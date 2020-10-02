@@ -1,0 +1,40 @@
+type: library
+
+target: lib_dht22
+
+alias: Click.Dht22
+
+sources: {
+    src/dht22.c
+}
+
+headers: {
+    include/dht22.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/dht22.h) dst(include/dht22.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_touchclamp
+
+alias: Click.TouchClamp
+
+sources: {
+    src/touchclamp.c
+}
+
+headers: {
+    include/touchclamp.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/touchclamp.h) dst(include/touchclamp.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

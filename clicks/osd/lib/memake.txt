@@ -1,0 +1,42 @@
+type: library
+
+target: lib_osd
+
+alias: Click.OSD
+
+sources: {
+    src/osd.c
+}
+
+headers: {
+    include/osd.h
+    include/resources.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/osd.h) dst(include/osd.h)
+    src(include/resources.h) dst(include/resources.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

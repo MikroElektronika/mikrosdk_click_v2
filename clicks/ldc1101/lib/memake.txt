@@ -1,0 +1,40 @@
+type: library
+
+target: lib_ldc1101
+
+alias: Click.Ldc1101
+
+sources: {
+    src/ldc1101.c
+}
+
+headers: {
+    include/ldc1101.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/ldc1101.h) dst(include/ldc1101.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

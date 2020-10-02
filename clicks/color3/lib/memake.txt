@@ -1,0 +1,40 @@
+type: library
+
+target: lib_color3
+
+alias: Click.Color3
+
+sources: {
+    src/color3.c
+}
+
+headers: {
+    include/color3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/color3.h) dst(include/color3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

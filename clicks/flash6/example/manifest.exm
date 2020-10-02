@@ -1,0 +1,8 @@
+{
+    "name": "Flash 6 Click",
+    "description": "<PRVE_2_RECENICE_SA_PRODUCT_PAGE>",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","W25Q128JV"],
+    "category" : ["Flash"] 
+}

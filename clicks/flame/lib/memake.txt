@@ -1,0 +1,40 @@
+type: library
+
+target: lib_flame
+
+alias: Click.Flame
+
+sources: {
+    src/flame.c
+}
+
+headers: {
+    include/flame.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/flame.h) dst(include/flame.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

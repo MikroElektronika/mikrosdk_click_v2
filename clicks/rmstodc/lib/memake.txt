@@ -1,0 +1,40 @@
+type: library
+
+target: lib_rmstodc
+
+alias: Click.RmstoDc
+
+sources: {
+    src/rmstodc.c
+}
+
+headers: {
+    include/rmstodc.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/rmstodc.h) dst(include/rmstodc.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

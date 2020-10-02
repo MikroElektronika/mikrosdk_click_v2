@@ -1,0 +1,40 @@
+type: library
+
+target: lib_gnsszoe
+
+alias: Click.Gnsszoe
+
+sources: {
+    src/gnsszoe.c
+}
+
+headers: {
+    include/gnsszoe.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/gnsszoe.h) dst(include/gnsszoe.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

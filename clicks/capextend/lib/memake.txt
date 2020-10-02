@@ -1,0 +1,40 @@
+type: library
+
+target: lib_capextend
+
+alias: Click.CapExtend
+
+sources: {
+    src/capextend.c
+}
+
+headers: {
+    include/capextend.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/capextend.h) dst(include/capextend.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

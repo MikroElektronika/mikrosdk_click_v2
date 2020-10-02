@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "EEPROM",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "EEPROM 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.eeprom2",
+    "product_link": "https://www.mikroe.com/eeprom-2-click",
+    "short_description": "EEPROM2 click provides 2 Mbit (2,097,152 bits) of Electrically Erasable and Programmable Read Only Memory, organized in bytes. In other words, this Click board™ is an EEPROM memory medium with the capacity of 256 KB. The used EEPROM module has an impressive endurance of 4,000,000 write cycles and data retention period of over 200 years.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

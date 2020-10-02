@@ -1,0 +1,40 @@
+type: library
+
+target: lib_stepup
+
+alias: Click.StepUp
+
+sources: {
+    src/stepup.c
+}
+
+headers: {
+    include/stepup.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/stepup.h) dst(include/stepup.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,17 @@
+type: executable
+target: example_rtd2
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Rtd2
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

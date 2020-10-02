@@ -1,0 +1,7 @@
+type: subdirs
+project: Nanogps
+
+subdirs: {
+    lib
+    example
+}

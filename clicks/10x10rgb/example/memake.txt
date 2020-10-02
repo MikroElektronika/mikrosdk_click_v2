@@ -1,0 +1,17 @@
+type: executable
+target: example_c10x10rgb
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.10x10RGB
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

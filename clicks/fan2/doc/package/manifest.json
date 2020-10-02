@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Brushless",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Fan 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.fan2",
+    "product_link": "https://www.mikroe.com/fan-2-click",
+    "short_description": "Fan 2 click carries the MAX31760 precision fan-speed controller. It can measure temperature and adjust the fan speed to keep the temperature at the same level. Fan 2 click can also control two fans at the same time.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}

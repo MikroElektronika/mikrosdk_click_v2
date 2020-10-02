@@ -1,0 +1,7 @@
+type: subdirs
+project: MatrixRgb
+
+subdirs: {
+    lib
+    example
+}

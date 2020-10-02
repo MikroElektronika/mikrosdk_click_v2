@@ -1,0 +1,40 @@
+type: library
+
+target: lib_captouch
+
+alias: Click.CapTouch
+
+sources: {
+    src/captouch.c
+}
+
+headers: {
+    include/captouch.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/captouch.h) dst(include/captouch.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

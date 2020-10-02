@@ -1,0 +1,40 @@
+type: library
+
+target: lib_vtohz2
+
+alias: Click.VToHz2
+
+sources: {
+    src/vtohz2.c
+}
+
+headers: {
+    include/vtohz2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/vtohz2.h) dst(include/vtohz2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

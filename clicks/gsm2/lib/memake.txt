@@ -1,0 +1,40 @@
+type: library
+
+target: lib_gsm2
+
+alias: Click.Gsm2
+
+sources: {
+    src/gsm2.c
+}
+
+headers: {
+    include/gsm2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/gsm2.h) dst(include/gsm2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

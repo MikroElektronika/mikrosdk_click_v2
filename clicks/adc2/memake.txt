@@ -1,0 +1,7 @@
+type: subdirs
+project: Adc2
+
+subdirs: {
+    lib
+    example
+}

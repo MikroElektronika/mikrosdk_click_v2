@@ -1,0 +1,40 @@
+type: library
+
+target: lib_optoencoder
+
+alias: Click.OptoEncoder
+
+sources: {
+    src/optoencoder.c
+}
+
+headers: {
+    include/optoencoder.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/optoencoder.h) dst(include/optoencoder.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

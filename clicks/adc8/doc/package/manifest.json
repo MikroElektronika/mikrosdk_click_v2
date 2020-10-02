@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "ADC",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "ADC 8 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.adc8",
+    "product_link": "https://www.mikroe.com/adc-8-click",
+    "short_description": "ADC 8 Click is a high precision, low-power, 16-bit analog-to-digital converter (ADC), based around the ADS1115 IC. ",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}

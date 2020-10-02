@@ -1,0 +1,40 @@
+type: library
+
+target: lib_accel14
+
+alias: Click.Accel14
+
+sources: {
+    src/accel14.c
+}
+
+headers: {
+    include/accel14.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/accel14.h) dst(include/accel14.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_spectral
+
+alias: Click.Spectral
+
+sources: {
+    src/spectral.c
+}
+
+headers: {
+    include/spectral.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/spectral.h) dst(include/spectral.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

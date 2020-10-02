@@ -1,0 +1,8 @@
+{
+    "name": "HZ to V 2 Click",
+    "description": "HZ to V 2 click is a device that can convert input frequency of the signal with virtually any wave shape to a DC voltage output, with a level proportional to the input frequency.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","VFC32KU"],
+    "category" : ["Measurements"] 
+}

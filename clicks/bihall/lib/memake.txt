@@ -1,0 +1,40 @@
+type: library
+
+target: lib_bihall
+
+alias: Click.BiHall
+
+sources: {
+    src/bihall.c
+}
+
+headers: {
+    include/bihall.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/bihall.h) dst(include/bihall.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,17 @@
+type: executable
+target: example_mic23099
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Mic23099
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

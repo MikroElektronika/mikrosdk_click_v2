@@ -1,0 +1,7 @@
+type: subdirs
+project: THERMO5
+
+subdirs: {
+    lib
+    example
+}

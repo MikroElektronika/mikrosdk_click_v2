@@ -1,0 +1,7 @@
+type: subdirs
+project: Gps
+
+subdirs: {
+    lib
+    example
+}

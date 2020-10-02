@@ -1,0 +1,18 @@
+type: executable
+target: example_tester
+
+depends: {
+    MikroC.Core
+    MikroSDK.Log
+    Click.Tester
+    MikroSDK.Board
+}
+
+uses: {
+    MikroC.Core
+    MikroSDK.Board
+}
+
+sources: {
+    main.c
+}

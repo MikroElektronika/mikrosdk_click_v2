@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "RS485",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "RS485 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.rs485",
+    "product_link": "https://www.mikroe.com/rs485-33v-click",
+    "short_description": "RS485 click 3.3V is a RS422/485 transceiver Click board™, which can be used as an interface between the TTL level UART and the RS422/485 communication bus.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

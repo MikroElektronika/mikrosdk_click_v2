@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Proto",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Tester click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.tester",
+    "product_link": "<https://www.mikroe.com/tester-click>",
+    "short_description": "Each pin of the mikroBUS™ is routed to a red colored LED, which is protected by 1K resistor.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

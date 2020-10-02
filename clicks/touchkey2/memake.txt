@@ -1,0 +1,7 @@
+type: subdirs
+project: Touchkey2
+
+subdirs: {
+    lib
+    example
+}

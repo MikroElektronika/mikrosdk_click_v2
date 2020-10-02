@@ -1,0 +1,17 @@
+type: executable
+target: example_oledswitch
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.OledSwitch
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

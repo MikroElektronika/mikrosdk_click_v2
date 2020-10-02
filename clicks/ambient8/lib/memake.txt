@@ -1,0 +1,40 @@
+type: library
+
+target: lib_ambient8
+
+alias: Click.Ambient8
+
+sources: {
+    src/ambient8.c
+}
+
+headers: {
+    include/ambient8.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/ambient8.h) dst(include/ambient8.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

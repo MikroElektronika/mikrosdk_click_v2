@@ -1,0 +1,7 @@
+type: subdirs
+project: c6DofImu10
+
+subdirs: {
+    lib
+    example
+}

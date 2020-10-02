@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Measurements",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Pressure 4 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.pressure4",
+    "product_link": "https://www.mikroe.com/hz-to-v-2-click",
+    "short_description": "HZ to V 2 click is a device that can convert input frequency of the signal with virtually any wave shape to a DC voltage output, with a level proportional to the input frequency.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

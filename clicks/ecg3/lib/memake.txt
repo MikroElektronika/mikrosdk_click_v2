@@ -1,0 +1,40 @@
+type: library
+
+target: lib_ecg3
+
+alias: Click.Ecg3
+
+sources: {
+    src/ecg3.c
+}
+
+headers: {
+    include/ecg3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/ecg3.h) dst(include/ecg3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

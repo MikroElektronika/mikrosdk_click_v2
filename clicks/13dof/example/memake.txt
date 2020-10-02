@@ -1,0 +1,17 @@
+type: executable
+target: example_c13dof
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.c13DOF
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

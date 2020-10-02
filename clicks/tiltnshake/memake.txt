@@ -1,0 +1,7 @@
+type: subdirs
+project: TiltNshake
+
+subdirs: {
+    lib
+    example
+}

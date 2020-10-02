@@ -1,0 +1,40 @@
+type: library
+
+target: lib_pressure5
+
+alias: Click.Pressure5
+
+sources: {
+    src/pressure5.c
+}
+
+headers: {
+    include/pressure5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/pressure5.h) dst(include/pressure5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

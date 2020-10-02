@@ -1,0 +1,151 @@
+
+
+---
+# MIC33153 click
+
+MIC33153 click is a DC-DC adjustable step-down (buck) converter that is designed to deliver a substantial amount of current to very demanding loads, with the voltage output up to 3.5V.
+
+<p align="center">
+  <img src="https://download.mikroe.com/images/click_for_ide/mic33153_click.png" height=300px>
+</p>
+
+[click Product page](<https://www.mikroe.com/mic33153-click>)
+
+---
+
+
+#### Click library 
+
+- **Author**        : MikroE Team
+- **Date**          : Jan 2020.
+- **Type**          : SPI type
+
+
+# Software Support
+
+We provide a library for the Mic33153 Click 
+as well as a demo application (example), developed using MikroElektronika 
+[compilers](https://shop.mikroe.com/compilers). 
+The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+
+Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+
+## Library Description
+
+> This library contains API for Mic33153 Click driver.
+
+#### Standard key functions :
+
+- Config Object Initialization function.
+> void mic33153_cfg_setup ( mic33153_cfg_t *cfg ); 
+ 
+- Initialization function.
+> MIC33153_RETVAL mic33153_init ( mic33153_t *ctx, mic33153_cfg_t *cfg );
+
+- Click Default Configuration function.
+> void mic33153_default_cfg ( mic33153_t *ctx );
+
+
+#### Example key functions :
+
+- This function writes 12-bit value to DAC and that causes that output voltage be seted on determined value.
+> void mic33153_write_dac ( mic33153_t *ctx, const uint16_t value_dac );
+ 
+- This function enables or disables output voltage depending on the state value.
+> void mic33153_enable_out ( mic33153_t *ctx, uint8_t state );
+
+- This function hecks state of PG (INT) pin. If state is 1 that means that output voltage is above 92% of its steady
+- state voltage. If state is 0 that means that output voltage is below 86% of its steady state voltage.
+> uint8_t mic33153_check_power_good ( mic33153_t *ctx );
+
+## Examples Description
+
+> This app enables step-down (buck) converter.
+
+**The demo application is composed of two sections :**
+
+### Application Init 
+
+> Initializes click driver.
+
+```c
+
+void application_init ( void )
+{
+    log_cfg_t log_cfg;
+    mic33153_cfg_t cfg;
+
+    //  Logger initialization.
+
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    LOG_MAP_USB_UART( log_cfg );
+    log_init( &logger, &log_cfg );
+    log_info( &logger, "---- Application Init ----" );
+
+    //  Click initialization.
+
+    mic33153_cfg_setup( &cfg );
+    MIC33153_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    mic33153_init( &mic33153, &cfg );
+    Delay_ms( 100 );
+}
+  
+```
+
+### Application Task
+
+> Activates the output voltage of the device, writes DAC value witch sets
+> output voltage to 2V, and checks PG (Power Good) pin witch compares output voltage with his
+> steady state voltage. MIC33153 click is tested on load with current output value of 20mA.
+
+```c
+
+void application_task ( void )
+{
+    uint8_t power_good;
+    uint8_t i = 1;
+
+    mic33153_enable_out( &mic33153, MIC33153_OUT_ENABLE);
+    
+    mic33153_write_dac ( &mic33153, MIC33153_VOLTAGE_2000MV);
+
+    power_good = mic33153_check_power_good( &mic33153 );
+    
+    if ( power_good && i )
+    {
+        log_printf( &logger, "Output voltage is above 92% of its steady state voltage. \r\n " );
+        i = 0;
+    }
+    else if ( ( power_good == 0 ) && ( i == 0 ) )
+    {
+        log_printf( &logger, "Output voltage is below 86% of its steady state voltage. \r\n " );
+        i = 1;
+    }
+    
+    Delay_ms(2000);
+}
+
+```
+
+The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+
+**Other mikroE Libraries used in the example:** 
+
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Mic33153
+
+**Additional notes and informations**
+
+Depending on the development board you are using, you may need 
+[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
+[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
+development systems with no UART to USB interface available on the board. The 
+terminal available in all Mikroelektronika 
+[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
+of your choice, can be used to read the message.
+
+
+
+---

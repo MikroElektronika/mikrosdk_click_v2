@@ -1,0 +1,40 @@
+type: library
+
+target: lib_airquality5
+
+alias: Click.Airquality5
+
+sources: {
+    src/airquality5.c
+}
+
+headers: {
+    include/airquality5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/airquality5.h) dst(include/airquality5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

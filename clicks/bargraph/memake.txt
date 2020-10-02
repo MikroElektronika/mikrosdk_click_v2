@@ -1,0 +1,7 @@
+type: subdirs
+project: BarGraph
+
+subdirs: {
+    lib
+    example
+}

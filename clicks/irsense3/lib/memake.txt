@@ -1,0 +1,40 @@
+type: library
+
+target: lib_irsense3
+
+alias: Click.IrSense3
+
+sources: {
+    src/irsense3.c
+}
+
+headers: {
+    include/irsense3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/irsense3.h) dst(include/irsense3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

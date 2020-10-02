@@ -1,0 +1,7 @@
+type: subdirs
+project: UniHall
+
+subdirs: {
+    lib
+    example
+}

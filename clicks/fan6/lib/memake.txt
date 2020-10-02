@@ -1,0 +1,40 @@
+type: library
+
+target: lib_fan6
+
+alias: Click.Fan6
+
+sources: {
+    src/fan6.c
+}
+
+headers: {
+    include/fan6.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/fan6.h) dst(include/fan6.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

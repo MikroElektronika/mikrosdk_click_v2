@@ -1,0 +1,8 @@
+{
+    "name": "RTD Click",
+    "description": "RTD click is based on MAX31865 resistance to digital converter from Maxim Integrated, optimized for platinum resistance temperature detectors, or RTD.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MAX31865"],
+    "category" : ["Temperature & humidity"] 
+}

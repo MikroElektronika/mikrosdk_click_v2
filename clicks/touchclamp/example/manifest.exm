@@ -1,0 +1,8 @@
+{
+    "name": "TouchClamp Click",
+    "description": "TouchClamp click is a mikroBUS™ add-on board with NXP’s MPR121 proximity capacitive touch sensor controller. It has seven plated holes for clamps which can be used to connect any – literally any – conductive object in order to use it as an input button to send an interrupt to the target board MCU.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MPR121 "],
+    "category" : ["Capacitive"] 
+}

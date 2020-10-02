@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Pressure",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Pressure 10",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.pressure10",
+    "product_link": "https://www.mikroe.com/pressure-10-click",
+    "short_description": "Pressure 10 Click features a digital interface barometric pressure sensor, based on piezoresistive bridge, labeled as HSPPAD042A, from ALPS Electric. It can use both SPI and I2C communication protocols, allowing it to be interfaced with a broad range of MCUs. Besides the pressure readings, this Click board™ also offers very accurate temperature reading, which is required for the pressure readings compensation and can be used in a wide range of battery-powered and portable applications thanks to its very low power consumption.",
+    "supported_compiler": "Mikro C",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

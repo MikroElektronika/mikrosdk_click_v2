@@ -1,0 +1,40 @@
+type: library
+
+target: lib_adc6
+
+alias: Click.Adc6
+
+sources: {
+    src/adc6.c
+}
+
+headers: {
+    include/adc6.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/adc6.h) dst(include/adc6.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

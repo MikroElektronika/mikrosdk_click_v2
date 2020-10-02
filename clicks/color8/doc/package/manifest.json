@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Optical",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Color 8 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.color8",
+    "product_link": "https://www.mikroe.com/color-8-click",
+    "short_description": "Color 8 click is a color-sensing Click board™, a part of our sensor Click board™ line. Sensing the color by utilizing ROHM’s BH1749NUC, an integrated color sensor IC, it comes in the package which also includes the mikroSDK™ software, a library with all the functions.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

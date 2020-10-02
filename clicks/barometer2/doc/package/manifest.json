@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Pressure",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Barometer 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.barometer2",
+    "product_link": "https://www.mikroe.com/barometer-2-click",
+    "short_description": "Barometer 2 Click is a digital barometer on a Click board™. Barometer 2 is equipped with the LPS35HW, an absolute piezoresistive pressure sensor with ceramic, water resistant package, manufactured using a proprietary technology.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

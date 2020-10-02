@@ -1,0 +1,7 @@
+type: subdirs
+project: LinHall
+
+subdirs: {
+    lib
+    example
+}

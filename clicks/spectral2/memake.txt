@@ -1,0 +1,7 @@
+type: subdirs
+project: Spectral2
+
+subdirs: {
+    lib
+    example
+}

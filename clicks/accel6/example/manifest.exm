@@ -1,0 +1,8 @@
+{
+    "name": "Accel 6 Click",
+    "description": "Accel 6 click is a three-axis acceleration sensor with many features. It uses the BMA280, a 14bit triaxial acceleration sensor with intelligent on-chip motion triggered interrupt controller, from Bosch Sensortec.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","BMA280, PCA9306"],
+    "category" : ["Motion, Acceleration"] 
+}

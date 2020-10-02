@@ -1,0 +1,8 @@
+{
+    "name": "6DOF IMU 2 Click",
+    "description": "6DOF IMU 2 Click is capable of precise acceleration and angular rate (gyroscopic) measurement.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","BMI160"],
+    "category" : ["Motion"] 
+}

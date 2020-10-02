@@ -1,0 +1,40 @@
+type: library
+
+target: lib_vreg
+
+alias: Click.Vreg
+
+sources: {
+    src/vreg.c
+}
+
+headers: {
+    include/vreg.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/vreg.h) dst(include/vreg.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

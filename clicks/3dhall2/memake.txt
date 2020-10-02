@@ -1,0 +1,7 @@
+type: subdirs
+project: C3dHall2
+
+subdirs: {
+    lib
+    example
+}

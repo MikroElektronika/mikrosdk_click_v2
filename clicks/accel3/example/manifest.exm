@@ -1,0 +1,8 @@
+{
+    "name": "Accel3 Click",
+    "description": "Accel 3 Click represent 3-axis linear accelerometer.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","H3LIS331DL"],
+    "category" : ["Motion,Acceleration"] 
+}

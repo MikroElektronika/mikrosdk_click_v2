@@ -1,0 +1,40 @@
+type: library
+
+target: lib_dcmotor
+
+alias: Click.DcMotor
+
+sources: {
+    src/dcmotor.c
+}
+
+headers: {
+    include/dcmotor.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/dcmotor.h) dst(include/dcmotor.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

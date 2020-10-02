@@ -1,0 +1,40 @@
+type: library
+
+target: lib_dotmatrixr
+
+alias: Click.DotMatrixR
+
+sources: {
+    src/dotmatrixr.c
+}
+
+headers: {
+    include/dotmatrixr.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/dotmatrixr.h) dst(include/dotmatrixr.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

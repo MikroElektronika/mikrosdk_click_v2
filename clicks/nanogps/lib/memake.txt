@@ -1,0 +1,40 @@
+type: library
+
+target: lib_nanogps
+
+alias: Click.Nanogps
+
+sources: {
+    src/nanogps.c
+}
+
+headers: {
+    include/nanogps.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/nanogps.h) dst(include/nanogps.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

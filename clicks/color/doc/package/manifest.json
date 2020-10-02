@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Optical",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Color click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.color",
+    "product_link": "https://www.mikroe.com/color-click",
+    "short_description": "Color click is a color light sensing Click board™, featuring the popular TSC3471 integrated color sensor. It is capable of sensing red, green, and blue light components, as well as the clear light.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

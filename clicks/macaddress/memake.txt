@@ -1,0 +1,7 @@
+type: subdirs
+project: MacAddress
+
+subdirs: {
+    lib
+    example
+}

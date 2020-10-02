@@ -1,0 +1,40 @@
+type: library
+
+target: lib_adc2
+
+alias: Click.Adc2
+
+sources: {
+    src/adc2.c
+}
+
+headers: {
+    include/adc2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/adc2.h) dst(include/adc2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

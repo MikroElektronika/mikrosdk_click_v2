@@ -1,0 +1,40 @@
+type: library
+
+target: lib_i2cmux4
+
+alias: Click.I2cMux4
+
+sources: {
+    src/i2cmux4.c
+}
+
+headers: {
+    include/i2cmux4.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/i2cmux4.h) dst(include/i2cmux4.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

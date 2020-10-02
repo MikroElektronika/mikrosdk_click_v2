@@ -1,0 +1,40 @@
+type: library
+
+target: lib_irda
+
+alias: Click.Irda
+
+sources: {
+    src/irda.c
+}
+
+headers: {
+    include/irda.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/irda.h) dst(include/irda.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

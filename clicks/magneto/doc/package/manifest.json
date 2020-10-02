@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Magnetic",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "MAGNETO click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.magneto",
+    "product_link": "https://www.mikroe.com/magneto-click",
+    "short_description": "MAGNETO Click carries contactless magnetic angle position sensor which delivers precise angle measurements down to 0.05º in 14-bit resolution.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

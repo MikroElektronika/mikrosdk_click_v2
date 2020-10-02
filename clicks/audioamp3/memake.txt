@@ -1,0 +1,7 @@
+type: subdirs
+project: AudioAmp3
+
+subdirs: {
+    lib
+    example
+}

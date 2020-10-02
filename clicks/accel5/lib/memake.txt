@@ -1,0 +1,40 @@
+type: library
+
+target: lib_accel5
+
+alias: Click.Accel5
+
+sources: {
+    src/accel5.c
+}
+
+headers: {
+    include/accel5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/accel5.h) dst(include/accel5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

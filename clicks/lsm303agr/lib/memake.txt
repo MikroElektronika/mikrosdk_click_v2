@@ -1,0 +1,40 @@
+type: library
+
+target: lib_lsm303agr
+
+alias: Click.LSM303AGR
+
+sources: {
+    src/lsm303agr.c
+}
+
+headers: {
+    include/lsm303agr.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/lsm303agr.h) dst(include/lsm303agr.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

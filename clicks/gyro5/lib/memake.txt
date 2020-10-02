@@ -1,0 +1,40 @@
+type: library
+
+target: lib_gyro5
+
+alias: Click.Gyro5
+
+sources: {
+    src/gyro5.c
+}
+
+headers: {
+    include/gyro5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/gyro5.h) dst(include/gyro5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

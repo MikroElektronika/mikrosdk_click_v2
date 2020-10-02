@@ -1,0 +1,7 @@
+type: subdirs
+project: Rs232Spi
+
+subdirs: {
+    lib
+    example
+}

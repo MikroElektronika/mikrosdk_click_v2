@@ -1,0 +1,40 @@
+type: library
+
+target: lib_balancer3
+
+alias: Click.Balancer3
+
+sources: {
+    src/balancer3.c
+}
+
+headers: {
+    include/balancer3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/balancer3.h) dst(include/balancer3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

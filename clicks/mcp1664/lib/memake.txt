@@ -1,0 +1,40 @@
+type: library
+
+target: lib_mcp1664
+
+alias: Click.Mcp1664
+
+sources: {
+    src/mcp1664.c
+}
+
+headers: {
+    include/mcp1664.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/mcp1664.h) dst(include/mcp1664.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

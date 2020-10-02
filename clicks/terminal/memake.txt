@@ -1,0 +1,7 @@
+type: subdirs
+project: Terminal
+
+subdirs: {
+    lib
+    example
+}

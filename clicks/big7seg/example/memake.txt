@@ -1,0 +1,17 @@
+type: executable
+target: example_big7seg
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Big7Seg
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_wheatstone
+
+alias: Click.Wheatstone
+
+sources: {
+    src/wheatstone.c
+}
+
+headers: {
+    include/wheatstone.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/wheatstone.h) dst(include/wheatstone.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

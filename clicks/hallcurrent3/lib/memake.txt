@@ -1,0 +1,40 @@
+type: library
+
+target: lib_hallcurrent3
+
+alias: Click.HallCurrent3
+
+sources: {
+    src/hallcurrent3.c
+}
+
+headers: {
+    include/hallcurrent3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/hallcurrent3.h) dst(include/hallcurrent3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

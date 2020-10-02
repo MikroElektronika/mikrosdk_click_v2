@@ -1,0 +1,17 @@
+type: executable
+target: example_bihall
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.BiHall
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

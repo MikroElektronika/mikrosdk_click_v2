@@ -1,0 +1,8 @@
+{
+    "name": "MIC23099 Click",
+    "description": "MIC23099 click represent single AA/AAA cell step-down/step-up regulator with battery monitoring.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MIC23099"],
+    "category" : ["Boost"] 
+}

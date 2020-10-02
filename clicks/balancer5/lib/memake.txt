@@ -1,0 +1,40 @@
+type: library
+
+target: lib_balancer5
+
+alias: Click.Balancer5
+
+sources: {
+    src/balancer5.c
+}
+
+headers: {
+    include/balancer5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/balancer5.h) dst(include/balancer5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

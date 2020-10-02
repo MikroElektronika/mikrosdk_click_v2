@@ -1,0 +1,8 @@
+{
+    "name": "MCP16331 Click",
+    "description": "MCP16331 click functions as a buck-boost voltage regulator, a switching regulator topology that combines principles of the buck conversion (step-down) and the boost conversion (step-up).",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MCP16331"],
+    "category" : ["Buck"] 
+}

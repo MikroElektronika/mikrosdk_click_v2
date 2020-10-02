@@ -1,0 +1,7 @@
+type: subdirs
+project: Proximity13
+
+subdirs: {
+    lib
+    example
+}

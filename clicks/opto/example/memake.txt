@@ -1,0 +1,17 @@
+type: executable
+target: example_opto
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.OPTO
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

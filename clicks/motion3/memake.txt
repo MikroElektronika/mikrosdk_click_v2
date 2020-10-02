@@ -1,0 +1,7 @@
+type: subdirs
+project: Motion3
+
+subdirs: {
+    lib
+    example
+}

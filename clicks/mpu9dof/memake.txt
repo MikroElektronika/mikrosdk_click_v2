@@ -1,0 +1,7 @@
+type: subdirs
+project: Mpu9Dof
+
+subdirs: {
+    lib
+    example
+}

@@ -1,0 +1,7 @@
+type: subdirs
+project: RemoteTemp
+
+subdirs: {
+    lib
+    example
+}

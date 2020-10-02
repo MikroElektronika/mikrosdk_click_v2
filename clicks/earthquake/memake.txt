@@ -1,0 +1,7 @@
+type: subdirs
+project: Earthquake
+
+subdirs: {
+    lib
+    example
+}

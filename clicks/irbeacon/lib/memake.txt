@@ -1,0 +1,40 @@
+type: library
+
+target: lib_irbeacon
+
+alias: Click.IrBeacon
+
+sources: {
+    src/irbeacon.c
+}
+
+headers: {
+    include/irbeacon.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/irbeacon.h) dst(include/irbeacon.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

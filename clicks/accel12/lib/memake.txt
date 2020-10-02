@@ -1,0 +1,40 @@
+type: library
+
+target: lib_accel12
+
+alias: Click.Accel12
+
+sources: {
+    src/accel12.c
+}
+
+headers: {
+    include/accel12.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/accel12.h) dst(include/accel12.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_audioamp2
+
+alias: Click.AudioAmp2
+
+sources: {
+    src/audioamp2.c
+}
+
+headers: {
+    include/audioamp2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/audioamp2.h) dst(include/audioamp2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

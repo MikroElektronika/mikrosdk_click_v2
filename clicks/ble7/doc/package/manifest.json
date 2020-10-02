@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "BT/BLE",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "BLE 7 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.ble7",
+    "product_link": "https://www.mikroe.com/ble-7-click",
+    "short_description": "The BLE 7 click is a Click board™ witch provide BT/BLE connectivity for any embedded application. BLE 7 click based on the BGX13S22GA-V31, a SiP module from Silicon Labs with a buit-in antenna. Click board™ an ultra-small, high-performing, Bluetooth low energy module for easy integration of Bluetooth low energy connectivity (BLE) into various electronic devices. Given its features, this click can be used for health, sports, and wellness devices as well as Industrial, home, and building automation; and smart phone, tablet, and PC accessories.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

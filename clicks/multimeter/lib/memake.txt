@@ -1,0 +1,40 @@
+type: library
+
+target: lib_multimeter
+
+alias: Click.Multimeter
+
+sources: {
+    src/multimeter.c
+}
+
+headers: {
+    include/multimeter.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/multimeter.h) dst(include/multimeter.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

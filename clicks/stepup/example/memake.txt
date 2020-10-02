@@ -1,0 +1,17 @@
+type: executable
+target: example_stepup
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.StepUp
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

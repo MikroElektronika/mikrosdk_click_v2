@@ -1,0 +1,17 @@
+type: executable
+target: example_lora5
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.LoRa5
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

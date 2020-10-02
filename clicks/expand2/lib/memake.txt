@@ -1,0 +1,40 @@
+type: library
+
+target: lib_expand2
+
+alias: Click.Expand2
+
+sources: {
+    src/expand2.c
+}
+
+headers: {
+    include/expand2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/expand2.h) dst(include/expand2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

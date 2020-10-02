@@ -1,0 +1,40 @@
+type: library
+
+target: lib_uv2
+
+alias: Click.UV2
+
+sources: {
+    src/uv2.c
+}
+
+headers: {
+    include/uv2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/uv2.h) dst(include/uv2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

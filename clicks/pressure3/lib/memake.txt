@@ -1,0 +1,40 @@
+type: library
+
+target: lib_pressure3
+
+alias: Click.Pressure3
+
+sources: {
+    src/pressure3.c
+}
+
+headers: {
+    include/pressure3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/pressure3.h) dst(include/pressure3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

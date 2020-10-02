@@ -1,0 +1,7 @@
+type: subdirs
+project: PowerBank
+
+subdirs: {
+    lib
+    example
+}

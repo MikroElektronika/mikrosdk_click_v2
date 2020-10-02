@@ -1,0 +1,8 @@
+{
+    "name": "Thermo 9 Click",
+    "description": "The TSYS01 is a single chip, versatile, new technology temperature sensor. The TSYS01 provides factory calibrated temperature information. It includes a temperature sensing chip and a 24 bit Σ-ADC.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","TSYS01"],
+    "category" : ["Temperature & humidity"] 
+}

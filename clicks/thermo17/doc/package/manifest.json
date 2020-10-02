@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Temperature & humidity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Thermo 17 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.thermo17",
+    "product_link": "https://www.mikroe.com/thermo-17-click",
+    "short_description": "The Thermo 17 Click is a Click board™ based on the TMP451-Q1, a high-accuracy, lowpower remote temperature sensor monitor with a built-in local temperature sensor from Texas Instruments.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

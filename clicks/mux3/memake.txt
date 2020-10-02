@@ -1,0 +1,7 @@
+type: subdirs
+project: Mux3
+
+subdirs: {
+    lib
+    example
+}

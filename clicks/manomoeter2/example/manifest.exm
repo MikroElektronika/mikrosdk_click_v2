@@ -1,0 +1,8 @@
+{
+    "name": "Manometer 2 Click",
+    "description": "Manometer 2 click carries the MS5525DSO-SB001GS digital pressure sensor, based on leading MEMS technology.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MS5525DSO"],
+    "category" : ["Pressure"] 
+}

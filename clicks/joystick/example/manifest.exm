@@ -1,0 +1,8 @@
+{
+    "name": "Joystick Click",
+    "description": "Joystick click is a smart navigation key concept based on contactless, magnetic movement detection.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","AS5013"],
+    "category" : ["Pushbutton/Switches"] 
+}

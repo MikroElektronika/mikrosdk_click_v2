@@ -1,0 +1,7 @@
+type: subdirs
+project: BoostInv2
+
+subdirs: {
+    lib
+    example
+}

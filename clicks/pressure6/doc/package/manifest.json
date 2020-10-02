@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Pressure",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Pressure 6 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.pressure6",
+    "product_link": "https://www.mikroe.com/pressure-6-click",
+    "short_description": "Pressure 6 Click features a simple, yet highly accurate and reliable pressure sensor labeled as BM1386GLV, produced by ROHM. This sensor is a piezo-resistive pressure sensor with internal thermal compensation, which greatly simplifies the pressure reading.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.2"
+}
+

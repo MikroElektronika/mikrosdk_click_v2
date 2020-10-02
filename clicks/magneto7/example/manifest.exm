@@ -1,0 +1,8 @@
+{
+    "name": "Magneto 7 Click",
+    "description": "Magneto 7 Click is a high-resolution magnetic sensor Click board™ which allows contactless orientation sensing.",
+    "image" : "https://cdn1-shop.mikroe.com/img/product/magneto-7-click/magneto-7-click-thickbox_default-22x.jpg",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","Magneto 7"],
+    "category" : ["Magnetic"] 
+}

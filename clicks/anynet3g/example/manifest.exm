@@ -1,0 +1,8 @@
+{
+    "name": "AnyNet 3G Click",
+    "description": "AnyNet 3G-EA/AA Click is a cellular to AWS gateway device, which provides developers with the complete solution for various IoT applications, by using the AWS IoT and Cloud Storage services for the data storage, analyzing and processing.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","UG95-EA/AA","ES4623","PIC18F67J11"],
+    "category" : ["GSM/LTE"] 
+}

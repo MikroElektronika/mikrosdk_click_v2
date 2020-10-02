@@ -1,0 +1,7 @@
+type: subdirs
+project: SemperFlash
+
+subdirs: {
+    lib
+    example
+}

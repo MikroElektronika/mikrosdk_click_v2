@@ -1,0 +1,113 @@
+/*!
+ * \file 
+ * \brief Accel10 Click example
+ * 
+ * # Description
+ * This is an example which demonstrates the use of Accel 10 Click board.
+ *
+ * The demo application is composed of two sections :
+ * 
+ * ## Application Init 
+ * Configuring clicks and log objects.
+ * 
+ * ## Application Task  
+ * Measured and display Accel data coordinates values for X-axis, Y-axis and Z-axis.
+ * Results are being sent to the Usart Terminal where you can track their changes.
+ * All data logs write on USB uart changes for every 1 sec.
+ * 
+ * \author Nenad Filipovic
+ *
+ */
+// ------------------------------------------------------------------- INCLUDES
+
+#include "board.h"
+#include "log.h"
+#include "accel10.h"
+
+// ------------------------------------------------------------------ VARIABLES
+
+static accel10_t accel10;
+static log_t logger;
+
+static accel10_data_t accel_data;
+static int8_t temperature;
+
+// ------------------------------------------------------ APPLICATION FUNCTIONS
+
+void application_init ( void )
+{
+    log_cfg_t log_cfg;
+    accel10_cfg_t cfg;
+
+    //  Logger initialization.
+
+    LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
+    log_init( &logger, &log_cfg );
+    log_info( &logger, "---- Application Init ----" );
+
+    //  Click initialization.
+
+    accel10_cfg_setup( &cfg );
+    ACCEL10_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    accel10_init( &accel10, &cfg );
+    Delay_ms( 500 );
+    
+    log_printf( &logger, "---------------------\r\n" );
+    log_printf( &logger, "    Accel 10 Click\r\n" );
+    log_printf( &logger, "---------------------\r\n" );
+    
+    // Checking communication
+    if ( accel10_check_id( &accel10 ) == ACCEL10_SUCCESS )
+    {
+        log_printf( &logger, "  Communication  OK\r\n" );
+        log_printf( &logger, "---------------------\r\n" );
+        Delay_ms( 100 );
+    }
+    else
+    {
+        log_printf( &logger, " Communication ERROR\r\n" );
+        log_printf( &logger, "  Reset the device\r\n" );
+        log_printf( &logger, "---------------------\r\n" );
+        for ( ; ; );
+    }
+    
+    accel10_default_cfg ( &accel10 );
+    log_printf( &logger, "   Default config.\r\n" );
+    log_printf( &logger, "---------------------\r\n" );
+    Delay_ms( 100 );
+}
+
+void application_task ( void )
+{
+    if ( accel10_check_data_ready( &accel10 ) == ACCEL10_STATUS_DATA_READY )
+    {
+        accel10_get_data ( &accel10, &accel_data );
+        Delay_ms( 10 );
+        
+        log_printf( &logger, "  Accel X :  %d\r\n", accel_data.x );
+        log_printf( &logger, "  Accel Y :  %d\r\n", accel_data.y );
+        log_printf( &logger, "  Accel Z :  %d\r\n", accel_data.z );
+    
+        temperature = accel10_read_temperature( &accel10 );
+        Delay_ms( 10 );
+
+        log_printf( &logger, " Temperature :  %d\r\n", temperature );
+        log_printf( &logger, "---------------------\r\n" );
+        Delay_ms( 1000 );
+    }
+}
+
+void main ( void )
+{
+    application_init( );
+
+    for ( ; ; )
+    {
+        application_task( );
+    }
+}
+
+
+// ------------------------------------------------------------------------ END

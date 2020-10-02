@@ -1,0 +1,8 @@
+{
+    "name": "DIGI POT 5 Click",
+    "description": "DIGI POT 5 click is a digitally controlled quad potentiometer, with the resistance of 10KΩ. It has an 8bit wiper step resolution, which allows the wiper to take 257 different discrete positions (across 256 internal resistors). The digital wiper position can be controlled via the SPI interface.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MCP4361 "],
+    "category" : ["Digital potentiometer"] 
+}

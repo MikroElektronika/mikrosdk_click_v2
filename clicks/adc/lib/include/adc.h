@@ -1,0 +1,226 @@
+/*
+ * MikroSDK - MikroE Software Development Kit
+ * Copyright© 2020 MikroElektronika d.o.o.
+ * 
+ * Permission is hereby granted, free of charge, to any person 
+ * obtaining a copy of this software and associated documentation 
+ * files (the "Software"), to deal in the Software without restriction, 
+ * including without limitation the rights to use, copy, modify, merge, 
+ * publish, distribute, sublicense, and/or sell copies of the Software, 
+ * and to permit persons to whom the Software is furnished to do so, 
+ * subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be 
+ * included in all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+ * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE 
+ * OR OTHER DEALINGS IN THE SOFTWARE. 
+ */
+
+/*!
+ * \file adc.h
+ *
+ * \brief This file contains API for ADC Click driver.
+ *
+ * \addtogroup adc ADC Click Driver
+ * @{
+ */
+// ----------------------------------------------------------------------------
+
+#ifndef _ADC_H_
+#define _ADC_H_
+
+#include "drv_digital_out.h"
+#include "drv_spi_master.h"
+
+// -------------------------------------------------------------- PUBLIC MACROS
+/**
+ * \defgroup macros Macros
+ * \{
+ */
+
+/**
+ * \defgroup map_mikrobus MikroBUS
+ * \{
+ */
+#define ADC_MAP_MIKROBUS( cfg, mikrobus ) \
+    cfg.sdo = MIKROBUS( mikrobus, MIKROBUS_MISO ); \
+    cfg.sdi = MIKROBUS( mikrobus, MIKROBUS_MOSI ); \
+    cfg.sck = MIKROBUS( mikrobus, MIKROBUS_SCK  ); \
+    cfg.cs  = MIKROBUS( mikrobus, MIKROBUS_CS   )
+/** \} */
+
+/** \} */ //  End macros group
+// --------------------------------------------------------------- PUBLIC TYPES
+/**
+ * \defgroup types Types
+ * \{
+ */
+
+/**
+ * @brief Click error code definition.
+ */
+typedef enum
+{
+    ADC_OK = 0x0,
+    ADC_ERR_INIT_DRV = 0xFF
+
+} adc_err_t;
+
+/**
+ * @brief Click reference voltage definition.
+ */
+typedef enum
+{
+    ADC_VREF_3300MV = 0,
+    ADC_VREF_4096MV,
+    ADC_VREF_5000MV
+
+} adc_vref_t;
+
+/**
+ * @brief Click channel definition.
+ */
+typedef enum
+{
+    ADC_CH0_OR_CH01 = 0,
+    ADC_CH1_OR_CH10,
+    ADC_CH2_OR_CH23,
+    ADC_CH3_OR_CH32
+
+} adc_ch_t;
+
+/**
+ * @brief Click context object definition.
+ */
+typedef struct
+{
+    digital_out_t cs;
+
+    //  SPI Module.
+    spi_master_t spi;
+    pin_name_t chip_select;
+
+    //  Single-Ended Channels Data.
+    uint16_t  ch0;
+    uint16_t  ch1;
+    uint16_t  ch2;
+    uint16_t  ch3;
+
+    //  Differential Channels Data.
+    uint16_t  ch01;
+    uint16_t  ch10;
+    uint16_t  ch23;
+    uint16_t  ch32;
+
+    //  Reference Voltage.
+    uint16_t  vref;
+
+} adc_t;
+
+/**
+ * @brief Click configuration structure definition.
+ */
+typedef struct
+{
+    //  Communication GPIO Pins.
+    pin_name_t  sdo;
+    pin_name_t  sdi;
+    pin_name_t  sck;
+    pin_name_t  cs;
+
+    //  SPI Configuration Variables.
+    uint32_t spi_speed;
+    spi_master_mode_t  spi_mode;
+    spi_master_chip_select_polarity_t cs_polarity;
+
+    //  Reference Voltage Selection.
+    adc_vref_t  vref;
+
+} adc_cfg_t;
+
+/** \} */ //  End types group
+// ----------------------------------------------- PUBLIC FUNCTION DECLARATIONS
+/**
+ * \defgroup public_function Public Function
+ * \{
+ */
+
+#ifdef __cplusplus
+extern "C"{
+#endif
+
+/**
+ * @brief Configuration Object Setup function.
+ *
+ * @param cfg  Click configuration structure.
+ *
+ * @description This function initializes click configuration structure to
+ * initial state.
+ * @note All used pins will be set to unconnected state.
+ *       Reference voltage will be set to 3V3 by default.
+ */
+void
+adc_cfg_setup( adc_cfg_t *cfg );
+
+/**
+ * @brief Click Initialization function.
+ *
+ * @param ctx  Click object.
+ * @param cfg  Click configuration structure.
+ *
+ * @returns 0x0 - Ok,
+ *          0xFF - Driver init error.
+ *
+ * @description This function initializes all necessary pins and peripherals
+ * used for this click.
+ */
+adc_err_t
+adc_init( adc_t *ctx, adc_cfg_t *cfg );
+
+/**
+ * @brief Get Single-Ended Channel function.
+ *
+ * @param ctx  Click object.
+ * @param channel  Single-Ended channel selector.
+ *                 (From CH0 to CH3).
+ *
+ * @returns Voltage level of selected channel [mV].
+ *
+ * @description This function returns voltage level of selected single-ended
+ * channel in millivolts. The voltage value will be placed also in the
+ * corresponding field of ctx object.
+ */
+uint16_t
+adc_get_single_ended_ch( adc_t *ctx, adc_ch_t channel );
+
+/**
+ * @brief Get Pseudo-Differential Pair function.
+ *
+ * @param ctx  Click object.
+ * @param channel  Differential channels selector.
+ *                 (CH01 means that CH0 is IN+, and CH1 is IN-).
+ *
+ * @returns Voltage level of selected pseudo-differential pair.
+ *
+ * @description This function returns voltage level of selected
+ * pseudo-differential pair in millivolts. The voltage value will be placed
+ * also in the corresponding field of ctx object.
+ */
+uint16_t
+adc_get_differential_ch( adc_t *ctx, adc_ch_t channel );
+
+#ifdef __cplusplus
+}
+#endif
+#endif  //  _ADC_H_
+
+/** \} */ //  End public_function group
+/// \}    //  End adc group
+/*! @} */
+// ------------------------------------------------------------------------ END

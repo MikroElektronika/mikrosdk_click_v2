@@ -1,0 +1,40 @@
+type: library
+
+target: lib_mcp73213
+
+alias: Click.Mcp73213
+
+sources: {
+    src/mcp73213.c
+}
+
+headers: {
+    include/mcp73213.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/mcp73213.h) dst(include/mcp73213.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

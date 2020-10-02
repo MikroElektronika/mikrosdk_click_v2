@@ -1,0 +1,40 @@
+type: library
+
+target: lib_pressure8
+
+alias: Click.Pressure8
+
+sources: {
+    src/pressure8.c
+}
+
+headers: {
+    include/pressure8.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/pressure8.h) dst(include/pressure8.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

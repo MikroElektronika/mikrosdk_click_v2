@@ -1,0 +1,40 @@
+type: library
+
+target: lib_color7
+
+alias: Click.Color7
+
+sources: {
+    src/color7.c
+}
+
+headers: {
+    include/color7.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/color7.h) dst(include/color7.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

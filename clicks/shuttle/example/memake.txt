@@ -1,0 +1,17 @@
+type: executable
+target: example_shuttle
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Shuttle
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Measurements",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Multimeter click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.multimeter",
+    "product_link": "https://www.mikroe.com/multimeter-click",
+    "short_description": "Since there are four distinctive properties that can be measured with Multimeter click which all require different measuring techniques, several different ICs had to be used on the Click board™. Starting with the high-quality, low noise A/D converter as the primary component, all the way to the input operational amplifiers, all components were hand-picked to ensure accuracy.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

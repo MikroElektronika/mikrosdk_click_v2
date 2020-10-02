@@ -1,0 +1,8 @@
+{
+    "name": "GSM 3 Click",
+    "description": "GSM3 click is a complete quad-band GSM cellular network communication solution, featuring the SIM800H-BT, a quad-band 2G GSM/GPRS module.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","SIM800H-BT"],
+    "category" : ["GSM/LTE,2G GPRS"] 
+}

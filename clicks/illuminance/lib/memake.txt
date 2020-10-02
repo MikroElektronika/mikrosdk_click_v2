@@ -1,0 +1,40 @@
+type: library
+
+target: lib_illuminance
+
+alias: Click.Illuminance
+
+sources: {
+    src/illuminance.c
+}
+
+headers: {
+    include/illuminance.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/illuminance.h) dst(include/illuminance.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,7 @@
+type: subdirs
+project: I2C1Wire
+
+subdirs: {
+    lib
+    example
+}

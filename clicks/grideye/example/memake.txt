@@ -1,0 +1,17 @@
+type: executable
+target: example_grideye
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Grideye
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

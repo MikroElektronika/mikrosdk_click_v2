@@ -1,0 +1,41 @@
+type: library
+
+target: lib_lora3
+
+alias: Click.LoRa3
+
+sources: {
+    src/lora3.c
+}
+
+headers: {
+    include/lora3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/lora3.h) dst(include/lora3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+    ../build.bat
+}

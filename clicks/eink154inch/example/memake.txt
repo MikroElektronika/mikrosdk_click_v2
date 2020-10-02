@@ -1,0 +1,17 @@
+type: executable
+target: example_eink_154inch
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Eink154Inch
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

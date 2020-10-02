@@ -1,0 +1,40 @@
+type: library
+
+target: lib_joystick2
+
+alias: Click.Joystick2
+
+sources: {
+    src/joystick2.c
+}
+
+headers: {
+    include/joystick2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/joystick2.h) dst(include/joystick2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

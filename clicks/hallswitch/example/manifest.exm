@@ -1,0 +1,8 @@
+{
+    "name": "Hall Switch click",
+    "description": "Hall Switch click is a magnetic field activated dual-relay Click board™.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","AH1389"],
+    "category" : ["Magnetic"] 
+}

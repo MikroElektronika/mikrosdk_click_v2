@@ -1,0 +1,8 @@
+{
+    "name": "Proximity Click",
+    "description": "Proximity Click features VCNL4010 proximity and ambient light sensor. It combines an infrared emitter and PIN photodiode for proximity measurement with a range of up to 20cm.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","VCNL4010"],
+    "category" : ["Proximity"] 
+}

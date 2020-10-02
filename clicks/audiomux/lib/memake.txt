@@ -1,0 +1,40 @@
+type: library
+
+target: lib_audiomux
+
+alias: Click.AudioMUX
+
+sources: {
+    src/audiomux.c
+}
+
+headers: {
+    include/audiomux.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/audiomux.h) dst(include/audiomux.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

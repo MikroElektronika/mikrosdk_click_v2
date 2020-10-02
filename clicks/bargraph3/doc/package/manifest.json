@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "LED Segment",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "BARGRAPH 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.bargraph3",
+    "product_link": "https://www.mikroe.com/bargraph-3-click",
+    "short_description": "BarGraph 3 click is equipped with a five-segment LED bar graph display, notable for its strong and uniform illumination of the segments. Each segment consists of three internal LEDs with a common cathode, while the anodes of all LEDs are connected in a single point.>",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

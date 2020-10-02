@@ -1,0 +1,40 @@
+type: library
+
+target: lib_thermo12
+
+alias: Click.Thermo12
+
+sources: {
+    src/thermo12.c
+}
+
+headers: {
+    include/thermo12.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/thermo12.h) dst(include/thermo12.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

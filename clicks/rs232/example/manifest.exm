@@ -1,0 +1,8 @@
+{
+    "name": "RS232 Click",
+    "description": "RS232 click provides an interface between the TTL/CMOS logic levels commonly used on microcontrollers and the RS-232 bus.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MAX3232"],
+    "category" : ["RS232"] 
+}

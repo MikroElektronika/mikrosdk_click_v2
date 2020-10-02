@@ -1,0 +1,17 @@
+type: executable
+target: example_gps
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Gps
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

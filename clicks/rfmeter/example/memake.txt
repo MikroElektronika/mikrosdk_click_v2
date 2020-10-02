@@ -1,0 +1,17 @@
+type: executable
+target: example_rfmeter
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.RfMeter
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

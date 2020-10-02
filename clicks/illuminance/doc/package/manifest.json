@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Optical",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Illuminance click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.illuminance",
+    "product_link": "https://www.mikroe.com/illuminance-click",
+    "short_description": "Illuminance click carries a TSL2561 light-to-digital converter with a sensor that’s designed to mimic the way humans perceive light.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "GSM/LTE",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "AnyNet 3G click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.anynet3g",
+    "product_link": "https://www.mikroe.com/anynet-3g-ea-click , https://www.mikroe.com/anynet-3g-aa-click",
+    "short_description": "AnyNet 3G-EA/AA Click is a cellular to AWS gateway device, which provides developers with the complete solution for various IoT applications, by using the AWS IoT and Cloud Storage services for the data storage, analyzing and processing.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

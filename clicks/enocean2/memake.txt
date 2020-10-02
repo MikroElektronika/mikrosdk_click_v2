@@ -1,0 +1,7 @@
+type: subdirs
+project: EnOcean2
+
+subdirs: {
+    lib
+    example
+}

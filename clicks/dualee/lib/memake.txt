@@ -1,0 +1,40 @@
+type: library
+
+target: lib_dualee
+
+alias: Click.DualEE
+
+sources: {
+    src/dualee.c
+}
+
+headers: {
+    include/dualee.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/dualee.h) dst(include/dualee.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

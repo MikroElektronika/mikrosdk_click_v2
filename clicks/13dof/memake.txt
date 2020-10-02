@@ -1,0 +1,7 @@
+type: subdirs
+project: c13DOF
+
+subdirs: {
+    lib
+    example
+}

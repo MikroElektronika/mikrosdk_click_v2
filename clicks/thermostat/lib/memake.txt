@@ -1,0 +1,40 @@
+type: library
+
+target: lib_thermostat
+
+alias: Click.Thermostat
+
+sources: {
+    src/thermostat.c
+}
+
+headers: {
+    include/thermostat.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/thermostat.h) dst(include/thermostat.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

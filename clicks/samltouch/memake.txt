@@ -1,0 +1,7 @@
+type: subdirs
+project: SamlTouch
+
+subdirs: {
+    lib
+    example
+}

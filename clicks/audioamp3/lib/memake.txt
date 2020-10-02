@@ -1,0 +1,40 @@
+type: library
+
+target: lib_audioamp3
+
+alias: Click.AudioAmp3
+
+sources: {
+    src/audioamp3.c
+}
+
+headers: {
+    include/audioamp3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/audioamp3.h) dst(include/audioamp3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

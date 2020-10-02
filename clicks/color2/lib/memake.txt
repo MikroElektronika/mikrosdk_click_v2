@@ -1,0 +1,40 @@
+type: library
+
+target: lib_color2
+
+alias: Click.Color2
+
+sources: {
+    src/color2.c
+}
+
+headers: {
+    include/color2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/color2.h) dst(include/color2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

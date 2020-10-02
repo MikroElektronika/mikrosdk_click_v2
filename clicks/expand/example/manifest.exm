@@ -1,0 +1,8 @@
+{
+    "name": "Expand Click",
+    "description": "< Expand click is an accessory board in mikroBUS form factor. It includes a 16-bit I/O expander MCP23S17 with SPI clock speeds up to 10 MHz for higher throughput applications >",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MCP23S17"],
+    "category" : ["Port expander"] 
+}

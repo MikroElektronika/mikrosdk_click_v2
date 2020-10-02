@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Temperature & humidity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Thermo 8 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.thermo8",
+    "product_link": "https://www.mikroe.com/thermo-8-click",
+    "short_description": "Thermo 8 click is a very accurate thermometer Click board™, with a very high typical measurement accuracy of ±0.25°C, and great data repeatability, with drift in the range of ±0.0625°C.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

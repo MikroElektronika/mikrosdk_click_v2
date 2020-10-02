@@ -1,0 +1,8 @@
+{
+    "name": "BLE 8 Click",
+    "description": "BLE 8 Click is fully embedded stand-alone Bluetooth 5.0 Energy connectivity module, equipped with the ANNA-B112, an ultra-small, high-performing, standalone Bluetooth low energy module for easy integration of Bluetooth low energy connectivity (BLE) into various electronic devices. This module combines a high-performance Arm® Cortex®-M4 CPU microprocessor with FPU, and state-of-the-art power performance. Reliable and easy to use, BLE 8 click is a perfect solution for development of various IoT applications, smart home applications, BLE enabled toys, advanced robotics, and other similar applications.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","ANNA-B112"],
+    "category" : ["BT/BLE"] 
+}

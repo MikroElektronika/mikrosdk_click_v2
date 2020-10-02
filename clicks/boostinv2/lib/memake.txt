@@ -1,0 +1,40 @@
+type: library
+
+target: lib_boostinv2
+
+alias: Click.BoostInv2
+
+sources: {
+    src/boostinv2.c
+}
+
+headers: {
+    include/boostinv2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/boostinv2.h) dst(include/boostinv2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

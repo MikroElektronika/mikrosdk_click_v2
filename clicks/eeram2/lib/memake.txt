@@ -1,0 +1,40 @@
+type: library
+
+target: lib_eeram2
+
+alias: Click.Eeram2
+
+sources: {
+    src/eeram2.c
+}
+
+headers: {
+    include/eeram2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/eeram2.h) dst(include/eeram2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

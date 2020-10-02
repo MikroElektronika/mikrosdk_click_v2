@@ -1,0 +1,40 @@
+type: library
+
+target: lib_gsr
+
+alias: Click.Gsr
+
+sources: {
+    src/gsr.c
+}
+
+headers: {
+    include/gsr.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/gsr.h) dst(include/gsr.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

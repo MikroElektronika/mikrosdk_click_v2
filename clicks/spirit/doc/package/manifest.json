@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Sub-1 GHz Transceievers",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Spirit click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.spirit",
+    "product_link": "https://www.mikroe.com/spirit-click",
+    "short_description": "SPIRIT click carries the SP1ML 868MHz ultra low-power RF module.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

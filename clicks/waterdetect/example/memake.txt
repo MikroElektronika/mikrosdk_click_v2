@@ -1,0 +1,17 @@
+type: executable
+target: example_waterdetect
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.WaterDetect
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

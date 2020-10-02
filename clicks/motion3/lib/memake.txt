@@ -1,0 +1,40 @@
+type: library
+
+target: lib_motion3
+
+alias: Click.Motion3
+
+sources: {
+    src/motion3.c
+}
+
+headers: {
+    include/motion3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/motion3.h) dst(include/motion3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_captouch2
+
+alias: Click.CapTouch2
+
+sources: {
+    src/captouch2.c
+}
+
+headers: {
+    include/captouch2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/captouch2.h) dst(include/captouch2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

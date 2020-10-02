@@ -1,0 +1,40 @@
+type: library
+
+target: lib_rs232spi
+
+alias: Click.Rs232Spi
+
+sources: {
+    src/rs232spi.c
+}
+
+headers: {
+    include/rs232spi.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/rs232spi.h) dst(include/rs232spi.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

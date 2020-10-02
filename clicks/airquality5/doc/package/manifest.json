@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Gas",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Air quality 5 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.airquality5",
+    "product_link": "https://www.mikroe.com/air-quality-5-click",
+    "short_description": "Air quality 5 click is a triple MOS sensor on a single Click board™, which can detect gas pollution for a number of different gases. The onboard sensor is specially designed to detect the pollution from automobile exhausts, as well as the gas pollution from the industrial or agricultural industry.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

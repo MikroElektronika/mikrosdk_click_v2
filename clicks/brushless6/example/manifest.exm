@@ -1,0 +1,8 @@
+{
+    "name": "Brushless 6 Click",
+    "description": "Brushless 6 click is designed to drive a three-phase sensorless, brushless motor, also known as the BLDC motor.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","ATmega8A"],
+    "category" : ["Brushless"] 
+}

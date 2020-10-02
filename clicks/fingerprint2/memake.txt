@@ -1,0 +1,7 @@
+type: subdirs
+project: Fingerprint2
+
+subdirs: {
+    lib
+    example
+}

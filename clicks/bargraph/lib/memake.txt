@@ -1,0 +1,40 @@
+type: library
+
+target: lib_bargraph
+
+alias: Click.BarGraph
+
+sources: {
+    src/bargraph.c
+}
+
+headers: {
+    include/bargraph.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/bargraph.h) dst(include/bargraph.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

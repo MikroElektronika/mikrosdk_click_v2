@@ -1,0 +1,40 @@
+type: library
+
+target: lib_mbusmaster
+
+alias: Click.MBusMaster
+
+sources: {
+    src/mbusmaster.c
+}
+
+headers: {
+    include/mbusmaster.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/mbusmaster.h) dst(include/mbusmaster.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

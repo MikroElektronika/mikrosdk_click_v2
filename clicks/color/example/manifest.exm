@@ -1,0 +1,8 @@
+{
+    "name": "Color Click",
+    "description": "Color click is a color light sensing Click board™, featuring the popular TSC3471 integrated color sensor. It is capable of sensing red, green, and blue light components, as well as the clear light.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","TSC3471"],
+    "category" : ["Optical"] 
+}

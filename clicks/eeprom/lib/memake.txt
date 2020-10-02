@@ -1,0 +1,40 @@
+type: library
+
+target: lib_eeprom
+
+alias: Click.Eeprom
+
+sources: {
+    src/eeprom.c
+}
+
+headers: {
+    include/eeprom.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/eeprom.h) dst(include/eeprom.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

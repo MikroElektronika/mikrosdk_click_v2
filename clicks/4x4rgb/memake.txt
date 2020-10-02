@@ -1,0 +1,7 @@
+type: subdirs
+project: 4x4Rgb
+
+subdirs: {
+    lib
+    example
+}

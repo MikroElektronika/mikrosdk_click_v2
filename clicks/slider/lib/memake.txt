@@ -1,0 +1,40 @@
+type: library
+
+target: lib_slider
+
+alias: Click.Slider
+
+sources: {
+    src/slider.c
+}
+
+headers: {
+    include/slider.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/slider.h) dst(include/slider.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

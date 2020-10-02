@@ -1,0 +1,17 @@
+type: executable
+target: example_mpu9dof
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Mpu9Dof
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

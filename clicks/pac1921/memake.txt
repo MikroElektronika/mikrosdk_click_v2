@@ -1,0 +1,7 @@
+type: subdirs
+project: PAC1921
+
+subdirs: {
+    lib
+    example
+}

@@ -1,0 +1,17 @@
+type: executable
+target: example_expand
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Expand
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_lightranger4
+
+alias: Click.LightRanger4
+
+sources: {
+    src/lightranger4.c
+}
+
+headers: {
+    include/lightranger4.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/lightranger4.h) dst(include/lightranger4.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

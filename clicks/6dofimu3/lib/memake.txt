@@ -1,0 +1,40 @@
+type: library
+
+target: lib_C6dotimu3
+
+alias: Click.6Dofimu3
+
+sources: {
+    src/C6dotimu3.c
+}
+
+headers: {
+    include/C6dotimu3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/C6dotimu3.h) dst(include/C6dotimu3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

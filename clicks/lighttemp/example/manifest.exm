@@ -1,0 +1,8 @@
+{
+    "name": "Light Temp Click",
+    "description": "Light Temp Click is a dual-channel LED driver, designed to be used in tunable Smart Connected Lighting (SCL) applications.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","AL1782"],
+    "category" : ["LED Drivers"] 
+}

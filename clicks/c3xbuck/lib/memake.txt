@@ -1,0 +1,40 @@
+type: library
+
+target: lib_c3xbuck
+
+alias: Click.3xBuck
+
+sources: {
+    src/c3xbuck.c
+}
+
+headers: {
+    include/c3xbuck.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/c3xbuck.h) dst(include/c3xbuck.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

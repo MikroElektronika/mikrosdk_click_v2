@@ -1,0 +1,8 @@
+{
+    "name": "MCP2517FD Click",
+    "description": "MCP2517FD click is a complete CAN solution which carries the MCP2517FD CAN FD controller and ATA6563 high-speed CAN transceiver from Microchip, as well as a DB9 9-pin connector. The click requires both 3.3V and 5V power supply. It communicates with the target microcontroller through the SPI interface, with additional functionality provided by the following pins on the mikroBUS™ socket: AN, PWM, INT, TX, and RX.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MCP2517FD, ATA6563"],
+    "category" : ["CAN"] 
+}

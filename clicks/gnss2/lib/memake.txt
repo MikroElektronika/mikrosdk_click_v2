@@ -1,0 +1,40 @@
+type: library
+
+target: lib_gnss2
+
+alias: Click.Gnss2
+
+sources: {
+    src/gnss2.c
+}
+
+headers: {
+    include/gnss2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/gnss2.h) dst(include/gnss2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

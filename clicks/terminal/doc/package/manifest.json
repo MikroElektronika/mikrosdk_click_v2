@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Adapter",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Terminal click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.terminal",
+    "product_link": "https://www.mikroe.com/terminal-click",
+    "short_description": "Terminal click can be especially interesting for the development systems that are equipped with mikroBUS™ slots only, or small number of GPIO pins available, such as the Clicker family of development systems.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.2"
+}
+

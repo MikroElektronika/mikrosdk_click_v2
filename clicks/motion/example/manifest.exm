@@ -1,0 +1,8 @@
+{
+    "name": "MOTION Click",
+    "description": "MOTION click is a motion detector sensitive only to live bodies. It carries PIR500B, a pyroelectric sensor. The click is designed to run on 3.3V power supply only.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","PIR500B","BISS0001 PIR"],
+    "category" : ["Motion"] 
+}

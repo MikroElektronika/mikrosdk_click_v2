@@ -1,0 +1,40 @@
+type: library
+
+target: lib_balancer2
+
+alias: Click.Balancer2
+
+sources: {
+    src/balancer2.c
+}
+
+headers: {
+    include/balancer2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/balancer2.h) dst(include/balancer2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

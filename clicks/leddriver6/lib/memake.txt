@@ -1,0 +1,40 @@
+type: library
+
+target: lib_leddriver6
+
+alias: Click.Leddriver6
+
+sources: {
+    src/leddriver6.c
+}
+
+headers: {
+    include/leddriver6.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/leddriver6.h) dst(include/leddriver6.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

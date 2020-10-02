@@ -1,0 +1,8 @@
+{
+    "name": "UVC Light  Click",
+    "description": "UVC Light Click is Click board™ with ultraviolet LEDs with 275nm wavelength which can be complemented with UVC Click for measuring exact dose of UV radiation. UVC radiation refers to wavelengths shorter than 280 nm. Because of the spectral sensitivity of DNA, only the UVC region demonstrates significant germicidal properties. As evident by multiple research studies and reports, when biological organisms are exposed to deep UV light in the range of 200 nm to 300 nm it is absorbed by DNA, RNA, and proteins. With two 0.7W (1.4W combined power) UVC Light Click is a perfect solution as a small surface disinfection tool.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","3535UVC1W, TPS61169"],
+    "category" : ["LED Drivers"] 
+}

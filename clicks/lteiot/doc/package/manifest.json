@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "LTE IoT",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "LTE IoT click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.lteiot",
+    "product_link": "https://www.mikroe.com/lte-iot-click",
+    "short_description": "LTE IoT click is a Click board™ that allows connection to the LTE and 2G networks",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

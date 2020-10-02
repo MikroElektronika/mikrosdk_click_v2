@@ -1,0 +1,7 @@
+type: subdirs
+project: Buck13
+
+subdirs: {
+    lib
+    example
+}

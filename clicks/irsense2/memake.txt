@@ -1,0 +1,7 @@
+type: subdirs
+project: IrSense2
+
+subdirs: {
+    lib
+    example
+}

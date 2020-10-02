@@ -1,0 +1,40 @@
+type: library
+
+target: lib_gyro4
+
+alias: Click.Gyro4
+
+sources: {
+    src/gyro4.c
+}
+
+headers: {
+    include/gyro4.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/gyro4.h) dst(include/gyro4.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

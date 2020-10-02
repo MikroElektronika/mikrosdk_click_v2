@@ -1,0 +1,40 @@
+type: library
+
+target: lib_btez
+
+alias: Click.BtEz
+
+sources: {
+    src/btez.c
+}
+
+headers: {
+    include/btez.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/btez.h) dst(include/btez.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

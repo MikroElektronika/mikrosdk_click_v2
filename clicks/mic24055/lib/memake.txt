@@ -1,0 +1,40 @@
+type: library
+
+target: lib_mic24055
+
+alias: Click.Mic24055
+
+sources: {
+    src/mic24055.c
+}
+
+headers: {
+    include/mic24055.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/mic24055.h) dst(include/mic24055.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

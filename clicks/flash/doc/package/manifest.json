@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "FLASH",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Flash click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.flash",
+    "product_link": "https://www.mikroe.com/flash-click",
+    "short_description": "Flash Click is 8,388,608 bits (8 Mbit) on a Click board, organized into 1,048,576 bytes (1 MB). In other words, this Click board is a Flash memory medium with the capacity of 1 MB. The used Flash module has very good endurance and it can withstand up to 100,000 write cycles, with the data retention period of about 20 years.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}

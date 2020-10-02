@@ -1,0 +1,8 @@
+{
+    "name": "Charger 13 Click",
+    "description": "Charger 13 Click is a single lithium-ion (Li+) cell battery charger. This click can be used for Low-Cost Li-Ion battery chargers, or Power Tools, toys, backup energy storage solutions, etc.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","RT9532GQW"],
+    "category" : ["Battery charger"] 
+}

@@ -1,0 +1,8 @@
+{
+    "name": "RS232 2 Click",
+    "description": "The RS232 communication standard is established back in the ‘60s, but thanks to its implementation on a wide range of devices",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MAX3237E"],
+    "category" : ["RS232"] 
+}

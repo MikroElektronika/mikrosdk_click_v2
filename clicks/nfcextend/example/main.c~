@@ -1,0 +1,162 @@
+/*!
+ * \file 
+ * \brief NfcExtend Click example
+ * 
+ * # Description
+ * <DEMOAPP_DESCRIPTION>
+ *
+ * The demo application is composed of two sections :
+ * 
+ * ## Application Init 
+ * <DEMOAPP_INIT_DESCRIPTION>
+ * 
+ * ## Application Task  
+ * <DEMOAPP_TASK_DESCRIPTION>
+ * 
+ * *note:* 
+ * <NOTE>
+ * 
+ * \author MikroE Team
+ *
+ */
+// ------------------------------------------------------------------- INCLUDES
+
+#include "board.h"
+#include "log.h"
+#include "nfcextend.h"
+
+// ------------------------------------------------------------------ VARIABLES
+
+static nfcextend_t nfcextend;
+static log_t logger;
+
+uint8_t default_password[ NFCEXTEND_PASSWORD_LEN ] = { 0 };
+
+// ------------------------------------------------------- ADDITIONAL FUNCTIONS
+
+void wait_for_interrupt ( )
+{
+    uint8_t int_pin_flag;
+    uint8_t timer_counter;
+
+    int_pin_flag = nfcextend_digital_read_int( &nfcextend );
+    timer_counter = 0;
+    
+    while ( ( int_pin_flag == 1 ) && ( timer_counter <= 300 ) )
+    {
+        Delay_ms( 1 );
+        timer_counter++;
+        int_pin_flag = nfcextend_digital_read_int( &nfcextend );
+    }
+
+    if ( timer_counter <= 300 )
+    {
+        int_pin_flag = nfcextend_digital_read_int( &nfcextend );
+
+        while ( int_pin_flag == 0 )
+        {
+            int_pin_flag = nfcextend_digital_read_int( &nfcextend );
+        }
+    }
+
+    timer_counter = 0;
+}
+
+// ------------------------------------------------------ APPLICATION FUNCTIONS
+
+void application_init ( )
+{
+    log_cfg_t log_cfg;
+    nfcextend_cfg_t cfg;
+
+    uint8_t init_status_flag;
+
+    //  Logger initialization.
+
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    LOG_MAP_USB_UART( log_cfg );
+    log_init( &logger, &log_cfg );
+    Delay_ms( 500 );
+    log_info( &logger, "---- Application Init ----" );
+
+    //  Click initialization.
+
+    nfcextend_cfg_setup( &cfg );
+    NFCEXTEND_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    Delay_ms( 500 );
+    nfcextend_init( &nfcextend, &cfg );
+    Delay_ms( 500 );
+
+    nfcextend_password_present( &nfcextend, default_password );
+    Delay_100ms( );
+
+    init_status_flag = nfcextend_default_cfg( &nfcextend );
+    Delay_100ms( );
+
+    if ( 1 == init_status_flag )
+    {
+        log_printf( &logger, " * App init failed. *\r\n" );
+    }
+    else if ( 0 == init_status_flag ) 
+    {
+        log_printf( &logger, " * App init done. *\r\n" );
+    }
+    log_printf( &logger, "-----------------------\r\n" );
+}
+
+void application_task ( )
+{
+    nfcextend_block_t block;
+
+    uint8_t temp_buf[ 258 ];
+    uint8_t message_len;
+    uint8_t cnt;
+
+    block.memory_area = NFCEXTEND_MEMORY_DYNAMIC;
+    block.reg_addr = NFCEXTEND_DYNAMIC_REG_MB_CTRL;
+    block.data_buf = temp_buf;
+    block.len = 1;
+
+    wait_for_interrupt( );
+    nfcextend_i2c_get( &nfcextend, &block );
+
+    if ( ( temp_buf[ 0 ] & 0x04 ) == 0x04 )
+    {
+        block.reg_addr = NFCEXTEND_DYNAMIC_REG_MB_LEN;
+        block.data_buf = &temp_buf[ 0 ];
+
+        wait_for_interrupt( );
+        nfcextend_i2c_get( &nfcextend, &block );
+
+        message_len = temp_buf[ 0 ] + 1;
+
+        block.memory_area = NFCEXTEND_MEMORY_MAILBOX;
+        block.reg_addr = NFCEXTEND_MAILBOX_REG_BYTE_0;
+        block.data_buf = &temp_buf[ 0 ];
+        block.len = message_len;
+
+        wait_for_interrupt( );
+        nfcextend_i2c_get( &nfcextend, &block );
+
+        log_printf( &logger, " ** Message START **\r\n" );
+
+        for ( cnt = 0; cnt < message_len; cnt++ )
+        {
+            log_printf( &logger, " 0x%b\r\n", temp_buf[ cnt ] );
+        }
+
+        log_printf( &logger, " ** Message END **\r\n" );
+    }
+}
+
+void main ( )
+{
+    application_init( );
+
+    for ( ; ; )
+    {
+        application_task( );
+    }
+}
+
+// ------------------------------------------------------------------------ END

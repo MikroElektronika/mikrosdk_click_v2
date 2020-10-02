@@ -1,0 +1,40 @@
+type: library
+
+target: lib_capsense
+
+alias: Click.CapSense
+
+sources: {
+    src/capsense.c
+}
+
+headers: {
+    include/capsense.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/capsense.h) dst(include/capsense.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

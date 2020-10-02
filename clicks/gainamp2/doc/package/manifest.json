@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Amplifier",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "GainAMP 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.gainamp2",
+    "product_link": "https://www.mikroe.com/gainamp-2-click",
+    "short_description": "GainAMP 2 click is a 6-channel programmable gain amplifier, used to amplify signals on any of the 6 non-inverting input channels up to 32x, in eight discrete steps.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

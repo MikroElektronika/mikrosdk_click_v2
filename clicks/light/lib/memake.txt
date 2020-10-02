@@ -1,0 +1,40 @@
+type: library
+
+target: lib_light
+
+alias: Click.Light
+
+sources: {
+    src/light.c
+}
+
+headers: {
+    include/light.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/light.h) dst(include/light.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

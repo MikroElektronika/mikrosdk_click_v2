@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "LED Segment",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "BIG 7-SEG click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.big7seg",
+    "product_link": "https://www.mikroe.com/big-7-seg-r-click",
+    "short_description": "BIG 7-SEG click is what you need if you want to add a seven-segment LED display to your project.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

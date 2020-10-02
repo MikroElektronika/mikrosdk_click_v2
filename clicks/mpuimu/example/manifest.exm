@@ -1,0 +1,8 @@
+{
+    "name": "MPU IMU Click",
+    "description": "MPU IMU Click carries the integrated 6-axis motion tracking device that combines 3-axis gyroscope and accelerometer.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MPU-6000"],
+    "category" : ["Motion"] 
+}

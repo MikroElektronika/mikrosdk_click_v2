@@ -1,0 +1,40 @@
+type: library
+
+target: lib_environment 
+
+alias: Click.Environment
+
+sources: {
+    src/environment.c
+}
+
+headers: {
+    include/environment.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/environment.h) dst(include/environment.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

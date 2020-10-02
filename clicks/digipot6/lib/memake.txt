@@ -1,0 +1,40 @@
+type: library
+
+target: lib_digipot6
+
+alias: Click.DIGIPOT6
+
+sources: {
+    src/digipot6.c
+}
+
+headers: {
+    include/digipot6.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/digipot6.h) dst(include/digipot6.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,17 @@
+type: executable
+target: example_gainamp2
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.GainAmp2
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

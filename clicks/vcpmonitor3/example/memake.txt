@@ -1,0 +1,17 @@
+type: executable
+target: example_vcpmonitor3
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.VcpMonitor3
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

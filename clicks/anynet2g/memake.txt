@@ -1,0 +1,7 @@
+type: subdirs
+project: AnyNet2g
+
+subdirs: {
+    lib
+    example
+}

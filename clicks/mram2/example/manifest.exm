@@ -1,0 +1,8 @@
+{
+    "name": "MRAM 2 Click",
+    "description": "MRAM 2 Click is a compact add-on board for applications that must store and retrieve data and programs quickly using a small number of pins.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MR10Q010"],
+    "category" : ["MRAM"] 
+}

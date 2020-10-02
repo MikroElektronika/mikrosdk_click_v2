@@ -1,0 +1,7 @@
+type: subdirs
+project: 9dof2
+
+subdirs: {
+    lib
+    example
+}

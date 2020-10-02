@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Motion",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Accel 5 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.accel5",
+    "product_link": "https://www.mikroe.com/accel-5-click",
+    "short_description": "Accel 5 click features an ultra-low power triaxial accelerometer sensor, labeled as the BMA400. This Click board™ allows linear motion and gravitational force measurements in ranges of ±2 g, ±4 g, ±8, and ±16 g in three perpendicular axes.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

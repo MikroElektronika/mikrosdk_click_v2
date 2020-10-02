@@ -1,0 +1,8 @@
+{
+    "name": "Compass Click",
+    "description": "Compass click is an add-on board in mikroBUS form factor. It features LSM303DLHC ultra compact high performance e-compass module.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","LSM303DLHC"],
+    "category" : ["Magnetic"] 
+}

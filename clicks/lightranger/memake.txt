@@ -1,0 +1,7 @@
+type: subdirs
+project: LightRanger
+
+subdirs: {
+    lib
+    example
+}

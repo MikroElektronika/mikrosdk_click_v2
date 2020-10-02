@@ -1,0 +1,40 @@
+type: library
+
+target: lib_opto3
+
+alias: Click.Opto3
+
+sources: {
+    src/opto3.c
+}
+
+headers: {
+    include/opto3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/opto3.h) dst(include/opto3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

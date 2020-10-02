@@ -1,0 +1,8 @@
+{
+  "name": "Ambient 5 Click",
+  "description": "Ambient 5 click can sense the intensity of the ambient light, providing measurement data in a digital format, over the I2C interface. It utilizes the VEML6030, a miniature ambient light sensor (ALS) which occupies only 2x2 mm of space. ",
+  "image": "../../Resources/click_icon.png",
+  "toolchain": ["mikrocarm","mikrocpic"],
+  "hw": [ "click", "VEML6030" ],
+  "category": [ "Optical" ]
+}

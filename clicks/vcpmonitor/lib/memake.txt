@@ -1,0 +1,40 @@
+type: library
+
+target: lib_vcpmonitor
+
+alias: Click.VCPmonitor
+
+sources: {
+    src/vcpmonitor.c
+}
+
+headers: {
+    include/vcpmonitor.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/vcpmonitor.h) dst(include/vcpmonitor.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

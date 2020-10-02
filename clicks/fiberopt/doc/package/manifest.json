@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Fiber optics",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Fiber Opt click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.fiberopt",
+    "product_link": "https://www.mikroe.com/fiber-opt-33v-click",
+    "short_description": "Fiber Opt click is a compact and easy solution for adding fiber-optic communication to your design. It features IF-D91 fiber-optic photodiode, IF-E97 fiber-optic LED diode as well as two operational amplifiers.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

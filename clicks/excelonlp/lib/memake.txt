@@ -1,0 +1,40 @@
+type: library
+
+target: lib_excelonlp
+
+alias: Click.ExcelonLP
+
+sources: {
+    src/excelonlp.c
+}
+
+headers: {
+    include/excelonlp.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/excelonlp.h) dst(include/excelonlp.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

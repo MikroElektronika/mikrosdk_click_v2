@@ -1,0 +1,7 @@
+type: subdirs
+project: IrReflect
+
+subdirs: {
+    lib
+    example
+}

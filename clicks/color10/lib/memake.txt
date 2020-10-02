@@ -1,0 +1,40 @@
+type: library
+
+target: lib_color10
+
+alias: Click.Color10
+
+sources: {
+    src/color10.c
+}
+
+headers: {
+    include/color10.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/color10.h) dst(include/color10.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

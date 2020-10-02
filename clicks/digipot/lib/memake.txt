@@ -1,0 +1,40 @@
+type: library
+
+target: lib_digipot
+
+alias: Click.DigiPot
+
+sources: {
+    src/digipot.c
+}
+
+headers: {
+    include/digipot.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/digipot.h) dst(include/digipot.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

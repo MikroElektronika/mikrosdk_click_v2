@@ -1,0 +1,7 @@
+type: subdirs
+project: OPTO4
+
+subdirs: {
+    lib
+    example
+}

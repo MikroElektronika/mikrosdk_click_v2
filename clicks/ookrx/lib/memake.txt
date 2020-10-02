@@ -1,0 +1,40 @@
+type: library
+
+target: lib_ookrx
+
+alias: Click.OOKRX
+
+sources: {
+    src/ookrx.c
+}
+
+headers: {
+    include/ookrx.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/ookrx.h) dst(include/ookrx.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

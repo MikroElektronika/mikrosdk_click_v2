@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Miscellaneous",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Thunder click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.thunder",
+    "product_link": "https://www.mikroe.com/thunder-click",
+    "short_description": "Thunder click features AS3935 lightning sensor as well as MA5532 coil antenna. It detects the presence and proximity of potentially hazardous lightning activity in the vicinity and provides estimated distance to the center of the storm. It can also provide information on the noise level. Thunder click communicates with the target board microcontroller via SPI and INT lines. The board is designed to use 3.3V or 5V power supply. LED diode (GREEN) indicates the presence of power supply.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

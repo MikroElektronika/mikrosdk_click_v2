@@ -1,0 +1,40 @@
+type: library
+
+target: lib_pixi
+
+alias: Click.Pixi
+
+sources: {
+    src/pixi.c
+}
+
+headers: {
+    include/pixi.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/pixi.h) dst(include/pixi.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

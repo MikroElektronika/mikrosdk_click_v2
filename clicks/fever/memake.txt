@@ -1,0 +1,7 @@
+type: subdirs
+project: Fever
+
+subdirs: {
+    lib
+    example
+}

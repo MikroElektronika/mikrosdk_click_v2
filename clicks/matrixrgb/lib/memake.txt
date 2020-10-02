@@ -1,0 +1,40 @@
+type: library
+
+target: lib_matrixrgb
+
+alias: Click.MatrixRgb
+
+sources: {
+    src/matrixrgb.c
+}
+
+headers: {
+    include/matrixrgb.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/matrixrgb.h) dst(include/matrixrgb.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

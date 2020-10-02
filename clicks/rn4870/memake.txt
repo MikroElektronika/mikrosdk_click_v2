@@ -1,0 +1,7 @@
+type: subdirs
+project: Rn4870
+
+subdirs: {
+    lib
+    example
+}

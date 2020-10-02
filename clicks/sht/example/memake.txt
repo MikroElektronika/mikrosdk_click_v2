@@ -1,0 +1,17 @@
+type: executable
+target: example_sht
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Sht
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

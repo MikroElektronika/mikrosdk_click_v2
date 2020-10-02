@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Boost",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Boost 6 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.boost6",
+    "product_link": "https://www.mikroe.com/boost-6-click",
+    "short_description": "The Boost 6 Click is a Click board™ which features the TPS55332-Q1, a monolithic high-voltage switching regulator with integrated 3-A, 60-V power MOSFET.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

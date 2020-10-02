@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Amplifier",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "StereoAmp click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.stereoamp",
+    "product_link": "https://www.mikroe.com/stereoamp-click",
+    "short_description": "This is an example which demonstrates the use of StereoAmp Click board - stereo amplifier and is ideal for battery operated devices or as a lab amplifier.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

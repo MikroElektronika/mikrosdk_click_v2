@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "PWM",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "PWM click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.pwm",
+    "product_link": "https://www.mikroe.com/pwm-click",
+    "short_description": "PWM click is a simple solution for controlling 16 PWM outputs through a single I2C interface. You can use it to control anything from a simple LED strip to a complex robot with a multitude of moving parts.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

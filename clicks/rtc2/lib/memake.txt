@@ -1,0 +1,40 @@
+type: library
+
+target: lib_rtc2
+
+alias: Click.Rtc2
+
+sources: {
+    src/rtc2.c
+}
+
+headers: {
+    include/rtc2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/rtc2.h) dst(include/rtc2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_llci2c
+
+alias: Click.LlcI2c
+
+sources: {
+    src/llci2c.c
+}
+
+headers: {
+    include/llci2c.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/llci2c.h) dst(include/llci2c.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

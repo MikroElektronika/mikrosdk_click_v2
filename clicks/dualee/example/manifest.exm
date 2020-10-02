@@ -1,0 +1,8 @@
+{
+    "name": "Dual EE Click",
+    "description": "Dual EE Click contains two AT24CM02 EEPROM ICs onboard which gives total of 4MB of memory. Each memory IC can be addressed through the I2C interface with the transfer speed of 400KHz.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","AT24CM02 – 2 Mbit"],
+    "category" : ["EEPROM"] 
+}

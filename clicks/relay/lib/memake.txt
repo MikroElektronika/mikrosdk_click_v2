@@ -1,0 +1,40 @@
+type: library
+
+target: lib_relay
+
+alias: Click.Relay
+
+sources: {
+    src/relay.c
+}
+
+headers: {
+    include/relay.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/relay.h) dst(include/relay.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

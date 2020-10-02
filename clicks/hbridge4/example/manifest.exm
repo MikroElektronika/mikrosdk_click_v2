@@ -1,0 +1,8 @@
+{
+    "name": "H-Bridge 4 Click",
+    "description": "H-Bridge 4 Click is a Click board™ that contains the AP1010AEN, which is a two channel H-Bridge motor driver compatible with a motor operating voltage up to 18V and can drive two DC motors or one stepper motor.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","AP1010AEN"],
+    "category" : ["Stepper, Brushed"] 
+}

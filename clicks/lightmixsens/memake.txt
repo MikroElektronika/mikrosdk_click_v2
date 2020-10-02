@@ -1,0 +1,7 @@
+type: subdirs
+project: LightMixSens
+
+subdirs: {
+    lib
+    example
+}

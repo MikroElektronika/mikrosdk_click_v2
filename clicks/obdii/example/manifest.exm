@@ -1,0 +1,8 @@
+{
+    "name": "OBDII Click",
+    "description": "OBDII click offers a unique opportunity to tap into the car diagnostic systems. ",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","STN1110"],
+    "category" : ["CAN"] 
+}

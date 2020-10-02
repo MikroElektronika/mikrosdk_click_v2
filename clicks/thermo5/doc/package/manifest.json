@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Temperature & humidity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "THERMO 5 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.thermo5",
+    "product_link": "https://www.mikroe.com/thermo-5-click",
+    "short_description": "THERMO 5 click measures temperature in default range of 0°C to 127°C and extended range of -64°C to 191°C with ±1°C accuracy. It carries the EMC1414 temperature sensor.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

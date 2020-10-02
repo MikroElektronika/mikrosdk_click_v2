@@ -1,0 +1,40 @@
+type: library
+
+target: lib_leddriver7
+
+alias: Click.LedDriver7
+
+sources: {
+    src/leddriver7.c
+}
+
+headers: {
+    include/leddriver7.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/leddriver7.h) dst(include/leddriver7.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

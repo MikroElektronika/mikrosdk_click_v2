@@ -1,0 +1,8 @@
+{
+    "name": "AnyNet 2G Click",
+    "description": "AnyNet 2G Click is a cellular to AWS gateway device, which provides developers with the complete solution for various IoT applications",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","PIC18F67J11"],
+    "category" : ["GSM/LTE,Cloud Routers,2G GPRS"] 
+}

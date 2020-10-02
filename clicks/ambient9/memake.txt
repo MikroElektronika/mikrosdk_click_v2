@@ -1,0 +1,7 @@
+type: subdirs
+project: Ambient9
+
+subdirs: {
+    lib
+    example
+}

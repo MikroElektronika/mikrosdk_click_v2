@@ -1,0 +1,7 @@
+type: subdirs
+project: IrEclipse
+
+subdirs: {
+    lib
+    example
+}

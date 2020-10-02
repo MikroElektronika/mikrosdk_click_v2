@@ -1,0 +1,40 @@
+type: library
+
+target: lib_nbiot
+
+alias: Click.NbIot
+
+sources: {
+    src/nbiot.c
+}
+
+headers: {
+    include/nbiot.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/nbiot.h) dst(include/nbiot.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

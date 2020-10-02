@@ -1,0 +1,7 @@
+type: subdirs
+project: Color3
+
+subdirs: {
+    lib
+    example
+}

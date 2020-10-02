@@ -1,0 +1,8 @@
+{
+    "name": "LTE Cat.1 Click",
+    "description": "LTE Cat.1-EU click is a Click board™ based on Thales Cinterion® ELS61 wireless module that delivers highly efficient Cat 1 LTE connectivity.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","ELS61"],
+    "category" : ["GSM/LTE"] 
+}

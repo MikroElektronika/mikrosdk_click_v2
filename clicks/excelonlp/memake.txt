@@ -1,0 +1,7 @@
+type: subdirs
+project: ExcelonLP
+
+subdirs: {
+    lib
+    example
+}

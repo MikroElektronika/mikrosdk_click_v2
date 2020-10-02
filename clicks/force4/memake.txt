@@ -1,0 +1,7 @@
+type: subdirs
+project: Force4
+
+subdirs: {
+    lib
+    example
+}

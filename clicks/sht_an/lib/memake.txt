@@ -1,0 +1,40 @@
+type: library
+
+target: lib_shtan
+
+alias: Click.ShtAn
+
+sources: {
+    src/shtan.c
+}
+
+headers: {
+    include/shtan.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/shtan.h) dst(include/shtan.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_gnss3
+
+alias: Click.Gnss3
+
+sources: {
+    src/gnss3.c
+}
+
+headers: {
+    include/gnss3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/gnss3.h) dst(include/gnss3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_anynet2g
+
+alias: Click.AnyNet2g
+
+sources: {
+    src/anynet2g.c
+}
+
+headers: {
+    include/anynet2g.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/anynet2g.h) dst(include/anynet2g.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

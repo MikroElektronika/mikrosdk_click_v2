@@ -1,0 +1,7 @@
+type: subdirs
+project: StepUp
+
+subdirs: {
+    lib
+    example
+}

@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Pushbutton/Switches",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Tamper 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.tamper2",
+    "product_link": "https://www.mikroe.com/tamper-2-click",
+    "short_description": "Tamper 2 click contains a levered D2HW-A221D switch by Omron, which outputs signal in both positions - pressed and released.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

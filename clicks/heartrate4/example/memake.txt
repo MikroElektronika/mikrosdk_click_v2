@@ -1,0 +1,17 @@
+type: executable
+target: example_heartrate4
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.HeartRate4
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

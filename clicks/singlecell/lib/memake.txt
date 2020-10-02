@@ -1,0 +1,40 @@
+type: library
+
+target: lib_singlecell
+
+alias: Click.SingleCell
+
+sources: {
+    src/singlecell.c
+}
+
+headers: {
+    include/singlecell.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/singlecell.h) dst(include/singlecell.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

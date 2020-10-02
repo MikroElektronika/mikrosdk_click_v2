@@ -1,0 +1,8 @@
+{
+    "name": "Air quality 3 Click",
+    "description": "Air quality 3 click is the air quality measurement device, which is able to output both equivalent CO2 levels and total volatile organic compounds (TVOC) concentration in the indoor environment.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","CCS811"],
+    "category" : ["Air Quality","Gas"] 
+}

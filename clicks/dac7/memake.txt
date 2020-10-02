@@ -1,0 +1,7 @@
+type: subdirs
+project: Dac7
+
+subdirs: {
+    lib
+    example
+}

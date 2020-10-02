@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "LED Drivers",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "LED Driver 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.leddriver2",
+    "product_link": "https://www.mikroe.com/led-driver-2-click",
+    "short_description": "LED driver 2 click carries the MCP1643 - LED constant current regulator, made by Microchip. It is a compact, high-efficiency, fixed frequency, synchronous step-up converter, optimized to drive one LED with the constant current.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

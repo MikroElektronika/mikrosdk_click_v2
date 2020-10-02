@@ -1,0 +1,40 @@
+type: library
+
+target: lib_c2x2key
+
+alias: Click.2x2key
+
+sources: {
+    src/c2x2key.c
+}
+
+headers: {
+    include/c2x2key.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/c2x2key.h) dst(include/c2x2key.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

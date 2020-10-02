@@ -1,0 +1,7 @@
+type: subdirs
+project: WifiEsp
+
+subdirs: {
+    lib
+    example
+}

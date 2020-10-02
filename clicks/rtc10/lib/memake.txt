@@ -1,0 +1,40 @@
+type: library
+
+target: lib_rtc10
+
+alias: Click.Rtc10
+
+sources: {
+    src/rtc10.c
+}
+
+headers: {
+    include/rtc10.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/rtc10.h) dst(include/rtc10.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Buck",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Buck 14",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.buck14",
+    "product_link": "https://www.mikroe.com/buck-14-click",
+    "short_description": "The Buck 14 Click is a Click board™ based around the BMR4613001/001, a PoL regulator from Flex. It's high-efficiency step-down converter which provides a highly regulated output voltage derived from the connected power source, rated from 4.5 to 14V.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

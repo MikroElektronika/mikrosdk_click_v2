@@ -1,0 +1,7 @@
+type: subdirs
+project: CapTouch2
+
+subdirs: {
+    lib
+    example
+}

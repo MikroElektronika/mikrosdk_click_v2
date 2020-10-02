@@ -1,0 +1,17 @@
+type: executable
+target: example_boost
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Boost
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

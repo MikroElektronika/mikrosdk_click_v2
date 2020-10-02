@@ -1,0 +1,7 @@
+type: subdirs
+project: 6DofImu11
+
+subdirs: {
+    lib
+    example
+}

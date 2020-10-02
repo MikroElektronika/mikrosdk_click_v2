@@ -1,0 +1,17 @@
+type: executable
+target: example_gsm
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Gsm
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

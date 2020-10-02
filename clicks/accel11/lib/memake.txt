@@ -1,0 +1,40 @@
+type: library
+
+target: lib_accel11
+
+alias: Click.Accel11
+
+sources: {
+    src/accel11.c
+}
+
+headers: {
+    include/accel11.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/accel11.h) dst(include/accel11.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Electronic Paper Display",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "eINK 290 Inch",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.eink_290inch",
+    "product_link": "https://www.mikroe.com/eink-click",
+    "short_description": "eINK click is an adapter Click board™, used to interface a compatible eINK display with the host MCU. ",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

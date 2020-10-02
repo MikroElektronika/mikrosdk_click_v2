@@ -1,0 +1,40 @@
+type: library
+
+target: lib_tilt
+
+alias: Click.Tilt
+
+sources: {
+    src/tilt.c
+}
+
+headers: {
+    include/tilt.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/tilt.h) dst(include/tilt.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

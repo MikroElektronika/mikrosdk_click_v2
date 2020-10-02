@@ -1,0 +1,8 @@
+{
+    "name": "GSM 2 Click",
+    "description": "GSM2 click is a compact quad-band GSM cellular network communication solution, featuring the GSM/GPRS Quectel M95.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","Quectel M95 FA GSM/GPRS"],
+    "category" : ["GSM/LTE,2G GPRS"] 
+}

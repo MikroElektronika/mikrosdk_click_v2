@@ -1,0 +1,7 @@
+type: subdirs
+project: Leddriver6
+
+subdirs: {
+    lib
+    example
+}

@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "LTE IoT",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "5G NB IoT click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.c5gnbiot",
+    "product_link": "https://www.mikroe.com/5g-nb-iot-click",
+    "short_description": "5G NB IoT Click is a Click board™ based on Gemalto's Cinterion® ENS22 NB-IoT Wireless Module platform that boosts highly efficient future 5G connectivity for the IoT.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

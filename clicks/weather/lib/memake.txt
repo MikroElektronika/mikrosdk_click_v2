@@ -1,0 +1,40 @@
+type: library
+
+target: lib_weather
+
+alias: Click.Weather
+
+sources: {
+    src/weather.c
+}
+
+headers: {
+    include/weather.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/weather.h) dst(include/weather.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_oledbw
+
+alias: Click.OledBW
+
+sources: {
+    src/oledbw.c
+}
+
+headers: {
+    include/oledbw.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/oledbw.h) dst(include/oledbw.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

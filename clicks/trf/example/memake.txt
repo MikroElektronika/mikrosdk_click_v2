@@ -1,0 +1,17 @@
+type: executable
+target: example_trf
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Trf
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

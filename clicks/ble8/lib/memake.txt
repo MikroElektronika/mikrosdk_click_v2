@@ -1,0 +1,40 @@
+type: library
+
+target: lib_ble8
+
+alias: Click.Ble8
+
+sources: {
+    src/ble8.c
+}
+
+headers: {
+    include/ble8.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/ble8.h) dst(include/ble8.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

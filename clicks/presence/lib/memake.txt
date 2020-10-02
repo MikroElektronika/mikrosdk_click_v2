@@ -1,0 +1,40 @@
+type: library
+
+target: lib_presence
+
+alias: Click.Presence
+
+sources: {
+    src/presence.c
+}
+
+headers: {
+    include/presence.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/presence.h) dst(include/presence.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

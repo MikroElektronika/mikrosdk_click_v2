@@ -1,0 +1,8 @@
+{
+    "name": "SOLAR ENERGY Click",
+    "description": "There are many battery chargers and solar energy harvesters out there already, but the Solar energy click has the unique feature - it encompasses both of these devices in a single package. The click uses Texas Instruments BQ25570 - a nano-power high-efficiency boost charger and buck converter device, designed to work with very low power energy harvesting elements, such as the photovoltaic and thermoelectric generators",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","BQ25570"],
+    "category" : ["Battery charger,Solar Charger"] 
+}

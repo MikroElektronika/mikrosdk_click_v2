@@ -1,0 +1,7 @@
+type: subdirs
+project: DigiPot3
+
+subdirs: {
+    lib
+    example
+}

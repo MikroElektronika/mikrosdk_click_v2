@@ -1,0 +1,7 @@
+type: subdirs
+project: Dht22
+
+subdirs: {
+    lib
+    example
+}

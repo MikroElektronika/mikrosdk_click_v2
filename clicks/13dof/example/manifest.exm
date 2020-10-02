@@ -1,0 +1,8 @@
+{
+    "name": "13DOF Click",
+    "description": "13DOF Click is an advanced 13-axis motion tracking Click board™, which utilizes three different sensor ICs onboard: BME680, a digital gas, humidity, pressure and temperature sensor and BMM150, a geomagnetic sensor and a BMI088, small, versatile 6DoF sensor module. All integrated sensors ICs are made by Bosch Sensortec, featuring the state-of-the-art sensor technology processes, in order to fulfill the requirements for immersive gaming and navigation applications, which require highly accurate sensor data fusion.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","BME680, BMM150, BMI088"],
+    "category" : ["Motion"] 
+}

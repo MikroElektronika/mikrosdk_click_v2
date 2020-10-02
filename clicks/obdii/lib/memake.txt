@@ -1,0 +1,40 @@
+type: library
+
+target: lib_obdii
+
+alias: Click.Obdii
+
+sources: {
+    src/obdii.c
+}
+
+headers: {
+    include/obdii.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/obdii.h) dst(include/obdii.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

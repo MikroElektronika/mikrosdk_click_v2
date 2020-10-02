@@ -1,0 +1,40 @@
+type: library
+
+target: lib_uwbtransceiver
+
+alias: Click.UwbTransceiver
+
+sources: {
+    src/uwbtransceiver.c
+}
+
+headers: {
+    include/uwbtransceiver.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/uwbtransceiver.h) dst(include/uwbtransceiver.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

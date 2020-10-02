@@ -1,0 +1,17 @@
+type: executable
+target: example_buttong
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.ButtonG
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

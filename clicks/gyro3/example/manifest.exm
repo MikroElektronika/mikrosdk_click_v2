@@ -1,0 +1,8 @@
+{
+    "name": "Gyro 3 Click",
+    "description": "Gyro 3 click is a three-axis gyroscope Click board™ that can sense motion over three perpendicular axes. It is equipped with the I3G4250, a three-axis digital gyroscope. ",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","I3G4250"],
+    "category" : ["Motion"] 
+}

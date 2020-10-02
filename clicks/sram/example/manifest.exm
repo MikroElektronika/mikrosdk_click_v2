@@ -1,0 +1,8 @@
+{
+    "name": "SRAM Click",
+    "description": "SRAM Click presents additional 1Mbit SRAM memory that can be added to device.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","23LC1024 "],
+    "category" : ["SRAM"] 
+}

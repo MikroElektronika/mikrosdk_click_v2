@@ -1,0 +1,8 @@
+{
+    "name": "GSM Click",
+    "description": "GSM click is a compact and powerful GSM cellular network communication solution, featuring the GSM/GPRS Telit GL865-QUAD module.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","GL865-QUAD GSM/GPRS"],
+    "category" : ["GSM/LTE,2G GPRS"] 
+}

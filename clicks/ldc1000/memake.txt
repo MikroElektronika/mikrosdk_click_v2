@@ -1,0 +1,7 @@
+type: subdirs
+project: Ldc1000
+
+subdirs: {
+    lib
+    example
+}

@@ -1,0 +1,17 @@
+type: executable
+target: example_mcp2542
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Mcp2542
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

@@ -1,0 +1,115 @@
+/*!
+ * \file 
+ * \brief Brushless Click example
+ * 
+ * # Description
+ * <DEMOAPP_DESCRIPTION>
+ *
+ * The demo application is composed of two sections :
+ * 
+ * ## Application Init 
+ * <DEMOAPP_INIT_DESCRIPTION>
+ * 
+ * ## Application Task  
+ * <DEMOAPP_TASK_DESCRIPTION>
+ * 
+ * *note:* 
+ * <NOTE>
+ * 
+ * \author MikroE Team
+ *
+ */
+// ------------------------------------------------------------------- INCLUDES
+
+#include "board.h"
+#include "log.h"
+#include "brushless.h"
+
+// ------------------------------------------------------------------ VARIABLES
+
+static brushless_t brushless;
+static log_t logger;
+
+static pwm_data_t duty_cycle = 800;
+
+// ------------------------------------------------------- ADDITIONAL FUNCTIONS
+
+static void clockwise ( )
+{
+    log_printf( &logger, "------------------------------" );
+    log_printf( &logger, " * Clockwise *\r\n" );
+    brushless_spin_clockwise( &brushless );
+    Delay_1sec( );
+
+    for( duty_cycle = 500; duty_cycle < brushless.pwm_period; duty_cycle += 250 )
+    {
+        brushless_set_duty_cycle( &brushless, duty_cycle );
+        log_printf( &logger, " * > *\r\n" );
+        Delay_1sec( );
+    }
+}
+
+static void counter_clockwise ( )
+{
+    log_printf( &logger, "------------------------------" );
+    log_printf( &logger, " * Counter clockwise *\r\n" );
+    brushless_spin_counter_clockwise( &brushless );
+    Delay_1sec( );
+
+    for( duty_cycle = brushless.pwm_period; duty_cycle > 500; duty_cycle -= 250 )
+    {
+        dcmotor2_set_duty_cycle( &brushless, duty_cycle );
+        log_printf( &logger, " * < *\r\n" );
+        Delay_1sec( );
+    }
+}
+
+// ------------------------------------------------------ APPLICATION FUNCTIONS
+
+void application_init ( )
+{
+    log_cfg_t log_cfg;
+    brushless_cfg_t cfg;
+
+    //  Logger initialization.
+
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    LOG_MAP_USB_UART( log_cfg );
+    log_init( &logger, &log_cfg );
+    log_info( &logger, "---- Application Init ----" );
+    Delay_100ms( );
+
+    //  Click initialization.
+
+    brushless_cfg_setup( &cfg );
+    BRUSHLESS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    Delay_100ms( );
+    brushless_init( &brushless, &cfg );
+    brushless_pwm_start( &brushless );
+    Delay_1sec( );
+}
+
+void application_task ( )
+{
+    adc4_data_t tmp;
+    
+    if ( duty_cycle > brushless.pwm_period )
+    {
+        duty_cycle = 0;
+    }
+
+    clockwise( );
+    counter_clockwise( );
+}
+
+void main ( )
+{
+    application_init( );
+
+    for ( ; ; )
+    {
+        application_task( );
+    }
+}
+
+// ------------------------------------------------------------------------ END

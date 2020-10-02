@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Proximity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "PROXIMITY 7 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.proximity7",
+    "product_link": "https://www.mikroe.com/proximity-7-click",
+    "short_description": "Proximity 7 click is an advanced proximity and ambient light sensing Click board™. It features the ADPS9930, a digital sensor IC equipped with two photodiodes (PD) and an IR LED, driven by a proprietary LED driver circuit. It allows an accurate proximity detection for a maximum distance of 100mm.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

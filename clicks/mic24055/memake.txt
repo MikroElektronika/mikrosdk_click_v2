@@ -1,0 +1,7 @@
+type: subdirs
+project: Mic24055
+
+subdirs: {
+    lib
+    example
+}

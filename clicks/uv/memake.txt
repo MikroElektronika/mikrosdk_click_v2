@@ -1,0 +1,7 @@
+type: subdirs
+project: Uv
+
+subdirs: {
+    lib
+    example
+}

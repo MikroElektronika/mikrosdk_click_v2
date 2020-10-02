@@ -1,0 +1,7 @@
+type: subdirs
+project: CapExtend
+
+subdirs: {
+    lib
+    example
+}

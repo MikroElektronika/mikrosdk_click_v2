@@ -1,0 +1,7 @@
+type: subdirs
+project: Counter
+
+subdirs: {
+    lib
+    example
+}

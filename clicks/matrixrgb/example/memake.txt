@@ -1,0 +1,17 @@
+type: executable
+target: example_matrixrgb
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.MatrixRgb
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

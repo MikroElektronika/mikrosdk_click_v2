@@ -1,0 +1,8 @@
+{
+    "name": "I2C MUX Click",
+    "description": "I2C MUX Click is an quad bidirectional translating I2C and SMBus switch with reset function, intended for applications with I2C slave address conflicts (multiple, identical temp sensors). It features a quad bidirectional translating switch controlled via the I2C bus, labeled as TCA9546A from Texas Instruments. Click has three address jumpers, allowing up to eight TCA9546A devices on the same bus. I2C MUX click allows voltage translation between 1.8V, 2.5V, 3.3V, and 5V buses, and also supports hot insertion.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","TCA9546A"],
+    "category" : ["I2C"] 
+}

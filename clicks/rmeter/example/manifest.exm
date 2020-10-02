@@ -1,0 +1,8 @@
+{
+    "name": "R Meter Click",
+    "description": "R Meter click is a mikroBUS add-on board with circuitry for measuring the value of resistors.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","AD8616"],
+    "category" : ["Measurements"] 
+}

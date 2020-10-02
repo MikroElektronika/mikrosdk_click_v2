@@ -1,0 +1,40 @@
+type: library
+
+target: lib_eink_290inch
+
+alias: Click.Eink290Inch
+
+sources: {
+    src/eink_290inch.c
+}
+
+headers: {
+    include/eink_290inch.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/eink_290inch.h) dst(include/eink_290inch.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

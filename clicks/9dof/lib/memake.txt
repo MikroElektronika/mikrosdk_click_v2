@@ -1,0 +1,40 @@
+type: library
+
+target: lib_c9dof
+
+alias: Click.9Dof
+
+sources: {
+    src/c9dof.c
+}
+
+headers: {
+    include/c9dof.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/c9dof.h) dst(include/c9dof.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

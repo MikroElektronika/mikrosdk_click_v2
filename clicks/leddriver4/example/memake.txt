@@ -1,0 +1,17 @@
+type: executable
+target: example_leddriver4
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.LedDriver4
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

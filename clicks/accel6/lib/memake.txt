@@ -1,0 +1,40 @@
+type: library
+
+target: lib_accel6
+
+alias: Click.Accel6
+
+sources: {
+    src/accel6.c
+}
+
+headers: {
+    include/accel6.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/accel6.h) dst(include/accel6.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

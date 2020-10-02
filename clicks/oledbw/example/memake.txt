@@ -1,0 +1,21 @@
+type: executable
+target: example_oledbw
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.OledBW
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}
+
+headers: {
+    resources.h
+}

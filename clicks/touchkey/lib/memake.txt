@@ -1,0 +1,40 @@
+type: library
+
+target: lib_touchkey
+
+alias: Click.TouchKey
+
+sources: {
+    src/touchkey.c
+}
+
+headers: {
+    include/touchkey.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/touchkey.h) dst(include/touchkey.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

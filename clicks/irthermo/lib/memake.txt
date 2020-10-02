@@ -1,0 +1,40 @@
+type: library
+
+target: lib_irthermo
+
+alias: Click.IrThermo
+
+sources: {
+    src/irthermo.c
+}
+
+headers: {
+    include/irthermo.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/irthermo.h) dst(include/irthermo.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,8 @@
+{
+    "name": "Accel 12 Click",
+    "description": "Accel 12 click is an advanced 3-axis motion tracking Click board™, which utilizes the MC3216, a low-noise, and low power 3-axis accelerometer.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MC3216"],
+    "category" : ["Acceleration,Motion"] 
+}

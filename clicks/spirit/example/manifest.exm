@@ -1,0 +1,8 @@
+{
+    "name": "Spirit Click",
+    "description": "SPIRIT click carries the SP1ML 868MHz ultra low-power RF module.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","TXB0106"],
+    "category" : ["Sub-1 GHz Transceievers"] 
+}

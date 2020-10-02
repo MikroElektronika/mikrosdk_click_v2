@@ -1,0 +1,32 @@
+{
+  "architecture": "ARM",
+  "category": "Linear",
+  "changelog": "Resources/CHANGELOG.md",
+  "contains": [
+    "libraries",
+    "hex_files",
+    "examples"
+  ],
+  "dependency_list": [
+  ],
+  "details": "Resources/DETAILS.md",
+  "display_name": "Nano Power 2 click",
+  "example_list": [
+    {
+      "project_path": "Examples/example"
+    }
+  ],
+  "help": "Help/doc",
+  "icon": "Resources/click_icon.png",
+  "license": {
+    "file_path": "",
+    "id": "46"
+  },
+  "name": "mikroe.click.nanopower2",
+  "product_link": "https://www.mikroe.com/nano-power-2-click",
+  "short_description": "Nano Power 2 click is a very low power voltage comparator, aimed at portable and battery-powered applications. It allows detecting a difference of two voltage potentials, applied on two input pins. ",
+  "supported_compiler": "mikroC",
+  "type": "Library",
+  "version": "2.0.0.1"
+}
+

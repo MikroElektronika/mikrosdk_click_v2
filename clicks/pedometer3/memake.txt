@@ -1,0 +1,7 @@
+type: subdirs
+project: Pedometer3
+
+subdirs: {
+    lib
+    example
+}

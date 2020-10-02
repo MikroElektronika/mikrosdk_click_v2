@@ -1,0 +1,40 @@
+type: library
+
+target: lib_ammonia
+
+alias: Click.Ammonia
+
+sources: {
+    src/ammonia.c
+}
+
+headers: {
+    include/ammonia.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/ammonia.h) dst(include/ammonia.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

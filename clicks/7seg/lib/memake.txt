@@ -1,0 +1,40 @@
+type: library
+
+target: lib_c7seg
+
+alias: Click.7seg
+
+sources: {
+    src/c7seg.c
+}
+
+headers: {
+    include/c7seg.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/c7seg.h) dst(include/c7seg.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

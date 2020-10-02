@@ -1,0 +1,8 @@
+{
+    "name": "Gyro Click",
+    "description": "Gyro click is an add-on board in mikroBUS form factor. It features L3GD20 three-axis digital gyroscope module capable of providing the measured angular rate, as well as ambient temperature.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","L3GD20"],
+    "category" : ["Motion"] 
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_rn4871
+
+alias: Click.Rn4871
+
+sources: {
+    src/rn4871.c
+}
+
+headers: {
+    include/rn4871.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/rn4871.h) dst(include/rn4871.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

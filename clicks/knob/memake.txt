@@ -1,0 +1,7 @@
+type: subdirs
+project: Knob
+
+subdirs: {
+    lib
+    example
+}

@@ -1,0 +1,7 @@
+type: subdirs
+project: UartMux
+
+subdirs: {
+    lib
+    example
+}

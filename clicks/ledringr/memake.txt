@@ -1,0 +1,7 @@
+type: subdirs
+project: LedringR
+
+subdirs: {
+    lib
+    example
+}

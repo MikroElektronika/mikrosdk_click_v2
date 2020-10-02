@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Current sensor",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "AMR Current click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.amrcurent",
+    "product_link": "https://www.mikroe.com/amr-current-click",
+    "short_description": "<The AMR current Click is product is ±20A fully integrated bi-directional analog output current sensors that deliver both high accuracy and high bandwidth.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

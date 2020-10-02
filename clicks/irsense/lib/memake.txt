@@ -1,0 +1,40 @@
+type: library
+
+target: lib_irsense
+
+alias: Click.IrSense
+
+sources: {
+    src/irsense.c
+}
+
+headers: {
+    include/irsense.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/irsense.h) dst(include/irsense.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

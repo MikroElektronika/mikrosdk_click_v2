@@ -1,0 +1,133 @@
+\mainpage Main Page
+ 
+---
+# H-BRIDGE 7 click
+
+H-Bridge 7 Click features flexible motor driver IC for a wide variety of applications, labeled as the DRV8876N. This Click board™ integrates an N-channel H-bridge, charge pump regulator, and protection circuitry. The charge pump improves efficiency by allowing for both high-side and low-side N-channels MOSFETs and 100% duty cycle support. This IC allows the H-Bridge 7 Click to achieve ultra-low quiescent current draw by shutting down most of the internal circuitry with his low-power sleep mode.
+
+<p align="center">
+  <img src="https://download.mikroe.com/images/click_for_ide/hbridge7_click.png" height=300px>
+</p>
+
+[click Product page](https://www.mikroe.com/h-bridge-7-click)
+
+---
+
+
+#### Click library 
+
+- **Author**        : MikroE Team
+- **Date**          : Jun 2020.
+- **Type**          : GPIO type
+
+
+# Software Support
+
+We provide a library for the Hbridge7 Click 
+as well as a demo application (example), developed using MikroElektronika 
+[compilers](http://shop.mikroe.com/compilers). 
+The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
+
+Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+
+## Library Description
+
+> This library contains API for Hbridge7 Click driver.
+
+#### Standard key functions :
+
+- Config Object Initialization function.
+> void hbridge7_cfg_setup ( hbridge7_cfg_t *cfg ); 
+ 
+- Initialization function.
+> HBRIDGE7_RETVAL hbridge7_init ( hbridge7_t *ctx, hbridge7_cfg_t *cfg );
+
+
+#### Example key functions :
+
+- Set motor state.
+> void hbridge7_motor_state ( hbridge7_t *ctx, uint8_t state );
+ 
+- Set motor control.
+> void hbridge7_motor_control ( hbridge7_t *ctx, uint8_t ctrl );
+
+- Get Fault pin state.
+> uint8_t hbridge7_get_fault_state ( hbridge7_t *ctx );
+
+## Examples Description
+
+> H-Bridge 7 Click features flexible motor driver. This Click board integrates 
+> an N-channel H-bridge, charge pump regulator, and protection circuitry. 
+> The charge pump improves efficiency by allowing for both high-side and 
+> low-side N-channels MOSFETs and 100% duty cycle support.
+
+**The demo application is composed of two sections :**
+
+### Application Init 
+
+> Initializes driver init and activates the motor.
+
+```c
+
+void application_init ( void )
+{
+    log_cfg_t log_cfg;
+    hbridge7_cfg_t cfg;
+
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    LOG_MAP_USB_UART( log_cfg );
+    log_init( &logger, &log_cfg );
+    log_info(&logger, "---- Application Init ----");
+
+    hbridge7_cfg_setup( &cfg );
+    HBRIDGE7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    hbridge7_init( &hbridge7, &cfg );
+
+    hbridge7_motor_state( &hbridge7, HBRIDGE7_MOTOR_ACTIVE );
+}
+  
+```
+
+### Application Task
+
+> Changes the direction of the motor.
+
+
+```c
+
+void application_task ( void )
+{
+    hbridge7_motor_control( &hbridge7, HBRIDGE7_MOTOR_FORWARD );
+    Delay_ms( 3000 );
+
+    hbridge7_motor_control( &hbridge7, HBRIDGE7_MOTOR_BACKWARD );
+    Delay_ms( 3000 );
+
+    hbridge7_motor_control( &hbridge7, HBRIDGE7_MOTOR_STOP );
+    Delay_ms( 3000 );
+}   
+
+```
+
+The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+
+**Other mikroE Libraries used in the example:** 
+
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Hbridge7
+
+**Additional notes and informations**
+
+Depending on the development board you are using, you may need 
+[USB UART click](http://shop.mikroe.com/usb-uart-click), 
+[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
+[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
+development systems with no UART to USB interface available on the board. The 
+terminal available in all Mikroelektronika 
+[compilers](http://shop.mikroe.com/compilers), or any other terminal application 
+of your choice, can be used to read the message.
+
+
+
+---

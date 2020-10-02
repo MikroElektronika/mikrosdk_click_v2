@@ -1,0 +1,8 @@
+{
+    "name": "Pressure 7 Click",
+    "description": "Pressure 7 click features an integrated digital barometric pressure and temperature sensor labeled as MS5837. This sensor relies on the advanced MEMS technology by MEAS Switzerland, a well-known high-volume MEMS manufacturer.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MS5837"],
+    "category" : ["Pressure"] 
+}

@@ -1,0 +1,7 @@
+type: subdirs
+project: Barcode2
+
+subdirs: {
+    lib
+    example
+}

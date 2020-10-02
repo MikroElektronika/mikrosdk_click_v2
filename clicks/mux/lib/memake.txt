@@ -1,0 +1,40 @@
+type: library
+
+target: lib_mux
+
+alias: Click.Mux
+
+sources: {
+    src/mux.c
+}
+
+headers: {
+    include/mux.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/mux.h) dst(include/mux.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

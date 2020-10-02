@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Brushed",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "DC Motor 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.dcmotor2",
+    "product_link": "https://www.mikroe.com/dc-motor-2-click",
+    "short_description": "DC MOTOR 2 click carries the TB6593FNG driver IC for direct current motors. With two pairs of screw terminals (power supply and outputs), the click board can drive motors with voltages from 2.5 to 13V (output current of up to 1.2 amps with peaks up to 3.2 amps) . The PWM signal drives the motor while the IN1 and IN2 pins provide binary direction signals that set the direction of the motor (clockwise or counter clockwise), or apply stop or short brake functions.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

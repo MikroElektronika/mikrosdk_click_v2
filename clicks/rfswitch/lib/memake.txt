@@ -1,0 +1,40 @@
+type: library
+
+target: lib_rfswitch
+
+alias: Click.RfSwitch
+
+sources: {
+    src/rfswitch.c
+}
+
+headers: {
+    include/rfswitch.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/rfswitch.h) dst(include/rfswitch.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

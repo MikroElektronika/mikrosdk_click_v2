@@ -1,0 +1,7 @@
+type: subdirs
+project: Oximeter
+
+subdirs: {
+    lib
+    example
+}

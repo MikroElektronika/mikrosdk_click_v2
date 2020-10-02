@@ -1,0 +1,8 @@
+{
+    "name": "OPTO 4 Click",
+    "description": "Opto 4 click is a galvanically isolated power switch, which uses a power MOSFET in combination with an optocoupler.",
+    "image" : "https://cdn1-shop.mikroe.com/img/product/opto-4-click/opto-4-click-large_default-2.jpg",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","LTV-817S"],
+    "category" : ["Optocoupler"] 
+}

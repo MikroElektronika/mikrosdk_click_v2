@@ -1,0 +1,22 @@
+type: executable
+target: example_oledc
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.OledC
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}
+
+headers: {
+    oledc_font.h
+    oledc_image.h
+}

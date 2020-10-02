@@ -1,0 +1,8 @@
+{
+    "name": "Cap Wheel 2 Click",
+    "description": "CAP Wheel 2 Click is a capacitive touch sensor with round-shaped electrodes integrated on a Click board™. This click can sense touch even through plastic, wood, or other dielectric materials, which can be used to protect the surface of the PCB and the sensor pad trace itself. Therefore, this Click board™ comes with overlay, made of plexiglass. Unlike the mechanical button, the capacitive touch button lasts much longer, it is not prone to damage and wear over time and it is very reliable. This Click board feature QS263B sensor which contains a ProxSense® module that uses patented technology to provide detection of proximity and touch conditions on numerous sensing lines.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","IQS263B"],
+    "category" : ["Capacitive"] 
+}

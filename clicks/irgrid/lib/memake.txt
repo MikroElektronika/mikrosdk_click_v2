@@ -1,0 +1,40 @@
+type: library
+
+target: lib_irgrid
+
+alias: Click.IrGrid
+
+sources: {
+    src/irgrid.c
+}
+
+headers: {
+    include/irgrid.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/irgrid.h) dst(include/irgrid.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

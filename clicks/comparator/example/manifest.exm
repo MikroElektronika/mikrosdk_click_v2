@@ -1,0 +1,8 @@
+{
+    "name": "Comparator Click",
+    "description": "Comparator Click represents board equipped with two independent precise voltage comparators.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","LM2903 "],
+    "category" : ["ADC"] 
+}

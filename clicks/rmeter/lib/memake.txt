@@ -1,0 +1,40 @@
+type: library
+
+target: lib_rmeter
+
+alias: Click.Rmeter
+
+sources: {
+    src/rmeter.c
+}
+
+headers: {
+    include/rmeter.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/rmeter.h) dst(include/rmeter.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

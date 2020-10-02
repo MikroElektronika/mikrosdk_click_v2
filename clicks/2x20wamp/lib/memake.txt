@@ -1,0 +1,40 @@
+type: library
+
+target: lib_c2x20wamp
+
+alias: Click.c2x20WAmp
+
+sources: {
+    src/c2x20wamp.c
+}
+
+headers: {
+    include/c2x20wamp.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/c2x20wamp.h) dst(include/c2x20wamp.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md 
+}

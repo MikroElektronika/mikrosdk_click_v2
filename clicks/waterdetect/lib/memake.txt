@@ -1,0 +1,40 @@
+type: library
+
+target: lib_waterdetect
+
+alias: Click.WaterDetect
+
+sources: {
+    src/waterdetect.c
+}
+
+headers: {
+    include/waterdetect.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/waterdetect.h) dst(include/waterdetect.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

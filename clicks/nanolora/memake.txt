@@ -1,0 +1,7 @@
+type: subdirs
+project: NanoLora
+
+subdirs: {
+    lib
+    example
+}

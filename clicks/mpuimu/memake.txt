@@ -1,0 +1,7 @@
+type: subdirs
+project: MpuImu
+
+subdirs: {
+    lib
+    example
+}

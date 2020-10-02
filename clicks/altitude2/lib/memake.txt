@@ -1,0 +1,40 @@
+type: library
+
+target: lib_altitude2
+
+alias: Click.Altitude2
+
+sources: {
+    src/altitude2.c
+}
+
+headers: {
+    include/altitude2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/altitude2.h) dst(include/altitude2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

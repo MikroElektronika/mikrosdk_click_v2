@@ -1,0 +1,17 @@
+type: executable
+target: example_ccrf
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.ccRf
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

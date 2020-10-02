@@ -1,0 +1,40 @@
+type: library
+
+target: lib_matrixrg
+
+alias: Click.MatrixRG
+
+sources: {
+    src/matrixrg.c
+}
+
+headers: {
+    include/matrixrg.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/matrixrg.h) dst(include/matrixrg.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

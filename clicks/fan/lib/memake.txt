@@ -1,0 +1,40 @@
+type: library
+
+target: lib_fan
+
+alias: Click.Fan
+
+sources: {
+    src/fan.c
+}
+
+headers: {
+    include/fan.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/fan.h) dst(include/fan.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

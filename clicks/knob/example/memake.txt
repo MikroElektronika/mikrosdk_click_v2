@@ -1,0 +1,17 @@
+type: executable
+target: example_knob
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Knob
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

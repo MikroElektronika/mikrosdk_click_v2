@@ -1,0 +1,40 @@
+type: library
+
+target: lib_audioamp6
+
+alias: Click.AudioAmp6
+
+sources: {
+    src/audioamp6.c
+}
+
+headers: {
+    include/audioamp6.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/audioamp6.h) dst(include/audioamp6.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

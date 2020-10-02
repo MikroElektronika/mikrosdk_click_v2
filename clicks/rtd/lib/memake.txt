@@ -1,0 +1,40 @@
+type: library
+
+target: lib_rtd
+
+alias: Click.Rtd
+
+sources: {
+    src/rtd.c
+}
+
+headers: {
+    include/rtd.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/rtd.h) dst(include/rtd.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

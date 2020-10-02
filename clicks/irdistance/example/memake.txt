@@ -1,0 +1,17 @@
+type: executable
+target: example_irdistance
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.IrDistance
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

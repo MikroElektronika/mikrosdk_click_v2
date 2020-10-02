@@ -1,0 +1,7 @@
+type: subdirs
+project: Shake2Wake
+
+subdirs: {
+    lib
+    example
+}

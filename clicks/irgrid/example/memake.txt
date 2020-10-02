@@ -1,0 +1,17 @@
+type: executable
+target: example_irgrid
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.IrGrid
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

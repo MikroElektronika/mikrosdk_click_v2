@@ -1,0 +1,40 @@
+type: library
+
+target: lib_ndirco2
+
+alias: Click.NdirCo2
+
+sources: {
+    src/ndirco2.c
+}
+
+headers: {
+    include/ndirco2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/ndirco2.h) dst(include/ndirco2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

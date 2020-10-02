@@ -1,0 +1,40 @@
+type: library
+
+target: lib_magneticrotary
+
+alias: Click.MagneticRotary
+
+sources: {
+    src/magneticrotary.c
+}
+
+headers: {
+    include/magneticrotary.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/magneticrotary.h) dst(include/magneticrotary.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

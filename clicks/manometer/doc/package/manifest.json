@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Pressure",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Manometer click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.manometer",
+    "product_link": "https://www.mikroe.com/manometer-click",
+    "short_description": "<Manometer click carries a piezoresistive silicon pressure sensor,the HSCMAND060PA3A3 from Honeywell, an industry-leading module with an extremely high accuracy of ±0.25%FSS BFSL.>",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

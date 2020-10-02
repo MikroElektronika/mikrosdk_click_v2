@@ -1,0 +1,40 @@
+type: library
+
+target: lib_rn4870
+
+alias: Click.Rn4870
+
+sources: {
+    src/rn4870.c
+}
+
+headers: {
+    include/rn4870.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/rn4870.h) dst(include/rn4870.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

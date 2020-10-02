@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Sub-1 GHz Transceivers",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "tRF click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.trf",
+    "product_link": "https://www.mikroe.com/trf-click",
+    "short_description": "tRF click is a complete short-range RF communication solution, operating in the 868 MHz ISM license-free frequency band. The Click board™ is based on LE70-868 RF module, from Telit. ",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

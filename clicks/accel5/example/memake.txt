@@ -1,0 +1,17 @@
+type: executable
+target: example_accel5
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Accel5
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

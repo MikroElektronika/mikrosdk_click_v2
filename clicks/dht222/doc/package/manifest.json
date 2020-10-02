@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Temperature & humidity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "DHT22 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.dht222",
+    "product_link": "https://www.mikroe.com/dht22-2-click",
+    "short_description": "DHT22 2 click is used for measuring the environmental temperature and relative humidity. It uses the CM2322 sensor, with very accurate thermal and humidity measuring capabilities. It can use either 1-Wire or I2C protocol to communicate with the integrated circuit.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Battery charger",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Charger 9 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.charger9",
+    "product_link": "https://www.mikroe.com/charger-9-click",
+    "short_description": "Charger 9 click is a Li-Ion (Li+, Li-Po) battery charger, capable of charging one, two or three battery cells.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

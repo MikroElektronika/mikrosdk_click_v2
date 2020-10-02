@@ -1,0 +1,97 @@
+/*!
+ * \file main.c
+ * \brief Altitude Click example
+ *
+ * # Description
+ * This is a example which demonstrates the use of Altitude Click board.
+ * This demo example offers the altitude [m], pressure [mbar] and temperature
+ * [deg C] measurements from sensor.
+ *
+ * The demo application is composed of two sections :
+ *
+ * ## Application Init
+ * Initializes I2C driver and all used pins, performs a default configuration
+ * for Altitude Click board and initializes the uart console for results
+ * logging.
+ *
+ * ## Application Task
+ * Shows two different uses of sensor, altimeter and barometer mode.
+ * Reads the altitude, pressure and temperature results in standard units and
+ * sends this results to the console.
+ *
+ * \author Nemanja Medakovic
+ *
+ */
+// ------------------------------------------------------------------- INCLUDES
+
+#include "board.h"
+#include "log.h"
+#include "altitude.h"
+
+
+// ------------------------------------------------------------------ VARIABLES
+
+static altitude_t altitude;
+static log_t console;
+static const uint8_t deg_cels[ 3 ] = { 176, 'C', 0 };
+
+// ------------------------------------------------------ APPLICATION FUNCTIONS
+
+void application_init( void )
+{
+    altitude_cfg_t altitude_cfg;
+    log_cfg_t console_cfg;
+
+    //  Click initialization.
+    altitude_cfg_setup( &altitude_cfg );
+    ALTITUDE_MAP_MIKROBUS( altitude_cfg, MIKROBUS_1 );
+    altitude_init( &altitude, &altitude_cfg );
+    altitude_default_cfg( &altitude );
+
+    //  Console initialization.
+    LOG_MAP_USB_UART( console_cfg );
+    console_cfg.level = LOG_LEVEL_DEBUG;
+    console_cfg.baud = 57600;
+    log_init( &console, &console_cfg );
+    log_printf( &console, "***  Altitude initialization done  ***\r\n" );
+    log_printf( &console, "**************************************\r\n" );
+}
+
+void application_task( void )
+{
+    float altitude_result;
+    float pressure_result;
+    float temperature_result;
+
+    //  Altimeter sensor mode for altitude data reading.
+    altitude_set_sensor_mode( &altitude, ALTITUDE_SENSMOD_ALTIMETER );
+
+    while (0 == altitude_get_drdy_status( &altitude, ALTITUDE_STATUS_FLAG_PDR ));
+
+    altitude_result = altitude_get_altitude( &altitude );
+
+    //  Barometer sensor mode for pressure data reading.
+    altitude_set_sensor_mode( &altitude, ALTITUDE_SENSMOD_BAROMETER );
+
+    while (0 == altitude_get_drdy_status( &altitude, ALTITUDE_STATUS_FLAG_PDR ));
+
+    pressure_result = altitude_get_pressure( &altitude );
+    temperature_result = altitude_get_temperature( &altitude );
+
+    log_printf( &console, "** Altitude is %.2f m\r\n", altitude_result );
+    log_printf( &console, "** Pressure is %.2f mbar\r\n", pressure_result );
+    log_printf( &console, "** Temperature is %.2f %s\r\n", temperature_result, deg_cels );
+    log_printf( &console, "**************************************\r\n" );
+}
+
+void main( void )
+{
+    application_init( );
+    
+    for ( ; ; )
+    {
+        application_task( );
+    }
+}
+
+// ------------------------------------------------------------------------ END

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_angle5
+
+alias: Click.Angle5
+
+sources: {
+    src/angle5.c
+}
+
+headers: {
+    include/angle5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/angle5.h) dst(include/angle5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

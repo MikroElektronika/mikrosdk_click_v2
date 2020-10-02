@@ -1,0 +1,40 @@
+type: library
+
+target: lib_hbridge2
+
+alias: Click.HBridge2
+
+sources: {
+    src/hbridge2.c
+}
+
+headers: {
+    include/hbridge2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/hbridge2.h) dst(include/hbridge2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

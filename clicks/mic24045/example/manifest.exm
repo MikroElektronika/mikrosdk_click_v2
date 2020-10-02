@@ -1,0 +1,8 @@
+{
+    "name": "mic24045 Click",
+    "description": "MIC24045 click carries MIC24045 I2C-programmable, high-efficiency, wide input range, 5A synchronous step-down regulator from Microchip.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MIC24045 I2C"],
+    "category" : ["Boost"] 
+}

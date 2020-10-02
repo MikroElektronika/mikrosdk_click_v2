@@ -1,0 +1,33 @@
+{
+    "architecture": "ARM",
+    "category": "Biometrics",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "ECG click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.ecg",
+    "product_link": "https://www.mikroe.com/ecg-click",
+    "short_description": "This is an ECG (or EKG) machine on a click board. It measures the electrical activity of a beating heart through electrodes taped to the skin. The board requires little setup, and the final measurement results can be displayed as an Electrocardiogram using a free Windows app.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.2"
+}
+
+

@@ -1,0 +1,85 @@
+/*!
+ * \file 
+ * \brief Buck5 Click example
+ * 
+ * # Description
+ * Buck 5 Click is a high-efficiency buck DC/DC converter, which can provide digitally 
+ * adjusted step-down voltage on its output while delivering a considerable amount of current. 
+ * Buck 5 click accepts a wide voltage range on its input - from 5V to 30V. The output voltage 
+ * may be adjusted via the SPI interface, in the range from 0.9V to approximately 5.5V.
+ *
+ * The demo application is composed of two sections :
+ * 
+ * ## Application Init 
+ * Initializes driver init, power On chip and reset buck 5 click.
+ * 
+ * ## Application Task  
+ * Sets 3 different output voltages every 2 seconds.
+ * 
+ * 
+ * \author MikroE Team
+ *
+ */
+// ------------------------------------------------------------------- INCLUDES
+
+#include "board.h"
+#include "log.h"
+#include "buck5.h"
+
+// ------------------------------------------------------------------ VARIABLES
+
+static buck5_t buck5;
+static log_t logger;
+
+// ------------------------------------------------------- ADDITIONAL FUNCTIONS
+
+
+// ------------------------------------------------------ APPLICATION FUNCTIONS
+
+void application_init ( void )
+{
+    log_cfg_t log_cfg;
+    buck5_cfg_t cfg;
+
+    //  Logger initialization.
+
+    LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
+    log_init( &logger, &log_cfg );
+    log_info( &logger, "---- Application Init ----" );
+
+    //  Click initialization.
+
+    buck5_cfg_setup( &cfg );
+    BUCK5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    buck5_init( &buck5, &cfg );
+
+    buck5_power_on( &buck5 );
+    buck5_reset( &buck5 );
+}
+
+void application_task ( void )
+{
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_1500mV );
+    Delay_ms( 2000 );
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_3000mV );
+    Delay_ms( 2000 );
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_4500mV );
+    Delay_ms( 2000 );
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_3000mV );
+    Delay_ms( 2000 );
+}
+
+void main ( void )
+{
+    application_init( );
+
+    for ( ; ; )
+    {
+        application_task( );
+    }
+}
+
+
+// ------------------------------------------------------------------------ END

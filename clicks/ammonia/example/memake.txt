@@ -1,0 +1,17 @@
+type: executable
+target: example_ammonia
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Ammonia
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

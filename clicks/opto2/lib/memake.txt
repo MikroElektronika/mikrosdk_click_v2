@@ -1,0 +1,40 @@
+type: library
+
+target: lib_opto2
+
+alias: Click.Opto2
+
+sources: {
+    src/opto2.c
+}
+
+headers: {
+    include/opto2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/opto2.h) dst(include/opto2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

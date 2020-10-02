@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Proximity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Proximity click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.proximity",
+    "product_link": "https://www.mikroe.com/proximity-click",
+    "short_description": "Proximity Click features VCNL4010 proximity and ambient light sensor. It combines an infrared emitter and PIN photodiode for proximity measurement with a range of up to 20cm.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_evc
+
+alias: Click.EVC
+
+sources: {
+    src/evc.c
+}
+
+headers: {
+    include/evc.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/evc.h) dst(include/evc.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

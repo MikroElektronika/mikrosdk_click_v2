@@ -1,0 +1,40 @@
+type: library
+
+target: lib_capwheel
+
+alias: Click.CapWheel
+
+sources: {
+    src/capwheel.c
+}
+
+headers: {
+    include/capwheel.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/capwheel.h) dst(include/capwheel.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

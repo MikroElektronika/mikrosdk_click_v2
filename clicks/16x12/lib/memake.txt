@@ -1,0 +1,40 @@
+type: library
+
+target: lib_c16x12
+
+alias: Click.16x12
+
+sources: {
+    src/c16x12.c
+}
+
+headers: {
+    include/c16x12.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/c16x12.h) dst(include/c16x12.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,8 @@
+{
+    "name": "UV  Click",
+    "description": "UV 2 click is a mikroBUS™ add-on board with a VEML6075 UVA and UVB light sensor. VEML6075 is a CMOS chip that incorporates a photodiode, amplifiers, and analog/digital circuits.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","VEML6075"],
+    "category" : ["Optical"] 
+}

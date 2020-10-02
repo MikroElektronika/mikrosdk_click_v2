@@ -1,0 +1,40 @@
+type: library
+
+target: lib_moisture
+
+alias: Click.Moisture
+
+sources: {
+    src/moisture.c
+}
+
+headers: {
+    include/moisture.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/moisture.h) dst(include/moisture.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

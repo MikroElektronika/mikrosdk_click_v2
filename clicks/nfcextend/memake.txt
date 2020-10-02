@@ -1,0 +1,7 @@
+type: subdirs
+project: NfcExtend
+
+subdirs: {
+    lib
+    example
+}

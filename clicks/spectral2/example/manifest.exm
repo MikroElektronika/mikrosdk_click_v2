@@ -1,0 +1,8 @@
+{
+    "name": "Spectral 2 Click",
+    "description": "Spectral 2 click is a multispectral color sensing device, which uses the state-of-the-art sensor IC for a very accurate color sensing.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","AS7262","AT25SF041"],
+    "category" : ["Optical"] 
+}

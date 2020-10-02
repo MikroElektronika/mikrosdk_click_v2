@@ -1,0 +1,8 @@
+{
+    "name": "Fever Click",
+    "description": "Fever click features a specially designed sensor, which is capable of accurate measurement of human body temperature. ",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MAX30205"],
+    "category" : ["Temperature & humidity"] 
+}

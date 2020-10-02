@@ -1,0 +1,40 @@
+type: library
+
+target: lib_buckboost2
+
+alias: Click.BuckBoost2
+
+sources: {
+    src/buckboost2.c
+}
+
+headers: {
+    include/buckboost2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/buckboost2.h) dst(include/buckboost2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

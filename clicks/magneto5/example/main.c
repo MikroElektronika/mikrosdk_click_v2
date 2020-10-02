@@ -1,0 +1,83 @@
+/*!
+ * \file 
+ * \brief Magneto5 Click example
+ * 
+ * # Description
+ * This application is is a very accurate and reliable magnetic sensor device.
+ *
+ * The demo application is composed of two sections :
+ * 
+ * ## Application Init 
+ * Initializes driver init and set measurement mode and channel.
+ * 
+ * ## Application Task  
+ * Reads X / Y / Z data axis and logs to USBUART every 1 sec.
+ * 
+ * \author MikroE Team
+ *
+ */
+// ------------------------------------------------------------------- INCLUDES
+
+#include "board.h"
+#include "log.h"
+#include "magneto5.h"
+
+// ------------------------------------------------------------------ VARIABLES
+
+static magneto5_t magneto5;
+static log_t logger;
+
+// ------------------------------------------------------ APPLICATION FUNCTIONS
+
+void application_init ( void )
+{
+    log_cfg_t log_cfg;
+    magneto5_cfg_t cfg;
+
+    //  Logger initialization.
+
+    LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
+    log_init( &logger, &log_cfg );
+    log_info( &logger, "---- Application Init ----" );
+
+    //  Click initialization.
+
+    magneto5_cfg_setup( &cfg );
+    MAGNETO5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    magneto5_init( &magneto5, &cfg );
+}
+
+void application_task ( void )
+{
+    float x_axis;
+    float y_axis;
+    float z_axis;
+
+    //  Task implementation.
+
+    x_axis = magneto5_get_axis_value( &magneto5, MAGNETO5_AXIS_X, MAGNETO5_CH3_12bits_1ms );
+    log_printf ( &logger, "-- X axis : %f \r\n ", x_axis );
+
+    y_axis = magneto5_get_axis_value( &magneto5, MAGNETO5_AXIS_Y, MAGNETO5_CH3_12bits_1ms );
+    log_printf ( &logger, "-- Y axis : %f \r\n ",  y_axis );
+
+    z_axis = magneto5_get_axis_value( &magneto5, MAGNETO5_AXIS_Z, MAGNETO5_CH3_12bits_1ms );
+    log_printf ( &logger, "-- Z axis : %f \r\n ", z_axis );
+
+    Delay_ms( 1000 );
+}
+
+void main ( void )
+{
+    application_init( );
+
+    for ( ; ; )
+    {
+        application_task( );
+    }
+}
+
+
+// ------------------------------------------------------------------------ END

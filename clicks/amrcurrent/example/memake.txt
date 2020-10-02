@@ -1,0 +1,17 @@
+type: executable
+target: example_amrcurent
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.AmrCurrent
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

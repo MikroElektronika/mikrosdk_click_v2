@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Digital potentiometer",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "DIGI POT 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.digipot3",
+    "product_link": "https://www.mikroe.com/digi-pot-3-click",
+    "short_description": "DIGI POT 3 click is a versatile and feature-rich digital potentiometer click with 1024 steps and an internal non-volatile memory (EEMEM), which can be used for storing the wiper position, but also for storing various user data.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

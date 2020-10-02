@@ -1,0 +1,40 @@
+type: library
+
+target: lib_clockgen3
+
+alias: Click.ClockGen3
+
+sources: {
+    src/clockgen3.c
+}
+
+headers: {
+    include/clockgen3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/clockgen3.h) dst(include/clockgen3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

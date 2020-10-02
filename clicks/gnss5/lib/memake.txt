@@ -1,0 +1,40 @@
+type: library
+
+target: lib_gnss5
+
+alias: Click.Gnss5
+
+sources: {
+    src/gnss5.c
+}
+
+headers: {
+    include/gnss5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/gnss5.h) dst(include/gnss5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

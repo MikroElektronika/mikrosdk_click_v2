@@ -1,0 +1,8 @@
+{
+    "name": "FRAM Click",
+    "description": "FRAM click is a Click board™ that carries a ferroelectric RAM module. Ferroelectric RAM, also known as FRAM, is a non-volatile memory type, with characteristics comparable to much faster DRAM memory modules.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MB85RS256A"],
+    "category" : ["FRAM"] 
+}

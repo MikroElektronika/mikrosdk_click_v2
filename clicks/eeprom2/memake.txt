@@ -1,0 +1,7 @@
+type: subdirs
+project: Eeprom2
+
+subdirs: {
+    lib
+    example
+}

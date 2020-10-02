@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Magnetic",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Magneto 5 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.magneto5",
+    "product_link": "https://www.mikroe.com/magneto-5-click",
+    "short_description": "Magneto 5 click is a very accurate and reliable magnetic sensor device, which features the MEMSIC MMC34160PJ, a 3-axis magnetic sensor IC",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

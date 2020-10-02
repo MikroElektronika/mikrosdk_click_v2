@@ -1,0 +1,40 @@
+type: library
+
+target: lib_boost2
+
+alias: Click.Boost2
+
+sources: {
+    src/boost2.c
+}
+
+headers: {
+    include/boost2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/boost2.h) dst(include/boost2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

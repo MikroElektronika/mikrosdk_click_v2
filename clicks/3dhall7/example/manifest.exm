@@ -1,0 +1,8 @@
+{
+    "name": "3D Hall 7 Click",
+    "description": "3D Hall 7 click is a very accurate, magnetic field sensing Click board™, used to measure the intensity of the magnetic field across three perpendicular axes.",
+    "image" : "https://cdn1-shop.mikroe.com/img/product/3d-hall-7-click/3d-hall-7-click-large_default-2.jpg",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","AK09970N"],
+    "category" : ["Magnetic"] 
+}

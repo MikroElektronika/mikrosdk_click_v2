@@ -1,0 +1,8 @@
+{
+    "name": "POWERBANK 2 Click",
+    "description": "The PowerBank 2 Click is a Click board™ equipped with the RT9480, highly integrated and easy to use power solution for Li-ion power bank and other powered handheld applications.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","RT9480"],
+    "category" : ["Optical"] 
+}

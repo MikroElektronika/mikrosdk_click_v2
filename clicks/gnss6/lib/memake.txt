@@ -1,0 +1,40 @@
+type: library
+
+target: lib_gnss6
+
+alias: Click.Gnss6
+
+sources: {
+    src/gnss6.c
+}
+
+headers: {
+    include/gnss6.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/gnss6.h) dst(include/gnss6.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

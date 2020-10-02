@@ -1,0 +1,8 @@
+{
+    "name": "RS485 Click",
+    "description": "RS485 click 3.3V is a RS422/485 transceiver Click board™, which can be used as an interface between the TTL level UART and the RS422/485 communication bus.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","SN75HVD12"],
+    "category" : ["RS485"] 
+}

@@ -1,0 +1,8 @@
+{
+    "name": "Stretch click",
+    "description": "Stretch click is a mikroBUS™ add-on board with circuitry for measuring stretch forces with conductive rubber cords.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["Stretch click"],
+    "category" : ["Force"] 
+}

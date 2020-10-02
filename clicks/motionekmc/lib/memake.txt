@@ -1,0 +1,41 @@
+type: library
+
+target: lib_motionekmc
+
+alias: Click.MotionEKMC
+
+sources: {
+    src/motionekmc.c
+}
+
+headers: {
+    include/motionekmc.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/motionekmc.h) dst(include/motionekmc.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+    ../build.bat
+}

@@ -1,0 +1,8 @@
+{
+    "name": "Thermostat 4 Click",
+    "description": "Thermostat 4 Click is complete solution that senses the temperature of a physical system and can performs actions so that the system's temperature is maintained near a desired setpoint. It's based on Texas Instruments TMP392, a resistor programmable temperature switch that enable protection and detection of system thermal events from 30°C to 130°C.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","TMP392"],
+    "category" : ["Temperature & humidity"] 
+}

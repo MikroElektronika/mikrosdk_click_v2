@@ -1,0 +1,7 @@
+type: subdirs
+project: IndexCounter
+
+subdirs: {
+    lib
+    example
+}

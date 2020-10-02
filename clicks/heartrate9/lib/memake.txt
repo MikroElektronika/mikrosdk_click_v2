@@ -1,0 +1,40 @@
+type: library
+
+target: lib_heartrate9
+
+alias: Click.HeartRate9
+
+sources: {
+    src/heartrate9.c
+}
+
+headers: {
+    include/heartrate9.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/heartrate9.h) dst(include/heartrate9.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

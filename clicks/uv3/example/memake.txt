@@ -1,0 +1,17 @@
+type: executable
+target: example_uv3
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Uv3
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

@@ -1,0 +1,17 @@
+type: executable
+target: example_buck14
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Buck14
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

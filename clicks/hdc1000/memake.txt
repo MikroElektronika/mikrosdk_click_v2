@@ -1,0 +1,7 @@
+type: subdirs
+project: HDC1000
+
+subdirs: {
+    lib
+    example
+}

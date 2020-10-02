@@ -1,0 +1,40 @@
+type: library
+
+target: lib_tamper
+
+alias: Click.Tamper
+
+sources: {
+    src/tamper.c
+}
+
+headers: {
+    include/tamper.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/tamper.h) dst(include/tamper.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

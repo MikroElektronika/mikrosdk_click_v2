@@ -1,0 +1,40 @@
+type: library
+
+target: lib_force
+
+alias: Click.Force
+
+sources: {
+    src/force.c
+}
+
+headers: {
+    include/force.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/force.h) dst(include/force.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

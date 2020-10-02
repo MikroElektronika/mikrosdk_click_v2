@@ -1,0 +1,7 @@
+type: subdirs
+project: FRAM3
+
+subdirs: {
+    lib
+    example
+}

@@ -1,0 +1,7 @@
+type: subdirs
+project: Mux2
+
+subdirs: {
+    lib
+    example
+}

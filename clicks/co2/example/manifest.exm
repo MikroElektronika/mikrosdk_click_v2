@@ -1,0 +1,8 @@
+{
+    "name": "CO 2 Click",
+    "description": "CO 2 click is a very accurate, carbon-monoxide-gas-sensor Click board™, equipped with the SPEC amperometric, 3SP CO 1000 gas sensor which electrochemically reacts with the carbon monoxide (CO).",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","3SP CO 1000","LMP9100SD","MCP3221","OPA344","MCP1501"],
+    "category" : ["CO"] 
+}

@@ -1,0 +1,18 @@
+type: executable
+target: example_lighttemp
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.LightTemp
+}
+
+uses: {
+    MikroC.Core
+    MikroC.PWM
+}
+
+sources: {
+    main.c
+}

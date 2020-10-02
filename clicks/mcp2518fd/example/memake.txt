@@ -1,0 +1,17 @@
+type: executable
+target: example_mcp2518fd
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Mcp2518Fd
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

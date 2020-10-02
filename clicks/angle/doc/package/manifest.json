@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Magnetic",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Angle click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.angle",
+    "product_link": "https://www.mikroe.com/angle-click",
+    "short_description": "Angle click is a precise Hall-effect angle sensing click board that can be used to measure the rotational angle of the magnetic field in the X-Y plane above it (parallel to the surface of the click), through the whole range of 360°.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

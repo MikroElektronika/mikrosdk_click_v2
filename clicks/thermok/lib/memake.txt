@@ -1,0 +1,40 @@
+type: library
+
+target: lib_thermok
+
+alias: Click.ThermoK
+
+sources: {
+    src/thermok.c
+}
+
+headers: {
+    include/thermok.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/thermok.h) dst(include/thermok.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

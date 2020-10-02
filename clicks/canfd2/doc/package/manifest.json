@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "CAN",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "CAN FD 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.canfd2",
+    "product_link": "https://www.mikroe.com/can-fd-2-click",
+    "short_description": "CAN FD 2 Click is a HS CAN transceiver add on board, suitable for evaluation of TLE9255W CAN network transceiver from Infineon.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

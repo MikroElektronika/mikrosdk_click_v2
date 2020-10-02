@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Biometrics",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Heart rate 4 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.heartrate4",
+    "product_link": "https://www.mikroe.com/heart-rate-4-click",
+    "short_description": "Heart rate 4 click carries the MAX30101 high-sensitivity pulse oximeter and heart-rate sensor from Maxim Integrated. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over I2C interface, with additional functionality provided by INT pin on the mikroBUS™ line.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

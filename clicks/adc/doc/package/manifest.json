@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "ADC",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "ADC click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.adc",
+    "product_link": "https://www.mikroe.com/adc-click",
+    "short_description": "ADC Click carries the MCP3204 12-bit Analog-to-Digital converter. The click is designed to run on 3.3V by default. Place PWR SEL SMD jumper to 5V position if used with 5V systems.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.2"
+}

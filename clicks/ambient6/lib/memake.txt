@@ -1,0 +1,40 @@
+type: library
+
+target: lib_ambient6
+
+alias: Click.Ambient6
+
+sources: {
+    src/ambient6.c
+}
+
+headers: {
+    include/ambient6.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/ambient6.h) dst(include/ambient6.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

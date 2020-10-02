@@ -1,0 +1,7 @@
+type: subdirs
+project: T420ma
+
+subdirs: {
+    lib
+    example
+}

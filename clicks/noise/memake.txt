@@ -1,0 +1,7 @@
+type: subdirs
+project: noise
+
+subdirs: {
+    lib
+    example
+}

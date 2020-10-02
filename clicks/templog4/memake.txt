@@ -1,0 +1,7 @@
+type: subdirs
+project: TempLog4
+
+subdirs: {
+    lib
+    example
+}

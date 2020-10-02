@@ -1,0 +1,40 @@
+type: library
+
+target: lib_buck8
+
+alias: Click.Buck8
+
+sources: {
+    src/buck8.c
+}
+
+headers: {
+    include/buck8.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/buck8.h) dst(include/buck8.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

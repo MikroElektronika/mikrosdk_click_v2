@@ -1,0 +1,8 @@
+{
+    "name": "rfid Click",
+    "description": "RFid click features CR95HF 13.56 MHz contactless transceiver as well as trace antenna. The click is designed to run on a 3.3V power supply only. It communicates with the target MCU via mikroBUS™ UART (TX, RX), SPI (MISO, MOSI, SCK, CS) INT, RST, PWM and AN lines.",
+    "image" : "..doc\image\click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click"," CR95HF"],
+    "category" : [" RFID/NFC"] 
+}

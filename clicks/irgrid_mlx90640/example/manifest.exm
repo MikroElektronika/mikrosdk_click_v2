@@ -1,0 +1,8 @@
+{
+    "name": "IR Grid MLX90640 Click",
+    "description": "IR Grid (MLX90640) click is a thermal imaging sensor. It has an array of 768 very sensitive factory calibrated IR elements (pixels), arranged in 32 rows of 24 pixels.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MLX90640","PCA9306"],
+    "category" : ["Optical"] 
+}

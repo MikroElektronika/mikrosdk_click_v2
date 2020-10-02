@@ -1,0 +1,40 @@
+type: library
+
+target: lib_geomagnetic
+
+alias: Click.Geomagnetic
+
+sources: {
+    src/geomagnetic.c
+}
+
+headers: {
+    include/geomagnetic.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/geomagnetic.h) dst(include/geomagnetic.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,17 @@
+type: executable
+target: example_fm
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Fm
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

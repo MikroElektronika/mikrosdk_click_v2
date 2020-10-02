@@ -1,0 +1,17 @@
+type: executable
+target: example_eeprom3
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Eeprom3
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

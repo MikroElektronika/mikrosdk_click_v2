@@ -1,0 +1,8 @@
+{
+  "name": "Pot 3 Click",
+  "description": "<POT 3 Click is a Click board� with the accurate selectable reference voltage output. By employing a high-quality 11mm, metal shaft potentiometer, this Click board� can provide very accurate voltage output. >",
+  "image": "../../Resources/click_icon.png",
+  "toolchain": ["mikrocarm","mikrocpic"],
+  "hw": [ "click", "MCP1501" ],
+  "category": [ "Digital potentiometer" ]
+}

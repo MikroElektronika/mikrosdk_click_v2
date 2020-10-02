@@ -1,0 +1,8 @@
+{
+    "name": "HZ to V Click",
+    "description": "HZ to V click is a device that can converts input frequency of the signal with virtually any wave shape to a DC voltage output, with a level proportional to the input frequency. It has a linear response, and by applying a signal with the frequency between 10Hz to 10kHz on its input, the Click board™ will generate a DC voltage, ranging from 0V to 3.3V.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","TC9400"],
+    "category" : ["Measurements"] 
+}

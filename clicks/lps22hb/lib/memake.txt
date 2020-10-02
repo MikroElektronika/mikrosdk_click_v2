@@ -1,0 +1,40 @@
+type: library
+
+target: lib_lps22hb
+
+alias: Click.Lps22hb
+
+sources: {
+    src/lps22hb.c
+}
+
+headers: {
+    include/lps22hb.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/lps22hb.h) dst(include/lps22hb.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

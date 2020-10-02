@@ -1,0 +1,8 @@
+{
+    "name": "RS485 Isolator Click",
+    "description": "RS485 Isolator click is an RS485 communication isolator and carries the ADM2682EBRIZ, a 5 kV rms signal and power isolated RS-485 transceiver.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","ADM2682EBRIZ"],
+    "category" : ["RS485"] 
+}

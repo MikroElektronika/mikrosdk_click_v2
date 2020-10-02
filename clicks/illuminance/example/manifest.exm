@@ -1,0 +1,8 @@
+{
+    "name": "Illuminance Click",
+    "description": "Illuminance click carries a TSL2561 light-to-digital converter with a sensor that’s designed to mimic the way humans perceive light.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","TSL2561"],
+    "category" : ["Optical"] 
+}

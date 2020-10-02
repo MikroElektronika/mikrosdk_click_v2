@@ -1,0 +1,8 @@
+{
+    "name": "AudioAmp 6 Click",
+    "description": "Audio Amp 6 click is a mono/subwoofer audio amplifier, capable of delivering up to 18.5W per channel with the 4Ω load. It is based on the TPA3138D2, a class-D integrated amplifier, which utilizes a highly efficient switching scheme.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","TPA3138D2"],
+    "category" : ["Amplifier"] 
+}

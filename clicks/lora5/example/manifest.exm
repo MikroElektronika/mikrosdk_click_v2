@@ -1,0 +1,8 @@
+{
+    "name": "LoRa 5 Click",
+    "description": "LoRa 5 click is a LoRa® technology-based SRD transceiver Click board™, which operates at a sub-gigahertz frequency of 902-928 MHz SRD Band optimized for very long range, low consumption applications, suitable for LPWA networks. Thanks to the spread spectrum modulation feature, as well as the low power consumption, it is capable of achieving a long-range communication, immune to interferences. Operated over the UART interface, it represents a very simple, yet powerful solution for the LoRa-based IoT communication network.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MIPOT 32001409"],
+    "category" : ["LoRa"] 
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_hdc1000
+
+alias: Click.HDC1000
+
+sources: {
+    src/hdc1000.c
+}
+
+headers: {
+    include/hdc1000.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/hdc1000.h) dst(include/hdc1000.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

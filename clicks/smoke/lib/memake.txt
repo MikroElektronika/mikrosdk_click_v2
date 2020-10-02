@@ -1,0 +1,40 @@
+type: library
+
+target: lib_smoke
+
+alias: Click.Smoke
+
+sources: {
+    src/smoke.c
+}
+
+headers: {
+    include/smoke.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/smoke.h) dst(include/smoke.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

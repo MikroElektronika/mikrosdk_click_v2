@@ -1,0 +1,40 @@
+type: library
+
+target: lib_rtc8
+
+alias: Click.Rtc8
+
+sources: {
+    src/rtc8.c
+}
+
+headers: {
+    include/rtc8.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/rtc8.h) dst(include/rtc8.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_hbridge4
+
+alias: Click.HBridge4
+
+sources: {
+    src/hbridge4.c
+}
+
+headers: {
+    include/hbridge4.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/hbridge4.h) dst(include/hbridge4.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

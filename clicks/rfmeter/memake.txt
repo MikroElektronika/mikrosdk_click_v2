@@ -1,0 +1,7 @@
+type: subdirs
+project: RfMeter
+
+subdirs: {
+    lib
+    example
+}

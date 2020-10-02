@@ -1,0 +1,7 @@
+type: subdirs
+project: LlcI2c
+
+subdirs: {
+    lib
+    example
+}

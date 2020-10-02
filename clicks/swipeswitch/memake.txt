@@ -1,0 +1,7 @@
+type: subdirs
+project: SwipeSwitch
+
+subdirs: {
+    lib
+    example
+}

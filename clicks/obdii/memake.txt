@@ -1,0 +1,7 @@
+type: subdirs
+project: Obdii
+
+subdirs: {
+    lib
+    example
+}

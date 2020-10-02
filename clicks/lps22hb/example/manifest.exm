@@ -1,0 +1,8 @@
+{
+    "name": "LPS22HB Click",
+    "description": "LPS22HB click is an easy solution for adding a digital barometer to your design. It carries the LPS22HB MEMS nano pressure sensor.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","LPS22HB"],
+    "category" : ["Pressure"] 
+}

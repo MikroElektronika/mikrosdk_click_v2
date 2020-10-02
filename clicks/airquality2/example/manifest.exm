@@ -1,0 +1,8 @@
+{
+    "name": "Air quality 2 Click",
+    "description": "Air quality 2 click carries the iAQ-Core Indoor Air Quality sensor that measures VOC levels and provides CO2 equivalent and TVOC equivalent predictions.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","iAQ-Core"],
+    "category" : ["Gas"] 
+}

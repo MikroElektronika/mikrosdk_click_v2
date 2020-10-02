@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Sub-1 GHz Transceivers",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "OOK RX click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.ookrx",
+    "product_link": "https://www.mikroe.com/ook-rx-click",
+    "short_description": "OOK RX click is a wireless receiver that operates at the frequency of 433MHz (sub-GHz). This device allows realization of a simple, low-speed wireless ad hoc communication network between a receiver and compatible transmitter.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

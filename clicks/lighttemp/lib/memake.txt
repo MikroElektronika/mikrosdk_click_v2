@@ -1,0 +1,40 @@
+type: library
+
+target: lib_lighttemp
+
+alias: Click.LightTemp
+
+sources: {
+    src/lighttemp.c
+}
+
+headers: {
+    include/lighttemp.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/lighttemp.h) dst(include/lighttemp.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

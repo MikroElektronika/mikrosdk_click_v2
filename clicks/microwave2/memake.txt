@@ -1,0 +1,7 @@
+type: subdirs
+project: Microwave2
+
+subdirs: {
+    lib
+    example
+}

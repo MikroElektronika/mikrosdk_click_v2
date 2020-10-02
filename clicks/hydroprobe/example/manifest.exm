@@ -1,0 +1,8 @@
+{
+    "name": "Hydro Probe Click",
+    "description": "Hydro Probe Click is a capacitive soil moisture sensor based on capacitive changes that are used to detect the volumetric water content in the soil. Water detection is achieved by using function oscillator MIC1557 and ADC converter MCP3221 from Microchip, which allow you to convert moisture presents to the digital value. Compared to resistant soil moisture sensors, its capacitive style reduces electrode erosion making it corrosion resistant and a better choice for applications such as soil moisture detection and automatic plant watering.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MIC1557, MCP3221"],
+    "category" : ["Enviromental"] 
+}

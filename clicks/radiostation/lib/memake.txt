@@ -1,0 +1,40 @@
+type: library
+
+target: lib_radiostation
+
+alias: Click.RadioStation
+
+sources: {
+    src/radiostation.c
+}
+
+headers: {
+    include/radiostation.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/radiostation.h) dst(include/radiostation.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

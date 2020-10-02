@@ -1,0 +1,40 @@
+type: library
+
+target: lib_voltmeter
+
+alias: Click.Voltmeter
+
+sources: {
+    src/voltmeter.c
+}
+
+headers: {
+    include/voltmeter.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/voltmeter.h) dst(include/voltmeter.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_temphum
+
+alias: Click.TempHum
+
+sources: {
+    src/temphum.c
+}
+
+headers: {
+    include/temphum.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/temphum.h) dst(include/temphum.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

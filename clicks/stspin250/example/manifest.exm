@@ -1,0 +1,8 @@
+{
+    "name": "STSPIN250 Click",
+    "description": "STSPIN250 click is a brushed DC motor driver with the current limiting and current sensing.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","STSPIN250"],
+    "category" : ["	Brushed"] 
+}

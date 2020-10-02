@@ -1,0 +1,7 @@
+type: subdirs
+project: Rs485
+
+subdirs: {
+    lib
+    example
+}

@@ -1,0 +1,8 @@
+{
+    "name": "Thermo 11 Click",
+    "description": "Thermo 11 Click is a Click board™ equipped with the sensor IC, which can digitize temperature measurements between -55°C and +150°C so that the temperature measurement data can be processed by the host MCU.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","TMP117"],
+    "category" : ["<Temperature & humidity>"] 
+}

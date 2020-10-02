@@ -1,0 +1,40 @@
+type: library
+
+target: lib_vibrasense
+
+alias: Click.VibraSense
+
+sources: {
+    src/vibrasense.c
+}
+
+headers: {
+    include/vibrasense.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/vibrasense.h) dst(include/vibrasense.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

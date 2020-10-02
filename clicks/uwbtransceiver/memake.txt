@@ -1,0 +1,7 @@
+type: subdirs
+project: UwbTransceiver
+
+subdirs: {
+    lib
+    example
+}

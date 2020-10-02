@@ -1,0 +1,8 @@
+{
+    "name": "ADC 3 Click",
+    "description": "ADC 3 Click represent 16-bit multichannel analog-to-digital converter. The click has four pairs of screw terminals onboard, letting you access the chip’s four differential input channels.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MCP3428 "],
+    "category" : ["ADC"] 
+}

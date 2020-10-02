@@ -1,0 +1,40 @@
+type: library
+
+target: lib_altitude3
+
+alias: Click.Altitude3
+
+sources: {
+    src/altitude3.c
+}
+
+headers: {
+    include/altitude3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/altitude3.h) dst(include/altitude3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

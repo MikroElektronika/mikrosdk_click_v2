@@ -1,0 +1,8 @@
+{
+    "name": "c3D Hall Click",
+    "description": "3D Hall click carries the MLX90333 Triaxis Hall sensor, capable of detecting the position of any magnet in nearby space. It does so by being sensitive to three components of flux density (BX, BY, BZ)",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MLX90333"],
+    "category" : ["Magnetic"] 
+}

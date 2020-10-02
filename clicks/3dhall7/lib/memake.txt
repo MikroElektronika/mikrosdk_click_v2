@@ -1,0 +1,40 @@
+type: library
+
+target: lib_c3dhall7
+
+alias: Click.3dHall7
+
+sources: {
+    src/c3dhall7.c
+}
+
+headers: {
+    include/c3dhall7.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/c3dhall7.h) dst(include/c3dhall7.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

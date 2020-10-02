@@ -1,0 +1,40 @@
+type: library
+
+target: lib_adc7
+
+alias: Click.Adc7
+
+sources: {
+    src/adc7.c
+}
+
+headers: {
+    include/adc7.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/adc7.h) dst(include/adc7.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_bluetooth
+
+alias: Click.Bluetooth
+
+sources: {
+    src/bluetooth.c
+}
+
+headers: {
+    include/bluetooth.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/bluetooth.h) dst(include/bluetooth.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

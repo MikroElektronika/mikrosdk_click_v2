@@ -1,0 +1,8 @@
+{
+    "name": "Gyro 5 Click",
+    "description": "Gyro 5 Click is a three-axis gyroscope Click board™ that can sense motion over three perpendicular axes. It is equipped with the ITG-3701, a three-axis digital gyroscope.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","ITG-3701"],
+    "category" : ["Motion"] 
+}

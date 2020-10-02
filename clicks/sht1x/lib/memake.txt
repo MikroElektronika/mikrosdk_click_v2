@@ -1,0 +1,40 @@
+type: library
+
+target: lib_sht1x
+
+alias: Click.Sht1x
+
+sources: {
+    src/sht1x.c
+}
+
+headers: {
+    include/sht1x.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/sht1x.h) dst(include/sht1x.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

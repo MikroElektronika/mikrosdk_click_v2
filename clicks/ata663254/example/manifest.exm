@@ -1,0 +1,8 @@
+{
+    "name": "ATA663254 Click",
+    "description": "ATA663254 click is a fully integrated LIN transceiver device with an integrated 5V LDO voltage regulator.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","ATA663254"],
+    "category" : ["LIN"] 
+}

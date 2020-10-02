@@ -1,0 +1,8 @@
+{
+    "name": "3D Hall Click",
+    "description": "3D Hall 2 click is a very accurate magnetic field sensing Click board™, used to sense the magnetic field strength in three perpendicular axes. It relies on a TLV493D-A1B6, a low power 3D magnetic sensor from Infineon. ",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","TLV493D-A1B6"],
+    "category" : ["Magnetic"] 
+}

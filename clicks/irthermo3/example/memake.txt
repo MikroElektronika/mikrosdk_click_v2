@@ -1,0 +1,17 @@
+type: executable
+target: example_irthermo3
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.IrThermo3
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

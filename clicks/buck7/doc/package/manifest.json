@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Buck",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "BUCK 7 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.buck7",
+    "product_link": "https://www.mikroe.com/buck-7-click",
+    "short_description": "Buck 7 Click is a high-efficiency buck (step-down) DC-DC converter, which can provide digitally adjusted step-down voltage on its output while delivering up to 3.5A of current.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

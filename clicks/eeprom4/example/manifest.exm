@@ -1,0 +1,8 @@
+{
+    "name": "EEPROM 4 Click",
+    "description": "EEPROM 4 click is 2,097,152 bits on a click board™, organized into 262,144 bytes. In other words, this click board™ is an EEPROM memory medium with the capacity of 256 KB.",
+    "image" : "https://cdn1-shop.mikroe.com/img/product/eeprom-4-click/eeprom-4-click-large_default-2.jpg",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","AT25M02"],
+    "category" : ["EEPROM"] 
+}

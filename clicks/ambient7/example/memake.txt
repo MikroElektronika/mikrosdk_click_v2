@@ -1,0 +1,17 @@
+type: executable
+target: example_ambient7
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Ambient7
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

@@ -1,0 +1,113 @@
+/*!
+ * \file 
+ * \brief Joystick2 Click example
+ * 
+ * # Description
+ * The demo application shows reading the joistick position ..
+ *
+ * The demo application is composed of two sections :
+ * 
+ * ## Application Init 
+ * Configuring clicks and log objects.
+ * Reset device and settings the click in the default configuration.
+ * 
+ * ## Application Task  
+ * It reads the position of the joystick,
+ * if it detects that the joystick has moved from the zero position,
+ * it prints a message about the current position.
+ * 
+ * \author Katarina Perendic
+ *
+ */
+// ------------------------------------------------------------------- INCLUDES
+
+#include "board.h"
+#include "log.h"
+#include "joystick2.h"
+
+// ------------------------------------------------------------------ VARIABLES
+
+static joystick2_t joystick2;
+static log_t logger;
+
+// ------------------------------------------------------ APPLICATION FUNCTIONS
+
+void application_init ( void )
+{
+    log_cfg_t log_cfg;
+    joystick2_cfg_t cfg;
+
+    //  Logger initialization.
+
+    LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
+    log_init( &logger, &log_cfg );
+    log_info( &logger, "---- Application Init ----" );
+
+    //  Click initialization.
+
+    joystick2_cfg_setup( &cfg );
+    JOYSTICK2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    joystick2_init( &joystick2, &cfg );
+
+    joystick2_reset( &joystick2 );
+    joystick2_default_cfg( &joystick2 );
+    log_info( &logger, "---- JOYSTICK START ----" );
+}
+
+void application_task ( void )
+{
+    uint8_t joystick_pos;
+
+    //  Task implementation.
+
+    joystick_pos = joystick2_get_position( &joystick2 );
+
+    switch ( joystick_pos )
+    {
+        case JOYSTICK2_BUTTON_ACTIVE:
+        {
+            log_info( &logger, "--- Button is pressed!!! ---" );
+            Delay_ms( 300 );
+            break;
+        }
+        case JOYSTICK2_POSITION_RIGHT:
+        {
+            log_info( &logger, "--- Joystick position [RIGHT] ---" );
+            Delay_ms( 300 );
+            break;
+        }
+        case JOYSTICK2_POSITION_LEFT:
+        {
+            log_info( &logger, "--- Joystick position [LEFT] ---" );
+            Delay_ms( 300 );
+            break;
+        }
+        case JOYSTICK2_POSITION_UP:
+        {
+            log_info( &logger, "--- Joystick position [UP] ---" );
+            Delay_ms( 300 );
+            break;
+        }
+        case JOYSTICK2_POSITION_DOWN:
+        {
+            log_info( &logger, "--- Joystick position [DOWN] ---" );
+            Delay_ms( 300 );
+            break;
+        }
+    }
+}
+
+void main ( void )
+{
+    application_init( );
+
+    for ( ; ; )
+    {
+        application_task( );
+    }
+}
+
+
+// ------------------------------------------------------------------------ END

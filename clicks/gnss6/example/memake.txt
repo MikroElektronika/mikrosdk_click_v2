@@ -1,0 +1,17 @@
+type: executable
+target: example_gnss6
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Gnss6
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

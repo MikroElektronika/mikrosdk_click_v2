@@ -1,0 +1,7 @@
+type: subdirs
+project: VCPmonitor
+
+subdirs: {
+    lib
+    example
+}

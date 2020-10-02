@@ -1,0 +1,17 @@
+type: executable
+target: example_thingstream
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Thingstream
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

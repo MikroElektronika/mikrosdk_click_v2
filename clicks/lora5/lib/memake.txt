@@ -1,0 +1,40 @@
+type: library
+
+target: lib_lora5
+
+alias: Click.LoRa5
+
+sources: {
+    src/lora5.c
+}
+
+headers: {
+    include/lora5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/lora5.h) dst(include/lora5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

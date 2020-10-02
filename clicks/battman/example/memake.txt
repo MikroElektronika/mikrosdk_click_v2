@@ -1,0 +1,17 @@
+type: executable
+target: example_battman
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.BattMan
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

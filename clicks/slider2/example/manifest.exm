@@ -1,0 +1,8 @@
+{
+    "name": "Slider 2 Click",
+    "description": "The Slider 2 click is a very accurate potentiometer Click Board, featuring a high-quality mechanical slide-action potentiometer (slider), which in conjunction with the accurate voltage reference IC, provides very precise analog control voltage (CV) at its output. Featuring an accurate voltage reference IC, the output of the Click board™ can be directly sampled by the A/D peripheral of the microcontroller (MCU). Since there are many different MCU architectures with different reference voltage requirements, Slider 2 click offers a possibility to select the voltage reference between 4.096V and 2.048V, two most commonly used values for different MCU peripherals.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","PTA3043"],
+    "category" : ["ADC"] 
+}

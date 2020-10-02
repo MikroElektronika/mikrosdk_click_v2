@@ -1,0 +1,40 @@
+type: library
+
+target: lib_sram2
+
+alias: Click.Sram2
+
+sources: {
+    src/sram2.c
+}
+
+headers: {
+    include/sram2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/sram2.h) dst(include/sram2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_accel8
+
+alias: Click.Accel8
+
+sources: {
+    src/accel8.c
+}
+
+headers: {
+    include/accel8.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/accel8.h) dst(include/accel8.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

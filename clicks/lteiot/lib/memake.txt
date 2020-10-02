@@ -1,0 +1,40 @@
+type: library
+
+target: lib_lteiot
+
+alias: Click.LteIot
+
+sources: {
+    src/lteiot.c
+}
+
+headers: {
+    include/lteiot.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/lteiot.h) dst(include/lteiot.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

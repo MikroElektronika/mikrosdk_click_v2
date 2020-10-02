@@ -1,0 +1,40 @@
+type: library
+
+target: lib_brushless5
+
+alias: Click.Brushless5
+
+sources: {
+    src/brushless5.c
+}
+
+headers: {
+    include/brushless5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/brushless5.h) dst(include/brushless5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

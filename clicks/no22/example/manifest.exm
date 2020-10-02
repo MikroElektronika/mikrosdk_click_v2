@@ -1,0 +1,8 @@
+{
+    "name": "NO2 2 Click",
+    "description": "NO2 2 Click is a gas sensor Click board™, equipped with the MiCS-2714, a compact metal oxide (MOS) sensor. This sensor reacts to the presence of nitrogen dioxide (NO2) and hydrogen (H2).",
+    "image" : "https://cdn1-shop.mikroe.com/img/product/no2-2-click/no2-2-click-large_default-2.jpg",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MCP3201"],
+    "category" : ["Gas,NO2"] 
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_c6dofimu10
+
+alias: Click.c6DofImu10
+
+sources: {
+    src/c6dofimu10.c
+}
+
+headers: {
+    include/c6dofimu10.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/c6dofimu10.h) dst(include/c6dofimu10.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

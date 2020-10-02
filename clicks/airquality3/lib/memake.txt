@@ -1,0 +1,40 @@
+type: library
+
+target: lib_airquality3
+
+alias: Click.AirQuality3
+
+sources: {
+    src/airquality3.c
+}
+
+headers: {
+    include/airquality3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/airquality3.h) dst(include/airquality3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

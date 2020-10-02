@@ -1,0 +1,8 @@
+{
+    "name": "Power MUX Click",
+    "description": "Power MUX Click features power multiplexer that enables transition between two power supplies (such as a battery and a wall adapter), each operating at 2.8V to 5.5V and delivering up to 2A current depending on the package. This IC provides inrush current control and thermal protection to Power MUX Click, manual and auto-switching operating modes, cross-conduction blocking, and reverse-conduction blocking. Operating mode selection depends on a logic level on D0 and D1 pins.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","TPS2115APWR"],
+    "category" : ["Power management"] 
+}

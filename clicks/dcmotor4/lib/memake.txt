@@ -1,0 +1,40 @@
+type: library
+
+target: lib_dcmotor4
+
+alias: Click.DcMotor4
+
+sources: {
+    src/dcmotor4.c
+}
+
+headers: {
+    include/dcmotor4.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/dcmotor4.h) dst(include/dcmotor4.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,33 @@
+{
+    "architecture": "ARM",
+    "category": "LED Drivers",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Light Temp click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.lighttemp",
+    "product_link": "https://www.mikroe.com/light-temp-click",
+    "short_description": "Light Temp Click is a dual-channel LED driver, designed to be used in tunable Smart Connected Lighting (SCL) applications.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.2"
+}
+
+

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_templog2
+
+alias: Click.TempLog2
+
+sources: {
+    src/templog2.c
+}
+
+headers: {
+    include/templog2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/templog2.h) dst(include/templog2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

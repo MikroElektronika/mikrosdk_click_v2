@@ -1,0 +1,40 @@
+type: library
+
+target: lib_pot3
+
+alias: Click.Pot3
+
+sources: {
+    src/pot3.c
+}
+
+headers: {
+    include/pot3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/pot3.h) dst(include/pot3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

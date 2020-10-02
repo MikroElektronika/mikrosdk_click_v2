@@ -1,0 +1,40 @@
+type: library
+
+target: lib_pressure2
+
+alias: Click.Pressure2
+
+sources: {
+    src/pressure2.c
+}
+
+headers: {
+    include/pressure2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/pressure2.h) dst(include/pressure2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

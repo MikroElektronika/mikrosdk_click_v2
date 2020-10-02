@@ -1,0 +1,40 @@
+type: library
+
+target: lib_fingerprint2
+
+alias: Click.Fingerprint2
+
+sources: {
+    src/fingerprint2.c
+}
+
+headers: {
+    include/fingerprint2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/fingerprint2.h) dst(include/fingerprint2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

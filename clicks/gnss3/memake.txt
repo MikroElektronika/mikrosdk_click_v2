@@ -1,0 +1,7 @@
+type: subdirs
+project: Gnss3
+
+subdirs: {
+    lib
+    example
+}

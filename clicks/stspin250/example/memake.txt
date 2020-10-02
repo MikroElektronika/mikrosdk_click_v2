@@ -1,0 +1,17 @@
+type: executable
+target: example_stspin250
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Stspin250
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

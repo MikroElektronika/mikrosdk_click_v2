@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "LED Drivers",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "UVC Light  click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.uvclight",
+    "product_link": "https://www.mikroe.com/uvc-light-click",
+    "short_description": "UVC Light Click is Click board™ with ultraviolet LEDs with 275nm wavelength which can be complemented with UVC Click for measuring exact dose of UV radiation. UVC radiation refers to wavelengths shorter than 280 nm. Because of the spectral sensitivity of DNA, only the UVC region demonstrates significant germicidal properties. As evident by multiple research studies and reports, when biological organisms are exposed to deep UV light in the range of 200 nm to 300 nm it is absorbed by DNA, RNA, and proteins. With two 0.7W (1.4W combined power) UVC Light Click is a perfect solution as a small surface disinfection tool.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

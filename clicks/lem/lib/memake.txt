@@ -1,0 +1,40 @@
+type: library
+
+target: lib_lem
+
+alias: Click.Lem
+
+sources: {
+    src/lem.c
+}
+
+headers: {
+    include/lem.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/lem.h) dst(include/lem.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

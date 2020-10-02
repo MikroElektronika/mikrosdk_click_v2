@@ -1,0 +1,40 @@
+type: library
+
+target: lib_amfm
+
+alias: Click.AmFm
+
+sources: {
+    src/amfm.c
+}
+
+headers: {
+    include/amfm.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/amfm.h) dst(include/amfm.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

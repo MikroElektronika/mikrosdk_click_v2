@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "RTC",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "RTC 7 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.rtc7",
+    "product_link": "https://www.mikroe.com/rtc-7-click",
+    "short_description": "RTC 7 Click is a real time clock module which has an extremely low power consumption, allowing it to be used with a single button cell battery or a super capacitor, for an extended period of time. ",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

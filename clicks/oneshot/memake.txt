@@ -1,0 +1,7 @@
+type: subdirs
+project: OneShot
+
+subdirs: {
+    lib
+    example
+}

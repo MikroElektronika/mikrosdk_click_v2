@@ -1,0 +1,8 @@
+{
+    "name": "GSM 4 Click",
+    "description": "GSM 4 click is a compact quad-band GSM cellular network communication solution, featuring the quad-band 2.5G GSM/GPRS SARA-G350 module.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","u-blox SARA-G3"],
+    "category" : ["GSM/LTE,2G GPRS"] 
+}

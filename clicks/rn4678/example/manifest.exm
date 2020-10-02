@@ -1,0 +1,8 @@
+{
+    "name": "RN4678 Click",
+    "description": "RN4678 click carries the RN4678 Bluetooth® 4.2 dual mode module from Microchip. The click is designed to run on a 3.3V power supply. It communicates with the target microcontroller over I2C and UART interface, with additional functionality provided by the following pins on the mikroBUS™ line: AN, RST, CS, PWM, INT.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","RN4678"],
+    "category" : ["BT/BLE"] 
+}

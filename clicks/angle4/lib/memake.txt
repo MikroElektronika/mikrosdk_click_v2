@@ -1,0 +1,40 @@
+type: library
+
+target: lib_angle4
+
+alias: Click.Angle4
+
+sources: {
+    src/angle4.c
+}
+
+headers: {
+    include/angle4.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/angle4.h) dst(include/angle4.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

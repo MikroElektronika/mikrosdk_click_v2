@@ -1,0 +1,40 @@
+type: library
+
+target: lib_charger12
+
+alias: Click.Charger12
+
+sources: {
+    src/charger12.c
+}
+
+headers: {
+    include/charger12.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/charger12.h) dst(include/charger12.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

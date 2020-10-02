@@ -1,0 +1,17 @@
+type: executable
+target: example_lsm6dsl
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Lsm6Dsl
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

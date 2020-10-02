@@ -1,0 +1,40 @@
+type: library
+
+target: lib_tiltnshake
+
+alias: Click.TiltNshake
+
+sources: {
+    src/tiltnshake.c
+}
+
+headers: {
+    include/tiltnshake.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/tiltnshake.h) dst(include/tiltnshake.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

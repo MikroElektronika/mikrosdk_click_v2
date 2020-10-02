@@ -1,0 +1,40 @@
+type: library
+
+target: lib_dac3
+
+alias: Click.DAC3
+
+sources: {
+    src/dac3.c
+}
+
+headers: {
+    include/dac3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/dac3.h) dst(include/dac3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

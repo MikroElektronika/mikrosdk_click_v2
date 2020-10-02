@@ -1,0 +1,40 @@
+type: library
+
+target: lib_adc5
+
+alias: Click.Adc5
+
+sources: {
+    src/adc5.c
+}
+
+headers: {
+    include/adc5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/adc5.h) dst(include/adc5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

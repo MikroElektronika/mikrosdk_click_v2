@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Rotary encoder",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Knob click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.knob",
+    "product_link": "https://www.mikroe.com/knob-g-click",
+    "short_description": "Knob G click features a combination of high-quality quadrature rotary encoder, and a LED ring composed of 24 individual green LEDs. ",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.2"
+}
+

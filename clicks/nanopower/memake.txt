@@ -1,0 +1,7 @@
+type: subdirs
+project: NanoPower
+
+subdirs: {
+    lib
+    example
+}

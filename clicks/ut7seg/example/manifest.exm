@@ -1,0 +1,8 @@
+{
+    "name": "UT 7-SEG Click",
+    "description": "UT 7-SEG R click carries two SMD ultra thin LED 7-SEG displays and the MAX6969 constant-current LED driver from Maxim Integrated.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MAX6969"],
+    "category" : ["LED segment"] 
+}

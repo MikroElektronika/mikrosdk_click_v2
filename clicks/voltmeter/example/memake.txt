@@ -1,0 +1,17 @@
+type: executable
+target: example_voltmeter
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Voltmeter
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

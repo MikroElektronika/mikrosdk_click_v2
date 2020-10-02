@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Measurements",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "PAC1921 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.pac1921",
+    "product_link": "https://www.mikroe.com/pac1921-click",
+    "short_description": "PAC1921 click is a versatile power monitoring and measuring device intended for the high speed, low latency measurements. This device can measure current, voltage or the power of the connected load.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

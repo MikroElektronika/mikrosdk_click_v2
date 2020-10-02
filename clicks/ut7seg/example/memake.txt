@@ -1,0 +1,17 @@
+type: executable
+target: example_ut7seg
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Ut7Seg
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

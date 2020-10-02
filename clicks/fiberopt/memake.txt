@@ -1,0 +1,7 @@
+type: subdirs
+project: FiberOpt
+
+subdirs: {
+    lib
+    example
+}

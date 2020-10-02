@@ -1,0 +1,8 @@
+{
+    "name": "DAC 2 Click",
+    "description": "DAC 2 click represents a 16-bit digital-to-analog converter.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","LTC2601CDD"],
+    "category" : ["DAC"] 
+}

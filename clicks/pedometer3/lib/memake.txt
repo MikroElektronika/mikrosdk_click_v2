@@ -1,0 +1,40 @@
+type: library
+
+target: lib_pedometer3
+
+alias: Click.Pedometer3
+
+sources: {
+    src/pedometer3.c
+}
+
+headers: {
+    include/pedometer3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/pedometer3.h) dst(include/pedometer3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_boost4
+
+alias: Click.Boost4
+
+sources: {
+    src/boost4.c
+}
+
+headers: {
+    include/boost4.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/boost4.h) dst(include/boost4.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

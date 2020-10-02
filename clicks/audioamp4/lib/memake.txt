@@ -1,0 +1,40 @@
+type: library
+
+target: lib_audioamp4
+
+alias: Click.AudioAmp4
+
+sources: {
+    src/audioamp4.c
+}
+
+headers: {
+    include/audioamp4.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/audioamp4.h) dst(include/audioamp4.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

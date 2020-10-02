@@ -1,0 +1,40 @@
+type: library
+
+target: lib_irgrid_mlx90640
+
+alias: Click.IrGridMlx90640
+
+sources: {
+    src/irgrid_mlx90640.c
+}
+
+headers: {
+    include/irgrid_mlx90640.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/irgrid_mlx90640.h) dst(include/irgrid_mlx90640.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

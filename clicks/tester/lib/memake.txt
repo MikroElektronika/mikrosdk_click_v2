@@ -1,0 +1,40 @@
+type: library
+
+target: lib_tester
+
+alias: Click.Tester
+
+sources: {
+    src/tester.c
+}
+
+headers: {
+    include/tester.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/tester.h) dst(include/tester.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

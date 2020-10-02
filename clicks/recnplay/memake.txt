@@ -1,0 +1,7 @@
+type: subdirs
+project: RecNPlay
+
+subdirs: {
+    lib
+    example
+}

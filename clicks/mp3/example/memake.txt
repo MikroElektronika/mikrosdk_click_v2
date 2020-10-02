@@ -1,0 +1,17 @@
+type: executable
+target: example_mp3
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Mp3
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

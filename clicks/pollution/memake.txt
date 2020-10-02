@@ -1,0 +1,7 @@
+type: subdirs
+project: Pollution
+
+subdirs: {
+    lib
+    example
+}

@@ -1,0 +1,8 @@
+{
+    "name": "Temp&Hum 6 Click",
+    "description": "Temp&Hum 6 click is a smart temperature and humidity sensing click board™, packed with features that allow easy and simple integration into any design.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","ENS210"],
+    "category" : ["Temperature & humidity"] 
+}

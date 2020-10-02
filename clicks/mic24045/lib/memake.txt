@@ -1,0 +1,40 @@
+type: library
+
+target: lib_mic24045
+
+alias: Click.Mic24045
+
+sources: {
+    src/mic24045.c
+}
+
+headers: {
+    include/mic24045.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/mic24045.h) dst(include/mic24045.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

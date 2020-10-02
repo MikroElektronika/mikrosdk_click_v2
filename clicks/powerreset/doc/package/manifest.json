@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Capacitive",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Power Reset click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.powerreset",
+    "product_link": "https://www.mikroe.com/power-reset-click",
+    "short_description": "Power/Reset Click is equipped with two capacitive touch pads on a single click board™.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

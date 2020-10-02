@@ -1,0 +1,8 @@
+{
+    "name": "DIGI POT Click",
+    "description": "DIGIPOT Click is an accessory board in mikroBUS form factor.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MCP4161"],
+    "category" : ["Digital potentiometer"] 
+}

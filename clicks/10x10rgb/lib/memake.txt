@@ -1,0 +1,42 @@
+type: library
+
+target: lib_c10x10rgb
+
+alias: Click.10x10RGB
+
+sources: {
+    src/c10x10rgb.c
+}
+
+headers: {
+    include/c10x10rgb.h
+    include/c10x10rgb_ascii_matrix.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/c10x10rgb.h) dst(include/c10x10rgb.h)
+    src(include/c10x10rgb_ascii_matrix.h) dst(include/c10x10rgb_ascii_matrix.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

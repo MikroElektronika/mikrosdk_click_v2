@@ -1,0 +1,40 @@
+type: library
+
+target: lib_ata663254
+
+alias: Click.Ata663254
+
+sources: {
+    src/ata663254.c
+}
+
+headers: {
+    include/ata663254.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/ata663254.h) dst(include/ata663254.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

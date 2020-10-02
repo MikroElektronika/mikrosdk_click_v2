@@ -1,0 +1,8 @@
+{
+    "name": "Buck-Boost Click",
+    "description": "Buck-Boost click™ features LTC3129-1, a buck-boost DC/DC conversion integrated circuit. The click supports a wide input voltage range and can output eight discrete regulated output voltage levels, selectable by the digital output voltage selection pins, ranging from 2.5V to 15V.",
+    "image" : "https://cdn1-shop.mikroe.com/img/product/buck-boost-click/buck-boost-click-thickbox_default-22x.jpg",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","Buck-Boost"],
+    "category" : ["Buck-Boost"] 
+}

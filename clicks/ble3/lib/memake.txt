@@ -1,0 +1,40 @@
+type: library
+
+target: lib_ble3
+
+alias: Click.Ble3
+
+sources: {
+    src/ble3.c
+}
+
+headers: {
+    include/ble3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/ble3.h) dst(include/ble3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,7 @@
+type: subdirs
+project: 16x9
+
+subdirs: {
+    lib
+    example
+}

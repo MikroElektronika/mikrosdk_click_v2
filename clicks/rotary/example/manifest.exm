@@ -1,0 +1,8 @@
+{
+    "name": "Rotary Click",
+    "description": "Rotary click carries a 15-pulse incremental rotary encoder with detents, surrounded by a ring of 16 green LEDs.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","74LVC1T45"],
+    "category" : ["Rotary encoder"] 
+}

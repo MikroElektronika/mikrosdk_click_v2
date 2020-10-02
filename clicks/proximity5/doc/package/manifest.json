@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Proximity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Proximity 5 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.proximity5",
+    "product_link": "https://www.mikroe.com/proximity-5-click",
+    "short_description": "Proximity 5 click is a very accurate and reliable proximity sensing (PS) and ambient light sensing (ALS) device, equipped with the state-of-the-art PS and ALS sensor.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

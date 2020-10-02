@@ -1,0 +1,40 @@
+type: library
+
+target: lib_magneto5
+
+alias: Click.Magneto5
+
+sources: {
+    src/magneto5.c
+}
+
+headers: {
+    include/magneto5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/magneto5.h) dst(include/magneto5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

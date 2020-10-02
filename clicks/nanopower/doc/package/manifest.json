@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Boost",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Nano Power click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.nanopower",
+    "product_link": "https://www.mikroe.com/nano-power-click",
+    "short_description": "Nano Power click is a boost (step-up) DC-DC converter click with extremely high efficiency and very low input voltage, aimed at the low power IoT market and battery-powered sensors and other devices. ",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

@@ -1,0 +1,7 @@
+type: subdirs
+project: Fan3
+
+subdirs: {
+    lib
+    example
+}

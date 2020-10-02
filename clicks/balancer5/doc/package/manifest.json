@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Battery charger",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Balancer 5 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.balancer5",
+    "product_link": "https://www.mikroe.com/balancer-5-click",
+    "short_description": "Balancer 5 Click is an intelligent 2-cell Li-Ion battery charger, system power manager, and a battery fuel gauge Click board™. Balancer 5 click is based on BQ25887 controller which has some extra features enabling charging without too much hassle.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

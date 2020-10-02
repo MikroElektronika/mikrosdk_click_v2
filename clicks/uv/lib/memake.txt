@@ -1,0 +1,40 @@
+type: library
+
+target: lib_uv
+
+alias: Click.Uv
+
+sources: {
+    src/uv.c
+}
+
+headers: {
+    include/uv.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/uv.h) dst(include/uv.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

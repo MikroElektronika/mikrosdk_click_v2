@@ -1,0 +1,8 @@
+{
+    "name": "Magnetic Rotary Click",
+    "description": "Magnetic rotary click is a very accurate position sensing Click board™ which utilizes the HMC1512, a magnetic field displacement sensor IC.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","HMC1512"],
+    "category" : ["Magnetic"] 
+}

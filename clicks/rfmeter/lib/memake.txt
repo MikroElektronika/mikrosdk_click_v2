@@ -1,0 +1,40 @@
+type: library
+
+target: lib_rfmeter
+
+alias: Click.RfMeter
+
+sources: {
+    src/rfmeter.c
+}
+
+headers: {
+    include/rfmeter.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/rfmeter.h) dst(include/rfmeter.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

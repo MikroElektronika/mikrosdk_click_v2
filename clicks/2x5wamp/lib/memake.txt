@@ -1,0 +1,40 @@
+type: library
+
+target: lib_c2x5wamp
+
+alias: Click.2x5WAmp
+
+sources: {
+    src/c2x5wamp.c
+}
+
+headers: {
+    include/c2x5wamp.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/c2x5wamp.h) dst(include/c2x5wamp.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Biometrics",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Heart Rate 9 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.heartrate9",
+    "product_link": "https://www.mikroe.com/heart-rate-9-click",
+    "short_description": "The Heart Rate 9 click is a Click board™ which features PIC16F1779 8-bit MCU and SFH 7060 heart rate and pulse oximetry monitoring sensor.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Amplifier",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "EVC click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.evc",
+    "product_link": "https://www.mikroe.com/evc-click",
+    "short_description": "EVC Click is a six-channel digital volume controller, equipped with an integrated electronic volume control circuit, which can be controlled over the I2C interface.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

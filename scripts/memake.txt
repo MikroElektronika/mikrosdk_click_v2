@@ -1,0 +1,23 @@
+type: executable
+target: example_{NAME}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+    {NAME}.c
+}
+
+headers: {
+    {NAME}.h
+}
+
+

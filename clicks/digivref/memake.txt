@@ -1,0 +1,7 @@
+type: subdirs
+project: DigiVref
+
+subdirs: {
+    lib
+    example
+}

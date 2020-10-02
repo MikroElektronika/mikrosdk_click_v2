@@ -1,0 +1,40 @@
+type: library
+
+target: lib_pwmdriver
+
+alias: Click.PwmDriver
+
+sources: {
+    src/pwmdriver.c
+}
+
+headers: {
+    include/pwmdriver.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/pwmdriver.h) dst(include/pwmdriver.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

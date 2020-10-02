@@ -1,0 +1,17 @@
+type: executable
+target: example_htu21d
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Htu21d
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

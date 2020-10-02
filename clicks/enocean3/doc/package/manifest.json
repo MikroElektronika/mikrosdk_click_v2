@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Sub-1 GHz Transceievers,EnOcean",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "EnOcean 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.enocan3",
+    "product_link": "https://www.mikroe.com/enocean-3-click",
+    "short_description": "This library contains API for Enocean3 Click driver.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

@@ -1,0 +1,32 @@
+{
+  "architecture": "ARM",
+  "category": "Measurements",
+  "changelog": "Resources/CHANGELOG.md",
+  "contains": [
+    "libraries",
+    "hex_files",
+    "examples"
+  ],
+  "dependency_list": [
+  ],
+  "details": "Resources/DETAILS.md",
+  "display_name": "Analog Key click",
+  "example_list": [
+    {
+      "project_path": "Examples/example"
+    }
+  ],
+  "help": "Help/doc",
+  "icon": "Resources/click_icon.png",
+  "license": {
+    "file_path": "",
+    "id": "46"
+  },
+  "name": "mikroe.click.analogkey",
+  "product_link": "https://www.mikroe.com/analog-key-click",
+  "short_description": "Analog Key Click is an analog keyboard on a Click board. It contains six tactile pushbuttons, used to select one of six different voltage levels. The idea behind this click is very simple: six resistors form a voltage divider.",
+  "supported_compiler": "mikroC",
+  "type": "Library",
+  "version": "2.0.0.1"
+}
+

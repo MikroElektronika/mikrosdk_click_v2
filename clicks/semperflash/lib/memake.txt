@@ -1,0 +1,40 @@
+type: library
+
+target: lib_semperflash
+
+alias: Click.SemperFlash
+
+sources: {
+    src/semperflash.c
+}
+
+headers: {
+    include/semperflash.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/semperflash.h) dst(include/semperflash.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

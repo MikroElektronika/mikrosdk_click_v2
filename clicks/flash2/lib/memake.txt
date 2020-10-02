@@ -1,0 +1,40 @@
+type: library
+
+target: lib_flash2
+
+alias: Click.Flash2
+
+sources: {
+    src/flash2.c
+}
+
+headers: {
+    include/flash2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/flash2.h) dst(include/flash2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

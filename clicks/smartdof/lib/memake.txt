@@ -1,0 +1,40 @@
+type: library
+
+target: lib_smartdof
+
+alias: Click.SmartDof
+
+sources: {
+    src/smartdof.c
+}
+
+headers: {
+    include/smartdof.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/smartdof.h) dst(include/smartdof.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,8 @@
+{
+    "name": "Cunter Click",
+    "description": "Counter click carries an LS7366R 32-bit quadrature counter. The top of the board has a pinout for interfacing with incremental encoders. The interface has ENCA and ENCB pins, along with ENCI, which is a programmable index.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","LS7366R"],
+    "category" : ["Rotary encoder"] 
+}

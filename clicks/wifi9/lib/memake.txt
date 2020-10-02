@@ -1,0 +1,40 @@
+type: library
+
+target: lib_wifi9
+
+alias: Click.Wifi9
+
+sources: {
+    src/wifi9.c
+}
+
+headers: {
+    include/wifi9.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/wifi9.h) dst(include/wifi9.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

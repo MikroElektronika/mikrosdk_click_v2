@@ -1,0 +1,7 @@
+type: subdirs
+project: Mcp1664
+
+subdirs: {
+    lib
+    example
+}

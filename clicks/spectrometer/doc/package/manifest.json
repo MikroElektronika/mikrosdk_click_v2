@@ -1,0 +1,31 @@
+{
+    "architecture": "ARM",
+    "category": "Optical",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Spectrometer click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.spectrometer",
+    "product_link": "https://www.mikroe.com/spectrometer-click",
+    "short_description": "Spectrometer Click features an 11-channel spectrometer for spectral identification and color matching applications. This Click board™ features the AS7341 from AMS-AG, whose spectral response is defined in the wavelengths from approximately 350nm to 1000nm.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.0"
+}

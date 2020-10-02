@@ -1,0 +1,40 @@
+type: library
+
+target: lib_current
+
+alias: Click.Current
+
+sources: {
+    src/current.c
+}
+
+headers: {
+    include/current.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/current.h) dst(include/current.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_heater
+
+alias: Click.heater
+
+sources: {
+    src/heater.c
+}
+
+headers: {
+    include/heater.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/heater.h) dst(include/heater.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,8 @@
+{
+    "name": "AudioAMP Click",
+    "description": "The AudioAMP Board features an on-board power amplifier LM386 designed for use in low voltage consumer applications.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","LM386 "],
+    "category" : ["Amplifier"] 
+}

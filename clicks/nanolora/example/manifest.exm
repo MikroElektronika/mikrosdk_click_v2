@@ -1,0 +1,8 @@
+{
+    "name": "Nano LoRa Click",
+    "description": "Nano LoRa Click is a LoRa® technology-based transceiver Click board™, which operates at a sub-gigahertz frequency of 815MHz and 928 MHz Bands, optimized for very long-range, low consumption applications, suitable for LPWA networks. Thanks to the spread spectrum modulation feature, as well as the low power consumption, it is capable of achieving a long-range communication, immune to interferences. Operated over the UART interface, it represents a very simple, yet powerful solution for the LoRa-based IoT communication network solution.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","EMB-LR1276S"],
+    "category" : ["LoRa"] 
+}

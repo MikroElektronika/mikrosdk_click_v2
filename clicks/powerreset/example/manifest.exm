@@ -1,0 +1,8 @@
+{
+    "name": "Power/Reset Click",
+    "description": "Power/Reset Click is equipped with two capacitive touch pads on a single click board™.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","QT1011"],
+    "category" : ["Capacitive"] 
+}

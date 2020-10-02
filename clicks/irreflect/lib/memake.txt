@@ -1,0 +1,40 @@
+type: library
+
+target: lib_irreflect
+
+alias: Click.IrReflect
+
+sources: {
+    src/irreflect.c
+}
+
+headers: {
+    include/irreflect.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/irreflect.h) dst(include/irreflect.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

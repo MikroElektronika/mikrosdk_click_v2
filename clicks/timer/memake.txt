@@ -1,0 +1,7 @@
+type: subdirs
+project: Timer
+
+subdirs: {
+    lib
+    example
+}

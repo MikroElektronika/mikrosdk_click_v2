@@ -1,0 +1,40 @@
+type: library
+
+target: lib_thermo5
+
+alias: Click.THERMO5
+
+sources: {
+    src/thermo5.c
+}
+
+headers: {
+    include/thermo5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/thermo5.h) dst(include/thermo5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

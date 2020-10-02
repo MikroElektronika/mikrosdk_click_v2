@@ -1,0 +1,7 @@
+type: subdirs
+project: Alcohol2
+
+subdirs: {
+    lib
+    example
+}

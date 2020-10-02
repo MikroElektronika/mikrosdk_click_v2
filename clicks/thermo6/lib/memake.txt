@@ -1,0 +1,40 @@
+type: library
+
+target: lib_thermo6
+
+alias: Click.Thermo6
+
+sources: {
+    src/thermo6.c
+}
+
+headers: {
+    include/thermo6.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/thermo6.h) dst(include/thermo6.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

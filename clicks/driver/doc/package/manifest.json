@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Stepper",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Driver click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.driver",
+    "product_link": "https://www.mikroe.com/driver-click",
+    "short_description": "Driver Click features an IC with seven integrated high-current sink drivers, which can be used to drive a wide range of loads via simple parallel interface. These integrated drivers use high-efficiency MOSFETs for improved thermal performance.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_amrcurent
+
+alias: Click.AmrCurrent
+
+sources: {
+    src/amrcurent.c
+}
+
+headers: {
+    include/amrcurent.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/amrcurent.h) dst(include/amrcurent.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

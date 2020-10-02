@@ -1,0 +1,8 @@
+{
+    "name": "WiFi3 click",
+    "description": "WiFi3 click is a complete self-contained WiFi solution carrying the ESP8266 module with a system on a chip. The click is designed to run on a 3.3V power supply only. It communicates with the targetboard microcontroller through the mikroBUS™ RX, TX, CS and RST lines. ",
+    "image" : "https://cdn1-shop.mikroe.com/img/product/wifi-3-click/wifi-3-click-thickbox_default-1.jpg",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","ESP8266"],
+    "category" : ["WIFI"] 
+}

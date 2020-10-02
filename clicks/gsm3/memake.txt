@@ -1,0 +1,7 @@
+type: subdirs
+project: Gsm3
+
+subdirs: {
+    lib
+    example
+}

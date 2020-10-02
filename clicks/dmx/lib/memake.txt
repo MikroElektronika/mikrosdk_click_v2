@@ -1,0 +1,40 @@
+type: library
+
+target: lib_dmx
+
+alias: Click.Dmx
+
+sources: {
+    src/dmx.c
+}
+
+headers: {
+    include/dmx.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/dmx.h) dst(include/dmx.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

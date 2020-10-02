@@ -1,0 +1,7 @@
+type: subdirs
+project: Lsm6Dsl
+
+subdirs: {
+    lib
+    example
+}

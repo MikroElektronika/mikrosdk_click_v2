@@ -1,0 +1,17 @@
+type: executable
+target: example_rs232isolator
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Rs232Isolator
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

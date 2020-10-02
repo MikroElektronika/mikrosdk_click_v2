@@ -1,0 +1,17 @@
+type: executable
+target: example_fan6
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Fan6
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

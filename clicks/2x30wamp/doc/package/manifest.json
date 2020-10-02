@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Amplifier",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "2x30W Amp click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.c2x30wamp",
+    "product_link": "https://www.mikroe.com/2x30w-amp-click",
+    "short_description": "2x30W Amp click is a class-D audio amplifier with a tremendous output power, considering its size and lack of huge heatsinks, usually associated with the audio amplifiers. ",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

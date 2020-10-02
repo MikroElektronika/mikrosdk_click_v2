@@ -1,0 +1,40 @@
+type: library
+
+target: lib_nfcextend
+
+alias: Click.NfcExtend
+
+sources: {
+    src/nfcextend.c
+}
+
+headers: {
+    include/nfcextend.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/nfcextend.h) dst(include/nfcextend.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

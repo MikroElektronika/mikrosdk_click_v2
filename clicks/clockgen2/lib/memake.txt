@@ -1,0 +1,40 @@
+type: library
+
+target: lib_clockgen2
+
+alias: Click.ClockGen2
+
+sources: {
+    src/clockgen2.c
+}
+
+headers: {
+    include/clockgen2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/clockgen2.h) dst(include/clockgen2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

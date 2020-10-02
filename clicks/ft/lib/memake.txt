@@ -1,0 +1,40 @@
+type: library
+
+target: lib_ft
+
+alias: Click.Ft
+
+sources: {
+    src/ft.c
+}
+
+headers: {
+    include/ft.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/ft.h) dst(include/ft.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

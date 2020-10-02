@@ -1,0 +1,7 @@
+type: subdirs
+project: Ble7
+
+subdirs: {
+    lib
+    example
+}

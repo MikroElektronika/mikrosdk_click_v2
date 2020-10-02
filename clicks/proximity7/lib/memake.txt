@@ -1,0 +1,40 @@
+type: library
+
+target: lib_proximity7
+
+alias: Click.Proximity7
+
+sources: {
+    src/proximity7.c
+}
+
+headers: {
+    include/proximity7.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/proximity7.h) dst(include/proximity7.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

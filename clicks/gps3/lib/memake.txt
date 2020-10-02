@@ -1,0 +1,40 @@
+type: library
+
+target: lib_gps3
+
+alias: Click.Gps3
+
+sources: {
+    src/gps3.c
+}
+
+headers: {
+    include/gps3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/gps3.h) dst(include/gps3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

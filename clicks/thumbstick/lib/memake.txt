@@ -1,0 +1,40 @@
+type: library
+
+target: lib_thumbstick
+
+alias: Click.Thumbstick
+
+sources: {
+    src/thumbstick.c
+}
+
+headers: {
+    include/thumbstick.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/thumbstick.h) dst(include/thumbstick.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

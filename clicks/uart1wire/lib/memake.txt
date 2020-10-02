@@ -1,0 +1,40 @@
+type: library
+
+target: lib_uart1wire
+
+alias: Click.UART1Wire
+
+sources: {
+    src/uart1wire.c
+}
+
+headers: {
+    include/uart1wire.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/uart1wire.h) dst(include/uart1wire.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

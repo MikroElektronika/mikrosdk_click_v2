@@ -1,0 +1,40 @@
+type: library
+
+target: lib_fram
+
+alias: Click.Fram
+
+sources: {
+    src/fram.c
+}
+
+headers: {
+    include/fram.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/fram.h) dst(include/fram.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

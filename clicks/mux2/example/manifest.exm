@@ -1,0 +1,8 @@
+{
+    "name": "MUX 2 Click",
+    "description": "MUX 2 click is a Click board™ that switches one of the eight inputs to one output. It employs the MUX508, a modern CMOS analog multiplexing integrated circuit, produced by Texas Instruments.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MUX508"],
+    "category" : ["DAC"] 
+}

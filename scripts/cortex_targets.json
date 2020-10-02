@@ -1,0 +1,39 @@
+{
+    "ARM_STM_M0_CORTEX": {
+        "MCU_NAME": "STM32L073RZ",
+        "PREFIX_PATH": "Fusion for ARM v8 STM32L073RZ 2.0.0",
+        "CORE": "M0",
+        "FREQ": 32,
+        "INSTALL": "/temp/Data/build/stm/m0"
+    },
+    "ARM_STM_M3_CORTEX": {
+        "MCU_NAME": "STM32F107VC",
+        "PREFIX_PATH": "Fusion for ARM v8 STM32F107VC 2.0.0",
+        "CORE": "M3",
+        "FREQ": 72,
+        "INSTALL": "/temp/Data/build/stm/m3"
+    },
+    "ARM_STM_M4_CORTEX": {
+        "MCU_NAME": "STM32F407ZG",
+        "PREFIX_PATH": "Fusion for ARM v8 STM32F407ZG 2.0.0",
+        "CORE": "M4EF",
+        "FREQ": 168,
+        "INSTALL": "/temp/Data/build/stm/m4"
+    },
+    "ARM_STM_M7_CORTEX": {
+        "MCU_NAME": "STM32F767BI",
+        "PREFIX_PATH": "Fusion for ARM v8 STM32F767BI 2.0.0",
+        "CORE": "M7",
+        "FREQ": 216,
+        "INSTALL": "/temp/Data/build/stm/m7"
+    },    
+    "PIC18_97J94_CORTEX": {
+        "MCU_NAME": "PIC18F97J94",
+        "PREFIX_PATH": "EasyPIC PRO v8 PIC18F97J94 2.0.0",
+        "CORE": "P18",
+        "FREQ": 64,
+        "INSTALL": "/temp/Data/build/pic18"
+    }  
+}
+
+

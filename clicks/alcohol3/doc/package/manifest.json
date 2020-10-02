@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Gas",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Alcohol 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.alcohol3",
+    "product_link": "https://www.mikroe.com/alcohol-3-click",
+    "short_description": "Alcohol 3 click is a gas sensor Click board, that reacts to the presence of deoxidizing and reducing gases, such as ethanol (also known as alcohol).",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.1"
+}
+

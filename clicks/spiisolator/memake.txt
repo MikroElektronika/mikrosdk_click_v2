@@ -1,0 +1,7 @@
+type: subdirs
+project: Spiisolator
+
+subdirs: {
+    lib
+    example
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_dac6
+
+alias: Click.Dac6
+
+sources: {
+    src/dac6.c
+}
+
+headers: {
+    include/dac6.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/dac6.h) dst(include/dac6.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

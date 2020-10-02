@@ -1,0 +1,97 @@
+/*!
+ * \file 
+ * \brief Thermo8 Click example
+ * 
+ * # Description
+ * This application measures temperature.
+ *
+ * The demo application is composed of two sections :
+ * 
+ * ## Application Init 
+ * Initialize device.
+ * 
+ * ## Application Task  
+ * Wait for the interrupt pin to be triggered. When the
+ * measured temperature breaches the upper or lower limit the
+ * temperature value as well as the status of the breach is
+ * is shown on the serial port (UART).
+ * 
+ * \author MikroE Team
+ *
+ */
+// ------------------------------------------------------------------- INCLUDES
+
+#include "board.h"
+#include "log.h"
+#include "thermo8.h"
+
+// ------------------------------------------------------------------ VARIABLES
+
+static thermo8_t thermo8;
+static log_t logger;
+
+// ------------------------------------------------------ APPLICATION FUNCTIONS
+
+void application_init ( void )
+{
+    log_cfg_t log_cfg;
+    thermo8_cfg_t cfg;
+
+    //  Logger initialization.
+
+    LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
+    log_init( &logger, &log_cfg );
+    log_info( &logger, "---- Application Init ----" );
+
+    //  Click initialization.
+
+    thermo8_cfg_setup( &cfg );
+    THERMO8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    thermo8_init( &thermo8, &cfg );
+    
+    Delay_ms( 100 );
+    thermo8_default_cfg( &thermo8 );
+    Delay_ms( 2000 );
+}
+
+void application_task ( void )
+{
+    float t_data;
+    char alert;
+    char alert_on;
+
+    alert = thermo8_ale_get( &thermo8 );
+
+    if ( alert == 0 )
+    {
+        t_data  = thermo8_get_temperature( &thermo8 );
+        alert_on = thermo8_get_alert_stat( &thermo8 );
+    }
+
+    if ( alert_on & THERMO8_TLOWER_REACHED )
+    {
+        log_printf( &logger, "Temperature under the low limit: %.2f C \r\n", 
+t_data );
+    }
+
+    if ( alert_on & THERMO8_TUPPER_REACHED )
+    {
+        log_printf( &logger, "Temperature over the high limit: %.2f C \r\n", 
+t_data );
+    }
+    Delay_ms( 2000 );
+}
+
+void main ( void )
+{
+    application_init( );
+
+    for ( ; ; )
+    {
+        application_task( );
+    }
+}
+
+// ------------------------------------------------------------------------ END

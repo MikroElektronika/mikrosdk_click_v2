@@ -1,0 +1,7 @@
+type: subdirs
+project: ADAC
+
+subdirs: {
+    lib
+    example
+}

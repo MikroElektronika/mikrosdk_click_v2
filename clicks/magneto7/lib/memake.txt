@@ -1,0 +1,40 @@
+type: library
+
+target: lib_magneto7
+
+alias: Click.Magneto7
+
+sources: {
+    src/magneto7.c
+}
+
+headers: {
+    include/magneto7.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/magneto7.h) dst(include/magneto7.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

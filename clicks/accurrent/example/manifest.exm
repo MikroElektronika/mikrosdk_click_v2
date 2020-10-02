@@ -1,0 +1,8 @@
+{
+    "name": "AC CURRENT Click",
+    "description": "AC Current click is a device that is able to measure the alternating current (AC) running through the conductor, using the so-called non-invasive current sensor. The non-invasive sensor works by utilizing the electromagnetic induction phenomenon, similar to a transformer",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MCP3201"],
+    "category" : ["Measurements"] 
+}

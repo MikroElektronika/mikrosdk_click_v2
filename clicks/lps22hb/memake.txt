@@ -1,0 +1,7 @@
+type: subdirs
+project: Lps22hb
+
+subdirs: {
+    lib
+    example
+}

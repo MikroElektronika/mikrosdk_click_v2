@@ -1,0 +1,40 @@
+type: library
+
+target: lib_flash4
+
+alias: Click.Flash4
+
+sources: {
+    src/flash4.c
+}
+
+headers: {
+    include/flash4.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/flash4.h) dst(include/flash4.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

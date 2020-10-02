@@ -1,0 +1,8 @@
+{
+    "name": "DAC Click",
+    "description": "DAC click is an accessory board in mikroBUS form factor. It includes a 12-bit Digital-to-Analog Converter MCP4921 that features an optional 2x buffered output and SPI interface.",
+    "image" : "https://cdn1-shop.mikroe.com/img/product/dac-click/dac-click-large_default-12x.jpg",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","MCP4921"],
+    "category" : ["DAC"] 
+}

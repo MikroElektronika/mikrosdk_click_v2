@@ -1,0 +1,40 @@
+type: library
+
+target: lib_motion2
+
+alias: Click.Motion2
+
+sources: {
+    src/motion2.c
+}
+
+headers: {
+    include/motion2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/motion2.h) dst(include/motion2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

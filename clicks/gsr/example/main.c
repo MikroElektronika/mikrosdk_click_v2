@@ -1,0 +1,72 @@
+/*!
+ * \file 
+ * \brief Gsr Click example
+ * 
+ * # Description
+ * This app measure the electrodermal activity.
+ *
+ * The demo application is composed of two sections :
+ * 
+ * ## Application Init 
+ * Initializes GSR driver.
+ * 
+ * ## Application Task  
+ * Sequential reading of ADC and logging data 
+ * to UART. Operation is repeated each 500 ms.
+ * 
+ * \author MikroE Team
+ *
+ */
+// ------------------------------------------------------------------- INCLUDES
+
+#include "board.h"
+#include "log.h"
+#include "gsr.h"
+
+// ------------------------------------------------------------------ VARIABLES
+
+static gsr_t gsr;
+static log_t logger;
+
+// ------------------------------------------------------ APPLICATION FUNCTIONS
+
+void application_init ( void )
+{
+    log_cfg_t log_cfg;
+    gsr_cfg_t cfg;
+
+    //  Logger initialization.
+
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    LOG_MAP_USB_UART( log_cfg );
+    log_init( &logger, &log_cfg );
+    log_info( &logger, "---- Application Init ----\r\n" );
+
+    //  Click initialization.
+
+    gsr_cfg_setup( &cfg );
+    GSR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    gsr_init( &gsr, &cfg );
+}
+
+void application_task ( void )
+{
+    uint16_t adc_value;
+
+    adc_value = gsr_read_value( &gsr );
+
+    log_printf( &logger, "ADC Measurements: %u \r\n", adc_value );
+    Delay_ms( 500 );
+}
+
+void main ( void )
+{
+    application_init( );
+
+    for ( ; ; )
+    {
+        application_task( );
+    }
+}
+
+// ------------------------------------------------------------------------ END

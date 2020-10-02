@@ -1,0 +1,40 @@
+type: library
+
+target: lib_earthquake
+
+alias: Click.Earthquake
+
+sources: {
+    src/earthquake.c
+}
+
+headers: {
+    include/earthquake.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/earthquake.h) dst(include/earthquake.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

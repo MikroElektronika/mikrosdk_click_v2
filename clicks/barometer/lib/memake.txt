@@ -1,0 +1,40 @@
+type: library
+
+target: lib_barometer
+
+alias: Click.Barometer
+
+sources: {
+    src/barometer.c
+}
+
+headers: {
+    include/barometer.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/barometer.h) dst(include/barometer.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -1,0 +1,8 @@
+{
+    "name": "ccRF 3 Click",
+    "description": "ccRF 3 click carries the CC1120 high-performance RF transceiver for narrowband systems from Texas Instruments. The clicks will enable you to add a low-power consumption radio transceiver at 433 MHz frequency. ccRF 3 click is designed to run on a 3.3V power supply. It communicates with the target microcontroller over SPI interface.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","CC1120"],
+    "category" : ["2.4 GHz Trancevers"] 
+}

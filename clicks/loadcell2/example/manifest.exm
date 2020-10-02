@@ -1,0 +1,8 @@
+{
+    "name": "Load Cell 2 Click",
+    "description": "<PRVE_2_RECENICE_SA_PRODUCT_PAGE>",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","NAU7802"],
+    "category" : ["Force"] 
+}

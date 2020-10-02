@@ -1,0 +1,32 @@
+{
+    "architecture": "ARM",
+    "category": "Current sensor",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Hall Current 6 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.hallcurrent6",
+    "product_link": "https://www.mikroe.com/hall-current-6-click",
+    "short_description": "Hall Current 6 Click is a very accurate current measurement Click board™, based on the ACS723 IC. This IC is a galvanically isolated current sensor, which utilizes the Hall-effect principle.",
+    "supported_compiler": "mikroC",
+    "type": "Library",
+    "version": "2.0.0.2"
+}
+
