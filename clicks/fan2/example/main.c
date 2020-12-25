@@ -9,16 +9,13 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes I2C driver and executes a default configuration for Fan 2 click,
- * to be ready to perform a control of 3-wire fan, in our example.
- * Also initializes UART console for results logging.
+ * Initializes I2C driver and executes a default configuration for Fan 2 click.
+ * Also initializes UART logger for results logging.
  *
  * ## Application Task
- * Increments the fan speed from minimum to maximum, and on each step measures
- * the current fan speed in percents and the local temperature in Celsius
- * degrees. Fan speed will be incremented every 1500ms for 5 percents.
- * When it reaches the maximum speed (100%), it will be returned to minimum
- * speed (0%).
+ * Increments the fan speed from half speed to maximum, and on each step measures
+ * the current fan speed in RPM and the remote temperature in Celsius.
+ * Fan speed will be incremented/decremented each second for 10 percents.
  *
  * \author Nemanja Medakovic
  *
@@ -32,61 +29,71 @@
 // ------------------------------------------------------------------ VARIABLES
 
 static fan2_t fan2;
-static log_t console;
+static log_t logger;
 static float fan2_speed;
-static float fan2_curr_speed;
-static float fan2_local_temp;
+static uint16_t fan2_curr_speed;
+static float fan2_temp;
+static uint8_t flag;
 
-const char deg_cels[ 3 ] = { 176, 'C', 0 };
+static char deg_cels[ 3 ] = { 176, 'C', 0 };
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init( void )
 {
     fan2_cfg_t fan2_cfg;
-    log_cfg_t console_cfg;
+    log_cfg_t log_cfg;
 
+    //  UART logger initialization.
+    LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
+    log_init( &logger, &log_cfg );
+    log_info( &logger, "---- Application Init ----" );
+    
     //  Click initialization.
     fan2_cfg_setup( &fan2_cfg );
     FAN2_MAP_MIKROBUS( fan2_cfg, MIKROBUS_1 );
     fan2_init( &fan2, &fan2_cfg );
-    fan2_default_cfg( &fan2, FAN2_WIRES_3 );
-    fan2_speed = FAN2_MIN_SPEED_PER;
+    
+    fan2_default_cfg( &fan2 );
+    fan2_speed = FAN2_HALF_SPEED_PER;
+    Delay_ms( 1000 );
 
-    //  UART console initialization.
-    LOG_MAP_USB_UART( console_cfg );
-    console_cfg.level = LOG_LEVEL_DEBUG;
-    console_cfg.baud = 57600;
-    log_init( &console, &console_cfg );
-    log_printf( &console, "* * *  Fan 2 initialization done  * * *\r\n" );
-    log_printf( &console, "***************************************\r\n" );
+    log_printf( &logger, "* * *  Fan 2 initialization done  * * *\r\n" );
+    log_printf( &logger, "***************************************\r\n" );
+    flag = 0;
 }
 
 void application_task( void )
 {
     fan2_direct_speed_control( &fan2, fan2_speed );
 
-    if (fan2_speed < FAN2_MAX_SPEED_PER)
-    {
-        fan2_speed += 5;
-    }
-    else
-    {
-        fan2_speed = FAN2_MIN_SPEED_PER;
-    }
-
-    Delay_ms( 500 );
-
-    fan2_curr_speed = fan2_read_current_speed( &fan2 );
-    fan2_read_temp( &fan2, FAN2_REG_LOCAL_TEMP_READ, &fan2_local_temp );
-
-    log_printf( &console, "* Fan 2 current speed : %.2f %%\r\n",
-                fan2_curr_speed );
-    log_printf( &console, "* Fan 2 local temperature : %.2f %s\r\n",
-                fan2_local_temp, deg_cels );
-    log_printf( &console, "***************************************\r\n" );
-
     Delay_ms( 1000 );
+    fan2_read_tacho( &fan2, FAN2_REG_TACH1_CNT, &fan2_curr_speed );
+    
+    fan2_read_temp( &fan2, FAN2_REG_REMOTE_TEMP_READ, &fan2_temp );
+
+    log_printf( &logger, "* Fan 2 set speed : %.2f %%\r\n", fan2_speed );
+    log_printf( &logger, "* Fan 2 current speed : %u RPM\r\n", fan2_curr_speed );
+    log_printf( &logger, "* Fan 2 remote temperature : %.2f %s\r\n", fan2_temp, deg_cels );
+    log_printf( &logger, "***************************************\r\n" );
+    
+    if ( flag == 0 ) {
+        if ( fan2_speed < FAN2_MAX_SPEED_PER)
+            fan2_speed += 10;
+        else
+            flag = 1;
+    }
+    
+    if ( flag == 1 ) {
+        if ( fan2_speed > FAN2_MIN_SPEED_PER)
+            fan2_speed -= 10;
+        else {
+            fan2_speed = FAN2_HALF_SPEED_PER;
+            flag = 0;
+        }
+    }
 }
 
 void main( void )

@@ -45,10 +45,10 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 #### Example key functions :
 
 - The function enter the command mode of the RN-41 Bluetooth module on Bluetooth Click board.
-> BLUETOOTH_RETVAL bluetooth_enter_command_mode ( bluetooth_t *ctx );
+> void bluetooth_enter_command_mode ( bluetooth_t *ctx );
  
 - The function set the authentication value to the RN-41 Bluetooth module on Bluetooth Click board.
-> BLUETOOTH_RETVAL bluetooth_set_authentication ( bluetooth_t *ctx, uint8_t auth_value );
+> void bluetooth_set_authentication ( bluetooth_t *ctx, uint8_t auth_value );
 
 - The function set security pin code string to the RN-41 Bluetooth module on Bluetooth Click board.
 > BLUETOOTH_RETVAL bluetooth_set_security_pin_code ( bluetooth_t *ctx, uint8_t *sp_code );
@@ -61,10 +61,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initialization driver enables - UART,
-> enable interrupts routine, enter command mode, set device name,
-> set extended status string, set operating mode, set auth,
-> and set security pin code also write log. 
+> Initializes driver and wake-up module. 
 
 ```c
 
@@ -87,96 +84,73 @@ void application_init ( void )
     BLUETOOTH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     bluetooth_init( &bluetooth, &cfg );
 
-    cmd_mode = 1;
-    data_ready = 0;
-
     Delay_ms( 500 );
-
+   
+    log_printf( &logger, "Configuring the module...\n" );
+    
     do
     {    
-        bluetooth_enter_command_mode( &bluetooth );
-        Delay_ms( 500 );
         log_printf( &logger, " --- Command mode --- \r\n" );
-        bluetooth_process(  );
+        bluetooth_enter_command_mode( &bluetooth );
     }
-    while ( bluetooth_get_response( &bluetooth ) != BLUETOOTH_CMD );
-
+    while( bluetooth_process( "CMD" ) != 1 );
+    
     do
     {
-        bluetooth_set_device_name( &bluetooth, &DEVICE_NAME_DATA[ 0 ] );
-        Delay_ms( 500 );
         log_printf( &logger, " --- Device name --- \r\n" );
-        bluetooth_process(  );
+        bluetooth_set_device_name( &bluetooth, &DEVICE_NAME_DATA[ 0 ] );
     }
-    while ( bluetooth_get_response( &bluetooth ) != BLUETOOTH_AOK );
+    while( bluetooth_process( "AOK" ) != 1 );
 
     do
     {
-        bluetooth_set_extended_status_string( &bluetooth, &EXTENDED_STRING_DATA[ 0 ] );
-        Delay_ms( 500 );
         log_printf( &logger, " --- Status string --- \r\n" );
-        bluetooth_process(  );
+        bluetooth_set_extended_status_string( &bluetooth, &EXTENDED_STRING_DATA[ 0 ] );
     }
-    while ( bluetooth_get_response( &bluetooth ) != BLUETOOTH_AOK );
+    while( bluetooth_process( "AOK" ) != 1 );
 
     do
     {
-        bluetooth_set_operating_mode( &bluetooth, 0 );
-        Delay_ms( 500 );
         log_printf( &logger, " --- Operating mode --- \r\n" );
-        bluetooth_process(  );
+        bluetooth_set_operating_mode( &bluetooth, 0 );
     }
-    while ( bluetooth_get_response( &bluetooth ) != BLUETOOTH_AOK );
+    while( bluetooth_process( "AOK" ) != 1 );
 
     do
     {
-        bluetooth_set_authentication( &bluetooth, 1 );
-        Delay_ms( 500 );
         log_printf( &logger, " --- Authentication --- \r\n" );
-        bluetooth_process(  );
+        bluetooth_set_authentication( &bluetooth, 1 );
     }
-    while ( bluetooth_get_response( &bluetooth ) != BLUETOOTH_AOK );
+    while( bluetooth_process( "AOK" ) != 1 );
 
     do
     {
-        bluetooth_set_security_pin_code( &bluetooth, &PIN_CODE_DATA[ 0 ] );
-        Delay_ms( 500 );
         log_printf( &logger, " --- Pin code --- \r\n" );
-        bluetooth_process(  );
+        bluetooth_set_security_pin_code( &bluetooth, &PIN_CODE_DATA[ 0 ] );
     }
-    while ( bluetooth_get_response( &bluetooth ) != BLUETOOTH_AOK );
+    while( bluetooth_process( "AOK" ) != 1 );
 
-    cmd_mode = 0;
-    data_ready = 0;
+    do
+    {
+        log_printf( &logger, " --- Exit command mode --- \r\n" );
+        bluetooth_exit_command_mode( &bluetooth );
+    }
+    while( bluetooth_process( "END" ) != 1 );
+    
+    log_printf( &logger, "The module has been configured.\n" );
 }
   
 ```
 
 ### Application Task
 
-> This is an example which demonstrates the use of Bluetooth click board.
-> Reads the received data and parses it. 
+> Reads the received data.
 
 ```c
 
 void application_task ( void )
 {
-    bluetooth.buffer_cnt = 0;
-
-    memset( bluetooth.driver_buffer, 0, 255 );
-    
-    log_printf( &logger, " * Waiting for message. * \r\n" );
-    Delay_ms ( 1000 );
-
-    while ( !data_ready )
-    {
-        bluetooth_process(  );
-        Delay_ms ( 1000 );
-    }
-
-    data_ready = 0;
-
-    bluetooth.buffer_cnt = 0;
+    bluetooth_process( "AOK" );
 } 
 
 ```

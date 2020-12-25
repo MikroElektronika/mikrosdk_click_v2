@@ -1,8 +1,0 @@
-{
-    "name": "7x10 Click",
-    "description": "7x10 click is a LED dot matrix display click, which can be used to display graphics or letters in a very simple and easy way.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","74HC595","CD4017","ULN2003A"],
-    "category" : ["LED Matrix"] 
-}

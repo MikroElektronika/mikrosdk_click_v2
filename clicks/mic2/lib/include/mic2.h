@@ -174,7 +174,6 @@ void mic2_set_potentiometer ( mic2_t *ctx, uint8_t ptt_value );
  */
 mic2_data_t mic2_generic_read ( mic2_t *ctx );
 
-
 #ifdef __cplusplus
 }
 #endif

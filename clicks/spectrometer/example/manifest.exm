@@ -1,8 +1,0 @@
-{
-    "name": "Spectrometer Click",
-    "description": "Spectrometer Click features an 11-channel spectrometer for spectral identification and color matching applications. This Click board™ features the AS7341 from AMS-AG, whose spectral response is defined in the wavelengths from approximately 350nm to 1000nm.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","AS7341"],
-    "category" : ["Optical"] 
-}

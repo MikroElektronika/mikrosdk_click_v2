@@ -60,8 +60,17 @@
  */
 #define C4X4RGB_RETVAL  uint8_t
 
-#define C4X4RGB_OK           0x00
-#define C4X4RGB_INIT_ERROR   0xFF
+#define C4X4RGB_OK                  0x00
+#define C4X4RGB_INIT_ERROR          0xFF
+/** \} */
+
+
+/**
+ * \defgroup control_pin Control pin select macro
+ * \{
+ */
+#define C4X4RGB_CTRL_PIN_IN1        1
+#define C4X4RGB_CTRL_PIN_IN2        2
 /** \} */
 
 
@@ -69,13 +78,13 @@
  * \defgroup color  Color
  * \{
  */
-#define C4X4RGB_COLOR_WHITE                                 0x002F2F2F
-#define C4X4RGB_COLOR_RED                                   0x002F0000
-#define C4X4RGB_COLOR_GREEN                                 0x00002F00
-#define C4X4RGB_COLOR_BLUE                                  0x0000002F
-#define C4X4RGB_COLOR_LIGHT_BLUE                            0x00002F2F
-#define C4X4RGB_COLOR_YELLOW                                0x002F2F00
-#define C4X4RGB_COLOR_PURPLE                                0x002F002F
+#define C4X4RGB_COLOR_WHITE         0x002F2F2F
+#define C4X4RGB_COLOR_RED           0x002F0000
+#define C4X4RGB_COLOR_GREEN         0x00002F00
+#define C4X4RGB_COLOR_BLUE          0x0000002F
+#define C4X4RGB_COLOR_LIGHT_BLUE    0x00002F2F
+#define C4X4RGB_COLOR_YELLOW        0x002F2F00
+#define C4X4RGB_COLOR_PURPLE        0x002F002F
 /** \} */
 
 /** \} */ // End group macro 
@@ -84,6 +93,11 @@
  * \defgroup type Types
  * \{
  */
+
+/**
+ * @brief Function pointer for logic level one and zero
+ */
+typedef void ( *drv_logic_t ) ( void );
  
 /**
  * @brief Click ctx object definition.
@@ -96,11 +110,14 @@ typedef struct
     digital_out_t in2;
     digital_out_t out;
     
-    uint8_t end_first; 
-    uint8_t end_second;
-    float first_delay;
-    float second_delay;
+    digital_out_t ctrl_pin;
 
+    // Function pointers
+
+    drv_logic_t logic_zero;
+    drv_logic_t logic_one;
+
+    
 } c4x4rgb_t;
 
 /**
@@ -113,6 +130,13 @@ typedef struct
     pin_name_t in1;
     pin_name_t in2;
     pin_name_t out;
+    
+    uint8_t ctrl_pin;
+
+    // Function pointers
+
+    drv_logic_t logic_zero;
+    drv_logic_t logic_one;
 
 } c4x4rgb_cfg_t;
 
@@ -130,56 +154,47 @@ extern "C"{
 
 /**
  * @brief Config Object Initialization function.
+ * @details This function initializes click configuration structure to init state.
  *
  * @param cfg  Click configuration structure.
- *
- * @description This function initializes click configuration structure to init state.
+ * @param logic_zero  Function pointer for logic zero
+ * @param logic_one  Function pointer for logic one
+ * @param select_ctrl_pin  Macro selecting control pin
  * @note All used pins will be set to unconnected state.
  */
-void c4x4rgb_cfg_setup ( c4x4rgb_cfg_t *cfg );
+void c4x4rgb_cfg_setup ( c4x4rgb_cfg_t *cfg, drv_logic_t logic_zero, drv_logic_t logic_one, uint8_t select_ctrl_pin );
 
 /**
  * @brief Initialization function.
- * @param c4x4rgb Click object.
- * @param cfg Click configuration structure.
+ * @details This function initializes all necessary pins and peripherals used for this click.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @param ctx Click object.
+ * @param cfg Click configuration structure.
  */
 C4X4RGB_RETVAL c4x4rgb_init ( c4x4rgb_t *ctx, c4x4rgb_cfg_t *cfg );
 
 /**
- * @brief Function for logic zero.
+ * @brief Function for setting color color of one diode.
+ * @details This function allows to set color of one diode.
  *
- * @param ctx  Click object.
+ * @param ctx            Click object.
+ * @param diode_num      Desired diode to control
+ * @param diode_color    Desiered color
+ * 
+ *  @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
  */
-void c4x4rgb_logic_zero ( c4x4rgb_t *ctx );
+err_t c4x4rgb_set_diode ( c4x4rgb_t *ctx, uint32_t diode_num, uint32_t diode_color );
 
 /**
- * @brief Function for logic one.
+ * @brief Function for filling color of ever diode.
+ * @details This function sets every diode on selected color.
  *
- * @param ctx  Click object.
+ * @param ctx            Click object.
+ * @param fill_color    Desiered color
+ * @param fill_delay    Delay between changeing diode color.
  */
-void c4x4rgb_logic_one ( c4x4rgb_t *ctx );
-
-/**
- * @brief Function for custom delay.
- *
- * @param delay_time     Length of delay.
- * @param delay_unit     Time unit in milliseconds or microseconds.      
- *
- * @description This function allows to enter different delay.
- */
-void c4x4rgb_delay ( uint16_t delay_time, char delay_unit );  
-
-/**
- * @brief Get device clock.
- *
- * @param ctx  Click object.
- *
- * @description This function get device clock value in MHz.
- */
-void c4x4rgb_get_device_clock ( c4x4rgb_t *ctx );
-
+void c4x4rgb_fill_screen ( c4x4rgb_t *ctx, uint32_t fill_color, uint16_t fill_delay );
 
 #ifdef __cplusplus
 }

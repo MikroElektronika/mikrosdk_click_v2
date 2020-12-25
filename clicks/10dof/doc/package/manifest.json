@@ -24,9 +24,12 @@
     },
     "name": "mikroe.click.c10dof",
     "product_link": "https://www.mikroe.com/10dof-click",
-    "short_description": "10DOF click is a mikroBUS add-on board for enhancing hardware prototypes with 10DOF functionality (10 degrees of freedom). 
-    The click board carries two modules from Bosch: BNO055, a 9-axis absolute orientation sensor and BMP180, a digital pressure sensor.",
-    "supported_compiler": "mikroC",
+    "short_description": "10DOF click is a mikroBUS add-on board for enhancing hardware prototypes with 10DOF functionality (10 degrees of freedom).",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.0"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        1695
+    ],
+    "version": "2.0.0.3"
 }

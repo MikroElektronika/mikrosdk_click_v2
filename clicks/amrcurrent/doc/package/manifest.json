@@ -27,6 +27,7 @@
     "short_description": "<The AMR current Click is product is ±20A fully integrated bi-directional analog output current sensors that deliver both high accuracy and high bandwidth.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+
 

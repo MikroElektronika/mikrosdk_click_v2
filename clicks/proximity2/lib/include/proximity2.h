@@ -308,6 +308,17 @@ uint8_t proximity2_read_prox ( proximity2_t *ctx );
  */
 uint16_t proximity2_read_als ( proximity2_t *ctx );
 
+/**
+ * @brief Get int pin status.
+ * 
+ * @param ctx          Click object.
+ * 
+ * @return status     [ 0 = Active / 1 = Inactive ]
+ *
+ * @description This function is used to read interrupt pin status.
+ */
+uint8_t proximity2_get_int_pin_status ( proximity2_t *ctx );
+
 #ifdef __cplusplus
 }
 #endif

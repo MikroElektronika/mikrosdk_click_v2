@@ -27,5 +27,6 @@
     "short_description": "LSM6DSL click measures linear and angular velocity with six degrees of freedom. It carries the LSM6DSL high-performance 3-axis digital accelerometer and 3-axis digital gyroscope. ",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

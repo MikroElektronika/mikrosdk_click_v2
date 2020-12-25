@@ -65,54 +65,58 @@ MAGNETO5_RETVAL magneto5_init ( magneto5_t *ctx, magneto5_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+//     i2c_master_set_timeout( &ctx->i2c, 0 );
 
     return MAGNETO5_OK;
 
 }
 
-void magneto5_generic_write ( magneto5_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
-{
-    uint8_t tx_buf[ 256 ];
-    uint8_t cnt;
-    
-    tx_buf[ 0 ] = reg;
-    
-    for ( cnt = 1; cnt <= len; cnt++ )
-    {
-        tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
-    }
-    
-    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );   
-}
-
-void magneto5_generic_read ( magneto5_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
-{
-    i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, len );
-}
+// void magneto5_generic_write ( magneto5_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
+// {
+//     uint8_t tx_buf[ 256 ];
+//     uint8_t cnt;
+//     
+//     tx_buf[ 0 ] = reg;
+//     
+//     for ( cnt = 1; cnt <= len; cnt++ )
+//     {
+//         tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
+//     }
+//     
+//     i2c_master_write( &ctx->i2c, tx_buf, len + 1 );   
+// }
+// 
+// void magneto5_generic_read ( magneto5_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
+// {
+//     i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, len );
+// }
 
 uint8_t magneto5_set_status_reg ( magneto5_t *ctx )
 {
-    uint8_t read_reg;
+    uint8_t write_reg[ 1 ];
+    uint8_t read_reg[ 1 ];
 
-    magneto5_generic_write( ctx, MAGNETO5_REG_STATUS, &read_reg, 1 );
+    write_reg[ 0 ] = MAGNETO5_REG_STATUS;
+    
+    i2c_master_write_then_read( &ctx->i2c, write_reg, 1, read_reg, 1 );
 
-    return read_reg;
+    return read_reg[ 0 ];
 }
 
 uint8_t magneto5_get_product_id ( magneto5_t *ctx )
-{
+{    
     uint8_t write_reg[ 1 ];
     uint8_t read_reg[ 1 ];
     uint8_t status_read;
     
     write_reg[ 0 ] = MAGNETO5_REG_PRODUCT_ID;
     status_read = magneto5_set_status_reg( ctx );
-
-    if ( status_read & MAGNETO_STATUS_READ_DONE )
-    {   
-        magneto5_generic_read( ctx, *write_reg, read_reg, 1 );
-
-        if ( read_reg[ 0 ] != MAGNETO5_PRODUCT_ID )
+    
+    if (status_read & MAGNETO_STATUS_READ_DONE)
+    {
+        i2c_master_write_then_read( &ctx->i2c, write_reg, 1, read_reg, 1 );
+        
+        if (read_reg[ 0 ] != MAGNETO5_PRODUCT_ID)
         {
             return MAGNETO5_ERROR;
         }
@@ -121,42 +125,43 @@ uint8_t magneto5_get_product_id ( magneto5_t *ctx )
             return  read_reg[ 0 ];
         }
     }
-    Delay_10ms( );
+    Delay_10ms();
 }
 
 void magneto5_get_axis_data ( magneto5_t *ctx, int16_t *axis_buffer, uint8_t max_resolution )
-{
+{ 
     uint8_t write_reg[ 1 ];
     uint8_t read_reg[ 6 ];
     uint8_t read_status;
+    uint16_t temp_data;
 
     write_reg[ 0 ] = 0x00;
 
     magneto5_config_register_0( ctx, MAGNETO5_CR0_TAKE_MEASUREMENT | MAGNETO5_CR0_REFILL_CAP );
-    
-    read_status = magneto5_set_status_reg( ctx );
-    magneto5_config_register_1( ctx, max_resolution );
-    measure_resolution( ctx, max_resolution );
-    
-    if ( read_status & ( MAGNETO_STATUS_MEASUREMENT_DONE | MAGNETO_STATUS_READ_DONE ))
-    {
-        magneto5_generic_read( ctx, *write_reg, read_reg, 6 );
 
-        axis_buffer[ 0 ] = read_reg[ 1 ];
-        axis_buffer[ 0 ] = axis_buffer[ 0 ] << 8;
-        axis_buffer[ 0 ] = axis_buffer[ 0 ] | read_reg[ 0 ];
+    read_status = magneto5_set_status_reg( ctx );
+    magneto5_config_register_0( ctx, max_resolution );
+    measure_resolution( ctx, max_resolution );
+
+    if (read_status & ( MAGNETO_STATUS_MEASUREMENT_DONE | MAGNETO_STATUS_READ_DONE ))
+    {        
+        i2c_master_write_then_read( &ctx->i2c, write_reg, 1, read_reg, 6 );
+
+        axis_buffer[0] = read_reg[1];
+        axis_buffer[0] <<= 8;
+        axis_buffer[0] |= read_reg[0];
         
-        axis_buffer[ 1 ] = read_reg[ 3 ];
-        axis_buffer[ 1 ] = axis_buffer[ 1 ] << 8;
-        axis_buffer[ 1 ] = axis_buffer[ 1 ] | read_reg[ 2 ];
+        axis_buffer[1] = read_reg[3];
+        axis_buffer[1] = axis_buffer[1] << 8;
+        axis_buffer[1] = axis_buffer[1] | read_reg[2];
         
-        axis_buffer[ 2 ] = read_reg[ 5 ];
-        axis_buffer[ 2 ] = axis_buffer[ 2 ] << 8;
-        axis_buffer[ 2 ] = axis_buffer[ 2 ] | read_reg[ 4 ];
+        axis_buffer[2] = read_reg[5];
+        axis_buffer[2] = axis_buffer[2] << 8;
+        axis_buffer[2] = axis_buffer[2] | read_reg[4];
         
-        axis_buffer[ 0 ] = axis_buffer[ 0 ] >> ctx->data_flag;
-        axis_buffer[ 1 ] = axis_buffer[ 1 ] >> ctx->data_flag;
-        axis_buffer[ 2 ] = axis_buffer[ 2 ] >> ctx->data_flag;
+        axis_buffer[0] = axis_buffer[0] >> ctx->data_flag;
+        axis_buffer[1] = axis_buffer[1] >> ctx->data_flag;
+        axis_buffer[2] = axis_buffer[2] >> ctx->data_flag;
         magneto5_reset( ctx );
     }
 }
@@ -168,68 +173,78 @@ float magneto5_get_axis_value ( magneto5_t *ctx, uint8_t axis, uint8_t max_resol
     
     magneto5_get_axis_data( ctx, &axis_data[ 0 ], max_resolution );
     
-    if ( axis == MAGNETO5_AXIS_X )
+    if ( axis == MAGNETO5_AXIS_X)
     {
-        axis_value = (float)axis_data[ 0 ] / max_resolution;
+        axis_value = ( float )axis_data[ 0 ] / ctx->max_resolution;
     }
-    else if ( axis == MAGNETO5_AXIS_Y )
+    else if ( axis == MAGNETO5_AXIS_Y)
     {
-        axis_value = (float)axis_data[ 1 ] / max_resolution;
+        axis_value = ( float )axis_data[ 1 ] / ctx->max_resolution;
     }
-    else if ( axis == MAGNETO5_AXIS_Z )
+    else if ( axis == MAGNETO5_AXIS_Z)
     {
-        axis_value = (float)axis_data[ 2 ] / max_resolution;
+        axis_value = ( float )axis_data[ 2 ] / ctx->max_resolution;
     }
     
     return axis_value;
 }
 
 void magneto5_config_register_0 ( magneto5_t *ctx, uint8_t config_data )
-{
-    magneto5_generic_write( ctx, MAGNETO5_REG_INTERNAL_CONTROL_0, &config_data, 1 );
+{    
+    uint8_t write_reg[ 2 ];
 
-    Delay_100ms( );
+    write_reg[ 0 ] = MAGNETO5_REG_INTERNAL_CONTROL_0;
+    write_reg[ 1 ] = config_data;
+    
+    i2c_master_write( &ctx->i2c, write_reg, 2 );
+    Delay_100ms();
 }
 
 void magneto5_config_register_1 ( magneto5_t *ctx, uint8_t config_data )
-{
-    magneto5_generic_write( ctx, MAGNETO5_REG_INTERNAL_CONTROL_1, &config_data, 1 );
+{    
+    uint8_t write_reg[ 2 ];
+
+    write_reg[ 0 ] = MAGNETO5_REG_INTERNAL_CONTROL_1;
+    write_reg[ 1 ] = config_data;
     
-    Delay_100ms( );
+    i2c_master_write( &ctx->i2c, write_reg, 2 );  
+    Delay_100ms();
 }
 
 void magneto5_reset (  magneto5_t *ctx )
 {
-    uint8_t reg;
-    reg = MAGNETO5_CR0_RESET;
-    magneto5_generic_write( ctx, MAGNETO5_REG_INTERNAL_CONTROL_0, &reg, 1 );
+    uint8_t write_reg[ 2 ];
 
+    write_reg[ 0 ] = MAGNETO5_REG_INTERNAL_CONTROL_0;
+    write_reg[ 1 ] = MAGNETO5_CR0_RESET;
+    
+    i2c_master_write( &ctx->i2c, write_reg, 2 );  
 }
 
 /* --------------------------------------------- PRIVATE FUNCTION DEFINITIONS */
 
 static void measure_resolution ( magneto5_t *ctx, uint8_t set_data )
-{
-      if (set_data == MAGNETO5_CH0_16bits_8ms)
-      {
-          ctx->max_resolution = 2048.0;
-          ctx->data_flag = 0;
-      }
-      else if ( set_data == MAGNETO5_CH1_16bits_4ms )
-      {
-          ctx->max_resolution = 2048.0;
-          ctx->data_flag = 0;
-      }
-      else if ( set_data == MAGNETO5_CH2_14bits_2ms )
-      {
-          ctx->max_resolution = 512.0;
-          ctx->data_flag = 2;
-      }
-      else if ( set_data == MAGNETO5_CH3_12bits_1ms )
-      {
-          ctx->max_resolution = 128.0;
-          ctx->data_flag = 4;
-      }
+{   
+    if (set_data == MAGNETO5_CH0_16bits_8ms)
+    {
+        ctx->max_resolution = 2048.0;
+        ctx->data_flag = 0;
+    }
+    else if (set_data == MAGNETO5_CH1_16bits_4ms)
+    {
+        ctx->max_resolution = 2048.0;
+        ctx->data_flag = 0;
+    }
+    else if (set_data == MAGNETO5_CH2_14bits_2ms)
+    {
+        ctx->max_resolution = 512.0;
+        ctx->data_flag = 2;
+    }
+    else if (set_data == MAGNETO5_CH3_12bits_1ms)
+    {
+        ctx->max_resolution = 128.0;
+        ctx->data_flag = 4;
+    }
 }
 
 // ------------------------------------------------------------------------- END

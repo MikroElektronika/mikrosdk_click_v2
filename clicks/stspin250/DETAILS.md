@@ -1,4 +1,5 @@
- 
+
+
 ---
 # STSPIN250 click
 
@@ -60,7 +61,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> his application enables usage of brushed DC motor driver with the current limiting and current sensing.
+> This application enables usage of brushed DC motor driver with the current limiting and current sensing.
 
 **The demo application is composed of two sections :**
 
@@ -78,8 +79,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -99,29 +101,15 @@ void application_init ( void )
 
 ### Application Task
 
-> Changes the PWM dutyCycle and controls the motor speed.
-> You can change the direction of the motor rotation by setting PH to 0 or 1. 
+> Controls the motor speed in both directions and logs all data on UART.
 
 ```c
 
 void application_task ( void )
 {
-    //  Task implementation.
-
-
-    duty_cycle += 250;
-    stspin250_set_duty_cycle ( &stspin250, duty_cycle );
-    if ( duty_cycle > 40000 )
-    {
-        duty_cycle = 0;
-        stspin250_pwm_stop( &stspin250 );
-        Delay_ms( 2000 );
-        stspin250_pwm_start( &stspin250 );
-    }
-	stspin250_set_ph( &stspin250 ,1 );
-    Delay_ms( 200 );
-
-    Delay_100ms( );
+    clockwise( );
+    
+    counter_clockwise( );
 }
 
 ```

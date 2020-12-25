@@ -65,6 +65,7 @@ ONESHOT_RETVAL oneshot_init ( oneshot_t *ctx, oneshot_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Output pins 
 
@@ -112,7 +113,7 @@ float oneshot_get_resistance ( oneshot_t *ctx )
 
     oneshot_generic_read( ctx, 0x00, &integer_value, 1 );
 
-    return ( float ) ( integer_value / 256.0 ) * 1000000.0 + 60.0;
+    return ( float ) ( ( ( 256 - integer_value ) / 256.0 ) * 1000000.0 ) + 60.0;
 }
 
 uint8_t oneshot_digital_read_rst ( oneshot_t *ctx )

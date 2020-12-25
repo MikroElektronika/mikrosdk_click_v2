@@ -44,7 +44,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -56,7 +56,7 @@ void application_init ( void )
 
     matrixrgb_device_reset( &matrixrgb );
 
-    matrixrgb_pattern_settings ( &matrixrgb, MATRIXRGB_PATTERN_1_MAP_6MM, 1000 );
+    matrixrgb_pattern_settings ( &matrixrgb, MATRIXRGB_PATTERN_1_MAP_5MM, 1000 );
     matrixrgb_set_power( &matrixrgb, 1 );
     Delay_ms( 1000 );
     
@@ -96,16 +96,18 @@ void application_task ( )
     }
     for ( test = 32; test > 0; test-- )
     {
-        matrixrgb_write_pixel( &matrixrgb, 32 - test, test, 0xF100 );
+        matrixrgb_write_pixel( &matrixrgb, 31 - test, test, 0xF100 );
         Delay_ms( 100 );
     }
+    Delay_ms( 2000 );
+    
 
     //Text Write Test
     matrixrgb_fill_screen( &matrixrgb, 0x0000 );
     matrixrgb_write_text( &matrixrgb, "RGB", 6, 5 );
     matrixrgb_write_text( &matrixrgb, "Demo", 4, 20 );
-    Delay_ms( 2000 );
-
+    Delay_ms( 5000 );
+    
     // Image Test
     matrixrgb_draw_image( &matrixrgb, mikroe_logo_32x32_bmp );
     Delay_ms( 1000 );

@@ -29,47 +29,49 @@
 
 #include "leddriver6.h"
 
-// ------------------------------------------------------------- PRIVATE MACROS 
+#define LEDDRIVER6_SLAVE_ADDR  0x4D
 
-#define PWM_PERIOD_ERROR   0
-
-// ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
+#define LEDDRIVER6_ADC_RES   4096
+#define LEDDRIVER6_ADC_VREF  3.3
 
 void leddriver6_cfg_setup ( leddriver6_cfg_t *cfg )
 {
-    // Communication gpio pins 
-
-    cfg->pwm = HAL_PIN_NC;
-    cfg->scl = HAL_PIN_NC;
-    cfg->sda = HAL_PIN_NC;
-    
-    // Additional gpio pins
-
+    cfg->pwm     = HAL_PIN_NC;
+    cfg->scl     = HAL_PIN_NC;
+    cfg->sda     = HAL_PIN_NC;
     cfg->int_pin = HAL_PIN_NC;
-    
-	cfg->dev_pwm_freq = LEDDRIVER6_DEF_FREQ;
-    cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
-    cfg->i2c_address = 0x4D;
+
+    cfg->dev_pwm_freq = LEDDRIVER6_DEF_FREQ;
+    cfg->i2c_speed    = I2C_MASTER_SPEED_STANDARD;
+    cfg->i2c_address  = LEDDRIVER6_SLAVE_ADDR;
 }
 
-LEDDRIVER6_RETVAL leddriver6_init ( leddriver6_t *ctx, leddriver6_cfg_t *cfg )
+err_t leddriver6_init ( leddriver6_t *ctx, leddriver6_cfg_t *cfg )
 {
-    i2c_master_config_t i2c_cfg;
     pwm_config_t pwm_cfg;
-    
+
     pwm_configure_default( &pwm_cfg );
 
-	pwm_cfg.pin      = cfg->pwm;
-	pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
+    pwm_cfg.pin = cfg->pwm;
 
     ctx->pwm_freq = cfg->dev_pwm_freq;
-    pwm_open( &ctx->pwm, &pwm_cfg );
-    pwm_set_freq( &ctx->pwm, pwm_cfg.freq_hz );
+
+    if ( pwm_open( &ctx->pwm, &pwm_cfg ) == PWM_ERROR )
+    {
+        return LEDDRIVER6_INIT_ERROR;
+    }
+
+    if ( pwm_set_freq( &ctx->pwm, cfg->dev_pwm_freq ) == PWM_ERROR )
+    {
+        return LEDDRIVER6_INIT_ERROR;
+    }
+
+    i2c_master_config_t i2c_cfg;
 
     i2c_master_configure_default( &i2c_cfg );
-    i2c_cfg.speed  = cfg->i2c_speed;
-    i2c_cfg.scl    = cfg->scl;
-    i2c_cfg.sda    = cfg->sda;
+
+    i2c_cfg.scl = cfg->scl;
+    i2c_cfg.sda = cfg->sda;
 
     ctx->slave_address = cfg->i2c_address;
 
@@ -78,60 +80,67 @@ LEDDRIVER6_RETVAL leddriver6_init ( leddriver6_t *ctx, leddriver6_cfg_t *cfg )
         return LEDDRIVER6_INIT_ERROR;
     }
 
-    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
-    i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    if ( i2c_master_set_slave_address( &ctx->i2c, cfg->i2c_address ) == I2C_MASTER_ERROR )
+    {
+        return LEDDRIVER6_INIT_ERROR;
+    }
 
-    // Input pins
+    if ( i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed ) == I2C_MASTER_ERROR )
+    {
+        return LEDDRIVER6_INIT_ERROR;
+    }
 
-    digital_in_init( &ctx->int_pin, cfg->int_pin );
+    if ( digital_in_init( &ctx->int_pin, cfg->int_pin ) == DIGITAL_IN_UNSUPPORTED_PIN )
+    {
+        return LEDDRIVER6_INIT_ERROR;
+    }
 
     return LEDDRIVER6_OK;
 }
 
-void leddriver6_set_duty_cycle ( leddriver6_t *ctx, float duty_cycle )
+err_t leddriver6_set_duty_cycle ( leddriver6_t *ctx, float duty_cycle )
 {
-    pwm_set_duty( &ctx->pwm, duty_cycle ); 
+    return pwm_set_duty( &ctx->pwm, duty_cycle );
 }
 
-void leddriver6_pwm_stop ( leddriver6_t *ctx )
+err_t leddriver6_pwm_stop ( leddriver6_t *ctx )
 {
-    pwm_stop( &ctx->pwm ); 
+    return pwm_stop( &ctx->pwm );
 }
 
-void leddriver6_pwm_start ( leddriver6_t *ctx )
+err_t leddriver6_pwm_start ( leddriver6_t *ctx )
 {
-    pwm_start( &ctx->pwm ); 
+    return pwm_start( &ctx->pwm );
 }
 
-void leddriver6_generic_read ( leddriver6_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
+err_t leddriver6_read_adc ( leddriver6_t *ctx, uint16_t *data_out )
 {
-    uint8_t tx_buf[ 256 ];
-    uint8_t cnt;
-    
-    tx_buf[ 0 ] = reg;
-    
-    for ( cnt = 1; cnt <= len; cnt++ )
+    uint8_t read_data[ 2 ];
+
+    if ( i2c_master_read( &ctx->i2c, read_data, 2 ) == I2C_MASTER_ERROR )
     {
-        tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
+        return LEDDRIVER6_INIT_ERROR;
     }
-    
-    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );   
+
+    *data_out = read_data[ 0 ];
+    *data_out <<= 8;
+    *data_out |= read_data[ 1 ];
+
+    return LEDDRIVER6_OK;
 }
 
-uint16_t leddriver6_get_pg_voltage ( leddriver6_t *ctx )
+err_t leddriver6_get_pg_voltage ( leddriver6_t *ctx, float *data_out )
 {
-    uint8_t read_reg[ 2 ];
-    uint16_t read_data;
+    uint16_t adc_data;
 
-    leddriver6_generic_read( ctx, 0x00, read_reg, 2 );
+    if ( leddriver6_read_adc( ctx, &adc_data ) == LEDDRIVER6_INIT_ERROR )
+    {
+        return LEDDRIVER6_INIT_ERROR;
+    }
 
-    read_data = read_reg[ 0 ];
-    read_data = read_data << 8;
-    read_data = read_data | read_reg[ 1 ];
+    *data_out = (float)adc_data / LEDDRIVER6_ADC_RES * LEDDRIVER6_ADC_VREF;
 
-    read_data &= 0x0FFF;
-
-    return read_data;
+    return LEDDRIVER6_OK;
 }
 
 uint8_t leddriver6_get_interrupt_state ( leddriver6_t *ctx )
@@ -139,5 +148,4 @@ uint8_t leddriver6_get_interrupt_state ( leddriver6_t *ctx )
     return digital_in_read( &ctx->int_pin );
 }
 
-// ------------------------------------------------------------------------- END
-
+// ------------------------------------------------------------------------ END

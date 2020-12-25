@@ -148,7 +148,7 @@ typedef struct
     // Input pins 
 
     digital_in_t int_pin;
-    
+
     // Modules 
 
     i2c_master_t i2c;
@@ -168,7 +168,7 @@ typedef struct
 
     pin_name_t scl;
     pin_name_t sda;
-    
+
     // Additional gpio pins 
 
     pin_name_t rst;
@@ -206,8 +206,8 @@ void spectral2_cfg_setup ( spectral2_cfg_t *cfg );
 /**
  * @brief Initialization function.
  *
- * @param ctx Click object.
- * @param cfg Click configuration structure.
+ * @param ctx  Click object.
+ * @param cfg  Click configuration structure.
  * 
  * @description This function initializes all necessary pins and peripherals used for this click.
  */
@@ -224,7 +224,7 @@ SPECTRAL2_RETVAL spectral2_init ( spectral2_t *ctx, spectral2_cfg_t *cfg );
 /**
  * @brief Function for configuration measurements
  *
- * @param cfg_data   data that will be entered in the configuration register
+ * @param ctx  Click object.
  *
  * Options for Configuration:
  * <pre>
@@ -240,49 +240,35 @@ SPECTRAL2_RETVAL spectral2_init ( spectral2_t *ctx, spectral2_cfg_t *cfg );
       </pre>
    </pre>
  */
-void spectral2_default_cfg ( spectral2_t *ctx, uint8_t cfg_data );
+void spectral2_default_cfg ( spectral2_t *ctx );
 
 /**
- * @brief Generic write function.
+ * @brief Generic write function
  *
  * @param ctx          Click object.
  * @param reg          Register address.
- * @param data_buf     Data buf to be written.
- * @param len          Number of the bytes in data buf.
+ * @param data_buf     Data to be written.
  *
  * @description This function writes data to the desired register.
  */
-void spectral2_generic_write ( spectral2_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+void spectral2_generic_write ( spectral2_t *ctx, uint8_t reg, uint8_t data_buf );
 
 /**
- * @brief Generic read function.
- * 
+ * @brief Generic read function
+ *
  * @param ctx          Click object.
  * @param reg          Register address.
- * @param data_buf     Output data buf
- * @param len          Number of the bytes to be read
+ * @return             Read data value.
  *
  * @description This function reads data from the desired register.
  */
-void spectral2_generic_read ( spectral2_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-/**
- * @brief Function for reads one byte
- *
- * @param virtual_reg   virtual registry from which one byte is read
- * @param ctx           Click object.
- * 
- * @return one byte, which is read from the register
- * 
- * @description This function reads one byte from the virtual register.
- */
-uint8_t spectral2_read_byte ( spectral2_t *ctx, uint8_t virtual_reg );
+uint8_t spectral2_generic_read ( spectral2_t *ctx, uint8_t reg );
 
 /**
  * @brief Reset function
- * 
+ *
  * @param ctx          Click object.
- * 
+ *
  * @description This function resets the chip.
  */
 void spectral2_reset ( spectral2_t *ctx );
@@ -291,10 +277,10 @@ void spectral2_reset ( spectral2_t *ctx );
  * @brief Integration time function
  *
  * @param ctx          Click object.
- * @param cur_time     data that will be written in the integration time register
+ * @param cur_time     Data that will be written in the integration time register.
  *
  * @description Function for calculating integration time.
- * 
+ *
  * @note Integration time = <value> * 2.8ms (default 0xFF)
  */
 void spectral2_set_integration_time ( spectral2_t *ctx, uint8_t cur_time );
@@ -303,10 +289,10 @@ void spectral2_set_integration_time ( spectral2_t *ctx, uint8_t cur_time );
  * @brief Read temperature function
  *
  * @param ctx          Click object.
- * 
- * @return Device temperature data byte in (�C)
- * 
- * @description Function for reading device temperature
+ *
+ * @return Device temperature data byte in (deg C).
+ *
+ * @description Function for reading device temperature.
  */
 uint8_t spectral2_get_temperature ( spectral2_t *ctx );
 
@@ -314,10 +300,10 @@ uint8_t spectral2_get_temperature ( spectral2_t *ctx );
  * @brief Led ctrl and setting function
  *
  * @param ctx          Click object.
- * @param led_data     Data that will be written in the LED control register
+ * @param led_data     Data that will be written in the LED control register.
  *
- * @description Function for led control and settings led
- * 
+ * @description Function for led control and settings led.
+ *
  * @note Options:
  * <pre>
      LED_DRV current limit ( 12.5mA, 25mA, 50mA or 100mA )
@@ -329,35 +315,35 @@ uint8_t spectral2_get_temperature ( spectral2_t *ctx );
 void spectral2_led_control ( spectral2_t *ctx, uint8_t led_data );
 
 /**
- * @brief read data function.
+ * @brief Read data function
  *
  * @param ctx          Click object.
  * @param dataReg      Value from which the filter will be read.
  *
- * @return 16 bit data that is read from the register
+ * @return 16 bit signed data that is read from the register.
  *
- * @description Function for reading Data.
+ * @description Function for reading the measured data.
  */
 int16_t spectral2_get_data ( spectral2_t *ctx, uint8_t data_reg );
 
 /**
- * @brief Reads calibrated data function.
+ * @brief Reads calibrated data function
  *
  * @param ctx          Click object.
- * @param dataReg      value from which the filter will be read
+ * @param dataReg      Value from which the filter will be read.
  *
- * @return float data that is read from the register
+ * @return Floating point data that is read from the register.
  *
- * @description Function that reads calibrated data.
+ * @description Function reads the calibrated data.
  */
-float spectral2_get_calibrated_data ( spectral2_t *ctx, uint8_t data_reg );
+int32_t spectral2_get_calibrated_data ( spectral2_t *ctx, uint8_t data_reg );
 
 #ifdef __cplusplus
 }
 #endif
-#endif  // _SPECTRAL2_H_
+#endif  // SPECTRAL2_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End click Driver group
 /*! @} */
-// ------------------------------------------------------------------------- END
+// ------------------------------------------------------------------------ END

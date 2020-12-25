@@ -27,5 +27,6 @@
     "short_description": "Expand 4 click carries TPCIC6A595, a chip that combines an 8-bit serial-in, parallel-out shift register with an 8-bit D-type storage register.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

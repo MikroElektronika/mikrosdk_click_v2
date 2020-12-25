@@ -67,7 +67,7 @@ void pressure11_cfg_setup ( pressure11_cfg_t *cfg )
     cfg->spi_mode = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 
-    cfg->sel = PRESSURE11_MASTER_SPI;
+    cfg->sel = PRESSURE11_MASTER_I2C;
 }
 
 PRESSURE11_RETVAL pressure11_init ( pressure11_t *ctx, pressure11_cfg_t *cfg )
@@ -94,6 +94,9 @@ PRESSURE11_RETVAL pressure11_init ( pressure11_t *ctx, pressure11_cfg_t *cfg )
 
         i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
         i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+        
+        digital_out_init( &ctx->cs, cfg->cs );
+        digital_out_high( &ctx->cs );
 
         ctx->read_f = pressure11_i2c_read;
         ctx->write_f = pressure11_i2c_write;
@@ -222,7 +225,8 @@ static void pressure11_i2c_write ( pressure11_t *ctx, uint8_t reg, uint8_t *data
 
 static void pressure11_i2c_read ( pressure11_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
-    i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, len );
+    i2c_master_write( &ctx->i2c, &reg, 1 ); 
+    i2c_master_read( &ctx->i2c, data_buf, len );
 }
 
 static void pressure11_spi_write ( pressure11_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )

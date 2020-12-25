@@ -71,32 +71,12 @@ RMSTODC_RETVAL rmstodc_init ( rmstodc_t *ctx, rmstodc_cfg_t *cfg )
     return RMSTODC_OK;
 }
 
-void rmstodc_generic_write ( rmstodc_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
-{
-    uint8_t tx_buf[ 256 ];
-    uint8_t cnt;
-    
-    tx_buf[ 0 ] = reg;
-    
-    for ( cnt = 1; cnt <= len; cnt++ )
-    {
-        tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
-    }
-    
-    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );   
-}
-
-void rmstodc_generic_read ( rmstodc_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
-{
-    i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, len );
-}
-
 uint16_t rms2dc_read_adc ( rmstodc_t *ctx )
 {
     uint8_t data_out[ 2 ];
     uint16_t ret_val;
     
-    rmstodc_generic_read( ctx, 0x00, data_out, 2 );
+    i2c_master_read( &ctx->i2c, data_out, 2 );
     
     ret_val = data_out[ 0 ] & 0x0F;
     ret_val <<= 8;
@@ -116,43 +96,6 @@ uint16_t rms2dc_vout_adc ( rmstodc_t *ctx, uint16_t vcc_sel )
     res *= vcc_sel;
     
     return ( uint16_t )res;
-}
-
-uint16_t rms2dc_avrg_vout_adc ( rmstodc_t *ctx, uint16_t vcc_select, uint8_t n_samples )
-{
-    uint16_t v_out;
-    uint16_t v_max;
-    uint16_t v_min;
-    uint8_t cont = 0;
-    uint8_t cnt;
-
-    for ( cnt = 0; cnt < n_samples; cnt++ )
-    {
-        v_out = rms2dc_vout_adc( ctx, vcc_select );
-        
-        if ( cont == 0 )
-        {
-            v_max = v_out;
-            v_min = v_out;
-            cont = 1;
-        }
-        else
-        {
-            if ( v_max < v_out )
-            {
-                v_max = v_out;
-            }
-            if ( v_min > v_out )
-            {
-                v_min = v_out;
-            }
-        }
-        Delay_1us( );
-    }
-    
-    v_out = ( v_max + v_min ) / 2;
-    
-    return v_out;
 }
 
 void rms2dc_enable ( rmstodc_t *ctx, uint8_t state )

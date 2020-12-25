@@ -37,36 +37,32 @@ static float duty_cycle = 0.5;
 
 static void clockwise ( )
 {
-    dcmotor4_enable_motor( &dcmotor4 );
-
-    log_printf( &logger, " Run: Clockwise -> \r\n " );
+    log_printf( &logger, "\r\n------------------------------\r\n" );
+    log_printf( &logger, " * Clockwise *\r\n" );
     dcmotor4_run_clockwise( &dcmotor4 );
+    Delay_1sec( );
 
-    for ( duty_cycle = 0; duty_cycle < dcmotor4.pwm_period; duty_cycle += 250 )
+    for ( duty_cycle = 0.1; duty_cycle <= 1.0; duty_cycle += 0.1 )
     {
-        dcmotor4_set_duty_cycle( &dcmotor4, duty_cycle );
-        log_printf( &logger, "  >  \r\n " );
-        Delay_1sec();
+        dcmotor4_set_duty_cycle ( &dcmotor4, duty_cycle );
+        log_printf( &logger," > " );
+        Delay_ms( 500 );
     }
-
-    dcmotor4_disable_motor( &dcmotor4 );
 }
 
 static void counter_clockwise ( )
 {
-    dcmotor4_enable_motor( &dcmotor4 );
-
-    log_printf( &logger, " Run: Clockwise <- \r\n " );
+    log_printf( &logger, "\r\n------------------------------\r\n" );
+    log_printf( &logger, " * Counter clockwise *\r\n" );
     dcmotor4_run_counter_clockwise( &dcmotor4 );
+    Delay_1sec( );
 
-    for ( duty_cycle = dcmotor4.pwm_period; duty_cycle > 0; duty_cycle -= 250 )
+    for ( duty_cycle = 1.0; duty_cycle > 0; duty_cycle -= 0.1 )
     {
-        dcmotor4_set_duty_cycle( &dcmotor4, duty_cycle );
-        log_printf( &logger, "  <  \r\n " );
-        Delay_1sec();
+        dcmotor4_set_duty_cycle ( &dcmotor4, duty_cycle );
+        log_printf( &logger," < " );
+        Delay_ms( 500 );
     }
-
-    dcmotor4_disable_motor( &dcmotor4 );
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -91,22 +87,14 @@ void application_init ( )
     DCMOTOR4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     Delay_100ms();
     dcmotor4_init( &dcmotor4, &cfg );
-
     dcmotor4_pwm_start( &dcmotor4 );
 }
 
 void application_task ( )
 {  
-    if ( duty_cycle > dcmotor4.pwm_period )
-    {
-        duty_cycle = 100;
-    }
+    counter_clockwise( );
     
     clockwise( );
-
-    counter_clockwise( );
-
-    Delay_100ms( );
 }
 
 void main ( )

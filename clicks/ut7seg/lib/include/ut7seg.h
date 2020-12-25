@@ -54,7 +54,7 @@
    cfg.mosi  = MIKROBUS( mikrobus, MIKROBUS_MOSI ); \
    cfg.sck   = MIKROBUS( mikrobus, MIKROBUS_SCK ); \
    cfg.cs    = MIKROBUS( mikrobus, MIKROBUS_CS ); \
-   cfg.oe = MIKROBUS( mikrobus, MIKROBUS_PWM ); 
+   cfg.oe = MIKROBUS( mikrobus, MIKROBUS_PWM )
 /** \} */
 
 /**
@@ -100,8 +100,7 @@ typedef struct
     // Output pins 
 
     digital_out_t oe;
-    digital_out_t cs;
-    
+
     // Modules 
 
     spi_master_t spi;
@@ -197,9 +196,9 @@ void ut7seg_display_state ( ut7seg_t *ctx, uint8_t state );
 #ifdef __cplusplus
 }
 #endif
-#endif  // _UT7SEG_H_
+#endif  // UT7SEG_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End click Driver group
 /*! @} */
-// ------------------------------------------------------------------------- END
+// ------------------------------------------------------------------------ END

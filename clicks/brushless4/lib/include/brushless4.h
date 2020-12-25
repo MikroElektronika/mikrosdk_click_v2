@@ -87,10 +87,6 @@ typedef struct
     // Input pins 
 
     digital_in_t fg;
-
-    // Output pins
-
-    digital_out_t pwm_pin;
     
     // Modules 
 

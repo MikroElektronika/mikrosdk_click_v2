@@ -33,40 +33,47 @@
 
 void pot_cfg_setup ( pot_cfg_t *cfg )
 {
-    // Communication gpio pins 
-
     cfg->an_pin = HAL_PIN_NC;
 
-    cfg->resolution   = ANALOG_IN_RESOLUTION_10_BIT;
-    cfg->vref         = 3.3;
+    cfg->resolution = ANALOG_IN_RESOLUTION_10_BIT;
+    cfg->vref       = 3.3;
 }
 
-POT_RETVAL pot_init ( pot_t *ctx, pot_cfg_t *cfg )
+err_t pot_init ( pot_t *ctx, pot_cfg_t *cfg )
 {
     analog_in_config_t adc_cfg;
 
     analog_in_configure_default( &adc_cfg );
-    adc_cfg.input_pin  = cfg->an_pin;
 
-    if ( analog_in_open( &ctx->adc, &adc_cfg ) != ACQUIRE_FAIL )
+    adc_cfg.input_pin = cfg->an_pin;
+
+    if ( analog_in_open( &ctx->adc, &adc_cfg ) == ADC_ERROR )
     {
-        return POT_INIT_ERROR;
+        return ADC_ERROR;
     }
 
     analog_in_set_vref_value( &ctx->adc, cfg->vref );
     analog_in_set_resolution( &ctx->adc, cfg->resolution );
 
-    return POT_OK;
+    return ADC_SUCCESS;
 }
 
-pot_data_t pot_generic_read ( pot_t *ctx )
+uint16_t pot_generic_read ( pot_t *ctx )
 {
-    pot_data_t rx_data;
+    uint16_t read_data = 0;
 
-    analog_in_read( &ctx->adc, &rx_data );
-    
-    return rx_data;
+    analog_in_read( &ctx->adc, &read_data );
+
+    return read_data;
+}
+
+float pot_read_voltage ( pot_t *ctx )
+{
+	float read_data = 0;
+
+    analog_in_read_voltage( &ctx->adc, &read_data );
+
+    return read_data;
 }
 
 // ------------------------------------------------------------------------- END
-

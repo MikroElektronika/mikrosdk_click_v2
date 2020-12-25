@@ -41,7 +41,7 @@ void application_init (  )
     //  Logger initialization.
 
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
@@ -51,6 +51,8 @@ void application_init (  )
     c3dhall7_cfg_setup( &cfg );
     C3DHALL7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c3dhall7_init( &c3dhall7, &cfg );
+    
+    c3dhall7_device_reset( &c3dhall7 );
 
     // Test communication 
     c3dhall7_device_info( &c3dhall7, &info );
@@ -73,8 +75,6 @@ void application_task ( void )
 {
     c3dhall7_axis_t axis;
 
-    char demo_text[ 50 ];
-    
     c3dhall7_get_axis_data( &c3dhall7, &axis );
     
     log_printf( &logger, "---- Measurement data of magnetic sensor ----\r\n" );

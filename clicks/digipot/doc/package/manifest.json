@@ -27,5 +27,6 @@
     "short_description": "DIGIPOT Click is an accessory board in mikroBUS form factor.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+

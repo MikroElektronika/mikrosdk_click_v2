@@ -31,11 +31,9 @@
 
 // ------------------------------------------------------------- PRIVATE MACROS 
 
-#define STEPUP_DUMMY 0
+#define STEPUP_DUMMY                0
 
-// ---------------------------------------------- PRIVATE FUNCTION DECLARATIONS 
-
-static void stepup_spi_set ( stepup_t *ctx, uint16_t command );
+#define STEPUP_DAC_RESOLUTION       4095
 
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
@@ -57,7 +55,10 @@ void stepup_cfg_setup ( stepup_cfg_t *cfg )
     cfg->spi_mode = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 
-    cfg->config_word_cfg = STEPUP_DACA | STEPUP_BUFFERED | STEPUP_GAIN_1X | STEPUP_POWER_UP;
+    cfg->dac_config.buf  = STEPUP_CFG_VREF_BUFFERED;
+    cfg->dac_config.ga   = STEPUP_CFG_GAIN_1X;
+    cfg->dac_config.shdn = STEPUP_CFG_POWER_OUT_ON;
+
 }
 
 STEPUP_RETVAL stepup_init ( stepup_t *ctx, stepup_cfg_t *cfg )
@@ -71,7 +72,6 @@ STEPUP_RETVAL stepup_init ( stepup_t *ctx, stepup_cfg_t *cfg )
     spi_cfg.mosi      = cfg->mosi;
     spi_cfg.default_write_data = STEPUP_DUMMY;
 
-    digital_out_init( &ctx->cs, cfg->cs );
     ctx->chip_select = cfg->cs;
 
     if (  spi_master_open( &ctx->spi, &spi_cfg ) == SPI_MASTER_ERROR )
@@ -83,41 +83,33 @@ STEPUP_RETVAL stepup_init ( stepup_t *ctx, stepup_cfg_t *cfg )
     spi_master_set_speed( &ctx->spi, cfg->spi_speed );
     spi_master_set_mode( &ctx->spi, cfg->spi_mode );
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
+    spi_master_deselect_device( ctx->chip_select );
 
     // Output pins 
     
     digital_out_init( &ctx->mod, cfg->mod );
     digital_out_init( &ctx->en, cfg->en );
 
-    spi_master_deselect_device( ctx->chip_select ); 
     digital_out_high( &ctx->mod );
     digital_out_high( &ctx->en );
+
+    ctx->dac_config.buf  = cfg->dac_config.buf;
+    ctx->dac_config.ga   = cfg->dac_config.ga;
+    ctx->dac_config.shdn = cfg->dac_config.shdn;
 
     return STEPUP_OK;
 
 }
 
-void stepup_default_cfg ( stepup_t *ctx, uint16_t out_value )
+void stepup_default_cfg ( stepup_t *ctx )
 {
     // Click default configuration 
     digital_out_low( &ctx->mod );
     digital_out_high( &ctx->en );
 
-    stepup_set_out( ctx, out_value );
-}
-
-void stepup_generic_transfer 
-( 
-    stepup_t *ctx, 
-    uint8_t *wr_buf, 
-    uint16_t wr_len, 
-    uint8_t *rd_buf, 
-    uint16_t rd_len 
-)
-{
-    spi_master_select_device( ctx->chip_select );
-    spi_master_write_then_read( &ctx->spi, wr_buf, wr_len, rd_buf, rd_len );
-    spi_master_deselect_device( ctx->chip_select );   
+    ctx->dac_config.buf  = STEPUP_CFG_VREF_BUFFERED;
+    ctx->dac_config.ga   = STEPUP_CFG_GAIN_1X;
+    ctx->dac_config.shdn = STEPUP_CFG_POWER_OUT_ON;
 }
 
 void stepup_mod_set ( stepup_t *ctx, uint8_t pin_state )
@@ -130,58 +122,51 @@ void stepup_en_set ( stepup_t *ctx, uint8_t pin_state )
     digital_out_write( &ctx->en, pin_state );
 }
 
-uint8_t stepup_set_config ( stepup_t *ctx, uint16_t config )
+void stepup_dac_setup ( stepup_t *ctx, stepup_dac_cfg_t *cfg )
 {
-    if ( ( config & 0x0FFF ) != 0 ) 
+    ctx->dac_config.buf  = cfg->buf;
+    ctx->dac_config.ga   = cfg->ga;
+    ctx->dac_config.shdn = cfg->shdn;
+}
+
+err_t stepup_dac_write ( stepup_t *ctx, uint16_t dac_val )
+{
+    if ( dac_val > STEPUP_DAC_RESOLUTION )
     {
-        return 1;
+        return STEPUP_ERROR;
     }
 
-    ctx->config_word = config;
-    
-    return 0;
-}
+    uint8_t write_buf[ 2 ];
 
-uint8_t stepup_set_out ( stepup_t *ctx, uint16_t out_value )
-{
-    uint16_t aux_value;
-    
-    if ( out_value > 4095 )
-    {
-        return 1;
-    }
+    write_buf[ 0 ] = dac_val >> 8;
+    write_buf[ 1 ] = dac_val;
 
-    aux_value = ctx->config_word;
-    aux_value |= out_value;
-    stepup_spi_set( ctx, aux_value );
-    
-    return 0;
-}
-
-float stepup_get_percent ( uint16_t out_value )
-{
-    float aux_out;
-    
-    aux_out  = ( float )( out_value ) / 4095;
-    aux_out *= 100;
-    aux_out  = ( float )( 100 - aux_out );
-    
-    return aux_out;
-}
-
-// ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
-
-static void stepup_spi_set ( stepup_t *ctx, uint16_t command )
-{
-    uint8_t aux_buffer[ 2 ];
-
-    aux_buffer[ 0 ] = command >> 8 ;
-    aux_buffer[ 1 ] = command & 0x00FF;
+    write_buf[ 0 ] |= ( ctx->dac_config.buf & 1 ) << 6;
+    write_buf[ 0 ] |= ( ctx->dac_config.ga & 1 ) << 5;
+    write_buf[ 0 ] |= ( ctx->dac_config.shdn & 1 ) << 4;
 
     spi_master_select_device( ctx->chip_select );
-    spi_master_write( &ctx->spi, &aux_buffer[ 0 ], 1 );
-    spi_master_write( &ctx->spi, &aux_buffer[ 1 ], 1 );
-    spi_master_deselect_device( ctx->chip_select );   
+    spi_master_write( &ctx->spi, write_buf, 2 );
+    spi_master_deselect_device( ctx->chip_select );  
+
+    return STEPUP_OK;
+}
+
+err_t stepup_set_percentage ( stepup_t *ctx, float percentage )
+{
+    uint16_t setter = 0;
+    float temp = 0.0;
+    
+    if ( ( percentage > 100.0 ) || ( percentage < 0.0 ) )
+        return STEPUP_ERROR;
+    
+    temp = ( percentage * STEPUP_DAC_RESOLUTION ) / 100.0;
+    
+    setter = STEPUP_DAC_RESOLUTION - ( uint16_t )temp;
+    
+    stepup_dac_write( ctx, setter );
+    
+    return STEPUP_OK;
 }
 
 // ------------------------------------------------------------------------- END

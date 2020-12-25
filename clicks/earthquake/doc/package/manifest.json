@@ -27,5 +27,6 @@
     "short_description": "Earthquake click carries D7S, the world’s smallest high-precision seismic sensor from Omron. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over I2C interface, with additional functionality provided by the following pins on the mikroBUS™ line: PWM, INT, CS.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

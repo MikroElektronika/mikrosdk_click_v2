@@ -27,6 +27,7 @@
     "short_description": "Balancer 5 Click is an intelligent 2-cell Li-Ion battery charger, system power manager, and a battery fuel gauge Click board™. Balancer 5 click is based on BQ25887 controller which has some extra features enabling charging without too much hassle.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+
 

@@ -1,4 +1,5 @@
 
+
 ---
 # 3D Hall click
 
@@ -66,11 +67,11 @@ void application_init ( void )
 {
     log_cfg_t log_cfg;
     c3dhall_cfg_t cfg;
-
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.baud = 9600;
+    log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -79,13 +80,16 @@ void application_init ( void )
     c3dhall_cfg_setup( &cfg );
     C3DHALL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c3dhall_init( &c3dhall, &cfg );
+    Delay_100ms( );
 }
   
 ```
 
 ### Application Task
 
-> This is a example which demonstrates the use of 3D Hall Click board. 3D Hall Click communicates with register via SPI by read data from register and calculate Alpha and Beta angle position. Results are being sent to the Usart Terminal where you can track their changes. All data logs on usb uart for aproximetly every 3 sec.
+> This is a example which demonstrates the use of 3D Hall Click board. 
+> 3D Hall Click communicates with register via SPI by read data from register and calculate Alpha and Beta angle position. 
+> Results are being sent to the Usart Terminal where you can track their changes. All data logs on usb uart.
 
 ```c
 
@@ -99,23 +103,16 @@ void application_task ( void )
     c3dhall_read_all_data( &c3dhall, &all_data );
     Delay_100ms( );
 
-    if ( ( all_data.data_error | all_data.data_sum ) == C3DHALL_NO_ERRORS )
+    if ( ( all_data.data_error ) == C3DHALL_NO_ERRORS )
     {
         angle_alpha = c3dhall_calculate_angle( &c3dhall, all_data.data_angle_a );
         angle_beta = c3dhall_calculate_angle( &c3dhall, all_data.data_angle_b );
+        
+        log_printf( &logger, "     Alpha : %u\r\n", ( uint16_t ) angle_alpha );
 
-
-        log_printf( &logger, "     Alpha : %d\r\n", angle_alpha );
-
-
-
-        log_printf( &logger, "     Beta  : %d\r\n", angle_beta );
+        log_printf( &logger, "     Beta  : %u\r\n", ( uint16_t ) angle_beta );
 
         log_printf( &logger, "-------------------------\r\n", angle_beta );
-
-        Delay_1sec( );
-        Delay_1sec( );
-        Delay_1sec( );
     }
     else
     {
@@ -145,6 +142,7 @@ void application_task ( void )
             log_printf( &logger, "      Unknown error      \r\n" );
 
         log_printf( &logger, "-------------------------\r\n" );
+        Delay_1sec( );
     }
 }  
 

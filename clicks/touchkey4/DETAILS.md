@@ -9,7 +9,6 @@ Touch Key 4 click is a capacitive touch sensing Click board™, with the advance
   <img src="https://download.mikroe.com/images/click_for_ide/touchkey4_click.png" height=300px>
 </p>
 
-
 [click Product page](<https://www.mikroe.com/touch-key-4-click>)
 
 ---
@@ -80,8 +79,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -90,16 +90,19 @@ void application_init ( void )
     touchkey4_cfg_setup( &cfg );
     TOUCHKEY4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     touchkey4_init( &touchkey4, &cfg );
-    touchkey4_default_cfg( &touchkey4 );
 
+    Delay_ms( 1000 );
+    
+    touchkey4_default_cfg( &touchkey4 );
+    log_info( &logger, "---- Configured and ready ----" );
 }
   
 ```
 
 ### Application Task
 
-> Calls function to check touch detection (is interrupt occured) and shows message on
-USB UART if touch is detected or if touch is released on enabled inputs.
+> Calls function to check touch detection (is interrupt occured) and shows message on 
+> USB UART if touch is detected or if touch is released on enabled inputs.
 
 ```c
 
@@ -110,11 +113,11 @@ void application_task ( void )
     {
         if ( sensor_results[ cnt ] == 1 )
         {
-            if (cnt == 0)
+            if ( cnt == 0 )
             {
                 log_info( &logger, "Input 1 is touched\r\n" );
             }
-            else if (cnt == 1)
+            else if ( cnt == 1 )
             {
                 log_info( &logger, "Input 2 is touched\r\n" );
             }
@@ -123,8 +126,8 @@ void application_task ( void )
                 log_info( &logger, "Input 3 is touched\r\n" );
             }
         }
-		else if ( sensor_results[ cnt ] == 2 )
-		{
+        else if ( sensor_results[ cnt ] == 2 )
+        {
             if ( cnt == 0 )
             {
                 log_info( &logger, "Input 1 is released\r\n" );
@@ -147,13 +150,14 @@ void application_task ( void )
 ## Note
 
 > TouchKey 4 is configured to work in Combo mode (Active and Standby mode). Input 1 is
-enabled in Active mode, input 3 is enabled in Standby mode, and input 2 is enabled to
-work in both modes. In this example the interrupt will be generated when touch is
-detected and when touch is released. Also input 2 will generate interrupt as long
-as the touch is detected (press and hold event), while input 1 and input 3 will
-generate interrupt only once on one touch detection, after which the touch will be 
-released. Standby mode should be used when fewer sensor inputs are enabled, and when
-they are programmed to have more sensitivity.
+> enabled in Active mode, input 3 is enabled in Standby mode, and input 2 is enabled to
+> work in both modes. In this example the interrupt will be generated when touch is
+> detected and when touch is released. Also input 2 will generate interrupt as long
+> as the touch is detected (press and hold event), while input 1 and input 3 will
+> generate interrupt only once on one touch detection, after which the touch will be 
+> released. Standby mode should be used when fewer sensor inputs are enabled, and when
+> they are programmed to have more sensitivity.
+> Somethimes it is neccessary to cycle the board power supply if click doesn't work. 
 
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.

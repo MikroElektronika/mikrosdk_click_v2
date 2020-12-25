@@ -1,7 +1,0 @@
-type: subdirs
-project: CanIsolator
-
-subdirs: {
-    lib
-    example
-}

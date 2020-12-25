@@ -39,7 +39,6 @@
 #include "drv_digital_in.h"
 #include "drv_uart.h"
 
-
 // -------------------------------------------------------------- PUBLIC MACROS 
 /**
  * \defgroup macros Macros
@@ -53,9 +52,8 @@
 #define RN4870_MAP_MIKROBUS( cfg, mikrobus ) \
   cfg.tx_pin  = MIKROBUS( mikrobus, MIKROBUS_TX ); \
   cfg.rx_pin  = MIKROBUS( mikrobus, MIKROBUS_RX ); \
-  cfg.rst = MIKROBUS( mikrobus, MIKROBUS_RST ); \
+  cfg.rst_n   = MIKROBUS( mikrobus, MIKROBUS_RST ); \
   cfg.uart_rts = MIKROBUS( mikrobus, MIKROBUS_CS ); \
-  cfg.pwm = MIKROBUS( mikrobus, MIKROBUS_PWM ); \
   cfg.uart_cts = MIKROBUS( mikrobus, MIKROBUS_INT )
 /** \} */
 
@@ -70,23 +68,26 @@
 /** \} */
 
 /**
+ * \defgroup error_code Error Code
+ * \{
+ */
+#define RN4870_DEVICETYPE_MASTER      0x02
+#define RN4870_DEVICETYPE_SLAVE       0x03
+/** \} */
+
+#define RN4870_ID_MASTER              0x35
+#define RN4870_ID_SLAVE               0x32
+#define RN4870_MTYPE_MSG              'M'
+#define RN4870_DTYPE_STRING           0x5331
+
+
+/**
  * \defgroup driver Driver define
  * \{
  */
 #define DRV_RX_BUFFER_SIZE 500
 /** \} */
 
-/**
- * \defgroup variables Variables
- * \{
- */
-#define RN4870_DEVICETYPE_MASTER                         0x01
-#define RN4870_DEVICETYPE_SLAVE                          0x02
-#define RN4870_ID_MASTER                                 0x35
-#define RN4870_ID_SLAVE                                  0x32
-#define RN4870_MTYPE_MSG                                 'M'
-#define RN4870_DTYPE_STRING                              0x5331
-/** \} */
 /** \} */ // End group macro 
 // --------------------------------------------------------------- PUBLIC TYPES
 /**
@@ -100,9 +101,8 @@ typedef struct
 {
     // Output pins 
 
-    digital_out_t rst;
+    digital_out_t rst_n;
     digital_out_t uart_rts;
-    digital_out_t pwm;
 
     // Input pins 
 
@@ -115,10 +115,11 @@ typedef struct
     char uart_rx_buffer[ DRV_RX_BUFFER_SIZE ];
     char uart_tx_buffer[ DRV_RX_BUFFER_SIZE ];
 
-    char device_buffer[ 255 ];
     uint8_t end_flag;
-    uint8_t sen_flag;
-    uint8_t tmp_pos;
+    uint8_t sentence_flag;
+
+    char device_buffer[ 255 ];
+    uint8_t buffer_position;
 
 } rn4870_t;
 
@@ -134,9 +135,8 @@ typedef struct
     
     // Additional gpio pins 
 
-    pin_name_t rst;
+    pin_name_t rst_n;
     pin_name_t uart_rts;
-    pin_name_t pwm;
     pin_name_t uart_cts;
 
     // static variable 
@@ -182,15 +182,6 @@ void rn4870_cfg_setup ( rn4870_cfg_t *cfg );
 RN4870_RETVAL rn4870_init ( rn4870_t *ctx, rn4870_cfg_t *cfg );
 
 /**
- * @brief Click Default Configuration function.
- *
- * @param ctx  Click object.
- *
- * @description This function executes default configuration for Rn4870 click.
- */
-void rn4870_default_cfg ( rn4870_t *ctx );
-
-/**
  * @brief Hardware reset function
  *
  * @param ctx  Click object.
@@ -221,9 +212,42 @@ void rn4870_generic_write ( rn4870_t *ctx, char *data_buf, uint16_t len );
  * @param data_buf  Buffer to be write.
  * @param max_len   Length of data to be read.
  *
+ * @returns number of read bytes 
+ *
  * @description This function read buffer of maximum length
  */
-int16_t rn4870_generic_read ( rn4870_t *ctx, char *data_buf, uint16_t max_len );
+int32_t rn4870_generic_read ( rn4870_t *ctx, char *data_buf, uint16_t max_len );
+
+/**
+ * @brief Get interrupt state function
+ *
+ * @param ctx  Click object.
+ * 
+ * @returns interrupt state ( 0 : not active, 1 : active )
+ *
+ * @description The function gets interrupt state by return status of INT pin.
+ */
+uint8_t rn4870_int_get ( rn4870_t *ctx );
+
+/**
+ * @brief Set states of RST pin to desired state
+ *
+ * @param ctx         Click object.
+ * @param pin_state   State of pin to be set.
+ * 
+ * @description The function set states of RST desired state.
+ */
+void rn4870_rst_set ( rn4870_t *ctx, uint8_t pin_state );
+
+/**
+ * @brief Set states of CS pin to desired state
+ *
+ * @param ctx         Click object.
+ * @param pin_state   State of pin to be set.
+ * 
+ * @description The function set states of  CS pin desired state.
+ */
+void rn4870_cs_set ( rn4870_t *ctx, uint8_t pin_state );
 
 /**
  * @brief UART write function
@@ -233,7 +257,7 @@ int16_t rn4870_generic_read ( rn4870_t *ctx, char *data_buf, uint16_t max_len );
  *
  * @description This function is for UART writing 
  */
-void rn4870_uart_write ( rn4870_t *ctx, uint8_t *tx_data );
+void rn4870_uart_write ( rn4870_t *ctx, uint8_t * wr_buf );
 
 /**
  * @brief Initialization RN4870 module
@@ -246,7 +270,7 @@ void rn4870_uart_write ( rn4870_t *ctx, uint8_t *tx_data );
  * reboots the device for change to take effect, enters CMD mode again,
  * and sets the address of the device.
  */
-void rn4870_initialize ( rn4870_t *ctx, char *dev_addr );
+void rn4870_initialize ( rn4870_t *ctx, char *p_addr );
 
 /**
  * @brief Connecting to slave device
@@ -257,17 +281,7 @@ void rn4870_initialize ( rn4870_t *ctx, char *dev_addr );
  * @description The function connects to slave device with desired register address
  * by secures the connection and entering data stream mode.
  */
-void rn4870_connect ( rn4870_t *ctx, char *dev_addr );
-
-/**
- * @brief Disconnecting from slave device
- *
- * @param ctx  Click object.
- * 
- * @description The function disconnects from slave device
- * by enters CMD mode and kills connection.
- */
-void rn4870_disconnect ( rn4870_t *ctx );
+void rn4870_connect ( rn4870_t *ctx, char *p_addr );
 
 /**
  * @brief Send message function
@@ -280,103 +294,44 @@ void rn4870_disconnect ( rn4870_t *ctx );
  *
  * @description The function sends message to slave device.
  */
-void rn4870_send ( rn4870_t *ctx, uint8_t msg_type, uint16_t data_type, uint8_t dev_id, uint8_t *tx_data );
+void rn4870_send( rn4870_t *ctx, uint8_t msg_type, uint16_t data_type, uint8_t id, uint8_t *payload );
+
+/**
+ * @brief Disconnecting from slave device
+ *
+ * @param ctx  Click object.
+ * 
+ * @description The function disconnects from slave device
+ * by enters CMD mode and kills connection.
+ */
+void rn4870_disconnect ( rn4870_t *ctx );
 
 /**
  * @brief Receiving character function
  *
- * @param ctx                   Click object. 
- * @param character             Received character
+ * @param ctx      Click object. 
+ * @param tmp      Received character
  *
  * @description The function receives character by
  * waits for '#' - character to start parsing message,
  * waits for '*' - character to stop parsing message
  * and sets flag if whole and properly formated message is received.
  */
-void rn4870_receive ( rn4870_t *ctx, char character );
+void rn4870_receive ( rn4870_t *ctx, char tmp );
 
 /**
- * @brief Read received message function
+ * @brief Reading received message
  *
- * @param ctx                   Click object. 
- * @param rx_data               pointer to the memory location where the read text data is stored
+ * @param ctx               Click object.  
+ * @param process_buffer    Buffer for storing received message
  *
- * @retval 
- * <pre>
- * - 0 : if whole and properly formated message was not received and stored
- * - 1 : if whole and properly formated message was received and stored
- * </pre>
+ * @returns 1 if whole and properly formated message was received and stored; 0 if not 
  *
- * @description The function check message from if data received ( if flag was set ),
- * stores received message to rx_data pointer to the memory location where the read text data is stored
- * and replaces '*' - character with end of string - '0x00'.
+ * @description This function gets message from 'void rn4870_receive function if flag was set
+ * This function replaces '*' (character with end of string) with '0x00' and stores received 
+ * message to process_buffer
  */
-uint8_t rn4870_read ( rn4870_t *ctx, uint8_t *rx_data );
-
-/**
- * @brief Get interrupt state function
- *
- * @param ctx  Click object.
- * 
- * @returns interrupt state ( 0 : not active, 1 : active )
- *
- * @description The function gets interrupt state by return status of INT pin.
- */
-uint8_t rn4870_get_interrupt ( rn4870_t *ctx );
-
-/**
- * @brief Set states of RST pin to high function
- *
- * @param ctx  Click object.
- * 
- * @description The function set states of RST pin to high.
- */
-void rn4870_set_rst ( rn4870_t *ctx );
-
-/**
- * @brief Clear states of RST pin function
- *
- * @param ctx  Click object.
- * 
- * @description The function clear states of RST pin by sets states of RST pin to low.
- */
-void rn4870_clear_rst ( rn4870_t *ctx );
-
-/**
- * @brief Set states of RTS pin function
- *
- * @param ctx  Click object.
- * 
- * @description The function set states of RST pin by sets states of CS pin to high.
- */
-void rn4870_set_rts ( rn4870_t *ctx );
-
-/**
- * @brief Clear states of RTS pin function
- *
- * @param ctx  Click object.
- * 
- * @description The function clear states of RTS pin by sets states of CS pin to low.
- */
-void rn4870_clear_rts ( rn4870_t *ctx );
-
-/**
- * @brief Set states of PWM pin function
- *
- * @param ctx  Click object.
- * 
- * @description The function set states of PWM pin by sets states of PWM pin to high.
- */
-void rn4870_set_pwm ( rn4870_t *ctx );
-
-/**
- * @brief Clear states of PWM pin function
- *
- * @param ctx  Click object.
- * 
- * @description The function clear states of PWM pin by sets states of PWM pin to low.
- */
-void rn4870_clear_pwm ( rn4870_t *ctx );
+uint8_t rn4870_read ( rn4870_t *ctx, uint8_t *process_buffer );
 
 #ifdef __cplusplus
 }

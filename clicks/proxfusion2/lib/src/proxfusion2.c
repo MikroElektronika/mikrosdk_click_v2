@@ -69,8 +69,6 @@ PROXFUSION2_RETVAL proxfusion2_init ( proxfusion2_t *ctx, proxfusion2_cfg_t *cfg
 
     ctx->slave_address = cfg->i2c_address;
     
-//     i2c_master_set_timeout( &ctx->i2c, 500 );
-
     if ( i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_ERROR )
     {
         return PROXFUSION2_INIT_ERROR;
@@ -78,6 +76,7 @@ PROXFUSION2_RETVAL proxfusion2_init ( proxfusion2_t *ctx, proxfusion2_cfg_t *cfg
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Input pins
 

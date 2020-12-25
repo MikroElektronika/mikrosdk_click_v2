@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# PRESSURE 11 click
+# Pressure 11 click
 
 Pressure 11 Click is a digital barometer on a Click board™. Pressure 11 is equipped with the LPS33HW, an absolute piezoresistive pressure sensor, manufactured using a proprietary technology. 
 

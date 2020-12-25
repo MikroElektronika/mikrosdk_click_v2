@@ -23,28 +23,17 @@
 // ------------------------------------------------------------------- INCLUDES
 
 #include "board.h"
-#include "log.h"
 #include "dcmotor7.h"
 
 // ------------------------------------------------------------------ VARIABLES
 
 static dcmotor7_t dcmotor7;
-static log_t logger;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
     dcmotor7_cfg_t cfg;
-
-    //  Logger initialization.
-
-    LOG_MAP_USB_UART( log_cfg );
-    log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
-    log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
 

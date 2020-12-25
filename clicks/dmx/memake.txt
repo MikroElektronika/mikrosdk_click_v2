@@ -1,7 +1,0 @@
-type: subdirs
-project: Dmx
-
-subdirs: {
-    lib
-    example
-}

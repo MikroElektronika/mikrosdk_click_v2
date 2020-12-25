@@ -97,7 +97,7 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    parser_application( current_parser_buffer );
+    parser_application( );
 } 
 
 ```

@@ -27,6 +27,7 @@
     "short_description": "Opto 2 click is a galvanic isolator Click board™, used to provide an optical isolation of sensitive microcontroller (MCU) pins, when operated by external signals.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+
 

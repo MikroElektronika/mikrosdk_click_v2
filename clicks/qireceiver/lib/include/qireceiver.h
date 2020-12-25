@@ -280,7 +280,7 @@ float qireceiver_read_voltage ( qireceiver_t *ctx );
  *
  * @returns result float value of a current amperage
  *
- * @description Function is used to measure current amperage in ampere.
+ * @description Function is used to measure current amperage in mA.
 **/
 float qireceiver_read_current ( qireceiver_t *ctx );
 

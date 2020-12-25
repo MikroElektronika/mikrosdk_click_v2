@@ -65,11 +65,14 @@ REMOTETEMP_RETVAL remotetemp_init ( remotetemp_t *ctx, remotetemp_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Input pins
 
     digital_in_init( &ctx->thm, cfg->thm );
     digital_in_init( &ctx->alr, cfg->alr );
+    
+    ctx->range_set = 0;
 
     return REMOTETEMP_OK;
 }
@@ -78,8 +81,11 @@ void remotetemp_default_cfg ( remotetemp_t *ctx )
 {
     uint8_t aux_reg_buf[ 1 ];
     uint8_t aux_reg_addr;
+    
+    remotetemp_set_range( ctx, REMOTETEMP_RANGE_0_127 );
 
     aux_reg_addr = REMOTETEMP_CONFIG;
+    
     if ( ctx->range_set == 1 ) 
     {
         aux_reg_buf[ 0 ] = 0x06;
@@ -115,6 +121,7 @@ void remotetemp_default_cfg ( remotetemp_t *ctx )
     remotetemp_write( ctx, aux_reg_addr, aux_reg_buf, 1 );
 
     Delay_100ms( );
+    
     remotetemp_set_int_diode_high_limit( ctx, 30 );
     remotetemp_set_int_diode_low_limit( ctx, 20 );
     remotetemp_set_ext_diode_high_limit( ctx, 30, REMOTETEMP_EXT_DIODE_1 );
@@ -134,7 +141,7 @@ void remotetemp_default_cfg ( remotetemp_t *ctx )
 
 void remotetemp_generic_write ( remotetemp_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
-    uint8_t tx_buf[ 256 ];
+    uint8_t tx_buf[ 100 ];
     uint8_t cnt;
     
     tx_buf[ 0 ] = reg;
@@ -186,18 +193,8 @@ void remotetemp_read ( remotetemp_t *ctx, uint8_t register_address, uint8_t *rea
 }
 
 void remotetemp_write ( remotetemp_t *ctx, uint8_t register_address, uint8_t *register_values, uint8_t n_bytes )
-{
-    uint8_t aux_buffer[ 50 ];
-    uint8_t i;
-
-    aux_buffer[ 0 ] = register_address;
-
-    for ( i = 0; i < n_bytes; i ++ )
-    {
-        aux_buffer[ i + 1 ] = register_values[ i ];
-    }
-    
-    remotetemp_generic_read( ctx, register_address, aux_buffer, n_bytes );
+{    
+    remotetemp_generic_write( ctx, register_address, register_values, n_bytes );
 }
 
 void remotetemp_set_int_diode_high_limit ( remotetemp_t *ctx, int16_t limit_value )

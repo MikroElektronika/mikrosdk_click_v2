@@ -153,7 +153,8 @@
  * \defgroup driver Driver define
  * \{
  */
-#define DRV_RX_BUFFER_SIZE 500
+#define DRV_RX_BUFFER_SIZE 100
+#define DRV_TX_BUFFER_SIZE 100
 /** \} */
 
 /** \} */ // End group macro 
@@ -162,11 +163,6 @@
  * \defgroup type Types
  * \{
  */
-
-/**
- * @brief Handler definition.
- */
-typedef void ( *ble8_hdl_t )( uint8_t* );
 
 /**
  * @brief Click ctx object definition.
@@ -189,9 +185,8 @@ typedef struct
     uart_t uart;
 
     char uart_rx_buffer[ DRV_RX_BUFFER_SIZE ];
-    char uart_tx_buffer[ DRV_RX_BUFFER_SIZE ];
+    char uart_tx_buffer[ DRV_TX_BUFFER_SIZE ];
 
-    ble8_hdl_t driver_hdl;
     uint8_t rsp_rdy;
     uint8_t termination_char;
 
@@ -258,15 +253,6 @@ void ble8_cfg_setup ( ble8_cfg_t *cfg );
 BLE8_RETVAL ble8_init ( ble8_t *ctx, ble8_cfg_t *cfg );
 
 /**
- * @brief Click Default Configuration function.
- *
- * @param ctx  Click object.
- *
- * @description This function executes default configuration for Ble8 click.
- */
-void ble8_default_cfg ( ble8_t *ctx );
-
-/**
  * @brief Reset function
  *
  * @param ctx  Click object.
@@ -277,48 +263,20 @@ void ble8_reset ( ble8_t *ctx );
 
 /**
  * @brief Generic write function.
-
- * @param ctx         Click object.
- * @param data_buf    Data buffer for sends.
- * @param len         Number of bytes for sends.
- *
- * @description This function write specific number of bytes
+ * @param ble8 Click object.
+ * @param data_buf Data buffer for sends.
+ * @param len Number of bytes for sends.
  */
 void ble8_generic_write ( ble8_t *ctx, char *data_buf, uint16_t len );
 
 /**
  * @brief Generic read function.
- *
- * @param ctx         Click object.
- * @param data_buf    Data buffer for read data.
- * @param max_len     The maximum length of data that can be read.
- *
- * @returns Number of reads data.
- *
- * @description This function read maximum length of data.
+ * @param ble8 Click object.
+ * @param data_buf Data buffer for read data.
+ * @param max_len The maximum length of data that can be read.
+ * @return Number of reads data.
  */
-int16_t ble8_generic_read ( ble8_t *ctx, char *data_buf, uint16_t max_len );
-
-/**
- * @brief Handler Setting function
- *
- * @param ctx         Click object.
- * @param handler  Pointer to the function which should be performed to get response
- *
- * @description This function sets handler on the function which should be performed,
- * for example function for the results logging.
- */
-void ble8_response_handler_set ( ble8_t *ctx, void ( *handler )( uint8_t* ) );
-
-/**
- * @brief UART ISR function
- *
- * @param ctx         Click object. 
- *
- * @description This function reads response bytes from the module and sets flag after each 
- * received byte.
- */
-void ble8_uart_isr ( ble8_t *ctx, uint8_t read_data );
+int32_t ble8_generic_read ( ble8_t *ctx, char *data_buf, uint16_t max_len );
 
 /**
  * @brief Response Ready function
@@ -443,7 +401,7 @@ void ble8_get_echo_cmd ( ble8_t *ctx );
  If user was enter a empty string, the local device name will be set to 
         "Bluetooth Device". For ANNA-B1, the default name is "ANNA-B1-XXXXXX", where XXXXXX is the last 6 characters from the Bluetooth address.
  */
-void ble8_set_local_name_cmd ( ble8_t *ctx, uint8_t *local_name );
+void ble8_set_local_name_cmd ( ble8_t *ctx, char *local_name );
 
 /**
  * @brief Get Local Name command

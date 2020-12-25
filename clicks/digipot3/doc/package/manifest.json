@@ -27,5 +27,6 @@
     "short_description": "DIGI POT 3 click is a versatile and feature-rich digital potentiometer click with 1024 steps and an internal non-volatile memory (EEMEM), which can be used for storing the wiper position, but also for storing various user data.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

@@ -41,10 +41,10 @@ void accel14_cfg_setup ( accel14_cfg_t *cfg )
 
     // Additional gpio pins
 
-    cfg->rst = HAL_PIN_NC;
-    cfg->int_pin = HAL_PIN_NC;
+    cfg->i2 = HAL_PIN_NC;
+    cfg->i1 = HAL_PIN_NC;
 
-    cfg->spi_speed = 100000; 
+    cfg->spi_speed = 100000;
     cfg->spi_mode = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 }
@@ -60,10 +60,9 @@ ACCEL14_RETVAL accel14_init ( accel14_t *ctx, accel14_cfg_t *cfg )
     spi_cfg.mosi      = cfg->mosi;
     spi_cfg.default_write_data = ACCEL14_DUMMY;
 
-    digital_out_init( &ctx->cs, cfg->cs );
     ctx->chip_select = cfg->cs;
 
-    if (  spi_master_open( &ctx->spi, &spi_cfg ) == SPI_MASTER_ERROR )
+    if ( spi_master_open( &ctx->spi, &spi_cfg ) == SPI_MASTER_ERROR )
     {
         return ACCEL14_INIT_ERROR;
     }
@@ -72,13 +71,12 @@ ACCEL14_RETVAL accel14_init ( accel14_t *ctx, accel14_cfg_t *cfg )
     spi_master_set_speed( &ctx->spi, cfg->spi_speed );
     spi_master_set_mode( &ctx->spi, cfg->spi_mode );
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
+    spi_master_deselect_device( ctx->chip_select );
 
     // Input pins
 
-    digital_in_init( &ctx->rst, cfg->rst );
-    digital_in_init( &ctx->int_pin, cfg->int_pin );
-
-    spi_master_deselect_device( ctx->chip_select );  
+    digital_in_init( &ctx->i2, cfg->i2 );
+    digital_in_init( &ctx->i1, cfg->i1 );
 
     return ACCEL14_OK;
 }
@@ -94,7 +92,7 @@ void accel14_generic_transfer
 {
     spi_master_select_device( ctx->chip_select );
     spi_master_write_then_read( &ctx->spi, wr_buf, wr_len, rd_buf, rd_len );
-    spi_master_deselect_device( ctx->chip_select );   
+    spi_master_deselect_device( ctx->chip_select );
 }
 
 void accel14_generic_write ( accel14_t *ctx, uint8_t reg, uint8_t tx_data )
@@ -108,7 +106,7 @@ void accel14_generic_write ( accel14_t *ctx, uint8_t reg, uint8_t tx_data )
     spi_master_select_device( ctx->chip_select );
     spi_master_write( &ctx->spi, &tx_buf[ 0 ], 1 );
     spi_master_write( &ctx->spi, &tx_buf[ 1 ], 1 );
-    spi_master_deselect_device( ctx->chip_select );   
+    spi_master_deselect_device( ctx->chip_select );
 }
 
 uint8_t accel14_generic_read ( accel14_t *ctx, uint8_t reg )
@@ -219,19 +217,19 @@ void accel14_get_data ( accel14_t *ctx, accel14_accel_t *accel_data )
     tmp = rx_buf[ 1 ];
     tmp <<= 8;
     tmp |= rx_buf[ 0 ];
-    
+
     accel_data->x = ( int16_t ) tmp;
 
     tmp = rx_buf[ 3 ];
     tmp <<= 8;
     tmp |= rx_buf[ 2 ];
-    
+
     accel_data->y = ( int16_t ) tmp;
 
     tmp = rx_buf[ 5 ];
     tmp <<= 8;
     tmp |= rx_buf[ 4 ];
-    
+
     accel_data->z = ( int16_t ) tmp;
 }
 
@@ -260,7 +258,7 @@ void accel14_read_accel ( accel14_t *ctx, accel14_accel_fs_xl_t *accel_fs )
     accel14_accel_t accel_data;
 
     accel14_get_data( ctx, &accel_data );
-    
+
     c_tmp = accel14_generic_read( ctx, ACCEL14_REG_CTRL1_XL );
     c_tmp &= ACCEL14_CTRL1_XL_GSEL_BIT_MASK;
 
@@ -311,13 +309,12 @@ void accel14_read_accel ( accel14_t *ctx, accel14_accel_fs_xl_t *accel_fs )
 
 uint8_t accel14_check_int1 ( accel14_t *ctx )
 {
-    return digital_in_read( &ctx->int_pin );
+    return digital_in_read( &ctx->i1 );
 }
 
 uint8_t accel14_check_int2 ( accel14_t *ctx )
 {
-    return digital_in_read( &ctx->rst );
+    return digital_in_read( &ctx->i2 );
 }
 
-// ------------------------------------------------------------------------- END
-
+// ------------------------------------------------------------------------ END

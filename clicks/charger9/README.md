@@ -112,23 +112,8 @@ void application_task ( )
         charger9_enable( &charger9, CHARGER9_ENABLE );
         en_flag = CHARGER9_ENABLE;
         
+        Delay_ms( 2000 );
         log_printf( &logger, "** Charger 9 is enabled ** \r\n" );
-    }
-    else
-    {
-        log_printf( &logger, "** Charger 9 is already enabled ** \r\n" );
-    }
-
-    if ( en_flag == CHARGER9_ENABLE )
-    {
-        charger9_enable( &charger9, CHARGER9_DISABLE );
-        en_flag = CHARGER9_DISABLE;
-
-        log_printf( &logger, "** Charger 9 is disabled ** \r\n" );
-    }
-    else
-    {
-        log_printf( &logger, "** Charger 9 is already disabled ** \r\n" );
     }
 
     charge_state = charger9_full_charge_ind( &charger9 );
@@ -136,12 +121,14 @@ void application_task ( )
     if ( charge_state == CHARGER9_IND_ACTIVE )
     {
         log_printf( &logger, "** Full-Charge state ** \r\n" );
+        Delay_ms( 2000 );
     }
     
     charge_state = charger9_fast_charge_ind( &charger9 );
     if ( charge_state == CHARGER9_IND_ACTIVE )
     {
         log_printf( &logger, "** Fast-Charge state ** \r\n" );
+        Delay_ms( 2000 );
     }
 
     charge_state = charger9_fault_ind ( &charger9 );
@@ -151,6 +138,7 @@ void application_task ( )
         charger9_enable( &charger9, CHARGER9_DISABLE );
         en_flag = CHARGER9_DISABLE;
         
+        Delay_ms( 3000 );
         log_printf( &logger, "** Fault condition! ** \r\n" );
         log_printf( &logger, "** Charger 9 is disabled ** \r\n" );
     }

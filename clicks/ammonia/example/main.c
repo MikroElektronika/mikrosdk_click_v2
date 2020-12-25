@@ -1,19 +1,22 @@
 /*!
- * \file 
+ * \file
  * \brief Ammonia Click example
- * 
+ *
  * # Description
- * This demo application reads ADC value.
+ * This example shows the value of ammonia measurement aquired from Ammonia Click board.
  *
  * The demo application is composed of two sections :
- * 
- * ## Application Init 
- * Initalizes SPI driver, turns on the heater, and makes an initial log.
- * 
- * ## Application Task  
- * This is an example that shows the capabilities of the ADC 9 click by reading ADC value and displaying it via UART.
- * 
- * \author MikroE Team
+ *
+ * ## Application Init
+ * Calls functions for driver initializaton used for data conversion and results reading.
+ *
+ * ## Application Task
+ * Reads the level of ammonia in the air every with repetition of 1 second.
+ * This driver is able to get the level of ammonia gas in the range from 5 to 200 ppm.
+ * #note#
+ * Be sure that you correctly set the AD convertor which you want to use.
+ *
+ * \author Nemanja Medakovic
  *
  */
 // ------------------------------------------------------------------- INCLUDES
@@ -27,14 +30,11 @@
 static ammonia_t ammonia;
 static log_t logger;
 
-uint32_t spi_adc_value;
-
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    ammonia_cfg_t cfg;
 
     //  Logger initialization.
 
@@ -42,35 +42,35 @@ void application_init ( void )
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, "---- Application Init... ----" );
+
+    ammonia_cfg_t ammonia_cfg;
 
     //  Click initialization.
 
-    ammonia_cfg_setup( &cfg );
-    AMMONIA_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    uint8_t err_flag = ammonia_init( &ammonia, &cfg );
-    if (err_flag == AMMONIA_INIT_ERROR)
+    ammonia_cfg_setup( &ammonia_cfg );
+    AMMONIA_MAP_MIKROBUS( ammonia_cfg, MIKROBUS_1 );
+
+    if ( ammonia_init( &ammonia, &ammonia_cfg ) == AMMONIA_INIT_ERROR )
     {
-        log_info( &logger, "---- Error Init ----" );
-        for(;;);
+        log_info( &logger, "---- Application Init Error. ----" );
+        log_info( &logger, "---- Please, run program again... ----" );
+
+        for ( ; ; );
     }
-    Delay_ms( 100 );
 
-    ammonia_heater( &ammonia, AMMONIA_HEATER_ON );
-    Delay_ms( 1000 );
-
-    log_printf( &logger, "-------------------- \r\n" );
-    log_printf( &logger, "   Ammonia  click    \r\n" );
-    log_printf( &logger, "-------------------- \r\n" );
+    log_info( &logger, "---- Application Init Done. ----\n" );
 }
 
 void application_task ( void )
 {
-    spi_adc_value = ammonia_data_read( &ammonia );
+    uint16_t nh3_ppm;
 
-    log_printf( &logger, "ADC value: %lu \r\n", spi_adc_value );
-
-    Delay_ms( 1000 );
+    if ( ammonia_read_measurement( &ammonia, &nh3_ppm ) == AMMONIA_OK )
+    {
+        log_printf( &logger, "  NH3 [ppm] : %u\r\n", nh3_ppm );
+        Delay_ms( 1000 );
+    }
 }
 
 void main ( void )

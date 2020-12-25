@@ -28,7 +28,7 @@
  * \brief This file contains API for BOOST Click driver.
  *
  * \addtogroup boost BOOST Click Driver
- * @{
+ * \{
  */
 // ----------------------------------------------------------------------------
 
@@ -38,7 +38,6 @@
 #include "drv_digital_out.h"
 #include "drv_digital_in.h"
 #include "drv_spi_master.h"
-
 
 // -------------------------------------------------------------- PUBLIC MACROS 
 /**
@@ -50,57 +49,35 @@
  * \defgroup map_mikrobus MikroBUS
  * \{
  */
-
 #define BOOST_MAP_MIKROBUS( cfg, mikrobus ) \
-   cfg.miso  = MIKROBUS( mikrobus, MIKROBUS_MISO ); \
-   cfg.mosi  = MIKROBUS( mikrobus, MIKROBUS_MOSI ); \
-   cfg.sck   = MIKROBUS( mikrobus, MIKROBUS_SCK ); \
-   cfg.cs    = MIKROBUS( mikrobus, MIKROBUS_CS ); \
-   cfg.cs2 = MIKROBUS( mikrobus, MIKROBUS_AN ); \
-   cfg.en = MIKROBUS( mikrobus, MIKROBUS_RST )
- 
+   cfg.miso = MIKROBUS( mikrobus, MIKROBUS_MISO ); \
+   cfg.mosi = MIKROBUS( mikrobus, MIKROBUS_MOSI ); \
+   cfg.sck  = MIKROBUS( mikrobus, MIKROBUS_SCK ); \
+   cfg.cs1  = MIKROBUS( mikrobus, MIKROBUS_CS ); \
+   cfg.cs2  = MIKROBUS( mikrobus, MIKROBUS_AN ); \
+   cfg.en   = MIKROBUS( mikrobus, MIKROBUS_RST )
 /** \} */
 
 /**
  * \defgroup error_code Error Code
  * \{
  */
-#define BOOST_RETVAL  uint8_t
-
-#define BOOST_OK           0x00
-#define BOOST_INIT_ERROR   0xFF
+#define BOOST_OK       0
+#define BOOST_ERROR  (-1)
 /** \} */
 
 /**
- * \defgroup adc_voltage_devider    ADC Voltage Devider
+ * \defgroup boost_config    Boost configuration
  * \{
  */
-#define BOOST_ADC_R7                                           15000.0
-#define BOOST_ADC_R8                                           470.0
-/** \} */
+#define BOOST_CFG_VREF_BUFFERED         1
+#define BOOST_CFG_VREF_UNBUFFERED       0
 
-/**
- * \defgroup boost_click_limits     Boost Click Limits 
- * \{
- */
-#define BOOST_HI_LIMIT                                         38000
-#define BOOST_LO_INT_LIMIT                                     12000
-#define BOOST_LO_EXT_LIMIT                                     15000
-/** \} */
+#define BOOST_CFG_GAIN_1X               1
+#define BOOST_CFG_GAIN_2X               0
 
-/**
- * \defgroup boost_power_source      Boost Power Source  
- * \{
- */
-#define BOOST_INT_POWER                                        0
-#define BOOST_EXT_POWER                                        1
-/** \} */
-
-/**
- * \defgroup start_command_bit      Start Command Bit 
- * \{
- */
-#define BOOST_START_COMMAND                                    0x30
+#define BOOST_CFG_POWER_OUT_ON          1
+#define BOOST_CFG_POWER_OUT_OFF         0
 /** \} */
 
 /** \} */ // End group macro 
@@ -111,22 +88,38 @@
  */
 
 /**
+ * @brief Click DAC configuration structure definition.
+ */
+typedef struct
+{
+    uint8_t buf;
+    uint8_t ga;
+    uint8_t shdn;
+
+} boost_dac_cfg_t;
+
+/**
  * @brief Click ctx object definition.
  */
 typedef struct
 {
-    digital_out_t cs;
-
     // Output pins 
 
+    digital_out_t cs1;
     digital_out_t cs2;
     digital_out_t en;
-    
+
+    digital_in_t miso;
+
     // Modules 
 
     spi_master_t spi;
-    pin_name_t chip_select;
-    pin_name_t an_chip_select;
+    pin_name_t chip_select1;
+    pin_name_t chip_select2;
+    spi_master_chip_select_polarity_t cs1_polarity;
+    spi_master_chip_select_polarity_t cs2_polarity;
+
+    boost_dac_cfg_t dac;
 
 } boost_t;
 
@@ -140,28 +133,31 @@ typedef struct
     pin_name_t miso;
     pin_name_t mosi;
     pin_name_t sck;
-    pin_name_t cs;
+    pin_name_t cs1;
+    pin_name_t cs2;
 
     // Additional gpio pins 
 
-    pin_name_t cs2;
     pin_name_t en;
 
-    // static variable 
+    // Static variable 
 
     uint32_t spi_speed;
-    spi_master_mode_t   spi_mode;
-    spi_master_chip_select_polarity_t cs_polarity;
+    spi_master_mode_t spi_mode;
+    spi_master_chip_select_polarity_t cs1_polarity;
+    spi_master_chip_select_polarity_t cs2_polarity;
+
+    boost_dac_cfg_t dac;
 
 } boost_cfg_t;
 
 /** \} */ // End types group
 // ----------------------------------------------- PUBLIC FUNCTION DECLARATIONS
-
 /**
  * \defgroup public_function Public function
  * \{
  */
+
 #ifdef __cplusplus
 extern "C"{
 #endif
@@ -179,109 +175,72 @@ void boost_cfg_setup ( boost_cfg_t *cfg );
 /**
  * @brief Initialization function.
  *
- * @param ctx Click object.
- * @param cfg Click configuration structure.
- * 
+ * @param ctx  Click object.
+ * @param cfg  Click configuration structure.
+ * @return    0  - Ok,
+ *          (-1) - Error.
+ *
  * @description This function initializes all necessary pins and peripherals used for this click.
  */
-BOOST_RETVAL boost_init ( boost_t *ctx, boost_cfg_t *cfg );
+err_t boost_init ( boost_t *ctx, boost_cfg_t *cfg );
 
 /**
- * @brief Click Default Configuration function.
+ * @brief Device Enable function.
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for BOOST click.
+ * @description This function puts the device to power ON state.
  */
-void boost_default_cfg ( boost_t *ctx );
+void boost_device_enable ( boost_t *ctx );
 
 /**
- * @brief Generic transfer function.
- *
- * @param ctx          Click object.
- * @param wr_buf       Write data buffer
- * @param wr_len       Number of byte in write data buffer
- * @param rd_buf       Read data buffer
- * @param rd_len       Number of byte in read data buffer
- *
- * @description Generic SPI transfer, for sending and receiving packages
- */
-void boost_generic_transfer ( boost_t *ctx, uint8_t *wr_buf, uint16_t wr_len, uint8_t *rd_buf,  uint16_t rd_len );
-
-/**
- * @brief Generic write 14-bit data function.
- *
- * @param ctx          Click object.
- * @param write_data   12-bit write data.
- *
- * @description This function set DAC value by writing 12-bit data to the MCP4921 chip.
- */
-void boost_write_byte ( boost_t *ctx, uint16_t write_data );
-
-/**
- * @brief Generic read 22-bit of data function.
+ * @brief Device Disable function.
  *
  * @param ctx  Click object.
  *
- * @description This function get 22-bit data by reading ADC value from MCP3551 chip.
+ * @description This function puts the device to power OFF state.
  */
-uint32_t boost_read_byte ( boost_t *ctx );
+void boost_device_disable ( boost_t *ctx );
 
 /**
- * @brief Set configuration function.
- *
- * @param ctx          Click object.
- * @param pwr_src   * - Power Source:
- * - 0 : internal power supply;
- * - 1 : external power supply;
- *
- * @description This function set configuration of Boost click byset power source and write max DAC value of 4095 to the MCP4921 chip.
- */
-void boost_set_configuration ( boost_t *ctx, uint8_t pwr_src );
-
-/**
- * @brief Get output voltage function.
+ * @brief DAC Setup function.
  *
  * @param ctx  Click object.
+ * @param cfg  DAC configuration structure.
  *
- * @description This function get output voltage value from MCP3551 chip and calculate output value [ mV ].
+ * @description This function performs the setup of the DAC converter of the Boost click.
  */
-float boost_get_voltage ( boost_t *ctx );
+void boost_dac_setup ( boost_t *ctx, boost_dac_cfg_t *cfg );
 
 /**
- * @brief Set desired voltage on output function.
+ * @brief DAC Write function.
  *
  * @param ctx  Click object.
- * @param value  12-bit desired voltage data [ mV ].
+ * @param dac_val  DAC writing value [12-bit].
+ * @return    0  - Ok,
+ *          (-1) - Error.
  *
- * @description This function set desired voltage on output value by write 12-bit data to the MCP4921 chip.
+ * @description This function sets the DAC converter to the selected value and allows the output
+ * voltage changing.
  */
-void boost_set_voltage ( boost_t *ctx, uint16_t value );
+err_t boost_dac_write ( boost_t *ctx, uint16_t dac_val );
 
 /**
- * @brief Enable regulator function.
+ * @brief VOUT Read function.
  *
  * @param ctx  Click object.
+ * @return Output voltage level [V].
  *
- * @description This function enable regulator on the MIC2606 chip by set RST pin high of Boost click.
+ * @description This function reads the output voltage level.
  */
-void boost_enable ( boost_t *ctx );
-
-/**
- * @brief Disable regulator function.
- *
- * @param ctx  Click object.
- *
- * @description This function disable regulator on the MIC2606 chip by set RST pin low of Boost click.
- */
-void boost_disable ( boost_t *ctx );
+float boost_vout_read ( boost_t *ctx );
 
 #ifdef __cplusplus
 }
 #endif
-#endif  // _BOOST_H_
+#endif  // BOOST_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
-/*! @} */
-// ------------------------------------------------------------------------- END
+/** \} */ // End click Driver group
+
+// ------------------------------------------------------------------------ END

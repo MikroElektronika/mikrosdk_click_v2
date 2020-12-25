@@ -93,10 +93,12 @@ SRAM_RETVAL sram_init ( sram_t *ctx, sram_cfg_t *cfg )
     spi_master_set_speed( &ctx->spi, cfg->spi_speed );
     spi_master_set_mode( &ctx->spi, cfg->spi_mode );
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
+    spi_master_deselect_device( ctx->chip_select );  
 
     // Output pins 
     
     digital_out_init( &ctx->hld, cfg->hld );
+    digital_out_high( &ctx->hld );
 
     return SRAM_OK;
 
@@ -112,8 +114,21 @@ void sram_generic_transfer
 )
 {
     spi_master_select_device( ctx->chip_select );
-    spi_master_write_then_read( &ctx->spi, wr_buf, wr_len, rd_buf, rd_len );
+    spi_master_write( &ctx->spi, wr_buf, wr_len );
+    spi_master_read( &ctx->spi, rd_buf, rd_len );
     spi_master_deselect_device( ctx->chip_select );   
+}
+
+void sram_generic_write 
+( 
+    sram_t *ctx, 
+    uint8_t *wr_buf, 
+    uint16_t wr_len
+)
+{
+    spi_master_select_device( ctx->chip_select );
+    spi_master_write( &ctx->spi, wr_buf, wr_len );
+    spi_master_deselect_device( ctx->chip_select );  
 }
 
 void sram_write_byte ( sram_t *ctx, uint32_t reg_address, uint8_t write_data )
@@ -129,7 +144,7 @@ void sram_write_byte ( sram_t *ctx, uint32_t reg_address, uint8_t write_data )
     tx_buf[ 3 ]  = ( uint8_t )   reg_address;
     tx_buf[ 4 ]  = write_data;
     
-    sram_generic_transfer( ctx, tx_buf, 5, 0, 0 );
+    sram_generic_write( ctx, tx_buf, 5 );
 }
 
 uint8_t sram_read_byte ( sram_t *ctx, uint32_t reg_address )
@@ -147,7 +162,7 @@ uint8_t sram_read_byte ( sram_t *ctx, uint32_t reg_address )
     
     sram_generic_transfer( ctx, tx_buf, 4, rx_buf, 1 );
 
-    read_data = rx_buf[ 3 ];
+    read_data = rx_buf[ 0 ];
     
     return read_data;
 }
@@ -160,7 +175,7 @@ void sram_write_mode_reg_ins ( sram_t *ctx, uint8_t ins_data )
     tx_buf[ 0 ] = SRAM_CMD_WRMR;
     tx_buf[ 1 ] = ins_data;
     
-    sram_generic_transfer( ctx, tx_buf, 2, 0, 0 );
+    sram_generic_write( ctx, tx_buf, 2 );
 }
 
 uint8_t sram_read_mode_reg_ins ( sram_t *ctx )
@@ -173,7 +188,7 @@ uint8_t sram_read_mode_reg_ins ( sram_t *ctx )
     
     sram_generic_transfer( ctx, tx_buf, 1, rx_buf, 1 );
 
-    read_data = rx_buf[ 1 ];
+    read_data = rx_buf[ 0 ];
     
     return read_data;
 }
@@ -185,7 +200,7 @@ void sram_soft_reset ( sram_t *ctx )
 
     tx_buf[ 0 ] = SRAM_CMD_RSTIO;
     
-    sram_generic_transfer( ctx, tx_buf, 1, 0, 0 );
+    sram_generic_write( ctx, tx_buf, 1 );
 }
 
 void sram_hold_transmission ( sram_t *ctx )

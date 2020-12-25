@@ -49,7 +49,7 @@ void rtd_cfg_setup ( rtd_cfg_t *cfg )
     cfg->drdy = HAL_PIN_NC;
 
     cfg->spi_speed = 100000; 
-    cfg->spi_mode = SPI_MASTER_MODE_0;
+    cfg->spi_mode = SPI_MASTER_MODE_3;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 }
 
@@ -76,6 +76,7 @@ RTD_RETVAL rtd_init ( rtd_t *ctx, rtd_cfg_t *cfg )
     spi_master_set_speed( &ctx->spi, cfg->spi_speed );
     spi_master_set_mode( &ctx->spi, cfg->spi_mode );
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
+    spi_master_deselect_device( ctx->chip_select );  
 
     // Input pins
 
@@ -108,10 +109,7 @@ void rtd_write_register ( rtd_t *ctx, uint8_t reg_address, uint8_t write_data )
     tmp[ 1 ] = write_data;
 
     spi_master_select_device( ctx->chip_select );
-
-    spi_master_write( &ctx->spi, &tmp[ 0 ], 1 );
-    spi_master_write( &ctx->spi, &tmp[ 1 ], 1 );
-
+    spi_master_write( &ctx->spi, tmp, 2 );
     spi_master_deselect_device( ctx->chip_select );    
 }
 
@@ -120,9 +118,9 @@ uint8_t rtd_read_register ( rtd_t *ctx, uint8_t reg_address )
     uint8_t tmp;
     uint8_t rx_data[ 2 ];
 
-    rtd_generic_transfer( ctx, &reg_address, 1, rx_data, 2 );
+    rtd_generic_transfer( ctx, &reg_address, 1, rx_data, 1 );
 
-    tmp = rx_data[ 1 ];
+    tmp = rx_data[ 0 ];
 
     return tmp;
 }

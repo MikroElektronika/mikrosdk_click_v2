@@ -75,6 +75,7 @@ void application_init ( void )
 
     log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -83,52 +84,43 @@ void application_init ( void )
     expand_cfg_setup( &cfg );
     EXPAND_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     expand_init( &expand, &cfg );
-
-
-    expand_reset( &expand );
-    Delay_ms( 1000 );
+    
+    expand_default_configuration( &expand, EXPAND_SPI_MODULE_POSITION_0 );
 
     expand_set_direction_port_a( &expand, EXPAND_SPI_MODULE_POSITION_0, EXPAND_PORT_DIRECTION_OUTPUT );
     
     expand_set_direction_port_b( &expand, EXPAND_SPI_MODULE_POSITION_0, EXPAND_PORT_DIRECTION_INPUT );
-
-    log_printf( &logger, " Configuring... \r\n" );
-    log_printf( &logger, "----------------\r\n" );
-    expand_default_configuration( &expand, EXPAND_SPI_MODULE_POSITION_0 );
+    
+    expand_set_pull_ups_port_b( &expand, EXPAND_SPI_MODULE_POSITION_0, 0xFF );
 }
   
 ```
 
 ### Application Task
 
-> This is a example which demonstrates the use of Expand Click board. Expand Click communicates with register via SPI protocol by write and read from register, set configuration and state and read configuration and state. Results are being sent to the Usart Terminal where you can track their changes. All data logs on usb uart for aproximetly every 3 sec.
+> This is a example which demonstrates the use of Expand Click board. 
+> Expand Click communicates with register via SPI protocol by write and read from register, set configuration and state and read configuration and state. 
+> Results are being sent to the Usart Terminal where you can track their changes. All data logs on usb uart for aproximetly every 500 ms.
 
 ```c
 
 void application_task ( void )
 {
-    uint8_t port_status;
-    uint8_t position;
-    uint16_t pin_position;
-
     pin_position = 1;
 
     for ( position = 0; position < 8; position++ )
     {
         expand_write_port_a( &expand, EXPAND_SPI_MODULE_POSITION_0, pin_position );
-        Delay_100ms();
+        log_printf( &logger, " PA%d set\r\n", (uint16_t) position );
 
         port_status = expand_read_port_b( &expand, EXPAND_SPI_MODULE_POSITION_0 );
 
-
-        log_printf( &logger, " %d RA\r\n", position );
-        
-        log_printf( &logger, " %d PORTB \r\n",  port_status );
+        log_printf( &logger, " Status PB (input) : %d  \r\n", (uint16_t) port_status );
+        log_printf( &logger, "----------------\r\n" );
         
         pin_position <<= 1;
 
-        Delay_ms( 3000 );
-    
+        Delay_ms( 500 );
     }
 }  
 

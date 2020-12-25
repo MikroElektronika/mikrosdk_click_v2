@@ -208,7 +208,8 @@ void c16x12_generic_write ( c16x12_t *ctx, uint8_t reg, uint8_t *data_buf, uint8
 
 void c16x12_generic_read ( c16x12_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
-    i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, len );
+    i2c_master_write( &ctx->i2c, &reg, 1 ); 
+    i2c_master_read( &ctx->i2c, data_buf, len );
 }
 
 void c16x12g_write_reg ( c16x12_t *ctx, uint8_t reg, uint8_t data_ )

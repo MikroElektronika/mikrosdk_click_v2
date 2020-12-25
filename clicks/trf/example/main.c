@@ -27,15 +27,12 @@
 // ------------------------------------------------------------------ VARIABLES
 
 #define DEMO_APP_RECEIVER
-// #define DEMO_APP_TRANSMITER
+//#define DEMO_APP_TRANSMITER
 
 static trf_t trf;
 static log_t logger;
 
 static char demo_message[ 9 ] = { 'M', 'i', 'k', 'r', 'o', 'E', 13, 10, 0 };
-
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
-
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -57,6 +54,8 @@ void application_init ( void )
     trf_cfg_setup( &cfg );
     TRF_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     trf_init( &trf, &cfg );
+    
+    Delay_ms( 100 );
 }
 
 void application_task ( void )
@@ -76,7 +75,7 @@ void application_task ( void )
 
     // TRANSMITER - TX each 2 sec
        
-    for ( cnt = 0; cnt < 9; cnt ++ )
+    for ( cnt = 0; cnt < 8; cnt ++ )
     {
         trf_generic_single_write( &trf, demo_message[ cnt ] );
         Delay_ms( 100 );

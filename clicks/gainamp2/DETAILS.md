@@ -1,4 +1,5 @@
 
+
 ---
 # GainAMP 2 click
 
@@ -41,17 +42,14 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 - Initialization function.
 > GAINAMP2_RETVAL gainamp2_init ( gainamp2_t *ctx, gainamp2_cfg_t *cfg );
 
-- Click Default Configuration function.
-> void gainamp2_default_cfg ( gainamp2_t *ctx );
-
 
 #### Example key functions :
 
-- Click Default Configuration function.
-> void gainamp2_default_cfg ( gainamp2_t *ctx );
+- Set the channel gain.
+> void gainamp2_set_channel_gain ( gainamp2_t *ctx, uint8_t channel, uint8_t gain );
  
-- Generic transfer function.
-> void gainamp2_generic_transfer ( gainamp2_t *ctx, spi_master_transfer_data_t *block );
+- Return voltage measured from VOUT pin.
+> float gainamp2_get_voltage ( gainamp2_t *ctx );
 
 - Send Command
 > void gainamp2_write_Command( gainamp2_t *ctx, uint8_t instruction, uint8_t input )
@@ -64,26 +62,46 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes CS pin as output and SPI module
+> Initializes and sets GainAMP 2 click channel 0 to amplify the signal 2 times
 
 ```c
 
 void application_init ( void )
 {
+    log_cfg_t log_cfg;
+    gainamp2_cfg_t cfg;
 
+    //  Logger initialization.
+
+    LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
+    log_init( &logger, &log_cfg );
+    log_info( &logger, "---- Application Init ----" );
+
+    //  Click initialization.
+
+    gainamp2_cfg_setup( &cfg );
+    GAINAMP2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    gainamp2_init( &gainamp2, &cfg );
+    
+    gainamp2_set_channel_gain ( &gainamp2, GAINAMP2_CH0, GAINAMP2_GAIN_2X );
+    log_printf( &logger,"Channel 0 - aplified 2x \r\n" ); 
 }
   
 ```
 
 ### Application Task
 
-> Setup GainAMP 2 click channel 4 to amplify the signal 4 times 
+> Displays the voltage measured from VOUT pin
 
 ```c
 
 void application_task ( void )
 {
-    // Nothing to do here 
+    log_printf( &logger,"Voltage at VOUT: %f \r\n", gainamp2_get_voltage( &gainamp2 ) );
+    log_printf( &logger,"------------------------------- \r\n " );
+    Delay_ms( 1000 );
 }  
 
 ```

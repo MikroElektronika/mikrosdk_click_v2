@@ -48,11 +48,8 @@ void application_init ( void )
 
     gyro2_cfg_setup( &cfg );
     GYRO2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-
-    Delay_ms(3000);
-
     gyro2_init( &gyro2, &cfg );
-
+    Delay_ms( 1000 );
     temp = gyro2_default_cfg( &gyro2 );
 
     if ( temp == 1 )
@@ -63,7 +60,7 @@ void application_init ( void )
     {
         log_printf( &logger, "Error\r\n" );
     }
-    Delay_ms(100);
+    Delay_ms( 500 );
 }
 
 void application_task ( void )
@@ -80,9 +77,9 @@ void application_task ( void )
 
     temperature = gyro2_read_temperature( &gyro2 );
 
-    log_printf( &logger, "Temperature: %d C\r\n ++ \r\n", temperature );
+    log_printf( &logger, "Temperature: %d degC\r\n +++++++++++++++++++++++++ \r\n", (int16_t)temperature );
 
-    Delay_ms(2000);
+    Delay_ms( 2000 );
 }
 
 void main ( void )

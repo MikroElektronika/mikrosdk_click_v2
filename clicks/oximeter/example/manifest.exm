@@ -1,6 +1,6 @@
 {
   "name": "Oximeter Click",
-  "description": "Oximeter click is a versatile photometric Click board�, perfectly suited for measuring the blood oxygen saturation. It employs ADPD105, a highly configurable photometric front end (AFE) device from Analog Devices. ",
+  "description": "Oximeter click is a versatile photometric Click board, perfectly suited for measuring the blood oxygen saturation. It employs ADPD105, a highly configurable photometric front end (AFE) device from Analog Devices.",
   "image": "../../Resources/click_icon.png",
   "toolchain": ["mikrocarm","mikrocpic"],
   "hw": [ "click", "ADPD105" ],

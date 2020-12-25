@@ -66,7 +66,7 @@ void boost6_power_off ( boost6_t *ctx )
 
 void boost6_power_on ( boost6_t *ctx )
 {
-    digital_out_high( &ctx->rst );
+    digital_out_high( &ctx->cs );
 }
 
 // ------------------------------------------------------------------------- END

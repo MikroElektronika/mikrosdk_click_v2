@@ -236,7 +236,7 @@ void c8x8_set_speed_scroll ( c8x8_t *ctx, uint8_t speed )
 
 void c8x8_display_string ( c8x8_t *ctx, char *p_array )
 {
-    uint8_t str_word[512];
+    uint8_t str_word[256];
     char wr_chr;
     uint8_t cnt;
     uint8_t i;

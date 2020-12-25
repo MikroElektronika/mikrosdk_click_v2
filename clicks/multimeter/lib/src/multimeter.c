@@ -65,7 +65,7 @@ void multimeter_cfg_setup ( multimeter_cfg_t *cfg )
     cfg->b = HAL_PIN_NC;
     cfg->c = HAL_PIN_NC;
 
-    cfg->spi_speed = 100000; 
+    cfg->spi_speed = 1000000; 
     cfg->spi_mode = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 
@@ -222,22 +222,24 @@ static uint16_t drv_read_channel ( multimeter_t *ctx, uint8_t channel )
     uint16_t value;
     uint8_t write_data;
     uint8_t read_buf[ 2 ];
-    uint8_t tmp;
 
-    tmp = 0x06;
+    write_data = 0x06;
 
     spi_master_select_device( ctx->chip_select );
-    spi_master_write( &ctx->spi, &tmp, 1 );
+    spi_master_write( &ctx->spi, &write_data, 1 );
 
     write_data = ( channel & 0x03 ) << 6;
     
-    spi_master_write_then_read( &ctx->spi, &write_data, 1, read_buf, 1 );
+    spi_master_set_default_write_data( &ctx->spi, write_data );
+    spi_master_read( &ctx->spi, read_buf, 1 );
     
     write_data      = 0x00;
     
-    spi_master_write_then_read( &ctx->spi, &write_data, 1, read_buf + 1, 1 );
+    spi_master_set_default_write_data( &ctx->spi, write_data );
+    spi_master_read( &ctx->spi, read_buf + 1, 1 );
     spi_master_deselect_device( ctx->chip_select );  
     
+    spi_master_set_default_write_data( &ctx->spi, MULTIMETER_DUMMY );
     value = read_buf[ 0 ] & 0x0F;
     value <<= 8;
     value |= read_buf[ 1 ];
@@ -247,7 +249,7 @@ static uint16_t drv_read_channel ( multimeter_t *ctx, uint8_t channel )
 
 static void drv_calibrate_capacitance ( multimeter_t *ctx )
 {
-    ctx->calibration.capacitance_cal = ( float ) 64285 /
+    ctx->calibration.capacitance_cal = 64285.0 /
                      ( drv_read_channel( ctx, MULTIMETER_C_CHANNEL ) * 2 );
 }
 

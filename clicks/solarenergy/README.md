@@ -33,7 +33,7 @@ as well as a demo application (example), developed using MikroElektronika
 [compilers](https://shop.mikroe.com/compilers). 
 The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+Package can be downloaded/installed directly from compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
 
 ## Library Description
 
@@ -120,7 +120,7 @@ void application_task ( void )
 ```
 
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+The full application code, and ready to use projects can be  installed directly from compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
 **Other mikroE Libraries used in the example:** 
 

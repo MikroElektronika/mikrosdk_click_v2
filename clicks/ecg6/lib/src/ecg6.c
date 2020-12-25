@@ -73,6 +73,7 @@ ECG6_RETVAL ecg6_init ( ecg6_t *ctx, ecg6_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Input pins
 
@@ -86,12 +87,12 @@ void ecg6_default_cfg ( ecg6_t *ctx )
     ecg6_cfg_element_t cfg;
     
     ecg6_write_data( ctx, ECG6_REG_INTERRUPT_ENABLE_1,
-                     ECG6_INTS1_A_FULL_OFF | ECG6_INTS1_PPG_RDY_ON |
+                     ECG6_INTS1_A_FULL_OFF | ECG6_INTS1_PPG_RDY_OFF |
                      ECG6_INTS1_ALC_OVF_OFF | ECG6_INTS1_PROX_INIT_OFF |
                      ECG6_INTS1_PWR_RDY_OFF );
 
     ecg6_write_data( ctx, ECG6_REG_INTERRUPT_ENABLE_2, ECG6_INTS2_VDD_OOR_OFF |
-                                                  ECG6_INTS2_DRDY_OFF );
+                                                  ECG6_INTS2_DRDY_ENABLE );
 
     ecg6_write_data( ctx, ECG6_REG_SYSTEM_CTRL, ECG6_SYSCTRL_RESET_ENABLE );
     Delay_100ms( );
@@ -132,24 +133,6 @@ void ecg6_default_cfg ( ecg6_t *ctx )
     Delay_100ms();
 }
 
-void ecg6_generic_write ( ecg6_t *ctx, uint8_t reg, uint8_t in_data , uint8_t len )
-{
-    uint8_t buf_data[ 2 ];
-
-    buf_data[ 0 ] = reg;
-    buf_data[ 1 ] = in_data;
-    
-    i2c_master_write( &ctx->i2c, buf_data, len + 2 );    
-}
-
-uint8_t ecg6_generic_read ( ecg6_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
-{
-    uint8_t reg_data;
-
-    i2c_master_write_then_read( &ctx->i2c, &reg, 1, &reg_data, 1 );
-
-    return reg_data;
-}
 void ecg6_write_data( ecg6_t *ctx, uint8_t reg, uint8_t in_data )
 {
     uint8_t buf_data[ 2 ];
@@ -180,8 +163,7 @@ uint8_t ecg6_read_data( ecg6_t *ctx, uint8_t reg )
 {
     uint8_t reg_data;
 
-    i2c_master_write( &ctx->i2c, &reg, 1 ); 
-    i2c_master_read( &ctx->i2c, &reg_data, 1 );
+    i2c_master_write_then_read( &ctx->i2c, &reg, 1, &reg_data, 1 );
 
     return reg_data;
 }
@@ -229,7 +211,7 @@ uint8_t ecg6_ppg_default_config ( ecg6_t *ctx )
 {
     ecg6_cfg_element_t cfg;
     
-    uint8_t tmp = ECG6_REG_INTERRUPT_ENABLE_1 | ECG6_INTS1_A_FULL_OFF |
+    uint8_t tmp = ECG6_INTS1_A_FULL_OFF |
                         ECG6_INTS1_PPG_RDY_ON | ECG6_INTS1_ALC_OVF_OFF | 
                         ECG6_INTS1_PROX_INIT_OFF | ECG6_INTS1_PWR_RDY_OFF;
                         
@@ -238,11 +220,11 @@ uint8_t ecg6_ppg_default_config ( ecg6_t *ctx )
     ecg6_write_data( ctx, ECG6_REG_INTERRUPT_ENABLE_2, ECG6_INTS2_VDD_OOR_OFF |
                                                   ECG6_INTS2_DRDY_OFF );
     
-    tmp = ECG6_REG_SYSTEM_CTRL | ECG6_SYSCTRL_RESET_ENABLE;
+    tmp = ECG6_SYSCTRL_RESET_ENABLE;
     ecg6_write_data( ctx, ECG6_REG_SYSTEM_CTRL, tmp );
     Delay_100ms( );
     
-     tmp = ECG6_REG_FIFO_CFG | ECG6_FCFG_A_FULL_CLR | ECG6_FCFG_A_FULL_TYPE_ONCE | 
+     tmp = ECG6_FCFG_A_FULL_CLR | ECG6_FCFG_A_FULL_TYPE_ONCE | 
      ECG6_FCFG_FIFO_ROLLS_ON_FULL_ON | 0x0F;
     ecg6_write_data( ctx, ECG6_REG_FIFO_CFG, tmp );
                      
@@ -253,22 +235,22 @@ uint8_t ecg6_ppg_default_config ( ecg6_t *ctx )
     cfg.element_4 = ECG6_SENSOR_NONE;
     ecg6_cfg_element( ctx, &cfg );
     
-    tmp = ECG6_REG_PPG_CFG_1 | ECG6_PPGCFG1_PPG_ADC_RGE_32768nA | 
+    tmp = ECG6_PPGCFG1_PPG_ADC_RGE_32768nA | 
              ECG6_PPGCFG1_PPG_SR_100n1 | ECG6_PPGCFG1_PPG_PW_100us;
     ecg6_write_data( ctx, ECG6_REG_PPG_CFG_1, tmp );
-    tmp = ECG6_REG_PPG_CFG_2 | 0x06;
+    tmp = 0x06;
     ecg6_write_data( ctx, ECG6_REG_PPG_CFG_2, tmp );
     
     ecg6_write_data( ctx, ECG6_REG_LED_RANGE, ECG6_LRANG_LED2_SMP_AVE_50 |
                                          ECG6_LRANG_LED1_SMP_AVE_50 );
     
-    tmp = ECG6_REG_SYSTEM_CTRL | ECG6_SYSCTRL_FIFO_ENABLE | 
+    tmp = ECG6_SYSCTRL_FIFO_ENABLE | 
             ECG6_SYSCTRL_SHUTDOWN_DISABLE | ECG6_SYSCTRL_RESET_DISABLE;
     ecg6_write_data( ctx, ECG6_REG_SYSTEM_CTRL, tmp );
     
-    tmp = ECG6_REG_CONFIG_1 | ECG6_CFG1_ADC_OSR_3200;
+    tmp = ECG6_CFG1_ADC_OSR_3200;
     ecg6_write_data( ctx, ECG6_REG_CONFIG_1, tmp );
-    tmp = ECG6_REG_CONFIG_3 | ECG6_CFG3_PGA_GAIN_4 | ECG6_CFG3_IA_GAIN_5;
+    tmp = ECG6_CFG3_PGA_GAIN_4 | ECG6_CFG3_IA_GAIN_5;
     ecg6_write_data( ctx, ECG6_REG_CONFIG_3, tmp );
 
     ecg6_set_led_pulse( ctx , 0xFF, 0xFF );
@@ -293,6 +275,7 @@ void ecg6_get_sample_data( ecg6_t *ctx, ecg6_element_t *element, uint8_t num_sam
     }
 
     ecg6_write_data( ctx, ECG6_REG_FIFO_READ, num_sample );
+    Delay_50us( );
     dev_get_fifo_elements( ctx, element );
 }
 
@@ -372,15 +355,15 @@ void ecg6_get_interrupt_status ( ecg6_t *ctx, ecg6_int_status_t *status )
     uint8_t raw_data;
     
     raw_data = ecg6_read_data( ctx, ECG6_REG_INTERRUPT_STATUS_1 );
-    status->a_full    = ( raw_data & 0x80 ) >> 7;
-    status->ppg_rdy   = ( raw_data & 0x40 ) >> 6;
-    status->alc_ovf   = ( raw_data & 0x20 ) >> 5;
-    status->prox_int  = ( raw_data & 0x10 ) >> 4;
+    status->a_full    = ( raw_data & 0x80 ) ? 1 : 0;
+    status->ppg_rdy   = ( raw_data & 0x40 ) ? 1 : 0;
+    status->alc_ovf   = ( raw_data & 0x20 ) ? 1 : 0;
+    status->prox_int  = ( raw_data & 0x10 ) ? 1 : 0;
     status->pwr_rdy   = ( raw_data & 0x01 );
     
     raw_data = ecg6_read_data( ctx, ECG6_REG_INTERRUPT_STATUS_2 );
-    status->vdd_oor = ( raw_data & 0x80 ) >> 7;
-    status->ecg_rdy = ( raw_data & 0x04 ) >> 2;
+    status->vdd_oor = ( raw_data & 0x80 ) ? 1 : 0;
+    status->ecg_rdy = ( raw_data & 0x04 ) ? 1 : 0;
 }
 
 uint8_t ecg6_int_pin_state ( ecg6_t *ctx )
@@ -400,6 +383,7 @@ static void dev_get_fifo_elements( ecg6_t *ctx, ecg6_element_t *sample )
     sample->element_1 |= rx_data_buff[ 1 ];
     sample->element_1 <<= 8;
     sample->element_1 |= rx_data_buff[ 2 ];
+    Delay_50us( );
     
     ecg6_read_data_buf( ctx, ECG6_REG_FIFO_DATA, rx_data_buff, 3 );
     sample->element_2 = rx_data_buff[ 0 ];
@@ -407,6 +391,7 @@ static void dev_get_fifo_elements( ecg6_t *ctx, ecg6_element_t *sample )
     sample->element_2 |= rx_data_buff[ 1 ];
     sample->element_2 <<= 8;
     sample->element_2 |= rx_data_buff[ 2 ];
+    Delay_50us( );
     
     ecg6_read_data_buf( ctx, ECG6_REG_FIFO_DATA, rx_data_buff, 3 );
     sample->element_3 = rx_data_buff[ 0 ];
@@ -414,6 +399,7 @@ static void dev_get_fifo_elements( ecg6_t *ctx, ecg6_element_t *sample )
     sample->element_3 |= rx_data_buff[ 1 ];
     sample->element_3 <<= 8;
     sample->element_3 |= rx_data_buff[ 2 ];
+    Delay_50us( );
     
     ecg6_read_data_buf( ctx, ECG6_REG_FIFO_DATA, rx_data_buff, 3 );
     sample->element_4 = rx_data_buff[ 0 ];
@@ -421,6 +407,7 @@ static void dev_get_fifo_elements( ecg6_t *ctx, ecg6_element_t *sample )
     sample->element_4 |= rx_data_buff[ 1 ];
     sample->element_4 <<= 8;
     sample->element_4 |= rx_data_buff[ 2 ];
+    Delay_50us( );
 }
 
 // ------------------------------------------------------------------------- END

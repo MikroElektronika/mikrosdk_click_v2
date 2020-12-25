@@ -11,8 +11,10 @@
  * Initialization driver init and pwm init for all LED's
  * 
  * ## Application Task  
- * On first LED is a pwm module, which increases/decreases light intensity, 
- * and on second LED turn ON/OFF light. 
+ * Increases/decreases light intensity.
+ * 
+ * ## NOTE
+ * In order to control LED2 via PWM, the PWM module should be available at CS pin. 
  * 
  * \author MikroE Team
  *
@@ -44,64 +46,43 @@ void application_init ( void )
     log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
-
+    Delay_ms( 100 );
+    
     //  Click initialization.
 
     lighttemp_cfg_setup( &cfg );
     LIGHTTEMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     lighttemp_init( &lighttemp, &cfg );
 
-    lighttemp_pwm_start( &lighttemp );
-    lighttemp_cs_set_state( &lighttemp, 0 );
+    Delay_ms( 100 );
 }
 
 void application_task ( void )
 {
-    uint16_t pg_volt;
-    uint8_t i;  
+    log_printf( &logger, ">>> Increasing LEDs light intensity \r\n" );
     
-    pg_volt = lighttemp_get_pg_voltage( &lighttemp );
-    log_printf( &logger, ">>> PG Voltage: %ld mV \r\n", pg_volt );
-
-    log_printf( &logger, ">>> LED 1 Increase \r\n" );
+    lighttemp_led1_pwm_start( &lighttemp );
+    lighttemp_led2_pwm_start( &lighttemp );
     
-    for ( i = 0; i < 72; i++ )
+    for ( duty_cycle = 0.1; duty_cycle <= 0.5; duty_cycle += 0.1 )
     {
-        if ( duty_cycle > 1 )
-        {
-            duty_cycle = 0.1;
-        }
-
-        lighttemp_set_duty_cycle( &lighttemp, duty_cycle );
-        duty_cycle += 0.1;
-        Delay_ms( 100 );
+        lighttemp_led1_set_duty_cycle ( &lighttemp, duty_cycle );
+        lighttemp_led2_set_duty_cycle ( &lighttemp, duty_cycle );
+        Delay_ms( 500 );
     }
-    
     Delay_ms( 1000 );
     
-    log_printf( &logger, ">>> LED 1 Decrease \r\n" );
     
-    
-    for ( i = 0; i < 72; i++ )
+    log_printf( &logger, ">>> Decreasing LEDs light intensity \r\n" );
+    for ( duty_cycle = 0.5; duty_cycle > 0; duty_cycle -= 0.1 )
     {
-        if ( duty_cycle < 0 )
-        {
-            duty_cycle = 1;
-        }
-
-        lighttemp_set_duty_cycle( &lighttemp, duty_cycle );
-        duty_cycle -= 0.1;
-        Delay_ms( 100 ); 
+        lighttemp_led1_set_duty_cycle ( &lighttemp, duty_cycle );
+        lighttemp_led2_set_duty_cycle ( &lighttemp, duty_cycle );
+        Delay_ms( 500 );
     }
-    
+    lighttemp_led1_pwm_stop( &lighttemp );
+    lighttemp_led2_pwm_stop( &lighttemp );
     Delay_ms( 1000 );
-     
-    log_printf( &logger, ">>> LED 2 -> ON \r\n" );
-    lighttemp_cs_set_state( &lighttemp, 1 );
-    Delay_ms( 1000 );
-    log_printf( &logger, ">>> LED 2 -> OFF \r\n" );
-    lighttemp_cs_set_state( &lighttemp, 0 );
-    Delay_ms( 1000 );  
 }
 
 void main ( void )

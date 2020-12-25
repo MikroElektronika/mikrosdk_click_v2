@@ -79,28 +79,14 @@ MIC2_RETVAL mic2_init ( mic2_t *ctx, mic2_cfg_t *cfg )
     return MIC2_OK;
 }
 
-void mic2_generic_write ( mic2_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
-{
-    uint8_t tx_buf[ 256 ];
-    uint8_t cnt;
-    
-    tx_buf[ 0 ] = reg;
-    
-    for ( cnt = 1; cnt <= len; cnt++ )
-    {
-        tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
-    }
-    
-    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );   
-}
-
 void mic2_set_potentiometer ( mic2_t *ctx, uint8_t ptt_value )
 {
-    uint8_t write_reg[ 1 ];
+    uint8_t write_reg[ 2 ];
 
+    write_reg[ 0 ] = 0x00;
     write_reg[ 1 ] = ptt_value;
 
-    mic2_generic_write( ctx, 0x00, write_reg, 1 );
+    i2c_master_write( &ctx->i2c, write_reg, 2 ); 
     
 }
 
@@ -112,5 +98,6 @@ mic2_data_t mic2_generic_read ( mic2_t *ctx )
     
     return rx_data;
 }
+
 // ------------------------------------------------------------------------- END
 

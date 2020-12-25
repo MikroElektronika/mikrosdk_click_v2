@@ -29,21 +29,6 @@
 
 #include "ambient11.h"
 
-// ------------------------------------------------------------- PRIVATE MACROS 
-
-
-// -------------------------------------------------------------- PRIVATE TYPES
-
-
-// ------------------------------------------------------------------ CONSTANTS
-
-
-// ------------------------------------------------------------------ VARIABLES
-
-
-// ---------------------------------------------- PRIVATE FUNCTION DECLARATIONS 
-
-
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
 void ambient11_cfg_setup ( ambient11_cfg_t *cfg )
@@ -89,7 +74,8 @@ AMBIENT11_RETVAL ambient11_init ( ambient11_t *ctx, ambient11_cfg_t *cfg )
 
 void ambient11_default_cfg ( ambient11_t *ctx )
 {
-    // Click default configuration 
+    ambient11_generic_write( ctx, AMBIENT11_ALS_CONF_WR, AMBIENT11_ALS_CONF_CHAN_EN );
+    Delay_100ms();
 }
 
 void ambient11_generic_write ( ambient11_t *ctx, uint8_t wr_cmd, uint16_t wr_data )
@@ -125,7 +111,7 @@ float ambient11_calc_illumination ( ambient11_t *ctx, float typical_res )
     uint16_t raw_val;
     float lx_val;
     
-    raw_val = ambient11_generic_read ( ctx, AMBIENT11_WHITE_VAL );
+    raw_val = ambient11_generic_read ( ctx, AMBIENT11_ALS_CONF_RD );
     lx_val = ( ( float )raw_val ) * typical_res;
     
     return lx_val;

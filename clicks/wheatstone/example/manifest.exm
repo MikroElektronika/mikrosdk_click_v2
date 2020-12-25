@@ -1,8 +1,0 @@
-{
-    "name": "Wheatstone Click",
-    "description": "Wheatstone Click is a measurement Click board™ which utilizes a Wheatstone bridge circuit onboard, in order to precisely measure the resistance of an external element. Besides the wheatstone bridge circuit, this Click board™ also utilizes MAX4208 – an ultra-low offset/drift, precision instrumentation amplifier, from Maxim Integrated.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","MAX4208"],
-    "category" : ["Power supply"] 
-}

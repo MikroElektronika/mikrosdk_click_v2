@@ -31,8 +31,13 @@
 
 // ------------------------------------------------------------- PRIVATE MACROS 
 
-#define THUMBSTICK_DUMMY 0
-#define THUMBSTICK_MARGIN 1365
+#define THUMBSTICK_DUMMY    0
+
+#define POSTION_MIDDLE          2047
+
+// ------------------------------------------------------------- PRIVATE VARIABLES
+
+static uint16_t thumbstick_sensitivity = 0;
 
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
@@ -65,7 +70,6 @@ THUMBSTICK_RETVAL thumbstick_init ( thumbstick_t *ctx, thumbstick_cfg_t *cfg )
     spi_cfg.mosi      = cfg->mosi;
     spi_cfg.default_write_data = THUMBSTICK_DUMMY;
 
-    digital_out_init( &ctx->cs, cfg->cs );
     ctx->chip_select = cfg->cs;
 
     if (  spi_master_open( &ctx->spi, &spi_cfg ) == SPI_MASTER_ERROR )
@@ -77,10 +81,13 @@ THUMBSTICK_RETVAL thumbstick_init ( thumbstick_t *ctx, thumbstick_cfg_t *cfg )
     spi_master_set_speed( &ctx->spi, cfg->spi_speed );
     spi_master_set_mode( &ctx->spi, cfg->spi_mode );
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
+    spi_master_deselect_device( ctx->chip_select );  
 
     // Input pins
 
     digital_in_init( &ctx->int_pin, cfg->int_pin );
+    
+    thumbstick_sensitivity = POSTION_SENS_DEFAULT;
 
     return THUMBSTICK_OK;
 }
@@ -99,59 +106,94 @@ void thumbstick_generic_transfer
     spi_master_deselect_device( ctx->chip_select );   
 }
 
-uint16_t thumbstick_read_data ( thumbstick_t *ctx, uint8_t channel )
+uint16_t thumbstick_read_rawadc ( thumbstick_t *ctx, uint8_t type, uint8_t channel )
 {
-    uint8_t tx_buf[ 3 ];
-    uint8_t rx_buf[ 3 ];
+    uint8_t tx_buf[ 1 ];
+    uint8_t rx_buf[ 2 ];
 
     uint16_t result;
 
     result = 0x00;
-    tx_buf[ 0 ] = 0x06;
-    tx_buf[ 1 ] = channel;
+    tx_buf[ 0 ] = type;
+    spi_master_set_default_write_data( &ctx->spi, channel );
+    
+    spi_master_select_device( ctx->chip_select );
+    spi_master_write_then_read( &ctx->spi, tx_buf, 1, rx_buf, 2 );
+    spi_master_deselect_device( ctx->chip_select );  
+    
+    spi_master_set_default_write_data( &ctx->spi, THUMBSTICK_DUMMY );
 
-    thumbstick_generic_transfer ( ctx, tx_buf, 2, rx_buf, 3 );
-
-    result = rx_buf[ 1 ] & 0x0F;
+    result = rx_buf[ 0 ] & 0x0F;
     result <<= 8;
-    result |= rx_buf[ 2 ];
+    result |= rx_buf[ 1 ];
 
     return result;
 }
 
-uint8_t thumbstick_get_position ( thumbstick_t *ctx )
+uint8_t thumbstick_get_single_axis_postion ( thumbstick_t *ctx, uint8_t axis )
 {
-    uint16_t ver;
-    uint16_t hor;
-    uint8_t pos;
+    volatile uint16_t adc_raw;
 
-    ver  = thumbstick_read_data( ctx, THUMBSTICK_CHANNEL_V );
-    hor  = thumbstick_read_data( ctx, THUMBSTICK_CHANNEL_H );
+    if ( ( axis != THUMBSTICK_VERTICAL ) && ( axis != THUMBSTICK_HORIZONTAL ) )
+    {
+        return THUMBSTICK_FUNCTION_ERROR;
+    }
+    
+    adc_raw = thumbstick_read_rawadc( ctx, THUMBSTICK_START_SINGLE_CONV, axis );
+    
+    if ( axis == THUMBSTICK_VERTICAL )
+    {
+        if ( adc_raw > ( POSTION_MIDDLE + thumbstick_sensitivity ) )
+        {
+            return THUMBSTICK_POSITION_BOTTOM;
+        }
+        else if ( adc_raw < ( POSTION_MIDDLE - thumbstick_sensitivity ) )
+        {
+            return THUMBSTICK_POSITION_TOP;
+        }
+        else
+        {
+            return THUMBSTICK_POSITION_DEFAULT;
+        }
+    }
+    else if ( axis == THUMBSTICK_HORIZONTAL )
+    {
+        if ( adc_raw > ( POSTION_MIDDLE + thumbstick_sensitivity ) )
+        {
+            return THUMBSTICK_POSITION_RIGHT;
+        }
+        else if ( adc_raw < ( POSTION_MIDDLE - thumbstick_sensitivity ) )
+        {
+            return THUMBSTICK_POSITION_LEFT;
+        }
+        else
+        {
+            return THUMBSTICK_POSITION_DEFAULT;
+        }
+    }
 
-    pos = THUMBSTICK_POSITION_START;
+    return THUMBSTICK_FUNCTION_ERROR;
+}
 
-    if ( ( ver < THUMBSTICK_MARGIN ) && ( hor > THUMBSTICK_MARGIN ) && ( hor < ( 2 * THUMBSTICK_MARGIN) ) )
-    {
-        pos = THUMBSTICK_POSITION_TOP;
-    }
-    else if ( ( ver > ( 2 * THUMBSTICK_MARGIN ) ) && ( hor > THUMBSTICK_MARGIN ) && ( hor < ( 2 * THUMBSTICK_MARGIN ) ) )
-    {
-        pos = THUMBSTICK_CHANNEL_BOTTOM;
-    }
-    else if ( hor < THUMBSTICK_MARGIN )
-    {
-        pos = THUMBSTICK_CHANNEL_LEFT;
-    }
-    else if ( hor > ( 2 * THUMBSTICK_MARGIN ) )
-    {
-        pos = THUMBSTICK_POSITION_RIGHT;
-    }
-    return pos;
+void thumbstick_get_position ( thumbstick_t *ctx, thumbstick_position_t *position )
+{
+    position->horizontal = thumbstick_get_single_axis_postion( ctx, THUMBSTICK_HORIZONTAL );
+    position->vertical = thumbstick_get_single_axis_postion( ctx, THUMBSTICK_VERTICAL );
 }
 
 uint8_t thumbstick_button_state ( thumbstick_t *ctx )
 {
     return digital_in_read( &ctx->int_pin );
+}
+
+uint8_t thumbstick_set_sensitivity ( uint16_t sensitivity )
+{
+    if ( sensitivity >= POSTION_MIDDLE )
+        return THUMBSTICK_FUNCTION_ERROR;
+    
+    thumbstick_sensitivity = sensitivity;
+    
+    return THUMBSTICK_OK;
 }
 
 // ------------------------------------------------------------------------- END

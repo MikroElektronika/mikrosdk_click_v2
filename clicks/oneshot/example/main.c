@@ -13,7 +13,7 @@
  * acquired from the AD5241, is displayed at the end of the initialization process. 
  * 
  * ## Application Task  
- * This function sets the digital output of the CS pin to low.
+ * This function triggers one shot every 8 seconds.
  * 
  * \author MikroE Team
  *
@@ -51,14 +51,18 @@ void application_init ( )
     oneshot_init( &oneshot, &cfg );
     Delay_100ms( );
     oneshot_default_cfg( &oneshot );
-
-    log_printf( &logger, " * Resistance: %.3f Ohm\r\n", oneshot_get_resistance( &oneshot ) );
     Delay_100ms( );
+    log_printf( &logger, " * Resistance: %.1f Ohm\r\n", oneshot_get_resistance( &oneshot ) );
 }
 
 void application_task ( )
 {
+    oneshot_digital_write_cs( &oneshot, 1 );
+    Delay_ms( 1 );
     oneshot_digital_write_cs( &oneshot, 0 );
+    log_printf( &logger, " * One shot triggered \r\n" );
+    log_printf( &logger, " --------------------------- \r\n" );
+    Delay_ms( 8000 );
 }
 
 void main ( )

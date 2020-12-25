@@ -25,8 +25,12 @@
     "name": "mikroe.click.swipeswitch",
     "product_link": "https://www.mikroe.com/swipeswitch-click",
     "short_description": "SwipeSwitch click is capacitive touch, gesture, and proximity sensing Click board™, which is equipped with the IQS266, an integrated trackpad controller circuit which features ProxSense® and IQ Switch® technologies. This IC consists of a 2x3-channel capacitive trackpad controller, and a single self-capacitive proximity sensor, which can be used to wake up the device. This ensures very low power consumption, as the device is able to stay in the Sleep mode when not used. The IQS266 can detect a number of various configurable swipe and tap gestures. An Automatic Tuning Implementation (ATI) feature ensures an optimized performance in various conditions.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2562
+    ],
+    "version": "2.0.0.2"
 }
 

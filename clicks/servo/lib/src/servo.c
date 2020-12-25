@@ -49,12 +49,6 @@ void servo_cfg_setup ( servo_cfg_t *cfg )
     cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
     cfg->i2c_address_of_pca9685 = 0x40;
     cfg->i2c_address_of_ltc2497 = 0x14;
-
-    cfg->dev_min_pos = 0;
-    cfg->dev_max_pos = 180;
-    cfg->dev_vref = SERVO_VREF_3300;
-    cfg->dev_low_res = SERVO_DEFAULT_LOW_RESOLUTION;
-    cfg->dev_high_res = SERVO_DEFAULT_HIGH_RESOLUTION;
 }
 
 SERVO_RETVAL servo_init ( servo_t *ctx, servo_cfg_t *cfg )
@@ -75,6 +69,7 @@ SERVO_RETVAL servo_init ( servo_t *ctx, servo_cfg_t *cfg )
     }
 
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Output pins 
 
@@ -94,10 +89,10 @@ void servo_default_cfg ( servo_t *ctx )
     
     servo_setting( ctx, pos_and_res ); 
     servo_set_vref( ctx, SERVO_VREF_3300 );
-    servo_set_mode( ctx, SERVO_REG_MODE_1, SERVO_MODE1_RESTART_ENABLE |SERVO_MODE1_USE_ALL_CALL_ADR );
+    servo_set_mode( ctx, SERVO_REG_MODE_1, SERVO_MODE1_RESTART_ENABLE | SERVO_MODE1_USE_ALL_CALL_ADR );
     servo_sleep( ctx );
     servo_set_freq( ctx, 30 );
-    servo_set_mode( ctx, SERVO_REG_MODE_1, SERVO_MODE1_RESTART_ENABLE| SERVO_MODE1_AUTO_INCREMENT_ENABLE | SERVO_MODE1_USE_ALL_CALL_ADR );
+    servo_set_mode( ctx, SERVO_REG_MODE_1, SERVO_MODE1_RESTART_ENABLE | SERVO_MODE1_AUTO_INCREMENT_ENABLE | SERVO_MODE1_USE_ALL_CALL_ADR );
 }
 
 void servo_generic_write_of_pca9685 ( servo_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
@@ -224,23 +219,17 @@ void servo_set_position ( servo_t *ctx, uint8_t motor, uint8_t position )
 void servo_set_freq ( servo_t *ctx, uint16_t freq )
 {
     uint32_t prescale_val;
-    uint8_t reg;
-    uint8_t w_buff[ 3 ];
-    
-    reg = SERVO_REG_PRE_SCALE;
+    uint8_t write_buf[ 1 ];
     
     prescale_val = 25000000;
     prescale_val /= 4096;
     prescale_val /= freq;
     prescale_val -= 1;
     
-    w_buff[ 0 ] = prescale_val;
-    w_buff[ 1 ] = prescale_val >> 8;
-    w_buff[ 2 ] = prescale_val >> 16;
-    w_buff[ 3 ] = prescale_val >> 24;
+    write_buf[ 0 ] = prescale_val;
     
     servo_start( ctx );
-    servo_generic_write_of_pca9685( ctx, SERVO_REG_PRE_SCALE, w_buff, 1 );
+    servo_generic_write_of_pca9685( ctx, SERVO_REG_PRE_SCALE, write_buf, 1 );
 
     Delay_100ms( );
 }
@@ -283,8 +272,7 @@ static uint16_t map_priv ( servo_map_t map )
 {
     uint16_t val;
 
-    val = ( map.out_max - map.out_min ) / ( map.in_max - map.in_min );
-    val = val * ( map.x - map.in_min );
+    val = ( map.x - map.in_min ) * ( map.out_max - map.out_min ) / ( map.in_max - map.in_min );
     val = val + map.out_min + 10 ;
 
     return val;

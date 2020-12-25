@@ -113,11 +113,12 @@ void application_task ( void )
 {
     altitude2_read_data( &altitude2, &temperature, &pressure, &altitude );
 
-    log_printf( &logger, "Temperature is: %.2f Celsius\r\n", temperature );
-    log_printf( &logger, "Pressure is: %.2f mbar\r\n", pressure );
-    log_printf( &logger, "Altitude is: %.2f m\r\n", altitude );
+    log_printf( &logger, "Temperature: %.2f Celsius\r\n", temperature );
+    log_printf( &logger, "Pressure: %.2f mbar\r\n", pressure );
+    log_printf( &logger, "Altitude: %.2f m\r\n", altitude );
+    log_printf( &logger, "---------------------------------------\r\n\r\n" );
 
-    Delay_ms( 300 );
+    Delay_ms( 1000 );
 }  
 
 ```

@@ -1,7 +1,0 @@
-type: subdirs
-project: LlcSpi
-
-subdirs: {
-    lib
-    example
-}

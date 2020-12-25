@@ -78,8 +78,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -88,10 +89,13 @@ void application_init ( void )
     brushless3_cfg_setup( &cfg );
     BRUSHLESS3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     brushless3_init( &brushless3, &cfg );
-
-    brushless3_default_cfg( &brushless3 ); 
+    brushless3_default_cfg( &brushless3 );
     brushless3_forward_direction( &brushless3 );
     brushless3_set_default_param( &brushless3 );
+    
+    brushless3_pwm_start( &brushless3 );
+    brushless3_set_duty_cycle ( &brushless3, duty_cycle );
+    Delay_ms( 4000 );
 }
   
 ```
@@ -102,15 +106,34 @@ void application_init ( void )
 > Read and display float motor frequency value from the DRV10983 sensorless 
 > BLDC motor driver on Brushless 3 click board. Results are being sent to 
 > the Usart Terminal where you can track their changes. 
-> All data logs write on usb uart changes for every 3 sec.
 
 ```c
 
 void application_task ( void )
 {
-    velocity = brushless3_get_speed( &brushless3 );
-    log_printf( &logger, " Motor frequency: %.2f Hz\r\n",  velocity );
+    log_printf( &logger, "    acceleration      \r\n" );
+    
+    for ( speed = 100; speed <= BRUSHLESS3_MAX_SPEED; speed += 20 )
+    {
+        brushless3_set_speed( &brushless3, speed );
+        velocity = brushless3_get_speed( &brushless3 );
+        log_printf( &logger, " Motor frequency: %.2f Hz\r\n",  velocity );
+        Delay_ms( 100 );
+    }
+
+    log_printf( &logger,  "\r\n ---------------------- \r\n" ); 
+    log_printf( &logger, "    slowing down     \r\n" );
+    
+    for ( speed = BRUSHLESS3_MAX_SPEED; speed >= 50; speed -= 20 )
+    {
+        brushless3_set_speed( &brushless3, speed );
+        velocity = brushless3_get_speed( &brushless3 );
+        log_printf( &logger, " Motor frequency: %.2f Hz\r\n",  velocity );
+        Delay_ms( 100 );
+    }
+    
     log_printf( &logger, "-----------------------\r\n" );
+    Delay_ms( 1000 );
 }  
 
 ``` 

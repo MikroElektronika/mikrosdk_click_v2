@@ -1,8 +1,0 @@
-{
-    "name": "Motion 2 Click",
-    "description": "Motion 2 Click is a Click board™ based on EKMC1607112, PIR motion sensor from Panasonic Corporation that's used as human motion detector. Also featured on Motion 2 Click bord is TLP241A photorelay from Toshiba that is used to provide a reinforced galvanic isolation for the external signals used to drive some external high power electronic equipment when motion is detected.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","EKMC1607112"],
-    "category" : ["Motion"] 
-}

@@ -37,12 +37,12 @@ void grideye_cfg_setup ( grideye_cfg_t *cfg )
 
     cfg->scl = HAL_PIN_NC;
     cfg->sda = HAL_PIN_NC;
-    
+
     // Additional gpio pins
 
     cfg->int_pin = HAL_PIN_NC;
 
-    cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
+    cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD;
     cfg->i2c_address = GRIDEYE_I2C_ADDR;
 }
 
@@ -57,7 +57,7 @@ GRIDEYE_RETVAL grideye_init ( grideye_t *ctx, grideye_cfg_t *cfg )
 
     ctx->slave_address = cfg->i2c_address;
 
-    if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) != I2C_MASTER_SUCCESS )
+    if ( i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_ERROR )
     {
         return GRIDEYE_INIT_ERROR;
     }
@@ -94,8 +94,8 @@ void grideye_generic_write ( grideye_t *ctx, uint8_t reg, uint8_t *data_buf, uin
         tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
     }
     
-    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );    
-    Delay_1ms( );  
+    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );
+    Delay_1ms( );
 }
 
 void grideye_generic_read ( grideye_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
@@ -127,16 +127,16 @@ uint16_t grideye_read_data ( grideye_t *ctx, uint8_t rd_addr )
     return result;
 }
 
-void grideye_read_grid ( grideye_t *ctx, uint16_t *buffer )
+void grideye_read_grid ( grideye_t *ctx, int16_t *buffer )
 {
     uint8_t buffer_r[ 128 ]; 
     uint8_t temp = 0;
     uint8_t i;
     
     grideye_generic_read( ctx, 0x80, buffer_r, 128 );
-    for( i = 0; i<64; i++ )
+    for( i = 0; i < 64; i++ )
     {
-        temp+=2;
+        temp += 2;
         buffer[ i ] = buffer_r[ temp - 1 ] << 8;
         
         buffer[ i ] |= buffer_r[ temp - 2 ];
@@ -379,5 +379,4 @@ uint8_t grideye_read_int7 ( grideye_t *ctx )
     return result;
 }
 
-// ------------------------------------------------------------------------- END
-
+// ------------------------------------------------------------------------ END

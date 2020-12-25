@@ -27,5 +27,7 @@
     "short_description": "The RS232 communication standard is established back in the ‘60s, but thanks to its implementation on a wide range of devices.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.2"
 }
+
+

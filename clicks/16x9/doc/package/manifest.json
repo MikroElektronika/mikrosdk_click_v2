@@ -27,6 +27,7 @@
     "short_description": "16x9 click is an array of 144 LEDs, driven by a single IC with relatively low pin count (28).",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.2"
+    "version": "2.0.0.3"
 }
+
 

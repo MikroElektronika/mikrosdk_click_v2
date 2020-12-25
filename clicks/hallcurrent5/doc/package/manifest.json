@@ -27,6 +27,7 @@
     "short_description": "Hall Current 5 Click is a very accurate electric current measurement Click board™ based on the ACS733 IC. This IC is a galvanically isolated current sensor, which utilizes the Hall-effect principle.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.2"
+    "version": "2.0.0.3"
 }
+
 

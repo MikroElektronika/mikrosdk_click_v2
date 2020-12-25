@@ -27,5 +27,6 @@
     "short_description": "LDC1101 click is an inductance-to-digital converter Click Board. It is designed for a range of different applications, based on the inductivity measurements. ",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+

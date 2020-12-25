@@ -38,7 +38,7 @@ void barcode_cfg_setup ( barcode_cfg_t *cfg )
 
     cfg->rx_pin = HAL_PIN_NC;
     cfg->tx_pin = HAL_PIN_NC;
-    
+
     // Additional gpio pins
 
     cfg->rst = HAL_PIN_NC;
@@ -64,15 +64,18 @@ BARCODE_RETVAL barcode_init ( barcode_t *ctx, barcode_cfg_t *cfg )
     // UART module config
     uart_cfg.rx_pin = cfg->rx_pin;  // UART RX pin. 
     uart_cfg.tx_pin = cfg->tx_pin;  // UART TX pin. 
-    uart_cfg.tx_ring_size = sizeof( ctx->uart_tx_buffer );  
+    uart_cfg.tx_ring_size = sizeof( ctx->uart_tx_buffer );
     uart_cfg.rx_ring_size = sizeof( ctx->uart_rx_buffer );
 
-    uart_open( &ctx->uart, &uart_cfg );
+    if ( uart_open( &ctx->uart, &uart_cfg ) == UART_ERROR )
+    {
+        return BARCODE_INIT_ERROR;
+    }
+
     uart_set_baud( &ctx->uart, cfg->baud_rate );
     uart_set_parity( &ctx->uart, cfg->parity_bit );
-    uart_set_stop_bits( &ctx->uart, cfg->stop_bit );  
+    uart_set_stop_bits( &ctx->uart, cfg->stop_bit );
     uart_set_data_bits( &ctx->uart, cfg->data_bit );
-
     uart_set_blocking( &ctx->uart, cfg->uart_blocking );
 
     // Output pins 
@@ -98,8 +101,12 @@ void barcode_generic_write ( barcode_t *ctx, char *data_buf, uint16_t len )
 
 uint16_t barcode_generic_read ( barcode_t *ctx, char *data_buf, uint16_t max_len )
 {
-    return uart_read( &ctx->uart, data_buf, max_len );
+    err_t read_size = uart_read( &ctx->uart, data_buf, max_len );
+
+    if ( read_size == -1 )
+        return 0;
+
+    return (uint16_t)read_size;
 }
 
-// ------------------------------------------------------------------------- END
-
+// ------------------------------------------------------------------------ END

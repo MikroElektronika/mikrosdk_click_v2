@@ -80,8 +80,9 @@ void application_init ( )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
     Delay_100ms( );
@@ -93,8 +94,6 @@ void application_init ( )
     Delay_100ms( );
     dcmotor2_init( &dcmotor2, &cfg );
     dcmotor2_pwm_start( &dcmotor2 );
-    Delay_1sec( );
-    dcmotor2_enable_motor( &dcmotor2 );
     Delay_1sec( );
 }
   
@@ -110,15 +109,13 @@ void application_init ( )
 
 void application_task ( )
 {    
-    if ( duty_cycle > dcmotor2.pwm_period )
-    {
-        duty_cycle = 0;
-    }
-    
-    pull_brake( );
+    dcmotor2_enable_motor( &dcmotor2 );
+    Delay_1sec( );
+       
     clockwise( );
     pull_brake( );
     counter_clockwise( );
+    pull_brake( );
     
     dcmotor2_stop_motor( &dcmotor2 );
     Delay_1sec( );

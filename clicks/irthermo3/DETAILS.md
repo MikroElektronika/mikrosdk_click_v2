@@ -77,8 +77,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -90,6 +91,7 @@ void application_init ( void )
 
     irthermo3_global_write ( &irthermo3, adr_rst, 4 );
     irthermo3_cal ( &irthermo3 );
+    Delay_ms( 500 );
 }
 ```
 

@@ -153,37 +153,6 @@ void light_cfg_setup ( light_cfg_t *cfg );
  */
 LIGHT_RETVAL light_init ( light_t *ctx, light_cfg_t *cfg );
 
-/**
- * @brief Generic transfer function.
- *
- * @param ctx          Click object.
- * @param wr_buf       Write data buffer
- * @param wr_len       Number of byte in write data buffer
- * @param rd_buf       Read data buffer
- * @param rd_len       Number of byte in read data buffer
- *
- * @description Generic SPI transfer, for sending and receiving packages
- */
-void light_generic_transfer 
-( 
-    light_t *ctx, 
-    uint8_t *wr_buf, 
-    uint16_t wr_len, 
-    uint8_t *rd_buf, 
-    uint16_t rd_len 
-);
-
-/**
- * @brief Generic write data function.
- *
- * @param ctx            Click object.
- * @param address        Register address.
- * @param write_command  Command to write.
- *
- * @description Function write byte of data to MCP3201.
- */
-void light_write_data ( light_t *ctx, uint8_t address, uint8_t write_command );
-
  /**
  * @brief Generic read data function.
  *

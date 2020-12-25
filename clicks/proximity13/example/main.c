@@ -41,7 +41,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -78,7 +78,7 @@ void application_task ( void )
 
     proximity13_read_channels( &proximity13, &chn_val );
 
-    log_printf( &logger, " Data : %u\r\n", chn_val.channel_1 );
+    log_printf( &logger, " Data : %lu\r\n", chn_val.channel_1 );
 
     Delay_ms ( 100 );
 }

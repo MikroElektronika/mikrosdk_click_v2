@@ -27,6 +27,7 @@
     "short_description": "RMS to DC click is a Click board™ that is used to convert the RMS of the input signal into a DC voltage, with a value directly readable over the I2C interface.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+
 

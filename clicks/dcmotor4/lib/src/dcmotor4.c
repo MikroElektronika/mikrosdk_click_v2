@@ -56,8 +56,8 @@ DCMOTOR4_RETVAL dcmotor4_init ( dcmotor4_t *ctx, dcmotor4_cfg_t *cfg )
     
     pwm_configure_default( &pwm_cfg );
 
-	pwm_cfg.pin      = cfg->pwm;
-	pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
+    pwm_cfg.pin      = cfg->pwm;
+    pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
 
     ctx->pwm_freq = cfg->dev_pwm_freq;
     pwm_open( &ctx->pwm, &pwm_cfg );
@@ -69,6 +69,7 @@ DCMOTOR4_RETVAL dcmotor4_init ( dcmotor4_t *ctx, dcmotor4_cfg_t *cfg )
     digital_out_init( &ctx->en, cfg->en );
 
     digital_out_low( &ctx->en );
+    digital_out_low( &ctx->dir );
 
     // Input pins
 
@@ -95,12 +96,12 @@ void dcmotor4_pwm_start ( dcmotor4_t *ctx )
 
 void dcmotor4_run_clockwise ( dcmotor4_t *ctx )
 {
-    digital_out_low( &ctx->dir );
+    digital_out_high( &ctx->dir );
 }
 
 void dcmotor4_run_counter_clockwise ( dcmotor4_t *ctx )
 {
-    digital_out_high( &ctx->dir );
+    digital_out_low( &ctx->dir );
 }
 
 void dcmotor4_enable_motor ( dcmotor4_t *ctx )

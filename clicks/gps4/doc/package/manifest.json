@@ -27,5 +27,7 @@
     "short_description": "GPS 4 click carries the L70 compact GPS module from Quectel. ",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.2"
 }
+
+

@@ -64,7 +64,7 @@ void id_check ( )
     log_printf( &logger, "DEVICE ID: 0x" );
     for ( cnt = 0; cnt < SEMPERFLASH2_DEVICE_ID_BYTE_SIZE; cnt++ )
     {
-        log_printf( &logger, "%x", id_data[ cnt ] );
+        log_printf( &logger, "%x", ( uint16_t )id_data[ cnt ] );
     }
     log_printf( &logger, "\r\n\r\n" );
     txt_flag = COMPANY_FLAG;

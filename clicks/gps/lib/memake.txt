@@ -27,6 +27,7 @@ expInclude: {
 depends: {
     MikroC.Core
     MikroSDK.Driver
+    MikroSDK.GenericPointer
 }
 
 uses: {

@@ -10,7 +10,7 @@
     "dependency_list": [
     ],
     "details": "Resources/DETAILS.md",
-    "display_name": "Temp&Hum 11 click",
+    "display_name": "TempHum 11 click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -27,6 +27,7 @@
     "short_description": "Temp-hum 11 click is a temperature and humidity sensing Click board™, equipped with the HDC1080, a high accuracy digital humidity, and temperature sensor. Its key features are its low power consumption, and the measurement accuracy achieved with that much energy.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+
 

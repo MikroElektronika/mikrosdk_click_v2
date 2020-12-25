@@ -4,5 +4,5 @@
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","mikrocpic"],
     "hw" : ["click","PIC16F1779"],
-    "category" : ["Heart Rate, Biometrics"] 
+    "category" : ["Heart Rate, Biometrics"]
 }

@@ -276,7 +276,7 @@ typedef struct
 {
     // Input pins 
 
-    digital_in_t rdy;
+    digital_in_t rdy_in;
     
     // Modules 
 
@@ -340,15 +340,6 @@ void swipeswitch_cfg_setup ( swipeswitch_cfg_t *cfg );
  * @description This function initializes all necessary pins and peripherals used for this click.
  */
 SWIPESWITCH_RETVAL swipeswitch_init ( swipeswitch_t *ctx, swipeswitch_cfg_t *cfg );
-
-/**
- * @brief Click Default Configuration function.
- *
- * @param ctx  Click object.
- *
- * @description This function executes default configuration for SwipeSwitch click.
- */
-void swipeswitch_default_cfg ( swipeswitch_t *ctx );
 
 /**
  * @brief Generic write function.

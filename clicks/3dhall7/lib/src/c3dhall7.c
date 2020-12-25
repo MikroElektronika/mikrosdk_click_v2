@@ -79,9 +79,11 @@ void c3dhall7_cfg_setup ( c3dhall7_cfg_t *cfg )
     cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
     cfg->i2c_address = C3DHALL7_DEVICE_SLAVE_ADDR_VCC;
     cfg->spi_speed = 100000; 
+    
     cfg->spi_mode = SPI_MASTER_MODE_0;
-    cfg->sel = C3DHALL7_MASTER_I2C;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;    
+    
+    cfg->sel = C3DHALL7_MASTER_I2C;
 }
 
 C3DHALL7_RETVAL c3dhall7_init ( c3dhall7_t *ctx, c3dhall7_cfg_t *cfg )
@@ -107,7 +109,10 @@ C3DHALL7_RETVAL c3dhall7_init ( c3dhall7_t *ctx, c3dhall7_cfg_t *cfg )
 
         i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
         i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
-       
+        i2c_master_set_timeout( &ctx->i2c, 0 );
+        
+        digital_out_init( &ctx->cs, cfg->cs );
+        digital_out_high( &ctx->cs );
 
         ctx->read_f = c3dhall7_i2c_read;
         ctx->write_f = c3dhall7_i2c_write;
@@ -133,7 +138,8 @@ C3DHALL7_RETVAL c3dhall7_init ( c3dhall7_t *ctx, c3dhall7_cfg_t *cfg )
 
         spi_master_set_default_write_data( &ctx->spi, C3DHALL7_DUMMY );
         spi_master_set_speed( &ctx->spi, spi_cfg.speed );
-         spi_master_set_chip_select_polarity( cfg->cs_polarity );
+        spi_master_set_chip_select_polarity( cfg->cs_polarity );
+        spi_master_deselect_device( ctx->chip_select ); 
         
         ctx->read_f = c3dhall7_spi_read;
         ctx->write_f = c3dhall7_spi_write;
@@ -150,7 +156,6 @@ C3DHALL7_RETVAL c3dhall7_init ( c3dhall7_t *ctx, c3dhall7_cfg_t *cfg )
     digital_in_init( &ctx->it1, cfg->it1 );
 
     digital_out_high( &ctx->rst );
-    spi_master_deselect_device( ctx->chip_select ); 
 
     return C3DHALL7_OK;
 }
@@ -194,7 +199,7 @@ void c3dhall7_device_reset ( c3dhall7_t *ctx )
      Delay_100ms( );
      Delay_100ms( );
      digital_out_high( &ctx->rst );
-     Delay_100ms( );
+     Delay_1sec( );
 }
 
 void c3dhall7_get_axis_data( c3dhall7_t *ctx, c3dhall7_axis_t *axis)
@@ -232,6 +237,7 @@ void c3dhall7_software_reset ( c3dhall7_t *ctx )
     Delay_100ms();
     reset = 0x00;
     c3dhall7_generic_write( ctx, C3DHALL7_REG_SOFTWARE_RESET, &reset, 1 );
+    Delay_1sec();
 }
 
 void c3dhall7_configuration ( c3dhall7_t *ctx, uint8_t reg, uint16_t data_in)
@@ -334,13 +340,8 @@ static void c3dhall7_spi_read ( c3dhall7_t *ctx, uint8_t reg, uint8_t *data_buf,
     tx_buf[ 0 ] = reg | 0x80;
     
     spi_master_select_device( ctx->chip_select );
-    spi_master_write_then_read( &ctx->spi, tx_buf, 1, rx_buf, len + 1 );
+    spi_master_write_then_read( &ctx->spi, tx_buf, 1, data_buf, len );
     spi_master_deselect_device( ctx->chip_select ); 
-
-    for ( cnt = 0; cnt < len; cnt++ )
-    {
-        data_buf[ cnt ] = rx_buf [ cnt + 1];
-    }
 }
 
 static int16_t package_data_16 ( uint8_t *data_in, uint8_t c_ind )

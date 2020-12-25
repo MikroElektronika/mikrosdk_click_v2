@@ -1,7 +1,0 @@
-type: subdirs
-project: Enocean4
-
-subdirs: {
-    lib
-    example
-}

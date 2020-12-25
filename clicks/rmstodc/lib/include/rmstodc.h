@@ -86,7 +86,7 @@
  * \defgroup voltage  Voltage
  * \{
  */
-#define RMS2DC_VCC_3V3           3296
+#define RMS2DC_VCC_3V3           3300
 #define RMS2DC_VCC_5V            5000
 /** \} */
 
@@ -170,30 +170,6 @@ void rmstodc_cfg_setup ( rmstodc_cfg_t *cfg );
 RMSTODC_RETVAL rmstodc_init ( rmstodc_t *ctx, rmstodc_cfg_t *cfg );
 
 /**
- * @brief Generic write function.
- *
- * @param ctx          Click object.
- * @param reg          Register address.
- * @param data_buf     Data buf to be written.
- * @param len          Number of the bytes in data buf.
- *
- * @description This function writes data to the desired register.
- */
-void rmstodc_generic_write ( rmstodc_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-/**
- * @brief Generic read function.
- *
- * @param ctx          Click object.
- * @param reg          Register address.
- * @param data_buf     Output data buf
- * @param len          Number of the bytes to be read
- *
- * @description This function reads data from the desired register.
- */
-void rmstodc_generic_read ( rmstodc_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-/**
  * @brief ADC Read function.
  *
  * @returns Result of AD conversion
@@ -212,18 +188,6 @@ uint16_t rms2dc_read_adc ( rmstodc_t *ctx );
  * Function returns the output voltage value calculated to mV, depending on the power voltage selection.
  */
 uint16_t rms2dc_vout_adc ( rmstodc_t *ctx, uint16_t vcc_sel );
-
-/**
- * @brief Get Averaged Output Voltage function.
- *
- * @param vcc_select  VCC value selection [mV]
- * @param n_samples  Number of samples for averaging
- *
- * @returns Averaged output voltage value
- *
- * Function returns the averaged output voltage value calculated to mV, depending on the power voltage selection.
- */
-uint16_t rms2dc_avrg_vout_adc ( rmstodc_t *ctx, uint16_t vcc_select, uint8_t n_samples );
 
 /**
  * @brief Enable function

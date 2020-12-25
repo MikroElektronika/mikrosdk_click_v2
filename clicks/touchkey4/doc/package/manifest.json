@@ -25,7 +25,12 @@
     "name": "mikroe.click.touchkey4",
     "product_link": "https://www.mikroe.com/touch-key-4-click",
     "short_description": "Touch Key 4 click is a capacitive touch sensing Click board™, with the advanced touch/proximity sensor IC.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.0"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2363
+    ],
+    "version": "2.0.0.3"
 }
+

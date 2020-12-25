@@ -147,7 +147,7 @@ uint8_t pixi_write_reg ( pixi_t *ctx, const uint8_t reg_addr, uint32_t reg_data 
    
     spi_master_select_device( ctx->chip_select );
     Delay_10us();
-    spi_master_write_then_read( &ctx->spi, temp, n_bytes * 2 + 1, 0, 0 );
+    spi_master_write( &ctx->spi, temp, n_bytes * 2 + 1 );
     spi_master_deselect_device( ctx->chip_select ); 
     Delay_1ms();
 

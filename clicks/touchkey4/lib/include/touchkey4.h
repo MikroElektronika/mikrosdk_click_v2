@@ -512,30 +512,6 @@ TOUCHKEY4_RETVAL touchkey4_init ( touchkey4_t *ctx, touchkey4_cfg_t *cfg );
 void touchkey4_default_cfg ( touchkey4_t *ctx );
 
 /**
- * @brief Generic write function.
- *
- * @param ctx          Click object.
- * @param reg          Register address.
- * @param data_buf     Data buf to be written.
- * @param len          Number of the bytes in data buf.
- *
- * @description This function writes data to the desired register.
- */
-void touchkey4_generic_write ( touchkey4_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-/**
- * @brief Generic read function.
- *
- * @param ctx          Click object.
- * @param reg          Register address.
- * @param data_buf     Output data buf.
- * @param len          Number of the bytes to be read.
- *
- * @description This function reads data from the desired register.
- */
-void touchkey4_generic_read ( touchkey4_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-/**
  * @brief Generic Write function
  *
  * @param ctx                   Click object.
@@ -559,6 +535,18 @@ void touchkey4_write_reg( touchkey4_t *ctx, const uint8_t register_address,
  */
 void touchkey4_read_reg ( touchkey4_t *ctx, const uint8_t register_address, 
                          uint8_t *data_out, const uint8_t n_bytes );
+
+/**
+ * @brief Read byte function
+ *
+ * @param ctx                       Click object.
+ * @param register_address          Address which from data be read.
+ * 
+ * @retval Read byte
+ *
+ * @description This function reads data from register.
+ */
+uint8_t touchkey4_receive_byte( touchkey4_t *ctx, const uint8_t register_address );
 
 /**
  * @brief Touch Detect function

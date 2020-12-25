@@ -36,7 +36,7 @@ static uint8_t slave_address_BNO055;
 static int16_t ac1_param;
 static int16_t ac2_param;
 static int16_t ac3_param;
-static int16_t ac4_param;
+static uint16_t ac4_param;
 static uint16_t ac5_param;
 static uint16_t ac6_param;
 static int16_t b1_param;
@@ -110,13 +110,14 @@ C10DOF_RETVAL c10dof_init ( c10dof_t *ctx, c10dof_cfg_t *cfg )
 
     ctx->slave_address = cfg->i2c_address;
 
-    if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) != I2C_MASTER_SUCCESS )
+    if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_ERROR )
     {
         return C10DOF_INIT_ERROR;
     }
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Output pins 
 
@@ -133,6 +134,7 @@ C10DOF_RETVAL c10dof_init ( c10dof_t *ctx, c10dof_cfg_t *cfg )
 void c10dof_default_cfg ( c10dof_t *ctx ) 
 {
     c10dof_hw_reset( ctx );
+    Delay_1sec( );
     c10dof_default_configuration_BMP180( ctx );
     hw_medium_delay( );
     c10dof_default_configuration_BNO055 ( ctx );
@@ -464,7 +466,7 @@ void c10dof_get_measurements( c10dof_t *ctx, float *temperature, float *pressure
 
     x1 = ( temp_data - ( ( int32_t  ) ac6_param ) ) * ( ( int32_t ) ac5_param ) >> 15;
     x2 = ( ( ( int32_t ) mc_param ) << 11 ) / ( x1 + ( ( int32_t ) md_param ) );
-    b5 = x1+ x2;
+    b5 = x1 + x2;
     *temperature = ( ( ( float ) b5 + 8.0 ) / 16.0 );
 
     *temperature /= 10.0;
@@ -497,7 +499,7 @@ void c10dof_get_measurements( c10dof_t *ctx, float *temperature, float *pressure
     press = press + ( ( x1 + x2 + 3791 ) >> 4 );
 
     *pressure = ( float ) press;
-    *pressure /= 30.0;
+    *pressure /= 100.0;
 }
 
 float c10dof_get_temperature ( c10dof_t *ctx )
@@ -561,7 +563,7 @@ float c10dof_get_pressure ( c10dof_t *ctx )
 
     x1 = ( temp_data - ( ( int32_t  ) ac6_param ) ) * ( ( int32_t ) ac5_param ) >> 15;
     x2 = ( ( ( int32_t ) mc_param ) << 11 ) / ( x1 + ( ( int32_t ) md_param ) );
-    b5 = x1+ x2;
+    b5 = x1 + x2;
 
     b6 = b5 - 4000;
     x1 = ( ( ( int32_t) b2_param ) * ( (b6 * b6) >> 12 ) ) >> 11;
@@ -603,7 +605,7 @@ int16_t c10dof_get_axis ( c10dof_t *ctx, uint8_t addr_reg_low )
     uint8_t buffer[ 2 ];
 
     buffer[ 0 ] = c10dof_read_byte( ctx, addr_reg_low + 1, C10DOF_BNO055_ADDRESS_A );
-    hw_small_delay( );
+    Delay_10us();
     buffer[ 1 ] = c10dof_read_byte( ctx, addr_reg_low, C10DOF_BNO055_ADDRESS_A );
 
     temp = buffer[ 0 ];

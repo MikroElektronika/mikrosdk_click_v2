@@ -136,9 +136,9 @@ void application_task ( void )
             log_printf( &logger, "------------------\r\n" );
         }
 
-        log_printf( &logger, " Time : %d:%d:%d \r\n Date: %d.%d.20%d.\r\n------------------\r\n", rtc3.time.time_hours, rtc3.time.time_minutes,
-                                                                                            rtc3.time.time_seconds, 
-                                                                                            rtc3.date.date_day, rtc3.date.date_month, rtc3.date.date_year );
+        log_printf( &logger, " Time : %d:%d:%d \r\n Date: %d.%d.20%d.\r\n------------------\r\n", (uint16_t)rtc3.time.time_hours, (uint16_t)rtc3.time.time_minutes,
+                                                                                            (uint16_t)rtc3.time.time_seconds, 
+                                                                                            (uint16_t)rtc3.date.date_day, (uint16_t)rtc3.date.date_month, (uint16_t)rtc3.date.date_year );
 
         time_seconds_new = rtc3.time.time_seconds;
     }

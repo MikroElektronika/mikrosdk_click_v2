@@ -77,6 +77,7 @@ HTU21D_RETVAL htu21d_init ( htu21d_t *ctx, htu21d_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
     
     return HTU21D_OK;
 }

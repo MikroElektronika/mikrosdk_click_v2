@@ -25,7 +25,11 @@
     "name": "mikroe.click.expand",
     "product_link": "https://www.mikroe.com/expand-click",
     "short_description": "This applicatioin use for expansion I/O lines",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.0"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        212
+    ],
+    "version": "2.0.0.1"
 }

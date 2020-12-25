@@ -45,7 +45,7 @@ void brushless4_cfg_setup ( brushless4_cfg_t *cfg )
 
     cfg->fg = HAL_PIN_NC;
 
-    cfg->dev_pwm_freq 	  = 5000;
+    cfg->dev_pwm_freq   = BRUSHLESS4_DEF_FREQ;
 }
 
 BRUSHLESS4_RETVAL brushless4_init ( brushless4_t *ctx, brushless4_cfg_t *cfg )
@@ -54,8 +54,8 @@ BRUSHLESS4_RETVAL brushless4_init ( brushless4_t *ctx, brushless4_cfg_t *cfg )
     
     pwm_configure_default( &pwm_cfg );
 
-	pwm_cfg.pin      = cfg->pwm;
-	pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
+    pwm_cfg.pin      = cfg->pwm;
+    pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
 
     ctx->pwm_freq = cfg->dev_pwm_freq;
     pwm_open( &ctx->pwm, &pwm_cfg );
@@ -64,7 +64,6 @@ BRUSHLESS4_RETVAL brushless4_init ( brushless4_t *ctx, brushless4_cfg_t *cfg )
     // Input pins
 
     digital_in_init( &ctx->fg, cfg->fg );
-    digital_in_init( &ctx->pwm_pin, cfg->pwm );
 
     return BRUSHLESS4_OK;
 }
@@ -105,11 +104,6 @@ uint16_t brushless4_get_speed ( brushless4_t *ctx, uint16_t pulse_sample )
     rotor_speed = rotor_speed / ctx->slots_poles;
 
     return rotor_speed;
-}
-
-void brushless4_pwm_pin ( brushless4_t *ctx, uint8_t state )
-{
-    digital_out_write( &ctx->pwm_pin, state );
 }
 
 uint8_t brushless4_fg_get ( brushless4_t *ctx )

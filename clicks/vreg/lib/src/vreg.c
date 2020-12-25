@@ -82,6 +82,7 @@ VREG_RETVAL vreg_init ( vreg_t *ctx, vreg_cfg_t *cfg )
     
     digital_out_init( &ctx->cs2, cfg->cs2 );
     digital_out_init( &ctx->sw, cfg->sw );
+    
     spi_master_deselect_device( ctx->chip_select );  
     digital_out_high( &ctx->cs2 );
 
@@ -110,15 +111,12 @@ uint16_t vreg_get_adc ( vreg_t *ctx, uint8_t channel )
     uint16_t result;
 
     w_buffer[ 0 ] = VREG_START_BIT | VREG_SINGLE_ENDED;
-    w_buffer[ 0 ] <<= 2;
-    w_buffer[ 0 ] |= channel;
     
     digital_out_low( &ctx->cs2 );
-
-    Delay_10us( );
-    
     spi_master_write( &ctx->spi, &w_buffer[ 0 ], 1 );
-    spi_master_read( &ctx->spi, r_buffer, 2 );
+    spi_master_set_default_write_data( &ctx->spi, channel << 6 );
+    spi_master_read( &ctx->spi, &r_buffer[ 0 ], 2 );
+    spi_master_set_default_write_data( &ctx->spi, VREG_DUMMY );
     digital_out_high( &ctx->cs2 );
 
     result = r_buffer[ 0 ] & 0x0F;
@@ -134,10 +132,9 @@ void vreg_set_out_voltage ( vreg_t *ctx, uint16_t value_dac )
 
     w_buffer[ 0 ] =  ( value_dac >> 8 ) & 0x0F;
     w_buffer[ 0 ] |= 0x30;
-    w_buffer[ 1 ] = value_dac  & 0x00FF;
+    w_buffer[ 1 ] = value_dac & 0x00FF;
 
     spi_master_select_device( ctx->chip_select );
-    Delay_10us( );
     spi_master_write( &ctx->spi, w_buffer, 2 );
     spi_master_deselect_device( ctx->chip_select );  
 }

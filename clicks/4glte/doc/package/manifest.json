@@ -25,7 +25,15 @@
     "name": "mikroe.click.c4glte",
     "product_link": "https://www.mikroe.com/4g-lte-e-click",
     "short_description": "4G LTE click is an LTE Cat 1 / 2G multimode cellular network solution, featuring the compact LARA-R2 series modem from u-blox.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.0"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2058
+    ],
+    "version": "2.0.0.6"
 }
+
+
+
+

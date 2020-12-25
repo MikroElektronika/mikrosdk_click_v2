@@ -1,7 +1,0 @@
-type: subdirs
-project: 3xBuck
-
-subdirs: {
-    lib
-    example
-}

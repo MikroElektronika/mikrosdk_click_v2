@@ -53,8 +53,8 @@
 #define LIGHTTEMP_MAP_MIKROBUS( cfg, mikrobus ) \
   cfg.scl  = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
   cfg.sda  = MIKROBUS( mikrobus, MIKROBUS_SDA ); \
-  cfg.pwm = MIKROBUS( mikrobus, MIKROBUS_PWM ); \
-  cfg.pw2 = MIKROBUS( mikrobus, MIKROBUS_CS ); \
+  cfg.pwm1 = MIKROBUS( mikrobus, MIKROBUS_PWM ); \
+  cfg.pwm2 = MIKROBUS( mikrobus, MIKROBUS_CS ); \
   cfg.int_pin = MIKROBUS( mikrobus, MIKROBUS_INT )
 /** \} */
 
@@ -91,14 +91,11 @@ typedef struct
 
     digital_in_t int_pin;
     
-    // Output pins
-    
-    digital_out_t pw2;
-    
     // Modules 
 
     i2c_master_t i2c;
-    pwm_t pwm;
+    pwm_t pwm1;
+    pwm_t pwm2;
 
     // ctx variable 
 
@@ -116,12 +113,12 @@ typedef struct
 
     pin_name_t scl;
     pin_name_t sda;
-    pin_name_t pwm;
+    pin_name_t pwm1;
+    pin_name_t pwm2;
 
     // Additional gpio pins 
 
     pin_name_t int_pin;
-    pin_name_t pw2;
     
     // static variable 
 
@@ -207,43 +204,60 @@ uint16_t lighttemp_get_pg_voltage ( lighttemp_t *ctx );
 uint8_t lighttemp_get_interrupt_state ( lighttemp_t *ctx );
 
 /**
- * @brief Generic sets PWM duty cycle.
+ * @brief Generic sets PWM duty cycle for LED1.
  *
  * @param ctx          Click object.
  * @param duty_cycle   Duty cycle.
  *
- * @description This function sets the PWM duty cycle.
+ * @description This function sets the PWM duty cycle for LED1.
  */
-void lighttemp_set_duty_cycle ( lighttemp_t *ctx, float duty_cycle );
+void lighttemp_led1_set_duty_cycle ( lighttemp_t *ctx, float duty_cycle );
 
 /**
- * @brief Stop PWM module.
+ * @brief Stop PWM module for LED1.
  *
  * @param ctx Click object.
  *
- * @description This function stops PWM module.
+ * @description This function stops PWM module for LED1.
  */
-void lighttemp_pwm_stop ( lighttemp_t *ctx );
+void lighttemp_led1_pwm_stop ( lighttemp_t *ctx );
 
 /**
- * @brief Start PWM module.
+ * @brief Start PWM module for LED1.
  *
  * @param ctx  Click object.
  *
- * @description This function starts PWM module.
+ * @description This function starts PWM module for LED1.
  */
-void lighttemp_pwm_start ( lighttemp_t *ctx );
+void lighttemp_led1_pwm_start ( lighttemp_t *ctx );
 
 /**
- * @brief Start PW2 module.
+ * @brief Generic sets PWM duty cycle for LED2.
  *
- * @param ctx    Click object.
- * @param state  State of cs pin.
+ * @param ctx          Click object.
+ * @param duty_cycle   Duty cycle.
  *
- * @description This function turns on/off second LED.
+ * @description This function sets the PWM duty cycle for LED2.
  */
-void lighttemp_cs_set_state( lighttemp_t *ctx, uint8_t state );
+void lighttemp_led2_set_duty_cycle ( lighttemp_t *ctx, float duty_cycle );
 
+/**
+ * @brief Stop PWM module for LED2.
+ *
+ * @param ctx Click object.
+ *
+ * @description This function stops PWM module for LED2.
+ */
+void lighttemp_led2_pwm_stop ( lighttemp_t *ctx );
+
+/**
+ * @brief Start PWM module for LED2.
+ *
+ * @param ctx  Click object.
+ *
+ * @description This function starts PWM module for LED2.
+ */
+void lighttemp_led2_pwm_start ( lighttemp_t *ctx );
 #ifdef __cplusplus
 }
 #endif

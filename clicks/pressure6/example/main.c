@@ -28,7 +28,7 @@
 static pressure6_t pressure6;
 static log_t logger;
 static uint16_t pressure;
-static uint8_t  temperature;
+static uint16_t  temperature;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -41,7 +41,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -51,7 +51,7 @@ void application_init ( void )
     PRESSURE6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pressure6_init( &pressure6, &cfg );
     pressure6_default_cfg( &pressure6 );
-    log_printf( &logger, "--- Start measurement ---" );
+    log_printf( &logger, "--- Start measurement ---\r\n" );
 }
 
 void application_task ( void )
@@ -62,10 +62,10 @@ void application_task ( void )
     pressure = pressure6_get_pressure( &pressure6 );
     temperature = pressure6_get_temperature( &pressure6 );
 
-    log_printf( &logger, "Pressure: %d\r\n", pressure);
-    log_printf( &logger, "Temperature: %d\r\n", temperature);
+    log_printf( &logger, "Pressure: %u\r\n", pressure);
+    log_printf( &logger, "Temperature: %u\r\n", temperature);
 
-    Delay_ms( 1000 );
+    Delay_ms( 3000 );
 } 
 
 void main ( void )

@@ -1,8 +1,8 @@
 {
-    "name": "Motion EKMC Click",
-    "description": "<PRVE_2_RECENICE_SA_PRODUCT_PAGE>",
+    "name": "Motion EKMC library",
+    "description": "Motion EKMC library is a long distance PaPIR's motion sensor with plastic lense and controllable output.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","<CHIP_NAME>"],
-    "category" : ["<LIBSTOCK_CATEGORY>"] 
+    "hw" : ["click","EKMC"],
+    "category" : ["Motion"] 
 }

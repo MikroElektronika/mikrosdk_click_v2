@@ -1,8 +1,0 @@
-{
-    "name": "GSM GNSS Click",
-    "description": "GSM/GNSS click combines GPS/GLONASS location tracking with GSM module capability for mobile communication.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","MC60"],
-    "category" : ["GSM+GPS"] 
-}

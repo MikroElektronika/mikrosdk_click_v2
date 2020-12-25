@@ -28,14 +28,13 @@
  * \brief This file contains API for REED Click driver.
  *
  * \addtogroup reed REED Click Driver
- * @{
+ * \{
  */
 // ----------------------------------------------------------------------------
 
 #ifndef REED_H
 #define REED_H
 
-#include "drv_digital_out.h"
 #include "drv_digital_in.h"
 
 // -------------------------------------------------------------- PUBLIC MACROS 
@@ -49,25 +48,23 @@
  * \{
  */
 #define REED_MAP_MIKROBUS( cfg, mikrobus ) \
-  cfg.cs= MIKROBUS( mikrobus, MIKROBUS_CS );
+    cfg.cs = MIKROBUS( mikrobus, MIKROBUS_CS )
 /** \} */
 
 /**
  * \defgroup error_code Error Code
  * \{
  */
-#define REED_RETVAL  uint8_t
-
-#define REED_OK           0x00
-#define REED_INIT_ERROR   0xFF
+#define REED_OK            0
+#define REED_INIT_ERROR  (-1)
 /** \} */
 
 /**
  * \defgroup mag_state Magnetic field detection state
  * \{
  */
-#define REED_NO_MAGNETIC_FIELD         0
-#define REED_MAGNETIC_FIELD_DETECTED   1
+#define REED_NO_MAGNETIC_FIELD        0
+#define REED_MAGNETIC_FIELD_DETECTED  1
 /** \} */
 
 /** \} */ // End group macro 
@@ -100,30 +97,12 @@ typedef struct
 } reed_cfg_t;
 
 /** \} */ // End types group
-// ------------------------------------------------------------------ CONSTANTS
-/**
- * \defgroup constants Constants
- * \{
- */
- 
- 
-
-/** \} */ // End constants group
-// ------------------------------------------------------------------ VARIABLES
-/**
- * \defgroup variable Variable
- * \{
- */
-
-
-/** \} */ // End variable group
 // ----------------------------------------------- PUBLIC FUNCTION DECLARATIONS
-
 /**
  * \defgroup public_function Public function
  * \{
  */
- 
+
 #ifdef __cplusplus
 extern "C"{
 #endif
@@ -140,18 +119,21 @@ void reed_cfg_setup ( reed_cfg_t *cfg );
 
 /**
  * @brief Initialization function.
- * @param reed Click object.
- * @param cfg Click configuration structure.
- * 
+ *
+ * @param ctx  Click object.
+ * @param cfg  Click configuration structure.
+ * @return    0  - Ok,
+ *          (-1) - Error.
+ *
  * @description This function initializes all necessary pins and peripherals used for this click.
  */
-REED_RETVAL reed_init ( reed_t *ctx, reed_cfg_t *cfg );
+err_t reed_init ( reed_t *ctx, reed_cfg_t *cfg );
 
 /**
  * @brief Get sensor magnetic detected status function.
  *
  * @param ctx  Click object.
- * 
+ *
  * @return
  * <pre> 0 : no magnetic field </pre>
  * <pre> 1 : magnetic field detected </pre>
@@ -161,13 +143,12 @@ REED_RETVAL reed_init ( reed_t *ctx, reed_cfg_t *cfg );
  */
 uint8_t reed_get_status ( reed_t *ctx );
 
-
 #ifdef __cplusplus
 }
 #endif
-#endif  // _REED_H_
+#endif  // REED_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
-/*! @} */
-// ------------------------------------------------------------------------- END
+/// \}    // End click Driver group
+
+// ------------------------------------------------------------------------ END

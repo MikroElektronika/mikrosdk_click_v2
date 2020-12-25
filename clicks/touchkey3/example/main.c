@@ -35,6 +35,9 @@ static log_t logger;
 static uint8_t return_data[ 2 ];
 static uint8_t counter;
 static uint8_t temp;
+static uint8_t old_state;
+static const uint16_t timeout_state = 1000;
+static uint16_t timeout_cnt;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -65,7 +68,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -77,6 +80,7 @@ void application_init ( void )
 
     touchkey3_reset( &touchkey3 );
     touchkey3_send_command( &touchkey3, TOUCHKEY3_CMD_RESET );
+    timeout_cnt = timeout_state;
     
     Delay_ms( 300 );
 }
@@ -87,10 +91,10 @@ void application_task ( void )
 
     for ( counter = 0; counter < 7; counter++ )
     {
-        if ( ( return_data[ 1 ] >> counter ) && 0x01 )
+        if ( ( return_data[ 1 ] >> counter ) & 0x01 )
         {
-            log_printf( &logger, "Touch detected on key %d\r\n", calculationt_index( return_data[ 1 ] ) );
-            Delay_ms( 100 );
+            log_printf( &logger, "Touch detected on key %d\r\n", ( uint16_t )(counter+1) );
+            Delay_ms( 1000 );
         }
     }
 }

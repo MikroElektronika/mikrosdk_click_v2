@@ -27,5 +27,6 @@
     "short_description": "Dot Matrix R Click is a display device Click board™ based on a four-digit dot matrix display module, labeled as HCMS-3906 from a company Avago (Broadcom Inc).",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

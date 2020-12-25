@@ -29,10 +29,6 @@
 
 #include "leddriver5.h"
 
-// ------------------------------------------------------------- PRIVATE MACROS 
-
-#define PWM_PERIOD_ERROR   0
-
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
 void leddriver5_cfg_setup ( leddriver5_cfg_t *cfg )
@@ -45,7 +41,7 @@ void leddriver5_cfg_setup ( leddriver5_cfg_t *cfg )
 
     cfg->en   = HAL_PIN_NC;
    
-    cfg->dev_pwm_freq 	  = 5000;
+    cfg->dev_pwm_freq   = 5000;
 }
 
 LEDDRIVER5_RETVAL leddriver5_init ( leddriver5_t *ctx, leddriver5_cfg_t *cfg )
@@ -54,8 +50,8 @@ LEDDRIVER5_RETVAL leddriver5_init ( leddriver5_t *ctx, leddriver5_cfg_t *cfg )
     
     pwm_configure_default( &pwm_cfg );
 
-	pwm_cfg.pin      = cfg->pwm;
-	pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
+    pwm_cfg.pin      = cfg->pwm;
+    pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
 
     ctx->pwm_freq = cfg->dev_pwm_freq;
     pwm_open( &ctx->pwm, &pwm_cfg );

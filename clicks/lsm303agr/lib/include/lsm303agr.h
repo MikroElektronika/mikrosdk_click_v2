@@ -156,6 +156,32 @@ void lsm303agr_default_cfg ( lsm303agr_t *ctx );
 
 
 /**
+ * @brief Generic read data function.
+ *
+ * @param lightranger       Click object.
+ * @param reg_addr          Register address.
+ * @param read_buf          Read buffer.
+ * @param read_len          Buffer length.
+ *
+ * @description This function reads 16-bit data from given address.
+ */
+void lsm303agr_read_data ( lsm303agr_t* ctx, uint8_t reg_addr, uint8_t *read_buf, uint8_t read_len );
+
+/**
+ * @brief Generic write data function.
+ *
+ * @param lsm303agr       Click object.
+ * @param reg_addr        Register address.
+ * @param write_buf       Read buffer.
+ * @param write_len       Buffer length.
+ *
+ *
+ * @description This function writes 16-bit command to given address.
+ */
+void lsm303agr_write_data ( lsm303agr_t* ctx, uint8_t reg_addr, uint8_t *write_buf, uint8_t write_len );
+
+
+/**
  * @brief Reading the raw X axis data and calculating the value :
  *
  * @param ctx  Click object.

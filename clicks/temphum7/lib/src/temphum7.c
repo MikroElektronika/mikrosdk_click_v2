@@ -74,6 +74,7 @@ TEMPHUM7_RETVAL temphum7_init ( temphum7_t *ctx, temphum7_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     return TEMPHUM7_OK;
 }
@@ -100,12 +101,14 @@ void temphum7_generic_write ( temphum7_t *ctx, uint8_t reg, uint8_t *data_buf, u
         tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
     }
     
-    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );     
+    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );   
+    Delay_10ms();
 }
 
 void temphum7_generic_read ( temphum7_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
     i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, len );
+    Delay_10ms();
 }
 
 float temphum7_get_relative_humidity ( temphum7_t *ctx, uint8_t mode_data )

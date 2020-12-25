@@ -1,11 +1,11 @@
 type: executable
-target: example_t420ma
+target: example_c420mat
 
 depends: {
     MikroC.Core
     MikroSDK.Board
     MikroSDK.Log
-    Click.T420ma
+    Click.C420mat
 }
 
 uses: {

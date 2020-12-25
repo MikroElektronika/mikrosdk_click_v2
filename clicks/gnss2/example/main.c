@@ -28,14 +28,11 @@
 #include "gnss2.h"
 #include "string.h"
 
-#define PROCESS_COUNTER 10
-#define PROCESS_RX_BUFFER_SIZE 500
-#define PROCESS_PARSER_BUFFER_SIZE 1000
+#define PROCESS_COUNTER 15
+#define PROCESS_RX_BUFFER_SIZE 600
+#define PROCESS_PARSER_BUFFER_SIZE 600
 
 // ------------------------------------------------------------------ VARIABLES
-
-#define DEMO_APP_RECEIVER
-//#define DEMO_APP_TRANSMITER
 
 static gnss2_t gnss2;
 static log_t logger;
@@ -46,11 +43,11 @@ static char current_parser_buf[ PROCESS_PARSER_BUFFER_SIZE ];
 
 static void gnss2_process ( void )
 {
-    int16_t rsp_size;
+    int32_t rsp_size;
     uint16_t rsp_cnt = 0;
     
     char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
-    uint16_t check_buf_cnt;    //kazi kaci da zabada ako je uint8_t
+    uint16_t check_buf_cnt; 
     uint8_t process_cnt = PROCESS_COUNTER;
     
     // Clear parser buffer
@@ -60,7 +57,7 @@ static void gnss2_process ( void )
     {
         rsp_size = gnss2_generic_read( &gnss2, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
 
-        if ( rsp_size != -1 )
+        if ( rsp_size > 0 )
         {  
             // Validation of the received data
             for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
@@ -95,13 +92,21 @@ static void parser_application ( char *rsp )
 {
     char element_buf[ 200 ] = { 0 };
     
-    log_printf( &logger, "\r\n-----------------------\r\n", element_buf ); 
+    log_printf( &logger, "\r\n-----------------------\r\n" ); 
     gnss2_generic_parser( rsp, GNSS2_NEMA_GPGGA, GNSS2_GPGGA_LATITUDE, element_buf );
-    log_printf( &logger, "Latitude:  %s \r\n", element_buf );    
-    gnss2_generic_parser( rsp, GNSS2_NEMA_GPGGA, GNSS2_GPGGA_LONGITUDE, element_buf );
-    log_printf( &logger, "Longitude:  %s \r\n", element_buf );  
-    gnss2_generic_parser( rsp, GNSS2_NEMA_GPGGA, GNSS2_GPGGA_ALTITUDE, element_buf );
-    log_printf( &logger, "Alitude: %s \r\n", element_buf );  
+    if ( strlen( element_buf ) > 0 )
+    {
+        log_printf( &logger, "Latitude:  %.2s degrees, %s minutes \r\n", element_buf, &element_buf[ 2 ] );
+        gnss2_generic_parser( rsp, GNSS2_NEMA_GPGGA, GNSS2_GPGGA_LONGITUDE, element_buf );
+        log_printf( &logger, "Longitude:  %.3s degrees, %s minutes \r\n", element_buf, &element_buf[ 3 ] );
+        memset( element_buf, 0, sizeof( element_buf ) );
+        gnss2_generic_parser( rsp, GNSS2_NEMA_GPGGA, GNSS2_GPGGA_ALTITUDE, element_buf );
+        log_printf( &logger, "Alitude: %s m", element_buf );  
+    }
+    else
+    {
+        log_printf( &logger, "Waiting for the position fix..." );
+    }
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS

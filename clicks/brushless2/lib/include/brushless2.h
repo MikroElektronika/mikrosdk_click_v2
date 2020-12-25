@@ -102,8 +102,7 @@ typedef struct
     pwm_t pwm;
 
     // ctx variable 
-
-    uint16_t pwm_period;
+    
     uint32_t pwm_freq;
 
 } brushless2_t;
@@ -209,6 +208,16 @@ void brushless2_counter_clockwise ( brushless2_t *ctx );
  * by set RST pin on Brushless 2 Click board.
  */
 void brushless2_clockwise ( brushless2_t *ctx );
+
+/**
+ * @brief Invert the direction of rotation
+ *
+ * @param ctx Click object.
+ *
+ * @description Function inverts the direction of rotation by toggling the RST pin on Brushless 2 Click board.
+ */
+
+void brushless2_invert_direction ( brushless2_t *ctx );
 
 /**
  * @brief Get Interrupt pin state function

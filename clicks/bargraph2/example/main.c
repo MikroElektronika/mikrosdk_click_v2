@@ -48,6 +48,8 @@ void application_init ( )
     bargraph2_cfg_setup( &cfg );
     BARGRAPH2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     bargraph2_init( &bargraph2, &cfg );
+    
+    barpgraph2_power( &bargraph2, BARGRAPH2_POWER_ON );
 }
 
 void application_task ( )

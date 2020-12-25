@@ -1,6 +1,6 @@
 /*!
  * \file 
- * \brief T420ma Click example
+ * \brief C420mat Click example
  * 
  * # Description
  * This aplication changes the value of the output current.
@@ -20,11 +20,11 @@
 
 #include "board.h"
 #include "log.h"
-#include "t420ma.h"
+#include "c420mat.h"
 
 // ------------------------------------------------------------------ VARIABLES
 
-static t420ma_t t420ma;
+static c420mat_t c420mat;
 static log_t logger;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -32,7 +32,7 @@ static log_t logger;
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    t420ma_cfg_t cfg;
+    c420mat_cfg_t cfg;
 
     //  Logger initialization.
 
@@ -44,16 +44,16 @@ void application_init ( void )
 
     //  Click initialization.
 
-    t420ma_cfg_setup( &cfg );
-    T420MA_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    t420ma_init( &t420ma, &cfg );
+    c420mat_cfg_setup( &cfg );
+    C420MAT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    c420mat_init( &c420mat, &cfg );
 }
 
 void application_task ( void )
 {
-   t420ma_set_i_out( &t420ma, 56 );                   // sets Iout to 5.6mA
+   c420mat_set_i_out( &c420mat, 56 );                   // sets Iout to 5.6mA
    Delay_ms( 3000 );
-   t420ma_set_i_out( &t420ma, 158 );                  // sets Iout to 15.8mA
+   c420mat_set_i_out( &c420mat, 158 );                  // sets Iout to 15.8mA
    Delay_ms( 3000 );
 }
 

@@ -1,8 +1,0 @@
-{
-    "name": "OLED BW Click",
-    "description": "OLED B/W click carries a 96 x 39px blue/white monochrome passive matrix OLED display. The display is bright, has a wide viewing angle and low power consumption.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","SSD1306"],
-    "category" : ["OLED"] 
-}

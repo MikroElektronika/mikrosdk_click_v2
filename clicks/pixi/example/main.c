@@ -43,7 +43,7 @@ void application_init ( )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
     Delay_ms( 100 );
@@ -74,10 +74,12 @@ void application_init ( )
 
 void application_task ( )
 {
-    pixi_write_reg( &pixi, PIXI_REG_GPO_DATA, 1 );
-    Delay_ms( 1000 );
+    pixi_write_reg( &pixi, PIXI_REG_GPO_DATA, 0x1 );
+    log_printf( &logger, "Led on\r\n" );
+    Delay_ms( 2000 );
     pixi_write_reg( &pixi, PIXI_REG_GPO_DATA, 0 );
-    Delay_ms( 1000 );
+    log_printf( &logger, "Led off\r\n" );
+    Delay_ms( 2000 );
 }
 
 void main ( )

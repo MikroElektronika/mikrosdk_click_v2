@@ -28,6 +28,8 @@
                           This option makes Remote Temp click well-suited for monitoring the temperature of a CPU, GPU or FPGA, where the BJT model junction can be a substrate PNP or NPN.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.3"
 }
+
+
 

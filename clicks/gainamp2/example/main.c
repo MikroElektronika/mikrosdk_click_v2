@@ -8,10 +8,10 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes CS pin as output and SPI module
+ * Initializes and sets GainAMP 2 click channel 0 to amplify the signal 2 times
  * 
  * ## Application Task  
- * Setup GainAMP 2 click channel 4 to amplify the signal 4 times
+ * Displays the voltage measured from VOUT pin
  * 
  * \author MikroE Team
  *
@@ -47,15 +47,16 @@ void application_init ( void )
     gainamp2_cfg_setup( &cfg );
     GAINAMP2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     gainamp2_init( &gainamp2, &cfg );
-
-    gainamp2_default_cfg( &gainamp2 );
-
-    log_printf( &logger,"Channel 4 - aplified 4x \r\n " );
+    
+    gainamp2_set_channel_gain ( &gainamp2, GAINAMP2_CH0, GAINAMP2_GAIN_2X );
+    log_printf( &logger,"Channel 0 - aplified 2x \r\n" ); 
 }
 
 void application_task( void )
 {
-    // Nothing to do here
+    log_printf( &logger,"Voltage at VOUT: %f \r\n", gainamp2_get_voltage( &gainamp2 ) );
+    log_printf( &logger,"------------------------------- \r\n " );
+    Delay_ms( 1000 );
 }
 
 void main ( void )

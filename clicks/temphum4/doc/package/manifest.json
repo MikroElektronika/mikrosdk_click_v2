@@ -10,7 +10,7 @@
     "dependency_list": [
     ],
     "details": "Resources/DETAILS.md",
-    "display_name": "Temp&Hum 4 click",
+    "display_name": "TempHum 4 click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -27,6 +27,8 @@
     "short_description": "Temp&Hum 4 click is a smart environmental temperature and humidity sensor Click board™.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.3"
 }
+
+
 

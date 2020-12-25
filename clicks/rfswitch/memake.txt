@@ -1,7 +1,0 @@
-type: subdirs
-project: RfSwitch
-
-subdirs: {
-    lib
-    example
-}

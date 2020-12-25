@@ -75,7 +75,7 @@
  * \{
  */
 #define EXPAND_SPI_DEVICE_OPCODE                                  0x40
-#define EXPAND_OPCODE_WRITE                                       0x00
+#define EXPAND_OPCODE_WRITE                                       0xFE
 #define EXPAND_OPCODE_READ                                        0x01
 /** \} */
 
@@ -211,6 +211,7 @@ typedef struct
     // Modules 
 
     spi_master_t spi;
+    pin_name_t chip_select;
 
 } expand_t;
 
@@ -233,8 +234,9 @@ typedef struct
 
     // static variable 
 
-    hal_spi_speed_t spi_speed;
-    hal_spi_mode_t spi_mode;
+    uint32_t spi_speed;
+    spi_master_mode_t spi_mode;
+    spi_master_chip_select_polarity_t cs_polarity;
 
 } expand_cfg_t;
 
@@ -269,16 +271,6 @@ void expand_cfg_setup ( expand_cfg_t *cfg );
 EXPAND_RETVAL expand_init ( expand_t *ctx, expand_cfg_t *cfg );
 
 /**
- * @brief Generic transfer function.
- *
- * @param ctx          Click object.
- * @param block        Transfer block structure.
- *
- * @description Generic SPI transfer, for sending and receiving packages
- */
-void expand_generic_transfer ( expand_t *ctx, spi_master_transfer_data_t *block );
-
-/**
  * @brief Generic read one bayt from register function
  *
  * @param ctx          Click object.
@@ -288,7 +280,6 @@ void expand_generic_transfer ( expand_t *ctx, spi_master_transfer_data_t *block 
  * @description Function read 8-bit of data from 8-bit register address of MCP23S17 chip.
  */
 uint8_t expand_read_byte ( expand_t *ctx, uint8_t mod_cmd, uint8_t reg_addr );
-
 /**
  * @brief Generic write one bayt to register function
  *

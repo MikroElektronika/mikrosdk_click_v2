@@ -1,7 +1,7 @@
 {
     "name": "Relay 2 Click",
     "description": "Relay 2 click is a dual relay click board™, equipped with two single-pole solid state relays (SSR), built with the patented OptoMOS® technology.",
-    "image" : "https://cdn1-shop.mikroe.com/img/product/relay-2-click/relay-2-click-thickbox_default-2.jpg",
+    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","mikrocpic"],
     "hw" : ["click","LCA717"],
     "category" : ["Relay"] 

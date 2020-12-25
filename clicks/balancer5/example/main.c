@@ -35,7 +35,6 @@ static log_t logger;
 static uint8_t temp_data;
 static uint16_t temp_uint_data;
 static float temp_float_data;
-static char log_degree[ 5 ] = { ' ', 176, 67, 13, 10 };
 
 // ------------------------------------------------------- ADDITIONAL FUNCTIONS
 
@@ -191,7 +190,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -291,7 +290,7 @@ void application_task ( void )
     temp_uint_data |= temp_data;
     temp_float_data = temp_uint_data;
     temp_float_data *= 0.5;
-    log_printf( &logger, "- TDIE: %.2f%s\r\n", temp_float_data, log_degree );
+    log_printf( &logger, "- TDIE: %.2f degC\r\n", temp_float_data );
     log_printf( &logger, "____________________\r\n" );
     
     Delay_ms( 5000 );

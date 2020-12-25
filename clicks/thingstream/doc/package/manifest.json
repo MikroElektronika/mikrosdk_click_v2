@@ -27,5 +27,9 @@
     "short_description": "Thingstream Click is an IoT gateway Click board™ with the Thingstream client SDK preinstalled.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.4"
 }
+
+
+
+

@@ -44,14 +44,11 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 - Initialization function.
 > AIRQUALITY2_RETVAL airquality2_init ( airquality2_t *ctx, airquality2_cfg_t *cfg );
 
-- Click Default Configuration function.
-> void airquality2_default_cfg ( airquality2_t *ctx );
-
 
 #### Example key functions :
 
-- Function write 8-bit data to 8-bit register on the iAQ-Core module.
-> void airquality2_write_data ( airquality2_t *ctx, uint8_t address, uint8_t write_command );
+- This function reads data.
+> void airquality2_generic_read ( airquality2_t *ctx, uint8_t *data_buf, uint8_t len );
  
 - Reads all data information about the indoor air quality.
 > uint8_t airquality2_get_all_data ( airquality2_t *ctx, uint16_t *value_co2, uint16_t *value_tvoc, int32_t *resistance );
@@ -75,8 +72,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -85,11 +83,15 @@ void application_init ( void )
     airquality2_cfg_setup( &cfg );
     AIRQUALITY2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     airquality2_init( &airquality2, &cfg );
-
-    log_printf( &logger, "----------------------------------\r\n");
-    log_printf( &logger, "           Air quality 2          \r\n");
-    log_printf( &logger, "----------------------------------\r\n");
-    Delay_100ms( );
+    
+    // Click calibration 
+    uint8_t dummy_buffer[ 9 ];
+    airquality2_generic_read( &airquality2, dummy_buffer, AIRQUALITY2_READ_ALL );
+    
+    log_printf( &logger, "----------------------------------\r\n" );
+    log_printf( &logger, "           Air quality 2          \r\n" );
+    log_printf( &logger, "----------------------------------\r\n" );
+    Delay_ms( 100 );
 }
   
 ```
@@ -113,36 +115,34 @@ void application_task ( void )
     int32_t resistance;
 
     status_info = airquality2_get_all_data( &airquality2, &value_co2, &value_tvoc, &resistance );
-    Delay_100ms();
-
-    log_printf( &logger, "       | Status : ");
+    Delay_100ms( );
 
     if ( status_info == AIRQUALITY2_STATUS_OK )
     {
-        log_printf( &logger, "       | Status : OK     |\r\n");
+        log_printf( &logger, "       | Status : OK     |\r\n" );
     }
     if ( status_info == AIRQUALITY2_STATUS_BUSY )
     {
-        log_printf( &logger, "       | Status : BUSY   |\r\n");
+        log_printf( &logger, "       | Status : BUSY   |\r\n" );
     }
     if ( status_info == AIRQUALITY2_STATUS_ERROR )
     {
-        log_printf( &logger, "       | Status : ERROR  |\r\n");
+        log_printf( &logger, "       | Status : ERROR  |\r\n" );
     }
     if ( status_info == AIRQUALITY2_STATUS_RUNIN )
     {
-        log_printf( &logger, "       | Status : RUNIN  |\r\n");
+        log_printf( &logger, "       | Status : RUNIN  |\r\n" );
     }
 
-    log_printf( &logger, "----------------------------------\r\n");
+    log_printf( &logger, "----------------------------------\r\n" );
 
-    log_printf( &logger, " CO2        : %d [ ppm ] \r\n", value_co2 );
+    log_printf( &logger, " CO2        : %u [ ppm ] \r\n", value_co2 );
 
-    log_printf( &logger, " TVOC       : %d [ ppb ] \r\n", value_tvoc );
+    log_printf( &logger, " TVOC       : %u [ ppb ] \r\n", value_tvoc );
 
-    log_printf( &logger, " Resistance : %d [ Ohm ] \r\n", resistance );
+    log_printf( &logger, " Resistance : %ld [ Ohm ] \r\n", resistance );
 
-    log_printf( &logger, "----------------------------------\r\n");
+    log_printf( &logger, "----------------------------------\r\n" );
 
     Delay_1sec( );
     Delay_1sec( );

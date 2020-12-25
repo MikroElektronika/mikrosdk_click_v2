@@ -70,6 +70,8 @@ DAC5_RETVAL dac5_init ( dac5_t *ctx, dac5_cfg_t *cfg )
 
     digital_out_init( &ctx->rst, cfg->rst );
     digital_out_init( &ctx->lda, cfg->lda );
+    
+    ctx->vref = DAC5_VREF_3300MV;
 
     return DAC5_OK;
 }
@@ -146,7 +148,7 @@ uint8_t dac5_set_ldac_pin ( dac5_t *ctx, uint8_t status )
 
 uint8_t dac5_send_data ( dac5_t *ctx, uint8_t data_reg, uint16_t data_buf )
 {
-    if ( ( data_buf < DAC5_MIN_DATA ) || ( data_buf > DAC5_MAX_DATA ) )
+    if ( data_buf > DAC5_MAX_DATA )
     {
         return DAC5_ERROR;
     }

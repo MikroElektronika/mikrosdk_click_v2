@@ -58,7 +58,6 @@ BUCKBOOST_RETVAL buckboost_init ( buckboost_t *ctx, buckboost_cfg_t *cfg )
 void buckboost_default_cfg ( buckboost_t *ctx )
 {
     buckboost_enable( ctx );
-    Delay_1ms();
     buckboost_set_mode_fixed_freq( ctx );
 }
 
@@ -84,74 +83,58 @@ void buckboost_enables_auto_burst_mode ( buckboost_t *ctx )
 
 void buckboost_set_2500mv ( buckboost_t *ctx )
 {
-    digital_out_low( &ctx->vs3 );
-    Delay_1ms();
-    digital_out_low( &ctx->vs2 );
-    Delay_1ms();
     digital_out_low( &ctx->vs1 );
+    digital_out_low( &ctx->vs2 );
+    digital_out_low( &ctx->vs3 );
 }
 
 void buckboost_set_3300mv ( buckboost_t *ctx )
 {
-    digital_out_low( &ctx->vs3 );
-    Delay_1ms();
-    digital_out_low( &ctx->vs2 );
-    Delay_1ms();
     digital_out_high( &ctx->vs1 );
+    digital_out_low( &ctx->vs2 );
+    digital_out_low( &ctx->vs3 );
 }
 
 void buckboost_set_4100mv ( buckboost_t *ctx )
 {
-    digital_out_low( &ctx->vs3 );
-    Delay_1ms();
-    digital_out_high( &ctx->vs2 );
-    Delay_1ms();
     digital_out_low( &ctx->vs1 );
+    digital_out_high( &ctx->vs2 );
+    digital_out_low( &ctx->vs3 );
 }
 
 void buckboost_set_5000mv ( buckboost_t *ctx )
 {
-    digital_out_low( &ctx->vs3 );
-    Delay_1ms();
-    digital_out_high( &ctx->vs2 );
-    Delay_1ms();
     digital_out_high( &ctx->vs1 );
+    digital_out_high( &ctx->vs2 );
+    digital_out_low( &ctx->vs3 );
 }
 
 void buckboost_set_6900mv ( buckboost_t *ctx )
 {
-    digital_out_high( &ctx->vs3 );
-    Delay_1ms();
-    digital_out_low( &ctx->vs2 );
-    Delay_1ms();
     digital_out_low( &ctx->vs1 );
+    digital_out_low( &ctx->vs2 );
+    digital_out_high( &ctx->vs3 );
 }
 
 void buckboost_set_8200mv ( buckboost_t *ctx )
 {
-    digital_out_high( &ctx->vs3 );
-    Delay_1ms();
-    digital_out_low( &ctx->vs2 );
-    Delay_1ms();
     digital_out_high( &ctx->vs1 );
+    digital_out_low( &ctx->vs2 );
+    digital_out_high( &ctx->vs3 );
 }
 
 void buckboost_set_12000mv ( buckboost_t *ctx )
 {
-    digital_out_high( &ctx->vs3 );
-    Delay_1ms();
-    digital_out_high( &ctx->vs2 );
-    Delay_1ms();
     digital_out_low( &ctx->vs1 );
+    digital_out_high( &ctx->vs2 );
+    digital_out_high( &ctx->vs3 );
 }
 
 void buckboost_set_15000mv ( buckboost_t *ctx )
 {
-    digital_out_high( &ctx->vs3 );
-    Delay_1ms();
-    digital_out_high( &ctx->vs2 );
-    Delay_1ms();
     digital_out_high( &ctx->vs1 );
+    digital_out_high( &ctx->vs2 );
+    digital_out_high( &ctx->vs3 );
 }
 
 // ------------------------------------------------------------------------- END

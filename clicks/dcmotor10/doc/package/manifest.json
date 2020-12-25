@@ -27,5 +27,7 @@
     "short_description": "DC Motor 10 Click is a brushed DC motor driver with the current limiting and current sensing. It is based on the TLE 6208-6 G, an Hex-Half-Bridge / Double Six-Driver IC, optimized for motor driving applications.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.2"
 }
+
+

@@ -1,8 +1,0 @@
-{
-    "name": "OLED C Click",
-    "description": "OLED C click is equipped with the 96x96 high-color OLED display. It can display up to 65K/262K different colors and shades on a compact size display, based on the OLED technology.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","PSP27801","SSD1351"],
-    "category" : ["OLED"] 
-}

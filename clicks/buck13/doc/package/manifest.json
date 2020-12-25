@@ -27,5 +27,6 @@
     "short_description": "Buck 13 Click is a high-efficiency step-down converter which provides a highly regulated output voltage derived from the connected power source, rated from 4.5V to 5.5V. ",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

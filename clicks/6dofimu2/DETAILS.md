@@ -128,9 +128,9 @@ void application_task ( void )
     
     log_printf( &logger, "    Accel    |    Gyro    \r\n" );
     log_printf( &logger, "--------------------------\r\n" );
-    log_printf( &logger, " X = %6d  | X = %6d \r\n", accel_data.accel_x, gyro_data.gyro_x );
-    log_printf( &logger, " Y = %6d  | Y = %6d \r\n", accel_data.accel_y, gyro_data.gyro_y );
-    log_printf( &logger, " Z = %6d  | Z = %6d \r\n", accel_data.accel_z, gyro_data.gyro_z );
+    log_printf( &logger, " X = %d  | X = %d \r\n", accel_data.accel_x, gyro_data.gyro_x );
+    log_printf( &logger, " Y = %d  | Y = %d \r\n", accel_data.accel_y, gyro_data.gyro_y );
+    log_printf( &logger, " Z = %d  | Z = %d \r\n", accel_data.accel_z, gyro_data.gyro_z );
     log_printf( &logger, "--------------------------\r\n" );    
     Delay_ms ( 1000 );
 }

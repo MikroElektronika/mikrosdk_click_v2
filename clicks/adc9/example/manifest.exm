@@ -1,8 +1,0 @@
-{
-    "name": "ADC 9 Click",
-    "description": "ADC 9 Click is 8th channel analog to digital converter expansion board, for projects where you have demand for multi channel ADC conversion such as microcontrollers with small number or none analog inputs. This Click board is based on MCP3564 a 24-bit Delta-Sigma Analog-to-Digital Converter with programmable data rate of up to 153.6 ksps from Microchip.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","MCP3564"],
-    "category" : ["ADC"] 
-}

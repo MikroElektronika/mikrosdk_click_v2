@@ -139,11 +139,11 @@ void application_task ( void )
     
     if ( time_sec_new != time_date_data.sec )
     {
-        log_printf( &logger, " Time : %02d:%02d:%02d\r\n", time_date_data.hours, time_date_data.min, time_date_data.sec );
+        log_printf( &logger, " Time : %d:%d:%d\r\n", (uint16_t)time_date_data.hours, (uint16_t)time_date_data.min, (uint16_t)time_date_data.sec );
     
         display_log_day_of_the_week( time_date_data.w_day );
     
-        log_printf( &logger, " Date : %02d.%02d.20%02d.\r\n", time_date_data.day, time_date_data.month, time_date_data.year );
+        log_printf( &logger, " Date : %d.%d.%d.\r\n", (uint16_t)time_date_data.day, (uint16_t)time_date_data.month, (uint16_t)time_date_data.year );
         log_printf( &logger, "--------------------\r\n" );
     
         time_sec_new = time_date_data.sec;

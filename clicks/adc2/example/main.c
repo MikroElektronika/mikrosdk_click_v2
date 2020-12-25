@@ -38,7 +38,7 @@ void application_init ( void )
     //  Logger initialization.
 
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
@@ -50,6 +50,8 @@ void application_init ( void )
     adc2_init( &adc2, &cfg );
 
     Delay_ms( 100 );
+    
+    adc2_set_vref( &adc2, ADC2_VCC_3v3 );
 
     log_printf( &logger, "------------------\r\n" );
     log_printf( &logger, "    ADC 2 Click   \r\n" );
@@ -58,15 +60,21 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    uint32_t adc_val;
+    float adc_val;
 
     //  Task implementation.
 
-    adc_val = adc2_adc_value_read( &adc2 );
+    adc_val = adc2_read_adc_data( &adc2 );
 
-    log_printf( &logger, "Value : %d", adc_val );
+    log_printf( &logger, "Value : %.2f mV\r\n", adc_val );
+    
+    if ( adc2.ovf_h )
+        log_printf( &logger, "HIGH OVERFLOW DETECTED\r\n" );
+    else if ( adc2.ovf_l )
+        log_printf( &logger, "LOW OVERFLOW DETECTED\r\n" );
+    
     log_printf( &logger, "------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms( 500 );
 }
 
 void main ( void )

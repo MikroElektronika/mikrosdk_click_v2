@@ -95,10 +95,10 @@ void application_task ( )
         log_printf
         ( 
             &logger, " %d days    %d:%d:%d \r\n", 
-            time_days, 
-            time_hours, 
-            time_minutes, 
-            time_seconds
+            (uint16_t)time_days, 
+            (uint16_t)time_hours, 
+            (uint16_t)time_minutes, 
+            (uint16_t)time_seconds
         );
         log_printf( &logger, "------------------\r\n" );
         time_seconds_new = time_seconds;

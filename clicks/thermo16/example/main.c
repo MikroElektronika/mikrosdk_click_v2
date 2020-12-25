@@ -27,6 +27,8 @@
 static thermo16_t thermo16;
 static log_t logger;
 
+float temp;
+
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
@@ -37,7 +39,7 @@ void application_init ( void )
     //  Logger initialization.
 
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
@@ -51,14 +53,13 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    float temp;
     
     //  Task implementation.
     
     temp = thermo16_get_temperature ( &thermo16, THERMO16_TEMP_IN_CELSIUS );
-    log_printf( &logger, "** Temperature : %f C \r\n", temp );
+    log_printf( &logger, "** Temperature : %.2f C \r\n", temp );
     
-    Delay_ms( 1500 );
+    Delay_ms( 500 );
 }
 
 void main ( void )

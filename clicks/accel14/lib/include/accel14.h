@@ -54,8 +54,8 @@
    cfg.mosi  = MIKROBUS( mikrobus, MIKROBUS_MOSI ); \
    cfg.sck   = MIKROBUS( mikrobus, MIKROBUS_SCK ); \
    cfg.cs    = MIKROBUS( mikrobus, MIKROBUS_CS ); \
-   cfg.rst = MIKROBUS( mikrobus, MIKROBUS_RST ); \
-   cfg.int_pin = MIKROBUS( mikrobus, MIKROBUS_INT )
+   cfg.i2    = MIKROBUS( mikrobus, MIKROBUS_RST ); \
+   cfg.i1    = MIKROBUS( mikrobus, MIKROBUS_INT )
 /** \} */
 
 /**
@@ -310,13 +310,11 @@ typedef struct
  */
 typedef struct
 {
-    digital_out_t cs;
-
     // Input pins 
 
-    digital_in_t rst;
-    digital_in_t int_pin;
-    
+    digital_in_t i1;
+    digital_in_t i2;
+
     // Modules 
 
     spi_master_t spi;
@@ -338,8 +336,8 @@ typedef struct
 
     // Additional gpio pins 
 
-    pin_name_t rst;
-    pin_name_t int_pin;
+    pin_name_t i2;
+    pin_name_t i1;
 
     // static variable 
 

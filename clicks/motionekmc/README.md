@@ -1,9 +1,9 @@
 \mainpage Main Page
  
 ---
-# Motion EKMC click
+# Motion EKMC library
 
-Motion 2, 3, 4 Click is a Click board™ based on EKMC, PIR motion sensor from Panasonic Corporation that's used as human motion detector.
+Motion 2, 3, 4 Click boards is a Click boards based on EKMC, PIR motion sensor from Panasonic Corporation that's used as human motion detector.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/grupe/motion-click-group.png" height=300px>

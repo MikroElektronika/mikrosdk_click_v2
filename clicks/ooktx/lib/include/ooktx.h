@@ -176,6 +176,29 @@ void ooktx_communication_stop ( ooktx_t *ctx );
  */
 void ooktx_communication_transmit ( ooktx_t *ctx, uint8_t transmit_data );
 
+/**
+ * @brief Communication transmit function.
+ * 
+ * @param ctx             Click object.
+ * @param preable_word   Preable word. 
+ * @param transmit_byte   Data package byte. 
+ * 
+ * @description This function transmits data in the OOK communication.
+ */
+void ooktx_transmit_byte ( ooktx_t *ctx, uint16_t preable_word, uint8_t transmit_byte );
+
+/**
+ * @brief Communication transmit function.
+ * 
+ * @param ctx             Click object.
+ * @param preable_word   Preable word. 
+ * @param transmit_data   Data package. 
+ * @param transmit_len   Data package length. 
+ * 
+ * @description This function transmits data in the OOK communication.
+ */
+void ooktx_transmit_data ( ooktx_t *ctx, uint16_t preable_word, uint8_t *transmit_data, uint8_t transmit_len );
+
 #ifdef __cplusplus
 }
 #endif

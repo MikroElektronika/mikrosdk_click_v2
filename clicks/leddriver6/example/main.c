@@ -1,134 +1,105 @@
 /*!
  * \file 
  * \brief Leddriver6 Click example
- * 
+ *
  * # Description
  * This application designed to be used in tunable Smart Connected Lighting applications.
  *
  * The demo application is composed of two sections :
- * 
- * ## Application Init 
- * Initialization driver init and pwm init for LED.
- * 
- * ## Application Task  
- * Waits for valid user input and executes functions based on set of valid commands.
- * 
- * 
- * \author MikroE Team
+ *
+ * ## Application Init
+ * Initializes I2C driver and PWM driver for the LED driver 6 control.
+ *
+ * ## Application Task
+ * Shows the best way how the LED driver 6 click board can be controlled by using
+ * functions from this click driver.
+ *
+ * \author Nemanja Medakovic
  *
  */
-// ------------------------------------------------------------------- INCLUDES
 
 #include "board.h"
 #include "log.h"
 #include "leddriver6.h"
 
-// ------------------------------------------------------------------ VARIABLES
-
 static leddriver6_t leddriver6;
 static log_t logger;
-
-static float duty_cycle = 0.5;
-
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
-
-static void increase ( )
-{
-    uint16_t maxLED_750mA = 1;
-    
-    duty_cycle += 0.1;
-    if ( duty_cycle > maxLED_750mA )
-    {
-        duty_cycle = maxLED_750mA;
-        log_printf( &logger, ">>> LED Maximum \r\n" );
-    }
-    log_printf( &logger, ">>> LED Increase \r\n" );
-    leddriver6_set_duty_cycle( &leddriver6, duty_cycle );
-}
-
-static void decrease ( )
-{
-    if ( duty_cycle <= 0.1 )
-    {
-        duty_cycle = 0;
-        log_printf( &logger, ">>> LED OFF \r\n" );
-    }
-    else
-    {
-        duty_cycle -= 0.1;
-    }
-    log_printf( &logger, ">>> LED Decrease \r\n" );
-    leddriver6_set_duty_cycle( &leddriver6, duty_cycle );
-}
-
-static void current_pg_voltage ( )
-{
-    uint16_t pg_volt;
-    char demo_text[ 20 ];
-
-    pg_volt = leddriver6_get_pg_voltage(  &leddriver6 );
-    
-    log_printf( &logger, ">>> PG Voltage: %d \r\n", pg_volt );
-    
-    log_printf( &logger, " mV  \r\n" );
-}
-
-// ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    leddriver6_cfg_t cfg;
 
     //  Logger initialization.
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 57600;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, "---- Application Init... ----" );
+
+    leddriver6_cfg_t leddriver6_cfg;
 
     //  Click initialization.
 
-    leddriver6_cfg_setup( &cfg );
-    LEDDRIVER6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    leddriver6_init( &leddriver6, &cfg );
+    leddriver6_cfg_setup( &leddriver6_cfg );
+    LEDDRIVER6_MAP_MIKROBUS( leddriver6_cfg, MIKROBUS_1 );
 
-    leddriver6_pwm_start( &leddriver6 );
+    if ( leddriver6_init( &leddriver6, &leddriver6_cfg ) == LEDDRIVER6_INIT_ERROR )
+    {
+        log_info( &logger, "---- Application Init Error. ----" );
+        log_info( &logger, "---- Please, run program again... ----" );
+
+        for ( ; ; );
+    }
+
+    log_info( &logger, "---- Application Init Done. ----" );
+
+    if ( leddriver6_pwm_start( &leddriver6 ) == LEDDRIVER6_INIT_ERROR )
+    {
+        log_info( &logger, "---- PWM can't be started. ----" );
+        log_info( &logger, "---- Please, run program again... ----" );
+
+        for ( ; ; );
+    }
+
+    log_info( &logger, "---- PWM is started. ----" );
 }
 
 void application_task ( void )
 {
-    uint8_t cnt;
+    log_info( &logger, "---- PWM ratio increasing. ----" );
 
-    if ( duty_cycle > 1 )
+    for ( float duty_ratio = 0.1; duty_ratio <= 1; duty_ratio += 0.1 )
     {
-        duty_cycle = 0.5;
-    }
-    
-    leddriver6_set_duty_cycle ( &leddriver6, duty_cycle );
-    duty_cycle += 0.5;
-    Delay_100ms( );
-    
-    increase( );
-    Delay_10ms( );
-    decrease( );
-    Delay_10ms( );
-    current_pg_voltage( );
+        leddriver6_set_duty_cycle( &leddriver6, duty_ratio );
 
-    for( cnt = 0; cnt < 5; cnt++ )
-    {
-        increase( );
-        Delay_10ms( );
+        Delay_ms( 1000 );
     }
-    for( cnt = 0; cnt < 3; cnt++ )
-    {
-        decrease( );
-        Delay_10ms( );
-    }
-    current_pg_voltage( );
 
-    Delay_ms( 1000 );
+    log_info( &logger, "---- PWM ratio decreasing. ----" );
+
+    for ( float duty_ratio = 0.9; duty_ratio >= 0.2; duty_ratio -= 0.1 )
+    {
+        leddriver6_set_duty_cycle( &leddriver6, duty_ratio );
+
+        Delay_ms( 1000 );
+    }
+
+    float leddriver6_pg_vol;
+
+    if ( leddriver6_get_pg_voltage( &leddriver6, &leddriver6_pg_vol ) == LEDDRIVER6_OK )
+    {
+        log_printf( &logger, "---- Power Good Voltage [V] : %.2f ----\r\n", leddriver6_pg_vol );
+
+        Delay_ms( 1000 );
+    }
+
+    if ( !leddriver6_get_interrupt_state( &leddriver6 ) )
+    {
+        log_info( &logger, "---- Fault conditions report! ----" );
+
+        Delay_ms( 1000 );
+    }
 }
 
 void main ( void )

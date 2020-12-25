@@ -158,7 +158,7 @@ typedef struct
     // static variable 
 
     uint32_t spi_speed;
-    uint8_t spi_mode;
+    spi_master_mode_t spi_mode;
     spi_master_chip_select_polarity_t cs_polarity;
     calibration_cfg_t calibration_cfg;
 

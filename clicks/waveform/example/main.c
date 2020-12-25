@@ -43,7 +43,8 @@
 static waveform_t waveform;
 static log_t logger;
 
-static uint32_t frequency;
+static uint32_t freq;
+static char rx_data_buffer[ 2 ];
 
 // ------------------------------------------------------- ADDITIONAL FUNCTIONS
 
@@ -77,16 +78,19 @@ void output_waveform ( uint32_t frequency_temp, uint8_t output_mode )
 void frequency_increment ( uint8_t output_mode )
 {
     uint32_t frequency_temp;
-    frequency += 1;
-    frequency_temp = frequency << 14;
+    freq += 1;
+    frequency_temp = freq << 14;
     output_waveform( frequency_temp, output_mode );
 }
 
 void frequency_decrement ( uint8_t output_mode )
 {
     uint32_t frequency_temp;
-    frequency -= 1;
-    frequency_temp = frequency << 14;
+    if ( freq > 1 )
+    {
+        freq -= 1;
+    }
+    frequency_temp = freq << 14;
     output_waveform( frequency_temp, output_mode );
 }
 
@@ -97,13 +101,11 @@ void application_init ( )
     log_cfg_t log_cfg;
     waveform_cfg_t cfg;
 
-    uint32_t freq;
-
     //  Logger initialization.
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -115,22 +117,64 @@ void application_init ( )
 
     freq = waveform_aprox_freqcalculation( 5000 );
     waveform_square_output( &waveform, freq );
-    freq = 0;
+    freq = 1;
 }
 
 void application_task ( )
 {
-    waveform_digipot_inc( &waveform );
-    waveform_digipot_dec( &waveform );
-
-    frequency_increment( WAVEFORM_SINE_OUT );
-    frequency_decrement( WAVEFORM_SINE_OUT );
-
-    frequency_increment( WAVEFORM_TRIANGLE_OUT );
-    frequency_decrement( WAVEFORM_TRIANGLE_OUT );
-
-    frequency_increment( WAVEFORM_SQUARE_OUT );
-    frequency_decrement( WAVEFORM_SQUARE_OUT );
+    uint8_t rx_len = log_read ( &logger, rx_data_buffer, 1 );
+    
+    if ( rx_len > 0 ) 
+    {
+       switch( rx_data_buffer[ 0 ] )
+       {
+           case '+': {
+                            waveform_digipot_inc( &waveform );
+                            log_printf( &logger, "Increasing amplitude of the current wave.\r\n" );
+                            break;
+                        }
+           case '-': {
+                            waveform_digipot_dec( &waveform );
+                            log_printf( &logger, "Decreasing amplitude of the current wave.\r\n" );
+                            break;
+                        }
+           case 'S': {
+                            frequency_increment( WAVEFORM_SINE_OUT );
+                            log_printf( &logger, "Increasing frequency of the sine wave.\r\n" );
+                            break;
+                        }
+           case 's': {
+                            frequency_decrement( WAVEFORM_SINE_OUT );
+                            log_printf( &logger, "Decreasing frequency of the sine wave.\r\n" );
+                            break;
+                        }
+           case 'T': {
+                            frequency_increment( WAVEFORM_TRIANGLE_OUT );
+                            log_printf( &logger, "Increasing frequency of the triangle wave.\r\n" );
+                            break;
+                        }
+           case 't': {
+                            frequency_decrement( WAVEFORM_TRIANGLE_OUT );
+                            log_printf( &logger, "Decreasing frequency of the triangle wave.\r\n" );
+                            break;
+                        }
+           case 'Q': {
+                            frequency_increment( WAVEFORM_SQUARE_OUT );
+                            log_printf( &logger, "Increasing frequency of the square wave.\r\n" );
+                            break;
+                        }
+           case 'q': {
+                            frequency_decrement( WAVEFORM_SQUARE_OUT );
+                            log_printf( &logger, "Decreasing frequency of the square wave.\r\n" );
+                            break;
+                        }
+           default :{
+                            break;
+                        }
+       }
+       rx_data_buffer[ 0 ] = 0;
+       rx_len = 0;
+    }
 }
 
 void main ( )

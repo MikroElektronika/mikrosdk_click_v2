@@ -32,11 +32,7 @@
 
 // ---------------------------------------------- PRIVATE FUNCTION DECLARATIONS 
 
-static void clear_buffer( bluetooth_t *ctx );
-
 void delay500ms( );
-
-void delay5sec( );
 
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
@@ -55,7 +51,7 @@ void bluetooth_cfg_setup ( bluetooth_cfg_t *cfg )
     cfg->data_bit       = UART_DATA_BITS_DEFAULT;
     cfg->parity_bit     = UART_PARITY_DEFAULT;
     cfg->stop_bit       = UART_STOP_BITS_DEFAULT;
-    cfg->uart_blocking  = true;
+    cfg->uart_blocking  = false;
 }
 
 BLUETOOTH_RETVAL bluetooth_init ( bluetooth_t *ctx, bluetooth_cfg_t *cfg )
@@ -86,26 +82,30 @@ BLUETOOTH_RETVAL bluetooth_init ( bluetooth_t *ctx, bluetooth_cfg_t *cfg )
 
     digital_out_init( &ctx->rst, cfg->rst );
 
-    
     digital_out_high( &ctx->rst );
-    
-    ctx->response_finished = 0;
-    ctx->bt_state          = 0;
-    ctx->response_id       = 0;
-    ctx->response          = 0;
-    ctx->buffer_cnt        = 0;
-    ctx->getting_settings  = 0;
 
     return BLUETOOTH_OK;
-
 }
 
 void bluetooth_generic_write ( bluetooth_t *ctx, char *data_buf, uint16_t len )
 {
-    uart_write( &ctx->uart, data_buf, len );
+    while(*data_buf) {
+        uart_write( &ctx->uart, data_buf++, 1);
+        Delay_10us();
+    }
 }
 
-int16_t bluetooth_generic_read ( bluetooth_t *ctx, char *data_buf, uint16_t max_len )
+void bluetooth_write_command ( bluetooth_t *ctx, char *data_buf, uint16_t len )
+{
+    uint8_t tmp_buf[ 30 ];
+    uint8_t carriage_return = '\r';
+    memcpy( tmp_buf, data_buf, len );
+    strcat( tmp_buf, &carriage_return );
+    
+    bluetooth_generic_write( ctx, tmp_buf, len+1 );
+}
+
+int32_t bluetooth_generic_read ( bluetooth_t *ctx, char *data_buf, uint16_t max_len )
 {
     return uart_read( &ctx->uart, data_buf, max_len );
 }
@@ -124,188 +124,82 @@ void bluetooth_hw_reset ( bluetooth_t *ctx )
     Delay_1sec( );
 }
 
-uint8_t bluetooth_get_response ( bluetooth_t *ctx )
+void bluetooth_enter_command_mode ( bluetooth_t *ctx )
 {
-    if ( ctx->response_finished )
-    {
-        ctx->response_finished = 0;
-        return ctx->response_id;
-    }
-    else
-    {
-        return 0;
-    }
+    uint8_t cmd_mode[ ] = "$$$";
+
+    bluetooth_generic_write( ctx, cmd_mode, 3 );
 }
 
-void bluetooth_rx_isr ( bluetooth_t *ctx, char character )
+void bluetooth_exit_command_mode ( bluetooth_t *ctx )
 {
-    ctx->driver_buffer[ ctx->buffer_cnt++ ] = character;
+    uint8_t exit_cmd_mode[ ] = "---";
 
-    if( character == 13 )
-    {
-        ctx->response_finished = 1;
-
-        if( !ctx->getting_settings )
-        {
-            ctx->driver_buffer[ --ctx->buffer_cnt ] = 0;
-        }
-    }
+    bluetooth_write_command( ctx, exit_cmd_mode, 3 );
 }
 
-BLUETOOTH_RETVAL bluetooth_enter_command_mode ( bluetooth_t *ctx )
+void bluetooth_toggle_echo ( bluetooth_t *ctx )
 {
-    uint8_t input = 36;
+    uint8_t cmd_toggle = '+';
 
-    bluetooth_generic_write( ctx, &input, 1 );
-    bluetooth_generic_write( ctx, &input, 1 );
-    bluetooth_generic_write( ctx, &input, 1 );
-    
-    return BLUETOOTH_OK;
+    bluetooth_write_command( ctx, &cmd_toggle, 1 );
 }
 
-BLUETOOTH_RETVAL bluetooth_exit_command_mode ( bluetooth_t *ctx )
+void bluetooth_set_device_name ( bluetooth_t *ctx, uint8_t *name )
 {
-    uint8_t input = 45;
-
-    bluetooth_generic_write( ctx, &input, 1 );
-    bluetooth_generic_write( ctx, &input, 1 );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    return BLUETOOTH_OK;
-}
-
-BLUETOOTH_RETVAL bluetooth_set_toggles_echo ( bluetooth_t *ctx, uint8_t t_echo )
-{
-    uint8_t input;
-
-    if ( t_echo == 0 )
-    {
-        input = 45;
-        bluetooth_generic_write( ctx, &input, 1 );
-    }
-    else if ( t_echo == 1 )
-    {
-        input = 43;
-        bluetooth_generic_write( ctx, &input, 1 );
-    }
-    else
-    {
-        return BLUETOOTH_ERR;
-    }
-
-    return BLUETOOTH_OK;
-}
-
-BLUETOOTH_RETVAL bluetooth_set_device_name ( bluetooth_t *ctx, uint8_t *name )
-{
-    uint8_t input = 13;
-    uint8_t *name_ptr = name;
-    uint8_t tx_buffer[ 20 ] = { "SN," };
+    uint8_t tx_buffer[ 23 ] = { "SN," };
     
     if( strlen( name ) > 20 )
     {
-        return BLUETOOTH_ERR;
+        name[ 20 ] = 0;
     }
     
-    clear_buffer( ctx );
-    strcat( tx_buffer, name_ptr );
-    bluetooth_generic_write( ctx, tx_buffer, strlen( tx_buffer ) );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    return BLUETOOTH_OK;
+    strcat( tx_buffer, name );
+    bluetooth_write_command( ctx, tx_buffer, strlen( tx_buffer ) );
 }
 
-BLUETOOTH_RETVAL bluetooth_set_operating_mode ( bluetooth_t *ctx, uint8_t op_mode )
+void bluetooth_set_operating_mode ( bluetooth_t *ctx, uint8_t op_mode )
 {
-    uint8_t input = 13;
-    uint8_t tx_buffer[ 20 ] = { "SM," };
-    uint8_t buff[ 5 ];
+    uint8_t tx_buffer[ 5 ] = { "SM," };
     
-    if ( op_mode > 6 )
-    {
-        return BLUETOOTH_ERR;
-    }
-    
-    buff[ 0 ] = op_mode + 48;
-
-    clear_buffer( ctx );
-    strcat( tx_buffer, buff );
-    bluetooth_generic_write( ctx, tx_buffer, strlen( tx_buffer ) );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    return BLUETOOTH_OK;
+    tx_buffer[ 3 ] = op_mode + 48;
+    bluetooth_write_command( ctx, tx_buffer, strlen( tx_buffer ) );
 }
 
-BLUETOOTH_RETVAL bluetooth_enable_7_bit_data_mode ( bluetooth_t *ctx )
+void bluetooth_enable_7_bit_data_mode ( bluetooth_t *ctx )
 {
-    uint8_t input = 13;
-    uint8_t tx_buffer[ 20 ] = { "S7,1" };
+    uint8_t tx_buffer[ 5 ] = { "S7,1" };
 
-    clear_buffer( ctx );
-    bluetooth_generic_write( ctx, tx_buffer, strlen( tx_buffer ) );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    return BLUETOOTH_OK;
+    bluetooth_write_command( ctx, tx_buffer, strlen( tx_buffer ) );
 }
 
-
-BLUETOOTH_RETVAL bluetooth_disable_7_bit_data_mode ( bluetooth_t *ctx )
+void bluetooth_disable_7_bit_data_mode ( bluetooth_t *ctx )
 {
-    uint8_t input = 13;
-    uint8_t tx_buffer[ 20 ] = { "S7,0" };
+    uint8_t tx_buffer[ 5 ] = { "S7,0" };
 
-    clear_buffer( ctx );
-    bluetooth_generic_write( ctx, tx_buffer, strlen( tx_buffer ) );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    return BLUETOOTH_OK;
+    bluetooth_write_command( ctx, tx_buffer, strlen( tx_buffer ) );
 }
 
-
-BLUETOOTH_RETVAL bluetooth_set_authentication ( bluetooth_t *ctx, uint8_t auth_value )
+void bluetooth_set_authentication ( bluetooth_t *ctx, uint8_t auth_value )
 {
-    uint8_t input = 13;
-    uint8_t tx_buffer[ 20 ] = { "SA," };
-    uint8_t buff[ 5 ];
+    uint8_t tx_buffer[ 5 ] = { "SA," };
 
-    if ( auth_value > 4 || auth_value == 3 )
-    {
-        return BLUETOOTH_ERR;
-    }
+    tx_buffer[ 3 ] = auth_value + 48;
 
-    buff[ 0 ] = auth_value + 48;
-
-    strcat( tx_buffer, buff );
-    bluetooth_generic_write( ctx, tx_buffer, strlen( tx_buffer ) );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    return BLUETOOTH_OK;
+    bluetooth_write_command( ctx, tx_buffer, strlen( tx_buffer ) );
 }
 
-BLUETOOTH_RETVAL bluetooth_set_break ( bluetooth_t *ctx, uint8_t break_signal )
+void bluetooth_set_break ( bluetooth_t *ctx, uint8_t break_signal )
 {
-    uint8_t input = 13;
-    uint8_t tx_buffer[ 20 ] = { "SB," };
-    uint8_t buff[ 5 ];
+    uint8_t tx_buffer[ 5 ] = { "SB," };
 
-    if ( break_signal < 1 || break_signal > 6 )
-    {
-        return BLUETOOTH_ERR;
-    }
+    tx_buffer[ 3 ] = break_signal + 48;
 
-    buff[ 0 ] = break_signal + 48;
-
-    clear_buffer( ctx );
-    strcat( tx_buffer, buff );
-    bluetooth_generic_write( ctx, tx_buffer, strlen( tx_buffer ) );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    return BLUETOOTH_OK;
+    bluetooth_write_command( ctx, tx_buffer, strlen( tx_buffer ) );
 }
 
 BLUETOOTH_RETVAL bluetooth_set_cod ( bluetooth_t *ctx, uint8_t *msw, uint8_t *lsw )
 {
-    uint8_t input = 13;
     uint8_t *msw_ptr = msw;
     uint8_t *lsw_ptr = lsw;
     uint8_t tx_buffer_c[ 20 ] = { "SC," };
@@ -316,72 +210,44 @@ BLUETOOTH_RETVAL bluetooth_set_cod ( bluetooth_t *ctx, uint8_t *msw, uint8_t *ls
         return BLUETOOTH_ERR;
     }
 
-    clear_buffer( ctx );
     strcat( tx_buffer_c, msw );
-    bluetooth_generic_write( ctx, tx_buffer_c, strlen( tx_buffer_c ) );
-    bluetooth_generic_write( ctx, &input, 1 );
+    bluetooth_write_command( ctx, tx_buffer_c, strlen( tx_buffer_c ) );
     delay500ms( );
-
-    while( !ctx->response_finished );
     
     strcat( tx_buffer_d, lsw );
-    bluetooth_generic_write( ctx, tx_buffer_d, strlen( tx_buffer_d ) );
-    bluetooth_generic_write( ctx, &input, 1 );
+    bluetooth_write_command( ctx, tx_buffer_d, strlen( tx_buffer_d ) );
     delay500ms( );
 
-    while( !ctx->response_finished );
-
     return BLUETOOTH_OK;
 }
 
-BLUETOOTH_RETVAL bluetooth_set_factory_defaults ( bluetooth_t *ctx )
+void bluetooth_set_factory_defaults ( bluetooth_t *ctx )
 {
-    uint8_t input = 13;
-    uint8_t tmp_buffer[ 20 ] = { "SF,1" };
+    uint8_t tmp_buffer[ 5 ] = { "SF,1" };
 
-    clear_buffer( ctx );
-    bluetooth_generic_write( ctx, tmp_buffer, strlen( tmp_buffer ) );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    return BLUETOOTH_OK;
+    bluetooth_write_command( ctx, tmp_buffer, strlen( tmp_buffer ) );
 }
 
-BLUETOOTH_RETVAL bluetooth_set_discoverability ( bluetooth_t *ctx, uint8_t *d_hex_value )
+void bluetooth_set_discoverability ( bluetooth_t *ctx, uint8_t *d_hex_value )
 {
-    uint8_t input = 13;
-    uint8_t *d_hex_value_ptr = d_hex_value;
     uint8_t tmp_buffer[ 20 ] = { "SI," };
 
-    clear_buffer( ctx );
-    strcat( tmp_buffer, d_hex_value_ptr );
-    bluetooth_generic_write( ctx, tmp_buffer, strlen( tmp_buffer ) );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    return BLUETOOTH_OK;
+    strcat( tmp_buffer, d_hex_value );
+    bluetooth_write_command( ctx, tmp_buffer, strlen( tmp_buffer ) );
 }
 
-BLUETOOTH_RETVAL  bluetooth_setConnectability ( bluetooth_t *ctx, uint8_t *c_hex_value )
+void bluetooth_setConnectability ( bluetooth_t *ctx, uint8_t *c_hex_value )
 {
-    uint8_t input = 13;
-    uint8_t *c_hex_value_ptr = c_hex_value;
     uint8_t tmp_buffer[ 20 ] = { "SJ," };
 
-    clear_buffer( ctx );
-    strcat( tmp_buffer, c_hex_value_ptr );
-    bluetooth_generic_write( ctx, tmp_buffer, strlen( tmp_buffer ) );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    while( !ctx->response_finished );
-
-    return BLUETOOTH_OK;
+    strcat( tmp_buffer, c_hex_value );
+    bluetooth_write_command( ctx, tmp_buffer, strlen( tmp_buffer ) );
 }
 
 BLUETOOTH_RETVAL bluetooth_set_uart_parity ( bluetooth_t *ctx, uint8_t character )
 {
     uint8_t input;
     uint8_t tmp_buffer[ 20 ] = { "SL," };
-    
-    clear_buffer( ctx );
     
     switch ( character )
     {
@@ -394,7 +260,6 @@ BLUETOOTH_RETVAL bluetooth_set_uart_parity ( bluetooth_t *ctx, uint8_t character
             bluetooth_generic_write( ctx, &input, 1 );
 
             return BLUETOOTH_OK;
-            break;
         }
         case  'O':
         {
@@ -405,7 +270,6 @@ BLUETOOTH_RETVAL bluetooth_set_uart_parity ( bluetooth_t *ctx, uint8_t character
             bluetooth_generic_write( ctx, &input, 1 );
 
             return BLUETOOTH_OK;
-            break;
         }
         case  'N':
         {
@@ -416,545 +280,271 @@ BLUETOOTH_RETVAL bluetooth_set_uart_parity ( bluetooth_t *ctx, uint8_t character
             bluetooth_generic_write( ctx, &input, 1 );
 
             return BLUETOOTH_OK;
-            break;
         }
     }
 
     return BLUETOOTH_ERR;
 }
 
-BLUETOOTH_RETVAL bluetooth_set_extended_status_string ( bluetooth_t *ctx, uint8_t *es_string )
+void bluetooth_set_extended_status_string ( bluetooth_t *ctx, uint8_t *es_string )
 {
-    uint8_t input = 13;
-    uint8_t *es_string_ptr = es_string;
-    uint8_t tmp_buffer[ 20 ] = { "SO," };
+    uint8_t tx_buffer[ 23 ] = { "SO," };
     
-    if ( strlen( es_string ) > 8 )
+    if( strlen( es_string ) > 8 )
     {
-        return BLUETOOTH_ERR;
+        es_string[ 8 ] = 0;
     }
-
-    clear_buffer( ctx );
-    strcat( tmp_buffer, es_string_ptr );
-    bluetooth_generic_write( ctx, tmp_buffer, strlen( tmp_buffer ) );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    return BLUETOOTH_OK;
+    
+    strcat( tx_buffer, es_string );
+    bluetooth_write_command( ctx, tx_buffer, strlen( tx_buffer ) );
 }
-
 
 BLUETOOTH_RETVAL bluetooth_set_security_pin_code ( bluetooth_t *ctx, uint8_t *sp_code )
 {
-    uint8_t input = 13;
-    uint8_t *sp_code_ptr = sp_code;
-    uint8_t tmp_buffer[ 20 ] = { "SP," };
+    uint8_t tmp_buffer[ 23 ] = { "SP," };
     
     if ( strlen( sp_code ) > 20 )
     {
         return BLUETOOTH_ERR;
     }
 
-    clear_buffer( ctx );
-    strcat( tmp_buffer, sp_code_ptr );
-    bluetooth_generic_write( ctx, tmp_buffer, strlen( tmp_buffer ) );
-    bluetooth_generic_write( ctx, &input, 1 );
+    strcat( tmp_buffer, sp_code );
+    bluetooth_write_command( ctx, tmp_buffer, strlen( tmp_buffer ) );
 
     return BLUETOOTH_OK;
 }
 
 BLUETOOTH_RETVAL bluetooth_set_special_config ( bluetooth_t *ctx, uint16_t special_config )
 {
-    uint8_t input = 13;
-
     switch ( special_config )
     {
         case  0:
         {
-            bluetooth_generic_write( ctx, "SQ,0", 4 );
-            bluetooth_generic_write( ctx, &input, 1 );
+            bluetooth_write_command( ctx, "SQ,0", 4 );
 
             return BLUETOOTH_OK;
-            break;
         }
         case  4:
         {
-            bluetooth_generic_write( ctx, "SQ,4", 4 );
-            bluetooth_generic_write( ctx, &input, 1 );
-
+            bluetooth_write_command( ctx, "SQ,4", 4 );
+            
             return BLUETOOTH_OK;
-            break;
         }
         case  8:
         {
-            bluetooth_generic_write( ctx, "SQ,8", 4 );
-            bluetooth_generic_write( ctx, &input, 1 );
+            bluetooth_write_command( ctx, "SQ,8", 4 );
 
             return BLUETOOTH_OK;
-            break;
         }
         case  16:
         {
-            bluetooth_generic_write( ctx, "SQ,16", 5 );
-            bluetooth_generic_write( ctx, &input, 1 );
+            bluetooth_write_command( ctx, "SQ,16", 5 );
 
             return BLUETOOTH_OK;
-            break;
         }
         case  128:
         {
-            bluetooth_generic_write( ctx, "SQ,128", 6 );
-            bluetooth_generic_write( ctx, &input, 1 );
+            bluetooth_write_command( ctx, "SQ,128", 6 );
 
             return BLUETOOTH_OK;
-            break;
         }
         case  256:
         {
-            bluetooth_generic_write( ctx, "SQ,256", 6 );
-            bluetooth_generic_write( ctx, &input, 1 );
+            bluetooth_write_command( ctx, "SQ,256", 6 );
 
             return BLUETOOTH_OK;
-            break;
         }
     }
 
     return BLUETOOTH_ERR;
 }
 
-BLUETOOTH_RETVAL bluetooth_set_remote_address ( bluetooth_t *ctx, uint8_t *r_addr )
+void bluetooth_set_remote_address ( bluetooth_t *ctx, uint8_t *r_addr )
 {
-    uint8_t input = 13;
-    uint8_t *r_addr_ptr = r_addr;
     uint8_t tmp_buffer[ 20 ] = { "SR," };
 
-    clear_buffer( ctx );
-    strcat( tmp_buffer, r_addr_ptr );
-    bluetooth_generic_write( ctx, tmp_buffer, strlen( tmp_buffer ) );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    return BLUETOOTH_OK;
+    strcat( tmp_buffer, r_addr );
+    bluetooth_write_command( ctx, tmp_buffer, strlen( tmp_buffer ) );
 }
 
 BLUETOOTH_RETVAL bluetooth_set_baud_rate ( bluetooth_t *ctx, uint32_t baud_rate )
 {
-    uint8_t input = 13;
-
     switch ( baud_rate )
     {
         case  1200:
         {
-            bluetooth_generic_write( ctx, "SU,12", 5 );
-            bluetooth_generic_write( ctx, &input, 1 );
+            bluetooth_write_command( ctx, "SU,12", 5 );
 
             return BLUETOOTH_OK;
-            break;
         }
         case  2400:
         {
-            bluetooth_generic_write( ctx, "SU,24", 5 );
-            bluetooth_generic_write( ctx, &input, 1 );
+            bluetooth_write_command( ctx, "SU,24", 5 );
 
             return BLUETOOTH_OK;
-            break;
         }
         case  9600:
         {
-            bluetooth_generic_write( ctx, "SU,96", 5 );
-            bluetooth_generic_write( ctx, &input, 1 );
+            bluetooth_write_command( ctx, "SU,96", 5 );
 
             return BLUETOOTH_OK;
-            break;
         }
         case  19200:
         {
-            bluetooth_generic_write( ctx, "SU,19", 5 );
-            bluetooth_generic_write( ctx, &input, 1 );
+            bluetooth_write_command( ctx, "SU,19", 5 );
 
             return BLUETOOTH_OK;
-            break;
         }
         case  38400:
         {
-            bluetooth_generic_write( ctx, "SU,38", 5 );
-            bluetooth_generic_write( ctx, &input, 1 );
+            bluetooth_write_command( ctx, "SU,38", 5 );
 
             return BLUETOOTH_OK;
-            break;
         }
         case  57600:
         {
-            bluetooth_generic_write( ctx, "SU,57", 5 );
-            bluetooth_generic_write( ctx, &input, 1 );
+            bluetooth_write_command( ctx, "SU,57", 5 );
 
             return BLUETOOTH_OK;
-            break;
         }
         case  115200:
         {
-            bluetooth_generic_write( ctx, "SU,11", 5  );
-            bluetooth_generic_write( ctx, &input, 1 );
+            bluetooth_write_command( ctx, "SU,11", 5  );
 
             return BLUETOOTH_OK;
-            break;
         }
     }
 
     return BLUETOOTH_ERR;
 }
 
-BLUETOOTH_RETVAL bluetooth_enable_bonding ( bluetooth_t *ctx )
+void bluetooth_enable_bonding ( bluetooth_t *ctx )
 {
-    uint8_t input = 13;
-
-    clear_buffer( ctx );
-    bluetooth_generic_write( ctx, "SX,1", 4 );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    return BLUETOOTH_OK;
+    bluetooth_write_command( ctx, "SX,1", 4 );
 }
 
-
-BLUETOOTH_RETVAL bluetooth_disable_bonding ( bluetooth_t *ctx )
+void bluetooth_disable_bonding ( bluetooth_t *ctx )
 {
-    uint8_t input = 13;
-
-    clear_buffer( ctx );
-    bluetooth_generic_write( ctx, "SX,0", 4 );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    return BLUETOOTH_OK;
+    bluetooth_write_command( ctx, "SX,0", 4 );
 }
 
-
-BLUETOOTH_RETVAL bluetooth_reboot ( bluetooth_t *ctx )
+void bluetooth_reboot ( bluetooth_t *ctx )
 { 
-    uint8_t input = 13;
-    
-    clear_buffer( ctx );
-    bluetooth_generic_write( ctx, "R,1", 3 );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    return BLUETOOTH_OK;
+    bluetooth_write_command( ctx, "R,1", 3 );
 }
-
 
 BLUETOOTH_RETVAL bluetooth_set_profile ( bluetooth_t *ctx, uint8_t profile )
 {
-    uint8_t input = 13;
     uint8_t tx_buffer[ 20 ] = { "S~," };
-    uint8_t buff[ 5 ];
 
     if ( profile > 6 )
     {
         return BLUETOOTH_ERR;
     }
 
-    buff[ 0 ] = profile + 48;
+    tx_buffer[ 3 ] = profile + 48;
 
-    clear_buffer( ctx );
-    strcat( tx_buffer, buff );
-    bluetooth_generic_write( ctx, tx_buffer, strlen( tx_buffer ) );
-    bluetooth_generic_write( ctx, &input, 1 );
+    bluetooth_write_command( ctx, tx_buffer, strlen( tx_buffer ) );
 
     return BLUETOOTH_OK;
 }
 
-BLUETOOTH_RETVAL bluetooth_enable_role_switch ( bluetooth_t *ctx )
+void bluetooth_enable_role_switch ( bluetooth_t *ctx )
 {
-    uint8_t input = 13;
-    clear_buffer( ctx );
-    bluetooth_generic_write( ctx, "S?,1", 4 );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    return BLUETOOTH_OK;
+    bluetooth_write_command( ctx, "S?,1", 4 );
 }
 
-
-BLUETOOTH_RETVAL bluetooth_disable_role_switch ( bluetooth_t *ctx )
+void bluetooth_disable_role_switch ( bluetooth_t *ctx )
 {
-    uint8_t input = 13;
-    clear_buffer( ctx );
-    bluetooth_generic_write( ctx, "S?,0", 4 );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    return BLUETOOTH_OK;
+    bluetooth_write_command( ctx, "S?,0", 4 );
 }
 
-BLUETOOTH_RETVAL bluetooth_connect_to_remote_address ( bluetooth_t *ctx, uint8_t *r_addr )
+void bluetooth_connect_to_remote_address ( bluetooth_t *ctx, uint8_t *r_addr )
 {
-    uint8_t input = 13;
-    uint8_t *r_addr_ptr = r_addr;
     uint8_t tx_buffer[ 20 ] = { "C," };
 
-    clear_buffer( ctx );
-    strcat( tx_buffer, r_addr_ptr );
-    bluetooth_generic_write( ctx, tx_buffer, strlen( tx_buffer ) );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    return BLUETOOTH_OK;
+    strcat( tx_buffer, r_addr );
+    bluetooth_write_command( ctx, tx_buffer, strlen( tx_buffer ) );
 }
 
-
-BLUETOOTH_RETVAL bluetooth_connect_to_remote_address_fast_mode ( bluetooth_t *ctx, uint8_t *r_addr )
+void bluetooth_connect_to_remote_address_fast_mode ( bluetooth_t *ctx, uint8_t *r_addr )
 {
-    uint8_t input = 13;
-    uint8_t *r_addr_ptr = r_addr;
     uint8_t tx_buffer[ 20 ] = { "CF," };
-
-    clear_buffer( ctx );
-    strcat( tx_buffer, r_addr_ptr );
-    bluetooth_generic_write( ctx, tx_buffer, strlen( tx_buffer ) );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    return BLUETOOTH_OK;
-}
-
-
-BLUETOOTH_RETVAL bluetooth_endspecial_config ( bluetooth_t *ctx )
-{
-    uint8_t input = 13;
-    clear_buffer( ctx );
-    bluetooth_generic_write( ctx, "F,1", 3 );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    return BLUETOOTH_OK;
-}
-
-
-BLUETOOTH_RETVAL bluetooth_get_help ( bluetooth_t *ctx, uint8_t *response )
-{
-    uint8_t input = 13;
-    uint8_t *tmp_ptr = response;
-    uint8_t tmp[ 15 ] = { 0 };
-    uint8_t cnt;
-
-    ctx->getting_settings = 1;
-
-    clear_buffer( ctx );
-
-    bluetooth_generic_write( ctx, "H", 1 );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    for( cnt = 0; cnt < 30; cnt++ )
-    {
-        while( !ctx->response_finished );
-
-        ctx->response_finished = 0;
-    }
-
-    strcpy( tmp_ptr, ctx->driver_buffer );
-    ctx->getting_settings = 0;
     
-    return BLUETOOTH_OK;
+    strcat( tx_buffer, r_addr );
+    bluetooth_write_command( ctx, tx_buffer, strlen( tx_buffer ) );
 }
 
-BLUETOOTH_RETVAL bluetooth_get_basic_settings ( bluetooth_t *ctx, uint8_t *response )
+void bluetooth_endspecial_config ( bluetooth_t *ctx )
 {
-    uint8_t input = 13;
-    uint8_t *tmp_ptr = response;
-    uint8_t tmp[ 15 ] = { 0 };
-    uint8_t cnt;
-
-    ctx->getting_settings = 1;
-
-    clear_buffer( ctx );
-
-    bluetooth_generic_write( ctx, "D", 1 );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    for( cnt = 0; cnt < 30; cnt++ )
-    {
-        while( !ctx->response_finished );
-
-        ctx->response_finished = 0;
-    }
-
-    strcpy( tmp_ptr, ctx->driver_buffer );
-    ctx->getting_settings = 0;
-    
-    return BLUETOOTH_OK;
-}
-
-BLUETOOTH_RETVAL bluetooth_get_extended_settings ( bluetooth_t *ctx, uint8_t *response )
-{
-    uint8_t input = 13;
-    uint8_t *tmp_ptr = response;
-    uint8_t tmp[ 15 ] = { 0 };
-    uint8_t cnt;
-
-    ctx->getting_settings = 1;
-
-    clear_buffer( ctx );
-
-    bluetooth_generic_write( ctx, "E", 1 );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    for( cnt = 0; cnt < 30; cnt++ )
-    {
-        while( !ctx->response_finished );
-
-        ctx->response_finished = 0;
-    }
-
-    strcpy( tmp_ptr, ctx->driver_buffer );
-    ctx->getting_settings = 0;
-    
-    return BLUETOOTH_OK;
+    bluetooth_write_command( ctx, "F,1", 3 );
 }
 
 
-BLUETOOTH_RETVAL bluetooth_get_device_address ( bluetooth_t *ctx, uint8_t *response )
+void bluetooth_get_help ( bluetooth_t *ctx )
 {
-    uint8_t input = 13;
-    uint8_t *tmp_ptr = response;
-    uint8_t tmp[ 15 ] = { 0 };
-    uint8_t cnt;
-
-    ctx->getting_settings = 1;
-
-    clear_buffer( ctx );
-
-    bluetooth_generic_write( ctx, "GB", 2 );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    for( cnt = 0; cnt < 30; cnt++ )
-    {
-        while( !ctx->response_finished );
-
-        ctx->response_finished = 0;
-    }
-
-    strcpy( tmp_ptr, ctx->driver_buffer );
-    ctx->getting_settings = 0;
-    
-    return BLUETOOTH_OK;
+    bluetooth_write_command( ctx, "H", 1 );
 }
 
-
-void bluetooth_scans_device ( bluetooth_t *ctx, uint8_t *response )
+void bluetooth_get_basic_settings ( bluetooth_t *ctx )
 {
-    uint8_t input = 13;
-    uint8_t *tmp_ptr = response;
-    uint8_t tmp[ 15 ] = { 0 };
-    uint8_t cnt;
-
-    ctx->getting_settings = 1;
-
-    clear_buffer( ctx );
-
-    bluetooth_generic_write( ctx, "IQ", 2 );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    for( cnt = 0; cnt < 30; cnt++ )
-    {
-        while( !ctx->response_finished );
-
-        ctx->response_finished = 0;
-    }
-
-    strcpy( tmp_ptr, ctx->driver_buffer );
-    ctx->getting_settings = 0;
+    bluetooth_write_command( ctx, "D", 1 );
 }
 
-
-void bluetooth_get_signal_status ( bluetooth_t *ctx, uint8_t *response )
+void bluetooth_get_extended_settings ( bluetooth_t *ctx )
 {
-    uint8_t input = 13;
-    uint8_t *tmp_ptr = response;
-    uint8_t tmp[ 15 ] = { 0 };
-    uint8_t cnt;
-
-    ctx->getting_settings = 1;
-
-    clear_buffer( ctx );
-
-    bluetooth_generic_write( ctx, "M", 1 );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    for( cnt = 0; cnt < 30; cnt++ )
-    {
-        while( !ctx->response_finished );
-
-        ctx->response_finished = 0;
-    }
-
-    strcpy( tmp_ptr, ctx->driver_buffer );
-    ctx->getting_settings = 0;
+    bluetooth_write_command( ctx, "E", 1 );
 }
 
-
-BLUETOOTH_RETVAL bluetooth_set_undiscoverable (  bluetooth_t *ctx )
+void bluetooth_get_device_address ( bluetooth_t *ctx )
 {
-    uint8_t input = 13;
-    clear_buffer( ctx );
-    bluetooth_generic_write( ctx, "Q,", 2 );
-    bluetooth_generic_write( ctx, &input, 1 );
+    bluetooth_write_command( ctx, "GB", 2 );
+}
 
-    return BLUETOOTH_OK;
+void bluetooth_scans_device ( bluetooth_t *ctx )
+{
+    bluetooth_write_command( ctx, "IQ", 2 );
+}
+
+void bluetooth_get_signal_status ( bluetooth_t *ctx )
+{
+    bluetooth_write_command( ctx, "M", 1 );
+}
+
+void bluetooth_set_undiscoverable (  bluetooth_t *ctx )
+{
+    bluetooth_write_command( ctx, "Q,", 2 );
 }
 
 BLUETOOTH_RETVAL bluetooth_set_quiet_mode ( bluetooth_t *ctx, uint8_t q_mode )
 {
-    uint8_t input = 13;
     uint8_t tx_buffer[ 20 ] = { "Q," };
-    uint8_t buff[ 5 ];
 
     if ( q_mode == 0 || q_mode == 1 || q_mode == 2 )
     {
-        buff[ 0 ] = q_mode + 48;
+        tx_buffer[ 3 ] = q_mode + 48;
     }
     else if ( q_mode == 3 )
     {
-        buff[ 0 ] = 63;
+        tx_buffer[ 3 ] = 63;
     }
     else
     {
         return BLUETOOTH_ERR;
     }
 
-    clear_buffer( ctx );
-    strcat( tx_buffer, buff );
-    bluetooth_generic_write( ctx, tx_buffer, strlen( tx_buffer ) );
-    bluetooth_generic_write( ctx, &input, 1 );
+    bluetooth_write_command( ctx, tx_buffer, strlen( tx_buffer ) );
 
     return BLUETOOTH_OK;
 }
 
 
-BLUETOOTH_RETVAL bluetooth_get_firmware_version ( bluetooth_t *ctx, uint8_t *firmware_version )
+void bluetooth_get_firmware_version ( bluetooth_t *ctx )
 {
-    uint8_t input = 13;
-    uint8_t *tmp_ptr = firmware_version;
-    uint8_t tmp[ 15 ] = { 0 };
-    uint8_t cnt;
-
-    ctx->getting_settings = 1;
-
-    clear_buffer( ctx );
-
-    bluetooth_generic_write( ctx, "V", 1 );
-    bluetooth_generic_write( ctx, &input, 1 );
-
-    for( cnt = 0; cnt < 30; cnt++ )
-    {
-        while( !ctx->response_finished );
-
-        ctx->response_finished = 0;
-    }
-
-    strcpy( tmp_ptr, ctx->driver_buffer );
-    ctx->getting_settings = 0;
-
-    return BLUETOOTH_OK;
+    bluetooth_write_command( ctx, "V", 1 );
 }
 
 // ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
-
-static void clear_buffer( bluetooth_t *ctx )
-{
-    memset( ctx->driver_buffer, 0, 255 );
-    ctx->response_finished = 0;
-}
 
 void delay500ms()
 {
@@ -963,15 +553,6 @@ void delay500ms()
     Delay_100ms();
     Delay_100ms();
     Delay_100ms();
-}
-
-void delay5sec()
-{
-    Delay_1sec();
-    Delay_1sec();
-    Delay_1sec();
-    Delay_1sec();
-    Delay_1sec();
 }
 
 // ------------------------------------------------------------------------- END

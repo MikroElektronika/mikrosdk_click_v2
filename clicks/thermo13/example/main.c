@@ -42,6 +42,7 @@ void application_init ( void )
 
     log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -78,8 +79,7 @@ void application_task ( void )
 {
     float temperature;
 
-    temperature = thermo13_get_ambient_temperature_data ( &thermo13,  
-THERMO13_TEMP_IN_CELSIUS );
+    temperature = thermo13_get_ambient_temperature_data ( &thermo13, THERMO13_TEMP_IN_CELSIUS );
     log_printf( &logger, "** temperature %.2f ** \r\n", temperature );
     log_printf( &logger, " ----------------------------\r\n" );
     Delay_ms ( 1500 );

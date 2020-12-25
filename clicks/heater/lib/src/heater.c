@@ -43,7 +43,7 @@ void heater_cfg_setup ( heater_cfg_t *cfg, heater_config_t  *cfg1)
     cfg->rst = HAL_PIN_NC;
     cfg->cs  = HAL_PIN_NC;
 
-    cfg1->dev_pwm_freq 	  = 5000;
+    cfg1->dev_pwm_freq 	  = HEATER_DEF_FREQ;
 
     cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
     cfg->i2c_address = HEATER_SLAVE_ADDRESS;
@@ -85,26 +85,6 @@ HEATER_RETVAL heater_init ( heater_t *ctx, heater_cfg_t *cfg, heater_config_t *c
     return HEATER_OK;
 }
 
-void heater_generic_write ( heater_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
-{
-    uint8_t tx_buf[ 256 ];
-    uint8_t cnt;
-    
-    tx_buf[ 0 ] = reg;
-    
-    for ( cnt = 1; cnt <= len; cnt++ )
-    {
-        tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
-    }
-    
-    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );     
-}
-
-void heater_generic_read ( heater_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
-{
-    i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, len );
-}
-
 void heater_set_led1_status ( heater_t *ctx, uint8_t status )
 { 
     digital_out_write( &ctx->rst, status );   
@@ -120,7 +100,7 @@ uint16_t heater_read_data ( heater_t *ctx )
     uint16_t temp_data;
     uint8_t buf_data[ 2 ];
 
-    i2c_master_write( &ctx->i2c, buf_data, 2 ); 
+    i2c_master_read( &ctx->i2c, buf_data, 2 ); 
     
     temp_data = buf_data [ 0 ];
     temp_data <<= HEATER_SHIFT_DATA;
@@ -132,9 +112,11 @@ uint16_t heater_read_data ( heater_t *ctx )
 float heater_read_mv ( heater_t *ctx )
 {
     float temp_data;
+    uint16_t raw_adc;
 
-    temp_data =  ( float ) heater_read_data( ctx );
-    temp_data = ( temp_data * HEATER_ADC_VREF ) /  ( float ) HEATER_MV_RESOLUTION;
+    raw_adc = heater_read_data( ctx );
+    temp_data =  ( float )raw_adc;
+    temp_data = ( temp_data * HEATER_ADC_VREF ) / HEATER_MV_RESOLUTION;
 
     return temp_data;
 }

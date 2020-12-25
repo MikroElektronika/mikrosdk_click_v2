@@ -108,10 +108,6 @@ typedef struct
     char uart_rx_buffer[ DRV_RX_BUFFER_SIZE ];
     char uart_tx_buffer[ DRV_RX_BUFFER_SIZE ];
 
-    uint8_t internal_sync; //for syncronizing the parser with the incoming data
-    uint8_t array_counter; //for setting of the position in the buffer
-    uint8_t *address_holder; 
-
 } microwave2_t;
 
 /**
@@ -181,16 +177,15 @@ MICROWAVE2_RETVAL microwave2_init ( microwave2_t *ctx, microwave2_cfg_t *cfg );
  */
 void microwave2_generic_multi_write ( microwave2_t *ctx, char *data_buf,  uint8_t len );
 
+
 /**
- * @brief Generic multi read function.
- *
- * @param ctx        Click object.
- * @param data_buf   Output data buffer.
- * @param len        Number of the bytes in data buffer.
- *
- * @description This function reads data.
+ * @brief Generic read function.
+ * @param microwave2 Click object.
+ * @param data_buf Data buffer for read data.
+ * @param max_len The maximum length of data that can be read.
+ * @return Number of reads data.
  */
-void microwave2_generic_multi_read ( microwave2_t *ctx, char *data_buf,  uint8_t len );
+int32_t microwave2_generic_read ( microwave2_t *ctx, char *data_buf, uint16_t max_len );
 
 
 /**
@@ -230,29 +225,6 @@ uint8_t microwave2_da_state ( microwave2_t *ctx );
  * @description This pin will be set to 1 if the object is moving away.
  */
 uint8_t microwave2_dl_state ( microwave2_t *ctx );
-
-/** 
- * @brief Uart hendler
- * 
- * @param ctx          Click object.
- * @param packeg_buffer
- * @param r_data
- * 
- * @description This function will handle packet's that the click board is sending when
- * movement is detected.
- */
-void microwave2_uart_handler ( microwave2_t *ctx, uint8_t *packeg_buffer, uint8_t r_data );
-
-/** 
- * @brief Check trafic
- * 
- * @param ctx          Click object.
- * 
- * @descriptionFunction compares received packets and return's the value that 
- * can be compared to the predefined one to test if the object is 
- * aproaching, has stopped aproaching or moving away from the click board.
- */
-uint8_t microwave2_check_trafic ( microwave2_t *ctx );
 
 #ifdef __cplusplus
 }

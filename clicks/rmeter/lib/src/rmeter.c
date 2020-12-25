@@ -21,6 +21,7 @@
  * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE 
  * OR OTHER DEALINGS IN THE SOFTWARE. 
  */
+
 /*!
  * \file
  *
@@ -28,255 +29,287 @@
 
 #include "rmeter.h"
 
-// ------------------------------------------------------------- PRIVATE MACROS 
+#define RMETER_R1Y1_OHM  200                    /*!< Resistance from negative input of OP to ground for small scale range. */
+#define RMETER_R2Y1_OHM  1000                   /*!< Resistance from negative input of OP to ground for medium scale range. */
+#define RMETER_R3Y1_OHM  100000                 /*!< Resistance from negative input of OP to ground for large scale range. */
+#define RMETER_RFB_OHM   2000                   /*!< Resistance of feedback. */
 
-#define RMETER_DUMMY 0
+#define RMETER_MEAS_DATA_ORDER_MSB   0          /*!< Data reading order of MSB. */
+#define RMETER_MEAS_DATA_ORDER_LSB   1          /*!< Data reading order of LSB. */
+#define RMETER_MEAS_DATA_OFFSET      1          /*!< Data measurement reading offset. */
+#define RMETER_MEAS_DATA_MASK        0x1FFF     /*!< Data measurement mask. */
+#define RMETER_MEAS_DATA_RESOLUTION  4095       /*!< Resolution of measurement conversion. */
+#define RMETER_MEAS_DATA_VREF        2.048      /*!< Reference voltage of measurement conversion. */
 
-// ---------------------------------------------- PRIVATE FUNCTION DECLARATIONS 
+#define RMETER_OP_VIN  0.1                      /*!< Input voltage of OP. */
 
-void rmeter_generic_transfer 
-( 
-    rmeter_t *ctx, 
-    uint8_t *wr_buf, 
-    uint16_t wr_len, 
-    uint8_t *rd_buf, 
-    uint16_t rd_len 
-);
-
-// ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
+/**
+ * @brief Generic Reading function.
+ *
+ * @param ctx  Click object.
+ * @param rd_buf  Data bytes.
+ * @return    0  - Ok,
+ *          (-1) - Error.
+ *
+ * @description This function allows the converted measurement data to be read by using
+ * SPI serial communication.
+ */
+static err_t rmeter_generic_read ( rmeter_t *ctx, uint8_t *rd_buf );
 
 void rmeter_cfg_setup ( rmeter_cfg_t *cfg )
 {
-    // Communication gpio pins 
-
-    cfg->sck = HAL_PIN_NC;
+    cfg->sck  = HAL_PIN_NC;
     cfg->miso = HAL_PIN_NC;
     cfg->mosi = HAL_PIN_NC;
-    cfg->cs = HAL_PIN_NC;
+    cfg->cs   = HAL_PIN_NC;
+    cfg->an   = HAL_PIN_NC;
+    cfg->s3   = HAL_PIN_NC;
+    cfg->s1   = HAL_PIN_NC;
+    cfg->s2   = HAL_PIN_NC;
 
-    // Additional gpio pins
-
-    cfg->an = HAL_PIN_NC;
-    cfg->s3 = HAL_PIN_NC;
-    cfg->s1 = HAL_PIN_NC;
-    cfg->s2 = HAL_PIN_NC;
-
-    cfg->spi_speed = 100000; 
-    cfg->spi_mode = SPI_MASTER_MODE_0;
+    cfg->spi_speed   = 100000;
+    cfg->spi_mode    = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
+
+    cfg->adc_resolution = ANALOG_IN_RESOLUTION_12_BIT;
+    cfg->adc_vref       = 3.3;
 }
 
-RMETER_RETVAL rmeter_init ( rmeter_t *ctx, rmeter_cfg_t *cfg )
+err_t rmeter_init ( rmeter_t *ctx, rmeter_cfg_t *cfg )
 {
     spi_master_config_t spi_cfg;
 
     spi_master_configure_default( &spi_cfg );
-    spi_cfg.speed     = cfg->spi_speed;
-    spi_cfg.sck       = cfg->sck;
-    spi_cfg.miso      = cfg->miso;
-    spi_cfg.mosi      = cfg->mosi;
-    spi_cfg.default_write_data = RMETER_DUMMY;
 
-    digital_out_init( &ctx->cs, cfg->cs );
+    spi_cfg.sck  = cfg->sck;
+    spi_cfg.miso = cfg->miso;
+    spi_cfg.mosi = cfg->mosi;
+
     ctx->chip_select = cfg->cs;
 
-    if (  spi_master_open( &ctx->spi, &spi_cfg ) == SPI_MASTER_ERROR )
+    if ( spi_master_open( &ctx->spi, &spi_cfg ) == SPI_MASTER_ERROR )
     {
         return RMETER_INIT_ERROR;
     }
 
-    spi_master_set_default_write_data( &ctx->spi, RMETER_DUMMY );
-    spi_master_set_speed( &ctx->spi, cfg->spi_speed );
-    spi_master_set_mode( &ctx->spi, cfg->spi_mode );
+    if ( spi_master_set_default_write_data( &ctx->spi, 0x00 ) == SPI_MASTER_ERROR )
+    {
+        return RMETER_INIT_ERROR;
+    }
+
+    if ( spi_master_set_speed( &ctx->spi, cfg->spi_speed ) == SPI_MASTER_ERROR )
+    {
+        return RMETER_INIT_ERROR;
+    }
+
+    if ( spi_master_set_mode( &ctx->spi, cfg->spi_mode ) == SPI_MASTER_ERROR )
+    {
+        return RMETER_INIT_ERROR;
+    }
+
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
+    spi_master_deselect_device( ctx->chip_select );
 
-    // Output pins 
-    
-    digital_out_init( &ctx->s3, cfg->s3 );
-    digital_out_init( &ctx->s1, cfg-> s1 );
-    digital_out_init( &ctx->s2, cfg->s2 );
+    if ( digital_out_init( &ctx->s3, cfg->s3 ) == DIGITAL_OUT_UNSUPPORTED_PIN )
+    {
+        return RMETER_INIT_ERROR;
+    }
 
-    // Input pins
+    if ( digital_out_init( &ctx->s2, cfg->s2 ) == DIGITAL_OUT_UNSUPPORTED_PIN )
+    {
+        return RMETER_INIT_ERROR;
+    }
 
-    digital_in_init( &ctx->an,  cfg->an  );
+    if ( digital_out_init( &ctx->s1, cfg->s1 ) == DIGITAL_OUT_UNSUPPORTED_PIN )
+    {
+        return RMETER_INIT_ERROR;
+    }
+
+    digital_out_low( &ctx->s3 );
+    digital_out_low( &ctx->s2 );
+    digital_out_low( &ctx->s1 );
+
+    ctx->ifb = 1;
+    ctx->callback = NULL;
+
+    analog_in_config_t an_cfg;
+
+    analog_in_configure_default( &an_cfg );
+
+    an_cfg.input_pin = cfg->an;
+
+    if ( analog_in_open( &ctx->an, &an_cfg ) == ADC_ERROR )
+    {
+        return RMETER_INIT_ERROR;
+    }
+
+    if ( analog_in_set_resolution( &ctx->an, cfg->adc_resolution ) == ADC_ERROR )
+    {
+        return RMETER_INIT_ERROR;
+    }
+
+    if ( analog_in_set_vref_value( &ctx->an, cfg->adc_vref ) == ADC_ERROR )
+    {
+        return RMETER_INIT_ERROR;
+    }
 
     return RMETER_OK;
 }
 
-void rmeter_range_s1 ( rmeter_t *ctx, uint8_t state )
+void rmeter_set_callback_handler ( rmeter_t *ctx, rmeter_callback_t handler )
 {
-    if ( state == RMETER_SELECT )
-	{
-        digital_out_high( &ctx->s1 );
-	}
-	else if ( state == RMETER_DESELECT )
-	{
-        digital_out_low( &ctx->s1 );
-	}
+    ctx->callback = handler;
 }
 
-void rmeter_range_s2 ( rmeter_t *ctx, uint8_t state )
+void rmeter_set_range_up_to_1k9_ohms ( rmeter_t *ctx )
 {
-    if ( state == RMETER_SELECT )
-	{
-        digital_out_high( &ctx->s2 );
-    }
-	else if ( state == RMETER_DESELECT )
-	{
-        digital_out_low( &ctx->s2 );
-    }
+    digital_out_low( &ctx->s3 );
+    digital_out_low( &ctx->s2 );
+    digital_out_high( &ctx->s1 );
+
+    ctx->ifb = 0.07182 / RMETER_R1Y1_OHM;
 }
 
-void rmeter_range_s3 ( rmeter_t *ctx, uint8_t state )
+void rmeter_set_range_up_to_17k_ohms ( rmeter_t *ctx )
 {
-    if ( state == RMETER_SELECT )
-	{
-        digital_out_high( &ctx->s3 );
-    }
-	else if ( state == RMETER_DESELECT )
-	{
-        digital_out_low( &ctx->s3 );
-    }
+    digital_out_low( &ctx->s3 );
+    digital_out_high( &ctx->s2 );
+    digital_out_low( &ctx->s1 );
+
+    ctx->ifb = 0.09288 / RMETER_R2Y1_OHM;
 }
 
-uint16_t rmeter_read_data ( rmeter_t *ctx )
+void rmeter_set_range_up_to_1M9_ohms ( rmeter_t *ctx )
 {
-    uint8_t rx_buf[ 2 ];
-	uint16_t result;
+    digital_out_high( &ctx->s3 );
+    digital_out_low( &ctx->s2 );
+    digital_out_low( &ctx->s1 );
 
-    rmeter_generic_transfer( ctx, 0, 0, rx_buf, 2 );
-    
-	result = rx_buf[ 0 ];
-    result <<= 8;
-    result |= rx_buf[ 1 ];
-	
-    return result;
+    ctx->ifb = 0.1 / RMETER_R3Y1_OHM;
 }
 
-uint16_t rmeter_get_volage ( rmeter_t *ctx )
+err_t rmeter_read_measurement ( rmeter_t *ctx, uint16_t *data_out )
 {
-    uint16_t result = 0;
+    uint8_t read_data[ 2 ];
 
-    result = rmeter_read_data( ctx );
-    result &= RMETER_FILTER_USEFULL_DATA;
-    result >>= 1;
-
-    return result;
-}
-
-float rmeter_avg_volt ( rmeter_t *ctx )
-{
-    uint16_t temp;
-    uint16_t sum = 0;
-    float average;
-    float result;
-    uint8_t n_cnt;
-    
-    for ( n_cnt = 0; n_cnt < RMETER_DATA_SAMPLE_NUM; n_cnt++ )
+    if ( rmeter_generic_read( ctx, read_data ) == SPI_MASTER_ERROR )
     {
-        temp = rmeter_get_volage( ctx );
-        Delay_10ms();
-        sum = sum + temp;
+        return RMETER_INIT_ERROR;
     }
 
-    average = sum / RMETER_DATA_SAMPLE_NUM;
-    result = average / 2;
+    *data_out = read_data[ RMETER_MEAS_DATA_ORDER_MSB ];
+    *data_out <<= 8;
+    *data_out |= read_data[ RMETER_MEAS_DATA_ORDER_LSB ];
 
-    return result;
+    *data_out >>= RMETER_MEAS_DATA_OFFSET;
+    *data_out &= RMETER_MEAS_DATA_MASK;
+
+    return RMETER_OK;
 }
 
-float rmeter_calc ( rmeter_t *ctx, uint32_t res_filt )
+err_t rmeter_calculate_resistance ( rmeter_t *ctx, float *data_out, uint16_t data_in )
 {
-    float gain;
-    float voltage;
-    float rsem;
-    uint32_t resx;
-
-    resx = res_filt;
-
-    voltage = rmeter_avg_volt( ctx );
-    gain = ( voltage / RMETER_GAIN_CALC_CONST );
-    gain = gain - 1;
-
-    rsem = resx * gain;
-    rsem = rsem - RMETER_RANGE_VALUE;
-
-    return rsem;
-}
-
-float rmeter_get_ohms ( rmeter_t *ctx )
-{
-    float voltage;
-    uint32_t resx;
-    float result;
-
-    resx = RMETER_RANGE_BASE_VALUE_1;
-    rmeter_range_s1 ( ctx, RMETER_SELECT );
-    rmeter_range_s2 ( ctx, RMETER_DESELECT );
-    rmeter_range_s3 ( ctx, RMETER_DESELECT );
-
-    voltage = voltage = rmeter_avg_volt( ctx );
-
-    if ( voltage < RMETER_RANGE_VALUE )
+    if ( data_in > RMETER_MEAS_DATA_RESOLUTION )
     {
-        result = rmeter_calc( ctx, resx );
-        return result;
+        return RMETER_INIT_ERROR;
     }
-    else if ( voltage > RMETER_RANGE_VALUE )
+
+    float vout = data_in;
+    vout /= RMETER_MEAS_DATA_RESOLUTION;
+    vout *= RMETER_MEAS_DATA_VREF;
+
+    *data_out = vout - RMETER_OP_VIN;
+    *data_out /= ctx->ifb;
+    *data_out -= RMETER_RFB_OHM;
+
+    return RMETER_OK;
+}
+
+uint16_t rmeter_auto_scale_range_execution ( rmeter_t *ctx )
+{
+    uint8_t cycle_cnt = 3;
+    uint16_t vout_val;
+
+    while ( cycle_cnt )
     {
-        resx = RMETER_RANGE_BASE_VALUE_2;
-        rmeter_range_s1 ( ctx, RMETER_DESELECT );
-        rmeter_range_s2 ( ctx, RMETER_SELECT );
-        rmeter_range_s3 ( ctx, RMETER_DESELECT );
-
-        voltage = rmeter_avg_volt( ctx );
-
-        if ( voltage < RMETER_RANGE_VALUE )
+        if ( cycle_cnt == 3 )
         {
-            result = rmeter_calc( ctx, resx );
-            return result;
+            rmeter_set_range_up_to_1k9_ohms( ctx );
         }
-    }
-    if ( voltage > RMETER_RANGE_VALUE )
-    {
-        resx = RMETER_RANGE_BASE_VALUE_3;
-        rmeter_range_s1 ( ctx, RMETER_DESELECT );
-        rmeter_range_s2 ( ctx, RMETER_DESELECT );
-        rmeter_range_s3 ( ctx, RMETER_SELECT );
-
-        voltage = rmeter_avg_volt( ctx );
-
-        if ( voltage < RMETER_RANGE_VALUE )
+        else if ( cycle_cnt == 2 )
         {
-            result =  rmeter_calc( ctx, resx );
-            if( result > RMETER_RANGE_VALUE_MAX )
+            rmeter_set_range_up_to_17k_ohms( ctx );
+        }
+        else
+        {
+            rmeter_set_range_up_to_1M9_ohms( ctx );
+        }
+
+        uint32_t sum = 0;
+        uint8_t cnt_ok = 0;
+
+        for ( uint8_t cnt = 0; cnt < 20; cnt++ )
+        {
+            if ( rmeter_read_measurement( ctx, &vout_val ) == RMETER_OK )
             {
-                resx = RMETER_RANGE_BASE_VALUE_0;
-                result =  rmeter_calc( ctx, resx );
-                return result;
+                sum += vout_val;
+                cnt_ok++;
+
+                Delay_10us( );
             }
-            return result;
         }
+
+        vout_val = sum / cnt_ok;
+
+        if ( vout_val < RMETER_MEAS_DATA_RESOLUTION )
+        {
+            if ( ctx->callback != NULL )
+            {
+                if ( cycle_cnt == 3 )
+                {
+                    ctx->callback( "Scale range up to 1k9 ohms is set." );
+                }
+                else if ( cycle_cnt == 2 )
+                {
+                    ctx->callback( "Scale range up to 17k ohms is set." );
+                }
+                else
+                {
+                    ctx->callback( "Scale range up to 1M9 ohms is set." );
+                }
+            }
+
+            return vout_val;
+        }
+
+        cycle_cnt--;
     }
-    if ( voltage > RMETER_RANGE_VALUE )
-    return RMETER_OVER_RANGE;
+
+    if ( ctx->callback != NULL )
+    {
+        ctx->callback( "Target resistor value is out of range." );
+    }
+
+    return vout_val;
 }
 
-// ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
+err_t rmeter_read_an ( rmeter_t *ctx, uint16_t *data_out )
+{
+    return analog_in_read( &ctx->an, data_out );
+}
 
-void rmeter_generic_transfer 
-( 
-    rmeter_t *ctx, 
-    uint8_t *wr_buf, 
-    uint16_t wr_len, 
-    uint8_t *rd_buf, 
-    uint16_t rd_len 
-)
+err_t rmeter_read_an_voltage ( rmeter_t *ctx, float *data_out )
+{
+    return analog_in_read_voltage( &ctx->an, data_out );
+}
+
+static err_t rmeter_generic_read ( rmeter_t *ctx, uint8_t *rd_buf )
 {
     spi_master_select_device( ctx->chip_select );
-    spi_master_write_then_read( &ctx->spi, wr_buf, wr_len, rd_buf, rd_len );
-    spi_master_deselect_device( ctx->chip_select );   
+    err_t error = spi_master_read( &ctx->spi, rd_buf, 2 );
+    spi_master_deselect_device( ctx->chip_select );
+
+    return error;
 }
 
-// ------------------------------------------------------------------------- END
-
+// ------------------------------------------------------------------------ END

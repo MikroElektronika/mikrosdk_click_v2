@@ -1,8 +1,0 @@
-{
-    "name": "MUX 3 Click",
-    "description": "MUX 3 Click is the general purpose multiplexer which offers multiplexing one input channel to eight single-ended output channels.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","TMUX1208"],
-    "category" : ["DAC"] 
-}

@@ -71,7 +71,7 @@ void ut7seg_cfg_setup ( ut7seg_cfg_t *cfg )
 
     cfg->oe = HAL_PIN_NC;
 
-    cfg->spi_speed = 100000; 
+    cfg->spi_speed = 100000;
     cfg->spi_mode = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 }
@@ -87,7 +87,6 @@ UT7SEG_RETVAL ut7seg_init ( ut7seg_t *ctx, ut7seg_cfg_t *cfg )
     spi_cfg.mosi      = cfg->mosi;
     spi_cfg.default_write_data = UT7SEG_DUMMY;
 
-    digital_out_init( &ctx->cs, cfg->cs );
     ctx->chip_select = cfg->cs;
 
     if (  spi_master_open( &ctx->spi, &spi_cfg ) == SPI_MASTER_ERROR )
@@ -99,9 +98,10 @@ UT7SEG_RETVAL ut7seg_init ( ut7seg_t *ctx, ut7seg_cfg_t *cfg )
     spi_master_set_speed( &ctx->spi, cfg->spi_speed );
     spi_master_set_mode( &ctx->spi, cfg->spi_mode );
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
+    spi_master_deselect_device( ctx->chip_select );
 
     // Output pins 
-    
+
     digital_out_init( &ctx->oe, cfg->oe );
 
     return UT7SEG_OK;
@@ -114,11 +114,11 @@ void ut7seg_default_cfg ( ut7seg_t *ctx )
     ut7seg_display_state( ctx, UT7SEG_DISPLAY_ON );
 }
 
-void ut7seg_generic_write ( ut7seg_t *ctx, uint8_t data_in )
+static void ut7seg_generic_write ( ut7seg_t *ctx, uint8_t *data_in )
 {
     spi_master_select_device( ctx->chip_select );
-    spi_master_write( &ctx->spi, &data_in, 1 );
-    spi_master_deselect_device( ctx->chip_select );   
+    spi_master_write( &ctx->spi, data_in, 2 );
+    spi_master_deselect_device( ctx->chip_select );
 }
 
 void ut7seg_display_state ( ut7seg_t *ctx, uint8_t state )
@@ -130,16 +130,14 @@ void utl7segr_display_number ( ut7seg_t *ctx, uint8_t number, uint8_t dot_pos )
 {
     uint8_t right_pos;
     uint8_t left_pos;
+    uint8_t data_buf[ 2 ];
 
     number %= 100;
 
     left_pos = number / 10;
     right_pos = number % 10;
 
-    ut7seg_generic_write( ctx, 0x00 );
-    ut7seg_generic_write( ctx, 0x00 );
-
-    switch (dot_pos)
+    switch ( dot_pos )
     {
         case UT7SEG_NO_DOT:
         {
@@ -169,15 +167,16 @@ void utl7segr_display_number ( ut7seg_t *ctx, uint8_t number, uint8_t dot_pos )
 
     if ( left_pos == 0)
     {
-        ut7seg_generic_write( ctx, right_pos );
-        ut7seg_generic_write( ctx, 0x00 );
+        data_buf[ 0 ] = right_pos;
+        data_buf[ 1 ] = 0x00;
     }
     else
     {
-        ut7seg_generic_write( ctx, right_pos );
-        ut7seg_generic_write( ctx, left_pos );
+        data_buf[ 0 ] = right_pos;
+        data_buf[ 1 ] = left_pos;
     }
+
+    ut7seg_generic_write( ctx, data_buf );
 }
 
-// ------------------------------------------------------------------------- END
-
+// ------------------------------------------------------------------------ END

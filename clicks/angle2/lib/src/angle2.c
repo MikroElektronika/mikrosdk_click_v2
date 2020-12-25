@@ -106,7 +106,12 @@ double angle2_write_reg ( angle2_t *ctx, uint8_t addr, uint8_t input )
     buff_in[ 0 ] |= ANGLE2_WRITE_CMD;
     buff_in[ 1 ] = input;
 
-    angle2_generic_transfer( ctx, buff_in, 2, buff_out, 2 );
+    spi_master_select_device( ctx->chip_select );
+    spi_master_set_default_write_data( &ctx->spi, buff_in[ 0 ] );
+    spi_master_read( &ctx->spi,&buff_out[ 0 ], 1 );
+    spi_master_set_default_write_data( &ctx->spi, buff_in[ 1 ] );
+    spi_master_read( &ctx->spi,&buff_out[ 1 ], 1 );
+    spi_master_deselect_device( ctx->chip_select );  
   
     angle_data = buff_out[ 0 ];
     angle_data <<= 4;
@@ -125,7 +130,12 @@ double angle2_read_reg ( angle2_t *ctx, uint8_t addr, uint8_t *output )
     buff_in[ 0 ] |= ANGLE2_READ_CMD;
     buff_in[ 1 ] = ANGLE2_DUMMY_BYTE;
     
-    angle2_generic_transfer( ctx, buff_in, 2, buff_out, 2 );
+    spi_master_select_device( ctx->chip_select );
+    spi_master_set_default_write_data( &ctx->spi, buff_in[ 0 ] );
+    spi_master_read( &ctx->spi,&buff_out[ 0 ], 1 );
+    spi_master_set_default_write_data( &ctx->spi, buff_in[ 1 ] );
+    spi_master_read( &ctx->spi,&buff_out[ 1 ], 1 );
+    spi_master_deselect_device( ctx->chip_select ); 
     
     *output = buff_out[ 1 ];
     angle_data = buff_out[ 0 ];
@@ -143,7 +153,12 @@ double angle2_get_angle ( angle2_t *ctx )
     buff_in[ 0 ] = ANGLE2_DUMMY_BYTE;
     buff_in[ 1 ] = ANGLE2_DUMMY_BYTE;
 
-    angle2_generic_transfer( ctx, buff_in, 2, buff_out, 2 );
+    spi_master_select_device( ctx->chip_select );
+    spi_master_set_default_write_data( &ctx->spi, buff_in[ 0 ] );
+    spi_master_read( &ctx->spi,&buff_out[ 0 ], 1 );
+    spi_master_set_default_write_data( &ctx->spi, buff_in[ 1 ] );
+    spi_master_read( &ctx->spi,&buff_out[ 1 ], 1 );
+    spi_master_deselect_device( ctx->chip_select ); 
     
     angle_data = buff_out[ 0 ];
     angle_data <<= 4;
@@ -162,7 +177,14 @@ double angle2_get_angle_with_time_index ( angle2_t *ctx, uint8_t *time_index )
     buff_in[ 1 ] = ANGLE2_DUMMY_BYTE;
     buff_in[ 2 ] = ANGLE2_DUMMY_BYTE;
 
-    angle2_generic_transfer( ctx, buff_in, 3, buff_out, 3 );
+    spi_master_select_device( ctx->chip_select );
+    spi_master_set_default_write_data( &ctx->spi, buff_in[ 0 ] );
+    spi_master_read( &ctx->spi,&buff_out[ 0 ], 1 );
+    spi_master_set_default_write_data( &ctx->spi, buff_in[ 1 ] );
+    spi_master_read( &ctx->spi,&buff_out[ 1 ], 1 );
+    spi_master_set_default_write_data( &ctx->spi, buff_in[2 ] );
+    spi_master_read( &ctx->spi,&buff_out[ 2 ], 1 );
+    spi_master_deselect_device( ctx->chip_select ); 
     
     *time_index = buff_out[ 2 ];
     angle_data = buff_out[ 0 ];

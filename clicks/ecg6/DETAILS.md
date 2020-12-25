@@ -78,7 +78,7 @@ void application_init ( void )
     //  Logger initialization.
 
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.baud = 9600;
+    log_cfg.baud = 57600;
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
@@ -90,8 +90,15 @@ void application_init ( void )
     ecg6_init( &ecg6, &cfg );
     
     Delay_ms( 1000 );
-
+    
+    DEMO_EXAMPLE = PPG_EXAMPLE;
+   
+    // Dummy read
+    ecg6_check_path_id( &ecg6 );
+    Delay_ms( 100 );
+    
     device_check = ecg6_check_path_id( &ecg6 );
+    
     if ( device_check != 0 )
     {
        log_printf( &logger, " -- > Device ERROR!!! \r\n" );
@@ -125,18 +132,20 @@ void application_init ( void )
 void application_task ( void )
 {
     ecg6_element_t sample;
-    ecg6_get_sample_data( &ecg6, &sample, 0x00 );
     
-    if ( DEMO_EXAMPLE == ECG_EXAMPLE )
-    {
-        log_printf( &logger, " %u ", sample.element_1 );
-        plot_ecg_data( sample.element_1 );
-    }
+    if ( ecg6_int_pin_state(&ecg6) == 0 ) {
+        
+        ecg6_get_sample_data( &ecg6, &sample, 0x00 );
     
-    else
-    {
-        log_printf( &logger, " %u, %u ", sample.element_1, sample.element_2 );
-        plot_ppg_data( sample.element_1, sample.element_2 );
+        if ( DEMO_EXAMPLE == ECG_EXAMPLE )
+        {
+            plot_ecg_data( sample.element_1 );
+        }
+        
+        else
+        {
+            plot_ppg_data( sample.element_1, sample.element_2 );
+        }
     }
 }  
 

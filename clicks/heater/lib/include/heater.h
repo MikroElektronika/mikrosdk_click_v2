@@ -78,15 +78,6 @@
 /** \} */
 
 /**
- * \defgroup device_state Device state
- * \{
- */
-#define HEATER_HEATING                        0xAA    
-#define HEATER_COOLING                        0xBB
-#define HEATER_WAITING                        0xCC
-/** \} */
-
-/**
  * \defgroup led_status Led status
  * \{
  */
@@ -97,14 +88,14 @@
 /**
  * \defgroup heater_resolution Heater resolution
  */
-#define HEATER_SHIFT_DATA                   8 
-#define HEATER_ADC_VREF                      3300.00f
-#define HEATER_MV_RESOLUTION            4096.00f
-#define HEATER_TEMP_RESOLUTION         10.0f
-#define HEATER_TEMP_0                          500
+#define HEATER_SHIFT_DATA                       8 
+#define HEATER_ADC_VREF                         3300.00f
+#define HEATER_MV_RESOLUTION                    4096.00f
+#define HEATER_TEMP_RESOLUTION                  10.0f
+#define HEATER_TEMP_0                           500.0
 /** \} */
 
-#define HEATER_DEF_FREQ                      500
+#define HEATER_DEF_FREQ                         500
 
 /** \} */ // End group macro 
 // --------------------------------------------------------------- PUBLIC TYPES
@@ -197,30 +188,6 @@ void heater_cfg_setup ( heater_cfg_t *cfg, heater_config_t  *cfg1);
  * @description This function initializes all necessary pins and peripherals used for this click.
  */
 HEATER_RETVAL heater_init ( heater_t *ctx, heater_cfg_t *cfg, heater_config_t *cfg1  );
-
-/**
- * @brief Generic write function.
- *
- * @param ctx          Click object.
- * @param reg          Register address.
- * @param data_buf     Data buf to be written.
- * @param len          Number of the bytes in data buf.
- *
- * @description This function writes data to the desired register.
- */
-void heater_generic_write ( heater_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-/**
- * @brief Generic read function.
- *
- * @param ctx          Click object.
- * @param reg          Register address.
- * @param data_buf     Output data buf
- * @param len          Number of the bytes to be read
- *
- * @description This function reads data from the desired register.
- */
-void heater_generic_read ( heater_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
 
 /**
  * @brief Sets state of the rst pin

@@ -38,6 +38,7 @@
 #include "drv_digital_out.h"
 #include "drv_digital_in.h"
 #include "drv_spi_master.h"
+#include "drv_analog_in.h"
 
 // -------------------------------------------------------------- PUBLIC MACROS 
 /**
@@ -54,7 +55,8 @@
    cfg.miso  = MIKROBUS( mikrobus, MIKROBUS_MISO ); \
    cfg.mosi  = MIKROBUS( mikrobus, MIKROBUS_MOSI ); \
    cfg.sck   = MIKROBUS( mikrobus, MIKROBUS_SCK ); \
-   cfg.cs    = MIKROBUS( mikrobus, MIKROBUS_CS )
+   cfg.cs    = MIKROBUS( mikrobus, MIKROBUS_CS ); \
+   cfg.vout    = MIKROBUS( mikrobus, MIKROBUS_AN )
 /** \} */
 
 /**
@@ -130,14 +132,13 @@ typedef struct
 
     digital_out_t cs;
     
-    // Input pins 
-
-    digital_in_t vout;
-    
     // Modules 
 
     spi_master_t spi;
     pin_name_t chip_select;
+    analog_in_t  adc;  
+    
+    float vref; 
 
 } gainamp2_t;
 
@@ -159,6 +160,8 @@ typedef struct
 
     // static variable 
 
+    analog_in_resolution_t  resolution;    
+    float  vref;                          
     uint32_t spi_speed;
     spi_master_mode_t   spi_mode;
     spi_master_chip_select_polarity_t cs_polarity;
@@ -197,23 +200,6 @@ void gainamp2_cfg_setup ( gainamp2_cfg_t *cfg );
 GAINAMP2_RETVAL gainamp2_init ( gainamp2_t *ctx, gainamp2_cfg_t *cfg );
 
 /**
- * @brief Click Default Configuration function.
- *
- * @param ctx  Click object.
- *
- * @note 
- *<pre>
- *      Set: GAINAMP2_WRITE_INS | GAINAMP2_CH
-                - GAINAMP2_CH4
-        Set: GAINAMP2_WRITE_INS | GAINAMP2_GAIN
-                - GAINAMP2_GAIN_4X
- *</pre>
- *
- * @description This function executes default configuration for GainAMP 2 click.
- */
-void gainamp2_default_cfg ( gainamp2_t *ctx );
-
-/**
  * @brief Generic transfer function.
  *
  * @param ctx          Click object.
@@ -236,6 +222,26 @@ void gainamp2_generic_transfer ( gainamp2_t *ctx, uint8_t *wr_buf, uint16_t wr_l
  * Function setup amplifier according to provided command.
  */
 void gainamp2_write_command( gainamp2_t *ctx, uint8_t instruction, uint8_t input );
+
+/**
+ * @brief Set the channel gain.
+ *
+ * @param ctx  Click object.
+ * @param channel
+ * @param gain
+ *
+ * @description This function sets the channel gain.
+ */
+void gainamp2_set_channel_gain ( gainamp2_t *ctx, uint8_t channel, uint8_t gain );
+
+/**
+ * @brief Return voltage measured from OUT pin.
+ *
+ * @param ctx  Click object.
+ *
+ * @description This function returns voltage measured from OUT pin.
+ */
+float gainamp2_get_voltage ( gainamp2_t *ctx );
 
 #ifdef __cplusplus
 }

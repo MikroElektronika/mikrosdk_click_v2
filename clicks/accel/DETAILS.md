@@ -7,7 +7,7 @@
 Accel Click is an accessory board in mikroBUS form factor. It features ADXL345 3-axis accelerometer module with ultra-low power and high resolution (13-bit) measurement.
 
 <p align="center">
-  <img src="http://download.mikroe.com/images/click_for_ide/adc_click.png" height=300px>
+  <img src="http://download.mikroe.com/images/click_for_ide/accel_click.png" height=300px>
 </p>
 
 

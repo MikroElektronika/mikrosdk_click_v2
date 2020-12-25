@@ -1,7 +1,0 @@
-type: subdirs
-project: Uvc
-
-subdirs: {
-    lib
-    example
-}

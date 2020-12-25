@@ -114,7 +114,6 @@ void application_task ( void )
     {
         read_vout_data(  &buck14 );
     }
-    log_printf( &logger, "OK OK OK\r\n" );
     Delay_ms( 8000 );
 
     vout_value = 3.7;

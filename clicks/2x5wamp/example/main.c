@@ -49,9 +49,11 @@ void application_init ( void )
     c2x5wamp_cfg_t cfg;
 
     //  Logger initialization.
-
-    log_cfg.level = LOG_LEVEL_DEBUG;
+    
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
+
     log_init( &logger, &log_cfg );
     log_printf( &logger, "-- Application Init --\r\n" );
     Delay_ms( 100 );

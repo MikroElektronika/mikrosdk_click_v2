@@ -1,4 +1,6 @@
 
+
+---
 # Fan click
 
 Fan Click carries an EMC2301 controller for powering and regulating the operation of 5V four-wire fans, which are commonly utilized as coolers in computers and other electronics.
@@ -65,36 +67,57 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    fan_cfg_t cfg;
+    fan_cfg_t fan_cfg;
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
+    //  Logger initialization.
+
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
-    fan_cfg_setup( &cfg );
-    FAN_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    fan_init( &fan, &cfg );
+    //  Click initialization.
+
+    fan_cfg_setup( &fan_cfg );
+    FAN_MAP_MIKROBUS( fan_cfg, MIKROBUS_1 );
+    if ( fan_init( &fan, &fan_cfg ) == I2C_MASTER_ERROR )
+    {
+        log_info( &logger, "---- Application Init Error ----" );
+        log_info( &logger, "---- Please, run program again ----" );
+
+        for ( ; ; );
+    }
+    log_info( &logger, "---- Application Init Done ----" );
+    fan_default_cfg( &fan );
+    fan_pwm_base( &fan, FAN_PWM_BASE_FREQ_HALF_SCALE );
+    log_info( &logger, "---- Application Program Running... ----\n" );
 }
   
 ```
 
 ### Application Task
 
-> Read rotation per minutes(RPM) and logs data to USBUART every 300ms.
+> Performs a control of the fan and reads rotation per minute (RPM).
+> Results will be sent to the usb uart terminal.
 
 ```c
 
 void application_task ( void )
 {
-    uint16_t rpm;
-    char demo_text[ 50 ];
-    
-    rpm = fan_get_tach( &fan );
-    
-    log_printf( &logger, "Rotation per minute : %c \r\n", demo_text );
-    
-    Delay_ms( 300 );
+    for ( uint8_t duty = FAN_DUTY_RATIO_0_PER; duty <= FAN_DUTY_RATIO_100_PER;
+          duty += FAN_DUTY_RATIO_10_PER )
+    {
+        fan_setting( &fan, duty );
+        log_printf( &logger, " Duty Ratio : %u%%\r\n", (uint16_t)duty );
+        Delay_ms( 2000 );
+
+        uint16_t tacho = 0;
+
+        fan_get_tach( &fan, &tacho );
+        log_printf( &logger, " Rotation per minute : %urpm\r\n\n", tacho );
+        Delay_ms( 2000 );
+    }
 }  
 
 ```

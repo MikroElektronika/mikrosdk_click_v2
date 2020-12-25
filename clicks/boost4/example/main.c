@@ -31,9 +31,6 @@
 static boost4_t boost4;
 static log_t logger;
 
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
-
-
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
@@ -66,22 +63,6 @@ void application_task ( void )
     log_printf( &logger, " Set the max Vout  ~ 5.25 V \r\n" );
 
     boost4_set_out_voltage( &boost4, BOOST4_VOUT_MAX );
-
-    Delay_ms( 3000 );
-
-    log_printf( &logger, "-----------------------------\r\n" );
-    
-    log_printf( &logger, " Set  ~ 4.5 V \r\n" );
-
-    boost4_set_out_voltage( &boost4, BOOST4_VOUT_4_5 );
-
-    Delay_ms( 3000 );
-
-    log_printf( &logger, "-----------------------------\r\n" );
-    
-    log_printf( &logger, " Set  ~ 4 V \r\n" );
-
-    boost4_set_out_voltage( &boost4, BOOST4_VOUT_4 );
 
     Delay_ms( 3000 );
 

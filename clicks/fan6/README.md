@@ -78,17 +78,21 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----\r\n" );
+    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
 
     fan6_cfg_setup( &cfg );
     FAN6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     fan6_init( &fan6, &cfg );
-
+    
+    fan6_enable_device( &fan6, 1 );
+    Delay_ms( 500 );
+    
     fan6_default_cfg( &fan6 );
     tachometer = 0;
 }
@@ -106,12 +110,19 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    tachometer = fan6_read_tachometer( &fan6 );
-    log_printf( &logger, "Tachometer value is: %d rpm \r\n", tachometer );
+    float temp_diode;
 
-    temp_diode = fan6_get_temperature( &fan6, FAN6_EXTDIODE1_TEMP_READ_REG );
+    temp_diode = fan6_get_temperature( &fan6, FAN6_INTERNAL_TEMP_READ_REG );
     log_printf( &logger, "Temperature of DIODE is: %f - Cels \r\n", temp_diode );
-
+    
+    fan6_set_pwm_mode( &fan6, duty_cycle );
+    
+    duty_cycle += 5;
+    
+    tachometer = fan6_read_tachometer( &fan6 );
+    log_printf( &logger, "Tachometer value is: %lu rpm \r\n", tachometer );
+    log_printf( &logger, "---------------------------------------- \r\n", tachometer );
+    
     Delay_ms( 500 );
 } 
 

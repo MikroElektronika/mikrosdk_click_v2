@@ -27,5 +27,7 @@
     "short_description": "Timer click is a mikroBUS add-on board with Maxim’s DS1682 total elapsed time recorder.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.2"
 }
+
+

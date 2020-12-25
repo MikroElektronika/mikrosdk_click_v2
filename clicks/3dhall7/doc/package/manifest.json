@@ -27,6 +27,9 @@
     "short_description": "3D Hall 7 click is a very accurate, magnetic field sensing Click board™, used to measure the intensity of the magnetic field across three perpendicular axes.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.4"
 }
+
+
+
 

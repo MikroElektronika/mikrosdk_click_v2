@@ -1,5 +1,5 @@
 \mainpage Main Page
- 
+
 ---
 # M-BUS RF 4 click
 
@@ -79,44 +79,40 @@ void application_init ( void )
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, "Application Init" );
 
     //  Click initialization.
 
     mbusrf4_cfg_setup( &cfg );
     MBUSRF4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     mbusrf4_init( &mbusrf4, &cfg );
-
+    
+    parser_cnt = 0;
+    parser_ptr = &parser_buf[ 0 ];
     mbusrf4_process( );
+    mbrusrf4_clear_buff();
 
     //Command SET mode
     payload_buff[ 0 ] = MBUSRF4_SET_VALUE_IN_EEPROM_MEMORY;
     payload_buff[ 1 ] = MBUSRF4_EEPARAM_WMBUS_MODE_S2_SHORT_PREAMBLE;
 
     mbusrf4_send_command( &mbusrf4, MBUSRF4_CMD_SET_MODE, 2, &payload_buff[ 0 ] );
+    Delay_ms( 500 );
     mbusrf4_process( );
-    Delay_ms( 1500 );
+    mbusrf4_parser_tx();
+    mbrusrf4_clear_buff();
     
     // Reads FW version
     mbusrf4_send_command( &mbusrf4, MBUSRF4_CMD_GET_FW_VERSION, 0, &payload_buff[ 0 ] );
-
-    log_printf( &logger, " ------ FW Version ------ \r\n" );
+    Delay_ms( 500 );
     mbusrf4_process( );
-    log_printf( &logger, " ------------------------ \r\n" );
-
-    Delay_ms( 3000 );
-
-    // Read EEPROM parameter
-    payload_buff[ 0 ] = MBUSRF4_EEADDR_WMBUS_C_FIELD;
-    payload_buff[ 1 ] = 0x01;
-    
-    mbusrf4_send_command( &mbusrf4, MBUSRF4_CMD_EEPROM_READ, 2, payload_buff );
-    
-    log_printf( &logger, " ------ EEPROM READ ------ \r\n" );
+    log_info( &logger, "FW version:" );
+    mbusrf4_parser_rx( LOG_HEX );
+    log_printf( &logger, "-----------------------------------------------------------\r\n" );
     mbusrf4_process( );
-    log_printf( &logger, " ------------------------- \r\n" );
 
-    Delay_ms( 3000 );
+    Delay_ms( 1000 );
+    log_info( &logger, "Application Task" );
 }
   
 ```
@@ -132,22 +128,25 @@ void application_task ( void )
 {
     // RX App mode
     #ifdef DEMO_APP_RECEIVER
-   
-       log_printf ( &logger, " ----- NEW - RX DATA ---- \r\n" );
-       mbusrf4_process(  );
-       log_printf ( &logger, " ------------------------ \r\n" );
 
+    if ( mbusrf4_get_state_ind( &mbusrf4 ) == 0 )
+    {     
+        Delay_ms( 100 );
+        mbusrf4_process( );
+        
+        mbusrf4_parser_rx( LOG_STR );
+    }
+    
     #endif
     
     // TX App Mode
     #ifdef DEMO_APP_TRANSMITER
     
-        mbusrf4_send_command( &mbusrf4, MBUSRF4_CMD_TX_MSG, 18, &tx_buffer[ 0 ] );
-        log_printf ( &logger, " ----- SEND - TX DATA ---- \r\n" );
-        mbusrf4_process(  );
-        log_printf ( &logger, " ------------------------ \r\n" );
-        
-        Delay_ms( 1500 );
+    mbusrf4_transmit_data( &mbusrf4, msg, 17 );
+    Delay_ms( 100 );
+    mbrusrf4_clear_buff();
+    mbusrf4_parser_tx();
+    Delay_ms( 2000 );
 
     #endif
 }
@@ -157,8 +156,16 @@ void application_task ( void )
 ## Note
 
 > ## Additional Function
-> - mbusrf4_process ( ) - The general process of collecting presponce that sends a module.
-
+> mbusrf4_process ( ) - The general process of collecting data and adding it to application buffer;
+ 
+>  mbrusrf4_clear_buff ( void ) - Clear application buffer data;
+ 
+>  mbusrf4_parser_tx ( void ) - Transmit data status parser;
+ 
+>  mbusrf4_parser_rx ( uint8_t logg_type ) - Receiver data parser;
+ 
+>  mbusrf4_log_data ( uint8_t log_type, uint8_t *log_buf, int32_t log_len ) - Log application buffer;
+ 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
 **Other mikroE Libraries used in the example:** 

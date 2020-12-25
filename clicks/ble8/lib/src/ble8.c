@@ -95,14 +95,9 @@ BLE8_RETVAL ble8_init ( ble8_t *ctx, ble8_cfg_t *cfg )
     ble8_set_dsr_pin ( ctx, 0 );
 
     ctx->rsp_rdy = BLE8_RSP_NOT_READY;
-    ctx->termination_char = 13;
+    ctx->termination_char = '\r';
 
     return BLE8_OK;
-}
-
-void ble8_default_cfg ( ble8_t *ctx )
-{
-    // Click default configuration 
 }
 
 void ble8_reset ( ble8_t *ctx )
@@ -115,24 +110,15 @@ void ble8_reset ( ble8_t *ctx )
 
 void ble8_generic_write ( ble8_t *ctx, char *data_buf, uint16_t len )
 {
-    uart_write( &ctx->uart, data_buf, len );
+        while(*data_buf) {
+            uart_write( &ctx->uart, data_buf++, 1);
+            Delay_1ms();
+        }
 }
 
-int16_t ble8_generic_read ( ble8_t *ctx, char *data_buf, uint16_t max_len )
+int32_t ble8_generic_read ( ble8_t *ctx, char *data_buf, uint16_t max_len )
 {
     return uart_read( &ctx->uart, data_buf, max_len );
-}
-
-void ble8_response_handler_set ( ble8_t *ctx, void ( *handler )( uint8_t* ) )
-{
-    ctx->driver_hdl = handler;
-}
-
-void ble8_uart_isr ( ble8_t *ctx, uint8_t read_data )
-{
-    ctx->driver_hdl( &read_data );
-    
-    ctx->rsp_rdy = BLE8_RSP_READY;
 }
 
 uint8_t ble8_response_ready( ble8_t *ctx )
@@ -147,17 +133,23 @@ uint8_t ble8_response_ready( ble8_t *ctx )
     return BLE8_RSP_NOT_READY;
 }
 
-void ble8_send_command ( ble8_t *ctx, char *command, uint8_t term_char )
+void ble8_send_command ( ble8_t *ctx, char * command, uint8_t term_char )
 {
     char tmp_buf[ 100 ];
-    uint8_t len;
+    int16_t len;
+    
     memset( tmp_buf, 0, 100 );
     len = strlen( command );
     
     strncpy( tmp_buf, command, len );
-    strcat( tmp_buf, &term_char );
+    tmp_buf[ len ] = term_char;
+    tmp_buf[ len + 1 ] = 0;
+    
+    len = strlen( tmp_buf );
 
-    ble8_generic_write( ctx, tmp_buf, strlen( tmp_buf ) );
+    ble8_set_cts_pin( ctx, 1 );
+    ble8_generic_write( ctx, tmp_buf, len );
+    ble8_set_cts_pin( ctx, 0 );
     ctx->termination_char = term_char;
 }
 
@@ -246,7 +238,7 @@ void ble8_get_echo_cmd ( ble8_t *ctx )
     ble8_send_command( ctx, "ATE?", ctx->termination_char );
 }
 
-void ble8_set_local_name_cmd ( ble8_t *ctx, uint8_t *local_name )
+void ble8_set_local_name_cmd ( ble8_t *ctx, char *local_name )
 {
     uint8_t tx_msg[ 41 ] = "AT+UBTLN=\"";
     uint8_t msg_idx = 10;

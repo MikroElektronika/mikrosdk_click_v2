@@ -28,108 +28,66 @@
  * \brief This file contains API for AudioAMP Click driver.
  *
  * \addtogroup audioamp AudioAMP Click Driver
- * @{
+ * \{
  */
-// ----------------------------------------------------------------------------
 
 #ifndef AUDIOAMP_H
 #define AUDIOAMP_H
 
-#include "drv_digital_out.h"
 #include "drv_digital_in.h"
 #include "drv_i2c_master.h"
 
-
-// -------------------------------------------------------------- PUBLIC MACROS 
 /**
  * \defgroup macros Macros
  * \{
  */
 
 /**
- * \defgroup map_mikrobus MikroBUS
+ * \defgroup map_mikrobus  MikroBUS
  * \{
  */
 #define AUDIOAMP_MAP_MIKROBUS( cfg, mikrobus ) \
-  cfg.scl  = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
-  cfg.sda  = MIKROBUS( mikrobus, MIKROBUS_SDA ); \
-  cfg.int_pin = MIKROBUS( mikrobus, MIKROBUS_INT ); 
+  cfg.scl     = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
+  cfg.sda     = MIKROBUS( mikrobus, MIKROBUS_SDA ); \
+  cfg.int_pin = MIKROBUS( mikrobus, MIKROBUS_INT )
 /** \} */
 
 /**
- * \defgroup error_code Error Code
+ * \defgroup error_code  Error Code
  * \{
  */
-#define AUDIOAMP_RETVAL  uint8_t
-
-#define AUDIOAMP_OK           0x00
-#define AUDIOAMP_INIT_ERROR   0xFF
+#define AUDIOAMP_OK            0
+#define AUDIOAMP_INIT_ERROR  (-1)
 /** \} */
 
 /**
- * \defgroup address  Address
+ * \defgroup dev_addr  Device Address
  * \{
  */
-#define AUDIOAMP_I2C_ADDRESS_0                                      0x7C 
-#define AUDIOAMP_I2C_ADDRESS_1                                      0x7D 
-/** \} */ 
-
-/**
- * \defgroup data_reg  Data Reg
- * \{
- */
-#define AUDIOAMP_REG_MODE                                           0x00 
-#define AUDIOAMP_REG_DIAG                                           0x20 
-#define AUDIOAMP_REG_FAULT                                          0x40 
-#define AUDIOAMP_REG_VOL_1                                          0x60 
-#define AUDIOAMP_REG_VOL_2                                          0x80 
+#define AUDIOAMP_I2C_ADDRESS_0  0x7C
+#define AUDIOAMP_I2C_ADDRESS_1  0x7D
 /** \} */
 
 /**
- * \defgroup mode  Mode
+ * \defgroup ch_sel  Channel Selectors
  * \{
  */
-#define AUDIOAMP_MODE_CH_1                                          0x00 
-#define AUDIOAMP_MODE_CH_2                                          0x01 
-#define AUDIOAMP_MODE_MUX                                           0x02 
-#define AUDIOAMP_MODE_MUTE                                          0x03 
+#define AUDIOAMP_IN_1  0x04
+#define AUDIOAMP_IN_2  0x08
 /** \} */
 
 /**
- * \defgroup volume  Volume
+ * \defgroup diag_set  Diagnostic Settings
  * \{
  */
-#define AUDIOAMP_CMD_POWER_ON                                       0x1C 
-#define AUDIOAMP_CMD_POWER_OFF                                      0x00 
-#define AUDIOAMP_CMD_VOLUME_1                                       0x06 
-#define AUDIOAMP_CMD_VOLUME_2                                       0x08 
-#define AUDIOAMP_CMD_ENABLE                                         0x10 
-#define AUDIOAMP_CMD_DISABLE                                        0x00 
+#define AUDIOAMP_DG_EN      0x10
+#define AUDIOAMP_DG_CONT    0x08
+#define AUDIOAMP_DG_RESET   0x06
+#define AUDIOAMP_DG_ILIMIT  0x04
 /** \} */
 
-/**
- * \defgroup data_cdm  Data Cdm
- * \{
- */
-#define AUDIOAMP_CMD_DG_EN                                          0x10 
-#define AUDIOAMP_CMD_DG_CONT                                        0x08 
-#define AUDIOAMP_CMD_DG_RESET                                       0x06 
-#define AUDIOAMP_CMD_DG_ILIMIT                                      0x04 
-/** \} */
+/** \} */ // End group macro
 
-/**
- * \defgroup data_ch  Data Ch
- * \{
- */
-#define AUDIOAMP_CH_1_BIT                                           0x04 
-#define AUDIOAMP_CH_2_BIT                                           0x08 
-#define AUDIOAMP_MUX_BIT                                            0x0C 
-#define AUDIOAMP_MUTE_BIT                                           0x00 
-/** \} */
-
-/** \} */ // End group macro 
-
-// --------------------------------------------------------------- PUBLIC TYPES
 /**
  * \defgroup type Types
  * \{
@@ -143,7 +101,7 @@ typedef struct
     // Input pins 
 
     digital_in_t int_pin;
-    
+
     // Modules 
 
     i2c_master_t i2c;
@@ -163,12 +121,12 @@ typedef struct
 
     pin_name_t scl;
     pin_name_t sda;
-    
+
     // Additional gpio pins 
 
     pin_name_t int_pin;
 
-    // static variable 
+    // Static variable 
 
     uint32_t i2c_speed;
     uint8_t i2c_address;
@@ -177,13 +135,11 @@ typedef struct
 
 /** \} */ // End types group
 
-// ----------------------------------------------- PUBLIC FUNCTION DECLARATIONS
-
 /**
  * \defgroup public_function Public function
  * \{
  */
- 
+
 #ifdef __cplusplus
 extern "C"{
 #endif
@@ -200,199 +156,145 @@ void audioamp_cfg_setup ( audioamp_cfg_t *cfg );
 
 /**
  * @brief Initialization function.
- * @param audioamp Click object.
- * @param cfg Click configuration structure.
- * 
+ *
+ * @param ctx  Click object.
+ * @param cfg  Click configuration structure.
+ * @return    0  - Ok,
+ *          (-1) - Error.
+ *
  * @description This function initializes all necessary pins and peripherals used for this click.
  */
-AUDIOAMP_RETVAL audioamp_init ( audioamp_t *ctx, audioamp_cfg_t *cfg );
+err_t audioamp_init ( audioamp_t *ctx, audioamp_cfg_t *cfg );
 
 /**
- * @brief Generic write function.
+ * @brief Turn on the Audio Amp click function.
  *
- * @param ctx          Click object.
- * @param reg          Register address.
- * @param data_buf     Data buf to be written.
- * @param len          Number of the bytes in data buf.
+ * @param ctx  Click object.
+ * @return    0  - Ok,
+ *          (-1) - Error.
  *
- * @description This function writes data to the desired register.
- */
-void audioamp_generic_write ( audioamp_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-/**
- * @brief Generic read function.
- *
- * 
- * @param ctx          Click object.
- * @param reg          Register address.
- * @param data_buf     Output data buf
- * @param len          Number of the bytes to be read
- *
- * @description This function reads data from the desired register.
- */
-void audioamp_generic_read ( audioamp_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-/**
- * @brief Turn on the Audio Amp click function
- *
- * @param ctx          Click object.
- * 
- * @description Function turn on the Audio Amp click
- * by set POEWR_ON and set INPUT_2 and INPUT_1 bits
+ * @description Function turns on the Audio Amp click
+ * by setting POWER_ON and set INPUT_2 and INPUT_1 bits
  * to MODE CONTROL register of LM48100Q-Q1 chip.
  */
-void audioamp_power_on ( audioamp_t *ctx );
+err_t audioamp_power_on ( audioamp_t *ctx );
 
 /**
- * @brief Turn off the Audio Amp click function
+ * @brief Turn off the Audio Amp click function.
  *
- * @param ctx          Click object.
- * 
- * @description Function turn off the Audio Amp click
- * by set POEWR_OFF bits
- * to MODE CONTROL register of LM48100Q-Q1 chip.
+ * @param ctx  Click object.
+ * @return    0  - Ok,
+ *          (-1) - Error.
+ *
+ * @description Function turns off the Audio Amp click
+ * by setting POWER_OFF bit to MODE CONTROL register of LM48100Q-Q1 chip.
  */
-void audioamp_power_off ( audioamp_t *ctx );
+err_t audioamp_power_off ( audioamp_t *ctx );
 
 /**
- * @brief Set mux volume function
+ * @brief Set volume function.
  *
- * @param ctx          Click object.
- * 
- * @param volume_value                    
- * 8-bit value from 0 to 31
+ * @param ctx  Click object.
+ * @param in_sel  Enter AUDIOAMP_IN_1 to select input 1 and/or
+ *                enter AUDIOAMP_IN_2 to select input 2.
+ * @param volume_level  Enter volume level from 1 to 32.
+ * @return    0  - Ok,
+ *          (-1) - Error.
  *
- * @description Function sets mux volume
- * to LM48100Q-Q1 chip on AudioAmp Click board.
- */
-void audioamp_set_volume ( audioamp_t *ctx, uint8_t volume_value );
-
-/**
- * @brief Set channel volume function
- *
- * @param ctx          Click object.
- * 
- * @param channel                        
- * - 0 : CHANNEL 1;
- * - 1 : CHANNEL 2;
- *
- * @param volume_value                    
- * 8-bit value from 0 to 31
- *
- * @description Function sets volume of selected channel
+ * @description Function sets the volume of the selected input
  * of LM48100Q-Q1 chip on AudioAmp Click board.
  */
-void audioamp_set_volume_channel ( audioamp_t *ctx, uint8_t channel, uint8_t volume_value );
+err_t audioamp_set_volume ( audioamp_t *ctx, uint8_t in_sel, uint8_t volume_level );
 
 /**
- * @brief Enable amplifier function
+ * @brief Mute input function.
  *
- * @param ctx          Click object.
- * 
- * @description Function enable the Audio Amp click
- * by set POEWR_ON bits
+ * @param ctx  Click object.
+ * @return    0  - Ok,
+ *          (-1) - Error.
+ *
+ * @description Function allows the user to mute the input
+ * by clearing INPUT_2 and INPUT_1 bits
  * to MODE CONTROL register of LM48100Q-Q1 chip.
  */
-void audioamp_enable ( audioamp_t *ctx );
+err_t audioamp_mute ( audioamp_t *ctx );
 
 /**
- * @brief Disable amplifier function
+ * @brief Unmute input function.
  *
- * @param ctx          Click object.
- * 
- * @description Function disable the Audio Amp click
- * by set POEWR_OFF bits
+ * @param ctx  Click object.
+ * @return    0  - Ok,
+ *          (-1) - Error.
+ *
+ * @description Function allows the user to unmute the input
+ * by setting INPUT_2 and INPUT_1 bits
  * to MODE CONTROL register of LM48100Q-Q1 chip.
  */
-void audioamp_disable ( audioamp_t *ctx );
+err_t audioamp_unmute ( audioamp_t *ctx );
 
 /**
- * @brief Set mute mode function
+ * @brief Set normal opeation of Fault function.
  *
- * @param ctx          Click object.
- * 
- * @description Function set mute mode
- * by claer INPUT_2 and INPUT_1 bits
- * to MODE CONTROL register of LM48100Q-Q1 chip.
- */
-void audioamp_mute_mode ( audioamp_t *ctx );
-
-/**
- * @brief Set unmute mode function
+ * @param ctx  Click object.
+ * @return    0  - Ok,
+ *          (-1) - Error.
  *
- * @param ctx          Click object.
- * 
- * @description Function set unmute mode
- * by sets INPUT_2 and INPUT_1 bits
- * to MODE CONTROL register of LM48100Q-Q1 chip.
- */
-void audioamp_unmute_mode ( audioamp_t *ctx );
-
-/**
- * @brief Set normal opeation function
- *
- * @param ctx          Click object.
- * 
- * @description Function set mute mode
- * by claer all bits
+ * @description Function sets the normal opration mode
+ * by clearing all bits
  * to FAULT DETECTION CONTROL register of LM48100Q-Q1 chip.
  */
-void audioamp_set_normal_operation ( audioamp_t *ctx );
+err_t audioamp_set_fault_normal_operation ( audioamp_t *ctx );
 
 /**
- * @brief Set fault detection control function
+ * @brief Set fault detection control function.
  *
- * @param ctx          Click object.
- * 
- * @param input_command
- * - 0 : Ignore output short circuit fault (outputs shorted together);
- * - 1 : Ignore output short circuit fault;
- * - 2 : Ignore output short to VDD or GND fault;
- * - 3 : Ignore output over-current fault;
- * - 4 : Ignore thermal overload fault;
+ * @param ctx  Click object.
+ * @param input_command  Fault settings :
+ *  0 : Ignore output short circuit fault (outputs shorted together);
+ *  1 : Ignore output short circuit fault;
+ *  2 : Ignore output short to VDD or GND fault;
+ *  3 : Ignore output over-current fault;
+ *  4 : Ignore thermal overload fault;
+ * @return    0  - Ok,
+ *          (-1) - Error.
  *
- * @description Function set fault detection control
- * by set command to FAULT DETECTION CONTROL register of LM48100Q-Q1 chip.
+ * @description Function sets a fault detection control
+ * by setting the entered command to FAULT DETECTION CONTROL register of LM48100Q-Q1 chip.
  */
-void audioamp_set_fault_detecton_control( audioamp_t *ctx, uint8_t input_command );
+err_t audioamp_set_fault_detecton_control ( audioamp_t *ctx, uint8_t input_command );
 
 /**
- * @brief Set input mixer mode function
+ * @brief Set diagnostic control function.
  *
- * @param ctx          Click object.
- * 
- * @param input_mode
- * - 0 : INPUT 1 only;
- * - 1 : INPUT 2 only;
- * - 2 : INPUT 1 & INPUT 2;
- * - 3 : MUTE;
+ * @param ctx  Click object.
+ * @param input_command  Diagnostic settings - to see the diagnostic settings
+ * refer to the Diagnostic Settings option.
+ * @return    0  - Ok,
+ *          (-1) - Error.
  *
- * @description Function set input mixer mode
- * by sets command to MODE CONTROL register of LM48100Q-Q1 chip.
+ * @description Function sets a diagnostic control
+ * by setting the entered command to DIAGNOSTIC CONTROL register of LM48100Q-Q1 chip.
  */
-void audioamp_set_input( audioamp_t *ctx, uint8_t input_mode );
+err_t audioamp_set_diagnostic_control ( audioamp_t *ctx, uint8_t input_command );
 
 /**
- * @brief Check interrupt status function
+ * @brief Check Fault status function.
  *
- * @param ctx          Click object.
- * 
- * @param result
- * - 0 : detected;
- * - 1 : not detected;
+ * @param ctx  Click object.
+ * @return 0 - detected,
+ *         1 - not detected.
  *
- * @description Function check interrupt status
- * by return value of INT pin
+ * @description Function checks the status of fault pin
  * of LM48100Q-Q1 chip on AudioAmp Click board.
  */
-uint8_t audioamp_check_status ( audioamp_t *ctx );
+uint8_t audioamp_check_fault ( audioamp_t *ctx );
 
 #ifdef __cplusplus
 }
 #endif
-#endif  // _AUDIOAMP_H_
+#endif  // AUDIOAMP_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
-/*! @} */
-// ------------------------------------------------------------------------- END
+/** \} */ // End click Driver group
+
+// ------------------------------------------------------------------------ END

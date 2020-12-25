@@ -80,6 +80,11 @@
 #define C7SEGRGB_POINT        0x80
 /** \} */
 
+/**
+ * @brief Function pointer for logic level one and zero
+ */
+typedef void ( *drv_logic_t ) ( void );
+
 
 
 /** \} */ // End group macro 
@@ -88,16 +93,34 @@
  * \defgroup type Types
  * \{
  */
- 
+
+/**
+ * @brief Click segments data.
+ */
+typedef struct
+{
+    bool logic_lvl;
+    uint8_t green;
+    uint8_t red;
+    uint8_t blue;
+
+} c7segrgb_segment_t;
+
 /**
  * @brief Click ctx object definition.
  */
 typedef struct
 {
     // Output pins 
-
     digital_out_t cs;
     digital_out_t pwm;
+
+    // Function pointers for logic zero and logic one
+    drv_logic_t logic_zero;
+    drv_logic_t logic_one;
+    
+    //Pointer to segments data that is array of 8 items for each segment and point on click board
+    c7segrgb_segment_t *segments;
 
 } c7segrgb_t;
 
@@ -107,9 +130,12 @@ typedef struct
 typedef struct
 {
     // Additional gpio pins 
-
     pin_name_t cs;
     pin_name_t pwm;
+    
+    // Function pointers for logic zero and logic one
+    drv_logic_t logic_zero;
+    drv_logic_t logic_one;
 
 } c7segrgb_cfg_t;
 
@@ -181,14 +207,41 @@ void c7segrgb_pwm_low ( c7segrgb_t *ctx );
 void c7segrgb_pwm_high( c7segrgb_t *ctx );
 
 /**
- * @brief Get delay value.
+ * @brief Sets the state high of PWM pin function
+ * 
+ * @param ctx               Click object.
+ * @param character         Char to be written.
+ * @param green_brightness  Green color brightness.
+ * @param red_brightness    Red color brightness.
+ * @param blue_brightness   Blue color brightness.
  *
- * @param cyc_num  Number of CPU cycles.
- * @returns        Delay value needed for Delay_Cyc function
- *
- * @description This function get delay value which depending on device clock value in MHz.
+ * <pre> 
+ *  character: 
+ *        0x06 - 0
+ *        0x5B - 1
+ *        0x4F - 2
+ *        0x66 - 3
+ *        0x6D - 4
+ *        0x7D - 5
+ *        0x07 - 6
+ *        0x7F - 7
+ *        0x6F - 8
+ *        0x3F - 9
+ *        0x80 - .
+ *  </pre> 
+ * 
+ * @description The function sets character and it's color.
  */
-float c7segrgb_get_delay_value ( uint8_t cyc_num );
+void c7segrgb_set_num ( c7segrgb_t *ctx, uint8_t  character, uint8_t green_brightness, uint8_t red_brightness, uint8_t blue_brightness );
+
+/**
+ * @brief Sets all segments data.
+ * 
+ * @param ctx  Click object.
+ *
+ * @description The function sets the state and color of every segment from click board object segment array data.
+ */
+void c7segrgb_set_seven_seg ( c7segrgb_t *ctx );
 
 #ifdef __cplusplus
 }

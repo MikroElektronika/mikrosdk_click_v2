@@ -107,15 +107,6 @@ typedef struct
     char uart_rx_buffer[ DRV_RX_BUFFER_SIZE ];
     char uart_tx_buffer[ DRV_RX_BUFFER_SIZE ];
 
-    // static variable 
-    char driver_buffer[ 255 ];
-    uint8_t response_finished;
-    uint8_t bt_state;
-    uint8_t response_id;
-    uint8_t response;
-    uint8_t buffer_cnt;
-    uint8_t getting_settings;
-
 } bluetooth_t;
 
 /**
@@ -180,27 +171,28 @@ BLUETOOTH_RETVAL bluetooth_init ( bluetooth_t *ctx, bluetooth_cfg_t *cfg );
 
 /**
  * @brief Generic write function.
-
- * @param ctx         Click object.
- * @param data_buf    Data buffer for sends.
- * @param len         Number of bytes for sends.
- *
- * @description This function write specific number of bytes
+ * @param bluetooth Click object.
+ * @param data_buf Data buffer for sends.
+ * @param len Number of bytes for sends.
  */
 void bluetooth_generic_write ( bluetooth_t *ctx, char *data_buf, uint16_t len );
 
 /**
  * @brief Generic read function.
-
- * @param ctx         Click object.
- * @param data_buf    Data buffer for read data.
- * @param max_len     The maximum length of data that can be read.
- *
- * @returns Number of reads data.
- *
- * @description This function read maximum length of data.
+ * @param bluetooth Click object.
+ * @param data_buf Data buffer for read data.
+ * @param max_len The maximum length of data that can be read.
+ * @return Number of reads data.
  */
-int16_t bluetooth_generic_read ( bluetooth_t *ctx, char *data_buf, uint16_t max_len );
+int32_t bluetooth_generic_read ( bluetooth_t *ctx, char *data_buf, uint16_t max_len );
+
+/**
+ * @brief Write command function.
+ * @param bluetooth Click object.
+ * @param data_buf Data buffer for sends.
+ * @param len Number of bytes for sends.
+ */
+void bluetooth_write_command ( bluetooth_t *ctx, char *data_buf, uint16_t len );
 
 /**
  * @brief Enable device function
@@ -224,63 +216,34 @@ void bluetooth_enable ( bluetooth_t *ctx );
 void bluetooth_hw_reset ( bluetooth_t *ctx );
 
 /**
- * @brief Get responses function
- *
- * @param ctx         Click object.
- * 
- * @description The function gets responses from the
- *              RN-41 Bluetooth module on Bluetooth Click board.
- */
-uint8_t bluetooth_get_response ( bluetooth_t *ctx );
-
-/**
- * @brief Bluetooth RX ISR function
- *
- * @param ctx         Click object. 
- * @param character   Character from UART Interrupt
- *
- * @description The function receiving ISR for UART interrupt
- *              RN-41 Bluetooth module on Bluetooth Click board.
- */
-void bluetooth_rx_isr ( bluetooth_t *ctx, char character );
-
-
-/**
  * @brief Enter the command mode function
  *
  * @param ctx         Click object.
- * 
- * @retval status: 0 - ERROR; 1 - OK;
  *
  * @description The function enter the command mode of the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_enter_command_mode ( bluetooth_t *ctx );
+void bluetooth_enter_command_mode ( bluetooth_t *ctx );
 
 /**
  * @brief Exit the command mode function
  *
  * @param ctx         Click object.
- * 
- * @retval status: 0 - ERROR; 1 - OK;
  *
  * @description The function exit the command mode of the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_exit_command_mode ( bluetooth_t *ctx );
+void bluetooth_exit_command_mode ( bluetooth_t *ctx );
 
 /**
- * @brief Set toggles echo function
+ * @brief Toggles echo function
  *
  * @param ctx         Click object. 
- * @param t_echo      0 : Turn local echo OFF,  1 : Turn local echo ON
  *
- * @retval status: 0 - ERROR; 1 - OK;
- *
- * @description The function sets toggles the local echo ON and OFF to the
+ * @description The function toggles the local echo ON and OFF of
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_set_toggles_echo ( bluetooth_t *ctx, uint8_t t_echo );
+void bluetooth_toggle_echo ( bluetooth_t *ctx );
 
 /**
  * @brief Set the device name function
@@ -288,12 +251,10 @@ BLUETOOTH_RETVAL bluetooth_set_toggles_echo ( bluetooth_t *ctx, uint8_t t_echo )
  * @param ctx         Click object. 
  * @param name        Pointer to the memory location where the name be stored
  *
- * @retval status: 0 - ERROR; 1 - OK;
- *
  * @description The function set the device name of the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_set_device_name ( bluetooth_t *ctx, uint8_t *name );
+void bluetooth_set_device_name ( bluetooth_t *ctx, uint8_t *name );
 
 /**
  * @brief Set the operating mode function
@@ -316,36 +277,30 @@ BLUETOOTH_RETVAL bluetooth_set_device_name ( bluetooth_t *ctx, uint8_t *name );
  * remote device matching the store remote address;
  * </pre>
  *
- * @retval status: 0 - ERROR; 1 - OK;
- *
  * @description The function sets the operating mode of the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_set_operating_mode ( bluetooth_t *ctx, uint8_t op_mode );
+void bluetooth_set_operating_mode ( bluetooth_t *ctx, uint8_t op_mode );
 
 /**
  * @brief Enable 7-Bit data mode function
  *
  * @param ctx         Click object. 
  *
- * @retval status: 0 - ERROR; 1 - OK;
- *
  * @description The function enable 7-Bit data mode of the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_enable_7_bit_data_mode ( bluetooth_t *ctx );
+void bluetooth_enable_7_bit_data_mode ( bluetooth_t *ctx );
 
 /**
  * @brief Disable 7-Bit data mode function
  *
  * @param ctx         Click object. 
- * 
- * @retval status: 0 - ERROR; 1 - OK;
  *
  * @description The function disable 7-Bit data mode of the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_disable_7_bit_data_mode ( bluetooth_t *ctx );
+void bluetooth_disable_7_bit_data_mode ( bluetooth_t *ctx );
 
 /**
  * @brief Set the authentication function
@@ -360,12 +315,10 @@ BLUETOOTH_RETVAL bluetooth_disable_7_bit_data_mode ( bluetooth_t *ctx );
  * enter a pin code that matches the stored pin code;
  * </pre>
  *
- * @retval status: 0 - ERROR; 1 - OK;
- *
  * @description The function set the authentication value to the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_set_authentication ( bluetooth_t *ctx, uint8_t auth_value );
+void bluetooth_set_authentication ( bluetooth_t *ctx, uint8_t auth_value );
 
 /**
  * @brief Set the break function
@@ -382,12 +335,10 @@ BLUETOOTH_RETVAL bluetooth_set_authentication ( bluetooth_t *ctx, uint8_t auth_v
  * - 6 :  6   ms;
  * </pre>
  *
- * @retval status: 0 - ERROR; 1 - OK;
- *
  * @description The function set the break signal length to the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_set_break ( bluetooth_t *ctx, uint8_t break_signal );
+void bluetooth_set_break ( bluetooth_t *ctx, uint8_t break_signal );
 
 /**
  * @brief Sets the class of device (COD) function
@@ -407,13 +358,11 @@ BLUETOOTH_RETVAL bluetooth_set_cod ( bluetooth_t *ctx, uint8_t *msw, uint8_t *ls
  * @brief Set factory defaults settings function
  *
  * @param ctx         Click object. 
- * 
- * @retval status: 0 - ERROR; 1 - OK;
  *
  * @description The function set factory defaults settings to the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_set_factory_defaults ( bluetooth_t *ctx );
+void bluetooth_set_factory_defaults ( bluetooth_t *ctx );
 
 /**
  * @brief Set enable an inquiry scan function
@@ -421,12 +370,10 @@ BLUETOOTH_RETVAL bluetooth_set_factory_defaults ( bluetooth_t *ctx );
  * @param ctx           Click object. 
  * @param d_hex_value   Pointer to the memory loc. where the discoverability hex value be stored
  *
- * @retval status: 0 - ERROR; 1 - OK;
- *
  * @description The function set enable an inquiry scan to the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_set_discoverability ( bluetooth_t *ctx, uint8_t *d_hex_value );
+void bluetooth_set_discoverability ( bluetooth_t *ctx, uint8_t *d_hex_value );
 
 /**
  * @brief Set enable page scanning function
@@ -434,12 +381,10 @@ BLUETOOTH_RETVAL bluetooth_set_discoverability ( bluetooth_t *ctx, uint8_t *d_he
  * @param ctx          Click object. 
  * @param c_hex_value  Pointer to the memory location where the connectability hex value be stored
  *
- * @retval status: 0 - ERROR; 1 - OK;
- *
  * @description The function set enable page scanning to the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL  bluetooth_setConnectability ( bluetooth_t *ctx, uint8_t *c_hex_value );
+void bluetooth_setConnectability ( bluetooth_t *ctx, uint8_t *c_hex_value );
 
 /**
  * @brief Set UART parity function
@@ -466,14 +411,12 @@ BLUETOOTH_RETVAL bluetooth_set_uart_parity ( bluetooth_t *ctx, uint8_t character
  * @param ctx          Click object.   
  * @param es_string    Pointer to the memory location where the extended status string be stored
  *
- * @retval status: 0 - ERROR; 1 - OK;
- *
  * @description The function set extended status string to the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  *
  * @note es_string up to 8 alphanumeric characters
  */
-BLUETOOTH_RETVAL bluetooth_set_extended_status_string ( bluetooth_t *ctx, uint8_t *es_string );
+void bluetooth_set_extended_status_string ( bluetooth_t *ctx, uint8_t *es_string );
 
 /**
  * @brief Set security pin code function
@@ -519,14 +462,12 @@ BLUETOOTH_RETVAL bluetooth_set_special_config ( bluetooth_t *ctx, uint16_t speci
  * @param ctx           Click object.    
  * @param r_addr        Pointer to the memory location where the remote address string be stored
  *
- * @retval status: 0 - ERROR; 1 - OK;
- *
  * @description The function stores the remote Bluetooth address to the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  *
  * @note r_addr is string of the 12 hexadecimal digits
  */
-BLUETOOTH_RETVAL bluetooth_set_remote_address ( bluetooth_t *ctx, uint8_t *r_addr );
+void bluetooth_set_remote_address ( bluetooth_t *ctx, uint8_t *r_addr );
 
 /**
  * @brief Set the baud rate function
@@ -555,37 +496,31 @@ BLUETOOTH_RETVAL bluetooth_set_baud_rate ( bluetooth_t *ctx, uint32_t baud_rate 
  * @brief Set bonding enable function
  *
  * @param ctx           Click object. 
- * 
- * @retval status: 0 - ERROR; 1 - OK;
  *
  * @description The function set bonding enable of the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_enable_bonding ( bluetooth_t *ctx );
+void bluetooth_enable_bonding ( bluetooth_t *ctx );
 
 /**
  * @brief Set bonding disable function
  *
  * @param ctx           Click object. 
- * 
- * @retval status: 0 - ERROR; 1 - OK;
  *
  * @description The function set bonding disable of the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_disable_bonding ( bluetooth_t *ctx );
+void bluetooth_disable_bonding ( bluetooth_t *ctx );
 
 /**
  * @brief Reboot the module function
  *
  * @param ctx           Click object. 
- * 
- * @retval status: 0 - ERROR; 1 - OK;
  *
  * @description The function set bonding disable of the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_reboot ( bluetooth_t *ctx );
+void bluetooth_reboot ( bluetooth_t *ctx );
 
 /**
  * @brief Set the profile function
@@ -616,25 +551,21 @@ BLUETOOTH_RETVAL bluetooth_set_profile ( bluetooth_t *ctx, uint8_t profile );
  * @brief Enables the role switch function
  *
  * @param ctx           Click object. 
- * 
- * @retval status: 0 - ERROR; 1 - OK;
  *
  * @description The function enables the role switch of the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_enable_role_switch ( bluetooth_t *ctx );
+void bluetooth_enable_role_switch ( bluetooth_t *ctx );
 
 /**
  * @brief Disables the role switch function
  *
  * @param ctx           Click object. 
- * 
- * @retval status: 0 - ERROR; 1 - OK;
  *
  * @description The function disables the role switch of the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_disable_role_switch ( bluetooth_t *ctx );
+void bluetooth_disable_role_switch ( bluetooth_t *ctx );
 
 /**
  * @brief Connect the device to a remote address function
@@ -642,12 +573,10 @@ BLUETOOTH_RETVAL bluetooth_disable_role_switch ( bluetooth_t *ctx );
  * @param ctx           Click object.  
  * @param r_addr        Pointer to the memory location where the remote address string be stored
  *
- * @retval status: 0 - ERROR; 1 - OK;
- *
  * @description The function connect the device to a remote address to the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_connect_to_remote_address ( bluetooth_t *ctx, uint8_t *r_addr );
+void bluetooth_connect_to_remote_address ( bluetooth_t *ctx, uint8_t *r_addr );
 
 /**
  * @brief Connect the device to a remote address fast mode function
@@ -655,110 +584,90 @@ BLUETOOTH_RETVAL bluetooth_connect_to_remote_address ( bluetooth_t *ctx, uint8_t
  * @param ctx           Click object. 
  * @param r_addr        Pointer to the memory location where the remote address string be stored
  *
- * @retval status: 0 - ERROR; 1 - OK;
- *
  * @description The function connect the device to a remote address fast mode to the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_connect_to_remote_address_fast_mode ( bluetooth_t *ctx, uint8_t *r_addr );
+void bluetooth_connect_to_remote_address_fast_mode ( bluetooth_t *ctx, uint8_t *r_addr );
 
 /**
  * @brief Ends configuration and puts the device into fast data mode function
  *
  * @param ctx           Click object. 
- * 
- * @retval status: 0 - ERROR; 1 - OK;
  *
  * @description The function ends configuration and puts the device into fast data mode to the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_endspecial_config ( bluetooth_t *ctx );
+void bluetooth_endspecial_config ( bluetooth_t *ctx );
 
 /**
  * @brief Get displays a list of help command function
  *
  * @param ctx           Click object.  
- * @param response  	  Pointer to the memory location where response be stored
- *
- * @retval status: 0 - ERROR; 1 - OK;
  *
  * @description The function get displays a list of help command of the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_get_help ( bluetooth_t *ctx, uint8_t *response );
+void bluetooth_get_help ( bluetooth_t *ctx );
 
 /**
  * @brief Get displays basic settings function
  *
  * @param ctx           Click object.  
- * @param response      Pointer to the memory location where response be stored
- *
- * @retval status: 0 - ERROR; 1 - OK;
  *
  * @description The function get displays basic settings of the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_get_basic_settings ( bluetooth_t *ctx, uint8_t *response );
+void bluetooth_get_basic_settings ( bluetooth_t *ctx );
 
 /**
  * @brief Get displays the device�s extended settings function
  *
  * @param ctx           Click object.  
- * @param response      Pointer to the memory location where response be stored
- *
- * @retval status: 0 - ERROR; 1 - OK;
  *
  * @description The function get displays the device�s extended settings of the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_get_extended_settings ( bluetooth_t *ctx, uint8_t *response );
+void bluetooth_get_extended_settings ( bluetooth_t *ctx );
 
 /**
  * @brief Get displays the device�s eBluetooth address function
  *
  * @param ctx           Click object.  
- * @param response      Pointer to the memory location where response be stored
- *
- * @retval status: 0 - ERROR; 1 - OK;
  *
  * @description The function get displays the Bluetooth address of the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_get_device_address ( bluetooth_t *ctx, uint8_t *response );
+void bluetooth_get_device_address ( bluetooth_t *ctx );
 
 /**
  * @brief Scans for Bluetooth devices in pairing mode function
  *
  * @param ctx           Click object.  
- * @param response      Pointer to the memory location where response be stored
  *
  * @description The function scans for Bluetooth devices in pairing mode of the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-void bluetooth_scans_device ( bluetooth_t *ctx, uint8_t *response );
+void bluetooth_scans_device ( bluetooth_t *ctx );
 
 /**
  * @brief Displays the remote side modem signal status function
  *
  * @param ctx           Click object.  
- * @param response      Pointer to the memory location where response be stored
  *
  * @description The function displays the remote side modem signal status of the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-void bluetooth_get_signal_status ( bluetooth_t *ctx, uint8_t *response );
+void bluetooth_get_signal_status ( bluetooth_t *ctx );
 
 /**
  * @brief Set undiscoverable mode function
  *
  * @param ctx           Click object. 
- * 
- * @retval status: 0 - ERROR; 1 - OK;
  *
  * @description The function set undiscoverable mode of the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_set_undiscoverable (  bluetooth_t *ctx );
+void bluetooth_set_undiscoverable (  bluetooth_t *ctx );
 
 /**
  * @brief Set quiet mode function
@@ -783,14 +692,11 @@ BLUETOOTH_RETVAL bluetooth_set_quiet_mode ( bluetooth_t *ctx, uint8_t q_mode );
  * @brief Get firmware version function
  *
  * @param ctx                 Click object.  
- * @param firmware_version    Pointer to the memory location where firmware version be stored
- *
- * @retval status: 0 - ERROR; 1 - OK;
  *
  * @description The function get firmware version of the
  *              RN-41 Bluetooth module on Bluetooth Click board.
  */
-BLUETOOTH_RETVAL bluetooth_get_firmware_version ( bluetooth_t *ctx, uint8_t *firmware_version );
+void bluetooth_get_firmware_version ( bluetooth_t *ctx );
 
 #ifdef __cplusplus
 }

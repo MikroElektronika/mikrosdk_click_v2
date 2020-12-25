@@ -67,7 +67,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes SPI driver, sets config word, initializes the device, sets and log output value
+> Initializes SPI driver, sets config word, initializes and configures the device
 
 ```c
 
@@ -76,67 +76,49 @@ void application_init ( void )
     log_cfg_t log_cfg;
     stepup_cfg_t cfg;
     
-
-    out_value = 4095;
-
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, "Application Init" );
 
     //  Click initialization.
 
     stepup_cfg_setup( &cfg );
     STEPUP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     stepup_init( &stepup, &cfg );
+    
+    stepup_default_cfg( &stepup );
 
     Delay_ms( 100 );
-
-    stepup_default_cfg( &stepup, out_value );
-    stepup_log_percent( out_value );
-    log_printf( &logger, "> app init done\r\n" );
+    log_info( &logger, "Application Task" );
 }
   
 ```
 
 ### Application Task
 
-> Simulates user input via UART terminal, if 'user' enters + or - output value is increased or 
-> decreased respectively
+> Sets 3 different boost precentage value to device, value changes every 10 seconds.
 
 
 ```c
 
 void application_task ( void )
 {
-    uint8_t i;
+    log_info( &logger, "Setting DAC boost to 10%%" );
+    stepup_set_percentage( &stepup, 10 );
+    Delay_ms( 10000 );
 
-    //  Task implementation.
-
-    for ( i = 0; i < 8; i++ )
-    {
-        if ( out_value < 4095 )
-        {
-            out_value++;
-        }
-        stepup_set_out( &stepup, out_value );
-        stepup_log_percent( out_value );
-        Delay_ms( 250 );
-    }
-
-    for ( i = 0; i < 14; i++ )
-    {
-        if ( out_value > 0 )
-        {
-            out_value--;
-        }
-        stepup_set_out( &stepup, out_value );
-        stepup_log_percent( out_value );
-        Delay_ms( 250 );
-    }
-}  
+    log_info( &logger, "Setting DAC boost to 60%%" );
+    stepup_set_percentage( &stepup, 60 );
+    Delay_ms( 10000 );
+    
+    log_info( &logger, "Setting DAC boost to 30%%" );
+    stepup_set_percentage( &stepup, 30 );
+    Delay_ms( 10000 );
+}
 
 ```
 

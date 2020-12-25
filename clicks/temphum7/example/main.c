@@ -38,7 +38,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -57,10 +57,10 @@ void application_task ( void )
    float relative_humidity; 
 
     temperature = temphum7_get_temperature( &temphum7, TEMPHUM7_HOLD_MASTER_MODE );
-    log_printf( &logger, "-> Temperature: %f C/r/n", temperature );
+    log_printf( &logger, "-> Temperature: %f C\r\n", temperature );
 
     relative_humidity = temphum7_get_relative_humidity( &temphum7, TEMPHUM7_HOLD_MASTER_MODE );
-    log_printf( &logger, "-> Relative humidity: %f %%RH/r/n ", relative_humidity );
+    log_printf( &logger, "-> Relative humidity: %f %%RH\r\n ", relative_humidity );
 
     Delay_ms( 1000 );
 }

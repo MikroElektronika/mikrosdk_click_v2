@@ -28,7 +28,7 @@
  * \brief This file contains API for Barcode Click driver.
  *
  * \addtogroup barcode Barcode Click Driver
- * @{
+ * \{
  */
 // ----------------------------------------------------------------------------
 
@@ -36,7 +36,6 @@
 #define BARCODE_H
 
 #include "drv_digital_out.h"
-#include "drv_digital_in.h"
 #include "drv_uart.h"
 
 // -------------------------------------------------------------- PUBLIC MACROS 
@@ -50,8 +49,8 @@
  * \{
  */
 #define BARCODE_MAP_MIKROBUS( cfg, mikrobus ) \
-  cfg.tx_pin  = MIKROBUS( mikrobus, MIKROBUS_TX ); \
-  cfg.rx_pin  = MIKROBUS( mikrobus, MIKROBUS_RX ); \
+  cfg.tx_pin = MIKROBUS( mikrobus, MIKROBUS_TX ); \
+  cfg.rx_pin = MIKROBUS( mikrobus, MIKROBUS_RX ); \
   cfg.rst = MIKROBUS( mikrobus, MIKROBUS_RST ); \
   cfg.trg = MIKROBUS( mikrobus, MIKROBUS_PWM )
 /** \} */
@@ -60,10 +59,10 @@
  * \defgroup error_code Error Code
  * \{
  */
-#define BARCODE_RETVAL  uint8_t
+#define BARCODE_RETVAL  int8_t
 
-#define BARCODE_OK           0x00
-#define BARCODE_INIT_ERROR   0xFF
+#define BARCODE_OK            0
+#define BARCODE_INIT_ERROR  (-1)
 /** \} */
 
 /**
@@ -90,13 +89,12 @@ typedef struct
     digital_out_t rst;
     digital_out_t trg;
 
-    
     // Modules 
 
     uart_t uart;
 
-    char uart_rx_buffer[ 500 ];
-    char uart_tx_buffer[ 500 ];
+    char uart_rx_buffer[ 300 ];
+    char uart_tx_buffer[ 300 ];
 
 } barcode_t;
 
@@ -109,7 +107,7 @@ typedef struct
 
     pin_name_t rx_pin;
     pin_name_t tx_pin;
-    
+
     // Additional gpio pins 
 
     pin_name_t rst;
@@ -120,15 +118,10 @@ typedef struct
     uint32_t          baud_rate;     // Clock speed.
     bool              uart_blocking;
     uart_data_bits_t  data_bit;      // Data bits.
-    uart_parity_t     parity_bit;    // Parity bit.  
-    uart_stop_bits_t  stop_bit;      // Stop bits.    
+    uart_parity_t     parity_bit;    // Parity bit.
+    uart_stop_bits_t  stop_bit;      // Stop bits.
 
 } barcode_cfg_t;
-
-/**
- * @brief Error type 
- */
-typedef uint8_t barcode_error_t;
 
 /** \} */ // End types group
 
@@ -189,9 +182,9 @@ uint16_t barcode_generic_read ( barcode_t *ctx, char *data_buf, uint16_t max_len
 #ifdef __cplusplus
 }
 #endif
-#endif  // _BARCODE_H_
+#endif  // BARCODE_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
-/*! @} */
-// ------------------------------------------------------------------------- END
+/** \} */ // End click Driver group
+
+// ------------------------------------------------------------------------ END

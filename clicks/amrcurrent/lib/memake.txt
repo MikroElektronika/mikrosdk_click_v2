@@ -1,15 +1,15 @@
 type: library
 
-target: lib_amrcurent
+target: lib_amrcurrent
 
 alias: Click.AmrCurrent
 
 sources: {
-    src/amrcurent.c
+    src/amrcurrent.c
 }
 
 headers: {
-    include/amrcurent.h
+    include/amrcurrent.h
 }
 
 include: {
@@ -17,7 +17,7 @@ include: {
 }
 
 install: {
-    src(include/amrcurent.h) dst(include/amrcurent.h)
+    src(include/amrcurrent.h) dst(include/amrcurrent.h)
 }
 
 expInclude: {

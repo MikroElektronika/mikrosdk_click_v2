@@ -66,7 +66,9 @@ NFCEXTEND_RETVAL nfcextend_init ( nfcextend_t *ctx, nfcextend_cfg_t *cfg )
         return NFCEXTEND_INIT_ERROR;
     }
     
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Input pins
 
@@ -116,7 +118,7 @@ uint8_t nfcextend_default_cfg ( nfcextend_t *ctx )
         return 1;
     }
 
-    temp_val = 0x00;
+    temp_val = 0x3F;
     if ( 0 != drv_single_write( ctx, NFCEXTEND_MEMORY_SYSTEM, 
                                      NFCEXTEND_SYSTEM_REG_ENDA1, &temp_val ) )
     {
@@ -249,8 +251,8 @@ uint8_t nfcextend_i2c_set ( nfcextend_t *ctx, nfcextend_block_t *block )
         return 1;
     }
 
-    temp_buf[ 0 ] = block->reg_addr >> 8;
-    temp_buf[ 1 ] = block->reg_addr;
+    temp_buf[ 0 ] = ( uint8_t ) ( block->reg_addr >> 8 );
+    temp_buf[ 1 ] = ( uint8_t ) block->reg_addr;
 
     for ( cnt = 0; cnt < block->len; cnt++ )
     {
@@ -259,7 +261,7 @@ uint8_t nfcextend_i2c_set ( nfcextend_t *ctx, nfcextend_block_t *block )
 
     if ( block->memory_area == 0x04 )
     {
-        temp_slave_addr = ctx->slave_address |= 0x04;
+        temp_slave_addr = ctx->slave_address | 0x04;
     }
     else 
     {
@@ -282,12 +284,12 @@ uint8_t nfcextend_i2c_get ( nfcextend_t *ctx, nfcextend_block_t *block )
         return 1;
     }
 
-    temp_buf[ 0 ] = ( uint8_t ) block->reg_addr >> 8;
+    temp_buf[ 0 ] = ( uint8_t ) ( block->reg_addr >> 8 );
     temp_buf[ 1 ] = ( uint8_t ) block->reg_addr;
 
     if ( block->memory_area == 0x04 )
     {
-        temp_slave_addr = ctx->slave_address |= 0x04;
+        temp_slave_addr = ctx->slave_address | 0x04;
     }
     else 
     {
@@ -321,7 +323,7 @@ uint8_t drv_single_write ( nfcextend_t *ctx, uint8_t memory_area,
     {
         return 1;
     }
-    Delay_ms( 10 );
+    Delay_10ms( );
 
     return 0;
 }

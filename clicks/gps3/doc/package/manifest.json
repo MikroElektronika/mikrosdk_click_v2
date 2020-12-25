@@ -27,5 +27,7 @@
     "short_description": "GPS3 click carries Quectel’s L80 GPS module, a high-sensitivity ultra slim GPS module with a patch antenna.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.2"
 }
+
+

@@ -49,16 +49,16 @@ void touchkey4_cfg_setup ( touchkey4_cfg_t *cfg )
 
     cfg->int_pin = HAL_PIN_NC;
 
-    cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
+    cfg->i2c_speed = I2C_MASTER_SPEED_FULL; 
     cfg->i2c_address = TOUCHKEY4_SLAVE_ADDRESS;
 }
 
 TOUCHKEY4_RETVAL touchkey4_init ( touchkey4_t *ctx, touchkey4_cfg_t *cfg )
 {
-     i2c_master_config_t i2c_cfg;
-
+    i2c_master_config_t i2c_cfg;
+    
     i2c_master_configure_default( &i2c_cfg );
-     i2c_cfg.speed  = cfg->i2c_speed;
+    i2c_cfg.speed  = cfg->i2c_speed;
     i2c_cfg.scl    = cfg->scl;
     i2c_cfg.sda    = cfg->sda;
 
@@ -71,6 +71,7 @@ TOUCHKEY4_RETVAL touchkey4_init ( touchkey4_t *ctx, touchkey4_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Input pins
 
@@ -83,7 +84,7 @@ void touchkey4_default_cfg ( touchkey4_t *ctx )
 {
     touchkey4_write_reg( ctx, TOUCHKEY4_CONFIG2_REG, TOUCHKEY4_AN_CALIB_RETRY |
                          TOUCHKEY4_DETECT_RELEASE_EN );
-    touchkey4_write_reg( ctx, TOUCHKEY4_REPEAT_RATE_EN_REG, TOUCHKEY4_INPUT2_REPEAT_RATE_EN );
+    touchkey4_write_reg( ctx, TOUCHKEY4_REPEAT_RATE_EN_REG, TOUCHKEY4_REPEAT_RATE_DIS );
     touchkey4_write_reg( ctx, TOUCHKEY4_CONFIG_REG, TOUCHKEY4_AN_NOISE_FILTER_EN | 
                          TOUCHKEY4_DIG_NOISE_THRESHOLD_DIS );
     touchkey4_write_reg( ctx, TOUCHKEY4_STANDBY_THRESHOLD_REG, 0x40 );
@@ -103,44 +104,26 @@ void touchkey4_default_cfg ( touchkey4_t *ctx )
                          TOUCHKEY4_COMBO_SENS_IN_BOTH_MODES_EN, TOUCHKEY4_COMBO_SENS_IN_STBY_EN );
 }
 
-void touchkey4_generic_write ( touchkey4_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
-{
-    uint8_t tx_buf[ 256 ];
-    uint8_t cnt;
-    
-    tx_buf[ 0 ] = reg;
-    
-    for ( cnt = 1; cnt <= len; cnt++ )
-    {
-        tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
-    }
-    
-    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );   
-}
-
-void touchkey4_generic_read ( touchkey4_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
-{
-    i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, len );
-}
-
 void touchkey4_write_reg( touchkey4_t *ctx, const uint8_t register_address, const uint8_t transfer_data )
 {
-    uint8_t data_to_write;
-
-    data_to_write = transfer_data;
-    touchkey4_generic_write(ctx, register_address, &data_to_write, 1 );
+    uint8_t buff_data[ 2 ] = { 0 };
+    
+    buff_data[ 0 ] = register_address;
+    buff_data[ 1 ] = transfer_data;
+    
+    i2c_master_write( &ctx->i2c, buff_data, 2 ); 
     receive_check = 1;
 
     switch ( register_address )
     {
         case 0x00: 
         {
-            config_byte = data_to_write;
+            config_byte = transfer_data;
         break;
         }
         case 0x44: 
         {
-            release_check = data_to_write;
+            release_check = transfer_data;
         break;
         }
         default:
@@ -151,10 +134,24 @@ void touchkey4_write_reg( touchkey4_t *ctx, const uint8_t register_address, cons
 void touchkey4_read_reg ( touchkey4_t *ctx, const uint8_t register_address, uint8_t *data_out,
                          const uint8_t n_bytes )
 {
-    uint8_t reg_addr = register_address;
-
-    touchkey4_generic_read(ctx, reg_addr, data_out, n_bytes);
+    uint8_t reg_write = register_address;
+    i2c_master_write_then_read( &ctx->i2c, &reg_write, 1, data_out, n_bytes );
     receive_check = 1;
+}
+
+uint8_t touchkey4_receive_byte( touchkey4_t *ctx, const uint8_t register_address )
+{
+    uint8_t temp = register_address;
+    
+    if ( receive_check )
+    {
+        i2c_master_write( &ctx->i2c, &temp, 1 );  
+        receive_check = 0;
+    }
+    
+    i2c_master_read( &ctx->i2c, &temp, 1 );
+    
+    return temp;
 }
 
 void touchkey4_detect_touch ( touchkey4_t *ctx, uint8_t *input_sens )

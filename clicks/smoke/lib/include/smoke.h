@@ -61,8 +61,9 @@
  */
 #define SMOKE_RETVAL  uint8_t
 
-#define SMOKE_OK           0x00
-#define SMOKE_INIT_ERROR   0xFF
+#define SMOKE_OK                0x00
+#define SMOKE_INIT_ERROR        0xFF
+#define SMOKE_PARAMETER_ERROR   0xFE
 /** \} */
 
 /**
@@ -78,13 +79,30 @@
  */
 
 /**
- * \defgroup status_registers Status Registers
+ * \defgroup status_registers Status Registers and flags
  * \{
  */
 #define SMOKE_INT_STAT1                   0x00
 #define SMOKE_INT_STAT2                   0x01
 #define SMOKE_INT_ENABLE1                 0x02
 #define SMOKE_INT_ENABLE2                 0x03
+/** \} */
+
+/**
+ * \defgroup int_flags Interrupt function flags
+ * \{
+ */
+#define SMOKE_INT_FLAG_GET_MAIN           1
+#define SMOKE_INT_FLAG_GET_TEMP_DATA      2
+
+#define SMOKE_INT_FLAG_SET_AFULL          0
+#define SMOKE_INT_FLAG_SET_DATA_RDY       1
+#define SMOKE_INT_FLAG_SET_ALS_OVF        2
+#define SMOKE_INT_FLAG_SET_PROXY_THRESH   3
+#define SMOKE_INT_FLAG_SET_TEMP           4
+
+#define SMOKE_INT_FLAG_SET_ENABLE         1
+#define SMOKE_INT_FLAG_SET_DISABLE        0
 /** \} */
 
 /**
@@ -102,18 +120,19 @@
  * \defgroup configuration_registers Configuration Registers
  * \{
  */
-#define SMOKE_FIFO_CONFIG                 0x08
-#define SMOKE_MODE_CONFIG                 0x09
-#define SMOKE_PARTICLE_CONFIG             0x0A
-#define SMOKE_LED1_PULSE_AMP              0x0C
-#define SMOKE_LED2_PULSE_AMP              0x0D
-#define SMOKE_LED3_PULSE_AMP              0x0E
-#define SMOKE_LED_PROX_AMP                0x10
-#define SMOKE_MULTI_LED_CONFIG1           0x11
-#define SMOKE_MULTI_LED_CONFIG2           0x12
-#define SMOKE_MIN_POWER_LEVEL             0x01
-#define SMOKE_AVG_POWER_LEVEL             0x1F
-#define SMOKE_MAX_POWER_LEVEL             0xFF
+#define SMOKE_REG_FIFO_CONFIG             0x08
+#define SMOKE_REG_MODE_CONFIG             0x09
+#define SMOKE_REG_PARTICLE_CONFIG         0x0A
+#define SMOKE_REG_LED_RED_PULSE_AMP       0x0C
+#define SMOKE_REG_LED_IR_PULSE_AMP        0x0D
+#define SMOKE_REG_LED_GREEN_PULSE_AMP     0x0E
+#define SMOKE_REG_LED_PROX_AMP            0x10
+#define SMOKE_REG_LED_PROX_THRESH         0x30
+#define SMOKE_REG_MULTI_LED_CONFIG1       0x11
+#define SMOKE_REG_MULTI_LED_CONFIG2       0x12
+#define SMOKE_REG_MIN_POWER_LEVEL         0x01
+#define SMOKE_REG_AVG_POWER_LEVEL         0x1F
+#define SMOKE_REG_MAX_POWER_LEVEL         0xFF
 /** \} */
 
 /**
@@ -233,10 +252,12 @@
 #define SMOKE_SLOT2_MASK                  0x8F
 #define SMOKE_SLOT3_MASK                  0xF8
 #define SMOKE_SLOT4_MASK                  0x8F
+
 #define SMOKE_SLOT_NONE                   0x00
 #define SMOKE_SLOT_RED_LED                0x01
 #define SMOKE_SLOT_IR_LED                 0x02
 #define SMOKE_SLOT_GREEN_LED              0x03
+
 #define SMOKE_SLOT_NONE_PILOT             0x04
 #define SMOKE_SLOT_RED_PILOT              0x05
 #define SMOKE_SLOT_IR_PILOT               0x06
@@ -266,6 +287,11 @@ typedef struct
     // ctx variable 
 
     uint8_t slave_address;
+    
+    uint8_t num_en_led;
+    uint32_t red_value;
+    uint32_t ir_value;
+    uint32_t green_value;
 
 } smoke_t;
 
@@ -295,16 +321,25 @@ typedef struct
  */
 typedef struct
 {
-  // Structure fields  
-
-  uint8_t avg_samp; 
-  uint8_t mode; 
-  uint8_t adc_range; 
-  uint8_t samp_rate; 
-  uint8_t pulse_width; 
-  uint8_t led_pow_lvl;
+    uint8_t avg_samp; 
+    uint8_t mode; 
+    uint8_t adc_range; 
+    uint8_t samp_rate; 
+    uint8_t pulse_width; 
+    uint8_t led_pow_lvl;
 
 } smoke_set_registers_t;
+
+/**
+ * @brief New value object definition.
+ */
+typedef struct
+{
+    uint8_t reg_addr;
+    uint8_t mask; 
+    uint8_t value;
+
+} smoke_set_new_value_t;
 
 /** \} */ // End types group
 // ----------------------------------------------- PUBLIC FUNCTION DECLARATIONS
@@ -371,7 +406,7 @@ void smoke_write_data ( smoke_t *ctx, uint8_t wr_addr, uint8_t wr_data );
 uint8_t smoke_read_data ( smoke_t *ctx, uint8_t rd_addr );
 
 /**
- * @brief Multi read function.
+ * @brief Generic read function.
  *
  * @param ctx          Click object.
  * @param rd_addr      Register address.
@@ -380,7 +415,7 @@ uint8_t smoke_read_data ( smoke_t *ctx, uint8_t rd_addr );
  *
  * @description This function reads n-bytes data from the desired register.
  */
-void smoke_multi_read ( smoke_t *ctx, uint8_t rd_addr, uint8_t *buffer, uint8_t cnt );
+void smoke_generic_read ( smoke_t *ctx, uint8_t rd_addr, uint8_t *buffer, uint8_t cnt );
 
 /**
  * @brief Set new value function
@@ -392,7 +427,7 @@ void smoke_multi_read ( smoke_t *ctx, uint8_t rd_addr, uint8_t *buffer, uint8_t 
  *
  * @description Function is used to apply new values.
 **/
-void smoke_set_new_value ( smoke_t *ctx, uint8_t reg, uint8_t mask, uint8_t value );
+void smoke_set_new_value ( smoke_t *ctx, smoke_set_new_value_t *new_value_data );
 
 /**
  * @brief Get desired interrupt function
@@ -411,11 +446,10 @@ uint8_t smoke_get_intrrupt ( smoke_t *ctx, uint8_t flag );
  *
  * @param ctx             Click object.
  * @param interrupt_flag  Flag that specifie interrupt    
- * @param enable_flag     1 - enable; 0 - disable
+ * @param enable_flag     Enable flag
  * 
- * @description Function is used to enable or disable specified interupt.
+ * @returns Function status.
  * 
- * @note
  * <pre> 
  *  interrupt_flag state: 
  *        0 - A full 
@@ -426,56 +460,217 @@ uint8_t smoke_get_intrrupt ( smoke_t *ctx, uint8_t flag );
  *  enable_flag state:
  *         1 - enable;
  *         0 - disable;
- *  One may consult datasheet in order to discern what to write into register or use predefined values.
+ *  return status:
+ *         0xFE - parameter error;
+ *         0x00 - ok
  *  </pre> 
- * Consult datasheet in order to discern what to write into register or use predefined values.
+ * 
+ * @description Function is used to enable or disable specified interupt.
+ * 
+ * @note Consult datasheet in order to discern what to write into register or use predefined values.
 **/
-void smoke_enable_disable_interrupts ( smoke_t *ctx, uint8_t interrupt_flag, uint8_t enable_flag );
+uint8_t smoke_enable_disable_interrupts ( smoke_t *ctx, uint8_t interrupt_flag, uint8_t enable_flag );
 
 /**
- * @brief Set corresponding configuration register function
- *
- * @param ctx      Click object.
- * @param flag     Flag that specifie interrupt    
- * @param mode     8-bit data representing desired mode
- * 
- * @description Function is used to write specified mode into corresponding configuration register.
- * 
- * @note
- * <pre> 
- * flag state: 
- *       0 - Soft shut down 
- *       1 - Soft wake up 
- *       2 - Set LED Mode For Sampling
- *       3 - Set ADC Range
- *       4 - Set sample rate
- *       5 - Set pulse width
- * One may consult datasheet in order to discern what to write into register or use predefined values. 
- * </pre> 
-**/
-void smoke_setting_function ( smoke_t *ctx, uint8_t flag, uint8_t mode );
-
-/**
- * @brief Set corresponding amplitude or proximity threshold function
+ * @brief Read device ID function
  *
  * @param ctx           Click object.
- * @param flag          Flag that specifie amplitude or proximity threshold    
- * @param write_data    8-bit data representing amplitude or the proximity mode interrupt threshold
  * 
- * @description Function is used to set specified amplitude or proximity threshold.
- * 
- * @note
- * <pre> 
- * flag state: 
- *     0 - Set RED LED Pulse Amplitude   
- *     1 - Set IR LED Pulse Amplitude   
- *     2 - Set GREEN LED Pulse Amplitude  
- *     3 - Set Proximity Pulse Amplitude   
- *     4 - Set Proximity Threshold  
- * One may consult datasheet in order to discern what to write into register or use predefined values.
- * </pre> 
+ * @returns result 8-bit value representing the device's ID number
+ *
+ * @description Function is used to read the device's ID number.
 **/
-void smoke_setting_prox_and_amp ( smoke_t *ctx, uint8_t flag, uint8_t write_data );
+uint8_t smoke_read_device_id ( smoke_t *ctx );
+
+/**
+ * @brief Reset device function
+ *
+ * @param ctx           Click object.
+ * @description Function is used to apply software reset.
+**/
+void smoke_reset ( smoke_t *ctx );
+
+/**
+ * @brief Read temperature in Centigrade function
+ *
+ * @param ctx           Click object.
+ * 
+ * @returns result float value of temperature in Celsius
+ *
+ * @description Function is used to read current IC�s internal temperature.
+**/
+float smoke_read_temp ( smoke_t *ctx );
+
+/**
+ * @brief I2C power setter
+ *
+ * @param ctx             Click object.
+ * @param state           Flag for power state
+ * 
+ * @returns Function status.
+ * 
+ * <pre> 
+ *  state: 
+ *        0x80 - Shutdown
+ *        0x00 - Wakeup
+ *  return status:
+ *         0xFE - parameter error;
+ *         0x00 - ok
+ *  </pre> 
+ * 
+ * @description Function is used to shutdown or wakeup device.
+ * 
+ * @note Consult datasheet in order to discern what to write into register or use predefined values.
+**/
+uint8_t smoke_set_power ( smoke_t *ctx, uint8_t state );
+
+/**
+ * @brief Enable leds
+ *
+ * @param ctx             Click object.
+ * @param mode            Led Modes
+ * 
+ * @returns Function status.
+ * 
+ * <pre> 
+ *  mode: 
+ *        0x02 - Red only
+ *        0x03 - Red and IR
+ *        0x07 - Red, IR and green
+ *  return status:
+ *         0xFE - parameter error;
+ *         0x00 - ok
+ *  </pre> 
+ * 
+ * @description Function is used to enable leds for reading.
+ * 
+ * @note Consult datasheet in order to discern what to write into register or use predefined values.
+**/
+uint8_t smoke_set_led_mode ( smoke_t *ctx, uint8_t mode );
+
+/**
+ * @brief Set ADC range
+ *
+ * @param ctx             Click object.
+ * @param adc_range       ADC range
+ * 
+ * @returns Function status.
+ * 
+ * <pre> 
+ *  adc_range: 
+ *        0x00 - 2048
+ *        0x20 - 4096
+ *        0x40 - 8192
+ *        0x60 - 16384
+ *  return status:
+ *         0xFE - parameter error;
+ *         0x00 - ok
+ *  </pre> 
+ * 
+ * @description Function is used to set adc range.
+ * 
+ * @note Consult datasheet in order to discern what to write into register or use predefined values.
+**/
+uint8_t smoke_set_adc_range ( smoke_t *ctx, uint8_t adc_range );
+
+/**
+ * @brief Set sample rate
+ *
+ * @param ctx             Click object.
+ * @param sample_rate     Sample rate
+ * 
+ * @returns Function status.
+ * 
+ * <pre> 
+ *  sample_rate: 
+ *        0x00 - 50
+ *        0x04 - 100
+ *        0x08 - 200
+ *        0x0C - 400
+ *        0x10 - 800
+ *        0x14 - 1000
+ *        0x18 - 1600
+ *        0x1C - 3200
+ *  return status:
+ *         0xFE - parameter error;
+ *         0x00 - ok
+ *  </pre> 
+ * 
+ * @description Function is used to set sample rate.
+ * 
+ * @note Consult datasheet in order to discern what to write into register or use predefined values.
+**/
+uint8_t smoke_set_sample_rate ( smoke_t *ctx, uint8_t sample_rate );
+
+/**
+ * @brief Set pulse width.
+ *
+ * @param ctx             Click object.
+ * @param pulse_width     Pulse width
+ * 
+ * @returns Function status.
+ * 
+ * <pre> 
+ *  pulse_width: 
+ *        0x00 - 69
+ *        0x01 - 118
+ *        0x02 - 215
+ *        0x03 - 411
+ *  return status:
+ *         0xFE - parameter error;
+ *         0x00 - ok
+ *  </pre> 
+ * 
+ * @description Function is used to set pulse width.
+ * 
+ * @note Consult datasheet in order to discern what to write into register or use predefined values.
+**/
+uint8_t smoke_set_pulse_width ( smoke_t *ctx, uint8_t pulse_width );
+
+/**
+ * @brief Set led amplitude.
+ *
+ * @param ctx             Click object.
+ * @param led             Flag for leds amplitude
+ * 
+ * @returns Function status.
+ * 
+ * <pre> 
+ *  led: 
+ *        0x0C - Red
+ *        0x0D - IR
+ *        0x0E - Green
+ *        0x10 - Proximity
+ *  return status:
+ *         0xFE - parameter error;
+ *         0x00 - ok
+ *  </pre> 
+ * 
+ * @description Function is used to set led amplitude.
+ * 
+ * @note Consult datasheet in order to discern what to write into register or use predefined values.
+**/
+uint8_t smoke_set_led_amplitude ( smoke_t *ctx, uint8_t led, uint8_t amplitude );
+
+/**
+ * @brief Set proximity threshold.
+ *
+ * @param ctx             Click object.
+ * @param led             Flag for leds amplitude
+ * 
+ * @returns Function status.
+ * 
+ * <pre> 
+ *  return status:
+ *         0xFE - parameter error;
+ *         0x00 - ok
+ *  </pre> 
+ * 
+ * @description Function is used to set proximity threshold.
+ * 
+ * @note Consult datasheet in order to discern what to write into register or use predefined values.
+**/
+uint8_t smoke_set_proximity_amplitude_threshold( smoke_t *ctx, uint8_t threshold );
 
 /**
  * @brief Define slots in MultiLED mode function
@@ -483,10 +678,12 @@ void smoke_setting_prox_and_amp ( smoke_t *ctx, uint8_t flag, uint8_t write_data
  * @param ctx           Click object.
  * @param slot_num      8-bit data representing the slot number
  * @param dev           8-bit data representing the device(LED)
+ * 
+ * @return Function status.
  *
  * @description Function is used to determine which LED is active in each time slot.
 **/
-void smoke_enable_slot ( smoke_t *ctx, uint8_t slot_num, uint8_t dev );
+uint8_t smoke_enable_slot ( smoke_t *ctx, uint8_t slot_num, uint8_t dev );
 
 /**
  * @brief Disable slots in MultiLED mode function
@@ -505,27 +702,6 @@ void smoke_disable_slots ( smoke_t *ctx );
  * @description Function is used to clear FIFO pointers.
 **/
 void smoke_clear_fifo ( smoke_t *ctx );
-
-/**
- * @brief Set FIFO configuration register function
- *
- * @param ctx           Click object.
- * @param flag          Flag that specifie amplitude or proximity threshold    
- * @param samp_num      8-bit data representing the number of samples
- * 
- * @description Function is used to set number of samples by writning into FIFO configuration register.
- *              Or to enable or disable FIFO Rolls on Full
- * @note
- * <pre> 
- * flag state: 
- *     0 - Disable roll over     
- *     1 - Enable roll over    
- *     2 - Set sample average   
- *     3 - Set number of trigger samples    
- * One may consult datasheet in order to discern what to write into register or use predefined values.
- * </pre> 
-**/
-void smoke_fifo_setting ( smoke_t *ctx, uint8_t flag, uint8_t samp_num );
 
 /**
  * @brief Read the FIFO Write Pointer function
@@ -550,78 +726,82 @@ uint8_t smoke_get_write_ptr ( smoke_t *ctx );
 uint8_t smoke_get_read_ptr ( smoke_t *ctx );
 
 /**
- * @brief Read temperature in Centigrade function
+ * @brief Set rollover state.
  *
- * @param ctx           Click object.
- * @returns result float value of temperature in Celsius
- *
- * @description Function is used to read current IC�s internal temperature.
+ * @param ctx             Click object.
+ * @param state           State flag
+ * 
+ * @returns Function status.
+ * 
+ * <pre> 
+ *  state: 
+ *        0x80 - Enable;
+ *        0x00 - Disable;
+ *  return status:
+ *         0xFE - Parameter error;
+ *         0x00 - Ok;
+ *  </pre> 
+ * 
+ * @description Function is used to set rollover state of FIFO.
+ * 
+ * @note Consult datasheet in order to discern what to write into register or use predefined values.
 **/
-float smoke_read_temp_c ( smoke_t *ctx );
+uint8_t smoke_set_rollover_state( smoke_t *ctx, uint8_t state );
 
 /**
- * @brief Read temperature in Fahrenheit function
+ * @brief Set almost full trigger.
  *
- * @param ctx           Click object.
- * @returns result float value of temperature in Fahrenheit
- *
- * @description Function is used to read current IC�s internal temperature.
+ * @param ctx             Click object.
+ * @param trigger_range   Trigger range.
+ * 
+ * @returns Function status.
+ * 
+ * <pre> 
+ *  return status:
+ *         0xFE - Parameter error;
+ *         0x00 - Ok;
+ *  </pre> 
+ * 
+ * @description Function is used to set almost full tregger of FIFO.
+ * 
+ * @note Consult datasheet in order to discern what to write into register or use predefined values.
 **/
-float smoke_read_temp_f ( smoke_t *ctx );
+uint8_t smoke_set_almost_full_trigger( smoke_t *ctx, uint8_t trigger_range );
 
 /**
- * @brief Reset device function
+ * @brief Set avarage samples.
  *
- * @param ctx           Click object.
- * @description Function is used to apply software reset.
+ * @param ctx             Click object.
+ * @param samples         Avarage samples
+ * 
+ * @returns Function status.
+ * 
+ * <pre> 
+ *  samples: 
+ *        0x00 - 1;
+ *        0x20 - 2;
+ *        0x40 - 4;
+ *        0x60 - 8;
+ *        0x80 - 16;
+ *        0xA0 - 32;
+ *  return status:
+ *         0xFE - Parameter error;
+ *         0x00 - Ok;
+ *  </pre> 
+ * 
+ * @description Function is used to set avarage samples of FIFO.
+ * 
+ * @note Consult datasheet in order to discern what to write into register or use predefined values.
 **/
-void smoke_reset ( smoke_t *ctx );
-
-/**
- * @brief Read device ID function
- *
- * @param ctx           Click object.
- * @returns result 8-bit value representing the device's ID number
- *
- * @description Function is used to read the device's ID number.
-**/
-uint8_t smoke_read_device_id ( smoke_t *ctx );
-
-/**
- * @brief Get Red value function
- *
- * @param ctx           Click object.
- * @returns result 32-bit value representing the oldest RED value
- *
- * @description Function is used to read the oldest RED value.
-**/
-uint32_t smoke_get_red_val ( smoke_t *ctx );
-
-/**
- * @brief Get IR value function
- *
- * @param ctx           Click object.
- * @returns result 32-bit value representing the oldest IR value
- *
- * @description Function is used to read the oldest IR value.
-**/
-uint32_t smoke_get_ir_val ( smoke_t *ctx );
-
-/**
- * @brief Get Green value function
- *
- * @param ctx           Click object.
- * @returns result 32-bit value representing the oldest Green value
- *
- * @description Function is used to read the oldest Green value.
-**/
-uint32_t smoke_get_green_val ( smoke_t *ctx );
+uint8_t smoke_set_sample_avarage ( smoke_t *ctx, uint8_t samples );
 
 /**
  * @brief Set registers values function
  *
  * @param ctx           Click object.
  * @param registers     Click registers object.
+ * 
+ * @returns Function status.
  * <pre> 
  * Registers structure fields
  *      avg_samp      -   8-bit data representing the number of samples
@@ -630,11 +810,34 @@ uint32_t smoke_get_green_val ( smoke_t *ctx );
  *      samp_rate     -   8-bit data representing sample rate
  *      pulse_width   -   8-bit data representing the puls width
  *      led_pow_lvl   -   8-bit data representing the power level
+ *  return status:
+ *         0xFE - parameter error;
+ *         0x00 - ok
  *</pre>
+ * 
  * @description Function is used to apply device settings.
+ * 
  * @note Consult datasheet in order to discern what to write into register or use predefined values.
 **/
-void smoke_set_registers ( smoke_t *ctx, smoke_set_registers_t *registers );
+uint8_t smoke_set_registers ( smoke_t *ctx, smoke_set_registers_t *registers );
+
+/**
+ * @brief Function for reading enabled leds
+ *
+ * @param ctx           Click object.
+ * 
+ * @returns Function status.
+ * <pre> 
+ *  return status:
+ *         0xFF - Init error;
+ *         0x00 - OK;
+ *</pre>
+ * 
+ * @description Function is used to read enabled led values.
+ * 
+ * @note Consult datasheet in order to discern what to write into register or use predefined values.
+**/
+uint8_t smoke_read_leds ( smoke_t *ctx );
 
 /**
  * @brief Get Interrupt state function

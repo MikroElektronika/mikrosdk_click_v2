@@ -31,7 +31,7 @@
 
 // ------------------------------------------------------------- PRIVATE MACROS 
 
-#define C3DHALL_DUMMY 0
+#define C3DHALL_DUMMY 0xFF
 
 void c3dhall_cfg_setup ( c3dhall_cfg_t *cfg )
 {
@@ -76,23 +76,30 @@ C3DHALL_RETVAL c3dhall_init ( c3dhall_t *ctx, c3dhall_cfg_t *cfg )
     return C3DHALL_OK;
 }
 
-void c3dhall_generic_transfer ( c3dhall_t *ctx, uint8_t *wr_buf, uint16_t wr_len, uint8_t *rd_buf, uint16_t rd_len )
-{
-    spi_master_select_device( ctx->chip_select );
-    Delay_1ms();
-    spi_master_write_then_read( &ctx->spi, wr_buf, wr_len, rd_buf, rd_len );
-    Delay_1ms();
-    spi_master_deselect_device( ctx->chip_select );   
-}
-
 void c3dhall_read_all_data ( c3dhall_t *ctx, c3dhall_all_data_t *all_data )
 {
-    uint8_t write_buffer_start[ 8 ];
     uint8_t buffer_read[ 8 ];
     
-    write_buffer_start[ 0 ] = C3DHALL_START_COMMUNICATION_BYTE;
-   
-    c3dhall_generic_transfer( ctx, write_buffer_start, 1, buffer_read, 8 ); 
+    spi_master_select_device( ctx->chip_select );
+    Delay_1ms();
+    spi_master_read( &ctx->spi, &buffer_read[ 0 ], 1 );
+    Delay_50us();
+    Delay_50us();
+    spi_master_read( &ctx->spi, &buffer_read[ 1 ], 1 );
+    Delay_50us();
+    spi_master_read( &ctx->spi, &buffer_read[ 2 ], 1 );
+    Delay_50us();
+    spi_master_read( &ctx->spi, &buffer_read[ 3 ], 1 );
+    Delay_50us();
+    spi_master_read( &ctx->spi, &buffer_read[ 4 ], 1 );
+    Delay_50us();
+    spi_master_read( &ctx->spi, &buffer_read[ 5 ], 1 );
+    Delay_50us();
+    spi_master_read( &ctx->spi, &buffer_read[ 6 ], 1 );
+    Delay_50us();
+    spi_master_read( &ctx->spi, &buffer_read[ 7 ], 1 );
+    Delay_1ms();
+    spi_master_deselect_device( ctx->chip_select );   
 
     all_data->data_angle_a = buffer_read[ 2 ];
     all_data->data_angle_a <<= 8;

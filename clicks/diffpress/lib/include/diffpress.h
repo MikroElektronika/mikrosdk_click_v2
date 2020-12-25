@@ -142,29 +142,6 @@ void diffpress_cfg_setup ( diffpress_cfg_t *cfg );
  */
 DIFFPRESS_RETVAL diffpress_init ( diffpress_t *ctx, diffpress_cfg_t *cfg );
 
-/**
- * @brief Generic write function.
- *
- * @param ctx          Click object.
- * @param reg          Register address.
- * @param data_buf     Data buf to be written.
- * @param len          Number of the bytes in data buf.
- *
- * @description This function writes data to the desired register.
- */
-void diffpress_generic_write ( diffpress_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-/**
- * @brief Generic read function.
- *
- * @param ctx          Click object.
- * @param reg          Register address.
- * @param data_buf     Output data buf
- * @param len          Number of the bytes to be read
- *
- * @description This function reads data from the desired register.
- */
-void diffpress_generic_read ( diffpress_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
 
 /**
  * @brief Gets adc data function.

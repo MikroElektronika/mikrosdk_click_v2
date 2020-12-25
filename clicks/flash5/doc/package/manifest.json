@@ -27,5 +27,6 @@
     "short_description": "Flash 5 Click is a perfect solution for the mass storage option in various embedded applications.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

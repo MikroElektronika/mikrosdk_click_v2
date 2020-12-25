@@ -101,8 +101,7 @@ uint16_t gsr_read_value ( gsr_t *ctx )
     value = 0;
     
     spi_master_select_device( ctx->chip_select );
-    spi_master_read( &ctx->spi, &ptr[0], 1 );
-    spi_master_read( &ctx->spi, &ptr[1], 1 );
+    spi_master_read( &ctx->spi, ptr, 2 );
     spi_master_deselect_device( ctx->chip_select );  
 
     value = ( ptr[ 0 ] & 0x1F );

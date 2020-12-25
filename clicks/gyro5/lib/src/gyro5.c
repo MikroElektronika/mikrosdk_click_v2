@@ -101,6 +101,7 @@ GYRO5_RETVAL gyro5_init ( gyro5_t *ctx, gyro5_cfg_t *cfg )
         i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
         i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
 
+        digital_out_init( &ctx->cs, cfg->cs );
         digital_out_high( &ctx->cs );
 
         ctx->read_f =  gyro5_i2c_read;

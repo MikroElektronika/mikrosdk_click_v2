@@ -8,14 +8,12 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * v2hz_setOutputFrequency - Sets the PWM duty cycle to required value, changing
-   the output frequency.
+ * v2hz_setOutputFrequency - Sets the PWM duty cycle to required value, changing the output frequency.
  * 
  * ## Application Task  
  * Alternates between different output frequencies.
  * 
- * Note: Output frequency may vary, depending on the offset and gain potentiometers 
-   on board the click.
+ * Note: Output frequency may vary, depending on the offset and gain potentiometers on board the click.
  * 
  * \author MikroE Team
  *
@@ -37,14 +35,21 @@ static float duty_cycle = 0.5;
 
 uint16_t pwm_period;
 
-static void set_output_frequency ( float frequency )
+static uint8_t set_output_frequency ( float frequency )
 {
     float duty_cycle;
 
-    duty_cycle *= frequency;
+    if ( frequency > 10000 )
+    {
+        return -1;
+    }
+    
+    duty_cycle = frequency;
     duty_cycle /= 10000;
     vtohz_set_duty_cycle( &vtohz, duty_cycle );
     vtohz_pwm_start( &vtohz );
+    
+    return 0;
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -58,7 +63,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -67,20 +72,24 @@ void application_init ( void )
     vtohz_cfg_setup( &cfg );
     VTOHZ_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     vtohz_init( &vtohz, &cfg );
-
-    vtohz_pwm_start( &vtohz );
+    
+    vtohz_enable ( &vtohz );
 }
 
 void application_task ( void )
 {
     set_output_frequency( 1000 );        //1000 Hz output
-    Delay_ms( 3000 );
+    log_printf( &logger, "Output frequency: \t 1000 Hz\r\n" );
+    Delay_ms( 5000 );
     set_output_frequency( 2000 );        //2000 Hz output
-    Delay_ms( 3000 );
+    log_printf( &logger, "Output frequency: \t 2000 Hz\r\n" );
+    Delay_ms( 5000 );
     set_output_frequency( 5000 );        //5000 Hz output
-    Delay_ms( 3000 );
+    log_printf( &logger, "Output frequency: \t 5000 Hz\r\n" );
+    Delay_ms( 5000 );
     set_output_frequency( 10000 );       //10000 Hz output
-    Delay_ms( 3000 );
+    log_printf( &logger, "Output frequency: \t 10000 Hz\r\n" );
+    Delay_ms( 5000 );
 }
 
 void main ( void )

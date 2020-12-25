@@ -27,6 +27,7 @@
     "short_description": "Opto 4 click is a galvanically isolated power switch, which uses a power MOSFET in combination with an optocoupler.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+
 

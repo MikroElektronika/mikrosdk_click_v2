@@ -34,7 +34,6 @@
 
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 500
-#define PROCESS_PARSER_BUFFER_SIZE 1000
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -43,8 +42,6 @@
 
 static ble7_t ble7;
 static log_t logger;
-
-static char current_parser_buf[ PROCESS_PARSER_BUFFER_SIZE ];
 
 char clrb_buf[5] = "clrb";
 char adv_buf[9] = "adv high";
@@ -70,9 +67,6 @@ static void ble7_process ( void )
     char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
     uint8_t check_buf_cnt;
     uint8_t process_cnt = PROCESS_COUNTER;
-    
-    // Clear parser buffer
-    memset( current_parser_buf, 0 , PROCESS_PARSER_BUFFER_SIZE ); 
     
     while( process_cnt != 0 )
     {

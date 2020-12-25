@@ -105,7 +105,7 @@ float hallcurrent3_get_current( hallcurrent3_t *ctx )
             voltage = read_data - 2048;
         }
         voltage = voltage * ( float )( 5000 / 4095 ); // 5V / 12bit resolution
-        voltage = ( voltage * 1000 ) / 65.57; // 56.57 -> nominal 80mV/A or 25A full scale
+        voltage = ( voltage * 1000 ) / 65.57; // 65.57 -> nominal 80mV/A or 25A full scale
         sum_current += voltage;
         cnt--;
     }

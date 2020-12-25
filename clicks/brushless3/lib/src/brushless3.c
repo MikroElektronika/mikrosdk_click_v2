@@ -37,13 +37,14 @@ void brushless3_cfg_setup ( brushless3_cfg_t *cfg )
 
     cfg->scl = HAL_PIN_NC;
     cfg->sda = HAL_PIN_NC;
+    cfg->pwm = HAL_PIN_NC;
     
     // Additional gpio pins
 
     cfg->dir = HAL_PIN_NC;
-    cfg->pwm = HAL_PIN_NC;
     cfg->int_pin = HAL_PIN_NC;
 
+    cfg->dev_pwm_freq = BRUSHLESS3_DEF_FREQ;
     cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
     cfg->i2c_address = BRUSHLESS3_I2C_ADDRESS;
 }
@@ -51,6 +52,7 @@ void brushless3_cfg_setup ( brushless3_cfg_t *cfg )
 BRUSHLESS3_RETVAL brushless3_init ( brushless3_t *ctx, brushless3_cfg_t *cfg )
 {
     i2c_master_config_t i2c_cfg;
+    pwm_config_t pwm_cfg;
 
     i2c_master_configure_default( &i2c_cfg );
     i2c_cfg.speed  = cfg->i2c_speed;
@@ -66,23 +68,30 @@ BRUSHLESS3_RETVAL brushless3_init ( brushless3_t *ctx, brushless3_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
+
+    pwm_configure_default( &pwm_cfg );
+
+    pwm_cfg.pin      = cfg->pwm;
+    pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
+
+    ctx->pwm_freq = cfg->dev_pwm_freq;
+    pwm_open( &ctx->pwm, &pwm_cfg );
+    pwm_set_freq( &ctx->pwm, pwm_cfg.freq_hz );
 
     // Output pins 
 
     digital_out_init( &ctx->dir, cfg->dir );
-    digital_out_init( &ctx->pwm, cfg->pwm );
 
     // Input pins
 
     digital_in_init( &ctx->int_pin, cfg->int_pin );
-
 
     return BRUSHLESS3_OK;
 }
 
 void brushless3_default_cfg ( brushless3_t *ctx )
 {
-    digital_out_low( &ctx->pwm );
     digital_out_low( &ctx->dir ); 
 }
 
@@ -136,6 +145,8 @@ void brushless3_set_default_param ( brushless3_t *ctx )
     brushless3_write_data( ctx, BRUSHLESS3_DEV_CTRL, BRUSHLESS3_PARAM_DEV_CTRL );
     
     brushless3_write_data( ctx, BRUSHLESS3_EE_CTRL, BRUSHLESS3_PARAM_STOP_EE_CTRL );
+    
+    brushless3_set_speed( ctx, 100 );
 }
 
 void brushless3_set_pwm_mode ( brushless3_t *ctx )
@@ -319,13 +330,13 @@ float brushless3_get_speed ( brushless3_t *ctx )
     return result;
 }
 
-void brushless3_set_speed ( brushless3_t *ctx, uint8_t motor_speed_hz )
+void brushless3_set_speed ( brushless3_t *ctx, uint16_t motor_speed_hz )
 {
     uint8_t tmp1;
     uint8_t tmp2;
     uint16_t speed;
     
-    speed = motor_speed_hz * 10;
+    speed = motor_speed_hz / 2;
     speed &= 0x01FF;
     
     tmp1 = ( uint8_t ) speed;
@@ -333,9 +344,27 @@ void brushless3_set_speed ( brushless3_t *ctx, uint8_t motor_speed_hz )
     tmp2 &= 0x01;
     tmp2 |= 0x80;
 
-    brushless3_write_data( ctx, BRUSHLESS3_MOTOR_SPEED_2, tmp2 );
+    brushless3_write_data( ctx, BRUSHLESS3_SPEED_CTRL_2, tmp2 );
     Delay_10us( );
-    brushless3_write_data( ctx, BRUSHLESS3_MOTOR_SPEED_1, tmp1 );
+    brushless3_write_data( ctx, BRUSHLESS3_SPEED_CTRL_1, tmp1 );
+}
+
+void brushless3_set_speedPWM ( brushless3_t *ctx, uint16_t motor_speed_hz )
+{
+    uint8_t tmp1;
+    uint8_t tmp2;
+    uint16_t speed;
+    
+    speed = motor_speed_hz / 2;
+    speed &= 0x01FF;
+    
+    tmp1 = ( uint8_t ) speed;
+    tmp2 = ( uint8_t ) ( speed >> 8 );
+    tmp2 &= 0x01;
+
+    brushless3_write_data( ctx, BRUSHLESS3_SPEED_CTRL_2, tmp2 );
+    Delay_10us( );
+    brushless3_write_data( ctx, BRUSHLESS3_SPEED_CTRL_1, tmp1 );
 }
 
 float brushless3_get_period ( brushless3_t *ctx )
@@ -385,19 +414,32 @@ float brushless3_get_velocity_constant ( brushless3_t *ctx )
 
 void brushless3_forward_direction ( brushless3_t *ctx )
 {
-    digital_out_high( &ctx->pwm );
     digital_out_low( &ctx->dir ); 
 }
 
 void brushless3_reverse_direction ( brushless3_t *ctx )
 {
-    digital_out_high( &ctx->pwm );
     digital_out_high( &ctx->dir ); 
 }
 
 uint8_t brushless3_get_interrupt_status ( brushless3_t *ctx )
 {
     return digital_in_read( &ctx->int_pin );
+}
+
+void brushless3_set_duty_cycle ( brushless3_t *ctx, float duty_cycle )
+{
+    pwm_set_duty( &ctx->pwm, duty_cycle ); 
+}
+
+void brushless3_pwm_stop ( brushless3_t *ctx )
+{
+    pwm_stop( &ctx->pwm ); 
+}
+
+void brushless3_pwm_start ( brushless3_t *ctx )
+{
+    pwm_start( &ctx->pwm ); 
 }
 
 // ------------------------------------------------------------------------- END

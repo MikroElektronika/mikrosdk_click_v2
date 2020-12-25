@@ -38,7 +38,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -55,15 +55,17 @@ void application_task ( void )
 {
     float vacuum_data;
     float vacuum_volt;
+    float pressure;
 
     //  Task implementation.
 
     vacuum_volt = vacuum_get_voltage(  &vacuum );
-    log_printf ( &logger, "Vacuum (voltage) : %.2f V\r\n ", vacuum_volt );
-     
+    log_printf ( &logger, "Vacuum [V] : %.2f\r\n ", vacuum_volt );
+    pressure = vacuum_get_pressure(  &vacuum );
+    log_printf ( &logger, "Pressure [mBar] : %.2f V\r\n ", pressure );
     vacuum_data = vacuum_get_percentage_of_vacuum(  &vacuum );
-    log_printf ( &logger, "Percentage of vacuum: %.2f : \r\n ", vacuum_data );
-    
+    log_printf ( &logger, "Percentage of vacuum [%%] : %.2f : \r\n ", vacuum_data );
+    log_printf ( &logger, "------------------------------------------\r\n " );
     Delay_ms( 300 );
 }
 

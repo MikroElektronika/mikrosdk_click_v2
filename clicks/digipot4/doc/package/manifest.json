@@ -27,5 +27,6 @@
     "short_description": "DIGI POT 4 click is a digitally controlled dual potentiometer, with the resistance of 10KΩ. It has a 10bit resolution which allows for a very smooth linear wiper positioning through 1024 steps.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

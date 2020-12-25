@@ -37,7 +37,7 @@ static float duty_cycle = 0.5;
 
 static void pull_brake ( )
 {
-    log_printf( &logger, "------------------------------\r\n" );
+    log_printf( &logger, "\r\n------------------------------\r\n" );
     log_printf( &logger, " * Pull break *\r\n" );
     dcmotor2_pull_brake( &dcmotor2 );
     Delay_1sec( );
@@ -50,11 +50,11 @@ static void clockwise ( )
     dcmotor2_spin_clockwise( &dcmotor2 );
     Delay_1sec( );
 
-    for( duty_cycle = 500; duty_cycle < dcmotor2.pwm_period; duty_cycle += 250 )
+    for ( duty_cycle = 0.1; duty_cycle <= 1.0; duty_cycle += 0.1 )
     {
-        dcmotor2_set_duty_cycle( &dcmotor2, duty_cycle );
-        log_printf( &logger, "  >>>\r\n" );
-        Delay_1sec( );
+        dcmotor2_set_duty_cycle ( &dcmotor2, duty_cycle );
+        log_printf( &logger," > " );
+        Delay_ms( 500 );
     }
 }
 
@@ -65,11 +65,11 @@ static void counter_clockwise ( )
     dcmotor2_spin_counter_clockwise( &dcmotor2 );
     Delay_1sec( );
 
-    for( duty_cycle = dcmotor2.pwm_period; duty_cycle > 500; duty_cycle -= 250 )
+    for ( duty_cycle = 1.0; duty_cycle > 0; duty_cycle -= 0.1 )
     {
-        dcmotor2_set_duty_cycle( &dcmotor2, duty_cycle );
-        log_printf( &logger, "  <<<\r\n" );
-        Delay_1sec( );
+        dcmotor2_set_duty_cycle ( &dcmotor2, duty_cycle );
+        log_printf( &logger," < " );
+        Delay_ms( 500 );
     }
 }
 
@@ -101,18 +101,13 @@ void application_init ( )
 
 void application_task ( )
 {    
-    if ( duty_cycle > dcmotor2.pwm_period )
-    {
-        duty_cycle = 0;
-    }
-    
     dcmotor2_enable_motor( &dcmotor2 );
     Delay_1sec( );
-    
-    pull_brake( );
+       
     clockwise( );
     pull_brake( );
     counter_clockwise( );
+    pull_brake( );
     
     dcmotor2_stop_motor( &dcmotor2 );
     Delay_1sec( );

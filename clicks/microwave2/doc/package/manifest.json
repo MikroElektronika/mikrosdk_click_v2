@@ -25,7 +25,12 @@
     "name": "mikroe.click.microwave2",
     "product_link": "https://www.mikroe.com/microwave-2-eu-click",
     "short_description": "Microwave 2 click is an accurate and reliable short to medium range motion detection Click board™, based on a Doppler radar principle.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.0"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2423
+    ],
+    "version": "2.0.0.2"
 }
+

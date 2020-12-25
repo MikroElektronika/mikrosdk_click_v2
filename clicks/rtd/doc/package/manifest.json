@@ -27,5 +27,7 @@
     "short_description": "RTD click is based on MAX31865 resistance to digital converter from Maxim Integrated, optimized for platinum resistance temperature detectors, or RTD.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.2"
 }
+
+

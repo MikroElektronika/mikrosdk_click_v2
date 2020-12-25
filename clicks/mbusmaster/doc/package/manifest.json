@@ -27,5 +27,6 @@
     "short_description": "The M-Bus Master is a Click board™ is complete solution for a master node in M-Bus networks.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

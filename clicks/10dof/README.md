@@ -82,10 +82,11 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.baud = 9600;
+    log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----\r\n" );
+    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
 
@@ -105,7 +106,6 @@ void application_init ( void )
 
 void application_task ( void )
 {
-
     c10dof_read_accel( &c10dof, &accelX, &accelY, &accelZ );
     Delay_ms( 10 );
     c10dof_read_gyro( &c10dof, &gyroX,  &gyroY, &gyroZ );
@@ -132,6 +132,7 @@ void application_task ( void )
     log_printf( &logger, "Mag Z   : %d  |  ", magZ);
     log_printf( &logger, "Press.  : %.2f mbar \r\n", pressure);
 
+    log_printf( &logger, "--------------------------------------------------------------------\r\n", pressure);
     Delay_ms( 500 );
 }
 

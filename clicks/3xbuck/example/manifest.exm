@@ -1,8 +1,0 @@
-{
-    "name": "3XBUCK Click",
-    "description": "3xBuck click is a triple step-down (buck) converter Click board™. It features three independent output terminals that can provide 1.8V, 3.3V, and 5V with the combined current output up to 3A.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","TPS65263"],
-    "category" : ["Buck"] 
-}

@@ -48,14 +48,14 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- Function is used to read desired interrupt specified by flag.
-> uint8_t smoke_get_intrrupt ( smoke_t *ctx, uint8_t flag );
- 
-- Function is used to read the oldest Green value.
-> uint32_t smoke_get_green_val ( smoke_t *ctx );
+- Set registers values function.
+> uint8_t smoke_set_registers ( smoke_t *ctx, smoke_set_registers_t *registers );
 
-- Function is used to read the oldest RED value.
-> uint32_t smoke_get_red_val ( smoke_t *ctx );
+- Enable or disable interrupt function.
+> uint8_t smoke_enable_disable_interrupts ( smoke_t *ctx, uint8_t interrupt_flag, uint8_t enable_flag );
+ 
+- Function for reading enabled led values.
+> uint8_t smoke_read_leds ( smoke_t *ctx );
 
 ## Examples Description
 
@@ -68,7 +68,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initalizes I2C driver, applies "set registers check green values" settings,  "enable FIFO data ready interrupt" and makes an initial log.
+> Initalizes I2C driver, and sets default configuration of         device.
 
 ```c
 
@@ -79,8 +79,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -90,45 +91,43 @@ void application_init ( void )
     SMOKE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     smoke_init( &smoke, &cfg );
 
+    smoke_reset( &smoke );
     smoke_default_cfg ( &smoke );
 
-    deg_cel[ 0 ] = 176;
-    deg_cel[ 1 ] = 67;
-    deg_cel[ 2 ] = 0;
-
-    log_printf( &logger, "------------------------------\r\n" );
-    log_printf( &logger, "         Smoke  Click         \r\n" );
-    log_printf( &logger, "------------------------------\r\n" );
+    log_info( &logger, "---- Application Task ----" );
     Delay_ms( 100 );
+    if ( smoke_read_leds( &smoke ) != SMOKE_OK )
+    {
+        log_info( &logger, "---- Init Error ----" );
+        for( ; ; );
+    }
 }
   
 ```
 
 ### Application Task
 
-> This example demonstrates the use of Smoke Click board. It reads reflected green values and
-> temperature from an internal sensor and displays the results on USART terminal.
-> It usualy takes two or three readings in order to get corect readings. Expect big values when you do.
+> This example demonstrates the use of Smoke Click board. It reads reflected red, ir,
+    green and temperature values from an internal sensor and displays and logs it.
 
 ```c
 
 void application_task ( void )
 {
-    if ( smoke_get_intrrupt( &smoke, 1 ) & 0x40 )
-    {
-        grn_val = smoke_get_green_val( &smoke );
-    }
+    smoke_read_leds( &smoke );
     
-    log_printf( &logger, "GREEN LED Pulse Amplitude : %u\r\n", grn_val );
+    log_printf( &logger, "Red : %llu\r\n", smoke.red_value );
+    log_printf( &logger, "IR : %llu\r\n", smoke.ir_value );
+    log_printf( &logger, "Green : %llu\r\n", smoke.green_value );
     log_printf( &logger, "------------------------------\r\n" );
     
-    temperature = smoke_read_temp_c( &smoke );
+    temperature = smoke_read_temp( &smoke );
     
-    log_printf( &logger, "Read Temperature : %.2f %s\r\n",  temperature, deg_cel );
+    log_printf( &logger, "Read Temperature[ degC ]: %.2f\r\n",  temperature );
     log_printf( &logger, "------------------------------\r\n" );
 
-    Delay_ms( 1000 );
-} 
+    Delay_ms( 500 );
+}
 
 ```
 

@@ -73,6 +73,7 @@ void application_init ( void )
 
     log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -89,21 +90,19 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads ADC data from AN pin and plots it on serial plotter.
+> Reads ADC data calculates dB value and logs data to serial plotter.
 
 ```c
 
 void application_task ( void )
 {
-    mic2_data_t tmp;
+    adc_value = mic2_generic_read ( &mic2 );
     
-    //  Task implementation.
+    float db_val = ( adc_value + 83.2073 ) / 11.003;
+    log_printf( &logger, "%.2f dB\r\n", db_val );
     
-    tmp = mic2_generic_read ( &mic2 );
-    log_printf( &logger, "** ADC value : [DEC]- %d, [HEX]- 0x%x \r\n", tmp, tmp );
-    Delay_ms( 1000 );
-    plot_data( tmp );
-}  
+    Delay_ms( 100 );
+} 
 
 ```
 

@@ -79,8 +79,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
     Delay_ms( 100 );
@@ -113,7 +114,7 @@ void application_task ( void )
 
     angle = angle2_get_angle( &angle2 );
 
-    log_printf( &logger, " .angle_value: %.2f deg\r\n", angle );
+    log_printf( &logger, " Angle: %.2f deg\r\n", angle );
 
     Delay_ms( 200 );
 }  

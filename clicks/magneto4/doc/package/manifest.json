@@ -27,5 +27,6 @@
     "short_description": "Magneto 4 click is a high-resolution magnetic encoder Click board™ which allows contactless motion sensing down to 0.5µm.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+

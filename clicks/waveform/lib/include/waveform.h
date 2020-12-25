@@ -117,10 +117,6 @@ typedef struct
 
     spi_master_t spi;
     pin_name_t chip_select;
-    
-    uint8_t  dumy_rec_buf[ 5 ];
-    uint16_t wavwform_control_reg;
-
 } waveform_t;
 
 /**
@@ -143,7 +139,7 @@ typedef struct
     // static variable 
 
     uint32_t spi_speed;
-    uint8_t spi_mode;
+    spi_master_mode_t spi_mode;
     spi_master_chip_select_polarity_t cs_polarity;
 
 } waveform_cfg_t;
@@ -177,26 +173,6 @@ void waveform_cfg_setup ( waveform_cfg_t *cfg );
  * @description This function initializes all necessary pins and peripherals used for this click.
  */
 WAVEFORM_RETVAL waveform_init ( waveform_t *ctx, waveform_cfg_t *cfg );
-
-/**
- * @brief Generic transfer function.
- *
- * @param ctx          Click object.
- * @param wr_buf       Write data buffer
- * @param wr_len       Number of byte in write data buffer
- * @param rd_buf       Read data buffer
- * @param rd_len       Number of byte in read data buffer
- *
- * @description Generic SPI transfer, for sending and receiving packages
- */
-void waveform_generic_transfer 
-( 
-    waveform_t *ctx, 
-    uint8_t *wr_buf, 
-    uint16_t wr_len, 
-    uint8_t *rd_buf, 
-    uint16_t rd_len 
-);
 
 /**
  * @brief Decrement function

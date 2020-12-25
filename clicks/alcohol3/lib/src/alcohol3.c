@@ -39,7 +39,7 @@
  *         0.18 | 100
  *         0.09 | 50
  */
-static float ppm_2_mgl ( uint16_t ppm );
+static float ppm_2_mgl ( float ppm );
 
 /* Etanol in CO data
  *
@@ -164,7 +164,7 @@ uint16_t alcohol3_ethanol_in_ppm ( alcohol3_t *ctx )
 float alcohol3_get_percentage_bac ( alcohol3_t *ctx )
 {
     float alcohol_mgl;
-    uint16_t ethanol_ppm;
+    float ethanol_ppm;
     uint16_t read_data;
 
     read_data   = alcohol3_get_adc_data( ctx );
@@ -176,14 +176,12 @@ float alcohol3_get_percentage_bac ( alcohol3_t *ctx )
 
 // ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
 
-static float ppm_2_mgl ( uint16_t ppm )
+static float ppm_2_mgl ( float ppm )
 {
     float mgl;
     
-    mgl  = ppm;
-    mgl *= ALCOHOL3_CONV_MGL_PARAM_A;
-    mgl /= ALCOHOL3_CONV_AIR_PPM_PARAM_A;
-
+    mgl = (1.82 * ppm) / 1000.0;
+    
     return mgl;
 }
 
@@ -191,25 +189,25 @@ static float etanol_in_co ( uint16_t co )
 {
     float etanol;
 
-    if ( co == ALCOHOL3_CO_PPM_0 )
+    if (co == 0)
     {
-        etanol = ALCOHOL3_EQU_TO_PPM_0;
+        etanol = 0;
     }
-    else if ( co <= ALCOHOL3_CO_PPM_10 )
+    else if (co <= 10)
     {
-        etanol = co / ALCOHOL3_CO_PPM_10;
+        etanol = co / 10.0;
     }
-    else if ( co > ALCOHOL3_CO_PPM_10 && co <= ALCOHOL3_CO_PPM_50 )
+    else if (co > 10 && co <= 50)
     {
-        etanol = ( float )( ALCOHOL3_EQU_TO_PPM_50 / ALCOHOL3_CO_PPM_50 ) * co;
+        etanol = (float)(6 / 50.0) * co;
     }
-    else if ( co > ALCOHOL3_CO_PPM_50 && co <= ALCOHOL3_CO_PPM_100 )
+    else if (co > 50 && co <= 100)
     {
-        etanol = ( ALCOHOL3_CONV_MGL_PARAM_C * co );
+        etanol = (0.18 * co);
     }
-    else if ( co > ALCOHOL3_CO_PPM_100 )
+    else if (co > 100)
     {
-        etanol = ( float )( ALCOHOL3_EQU_TO_PPM_500 / ALCOHOL3_CO_PPM_500 ) * co;
+        etanol = (float)(274 / 500.0) * co;
     }
     return etanol;
 }

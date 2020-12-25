@@ -8,7 +8,7 @@
 UT 7-SEG R click carries two SMD ultra thin LED 7-SEG displays and the MAX6969 constant-current LED driver from Maxim Integrated.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/grupe/ut-7-seg-group-click.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/grupe/ut-click-groupp.png" height=300px>
 </p>
 
 > - [Product page - UT S 7-SEG R click](<https://www.mikroe.com/ut-s-7-seg-r-click>)

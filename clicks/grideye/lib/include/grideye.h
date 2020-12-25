@@ -28,17 +28,15 @@
  * \brief This file contains API for GRID EYE Click driver.
  *
  * \addtogroup grideye GRID EYE Click Driver
- * @{
+ * \{
  */
 // ----------------------------------------------------------------------------
 
 #ifndef GRIDEYE_H
 #define GRIDEYE_H
 
-#include "drv_digital_out.h"
 #include "drv_digital_in.h"
 #include "drv_i2c_master.h"
-
 
 // -------------------------------------------------------------- PUBLIC MACROS 
 /**
@@ -51,19 +49,19 @@
  * \{
  */
 #define GRIDEYE_MAP_MIKROBUS( cfg, mikrobus ) \
-  cfg.scl  = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
-  cfg.sda  = MIKROBUS( mikrobus, MIKROBUS_SDA ); \
-  cfg.int_pin = MIKROBUS( mikrobus, MIKROBUS_INT ); 
+  cfg.scl = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
+  cfg.sda = MIKROBUS( mikrobus, MIKROBUS_SDA ); \
+  cfg.int_pin = MIKROBUS( mikrobus, MIKROBUS_INT )
 /** \} */
 
 /**
  * \defgroup error_code Error Code
  * \{
  */
-#define GRIDEYE_RETVAL  uint8_t
+#define GRIDEYE_RETVAL  int8_t
 
-#define GRIDEYE_OK           0x00
-#define GRIDEYE_INIT_ERROR   0xFF
+#define GRIDEYE_OK            0
+#define GRIDEYE_INIT_ERROR  (-1)
 /** \} */
 
 /**
@@ -184,7 +182,7 @@ typedef struct
     // Input pins 
 
     digital_in_t int_pin;
-    
+
     // Modules 
 
     i2c_master_t i2c;
@@ -204,7 +202,7 @@ typedef struct
 
     pin_name_t scl;
     pin_name_t sda;
-    
+
     // Additional gpio pins 
 
     pin_name_t int_pin;
@@ -313,7 +311,7 @@ uint16_t grideye_read_data ( grideye_t *ctx, uint8_t rd_addr );
  *
  * @description Function is used to reada data from the whole sensor grid.
 **/
-void grideye_read_grid ( grideye_t *ctx, uint16_t *buffer );
+void grideye_read_grid ( grideye_t *ctx, int16_t *buffer );
 
 /**
  * @brief Get Interrupt state function
@@ -635,9 +633,9 @@ uint8_t grideye_read_int7 ( grideye_t *ctx );
 #ifdef __cplusplus
 }
 #endif
-#endif  // _GRIDEYE_H_
+#endif  // GRIDEYE_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
-/*! @} */
-// ------------------------------------------------------------------------- END
+/** \} */ // End click Driver group
+
+// ------------------------------------------------------------------------ END

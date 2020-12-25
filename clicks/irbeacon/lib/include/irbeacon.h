@@ -68,7 +68,7 @@
  * \defgroup default_freq Default frequency value
  * \{
  */
-#define IRBEACON_DEF_FREQ     20000
+#define IRBEACON_DEF_FREQ     5000
 /** \} */
 
 /** \} */ // End group macro 

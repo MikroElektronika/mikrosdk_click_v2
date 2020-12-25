@@ -33,18 +33,6 @@
 
 #define BOOST4_DUMMY 0
 
-// -------------------------------------------------------------- PRIVATE TYPES
-
-
-// ------------------------------------------------------------------ CONSTANTS
-
-
-// ------------------------------------------------------------------ VARIABLES
-
-
-// ---------------------------------------------- PRIVATE FUNCTION DECLARATIONS 
-
-
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
 void boost4_cfg_setup ( boost4_cfg_t *cfg )
@@ -96,21 +84,6 @@ BOOST4_RETVAL boost4_init ( boost4_t *ctx, boost4_cfg_t *cfg )
     return BOOST4_OK;
 }
 
-void boost4_generic_transfer 
-( 
-    boost4_t *ctx, 
-    uint8_t *wr_buf, 
-    uint16_t wr_len, 
-    uint8_t *rd_buf, 
-    uint16_t rd_len 
-)
-{
-    spi_master_select_device( ctx->chip_select );
-    spi_master_write_then_read( &ctx->spi, wr_buf, wr_len, rd_buf, rd_len );
-    spi_master_deselect_device( ctx->chip_select );   
-}
-
-// Enable device function 
 void boost4_enable ( boost4_t *ctx, uint8_t state )
 {
     if ( state == BOOST4_ENABLE )
@@ -123,7 +96,6 @@ void boost4_enable ( boost4_t *ctx, uint8_t state )
     }
 }
 
-// Set output voltage function 
 void boost4_set_out_voltage ( boost4_t *ctx, uint16_t value )
 {
     uint8_t tx_buf[ 2 ];
@@ -132,9 +104,11 @@ void boost4_set_out_voltage ( boost4_t *ctx, uint16_t value )
     
     tx_buf[ 0 ] = ( uint8_t ) ( value >> 8 );
     tx_buf[ 0 ] |= BOOST4_START_CMD;
-    tx_buf[ 1 ] = ( uint8_t ) value;
+    tx_buf[ 1 ] = ( uint8_t ) ( value & 0xFF );
 
-    boost4_generic_transfer( ctx, tx_buf, 2, 0, 0 );
+    spi_master_select_device( ctx->chip_select );
+    spi_master_write( &ctx->spi, tx_buf, 2 );
+    spi_master_deselect_device( ctx->chip_select );  
 }
 
 // ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS

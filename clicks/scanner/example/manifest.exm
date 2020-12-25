@@ -1,8 +1,0 @@
-{
-    "name": "Scanner Click",
-    "description": "Scanner Click as his name said, is an optical scanner expansion board for building optical cost-sensitive scanners and printers.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","TSL3301CL"],
-    "category" : ["Optical"] 
-}

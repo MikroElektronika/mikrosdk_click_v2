@@ -37,6 +37,7 @@
 #include "drv_digital_out.h"
 #include "drv_digital_in.h"
 #include "drv_i2c_master.h"
+#include "drv_pwm.h"
 
 // -------------------------------------------------------------- PUBLIC MACROS 
 /**
@@ -130,7 +131,8 @@
  * \defgroup default_min_input Deafult min input
  * \{
  */
-#define HAPTIC_DEFAULT_MIN_INPUT                                    0xC0
+#define HAPTIC_DEFAULT_MIN_INPUT                                    0x19
+#define HAPTIC_DEFAULT_MAX_INPUT                                    0xFF
 /** \} */
 
 /** \} */ // End group macro 
@@ -148,17 +150,16 @@ typedef struct
     // Output pins 
 
     digital_out_t cs;
-    digital_out_t pwm;
-
-    // Input pins 
     
     // Modules 
 
     i2c_master_t i2c;
+    pwm_t pwm;
 
     // ctx variable 
 
     uint8_t slave_address;
+    uint32_t  pwm_freq;
 
 } haptic_t;
 
@@ -171,16 +172,17 @@ typedef struct
 
     pin_name_t scl;
     pin_name_t sda;
+    pin_name_t pwm;
     
     // Additional gpio pins 
 
     pin_name_t cs;
-    pin_name_t pwm;
 
     // static variable 
 
     uint32_t i2c_speed;
     uint8_t i2c_address;
+    uint32_t  dev_pwm_freq;
 
 } haptic_cfg_t;
 
@@ -673,6 +675,35 @@ void haptic_set_sequence ( haptic_t *ctx, uint8_t temp_data );
  * of DRV2605 chip on Haptic Click board.
  */
 void haptic_enable_ac_coulping ( haptic_t *ctx );
+
+/**
+ * @brief Generic sets PWM duty cycle.
+ *
+ * 
+ * @param ctx          Click object.
+ * @param duty_cycle   Duty cycle.
+ *
+ * @description This function sets the PWM duty cycle.
+ */
+void haptic_set_duty_cycle ( haptic_t *ctx, float duty_cycle );
+
+/**
+ * @brief Stop PWM module.
+ *
+ * @param ctx Click object.
+ *
+ * @description This function stops PWM module.
+ */
+void haptic_pwm_stop ( haptic_t *ctx );
+
+/**
+ * @brief Start PWM module.
+ *
+ * @param ctx  Click object.
+ *
+ * @description This function starts PWM module.
+ */
+void haptic_pwm_start ( haptic_t *ctx );
 
 #ifdef __cplusplus
 }

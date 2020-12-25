@@ -59,7 +59,7 @@
 #define GYRO2_STATUS           0x00
 #define GYRO2_OUT_X_MSB        0x01
 #define GYRO2_OUT_X_LSB        0x02
-#define GYRO2_OUT_Y_MSB        0x03             
+#define GYRO2_OUT_Y_MSB        0x03
 #define GYRO2_OUT_Y_LSB        0x04
 #define GYRO2_OUT_Z_MSB        0x05
 #define GYRO2_OUT_Z_LSB        0x06
@@ -227,7 +227,7 @@ typedef struct gyro2_s
 
     digital_in_t rdy;
     digital_in_t int_pin;
-    
+
     // Modules 
 
     i2c_master_t i2c;
@@ -508,9 +508,9 @@ void gyro2_fr_setup ( gyro2_t *ctx, uint8_t low_pass, uint8_t hi_pass, uint8_t s
 #ifdef __cplusplu
 
 #endif
-#endif  // _GYRO2_H_
+#endif  // GYRO2_H
 
 /** \} */ // End public_function group
 /// \}    // End click Driver group  
 /*! @} */
-// ------------------------------------------------------------------------- END
+// ------------------------------------------------------------------------ END

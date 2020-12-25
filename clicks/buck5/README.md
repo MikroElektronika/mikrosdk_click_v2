@@ -6,10 +6,10 @@
 Buck 5 Click is a high-efficiency buck (step-down) DC/DC converter, which can provide digitally adjusted step-down voltage on its output while delivering a considerable amount of current. Buck 5 click accepts a wide voltage range on its input - from 5V to 30V. 
 
 <p align="center">
-  <img src="@{CLICK_IMAGE_LINK}" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/buck5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/buck-5-click)
+[click Product page](<https://www.mikroe.com/buck-5-click>)
 
 ---
 

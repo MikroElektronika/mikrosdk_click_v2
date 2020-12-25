@@ -29,47 +29,24 @@
 
 #include "reed.h"
 
-// ------------------------------------------------------------- PRIVATE MACROS 
-
-
-// -------------------------------------------------------------- PRIVATE TYPES
-
-
-// ------------------------------------------------------------------ CONSTANTS
-
-
-// ------------------------------------------------------------------ VARIABLES
-
-
-// ---------------------------------------------- PRIVATE FUNCTION DECLARATIONS 
-
-
-// ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
-
 void reed_cfg_setup ( reed_cfg_t *cfg )
 {
-    // Additional gpio pins
-
-    cfg->cs   = HAL_PIN_NC;
+    cfg->cs = HAL_PIN_NC;
 }
 
-REED_RETVAL reed_init ( reed_t *ctx, reed_cfg_t *cfg )
+err_t reed_init ( reed_t *ctx, reed_cfg_t *cfg )
 {
-    // Input pins
-
-    digital_in_init( &ctx->cs, cfg->cs );
+    if ( digital_in_init( &ctx->cs, cfg->cs ) == DIGITAL_IN_UNSUPPORTED_PIN )
+    {
+        return REED_INIT_ERROR;
+    }
 
     return REED_OK;
 }
 
-// Get sensor magnetic detected status
 uint8_t reed_get_status ( reed_t *ctx )
 {
     return digital_in_read( &ctx->cs );
 }
 
-// ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
-
-
-// ------------------------------------------------------------------------- END
-
+// ------------------------------------------------------------------------ END

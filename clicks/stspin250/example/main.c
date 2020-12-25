@@ -11,8 +11,7 @@
  * Initialization driver init, PWM init and enable device
  * 
  * ## Application Task  
- * Changes the PWM dutyCycle and controls the motor speed.
- * You can change the direction of the motor rotation by setting PH to 0 or 1.
+ * Controls the motor speed in both directions and logs all data on UART.
  * 
  * \author MikroE Team
  *
@@ -29,6 +28,54 @@ static stspin250_t stspin250;
 static log_t logger;
 
 static float duty_cycle = 0.5;
+
+// ------------------------------------------------------- ADDITIONAL FUNCTIONS
+
+static void clockwise ( )
+{
+    log_printf( &logger, "\r\n------------------------------\r\n" );
+    log_printf( &logger, " *  Clockwise *\r\n" );
+    stspin250_set_ph( &stspin250, 1 );
+    Delay_1sec( );
+
+    for ( duty_cycle = 0.1; duty_cycle <= 1.0; duty_cycle += 0.1 )
+    {
+        stspin250_set_duty_cycle ( &stspin250, duty_cycle );
+        log_printf( &logger," > " );
+        Delay_ms( 500 );
+    }
+    log_printf( &logger,"\r\n" );
+    
+    for ( duty_cycle = 1.0; duty_cycle > 0; duty_cycle -= 0.1 )
+    {
+        stspin250_set_duty_cycle ( &stspin250, duty_cycle );
+        log_printf( &logger," < " );
+        Delay_ms( 500 );
+    }
+}
+
+static void counter_clockwise ( )
+{
+    log_printf( &logger, "\r\n------------------------------\r\n" );
+    log_printf( &logger, " * Counter clockwise *\r\n" );
+    stspin250_set_ph( &stspin250, 0 );
+    Delay_1sec( );
+
+    for ( duty_cycle = 0.1; duty_cycle <= 1.0; duty_cycle += 0.1 )
+    {
+        stspin250_set_duty_cycle ( &stspin250, duty_cycle );
+        log_printf( &logger," > " );
+        Delay_ms( 500 );
+    }
+    log_printf( &logger,"\r\n" );
+    
+    for ( duty_cycle = 1.0; duty_cycle > 0; duty_cycle -= 0.1 )
+    {
+        stspin250_set_duty_cycle ( &stspin250, duty_cycle );
+        log_printf( &logger," < " );
+        Delay_ms( 500 );
+    }
+}
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -59,22 +106,9 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    //  Task implementation.
-
-    duty_cycle += 0.1;
-    stspin250_set_ph( &stspin250 ,0 );
-    stspin250_set_duty_cycle ( &stspin250, duty_cycle );
-    if ( duty_cycle > 1 )
-    {
-        duty_cycle = 0.1;
-        stspin250_pwm_stop( &stspin250 );
-        Delay_ms( 2000 );
-        stspin250_pwm_start( &stspin250 );
-    }
-	stspin250_set_ph( &stspin250 ,1 );
-    Delay_ms( 200 );
-
-    Delay_100ms( );
+    clockwise( );
+    
+    counter_clockwise( );
 }
 
 void main ( void )

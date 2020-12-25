@@ -67,6 +67,7 @@ BATTMON_RETVAL battmon_init ( battmon_t *ctx, battmon_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Input pins
 
@@ -104,10 +105,7 @@ void battmon_generic_write ( battmon_t *ctx, uint8_t reg, uint8_t *data_buf, uin
 
 void battmon_generic_read ( battmon_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
-    i2c_master_write( &ctx->i2c, &reg, 1 );
-    Delay_ms( 100 );
-    i2c_master_read( &ctx->i2c, data_buf, len );
-    Delay_ms( 100 );
+    i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, len);
 }
 
 uint8_t battmon_read_bytes ( battmon_t *ctx, uint8_t reg_addr, uint8_t *data_out, uint8_t n_bytes )

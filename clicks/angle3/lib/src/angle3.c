@@ -47,9 +47,9 @@ void angle3_cfg_setup ( angle3_cfg_t *cfg )
 
     cfg->int_pin = HAL_PIN_NC;
 
-    cfg->spi_speed = 100000; 
+    cfg->spi_speed = 100000;
     cfg->spi_mode = SPI_MASTER_MODE_2;
-    cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_HIGH;
+    cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 }
 
 ANGLE3_RETVAL angle3_init ( angle3_t *ctx, angle3_cfg_t *cfg )
@@ -63,24 +63,23 @@ ANGLE3_RETVAL angle3_init ( angle3_t *ctx, angle3_cfg_t *cfg )
     spi_cfg.mosi      = cfg->mosi;
     spi_cfg.default_write_data = ANGLE3_DUMMY;
 
-    digital_out_init( &ctx->cs, cfg->cs );
     ctx->chip_select = cfg->cs;
 
-    if ( spi_master_open( &ctx->spi, &spi_cfg ) != SPI_MASTER_SUCCESS )
+    if ( spi_master_open( &ctx->spi, &spi_cfg ) == SPI_MASTER_ERROR )
     {
         return ANGLE3_INIT_ERROR;
     }
 
     spi_master_set_default_write_data( &ctx->spi, ANGLE3_DUMMY );
     spi_master_set_mode( &ctx->spi, spi_cfg.mode );
-	spi_master_set_speed( &ctx->spi, spi_cfg.speed );
-	spi_master_set_chip_select_polarity( cfg->cs_polarity );
-	spi_master_deselect_device( ctx->chip_select ); 
+    spi_master_set_speed( &ctx->spi, spi_cfg.speed );
+    spi_master_set_chip_select_polarity( cfg->cs_polarity );
+    spi_master_deselect_device( ctx->chip_select ); 
 
     // Output pins 
-    
+
     digital_in_init( &ctx->int_pin, cfg->int_pin );
-    
+
     return ANGLE3_OK;
 }
 
@@ -101,7 +100,7 @@ void angle3_write_data ( angle3_t* ctx, uint8_t opcode, uint8_t reg, uint16_t wr
 
 	spi_master_select_device( ctx->chip_select );
     spi_master_write( &ctx->spi, tx_buf, 3 );
-    spi_master_deselect_device( ctx->chip_select );   
+    spi_master_deselect_device( ctx->chip_select );
 }
 
 uint16_t angle3_read_data ( angle3_t* ctx, uint8_t opcode, uint8_t reg )
@@ -115,8 +114,13 @@ uint16_t angle3_read_data ( angle3_t* ctx, uint8_t opcode, uint8_t reg )
 	tx_buf[ 0 ] = ( opcode << 4 ) | ( reg >> 4 );
 
 	spi_master_select_device( ctx->chip_select );
-    spi_master_write_then_read( &ctx->spi, tx_buf, 1, rx_buf, 2 );
-    spi_master_deselect_device( ctx->chip_select ); 
+    spi_master_write( &ctx->spi, tx_buf, 1 );
+    spi_master_set_default_write_data( &ctx->spi, reg << 4 );
+    spi_master_read( &ctx->spi, &rx_buf[0], 1 );
+    spi_master_set_default_write_data( &ctx->spi, ANGLE3_REG_ANG );
+    spi_master_read( &ctx->spi, &rx_buf[1], 1 );
+    spi_master_deselect_device( ctx->chip_select );
+    spi_master_set_default_write_data( &ctx->spi, ANGLE3_DUMMY );
 
 	raw_data = rx_buf[ 0 ];
 	raw_data <<= 8;
@@ -192,7 +196,7 @@ float angle3_calculate_degrees ( angle3_t* ctx, uint16_t angle )
 {
 	float result;
 
-	result = ( 360 * (float) angle ) / 4096;
+	result = ( 360 * (float)angle ) / 4096;
 
 	return result;
 }
@@ -202,5 +206,4 @@ uint8_t angle3_read_error ( angle3_t* ctx )
 	return digital_in_read( &ctx->int_pin );
 }
 
-// ------------------------------------------------------------------------- END
-
+// ------------------------------------------------------------------------ END

@@ -27,5 +27,7 @@
   "short_description": "Magneto 2 click is a mikroBUS add-on board with Melexis's MLX90316 monolithic rotary position sensor.",
   "supported_compiler": "mikroC",
   "type": "Library",
-  "version": "2.0.0.0"
+  "version": "2.0.0.2"
 }
+
+

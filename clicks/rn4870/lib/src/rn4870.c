@@ -41,12 +41,11 @@ void rn4870_cfg_setup ( rn4870_cfg_t *cfg )
     
     // Additional gpio pins
 
-    cfg->rst = HAL_PIN_NC;
+    cfg->rst_n = HAL_PIN_NC;
     cfg->uart_rts = HAL_PIN_NC;
-    cfg->pwm = HAL_PIN_NC;
     cfg->uart_cts = HAL_PIN_NC;
 
-    cfg->baud_rate      = 9600;
+    cfg->baud_rate      = 115200;
     cfg->data_bit       = UART_DATA_BITS_DEFAULT;
     cfg->parity_bit     = UART_PARITY_DEFAULT;
     cfg->stop_bit       = UART_STOP_BITS_DEFAULT;
@@ -79,204 +78,33 @@ RN4870_RETVAL rn4870_init ( rn4870_t *ctx, rn4870_cfg_t *cfg )
 
     // Output pins 
 
-    digital_out_init( &ctx->rst, cfg->rst );
-    digital_out_init( &ctx->uart_rts, cfg->uart_rts );
-    digital_out_init( &ctx->pwm, cfg->pwm );
+     digital_out_init( &ctx->rst_n, cfg->rst_n );
+     digital_out_init( &ctx->uart_rts, cfg->uart_rts );
 
     // Input pins
 
-    digital_in_init( &ctx->uart_cts, cfg->uart_cts );
+     digital_in_init( &ctx->uart_cts, cfg->uart_cts );  
 
     return RN4870_OK;
 }
 
-void rn4870_uart_write ( rn4870_t *ctx, uint8_t *tx_data )
-{
-    uint16_t cnt;
-    
-    cnt = 0;
-
-    while ( tx_data[ cnt ] != 0x00 )
-    {
-        rn4870_generic_write( ctx, &tx_data[ cnt ], 1 );
-        cnt++;
-    }
-}
-
 void rn4870_reset ( rn4870_t *ctx )
 {
-    digital_out_low( &ctx->rst );
+    digital_out_high( &ctx->rst_n );
     Delay_100ms( );
-    digital_out_high( &ctx->rst );
+    digital_out_low( &ctx->rst_n );
     Delay_100ms( );
     Delay_100ms( );
-}
-
-void rn4870_initialize ( rn4870_t *ctx, char *dev_addr )
-{
-    rn4870_reset( ctx );
-
-    rn4870_uart_write( ctx, "$$$" );
-    Delay_100ms();
-    
-    rn4870_uart_write( ctx, "$$$\r" );
-    Delay_1sec();
-    
-    rn4870_uart_write( ctx, "SF,1\r" );
-    Delay_1sec();
-    Delay_1sec();
-    
-    rn4870_uart_write( ctx, "$$$" );
-    Delay_100ms();
-    
-    rn4870_uart_write( ctx, "$$$\r" );
-    Delay_1sec();
-
-    rn4870_uart_write( ctx, "SW,0A,0A\r" );
-    Delay_100ms();
-    Delay_100ms();
-    Delay_100ms();
-    Delay_100ms();
-    
-    rn4870_uart_write( ctx, "SW,0B,0B\r" );
-    Delay_100ms();
-    Delay_100ms();
-    Delay_100ms();
-    Delay_100ms();
-    
-    rn4870_uart_write( ctx, "R,1\r" );
-    Delay_1sec();
-    Delay_1sec();
-    
-    rn4870_uart_write( ctx, "$$$" );
-    Delay_100ms();
-    
-    rn4870_uart_write( ctx, "$$$\r" );
-    Delay_1sec();
-
-    rn4870_uart_write( ctx, "&," );
-    rn4870_uart_write( ctx, dev_addr );
-    
-    rn4870_uart_write( ctx, "\r" );
-    Delay_100ms();
-
-    ctx->end_flag = 0;
-    ctx->sen_flag = 0;
-    ctx->tmp_pos = 0;
-    memset( ctx->device_buffer, 0, 255 );
-}
-
-
-void rn4870_connect ( rn4870_t *ctx, char *dev_addr )
-{
-    rn4870_uart_write( ctx, "C,1," );
-    rn4870_uart_write( ctx, dev_addr );
-    rn4870_uart_write( ctx, "\r" );
-    Delay_1sec();
-    Delay_1sec();
-    Delay_1sec();
-
-    rn4870_uart_write( ctx, "B\r" );
-    Delay_1sec();
-    Delay_1sec();
-    Delay_1sec();
-}
-
-void rn4870_disconnect ( rn4870_t *ctx )
-{
-    Delay_1sec();
-    Delay_1sec();
-    Delay_1sec();
-    
-    rn4870_uart_write( ctx, "$$$" );
-    Delay_100ms();
-    
-    rn4870_uart_write( ctx, "$$$\r" );
-    Delay_1sec();
-
-    rn4870_uart_write( ctx, "K,1\r" );
-    Delay_1sec();
-}
-
-void rn4870_send ( rn4870_t *ctx, uint8_t msg_type, uint16_t data_type, uint8_t dev_id, uint8_t *tx_data )
-{
-    char msg_text[ 255 ];
-    uint8_t d_buff[ 2 ];
-    
-    d_buff[ 0 ] = ( uint8_t ) ( data_type >> 8 );
-    d_buff[ 1 ] = ( uint8_t ) data_type;
-
-    msg_text[ 0 ] = '#';
-    msg_text[ 1 ] = msg_type;
-    msg_text[ 2 ] = ',';
-    msg_text[ 3 ] = d_buff[ 0 ];
-    msg_text[ 4 ] = d_buff[ 1 ];
-    msg_text[ 5 ] = ',';
-    msg_text[ 6 ] = dev_id;
-    msg_text[ 7 ] = ',';
-    msg_text[ 8 ] = '\0';
-    strcat( msg_text, tx_data );
-    strcat( msg_text, "*\r\n" );
-
-    rn4870_uart_write( ctx, msg_text );
-}
-
-void rn4870_receive ( rn4870_t *ctx, char character )
-{
-    if ( character == '#' )
-    {
-        ctx->end_flag = 0x01;
-        return;
-    }
-
-    if ( character == '\r' && ctx->end_flag == 0x01 )
-    {
-        ctx->end_flag = 0xFF;
-        return;
-    }
-
-    if ( character == '\n' && ctx->end_flag == 0xFF )
-    {
-        ctx->device_buffer[ ctx->tmp_pos ] = '\0';
-        ctx->tmp_pos = 0;
-
-        ctx->end_flag = 0x00;
-        ctx->sen_flag = 1;
-        return;
-    }
-
-    if ( ctx->end_flag == 0x01 )
-    {
-        ctx->device_buffer[ ctx->tmp_pos ] = character;
-        ctx->tmp_pos++;
-        return;
-    }
-}
-
-uint8_t rn4870_read ( rn4870_t *ctx, uint8_t *rx_data )
-{
-    uint8_t cnt;
-
-    if ( ctx->sen_flag )
-    {
-        for ( cnt = 0; cnt <= 255; cnt++ )
-        {
-            if ( ctx->device_buffer[ cnt ] == '*' )
-            {
-                ctx->device_buffer[ cnt ] = 0;
-                break;
-            }
-        }
-
-        strcpy( rx_data, ctx->device_buffer );
-        ctx->sen_flag = 0;
-        
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
+    Delay_100ms( );
+    digital_out_high( &ctx->rst_n );
+    Delay_1sec( );
+    Delay_1sec( );
+    Delay_1sec( );
+    Delay_1sec( );
+    Delay_1sec( );
+    Delay_1sec( );
+    Delay_1sec( );
+    Delay_1sec( );
 }
 
 void rn4870_generic_write ( rn4870_t *ctx, char *data_buf, uint16_t len )
@@ -284,44 +112,188 @@ void rn4870_generic_write ( rn4870_t *ctx, char *data_buf, uint16_t len )
     uart_write( &ctx->uart, data_buf, len );
 }
 
-int16_t rn4870_generic_read ( rn4870_t *ctx, char *data_buf, uint16_t max_len )
+int32_t rn4870_generic_read ( rn4870_t *ctx, char *data_buf, uint16_t max_len )
 {
     return uart_read( &ctx->uart, data_buf, max_len );
 }
 
-uint8_t rn4870_get_interrupt ( rn4870_t *ctx )
+uint8_t rn4870_int_get ( rn4870_t *ctx )
 {
-    return digital_in_read( &ctx->uart_cts );
+    return digital_in_read ( &ctx->uart_cts );
 }
 
-void rn4870_set_rst ( rn4870_t *ctx )
+void rn4870_rst_set ( rn4870_t *ctx, uint8_t pin_state )
 {
-    digital_out_high( &ctx->rst );
+   digital_out_write( &ctx->rst_n, pin_state );
 }
 
-void rn4870_clear_rst ( rn4870_t *ctx )
+void rn4870_cs_set ( rn4870_t *ctx, uint8_t pin_state )
 {
-    digital_out_low( &ctx->rst );
+    digital_out_write( &ctx->uart_rts, pin_state );
 }
 
-void rn4870_set_rts ( rn4870_t *ctx )
+void rn4870_uart_write ( rn4870_t *ctx, uint8_t * wr_buf )
 {
-    digital_out_high( &ctx->uart_rts );
+    uint16_t i = 0;
+
+    while ( wr_buf[ i ] != 0x00 )
+    {
+        uart_write( &ctx->uart, &wr_buf[ i ], 1 );
+        i ++;
+    }
 }
 
-void rn4870_clear_rts ( rn4870_t *ctx )
+void rn4870_initialize ( rn4870_t *ctx, char *p_addr )
 {
-    digital_out_low( &ctx->uart_rts );
+    digital_out_low( &ctx->rst_n );
+    Delay_100ms( );
+    digital_out_high( &ctx->rst_n );
+    Delay_100ms( );
+    Delay_100ms( );
+    rn4870_uart_write( ctx, "$" );
+    Delay_100ms( );
+    rn4870_uart_write( ctx, "$$$" );
+    Delay_100ms( );
+    Delay_100ms( );
+    rn4870_uart_write( ctx, "SF,1\r" );
+    Delay_1sec( );
+    Delay_1sec( );
+    rn4870_uart_write( ctx, "$" );
+    Delay_100ms( );
+    rn4870_uart_write( ctx, "$$$" );
+    Delay_100ms( );
+
+    // Enables data transfer services 
+    rn4870_uart_write( ctx, "SS,C0\r" );
+    Delay_100ms( );
+    Delay_100ms( );
+    Delay_100ms( );
+    // Reboots the device for change to take effect 
+    rn4870_uart_write( ctx, "R,1\r" );
+    Delay_1sec( );
+    Delay_1sec( );
+    rn4870_uart_write( ctx, "$" );
+    Delay_100ms( );
+    rn4870_uart_write( ctx, "$$$" );
+    Delay_1sec( );
+
+    // Sets the address of the click 
+    rn4870_uart_write( ctx, "&," );
+    rn4870_uart_write( ctx, p_addr );
+    rn4870_uart_write( ctx, "\r" );
+    Delay_100ms( );
+
+    // Initializes sentence buffer
+    ctx->end_flag = 0;
+    ctx->sentence_flag = 0;
+    ctx->buffer_position = 0;
+    memset( ctx->device_buffer, 0, 255 );
 }
 
-void rn4870_set_pwm ( rn4870_t *ctx )
+void rn4870_connect ( rn4870_t *ctx, char *p_addr )
 {
-    digital_out_high( &ctx->pwm );
+    // Connects to a device with specified adress
+    rn4870_uart_write( ctx, "C,1," );
+    rn4870_uart_write( ctx, p_addr );
+    rn4870_uart_write( ctx, "\r" );
+    Delay_1sec( );
+    Delay_1sec( );
+    Delay_1sec( );
+    // Secures the connection, entering data stream mode
+    rn4870_uart_write( ctx, "B\r" );
+    Delay_1sec( );
+    Delay_1sec( );
+    Delay_1sec( );
 }
 
-void rn4870_clear_pwm ( rn4870_t *ctx )
+void rn4870_send ( rn4870_t *ctx, uint8_t msg_type, uint16_t data_type, uint8_t id, uint8_t *payload )
 {
-    digital_out_low( &ctx->pwm );
+    char msg_txt[ 255 ];
+
+    //Sentence construction
+    msg_txt[ 0 ] = '#';
+    msg_txt[ 1 ] = msg_type;
+    msg_txt[ 2 ] = ',';
+    msg_txt[ 3 ] = data_type / 0x100;
+    msg_txt[ 4 ] = data_type % 0x100;
+    msg_txt[ 5 ] = ',';
+    msg_txt[ 6 ] = id;
+    msg_txt[ 7 ] = ',';
+    msg_txt[ 8 ] = '\0';
+    strcat( msg_txt, payload );
+    strcat( msg_txt, "*\r\n" );
+
+    rn4870_uart_write( ctx, msg_txt );
+}
+
+void rn4870_disconnect ( rn4870_t *ctx )
+{
+    Delay_1sec( );
+    Delay_1sec( );
+    Delay_1sec( );
+    // Enters CMD mode
+    rn4870_uart_write( ctx, "$" );
+    Delay_100ms( );
+    rn4870_uart_write( ctx, "$$$" );
+    Delay_1sec( );
+    // Kills connection
+    rn4870_uart_write( ctx, "K,1\r" );
+    Delay_1sec( );
+}
+
+void rn4870_receive ( rn4870_t *ctx, char tmp )
+{
+    // Checks if first character of the sentence is #, to avoid parsing RN4xxx status messages
+    if ( tmp == '#' )    
+    {
+        ctx->end_flag = 0x01;
+        return;
+    }
+
+    if ( tmp == '\r' && ctx->end_flag == 0x01 )
+    {
+        ctx->end_flag = 0xFF;
+        return;
+    }
+
+    if ( tmp == '\n' && ctx->end_flag == 0xFF )
+    {
+        ctx->device_buffer[ ctx->buffer_position ] = '\0';
+        ctx->buffer_position = 0;
+
+        ctx->end_flag = 0x00;
+        ctx->sentence_flag = 1;
+        return;
+    }
+
+    if ( ctx->end_flag == 0x01 )
+    {
+        ctx->device_buffer[ ctx->buffer_position ] = tmp;
+        ctx->buffer_position++;
+        return;
+    }
+}
+
+uint8_t rn4870_read ( rn4870_t *ctx, uint8_t *process_buffer )
+{
+    uint8_t i;
+    
+    if ( ctx->sentence_flag )
+    {
+        for ( i = 0; i <= 255; i ++ )
+        {
+            if ( ctx->device_buffer[ i ] == '*' )
+            {
+                ctx->device_buffer[ i ] = 0;
+                break;
+            }
+        }
+        
+        strcpy( process_buffer, ctx->device_buffer );
+        ctx->sentence_flag = 0;
+        return 1;
+    }
+    else return 0;
 }
 
 // ------------------------------------------------------------------------- END

@@ -3,6 +3,6 @@
     "description": "HDC1000 Click is a humidity and temperature measurement click board carrying the HDC1000 sensor.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","HDC1000 "],
+    "hw" : ["click","HDC1000"],
     "category" : ["Temperature & humidity"] 
 }

@@ -68,6 +68,7 @@ CAPSENSE_RETVAL capsense_init ( capsense_t *ctx, capsense_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Output pins 
 
@@ -94,18 +95,14 @@ void capsense_default_cfg ( capsense_t *ctx )
     capsense_write_data( ctx, CAPSENSE_CS_SLID_MULL, 0x00 );   // Configure slider resolution
 
     capsense_write_data( ctx, CAPSENSE_COMMAND_REG, 0x01 );     // Store Current Configuration to NVM
-    cfg_delay_ms( );
-    cfg_delay_ms( );
-    cfg_delay_ms( );
-    
+    Delay_100ms();
+    Delay_100ms();
     capsense_write_data( ctx, CAPSENSE_COMMAND_REG, 0x06 );     // Reconfigure Device (POR)
-    
-    cfg_delay_ms( );
-    cfg_delay_ms( );
-    
+    Delay_100ms();
+    Delay_100ms();
+    Delay_100ms();
     capsense_write_data( ctx, CAPSENSE_OUTPUT_PORT0, 0x03 );
-    cfg_delay_ms( );
-    
+    Delay_100ms();
 }
 
 void capsense_generic_write ( capsense_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
@@ -146,9 +143,13 @@ uint8_t capsense_read_data( capsense_t *ctx, uint8_t reg_address )
 uint16_t capsense_read_data_bytes( capsense_t *ctx, uint8_t reg_address )
 {
     uint16_t result;
+    uint8_t tempData[2];
     uint8_t bytes[ 2 ];
 
-    capsense_generic_read( ctx, reg_address, bytes, 2);
+    tempData[0] = reg_address;
+    tempData[1] = reg_address;
+
+    i2c_master_write_then_read( &ctx->i2c, &tempData, 2, bytes, 2 );
 
     result = bytes[ 0 ];
     result <<= 8;
@@ -157,106 +158,16 @@ uint16_t capsense_read_data_bytes( capsense_t *ctx, uint8_t reg_address )
     return result;
 }
 
-uint16_t capsense_get_slider_lvl( capsense_t *ctx )
+uint8_t capsense_get_slider_lvl( capsense_t *ctx )
 {
-    uint16_t slider_lvl;
-    uint8_t slider_sum;
-    slider_lvl = 0;
+    uint16_t slider_lvl = 0;
 
-    slider_sum = capsense_read_data_bytes( ctx, CAPSENSE_CS_READ_RAW );
-    
-    switch ( slider_sum )
-    {
-          case 1 :  
-          {
-            slider_lvl = 1;
-          break;
-          }
-          case 2 :
-          {
-            slider_lvl = 2;
-          break;
-          }
-          case 3 :
-          {  
-            slider_lvl = 12;
-          break;  
-          }
-          case 4 :
-          {
-            slider_lvl = 3;
-          break;
-          }
-          case 6 :  
-          {
-            slider_lvl = 23;
-          break;
-          }
-          case 7 :
-          {
-            slider_lvl = 123;
-          break;
-          }
-          case 8 :  
-          {
-            slider_lvl = 4;
-          break;
-          }
-          case 12 :
-          {
-            slider_lvl = 34;
-          break;
-          }
-          case 14 : 
-          {
-            slider_lvl = 234;
-          break;
-          }
-          case 15 :
-          {
-            slider_lvl = 1234;
-          break;
-          }
-          case 16 :
-          {
-            slider_lvl = 5;
-          break;
-          }
-          case 24 : 
-          {
-            slider_lvl = 45;
-          break;
-          }
-          case 28 : 
-          {
-            slider_lvl = 345;
-          break;
-          }
-          case 30 : 
-          {
-            slider_lvl = 2345;
-          break;
-          }
-          case 31 : 
-          {
-            slider_lvl = 12345;
-          break;
-          }
-          default :
-          {
-            slider_lvl = 0;
-          break;
-          }
-    }
+    slider_lvl = capsense_read_data_bytes( ctx, CAPSENSE_CS_READ_RAW );
 
-    return slider_lvl;
-}
-
-// ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
-static void cfg_delay_ms ( void )
-{
-    // This delay is required while setting initial values to the config registers
-    Delay_100ms( );
+    if (slider_lvl < 32 && slider_lvl > 0)
+        return (uint8_t) slider_lvl;
+    else
+        return 0;
 }
 
 // ------------------------------------------------------------------------- END

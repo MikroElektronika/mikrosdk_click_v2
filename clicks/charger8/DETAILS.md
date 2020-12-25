@@ -1,8 +1,9 @@
 
----
-# Angle 4 click
 
-Angle 4 click is an angular magnetic rotary sensor, which can be used as a rotary encoder.
+---
+# Charger 8 click
+
+Charger 8 Click is an intelligent Li-Ion battery charger, system power manager, and a battery fuel gauge Click board.
 
 <p align="center">
   <img src="http://download.mikroe.com/images/click_for_ide/charger8_click.png" height=300px>
@@ -16,13 +17,13 @@ Angle 4 click is an angular magnetic rotary sensor, which can be used as a rotar
 #### Click library 
 
 - **Author**        : MikroE Team
-- **Date**          : dec 2019.
-- **Type**          : SPI type
+- **Date**          : Nov 2019.
+- **Type**          : I2C type
 
 
 # Software Support
 
-We provide a library for the Angle4 Click 
+We provide a library for the Charger8 Click 
 as well as a demo application (example), developed using MikroElektronika 
 [compilers](http://shop.mikroe.com/compilers). 
 The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
@@ -31,46 +32,48 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Library Description
 
-> This library contains API for Angle4 Click driver.
+> This library contains API for Charger8 Click driver.
 
 #### Standard key functions :
 
 - Config Object Initialization function.
-> void angle4_cfg_setup ( angle4_cfg_t *cfg ); 
+> void charger8_cfg_setup ( charger8_cfg_t *cfg ); 
  
 - Initialization function.
-> ANGLE4_RETVAL angle4_init ( angle4_t *ctx, angle4_cfg_t *cfg );
+> CHARGER8_RETVAL charger8_init ( charger8_t *ctx, charger8_cfg_t *cfg );
 
 - Click Default Configuration function.
-> void angle4_default_cfg ( angle4_t *ctx );
+> void charger8_default_cfg ( charger8_t *ctx );
 
 
 #### Example key functions :
 
-- Functions for read Angle
-> uint8_t angle4_get_new_angle ( angle4_t *ctx, uint16_t *data_out );
+- Functions for read Temperature of the chip
+> float charger8_get_temperature ( charger8_t *ctx );
  
-- Functions for chip calibration
-> void angle4_calibration ( angle4_t *ctx, uint8_t dir, uint8_t data_resolution );
+- Function for reads the current capacity of the battery
+> uint16_t charger8_get_capacity ( charger8_t *ctx );
 
-- Custom function for reading multiple bytes of data
-> void angle4_multi_read ( angle4_t *ctx, uint8_t addr, uint8_t *read_data, uint8_t len );
+- Function for reads the Status register
+> uint16_t charger8_get_status ( charger8_t *ctx );
 
 ## Examples Description
 
-> This app uses angular magnetic rotary sensor and can be used for a rotary encoder.
+> This application is used for charging devices and battery diagnostics
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Driver intialization, standard configurations and start measurement 
+> Initialization driver init, enable moduele and default configuration,
+> disable ALERT and USB suspand mode and sets max battery capacity
 
 ```c
+
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    angle4_cfg_t cfg;
+    charger8_cfg_t cfg;
 
     //  Logger initialization.
 
@@ -81,40 +84,59 @@ void application_init ( void )
 
     //  Click initialization.
 
-    angle4_cfg_setup( &cfg );
-    ANGLE4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    angle4_init( &angle4, &cfg );
+    charger8_cfg_setup( &cfg );
+    CHARGER8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    charger8_init( &charger8, &cfg );
 
-    angle4_custom_write( &angle4, ANGLE4_REG_CUSTOMER_CFG_0, ANGLE4_CCFG0_SELECT_UVW_MODE |
-                                                 ANGLE4_CCFG0_PWM_PERIOD_1025us |
-                                                 ANGLE4_CCFG0_ABI_270edeg |
-                                                 ANGLE4_CCFG0_UVW_POLE_PAIRS_8 );
-                                                 
-    angle4_custom_write( &angle4, ANGLE4_REG_CUSTOMER_CFG_1, ANGLE4_CCFG1_ABI_CPR_4096 |
-                                                 ANGLE4_CCFG1_HYSTERESIS_1_4mdeg );
-
-    angle4_custom_write( &angle4, ANGLE4_REG_OPERATING_VOLTAGE, ANGLE4_OPERATING_VOLTAGE_5000mV );
-    
-    angle4_calibration( &angle4, ANGLE4_CCFG2_DIR_COUNTER_CLOCKWISE_ROTATION, ANGLE4_CCFG2_ABS_RESOLUTION_14bit);
-    
-    log_printf( &logger, " --- Start measurement --- \r\n" );
-
-    angle4_start_mesuremenet( &angle4 );
+    charger8_enable( &charger8, CHARGER8_CHARGER_ENABLE );
+    charger8_default_cfg( &charger8 );
+    charger8_reset( &charger8 );
+    charger8_set_alert( &charger8, CHARGER8_ALERT_DISABLE );
+    charger8_set_usb_suspend( &charger8, CHARGER8_USB_SUSPAND_MODE_DISABLE );
+    charger8_set_max_battery_capacity( 2000 );
+    log_printf( &logger, " --- Charger - Start measurement --- \r\n" );
+    Delay_ms( 1000 );
 }
+  
 ```
 
 ### Application Task
 
-> Reads Angle in degreeses and logs data to USBUART every 200 ms.
+> Reads battery diagnostics and this data logs to USBUART every 1500 ms.
 
 ```c
+
 void application_task ( void )
 {
-    angle4_get_new_angle( &angle4, &angle );
+    //  Task implementation.
+
+    float temperature;
+    float current;
+    float voltage;
+    uint8_t soc;
+    uint16_t capacity;
     
-    log_printf( &logger, " Angle : %d deg \r\n", angle );
-    Delay_ms( 200 );
+    log_printf( &logger, " - Battery diagnostics - \r\n" );
+    
+    temperature = charger8_get_temperature( &charger8 );
+    log_printf( &logger, " - Temperature : %f C\r\n", temperature );
+    
+    current = charger8_get_current( &charger8 );
+    log_printf( &logger, " - Current : %f mA\r\n", current);
+    
+    voltage = charger8_get_voltage( &charger8 );
+    log_printf( &logger, " - Voltage : %f mV\r\n", voltage);
+    
+    capacity = charger8_get_capacity( &charger8 );
+    log_printf( &logger, " - Capacity : %d mAh\r\n", capacity );
+    
+    soc = charger8_get_soc( &charger8 );
+    log_printf( &logger, " - SOC : %d %%\r\n", soc );
+    
+    log_printf( &logger, " -------------------------- \r\n" );
+    Delay_ms( 1500 );
 }
+
 ```
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
@@ -123,7 +145,7 @@ The full application code, and ready to use projects can be  installed directly 
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.Angle4
+- Click.Charger8
 
 **Additional notes and informations**
 

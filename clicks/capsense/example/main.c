@@ -29,6 +29,23 @@
 static capsense_t capsense;
 static log_t logger;
 
+// ------------------------------------------------------- ADDITIONAL FUNCTIONS
+
+void bits_to_str( uint8_t num, char *s )
+{
+   uint8_t mask = 0x80;
+
+   while( mask )
+   {
+      if ( num & mask )
+        *s++ = '1';
+      else
+        *s++ = '0';
+      mask >>= 1;
+   }
+   *s = '\0';
+}
+
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
@@ -50,19 +67,17 @@ void application_init ( void )
     CAPSENSE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     capsense_init( &capsense, &cfg );
     capsense_default_cfg( &capsense );
-
 }
 
 void application_task ( void )
 {
-
     uint8_t current_led_state;
     uint8_t button_select;
-    uint8_t slider_value;
-    uint16_t slider_lvl;
+    uint8_t slider_lvl;
+    char output_lvl[ 10 ];
     
     button_select = capsense_read_data( &capsense, CAPSENSE_CS_READ_STATUS0 );
-    slider_value = capsense_read_data_bytes( &capsense, CAPSENSE_CS_READ_RAW );
+    slider_lvl = capsense_get_slider_lvl( &capsense );
     capsense_write_data( &capsense, CAPSENSE_OUTPUT_PORT0, current_led_state );
     
     Delay_ms( 100 );
@@ -70,26 +85,26 @@ void application_task ( void )
     if ( button_select == 8 )
     {
         current_led_state ^= 0x01;
+        log_printf( &logger, "Toggle LED1\r\n");
         Delay_ms( 100 );
     }
     if ( button_select == 16 )
     {
         current_led_state ^= 0x02;
+        log_printf( &logger, "Toggle LED2\r\n");
         Delay_ms( 100 );
     }
     if ( button_select == 24 )
     {
         current_led_state = ~current_led_state;
+        log_printf( &logger, "Toggle both LEDs\r\n");
         Delay_ms( 100 );
     }
 
-    slider_lvl = capsense_get_slider_lvl( &capsense );
-
-    if ( slider_value != 0 )
+    if ( slider_lvl != 0 )
     {
-        log_printf( &logger, "Slider lvl. %u \r\n", slider_lvl );
-        log_printf( &logger, "Slider value: %u \r\n", slider_value );
-        
+        bits_to_str( slider_lvl, output_lvl );
+        log_printf( &logger, "Slider level - channels [5-1]:\t%s \r\n", &output_lvl[ 3 ] );
         Delay_ms( 100 );
     }
 }

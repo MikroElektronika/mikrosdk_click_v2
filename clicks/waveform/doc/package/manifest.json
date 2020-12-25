@@ -10,7 +10,7 @@
     "dependency_list": [
     ],
     "details": "Resources/DETAILS.md",
-    "display_name": "Waveform ",
+    "display_name": "Waveform click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -25,7 +25,14 @@
     "name": "mikroe.click.waveform",
     "product_link": "https://www.mikroe.com/waveform-click",
     "short_description": "Waveform Click is a precise sine/triangle/square waveform generator, capable of reproducing frequencies up to 12MHz.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.0"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2614
+    ],
+    "version": "2.0.0.5"
 }
+
+
+

@@ -25,8 +25,12 @@
     "name": "mikroe.click.vtohz",
     "product_link": "https://www.mikroe.com/v-to-hz-click",
     "short_description": "V to HZ click is a device that converts an analog voltage input signal into a pulse wave signal of a certain frequency. It has a linear response, so applying a voltage in a range of 0 to 5V on its input, will result in generating the pulse train with frequency linearly proportional to the input voltage.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2268
+    ],
+    "version": "2.0.0.2"
 }
 

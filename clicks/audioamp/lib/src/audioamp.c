@@ -29,242 +29,176 @@
 
 #include "audioamp.h"
 
-// ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
+/**
+ * \brief Register Address
+ */
+#define AUDIOAMP_REG_MODE             0x00
+#define AUDIOAMP_REG_DIAG             0x20
+#define AUDIOAMP_REG_FAULT            0x40
+#define AUDIOAMP_REG_VOL_1            0x60
+#define AUDIOAMP_REG_VOL_2            0x80
+
+/**
+ * \brief Channel Settings
+ */
+#define AUDIOAMP_MODE_MUX             0x0C
+#define AUDIOAMP_MODE_MUTE            0x00
+
+/**
+ * \brief Power Control
+ */
+#define AUDIOAMP_MODE_POWER_ON        0x10
+#define AUDIOAMP_MODE_POWER_OFF       0x00
+
+/**
+ * @brief Generic read function.
+ *
+ * @param ctx  Click object.
+ * @param reg  Register address.
+ * @param data_in  Data byte to be written.
+ * @return    0  - Ok,
+ *          (-1) - Error.
+ *
+ * @description This function writes one byte data to the selected register via I2C serial communication.
+ */
+static err_t audioamp_generic_write ( audioamp_t *ctx, uint8_t reg, uint8_t data_in );
 
 void audioamp_cfg_setup ( audioamp_cfg_t *cfg )
 {
-    // Communication gpio pins 
-
-    cfg->scl = HAL_PIN_NC;
-    cfg->sda = HAL_PIN_NC;
-    
-    // Additional gpio pins
-
+    cfg->scl     = HAL_PIN_NC;
+    cfg->sda     = HAL_PIN_NC;
     cfg->int_pin = HAL_PIN_NC;
 
-    cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
+    cfg->i2c_speed   = I2C_MASTER_SPEED_STANDARD;
     cfg->i2c_address = AUDIOAMP_I2C_ADDRESS_0;
 }
 
-AUDIOAMP_RETVAL audioamp_init ( audioamp_t *ctx, audioamp_cfg_t *cfg )
+err_t audioamp_init ( audioamp_t *ctx, audioamp_cfg_t *cfg )
 {
     i2c_master_config_t i2c_cfg;
 
     i2c_master_configure_default( &i2c_cfg );
-    i2c_cfg.speed  = cfg->i2c_speed;
-    i2c_cfg.scl    = cfg->scl;
-    i2c_cfg.sda    = cfg->sda;
+
+    i2c_cfg.speed = cfg->i2c_speed;
+    i2c_cfg.scl   = cfg->scl;
+    i2c_cfg.sda   = cfg->sda;
 
     ctx->slave_address = cfg->i2c_address;
 
-    if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_ERROR )
+    if ( i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_ERROR )
     {
         return AUDIOAMP_INIT_ERROR;
     }
 
-    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
-    i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    if ( i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address ) == I2C_MASTER_ERROR )
+    {
+        return AUDIOAMP_INIT_ERROR;
+    }
 
-    // Input pins
+    if ( i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed ) == I2C_MASTER_ERROR )
+    {
+        return AUDIOAMP_INIT_ERROR;
+    }
 
-    digital_in_init( &ctx->int_pin, cfg->int_pin );
-    
+    if ( i2c_master_set_timeout( &ctx->i2c, 0 ) == I2C_MASTER_ERROR )
+    {
+        return AUDIOAMP_INIT_ERROR;
+    }
+
+    if ( digital_in_init( &ctx->int_pin, cfg->int_pin ) == DIGITAL_IN_UNSUPPORTED_PIN )
+    {
+        return AUDIOAMP_INIT_ERROR;
+    }
 
     return AUDIOAMP_OK;
 }
 
-
-void audioamp_generic_write ( audioamp_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
+err_t audioamp_power_on ( audioamp_t *ctx )
 {
-    uint8_t tx_buf[ 256 ];
-    uint8_t cnt;
-    
-    tx_buf[ 0 ] = reg;
-    
-    for ( cnt = 1; cnt <= len; cnt++ )
+    return audioamp_generic_write( ctx, AUDIOAMP_REG_MODE, AUDIOAMP_MODE_POWER_ON | AUDIOAMP_MODE_MUX );
+}
+
+err_t audioamp_power_off ( audioamp_t *ctx )
+{
+    return audioamp_generic_write( ctx, AUDIOAMP_REG_MODE, AUDIOAMP_MODE_POWER_OFF );
+}
+
+err_t audioamp_set_volume ( audioamp_t *ctx, uint8_t in_sel, uint8_t volume_level )
+{
+    if ( ( volume_level < 1 ) || ( volume_level > 32 ) )
     {
-        tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
-    }
-    
-    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );    
-}
-
-void audioamp_generic_read ( audioamp_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
-{
-    i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, len );
-}
-
-void audioamp_power_on ( audioamp_t *ctx )
-{
-    uint8_t buffer[ 1 ];
-    uint8_t dummy;
-
-    buffer[ 0 ] = AUDIOAMP_CMD_ENABLE | AUDIOAMP_MUX_BIT;
-
-    audioamp_generic_write( ctx, buffer[ 0 ], &dummy, 1 );
-}
-
-void audioamp_power_off ( audioamp_t *ctx )
-{
-    uint8_t buffer[ 1 ];
-    uint8_t dummy;
-
-    buffer[ 0 ] = AUDIOAMP_CMD_DISABLE;
-
-    audioamp_generic_write( ctx, buffer[ 0 ], &dummy, 1 );
-}
-
-void audioamp_set_volume ( audioamp_t *ctx, uint8_t volume_value )
-{
-    uint8_t buffer[ 1 ];
-    uint8_t dummy;
-
-    volume_value %= 32;
-
-    buffer[ 0 ] = volume_value;
-    buffer[ 0 ] |= AUDIOAMP_REG_VOL_1;
-
-    audioamp_generic_write( ctx, buffer[ 0 ], &dummy, 1 );
-
-    buffer[ 0 ] = volume_value;
-    buffer[ 0 ] |= AUDIOAMP_REG_VOL_2;
-
-    audioamp_generic_write( ctx, buffer[ 0 ], &dummy, 1 );
-}
-
-void audioamp_set_volume_channel ( audioamp_t *ctx, uint8_t channel, uint8_t volume_value )
-{
-    uint8_t buffer[ 1 ];
-    uint8_t dummy;
-
-    volume_value %= 32;
-    
-    buffer[ 0 ] = volume_value;
-
-    if ( channel == AUDIOAMP_MODE_CH_1 )
-    {
-        buffer[ 0 ] |= AUDIOAMP_CMD_VOLUME_1;
-    }
-     
-    if ( channel == AUDIOAMP_MODE_CH_2 )
-    {
-       buffer[ 0 ] |= AUDIOAMP_CMD_VOLUME_2;
-    }
-   
-    audioamp_generic_write( ctx, buffer[ 0 ], &dummy, 1 );
-}
-
-void audioamp_enable ( audioamp_t *ctx )
-{
-    uint8_t tmp;
-    uint8_t dummy;
-
-    tmp = AUDIOAMP_REG_MODE;
-    tmp |= AUDIOAMP_CMD_ENABLE;
-
-    audioamp_generic_write( ctx, tmp, &dummy, 1 );
-}
-
-void audioamp_disable ( audioamp_t *ctx )
-{
-    uint8_t tmp;
-    uint8_t dummy;
-
-    tmp = AUDIOAMP_REG_MODE;
-    tmp |= AUDIOAMP_CMD_DISABLE;
-
-    audioamp_generic_write( ctx, tmp, &dummy, 1 );
-}
-
-void audioamp_mute_mode ( audioamp_t *ctx )
-{
-    uint8_t buffer[ 1 ];
-    uint8_t dummy;
-
-    buffer[ 0 ] = AUDIOAMP_CMD_ENABLE | AUDIOAMP_MUTE_BIT;
-
-    audioamp_generic_write( ctx, buffer[ 0 ], &dummy, 1 );
-}
-
-void audioamp_unmute_mode ( audioamp_t *ctx )
-{
-    uint8_t buffer[ 1 ];
-    uint8_t dummy;
-
-    buffer[ 0 ] = AUDIOAMP_CMD_ENABLE | AUDIOAMP_MUX_BIT;
-
-    audioamp_generic_write( ctx, buffer[ 0 ], &dummy, 1 );
-}
-
-void audioamp_set_normal_operation ( audioamp_t *ctx )
-{
-    uint8_t tmp;
-    uint8_t dummy;
-
-    tmp = AUDIOAMP_REG_FAULT;
-    tmp |= 0x00;
-
-    audioamp_generic_write( ctx, tmp, &dummy, 1 );
-}
-
-void audioamp_set_fault_detecton_control( audioamp_t *ctx, uint8_t input_command )
-{
-    uint8_t temp;
-    uint8_t tmp;
-    uint8_t dummy;
-
-    temp = 0x01;
-    
-    input_command %= 5;
-    
-    temp <<= input_command;
-
-    tmp = AUDIOAMP_REG_FAULT;
-    tmp |= temp;
-
-    audioamp_generic_write( ctx, tmp, &dummy, 1 );
-}
-
-void audioamp_set_input( audioamp_t *ctx, uint8_t input_mode )
-{
-    uint8_t temp;
-    uint8_t tmp;
-    uint8_t dummy;
-    
-    if ( input_mode == AUDIOAMP_MODE_CH_1 )
-    {
-       temp = AUDIOAMP_CH_1_BIT;
-    }
-        
-    if ( input_mode == AUDIOAMP_MODE_CH_2 )
-    {
-       temp = AUDIOAMP_CH_2_BIT;
-    }
-        
-    if ( input_mode == AUDIOAMP_MODE_MUX )
-    {
-       temp = AUDIOAMP_MUX_BIT;
-    }
-        
-    if ( input_mode == AUDIOAMP_MODE_MUTE )
-    {
-       temp = AUDIOAMP_MUTE_BIT;
+        return AUDIOAMP_INIT_ERROR;
     }
 
-    tmp = AUDIOAMP_REG_MODE;
-    tmp |= temp | AUDIOAMP_CMD_ENABLE;
+    if ( in_sel == AUDIOAMP_IN_1 )
+    {
+        if ( audioamp_generic_write( ctx, AUDIOAMP_REG_VOL_1, volume_level - 1 ) == I2C_MASTER_ERROR )
+        {
+            return AUDIOAMP_INIT_ERROR;
+        }
+    }
+    else if ( in_sel == AUDIOAMP_IN_2 )
+    {
+        if ( audioamp_generic_write( ctx, AUDIOAMP_REG_VOL_2, volume_level - 1 ) == I2C_MASTER_ERROR )
+        {
+            return AUDIOAMP_INIT_ERROR;
+        }
+    }
+    else if ( in_sel == AUDIOAMP_IN_1 | AUDIOAMP_IN_2 )
+    {
+        if ( audioamp_generic_write( ctx, AUDIOAMP_REG_VOL_1, volume_level - 1 ) == I2C_MASTER_ERROR )
+        {
+            return AUDIOAMP_INIT_ERROR;
+        }
 
-    audioamp_generic_write( ctx, tmp, &dummy, 1 );
+        if ( audioamp_generic_write( ctx, AUDIOAMP_REG_VOL_2, volume_level - 1 ) == I2C_MASTER_ERROR )
+        {
+            return AUDIOAMP_INIT_ERROR;
+        }
+    }
+    else
+    {
+        return AUDIOAMP_INIT_ERROR;
+    }
+
+    return AUDIOAMP_OK;
 }
 
-/* Check interrupt status function */
-uint8_t audioamp_check_status ( audioamp_t *ctx )
+err_t audioamp_mute ( audioamp_t *ctx )
+{
+    return audioamp_generic_write( ctx, AUDIOAMP_REG_MODE, AUDIOAMP_MODE_POWER_ON | AUDIOAMP_MODE_MUTE );
+}
+
+err_t audioamp_unmute ( audioamp_t *ctx )
+{
+    return audioamp_generic_write( ctx, AUDIOAMP_REG_MODE, AUDIOAMP_MODE_POWER_ON | AUDIOAMP_MODE_MUX );
+}
+
+err_t audioamp_set_fault_normal_operation ( audioamp_t *ctx )
+{
+    return audioamp_generic_write( ctx, AUDIOAMP_REG_FAULT, 0x00 );
+}
+
+err_t audioamp_set_fault_detecton_control ( audioamp_t *ctx, uint8_t input_command )
+{
+    return audioamp_generic_write( ctx, AUDIOAMP_REG_FAULT, input_command );
+}
+
+err_t audioamp_set_diagnostic_control ( audioamp_t *ctx, uint8_t input_command )
+{
+    return audioamp_generic_write( ctx, AUDIOAMP_REG_DIAG, input_command & 0x1E );
+}
+
+uint8_t audioamp_check_fault ( audioamp_t *ctx )
 {
     return digital_in_read( &ctx->int_pin );
 }
 
-// ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
+static err_t audioamp_generic_write ( audioamp_t *ctx, uint8_t reg, uint8_t data_in )
+{
+    uint8_t tx_data = ( reg & 0xE0 ) | ( data_in & 0x1F );
 
+    return i2c_master_write( &ctx->i2c, &tx_data, 1 );
+}
 
-// ------------------------------------------------------------------------- END
-
+// ------------------------------------------------------------------------ END

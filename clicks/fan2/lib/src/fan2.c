@@ -38,8 +38,7 @@
 
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
-void
-fan2_cfg_setup( fan2_cfg_t *cfg )
+void fan2_cfg_setup( fan2_cfg_t *cfg )
 {
     cfg->scl     = HAL_PIN_NC;
     cfg->sda     = HAL_PIN_NC;
@@ -52,8 +51,7 @@ fan2_cfg_setup( fan2_cfg_t *cfg )
     cfg->i2c_addr  = FAN2_I2C_ADDR_000;
 }
 
-fan2_err_t
-fan2_init( fan2_t *ctx, fan2_cfg_t *cfg )
+fan2_err_t fan2_init( fan2_t *ctx, fan2_cfg_t *cfg )
 {
     i2c_master_config_t i2c_cfg;
 
@@ -69,34 +67,22 @@ fan2_init( fan2_t *ctx, fan2_cfg_t *cfg )
         return FAN2_ERR_INIT_DRV;
     }
 
-    if ( digital_in_init( &ctx->alr,  cfg->alr ) != DIGITAL_IN_SUCCESS )
-    {
-        return FAN2_ERR_UNSUPPORTED_PIN;
-    }
-
-    if ( digital_in_init( &ctx->shd, cfg->shd ) != DIGITAL_IN_SUCCESS )
-    {
-        return FAN2_ERR_UNSUPPORTED_PIN;
-    }
-
-    if ( digital_in_init( &ctx->ff,  cfg->ff ) != DIGITAL_IN_SUCCESS )
-    {
-        return FAN2_ERR_UNSUPPORTED_PIN;
-    }
-
-    if ( digital_in_init( &ctx->int_pin, cfg->int_pin ) != DIGITAL_IN_SUCCESS )
-    {
-        return FAN2_ERR_UNSUPPORTED_PIN;
-    }
-
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_addr );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
+    
+    digital_in_init( &ctx->alr,  cfg->alr );
+
+    digital_in_init( &ctx->shd, cfg->shd );
+
+    digital_in_init( &ctx->ff,  cfg->ff );
+
+    digital_in_init( &ctx->int_pin, cfg->int_pin );
 
     return FAN2_OK;
 }
 
-void
-fan2_default_cfg( fan2_t *ctx, fan2_wire_t n_wires )
+void fan2_default_cfg( fan2_t *ctx )
 {
     fan2_generic_write_byte( ctx, FAN2_REG_CTRL1, FAN2_CTRL1_PWM_FREQ_33_HZ |
                                                   FAN2_CTRL1_PWM_POL_POS 
@@ -106,26 +92,15 @@ fan2_default_cfg( fan2_t *ctx, fan2_wire_t n_wires )
                                                   FAN2_CTRL2_FF_OUTPUT_COMP |
                                                   FAN2_CTRL2_DIRECT_FAN_CTRL_EN 
                                                   );
-    if (n_wires == FAN2_WIRES_4)
-    {
-        fan2_generic_write_byte( ctx, FAN2_REG_CTRL3, FAN2_CTRL3_CLR_FAIL |
+    
+    fan2_generic_write_byte( ctx, FAN2_REG_CTRL3, FAN2_CTRL3_CLR_FAIL |
                                                       FAN2_CTRL3_PWM_RAMP_RATE_FAST |
                                                       FAN2_CTRL3_PULSE_STRETCH_EN |
                                                       FAN2_CTRL3_TACH1_EN 
                                                       );
-    }
-    else
-    {
-        fan2_generic_write_byte( ctx, FAN2_REG_CTRL3, FAN2_CTRL3_CLR_FAIL |
-                                                      FAN2_CTRL3_PWM_RAMP_RATE_FAST |
-                                                      FAN2_CTRL3_PULSE_STRETCH_EN |
-                                                      FAN2_CTRL3_TACH2_EN 
-                                                      );
-    }
 }
 
-fan2_err_t
-fan2_generic_write_byte( fan2_t *ctx, uint8_t reg_addr, uint8_t data_in )
+fan2_err_t fan2_generic_write_byte( fan2_t *ctx, uint8_t reg_addr, uint8_t data_in )
 {
     uint8_t tmp_data[ 2 ];
 
@@ -143,8 +118,7 @@ fan2_generic_write_byte( fan2_t *ctx, uint8_t reg_addr, uint8_t data_in )
     return FAN2_OK;
 }
 
-fan2_err_t
-fan2_generic_read_byte( fan2_t *ctx, uint8_t reg_addr, uint8_t *data_out )
+fan2_err_t fan2_generic_read_byte( fan2_t *ctx, uint8_t reg_addr, uint8_t *data_out )
 {
     uint8_t tmp_data;
 
@@ -160,8 +134,7 @@ fan2_generic_read_byte( fan2_t *ctx, uint8_t reg_addr, uint8_t *data_out )
     return FAN2_OK;
 }
 
-fan2_err_t
-fan2_generic_write_word( fan2_t *ctx, uint8_t reg_addr, uint16_t data_in )
+fan2_err_t fan2_generic_write_word( fan2_t *ctx, uint8_t reg_addr, uint16_t data_in )
 {
     uint8_t tmp_data[ 3 ];
 
@@ -180,8 +153,7 @@ fan2_generic_write_word( fan2_t *ctx, uint8_t reg_addr, uint16_t data_in )
     return FAN2_OK;
 }
 
-fan2_err_t
-fan2_generic_read_word( fan2_t *ctx, uint8_t reg_addr, uint16_t data_out )
+fan2_err_t fan2_generic_read_word( fan2_t *ctx, uint8_t reg_addr, uint16_t *data_out )
 {
     uint8_t tmp_data[ 2 ];
 
@@ -194,27 +166,26 @@ fan2_generic_read_word( fan2_t *ctx, uint8_t reg_addr, uint16_t data_out )
 
     i2c_master_write_then_read( &ctx->i2c, &reg_addr, 1, tmp_data, 2 );
 
-    data_out = tmp_data[ 0 ];
-    data_out <<= 8;
-    data_out |= tmp_data[ 1 ];
+    *data_out = tmp_data[ 0 ];
+    *data_out <<= 8;
+    *data_out |= tmp_data[ 1 ];
 
     return FAN2_OK;
 }
 
-fan2_err_t
-fan2_read_temp( fan2_t *ctx, uint8_t temp_addr, float *temp_cels )
+fan2_err_t fan2_read_temp( fan2_t *ctx, uint8_t temp_addr, float *temp_cels )
 {
-    int16_t temp;
+    uint16_t temp;
     double res;
 
-    if ( ( temp_addr != 0x6 ) && ( temp_addr != 0x8 ) &&
-         ( temp_addr != 0xA ) && ( temp_addr != 0xC ) &&
+    if ( ( temp_addr != 0x06 ) && ( temp_addr != 0x08 ) &&
+         ( temp_addr != 0x0A ) && ( temp_addr != 0x0C ) &&
          ( temp_addr != 0x56 ) && ( temp_addr != 0x58 ) )
     {
         return FAN2_ERR_REG_ADDR;
     }
 
-    fan2_generic_read_word( ctx, temp_addr, temp );
+    fan2_generic_read_word( ctx, temp_addr, &temp );
 
     res = FAN2_RESOL_TEMP_CELS;
     res /= 1 << FAN2_TEMP_DATA_OFFSET;
@@ -225,8 +196,7 @@ fan2_read_temp( fan2_t *ctx, uint8_t temp_addr, float *temp_cels )
     return FAN2_OK;
 }
 
-fan2_err_t
-fan2_write_temp( fan2_t *ctx, uint8_t temp_addr, float temp_cels )
+fan2_err_t fan2_write_temp( fan2_t *ctx, uint8_t temp_addr, float temp_cels )
 {
     int16_t temp;
     double res;
@@ -251,32 +221,30 @@ fan2_write_temp( fan2_t *ctx, uint8_t temp_addr, float temp_cels )
     return FAN2_OK;
 }
 
-fan2_err_t
-fan2_read_tacho( fan2_t *ctx, uint8_t tacho_addr, uint32_t *tacho_rpm )
+fan2_err_t fan2_read_tacho( fan2_t *ctx, uint8_t tacho_addr, uint16_t *tacho_rpm )
 {
     uint16_t tacho;
     double res;
 
-    if ( ( tacho_addr != 0xE ) && ( tacho_addr != 0x52 ) &&
+    if ( ( tacho_addr != 0x0E ) && ( tacho_addr != 0x52 ) &&
          ( tacho_addr != 0x54 ) )
     {
         return FAN2_ERR_REG_ADDR;
     }
 
-    fan2_generic_read_word( ctx, tacho_addr, tacho );
+    fan2_generic_read_word( ctx, tacho_addr, &tacho );
 
     res = 100000;
     res /= tacho;
     res /= 4;
     res *= 60;
 
-    *tacho_rpm = (uint32_t)res;
+    *tacho_rpm = (uint16_t)res;
 
     return FAN2_OK;
 }
 
-void
-fan2_write_tacho_threshold( fan2_t *ctx, uint32_t tacho_rpm )
+void fan2_write_tacho_threshold( fan2_t *ctx, uint32_t tacho_rpm )
 {
     uint16_t tacho;
     double res;
@@ -289,8 +257,7 @@ fan2_write_tacho_threshold( fan2_t *ctx, uint32_t tacho_rpm )
     fan2_generic_write_word( ctx, FAN2_REG_TACH_CNT_THRSH, tacho );
 }
 
-fan2_err_t
-fan2_direct_speed_control( fan2_t *ctx, float speed_per )
+fan2_err_t fan2_direct_speed_control( fan2_t *ctx, float speed_per )
 {
     uint8_t duty;
 
@@ -306,8 +273,7 @@ fan2_direct_speed_control( fan2_t *ctx, float speed_per )
     return FAN2_OK;
 }
 
-float
-fan2_read_current_speed( fan2_t *ctx )
+float fan2_read_current_speed( fan2_t *ctx )
 {
     uint8_t duty;
 
@@ -316,8 +282,7 @@ fan2_read_current_speed( fan2_t *ctx )
     return ( float )duty * FAN2_RESOL_SPEED_PER;
 }
 
-uint8_t
-fan2_status( fan2_t *ctx, uint8_t flag_mask )
+uint8_t fan2_status( fan2_t *ctx, uint8_t flag_mask )
 {
     uint8_t stat;
 
@@ -326,8 +291,7 @@ fan2_status( fan2_t *ctx, uint8_t flag_mask )
     return stat & flag_mask;
 }
 
-fan2_err_t
-fan2_write_lut( fan2_t *ctx, uint8_t lut_addr, uint8_t *lut_data,
+fan2_err_t fan2_write_lut( fan2_t *ctx, uint8_t lut_addr, uint8_t *lut_data,
                 uint8_t n_data )
 {
     uint8_t tmp_data[ 49 ];
@@ -356,8 +320,7 @@ fan2_write_lut( fan2_t *ctx, uint8_t lut_addr, uint8_t *lut_data,
     return FAN2_OK;
 }
 
-void
-fan2_sw_reset( fan2_t *ctx )
+void fan2_sw_reset( fan2_t *ctx )
 {
     uint8_t por_state;
 
@@ -372,26 +335,22 @@ fan2_sw_reset( fan2_t *ctx )
     }
 }
 
-uint8_t
-fan2_get_alr_pin( fan2_t *ctx )
+uint8_t fan2_get_alr_pin( fan2_t *ctx )
 {
     return digital_in_read( &ctx->alr );
 }
 
-uint8_t
-fan2_get_shd_pin( fan2_t *ctx )
+uint8_t fan2_get_shd_pin( fan2_t *ctx )
 {
     return digital_in_read( &ctx->shd );
 }
 
-uint8_t
-fan2_get_ff_pin( fan2_t *ctx )
+uint8_t fan2_get_ff_pin( fan2_t *ctx )
 {
     return digital_in_read( &ctx->ff );
 }
 
-uint8_t
-fan2_get_int_pin( fan2_t *ctx )
+uint8_t fan2_get_int_pin( fan2_t *ctx )
 {
     return digital_in_read( &ctx->int_pin );
 }

@@ -1,8 +1,0 @@
-{
-    "name": "ButtonR Click",
-    "description": "Button R Click is the simplest solution for adding a single pushbutton to your design. The button itself is transparent, 6.8mm in diameter and has a red LED backlight.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","Button R"],
-    "category" : ["Pushbutton/Switches"] 
-}

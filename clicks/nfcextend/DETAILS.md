@@ -76,8 +76,9 @@ void application_init ( )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -88,10 +89,10 @@ void application_init ( )
     nfcextend_init( &nfcextend, &cfg );
 
     nfcextend_password_present( &nfcextend, default_password );
-    Delay_100ms( );
+    Delay_ms( 100 );
 
     init_status_flag = nfcextend_default_cfg( &nfcextend );
-    Delay_100ms( );
+    Delay_ms( 100 );
 
     if ( 1 == init_status_flag )
     {
@@ -119,8 +120,8 @@ void application_task ( )
     nfcextend_block_t block;
 
     uint8_t temp_buf[ 258 ];
-    uint8_t message_len;
-    uint8_t cnt;
+    uint16_t message_len;
+    uint16_t cnt;
 
     block.memory_area = NFCEXTEND_MEMORY_DYNAMIC;
     block.reg_addr = NFCEXTEND_DYNAMIC_REG_MB_CTRL;
@@ -148,14 +149,18 @@ void application_task ( )
         wait_for_interrupt( );
         nfcextend_i2c_get( &nfcextend, &block );
 
+        log_printf( &logger, " ** Message length:  %u Bytes**\r\n", message_len);
+        
+        log_printf( &logger, " ------------------------------\r\n" );
         log_printf( &logger, " ** Message START **\r\n" );
 
         for ( cnt = 0; cnt < message_len; cnt++ )
         {
-            log_printf( &logger, " 0x%b\r\n", temp_buf[ cnt ] );
+            log_printf( &logger, " %u : 0x%x\r\n", cnt, ( uint16_t ) temp_buf[ cnt ] );
         }
 
         log_printf( &logger, " ** Message END **\r\n" );
+        log_printf( &logger, " ------------------------------\r\n" );
     }
 }  
 

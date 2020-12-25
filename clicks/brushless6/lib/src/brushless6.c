@@ -43,7 +43,7 @@ void brushless6_cfg_setup ( brushless6_cfg_t *cfg )
     
     // Additional gpio pins
 
-    cfg->dev_pwm_freq 	  = 5000;
+    cfg->dev_pwm_freq   = BRUSHLESS6_DEF_FREQ;
 }
 
 BRUSHLESS6_RETVAL brushless6_init ( brushless6_t *ctx, brushless6_cfg_t *cfg )
@@ -52,16 +52,14 @@ BRUSHLESS6_RETVAL brushless6_init ( brushless6_t *ctx, brushless6_cfg_t *cfg )
     
     pwm_configure_default( &pwm_cfg );
 
-	pwm_cfg.pin      = cfg->pwm;
-	pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
+    pwm_cfg.pin      = cfg->pwm;
+    pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
 
     ctx->pwm_freq = cfg->dev_pwm_freq;
     pwm_open( &ctx->pwm, &pwm_cfg );
     pwm_set_freq( &ctx->pwm, pwm_cfg.freq_hz );
 
-
     return BRUSHLESS6_OK;
-
 }
 
 void brushless6_set_duty_cycle ( brushless6_t *ctx, float duty_cycle )

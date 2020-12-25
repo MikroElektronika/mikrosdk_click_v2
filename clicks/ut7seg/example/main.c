@@ -48,8 +48,8 @@ void application_init ( void )
     ut7seg_cfg_setup( &cfg );
     UT7SEG_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ut7seg_init( &ut7seg, &cfg );
-
     ut7seg_default_cfg( &ut7seg );
+    Delay_ms( 500 );
 }
 
 void application_task ( void )
@@ -62,7 +62,7 @@ void application_task ( void )
 
     for ( cnt = 0; cnt < 100; cnt++ )
     {
-        utl7segr_display_number( &ut7seg, cnt, UT7SEG_DOT_LEFT_RIGHT );
+        utl7segr_display_number( &ut7seg, cnt, UT7SEG_DOT_LEFT );
         Delay_ms( 500 );
     }
 }

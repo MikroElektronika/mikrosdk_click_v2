@@ -185,6 +185,15 @@ void vtohz_pwm_stop ( vtohz_t *ctx );
  */
 void vtohz_pwm_start ( vtohz_t *ctx );
 
+/**
+ * @brief Enable the click module.
+ *
+ * @param ctx  Click object.
+ *
+ * @description This function enables the click module.
+ */
+void vtohz_enable ( vtohz_t *ctx );
+
 #ifdef __cplusplus
 }
 #endif

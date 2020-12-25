@@ -278,7 +278,7 @@ uint16_t capsense_read_data_bytes( capsense_t *ctx, uint8_t reg_address );
  *
  * @description This function gets slider level of click object ctx.
  */
-uint16_t capsense_get_slider_lvl( capsense_t *ctx );
+uint8_t capsense_get_slider_lvl( capsense_t *ctx );
 
 
 #ifdef __cplusplus

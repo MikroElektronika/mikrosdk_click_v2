@@ -204,8 +204,7 @@ extern "C"{
  * initial state.
  * @note All used pins will be set to unconnected state.
  */
-void
-flash_cfg_setup( flash_cfg_t *cfg );
+void flash_cfg_setup( flash_cfg_t *cfg );
 
 /**
  * @brief Click Initialization function.
@@ -219,8 +218,7 @@ flash_cfg_setup( flash_cfg_t *cfg );
  * @description This function initializes all necessary pins and peripherals
  * used for this click.
  */
-flash_err_t
-flash_init( flash_t *ctx, flash_cfg_t *cfg );
+flash_err_t flash_init( flash_t *ctx, flash_cfg_t *cfg );
 
 /**
  * @brief Click Default Configuration function.
@@ -229,8 +227,7 @@ flash_init( flash_t *ctx, flash_cfg_t *cfg );
  *
  * @description This function executes default configuration for Flash click.
  */
-void
-flash_default_cfg( flash_t *ctx );
+void flash_default_cfg( flash_t *ctx );
 
 /**
  * @brief Reset function.
@@ -241,8 +238,7 @@ flash_default_cfg( flash_t *ctx );
  * the device in normal operating Ready mode.
  * @note This function will make a delay of 1 second.
  */
-void
-flash_reset( flash_t *ctx );
+void flash_reset( flash_t *ctx );
 
 /**
  * @brief Write Enable function.
@@ -252,8 +248,7 @@ flash_reset( flash_t *ctx );
  * @description This function sets the Write Enable Latch to allow user to
  * execute memory programming, status register writing and chip/sector erasing.
  */
-void
-flash_write_enable( flash_t *ctx );
+void flash_write_enable( flash_t *ctx );
 
 /**
  * @brief Write Disable function.
@@ -264,8 +259,7 @@ flash_write_enable( flash_t *ctx );
  * memory programming, status register writing and chip/sector erasing.
  * @note This function also can be used to exit from OTP mode to normal mode.
  */
-void
-flash_write_disable( flash_t *ctx );
+void flash_write_disable( flash_t *ctx );
 
 /**
  * @brief Status Write function.
@@ -277,8 +271,7 @@ flash_write_disable( flash_t *ctx );
  * @note Write Enable Latch will be set automatically and reset after cycle was
  * done.
  */
-void
-flash_write_status( flash_t *ctx, uint8_t data_tx );
+void flash_write_status( flash_t *ctx, uint8_t data_tx );
 
 /**
  * @brief Status Read function.
@@ -289,8 +282,7 @@ flash_write_status( flash_t *ctx, uint8_t data_tx );
  *
  * @description This function reads Status register.
  */
-uint8_t
-flash_read_status( flash_t *ctx );
+uint8_t flash_read_status( flash_t *ctx );
 
 /**
  * @brief ID Read function.
@@ -302,8 +294,7 @@ flash_read_status( flash_t *ctx );
  * @description This function reads one byte of manufacturer identification and
  * two bytes of device identification.
  */
-void
-flash_read_id( flash_t *ctx, uint8_t *manufact_id, uint16_t *dev_id );
+void flash_read_id( flash_t *ctx, uint8_t *manufact_id, uint16_t *dev_id );
 
 /**
  * @brief Byte Write function.
@@ -320,8 +311,7 @@ flash_read_id( flash_t *ctx, uint8_t *manufact_id, uint16_t *dev_id );
  * @note Write Enable Latch will be set automatically and reset after cycle was
  *       done.
  */
-flash_err_t
-flash_write_byte( flash_t *ctx, uint32_t mem_addr, uint8_t data_tx );
+flash_err_t flash_write_byte( flash_t *ctx, uint32_t mem_addr, uint8_t data_tx );
 
 /**
  * @brief Byte Read function.
@@ -336,8 +326,7 @@ flash_write_byte( flash_t *ctx, uint32_t mem_addr, uint8_t data_tx );
  * @description This function reads one byte data from the selected memory
  * address.
  */
-flash_err_t
-flash_read_byte( flash_t *ctx, uint32_t mem_addr, uint8_t *data_rx );
+flash_err_t flash_read_byte( flash_t *ctx, uint32_t mem_addr, uint8_t *data_rx );
 
 /**
  * @brief Page Write function.
@@ -356,8 +345,7 @@ flash_read_byte( flash_t *ctx, uint32_t mem_addr, uint8_t *data_rx );
  * @note Write Enable Latch will be set automatically and reset after cycle was
  *       done.
  */
-flash_err_t
-flash_write_page( flash_t *ctx, uint32_t mem_addr, uint8_t *data_tx,
+flash_err_t flash_write_page( flash_t *ctx, uint32_t mem_addr, uint8_t *data_tx,
                   uint16_t n_data );
 
 /**
@@ -375,8 +363,7 @@ flash_write_page( flash_t *ctx, uint32_t mem_addr, uint8_t *data_tx,
  * @description This function allows memory to be read up to 256 bytes,
  * starting from the selected memory address.
  */
-flash_err_t
-flash_read_page( flash_t *ctx, uint32_t mem_addr, uint8_t *data_rx,
+flash_err_t flash_read_page( flash_t *ctx, uint32_t mem_addr, uint8_t *data_rx,
                  uint16_t n_data );
 
 /**
@@ -388,8 +375,7 @@ flash_read_page( flash_t *ctx, uint32_t mem_addr, uint8_t *data_rx,
  * @note Write Enable Latch will be set automatically and reset after cycle was
  *       done.
  */
-void
-flash_erase_chip( flash_t *ctx );
+void flash_erase_chip( flash_t *ctx );
 
 /**
  * @brief Block Erase function.
@@ -404,8 +390,7 @@ flash_erase_chip( flash_t *ctx );
  * @note Write Enable Latch will be set automatically and reset after cycle was
  *       done.
  */
-flash_err_t
-flash_erase_block( flash_t *ctx, uint32_t mem_addr );
+flash_err_t flash_erase_block( flash_t *ctx, uint32_t mem_addr );
 
 /**
  * @brief Half Block Erase function.
@@ -421,8 +406,7 @@ flash_erase_block( flash_t *ctx, uint32_t mem_addr );
  * @note Write Enable Latch will be set automatically and reset after cycle was
  *       done.
  */
-flash_err_t
-flash_erase_half_block( flash_t *ctx, uint32_t mem_addr );
+flash_err_t flash_erase_half_block( flash_t *ctx, uint32_t mem_addr );
 
 /**
  * @brief Sector Erase function.
@@ -437,8 +421,7 @@ flash_erase_half_block( flash_t *ctx, uint32_t mem_addr );
  * @note Write Enable Latch will be set automatically and reset after cycle was
  *       done.
  */
-flash_err_t
-flash_erase_sector( flash_t *ctx, uint32_t mem_addr );
+flash_err_t flash_erase_sector( flash_t *ctx, uint32_t mem_addr );
 
 /**
  * @brief WP Pin Set function.
@@ -448,8 +431,7 @@ flash_erase_sector( flash_t *ctx, uint32_t mem_addr );
  *
  * @description This function sets the WP pin to the desired state.
  */
-void
-flash_set_write_protect_pin( flash_t *ctx, flash_pin_state_t state );
+void flash_set_write_protect_pin( flash_t *ctx, flash_pin_state_t state );
 
 /**
  * @brief HLD Pin Set function.
@@ -459,8 +441,7 @@ flash_set_write_protect_pin( flash_t *ctx, flash_pin_state_t state );
  *
  * @description This function sets the HLD pin to the desired state.
  */
-void
-flash_set_hold_pin( flash_t *ctx, flash_pin_state_t state );
+void flash_set_hold_pin( flash_t *ctx, flash_pin_state_t state );
 
 #ifdef __cplusplus
 }

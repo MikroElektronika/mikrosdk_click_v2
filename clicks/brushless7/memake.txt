@@ -1,7 +1,0 @@
-type: subdirs
-project: Brushless7
-
-subdirs: {
-    lib
-    example
-}

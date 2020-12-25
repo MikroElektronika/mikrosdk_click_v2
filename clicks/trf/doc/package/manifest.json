@@ -27,5 +27,6 @@
     "short_description": "tRF click is a complete short-range RF communication solution, operating in the 868 MHz ISM license-free frequency band. The Click board™ is based on LE70-868 RF module, from Telit. ",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

@@ -50,7 +50,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 - Function is used to measure current voltage in volt.
 > float qireceiver_read_voltage( qireceiver_t *ctx );
  
-- Function is used to measure current amperage in ampere.
+- Function is used to measure current amperage in mA.
 > qireceiver_read_current( qireceiver_t *ctx );
 
 - Function is used to measure current frequency in hertz.
@@ -78,8 +78,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -91,9 +92,9 @@ void application_init ( void )
     
     Delay_ms( 100 );
     qireceiver_dev_enable( &qireceiver );
-    log_printf( &logger, "-----------------" );
-    log_printf( &logger, "Qi Receiver Click" );
-    log_printf( &logger, "-----------------" );
+    log_printf( &logger, "-----------------\r\n" );
+    log_printf( &logger, "Qi Receiver Click\r\n" );
+    log_printf( &logger, "-----------------\r\n" );
     Delay_ms( 100 );
 }
   
@@ -108,32 +109,22 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    char logTxt[ 50 ];
     float voltage;
     float current;
     float freq;
     
-    voltage = qireceiver_readVoltage();
-    FloatToStr( voltage, logTxt );
-    log_printf( &logger, "Voltage : \r\n", LOG_TEXT );
-    log_printf( &logger, logTxt, LOG_TEXT );
-    log_printf( &logger, " V\r\n", LOG_LINE );
+    voltage = qireceiver_read_voltage( &qireceiver );
+    log_printf( &logger, "Voltage : %.2f V\r\n", voltage );
 
-    current = qireceiver_readCurrent();
-    FloatToStr( current, logTxt );
-    log_printf( &logger, "Current : \r\n", LOG_TEXT );
-    log_printf( &logger, logTxt, LOG_TEXT );
-    log_printf( &logger, " A\r\n", LOG_LINE );
+    current = qireceiver_read_current( &qireceiver );
+    log_printf( &logger, "Current : %.2f mA\r\n", current );
 
-    freq = qireceiver_readFreq();
-    FloatToStr( freq, logTxt );
-    log_printf( &logger, "Frequency : \r\n", LOG_TEXT );
-    log_printf( &logger, logTxt, LOG_TEXT );
-    log_printf( &logger, " Hz\r\n", LOG_LINE );
+    freq = qireceiver_read_freq( &qireceiver );
+    log_printf( &logger, "Frequency : %.2f Hz\r\n", freq );
     
-    log_printf( &logger, "-----------------\r\n", LOG_LINE );
+    log_printf( &logger, "-----------------\r\n" );
     Delay_ms( 1000 );
-} 
+}
 
 ```
 

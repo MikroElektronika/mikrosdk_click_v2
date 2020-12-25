@@ -1,5 +1,5 @@
 type: executable
-target: example_amrcurent
+target: example_amrcurrent
 
 depends: {
     MikroC.Core

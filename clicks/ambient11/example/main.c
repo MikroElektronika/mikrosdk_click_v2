@@ -49,7 +49,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -66,7 +66,7 @@ void application_task ( void )
     lx_val = ambient11_calc_illumination( &ambient11, resolution );
     log_printf( &logger, "Illumination : %.2f lx \r\n", lx_val );
     log_printf( &logger, "-------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms( 1000 );
 }
 
 void main ( void )

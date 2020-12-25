@@ -43,7 +43,7 @@ void application_init ( void )
     //  Logger initialization.
 
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
@@ -62,20 +62,20 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    int16_t axis_X;
-    int16_t axis_Y;
-    int16_t axis_Z;
+    int16_t axis_x;
+    int16_t axis_y;
+    int16_t axis_z;
 
     //  Task implementation.
 
-    axis_X = c3dhall5_get_axis_data( &c3dhall5, C3DHALL5_AXIS_X );
-    axis_Y = c3dhall5_get_axis_data( &c3dhall5, C3DHALL5_AXIS_Y );
-    axis_Z = c3dhall5_get_axis_data( &c3dhall5, C3DHALL5_AXIS_Z );
+    axis_x = c3dhall5_get_axis_data( &c3dhall5, C3DHALL5_AXIS_X );
+    axis_y = c3dhall5_get_axis_data( &c3dhall5, C3DHALL5_AXIS_Y );
+    axis_z = c3dhall5_get_axis_data( &c3dhall5, C3DHALL5_AXIS_Z );
 
     log_printf( &logger, "----- AXIS -----\r\n" );
-    log_printf( &logger, "** X: %d \r\n", axis_X );
-    log_printf( &logger, "** Y: %d \r\n", axis_Y );
-    log_printf( &logger, "** Z: %d \r\n", axis_Z );
+    log_printf( &logger, "** X: %d \r\n", axis_x );
+    log_printf( &logger, "** Y: %d \r\n", axis_y );
+    log_printf( &logger, "** Z: %d \r\n", axis_z );
     log_printf( &logger, "----------------\r\n" );
 
     Delay_ms( 1000 );

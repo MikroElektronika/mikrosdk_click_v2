@@ -45,7 +45,7 @@ void airquality2_cfg_setup ( airquality2_cfg_t *cfg )
 AIRQUALITY2_RETVAL airquality2_init ( airquality2_t *ctx, airquality2_cfg_t *cfg )
 {
     i2c_master_config_t i2c_cfg;
-
+    
     i2c_master_configure_default( &i2c_cfg );
     i2c_cfg.speed    = cfg->i2c_speed;
     i2c_cfg.scl      = cfg->scl;
@@ -64,29 +64,9 @@ AIRQUALITY2_RETVAL airquality2_init ( airquality2_t *ctx, airquality2_cfg_t *cfg
     return AIRQUALITY2_OK;
 }
 
-void airquality2_generic_write ( airquality2_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
+void airquality2_generic_read ( airquality2_t *ctx, uint8_t *data_buf, uint8_t len )
 {
-    uint8_t tx_buf[ 256 ];
-    uint8_t cnt;
-    
-    tx_buf[ 0 ] = reg;
-    
-    for ( cnt = 1; cnt <= len; cnt++ )
-    {
-        tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
-    }
-    
-    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );   
-}
-
-void airquality2_generic_read ( airquality2_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
-{
-    i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, len );
-}
-
-void airquality2_write_data ( airquality2_t *ctx, uint8_t address, uint8_t write_command )
-{
-    airquality2_generic_write( ctx, address, &write_command, 1 );
+    i2c_master_read( &ctx->i2c, data_buf, len );
 }
 
 uint8_t airquality2_get_all_data ( airquality2_t *ctx, uint16_t *value_co2, uint16_t *value_tvoc, int32_t *resistance )
@@ -97,7 +77,7 @@ uint8_t airquality2_get_all_data ( airquality2_t *ctx, uint16_t *value_co2, uint
     int32_t resulet_resistance;
     uint8_t status;
 
-    airquality2_generic_read( ctx, AIRQUALITY2_READ_REG_ADDRESS, buffer, AIRQUALITY2_READ_ALL );
+    airquality2_generic_read( ctx, buffer, AIRQUALITY2_READ_ALL );
 
     resulet_co2 = buffer[ AIRQUALITY2_CO2_PREDICTION_MSB_OFFSET ];
     resulet_co2 <<= 8;

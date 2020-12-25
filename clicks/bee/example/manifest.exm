@@ -1,8 +1,0 @@
-{
-    "name": "BEE Click",
-    "description": "BEE click features MRF24J40MA 2.4 GHz IEEE 802.15.4 radio transceiver module from Microchip.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","MRF24J40MA"],
-    "category" : ["ZigBee"] 
-}

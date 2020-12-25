@@ -81,11 +81,12 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
-    log_printf( &logger, " Application Init\r\n" );
-
+    log_info( &logger, "Application Init" );
+    
     //  Click initialization.
 
     proximity2_cfg_setup( &cfg );
@@ -94,10 +95,8 @@ void application_init ( void )
     
     proximity2_default_cfg ( &proximity2 );
     
-    avg_proxi_val = PROXIMITY2_PROXI_AVG_VAL;
-    proxi_val_old = PROXIMITY2_PROXI_MAX_VAL;
-    sensitivity = PROXIMITY2_PROXI_SENSITIVITY;
-    log_printf( &logger, "------------------\r\n" );
+    log_info( &logger, "Application Init" );
+    Delay_ms( 1000 );
 }
   
 ```
@@ -115,18 +114,14 @@ void application_task ( void )
     proxi_val =  proximity2_read_prox ( &proximity2 );
     ambient = proximity2_read_als ( &proximity2 );
 
-    if ( ( ( proxi_val - proxi_val_old ) > sensitivity ) || ( ( proxi_val_old - proxi_val ) > sensitivity ) )
-    {        
-        log_printf( &logger, " Distance : %d \r\n", proxi_val );
-        
-        log_printf( &logger, " Light    : %d \r\n", ambient );
+    log_printf( &logger, " Distance : %d \r\n", (uint16_t)proxi_val );
+    
+    log_printf( &logger, " Light    : %d \r\n", ambient );
 
-        log_printf( &logger, "------------------\r\n" );
-        
-        proxi_val_old = proxi_val;
-        Delay_ms( 1 );
-    }
-} 
+    log_printf( &logger, "------------------\r\n" );
+    
+    Delay_ms( 300 );
+}
 
 ```
 

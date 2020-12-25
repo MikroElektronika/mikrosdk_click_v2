@@ -68,32 +68,13 @@ VACCUM_RETVAL vacuum_init ( vacuum_t *ctx, vacuum_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Output pins 
 
     digital_out_init( &ctx->an, cfg->an );
 
     return VACCUM_OK;
-}
-
-void vacuum_generic_write ( vacuum_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
-{
-    uint8_t tx_buf[ 256 ];
-    uint8_t cnt;
-    
-    tx_buf[ 0 ] = reg;
-    
-    for ( cnt = 1; cnt <= len; cnt++ )
-    {
-        tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
-    }
-    
-    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );   
-}
-
-void vacuum_generic_read ( vacuum_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
-{
-    i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, len );
 }
 
 uint16_t vacuum_read_data ( vacuum_t *ctx )
@@ -122,34 +103,35 @@ float vacuum_get_voltage ( vacuum_t *ctx )
 }
 
 float vacuum_get_pressure ( vacuum_t *ctx )
-{
-    float pressure_m_bar;
+{    
+    uint16_t pressure;
+    float pressure_mbar;
 
-    ctx->pressure = vacuum_read_data( ctx );
-    pressure_m_bar = ( ( ctx->pressure - 2400.0 ) / ( ( 13107.0 ) / 100.0 ) );
-    pressure_m_bar *= 100.0;
-    
-    return pressure_m_bar;
+    pressure = vacuum_read_data( ctx );
+    pressure_mbar = ( ( pressure - 2400.0 ) / ( ( 13107.0 ) / 100.0 ) );
+    pressure_mbar *= 100.0;// mBar
+
+    return pressure_mbar;
 }
 
 float vacuum_get_percentage_of_vacuum ( vacuum_t *ctx )
-{
-    float pressure_m_bar;
+{    
+    float pressure_mbar;
     float vacuum;
-    
-    pressure_m_bar = vacuum_get_pressure( ctx );
-    vacuum = ( ctx->pressure - pressure_m_bar ) / 18.0;
-    
-    if ( vacuum < 1 )
+
+    pressure_mbar = vacuum_get_pressure( ctx );
+    vacuum = ( ctx->pressure - pressure_mbar ) / 18.0;
+
+    if( vacuum < 1 )
     {
         return 0;
     }
-    else if ( vacuum > 100 )
+    else if( vacuum > 100 )
     {
         return 100;
     }
-    
-    return vacuum;
+
+    return  vacuum;
 }
 
 void vacuum_calibration ( vacuum_t *ctx )

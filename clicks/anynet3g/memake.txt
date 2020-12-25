@@ -1,7 +1,0 @@
-type: subdirs
-project: AnyNet3g
-
-subdirs: {
-    lib
-    example
-}

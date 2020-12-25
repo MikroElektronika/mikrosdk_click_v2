@@ -27,5 +27,6 @@
     "short_description": "Noise click is a mikroBUS add-on board with noise detecting circuitry. It enables you to set a noise detection threshold for alarm systems, environmental monitoring or data logging.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

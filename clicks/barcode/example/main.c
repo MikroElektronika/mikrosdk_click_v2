@@ -17,7 +17,7 @@
  * - barcode_process( ) - The general process of collecting presponce 
  *                                   that sends a module.
  * 
- * \author MikroE Team
+ * \author Nemanja Medakovic
  *
  */
 // ------------------------------------------------------------------- INCLUDES
@@ -27,8 +27,8 @@
 #include "barcode.h"
 #include "string.h"
 
-#define PROCESS_COUNTER 10
-#define PROCESS_RX_BUFFER_SIZE 500
+#define PROCESS_COUNTER 2000
+#define PROCESS_RX_BUFFER_SIZE 300
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -41,16 +41,16 @@ static void barcode_process ( void )
 {
     uint16_t rsp_size;
     uint16_t rsp_cnt = 0;
-    
+
     char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
-    uint8_t check_buf_cnt;
-    uint8_t process_cnt = PROCESS_COUNTER;
-    
-    while( process_cnt != 0 )
+    uint16_t check_buf_cnt;
+    uint16_t process_cnt = PROCESS_COUNTER;
+
+    while( process_cnt > 0 )
     {
         rsp_size = barcode_generic_read( &barcode, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
 
-        if ( rsp_size != 0 )
+        if ( rsp_size > 0 )
         {  
             // Validation of the received data
             for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
@@ -60,7 +60,7 @@ static void barcode_process ( void )
                     uart_rx_buffer[ check_buf_cnt ] = 13;
                 }
             }
-            
+
             log_printf( &logger, "%s", uart_rx_buffer );
 
             // Clear RX buffer
@@ -71,7 +71,7 @@ static void barcode_process ( void )
             process_cnt--;
 
             // Process delay 
-            Delay_100ms( );
+            Delay_ms( 1 );
         }
     }
 }
@@ -96,7 +96,7 @@ void application_init ( void )
     barcode_cfg_setup( &cfg );
     BARCODE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     barcode_init( &barcode, &cfg );
-    
+
     Delay_ms( 500 );
 }
 
@@ -104,7 +104,6 @@ void application_task ( void )
 {
     barcode_enable_scaning( &barcode, BARCODE_LOGIC_ON );
     barcode_process( );
-    Delay_ms( 2000 );
     barcode_enable_scaning( &barcode, BARCODE_LOGIC_OFF );
     Delay_ms( 2000 );
 }

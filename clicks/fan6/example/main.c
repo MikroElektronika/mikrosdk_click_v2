@@ -31,6 +31,7 @@ static fan6_t fan6;
 static log_t logger;
 
 static uint32_t tachometer;
+static uint8_t duty_cycle = 0;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -52,7 +53,10 @@ void application_init ( void )
     fan6_cfg_setup( &cfg );
     FAN6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     fan6_init( &fan6, &cfg );
-
+    
+    fan6_enable_device( &fan6, 1 );
+    Delay_ms( 500 );
+    
     fan6_default_cfg( &fan6 );
     tachometer = 0;
 }
@@ -61,12 +65,17 @@ void application_task ( void )
 {
     float temp_diode;
 
-    tachometer = fan6_read_tachometer( &fan6 );
-    log_printf( &logger, "Tachometer value is: %d rpm \r\n", tachometer );
-
-    temp_diode = fan6_get_temperature( &fan6, FAN6_EXTDIODE1_TEMP_READ_REG );
+    temp_diode = fan6_get_temperature( &fan6, FAN6_INTERNAL_TEMP_READ_REG );
     log_printf( &logger, "Temperature of DIODE is: %f - Cels \r\n", temp_diode );
-
+    
+    fan6_set_pwm_mode( &fan6, duty_cycle );
+    
+    duty_cycle += 5;
+    
+    tachometer = fan6_read_tachometer( &fan6 );
+    log_printf( &logger, "Tachometer value is: %lu rpm \r\n", tachometer );
+    log_printf( &logger, "---------------------------------------- \r\n", tachometer );
+    
     Delay_ms( 500 );
 }
 

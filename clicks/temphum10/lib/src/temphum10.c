@@ -42,14 +42,23 @@ void temphum10_cfg_setup ( temphum10_cfg_t *cfg )
 
     cfg->cs  = HAL_PIN_NC;
 
-    cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
+    cfg->i2c_speed = I2C_MASTER_SPEED_FULL; 
     cfg->i2c_address = 0x7F;
 }
 
 TEMPHUM10_RETVAL temphum10_init ( temphum10_t *ctx, temphum10_cfg_t *cfg )
 {
     i2c_master_config_t i2c_cfg;
+    
+    // Output pins 
 
+    digital_out_init( &ctx->cs, cfg->cs );
+    
+    digital_out_low( &ctx->cs );
+    Delay_100ms( );
+
+    // I2C config
+    
     i2c_master_configure_default( &i2c_cfg );
     i2c_cfg.speed  = cfg->i2c_speed;
     i2c_cfg.scl    = cfg->scl;
@@ -64,11 +73,8 @@ TEMPHUM10_RETVAL temphum10_init ( temphum10_t *ctx, temphum10_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
-
-    // Output pins 
-
-    digital_out_init( &ctx->cs, cfg->cs );
-
+    i2c_master_set_timeout( &ctx->i2c, 0 );
+    
     return TEMPHUM10_OK;
 }
 
@@ -89,7 +95,8 @@ void temphum10_generic_write ( temphum10_t *ctx, uint8_t reg, uint8_t *data_buf,
 
 void temphum10_generic_read ( temphum10_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
-    i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, len );
+    i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, len );  
+    Delay_1ms( );
 }
 
 float temphum10_get_humidity ( temphum10_t *ctx )
@@ -120,7 +127,6 @@ float temphum10_get_temperature ( temphum10_t *ctx )
     temphum10_generic_read( ctx, TEMPHUM10_REG_TEMPERATURE_MSB, &temp_msb, 1 );
     temphum10_generic_read( ctx, TEMPHUM10_REG_TEMPERATURE_LSB, &temp_lsb, 1 );
 
-
     read_data = ( temp_msb & 0x07 );
     read_data = read_data << 8;
     read_data = read_data | temp_lsb;
@@ -139,6 +145,10 @@ void temphum10_repeat_measurement ( temphum10_t *ctx, uint8_t average )
     uint8_t tmp;
     tmp = average | TEMPHUM10_AM_MANUAL_MODE_DETECTION_OP_START;
     temphum10_generic_write( ctx, TEMPHUM10_REG_AVERAGE_MODE, &tmp, 1 );
+    while ( (tmp & 0x01) == 0x01 ){
+        temphum10_generic_read( ctx, TEMPHUM10_REG_AVERAGE_MODE, &tmp, 1 );
+        Delay_10ms( );
+    }
 }
 
 // ------------------------------------------------------------------------- END

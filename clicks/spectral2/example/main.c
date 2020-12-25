@@ -7,14 +7,14 @@
  *
  * The demo application is composed of two sections :
  * 
- * ## Application Init 
+ * ## Application Init
  * Driver initialize, reset module and configuration measurement
  * 
- * ## Application Task  
- * Reads the brightness value with R, G, B, I, O and V filter, every 1 second, and logs on to USBUART.
- * 
- * 
- * \author MikroE Team
+ * ## Application Task
+ * Reads the brightness value with R, G, B, I, O and V filter, every 1 second,
+ * and logs on to USBUART.
+ *
+ * \author Nemanja Medakovic
  *
  */
 // ------------------------------------------------------------------- INCLUDES
@@ -34,63 +34,60 @@ void application_init ( void )
 {
     log_cfg_t log_cfg;
     spectral2_cfg_t cfg;
-    uint8_t cfg_data;
 
     //  Logger initialization.
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 57600;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, "---- Application Init... ----" );
 
     //  Click initialization.
 
     spectral2_cfg_setup( &cfg );
     SPECTRAL2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    spectral2_init( &spectral2, &cfg );
+
+    if ( spectral2_init( &spectral2, &cfg ) == SPECTRAL2_INIT_ERROR )
+    {
+        log_info( &logger, "---- Application Init Error. ----" );
+        log_info( &logger, "---- Please, run program again... ----" );
+
+        for ( ; ; );
+    }
+
+    log_info( &logger, "---- Application Init Done. ----" );
 
     spectral2_reset( &spectral2 );
+    spectral2_default_cfg( &spectral2 );
 
-    Delay_100ms( );
-    log_printf( &logger, "--- System init ---\r\n" );
-
-    cfg_data = ( SPECTRAL2_NORMAL_OPERATION | SPECTRAL2_INT_DISABLE |
-                                   SPECTRAL2_GAIN_16X |
-                                   SPECTRAL2_MODE_2 );
-
-    spectral2_default_cfg( &spectral2, cfg_data );
-
-    Delay_1sec( );
+    Delay_ms( 1000 );
+    log_info( &logger, "---- Application Running... ----\n" );
 }
 
 void application_task ( void )
 {
-    float f_data;
+    log_printf( &logger, "----------------------------------\r\n" );
 
-    //  Task implementation.
+    int16_t v_dat = spectral2_get_data( &spectral2, SPECTRAL2_DATA_V );
+    log_printf( &logger, " -- V ( Violet data ) : %d\r\n", v_dat );
 
-    log_printf( &logger, "-------------------\r\n" );
+    int16_t b_dat = spectral2_get_data( &spectral2, SPECTRAL2_DATA_B );
+    log_printf( &logger, " -- B ( Blue data ) : %d\r\n", b_dat );
 
-    f_data = spectral2_get_calibrated_data( &spectral2, SPECTRAL2_CALIBRATED_DATA_R );
-    log_printf( &logger, "-- R ( Red data ) : %.2f \r\n", f_data );
-    
-    f_data = spectral2_get_calibrated_data( &spectral2, SPECTRAL2_CALIBRATED_DATA_G );
-    log_printf( &logger, "-- G ( Green data ) : %.2f\r\n", f_data );
-    
-    f_data = spectral2_get_calibrated_data( &spectral2, SPECTRAL2_CALIBRATED_DATA_B );
-    log_printf( &logger, "-- B ( Blue data ) : %.2f\r\n", f_data );
-    
-    f_data = spectral2_get_calibrated_data( &spectral2, SPECTRAL2_CALIBRATED_DATA_Y );
-    log_printf( &logger, "-- Y ( Yellow data ) : %.2f\r\n", f_data );
-    
-    f_data = spectral2_get_calibrated_data( &spectral2, SPECTRAL2_CALIBRATED_DATA_O );
-    log_printf( &logger, "-- O ( Orange data ) : %.2f\r\n", f_data );
-    
-    f_data = spectral2_get_calibrated_data( &spectral2, SPECTRAL2_CALIBRATED_DATA_V );
-    log_printf( &logger, "-- V ( Violet data ) : %.2f\r\n", f_data );
-    
-    Delay_1sec( );
+    int16_t g_dat = spectral2_get_data( &spectral2, SPECTRAL2_DATA_G );
+    log_printf( &logger, " -- G ( Green data ) : %d\r\n", g_dat );
+
+    int16_t y_dat = spectral2_get_data( &spectral2, SPECTRAL2_DATA_Y );
+    log_printf( &logger, " -- Y ( Yellow data ) : %d\r\n", y_dat );
+
+    int16_t o_dat = spectral2_get_data( &spectral2, SPECTRAL2_DATA_O );
+    log_printf( &logger, " -- O ( Orange data ) : %d\r\n", o_dat );
+
+    int16_t r_dat = spectral2_get_data( &spectral2, SPECTRAL2_DATA_R );
+    log_printf( &logger, " -- R ( Red data ) : %d\r\n", r_dat );
+
+    Delay_ms( 2000 );
 }
 
 void main ( void )

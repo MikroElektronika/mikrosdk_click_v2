@@ -3,102 +3,85 @@
  * \brief AudioAmp Click example
  * 
  * # Description
- * AudioAmp Click is a stereo audio amplifier
+ * AudioAmp Click is a stereo audio amplifier which can be controlled by using this
+ * click driver.
  *
  * The demo application is composed of two sections :
  * 
- * ## Application Init 
- * Initialization driver enable's - I2C, turn on the Audio Amp click and start write log.
+ * ## Application Init
+ * Performs driver and log module initialization, enables I2C, turns on the AudioAmp device
+ * and sends a message about init status.
  * 
- * ## Application Task  
- * This is a example which demonstrates the use of AudioAmp Click board.
+ * ## Application Task
+ * This is a example which demonstrates the use and control of the AudioAmp Click board.
  * 
- * 
- * \author MikroE Team
+ * \author Nemanja Medakovic
  *
  */
-// ------------------------------------------------------------------- INCLUDES
 
 #include "board.h"
 #include "log.h"
 #include "audioamp.h"
 
-// ------------------------------------------------------------------ VARIABLES
-
 static audioamp_t audioamp;
 static log_t logger;
-
-// ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    audioamp_cfg_t cfg;
 
     //  Logger initialization.
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 57600;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, "---- Application Init... ----" );
+
+    audioamp_cfg_t audioamp_cfg;
 
     //  Click initialization.
 
-    audioamp_cfg_setup( &cfg );
-    AUDIOAMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    audioamp_init( &audioamp, &cfg );
+    audioamp_cfg_setup( &audioamp_cfg );
+    AUDIOAMP_MAP_MIKROBUS( audioamp_cfg, MIKROBUS_1 );
 
-    Delay_ms( 100 );
+    if ( audioamp_init( &audioamp, &audioamp_cfg ) == AUDIOAMP_INIT_ERROR )
+    {
+        log_info( &logger, "---- Application Init Error. ----" );
+        log_info( &logger, "---- Please, run program again... ----" );
 
-    log_printf( &logger, "~~~~~~~~~~~~~~~~~~~~~~\r\n " );
-    log_printf( &logger, "    AudioAmp Click   \r\n " );
-    log_printf( &logger, "~~~~~~~~~~~~~~~~~~~~~~\r\n" );
+        for ( ; ; );
+    }
 
-    log_printf( &logger, "       Power ON       \r\n" );
-    
+    log_info( &logger, "---- Application Init Done. ----" );
+    log_info( &logger, "---- Application Running... ----" );
+    log_info( &logger, "---- Check your audio speaker. ----\n" );
+
     audioamp_power_on( &audioamp );
-    Delay_ms( 1000 );
-
-    log_printf( &logger, "----------------------\r\n" );
 }
 
 void application_task ( void )
 {
-    log_printf( &logger, " Set volume to lvl 15 \r\n" );
-    log_printf( &logger, " for the next 10 sec. \r\n" );
+    log_info( &logger, "---- Volume level control testing... ----" );
 
-    audioamp_set_volume( &audioamp, 15 );
+    audioamp_set_volume( &audioamp, AUDIOAMP_IN_1 | AUDIOAMP_IN_2, 5 );
+    Delay_ms( 3000 );
+    audioamp_set_volume( &audioamp, AUDIOAMP_IN_1 | AUDIOAMP_IN_2, 15 );
+    Delay_ms( 3000 );
+    audioamp_set_volume( &audioamp, AUDIOAMP_IN_1 | AUDIOAMP_IN_2, 25 );
+    Delay_ms( 3000 );
+    audioamp_set_volume( &audioamp, AUDIOAMP_IN_1 | AUDIOAMP_IN_2, 32 );
+    Delay_ms( 3000 );
+
+    log_info( &logger, "---- Volume level control test done. ----" );
+    log_info( &logger, "---- Input mute/unmute control testing... ----" );
+
+    audioamp_mute( &audioamp );
+    Delay_ms( 3000 );
+    audioamp_unmute( &audioamp );
     Delay_ms( 10000 );
 
-    log_printf( &logger, "----------------------\r\n" );
-    log_printf( &logger, " Set volume to lvl 5  \r\n" );
-    log_printf( &logger, " for the next 15 sec. \r\n" );
-
-    audioamp_set_volume( &audioamp, 5 );
-    Delay_ms( 15000 );
-
-    log_printf( &logger, "----------------------\r\n" );
-    log_printf( &logger, " Set volume to lvl 10 \r\n" );
-    log_printf( &logger, " for the next 20 sec. \r\n" );
-
-    audioamp_set_volume( &audioamp, 10 );
-    Delay_ms( 20000 );
-    
-    log_printf( &logger, "----------------------\r\n" );
-    log_printf( &logger, "      Mute  mode      \r\n" );
-    log_printf( &logger, " for the next 5 sec.  \r\n" );
-
-    audioamp_mute_mode( &audioamp );
-    Delay_ms( 5000 );
-    
-    log_printf( &logger, "----------------------\r\n" );
-    log_printf( &logger, "     Unmute  mode     \r\n" );
-
-    audioamp_unmute_mode( &audioamp );
-    Delay_ms( 100 );
-
-    log_printf( &logger, "----------------------\r\n" );
+    log_info( &logger, "---- Input mute/unmute control test done. ----" );
 }
 
 void main ( void )

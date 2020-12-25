@@ -76,7 +76,7 @@ BARGRAPH2_RETVAL bargraph2_init ( bargraph2_t *ctx, bargraph2_cfg_t *cfg )
     digital_out_init( &ctx->cs, cfg->cs );
     ctx->chip_select = cfg->cs;
 
-    if (  spi_master_open( &ctx->spi, &spi_cfg ) != SPI_MASTER_SUCCESS )
+    if (  spi_master_open( &ctx->spi, &spi_cfg ) == SPI_MASTER_ERROR )
     {
         return BARGRAPH2_INIT_ERROR;
     }
@@ -451,6 +451,18 @@ void bargraph2_leds_yellow ( bargraph2_t *ctx, int start_index, int end_index )
 void bargraph2_lights_out ( bargraph2_t *ctx ) 
 {
     drv_segment_switch( ctx, BARGRAPH2_LED_SEG_0, BARGRAPH2_LED_SEG_0, BARGRAPH2_LED_SEG_0 );
+}
+
+void barpgraph2_power ( bargraph2_t *ctx, uint8_t power_on_off )
+{
+    if ( 0 == power_on_off )
+    {
+        digital_out_low( &ctx->pwm );
+    }
+    else
+    {
+        digital_out_high( &ctx->pwm );
+    }
 }
 
 // ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS

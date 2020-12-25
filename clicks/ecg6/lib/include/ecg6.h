@@ -473,7 +473,7 @@ ECG6_RETVAL ecg6_init ( ecg6_t *ctx, ecg6_cfg_t *cfg );
  * --  ECG6_REG_INTERRUPT_ENABLE_1
  *     ----------------------------
  *     ECG6_INTS1_A_FULL_OFF
- *     ECG6_INTS1_PPG_RDY_ON
+ *     ECG6_INTS1_PPG_RDY_OFF
  *     ECG6_INTS1_ALC_OVF_OFF
  *     ECG6_INTS1_PROX_INIT_OFF
  *     ECG6_INTS1_PWR_RDY_OFF
@@ -481,7 +481,7 @@ ECG6_RETVAL ecg6_init ( ecg6_t *ctx, ecg6_cfg_t *cfg );
  * --  ECG6_REG_INTERRUPT_ENABLE_2
  *     ---------------------------
  *     ECG6_INTS2_VDD_OOR_OFF
- *     ECG6_INTS2_DRDY_OFF
+ *     ECG6_INTS2_DRDY_ON
  *
  * --  ECG6_REG_SYSTEM_CTRL
  *     ---------------------
@@ -543,30 +543,6 @@ ECG6_RETVAL ecg6_init ( ecg6_t *ctx, ecg6_cfg_t *cfg );
  * @description This function executes default configuration for Ecg6 click.
  */
 void ecg6_default_cfg ( ecg6_t *ctx );
-
-/**
- * @brief Generic write function.
- *
- * @param ctx          Click object.
- * @param reg          Register address.
- * @param data_buf     Data buf to be written.
- * @param len          Number of the bytes in data buf.
- *
- * @description This function writes data to the desired register.
- */
-void ecg6_generic_write ( ecg6_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-/**
- * @brief Generic read function.
- *
- * @param ctx          Click object.
- * @param reg          Register address.
- * @param data_buf     Output data buf
- * @param len          Number of the bytes to be read
- *
- * @description This function reads data from the desired register.
- */
-uint8_t ecg6_generic_read ( ecg6_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
 
 /**
  * @brief Generic Write function

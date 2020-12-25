@@ -128,12 +128,10 @@
  */
 typedef struct
 {
-    digital_out_t cs;
-    
     // Input pins 
 
     digital_in_t int_pin;
-    
+
     // Modules 
 
     spi_master_t spi;
@@ -160,7 +158,7 @@ typedef struct
     // static variable 
 
     uint32_t spi_speed;
-    spi_master_mode_t  spi_mode;
+    spi_master_mode_t spi_mode;
     spi_master_chip_select_polarity_t cs_polarity;
 
 } angle3_cfg_t;
@@ -172,6 +170,7 @@ typedef struct
  * \defgroup public_function Public function
  * \{
  */
+
 #ifdef __cplusplus
 extern "C"{
 #endif
@@ -371,9 +370,9 @@ uint8_t angle3_read_error ( angle3_t* ctx );
 #ifdef __cplusplus
 }
 #endif
-#endif  // _ANGLE3_H_
+#endif  // ANGLE3_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End click Driver group
 /*! @} */
-// ------------------------------------------------------------------------- END
+// ------------------------------------------------------------------------ END

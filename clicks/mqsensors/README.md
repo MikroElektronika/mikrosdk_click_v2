@@ -6,7 +6,7 @@
 This click group supports all MQ sensors in click form.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/grupe/mq-sensor-click-group.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/grupe/mq-sensor-click-group.png" height=150px>
 </p>
 
 > - [Product page - LPG click](<https://www.mikroe.com/lpg-click>)

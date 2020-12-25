@@ -1,3 +1,4 @@
+\mainpage Main Page
 
 ---
 # 7-SEG RGB click
@@ -47,9 +48,11 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- This function get delay value which depending on device clock value in MHz.
-> float c7segrgb_get_delay_value ( uint8_t cyc_num );
+- The function sets character and it's color.
+> void c7segrgb_set_num ( c7segrgb_t *ctx, uint8_t  character, uint8_t green_brightness, uint8_t red_brightness, uint8_t blue_brightness );
  
+ - The function sets the state and color of every segment from click board object segment array data.
+> void c7segrgb_set_seven_seg ( c7segrgb_t *ctx );
 
 ## Examples Description
 
@@ -78,13 +81,19 @@ void application_init ( void )
 
     //  Click initialization.
 
+
     c7segrgb_cfg_setup( &cfg );
+    cfg.logic_one = &logic_one;
+    cfg.logic_zero = &logic_zero;
     C7SEGRGB_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c7segrgb_init( &c7segrgb, &cfg );
-
-    Delay_ms( 100 );
-    RGB_CONTROL_BIT = 0;
-    CS_BIT = 0;
+    
+    for ( uint8_t cnt = 0; cnt < 8; cnt++ )
+    {
+        c7segrgb.segments[ cnt ] = segments_data[ cnt ];
+    }
+    c7segrgb_set_seven_seg( &c7segrgb );
+    Delay_ms( 3000 );
 }
   
 ```
@@ -105,45 +114,45 @@ void application_task ( void )
     {
         for ( cnt_j = 10; cnt_j > 0; cnt_j-- )
         {
-            set_seven_segment( CHARACTER_TABLE[ cnt_i ], 4 * cnt_i, 4 * cnt_j, cnt_i * cnt_j );
+            c7segrgb_set_num( &c7segrgb, CHARACTER_TABLE[ cnt_i ], 4 * cnt_i, 4 * cnt_j, cnt_i * cnt_j );
             Delay_ms( 100 );
         }
     }
     
-    set_seven_segment( C7SEGRGB_POINT, 10, 10, 10 );
+    c7segrgb_set_num( &c7segrgb, C7SEGRGB_POINT, 10, 10, 10 );
     Delay_ms( 1000 );
     
-    set_seven_segment( C7SEGRGB_ZERO, 40, 40, 40 );
+    c7segrgb_set_num( &c7segrgb, C7SEGRGB_ZERO, 40, 40, 40 );
     Delay_ms( 1000 );
 
-    set_seven_segment( C7SEGRGB_ONE, 40, 0, 0 );
+    c7segrgb_set_num( &c7segrgb, C7SEGRGB_ONE, 40, 0, 0 );
     Delay_ms( 1000 );
 
-    set_seven_segment( C7SEGRGB_TWO, 0, 40, 0 );
+    c7segrgb_set_num( &c7segrgb, C7SEGRGB_TWO, 0, 40, 0 );
     Delay_ms( 1000 );
 
-    set_seven_segment( C7SEGRGB_THREE, 0, 0, 40 );
+    c7segrgb_set_num( &c7segrgb, C7SEGRGB_THREE, 0, 0, 40 );
     Delay_ms( 1000 );
 
-    set_seven_segment( C7SEGRGB_FOUR, 40, 0, 40 );
+    c7segrgb_set_num( &c7segrgb, C7SEGRGB_FOUR, 40, 0, 40 );
     Delay_ms( 1000 );
 
-    set_seven_segment( C7SEGRGB_FIVE, 0, 40, 40 );
+    c7segrgb_set_num( &c7segrgb, C7SEGRGB_FIVE, 0, 40, 40 );
     Delay_ms( 1000 );
 
-    set_seven_segment( C7SEGRGB_SIX, 40, 40, 0 );
+    c7segrgb_set_num( &c7segrgb, C7SEGRGB_SIX, 40, 40, 0 );
     Delay_ms( 1000 );
 
-    set_seven_segment( C7SEGRGB_SEVEN, 20, 30, 40 );
+    c7segrgb_set_num( &c7segrgb, C7SEGRGB_SEVEN, 20, 30, 40 );
     Delay_ms( 1000 );
 
-    set_seven_segment( C7SEGRGB_EIGHT, 40, 15, 31 );
+    c7segrgb_set_num( &c7segrgb, C7SEGRGB_EIGHT, 40, 15, 31 );
     Delay_ms( 1000 );
 
-    set_seven_segment( C7SEGRGB_NINE, 20, 10, 30 );
+    c7segrgb_set_num( &c7segrgb, C7SEGRGB_NINE, 20, 10, 30 );
     Delay_ms( 1000 );
      
-    RGB_CONTROL_BIT = 0;
+    c7segrgb_pwm_low( &c7segrgb );
 }
 
 ```
@@ -154,10 +163,6 @@ void application_task ( void )
 > Additional Functions :
 > void logic_one ( )  - Generic logic one function.
 > void logic_zero ( ) - Generic logic zero function.
-> void set_color ( uint8_t green, uint8_t red, uint8_t blue ) 
->                     - Set the color of the  LSB segment of the display function.
-> void set_seven_segment ( uint8_t  character, uint8_t green_brightness, uint8_t red_brightness, uint8_t blue_brightness )
->                     -Set whole character and color function.
 > </pre>
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.

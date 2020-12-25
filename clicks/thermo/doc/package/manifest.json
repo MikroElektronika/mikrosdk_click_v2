@@ -27,5 +27,6 @@
   "short_description": "THERMO click features the MAX31855K thermocouple-to-digital converter as well as PCC-SMP connector for K-type thermocouple probes. The click is designed to run on a 3.3V power supply. ",
   "supported_compiler": "mikroC",
   "type": "Library",
-  "version": "2.0.0.0"
+  "version": "2.0.0.1"
 }
+

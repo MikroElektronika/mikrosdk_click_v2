@@ -1,8 +1,0 @@
-{
-    "name": "AD SWIO 2 Click",
-    "description": "AD-SWIO 2 Click is a quad-channel software configurable input/output solution based on AD74413R, for building and process control application. The AD74413R is a quad-channel software configurable input/output solution for building and process control applications. The device provides a fully integrated single chip solution for input and output operation. The AD-SWIO 2 Click contains four 13-bit DACs, one per chanal, and 16-bit Σ-∆ ADC.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","AD74413R"],
-    "category" : ["ADC"] 
-}

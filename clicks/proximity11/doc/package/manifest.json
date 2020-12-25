@@ -27,5 +27,6 @@
     "short_description": "Proximity 11 Click is a close-range proximity sensing Click board™, equipped with the RPR-0521RS, a very accurate and power-efficient proximity and ambient Light Sensor with IrLED.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

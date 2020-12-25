@@ -67,22 +67,20 @@ void application_task ( )
     float x_axis;
     float y_axis;
     float die_temperature;
-    char degrees_celsius[ 4 ] = { ' ', 176, 'C', 0x00 };
-    char degrees_per_second[ 5 ] = { ' ', 176, '/', 's', 0x00 };
 
     int_flag = gyro4_int_get( &gyro4 );
     while ( int_flag == 1 )
     {
         int_flag = gyro4_int_get( &gyro4 );
     }
-    
+
     gyro4_get_temperature( &gyro4, &die_temperature );
     gyro4_get_axes( &gyro4, &x_axis, &y_axis );
 
     log_printf( &logger, "\r\n" );
-    log_printf( &logger, "> Die temperature : %.2f %c \r\n", die_temperature, degrees_celsius );
-    log_printf( &logger, "> X axis : %.2f %c \r\n", x_axis, degrees_per_second );
-    log_printf( &logger, "> Y axis : %.2f %c \r\n", y_axis, degrees_per_second );
+    log_printf( &logger, "> Die temperature : %.2f degrees Celsius \r\n", die_temperature );
+    log_printf( &logger, "> X axis : %.2f degrees per second \r\n", x_axis );
+    log_printf( &logger, "> Y axis : %.2f degrees per second \r\n", y_axis );
 
     Delay_ms( 500 );
 }

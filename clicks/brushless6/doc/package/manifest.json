@@ -25,7 +25,11 @@
     "name": "mikroe.click.brushless6",
     "product_link": "https://www.mikroe.com/brushless-6-click",
     "short_description": "Brushless 6 click is designed to drive a three-phase sensorless.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.0"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2255
+    ],
+    "version": "2.0.0.1"
 }

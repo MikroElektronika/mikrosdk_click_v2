@@ -22,7 +22,7 @@
 
 #include "board.h"
 #include "log.h"
-#include "amrcurent.h"
+#include "amrcurrent.h"
 
 // ------------------------------------------------------------------ VARIABLES
 

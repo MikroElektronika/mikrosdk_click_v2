@@ -88,6 +88,9 @@ TEMPHUM6_RETVAL temphum6_init ( temphum6_t *ctx, temphum6_cfg_t *cfg )
         return TEMPHUM6_INIT_ERROR;
     }
 
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
+    i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+
     return TEMPHUM6_OK;
 }
 

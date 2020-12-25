@@ -40,7 +40,7 @@ void application_init ( void )
     //  Logger initialization.
 
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
@@ -58,18 +58,18 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    int16_t X_Axis;
-    int16_t Y_Axis;
-    int16_t Z_Axis;
+    int16_t x_Axis;
+    int16_t y_Axis;
+    int16_t z_Axis;
     uint8_t tap;
 
     // Accelerometer measurement 
     
-    accel12_get_axis_data( &accel12, &X_Axis, &Y_Axis, &Z_Axis );
+    accel12_get_axis_data( &accel12, &x_Axis, &y_Axis, &z_Axis );
 
-    log_printf( &logger, " X axis : %d \r\n", X_Axis );
-    log_printf( &logger, " Y axis : %d \r\n", Y_Axis );
-    log_printf( &logger, " Z axis : %d \r\n", Z_Axis );
+    log_printf( &logger, " X axis : %d \r\n", x_Axis );
+    log_printf( &logger, " Y axis : %d \r\n", y_Axis );
+    log_printf( &logger, " Z axis : %d \r\n", z_Axis );
 
     // TAP interrupt 
     

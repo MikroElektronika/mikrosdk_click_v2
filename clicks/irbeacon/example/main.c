@@ -28,8 +28,6 @@
 static irbeacon_t irbeacon;
 static log_t logger;
 
-static float duty_cycle = 0.5;
-
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
@@ -50,8 +48,6 @@ void application_init ( void )
     irbeacon_cfg_setup( &cfg );
     IRBEACON_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     irbeacon_init( &irbeacon, &cfg );
-
-    irbeacon_set_duty_cycle( &irbeacon, duty_cycle );
     irbeacon_pwm_start( &irbeacon );
     Delay_ms( 1000 );
 }
@@ -59,13 +55,13 @@ void application_init ( void )
 void application_task ( void )
 {
     irbeacon_enable_mod( &irbeacon );
-    
-    for ( duty_cycle = 250; duty_cycle < 3000; duty_cycle += 250 )
+
+    for ( float duty_cycle = 0.1; duty_cycle <= 1; duty_cycle += 0.1 )
     {
         irbeacon_set_duty_cycle( &irbeacon, duty_cycle );
-        Delay_ms( 500 );
+        Delay_ms( 1000 );
     }
-    
+
     irbeacon_disable_mod( &irbeacon );
     Delay_ms( 1000 );
 }

@@ -27,6 +27,8 @@
     "short_description": "Proximity 2 Click features MAX44000, an IC that integrates an ambient light as well as a proximity sensor. The chip consists of an array of photodiodes that convert light into current, which the internal circuitry then converts into a digital value.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.3"
 }
+
+
 

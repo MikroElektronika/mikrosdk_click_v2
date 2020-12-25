@@ -25,7 +25,11 @@
     "name": "mikroe.click.fan2",
     "product_link": "https://www.mikroe.com/fan-2-click",
     "short_description": "Fan 2 click carries the MAX31760 precision fan-speed controller. It can measure temperature and adjust the fan speed to keep the temperature at the same level. Fan 2 click can also control two fans at the same time.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2115
+    ],
+    "version": "2.0.0.2"
 }

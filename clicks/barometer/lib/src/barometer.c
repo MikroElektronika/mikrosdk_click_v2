@@ -61,12 +61,13 @@ void barometer_cfg_setup ( barometer_cfg_t *cfg )
     cfg->rdy = HAL_PIN_NC;
 
     cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
-    cfg->i2c_address = BAROMETER_I2C_ADDRESS_0;
-    cfg->sel = BAROMETER_MASTER_I2C;
+    cfg->i2c_address = BAROMETER_I2C_ADDRESS_1;
     
     cfg->spi_speed = 100000; 
     cfg->spi_mode = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
+    
+    cfg->sel = BAROMETER_MASTER_I2C;
 }
 
 BAROMETER_RETVAL barometer_init ( barometer_t *ctx, barometer_cfg_t *cfg )
@@ -92,6 +93,10 @@ BAROMETER_RETVAL barometer_init ( barometer_t *ctx, barometer_cfg_t *cfg )
 
         i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
         i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+        i2c_master_set_timeout( &ctx->i2c, 0 );
+        
+        digital_out_init( &ctx->cs, cfg->cs );
+        digital_out_high( &ctx->cs );
 
         ctx->read_f = barometer_i2c_read;
         ctx->write_f = barometer_i2c_write;
@@ -282,7 +287,7 @@ static void barometer_spi_write ( barometer_t *ctx, uint8_t reg, uint8_t *data_b
     }
     
     spi_master_select_device( ctx->chip_select );
-    spi_master_write( &ctx->spi, tx_buf, len );
+    spi_master_write( &ctx->spi, tx_buf, len + 1 );
     spi_master_deselect_device( ctx->chip_select );  
 }
 
@@ -295,13 +300,8 @@ static void barometer_spi_read ( barometer_t *ctx, uint8_t reg, uint8_t *data_bu
     tx_buf[ 0 ] = reg | 0x80;
     
     spi_master_select_device( ctx->chip_select );
-    spi_master_write_then_read( &ctx->spi, tx_buf, 1, rx_buf, len );
+    spi_master_write_then_read( &ctx->spi, tx_buf, 1, data_buf, len );
     spi_master_deselect_device( ctx->chip_select );  
-
-    for ( cnt = 0; cnt < len; cnt++ )
-    {
-        data_buf[ cnt ] = rx_buf [ cnt ];
-    }
 }
 
 // ------------------------------------------------------------------------- END

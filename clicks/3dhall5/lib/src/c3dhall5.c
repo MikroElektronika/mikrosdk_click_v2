@@ -62,11 +62,12 @@ void c3dhall5_cfg_setup ( c3dhall5_cfg_t *cfg )
 
     cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
     cfg->i2c_address = 0x1E;
-    cfg->sel = C3DHALL5_MASTER_SPI;
     
     cfg->spi_speed = 100000; 
     cfg->spi_mode = SPI_MASTER_MODE_3;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
+
+    cfg->sel = C3DHALL5_MASTER_I2C;
 
 }
 

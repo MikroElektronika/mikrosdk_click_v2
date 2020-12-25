@@ -29,6 +29,7 @@
 
 #include "ltecat1.h"
 #include "string.h"
+#include "generic_pointer.h"
 
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
@@ -152,8 +153,8 @@ void ltecat1_send_command ( ltecat1_t *ctx, char *command )
 
 char *ltecat1_gps_parser(char *data_in, char *cmd, uint8_t data_pos)
 {
-    volatile char *p_com;     // Pointer Start 
-    volatile char *p_new;     // Pointer End 
+    volatile char * __generic p_com;     // Pointer Start 
+    volatile char * __generic p_new;     // Pointer End 
     volatile char *p_return = 0;    // Pointer for return data 
 
     volatile char rsp_com[ 1000 ] = {0};     // Buffer for storage response of the cmd 

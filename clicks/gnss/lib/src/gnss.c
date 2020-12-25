@@ -29,6 +29,7 @@
 
 #include "gnss.h"
 #include "string.h"
+#include "generic_pointer.h"
 
 // ------------------------------------------------------------- PRIVATE MACROS 
 
@@ -92,10 +93,9 @@ GNSS_RETVAL gnss_init ( gnss_t *ctx, gnss_cfg_t *cfg )
 
     // Output pins 
 
-     digital_out_init( &ctx->rst, cfg->rst );
-     digital_out_init( &ctx->fon, cfg->fon );
-
-
+    digital_out_init( &ctx->rst, cfg->rst );
+    digital_out_init( &ctx->fon, cfg->fon );
+     
     return GNSS_OK;
 
 }
@@ -136,13 +136,13 @@ gnss_error_t gnss_generic_parser
     uint8_t element, char *parser_buf 
 )
 {    
-    char *start_rsp;
-    char *end_rsp;
+    char * __generic start_rsp;
+    char * __generic end_rsp;
     char rsp_buf[ 200 ];
     
     uint8_t element_cnt = 0;
-    char *element_start;
-    char *element_end;
+    char * __generic element_start;
+    char * __generic element_end;
     
     char current_cmd_buf[ 10 ];
     

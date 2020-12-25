@@ -62,7 +62,7 @@ void application_task( void )
 
         log_printf( &console, "** Ambient Light Sensor : %.2f lux **\r\n", ambient2.sens_data.amb_light_lx );
         log_printf( &console, "** Ambient Light Range : %.2f lux **\r\n", ambient2.sens_data.amb_light_range );
-        log_printf( &console, "** Ambient Light Percents : %d %% **\r\n\n", ambient2.sens_data.amb_light_per );
+        log_printf( &console, "** Ambient Light Percents : %d %% **\r\n\n", (int16_t)ambient2.sens_data.amb_light_per );
     }
 }
 

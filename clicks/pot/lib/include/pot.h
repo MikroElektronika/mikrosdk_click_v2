@@ -39,7 +39,6 @@
 #include "drv_analog_in.h"
 
 // -------------------------------------------------------------- PUBLIC MACROS 
-
 /**
  * \defgroup macros Macros
  * \{
@@ -50,31 +49,15 @@
  * \{
  */
 #define POT_MAP_MIKROBUS( cfg, mikrobus ) \
-cfg.an_pin  = MIKROBUS( mikrobus, MIKROBUS_AN )
-/** \} */
-
-/**
- * \defgroup error_code Error Code
- * \{
- */
-#define POT_RETVAL  uint8_t
-
-#define POT_OK           0x00
-#define POT_INIT_ERROR   0xFF
+    cfg.an_pin = MIKROBUS( mikrobus, MIKROBUS_AN )
 /** \} */
 
 /** \} */ // End group macro 
-
 // --------------------------------------------------------------- PUBLIC TYPES
 /**
  * \defgroup type Types
  * \{
  */
-
-/**
- * @brief Analog data type 
- */
-typedef  uint16_t pot_data_t;
 
 /**
  * @brief Click ctx object definition.
@@ -119,7 +102,7 @@ extern "C"{
 /**
  * @brief Config Object Initialization function.
  *
- * @param cfg  Click configuration structure.
+ * @param cfg Click configuration structure.
  *
  * @description This function initializes click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
@@ -131,20 +114,32 @@ void pot_cfg_setup ( pot_cfg_t *cfg );
  *
  * @param ctx Click object.
  * @param cfg Click configuration structure.
+ *
+ * @return 0 - Ok, (-1) - Error.
  * 
  * @description This function initializes all necessary pins and peripherals used for this click.
  */
-POT_RETVAL pot_init ( pot_t *ctx, pot_cfg_t *cfg );
+err_t pot_init ( pot_t *ctx, pot_cfg_t *cfg );
 
 /**
  * @brief Generic read function.
  *
  * @param ctx        Click object.
- * @return           ADC data
+ * @return           ADC data.
  *
  * @description This function read ADC data.
  */
-pot_data_t pot_generic_read ( pot_t *ctx );
+uint16_t pot_generic_read ( pot_t *ctx );
+
+/**
+ * @brief Generic read voltage function.
+ *
+ * @param ctx        Click object.
+ * @return           Voltage value.
+ *
+ * @description This function read voltage level of AN pin.
+ */
+float pot_read_voltage ( pot_t *ctx );
 
 #ifdef __cplusplus
 }

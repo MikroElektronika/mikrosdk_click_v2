@@ -48,8 +48,9 @@ void expand_cfg_setup ( expand_cfg_t *cfg )
     cfg->rst = HAL_PIN_NC;
     cfg->int_pin = HAL_PIN_NC;
 
-    cfg->spi_speed = SPI_MEDIUM; 
-    cfg->spi_mode = SPI_MODE_0;
+    cfg->spi_speed = 100000; 
+    cfg->spi_mode = SPI_MASTER_MODE_0;
+    cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 }
 
 EXPAND_RETVAL expand_init ( expand_t *ctx, expand_cfg_t *cfg )
@@ -57,19 +58,24 @@ EXPAND_RETVAL expand_init ( expand_t *ctx, expand_cfg_t *cfg )
     spi_master_config_t spi_cfg;
 
     spi_master_configure_default( &spi_cfg );
-    spi_cfg.mode        = cfg->spi_mode;
-    spi_cfg.speed       = cfg->spi_speed;
-    spi_cfg.pins.sck    = cfg->sck;
-    spi_cfg.pins.miso   = cfg->miso;
-    spi_cfg.pins.mosi   = cfg->mosi;
-    spi_cfg.chip_select = cfg->cs;
+    spi_cfg.speed     = cfg->spi_speed;
+    spi_cfg.sck       = cfg->sck;
+    spi_cfg.miso      = cfg->miso;
+    spi_cfg.mosi      = cfg->mosi;
+    spi_cfg.default_write_data = EXPAND_DUMMY;
 
-    if (  spi_master_open( &ctx->spi, &spi_cfg ) != SPI_SUCCESS )
+    digital_out_init( &ctx->cs, cfg->cs );
+    ctx->chip_select = cfg->cs;
+
+    if (  spi_master_open( &ctx->spi, &spi_cfg ) == SPI_MASTER_ERROR )
     {
         return EXPAND_INIT_ERROR;
     }
 
-    spi_master_set_dummy_data( &ctx->spi, EXPAND_DUMMY );
+    spi_master_set_default_write_data( &ctx->spi, EXPAND_DUMMY );
+    spi_master_set_speed( &ctx->spi, cfg->spi_speed );
+    spi_master_set_mode( &ctx->spi, cfg->spi_mode );
+    spi_master_set_chip_select_polarity( cfg->cs_polarity );
 
     // Output pins 
     
@@ -79,75 +85,45 @@ EXPAND_RETVAL expand_init ( expand_t *ctx, expand_cfg_t *cfg )
 
     digital_in_init( &ctx->int_pin, cfg->int_pin );
     
-    spi_master_stop( &ctx->spi );
-
     return EXPAND_OK;
 
 }
 
-void expand_generic_transfer ( expand_t *ctx, spi_master_transfer_data_t *block )
-{
-    spi_master_start(&ctx->spi);
-    spi_master_transfer(&ctx->spi, block);
-    spi_master_stop(&ctx->spi);    
-}
-
 uint8_t expand_read_byte ( expand_t *ctx, uint8_t mod_cmd, uint8_t reg_addr )
 {
-    spi_master_transfer_data_t block;
-
-    uint8_t buffer_read[ 3 ];
+    uint8_t buffer_read[ 1 ];
     uint8_t buffer_write[ 2 ];
   
+    mod_cmd <<= 1;
     buffer_write[ 0 ] = EXPAND_SPI_DEVICE_OPCODE | mod_cmd | EXPAND_OPCODE_READ;
     buffer_write[ 1 ] = reg_addr;
 
-    block.tx_buffer = buffer_write;
-    block.rx_buffer = buffer_read;
-    block.tx_length = 2;
-    block.rx_length = 3;
+    spi_master_select_device( ctx->chip_select );
+    spi_master_write( &ctx->spi, buffer_write, 2 );
+    spi_master_read( &ctx->spi, buffer_read, 1 );
+    spi_master_deselect_device( ctx->chip_select );
 
-    spi_master_start( &ctx->spi );
-    spi_master_transfer( &ctx->spi, &block );
-    spi_master_stop( &ctx->spi );
-
-    return buffer_read[ 2 ];
+    return buffer_read[ 0 ];
 }
 
 void expand_write_byte ( expand_t *ctx, uint8_t mod_cmd, uint8_t reg_addr, uint8_t write_data )
 {
-    spi_master_transfer_data_t block;
-    uint8_t buffer_write[ 4 ];
-
-    buffer_write[ 0 ] = EXPAND_SPI_DEVICE_OPCODE | mod_cmd | EXPAND_OPCODE_WRITE;
+    uint8_t buffer_write[ 3 ] = { 0x00 };
+    
+    mod_cmd <<= 1;
+    buffer_write[ 0 ] = (EXPAND_SPI_DEVICE_OPCODE | mod_cmd) & EXPAND_OPCODE_WRITE;
     buffer_write[ 1 ] = reg_addr;
     buffer_write[ 2 ] = write_data;
 
-    block.tx_buffer = buffer_write;
-    block.rx_buffer = 0;
-    block.tx_length = 4;
-    block.rx_length = 0;
-
-    spi_master_start( &ctx->spi );
-    spi_master_transfer( &ctx->spi, &block );
-    spi_master_stop( &ctx->spi );
-
+    spi_master_select_device( ctx->chip_select );
+    spi_master_write( &ctx->spi, buffer_write, 3 );
+    spi_master_deselect_device( ctx->chip_select );
 }
 
 void expand_default_configuration ( expand_t *ctx, uint8_t mod_cmd )
 {
-    uint8_t check;
-    
-    check = 0;
-    
-    expand_write_byte( ctx, mod_cmd, EXPAND_IOCON_BANK0, ( EXPAND_IOCON_BYTE_MODE | EXPAND_IOCON_HAEN ) );
-
-    while ( !check )
-    {
-        expand_write_port_a( ctx, 0x00, 0x01 );
-        check = expand_read_port_b( ctx, 0x00 );
-    }
-    
+    expand_reset( ctx );
+    expand_write_byte( ctx, mod_cmd, EXPAND_IOCON_BANK0, ( EXPAND_IOCON_BYTE_MODE | EXPAND_IOCON_HAEN ) );    
 }
 
 void expand_set_bits ( expand_t *ctx, uint8_t mod_cmd, uint8_t reg_addr, uint8_t bit_mask )
@@ -250,7 +226,7 @@ void expand_toggle_bit_port_b ( expand_t *ctx, uint8_t mod_cmd, uint8_t bit_mask
 
 void expand_set_direction_port_a ( expand_t *ctx, uint8_t mod_cmd, uint8_t write_data )
 {
-    expand_write_byte( ctx, mod_cmd, EXPAND_INTCONA_BANK0, write_data );
+    expand_write_byte( ctx, mod_cmd, EXPAND_IODIRA_BANK0, write_data );
 }
 
 void expand_set_input_dir_port_a ( expand_t *ctx, uint8_t mod_cmd, uint8_t bit_mask )
@@ -265,7 +241,7 @@ void expand_set_output_dir_port_a ( expand_t *ctx, uint8_t mod_cmd, uint8_t bit_
 
 void expand_set_direction_port_b ( expand_t *ctx, uint8_t mod_cmd, uint8_t write_data )
 {
-    expand_write_byte( ctx, mod_cmd, EXPAND_INTCONB_BANK0, write_data );
+    expand_write_byte( ctx, mod_cmd, EXPAND_IODIRB_BANK0, write_data );
 }
 
 void expand_set_input_dir_port_b ( expand_t *ctx, uint8_t mod_cmd, uint8_t bit_mask )

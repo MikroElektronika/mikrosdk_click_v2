@@ -27,6 +27,7 @@
     "short_description": "Diff Press Click is an accurate pressure sensor Click board™ capable of measuring differential pressure.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+
 

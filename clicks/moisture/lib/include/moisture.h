@@ -253,7 +253,7 @@ typedef struct
     // Input pins 
 
     digital_in_t int_pin;
-    
+
     // Modules 
 
     i2c_master_t i2c;
@@ -274,7 +274,7 @@ typedef struct
 
     pin_name_t scl;
     pin_name_t sda;
-    
+
     // Additional gpio pins 
 
     pin_name_t int_pin;
@@ -542,4 +542,4 @@ uint8_t moisture_check_interrupt ( moisture_t *ctx );
 /** \} */ // End public_function group
 /// \}    // End click Driver group  
 /*! @} */
-// ------------------------------------------------------------------------- END
+// ------------------------------------------------------------------------ END

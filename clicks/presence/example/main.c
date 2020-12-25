@@ -28,6 +28,9 @@
 static presence_t presence;
 static log_t logger;
 
+static uint16_t log_counter = 0;
+#define LOG_INT               1000
+
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
@@ -42,14 +45,14 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
 
     presence_cfg_setup( &cfg );
-    PRESENCE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PRESENCE_MAP_MIKROBUS( cfg, MIKROBUS_4 );
     presence_init( &presence, &cfg );
 
     // General call address
@@ -98,18 +101,19 @@ void application_task ( void )
     //  Task implementation.
 
     uint8_t int_status;
-    float tamb;
-    float tobj;
+    volatile float tamb;
+    volatile float tobj;
 
     presence_generic_read( &presence, PRESENCE_REG_INTERRUPT_STATUS, &int_status, 1 );
     
-    tamb = presence_ambient_temperature( &presence );
-    log_printf( &logger, "---- Ambient Temperature: %.2f\r\n", tamb );
-    Delay_ms( 100 );
+    if ( log_counter++ > LOG_INT )
+    {
+        tamb = presence_ambient_temperature( &presence );
+        log_printf( &logger, "---- Ambient Temperature: %.2f\r\n", tamb );
 
-    tobj = presence_object_temperature( &presence );
-    log_printf( &logger, "---- Object Temperature: %.2f\r\n", tobj );
-    Delay_ms( 800 );
+        tobj = presence_object_temperature( &presence );
+        log_printf( &logger, "---- Object Temperature: %.2f\r\n", tobj );
+    }
         
     if ( ( int_status & 0x08 ) != 0 )
     {

@@ -29,10 +29,6 @@
 
 #include "diffpress.h"
 
-// ---------------------------------------------- PRIVATE FUNCTION DECLARATIONS 
-
-static void adc_read ( diffpress_t *ctx, uint8_t *data_buf, uint8_t len );
-
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
 void diffpress_cfg_setup ( diffpress_cfg_t *cfg )
@@ -64,28 +60,9 @@ DIFFPRESS_RETVAL diffpress_init ( diffpress_t *ctx, diffpress_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_speed( &ctx->i2c, 0 );
 
     return DIFFPRESS_OK;
-}
-
-void diffpress_generic_write ( diffpress_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
-{
-    uint8_t tx_buf[ 256 ];
-    uint8_t cnt;
-    
-    tx_buf[ 0 ] = reg;
-    
-    for ( cnt = 1; cnt <= len; cnt++ )
-    {
-        tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
-    }
-    
-    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );      
-}
-
-void diffpress_generic_read ( diffpress_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
-{
-    i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, len );
 }
 
 uint16_t diffpress_get_adc_data( diffpress_t *ctx )
@@ -93,7 +70,7 @@ uint16_t diffpress_get_adc_data( diffpress_t *ctx )
     uint16_t adc_data;
     uint8_t read_buffer[ 2 ];
     
-    adc_read( ctx, read_buffer, 2 );
+    i2c_master_read( &ctx->i2c, read_buffer, 2 );
 
     adc_data = read_buffer[ 0 ];
     adc_data <<= 8;
@@ -109,19 +86,13 @@ float diffpress_get_pressure_difference( diffpress_t *ctx )
     
     adc_data = diffpress_get_adc_data( ctx );
     
-    pressure_difference = ( float )adc_data - 2048;
-    pressure_difference /= 2048;
+    pressure_difference = ( float )adc_data - 2048.0;
+    pressure_difference /= 2048.0;
     pressure_difference *= 3.5;
     
     return pressure_difference;
 }
 
-// ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
-
-static void adc_read ( diffpress_t *ctx, uint8_t *data_buf, uint8_t len )
-{
-    i2c_master_read( &ctx->i2c, data_buf, len );
-}
 
 // ------------------------------------------------------------------------- END
 

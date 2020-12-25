@@ -30,12 +30,6 @@
 #include "samltouch.h"
 #include "string.h"
 
-// ------------------------------------------------------------------ VARIABLES
-
-    static uint16_t slider_pos = 0;
-    static char start_frame = 0x55;
-    static char end_frame = 0xAA;
-
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
 void samltouch_cfg_setup ( samltouch_cfg_t *cfg )
@@ -84,9 +78,11 @@ void samltouch_generic_write ( samltouch_t *ctx, char *data_buf, uint16_t len )
     uart_write( &ctx->uart, data_buf, len );
 }
 
-uint16_t samltouch_generic_read ( samltouch_t *ctx, char *data_buf, uint16_t max_len )
+int32_t samltouch_generic_read ( samltouch_t *ctx, char *data_buf, uint16_t max_len )
 {
-    return uart_read( &ctx->uart, data_buf, max_len );
+    int32_t ret = uart_read( &ctx->uart, data_buf, max_len );
+    uart_clear(&ctx->uart);
+    return ret;
 }
 
 void samltouch_send_command ( samltouch_t *ctx, char *command )
@@ -105,16 +101,17 @@ void samltouch_send_command ( samltouch_t *ctx, char *command )
 
 void samltouch_parser ( char *data_in, samltouch_state_t *state )
 {
-    char button_1;
-    char button_2;
-    char slider_active;
+    uint8_t button_1;
+    uint8_t button_2;
+    uint8_t slider_active;
+    uint16_t slider_pos = 0;
 
     button_1 = data_in[10];
     state->button1 = button_1 & 0x01;
     button_2 = data_in[20];
     state->button2 = button_2 & 0x01;
 
-    slider_active  = data_in[ 61 ];
+    slider_active  = data_in[ 62 ];
     state->sw_state = slider_active & 0x01;
 
     slider_pos = data_in[ 66 ];

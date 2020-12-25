@@ -15,7 +15,7 @@
  * The device measures ambient and object temperatures and displays data in
  * degree centigrade every second.
  * 
- * \author Jovan Stajokovic
+ * \author Jovan Stajkovic
  *
  */
 // ------------------------------------------------------------------- INCLUDES
@@ -45,7 +45,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -57,6 +57,7 @@ void application_init ( void )
 
     irthermo3_global_write ( &irthermo3, adr_rst, 4 );
     irthermo3_cal ( &irthermo3 );
+    Delay_ms( 500 );
 }
 
 void application_task ( void )

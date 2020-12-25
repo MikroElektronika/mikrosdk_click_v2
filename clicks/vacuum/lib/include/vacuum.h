@@ -156,30 +156,6 @@ VACCUM_RETVAL vacuum_init ( vacuum_t *ctx, vacuum_cfg_t *cfg );
 void vacuum_default_cfg ( vacuum_t *ctx );
 
 /**
- * @brief Generic write function.
- *
- * @param ctx          Click object.
- * @param reg          Register address.
- * @param data_buf     Data buf to be written.
- * @param len          Number of the bytes in data buf.
- *
- * @description This function writes data to the desired register.
- */
-void vacuum_generic_write ( vacuum_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-/**
- * @brief Generic read function.
- * 
- * @param ctx          Click object.
- * @param reg          Register address.
- * @param data_buf     Output data buf
- * @param len          Number of the bytes to be read
- *
- * @description This function reads data from the desired register.
- */
-void vacuum_generic_read ( vacuum_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-/**
  * @brief Function for reads 12 bit ADC data.
  * 
  * @param ctx          Click object.

@@ -1,4 +1,6 @@
 
+
+---
 # V to Hz click
 
 V to HZ click is a device that converts an analog voltage input signal into a pulse wave signal of a certain frequency. It has a linear response, so applying a voltage in a range of 0 to 5V on its input, will result in generating the pulse train with frequency linearly proportional to the input voltage.
@@ -59,8 +61,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> v2hz_setOutputFrequency - Sets the PWM duty cycle to required value, changing
-the output frequency. 
+> v2hz_setOutputFrequency - Sets the PWM duty cycle to required value, changing the output frequency. 
 
 ```c
 
@@ -71,8 +72,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -81,38 +83,39 @@ void application_init ( void )
     vtohz_cfg_setup( &cfg );
     VTOHZ_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     vtohz_init( &vtohz, &cfg );
-
-    vtohz_pwm_start( &vtohz );
+    
+    vtohz_enable ( &vtohz );
 }
   
 ```
 
 ### Application Task
 
->
 > Alternates between different output frequencies.
-> 
 
 ```c
 
 void application_task ( void )
 {
     set_output_frequency( 1000 );        //1000 Hz output
-    Delay_ms( 3000 );
+    log_printf( &logger, "Output frequency: \t 1000 Hz\r\n" );
+    Delay_ms( 5000 );
     set_output_frequency( 2000 );        //2000 Hz output
-    Delay_ms( 3000 );
+    log_printf( &logger, "Output frequency: \t 2000 Hz\r\n" );
+    Delay_ms( 5000 );
     set_output_frequency( 5000 );        //5000 Hz output
-    Delay_ms( 3000 );
+    log_printf( &logger, "Output frequency: \t 5000 Hz\r\n" );
+    Delay_ms( 5000 );
     set_output_frequency( 10000 );       //10000 Hz output
-    Delay_ms( 3000 );
+    log_printf( &logger, "Output frequency: \t 10000 Hz\r\n" );
+    Delay_ms( 5000 );
 }  
 
 ```
 
 ## Note
 
-> Note: Output frequency may vary, depending on the offset and gain potentiometers 
-on board the click.
+> Note: Output frequency may vary, depending on the offset and gain potentiometers on board the click.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

@@ -68,19 +68,30 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "    <<  Application Init  >>    " );
+    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
 
     macaddress_cfg_setup( &cfg );
     MACADDRESS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     macaddress_init( &macaddress, &cfg );
+    
+    macaddress_get_mac( &macaddress, mac_addr );
+    
+    log_printf( &logger, " > MAC Address: 0x" );
+    for ( uint8_t cnt = 0; cnt < 8; cnt++ )
+    {
+        log_printf( &logger, "%02X", (uint16_t)mac_addr[ cnt ] );
+    }
+    log_printf( &logger, "\r\n" );
 
-    log_printf( &logger,"      <<   I2C Driver Init   >>      \r\n" );
-    Delay_100ms( );
+    Delay_ms( 1000 );
+    log_info( &logger, "---- Application Task ----" );
+    data_cnt = 0;
 }
   
 ```
@@ -89,88 +100,37 @@ void application_init ( void )
 
 > This is an example which demonstrates the use of MAC Address click board.
 > MAC Address click communicates with register via I2C protocol by the write to register and read from the register.
-> This example shows write/read single byte and sequential write/read from EEPROM.
+> This example shows write/read sequential write/read from EEPROM.
 > Results are being sent to the Usart Terminal where you can track their changes.
-> All data logs write on USB uart changes for every 1 sec.
 
 ```c
 
 void application_task ( void )
 {
-    uint8_t cnt;
-    uint8_t buffer[ 12 ];
-    uint8_t read_mac[ 10 ];
-    uint8_t buffer_loop = 0;
+    log_printf( &logger, " > Writing data to memory...\r\n" );
+    Delay_ms( 100 );
+    macaddress_generic_write( &macaddress, address, write_data[ data_cnt ], data_len[ data_cnt ] );
+    log_printf( &logger, " > Writing done.\r\n" );
+    Delay_ms( 1000 );
     
-    macaddress_get_mac( &macaddress, &read_mac );
-    Delay_100ms( );
-
-    log_printf( &logger, " MAC Address :  \r\n" );
-    for ( cnt = 0; cnt < 6; cnt++ )
-    {
-        log_printf( &logger, "0x%x", read_mac[ cnt ] );
-            
-        if ( cnt != 5 )
-        {
-            log_printf( &logger, ": \r\n" );
-        }
-    }
-
-    log_printf( &logger, "--------------------------------- \r\n" );
-    log_printf( &logger, " Write Single Byte Test :  \r\n" );
-
-    macaddress_generic_write( &macaddress, buffer_loop, &buffer_loop, 1 );
-
-    log_printf( &logger, " Byte value [ 0x%x ] successfully written to [ 0x%x ] address \r\n" , buffer_loop + 1, buffer_loop );
     
-    log_printf( &logger, "-----------------------------\r\n" );
-    log_printf( &logger, "-----------------------------\r\n" );
-    log_printf( &logger, " Read Single Byte Test \r\n");
-
-    macaddress_read_byte( &macaddress, buffer_loop );
+    log_printf( &logger, " > Reading data from memory...\r\n" );
+    macaddress_generic_read( &macaddress, address, read_buff, data_len[ data_cnt ] );
+    Delay_ms( 100 );
+    log_printf( &logger, " > Read data: " );
+    for( uint8_t cnt = 0; cnt < data_len[ data_cnt ]; cnt++ )
+    {
+        log_printf( &logger, "%c", read_buff[ cnt ] );
+    }
+    log_printf( &logger, "\r\n" );
+    Delay_ms( 100 );
+    log_printf( &logger, " > Reading done.\r\n" );
+    log_printf( &logger, "---------------------------------\r\n" );
+    data_cnt++;
+    if ( data_cnt >= 3 )
+        data_cnt = 0;
     
-    log_printf( &logger, " Byte value [ 0x%x ] successfully read from  [ 0x%x ] address \r\n", buffer_loop + 1, buffer_loop );
-    log_printf( &logger, "----------------------------- \r\n" );
-    log_printf( &logger, "----------------------------- \r\n" );
-
-    macaddress_generic_write( &macaddress, buffer_loop, buffer, 12 );
-    Delay_100ms( );
-
-    log_printf( &logger, " Array values : \r\n" );
-
-    for ( cnt = 0; cnt < 12; cnt++ )
-    {
-        log_printf( &logger,"[ 0x%x ] \r\n", buffer[ cnt ] );
-    }
-
-    log_printf( &logger," successfully written to [ 0x%x ] address and forward \r\n", buffer_loop );
-    log_printf( &logger, "-----------------------------" );
-    log_printf( &logger, "-----------------------------" );
-
-    macaddress_generic_read( &macaddress, buffer_loop, buffer, 12 );
-    Delay_100ms( );
-
-    log_printf( &logger, " Array values : \r\n" );
-
-    for ( cnt = 0; cnt < 12; cnt++ )
-    {
-        log_printf( &logger,"[ 0x%x ]", buffer[ cnt ]); 
-    }
-
-    log_printf( &logger," successfully read from [ 0x%x ] address and forward \r\n", buffer_loop );
-    log_printf( &logger, "-----------------------------" );
-    log_printf( &logger, "-----------------------------" );
-
-    if ( buffer_loop < MACADDRESS_END_ADDR )
-    {
-        buffer_loop++;
-    }
-    else
-    {
-        buffer_loop = 0;
-    }
-
-    Delay_1sec( );
+    Delay_ms( 3000 );
 }
 
 ```

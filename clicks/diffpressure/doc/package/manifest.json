@@ -27,5 +27,6 @@
     "short_description": "Diff pressure click carries NXP’s MPXV5010DP signal conditioned, temperature compensated and calibrated pressure sensor with two axial ports to accommodate industrial grade tubing.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

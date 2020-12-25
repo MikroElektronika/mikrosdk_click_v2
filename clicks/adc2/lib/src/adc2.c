@@ -29,9 +29,18 @@
 
 #include "adc2.h"
 
+// ------------------------------------------------------------- PRIVATE VARIABLES
+
+static float dev_vref = 0;
+
 // ------------------------------------------------------------- PRIVATE MACROS 
 
-#define ADC2_DUMMY 0
+#define ADC2_DUMMY          0
+
+#define ADC2_RESOLUTION     2097151.0
+
+#define ADC2_OL             0x80 
+#define ADC2_OH             0x40
 
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
@@ -44,7 +53,7 @@ void adc2_cfg_setup ( adc2_cfg_t *cfg )
     cfg->mosi = HAL_PIN_NC;
     cfg->cs = HAL_PIN_NC;
 
-    cfg->spi_mode = SPI_MASTER_MODE_0;
+    cfg->spi_mode = SPI_MASTER_MODE_3;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
     cfg->spi_speed = 100000;
 }
@@ -79,94 +88,52 @@ ADC2_RETVAL adc2_init ( adc2_t *ctx, adc2_cfg_t *cfg )
 
 }
 
-void adc2_generic_transfer ( adc2_t *ctx, uint8_t *wr_buf, uint16_t wr_len, uint8_t *rd_buf, uint16_t rd_len )
+float adc2_read_adc_data ( adc2_t *ctx )
 {
-    spi_master_deselect_device( ctx->chip_select );
-    Delay_1ms( );
+    uint8_t read_buf[ 4 ] = { 0 };
+    int32_t raw_data = 0;
+    int32_t sign_bit = 1;
+    float adc_data = 0;
+    float adc_res = ADC2_RESOLUTION;
+    ctx->ovf_l = 0;
+    ctx->ovf_h = 0;
+
     spi_master_select_device( ctx->chip_select );
-    Delay_1ms( );
-    spi_master_write_then_read( &ctx->spi, wr_buf, wr_len, rd_buf, rd_len );
-    Delay_1ms( );
+    Delay_100ms( );
+    spi_master_read( &ctx->spi, read_buf, 3 );
     spi_master_deselect_device( ctx->chip_select );
-    Delay_1ms( );    
-}
-
-uint32_t adc2_read_4bytes ( adc2_t *ctx )
-{
-    uint8_t read_reg[ 4 ];
-    uint32_t result;
-
-    result = 0x00000000;
-
-    spi_master_deselect_device( ctx->chip_select );
-    Delay_1ms( );
-    spi_master_select_device( ctx->chip_select );
-    Delay_1ms( );
-    spi_master_read( &ctx->spi, read_reg, 4 );
-    Delay_1ms( );
-    spi_master_deselect_device( ctx->chip_select );
-    Delay_1ms( );
-
-    result = read_reg[ 0 ];
-    result <<= 8;
-    result |= read_reg[ 1 ];
-    result <<= 8;
-    result |= read_reg[ 2 ];
-    result <<= 8;
-    result |= read_reg[ 3 ];
     
-    result >>= 7;
-
-    return result;
-}
-
-uint32_t adc2_adc_value_read ( adc2_t *ctx )
-{
-    uint32_t result;
-    result = adc2_read_4bytes( ctx );
-
-    while ( result >= 0x01FFFFFF )
+    
+    raw_data = read_buf[ 0 ];
+    raw_data <<= 8;
+    raw_data |= read_buf[ 1 ];
+    raw_data <<= 8;
+    raw_data |= read_buf[ 2 ];
+    
+    raw_data &= 0x003FFFFF;
+    
+    if ( ( read_buf[ 0 ] & ADC2_OL ) == ADC2_OL )
     {
-        result = adc2_read_4bytes( ctx );
-        Delay_10us( );
+        raw_data |= 0xFFB00000;
+        ctx->ovf_l = 1;
     }
-    result &= 0x003FFFFF;
-
-        if ( result > 0x1FFFFF )
-        {
-            result = ~result;
-            result *= -1;
-        }
-
-    return result;
-}
-
-uint8_t adc2_check_over_low ( adc2_t *ctx )
-{
-    uint32_t check;
-    uint8_t result;
-
-    check = adc2_read_4bytes( ctx );
+    else if ( ( read_buf[ 0 ] & ADC2_OH ) == ADC2_OH )
+    {
+        ctx->ovf_h = 1;
+    }
     
-    check >>= 23;
-    result = ( uint8_t ) check ;
-    result &= 0x01;
+    adc_data = ( float )raw_data;
+    adc_data *= ctx->vref;  
+    adc_data /= adc_res;
 
-    return result;
+    return adc_data;
 }
 
-uint8_t adc2_check_over_high ( adc2_t *ctx )
+void adc2_set_vref ( adc2_t *ctx, float vref )
 {
-    uint32_t check;
-    uint8_t result;
-
-    check = adc2_read_4bytes( ctx );
-
-    check >>= 22;
-    result = ( uint8_t ) check ;
-    result &= 0x01;
-
-    return result;
+    ctx->vref = vref;
 }
+
+
 // ------------------------------------------------------------------------- END
 

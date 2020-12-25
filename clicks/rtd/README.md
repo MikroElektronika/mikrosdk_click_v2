@@ -77,8 +77,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -89,7 +90,7 @@ void application_init ( void )
     rtd_init( &rtd, &cfg );
 
     rtd_write_register( &rtd, RTD_CONFIGURATION, 0xD0 );
-} 
+}
   
 ```
 
@@ -108,9 +109,9 @@ void application_task ( void )
     read_value = rtd_read_temperature( &rtd );
     converted_value = rtd_convert_temperature( &rtd, read_value, RTD_REF_RESISTANCE_470);
 
-    log_printf( &logger, "Current temperature: %f \r\n", converted_value );
+    log_printf( &logger, "Current temperature: %.2f \r\n", converted_value );
 
-    delay_ms( 1000 );
+    Delay_ms( 300 );
 }
 
 ```

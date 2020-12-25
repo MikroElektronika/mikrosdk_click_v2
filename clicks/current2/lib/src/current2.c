@@ -32,7 +32,6 @@
 // ------------------------------------------------------------- PRIVATE MACROS 
 
 #define CURRENT2_DUMMY 0
-#define NULL 0
 
 #define RSENSE   0.05
 #define ROUT     10000
@@ -102,7 +101,9 @@ uint16_t current2_get_adc ( current2_t *ctx )
     uint8_t data_out[ 2 ];
     uint16_t adc_data;
 
-    current2_generic_transfer( ctx, 0, 0, data_out, 2 );
+    spi_master_select_device( ctx->chip_select );
+    spi_master_read( &ctx->spi, data_out, 2 );
+    spi_master_deselect_device( ctx->chip_select );   
 
     adc_data = data_out[ 0 ];
     adc_data <<= 8;

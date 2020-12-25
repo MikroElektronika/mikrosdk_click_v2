@@ -54,7 +54,7 @@ void application_init ( void )
     c2x20wamp_cfg_setup( &cfg );
     C2X20WAMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c2x20wamp_init( &c2x20wamp, &cfg );
-    
+
     Delay_ms( 100 );
 
     log_printf( &logger, "-----------------------\r\n" );
@@ -69,20 +69,21 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    int cnt;
-    
     log_printf( &logger, "       PLAY MODE       \r\n" );
     c2x20wamp_mode_play( &c2x20wamp );
-    
-    log_printf( &logger, "  Set Volume lvl : 32  \r\n" );
+    Delay_ms( 200 );
+
+    uint8_t volume = 32;
+
+    log_printf( &logger, "  Set Volume lvl : %u  \r\n", (uint16_t)volume );
     log_printf( &logger, "-----------------------\r\n" );
-    c2x20wamp_set_volume( &c2x20wamp, 32 );
+    c2x20wamp_set_volume( &c2x20wamp, volume );
 
     log_printf( &logger, "- - - - - - - - - - - -\r\n" );
 
     Delay_ms( 5000 );
 
-    for ( cnt = 0; cnt < 10; cnt++ )
+    for ( uint8_t cnt = 0; cnt < 10; cnt++ )
     {
         log_printf( &logger, "       Volume Up       \r\n" );
 
@@ -95,7 +96,7 @@ void application_task ( void )
 
     Delay_ms( 5000 );
 
-    for ( cnt = 0; cnt < 10; cnt++ )
+    for ( uint8_t cnt = 0; cnt < 10; cnt++ )
     {
         log_printf( &logger, "       Volume Down       \r\n" );
 

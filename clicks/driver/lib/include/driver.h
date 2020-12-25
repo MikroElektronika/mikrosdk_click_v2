@@ -74,7 +74,7 @@
  * \defgroup conf  Conf
  * \{
  */
-#define PULSE_WIDTH  50
+#define PULSE_WIDTH  3000
 #define ENABLE_IN  0
 #define DISABLE_IN  1
 /** \} */

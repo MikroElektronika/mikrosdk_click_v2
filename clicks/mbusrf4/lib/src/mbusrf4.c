@@ -38,7 +38,7 @@
 
 // ---------------------------------------------- PRIVATE FUNCTION DECLARATIONS 
 
-static uint8_t calc_checksum ( uint8_t *crc_buff, uint8_t n_bytes );
+static void calc_checksum ( uint8_t *crc_buff, uint8_t n_bytes );
 
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
@@ -139,31 +139,51 @@ uint8_t mbusrf4_get_state_ind ( mbusrf4_t *ctx )
 
 void mbusrf4_send_command ( mbusrf4_t *ctx, uint8_t command, uint8_t length, uint8_t *payload_buff )
 {
-    uint8_t cnt = 0;
-    uint8_t crc_data;
-    uint8_t crc_number = 3;
-    uint8_t crc_buffer[ 50 ] = { 0 };
+    uint8_t crc_buf[ 255 ] = { 0 };
+    uint8_t crc_cnt = 3;
     
-    crc_buffer[ 0 ] = MBUSRF4_HEADER;
-    crc_buffer[ 1 ] = command;
-    crc_buffer[ 2 ] = length;
-
-    mbusrf4_generic_write( ctx, crc_buffer, 3 );
-
-    for ( cnt = 0; cnt < length; cnt++ )
+    crc_buf[ 0 ] = MBUSRF4_HEADER;
+    crc_buf[ 1 ] = command;
+    crc_buf[ 2 ] = length;
+    
+    for ( uint8_t cnt = 0; cnt < length; cnt++ )
     {
-        mbusrf4_generic_write( ctx, &payload_buff[ cnt ], 1 );
-        crc_buffer[ cnt + 3 ] = payload_buff[ cnt ];
-        crc_number++;
+        crc_buf[ crc_cnt ] = *payload_buff;
+        payload_buff++;
+        crc_cnt++;
     }
+    
+    calc_checksum( crc_buf, crc_cnt );
+    crc_cnt++;
+    
+    mbusrf4_generic_write( ctx, crc_buf, crc_cnt );
+}
 
-    crc_data = calc_checksum( crc_buffer, crc_number );
-    mbusrf4_generic_write( ctx, &crc_data, 1 );
+void mbusrf4_transmit_data ( mbusrf4_t *ctx, uint8_t *tx_buf, uint8_t tx_len )
+{
+    uint8_t crc_buf[ 255 ] = { 0 };
+    uint8_t crc_cnt = 3;
+    
+    crc_buf[ 0 ] = MBUSRF4_HEADER;
+    crc_buf[ 1 ] = MBUSRF4_CMD_TX_MSG;
+    crc_buf[ 2 ] = tx_len;
+    
+    for ( uint8_t cnt = 0; cnt < tx_len; cnt++ )
+    {
+        crc_buf[ crc_cnt ] = *tx_buf;
+        tx_buf++;
+        crc_cnt++;
+    }
+    
+    calc_checksum( crc_buf, crc_cnt );
+    crc_cnt++;
+    
+    mbusrf4_generic_write( ctx, crc_buf, crc_cnt );
 }
 
 // ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
 
-static uint8_t calc_checksum ( uint8_t *crc_buff, uint8_t n_bytes )
+static void calc_checksum ( uint8_t *crc_buff, uint8_t n_bytes )
 {
     uint8_t cnt;
     uint8_t crc_data = 0;
@@ -173,7 +193,7 @@ static uint8_t calc_checksum ( uint8_t *crc_buff, uint8_t n_bytes )
         crc_data ^= crc_buff[ cnt ];
     }
 
-    return crc_data;
+    crc_buff[ n_bytes ] = crc_data;
 }
 
 // ------------------------------------------------------------------------- END

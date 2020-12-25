@@ -4,6 +4,7 @@
  * 
  * # Description
  * The click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over SPI interface.
+ * In this example we have used an 8x8 click board connected to a SPI Isolator click board. 
  *
  * The demo application is composed of two sections :
  * 
@@ -11,10 +12,7 @@
  * Initialization driver enables - SPI, set default configuration, also write log.
  * 
  * ## Application Task  
- * This is an example which demonstrates the use of SPI Isolator Click board.
-    In this example, we measured pressure and temperature data from the DPS310 sensor on Pressure 3 click board.
-    Results are being sent to the Usart Terminal where you can track their changes.
-    All data logs write on usb uart changes for every 3 sec.
+ * Controls an 8x8 click board and displays the steps on UART Terminal.
  * 
  * \author MikroE Team
  *
@@ -29,20 +27,6 @@
 
 static spiisolator_t spiisolator;
 static log_t logger;
-
-/*static float pressure;
-static float temperature;
-static char deg_cel[ 4 ];
-
-static int16_t coeff_C0;
-static int16_t coeff_C1;
-static int32_t coeff_C00;
-static int32_t coeff_C10;
-static int16_t coeff_C01;
-static int16_t coeff_C11;
-static int16_t coeff_C20;
-static int16_t coeff_C21;
-static int16_t coeff_C30;*/
 
 uint8_t demo_string[ 11 ] = { ' ', '-', 'M', 'i', 'k', 'r', 'o', 'E', '-', ' ', 0 };
 uint8_t demo_img_on [ 8 ] = { 0x08, 0x1c, 0x36, 0x22, 0x08, 0x1c, 0x36, 0x22 };
@@ -182,6 +166,7 @@ void c8x8_display_string ( spiisolator_t *ctx, char *p_array )
          }
          col = 8;
          position++;
+         Delay_100ms( );
      }
 }
 
@@ -216,6 +201,28 @@ void c8x8_display_image ( spiisolator_t *ctx, uint8_t *p_image )
     }
 }
 
+void c8x8_display_refresh ( spiisolator_t *ctx )
+{
+   uint8_t cnt;
+
+   for ( cnt = 1; cnt < 9; cnt++ )
+   {
+        spiisolator_write_cmd( ctx, cnt, 0x00 );
+   }
+}
+
+void c8x8_default_cfg ( spiisolator_t *ctx )
+{
+    // Click default configuration
+
+    spiisolator_write_cmd( ctx, 0x09, 0x00 ); // decode mode
+    spiisolator_write_cmd( ctx, 0x0A, 0x07 ); // intensity
+    spiisolator_write_cmd( ctx, 0x0B, 0x07 ); // scan limit
+    spiisolator_write_cmd( ctx, 0x0C, 0x01 ); // normal operation mode
+
+    c8x8_display_refresh( ctx );
+}
+
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
@@ -236,14 +243,14 @@ void application_init ( void )
     spiisolator_cfg_setup( &cfg );
     SPIISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     spiisolator_init( &spiisolator, &cfg );
+    
+    c8x8_default_cfg( &spiisolator );
 
     Delay_100ms( );
 }
 
 void application_task ( void )
 {    
-    //  Task implementation.
-
     log_info( &logger, "> Display Character ..." );
     c8x8_display_byte( &spiisolator, demo_char );
     Delay_ms( 1000 );

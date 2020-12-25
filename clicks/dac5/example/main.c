@@ -9,13 +9,13 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes driver init, tests communication and configures device for measureing
+ * Initializes driver init, tests communication and configures device for measuring
  *
  * ## Application Task
- * Sends 4 different values to one output and prints expected measurement
+ * Sets the channel H with different values and logs the expected output on USB UART
  *
- * *note:*
- * Values that are tested and expected are values for Vref on 2.048
+ * ## NOTE
+ * In order to improve the accuracy, measure the voltage on the click board VrefIN SEL jumper and set it as VREF below.
  * 
  * \author Luka Filipovic
  *
@@ -52,52 +52,34 @@ void application_init ( void )
     DAC5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     dac5_init( &dac5, &cfg );
 
-    if ( dac5_get_device_id( &dac5 ) == DAC5_DEVICE_ID )
+    if ( dac5_get_device_id( &dac5 ) != DAC5_DEVICE_ID )
     {
-        log_printf( &logger,"DEVICE READY\r\n" );
-    }
-    else
-    {
-        log_printf( &logger, "DEVICE NOT READY\r\n" );
+        log_printf( &logger, "ERROR - DEVICE IS NOT READY\r\n" );
+        log_printf( &logger, "Please check the onboard jumpers position.\r\n" );
         for ( ; ; );
     }
 
     dac5_config( &dac5, DAC5_CONFIG_GLOBAL_ENABLED );
-    log_printf( &logger, "CONFIGURATION COMPLETE\r\n" );
+    log_printf( &logger, "The click board is configured.\r\n" );
 
-    log_printf( &logger, "***** APP INIT *****\r\n" );
-    log_printf( &logger, "_________________________________________\r\n" );
     Delay_ms( 100 );
 }
 
 void application_task ( void )
 {
-    uint16_t sender[ 4 ] = { 0x0118, 0x0FF0, 0x0AAC, 0x0DD4 };
-    uint16_t expected[ 4 ] = { 140, 2030, 1360, 1760 };
-    uint8_t end_count = 4;
-    uint8_t cnt;
-
-    for ( cnt = 0; cnt < end_count; cnt++ )
+    for ( uint16_t cnt = DAC5_MIN_DATA; cnt < DAC5_MAX_DATA; cnt += 500 )
     {
-        if ( dac5_send_data( &dac5, DAC5_REG_DAC_H_DATA, sender[ cnt ] ) == DAC5_ERROR )
+        if ( dac5_send_data( &dac5, DAC5_REG_DAC_H_DATA, cnt ) == DAC5_ERROR )
         {
-            log_printf( &logger, "-ERROR SENDING DATA\r\n" );
+            log_printf( &logger, "ERROR SENDING DATA\r\n" );
         }
         else
         {
-            log_printf( &logger, "Sending : %#06X\r\n", sender[ cnt ] );
-            log_printf( &logger, "Expected return around : %d mV\r\n", expected[ cnt ] );
+            log_printf( &logger, "Expected output on channel H:\t %d mV\r\n", ( uint16_t )( ( ( float ) cnt / DAC5_MAX_DATA ) * dac5.vref ) );
         }
-        Delay_ms ( 5000 );
-        dac5_clear( &dac5 );
-        log_printf( &logger,"Clearing output...\r\n" );
-        log_printf( &logger,"...........................................\r\n" );
+        log_printf( &logger,"------------------------------------\r\n" );
         Delay_ms ( 2000 );
     }
-
-    log_printf( &logger,"___________________________________________________\r\n" );
-
-    Delay_ms ( 1000 );
 }
 
 void main ( void )

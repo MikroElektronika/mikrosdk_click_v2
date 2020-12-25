@@ -27,5 +27,6 @@
     "short_description": "BIG 7-SEG click is what you need if you want to add a seven-segment LED display to your project.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

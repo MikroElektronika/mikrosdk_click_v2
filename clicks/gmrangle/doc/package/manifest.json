@@ -27,5 +27,6 @@
     "short_description": "The GMR Angle Click is a Click board™ that features the TLI5012B E1000, which is a pre-calibrated 360° angle sensor that detects the orientation of a magnetic field, made by Infineon. The GMR Angle click is ideal for angular position sensing in industrial and consumer applications such as electrical commutated motor (e.g. BLDC), fans or pumps.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

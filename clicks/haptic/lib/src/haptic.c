@@ -34,19 +34,22 @@ void haptic_cfg_setup ( haptic_cfg_t *cfg )
 
     cfg->scl = HAL_PIN_NC;
     cfg->sda = HAL_PIN_NC;
+    cfg->pwm = HAL_PIN_NC;
     
     // Additional gpio pins
 
     cfg->cs  = HAL_PIN_NC;
-    cfg->pwm = HAL_PIN_NC;
 
     cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
     cfg->i2c_address = HAPTIC_I2C_ADDRESS;
+    
+    cfg->dev_pwm_freq   = 5000;
 }
 
 HAPTIC_RETVAL haptic_init ( haptic_t *ctx, haptic_cfg_t *cfg )
 {
-     i2c_master_config_t i2c_cfg;
+    i2c_master_config_t i2c_cfg;
+    pwm_config_t pwm_cfg;
 
     i2c_master_configure_default( &i2c_cfg );
     i2c_cfg.speed  = cfg->i2c_speed;
@@ -62,11 +65,23 @@ HAPTIC_RETVAL haptic_init ( haptic_t *ctx, haptic_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
+//     Only when the click board is in PWM interface mode
+    
+//     pwm_configure_default( &pwm_cfg );
+// 
+//     pwm_cfg.pin      = cfg->pwm;
+//     pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
+// 
+//     ctx->pwm_freq = cfg->dev_pwm_freq;
+//     
+//     pwm_open( &ctx->pwm, &pwm_cfg );
+//     pwm_set_freq( &ctx->pwm, pwm_cfg.freq_hz );
+    
     // Output pins 
 
     digital_out_init( &ctx->cs, cfg->cs );
-    digital_out_init( &ctx->pwm, cfg->pwm );
 
     return HAPTIC_OK;
 }
@@ -585,6 +600,21 @@ void haptic_set_sequence ( haptic_t *ctx, uint8_t temp_data )
 void haptic_enable_ac_coulping ( haptic_t *ctx )
 {
     haptic_write_byte( ctx, HAPTIC_REG_CONTROL1, 0xB3 );
+}
+
+void haptic_set_duty_cycle ( haptic_t *ctx, float duty_cycle )
+{
+    pwm_set_duty( &ctx->pwm, duty_cycle ); 
+}
+
+void haptic_pwm_stop ( haptic_t *ctx )
+{
+    pwm_stop( &ctx->pwm ); 
+}
+
+void haptic_pwm_start ( haptic_t *ctx )
+{
+    pwm_start( &ctx->pwm ); 
 }
 // ------------------------------------------------------------------------- END
 

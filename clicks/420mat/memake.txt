@@ -1,5 +1,5 @@
 type: subdirs
-project: T420ma
+project: C420mat
 
 subdirs: {
     lib

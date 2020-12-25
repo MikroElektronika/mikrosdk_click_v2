@@ -27,5 +27,6 @@
     "short_description": "IrDA click is a compact and easy solution for adding infrared communication to your device.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.2"
+    "version": "2.0.0.3"
 }
+

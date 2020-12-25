@@ -79,6 +79,16 @@
 /** \} */
 
 /**
+ * \defgroup vref Vref
+ * \{
+ */
+#define DAC5_VREF_3300MV            3300
+#define DAC5_VREF_5000MV            5000
+#define DAC5_VREF_2048MV            2048
+#define DAC5_VREF_1024MV            1024
+/** \} */
+
+/**
  * \defgroup registers Registers
  * \{
  */
@@ -132,8 +142,8 @@
  * \defgroup data_limiter Data limiter
  * \{
  */
-#define DAC5_MIN_DATA                     0x0004
-#define DAC5_MAX_DATA                     0x0FFC
+#define DAC5_MIN_DATA                     0x0000
+#define DAC5_MAX_DATA                     0x0FFF
 /** \} */
 
 /**
@@ -176,6 +186,7 @@ typedef struct
     // ctx variable 
 
     uint8_t slave_address;
+    uint16_t vref;
 
 } dac5_t;
 

@@ -150,7 +150,8 @@
  * \defgroup driver Driver define
  * \{
  */
-#define DRV_RX_BUFFER_SIZE 500
+#define DRV_RX_BUFFER_SIZE 100
+#define DRV_TX_BUFFER_SIZE 100
 /** \} */
 
 /** \} */ // End group macro 
@@ -178,7 +179,7 @@ typedef struct
     uart_t uart;
 
     char uart_rx_buffer[ DRV_RX_BUFFER_SIZE ];
-    char uart_tx_buffer[ DRV_RX_BUFFER_SIZE ];
+    char uart_tx_buffer[ DRV_TX_BUFFER_SIZE ];
 
 } ble3_t;
 
@@ -241,26 +242,21 @@ void ble3_cfg_setup ( ble3_cfg_t *cfg );
 BLE3_RETVAL ble3_init ( ble3_t *ctx, ble3_cfg_t *cfg );
 
 /**
- * @brief Click Default Configuration function.
- *
- * @param ctx  Click object.
- *
- * @description This function executes default configuration for Ble3 click.
+ * @brief Generic write function.
+ * @param ble3 Click object.
+ * @param data_buf Data buffer for sends.
+ * @param len Number of bytes for sends.
  */
-void ble3_default_cfg ( ble3_t *ctx );
+void ble3_generic_write ( ble3_t *ctx, char *data_buf, uint16_t len );
 
 /**
  * @brief Generic read function.
- *
- * @param ctx       Click object.
- * @param data_buf  Buffer of data to be read.
- * @param max_len   Max length of data that can be read.
- *
- * @returns Nubmer of read data.
- *
- * @description This function read specific number of data using uart_read function.
+ * @param ble3 Click object.
+ * @param data_buf Data buffer for read data.
+ * @param max_len The maximum length of data that can be read.
+ * @return Number of reads data.
  */
-int16_t ble3_generic_read ( ble3_t *ctx, char *data_buf, uint16_t max_len );
+int32_t ble3_generic_read ( ble3_t *ctx, char *data_buf, uint16_t max_len );
 
 
 #ifdef __cplusplus

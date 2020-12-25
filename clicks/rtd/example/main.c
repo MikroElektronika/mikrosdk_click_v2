@@ -40,7 +40,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -63,7 +63,7 @@ void application_task ( void )
 
     log_printf( &logger, "Current temperature: %.2f \r\n", converted_value );
 
-    Delay_ms( 1000 );
+    Delay_ms( 300 );
 }
 
 void main ( void )

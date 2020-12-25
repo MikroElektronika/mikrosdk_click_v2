@@ -27,5 +27,6 @@
     "short_description": "This application change the output voltage every 5 seconds",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

@@ -64,15 +64,15 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example gets data when IR diode (LEDX2) is enabled, and after that gets data.
-> Repeats operation 10 times and then calculates the average value for both results.
+> This application collects data from the sensor, calculates it and then logs the result.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes the driver and performs the device configuration which puts Time Slot A 
-> in enabled mode and LEDX2 (IR diode) to active state. 
+> Initializes driver and performs the device configuration which puts Time Slot A
+> in enabled mode and LEDX2 (IR diode) to active state.  Before the device configuration, the
+> SW reset will be performed and in this way we will put the registers in initial state.
 
 ```c
 
@@ -83,8 +83,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -100,13 +101,13 @@ void application_init ( void )
 
 ### Application Task
 
-> Gets data from the sensor and logs on serial plot as graphic view.
+> Logs PD1-PD4 data on USB UART
 
 ```c
 
 void application_task ( void )
 {
-    oxim_plot_display();
+    oxim_logs_results();
 }  
 
 ```

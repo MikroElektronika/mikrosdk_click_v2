@@ -41,7 +41,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -81,21 +81,21 @@ void application_task ( void )
     c6dofimu11_read_mag ( &c6dofimu11, &mag_data );
     Delay_ms( 10 );
 
-    log_printf( &logger, " Accel X : %d g\r\n", accel_data.x  );
+    log_printf( &logger, " Accel X : %.2f g\r\n", accel_data.x  );
 
-    log_printf( &logger, " Accel Y : %d g\r\n", accel_data.y  );
+    log_printf( &logger, " Accel Y : %.2f g\r\n", accel_data.y  );
 
-    log_printf( &logger, " Accel Z : %d g\r\n", accel_data.z  );
+    log_printf( &logger, " Accel Z : %.2f g\r\n", accel_data.z  );
 
     
     log_printf( &logger, "\r\n" );
 
     
-    log_printf( &logger, " Mag X : %d uT\r\n", mag_data.x  );
+    log_printf( &logger, " Mag X : %.2f uT\r\n", mag_data.x  );
 
-    log_printf( &logger, " Mag Y : %d uT\r\n", mag_data.y  );
+    log_printf( &logger, " Mag Y : %.2f uT\r\n", mag_data.y  );
     
-    log_printf( &logger, " Mag Z : %d uT\r\n", mag_data.z  );
+    log_printf( &logger, " Mag Z : %.2f uT\r\n", mag_data.z  );
     
  
     log_printf( &logger, "--------------------------\r\n" );

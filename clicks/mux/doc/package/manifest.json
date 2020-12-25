@@ -25,8 +25,12 @@
     "name": "mikroe.click.mux",
     "product_link": "https://www.mikroe.com/mux-click",
     "short_description": "MUX click is a Click board™ that switches one of the four differential inputs to one differential output. It employs the MUX509, a modern CMOS analog multiplexing integrated circuit, produced by Texas Instruments.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.2"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2595
+    ],
+    "version": "2.0.0.5"
 }
 

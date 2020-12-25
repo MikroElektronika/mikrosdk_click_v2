@@ -72,6 +72,7 @@ NDIRCO2_RETVAL ndirco2_init ( ndirco2_t *ctx, ndirco2_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Input pins
 
@@ -95,7 +96,7 @@ void ndirco2_generic_write ( ndirco2_t *ctx, uint8_t reg, uint8_t *data_buf, uin
         tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
     }
     
-    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );   
+    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );  
 }
 
 void ndirco2_generic_read ( ndirco2_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
@@ -120,6 +121,7 @@ uint8_t ndirco2_read_register ( ndirco2_t *ctx, uint8_t register_address, uint16
     ret_val <<= 8;
     ret_val |= buff_data[ 0 ];
     *data_out = ret_val;
+    Delay_1ms(  );
     return 0;
 }
 
@@ -130,7 +132,8 @@ uint8_t ndirco2_write_register ( ndirco2_t *ctx, uint8_t register_address, uint8
         return 1;
     }
     ndirco2_generic_write( ctx, register_address, &transfer_data, 1 );
-    Delay_10ms( );
+    Delay_100ms( );
+    Delay_100ms( );
     return 0;
 }
 
@@ -205,7 +208,7 @@ void ndirco2_reset ( ndirco2_t *ctx )
 
     ndirco2_write_register( ctx, NDIRCO2_SOFTWARE_RESET_REG, temp );
     Delay_100ms( );
-    ndirco2_read_register( ctx, 0x00, &temp );
+    ndirco2_read_register( ctx, NDIRCO2_SOFTWARE_RESET_REG, &temp );
     while ( temp )
     {
         ndirco2_read_register( ctx, NDIRCO2_SOFTWARE_RESET_REG, &temp );

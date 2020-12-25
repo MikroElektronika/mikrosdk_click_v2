@@ -25,8 +25,12 @@
     "name": "mikroe.click.loadcell",
     "product_link": "https://www.mikroe.com/load-cell-click",
     "short_description": "Load cell click is a weight measurement click which utilizes a load cell element, in order to precisely measure the weight of an object. The Load Cell click can be used with the strain gauge type of load cells and can measure up to ±20V or ±40V of differential voltage. ",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2410
+    ],
+    "version": "2.0.0.4"
 }
 

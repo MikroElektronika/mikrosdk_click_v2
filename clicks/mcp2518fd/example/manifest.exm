@@ -1,8 +1,0 @@
-{
-    "name": "MCP2518FD Click",
-    "description": "MCP2518FD click is a complete CAN solution, which can be used as a control node in a CAN network. The Click board™ is used to provide the microcontroller (MCU) with unrestricted access to the CAN network bus. MCP2518FD click is equipped with both the control logic and the physical interface ICs.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","MCP2518FD, ATA6563"],
-    "category" : ["CAN"] 
-}

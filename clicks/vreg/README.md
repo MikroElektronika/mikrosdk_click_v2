@@ -70,24 +70,29 @@ void application_init ( void )
     log_cfg_t log_cfg;
     vreg_cfg_t cfg;
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
+    //  Logger initialization.
+
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
+
+    //  Click initialization.
 
     vreg_cfg_setup( &cfg );
     VREG_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     vreg_init( &vreg, &cfg );
 
     vreg_stop_measuring( &vreg );
-    log_printf( &logger, " Stop  Measuring " );
+    log_printf( &logger, " Stop Measuring \r\n" );
     Delay_1sec( );
 
-    log_printf( &logger, " Set Out Voltage " );
+    log_printf( &logger, " Set Out Voltage \r\n" );
     vreg_set_out_voltage( &vreg, 600 );
     Delay_1sec( );
 
-    log_printf( &logger, " Start Measuring " );
+    log_printf( &logger, " Start Measuring \r\n" );
     vreg_start_measuring( &vreg );
     Delay_1sec( );
 }
@@ -106,22 +111,26 @@ void application_init ( void )
 void application_task ( void )
 {
     ch_reg = vreg_get_adc( &vreg, VREG_CHANNEL_0 );
+    voltage = ch_reg / 182.0;
    
-    log_printf( &logger, " CH Reg  : %d \r\n", ch_reg );
+    log_printf( &logger, " CH Reg  : %.2f V\r\n", voltage );
     
     Delay_10ms( );
 
-    ch_in = vreg_get_adc( &vreg, VREG_CHANNEL_1 );
+    ch_in = vreg_get_adc( &vreg, VREG_CHANNEL_2 );
+    voltage = ch_in / 182.0;
     
-    log_printf( &logger, " CH In   : %d \r\n ", ch_in );
+    log_printf( &logger, " CH In   : %.2f V\r\n ", voltage );
     
     Delay_10ms( );
-
-    ch_out = vreg_get_adc( &vreg, VREG_CHANNEL_2 );
     
-    log_printf( &logger, " CH Out  : %d \r\n", ch_out );
+    ch_out = vreg_get_adc( &vreg, VREG_CHANNEL_1 );
+    voltage = ch_out / 182.0;
+    
+    log_printf( &logger, " CH Out  : %.2f  V\r\n", voltage );
     
     Delay_1sec( );
+    log_printf( &logger, " ---------------------- \r\n" );
 }  
 
 ```

@@ -42,7 +42,7 @@ void proximity2_cfg_setup ( proximity2_cfg_t *cfg )
 
     cfg->int_pin = HAL_PIN_NC;
 
-    cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
+    cfg->i2c_speed = I2C_MASTER_SPEED_FULL; 
     cfg->i2c_address = PROXIMITY2_I2C_SLAVE_ADDR;
 }
 
@@ -69,8 +69,6 @@ PROXIMITY2_RETVAL proximity2_init ( proximity2_t *ctx, proximity2_cfg_t *cfg )
 
     digital_in_init( &ctx->int_pin, cfg->int_pin );
  
-	// digital_in_read( &ctx->int_pin );
-
     return PROXIMITY2_OK;
 
 }
@@ -125,8 +123,6 @@ uint8_t proximity2_read_prox ( proximity2_t *ctx )
     
     result = buf[ 0 ];
     
-    result = ~result;
-
     return result;
 }
 
@@ -140,8 +136,14 @@ uint16_t proximity2_read_als ( proximity2_t *ctx )
     result = buf[ 0 ];
     result <<= 8;
     result |= buf[ 1 ];
+    result &= 0x3FFF;
 
     return result;
+}
+
+uint8_t proximity2_get_int_pin_status ( proximity2_t *ctx )
+{
+    return digital_in_read( &ctx->int_pin );
 }
 
 // ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS

@@ -17,11 +17,6 @@
  * If it did, it writes out data regarding that event via UART.
  * In the second test mode, X and Y coordinates are being read and logged via UART.
  * 
- * *note:* 
- * After reading data or status registers, 
- * there is a certain time which must pass until the device is ready again.
- * The device is ready for a new conversion and reading after the Ready pin is LOW.
- * 
  * \author MikroE Team
  *
  */
@@ -31,18 +26,21 @@
 #include "log.h"
 #include "swipeswitch.h"
 
+#define SWIPESWITCH_GESTURE_MODE        0    
+#define SWIPESWITCH_POSITION_MODE       1                
+
 // ------------------------------------------------------------------ VARIABLES
 
 static swipeswitch_t swipeswitch;
 static log_t logger;
 
-static uint8_t x_coordinate     = 0;
-static uint8_t y_coordinate     = 0;
+static uint8_t x_coordinate = 0;
+static uint8_t y_coordinate = 0;
 static uint8_t old_x_coordinate = 0;
 static uint8_t old_y_coordinate = 0;
-static uint8_t events           = 0;
-static uint8_t gestures         = 0;
-static uint8_t display_mode     = 1;
+static uint8_t events = 0;
+static uint8_t gestures = 0;
+static uint8_t display_mode;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -64,15 +62,24 @@ void application_init ( void )
     swipeswitch_cfg_setup( &cfg );
     SWIPESWITCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     swipeswitch_init( &swipeswitch, &cfg );
-    swipeswitch_default_cfg( &swipeswitch );
     Delay_ms( 300 );
+    
+    display_mode = SWIPESWITCH_GESTURE_MODE;
+    
+    if ( display_mode == SWIPESWITCH_GESTURE_MODE)
+    {
+        log_printf( &logger, "<<< GESTURE MODE >>> \r\n" ); 
+    }
+    else if ( display_mode == SWIPESWITCH_POSITION_MODE)
+    {
+        log_printf( &logger, "<<< POSITION MODE >>> \r\n" ); 
+    }
 }
 
 void application_task ( void )
 {
-    if ( display_mode == 0)
+    if ( display_mode == SWIPESWITCH_GESTURE_MODE)
     {
-
         events = swipeswitch_read_events( &swipeswitch );
         gestures = swipeswitch_read_gestures( &swipeswitch );
 
@@ -102,16 +109,14 @@ void application_task ( void )
             log_printf( &logger,"TAP \r\n" );
         }
     }
-    else
+    else if ( display_mode == SWIPESWITCH_POSITION_MODE)
     {
-        while ( swipeswitch_wait_for_ready( &swipeswitch ) != 0);
         x_coordinate = swipeswitch_read_x_coordinate( &swipeswitch );
-        while ( swipeswitch_wait_for_ready( &swipeswitch ) != 0);
         y_coordinate = swipeswitch_read_y_coordinate( &swipeswitch );
 
         if ( ( x_coordinate != old_x_coordinate) || ( y_coordinate != old_y_coordinate ) )
         {
-            log_printf( &logger,"Coordinate : (%d , %d)", x_coordinate, y_coordinate );
+            log_printf( &logger,"Coordinate : (%u , %u)\r\n", (uint16_t) x_coordinate, (uint16_t) y_coordinate );
 
             old_x_coordinate = x_coordinate;
             old_y_coordinate = y_coordinate;

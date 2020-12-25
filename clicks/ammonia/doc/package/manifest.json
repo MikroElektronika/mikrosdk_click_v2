@@ -27,5 +27,7 @@
     "short_description": "Ammonia Click is an Ammonia detection (NH3) sensor, based on the MQ-137 gas sensor. This gas sensor has a sensitive layer made of SnO2, which changes its resistance when exposed to ammonia. ",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.2"
 }
+
+

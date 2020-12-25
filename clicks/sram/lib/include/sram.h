@@ -209,6 +209,22 @@ void sram_generic_transfer
 );
 
 /**
+ * @brief Generic write function.
+ *
+ * @param ctx          Click object.
+ * @param wr_buf       Write data buffer
+ * @param wr_len       Number of byte in write data buffer
+ *
+ * @description Generic SPI write, for sending packages
+ */
+void sram_generic_write 
+( 
+    sram_t *ctx, 
+    uint8_t *wr_buf, 
+    uint16_t wr_len
+);
+
+/**
  * @brief Generic write byte of data funcion.
  *
  * @param ctx            Click object.

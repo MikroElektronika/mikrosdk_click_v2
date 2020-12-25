@@ -25,7 +25,13 @@
     "name": "mikroe.click.heartrate9",
     "product_link": "https://www.mikroe.com/heart-rate-9-click",
     "short_description": "The Heart Rate 9 click is a Click board™ which features PIC16F1779 8-bit MCU and SFH 7060 heart rate and pulse oximetry monitoring sensor.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.0"
+    "_type": "mikroSDK Library",
+    "related_projects": [ 2958 ],
+    "version": "2.0.0.4"
 }
+
+
+
+

@@ -64,9 +64,9 @@ void c6dofimu2_cfg_setup ( c6dofimu2_cfg_t *cfg )
     cfg->i2c_address = C6DOFIMU2_I2C_ADDR;
     cfg->spi_speed   = 100000; 
     cfg->spi_mode    = 0;
-    cfg->sel         = C6DOFIMU2_MASTER_I2C;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
      
+    cfg->sel         = C6DOFIMU2_MASTER_I2C;
 }
 
 C6DOFIMU2_RETVAL c6dofimu2_init ( c6dofimu2_t *ctx, c6dofimu2_cfg_t *cfg )
@@ -117,6 +117,7 @@ C6DOFIMU2_RETVAL c6dofimu2_init ( c6dofimu2_t *ctx, c6dofimu2_cfg_t *cfg )
 
         i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
         i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+        i2c_master_set_timeout( &ctx->i2c, 0 );
 
         ctx->read_f  = c6dofimu2_i2c_read;
         ctx->write_f = c6dofimu2_i2c_write;
@@ -152,11 +153,13 @@ void c6dofimu2_default_cfg ( c6dofimu2_t *ctx, c6dofimu2_cfg_t *cfg )
     
     buf = C6DOFIMU2_CMD_ACCEL_NORMAL;
     c6dofimu2_generic_write( ctx, C6DOFIMU2_CFG_COMMAND, &buf, 1 );
-
+    Delay_10ms();
+    
     // Set Gyro in their normal state of performance
     
     buf = C6DOFIMU2_CMD_GYRO_NORMAL;
     c6dofimu2_generic_write( ctx, C6DOFIMU2_CFG_COMMAND, &buf, 1 );
+    Delay_100ms();
 }
 
 void c6dofimu2_generic_write ( c6dofimu2_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
@@ -171,12 +174,11 @@ void c6dofimu2_generic_read ( c6dofimu2_t *ctx, uint8_t reg, uint8_t *data_buf, 
 
 int16_t c6dofimu2_get_axis ( c6dofimu2_t *ctx, uint8_t adr_reg_low, uint8_t adr_reg_high )
 {
-    uint16_t result;
+    int16_t result;
     uint8_t buf_msb;
     uint8_t buf_lsb;
 
     c6dofimu2_generic_read( ctx, adr_reg_low, &buf_lsb, 1 );
-    Delay_100ms( );
     c6dofimu2_generic_read( ctx, adr_reg_high, &buf_msb, 1 );
 
     result = buf_msb;

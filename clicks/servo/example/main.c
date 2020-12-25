@@ -3,7 +3,7 @@
  * \brief Servo Click example
  * 
  * # Description
- * This app sets servo motor at three different positions 0, 90, 180.
+ * This app shows how the servo motor can be controled by the click board.
  *
  * The demo application is composed of two sections :
  * 
@@ -11,8 +11,7 @@
  * Initializes device.
  * 
  * ## Application Task  
- * The servo motor is set at three different positions 0, 90, 180 - every two second,
- * and reads current value witch motor spends in the moment when it runs to new position.
+ * The servo motor at CH1 rotate in clockwise and counter clockwise directions.
  * 
  * \author MikroE Team
  *
@@ -27,6 +26,7 @@
 
 static servo_t servo;
 static log_t logger;
+static int16_t cnt;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -54,20 +54,27 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    uint16_t current;
-
-    servo_set_position( &servo, SERVO_MOTOR_1, 0 );
-    Delay_ms( 2000 );
-    servo_set_position( &servo, SERVO_MOTOR_1, 90 );
-    Delay_ms( 1000 );
-    servo_set_position( &servo, SERVO_MOTOR_1, 180 );
-    Delay_ms( 2000 );
-    servo_set_position( &servo, SERVO_MOTOR_1, 90 );
-
-    current = setvo_get_current( &servo, SERVO_POSITIVE_CH0 );
-    log_printf( &logger, "Current - %u  mA \r\n", current );
-
-    Delay_ms( 1000 );
+    log_printf( &logger, "<<< Counter clockwise >>>\r\n" );
+    Delay_1sec( );
+    
+    for ( cnt = servo.min_pos; cnt <= servo.max_pos; cnt++ )
+    {
+        servo_set_position( &servo, SERVO_MOTOR_1, cnt );
+        log_printf( &logger, "Position : %u \r\n", ( uint16_t ) cnt );
+        Delay_10ms( );
+    }
+    
+    log_printf( &logger, "-----------------------------\r\n" );
+    
+    log_printf( &logger, "<<< Clockwise >>>\r\n" );
+    Delay_1sec( );
+    
+    for ( cnt = servo.max_pos; cnt >= servo.min_pos; cnt-- )
+    {
+        servo_set_position( &servo, SERVO_MOTOR_1, cnt );
+        log_printf( &logger, "Position : %u \r\n", ( uint16_t ) cnt );
+        Delay_10ms( );
+    }
 }
 
 void main ( void )

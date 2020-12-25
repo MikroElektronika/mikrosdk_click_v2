@@ -1,8 +1,0 @@
-{
-    "name": "MIC 3 Click",
-    "description": "The MIC 3 Click is a Click board™ that features the SSM2167-1RMZ-R7, a Microphone Preamplifier, from Analog Device. This Click board™ is a low voltage Microphone preamplifier with Variable compression and noise gating.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","SSM2167-1RMZ-R7"],
-    "category" : ["Microphone"] 
-}

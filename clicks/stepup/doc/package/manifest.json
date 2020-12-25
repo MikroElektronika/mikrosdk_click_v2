@@ -27,5 +27,7 @@
     "short_description": "Step Up Click is a fixed frequency DC-DC step-up (boost) regulator, which can be obtained from any low voltage input - such as NiCd, NiMH or one cell Li-Po/Li-Ion batteries.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.2"
 }
+
+

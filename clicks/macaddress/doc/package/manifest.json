@@ -27,6 +27,8 @@
     "short_description": "MAC Address click provides a unique node address for your application. It also has 1Kbit of writable EEPROM memory.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.3"
 }
+
+
 

@@ -27,5 +27,6 @@
     "short_description": "Cap Touch 2 click is a capacitive touch sensing Click board™ which features the CAP1166, an advanced touch/proximity sensor IC, packed with a range of different touch/proximity functionalities, allowing development of robust and aesthetically pleasing touch interfaces.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+

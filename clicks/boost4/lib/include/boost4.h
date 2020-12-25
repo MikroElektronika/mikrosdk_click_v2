@@ -127,29 +127,13 @@ typedef struct
     // static variable 
 
     uint32_t spi_speed;
-    uint8_t spi_mode;
+    spi_master_mode_t spi_mode;
     spi_master_chip_select_polarity_t cs_polarity;
 
 } boost4_cfg_t;
 
 /** \} */ // End types group
-// ------------------------------------------------------------------ CONSTANTS
-/**
- * \defgroup constants Constants
- * \{
- */
- 
- 
 
-/** \} */ // End constants group
-// ------------------------------------------------------------------ VARIABLES
-/**
- * \defgroup variable Variable
- * \{
- */
-
-
-/** \} */ // End variable group
 // ----------------------------------------------- PUBLIC FUNCTION DECLARATIONS
 
 /**
@@ -180,26 +164,6 @@ void boost4_cfg_setup ( boost4_cfg_t *cfg );
  * used for this click.
  */
 BOOST4_RETVAL boost4_init ( boost4_t *ctx, boost4_cfg_t *cfg );
-
-/**
- * @brief Generic transfer function.
- *
- * @param ctx          Click object.
- * @param wr_buf       Write data buffer
- * @param wr_len       Number of byte in write data buffer
- * @param rd_buf       Read data buffer
- * @param rd_len       Number of byte in read data buffer
- *
- * @description Generic SPI transfer, for sending and receiving packages
- */
-void boost4_generic_transfer 
-( 
-    boost4_t *ctx, 
-    uint8_t *wr_buf, 
-    uint16_t wr_len, 
-    uint8_t *rd_buf, 
-    uint16_t rd_len 
-);
 
 /**
  * @brief Enable device function 

@@ -33,7 +33,7 @@
 
 // ADC3 Multiplying Factor
 
-#define ADC3_MULTIP_FACTOR             3.3
+#define ADC3_MULTIP_FACTOR             2.048
 
 // ADC3 Result Calibrating Factor
 
@@ -167,9 +167,10 @@ int16_t adc3_read_measurement ( adc3_t *ctx, uint8_t channel, uint8_t resolution
         result  |= tmp_data[ 0 ];
         result <<= 8;
         result  |= tmp_data[ 1 ];
-        if( result > ADC3_DATA_RESULT_RATE_12 )
-        result   = ~result;
-        result  += 1;
+        if( result > ADC3_DATA_RESULT_RATE_12 ) {
+            result ^= 0xFFF;
+            result  = ~result;
+        }
     }
     else if ( resolution == ADC3_SAMPLE_RATE_14 )
     {
@@ -177,9 +178,10 @@ int16_t adc3_read_measurement ( adc3_t *ctx, uint8_t channel, uint8_t resolution
         result  |= tmp_data[ 0 ];
         result <<= 8;
         result  |= tmp_data[ 1 ];
-        if( result > ADC3_DATA_RESULT_RATE_14 )
-        result   = ~result;
-        result  += 1;
+        if( result > ADC3_DATA_RESULT_RATE_14 ) {
+            result ^= 0x3FFF;
+            result  = ~result;
+        }
     }
     else
     {
@@ -187,9 +189,10 @@ int16_t adc3_read_measurement ( adc3_t *ctx, uint8_t channel, uint8_t resolution
         result  |= tmp_data[ 0 ];
         result <<= 8;
         result  |= tmp_data[ 1 ];
-        if( result > ADC3_DATA_RESULT_RATE_16 )
-        result   = ~result;
-        result  += 1;
+        if( result > ADC3_DATA_RESULT_RATE_16 ) {
+            result ^= 0xFFFF;
+            result  = ~result;
+        }
     }
 
     return result;

@@ -1,8 +1,0 @@
-{
-    "name": "RS485 Isolator 2 Click",
-    "description": "RS485 Isolator 2 Click features ADM2867E a 5.7 kV rms signal and power isolated full duplex RS-485 transceiver.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","ADM2867E"],
-    "category" : ["RS485"] 
-}

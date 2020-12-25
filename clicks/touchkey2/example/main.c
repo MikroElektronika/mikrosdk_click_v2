@@ -53,43 +53,32 @@ void application_init ( void )
 void application_task ( void )
 {
     char tmp;
-    uint8_t rdyFlag;
 
     tmp = touchkey2_generic_single_read( &touchkey2 );
-    if (1 == rdyFlag)
+    if( tmp == 0x00 )
     {
-        if( tmp == 0x00 )
-        {
-            log_printf( &logger, "   Key released   %c\r\n" );
-            log_printf( &logger, "------------------- \r\n" );
-        }
-        else if( tmp == 0x01 )
-        {
-            log_printf( &logger, "   Key A pressed %c\r\n" );
-            log_printf( &logger, "------------------- \r\n" );
-        }
-        else if( tmp == 0x02 )
-        {
-            log_printf( &logger, "   Key B pressed %c\r\n" );
-            log_printf( &logger, "------------------- \r\n" );
-        }
-        else if( tmp == 0x04 )
-        {
-            log_printf( &logger, "   Key C pressed %c\r\n" );
-            log_printf( &logger, "------------------- \r\n" );
-        }
-        else if( tmp == 0x08 )
-        {
-            log_printf( &logger, "   Key D pressed \r\n" );
-            log_printf( &logger, "------------------- \r\n" );
-        }
-        else
-        {
-            log_printf( &logger, "   Error!!! \r\n  " );
-            touchkey2_target_reset( &touchkey2 );
-        }
-        
-        Delay_ms( 1000 );
+        log_printf( &logger, "   Key released\r\n" );
+        log_printf( &logger, "------------------- \r\n" );
+    }
+    else if( tmp == 0x01 )
+    {
+        log_printf( &logger, "   Key A pressed\r\n" );
+        log_printf( &logger, "------------------- \r\n" );
+    }
+    else if( tmp == 0x02 )
+    {
+        log_printf( &logger, "   Key B pressed\r\n" );
+        log_printf( &logger, "------------------- \r\n" );
+    }
+    else if( tmp == 0x04 )
+    {
+        log_printf( &logger, "   Key C pressed\r\n" );
+        log_printf( &logger, "------------------- \r\n" );
+    }
+    else if( tmp == 0x08 )
+    {
+        log_printf( &logger, "   Key D pressed \r\n" );
+        log_printf( &logger, "------------------- \r\n" );
     }
 }
 

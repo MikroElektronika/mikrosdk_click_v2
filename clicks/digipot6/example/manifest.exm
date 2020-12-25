@@ -1,8 +1,0 @@
-{
-    "name": "DIGI POT 6 Click",
-    "description": "DIGI POT 6 Click features the MCP41HVX1 family of devices which have dual power rails (analog and digital). The analog power rail allows high voltage on the resistor network terminal pins.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","MCP41HV51"],
-    "category" : ["Digital potentiometer"] 
-}

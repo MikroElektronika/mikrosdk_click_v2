@@ -136,14 +136,11 @@ uint16_t magneto_read_data ( magneto_t *ctx, uint16_t address_command )
     tx_buf[ 0 ] = ( uint8_t ) ( address_command >> 8 );
     tx_buf[ 1 ] = ( uint8_t ) ( address_command );
     
-//     magneto_generic_transfer( ctx, tx_buf, 2, rx_buf, 2 );
     
     spi_master_select_device( ctx->chip_select );
-//     Delay_1us();
     spi_master_write( &ctx->spi, tx_buf, 2 );
     spi_master_deselect_device( ctx->chip_select ); 
     spi_master_select_device( ctx->chip_select );
-//     Delay_1us();
     spi_master_read( &ctx->spi, rx_buf, 2 );
     spi_master_deselect_device( ctx->chip_select ); 
     

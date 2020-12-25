@@ -86,17 +86,17 @@ void application_task ( )
 
             if ( id_code[ cnt_val ] == I2CONEWIRE_WIRE_RESULT_OK )
             {
-                log_printf( &logger, "\r\n Channel %d : No device on the channel\r\n", cnt_chan );
+                log_printf( &logger, "\r\n Channel %d : No device on the channel\r\n", ( uint16_t )cnt_chan );
                 Delay_100ms( );
                 break;
             }
             else if ( chan_state )
             {
-                log_printf( &logger, " Channel %d : ID = 0x", cnt_chan );
+                log_printf( &logger, " Channel %d : ID = 0x", ( uint16_t )cnt_chan );
                 chan_state = 0;
             }
 
-            log_printf( &logger, "%d", id_code[ cnt_val ] );
+            log_printf( &logger, "%d", ( uint16_t )id_code[ cnt_val ] );
             Delay_100ms( );
         }
 

@@ -164,7 +164,9 @@ uint8_t pwrmeter2_read_reg ( pwrmeter2_t *ctx, uint8_t register_address, uint32_
     n_bytes = ( n_data * 3 ) + 1;
 
     spi_master_select_device( ctx->chip_select );
-    spi_master_write_then_read( &ctx->spi, buff_data_in, 1, buff_data_out, n_bytes );
+    spi_master_set_default_write_data( &ctx->spi, buff_data_in[ 0 ] );
+    spi_master_read( &ctx->spi, buff_data_out, n_bytes );
+    spi_master_set_default_write_data( &ctx->spi, PWRMETER2_DUMMY );
     spi_master_deselect_device( ctx->chip_select );  
 
     n_bytes = 1;
@@ -256,7 +258,9 @@ uint8_t pwrmeter2_read_conv_data ( pwrmeter2_t *ctx, uint32_t *data_ch_0, uint32
     buff_data_in[ 0 ] = PWRMETER2_CH0_ADC_DATA_REG | 0x41;
 
     spi_master_select_device( ctx->chip_select );
-    spi_master_write_then_read( &ctx->spi, buff_data_in, 1, buff_data_out, n_bytes );
+    spi_master_set_default_write_data( &ctx->spi, buff_data_in[ 0 ] );
+    spi_master_read( &ctx->spi, buff_data_out, n_bytes );
+    spi_master_set_default_write_data( &ctx->spi, PWRMETER2_DUMMY );
     spi_master_deselect_device( ctx->chip_select );  
     
     temp_1 = buff_data_out[ 1 ];

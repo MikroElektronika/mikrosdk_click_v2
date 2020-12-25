@@ -326,13 +326,6 @@ typedef struct
     uint32_t i2c_speed;
     uint8_t i2c_address_of_pca9685;
     uint8_t i2c_address_of_ltc2497;
-
-    uint8_t dev_min_pos;
-    uint8_t dev_max_pos;
-    uint16_t dev_vref;
-    uint16_t dev_low_res;
-    uint16_t dev_high_res;
-
 } servo_cfg_t;
 
 /** \} */ // End types group

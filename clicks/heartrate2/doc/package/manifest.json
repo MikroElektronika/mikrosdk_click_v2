@@ -27,5 +27,6 @@
     "short_description": "Heart Rate 2 Click is an add-on board based on MAXM86161 from Maxim Integrated a complete, integrated, optical data acquisition system, ideal for optical pulse oximetry and heart-rate detection applications. The optical readout has a low-noise signal conditioning analog front-end (AFE), including 19-bit ADC, an industry-lead ambient light cancellation (ALC) circuit, and a picket fence detect and replace algorithm.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

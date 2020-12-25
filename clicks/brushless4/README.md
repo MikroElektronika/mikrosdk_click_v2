@@ -77,8 +77,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -88,8 +89,11 @@ void application_init ( void )
     BRUSHLESS4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     brushless4_init( &brushless4, &cfg );
 
-    brushless4_pwm_start( &brushless4 );
-    Delay_ms( 100 );
+    brushless4_pwm_start( &brushless4 );  
+    brushless4_set_duty_cycle ( &brushless4, duty_cycle );  
+    Delay_ms( 1000 );
+    
+    log_printf( &logger, "---------------------- \r\n" );
 }
   
 ```
@@ -102,35 +106,31 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    for ( duty_cycle = 0; duty_cycle < brushless4.pwm_period;  )
+    brushless4_pwm_start( &brushless4 );
+    Delay_ms( 100 );
+    
+    log_printf( &logger, "    acceleration      \r\n" );
+    
+    for ( duty_cycle = 0.1; duty_cycle <= 1.0; duty_cycle += 0.1 )
     {
-        brushless4_set_duty_cycle( &brushless4, duty_cycle );
-        Delay_ms( 20 );
-        if ( duty_cycle > ( brushless4.pwm_period - 10 ) )
-        {
-            break;
-        }
-        else
-        {
-            duty_cycle += 10;
-        }
+        brushless4_set_duty_cycle ( &brushless4, duty_cycle );
+        log_printf( &logger," > " );
+        Delay_ms( 500 );
     }
 
-    for ( duty_cycle = brushless4.pwm_period; duty_cycle > 0;  )
+    log_printf( &logger,  "\r\n ---------------------- \r\n" ); 
+    log_printf( &logger, "    slowing down     \r\n" );
+    
+    for ( duty_cycle = 1.0; duty_cycle > 0; duty_cycle -= 0.1 )
     {
-        brushless4_set_duty_cycle( &brushless4, duty_cycle );
-        Delay_ms( 20 );
-        if ( duty_cycle < 10 )
-        {
-            break;
-        }
-        else
-        {
-            duty_cycle -= 10;
-        }
+        brushless4_set_duty_cycle ( &brushless4, duty_cycle );
+        log_printf( &logger," < " );
+        Delay_ms( 500 );
     }
     
-    Delay_ms( 1000 );
+    brushless4_pwm_stop( &brushless4 );
+    log_printf( &logger,  "\r\n ---------------------- \r\n" ); 
+    Delay_ms( 100 );
 }  
 
 ```

@@ -1,5 +1,5 @@
 {
-    "name": RTC 10 Click",
+    "name": "RTC 10 Click",
     "description": "RTC 10 Click is a real-time clock module which has an extremely low power consumption, allowing it to be used with a single button cell battery, for an extended period of time.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","mikrocpic"],

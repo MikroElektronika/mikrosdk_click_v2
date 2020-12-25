@@ -27,5 +27,6 @@
     "short_description": "Index Counter Click is a simple prototyping high precision Hall-Effect switch solution with direction detection.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

@@ -71,7 +71,7 @@
  * \defgroup default_freq Default frequency value
  * \{
  */
-#define BRUSHLESS_DEF_FREQ     50000
+#define BRUSHLESS_DEF_FREQ     5000
 /** \} */
 
 /** \} */ // End group macro 
@@ -84,7 +84,7 @@
 /**
  * @brief Analog data type 
  */
-typedef  uint16_t adc4_data_t;
+typedef  uint16_t brushless_data_t;
 
 /**
  * @brief Click ctx object definition.
@@ -202,7 +202,7 @@ void brushless_pwm_start ( brushless_t *ctx );
  *
  * @description This function read ADC data.
  */
-adc4_data_t brushless_generic_read ( brushless_t *ctx );
+brushless_data_t brushless_generic_read ( brushless_t *ctx );
 
 /**
  * @brief Spin motor clockwise function.

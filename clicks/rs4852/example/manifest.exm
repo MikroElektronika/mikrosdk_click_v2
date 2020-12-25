@@ -1,8 +1,0 @@
-{
-    "name": "RS485 2 Click",
-    "description": "RS485 2 click is an RS422/485 transceiver Click board™, which can be used as an interface between the TTL level UART and the RS422/485 communication bus.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","MAX3471"],
-    "category" : ["RS485"] 
-}

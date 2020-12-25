@@ -27,6 +27,7 @@
     "short_description": "This application is controls the speed DC motors.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+
 

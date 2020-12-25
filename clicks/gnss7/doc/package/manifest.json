@@ -25,7 +25,12 @@
     "name": "mikroe.click.gnss7",
     "product_link": "https://www.mikroe.com/gnss-7-click",
     "short_description": "Determine your current position with GNSS 7 click. It carries the NEO-M9N GNSS receiver module from u-blox.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.0"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        3209
+    ],
+    "version": "2.0.0.2"
 }
+

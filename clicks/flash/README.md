@@ -82,6 +82,13 @@ void application_init( void )
     flash_cfg_t flash_cfg;
     log_cfg_t log_cfg;
 
+    //  Logger initialization.
+    LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
+    log_init( &logger, &log_cfg );
+    log_info( &logger, "---- Application Init ----" );
+    
     //  Click initialization.
     flash_cfg_setup( &flash_cfg );
     FLASH_MAP_MIKROBUS( flash_cfg, MIKROBUS_1 );
@@ -91,14 +98,8 @@ void application_init( void )
     flash_reset( &flash );
     flash_default_cfg( &flash );
 
-    //  Logger initialization.
-    LOG_MAP_USB_UART( log_cfg );
-    log_cfg.baud = 57600;
-    log_init( &logger, &log_cfg );
-    log_write( &logger, "***  Flash Initialization Done.  ***",
-               LOG_FORMAT_LINE );
-    log_write( &logger, "************************************",
-               LOG_FORMAT_LINE );
+    log_printf( &logger, "***  Flash Initialization Done.  ***\r\n" );
+    log_printf( &logger, "************************************\r\n" );
 }
 
 ```
@@ -116,25 +117,23 @@ void application_task( void )
 {
     enter_data( "Mikroelektronika (MikroE)" );
 
-    log_write( &logger, "> Data content to be written: ", LOG_FORMAT_TEXT );
-    log_write( &logger, data_, LOG_FORMAT_LINE );
-    log_write( &logger, "> Data writing to memory...", LOG_FORMAT_LINE );
-    flash_write_page( &flash, FLASH_MEM_ADDR_FIRST_PAGE_START, data_, n_data );
-    log_write( &logger, "> Done.", LOG_FORMAT_LINE );
+    log_printf( &logger, "> Data content to be written: %s\r\n", data_buf );
+    log_printf( &logger, "> Data writing to memory...\r\n" );
+    flash_write_page( &flash, FLASH_MEM_ADDR_FIRST_PAGE_START, data_buf, n_data );
+    log_printf( &logger, "> Done.\r\n" );
 
-    memset( data_, 0, sizeof( data_ ) );
+    memset( data_buf, 0, sizeof( data_buf ) );
     process_wait( );
 
-    log_write( &logger, "> Data reading from memory...", LOG_FORMAT_LINE );
-    flash_read_page( &flash, FLASH_MEM_ADDR_FIRST_PAGE_START, data_, n_data );
-    log_write( &logger, "> Done.\r\n> Read data content: ", LOG_FORMAT_TEXT );
-    log_write( &logger, data_, LOG_FORMAT_LINE );
+    log_printf( &logger, "> Data reading from memory...\r\n" );
+    flash_read_page( &flash, FLASH_MEM_ADDR_FIRST_PAGE_START, data_buf, n_data );
+    log_printf( &logger, "> Done.\r\n> Read data content: %s\r\n", data_buf );
 
     process_wait( );
 
-    log_write( &logger, "> Sector erasing...", LOG_FORMAT_LINE );
+    log_printf( &logger, "> Sector erasing...\r\n" );
     flash_erase_sector( &flash, FLASH_MEM_ADDR_FIRST_SECTOR_START );
-    log_write( &logger, "> Done.", LOG_FORMAT_LINE );
+    log_printf( &logger, "> Done.\r\n" );
 
     process_wait( );
 }

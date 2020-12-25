@@ -8,14 +8,11 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initialization driver enable's - GPIO,
- * PWM initialization, set PWM duty cycle and PWM frequency, start PWM, enable the engine, 
- * and start write log.
+ * Initialization driver enable's - GPIO, PWM initialization
  * 
  * ## Application Task  
  * This is a example which demonstrates the use of Brushless 2 Click board.
  * Brushless 2 Click communicates with register via PWM interface.
- * It acceleration and slowing down in the counter clockwise direction of rotation ( CCW ).
  * Results are being sent to the Usart Terminal where you can track their changes.
  * 
  * \author MikroE Team
@@ -33,6 +30,7 @@ static brushless2_t brushless2;
 static log_t logger;
 
 static float duty_cycle = 0.5;
+static uint8_t flag = 0;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -54,49 +52,40 @@ void application_init ( void )
     brushless2_cfg_setup( &cfg );
     BRUSHLESS2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     brushless2_init( &brushless2, &cfg );
-
-    brushless2_set_duty_cycle( &brushless2, duty_cycle );
-    brushless2_pwm_start( &brushless2 );
-    Delay_1sec( );
-    log_printf( &logger, "--------------------- \r\n" );
+    
+    log_printf( &logger, "---------------------- \r\n" );
 }
 
 void application_task ( void )
-{
-    int32_t temp;
+{    
+    brushless2_invert_direction( &brushless2 );
+    Delay_ms( 6000 );
     
-    brushless2_counter_clockwise( &brushless2 );
-
-    log_printf( &logger, "  Counterclockwise    \r\n" );
-    log_printf( &logger, "--------------------- \r\n" );
+    brushless2_pwm_start( &brushless2 );
+    Delay_ms( 100 );
+    
     log_printf( &logger, "    acceleration      \r\n" );
-    Delay_1sec( );
     
-    for ( duty_cycle = 10; duty_cycle < brushless2.pwm_period; duty_cycle += 50 )
+    for ( duty_cycle = 0.1; duty_cycle <= 1.0; duty_cycle += 0.1 )
     {
         brushless2_set_duty_cycle ( &brushless2, duty_cycle );
-        log_printf( &logger," > \r\n" );
-        //Delay_1sec( );
-        //Delay_1sec( );
-        //Delay_1sec( );
+        log_printf( &logger," > " );
+        Delay_ms( 500 );
     }
 
-    log_printf( &logger, "---------------------\r\n" );
+    log_printf( &logger,  "\r\n ---------------------- \r\n" ); 
     log_printf( &logger, "    slowing down     \r\n" );
-    Delay_1sec( );
-
-    temp = brushless2.pwm_period;
     
-    for ( duty_cycle = temp; duty_cycle > 10; duty_cycle -= 50 )
+    for ( duty_cycle = 1.0; duty_cycle > 0.09; duty_cycle -= 0.1 )
     {
         brushless2_set_duty_cycle ( &brushless2, duty_cycle );
-        log_printf( &logger," < \r\n" );
-        //Delay_1sec( );
-        //Delay_1sec( );
-        //Delay_1sec( );
+        log_printf( &logger," < " );
+        Delay_ms( 500 );
     }
-
-    log_printf( &logger,  "--------------------- \r\n" ); 
+    
+    brushless2_pwm_stop( &brushless2 );
+    log_printf( &logger,  "\r\n ---------------------- \r\n" ); 
+    Delay_ms( 100 );
 }
 
 void main ( void )

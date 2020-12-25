@@ -25,8 +25,12 @@
     "name": "mikroe.click.fan3",
     "product_link": "https://www.mikroe.com/fan-3-click",
     "short_description": "Fan 3 click is the perfect choice for fan speed control and it can operate in seven discrete speed steps.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2238
+    ],
+    "version": "2.0.0.2"
 }
 

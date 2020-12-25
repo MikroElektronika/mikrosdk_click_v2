@@ -60,6 +60,7 @@ CHARGER2_RETVAL charger2_init ( charger2_t *ctx, charger2_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     return CHARGER2_OK;
 }

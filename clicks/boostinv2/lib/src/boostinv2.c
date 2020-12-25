@@ -91,6 +91,7 @@ BOOSTONV2_RETVAL boostinv2_init ( boostinv2_t *ctx, boostinv2_cfg_t *cfg )
 void boostinv2_default_cfg ( boostinv2_t *ctx ) 
 {
     digital_out_high( &ctx->csn );
+    digital_out_high( &ctx->cs );
 }
 
 void boostinv2_generic_transfer 
@@ -124,12 +125,10 @@ void boostinv2_set_positive_voltage ( boostinv2_t *ctx, uint16_t voltage )
     write_reg[ 0 ] = ( uint8_t )( ( voltage >> 8 ) & 0x00FF );
     write_reg[ 1 ] = ( uint8_t )( voltage & 0x00FF );
 
-    digital_out_low( &ctx->en );
     spi_master_select_device( ctx->chip_select );
     spi_master_write( &ctx->spi, &write_reg[0], 1 );
     spi_master_write( &ctx->spi, &write_reg[1], 1 );
     spi_master_deselect_device( ctx->chip_select ); 
-    digital_out_high( &ctx->en );
 }
 
 void boostinv2_set_negative_voltage ( boostinv2_t *ctx, uint16_t voltage )
@@ -139,12 +138,10 @@ void boostinv2_set_negative_voltage ( boostinv2_t *ctx, uint16_t voltage )
     write_reg[ 0 ] = (uint8_t)((voltage >> 8) & 0x00FF);
     write_reg[ 1 ] = (uint8_t)(voltage & 0x00FF);
 
-    digital_out_low( &ctx->en );
-    spi_master_select_device( ctx->chip_select );
+    digital_out_low( &ctx->csn );
     spi_master_write( &ctx->spi, &write_reg[0], 1 );
     spi_master_write( &ctx->spi, &write_reg[1], 1 );
-    spi_master_deselect_device( ctx->chip_select ); 
-    digital_out_high( &ctx->en );
+    digital_out_high( &ctx->csn );
 }
 
 void boostinv2_set_psn (  boostinv2_t *ctx, uint8_t state )

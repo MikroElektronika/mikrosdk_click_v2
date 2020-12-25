@@ -29,6 +29,7 @@
 
 #include "nanogps.h"
 #include "string.h"
+#include "generic_pointer.h"
 
 // ------------------------------------------------------------- PRIVATE MACROS 
 
@@ -151,13 +152,13 @@ nanogps_error_t nanogps_generic_parser
     uint8_t element, char *parser_buf 
 )
 {    
-    char *start_rsp;
-    char *end_rsp;
+    char * __generic start_rsp;
+    char * __generic end_rsp;
     char rsp_buf[ 200 ];
     
     uint8_t element_cnt = 0;
-    char *element_start;
-    char *element_end;
+    char * __generic element_start;
+    char * __generic element_end;
     
     char current_cmd_buf[ 10 ];
     

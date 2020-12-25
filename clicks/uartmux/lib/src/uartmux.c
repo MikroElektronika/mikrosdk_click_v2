@@ -45,7 +45,7 @@ void uartmux_cfg_setup ( uartmux_cfg_t *cfg )
     cfg->a   = HAL_PIN_NC;
     cfg->b = HAL_PIN_NC;
 
-    cfg->baud_rate      = 9600;
+    cfg->baud_rate      = 115200;
     cfg->data_bit       = UART_DATA_BITS_DEFAULT;
     cfg->parity_bit     = UART_PARITY_DEFAULT;
     cfg->stop_bit       = UART_STOP_BITS_DEFAULT;

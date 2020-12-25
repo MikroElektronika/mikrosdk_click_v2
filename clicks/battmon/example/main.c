@@ -66,7 +66,7 @@ void application_init ( void )
     Delay_ms( 500 );
 
     battmon_read_bytes( &battmon, BATTMON_REG_ID, &reg_read, 1 );
-    log_printf( &logger, " ** Part ID: 0x%d \r\n", reg_read );
+    log_printf( &logger, " ** Part ID: 0x%d \r\n", (uint16_t) reg_read );
 
     battmon_default_cfg( &battmon );
     
@@ -76,7 +76,7 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    char cels_symbol[ 4 ] = { ' ', 176, 'C', 0 };
+    char cels_symbol[ 3 ] = { 176, 'C', 0 };
     float data_read;
     uint16_t conv_cnt;
 
@@ -98,7 +98,7 @@ void application_task ( void )
         {
             data_read = battmon_get_data( &battmon, BATTMON_REG_TEMPERATURE );
             battmon_reset_conv_cnt( &battmon );
-            log_printf( &logger, "** Temperature :  %.2f %c", data_read, cels_symbol );
+            log_printf( &logger, "** Temperature :  %.2f %s\r\n", data_read, cels_symbol );
         }
         
         reg_read = battmon_check_clear_alarm( &battmon );

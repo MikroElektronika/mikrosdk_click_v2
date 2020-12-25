@@ -31,8 +31,6 @@
 
 // ------------------------------------------------------------- PRIVATE MACROS 
 
-#define PWM_PERIOD_ERROR   0
-
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
 void brushless2_cfg_setup ( brushless2_cfg_t *cfg )
@@ -48,7 +46,7 @@ void brushless2_cfg_setup ( brushless2_cfg_t *cfg )
     cfg->fgs   = HAL_PIN_NC;
     cfg->int_pin = HAL_PIN_NC;
 
-    cfg->dev_pwm_freq 	  = 5000;
+    cfg->dev_pwm_freq = 5000;
 }
 
 BRUSHLESS2_RETVAL brushless2_init ( brushless2_t *ctx, brushless2_cfg_t *cfg )
@@ -57,8 +55,8 @@ BRUSHLESS2_RETVAL brushless2_init ( brushless2_t *ctx, brushless2_cfg_t *cfg )
     
     pwm_configure_default( &pwm_cfg );
 
-	pwm_cfg.pin      = cfg->pwm;
-	pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
+    pwm_cfg.pin      = cfg->pwm;
+    pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
 
     ctx->pwm_freq = cfg->dev_pwm_freq;
     pwm_open( &ctx->pwm, &pwm_cfg );
@@ -100,6 +98,11 @@ void brushless2_counter_clockwise ( brushless2_t *ctx )
 void brushless2_clockwise ( brushless2_t *ctx )
 {
     digital_out_high( &ctx->fr );
+}
+
+void brushless2_invert_direction ( brushless2_t *ctx )
+{
+    digital_out_toggle( &ctx->fr );
 }
 
 uint8_t brushless2_get_interrupt_status ( brushless2_t *ctx )

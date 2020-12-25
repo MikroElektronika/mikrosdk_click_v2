@@ -27,5 +27,6 @@
     "short_description": "Comparator Click represents board equipped with two independent precise voltage comparators.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

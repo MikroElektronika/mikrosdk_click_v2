@@ -27,5 +27,7 @@
     "short_description": "Rotary click carries a 15-pulse incremental rotary encoder with detents, surrounded by a ring of 16 green LEDs.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.3"
 }
+
+

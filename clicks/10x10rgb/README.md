@@ -83,6 +83,7 @@ void application_init ( void )
 
     log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info(&logger, "---- Application Init ----");
 
@@ -93,7 +94,7 @@ void application_init ( void )
     c10x10rgb_init( &c10x10rgb, &cfg );
 
     c10x10rgb_fill_screen( &c10x10rgb, C10X10RGB_COLOR_OFF );
-    Delay_ms( 500 );
+    Delay_ms( 1000 );
 }
   
 ```

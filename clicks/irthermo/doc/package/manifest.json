@@ -27,5 +27,6 @@
   "short_description": "IrThermo click 3.3V is a contactless temperature measurement device that relies on the accurate thermopile sensor chip, which encompasses both the thermopile sensor element and the ASSP.",
   "supported_compiler": "mikroC",
   "type": "Library",
-  "version": "2.0.0.0"
+  "version": "2.0.0.1"
 }
+

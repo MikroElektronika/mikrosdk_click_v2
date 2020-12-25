@@ -29,6 +29,7 @@
 
 #include "gnss2.h"
 #include "string.h"
+#include "generic_pointer.h"
 
 // ------------------------------------------------------------- PRIVATE MACROS 
 
@@ -93,12 +94,12 @@ GNSS2_RETVAL gnss2_init ( gnss2_t *ctx, gnss2_cfg_t *cfg )
 
     // Output pins 
 
-     digital_out_init( &ctx->rst, cfg->rst );
+    digital_out_init( &ctx->rst, cfg->rst );
 
     // Input pins
 
-     digital_in_init( &ctx->fon, cfg->fon );
-     digital_in_init( &ctx->stb, cfg->stb );
+    digital_in_init( &ctx->fon, cfg->fon );
+    digital_in_init( &ctx->stb, cfg->stb );
 
     return GNSS2_OK;
 
@@ -134,7 +135,7 @@ void gnss2_generic_write ( gnss2_t *ctx, char *data_buf, uint16_t len )
     uart_write( &ctx->uart, data_buf, len );
 }
 
-int16_t gnss2_generic_read ( gnss2_t *ctx, char *data_buf, uint16_t max_len )
+int32_t gnss2_generic_read ( gnss2_t *ctx, char *data_buf, uint16_t max_len )
 {
     return uart_read( &ctx->uart, data_buf, max_len );
 }
@@ -145,13 +146,13 @@ gnss2_error_t gnss2_generic_parser
     uint8_t element, char *parser_buf 
 )
 {    
-    char *start_rsp;
-    char *end_rsp;
+    char * __generic start_rsp;
+    char * __generic end_rsp;
     char rsp_buf[ 200 ];
     
     uint8_t element_cnt = 0;
-    char *element_start;
-    char *element_end;
+    char * __generic element_start;
+    char * __generic element_end;
     
     char current_cmd_buf[ 10 ];
     

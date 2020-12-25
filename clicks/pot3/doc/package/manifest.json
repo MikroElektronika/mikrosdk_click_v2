@@ -27,5 +27,6 @@
   "short_description": "POT 3 Click is a Click board� with the accurate selectable reference voltage output. By employing a high-quality 11mm, metal shaft potentiometer, this Click board� can provide very accurate voltage output. ",
   "supported_compiler": "mikroC",
   "type": "Library",
-  "version": "2.0.0.0"
+  "version": "2.0.0.1"
 }
+

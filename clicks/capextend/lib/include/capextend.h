@@ -330,6 +330,17 @@ int8_t capextend_read_msb_buttons ( capextend_t *ctx );
 int8_t capextend_read_lsb_buttons ( capextend_t *ctx );
 
 /**
+ * @brief Read buttons function.
+ *
+ * @param ctx          Click object.
+ * 
+ * @retval Returns 12bit data of buttons state.
+ *
+ * @description This function reads the button map data.
+ */
+uint16_t capextend_read_buttons ( capextend_t *ctx );
+
+/**
  * @brief Reset function.
  *
  * @param ctx          Click object.

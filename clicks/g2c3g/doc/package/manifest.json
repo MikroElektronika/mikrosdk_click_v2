@@ -27,5 +27,6 @@
     "short_description": "Go to Cloud (G2C) 3G click is a gateway Click board™ which provides a simple and reliable connection to the Click Cloud platform",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

@@ -117,6 +117,7 @@ void semperflash2_default_cfg ( semperflash2_t *ctx )
 void semperflash2_send_cmd ( semperflash2_t *ctx, uint8_t cmd )
 {
     spi_master_select_device( ctx->chip_select );
+    Delay_1us();
     spi_master_write( &ctx->spi, &cmd, 1 );
     spi_master_deselect_device( ctx->chip_select );  
     drv_communication_delay( );
@@ -132,6 +133,7 @@ void semperflash2_transfer_data
 )   
 {
     spi_master_select_device( ctx->chip_select );
+    Delay_1us();
     spi_master_write_then_read( &ctx->spi, write_buf, wbuf_size, read_buf, rbuf_size );
     spi_master_deselect_device( ctx->chip_select );   
     drv_communication_delay( );
@@ -145,6 +147,7 @@ void semperflash2_generic_write
 )  
 {
     spi_master_select_device( ctx->chip_select );
+    Delay_1us();
     spi_master_write( &ctx->spi, write_buf, buf_size );
     spi_master_deselect_device( ctx->chip_select );   
     drv_communication_delay( );

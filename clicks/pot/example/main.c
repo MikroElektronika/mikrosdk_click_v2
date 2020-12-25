@@ -17,7 +17,7 @@
  * *note:* 
  * The AD conversion will be performed on the analog (AN) pin on the mikrobus 1.
  * 
- * \author MikroE Team
+ * \author Nemanja Medakovic
  *
  */
 // ------------------------------------------------------------------- INCLUDES
@@ -30,11 +30,6 @@
 
 static pot_t pot;
 static log_t logger;
-
-#define N_SAMPLES         100
-#define ADC_V_REF_MV      1790
-#define ADC_12BIT_RESOL   4096
-#define ADC_10BIT_RESOL   1024
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -49,60 +44,30 @@ void application_init ( void )
     log_cfg.baud = 9600;
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, "---- Application Init... ----" );
 
     //  Click initialization.
 
     pot_cfg_setup( &cfg );
     POT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    pot_init( &pot, &cfg );
+    if ( pot_init( &pot, &cfg ) == ADC_ERROR )
+    {
+        log_info( &logger, "---- Application Init Error. ----" );
+        log_info( &logger, "---- Please, run program again... ----" );
 
+        for ( ; ; );
+    }
+    log_info( &logger, "---- Application Init Done. ----\n" );
 }
 
 void application_task ( void )
 {
-    pot_data_t tmp;
-    uint16_t adc_read;
-    uint16_t n_samples;
-    uint16_t adc_max;
-    uint16_t adc_min;
-    float adc_avrg;
+    float an_voltage;
 
-    //  Task implementation.
+    an_voltage = pot_read_voltage( &pot );
 
-    for ( n_samples = 0; n_samples < N_SAMPLES; n_samples++ )
-    {
-        adc_read = pot_generic_read ( &pot );
-        
-        if ( n_samples == 0 )
-        {
-            adc_max = adc_read;
-            adc_min = adc_read;
-        }
-
-        if ( adc_read > adc_max )
-        {
-            adc_max = adc_read;
-        }
-
-        else if ( adc_read < adc_min )
-        {
-            adc_min = adc_read;
-        }
-        
-        Delay_ms( 1 );
-    }
-
-    adc_avrg = adc_max;
-    adc_avrg += adc_min;
-    adc_avrg /= 2;
-    adc_avrg /= ADC_12BIT_RESOL;
-    adc_avrg *= ADC_V_REF_MV;
-    adc_read = adc_avrg;
-    
-    log_printf( &logger, "** AN : %d mV\r\n", adc_read );
+    log_printf( &logger, " AN [V] : %.2f\r\n", an_voltage );
     Delay_ms( 1000 );
-
 }
 
 void main ( void )
@@ -114,6 +79,5 @@ void main ( void )
         application_task( );
     }
 }
-
 
 // ------------------------------------------------------------------------ END

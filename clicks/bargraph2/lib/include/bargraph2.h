@@ -70,6 +70,14 @@
 /** \} */
 
 /**
+ * \defgroup led_power Led Power control
+ * \{
+ */
+#define BARGRAPH2_POWER_ON    1
+#define BARGRAPH2_POWER_OFF   0
+/** \} */
+
+/**
  * \defgroup led_segment LED Segment
  * \{
  */
@@ -290,6 +298,16 @@ void bargraph2_leds_yellow ( bargraph2_t *ctx, int start_index, int end_index );
  * @description This function turns off all the LED diodes.
  */
 void bargraph2_lights_out ( bargraph2_t *ctx ); 
+
+/**
+ * @brief Lights out function.
+ *
+ * @param ctx          Click object.
+ * @param power_on_of  Power state ON/OFF
+ * 
+ * @description This function turns off all the LED diodes.
+ */
+void barpgraph2_power ( bargraph2_t *ctx, uint8_t power_on_off );
 
 #ifdef __cplusplus
 }

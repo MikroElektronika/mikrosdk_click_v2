@@ -44,10 +44,10 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
     Delay_ms ( 100 );
+    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
 
@@ -57,10 +57,6 @@ void application_init ( void )
     
     log_printf( &logger, "--------------------------\r\n" );
     log_printf( &logger, " ------ SRAM Click  ----- \r\n" );
-    log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms ( 1000 );
-    
-    log_printf( &logger, " -- Initialization done --\r\n" );
     log_printf( &logger, "--------------------------\r\n" );
     Delay_ms ( 1000 );
 }
@@ -79,9 +75,15 @@ void application_task ( void )
         mem_data[ n_cnt ] = sram_read_byte( &sram, n_cnt );
     }
     
+    
     log_printf( &logger, "\r\n" );
     log_printf( &logger, " Read text :\r\n" );
-    log_printf( &logger, "%s", &mem_data[ 0 ] );
+    for ( n_cnt = 0; n_cnt < 16; n_cnt++ )
+    {
+        mem_data[ n_cnt ] = sram_read_byte( &sram, n_cnt );
+        Delay_ms ( 100 );
+        log_printf( &logger, "%c", mem_data[ n_cnt ] );
+    }
     log_printf( &logger, "\r\n" );
     log_printf( &logger, "--------------------------\r\n" );
     

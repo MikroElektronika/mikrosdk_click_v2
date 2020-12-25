@@ -86,7 +86,7 @@ void application_init ( void )
 
     //  Click initialization.
 
-     mux_cfg_setup( &cfg );
+    mux_cfg_setup( &cfg );
     MUX_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     mux_init( &mux, &cfg );
     Delay_ms( 100 );
@@ -110,13 +110,11 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    uint8_t n_cnt;
-    
-    //  Task implementation.
+    uint16_t n_cnt;
     
     for ( n_cnt = MUX_CHANNEL_1A_AND_1B; n_cnt < MUX_CHANNEL_END; n_cnt++ )
     {
-        log_printf( &logger, "      CHANNEL  S%d\r\n", n_cnt );
+        log_printf( &logger, "      CHANNEL  S%u\r\n", n_cnt );
         log_printf( &logger, "------------------------\r\n" );
         
         mux_active_mux_channel( &mux, n_cnt );

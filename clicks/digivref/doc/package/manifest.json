@@ -27,5 +27,6 @@
     "short_description": "DigiVref click is a very precise voltage reference Click board™, which allows one of four different voltage values to be selected over the SPI interface.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

@@ -25,7 +25,12 @@
     "name": "mikroe.click.haptic",
     "product_link": "https://www.mikroe.com/haptic-click",
     "short_description": "This application generate vibrations from the lower frequency range of the audio input",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.0"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        1622
+    ],
+    "version": "2.0.0.2"
 }
+

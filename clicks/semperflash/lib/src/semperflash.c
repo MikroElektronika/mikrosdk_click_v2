@@ -35,7 +35,6 @@
 
 // ---------------------------------------------- PRIVATE FUNCTION DECLARATIONS 
 
-static void drv_communication_delay( );
 
 static void drv_memory_communication_delay( );
 
@@ -56,7 +55,7 @@ void semperflash_cfg_setup ( semperflash_cfg_t *cfg )
     cfg->io2 = HAL_PIN_NC;
     cfg->io3 = HAL_PIN_NC;
 
-    cfg->spi_speed = 10000000; 
+    cfg->spi_speed = 100000; 
     cfg->spi_mode = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 }
@@ -119,7 +118,7 @@ void semperflash_send_cmd ( semperflash_t *ctx, uint8_t cmd )
     spi_master_select_device( ctx->chip_select );
     spi_master_write( &ctx->spi, &cmd, 1 );
     spi_master_deselect_device( ctx->chip_select );   
-    drv_communication_delay( );
+    drv_memory_communication_delay( );
 }
 
 void semperflash_transfer_data 
@@ -134,7 +133,7 @@ void semperflash_transfer_data
     spi_master_select_device( ctx->chip_select );
     spi_master_write_then_read( &ctx->spi, write_buf, wbuf_size, read_buf, rbuf_size );
     spi_master_deselect_device( ctx->chip_select );   
-    drv_communication_delay( );
+    drv_memory_communication_delay( );
 }
 
 void semperflash_generic_write 
@@ -147,7 +146,7 @@ void semperflash_generic_write
     spi_master_select_device( ctx->chip_select );
     spi_master_write( &ctx->spi, write_buf, buf_size );
     spi_master_deselect_device( ctx->chip_select );   
-    drv_communication_delay( );
+    drv_memory_communication_delay( );
 }
 
 void semperflash_write_config ( semperflash_t *ctx, semperflash_config_t *cfg_data )
@@ -162,7 +161,7 @@ void semperflash_write_config ( semperflash_t *ctx, semperflash_config_t *cfg_da
     cfg_buf[ 5 ] = cfg_data->cfg4;
 
     semperflash_generic_write( ctx, cfg_buf, 6 );
-    drv_communication_delay( );
+    drv_memory_communication_delay( );
 }
 
 uint8_t semperflash_read_memory 
@@ -248,7 +247,7 @@ uint8_t semperflash_get_device_id ( semperflash_t *ctx, uint8_t *id_buf )
     id_buf_write[ 0 ] = SEMPERFLASH_DEVICE_ID;
 
     semperflash_transfer_data( ctx, id_buf_write, 5, id_buf, 8 );
-    drv_communication_delay( );
+    drv_memory_communication_delay( );
 
     return SEMPERFLASH_SUCCESS;
 }
@@ -261,7 +260,7 @@ uint8_t semperflash_check_manufacturer_id ( semperflash_t *ctx )
     id_write[ 0 ] = SEMPERFLASH_MANUFACTURER_DEVICE_ID;
 
     semperflash_transfer_data( ctx, id_write, 1, id_read, 1 );
-    drv_communication_delay( );
+    drv_memory_communication_delay( );
     
     if ( SEMPERFLASH_MANUFACTURER_DEVICE_ID_VALUE == id_read[ 0 ] )
     {
@@ -281,21 +280,15 @@ uint8_t semperflash_check_status_reg_1 ( semperflash_t *ctx )
     cmd[ 0 ] = SEMPERFLASH_READ_STATUS_REG_1;
 
     semperflash_transfer_data( ctx, cmd, 1, return_val, 1 );
-    drv_communication_delay( );
+    drv_memory_communication_delay( );
 
     return return_val[ 0 ];
 }
 
 // ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
 
-static void drv_communication_delay ( )
-{
-    Delay_10ms( );
-}
-
 static void drv_memory_communication_delay ( )
 {
-    Delay_100ms( );
     Delay_100ms( );
 }
 

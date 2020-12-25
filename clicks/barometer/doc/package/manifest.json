@@ -25,8 +25,12 @@
     "name": "mikroe.click.barometer",
     "product_link": "https://www.mikroe.com/barometer-click",
     "short_description": "This application measures temperature and pressure data.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        1469
+    ],
+    "version": "2.0.0.2"
 }
 

@@ -27,5 +27,7 @@
     "short_description": "The Flash 6 Click based on W25Q128JV (128M-bit) flash memory from Winbond provides a storage solution for systems with limited space, pins and power.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.2"
 }
+
+

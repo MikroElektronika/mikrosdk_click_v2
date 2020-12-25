@@ -25,8 +25,12 @@
     "name": "mikroe.click.capsense",
     "product_link": "https://www.mikroe.com/capsense-click",
     "short_description": "CapSense click add-on board features a capacitive sensing module CY8C201A0 which takes human body capacitance as an input and directly provides the real time sensor information via I2C output.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        851
+    ],
+    "version": "2.0.0.2"
 }
 

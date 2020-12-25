@@ -25,7 +25,12 @@
     "name": "mikroe.click.gnss2",
     "product_link": "https://www.mikroe.com/gnss-2-click",
     "short_description": "GNSS2 click carries Quectel’s L76 module and an SMA antenna connector.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.0"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        1443
+    ],
+    "version": "2.0.0.2"
 }
+

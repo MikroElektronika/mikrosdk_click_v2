@@ -27,6 +27,7 @@
     "short_description": "Vacuum click is an accurate vacuum pressure sensing click board™, capable of measuring absolute pressure values down to -115kPa.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+
 

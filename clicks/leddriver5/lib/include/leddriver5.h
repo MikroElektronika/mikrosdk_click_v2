@@ -95,7 +95,6 @@ typedef struct
 
     // ctx variable 
 
-    uint16_t pwm_period;
     uint32_t  pwm_freq;
 
 } leddriver5_t;

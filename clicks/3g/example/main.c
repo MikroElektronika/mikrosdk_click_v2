@@ -29,7 +29,7 @@
 
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 500
-#define PROCESS_PARSER_BUFFER_SIZE 1000
+#define PROCESS_PARSER_BUFFER_SIZE 500
 
 #define AT_COMMAND        "AT" 
 #define ATE0_COMMAND      "ATE0" 
@@ -43,28 +43,28 @@ static c3g_t c3g;
 static log_t logger;
 
 static char data_buf[ 20 ] = "12.2";
-static char current_parser_buf[ PROCESS_PARSER_BUFFER_SIZE ];
+static char current_rx_buf[ PROCESS_PARSER_BUFFER_SIZE ];
 static uint8_t send_data_cnt = 0; 
 
 // ------------------------------------------------------- ADDITIONAL FUNCTIONS
 
 static void c3g_process ( void )
 {
-    uint16_t rsp_size;
+    volatile int32_t rsp_size;
     uint16_t rsp_cnt = 0;
     
     char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
     uint8_t check_buf_cnt;
     uint8_t process_cnt = PROCESS_COUNTER;
     
-    // Clear parser buffer
-    memset( current_parser_buf, 0 , PROCESS_PARSER_BUFFER_SIZE ); 
+    // Clear current buffer
+    memset( current_rx_buf, 0 , PROCESS_PARSER_BUFFER_SIZE ); 
     
     while( process_cnt != 0 )
     {
-        rsp_size = c3g_generic_read( &c3g, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
+        rsp_size = c3g_generic_read( &c3g, &uart_rx_buffer, 500 );
 
-        if ( rsp_size != 0 )
+        if ( rsp_size != -1 )
         {  
             // Validation of the received data
             for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
@@ -74,12 +74,12 @@ static void c3g_process ( void )
                     uart_rx_buffer[ check_buf_cnt ] = 13;
                 }
             }
-
-            // Storages data in parser buffer
+            
+            // Storages data in current buffer
             rsp_cnt += rsp_size;
             if ( rsp_cnt < PROCESS_PARSER_BUFFER_SIZE )
             {
-                strncat( current_parser_buf, uart_rx_buffer, rsp_size );
+                strncat( current_rx_buf, uart_rx_buffer, rsp_size );
             }
             
             // Clear RX buffer
@@ -90,10 +90,11 @@ static void c3g_process ( void )
             process_cnt--;
             
             // Process delay 
-            Delay_100ms( );
+            Delay_ms( 100 );
         }
     }
-    log_printf( &logger, "%s\r\n", current_parser_buf );
+    send_data_cnt++;
+    log_printf( &logger, "%s", current_rx_buf );
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -107,7 +108,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -119,14 +120,18 @@ void application_init ( void )
 
     c3g_module_power( &c3g, true );
 
+    c3g_send_command( &c3g, AT_COMMAND );
     c3g_process( );
-
     c3g_send_command( &c3g, AT_COMMAND );
+    c3g_process( );
     c3g_send_command( &c3g, AT_COMMAND );
-    c3g_send_command( &c3g, AT_COMMAND );
+    c3g_process( );
     c3g_send_command( &c3g, ATE0_COMMAND );
+    c3g_process( );
     c3g_send_command( &c3g, AT_IFC_COMMAND );
+    c3g_process( );
     c3g_send_command( &c3g, AT_CMGF_COMMAND );
+    c3g_process( );
 }
 
 void application_task ( void )

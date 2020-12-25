@@ -31,12 +31,12 @@
 
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 500
-#define PROCESS_PARSER_BUFFER_SIZE 1000
+#define PROCESS_PARSER_BUFFER_SIZE 500
 
 // ------------------------------------------------------------------ VARIABLES
 
-#define DEMO_APP_RECEIVER
-//#define DEMO_APP_TRANSMITER
+// #define DEMO_APP_RECEIVER
+#define DEMO_APP_TRANSMITER
 
 static rn4871_t rn4871;
 static log_t logger;
@@ -96,17 +96,15 @@ void application_init ( void )
     
     dev_type = RN4871_DEVICETYPE_MASTER;
 
-    if ( dev_type == RN4871_DEVICETYPE_MASTER )
-    {
-        log_info( &logger, "RN4871 DEVICE TYPE MASTER" );
-        rn4871_initialize( &rn4871, &RN4871_ADDR_MASTER[ 0 ] );
-    }
-    else if ( dev_type == RN4871_DEVICETYPE_SLAVE )
-    {
-        log_info( &logger, "RN4871 DEVICE TYPE SLAVE" );
-        rn4871_initialize( &rn4871, &RN4871_ADDR_SLAVE[ 0 ] );
-        ptr = &receive_buffer[ 7 ];
-    }
+#ifdef DEMO_APP_TRANSMITER
+    log_info( &logger, "RN4871 DEVICE TYPE MASTER" );
+    rn4871_initialize( &rn4871, &RN4871_ADDR_MASTER[ 0 ] );
+#endif
+#ifdef DEMO_APP_RECEIVER
+    log_info( &logger, "RN4871 DEVICE TYPE SLAVE" );
+    rn4871_initialize( &rn4871, &RN4871_ADDR_SLAVE[ 0 ] );
+    ptr = &receive_buffer[ 7 ];
+#endif
 
     memset( &rn4871.device_buffer, 0, 255 );
     log_printf( &logger, " >>> app init done <<<  \r\n" );
@@ -115,27 +113,26 @@ void application_init ( void )
 void application_task ( void )
 {
     rn4871_process(  );
-    if ( dev_type == RN4871_DEVICETYPE_MASTER )
-    {
-        rn4871_connect( &rn4871, &RN4871_ADDR_SLAVE[ 0 ] );
-        Delay_ms( 100 );
-        log_printf( &logger, ">>> sending data  <<<\r\n" );
-        rn4871_send( &rn4871, RN4871_MTYPE_MSG, RN4871_DTYPE_STRING, RN4871_ID_MASTER, &message_payload[ 0 ] );
-        Delay_ms( 100 );
-        rn4871_disconnect( &rn4871 );
-        Delay_ms( 100 );
-    }
-    else if ( dev_type == RN4871_DEVICETYPE_SLAVE )
-    {
-        msg_flag = rn4871_read( &rn4871, &receive_buffer[ 0 ] );
+#ifdef DEMO_APP_TRANSMITER
+    rn4871_connect( &rn4871, &RN4871_ADDR_SLAVE[ 0 ] );
+    Delay_ms( 100 );
+    log_printf( &logger, ">>> sending data  <<<\r\n" );
+    rn4871_send( &rn4871, RN4871_MTYPE_MSG, RN4871_DTYPE_STRING, RN4871_ID_MASTER, &message_payload[ 0 ] );
+    Delay_ms( 100 );
+    rn4871_disconnect( &rn4871 );
+    Delay_ms( 100 );
+#endif
 
-        if ( msg_flag == 1 )
-        {
-            log_printf( &logger, ">>> data received <<<\r\n" );
-            log_printf( &logger, ">>> data : " );
-            log_printf( &logger, "%s\r\n", ptr );     
-        }
+#ifdef DEMO_APP_RECEIVER
+    msg_flag = rn4871_read( &rn4871, &receive_buffer[ 0 ] );
+
+    if ( msg_flag == 1 )
+    {
+        log_printf( &logger, ">>> data received <<<\r\n" );
+        log_printf( &logger, ">>> data : " );
+        log_printf( &logger, "%s\r\n", ptr );     
     }
+#endif
 }
 
 void main ( void )

@@ -28,7 +28,7 @@ as well as a demo application (example), developed using MikroElektronika
 [compilers](https://shop.mikroe.com/compilers). 
 The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+Package can be downloaded/installed directly from compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
 
 ## Library Description
 
@@ -65,7 +65,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ### Application Init 
 
 >
-> Application Init performs Logger and Click initialization.
+> Application Init perfroms Logger and Click initialization.
 > 
 
 ```c
@@ -155,7 +155,7 @@ void application_task ( void )
 
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+The full application code, and ready to use projects can be  installed directly from compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
 **Other mikroE Libraries used in the example:** 
 
@@ -163,7 +163,7 @@ The full application code, and ready to use projects can be  installed directly 
 - MikroSDK.Log
 - Click.StereoAmp
 
-**Additional notes and informations**
+**Additional notes and infromations**
 
 Depending on the development board you are using, you may need 
 [USB UART click](https://shop.mikroe.com/usb-uart-click), 

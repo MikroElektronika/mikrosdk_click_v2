@@ -52,10 +52,8 @@ void application_init ( void )
     moisture_cfg_setup( &cfg );
     MOISTURE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     moisture_init( &moisture, &cfg );
-    Delay_ms( 100 );
-
     moisture_soft_reset( &moisture );
-    Delay_ms( 100 );
+    Delay_ms( 1000 );
 
     data_res = moisture_read_word( &moisture, MOISTURE_REG_DEVICE_ID );
 
@@ -82,7 +80,7 @@ void application_init ( void )
 void application_task ( void )
 {
     moisture_data = moisture_get_data( &moisture  );
-    log_printf( &logger, " Moisture data : %d \r\n", moisture_data );
+    log_printf( &logger, " Moisture data : %d \r\n", (int16_t)moisture_data );
     Delay_ms( 500 );
 }
 

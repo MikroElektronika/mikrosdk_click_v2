@@ -36,7 +36,6 @@
 #define C2X20WAMP_H
 
 #include "drv_digital_out.h"
-#include "drv_digital_in.h"
 #include "drv_i2c_master.h"
 
 // -------------------------------------------------------------- PUBLIC MACROS 
@@ -62,10 +61,10 @@
  * \defgroup error_code Error Code
  * \{
  */
-#define C2X20WAMP_RETVAL  uint8_t
+#define C2X20WAMP_RETVAL  int8_t
 
-#define C2X20WAMP_OK           0x00
-#define C2X20WAMP_INIT_ERROR   0xFF
+#define C2X20WAMP_OK             0
+#define C2X20WAMP_INIT_ERROR   (-1)
 /** \} */
 
 /**
@@ -120,8 +119,8 @@ typedef struct
 
     // Input pins 
 
-    digital_in_t addr1;
-    digital_in_t addr2;
+    digital_out_t addr1;
+    digital_out_t addr2;
     
     // Modules 
 
@@ -299,9 +298,9 @@ void c2x20wamp_classic_pwm_modulation( c2x20wamp_t *ctx );
 #ifdef __cplusplus
 }
 #endif
-#endif  // _C2X20WAMP_H_
+#endif  // C2X20WAMP_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
-/*! @} */
-// ------------------------------------------------------------------------- END
+/** \} */ // End click Driver group  
+
+// ------------------------------------------------------------------------ END

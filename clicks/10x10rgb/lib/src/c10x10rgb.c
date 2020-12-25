@@ -49,6 +49,7 @@ static void drv_show_delay ( uint16_t wait_ms );
 
 static uint32_t drv_color_wheel ( uint8_t wheel_pos, uint8_t brightness );
 
+
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
 void c10x10rgb_cfg_setup ( c10x10rgb_cfg_t *cfg, drv_logic_t logic_zero, drv_logic_t logic_one )
@@ -78,7 +79,11 @@ c10X10RGB_RETVAL c10x10rgb_init ( c10x10rgb_t *ctx, c10x10rgb_cfg_t *cfg )
     ctx->logic_one = cfg->logic_one;
 
     digital_out_low( &ctx->di_pin );
-
+    Delay_100ms( );
+    
+    ctx->logic_zero( );
+    Delay_500us( );
+    
     return c10X10RGB_OK;
 }
 
@@ -103,7 +108,7 @@ void c10x10rgb_write_data ( c10x10rgb_t *ctx, uint32_t w_data )
 void c10x10rgb_fill_screen ( c10x10rgb_t *ctx, uint32_t screen_color ) 
 {
     uint8_t cnt;
-
+    
     for ( cnt = 0; cnt < NUM_MATRIX_BYTE; cnt++ )
     {
         c10x10rgb_write_data( ctx, screen_color );
@@ -187,7 +192,10 @@ void c10x10rgb_display_string ( c10x10rgb_t *ctx, c10x10rgb_byte_t *data_obj,
 
     drv_memset( scroll_buf_obj.buffer, 0, NUX_MAX_CHAR * 10 );
     drv_matrix_add_scroll_buf( &scroll_buf_obj, data_obj, len );
-
+    
+    ctx->logic_zero( );
+    Delay_500us( );
+    
     for ( cnt_byte = 0; cnt_byte < scroll_buf_obj.len; cnt_byte++ )
     {
         drv_memset( matrix, 0, NUM_MATRIX_BYTE );

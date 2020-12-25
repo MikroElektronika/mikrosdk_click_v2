@@ -65,7 +65,7 @@ void application_task ( void )
     
     for ( n_cnt = MUX2_CHANNEL_S1; n_cnt < MUX2_CHANNEL_END; n_cnt++ )
     {
-        log_printf( &logger, "      CHANNEL  S%d\r\n", n_cnt );
+        log_printf( &logger, "      CHANNEL  S%d\r\n", ( uint16_t )n_cnt );
         log_printf( &logger, "------------------------\r\n" );
         
         mux2_active_mux_channel( &mux2, n_cnt );

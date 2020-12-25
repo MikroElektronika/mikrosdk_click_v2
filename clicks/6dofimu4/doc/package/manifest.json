@@ -27,6 +27,7 @@
     "short_description": "6DOF IMU 4 Click is an advanced 6-axis motion tracking Click board™, which utilizes the ICM-20602, a high-performance integrated motion sensor, equipped with a 3-axis gyroscope, and a 3-axis accelerometer. ",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.2"
+    "version": "2.0.0.3"
 }
+
 

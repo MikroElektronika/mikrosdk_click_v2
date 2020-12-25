@@ -6,12 +6,6 @@ depends: {
     MikroSDK.Board
     MikroSDK.Log
     Click.HeartRate9
-    MikroSDK.Conversions
-}
-
-uses: {
-    MikroC.Core
-    MikroSDK.Conversions
 }
 
 sources: {

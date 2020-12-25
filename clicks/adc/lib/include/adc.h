@@ -49,8 +49,8 @@
  * \{
  */
 #define ADC_MAP_MIKROBUS( cfg, mikrobus ) \
-    cfg.sdo = MIKROBUS( mikrobus, MIKROBUS_MISO ); \
-    cfg.sdi = MIKROBUS( mikrobus, MIKROBUS_MOSI ); \
+    cfg.miso = MIKROBUS( mikrobus, MIKROBUS_MISO ); \
+    cfg.mosi = MIKROBUS( mikrobus, MIKROBUS_MOSI ); \
     cfg.sck = MIKROBUS( mikrobus, MIKROBUS_SCK  ); \
     cfg.cs  = MIKROBUS( mikrobus, MIKROBUS_CS   )
 /** \} */
@@ -65,35 +65,25 @@
 /**
  * @brief Click error code definition.
  */
-typedef enum
-{
-    ADC_OK = 0x0,
-    ADC_ERR_INIT_DRV = 0xFF
+#define ADC_RETVAL  uint8_t
 
-} adc_err_t;
+#define ADC_OK                  0x00
+#define ADC_INIT_ERROR     0xFF
 
 /**
  * @brief Click reference voltage definition.
  */
-typedef enum
-{
-    ADC_VREF_3300MV = 0,
-    ADC_VREF_4096MV,
-    ADC_VREF_5000MV
-
-} adc_vref_t;
+#define ADC_VREF_3300MV     3300
+#define ADC_VREF_4096MV     4096
+#define ADC_VREF_5000MV     5000
 
 /**
  * @brief Click channel definition.
  */
-typedef enum
-{
-    ADC_CH0_OR_CH01 = 0,
-    ADC_CH1_OR_CH10,
-    ADC_CH2_OR_CH23,
-    ADC_CH3_OR_CH32
-
-} adc_ch_t;
+#define ADC_CH0_OR_CH01     0x00
+#define ADC_CH1_OR_CH10     0x01
+#define ADC_CH2_OR_CH23     0x02
+#define ADC_CH3_OR_CH32     0x03
 
 /**
  * @brief Click context object definition.
@@ -129,8 +119,8 @@ typedef struct
 typedef struct
 {
     //  Communication GPIO Pins.
-    pin_name_t  sdo;
-    pin_name_t  sdi;
+    pin_name_t  miso;
+    pin_name_t  mosi;
     pin_name_t  sck;
     pin_name_t  cs;
 
@@ -140,7 +130,7 @@ typedef struct
     spi_master_chip_select_polarity_t cs_polarity;
 
     //  Reference Voltage Selection.
-    adc_vref_t  vref;
+    uint16_t  vref;
 
 } adc_cfg_t;
 
@@ -165,8 +155,7 @@ extern "C"{
  * @note All used pins will be set to unconnected state.
  *       Reference voltage will be set to 3V3 by default.
  */
-void
-adc_cfg_setup( adc_cfg_t *cfg );
+void adc_cfg_setup( adc_cfg_t *cfg );
 
 /**
  * @brief Click Initialization function.
@@ -180,8 +169,7 @@ adc_cfg_setup( adc_cfg_t *cfg );
  * @description This function initializes all necessary pins and peripherals
  * used for this click.
  */
-adc_err_t
-adc_init( adc_t *ctx, adc_cfg_t *cfg );
+ADC_RETVAL adc_init( adc_t *ctx, adc_cfg_t *cfg );
 
 /**
  * @brief Get Single-Ended Channel function.
@@ -196,8 +184,7 @@ adc_init( adc_t *ctx, adc_cfg_t *cfg );
  * channel in millivolts. The voltage value will be placed also in the
  * corresponding field of ctx object.
  */
-uint16_t
-adc_get_single_ended_ch( adc_t *ctx, adc_ch_t channel );
+uint16_t adc_get_single_ended_ch( adc_t *ctx, uint8_t channel );
 
 /**
  * @brief Get Pseudo-Differential Pair function.
@@ -212,8 +199,7 @@ adc_get_single_ended_ch( adc_t *ctx, adc_ch_t channel );
  * pseudo-differential pair in millivolts. The voltage value will be placed
  * also in the corresponding field of ctx object.
  */
-uint16_t
-adc_get_differential_ch( adc_t *ctx, adc_ch_t channel );
+uint16_t adc_get_differential_ch( adc_t *ctx, uint8_t channel );
 
 #ifdef __cplusplus
 }

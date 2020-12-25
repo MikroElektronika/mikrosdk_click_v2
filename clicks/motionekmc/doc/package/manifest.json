@@ -27,6 +27,8 @@
     "short_description": "Motion 2,3,4 Click is a Click board™ based on EKMC, PIR motion sensor from Panasonic Corporation that's used as human motion detector. ",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.3"
 }
+
+
 

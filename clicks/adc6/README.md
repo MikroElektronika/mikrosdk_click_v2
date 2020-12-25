@@ -110,7 +110,7 @@ void application_task ( void )
 
     adc_value = adc6_get_adc_data( &adc6, ADC6_SINGLE_GET_DATA_MODE );
 
-    log_printf( &logger, "The ADC value is: %d\r\n", adc_value );
+    log_printf( &logger, "The ADC value is: %lu\r\n", adc_value );
 
     Delay_ms( 500 );
 }

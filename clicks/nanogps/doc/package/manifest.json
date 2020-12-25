@@ -27,5 +27,8 @@
     "short_description": "Nano GPS click carries the Nano Hornet module from OriginGPS. It’s the smallest GPS module with an integrated patch antenna (measuring just 10x10x3.8mm).",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.3"
 }
+
+
+

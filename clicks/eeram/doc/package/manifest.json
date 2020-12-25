@@ -27,5 +27,6 @@
     "short_description": "EERAM click is a static RAM (SRAM) memory click board™ with the unique feature - it has a backup non-volatile memory array, used to store the data from the SRAM array. Since the SRAM is not able to maintain its content after the power loss, the non-volatile EEPROM backup can be a very handy addition that can be used to preserve the data, even after the power loss event. This is a very useful feature when working with critical or sensitive applications.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

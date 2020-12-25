@@ -1,7 +1,0 @@
-type: subdirs
-project: Mic33153
-
-subdirs: {
-    lib
-    example
-}

@@ -78,8 +78,9 @@ void application_init ( )
 
     log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
-    log_info(&logger, "---- Application Init ----");
+    log_info(&logger, "Application Init");
 
     //  Click initialization.
 
@@ -87,25 +88,44 @@ void application_init ( )
     OOKRX_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ookrx_init( &ookrx, &cfg );
     Delay_ms( 100 );
+    
+#ifdef BYTE_RECEIVE
+    log_info(&logger, "Application Task\r\n BYTE TRANSMIT DEMO");
+#endif
+    
+#ifdef DATA_RECEIVE
+    log_info(&logger, "Application Task\r\n DATA TRANSMIT DEMO");
+#endif
 }
   
 ```
 
 ### Application Task
 
-> This function waits for the transmitter to send the data and then reads and displays it in
-  the console using the UART communication. 
+> This application consists 2 types:
+>  - BYTE_RECEIVE: Receiving one by one byte of data
+>  - DATA_RECEIVE: Receiving package of data ( 6 bytes in this example )
 
 ```c
 
 void application_task ( )
 {
-    uint8_t received_package[ 1 ];
+#ifdef BYTE_RECEIVE
+    uint8_t received_byte;
 
-    if ( ! ( ookrx_receive_data( &ookrx, 0xCE35, &received_package, 1 ) ) )
+    if ( ! ( ookrx_receive_data( &ookrx, PREABLE_WORD, &received_byte, 1 ) ) )
     {
-        log_printf( &logger, " * Received packet: %d * \r\n", received_package[ 0 ] );
+        log_printf( &logger, "%c", received_byte );
     }
+#endif
+#ifdef DATA_RECEIVE
+    uint8_t received_package[ 10 ] = { 0 };
+
+    if ( ! ( ookrx_receive_data( &ookrx, PREABLE_WORD, received_package, 6 ) ) )
+    {
+        log_printf( &logger, " * Received packet: %s\r\n", received_package );
+    }
+#endif
 }  
 
 ```

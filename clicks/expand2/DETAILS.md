@@ -77,8 +77,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.baud = 9600;
+    log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -117,15 +118,17 @@ void application_task ( void )
     for ( pin_position = 0; pin_position < 8; pin_position++ )
     {
         expand2_set_potr_a( &expand2, pin_position );
-
+        
         port_status = expand2_read_port_a( &expand2, EXPAND2_I2C__MODULE_ADDRESS_5 );
 
-        log_printf( &logger, "      PA %d\r\n", pin_position );  
+        log_printf( &logger, " Status PA (output): %d\r\n", (uint16_t) port_status );
+        
+        port_status = expand2_read_port_b( &expand2, EXPAND2_I2C__MODULE_ADDRESS_5 );
 
-        log_printf( &logger, " Status: %d\r\n", port_status );
+        log_printf( &logger, " Status PB (input) : %d  \r\n", (uint16_t) port_status );
         log_printf( &logger, "----------------\r\n" );
         
-        Delay_ms( 5000 );
+        Delay_ms( 3000 );
     }
 }
 

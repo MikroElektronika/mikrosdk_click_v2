@@ -40,7 +40,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -55,11 +55,11 @@ void application_init ( void )
     part_id = temphum6_get_part_id( &temphum6 );
     if ( part_id == TEMPHUM6_PART_ID )
     {
-        log_printf( &logger, "Device OK - read ID is OK  0x%x", part_id );
+        log_printf( &logger, "Device OK - read ID is OK  0x%x\r\n", part_id );
     }
     else
     {
-        log_printf( &logger, "Device ERROR - read ID is NOT OK 0x%x", part_id  );
+        log_printf( &logger, "Device ERROR - read ID is NOT OK 0x%x\r\n", part_id  );
         for ( ; ; );
     }
 }

@@ -27,5 +27,7 @@
     "short_description": "Compass 3 Click is an expansion board that can measure the three-axis magnetic field which is perfect for implementation in applications such as electric compasses. This board features MMC5883MA, a complete 3-axis magnetic sensor with signal processing from MEMSIC.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.2"
 }
+
+

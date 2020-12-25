@@ -35,10 +35,7 @@
 static smoke_t smoke;
 static log_t logger;
 
-static uint32_t grn_val;
 static float temperature;
-
-static char deg_cel[ 3 ];
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -64,29 +61,27 @@ void application_init ( void )
     smoke_reset( &smoke );
     smoke_default_cfg ( &smoke );
 
-    deg_cel[ 0 ] = 176;
-    deg_cel[ 1 ] = 67;
-    deg_cel[ 2 ] = 0;
-
-    log_printf( &logger, "------------------------------\r\n" );
-    log_printf( &logger, "         Smoke  Click         \r\n" );
-    log_printf( &logger, "------------------------------\r\n" );
+    log_info( &logger, "---- Application Task ----" );
     Delay_ms( 100 );
+    if ( smoke_read_leds( &smoke ) != SMOKE_OK )
+    {
+        log_info( &logger, "---- Init Error ----" );
+        for( ; ; );
+    }
 }
 
 void application_task ( void )
 {
-    if ( smoke_get_intrrupt( &smoke, 1 ) & 0x40 )
-    {
-        grn_val = smoke_get_green_val( &smoke );
-    }
+    smoke_read_leds( &smoke );
     
-    log_printf( &logger, "GREEN LED Pulse Amplitude : %llu\r\n", grn_val );
+    log_printf( &logger, "Red : %llu\r\n", smoke.red_value );
+    log_printf( &logger, "IR : %llu\r\n", smoke.ir_value );
+    log_printf( &logger, "Green : %llu\r\n", smoke.green_value );
     log_printf( &logger, "------------------------------\r\n" );
     
-    temperature = smoke_read_temp_c( &smoke );
+    temperature = smoke_read_temp( &smoke );
     
-    log_printf( &logger, "Read Temperature : %.4f %s\r\n",  temperature, deg_cel );
+    log_printf( &logger, "Read Temperature[ degC ]: %.2f\r\n",  temperature );
     log_printf( &logger, "------------------------------\r\n" );
 
     Delay_ms( 1000 );

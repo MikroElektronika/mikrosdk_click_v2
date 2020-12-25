@@ -1,15 +1,15 @@
 type: library
 
-target: lib_t420ma
+target: lib_c420mat
 
-alias: Click.T420ma
+alias: Click.C420mat
 
 sources: {
-    src/t420ma.c
+    src/c420mat.c
 }
 
 headers: {
-    include/t420ma.h
+    include/c420mat.h
 }
 
 include: {
@@ -17,7 +17,7 @@ include: {
 }
 
 install: {
-    src(include/t420ma.h) dst(include/t420ma.h)
+    src(include/c420mat.h) dst(include/c420mat.h)
 }
 
 expInclude: {

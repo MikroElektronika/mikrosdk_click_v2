@@ -42,21 +42,10 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 - Initialization function.
 > BLE8_RETVAL ble8_init ( ble8_t *ctx, ble8_cfg_t *cfg );
 
-- Click Default Configuration function.
-> void ble8_default_cfg ( ble8_t *ctx );
-
-
 #### Example key functions :
-
-- This function sets handler on the function which should be performed, 
-- for example function for the results logging.
-> void ble8_response_handler_set ( ble8_t *ctx, void ( *handler )( uint8_t* ) );
  
 - This function allows user to reset a module.
 > void ble8_reset ( ble8_t *ctx );
-
-- This function reads response bytes from the module and sets flag after each received byte.
-> void ble8_uart_isr ( ble8_t *ctx, uint8_t read_data );
 
 ## Examples Description
 
@@ -66,8 +55,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes UART serial interface, UART interrupt,
-> and executes a module reset. Allows user to enter command mode.
+> Initializes driver and wake-up module.
 
 ```c
 
@@ -90,58 +78,62 @@ void application_init ( void )
     BLE8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ble8_init( &ble8, &cfg );
 
-    ble8_response_handler_set( &ble8, &get_rsp );
-    Delay_ms( 200 );
-
     ble8_reset( &ble8 );
-    Delay_ms( 2000 );
+    Delay_1sec( );
+    
+    log_printf( &logger, "Configuring the module...\n" );
+    Delay_1sec( );
+    
+    ble8_set_dsr_pin( &ble8, 1 );
+    Delay_ms( 20 );
 
-    rsp_idx = 0;
-    rsp_check = 1;
-    start_timer = 0;
-    timer_cnt = 0;
-    prev_data = 0;
-    log_check = BLE8_RSP_NOT_READY;
-
-    #ifdef COMMAND_MODE
-        log_printf( &logger, "COMMAND MODE ENTERING...\r\n" );
-
-        ble8_set_dsr_pin( &ble8, 1 );
-        Delay_ms( 20 );
-        ble8_set_dsr_pin( &ble8, 0 );
-        Delay_ms( 20 );
-
-        ble8_set_echo_cmd( &ble8, BLE8_ECHO_OFF );
-        ble8_process( );
-        log_rsp( );
-        Delay_ms( 100 );
-    #else
-        log_printf( &logger, "DEFAULT MODE ENTERING...\r\n" );
-    #endif
+    do {
+        ble8_set_echo_cmd( &ble8, 1 );
+        Delay_100ms( );
+    }
+    while( ble8_process( ) != 1 );
+    
+    do {
+        ble8_set_local_name_cmd( &ble8, "BLE 8 Click" );
+        Delay_100ms( );
+    }
+    while( ble8_process( ) != 1 );
+    
+    do {
+        ble8_connectability_en_cmd( &ble8, BLE8_GAP_CONNECTABLE_MODE );
+        Delay_100ms( );
+    }
+    while( ble8_process( ) != 1 );
+    
+    do {
+        ble8_discoverability_en_cmd( &ble8, BLE8_GAP_GENERAL_DISCOVERABLE_MODE );
+        Delay_100ms( );
+    }
+    while( ble8_process( ) != 1 );
+    
+    do {
+        ble8_enter_mode_cmd( &ble8, BLE8_DATA_MODE );
+        Delay_100ms( );
+    }
+    while( ble8_process( ) != 1 );
+    
+    ble8_set_dsr_pin( &ble8, 0 );
+    Delay_ms( 20 );
+    data_mode = 1;
+    log_printf( &logger, "The module has been configured.\n" );
 }
   
 ```
 
 ### Application Task
 
-> This function has two segments.
-> First segment allows user to enter a commands, for using function from driver
-> ( those with AT command ). Second ( default ) segment allows user to comunicate with 
-> other bluetooth devices - by sending data to the ANNA-B112 module.
+> Reads the received data.
 
 ```c
 
 void application_task ( void )
 {
     ble8_process( );
-
-    if ( start_timer == 1 )
-    {
-        timer_cnt++;
-    }
-
-    log_rsp( );
-    Delay_us( 1 );
 } 
 
 ```
@@ -149,7 +141,6 @@ void application_task ( void )
 ## Note
 
 > <pre>
-> For using AT commands swich to COMMAND_MODE
 > The all possible commands, module configuration and specification can be found in the 
 > related documents:
 >     [1] ANNA-B112 System Integration Manual, document number UBX-18009821 
@@ -158,7 +149,7 @@ void application_task ( void )
 >     [4] ANNA-B112 Declaration of Conformity, document number UBX-18058993
 > </pre>
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+The full application code, and ready to use projects can be installed directly from compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
 **Other mikroE Libraries used in the example:** 
 

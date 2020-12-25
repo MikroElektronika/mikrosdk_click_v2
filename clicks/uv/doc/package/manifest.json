@@ -27,5 +27,6 @@
     "short_description": "Design devices that warn you of excesive ultraviolet radiation levels with UV click. This click boards carries the ML8511 IC that is sensitive to UV-A (365-315 nm) and UV-B (315-280 nm) rays.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

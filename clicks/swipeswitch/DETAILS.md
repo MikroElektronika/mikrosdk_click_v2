@@ -1,4 +1,3 @@
-
  
 
 ---
@@ -9,7 +8,6 @@ SwipeSwitch click is capacitive touch, gesture, and proximity sensing Click boar
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/swipeswitch_click.png" height=300px>
 </p>
-
 
 [click Product page](<https://www.mikroe.com/swipeswitch-click>)
 
@@ -44,9 +42,6 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 - Initialization function.
 > SWIPESWITCH_RETVAL swipeswitch_init ( swipeswitch_t *ctx, swipeswitch_cfg_t *cfg );
 
-- Click Default Configuration function.
-> void swipeswitch_default_cfg ( swipeswitch_t *ctx );
-
 
 #### Example key functions :
 
@@ -78,8 +73,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -88,25 +84,34 @@ void application_init ( void )
     swipeswitch_cfg_setup( &cfg );
     SWIPESWITCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     swipeswitch_init( &swipeswitch, &cfg );
-    swipeswitch_default_cfg( &swipeswitch );
     Delay_ms( 300 );
+    
+    display_mode = SWIPESWITCH_GESTURE_MODE;
+    
+    if ( display_mode == SWIPESWITCH_GESTURE_MODE)
+    {
+        log_printf( &logger, "<<< GESTURE MODE >>> \r\n" ); 
+    }
+    else if ( display_mode == SWIPESWITCH_POSITION_MODE)
+    {
+        log_printf( &logger, "<<< POSITION MODE >>> \r\n" ); 
+    }
 }
   
 ```
 
 ### Application Task
 
-> Display message on a terminal when new event occurs ( TAP or SWIPE ) along with the X and Y coordinates.
+> Display message on a terminal when new event occurs ( TAP or SWIPE ) along with the X and Y coordinates depending on the display_mode value.
 
 ```c
 
 void application_task ( void )
 {
-    if ( display_mode == 0)
+    if ( display_mode == SWIPESWITCH_GESTURE_MODE)
     {
-
-            events = swipeswitch_read_events( &swipeswitch );
-            gestures = swipeswitch_read_gestures( &swipeswitch );
+        events = swipeswitch_read_events( &swipeswitch );
+        gestures = swipeswitch_read_gestures( &swipeswitch );
 
         
         if ( ( events & ( SWIPESWITCH_EVENT_SWIPE ) ) != 0 )
@@ -128,21 +133,20 @@ void application_task ( void )
                 log_printf( &logger, "SWIPE RIGHT \r\n" );
             }
         }
+        
         else if ( ( events & ( SWIPESWITCH_EVENT_TAP ) ) != 0 )
         {
             log_printf( &logger,"TAP \r\n" );
         }
     }
-    else
+    else if ( display_mode == SWIPESWITCH_POSITION_MODE)
     {
-        while ( swipeswitch_wait_for_ready( &swipeswitch ) != 0);
         x_coordinate = swipeswitch_read_x_coordinate( &swipeswitch );
-        while ( swipeswitch_wait_for_ready( &swipeswitch ) != 0);
         y_coordinate = swipeswitch_read_y_coordinate( &swipeswitch );
 
         if ( ( x_coordinate != old_x_coordinate) || ( y_coordinate != old_y_coordinate ) )
         {
-            log_printf( &logger,"Coordinate : (%d , %d)", x_coordinate, y_coordinate );
+            log_printf( &logger,"Coordinate : (%u , %u)\r\n", (uint16_t) x_coordinate, (uint16_t) y_coordinate );
 
             old_x_coordinate = x_coordinate;
             old_y_coordinate = y_coordinate;
@@ -152,11 +156,6 @@ void application_task ( void )
 }
 
 ```
-
-## Note
-
-> After reading data or status registers,  there is a certain time which must pass until the device is ready again.
-> The device is ready for a new conversion and reading after the Ready pin is LOW.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

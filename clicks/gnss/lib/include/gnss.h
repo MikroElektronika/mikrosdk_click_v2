@@ -122,7 +122,7 @@
  * \defgroup driver Driver define
  * \{
  */
-#define DRV_RX_BUFFER_SIZE 1000
+#define DRV_RX_BUFFER_SIZE 500
 /** \} */
 
 /** \} */ // End group macro 

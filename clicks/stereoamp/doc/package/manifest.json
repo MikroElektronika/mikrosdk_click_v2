@@ -27,5 +27,6 @@
     "short_description": "This is an example which demonstrates the use of StereoAmp Click board - stereo amplifier and is ideal for battery operated devices or as a lab amplifier.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.2"
 }
+

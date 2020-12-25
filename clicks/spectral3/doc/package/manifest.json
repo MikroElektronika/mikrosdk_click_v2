@@ -27,5 +27,6 @@
     "short_description": "Spectral 3 click is a multispectral sensing device, which uses the state-of-the-art sensor IC for a very accurate near-IR (NIR) sensing.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

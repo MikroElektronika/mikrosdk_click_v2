@@ -96,7 +96,7 @@ void altitude2_cfg_setup ( altitude2_cfg_t *cfg )
     cfg->mosi = HAL_PIN_NC;
     cfg->cs = HAL_PIN_NC;
 
-    cfg->i2c_speed = 100000; 
+    cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
     cfg->i2c_address = ALTITUDE2_DEVICE_ADDR_1;
     cfg->spi_speed = 100000; 
     cfg->spi_mode = 0;
@@ -117,10 +117,9 @@ ALTITUDE2_RETVAL altitude2_init ( altitude2_t *ctx, altitude2_cfg_t *cfg )
         i2c_cfg.speed    = cfg->i2c_speed;
         i2c_cfg.scl = cfg->scl;
         i2c_cfg.sda = cfg->sda;
-
         ctx->slave_address = cfg->i2c_address;
-
-        if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) != I2C_MASTER_SUCCESS )
+        
+        if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_ERROR )
         {
             return ALTITUDE2_INIT_ERROR;
         }
@@ -185,7 +184,6 @@ void altitude2_reset( altitude2_t *ctx )
     uint8_t cnt;
 
     ctx->send_comm_f( ctx, comm_data, 0, 0);
-    Delay_10ms( );
     
     for( cnt = 1; cnt < 7; cnt++ )
     {
@@ -216,7 +214,7 @@ void altitude2_read_data( altitude2_t *ctx, float *temp_data, float *press_data,
     uint8_t temp_comm;
     uint8_t press_comm;
     float res_data[ 4 ];
-    float tmp_var;
+    float  volatile tmp_var;
         
     altitude2_make_conv_comm( ctx, &temp_comm, &press_comm );
     ctx->send_comm_f( ctx, temp_comm, 0, 0 );
@@ -257,8 +255,8 @@ void altitude2_read_data( altitude2_t *ctx, float *temp_data, float *press_data,
 
 static void altitude2_i2c_send_comm ( altitude2_t *ctx, uint8_t comm_byte, uint32_t *input_data, uint8_t num_bytes )
 {
-    Delay_10ms( );
     i2c_master_write( &ctx->i2c, &comm_byte, 1 );  
+    Delay_10ms( );
 }
 
 static void altitude2_spi_send_comm ( altitude2_t *ctx, uint8_t comm_byte, uint32_t *input_data, uint8_t num_bytes )
@@ -410,7 +408,11 @@ static double exp( double x )
         return 1.0;
     if (x > EXP_MAX)
     {
+#ifdef _8BIT_SPECIFIC
+        return DBL_MAX_PIC;
+#else
         return DBL_MAX;
+#endif
     }
     if (x < EXP_MIN)
     { 
@@ -428,10 +430,17 @@ static double exp( double x )
         
     if ( sign )
     {
+#ifdef _8BIT_SPECIFIC
+        if (x == DBL_MAX_PIC)
+        {
+            return 0.0;
+        }
+#else
         if (x == DBL_MAX)
         {
             return 0.0;
         }
+#endif
         return 1.0 / x;
     }
         
@@ -453,6 +462,24 @@ static double eval_poly( double x, const double code *d, int n )
 
 static double ldexp( double value, int newexp )
 {
+#ifdef _8BIT_SPECIFIC
+    char *pom;
+
+    pom = &value;
+    newexp += pom[3];
+    if (newexp < 0)
+        return 0.0;
+    else
+    if (newexp > MAX_EXPONENT)
+        if (value < 0.0)
+            return -DBL_MAX_PIC;
+        else
+            return DBL_MAX_PIC;
+    else
+        pom[3] = newexp;
+
+    return value;
+#else
     union both uv;
 
     uv.fl = value;
@@ -469,12 +496,22 @@ static double ldexp( double value, int newexp )
         uv.flt.exp = newexp;
         
     return uv.fl;
+#endif
 }
 
 static double frexp ( double value, int *eptr )
 {
+#ifdef _8BIT_SPECIFIC
+    char *pom;
+
+    pom = &value;
+    *eptr = pom[3] - EXCESS;
+    pom[3] = EXCESS;
+
+    return value;
+#else
     union both uv;
-    volatile int bb;
+    int bb;
 
     uv.fl = value;
     bb = uv.flt.exp - EXCESS;
@@ -482,6 +519,7 @@ static double frexp ( double value, int *eptr )
     uv.flt.exp = EXCESS;
         
     return uv.fl;
+#endif
 }
 
 
@@ -490,7 +528,11 @@ static double floor( double x )
     double i;
     int expon;
 
+#ifdef _8BIT_SPECIFIC
+    expon = (*(unsigned long *)&x >> DBL_MANT_DIG_PIC) & 255;
+#else
     expon = ( ( *( unsigned long * ) & x >> DBL_MANT_DIG ) & 255 );
+#endif
     expon = expon - 127;
         
     if ( expon < 0 )

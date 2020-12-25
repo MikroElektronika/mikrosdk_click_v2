@@ -8,7 +8,7 @@
 > Flame click is a fire detection solution. It carries a PT334-6B silicon phototransistor that’s covered in black epoxy and therefore sensitive only to infrared light.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/dualee_click.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/flame_click.png" height=300px>
 </p>
 
 [click Product page](<https://www.mikroe.com/flame-click>)

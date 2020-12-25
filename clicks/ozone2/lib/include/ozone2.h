@@ -28,19 +28,18 @@
  * \brief This file contains API for Ozone 2 Click driver.
  *
  * \addtogroup ozone2 Ozone 2 Click Driver
- * @{
+ * \{
  */
 // ----------------------------------------------------------------------------
 
 #ifndef OZONE2_H
 #define OZONE2_H
 
-#include "drv_digital_out.h"
+#include "drv_analog_in.h"
 #include "drv_digital_in.h"
 #include "drv_spi_master.h"
 
-
-// -------------------------------------------------------------- PUBLIC MACROS 
+// -------------------------------------------------------------- PUBLIC MACROS
 /**
  * \defgroup macros Macros
  * \{
@@ -50,26 +49,23 @@
  * \defgroup map_mikrobus MikroBUS
  * \{
  */
-
 #define OZONE2_MAP_MIKROBUS( cfg, mikrobus ) \
-   cfg.miso  = MIKROBUS( mikrobus, MIKROBUS_MISO ); \
-   cfg.mosi  = MIKROBUS( mikrobus, MIKROBUS_MOSI ); \
-   cfg.sck   = MIKROBUS( mikrobus, MIKROBUS_SCK ); \
-   cfg.cs    = MIKROBUS( mikrobus, MIKROBUS_CS ); \
-   cfg.an    = MIKROBUS( mikrobus, MIKROBUS_AN )
+   cfg.miso = MIKROBUS( mikrobus, MIKROBUS_MISO ); \
+   cfg.mosi = MIKROBUS( mikrobus, MIKROBUS_MOSI ); \
+   cfg.sck  = MIKROBUS( mikrobus, MIKROBUS_SCK ); \
+   cfg.cs   = MIKROBUS( mikrobus, MIKROBUS_CS ); \
+   cfg.an   = MIKROBUS( mikrobus, MIKROBUS_AN )
 /** \} */
 
 /**
  * \defgroup error_code Error Code
  * \{
  */
-#define OZONE2_RETVAL  uint8_t
-
-#define OZONE2_OK           0x00
-#define OZONE2_INIT_ERROR   0xFF
+#define OZONE2_OK            0
+#define OZONE2_INIT_ERROR  (-1)
 /** \} */
 
-/** \} */ // End group macro 
+/** \} */ // End group macro
 // --------------------------------------------------------------- PUBLIC TYPES
 /**
  * \defgroup type Types
@@ -77,19 +73,33 @@
  */
 
 /**
+ * @brief Click AD conversion type selectors.
+ */
+typedef enum
+{
+    OZONE2_ADC_SEL_AN,
+    OZONE2_ADC_SEL_SPI
+
+} ozone2_adc_sel_t;
+
+/**
  * @brief Click ctx object definition.
  */
 typedef struct
 {
-    // Input pins 
+    // Input pins objects
 
-    digital_in_t an;
-    digital_out_t cs;
+    analog_in_t an;
+    digital_in_t miso;
 
-    // Modules 
+    // Module object
 
     spi_master_t spi;
     pin_name_t chip_select;
+
+    // ADC selection
+
+    ozone2_adc_sel_t adc_sel;
 
 } ozone2_t;
 
@@ -98,31 +108,40 @@ typedef struct
  */
 typedef struct
 {
-    // Communication gpio pins 
+    // Communication gpio pins
 
     pin_name_t miso;
+    pin_name_t mosi;
     pin_name_t sck;
     pin_name_t cs;
-    pin_name_t mosi;
 
-    // Additional gpio pins 
+    // Additional gpio pins
 
     pin_name_t an;
 
-    // static variable 
+    // SPI settings
 
     uint32_t spi_speed;
-    uint8_t spi_mode;
+    spi_master_mode_t spi_mode;
     spi_master_chip_select_polarity_t cs_polarity;
+
+    // ADC settings
+
+    analog_in_resolution_t resolution;
+    float vref;
+
+    // ADC selection
+
+    ozone2_adc_sel_t adc_sel;
 
 } ozone2_cfg_t;
 
 // ----------------------------------------------- PUBLIC FUNCTION DECLARATIONS
-
 /**
  * \defgroup public_function Public function
  * \{
  */
+
 #ifdef __cplusplus
 extern "C"{
 #endif
@@ -134,35 +153,54 @@ extern "C"{
  *
  * @description This function initializes click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
+ *       Be sure that the ADC selection is properly selected.
  */
 void ozone2_cfg_setup ( ozone2_cfg_t *cfg );
 
 /**
  * @brief Initialization function.
- * @param ozone2 Click object.
- * @param cfg Click configuration structure.
- * 
+ *
+ * @param ctx  Click object.
+ * @param cfg  Click configuration structure.
+ * @return    0  - Ok,
+ *          (-1) - Error.
+ *
  * @description This function initializes all necessary pins and peripherals used for this click.
+ * @note The ADC selection should be set before call this function.
  */
-OZONE2_RETVAL ozone2_init ( ozone2_t *ctx, ozone2_cfg_t *cfg );
+err_t ozone2_init ( ozone2_t *ctx, ozone2_cfg_t *cfg );
 
 /**
- * @brief Ozone 2 click read
+ * @brief Measurement Voltage Read function.
  *
- * @param ctx   Click object
- * 
- * @description Function reads from MCP 3351 ADC and returns 32 bit read value.
- * @returns  ADC value from the MCP3351.
+ * @param ctx  Click object.
+ * @param data_out  Output voltage value [V].
+ * @return    0  - Ok,
+ *          (-1) - Error.
+ *
+ * @description This function reads the level of the output measurement voltage.
  */
-uint32_t ozone2_read ( ozone2_t *ctx );
+err_t ozone2_read_signal_voltage ( ozone2_t *ctx, float *data_out );
 
+/**
+ * @brief Measurement Read function.
+ *
+ * @param ctx  Click object.
+ * @param data_out  Output measurement level [ppm].
+ * @return    0  - Ok,
+ *          (-1) - Error.
+ *
+ * @description This function reads the level of the measurement signal voltage and calculates
+ * this value to ppm in the range from 10 to 1000 ppm.
+ */
+err_t ozone2_read_measurement ( ozone2_t *ctx, uint16_t *data_out );
 
 #ifdef __cplusplus
 }
 #endif
-#endif  // _OZONE2_H_
+#endif  // OZONE2_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
-/*! @} */
-// ------------------------------------------------------------------------- END
+/** \} */ // End click Driver group
+
+// ------------------------------------------------------------------------ END

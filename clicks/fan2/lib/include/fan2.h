@@ -282,17 +282,6 @@ typedef enum
 } fan2_i2c_addr_t;
 
 /**
- * @brief Click fan mode selection.
- */
-typedef enum
-{
-    FAN2_WIRES_2 = 2,
-    FAN2_WIRES_3,
-    FAN2_WIRES_4
-
-} fan2_wire_t;
-
-/**
  * @brief Click context object definition.
  */
 typedef struct
@@ -352,8 +341,7 @@ extern "C"{
  * initial state.
  * @note All used pins will be set to unconnected state.
  */
-void
-fan2_cfg_setup( fan2_cfg_t *cfg );
+void fan2_cfg_setup( fan2_cfg_t *cfg );
 
 /**
  * @brief Click Initialization function.
@@ -368,19 +356,16 @@ fan2_cfg_setup( fan2_cfg_t *cfg );
  * @description This function initializes all necessary pins and peripherals
  * used for this click.
  */
-fan2_err_t
-fan2_init( fan2_t *ctx, fan2_cfg_t *cfg );
+fan2_err_t fan2_init( fan2_t *ctx, fan2_cfg_t *cfg );
 
 /**
  * @brief Click Default Configuration function.
  *
  * @param ctx  Click object.
- * @param n_wires  Determines fan number of wires [2, 3 or 4].
  *
  * @description This function executes a default configuration for Fan 2 click.
  */
-void
-fan2_default_cfg( fan2_t *ctx, fan2_wire_t n_wires );
+void fan2_default_cfg( fan2_t *ctx );
 
 /**
  * @brief Generic Byte Write function.
@@ -394,8 +379,7 @@ fan2_default_cfg( fan2_t *ctx, fan2_wire_t n_wires );
  *
  * @description This function writes one byte data to the desired register.
  */
-fan2_err_t
-fan2_generic_write_byte( fan2_t *ctx, uint8_t reg_addr, uint8_t data_in );
+fan2_err_t fan2_generic_write_byte( fan2_t *ctx, uint8_t reg_addr, uint8_t data_in );
 
 /**
  * @brief Generic Byte Read function.
@@ -409,8 +393,7 @@ fan2_generic_write_byte( fan2_t *ctx, uint8_t reg_addr, uint8_t data_in );
  *
  * @description This function reads one byte data from the desired register.
  */
-fan2_err_t
-fan2_generic_read_byte( fan2_t *ctx, uint8_t reg_addr, uint8_t *data_out );
+fan2_err_t fan2_generic_read_byte( fan2_t *ctx, uint8_t reg_addr, uint8_t *data_out );
 
 /**
  * @brief Generic Word Write function.
@@ -424,8 +407,7 @@ fan2_generic_read_byte( fan2_t *ctx, uint8_t reg_addr, uint8_t *data_out );
  *
  * @description This function writes 16-bit data to the desired register.
  */
-fan2_err_t
-fan2_generic_write_word( fan2_t *ctx, uint8_t reg_addr, uint16_t data_in );
+fan2_err_t fan2_generic_write_word( fan2_t *ctx, uint8_t reg_addr, uint16_t data_in );
 
 /**
  * @brief Generic Word Read function.
@@ -439,8 +421,7 @@ fan2_generic_write_word( fan2_t *ctx, uint8_t reg_addr, uint16_t data_in );
  *
  * @description This function reads 16-bit data from the desired register.
  */
-fan2_err_t
-fan2_generic_read_word( fan2_t *ctx, uint8_t reg_addr, uint16_t *data_out );
+fan2_err_t fan2_generic_read_word( fan2_t *ctx, uint8_t reg_addr, uint16_t *data_out );
 
 /**
  * @brief Temperature Read function.
@@ -455,8 +436,7 @@ fan2_generic_read_word( fan2_t *ctx, uint8_t reg_addr, uint16_t *data_out );
  * @description This function reads the temperature data from the selected
  * temperature register and converts this data to Celsius degrees.
  */
-fan2_err_t
-fan2_read_temp( fan2_t *ctx, uint8_t temp_addr, float *temp_cels );
+fan2_err_t fan2_read_temp( fan2_t *ctx, uint8_t temp_addr, float *temp_cels );
 
 /**
  * @brief Temperature Write function.
@@ -472,8 +452,7 @@ fan2_read_temp( fan2_t *ctx, uint8_t temp_addr, float *temp_cels );
  * @description This function writes the entered temperature [Celsius degrees]
  * to the selected temperature register.
  */
-fan2_err_t
-fan2_write_temp( fan2_t *ctx, uint8_t temp_addr, float temp_cels );
+fan2_err_t fan2_write_temp( fan2_t *ctx, uint8_t temp_addr, float temp_cels );
 
 /**
  * @brief Tachometer Read function.
@@ -488,8 +467,7 @@ fan2_write_temp( fan2_t *ctx, uint8_t temp_addr, float temp_cels );
  * @description This function reads the tachometer data from the selected
  * tachometer register and converts this data to rpm [rotation per minute].
  */
-fan2_err_t
-fan2_read_tacho( fan2_t *ctx, uint8_t tacho_addr, uint32_t *tacho_rpm );
+fan2_err_t fan2_read_tacho( fan2_t *ctx, uint8_t tacho_addr, uint16_t *tacho_rpm );
 
 /**
  * @brief Tachometer Threshold Write function.
@@ -499,8 +477,7 @@ fan2_read_tacho( fan2_t *ctx, uint8_t tacho_addr, uint32_t *tacho_rpm );
  *
  * @description This function writes the tachometer threshold value in rpm.
  */
-void
-fan2_write_tacho_threshold( fan2_t *ctx, uint32_t tacho_rpm );
+void fan2_write_tacho_threshold( fan2_t *ctx, uint32_t tacho_rpm );
 
 /**
  * @brief Direct Fan Speed Control function.
@@ -514,8 +491,7 @@ fan2_write_tacho_threshold( fan2_t *ctx, uint32_t tacho_rpm );
  * @description This function allows user to control fan speed directly by
  * changing the PWM duty cycle.
  */
-fan2_err_t
-fan2_direct_speed_control( fan2_t *ctx, float speed_per );
+fan2_err_t fan2_direct_speed_control( fan2_t *ctx, float speed_per );
 
 /**
  * @brief Current Fan Speed Read function.
@@ -527,8 +503,7 @@ fan2_direct_speed_control( fan2_t *ctx, float speed_per );
  * @description This function reads the current fan speed and converts this
  * data to percents.
  */
-float
-fan2_read_current_speed( fan2_t *ctx );
+float fan2_read_current_speed( fan2_t *ctx );
 
 /**
  * @brief Status Check function.
@@ -540,8 +515,7 @@ fan2_read_current_speed( fan2_t *ctx );
  *
  * @description This function checks the selected status flag bits.
  */
-uint8_t
-fan2_status( fan2_t *ctx, uint8_t flag_mask );
+uint8_t fan2_status( fan2_t *ctx, uint8_t flag_mask );
 
 /**
  * @brief Lookup Table Write function.
@@ -558,8 +532,7 @@ fan2_status( fan2_t *ctx, uint8_t flag_mask );
  * @description This function allows user to write the desired data to Lookup
  * table.
  */
-fan2_err_t
-fan2_write_lut( fan2_t *ctx, uint8_t lut_addr, uint8_t *lut_data,
+fan2_err_t fan2_write_lut( fan2_t *ctx, uint8_t lut_addr, uint8_t *lut_data,
                 uint8_t n_data );
 
 /**
@@ -570,8 +543,7 @@ fan2_write_lut( fan2_t *ctx, uint8_t lut_addr, uint8_t *lut_data,
  * @description This function executes a software reset and waits until reset
  * operation was done.
  */
-void
-fan2_sw_reset( fan2_t *ctx );
+void fan2_sw_reset( fan2_t *ctx );
 
 /**
  * @brief Alert Pin Check function.
@@ -585,8 +557,7 @@ fan2_sw_reset( fan2_t *ctx );
  *       ALERT is triggered when a measured temperature exceeds its programmed
  *       high limit.
  */
-uint8_t
-fan2_get_alr_pin( fan2_t *ctx );
+uint8_t fan2_get_alr_pin( fan2_t *ctx );
 
 /**
  * @brief Shutdown Pin Check function.
@@ -599,8 +570,7 @@ fan2_get_alr_pin( fan2_t *ctx );
  * @note Active-Low Shutdown Output. Open-drain output for system shutdown when
  *       overtemperature is detected.
  */
-uint8_t
-fan2_get_shd_pin( fan2_t *ctx );
+uint8_t fan2_get_shd_pin( fan2_t *ctx );
 
 /**
  * @brief Fan-Failure Pin Check function.
@@ -613,8 +583,7 @@ fan2_get_shd_pin( fan2_t *ctx );
  * @note Active-Low Fan-Failure Output. The device pulls this output low if a
  *       fan failure is detected.
  */
-uint8_t
-fan2_get_ff_pin( fan2_t *ctx );
+uint8_t fan2_get_ff_pin( fan2_t *ctx );
 
 /**
  * @brief Fault Pin Check function.
@@ -625,8 +594,7 @@ fan2_get_ff_pin( fan2_t *ctx );
  *
  * @description This function returns the INT (FAULT) pin state.
  */
-uint8_t
-fan2_get_int_pin( fan2_t *ctx );
+uint8_t fan2_get_int_pin( fan2_t *ctx );
 
 #ifdef __cplusplus
 }

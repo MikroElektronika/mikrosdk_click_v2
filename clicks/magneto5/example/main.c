@@ -38,7 +38,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -47,6 +47,7 @@ void application_init ( void )
     magneto5_cfg_setup( &cfg );
     MAGNETO5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     magneto5_init( &magneto5, &cfg );
+    Delay_ms( 100 );
 }
 
 void application_task ( void )
@@ -58,14 +59,14 @@ void application_task ( void )
     //  Task implementation.
 
     x_axis = magneto5_get_axis_value( &magneto5, MAGNETO5_AXIS_X, MAGNETO5_CH3_12bits_1ms );
-    log_printf ( &logger, "-- X axis : %f \r\n ", x_axis );
+    log_printf ( &logger, "-- X axis : %.2f \r\n ", x_axis );
 
     y_axis = magneto5_get_axis_value( &magneto5, MAGNETO5_AXIS_Y, MAGNETO5_CH3_12bits_1ms );
-    log_printf ( &logger, "-- Y axis : %f \r\n ",  y_axis );
+    log_printf ( &logger, "-- Y axis : %.2f \r\n ",  y_axis );
 
     z_axis = magneto5_get_axis_value( &magneto5, MAGNETO5_AXIS_Z, MAGNETO5_CH3_12bits_1ms );
-    log_printf ( &logger, "-- Z axis : %f \r\n ", z_axis );
-
+    log_printf ( &logger, "-- Z axis : %.2f \r\n ", z_axis );
+    log_printf ( &logger, "-------------------------\r\n " );
     Delay_ms( 1000 );
 }
 

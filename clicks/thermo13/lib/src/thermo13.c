@@ -65,6 +65,9 @@ THERMO13_RETVAL thermo13_init ( thermo13_t *ctx, thermo13_cfg_t *cfg )
     {
         return THERMO13_INIT_ERROR;
     }
+    
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
+    i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
 
     // Output pins 
 
@@ -131,11 +134,11 @@ float thermo13_get_ambient_temperature_data ( thermo13_t *ctx, uint8_t temp_in )
     
     if ( raw_temp > 0x1000 )
     {
-        temperature = ( float ) ( ( raw_temp - 4096) / 16.0 );
+        temperature =  ( ( float )raw_temp - 4096) / 16.0;
     }
     else
     {
-        temperature = ( float ) ( raw_temp / 16.0 );
+        temperature = ( float )raw_temp / 16.0;
     }
 
     dev_conversion_delay( );
@@ -174,7 +177,7 @@ float thermo13_get_temp_limit ( thermo13_t *ctx, uint8_t temp_reg )
     temp_data = thermo13_read_data( ctx, temp_reg );
     temp_data >>= 4;
 
-    temperature = ( float ) ( temp_data / 16.0 );
+    temperature = ( float )temp_data / 16.0;
 
     return temperature;
 }

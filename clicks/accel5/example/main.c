@@ -37,7 +37,7 @@ void application_init ( void )
     //  Logger initialization.
 
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
@@ -46,10 +46,20 @@ void application_init ( void )
 
     accel5_cfg_setup( &cfg );
     ACCEL5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    accel5_init( &accel5, &cfg );
-    accel5_soft_reset( &accel5 );
-    accel5_default_cfg( &accel5, ACCEL5_CFG_0_NORMAL_MODE, ACCEL5_CFG_1_ACC_RANGE_4g );
 
+    if ( accel5_init( &accel5, &cfg ) == ACCEL5_INIT_ERROR )
+    {
+        log_info( &logger, "---- Application Error ----" );
+
+        for ( ; ; );
+    }
+
+    log_info( &logger, "---- Application Init Done ----\n" );
+
+    accel5_soft_reset( &accel5 );
+    Delay_ms( 500 );
+    accel5_default_cfg( &accel5, ACCEL5_CFG_0_NORMAL_MODE, ACCEL5_CFG_1_ACC_RANGE_4g );
+    Delay_ms( 500 );
 }
 
 void application_task ( void )
@@ -57,18 +67,18 @@ void application_task ( void )
     int16_t x_axis_data;
     int16_t y_axis_data;
     int16_t z_axis_data;
-    
+
     //  Task implementation.
 
     x_axis_data = accel5_get_axis( &accel5, ACCEL5_X_AXIS );
-    log_printf ( &logger, " X axis : %d \r\n  ", x_axis_data );
-    
+    log_printf ( &logger, " X axis : %d\r\n", x_axis_data );
+
     y_axis_data = accel5_get_axis( &accel5, ACCEL5_Y_AXIS );
-    log_printf ( &logger, " Y axis : %d \r\n  ", y_axis_data );
+    log_printf ( &logger, " Y axis : %d\r\n", y_axis_data );
 
     z_axis_data = accel5_get_axis( &accel5, ACCEL5_Z_AXIS );
-    log_printf ( &logger, " Z axis : %d \r\n  ", z_axis_data );
-    
+    log_printf ( &logger, " Z axis : %d\r\n\n", z_axis_data );
+
     Delay_ms( 500 );
 }
 
@@ -81,4 +91,5 @@ void main ( void )
         application_task( );
     }
 }
+
 // ------------------------------------------------------------------------ END

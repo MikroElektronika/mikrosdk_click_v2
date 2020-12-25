@@ -59,22 +59,43 @@ void audioamp5_default_cfg ( audioamp5_t *ctx )
 {
     audioamp5_set_device_state( ctx, AUDIOAMP5_PWRUP_UNMUTE_OUTPUTS );
     audioamp5_gain_select( ctx, AUDIOAMP5_GAIN_20DB );
-    audioamp5_mode_select( ctx, AUDIOAMP5_BD_MODE );
+    audioamp5_mode_select( ctx, AUDIOAMP5_1SPW_MODE );
 }
 
 void audioamp5_set_device_state ( audioamp5_t *ctx, uint8_t state )
 {
-    digital_out_write( &ctx->en, state );
+    if ( state ) 
+    {
+        digital_out_high( &ctx->en );
+    }
+    else
+    {
+        digital_out_low( &ctx->en );
+    }
 }
 
 void audioamp5_mode_select ( audioamp5_t *ctx, uint8_t state )
 {
-    digital_out_write( &ctx->mds, state );
+    if ( state ) 
+    {
+        digital_out_high( &ctx->mds );
+    }
+    else
+    {
+        digital_out_low( &ctx->mds );
+    }
 }
 
 void audioamp5_gain_select ( audioamp5_t *ctx, uint8_t state )
 {
-    digital_out_write( &ctx->gs, state );
+    if ( state ) 
+    {
+        digital_out_high( &ctx->gs );
+    }
+    else
+    {
+        digital_out_low( &ctx->gs );
+    }
 }
 
 void audioamp5_config_update ( audioamp5_t *ctx )

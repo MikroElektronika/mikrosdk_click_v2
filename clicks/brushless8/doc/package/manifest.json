@@ -1,0 +1,33 @@
+{
+    "architecture": "ARM",
+    "category": "Brushless",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Brushless 8 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.brushless8",
+    "product_link": "https://www.mikroe.com/brushless-8-click",
+    "short_description": "Brushless 8 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the TC78B042FTG, a sine-wave PWM drive three-phase full-wave brushless motor controller from Toshiba Semiconductor.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

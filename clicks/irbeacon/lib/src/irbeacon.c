@@ -43,9 +43,9 @@ void irbeacon_cfg_setup ( irbeacon_cfg_t *cfg )
     
     // Additional gpio pins
 
-    cfg->mod   = HAL_PIN_NC;
+    cfg->mod = HAL_PIN_NC;
 
-    cfg->dev_pwm_freq 	  = 5000;
+    cfg->dev_pwm_freq = IRBEACON_DEF_FREQ;
 }
 
 IRBEACON_RETVAL irbeacon_init ( irbeacon_t *ctx, irbeacon_cfg_t *cfg )

@@ -54,7 +54,7 @@ void rtc6_cfg_setup ( rtc6_cfg_t *cfg )
     cfg->int_pin = HAL_PIN_NC;
 
     cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
-    cfg->i2c_address = 0x00;
+    cfg->i2c_address = 0x6F;
 
     cfg->time_zone_cfg = -1;
 }

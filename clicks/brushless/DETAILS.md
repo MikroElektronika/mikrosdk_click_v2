@@ -57,8 +57,8 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ## Examples Description
 
 > This example showcases how to initialize and use the Brushless click. The click has a bru-
-  shless motor driver which controls the work of the motor through the BLDC terminal. In order
-  for this example to work a motor and a power supply are needed. 
+> shless motor driver which controls the work of the motor through the BLDC terminal. In order
+> for this example to work a motor and a power supply are needed. 
 
 **The demo application is composed of two sections :**
 
@@ -75,8 +75,9 @@ void application_init ( )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
     Delay_100ms( );
@@ -95,19 +96,12 @@ void application_init ( )
 
 ### Application Task
 
-> This function drives the motor clockwise, starting from a low speed and slowly building up
-  towards the max duty cycle and after that drives it in a counter clockwise direction star-
-  ting at max speed and slowing down towards a slower pace. 
+> This function drives the motor in both directions increasing and decreasing the speed of the motor.
 
 ```c
 
 void application_task ( )
 {    
-    if ( duty_cycle > brushless.pwm_period )
-    {
-        duty_cycle = 0;
-    }
-
     clockwise( );
     counter_clockwise( );
 }  

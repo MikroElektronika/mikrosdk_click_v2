@@ -25,7 +25,12 @@
     "name": "mikroe.click.vreg",
     "product_link": "https://www.mikroe.com/vreg-click",
     "short_description": "This library contains API for Vreg Click driver.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.0"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        1929
+    ],
+    "version": "2.0.0.2"
 }
+

@@ -27,6 +27,8 @@
     "short_description": "Presence click is an infrared sensing Click board™ which can be used for presence sensing, motion detection, and a remote overtemperature protection. ",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.3"
 }
+
+
 

@@ -27,5 +27,6 @@
     "short_description": "Fiber Opt click is a compact and easy solution for adding fiber-optic communication to your design. It features IF-D91 fiber-optic photodiode, IF-E97 fiber-optic LED diode as well as two operational amplifiers.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

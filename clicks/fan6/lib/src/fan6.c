@@ -74,6 +74,7 @@ FAN6_RETVAL fan6_init ( fan6_t *ctx, fan6_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Output pins 
 
@@ -85,20 +86,21 @@ FAN6_RETVAL fan6_init ( fan6_t *ctx, fan6_cfg_t *cfg )
     digital_in_init( &ctx->sdn, cfg->sdn );
     digital_in_init( &ctx->io2, cfg->io2 );
     digital_in_init( &ctx->alr, cfg->alr );
-
+    
     return FAN6_OK;
 }
 
 void fan6_default_cfg ( fan6_t *ctx )
 {
-    fan6_write_reg( ctx, FAN6_FAN_STEP_REG, 0x10 );
-    fan6_write_reg( ctx, FAN6_FAN_SPINUP_CONFIG_REG, FAN6_SPINUP_DRIVELEVEL_60_PERCENTS | FAN6_SPINUP_TIME_500_MILISEC );
-    fan6_write_reg( ctx, FAN6_FAN_CONFIG1_REG, FAN6_RANGE_MIN_1000RPM | FAN6_MIN_5_EDGES | FAN6_UPDATE_TIME_400_MILISEC );
+    fan6_write_reg( ctx, FAN6_FAN_STEP_REG, 0x08 );
+    fan6_write_reg( ctx, FAN6_FAN_SPINUP_CONFIG_REG, FAN6_SPINUP_DRIVELEVEL_65_PERCENTS | FAN6_SPINUP_TIME_250_MILISEC );
+    fan6_write_reg( ctx, FAN6_FAN_CONFIG1_REG, FAN6_RANGE_MIN_500RPM | FAN6_MIN_5_EDGES | FAN6_UPDATE_TIME_100_MILISEC );
     fan6_write_reg( ctx, FAN6_PWM_DIVIDE_REG, 0x01 );
     fan6_write_reg( ctx, FAN6_PWM_CONFIG_REG, FAN6_NORMAL_POLARITY );
-    fan6_write_reg( ctx, FAN6_FAN_MIN_DRIVE_REG, 0x66 );
+    fan6_write_reg( ctx, FAN6_FAN_MIN_DRIVE_REG, 0x00 );
     fan6_write_reg( ctx, FAN6_FAN_VALID_TACH_COUNT_REG, 0xFF );
-    fan6_set_pwm_mode( ctx, FAN6_100_PERCENTS_SPEED );
+    fan6_write_reg( ctx, FAN6_PWM_BASE_FREQ_REG, FAN6_PWM_BASE_FREQ_26000HZ );
+    fan6_set_pwm_mode( ctx, FAN6_0_PERCENT_SPEED );
 }
 
 void fan6_generic_write ( fan6_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
@@ -160,7 +162,7 @@ uint16_t fan6_read_reg ( fan6_t *ctx, uint8_t register_address )
     for ( i = 0; i < n_bytes; i++ )
     {
         reg = register_address + i;
-        fan6_generic_read( ctx, reg, buff_data, 1 );
+        fan6_generic_read( ctx, reg, &buff_data[ i ], 1 );
     }
     if ( n_bytes == 2 )
     {
@@ -178,7 +180,7 @@ uint16_t fan6_read_reg ( fan6_t *ctx, uint8_t register_address )
         }
     }
     else
-        temp = buff_data[ 0 ];;
+        temp = buff_data[ 0 ];
     return temp;
 }
 
@@ -254,7 +256,7 @@ uint32_t fan6_read_tachometer ( fan6_t *ctx )
     uint8_t n_poles;
     uint8_t n_edges;
     uint8_t multiplier_range;
-    uint32_t tmp = 0x001E0000;
+    float tmp = 1966080;
     
     fan_config = fan6_read_reg( ctx,  0x42 );
     fan_config_check = ( fan_config & 0x60 ) >> 5;
@@ -316,7 +318,7 @@ uint32_t fan6_read_tachometer ( fan6_t *ctx )
     tmp /= n_poles;
     tmp *= multiplier_range;
     tmp /= tach_value;
-    return tmp;
+    return (uint32_t) tmp;
 }
 
 float fan6_get_temperature ( fan6_t *ctx, uint8_t temp_address )
@@ -353,13 +355,13 @@ float fan6_get_temperature ( fan6_t *ctx, uint8_t temp_address )
     }
     if ( temp_value < 0x8000 )
     {
-        ret_value = temp_value / 0x0020;
+        ret_value = temp_value >> 5;
         ret_value *= 0.125;
     }
     else if ( temp_value > 0x8000 )
     {
-        ret_value = ~temp_value;
-        ret_value += 1;
+        temp_value = ~temp_value;
+        temp_value += 1;
         ret_value = temp_value / 0x0020;
         ret_value *= 0.125;
     }
@@ -459,46 +461,25 @@ static uint8_t fan6_get_data_size ( fan6_t *ctx, uint8_t reg_addr )
     switch ( reg_addr )
     {
         case 0x00:  
-        {
-            ctx->adc_mode = 1;
-            return 2;
-        }
-        case 0x02:
-        {
-            ctx->adc_mode = 1;
-            return 2;
-        } 
-        case 0x04:
-        {
-            ctx->adc_mode = 1;
-            return 2;  
-        } 
+        case 0x02: 
+        case 0x04: 
         case 0x06:
-        {
-            ctx->adc_mode = 1;
-            return 2;
-        } 
-        case 0x4A: 
-        {
-            ctx->adc_mode = 0;
-            return 2;
-        }
-        case 0x4C:
-        {
-            ctx->adc_mode = 0;
-            return 2;
-        } 
         case 0x4E:
         {
             ctx->adc_mode = 1;
             return 2;
-        } 
+        }
+        case 0x4A: 
+        case 0x4C:
+        {
+            ctx->adc_mode = 0;
+            return 2;
+        }
         default:
         {
             return 1;
         } 
     }
-    ctx->check_ptr = 0;
 }
 
 static void fan6_make_data ( fan6_t *ctx, uint16_t data_in, uint8_t *data_out, uint8_t num_bytes )

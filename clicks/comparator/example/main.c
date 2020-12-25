@@ -34,9 +34,6 @@ uint8_t out_state_two;
 static comparator_t comparator;
 static log_t logger;
 
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
-
-
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
@@ -46,8 +43,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_printf( &logger, "--------------------------\r\n" );
     log_printf( &logger, "     Application  Init\r\n" );

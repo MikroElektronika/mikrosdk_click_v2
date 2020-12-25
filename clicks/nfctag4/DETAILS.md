@@ -1,4 +1,5 @@
 
+
 ---
 # NFC Tag 4  click
 
@@ -59,14 +60,16 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example checks if there is a message in the mailbox, and logs message length.
+> This example showcases how to configure and use the NFC Tag 4 click. The click is an NFC tag 
+> interface which uses the I2C serial interface and an RF link interface in order to communicate.
+> The example requires the ST25 NFC Tap application which can be downloaded to your phone.
 
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes driver, presents password to the device and initializes the device. 
+> This function initializes and configures the logger and click modules.
 
 ```c
 
@@ -75,8 +78,9 @@ void application_init ( void )
     log_cfg_t log_cfg;
     nfctag4_cfg_t cfg;
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -91,7 +95,9 @@ void application_init ( void )
 
 ### Application Task
 
-> Checks if RF placed a message to mailbox and if it did, logs length.
+> This function waits for the interrupt signal, after which it expects data transfers. Once
+> some data has been detected it will open a communication channel with the device transmitting
+> it and show the received data in the UART console.
 
 ```c
 
@@ -120,11 +126,11 @@ void application_task ( void )
         nfctag4_i2c_get( &nfctag4, &info, aux_buffer );
 
         log_printf( &logger, "************* MESSAGE ***************\r\n" );
-        log_printf( &logger, "Message length: %d\r\n", message_length );
+        log_printf( &logger, " ** Message length:  %u Bytes**\r\n", message_length );
 
         for ( i = 0; i < message_length; i++ )
         {
-            log_printf( &logger, "%d: 0x%x\r\n", i, aux_buffer[ i ] );
+            log_printf( &logger, " %u : 0x%x\r\n", i, ( uint16_t ) aux_buffer[ i ] );
         }
 
         log_printf( &logger, "************** END ****************\r\n" );

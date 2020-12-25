@@ -1,8 +1,0 @@
-{
-    "name": "LoRa Click",
-    "description": "LoRa and LoRa 2 clicks are a LoRa® RF technology based SRD transceiver, which operates at a sub-gigahertz frequency. This click board™ features an embedded LoRaWAN® Class A compliant stack, providing a long-range spread spectrum communication, with high interference immunity.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","RN2483, RN2903"],
-    "category" : ["Sub-1 GHz Transceivers"] 
-}

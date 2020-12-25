@@ -99,11 +99,11 @@ void application_task ( void )
 
                 if ( check_output == 0 )
                 {
-                    log_printf( &logger, "OUT1 is low %d\r\n" );
+                    log_printf( &logger, "OUT1 is low\r\n" );
                 }
                 else
                 {
-                    log_printf( &logger, "OUT1 is high %d\r\n" );
+                    log_printf( &logger, "OUT1 is high\r\n" );
                 }
                 break;
             }
@@ -113,11 +113,11 @@ void application_task ( void )
 
                 if ( check_output == 0 )
                 {
-                    log_printf( &logger, "OUT2 is low %d\r\n" );
+                    log_printf( &logger, "OUT2 is low\r\n" );
                 }
                 else
                 {
-                    log_printf( &logger, "OUT2 is high %d\r\n" );
+                    log_printf( &logger, "OUT2 is high\r\n" );
                 }
                 break;
             }
@@ -127,11 +127,11 @@ void application_task ( void )
 
                 if ( check_output == 0 )
                 {
-                    log_printf( &logger, "OUT3 is low %d\r\n" );
+                    log_printf( &logger, "OUT3 is low\r\n" );
                 }
                 else
                 {
-                    log_printf( &logger, "OUT3 is high %d\r\n" );
+                    log_printf( &logger, "OUT3 is high\r\n" );
                 }
                 break;
             }
@@ -141,11 +141,11 @@ void application_task ( void )
 
                 if ( check_output == 0 )
                 {
-                    log_printf( &logger, "OUT4 is low %d\r\n" );
+                    log_printf( &logger, "OUT4 is low\r\n" );
                 }
                 else
                 {
-                    log_printf( &logger, "OUT4 is high %d\r\n" );
+                    log_printf( &logger, "OUT4 is high\r\n" );
                 }
                 break;
             }

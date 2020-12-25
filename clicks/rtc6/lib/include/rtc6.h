@@ -240,7 +240,7 @@ typedef struct
     uint8_t weekdays;
     uint8_t monthday;
     uint8_t month;
-    uint8_t year;
+    uint16_t year;
 
 } rtc6_time_t;
 

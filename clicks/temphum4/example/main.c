@@ -40,9 +40,8 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
 
@@ -50,9 +49,23 @@ void application_init ( void )
     TEMPHUM4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     temphum4_init( &temphum4, &cfg );
     
+    temphum4_set_mode( &temphum4, TEMPHUM4_MODE_ACTIVE );
+    Delay_ms( 500 );
+    
+    uint16_t dev_id = temphum4_get_manifacturer_id( &temphum4 );
+    log_printf( &logger, " ID[HEX] : 0x%X\r\n", dev_id );
+    
+    if ( TEMPHUM4_MANUFACTURER_ID != dev_id )
+    {
+        log_info( &logger, "---- Error Init ----" ); 
+        for(;;);
+    }
+    Delay_ms( 500 );
+    
     temphum4_default_cfg( &temphum4 );
 
     log_info( &logger, "---Temp&Hum 4 Configured---" );
+    Delay_ms( 500 );
 }
 
 void application_task ( void )
@@ -61,9 +74,10 @@ void application_task ( void )
     float humidity;
     
     temperature = temphum4_get_temperature( &temphum4 );
-    log_printf( &logger, " Temperature : %f C \r\n", temperature );
+    log_printf( &logger, " Temperature : %.2f degC \r\n", temperature );
     humidity = temphum4_get_humidity( &temphum4 );
-    log_printf( &logger, " Humidity : %f %% \r\n", humidity );
+    log_printf( &logger, " Humidity : %.2f %%\r\n", humidity );
+    log_printf( &logger, "*********************************\r\n" );
     Delay_ms( 1000 );
 }
 

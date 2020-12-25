@@ -62,7 +62,7 @@
  */
 #define AMBIENT11_RETVAL  uint8_t
 
-#define AMBIENT11_OK                                             0x00
+#define AMBIENT11_OK                                        0x00
 #define AMBIENT11_INIT_ERROR                                0xFF
 /** \} */
 
@@ -70,42 +70,42 @@
  * \defgroup ambient11_I2C slave address
  * \{
  */
-#define AMBIENT11_SLAVE_ADDRESS                           0x29
+#define AMBIENT11_SLAVE_ADDRESS                             0x29
 /** \} */
 
 /**
  * \defgroup ambient11_commands
  * \{
  */
-#define AMBIENT11_ALS_CONF_WR                             0x00
-#define AMBIENT11_TRSHLD_WINDOW_SET_HIGH        0x01
-#define AMBIENT11_TRSHLD_WINDOW_SET_LOW         0x02
-#define AMBIENT11_ALS_CONF_RD                              0x04
+#define AMBIENT11_ALS_CONF_WR                               0x00
+#define AMBIENT11_TRSHLD_WINDOW_SET_HIGH                    0x01
+#define AMBIENT11_TRSHLD_WINDOW_SET_LOW                     0x02
+#define AMBIENT11_ALS_CONF_RD                               0x04
 #define AMBIENT11_WHITE_VAL                                 0x05
-#define AMBIENT11_TRSHLD_TRIG_INT                       0x06
+#define AMBIENT11_TRSHLD_TRIG_INT                           0x06
 /** \} */
 
 /**
  * \defgroup ambient11_configuration register settings
  * \{
  */
-#define AMBIENT11_ALS_CONF_SENS_LOW                   0x1000
-#define AMBIENT11_ALS_CONF_DG_DOUBLE                 0x0800
-#define AMBIENT11_ALS_CONF_GAIN_DOUBLE_SENS      0x0400
-#define AMBIENT11_ALS_CONF_IT_25                          0x0300
-#define AMBIENT11_ALS_CONF_IT_50                          0x0200
-#define AMBIENT11_ALS_CONF_IT_100                        0x0000
-#define AMBIENT11_ALS_CONF_IT_200                        0x0040
-#define AMBIENT11_ALS_CONF_IT_400                        0x0080
-#define AMBIENT11_ALS_CONF_IT_800                        0x00C0
-#define AMBIENT11_ALS_CONF_PERS_1                        0x0000
-#define AMBIENT11_ALS_CONF_PERS_2                        0x0010
-#define AMBIENT11_ALS_CONF_PERS_4                        0x0020
-#define AMBIENT11_ALS_CONF_PERS_8                        0x0030
-#define AMBIENT11_ALS_CONF_INT_CHAN                   0x0008
-#define AMBIENT11_ALS_CONF_CHAN_EN                     0x0004
-#define AMBIENT11_ALS_CONF_INT_EN                       0x0002
-#define AMBIENT11_ALS_CONF_SHUT_DOWN               0x0001
+#define AMBIENT11_ALS_CONF_SENS_LOW                         0x1000
+#define AMBIENT11_ALS_CONF_DG_DOUBLE                        0x0800
+#define AMBIENT11_ALS_CONF_GAIN_DOUBLE_SENS                 0x0400
+#define AMBIENT11_ALS_CONF_IT_25                            0x0300
+#define AMBIENT11_ALS_CONF_IT_50                            0x0200
+#define AMBIENT11_ALS_CONF_IT_100                           0x0000
+#define AMBIENT11_ALS_CONF_IT_200                           0x0040
+#define AMBIENT11_ALS_CONF_IT_400                           0x0080
+#define AMBIENT11_ALS_CONF_IT_800                           0x00C0
+#define AMBIENT11_ALS_CONF_PERS_1                           0x0000
+#define AMBIENT11_ALS_CONF_PERS_2                           0x0010
+#define AMBIENT11_ALS_CONF_PERS_4                           0x0020
+#define AMBIENT11_ALS_CONF_PERS_8                           0x0030
+#define AMBIENT11_ALS_CONF_INT_CHAN                         0x0008
+#define AMBIENT11_ALS_CONF_CHAN_EN                          0x0004
+#define AMBIENT11_ALS_CONF_INT_EN                           0x0002
+#define AMBIENT11_ALS_CONF_SHUT_DOWN                        0x0001
 /** \} */
 
 /** \} */ // End group macro 

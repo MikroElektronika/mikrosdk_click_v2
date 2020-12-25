@@ -29,8 +29,8 @@
 #include "string.h"
 
 #define PROCESS_COUNTER 10
-#define PROCESS_RX_BUFFER_SIZE 1000
-#define PROCESS_PARSER_BUFFER_SIZE 1000
+#define PROCESS_RX_BUFFER_SIZE 500
+#define PROCESS_PARSER_BUFFER_SIZE 500
 
 // ------------------------------------------------------------------ VARIABLES
 

@@ -1,7 +1,7 @@
 {
     "name": "RF Meter Click",
     "description": "RF Meter click is a radio frequency power measurement device covering a frequency span from 1 MHz to 8 GHz over a 60 dB range (approximately).",
-    "image" : "https://cdn1-shop.mikroe.com/img/product/rf-meter-click-click/rf-meter-click-click-large_default-12x.jpg",
+    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","mikrocpic"],
     "hw" : ["click","AD8318"],
     "category" : ["RF meter"] 

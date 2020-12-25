@@ -14,8 +14,7 @@
  * Reads the received data and parses it.
  * 
  * ## Additional Function
- * - gnss5_process ( ) - The general process of collecting presponce 
- *                                   that sends a module.
+ * - gnss5_process ( ) - The general process of collecting data the module sends.
  * 
  * 
  * \author MikroE Team
@@ -28,14 +27,11 @@
 #include "gnss5.h"
 #include "string.h"
 
-#define PROCESS_COUNTER 10
-#define PROCESS_RX_BUFFER_SIZE 500
-#define PROCESS_PARSER_BUFFER_SIZE 1000
+#define PROCESS_COUNTER 15
+#define PROCESS_RX_BUFFER_SIZE 600
+#define PROCESS_PARSER_BUFFER_SIZE 600
 
 // ------------------------------------------------------------------ VARIABLES
-
-#define DEMO_APP_RECEIVER
-//#define DEMO_APP_TRANSMITER
 
 static gnss5_t gnss5;
 static log_t logger;
@@ -77,7 +73,6 @@ static void gnss5_process ( void )
             {
                 strncat( current_parser_buf, uart_rx_buffer, rsp_size );
             }
-            
             // Clear RX buffer
             memset( uart_rx_buffer, 0, PROCESS_RX_BUFFER_SIZE );
         } 
@@ -95,14 +90,21 @@ static void parser_application ( char *rsp )
 {
     char element_buf[ 200 ] = { 0 };
     
-    log_printf( &logger, "\r\n-----------------------\r\n", element_buf ); 
+    log_printf( &logger, "\r\n-----------------------\r\n" ); 
     gnss5_generic_parser( rsp, GNSS5_NEMA_GNGGA, GNSS5_GNGGA_LATITUDE, element_buf );
-    log_printf( &logger, "Latitude:  %s \r\n", element_buf );
-    gnss5_generic_parser( rsp, GNSS5_NEMA_GNGGA, GNSS5_GNGGA_LONGITUDE, element_buf );
-    log_printf( &logger, "Longitude:  %s \r\n", element_buf );
-    memset( element_buf, 0, sizeof( element_buf ) );
-    gnss5_generic_parser( rsp, GNSS5_NEMA_GNGGA, GNSS5_GNGGA_ALTITUDE, element_buf );
-    log_printf( &logger, "Alitude: %s \r\n", element_buf );  
+    if ( strlen( element_buf ) > 0 )
+    {
+        log_printf( &logger, "Latitude:  %.2s degrees, %s minutes \r\n", element_buf, &element_buf[ 2 ] );
+        gnss5_generic_parser( rsp, GNSS5_NEMA_GNGGA, GNSS5_GNGGA_LONGITUDE, element_buf );
+        log_printf( &logger, "Longitude:  %.3s degrees, %s minutes \r\n", element_buf, &element_buf[ 3 ] );
+        memset( element_buf, 0, sizeof( element_buf ) );
+        gnss5_generic_parser( rsp, GNSS5_NEMA_GNGGA, GNSS5_GNGGA_ALTITUDE, element_buf );
+        log_printf( &logger, "Alitude: %s m", element_buf );  
+    }
+    else
+    {
+        log_printf( &logger, "Waiting for the position fix..." );
+    }
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS

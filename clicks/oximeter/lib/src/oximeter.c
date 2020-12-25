@@ -68,6 +68,7 @@ OXIMETER_RETVAL oximeter_init ( oximeter_t *ctx, oximeter_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     digital_in_init( &ctx->io0, cfg->io0 );
    
@@ -97,7 +98,7 @@ void oximeter_default_cfg ( oximeter_t *ctx )
     tmp.enable_led = OXIM_LEDX1_EN;
     oxim_set_time_slot_b( ctx, &tmp, OXIM_SLOT_NORM_OP_MODE );
 
-    oxim_enable_channels( ctx, OXIM_CH1_EN );
+    oxim_enable_channels( ctx, OXIM_ALL_CHANN_EN );
     oxim_write_reg( ctx, OXIM_STATUS_REG, 0xFFFF );
     oxim_write_reg( ctx, OXIM_DATA_ACCESS_CTL_REG, 0x0000 );
     oxim_set_mode( ctx, OXIM_DEV_NORMAL_OP_MODE );

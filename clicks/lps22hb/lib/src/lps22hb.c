@@ -69,7 +69,7 @@ void lps22hb_cfg_setup ( lps22hb_cfg_t *cfg )
     cfg->spi_mode = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 
-    cfg->sel         = LPS22HB_MASTER_SPI;
+    cfg->sel         = LPS22HB_MASTER_I2C;
 }
 
 LPS22HB_RETVAL lps22hb_init ( lps22hb_t *ctx, lps22hb_cfg_t *cfg )

@@ -27,6 +27,7 @@
     "short_description": "ProxFusion® 2 Click is an ambient lighting, capacitive, Hall-effect, and inductive sensing Click board™ which features a single multifunctional sensor IC.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+
 

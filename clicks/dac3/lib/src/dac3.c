@@ -65,13 +65,14 @@ DAC3_RETVAL dac3_init ( dac3_t *ctx, dac3_cfg_t *cfg )
     ctx->dac_cfg.gain = cfg->dac_cfg.gain;
     ctx->slave_address = cfg->i2c_address;
 
-    if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) != I2C_MASTER_SUCCESS )
+    if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_ERROR )
     {
         return DAC3_INIT_ERROR;
     }
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+	i2c_master_set_timeout( &ctx->i2c, 0 );
 
     return DAC3_OK;
 }

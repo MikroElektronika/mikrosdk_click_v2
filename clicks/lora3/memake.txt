@@ -1,7 +1,0 @@
-type: subdirs
-project: LoRa3
-
-subdirs: {
-    lib
-    example
-}

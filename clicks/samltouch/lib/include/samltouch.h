@@ -44,7 +44,8 @@
  * \defgroup macros Macros
  * \{
  */
-
+#define SAMLTOUCH_START_FRAME  0x55
+#define SAMLTOUCH_END_FRAME  0xAA
 /**
  * \defgroup map_mikrobus MikroBUS
  * \{
@@ -68,7 +69,8 @@
  * \defgroup driver Driver define
  * \{
  */
-#define DRV_RX_BUFFER_SIZE 2000
+#define DRV_RX_BUFFER_SIZE 1000
+#define DRV_TX_BUFFER_SIZE 80
 /** \} */
 
 /** \} */ // End group macro 
@@ -97,7 +99,7 @@ typedef struct
     uart_t uart;
 
     char uart_rx_buffer[ DRV_RX_BUFFER_SIZE ];
-    char uart_tx_buffer[ DRV_RX_BUFFER_SIZE ];
+    char uart_tx_buffer[ DRV_TX_BUFFER_SIZE ];
 
 } samltouch_t;
 
@@ -176,7 +178,7 @@ void samltouch_generic_write ( samltouch_t *ctx, char *data_buf, uint16_t len );
  * 
  * @return Number of reads data.
  */
-uint16_t samltouch_generic_read ( samltouch_t *ctx, char *data_buf, uint16_t max_len );
+int32_t samltouch_generic_read ( samltouch_t *ctx, char *data_buf, uint16_t max_len );
 
 /**
  * @brief Generic parser function.

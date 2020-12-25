@@ -55,7 +55,7 @@ void application_task ( )
     float current_data;
 
     current_data = hallcurrent3_get_current( &hallcurrent3 );
-    log_printf( &logger, "Current : %f mA\r\n" );
+    log_printf( &logger, "Current : %f mA\r\n", current_data );
 
     Delay_ms( 1000 );
 }

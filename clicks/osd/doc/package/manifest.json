@@ -27,5 +27,6 @@
     "short_description": "OSD Click features MAX7456 single-channel monochrome OSD module with integrated EEPROM memory as well as two RCA sockets. It is used to create on-screen menus and other video overlays, such as custom graphics, company logo, time and date using 256 user-programmable characters or pictographs.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

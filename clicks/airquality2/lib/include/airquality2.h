@@ -73,13 +73,6 @@
 /** \} */
 
 /**
- * \defgroup register_address_to_read Register Address To Read
- * \{
- */
-#define AIRQUALITY2_READ_REG_ADDRESS                               0x00
-/** \} */
-
-/**
  * \defgroup type Type
  * \{
  */
@@ -203,39 +196,15 @@ void airquality2_cfg_setup ( airquality2_cfg_t *cfg );
 AIRQUALITY2_RETVAL airquality2_init ( airquality2_t *ctx, airquality2_cfg_t *cfg );
 
 /**
- * @brief Generic write function.
- *
- * @param ctx          Click object.
- * @param reg          Register address.
- * @param data_buf     Data buf to be written.
- * @param len          Number of the bytes in data buf.
- *
- * @description This function writes data to the desired register.
- */
-void airquality2_generic_write ( airquality2_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-/**
  * @brief Generic read function.
  *
  * @param ctx          Click object.
- * @param reg          Register address.
  * @param data_buf     Output data buf
  * @param len          Number of the bytes to be read
  *
- * @description This function reads data from the desired register.
+ * @description This function reads data.
  */
-void airquality2_generic_read ( airquality2_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-/**
- * @brief Write 8-bit data function.
- *
- * @param ctx              Click object.
- * @param address          8-bit data register address.
- * @param write_command    8-bit data command to write.
- *
- * @description Function write 8-bit data to 8-bit register on the iAQ-Core module.
- */
-void airquality2_write_data ( airquality2_t *ctx, uint8_t address, uint8_t write_command );
+void airquality2_generic_read ( airquality2_t *ctx, uint8_t *data_buf, uint8_t len );
 
 /**
  * @brief Read all data info function.

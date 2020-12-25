@@ -25,7 +25,12 @@
     "name": "mikroe.click.samltouch",
     "product_link": "https://www.mikroe.com/saml-touch-click",
     "short_description": "SAML Touch Click is a Click board™ equipped with two capacitive touch pads and one capacitive slider.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.0"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2757
+    ],
+    "version": "2.0.0.2"
 }
+

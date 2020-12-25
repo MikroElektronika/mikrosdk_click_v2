@@ -1,8 +1,0 @@
-{
-    "name": "G2C Click",
-    "description": "Go to Cloud (G2C) click is a gateway Click board™ which provides a simple and reliable connection to the Click Cloud platform",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","MK64FN1M0VDC12"],
-    "category" : ["WiFi,Cloud Routers"] 
-}

@@ -27,5 +27,6 @@
     "short_description": "Thermo 14 Click provides an accuracy of ±0.5°C in the range from -10°C to 60°C.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

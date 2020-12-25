@@ -84,7 +84,7 @@
  * \defgroup driver Driver define
  * \{
  */
-#define DRV_RX_BUFFER_SIZE 500
+#define DRV_RX_BUFFER_SIZE 256
 /** \} */
 
 /**
@@ -383,11 +383,11 @@ uint8_t mbusrf4_get_state_rts ( mbusrf4_t *ctx );
 void mbusrf4_set_communication_mode ( mbusrf4_t *ctx, uint8_t mode );
 
 /**
- * @brief Get Interrupt state of the IND(AN) pin
+ * @brief Get Interrupt state of the RTS(INT) pin
  *
  * @param ctx Click object.
  *
- * @description This function gets state of IND pin.
+ * @description This function gets state of RTS pin.
  */
 uint8_t mbusrf4_get_state_rts ( mbusrf4_t *ctx );
 
@@ -403,6 +403,18 @@ uint8_t mbusrf4_get_state_rts ( mbusrf4_t *ctx );
  *              and finally (checksum)
  */
 void mbusrf4_send_command ( mbusrf4_t *ctx, uint8_t command, uint8_t length, uint8_t *payload_buff );
+
+
+void mbusrf4_transmit_data ( mbusrf4_t *ctx, uint8_t *tx_buf, uint8_t tx_len );
+
+/**
+ * @brief Get Interrupt state of the IND(AN) pin
+ *
+ * @param ctx Click object.
+ *
+ * @description This function gets state of IND pin.
+ */
+uint8_t mbusrf4_get_state_ind ( mbusrf4_t *ctx );
 
 #ifdef __cplusplus
 }

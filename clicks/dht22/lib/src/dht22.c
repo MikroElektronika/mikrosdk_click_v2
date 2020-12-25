@@ -29,177 +29,195 @@
 
 #include "dht22.h"
 
-// ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
-
 void dht22_cfg_setup ( dht22_cfg_t *cfg )
 {
-    // Additional gpio pins
-
-    cfg-> sd11   = HAL_PIN_NC;
-    cfg-> sd12   = HAL_PIN_NC;
+    cfg->sd1 = HAL_PIN_NC;
     cfg->sd2 = HAL_PIN_NC;
+
+    cfg->sda_sel = DHT22_SDA_SEL_SDA1;
 }
 
-DHT22_RETVAL dht22_init ( dht22_t *ctx, dht22_cfg_t *cfg )
+err_t dht22_init ( dht22_t *ctx, dht22_cfg_t *cfg )
 {
-    // Output pins 
+    ctx->sd1 = cfg->sd1;
+    ctx->sd2 = cfg->sd2;
 
-    digital_out_init( &ctx->sd12, cfg->sd12 );
+    ctx->sda_sel = cfg->sda_sel;
 
-    // Input pins
+    ctx->sda_out_stat = DIGITAL_OUT_UNSUPPORTED_PIN;
+    ctx->sda_in_stat = DIGITAL_IN_UNSUPPORTED_PIN;
 
-    digital_in_init( &ctx->sd11, cfg->sd11 );
-    digital_in_init( &ctx->sd2, cfg->sd2 );
+    if ( ( cfg->sd1 == HAL_PIN_NC ) && ( cfg->sd2 == HAL_PIN_NC ) )
+    {
+        return DHT22_ERROR;
+    }
 
     return DHT22_OK;
 }
 
-void dht22_start_signal ( dht22_t *ctx )
+err_t dht22_start_signal ( dht22_t *ctx )
 {
-    uint8_t timeout;
+    if ( ctx->sda_out_stat == DIGITAL_OUT_UNSUPPORTED_PIN )
+    {
+        return DHT22_ERROR;
+    }
 
-    digital_out_high( &ctx->sd12 );
+    digital_out_low( &ctx->sda_out );
 
-    Delay_100ms( );
+    Delay_500us( );
+    Delay_50us( );
 
-    digital_out_low( &ctx->sd12 );
+    digital_out_high( &ctx->sda_out );
 
-    Delay_1ms( );
-    Delay_1ms( );
-
-    digital_out_high( &ctx->sd12 );
+    return DHT22_OK;
 }
 
-uint8_t dht22_check_sensor_response ( dht22_t *ctx )
+err_t dht22_check_sensor_response ( dht22_t *ctx, uint8_t *check_out )
 {
-    uint8_t timeout;
+    if ( ctx->sda_in_stat == DIGITAL_IN_UNSUPPORTED_PIN )
+    {
+        return DHT22_ERROR;
+    }
 
-    timeout = 200;
+    Delay_10us( );
+    Delay_10us( );
+    Delay_10us( );
 
-    while ( digital_in_read( &ctx->sd11 ) )
+    uint8_t timeout = 100;
+
+    while ( !digital_in_read( &ctx->sda_in ) )
     {
         Delay_1us( );
 
         if ( !timeout-- )
-            return 0;
+        {
+            *check_out = DHT22_RESP_NOT_READY;
+
+            return DHT22_OK;
+        }
     }
-    
-    while ( !digital_in_read( &ctx->sd11 ) )
+
+    timeout = 100;
+
+    while ( digital_in_read( &ctx->sda_in ) )
+    {
         Delay_1us( );
 
-    while ( digital_in_read( &ctx->sd11 ) )
-        Delay_1us( );
-    
-    return 1;
+        if ( !timeout-- )
+        {
+            *check_out = DHT22_RESP_NOT_READY;
+
+            return DHT22_OK;
+        }
+    }
+
+    *check_out = DHT22_RESP_READY;
+
+    return DHT22_OK;
 }
 
-uint32_t dht22_get_sensor_data ( dht22_t *ctx )
+err_t dht22_get_sensor_data ( dht22_t *ctx, uint32_t *data_out )
 {
-    uint8_t cnt_i ;
-    uint8_t cnt_j ;
-    uint8_t sensor_byte_buffer;
-    uint32_t result;
-    uint8_t read_buffer[ 5 ];
-    
-    result = 0x00000000;
-    
-    for ( cnt_i = 0; cnt_i < 5; cnt_i++ )
+    if ( ctx->sda_in_stat == DIGITAL_IN_UNSUPPORTED_PIN )
     {
-        for ( cnt_j = 1; cnt_j <= 8; cnt_j++ )
-                {
-            while ( !digital_in_read( &ctx->sd11 ) )
-                Delay_1us( );
+        return DHT22_ERROR;
+    }
 
-            Delay_10us( );
-            Delay_10us( );
-            Delay_10us( );
+    uint8_t sensor_byte_buffer = 0;
+    uint8_t read_buffer[ 5 ];
+
+    for ( uint8_t cnt_i = 0; cnt_i < 5; cnt_i++ )
+    {
+        for ( uint8_t cnt_j = 1; cnt_j <= 8; cnt_j++ )
+        {
+            while ( !digital_in_read( &ctx->sda_in ) );
+
+            uint8_t tim_cnt = 0;
+
+            while ( digital_in_read( &ctx->sda_in ) )
+            {
+                Delay_1us( );
+                tim_cnt++;
+            }
 
             sensor_byte_buffer <<= 1;
 
-            if ( digital_in_read( &ctx->sd11 ) )
+            if ( tim_cnt > 30 )
             {
                 sensor_byte_buffer |= 1;
-
-                Delay_22us( );
-                Delay_22us( );
-                Delay_1us( );
-
-                while ( digital_in_read( &ctx->sd11 ) )
-                    Delay_1us( );
-
             }
         }
 
-    read_buffer[ cnt_i ] = sensor_byte_buffer;
-    
+        read_buffer[ cnt_i ] = sensor_byte_buffer;
     }
 
-    result = read_buffer[ 0 ];
-    result <<= 8;
-    result |= read_buffer[ 1 ];
-    result <<= 8;
-    result |= read_buffer[ 2 ];
-    result <<= 8;
-    result |= read_buffer[ 3 ];
+    uint32_t results = read_buffer[ 0 ];
+    results <<= 8;
+    results |= read_buffer[ 1 ];
+    results <<= 8;
+    results |= read_buffer[ 2 ];
+    results <<= 8;
+    results |= read_buffer[ 3 ];
 
-    return result;
+    *data_out = results;
+
+    return DHT22_OK;
 }
 
-uint16_t dht22_calculate_temperature ( dht22_t *ctx, uint32_t sensor_data )
+uint16_t dht22_get_temperature ( dht22_t *ctx, uint32_t sensor_data )
 {
-    uint16_t temperature;
-
-    temperature = ( uint16_t ) sensor_data ;
-    
-    return temperature;
+    return (uint16_t)sensor_data;
 }
 
-float dht22_calc_temp_c ( dht22_t *ctx, uint32_t sensor_data )
+float dht22_calculate_temperature ( dht22_t *ctx, uint32_t sensor_data )
 {
-    uint16_t temp_data;
-    float result;
-    
-    result = 0.0;
+    uint16_t temp_data = dht22_get_temperature( ctx, sensor_data );
 
-    temp_data = ( uint16_t ) sensor_data ;
-    
-    result = temp_data / 10.0;
-
-    return result;
+    return (float)temp_data / 10;
 }
 
-uint16_t dht22_calculate_humidity ( dht22_t *ctx, uint32_t sensor_data )
+uint16_t dht22_get_humidity ( dht22_t *ctx, uint32_t sensor_data )
 {
-    uint16_t humidity;
-
-    humidity = ( uint16_t ) ( sensor_data >> 16 );
-
-    return humidity;
+    return (uint16_t)( sensor_data >> 16 );
 }
 
-float dht22_calc_humidity ( dht22_t *ctx, uint32_t sensor_data )
+float dht22_calculate_humidity ( dht22_t *ctx, uint32_t sensor_data )
 {
-    uint16_t hum_data;
-    float result;
+    uint16_t hum_data = dht22_get_humidity( ctx, sensor_data );
 
-    result = 0.0;
-
-    hum_data = ( uint16_t ) sensor_data ;
-
-    result = hum_data / 10.0;
-
-    return result;
+    return (float)hum_data / 10;
 }
 
-void cs_input ( dht22_t *ctx, dht22_cfg_t *cfg )
+err_t dht22_init_sda_input ( dht22_t *ctx )
 {
-    digital_in_init( &ctx->sd11, cfg->sd11 );
+    if ( ctx->sda_sel == DHT22_SDA_SEL_SDA1 )
+    {
+        ctx->sda_in_stat = digital_in_init( &ctx->sda_in, ctx->sd1 );
+    }
+    else
+    {
+        ctx->sda_in_stat = digital_in_init( &ctx->sda_in, ctx->sd2 );
+    }
+
+    ctx->sda_out_stat = DIGITAL_OUT_UNSUPPORTED_PIN;
+
+    return ctx->sda_in_stat;
 }
 
-void cs_output ( dht22_t *ctx, dht22_cfg_t *cfg )
+err_t dht22_init_sda_output ( dht22_t *ctx )
 {
-    digital_out_init( &ctx->sd12, cfg->sd12 );
+    if ( ctx->sda_sel == DHT22_SDA_SEL_SDA1 )
+    {
+        ctx->sda_out_stat = digital_out_init( &ctx->sda_out, ctx->sd1 );
+    }
+    else
+    {
+        ctx->sda_out_stat = digital_out_init( &ctx->sda_out, ctx->sd2 );
+    }
+
+    ctx->sda_in_stat = DIGITAL_IN_UNSUPPORTED_PIN;
+
+    return ctx->sda_out_stat;
 }
 
-// ------------------------------------------------------------------------- END
-
+// ------------------------------------------------------------------------ END

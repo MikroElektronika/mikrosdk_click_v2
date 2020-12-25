@@ -27,5 +27,7 @@
     "short_description": "EEPROM 4 click is 2,097,152 bits on a click board™, organized into 262,144 bytes. In other words, this click board™ is an EEPROM memory medium with the capacity of 256 KB.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.2"
 }
+
+

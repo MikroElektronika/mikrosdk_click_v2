@@ -14,7 +14,7 @@
  * Reads ADC value and detects which button is pressed based on that value.
  * 
  * 
- * \author MikroE Team
+ * \author Nemanja Medakovic
  *
  */
 // ------------------------------------------------------------------- INCLUDES
@@ -22,6 +22,8 @@
 #include "board.h"
 #include "log.h"
 #include "analogkey.h"
+
+#define ANALOGKEY_N_SAMPLES  50
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -35,44 +37,54 @@ void application_init ( void )
     log_cfg_t log_cfg;
     analogkey_cfg_t cfg;
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, "---- Application Init... ----" );
 
     analogkey_cfg_setup( &cfg );
     ANALOGKEY_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    if ( analogkey_init( &analogkey, &cfg ) == ADC_ERROR )
+    {
+        log_info( &logger, "---- Application Init Error. ----" );
+        log_info( &logger, "---- Please, run program again... ----" );
 
-    analogkey_set_resolution( &analogkey, ANALOGKEY_ADC_RESOLUTION_12bit );
-    
-    analogkey_init( &analogkey, &cfg );
-    Delay_ms( 100 );
-
-    log_printf(&logger, " Press the button :D\r\n ");
-
+        for ( ; ; );
+    }
+    log_info( &logger, "---- Application Init Done. ----\n" );
 }
 
 void application_task ( void )
 {
-    uint16_t adc_value;
-    uint8_t is_key;
-    uint8_t cnt;
-    uint16_t sum_value = 0;
+    float an_voltage = 0;
+    analogkey_key_id_t key;
+    float an_average = 0;
     
-    for ( cnt = 0; cnt < 5; cnt++ )
+    an_voltage = analogkey_read_voltage( &analogkey );
+    
+    if ( an_voltage > 0.2 )
     {
-        adc_value = analogkey_generic_read( &analogkey );
-        sum_value += adc_value;
+        an_average += an_voltage / ANALOGKEY_N_SAMPLES;
+        for ( uint8_t cnt = 0; cnt < ANALOGKEY_N_SAMPLES - 1; cnt++ )
+        {
+            an_voltage = analogkey_read_voltage( &analogkey );
+        
+            an_average += an_voltage / ANALOGKEY_N_SAMPLES;
+        }
+    }
+    
+    if ( ( key = analogkey_get_key( &analogkey, an_average ) ) != ANALOGKEY_TOUCH_KEY_NONE )
+    {
+        log_printf( &logger, " T%u is pressed.\r\n", (uint16_t)key );
+        
+        while ( analogkey_read_voltage( &analogkey ) > 0.2 ) {
+             Delay_ms( 1 );   
+        }
+    
+        log_printf( &logger, " T%u is released.\r\n", (uint16_t)key );
         Delay_ms( 10 );
     }
-    adc_value = sum_value / 5;
-    is_key = analogkey_get_key( &analogkey ,adc_value );
-
-    if ( is_key != ANALOGKEY_NO_TOUCH )
-    {
-        log_printf( &logger, "Pressed the button: %d\r\n", is_key );
-    }
-    Delay_ms( 300 );
 }
 
 void main ( void )

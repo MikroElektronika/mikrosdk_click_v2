@@ -78,8 +78,9 @@ void application_init ( )
 
     log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
-    log_info(&logger, "---- Application Init ----");
+    log_info(&logger, "Application Init");
 
     //  Click initialization.
 
@@ -87,40 +88,58 @@ void application_init ( )
     OOKTX_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ooktx_init( &ooktx, &cfg );
     Delay_100ms( ); 
+    
+    tx_index = 0;
+#ifdef BYTE_TRANSMIT
+    log_info(&logger, "Application Task\r\n BYTE TRANSMIT DEMO");
+#endif
+    
+#ifdef DATA_TRANSMIT
+    log_info(&logger, "Application Task\r\n DATA TRANSMIT DEMO");
+#endif
 }
   
 ```
 
 ### Application Task
 
-> This function initiates the radio signal communication, sends an 8 byte preambule, 2 start
-  package bytes to help the receiver differentiate actual data packages from signal glitches,
-  sends the actual data byte and stops the communication in one iteration.
+> This application consists 2 types:
+>  - BYTE_TRANSMIT: Transmiting one by one byte of data
+>  - DATA_TRANSMIT: Transmiting package of data ( 6 bytes in this example )
 
 ```c
 
 void application_task ( )
 {
     uint8_t cnt;
-    uint8_t inc;
-
-    for ( ; ; )
+    
+    ooktx_communication_init ( &ooktx, OOKTX_CALIBRATION_ENABLE, OOKTX_CONFIGURATION_ENABLE,
+                                       OOKTX_CFG_DEFAULT );
+    for ( cnt = 0; cnt < 8; cnt++ )
     {
-        ooktx_communication_init ( &ooktx, OOKTX_CALIBRATION_ENABLE, OOKTX_CONFIGURATION_ENABLE,
-                                           OOKTX_CFG_DEFAULT );
-        for ( cnt = 0; cnt < 8; cnt++ )
-        {
-            ooktx_communication_transmit ( &ooktx, OOKTX_PREAMBULE );
-        }
-        
-        ooktx_communication_transmit( &ooktx, 0xCE );
-        ooktx_communication_transmit( &ooktx, 0x35 );
-        ooktx_communication_transmit( &ooktx, inc++ );
-
-        ooktx_communication_stop( &ooktx );
-        Delay_ms ( 1000 );
+        ooktx_communication_transmit ( &ooktx, OOKTX_PREAMBULE );
     }
-} 
+#ifdef BYTE_TRANSMIT
+    ooktx_transmit_byte( &ooktx, 0xCE35, tx_data[ tx_index ] );
+    tx_index++;
+    if ( tx_data[ tx_index ] == '\0' )
+        tx_index = 0;
+#endif
+    
+#ifdef DATA_TRANSMIT
+    ooktx_transmit_data( &ooktx, 0xCE35, tx_data, 6 );
+#endif
+
+    ooktx_communication_stop( &ooktx );
+    
+#ifdef BYTE_TRANSMIT
+    Delay_ms ( 100 );
+#endif
+    
+#ifdef DATA_TRANSMIT
+    Delay_ms ( 2000 );
+#endif
+}
 
 ```
 

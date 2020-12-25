@@ -52,7 +52,11 @@ void application_init ( void )
     airquality2_cfg_setup( &cfg );
     AIRQUALITY2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     airquality2_init( &airquality2, &cfg );
-
+    
+    // Click calibration 
+    uint8_t dummy_buffer[ 9 ];
+    airquality2_generic_read( &airquality2, dummy_buffer, AIRQUALITY2_READ_ALL );
+    
     log_printf( &logger, "----------------------------------\r\n" );
     log_printf( &logger, "           Air quality 2          \r\n" );
     log_printf( &logger, "----------------------------------\r\n" );
@@ -67,7 +71,7 @@ void application_task ( void )
     int32_t resistance;
 
     status_info = airquality2_get_all_data( &airquality2, &value_co2, &value_tvoc, &resistance );
-    Delay_ms( 100 );
+    Delay_100ms( );
 
     if ( status_info == AIRQUALITY2_STATUS_OK )
     {
@@ -96,12 +100,11 @@ void application_task ( void )
 
     log_printf( &logger, "----------------------------------\r\n" );
 
-    Delay_ms( 1000 );
-    Delay_ms( 1000 );
-    Delay_ms( 1000 );
-    Delay_ms( 1000 );
-    Delay_ms( 1000 );
-    Delay_ms( 1000 );
+    Delay_1sec( );
+    Delay_1sec( );
+    Delay_1sec( );
+    Delay_1sec( );
+    Delay_1sec( );
 }
 
 void main ( void )

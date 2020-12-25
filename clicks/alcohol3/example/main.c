@@ -40,7 +40,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
     Delay_ms ( 100 );
@@ -65,6 +65,7 @@ void application_task ( void )
 {
     uint16_t co_ppm;
     uint16_t p_bac;
+    float temp_bac;
 
     //  Task implementation.
 
@@ -73,19 +74,20 @@ void application_task ( void )
     co_ppm = alcohol3_get_co_in_ppm ( &alcohol3 );
     log_printf( &logger, " co in ppm  %d    | \r\n", co_ppm );
 
-    p_bac = alcohol3_get_percentage_bac( &alcohol3 ) * 1000;
+    temp_bac = alcohol3_get_percentage_bac( &alcohol3 );
+    p_bac = ( uint16_t )( temp_bac * 1000 );
 
     if ( 10 > p_bac && p_bac < 100 )
     {
-        log_printf( &logger, " BAC    %d  | 0.00\r\n", p_bac );
+        log_printf( &logger, " BAC      | 0.00%d\r\n", p_bac );
     }
     else if ( 100 <= p_bac && 1000 > p_bac )
     {
-        log_printf( &logger, " BAC    %d  | 0.00\r\n", p_bac );
+        log_printf( &logger, " BAC      | 0.0%d\r\n", p_bac );
     }
     else if ( p_bac >= 1000 )
     {
-        log_printf( &logger, " BAC    %d  | 0.\r\n", p_bac );
+        log_printf( &logger, " BAC      | 0.%d\r\n", p_bac );
     }
     else
     {

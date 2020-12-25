@@ -29,73 +29,35 @@
 
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 500
-#define PROCESS_RSP_BUFFER_SIZE 1000
 
 #define TEXT_TO_SEND  "MikroE\r\n"
 
 // ------------------------------------------------------------------ VARIABLES
 
-//#define DEMO_APP_RECEIVER
-#define DEMO_APP_TRANSMITER
+#define DEMO_APP_RECEIVER
+// #define DEMO_APP_TRANSMITER
 
 static uartmux_t uartmux;
 static log_t logger;
 
 static uartmux_channel_t channel;
 
-static char current_rsp_buf[ PROCESS_RSP_BUFFER_SIZE ];
-static uint8_t send_data_cnt = 0;
+static int32_t rsp_size;
+static char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
 
 // ------------------------------------------------------- ADDITIONAL FUNCTIONS
 
 static void uartmux_process ( void )
 {
-    int32_t rsp_size;
-    uint16_t rsp_cnt = 0;
-    
-    char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
-    uint8_t check_buf_cnt;
-    uint8_t process_cnt = PROCESS_COUNTER;
+    rsp_size = uartmux_generic_read( &uartmux, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE, &channel );
 
-    channel.state_a = UARTMUX_STATE_A_CHANNEL_1;
-    channel.state_b = UARTMUX_STATE_B_CHANNEL_1;
-
-    // Clear rsp buffer
-    memset( current_rsp_buf, 0 , PROCESS_RSP_BUFFER_SIZE ); 
-    
-    while( process_cnt != 0 )
-    {
-        rsp_size = uartmux_generic_read( &uartmux, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE, &channel );
-
-        if ( rsp_size != -1 )
-        {  
-            // Validation of the received data
-            for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
-            {
-                if ( uart_rx_buffer[ check_buf_cnt ] == 0 ) 
-                {
-                    uart_rx_buffer[ check_buf_cnt ] = 13;
-                }
-            }
-            
-            // Storages data in rsp buffer
-            rsp_cnt += rsp_size;
-            if ( rsp_cnt < PROCESS_RSP_BUFFER_SIZE )
-            {
-                strncat( current_rsp_buf, uart_rx_buffer, rsp_size );
-            }
-            
-            // Clear RX buffer
-            memset( uart_rx_buffer, 0, PROCESS_RX_BUFFER_SIZE );
-        } 
-        else 
+    if ( rsp_size != -1 )
+    {  
+        for ( int32_t cnt = 0; cnt < rsp_size; cnt++ )
         {
-            process_cnt--;
-            
-            // Process delay 
-            Delay_ms( 100 );
+            log_printf( &logger, "%c", uart_rx_buffer[ cnt ] );
         }
-    }
+    }  
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -109,7 +71,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 

@@ -27,5 +27,6 @@
     "short_description": "DAC 2 click represents a 16-bit digital-to-analog converter.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

@@ -1,7 +1,0 @@
-type: subdirs
-project: Rs4853
-
-subdirs: {
-    lib
-    example
-}

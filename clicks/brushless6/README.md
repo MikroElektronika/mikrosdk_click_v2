@@ -42,9 +42,6 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 - Initialization function.
 > BRUSHLESS6_RETVAL brushless6_init ( brushless6_t *ctx, brushless6_cfg_t *cfg );
 
-- Click Default Configuration function.
-> void brushless6_default_cfg ( brushless6_t *ctx );
-
 
 #### Example key functions :
 
@@ -65,11 +62,10 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
->Intializes PWM module but also and Brushless click by executing intialization prodecure.
+> This function initializes and configures the logger and the click board.
 
 ```c
 
-void application_init ( void )
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -77,8 +73,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -87,48 +84,30 @@ void application_init ( void )
     brushless6_cfg_setup( &cfg );
     BRUSHLESS6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     brushless6_init( &brushless6, &cfg );
-
-    brushless6_pwm_start( &brushless6 );
-
+    brushless6_calibration( );
+    brushless6_setings( );
 }
   
 ```
 
 ### Application Task
 
->Periodicaly changes the motor speed using PWM module but also log current setting to UART.
+> This function drives the motor in both directions increasing and decreasing the speed of the motor.
 
 ```c
 
 void application_task ( void )
 {
-    //  Task implementation.
-    
-    if ( duty_cycle > brushless6.pwm_period )
-    {
-        duty_cycle = 100;
-    }
-    
-    brushless6_set_duty_cycle ( &brushless6, duty_cycle );
-    duty_cycle += 50;
-    Delay_100ms();
-
-    brushless6_setMotor( BRUSHLESS6_SPEED1 );
-    log_printf( &logger, " Speed 1 \r\n" );
-    log_printf( &logger, " 13 \r\n" );
-    log_printf( &logger, " 10 \r\n" );
-    Delay_ms( 1000 );
-  
-
-    brushless6_set_motor( BRUSHLESS6_CCW );
-    log_printf( &logger, "Direction change \r\n" );
-    log_printf( &logger, "13 \r\n" );
-    log_printf( &logger, "10 \r\n" );
-    Delay_ms( 1000 );
-
+    clockwise( );
+    counter_clockwise( );
 } 
 
 ```
+
+### NOTE
+
+> The maximal PWM Clock frequency for this click board is 500 Hz. 
+> So, the user will need to decrease the MCU's main clock frequency in MCU Settings in order to get up-to 500 Hz PWM clock frequency.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

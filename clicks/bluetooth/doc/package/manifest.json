@@ -25,7 +25,12 @@
     "name": "mikroe.click.bluetooth",
     "product_link": "https://www.mikroe.com/bluetooth-click",
     "short_description": "With the range up to a 100m and low power consumption, Bluetooth click is a great solution if you are looking for a simple way to integrate Bluetooth 2.1 communication to your device. It features the RN-41 low power, class 1 Bluetooth radio module. Bluetooth click communicates with the target board MCU through UART interface and is designed to run on 3.3V power supply only.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.0"
+    "_type": "mikroSDK Library",
+    "related_projects":[
+        220
+    ],
+    "version": "2.0.0.2"
 }
+

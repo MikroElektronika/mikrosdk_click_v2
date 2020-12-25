@@ -37,18 +37,17 @@ void accel5_cfg_setup ( accel5_cfg_t *cfg )
 
     cfg->scl = HAL_PIN_NC;
     cfg->sda = HAL_PIN_NC;
-    
+
     // Additional gpio pins
 
-    cfg->cs   = HAL_PIN_NC;
     cfg->it2 = HAL_PIN_NC;
     cfg->it1 = HAL_PIN_NC;
 
-    cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
+    cfg->i2c_speed   = I2C_MASTER_SPEED_STANDARD; 
     cfg->i2c_address = 0x15;
 }
 
-ACCEL5_RETVAL accel5_init ( accel5_t *ctx, accel5_cfg_t *cfg )
+err_t accel5_init ( accel5_t *ctx, accel5_cfg_t *cfg )
 {
     i2c_master_config_t i2c_cfg;
 
@@ -59,18 +58,14 @@ ACCEL5_RETVAL accel5_init ( accel5_t *ctx, accel5_cfg_t *cfg )
 
     ctx->slave_address = cfg->i2c_address;
 
-    if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) != I2C_MASTER_SUCCESS )
+    if ( i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_ERROR )
     {
         return ACCEL5_INIT_ERROR;
     }
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
-
-    // Output pins 
-
-    digital_out_init( &ctx->cs, cfg->cs );
-    digital_out_high( &ctx->cs );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Input pins
 
@@ -80,24 +75,26 @@ ACCEL5_RETVAL accel5_init ( accel5_t *ctx, accel5_cfg_t *cfg )
     return ACCEL5_OK;
 }
 
-void accel5_generic_write ( accel5_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
+err_t accel5_generic_write ( accel5_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
     uint8_t tx_buf[ 256 ];
-    uint8_t cnt;
-    
+    uint16_t cnt;
+
     tx_buf[ 0 ] = reg;
-    
+
     for ( cnt = 1; cnt <= len; cnt++ )
     {
-        tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
+        tx_buf[ cnt ] = data_buf[ cnt - 1 ];
     }
-    
-    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );   
+
+    return i2c_master_write( &ctx->i2c, tx_buf, len + 1 );
 }
 
-void accel5_generic_read ( accel5_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
+err_t accel5_generic_read ( accel5_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
-    i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, len );
+    uint8_t reg_tmp = reg;
+    
+    return i2c_master_write_then_read( &ctx->i2c, &reg_tmp, 1, data_buf, len );
 }
 
 void accel5_default_cfg ( accel5_t *ctx, uint8_t mode, uint8_t range )
@@ -156,44 +153,46 @@ void accel5_default_cfg ( accel5_t *ctx, uint8_t mode, uint8_t range )
 
 void accel5_write_byte ( accel5_t *ctx, uint8_t reg, uint8_t reg_data )
 {
-    accel5_generic_write( ctx, reg, &reg_data, 1 );
+    uint8_t tmp_data = reg_data;
+
+    accel5_generic_write( ctx, reg, &tmp_data, 1 );
 }
 
 uint8_t accel5_read_byte ( accel5_t *ctx, uint8_t reg )
 {
-    uint8_t read_reg[ 1 ];
+    uint8_t read_reg;
 
-    accel5_generic_read( ctx, reg, read_reg, 1 );
+    accel5_generic_read( ctx, reg, &read_reg, 1 );
 
-    return read_reg[ 0 ];
+    return read_reg;
 }
 
 uint16_t accel5_read_data ( accel5_t *ctx, uint8_t reg )
 {
     uint8_t read_reg[ 2 ];
     uint16_t read_data;
-    
+
     accel5_generic_read( ctx, reg, read_reg, 2 );
-    
+
     read_data = read_reg[ 1 ];
     read_data = read_data << 8;
     read_data = read_data | read_reg[ 0 ];
-    
+
     return read_data;
 }
 
 int16_t accel5_get_axis ( accel5_t *ctx, uint8_t axis )
 {
     int16_t axis_data;
-    
+
     axis_data = accel5_read_data( ctx, axis );
     axis_data = axis_data & 0x0FFF;
-    
+
     if ( axis_data > 2047 )
     {
         axis_data = (int16_t)( axis_data - 4096 );
     }
-    
+
     return axis_data;
 }
 
@@ -203,18 +202,18 @@ uint32_t accel5_sensor_time ( accel5_t *ctx )
     uint8_t read_time0;
     uint8_t read_time1;
     uint8_t read_time2;
-    
+
     read_time0 = accel5_read_byte( ctx, ACCEL5_REG_SENSOR_TIME_0 );
     read_time1 = accel5_read_byte( ctx, ACCEL5_REG_SENSOR_TIME_1 );
     read_time2 = accel5_read_byte( ctx, ACCEL5_REG_SENSOR_TIME_2 );
-    
+
     s_time = read_time2;
     s_time = s_time << 8;
     s_time = s_time | read_time1;
     s_time = s_time << 8;
     s_time = s_time | read_time0;
     s_time = (uint32_t)s_time * 312.5;
-    
+
     return s_time;
 }
 
@@ -222,14 +221,14 @@ float accel5_get_temperature ( accel5_t *ctx )
 {
     int8_t read_data;
     float temp;
-    
+
     read_data = accel5_read_byte( ctx, ACCEL5_REG_TEMPERATURE );
     if ( read_data > 0x80 )
     {
         read_data = read_data - 256;
     }
     temp = ( read_data * 0.5 ) + 33.0;
-    
+
     return temp;
 }
 
@@ -238,5 +237,4 @@ void accel5_soft_reset ( accel5_t *ctx )
     accel5_write_byte( ctx, ACCEL5_REG_CMD, ACCEL5_CMD_SOFTWARE_RESET );
 }
 
-// ------------------------------------------------------------------------- END
-
+// ------------------------------------------------------------------------ END

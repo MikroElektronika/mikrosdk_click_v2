@@ -67,20 +67,11 @@ void application_init ( void )
 void application_task ( void )
 {
     //  Task implementation.
-    
-    if ( duty_cycle > 1 )
-    {
-        duty_cycle = 0.1;
-    }
-    
-    pwmdriver_set_duty_cycle ( &pwmdriver, duty_cycle );
-    duty_cycle += 0.1;
-    Delay_100ms();
 
     log_printf( &logger," Light Intensity Rising  \r\n  " );
     Delay_1sec( );
 
-    for ( duty_cycle = 5; duty_cycle < 255; duty_cycle += 25 )
+    for ( duty_cycle = 0; duty_cycle < 1; duty_cycle += 0.1 )
     {
         pwmdriver_set_duty_cycle( &pwmdriver,duty_cycle );
         log_printf( &logger," >  \r\n " );
@@ -91,7 +82,7 @@ void application_task ( void )
     log_printf( &logger," Light Intensity Falling  \r\n " );
     Delay_1sec( );
 
-    for ( duty_cycle = 255; duty_cycle > 5; duty_cycle -= 25 )
+    for ( duty_cycle = 1; duty_cycle > 0; duty_cycle -= 0.1 )
     {
         pwmdriver_set_duty_cycle( &pwmdriver,duty_cycle );
         log_printf( &logger," <  \r\n " );
@@ -101,7 +92,6 @@ void application_task ( void )
     log_printf( &logger,"   \r\n " );
     log_printf( &logger,"---------------------  \r\n " );
     Delay_1sec( );
-
 }
 
 void main ( void )

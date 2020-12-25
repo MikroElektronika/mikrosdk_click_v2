@@ -27,5 +27,6 @@
     "short_description": "Ambient 2 click carries TI’s OPT3001 Ambient Light sensor. It’s a small (2mm x 2mm) single-chip lux meter that measures only the visible part of the light spectrum from any kind of source (mimicking the way humans see light).",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.2"
+    "version": "2.0.0.3"
 }
+

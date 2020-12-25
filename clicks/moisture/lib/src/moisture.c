@@ -48,7 +48,7 @@ void moisture_cfg_setup ( moisture_cfg_t *cfg )
 
     cfg->scl = HAL_PIN_NC;
     cfg->sda = HAL_PIN_NC;
-    
+
     // Additional gpio pins
 
     cfg->int_pin = HAL_PIN_NC;
@@ -59,7 +59,7 @@ void moisture_cfg_setup ( moisture_cfg_t *cfg )
 
 MOISTURE_RETVAL moisture_init ( moisture_t *ctx, moisture_cfg_t *cfg )
 {
-     i2c_master_config_t i2c_cfg;
+    i2c_master_config_t i2c_cfg;
 
     i2c_master_configure_default( &i2c_cfg );
     i2c_cfg.speed  = cfg->i2c_speed;
@@ -113,15 +113,15 @@ void moisture_generic_write ( moisture_t *ctx, uint8_t reg, uint8_t *data_buf, u
 {
     uint8_t tx_buf[ 256 ];
     uint8_t cnt;
-    
+
     tx_buf[ 0 ] = reg;
-    
+
     for ( cnt = 1; cnt <= len; cnt++ )
     {
         tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
     }
-    
-    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );   
+
+    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );
 }
 
 void moisture_generic_read ( moisture_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
@@ -250,5 +250,4 @@ static void clc_wait_period ( )
      Delay_1ms( );
 }
 
-// ------------------------------------------------------------------------- END
-
+// ------------------------------------------------------------------------ END

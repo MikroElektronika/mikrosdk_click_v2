@@ -24,7 +24,7 @@
  * In pseudo-differential mode the IN- channel must be in the range from
  * (Vss - 100mV) to (Vss + 100mV). The IN+ channel must be in the range from
  * IN- to (Vref + IN-).
- * If any of conditions are not satisfied, the device will return 0 or Vref
+ * If any of conditions are not fullfilled, the device will return 0 or Vref
  * voltage level, and measurements are not valid.
  *
  * \author Nemanja Medakovic
@@ -40,40 +40,44 @@
 // ------------------------------------------------------------------ VARIABLES
 
 static adc_t adc;
-static log_t console;
+static log_t logger;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init( void )
 {
-    adc_cfg_t adc_cfg;
-    log_cfg_t console_cfg;
+    log_cfg_t log_cfg;
+    adc_cfg_t cfg;
+
+    //  Logger initialization.
+
+    LOG_MAP_USB_UART( log_cfg );
+    log_cfg.baud = 9600;
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_init( &logger, &log_cfg );
+    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-    adc_cfg_setup( &adc_cfg );
-    ADC_MAP_MIKROBUS( adc_cfg, MIKROBUS_1 );
-    adc_init( &adc, &adc_cfg );
 
-    //  UART console initialization.
-    LOG_MAP_USB_UART( console_cfg );
-    console_cfg.baud = 57600;
-    console_cfg.level = LOG_LEVEL_DEBUG;
-    log_init( &console, &console_cfg );
-    log_info( &console, "* * *  ADC initialization done  * * *" );
-    log_info( &console, "*************************************" );
+    adc_cfg_setup( &cfg );
+    ADC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    adc_init( &adc, &cfg );
 }
 
 void application_task( void )
 {
     adc_get_single_ended_ch( &adc, ADC_CH0_OR_CH01 );
     adc_get_single_ended_ch( &adc, ADC_CH1_OR_CH10 );
+    adc_get_single_ended_ch( &adc, ADC_CH2_OR_CH23 );
+    adc_get_single_ended_ch( &adc, ADC_CH3_OR_CH32 );
     adc_get_differential_ch( &adc, ADC_CH0_OR_CH01 );
-    adc_get_differential_ch( &adc, ADC_CH1_OR_CH10 );
 
-    log_printf( &console, "* CH0 = %d mV\r\n", adc.ch0 );
-    log_printf( &console, "* CH1 = %d mV\r\n", adc.ch1 );
-    log_printf( &console, "* CH0 - CH1 = %d mV\r\n", adc.ch01 );
-    log_printf( &console, "* CH1 - CH0 = %d mV\r\n\n", adc.ch10 );
+    log_printf( &logger, "* CH0 = %u mV\r\n", adc.ch0 );
+    log_printf( &logger, "* CH1 = %u mV\r\n", adc.ch1 );
+    log_printf( &logger, "* CH2 = %u mV\r\n", adc.ch2 );
+    log_printf( &logger, "* CH3 = %u mV\r\n", adc.ch3 );
+    log_printf( &logger, "* CH0 - CH1 = %d mV\r\n", adc.ch01 );
+    log_printf( &logger, "-----------------------------\r\n" );
 
     Delay_ms( 1000 );
 }

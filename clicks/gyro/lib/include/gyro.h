@@ -54,7 +54,7 @@
   cfg.scl  = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
   cfg.sda  = MIKROBUS( mikrobus, MIKROBUS_SDA ); \
   cfg.rst = MIKROBUS( mikrobus, MIKROBUS_RST ); \
-  cfg.int_pin = MIKROBUS( mikrobus, MIKROBUS_INT );
+  cfg.int_pin = MIKROBUS( mikrobus, MIKROBUS_INT )
 /** \} */
 
 /**
@@ -135,7 +135,7 @@ typedef struct
     // Input pins 
 
     digital_in_t int_pin;
-    
+
     // Modules 
 
     i2c_master_t i2c;
@@ -155,7 +155,7 @@ typedef struct
 
     pin_name_t scl;
     pin_name_t sda;
-    
+
     // Additional gpio pins 
 
     pin_name_t rst;
@@ -268,9 +268,9 @@ void gyro_read_gyro ( gyro_t *ctx, int16_t *gyro_x, int16_t *gyro_y, int16_t *gy
 #ifdef __cplusplus
 }
 #endif
-#endif  // _GYRO_H_
+#endif  // GYRO_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End click Driver group
 /*! @} */
-// ------------------------------------------------------------------------- END
+// ------------------------------------------------------------------------ END

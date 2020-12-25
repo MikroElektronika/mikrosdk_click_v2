@@ -111,15 +111,15 @@ void application_task ( void )
     
     audioamp5_gain_select( &audioamp5, AUDIOAMP5_GAIN_26DB );
     audioamp5_config_update( &audioamp5 );
-    log_printf( &logger, "** Gain value is 26dB \r\n**" );    
+    log_printf( &logger, "** Gain value is 26dB **\r\n" );    
 
     Delay_ms ( 5000 );
 
     audioamp5_gain_select( &audioamp5, AUDIOAMP5_GAIN_20DB );
     audioamp5_config_update( &audioamp5 );
-    log_printf( &logger, "** Gain value is 20dB \r\n**" );   
-
-    Delay_ms ( 5000 ); 
+    log_printf( &logger, "** Gain value is 20dB **\r\n" );  
+    
+    Delay_ms ( 5000 );
 }
 ```
 

@@ -27,5 +27,7 @@
     "short_description": "It’s a low cost reliable solution that communicates with the target board microcontroller through a single Serial Data Line.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.2"
 }
+
+

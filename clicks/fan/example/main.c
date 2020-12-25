@@ -13,7 +13,7 @@
  *
  * ## Application Task
  * Performs a control of the fan and reads rotation per minute (RPM).
- * Results will be sent to the usb uart terminal every 300 milliseconds.
+ * Results will be sent to the usb uart terminal.
  *
  * \author Nemanja Medakovic
  *

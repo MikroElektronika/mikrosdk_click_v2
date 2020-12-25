@@ -61,7 +61,7 @@ ACCEL12_RETVAL accel12_init ( accel12_t *ctx, accel12_cfg_t *cfg )
 
     ctx->slave_address = cfg->i2c_address;
 
-    if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) != I2C_MASTER_SUCCESS )
+    if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_ERROR )
     {
         return ACCEL12_INIT_ERROR;
     }

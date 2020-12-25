@@ -71,8 +71,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -110,16 +111,6 @@ void application_task ( void )
     log_printf( &logger, "---------------------- \r\n" );
     log_printf( &logger, "    5 kOhm - 250 mA    \r\n" );
     mcp73213_set_current_output( &mcp73213, MCP73213_OUTPUT_250_mA );
-    Delay_ms( 5000 );
-
-    log_printf( &logger, "---------------------- \r\n" );
-    log_printf( &logger, "  2,1 kOhm - 550 mA    \r\n" );
-    mcp73213_set_current_output( &mcp73213, MCP73213_OUTPUT_550_mA );
-    Delay_ms( 5000 );
-
-    log_printf( &logger, "---------------------- \r\n" );
-    log_printf( &logger, "   1 kOhm - 1100 mA    \r\n" );
-    mcp73213_set_current_output( &mcp73213, MCP73213_OUTPUT_1100_mA );
     Delay_ms( 5000 );
 }
 

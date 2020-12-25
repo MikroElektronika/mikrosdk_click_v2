@@ -113,6 +113,47 @@ void ooktx_communication_transmit ( ooktx_t *ctx, uint8_t transmit_data )
     }
 }
 
+void ooktx_transmit_byte ( ooktx_t *ctx, uint16_t preable_word, uint8_t transmit_byte )
+{
+    uint8_t transmit_bit;
+
+    for ( uint8_t cnt = 0; cnt < 16; cnt++ )                    
+    {
+        transmit_bit = ( preable_word >> ( 15 - cnt ) ) & 0x01;
+        digital_out_write( &ctx->sda, transmit_bit );
+        Delay_500us( );
+    }
+    
+    for ( uint8_t cnt = 0; cnt < 8; cnt++ )                    
+    {
+        transmit_bit = ( transmit_byte >> ( 7 - cnt ) ) & 0x01;
+        digital_out_write( &ctx->sda, transmit_bit );
+        Delay_500us( );
+    }
+}
+
+void ooktx_transmit_data ( ooktx_t *ctx, uint16_t preable_word, uint8_t *transmit_data, uint8_t transmit_len )
+{
+    uint8_t transmit_bit;
+
+    for ( uint8_t cnt = 0; cnt < 16; cnt++ )                    
+    {
+        transmit_bit = ( preable_word >> ( 15 - cnt ) ) & 0x01;
+        digital_out_write( &ctx->sda, transmit_bit );
+        Delay_500us( );
+    }
+    
+    for ( uint8_t len_cnt = 0; len_cnt < transmit_len; len_cnt++ )
+    {
+        for ( uint8_t cnt = 0; cnt < 8; cnt++ )                    
+        {
+            transmit_bit = ( transmit_data[ len_cnt ] >> ( 7 - cnt ) ) & 0x01;
+            digital_out_write( &ctx->sda, transmit_bit );
+            Delay_500us( );
+        }
+    }
+}
+
 // ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
 
 void drv_start_condition_signal ( ooktx_t *ctx )

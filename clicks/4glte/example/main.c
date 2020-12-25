@@ -29,7 +29,7 @@
 
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 500
-#define PROCESS_CURRENT_BUFFER_SIZE 1000
+#define PROCESS_CURRENT_BUFFER_SIZE 500
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -37,7 +37,7 @@ static c4glte_t c4glte;
 static log_t logger;
 
 #define C4GLTE_AT      "AT" 
-#define C4GLTE_ATE0    "ATE0" 
+#define C4GLTE_ATE1    "ATE1" 
 #define C4GLTE_AT_IFC  "AT+IFC=2,2" 
 #define C4GLTE_AT_CMGF "AT+CMGF=1" 
 #define C4GLTE_ATH     "ATH"
@@ -49,7 +49,7 @@ static uint8_t send_data_cnt = 0;
 
 static void c4glte_process ( void )
 {
-    uint16_t rsp_size;
+    int32_t rsp_size;
     uint16_t rsp_cnt = 0;
     
     char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
@@ -63,7 +63,7 @@ static void c4glte_process ( void )
     {
         rsp_size = c4glte_generic_read( &c4glte, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
 
-        if ( rsp_size != 0 )
+        if ( rsp_size != -1 )
         {  
             // Validation of the received data
             for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
@@ -122,11 +122,7 @@ void application_init ( void )
     
     c4glte_send_command( &c4glte, C4GLTE_AT );
     c4glte_process( );
-    c4glte_send_command( &c4glte, C4GLTE_AT);
-    c4glte_process( );
-    c4glte_send_command( &c4glte, C4GLTE_AT );
-    c4glte_process( );
-    c4glte_send_command( &c4glte, C4GLTE_ATE0 );
+    c4glte_send_command( &c4glte, C4GLTE_ATE1 );
     c4glte_process( );
     c4glte_send_command( &c4glte, C4GLTE_AT_IFC );
     c4glte_process( );

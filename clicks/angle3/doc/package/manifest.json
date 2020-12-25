@@ -27,5 +27,7 @@
   "short_description": "Angle 3 click carries the AK7451, a magnetic rotational angle sensor. The click is designed to run on a 5V power supply. ",
   "supported_compiler": "mikroC",
   "type": "Library",
-  "version": "2.0.0.0"
+  "version": "2.0.0.2"
 }
+
+

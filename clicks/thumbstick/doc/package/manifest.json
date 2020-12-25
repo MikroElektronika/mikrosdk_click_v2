@@ -10,7 +10,7 @@
     "dependency_list": [
     ],
     "details": "Resources/DETAILS.md",
-    "display_name": "Thumbstiick click",
+    "display_name": "Thumbstick click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -27,5 +27,8 @@
     "short_description": "Thumbstick click is a high precision input device.It features a dual axis, spring return, pushbutton enabled joystick, and a MCP3204 12-bit A/D converter.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.4"
 }
+
+
+

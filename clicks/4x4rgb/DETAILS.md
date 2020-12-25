@@ -43,14 +43,11 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- Function for logic one.
-> void c4x4rgb_logic_one ( c4x4rgb_t *ctx );
+- Function for setting color color of one diode.
+> err_t c4x4rgb_set_diode ( c4x4rgb_t *ctx, uint32_t diode_num, uint32_t diode_color );
  
-- Function for custom delay.
-> void c4x4rgb_delay ( uint16_t delay_time, char delay_unit );  
-
-- Get device clock.
-> void c4x4rgb_get_device_clock ( c4x4rgb_t *ctx );
+- Function for filling color of ever diode.
+> void c4x4rgb_fill_screen ( c4x4rgb_t *ctx, uint32_t fill_color, uint16_t fill_delay ); 
 
 ## Examples Description
 
@@ -66,40 +63,19 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
     c4x4rgb_cfg_t cfg;
-    
-    unsigned long clk;
-    float one_cyc;
-    uint8_t tmp;
-    float first_delay;
-
-    //  Logger initialization.
-
-    log_cfg.level = LOG_LEVEL_DEBUG;
-    LOG_MAP_USB_UART( log_cfg );
-    log_init( &logger, &log_cfg );
-    log_info(&logger, "---- Application Init ----");
 
     //  Click initialization.
-
-    c4x4rgb_cfg_setup( &cfg );
+    c4x4rgb_cfg_setup( &cfg, &c4x4rgb_logic_zero, &c4x4rgb_logic_one, C4X4RGB_CTRL_PIN_IN1 );
     C4X4RGB_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c4x4rgb_init( &c4x4rgb, &cfg );
-
-    log_printf( &logger, "  GPIO Driver Init   \r\n" );
-    log_printf( &logger, "---------------------\r\n" );
-
-    log_printf( &logger, " Fill Screen speed:  \r\n" );
-    log_printf( &logger, "  25 x 5 ms = 125 ms \r\n" );
-    log_printf( &logger, "   Set diode color   \r\n" );
-    log_printf( &logger, "      ~ White ~      \r\n" );
     
-    s_speed = 25;
-    temp_color = C4X4RGB_COLOR_WHITE;
-    c4x4rgb_fill_screen( );
-    log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 100 );
+    c4x4rgb_fill_screen( &c4x4rgb, C4X4RGB_COLOR_WHITE, 5 );
+    Delay_ms( 100 ); 
+    
+    
+    c4x4rgb_color_mash();
+    Delay_ms( 2000 );
 }
   
 ```
@@ -116,60 +92,27 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    log_printf( &logger, "   Set snake speed:  \r\n" );
-    log_printf( &logger, "  20 x 5 ms = 100 ms \r\n" );
-    log_printf( &logger, "   Set diode color   \r\n" );
-    log_printf( &logger, "      ~ Blue ~      \r\n" );
-    s_speed = 20;
-    temp_color = C4X4RGB_COLOR_BLUE;
-    c4x4rgb_snake( );
-    log_printf( &logger, "---------------------\r\n" );
+    c4x4rgb_snake( C4X4RGB_COLOR_BLUE );
+    Delay_ms( 500 ); 
     
-    log_printf( &logger, "   Set diode color   \r\n" );
-    log_printf( &logger, "   ~ Light Blue ~    \r\n" );
-    temp_color = C4X4RGB_COLOR_LIGHT_BLUE;
-    c4x4rgb_snake_return( );
-    log_printf( &logger, "---------------------\r\n" );
-
-    log_printf( &logger, "   Set snake speed:  \r\n" );
-    log_printf( &logger, "  15 x 5 ms = 75 ms  \r\n" );
-    log_printf( &logger, "   Set diode color   \r\n" );
-    log_printf( &logger, "      ~ Green ~      \r\n" );
-    s_speed = 15;
-    temp_color = C4X4RGB_COLOR_GREEN;
-    c4x4rgb_snake( );
-    log_printf( &logger, "---------------------\r\n" );
+    c4x4rgb_snake_return( C4X4RGB_COLOR_LIGHT_BLUE );
+    Delay_ms( 1000 ); 
     
-    log_printf( &logger, "   Set diode color   \r\n" );
-    log_printf( &logger, "     ~ Yellow ~      \r\n" );
-    temp_color = C4X4RGB_COLOR_YELLOW;
-    c4x4rgb_snake_return( );
-    log_printf( &logger, "---------------------\r\n" );
-
-    log_printf( &logger, "   Set snake speed:  \r\n" );
-    log_printf( &logger, "  10 x 5 ms = 50 ms  \r\n" );
-    log_printf( &logger, "   Set diode color   \r\n" );
-    log_printf( &logger, "       ~ Red ~       \r\n" );
-    s_speed = 10;
-    temp_color = C4X4RGB_COLOR_RED;
-    c4x4rgb_snake( );
-    log_printf( &logger, "---------------------\r\n" );
+    c4x4rgb_snake(  C4X4RGB_COLOR_GREEN );
+    Delay_ms( 500 ); 
     
-    log_printf( &logger, "   Set diode color   \r\n" );
-    log_printf( &logger, "     ~ Purpule ~     \r\n" );
-    temp_color = C4X4RGB_COLOR_PURPLE;
-    c4x4rgb_snake_return( );
-    log_printf( &logger, "---------------------\r\n" );
-
-    log_printf( &logger, " Fill Screen speed:  \r\n" );
-    log_printf( &logger, "  5 x 5 ms = 25 ms   \r\n" );
-    log_printf( &logger, "   Set diode color   \r\n" );
-    log_printf( &logger, "      ~ White ~      \r\n" );
-    s_speed = 5;
-    temp_color = C4X4RGB_COLOR_WHITE;
-    c4x4rgb_fill_screen( );
-    log_printf( &logger, "---------------------\r\n" );
-} 
+    c4x4rgb_snake_return( C4X4RGB_COLOR_YELLOW );
+    Delay_ms( 1000 ); 
+    
+    c4x4rgb_snake( C4X4RGB_COLOR_RED );
+    Delay_ms( 500 ); 
+    
+    c4x4rgb_snake_return( C4X4RGB_COLOR_PURPLE );
+    Delay_ms( 1000 ); 
+    
+    c4x4rgb_fill_screen( &c4x4rgb, C4X4RGB_COLOR_WHITE, 50 );
+    Delay_ms( 100 ); 
+}
 
 ```
 

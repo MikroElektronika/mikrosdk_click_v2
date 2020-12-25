@@ -42,7 +42,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
     Delay_ms ( 100 );
@@ -73,7 +73,7 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    angle_value = magneto_get_angle/*magneto_calculate_angle*/( &magneto );
+    angle_value = magneto_get_angle( &magneto );
     log_printf( &logger, "  [ANGLE] : %0.3f \r\n", angle_value );
     
     Delay_ms ( 500 );

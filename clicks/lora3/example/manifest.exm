@@ -1,8 +1,0 @@
-{
-    "name": "LoRa 3 Click",
-    "description": "LoRa 3 click is a LoRa® technology-based SRD transceiver, which operates at a sub-gigahertz frequency of 868MHz. Thanks to the spread spectrum modulation feature, as well as the low power consumption, it is capable of achieving a long-range communication, immune to interferences. This click board™ features a complete LoRa® stack onboard: it implements physical, network and MAC layers, allowing for easy operation via the UART interface.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","MIPOT 32001345"],
-    "category" : ["Sub-1 GHz Transceivers"] 
-}

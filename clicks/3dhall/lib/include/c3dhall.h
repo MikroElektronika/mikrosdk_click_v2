@@ -171,19 +171,6 @@ void c3dhall_cfg_setup ( c3dhall_cfg_t *cfg );
 C3DHALL_RETVAL c3dhall_init ( c3dhall_t *ctx, c3dhall_cfg_t *cfg );
 
 /**
- * @brief Generic transfer function.
- *
- * @param ctx          Click object.
- * @param wr_buf       Write data buffer
- * @param wr_len       Number of byte in write data buffer
- * @param rd_buf       Read data buffer
- * @param rd_len       Number of byte in read data buffer
- *
- * @description Generic SPI transfer, for sending and receiving packages
- */
-void c3dhall_generic_transfer ( c3dhall_t *ctx, uint8_t *wr_buf, uint16_t wr_len, uint8_t *rd_buf, uint16_t rd_len );
-
-/**
  * @brief Read 8 bytes data from sensor function.
  *
  * @param ctx          Click object.

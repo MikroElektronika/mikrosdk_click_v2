@@ -41,7 +41,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -50,6 +50,7 @@ void application_init ( void )
     lsm303agr_cfg_setup( &cfg );
     LSM303AGR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     lsm303agr_init( &lsm303agr, &cfg );
+    
     lsm303agr_default_cfg ( &lsm303agr );
    
 }
@@ -61,26 +62,26 @@ void application_task ( void )
     log_printf(&logger, "======== Accelerometer data ========\r\n");
     
     read_data = lsm303agr_get_acc_axis_x ( &lsm303agr );
-    log_printf(&logger, "X Axis : %f\r\n", read_data);
+    log_printf(&logger, "X Axis : %.2f\r\n", read_data);
 
     read_data = lsm303agr_get_acc_axis_y ( &lsm303agr );
-    log_printf(&logger, "Y Axis : %f\r\n", read_data);
+    log_printf(&logger, "Y Axis : %.2f\r\n", read_data);
 
     read_data = lsm303agr_get_acc_axis_z ( &lsm303agr );
-    log_printf(&logger, "Z Axis : %f\r\n", read_data);
+    log_printf(&logger, "Z Axis : %.2f\r\n", read_data);
     
     log_printf(&logger, "======== Mangetometer data ========\r\n");
     
     read_data = lsm303agr_get_mag_axis_x ( &lsm303agr );
-    log_printf(&logger, "X Axis : %f\r\n", read_data);
+    log_printf(&logger, "X Axis : %.2f\r\n", read_data);
 
     read_data = lsm303agr_get_mag_axis_y ( &lsm303agr );
-    log_printf(&logger, "Y Axis : %f\r\n", read_data);
+    log_printf(&logger, "Y Axis : %.2f\r\n", read_data);
 
     read_data = lsm303agr_get_mag_axis_z ( &lsm303agr );
-    log_printf(&logger, "Z Axis : %f\r\n", read_data);
+    log_printf(&logger, "Z Axis : %.2f\r\n", read_data);
 
-    Delay_ms( 1000 );
+    Delay_ms( 2000 );
 }
 
 void main ( void )

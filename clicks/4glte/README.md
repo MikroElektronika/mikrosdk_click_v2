@@ -9,7 +9,13 @@
   <img src="https://download.mikroe.com/images/click_for_ide/4glte_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/4g-lte-e-click>)
+ - [click Product page 4G LTE-AT&T CLICK ](<https://www.mikroe.com/4g-lte-e-click>)
+
+ - [click Product page 4G LTE-E CLICK ](<https://www.mikroe.com/4g-lte-att-click>)
+
+ - [click Product page 4G LTE-APJ CLICK ](<https://www.mikroe.com/4g-lte-apj-click>)
+
+ - [click Product page 4G LTE-NA CLICK ](<https://www.mikroe.com/4g-lte-na-click>)
 
 ---
 
@@ -84,19 +90,15 @@ void application_init ( void )
     c4glte_module_power( &c4glte, C4GLTE_MODULE_POWER_ON );
 
     // MODULE INIT
-   
+    
     c4glte_send_command( &c4glte, C4GLTE_AT );
     c4glte_process( );
-    c4glte_send_command( &c4glte, C4GLTE_AT);
-    c4glte_process( );
-    c4glte_send_command( &c4glte, C4GLTE_AT );
-    c4glte_process( );
-    c4glte_send_command( &c4glte, C4GLTE_ATE0 );
+    c4glte_send_command( &c4glte, C4GLTE_ATE1 );
     c4glte_process( );
     c4glte_send_command( &c4glte, C4GLTE_AT_IFC );
     c4glte_process( );
     c4glte_send_command( &c4glte, C4GLTE_AT_CMGF );
-    c4glte_process( ); 
+    c4glte_process( );
 }
   
 ```

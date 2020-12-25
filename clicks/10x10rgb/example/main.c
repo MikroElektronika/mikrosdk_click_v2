@@ -25,8 +25,8 @@
 #include "log.h"
 #include "c10x10rgb.h"
 
-#define DELAY_SHORT   4
-#define DELAY_LONG    8
+#define DELAY_SHORT   2
+#define DELAY_LONG    4
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -99,6 +99,7 @@ void application_init ( void )
 
     log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info(&logger, "---- Application Init ----");
 
@@ -109,7 +110,7 @@ void application_init ( void )
     c10x10rgb_init( &c10x10rgb, &cfg );
 
     c10x10rgb_fill_screen( &c10x10rgb, C10X10RGB_COLOR_OFF );
-    Delay_ms( 500 );
+    Delay_ms( 1000 );
 }
 
 void application_task ( void )
@@ -120,7 +121,7 @@ void application_task ( void )
     Delay_ms( 1000 );
     c10x10rgb_display_byte ( &c10x10rgb, &rgb_data_byte[ 2 ] );
     Delay_ms( 2000 );
-
+    
     c10x10rgb_display_string( &c10x10rgb, &scroll_data_obj, scroll_data_len, scroll_speed_ms );
     Delay_ms( 1000 );
     c10x10rgb_display_image( &c10x10rgb, &MIKROE_IMAGE[ 0 ] );

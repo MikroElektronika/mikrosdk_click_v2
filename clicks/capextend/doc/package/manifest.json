@@ -27,6 +27,7 @@
     "short_description": "Cap Extend click is a mikroBUS add-on board with a SEMTECH SX8633 low power, capacitive button touch controller. It has 12 pins for connecting capacitive inputs (either touch-buttons or proximity sensors).",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+
 

@@ -27,6 +27,7 @@
     "short_description": "The 6DOF IMU 11 click is a Click board™ based on the KMX63, a 6 Degrees-of-Freedom inertial sensor system on a single, silicon chip, which is designed to strike a balance between current consumption and noise performance with excellent bias stability over temperature.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.2"
+    "version": "2.0.0.3"
 }
+
 

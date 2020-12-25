@@ -1,7 +1,0 @@
-type: subdirs
-project: Gnss6
-
-subdirs: {
-    lib
-    example
-}

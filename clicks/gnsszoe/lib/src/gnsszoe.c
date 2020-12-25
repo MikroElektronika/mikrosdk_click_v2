@@ -29,6 +29,7 @@
 
 #include "gnsszoe.h"
 #include "string.h"
+#include "generic_pointer.h"
 
 // ------------------------------------------------------------- PRIVATE MACROS 
 
@@ -95,7 +96,6 @@ GNSSZOE_RETVAL gnsszoe_init ( gnsszoe_t *ctx, gnsszoe_cfg_t *cfg )
     digital_out_init( &ctx->exi, cfg->exi );
 
     return GNSSZOE_OK;
-
 }
 
 void gnsszoe_generic_transfer ( 
@@ -123,13 +123,13 @@ void gnsszoe_generic_read ( gnsszoe_t *ctx,  uint8_t *rd_buf,  uint16_t rd_len)
 
 gnsszoe_error_t gnsszoe_generic_parser ( char *rsp,  uint8_t command, uint8_t element, char *parser_buf )
 {    
-    char *start_rsp;
-    char *end_rsp;
+    char * __generic start_rsp;
+    char * __generic end_rsp;
     char rsp_buf[ 200 ];
     
     uint8_t element_cnt = 0;
-    char *element_start;
-    char *element_end;
+    char * __generic element_start;
+    char * __generic element_end;
     
     char current_cmd_buf[ 10 ];
     

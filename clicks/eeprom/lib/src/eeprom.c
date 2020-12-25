@@ -46,7 +46,7 @@ void eeprom_cfg_setup( eeprom_cfg_t *cfg )
     cfg->sda = HAL_PIN_NC;
 
     cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
-    cfg->addr_sel = EEPROM_I2C_ADDR_SEL_7;
+    cfg->addr_sel = EEPROM_I2C_ADDR_SEL_0;
 }
 
 eeprom_retval_t eeprom_init( eeprom_t *ctx, eeprom_cfg_t *cfg )

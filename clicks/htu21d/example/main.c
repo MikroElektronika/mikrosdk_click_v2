@@ -50,7 +50,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -61,7 +61,7 @@ void application_init ( void )
     htu21d_init( &htu21d, &cfg );
     
     htu21d_send_cmd ( &htu21d, HTU21D_SOFT_RESET );
-    Delay_ms( 15 );
+    Delay_ms( 500 );
 
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, "         HTU21D\r\n" );
@@ -72,7 +72,7 @@ void application_task ( void )
 {
     //  Task implementation.
     temperature = htu21d_get_temperature( &htu21d );
-    log_printf( &logger, " Temperature : %.2f C\r\n", temperature );
+    log_printf( &logger, " Temperature : %.2f degC\r\n", temperature );
     
     humidity = htu21d_get_humidity( &htu21d );
     log_printf( &logger, " Humidity    : %.2f %%\r\n", humidity );

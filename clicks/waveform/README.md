@@ -73,12 +73,11 @@ void application_init ( )
     log_cfg_t log_cfg;
     waveform_cfg_t cfg;
 
-    uint32_t freq;
-
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -87,9 +86,6 @@ void application_init ( )
     waveform_cfg_setup( &cfg );
     WAVEFORM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     waveform_init( &waveform, &cfg );
-
-    log_printf( &logger,"---- System initialized ----\r\n");
-    Delay_ms( 100 );
 
     freq = waveform_aprox_freqcalculation( 5000 );
     waveform_square_output( &waveform, freq );
@@ -108,17 +104,59 @@ void application_init ( )
 
 void application_task ( )
 {
-    waveform_digipot_inc( &waveform );
-    waveform_digipot_dec( &waveform );
-
-    frequency_increment( WAVEFORM_SINE_OUT );
-    frequency_decrement( WAVEFORM_SINE_OUT );
-
-    frequency_increment( WAVEFORM_TRIANGLE_OUT );
-    frequency_decrement( WAVEFORM_TRIANGLE_OUT );
-
-    frequency_increment( WAVEFORM_SQUARE_OUT );
-    frequency_decrement( WAVEFORM_SQUARE_OUT );
+    uint8_t rx_len = log_read ( &logger, rx_data_buffer, 1 );
+    
+    if ( rx_len > 0 ) 
+    {
+       switch( rx_data_buffer[ 0 ] )
+       {
+           case '+': {
+                            waveform_digipot_inc( &waveform );
+                            log_printf( &logger, "Increasing amplitude of the current wave.\r\n" );
+                            break;
+                        }
+           case '-': {
+                            waveform_digipot_dec( &waveform );
+                            log_printf( &logger, "Decreasing amplitude of the current wave.\r\n" );
+                            break;
+                        }
+           case 'S': {
+                            frequency_increment( WAVEFORM_SINE_OUT );
+                            log_printf( &logger, "Increasing frequency of the sine wave.\r\n" );
+                            break;
+                        }
+           case 's': {
+                            frequency_decrement( WAVEFORM_SINE_OUT );
+                            log_printf( &logger, "Decreasing frequency of the sine wave.\r\n" );
+                            break;
+                        }
+           case 'T': {
+                            frequency_increment( WAVEFORM_TRIANGLE_OUT );
+                            log_printf( &logger, "Increasing frequency of the triangle wave.\r\n" );
+                            break;
+                        }
+           case 't': {
+                            frequency_decrement( WAVEFORM_TRIANGLE_OUT );
+                            log_printf( &logger, "Decreasing frequency of the triangle wave.\r\n" );
+                            break;
+                        }
+           case 'Q': {
+                            frequency_increment( WAVEFORM_SQUARE_OUT );
+                            log_printf( &logger, "Increasing frequency of the square wave.\r\n" );
+                            break;
+                        }
+           case 'q': {
+                            frequency_decrement( WAVEFORM_SQUARE_OUT );
+                            log_printf( &logger, "Decreasing frequency of the square wave.\r\n" );
+                            break;
+                        }
+           default :{
+                            break;
+                        }
+       }
+       rx_data_buffer[ 0 ] = 0;
+       rx_len = 0;
+    }
 }
 
 ```

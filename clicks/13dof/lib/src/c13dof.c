@@ -129,7 +129,7 @@ C13DOF_RETVAL c13dof_init ( c13dof_t *ctx, c13dof_cfg_t *cfg )
     ctx->bmi088Gyro_slave_address = cfg->bmi088Gyro_slave_address;
     ctx->bmi088Accel_slave_address = cfg->bmi088Accel_slave_address;
 
-    if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) != I2C_MASTER_SUCCESS )
+    if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_SUCCESS )
     {
         return C13DOF_INIT_ERROR;
     }

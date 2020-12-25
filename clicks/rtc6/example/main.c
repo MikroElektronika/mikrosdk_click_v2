@@ -45,7 +45,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -76,6 +76,7 @@ void application_init ( void )
 
     rtc6_default_cfg( &rtc6, time_zone, &utc_time, &alarm_time );
     log_info( &logger, " ----- Init successfully ----- " );
+    Delay_ms( 2000 );
 }
 
 void application_task ( void )
@@ -85,13 +86,13 @@ void application_task ( void )
     rtc6_get_gmt_time( &rtc6, &utc_time );
     rtc6_get_local_time( &rtc6, &local_time );
     
-    log_printf( &logger, "--- UTC time ---\r\nTime : %d %d %d\r\n", utc_time.hours, utc_time.minutes, utc_time.seconds );
+    log_printf( &logger, "--- UTC time ---\r\nTime : %u %u %u\r\n", ( uint16_t )utc_time.hours, ( uint16_t )utc_time.minutes, ( uint16_t )utc_time.seconds );
     
-    log_printf( &logger, "Date : %d %d %d\r\n", utc_time.monthday, utc_time.month, utc_time.year );
+    log_printf( &logger, "Date : %u %u %u\r\n", ( uint16_t )utc_time.monthday, ( uint16_t )utc_time.month, utc_time.year );
     
-    log_printf( &logger, "--- Local time ---\r\nTime : %d %d %d\r\n", local_time.hours, local_time.minutes, local_time.seconds );
+    log_printf( &logger, "--- Local time ---\r\nTime : %u %u %u\r\n", ( uint16_t )local_time.hours, ( uint16_t )local_time.minutes, ( uint16_t )local_time.seconds );
 
-    log_printf( &logger, "Date : %d %d %d\r\n \r\n", local_time.monthday, local_time.month, local_time.year );
+    log_printf( &logger, "Date : %u %u %u\r\n \r\n", ( uint16_t )local_time.monthday, ( uint16_t )local_time.month, local_time.year );
     
     if ( rtc6_is_active_alarm( &rtc6 ) != 0 )
     {

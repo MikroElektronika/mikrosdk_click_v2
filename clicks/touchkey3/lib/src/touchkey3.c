@@ -208,7 +208,7 @@ void touchkey3_get_data ( touchkey3_t *ctx, uint8_t data_address, uint8_t *read_
     Delay_10us();
     spi_master_write( &ctx->spi, &data_address, 1 );
     Delay_1ms();
-    spi_master_read( &ctx->spi, &read_data[ 0 ], 1 );
+    spi_master_read( &ctx->spi, read_data, 1 );
     Delay_1ms();
     spi_master_deselect_device( ctx->chip_select );
     Delay_1ms(); 

@@ -105,6 +105,13 @@
 #define TEMPHUM4_CONF_HUMINIDY_9bit            ( 0x02 << 7  )
 /** \} */
 
+/**
+ * \defgroup dev_id Device ID value
+ * \{
+ */
+#define TEMPHUM4_MANUFACTURER_ID                0x5449
+/** \} */
+
 /** \} */ // End group macro 
 // --------------------------------------------------------------- PUBLIC TYPES
 /**

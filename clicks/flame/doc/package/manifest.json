@@ -27,6 +27,7 @@
     "short_description": "Flame click is a fire detection solution. It carries a PT334-6B silicon phototransistor that’s covered in black epoxy and therefore sensitive only to infrared light.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+
 

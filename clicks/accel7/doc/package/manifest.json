@@ -27,5 +27,6 @@
     "short_description": "The acceleration sensing is based on the principle of measuring the differential capacitance, which further decreases errors due to manufacturing imperfections, temperature and other environmental influences. The micro-electromechanical sensor (MEMS) is coupled with a very advanced application specific integrated circuit (ASIC), which allows the simplicity of the KXTJ3-1057 design, requiring a low number of additional external components.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

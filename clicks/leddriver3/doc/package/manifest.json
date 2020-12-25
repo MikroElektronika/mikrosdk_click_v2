@@ -27,5 +27,6 @@
     "short_description": "LED Driver 3 click is an RGB LED driver, capable of driving RGB LEDs with up to 30mA per segment, via the digital I2C interface.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

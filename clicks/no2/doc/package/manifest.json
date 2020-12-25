@@ -10,7 +10,7 @@
     "dependency_list": [
     ],
     "details": "Resources/DETAILS.md",
-    "display_name": "NO 2 click",
+    "display_name": "NO2 click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -27,6 +27,7 @@
     "short_description": "NO2 click is a very accurate nitrogen-dioxide gas sensor Click board™, equipped with the SPEC amperometric gas sensor which electrochemically reacts with the nitrogen-dioxide (NO2).",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+
 

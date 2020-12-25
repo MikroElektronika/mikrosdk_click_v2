@@ -56,10 +56,8 @@
    cfg.mosi  = MIKROBUS( mikrobus, MIKROBUS_MOSI ); \
    cfg.sck   = MIKROBUS( mikrobus, MIKROBUS_SCK ); \
    cfg.cs    = MIKROBUS( mikrobus, MIKROBUS_CS ); \
-   //cfg.cs2 = MIKROBUS( mikrobus, MIKROBUS_AN ); \
-   //cfg.rst = MIKROBUS( mikrobus, MIKROBUS_RST ); \
-   //cfg.sw = MIKROBUS( mikrobus, MIKROBUS_PWM ); \
-   //cfg.int_pin = MIKROBUS( mikrobus, MIKROBUS_INT );
+   cfg.cs2 = MIKROBUS( mikrobus, MIKROBUS_AN ); \
+   cfg.sw = MIKROBUS( mikrobus, MIKROBUS_PWM ); 
 /** \} */
 
 /**
@@ -125,7 +123,7 @@ typedef struct
     // static variable 
 
     uint32_t spi_speed;
-    uint8_t spi_mode;
+    spi_master_mode_t   spi_mode;
     spi_master_chip_select_polarity_t cs_polarity;
 
 } vreg_cfg_t;

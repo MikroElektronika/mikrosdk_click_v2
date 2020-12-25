@@ -52,8 +52,8 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 - Get Output Voltage function.
 > uint16_t rms2dc_vout_adc ( rmstodc_t *ctx, uint16_t vcc_sel );
 
-- Get Averaged Output Voltage function.
-> uint16_t rms2dc_avrg_vout_adc ( rmstodc_t *ctx, uint16_t vcc_select, uint8_t n_samples );
+- Enable function.
+> void rms2dc_enable ( rmstodc_t *ctx, uint8_t state );
 
 ## Examples Description
 
@@ -74,8 +74,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -84,25 +85,27 @@ void application_init ( void )
     rmstodc_cfg_setup( &cfg );
     RMSTODC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rmstodc_init( &rmstodc, &cfg );
+    
+    rms2dc_enable( &rmstodc, RMS2DC_DEVICE_EN );
 }
   
 ```
 
 ### Application Task
 
-> Reads averaged DC output voltage calculated to mV and
-   sends results to the serial plotter.
+> Reads DC output voltage calculated to mV and
+   sends results to the serial terminal.
 
 ```c
 
 void application_task ( void )
 {
-    out_volt_dc = rms2dc_avrg_vout_adc( &rmstodc, RMS2DC_VCC_3V3, 25 );
+    out_volt_dc = rms2dc_vout_adc( &rmstodc, RMS2DC_VCC_3V3 );
     
-    plot_data( out_volt_dc );
-
-    Delay_ms( 5 );
-}  
+    log_printf(&logger,"%u mV\r\n",out_volt_dc);
+    
+    Delay_ms( 300 );
+} 
 
 ```
 

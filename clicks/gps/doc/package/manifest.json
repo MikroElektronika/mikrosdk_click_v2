@@ -27,5 +27,11 @@
     "short_description": "GPS click is a compact solution for adding GPS functionality to your device. It carries the u-blox LEA-6S high-performance position engine.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.6"
 }
+
+
+
+
+
+

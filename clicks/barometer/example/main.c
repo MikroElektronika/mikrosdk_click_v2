@@ -12,6 +12,8 @@
  * 
  * ## Application Task  
  * This is a example which demonstrates the use of Barometer Click board.
+ * ## NOTE
+ * External pull-up resistors are required on I2C lines, if the click board is configured for I2C mode.
  * 
  * 
  * \author MikroE Team
@@ -39,7 +41,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -76,13 +78,11 @@ void application_task ( void )
     pressure = barometer_get_pressure( &barometer );
     Delay_100ms( );
 
-    log_printf( &logger, " Temperature : %.2f \r\n", temperature_c );
+    log_printf( &logger, " Temperature : %.2f\r\n", temperature_c );
 
     log_printf( &logger, " Pressure    : %.2f\r\n", pressure );
     log_printf( &logger, "-------------------------------- \r\n" );
 
-    Delay_1sec( );
-    Delay_1sec( );
     Delay_1sec( );
 }
 

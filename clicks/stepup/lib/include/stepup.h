@@ -68,20 +68,21 @@
 
 #define STEPUP_OK           0x00
 #define STEPUP_INIT_ERROR   0xFF
+#define STEPUP_ERROR        (-1)
 /** \} */
 
 /**
- * \defgroup stepup_var Variables
+ * \defgroup stepup_config    Step up configuration
  * \{
  */
-#define STEPUP_DACB          0x8000
-#define STEPUP_DACA          0x0000
-#define STEPUP_BUFFERED      0x4000
-#define STEPUP_UNBUFFERED    0x0000
-#define STEPUP_GAIN_1X       0x2000
-#define STEPUP_GAIN_2X       0x0000
-#define STEPUP_POWER_UP      0x1000
-#define STEPUP_POWER_DOWN    0x0000
+#define STEPUP_CFG_VREF_BUFFERED         1
+#define STEPUP_CFG_VREF_UNBUFFERED       0
+
+#define STEPUP_CFG_GAIN_1X               1
+#define STEPUP_CFG_GAIN_2X               0
+
+#define STEPUP_CFG_POWER_OUT_ON          1
+#define STEPUP_CFG_POWER_OUT_OFF         0
 /** \} */
 
 /** \} */ // End group macro 
@@ -90,6 +91,16 @@
  * \defgroup type Types
  * \{
  */
+/**
+ * @brief Click DAC configuration structure definition.
+ */
+typedef struct
+{
+    uint8_t buf;
+    uint8_t ga;
+    uint8_t shdn;
+
+} stepup_dac_cfg_t;
 
 /**
  * @brief Click ctx object definition.
@@ -107,7 +118,7 @@ typedef struct
     spi_master_t spi;
     pin_name_t chip_select;
 
-    uint16_t config_word;
+    stepup_dac_cfg_t dac_config;
 
 } stepup_t;
 
@@ -134,7 +145,7 @@ typedef struct
     uint8_t spi_mode;
     spi_master_chip_select_polarity_t cs_polarity;
 
-    uint16_t config_word_cfg;
+    stepup_dac_cfg_t dac_config;
 
 } stepup_cfg_t;
 
@@ -176,27 +187,8 @@ STEPUP_RETVAL stepup_init ( stepup_t *ctx, stepup_cfg_t *cfg );
  *
  * @description This function executes default configuration for Step Up click.
  */
-void stepup_default_cfg ( stepup_t *ctx, uint16_t out_value );
+void stepup_default_cfg ( stepup_t *ctx );
 
-/**
- * @brief Generic transfer function.
- *
- * @param ctx          Click object.
- * @param wr_buf       Write data buffer
- * @param wr_len       Number of byte in write data buffer
- * @param rd_buf       Read data buffer
- * @param rd_len       Number of byte in read data buffer
- *
- * @description Generic SPI transfer, for sending and receiving packages
- */
-void stepup_generic_transfer 
-( 
-    stepup_t *ctx, 
-    uint8_t *wr_buf, 
-    uint16_t wr_len, 
-    uint8_t *rd_buf, 
-    uint16_t rd_len 
-);
 
 /**
  * @brief Mod Pin set function.
@@ -219,44 +211,39 @@ void stepup_mod_set ( stepup_t *ctx, uint8_t pin_state );
 void stepup_en_set ( stepup_t *ctx, uint8_t pin_state );
 
 /**
- * @brief En Pin set function.
+ * @brief DAC Setup function.
  *
- * @param ctx          Click object.
- * @param config       Command word configuration bits
- * 
- * @returns 0 for correct input value
- * @returns 1 for incorrect input value
- * 
- * @description This function sets first 4 bits in command word
+ * @param ctx  Click object.
+ * @param cfg  DAC configuration structure.
+ *
+ * @description This function performs the setup of the DAC converter of the Step up click.
  */
-uint8_t stepup_set_config ( stepup_t *ctx, uint16_t config );
+void stepup_dac_setup ( stepup_t *ctx, stepup_dac_cfg_t *cfg );
 
 /**
- * @brief Setting output value.
+ * @brief DAC Write function.
  *
- * @param ctx          Click object.
- * @param out_value    Output value (range : 0 to 4095)
- * 
- * @returns 0 for correct input value
- * @returns 1 for incorrect input value
- * 
- * @description This function sets output value
- * 
- * @note Value of 0 means that output is at 100%, value of 4095 means that output is at 0%
+ * @param ctx  Click object.
+ * @param dac_val  DAC writing value [12-bit].
+ * @return    0  - Ok,
+ *          (-1) - Error.
+ *
+ * @description This function sets the DAC converter to the selected value and allows the output
+ * voltage changing.
  */
-uint8_t stepup_set_out ( stepup_t *ctx, uint16_t out_value );
+err_t stepup_dac_write ( stepup_t *ctx, uint16_t dac_val );
 
 /**
- * @brief Calculate ouput value in percent.
+ * @brief Set DAC precetage up
  *
- * @param ctx          Click object.
- * @param out_value    Output value (range : 0 to 4095)
- * 
- * @returns output value in percent (range : 0% to 100%)
- * 
- * @description This function calculates ouput value in percent
+ * @param ctx  Click object.
+ * @param percentage  Percentage boost ( 0 - 100% )
+ * @return    0  - Ok,
+ *          (-1) - Error.
+ *
+ * @description This function sets the DAC percentage boost.
  */
-float stepup_get_percent ( uint16_t out_value );
+err_t stepup_set_percentage ( stepup_t *ctx, float percentage );
 
 #ifdef __cplusplus
 }

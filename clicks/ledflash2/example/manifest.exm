@@ -1,5 +1,5 @@
 {
-    "name": "Led Flash 6 Click",
+    "name": "Led Flash 2 Click",
     "description": "LED Flash 2 click is a powerful flash/torch click, featuring the MIC2870 from Microchip, a high-efficiency flash LED driver, optimized for driving one or two high-brightness camera flash LEDs.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","mikrocpic"],

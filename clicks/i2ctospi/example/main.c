@@ -66,7 +66,7 @@ static uint8_t time_seconds_new = 0xFF;
 
 void display_log_uart ( uint8_t value )
 {
-    log_printf( &logger, " %d%d ", value / 10, value % 10 );
+    log_printf( &logger, " %d%d ", ( uint16_t )( value / 10 ), ( uint16_t )( value % 10 ) );
 }
 
 void rtc5_clear ( i2ctospi_t *ctx, i2ctospi_spi_t *spi )
@@ -239,7 +239,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 

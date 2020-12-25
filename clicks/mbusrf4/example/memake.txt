@@ -6,6 +6,7 @@ depends: {
     MikroSDK.Board
     MikroSDK.Log
     Click.MBusRf4
+    MikroSDK.GenericPointer
 }
 
 uses: {

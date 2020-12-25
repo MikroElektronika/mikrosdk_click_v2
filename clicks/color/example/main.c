@@ -62,51 +62,51 @@ void application_task ( void )
     color_value = color_get_color_value( &color );
     is_color = color_get_color( color_value );
 
-  switch( is_color )
+    switch( is_color )
     {
         case ORANGE_COLOR_FLAG:
         {
             log_printf( &logger, "--- Color: ORANGE\r\n" );
-        break;
+            break;
         }
         case RED_COLOR_FLAG:
         {
             log_printf( &logger, "--- Color: RED\r\n" );
-        break;
+            break;
         }
         case PINK_COLOR_FLAG:
         {
             log_printf( &logger, "--- Color: PINK\r\n" );
-        break;
+            break;
         }
         case PURPLE_COLOR_FLAG:
         {
             log_printf( &logger, "--- Color: PURPLE\r\n" );
-        break;
+            break;
         }
         case BLUE_COLOR_FLAG:
         {
             log_printf( &logger, "--- Color: BLUE\r\n" );
-        break;
+            break;
         }
         case CYAN_COLOR_FLAG:
         {
             log_printf( &logger, "--- Color: CYAN\r\n" );
-        break;
+            break;
         }
         case GREEN_COLOR_FLAG:
         {
             log_printf( &logger, "--- Color: GREEN\r\n" );
-        break;
+            break;
         }
         case YELLOW_COLOR_FLAG:
         {
             log_printf( &logger, "--- Color: YELLOW\r\n" );
-        break;
+            break;
         }
         default:
         {
-        break;
+            break;
         }
     }
 

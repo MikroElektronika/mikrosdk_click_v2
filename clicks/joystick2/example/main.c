@@ -15,6 +15,8 @@
  * It reads the position of the joystick,
  * if it detects that the joystick has moved from the zero position,
  * it prints a message about the current position.
+ *
+ * @note: The I2C peripheral lines external pull up can be required.
  * 
  * \author Katarina Perendic
  *

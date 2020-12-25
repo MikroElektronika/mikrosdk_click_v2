@@ -63,7 +63,7 @@ void application_task ( void )
     for ( n_pos = 12; n_pos < pos_num; n_pos++ )
     {
         leddriver7_generic_write( &leddriver7, LEDDRIVER7_NORM_OP_MODE, &n_pos, 1 );
-        log_printf( &logger, "Position : %d \r\n", n_pos );
+        log_printf( &logger, "Position : %d \r\n", (uint16_t)n_pos );
         Delay_ms( 500 );
     }
 }

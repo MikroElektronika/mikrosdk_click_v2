@@ -33,92 +33,83 @@
 
 void analogkey_cfg_setup ( analogkey_cfg_t *cfg )
 {
-    // Communication gpio pins 
-
     cfg->an_pin = HAL_PIN_NC;
-    
-    cfg->resolution   = ANALOG_IN_RESOLUTION_10_BIT;
-    cfg->vref         = 3.3;
-    cfg->dev_key_flag = 1;
-    cfg->dev_max_adc = 1024;
-    cfg->dev_prec = 51;
 
+    cfg->resolution = ANALOG_IN_RESOLUTION_10_BIT;
+    cfg->vref       = 3.3;
+    cfg->vsel       = 3.3;
 }
 
-ANALOGKEY_RETVAL analogkey_init ( analogkey_t *ctx, analogkey_cfg_t *cfg )
+err_t analogkey_init ( analogkey_t *ctx, analogkey_cfg_t *cfg )
 {
     analog_in_config_t adc_cfg;
 
     analog_in_configure_default( &adc_cfg );
-    adc_cfg.input_pin  = cfg->an_pin;
 
-    if (  analog_in_open( &ctx->adc, &adc_cfg ) != ACQUIRE_FAIL )
+    adc_cfg.input_pin = cfg->an_pin;
+
+    if ( analog_in_open( &ctx->adc, &adc_cfg ) == ADC_ERROR )
     {
-        return ANALOGKEY_INIT_ERROR;
+        return ADC_ERROR;
     }
 
     analog_in_set_vref_value( &ctx->adc, cfg->vref );
     analog_in_set_resolution( &ctx->adc, cfg->resolution );
 
-    ctx->key_flag = cfg->dev_key_flag;
-    ctx->max_adc = cfg->dev_max_adc;
-    ctx->prec = cfg->dev_prec;
+    ctx->vref = cfg->vref;
+    ctx->vdiv = cfg->vref / cfg->vsel;
 
-    return ANALOGKEY_OK;
+    return ADC_SUCCESS;
 }
 
-analogkey_data_t analogkey_generic_read ( analogkey_t *ctx )
+uint16_t analogkey_generic_read ( analogkey_t *ctx )
 {
-    analogkey_data_t rx_data;
+    uint16_t rx_data = 0;
 
     analog_in_read( &ctx->adc, &rx_data );
-    
+
     return rx_data;
 }
 
-uint8_t analogkey_get_key ( analogkey_t* ctx, uint16_t adc_value )
+float analogkey_read_voltage ( analogkey_t *ctx )
 {
-    if ( adc_value >= ( ctx->max_adc / 6 - ctx->prec ) && adc_value <= ( ctx->max_adc / 6 + ctx->prec ) )
-    {
-        return ANALOGKEY_TOUCH_KEY_6;
-    }
-    else if ( adc_value >= ( ctx->max_adc / 6 * 2 - ctx->prec ) && adc_value <= ( ctx->max_adc / 6 * 2 + ctx->prec ) )
-    {
-        return ANALOGKEY_TOUCH_KEY_5;
-    }
-    else if ( adc_value >= ( ctx->max_adc / 6 * 3 - ctx->prec ) && adc_value <= ( ctx->max_adc / 6 * 3 + ctx->prec ) )
-    {
-        return ANALOGKEY_TOUCH_KEY_4;
-    }
-    else if ( adc_value >= ( ctx->max_adc / 6 * 4 - ctx->prec ) && adc_value <= ( ctx->max_adc / 6 * 4 + ctx->prec ) )
-    {
-        return ANALOGKEY_TOUCH_KEY_3;
-    }
-    else if ( adc_value >= ( ctx->max_adc / 6 * 5 - ctx->prec ) && adc_value <= ( ctx->max_adc / 6 * 5 + ctx->prec ) )
-    {
-        return ANALOGKEY_TOUCH_KEY_2;
-    }
-    else if ( adc_value >= ( ctx->max_adc - ctx->prec ) && adc_value <= ( ctx->max_adc + ctx->prec ) )
+    float rx_data = 0;
+
+    analog_in_read_voltage( &ctx->adc, &rx_data );
+
+    return rx_data;
+}
+
+analogkey_key_id_t analogkey_get_key ( analogkey_t* ctx, float an_value )
+{
+    float tmp = an_value * ctx->vdiv / ctx->vref;
+
+    if ( tmp > 0.9 )
     {
         return ANALOGKEY_TOUCH_KEY_1;
     }
+    else if ( tmp > 0.77 )
+    {
+        return ANALOGKEY_TOUCH_KEY_2;
+    }
+    else if ( tmp > 0.6 )
+    {
+        return ANALOGKEY_TOUCH_KEY_3;
+    }
+    else if ( tmp > 0.42 )
+    {
+        return ANALOGKEY_TOUCH_KEY_4;
+    }
+    else if ( tmp > 0.26 )
+    {
+        return ANALOGKEY_TOUCH_KEY_5;
+    }
+    else if ( tmp > 0.06 )
+    {
+        return ANALOGKEY_TOUCH_KEY_6;
+    }
 
-    return ANALOGKEY_NO_TOUCH;
+    return ANALOGKEY_TOUCH_KEY_NONE;
 }
 
-void analogkey_set_resolution ( analogkey_t* ctx, uint8_t resolution )
-{
-    if ( resolution == ANALOGKEY_ADC_RESOLUTION_10bit )
-    {
-        ctx->max_adc = 1023;
-        ctx->prec = 51;
-    }
-    else
-    {
-        ctx->max_adc = 4095;
-        ctx->prec = 205;
-    }
-}
-
-// ------------------------------------------------------------------------- END
-
+// ------------------------------------------------------------------------ END

@@ -37,6 +37,7 @@
 
 static ecg6_t ecg6;
 static log_t logger;
+static ecg6_int_status_t int_status;
 
 static uint8_t ECG_EXAMPLE = 1;
 static uint8_t PPG_EXAMPLE = 0;
@@ -47,6 +48,36 @@ static uint8_t device_check;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
+static void plot_ecg_data ( uint32_t ecg_data )
+{
+    uint32_t tmp;
+    uint32_t timer;
+
+    tmp = ecg_data & 0x3FFFFF;
+    timer = time_cnt++;
+    
+    if ( tmp != 0 ) {
+        log_printf( &logger, "%lu,%lu\r\n", tmp, timer );
+        Delay_ms( 5 );
+    }
+}
+
+static void plot_ppg_data ( uint32_t ir_data, uint32_t red_data )
+{
+    uint32_t tmp;
+    uint32_t tmf;
+    uint32_t tmd;
+
+    tmp = ir_data & 0x0007FFFF;
+    tmf = red_data & 0x0007FFFF;
+    tmd = time_cnt++;
+    
+    if ( ( tmp != 0 ) && ( tmf != 0 ) ) {
+        log_printf( &logger,"%lu,%lu,%lu\r\n", tmp, tmf, tmd );
+        Delay_ms( 20 );
+    }
+}
+
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -55,7 +86,7 @@ void application_init ( void )
     //  Logger initialization.
 
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.baud = 9600;
+    log_cfg.baud = 57600;
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
@@ -67,8 +98,15 @@ void application_init ( void )
     ecg6_init( &ecg6, &cfg );
     
     Delay_ms( 1000 );
-
+    
+    DEMO_EXAMPLE = PPG_EXAMPLE;
+   
+    // Dummy read
+    ecg6_check_path_id( &ecg6 );
+    Delay_ms( 100 );
+    
     device_check = ecg6_check_path_id( &ecg6 );
+    
     if ( device_check != 0 )
     {
        log_printf( &logger, " -- > Device ERROR!!! \r\n" );
@@ -91,49 +129,23 @@ void application_init ( void )
     time_cnt = 0;
 }
 
-static void plot_ecg_data ( uint32_t ecg_data )
-{
-    uint8_t tmp;
-    uint8_t timer;
-
-    tmp = ecg_data & 0x3FFFFF;
-    timer = time_cnt++;
-    log_printf( &logger, " %d, \r\n", tmp );
-    log_printf( &logger, " %d, \r\n", timer );
-    Delay_ms( 3 );
-}
-
-static void plot_ppg_data ( uint32_t ir_data, uint32_t red_data )
-{
-    uint8_t tmp;
-    uint8_t tmf;
-    uint8_t tmd;
-
-    tmp = ir_data & 0x0007FFFF;
-    tmf = red_data & 0x0007FFFF;
-    tmd = time_cnt++;
-
-    log_printf( &logger," %d \r\n", tmp );
-    log_printf( &logger," %d \r\n", tmf );
-    log_printf( &logger," %d \r\n", tmd );
-    Delay_ms( 40 );
-}
-
 void application_task ( void )
 {
     ecg6_element_t sample;
-    ecg6_get_sample_data( &ecg6, &sample, 0x00 );
     
-    if ( DEMO_EXAMPLE == ECG_EXAMPLE )
-    {
-        log_printf( &logger, " %u ", sample.element_1 );
-        plot_ecg_data( sample.element_1 );
-    }
+    if ( ecg6_int_pin_state(&ecg6) == 0 ) {
+        
+        ecg6_get_sample_data( &ecg6, &sample, 0x00 );
     
-    else
-    {
-        log_printf( &logger, " %u, %u ", sample.element_1, sample.element_2 );
-        plot_ppg_data( sample.element_1, sample.element_2 );
+        if ( DEMO_EXAMPLE == ECG_EXAMPLE )
+        {
+            plot_ecg_data( sample.element_1 );
+        }
+        
+        else
+        {
+            plot_ppg_data( sample.element_1, sample.element_2 );
+        }
     }
 }
 

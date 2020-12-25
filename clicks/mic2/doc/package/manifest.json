@@ -27,6 +27,7 @@
     "short_description": "This range is  suited for audio and/or speech applications",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+
 

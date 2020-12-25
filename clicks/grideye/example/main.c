@@ -23,6 +23,8 @@
 #include "log.h"
 #include "grideye.h"
 
+#define GRIDEYE_TEMP_COEF  0.25
+
 // ------------------------------------------------------------------ VARIABLES
 
 static grideye_t grideye;
@@ -38,42 +40,53 @@ void application_init ( void )
     //  Logger initialization.
 
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, "---- Application Init... ----" );
 
     //  Click initialization.
 
     grideye_cfg_setup( &cfg );
-    
     GRIDEYE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    grideye_init( &grideye, &cfg );
+
+    if ( grideye_init( &grideye, &cfg ) == GRIDEYE_INIT_ERROR )
+    {
+        log_info( &logger, "---- Application Init Error. ----" );
+        log_info( &logger, "---- Please, run program again... ----" );
+
+        for ( ; ; );
+    }
+
+    log_info( &logger, "---- Application Init Done. ----" );
 
     grideye_default_cfg ( &grideye );
+
+    log_info( &logger, "---- Application Running... ----\n" );
 }
 
 void application_task ( void )
 {
     uint8_t i;
     uint8_t j;
-    uint16_t grid_array[ 64 ];
-    uint16_t grid_array_tmp;
+    int16_t grid_array[ 64 ];
+    int16_t grid_array_tmp;
 
-    grideye_read_grid( &grideye, &grid_array );
+    grideye_read_grid( &grideye, grid_array );
 
     for( i = 1; i < 9; i++ )
     {
         for( j = 1; j < 9; j++ )
         {
             log_printf( &logger, "| " );
-            grid_array_tmp = grid_array[ i * j ];
-            
-            log_printf( &logger, "%d ", grid_array_tmp );
+            grid_array_tmp = grid_array[ i * j - 1 ];
+
+            log_printf( &logger, "%d ", (int16_t)( grid_array_tmp * GRIDEYE_TEMP_COEF ) );
         }
         log_printf( &logger, " \r\n" );
         log_printf( &logger, "-------------------------------------- \r\n" );
     }
+
     Delay_ms( 1000 );
 }
 

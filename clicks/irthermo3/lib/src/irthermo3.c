@@ -45,14 +45,9 @@
 #define IRTHERMO3_SAVE_UPPER_BYTE           0xFF00
 #define IRTHERMO3_CTRL_REG_MODE_BITS        0x0003
 #define IRTHERMO3_CTRL_REG_SOC_BIT          0x0008
-#define IRTHERMO3_BROWN_OUT_BIT             0x0100
 #define IRTHERMO3_EEPROM_BUSY_BIT           0x0200
-#define IRTHERMO3_DEVICE_BUSY_BIT           0x0400
 #define IRTHERMO3_CYCLE_POS_BITS            0x007C
-#define IRTHERMO3_CLEAR_NEW_DATA_BIT        0xFFFE
-#define IRTHERMO3_NEW_DATA_BIT              0x0001
 
-#define IRTHERMO3_ADVISAVLE_WAIT_PERIOD  750
 #define IRTHERMO3_APSOLUTE_ZERO_DIF      273.15
 #define IRTHERMO3_MESUREMENT_ODD         1
 #define IRTHERMO3_MESUREMENT_EVEN        2
@@ -66,16 +61,6 @@ static uint8_t irthermo3_get_cycle ( irthermo3_t *ctx );
 static uint8_t irthermo3_get_mode ( irthermo3_t *ctx );
 
 static void irthermo3_set_soc_bit ( irthermo3_t *ctx );
-
-static void irthermo3_set_brown_out_bit ( irthermo3_t *ctx );
-
-static void irthermo3_clear_data_available ( irthermo3_t *ctx );
-
-static void irthermo3_wait_for_new_data ( irthermo3_t *ctx, uint16_t t_out_ms );
-
-static uint8_t irthermo3_new_data_available ( irthermo3_t *ctx );
-
-static uint8_t irthermo3_device_busy ( irthermo3_t *ctx );
 
 static uint8_t irthermo3_eeprom_busy ( irthermo3_t *ctx );
 
@@ -112,6 +97,7 @@ IRTHERMO3_RETVAL irthermo3_init ( irthermo3_t *ctx, irthermo3_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     return IRTHERMO3_OK;
 }
@@ -125,7 +111,7 @@ void irthermo3_generic_write ( irthermo3_t *ctx, uint16_t reg,
     tx_buf[ 0 ] = ( reg & IRTHERMO3_SAVE_UPPER_BYTE ) >> 8;
     tx_buf[ 1 ] = ( reg & IRTHERMO3_SAVE_LOWER_BYTE );
     
-    for ( cnt = 2; cnt <= len; cnt++ )
+    for ( cnt = 2; cnt <= len+1; cnt++ )
     {
         tx_buf[ cnt ] = *data_buf; 
         data_buf++; 
@@ -147,7 +133,7 @@ void irthermo3_generic_read ( irthermo3_t *ctx, uint16_t reg,
 
 void irthermo3_write_u16 ( irthermo3_t *ctx, uint16_t reg, uint16_t wr_data )
 {
-    uint8_t tx_buf[ 256 ];
+    uint8_t tx_buf[ 4 ];
     tx_buf[ 3 ] = ( wr_data & IRTHERMO3_SAVE_UPPER_BYTE ) >> 8;
     tx_buf[ 2 ] = ( wr_data & IRTHERMO3_SAVE_LOWER_BYTE );
     tx_buf[ 0 ] = ( reg & IRTHERMO3_SAVE_UPPER_BYTE ) >> 8;
@@ -158,14 +144,14 @@ void irthermo3_write_u16 ( irthermo3_t *ctx, uint16_t reg, uint16_t wr_data )
 
 int16_t irthermo3_read_i16 ( irthermo3_t *ctx, uint16_t reg )
 {
-    uint8_t data_buf[ 2 ];
+    uint8_t reg_buf[ 2 ];
     uint8_t rx_buff[ 2 ];
     int16_t ret_val = 0;
     
-    data_buf[ 0 ] = ( reg & IRTHERMO3_SAVE_UPPER_BYTE ) >> 8;
-    data_buf[ 1 ] = ( reg & IRTHERMO3_SAVE_LOWER_BYTE ); 
+    reg_buf[ 0 ] = ( reg & IRTHERMO3_SAVE_UPPER_BYTE ) >> 8;
+    reg_buf[ 1 ] = ( reg & IRTHERMO3_SAVE_LOWER_BYTE ); 
 
-    i2c_master_write_then_read( &ctx->i2c, data_buf, 2, rx_buff, 2 );
+    i2c_master_write_then_read( &ctx->i2c, reg_buf, 2, rx_buff, 2 );
 
     ret_val = rx_buff[ 0 ];
     ret_val <<= 8;
@@ -176,22 +162,22 @@ int16_t irthermo3_read_i16 ( irthermo3_t *ctx, uint16_t reg )
 
 int32_t irthermo3_read_i32 ( irthermo3_t *ctx, uint16_t reg )
 {
-    uint8_t data_buf[ 2 ];
+    uint8_t reg_buf[ 2 ];
     uint8_t rx_buff[ 4 ];
     int32_t ret_val = 0;
     
-    data_buf[ 0 ] = ( reg & IRTHERMO3_SAVE_UPPER_BYTE ) >> 8;
-    data_buf[ 1 ] = ( reg & IRTHERMO3_SAVE_LOWER_BYTE ); 
+    reg_buf[ 0 ] = ( reg & IRTHERMO3_SAVE_UPPER_BYTE ) >> 8;
+    reg_buf[ 1 ] = ( reg & IRTHERMO3_SAVE_LOWER_BYTE ); 
 
-    i2c_master_write_then_read( &ctx->i2c, data_buf, 2, rx_buff, 4 );
+    i2c_master_write_then_read( &ctx->i2c, reg_buf, 2, rx_buff, 4 );
     
-    ret_val = data_buf[ 2 ];
+    ret_val = rx_buff[ 2 ];
     ret_val <<= 8;
-    ret_val |= data_buf[ 3 ];
+    ret_val |= rx_buff[ 3 ];
     ret_val <<= 8;
-    ret_val |= data_buf[ 0 ];
+    ret_val |= rx_buff[ 0 ];
     ret_val <<= 8;
-    ret_val |= data_buf[ 1 ];
+    ret_val |= rx_buff[ 1 ];
 
     return ret_val;
 }
@@ -211,11 +197,10 @@ void irthermo3_global_write ( irthermo3_t *ctx, uint8_t *data_buf, uint8_t len )
 }
 
 void irthermo3_set_mode( irthermo3_t *ctx, uint8_t mode )
-{
-    uint16_t reg;
-    reg  = irthermo3_read_i16( ctx, IRTHERMO3_REG_CONTROL );
-    reg &= ~( IRTHERMO3_CTRL_REG_MODE_BITS << 1 );
-    reg |= ( mode << 1 );
+{    
+    uint16_t reg  = irthermo3_read_i16( ctx, IRTHERMO3_REG_CONTROL );
+    reg &= ~(0x0003 << 1); //Clear the mode bits
+    reg |= (mode << 1);
     irthermo3_write_u16( ctx, IRTHERMO3_REG_CONTROL, reg );
 }
 
@@ -224,8 +209,8 @@ void irthermo3_cal ( irthermo3_t *ctx )
     int32_t i32_data;
     int16_t i16_data;
    
-    irthermo3_wait_for_eeprom( ctx, IRTHERMO3_ADVISAVLE_WAIT_PERIOD );
-    irthermo3_set_mode( ctx, IRTHERMO3_MODE_SLEEP );
+    irthermo3_wait_for_eeprom( ctx, 750 );
+    irthermo3_set_mode( ctx, 0x02 );
     
     i32_data = irthermo3_read_i32( ctx, IRTHERMO3_EEPROM_CAL_CONST_P_R_LSW );
     ctx->cal_coef.p_r = i32_data * 0.00390625;
@@ -254,7 +239,7 @@ void irthermo3_cal ( irthermo3_t *ctx )
     i16_data = irthermo3_read_i16( ctx, IRTHERMO3_EEPROM_CAL_CONST_HB_COSTUMER );
     ctx->cal_coef.hb = i16_data * 0.000061035;
    
-    irthermo3_set_mode( ctx, IRTHERMO3_MODE_CONTINOUS );
+    irthermo3_set_mode( ctx, 0x06 );
 }
 
 float irthermo3_get_ambient_temperature ( irthermo3_t *ctx )
@@ -272,8 +257,6 @@ float irthermo3_get_ambient_temperature ( irthermo3_t *ctx )
     {
         irthermo3_set_soc_bit( ctx );
     }
-    irthermo3_clear_data_available( ctx );
-    irthermo3_wait_for_new_data( ctx,IRTHERMO3_ADVISAVLE_WAIT_PERIOD );
    
     ram6 = irthermo3_read_i16( ctx, IRTHERMO3_RAW_DATA_6 );
     ram9 = irthermo3_read_i16( ctx, IRTHERMO3_RAW_DATA_9 );
@@ -318,8 +301,6 @@ float irthermo3_get_object_temperature ( irthermo3_t *ctx )
     {
         irthermo3_set_soc_bit( ctx );
     }
-    irthermo3_clear_data_available( ctx );
-    irthermo3_wait_for_new_data( ctx, IRTHERMO3_ADVISAVLE_WAIT_PERIOD );
    
     sc_1 = irthermo3_read_i16( ctx, IRTHERMO3_RAW_DATA_4 );
     sc_1 += irthermo3_read_i16( ctx, IRTHERMO3_RAW_DATA_5 );
@@ -417,53 +398,6 @@ static void irthermo3_set_soc_bit ( irthermo3_t *ctx )
     irthermo3_write_u16( ctx, IRTHERMO3_REG_CONTROL, reg );
 }
 
-static void irthermo3_set_brown_out_bit ( irthermo3_t *ctx )
-{
-    uint16_t reg = irthermo3_get_status( ctx );
-    reg |= IRTHERMO3_BROWN_OUT_BIT;
-    irthermo3_write_u16( ctx, IRTHERMO3_REG_STATUS, reg );
-}
-
-static void irthermo3_clear_data_available ( irthermo3_t *ctx )
-{
-    uint16_t reg = irthermo3_get_status( ctx );
-    reg &= IRTHERMO3_CLEAR_NEW_DATA_BIT;
-    irthermo3_write_u16( ctx, IRTHERMO3_REG_STATUS, reg );
-}
-
-static void irthermo3_wait_for_new_data ( irthermo3_t *ctx, uint16_t t_out_ms )
-{
-    uint16_t n_cnt = 0;
-    uint8_t flag;
-    
-    flag = irthermo3_new_data_available( ctx );
-    
-    while ( !flag )
-    {
-        Delay_1ms( );
-        n_cnt++;
-        if ( n_cnt > t_out_ms )
-        {
-            return;
-        }
-    }
-}
-
-static uint8_t irthermo3_new_data_available ( irthermo3_t *ctx )
-{
-    uint8_t ret_value;
-    
-    ret_value = irthermo3_get_status( ctx ) & IRTHERMO3_NEW_DATA_BIT;
-    
-    return ret_value;
-}
-
-static uint8_t irthermo3_device_busy ( irthermo3_t *ctx )
-{
-    return ( ( uint16_t )( irthermo3_get_status( ctx ) >> 
-                        IRTHERMO3_DEVICE_BUSY_BIT ) & 1 );
-}
-
 static uint8_t irthermo3_eeprom_busy ( irthermo3_t *ctx )
 {
     return ( ( uint16_t )( irthermo3_get_status( ctx ) >> 
@@ -473,11 +407,8 @@ static uint8_t irthermo3_eeprom_busy ( irthermo3_t *ctx )
 static void irthermo3_wait_for_eeprom( irthermo3_t *ctx , uint16_t t_out_ms )
 {
     uint16_t n_cnt = 0;
-    uint8_t flag;
     
-    flag = irthermo3_eeprom_busy( ctx );
-    
-    while ( flag )
+    while ( irthermo3_eeprom_busy( ctx ) )
     {
         Delay_1ms();
         n_cnt++;

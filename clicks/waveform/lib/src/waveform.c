@@ -46,12 +46,11 @@ void waveform_cfg_setup ( waveform_cfg_t *cfg )
 
     // Additional gpio pins
 
-
     cfg->rst = HAL_PIN_NC;
     cfg->pwm = HAL_PIN_NC;
 
     cfg->spi_speed = 100000; 
-    cfg->spi_mode = SPI_MASTER_MODE_0;
+    cfg->spi_mode = SPI_MASTER_MODE_2;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 }
 
@@ -91,30 +90,15 @@ WAVEFORM_RETVAL waveform_init ( waveform_t *ctx, waveform_cfg_t *cfg )
     return WAVEFORM_OK;
 }
 
-void waveform_generic_transfer 
-( 
-    waveform_t *ctx, 
-    uint8_t *wr_buf, 
-    uint16_t wr_len, 
-    uint8_t *rd_buf, 
-    uint16_t rd_len 
-)
-{
-    spi_master_select_device( ctx->chip_select );
-    spi_master_write_then_read( &ctx->spi, wr_buf, wr_len, rd_buf, rd_len );
-    spi_master_deselect_device( ctx->chip_select );   
-}
-
 void waveform_digipot_dec ( waveform_t *ctx ) 
 {       
     uint8_t transfer;
-    uint8_t tmp;
 
-    transfer = 0x1F;
+    transfer = 0x07;
 
     spi_master_select_device( ctx->chip_select );
     Delay_1ms( );
-    spi_master_write_then_read( &ctx->spi, &transfer, 1, &tmp, 1 );
+    spi_master_write( &ctx->spi, &transfer, 1 );
     Delay_1ms( );
     spi_master_deselect_device( ctx->chip_select ); 
 }
@@ -122,13 +106,12 @@ void waveform_digipot_dec ( waveform_t *ctx )
 void waveform_digipot_inc ( waveform_t *ctx ) 
 {    
     uint8_t transfer;
-    uint8_t tmp;
     
-    transfer = 0x07;
+    transfer = 0x1F;
 
     spi_master_select_device( ctx->chip_select );
     Delay_1ms( );
-    spi_master_write_then_read( &ctx->spi, &transfer, 1, &tmp, 1 );
+    spi_master_write( &ctx->spi, &transfer, 1 );
     Delay_1ms( );
     spi_master_deselect_device( ctx->chip_select ); 
 }
@@ -142,7 +125,7 @@ void waveform_write_reg ( waveform_t *ctx, uint16_t reg_setting )
 
     digital_out_low( &ctx->rst );
     Delay_1ms( );
-    spi_master_write_then_read( &ctx->spi, temp, 2, ctx->dumy_rec_buf, 2 );
+    spi_master_write( &ctx->spi, temp, 2 );
     Delay_1ms( );
     digital_out_high( &ctx->rst );
 }
@@ -151,47 +134,36 @@ void waveform_write_freqency ( waveform_t *ctx, uint32_t f )
 {
     uint16_t fekreg_0 = 0;
     uint16_t fekreg_1 = 0;
-    uint16_t tmp;
 
     fekreg_0 = f & 0x7FFF;
     fekreg_1 = ( f >> 14 ) & 0x7FFF;
     
-    tmp = 0x0000;
-    waveform_write_reg( ctx, tmp );
-    tmp = 0x8000;
-    waveform_write_reg( ctx, tmp | fekreg_0 );
+    waveform_write_reg( ctx, 0x0000 );
+    waveform_write_reg( ctx, 0x8000 | fekreg_0 );
  
-    tmp = 0x1000;
-    waveform_write_reg( ctx, tmp );
-    tmp = 0x4000;
-    waveform_write_reg( ctx, tmp | fekreg_1 );
+    waveform_write_reg( ctx, 0x1000 );
+    waveform_write_reg( ctx, 0x4000 | fekreg_1 );
 }
 
 void waveform_sine_output ( waveform_t *ctx, uint32_t f )
 {
-    uint16_t tmp;
-
     waveform_write_freqency( ctx, f );
-    tmp = 0x2100;
-    waveform_write_reg( ctx, tmp );
-    tmp = 0x2000;
-    waveform_write_reg( ctx, tmp );
+    waveform_write_reg( ctx, 0x2100 );
+    waveform_write_reg( ctx, 0x2000 );
 }
 
 void waveform_triangle_output ( waveform_t *ctx, uint32_t f )
 {
     waveform_write_freqency( ctx, f );
-    ctx->wavwform_control_reg = WAVEFORM_CR_B28_BITMASK | WAVEFORM_CR_MODE_BITMASK;
-    waveform_write_reg( ctx, ctx->wavwform_control_reg );
+    waveform_write_reg( ctx, WAVEFORM_CR_B28_BITMASK | WAVEFORM_CR_MODE_BITMASK );
 }
 
 void waveform_square_output ( waveform_t *ctx, uint32_t f )
 {
     waveform_write_freqency( ctx, f );
-    ctx->wavwform_control_reg = WAVEFORM_CR_B28_BITMASK | 
+    waveform_write_reg( ctx, WAVEFORM_CR_B28_BITMASK | 
                                 WAVEFORM_CR_DIV2_BITMASK | 
-                                WAVEFORM_CR_OPBITEN_BITMASK;
-    waveform_write_reg( ctx, ctx->wavwform_control_reg );
+                                WAVEFORM_CR_OPBITEN_BITMASK );
 }
 
 // ------------------------------------------------------------------------- END

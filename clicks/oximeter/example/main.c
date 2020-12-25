@@ -10,21 +10,11 @@
  * 
  * ## Application Init 
  * Initializes driver and performs the device configuration which puts Time Slot A
- * in enabled mode and LEDX2 (IR diode) to active state. On Oximeter click the photodiode is connected on PD1 input,
- * and because we will observe the Channel 1 in this example (CH1 is enabled). Before the device configuration, the
- * SW reset will be performed and on this way we will put the registers in initial state.
+ * in enabled mode and LEDX2 (IR diode) to active state.  Before the device configuration, the
+ * SW reset will be performed and in this way we will put the registers in initial state.
  * 
  * ## Application Task  
- * Gets data when IR diode (LEDX2) is enabled, and after that gets data when LED diode
- * (LEDX1) is enabled. Repeats operation 10 times and then calculates the average value for both results.
- * This results logs on serial plot as graphic view.
- * Note: For this example you must have the serial plot application.
- * The IR diode is internal connected on LEDX2 input, and the LED diode is internal connected on LEDX1 input.
- * The photodiode is internal connected on PD1 input.
- * When we want to perform some register configuration we must first put the device in Program Operating Mode, then we can
- * set the desired register to the desired value, and when we finished, then we can put the device back to the Normal Operating Mode.
- * 
-
+ * Logs PD1-PD4 data on USB UART
  * 
  * \author MikroE Team
  *
@@ -46,12 +36,12 @@ static uint32_t res_slot[ 100 ];
 
 void oxim_write_res ( uint32_t data_write )
 {
-    log_printf( &logger, "%d\r\n", data_write );
+    log_printf( &logger, "%u\r\n", data_write );
 }
 
 void oxim_plot ( uint32_t buff1, uint32_t buff2 )
 {
-    log_printf( &logger, "%d, %d\r\n", buff1, buff2 );
+    log_printf( &logger, "%u, %u\r\n", buff1, buff2 );
 }
 
 void oxim_plot_display ( void )
@@ -211,7 +201,7 @@ void oxim_logs_results( void )
 
     if ( oximeter.result_mode_check == 0 )
     {
-        log_printf( &logger, "Average result is: " );
+        log_printf( &logger, "Average result is: \r\n" );
     }
     else
     {
@@ -275,9 +265,9 @@ void oxim_logs_results( void )
             break;
         }
     }
-    log_printf( &logger, "\r\n" );
+    log_printf( &logger, "-------------------------\r\n" );
 
-    Delay_ms( 200 );
+    Delay_ms( 300 );
 }
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -304,7 +294,7 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    oxim_plot_display();
+    oxim_logs_results();
 }
 
 void main ( void )

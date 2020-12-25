@@ -25,7 +25,12 @@
     "name": "mikroe.click.buck12",
     "product_link": "https://www.mikroe.com/buck-12-click",
     "short_description": "Buck 12 Click is a high-efficiency step-down converter which provides 3.3V on its output, derived from the connected power supply voltage, in the range from 4.2V to 18V.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.0"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2845
+    ],
+    "version": "2.0.0.2"
 }
+

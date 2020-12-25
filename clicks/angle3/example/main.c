@@ -31,10 +31,6 @@
 static angle3_t angle3;
 static log_t logger;
 
-static uint16_t angle_value;
-static uint16_t angle_value_old;
-static uint16_t angle_data_degrees;
-
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
@@ -48,28 +44,35 @@ void application_init ( void )
     log_cfg.baud = 9600;
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, "---- Application Init... ----" );
 
     //  Click initialization.
 
     angle3_cfg_setup( &angle3_cfg );
     ANGLE3_MAP_MIKROBUS( angle3_cfg, MIKROBUS_1 );
-    angle3_init( &angle3, &angle3_cfg );
+    if ( angle3_init( &angle3, &angle3_cfg ) == ANGLE3_INIT_ERROR )
+    {
+        log_info( &logger, "---- Application Init Error ----" );
+        log_info( &logger, "---- Please, run program again... ----" );
+
+        for ( ; ; );
+    }
+    log_info( &logger, "---- Application Init Done ----\n" );
 }
 
 void application_task ( void )
 {
-	angle_value_old = 0;
+	static uint16_t angle_value_old = 0;
 
 	if ( angle3_read_error( &angle3 ) )
 	{
-		angle_value = angle3_read_angle_data( &angle3 );
+		uint16_t angle_value = angle3_read_angle_data( &angle3 );;
 
 		if ( angle_value_old != angle_value )
 		{
-			angle_data_degrees = angle3_calculate_degrees( &angle3, angle_value );
+			uint16_t angle_data_degrees = angle3_calculate_degrees( &angle3, angle_value );
 
-			log_printf( &logger, "Angle : %d deg \r\n", angle_data_degrees );
+			log_printf( &logger, " Angle : %u deg\r\n", angle_data_degrees );
 
 			angle_value_old = angle_value;
 
@@ -78,8 +81,9 @@ void application_task ( void )
 	}
 	else
 	{
-		log_printf( &logger, "Magnetic Field Too Weak\r\n" );
+		log_printf( &logger, " Magnetic Field Too Weak\r\n" );
 
+        angle_value_old = 0;
 		Delay_ms( 1000 );
 	}
 }

@@ -34,7 +34,7 @@
 
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 500
-#define PROCESS_PARSER_BUFFER_SIZE 1000
+#define PROCESS_PARSER_BUFFER_SIZE 500
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -75,7 +75,6 @@ static void gsm4_process ( void )
                     uart_rx_buffer[ check_buf_cnt ] = 13;
                 }
             }
-            log_printf( &logger, "%s", uart_rx_buffer );
 
             // Storages data in parser buffer
             rsp_cnt += rsp_size;
@@ -95,6 +94,7 @@ static void gsm4_process ( void )
             Delay_ms( 100 );
         }
     }
+    log_printf( &logger, "%s\r\n", current_parser_buf );
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -108,7 +108,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 57600;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 

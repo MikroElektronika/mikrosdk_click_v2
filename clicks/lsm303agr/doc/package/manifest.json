@@ -27,6 +27,8 @@
     "short_description": "LSM303AGR click is a magnetometer and accelerometer device, capable of sensing both the magnetic and gravitational field along three orthogonal axes. It uses the LSM303AGR from STMicroelectronics, an integrated MEMS IC with plenty of features that allow accurate and reliable sensing, even in presence of foreign objects made of iron and similar materials that exhibit ferromagnetic behavior. An extensive interrupt engine can be programmed to generate an interrupt signal for free-falling events, motion detection, and magnetic field detection. The Click board™ can sense the magnetic field in the range of ±50 G (gauss) and ±2g, ±4g, ±8g, and ±16g selectable ranges for the full-scale acceleration detection (gravity force).",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.3"
 }
+
+
 

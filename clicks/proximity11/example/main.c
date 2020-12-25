@@ -73,7 +73,7 @@ void application_task ( void )
 
     proximity11_get_ps_als_values( &proximity11, &ps_value, &als_value );
 
-    log_printf( &logger, "PS  : %ld [count]\r\n", ps_value );
+    log_printf( &logger, "PS  : %u [count]\r\n", ps_value );
     log_printf( &logger, "ALS : %.2f [Lx]\r\n\r\n", als_value );
 
     Delay_ms( 500 );

@@ -1,8 +1,0 @@
-{
-    "name": "Motion 4 Click",
-    "description": "Motion 4 Click is a long distance PaPIR's motion sensor with plastic lense and controllable output. This Click board features EKMC1603111, a PIR motion sensor from Panasonic Corporation which can be used as human motion detector and is able to detect movement up to 12m with 170uA current consumption.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","EKMC1603111"],
-    "category" : ["Motion"] 
-}

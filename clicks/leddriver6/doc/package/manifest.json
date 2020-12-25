@@ -27,6 +27,8 @@
     "short_description": "LED driver 6 Click is a high brightness LED or LED strip driver, designed to be used in tunable Smart Connected Lighting (SCL) applications. It is based on the AL1781, a single-channel PWM dimmable linear LED driver.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.3"
 }
+
+
 

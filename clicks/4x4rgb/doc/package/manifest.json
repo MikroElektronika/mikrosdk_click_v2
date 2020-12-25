@@ -25,7 +25,15 @@
     "name": "mikroe.click.c4x4rgb",
     "product_link": "https://www.mikroe.com/4x4-rgb-click",
     "short_description": "4x4 RGB click is a matrix of 16 intelligent RGB elements, forming a 4x4 display screen. ",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.0"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        1413
+    ],
+    "_type": "mikroSDK Library",
+    "related_project": [ 3499 ],
+    "version": "2.0.0.2"
 }
+
+

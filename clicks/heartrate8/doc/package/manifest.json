@@ -27,5 +27,6 @@
     "short_description": "Heart Rate 8 click is an optical biosensor Click board™, designed for heart-rate monitoring (HRM). This Click board™ employs a specialized sensor that incorporates three LED drivers and two photo-sensing elements, sensitive to green and IR light.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

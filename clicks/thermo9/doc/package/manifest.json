@@ -27,5 +27,6 @@
     "short_description": "The TSYS01 is a single chip, versatile, new technology temperature sensor. The TSYS01 provides factory calibrated temperature information. It includes a temperature sensing chip and a 24 bit Σ-ADC.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

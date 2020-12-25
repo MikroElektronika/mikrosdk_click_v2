@@ -27,8 +27,8 @@
 #include "samltouch.h"
 #include "string.h"
 
-#define PROCESS_RX_BUFFER_SIZE 2000
-#define PROCESS_PARSER_BUFFER_SIZE 2000
+#define PROCESS_RX_BUFFER_SIZE 1000
+#define PROCESS_BUFFER_SIZE 80
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -38,74 +38,97 @@ static log_t logger;
 samltouch_state_t saml_touch_status;
 
 static char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
-static char current_parser_buffer[ PROCESS_PARSER_BUFFER_SIZE ];
+static char current_parser_buffer[ PROCESS_BUFFER_SIZE ];
 
-static uint8_t flag_1;
+static uint8_t flag_1 = 0;
+static uint8_t flag_2 = 0;
+static uint16_t wait_cnt = 0;
+static uint16_t button1_cnt = 0;
+static uint16_t button2_cnt = 0;
 
 // ------------------------------------------------------- ADDITIONAL FUNCTIONS
 
 static void samltouch_process ( void )
 {
-    int16_t rsp_size;
-    uint16_t rsp_cnt = 0;
-    
+    int32_t rsp_size;
     uint16_t check_buf_cnt;
     
     // Clear RX buffer
     memset( uart_rx_buffer, 0, PROCESS_RX_BUFFER_SIZE );
     // Clear Parser buffer
-    memset( current_parser_buffer, 0, PROCESS_PARSER_BUFFER_SIZE );
-
+    memset( current_parser_buffer, 0, PROCESS_BUFFER_SIZE );
+    
     rsp_size = samltouch_generic_read( &samltouch, uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
-
+    
     if ( rsp_size > 0 )
     {  
-        for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
-        {
-            if ( ( uart_rx_buffer[ check_buf_cnt ] == 0x55 ) && ( flag_1 == 0 ) )
-           {
+        for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ ) {
+            if ( uart_rx_buffer[check_buf_cnt] == SAMLTOUCH_START_FRAME && ( (check_buf_cnt + 76) <= rsp_size ) ) {
+                memcpy( current_parser_buffer, &uart_rx_buffer[check_buf_cnt], 76 );
+                if ( current_parser_buffer[ 10 ] == 1 ) 
+                {
+                    button1_cnt++;
+                }
+                if ( current_parser_buffer[ 20 ] == 1 ) 
+                {
+                    button2_cnt++;
+                }
                 flag_1 = 1;
-           }
-           if ( flag_1 == 1 )
-           {
-                current_parser_buffer[ rsp_cnt++ ] = uart_rx_buffer[ check_buf_cnt ];
-           }
-           if ( ( uart_rx_buffer[ check_buf_cnt ] == 0xAA ) && ( ( rsp_cnt ) > 70 ) )
-           {
-                flag_1 = 2;
-                rsp_cnt = 0;
-                
-                return;
-           }
-           Delay_ms( 10 );
+                break;
+            }
         }
-    } 
-    Delay_ms( 100 );
+    }
 }
 
-void parser_application ( char *rsp )
+void parser_application ( )
 {
     samltouch_process( );
 
-    if ( flag_1 == 2 )
+    if ( flag_1 == 1 )
     {
-        samltouch_parser( rsp, &saml_touch_status );
-
-        if ( saml_touch_status.button2 == 1 )
+        samltouch_parser( current_parser_buffer, &saml_touch_status );
+        
+        flag_2 = 0;
+        
+        if ( saml_touch_status.button2 == 1 && button2_cnt > 2 )
         {
-            log_printf( &logger, "Button 2 is pressed. \r\n" );
-        }
-        else if ( saml_touch_status.button1 == 1 )
-        {
-            log_printf( &logger, "Button 1 is pressed.\r\n" );
+            log_printf( &logger, "\r\n Button 2 is pressed. \r\n" );
+            flag_2 = 1;
+            wait_cnt = 0;
+            button2_cnt = 2;
         }
         
-        if ( saml_touch_status.sw_pos != 0 )
+        if ( saml_touch_status.button1 == 1 && button1_cnt > 2 )
         {
-            log_printf( &logger, "Slider position is  %d \r\n", saml_touch_status.sw_pos );
-    
+            log_printf( &logger, "\r\n Button 1 is pressed. \r\n" );
+            flag_2 = 1;
+            wait_cnt = 0;
+            button1_cnt = 2;
+        }
+        
+        if ( saml_touch_status.sw_state == 1 && saml_touch_status.sw_pos != 0 )
+        {
+            log_printf( &logger, "\r\n Slider position is  %u \r\n", (uint16_t) saml_touch_status.sw_pos );
+            flag_2 = 1;
+            wait_cnt = 0;
         }
         flag_1 = 0;
+    }
+     
+    if ( flag_2 == 1 ) 
+    {
+        Delay_100ms( );
+    }
+    else 
+    {
+        if ( wait_cnt++%50 == 0 )
+        {
+            log_printf( &logger, "\r\n Waiting for an event: \r\n" );
+            button1_cnt = 0;
+            button2_cnt = 0;
+        }
+        log_printf( &logger, "." );
+        Delay_100ms( );
     }
 }
 
@@ -135,7 +158,7 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    parser_application( current_parser_buffer );
+    parser_application( );
 }
 
 void main ( void )

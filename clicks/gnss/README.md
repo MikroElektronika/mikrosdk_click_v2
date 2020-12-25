@@ -91,7 +91,6 @@ void application_init ( void )
     gnss_module_wakeup( &gnss );
    
     Delay_ms( 5000 );
-    log_printf( &logger, "budan" ); 
 }
   
 ```

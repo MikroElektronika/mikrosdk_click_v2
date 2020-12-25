@@ -27,5 +27,7 @@
     "short_description": "REED click is a simple board that carries a standard (Single Pole Single Throw Normally Open) reed switch. A reed switch comprises of two thin magnetic contacts sealed inside a casing.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.2"
 }
+
+

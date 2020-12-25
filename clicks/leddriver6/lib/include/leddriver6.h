@@ -28,14 +28,13 @@
  * \brief This file contains API for LED driver 6 Click driver.
  *
  * \addtogroup leddriver6 LED driver 6 Click Driver
- * @{
+ * \{
  */
 // ----------------------------------------------------------------------------
 
 #ifndef LEDDRIVER6_H
 #define LEDDRIVER6_H
 
-#include "drv_digital_out.h"
 #include "drv_digital_in.h"
 #include "drv_pwm.h"
 #include "drv_i2c_master.h"
@@ -51,27 +50,25 @@
  * \{
  */
 #define LEDDRIVER6_MAP_MIKROBUS( cfg, mikrobus ) \
-  cfg.pwm = MIKROBUS( mikrobus, MIKROBUS_PWM ); \
-  cfg.scl = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
-  cfg.sda = MIKROBUS( mikrobus, MIKROBUS_SDA ); \
-  cfg.int_pin = MIKROBUS( mikrobus, MIKROBUS_INT ) 
+  cfg.pwm     = MIKROBUS( mikrobus, MIKROBUS_PWM ); \
+  cfg.scl     = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
+  cfg.sda     = MIKROBUS( mikrobus, MIKROBUS_SDA ); \
+  cfg.int_pin = MIKROBUS( mikrobus, MIKROBUS_INT )
 /** \} */
 
 /**
  * \defgroup error_code Error Code
  * \{
  */
-#define LEDDRIVER6_RETVAL  uint8_t
-
-#define LEDDRIVER6_OK           0x00
-#define LEDDRIVER6_INIT_ERROR   0xFF
+#define LEDDRIVER6_OK            0
+#define LEDDRIVER6_INIT_ERROR  (-1)
 /** \} */
 
 /**
  * \defgroup default_freq Default frequency value
  * \{
  */
-#define LEDDRIVER6_DEF_FREQ     20000
+#define LEDDRIVER6_DEF_FREQ  10000
 /** \} */
 
 /** \} */ // End group macro 
@@ -90,18 +87,16 @@ typedef struct
     // Input pins 
 
     digital_in_t int_pin;
-    
+
     // Modules 
 
-    pwm_t pwm;
-    
+    pwm_t        pwm;
     i2c_master_t i2c;
 
-    // ctx variable 
+    // ctx variables 
 
     uint32_t pwm_freq;
-
-    uint8_t slave_address;
+    uint8_t  slave_address;
 
 } leddriver6_t;
 
@@ -115,28 +110,26 @@ typedef struct
     pin_name_t scl;
     pin_name_t sda;
     pin_name_t pwm;
-    
+
     // Additional gpio pins 
 
     pin_name_t int_pin;
 
-    // static variable 
-    
+    // Static variables 
+
     uint32_t i2c_speed;
-    uint8_t i2c_address;
+    uint8_t  i2c_address;
     uint32_t dev_pwm_freq;
 
 } leddriver6_cfg_t;
 
 /** \} */ // End types group
-
 // ----------------------------------------------- PUBLIC FUNCTION DECLARATIONS
-
 /**
  * \defgroup public_function Public function
  * \{
  */
- 
+
 #ifdef __cplusplus
 extern "C"{
 #endif
@@ -154,81 +147,90 @@ void leddriver6_cfg_setup ( leddriver6_cfg_t *cfg );
 /**
  * @brief Initialization function.
  *
- * @param ctx Click object.
- * @param cfg Click configuration structure.
- * 
+ * @param ctx  Click object.
+ * @param cfg  Click configuration structure.
+ * @return    0  - Ok,
+ *          (-1) - Error.
+ *
  * @description This function initializes all necessary pins and peripherals used for this click.
  */
-LEDDRIVER6_RETVAL leddriver6_init ( leddriver6_t *ctx, leddriver6_cfg_t *cfg );
+err_t leddriver6_init ( leddriver6_t *ctx, leddriver6_cfg_t *cfg );
 
 /**
- * @brief Generic sets PWM duty cycle.
+ * @brief Sets PWM duty cycle.
  *
- * @param ctx          Click object.
- * @param duty_cycle   Duty cycle.
+ * @param ctx  Click object.
+ * @param duty_cycle  Duty ratio.
+ * @return    0  - Ok,
+ *          (-1) - Error.
  *
  * @description This function sets the PWM duty cycle.
  */
-void leddriver6_set_duty_cycle ( leddriver6_t *ctx, float duty_cycle );
+err_t leddriver6_set_duty_cycle ( leddriver6_t *ctx, float duty_cycle );
 
 /**
  * @brief Stop PWM module.
  *
- * @param ctx Click object.
+ * @param ctx  Click object.
+ * @return    0  - Ok,
+ *          (-1) - Error.
  *
  * @description This function stops PWM module.
  */
-void leddriver6_pwm_stop ( leddriver6_t *ctx );
+err_t leddriver6_pwm_stop ( leddriver6_t *ctx );
 
 /**
  * @brief Start PWM module.
  *
  * @param ctx  Click object.
+ * @return    0  - Ok,
+ *          (-1) - Error.
  *
  * @description This function starts PWM module.
  */
-void leddriver6_pwm_start ( leddriver6_t *ctx );
+err_t leddriver6_pwm_start ( leddriver6_t *ctx );
 
 /**
- * @brief Generic read function.
- * 
- * @param ctx          Click object.
- * @param reg          Register address.
- * @param data_buf     Output data buf
- * @param len          Number of the bytes to be read
- *
- * @description This function reads data from the desired register.
- */
-void leddriver6_generic_read ( leddriver6_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-/**
- * @brief Function for reads current PG output voltage.
+ * @brief Read ADC function.
  *
  * @param ctx  Click object.
+ * @param data_out  Output converted data [12-bit].
+ * @return    0  - Ok,
+ *          (-1) - Error.
  *
- * @retval Voltage in mV
- *
- * @description This function for reads current PG output voltage.
+ * @description This function reads the ADC converted results of Power Good voltage level.
  */
-uint16_t leddriver6_get_pg_voltage ( leddriver6_t *ctx );
+err_t leddriver6_read_adc ( leddriver6_t *ctx, uint16_t *data_out );
 
 /**
- * @brief Function for get interrupt pin state.
+ * @brief Function for reading current PG output voltage.
  *
  * @param ctx  Click object.
+ * @param data_out  Output voltage level [V].
+ * @return    0  - Ok,
+ *          (-1) - Error.
  *
- * @retval Interrupt pin state
+ * @description This function gets and calculates the Power Good voltage level.
+ */
+err_t leddriver6_get_pg_voltage ( leddriver6_t *ctx, float *data_out );
+
+/**
+ * @brief Function for getting interrupt pin state.
  *
- * @description This function for get interrupt pin state.
+ * @param ctx  Click object.
+ * @return  0 (low) - fault conditions report,
+ *          1 (high) - no fault conditions.
+ *
+ * @description This function checks the state of interrupt (INT) pin.
  */
 uint8_t leddriver6_get_interrupt_state ( leddriver6_t *ctx );
 
 #ifdef __cplusplus
 }
 #endif
-#endif  // _LEDDRIVER6_H_
+#endif  // LEDDRIVER6_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
-/*! @} */
-// ------------------------------------------------------------------------- END
+/** \} */ // End click Driver group
+
+// ------------------------------------------------------------------------ END

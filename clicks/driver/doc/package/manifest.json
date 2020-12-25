@@ -25,8 +25,12 @@
     "name": "mikroe.click.driver",
     "product_link": "https://www.mikroe.com/driver-click",
     "short_description": "Driver Click features an IC with seven integrated high-current sink drivers, which can be used to drive a wide range of loads via simple parallel interface. These integrated drivers use high-efficiency MOSFETs for improved thermal performance.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2382
+    ],
+    "version": "2.0.0.2"
 }
 

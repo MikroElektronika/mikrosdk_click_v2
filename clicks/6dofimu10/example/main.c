@@ -59,7 +59,7 @@ void application_init ( void )
     //  Logger initialization.
 
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
@@ -97,16 +97,14 @@ void application_task ( void )
 
     log_printf( &logger, "-- Accelerometer axis --\r\n" );
     app_display_axis_data( &accel_axis );
-    Delay_ms( 2000 );
 
     log_printf( &logger, "-- Magnetometer axis --\r\n" );
     app_display_axis_data( &mag_axis );
-    Delay_ms( 2000 );
 
     log_printf( &logger, "-- Temperature data --\r\n" );
     app_display_temp_data( temperature );
-    Delay_ms( 2000 );
-    
+    log_printf( &logger, "***************************************************************************************\r\n" );
+    Delay_ms( 1000 );
 }
 
 void main ( void )

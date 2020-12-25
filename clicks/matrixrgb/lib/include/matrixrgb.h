@@ -324,7 +324,7 @@ void matrixrgb_fill_screen ( matrixrgb_t *ctx, uint16_t color );
  * @note
  * Image must be in RGB565 format LSB first.
  */
-void matrixrgb_draw_image ( matrixrgb_t *ctx, uint8_t *device_img );
+void matrixrgb_draw_image ( matrixrgb_t *ctx, const uint8_t *device_img );
 
 /**
  * @brief Set Font Function

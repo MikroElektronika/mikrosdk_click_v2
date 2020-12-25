@@ -37,15 +37,9 @@ void remotetemp_aux_get_fault ( remotetemp_t *ctx )
     remotetemp_read( ctx, REMOTETEMP_EXTERNAL_DIODE_FAULT_STATUS, &aux_byte[ 0 ], 1 );
     if ( aux_byte[ 0 ] != 0 )
     {
-        log_printf( &logger, "> fault occured on diode(s) : \r\n" );
-
         if ( ( aux_byte[ 0 ] & 0x02 ) == 0x02 )
         {
             log_printf( &logger, "  - external diode 1 \r\n" );
-        }
-        if ( ( aux_byte[ 0 ] & 0x04 ) == 0x04 )
-        {
-            log_printf( &logger, "  - external diode 2 \r\n" );
         }
     }
 }
@@ -171,9 +165,8 @@ void remotetemp_aux_get_hottest_status ( remotetemp_t *ctx )
         {
             log_printf( &logger, "  - external diode 2 \r\n" );
         }
-        log_printf( &logger, "  - external diode 1 \r\n" );
         hottest_temp = remotetemp_get_hottest_diode( ctx );
-        log_printf( &logger, "  - temperature : %f degC \r\n", hottest_temp );
+        log_printf( &logger, "  - temperature : %.2f degC \r\n", hottest_temp );
     }   
     log_printf( &logger, "\r\n" );
 }
@@ -187,7 +180,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
     
@@ -196,8 +189,8 @@ void application_init ( void )
     remotetemp_cfg_setup( &cfg );
     REMOTETEMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     remotetemp_init( &remotetemp, &cfg );
+    
     Delay_ms( 300 );
-    remotetemp_set_range( &remotetemp, REMOTETEMP_RANGE_0_127 );
     remotetemp_default_cfg( &remotetemp );
     log_printf( &logger, "> app init done \r\n" );
 }
@@ -209,7 +202,7 @@ void application_task ( void )
     remotetemp_aux_get_low_limit_status( &remotetemp );
     remotetemp_aux_get_therm_limit_status( &remotetemp );
     remotetemp_aux_get_hottest_status( &remotetemp );
-    Delay_ms( 500 );
+    Delay_ms( 1000 );
 }
 
 void main ( void )

@@ -1,8 +1,0 @@
-{
-    "name": "Button library Click",
-    "description": "<Every Button click is a very interesting interactive gadget on a Click board™. It is an integrated capacitive touch sensor display in the form of a button.>",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","CTHS15CIC05ARROW"],
-    "category" : ["Capacitive"] 
-}

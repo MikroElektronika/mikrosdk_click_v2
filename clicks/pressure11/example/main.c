@@ -40,7 +40,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -49,6 +49,14 @@ void application_init ( void )
     pressure11_cfg_setup( &cfg );
     PRESSURE11_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pressure11_init( &pressure11, &cfg );
+    
+    uint8_t id_flag =  pressure11_check_id( &pressure11 );
+    if ( DEVICE_ERROR == id_flag )
+    {
+        log_info( &logger, "---- Error Comm ----" );
+        for( ; ; );
+    }
+    Delay_ms( 500 );
 }
 
 void application_task ( void )
@@ -57,12 +65,11 @@ void application_task ( void )
     float pressure;
         
     temperature = pressure11_get_temperature( &pressure11 );
-    log_printf( &logger, "Temperature: %.2f \r\n", temperature );
-    log_printf( &logger, " C" );
+    log_printf( &logger, "Temperature: %.2f degC\r\n", temperature );
  
     pressure = pressure11_get_pressure( &pressure11 );
-    log_printf( &logger, "Pressure:  %.2f \r\n", pressure );
-    log_printf( &logger, "   hPa (mBar)" );
+    log_printf( &logger, "Pressure:  %.2f hPa (mBar)\r\n", pressure );
+    log_printf( &logger, "-------------------------------------------------\r\n" );
  
     Delay_ms( 500 );
 }

@@ -59,6 +59,7 @@ BUCK12_RETVAL buck12_init ( buck12_t *ctx, buck12_cfg_t *cfg )
 
     spi_master_configure_default( &spi_cfg );
     spi_cfg.speed     = cfg->spi_speed;
+    spi_cfg.mode      = cfg->spi_mode;
     spi_cfg.sck       = cfg->sck;
     spi_cfg.miso      = cfg->miso;
     spi_cfg.mosi      = cfg->mosi;
@@ -73,9 +74,10 @@ BUCK12_RETVAL buck12_init ( buck12_t *ctx, buck12_cfg_t *cfg )
     }
 
     spi_master_set_default_write_data( &ctx->spi, BUCK12_DUMMY );
-    spi_master_set_speed( &ctx->spi, cfg->spi_speed );
     spi_master_set_mode( &ctx->spi, cfg->spi_mode );
+    spi_master_set_speed( &ctx->spi, cfg->spi_speed );
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
+    spi_master_deselect_device( ctx->chip_select ); 
 
     // Output pins 
     
@@ -113,22 +115,32 @@ void buck12_control ( buck12_t *ctx, uint8_t ctrl )
 uint16_t buck12_get_channel_adc ( buck12_t *ctx, uint8_t channel )
 {
     uint8_t read_data[ 3 ];
+    uint8_t write_data[ 3 ];
     uint16_t adc_data;
     uint8_t tmp; 
+    
+    write_data[0] = 0x01;
+    write_data[1] = channel;
+    write_data[2] = 0;
 
     spi_master_select_device( ctx->chip_select );
-
-    tmp = 0x01;
-    spi_master_write ( &ctx->spi, &tmp, 1 );
-    spi_master_write ( &ctx->spi, &channel, 1 );
-
+    
+    spi_master_set_default_write_data( &ctx->spi, write_data[ 0 ] );
     spi_master_read( &ctx->spi, &read_data[ 0 ], 1 );
+    
+    spi_master_set_default_write_data( &ctx->spi, write_data[ 1 ] );
+    spi_master_read( &ctx->spi, &read_data[ 1 ], 1 );
+    
+    spi_master_set_default_write_data( &ctx->spi, write_data[ 2 ] );
+    spi_master_read( &ctx->spi, &read_data[ 2 ], 1 );
     
     spi_master_deselect_device( ctx->chip_select );
 
-    adc_data = channel & 0x0F;
+    spi_master_set_default_write_data( &ctx->spi, BUCK12_DUMMY );
+    
+    adc_data = read_data[1] & 0x0F;
     adc_data <<= 8;
-    adc_data |= read_data[ 0 ];
+    adc_data |= read_data[ 2 ];
 
     return adc_data;
 }

@@ -41,7 +41,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -57,21 +57,12 @@ void application_task ( void )
 {
     uint16_t light_value;
     uint8_t light_percent;
-    uint8_t percent_old = 1;
 
     light_value = light_read_data( &light );
     light_percent = light_calculate_percent( &light, light_value );
     
-
-    if ( percent_old != light_percent )
-    {
-        log_printf( &logger, " Light Intensity : %d \r\n", light_percent );
-
-        log_printf( &logger, " Light Value     : %d\r\n", light_value );
-
-        percent_old = light_percent;
-        Delay_100ms();
-    }
+    log_printf( &logger, " Light Intensity : %d \r\n", (uint16_t)light_percent );
+    log_printf( &logger, " Light Value     : %d\r\n", light_value );
     Delay_ms( 1000 );
 
 }

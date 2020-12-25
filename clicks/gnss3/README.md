@@ -52,7 +52,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 > gnss3_error_t gnss3_generic_parser ( char *rsp,  uint8_t command, uint8_t element, char *parser_buf );
  
 - Generic read function.
-> uint16_t gnss3_generic_read ( gnss3_t *ctx, char *data_buf, uint16_t max_len );
+> int32_t gnss3_generic_read ( gnss3_t *ctx, char *data_buf, uint16_t max_len );
 
 - Wake-up module.
 > void gnss3_module_wakeup ( gnss3_t *ctx );
@@ -89,7 +89,7 @@ void application_init ( void )
     gnss3_init( &gnss3, &cfg );
 
     gnss3_module_wakeup( &gnss3 );
-    Delay_ms( 5000 );
+    Delay_ms( 1000 );
 }
   
 ```

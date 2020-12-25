@@ -78,44 +78,30 @@ BLE3_RETVAL ble3_init ( ble3_t *ctx, ble3_cfg_t *cfg )
 
     // Output pins 
 
-     digital_out_init( &ctx->rst, cfg->rst );
-     digital_out_init( &ctx->rts, cfg->rts );
+    digital_out_init( &ctx->rst, cfg->rst );
+    digital_out_init( &ctx->rts, cfg->rts );
 
     // Input pins
 
-     digital_in_init( &ctx->cts, cfg->cts );
+    digital_in_init( &ctx->cts, cfg->cts );
 
-
-     digital_out_low( &ctx->rts );
-     digital_out_high( &ctx->rst );
-     Delay_1sec( );
-     Delay_1sec( );
+    digital_out_low( &ctx->rts );
+    digital_out_high( &ctx->rst );
+    Delay_1sec( );
 
     return BLE3_OK;
 }
 
-void ble3_default_cfg ( ble3_t *ctx )
+void ble3_generic_write ( ble3_t *ctx, char *data_buf, uint16_t len )
 {
-    char command1[ 10 ]= "AT+UBTLN=";
-    char command2[ 15 ]= "\"mikroE\"";
-    char command3[ 5 ] = "\r";
-    char command4[ 10 ]= "ATO1\r";
-
-    uart_write( &ctx->uart, command1, strlen( command1 ) );
-    uart_write( &ctx->uart, command2, strlen( command2 ) );
-    uart_write( &ctx->uart, command3, strlen( command3 ) );
-
-    Delay_1sec( );
-    Delay_1sec( );
-
-    uart_write( &ctx->uart, command4, strlen( command4 ) );
-    Delay_1sec( );
+    uart_clear( &ctx->uart );
+    uart_write( &ctx->uart, data_buf, len );
 }
 
-int16_t ble3_generic_read ( ble3_t *ctx, char *data_buf, uint16_t max_len )
+int32_t ble3_generic_read ( ble3_t *ctx, char *data_buf, uint16_t max_len )
 {
     return uart_read( &ctx->uart, data_buf, max_len );
-} 
+}
 
 
 // ------------------------------------------------------------------------- END

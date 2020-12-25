@@ -116,6 +116,19 @@ int8_t capextend_read_lsb_buttons ( capextend_t *ctx )
     return lsb_byte;
 }
 
+uint16_t capextend_read_buttons ( capextend_t *ctx )
+{
+    uint16_t buttons;
+     uint8_t lsb_byte;
+    
+    buttons = capextend_read_msb_buttons( ctx );
+    buttons <<= 8;
+    buttons |= capextend_read_lsb_buttons( ctx );
+    buttons &= 0x0FFF;
+    
+    return buttons;
+}
+
 void capextend_reset ( capextend_t *ctx )
 {
     capextend_set_rst_low( ctx );

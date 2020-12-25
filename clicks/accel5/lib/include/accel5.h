@@ -23,7 +23,7 @@
  * \file
  * \brief This file contains API for Accel 5 Click driver.
  * \addtogroup accel5 Accel 5 Click Driver
- * @{
+ * \{
  */
 // ----------------------------------------------------------------------------
 
@@ -45,8 +45,10 @@
  * \{
  */
 #define ACCEL5_MAP_MIKROBUS( cfg, mikrobus ) \
-  cfg.scl  = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
-  cfg.sda  = MIKROBUS( mikrobus, MIKROBUS_SDA ) 
+  cfg.scl = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
+  cfg.sda = MIKROBUS( mikrobus, MIKROBUS_SDA ); \
+  cfg.it2 = MIKROBUS( mikrobus, MIKROBUS_PWM ); \
+  cfg.it1 = MIKROBUS( mikrobus, MIKROBUS_INT );
 
 /** \} */
 
@@ -54,10 +56,8 @@
  * \defgroup error_code Error Code
  * \{
  */
-#define ACCEL5_RETVAL  uint8_t
-
-#define ACCEL5_OK           0x00
-#define ACCEL5_INIT_ERROR   0xFF
+#define ACCEL5_OK            0
+#define ACCEL5_INIT_ERROR  (-1)
 /** \} */
 
 /**
@@ -548,7 +548,7 @@
 /** \} */
 
 /**
- * \defgroup self_test    Self Test   
+ * \defgroup self_test    Self Test
  * \{
  */
 #define ACCEL5_TEST_SIGN_ENABLE                    0x08
@@ -595,15 +595,12 @@
  */
 typedef struct
 {
-    // Output pins 
-
-    digital_out_t cs;
 
     // Input pins 
 
     digital_in_t it2;
     digital_in_t it1;
-    
+
     // Modules 
 
     i2c_master_t i2c;
@@ -623,10 +620,9 @@ typedef struct
 
     pin_name_t scl;
     pin_name_t sda;
-    
+
     // Additional gpio pins 
 
-    pin_name_t cs;
     pin_name_t it2;
     pin_name_t it1;
 
@@ -645,7 +641,7 @@ typedef struct
  * \defgroup public_function Public function
  * \{
  */
- 
+
 #ifdef __cplusplus
 extern "C"{
 #endif
@@ -665,7 +661,7 @@ void accel5_cfg_setup ( accel5_cfg_t *cfg );
  * 
  * @description This function initializes all necessary pins and peripherals used for this click.
  */
-ACCEL5_RETVAL accel5_init ( accel5_t *ctx, accel5_cfg_t *cfg );
+err_t accel5_init ( accel5_t *ctx, accel5_cfg_t *cfg );
 
 /**
  * @brief Generic write function.
@@ -675,7 +671,7 @@ ACCEL5_RETVAL accel5_init ( accel5_t *ctx, accel5_cfg_t *cfg );
  * @param len          Number of the bytes in data buf.
  * @description This function writes data to the desired register.
  */
-void accel5_generic_write ( accel5_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+err_t accel5_generic_write ( accel5_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
 
 /**
  * @brief Generic read function.
@@ -685,7 +681,7 @@ void accel5_generic_write ( accel5_t *ctx, uint8_t reg, uint8_t *data_buf, uint8
  * @param len          Number of the bytes to be read
  * @description This function reads data from the desired register.
  */
-void accel5_generic_read ( accel5_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+err_t accel5_generic_read ( accel5_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
 
 /**
  * @brief Click Default Configuration function..
@@ -766,9 +762,9 @@ void accel5_soft_reset ( accel5_t *ctx );
 #ifdef __cplusplus
 }
 #endif
-#endif  // _ACCEL5_H_
+#endif  // ACCEL5_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
-/*! @} */
-// ------------------------------------------------------------------------- END
+/** \} */ // End click Driver group
+
+// ------------------------------------------------------------------------ END

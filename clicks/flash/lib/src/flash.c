@@ -64,8 +64,7 @@
  * @description Generic SPI transfer function, for sending and receiving data
  * packages.
  */
-static void
-flash_spi_master_transfer( flash_t *ctx,
+static void flash_spi_master_transfer( flash_t *ctx,
                            uint8_t *wr_buf, uint16_t wr_len, uint8_t *rd_buf, uint16_t rd_len );
 
 /**
@@ -76,8 +75,7 @@ flash_spi_master_transfer( flash_t *ctx,
  *
  * @description Generic function for sending commands to Flash click.
  */
-static void
-flash_send_cmd( flash_t *ctx, uint8_t command );
+static void flash_send_cmd( flash_t *ctx, uint8_t command );
 
 /**
  * @brief Generic Memory Erase function.
@@ -93,13 +91,11 @@ flash_send_cmd( flash_t *ctx, uint8_t command );
  * @description Generic function to select the part of the memory content which
  * will be erased.
  */
-static flash_err_t
-flash_erase( flash_t *ctx, uint8_t erase_cmd, uint32_t mem_addr );
+static flash_err_t flash_erase( flash_t *ctx, uint8_t erase_cmd, uint32_t mem_addr );
 
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
-void
-flash_cfg_setup( flash_cfg_t *cfg )
+void flash_cfg_setup( flash_cfg_t *cfg )
 {
     cfg->sdo = HAL_PIN_NC;
     cfg->sdi = HAL_PIN_NC;
@@ -113,8 +109,7 @@ flash_cfg_setup( flash_cfg_t *cfg )
     cfg->spi_speed = 100000; 
 }
 
-flash_err_t
-flash_init( flash_t *ctx, flash_cfg_t *cfg )
+flash_err_t flash_init( flash_t *ctx, flash_cfg_t *cfg )
 {
     spi_master_config_t spi_cfg;
 
@@ -146,16 +141,14 @@ flash_init( flash_t *ctx, flash_cfg_t *cfg )
     return FLASH_OK;
 }
 
-void
-flash_default_cfg( flash_t *ctx )
+void flash_default_cfg( flash_t *ctx )
 {
     flash_set_hold_pin( ctx, FLASH_PIN_STATE_HIGH );
     flash_set_write_protect_pin( ctx, FLASH_PIN_STATE_HIGH );
     flash_write_status( ctx, FLASH_STATUS_SET_OTP_LOCK );
 }
 
-void
-flash_reset( flash_t *ctx )
+void flash_reset( flash_t *ctx )
 {
     flash_send_cmd( ctx, FLASH_CMD_RSTEN );
     Delay_10ms( );
@@ -163,20 +156,17 @@ flash_reset( flash_t *ctx )
     Delay_1sec( );
 }
 
-void
-flash_write_enable( flash_t *ctx )
+void flash_write_enable( flash_t *ctx )
 {
     flash_send_cmd( ctx, FLASH_CMD_WREN );
 }
 
-void
-flash_write_disable( flash_t *ctx )
+void flash_write_disable( flash_t *ctx )
 {
     flash_send_cmd( ctx, FLASH_CMD_WDIS );
 }
 
-void
-flash_write_status( flash_t *ctx, uint8_t data_tx )
+void flash_write_status( flash_t *ctx, uint8_t data_tx )
 {
     uint8_t data_in[ 2 ];
 
@@ -191,8 +181,7 @@ flash_write_status( flash_t *ctx, uint8_t data_tx )
     spi_master_deselect_device( ctx->chip_select );  
 }
 
-uint8_t
-flash_read_status( flash_t *ctx )
+uint8_t flash_read_status( flash_t *ctx )
 {
     uint8_t data_in;
     uint8_t data_out[ 1 ];
@@ -205,8 +194,7 @@ flash_read_status( flash_t *ctx )
     return data_out[ 0 ];
 }
 
-void
-flash_read_id( flash_t *ctx, uint8_t *manufact_id, uint16_t *dev_id )
+void flash_read_id( flash_t *ctx, uint8_t *manufact_id, uint16_t *dev_id )
 {
     uint8_t data_in;
     uint8_t data_out[ 3 ];
@@ -222,8 +210,7 @@ flash_read_id( flash_t *ctx, uint8_t *manufact_id, uint16_t *dev_id )
     *dev_id     |= data_out[ 2 ];
 }
 
-flash_err_t
-flash_write_byte( flash_t *ctx, uint32_t mem_addr, uint8_t data_tx )
+flash_err_t flash_write_byte( flash_t *ctx, uint32_t mem_addr, uint8_t data_tx )
 {
     uint8_t data_in[ 5 ];
 
@@ -248,8 +235,7 @@ flash_write_byte( flash_t *ctx, uint32_t mem_addr, uint8_t data_tx )
     return FLASH_OK;
 }
 
-flash_err_t
-flash_read_byte( flash_t *ctx, uint32_t mem_addr, uint8_t *data_rx )
+flash_err_t flash_read_byte( flash_t *ctx, uint32_t mem_addr, uint8_t *data_rx )
 {
     uint8_t data_in[ 4 ];
     uint8_t data_out[ 1 ];
@@ -272,8 +258,7 @@ flash_read_byte( flash_t *ctx, uint32_t mem_addr, uint8_t *data_rx )
     return FLASH_OK;
 }
 
-flash_err_t
-flash_write_page( flash_t *ctx, uint32_t mem_addr, uint8_t *data_tx,
+flash_err_t flash_write_page( flash_t *ctx, uint32_t mem_addr, uint8_t *data_tx,
                   uint16_t n_data )
 {
     uint8_t data_in[ 260 ];
@@ -311,8 +296,7 @@ flash_write_page( flash_t *ctx, uint32_t mem_addr, uint8_t *data_tx,
     return FLASH_OK;
 }
 
-flash_err_t
-flash_read_page( flash_t *ctx, uint32_t mem_addr, uint8_t *data_rx,
+flash_err_t flash_read_page( flash_t *ctx, uint32_t mem_addr, uint8_t *data_rx,
                  uint16_t n_data )
 {
     uint8_t data_in[ 4 ];
@@ -340,48 +324,41 @@ flash_read_page( flash_t *ctx, uint32_t mem_addr, uint8_t *data_rx,
     return FLASH_OK;
 }
 
-void
-flash_erase_chip( flash_t *ctx )
+void flash_erase_chip( flash_t *ctx )
 {
     flash_write_enable( ctx );
     Delay_10ms( );
     flash_send_cmd( ctx, FLASH_CMD_ERASE );
 }
 
-flash_err_t
-flash_erase_block( flash_t *ctx, uint32_t mem_addr )
+flash_err_t flash_erase_block( flash_t *ctx, uint32_t mem_addr )
 {
     return flash_erase( ctx, FLASH_CMD_BER, mem_addr );
 }
 
-flash_err_t
-flash_erase_half_block( flash_t *ctx, uint32_t mem_addr )
+flash_err_t flash_erase_half_block( flash_t *ctx, uint32_t mem_addr )
 {
     return flash_erase( ctx, FLASH_CMD_HBER, mem_addr );
 }
 
-flash_err_t
-flash_erase_sector( flash_t *ctx, uint32_t mem_addr )
+flash_err_t flash_erase_sector( flash_t *ctx, uint32_t mem_addr )
 {
     return flash_erase( ctx, FLASH_CMD_SER, mem_addr );
 }
 
-void
-flash_set_write_protect_pin( flash_t *ctx, flash_pin_state_t state )
+void flash_set_write_protect_pin( flash_t *ctx, flash_pin_state_t state )
 {
     digital_out_write( &ctx->wp, state );
 }
 
-void
-flash_set_hold_pin( flash_t *ctx, flash_pin_state_t state )
+void flash_set_hold_pin( flash_t *ctx, flash_pin_state_t state )
 {
     digital_out_write( &ctx->hld, state );
 }
 
 // ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
 
-static void
-flash_spi_master_transfer( flash_t *ctx,
+static void flash_spi_master_transfer( flash_t *ctx,
                            uint8_t *wr_buf, uint16_t wr_len, uint8_t *rd_buf, uint16_t rd_len )
 {
     spi_master_select_device( ctx->chip_select );
@@ -389,8 +366,7 @@ flash_spi_master_transfer( flash_t *ctx,
     spi_master_deselect_device( ctx->chip_select );  
 }
 
-static void
-flash_send_cmd( flash_t *ctx, uint8_t command )
+static void flash_send_cmd( flash_t *ctx, uint8_t command )
 {
     uint8_t data_in;
 
@@ -401,8 +377,7 @@ flash_send_cmd( flash_t *ctx, uint8_t command )
     spi_master_deselect_device( ctx->chip_select );  
 }
 
-static flash_err_t
-flash_erase( flash_t *ctx, uint8_t erase_cmd, uint32_t mem_addr )
+static flash_err_t flash_erase( flash_t *ctx, uint8_t erase_cmd, uint32_t mem_addr )
 {
     uint8_t data_in[ 4 ];
 

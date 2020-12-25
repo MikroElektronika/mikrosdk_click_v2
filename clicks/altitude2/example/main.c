@@ -17,7 +17,8 @@
  * Gets temperature data in celsius value and pressure data in mbar value.
  * Gets the calculated altitude value in meters which depends on the temperature and pressure measurements.
  * Logs results on USBUART and repeats operation every 300 ms.
- * 
+ * ## NOTE
+ * Altitude is mented for correct outside readings. It's calculated from pressure and temperature readings.
  * 
  * \author MikroE Team
  *
@@ -45,9 +46,8 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    LOG_MAP_USB_UART( log_cfg );
-    log_cfg.baud = 9600;
     log_cfg.level = LOG_LEVEL_DEBUG;
+    LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -58,7 +58,6 @@ void application_init ( void )
     altitude2_init( &altitude2, &cfg );
     Delay_ms( 500 );
     altitude2_reset( &altitude2 );
-    // Delay_ms( 500 );
     
     altitude2_set_ratio ( &altitude2, ALTITUDE2_RATIO_2048, ALTITUDE2_RATIO_2048 );
     log_printf( &logger, "Altitude 2 is initialized\r\n" );
@@ -69,11 +68,12 @@ void application_task ( void )
 {
     altitude2_read_data( &altitude2, &temperature, &pressure, &altitude );
 
-    log_printf( &logger, "Temperature is: %.2f Celsius\r\n", temperature );
-    log_printf( &logger, "Pressure is: %.2f mbar\r\n", pressure );
-    log_printf( &logger, "Altitude is: %.2f m\r\n", altitude );
+    log_printf( &logger, "Temperature: %.2f Celsius\r\n", temperature );
+    log_printf( &logger, "Pressure: %.2f mbar\r\n", pressure );
+    log_printf( &logger, "Altitude: %.2f m\r\n", altitude );
+    log_printf( &logger, "---------------------------------------\r\n\r\n" );
 
-    Delay_ms( 300 );
+    Delay_ms( 1000 );
 }
 
 void main ( void )

@@ -27,5 +27,7 @@
     "short_description": "MCP73871 click is a fully integrated solution for system power delivery and Li-Po/Li-Ion battery charge management.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.3"
 }
+
+

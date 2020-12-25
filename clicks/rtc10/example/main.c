@@ -78,7 +78,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -92,8 +92,8 @@ void application_init ( void )
     
     sec_flag = 0xFF;
 
-    log_printf( &logger, "-------------------:%d \r\n" );
-    log_printf( &logger, "  Hardware  Reset  :%d \r\n" );
+    log_printf( &logger, "------------------- \r\n" );
+    log_printf( &logger, "  Hardware  Reset   \r\n" );
     rtc10_hw_reset(  &rtc10 );
     Delay_ms( 1000 );
 
@@ -105,11 +105,11 @@ void application_init ( void )
     rtc10_set_date(  &rtc10,  6, 31, 8, 2019 );
     Delay_ms( 100 );
 
-    log_printf( &logger, "------------------- :%d \r\n" );
-    log_printf( &logger, "  Enable Counting :%d \r\n" );
-    log_printf( &logger, "-------------------:%d \r\n" );
-    log_printf( &logger, "     Start RTC     :%d \r\n" );
-    log_printf( &logger, "-------------------:%d \r\n" );
+    log_printf( &logger, "-------------------  \r\n" );
+    log_printf( &logger, "  Enable Counting  \r\n" );
+    log_printf( &logger, "------------------- \r\n" );
+    log_printf( &logger, "     Start RTC      \r\n" );
+    log_printf( &logger, "------------------- \r\n" );
     rtc10_enable_counting(  &rtc10 );
     Delay_ms( 100 );
 }
@@ -117,14 +117,14 @@ void application_init ( void )
 void application_task ( void )
 {
     uint8_t i;
-    uint8_t time_hours;
-    uint8_t time_minutes;
-    uint8_t time_seconds;
+    uint8_t time_hours = 0;
+    uint8_t time_minutes = 0;
+    uint8_t time_seconds = 0;
 
-    uint8_t day_of_the_week;
-    uint8_t date_day;
-    uint8_t date_month;
-    uint8_t date_year;
+    uint8_t day_of_the_week = 0;
+    uint8_t date_day = 0;
+    uint8_t date_month = 0;
+    uint8_t date_year = 0;
     
     float temperature;
     
@@ -136,9 +136,9 @@ void application_task ( void )
 
     if ( sec_flag !=  time_seconds )
     {
-        log_printf( &logger, " \r\n\n Time: %d:%d:%d  Date: %d.%d.20%d. ", \
-        time_hours, time_minutes, time_seconds, date_day, date_month, date_year );
+        log_printf( &logger, " \r\n\n Time: %u:%u:%u  ", (uint16_t)time_hours, (uint16_t)time_minutes, (uint16_t)time_seconds );
         
+        log_printf( &logger, "Date: %u. %u. 20%u. ", (uint16_t)date_day, (uint16_t)date_month, (uint16_t)date_year );
         display_day_of_the_week( day_of_the_week );
         
         if ( time_seconds == 0 )

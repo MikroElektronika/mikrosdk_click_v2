@@ -8,23 +8,16 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes UART serial interface, UART interrupt,
- * and executes a module reset. Allows user to enter command mode.
+ * Initializes driver and wake-up module.
  * 
  * ## Application Task  
- * This function has two segments.
- * First segment allows user to enter a commands, for using function from driver
- * ( those with AT command ). Second ( default ) segment allows user to comunicate with 
- * other bluetooth devices - by sending data to the ANNA-B112 module.
+ * Reads the received data.
  * 
  * ## Additional Function
- * - ble8_process ( ) - The general process of collecting presponce that sends a module.
- * - get_rsp - Catches the response bytes and sets flag when the response was ready.
- * - log_rsp - Allows user to see and check the response on the serial terminal.
+ * - ble8_process ( ) - Logs all received messages on UART, and sends the certain message back to the connected device.
  * 
  * *note:* 
  * <pre>
- * For using AT commands swich to COMMAND_MODE
  * The all possible commands, module configuration and specification can be found in the 
  * related documents:
  *     [1] ANNA-B112 System Integration Manual, document number UBX-18009821 
@@ -43,52 +36,72 @@
 #include "ble8.h"
 #include "string.h"
 
-#define PROCESS_COUNTER             10
-#define PROCESS_RX_BUFFER_SIZE      500
-
-#define RSP_TERM_CHAR               10
-#define CMD_TERM_CHAR               13
+#define PROCESS_COUNTER 5
+#define PROCESS_RX_BUFFER_SIZE 100
+#define PROCESS_PARSER_BUFFER_SIZE 100
 
 // ------------------------------------------------------------------ VARIABLES
 
-//#define COMMAND_MODE
-
 static ble8_t ble8;
 static log_t logger;
+static uint8_t data_mode = 0;
 
-uint8_t response[ 256 ];
-uint8_t rsp_idx;
-uint8_t rsp_check;
-uint8_t log_check;
-uint8_t start_timer;
-uint16_t timer_cnt;
-uint8_t prev_data;
+static char current_parser_buf[ PROCESS_PARSER_BUFFER_SIZE ];
 
 // ------------------------------------------------------- ADDITIONAL FUNCTIONS
 
-static void ble8_process ( void )
+static int8_t ble8_process ( void )
 {
-    int16_t rsp_size;
+    int32_t rsp_size;
+    uint16_t rsp_cnt = 0;
     
     char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
     uint8_t check_buf_cnt;
     uint8_t process_cnt = PROCESS_COUNTER;
     
+    // Clear current buffer
+    memset( current_parser_buf, 0, PROCESS_PARSER_BUFFER_SIZE ); 
     
     while( process_cnt != 0 )
     {
-        rsp_size = ble8_generic_read( &ble8, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
+        rsp_size = ble8_generic_read( &ble8, uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
 
-        if ( rsp_size != -1 )
+        if ( rsp_size > 0 )
         {  
             // Validation of the received data
             for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
             {
-                ble8_uart_isr( &ble8, uart_rx_buffer[ check_buf_cnt ] ) ;
+                if ( uart_rx_buffer[ check_buf_cnt ] == 0 ) 
+                {
+                    uart_rx_buffer[ check_buf_cnt ] = 13;
+                }
+            }
+            // Storages data in current buffer
+            rsp_cnt += rsp_size;
+            if ( rsp_cnt < PROCESS_PARSER_BUFFER_SIZE )
+            {
+                strncat( current_parser_buf, uart_rx_buffer, rsp_size );
             }
             
             // Clear RX buffer
             memset( uart_rx_buffer, 0, PROCESS_RX_BUFFER_SIZE );
+            
+            if (strstr(current_parser_buf, "ERROR")) {
+               return -1;
+            }
+               
+            if (strstr(current_parser_buf, "OK")) {
+               log_printf( &logger, "%s", current_parser_buf );
+               Delay_100ms( );
+               return 1;
+            }
+               
+            if ( data_mode == 1) {
+                log_printf( &logger, "%s", current_parser_buf );
+                uart_write( &ble8.uart, "Hello", 5 );
+                Delay_ms( 2000 );
+                uart_write( &ble8.uart, "BLE8", 4 );
+            }
         } 
         else 
         {
@@ -98,61 +111,8 @@ static void ble8_process ( void )
             Delay_ms( 100 );
         }
     }
-}
-
-void get_rsp ( uint8_t *rsp_dat )
-{
-    response[ rsp_idx ] = *rsp_dat;
-
-    if ( ( response[ rsp_idx ] == RSP_TERM_CHAR) || ( rsp_idx == 150 ) )
-    {
-        start_timer = 0;
-        log_check = BLE8_RSP_READY;
-    }
-    else
-    {
-        start_timer = 1;
-    }
     
-    rsp_idx++;
-}
-
-void log_rsp ( )
-{
-    if ( ( log_check == BLE8_RSP_READY ) || ( timer_cnt == 20000 ) )
-    {
-        char log_ptr[ 256 ];
-        uint8_t rx_cnt = 0;
-        uint8_t rx_idx = 0;
-        
-        timer_cnt = 0;
-        start_timer = 0;
-
-        while ( rx_idx < rsp_idx )
-        {
-            if ( ( prev_data == CMD_TERM_CHAR ) && ( response[ rx_idx ] != RSP_TERM_CHAR ) && ( response[ rx_idx ] != CMD_TERM_CHAR ) )
-            {
-                log_ptr[ rx_cnt ] = RSP_TERM_CHAR;
-                rx_cnt++;
-                log_ptr[ rx_cnt ] = response[ rx_idx ];
-            }
-            else
-            {
-                log_ptr[ rx_cnt ] = response[ rx_idx ];
-            }
-
-            prev_data = response[ rx_idx ];
-            rx_idx++;
-            rx_cnt++;
-        }
-
-        rsp_idx = 0;
-        rsp_check = 1;
-        log_check = BLE8_RSP_NOT_READY;
-        
-        log_ptr[ rx_cnt ] = BLE8_END_BUFF;
-        log_printf( &logger, "%s", log_ptr );
-    }
+    return 0;
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -166,7 +126,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -176,47 +136,54 @@ void application_init ( void )
     BLE8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ble8_init( &ble8, &cfg );
 
-    ble8_response_handler_set( &ble8, &get_rsp );
-    Delay_ms( 200 );
-
     ble8_reset( &ble8 );
-    Delay_ms( 2000 );
+    Delay_1sec( );
+    
+    log_printf( &logger, "Configuring the module...\n" );
+    Delay_1sec( );
+    
+    ble8_set_dsr_pin( &ble8, 1 );
+    Delay_ms( 20 );
 
-    rsp_idx = 0;
-    rsp_check = 1;
-    start_timer = 0;
-    timer_cnt = 0;
-    prev_data = 0;
-    log_check = BLE8_RSP_NOT_READY;
-
-    #ifdef COMMAND_MODE
-        log_printf( &logger, "COMMAND MODE ENTERING...\r\n" );
-
-        ble8_set_dsr_pin( &ble8, 1 );
-        Delay_ms( 20 );
-        ble8_set_dsr_pin( &ble8, 0 );
-        Delay_ms( 20 );
-
-        ble8_set_echo_cmd( &ble8, BLE8_ECHO_OFF );
-        ble8_process( );
-        log_rsp( );
-        Delay_ms( 100 );
-    #else
-        log_printf( &logger, "DEFAULT MODE ENTERING...\r\n" );
-    #endif
+    do {
+        ble8_set_echo_cmd( &ble8, 1 );
+        Delay_100ms( );
+    }
+    while( ble8_process( ) != 1 );
+    
+    do {
+        ble8_set_local_name_cmd( &ble8, "BLE 8 Click" );
+        Delay_100ms( );
+    }
+    while( ble8_process( ) != 1 );
+    
+    do {
+        ble8_connectability_en_cmd( &ble8, BLE8_GAP_CONNECTABLE_MODE );
+        Delay_100ms( );
+    }
+    while( ble8_process( ) != 1 );
+    
+    do {
+        ble8_discoverability_en_cmd( &ble8, BLE8_GAP_GENERAL_DISCOVERABLE_MODE );
+        Delay_100ms( );
+    }
+    while( ble8_process( ) != 1 );
+    
+    do {
+        ble8_enter_mode_cmd( &ble8, BLE8_DATA_MODE );
+        Delay_100ms( );
+    }
+    while( ble8_process( ) != 1 );
+    
+    ble8_set_dsr_pin( &ble8, 0 );
+    Delay_ms( 20 );
+    data_mode = 1;
+    log_printf( &logger, "The module has been configured.\n" );
 }
 
 void application_task ( void )
 {
     ble8_process( );
-
-    if ( start_timer == 1 )
-    {
-        timer_cnt++;
-    }
-
-    log_rsp( );
-    Delay_us( 1 );
 }
 
 void main ( void )

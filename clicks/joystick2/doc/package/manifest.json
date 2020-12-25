@@ -27,6 +27,7 @@
     "short_description": "Joystick 2 Click is a smart navigation key concept based on SKRHABE010 by Alps, a 4-direction joystick switch with Center-push Function.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.2"
+    "version": "2.0.0.3"
 }
+
 

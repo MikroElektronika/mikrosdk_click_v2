@@ -54,38 +54,7 @@
   cfg.an_pin  = MIKROBUS( mikrobus, MIKROBUS_AN )
 /** \} */
 
-/**
- * \defgroup error_code Error Code
- * \{
- */
-#define ANALOGKEY_RETVAL  uint8_t
-
-#define ANALOGKEY_OK           0x00
-#define ANALOGKEY_INIT_ERROR   0xFF
-/** \} */
-
-/**
- * \defgroup buttons Buttons
- * \{
- */
-#define ANALOGKEY_TOUCH_KEY_1            0x01
-#define ANALOGKEY_TOUCH_KEY_2            0x02
-#define ANALOGKEY_TOUCH_KEY_3            0x03
-#define ANALOGKEY_TOUCH_KEY_4            0x04
-#define ANALOGKEY_TOUCH_KEY_5            0x05
-#define ANALOGKEY_TOUCH_KEY_6            0x06
-#define ANALOGKEY_NO_TOUCH                0x00
-/** \} */
-
-/**
-* \defgroup resolution Resolution
-* \{
-*/
-#define ANALOGKEY_ADC_RESOLUTION_10bit   0x01
-#define ANALOGKEY_ADC_RESOLUTION_12bit   0x02
-/** \} */
-
-/** \} */ // End group macro 
+/** \} */ // End group macro
 // --------------------------------------------------------------- PUBLIC TYPES
 /**
  * \defgroup type Types
@@ -93,21 +62,28 @@
  */
 
 /**
- * @brief Analog data type 
+ * @brief Click touch key definition.
  */
-typedef  uint16_t analogkey_data_t;
+typedef enum
+{
+    ANALOGKEY_TOUCH_KEY_NONE,
+    ANALOGKEY_TOUCH_KEY_1,
+    ANALOGKEY_TOUCH_KEY_2,
+    ANALOGKEY_TOUCH_KEY_3,
+    ANALOGKEY_TOUCH_KEY_4,
+    ANALOGKEY_TOUCH_KEY_5,
+    ANALOGKEY_TOUCH_KEY_6
+
+} analogkey_key_id_t;
 
 /**
  * @brief Click ctx object definition.
  */
 typedef struct
 {
-    // Modules 
-
-    analog_in_t adc;
-    float key_flag;
-    uint16_t max_adc;
-    uint8_t prec;
+    analog_in_t  adc;   /**< ADC module. */
+    float        vref;  /**< ADC reference voltage. */
+    float        vdiv;  /**< Voltage divider between ADC ref voltage and voltage selection on the click board. */
 
 } analogkey_t;
 
@@ -116,29 +92,25 @@ typedef struct
  */
 typedef struct
 {
-    // Communication gpio pins 
+    // Communication gpio pins
 
-    pin_name_t an_pin;
+    pin_name_t  an_pin;                     /**< AN pin descriptor. */
 
-    // static variable 
+    // Static variable
 
-    analog_in_resolution_t  resolution;   // Resolution
-    float vref;   // VRef  
-
-    float dev_key_flag;
-    uint16_t dev_max_adc;
-    uint8_t dev_prec;
+    analog_in_resolution_t  resolution;     /**< ADC resolution. */
+    float  vref;                            /**< ADC reference voltage. */
+    float  vsel;                            /**< Click voltage selection. */
 
 } analogkey_cfg_t;
 
 /** \} */ // End types group
 // ----------------------------------------------- PUBLIC FUNCTION DECLARATIONS
-
 /**
  * \defgroup public_function Public function
  * \{
  */
- 
+
 #ifdef __cplusplus
 extern "C"{
 #endif
@@ -158,46 +130,46 @@ void analogkey_cfg_setup ( analogkey_cfg_t *cfg );
  *
  * @param ctx Click object.
  * @param cfg Click configuration structure.
- * 
+ * @return 0 - Ok, (-1) - Error.
  * @description This function initializes all necessary pins and peripherals used for this click.
  */
-ANALOGKEY_RETVAL analogkey_init ( analogkey_t *ctx, analogkey_cfg_t *cfg );
+err_t analogkey_init ( analogkey_t *ctx, analogkey_cfg_t *cfg );
 
 /**
  * @brief Generic read function.
  *
- * @param ctx        Click object.
- * @return ADC data
+ * @param ctx Click object.
+ * @return ADC data result.
  *
  * @description This function read ADC data.
  */
-analogkey_data_t analogkey_generic_read ( analogkey_t *ctx );
+uint16_t analogkey_generic_read ( analogkey_t *ctx );
 
 /**
- * @brief Detects which button is pressed
+ * @brief Generic read function.
  *
- * @param ctx        Click object.
- * @param adc_value     ADC value
- * @return which button is pressed
+ * @param ctx Click object.
+ * @return ADC data result.
+ *
+ * @description This function read ADC data.
+ */
+float analogkey_read_voltage ( analogkey_t *ctx );
+
+/**
+ * @brief Detects which button is pressed.
+ *
+ * @param ctx Click object.
+ * @param adc_value ADC value.
+ * @return Which button is pressed.
  *
  * @description This function returns which button is pressed.
  */
-uint8_t analogkey_get_key ( analogkey_t* ctx, uint16_t adc_value );
-
-/**
- * @brief set ADC resolution
- *
- * @param ctx        Click object.
- * @param resolution     ADC resolution (10bit or 12 bit)
- *
- * @description This function sets the resolution.
- */
-void analogkey_set_resolution ( analogkey_t* ctx, uint8_t resolution );
+analogkey_key_id_t analogkey_get_key ( analogkey_t* ctx, float an_value );
 
 #ifdef __cplusplus
 }
 #endif
-#endif  // _ANALOGKEY_H_
+#endif  // ANALOGKEY_H
 
 /** \} */ // End public_function group
 /// \}    // End click Driver group  

@@ -259,7 +259,7 @@ void gnss2_generic_write ( gnss2_t *ctx, char *data_buf, uint16_t len );
  * @param max_len The maximum length of data that can be read.
  * @return Number of reads data.
  */
-int16_t gnss2_generic_read ( gnss2_t *ctx, char *data_buf, uint16_t max_len );
+int32_t gnss2_generic_read ( gnss2_t *ctx, char *data_buf, uint16_t max_len );
 
 /**
  * @brief Generic parser function.

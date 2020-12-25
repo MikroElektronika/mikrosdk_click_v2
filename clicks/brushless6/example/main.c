@@ -8,10 +8,14 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Intializes PWM module but also and Brushless click by executing intialization prodecure.
+ * This function initializes and configures the logger and the click board.
  * 
  * ## Application Task  
- * Periodicaly changes the motor speed using PWM module but also log current setting to UART.
+ * This function drives the motor in both directions increasing and decreasing the speed of the motor.
+ * 
+ * ## NOTE
+ * The maximal PWM Clock frequency for this click board is 500 Hz. 
+ * So, the user will need to decrease the MCU's main clock frequency in MCU Settings in order to get up-to 500 Hz PWM clock frequency.
  * 
  * 
  * \author MikroE Team
@@ -28,30 +32,69 @@
 static brushless6_t brushless6;
 static log_t logger;
 
-static float duty_cycle = 0.5;
+static float duty_cycle;
 
 // ------------------------------------------------------- ADDITIONAL FUNCTIONS
 
 void brushless6_calibration( )
 {
     brushless6_pwm_start( &brushless6 );
-    brushless6_set_duty_cycle( &brushless6, BRUSHLESS6_MAX_PWM_DC );
-    Delay_ms( 2000 );
 
     brushless6_set_duty_cycle( &brushless6, BRUSHLESS6_MIN_PWM_DC );
-    Delay_ms( 2000 );
+    Delay_1sec( );
+    Delay_1sec( );
 }
 
 void brushless6_setings( )
 {
-    brushless6_set_duty_cycle( &brushless6, BRUSHLESS6_INIT );
-    Delay_ms( 2000 );
+    brushless6_set_duty_cycle( &brushless6, BRUSHLESS6_INIT_DC );
+    Delay_1sec( );
+    Delay_1sec( );
 }
 
-void brushless6_set_motor( const uint16_t setting )
+static void clockwise ( )
 {
-    brushless6_set_duty_cycle( &brushless6, setting );
-    Delay_ms( 100 );
+    log_printf( &logger, "\r\n------------------------------\r\n" );
+    log_printf( &logger, " * Clockwise *\r\n" );
+    Delay_1sec( );
+    
+    for( duty_cycle = BRUSHLESS6_INIT_DC; duty_cycle > BRUSHLESS6_1MS_DC; duty_cycle -= BRUSHLESS6_PERIOD )
+    {
+        brushless6_set_duty_cycle( &brushless6, duty_cycle );
+        log_printf( &logger, "  > " );
+        Delay_1sec( );
+    }
+        
+    log_printf( &logger, "\r\n" );
+    
+    for( duty_cycle = BRUSHLESS6_1MS_DC; duty_cycle < BRUSHLESS6_INIT_DC; duty_cycle += BRUSHLESS6_PERIOD )
+    {
+        brushless6_set_duty_cycle( &brushless6, duty_cycle );
+        log_printf( &logger, "  < " );
+        Delay_1sec( );
+    }
+}
+
+static void counter_clockwise ( )
+{
+    log_printf( &logger, "\r\n------------------------------\r\n" );
+    log_printf( &logger, " * Counter clockwise *\r\n" );
+    Delay_1sec( );
+
+    for( duty_cycle = BRUSHLESS6_INIT_DC; duty_cycle < BRUSHLESS6_2MS_DC - BRUSHLESS6_PERIOD; duty_cycle += BRUSHLESS6_PERIOD )
+    {
+        brushless6_set_duty_cycle( &brushless6, duty_cycle );
+        log_printf( &logger, "  > " );
+        Delay_1sec( );
+    }
+    log_printf( &logger, "\r\n" );
+    
+    for( duty_cycle = BRUSHLESS6_2MS_DC - BRUSHLESS6_PERIOD; duty_cycle > BRUSHLESS6_INIT_DC; duty_cycle -= BRUSHLESS6_PERIOD )
+    {
+        brushless6_set_duty_cycle( &brushless6, duty_cycle );
+        log_printf( &logger, "  < " );
+        Delay_1sec( );
+    }
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -74,37 +117,14 @@ void application_init ( void )
     brushless6_cfg_setup( &cfg );
     BRUSHLESS6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     brushless6_init( &brushless6, &cfg );
-
-    brushless6_pwm_start( &brushless6 );
-
+    brushless6_calibration( );
+    brushless6_setings( );
 }
 
 void application_task ( void )
 {
-    //  Task implementation.
-    
-    if ( duty_cycle > brushless6.pwm_period )
-    {
-        duty_cycle = 100;
-    }
-    
-    brushless6_set_duty_cycle ( &brushless6, duty_cycle );
-    duty_cycle += 50;
-    Delay_100ms();
-
-    brushless6_set_motor( BRUSHLESS6_SPEED1 );
-    log_printf( &logger, " Speed 1 \r\n" );
-    log_printf( &logger, " 13 \r\n" );
-    log_printf( &logger, " 10 \r\n" );
-    Delay_ms( 1000 );
-  
-
-    brushless6_set_motor( BRUSHLESS6_CCW );
-    log_printf( &logger, "Direction change \r\n" );
-    log_printf( &logger, "13 \r\n" );
-    log_printf( &logger, "10 \r\n" );
-    Delay_ms( 1000 );
-
+    clockwise( );
+    counter_clockwise( );
 }
 
 void main ( void )

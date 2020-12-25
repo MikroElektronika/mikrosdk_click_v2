@@ -29,6 +29,7 @@
 
 #include "gnss3.h"
 #include "string.h"
+#include "generic_pointer.h"
 
 // ------------------------------------------------------------- PRIVATE MACROS 
 
@@ -92,11 +93,8 @@ GNSS3_RETVAL gnss3_init ( gnss3_t *ctx, gnss3_cfg_t *cfg )
 
     // Output pins 
 
-     digital_out_init( &ctx->rst, cfg->rst );
-
-    // Input pins
-
-     digital_in_init( &ctx->int_pin, cfg->int_pin );
+    digital_out_init( &ctx->rst, cfg->rst );
+    digital_out_init( &ctx->int_pin, cfg->int_pin );
 
     return GNSS3_OK;
 
@@ -104,6 +102,7 @@ GNSS3_RETVAL gnss3_init ( gnss3_t *ctx, gnss3_cfg_t *cfg )
 
 void gnss3_module_wakeup ( gnss3_t *ctx )
 {
+    digital_out_write( &ctx->int_pin, 1 );
     digital_out_write( &ctx->rst, 1 );
     Delay_100ms( );
     digital_out_write( &ctx->rst, 0 );
@@ -127,7 +126,7 @@ void gnss3_generic_write ( gnss3_t *ctx, char *data_buf, uint16_t len )
     uart_write( &ctx->uart, data_buf, len );
 }
 
-int16_t gnss3_generic_read ( gnss3_t *ctx, char *data_buf, uint16_t max_len )
+int32_t gnss3_generic_read ( gnss3_t *ctx, char *data_buf, uint16_t max_len )
 {
     return uart_read( &ctx->uart, data_buf, max_len );
 }
@@ -138,13 +137,13 @@ gnss3_error_t gnss3_generic_parser
     uint8_t element, char *parser_buf 
 )
 {    
-    char *start_rsp;
-    char *end_rsp;
+    char * __generic start_rsp;
+    char * __generic end_rsp;
     char rsp_buf[ 200 ];
     
     uint8_t element_cnt = 0;
-    char *element_start;
-    char *element_end;
+    char * __generic element_start;
+    char * __generic element_end;
     
     char current_cmd_buf[ 10 ];
     

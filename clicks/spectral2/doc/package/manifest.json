@@ -27,6 +27,7 @@
     "short_description": "Spectral 2 click is a multispectral color sensing device, which uses the state-of-the-art sensor IC for a very accurate color sensing.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+
 

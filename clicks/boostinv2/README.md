@@ -77,8 +77,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -102,28 +103,39 @@ void application_init ( void )
 void application_task ( void )
 {
      // Positive output voltage 
-    
+     log_printf( &logger, "VOUT = 6V\r\n");
      boostinv2_set_positive_voltage( &boostinv2, BOOSTINV2_POS_VOUT_6V );
      Delay_ms( 3000 );
+     log_printf( &logger, "VOUT = 8V\r\n");
      boostinv2_set_positive_voltage( &boostinv2, BOOSTINV2_POS_VOUT_8V );
      Delay_ms( 3000 );
+     log_printf( &logger, "VOUT = 12V\r\n");
      boostinv2_set_positive_voltage( &boostinv2, BOOSTINV2_POS_VOUT_12V );
      Delay_ms( 3000 );
+     log_printf( &logger, "VOUT = 14V\r\n");
      boostinv2_set_positive_voltage( &boostinv2, BOOSTINV2_POS_VOUT_14V );
      Delay_ms( 3000 );
+     log_printf( &logger, "VOUT = 12V\r\n");
      boostinv2_set_positive_voltage( &boostinv2, BOOSTINV2_POS_VOUT_12V );
      Delay_ms( 3000 );
+     log_printf( &logger, "VOUT = 8V\r\n");
      boostinv2_set_positive_voltage( &boostinv2, BOOSTINV2_POS_VOUT_8V );
+     Delay_ms( 3000 );
      
      // Negative output voltage 
      
+     log_printf( &logger, "VOUT = -5V\r\n");
      boostinv2_set_negative_voltage( &boostinv2, BOOSTINV2_NEG_VOUT_5V );
      Delay_ms( 3000 );
+     log_printf( &logger, "VOUT = -7V\r\n");
      boostinv2_set_negative_voltage( &boostinv2, BOOSTINV2_NEG_VOUT_7V );
      Delay_ms( 3000 );
+     log_printf( &logger, "VOUT = -13V\r\n");
      boostinv2_set_negative_voltage( &boostinv2, BOOSTINV2_NEG_VOUT_13V );
      Delay_ms( 3000 );
+     log_printf( &logger, "VOUT = -7V\r\n");
      boostinv2_set_negative_voltage( &boostinv2, BOOSTINV2_NEG_VOUT_7V );
+     Delay_ms( 3000 );
 }
 ```
 

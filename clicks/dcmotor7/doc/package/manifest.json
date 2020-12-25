@@ -27,6 +27,7 @@
     "short_description": "DC MOTOR 7 click is a dual brushed DC motor driving Click board™, featuring the advanced PWM chopper-type integrated DC motor driver, labeled as TB67H400AFTG.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.3"
 }
+
 

@@ -38,7 +38,7 @@ void application_init ( void )
     //  Logger initialization.
 
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
@@ -49,11 +49,11 @@ void application_init ( void )
     HDC1000_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     hdc1000_init( &hdc1000, &cfg );
     
+    log_printf( &logger, "-- Configurating --\r\n" );
     hdc1000_default_cfg( &hdc1000 );
+    Delay_ms ( 100 );
     log_printf( &logger, "-- Start measurement --\r\n" );
     log_printf( &logger, "-----------------------\r\n" );
-    Delay_ms ( 1000 );
-    
 }
 
 void application_task ( void )
@@ -62,14 +62,14 @@ void application_task ( void )
     float temperature;
     
     temperature = hdc1000_get_temperature_data( &hdc1000 );
-    log_printf( &logger, " Temperature : %0.2f C\r\n", temperature );
+    log_printf( &logger, " Temperature : %0.2f degC\r\n", temperature );
     
     humidity = hdc1000_get_humidity_data( &hdc1000 );
     log_printf( &logger, " Humidity    : %0.2f %%\r\n", humidity );
 
     log_printf( &logger, "-----------------------\r\n" );
 
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
 }
 
 void main ( void )

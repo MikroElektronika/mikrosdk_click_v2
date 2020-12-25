@@ -27,5 +27,6 @@
     "short_description": "RadioStation click is a unique click board™ that can be used to broadcast the music via the FM radio band. It features the Si4713-B30 from Silicon Labs, the best in class integrated FM broadcast stereo transmitter, which operates in the frequency range of 76MHz to 108MHz. It can also broadcast RDS/RDBS data. The click board™ can be equipped with a small FM antenna, which is used to extend the broadcasting range.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

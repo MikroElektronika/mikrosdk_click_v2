@@ -56,17 +56,11 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    //  Task implementation.
-    
-    if ( duty_cycle > leddriver5.pwm_period )
+    for ( duty_cycle = 0.1; duty_cycle <= 1.0; duty_cycle += 0.1 )
     {
-        duty_cycle = 1000;
+        leddriver5_set_duty_cycle ( &leddriver5, duty_cycle );
+        Delay_ms( 500 );
     }
-    
-    leddriver5_set_duty_cycle ( &leddriver5, duty_cycle );
-    duty_cycle += 250;
-    Delay_100ms();
-
 }
 
 void main ( void )

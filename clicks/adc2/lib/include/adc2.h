@@ -64,9 +64,14 @@
  */
 #define ADC2_RETVAL  uint8_t
 
-#define ADC2_OK           0x00
-#define ADC2_INIT_ERROR   0xFF
+#define ADC2_OK                 0x00
+#define ADC2_INIT_ERROR         0xFF
 /** \} */
+
+
+#define ADC2_VCC_3v3            3300.0
+#define ADC2_VCC_5V             5000.0
+#define ADC2_VCC_4v096          4096.0
 
 /**
  * \defgroup flags Flags
@@ -95,6 +100,10 @@ typedef struct
 
     spi_master_t spi;
     pin_name_t chip_select;
+    
+    float vref;
+    uint8_t ovf_h;
+    uint8_t ovf_l;
 
 } adc2_t;
 
@@ -150,61 +159,25 @@ void adc2_cfg_setup ( adc2_cfg_t *cfg );
 ADC2_RETVAL adc2_init ( adc2_t *ctx, adc2_cfg_t *cfg );
 
 /**
- * @brief Generic transfer function.
- *
+ * @brief Read adc data function
+ * 
  * @param ctx          Click object.
- * @param wr_buf       Write data buffer
- * @param wr_len       Number of byte in write data buffer
- * @param rd_buf       Read data buffer
- * @param rd_len       Number of byte in read data buffer
+ * 
+ * @returns Reading 3 bytes from Click board and returning it in one variable
  *
- * @description Generic SPI transfer, for sending and receiving packages
+ * @description Function is used to read 3 bytes from ADC convertor.
  */
-void adc2_generic_transfer ( adc2_t *ctx, uint8_t *wr_buf, uint16_t wr_len, uint8_t *rd_buf, uint16_t rd_len );
+float adc2_read_adc_data ( adc2_t *ctx );
 
 /**
- * @brief Data read function
- *
- * @param ctx          Click object.
+ * @brief Setting reference voltage.
  * 
- * @returns result 24-bit value that represents readings from ADC convertor
- *
- * @description Function is used to read data from ADC convertor.
+ * @param ctx          Click object.
+ * @param vref         Reference mV.
+ * 
+ * @description Function is used to set reference voltage.
  */
-uint32_t adc2_read_4bytes ( adc2_t *ctx );
-
-/**
- * @brief Read ADC value function
- * 
- * @param ctx          Click object.
- * 
- * @returns result 22-bit data that represents readings from ADC convertor
- *
- * @description Function is used to read specific data from ADC convertor.
- */
-uint32_t adc2_adc_value_read ( adc2_t *ctx );
-
-/**
- * @brief Check over low bit function
- *
- * @param ctx          Click object.
- * 
- * @returns result 1-bit that represents over low bit
- *
- * @description Function is used to check overflow low state.
-**/
-uint8_t adc2_check_over_low ( adc2_t *ctx );
-
-/**
- * @brief Check over high bit function
- *
- * @param ctx          Click object.
- * 
- * @returns  result 1-bit that represents over high bit
- *
- * @description Function is used to check overflow high state.
-**/
-uint8_t adc2_check_over_high ( adc2_t *ctx );
+void adc2_set_vref ( adc2_t *ctx, float vref );
 
 #ifdef __cplusplus
 }

@@ -27,6 +27,7 @@
     "short_description": "PWM click is a simple solution for controlling 16 PWM outputs through a single I2C interface. You can use it to control anything from a simple LED strip to a complex robot with a multitude of moving parts.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+
 

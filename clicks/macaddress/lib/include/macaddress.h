@@ -80,7 +80,7 @@
  * \{
  */
 #define MACADDRESS_END_ADDR                                        0x80
-#define MACADDRESS_MAC_ADDR                                        0xFA
+#define MACADDRESS_MAC_ADDR                                        0xF8
 /** \} */
 
 /**
@@ -188,21 +188,6 @@ void macaddress_generic_read ( macaddress_t *ctx, uint8_t reg, uint8_t *data_buf
  * with EUI-64� node identity on MAC Address Click board.
  */
 void macaddress_get_mac ( macaddress_t *ctx, uint8_t *read_mac );
-
-/**
- * @brief Generic read the byte of data function
- *
- * @param ctx                Click object.
- * @param  reg_address       Register address
- *
- * @return
- * 8-bit data to be reading
- *
- * @description Function performs a data reading from the
- * target 8-bit register address of 24AA025E64 2K I2C Serial EEPROMs
- * with EUI-64� node identity on MAC Address Click board.
- */
-uint8_t macaddress_read_byte ( macaddress_t *ctx, uint8_t reg_address );
 
 #ifdef __cplusplus
 }

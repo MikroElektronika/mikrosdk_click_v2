@@ -76,8 +76,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -87,7 +88,7 @@ void application_init ( void )
     BAROMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     barometer_init( &barometer, &cfg );
 
-    barometer_default_cfg ( &barometer );
+    barometer_default_cfg( &barometer );
 
     // Check sensor id
     if ( barometer_check_id( &barometer ) != BAROMETER_DEVICE_ID )
@@ -122,13 +123,11 @@ void application_task ( void )
     pressure = barometer_get_pressure( &barometer );
     Delay_100ms( );
 
-    log_printf( &logger, " Temperature : %.2f \r\n", temperature_c );
+    log_printf( &logger, " Temperature : %.2f\r\n", temperature_c );
 
     log_printf( &logger, " Pressure    : %.2f\r\n", pressure );
     log_printf( &logger, "-------------------------------- \r\n" );
 
-    Delay_1sec( );
-    Delay_1sec( );
     Delay_1sec( );
 }
 

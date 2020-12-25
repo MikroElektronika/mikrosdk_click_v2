@@ -25,7 +25,12 @@
     "name": "mikroe.click.ble3",
     "product_link": "https://www.mikroe.com/ble-3-click",
     "short_description": "BLE 3 click is a quick and simple solution if you want to add Bluetooth Low Energy to your project. It features the NINA-B1 Bluetooth 4.2 module, from u-blox. This click also comes with an integrated antenna mounted on the PCB.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.0"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        1946
+    ],
+    "version": "2.0.0.3"
 }
+

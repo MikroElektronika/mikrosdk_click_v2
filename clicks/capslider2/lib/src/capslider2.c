@@ -77,8 +77,8 @@ CAPSLIDER2_RETVAL capslider2_init ( capslider2_t *ctx, capslider2_cfg_t *cfg )
     // Example: Sets pin [high, low] 
 
      digital_out_high( &ctx-> clr );
-	
-	// Example: Get pin state 
+    
+    // Example: Get pin state 
 
 
     return CAPSLIDER2_OK;

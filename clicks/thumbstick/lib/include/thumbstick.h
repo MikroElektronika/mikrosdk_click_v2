@@ -63,24 +63,51 @@
  */
 #define THUMBSTICK_RETVAL  uint8_t
 
-#define THUMBSTICK_OK           0x00
-#define THUMBSTICK_INIT_ERROR   0xFF
+#define THUMBSTICK_OK                       0x00
+#define THUMBSTICK_INIT_ERROR               0xFF
+#define THUMBSTICK_FUNCTION_ERROR           0xEE
 /** \} */
 
 /**
- * \defgroup registers Registers
+ * \defgroup reading_type Reading adc type
  * \{
  */
-#define THUMBSTICK_START_SINGLE_ENDED_BIT 0x04
-#define THUMBSTICK_CHANNEL_V              0x00
-#define THUMBSTICK_CHANNEL_H              0x40
-#define THUMBSTICK_POSITION_START         0x00
-#define THUMBSTICK_POSITION_TOP           0x01
-#define THUMBSTICK_POSITION_RIGHT         0x02
-#define THUMBSTICK_CHANNEL_BOTTOM         0x03
-#define THUMBSTICK_CHANNEL_LEFT           0x04
-#define THUMBSTICK_BUTTON_INACTIVE        0x00
-#define THUMBSTICK_BUTTON_ACTIVE          0x01
+#define THUMBSTICK_START_SINGLE_CONV        0x06
+#define THUMBSTICK_START_DIFF_CONV          0x04
+/** \} */
+
+/**
+ * \defgroup axis_macro Axis macro for thumbstick
+ * \{
+ */
+#define THUMBSTICK_VERTICAL                 0x00
+#define THUMBSTICK_HORIZONTAL               0x60
+/** \} */
+
+/**
+ * \defgroup postion_state Postion state of thumbstick axes
+ * \{
+ */
+#define THUMBSTICK_POSITION_DEFAULT         0x01
+#define THUMBSTICK_POSITION_TOP             0x02
+#define THUMBSTICK_POSITION_RIGHT           0x03
+#define THUMBSTICK_POSITION_BOTTOM          0x04
+#define THUMBSTICK_POSITION_LEFT            0x05
+/** \} */
+
+/**
+ * \defgroup button_state Button state
+ * \{
+ */
+#define THUMBSTICK_BUTTON_INACTIVE          0x00
+#define THUMBSTICK_BUTTON_ACTIVE            0x01
+/** \} */
+
+/**
+ * \defgroup default_sensitivity Default sensitivity data
+ * \{
+ */
+#define POSTION_SENS_DEFAULT    500
 /** \} */
 
 /**
@@ -134,10 +161,20 @@ typedef struct
     // static variable 
 
     uint32_t spi_speed;
-    uint8_t spi_mode;
+    spi_master_mode_t spi_mode;
     spi_master_chip_select_polarity_t cs_polarity;
 
 } thumbstick_cfg_t;
+
+/**
+ * @brief Click configuration structure definition.
+ */
+typedef struct
+{
+    uint8_t vertical;
+    uint8_t horizontal;
+
+} thumbstick_position_t;
 
 /** \} */ // End types group
 
@@ -193,37 +230,60 @@ void thumbstick_generic_transfer
 /**
  * @brief Generic read 2 byte of data function
  *
- * @param read_channel
+ * @param type
  * <pre>
  * - Channel:
- * - 1 : first channel;
- * - 2 : secound channel;
+ * - 0x06 : single channel adc;
+ * - 0x04 : difference channell adc;
+ *</pre>
+ * @param channel
+ * <pre>
+ * - Channel:
+ * - 0x00 : horizontal channel;
+ * - 0x60 : vertical channel;
  *</pre>
  *
- * @return 14-bit read ADC data
+ * @return 12-bit read ADC data
  *
- * @description Function read 14-bit ADC data from selected channel
+ * @description Function read 12-bit ADC data from selected channel
  * from MCP3204 chip of the Thumbstick Click.
  */
-uint16_t thumbstick_read_data( thumbstick_t *ctx, uint8_t channel );
+uint16_t thumbstick_read_rawadc ( thumbstick_t *ctx, uint8_t type, uint8_t channel );
 
 /**
- * @brief Get thumbstick position function
+ * @brief Get thumbstick position by axis function
  *
+ * @param axis
+ * <pre>
+ * - Channel:
+ * - 0x00 : horizontal axis;
+ * - 0x60 : vertical axis;
+ *</pre>
+ * 
  * @return 8-bit data of position
  * <pre>
- * - 0 : Start           Position;
- * - 1 : Top             Position;
- * - 2 : Right           Position;
- * - 3 : Bottom          Position;
- * - 4 : Left            Position;
+ * - 1 : Default         Position;
+ * - 2 : Top             Position;
+ * - 3 : Right           Position;
+ * - 4 : Bottom          Position;
+ * - 5 : Left            Position;
+ * - 0xEE: Error         Parameter;
  *</pre>
  *
  * @description Function get position of thumbstick,
- * return position state value from 0 to 5 that calculeted
+ * return position state value from 1 to 5 that calculeted
  * by the value read ADC value from the MCP3204 chip.
  */
-uint8_t thumbstick_get_position( thumbstick_t *ctx );
+uint8_t thumbstick_get_single_axis_postion ( thumbstick_t *ctx, uint8_t axis );
+
+/**
+ * @brief Get thumbstick position by axis function
+ *
+ * @param postion   Potion data struct that stores data of axis thumbstic postion
+ *
+ * @description Function get position of thumbstick.
+ */
+void thumbstick_get_position ( thumbstick_t *ctx, thumbstick_position_t *position );
 
 /**
  * @brief Get state of thumbstick button function
@@ -238,6 +298,23 @@ uint8_t thumbstick_get_position( thumbstick_t *ctx );
  * by read state of INT pin from MCP3204 chip of the Thumbstick Click.
  */
 uint8_t thumbstick_button_state( thumbstick_t *ctx );
+
+
+/**
+ * @brief Set thumbstick sensitivity
+ *
+ * @param sensitivity   variable that offsets changeing state of thumbstick sensing state
+ * 
+ * @return status
+ * <pre>
+ * - 0x00: OK               
+ * - 0xEE: Error
+ *</pre>
+ *
+ * @description Function for setting sensitivity that state of thumbstick changes states.
+ */
+uint8_t thumbstick_set_sensitivity ( uint16_t sensitivity );
+
 
 #ifdef __cplusplus
 }

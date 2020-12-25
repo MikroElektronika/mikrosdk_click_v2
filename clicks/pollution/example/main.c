@@ -44,7 +44,7 @@ void application_init ( void )
     //  Logger initialization.
 
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
@@ -74,15 +74,15 @@ void application_task ( void )
     pollution_data_t tmp;
     
     tmp = pollution_generic_read( &pollution );
-    log_printf( &logger, " ADC value            : %d ppm\r\n", tmp );
+    log_printf( &logger, " ADC value            : %u ppm\r\n", tmp );
     Delay_ms( 1000 );
     
     value_volt = pollution_measure_load_voltage( &pollution );
-    log_printf( &logger, " Load voltage         : %0.2f V\r\n", value_volt );
+    log_printf( &logger, " Load voltage         : %.2f V\r\n", value_volt );
     Delay_ms( 1000 );
     
     value_res = pollution_get_corrected_resistance( &pollution );
-    log_printf( &logger, " Corrected resistance : %0.2f kOhm\r\n", value_res );
+    log_printf( &logger, " Corrected resistance : %.2f kOhm\r\n", value_res );
     log_printf( &logger, "-------------------------------------\r\n" );
     Delay_ms( 1000 );
 }

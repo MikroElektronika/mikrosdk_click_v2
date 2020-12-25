@@ -27,5 +27,7 @@
     "short_description": "Current click is an add-on board used for measurement of electric current. It features INA196 current shunt monitor, MCP3201 12-bit ADC, MAX6106 voltage reference as well as two screw terminals.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.2"
 }
+
+

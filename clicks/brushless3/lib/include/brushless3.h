@@ -38,6 +38,7 @@
 #include "drv_digital_out.h"
 #include "drv_digital_in.h"
 #include "drv_i2c_master.h"
+#include "drv_pwm.h"
 
 
 // -------------------------------------------------------------- PUBLIC MACROS 
@@ -69,6 +70,8 @@
 /** \} */
 
 #define BRUSHLESS3_I2C_ADDRESS                             0x52
+#define BRUSHLESS3_MAX_SPEED                                0x1FF
+#define BRUSHLESS3_DEF_FREQ                                  25000
 
 /**
  * \defgroup motor_speed_and_control_reg  Motor speed and control device registers   
@@ -151,7 +154,6 @@ typedef struct
     // Output pins 
 
     digital_out_t dir;
-    digital_out_t pwm;
 
     // Input pins 
 
@@ -160,9 +162,11 @@ typedef struct
     // Modules 
 
     i2c_master_t i2c;
+    pwm_t pwm;
 
     // ctx variable 
 
+    uint32_t pwm_freq;
     uint8_t slave_address;
 
 } brushless3_t;
@@ -176,15 +180,16 @@ typedef struct
 
     pin_name_t scl;
     pin_name_t sda;
+    pin_name_t pwm;
     
     // Additional gpio pins 
 
     pin_name_t dir;
-    pin_name_t pwm;
     pin_name_t int_pin;
 
     // static variable 
 
+    uint32_t         dev_pwm_freq;
     uint32_t i2c_speed;
     uint8_t i2c_address;
 
@@ -463,7 +468,19 @@ float brushless3_get_speed ( brushless3_t *ctx );
  * two target Speed Ctrl 1 and 2 register address of DRV10983 sensorless BLDC motor driver
  * on Brushless 3 click board.
  */
-void brushless3_set_speed ( brushless3_t *ctx, uint8_t motor_speed_hz );
+void brushless3_set_speed ( brushless3_t *ctx, uint16_t motor_speed_hz );
+
+/**
+ * @brief Set speed PWM function
+ *
+ * @param ctx              Click object.
+ * @param motor_speed_hz   Float value of motor speed ( Hz );
+ *
+ * @description Function set speed by write the desired value to the
+ * two target Speed Ctrl 1 and 2 register address of DRV10983 sensorless BLDC motor driver
+ * on Brushless 3 click board.
+ */
+void brushless3_set_speedPWM ( brushless3_t *ctx, uint16_t motor_speed_hz );
 
 /**
  * @brief Get motor period function
@@ -533,6 +550,34 @@ void brushless3_reverse_direction ( brushless3_t *ctx );
  */
 uint8_t brushless3_get_interrupt_status ( brushless3_t *ctx );
 
+/**
+ * @brief Generic sets PWM duty cycle.
+ *
+ * 
+ * @param ctx          Click object.
+ * @param duty_cycle   Duty cycle.
+ *
+ * @description This function sets the PWM duty cycle.
+ */
+void brushless3_set_duty_cycle ( brushless3_t *ctx, float duty_cycle );
+
+/**
+ * @brief Stop PWM module.
+ *
+ * @param ctx Click object.
+ *
+ * @description This function stops PWM module.
+ */
+void brushless3_pwm_stop ( brushless3_t *ctx );
+
+/**
+ * @brief Start PWM module.
+ *
+ * @param ctx  Click object.
+ *
+ * @description This function starts PWM module.
+ */
+void brushless3_pwm_start ( brushless3_t *ctx );
 
 #ifdef __cplusplus
 }

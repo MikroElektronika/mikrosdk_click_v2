@@ -25,8 +25,12 @@
     "name": "mikroe.click.oneshot",
     "product_link": "https://www.mikroe.com/one-shot-click",
     "short_description": "One Shot Click is equipped with the monostable multivibrator (also known as a “one-shot” pulse generator) with a programmable pulse width of 1μs to 33.6 seconds. The used LTC6993-2 is part of the TimerBlox® family of versatile silicon timing devices, from Analog Devices.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2959
+    ],
+    "version": "2.0.0.2"
 }
 

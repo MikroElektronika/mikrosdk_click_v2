@@ -21,6 +21,9 @@
  * Results are being sent to the Usart Terminal where you can track their changes.
  * All data logs write on usb uart changes for every 3 sec.
  * 
+ * ## NOTE
+ * Additional pull-up on I2C lines might be required.
+ * 
  * 
  * \author MikroE Team
  *
@@ -73,7 +76,6 @@ void application_init ( void )
 
 void application_task ( void )
 {
-
     c10dof_read_accel( &c10dof, &accelX, &accelY, &accelZ );
     Delay_ms( 10 );
     c10dof_read_gyro( &c10dof, &gyroX,  &gyroY, &gyroZ );
@@ -100,6 +102,7 @@ void application_task ( void )
     log_printf( &logger, "Mag Z   : %d  |  ", magZ);
     log_printf( &logger, "Press.  : %.2f mbar \r\n", pressure);
 
+    log_printf( &logger, "--------------------------------------------------------------------\r\n", pressure);
     Delay_ms( 500 );
 }
 

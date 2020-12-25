@@ -40,7 +40,7 @@ void application_init ( )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -54,37 +54,26 @@ void application_init ( )
 
 void application_task ( )
 {
-    uint8_t msb;
-    uint8_t lsb;
+    uint16_t buttons = 0;
 
-    msb = capextend_read_msb_buttons( &capextend );
-    lsb = capextend_read_lsb_buttons( &capextend );
+    buttons = capextend_read_buttons( &capextend );
 
-    // LSB
 
-    log_printf( &logger, " * ---------LSB--------- * \r\n" );
-    log_printf( &logger, " * | %d", ( lsb & 0x80 ) >> 7 );
-    log_printf( &logger, " %d", ( lsb & 0x40 ) >> 6 );
-    log_printf( &logger, " %d", ( lsb & 0x20 ) >> 5 );
-    log_printf( &logger, " %d |",( lsb & 0x10 ) >> 4 );
-    log_printf( &logger, " %d", ( lsb & 0x08 ) >> 3 );
-    log_printf( &logger, " %d", ( lsb & 0x04 ) >> 2 );
-    log_printf( &logger, " %d", ( lsb & 0x02 ) >> 1 );
-    log_printf( &logger, " %d | * \r\n", lsb & 0x01 );
+    log_printf( &logger, " * ---------BUTTTONS--------- * \r\n" );
+    
+    for ( uint8_t counter = 0; counter < 12; counter++ )
+    {
+        if ( ( buttons >> ( 11 - counter ) ) & 1 )
+        {
+            log_printf( &logger, " * " );
+        }
+        else
+        {
+            log_printf( &logger, " o " );
+        }
+    }
 
-    // MSB
-
-    log_printf( &logger, " * ---------MSB--------- * \r\n" );
-    log_printf( &logger, " * | %d", ( msb & 0x80 ) >> 7 );
-    log_printf( &logger, " %d", ( msb & 0x40 ) >> 6 );
-    log_printf( &logger, " %d", ( msb & 0x20 ) >> 5 );
-    log_printf( &logger, " %d |",( msb & 0x10 ) >> 4 );
-    log_printf( &logger, " %d", ( msb & 0x08 ) >> 3 );
-    log_printf( &logger, " %d", ( msb & 0x04 ) >> 2 );
-    log_printf( &logger, " %d", ( msb & 0x02 ) >> 1 );
-    log_printf( &logger, " %d | * \r\n", msb & 0x01 );
-
-    log_printf( &logger, " * ----------------------- * \r\n\r\n" );
+    log_printf( &logger, "\r\n * ------------------------------- * \r\n\r\n" );
     Delay_ms( 500 );
 }
 

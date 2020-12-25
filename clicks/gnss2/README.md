@@ -52,7 +52,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 > gnss2_error_t gnss2_generic_parser ( char *rsp,  uint8_t command, uint8_t element, char *parser_buf );
  
 - Generic read function.
-> uint16_t gnss2_generic_read ( gnss2_t *ctx, char *data_buf, uint16_t max_len );
+> int32_t gnss2_generic_read ( gnss2_t *ctx, char *data_buf, uint16_t max_len );
 
 - Wake-up module.
 > void gnss2_module_wakeup ( gnss2_t *ctx );

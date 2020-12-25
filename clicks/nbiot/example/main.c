@@ -30,31 +30,14 @@
 
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 500
-#define PROCESS_PARSER_BUFFER_SIZE 1000
+#define PROCESS_PARSER_BUFFER_SIZE 500
 
 // ------------------------------------------------------------------ VARIABLES
 
 #define DEMO_APP_RECEIVER
-//#define DEMO_APP_TRANSMITER
 
 static nbiot_t nbiot;
 static log_t logger;
-
-// Sensor/Actuator reference
-#define ACTUAROT_SW_REF   "G2C3G_TEST_AB"
-#define ACTUAROT_STR_REF  "G2C3G_TEST_AS"
-#define ACTUAROT_CNT_REF  "G2C3G_TEST_AC"
-#define SENSOR_REF        "G2C3G_TEST_S"
-
-// Operator settings
-#define OPERATOR_APN      "vipmobile"
-#define OPERATOR_USERNAME "vipmobile"
-#define OPERATOR_PASSWORD "vipmobile"
-
-// Broker(device) settings
-#define DEVICE_KEY      "bc8mtmm1ztqjol75"
-#define DEVICE_PASSWORD "65c64823-78e9-4f78-b154-ac0c6632d466"
-
 static char data_buf[ 20 ] = "12.2";
 static char current_parser_buf[ PROCESS_PARSER_BUFFER_SIZE ];
 static uint8_t send_data_cnt = 0; 

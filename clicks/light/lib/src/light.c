@@ -74,45 +74,10 @@ LIGHT_RETVAL light_init ( light_t *ctx, light_cfg_t *cfg )
     spi_master_set_speed( &ctx->spi, cfg->spi_speed );
     spi_master_set_mode( &ctx->spi, cfg->spi_mode );
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
-
-    // Output pins 
-
-
-    // Input pins
-
-    
-    // Example: Sets pin [high, low] 
-
-     digital_out_high( &ctx->cs );
-	
-	// Example: Get pin state 
+    spi_master_deselect_device( ctx->chip_select );   
 
     return LIGHT_OK;
 
-}
-
-void light_generic_transfer 
-( 
-    light_t *ctx, 
-    uint8_t *wr_buf, 
-    uint16_t wr_len, 
-    uint8_t *rd_buf, 
-    uint16_t rd_len 
-)
-{
-    spi_master_select_device( ctx->chip_select );
-    spi_master_write_then_read( &ctx->spi, wr_buf, wr_len, rd_buf, rd_len );
-    spi_master_deselect_device( ctx->chip_select );   
-}
-
-void light_write_data ( light_t *ctx, uint8_t address, uint8_t write_command )
-{
-    uint8_t write_reg[ 2 ];
-
-    write_reg[ 0 ] = address;
-    write_reg[ 1 ] = write_command;
-
-    light_generic_transfer( ctx, write_reg, 2, 0, 0 ); 
 }
 
 uint16_t light_read_data ( light_t *ctx )
@@ -123,7 +88,9 @@ uint16_t light_read_data ( light_t *ctx )
 
     write_reg[ 0 ] = LIGHT_COMMAND_REG;
 
-    light_generic_transfer( ctx, &write_reg, 1, read_reg, 2 ); 
+    spi_master_select_device( ctx->chip_select );
+    spi_master_read( &ctx->spi, read_reg, 2 );
+    spi_master_deselect_device( ctx->chip_select );   
     
     result = 0x00;
     result = read_reg[ 0 ] & 0x0F;
@@ -138,8 +105,8 @@ uint8_t light_calculate_percent ( light_t *ctx, uint16_t light_value )
     uint8_t result;
     float value;
 
-    value=light_value;
-    value /= 4096;
+    value= (float)light_value;
+    value /= 4096.0;
     value *= 100;
 
     result = ( uint8_t ) value;

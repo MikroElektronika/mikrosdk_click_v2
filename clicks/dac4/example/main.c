@@ -183,20 +183,24 @@ void dac4_set_output ( uint8_t channel_set, uint8_t output_set )
 void dac4_channel_report ( )
 {
     log_printf( &logger, "-----> Channel A \r\n" );
-    dac4_log_report( 0 );
     dac4_set_output( DAC4_CHANNEL_A, 1 );
+    dac4_log_report( 0 );
+    Delay_ms( 3000 );
     
     log_printf( &logger, "-----> Channel B \r\n" );
-    dac4_log_report( 1 );
     dac4_set_output( DAC4_CHANNEL_B, 2 );
+    dac4_log_report( 1 );
+    Delay_ms( 3000 );
     
     log_printf( &logger, "-----> Channel C \r\n" );
-    dac4_log_report( 2 );
     dac4_set_output( DAC4_CHANNEL_C, 3 );
+    dac4_log_report( 2 );
+    Delay_ms( 3000 );
     
     log_printf( &logger, "-----> Channel D \r\n" );
-    dac4_log_report( 3 );
     dac4_set_output( DAC4_CHANNEL_D, 4 );
+    dac4_log_report( 3 );
+    Delay_ms( 3000 );
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -235,8 +239,6 @@ void application_init ( void )
 void application_task ( void )
 {
     dac4_channel_report( );
-
-    Delay_ms( 3000 );
 }
 
 void main ( void )

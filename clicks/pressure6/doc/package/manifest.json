@@ -27,6 +27,9 @@
     "short_description": "Pressure 6 Click features a simple, yet highly accurate and reliable pressure sensor labeled as BM1386GLV, produced by ROHM. This sensor is a piezo-resistive pressure sensor with internal thermal compensation, which greatly simplifies the pressure reading.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.2"
+    "version": "2.0.0.6"
 }
+
+
+
 

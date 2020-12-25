@@ -27,5 +27,7 @@
     "short_description": "SRAM Click presents additional 1Mbit SRAM memory that can be added to device.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.2"
 }
+
+

@@ -30,12 +30,12 @@
 static force2_t force2;
 static log_t logger;
 
-uint32_t force2_val_conv ( uint32_t x, uint32_t in_max,
-                           uint32_t out_min, uint32_t out_max )
+int32_t force2_val_conv 
+( int32_t x, int32_t in_max, int32_t out_min, int32_t out_max )
 {
-    uint32_t in_min = 0;
+    int32_t in_min = 0;
 
-    return ( x - in_min ) * ( out_max - out_min ) / ( in_max - in_min ) + out_min;
+    return x * ( out_max - out_min ) / in_max + out_min;
 }
 
 void application_init ( void )
@@ -46,7 +46,7 @@ void application_init ( void )
     //  Logger initialization.
 
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
@@ -57,25 +57,25 @@ void application_init ( void )
     FORCE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     force2_init( &force2, &cfg );
 
-
     log_printf( &logger, "--------------------\r\n" );
     log_printf( &logger, "    Force 2 click   \r\n" );
     log_printf( &logger, "--------------------\r\n" );
-
-    Delay_ms( 100 );
+    Delay_ms( 500 );
 }
 
 void application_task ( void )
 {
-    uint32_t disp_val;
+    int16_t disp_val;
     force2_data_t tmp;
     
     //  Task implementation.
     
     tmp = force2_generic_read ( &force2 );
-    disp_val = force2_val_conv( tmp, 4095, 15, 0 );
+    disp_val = force2_val_conv( ( int32_t )tmp, 1024, 15, 0 );
 
+    log_printf( &logger, "ADC: %u\r\n", tmp );
     log_printf( &logger, "Force: %d N\r\n", disp_val );
+    log_printf( &logger, "-----------------------------\r\n" );
     Delay_ms( 500 );
 }
 

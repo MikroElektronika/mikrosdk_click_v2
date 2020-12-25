@@ -14,6 +14,10 @@
  * This is an example that shows the most important
  * functions that Qi Receiver click has, it mesures current voltage, amperage and frequency.
  * 
+ * ## Note
+ * Click board needs to have external power ( Qi transmitter ) in order to work, otherwise I2C communication won't work.
+ * If Qi Transmitter is removed from click board it will stop working, if you return it you should restart your application.
+ * You will now when Click board has power and is ready to start application when red STAT led is on, when it's off I2C communication won't work.
  * 
  * \author MikroE Team
  *
@@ -40,7 +44,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -68,7 +72,7 @@ void application_task ( void )
     log_printf( &logger, "Voltage : %.2f V\r\n", voltage );
 
     current = qireceiver_read_current( &qireceiver );
-    log_printf( &logger, "Current : %.2f A\r\n", current );
+    log_printf( &logger, "Current : %.2f mA\r\n", current );
 
     freq = qireceiver_read_freq( &qireceiver );
     log_printf( &logger, "Frequency : %.2f Hz\r\n", freq );

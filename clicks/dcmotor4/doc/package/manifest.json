@@ -25,7 +25,12 @@
     "name": "mikroe.click.dcmotor4",
     "product_link": "https://www.mikroe.com/dc-motor-4-click",
     "short_description": "This library contains API for DcMotor4 Click driver.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.0"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2090
+    ],
+    "version": "2.0.0.2"
 }
+

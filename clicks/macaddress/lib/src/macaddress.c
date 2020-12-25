@@ -60,6 +60,7 @@ MACADDRESS_RETVAL macaddress_init ( macaddress_t *ctx, macaddress_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+//     i2c_master_set_timeout( &ctx->i2c, 0 );
 
     return MACADDRESS_OK;
 }
@@ -71,9 +72,10 @@ void macaddress_generic_write ( macaddress_t *ctx, uint8_t reg, uint8_t *data_bu
     
     tx_buf[ 0 ] = reg;
     
-    for ( cnt = 1; cnt <= len; cnt++ )
+    for ( cnt = 0; cnt <= len; cnt++ )
     {
-        tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
+        tx_buf[ cnt + 1 ] = *data_buf; 
+        data_buf++;
     }
     
     i2c_master_write( &ctx->i2c, tx_buf, len + 1 );  
@@ -86,16 +88,7 @@ void macaddress_generic_read ( macaddress_t *ctx, uint8_t reg, uint8_t *data_buf
 
 void macaddress_get_mac ( macaddress_t *ctx, uint8_t *read_mac )
 {
-    macaddress_generic_read( ctx, MACADDRESS_MAC_ADDR, read_mac, 6 );
-}
-
-uint8_t macaddress_read_byte ( macaddress_t *ctx, uint8_t reg_address )
-{
-    uint8_t read_data;
-
-    macaddress_generic_read( ctx, reg_address, &read_data, 1 );
-
-    return read_data;
+    macaddress_generic_read( ctx, 0xF8, read_mac, 8 );
 }
 
 // ------------------------------------------------------------------------- END

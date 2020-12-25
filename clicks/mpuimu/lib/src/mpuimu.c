@@ -76,11 +76,11 @@ void mpuimu_cfg_setup ( mpuimu_cfg_t *cfg )
     cfg->i2c_speed   = I2C_MASTER_SPEED_STANDARD; 
     cfg->i2c_address = MPUIMU_I2C_ADDR_1;
 
-    cfg->spi_speed   = 100000; 
+    cfg->spi_speed   = 1000000; 
     cfg->spi_mode    = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 
-    cfg->sel         = MPUIMU_MASTER_SPI;
+    cfg->sel         = MPUIMU_MASTER_I2C;
 }
 
 MPUIMU_RETVAL mpuimu_init ( mpuimu_t *ctx, mpuimu_cfg_t *cfg )
@@ -106,6 +106,7 @@ MPUIMU_RETVAL mpuimu_init ( mpuimu_t *ctx, mpuimu_cfg_t *cfg )
 
         i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
         i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+        i2c_master_set_timeout( &ctx->i2c, 0 );
 
         ctx->read_f  = mpuimu_i2c_read;
         ctx->write_f = mpuimu_i2c_write;
@@ -288,13 +289,8 @@ static void mpuimu_spi_read ( mpuimu_t *ctx, uint8_t reg, uint8_t *data_buf, uin
     tx_buf[ 0 ] = reg | 0x80;
     
     spi_master_select_device( ctx->chip_select );
-    spi_master_write_then_read( &ctx->spi, tx_buf, 1, rx_buf, len + 1 );
+    spi_master_write_then_read( &ctx->spi, tx_buf, 1, data_buf, len );
     spi_master_deselect_device( ctx->chip_select ); 
-
-    for ( cnt = 0; cnt < len; cnt++ )
-    {
-        data_buf[ cnt ] = rx_buf [ cnt + 1];
-    }
 }
 
 static void dev_comm_delay ( void )

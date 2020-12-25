@@ -105,9 +105,10 @@ void presence_general_call_addr ( presence_t *ctx )
 
     write_reg = 0x04;
 
-    presence_generic_write( ctx, write_reg, NULL, 0 );
+    i2c_master_write( &ctx->i2c, &write_reg, 1 );  
 
     ctx->slave_address = PRESENCE_DEVICE_SLAVE_ADDRESS;
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
 }
 
 uint8_t presence_eeprom_process ( presence_t *ctx )

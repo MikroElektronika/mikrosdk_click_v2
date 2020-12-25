@@ -50,8 +50,8 @@
  */
 #define BUCKBOOST_MAP_MIKROBUS( cfg, mikrobus ) \
   cfg.vs2= MIKROBUS( mikrobus, MIKROBUS_AN ); \
-  cfg.run= MIKROBUS( mikrobus, MIKROBUS_RST ); \
-  cfg.vs3= MIKROBUS( mikrobus, MIKROBUS_CS ); \
+  cfg.run= MIKROBUS( mikrobus, MIKROBUS_CS ); \
+  cfg.vs3= MIKROBUS( mikrobus, MIKROBUS_RST ); \
   cfg.pwm= MIKROBUS( mikrobus, MIKROBUS_PWM ); \
   cfg.vs1= MIKROBUS( mikrobus, MIKROBUS_INT )
 /** \} */

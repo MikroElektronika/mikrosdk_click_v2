@@ -99,21 +99,21 @@ void application_init ( void )
 
 > Sequential read of voltage. Information about
 > current voltage is logget to UART. Operation is repeated each second. Settings are set
-> to calculate and convert input voltage with internal referent voltage 2.5V.
+> to calculate and convert input voltage from CH0 with external referent voltage set by VREF jumper on the click board.
 
 ```c
 
 void application_task ( )
 {
-    voltage = adc4_get_voltage( &adc4, ADC4_VREF_2500MV);
+    voltage = adc4_get_voltage( &adc4, ADC4_VREF_4000MV);
 
     if ( adc4.sing_bit == 1 )
     {
-        log_printf( &logger, "Current Voltage : %d mV \r\n", voltage );
+        log_printf( &logger, "Voltage at CH0 : %d mV \r\n", voltage );
     }
     else
     {
-        log_printf( &logger, "Current Voltage : - %d mV \r\n", voltage );
+        log_printf( &logger, "Voltage at CH0 : - %d mV \r\n", voltage );
     }
 
     Delay_ms( 1000 );

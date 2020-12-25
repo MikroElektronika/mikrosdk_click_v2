@@ -154,6 +154,7 @@ PRESSURE9_RETVAL pressure9_init ( pressure9_t *ctx, pressure9_cfg_t *cfg )
         i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
         
         // Enter I2C mode
+        digital_out_init( &ctx->cs, cfg->cs );
         digital_out_high( &ctx->cs );
         ctx->read_f =  pressure9_i2c_read;
         ctx->write_f =  pressure9_i2c_write;
@@ -182,6 +183,7 @@ PRESSURE9_RETVAL pressure9_init ( pressure9_t *ctx, pressure9_cfg_t *cfg )
         spi_master_set_mode( &ctx->spi, spi_cfg.mode );
         spi_master_set_speed( &ctx->spi, spi_cfg.speed );
         spi_master_set_chip_select_polarity( cfg->cs_polarity );
+        spi_master_deselect_device( ctx->chip_select );   
         
         // Enter SPI mode
 
@@ -496,7 +498,7 @@ float pressure9_get_pressure_data ( pressure9_t *ctx )
     press_calculation /= pressure_res;
     
     temp_raw = pressure9_get_temperature_raw( ctx );
-    temp_calculation = temp_raw;
+    temp_calculation = (float)temp_raw;
     temp_calculation /= PRESSURE9_TEMP_CALC_COEF;
 
     press_cal = calc_pressure_calibration( ctx, press_calculation, temp_calculation );
@@ -514,7 +516,7 @@ float pressure9_get_temperature_data ( pressure9_t *ctx )
     float tmp;
     
     temp_raw = pressure9_get_temperature_raw( ctx );
-    temp_calc = temp_raw;
+    temp_calc = (float)temp_raw;
     temp_calc /= PRESSURE9_TEMP_CALC_COEF;
 
     tmp = CAL_ALFA;
@@ -576,14 +578,9 @@ static void pressure9_spi_read ( pressure9_t *ctx, uint8_t reg, uint8_t *data_bu
     tx_buf[ 0 ] = reg | 0x80;
     
     spi_master_select_device( ctx->chip_select );
-    Delay_22us();
-    spi_master_write_then_read( &ctx->spi, tx_buf, 1, rx_buf, len );
+//     Delay_22us();
+    spi_master_write_then_read( &ctx->spi, tx_buf, 1, data_buf, len );
     spi_master_deselect_device( ctx->chip_select ); 
-
-    for ( cnt = 0; cnt < len; cnt++ )
-    {
-        data_buf[ cnt ] = rx_buf [ cnt ];
-    }
 }
 
 static void press_coefficient_buf ( pressure9_t *ctx, uint8_t *data_out )

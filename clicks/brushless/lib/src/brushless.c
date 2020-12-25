@@ -47,7 +47,7 @@ void brushless_cfg_setup ( brushless_cfg_t *cfg )
     cfg->dir = HAL_PIN_NC;
     cfg->int_pin = HAL_PIN_NC;
 
-	cfg->dev_pwm_freq 	  = BRUSHLESS_DEF_FREQ;
+    cfg->dev_pwm_freq 	  = BRUSHLESS_DEF_FREQ;
 
     cfg->resolution   = ANALOG_IN_RESOLUTION_10_BIT;
     cfg->vref         = 3.3;
@@ -60,12 +60,12 @@ BRUSHLESS_RETVAL brushless_init ( brushless_t *ctx, brushless_cfg_t *cfg )
     
     pwm_configure_default( &pwm_cfg );
 
-	pwm_cfg.pin      = cfg->pwm;
-	pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
+    pwm_cfg.pin      = cfg->pwm;
+    pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
 
     ctx->pwm_freq = cfg->dev_pwm_freq;
     pwm_open( &ctx->pwm, &pwm_cfg );
-
+    pwm_set_freq( &ctx->pwm, pwm_cfg.freq_hz );
 
     analog_in_configure_default( &adc_cfg );
     adc_cfg.input_pin  = cfg->an_pin;
@@ -104,9 +104,9 @@ void brushless_pwm_start ( brushless_t *ctx )
     pwm_start( &ctx->pwm ); 
 }
 
-adc4_data_t brushless_generic_read ( brushless_t *ctx )
+brushless_data_t brushless_generic_read ( brushless_t *ctx )
 {
-    adc4_data_t rx_data;
+    brushless_data_t rx_data;
 
     analog_in_read( &ctx->adc, &rx_data );
     

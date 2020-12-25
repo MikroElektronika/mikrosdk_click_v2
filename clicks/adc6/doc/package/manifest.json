@@ -25,7 +25,12 @@
   "name": "mikroe.click.adc6",
   "product_link": "https://www.mikroe.com/adc-6-click",
   "short_description": "ADC 6 click is an advanced 24bit multichannel analog to digital converter (ADC), with 8 fully differential or 15 single ended/pseudo differential sampling inputs, and very flexible routing capabilities. The click board has two 2x10 pin headers, used both to configure the device and connect the input channels. ",
-  "supported_compiler": "mikroC",
+  "supported_compiler": "mikroC AI",
   "type": "Library",
-  "version": "2.0.0.0"
+  "_type":"mikroSDK Library",
+  "related_projects":[
+      2337
+  ],
+  "version": "2.0.0.1"
 }
+

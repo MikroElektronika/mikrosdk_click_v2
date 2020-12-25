@@ -29,6 +29,20 @@
 
 #include "smoke.h"
 
+//------------------------------------------------- PRIVATE FUNCTIONS
+
+/**
+ * @brief Set new value function
+ *
+ * @param ctx         Click object.
+ * @param reg         8-bit register address
+ * @param mask        8-bit value used as a mask
+ * @param value       8-bit data to be written into register
+ *
+ * @description Function is used to apply new values.
+**/
+void dev_set_new_value ( smoke_t *ctx, uint8_t reg, uint8_t mask, uint8_t value );
+
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
 void smoke_cfg_setup ( smoke_cfg_t *cfg )
@@ -68,37 +82,37 @@ SMOKE_RETVAL smoke_init ( smoke_t *ctx, smoke_cfg_t *cfg )
     // Input pins
 
     digital_in_init( &ctx->int_pin, cfg->int_pin );
+    
+    ctx->num_en_led = 0;
+    ctx->red_value = 0;
+    ctx->ir_value = 0;
+    ctx->green_value = 0;
 
     return SMOKE_OK;
 }
 
 void smoke_default_cfg ( smoke_t *ctx )
 {
-    Delay_100ms( );
-
+    smoke_set_registers_t default_configuration;
+    
     smoke_reset( ctx );
-    smoke_fifo_setting( ctx, 2, SMOKE_SAMPLEAVG_32 );
-    smoke_fifo_setting( ctx, 1, 0 );
-    smoke_setting_function( ctx, 2, SMOKE_MODE_MULTILED );
-    smoke_setting_function( ctx, 3, SMOKE_ADCRANGE_2048 );
-    smoke_setting_function( ctx, 4, SMOKE_SAMPLERATE_400 );
-    smoke_setting_function( ctx, 5, SMOKE_PULSEWIDTH_411 );
-
- 
-    smoke_setting_prox_and_amp( ctx, 0, SMOKE_MIN_POWER_LEVEL );
-    smoke_setting_prox_and_amp( ctx, 1, SMOKE_MIN_POWER_LEVEL );
-    smoke_setting_prox_and_amp( ctx, 2, SMOKE_MAX_POWER_LEVEL );
-    smoke_setting_prox_and_amp( ctx, 3, SMOKE_MIN_POWER_LEVEL );
-
-    smoke_disable_slots( ctx );
-    smoke_enable_slot( ctx, 1, SMOKE_SLOT_RED_LED );
-    smoke_enable_slot( ctx, 2, SMOKE_SLOT_IR_LED );
-    smoke_enable_slot( ctx, 3, SMOKE_SLOT_GREEN_LED );
-    smoke_clear_fifo( ctx );
-
     Delay_100ms( );
-    smoke_enable_disable_interrupts( ctx, 1, 1 );
-    Delay_100ms( );
+    
+    
+    //TODO postaviti default configuraciju i napraviti citanje
+    
+    default_configuration.avg_samp = SMOKE_SAMPLEAVG_4; 
+    default_configuration.mode = SMOKE_MODE_MULTILED;
+    default_configuration.adc_range = SMOKE_ADCRANGE_16384;
+    default_configuration.samp_rate = SMOKE_SAMPLERATE_50;
+    default_configuration.pulse_width = SMOKE_PULSEWIDTH_411;
+    default_configuration.led_pow_lvl = 0xFF;
+    
+    uint8_t status = smoke_set_registers( ctx, &default_configuration );
+    
+    if ( status != SMOKE_OK )
+        for( ; ; );
+    
 }
 
 void smoke_write_data ( smoke_t *ctx, uint8_t wr_addr, uint8_t wr_data )
@@ -123,215 +137,305 @@ uint8_t smoke_read_data ( smoke_t *ctx, uint8_t rd_addr )
     return r_buffer[ 0 ];
 }
 
-void smoke_set_new_value ( smoke_t *ctx, uint8_t reg, uint8_t mask, uint8_t value )
+void smoke_generic_read ( smoke_t *ctx, uint8_t rd_addr, uint8_t *buffer, uint8_t cnt )
+{
+    i2c_master_write_then_read( &ctx->i2c, &rd_addr, 1, buffer, cnt );
+}
+
+void smoke_set_new_value ( smoke_t *ctx, smoke_set_new_value_t *new_value_data )
 {
     uint8_t old_val;
 
-    old_val = smoke_read_data( ctx, reg );
-    old_val = old_val & mask;
+    old_val = smoke_read_data( ctx, new_value_data->reg_addr );
+    old_val = old_val & new_value_data->mask;
 
-    smoke_write_data( ctx, reg, old_val | value );
+    smoke_write_data( ctx, new_value_data->reg_addr, old_val | new_value_data->value );
 }
 
 uint8_t smoke_get_intrrupt ( smoke_t *ctx, uint8_t flag )
 {
-    if ( flag == 1 )
+    if ( flag == SMOKE_INT_FLAG_GET_MAIN )
     {
         // Get the main interrupt group 
         return smoke_read_data( ctx, SMOKE_INT_STAT1 );
     }
-    if ( flag == 2 )
+    if ( flag == SMOKE_INT_FLAG_GET_TEMP_DATA )
     {
         // Get the temporary ready interrupt
         return smoke_read_data( ctx, SMOKE_INT_STAT2 );
     }
+    else
+    {
+        return SMOKE_PARAMETER_ERROR;
+    }
 }
 
-void smoke_enable_disable_interrupts ( smoke_t *ctx, uint8_t interrupt_flag, uint8_t enable_flag )
+uint8_t smoke_enable_disable_interrupts ( smoke_t *ctx, uint8_t interrupt_flag, uint8_t enable_flag )
 {
-    uint8_t reg_addr;
-    uint8_t mask; 
-    uint8_t value;
-
-    if ( interrupt_flag >= 0 && interrupt_flag <= 3 )
+    smoke_set_new_value_t interrupt_data;
+    
+    if ( interrupt_flag == SMOKE_INT_FLAG_SET_AFULL )
     {
-        reg_addr = SMOKE_INT_ENABLE1;
-    }
-    else if ( interrupt_flag == 4 )
-    {
-        reg_addr = SMOKE_INT_ENABLE2;
-    }
-
-    if ( interrupt_flag == 0 )
-    {
-        mask = SMOKE_INT_A_FULL_MASK;
-        if ( enable_flag == 1 )
+        interrupt_data.reg_addr = SMOKE_INT_STAT1;
+        interrupt_data.mask = SMOKE_INT_A_FULL_MASK;
+        
+        if ( enable_flag == SMOKE_INT_FLAG_SET_ENABLE )
         {
-            value = SMOKE_INT_A_FULL_ENABLE;
+            interrupt_data.value = SMOKE_INT_A_FULL_ENABLE;
         }
-        else if ( enable_flag == 0 )
+        else if ( enable_flag == SMOKE_INT_FLAG_SET_DISABLE )
         {
-            value = SMOKE_INT_A_FULL_DISABLE;
+            interrupt_data.value = SMOKE_INT_A_FULL_DISABLE;
         }
+        else
+        {
+            return SMOKE_PARAMETER_ERROR;
+        }
+    }
+    else if ( interrupt_flag == SMOKE_INT_FLAG_SET_DATA_RDY )
+    {
+        interrupt_data.reg_addr = SMOKE_INT_STAT1;
+        interrupt_data.mask = SMOKE_INT_DATA_RDY_MASK;
+        
+        if ( enable_flag == SMOKE_INT_FLAG_SET_ENABLE )
+        {
+            interrupt_data.value = SMOKE_INT_DATA_RDY_ENABLE;
+        }
+        else if ( enable_flag == SMOKE_INT_FLAG_SET_DISABLE )
+        {
+            interrupt_data.value = SMOKE_INT_DATA_RDY_DISABLE;
+        }
+        else
+        {
+            return SMOKE_PARAMETER_ERROR;
+        }
+    }
+    else if ( interrupt_flag == SMOKE_INT_FLAG_SET_ALS_OVF )
+    {
+        interrupt_data.reg_addr = SMOKE_INT_STAT1;
+        interrupt_data.mask = SMOKE_INT_ALC_OVF_MASK;
+        
+        if ( enable_flag == SMOKE_INT_FLAG_SET_ENABLE )
+        {
+            interrupt_data.value = SMOKE_INT_ALC_OVF_ENABLE;
+        }
+        else if ( enable_flag == SMOKE_INT_FLAG_SET_DISABLE )
+        {
+            interrupt_data.value = SMOKE_INT_ALC_OVF_DISABLE;
+        }
+        else
+        {
+            return SMOKE_PARAMETER_ERROR;
+        }
+    }
+    else if ( interrupt_flag == SMOKE_INT_FLAG_SET_PROXY_THRESH )
+    {
+        interrupt_data.reg_addr = SMOKE_INT_STAT1;
+        interrupt_data.mask = SMOKE_INT_PROX_INT_MASK;
+        
+        if ( enable_flag == SMOKE_INT_FLAG_SET_ENABLE )
+        {
+            interrupt_data.value = SMOKE_INT_PROX_INT_ENABLE;
+        }
+        else if ( enable_flag == SMOKE_INT_FLAG_SET_DISABLE )
+        {
+            interrupt_data.value = SMOKE_INT_PROX_INT_DISABLE;
+        }
+        else
+        {
+            return SMOKE_PARAMETER_ERROR;
+        }
+    }
+    else if ( interrupt_flag == SMOKE_INT_FLAG_SET_TEMP )
+    {
+        interrupt_data.reg_addr = SMOKE_INT_STAT2;
+        interrupt_data.mask = SMOKE_INT_DIE_TEMP_RDY_MASK;
+        
+        if ( enable_flag == SMOKE_INT_FLAG_SET_ENABLE )
+        {
+            interrupt_data.value = SMOKE_INT_DIE_TEMP_RDY_ENABLE;
+        }
+        else if ( enable_flag == SMOKE_INT_FLAG_SET_DISABLE )
+        {
+            interrupt_data.value = SMOKE_INT_DIE_TEMP_RDY_DISABLE;
+        }
+        else
+        {
+            return SMOKE_PARAMETER_ERROR;
+        }
+    }
+    else
+    {
+        return SMOKE_PARAMETER_ERROR;
     }
     
-    if ( interrupt_flag == 1 )
-    {
-        mask = SMOKE_INT_DATA_RDY_MASK;
-        if ( enable_flag == 1 )
-        {
-            value = SMOKE_INT_DATA_RDY_ENABLE;
-        }
-        else if ( enable_flag == 0 )
-        {
-            value = SMOKE_INT_DATA_RDY_DISABLE;
-        }
-    }
-
-    if ( interrupt_flag == 2 )
-    {
-        mask = SMOKE_INT_ALC_OVF_MASK;
-        if ( enable_flag == 1 )
-        {
-            value = SMOKE_INT_ALC_OVF_ENABLE;
-        }
-        else if ( enable_flag == 0 )
-        {
-            value = SMOKE_INT_ALC_OVF_DISABLE;
-        }
-    }
-
-    if ( interrupt_flag == 3 )
-    {
-        mask = SMOKE_INT_PROX_INT_MASK;
-        if ( enable_flag == 1 )
-        {
-            value = SMOKE_INT_PROX_INT_ENABLE;
-        }
-        else if ( enable_flag == 0 )
-        {
-            value = SMOKE_INT_PROX_INT_DISABLE;
-        }
-    }
-
-    if ( interrupt_flag == 4 )
-    {
-        mask = SMOKE_INT_DIE_TEMP_RDY_MASK;
-        if ( enable_flag == 1 )
-        {
-            value = SMOKE_INT_DIE_TEMP_RDY_ENABLE;
-        }
-        else if ( enable_flag == 0 )
-        {
-            value = SMOKE_INT_DIE_TEMP_RDY_DISABLE;
-        }
-    }
-
-    smoke_set_new_value( ctx, reg_addr, mask, value );
+    smoke_set_new_value( ctx, &interrupt_data );
+    return SMOKE_OK;
 }
 
-void smoke_setting_function ( smoke_t *ctx, uint8_t flag, uint8_t mode )
+uint8_t smoke_read_device_id ( smoke_t *ctx )
 {
-    uint8_t reg_addr;
-    uint8_t mask; 
-    uint8_t value;
+    uint8_t result;
+    result = smoke_read_data( ctx, SMOKE_PART_ID );
+    return result;
+} 
 
-    if ( flag >= 0 && flag <= 2 )
-    {
-        reg_addr = SMOKE_MODE_CONFIG;
-    }
-    else if ( flag >= 3 && flag <= 5 )
-    {
-        reg_addr = SMOKE_PARTICLE_CONFIG;
-    }
+void smoke_reset ( smoke_t *ctx )
+{
+    dev_set_new_value( ctx, SMOKE_REG_MODE_CONFIG, SMOKE_RESET_MASK, SMOKE_RESET );
 
-    if ( flag == 0 )
+    for( ; ; ) 
     {
-        mask  = SMOKE_SHUTDOWN_MASK;
-        value = SMOKE_SHUTDOWN;
+        if ( ( smoke_read_data( ctx, SMOKE_REG_MODE_CONFIG ) & SMOKE_RESET ) == 0 ) 
+            break;
+        Delay_1ms(  );
     }
-    else if ( flag == 1 )
-    {
-        mask  = SMOKE_SHUTDOWN_MASK;
-        value = SMOKE_WAKEUP;
-    }
-    else if ( flag == 2 )
-    {
-        mask  = SMOKE_MODE_MASK;
-    } 
-    else if ( flag == 3 )
-    {
-        mask  = SMOKE_ADCRANGE_MASK;
-    } 
-    else if ( flag == 4 )
-    {
-        mask  = SMOKE_SAMPLERATE_MASK;
-    } 
-    else if ( flag == 5 )
-    {
-        mask  = SMOKE_PULSEWIDTH_MASK;
-    } 
-
-    if ( flag >= 2  && flag <= 5 )
-    {
-        value = mode;
-    }
-
-    smoke_set_new_value( ctx, reg_addr, mask, value );
 }
 
-void smoke_setting_prox_and_amp ( smoke_t *ctx, uint8_t flag, uint8_t write_data )
+float smoke_read_temp ( smoke_t *ctx )
 {
-   uint8_t write_addr;
+    float result;
+    uint8_t temp_int;
+    uint8_t temp_frac;
 
-    if ( flag == 0 )
+    smoke_write_data( ctx, SMOKE_DIE_TEMP_CONFIG, 0x01 );
+    
+    for ( ; ; )
     {
-        write_addr = SMOKE_LED1_PULSE_AMP;
+        if ( ( smoke_read_data( ctx, SMOKE_DIE_TEMP_CONFIG ) & 0x01 ) == 0 ) 
+            break;
+        Delay_1ms(  );
     }
-    else if ( flag == 1 )
-    {
-        write_addr = SMOKE_LED2_PULSE_AMP;
-    }
-    else if ( flag == 2 )
-    {
-        write_addr = SMOKE_LED3_PULSE_AMP;
-    } 
-    else if ( flag == 3 )
-    {
-        write_addr = SMOKE_LED_PROX_AMP;
-    } 
-    else if ( flag == 4 )
-    {
-        write_addr = SMOKE_PROX_INT_THRESH;
-    } 
 
-   smoke_write_data( ctx, write_addr, write_data );
+    temp_int = smoke_read_data( ctx, SMOKE_DIE_TEMP_INT );
+    temp_frac = smoke_read_data( ctx, SMOKE_DIE_TEMP_FRAC );
+
+    result = ( float )temp_int + ( ( float )temp_frac * 0.0625 );
+
+    return result;
 }
 
-void smoke_enable_slot ( smoke_t *ctx, uint8_t slot_num, uint8_t dev )
+uint8_t smoke_set_power ( smoke_t *ctx, uint8_t state )
 {
-    if ( slot_num == 1 )
+    if ( ( state != SMOKE_SHUTDOWN ) && ( state != SMOKE_WAKEUP ) )
+        return SMOKE_PARAMETER_ERROR;
+    
+    dev_set_new_value( ctx, SMOKE_REG_MODE_CONFIG, SMOKE_SHUTDOWN_MASK, state );
+    
+    return SMOKE_OK;
+}
+
+uint8_t smoke_set_led_mode ( smoke_t *ctx, uint8_t mode )
+{
+    if ( ( mode != SMOKE_MODE_REDONLY ) && 
+         ( mode != SMOKE_MODE_REDIRONLY ) && 
+         ( mode != SMOKE_MODE_MULTILED ) )
+        return SMOKE_PARAMETER_ERROR;
+    
+    dev_set_new_value( ctx, SMOKE_REG_MODE_CONFIG, SMOKE_MODE_MASK, mode );
+    
+    return SMOKE_OK;
+}
+
+uint8_t smoke_set_adc_range ( smoke_t *ctx, uint8_t adc_range )
+{
+    if ( ( adc_range != SMOKE_ADCRANGE_2048 ) && 
+         ( adc_range != SMOKE_ADCRANGE_4096 ) && 
+         ( adc_range != SMOKE_ADCRANGE_8192 ) && 
+         ( adc_range != SMOKE_ADCRANGE_16384 ) )
+        return SMOKE_PARAMETER_ERROR;
+    
+    dev_set_new_value( ctx, SMOKE_REG_PARTICLE_CONFIG, SMOKE_ADCRANGE_MASK, adc_range );
+    
+    return SMOKE_OK;
+}
+
+uint8_t smoke_set_sample_rate ( smoke_t *ctx, uint8_t sample_rate )
+{
+    if ( ( sample_rate != SMOKE_SAMPLERATE_50 ) && 
+         ( sample_rate != SMOKE_SAMPLERATE_100 ) && 
+         ( sample_rate != SMOKE_SAMPLERATE_200 ) && 
+         ( sample_rate != SMOKE_SAMPLERATE_400 ) && 
+         ( sample_rate != SMOKE_SAMPLERATE_800 ) && 
+         ( sample_rate != SMOKE_SAMPLERATE_1000 ) && 
+         ( sample_rate != SMOKE_SAMPLERATE_1600 ) && 
+         ( sample_rate != SMOKE_SAMPLERATE_3200 ) )
+        return SMOKE_PARAMETER_ERROR;
+    
+    dev_set_new_value( ctx, SMOKE_REG_PARTICLE_CONFIG, SMOKE_SAMPLERATE_MASK, sample_rate );
+    
+    return SMOKE_OK;
+}
+
+uint8_t smoke_set_pulse_width ( smoke_t *ctx, uint8_t pulse_width )
+{
+    if ( ( pulse_width != SMOKE_PULSEWIDTH_69 ) && 
+         ( pulse_width != SMOKE_PULSEWIDTH_118 ) && 
+         ( pulse_width != SMOKE_PULSEWIDTH_215 ) && 
+         ( pulse_width != SMOKE_PULSEWIDTH_411 ) )
+        return SMOKE_PARAMETER_ERROR;
+    
+    dev_set_new_value( ctx, SMOKE_REG_PARTICLE_CONFIG, SMOKE_PULSEWIDTH_MASK, pulse_width );
+    
+    return SMOKE_OK;
+}
+
+uint8_t smoke_set_led_amplitude ( smoke_t *ctx, uint8_t led, uint8_t amplitude )
+{    
+    if ( ( led != SMOKE_REG_LED_RED_PULSE_AMP ) && 
+         ( led != SMOKE_REG_LED_IR_PULSE_AMP ) && 
+         ( led != SMOKE_REG_LED_GREEN_PULSE_AMP ) && 
+         ( led != SMOKE_REG_LED_PROX_AMP ) )
+        return SMOKE_PARAMETER_ERROR;
+    
+    smoke_write_data( ctx, led, amplitude );
+    
+    return SMOKE_OK;
+}
+
+void smoke_set_proximity_threshold( smoke_t *ctx, uint8_t threshold )
+{
+    smoke_write_data( ctx, SMOKE_REG_LED_PROX_THRESH, threshold );
+}
+
+uint8_t smoke_enable_slot ( smoke_t *ctx, uint8_t slot_num, uint8_t dev )
+{
+    if ( dev > SMOKE_SLOT_GREEN_PILOT )
+        return SMOKE_PARAMETER_ERROR;
+    
+    switch ( slot_num )
     {
-        smoke_set_new_value( ctx, SMOKE_MULTI_LED_CONFIG1, SMOKE_SLOT1_MASK, dev );
-    }
-    else if ( slot_num == 2 )
-    {
-        smoke_set_new_value( ctx, SMOKE_MULTI_LED_CONFIG1, SMOKE_SLOT2_MASK, dev << 4 );
-    }
-    else if ( slot_num == 3 )
-    {
-        smoke_set_new_value( ctx, SMOKE_MULTI_LED_CONFIG2, SMOKE_SLOT3_MASK, dev );
-    }
-    else if ( slot_num == 4 )
-    {
-        smoke_set_new_value( ctx, SMOKE_MULTI_LED_CONFIG2, SMOKE_SLOT4_MASK, dev << 4 );
+        case 1:
+        {
+            dev_set_new_value( ctx, SMOKE_REG_MULTI_LED_CONFIG1, SMOKE_SLOT1_MASK, dev );
+            return SMOKE_OK;
+        }
+        case 2:
+        {
+            dev_set_new_value( ctx, SMOKE_REG_MULTI_LED_CONFIG1, SMOKE_SLOT2_MASK, dev << 4 );
+            return SMOKE_OK;
+        }
+        case 3:
+        {
+            dev_set_new_value( ctx, SMOKE_REG_MULTI_LED_CONFIG2, SMOKE_SLOT3_MASK, dev );
+            return SMOKE_OK;
+        }
+        case 4:
+        {
+            dev_set_new_value( ctx, SMOKE_REG_MULTI_LED_CONFIG2, SMOKE_SLOT4_MASK, dev << 4 );
+            return SMOKE_OK;
+        }
+        default:
+        {
+            return SMOKE_PARAMETER_ERROR;
+        }
     }
 }
 
 void smoke_disable_slots ( smoke_t *ctx )
 {
-    smoke_write_data( ctx, SMOKE_MULTI_LED_CONFIG1, 0 );
-    smoke_write_data( ctx, SMOKE_MULTI_LED_CONFIG2, 0 );
+    smoke_write_data( ctx, SMOKE_REG_MULTI_LED_CONFIG1, 0 );
+    smoke_write_data( ctx, SMOKE_REG_MULTI_LED_CONFIG2, 0 );
 }
 
 void smoke_clear_fifo ( smoke_t *ctx )
@@ -339,39 +443,6 @@ void smoke_clear_fifo ( smoke_t *ctx )
     smoke_write_data( ctx, SMOKE_FIFO_WRITE_PTR, 0 );
     smoke_write_data( ctx, SMOKE_FIFO_OVERFLOW, 0 );
     smoke_write_data( ctx, SMOKE_FIFO_READ_PTR, 0 );
-}
-
-void smoke_fifo_setting ( smoke_t *ctx, uint8_t flag, uint8_t samp_num )
-{
-    uint8_t mask; 
-    uint8_t value;
-    
-    if ( flag == 0 || flag == 1 )
-    {
-        mask = SMOKE_ROLLOVER_MASK;
-        if ( flag == 0 )
-        {
-            value = SMOKE_ROLLOVER_DISABLE;
-        }
-        else if ( flag == 1 )
-        {
-            value = SMOKE_ROLLOVER_ENABLE;
-        }
-    }
-    else if ( flag == 2 || flag == 3 )
-    {
-        value = samp_num;
-        if ( flag == 2 )
-        {
-            value = SMOKE_SAMPLEAVG_MASK;
-        }
-        else if ( flag == 3 )
-        {
-            value = SMOKE_A_FULL_MASK;
-        }
-    }
-
-    smoke_set_new_value( ctx, SMOKE_FIFO_CONFIG, mask, value );
 }
 
 uint8_t smoke_get_write_ptr ( smoke_t *ctx )
@@ -384,205 +455,169 @@ uint8_t smoke_get_read_ptr ( smoke_t *ctx )
     return smoke_read_data( ctx, SMOKE_FIFO_READ_PTR );
 }
 
-float smoke_read_temp_c ( smoke_t *ctx )
+uint8_t smoke_set_rollover_state( smoke_t *ctx, uint8_t state )
 {
-    float result;
-    uint8_t temp_int;
-    uint8_t temp_frac;
-
-    smoke_write_data( ctx, SMOKE_DIE_TEMP_CONFIG, 0x01 );
-
-    temp_int = smoke_read_data( ctx, SMOKE_DIE_TEMP_INT );
-    temp_frac = smoke_read_data( ctx, SMOKE_DIE_TEMP_FRAC );
-
-    result = ( float )temp_int + ( ( float )temp_frac * 0.0625 );
-
-    return result;
-}
-
-float smoke_read_temp_f ( smoke_t *ctx )
-{
-    float result = smoke_read_temp_c( ctx );
-
-    result = result * 1.8 + 32.0;
-
-    return result;
-}
-
-void smoke_reset ( smoke_t *ctx )
-{
-    smoke_set_new_value( ctx, SMOKE_MODE_CONFIG, SMOKE_RESET_MASK, SMOKE_RESET );
-}
-
-uint8_t smoke_read_device_id ( smoke_t *ctx )
-{
-    uint8_t result;
-    result = smoke_read_data( ctx, SMOKE_PART_ID );
-    return result;
-} 
-
-uint32_t smoke_get_red_val ( smoke_t *ctx )
-{
-    uint8_t r_buffer[ 3 ];
-    uint8_t w_buffer[ 1 ];
-    uint32_t result;
-
-    w_buffer[ 0 ] = SMOKE_FIFO_DATA;
-
-    i2c_master_write_then_read( &ctx->i2c, w_buffer, 1, r_buffer, 3 );
-
-    result = r_buffer[ 2 ];
-    result <<= 8;
-    result |= r_buffer[ 1 ];
-    result <<= 8;
-    result |= r_buffer[ 0 ];
-    result &= 0xFFFFFF;
-
-    return result;
-}
-
-uint32_t smoke_get_ir_val ( smoke_t *ctx )
-{
-    uint8_t r_buffer[ 6 ];
-    uint8_t w_buffer[ 1 ];
-    uint32_t result;
+    if ( ( state != SMOKE_ROLLOVER_ENABLE ) && ( SMOKE_ROLLOVER_ENABLE != SMOKE_ROLLOVER_DISABLE ) )
+        return SMOKE_PARAMETER_ERROR;
     
-    w_buffer[ 0 ] = SMOKE_FIFO_DATA;
-
-    i2c_master_write_then_read( &ctx->i2c, w_buffer, 1, r_buffer, 6 );
-
-    result = r_buffer[ 5 ];
-    result <<= 8;
-    result |= r_buffer[ 4 ];
-    result <<= 8;
-    result |= r_buffer[ 3 ];
-    result &= 0xFFFFFF;
-
-    return result;
+    dev_set_new_value( ctx, SMOKE_REG_FIFO_CONFIG, SMOKE_ROLLOVER_MASK, state );
+    
+    return SMOKE_OK;
 }
 
-uint32_t smoke_get_green_val ( smoke_t *ctx )
+uint8_t smoke_set_almost_full_trigger( smoke_t *ctx, uint8_t trigger_range )
 {
-    uint8_t r_buffer[ 9 ];
-    uint8_t w_buffer[ 1 ];
-    uint32_t result = 0;
+    if ( trigger_range > 0x0F )
+        return SMOKE_PARAMETER_ERROR;
     
-    w_buffer[ 0 ] = SMOKE_FIFO_DATA;
-
-    i2c_master_write_then_read( &ctx->i2c, w_buffer, 1, r_buffer, 9 );
-
-    result = r_buffer[ 8 ];
-    result <<= 8;
-    result |= r_buffer[ 7 ];
-    result <<= 8;
-    result |= r_buffer[ 6 ];
-    result &= 0xFFFFFF;
+    dev_set_new_value( ctx, SMOKE_REG_FIFO_CONFIG, SMOKE_A_FULL_MASK, trigger_range );
     
-    return result;
+    return SMOKE_OK;
 }
 
-void smoke_read_fifo_data ( smoke_t *ctx, uint32_t *red_res, uint32_t *ir_res, uint32_t *grn_res )
+uint8_t smoke_set_sample_avarage ( smoke_t *ctx, uint8_t samples )
 {
-    uint8_t r_buffer[ 9 ];
-    uint8_t w_buffer[ 1 ];
-    uint8_t led_num;
-    uint32_t temp_rd;
-    temp_rd = 0;
+    if ( ( samples != SMOKE_SAMPLEAVG_1 ) && 
+         ( samples != SMOKE_SAMPLEAVG_2 ) && 
+         ( samples != SMOKE_SAMPLEAVG_4 ) && 
+         ( samples != SMOKE_SAMPLEAVG_8 ) && 
+         ( samples != SMOKE_SAMPLEAVG_16 ) && 
+         ( samples != SMOKE_SAMPLEAVG_32 ) )
+        return SMOKE_PARAMETER_ERROR;
     
-    w_buffer[ 0 ] = SMOKE_FIFO_DATA;
+    dev_set_new_value( ctx, SMOKE_REG_FIFO_CONFIG, SMOKE_SAMPLEAVG_MASK, samples );
+    
+    return SMOKE_OK;
+}
+
+uint8_t smoke_set_registers ( smoke_t *ctx, smoke_set_registers_t *registers )
+{    
+    ctx->num_en_led = 0;
+    
+    if ( smoke_set_sample_avarage( ctx, registers->avg_samp ) != SMOKE_OK )
+        return SMOKE_PARAMETER_ERROR;
+    
+    if ( smoke_set_rollover_state( ctx, SMOKE_ROLLOVER_ENABLE ) != SMOKE_OK )
+        return SMOKE_PARAMETER_ERROR;
+    
+    switch ( registers->mode )
+    {
+        case SMOKE_MODE_REDONLY:
+        {
+            ctx->num_en_led = 1;
+            smoke_set_led_mode( ctx, registers->mode );
+            break;
+        }
+        case SMOKE_MODE_REDIRONLY:
+        {
+            ctx->num_en_led = 2;
+            smoke_set_led_mode( ctx, registers->mode );
+            break;
+        }
+        case SMOKE_MODE_MULTILED:
+        {
+            ctx->num_en_led = 3;
+            smoke_set_led_mode( ctx, registers->mode );
+            break;
+        }
+        default:
+        {
+            return SMOKE_PARAMETER_ERROR;
+        }
+    }
+    
+    if ( smoke_set_adc_range( ctx, registers->adc_range ) != SMOKE_OK )
+        return SMOKE_PARAMETER_ERROR;
+    
+    if ( smoke_set_sample_rate( ctx, registers->samp_rate ) != SMOKE_OK )
+        return SMOKE_PARAMETER_ERROR;
+    
+    if ( smoke_set_pulse_width( ctx, registers->pulse_width ) != SMOKE_OK )
+        return SMOKE_PARAMETER_ERROR;
+    
+    if ( smoke_set_led_amplitude( ctx, SMOKE_REG_LED_RED_PULSE_AMP, registers->led_pow_lvl ) != SMOKE_OK )
+        return SMOKE_PARAMETER_ERROR;
+    if ( smoke_set_led_amplitude( ctx, SMOKE_REG_LED_IR_PULSE_AMP, registers->led_pow_lvl ) != SMOKE_OK )
+        return SMOKE_PARAMETER_ERROR;
+    if ( smoke_set_led_amplitude( ctx, SMOKE_REG_LED_GREEN_PULSE_AMP, registers->led_pow_lvl ) != SMOKE_OK )
+        return SMOKE_PARAMETER_ERROR;
+    if ( smoke_set_led_amplitude( ctx, SMOKE_REG_LED_PROX_AMP, registers->led_pow_lvl ) != SMOKE_OK )
+        return SMOKE_PARAMETER_ERROR;
+    
+    
+    if ( smoke_enable_slot( ctx, 1, SMOKE_SLOT_RED_PILOT ) != SMOKE_OK )
+        return SMOKE_PARAMETER_ERROR;
+    if ( smoke_enable_slot( ctx, 2, SMOKE_SLOT_IR_PILOT ) != SMOKE_OK )
+        return SMOKE_PARAMETER_ERROR;
+    if ( smoke_enable_slot( ctx, 3, SMOKE_SLOT_GREEN_PILOT ) != SMOKE_OK )
+        return SMOKE_PARAMETER_ERROR;
+    
     smoke_clear_fifo( ctx );
-    led_num = smoke_read_data( ctx, SMOKE_MODE_CONFIG );
-    led_num &= 0x07;
-
-    if ( led_num == SMOKE_MODE_REDONLY )
-    {
-        i2c_master_write_then_read( &ctx->i2c, w_buffer, 1, r_buffer, 3 );
-
-        temp_rd = r_buffer[ 2 ];
-        temp_rd <<= 8;
-        temp_rd |= r_buffer[ 1 ];
-        temp_rd <<= 8;
-        temp_rd |= r_buffer[ 0 ];
-        *red_res = temp_rd;
-    }
-    else if ( led_num == SMOKE_MODE_REDIRONLY )
-    {
-        i2c_master_write_then_read( &ctx->i2c, w_buffer, 1, r_buffer, 6 );
-
-        temp_rd = r_buffer[ 2 ];
-        temp_rd <<= 8;
-        temp_rd |= r_buffer[ 1 ];
-        temp_rd <<= 8;
-        temp_rd |= r_buffer[ 0 ];
-        *red_res = temp_rd;
-         
-        temp_rd = r_buffer[ 5 ];
-        temp_rd <<= 8;
-        temp_rd |= r_buffer[ 4 ];
-        temp_rd <<= 8;
-        temp_rd |= r_buffer[ 3 ];
-        *ir_res = temp_rd;
-    }
-    else if ( led_num == SMOKE_MODE_MULTILED )
-    {
-        i2c_master_write_then_read( &ctx->i2c, w_buffer, 1, r_buffer, 9 );
-
-        temp_rd = r_buffer[ 2 ];
-        temp_rd <<= 8;
-        temp_rd |= r_buffer[ 1 ];
-        temp_rd <<= 8;
-        temp_rd |= r_buffer[ 0 ];
-        *red_res = temp_rd;
-
-        temp_rd = r_buffer[ 5 ];
-        temp_rd <<= 8;
-        temp_rd |= r_buffer[ 4 ];
-        temp_rd <<= 8;
-        temp_rd |= r_buffer[ 3 ];
-        *ir_res = temp_rd;
-
-        temp_rd = r_buffer[ 8 ];
-        temp_rd <<= 8;
-        temp_rd |= r_buffer[ 7 ];
-        temp_rd <<= 8;
-        temp_rd |= r_buffer[ 6 ];
-        *grn_res = temp_rd;
-    }
+    
+    return SMOKE_OK;
 }
 
-void smoke_set_registers ( smoke_t *ctx, smoke_set_registers_t *registers )
+uint8_t smoke_read_leds ( smoke_t *ctx )
 {
-    smoke_fifo_setting( ctx, 2, registers->avg_samp );
-    smoke_fifo_setting( ctx, 1, 0 );
-    smoke_setting_function( ctx, 2, registers->mode );
-    smoke_setting_function( ctx, 3, registers->adc_range );   
-    smoke_setting_function( ctx, 4, registers->samp_rate );
-    smoke_setting_function( ctx, 5, registers->pulse_width );
-    smoke_setting_prox_and_amp( ctx, 0, registers->led_pow_lvl );
-    smoke_setting_prox_and_amp( ctx, 1, registers->led_pow_lvl );
-    smoke_setting_prox_and_amp( ctx, 2, registers->led_pow_lvl );
-    smoke_setting_prox_and_amp( ctx, 3, registers->led_pow_lvl );
-
-    smoke_enable_slot( ctx, 1, SMOKE_SLOT_RED_LED );
-
-    if ( registers->mode > 2 )
+    uint8_t temp[ 9 ] = { 0 };
+    uint8_t temp_led[ 4 ] = { 0 };
+        
+    if ( ctx->num_en_led == 0 )
     {
-        smoke_enable_slot( ctx, 1, SMOKE_SLOT_RED_LED );
-        smoke_enable_slot( ctx, 2, SMOKE_SLOT_IR_LED );
+        return SMOKE_INIT_ERROR;
     }
-    if ( registers->mode > 3 )
+    
+    smoke_generic_read( ctx, SMOKE_FIFO_DATA, temp, ctx->num_en_led * 3 );
+    
+    temp_led[ 3 ] = 0;
+    
+    if ( ctx->num_en_led > 0 )
     {
-        smoke_enable_slot( ctx, 1, SMOKE_SLOT_RED_LED );
-        smoke_enable_slot( ctx, 2, SMOKE_SLOT_IR_LED );
-        smoke_enable_slot( ctx, 3, SMOKE_SLOT_GREEN_LED );
+        temp_led[ 2 ] = temp[ 0 ];
+        temp_led[ 1 ] = temp[ 1 ];
+        temp_led[ 0 ] = temp[ 2 ];
+        memcpy( &ctx->red_value, temp_led, 4 );
     }
-
-    smoke_clear_fifo( ctx );
+    
+    if ( ctx->num_en_led > 1 )
+    {
+        temp_led[ 2 ] = temp[ 3 ];
+        temp_led[ 1 ] = temp[ 4 ];
+        temp_led[ 0 ] = temp[ 5 ];
+        memcpy( &ctx->ir_value, temp_led, 4 );
+    }
+    
+    if ( ctx->num_en_led > 2 )
+    {
+        temp_led[ 2 ] = temp[ 6 ];
+        temp_led[ 1 ] = temp[ 7 ];
+        temp_led[ 0 ] = temp[ 8 ];
+        memcpy( &ctx->green_value, temp_led, 4 );
+    }
+    
+    if ( ctx->num_en_led > 3 )
+    {
+        return SMOKE_INIT_ERROR;
+    }
+    
+    return SMOKE_OK;
 }
 
 uint8_t smoke_check_int ( smoke_t *ctx )
 {
     return digital_in_read( &ctx->int_pin );
+}
+
+//--------------------------------------------------------------------------PRIVATE FUNCTIONS
+
+void dev_set_new_value ( smoke_t *ctx, uint8_t reg, uint8_t mask, uint8_t value )
+{
+    uint8_t old_val;
+
+    old_val = smoke_read_data( ctx, reg );
+    old_val = old_val & mask;
+
+    smoke_write_data( ctx, reg, old_val | value );
 }
 
 // ------------------------------------------------------------------------- END

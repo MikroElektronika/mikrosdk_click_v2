@@ -1,8 +1,0 @@
-{
-    "name": "RS485 6 Click",
-    "description": "RS485 6 Click offers a half-duplex RS-485 communication with integrated surge protection",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","THVD1329DT"],
-    "category" : ["RS485"] 
-}

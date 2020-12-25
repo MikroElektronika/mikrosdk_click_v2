@@ -46,7 +46,7 @@ void vtohz_cfg_setup ( vtohz_cfg_t *cfg )
     cfg->en   = HAL_PIN_NC;
     cfg->fo = HAL_PIN_NC;
 
-    cfg->dev_pwm_freq 	  = 5000;
+    cfg->dev_pwm_freq   = VTOHZ_DEF_FREQ;
 }
 
 VTOHZ_RETVAL vtohz_init ( vtohz_t *ctx, vtohz_cfg_t *cfg )
@@ -55,8 +55,8 @@ VTOHZ_RETVAL vtohz_init ( vtohz_t *ctx, vtohz_cfg_t *cfg )
     
     pwm_configure_default( &pwm_cfg );
 
-	pwm_cfg.pin      = cfg->pwm;
-	pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
+    pwm_cfg.pin      = cfg->pwm;
+    pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
 
     ctx->pwm_freq = cfg->dev_pwm_freq;
     pwm_open( &ctx->pwm, &pwm_cfg );
@@ -72,6 +72,11 @@ VTOHZ_RETVAL vtohz_init ( vtohz_t *ctx, vtohz_cfg_t *cfg )
 
     return VTOHZ_OK;
 
+}
+
+void vtohz_enable ( vtohz_t *ctx )
+{
+    digital_out_high( &ctx->en );
 }
 
 void vtohz_set_duty_cycle ( vtohz_t *ctx, float duty_cycle )

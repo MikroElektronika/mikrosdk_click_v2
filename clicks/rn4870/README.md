@@ -3,8 +3,7 @@
 ---
 # RN4870 click
 
-RN4870 click carries the RN4870 Bluetooth® 4.2 low energy module from Microchip.
-The click is designed to run on a 3.3V power supply. It uses ASCII Command Interface over UART for communication with target microcontroller, with additional functionality provided by the following pins on the mikroBUS™ line: PWM, INT, RST, CS.
+RN4870 click carries the RN4870 Bluetooth® 4.2 low energy module from Microchip.The click is designed to run on a 3.3V power supply. It uses ASCII Command Interface over UART for communication with target microcontroller, with additional functionality provided by the following pins on the mikroBUS™ line: RST, CS, and INT.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/rn4870_click.png" height=300px>
@@ -43,20 +42,17 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 - Initialization function.
 > RN4870_RETVAL rn4870_init ( rn4870_t *ctx, rn4870_cfg_t *cfg );
 
-- Click Default Configuration function.
-> void rn4870_default_cfg ( rn4870_t *ctx );
-
 
 #### Example key functions :
 
--  The function receives character by waits for '#' - character to start parsing message, waits for '*' - character to stop parsing message and sets flag if whole and properly formated message is received.
-> void rn4870_receive ( rn4870_t *ctx, char character );
+- This function gets message from 'void rn4870_receive function if flag was set. This function replaces '*' (character with end of string) with '0x00' and stores received message to process_buffer
+> uint8_t rn4870_read ( rn4870_t *ctx, uint8_t *process_buffer );
  
-- The function connects to slave device with desired register address by secures the connection and entering data stream mode.
-> void rn4870_connect( rn4870_t *ctx, char *dev_addr );
+- The function receives character by waits for '#' - character to start parsing message, waits for '*' - character to stop parsing message and sets flag if whole and properly formated message is received.
+> void rn4870_receive ( rn4870_t *ctx, char tmp );
 
-- The function check message from if data received ( if flag was set ), stores received message to rx_data pointer to the memory location where the read text data is stored and replaces '*' - character with end of string - '0x00'.
-> uint8_t rn4870_read ( rn4870_t *ctx, uint8_t *rx_data );
+- The function connects to slave device with desired register address by secures the connection and entering data stream mode.
+> void rn4870_connect ( rn4870_t *ctx, char *p_addr );
 
 ## Examples Description
 
@@ -66,7 +62,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initialization driver enables - UART, also write log. 
+> Initializes UART driver. Initializes device and parser.
 
 ```c
 
@@ -79,7 +75,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -89,7 +85,7 @@ void application_init ( void )
     RN4870_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rn4870_init( &rn4870, &cfg );
 
-    dev_type = RN4870_DEVICETYPE_SLAVE;
+    dev_type = RN4870_DEVICETYPE_MASTER;
 
     if ( dev_type == RN4870_DEVICETYPE_MASTER )
     {
@@ -97,45 +93,45 @@ void application_init ( void )
     }
     else if ( dev_type == RN4870_DEVICETYPE_SLAVE )
     {
-        rn4870_initialize( &rn4870, &RN4870_ADDR_SLAVE2[ 0 ] );
-        log_text = &receive_buffer[ 7 ];
+        rn4870_initialize( &rn4870, &RN4870_ADDR_SLAVE[ 0 ] );
+        ptr = &receive_buffer[ 7 ];
     }
 
     memset( &rn4870.device_buffer, 0, 255 );
-    log_printf( &logger, " Clearing Msg Data  \r\n" );
-    log_printf( &logger, "--------------------\r\n" );
+    log_printf( &logger, " >>> app init done <<<  \r\n" );
 }
   
 ```
 
 ### Application Task
 
-> This is an example which demonstrates the use of RN4870 Click board.
-> If 'MASTER' - connects to 'SLAVE', sends message and disconnects.
-> If 'SLAVE' - waits for connect request and message from 'MASTER' and LOGs received message.
-> Results are being sent to the Usart Terminal where you can track their changes.
+> If 'MASTER' - connects to 'SLAVE', sends message and disconnects. If 'SLAVE' - waits for connect request 
+> and message from 'MASTER' and LOGs received message.
 
 ```c
 
-void applicationTask()
+void application_task ( void )
 {
-    if ( devType == _RN4870_DEVICETYPE_MASTER )
+    rn4870_process(  );
+    if ( dev_type == RN4870_DEVICETYPE_MASTER )
     {
-        rn4870_connect( &RN4870_ADDR_SLAVE1[ 0 ] );
-        rn4870_send( _RN4870_MTYPE_MSG, _RN4870_DTYPE_STRING, _RN4870_ID_SLAVE, &MESSAGE_DATA[ 0 ] );
-        mikrobus_logWrite( "    Message Send    ", _LOG_LINE );
-        rn4870_disconnect();
+        rn4870_connect( &rn4870, &RN4870_ADDR_SLAVE[ 0 ] );
+        log_printf( &logger, ">>> sending data  <<<\r\n" );
+        rn4870_send( &rn4870, RN4870_MTYPE_MSG, RN4870_DTYPE_STRING, RN4870_ID_MASTER, &message_payload[ 0 ] );
+        rn4870_disconnect( &rn4870 );
     }
-    else if ( devType == _RN4870_DEVICETYPE_SLAVE )
+    else if ( dev_type == RN4870_DEVICETYPE_SLAVE )
     {
-        msgFlag = rn4870_read( receiveBuffer );
+        msg_flag = rn4870_read( &rn4870, &receive_buffer[ 0 ] );
 
-        if ( msgFlag == 1 )
+        if ( msg_flag == 1 )
         {
-            mikrobus_logWrite( receiveBuffer, _LOG_LINE );
+            log_printf( &logger, ">>> data received <<<\r\n" );
+            log_printf( &logger, ">>> data : " );
+            log_printf( &logger, "%s\r\n", ptr );     
         }
     }
-} 
+}  
 
 ```
 

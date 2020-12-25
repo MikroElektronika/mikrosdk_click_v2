@@ -42,10 +42,10 @@ void gyro2_cfg_setup ( gyro2_cfg_t *cfg )
     cfg->scl = HAL_PIN_NC;
     cfg->sda = HAL_PIN_NC;
     cfg->cs = HAL_PIN_NC;
-    
+
     // Additional gpio pins
 
-    cfg->scs   = HAL_PIN_NC;
+    cfg->scs = HAL_PIN_NC;
     cfg->rst = HAL_PIN_NC;
     cfg->rdy = HAL_PIN_NC;
     cfg->int_pin = HAL_PIN_NC;
@@ -66,19 +66,19 @@ GYRO2_RETVAL gyro2_init ( gyro2_t *ctx, gyro2_cfg_t *cfg )
 
     ctx->slave_address = cfg->i2c_address;
 
-    if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_ERROR )
+    if ( i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_ERROR )
     {
         return GYRO2_INIT_ERROR;
     }
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
-    
+    i2c_master_set_timeout( &ctx->i2c, 0 );
+
     // Output pins 
 
     digital_out_init( &ctx->scs, cfg->scs );
     digital_out_init( &ctx->rst, cfg->rst );
-    digital_out_init( &ctx->rdy_pin, cfg->rdy );
     digital_out_init( &ctx->cs, cfg->cs );
 
     // Input pins
@@ -90,10 +90,7 @@ GYRO2_RETVAL gyro2_init ( gyro2_t *ctx, gyro2_cfg_t *cfg )
 
     digital_out_high( &ctx->scs );
     digital_out_high( &ctx->rst );
-
-
     digital_out_low( &ctx->cs );
-   
 
     return GYRO2_OK;
 }
@@ -174,9 +171,9 @@ uint8_t gyro2_int_get ( gyro2_t *ctx )
 void gyro2_hw_reset ( gyro2_t *ctx )
 {
     gyro2_rst_set( ctx, 0 );
-    Delay_10ms( );
+    Delay_100ms( );
     gyro2_rst_set( ctx, 1 );
-    Delay_10ms( );
+    Delay_100ms( );
 }
 
 uint8_t gyro2_get_id ( gyro2_t *ctx )
@@ -316,3 +313,4 @@ void gyro2_fr_setup ( gyro2_t *ctx, uint8_t low_pass, uint8_t hi_pass, uint8_t s
    gyro2_generic_write( ctx, GYRO2_CTRL_REG0, &tmp, 1 );
 }
 
+// ------------------------------------------------------------------------ END

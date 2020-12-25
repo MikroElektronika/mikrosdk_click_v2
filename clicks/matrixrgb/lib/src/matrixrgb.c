@@ -81,7 +81,6 @@ MATRIXRGB_RETVAL matrixrgb_init ( matrixrgb_t *ctx, matrixrgb_cfg_t *cfg )
     spi_cfg.mosi      = cfg->mosi;
     spi_cfg.default_write_data = MATRIXRGB_DUMMY;
 
-    digital_out_init( &ctx->cs, cfg->cs );
     ctx->chip_select = cfg->cs;
 
     if (  spi_master_open( &ctx->spi, &spi_cfg ) == SPI_MASTER_ERROR )
@@ -93,12 +92,12 @@ MATRIXRGB_RETVAL matrixrgb_init ( matrixrgb_t *ctx, matrixrgb_cfg_t *cfg )
     spi_master_set_speed( &ctx->spi, cfg->spi_speed );
     spi_master_set_mode( &ctx->spi, cfg->spi_mode );
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
+    spi_master_deselect_device( ctx->chip_select ); 
 
     // Output pins 
     
     digital_out_init( &ctx->rst, cfg->rst );
     digital_out_init( &ctx->slp, cfg->slp );
-    spi_master_deselect_device( ctx->chip_select ); 
 
     // Input pins
 
@@ -130,8 +129,11 @@ void matrixrgb_generic_transfer
 void matrixrgb_device_reset ( matrixrgb_t *ctx )
 {
     digital_out_high( &ctx->rst );
+    Delay_100ms();
     digital_out_low( &ctx->rst );
+    Delay_100ms();
     digital_out_high( &ctx->rst );
+    Delay_100ms();
 }
 
 uint8_t matrixrgb_device_settings ( matrixrgb_t *ctx, uint8_t pattern_id )
@@ -221,65 +223,65 @@ void matrixrgb_set_brightness ( matrixrgb_t *ctx, uint8_t brightness )
 }
 
 uint8_t matrixrgb_write_pixel ( matrixrgb_t *ctx, uint16_t x, uint16_t y, uint16_t color )
-{
+{ 
+    uint8_t cmd;
     uint16_t pos;
-    uint8_t i;
-    uint8_t tmp;
-    uint8_t temp[ 2 ];
+    uint8_t tmp[ 4 ];
 
     if ( ( x >= ctx->device_pixel.pixel_width ) || ( y >= ctx->device_pixel.pixel_height ) )
     {
         return 1;
     }
 
+    cmd = MATRIXRGB_CMD_LOAD_PIX;
     pos = ( ( y * ctx->device_pixel.pixel_width ) + x );
-
+    
+    tmp[0] = color;
+    tmp[1] = color >> 8;
+    tmp[2] = pos;
+    tmp[3] = pos >> 8;
+        
     wait_int_pin( ctx );
+    
     spi_master_select_device( ctx->chip_select );
-    tmp = MATRIXRGB_CMD_LOAD_PIX;
-    spi_master_write( &ctx->spi, &tmp, 1 );
-    temp[ 0 ] = color;
-    temp[ 1 ] = color >> 8;
-    spi_master_write( &ctx->spi, temp, 2 );
-    tmp = color >> 8;
-    spi_master_write( &ctx->spi, &tmp, 1 );
-    temp[ 0 ] = pos;
-    temp[ 1 ] = pos >> 8;
-    spi_master_write( &ctx->spi, temp, 2 );
-    tmp = pos >> 8;
-    spi_master_write( &ctx->spi, &tmp, 1 );
+    spi_master_write( &ctx->spi, &cmd, 1 );
+    spi_master_write( &ctx->spi, tmp, 4 );
     spi_master_deselect_device( ctx->chip_select );
-    pattern_delay( ctx->device_pattern_delay );
+    Delay_1ms();
 
     return 0;
 }
 
 void matrixrgb_fill_screen ( matrixrgb_t *ctx, uint16_t color )
 {
+    uint8_t cmd;
     uint16_t pos;
-    uint8_t tmp;
-    uint8_t temp[ 2 ];
+    uint8_t tmp[ 2 ];
+    
+    cmd = MATRIXRGB_CMD_LOAD_IMG;
+    tmp[ 0 ] = color;
+    tmp[ 1 ] = color >> 8;
 
     wait_int_pin( ctx );
+    
     spi_master_select_device( ctx->chip_select );
-    tmp = MATRIXRGB_CMD_LOAD_IMG;
-    spi_master_write( &ctx->spi, &tmp, 1 );
+    spi_master_write( &ctx->spi, &cmd, 1 );
     
     for ( pos = 0; pos < ctx->device_pixel.ram_size; pos++ )
     {
-        temp[ 0 ] = color;
-        temp[ 1 ] = color << 8;
-        spi_master_write( &ctx->spi, temp, 2 );
-        tmp = color >> 8;
-        spi_master_write( &ctx->spi, &tmp, 1 );
-        pattern_delay( ctx->device_pattern_delay );
+        spi_master_write( &ctx->spi, tmp, 2 );
+        Delay_1ms();
     }
-    spi_master_deselect_device( ctx->chip_select ); 
+
+    spi_master_deselect_device( ctx->chip_select );  
+    Delay_1ms();
 }
 
-void matrixrgb_draw_image ( matrixrgb_t *ctx, uint8_t *device_img )
+void matrixrgb_draw_image ( matrixrgb_t *ctx, const 
+uint8_t *device_img )
 {
     uint16_t pos;
+    uint8_t tmp_buf[ 2 ];
     uint8_t tmp;
 
     wait_int_pin( ctx );
@@ -289,13 +291,13 @@ void matrixrgb_draw_image ( matrixrgb_t *ctx, uint8_t *device_img )
 
     for ( pos = 0; pos < ctx->device_pixel.ram_size; pos++ )
     {
-        tmp = device_img[ pos * 2 ];
-        spi_master_write( &ctx->spi, &tmp, 1 );
-        tmp = device_img[ pos * 2 + 1 ];
-        spi_master_write( &ctx->spi, &tmp, 1 );
-        pattern_delay( ctx->device_pattern_delay );
+        tmp_buf[0] = device_img[ pos * 2 ];
+        tmp_buf[1] = device_img[ pos * 2 + 1 ];
+        spi_master_write( &ctx->spi, tmp_buf, 2 );
+        Delay_1ms();
     }
     spi_master_deselect_device( ctx->chip_select );  
+    Delay_1ms();
 }
 
 void matrixrgb_set_font ( matrixrgb_t *ctx, matrixrgb_font_t *font_cfg )
@@ -344,6 +346,7 @@ static void send_command ( matrixrgb_t *ctx, uint8_t cmd, uint8_t arg )
     spi_master_select_device( ctx->chip_select );
     spi_master_write( &ctx->spi, tx_buf, 2 );
     spi_master_deselect_device( ctx->chip_select ); 
+    Delay_1ms();
 }
 
 static void write_char ( matrixrgb_t *ctx, uint16_t ch )
@@ -397,6 +400,7 @@ static void write_char ( matrixrgb_t *ctx, uint16_t ch )
                 if ( temp & mask )
                 {
                     matrixrgb_write_pixel( ctx, x, y, ctx->device_font.color );
+                    Delay_80us();
                 }
 
                 x++;

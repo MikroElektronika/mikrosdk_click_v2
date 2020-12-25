@@ -28,9 +28,6 @@
  */
 
 #include "lighttemp.h"
-// -------------------------------------------------------------- PRIVATE MACRO
-
-#define PWM_PERIOD_ERROR   0
 
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
@@ -40,22 +37,23 @@ void lighttemp_cfg_setup ( lighttemp_cfg_t *cfg )
 
     cfg->scl = HAL_PIN_NC;
     cfg->sda = HAL_PIN_NC;
-    cfg->pwm = HAL_PIN_NC;
+    cfg->pwm1 = HAL_PIN_NC;
+    cfg->pwm2  = HAL_PIN_NC;
     
     // Additional gpio pins
-    cfg->pw2  = HAL_PIN_NC;
     cfg->int_pin = HAL_PIN_NC;
 
     cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
     cfg->i2c_address = 0x4D;
 
-    cfg->dev_pwm_freq = 5000;
+    cfg->dev_pwm_freq = LIGHTTEMP_DEF_FREQ;
 }
 
 LIGHTTEMP_RETVAL lighttemp_init ( lighttemp_t *ctx, lighttemp_cfg_t *cfg )
 {
     i2c_master_config_t i2c_cfg;
-    pwm_config_t pwm_cfg;
+    pwm_config_t pwm1_cfg;
+    pwm_config_t pwm2_cfg;
 
     i2c_master_configure_default( &i2c_cfg );
     i2c_cfg.speed  = cfg->i2c_speed;
@@ -72,14 +70,22 @@ LIGHTTEMP_RETVAL lighttemp_init ( lighttemp_t *ctx, lighttemp_cfg_t *cfg )
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
 
-    pwm_configure_default( &pwm_cfg );
+    pwm_configure_default( &pwm1_cfg );
 
-	pwm_cfg.pin      = cfg->pwm;
-	pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
+    pwm1_cfg.pin      = cfg->pwm1;
+    pwm1_cfg.freq_hz  = cfg->dev_pwm_freq;
 
     ctx->pwm_freq = cfg->dev_pwm_freq;
-    pwm_open( &ctx->pwm, &pwm_cfg );
-    pwm_set_freq( &ctx->pwm, pwm_cfg.freq_hz );
+    pwm_open( &ctx->pwm1, &pwm1_cfg );
+    pwm_set_freq( &ctx->pwm1, pwm1_cfg.freq_hz );
+    
+    pwm_configure_default( &pwm2_cfg );
+    pwm2_cfg.pin      = cfg->pwm2;
+    pwm2_cfg.freq_hz  = cfg->dev_pwm_freq;
+
+    ctx->pwm_freq = cfg->dev_pwm_freq;
+    pwm_open( &ctx->pwm2, &pwm2_cfg );
+    pwm_set_freq( &ctx->pwm2, pwm2_cfg.freq_hz );
     
     // Input pins
 
@@ -112,6 +118,7 @@ uint16_t lighttemp_get_pg_voltage ( lighttemp_t *ctx )
 {
     uint8_t read_reg[ 2 ];
     uint16_t read_data;
+    double res;
 
     i2c_master_read( &ctx->i2c, read_reg, 2 );
 
@@ -121,7 +128,10 @@ uint16_t lighttemp_get_pg_voltage ( lighttemp_t *ctx )
     
     read_data = read_data & 0x0FFF;
     
-    return read_data;
+    res = (double) read_data / 4096.0;
+    res *= 3300.0;
+    
+    return (uint16_t) res;
 }
 
 uint8_t lighttemp_get_interrupt_state ( lighttemp_t *ctx )
@@ -129,25 +139,36 @@ uint8_t lighttemp_get_interrupt_state ( lighttemp_t *ctx )
     return digital_in_read( &ctx->int_pin );
 }
 
-void lighttemp_set_duty_cycle ( lighttemp_t *ctx, float duty_cycle )
+void lighttemp_led1_set_duty_cycle ( lighttemp_t *ctx, float duty_cycle )
 {
-    pwm_set_duty( &ctx->pwm, duty_cycle ); 
+    pwm_set_duty( &ctx->pwm1, duty_cycle ); 
 }
 
-void lighttemp_pwm_stop ( lighttemp_t *ctx )
+void lighttemp_led1_pwm_stop ( lighttemp_t *ctx )
 {
-    pwm_stop( &ctx->pwm ); 
+    pwm_stop( &ctx->pwm1 ); 
 }
 
-void lighttemp_pwm_start ( lighttemp_t *ctx )
+void lighttemp_led1_pwm_start ( lighttemp_t *ctx )
 {
-    pwm_start( &ctx->pwm ); 
+    pwm_start( &ctx->pwm1 ); 
 }
 
-void lighttemp_cs_set_state( lighttemp_t *ctx, uint8_t state )
+void lighttemp_led2_set_duty_cycle ( lighttemp_t *ctx, float duty_cycle )
 {
-    digital_out_write( &ctx->pw2, state );
+    pwm_set_duty( &ctx->pwm2, duty_cycle ); 
 }
+
+void lighttemp_led2_pwm_stop ( lighttemp_t *ctx )
+{
+    pwm_stop( &ctx->pwm2 ); 
+}
+
+void lighttemp_led2_pwm_start ( lighttemp_t *ctx )
+{
+    pwm_start( &ctx->pwm2 ); 
+}
+
 
 // ------------------------------------------------------------------------- END
 

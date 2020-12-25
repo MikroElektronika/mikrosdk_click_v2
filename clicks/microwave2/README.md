@@ -50,9 +50,6 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 - Set pin DA
 > uint8_t microwave2_da_state ( microwave2_t *ctx );
 
-- Check trafic
-> uint8_t microwave2_check_trafic ( microwave2_t *ctx );
-
 ## Examples Description
 
 > This application is an accurate and reliable short to medium range motion detection.
@@ -72,8 +69,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -88,33 +86,13 @@ void application_init ( void )
 
 ### Application Task
 
-> Data sen't from the click board is captured and different actions are applied.
+> Data sent from the click board is captured and different actions are applied.
 
 ```c
 
 void application_task ( void )
 {
-    char temp;
-    char r_dat;
-    uint8_t buf[ 6 ];
-    
-    r_dat = microwave2_generic_single_read( &microwave2 );
-    microwave2_uart_handler( &microwave2, &buf, r_dat );
-
-    temp = microwave2_check_trafic( &microwave2 );
-    
-    if ( temp == MICROWAVE2_MOVING_CLOSER )
-    {
-       log_printf( &logger, "Approaching \r\n" );
-    }
-    if ( temp == MICROWAVE2_STOPPED_MOVING )
-    {
-       log_printf( &logger, "No movesment \r\n");
-    }
-    if ( temp == MICROWAVE2_MOVING_AWAY )
-    {
-       log_printf( &logger, "Moving away \r\n" );
-    }
+    microwave2_process();
 } 
 
 ```

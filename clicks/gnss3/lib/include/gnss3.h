@@ -139,10 +139,7 @@ typedef struct
     // Output pins 
 
     digital_out_t rst;
-
-    // Input pins 
-
-    digital_in_t int_pin;
+    digital_out_t int_pin;
     
     // Modules 
 
@@ -249,7 +246,7 @@ void gnss3_generic_write ( gnss3_t *ctx, char *data_buf, uint16_t len );
  * @param max_len The maximum length of data that can be read.
  * @return Number of reads data.
  */
-int16_t gnss3_generic_read ( gnss3_t *ctx, char *data_buf, uint16_t max_len );
+int32_t gnss3_generic_read ( gnss3_t *ctx, char *data_buf, uint16_t max_len );
 
 /**
  * @brief Generic parser function.

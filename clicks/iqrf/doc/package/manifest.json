@@ -27,5 +27,6 @@
     "short_description": "IQRF Click carries the RF transceiver, operating in the 868/916 MHz frequency.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

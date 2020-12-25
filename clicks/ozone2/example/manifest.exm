@@ -4,5 +4,5 @@
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","mikrocpic"],
     "hw" : ["click","MQ131"],
-    "category" : ["gas"] 
+    "category" : ["Gas"] 
 }

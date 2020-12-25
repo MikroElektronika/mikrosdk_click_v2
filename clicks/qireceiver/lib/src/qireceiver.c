@@ -72,6 +72,7 @@ QIRECEIVER_RETVAL qireceiver_init ( qireceiver_t *ctx, qireceiver_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Output pins 
 
@@ -153,6 +154,7 @@ float qireceiver_read_current ( qireceiver_t *ctx )
     temp_data |= raw_data1[ 0 ];
     result = temp_data * 1.8;
     result /= 4096.0;
+    result *= 1000;
 
     return result;
 }

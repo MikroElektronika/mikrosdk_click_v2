@@ -22,7 +22,7 @@
 
 # Software Support
 
-We provide a library for the T420ma Click 
+We provide a library for the C420mat Click 
 as well as a demo application (example), developed using MikroElektronika 
 [compilers](http://shop.mikroe.com/compilers). 
 The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
@@ -31,25 +31,25 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Library Description
 
-> This library contains API for T420ma Click driver.
+> This library contains API for C420mat Click driver.
 
 #### Standard key functions :
 
 - Config Object Initialization function.
-> void t420ma_cfg_setup ( t420ma_cfg_t *cfg ); 
+> void c420mat_cfg_setup ( c420mat_cfg_t *cfg ); 
  
 - Initialization function.
-> T420MA_RETVAL t420ma_init ( t420ma_t *ctx, t420ma_cfg_t *cfg );
+> C420MAT_RETVAL c420mat_init ( c420mat_t *ctx, c420mat_cfg_t *cfg );
 
 
 
 #### Example key functions :
 
 - This function sets the output of DAC.
-> void t420ma_dac_output ( t420ma_t *ctx, uint16_t value_dac );
+> void c420mat_dac_output ( c420mat_t *ctx, uint16_t value_dac );
  
 - This function sets the output current to selected value.
-> void t420ma_set_i_out ( t420ma_t *ctx, uint8_t i_out );
+> void c420mat_set_i_out ( c420mat_t *ctx, uint8_t i_out );
 
 
 ## Examples Description
@@ -67,7 +67,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    t420ma_cfg_t cfg;
+    c420mat_cfg_t cfg;
 
     //  Logger initialization.
 
@@ -78,9 +78,9 @@ void application_init ( void )
 
     //  Click initialization.
 
-    t420ma_cfg_setup( &cfg );
-    T420MA_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    t420ma_init( &t420ma, &cfg );
+    c420mat_cfg_setup( &cfg );
+    C420MAT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    c420mat_init( &c420mat, &cfg );
 }
   
 ```
@@ -93,9 +93,9 @@ void application_init ( void )
 
 void application_task ( void )
 {
-   t420ma_set_i_out( &t420ma, 56 );                   // sets Iout to 5.6mA
+   c420mat_set_i_out( &c420mat, 56 );                   // sets Iout to 5.6mA
    Delay_ms( 3000 );
-   t420ma_set_i_out( &t420ma, 158 );                  // sets Iout to 15.8mA
+   c420mat_set_i_out( &c420mat, 158 );                  // sets Iout to 15.8mA
    Delay_ms( 3000 );
 }  
 
@@ -108,7 +108,7 @@ The full application code, and ready to use projects can be  installed directly 
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.T420ma
+- Click.C420mat
 
 **Additional notes and informations**
 

@@ -27,5 +27,8 @@
     "short_description": "UT 7-SEG R click carries two SMD ultra thin LED 7-SEG displays and the MAX6969 constant-current LED driver from Maxim Integrated.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.4"
 }
+
+
+

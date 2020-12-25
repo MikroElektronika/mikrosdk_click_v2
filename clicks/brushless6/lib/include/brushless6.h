@@ -50,6 +50,7 @@
  * \{
  */
 #define BRUSHLESS6_MAP_MIKROBUS( cfg, mikrobus ) \
+  cfg.pwm = MIKROBUS( mikrobus, MIKROBUS_PWM ); \
   
 
   //cfg.int_pin = MIKROBUS( mikrobus, MIKROBUS_INT ); 
@@ -69,26 +70,19 @@
  * \defgroup default_freq Default frequency value
  * \{
  */
-#define BRUSHLESS6_DEF_FREQ     20000
+#define BRUSHLESS6_DEF_FREQ     500
 /** \} */
-
-/**
- * \defgroup set_min_max  Set min max
- * \{
- */
-#define BRUSHLESS6_MIN_PWM_DC   2000 
-#define BRUSHLESS6_MAX_PWM_DC   5000 
- /** \} */ 
 
 /**
  * \defgroup speed  Speed
  * \{
  */
-#define BRUSHLESS6_INIT         4855 
-#define BRUSHLESS6_SPEED1       4860 
-#define BRUSHLESS6_SPEED2       4950 
-#define BRUSHLESS6_SPEED3       5000 
-#define BRUSHLESS6_CCW          4650 
+#define BRUSHLESS6_COEF                 1.0 / ( ( 1000000.0 / BRUSHLESS6_DEF_FREQ ) / 0.3048 )  
+#define BRUSHLESS6_MIN_PWM_DC     BRUSHLESS6_COEF * 2000.0
+#define BRUSHLESS6_INIT_DC             BRUSHLESS6_COEF * 4855.0
+#define BRUSHLESS6_1MS_DC              BRUSHLESS6_MIN_PWM_DC / 0.608
+#define BRUSHLESS6_2MS_DC              BRUSHLESS6_1MS_DC * 2.0
+#define BRUSHLESS6_PERIOD               BRUSHLESS6_1MS_DC / 10.0
 /** \} */
 
 /** \} */ // End group macro 
@@ -109,8 +103,7 @@ typedef struct
     pwm_t pwm;
 
     // ctx variable 
-
-    uint16_t pwm_period;
+    
     uint32_t  pwm_freq;
 
 } brushless6_t;

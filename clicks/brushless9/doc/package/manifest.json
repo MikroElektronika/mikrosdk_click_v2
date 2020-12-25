@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM",
+    "category": "Brushless",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Brushless 9 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.brushless9",
+    "product_link": "https://www.mikroe.com/brushless-9-click",
+    "short_description": "Brushless 9 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the TC78B027FTG, a 1-Hall sine-wave PWM controller for three-phase brushless DC motors from Toshiba Semiconductor. It simplifies the motor selection by using only one Hall sensor input that can be used with either a single Hall sensor motor or the more conventional 3 Hall sensor motors.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.3"
+}
+
+
+

@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# SPI ISLOATOR click
+# SPI Isolator click
 
 SPI Isolator click carries the ADuM4154 5kV digital isolator optimized for a serial peripheral interface (SPI).
 
@@ -55,7 +55,8 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
  
-> The click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over SPI interface. 
+> TThe click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over SPI interface.
+> In this example we have used an 8x8 click board connected to a SPI Isolator click board. 
 
 **The demo application is composed of two sections :**
 
@@ -70,55 +71,50 @@ void application_init ( void )
     log_cfg_t log_cfg;
     spiisolator_cfg_t cfg;
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
+    //  Logger initialization.
+
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
+
+    //  Click initialization.
 
     spiisolator_cfg_setup( &cfg );
     SPIISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     spiisolator_init( &spiisolator, &cfg );
+    
+    c8x8_default_cfg( &spiisolator );
 
     Delay_100ms( );
-
-    deg_cel[ 0 ] = 32;
-    deg_cel[ 1 ] = 176;
-    deg_cel[ 2 ] = 67;
-    deg_cel[ 3 ] = 0;
-
-    spiisolator_write_byte( &spiisolator, SPIISOLATOR_PRESSURE3_REG_MEAS_CFG, SPIISOLATOR_PRESSURE3_SPI_CMD_WRITE, SPIISOLATOR_PRESSURE3_BIT_MASK_MEAS_CFG_COEF_RDY_NO_AVB
-                                                                                                     | SPIISOLATOR_PRESSURE3_BIT_MASK_MEAS_CFG_SENSOR_RDY_NO_CMP
-                                                                                                     | SPIISOLATOR_PRESSURE3_BIT_MASK_MEAS_CFG_MEAS_CTRL_IDLE
-                                                                                                     | SPIISOLATOR_PRESSURE3_BIT_MASK_MEAS_CFG_MEAS_CTRL_CNT_PRS_TMP );
 }
   
 ```
 
 ### Application Task
 
-> This is an example which demonstrates the use of SPI Isolator Click board.
-    In this example, we measured pressure and temperature data from the DPS310 sensor on Pressure 3 click board.
-    Results are being sent to the Usart Terminal where you can track their changes.
-    All data logs write on usb uart changes for every 3 sec.
+> Controls an 8x8 click board and displays the steps on UART Terminal.
 
 ```c
 
 void application_task ( void )
 {
-    pressure3_get_coefficients0( );
-    pressure3_get_coefficients1( );
-    spiisolator_get_temperature_pressure( );
+    log_info( &logger, "> Display Character ..." );
+    c8x8_display_byte( &spiisolator, demo_char );
+    Delay_ms( 1000 );
 
-    log_printf( &logger, " Pressure %.2f", pressure );
-    log_printf( &logger, " mbar \r\n" );
-    log_printf( &logger, " -------------------------- \r\n" );
-    log_printf( &logger, " Temperature: %.2f", temperature );
-    log_printf( &logger, " C \r\n" );
-    log_printf( &logger, " ---------------------------\r\n" );
+    log_info( &logger, "> Display String ..." );
+    c8x8_display_string( &spiisolator, &demo_string[ 0 ] );
+    Delay_ms( 1000 );
 
-    Delay_1sec( );
-    Delay_1sec( );
-    Delay_1sec( );
+    log_info( &logger, "> Display Image ON ..." );
+    c8x8_display_image( &spiisolator, &demo_img_on[ 0 ] );
+    Delay_ms( 500 );
+
+    log_info( &logger, "> Display Image OFF ..." );
+    c8x8_display_image( &spiisolator, &demo_img_off[ 0 ] );
+    Delay_ms( 1000 );
 }  
 
 ```

@@ -27,6 +27,7 @@
     "short_description": "This application charge the batery when is empty",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.2"
+    "version": "2.0.0.3"
 }
+
 

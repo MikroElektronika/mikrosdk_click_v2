@@ -34,12 +34,14 @@ static c16x12_abm_t abm_1;
 static c16x12_abm_t abm_2;
 
 
-char demo_text[ 17 ] = 
-{ 'M', 'I', 'K', 'R', 'O', 'E', 'L', 'E', 'K', 'T', 'R', 'O', 'N', 'I', 'K', 'A', 0 };
+char demo_text[ 7 ] = "MikroE";
 uint16_t demo_image_light[ 12 ] = 
 { 0x0000, 0x0666, 0x0CCC, 0x1998, 0x3330, 0x6660, 0x3330, 0x1998, 0x0CCC, 0x0666, 0x0000, 0x0000 };
 uint16_t demo_image_dark[ 12 ]  = 
 { 0xFFFF, 0xF999, 0xF333, 0xE667, 0xCCCF, 0x999F, 0xCCCF, 0xE667, 0xF333, 0xF999, 0xFFFF, 0xFFFF };
+
+char name[] = "16x12";
+
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -84,12 +86,15 @@ void application_init ( void )
     abm_2.loop_begin = C16X12G_ABM_LOOP_BEGIN_T1;
     abm_2.loop_end   = C16X12G_ABM_LOOP_END_T3;
     abm_2.loop_times = C16X12G_ABM_LOOP_FOREVER;
+    
+    c16x12g_config_abm( &c16x12, C16X12G_ABM_NUM_1, &abm_2 );
+    c16x12g_start_abm( &c16x12 );
+    c16x12g_display_text( &c16x12, &name[ 0 ], 5, scroll_speed );
 
     c16x12g_config_abm( &c16x12, C16X12G_ABM_NUM_1, &abm_1 );
     c16x12g_start_abm( &c16x12 );
-    
     c16x12g_display_byte( &c16x12, 'G' );
-    Delay_ms( 11000 );
+    Delay_ms( 5000 );
     
     c16x12g_config_abm( &c16x12, C16X12G_ABM_NUM_1, &abm_2 );
     c16x12g_start_abm( &c16x12 );
@@ -98,6 +103,8 @@ void application_init ( void )
 void application_task ( void )
 {
     uint8_t cnt = 0;
+    
+    c16x12g_display_text( &c16x12, &demo_text[ 0 ], 6, scroll_speed );
 
     c16x12g_clear_display( &c16x12 );
 
@@ -105,20 +112,15 @@ void application_task ( void )
     for ( cnt = 1; cnt <= 12; cnt++ )
     {
         c16x12g_set_led( &c16x12, cnt, cnt, C16X12G_LED_STATE_ON, C16X12G_STOP_SETTINGS );
-        Delay_ms( 200 );
+        Delay_ms( 100 );
     }
-    Delay_ms( 3000 );
-
-    c16x12g_display_byte( &c16x12, 'G' );
-    Delay_ms( 3000 );
+    Delay_ms( 2000 );
 
     c16x12g_display_image( &c16x12, &demo_image_light[ 0 ] );
-    Delay_ms( 3000 );
-    
+    Delay_ms( 2000 );
+     
     c16x12g_display_image( &c16x12, &demo_image_dark[ 0 ] );
-    Delay_ms( 3000 );
-    
-    c16x12g_display_text( &c16x12, &demo_text[ 0 ], 16, scroll_speed );
+    Delay_ms( 2000 );
 }
 
 void main ( void )

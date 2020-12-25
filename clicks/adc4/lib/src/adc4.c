@@ -94,11 +94,11 @@ ADC4_RETVAL adc4_init ( adc4_t *ctx, adc4_cfg_t *cfg )
 
 void adc4_default_cfg ( adc4_t *ctx )
 {
-    adc4_set_config( ctx, ADC4_CH_REG_BASE, ADC4_CH_EN);
-    adc4_set_config( ctx, ADC4_MODE_REG, ADC4_MODE_INT_REF_AND_SING_CYC_EN );
+    adc4_set_config( ctx, ADC4_CH_REG_BASE, ADC4_CH_EN | ADC4_CH_AINPOS_0 | ADC4_CH_AINNEG_REF_N);
+    adc4_set_config( ctx, ADC4_MODE_REG, ADC4_MODE_SING_CYC_EN );
     adc4_set_config( ctx, ADC4_IFACE_MODE_REG, ADC4_IFACE_MODE_CRC_DIS );
     adc4_set_config( ctx, ADC4_GPIO_CONFIG_REG, ADC4_CFG_SYNC_EN );
-    adc4_set_config( ctx, ADC4_SETUP_CONFIGURATION_REG, 0x1320);
+    adc4_set_config( ctx, ADC4_SETUP_CONFIGURATION_REG, 0x1F00);
 }
 
 void adc4_generic_transfer ( adc4_t *ctx, uint8_t *wr_buf, uint16_t wr_len, uint8_t *rd_buf, uint16_t rd_len )

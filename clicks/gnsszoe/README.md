@@ -78,24 +78,19 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
-
-    Delay_ms(100);
-
-
+    
     //  Click initialization.
 
     gnsszoe_cfg_setup( &cfg );
     GNSSZOE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     gnsszoe_init( &gnsszoe, &cfg );
 
-    Delay_ms( 500 );
-
     gnsszoe_module_reset( &gnsszoe );
 
-    Delay_ms( 500 );
+    Delay_ms( 1000 );
 }
   
 ```
@@ -108,7 +103,6 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    //  Task implementation.
     gnsszoe_process(  );
     parser_application( current_parser_buf );
 }

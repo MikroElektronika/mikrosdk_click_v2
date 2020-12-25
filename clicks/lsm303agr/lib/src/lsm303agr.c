@@ -70,6 +70,7 @@ LSM303AGR_RETVAL lsm303agr_init ( lsm303agr_t *ctx, lsm303agr_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Input pins
 
@@ -86,20 +87,50 @@ void lsm303agr_default_cfg ( lsm303agr_t *ctx )
 }
 
 
+void lsm303agr_read_data ( lsm303agr_t* ctx, uint8_t reg_addr, uint8_t *read_buf, uint8_t read_len )
+{
+    uint8_t reg_data = reg_addr;
+    
+    i2c_master_write_then_read( &ctx->i2c, &reg_data, 1, read_buf, read_len ); 
+}
+
+
+void lsm303agr_write_data ( lsm303agr_t* ctx, uint8_t reg_addr, uint8_t *write_buf, uint8_t write_len )
+{
+    uint8_t write_data[ 255 ] = { 0 };
+    
+    write_data[ 0 ] = reg_addr;
+    for ( uint8_t cnt = 1; cnt < write_len + 1; cnt++ )
+    {
+        write_data[ cnt ] = *write_buf;
+        write_buf++;
+    }
+    
+    i2c_master_write( &ctx->i2c, write_data, write_len + 1 );
+}
+
 float lsm303agr_get_acc_axis_x ( lsm303agr_t *ctx )
 {
     int16_t  value;
     float  ret_value;
     uint8_t buff[ 2 ];
+    
     ctx->slave_address = 0x19;
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
 
     buff[0] = lsm303agr_read_reg ( ctx, 0x28 );
     buff[1] = lsm303agr_read_reg ( ctx, 0x29 );
 
-    value = (int16_t)( ( ( buff[ 1 ] & 0xFF ) << 8) | (buff[ 0 ] & 0xFF ) );
+    value = buff[ 1 ];
+    value <<= 8;
+    value |= buff[ 0 ];
     
-    ret_value = ( ( float )( value >> 4 ) * 980.0f + 500.0f) / 1000.0f;
-
+    value >>= 4;
+    
+    ret_value = value * 980.0;
+    ret_value += 500.0;
+    ret_value /= 1000.0;
+    
     return ret_value;
 }
 
@@ -108,14 +139,22 @@ float lsm303agr_get_acc_axis_y ( lsm303agr_t *ctx )
     int16_t  value;
     float  ret_value;
     uint8_t buff[ 2 ];
+    
     ctx->slave_address = 0x19;
-
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
+    
     buff[0] = lsm303agr_read_reg ( ctx, 0x2A );
     buff[1] = lsm303agr_read_reg ( ctx, 0x2B );
 
-    value = (int16_t)( ( ( buff[ 1 ] & 0xFF ) << 8 ) | ( buff[ 0 ] & 0xFF));
+    value = buff[ 1 ];
+    value <<= 8;
+    value |= buff[ 0 ];
     
-    ret_value = ((float)( value >> 4 ) * 980.0f + 500.0f) / 1000.0f;
+    value >>= 4;
+    
+    ret_value = value * 980.0;
+    ret_value += 500.0;
+    ret_value /= 1000.0;
     
     return ret_value;
 }
@@ -125,16 +164,23 @@ float lsm303agr_get_acc_axis_z ( lsm303agr_t *ctx )
     int16_t  value;
     float  ret_value;
     uint8_t buff[2];
+    
     ctx->slave_address = 0x19;
-
-
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
+    
     buff[0] = lsm303agr_read_reg ( ctx, 0x2C );
     buff[1] = lsm303agr_read_reg ( ctx, 0x2D );
 
-    value = (int16_t)( ( ( buff[ 1 ] & 0xFF ) << 8) | (buff[ 0 ] & 0xFF));
+    value = buff[ 1 ];
+    value <<= 8;
+    value |= buff[ 0 ];
     
-    ret_value = ((float)( value >> 4 ) * 980.0f + 500.0f) / 1000.0f;    
-
+    value >>= 4;
+    
+    ret_value = value * 980.0;
+    ret_value += 500.0;
+    ret_value /= 1000.0;
+    
     return ret_value;
 }
 
@@ -144,15 +190,19 @@ float lsm303agr_get_mag_axis_x ( lsm303agr_t *ctx )
     float  ret_value;
     volatile uint8_t buff[2];
     float sensitivity = 1.5;
+    
     ctx->slave_address = 0x1E;
-
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
+    
     buff[0] = lsm303agr_read_reg ( ctx, 0x68 );
     buff[1] = lsm303agr_read_reg ( ctx, 0x69 );
 
-    value = (int16_t)(((buff[1] & 0xff) << 8) | (buff[0] & 0xff));
+    value = buff[ 1 ];
+    value <<= 8;
+    value |= buff[ 0 ];
     
-    ret_value = (float) ((int32_t)value) * sensitivity;
-
+    ret_value = value * sensitivity;
+    
     return ret_value;
 }
 
@@ -162,15 +212,19 @@ float lsm303agr_get_mag_axis_y ( lsm303agr_t *ctx )
     volatile float  ret_value;
     uint8_t buff[2];
     float sensitivity = 1.5;
+    
     ctx->slave_address = 0x1E;
-
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
+    
     buff[0] = lsm303agr_read_reg ( ctx, 0x6A );
     buff[1] = lsm303agr_read_reg ( ctx, 0x6B );
 
-    value = (int16_t)(((buff[1] & 0xff) << 8) | (buff[0] & 0xff));
+    value = buff[ 1 ];
+    value <<= 8;
+    value |= buff[ 0 ];
     
-    ret_value = (float) ((int32_t)value)* sensitivity; 
-
+    ret_value = value * sensitivity;
+    
     return ret_value;
 }
 
@@ -180,16 +234,19 @@ float lsm303agr_get_mag_axis_z (  lsm303agr_t *ctx )
     float  ret_value;
     uint8_t buff[2];
     float sensitivity = 1.5;
+    
     ctx->slave_address = 0x1E;
-
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
+    
     buff[0] = lsm303agr_read_reg ( ctx, 0x6C );
     buff[1] = lsm303agr_read_reg ( ctx, 0x6D );
 
-    value = (int16_t)(((buff[1] & 0xff) << 8) | (buff[0] & 0xff));
+    value = buff[ 1 ];
+    value <<= 8;
+    value |= buff[ 0 ];
     
+    ret_value = value * sensitivity;
     
-    ret_value = (float) ((int32_t)value) * sensitivity;
-
     return ret_value;
 }
 
@@ -217,12 +274,14 @@ void lsm303agr_write_reg ( lsm303agr_t *ctx, uint8_t reg, uint8_t wr_reg_value)
 void lsm303agr_magnetometer_init ( lsm303agr_t *ctx )
 {
     ctx->slave_address = 0x1E;
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     lsm303agr_write_reg( ctx, 0x60, 0x00);;
 }
 
 void lsm303agr_accelerometer_init ( lsm303agr_t *ctx )
 {
     ctx->slave_address = 0x19;
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     lsm303agr_write_reg ( ctx, 0x20, 0x57);
 }
 

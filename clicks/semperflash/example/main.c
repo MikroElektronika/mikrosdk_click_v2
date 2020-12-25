@@ -64,7 +64,7 @@ void id_check ( )
     log_printf( &logger, "DEVICE ID: 0x" );
     for ( cnt = 0; cnt < SEMPERFLASH_DEVICE_ID_BYTE_SIZE; cnt++ )
     {
-        log_printf( &logger, "%x", id_data[ cnt ] );
+        log_printf( &logger, "%x", ( uint16_t )id_data[ cnt ] );
     }
     log_printf( &logger, "\r\n\r\n" );
     txt_flag = COMPANY_FLAG;
@@ -81,7 +81,7 @@ void application_init ( )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
     Delay_ms( 100 );
@@ -91,7 +91,9 @@ void application_init ( )
     semperflash_cfg_setup( &cfg );
     SEMPERFLASH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     semperflash_init( &semperflash, &cfg );
+    
     semperflash_default_cfg( &semperflash );
+    
     id_check( );
     Delay_ms( 500 );
 }

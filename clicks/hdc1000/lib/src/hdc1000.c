@@ -75,13 +75,14 @@ HDC1000_RETVAL hdc1000_init ( hdc1000_t *ctx, hdc1000_cfg_t *cfg )
 
     ctx->slave_address = cfg->i2c_address;
 
-    if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) != I2C_MASTER_SUCCESS )
+    if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_ERROR )
     {
         return HDC1000_INIT_ERROR;
     }
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Input pins
 
@@ -119,7 +120,10 @@ void hdc1000_generic_write ( hdc1000_t *ctx, uint8_t reg, uint8_t *data_buf, uin
 
 void hdc1000_generic_read ( hdc1000_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
-    i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, len );
+    i2c_master_write( &ctx->i2c, &reg, 1 );
+    Delay_10ms();
+    Delay_10ms();
+    i2c_master_read( &ctx->i2c, data_buf, len );
 }
 
 float hdc1000_get_temperature_data ( hdc1000_t *ctx )

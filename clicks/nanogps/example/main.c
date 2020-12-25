@@ -30,7 +30,7 @@
 
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 500
-#define PROCESS_PARSER_BUFFER_SIZE 1000
+#define PROCESS_PARSER_BUFFER_SIZE 500
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -47,7 +47,7 @@ static void nanogps_process ( void )
     uint16_t rsp_cnt = 0;
     
     char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
-    uint16_t check_buf_cnt;    //kazi kaci da zabada ako je uint8_t
+    uint16_t check_buf_cnt;
     uint8_t process_cnt = PROCESS_COUNTER;
     
     // Clear parser buffer
@@ -113,7 +113,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 4800;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 

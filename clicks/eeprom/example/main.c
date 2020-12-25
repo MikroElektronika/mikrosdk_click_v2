@@ -48,7 +48,7 @@ void application_init( void )
     //  Logger initialization.
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 }
@@ -78,7 +78,7 @@ void application_task( void )
 
     for (cnt = EEPROM_BLOCK_ADDR_START; cnt < EEPROM_NBYTES_PAGE; cnt++)
     {
-        log_printf( &logger, " %d", read_buff[ cnt ] );
+        log_printf( &logger, " %u", ( uint16_t )read_buff[ cnt ] );
         Delay_ms( 300 );
     }
     log_printf( &logger, "\r\n" );

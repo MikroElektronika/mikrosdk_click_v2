@@ -1,8 +1,0 @@
-{
-    "name": "9 DOF 2 Click",
-    "description": "9DOF 2 Click is a compact add-on board for applications which require lowest power motion tracking and magnetometer functionality.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","ICM-20948 IC"],
-    "category" : ["Motion"] 
-}

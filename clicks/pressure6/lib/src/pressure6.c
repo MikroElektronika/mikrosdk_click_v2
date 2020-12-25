@@ -96,6 +96,7 @@ PRESSURE6_RETVAL pressure6_init ( pressure6_t *ctx, pressure6_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Input pins
 
@@ -140,18 +141,18 @@ uint16_t pressure6_get_pressure ( pressure6_t *ctx )
     uint32_t pressure_counts = 0;
     uint32_t pressure_value = 0;
 
-    uint8_t tx_buf[ 1 ];
-    uint8_t rx_buf[ 3 ];
+    uint8_t write_reg[ 1 ];
+    uint8_t read_reg[ 3 ];
 
-    tx_buf[ 0 ] = PRESSURE6_REG_PRESSURE_DATA;
+    write_reg[ 0 ] = 0x1A;
+    
+    i2c_master_write_then_read( &ctx->i2c, write_reg, 1, read_reg, 3 );
 
-    i2c_master_write_then_read( &ctx->i2c, tx_buf, 1, rx_buf, 3 );
-
-    pressure_counts = tx_buf[ 0 ];
+    pressure_counts = read_reg[ 0 ];
     pressure_counts = pressure_counts << 8;
-    pressure_counts |= tx_buf[ 1 ];
+    pressure_counts |= read_reg[ 1 ];
     pressure_counts = pressure_counts << 8;
-    pressure_counts |= tx_buf[ 2 ];
+    pressure_counts |= read_reg[ 2 ];
     pressure_counts >>= 2;
 
     pressure_value = pressure_counts / 2048;

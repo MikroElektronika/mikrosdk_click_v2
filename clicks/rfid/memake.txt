@@ -1,7 +1,0 @@
-type: subdirs
-project: rfid
-
-subdirs: {
-    lib
-    example
-}

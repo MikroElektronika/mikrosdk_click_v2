@@ -1,0 +1,40 @@
+type: library
+
+target: lib_buttonlibrary
+
+alias: Click.ButtonLibrary
+
+sources: {
+    src/buttonlibrary.c
+}
+
+headers: {
+    include/buttonlibrary.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/buttonlibrary.h) dst(include/buttonlibrary.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

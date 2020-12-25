@@ -28,18 +28,18 @@
  * \brief This file contains API for Ammonia Click driver.
  *
  * \addtogroup ammonia Ammonia Click Driver
- * @{
+ * \{
  */
 // ----------------------------------------------------------------------------
 
 #ifndef AMMONIA_H
 #define AMMONIA_H
 
-#include "drv_digital_out.h"
+#include "drv_analog_in.h"
 #include "drv_digital_in.h"
 #include "drv_spi_master.h"
 
-// -------------------------------------------------------------- PUBLIC MACROS 
+// -------------------------------------------------------------- PUBLIC MACROS
 /**
  * \defgroup macros Macros
  * \{
@@ -49,34 +49,23 @@
  * \defgroup map_mikrobus MikroBUS
  * \{
  */
-
 #define AMMONIA_MAP_MIKROBUS( cfg, mikrobus ) \
-   cfg.mosi = MIKROBUS( mikrobus, MIKROBUS_MOSI ); \
    cfg.miso = MIKROBUS( mikrobus, MIKROBUS_MISO ); \
+   cfg.mosi = MIKROBUS( mikrobus, MIKROBUS_MOSI ); \
    cfg.sck  = MIKROBUS( mikrobus, MIKROBUS_SCK ); \
    cfg.cs   = MIKROBUS( mikrobus, MIKROBUS_CS ); \
-   cfg.pwm  = MIKROBUS( mikrobus, MIKROBUS_PWM )
+   cfg.an   = MIKROBUS( mikrobus, MIKROBUS_AN )
 /** \} */
 
 /**
  * \defgroup error_code Error Code
  * \{
  */
-#define AMMONIA_RETVAL  uint8_t
-
-#define AMMONIA_OK           0x00
-#define AMMONIA_INIT_ERROR   0xFF
+#define AMMONIA_OK            0
+#define AMMONIA_INIT_ERROR  (-1)
 /** \} */
 
-/**
- * \defgroup heater_state  Heater State
- * \{
- */
-#define AMMONIA_HEATER_ON   1
-#define AMMONIA_HEATER_OFF  0
-/** \} */
-
-/** \} */ // End group macro 
+/** \} */ // End group macro
 // --------------------------------------------------------------- PUBLIC TYPES
 /**
  * \defgroup type Types
@@ -84,23 +73,33 @@
  */
 
 /**
+ * @brief Click AD conversion type selectors.
+ */
+typedef enum
+{
+    AMMONIA_ADC_SEL_AN,
+    AMMONIA_ADC_SEL_SPI
+
+} ammonia_adc_sel_t;
+
+/**
  * @brief Click ctx object definition.
  */
 typedef struct
 {
-    // Output pins 
+    // Input pins objects
 
-    digital_out_t cs;
-    digital_out_t pwm;
-
-    // Input pins 
-
+    analog_in_t an;
     digital_in_t miso;
-    
-    // Modules 
+
+    // Module object
 
     spi_master_t spi;
     pin_name_t chip_select;
+
+    // ADC selection
+
+    ammonia_adc_sel_t adc_sel;
 
 } ammonia_t;
 
@@ -109,32 +108,40 @@ typedef struct
  */
 typedef struct
 {
-    // Communication gpio pins 
+    // Communication gpio pins
 
     pin_name_t miso;
     pin_name_t mosi;
     pin_name_t sck;
     pin_name_t cs;
 
-    // Additional gpio pins 
+    // Additional gpio pins
 
-    pin_name_t pwm;
+    pin_name_t an;
 
-    // static variable 
+    // SPI settings
 
     uint32_t spi_speed;
-    spi_master_mode_t   spi_mode;
-    spi_master_chip_select_polarity_t cs_polarity;  
+    spi_master_mode_t spi_mode;
+    spi_master_chip_select_polarity_t cs_polarity;
+
+    // ADC settings
+
+    analog_in_resolution_t resolution;
+    float vref;
+
+    // ADC selection
+
+    ammonia_adc_sel_t adc_sel;
 
 } ammonia_cfg_t;
 
-/** \} */ // End types group
 // ----------------------------------------------- PUBLIC FUNCTION DECLARATIONS
-
 /**
  * \defgroup public_function Public function
  * \{
  */
+
 #ifdef __cplusplus
 extern "C"{
 #endif
@@ -146,59 +153,54 @@ extern "C"{
  *
  * @description This function initializes click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
+ *       Be sure that the ADC selection is properly selected.
  */
 void ammonia_cfg_setup ( ammonia_cfg_t *cfg );
 
 /**
  * @brief Initialization function.
- * 
- * @param ctx Click object.
- * @param cfg Click configuration structure.
- * 
+ *
+ * @param ctx  Click object.
+ * @param cfg  Click configuration structure.
+ * @return    0  - Ok,
+ *          (-1) - Error.
+ *
  * @description This function initializes all necessary pins and peripherals used for this click.
+ * @note The ADC selection should be set before call this function.
  */
-AMMONIA_RETVAL ammonia_init ( ammonia_t *ctx, ammonia_cfg_t *cfg );
+err_t ammonia_init ( ammonia_t *ctx, ammonia_cfg_t *cfg );
 
 /**
- * @brief Generic transfer function.
+ * @brief Measurement Voltage Read function.
  *
- * @param ctx          Click object.
- * @param wr_buf       Write data buffer
- * @param wr_len       Number of byte in write data buffer
- * @param rd_buf       Read data buffer
- * @param rd_len       Number of byte in read data buffer
+ * @param ctx  Click object.
+ * @param data_out  Output voltage value [V].
+ * @return    0  - Ok,
+ *          (-1) - Error.
  *
- * @description Generic SPI transfer, for sending and receiving packages
+ * @description This function reads the level of the output measurement voltage.
  */
-void ammonia_generic_transfer ( ammonia_t *ctx, uint8_t *wr_buf, uint16_t wr_len, uint8_t *rd_buf,  uint16_t rd_len );
+err_t ammonia_read_signal_voltage ( ammonia_t *ctx, float *data_out );
 
 /**
- * @brief Sensor heater function
+ * @brief Measurement Read function.
  *
- * @param ctx    Click object.
- * @param state  8-bit value that enables or disables heater
+ * @param ctx  Click object.
+ * @param data_out  Output measurement level [ppm].
+ * @return    0  - Ok,
+ *          (-1) - Error.
  *
- * Function is used to turn the heater on or off.
-**/
-void ammonia_heater ( ammonia_t *ctx, uint8_t state );
-
-/**
- * @brief Read data function
- *
- * @param ctx          Click object.
- * 
- * @returns Function returns 32-bit ADC value
- *
- * Function is used to read ADC value.
-**/
-uint32_t ammonia_data_read ( ammonia_t *ctx );
+ * @description This function reads the level of the measurement signal voltage and calculates
+ * this value to ppm in the range from 5 to 200 ppm.
+ */
+err_t ammonia_read_measurement ( ammonia_t *ctx, uint16_t *data_out );
 
 #ifdef __cplusplus
 }
 #endif
-#endif  // _AMMONIA_H_
+#endif  // AMMONIA_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
-/*! @} */
-// ------------------------------------------------------------------------- END
+/** \} */ // End click Driver group
+
+// ------------------------------------------------------------------------ END

@@ -29,27 +29,13 @@
 
 #include "c2x20wamp.h"
 
-// ------------------------------------------------------------- PRIVATE MACROS 
-
-
-
-// ---------------------------------------------- PRIVATE FUNCTION DECLARATIONS 
-
-// Check states of AD1 pin function
-uint8_t dev_check_ad1 ( c2x20wamp_t *ctx );
-
-// Check states of AD2 pin function
-uint8_t dev_check_ad2 ( c2x20wamp_t *ctx );
-
-// ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
-
 void c2x20wamp_cfg_setup ( c2x20wamp_cfg_t *cfg )
 {
     // Communication gpio pins 
 
     cfg->scl = HAL_PIN_NC;
     cfg->sda = HAL_PIN_NC;
-    
+
     // Additional gpio pins
 
     cfg->shdn = HAL_PIN_NC;
@@ -57,8 +43,8 @@ void c2x20wamp_cfg_setup ( c2x20wamp_cfg_t *cfg )
     cfg->addr1 = HAL_PIN_NC;
     cfg->addr2 = HAL_PIN_NC;
 
-    cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
-    cfg->i2c_address = C2X20WAMP_I2C_ADDRESS;
+    cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD;
+    cfg->i2c_address = C2X20WAMP_I2C_ADDRESS | C2X20WAMP_ADDRESS_1 | C2X20WAMP_ADDRESS_2;
 }
 
 C2X20WAMP_RETVAL c2x20wamp_init ( c2x20wamp_t *ctx, c2x20wamp_cfg_t *cfg )
@@ -79,36 +65,27 @@ C2X20WAMP_RETVAL c2x20wamp_init ( c2x20wamp_t *ctx, c2x20wamp_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Output pins 
 
     digital_out_init( &ctx->shdn, cfg->shdn );
     digital_out_init( &ctx->mute, cfg->mute );
 
-    // Input pins
+    digital_out_init( &ctx->addr1, cfg->addr1 );
+    digital_out_init( &ctx->addr2, cfg->addr2 );
 
-    digital_in_init( &ctx->addr1, cfg->addr1 );
-    digital_in_init( &ctx->addr2, cfg->addr2 );
+    digital_out_high( &ctx->addr1 );
+    digital_out_high( &ctx->addr2 );
 
     return C2X20WAMP_OK;
 }
 
 void c2x20wamp_generic_write ( c2x20wamp_t *ctx, uint8_t data_buf )
 {
-    uint8_t tx_buf[ 1 ];
-    
-    if ( dev_check_ad1( ctx ) )
-    {
-        ctx->slave_address |= C2X20WAMP_ADDRESS_1;
-    }
+    uint8_t send_data = data_buf;
 
-    if ( dev_check_ad2(ctx) )
-    {
-        ctx->slave_address |= C2X20WAMP_ADDRESS_2;
-    }
-    
-    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
-    i2c_master_write( &ctx->i2c, &data_buf, 1 );     
+    i2c_master_write( &ctx->i2c, &send_data, 1 ); 
 }
 
 void c2x20wamp_mode_play ( c2x20wamp_t *ctx )
@@ -133,9 +110,7 @@ void c2x20wamp_enable ( c2x20wamp_t *ctx )
 
 void c2x20wamp_set_volume ( c2x20wamp_t *ctx, uint8_t volume )
 {
-    volume &= C2X20WAMP_6_BIT_VALUE;
-    
-    c2x20wamp_generic_write( ctx, volume );
+    c2x20wamp_generic_write( ctx, volume & C2X20WAMP_6_BIT_VALUE );
 }
 
 void c2x20wamp_volume_up ( c2x20wamp_t *ctx )
@@ -156,21 +131,7 @@ void c2x20wamp_filterless_modulation ( c2x20wamp_t *ctx )
 
 void c2x20wamp_classic_pwm_modulation ( c2x20wamp_t *ctx )
 {
-    c2x20wamp_generic_write( ctx, C2X20WAMP_CMD_CLASSIC_PWM_MODULATION );    
+    c2x20wamp_generic_write( ctx, C2X20WAMP_CMD_CLASSIC_PWM_MODULATION );
 }
 
-// ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
-
-
-uint8_t dev_check_ad1( c2x20wamp_t *ctx )
-{
-    return digital_in_read( &ctx->addr1 );
-}
-
-uint8_t dev_check_ad2( c2x20wamp_t *ctx )
-{
-    return digital_in_read( &ctx->addr2 );
-}
-
-// ------------------------------------------------------------------------- END
-
+// ------------------------------------------------------------------------ END

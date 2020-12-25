@@ -27,5 +27,8 @@
     "short_description": "Balancer 3 Click is overvoltage protection device for 2-series cell lithium-ion battery packs that incorporates a high-accuracy precision overvoltage detection circuit and automatic cell imbalance correction.",
     "supported_compiler": "mikroC",
     "type": "Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.3"
 }
+
+
+

@@ -25,8 +25,12 @@
     "name": "mikroe.click.charger9",
     "product_link": "https://www.mikroe.com/charger-9-click",
     "short_description": "Charger 9 click is a Li-Ion (Li+, Li-Po) battery charger, capable of charging one, two or three battery cells.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2831
+    ],
+    "version": "2.0.0.2"
 }
 

@@ -30,9 +30,6 @@
 static accel14_t accel14;
 static log_t logger;
 
-accel14_accel_t accel_data;
-uint8_t data_ready_flag;
-
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
@@ -55,11 +52,11 @@ void application_init ( void )
     accel14_init( &accel14, &cfg );
 
     Delay_ms( 100 );
-    
+
     log_printf( &logger, "   Driver init done   \r\n" );
     log_printf( &logger, "--------------------- \r\n" );
     log_printf( &logger, " Communication check  \r\n" );
-    
+
     if ( accel14_check_communication( &accel14 ) == ACCEL14_CHECK_ID_SUCCESS )
     {
         log_printf( &logger, "       SUCCESS        \r\n" );
@@ -72,21 +69,24 @@ void application_init ( void )
         log_printf( &logger, "--------------------- \r\n" );
         for ( ; ; );
     }
-    
+
     log_printf( &logger, " Set default config.  \r\n" );
     log_printf( &logger, "--------------------- \r\n" );
     accel14_default_cfg( &accel14 );
     Delay_ms( 100 );
-    
+
     log_printf( &logger, "  Acceleration data:  \r\n" );
     log_printf( &logger, "--------------------- \r\n" );
 }
 
 void application_task ( void )
 {
+    accel14_accel_t accel_data;
+    uint8_t data_ready_flag;
+
     data_ready_flag = accel14_check_accel_data_ready( &accel14 );
     Delay_ms( 10 );
-    
+
     if ( data_ready_flag == ACCEL14_NEW_DATA_AVAILABLE )
     {
         accel14_get_data ( &accel14, &accel_data );

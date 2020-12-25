@@ -1,5 +1,5 @@
 {
-    "name": "Microwave Click",
+    "name": "MQ Sensors Click",
     "description": "This click group supports all MQ sensors in click form.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","mikrocpic"],

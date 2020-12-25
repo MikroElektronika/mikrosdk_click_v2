@@ -3,6 +3,6 @@
     "description": "Flash 3 Click is a mikroBUS add-on board for adding more Flash Memory to your target board microcontroller. It carries an ISSI IS25LP128 IC with 128 Mbit capacity.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click",ISSI IS25LP128 IC"],
+    "hw" : ["click","ISSI IS25LP128 IC"],
     "category" : ["FLASH"] 
 }

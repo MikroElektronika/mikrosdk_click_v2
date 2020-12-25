@@ -112,8 +112,6 @@ void application_init ( void )
 void application_task ( void )
 {
     dac4_channel_report( );
-
-    Delay_ms( 3000 );
 } 
 
 ```

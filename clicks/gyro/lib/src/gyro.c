@@ -65,10 +65,12 @@ GYRO_RETVAL gyro_init ( gyro_t *ctx, gyro_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     // Output pins 
 
     digital_out_init( &ctx->rst, cfg->rst );
+    digital_out_high( &ctx->rst );
 
     // Input pins
 
@@ -89,18 +91,18 @@ void gyro_default_cfg ( gyro_t *ctx )
 void gyro_write_data ( gyro_t *ctx, uint8_t address, uint8_t write_command )
 {
     uint8_t tx_buf[ 2 ];
-    
+
     tx_buf[ 0 ] = address;
     tx_buf[ 1 ] = write_command;
 
 
-    i2c_master_write( &ctx->i2c, tx_buf, 2 );      
+    i2c_master_write( &ctx->i2c, tx_buf, 2 );
 }
 
 uint8_t gyro_read_data ( gyro_t *ctx, uint8_t address )
 {
     uint8_t tx_buf;
-    
+
     i2c_master_write_then_read( &ctx->i2c, &address, 1, &tx_buf, 1 );
 
     return tx_buf;
@@ -128,5 +130,5 @@ void gyro_read_gyro ( gyro_t *ctx, int16_t *gyro_x, int16_t *gyro_y, int16_t *gy
     *gyro_z = gyro_get_axis( ctx, GYRO_L3GD20_REGISTER_OUT_Z_L );
 }
 
-// ------------------------------------------------------------------------- END
+// ------------------------------------------------------------------------ END
 

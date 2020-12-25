@@ -108,9 +108,9 @@ void application_task ( void )
 
     pwrmeter2_get_data( &pwrmeter2, &voltage_res, &current_res, &power_res );
 
-    log_printf( &logger, "U = %d mV \r\n", voltage_res );
-    log_printf( &logger, "I = %d mV \r\n", current_res );
-    log_printf( &logger, "P = %u mV \r\n", power_res );
+    log_printf( &logger, "U = %ld mV \r\n", voltage_res );
+    log_printf( &logger, "I = %ld mV \r\n", current_res );
+    log_printf( &logger, "P = %lu mV \r\n", power_res );
 
     Delay_ms( 500 );
 }
