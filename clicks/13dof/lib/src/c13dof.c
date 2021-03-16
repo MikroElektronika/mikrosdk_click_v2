@@ -117,7 +117,7 @@ void c13dof_cfg_setup ( c13dof_cfg_t *cfg )
 
 C13DOF_RETVAL c13dof_init ( c13dof_t *ctx, c13dof_cfg_t *cfg )
 {
-     i2c_master_config_t i2c_cfg;
+    i2c_master_config_t i2c_cfg;
 
     i2c_master_configure_default( &i2c_cfg );
     i2c_cfg.speed  = cfg->i2c_speed;
@@ -169,6 +169,8 @@ void c13dof_default_cfg ( c13dof_t *ctx )
                                C13DOF_BME680_FILTER_SEL |
                                C13DOF_BME680_GAS_SENSOR_SEL );
     bme680_set_sensor_mode( ctx );
+    
+    c13dof_bme680_get_temperature( ctx ); // dummy read
 }
 
 void c13dof_bme680_write_byte ( c13dof_t *ctx, uint8_t reg_address, uint8_t write_data )

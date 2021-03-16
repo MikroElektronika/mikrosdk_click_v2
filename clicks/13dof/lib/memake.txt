@@ -2,7 +2,7 @@ type: library
 
 target: lib_c13dof
 
-alias: Click.c13DOF
+alias: Click.13DOF
 
 sources: {
     src/c13dof.c

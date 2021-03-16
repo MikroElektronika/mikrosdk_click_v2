@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "LED Matrix",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,10 +25,16 @@
     "name": "mikroe.click.c16x12",
     "product_link": "https://www.mikroe.com/16x12-g-click",
     "short_description": "16x12 G click carries a 16x12 LED display and the IS31FL3733 matrix driver. The click is designed to run on either 3.3V or 5V power supply.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.3"
+    "_type": "mirkoSDK Library",
+    "related_projects":[2162],
+    "version": "2.0.0.7"
 }
+
+
+
+
 
 
 

@@ -6,7 +6,7 @@
 13DOF Click is an advanced 13-axis motion tracking Click board™, which utilizes three different sensor ICs onboard: BME680, a digital gas, humidity, pressure and temperature sensor and BMM150, a geomagnetic sensor and a BMI088, small, versatile 6DoF sensor module. All integrated sensors ICs are made by Bosch Sensortec, featuring the state-of-the-art sensor technology processes, in order to fulfill the requirements for immersive gaming and navigation applications, which require highly accurate sensor data fusion.>
 
 <p align="center">
-  <img src="http://download.mikroe.com/images/click_for_ide/13dof_click.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/13dof_click.png" height=300px>
 </p>
 
 [click Product page](<https://www.mikroe.com/13dof-click>)
@@ -25,8 +25,8 @@
 
 We provide a library for the c13DOF Click 
 as well as a demo application (example), developed using MikroElektronika 
-[compilers](http://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
+[compilers](https://shop.mikroe.com/compilers). 
+The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
 
 Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
 
@@ -59,13 +59,16 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This is a example displays values registered by sensors on click board.
+> This example displays values registered by sensors on click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initialization driver enables - BME680, BMI088 and BMM150 sensor.
+> Initialization driver enables -
+> BME680 Low power gas, pressure, temperature & humidity sensor, 
+> BMI088 6-axis Motion Tracking Sensor and
+> BMM150 Geomagnetic Sensor, also write log.
 
 ```c
 
@@ -76,10 +79,11 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.baud = 115200;
+    log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- 13DOF  Click ----" );
+    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
 
@@ -94,14 +98,19 @@ void application_init ( void )
 ### Application Task
 
 > This is a example which demonstrates the use of 13DOF Click board.
-> Displays temperature in degrees Celsius , humidity data, pressure and gas resistance data from the BME680 sensor.
+> Measures and display temperature in degrees Celsius [ C ], humidity data [ % ], 
+> pressure [ mbar ] and gas resistance data from the BME680 sensor.
+> Measures and display Accel and Gyro data coordinates values 
+> for X-axis, Y-axis and Z-axis from the BMI088 sensor.
+> Measures and display Geomagnetic data coordinates values for 
+> X-axis, Y-axis and Z-axis from the BMM150 sensor.
+> Results are being sent to the Usart Terminal where you can track their changes.
+> All data logs write on usb uart changes for each second.
 
 ```c
 
 void application_task ( void )
 {
-    //  Task implementation.
-
     temperature = c13dof_bme680_get_temperature( &c13dof );
 
     log_printf( &logger, "----------------------------------------------------------\n");
@@ -111,10 +120,10 @@ void application_task ( void )
     log_printf( &logger, "Humidity : %.2f %% \r\n", humidity );
 
     pressure = c13dof_bme680_get_pressure( &c13dof );
-    log_printf( &logger, "Pressure : %f mbar \r\n", pressure );
+    log_printf( &logger, "Pressure : %.2f mbar \r\n", pressure );
 
     gas_res = c13dof_bme680_get_gas_resistance( &c13dof );
-    log_printf( &logger, "Gas Resistance : %u \r\n", gas_res );
+    log_printf( &logger, "Gas Resistance : %ld \r\n", gas_res );
     
     ready_check = c13dof_bmm150_check_ready( &c13dof );
 
@@ -123,12 +132,10 @@ void application_task ( void )
         ready_check = c13dof_bmm150_check_ready( &c13dof );
     }
     
-
     c13dof_bmi088_read_accel( &c13dof, &accel_x, &accel_y, &accel_z );
     c13dof_bmi088_read_gyro( &c13dof, &gyro_x, &gyro_y, &gyro_z );
     c13dof_bmm150_read_geo_mag_data( &c13dof, &mag_x, &mag_y, &mag_z, &r_hall );
-
-
+    
     log_printf( &logger, "Accel X : %d ", accel_x );
     log_printf( &logger, " Y : %d ", accel_y );
     log_printf( &logger, " Z : %d \r\n", accel_z );
@@ -141,7 +148,7 @@ void application_task ( void )
     log_printf( &logger, " Y : %d ", mag_y );
     log_printf( &logger, " Z : %d \r\n", mag_z );
 
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
 }
 
 ```
@@ -158,12 +165,12 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](http://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
+[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
+[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 
 terminal available in all Mikroelektronika 
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application 
+[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
 of your choice, can be used to read the message.
 
 
