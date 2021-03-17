@@ -1,0 +1,8 @@
+{
+    "name": "BUCK Click",
+    "description": "BUCK click is a buck switching regulator that accepts a wide input voltage range of up to 40V and steps it down to 3.3V or 5V.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","LT3976"],
+    "category" : ["Buck"] 
+}

@@ -3,26 +3,17 @@
  * \brief Buck 3 Click example
  * 
  * # Description
- * Demo application checks the status of the device and the voltage.
+ * This example demonstrates the use of Buck 3 click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Configuring clicks and log objects.
- * Settings the click in the default configuration.
+ * Initializes the driver and configures the click board.
  * 
  * ## Application Task  
- * Sequentialy, each one second, checks the status of the 
- * Buck 3 Click and if the overvoltage detected or device is under thermal shutdown 
- * it logs a message on the USBUART.
- * 
- * *note:* 
- * Open Drain Power Good Indicator, it is asserted low if output voltage 
- * is out of PGOOD threshold, 
- * Overvoltage or if the device is under thermal shutdown, 
- * EN shutdown or during soft start.
- * Once the FB pin voltage is between 93% and 107% of the 
- * internal reference voltage (VREF) the PGOOD is pulled high.
+ * Checks the PGD pin state which signalize the undervoltage or overvoltage fault or
+ * the thermal shutdown condition. 
+ * If there's any of the above faults detected it logs a desired message on USB UART.
  * 
  * \author Katarina Perendic
  *
@@ -49,6 +40,7 @@ void application_init ( void )
 
     log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -60,6 +52,7 @@ void application_init ( void )
 
     buck3_default_cfg( &buck3 );
     log_info( &logger, "---- Buck 3 is activated ----" );
+	Delay_1sec( );
 }
 
 void application_task ( void )

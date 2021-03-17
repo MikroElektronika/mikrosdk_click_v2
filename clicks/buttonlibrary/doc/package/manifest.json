@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Capacitive",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,10 +25,17 @@
     "name": "mikroe.click.buttonlibrary",
     "product_link": "https://www.mikroe.com/button-play-click",
     "short_description": "Every Button click is a very interesting interactive gadget on a Click board™. It is an integrated capacitive touch sensor display in the form of a button.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.12"
+    "_type": "mikroSDK Library",
+    "related_projects": [ 
+        2945, 2918, 2685, 
+        2636, 1473, 1639
+    ],
+    "version": "2.0.0.14"
 }
+
+
 
 
 

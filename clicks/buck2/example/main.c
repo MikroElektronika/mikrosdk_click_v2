@@ -3,17 +3,17 @@
  * \brief Buck 2 Click example
  * 
  * # Description
- * The demo application displays output voltage change.
+ * This application demonstrates the use of Buck 2 Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Configuring clicks and log objects.
- * Settings the click in the default configuration.
+ * Initializes the driver and configures the click board.
  * 
  * ## Application Task  
- * Sets a different range of input voltages 
- * every 3 sec and checks if it has reached the set output voltage.
+ * Sets a different output voltage every 5 seconds then checks if the voltage on 
+ * the output (OUTSNS) drops under 90% of the regulated voltage 
+ * and displays an appropriate message on USB UART.
  * 
  * \author Katarina Perendic
  *
@@ -40,6 +40,7 @@ void application_init ( void )
 
     log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -56,24 +57,39 @@ void application_task ( void )
 {
     uint8_t pg_state;
 
-    pg_state = buck2_get_power_good( &buck2 );
-    if ( pg_state != 0 )
-    {
-        log_info( &logger, "---- Power good output voltage ----" );
-    }
-
-    log_info( &logger, "---- Output voltage is 3300 mV ----" );
     buck2_set_output_voltage( &buck2, BUCK2_SET_VOLTAGE_3300mV );
-    Delay_ms( 3000 );
-    log_info( &logger, "---- Output voltage is 2500 mV ----" );
+    log_printf( &logger, "---- Output voltage is 3300 mV ----\r\n" );
+    Delay_ms( 5000 );
+    pg_state = buck2_get_power_good( &buck2 );
+    if ( pg_state == 0 )
+    {
+        log_info( &logger, "---- Voltage of the output dropped under 90%% of the regulated voltage ----" );
+    }
     buck2_set_output_voltage( &buck2, BUCK2_SET_VOLTAGE_2500mV );
-    Delay_ms( 3000 );
-    log_info( &logger, "---- Output voltage is 1800 mV ----" );
+    log_printf( &logger, "---- Output voltage is 2500 mV ----\r\n" );
+    Delay_ms( 5000 );
+    pg_state = buck2_get_power_good( &buck2 );
+    if ( pg_state == 0 )
+    {
+        log_info( &logger, "---- Voltage of the output dropped under 90%% of the regulated voltage ----" );
+    }
     buck2_set_output_voltage( &buck2, BUCK2_SET_VOLTAGE_1800mV );
-    Delay_ms( 3000 );
-    log_info( &logger, "---- Output voltage is 1500 mV ----" );
+    log_printf( &logger, "---- Output voltage is 1800 mV ----\r\n" );
+    Delay_ms( 5000 );
+    pg_state = buck2_get_power_good( &buck2 );
+    if ( pg_state == 0 )
+    {
+        log_info( &logger, "---- Voltage of the output dropped under 90%% of the regulated voltage ----" );
+    }
     buck2_set_output_voltage( &buck2, BUCK2_SET_VOLTAGE_1500mV );
-    Delay_ms( 3000 );
+    log_printf( &logger, "---- Output voltage is 1500 mV ----\r\n" );
+    log_printf( &logger, "-----------------------------------\r\n" );
+    Delay_ms( 5000 );
+    pg_state = buck2_get_power_good( &buck2 );
+    if ( pg_state == 0 )
+    {
+        log_info( &logger, "---- Voltage of the output dropped under 90%% of the regulated voltage ----" );
+    }
 }
 
 void main ( void )

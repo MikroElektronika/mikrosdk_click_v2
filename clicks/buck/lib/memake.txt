@@ -1,0 +1,40 @@
+type: library
+
+target: lib_buck
+
+alias: Click.Buck
+
+sources: {
+    src/buck.c
+}
+
+headers: {
+    include/buck.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/buck.h) dst(include/buck.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

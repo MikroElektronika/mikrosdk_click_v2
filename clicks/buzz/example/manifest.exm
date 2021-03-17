@@ -1,0 +1,8 @@
+{
+    "name": "BUZZ Clicks",
+    "description": "BUZZ Click is an accessory board in mikroBus™ form factor. Board features a piezo speaker capable of emitting audio signals.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","CMT-8540S-SMT"],
+    "category" : ["Speakers"] 
+}

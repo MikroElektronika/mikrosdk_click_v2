@@ -103,8 +103,6 @@ uint8_t buck2_get_power_good ( buck2_t *ctx  )
 
 void buck2_set_output_voltage ( buck2_t *ctx , uint8_t voltage )
 {
-    back2_device_reset( ctx );
-    
     switch ( voltage )
     {
         case BUCK2_SET_VOLTAGE_3300mV:
@@ -143,6 +141,7 @@ void buck2_set_output_voltage ( buck2_t *ctx , uint8_t voltage )
             break;   
         }
     }
+    back2_device_reset( ctx );
 }
 
 // ------------------------------------------------------------------------- END

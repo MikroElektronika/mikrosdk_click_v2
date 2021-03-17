@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Buck-Boost",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,7 +31,8 @@
     "related_projects":[
         2216
     ],
-    "version": "2.0.0.4"
+    "version": "2.0.0.5"
 }
+
 
 

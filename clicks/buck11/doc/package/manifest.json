@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Buck",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,9 +25,15 @@
     "name": "mikroe.click.buck11",
     "product_link": "https://www.mikroe.com/buck-11-click",
     "short_description": "Buck 11 click is a high-efficiency step-down converter which provides 3.3V on its output, derived from the connected power supply voltage, in the range from 4.2V to 60V.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.2"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2771
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.3"
 }
+
 
 

@@ -5,10 +5,10 @@
 Buck 2 click is a powerful step down DC-DC switching regulator. It gives a high precision regulated voltage at its output and it can handle an ample amount of current.
 
 <p align="center">
-  <img src="http://download.mikroe.com/images/click_for_ide/buck2_click.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/buck2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/buck-2-click>)
+[click Product page](https://www.mikroe.com/buck-2-click)
 
 ---
 
@@ -23,8 +23,8 @@ Buck 2 click is a powerful step down DC-DC switching regulator. It gives a high 
 
 We provide a library for the Buck2 Click 
 as well as a demo application (example), developed using MikroElektronika 
-[compilers](http://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
+[compilers](https://shop.mikroe.com/compilers). 
+The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
 
 Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
 
@@ -57,14 +57,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> The demo application displays output voltage change.
+> This application demonstrates the use of Buck 2 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Configuring clicks and log objects.
-> Settings the click in the default configuration.
+> Initializes the driver and configures the click board.
 
 ```c
 void application_init ( void )
@@ -76,6 +75,7 @@ void application_init ( void )
 
     log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -91,28 +91,48 @@ void application_init ( void )
 
 ### Application Task
 
-> Sets a different range of input voltages 
-> every 2 s and checks if it has reached the set output voltage.
+> Sets a different output voltage every 5 seconds then checks if the voltage on 
+> the output (OUTSNS) drops under 90% of the regulated voltage 
+> and displays an appropriate message on USB UART.
 
 ```c
 void application_task ( void )
 {
     uint8_t pg_state;
 
-    pg_state = buck2_get_power_good( &buck2 );
-    if ( pg_state != 0 )
-    {
-        log_info( &logger, "---- Power good output voltage ----" );
-    }
-
     buck2_set_output_voltage( &buck2, BUCK2_SET_VOLTAGE_3300mV );
-    Delay_ms( 3000 );
+    log_printf( &logger, "---- Output voltage is 3300 mV ----\r\n" );
+    Delay_ms( 5000 );
+    pg_state = buck2_get_power_good( &buck2 );
+    if ( pg_state == 0 )
+    {
+        log_info( &logger, "---- Voltage of the output dropped under 90%% of the regulated voltage ----" );
+    }
     buck2_set_output_voltage( &buck2, BUCK2_SET_VOLTAGE_2500mV );
-    Delay_ms( 3000 );
+    log_printf( &logger, "---- Output voltage is 2500 mV ----\r\n" );
+    Delay_ms( 5000 );
+    pg_state = buck2_get_power_good( &buck2 );
+    if ( pg_state == 0 )
+    {
+        log_info( &logger, "---- Voltage of the output dropped under 90%% of the regulated voltage ----" );
+    }
     buck2_set_output_voltage( &buck2, BUCK2_SET_VOLTAGE_1800mV );
-    Delay_ms( 3000 );
+    log_printf( &logger, "---- Output voltage is 1800 mV ----\r\n" );
+    Delay_ms( 5000 );
+    pg_state = buck2_get_power_good( &buck2 );
+    if ( pg_state == 0 )
+    {
+        log_info( &logger, "---- Voltage of the output dropped under 90%% of the regulated voltage ----" );
+    }
     buck2_set_output_voltage( &buck2, BUCK2_SET_VOLTAGE_1500mV );
-    Delay_ms( 3000 );
+    log_printf( &logger, "---- Output voltage is 1500 mV ----\r\n" );
+    log_printf( &logger, "-----------------------------------\r\n" );
+    Delay_ms( 5000 );
+    pg_state = buck2_get_power_good( &buck2 );
+    if ( pg_state == 0 )
+    {
+        log_info( &logger, "---- Voltage of the output dropped under 90%% of the regulated voltage ----" );
+    }
 }
 ```
 
@@ -127,12 +147,12 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](http://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
+[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
+[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 
 terminal available in all Mikroelektronika 
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application 
+[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
 of your choice, can be used to read the message.
 
 

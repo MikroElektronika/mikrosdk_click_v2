@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Buck",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,8 +25,14 @@
     "name": "mikroe.click.buck6",
     "product_link": "https://www.mikroe.com/buck-6-click",
     "short_description": "BUCK 6 click is an advanced synchronous DC-DC step down (buck) converter, with a very wide input voltage range and reasonably high output current.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2304
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.2"
 }
+
 

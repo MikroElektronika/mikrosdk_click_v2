@@ -8,7 +8,7 @@ Buck 5 Click is a high-efficiency buck (step-down) DC/DC converter, which can pr
   <img src="https://download.mikroe.com/images/click_for_ide/buck5_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/buck-5-click>)
+[click Product page](https://www.mikroe.com/buck-5-click)
 
 ---
 
@@ -24,8 +24,8 @@ Buck 5 Click is a high-efficiency buck (step-down) DC/DC converter, which can pr
 
 We provide a library for the Buck5 Click 
 as well as a demo application (example), developed using MikroElektronika 
-[compilers](http://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
+[compilers](https://shop.mikroe.com/compilers). 
+The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
 
 Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
 
@@ -64,7 +64,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes driver init, power On chip and reset buck 5 click.
+> Initializes driver init, and enables the click board.
 
 ```c
 
@@ -95,20 +95,45 @@ void application_init ( void )
 
 ### Application Task
 
-> Sets 3 different output voltages every 2 seconds.
+> Increases the output voltage by 500mV every 3 seconds from MIN to MAX VOUT.
 
 ```c
 
 void application_task ( void )
 {
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_MIN );
+    log_printf( &logger, "VOUT: MIN\r\n" );
+    Delay_ms( 3000 );
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_1000mV );
+    log_printf( &logger, "VOUT: ~1V\r\n" );
+    Delay_ms( 3000 );
     buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_1500mV );
-    Delay_ms( 2000 );
+    log_printf( &logger, "VOUT: ~1.5V\r\n" );
+    Delay_ms( 3000 );
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_2000mV );
+    log_printf( &logger, "VOUT: ~2V\r\n" );
+    Delay_ms( 3000 );
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_2500mV );
+    log_printf( &logger, "VOUT: ~2.5V\r\n" );
+    Delay_ms( 3000 );
     buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_3000mV );
-    Delay_ms( 2000 );
+    log_printf( &logger, "VOUT: ~3V\r\n" );
+    Delay_ms( 3000 );
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_3500mV );
+    log_printf( &logger, "VOUT: ~3.5V\r\n" );
+    Delay_ms( 3000 );
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_4000mV );
+    log_printf( &logger, "VOUT: ~4V\r\n" );
+    Delay_ms( 3000 );
     buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_4500mV );
-    Delay_ms( 2000 );
-    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_3000mV );
-    Delay_ms( 2000 );
+    log_printf( &logger, "VOUT: ~4.5V\r\n" );
+    Delay_ms( 3000 );
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_5000mV );
+    log_printf( &logger, "VOUT: ~5V\r\n" );
+    Delay_ms( 3000 );
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_MAX );
+    log_printf( &logger, "VOUT: MAX\r\n" );
+    Delay_ms( 3000 );
 }  
 
 ```
@@ -124,12 +149,12 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](http://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
+[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
+[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 
 terminal available in all Mikroelektronika 
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application 
+[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
 of your choice, can be used to read the message.
 
 

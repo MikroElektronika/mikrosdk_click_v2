@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Buck",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,9 +25,13 @@
     "name": "mikroe.click.buck2",
     "product_link": "https://www.mikroe.com/buck-2-click",
     "short_description": "Buck 2 click is a powerful step down DC-DC switching regulator. It gives a high precision regulated voltage at its output and it can handle an ample amount of current.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.2"
+    "_type": "mikroSDK Library",
+    "related_projects":[
+        2308
+    ],
+    "version": "2.0.0.4"
 }
 
 

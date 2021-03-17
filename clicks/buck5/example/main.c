@@ -11,11 +11,10 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes driver init, power On chip and reset buck 5 click.
+ * Initializes driver init, and enables the click board.
  * 
  * ## Application Task  
- * Sets 3 different output voltages every 2 seconds.
- * 
+ * Increases the output voltage by 500mV every 3 seconds from MIN to MAX VOUT.
  * 
  * \author MikroE Team
  *
@@ -30,9 +29,6 @@
 
 static buck5_t buck5;
 static log_t logger;
-
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
-
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -61,14 +57,39 @@ void application_init ( void )
 
 void application_task ( void )
 {
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_MIN );
+    log_printf( &logger, "VOUT: MIN\r\n" );
+    Delay_ms( 3000 );
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_1000mV );
+    log_printf( &logger, "VOUT: ~1V\r\n" );
+    Delay_ms( 3000 );
     buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_1500mV );
-    Delay_ms( 2000 );
+    log_printf( &logger, "VOUT: ~1.5V\r\n" );
+    Delay_ms( 3000 );
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_2000mV );
+    log_printf( &logger, "VOUT: ~2V\r\n" );
+    Delay_ms( 3000 );
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_2500mV );
+    log_printf( &logger, "VOUT: ~2.5V\r\n" );
+    Delay_ms( 3000 );
     buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_3000mV );
-    Delay_ms( 2000 );
+    log_printf( &logger, "VOUT: ~3V\r\n" );
+    Delay_ms( 3000 );
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_3500mV );
+    log_printf( &logger, "VOUT: ~3.5V\r\n" );
+    Delay_ms( 3000 );
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_4000mV );
+    log_printf( &logger, "VOUT: ~4V\r\n" );
+    Delay_ms( 3000 );
     buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_4500mV );
-    Delay_ms( 2000 );
-    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_3000mV );
-    Delay_ms( 2000 );
+    log_printf( &logger, "VOUT: ~4.5V\r\n" );
+    Delay_ms( 3000 );
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_5000mV );
+    log_printf( &logger, "VOUT: ~5V\r\n" );
+    Delay_ms( 3000 );
+    buck5_set_output_voltage( &buck5, BUCK5_VOLTAGE_MAX );
+    log_printf( &logger, "VOUT: MAX\r\n" );
+    Delay_ms( 3000 );
 }
 
 void main ( void )

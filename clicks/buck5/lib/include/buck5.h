@@ -74,15 +74,17 @@
  * \defgroup variables Variables
  * \{
  */
-#define BUCK5_VOLTAGE_1000mV    0x00
+#define BUCK5_VOLTAGE_MIN       0x00
+#define BUCK5_VOLTAGE_1000mV    0x02
 #define BUCK5_VOLTAGE_1500mV    0x11
 #define BUCK5_VOLTAGE_2000mV    0x24
 #define BUCK5_VOLTAGE_2500mV    0x39
-#define BUCK5_VOLTAGE_3000mV    0x50
-#define BUCK5_VOLTAGE_3500mV    0x6E
-#define BUCK5_VOLTAGE_4000mV    0x8C
-#define BUCK5_VOLTAGE_4500mV    0xB7
-#define BUCK5_VOLTAGE_5000mV    0xE1
+#define BUCK5_VOLTAGE_3000mV    0x52
+#define BUCK5_VOLTAGE_3500mV    0x6D
+#define BUCK5_VOLTAGE_4000mV    0x8D
+#define BUCK5_VOLTAGE_4500mV    0xB4
+#define BUCK5_VOLTAGE_5000mV    0xE4
+#define BUCK5_VOLTAGE_MAX       0xFF
 
 /** \} */ // End group macro 
 // --------------------------------------------------------------- PUBLIC TYPES

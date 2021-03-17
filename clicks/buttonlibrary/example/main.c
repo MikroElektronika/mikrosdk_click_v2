@@ -77,7 +77,7 @@ void application_init ( )
     //  Click initialization.
 
     buttonlibrary_cfg_setup( &cfg );
-    BUTTONLIBRARY_MAP_MIKROBUS( cfg, MIKROBUS_5 );
+    BUTTONLIBRARY_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     Delay_ms( 100 );
     buttonlibrary_init( &buttonlibrary, &cfg );
     buttonlibrary_pwm_start( &buttonlibrary );

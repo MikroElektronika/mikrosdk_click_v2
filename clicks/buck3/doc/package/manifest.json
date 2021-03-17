@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Buck",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,9 +25,13 @@
     "name": "mikroe.click.buck3",
     "product_link": "https://www.mikroe.com/buck-3-click",
     "short_description": "Buck 3 click is a very advanced synchronous step-down (buck) converter, which is designed to deliver noise and ripple-free voltage to highly sensitive applications, such as FPGA and high-performance DSP platforms.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.2"
+    "_type": "mikroSDK Library",
+    "related_projects":[
+        2303
+    ],
+    "version": "2.0.0.4"
 }
 
 

@@ -109,25 +109,22 @@ void buck5_power_on ( buck5_t *ctx )
 
 void buck5_reset ( buck5_t *ctx )
 {
-   digital_out_high( &ctx->rst );
-   Delay_10ms( );
-   digital_out_low( &ctx->rst );
-   Delay_100ms( );
-   Delay_100ms( );
-   digital_out_high( &ctx->rst );
-   Delay_100ms( );
+    digital_out_high( &ctx->rst );
+    Delay_10ms( );
+    digital_out_low( &ctx->rst );
+    Delay_100ms( );
+    Delay_100ms( );
+    digital_out_high( &ctx->rst );
+    Delay_100ms( );
 }
 
 void buck5_set_output_voltage ( buck5_t *ctx, uint8_t voltage )
 {
-    uint8_t write_reg[ 4 ];
-    write_reg[ 0 ] = 0x00;
-    write_reg[ 1 ] = voltage;
-    write_reg[ 2 ] = 0x20;
-    write_reg[ 3 ] = voltage;
+    uint8_t write_reg[ 1 ];
+    write_reg[ 0 ] = voltage;
 
     spi_master_select_device( ctx->chip_select );
-    spi_master_write( &ctx->spi, write_reg, 4 );
+    spi_master_write( &ctx->spi, write_reg, 1 );
     spi_master_deselect_device( ctx->chip_select );  
 }
 

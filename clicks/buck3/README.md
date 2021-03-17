@@ -6,10 +6,10 @@
 Buck 3 click is a very advanced synchronous step-down (buck) converter, which is designed to deliver noise and ripple-free voltage to highly sensitive applications, such as FPGA and high-performance DSP platforms.
 
 <p align="center">
-  <img src="http://download.mikroe.com/images/click_for_ide/buck3_click.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/buck3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/buck-3-click>)
+[click Product page](https://www.mikroe.com/buck-3-click)
 
 ---
 
@@ -24,8 +24,8 @@ Buck 3 click is a very advanced synchronous step-down (buck) converter, which is
 
 We provide a library for the Buck3 Click 
 as well as a demo application (example), developed using MikroElektronika 
-[compilers](http://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
+[compilers](https://shop.mikroe.com/compilers). 
+The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
 
 Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
 
@@ -55,14 +55,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> Demo application checks the status of the device and the voltage.
+> This example demonstrates the use of Buck 3 click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Configuring clicks and log objects.
-> Settings the click in the default configuration. 
+> Initializes the driver and configures the click board.
 
 ```c
 void application_init ( void )
@@ -74,6 +73,7 @@ void application_init ( void )
 
     log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -85,15 +85,15 @@ void application_init ( void )
 
     buck3_default_cfg( &buck3 );
     log_info( &logger, "---- Buck 3 is activated ----" );
+	Delay_1sec( );
 }
 ```
 
 ### Application Task
 
-> Sequentialy, each one second, checks the status of the 
-> Buck 3 Click and if the overvoltage detected or device is under thermal shutdown 
-> it logs a message on the USBUART.
-
+> Checks the PGD pin state which signalize the undervoltage or overvoltage fault or
+> the thermal shutdown condition. 
+> If there's any of the above faults detected it logs a desired message on USB UART.
 
 ```c
 void application_task ( void )
@@ -116,15 +116,6 @@ void application_task ( void )
 }
 ```
 
-## Note
-
-> Open Drain Power Good Indicator, it is asserted low if output voltage 
-> is out of PGOOD threshold, 
-> Overvoltage or if the device is under thermal shutdown, 
-> EN shutdown or during soft start.
-> Once the FB pin voltage is between 93% and 107% of the 
-> internal reference voltage (VREF) the PGOOD is pulled high.
-
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
 **Other mikroE Libraries used in the example:** 
@@ -136,12 +127,12 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](http://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
+[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
+[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 
 terminal available in all Mikroelektronika 
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application 
+[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
 of your choice, can be used to read the message.
 
 
