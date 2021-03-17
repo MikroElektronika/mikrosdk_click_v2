@@ -1,0 +1,40 @@
+type: library
+
+target: lib_c8pini2c
+
+alias: Click.8pinI2c
+
+sources: {
+    src/c8pini2c.c
+}
+
+headers: {
+    include/c8pini2c.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/c8pini2c.h) dst(include/c8pini2c.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

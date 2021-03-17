@@ -6,7 +6,7 @@
 Accel 6 click is a three-axis acceleration sensor with many features. It uses the BMA280, a 14bit triaxial acceleration sensor with intelligent on-chip motion triggered interrupt controller, from Bosch Sensortec.
 
 <p align="center">
-  <img src="http://download.mikroe.com/images/click_for_ide/accel6_click.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/accel6_click.png" height=300px>
 </p>
 
 [click Product page](<https://www.mikroe.com/accel-6-click>)
@@ -25,8 +25,8 @@ Accel 6 click is a three-axis acceleration sensor with many features. It uses th
 
 We provide a library for the Accel6 Click 
 as well as a demo application (example), developed using MikroElektronika 
-[compilers](http://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
+[compilers](https://shop.mikroe.com/compilers). 
+The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
 
 Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
 
@@ -238,12 +238,12 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](http://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
+[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
+[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 
 terminal available in all Mikroelektronika 
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application 
+[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
 of your choice, can be used to read the message.
 
 

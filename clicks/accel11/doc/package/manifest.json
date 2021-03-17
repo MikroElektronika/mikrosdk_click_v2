@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,8 +25,14 @@
     "name": "mikroe.click.accel11",
     "product_link": "https://www.mikroe.com/accel-11-click",
     "short_description": "Accel 11 click features an ultra-low power triaxial accelerometer sensor with embedded intelligence, labeled as the BMA456.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2758
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.2"
 }
+
 

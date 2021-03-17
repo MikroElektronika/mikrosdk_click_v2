@@ -1,0 +1,40 @@
+type: library
+
+target: lib_adapter
+
+alias: Click.Adapter
+
+sources: {
+    src/adapter.c
+}
+
+headers: {
+    include/adapter.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/adapter.h) dst(include/adapter.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

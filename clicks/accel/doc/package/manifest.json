@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,9 +25,16 @@
     "name": "mikroe.click.accel",
     "product_link": "https://www.mikroe.com/accel-click",
     "short_description": "Accel Click is an accessory board in mikroBUS form factor. It features ADXL345 3-axis accelerometer module with ultra-low power and high resolution (13-bit) measurement. ",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.4"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        371
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.6"
 }
+
+
 
 

@@ -3,15 +3,18 @@
  * \brief AcCurrent Click example
  * 
  * # Description
- * This application measures current through a conductor.
+ * This application measures AC current through a conductor.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * SPI driver and slick initialization.
+ * SPI driver and click initialization.
  * 
  * ## Application Task  
- * Reading the value of current and dislaying it via UART.
+ * Reads the value of AC current and displays it on the USB UART.
+ * 
+ * ## NOTE
+ * An appropriate AC Current sensor needs to be connected to the click board.
  * 
  * \author MikroE Team
  *
@@ -52,8 +55,8 @@ void application_task ( void )
     float ac_current;
 
     ac_current = accurrent_get_ma( &accurrent );
-    log_printf( &logger, "Current value: %f mA ", ac_current);
-    Delay_ms(1000);
+    log_printf( &logger, "Current value: %.3f mA\r\n", ac_current );
+    Delay_ms( 1000 );
 }
 
 void main ( void )

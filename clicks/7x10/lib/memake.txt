@@ -1,0 +1,41 @@
+type: library
+
+target: lib_c7x10
+
+alias: Click.7x10
+
+sources: {
+    src/c7x10.c
+}
+
+headers: {
+    include/c7x10.h
+    include/c7x10_font.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/c7x10.h) dst(include/c7x10.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

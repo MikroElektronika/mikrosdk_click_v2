@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,8 +25,15 @@
     "name": "mikroe.click.accel12",
     "product_link": "https://www.mikroe.com/accel-12-click",
     "short_description": "Accel 12 click is an advanced 3-axis motion tracking Click board™, which utilizes the MC3216, a low-noise, and low power 3-axis accelerometer.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2743
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.3"
 }
+
+
 

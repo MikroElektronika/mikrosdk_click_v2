@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Measurements",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -24,9 +24,13 @@
     },
     "name": "mikroe.click.accurrent",
     "product_link": "https://www.mikroe.com/ac-current-click",
-    "short_description": "This application measures current through a conductor",
-    "supported_compiler": "mikroC",
+    "short_description": "This application measures AC current through a conductor",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "related_projects":[
+        2004
+    ],
+    "version": "2.0.0.2"
 }
 

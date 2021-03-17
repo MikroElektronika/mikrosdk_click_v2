@@ -1,0 +1,8 @@
+{
+    "name": "8-pin I2C Click",
+    "description": "8-pin I2C Click is a compact add-on board that represents a breakout board that simplifies the connection of add-on boards with 8 pin Female Connector to mikroBUS™ socket.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click"],
+    "category" : ["Interface"] 
+}
