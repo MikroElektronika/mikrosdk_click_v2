@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,10 +25,16 @@
     "name": "mikroe.click.c6dofimu10",
     "product_link": "https://www.mikroe.com/6dof-imu-10-click",
     "short_description": "6DOF IMU 10 Click is a 6 Degrees-of-Freedom inertial sensor module, that features KMX62 sensor whcih consist of tri-axial magnetometer (range ±2g / ±4g / ±8g / ±16g) plus a triaxial accelerometer (±1200µT).",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.6"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        3016
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.7"
 }
+
 
 
 

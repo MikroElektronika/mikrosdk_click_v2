@@ -524,7 +524,7 @@ typedef struct
     uint32_t i2c_speed;
     uint8_t i2c_address;
     uint32_t spi_speed;
-    uint8_t spi_mode;
+    spi_master_mode_t spi_mode;
     spi_master_chip_select_polarity_t cs_polarity;
 
    c6dofimu8_select_t sel;

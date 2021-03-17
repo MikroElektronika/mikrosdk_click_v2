@@ -1,0 +1,7 @@
+type: subdirs
+project: c2x30wAmp
+
+subdirs: {
+    lib
+    example
+}

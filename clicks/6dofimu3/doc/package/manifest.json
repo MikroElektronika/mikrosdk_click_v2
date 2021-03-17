@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC",
+    "category": "Motion",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "6DOF IMU 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.c6dofimu3",
+    "product_link": "https://www.mikroe.com/6dof-imu-3-click",
+    "short_description": "6DOF IMU 3 Click is a complete 6-axis detection development board suitable for movement and position tracking devices.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type": "mikroSDK Library",
+    "related_projects":[
+        3248
+    ],
+    "version": "2.0.0.2"
+}
+

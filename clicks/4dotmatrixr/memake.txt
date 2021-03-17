@@ -1,0 +1,7 @@
+type: subdirs
+project: c4dotmatrixr
+
+subdirs: {
+    lib
+    example
+}

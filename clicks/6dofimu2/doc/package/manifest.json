@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,8 +31,9 @@
     "related_projects":[
         1915
     ],
-    "version": "2.0.0.8"
+    "version": "2.0.0.9"
 }
+
 
 
 

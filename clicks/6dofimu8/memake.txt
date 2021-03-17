@@ -1,5 +1,5 @@
 type: subdirs
-project: c6DofImu8
+project: 6DofImu8
 
 subdirs: {
     lib

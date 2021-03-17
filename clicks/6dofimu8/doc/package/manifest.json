@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,10 +25,15 @@
     "name": "mikroe.click.c6dofimu8",
     "product_link": "https://www.mikroe.com/6dof-imu-8-click",
     "short_description": "6DOF IMU 8 click is an advanced 6-axis motion tracking Click board™, which utilizes the ISM330DLC, a high-performance System in Package (SiP), equipped with a 3-axis gyroscope, and a 3-axis accelerometer.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.3"
+    "_type": "mikroSDK Library",
+    "related_projects":[
+        2738
+    ],
+    "version": "2.0.0.5"
 }
+
 
 
 

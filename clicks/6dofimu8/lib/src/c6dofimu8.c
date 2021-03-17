@@ -66,9 +66,10 @@ void c6dofimu8_cfg_setup ( c6dofimu8_cfg_t *cfg )
     cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
     cfg->i2c_address = C6DOFIMU8_DEVICE_ADDR_LSB_HIGH;
     cfg->spi_speed = 100000; 
-    cfg->spi_mode = 0;
-    cfg->sel = C6DOFIMU8_MASTER_I2C;
+    cfg->spi_mode = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
+    
+    cfg->sel = C6DOFIMU8_MASTER_I2C;
 }
 
 C6DOFIMU8_RETVAL c6dofimu8_init ( c6dofimu8_t *ctx, c6dofimu8_cfg_t *cfg )
@@ -87,7 +88,7 @@ C6DOFIMU8_RETVAL c6dofimu8_init ( c6dofimu8_t *ctx, c6dofimu8_cfg_t *cfg )
 
         ctx->slave_address = cfg->i2c_address;
 
-        if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) != I2C_MASTER_SUCCESS )
+        if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_ERROR )
         {
             return C6DOFIMU8_INIT_ERROR;
         }
@@ -97,29 +98,35 @@ C6DOFIMU8_RETVAL c6dofimu8_init ( c6dofimu8_t *ctx, c6dofimu8_cfg_t *cfg )
 
         ctx->read_f = c6dofimu8_i2c_read;
         ctx->write_f = c6dofimu8_i2c_write;
+        
+        digital_out_init( &ctx->cs, cfg->cs );
+        digital_out_high( &ctx->cs );
     }
     else
     {
         spi_master_config_t spi_cfg;
 
         spi_master_configure_default( &spi_cfg );
-        //spi_cfg.mode        = cfg->spi_mode;
+        spi_cfg.mode        = cfg->spi_mode;
         spi_cfg.speed  = cfg->spi_speed;
         spi_cfg.sck    = cfg->sck;
         spi_cfg.miso   = cfg->miso;
         spi_cfg.mosi   = cfg->mosi;
         
+        spi_cfg.default_write_data = C6DOFIMU8_DUMMY;
         digital_out_init( &ctx->cs, cfg->cs );
         ctx->chip_select = cfg->cs;
 
-        if (  spi_master_open( &ctx->spi, &spi_cfg ) != SPI_MASTER_SUCCESS )
+        if (  spi_master_open( &ctx->spi, &spi_cfg ) == SPI_MASTER_ERROR )
         {
             return  C6DOFIMU8_INIT_ERROR;
         }
 
         spi_master_set_default_write_data( &ctx->spi, C6DOFIMU8_DUMMY );
+        spi_master_set_mode( &ctx->spi, spi_cfg.mode );
         spi_master_set_speed( &ctx->spi, spi_cfg.speed );
         spi_master_set_chip_select_polarity( cfg->cs_polarity );
+        spi_master_deselect_device( ctx->chip_select ); 
         
         ctx->read_f = c6dofimu8_spi_read;
         ctx->write_f = c6dofimu8_spi_write;
@@ -481,7 +488,7 @@ static void c6dofimu8_i2c_read ( c6dofimu8_t *ctx, uint8_t reg, uint8_t *data_bu
 
 static void c6dofimu8_spi_write ( c6dofimu8_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
-    uint8_t tx_buf[ 265 ];
+    uint8_t tx_buf[ 257 ];
     uint8_t cnt;
 
     tx_buf[ 0 ] = reg;
@@ -498,18 +505,21 @@ static void c6dofimu8_spi_write ( c6dofimu8_t *ctx, uint8_t reg, uint8_t *data_b
 static void c6dofimu8_spi_read ( c6dofimu8_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
     uint8_t tx_buf[ 1 ];
-    uint8_t rx_buf[ 265 ];
+    uint8_t rx_buf[ 256 ];
     uint8_t cnt;
 
     tx_buf[ 0 ] = reg | 0x80;
     
     spi_master_select_device( ctx->chip_select );
-    spi_master_write_then_read( &ctx->spi, tx_buf, 1, rx_buf, len + 1 );
+    spi_master_set_default_write_data( &ctx->spi, tx_buf[ 0 ] );
+    spi_master_read( &ctx->spi, tx_buf, 1 );
+    spi_master_set_default_write_data( &ctx->spi, C6DOFIMU8_DUMMY );
+    spi_master_read( &ctx->spi, rx_buf, len );
     spi_master_deselect_device( ctx->chip_select ); 
 
     for ( cnt = 0; cnt < len; cnt++ )
     {
-        data_buf[ cnt ] = rx_buf [ cnt + 1];
+        data_buf[ cnt ] = rx_buf [ cnt ];
     }
 }
 

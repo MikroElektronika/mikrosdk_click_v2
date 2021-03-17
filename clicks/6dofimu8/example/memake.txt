@@ -5,7 +5,7 @@ depends: {
     MikroC.Core
     MikroSDK.Board
     MikroSDK.Log
-    Click.c6DofImu8
+    Click.6DofImu8
 }
 
 uses: {
@@ -15,3 +15,7 @@ uses: {
 sources: {
     main.c
 }
+
+
+
+

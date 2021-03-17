@@ -1,0 +1,8 @@
+{
+    "name": "2x30W Amp Click",
+    "description": "2x30W Amp click is a class-D audio amplifier with a tremendous output power, considering its size and lack of huge heatsinks, usually associated with the audio amplifiers. ",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","TPA3128"],
+    "category" : ["	Amplifier"] 
+}
