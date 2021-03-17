@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Gas",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,8 +25,14 @@
     "name": "mikroe.click.airquality3",
     "product_link": "https://www.mikroe.com/air-quality-3-click",
     "short_description": "Air quality 3 click is the air quality measurement device, which is able to output both equivalent CO2 levels and total volatile organic compounds (TVOC) concentration in the indoor environment. ",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.3"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2302
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.4"
 }
+
 

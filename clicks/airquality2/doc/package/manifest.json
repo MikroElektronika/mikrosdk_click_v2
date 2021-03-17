@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Gas",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,6 +31,6 @@
     "related_projects":[
         2009
     ],
-    "version": "2.0.0.1"
+    "version": "2.0.0.5"
 }
 

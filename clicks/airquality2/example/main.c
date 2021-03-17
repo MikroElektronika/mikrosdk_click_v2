@@ -18,6 +18,10 @@
  * Results are being sent to the Usart Terminal where you can track their changes.
  * All data logs on usb uart for aproximetly every 5 sec.
  * 
+ * ## NOTE
+ * The sensor is in warm-up phase when the status is RUNIN. The user should wait
+ * for status OK in order to get valid data output.
+ * 
  * \author MikroE Team
  *
  */

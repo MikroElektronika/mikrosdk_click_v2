@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "ADC",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,8 +25,14 @@
     "name": "mikroe.click.adc5",
     "product_link": "https://www.mikroe.com/adc-5-click",
     "short_description": "ADC 5 click is a Click board™ used to sample an analog voltage on the input and convert it to a digital information. ADC 5 click is equipped with the ADC121S021, a low power, single channel 12-bit CMOS analog to digital converter (ADC), with a high-speed serial interface.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2256
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.2"
 }
+
 

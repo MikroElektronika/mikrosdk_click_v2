@@ -1,0 +1,7 @@
+type: subdirs
+project: AdSwio2
+
+subdirs: {
+    lib
+    example
+}

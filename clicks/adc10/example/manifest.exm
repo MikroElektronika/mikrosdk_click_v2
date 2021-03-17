@@ -1,0 +1,8 @@
+{
+    "name": "ADC 10 Click",
+    "description": "<PRVIH_PAR_RECENICA_SA_PRODUCT_PAGE_DA_ISPRATE_CELINU>",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","ADS122U04IPWR"],
+    "category" : ["ADC"]
+}

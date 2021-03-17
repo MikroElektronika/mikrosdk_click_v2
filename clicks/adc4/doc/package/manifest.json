@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "ADC",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,6 +31,7 @@
     "related_projects":[
         2293
     ],
-    "version": "2.0.0.4"
+    "version": "2.0.0.5"
 }
+
 

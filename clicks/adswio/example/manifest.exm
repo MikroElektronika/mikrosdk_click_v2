@@ -1,0 +1,8 @@
+{
+    "name": "AD SWIO Click",
+    "description": "AD-SWIO Click is a quad-channel software configurable input/output solution based on AD74412R. The AD74412R is a quad-channel software configurable input/output integrated circuit for building and process control applications.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm"],
+    "hw" : ["click","AD74412R"],
+    "category" : ["ADC"] 
+}
