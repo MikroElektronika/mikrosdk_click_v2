@@ -1,0 +1,40 @@
+type: library
+
+target: lib_bee
+
+alias: Click.Bee
+
+sources: {
+    src/bee.c
+}
+
+headers: {
+    include/bee.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/bee.h) dst(include/bee.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

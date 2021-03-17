@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "LED Segment",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,8 +25,14 @@
     "name": "mikroe.click.big7seg",
     "product_link": "https://www.mikroe.com/big-7-seg-r-click",
     "short_description": "BIG 7-SEG click is what you need if you want to add a seven-segment LED display to your project.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "related_projects":[
+        1979
+    ],
+    "version": "2.0.0.3"
 }
+
+
 

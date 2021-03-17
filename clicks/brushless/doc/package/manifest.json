@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Brushless",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,5 +31,6 @@
     "related_projects":[
         1951
     ],
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+

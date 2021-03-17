@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Pressure",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,6 +31,7 @@
     "related_projects":[
         1469
     ],
-    "version": "2.0.0.2"
+    "version": "2.0.0.3"
 }
+
 

@@ -41,11 +41,11 @@ void ble7_cfg_setup ( ble7_cfg_t *cfg )
     
     // Additional gpio pins
 
-     cfg->gp0   = HAL_PIN_NC;
-     cfg->rst = HAL_PIN_NC;
-     cfg->rts   = HAL_PIN_NC;
-     cfg->gp1 = HAL_PIN_NC;
-     cfg->cts = HAL_PIN_NC;
+    cfg->gp0 = HAL_PIN_NC;
+    cfg->rst = HAL_PIN_NC;
+    cfg->rts = HAL_PIN_NC;
+    cfg->gp1 = HAL_PIN_NC;
+    cfg->cts = HAL_PIN_NC;
 
     cfg->baud_rate      = 115200;
     cfg->data_bit       = UART_DATA_BITS_DEFAULT;
@@ -91,8 +91,7 @@ BLE7_RETVAL ble7_init ( ble7_t *ctx, ble7_cfg_t *cfg )
     digital_in_init( &ctx->rts, cfg->rts );
 
     digital_out_high( &ctx->rst );
-    ctx->rsp_rdy = BLE7_RSP_NOT_READY;
-
+    
     return BLE7_OK;
 }
 
@@ -113,34 +112,6 @@ void ble7_generic_write ( ble7_t *ctx, char *data_buf, uint16_t len )
 int32_t ble7_generic_read ( ble7_t *ctx, char *data_buf, uint16_t max_len )
 {
     return uart_read( &ctx->uart, data_buf, max_len );
-}
-
-void ble7_receive_command( ble7_t *ctx, char* data_buf)
-{
-    ble7_generic_read ( ctx, data_buf, 10 );
-}
-
-void ble7_response_handler_set ( ble7_t *ctx, void ( *handler )( uint8_t* ) )
-{
-    ctx->driver_hdl = handler;
-}
-
-void ble7_uart_isr ( ble7_t *ctx, uint8_t rx_dat )
-{ 
-    ctx->driver_hdl( &rx_dat );
-    ctx->rsp_rdy = BLE7_RSP_READY;
-}
-
-uint8_t ble7_response_ready ( ble7_t *ctx )
-{
-    if ( ctx->rsp_rdy )
-    {
-        ctx->rsp_rdy = BLE7_RSP_NOT_READY;
-        
-        return BLE7_RSP_READY;
-    }
-    
-    return BLE7_RSP_NOT_READY;
 }
 
 uint8_t ble7_get_gp0 ( ble7_t *ctx )
@@ -171,7 +142,7 @@ void ble7_send_command ( ble7_t *ctx, char *command )
     len = strlen( command );
     
     strncpy( tmp_buf, command, len );
-    strcat( tmp_buf, '\r' );
+    strcat( tmp_buf, "\r" );
 
     ble7_generic_write( ctx, tmp_buf, strlen( tmp_buf ) );
 }

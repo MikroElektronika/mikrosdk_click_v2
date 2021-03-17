@@ -1,13 +1,14 @@
 
+---
 # Brushless 5 click
 
 Brushless 5 click is a 3 phase sensorless BLDC motor controller, with a soft-switching feature for reduced motor noise and EMI, and precise BEMF motor sensing, which eliminates the need for Hall-sensors in motor applications.
 
 <p align="center">
-  <img src="http://download.mikroe.com/images/click_for_ide/brushless5_click.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/brushless5_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/brushless-5-click>)
+[click Product page](https://www.mikroe.com/brushless-5-click)
 
 ---
 
@@ -23,8 +24,8 @@ Brushless 5 click is a 3 phase sensorless BLDC motor controller, with a soft-swi
 
 We provide a library for the Brushless5 Click 
 as well as a demo application (example), developed using MikroElektronika 
-[compilers](http://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
+[compilers](https://shop.mikroe.com/compilers). 
+The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
 
 Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
 
@@ -43,7 +44,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 #### Example key functions :
 
 - Generic sets PWM duty cycle.
-> void brushless5_set_duty_cycle ( brushless5_t *ctx, pwm_data_t duty_cycle );
+> void brushless5_set_duty_cycle ( brushless5_t *ctx, float duty_cycle );
  
 - Stop PWM module.
 > void brushless5_pwm_stop ( brushless5_t *ctx );
@@ -53,7 +54,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This application with a soft-switching feature for reduced motor noise and EMI.
+> This application demonstrates the use of Brushless 5 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -70,8 +71,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -88,34 +90,31 @@ void application_init ( void )
 
 ### Application Task
 
-> Increases and decreases the speed of the motor demonstrating the speed controll. 
+> Increases and decreases the speed of the motor demonstrating the speed control.
 
 ```c
 
 void application_task ( void )
 {
-    uint16_t speed;
+    log_printf( &logger, " Increasing the motor speed... \r\n" );
     
-    if ( duty_cycle > brushless5.pwm_period )
+    for ( duty_cycle = 0.1; duty_cycle <= 1.0; duty_cycle += 0.1 )
     {
-        duty_cycle = 100;
+        brushless5_set_duty_cycle ( &brushless5, duty_cycle );
+        log_printf( &logger," > " );
+        Delay_ms( 500 );
     }
+
+    log_printf( &logger,  "\r\n ---------------------- \r\n" ); 
+    log_printf( &logger, " Slowing down... \r\n" );
     
-    for ( speed = 0; speed < brushless5.pwm_period; speed++ )
+    for ( duty_cycle = 1.0; duty_cycle > 0.09; duty_cycle -= 0.1 )
     {
-        brushless5_set_duty_cycle ( &brushless5, speed );
-        Delay_10ms( );
+        brushless5_set_duty_cycle ( &brushless5, duty_cycle );
+        log_printf( &logger," < " );
+        Delay_ms( 500 );
     }
-
-    Delay_ms( 1000 );
-
-    for ( speed; speed > 0; speed-- )
-    {
-        brushless5_set_duty_cycle ( &brushless5, speed );
-        Delay_10ms( );
-    }
-
-    Delay_ms( 1000 );
+    log_printf( &logger,  "\r\n ---------------------- \r\n" ); 
 }  
 
 ```
@@ -131,12 +130,12 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](http://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
+[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
+[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 
 terminal available in all Mikroelektronika 
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application 
+[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
 of your choice, can be used to read the message.
 
 

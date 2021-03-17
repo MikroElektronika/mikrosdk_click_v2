@@ -3,15 +3,16 @@
  * \brief Brushless5 Click example
  * 
  * # Description
- * This application with a soft-switching feature for reduced motor noise and EMI.
+ * This application demonstrates the use of Brushless 5 Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the GPIO driver and configures the PWM peripheral for controlling the speed of the motor.
+ * Initializes the GPIO driver and configures the PWM peripheral for 
+ * controlling the speed of the motor.
  * 
  * ## Application Task  
- * Increases and decreases the speed of the motor demonstrating the speed controll.
+ * Increases and decreases the speed of the motor demonstrating the speed control.
  * 
  * \author MikroE Team
  *
@@ -28,9 +29,6 @@ static brushless5_t brushless5;
 static log_t logger;
 
 static float duty_cycle = 0.5;
-
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
-
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -57,29 +55,26 @@ void application_init ( void )
 }
 
 void application_task ( void )
-{
-    uint16_t speed;
+{    
+    log_printf( &logger, " Increasing the motor speed... \r\n" );
     
-    if ( duty_cycle > brushless5.pwm_period )
+    for ( duty_cycle = 0.1; duty_cycle <= 1.0; duty_cycle += 0.1 )
     {
-        duty_cycle = 100;
+        brushless5_set_duty_cycle ( &brushless5, duty_cycle );
+        log_printf( &logger," > " );
+        Delay_ms( 500 );
     }
+
+    log_printf( &logger,  "\r\n ---------------------- \r\n" ); 
+    log_printf( &logger, " Slowing down... \r\n" );
     
-    for ( speed = 0; speed < brushless5.pwm_period; speed++ )
+    for ( duty_cycle = 1.0; duty_cycle > 0.09; duty_cycle -= 0.1 )
     {
-        brushless5_set_duty_cycle ( &brushless5, speed );
-        Delay_10ms( );
+        brushless5_set_duty_cycle ( &brushless5, duty_cycle );
+        log_printf( &logger," < " );
+        Delay_ms( 500 );
     }
-
-    Delay_ms( 1000 );
-
-    for ( speed; speed > 0; speed-- )
-    {
-        brushless5_set_duty_cycle ( &brushless5, speed );
-        Delay_10ms( );
-    }
-
-    Delay_ms( 1000 );
+    log_printf( &logger,  "\r\n ---------------------- \r\n" ); 
 }
 
 void main ( void )

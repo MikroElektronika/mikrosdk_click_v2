@@ -8,7 +8,7 @@
 Boost 4 click carries the TPS61230A, a high efficiency fully integrated synchronous boost converter from Texas Instruments. The click is designed to run on a 3.3V power supply.
 
 <p align="center">
-  <img src="http://download.mikroe.com/images/click_for_ide/boost4_click.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/boost4_click.png" height=300px>
 </p>
 
 [click Product page](<https://www.mikroe.com/boost-4-click>)
@@ -27,8 +27,8 @@ Boost 4 click carries the TPS61230A, a high efficiency fully integrated synchron
 
 We provide a library for the Boost4 Click 
 as well as a demo application (example), developed using MikroElektronika 
-[compilers](http://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
+[compilers](https://shop.mikroe.com/compilers). 
+The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
 
 Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
 
@@ -58,17 +58,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> 
-> This example uses of Boost 4 Click board to set the desired output voltage.
-> 
+> This example demonstrates the use of Boost 4 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
->
-> Initializes devices driver and starts write log.
-> 
+> Initializes the driver and logger, and enables the click board.
 
 ```c
 
@@ -94,34 +90,76 @@ void application_init ( void )
     log_printf( &logger, "        Boost 4 Click        \r\n" );
     log_printf( &logger, "-----------------------------\r\n" );
     boost4_enable( &boost4, BOOST4_ENABLE );
-    Delay_ms( 100 );
+    Delay_ms( 1000 );
 }
   
 ```
 
 ### Application Task
 
->
->  This is a example which demonstrates the use of Boost 4 Click board.
->  Boost 4 Click communicates with register via SPI by write value to the 
->  TPS61230A chip. This example shows how to set the desired output voltage, 
->  by cycling through a couple of predefined voltage values. All data logs 
->  write on usb uart for aproximetly every 3 sec.
-> 
+> Set the desired output voltage by cycling through a couple of predefined voltage values.
+> All data are being logged on USB UART every 3 seconds.
 
 ```c
 
 void application_task ( void )
 {
-    log_printf( &logger, " Set the max Vout  ~ 5.25 V \r\n" );
-
+    log_printf( &logger, " Set the max Vout \r\n" );
     boost4_set_out_voltage( &boost4, BOOST4_VOUT_MAX );
 
     Delay_ms( 3000 );
 
     log_printf( &logger, "-----------------------------\r\n" );
 
-    log_printf( &logger, " Set the min Vout  ~ 3.05 V \r\n" );
+    log_printf( &logger, " Set Vout to 5V\r\n" );
+
+    boost4_set_out_voltage( &boost4, BOOST4_VOUT_5 );
+
+    Delay_ms( 3000 );
+    
+    log_printf( &logger, "-----------------------------\r\n" );
+
+    log_printf( &logger, " Set Vout to 4.5V\r\n" );
+
+    boost4_set_out_voltage( &boost4, BOOST4_VOUT_4_5 );
+
+    Delay_ms( 3000 );
+
+    log_printf( &logger, "-----------------------------\r\n" );
+    
+    log_printf( &logger, " Set Vout to 4V\r\n" );
+
+    boost4_set_out_voltage( &boost4, BOOST4_VOUT_4 );
+
+    Delay_ms( 3000 );
+
+    log_printf( &logger, "-----------------------------\r\n" );
+    
+    log_printf( &logger, " Set Vout to 3.5V\r\n" );
+
+    boost4_set_out_voltage( &boost4, BOOST4_VOUT_3_5 );
+
+    Delay_ms( 3000 );
+
+    log_printf( &logger, "-----------------------------\r\n" );
+    
+    log_printf( &logger, " Set Vout to 3V\r\n" );
+
+    boost4_set_out_voltage( &boost4, BOOST4_VOUT_3 );
+
+    Delay_ms( 3000 );
+
+    log_printf( &logger, "-----------------------------\r\n" );
+    
+    log_printf( &logger, " Set Vout to 2.5V\r\n" );
+
+    boost4_set_out_voltage( &boost4, BOOST4_VOUT_2_5 );
+
+    Delay_ms( 3000 );
+
+    log_printf( &logger, "-----------------------------\r\n" );
+    
+    log_printf( &logger, " Set the min Vout \r\n" );
 
     boost4_set_out_voltage( &boost4, BOOST4_VOUT_MIN );
 
@@ -134,6 +172,9 @@ void application_task ( void )
 
 ## Note
 
+> Vout cannot be set to voltage below Vin. So in order to get all values at Vout exactly 
+> as it is set in this example, please provide 2.5V to Vin. 
+
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
 **Other mikroE Libraries used in the example:** 
@@ -145,12 +186,12 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](http://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
+[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
+[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 
 terminal available in all Mikroelektronika 
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application 
+[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
 of your choice, can be used to read the message.
 
 

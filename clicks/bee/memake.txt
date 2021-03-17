@@ -1,0 +1,7 @@
+type: subdirs
+project: Bee
+
+subdirs: {
+    lib
+    example
+}

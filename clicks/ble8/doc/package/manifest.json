@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "BT/BLE",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,6 +31,7 @@
     "related_projects":[
         2897
     ],
-    "version": "2.0.0.1"
+    "version": "2.0.0.2"
 }
+
 

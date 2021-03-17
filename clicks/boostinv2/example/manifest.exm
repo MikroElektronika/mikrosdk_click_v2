@@ -4,5 +4,5 @@
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","mikrocpic"],
     "hw" : ["click","TPS65131"],
-    "category" : ["	Boost"] 
+    "category" : ["Boost"] 
 }

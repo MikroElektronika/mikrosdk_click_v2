@@ -1,6 +1,6 @@
 
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Magnetic",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -26,8 +26,14 @@
     "name": "mikroe.click.bihall",
     "product_link": "https://www.mikroe.com/bi-hall-click",
     "short_description": "Bi Hall click is a simple solution for adding a bipolar Hall switch to your design. It carries the Melexis US2882 bipolar Hall-effect switch and a 74LVC1T45 single bit, dual supply transceiver.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        1076
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.2"
 }
+
 

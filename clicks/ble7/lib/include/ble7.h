@@ -70,24 +70,14 @@
 #define BLE7_INIT_ERROR   0xFF
 
 #define BLE7_END_BUFF          0
-
-#define BLE7_RSP_READY         1
-#define BLE7_RSP_NOT_READY     0
-/** \} */
-
-/**
- * \defgroup module_state Module power state
- * \{
- */
-#define BLE7_MODULE_POWER_ON   1
-#define BLE7_MODULE_POWER_OFF  0
 /** \} */
 
 /**
  * \defgroup driver Driver define
  * \{
  */
-#define DRV_RX_BUFFER_SIZE 500
+#define DRV_RX_BUFFER_SIZE 200
+#define DRV_TX_BUFFER_SIZE 100
 /** \} */
 
 /** \} */ // End group macro 
@@ -96,12 +86,6 @@
  * \defgroup type Types
  * \{
  */
-
-/**
- * @brief Handler definition.
- */
-typedef void ( *ble7_hdl_t )( uint8_t* );
-
 /**
  * @brief Click ctx object definition.
  */
@@ -123,10 +107,7 @@ typedef struct
     uart_t uart;
 
     char uart_rx_buffer[ DRV_RX_BUFFER_SIZE ];
-    char uart_tx_buffer[ DRV_RX_BUFFER_SIZE ];
-
-    uint8_t  rsp_rdy;
-    ble7_hdl_t  driver_hdl;
+    char uart_tx_buffer[ DRV_TX_BUFFER_SIZE ];
 
 } ble7_t;
 
@@ -240,38 +221,6 @@ int32_t ble7_generic_read ( ble7_t *ctx, char *data_buf, uint16_t max_len );
 void ble7_send_command ( ble7_t *ctx, char *command );
 
 /**
- * @brief Handler Setting function
- *
- * @param ctx         Click object.  
- * @param handler     Pointer to the function which should be performed to get response
- *
- * @description This function sets handler on the function which should be performed,
- * for example function for the results logging.
- */
-void ble7_response_handler_set ( ble7_t *ctx, void ( *handler )( uint8_t* ) );
-
-/**
- * @brief UART ISR function
- *
- * @param ctx         Click object. 
- *
- * @description This function reads response bytes from the BGX module and sets flag after 
- * each received byte.
- */
-void ble7_uart_isr ( ble7_t *ctx, uint8_t rx_dat );
-
-/**
- * @brief Response Ready function
- *
- * @param ctx         Click object. 
- * 
- * @returns 0 - response is not ready, 1 - response is ready
- *
- * @description This function checks does response ready or not.
- */
-uint8_t ble7_response_ready ( ble7_t *ctx );
-
-/**
  * @brief GP0 Pin Getting function
  *
  * @param ctx         Click object. 
@@ -312,8 +261,6 @@ void ble7_set_gp1 ( ble7_t *ctx, uint8_t state );
  * @description This function sets CTS pin to the desired state.
  */
 void ble7_set_cts ( ble7_t *ctx, uint8_t state );
-
-void ble7_receive_command( ble7_t *ctx, char* data_buf);
 
 #ifdef __cplusplus
 }

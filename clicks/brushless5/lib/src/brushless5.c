@@ -45,8 +45,7 @@ void brushless5_cfg_setup ( brushless5_cfg_t *cfg )
 
     cfg->fg = HAL_PIN_NC;
 
-    cfg->dev_pwm_freq 	  = 5000;
-
+    cfg->dev_pwm_freq = BRUSHLESS5_DEF_FREQ;
 }
 
 BRUSHLESS5_RETVAL brushless5_init ( brushless5_t *ctx, brushless5_cfg_t *cfg )
@@ -55,20 +54,18 @@ BRUSHLESS5_RETVAL brushless5_init ( brushless5_t *ctx, brushless5_cfg_t *cfg )
     
     pwm_configure_default( &pwm_cfg );
 
-	pwm_cfg.pin      = cfg->pwm;
-	pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
+    pwm_cfg.pin      = cfg->pwm;
+    pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
 
     ctx->pwm_freq = cfg->dev_pwm_freq;
     pwm_open( &ctx->pwm, &pwm_cfg );
     pwm_set_freq( &ctx->pwm, pwm_cfg.freq_hz );
-
 
     // Input pins
 
     digital_in_init( &ctx->fg, cfg->fg );
 
     return BRUSHLESS5_OK;
-
 }
 
 void brushless5_set_duty_cycle ( brushless5_t *ctx, float duty_cycle )
@@ -84,6 +81,11 @@ void brushless5_pwm_stop ( brushless5_t *ctx )
 void brushless5_pwm_start ( brushless5_t *ctx )
 {
     pwm_start( &ctx->pwm ); 
+}
+
+uint8_t brushless5_get_fg ( brushless5_t *ctx )
+{
+    return digital_in_read( &ctx->fg );
 }
 
 // ------------------------------------------------------------------------- END

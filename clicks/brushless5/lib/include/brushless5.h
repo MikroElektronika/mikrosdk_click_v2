@@ -58,7 +58,7 @@
  * \defgroup error_code Error Code
  * \{
  */
-#define BRUSHLESS5_RETVAL  uint8_t
+#define BRUSHLESS5_RETVAL       uint8_t
 
 #define BRUSHLESS5_OK           0x00
 #define BRUSHLESS5_INIT_ERROR   0xFF
@@ -68,7 +68,7 @@
  * \defgroup default_freq Default frequency value
  * \{
  */
-#define BRUSHLESS5_DEF_FREQ     20000
+#define BRUSHLESS5_DEF_FREQ     5000
 /** \} */
 
 /** \} */ // End group macro 
@@ -94,7 +94,6 @@ typedef struct
 
     // ctx variable 
 
-    uint16_t pwm_period;
     uint32_t  pwm_freq;
 
 } brushless5_t;
@@ -177,6 +176,15 @@ void brushless5_pwm_stop ( brushless5_t *ctx );
  * @description This function starts PWM module.
  */
 void brushless5_pwm_start ( brushless5_t *ctx );
+
+/**
+ * @brief Get fg pin state.
+ *
+ * @param ctx  Click object.
+ *
+ * @description This function returns fg pin state.
+ */
+uint8_t brushless5_get_fg ( brushless5_t *ctx );
 
 #ifdef __cplusplus
 }

@@ -7,7 +7,7 @@
 Brushless 9 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the TC78B027FTG, a 1-Hall sine-wave PWM controller for three-phase brushless DC motors from Toshiba Semiconductor. It simplifies the motor selection by using only one Hall sensor input that can be used with either a single Hall sensor motor or the more conventional 3 Hall sensor motors.
 
 <p align="center">
-  <img src="http://download.mikroe.com/images/click_for_ide/brushless-9-click-necto.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/brushless-9-click-necto.png" height=300px>
 </p>
 
 [click Product page](https://www.mikroe.com/brushless-9-click)
@@ -161,12 +161,12 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
+[USB UART click](https://shop.mikroe.com/usb-uart-click),
+[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or
+[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The
 terminal available in all Mikroelektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
+[compilers](https://shop.mikroe.com/compilers), or any other terminal application
 of your choice, can be used to read the message.
 
 ---

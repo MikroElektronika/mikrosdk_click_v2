@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Brushless",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,8 +25,12 @@
     "name": "mikroe.click.brushless5",
     "product_link": "https://www.mikroe.com/brushless-5-click",
     "short_description": "Brushless 5 click is a 3 phase sensorless BLDC motor controller, with a soft-switching feature for reduced motor noise and EMI, and precise BEMF motor sensing, which eliminates the need for Hall-sensors in motor applications.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "related_projects":[
+        2390
+    ],
+    "version": "2.0.0.3"
 }
 

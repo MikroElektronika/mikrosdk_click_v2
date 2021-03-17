@@ -74,10 +74,15 @@
  */
 #define BOOST4_START_CMD  0x70
 
-#define BOOST4_VOUT_MAX   0x0000
-#define BOOST4_VOUT_MIN   0x0FFF
-#define BOOST4_VOUT_4     0x0740
-#define BOOST4_VOUT_4_5   0x041F
+#define BOOST4_VOUT_MIN   1500 
+#define BOOST4_VOUT_2_5   1330
+#define BOOST4_VOUT_3     1085
+#define BOOST4_VOUT_3_5   840
+#define BOOST4_VOUT_4     595
+#define BOOST4_VOUT_4_5   350
+#define BOOST4_VOUT_5     105
+#define BOOST4_VOUT_MAX   0
+
 #define BOOST4_12_BIT     0x0FFF
 #define BOOST4_ENABLE     1
 #define BOOST4_DISABLE    0

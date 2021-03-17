@@ -5,7 +5,7 @@
 Barometer click carries the LPS25HB IC, which is a piezoresistive absolute pressure sensor with a measurement range from 260 to 1260 hPa.
 
 <p align="center">
-  <img src="http://download.mikroe.com/images/click_for_ide/barometer_click.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/barometer_click.png" height=300px>
 </p>
 
 [click Product page](<https://www.mikroe.com/barometer-click>)
@@ -24,8 +24,8 @@ Barometer click carries the LPS25HB IC, which is a piezoresistive absolute press
 
 We provide a library for the Barometer Click 
 as well as a demo application (example), developed using MikroElektronika 
-[compilers](http://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
+[compilers](https://shop.mikroe.com/compilers). 
+The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
 
 Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
 
