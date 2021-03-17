@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "LED Matrix",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,9 +25,17 @@
     "name": "mikroe.click.c16x9",
     "product_link": "https://www.mikroe.com/16x9-g-click",
     "short_description": "16x9 click is an array of 144 LEDs, driven by a single IC with relatively low pin count (28).",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.3"
+    "_type": "mirkoSDK Library",
+    "related_projects":[
+        2003
+    ],
+    "version": "2.0.0.7"
 }
+
+
+
+
 
 

@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Pushbutton/Switches",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,9 +25,13 @@
     "name": "mikroe.click.c2x2key",
     "product_link": "https://www.mikroe.com/2x2-key-click",
     "short_description": "2x2 Key click has a 4 button keypad and allows multiple key presses.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.2"
+    "_type":"mikroSDK Library",
+    "related_projects": [ 1965 ],
+    "version": "2.0.0.4"
 }
+
+
 
 

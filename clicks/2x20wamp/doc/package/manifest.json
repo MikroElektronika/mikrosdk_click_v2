@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Amplifier",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,10 +25,16 @@
     "name": "mikroe.click.c2x20wamp",
     "product_link": "https://www.mikroe.com/2x20w-amp-click",
     "short_description": "2x20W Amp click carries the MAX9744 stereo class D audio power amplifier from Maxim Integrated. This click brings the Class AB sound performance with Class D efficiency.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.6"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2191
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.7"
 }
+
 
 
 
