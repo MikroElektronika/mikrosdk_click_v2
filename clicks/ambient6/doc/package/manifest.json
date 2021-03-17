@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Optical",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,8 +25,14 @@
     "name": "mikroe.click.ambient6",
     "product_link": "https://www.mikroe.com/ambient-6-click",
     "short_description": "Ambient 6 click can sense the intensity of the ambient light, providing the measurement data in digital format over the I2C interface.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.2"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2652
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.3"
 }
+
 

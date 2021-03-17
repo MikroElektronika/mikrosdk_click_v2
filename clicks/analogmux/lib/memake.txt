@@ -1,0 +1,40 @@
+type: library
+
+target: lib_analogmux
+
+alias: Click.AnalogMUX
+
+sources: {
+    src/analogmux.c
+}
+
+headers: {
+    include/analogmux.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/analogmux.h) dst(include/analogmux.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

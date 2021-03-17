@@ -1,0 +1,17 @@
+type: executable
+target: example_barcode2
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Barcode2
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

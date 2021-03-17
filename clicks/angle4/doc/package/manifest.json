@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Magnetic",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,8 +25,14 @@
     "name": "mikroe.click.angle4",
     "product_link": "https://www.mikroe.com/angle-4-click",
     "short_description": "Angle 4 click is an angular magnetic rotary sensor, which can be used as a rotary encoder.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2491
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.2"
 }
+
 

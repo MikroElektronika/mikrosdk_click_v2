@@ -1,0 +1,8 @@
+{
+    "name": "Altitude 3 Click",
+    "description": "Altitude 3 click allows high-resolution barometric pressure measurement, by utilizing the ICP-10100, an integrated barometric pressure and temperature sensor.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic"],
+    "hw" : ["click","ICP-10100"],
+    "category" : ["Altitude"] 
+}

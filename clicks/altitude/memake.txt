@@ -1,0 +1,7 @@
+type: subdirs
+project: Altitude
+
+subdirs: {
+    lib
+    example
+}

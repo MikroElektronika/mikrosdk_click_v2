@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Amplifier",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,8 +25,14 @@
     "name": "mikroe.click.audioamp4",
     "product_link": "https://www.mikroe.com/audioamp-4-click",
     "short_description": "AudioAmp 4 click is a low-power audio amplifier with a digital volume control. It is equipped with the LM4860, an audio amplifier IC capable of delivering up to 1W of continuous power to an 8 Ω load. ",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2642
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.2"
 }
+
 

@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Miscellaneous",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,10 +25,16 @@
     "name": "mikroe.click.barcode",
     "product_link": "https://www.mikroe.com/barcode-click",
     "short_description": "Barcode Click is a very fast and agile barcode scanner on a click board™, which is compliant with a wide range of different 1D and 2D barcode protocols.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.3"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2290
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.4"
 }
+
 
 
 

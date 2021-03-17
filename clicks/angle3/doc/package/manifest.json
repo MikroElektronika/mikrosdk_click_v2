@@ -1,5 +1,5 @@
 {
-  "architecture": "ARM",
+  "architecture": "ARM|PIC",
   "category": "Magnetic",
   "changelog": "Resources/CHANGELOG.md",
   "contains": [
@@ -25,9 +25,14 @@
   "name": "mikroe.click.angle3",
   "product_link": "https://www.mikroe.com/angle-3-click",
   "short_description": "Angle 3 click carries the AK7451, a magnetic rotational angle sensor. The click is designed to run on a 5V power supply. ",
-  "supported_compiler": "mikroC",
+  "supported_compiler": "mikroC AI",
   "type": "Library",
-  "version": "2.0.0.2"
+  "related_projects":[
+    2158
+  ],
+  "version": "2.0.0.4"
 }
+
+
 
 

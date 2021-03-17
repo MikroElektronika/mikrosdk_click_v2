@@ -5,7 +5,7 @@
 The AudioAMP Board features an on-board power amplifier LM386 designed for use in low voltage consumer applications.
 
 <p align="center">
-  <img src="http://download.mikroe.com/images/click_for_ide/audioamp_click.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/audioamp_click.png" height=300px>
 </p>
 
 [click Product page](<https://www.mikroe.com/audioamp-board>)
@@ -24,8 +24,8 @@ The AudioAMP Board features an on-board power amplifier LM386 designed for use i
 
 We provide a library for the AudioAmp Click 
 as well as a demo application (example), developed using MikroElektronika 
-[compilers](http://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
+[compilers](https://shop.mikroe.com/compilers). 
+The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
 
 Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
 

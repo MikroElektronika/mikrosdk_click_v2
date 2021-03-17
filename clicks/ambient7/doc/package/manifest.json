@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Optical",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -25,8 +25,14 @@
     "name": "mikroe.click.ambient7",
     "product_link": "https://www.mikroe.com/ambient-7-click",
     "short_description": "Ambient 7 Click is a light intensity-sensing and measuring Click board™, which features an accurate light-intensity sensor labeled as SFH 5701 A01, made by Osram Opto Semiconductors.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.2"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2760
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.3"
 }
+
 

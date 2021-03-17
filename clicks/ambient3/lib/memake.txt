@@ -1,0 +1,40 @@
+type: library
+
+target: lib_ambient3
+
+alias: Click.Ambient3
+
+sources: {
+    src/ambient3.c
+}
+
+headers: {
+    include/ambient3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/ambient3.h) dst(include/ambient3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

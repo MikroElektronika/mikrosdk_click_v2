@@ -1,0 +1,17 @@
+type: executable
+target: example_angle5
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Angle5
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

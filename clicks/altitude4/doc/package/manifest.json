@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC",
+    "category": "Measurement",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Altitude 4 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.altitude4",
+    "product_link": "https://www.mikroe.com/altitude-4-click",
+    "short_description": "Altitude 4 Click introduces an absolute pressure sensor with digital output for low-cost applications labeled as NPA-201. Altitude 4 click employs a MEMS pressure sensor with a signal-conditioning IC to provide accurate pressure measurements from 260 to 1260 mBar.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.2"
+}
+
+

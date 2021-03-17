@@ -11,7 +11,7 @@ Altitude 2 click is a high-resolution barometric pressure sensor Click board™.
   <img src="http://download.mikroe.com/images/click_for_ide/altitude2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/altitude-2-click>)
+[click Product page](https://www.mikroe.com/altitude-2-click)
 
 ---
 
@@ -70,7 +70,7 @@ This example demonstrates the use of Altitude 2 Click to measure temperature, al
 > Initializes I2C driver and performs the device reset,
 > after which the calibration coefficients be read.
 > Determines the ratio value for temperature and pressure measurements.
-> Calibration coefficients are necessary to read after the device reset
+> Calibration coefficients are necessary to read after the device reset.
 
 ```c
 
@@ -105,7 +105,7 @@ void application_init ( void )
 
 > Gets temperature data in celsius value and pressure data in mbar value.
 > Gets the calculated altitude value in meters which depends on the temperature and pressure measurements.
-> Logs results on USBUART and repeats operation every 300 ms.
+> Logs results on USBUART and repeats operation each second.
 
 ```c
 
@@ -122,8 +122,6 @@ void application_task ( void )
 }  
 
 ```
-
-
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

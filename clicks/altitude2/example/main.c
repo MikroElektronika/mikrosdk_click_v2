@@ -9,16 +9,17 @@
  * 
  * ## Application Init 
  * Initializes I2C driver and performs the device reset,
- * after which the calibration coefficients be read.
+ * after which the calibration coefficients will be read.
  * Determines the ratio value for temperature and pressure measurements.
- * Calibration coefficients are necessary to read after the device reset
+ * Calibration coefficients are necessary to read after the device reset.
  * 
  * ## Application Task  
  * Gets temperature data in celsius value and pressure data in mbar value.
  * Gets the calculated altitude value in meters which depends on the temperature and pressure measurements.
- * Logs results on USBUART and repeats operation every 300 ms.
- * ## NOTE
- * Altitude is mented for correct outside readings. It's calculated from pressure and temperature readings.
+ * Logs results on USBUART and repeats operation each second.
+ * 
+ * @note
+ * Altitude is dependent from correct outside readings. It's calculated from pressure and temperature readings.
  * 
  * \author MikroE Team
  *

@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Amplifier",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -10,7 +10,7 @@
     "dependency_list": [
     ],
     "details": "Resources/DETAILS.md",
-    "display_name": "Audio Amp 2 click",
+    "display_name": "AudioAmp 2 click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -25,8 +25,15 @@
     "name": "mikroe.click.audioamp2",
     "product_link": "https://www.mikroe.com/audioamp-2-click",
     "short_description": "Audio Amp 2 click is a highly efficient class D audio amplifier, using the TDA7491, a dual BTL class-D audio amplifier IC, capable of delivering up to 20W to 8Ω load.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "related_projects":[
+        2384
+    ],
+    "version": "2.0.0.4"
 }
+
+
+
 

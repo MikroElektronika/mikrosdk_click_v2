@@ -39,6 +39,7 @@
 #include "drv_digital_in.h"
 #include "drv_i2c_master.h"
 #include "drv_spi_master.h"
+#include "math.h"
 
 // -------------------------------------------------------------- PUBLIC MACROS 
 /**
@@ -158,8 +159,6 @@ typedef struct altitude2_s
    uint8_t ratio_temp;
    uint8_t ratio_press;
    volatile uint32_t data_prom[ 6 ];
-   
-   
     
 } altitude2_t;
 
@@ -182,7 +181,7 @@ typedef struct
     uint32_t i2c_speed;
     uint8_t  i2c_address;
     uint32_t spi_speed;
-    uint8_t  spi_mode;
+    spi_master_mode_t  spi_mode;
     spi_master_chip_select_polarity_t cs_polarity;
 
    altitude2_select_t sel;

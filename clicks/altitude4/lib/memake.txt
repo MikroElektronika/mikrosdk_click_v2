@@ -1,0 +1,40 @@
+type: library
+
+target: lib_altitude4
+
+alias: Click.Altitude4
+
+sources: {
+    src/altitude4.c
+}
+
+headers: {
+    include/altitude4.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/altitude4.h) dst(include/altitude4.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

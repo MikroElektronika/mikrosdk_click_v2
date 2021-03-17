@@ -32,51 +32,10 @@
 // ------------------------------------------------------------- PRIVATE MACROS 
 
 #define ALTITUDE2_DUMMY             0
-#define DBL_MAX                     3.40282347e+38
-#define DBL_MAX_PIC                 6.80564713e+38
-#define EXCESS                    126
-#define MAX_EXPONENT              255
-
-#define FRNDINT(x)                  ((double)(long)(x))
-#define DBL_MANT_DIG               23
-#define DBL_MANT_DIG_PIC           24
-#define CHAR_BIT                    8
-
-#define EXP_MAX                    89.416
-#define EXP_MIN                   -87.33655
-
-// -------------------------------------------------------------- PRIVATE TYPES
-
-static union both
-{
-    struct flt
-    {
-        unsigned char   mant[ 2 ];
-        unsigned        hmant:7;
-        unsigned        exp:8;
-        unsigned        sign:1;
-      } flt;
-   double fl;
-};
-
-// ------------------------------------------------------------------ CONSTANTS
-
-
-// ------------------------------------------------------------------ VARIABLES
-
 
 // ---------------------------------------------- PRIVATE FUNCTION DECLARATIONS 
 
 static void altitude2_make_conv_comm ( altitude2_t *ctx, uint8_t *comm_temp, uint8_t *comm_press );
-
-static double pow ( double x, double y );
-static double log ( double x );
-static double exp ( double x );
-static double eval_poly ( double x, const double code *d, int n );
-static double ldexp ( double value, int newexp );
-static double frexp ( double value, int *eptr );
-static double floor ( double x );
-
 static void altitude2_i2c_send_comm ( altitude2_t *ctx, uint8_t comm_byte, uint32_t *input_data, uint8_t num_bytes );
 static void altitude2_i2c_send_comm_resp ( altitude2_t *ctx, uint8_t comm_byte, uint32_t *output_data, uint8_t num_bytes );
 static void altitude2_spi_send_comm ( altitude2_t *ctx, uint8_t comm_byte, uint32_t *input_data, uint8_t num_bytes );
@@ -99,7 +58,7 @@ void altitude2_cfg_setup ( altitude2_cfg_t *cfg )
     cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
     cfg->i2c_address = ALTITUDE2_DEVICE_ADDR_1;
     cfg->spi_speed = 100000; 
-    cfg->spi_mode = 0;
+    cfg->spi_mode = SPI_MASTER_MODE_0;
     cfg->sel = ALTITUDE2_MASTER_I2C;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 }
@@ -135,7 +94,7 @@ ALTITUDE2_RETVAL altitude2_init ( altitude2_t *ctx, altitude2_cfg_t *cfg )
         spi_master_config_t spi_cfg;
 
         spi_master_configure_default( &spi_cfg );
-        //spi_cfg.mode        = cfg->spi_mode;
+        spi_cfg.mode    = cfg->spi_mode;
         spi_cfg.speed  = cfg->spi_speed;
         spi_cfg.sck    = cfg->sck;
         spi_cfg.miso   = cfg->miso;
@@ -144,7 +103,7 @@ ALTITUDE2_RETVAL altitude2_init ( altitude2_t *ctx, altitude2_cfg_t *cfg )
         digital_out_init( &ctx->cs, cfg->cs );
         ctx->chip_select = cfg->cs;
 
-        if ( spi_master_open( &ctx->spi, &spi_cfg ) != SPI_MASTER_SUCCESS )
+        if ( spi_master_open( &ctx->spi, &spi_cfg ) == SPI_MASTER_ERROR )
         {
             return  ALTITUDE2_INIT_ERROR;
         }
@@ -156,10 +115,7 @@ ALTITUDE2_RETVAL altitude2_init ( altitude2_t *ctx, altitude2_cfg_t *cfg )
         
         ctx->send_comm_f = altitude2_spi_send_comm;
         ctx->send_comm_resp_f = altitude2_spi_send_comm_resp;
-
     }
-    
-
     return ALTITUDE2_OK;
 }
 
@@ -262,7 +218,11 @@ static void altitude2_i2c_send_comm ( altitude2_t *ctx, uint8_t comm_byte, uint3
 static void altitude2_spi_send_comm ( altitude2_t *ctx, uint8_t comm_byte, uint32_t *input_data, uint8_t num_bytes )
 {
     spi_master_select_device( ctx->chip_select );
+    Delay_1ms( );
+    Delay_1ms( );
+    Delay_1ms( );
     spi_master_write( &ctx->spi, &comm_byte, 1 );
+    Delay_1ms( );
     spi_master_deselect_device( ctx->chip_select );  
 }
 
@@ -287,20 +247,24 @@ static void altitude2_i2c_send_comm_resp ( altitude2_t *ctx, uint8_t comm_byte, 
 static void altitude2_spi_send_comm_resp ( altitude2_t *ctx, uint8_t comm_byte, uint32_t *output_data, uint8_t num_bytes )
 {   
     uint8_t tx_buf[ 1 ];
-    uint8_t rx_buf[ 257 ];
+    uint8_t rx_buf[ 3 ];
     uint8_t cnt;
     uint32_t pom = 0;
     
     tx_buf[ 0 ] = comm_byte;
 
     spi_master_select_device( ctx->chip_select );
-    spi_master_write_then_read( &ctx->spi, tx_buf, 1, rx_buf, num_bytes+1 );
+    Delay_1ms( );
+    Delay_1ms( );
+    Delay_1ms( );
+    spi_master_write_then_read( &ctx->spi, tx_buf, 1, rx_buf, num_bytes );
+    Delay_1ms( );
     spi_master_deselect_device( ctx->chip_select ); 
 
     for( cnt = 0; cnt < num_bytes ; cnt++ )
     { 
         pom = pom << 8;
-        pom = pom | rx_buf[ cnt + 1 ];  
+        pom = pom | rx_buf[ cnt ];  
         
     }
     *output_data = pom;
@@ -327,234 +291,6 @@ static void altitude2_make_conv_comm( altitude2_t *ctx, uint8_t *comm_temp, uint
     }
 
     *comm_press = comm_byte;
-}
-
-static double pow( double x, double y )
-{
-    unsigned char sign = 0;
-    long yi;
-
-    if ( y == 0.0 )
-        return 1.0;
-    if ( x == 0.0 ) 
-        return 0.0;
-        
-    if ( x < 0.0 )
-    {
-        yi = ( long )y;
-                
-        if ( ( double ) yi != y)
-            return 0.0;
-        sign = yi & 1;
-        x = -x;
-    }
-        
-    x = log( x );
-    x = x * y;
-    x = exp( x );
-
-    if ( sign )
-    {
-        return -x;
-    }
-
-    return x;
-}
-
-static double log( double x )
-{
-    int exp;
-    static const double coeff[ ] = {
-     0.0000000001,      // a0 //
-     0.9999964239,      // a1 //
-    -0.4998741238,      // a2 //
-     0.3317990258,      // a3 //
-    -0.2407338084,      // a4 //
-     0.1676540711,      // a5 //
-    -0.0953293897,      // a6 //
-     0.0360884937,      // a7 //
-    -0.0064535442,      // a8 //
-    };
-
-    if ( x <= 0.0 )
-        return 0.0;
-        
-    x = frexp( x, &exp ) * 2.0 - 1.0;
-    exp--;
-    x = eval_poly( x, coeff, sizeof coeff / sizeof coeff[ 0 ] - 1 );
-        
-    return x + 0.69314718055995 * exp;
-}
-
-static double exp( double x )
-{
-    int exp;
-    char sign;
-
-    const static double coeff[ ] = {
-    1.0000000000e+00,
-    6.9314718056e-01,
-    2.4022650695e-01,
-    5.5504108945e-02,
-    9.6181261779e-03,
-    1.3333710529e-03,
-    1.5399104432e-04,
-    1.5327675257e-05,
-    1.2485143336e-06,
-    1.3908092221e-07,
-    };
-
-    if (x == 0.0)
-        return 1.0;
-    if (x > EXP_MAX)
-    {
-#ifdef _8BIT_SPECIFIC
-        return DBL_MAX_PIC;
-#else
-        return DBL_MAX;
-#endif
-    }
-    if (x < EXP_MIN)
-    { 
-        return 0.0;
-    }
-        
-    sign = x < 0.0;
-    if ( sign )
-        x = -x;
-        
-    x *= 1.4426950409;           
-    exp = ( int ) floor( x );
-    x -= ( double ) exp;
-    x = ldexp( eval_poly( x, coeff, sizeof coeff / sizeof coeff[ 0 ] - 1 ), exp );
-        
-    if ( sign )
-    {
-#ifdef _8BIT_SPECIFIC
-        if (x == DBL_MAX_PIC)
-        {
-            return 0.0;
-        }
-#else
-        if (x == DBL_MAX)
-        {
-            return 0.0;
-        }
-#endif
-        return 1.0 / x;
-    }
-        
-    return x;
-}
-
-static double eval_poly( double x, const double code *d, int n )
-{
-    double res;
-
-    res = d[ n ];
-
-    while ( n )
-    {
-        res = x * res + d[--n];
-    }
-    return res;
-}
-
-static double ldexp( double value, int newexp )
-{
-#ifdef _8BIT_SPECIFIC
-    char *pom;
-
-    pom = &value;
-    newexp += pom[3];
-    if (newexp < 0)
-        return 0.0;
-    else
-    if (newexp > MAX_EXPONENT)
-        if (value < 0.0)
-            return -DBL_MAX_PIC;
-        else
-            return DBL_MAX_PIC;
-    else
-        pom[3] = newexp;
-
-    return value;
-#else
-    union both uv;
-
-    uv.fl = value;
-    newexp += uv.flt.exp;
-    if (newexp < 0)
-        return 0.0;
-    else
-    if (newexp > MAX_EXPONENT)
-        if (value < 0.0)
-            return -DBL_MAX;
-        else
-            return DBL_MAX;
-    else
-        uv.flt.exp = newexp;
-        
-    return uv.fl;
-#endif
-}
-
-static double frexp ( double value, int *eptr )
-{
-#ifdef _8BIT_SPECIFIC
-    char *pom;
-
-    pom = &value;
-    *eptr = pom[3] - EXCESS;
-    pom[3] = EXCESS;
-
-    return value;
-#else
-    union both uv;
-    int bb;
-
-    uv.fl = value;
-    bb = uv.flt.exp - EXCESS;
-    *eptr = bb;
-    uv.flt.exp = EXCESS;
-        
-    return uv.fl;
-#endif
-}
-
-
-static double floor( double x )
-{
-    double i;
-    int expon;
-
-#ifdef _8BIT_SPECIFIC
-    expon = (*(unsigned long *)&x >> DBL_MANT_DIG_PIC) & 255;
-#else
-    expon = ( ( *( unsigned long * ) & x >> DBL_MANT_DIG ) & 255 );
-#endif
-    expon = expon - 127;
-        
-    if ( expon < 0 )
-        if ( x < 0.0 )
-        {
-            return -1.0;
-        }
-        else
-        {
-            return  0.0;
-        }
-        
-    if ( ( unsigned ) expon > sizeof( double ) * CHAR_BIT - 8 )
-        return x;          
-    i = FRNDINT(x);
-
-    if ( i > x )
-    {
-        return i - 1.0;
-    }
-        
-    return i;
 }
 
 // ------------------------------------------------------------------------- END

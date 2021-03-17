@@ -27,7 +27,7 @@
  *
  */
 
-#include "amrcurent.h"
+#include "amrcurrent.h"
 
 // ---------------------------------------------- PRIVATE FUNCTION DECLARATIONS 
 

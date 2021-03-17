@@ -4,15 +4,6 @@ target: lib_altitude2
 
 alias: Click.Altitude2
 
-#begin python
-if (MEMAKE_TOOLCHAIN_ID == "mikrocpic"):
-    architecture = "_8BIT_SPECIFIC"
-#end python
-
-defines: {
-    <[architecture]>
-}
-
 sources: {
     src/altitude2.c
 }

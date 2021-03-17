@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC",
     "category": "Magnetic",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,7 +31,8 @@
     "related_projects":[
         2629
     ],
-    "version": "2.0.0.2"
+    "version": "2.0.0.3"
 }
+
 
 
