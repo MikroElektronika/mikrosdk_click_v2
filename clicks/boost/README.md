@@ -9,7 +9,7 @@ Boost click carries Microchip’s MIC2606, a 2MHz, PWM DC/DC boost switching reg
   <img src="https://download.mikroe.com/images/click_for_ide/boost_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/boost-click>)
+[click Product page](https://www.mikroe.com/boost-click)
 
 ---
 

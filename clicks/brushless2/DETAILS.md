@@ -8,7 +8,7 @@ Brushless 2 click carries the DRV10964 BLDC motor controller with an integrated 
   <img src="https://download.mikroe.com/images/click_for_ide/brushless2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/brushless-2-click>)
+[click Product page](https://www.mikroe.com/brushless-2-click)
 
 ---
 

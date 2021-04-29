@@ -8,7 +8,7 @@ Brushless 4 click is a 3 phase sensorless BLDC motor driver, which features a 18
   <img src="https://download.mikroe.com/images/click_for_ide/brushless4_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/brushless-4-click>)
+[click Product page](https://www.mikroe.com/brushless-4-click)
 
 ---
 

@@ -8,7 +8,7 @@ Boost-INV 2 click is a very useful DC/DC voltage converter device, as can output
   <img src="https://download.mikroe.com/images/click_for_ide/boostinv2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/boost-inv-2-click>)
+[click Product page](https://www.mikroe.com/boost-inv-2-click)
 
 ---
 

@@ -9,7 +9,7 @@ The Buck-Boost 3 click is a voltage converter regulator, which is able to provid
   <img src="https://download.mikroe.com/images/click_for_ide/buckboost3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/buck-boost-3-click>)
+[click Product page](https://www.mikroe.com/buck-boost-3-click)
 
 ---
 

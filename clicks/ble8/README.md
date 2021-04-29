@@ -9,7 +9,7 @@ BLE 8 Click is fully embedded stand-alone Bluetooth 5.0 Energy connectivity modu
   <img src="https://download.mikroe.com/images/click_for_ide/ble8_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ble-8-click>)
+[click Product page](https://www.mikroe.com/ble-8-click)
 
 ---
 

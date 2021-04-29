@@ -62,27 +62,27 @@
  */
 #define BRUSHLESS6_RETVAL  uint8_t
 
-#define BRUSHLESS6_OK           0x00
-#define BRUSHLESS6_INIT_ERROR   0xFF
+#define BRUSHLESS6_OK             0x00
+#define BRUSHLESS6_INIT_ERROR     0xFF
 /** \} */
 
 /**
  * \defgroup default_freq Default frequency value
  * \{
  */
-#define BRUSHLESS6_DEF_FREQ     500
+#define BRUSHLESS6_DEF_FREQ       500
 /** \} */
 
 /**
  * \defgroup speed  Speed
  * \{
  */
-#define BRUSHLESS6_COEF                 1.0 / ( ( 1000000.0 / BRUSHLESS6_DEF_FREQ ) / 0.3048 )  
+#define BRUSHLESS6_COEF           1.0 / ( ( 1000000.0 / BRUSHLESS6_DEF_FREQ ) / 0.3048 )  
 #define BRUSHLESS6_MIN_PWM_DC     BRUSHLESS6_COEF * 2000.0
-#define BRUSHLESS6_INIT_DC             BRUSHLESS6_COEF * 4855.0
-#define BRUSHLESS6_1MS_DC              BRUSHLESS6_MIN_PWM_DC / 0.608
-#define BRUSHLESS6_2MS_DC              BRUSHLESS6_1MS_DC * 2.0
-#define BRUSHLESS6_PERIOD               BRUSHLESS6_1MS_DC / 10.0
+#define BRUSHLESS6_INIT_DC        BRUSHLESS6_COEF * 4855.0
+#define BRUSHLESS6_1MS_DC         BRUSHLESS6_MIN_PWM_DC / 0.608
+#define BRUSHLESS6_2MS_DC         BRUSHLESS6_1MS_DC * 2.0
+#define BRUSHLESS6_PERIOD         BRUSHLESS6_1MS_DC / 10.0
 /** \} */
 
 /** \} */ // End group macro 
@@ -188,14 +188,6 @@ void brushless6_pwm_stop ( brushless6_t *ctx );
  * @description This function starts PWM module.
  */
 void brushless6_pwm_start ( brushless6_t *ctx );
-
-/**
- * @brief GPIO Only Drivers - remove in other cases
- *
- * @param ctx  Click object.
- *
- */
-void brushless6_gpio_driver_init ( brushless6_t *ctx );
 
 #ifdef __cplusplus
 }

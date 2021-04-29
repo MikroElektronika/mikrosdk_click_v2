@@ -8,7 +8,7 @@ BUCK click is a buck switching regulator that accepts a wide input voltage range
   <img src="https://download.mikroe.com/images/click_for_ide/buck_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/buck-click>)
+[click Product page](https://www.mikroe.com/buck-click)
 
 ---
 

@@ -2,7 +2,7 @@
     "name": "Buck 9 10 click",
     "description": "Buck 9 10 Click is a high-efficiency step-down converter which provides a highly regulated output voltage derived from the connected power source, rated from 4V to 36V.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","MP9943", "MPM3632C"],
     "category" : ["Buck"] 
 }

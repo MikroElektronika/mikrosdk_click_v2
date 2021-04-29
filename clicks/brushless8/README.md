@@ -11,7 +11,7 @@
 </p>
 
 
-[click Product page](<https://www.mikroe.com/brushless-8-click>)
+[click Product page](https://www.mikroe.com/brushless-8-click)
 
 ---
 

@@ -1,0 +1,38 @@
+type: library
+
+target: lib_bletiny
+
+sources: {
+    src/bletiny.c
+}
+
+headers: {
+    include/bletiny.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/bletiny.h) dst(include/bletiny.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+    MikroSDK.Conversions
+    MikroSDK.GenericPointer
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.BLETINY

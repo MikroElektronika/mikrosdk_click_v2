@@ -9,7 +9,7 @@ The Boost 6 Click is a Click board™ which features the TPS55332-Q1, a monolith
   <img src="https://download.mikroe.com/images/click_for_ide/boost6_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/boost-6-click>)
+[click Product page](https://www.mikroe.com/boost-6-click)
 
 ---
 

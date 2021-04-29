@@ -8,7 +8,7 @@ BUCK 6 click is an advanced synchronous DC-DC step down (buck) converter, with a
   <img src="https://download.mikroe.com/images/click_for_ide/buck6_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/buck-6-click>)
+[click Product page](https://www.mikroe.com/buck-6-click)
 
 ---
 

@@ -11,7 +11,7 @@ Boost 4 click carries the TPS61230A, a high efficiency fully integrated synchron
   <img src="https://download.mikroe.com/images/click_for_ide/boost4_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/boost-4-click>)
+[click Product page](https://www.mikroe.com/boost-4-click)
 
 ---
 

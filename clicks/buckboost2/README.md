@@ -11,7 +11,7 @@ Buck-Boost 2 click is an advanced DC-DC step-down/step-up regulator (buck/boost)
   <img src="https://download.mikroe.com/images/click_for_ide/buckboost2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/buck-boost-2-click>)
+[click Product page](https://www.mikroe.com/buck-boost-2-click)
 
 ---
 

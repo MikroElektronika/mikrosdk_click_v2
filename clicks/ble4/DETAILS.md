@@ -8,7 +8,7 @@ BLE 4 Click is fully embedded stand-alone Bluetooth 5.0 low energy connectivity 
   <img src="https://download.mikroe.com/images/click_for_ide/ble4_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ble-4-click>)
+[click Product page](https://www.mikroe.com/ble-4-click)
 
 ---
 

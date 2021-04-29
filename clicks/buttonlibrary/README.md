@@ -9,12 +9,12 @@ Every Button click is a very interesting interactive gadget on a Click board™.
   <img src="https://download.mikroe.com/images/click_for_ide/grupe/button-click-group.png" height=150px>
 </p>
 
-> - [Product page - Button Play click](<https://www.mikroe.com/button-play-click>)
-> - [Product page - Button Power click](<https://www.mikroe.com/button-power-click>)
-> - [Product page - Button Alarm click](<https://www.mikroe.com/button-alarm-click>)
-> - [Product page - Button Y click](<https://www.mikroe.com/button-y-click>)
-> - [Product page - Button G click](<https://www.mikroe.com/button-g-click>)
-> - [Product page - Button R click](<https://www.mikroe.com/button-r-click>)
+> - [Product page - Button Play click](https://www.mikroe.com/button-play-click)
+> - [Product page - Button Power click](https://www.mikroe.com/button-power-click)
+> - [Product page - Button Alarm click](https://www.mikroe.com/button-alarm-click)
+> - [Product page - Button Y click](https://www.mikroe.com/button-y-click)
+> - [Product page - Button G click](https://www.mikroe.com/button-g-click)
+> - [Product page - Button R click](https://www.mikroe.com/button-r-click)
 ---
 
 #### Click library 

@@ -9,8 +9,8 @@ Buck 9 Click is a high-efficiency step-down converter which provides a highly re
   <img src="https://download.mikroe.com/images/click_for_ide/grupe/buck910-click-group.png" height=300px>
 </p>
 
-[Product page - Buck 10 click](<https://www.mikroe.com/buck-10-click>)
-[Product page - Buck 9 click](<https://www.mikroe.com/buck-9-click>)
+[Product page - Buck 10 click](https://www.mikroe.com/buck-10-click)
+[Product page - Buck 9 click](https://www.mikroe.com/buck-9-click)
 
 ---
 

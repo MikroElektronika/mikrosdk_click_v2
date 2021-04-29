@@ -7,7 +7,7 @@ BOOST 2 click is a DC-DC step-up (boost) regulator that has a fixed 5V output, w
   <img src="https://download.mikroe.com/images/click_for_ide/boost2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/boost-2-click>)
+[click Product page](https://www.mikroe.com/boost-2-click)
 
 ---
 

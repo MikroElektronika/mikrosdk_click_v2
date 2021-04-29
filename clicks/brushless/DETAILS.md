@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/brushless_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/brushless>)
+[click Product page](https://www.mikroe.com/brushless)
 
 ---
 

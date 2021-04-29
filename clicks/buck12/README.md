@@ -11,7 +11,7 @@ Buck 12 Click is a high-efficiency step-down converter which provides 3.3V on it
   <img src="https://download.mikroe.com/images/click_for_ide/buck12_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/buck-12-click>)
+[click Product page](https://www.mikroe.com/buck-12-click)
 
 ---
 

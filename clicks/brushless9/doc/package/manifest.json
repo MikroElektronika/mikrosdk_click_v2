@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM|PIC",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Brushless",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -28,8 +29,9 @@
     "supported_compiler": "mikroC AI",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.0.0.4"
+    "version": "2.0.0.5"
 }
+
 
 
 

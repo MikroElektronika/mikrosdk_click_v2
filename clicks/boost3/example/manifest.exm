@@ -2,7 +2,7 @@
     "name": "Boost 3 Click",
     "description": "Boost 3 Click is a compact add-on board that contains a boost converter with an integrated current mirror function. This board features the TPS61391, a 700-kHz pulse-width modulating (PWM) Step-Up converter with a 70V switch FET with an input voltage up to 5.5V from Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","TPS61391"],
     "category" : ["Boost"] 
 }

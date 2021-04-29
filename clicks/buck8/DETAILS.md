@@ -9,7 +9,7 @@ Buck 8 click is a high efficiency, wide voltage range, and high current synchron
 </p>
 
 
-[click Product page](<https://www.mikroe.com/buck-8-click>)
+[click Product page](https://www.mikroe.com/buck-8-click)
 
 ---
 

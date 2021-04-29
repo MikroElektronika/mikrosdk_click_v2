@@ -9,7 +9,7 @@ With the range up to a 100m and low power consumption, Bluetooth click is a grea
   <img src="https://download.mikroe.com/images/click_for_ide/bluetooth_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/bluetooth-click>)
+[click Product page](https://www.mikroe.com/bluetooth-click)
 
 ---
 

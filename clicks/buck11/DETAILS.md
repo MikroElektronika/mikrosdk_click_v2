@@ -8,7 +8,7 @@ Buck 11 click is a high-efficiency step-down converter which provides 3.3V on it
   <img src="https://download.mikroe.com/images/click_for_ide/buck11_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/buck-11-click>)
+[click Product page](https://www.mikroe.com/buck-11-click)
 
 ---
 

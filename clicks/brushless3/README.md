@@ -11,7 +11,7 @@ Brushless 3 click carries the DRV10983, a three-phase sensorless motor driver wi
   <img src="https://download.mikroe.com/images/click_for_ide/brushless3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/brushless-3-click>)
+[click Product page](https://www.mikroe.com/brushless-3-click)
 
 ---
 

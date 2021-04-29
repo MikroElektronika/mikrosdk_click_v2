@@ -9,7 +9,7 @@ Brushless 6 click is designed to drive a three-phase sensorless, brushless motor
   <img src="https://download.mikroe.com/images/click_for_ide/brushless6_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/brushless-6-click>)
+[click Product page](https://www.mikroe.com/brushless-6-click)
 
 ---
 

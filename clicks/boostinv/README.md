@@ -11,7 +11,7 @@ Boost-INV click is a very useful DC/DC voltage converter device, as can output b
   <img src="https://download.mikroe.com/images/click_for_ide/boostinv_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/boost-inv-click>)
+[click Product page](https://www.mikroe.com/boost-inv-click)
 
 ---
 

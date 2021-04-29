@@ -2,7 +2,7 @@
     "name": "Buck 2 Click",
     "description": "Buck 2 click is a powerful step down DC-DC switching regulator. It gives a high precision regulated voltage at its output and it can handle an ample amount of current.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","MIC45404"],
     "category" : ["Buck"] 
 }

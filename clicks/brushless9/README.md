@@ -37,11 +37,15 @@ Package can be downloaded/installed directly from *NECTO Studio Package Manager*
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void brushless9_cfg_setup ( brushless9_cfg_t *cfg );
+- `brushless9_cfg_setup` Config Object Initialization function.
+```c
+void brushless9_cfg_setup ( brushless9_cfg_t *cfg );
+```
 
-- Initialization function.
-> BRUSHLESS8_RETVAL brushless9_init ( brushless9_t *ctx, brushless9_cfg_t *cfg );
+- `brushless9_init` Initialization function.
+```c
+err_t brushless9_init ( brushless9_t *ctx, brushless9_cfg_t *cfg );
+```
 
 #### Example key functions :
 

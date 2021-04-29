@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM|PIC",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Capacitive",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -32,8 +33,9 @@
         2945, 2918, 2685, 
         2636, 1473, 1639
     ],
-    "version": "2.0.0.14"
+    "version": "2.0.0.15"
 }
+
 
 
 

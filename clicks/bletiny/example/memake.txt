@@ -1,0 +1,14 @@
+type: executable
+target: example_bletiny
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    MikroSDK.Conversions
+    Click.BLETINY
+}
+
+sources: {
+    main.c
+}

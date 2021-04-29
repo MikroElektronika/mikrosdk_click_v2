@@ -8,7 +8,7 @@ The Buck 14 Click is a Click board™ based around the BMR4613001/001, a PoL reg
   <img src="https://download.mikroe.com/images/click_for_ide/buck14_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/buck-14-click>)
+[click Product page](https://www.mikroe.com/buck-14-click)
 
 ---
 

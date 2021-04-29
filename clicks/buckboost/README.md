@@ -11,7 +11,7 @@ Buck-Boost click™ features LTC3129-1, a buck-boost DC/DC conversion integrated
   <img src="https://download.mikroe.com/images/click_for_ide/buckboost_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/buck-boost-click>)
+[click Product page](https://www.mikroe.com/buck-boost-click)
 
 ---
 

@@ -11,7 +11,7 @@ Buck 13 Click is a high-efficiency step-down converter which provides a highly r
   <img src="https://download.mikroe.com/images/click_for_ide/buck13_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/buck-13-click>)
+[click Product page](https://www.mikroe.com/buck-13-click)
 
 ---
 
