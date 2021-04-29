@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Battery Charger",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Charger 6 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.charger6",
+    "product_link": "https://www.mikroe.com/charger-6-click",
+    "short_description": "Charger 6 Click is a compact add-on board that represents a single-cell battery charger. This board features the BQ25601, an I2C controlled battery charger for high input voltage and narrow voltage DC power path management from Texas Instruments. This buck charger supports USB, and it’s optimized for USB voltage input. The low impedance power path optimizes switch-mode operation efficiency, reduces battery charging time, and extends battery life during discharge. It also has a programmable current limiting, allowing it to use an external power supply rated up to 13.5V. This Click board™ is suitable as a Li-Ion and Li-polymer battery charger for portable devices and accessories, power tools, and more.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.2"
+}
+

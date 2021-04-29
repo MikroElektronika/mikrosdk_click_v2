@@ -1,0 +1,36 @@
+type: library
+
+target: lib_canfd6
+
+sources: {
+    src/canfd6.c
+}
+
+headers: {
+    include/canfd6.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/canfd6.h) dst(include/canfd6.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.CANFD6

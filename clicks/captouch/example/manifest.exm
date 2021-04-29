@@ -2,7 +2,7 @@
     "name": "Cap Touch Click",
     "description": "Cap Touch click is a capacitive touch sensing button, integrated on a click board. It can be activated by touch.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","AT42QT1010"],
     "category" : ["Capacitive"] 
 }

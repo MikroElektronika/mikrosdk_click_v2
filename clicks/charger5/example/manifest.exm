@@ -2,7 +2,7 @@
     "name": "Charger 5 Click",
     "description": "Charger 5 click is designed to charge Lithium-Ion and Lithium-Polymer batteries.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","MCP73113"],
     "category" : ["Battery charger"] 
 }

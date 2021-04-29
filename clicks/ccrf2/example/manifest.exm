@@ -1,0 +1,8 @@
+{
+    "name": "ccRF 2 Click",
+    "description": "ccRF2 click carries CC1120, the fully integrated, high-performance single-chip radio transceiver with extremely low power consumption.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","CC1120"],
+    "category" : ["Sub-1 GHz Transceivers"] 
+}

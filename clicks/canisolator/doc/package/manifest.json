@@ -1,0 +1,40 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "CAN",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "CAN Isolator click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.canisolator",
+    "product_link": "https://www.mikroe.com/can-isolator-click",
+    "short_description": "CAN Isolator click provides isolated CAN communication. It carries the ADM3053 signal and power isolated CAN transceiver with an integrated isolated DC-to-DC converter.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2884
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.3"
+}
+
+
+

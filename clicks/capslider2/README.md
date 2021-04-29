@@ -1,15 +1,16 @@
 \mainpage Main Page
 
----
-# CAP SLIDER 2 click
 
-< CAP Slider 2 Click is a capacitive touch sensor with XY cross shaped electrodes integrated on a Click board™. This click can sense touch even through plastic, wood, or other dielectric materials, which can be used to protect the surface of the PCB and the sensor pad trace itself >
+---
+# CAP Slider 2 click
+
+CAP Slider 2 Click is a capacitive touch sensor with XY cross shaped electrodes integrated on a Click board™. This click can sense touch even through plastic, wood, or other dielectric materials, which can be used to protect the surface of the PCB and the sensor pad trace itself
 
 <p align="center">
-  <img src="http://download.mikroe.com/images/click_for_ide/capslider2_click.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/capslider2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/cap-slider-2-click>)
+[click Product page](https://www.mikroe.com/cap-slider-2-click)
 
 ---
 
@@ -25,8 +26,8 @@
 
 We provide a library for the CapSlider2 Click 
 as well as a demo application (example), developed using MikroElektronika 
-[compilers](http://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
+[compilers](https://shop.mikroe.com/compilers). 
+The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
 
 Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
 
@@ -56,14 +57,14 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This application use for controlling various devices.
+> This application could be used for controlling various devices.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
->  Initializes I2C interface, performs the device reset and configurations
-  and sets the desired threshold value which determines sensor sensitivity.
+> Initializes I2C interface, performs the device reset and configurations
+> and sets the desired threshold value which determines sensor sensitivity.
 
 ```c
 
@@ -108,7 +109,10 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads sense values from capacitance cross (both wheels) when data was ready for reading, converts these values to 8 step resolution and selects on which way the LEDs be activated, depending in the which way finger (object) is pulled over the cross sensor. Results will be sent to the uart terminal.
+> Checks for data ready and then read capacitance from all channels.
+> There are two sliders on the clik board (X and Y).
+> X slider selects which LEDs are being activated, 
+> while Y slider increases/decreases the LEDs intensity.
 
 ```c
 
@@ -152,7 +156,7 @@ void application_task ( void )
 
 ## Note
 
-> User should wait for a 4 seconds about to device be stabilized.
+> In some cases, the user will need to wait several seconds after the click initialization for the sensor to be stabilized.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
@@ -165,12 +169,12 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](http://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
+[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
+[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 
 terminal available in all Mikroelektronika 
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application 
+[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
 of your choice, can be used to read the message.
 
 

@@ -1,0 +1,113 @@
+{
+    "dependencies": [
+    ],
+    "dictionary": [
+        {
+            "tag": "PACKAGE_NAME",
+            "value": "CAN FD 6"
+        },
+        {
+            "tag": "ALIAS_NAME",
+            "value": "CANFD6"
+        },
+        {
+            "tag": "NAME_LOWERCASE",
+            "value": "canfd6"
+        },
+        {
+            "tag": "NAME_UPPERCASE",
+            "value": "CANFD6"
+        },
+        {
+            "tag": "DEVELOPER_NAME",
+            "value": "Stefan Nikolic"
+        },
+        {
+            "tag": "VERSION",
+            "value": "2.0.0.0"
+        },
+        {
+            "tag": "---------- AN --",
+            "value": " "
+        },
+        {
+            "tag": "ENABLE_AN_PIN",
+            "value": " "
+        },
+        {
+            "tag": "AN_PIN_NAME",
+            "value": "wkr"
+        },
+        {
+            "tag": "AN_OUTPUT",
+            "value": " "
+        },
+        {
+            "tag": "AN_INPUT",
+            "value": "//"
+        },
+        {
+            "tag": "--------- RST --",
+            "value": " "
+        },
+        {
+            "tag": "ENABLE_RST_PIN",
+            "value": " "
+        },
+        {
+            "tag": "RST_PIN_NAME",
+            "value": "rst"
+        },
+        {
+            "tag": "RST_OUTPUT",
+            "value": " "
+        },
+        {
+            "tag": "RST_INPUT",
+            "value": "//"
+        },
+        {
+            "tag": "--------- PWM --",
+            "value": " "
+        },
+        {
+            "tag": "ENABLE_PWM_PIN",
+            "value": " "
+        },
+        {
+            "tag": "PWM_PIN_NAME",
+            "value": "wkp"
+        },
+        {
+            "tag": "PWM_OUTPUT",
+            "value": " "
+        },
+        {
+            "tag": "PWM_INPUT",
+            "value": "//"
+        },
+        {
+            "tag": "--------- INT --",
+            "value": " "
+        },
+        {
+            "tag": "ENABLE_INT_PIN",
+            "value": " "
+        },
+        {
+            "tag": "INT_PIN_NAME",
+            "value": "int_pin"
+        },
+        {
+            "tag": "INT_OUTPUT",
+            "value": "//"
+        },
+        {
+            "tag": "INT_INPUT",
+            "value": " "
+        }
+    ],
+    "packages": [
+    ],
+    "template": "SDK_v2_SPI_template"
+}

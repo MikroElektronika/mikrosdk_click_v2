@@ -1,0 +1,7 @@
+type: subdirs
+project: CANFD6
+
+subdirs: {
+    lib
+    example
+}

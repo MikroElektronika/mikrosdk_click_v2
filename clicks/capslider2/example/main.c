@@ -3,7 +3,7 @@
  * \brief CapSlider2 Click example
  * 
  * # Description
- * This application use for controlling various devices.
+ * This application could be used for controlling various devices.
  *
  * The demo application is composed of two sections :
  * 
@@ -12,12 +12,14 @@
  * and sets the desired threshold value which determines sensor sensitivity.
  * 
  * ## Application Task  
- * Reads sense values from capacitance cross (both wheels) when data was ready for reading,
- * converts these values to 8 step resolution and selects on which way the LEDs be activated, depending in the which way finger (object)
- * is pulled over the cross sensor. Results will be sent to the uart terminal.
+ * Checks for data ready and then read capacitance from all channels.
+ * There are two sliders on the clik board (X and Y).
+ * X slider selects which LEDs are being activated, 
+ * while Y slider increases/decreases the LEDs intensity.
  * 
- * *note:* 
- *  User should wait for a 4 seconds about to device be stabilized.
+ * ## NOTE 
+ * In some cases, the user will need to wait several seconds after the click initialization
+ * for the sensor to be stabilized.
  * 
  * \author MikroE Team
  *

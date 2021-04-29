@@ -1,0 +1,13 @@
+type: executable
+target: example_charger6
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Charger6
+}
+
+sources: {
+    main.c
+}

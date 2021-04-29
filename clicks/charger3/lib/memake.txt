@@ -1,0 +1,36 @@
+type: library
+
+target: lib_charger3
+
+sources: {
+    src/charger3.c
+}
+
+headers: {
+    include/charger3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/charger3.h) dst(include/charger3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Charger3
