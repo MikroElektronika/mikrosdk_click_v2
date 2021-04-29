@@ -11,7 +11,7 @@ The click is designed to run on a 5V power supply.
   <img src="https://download.mikroe.com/images/click_for_ide/angle3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/angle-3-click>)
+[click Product page](https://www.mikroe.com/angle-3-click)
 
 ---
 

@@ -8,7 +8,7 @@ Ammonia Click is an Ammonia detection (NH3) sensor, based on the MQ-137 gas sens
   <img src="https://download.mikroe.com/images/click_for_ide/ammonia_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ammonia-click>)
+[click Product page](https://www.mikroe.com/ammonia-click)
 
 ---
 

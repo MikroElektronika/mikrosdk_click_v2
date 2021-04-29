@@ -6,7 +6,7 @@ Ambient 7 Click is a light intensity-sensing and measuring Click board™, which
   <img src="https://download.mikroe.com/images/click_for_ide/ambient7_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ambient-7-click>)
+[click Product page](https://www.mikroe.com/ambient-7-click)
 
 ---
 

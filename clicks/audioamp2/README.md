@@ -11,7 +11,7 @@ Audio Amp 2 click is a highly efficient class D audio amplifier, using the TDA74
   <img src="https://download.mikroe.com/images/click_for_ide/audioamp2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/audioamp-2-click>)
+[click Product page](https://www.mikroe.com/audioamp-2-click)
 
 ---
 

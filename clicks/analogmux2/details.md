@@ -9,7 +9,7 @@ Analog MUX 2 Click is a compact add-on board that switches one of the eight inpu
   <img src="https://download.mikroe.com/images/click_for_ide/analogmux2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/analog-mux-2-click>)
+[click Product page](https://www.mikroe.com/analog-mux-2-click)
 
 ---
 

@@ -8,7 +8,7 @@ AM/FM Click is a RADIO RECEIVER click board™ that can be used to listen to mus
   <img src="https://download.mikroe.com/images/click_for_ide/amfm_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/amfm-click>)
+[click Product page](https://www.mikroe.com/amfm-click)
 
 ---
 

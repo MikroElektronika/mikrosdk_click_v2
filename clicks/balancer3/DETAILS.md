@@ -7,7 +7,7 @@ Balancer 3 Click is overvoltage protection device for 2-series cell lithium-ion 
   <img src="https://download.mikroe.com/images/click_for_ide/balancer3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/balancer-3-click>)
+[click Product page](https://www.mikroe.com/balancer-3-click)
 
 ---
 

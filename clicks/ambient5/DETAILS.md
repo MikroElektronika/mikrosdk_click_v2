@@ -11,7 +11,7 @@ only 2x2 mm of space.
   <img src="https://download.mikroe.com/images/click_for_ide/ambient5_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ambient-5-click>)
+[click Product page](https://www.mikroe.com/ambient-5-click)
 
 ---
 

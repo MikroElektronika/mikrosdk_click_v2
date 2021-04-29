@@ -11,7 +11,7 @@ AudioAmp 3 Click is a stereo audio amplifier, capable of delivering up to 79W pe
   <img src="https://download.mikroe.com/images/click_for_ide/audioamp3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/audioamp-3-click>)
+[click Product page](https://www.mikroe.com/audioamp-3-click)
 
 ---
 

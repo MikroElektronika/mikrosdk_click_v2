@@ -2,7 +2,7 @@
     "name": "AudioMUX Click",
     "description": "AudioMUX click is a sound processing Click board™ with digital controls, based on the TDA7468D IC. It can be used to select one of four audio input channels, adjust its frequency response and volume, and send it to the output.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","TDA7468D"],
     "category" : ["Signal processing"] 
 }

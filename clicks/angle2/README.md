@@ -9,7 +9,7 @@ Angle 2 click is a magnetic rotational sensor which relies on the ultra-fast MA7
   <img src="https://download.mikroe.com/images/click_for_ide/angle2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/angle-2-click>)
+[click Product page](https://www.mikroe.com/angle-2-click)
 
 ---
 

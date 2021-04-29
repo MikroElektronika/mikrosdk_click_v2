@@ -9,7 +9,7 @@ Barcode Click is a very fast and agile barcode scanner on a click board™, whic
   <img src="https://download.mikroe.com/images/click_for_ide/barcode_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/barcode-click>)
+[click Product page](https://www.mikroe.com/barcode-click)
 
 ---
 

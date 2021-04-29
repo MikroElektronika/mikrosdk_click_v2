@@ -9,7 +9,7 @@ ATA6570 click is a CAN Partial Networking interface board. The click carries the
   <img src="https://download.mikroe.com/images/click_for_ide/ata6570_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ata6570-click>)
+[click Product page](https://www.mikroe.com/ata6570-click)
 
 ---
 

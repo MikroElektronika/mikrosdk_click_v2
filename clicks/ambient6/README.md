@@ -11,7 +11,7 @@ Ambient 6 click can sense the intensity of the ambient light, providing the meas
   <img src="https://download.mikroe.com/images/click_for_ide/ambient6_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ambient-6-click>)
+[click Product page](https://www.mikroe.com/ambient-6-click)
 
 ---
 

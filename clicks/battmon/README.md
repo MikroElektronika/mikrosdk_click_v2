@@ -11,7 +11,7 @@ BATT-MON Click is a very versatile, high accuracy, multiple-chemistry battery ga
   <img src="https://download.mikroe.com/images/click_for_ide/battmon_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/batt-mon-click>)
+[click Product page](https://www.mikroe.com/batt-mon-click)
 
 ---
 

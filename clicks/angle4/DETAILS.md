@@ -8,7 +8,7 @@ Angle 4 click is an angular magnetic rotary sensor, which can be used as a rotar
   <img src="https://download.mikroe.com/images/click_for_ide/angle4_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/angle-4-click>)
+[click Product page](https://www.mikroe.com/angle-4-click)
 
 ---
 

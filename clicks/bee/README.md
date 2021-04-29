@@ -9,7 +9,7 @@ BEE click features MRF24J40MA 2.4 GHz IEEE 802.15.4 radio transceiver module fro
   <img src="https://download.mikroe.com/images/click_for_ide/bee_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/bee-click>)
+[click Product page](https://www.mikroe.com/bee-click)
 
 ---
 

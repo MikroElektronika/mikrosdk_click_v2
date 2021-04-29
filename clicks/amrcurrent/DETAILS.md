@@ -8,7 +8,7 @@ The AMR current Click is product is ±20A fully integrated bi-directional analog
   <img src="https://download.mikroe.com/images/click_for_ide/amrcurrent_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/amr-current-click>)
+[click Product page](https://www.mikroe.com/amr-current-click)
 
 ---
 

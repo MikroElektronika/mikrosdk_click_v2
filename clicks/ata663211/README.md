@@ -9,7 +9,7 @@ ATA663211 click carries an Atmel LIN transceiver IC designed to handle low-speed
   <img src="https://download.mikroe.com/images/click_for_ide/ata663211_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ata663211-click>)
+[click Product page](https://www.mikroe.com/ata663211-click)
 
 ---
 

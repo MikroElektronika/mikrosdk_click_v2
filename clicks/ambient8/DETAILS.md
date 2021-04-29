@@ -11,7 +11,7 @@ It utilizes the LTR-329ALS-01, an ALS with the I2C interface.
   <img src="https://download.mikroe.com/images/click_for_ide/ambient8_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ambient-8-click>)
+[click Product page](https://www.mikroe.com/ambient-8-click)
 
 ---
 

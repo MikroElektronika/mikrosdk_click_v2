@@ -11,7 +11,7 @@ Balancer 5 Click is an intelligent 2-cell Li-Ion battery charger, system power m
   <img src="https://download.mikroe.com/images/click_for_ide/balancer5_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/balancer-5-click>)
+[click Product page](https://www.mikroe.com/balancer-5-click)
 
 ---
 

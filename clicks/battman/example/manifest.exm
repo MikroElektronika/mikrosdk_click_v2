@@ -2,7 +2,7 @@
     "name": "BATT-MAN Click",
     "description": "BATT-MAN click is a very versatile battery operated power manager. When powered via mikroBUS™, it will charge the connected Li-Ion/Li-Po 3.7V battery, while providing the output voltage on all its outputs at the same time. The interesting feature of this device is that it can provide additional current to the connected load if the current provided from the mikroBUS™ socket is not enough.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","LTC3586"],
     "category" : ["Buck-Boost"] 
 }

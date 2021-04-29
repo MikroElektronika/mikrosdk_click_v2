@@ -1,0 +1,13 @@
+type: executable
+target: example_amrangle
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.AMRAngle
+}
+
+sources: {
+    main.c
+}

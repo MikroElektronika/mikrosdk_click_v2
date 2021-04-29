@@ -9,7 +9,7 @@ Balancer 2 Click is an overvoltage protection device for a 2-series cell lithium
   <img src="https://download.mikroe.com/images/click_for_ide/balancer2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/balancer-2-click>)
+[click Product page](https://www.mikroe.com/balancer-2-click)
 
 ---
 

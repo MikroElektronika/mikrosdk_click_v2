@@ -11,7 +11,7 @@ AudioAmp 4 click is a low-power audio amplifier with a digital volume control. I
   <img src="https://download.mikroe.com/images/click_for_ide/audioamp4_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/audioamp-4-click>)
+[click Product page](https://www.mikroe.com/audioamp-4-click)
 
 ---
 

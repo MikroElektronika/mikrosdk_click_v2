@@ -5,7 +5,8 @@
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -31,5 +32,6 @@
     "related_projects":[
         3251
     ],
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

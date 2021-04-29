@@ -2,7 +2,7 @@
     "name": "BARGRAPH 3 Click",
     "description": "BarGraph 3 click is equipped with a five-segment LED bar graph display, notable for its strong and uniform illumination of the segments. Each segment consists of three internal LEDs with a common cathode, while the anodes of all LEDs are connected in a single point.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","74HC595"],
     "category" : ["LED Segment,Bargraph"] 
 }

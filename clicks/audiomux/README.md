@@ -11,7 +11,7 @@ AudioMUX click is a sound processing Click board™ with digital controls, based
   <img src="https://download.mikroe.com/images/click_for_ide/audiomux_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/audiomux-click>)
+[click Product page](https://www.mikroe.com/audiomux-click)
 
 ---
 

@@ -9,7 +9,7 @@ Ambient 3 Click is calibrated XYZ chromatic smart lighting director, providing t
   <img src="https://download.mikroe.com/images/click_for_ide/ambient3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ambient-3-click>)
+[click Product page](https://www.mikroe.com/ambient-3-click)
 
 ---
 

@@ -2,7 +2,7 @@
     "name": "BIG 7-SEG Click",
     "description": "BIG 7-SEG click is what you need if you want to add a seven-segment LED display to your project.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","SC10-21SRWA"],
     "category" : ["LED Segment,7-segment"] 
 }

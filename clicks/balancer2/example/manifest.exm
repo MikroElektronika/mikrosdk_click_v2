@@ -2,7 +2,7 @@
     "name": "BALANCER 2 Click",
     "description": "<PRVE_2_RECENICE_SA_PRODUCT_PAGE>",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","<CHIP_NAME>"],
     "category" : ["<LIBSTOCK_CATEGORY>"] 
 }

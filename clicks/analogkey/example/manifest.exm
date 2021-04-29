@@ -2,7 +2,7 @@
   "name": "Analog Key Click",
   "description": "Analog Key Click is an analog keyboard on a Click board�. It contains six tactile pushbuttons, used to select one of six different voltage levels. The idea behind this click is very simple: six resistors form a voltage divider.",
   "image": "../../Resources/click_icon.png",
-  "toolchain": ["mikrocarm","mikrocpic"],
+  "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
   "hw": [ "click", "KMR221" ],
   "category": [ "Measurements" ]
 }

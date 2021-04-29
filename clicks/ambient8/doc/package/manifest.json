@@ -1,33 +1,39 @@
 {
-  "architecture": "ARM|PIC",
-  "category": "Optical",
-  "changelog": "Resources/CHANGELOG.md",
-  "contains": [
-    "libraries",
-    "hex_files",
-    "examples"
-  ],
-  "dependency_list": [
-  ],
-  "details": "Resources/DETAILS.md",
-  "display_name": "Ambient 8 click",
-  "example_list": [
-    {
-      "project_path": "Examples/example"
-    }
-  ],
-  "help": "Help/doc",
-  "icon": "Resources/click_icon.png",
-  "license": {
-    "file_path": "",
-    "id": "46"
-  },
-  "name": "mikroe.click.ambient8",
-  "product_link": "https://www.mikroe.com/ambient-8-click",
-  "short_description": "Ambient 8 click is equipped with the ambient light sensor (ALS) IC, providing measurements of the ambient light intensity in a digital format. It utilizes the LTR-329ALS-01, an ALS with the I2C interface.",
-  "supported_compiler": "mikroC AI",
-  "type": "Library",
-  "version": "2.0.0.2"
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Optical",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Ambient 8 click",
+    "example_list": [
+      {
+        "project_path": "Examples/example"
+      }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+      "file_path": "",
+      "id": "46"
+    },
+    "name": "mikroe.click.ambient8",
+    "product_link": "https://www.mikroe.com/ambient-8-click",
+    "short_description": "Ambient 8 click is equipped with the ambient light sensor (ALS) IC, providing measurements of the ambient light intensity in a digital format. It utilizes the LTR-329ALS-01, an ALS with the I2C interface.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2717
+    ],
+    "version": "2.0.0.3"
 }
+
 
 

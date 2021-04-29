@@ -9,7 +9,7 @@ Barometer click carries the LPS25HB IC, which is a piezoresistive absolute press
   <img src="https://download.mikroe.com/images/click_for_ide/barometer_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/barometer-click>)
+[click Product page](https://www.mikroe.com/barometer-click)
 
 ---
 

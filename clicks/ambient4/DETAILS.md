@@ -10,7 +10,7 @@ Ambient 4 click is a light intensity-sensing and measuring Click board™, which
 </p>
 
 
-[click Product page](<https://www.mikroe.com/ambient-4-click>)
+[click Product page](https://www.mikroe.com/ambient-4-click)
 
 ---
 

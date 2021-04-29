@@ -8,7 +8,7 @@ BarGraph click is a 10-segment bar graph display click, which uses a high-qualit
 </p>
 
 
-[click Product page](<https://www.mikroe.com/bargraph-click>)
+[click Product page](https://www.mikroe.com/bargraph-click)
 
 ---
 

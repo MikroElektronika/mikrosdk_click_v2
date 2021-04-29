@@ -9,7 +9,7 @@ AudioAmp 5 Click is a stereo audio amplifier, capable of delivering up to 10W pe
   <img src="https://download.mikroe.com/images/click_for_ide/audioamp5_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/audioamp-5-click>)
+[click Product page](https://www.mikroe.com/audioamp-5-click)
 
 ---
 
@@ -31,7 +31,7 @@ AudioAmp 5 Click is a stereo audio amplifier, capable of delivering up to 10W pe
 
 ![click image](https://cdn1-shop.mikroe.com/img/product/audioamp-5-click/audioamp-5-click-thickbox_default-1.jpg)
 
-[click Product page](<https://www.mikroe.com/audioamp-5-click>)
+[click Product page](https://www.mikroe.com/audioamp-5-click)
 
 ---
 

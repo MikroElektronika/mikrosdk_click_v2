@@ -10,7 +10,7 @@ Audio Amp 6 click is a mono/subwoofer audio amplifier, capable of delivering up 
   <img src="https://download.mikroe.com/images/click_for_ide/audioamp6_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/audioamp-6-click>)
+[click Product page](https://www.mikroe.com/audioamp-6-click)
 
 ---
 

@@ -9,7 +9,7 @@ Barometer 2 Click is a digital barometer on a Click board™. Barometer 2 is equ
   <img src="https://download.mikroe.com/images/click_for_ide/barometer2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/barometer-2-click>)
+[click Product page](https://www.mikroe.com/barometer-2-click)
 
 ---
 

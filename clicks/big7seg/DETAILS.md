@@ -8,7 +8,7 @@ BIG 7-SEG R click is what you need if you want to add a seven-segment LED displa
   <img src="https://download.mikroe.com/images/click_for_ide/big7segr_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/big-7-seg-r-click>)
+[click Product page](https://www.mikroe.com/big-7-seg-r-click)
 
 ---
 

@@ -9,7 +9,7 @@ tactile pushbuttons, used to select one of six different voltage levels.
   <img src="https://download.mikroe.com/images/click_for_ide/analogkey_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/analog-key-click>)
+[click Product page](https://www.mikroe.com/analog-key-click)
 
 ---
 

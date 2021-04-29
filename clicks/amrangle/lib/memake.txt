@@ -1,0 +1,36 @@
+type: library
+
+target: lib_amrangle
+
+sources: {
+    src/amrangle.c
+}
+
+headers: {
+    include/amrangle.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/amrangle.h) dst(include/amrangle.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.AMRAngle

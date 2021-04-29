@@ -11,7 +11,7 @@ Bi Hall click is a simple solution for adding a bipolar Hall switch to your desi
   <img src="https://download.mikroe.com/images/click_for_ide/bihall_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/bi-hall-click>)
+[click Product page](https://www.mikroe.com/bi-hall-click)
 
 ---
 

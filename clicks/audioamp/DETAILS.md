@@ -8,7 +8,7 @@ The AudioAMP Board features an on-board power amplifier LM386 designed for use i
   <img src="https://download.mikroe.com/images/click_for_ide/audioamp_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/audioamp-board>)
+[click Product page](https://www.mikroe.com/audioamp-board)
 
 ---
 

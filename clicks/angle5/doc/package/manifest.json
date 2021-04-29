@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM|PIC",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Magnetic",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -31,5 +32,6 @@
     "related_projects":[
         3837
     ],
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

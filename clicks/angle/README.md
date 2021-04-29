@@ -11,7 +11,7 @@ Angle click is a precise Hall-effect angle sensing click board that can be used 
   <img src="https://download.mikroe.com/images/click_for_ide/angle_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/angle-click>)
+[click Product page](https://www.mikroe.com/angle-click)
 
 ---
 
