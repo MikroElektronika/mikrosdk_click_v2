@@ -22,16 +22,42 @@
 // ------------------------------------------------------------------- INCLUDES
 
 #include "board.h"
-#include "log.h"
 #include "c10x10rgb.h"
 
-#define DELAY_SHORT   2
-#define DELAY_LONG    4
+#if defined __MIKROC_AI_FOR_ARM__
+#define D_S    2
+#define D_L    4
+
+#define DELAY_SHORT( void ) \
+    Delay_Cyc( D_S );
+    
+#define DELAY_LONG( void ) \
+    Delay_Cyc( D_L );
+#endif
+#if defined __MIKROC_AI_FOR_PIC32__
+
+#define D_L    4
+    
+#define DELAY_SHORT( void ) \
+    asm nop
+    
+#define DELAY_LONG( void ) \
+    Delay_Cyc( D_L );
+#endif
+#if !defined(__MIKROC_AI_FOR_ARM__) && !defined(__MIKROC_AI_FOR_PIC32__)
+#define D_S    1
+#define D_L    2
+
+#define DELAY_SHORT( void ) \
+    Delay_Cyc( D_S );
+    
+#define DELAY_LONG( void ) \
+    Delay_Cyc( D_L );
+#endif
 
 // ------------------------------------------------------------------ VARIABLES
 
 static c10x10rgb_t c10x10rgb;
-static log_t logger;
 
 static uint32_t MIKROE_IMAGE[ 100 ] =
 {
@@ -75,33 +101,24 @@ static uint16_t rainbow_speed_ms = 20;
 static void logic_zero ( void )
 {
     digital_out_write( &c10x10rgb.di_pin, C10X10RGB_CTRL_PIN_HIGH );
-    Delay_Cyc( DELAY_SHORT );
+    DELAY_SHORT( );
     digital_out_write( &c10x10rgb.di_pin, C10X10RGB_CTRL_PIN_LOW );
-    Delay_Cyc( DELAY_LONG );
+    DELAY_LONG( );
 }
 
 static void logic_one ( void )
 {
     digital_out_write( &c10x10rgb.di_pin, C10X10RGB_CTRL_PIN_HIGH );
-    Delay_Cyc( DELAY_LONG );
+    DELAY_LONG( );
     digital_out_write( &c10x10rgb.di_pin, C10X10RGB_CTRL_PIN_LOW );
-    Delay_Cyc( DELAY_SHORT );
+    DELAY_SHORT( );
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
     c10x10rgb_cfg_t cfg;
-
-    //  Logger initialization.
-
-    log_cfg.level = LOG_LEVEL_DEBUG;
-    LOG_MAP_USB_UART( log_cfg );
-    log_cfg.baud = 9600;
-    log_init( &logger, &log_cfg );
-    log_info(&logger, "---- Application Init ----");
 
     //  Click initialization.
 

@@ -11,7 +11,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/16x12g_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/16x12-g-click>)
+[click Product page](https://www.mikroe.com/16x12-g-click)
 
 ---
 

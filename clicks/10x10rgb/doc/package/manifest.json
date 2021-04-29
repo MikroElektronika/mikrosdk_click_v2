@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC32",
     "category": "Optical",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -29,8 +30,10 @@
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [3729],
-    "version": "2.0.1.15"
+    "version": "2.0.1.17"
 }
+
+
 
 
 

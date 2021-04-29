@@ -11,7 +11,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/420mat_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/4-20ma-t-click>)
+[click Product page](https://www.mikroe.com/4-20ma-t-click)
 
 ---
 

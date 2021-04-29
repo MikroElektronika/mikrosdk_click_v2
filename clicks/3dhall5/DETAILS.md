@@ -11,7 +11,7 @@
 </p>
 
 
-[click Product page](<https://www.mikroe.com/3d-hall-5-click>)
+[click Product page](https://www.mikroe.com/3d-hall-5-click)
 
 ---
 

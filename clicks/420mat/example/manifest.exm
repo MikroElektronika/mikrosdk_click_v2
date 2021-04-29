@@ -2,7 +2,7 @@
     "name": "4-20 mA T Click",
     "description": "4-20mA T Click is an add-on board in mikroBUS form factor. It’s a compact and easy solution for adding 4-to-20mA industry standard communication protocol to your design",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","ADuM1411,MCP4921 12"],
     "category" : ["Current"] 
 }

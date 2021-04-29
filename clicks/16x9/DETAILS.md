@@ -10,7 +10,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/16x9g_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/16x9-g-click>)
+[click Product page](https://www.mikroe.com/16x9-g-click)
 
 ---
 

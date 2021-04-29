@@ -2,7 +2,7 @@
     "name": "3G Click",
     "description": "3G-EA click is a versatile cellular network communication solution, featuring the compact 3G UMTS/HSPA Quectel UG95 module.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","MCP1826","TXB0106","UG95"],
     "category" : ["GSM/LTE"] 
 }

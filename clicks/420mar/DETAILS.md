@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/420mar_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/4-20ma-r-click>)
+[click Product page](https://www.mikroe.com/4-20ma-r-click)
 
 ---
 

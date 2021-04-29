@@ -12,7 +12,7 @@
 </p>
 
 
-[click Product page](<https://www.mikroe.com/3d-hall-6-click>)
+[click Product page](https://www.mikroe.com/3d-hall-6-click)
 
 ---
 

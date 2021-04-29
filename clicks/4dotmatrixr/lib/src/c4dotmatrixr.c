@@ -59,7 +59,7 @@ C4DOTMATRIXR_RETVAL c4dotmatrixr_init ( c4dotmatrixr_t *ctx, c4dotmatrixr_cfg_t 
 
     ctx->slave_address = cfg->i2c_address;
 
-    if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_ERROR )
+    if ( i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_ERROR )
     {
         return C4DOTMATRIXR_INIT_ERROR;
     }
@@ -74,7 +74,6 @@ C4DOTMATRIXR_RETVAL c4dotmatrixr_init ( c4dotmatrixr_t *ctx, c4dotmatrixr_cfg_t 
     digital_out_init( &ctx->pwm, cfg->pwm );
 
     return C4DOTMATRIXR_OK;
-
 }
 
 void c4dotmatrixr_default_cfg ( c4dotmatrixr_t *ctx )
@@ -197,8 +196,8 @@ void c4dot_write_int ( c4dotmatrixr_t *ctx, int16_t int_to_write, uint8_t int_ba
 
     uint8_t sign; 
 
-
-     // start at the rightmost position
+    // start at the rightmost position
+    
     index = 0;
 
     sign = 0;
@@ -207,10 +206,10 @@ void c4dot_write_int ( c4dotmatrixr_t *ctx, int16_t int_to_write, uint8_t int_ba
 
     if ( int_to_write == 0 )
     {
-        c4dot_write_char3( ctx,' ');
-        c4dot_write_char2( ctx, ' ');
-        c4dot_write_char1( ctx, ' ');
-        c4dot_write_char0( ctx, '0');
+        c4dot_write_char3( ctx, ' ' );
+        c4dot_write_char2( ctx, ' ' );
+        c4dot_write_char1( ctx, ' ' );
+        c4dot_write_char0( ctx, '0' );
 
         return;
     }
@@ -249,9 +248,9 @@ void c4dot_write_int ( c4dotmatrixr_t *ctx, int16_t int_to_write, uint8_t int_ba
         // Fill the first space with either '-' or ' '.
 
         if (sign == 1)
-            c4dot_write_char( ctx, index++, '-');
+            c4dot_write_char( ctx, index++, '-' );
         else
-            c4dot_write_char( ctx, index++,' ');
+            c4dot_write_char( ctx, index++, ' ' );
             
         // Fill the remaining spaces.
 
@@ -282,7 +281,6 @@ void c4dot_write_int_hex ( c4dotmatrixr_t *ctx, int16_t int_to_write )
 
 void c4dot_clear_display ( c4dotmatrixr_t *ctx )
 {
-    
     digital_out_low( &ctx->rst );
     Delay_1ms( );       // hold CLR low for 1 ms
     digital_out_high( &ctx->rst );

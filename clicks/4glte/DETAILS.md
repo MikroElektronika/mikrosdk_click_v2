@@ -8,13 +8,13 @@
   <img src="https://download.mikroe.com/images/click_for_ide/4glte_click.png" height=300px>
 </p>
 
- - [click Product page 4G LTE-AT&T CLICK ](<https://www.mikroe.com/4g-lte-e-click>)
+ - [click Product page 4G LTE-AT&T CLICK ](https://www.mikroe.com/4g-lte-e-click)
 
- - [click Product page 4G LTE-E CLICK ](<https://www.mikroe.com/4g-lte-att-click>)
+ - [click Product page 4G LTE-E CLICK ](https://www.mikroe.com/4g-lte-att-click)
 
- - [click Product page 4G LTE-APJ CLICK ](<https://www.mikroe.com/4g-lte-apj-click>)
+ - [click Product page 4G LTE-APJ CLICK ](https://www.mikroe.com/4g-lte-apj-click)
 
- - [click Product page 4G LTE-NA CLICK ](<https://www.mikroe.com/4g-lte-na-click>)
+ - [click Product page 4G LTE-NA CLICK ](https://www.mikroe.com/4g-lte-na-click)
 
 
 ---

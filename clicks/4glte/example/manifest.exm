@@ -2,7 +2,7 @@
     "name": "4G LTE Click",
     "description": "4G LTE click is an LTE Cat 1 / 2G multimode cellular network solution, featuring the compact LARA-R2 series modem from u-blox.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","TXB1016, MCP1826"],
     "category" : ["GSM/LTE,4G LTE"] 
 }

@@ -1,16 +1,17 @@
 {
-    "architecture": "ARM|PIC",
+    "architecture": "ARM|PIC|PIC32",
     "category": "LED Matrix",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
     "details": "Resources/DETAILS.md",
-    "display_name": "c4Dot-matrix r Click",
+    "display_name": "4Dot-Matrix R click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,11 +25,15 @@
     },
     "name": "mikroe.click.c4dotmatrixr",
     "product_link": "https://www.mikroe.com/4dot-matrix-r-click",
-    "short_description": "This library contains API for c4dotmatrixr Click driver.",
-    "supported_compiler": "Mikro C",
+    "short_description": "4Dot-Matrix R click is a display device Click board™, which contains a four-digit dot matrix display module, labeled as SLO2016.",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.0.0.2"
+    "related_projects":[
+        2105
+    ],
+    "version": "2.0.0.3"
 }
+
 
 

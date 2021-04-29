@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/3dhall6_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/3d-hall-6-click>)
+[click Product page](https://www.mikroe.com/3d-hall-6-click)
 
 ---
 

@@ -1,9 +1,8 @@
 {
-    "name": "c4Dot-matrix r Click",
+    "name": "4Dot-Matrix R Click",
     "description": "4Dot-Matrix R click is a display device Click board™, which contains a four-digit dot matrix display module, labeled as SLO2016.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","SLO2016"],
-    "category" : ["LED Matrix
-"] 
+    "category" : ["LED Matrix"] 
 }

@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# c4Dot-matrix r click
+# 4Dot-Matrix R click
 
 4Dot-Matrix R click is a display device Click board™, which contains a four-digit dot matrix display module, labeled as SLO2016.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/4dotmatrixr_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/4dot-matrix-r-click>)
+[click Product page](https://www.mikroe.com/4dot-matrix-r-click)
 
 ---
 
@@ -59,13 +59,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This module has a 5x7 dot matrix, with very closely spaced, bright red pixel elements.
+> This example demonstrates the use of 4Dot-Matrix R click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Click driver init and setting mBus pins to appropriate logic levels. 
+> Initializes the driver and performs the click default configuration.
 
 ```c
 
@@ -74,46 +74,57 @@ void application_init ( void )
     log_cfg_t log_cfg;
     c4dotmatrixr_cfg_t cfg;
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
+    //  Logger initialization.
+
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.baud = 115200;
+    log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
+
+    //  Click initialization.
 
     c4dotmatrixr_cfg_setup( &cfg );
     C4DOTMATRIXR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c4dotmatrixr_init( &c4dotmatrixr, &cfg );
+    
     c4dotmatrixr_default_cfg ( &c4dotmatrixr );
+    log_info( &logger, "---- Application Task ----" );
 }
   
 ```
 
 ### Application Task
 
-> Text MikroElektronika slides from left to right and then numbers from -20 to 20 are displayed on 4 Dot Matrix click 
+> Displays a desired text message and then numbers from -20 to 20 on the click board.
+> Each step will be logged on the USB UART where you can track the program flow.
 
 ```c
 
 void application_task ( void )
 {
     int8_t i;
-    
-    for ( i = 0; i < 21; i++ )
+    log_printf( &logger, "------------------------------------\r\n" );
+    log_printf( &logger, "Displaying \"Mikroelektronika\" on the click board...\r\n" );
+    for ( i = 0; i < 20; i++ )
     {
         c4dot_write_text(  &c4dotmatrixr, text + i );
         Delay_ms( 150 );
     }
         
-        // Clear and delay.
+    // Clear and delay.
     c4dot_clear_display( &c4dotmatrixr );
     Delay_ms( 500 );
         
-        // Write some numbers on the display.
+    log_printf( &logger, "Displaying all integer numbers from -20 to 20 on the click board...\r\n" );
+    // Write some numbers on the display.
     for ( i = -20; i <= 20; i++ )
     {
         c4dot_write_int_dec( &c4dotmatrixr, i );
         Delay_ms( 150 );
     }
 
+    // Clear and delay.
     c4dot_clear_display( &c4dotmatrixr );
     Delay_ms( 500 );
 }  

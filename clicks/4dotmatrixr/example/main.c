@@ -3,15 +3,16 @@
  * \brief c4dotmatrixr Click example
  * 
  * # Description
- * This module has a 5x7 dot matrix, with very closely spaced, bright red pixel elements.
+ * This example demonstrates the use of 4Dot-Matrix R click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Click driver init and setting mBus pins to appropriate logic levels.
+ * Initializes the driver and performs the click default configuration.
  * 
  * ## Application Task  
- * Text MikroElektronika slides from left to right and then numbers from -20 to 20 are displayed on 4 Dot Matrix click
+ * Displays a desired text message and then numbers from -20 to 20 on the click board.
+ * Each step will be logged on the USB UART where you can track the program flow.
  *  
  * \author MikroE Team
  *
@@ -27,7 +28,8 @@
 static c4dotmatrixr_t c4dotmatrixr;
 static log_t logger;
 
-static uint8_t text[23] = { ' ',' ',' ','M', 'i', 'k', 'r', 'o', 'E','l','e','k','t','r','o','n','i','k','a',' ',' ',' ',' '};
+static uint8_t text[23] = { ' ',' ',' ','M', 'i', 'k', 'r', 'o', 'E','l','e',
+                            'k','t','r','o','n','i','k','a',' ',' ',' ',' '};
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -39,7 +41,7 @@ void application_init ( void )
     //  Logger initialization.
 
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
@@ -47,30 +49,30 @@ void application_init ( void )
     //  Click initialization.
 
     c4dotmatrixr_cfg_setup( &cfg );
-    log_info( &logger, "---- Configuration Setup ----" );
     C4DOTMATRIXR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    log_info( &logger, "---- MAP Setup ----" );
     c4dotmatrixr_init( &c4dotmatrixr, &cfg );
-    log_info( &logger, "---- Chip Init ----" );
+    
     c4dotmatrixr_default_cfg ( &c4dotmatrixr );
-    log_info( &logger, "---- Chip Configuration ----" );
+    log_info( &logger, "---- Application Task ----" );
 }
 
 void application_task ( void )
 {
     int8_t i;
-    
-    for ( i = 0; i < 21; i++ )
+    log_printf( &logger, "------------------------------------\r\n" );
+    log_printf( &logger, "Displaying \"Mikroelektronika\" on the click board...\r\n" );
+    for ( i = 0; i < 20; i++ )
     {
         c4dot_write_text(  &c4dotmatrixr, text + i );
         Delay_ms( 150 );
     }
         
-        // Clear and delay.
+    // Clear and delay.
     c4dot_clear_display( &c4dotmatrixr );
     Delay_ms( 500 );
         
-        // Write some numbers on the display.
+    log_printf( &logger, "Displaying all integer numbers from -20 to 20 on the click board...\r\n" );
+    // Write some numbers on the display.
     for ( i = -20; i <= 20; i++ )
     {
         c4dot_write_int_dec( &c4dotmatrixr, i );
