@@ -11,7 +11,7 @@ Alcohol 2 click is a very accurate ethanol gas (alcohol) sensor Click board™, 
   <img src="https://download.mikroe.com/images/click_for_ide/alcohol2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/alcohol-2-click>)
+[click Product page](https://www.mikroe.com/alcohol-2-click)
 
 ---
 

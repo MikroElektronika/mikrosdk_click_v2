@@ -9,7 +9,7 @@ Altitude 3 click allows high-resolution barometric pressure measurement, by util
   <img src="https://download.mikroe.com/images/click_for_ide/altitude3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/altitude-3-click>)
+[click Product page](https://www.mikroe.com/altitude-3-click)
 
 ---
 

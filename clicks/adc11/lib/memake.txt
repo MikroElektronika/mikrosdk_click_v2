@@ -1,0 +1,36 @@
+type: library
+
+target: lib_adc11
+
+sources: {
+    src/adc11.c
+}
+
+headers: {
+    include/adc11.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/adc11.h) dst(include/adc11.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Adc11

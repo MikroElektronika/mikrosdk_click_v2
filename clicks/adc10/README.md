@@ -1,15 +1,16 @@
 \mainpage Main Page
 
+
 ---
 # ADC 10 click
 
-<PRVIH_PAR_RECENICA_SA_PRODUCT_PAGE_DA_ISPRATE_CELINU>
+ADC 10 Click is a compact add-on board that contains a high-performance data converter. This board features the ADS122U04, a 24-bit precision ?S analog-to-digital converter with UART compatible interface from Texas Instruments.
 
 <p align="center">
-  <img src="@{CLICK_IMAGE_LINK}" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/adc10-click.png" height=300px>
 </p>
 
-[click Product page](<CLICK_PRODUCT_PAGE_LINK>)
+[click Product page](https://www.mikroe.com/adc-10-click)
 
 ---
 
@@ -84,8 +85,8 @@ and set the default device configuration, also, write a log.
 
 ```
 void application_init ( void ) {
-    log_cfg_t log_cfg;      /**< Logger config object. */
-    adc10_cfg_t adc10_cfg;  /**< Click config object. */
+    log_cfg_t log_cfg;       /**< Logger config object. */
+    adc10_cfg_t adc10_cfg;   /**< Click config object. */
 
     // Logger initialization.
 

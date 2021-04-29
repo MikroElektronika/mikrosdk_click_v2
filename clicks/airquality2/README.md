@@ -11,7 +11,7 @@ Air quality 2 click carries the iAQ-Core Indoor Air Quality sensor that measures
   <img src="https://download.mikroe.com/images/click_for_ide/airquality2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/air-quality-2-click>)
+[click Product page](https://www.mikroe.com/air-quality-2-click)
 
 ---
 

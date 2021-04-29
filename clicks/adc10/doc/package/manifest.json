@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM|PIC",
+    "architecture": "ARM|PIC|PIC32",
     "category": "ADC",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -23,10 +24,12 @@
         "id": "46"
     },
     "name": "mikroe.click.adc10",
-    "product_link": "<PRODUCT_PAGE_CLICK_LINK>",
-    "short_description": "<PRODUCT_PAGE_CLICK_DESCRIPTION>",
+    "product_link": "https://www.mikroe.com/adc-10-click",
+    "short_description": "ADC 10 Click is a compact add-on board that contains a high-performance data converter. This board features the ADS122U04, a 24-bit precision ?S analog-to-digital converter with UART compatible interface from Texas Instruments.",
     "supported_compiler": "mikroC AI",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.2"
 }
+
+

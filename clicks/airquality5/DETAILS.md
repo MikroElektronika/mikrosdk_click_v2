@@ -7,7 +7,7 @@ Air quality 5 click is a triple MOS sensor on a single Click board™, which can
   <img src="https://download.mikroe.com/images/click_for_ide/airquality5_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/air-quality-5-click>)
+[click Product page](https://www.mikroe.com/air-quality-5-click)
 
 ---
 

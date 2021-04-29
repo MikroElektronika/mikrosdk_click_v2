@@ -2,7 +2,7 @@
     "name": "MQ Sensors Click",
     "description": "This click group supports all MQ sensors in click form.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click"," MQ-3","MQ-4","MQ-5","MQ-7","MQ-8","MQ-135"],
     "category" : ["Gas"] 
 }

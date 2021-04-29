@@ -9,7 +9,7 @@ Accel 2 click carries ST’s LIS3DSH IC, a low-power factory-calibrated three-ax
   <img src="https://download.mikroe.com/images/click_for_ide/accel2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/accel-2-click>)
+[click Product page](https://www.mikroe.com/accel-2-click)
 
 ---
 

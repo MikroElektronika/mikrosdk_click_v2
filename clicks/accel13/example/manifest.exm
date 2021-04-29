@@ -2,7 +2,7 @@
     "name": "Accel 13 Click",
     "description": "Accel 13 Click features an ultra-low power triaxial accelerometer sensor with embedded intelligence, labeled as the IIS2DLPC.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","IIS2DLPC"],
     "category" : ["Acceleration"] 
 }

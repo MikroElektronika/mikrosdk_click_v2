@@ -12,7 +12,7 @@ The click has four pairs of screw terminals onboard, letting you access the chip
   <img src="https://download.mikroe.com/images/click_for_ide/adc3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/adc-3-click>)
+[click Product page](https://www.mikroe.com/adc-3-click)
 
 ---
 

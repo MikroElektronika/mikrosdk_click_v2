@@ -14,7 +14,7 @@ used both to configure the device and connect the input channels.
   <img src="https://download.mikroe.com/images/click_for_ide/adc6_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/adc-6-click>)
+[click Product page](https://www.mikroe.com/adc-6-click)
 
 ---
 

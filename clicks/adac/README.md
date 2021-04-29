@@ -10,7 +10,7 @@ The click is designed to run on either 3.3V or 5V power supply. ADAC click commu
 </p>
 
 
-[click Product page](<https://www.mikroe.com/adac-click-click>)
+[click Product page](https://www.mikroe.com/adac-click-click)
 
 ---
 

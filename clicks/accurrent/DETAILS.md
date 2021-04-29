@@ -8,7 +8,7 @@ AC Current click is a device that is able to measure the alternating current (AC
   <img src="https://download.mikroe.com/images/click_for_ide/accurrent_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ac-current-click>)
+[click Product page](https://www.mikroe.com/ac-current-click)
 
 ---
 

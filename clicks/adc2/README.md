@@ -11,7 +11,7 @@ ADC 2 click carries MCP3551/3, which is a 22-bit ADC with automatic internal off
   <img src="https://download.mikroe.com/images/click_for_ide/adc2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/adc-2-click>)
+[click Product page](https://www.mikroe.com/adc-2-click)
 
 ---
 

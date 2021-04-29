@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM|PIC",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Gas",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -32,7 +33,8 @@
         2284
     ],
     "_type": "mikroSDK Library",
-    "version": "2.0.0.2"
+    "version": "2.0.0.3"
 }
+
 
 

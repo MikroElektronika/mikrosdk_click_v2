@@ -9,7 +9,7 @@ Adapter click™ is a breakout board which simplifies connection of add-on board
 </p>
 
 
-[click Product page](<https://www.mikroe.com/adapter-click>)
+[click Product page](https://www.mikroe.com/adapter-click)
 
 ---
 

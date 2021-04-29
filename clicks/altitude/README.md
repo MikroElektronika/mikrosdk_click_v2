@@ -11,7 +11,7 @@ Altitude click features a MEMS pressure sensor MPL3115A2, which provides accurat
   <img src="https://download.mikroe.com/images/click_for_ide/altitude_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/altitude-click>)
+[click Product page](https://www.mikroe.com/altitude-click)
 
 ---
 

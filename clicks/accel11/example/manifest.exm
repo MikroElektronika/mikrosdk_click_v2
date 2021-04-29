@@ -2,7 +2,7 @@
     "name": "Accel 11 Click",
     "description": "Accel 11 click features an ultra-low power triaxial accelerometer sensor with embedded intelligence, labeled as the BMA456.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","BMA456"],
     "category" : ["Acceleration"] 
 }

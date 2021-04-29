@@ -11,7 +11,7 @@ ADC 8 Click is a high precision, low-power, 16-bit analog-to-digital converter (
   <img src="https://download.mikroe.com/images/click_for_ide/adc8_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/adc-8-click>)
+[click Product page](https://www.mikroe.com/adc-8-click)
 
 ---
 

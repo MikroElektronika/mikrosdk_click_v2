@@ -8,8 +8,8 @@ AlphaNumRG click is a simple solution for adding 14-segment alphanumeric display
   <img src="https://download.mikroe.com/images/click_for_ide/grupe/alphanumrg-click-group.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/alphanum-r-click>)
-[click Product page](<https://www.mikroe.com/alphanum-g-click>)
+[click Product page](https://www.mikroe.com/alphanum-r-click)
+[click Product page](https://www.mikroe.com/alphanum-g-click)
 
 ---
 

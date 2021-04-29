@@ -11,7 +11,7 @@ Accel 5 click features an ultra-low power triaxial accelerometer sensor, labeled
   <img src="https://download.mikroe.com/images/click_for_ide/accel5_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/accel-5-click>)
+[click Product page](https://www.mikroe.com/accel-5-click)
 
 ---
 

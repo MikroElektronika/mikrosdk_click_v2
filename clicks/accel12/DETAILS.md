@@ -9,7 +9,7 @@ Accel 12 click is an advanced 3-axis motion tracking Click board™, which utili
   <img src="https://download.mikroe.com/images/click_for_ide/accel12_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/accel-12-click>)
+[click Product page](https://www.mikroe.com/accel-12-click)
 
 ---
 

@@ -11,7 +11,7 @@ Accel 11 click features an ultra-low power triaxial accelerometer sensor with em
   <img src="https://download.mikroe.com/images/click_for_ide/accel11_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/accel-11-click>)
+[click Product page](https://www.mikroe.com/accel-11-click)
 
 ---
 

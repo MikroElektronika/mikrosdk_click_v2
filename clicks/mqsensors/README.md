@@ -9,17 +9,17 @@ This click group supports all MQ sensors in click form.
   <img src="https://download.mikroe.com/images/click_for_ide/grupe/mq-sensor-click-group.png" height=150px>
 </p>
 
-> - [Product page - LPG click](<https://www.mikroe.com/lpg-click>)
+> - [Product page - LPG click](https://www.mikroe.com/lpg-click)
 
-> - [Product page - Alcohol click](<https://www.mikroe.com/alcohol-click>)
+> - [Product page - Alcohol click](https://www.mikroe.com/alcohol-click)
 
-> - [Product page - Hydrogen click](<https://www.mikroe.com/hydrogen-click>)
+> - [Product page - Hydrogen click](https://www.mikroe.com/hydrogen-click)
 
-> - [Product page - Air Quality click](<https://www.mikroe.com/air-quality-click>)
+> - [Product page - Air Quality click](https://www.mikroe.com/air-quality-click)
 
-> - [Product page - Methane click](<https://www.mikroe.com/methane-click>)
+> - [Product page - Methane click](https://www.mikroe.com/methane-click)
 
-> - [Product page - CO click](<https://www.mikroe.com/co-click>)
+> - [Product page - CO click](https://www.mikroe.com/co-click)
 
 ---
 

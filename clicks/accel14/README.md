@@ -9,7 +9,7 @@ Accel 14 Click is digital acceleration and vibration sensor Click board™. It f
   <img src="https://download.mikroe.com/images/click_for_ide/accel14_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/accel-14-click>)
+[click Product page](https://www.mikroe.com/accel-14-click)
 
 ---
 

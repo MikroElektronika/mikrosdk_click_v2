@@ -9,7 +9,7 @@ Altitude 4 Click introduces an absolute pressure sensor with digital output for 
 </p>
 
 
-[click Product page](<https://www.mikroe.com/altitude-4-click>)
+[click Product page](https://www.mikroe.com/altitude-4-click)
 
 ---
 

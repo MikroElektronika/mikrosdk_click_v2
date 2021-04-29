@@ -9,7 +9,7 @@ Accel 8 Click is an advanced 6-axis motion tracking Click board™, which utiliz
   <img src="https://download.mikroe.com/images/click_for_ide/accel8_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/accel-8-click>)
+[click Product page](https://www.mikroe.com/accel-8-click)
 
 ---
 

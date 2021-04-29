@@ -8,7 +8,7 @@ ADC 9 Click is 8th channel analog to digital converter expansion board, for proj
   <img src="https://download.mikroe.com/images/click_for_ide/adc9_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/adc-9-click>)
+[click Product page](https://www.mikroe.com/adc-9-click)
 
 ---
 
