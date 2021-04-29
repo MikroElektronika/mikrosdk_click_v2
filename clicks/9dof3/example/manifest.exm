@@ -1,0 +1,8 @@
+{
+    "name": "9DOF 3  Click",
+    "description": "9DOF 3 Click introduces the BMX055, a small-scale absolute orientation sensor in the class of low-noise 9-axis measurement units, from Bosch Sensortec. It comprises the full functionality of a triaxial, low-g acceleration sensor, a triaxial angular rate sensor and a triaxial geomagnetic sensor. All three sensor components of the BMX055 can be operated and addressed independently from each other. On top, the BMX055 integrates a multitude of features that facilitate its use especially in the area of motion detection applications, such as device orientation measurement, gaming, HMI or menu browser control. 9DOF 3 Click offers both SPI and I2C digital interfaces for easy and fast system integration.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","BMX055"],
+    "category" : ["Motion"] 
+}

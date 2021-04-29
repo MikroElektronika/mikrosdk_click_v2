@@ -12,7 +12,7 @@ Accel Click is an accessory board in mikroBUS form factor. It features ADXL345 3
 </p>
 
 
-[click Product page](<https://www.mikroe.com/accel-click>)
+[click Product page](https://www.mikroe.com/accel-click)
 
 ---
 

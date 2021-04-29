@@ -2,7 +2,7 @@
     "name": "8x8 Click",
     "description": "8x8 click is a 64 LED matrix display Click board™, composed of SMD LEDs organized in 8 rows by 8 columns.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","MAX7129"],
     "category" : ["LED Matrix"] 
 }

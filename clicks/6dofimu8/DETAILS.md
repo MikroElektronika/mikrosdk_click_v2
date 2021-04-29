@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/6dofimu8_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/6dof-imu-8-click>)
+[click Product page](https://www.mikroe.com/6dof-imu-8-click)
 
 ---
 

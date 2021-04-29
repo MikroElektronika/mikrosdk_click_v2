@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM|PIC",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -31,8 +32,9 @@
     "related_projects":[
         2738
     ],
-    "version": "2.0.0.5"
+    "version": "2.0.0.6"
 }
+
 
 
 

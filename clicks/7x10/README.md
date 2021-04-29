@@ -11,10 +11,10 @@
   <img src="https://download.mikroe.com/images/click_for_ide/grupe/7x10-click-groupp.png" height=300px>
 </p>
 
-> - [Product page - 7x10 Y click](<https://www.mikroe.com/7x10-y-click>)
-> - [Product page - 7x10 G click](<https://www.mikroe.com/7x10-g-click>)
-> - [Product page - 7x10 B click](<https://www.mikroe.com/7x10-b-click>)
-> - [Product page - 7x10 R click](<https://www.mikroe.com/7x10-r-click>)
+> - [Product page - 7x10 Y click](https://www.mikroe.com/7x10-y-click)
+> - [Product page - 7x10 G click](https://www.mikroe.com/7x10-g-click)
+> - [Product page - 7x10 B click](https://www.mikroe.com/7x10-b-click)
+> - [Product page - 7x10 R click](https://www.mikroe.com/7x10-r-click)
 
 ---
 

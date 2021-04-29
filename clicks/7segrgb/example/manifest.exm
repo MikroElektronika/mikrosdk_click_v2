@@ -2,7 +2,7 @@
     "name": "7-SEG RGB Click",
     "description": "7-SEG RGB click carries a full color single 7 segment digit display. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over the CS, and PWM pin on the mikroBUS™ line.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm"],
+    "toolchain": ["mikrocarm","mikrocpic32"],
     "hw" : ["click","7-SEG RGB"],
     "category" : ["LED segment"] 
 }

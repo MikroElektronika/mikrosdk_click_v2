@@ -35,8 +35,36 @@
 #include "board.h"
 #include "c4x4rgb.h"
 
-#define DELAY_SHORT     2
-#define DELAY_LONG      5
+#if defined __MIKROC_AI_FOR_ARM__
+#define D_S    2
+#define D_L    4
+
+#define DELAY_SHORT( void ) \
+    Delay_Cyc( D_S );
+    
+#define DELAY_LONG( void ) \
+    Delay_Cyc( D_L );
+#endif
+#if defined __MIKROC_AI_FOR_PIC32__
+
+#define D_L    4
+    
+#define DELAY_SHORT( void ) \
+    asm nop
+    
+#define DELAY_LONG( void ) \
+    Delay_Cyc( D_L );
+#endif
+#if !defined(__MIKROC_AI_FOR_ARM__) && !defined(__MIKROC_AI_FOR_PIC32__)
+#define D_S    1
+#define D_L    2
+
+#define DELAY_SHORT( void ) \
+    Delay_Cyc( D_S );
+    
+#define DELAY_LONG( void ) \
+    Delay_Cyc( D_L );
+#endif
 
 #define SNAKE_DELAY     50
 #define MASH_DELAY      100
@@ -108,17 +136,17 @@ void main ( void )
 static void c4x4rgb_logic_zero ( void )
 {
     digital_out_high( &c4x4rgb.ctrl_pin );
-    Delay_Cyc( DELAY_SHORT );
+    DELAY_SHORT( );
     digital_out_low( &c4x4rgb.ctrl_pin );
-    Delay_Cyc( DELAY_LONG );
+    DELAY_LONG( );
 }
 
 static void c4x4rgb_logic_one ( void )
 {
     digital_out_high( &c4x4rgb.ctrl_pin );
-    Delay_Cyc( DELAY_LONG );
+    DELAY_LONG( );
     digital_out_low( &c4x4rgb.ctrl_pin );
-    Delay_Cyc( DELAY_SHORT );
+    DELAY_SHORT( );
 }
 
 static void c4x4rgb_color_mash ( void )

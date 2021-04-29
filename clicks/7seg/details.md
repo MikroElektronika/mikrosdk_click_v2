@@ -10,7 +10,7 @@ It’s a compact and easy solution for adding 2-digit seven-segment display to y
   <img src="https://download.mikroe.com/images/click_for_ide/7seg_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/7seg-click>)
+[click Product page](https://www.mikroe.com/7seg-click)
 
 ---
 

@@ -49,15 +49,17 @@
 #define DELAY_LONG( void ) \
     Delay_Cyc( D_L );
 #endif
-#if defined __MIKROC_AI_FOR_PIC__
+#if defined __MIKROC_AI_FOR_PIC32__
+    
+#define D_L    4
+    
 #define DELAY_SHORT( void ) \
     asm nop
     
 #define DELAY_LONG( void ) \
-    asm nop \
-    asm nop
+    Delay_Cyc( D_L );
 #endif
-#if !defined(__MIKROC_AI_FOR_ARM__) && !defined(__MIKROC_AI_FOR_PIC__)
+#if !defined(__MIKROC_AI_FOR_ARM__) && !defined(__MIKROC_AI_FOR_PIC32__)
 #define D_S    1
 #define D_L    2
 

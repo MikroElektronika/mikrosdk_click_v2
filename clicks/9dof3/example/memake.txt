@@ -1,0 +1,17 @@
+type: executable
+target: example_c9dof3
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.9Dof3
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

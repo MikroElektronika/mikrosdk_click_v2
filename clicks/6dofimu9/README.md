@@ -11,7 +11,7 @@ The 6DOF IMU 9 Click is a Click board™ which features the IAM-20680, a 6-axis 
   <img src="https://download.mikroe.com/images/click_for_ide/6dofimu9_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/6dof-imu-9-click>)
+[click Product page](https://www.mikroe.com/6dof-imu-9-click)
 
 ---
 

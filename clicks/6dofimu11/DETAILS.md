@@ -8,7 +8,7 @@ The 6DOF IMU 11 click is a Click board™ based on the KMX63, a 6 Degrees-of-Fre
   <img src="https://download.mikroe.com/images/click_for_ide/6dofimu11_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/6dof-imu-11-click>)
+[click Product page](https://www.mikroe.com/6dof-imu-11-click)
 
 ---
 
