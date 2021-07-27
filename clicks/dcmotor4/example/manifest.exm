@@ -2,7 +2,7 @@
     "name": "DC Motor 4 Click",
     "description": "DC MOTOR 4 click is capable of driving motors with a supply voltage from 4.5V to 36V. It carries the MAX14870 motor driver from Maxim Integrated.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","MAX14870"],
-    "category" : ["	Brushed"] 
+    "category" : ["Brushed"] 
 }

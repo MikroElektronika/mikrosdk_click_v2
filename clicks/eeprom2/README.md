@@ -13,7 +13,7 @@ The used EEPROM module has an impressive endurance of 4,000,000 write cycles and
   <img src="https://download.mikroe.com/images/click_for_ide/eeprom2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/eeprom-2-click>)
+[click Product page](https://www.mikroe.com/eeprom-2-click)
 
 ---
 

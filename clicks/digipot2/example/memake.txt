@@ -8,10 +8,6 @@ depends: {
     Click.DigiPot2
 }
 
-uses: {
-    MikroC.Core
-}
-
 sources: {
     main.c
 }

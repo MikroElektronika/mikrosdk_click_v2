@@ -1,0 +1,7 @@
+type: subdirs
+project: EERAM3v3
+
+subdirs: {
+    lib
+    example
+}

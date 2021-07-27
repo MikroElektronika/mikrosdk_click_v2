@@ -8,10 +8,10 @@
 DIGI POT 4 click is a digitally controlled dual potentiometer, with the resistance of 10KΩ. It has a 10bit resolution which allows for a very smooth linear wiper positioning through 1024 steps.
 
 <p align="center">
-  <img src="http://download.mikroe.com/images/click_for_ide/digipot4_click.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/digipot4_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/digi-pot-4-click>)
+[click Product page](https://www.mikroe.com/digi-pot-4-click)
 
 ---
 
@@ -27,8 +27,8 @@ DIGI POT 4 click is a digitally controlled dual potentiometer, with the resistan
 
 We provide a library for the DigiPot4 Click 
 as well as a demo application (example), developed using MikroElektronika 
-[compilers](http://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
+[compilers](https://shop.mikroe.com/compilers). 
+The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
 
 Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
 
@@ -118,12 +118,12 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](http://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
+[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
+[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 
 terminal available in all Mikroelektronika 
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application 
+[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
 of your choice, can be used to read the message.
 
 

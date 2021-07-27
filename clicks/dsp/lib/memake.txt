@@ -1,0 +1,36 @@
+type: library
+
+target: lib_dsp
+
+sources: {
+    src/dsp.c
+}
+
+headers: {
+    include/dsp.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/dsp.h) dst(include/dsp.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Dsp

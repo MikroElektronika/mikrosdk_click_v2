@@ -1,0 +1,17 @@
+type: executable
+target: example_duallin
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.DualLin
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

@@ -1,16 +1,17 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Digital potentiometer",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
     "details": "Resources/DETAILS.md",
-    "display_name": "DIGI POT click group",
+    "display_name": "DIGI POT click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -23,10 +24,13 @@
         "id": "46"
     },
     "name": "mikroe.click.digipot",
-    "product_link": "https://www.mikroe.com/click-package/digi-pot-click",
-    "short_description": "DIGIPOT Click is an accessory board in mikroBUS form factor.",
-    "supported_compiler": "mikroC",
+    "product_link": "https://www.mikroe.com/digipot-click",
+    "short_description": "DIGIPOT Click is an accessory board in mikroBUS form factor. It features a single-channel digital potentiometer MCP4161 with 8-bit resolution (256 wiper steps) and industry-standard SPI serial interface.",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.2"
+    "related_projects":[
+        200
+    ],
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.6"
 }
-

@@ -1,0 +1,8 @@
+type: subdirs
+
+project: DTMFGenerator
+
+subdirs: {
+    lib
+    example
+}

@@ -1,0 +1,41 @@
+type: library
+
+target: lib_dcmotor8
+
+alias: Click.DcMotor8
+
+sources: {
+    src/dcmotor8.c
+}
+
+headers: {
+    include/dcmotor8.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/dcmotor8.h) dst(include/dcmotor8.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+    ../build.bat
+}

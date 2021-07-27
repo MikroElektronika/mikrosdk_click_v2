@@ -9,7 +9,7 @@ EEPROM Click is an accessory board in mikroBUS form factor. It features 24C08WP 
   <img src="https://download.mikroe.com/images/click_for_ide/eeprom_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/eeprom-click>)
+[click Product page](https://www.mikroe.com/eeprom-click)
 
 ---
 

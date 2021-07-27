@@ -1,0 +1,7 @@
+type: subdirs
+project: EERAM5V
+
+subdirs: {
+    lib
+    example
+}

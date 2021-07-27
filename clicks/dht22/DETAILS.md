@@ -1,13 +1,14 @@
 
+---
 # DHT22 click
 
 DHT22 click is a temperature and humidity measurement board carrying the sensor of the same name.
 
 <p align="center">
-  <img src="http://download.mikroe.com/images/click_for_ide/dht22_click.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/dht22_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/dht22-click>)
+[click Product page](https://www.mikroe.com/dht22-click)
 
 ---
 
@@ -23,8 +24,8 @@ DHT22 click is a temperature and humidity measurement board carrying the sensor 
 
 We provide a library for the Dht22 Click 
 as well as a demo application (example), developed using MikroElektronika 
-[compilers](http://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
+[compilers](https://shop.mikroe.com/compilers). 
+The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
 
 Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
 
@@ -53,13 +54,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> It’s a low cost reliable solution that communicates with the target board     microcontroller through a single Serial Data Line.
+> This is a example which demonstrates the use of DHT22 Click board by measuring temperature and relative humidity.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initialization driver enable's - GPIO and start write log. 
+> Initializes the SDA data pin depending on the selected GPIO pin (SDA1/SDA2) and log module.
 
 ```c
 
@@ -67,47 +68,71 @@ void application_init ( void )
 {
     log_cfg_t log_cfg;
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
-    LOG_MAP_USB_UART( log_cfg );
-    log_init( &logger, &log_cfg );
-    log_info(&logger, "---- Application Init ----");
+    //  Logger initialization.
 
-    dht22_cfg_setup( &cfg );
-    DHT22_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    dht22_init( &dht22, &cfg );
+    LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
+    log_init( &logger, &log_cfg );
+    log_info( &logger, "---- Application Init... ----" );
+
+    dht22_cfg_t dht22_cfg;
+
+    //  Click initialization.
+
+    dht22_cfg_setup( &dht22_cfg );
+    DHT22_MAP_MIKROBUS( dht22_cfg, MIKROBUS_1 );
+
+    if ( dht22_init( &dht22, &dht22_cfg ) == DHT22_ERROR )
+    {
+        log_info( &logger, "---- Application Init Error. ----" );
+        log_info( &logger, "---- Please, run program again... ----" );
+
+        for ( ; ; );
+    }
+
+    log_info( &logger, "---- Application Init done. ----" );
 }
   
 ```
 
 ### Application Task
 
-> This is a example which demonstrates the use of DHT22 Click board. 
+> Reads the temperature and humidity from the sensor and displays the values on the USB UART. 
 
 ```c
 
 void application_task ( void )
 {
-    cs_output( &dht22, &cfg );
-
-    dht22_start_signal( &dht22 );
-
+    uint8_t resp_stat = DHT22_RESP_NOT_READY;
+    uint32_t sens_meas = 0;
+    float dht22_temp = 0;
+    float dht22_hum = 0;
     
-    cs_input( &dht22, &cfg );
-
-    if ( dht22_check_sensor_response( &dht22 ) )
+    dht22_init_sda_output( &dht22 );
+    
+    if ( dht22_start_signal( &dht22 ) == DHT22_OK )
     {
-        sensor_data = dht22_get_sensor_data( &dht22 );
-
-        if ( sensor_data != 0 )
+        dht22_init_sda_input( &dht22 );
+        
+        if ( dht22_check_sensor_response( &dht22, &resp_stat ) == DHT22_OK )
         {
-            temperature = dht22_calculate_temperature( &dht22, sensor_data );
+            if ( resp_stat == DHT22_RESP_READY )
+            {
+                if ( dht22_get_sensor_data( &dht22, &sens_meas ) == DHT22_OK )
+                {
+                    dht22_temp = dht22_calculate_temperature( &dht22, sens_meas );
+                    dht22_hum = dht22_calculate_humidity( &dht22, sens_meas );
 
-            humidity = dht22_calculate_humidity( &dht22, sensor_data );
-
-            dht22_display_temp_hum( );
+                    log_printf( &logger, " Humidity : %.2f %%\r\n", dht22_hum );
+                    log_printf( &logger, " Temperature : %.2f degC\r\n", dht22_temp );
+                    log_printf( &logger, " ---------------------------\r\n", dht22_temp );
+                    Delay_ms( 1000 );
+                }
+                
+            }
         }
     }
-    Delay_1sec( );
 }  
 
 ``` 
@@ -123,12 +148,12 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](http://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
+[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
+[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 
 terminal available in all Mikroelektronika 
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application 
+[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
 of your choice, can be used to read the message.
 
 

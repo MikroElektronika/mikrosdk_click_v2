@@ -11,7 +11,7 @@ This is an ECG (or EKG) machine on a click board. It measures the electrical act
   <img src="https://download.mikroe.com/images/click_for_ide/ecg_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ecg-click>)
+[click Product page](https://www.mikroe.com/ecg-click)
 
 ---
 

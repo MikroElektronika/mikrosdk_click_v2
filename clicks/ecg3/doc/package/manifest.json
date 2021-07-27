@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Biometrics",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,8 +26,15 @@
     "name": "mikroe.click.ecg3",
     "product_link": "https://www.mikroe.com/ecg-3-click",
     "short_description": "ECG 3 click is a complete solution for ECG and HR application development, utilizing a specialized IC with a clinical-grade analog front-end (AFE). ECG 3 click uses the MAX30003 IC, an ultra-low power, single-channel bio-sensor, which features a wide range of different options, making it an ideal solution for development of heart rate and ECG monitoring applications, fitness applications, for the ECG bio-authentication, and similar applications related to heart monitoring. ECG 3 click is also equipped with the 3.5mm electrodes connector, making it ready to be used out of the box.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.2"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2599
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.4"
 }
+
+
 

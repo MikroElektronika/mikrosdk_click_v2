@@ -1,16 +1,17 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Digital potentiometer",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
     "details": "Resources/DETAILS.md",
-    "display_name": "DIGI POT 2",
+    "display_name": "DIGI POT 2 click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,9 +25,12 @@
     },
     "name": "mikroe.click.digipot2",
     "product_link": "https://www.mikroe.com/digipot-2-click",
-    "short_description": "This application change the output voltage every 5 seconds",
-    "supported_compiler": "mikroC",
+    "short_description": "DIGI POT 2 click is a mikroBUS™ add-on board with a single channel digital potentiometer TPL0501 with 256 wiper positions.",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "related_projects":[
+        1825
+    ],
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.3"
 }
-

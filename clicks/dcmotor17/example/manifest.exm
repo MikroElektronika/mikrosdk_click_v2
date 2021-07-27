@@ -2,7 +2,7 @@
     "name": "DC Motor 17 Click",
     "description": "DC Motor 17 Click is a compact add-on board that contains a brushed DC motor driver. This board features the TC78H660FTG, a dual H Bridge driver for one or two brushed motors that incorporate a DMOS with low on-resistance in output transistors from Toshiba Semiconductor.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","TC78H660FTG"],
     "category" : ["Brushed"]
 }

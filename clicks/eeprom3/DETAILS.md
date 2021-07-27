@@ -9,7 +9,7 @@ EEPROM 3 click provides 2 Mbit (2,097,152 bits) of Electrically Erasable Program
   <img src="https://download.mikroe.com/images/click_for_ide/eeprom3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/eeprom-3-click>)
+[click Product page](https://www.mikroe.com/eeprom-3-click)
 
 ---
 

@@ -2,7 +2,7 @@
     "name": "DHT22 2 Click",
     "description": "DHT22 2 click is used for measuring the environmental temperature and relative humidity. It uses the CM2322 sensor, with very accurate thermal and humidity measuring capabilities. It can use either 1-Wire or I2C protocol to communicate with the integrated circuit.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","CM2322"],
     "category" : ["Temperature & humidity"] 
 }

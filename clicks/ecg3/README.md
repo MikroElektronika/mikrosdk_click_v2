@@ -9,7 +9,7 @@ ECG 3 click is a complete solution for ECG and HR application development, utili
   <img src="https://download.mikroe.com/images/click_for_ide/ecg3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ecg-3-click>)
+[click Product page](https://www.mikroe.com/ecg-3-click)
 
 ---
 

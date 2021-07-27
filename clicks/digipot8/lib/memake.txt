@@ -1,0 +1,36 @@
+type: library
+
+target: lib_digipot8
+
+sources: {
+    src/digipot8.c
+}
+
+headers: {
+    include/digipot8.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/digipot8.h) dst(include/digipot8.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.DIGIPOT8

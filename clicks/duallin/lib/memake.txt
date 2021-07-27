@@ -1,0 +1,40 @@
+type: library
+
+target: lib_duallin
+
+alias: Click.DualLin
+
+sources: {
+    src/duallin.c
+}
+
+headers: {
+    include/duallin.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/duallin.h) dst(include/duallin.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

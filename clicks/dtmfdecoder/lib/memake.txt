@@ -1,0 +1,36 @@
+type: library
+
+target: lib_dtmfdecoder
+
+sources: {
+    src/dtmfdecoder.c
+}
+
+headers: {
+    include/dtmfdecoder.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/dtmfdecoder.h) dst(include/dtmfdecoder.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.DTMFDecoder

@@ -1,0 +1,36 @@
+type: library
+
+target: lib_dcmotor15
+
+sources: {
+    src/dcmotor15.c
+}
+
+headers: {
+    include/dcmotor15.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/dcmotor15.h) dst(include/dcmotor15.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.DCMotor15
