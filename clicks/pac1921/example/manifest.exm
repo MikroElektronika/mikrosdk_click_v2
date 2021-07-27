@@ -2,7 +2,7 @@
     "name": "PAC1921 Click",
     "description": "<PAC1921 click is a versatile power monitoring and measuring device intended for the high speed, low latency measurements. This device can measure current, voltage or the power of the connected load.>",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","PAC1921"],
     "category" : ["Measurements"] 
 }

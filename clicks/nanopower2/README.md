@@ -13,7 +13,7 @@ voltage potentials, applied on two input pins.
   <img src="https://download.mikroe.com/images/click_for_ide/nanopower2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/nano-power-2-click>)
+[click Product page](https://www.mikroe.com/nano-power-2-click)
 
 ---
 

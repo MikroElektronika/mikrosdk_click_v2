@@ -8,7 +8,7 @@ Nano GPS click carries the Nano Hornet module from OriginGPS. It’s the smalles
   <img src="https://download.mikroe.com/images/click_for_ide/nanogps_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/nano-gps-click>)
+[click Product page](https://www.mikroe.com/nano-gps-click)
 
 ---
 
@@ -41,9 +41,6 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 - Initialization function.
 > NANOGPS_RETVAL nanogps_init ( nanogps_t *ctx, nanogps_cfg_t *cfg );
 
-- Click Default Configuration function.
-> void nanogps_default_cfg ( nanogps_t *ctx );
-
 
 #### Example key functions :
 
@@ -51,7 +48,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 > nanogps_error_t nanogps_generic_parser ( char *rsp,  uint8_t command, uint8_t element, char *parser_buf );
 
 - Generic read function.
-> uint16_t nanogps_generic_read ( nanogps_t *ctx, char *data_buf, uint16_t max_len );
+> int32_t nanogps_generic_read ( nanogps_t *ctx, char *data_buf, uint16_t max_len );
 
 - Wake-up module.
 > void nanogps_module_wakeup ( nanogps_t *ctx );
@@ -77,7 +74,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 4800;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -88,7 +85,6 @@ void application_init ( void )
     nanogps_init( &nanogps, &cfg );
 
     nanogps_module_wakeup( &nanogps );
-    Delay_ms( 5000 );
 }
   
 ```
@@ -106,6 +102,11 @@ void application_task ( void )
 }
 
 ```
+
+## Note
+
+> Depending on the environmental conditions and the satellites availability
+> it may take some time for the module to receive the position fix.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

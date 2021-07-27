@@ -8,7 +8,7 @@ NFC Extend Click is NFC tag interface device with possibility of using any shape
   <img src="https://download.mikroe.com/images/click_for_ide/nfcextend_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/nfc-extend-click>)
+[click Product page](https://www.mikroe.com/nfc-extend-click)
 
 ---
 

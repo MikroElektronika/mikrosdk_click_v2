@@ -8,7 +8,7 @@ Opto 3 click is a relay Click board™, equipped with two pairs of optically iso
   <img src="https://download.mikroe.com/images/click_for_ide/opto3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/opto-3-click>)
+[click Product page](https://www.mikroe.com/opto-3-click)
 
 ---
 

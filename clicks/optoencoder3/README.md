@@ -1,6 +1,4 @@
 \mainpage Main Page
- 
- 
 
 ---
 # Opto Encoder 3 click
@@ -11,7 +9,7 @@ Opto Encoder 3 Click is a linear incremental optical sensor/encoder click, which
   <img src="https://download.mikroe.com/images/click_for_ide/optoencoder3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/opto-encoder-3-click>)
+[click Product page](https://www.mikroe.com/opto-encoder-3-click)
 
 ---
 
@@ -51,7 +49,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 > uint8_t optoencoder3_cnt ( optoencoder3_t *ctx );
  
 - Sets state of click
-> void optoencoder3_enabler ( optoencoder3_t *ctx, uint8_t active );
+> void optoencoder3_enable ( optoencoder3_t *ctx, uint8_t active );
 
 - Sets state of all pins
 > void optoencoder3_read_all_pins ( optoencoder3_t *ctx, optoencoder3_pins_t *pins );
@@ -64,8 +62,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Configuring clicks and log objects.
-> Select demo application mode.
+> Configures the driver and logger, and selects the demo application mode.
 
 ```c
 void application_init ( void )
@@ -75,8 +72,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info(&logger, "---- Application Init ----");
 
@@ -86,15 +84,17 @@ void application_init ( void )
     OPTOENCODER3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     optoencoder3_init( &optoencoder3, &cfg );
 
-    example_setter = DEMO_GRAPH;
+    optoencoder3_enable ( &optoencoder3, OPTOENCODER3_ENABLE );
+    
+    example_setter = DEMO_CNT;
 }
 ```
 
 ### Application Task
 
-> Depending on the set demo application mode:
->    - DEMO_CNT - Measures and displays the value of the counter.
->    - DEMO_GRAPH - Draws the status of each O pin. 
+> Depending on the demo application mode set in the application init it:
+>    - Measures and displays the value of the counter - DEMO_CNT mode; or
+>    - Draws the status of each O pin - DEMO_GRAPH mode.
 
 ```c
 void application_task ( void )
@@ -107,7 +107,6 @@ void application_task ( void )
     {
         view_counters(  );
     }
-    Delay_ms( 100 );
 }
 ```
 

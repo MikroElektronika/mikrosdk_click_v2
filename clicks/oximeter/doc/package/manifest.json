@@ -1,36 +1,39 @@
 {
-  "architecture": "ARM",
-  "category": "Biometrics",
-  "changelog": "Resources/CHANGELOG.md",
-  "contains": [
-    "libraries",
-    "hex_files",
-    "examples"
-  ],
-  "dependency_list": [
-  ],
-  "details": "Resources/DETAILS.md",
-  "display_name": "Oximeter click",
-  "example_list": [
-    {
-      "project_path": "Examples/example"
-    }
-  ],
-  "help": "Help/doc",
-  "icon": "Resources/click_icon.png",
-  "license": {
-    "file_path": "",
-    "id": "46"
-  },
-  "name": "mikroe.click.oximeter",
-  "product_link": "https://www.mikroe.com/oximeter-click",
-  "short_description": "Oximeter click is a versatile photometric Click board�, perfectly suited for measuring the blood oxygen saturation. It employs ADPD105, a highly configurable photometric front end (AFE) device from Analog Devices. ",
-  "supported_compiler": "mikroC AI",
-  "type": "Library",
-  "_type":"mikroSDK Library",
-  "related_projects":[
-      2399
-  ],
-  "version": "2.0.0.2"
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Biometrics",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Oximeter click",
+    "example_list": [
+      {
+        "project_path": "Examples/example"
+      }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+      "file_path": "",
+      "id": "46"
+    },
+    "name": "mikroe.click.oximeter",
+    "product_link": "https://www.mikroe.com/oximeter-click",
+    "short_description": "Oximeter click is a versatile photometric Click board�, perfectly suited for measuring the blood oxygen saturation. It employs ADPD105, a highly configurable photometric front end (AFE) device from Analog Devices. ",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2399
+    ],
+  "version": "2.0.0.4"
 }
+
+
 

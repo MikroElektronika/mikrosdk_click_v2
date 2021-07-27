@@ -178,7 +178,7 @@ OPTOENCODER3_RETVAL optoencoder3_init ( optoencoder3_t *ctx, optoencoder3_cfg_t 
  * 
  * @param active   State to be set
  */
-void optoencoder3_enabler ( optoencoder3_t *ctx, uint8_t active );
+void optoencoder3_enable ( optoencoder3_t *ctx, uint8_t active );
 
 /**
  * @brief Functions for reading state of pin o1

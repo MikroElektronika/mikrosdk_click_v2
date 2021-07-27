@@ -9,7 +9,7 @@ OOK RX click is a wireless receiver that operates at the frequency of 433MHz (su
   <img src="https://download.mikroe.com/images/click_for_ide/ookrx_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ook-rx-click>)
+[click Product page](https://www.mikroe.com/ook-rx-click)
 
 ---
 

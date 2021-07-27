@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Measurements",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "PAC1954 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.pac1954",
+    "product_link": "https://www.mikroe.com/pac1954-click",
+    "short_description": "PAC1954 Click is a compact add-on board that contains an energy monitoring solution. This board features the PAC1954, a four-channel DC power/energy monitor from Microchip Technology. It uses real-time calibration to minimize offset and gain errors with no input filters required for this device.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        3889
+    ],
+    "version": "2.0.0.0"
+}

@@ -1,5 +1,6 @@
 \mainpage Main Page
  
+
 ---
 # NB IoT click
 
@@ -9,7 +10,7 @@ NB IoT click is a Click board™ that allows LTE Cat NB1 connectivity by utilizi
   <img src="https://download.mikroe.com/images/click_for_ide/nbiot_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/nb-iot-click>)
+[click Product page](https://www.mikroe.com/nb-iot-click)
 
 ---
 
@@ -36,26 +37,23 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
+- NB IoT configuration object setup function.
 > void nbiot_cfg_setup ( nbiot_cfg_t *cfg ); 
  
-- Initialization function.
-> NBIOT_RETVAL nbiot_init ( nbiot_t *ctx, nbiot_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void nbiot_default_cfg ( nbiot_t *ctx );
+- NB IoT initialization function.
+> err_t nbiot_init ( nbiot_t *ctx, nbiot_cfg_t *cfg );
 
 
 #### Example key functions :
 
-- Send Command function.
-> void nbiot_send_command ( nbiot_t *ctx, char *command );
+- Send command function.
+> void nbiot_send_cmd ( nbiot_t *ctx, char *cmd );
  
-- Power up modules.
-> void nbiot_module_power ( nbiot_t *ctx );
+- NB IoT module power on.
+> void nbiot_power_on ( nbiot_t *ctx );
 
-- Generic write function.
-> void nbiot_generic_write ( nbiot_t *ctx, char *data_buf, uint16_t len );
+- NB IoT data writing function.
+> err_t nbiot_generic_write ( nbiot_t *ctx, char *data_buf, uint16_t len );
 
 ## Examples Description
 
@@ -65,102 +63,146 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes driver and wake-up module.
+> Initializes driver, wake-up module and sets default configuration for connecting device to network.
 
 ```c
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
-    nbiot_cfg_t cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    nbiot_cfg_t nbiot_cfg;  /**< Click config object. */
 
-    //  Logger initialization.
-
+    // Logger initialization.
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 57600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
-
-    //  Click initialization.
-
-    nbiot_cfg_setup( &cfg );
-    NBIOT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    nbiot_init( &nbiot, &cfg );
-
-    nbiot_module_power( &nbiot );
+    log_info( &logger, " Application Init " );
+    Delay_ms( 1000 );
     
-    nbiot_send_command( &nbiot, NBIOT_SINGLE_CMD_AT );
-    nbiot_process(  );
+    // Click initialization.
+    nbiot_cfg_setup( &nbiot_cfg );
+    NBIOT_MAP_MIKROBUS( nbiot_cfg, MIKROBUS_1 );
+    err_t init_flag  = nbiot_init( &nbiot, &nbiot_cfg );
+    if ( init_flag == UART_ERROR )
+    {
+        log_error( &logger, " Application Init Error. " );
+        log_info( &logger, " Please, run program again... " );
 
-    nbiot_send_command( &nbiot, NBIOT_SINGLE_CMD_ATE1 );
-    nbiot_process(  );
-
-    nbiot_send_command( &nbiot, NBIOT_SINGLE_CMD_ATI );
-    nbiot_process(  );
-
-    nbiot_send_command( &nbiot, NBIOT_SINGLE_CMD_SET_AT_CFUN );
-    nbiot_process(  );
-
-    nbiot_send_command( &nbiot, NBIOT_SINGLE_CMD_AT_CIMI );
-    nbiot_process(  );
-
-    nbiot_send_command( &nbiot, NBIOT_SINGLE_CMD_TEST_ATAT_CGDCONT );
-    nbiot_process(  );
-
-    nbiot_send_command( &nbiot, C5GNBIOT_SINGLE_CMD_GET_AT_CGATT );
-    nbiot_process(  );
-
-    log_printf( &logger, "------------------------\r\n" );
-    log_printf( &logger, "--- UDP server - AT command ---\r\n" );
-
-    nbiot_send_command( &nbiot, NBIOT_CMD_AT_NCONFIG );
-    nbiot_process(  );
-    nbiot_send_command( &nbiot, NBIOT_CMD_AT_NCONFIG1 );
-    nbiot_process(  );
-    nbiot_send_command( &nbiot, NBIOT_CMD_AT_NCONFIG2 );
-    nbiot_process(  );
-
-
-    nbiot_send_command( &nbiot, NBIOT_CMD_AT_NBAND );
-    nbiot_process(  );
-
-    nbiot_send_command( &nbiot, C5GNBIOT_SINGLE_CMD_SET_AT_CGDCONT_1 );
-    nbiot_process(  );
-
-
+        for ( ; ; );
+    }
     
-    nbiot_send_command( &nbiot, NBIOT_CMD_AT_CEREG );
-    nbiot_process(  );
-    nbiot_send_command( &nbiot, NBIOT_CMD_AT_COPS ); 
-    nbiot_process(  );
-    nbiot_send_command( &nbiot, NBIOT_CMD_AT_NSOCR ); 
-    nbiot_process(  );
-    nbiot_send_command( &nbiot, NBIOT_CMD_AT_NSOST );
-    nbiot_process(  );
-    nbiot_send_command( &nbiot, NBIOT_CMD_AT_NSOCL );
-    nbiot_process(  );
-
+    log_info( &logger, " Power on device... " );
+    nbiot_power_on( &nbiot );
+    // dummy read
+    app_error_flag = nbiot_rsp_check(  );
+    nbiot_error_check( app_error_flag );
+    
+    // AT
+    nbiot_send_cmd( &nbiot, NBIOT_CMD_AT );
+    app_error_flag = nbiot_rsp_check( );
+    nbiot_error_check( app_error_flag );
+    Delay_ms( 500 );
+    
+    // ATI - product information
+    nbiot_send_cmd( &nbiot, NBIOT_CMD_ATI );
+    app_error_flag = nbiot_rsp_check(  );
+    nbiot_error_check( app_error_flag );
+    Delay_ms( 500 );
+    
+    // CGMR - firmware version
+    nbiot_send_cmd( &nbiot, NBIOT_CMD_CGMR );
+    app_error_flag = nbiot_rsp_check(  );
+    nbiot_error_check( app_error_flag );
+    Delay_ms( 1000 );
+    
+    // COPS - deregister from network
+    nbiot_send_cmd_with_parameter( &nbiot, NBIOT_CMD_COPS, "2" );
+    app_error_flag = nbiot_rsp_check(  );
+    nbiot_error_check( app_error_flag );
+    Delay_ms( 1000 );
+     
+    // CFUN - full funtionality
+    nbiot_send_cmd_with_parameter( &nbiot, NBIOT_CMD_CFUN, "1" );
+    app_error_flag = nbiot_rsp_check(  );
+    nbiot_error_check( app_error_flag );
+    Delay_ms( 500 );
+    
+    // COPS - automatic mode
+    nbiot_send_cmd_with_parameter( &nbiot, NBIOT_CMD_COPS, "0" );
+    app_error_flag = nbiot_rsp_check(  );
+    nbiot_error_check( app_error_flag );
     Delay_ms( 2000 );
+    
+    // CEREG - network registration status
+    nbiot_send_cmd_with_parameter( &nbiot, NBIOT_CMD_CEREG, "2" );
+    app_error_flag = nbiot_rsp_check(  );
+    nbiot_error_check( app_error_flag );
+    Delay_ms( 500 );
+    
+    // CIMI - request IMSI
+    nbiot_send_cmd( &nbiot, NBIOT_CMD_CIMI );
+    app_error_flag = nbiot_rsp_check(  );
+    nbiot_error_check( app_error_flag );
+    Delay_ms( 500 );
+    
+    app_buf_len = 0;
+    app_buf_cnt = 0;
+    app_connection_status = WAIT_FOR_CONNECTION;
+    log_info( &logger, " Application Task " );
+    Delay_ms( 5000 );
 }
   
 ```
 
 ### Application Task
 
-> Reads the received data and parses it.
+> Waits for device to connect to network and then checks the signal quality 
+> every 5 seconds. All data is being logged on USB UART where you can track their changes.
 
 ```c
 
 void application_task ( void )
 {
-    nbiot_process(  );
-    nbiot_send_command( &nbiot, NBIOT_SINGLE_CMD_AT_CIMI );
+    if ( app_connection_status == WAIT_FOR_CONNECTION )
+    {
+        // CGATT - request IMSI
+        nbiot_send_cmd_check( &nbiot, NBIOT_CMD_CGATT );
+        app_error_flag = nbiot_rsp_check(  );
+        nbiot_error_check( app_error_flag );
+        Delay_ms( 500 );
+        
+        // CEREG - network registration status
+        nbiot_send_cmd_check( &nbiot, NBIOT_CMD_CEREG );
+        app_error_flag = nbiot_rsp_check(  );
+        nbiot_error_check( app_error_flag );
+        Delay_ms( 500 );
+        
+        // CSQ - signal quality
+        nbiot_send_cmd( &nbiot, NBIOT_CMD_CSQ );
+        app_error_flag = nbiot_rsp_check(  );
+        nbiot_error_check( app_error_flag );
+        Delay_ms( 5000 );
+    }
+    else
+    {
+        log_info( &logger, "CONNECTED TO NETWORK" );
+        
+        log_info( &logger, "CHECKING SIGNAL QUALITY" );
+        nbiot_send_cmd( &nbiot, NBIOT_CMD_CSQ );
+        app_error_flag = nbiot_rsp_check(  );
+        nbiot_error_check( app_error_flag );
+        Delay_ms( 5000 );
+    }
 } 
 
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Note
+
+> In order for the example to work, a valid SIM card needs to be entered.
+
+The full application code, and ready to use projects can be installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
 **Other mikroE Libraries used in the example:** 
 

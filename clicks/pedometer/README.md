@@ -12,7 +12,7 @@ Pedometer Click is designed to sense movement, more precisely, to sense and coun
 </p>
 
 
-[click Product page](<https://www.mikroe.com/pedometer-click>)
+[click Product page](https://www.mikroe.com/pedometer-click)
 
 ---
 

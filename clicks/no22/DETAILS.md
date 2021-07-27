@@ -10,7 +10,7 @@ NO2 2 Click is a gas sensor Click board™, equipped with the MiCS-2714, a compa
 </p>
 
 
-[click Product page](<https://www.mikroe.com/no2-2-click>)
+[click Product page](https://www.mikroe.com/no2-2-click)
 
 ---
 

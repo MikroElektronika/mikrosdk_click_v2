@@ -8,7 +8,7 @@ NDIR CO2 click is an advanced integrated CO2 gas sensor system, which is able to
   <img src="https://download.mikroe.com/images/click_for_ide/ndirco2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ndir-co2-click>)
+[click Product page](https://www.mikroe.com/ndir-co2-click)
 
 ---
 

@@ -1,0 +1,7 @@
+type: subdirs
+project: PAC1954
+
+subdirs: {
+    lib
+    example
+}

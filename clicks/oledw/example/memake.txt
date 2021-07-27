@@ -1,0 +1,13 @@
+type: executable
+target: example_oledw
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.OLEDW
+}
+
+sources: {
+    main.c
+}

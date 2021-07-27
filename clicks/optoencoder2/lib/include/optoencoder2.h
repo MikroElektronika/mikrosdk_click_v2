@@ -49,7 +49,7 @@
  * \{
  */
 #define OPTOENCODER2_MAP_MIKROBUS( cfg, mikrobus ) \
-  cfg. b= MIKROBUS( mikrobus, MIKROBUS_PWM ); \
+  cfg.b= MIKROBUS( mikrobus, MIKROBUS_PWM ); \
   cfg.a= MIKROBUS( mikrobus, MIKROBUS_INT );
 /** \} */
 

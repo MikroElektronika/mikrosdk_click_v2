@@ -1,0 +1,8 @@
+{
+    "name": "Opto 5 Click",
+    "description": "Opto 5 Click is a compact add-on board that provides uncomplicated safety isolation from the high voltage. This board features the FOD4216, a random phase snubberless Triac driver from ON Semiconductor.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","FOD4216SD"],
+    "category" : ["Optocoupler"]
+}

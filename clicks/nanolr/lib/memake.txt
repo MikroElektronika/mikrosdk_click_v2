@@ -1,0 +1,40 @@
+type: library
+
+target: lib_nanolr
+
+alias: Click.NanoLR
+
+sources: {
+    src/nanolr.c
+}
+
+headers: {
+    include/nanolr.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/nanolr.h) dst(include/nanolr.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

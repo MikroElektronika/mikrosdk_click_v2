@@ -1,0 +1,36 @@
+type: library
+
+target: lib_nvsram
+
+sources: {
+    src/nvsram.c
+}
+
+headers: {
+    include/nvsram.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/nvsram.h) dst(include/nvsram.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.nvSRAM

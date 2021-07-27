@@ -68,98 +68,21 @@
 /** \} */
 
 /**
- * \defgroup parser_error Parser error
+ * \defgroup commands AT Commands define
  * \{
  */
-#define NBIOT_PARSER_NO_ERROR    0x00
-#define NBIOT_PARSER_ERROR_REF   0x01
-#define NBIOT_PARSER_ERROR_CMD   0x02
-#define NBIOT_PARSER_ERROR_DATA  0x04
-/** \} */
+#define NBIOT_CMD_AT          "AT"
+#define NBIOT_CMD_ATI         "ATI"
+#define NBIOT_CMD_CGMR        "AT+CGMR"
 
-/**
- * \defgroup click_status G2C 3G click status
- * \{
- */
-#define NBIOT_STATUS_DEVICE_READY            1
-#define NBIOT_STATUS_ACT_NETWORK_AND_BROKER  4
-#define NBIOT_STATUS_ACT_NETWORK             2
-#define NBIOT_STATUS_ACT_BROKER              3
-#define NBIOT_STATUS_DEVICE_BUSY             0
-/** \} */
-
-/**
- * \defgroup module_state Module power state
- * \{
- */
-#define NBIOT_MODULE_POWER_ON   1
-#define NBIOT_MODULE_POWER_OFF  0
-/** \} */
-
-/**
- * \defgroup at_command AT command 
- * \{
- */
-#define NBIOT_SINGLE_CMD_AT        "AT"
-#define NBIOT_SINGLE_CMD_ATI       "ATI"
-#define NBIOT_SINGLE_CMD_AT_W      "AT+W"
-#define NBIOT_SINGLE_CMD_AT_R      "AT+R"
-#define NBIOT_SINGLE_CMD_ATE0      "ATE0"
-#define NBIOT_SINGLE_CMD_ATE1      "ATE1"
-#define NBIOT_SINGLE_CMD_AT_RST    "AT+RST"
-#define NBIOT_SINGLE_CMD_AT_CRST   "AT+CRST"
-#define NBIOT_SINGLE_CMD_AT_GMR    "AT+GMR"
-#define NBIOT_SINGLE_CMD_AT_GMSTA  "AT+GMSTA"
-#define NBIOT_SINGLE_CMD_AT_PUB    "AT+PUB"
-#define NBIOT_SINGLE_CMD_AT_CIMI   "AT+CIMI"
-
-#define NBIOT_SINGLE_CMD_SET_AT_LRSP_1 "AT+LRSP=1"
-#define NBIOT_SINGLE_CMD_SET_AT_LRSP_0 "AT+LRSP=0"
-#define NBIOT_SINGLE_CMD_SET_AT_CEN_1  "AT+CEN=1"
-#define NBIOT_SINGLE_CMD_SET_AT_CEN_0  "AT+CEN=0"
-#define NBIOT_SINGLE_CMD_SET_AT_NWC_1  "AT+NWC=1"
-#define NBIOT_SINGLE_CMD_SET_AT_NWC_0  "AT+NWC=0"
-#define NBIOT_SINGLE_CMD_SET_AT_BRC_1  "AT+BRC=1"
-#define NBIOT_SINGLE_CMD_SET_AT_BRC_0  "AT+BRC=0"
-#define NBIOT_SINGLE_CMD_SET_AT_GPEN_0 "AT+GPEN=0"
-#define NBIOT_SINGLE_CMD_SET_AT_GPEN_1 "AT+GPEN=1"
-#define NBIOT_SINGLE_CMD_SET_AT_CFUN   "AT+CFUN=1"
-
-#define NBIOT_SINGLE_CMD_GET_AT_LRSP "AT+LRSP?"
-#define NBIOT_SINGLE_CMD_GET_AT_CEN  "AT+CEN?"
-#define NBIOT_SINGLE_CMD_GET_AT_NWC  "AT+NWC?"
-#define NBIOT_SINGLE_CMD_GET_AT_BRC  "AT+BRC?"
-#define NBIOT_SINGLE_CMD_GET_AT_GPEN "AT+GPEN?"
-#define NBIOT_SINGLE_CMD_GET_AT_NWCR "AT+NWCR?"
-#define NBIOT_SINGLE_CMD_GET_AT_BRCR "AT+BRCR?"
-#define NBIOT_SINGLE_CMD_GET_AT_DSET "AT+DSET?"
-
-#define NBIOT_SINGLE_CMD_TEST_AT_LRSP         "AT+LRSP=?"
-#define NBIOT_SINGLE_CMD_TEST_AT_CEN          "AT+CEN=?"
-#define NBIOT_SINGLE_CMD_TEST_AT_NWC          "AT+NWC=?"
-#define NBIOT_SINGLE_CMD_TEST_AT_BRC          "AT+BRC=?"
-#define NBIOT_SINGLE_CMD_TEST_AT_GPEN         "AT+GPEN=?"
-#define NBIOT_SINGLE_CMD_TEST_AT_NWCR         "AT+NWCR=?"
-#define NBIOT_SINGLE_CMD_TEST_AT_BRCR         "AT+BRCR=?"
-#define NBIOT_SINGLE_CMD_TEST_AT_DSET         "AT+DSET=?"
-#define NBIOT_SINGLE_CMD_TEST_ATAT_CGDCONT    "AT+CGDCONT?"
-#define C5GNBIOT_SINGLE_CMD_GET_AT_CGATT      "AT+CGATT?"
-
-#define NBIOT_MULTI_CMD_AT_DSET      "AT+DSET"
-#define NBIOT_MULTI_CMD_AT_BRCR      "AT+BRCR"
-#define NBIOT_MULTI_CMD_AT_NWCR      "AT+NWCR"
-
-#define C5GNBIOT_SINGLE_CMD_SET_AT_CGDCONT_1  "AT+CGDCONT=1,\"IP\",\"vip.iot\""
-#define NBIOT_CMD_AT_NCONFIG                  "AT+NCONFIG=CR_0354_0338_SCRAMBLING,TRUE"
-#define NBIOT_CMD_AT_NCONFIG1                 "AT+NCONFIG=CR_0859_SI_AVOID,TRUE"
-#define NBIOT_CMD_AT_NCONFIG2                 "AT+NCONFIG=AUTOCONNECT,FALSE"
-#define NBIOT_CMD_AT_NBAND                    "AT+NBAND=8"
-#define NBIOT_CMD_AT_CEREG                    "AT+CEREG=2"
-#define NBIOT_CMD_AT_COPS                     "AT+COPS=1,2,\"12345\""
-#define NBIOT_CMD_AT_NSOCR                    "AT+NSOCR= DGRAM,17,16666,1"
-#define NBIOT_CMD_AT_NSOST                    "AT+NSOST=0,83.58.228.64,16666,2,ABCD"
-#define NBIOT_CMD_AT_NSOCL                    "AT+NSOCL=0"
-
+#define NBIOT_CMD_CFUN        "AT+CFUN"
+#define NBIOT_CMD_CEREG       "AT+CEREG"
+#define NBIOT_CMD_CGDCONT     "AT+CGDCONT"
+#define NBIOT_CMD_CIMI        "AT+CIMI"
+#define NBIOT_CMD_CGATT       "AT+CGATT"
+#define NBIOT_CMD_CSQ         "AT+CSQ"
+#define NBIOT_CMD_CESQ        "AT+CESQ"
+#define NBIOT_CMD_COPS        "AT+COPS"
 /** \} */
 
 /**
@@ -167,6 +90,7 @@
  * \{
  */
 #define DRV_RX_BUFFER_SIZE 500
+#define DRV_TX_BUFFER_SIZE 100
 /** \} */
 
 /** \} */ // End group macro 
@@ -193,7 +117,7 @@ typedef struct
     uart_t uart;
 
     char uart_rx_buffer[ DRV_RX_BUFFER_SIZE ];
-    char uart_tx_buffer[ DRV_RX_BUFFER_SIZE ];
+    char uart_tx_buffer[ DRV_TX_BUFFER_SIZE ];
 
 } nbiot_t;
 
@@ -250,60 +174,146 @@ extern "C"{
 #endif
 
 /**
- * @brief Config Object Initialization function.
- *
- * @param cfg  Click configuration structure.
- *
- * @description This function initializes click configuration structure to init state.
- * @note All used pins will be set to unconnected state.
+ * @brief NB IoT configuration object setup function.
+ * @details This function initializes click configuration structure to initial
+ * values.
+ * @param[out] cfg : Click configuration structure.
+ * See #nbiot_cfg_t object definition for detailed explanation.
+ * @return Nothing.
+ * @note The all used pins will be set to unconnected state.
  */
 void nbiot_cfg_setup ( nbiot_cfg_t *cfg );
 
 /**
- * @brief Initialization function.
- * @param ctx Click object.
- * @param cfg Click configuration structure.
- * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @brief NB IoT initialization function.
+ * @details This function initializes all necessary pins and peripherals used
+ * for this click board.
+ * @param[out] ctx : Click context object.
+ * See #nbiot_t object definition for detailed explanation.
+ * @param[in] cfg : Click configuration structure.
+ * See #nbiot_cfg_t object definition for detailed explanation.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ *
+ * See #err_t definition for detailed explanation.
+ * @note None.
  */
-NBIOT_RETVAL nbiot_init ( nbiot_t *ctx, nbiot_cfg_t *cfg );
+err_t nbiot_init ( nbiot_t *ctx, nbiot_cfg_t *cfg );
 
 /**
- * @brief Power up modules.
- * @param ctx Click object.
+ * @brief NB IoT data writing function.
+ * @details This function writes a desired number of data bytes by using UART serial interface.
+ * @param[in] ctx : Click context object.
+ * See #nbiot_t object definition for detailed explanation.
+ * @param[in] data_buf : Data buffer for sending.
+ * @param[in] len : Number of bytes for sending.
+ * @return @li @c  >=0 - Success,
+ *         @li @c   <0 - Error.
+ *
+ * See #err_t definition for detailed explanation.
+ * @note None.
  */
-void nbiot_module_power ( nbiot_t *ctx );
+err_t nbiot_generic_write ( nbiot_t *ctx, char *data_buf, uint16_t len );
 
 /**
- * @brief Reset module.
- * @param ctx Click object.
+ * @brief NB IoT data reading function.
+ * @details This function reads a desired number of data bytes by using UART serial interface.
+ * @param[in] ctx : Click context object.
+ * See #nbiot_t object definition for detailed explanation.
+ * @param[out] data_buf : Output read data.
+ * @param[in] max_len : Number of bytes to be read.
+ * @return @li @c  >0 - Number of data bytes read,
+ *         @li @c <=0 - Error/Empty Ring buffer.
+ *
+ * See #err_t definition for detailed explanation.
+ * @note None.
  */
-void nbiot_reset ( nbiot_t *ctx );
+err_t nbiot_generic_read ( nbiot_t *ctx, char *data_buf, uint16_t max_len );
 
 /**
- * @brief Generic write function.
- * @param ctx Click object.
- * @param data_buf Data buffer for sends.
- * @param len Number of bytes for sends.
+ * @brief NB IoT module power on.
+ * @details This function resets the chip on NB IoT click.
+ * @param[in] ctx : Click context object.
+ * See #nbiot_t object definition for detailed explanation.
+ * @return Nothing.
  */
-void nbiot_generic_write ( nbiot_t *ctx, char *data_buf, uint16_t len );
+void nbiot_power_on ( nbiot_t *ctx );
 
 /**
- * @brief Generic read function.
- * @param ctx Click object.
- * @param data_buf Data buffer for read data.
- * @param max_len The maximum length of data that can be read.
- * @return Number of reads data.
+ * @brief Sets state of the RST pin.
+ * @details This function sets RST pin state.
+ * @param[in] ctx : Click context object.
+ * See #nbiot_t object definition for detailed explanation.
+ * @param[in] state Pin state ( 1 or 0 ).
+ * @return Nothing.
  */
-int32_t nbiot_generic_read ( nbiot_t *ctx, char *data_buf, uint16_t max_len );
+void nbiot_set_rst ( nbiot_t *ctx, uint8_t state );
 
 /**
- * @brief Send Command function.
- * @param ctx  Click object.
- * @param command  Command.
- * @description This function sends comamnd.
+ * @brief STAT Pin Get function
+ * @details This function allows user to check state of the STAT pin.
+ * @param[in] ctx : Click context object.
+ * See #nbiot_t object definition for detailed explanation.
+ * @return @li @c 0 logical low.
+ *         @li @c 1 logical high.
  */
-void nbiot_send_command ( nbiot_t *ctx, char *command );
+uint8_t nbiot_get_stat ( nbiot_t *ctx );
+
+/**
+ * @brief Send command function.
+ * @details This function sends the specified command to the click module.
+ * @param[in] ctx : Click context object.
+ * See #nbiot_t object definition for detailed explanation.
+ * @param[in] cmd  Command variable.
+ *
+ * @return Nothing.
+ */
+void nbiot_send_cmd ( nbiot_t *ctx, char *cmd );
+
+/**
+ * @brief Send command function with parameter.
+ * @details This function sends commands to the click module.
+ * @param[in] ctx : Click context object.
+ * See #nbiot_t object definition for detailed explanation.
+ * @param[in] at_cmd_buf  Command buffer.
+ * @param[in] param_buf  Parameter buffer.
+ *
+ * @return Nothing.
+ */
+void nbiot_send_cmd_with_parameter ( nbiot_t *ctx, char *at_cmd_buf, char *param_buf );
+
+/**
+ * @brief Check the sent command.
+ * @details This function checks the command that is sent.
+ * @param[in] ctx : Click context object.
+ * See #nbiot_t object definition for detailed explanation.
+ * @param[in] at_cmd_buf  Command buffer.
+ *
+ * @return Nothing.
+ */
+void nbiot_send_cmd_check ( nbiot_t *ctx, char *at_cmd_buf );
+
+/**
+ * @brief Check the command parameters.
+ * @details This function checks the command that is sent.
+ * @param[in] ctx : Click context object.
+ * See #nbiot_t object definition for detailed explanation.
+ * @param[in] at_cmd_buf  Command buffer.
+ *
+ * @return Nothing.
+ */
+void nbiot_send_cmd_parameter_check ( nbiot_t *ctx, char *at_cmd_buf );
+
+/**
+ * @brief Set sim card APN.
+ * @details This function sets APN for sim card.
+ * @param[in] ctx : Click context object.
+ * See #nbiot_t object definition for detailed explanation.
+ * @param[in] sim_apn  SIM card APN.
+ *
+ * @return Nothing.
+ */
+void nbiot_set_sim_apn ( nbiot_t *ctx, char *sim_apn );
 
 #ifdef __cplusplus
 }

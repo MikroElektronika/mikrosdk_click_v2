@@ -8,7 +8,7 @@ OOK TX click is a simple wireless transmitter that operates at the frequency of 
   <img src="https://download.mikroe.com/images/click_for_ide/ooktx_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ook-tx-click>)
+[click Product page](https://www.mikroe.com/ook-tx-click)
 
 ---
 

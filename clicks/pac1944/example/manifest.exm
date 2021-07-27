@@ -1,0 +1,8 @@
+{
+    "name": "PAC1944 Click",
+    "description": "PAC1944 Click is a compact add-on board that contains an energy monitoring solution. This board features the PAC1944, a multi-channel DC power/energy monitor from Microchip Technology. It uses real-time calibration to minimize offset and gain errors with no input filters required for this device.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","PAC1944"],
+    "category" : ["Measurements"]
+}

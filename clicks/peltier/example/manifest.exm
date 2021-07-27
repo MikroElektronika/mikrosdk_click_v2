@@ -2,7 +2,7 @@
     "name": "Peltier Click",
     "description": "The Peltier Click is a Click board™ which utilizes the SPV1050, an ultralow power energy harvester and battery charger from STMicroelectronics. The Peltier click can charge lithium battery using thermoelectric energy harvesting device (TEG).",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","SPV1050"],
     "category" : ["Battery charger"] 
 }

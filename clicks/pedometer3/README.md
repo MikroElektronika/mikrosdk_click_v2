@@ -12,7 +12,7 @@ which utilizes the KX126-1063. An advanced tri-axis acceleration sensor, KX126-1
   <img src="https://download.mikroe.com/images/click_for_ide/pedometer3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/pedometer-3-click>)
+[click Product page](https://www.mikroe.com/pedometer-3-click)
 
 ---
 

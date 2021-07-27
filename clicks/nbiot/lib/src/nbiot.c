@@ -30,25 +30,6 @@
 #include "nbiot.h"
 #include "string.h"
 
-// ------------------------------------------------------------- PRIVATE MACROS 
-
-// Buffer 
-#define NBIOT_BUF_FIRST_CMD "=\""
-#define NBIOT_BUF_MID_CMD   "\",\""
-#define NBIOT_BUF_END_CMD   "\""
-
-#define NBIOT_RSP_CMD_ACT "+ACT"
-#define NBIOT_RSP_CMD_ACT_LEN 4
-
-// ACTUATOR SWITCH PARSER
-#define NBIOT_RSP_STATE_TRUE "true"
-#define NBIOT_RSP_STATE_TRUE_LEN 4
-#define NBIOT_RSP_STATE_FALSE "false"
-#define NBIOT_RSP_STATE_FALSE_LEN 5
-
-// ---------------------------------------------- PRIVATE FUNCTION DECLARATIONS 
-
-
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
 void nbiot_cfg_setup ( nbiot_cfg_t *cfg )
@@ -60,17 +41,22 @@ void nbiot_cfg_setup ( nbiot_cfg_t *cfg )
     
     // Additional gpio pins
 
-     cfg->stat   = HAL_PIN_NC;
-     cfg->rst = HAL_PIN_NC;
-
-    cfg->baud_rate      = 9600;
+    cfg->stat = HAL_PIN_NC;
+    cfg->rst  = HAL_PIN_NC;
+    
+    /*
+        NOTE 
+        The module works at a 9600 baud rate, however, due to problems with SDK related to
+        UART baud rate setting accuracy, we had to set it here to 9700.
+    */
+    cfg->baud_rate      = 9700; 
     cfg->data_bit       = UART_DATA_BITS_DEFAULT;
     cfg->parity_bit     = UART_PARITY_DEFAULT;
     cfg->stop_bit       = UART_STOP_BITS_DEFAULT;
     cfg->uart_blocking  = false;
 }
 
-NBIOT_RETVAL nbiot_init ( nbiot_t *ctx, nbiot_cfg_t *cfg )
+err_t nbiot_init ( nbiot_t *ctx, nbiot_cfg_t *cfg )
 {
     uart_config_t uart_cfg;
     
@@ -96,65 +82,107 @@ NBIOT_RETVAL nbiot_init ( nbiot_t *ctx, nbiot_cfg_t *cfg )
 
     // Output pins 
 
-     digital_out_init( &ctx->rst, cfg->rst );
+    digital_out_init( &ctx->rst, cfg->rst );
 
     // Input pins
 
-     digital_in_init( &ctx->stat, cfg->stat );
+    digital_in_init( &ctx->stat, cfg->stat );
 
     return NBIOT_OK;
-
 }
 
-void nbiot_module_power ( nbiot_t *ctx )
+err_t nbiot_generic_write ( nbiot_t *ctx, char *data_buf, uint16_t len )
 {
-    digital_out_high( &ctx->rst );
-    Delay_100ms( );
-    Delay_100ms( );
-    digital_out_low( &ctx->rst );
-    Delay_1sec( );
-} 
-
-void nbiot_reset ( nbiot_t *ctx )
-{
-    digital_out_high( &ctx->rst );
-    Delay_100ms( );
-    digital_out_low( &ctx->rst );
-    Delay_100ms( );
-    Delay_100ms( );
-    Delay_100ms( );
-    digital_out_high( &ctx->rst );
-    Delay_1sec( );
-    Delay_1sec( );
-    Delay_1sec( );
-    Delay_1sec( );
-    Delay_1sec( );
-    Delay_1sec( );
-    Delay_1sec( );
-    Delay_1sec( );
+    return uart_write( &ctx->uart, data_buf, len );
 }
 
-void nbiot_generic_write ( nbiot_t *ctx, char *data_buf, uint16_t len )
-{
-    uart_write( &ctx->uart, data_buf, len );
-}
-
-int32_t nbiot_generic_read ( nbiot_t *ctx, char *data_buf, uint16_t max_len )
+err_t nbiot_generic_read ( nbiot_t *ctx, char *data_buf, uint16_t max_len )
 {
     return uart_read( &ctx->uart, data_buf, max_len );
 }
 
-void nbiot_send_command ( nbiot_t *ctx, char *command )
+void nbiot_power_on ( nbiot_t *ctx )
 {
-    char tmp_buf[ 100 ];
-    uint8_t len;
-    memset( tmp_buf, 0, 100 );
-    len = strlen( command );
-    
-    strncpy( tmp_buf, command, len );
-    strcat( tmp_buf, "\r\n" );
+    digital_out_high( &ctx->rst );
+    Delay_100ms( );
+    Delay_100ms( );
+    digital_out_low( &ctx->rst );
+} 
 
-    nbiot_generic_write( ctx, tmp_buf, strlen( tmp_buf ) );
+void nbiot_set_rst ( nbiot_t *ctx, uint8_t state )
+{
+    if ( state > 0 )
+    {
+        digital_out_high( &ctx->rst );
+    }
+    else
+    {
+        digital_out_low( &ctx->rst );
+    }
+}
+
+uint8_t nbiot_get_stat ( nbiot_t *ctx )
+{
+    return digital_in_read( &ctx->stat );
+}
+
+void nbiot_send_cmd ( nbiot_t *ctx, char *cmd )
+{
+    char cr[ 2 ] = { 13, 0 };
+    
+    while ( *cmd != 0 )
+    {
+        uart_write( &ctx->uart, cmd, 1 );
+        cmd++;
+    }
+    
+    uart_write( &ctx->uart, cr, 1 );
+    Delay_100ms(  );
+}
+
+void nbiot_send_cmd_with_parameter ( nbiot_t *ctx, char *at_cmd_buf, char *param_buf )
+{
+    char final_cmd[ 100 ] = { 0 };
+    char check_char[ 2 ] = { '=', 0 };
+    
+    strcpy( final_cmd, at_cmd_buf );
+    strcat( final_cmd, check_char );
+    strcat( final_cmd, param_buf );
+    
+    nbiot_send_cmd( ctx, final_cmd );
+}
+
+void nbiot_send_cmd_check ( nbiot_t *ctx, char *at_cmd_buf )
+{
+    char final_cmd[ 100 ] = { 0 };
+    char check_char[ 2 ] = { '?', 0 };
+    
+    strcpy( final_cmd, at_cmd_buf );
+    strcat( final_cmd, check_char );
+    
+    nbiot_send_cmd( ctx, final_cmd );
+}
+
+void nbiot_send_cmd_parameter_check ( nbiot_t *ctx, char *at_cmd_buf )
+{
+    char final_cmd[ 100 ] = { 0 };
+    char check_char[ 3 ] = { '=' , '?', 0 };
+    
+    strcpy( final_cmd, at_cmd_buf );
+    strcat( final_cmd, check_char );
+    
+    nbiot_send_cmd( ctx, final_cmd );
+}
+
+void nbiot_set_sim_apn ( nbiot_t *ctx, char *sim_apn )
+{
+    char final_cmd[ 50 ] = "1,\"IP\",\"";
+    char end_cmd[ 3 ] = "\"";
+    
+    strcat( final_cmd, sim_apn );
+    strcat( final_cmd, end_cmd );
+    
+    nbiot_send_cmd_with_parameter( ctx, NBIOT_CMD_CGDCONT, final_cmd );
 }
 
 // ------------------------------------------------------------------------- END

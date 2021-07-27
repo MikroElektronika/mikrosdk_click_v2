@@ -79,7 +79,7 @@ OPTOENCODER3_RETVAL optoencoder3_init ( optoencoder3_t *ctx, optoencoder3_cfg_t 
     return OPTOENCODER3_OK;
 }
 
-void optoencoder3_enabler ( optoencoder3_t *ctx, uint8_t active )
+void optoencoder3_enable ( optoencoder3_t *ctx, uint8_t active )
 {
     digital_out_write ( &ctx->en, active );
 }

@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "OLED",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "OLED W click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.oledw",
+    "product_link": "https://www.mikroe.com/oled-w-click",
+    "short_description": "OLED W click carries a 96 x 39px white monochrome passive matrix OLED display. The display is bright, has a wide viewing angle and low power consumption.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "related_projects":[
+        1112
+    ],
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.2"
+}

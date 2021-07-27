@@ -11,7 +11,7 @@ Opto Encoder 2 click is a linear incremental optical sensor/encoder click which 
   <img src="https://download.mikroe.com/images/click_for_ide/optoencoder2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/opto-encoder-2-click>)
+[click Product page](https://www.mikroe.com/opto-encoder-2-click)
 
 ---
 
@@ -58,13 +58,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This application is used to encode motion or rotation
+> This application is used to encode motion or rotation.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes GPIO driver and resets encoder counter to 0(zero)
+> Initializes GPIO driver and resets encoder counter to 0 (zero)
 
 ```c
 
@@ -87,14 +87,13 @@ void application_init ( void )
     optoencoder2_init( &optoencoder2, &cfg );
 
     optoencoder2_zero_counter( &optoencoder2 );
-    log_printf( &logger, "> app init done \r\n" );
 }
   
 ```
 
 ### Application Task
 
-> If encoder is moving - increments or decrements encoder position on every rising edge on Channel A (INT pin) and logs encoder position
+> If motion is detected - encoder increments or decrements position on each rising edge on Channel A (INT pin) and logs encoder position
 
 ```c
 
@@ -105,9 +104,10 @@ void application_task ( )
 
     stop_flag = optoencoder2_isr( &optoencoder2, 100 );
     encoder_position = optoencoder2_get_position( &optoencoder2 );
+    
     if ( stop_flag == 0 )
     {
-        log_printf( &logger, "> pos: %d \r\n", encoder_position );
+        log_printf( &logger, "Position: %ld \r\n", encoder_position );
     }
 }  
 

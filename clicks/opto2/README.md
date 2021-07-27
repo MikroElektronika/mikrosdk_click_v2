@@ -11,7 +11,7 @@ Opto 2 click is a galvanic isolator Click board™, used to provide an optical i
   <img src="https://download.mikroe.com/images/click_for_ide/opto2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/opto-2-click>)
+[click Product page](https://www.mikroe.com/opto-2-click)
 
 ---
 

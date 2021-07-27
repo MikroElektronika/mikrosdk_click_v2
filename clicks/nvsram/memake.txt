@@ -1,0 +1,7 @@
+type: subdirs
+project: nvSRAM
+
+subdirs: {
+    lib
+    example
+}

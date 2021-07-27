@@ -9,7 +9,7 @@ One Shot Click is equipped with the monostable multivibrator (also known as a â€
   <img src="https://download.mikroe.com/images/click_for_ide/oneshot_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/one-shot-click>)
+[click Product page](https://www.mikroe.com/one-shot-click)
 
 ---
 

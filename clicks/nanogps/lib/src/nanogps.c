@@ -57,9 +57,9 @@ void nanogps_cfg_setup ( nanogps_cfg_t *cfg )
     
     // Additional gpio pins
 
-     cfg->wkp   = HAL_PIN_NC;
-     cfg->rst = HAL_PIN_NC;
-     cfg->pwr = HAL_PIN_NC;
+    cfg->wkp   = HAL_PIN_NC;
+    cfg->rst = HAL_PIN_NC;
+    cfg->pwr = HAL_PIN_NC;
 
     cfg->baud_rate      = 4800;
     cfg->data_bit       = UART_DATA_BITS_DEFAULT;
@@ -94,31 +94,30 @@ NANOGPS_RETVAL nanogps_init ( nanogps_t *ctx, nanogps_cfg_t *cfg )
 
     // Output pins 
 
-     digital_out_init( &ctx->rst, cfg->rst );
-     digital_out_init( &ctx->pwr, cfg->pwr );
+    digital_out_init( &ctx->rst, cfg->rst );
+    digital_out_init( &ctx->pwr, cfg->pwr );
 
     // Input pins
 
-     digital_in_init( &ctx->wkp, cfg->wkp );
+    digital_in_init( &ctx->wkp, cfg->wkp );
 
     return NANOGPS_OK;
 }
 
 void nanogps_module_wakeup ( nanogps_t *ctx )
 {
-    digital_out_write( &ctx->rst, 0 );
-    Delay_100ms( );
-    digital_out_write( &ctx->rst, 1 );
-    Delay_100ms( );
-    Delay_100ms( );
-    digital_out_write( &ctx->rst, 0 );
-
-    digital_out_write( &ctx->pwr, 0 );
-    Delay_100ms( );
-    digital_out_write( &ctx->pwr, 1 );
-    Delay_1sec( );
-    Delay_1sec( );
-    digital_out_write( &ctx->pwr, 0 );
+    do 
+    {
+        digital_out_write( &ctx->rst, 1 );
+        Delay_100ms( );
+        digital_out_write( &ctx->rst, 0 );
+        Delay_100ms( );
+        digital_out_write( &ctx->pwr, 0 );
+        Delay_100ms( );
+        digital_out_write( &ctx->pwr, 1 );
+        Delay_1sec( );
+    }
+    while( nanogps_get_wkp_pin( ctx ) != 1 );
 }
 
 void nanogps_set_pwr_pin ( nanogps_t *ctx, uint8_t state )

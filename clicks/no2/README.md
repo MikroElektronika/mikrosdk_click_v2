@@ -9,7 +9,7 @@ NO2 click is a very accurate nitrogen-dioxide gas sensor Click board™, equippe
   <img src="https://download.mikroe.com/images/click_for_ide/no2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/no2-click>)
+[click Product page](https://www.mikroe.com/no2-click)
 
 ---
 

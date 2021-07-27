@@ -12,7 +12,7 @@ The Peltier Click is a Click board™ which utilizes the SPV1050, an ultralow po
 </p>
 
 
-[click Product page](<https://www.mikroe.com/peltier-click>)
+[click Product page](https://www.mikroe.com/peltier-click)
 
 ---
 

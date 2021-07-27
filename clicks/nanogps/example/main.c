@@ -3,7 +3,7 @@
  * \brief Nanogps Click example
  * 
  * # Description
- * This example reads and processes data from Nano GPS clicks.
+ * This example reads and processes data from Nano GPS click.
  *
  * The demo application is composed of two sections :
  * 
@@ -14,9 +14,11 @@
  * Reads the received data and parses it.
  * 
  * ## Additional Function
- * - nanogps_process ( ) - The general process of collecting presponce 
- *                                   that sends a module.
+ * - nanogps_process ( ) - The general process of collecting data the module sends.
  * 
+ * @note
+ * Depending on the environmental conditions and the satellites availability
+ * it may take some time for the module to receive the position fix.
  * 
  * \author MikroE Team
  *
@@ -28,9 +30,9 @@
 #include "nanogps.h"
 #include "string.h"
 
-#define PROCESS_COUNTER 10
-#define PROCESS_RX_BUFFER_SIZE 500
-#define PROCESS_PARSER_BUFFER_SIZE 500
+#define PROCESS_COUNTER 15
+#define PROCESS_RX_BUFFER_SIZE 600
+#define PROCESS_PARSER_BUFFER_SIZE 600
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -74,7 +76,6 @@ static void nanogps_process ( void )
             {
                 strncat( current_parser_buf, uart_rx_buffer, rsp_size );
             }
-            
             // Clear RX buffer
             memset( uart_rx_buffer, 0, PROCESS_RX_BUFFER_SIZE );
         } 
@@ -92,14 +93,21 @@ static void parser_application ( char *rsp )
 {
     char element_buf[ 200 ] = { 0 };
     
-    log_printf( &logger, "\r\n-----------------------\r\n", element_buf ); 
+    log_printf( &logger, "\r\n-----------------------\r\n" ); 
     nanogps_generic_parser( rsp, NANOGPS_NEMA_GPGGA, NANOGPS_GPGGA_LATITUDE, element_buf );
-    log_printf( &logger, "Latitude:  %s \r\n", element_buf );    
-    nanogps_generic_parser( rsp, NANOGPS_NEMA_GPGGA, NANOGPS_GPGGA_LONGITUDE, element_buf );
-    log_printf( &logger, "Longitude:  %s \r\n", element_buf );  
-    memset( element_buf, 0, sizeof( element_buf ) );
-    nanogps_generic_parser( rsp, NANOGPS_NEMA_GPGGA, NANOGPS_GPGGA_ALTITUDE, element_buf );
-    log_printf( &logger, "Alitude: %s \r\n", element_buf );  
+    if ( strlen( element_buf ) > 0 )
+    {
+        log_printf( &logger, "Latitude:  %.2s degrees, %s minutes \r\n", element_buf, &element_buf[ 2 ] );
+        nanogps_generic_parser( rsp, NANOGPS_NEMA_GPGGA, NANOGPS_GPGGA_LONGITUDE, element_buf );
+        log_printf( &logger, "Longitude:  %.3s degrees, %s minutes \r\n", element_buf, &element_buf[ 3 ] );
+        memset( element_buf, 0, sizeof( element_buf ) );
+        nanogps_generic_parser( rsp, NANOGPS_NEMA_GPGGA, NANOGPS_GPGGA_ALTITUDE, element_buf );
+        log_printf( &logger, "Altitude: %s m", element_buf );  
+    }
+    else
+    {
+        log_printf( &logger, "Waiting for the position fix..." );
+    } 
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -124,7 +132,6 @@ void application_init ( void )
     nanogps_init( &nanogps, &cfg );
 
     nanogps_module_wakeup( &nanogps );
-    Delay_ms( 5000 );
 }
 
 void application_task ( void )

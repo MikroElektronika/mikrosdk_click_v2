@@ -11,7 +11,7 @@ Ozone 2 click is an Ozone detection (O3) sensor, based on the MQ131 gas sensor. 
   <img src="https://download.mikroe.com/images/click_for_ide/ozone2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ozone-2-click>)
+[click Product page](https://www.mikroe.com/ozone-2-click)
 
 ---
 

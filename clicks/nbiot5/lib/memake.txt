@@ -1,0 +1,36 @@
+type: library
+
+target: lib_nbiot5
+
+sources: {
+    src/nbiot5.c
+}
+
+headers: {
+    include/nbiot5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/nbiot5.h) dst(include/nbiot5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.NBIoT5

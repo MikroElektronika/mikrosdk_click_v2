@@ -35,7 +35,7 @@ void optoencoder2_cfg_setup ( optoencoder2_cfg_t *cfg )
 {
     // Additional gpio pins
 
-    cfg-> b = HAL_PIN_NC;
+    cfg->b = HAL_PIN_NC;
     cfg->a = HAL_PIN_NC;
 }
 

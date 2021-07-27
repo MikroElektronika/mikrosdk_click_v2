@@ -2,23 +2,31 @@
  * \file 
  * \brief NbIot Click example
  * 
- * # Description
+* # Description
  * This example reads and processes data from NB IoT clicks.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes driver and wake-up module.
+ * Initializes driver, wake-up module and sets default configuration 
+ * for connecting device to network.
  * 
  * ## Application Task  
- * Reads the received data and parses it.
+ * Waits for device to connect to network and then checks the signal quality 
+ * every 5 seconds. All data is being logged on USB UART where you can track their changes.
  * 
  * ## Additional Function
- * - nbiot_process ( ) - The general process of collecting presponce 
- *                                   that sends a module.
+ * - static void nbiot_clear_app_buf ( void )
+ * - static void nbiot_error_check( err_t error_flag )
+ * - static void nbiot_log_app_buf ( void )
+ * - static void nbiot_check_connection( void )
+ * - static err_t nbiot_rsp_check ( void )
+ * - static err_t nbiot_process ( void )
  * 
+ * @note 
+ * In order for the example to work, a valid SIM card needs to be entered.
  * 
- * \author MikroE Team
+ * @author MikroE Team
  *
  */
 // ------------------------------------------------------------------- INCLUDES
@@ -26,154 +34,204 @@
 #include "board.h"
 #include "log.h"
 #include "nbiot.h"
-#include "string.h"
 
-#define PROCESS_COUNTER 10
-#define PROCESS_RX_BUFFER_SIZE 500
-#define PROCESS_PARSER_BUFFER_SIZE 500
+#define APP_OK                              0
+#define APP_ERROR_DRIVER                    -1
+#define APP_ERROR_OVERFLOW                  -2
+#define APP_ERROR_TIMEOUT                   -3
 
-// ------------------------------------------------------------------ VARIABLES
+#define RSP_OK                              "OK"
+#define RSP_ERROR                           "ERROR"
 
-#define DEMO_APP_RECEIVER
+#define PROCESS_BUFFER_SIZE                 500
+
+#define WAIT_FOR_CONNECTION                 0
+#define CONNECTED_TO_NETWORK                1
 
 static nbiot_t nbiot;
 static log_t logger;
-static char data_buf[ 20 ] = "12.2";
-static char current_parser_buf[ PROCESS_PARSER_BUFFER_SIZE ];
-static uint8_t send_data_cnt = 0; 
 
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
+static char app_buf[ PROCESS_BUFFER_SIZE ]  = { 0 };
+static int32_t app_buf_len                  = 0;
+static int32_t app_buf_cnt                  = 0;
 
-static void nbiot_process ( void )
-{
-    int32_t rsp_size;
-    uint16_t rsp_cnt = 0;
-    
-    char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
-    uint8_t check_buf_cnt;
-    uint8_t process_cnt = PROCESS_COUNTER;
-    
-    // Clear parser buffer
-    memset( current_parser_buf, 0 , PROCESS_PARSER_BUFFER_SIZE ); 
-    
-    while( process_cnt != 0 )
-    {
-        rsp_size = nbiot_generic_read( &nbiot, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
+static uint8_t app_connection_status        = WAIT_FOR_CONNECTION;
 
-        if ( rsp_size != -1 )
-        {  
-            // Validation of the received data
-            for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
-            {
-                if ( uart_rx_buffer[ check_buf_cnt ] == 0 ) 
-                {
-                    uart_rx_buffer[ check_buf_cnt ] = 13;
-                }
-            }
-            log_printf( &logger, "%s", uart_rx_buffer );
+static err_t app_error_flag;
 
-            // Storages data in parser buffer
-            rsp_cnt += rsp_size;
-            if ( rsp_cnt < PROCESS_PARSER_BUFFER_SIZE )
-            {
-                strncat( current_parser_buf, uart_rx_buffer, rsp_size );
-            }
-            
-            // Clear RX buffer
-            memset( uart_rx_buffer, 0, PROCESS_RX_BUFFER_SIZE );
-        } 
-        else 
-        {
-            process_cnt--;
-            
-            // Process delay 
-            Delay_ms( 100 );
-        }
-    }
-}
+/**
+ * @brief NB IoT clearing application buffer.
+ * @details This function clears memory of application buffer and reset its length and counter.
+ * @note None.
+ */
+static void nbiot_clear_app_buf ( void );
 
+/**
+ * @brief NB IoT data reading function.
+ * @details This function reads data from device and concats data to application buffer.
+ * 
+ * @return @li @c  0 - Read some data.
+ *         @li @c -1 - Nothing is read.
+ *         @li @c -2 - Application buffer overflow.
+ *
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+static err_t nbiot_process ( void );
+
+/**
+ * @brief NB IoT check for errors.
+ * @details This function checks for different types of errors and logs them on UART.
+ * @note None.
+ */
+static void nbiot_error_check( err_t error_flag );
+
+/**
+ * @brief NB IoT logs application buffer.
+ * @details This function logs data from application buffer.
+ * @note None.
+ */
+static void nbiot_log_app_buf ( void );
+
+/**
+ * @brief NB IoT response check.
+ * @details This function checks for response and returns the status of response.
+ * 
+ * @return application status.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+static err_t nbiot_rsp_check ( void );
+
+/**
+ * @brief NB IoT chek connection.
+ * @details This function checks connection to the network and 
+ *          logs that status to UART.
+ * 
+ * @note None.
+ */
+static void nbiot_check_connection( void );
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
-    nbiot_cfg_t cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    nbiot_cfg_t nbiot_cfg;  /**< Click config object. */
 
-    //  Logger initialization.
-
+    // Logger initialization.
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 57600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
-
-    //  Click initialization.
-
-    nbiot_cfg_setup( &cfg );
-    NBIOT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    nbiot_init( &nbiot, &cfg );
-
-    nbiot_module_power( &nbiot );
+    log_info( &logger, " Application Init " );
+    Delay_ms( 1000 );
     
-    nbiot_send_command( &nbiot, NBIOT_SINGLE_CMD_AT );
-    nbiot_process(  );
+    // Click initialization.
+    nbiot_cfg_setup( &nbiot_cfg );
+    NBIOT_MAP_MIKROBUS( nbiot_cfg, MIKROBUS_1 );
+    err_t init_flag  = nbiot_init( &nbiot, &nbiot_cfg );
+    if ( init_flag == UART_ERROR )
+    {
+        log_error( &logger, " Application Init Error. " );
+        log_info( &logger, " Please, run program again... " );
 
-    nbiot_send_command( &nbiot, NBIOT_SINGLE_CMD_ATE1 );
-    nbiot_process(  );
-
-    nbiot_send_command( &nbiot, NBIOT_SINGLE_CMD_ATI );
-    nbiot_process(  );
-
-    nbiot_send_command( &nbiot, NBIOT_SINGLE_CMD_SET_AT_CFUN );
-    nbiot_process(  );
-
-    nbiot_send_command( &nbiot, NBIOT_SINGLE_CMD_AT_CIMI );
-    nbiot_process(  );
-
-    nbiot_send_command( &nbiot, NBIOT_SINGLE_CMD_TEST_ATAT_CGDCONT );
-    nbiot_process(  );
-
-    nbiot_send_command( &nbiot, C5GNBIOT_SINGLE_CMD_GET_AT_CGATT );
-    nbiot_process(  );
-
-    log_printf( &logger, "------------------------\r\n" );
-    log_printf( &logger, "--- UDP server - AT command ---\r\n" );
-
-    nbiot_send_command( &nbiot, NBIOT_CMD_AT_NCONFIG );
-    nbiot_process(  );
-    nbiot_send_command( &nbiot, NBIOT_CMD_AT_NCONFIG1 );
-    nbiot_process(  );
-    nbiot_send_command( &nbiot, NBIOT_CMD_AT_NCONFIG2 );
-    nbiot_process(  );
-
-
-    nbiot_send_command( &nbiot, NBIOT_CMD_AT_NBAND );
-    nbiot_process(  );
-
-    nbiot_send_command( &nbiot, C5GNBIOT_SINGLE_CMD_SET_AT_CGDCONT_1 );
-    nbiot_process(  );
-
-
+        for ( ; ; );
+    }
     
-    nbiot_send_command( &nbiot, NBIOT_CMD_AT_CEREG );
-    nbiot_process(  );
-    nbiot_send_command( &nbiot, NBIOT_CMD_AT_COPS ); 
-    nbiot_process(  );
-    nbiot_send_command( &nbiot, NBIOT_CMD_AT_NSOCR ); 
-    nbiot_process(  );
-    nbiot_send_command( &nbiot, NBIOT_CMD_AT_NSOST );
-    nbiot_process(  );
-    nbiot_send_command( &nbiot, NBIOT_CMD_AT_NSOCL );
-    nbiot_process(  );
-
+    log_info( &logger, " Power on device... " );
+    nbiot_power_on( &nbiot );
+    // dummy read
+    app_error_flag = nbiot_rsp_check(  );
+    nbiot_error_check( app_error_flag );
+    
+    // AT
+    nbiot_send_cmd( &nbiot, NBIOT_CMD_AT );
+    app_error_flag = nbiot_rsp_check( );
+    nbiot_error_check( app_error_flag );
+    Delay_ms( 500 );
+    
+    // ATI - product information
+    nbiot_send_cmd( &nbiot, NBIOT_CMD_ATI );
+    app_error_flag = nbiot_rsp_check(  );
+    nbiot_error_check( app_error_flag );
+    Delay_ms( 500 );
+    
+    // CGMR - firmware version
+    nbiot_send_cmd( &nbiot, NBIOT_CMD_CGMR );
+    app_error_flag = nbiot_rsp_check(  );
+    nbiot_error_check( app_error_flag );
+    Delay_ms( 1000 );
+    
+    // COPS - deregister from network
+    nbiot_send_cmd_with_parameter( &nbiot, NBIOT_CMD_COPS, "2" );
+    app_error_flag = nbiot_rsp_check(  );
+    nbiot_error_check( app_error_flag );
+    Delay_ms( 1000 );
+     
+    // CFUN - full funtionality
+    nbiot_send_cmd_with_parameter( &nbiot, NBIOT_CMD_CFUN, "1" );
+    app_error_flag = nbiot_rsp_check(  );
+    nbiot_error_check( app_error_flag );
+    Delay_ms( 500 );
+    
+    // COPS - automatic mode
+    nbiot_send_cmd_with_parameter( &nbiot, NBIOT_CMD_COPS, "0" );
+    app_error_flag = nbiot_rsp_check(  );
+    nbiot_error_check( app_error_flag );
     Delay_ms( 2000 );
+    
+    // CEREG - network registration status
+    nbiot_send_cmd_with_parameter( &nbiot, NBIOT_CMD_CEREG, "2" );
+    app_error_flag = nbiot_rsp_check(  );
+    nbiot_error_check( app_error_flag );
+    Delay_ms( 500 );
+    
+    // CIMI - request IMSI
+    nbiot_send_cmd( &nbiot, NBIOT_CMD_CIMI );
+    app_error_flag = nbiot_rsp_check(  );
+    nbiot_error_check( app_error_flag );
+    Delay_ms( 500 );
+    
+    app_buf_len = 0;
+    app_buf_cnt = 0;
+    app_connection_status = WAIT_FOR_CONNECTION;
+    log_info( &logger, " Application Task " );
+    Delay_ms( 5000 );
 }
 
 void application_task ( void )
-{
-    nbiot_process(  );
-    nbiot_send_command( &nbiot, NBIOT_SINGLE_CMD_AT_CIMI );
+{  
+    if ( app_connection_status == WAIT_FOR_CONNECTION )
+    {
+        // CGATT - request IMSI
+        nbiot_send_cmd_check( &nbiot, NBIOT_CMD_CGATT );
+        app_error_flag = nbiot_rsp_check(  );
+        nbiot_error_check( app_error_flag );
+        Delay_ms( 500 );
+        
+        // CEREG - network registration status
+        nbiot_send_cmd_check( &nbiot, NBIOT_CMD_CEREG );
+        app_error_flag = nbiot_rsp_check(  );
+        nbiot_error_check( app_error_flag );
+        Delay_ms( 500 );
+        
+        // CSQ - signal quality
+        nbiot_send_cmd( &nbiot, NBIOT_CMD_CSQ );
+        app_error_flag = nbiot_rsp_check(  );
+        nbiot_error_check( app_error_flag );
+        Delay_ms( 5000 );
+    }
+    else
+    {
+        log_info( &logger, "CONNECTED TO NETWORK" );
+        
+        log_info( &logger, "CHECKING SIGNAL QUALITY" );
+        nbiot_send_cmd( &nbiot, NBIOT_CMD_CSQ );
+        app_error_flag = nbiot_rsp_check(  );
+        nbiot_error_check( app_error_flag );
+        Delay_ms( 5000 );
+    }
 }
 
 void main ( void )
@@ -186,5 +244,135 @@ void main ( void )
     }
 }
 
+static void nbiot_clear_app_buf ( void )
+{
+    memset( app_buf, 0, app_buf_len );
+    app_buf_len = 0;
+    app_buf_cnt = 0;
+}
+
+static err_t nbiot_process ( void )
+{
+    err_t return_flag = APP_ERROR_DRIVER;
+    int32_t rx_size;
+    char rx_buff[ PROCESS_BUFFER_SIZE ] = { 0 };
+    
+    rx_size = nbiot_generic_read( &nbiot, rx_buff, PROCESS_BUFFER_SIZE );
+
+    if ( rx_size > 0 )
+    { 
+        int32_t buf_cnt = 0;
+        return_flag = APP_OK;
+
+        if ( app_buf_len + rx_size >= PROCESS_BUFFER_SIZE )
+        {
+            nbiot_clear_app_buf(  );
+            return_flag = APP_ERROR_OVERFLOW;
+        }
+        else
+        {
+            buf_cnt = app_buf_len;
+            app_buf_len += rx_size;
+        }
+
+        for ( int32_t rx_cnt = 0; rx_cnt < rx_size; rx_cnt++ )
+        {
+            if ( rx_buff[ rx_cnt ] != 0 ) 
+            {
+                app_buf[ ( buf_cnt + rx_cnt ) ] = rx_buff[ rx_cnt ];
+            }
+            else
+            {
+                app_buf_len--;
+                buf_cnt--;
+            }
+        }
+    } 
+
+    return return_flag;
+}
+
+static err_t nbiot_rsp_check ( void )
+{
+    uint16_t timeout_cnt = 0;
+    uint16_t timeout = 20000;
+    
+    err_t error_flag = nbiot_process(  );
+    
+    if ( ( error_flag != 0 ) && ( error_flag != -1 ) )
+    {
+        return error_flag;
+    }
+    
+    while ( ( strstr( app_buf, RSP_OK ) == 0 ) && ( strstr( app_buf, RSP_ERROR ) == 0 ) )
+    {
+        error_flag = nbiot_process(  );
+        if ( ( error_flag != 0 ) && ( error_flag != -1 ) )
+        {
+            return error_flag;
+        }
+        
+        timeout_cnt++;
+        if ( timeout_cnt > timeout )
+        {
+            while ( ( strstr( app_buf, RSP_OK ) == 0 ) && ( strstr( app_buf, RSP_ERROR ) == 0 ) )
+            {
+                nbiot_send_cmd( &nbiot, NBIOT_CMD_AT );
+                nbiot_process(  );
+                Delay_ms( 100 );
+            }
+            nbiot_clear_app_buf(  );
+            return APP_ERROR_TIMEOUT;
+        }
+        
+        Delay_ms( 1 );
+    }
+    
+    nbiot_check_connection();
+    
+    nbiot_log_app_buf();
+    
+    log_printf( &logger, "-----------------------------------\r\n" );
+    
+    return APP_OK;
+}
+
+static void nbiot_error_check( err_t error_flag )
+{
+    if ( ( error_flag != 0 ) && ( error_flag != -1 ) )
+    {
+        switch ( error_flag )
+        {
+            case -2:
+                log_error( &logger, " Overflow!" );
+                break;
+            case -3:
+                log_error( &logger, " Timeout!" );
+                break;
+            default:
+                break;
+        }
+    }
+}
+
+static void nbiot_log_app_buf ( void )
+{
+    for ( int32_t buf_cnt = 0; buf_cnt < app_buf_len; buf_cnt++ )
+    {
+        log_printf( &logger, "%c", app_buf[ buf_cnt ] );
+    }
+    log_printf( &logger, "\r\n" );
+    nbiot_clear_app_buf(  );
+}
+
+static void nbiot_check_connection( void )
+{
+    #define CONNECTED "+CGATT:1"
+    
+    if ( strstr( app_buf, CONNECTED ) != 0 )
+    {
+        app_connection_status = CONNECTED_TO_NETWORK;
+    }
+}
 
 // ------------------------------------------------------------------------ END

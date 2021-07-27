@@ -1,0 +1,36 @@
+type: library
+
+target: lib_pac1954
+
+sources: {
+    src/pac1954.c
+}
+
+headers: {
+    include/pac1954.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/pac1954.h) dst(include/pac1954.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.PAC1954

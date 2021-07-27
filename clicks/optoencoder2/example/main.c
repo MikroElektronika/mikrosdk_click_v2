@@ -3,16 +3,16 @@
  * \brief Opto Encoder 2 Click example
  * 
  * # Description
- * This application is used to encode motion or rotation
+ * This application is used to encode motion or rotation.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes GPIO driver and resets encoder counter to 0(zero)
+ * Initializes GPIO driver and resets encoder counter to 0 (zero)
  * 
  * ## Application Task  
- * If encoder is moving - increments or decrements encoder position 
- * on every rising edge on Channel A (INT pin) and logs encoder position
+ * If motion is detected - encoder increments or decrements position 
+ * on each rising edge on Channel A (INT pin) and logs encoder position
  * 
  * \author MikroE Team
  *
@@ -49,7 +49,6 @@ void application_init ( void )
     optoencoder2_init( &optoencoder2, &cfg );
 
     optoencoder2_zero_counter( &optoencoder2 );
-    log_printf( &logger, "> app init done \r\n" );
 }
 
 void application_task ( )
@@ -62,7 +61,7 @@ void application_task ( )
     
     if ( stop_flag == 0 )
     {
-        log_printf( &logger, "> pos: %d \r\n", encoder_position );
+        log_printf( &logger, "Position: %ld \r\n", encoder_position );
     }
 }
 

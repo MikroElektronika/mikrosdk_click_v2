@@ -1,0 +1,8 @@
+{
+    "name": "OLED W Click",
+    "description": "OLED W click carries a 96 x 39px white monochrome passive matrix OLED display. The display is bright, has a wide viewing angle and low power consumption.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","AP7331"],
+    "category" : ["OLED"]
+}

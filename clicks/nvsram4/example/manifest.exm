@@ -1,0 +1,8 @@
+{
+    "name": "nvSRAM 4 Click",
+    "description": "nvSRAM 4 Click is a compact add-on board that contains the most reliable nonvolatile memory. This board features the CY14B101PA, a 1-Mbit nvSRAM with a fully-featured real-time clock from Cypress Semiconductor.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","CY14B101PA"],
+    "category" : ["SRAM"]
+}

@@ -1,0 +1,33 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Gas",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Ozone 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.ozone3",
+    "product_link": "https://www.mikroe.com/ozone-3-click",
+    "short_description": "Ozone 3 Click is a compact add-on board suitable for ozone concentration detection and monitoring. This board features the 110-407, a high-performance ultra-thin electrochemical gas sensor from SPEC Sensors supported by the LMP91000, a high-precision integrated analog front-end IC (AFE) ideal for this sensing application. It provides the reference voltage required by the sensor and offers a choice between the analog output from the AFE IC buffered with the low noise Op-Amp and digital output from the 12-bit SAR A/D converter. This Click board™ represents an ideal choice for health, environmental, industrial, and residential monitoring.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}

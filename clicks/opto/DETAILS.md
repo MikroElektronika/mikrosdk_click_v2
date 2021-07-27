@@ -9,7 +9,7 @@ OPTO Click is an accessory board in mikroBUS form factor. It features two VO2630
   <img src="https://download.mikroe.com/images/click_for_ide/opto_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/opto-click>)
+[click Product page](https://www.mikroe.com/opto-click)
 
 ---
 
