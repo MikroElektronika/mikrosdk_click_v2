@@ -41,7 +41,6 @@ static uint8_t counter_read_register ( counter_t *ctx, uint8_t command );
 static void counter_write_data ( counter_t *ctx, uint8_t command, uint8_t *_data, uint8_t count );
 static void counter_read_data ( counter_t *ctx, uint8_t command, uint8_t *_data, uint8_t count );
 
-
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
 void counter_cfg_setup ( counter_cfg_t *cfg )
@@ -101,9 +100,11 @@ COUNTER_RETVAL counter_init ( counter_t *ctx, counter_cfg_t *cfg )
 
 void counter_default_cfg ( counter_t *ctx )
 {
+    uint8_t tmp[ 4 ] = { 0 };
     counter_init_advanced( ctx, COUNTER_4X_QUAD | COUNTER_FREE_RUN | COUNTER_INDEX_DISABLED | COUNTER_FILTER_CLOCK_DIV1,
-                                COUNTER_MODE_24 | COUNTER_DISABLE | COUNTER_FLAG_DISABLE );
-    counter_write_dtr( ctx, 0 );
+                                COUNTER_MODE_32 | COUNTER_ENABLE | COUNTER_FLAG_DISABLE );
+    counter_write_dtr( ctx, tmp );
+    counter_clear_cntr ( ctx );
     counter_load_cntr( ctx );
     counter_enable( ctx );
 }
@@ -132,9 +133,9 @@ void counter_write_mdr1 ( counter_t *ctx, uint8_t settings )
     counter_write_data( ctx, COUNTER_CMD_WR | COUNTER_MDR1, &settings, 1 );
 }
 
-void counter_write_dtr ( counter_t *ctx, uint8_t buffer )
+void counter_write_dtr ( counter_t *ctx, uint8_t* buffer )
 {
-    counter_write_data( ctx, COUNTER_CMD_WR | COUNTER_DTR, &buffer, ctx->buffer_size );
+    counter_write_data( ctx, COUNTER_CMD_WR | COUNTER_DTR, buffer, ctx->buffer_size );
 }
 
 void counter_load_cntr ( counter_t *ctx )
@@ -165,21 +166,57 @@ uint8_t counter_read_mdr1 ( counter_t *ctx )
     return result;
 }
 
-uint8_t counter_read_otr ( counter_t *ctx )
+int32_t counter_read_otr ( counter_t *ctx )
 {
-    uint8_t result;
+    uint8_t data_buf[ 4 ];
+    uint32_t result;
 
-    counter_read_data( ctx, COUNTER_CMD_RD | COUNTER_OTR, &result, ctx->buffer_size );
+    counter_read_data( ctx, COUNTER_CMD_RD | COUNTER_OTR, data_buf, ctx->buffer_size );
+    
+    result = data_buf[ 0 ];
+    
+    for ( uint8_t cnt = 1; cnt < ctx->buffer_size; cnt++ )
+    {
+        result <<= 8;
+        result |= data_buf[ cnt ];
+    }
 
     return result;
 }
 
-uint8_t counter_read_cntr ( counter_t *ctx )
+int32_t counter_read_cntr ( counter_t *ctx )
 {
-    uint8_t result;
+    uint8_t data_buf[ 4 ];
+    uint32_t result;
 
-    counter_read_data( ctx, COUNTER_CMD_RD | COUNTER_CNTR, &result, ctx->buffer_size );
+    counter_read_data( ctx, COUNTER_CMD_RD | COUNTER_CNTR, data_buf, ctx->buffer_size );
 
+    result = data_buf[ 0 ];
+    
+    for ( uint8_t cnt = 1; cnt < ctx->buffer_size; cnt++ )
+    {
+        result <<= 8;
+        result |= data_buf[ cnt ];
+    }
+    
+    return result;
+}
+
+int32_t counter_read_dtr ( counter_t *ctx )
+{
+    uint8_t data_buf[ 4 ];
+    uint32_t result;
+
+    counter_read_data( ctx, COUNTER_CMD_RD | COUNTER_DTR, data_buf, ctx->buffer_size );
+
+    result = data_buf[ 0 ];
+    
+    for ( uint8_t cnt = 1; cnt < ctx->buffer_size; cnt++ )
+    {
+        result <<= 8;
+        result |= data_buf[ cnt ];
+    }
+    
     return result;
 }
 
@@ -320,23 +357,22 @@ static void counter_write_data ( counter_t *ctx, uint8_t command, uint8_t *data_
 
     spi_master_select_device( ctx->chip_select );
     spi_master_write( &ctx->spi, &command, 1 );
-    counter_generic_transfer( ctx, temp, count, 0, 0 );
+    spi_master_write( &ctx->spi, temp, count );
     spi_master_deselect_device( ctx->chip_select );  
 }
 
 static void counter_read_data ( counter_t *ctx, uint8_t command, uint8_t *data_buff, uint8_t count )
 {
-    uint8_t i;
     uint8_t tx_buff[ 1 ];
-    uint8_t rx_buff[ 256 ];
+    uint8_t rx_buff[ 4 ];
     
     tx_buff[ 0 ] = command;
 
-    counter_generic_transfer ( ctx, &tx_buff, 1, rx_buff, count + 1 );  
+    counter_generic_transfer ( ctx, &tx_buff, 1, rx_buff, count );  
     
-    for ( i = 0; i <= count; i++ )
+    for ( uint8_t cnt = 0; cnt < count; cnt++ )
     {
-        data_buff[ i ] = rx_buff[ i+1 ];
+        data_buff[ cnt ] = rx_buff[ cnt ];
     }
 
 }

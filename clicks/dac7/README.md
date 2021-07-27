@@ -9,10 +9,10 @@ DAC 7 click carries the AD5624R 12-bit buffered Digital-to-Analog Converter that
 digital value to the corresponding voltage level using external voltage reference.
 
 <p align="center">
-  <img src="http://download.mikroe.com/images/click_for_ide/dac7_click.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/dac7_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/dac-7-click>)
+[click Product page](https://www.mikroe.com/dac-7-click)
 
 ---
 
@@ -28,8 +28,8 @@ digital value to the corresponding voltage level using external voltage referenc
 
 We provide a library for the Dac7 Click 
 as well as a demo application (example), developed using MikroElektronika 
-[compilers](http://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
+[compilers](https://shop.mikroe.com/compilers). 
+The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
 
 Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
 
@@ -61,18 +61,15 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> 
-> This is an example that demonstrates the use of the DAC 7 Click board, that converts 
-> digital value to the corresponding voltage level using external voltage reference.
-> 
+> DAC 7 click carries the AD5624R 12-bit buffered Digital-to-Analog Converter 
+> that converts digital value to the corresponding voltage level 
+> using external voltage reference.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
->
-> Application Init performs Logger and Click initialization.
-> 
+> Application Init performs Logger and Click initialization. 
 
 ```c
 
@@ -83,11 +80,11 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
-    log_printf( &logger, "--------------------------\r\n\n" );
-    log_printf( &logger, "     Application  Init\r\n" );
+    log_info( &logger, "---- Application Init ----" );
     Delay_ms ( 100 );
 
     //  Click initialization.
@@ -113,8 +110,9 @@ void application_init ( void )
         for ( ; ; );
     }
     
-    Delay_ms( 1000 );
+    Delay_ms( 500 );
     log_printf( &logger, "--------------------------\r\n\n" );
+
     
     if ( dac7_set_power( &dac7, DAC7_PWR_ON_ENABLE, DAC7_SELECT_CHANNEL_ALL ) == DAC7_SUCCESS )
     {
@@ -127,7 +125,7 @@ void application_init ( void )
         for ( ; ; );
     }
 
-    Delay_ms( 100 );
+    Delay_ms( 500 );
     log_printf( &logger, "--------------------------\r\n\n" );
     log_printf( &logger, " -- Initialization  done. --\r\n" );
     log_printf( &logger, "--------------------------\r\n\n" );
@@ -138,13 +136,11 @@ void application_init ( void )
 
 ### Application Task
 
->
 > In this example, we adjust the DAC output voltage from 1000 mV to 4000 mV 
 > for the channels, starting from channel A to channel D 
-> and set the DAC output voltage to 5000 mV for all channels.
+> and then set the DAC output voltage to 5000 mV for all channels.
 > Results are being sent to UART Terminal where you can track their changes.
 > All data logs write on USB UART changes every 5 sec.
-> 
 
 ```c
 
@@ -229,12 +225,12 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](http://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
+[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
+[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 
 terminal available in all Mikroelektronika 
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application 
+[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
 of your choice, can be used to read the message.
 
 

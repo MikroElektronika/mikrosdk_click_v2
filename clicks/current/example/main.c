@@ -3,7 +3,9 @@
  * \brief Current Click example
  * 
  * # Description
- * Demo app measures and displays current by using Current click board.
+ * This is an example that shows the capabilities of the Current click board 
+ * by measuring current in miliampers. Current click board can be used to safely
+ * measure DC current in the range of 2-2048mA depending on shunt resistor.
  *
  * The demo application is composed of two sections :
  * 
@@ -11,12 +13,19 @@
  * Initalizes SPI, LOG and click drivers.
  * 
  * ## Application Task  
- * This is an example that shows the capabilities of the Current click board 
- * by measuring current in miliampers. Current click board can be used to safely
- * measure current ranging from 2mA to 2048mA.
+ * Measures DC current and displays the results on USB UART each second.
  * 
- * *note:* 
- * It is important to provide the shunt of the appropriate value.
+ * @note
+ * Shunt resistor used in the example covers 4 default values (0.05 Ohm, 0.2 Ohm, 1 Ohm, 10 Ohm).
+ * To operate in linear range of INA196 check table bellow for shunt selection.
+ * |------------------------------------|
+ * | Rshunt  | Imin [mA]  | Imax  [mA]  |
+ * |------------------------------------|
+ * |   0.05  |    400     |   2048      |
+ * |   0.2   |    100     |    512      |
+ * |   1     |     20     |    102      |
+ * |  10     |      2     |     10      |
+ * --------------------------------------
  * 
  * \author Jovan Stajkovic
  *
@@ -32,9 +41,6 @@
 static current_t current;
 static log_t logger;
 static float curr;
-
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
-
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -63,8 +69,7 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    //  Task implementation.
-    curr = current_get_current_data( &current, CURRENT_RSHUNT_10 );
+    curr = current_get_current_data( &current, CURRENT_RSHUNT_0_05 );
     
     if ( curr == CURRENT_OUT_OF_RANGE )
     {

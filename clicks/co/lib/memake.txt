@@ -1,0 +1,36 @@
+type: library
+
+target: lib_co
+
+sources: {
+    src/co.c
+}
+
+headers: {
+    include/co.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/co.h) dst(include/co.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.CO

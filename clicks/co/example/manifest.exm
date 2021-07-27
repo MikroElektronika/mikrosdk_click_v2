@@ -1,0 +1,8 @@
+{
+    "name": "CO Click",
+    "description": "CO click is designed to run on a 5V power supply only. It communicates with the target microcontroller over the AN pin on the mikroBUS™ line. The board also features a calibration potentiometer, a mikroBUS™ host socket, two jumpers and a power indicator LED.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","MQ-7"],
+    "category" : ["Gas"]
+}

@@ -8,10 +8,10 @@
 Current click is an add-on board used for measurement of electric current. It features INA196 current shunt monitor, MCP3201 12-bit ADC, MAX6106 voltage reference as well as two screw terminals. 
 
 <p align="center">
-  <img src="http://download.mikroe.com/images/click_for_ide/current_click.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/current_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/current-click>)
+[click Product page](https://www.mikroe.com/current-click)
 
 ---
 
@@ -27,8 +27,8 @@ Current click is an add-on board used for measurement of electric current. It fe
 
 We provide a library for the Current Click 
 as well as a demo application (example), developed using MikroElektronika 
-[compilers](http://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
+[compilers](https://shop.mikroe.com/compilers). 
+The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
 
 Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
 
@@ -52,17 +52,15 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> 
-> Demo app measures and displays current by using Current click board.
-> 
+> This is an example that shows the capabilities of the Current click board 
+> by measuring current in miliampers. Current click board can be used to safely
+> measure DC current in the range of 2-2048mA depending on shunt resistor.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
->
 > Initalizes SPI, LOG and click drivers.
-> 
 
 ```c
 
@@ -73,10 +71,11 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
-    log_printf( &logger, "---- Application Init ----\r\n" );
+    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
 
@@ -92,39 +91,28 @@ void application_init ( void )
 
 ### Application Task
 
->
-> This is an example that shows the capabilities of the Current click board 
-  by measuring current in miliampers. Current click board can be used to safely
-  measure current ranging from 2mA to 2048mA.
-> 
+> Measures DC current and displays the results on USB UART each second.
 
 ```c
 
 void application_task ( void )
 {
-    //  Task implementation.
-    curr = current_get_current_data( &current, CURRENT_RSHUNT_10 );
+    curr = current_get_current_data( &current, CURRENT_RSHUNT_0_05 );
     
-    if( curr == CURRENT_OUT_OF_RANGE )
+    if ( curr == CURRENT_OUT_OF_RANGE )
     {
-        log_printf( &logger, "Out of range!  \r\n" );
+        log_printf( &logger, "Out of range!\r\n" );
     }
     else
     {
-       log_printf( &logger, " Current: %.2f mA \r\n", curr );
+       log_printf( &logger, " Current: %.2f mA\r\n", curr );
     }
-	
+    
     log_printf( &logger, "-----------------------\r\n" );
     Delay_ms( 1000 );
 }  
 
 ```
-
-## Note
-
-> 
-> It is important to provide the shunt of the appropriate value.
-> 
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
@@ -137,12 +125,12 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](http://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
+[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
+[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 
 terminal available in all Mikroelektronika 
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application 
+[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
 of your choice, can be used to read the message.
 
 

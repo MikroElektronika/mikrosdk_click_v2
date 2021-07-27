@@ -43,13 +43,12 @@ void color3_cfg_setup ( color3_cfg_t *cfg )
     cfg->int_pin = HAL_PIN_NC;
 
     cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
-    cfg->i2c_address = COLOR_3_I2C_SLAVE_ADDR;
-
+    cfg->i2c_address = COLOR3_I2C_SLAVE_ADDR;
 }
 
 COLOR3_RETVAL color3_init ( color3_t *ctx, color3_cfg_t *cfg )
 {
-     i2c_master_config_t i2c_cfg;
+    i2c_master_config_t i2c_cfg;
 
     i2c_master_configure_default( &i2c_cfg );
     i2c_cfg.speed  = cfg->i2c_speed;
@@ -73,7 +72,6 @@ COLOR3_RETVAL color3_init ( color3_t *ctx, color3_cfg_t *cfg )
     digital_in_init( &ctx->int_pin, cfg->int_pin );
 
     return COLOR3_OK;
-
 }
 
 void color3_generic_write ( color3_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
@@ -102,7 +100,7 @@ void color3_normal_wr_byte ( color3_t *ctx, uint8_t wr_addr, uint8_t wr_data )
 
     w_buffer[ 0 ] = wr_data;
 
-    color3_generic_write( ctx, COLOR_3_COMMAND_SELECT | COLOR_3_COMMAND_TYPE_AUTOINC | wr_addr, w_buffer, 1 );
+    color3_generic_write( ctx, COLOR3_COMMAND_SELECT | COLOR3_COMMAND_TYPE_AUTOINC | wr_addr, w_buffer, 1 );
 }
 
 void color3_special_wr_byte ( color3_t *ctx, uint8_t wr_addr, uint8_t wr_data )
@@ -111,14 +109,14 @@ void color3_special_wr_byte ( color3_t *ctx, uint8_t wr_addr, uint8_t wr_data )
 
     w_buffer[ 0 ] = wr_data;
 
-  color3_generic_write( ctx, COLOR_3_COMMAND_SELECT | COLOR_3_COMMAND_TYPE_SPECIAL | wr_addr, w_buffer, 1 );
+  color3_generic_write( ctx, COLOR3_COMMAND_SELECT | COLOR3_COMMAND_TYPE_SPECIAL | wr_addr, w_buffer, 1 );
 }
 
 uint8_t color3_read_byte ( color3_t *ctx, uint8_t rd_addr )
 {
     uint8_t r_buffer[ 1 ];
 
-   color3_generic_read( ctx, COLOR_3_COMMAND_SELECT | COLOR_3_COMMAND_TYPE_AUTOINC | rd_addr, r_buffer, 1 );
+   color3_generic_read( ctx, COLOR3_COMMAND_SELECT | COLOR3_COMMAND_TYPE_AUTOINC | rd_addr, r_buffer, 1 );
 
     return r_buffer[ 0 ];
 }
@@ -130,7 +128,7 @@ void color3_normal_wr_data ( color3_t *ctx, uint8_t wr_addr, uint16_t wr_data )
     w_buffer[ 0 ] = ( uint8_t ) wr_data;
     w_buffer[ 1 ] = ( uint8_t ) ( wr_data >> 8 );
 
-   color3_generic_write( ctx, COLOR_3_COMMAND_SELECT | COLOR_3_COMMAND_TYPE_AUTOINC | wr_addr, w_buffer, 2  );
+   color3_generic_write( ctx, COLOR3_COMMAND_SELECT | COLOR3_COMMAND_TYPE_AUTOINC | wr_addr, w_buffer, 2  );
 }
 
 void color3_special_wr_data ( color3_t *ctx, uint8_t wr_addr, uint16_t wr_data )
@@ -140,7 +138,7 @@ void color3_special_wr_data ( color3_t *ctx, uint8_t wr_addr, uint16_t wr_data )
     w_buffer[ 1 ] = ( uint8_t ) wr_data;
     w_buffer[ 2 ] = ( uint8_t ) ( wr_data >> 8 );
 
-    color3_generic_write( ctx, COLOR_3_COMMAND_SELECT | COLOR_3_COMMAND_TYPE_SPECIAL | wr_addr, w_buffer, 2 );
+    color3_generic_write( ctx, COLOR3_COMMAND_SELECT | COLOR3_COMMAND_TYPE_SPECIAL | wr_addr, w_buffer, 2 );
 }
 
 uint16_t color3_read_data ( color3_t *ctx, uint8_t rd_addr )
@@ -148,7 +146,7 @@ uint16_t color3_read_data ( color3_t *ctx, uint8_t rd_addr )
     uint16_t result;
     uint8_t r_buffer[ 2 ];
 
-    color3_generic_read( ctx, COLOR_3_COMMAND_SELECT | COLOR_3_COMMAND_TYPE_AUTOINC | rd_addr,r_buffer, 2 );
+    color3_generic_read( ctx, COLOR3_COMMAND_SELECT | COLOR3_COMMAND_TYPE_AUTOINC | rd_addr,r_buffer, 2 );
 
     result = r_buffer[ 1 ];
     result <<= 8;
@@ -159,85 +157,85 @@ uint16_t color3_read_data ( color3_t *ctx, uint8_t rd_addr )
 
 void color3_write_enable_register ( color3_t *ctx, uint8_t wr_data )
 {
- color3_normal_wr_byte( ctx, COLOR_3_ENABLE, wr_data );
+    color3_normal_wr_byte( ctx, COLOR3_ENABLE, wr_data );
 }
 
 uint8_t color3_read_enable_register ( color3_t *ctx )
 {
     uint8_t result;
-    result =  color3_read_byte( ctx, COLOR_3_ENABLE );
+    result =  color3_read_byte( ctx, COLOR3_ENABLE );
 
     return result;
 }
 
 void color3_write_rgbc_timing_register ( color3_t *ctx , uint8_t wr_data )
 {
- color3_normal_wr_byte( ctx, COLOR_3_ATIME, wr_data );
+    color3_normal_wr_byte( ctx, COLOR3_ATIME, wr_data );
 }
 
 uint8_t color3_read_rgbc_timing_register ( color3_t *ctx )
 {
     uint8_t result;
-    result =  color3_read_byte( ctx, COLOR_3_ATIME );
+    result =  color3_read_byte( ctx, COLOR3_ATIME );
 
     return result;
 }
 
 void color3_write_proxy_timing_register ( color3_t *ctx )
 {
- color3_normal_wr_byte( ctx, COLOR_3_PTIME, 0xFF );
+    color3_normal_wr_byte( ctx, COLOR3_PTIME, 0xFF );
 }
 
 uint8_t color3_read_proxy_timing_register ( color3_t *ctx )
 {
     uint8_t result;
-    result =  color3_read_byte( ctx, COLOR_3_PTIME );
+    result =  color3_read_byte( ctx, COLOR3_PTIME );
 
     return result;
 }
 
 void color3_write_wait_time_register ( color3_t *ctx, uint8_t wr_data )
 {
- color3_normal_wr_byte( ctx, COLOR_3_WTIME, wr_data );
+    color3_normal_wr_byte( ctx, COLOR3_WTIME, wr_data );
 }
 
 uint8_t color3_read_wait_time_register ( color3_t *ctx )
 {
     uint8_t result;
-    result =  color3_read_byte( ctx, COLOR_3_WTIME );
+    result =  color3_read_byte( ctx, COLOR3_WTIME );
 
     return result;
 }
 
 void color3_set_inter_trsh_lo_val( color3_t *ctx, uint16_t wr_data )
 {
-    color3_normal_wr_data( ctx, COLOR_3_AILTL, wr_data );
+    color3_normal_wr_data( ctx, COLOR3_AILTL, wr_data );
 }
 
 void color3_set_inter_trsh_hi_val ( color3_t *ctx, uint16_t wr_data )
 {
-    color3_normal_wr_data ( ctx, COLOR_3_AIHTL, wr_data );
+    color3_normal_wr_data ( ctx, COLOR3_AIHTL, wr_data );
 }
 
 void color3_set_proxy_inter_trsh_lo_val ( color3_t *ctx, uint16_t wr_data )
 {
-    color3_normal_wr_data( ctx, COLOR_3_PILTL, wr_data );
+    color3_normal_wr_data( ctx, COLOR3_PILTL, wr_data );
 }
 
 void color3_set_proxy_inter_trsh_hi_val ( color3_t *ctx, uint16_t wr_data )
 {
-    color3_normal_wr_data( ctx, COLOR_3_PIHTL, wr_data );
+    color3_normal_wr_data( ctx, COLOR3_PIHTL, wr_data );
 }
 
 void color3_set_interrupt_persistence ( color3_t *ctx, uint8_t int_pers )
 {
-    color3_normal_wr_byte( ctx, COLOR_3_PERS, int_pers );
+    color3_normal_wr_byte( ctx, COLOR3_PERS, int_pers );
 }
 
 uint8_t color3_read_interrupt_persistence ( color3_t *ctx )
 {
     uint8_t result;
-    result =  color3_read_byte( ctx, COLOR_3_PERS );
+    result =  color3_read_byte( ctx, COLOR3_PERS );
 
     return result;
 }
@@ -245,13 +243,13 @@ uint8_t color3_read_interrupt_persistence ( color3_t *ctx )
 void color3_setproxy_interrupt_persistence ( color3_t *ctx, uint8_t int_pers )
 {
     int_pers <<= 4;
-    color3_normal_wr_byte( ctx, COLOR_3_PERS, int_pers );
+    color3_normal_wr_byte( ctx, COLOR3_PERS, int_pers );
 }
 
 uint8_t color3_read_proxy_interrupt_persistence ( color3_t *ctx )
 {
     uint8_t result;
-    result =  color3_read_byte( ctx, COLOR_3_PERS );
+    result =  color3_read_byte( ctx, COLOR3_PERS );
     result >>=4;
 
     return result;
@@ -259,65 +257,65 @@ uint8_t color3_read_proxy_interrupt_persistence ( color3_t *ctx )
 
 void color3_set_long_wait ( color3_t *ctx, uint8_t lon_wait )
 {
-    color3_normal_wr_byte( ctx, COLOR_3_CONFIG, lon_wait );
+    color3_normal_wr_byte( ctx, COLOR3_CONFIG, lon_wait );
 }
 
 uint8_t color3_read_long_wait ( color3_t *ctx )
 {
     uint8_t result;
-    result =  color3_read_byte( ctx, COLOR_3_CONFIG );
+    result =  color3_read_byte( ctx, COLOR3_CONFIG );
 
     return result;
 }
 
 void color3_write_pulse_cnt ( color3_t *ctx, uint8_t pulse_cnt )
 {
-    color3_normal_wr_byte( ctx, COLOR_3_PPCOUNT, pulse_cnt );
+    color3_normal_wr_byte( ctx, COLOR3_PPCOUNT, pulse_cnt );
 }
 
 uint8_t color3_read_pulse_cnt ( color3_t *ctx )
 {
     uint8_t result;
-    result =  color3_read_byte( ctx, COLOR_3_PPCOUNT );
+    result =  color3_read_byte( ctx, COLOR3_PPCOUNT );
 
     return result;
 }
 
 void color3_write_rgbc_gain ( color3_t *ctx, uint8_t gain_val )
 {
-    color3_normal_wr_byte( ctx, COLOR_3_CONTROL, gain_val );
+    color3_normal_wr_byte( ctx, COLOR3_CONTROL, gain_val );
 }
 
 uint8_t color3_read_rgbc_gain ( color3_t *ctx )
 {
     uint8_t result;
-    result =  color3_read_byte( ctx, COLOR_3_CONTROL );
+    result =  color3_read_byte( ctx, COLOR3_CONTROL );
 
     return result;
 }
 
 void color3_set_diode_select ( color3_t *ctx, uint8_t dio_sel )
 {
-    color3_normal_wr_byte( ctx, COLOR_3_CONTROL, dio_sel );
+    color3_normal_wr_byte( ctx, COLOR3_CONTROL, dio_sel );
 }
 
 uint8_t color3_get_diode_select ( color3_t *ctx )
 {
     uint8_t result;
-    result =  color3_read_byte( ctx, COLOR_3_CONTROL );
+    result =  color3_read_byte( ctx, COLOR3_CONTROL );
 
     return result;
 }
 
 void color3_set_led_str ( color3_t *ctx, uint8_t led_str )
 {
-    color3_normal_wr_byte( ctx, COLOR_3_CONTROL, led_str );
+    color3_normal_wr_byte( ctx, COLOR3_CONTROL, led_str );
 }
 
 uint8_t color3_read_led_str ( color3_t *ctx )
 {
     uint8_t result;
-    result =  color3_read_byte( ctx, COLOR_3_CONTROL );
+    result =  color3_read_byte( ctx, COLOR3_CONTROL );
 
     return result;
 }
@@ -326,7 +324,7 @@ uint8_t color3_read_led_str ( color3_t *ctx )
 uint8_t color3_read_dev_id ( color3_t *ctx )
 {
     uint8_t result;
-    result =  color3_read_byte( ctx, COLOR_3_ID );
+    result =  color3_read_byte( ctx, COLOR3_ID );
 
     return result;
 }
@@ -334,7 +332,7 @@ uint8_t color3_read_dev_id ( color3_t *ctx )
 uint8_t color3_read_dev_stat ( color3_t *ctx )
 {
     uint8_t result;
-    result =  color3_read_byte( ctx, COLOR_3_STATUS );
+    result =  color3_read_byte( ctx, COLOR3_STATUS );
 
     return result;
 }
@@ -342,7 +340,7 @@ uint8_t color3_read_dev_stat ( color3_t *ctx )
 uint16_t color3_read_clear_data ( color3_t *ctx )
 {
     uint16_t result;
-    result = color3_read_data( ctx, COLOR_3_CDATA );
+    result = color3_read_data( ctx, COLOR3_CDATA );
 
     return result;
 }
@@ -350,7 +348,7 @@ uint16_t color3_read_clear_data ( color3_t *ctx )
 uint16_t color3_read_red_data ( color3_t *ctx )
 {
     uint16_t result;
-    result = color3_read_data( ctx, COLOR_3_RDATA );
+    result = color3_read_data( ctx, COLOR3_RDATA );
 
     return result;
 }
@@ -358,7 +356,7 @@ uint16_t color3_read_red_data ( color3_t *ctx )
 uint16_t color3_read_green_data ( color3_t *ctx )
 {
     uint16_t result;
-    result = color3_read_data( ctx, COLOR_3_GDATA );
+    result = color3_read_data( ctx, COLOR3_GDATA );
 
     return result;
 }
@@ -367,7 +365,7 @@ uint16_t color3_read_green_data ( color3_t *ctx )
 uint16_t color3_read_blue_data ( color3_t *ctx )
 {
     uint16_t result;
-    result = color3_read_data( ctx, COLOR_3_BDATA );
+    result = color3_read_data( ctx, COLOR3_BDATA );
 
     return result;
 }
@@ -375,7 +373,7 @@ uint16_t color3_read_blue_data ( color3_t *ctx )
 uint16_t color3_read_proxy_data( color3_t *ctx )
 {
     uint16_t result;
-    result = color3_read_data( ctx, COLOR_3_PDATA );
+    result = color3_read_data( ctx, COLOR3_PDATA );
 
     return result;
 }
@@ -387,21 +385,23 @@ uint8_t color3_get_inter_state ( color3_t *ctx )
 
 void color3_set_default_settings ( color3_t *ctx )
 {
-    color3_set_diode_select( ctx, COLOR_3_IR_DIODE );
-    color3_write_pulse_cnt( ctx, COLOR_3_PROXY_PULSE_256 );
-    color3_write_wait_time_register( ctx, COLOR_3_WAIT_TIME_REG_40_CYC );
-    color3_set_proxy_inter_trsh_lo_val( ctx, COLOR_3_LOW_THRESHOLD_VALUE );
-    color3_set_proxy_inter_trsh_hi_val( ctx, COLOR_3_HIGH_THRESHOLD_VALUE );
-    color3_set_inter_trsh_lo_val( ctx, COLOR_3_LOW_THRESHOLD_VALUE );
-    color3_set_inter_trsh_hi_val( ctx, COLOR_3_HIGH_THRESHOLD_VALUE );
-    color3_set_interrupt_persistence( ctx, COLOR_3_2_OR_INTER );
-    color3_setproxy_interrupt_persistence( ctx, COLOR_3_2_OR_INTER );
-    color3_write_enable_register(  ctx,  COLOR_3_ENABLE_REG_PON | COLOR_3_ENABLE_REG_AEN |COLOR_3_ENABLE_REG_PEN | COLOR_3_ENABLE_REG_WEN | COLOR_3_ENABLE_REG_AIEN | COLOR_3_ENABLE_REG_PIEN );
-    color3_write_rgbc_timing_register( ctx, COLOR_3_RGBC_TIMING_4_CYC );
+    color3_set_diode_select( ctx, COLOR3_IR_DIODE );
+    color3_write_pulse_cnt( ctx, COLOR3_PROXY_PULSE_256 );
+    color3_write_wait_time_register( ctx, COLOR3_WAIT_TIME_REG_40_CYC );
+    color3_set_proxy_inter_trsh_lo_val( ctx, COLOR3_LOW_THRESHOLD_VALUE );
+    color3_set_proxy_inter_trsh_hi_val( ctx, COLOR3_HIGH_THRESHOLD_VALUE );
+    color3_set_inter_trsh_lo_val( ctx, COLOR3_LOW_THRESHOLD_VALUE );
+    color3_set_inter_trsh_hi_val( ctx, COLOR3_HIGH_THRESHOLD_VALUE );
+    color3_set_interrupt_persistence( ctx, COLOR3_2_OR_INTER );
+    color3_setproxy_interrupt_persistence( ctx, COLOR3_2_OR_INTER );
+    color3_write_enable_register(  ctx,  COLOR3_ENABLE_REG_PON | COLOR3_ENABLE_REG_AEN |
+                                                   COLOR3_ENABLE_REG_PEN | COLOR3_ENABLE_REG_WEN | 
+                                                   COLOR3_ENABLE_REG_AIEN | COLOR3_ENABLE_REG_PIEN );
+    color3_write_rgbc_timing_register( ctx, COLOR3_RGBC_TIMING_4_CYC );
     color3_write_proxy_timing_register( ctx );
 }
 
-void color_3_get_rgb_data ( color3_t *ctx, uint16_t *red_data, uint16_t *green_data, uint16_t *blue_data )
+void color3_get_rgb_data ( color3_t *ctx, uint16_t *red_data, uint16_t *green_data, uint16_t *blue_data )
 {
     *red_data = color3_read_red_data( ctx );
     *green_data = color3_read_green_data( ctx );
@@ -452,12 +452,12 @@ float color3_get_color_value ( color3_t *ctx )
     return color_value;
 }
 
-void color_3_get_crgb_data ( color3_t *ctx, color3_const_t *data_const )
+void color3_get_crgb_data ( color3_t *ctx, color3_const_t *data_const )
 {
     uint8_t r_buffer[ 8 ];
     uint16_t temp_data;
     
-    color3_generic_read( ctx, COLOR_3_COMMAND_SELECT | COLOR_3_COMMAND_TYPE_AUTOINC | 0x14, r_buffer, 8 );
+    color3_generic_read( ctx, COLOR3_COMMAND_SELECT | COLOR3_COMMAND_TYPE_AUTOINC | 0x14, r_buffer, 8 );
 
     //Clear Data
     temp_data = r_buffer[ 1 ];
@@ -466,7 +466,7 @@ void color_3_get_crgb_data ( color3_t *ctx, color3_const_t *data_const )
     
     *data_const->clear_data = temp_data;
 
-  //Red Data
+    //Red Data
     temp_data = 0;
     
     temp_data = r_buffer[ 3 ];
@@ -482,7 +482,7 @@ void color_3_get_crgb_data ( color3_t *ctx, color3_const_t *data_const )
     temp_data <<= 8;
     temp_data |= r_buffer[ 4 ];
     
-   * data_const->green_data = temp_data;
+    *data_const->green_data = temp_data;
 
     //Blue Data
     temp_data = 0;
@@ -491,8 +491,47 @@ void color_3_get_crgb_data ( color3_t *ctx, color3_const_t *data_const )
     temp_data <<= 8;
     temp_data |= r_buffer[ 6 ];
 
-   * data_const->blue_data = temp_data;
+    *data_const->blue_data = temp_data;
 }
+
+uint8_t color3_get_color ( float color_value )
+{
+     if( ( color_value >= 0.992 ) && ( color_value <= 0.999 ) )
+     {
+         return COLOR3_ORANGE_COLOR_FLAG;
+     }
+     else if ( ( color_value >= 0.9750 ) && ( color_value <= 0.9919 ) )
+     {
+         return COLOR3_RED_COLOR_FLAG;
+     }
+     else if ( ( color_value >= 0.920 ) && ( color_value <= 0.9749 ) )
+     {
+         return COLOR3_PINK_COLOR_FLAG;
+     }
+     else if ( ( color_value >= 0.6201 ) && ( color_value <= 0.919 ) )
+     {
+         return COLOR3_PURPLE_COLOR_FLAG;
+     }
+     else if ( ( color_value >= 0.521 ) && ( color_value <= 0.6200 ) )
+     {
+         return COLOR3_BLUE_COLOR_FLAG;
+     }
+     else if ( ( color_value >= 0.470 ) && ( color_value < 0.520 ) )
+     {
+         return COLOR3_CYAN_COLOR_FLAG;
+     }
+     else if ( ( color_value >= 0.210 ) && ( color_value <= 0.469 ) )
+     {
+         return COLOR3_GREEN_COLOR_FLAG;
+     }
+     else if ( ( color_value >= 0.0650 ) && ( color_value <= 0.180 ) )
+     {
+         return COLOR3_YELLOW_COLOR_FLAG;
+     }
+
+     return COLOR3_NON_COLOR_FLAG;
+}
+
 // ----------------------------------------------------------- PRIVATE FUNCTION DEFINITIONS
 
 static float color3_max_color ( color3_t *ctx, float color_a, float color_b )

@@ -70,165 +70,178 @@
  * \defgroup error_code Error Code
  * \{
  */
-#define COLOR_3_COMMAND_TYPE_SPECIAL  (3 << 5)
-#define COLOR_3_COMMAND_TYPE_AUTOINC  (0b01 << 5)
-#define COLOR_3_COMMAND_SELECT  (1 << 7)
+#define COLOR3_COMMAND_TYPE_SPECIAL  (3 << 5)
+#define COLOR3_COMMAND_TYPE_AUTOINC  (0b01 << 5)
+#define COLOR3_COMMAND_SELECT  (1 << 7)
 /** \} */
 
 /**
  * \defgroup I2C_slave_address I2C slave address
  * \{
  */
-#define COLOR_3_I2C_SLAVE_ADDR                                     0x29
+#define COLOR3_I2C_SLAVE_ADDR                                     0x29
 /** \} */
 
 /**
  * \defgroup register_addresses Register addresses
  * \{
  */
-#define COLOR_3_ENABLE                                             0x00
-#define COLOR_3_ATIME                                              0x01
-#define COLOR_3_PTIME                                              0x02
-#define COLOR_3_WTIME                                              0x03
-#define COLOR_3_AILTL                                              0x04
-#define COLOR_3_AILTH                                              0x05
-#define COLOR_3_AIHTL                                              0x06
-#define COLOR_3_AIHTH                                              0x07
-#define COLOR_3_PILTL                                              0x08
-#define COLOR_3_PILTH                                              0x09
-#define COLOR_3_PIHTL                                              0x0A
-#define COLOR_3_PIHTH                                              0x0B
-#define COLOR_3_PERS                                               0x0C
-#define COLOR_3_CONFIG                                             0x0D
-#define COLOR_3_PPCOUNT                                            0x0E
-#define COLOR_3_CONTROL                                            0x0F
-#define COLOR_3_ID                                                 0x12
-#define COLOR_3_STATUS                                             0x13
-#define COLOR_3_CDATA                                              0x14
-#define COLOR_3_CDATAH                                             0x15
-#define COLOR_3_RDATA                                              0x16
-#define COLOR_3_RDATAH                                             0x17
-#define COLOR_3_GDATA                                              0x18
-#define COLOR_3_GDATAH                                             0x19
-#define COLOR_3_BDATA                                              0x1A
-#define COLOR_3_BDATAH                                             0x1B
-#define COLOR_3_PDATA                                              0x1C
-#define COLOR_3_PDATAH                                             0x1D
+#define COLOR3_ENABLE                                             0x00
+#define COLOR3_ATIME                                              0x01
+#define COLOR3_PTIME                                              0x02
+#define COLOR3_WTIME                                              0x03
+#define COLOR3_AILTL                                              0x04
+#define COLOR3_AILTH                                              0x05
+#define COLOR3_AIHTL                                              0x06
+#define COLOR3_AIHTH                                              0x07
+#define COLOR3_PILTL                                              0x08
+#define COLOR3_PILTH                                              0x09
+#define COLOR3_PIHTL                                              0x0A
+#define COLOR3_PIHTH                                              0x0B
+#define COLOR3_PERS                                               0x0C
+#define COLOR3_CONFIG                                             0x0D
+#define COLOR3_PPCOUNT                                            0x0E
+#define COLOR3_CONTROL                                            0x0F
+#define COLOR3_ID                                                 0x12
+#define COLOR3_STATUS                                             0x13
+#define COLOR3_CDATA                                              0x14
+#define COLOR3_CDATAH                                             0x15
+#define COLOR3_RDATA                                              0x16
+#define COLOR3_RDATAH                                             0x17
+#define COLOR3_GDATA                                              0x18
+#define COLOR3_GDATAH                                             0x19
+#define COLOR3_BDATA                                              0x1A
+#define COLOR3_BDATAH                                             0x1B
+#define COLOR3_PDATA                                              0x1C
+#define COLOR3_PDATAH                                             0x1D
 /** \} */
 
 /**
  * \defgroup enable_register_values Enable register values
  * \{
  */
-#define COLOR_3_ENABLE_REG_DEFAULT                                 0x00
-#define COLOR_3_ENABLE_REG_PON                                     0x01
-#define COLOR_3_ENABLE_REG_AEN                                     0x02
-#define COLOR_3_ENABLE_REG_PEN                                     0x04
-#define COLOR_3_ENABLE_REG_WEN                                     0x08
-#define COLOR_3_ENABLE_REG_AIEN                                    0x10
-#define COLOR_3_ENABLE_REG_PIEN                                    0x20
+#define COLOR3_ENABLE_REG_DEFAULT                                 0x00
+#define COLOR3_ENABLE_REG_PON                                     0x01
+#define COLOR3_ENABLE_REG_AEN                                     0x02
+#define COLOR3_ENABLE_REG_PEN                                     0x04
+#define COLOR3_ENABLE_REG_WEN                                     0x08
+#define COLOR3_ENABLE_REG_AIEN                                    0x10
+#define COLOR3_ENABLE_REG_PIEN                                    0x20
 /** \} */
 
 /**
  * \defgroup RGBC_timing_register_values RGBC Timing register values
  * \{
  */
-#define  COLOR_3_RGBC_TIMING_1_CYC                                  0xFF
-#define  COLOR_3_RGBC_TIMING_4_CYC                                  0xFC
-#define  COLOR_3_RGBC_TIMING_10_CYC                                 0xF6
-#define  COLOR_3_RGBC_TIMING_42_CYC                                 0xD6
-#define  COLOR_3_RGBC_TIMING_64_CYC                                 0xAD
-#define  COLOR_3_RGBC_TIMING_256_CYC                                0x00
+#define  COLOR3_RGBC_TIMING_1_CYC                                  0xFF
+#define  COLOR3_RGBC_TIMING_4_CYC                                  0xFC
+#define  COLOR3_RGBC_TIMING_10_CYC                                 0xF6
+#define  COLOR3_RGBC_TIMING_42_CYC                                 0xD6
+#define  COLOR3_RGBC_TIMING_64_CYC                                 0xAD
+#define  COLOR3_RGBC_TIMING_256_CYC                                0x00
 /** \} */
 
 /**
  * \defgroup proximity_pulse_counter_values Proximity pulse counter values
  * \{
  */
-#define COLOR_3_PROXY_PULSE_1                                      0xFF
-#define COLOR_3_PROXY_PULSE_10                                     0xF6
-#define COLOR_3_PROXY_PULSE_42                                     0xD6
-#define COLOR_3_PROXY_PULSE_64                                     0xAD
-#define COLOR_3_PROXY_PULSE_256                                    0x00
+#define COLOR3_PROXY_PULSE_1                                      0xFF
+#define COLOR3_PROXY_PULSE_10                                     0xF6
+#define COLOR3_PROXY_PULSE_42                                     0xD6
+#define COLOR3_PROXY_PULSE_64                                     0xAD
+#define COLOR3_PROXY_PULSE_256                                    0x00
 /** \} */
 
 /**
  * \defgroup proximity_timing_register_values Proximity Timing register values
  * \{
  */
-#define COLOR_3_WAIT_TIME_REG_1_CYC                                0xFF
-#define COLOR_3_WAIT_TIME_REG_40_CYC                               0xD8
-#define COLOR_3_WAIT_TIME_REG_85_CYC                               0xAB
-#define COLOR_3_WAIT_TIME_REG_256_CYC                              0x00
+#define COLOR3_WAIT_TIME_REG_1_CYC                                0xFF
+#define COLOR3_WAIT_TIME_REG_40_CYC                               0xD8
+#define COLOR3_WAIT_TIME_REG_85_CYC                               0xAB
+#define COLOR3_WAIT_TIME_REG_256_CYC                              0x00
 /** \} */
 
 /**
  * \defgroup threshold_values Threshold values
  * \{
  */
-#define COLOR_3_LOW_THRESHOLD_VALUE                               0x0130
-#define COLOR_3_HIGH_THRESHOLD_VALUE                              0x0170
+#define COLOR3_LOW_THRESHOLD_VALUE                               0x0130
+#define COLOR3_HIGH_THRESHOLD_VALUE                              0x0170
 /** \} */
 
 /**
  * \defgroup persistence_filtering_values Persistence filtering values
  * \{
  */
-#define COLOR_3_EVERY_CYC_INTER                                    0x00
-#define COLOR_3_1_OR_INTER                                         0x01
-#define COLOR_3_2_OR_INTER                                         0x02
-#define COLOR_3_3_OR_INTER                                         0x03
-#define COLOR_3_5_OR_INTER                                         0x04
-#define COLOR_3_10_OR_INTER                                        0x05
-#define COLOR_3_15_OR_INTER                                        0x06
-#define COLOR_3_20_OR_INTER                                        0x07
-#define COLOR_3_25_OR_INTER                                        0x08
-#define COLOR_3_30_OR_INTER                                        0x09
-#define COLOR_3_35_OR_INTER                                        0x0A
-#define COLOR_3_40_OR_INTER                                        0x0B
-#define COLOR_3_45_OR_INTER                                        0x0C
-#define COLOR_3_50_OR_INTER                                        0x0D
-#define COLOR_3_55_OR_INTER                                        0x0E
-#define COLOR_3_60_OR_INTER                                        0x0F
+#define COLOR3_EVERY_CYC_INTER                                    0x00
+#define COLOR3_1_OR_INTER                                         0x01
+#define COLOR3_2_OR_INTER                                         0x02
+#define COLOR3_3_OR_INTER                                         0x03
+#define COLOR3_5_OR_INTER                                         0x04
+#define COLOR3_10_OR_INTER                                        0x05
+#define COLOR3_15_OR_INTER                                        0x06
+#define COLOR3_20_OR_INTER                                        0x07
+#define COLOR3_25_OR_INTER                                        0x08
+#define COLOR3_30_OR_INTER                                        0x09
+#define COLOR3_35_OR_INTER                                        0x0A
+#define COLOR3_40_OR_INTER                                        0x0B
+#define COLOR3_45_OR_INTER                                        0x0C
+#define COLOR3_50_OR_INTER                                        0x0D
+#define COLOR3_55_OR_INTER                                        0x0E
+#define COLOR3_60_OR_INTER                                        0x0F
 /** \} */
 
 /**
  * \defgroup long_wait_value Long wait value
  * \{
  */
-#define COLOR_3_LONG_WAIT                                          0x02
+#define COLOR3_LONG_WAIT                                          0x02
 /** \} */
 
 /**
  * \defgroup RGBC_gain_control RGBC Gain Control
  * \{
  */
-#define COLOR_3_A_GAIN_1                                           0x00
-#define COLOR_3_A_GAIN_4                                           0x01
-#define COLOR_3_A_GAIN_16                                          0x02
-#define COLOR_3_A_GAIN_60                                          0x03
+#define COLOR3_A_GAIN_1                                           0x00
+#define COLOR3_A_GAIN_4                                           0x01
+#define COLOR3_A_GAIN_16                                          0x02
+#define COLOR3_A_GAIN_60                                          0x03
 /** \} */
 
 /**
  * \defgroup proximity_diode _select Proximity Diode Select
  * \{
  */
-#define COLOR_3_CLEAR_DIODE                                        0x10
-#define COLOR_3_IR_DIODE                                           0x20
-#define COLOR_3_BOTH_DIODE                                         0x30
+#define COLOR3_CLEAR_DIODE                                        0x10
+#define COLOR3_IR_DIODE                                           0x20
+#define COLOR3_BOTH_DIODE                                         0x30
 /** \} */
 
 /**
  * \defgroup LED_drive_strength LED Drive Strength
  * \{
  */
-#define COLOR_3_LED_STR_100                                        0x00
-#define COLOR_3_LED_STR_50                                         0x40
-#define COLOR_3_LED_STR_25                                         0x80
-#define COLOR_3_LED_STR_12_5                                       0xC0
+#define COLOR3_LED_STR_100                                        0x00
+#define COLOR3_LED_STR_50                                         0x40
+#define COLOR3_LED_STR_25                                         0x80
+#define COLOR3_LED_STR_12_5                                       0xC0
 /** \} */
 
-
+/**
+ * \defgroup color_flag Color Flag
+ * \{
+ */
+#define  COLOR3_ORANGE_COLOR_FLAG                        1
+#define  COLOR3_RED_COLOR_FLAG                              2
+#define  COLOR3_PINK_COLOR_FLAG                            3
+#define  COLOR3_PURPLE_COLOR_FLAG                         4
+#define  COLOR3_BLUE_COLOR_FLAG                            5
+#define  COLOR3_CYAN_COLOR_FLAG                           6
+#define  COLOR3_GREEN_COLOR_FLAG                         7
+#define  COLOR3_YELLOW_COLOR_FLAG                       8
+#define  COLOR3_NON_COLOR_FLAG                            0
+/** \} */
 
 
 /** \} */ // End group macro 
@@ -803,7 +816,7 @@ void color3_normal_wr_byte ( color3_t *ctx, uint8_t wr_addr, uint8_t wr_data );
  *
  * @description Function is used to read red, green and blue data.
  */
-  void color_3_get_rgb_data ( color3_t *ctx, uint16_t *red_data, uint16_t *green_data, uint16_t *blue_data );
+  void color3_get_rgb_data ( color3_t *ctx, uint16_t *red_data, uint16_t *green_data, uint16_t *blue_data );
 
  /**
  * @brief Get color ratio function.
@@ -822,7 +835,7 @@ void color3_normal_wr_byte ( color3_t *ctx, uint8_t wr_addr, uint8_t wr_data );
  * 
  * @param ctx          Click object.
  *
- * @description Function is used to figure out dominant color.
+ * @description Function is used to calculate HSL color.
  */
   float color3_get_color_value ( color3_t *ctx );
 
@@ -838,10 +851,10 @@ void color3_normal_wr_byte ( color3_t *ctx, uint8_t wr_addr, uint8_t wr_data );
  *
  * @description Function is used to read clear, red, blue and green data values.
  */
-  void color_3_get_crgb_data ( color3_t *ctx, color3_const_t *data_const );
+  void color3_get_crgb_data ( color3_t *ctx, color3_const_t *data_const );
 
 /**
- * @brief RGBT to hsl.
+ * @brief RGB to hsl.
  *
  * 
  * @param ctx          Click object.
@@ -849,9 +862,35 @@ void color3_normal_wr_byte ( color3_t *ctx, uint8_t wr_addr, uint8_t wr_data );
  * @param green        16-bit data that green data.
  * @param blue         16-bit data that blue data.
  *
- * @description Function is used to translate RGBT to hsl.
+ * @description Function is used to translate RGB to hsl.
  */
 static float color3_rgb_to_hsl( color3_t *ctx, float red, float green, float blue );
+
+/**
+ * @brief Detect color.
+ *
+ * @param color_value    Color value in HSL.
+ *
+ * @returns               Color flag.
+ *
+ * @description This function determines which color is read
+ * by click sensor after color3_get_color_value() function has
+ * been invoked previously.
+ *
+ * @note
+ * <pre>
+ * Detect color
+ *    ORANGE color - from 0.992  to 0.999
+ *    RED color    - from 0.9750 to 0.9919
+ *    PINK color   - from 0.920  to 0.9749
+ *    PURPLE color - from 0.6201 to 0.919
+ *    BLUE color   - from 0.521  to 0.6200
+ *    CYAN color   - from 0.4700 to 0.520
+ *    GREEN color  - from 0.210  to 0.469
+ *    YELLOW color - from 0.0650 to 0.209
+ * </pre>
+ */
+uint8_t color3_get_color ( float color_value );
 
 #ifdef __cplusplus
 }

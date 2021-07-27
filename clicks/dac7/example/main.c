@@ -15,7 +15,7 @@
  * ## Application Task  
  * In this example, we adjust the DAC output voltage from 1000 mV to 4000 mV 
  * for the channels, starting from channel A to channel D 
- * and set the DAC output voltage to 5000 mV for all channels.
+ * and then set the DAC output voltage to 5000 mV for all channels.
  * Results are being sent to UART Terminal where you can track their changes.
  * All data logs write on USB UART changes every 5 sec.
  *  
@@ -28,10 +28,10 @@
 #include "log.h"
 #include "dac7.h"
 
-uint16_t v_ref_sel;
 
 // ------------------------------------------------------------------ VARIABLES
 
+uint16_t v_ref_sel;
 static dac7_t dac7;
 static log_t logger;
 

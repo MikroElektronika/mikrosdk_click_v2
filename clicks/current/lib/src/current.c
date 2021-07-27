@@ -33,28 +33,6 @@
 
 #define CURRENT_DUMMY 0
 
-// -------------------------------------------------------------- PRIVATE TYPES
-
-
-// ------------------------------------------------------------------ CONSTANTS
-
-
-// ------------------------------------------------------------------ VARIABLES
-
-
-// ---------------------------------------------- PRIVATE FUNCTION DECLARATIONS 
-
-static void current_generic_transfer 
-( 
-    current_t *ctx, 
-    uint8_t *wr_buf, 
-    uint16_t wr_len, 
-    uint8_t *rd_buf, 
-    uint16_t rd_len 
-);
-
-static void current_calc_delay ();
-
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
 void current_cfg_setup ( current_cfg_t *cfg )
@@ -98,7 +76,6 @@ CURRENT_RETVAL current_init ( current_t *ctx, current_cfg_t *cfg )
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
 
     return CURRENT_OK;
-
 }
 
 uint16_t current_data_read ( current_t *ctx )
@@ -106,7 +83,11 @@ uint16_t current_data_read ( current_t *ctx )
     uint8_t rx_buf[ 2 ];
     uint16_t result;
 
-    current_generic_transfer( ctx, 0, 0, rx_buf, 2 );
+    spi_master_select_device( ctx->chip_select );
+    Delay_1ms();
+    spi_master_read( &ctx->spi, rx_buf, 2 );
+    Delay_1ms();
+    spi_master_deselect_device( ctx->chip_select );
     
     result = rx_buf[ 0 ];
     result <<= 8;
@@ -137,7 +118,7 @@ float current_avg_rata ( current_t *ctx )
     for ( n_cnt = 0; n_cnt < CURRENT_SAMPLE_NUM; n_cnt++ )
     {
         temp = current_get_raw_data( ctx );
-        current_calc_delay();
+        Delay_10ms();
         sum += temp;
     }
 
@@ -165,27 +146,6 @@ float current_get_current_data ( current_t *ctx, float r_shunt )
     }
 
     return result;
-}
-
-// ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
-
-static void current_generic_transfer 
-( 
-    current_t *ctx, 
-    uint8_t *wr_buf, 
-    uint16_t wr_len, 
-    uint8_t *rd_buf, 
-    uint16_t rd_len 
-)
-{
-    spi_master_select_device( ctx->chip_select );
-    spi_master_write_then_read( &ctx->spi, wr_buf, wr_len, rd_buf, rd_len );
-    spi_master_deselect_device( ctx->chip_select );   
-}
-
-static void current_calc_delay ()
-{
-    Delay_10ms();
 }
 
 // ------------------------------------------------------------------------- END

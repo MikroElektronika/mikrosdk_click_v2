@@ -1,0 +1,40 @@
+type: library
+
+target: lib_co2
+
+alias: Click.CO2
+
+sources: {
+    src/co2.c
+}
+
+headers: {
+    include/co2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/co2.h) dst(include/co2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -37,15 +37,6 @@
 
 #define DAC7_MASK_DATA                 0xFF
 
-// -------------------------------------------------------------- PRIVATE TYPES
-
-
-// ------------------------------------------------------------------ CONSTANTS
-
-
-// ------------------------------------------------------------------ VARIABLES
-
-
 // ---------------------------------------------- PRIVATE FUNCTION DECLARATIONS 
 
 // Check command definition function
@@ -65,7 +56,7 @@ void dac7_cfg_setup ( dac7_cfg_t *cfg )
     cfg->mosi = HAL_PIN_NC;
     cfg->cs   = HAL_PIN_NC;
 
-    cfg->spi_speed = 100000; 
+    cfg->spi_speed = 10000000; 
     cfg->spi_mode = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 }
@@ -95,21 +86,6 @@ DAC7_RETVAL dac7_init ( dac7_t *ctx, dac7_cfg_t *cfg )
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
 
     return DAC7_OK;
-
-}
-
-void dac7_generic_transfer 
-( 
-    dac7_t *ctx, 
-    uint8_t *wr_buf, 
-    uint16_t wr_len, 
-    uint8_t *rd_buf, 
-    uint16_t rd_len 
-)
-{
-    spi_master_select_device( ctx->chip_select );
-    spi_master_write_then_read( &ctx->spi, wr_buf, wr_len, rd_buf, rd_len );
-    spi_master_deselect_device( ctx->chip_select );   
 }
 
 void dac7_write_data ( dac7_t *ctx, uint8_t def_cmd, uint8_t addr_cmd, uint16_t write_data )
@@ -129,7 +105,9 @@ void dac7_write_data ( dac7_t *ctx, uint8_t def_cmd, uint8_t addr_cmd, uint16_t 
     tx_buf[ 1 ] = ( uint8_t ) ( ( write_data >> 8 ) & DAC7_MASK_BIT_LBS );
     tx_buf[ 2 ] = ( uint8_t ) write_data;
     
-    dac7_generic_transfer( ctx, tx_buf, 3, 0, 0 );
+    spi_master_select_device( ctx->chip_select );
+    spi_master_write( &ctx->spi, tx_buf, 3 );
+    spi_master_deselect_device( ctx->chip_select );  
 }
 
 
@@ -215,8 +193,10 @@ DAC7_RETVAL_T dac7_set_power ( dac7_t *ctx, uint8_t pwr_en, uint8_t sel_ch )
         tx_buf[ 1 ]  = DAC7_DONT_CARE_COMMAND;
         tx_buf[ 2 ]  = ( pwr_en & DAC7_MASK_BIT_POWERMODE );
         tx_buf[ 2 ] |= ( sel_ch & DAC7_MASK_BIT_SEL_CHANNEL );
-    
-        dac7_generic_transfer( ctx, tx_buf, 3, 0, 0 );
+        
+        spi_master_select_device( ctx->chip_select );
+        spi_master_write( &ctx->spi, tx_buf, 3 );
+        spi_master_deselect_device( ctx->chip_select );  
         
         return DAC7_SUCCESS;
     }
@@ -231,7 +211,9 @@ DAC7_RETVAL_T dac7_sw_reset ( dac7_t *ctx )
     tx_buf[ 1 ] = DAC7_DONT_CARE_COMMAND;
     tx_buf[ 2 ] = DAC7_SW_RST_COMMAND;
     
-    dac7_generic_transfer( ctx, tx_buf, 3, 0, 0 );
+    spi_master_select_device( ctx->chip_select );
+    spi_master_write( &ctx->spi, tx_buf, 3 );
+    spi_master_deselect_device( ctx->chip_select );  
     
     return DAC7_SUCCESS;
 }
@@ -251,7 +233,9 @@ DAC7_RETVAL_T dac7_set_ldac ( dac7_t *ctx, uint8_t sel_ch )
         tx_buf[ 1 ] = DAC7_DONT_CARE_COMMAND;
         tx_buf[ 2 ] = sel_ch & DAC7_MASK_BIT_SEL_CHANNEL;
     
-        dac7_generic_transfer( ctx, tx_buf, 3, 0, 0 );
+        spi_master_select_device( ctx->chip_select );
+        spi_master_write( &ctx->spi, tx_buf, 3 );
+        spi_master_deselect_device( ctx->chip_select );  
 
         return DAC7_SUCCESS;
     }
@@ -266,7 +250,9 @@ DAC7_RETVAL_T dac7_set_internal_reference ( dac7_t *ctx, uint8_t int_ref_en )
     tx_buf[ 1 ] = DAC7_DONT_CARE_COMMAND;
     tx_buf[ 2 ] = int_ref_en & DAC7_MASK_BIT_0;
     
-    dac7_generic_transfer( ctx, tx_buf, 3, 0, 0 );
+    spi_master_select_device( ctx->chip_select );
+    spi_master_write( &ctx->spi, tx_buf, 3 );
+    spi_master_deselect_device( ctx->chip_select );  
     
     return DAC7_SUCCESS;
 }

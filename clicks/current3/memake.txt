@@ -1,0 +1,7 @@
+type: subdirs
+project: Current3
+
+subdirs: {
+    lib
+    example
+}

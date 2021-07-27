@@ -204,7 +204,7 @@ typedef struct
     // static variable 
 
     uint32_t spi_speed;
-    uint8_t spi_mode;
+    spi_master_mode_t spi_mode;
     spi_master_chip_select_polarity_t cs_polarity;
 
 } dac7_cfg_t;
@@ -257,26 +257,6 @@ void dac7_cfg_setup ( dac7_cfg_t *cfg );
  * @description This function initializes all necessary pins and peripherals used for this click.
  */
 DAC7_RETVAL dac7_init ( dac7_t *ctx, dac7_cfg_t *cfg );
-
-/**
- * @brief Generic transfer function.
- *
- * @param ctx          Click object.
- * @param wr_buf       Write data buffer
- * @param wr_len       Number of byte in write data buffer
- * @param rd_buf       Read data buffer
- * @param rd_len       Number of byte in read data buffer
- *
- * @description Generic SPI transfer, for sending and receiving packages
- */
-void dac7_generic_transfer 
-( 
-    dac7_t *ctx, 
-    uint8_t *wr_buf, 
-    uint16_t wr_len, 
-    uint8_t *rd_buf, 
-    uint16_t rd_len 
-);
 
 /**
  * @brief Generic write data function.

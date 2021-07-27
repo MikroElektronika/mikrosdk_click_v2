@@ -11,9 +11,8 @@
  * Initalizes I2C driver, applies default settings and makes an initial log.
  * 
  * ## Application Task  
- * This example demonstrates the use of Color 3 Click board. It reads 
- * reflected color values and displays the results on USART terminal.
- * 
+ * Checks which color is detected by the sensor.
+ * The detected color name is being logged on the USBUART.
  * 
  * \author MikroE Team
  *
@@ -28,6 +27,8 @@
 
 static color3_t color3;
 static log_t logger;
+static uint8_t is_color;
+static float color_value;
 
 void application_init ( void )
 {
@@ -59,25 +60,58 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    uint16_t red_data;
-    uint16_t green_data;
-    uint16_t blue_data;
-    uint16_t clear_data;
+    color_value = color3_get_color_value( &color3 );
+    is_color = color3_get_color( color_value );
 
-    clear_data = color3_read_clear_data( &color3 );
-    log_printf( &logger, " Clear: %f\r\n", clear_data );
+    switch( is_color )
+    {
+        case COLOR3_ORANGE_COLOR_FLAG:
+        {
+            log_printf( &logger, "--- Color: ORANGE\r\n" );
+            break;
+        }
+        case COLOR3_RED_COLOR_FLAG:
+        {
+            log_printf( &logger, "--- Color: RED\r\n" );
+            break;
+        }
+        case COLOR3_PINK_COLOR_FLAG:
+        {
+            log_printf( &logger, "--- Color: PINK\r\n" );
+            break;
+        }
+        case COLOR3_PURPLE_COLOR_FLAG:
+        {
+            log_printf( &logger, "--- Color: PURPLE\r\n" );
+            break;
+        }
+        case COLOR3_BLUE_COLOR_FLAG:
+        {
+            log_printf( &logger, "--- Color: BLUE\r\n" );
+            break;
+        }
+        case COLOR3_CYAN_COLOR_FLAG:
+        {
+            log_printf( &logger, "--- Color: CYAN\r\n" );
+            break;
+        }
+        case COLOR3_GREEN_COLOR_FLAG:
+        {
+            log_printf( &logger, "--- Color: GREEN\r\n" );
+            break;
+        }
+        case COLOR3_YELLOW_COLOR_FLAG:
+        {
+            log_printf( &logger, "--- Color: YELLOW\r\n" );
+            break;
+        }
+        default:
+        {
+            break;
+        }
+    }
 
-    red_data = color3_read_red_data( &color3 );
-    log_printf( &logger, " Red: %d\r\n", red_data);
-
-    green_data = color3_read_green_data( &color3 );
-    log_printf( &logger, " Green: %d\r\n", green_data );
-
-    blue_data = color3_read_blue_data( &color3 );
-    log_printf( &logger, " Blue: %d\r\n", blue_data );
-
-    log_printf( &logger, "-----------------\r\n" );
-    Delay_ms( 500 );
+    Delay_ms( 300 );
 }
 
 void main ( void )

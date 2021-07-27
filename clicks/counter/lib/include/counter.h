@@ -219,7 +219,7 @@ typedef struct
     // static variable 
 
     uint32_t spi_speed;
-    uint8_t spi_mode;
+    spi_master_mode_t spi_mode;
     spi_master_chip_select_polarity_t cs_polarity;
 
 } counter_cfg_t;
@@ -322,7 +322,7 @@ void counter_write_mdr1 ( counter_t *ctx, uint8_t settings );
  *
  * @description This function writes data into DTR, using click object.
  */
-void counter_write_dtr ( counter_t *ctx, uint8_t buffer );
+void counter_write_dtr ( counter_t *ctx, uint8_t* buffer );
 
 /**
  * @brief Loads CNTR from DTR
@@ -381,7 +381,7 @@ uint8_t counter_read_mdr1 ( counter_t *ctx );
  * 
  * @description This function reads OTR, using click object.
  */
-uint8_t counter_read_otr ( counter_t *ctx );
+int32_t counter_read_otr ( counter_t *ctx );
 
 /**
  * @brief Reads CNTR
@@ -391,7 +391,17 @@ uint8_t counter_read_otr ( counter_t *ctx );
  * 
  * @description This function reads CNTR, using click object.
  */
-uint8_t counter_read_cntr ( counter_t *ctx );
+int32_t counter_read_cntr ( counter_t *ctx );
+
+/**
+ * @brief Reads DTR
+ *
+ * @param ctx          Click object.
+ * @returns            DTR register data.
+ * 
+ * @description This function reads DTR, using click object.
+ */
+int32_t counter_read_dtr ( counter_t *ctx );
 
 /**
  * @brief Reads STR

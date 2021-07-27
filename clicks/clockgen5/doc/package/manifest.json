@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Clock generator",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Clock Gen 5 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.clockgen5",
+    "product_link": "https://www.mikroe.com/clock-gen-5-click",
+    "short_description": "Clock Gen 5 Click is a compact add-on board that contains a digital programmable oscillator solution. This board features the LTC6903, a low-power self-contained digital frequency source providing a precision frequency from 1kHz to 68MHz set through a 3-wire SPI digital interface from Analog Devices. ",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "related_projects":[
+        4095
+    ],
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.0"
+}

@@ -439,6 +439,7 @@ void clockgen_cfg_setup ( clockgen_cfg_t *cfg );
 
 /**
  * @brief Initialization function.
+ *
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
@@ -545,16 +546,14 @@ void clockgen_set_params ( clockgen_t *ctx, uint8_t clk_pll_num, clockgen_params
 void clockgen_get_params ( clockgen_t *ctx, uint8_t clk_pll_num, clockgen_params_t *param_group );
 
 /**
- * @brief Function for setting clock divider
- *
+ * @brief Function for setting clock frequency on specific clock
+ * 
  * @param ctx               Click object.  
  * @param clk_num           Clock number.
- * @param divider           Divider value.
- * @param num               Nominator value.
- * @param denom             Denominator value.
- * @param factor            R divider.
+ * @param pll_num           Pll number.
+ * @param freq              Frequency to be set in MHz.
  *
- * @description This function sets clock divider
+ * @description This function sets clock frequency on specific clock.
  */
 void clockgen_set_frequency ( clockgen_t *ctx, uint8_t clk_num, uint8_t pll_num, uint32_t freq );
 
@@ -565,21 +564,24 @@ void clockgen_set_frequency ( clockgen_t *ctx, uint8_t clk_num, uint8_t pll_num,
  * @param clk_num           Clock number.
  * @param mult              Multiplier value.
  * @param num               Nominator value.
- * @param denom             Denominator value.
  *
  * @description This function sets pll.
+ * @note @param denom             Denominator value.
  */
 void clockgen_setup_pll ( clockgen_t *ctx, uint8_t pll, uint8_t mult, uint32_t num );
 
 /**
- * @brief Function for setting clock frequency on specific clock
- * 
+ * @brief Function for setting clock divider
+ *
  * @param ctx               Click object.  
  * @param clk_num           Clock number.
- * @param pll_num           Pll number.
- * @param freq              Frequency to be set in MHz.
+ * @param divider           Divider value.
+ * @param num               Nominator value.
  *
- * @description This function sets clock frequency on specific clock.
+ * @description This function sets clock divider
+ * @note
+ * @param denom             Denominator value.
+ * @param factor            R divider.
  */
 void clockgen_setup_multisyinth ( clockgen_t *ctx, uint8_t clk_num, uint32_t divider, uint32_t num );
 

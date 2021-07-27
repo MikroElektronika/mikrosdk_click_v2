@@ -13,7 +13,7 @@
  * 
  * ## Application Task  
  * Checks which color is detected by the sensor.
- * The detected color message is logged on the USBUART.
+ * The name of the detected color is logged on the USBUART.
  *
  * 
  * \author MikroE Team

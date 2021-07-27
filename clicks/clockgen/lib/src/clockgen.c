@@ -49,7 +49,7 @@ void clockgen_cfg_setup ( clockgen_cfg_t *cfg )
 
 CLOCKGEN_RETVAL clockgen_init ( clockgen_t *ctx, clockgen_cfg_t *cfg )
 {
-     i2c_master_config_t i2c_cfg;
+    i2c_master_config_t i2c_cfg;
 
     i2c_master_configure_default( &i2c_cfg );
     i2c_cfg.speed  = cfg->i2c_speed;
@@ -65,7 +65,7 @@ CLOCKGEN_RETVAL clockgen_init ( clockgen_t *ctx, clockgen_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
-
+    
     return CLOCKGEN_OK;
 }
 
@@ -87,9 +87,10 @@ void clockgen_default_cfg ( clockgen_t *ctx )
     tx_val = 0x0C;
     clockgen_generic_write( ctx, CLOCKGEN_REG_PLL_IN_SRC, &tx_val, 1 );
 
-    clockgen_generic_write( ctx, CLOCKGEN_REG_VCXO_PARAM_B7_0, 0, 1 );
-    clockgen_generic_write( ctx, CLOCKGEN_REG_VCXO_PARAM_B15_8, 0, 1 );
-    clockgen_generic_write( ctx, CLOCKGEN_REG_VCXO_PARAM_B21_16, 0, 1 );
+    tx_val = 0;
+    clockgen_generic_write( ctx, CLOCKGEN_REG_VCXO_PARAM_B7_0, &tx_val, 1 );
+    clockgen_generic_write( ctx, CLOCKGEN_REG_VCXO_PARAM_B15_8, &tx_val, 1 );
+    clockgen_generic_write( ctx, CLOCKGEN_REG_VCXO_PARAM_B21_16, &tx_val, 1 );
 
     tx_val = CLOCKGEN_RESET_PLLA | CLOCKGEN_RESET_PLLB;
     clockgen_generic_write( ctx, CLOCKGEN_REG_PLL_RST, &tx_val, 1 );

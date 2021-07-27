@@ -1,0 +1,8 @@
+type: subdirs
+
+project: CO
+
+subdirs: {
+    lib
+    example
+}

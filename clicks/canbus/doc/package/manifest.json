@@ -1,0 +1,33 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "CAN",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "CAN Bus click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.canbus",
+    "product_link": "https://www.mikroe.com/can-bus-click",
+    "short_description": "CAN Bus Click is a compact add-on board that provides a link between the CAN protocol controller and the physical wires of the bus lines in a control area network (CAN). This board features the MAX13054, an industry-standard, high-speed CAN transceiver with extended ±80V fault protection from Maxim Integrated.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}

@@ -3,20 +3,22 @@
  * \brief Counter Click example
  * 
  * # Description
- * Measuring RPM and speed of DC motor shafts
+ * This application measures the speed and the position of the DC motor shafts.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes driver init and chip init
+ * Initializes driver and configures the click board.
  * 
  * ## Application Task  
- * This application reads data from CNTR.
+ * Reads data from the CNTR register and calculates the speed of the motor in Rad/s.
+ * All data is being displayed on the USB UART terminal where you can track their changes.
  * The CNTR is a software configurable 8, 16, 24 or 32-bit up/down counter which
  * counts the up/down pulses resulting from the quadrature clocks applied at the
- * A and B inputs, or alternatively, in non-quadrature mode, pulses applied at
- * the A input.
+ * A and B inputs, or alternatively, in non-quadrature mode, pulses applied at the A input.
  * 
+ * ## NOTE
+ * An appropriate motor with optical encoder needs to be connected to the click board.
  * 
  * \author MikroE Team
  *
@@ -32,7 +34,9 @@
 static counter_t counter;
 static log_t logger;
 
-static uint8_t count;
+static int32_t count;
+static int32_t count_old;
+static float speed;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -62,8 +66,13 @@ void application_init ( void )
 void application_task ( void )
 {
     count = counter_read_cntr( &counter );
-    log_printf( &logger, " %d\r\n",  count );
-    Delay_ms( 500 );
+    log_printf( &logger, "Counter: %ld\r\n",  count );
+    speed = ( float ) ( count - count_old ) / 3600.0;
+    speed *= 6.283185;
+    log_printf( &logger, "Speed: %.4f Rad/s\r\n",  speed );
+    count_old = count;
+    log_printf( &logger, "-------------------------\r\n" );
+    Delay_ms( 1000 );
 }
 
 void main ( void )

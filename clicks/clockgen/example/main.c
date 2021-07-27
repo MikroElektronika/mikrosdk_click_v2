@@ -39,12 +39,11 @@ void application_init ( void )
 {
     log_cfg_t log_cfg;
     clockgen_cfg_t cfg;
-
-    //  Logger initialization.
-
+    
+    // Logger initialization.
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.baud = 115200;
     log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 

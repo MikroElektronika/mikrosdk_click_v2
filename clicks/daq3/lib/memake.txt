@@ -1,0 +1,36 @@
+type: library
+
+target: lib_daq3
+
+sources: {
+    src/daq3.c
+}
+
+headers: {
+    include/daq3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/daq3.h) dst(include/daq3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Daq3

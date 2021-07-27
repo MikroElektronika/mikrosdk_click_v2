@@ -1,33 +1,40 @@
 {
-  "architecture": "ARM",
-  "category": "Optical",
-  "changelog": "Resources/CHANGELOG.md",
-  "contains": [
-    "libraries",
-    "hex_files",
-    "examples"
-  ],
-  "dependency_list": [
-  ],
-  "details": "Resources/DETAILS.md",
-  "display_name": "Color 9 click",
-  "example_list": [
-    {
-      "project_path": "Examples/example"
-    }
-  ],
-  "help": "Help/doc",
-  "icon": "Resources/click_icon.png",
-  "license": {
-    "file_path": "",
-    "id": "46"
-  },
-  "name": "mikroe.click.color9",
-  "product_link": "https://www.mikroe.com/color-9-click",
-  "short_description": "Color 9 Click is a very accurate color sensing Click board which features the APDS-9250, IR and ambient light sensor, from Broadcom. It contains a specially designed matrix of photosensitive elements, which can sense red, green, blue and IR component.",
-  "supported_compiler": "mikroC",
-  "type": "Library",
-  "version": "2.0.0.2"
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Optical",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Color 9 click",
+    "example_list": [
+      {
+        "project_path": "Examples/example"
+      }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+      "file_path": "",
+      "id": "46"
+    },
+    "name": "mikroe.click.color9",
+    "product_link": "https://www.mikroe.com/color-9-click",
+    "short_description": "Color 9 Click is a very accurate color sensing Click board which features the APDS-9250, IR and ambient light sensor, from Broadcom. It contains a specially designed matrix of photosensitive elements, which can sense red, green, blue and IR component.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2887
+    ],
+    "version": "2.0.0.4"
 }
+
+
 
 
