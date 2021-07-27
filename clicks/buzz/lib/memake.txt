@@ -2,8 +2,6 @@ type: library
 
 target: lib_buzz
 
-alias: Click.Buzz
-
 sources: {
     src/buzz.c
 }
@@ -29,13 +27,10 @@ depends: {
     MikroSDK.Driver
 }
 
-uses: {
-    MikroC.Core
-}
-
 others: {
     ../README.md
     ../DETAILS.md
     ../CHANGELOG.md
-    ../build.bat
 }
+
+alias: Click.BUZZ

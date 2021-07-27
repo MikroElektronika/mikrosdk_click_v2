@@ -1,0 +1,7 @@
+type: subdirs
+project: ButtonR
+
+subdirs: {
+    lib
+    example
+}

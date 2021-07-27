@@ -1,0 +1,8 @@
+type: subdirs
+
+project: ButtonAlarm
+
+subdirs: {
+    lib
+    example
+}

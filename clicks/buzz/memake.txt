@@ -1,5 +1,5 @@
 type: subdirs
-project: Buzz
+project: BUZZ
 
 subdirs: {
     lib

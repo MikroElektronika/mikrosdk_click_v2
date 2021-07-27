@@ -1,0 +1,36 @@
+type: library
+
+target: lib_buttong
+
+sources: {
+    src/buttong.c
+}
+
+headers: {
+    include/buttong.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/buttong.h) dst(include/buttong.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.ButtonG

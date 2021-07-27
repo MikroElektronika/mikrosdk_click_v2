@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Pushbutton/Switches",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Button R click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.buttonr",
+    "product_link": "https://www.mikroe.com/button-r-click",
+    "short_description": "Button R click is the simplest solution for adding a single pushbutton to your design. The button itself is transparent, 6.8mm in diameter and has a red LED backlight. When pressed, it sends an interrupt signal to the target board microcontroller. The backlight LED is controlled separately through the mikroBUS PWM pin, so you can program all kinds of patterns (varying level of light intensity or rate of blinking on subsequent button presses). The board can use either a 3.3V or a 5V power supply.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+	"related_projects":[
+        1473
+    ],
+    "version": "2.0.0.0"
+}

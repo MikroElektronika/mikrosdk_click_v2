@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Buck",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Buck 10 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.buck10",
+    "product_link": "https://www.mikroe.com/buck-10-click",
+    "short_description": "Buck 10 Click is a high-efficiency step-down converter which provides a highly regulated output voltage derived from the connected power source, rated from 4V to 18V. The regulated output voltage can be selected between two values: 3.3V and 5V. These are voltage values ​​that are most commonly used in many embedded designs. This click is based around an integrated DC-DC converter, labeled as MPM3632C.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "related_projects":[
+        2823
+    ],
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.0"
+}

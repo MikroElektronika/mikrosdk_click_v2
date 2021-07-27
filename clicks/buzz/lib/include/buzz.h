@@ -1,48 +1,73 @@
-/*
- * MikroSDK - MikroE Software Development Kit
- * Copyright© 2020 MikroElektronika d.o.o.
- * 
- * Permission is hereby granted, free of charge, to any person 
- * obtaining a copy of this software and associated documentation 
- * files (the "Software"), to deal in the Software without restriction, 
- * including without limitation the rights to use, copy, modify, merge, 
- * publish, distribute, sublicense, and/or sell copies of the Software, 
- * and to permit persons to whom the Software is furnished to do so, 
- * subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be 
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
- * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE 
- * OR OTHER DEALINGS IN THE SOFTWARE. 
- */
+/****************************************************************************
+** Copyright (C) 2020 MikroElektronika d.o.o.
+** Contact: https://www.mikroe.com/contact
+**
+** Permission is hereby granted, free of charge, to any person obtaining a copy
+** of this software and associated documentation files (the "Software"), to deal
+** in the Software without restriction, including without limitation the rights
+** to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+** copies of the Software, and to permit persons to whom the Software is
+** furnished to do so, subject to the following conditions:
+** The above copyright notice and this permission notice shall be
+** included in all copies or substantial portions of the Software.
+**
+** THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+** EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+** OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+** IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+** DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
+** OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+**  USE OR OTHER DEALINGS IN THE SOFTWARE.
+****************************************************************************/
 
 /*!
- * \file
- *
- * \brief This file contains API for Buzz 2 Click driver.
- *
- * \addtogroup buzz Buzz 2 Click Driver
- * @{
+ * @file buzz.h
+ * @brief This file contains API for BUZZ Click Driver.
  */
-// ----------------------------------------------------------------------------
 
 #ifndef BUZZ_H
 #define BUZZ_H
+
+#ifdef __cplusplus
+extern "C"{
+#endif
 
 #include "drv_digital_out.h"
 #include "drv_digital_in.h"
 #include "drv_pwm.h"
 
-// -------------------------------------------------------------- PUBLIC MACROS 
+/*!
+ * @addtogroup buzz BUZZ Click Driver
+ * @brief API for configuring and manipulating BUZZ Click driver.
+ * @{
+ */
+
 /**
- * \defgroup macros Macros
- * \{
+ * @defgroup buzz_set BUZZ PWM Settings
+ * @brief Settings for configuration of BUZZ Click driver.
+ */
+
+/**
+ * @addtogroup buzz_cfg
+ * @{
+ */
+
+/**
+ * @brief BUZZ default PWM frequency.
+ * @details Specified setting for setting default PWM frequency of BUZZ Click driver.
+ */
+#define BUZZ_DEF_FREQ     5000
+
+/*! @} */ // buzz_cfg
+
+/**
+ * @brief Buzz frequency.
+ * @details Seting frequencies for BUZZ Click.
+ */
+
+/**
+ * @addtogroup buzz_freq
+ * @{
  */
 #define BUZZ_NOTE_C2  65
 #define BUZZ_NOTE_Db2 69
@@ -120,142 +145,171 @@
 #define BUZZ_NOTE_Db8 4435
 #define BUZZ_NOTE_D8  4699
 #define BUZZ_NOTE_Eb8 4978
-/** \} */
+
+/*! @} */ // buzz_freq
 
 /**
- * \defgroup map_mikrobus MikroBUS
- * \{
+ * @defgroup buzz_map BUZZ MikroBUS Map
+ * @brief MikroBUS pin mapping of BUZZ Click driver.
+ */
+
+/**
+ * @addtogroup buzz_map
+ * @{
+ */
+
+
+
+/**
+ * @brief MikroBUS pin mapping.
+ * @details Mapping pins of BUZZ Click to the selected MikroBUS.
  */
 #define BUZZ_MAP_MIKROBUS( cfg, mikrobus ) \
-  cfg.pwm = MIKROBUS( mikrobus, MIKROBUS_PWM )
-/** \} */
+    cfg.pwm = MIKROBUS( mikrobus, MIKROBUS_PWM )
+
+/*! @} */ // buzz_map
+/*! @} */ // buzz
 
 /**
- * \defgroup error_code Error Code
- * \{
- */
-#define BUZZ_RETVAL  uint8_t
-
-#define BUZZ_OK           0x00
-#define BUZZ_INIT_ERROR   0xFF
-/** \} */
-
-/** \} */ // End group macro 
-// --------------------------------------------------------------- PUBLIC TYPES
-/**
- * \defgroup type Types
- * \{
+ * @brief BUZZ Click driver selector.
+ * @details Selects target driver interface of BUZZ Click driver.
  */
 
 /**
- * @brief Click ctx object definition.
+ * @brief BUZZ Click context object.
+ * @details Context object definition of BUZZ Click driver.
  */
-typedef struct
+typedef struct 
 {
-       
-    // Modules 
+    // Modules
 
-    pwm_t pwm;
+    pwm_t pwm;                                      /**< PWM driver object. */
 
-    // ctx variable 
+    // ctx variable
 
-    uint32_t  pwm_freq;
+    uint32_t pwm_freq;                              /**< PWM frequency value. */
 
 } buzz_t;
 
 /**
- * @brief Click configuration structure definition.
+ * @brief BUZZ Click configuration object.
+ * @details Configuration object definition of BUZZ Click driver.
  */
-typedef struct
+typedef struct 
 {
-    // Communication gpio pins 
+    // Communication gpio pins
 
-    pin_name_t pwm;
+    pin_name_t pwm;                                 /**< PWM pin. */
 
-    // static variable 
+    // Static variable
 
-    uint32_t  dev_pwm_freq;
+    uint32_t dev_pwm_freq;                          /**< PWM frequency value. */
 
 } buzz_cfg_t;
 
-/** \} */ // End types group
-// ----------------------------------------------- PUBLIC FUNCTION DECLARATIONS
-
 /**
- * \defgroup public_function Public function
- * \{
+ * @brief BUZZ Click return value data.
+ * @details Predefined enum values for driver return values.
  */
- 
-#ifdef __cplusplus
-extern "C"{
-#endif
+typedef enum
+{
+   BUZZ_OK = 0,
+   BUZZ_ERROR = -1
+
+} buzz_return_value_t;
+
+/*!
+ * @addtogroup buzz BUZZ Click Driver
+ * @brief API for configuring and manipulating BUZZ Click driver.
+ * @{
+ */
 
 /**
- * @brief Config Object Initialization function.
- *
- * @param cfg  Click configuration structure.
- *
- * @description This function initializes click configuration structure to init state.
- * @note All used pins will be set to unconnected state.
+ * @brief BUZZ configuration object setup function.
+ * @details This function initializes click configuration structure to initial
+ * values.
+ * @param[out] cfg : Click configuration structure.
+ * See #buzz_cfg_t object definition for detailed explanation.
+ * @return Nothing.
+ * @note The all used pins will be set to unconnected state.
  */
 void buzz_cfg_setup ( buzz_cfg_t *cfg );
 
 /**
- * @brief Initialization function.
- * @param ctx Click object.
- * @param cfg Click configuration structure.
- * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @brief BUZZ initialization function.
+ * @details This function initializes all necessary pins and peripherals used
+ * for this click board.
+ * @param[out] ctx : Click context object.
+ * See #buzz_t object definition for detailed explanation.
+ * @param[in] cfg : Click configuration structure.
+ * See #buzz_cfg_t object definition for detailed explanation.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ *
+ * See #err_t definition for detailed explanation.
+ * @note None.
  */
-BUZZ_RETVAL buzz_init ( buzz_t *ctx, buzz_cfg_t *cfg );
+err_t buzz_init ( buzz_t *ctx, buzz_cfg_t *cfg );
 
 /**
- * @brief Play sound function.
+ * @brief BUZZ sets PWM duty cycle.
+ * @details This function sets the PWM duty cycle in percentages ( Range[ 0..1 ] ).
+ * @param[out] ctx : Click context object.
+ * See #buzz_t object definition for detailed explanation.
+ * @param[in] duty_ratio : PWM duty_ratio.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
  *
- * @param ctx  Click object.
- * @param freq  Buzz sound frequency.
- * @param level  Buzz sound level. ( min = 1, max = 1000 )
- * @param duration  Buzz sound duration in miliseconds.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t buzz_set_duty_cycle ( buzz_t *ctx, float duty_cycle );
+
+/**
+ * @brief BUZZ stop PWM module.
+ * @details This function stops the PWM moudle output.
+ * @param[out] ctx : Click context object.
+ * See #buzz_t object definition for detailed explanation.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
  *
- * @description This function plays sound on buzzer.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t buzz_pwm_stop ( buzz_t *ctx );
+
+/**
+ * @brief BUZZ start PWM module.
+ * @details This function starts the PWM moudle output.
+ * @param[out] ctx : Click context object.
+ * See #buzz_t object definition for detailed explanation.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ *
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t buzz_pwm_start ( buzz_t *ctx );
+
+/**
+ * @brief BUZZ Play sound function.
+ * @details This function plays sound on buzzer.
+ * @param[out] ctx : Click context object.
+ * See #buzz_t object definition for detailed explanation.
+ * @param[in] freq : Buzz sound frequency.
+ * @param[in] level : Buzz sound level. ( min = 1, max = 1000 )
+ * @param[in] duration : Buzz sound duration in miliseconds.
+ * @return Nothing.
+ *
+ * @note None.
  */
 void buzz_play_sound ( buzz_t *ctx, uint16_t freq, uint16_t level, uint16_t duration );
-
-/**
- * @brief Generic sets PWM duty cycle.
- *
- * 
- * @param ctx          Click object.
- * @param duty_cycle   Duty cycle.
- *
- * @description This function sets the PWM duty cycle.
- */
-void buzz_set_duty_cycle ( buzz_t *ctx, float duty_cycle );
-
-/**
- * @brief Stop PWM module.
- *
- * @param ctx Click object.
- *
- * @description This function stops PWM module.
- */
-void buzz_pwm_stop ( buzz_t *ctx );
-
-/**
- * @brief Start PWM module.
- *
- * @param ctx  Click object.
- *
- * @description This function starts PWM module.
- */
-void buzz_pwm_start ( buzz_t *ctx );
 
 #ifdef __cplusplus
 }
 #endif
-#endif  // _BUZZ_H_
+#endif // BUZZ_H
 
-/** \} */ // End public_function group
-/// \}    // End click Driver group  
-/*! @} */
-// ------------------------------------------------------------------------- END
+/*! @} */ // buzz
+
+// ------------------------------------------------------------------------ END

@@ -1,0 +1,8 @@
+type: subdirs
+
+project: ButtonY
+
+subdirs: {
+    lib
+    example
+}

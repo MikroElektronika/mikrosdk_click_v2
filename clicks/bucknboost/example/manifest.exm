@@ -1,0 +1,8 @@
+{
+    "name": "Buck n Boost Click",
+    "description": "Buck & Boost Click is a compact add-on board that contains a configurable power management device. This board features the MIC7401, a highly-integrated power-management IC featuring five synchronous buck regulators, one boost regulator, and a high-speed I2C interface with an internal EEPROM memory from Microchip.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","MIC7401"],
+    "category" : ["Buck-Boost"]
+}

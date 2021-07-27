@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Buck-Boost",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Buck n Boost click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.bucknboost",
+    "product_link": "https://www.mikroe.com/buck-and-boost-click",
+    "short_description": "Buck & Boost Click is a compact add-on board that contains a configurable power management device. This board features the MIC7401, a highly-integrated power-management IC featuring five synchronous buck regulators, one boost regulator, and a high-speed I2C interface with an internal EEPROM memory from Microchip.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        3815
+    ],
+    "version": "2.0.0.0"
+}

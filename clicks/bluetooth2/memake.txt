@@ -1,0 +1,8 @@
+type: subdirs
+
+project: Bluetooth2
+
+subdirs: {
+    lib
+    example
+}

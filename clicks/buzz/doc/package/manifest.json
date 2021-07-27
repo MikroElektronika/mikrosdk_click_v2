@@ -11,7 +11,7 @@
     "dependency_list": [
     ],
     "details": "Resources/DETAILS.md",
-    "display_name": "BUZZ clicks",
+    "display_name": "BUZZ click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -25,13 +25,12 @@
     },
     "name": "mikroe.click.buzz",
     "product_link": "https://www.mikroe.com/buzz-click",
-    "short_description": "BUZZ Click is an accessory board in mikroBus™ form factor. Board features a piezo speaker capable of emitting audio signals.",
+    "short_description": "BUZZ Click is an accessory board in mikroBus™ form factor. Board features a piezo speaker capable of emitting audio signals.Buzzer’s resonant frequency is 3.8kHz (where you can expect it’s best performance).",
     "supported_compiler": "mikroC AI",
     "type": "Library",
-    "_type": "mikroSDK Library",
+    "_type":"mikroSDK Library",
     "related_projects":[
-        206,2129
+        206
     ],
-    "version": "2.0.0.1"
+    "version": "2.0.0.3"
 }
-

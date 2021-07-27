@@ -1,0 +1,8 @@
+{
+    "name": "Button R Click",
+    "description": "Button R click is the simplest solution for adding a single pushbutton to your design. The button itself is transparent, 6.8mm in diameter and has a red LED backlight. When pressed, it sends an interrupt signal to the target board microcontroller. The backlight LED is controlled separately through the mikroBUS PWM pin, so you can program all kinds of patterns (varying level of light intensity or rate of blinking on subsequent button presses). The board can use either a 3.3V or a 5V power supply.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","LED PLCC-2"],
+    "category" : ["Pushbutton/Switches"]
+}

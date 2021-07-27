@@ -1,0 +1,36 @@
+type: library
+
+target: lib_buttonpower
+
+sources: {
+    src/buttonpower.c
+}
+
+headers: {
+    include/buttonpower.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/buttonpower.h) dst(include/buttonpower.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.ButtonPower

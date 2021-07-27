@@ -1,0 +1,36 @@
+type: library
+
+target: lib_buzz2
+
+sources: {
+    src/buzz2.c
+}
+
+headers: {
+    include/buzz2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/buzz2.h) dst(include/buzz2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Buzz2
