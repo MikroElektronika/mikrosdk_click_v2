@@ -1,0 +1,8 @@
+{
+    "name": "Hydrogen Click",
+    "description": "Hydrogen click carries an MQ-8 sensor for hydrogen (H2). The gas sensing layer on the sensor unit is made of tin dioxide (SnO2), which has lower conductivity in clean air.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","MQ-8"],
+    "category" : ["Gas"]
+}

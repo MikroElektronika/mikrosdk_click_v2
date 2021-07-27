@@ -1,0 +1,36 @@
+type: library
+
+target: lib_ism
+
+sources: {
+    src/ism.c
+}
+
+headers: {
+    include/ism.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/ism.h) dst(include/ism.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Ism

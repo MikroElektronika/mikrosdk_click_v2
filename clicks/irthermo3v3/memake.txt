@@ -1,0 +1,7 @@
+type: subdirs
+project: IrThermo3V3
+
+subdirs: {
+    lib
+    example
+}

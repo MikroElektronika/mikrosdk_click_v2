@@ -10,7 +10,7 @@ Index Counter Click is a simple prototyping high precision Hall-Effect switch so
 </p>
 
 
-[click Product page](<https://www.mikroe.com/index-counter-click>)
+[click Product page](https://www.mikroe.com/index-counter-click)
 
 ---
 

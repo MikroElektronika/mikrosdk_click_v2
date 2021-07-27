@@ -1,0 +1,8 @@
+{
+    "name": "Heart Rate 10 Click",
+    "description": "Heart Rate 10 Click is a compact add-on board suitable for heart rate monitoring applications. This board features the MAX86916, an integrated optical sensor with applications in bio-sensing, proximity, and color from Maxim Integrated.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","MAX86916"],
+    "category" : ["Biometrics"]
+}

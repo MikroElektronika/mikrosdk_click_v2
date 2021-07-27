@@ -70,7 +70,7 @@ void heartrate2_cfg_setup ( heartrate2_cfg_t *cfg )
 
 HEARTRATE2_RETVAL heartrate2_init ( heartrate2_t *ctx, heartrate2_cfg_t *cfg )
 {
-     i2c_master_config_t i2c_cfg;
+    i2c_master_config_t i2c_cfg;
 
     i2c_master_configure_default( &i2c_cfg );
     i2c_cfg.speed  = cfg->i2c_speed;
@@ -108,39 +108,39 @@ void heartrate2_default_cfg ( heartrate2_t *ctx, uint8_t cfg_led )
 
     ppg_cfg_object.alc = HEARTRATE2_PPG_CFG_ALC_DS;
     ppg_cfg_object.offset = HEARTRATE2_PPG_CFG_OFFSET_NO;
-    ppg_cfg_object.ppg_tint = HEARTRATE2_PPG_CFG_TINT_117p3_US;
+    ppg_cfg_object.ppg_tint = HEARTRATE2_PPG_CFG_TINT_58p7_US;
     ppg_cfg_object.led_range = HEARTRATE2_PPG_CFG_LED_RANGE_32k;
-    ppg_cfg_object.smp_rate = HEARTRATE2_PPG_CFG_SMP_RATE_P1_512sps;
-    ppg_cfg_object.smp_freq = HEARTRATE2_PPG_CFG_SMP_AVG_1;
+    ppg_cfg_object.smp_rate = HEARTRATE2_PPG_CFG_SMP_RATE_P1_4096sps;
+    ppg_cfg_object.smp_freq = HEARTRATE2_PPG_CFG_SMP_AVG_8;
 
     switch ( cfg_led )
     {
-    case HEARTRATE2_CONFIG_GREEN:
-    {
-        ledpa_object.green = 0xFF;
-        ledpa_object.ir = 0x00;
-        ledpa_object.red = 0x00;
-        ledsq_object.ledsq1 = HEARTRATE2_LEDSQ_GREEN;
-        break;
-    }
-    case HEARTRATE2_CONFIG_IR:
-    {
-        ledpa_object.green = 0x00;
-        ledpa_object.ir = 0xFF;
-        ledpa_object.red = 0x00;
-        ledsq_object.ledsq1 = HEARTRATE2_LEDSQ_IR;
-        break;
-    }
-    case HEARTRATE2_CONFIG_RED:
-    {
-        ledpa_object.green = 0x00;
-        ledpa_object.ir = 0x00;
-        ledpa_object.red = 0xFF;
-        ledsq_object.ledsq1 = HEARTRATE2_LEDSQ_RED;
-        break;
-    }
-    default:
-        return;
+        case HEARTRATE2_CONFIG_GREEN:
+        {
+            ledpa_object.green = 0xFF;
+            ledpa_object.ir = 0x00;
+            ledpa_object.red = 0x00;
+            ledsq_object.ledsq1 = HEARTRATE2_LEDSQ_GREEN;
+            break;
+        }
+        case HEARTRATE2_CONFIG_IR:
+        {
+            ledpa_object.green = 0x00;
+            ledpa_object.ir = 0xFF;
+            ledpa_object.red = 0x00;
+            ledsq_object.ledsq1 = HEARTRATE2_LEDSQ_IR;
+            break;
+        }
+        case HEARTRATE2_CONFIG_RED:
+        {
+            ledpa_object.green = 0x00;
+            ledpa_object.ir = 0x00;
+            ledpa_object.red = 0xFF;
+            ledsq_object.ledsq1 = HEARTRATE2_LEDSQ_RED;
+            break;
+        }
+        default:
+            return;
     }
 
     ledsq_object.ledsq2 = HEARTRATE2_LEDSQ_OFF;
@@ -401,7 +401,7 @@ uint8_t heartrate2_get_gp ( heartrate2_t *ctx )
 
 void heartrate2_set_en ( heartrate2_t *ctx, uint8_t state )
 {
-    digital_out_write( &ctx->int_pin, state );
+    digital_out_write( &ctx->cs, state );
 }
 
 // ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
@@ -410,196 +410,196 @@ static uint8_t heartrate2_bool_check ( uint8_t value )
 {
     switch ( value )
     {
-    case 0x00:
-    {
-        return HEARTRATE2_OK;
-    }
-    case 0x01:
-    {
-        return HEARTRATE2_OK;
-    }
-    default:
-        return HEARTRATE2_ERROR;
+        case 0x00:
+        {
+            return HEARTRATE2_OK;
+        }
+        case 0x01:
+        {
+            return HEARTRATE2_OK;
+        }
+        default:
+            return HEARTRATE2_ERROR;
     }
 }
 
 static uint8_t heartrate2_ppg_tint_check ( uint8_t value )
 {
-        switch ( value )
+    switch ( value )
     {
-    case HEARTRATE2_PPG_CFG_TINT_14p8_US:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_TINT_29p4_US:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_TINT_58p7_US:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_TINT_117p3_US:
-    {
-        return HEARTRATE2_OK;
-    }
-    default:
-        return HEARTRATE2_ERROR;
+        case HEARTRATE2_PPG_CFG_TINT_14p8_US:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_TINT_29p4_US:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_TINT_58p7_US:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_TINT_117p3_US:
+        {
+            return HEARTRATE2_OK;
+        }
+        default:
+            return HEARTRATE2_ERROR;
     }
 }
 
 static uint8_t heartrate2_led_range_check ( uint8_t value )
 {
-        switch ( value )
+    switch ( value )
     {
-    case HEARTRATE2_PPG_CFG_LED_RANGE_4k:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_LED_RANGE_8k:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_LED_RANGE_16k:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_LED_RANGE_32k:
-    {
-        return HEARTRATE2_OK;
-    }
-    default:
-        return HEARTRATE2_ERROR;
+        case HEARTRATE2_PPG_CFG_LED_RANGE_4k:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_LED_RANGE_8k:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_LED_RANGE_16k:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_LED_RANGE_32k:
+        {
+            return HEARTRATE2_OK;
+        }
+        default:
+            return HEARTRATE2_ERROR;
     }
 }
 
 static uint8_t heartrate2_smp_rate_check ( uint8_t value )
 {
-        switch ( value )
+    switch ( value )
     {
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P1_24sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P1_50sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P1_84sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P1_99sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P1_199sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P1_399sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P2_24sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P2_50sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P2_84sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P2_99sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P1_8sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P1_16sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P1_32sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P1_64sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P1_128sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P1_256sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P1_512sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P1_1024sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P1_2048sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_RATE_P1_4096sps:
-    {
-        return HEARTRATE2_OK;
-    }
-    default:
-        return HEARTRATE2_ERROR;
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P1_24sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P1_50sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P1_84sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P1_99sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P1_199sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P1_399sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P2_24sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P2_50sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P2_84sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P2_99sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P1_8sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P1_16sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P1_32sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P1_64sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P1_128sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P1_256sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P1_512sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P1_1024sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P1_2048sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_RATE_P1_4096sps:
+        {
+            return HEARTRATE2_OK;
+        }
+        default:
+            return HEARTRATE2_ERROR;
     }
 }
 
 static uint8_t heartrate2_smo_freq_check ( uint8_t value )
 {
-        switch ( value )
+    switch ( value )
     {
-    case HEARTRATE2_PPG_CFG_SMP_AVG_1:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_AVG_2:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_AVG_4:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_AVG_8:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_AVG_16:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_AVG_32:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_AVG_64:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_PPG_CFG_SMP_AVG_128:
-    {
-        return HEARTRATE2_OK;
-    }
-    default:
-        return HEARTRATE2_ERROR;
+        case HEARTRATE2_PPG_CFG_SMP_AVG_1:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_AVG_2:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_AVG_4:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_AVG_8:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_AVG_16:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_AVG_32:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_AVG_64:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_PPG_CFG_SMP_AVG_128:
+        {
+            return HEARTRATE2_OK;
+        }
+        default:
+            return HEARTRATE2_ERROR;
     }
 }
 
@@ -607,24 +607,24 @@ static uint8_t heartrate2_led_range_curr_check ( uint8_t value )
 {
     switch ( value )
     {
-    case HEARTRATE2_LED_RANGE_CURRENT_31_MA:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_LED_RANGE_CURRENT_62_MA:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_LED_RANGE_CURRENT_93_MA:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_LED_RANGE_CURRENT_124_MA:
-    {
-        return HEARTRATE2_OK;
-    }
-    default:
-        return HEARTRATE2_ERROR;
+        case HEARTRATE2_LED_RANGE_CURRENT_31_MA:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_LED_RANGE_CURRENT_62_MA:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_LED_RANGE_CURRENT_93_MA:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_LED_RANGE_CURRENT_124_MA:
+        {
+            return HEARTRATE2_OK;
+        }
+        default:
+            return HEARTRATE2_ERROR;
     }
 }
 
@@ -632,32 +632,32 @@ static uint8_t heartrate2_sequence_check ( uint8_t value )
 {
     switch ( value )
     {
-    case HEARTRATE2_LEDSQ_GREEN:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_LEDSQ_IR:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_LEDSQ_RED:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_LEDSQ_PILOT_LED1:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_LEDSQ_DIRECT_AMBIENT:
-    {
-        return HEARTRATE2_OK;
-    }
-    case HEARTRATE2_LEDSQ_OFF:
-    {
-        return HEARTRATE2_OK;
-    }
-    default:
-        return HEARTRATE2_ERROR;
+        case HEARTRATE2_LEDSQ_GREEN:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_LEDSQ_IR:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_LEDSQ_RED:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_LEDSQ_PILOT_LED1:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_LEDSQ_DIRECT_AMBIENT:
+        {
+            return HEARTRATE2_OK;
+        }
+        case HEARTRATE2_LEDSQ_OFF:
+        {
+            return HEARTRATE2_OK;
+        }
+        default:
+            return HEARTRATE2_ERROR;
     }
 }
 

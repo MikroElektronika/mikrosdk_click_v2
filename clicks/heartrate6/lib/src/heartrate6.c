@@ -42,7 +42,7 @@ void heartrate6_cfg_setup ( heartrate6_cfg_t *cfg )
     cfg->scl = HAL_PIN_NC;
     cfg->sda = HAL_PIN_NC;
 
-    cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
+    cfg->i2c_speed = I2C_MASTER_SPEED_FULL; 
     cfg->i2c_address = HEARTRATE6_SLAVE_ADDR;
 }
 
@@ -57,7 +57,7 @@ HEARTRATE6_RETVAL heartrate6_init ( heartrate6_t *ctx, heartrate6_cfg_t *cfg )
 
     ctx->slave_address = cfg->i2c_address;
 
-    if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) != I2C_MASTER_SUCCESS )
+    if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_ERROR )
     {
         return HEARTRATE6_INIT_ERROR;
     }
@@ -66,7 +66,7 @@ HEARTRATE6_RETVAL heartrate6_init ( heartrate6_t *ctx, heartrate6_cfg_t *cfg )
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
 
     ctx->res = 0;
-    ctx->wait_time = 30;
+    ctx->wait_time = 0;
 
     return HEARTRATE6_OK;
 }
@@ -74,8 +74,12 @@ HEARTRATE6_RETVAL heartrate6_init ( heartrate6_t *ctx, heartrate6_cfg_t *cfg )
 void heartrate6_default_cfg ( heartrate6_t *ctx )
 {
     heartrate6_reset( ctx );
-    heartrate6_set_freq( ctx, HEARTRATE6_OSC_ACTIVE | HEARTRATE6_LED_FREQ_128HZ | HEARTRATE6_DATAREAD_FREQ_64HZ );
-    heartrate6_write_single_byte( ctx, HEARTRATE6_MEAS_CTRL2_REG, HEARTRATE6_LEDS_PULSED | HEARTRATE6_LED_TIME_600MICROSEC | HEARTRATE6_LED_CURR_3MA );
+    heartrate6_set_freq( ctx, HEARTRATE6_OSC_ACTIVE | 
+                                      HEARTRATE6_LED_FREQ_128HZ | 
+                                      HEARTRATE6_DATAREAD_FREQ_32HZ );
+    heartrate6_write_single_byte( ctx, HEARTRATE6_MEAS_CTRL2_REG, HEARTRATE6_LEDS_PULSED | 
+                                                                                                HEARTRATE6_LED_TIME_300MICROSEC | 
+                                                                                                HEARTRATE6_LED_CURR_20MA );
     heartrate6_start_measure( ctx );
     Delay_100ms( );
     Delay_100ms( );
@@ -150,6 +154,7 @@ void heartrate6_reset ( heartrate6_t *ctx )
 {
     heartrate6_write_single_byte( ctx, HEARTRATE6_RESET_REG, HEARTRATE6_RESET_CMD );
     Delay_100ms();
+    Delay_100ms();
 }
 
 void heartrate6_set_freq ( heartrate6_t *ctx, uint8_t freq_data )
@@ -164,8 +169,7 @@ void heartrate6_set_freq ( heartrate6_t *ctx, uint8_t freq_data )
     {
         ctx->res = 14740.0 * 0.0019;
     }
-    ctx->wait_time = ctx->res;
-    ctx->wait_time += 3;
+    ctx->wait_time = ( uint8_t ) ctx->res;
 }
 
 void heartrate6_get_data ( heartrate6_t *ctx, uint16_t *led_off_data, uint16_t *led_on_data )
@@ -187,9 +191,9 @@ void heartrate6_wait_measure( heartrate6_t *ctx )
 {
     uint8_t cnt;
     
-    for ( cnt = 0; cnt < ctx->wait_time ; cnt++ )
+    for ( cnt = 0; cnt < ctx->wait_time; cnt++ )
     {
-         Delay_1ms();
+         Delay_1ms( );
     }
 }
 

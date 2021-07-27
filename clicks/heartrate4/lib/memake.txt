@@ -1,0 +1,40 @@
+type: library
+
+target: lib_heartrate4
+
+alias: Click.HeartRate4
+
+sources: {
+    src/heartrate4.c
+}
+
+headers: {
+    include/heartrate4.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/heartrate4.h) dst(include/heartrate4.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

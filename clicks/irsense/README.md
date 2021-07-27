@@ -11,7 +11,7 @@ IR Sense click carries the AK9750 quantum-type IR sensor. The click is designed 
   <img src="https://download.mikroe.com/images/click_for_ide/irsense_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ir-sense-click>)
+[click Product page](https://www.mikroe.com/ir-sense-click)
 
 ---
 

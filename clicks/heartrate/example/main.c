@@ -10,16 +10,10 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes heartrate driver and click board
+ * Initializes heartrate driver and set the click board default configuration.
  * 
  * ## Application Task  
- * Reading the value from both Ir and Red diode displaying their average values
- * 
- * ## Note
- * <pre>
- * MCU              : STM32F107VCT6
- * Dev. Board       : Fusion for ARM v8
- * </pre>
+ * Reading values from both Ir and Red diode and displaying their average values on the USB UART.
  * 
  * \author MikroE Team
  *
@@ -35,8 +29,7 @@
 static heartrate_t heartrate;
 static log_t logger;
 
-static uint16_t counter1 = 0;
-static uint8_t  counter2 = 0;
+static uint16_t  counter = 500;
 static uint8_t  sample_num;
 
 static uint16_t ir_buff[ 16 ]  = { 0 };
@@ -74,36 +67,31 @@ void application_task ( void )
     if ( heartrate_data_ready( &heartrate ) )      
     {
         sample_num = heartrate_read_ir_red( &heartrate, ir_buff, red_buff );             
-        if ( sample_num >= 1 )
+        if ( sample_num > 0 )
         {
-
             ir_average = 0;
             red_average = 0;
-            for ( counter1 = 0; counter1 < sample_num; counter1++ )
+            for ( uint8_t cnt = 0; cnt < sample_num; cnt++ )
             {              
-                ir_average += ir_buff[ counter1 ];
-                red_average += red_buff[ counter1 ];
-            }
-                                            
+                ir_average += ir_buff[ cnt ];
+                red_average += red_buff[ cnt ];
+            }                 
             ir_average  /= sample_num;
             red_average /= sample_num;
-            counter2++;
-            if ( counter2 > 100 )
+            counter++;
+            if( red_average > 100 && ir_average > 100 )                
+            {       
+                log_printf( &logger, "%lu;%lu;\r\n", red_average, ir_average );
+                counter = 500;
+            }
+            else
             {
-                if( red_average > 100 && ir_average > 100 )                
-                {       
-                    log_printf( &logger, "Average value of Red LED sensor per 100 samples: %u\r\n", red_average );
-
-                    log_printf( &logger, "Average value of IR LED sensor per 100 samples: %u\r\n", ir_average );
-
-                    counter2 = 0; 
-                }
-                else
+                if ( counter > 500 ) 
                 {
-                    log_printf( &logger, "Place finger on sensor\r\n" );
-                    Delay_ms( 200 );
+                    log_printf( &logger, "Please place your index finger on the sensor.\r\n" );
+                    counter = 0;
                 }
-            }          
+            }   
         }
     }
 }

@@ -10,7 +10,7 @@ IR distance click carries Sharp’s GP2Y0A60SZ0F distance measuring sensor, whic
   <img src="https://download.mikroe.com/images/click_for_ide/irdistance_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ir-distance-click>)
+[click Product page](https://www.mikroe.com/ir-distance-click)
 
 ---
 

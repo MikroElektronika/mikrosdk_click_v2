@@ -11,7 +11,7 @@ Heart rate 3 click is a mikroBUS add-on board whose functionality is determined 
   <img src="https://download.mikroe.com/images/click_for_ide/heartrate3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/heart-rate-3-click>)
+[click Product page](https://www.mikroe.com/heart-rate-3-click)
 
 ---
 

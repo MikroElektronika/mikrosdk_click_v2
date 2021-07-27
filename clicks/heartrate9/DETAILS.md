@@ -8,7 +8,7 @@ The Heart Rate 9 click is a Click board™ which features PIC16F1779 8-bit MCU a
   <img src="https://download.mikroe.com/images/click_for_ide/heartrate9_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/heart-rate-9-click>)
+[click Product page](https://www.mikroe.com/heart-rate-9-click)
 
 ---
 

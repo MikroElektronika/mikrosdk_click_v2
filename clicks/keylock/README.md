@@ -8,7 +8,7 @@ Keylock click carries a processed sealed key lock mechanism that can be set in t
   <img src="https://download.mikroe.com/images/click_for_ide/keylock_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/keylock-click>)
+[click Product page](https://www.mikroe.com/keylock-click)
 
 ---
 

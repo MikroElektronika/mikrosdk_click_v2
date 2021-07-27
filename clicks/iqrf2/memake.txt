@@ -1,0 +1,7 @@
+type: subdirs
+project: iqrf2
+
+subdirs: {
+    lib
+    example
+}

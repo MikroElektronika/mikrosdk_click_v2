@@ -9,7 +9,7 @@ Keylock 2 Click carries antistatic process sealed keylock mechanism that has thr
   <img src="https://download.mikroe.com/images/click_for_ide/keylock2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/keylock-2-click>)
+[click Product page](https://www.mikroe.com/keylock-2-click)
 
 ---
 

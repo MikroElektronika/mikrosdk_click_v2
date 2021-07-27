@@ -8,7 +8,7 @@ Joystick click is a smart navigation key concept based on contactless, magnetic 
   <img src="https://download.mikroe.com/images/click_for_ide/joystick_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/joystick-click>)
+[click Product page](https://www.mikroe.com/joystick-click)
 
 ---
 

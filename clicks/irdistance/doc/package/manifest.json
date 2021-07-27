@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Optical",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,8 +26,15 @@
     "name": "mikroe.click.irdistance",
     "product_link": "https://www.mikroe.com/ir-distance-click",
     "short_description": "IR distance click carries Sharp’s GP2Y0A60SZ0F distance measuring sensor, which comprises of an integrated PSD (position sensitive detector), an infrared LED and a signal processing circuit. The measuring range is between 10 and 150 cm. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over RST and AN pin on the mikroBUS™ line.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        1581
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.3"
 }
+
+
 

@@ -10,7 +10,7 @@ IrThermo 3 click is a device which allows contactless measurement of the object 
   <img src="https://download.mikroe.com/images/click_for_ide/irthermo3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ir-thermo-3-click>)
+[click Product page](https://www.mikroe.com/ir-thermo-3-click)
 
 ---
 

@@ -9,7 +9,7 @@ I2C 1-Wire click carries DS2482-800, a “bridge device” that performs bidirec
 </p>
 
 
-[click Product page](<https://www.mikroe.com/i2c-1-wire-click>)
+[click Product page](https://www.mikroe.com/i2c-1-wire-click)
 
 ---
 

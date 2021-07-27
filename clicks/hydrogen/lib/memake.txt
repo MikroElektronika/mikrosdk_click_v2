@@ -1,0 +1,36 @@
+type: library
+
+target: lib_hydrogen
+
+sources: {
+    src/hydrogen.c
+}
+
+headers: {
+    include/hydrogen.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/hydrogen.h) dst(include/hydrogen.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Hydrogen

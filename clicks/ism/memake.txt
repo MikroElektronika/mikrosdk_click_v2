@@ -1,0 +1,7 @@
+type: subdirs
+project: Ism
+
+subdirs: {
+    lib
+    example
+}

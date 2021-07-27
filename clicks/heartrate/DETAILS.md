@@ -1,4 +1,4 @@
- 
+
 ---
 # Heart Rate click
 
@@ -8,7 +8,7 @@ Heart Rate click is a heart rate monitoring and pulse oximetry measuring Click b
   <img src="https://download.mikroe.com/images/click_for_ide/heartrate_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/heart-rate-click>)
+[click Product page](https://www.mikroe.com/heart-rate-click)
 
 ---
 
@@ -66,7 +66,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes heartrate driver and click board
+> Initializes heartrate driver and set the click board default configuration.
 
 ```c
 
@@ -77,8 +77,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.baud = 9600;
+    log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -96,7 +97,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Reading the value from both Ir and Red diode displaying their average values
+> Reading values from both Ir and Red diode and displaying their average values on the USB UART.
 
 ```c
 
@@ -105,48 +106,36 @@ void application_task ( void )
     if ( heartrate_data_ready( &heartrate ) )      
     {
         sample_num = heartrate_read_ir_red( &heartrate, ir_buff, red_buff );             
-        if ( sample_num >= 1 )
+        if ( sample_num > 0 )
         {
-
             ir_average = 0;
             red_average = 0;
-            for ( counter1 = 0; counter1 < sample_num; counter1++ )
+            for ( uint8_t cnt = 0; cnt < sample_num; cnt++ )
             {              
-                ir_average += ir_buff[ counter1 ];
-                red_average += red_buff[ counter1 ];
-            }
-                                            
+                ir_average += ir_buff[ cnt ];
+                red_average += red_buff[ cnt ];
+            }                 
             ir_average  /= sample_num;
             red_average /= sample_num;
-            counter2++;
-            if ( counter2 > 100 )
+            counter++;
+            if( red_average > 100 && ir_average > 100 )                
+            {       
+                log_printf( &logger, "%lu;%lu;\r\n", red_average, ir_average );
+                counter = 500;
+            }
+            else
             {
-                if( red_average > 100 && ir_average > 100 )                
-                {       
-                    log_printf( &logger, "Average value of Red LED sensor per 100 samples: %u\r\n", red_average );
-
-                    log_printf( &logger, "Average value of IR LED sensor per 100 samples: %u\r\n", ir_average );
-
-                    counter2 = 0; 
-                }
-                else
+                if ( counter > 500 ) 
                 {
-                    log_printf( &logger, "Place finger on sensor\r\n" );
-                    Delay_ms( 200 );
+                    log_printf( &logger, "Please place your index finger on the sensor.\r\n" );
+                    counter = 0;
                 }
-            }          
+            }   
         }
     }
 } 
 
 ```
-
-## Note
-
-> <pre>
-> MCU              : STM32F107VCT6
-> Dev. Board       : Fusion for ARM v8
-> </pre>
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

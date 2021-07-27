@@ -12,7 +12,7 @@ Illuminance click carries a TSL2561 light-to-digital converter with a sensor tha
 </p>
 
 
-[click Product page](<https://www.mikroe.com/illuminance-click>)
+[click Product page](https://www.mikroe.com/illuminance-click)
 
 ---
 

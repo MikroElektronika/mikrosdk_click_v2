@@ -9,7 +9,7 @@ IR Sense 2 click is the infrared sensor Click board™, designed to be used for 
   <img src="https://download.mikroe.com/images/click_for_ide/irsense2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ir-sense-2-click>)
+[click Product page](https://www.mikroe.com/ir-sense-2-click)
 
 ---
 

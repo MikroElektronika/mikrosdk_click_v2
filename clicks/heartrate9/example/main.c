@@ -15,10 +15,9 @@
  *
  * ## Additional Function
  * - static void heartrate9_clear_app_buf ( void ) - Function clears memory of app_buf.
- * - static err_t heartrate9_process ( void ) - The general process of collecting presponce
- *   that a module sends.
+ * - static err_t heartrate9_process ( void ) - The general process of collecting data the module sends.
  *
- * *note:*
+ * @note
  * Data structure is:
  *  > AA;BB;CC;DD;EE; <
  * 
@@ -54,7 +53,7 @@ static void heartrate9_clear_app_buf ( void );
 
 /**
  * @brief Heart Rate 9 data reading function.
- * @details This function reads data from device and concats data to application buffer.
+ * @details This function reads data from device and concatenates data to application buffer.
  *
  * @return @li @c  0 - Read some data.
  *         @li @c -1 - Nothing is read.

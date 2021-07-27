@@ -8,7 +8,7 @@ Heart Rate 8 click is an optical biosensor Click board™, designed for heart-ra
   <img src="https://download.mikroe.com/images/click_for_ide/heartrate8_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/heart-rate-8-click>)
+[click Product page](https://www.mikroe.com/heart-rate-8-click)
 
 ---
 

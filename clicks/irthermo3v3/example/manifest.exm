@@ -1,0 +1,8 @@
+{
+    "name": "IrThermo 3V3 Click",
+    "description": "IrThermo click 3.3V is a contactless temperature measurement device that relies on the accurate thermopile sensor chip, which encompasses both the thermopile sensor element and the ASSP. The ASSP - signal conditioning circuitry features 17bit ADC and powerful DSP which allow high degree of accuracy and wide temperature measurement range. The IrThermo click is equipped with both the 10bit PWM interface and the SMBus/I2C interface.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","MLX90614"],
+    "category" : ["Temperature & humidity"]
+}

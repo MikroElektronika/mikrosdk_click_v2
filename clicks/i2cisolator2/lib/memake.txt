@@ -1,0 +1,40 @@
+type: library
+
+target: lib_i2cisolator2
+
+alias: Click.I2CIsolator2
+
+sources: {
+    src/i2cisolator2.c
+}
+
+headers: {
+    include/i2cisolator2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/i2cisolator2.h) dst(include/i2cisolator2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

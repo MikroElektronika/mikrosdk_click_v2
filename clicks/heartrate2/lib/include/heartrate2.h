@@ -50,8 +50,8 @@
  * \{
  */
 #define HEARTRATE2_MAP_MIKROBUS( cfg, mikrobus ) \
-  cfg.scl  = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
-  cfg.sda  = MIKROBUS( mikrobus, MIKROBUS_SDA ); \
+  cfg.scl = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
+  cfg.sda = MIKROBUS( mikrobus, MIKROBUS_SDA ); \
   cfg.an = MIKROBUS( mikrobus, MIKROBUS_AN ); \
   cfg.cs = MIKROBUS( mikrobus, MIKROBUS_CS ); \
   cfg.int_pin = MIKROBUS( mikrobus, MIKROBUS_INT )

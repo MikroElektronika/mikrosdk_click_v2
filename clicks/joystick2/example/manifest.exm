@@ -2,7 +2,7 @@
     "name": "Joystick 2 Click",
     "description": "Joystick 2 Click is a smart navigation key concept based on SKRHABE010 by Alps, a 4-direction joystick switch with Center-push Function.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","SKRHABE01","PCA9538A"],
     "category" : ["Pushbutton/Switches"] 
 }

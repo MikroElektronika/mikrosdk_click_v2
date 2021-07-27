@@ -3,24 +3,23 @@
  * \brief IR reflect Click example
  * 
  * # Description
- * Example demonstrates use of IR Reflect Click board.
+ * Example demonstrates the use of IR Reflect Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initialization driver enable's - Start write log.
+ * Initialization driver enables - Start write log.
  * 
  * ## Application Task  
  * This is a example which demonstrates the use of IR Reflect Click board.
  * On this type of photointerrupter the infrared emitter and receiver are facing the same direction,
  * the infrared beam from the emitter gets bounced back to the receiver when an object 
  * is placed within the detecting range of the sensor ( optimal range is 3mm ).
- * These sensors are used to detect an object�s presence or motion, such as a piece of paper passing through a printer
- * and counting when sesnor is triggered.
+ * These sensors are used to detect an object's presence or motion, such as a piece of paper passing through a printer
+ * and counting when sensor is triggered.
  * Results are being sent to the Usart Terminal where you can track their changes.
  * Data logs on usb uart when the sensor is triggered.
  * 
-
  * 
  * \author MikroE Team
  *
@@ -74,7 +73,7 @@ void application_task ( void )
     {
         if ( ir_state )
         {
-            log_printf( &logger, "  Counter = %d\n", counter);
+            log_printf( &logger, "  Counter = %u\n", counter);
             counter++;
         }
         ir_state_old = ir_state;

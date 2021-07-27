@@ -1,0 +1,7 @@
+type: subdirs
+project: HydroProbe
+
+subdirs: {
+    lib
+    example
+}

@@ -9,7 +9,7 @@ Heater Click is designed with intention of PCB heater concept testing and useful
   <img src="https://download.mikroe.com/images/click_for_ide/heater_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/heater-click>)
+[click Product page](https://www.mikroe.com/heater-click)
 
 ---
 

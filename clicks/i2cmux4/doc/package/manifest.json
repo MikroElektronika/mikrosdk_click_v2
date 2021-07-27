@@ -1,0 +1,37 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "I2C",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "I2C MUX 4 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.i2cmux4",
+    "product_link": "https://www.mikroe.com/i2c-mux-4-click",
+    "short_description": "I2C MUX 4 Click is a compact add-on board that contains a dual bidirectional translating switch dedicated for applications with I2C slave address conflicts.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type": "mikroSDK Library",
+    "related_projects":[
+        3852
+    ],
+    "version": "2.0.0.1"
+}
+

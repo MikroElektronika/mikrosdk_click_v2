@@ -1,12 +1,12 @@
 \mainpage Main Page
  
 ---
-# Heart rate 2 click
+# Heart Rate 2 click
 
 Heart Rate 2 Click is an add-on board based on MAXM86161 from Maxim Integrated a complete, integrated, optical data acquisition system, ideal for optical pulse oximetry and heart-rate detection applications. The optical readout has a low-noise signal conditioning analog front-end (AFE), including 19-bit ADC, an industry-lead ambient light cancellation (ALC) circuit, and a picket fence detect and replace algorithm.
 
 <p align="center">
-  <img src="@{CLICK_IMAGE_LINK}">
+  <img src="https://download.mikroe.com/images/click_for_ide/heartrate2_click.png">
 </p>
 
 [click Product page](https://www.mikroe.com/heart-rate-2-click)
@@ -25,8 +25,8 @@ Heart Rate 2 Click is an add-on board based on MAXM86161 from Maxim Integrated a
 
 We provide a library for the HeartRate2 Click 
 as well as a demo application (example), developed using MikroElektronika 
-[compilers](http://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
+[compilers](https://shop.mikroe.com/compilers). 
+The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
 
 Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
 
@@ -59,13 +59,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This app measures heart rate.
+> This example demonstrates the use of Heart rate 2 click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Resets device, checks ID and configures device to desired led.
+> Initilizes the driver, resets the device, checks the device ID and applies default settings.
 
 ```c
 
@@ -78,7 +78,7 @@ void application_init ( void )
     //  Logger initialization.
     
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
@@ -88,34 +88,34 @@ void application_init ( void )
     heartrate2_cfg_setup( &cfg );
     HEARTRATE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     heartrate2_init( &heartrate2, &cfg );
-
-    Delay_ms( 100 );
-
+    
+    log_printf( &logger, "Configuring the module...\r\n" );
+    Delay_ms( 1000 );
+    
     heartrate2_set_en( &heartrate2, HEARTRATE2_PIN_HIGH );
-
     Delay_ms( 100 );
-
     heartrate2_soft_reset ( &heartrate2 );
     
     rd_stat = heartrate2_generic_read( &heartrate2, HEARTRATE2_REG_PART_ID );
 
     if ( rd_stat != HEARTRATE2_DEV_ID )
     {
+        log_error( &logger, "---- WRONG ID ----" );
+        log_printf( &logger, "Please restart your system.\r\n" );
         for ( ; ; );
     }
     
-    Delay_ms( 100 );
-    
     heartrate2_default_cfg( &heartrate2, HEARTRATE2_CONFIG_GREEN );
-
-    Delay_ms( 200 );
+    log_printf( &logger, "The module has been configured!\r\n" );
+    Delay_ms( 1000 );
 }
   
 ```
 
 ### Application Task
 
-> Reading fifo data and logs it with time.
+> Reads the data from Green diode and displays the results on USB UART if the measured data
+> is above defined threshold, otherwise, it displays a desired message on the terminal.
 
 ```c
 
@@ -127,10 +127,18 @@ void application_task ( void )
 
     if ( fifo_object.tag == HEARTRATE2_FIFO_TAG_PPG1_LEDC1 )
     {
-        log_printf( &logger, " %u \r\n", fifo_object.data_val );
+        counter++;
+        if ( fifo_object.data_val > 1000 )
+        {
+            log_printf( &logger, "%lu;\r\n", fifo_object.data_val );
+            counter = 1000;
+        }
+        else if ( counter > 1000 )
+        {
+            log_printf( &logger, "Please place your index finger on the sensor.\r\n" );
+            counter = 0;
+        }
     }
-    
-    Delay_ms( 4 );
 }  
 
 ```
@@ -146,12 +154,12 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](http://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
+[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
+[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 
 terminal available in all Mikroelektronika 
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application 
+[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
 of your choice, can be used to read the message.
 
 

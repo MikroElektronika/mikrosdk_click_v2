@@ -12,13 +12,7 @@
  * 
  * ## Application Task  
  * Waits until measurement cycle is finished and data is ready for reading. 
- * Then reads the LED Data values and performs the data plotting on serial plot, or logging on uart.
- * 
- * *note:* 
- * Uart baud rate should be as high as possible, then data plotting will be better.
- * The new measurement cycle is started when command for measurement starting is sent, or when register 0x57 is read out.
- * Also the pressure on sensor must be same for the all measurement time, if we want to get the valid results.
- * This is very important to device can work properly.
+ * Then reads the LED data and performs the data plotting on USB UART.
  * 
  * \author MikroE Team
  *
@@ -36,26 +30,7 @@ static log_t logger;
 
 static uint16_t led_data_off;
 static uint16_t led_data_on;
-static uint32_t i;
-
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
-
-void plot_res( uint16_t plot_data )
-{
-    log_printf( &logger, "%u,%u\r\n", plot_data, ++i );
-
-    if (i == 0xFFFFFFFF)
-    {
-        i = 0;
-    }
-}
-
-void log_res()
-{
-    log_printf( &logger, "LED OFF Data : %u\r\n", led_data_off );
-
-    log_printf( &logger, "LED ON Data : %u\r\n", led_data_on );
-}
+static uint8_t counter = 200;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -71,19 +46,16 @@ void application_init ( void )
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
-    Delay_ms( 200 );
 
     //  Click initialization.
 
     heartrate6_cfg_setup( &cfg );
-    Delay_ms( 500 );
     HEARTRATE6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     heartrate6_init( &heartrate6, &cfg );
     Delay_ms( 500 );
 
     heartrate6_default_cfg( &heartrate6 );
-    log_printf( &logger, " Heart rate 6 is initialized \r\n");
-    i = 0;
+    log_printf( &logger, " Heart rate 6 is initialized. \r\n");
     Delay_ms( 500 );
 }
 
@@ -92,8 +64,18 @@ void application_task ( void )
     heartrate6_wait_measure( &heartrate6 );
     
     heartrate6_get_data( &heartrate6,  &led_data_off, &led_data_on );
-
-    plot_res( led_data_on );
+    
+    counter++;
+    if ( led_data_off < 200 )
+    {
+        log_printf( &logger, "%u;\r\n", led_data_on );
+        counter = 200;
+    }
+    else if ( counter > 200 )
+    {
+        log_printf( &logger, "Please place your index finger on the sensor.\r\n" );
+        counter = 0;
+    }
 }
 
 void main ( void )

@@ -1,0 +1,36 @@
+type: library
+
+target: lib_i2ctocan
+
+sources: {
+    src/i2ctocan.c
+}
+
+headers: {
+    include/i2ctocan.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/i2ctocan.h) dst(include/i2ctocan.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.I2cToCan

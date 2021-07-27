@@ -8,7 +8,7 @@ Heart rate 6 Click is an optical biosensor Click board™ designed for heart-rat
   <img src="https://download.mikroe.com/images/click_for_ide/heartrate6_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/heart-rate-6-click>)
+[click Product page](https://www.mikroe.com/heart-rate-6-click)
 
 ---
 
@@ -75,10 +75,11 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.baud = 115200;
+    log_cfg.level = LOG_LEVEL_DEBUG;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Initializing ----" );
+    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
 
@@ -88,16 +89,16 @@ void application_init ( void )
     Delay_ms( 500 );
 
     heartrate6_default_cfg( &heartrate6 );
+    log_printf( &logger, " Heart rate 6 is initialized. \r\n");
     Delay_ms( 500 );
-    log_printf( &logger, " Heart rate 6 is initialized \n");
-    i = 0;
 }
   
 ```
 
 ### Application Task
 
-> Waits until measurement cycle is finished and data is ready. Then reads the LED Data values and > performs the data plotting on serial plot, or logging on uart.
+> Waits until measurement cycle is finished and data is ready for reading. 
+> Then reads the LED data and performs the data plotting on USB UART.
 
 ```c
 
@@ -106,19 +107,21 @@ void application_task ( void )
     heartrate6_wait_measure( &heartrate6 );
     
     heartrate6_get_data( &heartrate6,  &led_data_off, &led_data_on );
-
-    plot_res( led_data_on );
+    
+    counter++;
+    if ( led_data_off < 200 )
+    {
+        log_printf( &logger, "%u;\r\n", led_data_on );
+        counter = 200;
+    }
+    else if ( counter > 200 )
+    {
+        log_printf( &logger, "Please place your index finger on the sensor.\r\n" );
+        counter = 0;
+    }
 }
 
 ```
-
-## Note
-
-> Uart baud rate should be as high as possible, then data plotting will be better.
-> The new measurement cycle is started when command for measurement starting is sent, or when
-> register 0x57 is read out.
-> Also the pressure on sensor must be same for the all measurement time.
-> This is very important to device can work properly.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

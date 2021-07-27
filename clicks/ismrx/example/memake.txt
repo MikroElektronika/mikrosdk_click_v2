@@ -1,0 +1,13 @@
+type: executable
+target: example_ismrx
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.ISMRX
+}
+
+sources: {
+    main.c
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_hztov2
+
+alias: Click.HzToV2
+
+sources: {
+    src/hztov2.c
+}
+
+headers: {
+    include/hztov2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/hztov2.h) dst(include/hztov2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

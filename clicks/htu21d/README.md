@@ -11,7 +11,7 @@ HTU21D click carries a high-precision, easy-to-use relative humidity sensor with
   <img src="https://download.mikroe.com/images/click_for_ide/htu21d_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/htu21d-click>)
+[click Product page](https://www.mikroe.com/htu21d-click)
 
 ---
 

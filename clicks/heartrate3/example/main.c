@@ -78,25 +78,15 @@ void application_init ( void )
 void application_task ( void )
 {
     led_2 = heartrate3_read_u32( &heartrate3, HEARTRATE3_LED2VAL );
-    log_printf( &logger, "LED2: %.0f \r\n", (float)led_2 );
-    
     aled_2 = heartrate3_read_u32( &heartrate3, HEARTRATE3_ALED2VAL );
-    log_printf( &logger, "ALED2: %.0f \r\n", (float)aled_2 );
-    
     led_1 = heartrate3_read_u32( &heartrate3, HEARTRATE3_LED1VAL );
-    log_printf( &logger, "LED1: %.0f \r\n", (float)led_1 );
-    
     aled_1 = heartrate3_read_u32( &heartrate3, HEARTRATE3_ALED1VAL );
-    log_printf( &logger, "ALED1: %.0f \r\n", (float)aled_1 );
-    
     led_2_aled_2 = heartrate3_read_u32( &heartrate3, HEARTRATE3_LED2_ALED2VAL );
-    log_printf( &logger, "LED2ALED2: %.0f \r\n", (float)led_2_aled_2 );
-    
     led_1_aled_1 = heartrate3_read_u32( &heartrate3, HEARTRATE3_LED1_ALED1VAL );
-    log_printf( &logger, "LED1ALED1: %.0f \r\n", (float)led_1_aled_1 );
     
-    log_printf( &logger, "----------------------\r\n" );
-    Delay_ms( 1000 );
+    log_printf( &logger, "%.0f,%.0f,%.0f,%.0f,%.0f,%.0f \r\n", (float)led_2, (float)aled_2, 
+                (float)led_1, (float)aled_1, (float)led_2_aled_2, (float)led_1_aled_1 );
+    Delay_ms(3);
 }
 
 void main ( void )

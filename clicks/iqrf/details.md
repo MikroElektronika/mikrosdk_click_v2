@@ -9,7 +9,7 @@ IQRF Click carries the RF transceiver, operating in the 868/916 MHz frequency.
   <img src="https://download.mikroe.com/images/click_for_ide/iqrf_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/iqrf-click>)
+[click Product page](https://www.mikroe.com/iqrf-click)
 
 ---
 

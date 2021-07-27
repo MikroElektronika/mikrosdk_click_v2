@@ -9,7 +9,7 @@ IR eclipse click carries an EE-SX198 photo interrupter sensor. This sensor consi
   <img src="https://download.mikroe.com/images/click_for_ide/ireclipse_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ir-eclipse-click>)
+[click Product page](https://www.mikroe.com/ir-eclipse-click)
 
 ---
 

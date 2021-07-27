@@ -2,7 +2,7 @@
     "name": "I2C 1 Wire Click",
     "description": "I2C 1-Wire click carries DS2482-800, a “bridge device” that performs bidirectional conversions between I2C masters and 1-Wire slave devices. These can be EEPROM chips, temperature sensors and similar devices that have momentary high source current modes.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","DS2482-800"],
     "category" : ["1-Wire"] 
 }

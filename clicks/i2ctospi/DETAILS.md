@@ -9,7 +9,7 @@ I2C to SPi Click is an all-in-one solution which allows serving as an interface 
 </p>
 
 
-[click Product page](<https://www.mikroe.com/i2c-to-spi-click>)
+[click Product page](https://www.mikroe.com/i2c-to-spi-click)
 
 ---
 

@@ -9,7 +9,7 @@ IR Grid click is a thermal imaging sensor. It has an array of 64 very sensitive 
 </p>
 
 
-[click Product page](<https://www.mikroe.com/ir-grid-click>)
+[click Product page](https://www.mikroe.com/ir-grid-click)
 
 ---
 

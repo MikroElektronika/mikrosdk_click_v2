@@ -10,7 +10,7 @@ Joystick 2 Click is a smart navigation key concept based on SKRHABE010 by Alps, 
   <img src="https://download.mikroe.com/images/click_for_ide/joystick2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/joystick-2-click>)
+[click Product page](https://www.mikroe.com/joystick-2-click)
 
 ---
 

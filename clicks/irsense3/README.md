@@ -11,7 +11,7 @@ IR Sense 3 Click is the infrared sensor Click board, designed to be used for the
   <img src="https://download.mikroe.com/images/click_for_ide/irsense3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ir-sense-3-click>)
+[click Product page](https://www.mikroe.com/ir-sense-3-click)
 
 ---
 

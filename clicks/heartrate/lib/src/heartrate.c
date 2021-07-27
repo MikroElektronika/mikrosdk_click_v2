@@ -30,11 +30,6 @@
 #include "heartrate.h"
 #include <string.h>
 
-
-// ---------------------------------------------- PRIVATE FUNCTION DECLARATIONS 
-
-static int drv_abs ( int i );
-
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
 void heartrate_cfg_setup ( heartrate_cfg_t *cfg )
@@ -85,7 +80,7 @@ void heartrate_default_cfg ( heartrate_t *ctx )
 
     heartrate_generic_read( ctx, HEARTRATE_MODE_CONFIG, 1, cfg_reset );
     
-    cfg_reset[ 0 ].B6 = 1;
+    cfg_reset[ 0 ] |= 0x40;
     
     heartrate_generic_write( ctx, HEARTRATE_MODE_CONFIG, 1, cfg_reset );
     // wait for the RESET bit to clear itself
@@ -93,7 +88,7 @@ void heartrate_default_cfg ( heartrate_t *ctx )
     for ( ; ; )
     {
         heartrate_generic_read( ctx, HEARTRATE_MODE_CONFIG, 1, cfg_reset );
-        if ( cfg_reset[0].B6 == 0 ) 
+        if ( ( cfg_reset[ 0 ] & 0x40 ) == 0 ) 
         {
             break;
         }
@@ -195,7 +190,7 @@ uint8_t heartrate_read_ir_red ( heartrate_t *ctx, uint16_t *ir_buff, uint16_t *r
     heartrate_generic_read( ctx, HEARTRATE_FIFO_WRITE_PTR, 1, &wr_ptr );
     heartrate_generic_read( ctx, HEARTRATE_FIFO_READ_PTR, 1, &rd_ptr );
 
-    sample_num = drv_abs( 16 + wr_ptr - rd_ptr ) % 16;
+    sample_num = abs( 16 + wr_ptr - rd_ptr ) % 16;
 
     if ( sample_num >= 1 )
     {
@@ -443,7 +438,7 @@ uint8_t hr_read_diodes ( heartrate_t *ctx, uint16_t* ir_buff, uint16_t* red_buff
     heartrate_generic_read( ctx, HEARTRATE_FIFO_WRITE_PTR, 1, &wr_ptr );
     heartrate_generic_read( ctx, HEARTRATE_FIFO_READ_PTR, 1, &rd_ptr );
 
-    sample_num = drv_abs( 16 + wr_ptr - rd_ptr ) % 16;
+    sample_num = abs( 16 + wr_ptr - rd_ptr ) % 16;
 
     if ( sample_num >= 1 )
     {
@@ -466,13 +461,6 @@ uint8_t hr_get_status ( heartrate_t *ctx )
     uint8_t read_data;
     heartrate_generic_read( ctx, HEARTRATE_INT_STATUS, 1, &read_data );
     return read_data;
-}
-
-// ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
-
-static int drv_abs ( int i )
-{	 
-    return i < 0 ? -i : i;
 }
 
 // ------------------------------------------------------------------------- END

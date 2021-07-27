@@ -11,7 +11,7 @@ Knob click features a combination of high-quality quadrature rotary encoder, and
   <img src="https://download.mikroe.com/images/click_for_ide/knobg_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/knob-g-click>)
+[click Product page](https://www.mikroe.com/knob-g-click)
 
 ---
 
