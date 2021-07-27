@@ -9,7 +9,7 @@ Temp&Hum 10 Click is a smart temperature and humidity sensing Click board™, ai
   <img src="https://download.mikroe.com/images/click_for_ide/temphum10_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/temphum-10-click>)
+[click Product page](https://www.mikroe.com/temphum-10-click)
 
 ---
 

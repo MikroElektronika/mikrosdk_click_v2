@@ -8,18 +8,18 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes I2C interface and performs a device configuration for properly working.
- * Also sets the temperature limit to the desired values.
+ * Initializes I2C interface and performs a device default configuration.
  * 
  * ## Application Task  
  * First ensures that the minimum conversion time is met, and then reads the
- * ambient temperature calculated to the Celsius degrees.
+ * ambient temperature calculated to the Celsius degrees, and logs the results to the USB UART.
  * 
- * *note:* 
+ * @note 
  * The temperature range that can be measured or written is from -40 to +125 Celsius degrees.
  * The user can change the measured temperature resolution, but the range remains the same.
- * The limit temperature resolution is always a 10bit, or 0.25 Celsius degrees.
- * If user wants to enable the EEPROM Write Protection, the A0 pin on the device must be set to the high voltage level.
+ * The limit of the temperature resolution is always a 10bit, or 0.25 Celsius degrees.
+ * If user wants to enable the EEPROM Write Protection, the A0 pin on the device 
+ * must be set to the high voltage level.
  * 
  * \author MikroE Team
  *
@@ -80,7 +80,7 @@ void application_init ( void )
     
     Delay_ms( 200 );
 
-    log_printf( &logger, "** Temp-Log 3 is initialized ** \r\n" );
+    log_printf( &logger, "** Temp-Log 3 click is initialized ** \r\n" );
 }
 
 void application_task ( void )

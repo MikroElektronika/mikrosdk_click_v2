@@ -1,0 +1,8 @@
+{
+    "name": "SWI EEPROM Click",
+    "description": "SWI EEPROM opis.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","mikrocpic32"],
+    "hw" : ["click","AT21CS01"],
+    "category" : ["mikroC Legacy"] 
+}

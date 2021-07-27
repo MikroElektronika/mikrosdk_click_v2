@@ -9,7 +9,7 @@ Temp&Hum 13 Click is a Click board™ which is perfectly suited for measuring th
   <img src="https://download.mikroe.com/images/click_for_ide/temphum13_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/temphum-13-click>)
+[click Product page](https://www.mikroe.com/temphum-13-click)
 
 ---
 

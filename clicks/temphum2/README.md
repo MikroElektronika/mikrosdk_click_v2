@@ -11,7 +11,7 @@ Temp&Hum 2 click is a smart temperature and humidity sensor click board™, pack
   <img src="https://download.mikroe.com/images/click_for_ide/temphum2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/temp-hum-2-click>)
+[click Product page](https://www.mikroe.com/temp-hum-2-click)
 
 ---
 

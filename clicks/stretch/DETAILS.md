@@ -9,7 +9,7 @@ Stretch click is a mikroBUS™ add-on board with circuitry for measuring stretch
 </p>
 
 
-[click Product page](<https://www.mikroe.com/stretch-click>)
+[click Product page](https://www.mikroe.com/stretch-click)
 
 ---
 

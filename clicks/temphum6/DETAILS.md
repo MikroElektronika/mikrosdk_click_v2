@@ -9,7 +9,7 @@ Temp&Hum 6 click is a smart temperature and humidity sensing click board™, pac
   <img src="https://download.mikroe.com/images/click_for_ide/temphum6_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/temphum-6-click>)
+[click Product page](https://www.mikroe.com/temphum-6-click)
 
 ---
 

@@ -11,7 +11,7 @@ Tamper 2 click contains a levered D2HW-A221D switch by Omron, which outputs sign
   <img src="https://download.mikroe.com/images/click_for_ide/tamper2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/tamper-2-click>)
+[click Product page](https://www.mikroe.com/tamper-2-click)
 
 ---
 

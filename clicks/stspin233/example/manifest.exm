@@ -1,0 +1,8 @@
+{
+    "name": "STSPIN233 Click",
+    "description": "STSPIN233 click is a complete solution for a 3-phase integrated motor driver, based on the STSPIN233, Low voltage 3-phase integrated motor driver.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","STSPIN233"],
+    "category" : ["Brushed"] 
+}

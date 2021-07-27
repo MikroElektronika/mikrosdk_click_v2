@@ -11,7 +11,7 @@ Temp-Log 4 Click is a temperature measuring Click board™ featuring the SE97B I
   <img src="https://download.mikroe.com/images/click_for_ide/templog4_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/temp-log-4-click>)
+[click Product page](https://www.mikroe.com/temp-log-4-click)
 
 ---
 

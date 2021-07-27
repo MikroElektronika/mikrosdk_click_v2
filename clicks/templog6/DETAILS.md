@@ -8,7 +8,7 @@ Temp-Log 6 click is a temperature sensing Click board™, which features the MAX
   <img src="https://download.mikroe.com/images/click_for_ide/templog6_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/temp-log-6-click>)
+[click Product page](https://www.mikroe.com/temp-log-6-click)
 
 ---
 

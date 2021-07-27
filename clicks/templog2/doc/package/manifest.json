@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Temperature & humidity",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,8 +26,16 @@
     "name": "mikroe.click.templog2",
     "product_link": "https://www.mikroe.com/temp-log-2-click",
     "short_description": "Temp-Log 2 click is a precise ambient temperature measurement device, equipped with the additional non-volatile (EEPROM) memory that can be used to permanently store system configuration, and 64 bits of general-purpose EEPROM, used for logging application specific or user preference data. This click covers a range of temperatures from -55°C to +125°C with the highest accuracy of ±0.2°C.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.2"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2377
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.5"
 }
+
+
+
 

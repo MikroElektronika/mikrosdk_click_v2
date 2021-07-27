@@ -8,7 +8,7 @@ Temp&Hum 7 click is a Click board™ which is perfectly suited for measuring the
   <img src="https://download.mikroe.com/images/click_for_ide/temphum7_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/temp-hum-7-click>)
+[click Product page](https://www.mikroe.com/temp-hum-7-click)
 
 ---
 

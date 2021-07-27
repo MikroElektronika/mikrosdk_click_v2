@@ -1,0 +1,40 @@
+type: library
+
+target: lib_stspin233
+
+alias: Click.Stspin233
+
+sources: {
+    src/stspin233.c
+}
+
+headers: {
+    include/stspin233.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/stspin233.h) dst(include/stspin233.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

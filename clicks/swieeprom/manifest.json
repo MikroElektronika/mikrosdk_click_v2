@@ -1,0 +1,38 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "EEPROM",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "SWI EEPROM click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.swieeprom",
+    "product_link": "https://www.mikroe.com/swi-eeprom-click",
+    "short_description": "SWI EEPROM Click is a compact add-on board that provides a highly reliable memory solution. This board features the AT21CS01, a single-wire serial EEPROM with a unique, factory-programmed 64-bit serial number from Microchip Technology.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type": "Example",
+    "version": "2.0.0.8"
+}
+
+
+
+
+
+

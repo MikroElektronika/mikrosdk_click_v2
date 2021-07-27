@@ -11,7 +11,7 @@ This click covers a range of temperatures from -55°C to +125°C with the highes
   <img src="https://download.mikroe.com/images/click_for_ide/templog2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/temp-log-2-click>)
+[click Product page](https://www.mikroe.com/temp-log-2-click)
 
 ---
 

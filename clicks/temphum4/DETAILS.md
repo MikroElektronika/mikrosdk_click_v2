@@ -9,7 +9,7 @@ Temp&Hum 4 click is a smart environmental temperature and humidity sensor Click 
   <img src="https://download.mikroe.com/images/click_for_ide/temphum4_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/temp-hum-4-click>)
+[click Product page](https://www.mikroe.com/temp-hum-4-click)
 
 ---
 

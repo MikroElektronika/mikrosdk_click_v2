@@ -1,0 +1,7 @@
+type: subdirs
+project: Stspin233
+
+subdirs: {
+    lib
+    example
+}

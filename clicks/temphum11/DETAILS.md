@@ -8,7 +8,7 @@ Temp-hum 11 click is a temperature and humidity sensing Click board™, equipped
   <img src="https://download.mikroe.com/images/click_for_ide/temphum11_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/temp-hum-11-click>)
+[click Product page](https://www.mikroe.com/temp-hum-11-click)
 
 ---
 

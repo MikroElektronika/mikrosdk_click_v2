@@ -11,7 +11,7 @@ Temp&Hum 8 click is based on a sensor from the popular SHT family, designed to m
   <img src="https://download.mikroe.com/images/click_for_ide/temphum8_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/temp-hum-8-click>)
+[click Product page](https://www.mikroe.com/temp-hum-8-click)
 
 ---
 

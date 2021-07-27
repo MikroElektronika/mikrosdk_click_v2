@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['swi_5fack_141',['SWI_ACK',['../swi_8h.html#a589e7a181884bae19117587736492041a16da8edcbf793a763509922ac41fbbe3',1,'swi.h']]],
+  ['swi_5flogic_5f0_142',['SWI_LOGIC_0',['../swi_8h.html#a470a12c4170391a70dfc4d0bf53ccffdaf8a3c1dfa67b5040abc523de897b4dae',1,'swi.h']]],
+  ['swi_5flogic_5f1_143',['SWI_LOGIC_1',['../swi_8h.html#a470a12c4170391a70dfc4d0bf53ccffdad53ba8424731a788d539c8f3470d6336',1,'swi.h']]],
+  ['swi_5fnack_144',['SWI_NACK',['../swi_8h.html#a589e7a181884bae19117587736492041a2d615fea359c958e67596b199d1346ec',1,'swi.h']]],
+  ['swi_5fret_5fval_5ferror_145',['SWI_RET_VAL_ERROR',['../swi_8h.html#af9b9f5cdb7f77a709cc6453c49a9d23aab3f176b94ebebc7467e06a570f610284',1,'swi.h']]],
+  ['swi_5fret_5fval_5fok_146',['SWI_RET_VAL_OK',['../swi_8h.html#af9b9f5cdb7f77a709cc6453c49a9d23aa10c9b27b6cdf60d7878f4181c800f0c6',1,'swi.h']]],
+  ['swieeprom_5fop_5fcode_5feeprom_147',['SWIEEPROM_OP_CODE_EEPROM',['../group__swieeprom.html#ggacf2c1afc47d018c16d9e11117eb6e904ac0cd10634d5af3ead7cda4791e865c78',1,'swieeprom.h']]],
+  ['swieeprom_5fop_5fcode_5ffreeze_5from_148',['SWIEEPROM_OP_CODE_FREEZE_ROM',['../group__swieeprom.html#ggacf2c1afc47d018c16d9e11117eb6e904a7ec19228b309d8c352edf4f8d165cdca',1,'swieeprom.h']]],
+  ['swieeprom_5fop_5fcode_5fhigh_5fspeed_149',['SWIEEPROM_OP_CODE_HIGH_SPEED',['../group__swieeprom.html#ggacf2c1afc47d018c16d9e11117eb6e904ad8321287f29ba408596ac36f9a72be9f',1,'swieeprom.h']]],
+  ['swieeprom_5fop_5fcode_5fid_150',['SWIEEPROM_OP_CODE_ID',['../group__swieeprom.html#ggacf2c1afc47d018c16d9e11117eb6e904ac8f9a6c7e34c8faae326e2215b5f8777',1,'swieeprom.h']]],
+  ['swieeprom_5fop_5fcode_5flock_151',['SWIEEPROM_OP_CODE_LOCK',['../group__swieeprom.html#ggacf2c1afc47d018c16d9e11117eb6e904a1c2ffc493d8181fe4fa6dba82cd4300a',1,'swieeprom.h']]],
+  ['swieeprom_5fop_5fcode_5from_152',['SWIEEPROM_OP_CODE_ROM',['../group__swieeprom.html#ggacf2c1afc47d018c16d9e11117eb6e904a2ba2db5a1afc8f287493c2f0453910c4',1,'swieeprom.h']]],
+  ['swieeprom_5fop_5fcode_5fsecurity_153',['SWIEEPROM_OP_CODE_SECURITY',['../group__swieeprom.html#ggacf2c1afc47d018c16d9e11117eb6e904a4186b7b81b2b4af88c842a0cce92f3be',1,'swieeprom.h']]],
+  ['swieeprom_5fop_5fcode_5fstdn_5fspeed_154',['SWIEEPROM_OP_CODE_STDN_SPEED',['../group__swieeprom.html#ggacf2c1afc47d018c16d9e11117eb6e904a745f578bb04fa1c521e93f5ace396bfb',1,'swieeprom.h']]],
+  ['swieeprom_5fret_5fval_5ferror_155',['SWIEEPROM_RET_VAL_ERROR',['../group__swieeprom.html#ggaeb6665628766b169bbfe96e8b29d0981ab7347c7b2ed506153b15251fd4eb9cd7',1,'swieeprom.h']]],
+  ['swieeprom_5fret_5fval_5ferror_5fadr_156',['SWIEEPROM_RET_VAL_ERROR_ADR',['../group__swieeprom.html#ggaeb6665628766b169bbfe96e8b29d0981a93e5864badbb80a38cfadf2999bbd00d',1,'swieeprom.h']]],
+  ['swieeprom_5fret_5fval_5ferror_5fdata_157',['SWIEEPROM_RET_VAL_ERROR_DATA',['../group__swieeprom.html#ggaeb6665628766b169bbfe96e8b29d0981a364387afd7e24b8f70118acc0890414b',1,'swieeprom.h']]],
+  ['swieeprom_5fret_5fval_5ferror_5fid_158',['SWIEEPROM_RET_VAL_ERROR_ID',['../group__swieeprom.html#ggaeb6665628766b169bbfe96e8b29d0981a5a04f1312348095b6303587659dfb110',1,'swieeprom.h']]],
+  ['swieeprom_5fret_5fval_5ferror_5fno_5fdevice_5ffound_159',['SWIEEPROM_RET_VAL_ERROR_NO_DEVICE_FOUND',['../group__swieeprom.html#ggaeb6665628766b169bbfe96e8b29d0981a03d1434c78ac2bfd0d0a2f2d687b725e',1,'swieeprom.h']]],
+  ['swieeprom_5fret_5fval_5ferror_5fop_5fcode_160',['SWIEEPROM_RET_VAL_ERROR_OP_CODE',['../group__swieeprom.html#ggaeb6665628766b169bbfe96e8b29d0981a49240f342670c4fcb6245efd86472688',1,'swieeprom.h']]],
+  ['swieeprom_5fret_5fval_5ferror_5fslave_5faddress_161',['SWIEEPROM_RET_VAL_ERROR_SLAVE_ADDRESS',['../group__swieeprom.html#ggaeb6665628766b169bbfe96e8b29d0981a4327b0419ab4cd4c5f0c45a460a32cd2',1,'swieeprom.h']]],
+  ['swieeprom_5fret_5fval_5fok_162',['SWIEEPROM_RET_VAL_OK',['../group__swieeprom.html#ggaeb6665628766b169bbfe96e8b29d0981aa9da29c3c62d7e173240def9cc7b1856',1,'swieeprom.h']]]
+];

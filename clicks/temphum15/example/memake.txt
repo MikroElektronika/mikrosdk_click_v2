@@ -1,0 +1,13 @@
+type: executable
+target: example_temphum15
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.TempHum15
+}
+
+sources: {
+    main.c
+}

@@ -9,7 +9,7 @@ Tester click is a Click board™ used as a diagnostic tool on the mikroBUS™ so
   <img src="https://download.mikroe.com/images/click_for_ide/tester_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/tester-click>)
+[click Product page](https://www.mikroe.com/tester-click)
 
 ---
 

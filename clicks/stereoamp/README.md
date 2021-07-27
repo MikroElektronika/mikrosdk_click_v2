@@ -12,7 +12,7 @@ This is an example which demonstrates the use of StereoAmp Click board - stereo 
 </p>
 
 
-[click Product page](<https://www.mikroe.com/stereoamp-click>)
+[click Product page](https://www.mikroe.com/stereoamp-click)
 
 ---
 

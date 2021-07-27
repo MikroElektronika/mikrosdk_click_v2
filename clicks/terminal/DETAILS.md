@@ -8,7 +8,7 @@ This day is dedicated to the Terminal click, a mikroBUS™ socket expansion boar
   <img src="https://download.mikroe.com/images/click_for_ide/terminal_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/terminal-click>)
+[click Product page](https://www.mikroe.com/terminal-click)
 
 ---
 

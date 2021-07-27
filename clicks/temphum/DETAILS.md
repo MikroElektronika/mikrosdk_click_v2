@@ -9,7 +9,7 @@ Temp&Hum Click carries ST’s HTS221 temperature and relative humidity sensor.
   <img src="https://download.mikroe.com/images/click_for_ide/temphum_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/temp-hum-click>)
+[click Product page](https://www.mikroe.com/temp-hum-click)
 
 ---
 

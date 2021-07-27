@@ -1,9 +1,7 @@
 \mainpage Main Page
  
- 
-
 ---
-# Temp Log 3 click
+# Temp-Log 3 click
 
 Temp-Log 3 click is a temperature measuring Click board™ featuring the MCP9843 IC, an accurate temperature sensor IC with integrated EEPROM
 
@@ -11,7 +9,7 @@ Temp-Log 3 click is a temperature measuring Click board™ featuring the MCP9843
   <img src="https://download.mikroe.com/images/click_for_ide/templog3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/temp-log-3-click>)
+[click Product page](https://www.mikroe.com/temp-log-3-click)
 
 ---
 
@@ -67,8 +65,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes I2C interface and performs a device configuration for properly working.
-> Also sets the temperature limit to the desired values.
+> Initializes I2C interface and performs a device default configuration.
 
 ```c
 
@@ -79,8 +76,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -93,10 +91,10 @@ void application_init ( void )
     Delay_ms( 500 );
     
     templog3_default_cfg( &templog3 );
-
-    Delay_ms( 200 );
     
-    log_printf( &logger, "** Temp-Log 3 is initialized ** \r\n" );
+    Delay_ms( 200 );
+
+    log_printf( &logger, "** Temp-Log 3 click is initialized ** \r\n" );
 }
   
 ```
@@ -104,13 +102,14 @@ void application_init ( void )
 ### Application Task
 
 > First ensures that the minimum conversion time is met, and then reads the
-> ambient temperature calculated to the Celsius degrees.
+> ambient temperature calculated to the Celsius degrees, and logs the results to the USB UART.
 
 ```c
 
 void application_task ( void )
 {
     float temperature;
+    uint8_t ret_status;
 
     templog3_wait_conv_done( &templog3 );
 
@@ -118,7 +117,7 @@ void application_task ( void )
 
     log_printf( &logger, "**  Ambient temperature is : %.2f C  **\r\n", temperature );
     
-    check_limit_status( );
+    check_limit_status( ret_status );
     
     Delay_ms( 300 );
 }
@@ -129,8 +128,9 @@ void application_task ( void )
 
 > The temperature range that can be measured or written is from -40 to +125 Celsius degrees.
 > The user can change the measured temperature resolution, but the range remains the same.
-> The limit temperature resolution is always a 10bit, or 0.25 Celsius degrees.
-> If user wants to enable the EEPROM Write Protection, the A0 pin on the device must be set to the high voltage level
+> The limit of the temperature resolution is always a 10bit, or 0.25 Celsius degrees.
+> If user wants to enable the EEPROM Write Protection, the A0 pin on the device 
+> must be set to the high voltage level.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

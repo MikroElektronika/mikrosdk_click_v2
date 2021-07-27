@@ -10,7 +10,7 @@ STSPIN250 click is a brushed DC motor driver with the current limiting and curre
 </p>
 
 
-[click Product page](<https://www.mikroe.com/stspin250-click>)
+[click Product page](https://www.mikroe.com/stspin250-click)
 
 ---
 

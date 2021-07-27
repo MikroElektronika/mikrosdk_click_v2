@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Temperature & humidity",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,8 +26,15 @@
     "name": "mikroe.click.templog6",
     "product_link": "https://www.mikroe.com/temp-log-6-click",
     "short_description": "Temp-Log 6 click is a temperature sensing Click board™, which features the MAX6642, a specifically designed IC, capable of measuring its own die temperature, as well as a temperature at a remote PN junction. This option makes Temp-Log 6 click well-suited for monitoring the temperature of a CPU, GPU or FPGA, where the PN junction is typically a substrate PNP transistor on the die of the measured IC.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2753
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.3"
 }
+
+
 

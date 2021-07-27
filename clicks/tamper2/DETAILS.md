@@ -9,7 +9,7 @@ Tamper 2 click contains a levered D2HW-A221D switch by Omron, which outputs sign
 </p>
 
 
-[click Product page](<https://www.mikroe.com/tamper-2-click>)
+[click Product page](https://www.mikroe.com/tamper-2-click)
 
 ---
 

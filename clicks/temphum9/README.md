@@ -11,7 +11,7 @@ Temp-Hum 9 click is a smart temperature and humidity sensing click board™, pac
   <img src="https://download.mikroe.com/images/click_for_ide/temphum9_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/temphum-9-click>)
+[click Product page](https://www.mikroe.com/temphum-9-click)
 
 ---
 

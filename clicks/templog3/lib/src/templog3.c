@@ -34,11 +34,6 @@
 #define TEMP_RESOL  0.0625
 #define SIGN_BIT    0x1000
 
-// ----------------------------------------------- PRIVATE FUNCTION DECLARATION
-
-// static void templog3_read ( templog3_t *ctx, uint8_t *data_buf, uint8_t len );
-// static void templog3_read_eeprom ( templog3_t *ctx, uint8_t *data_buf, uint8_t len );
-
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
 void templog3_cfg_setup ( templog3_cfg_t *cfg )
@@ -99,8 +94,8 @@ void templog3_default_cfg ( templog3_t *ctx )
                                              TEMPLOG3_EVENT_POL_ACT_HIGH | 
                                              TEMPLOG3_EVENT_COMPARATOR_MODE );
     templog3_write_reg( ctx, TEMPLOG3_RESOLUTION_REG, TEMPLOG3_11BIT_RESOLUTION );
-    templog3_set_temp( ctx, TEMPLOG3_TEMP_CRITICAL_REG, 26.5 );
-    templog3_set_temp( ctx, TEMPLOG3_TEMP_UPPER_REG, 30 );
+    templog3_set_temp( ctx, TEMPLOG3_TEMP_CRITICAL_REG, 30 );
+    templog3_set_temp( ctx, TEMPLOG3_TEMP_UPPER_REG, 35 );
     templog3_set_temp( ctx, TEMPLOG3_TEMP_LOWER_REG, -5 );
 }
 
@@ -401,19 +396,6 @@ uint8_t templog3_eeprom_sequential_read ( templog3_t *ctx, uint8_t reg_addr, uin
     
     return TEMPLOG3_OK;
 }
-// ------------------------------------------------ PRIVATE FUNCTION DEFINITION
-
-// static void templog3_read ( templog3_t *ctx, uint8_t *data_buf, uint8_t len )
-// {
-//     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
-//     i2c_master_read( &ctx->i2c, data_buf, 1 );
-// }
-// 
-// static void templog3_read_eeprom ( templog3_t *ctx, uint8_t *data_buf, uint8_t len )
-// {
-//     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_eeprom );
-//     i2c_master_read( &ctx->i2c, data_buf, 1 );
-// }
 
 // ------------------------------------------------------------------------- END
 

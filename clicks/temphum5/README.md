@@ -11,7 +11,7 @@ Temp&Hum 5 click is a temperature and humidity sensing click board™, packed wi
   <img src="https://download.mikroe.com/images/click_for_ide/temphum5_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/temphum-5-click>)
+[click Product page](https://www.mikroe.com/temphum-5-click)
 
 ---
 

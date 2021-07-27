@@ -9,7 +9,7 @@ Tamper click is equipped with SDS001, a low profile side-actuated detect switch,
 </p>
 
 
-[click Product page](<https://www.mikroe.com/tamper-click>)
+[click Product page](https://www.mikroe.com/tamper-click)
 
 ---
 
