@@ -11,7 +11,7 @@ UV 2 click is a mikroBUS™ add-on board with a VEML6075 UVA and UVB light senso
   <img src="https://download.mikroe.com/images/click_for_ide/uv2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/uv2-click>)
+[click Product page](https://www.mikroe.com/uv2-click)
 
 ---
 

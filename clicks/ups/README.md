@@ -11,7 +11,7 @@ UPS click is a supercapacitor charger click that provides continuous power for a
   <img src="https://download.mikroe.com/images/click_for_ide/ups_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ups-click>)
+[click Product page](https://www.mikroe.com/ups-click)
 
 ---
 

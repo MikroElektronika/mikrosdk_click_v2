@@ -1,0 +1,7 @@
+type: subdirs
+project: UART1Wire
+
+subdirs: {
+    lib
+    example
+}

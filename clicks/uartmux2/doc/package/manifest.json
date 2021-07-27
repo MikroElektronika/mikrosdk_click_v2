@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "RS232",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "UART MUX 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.uartmux2",
+    "product_link": "https://www.mikroe.com/uart-mux-2-click",
+    "short_description": "UART MUX 2 Click is a compact add-on board that enables pseudo-multidrop RS232 transmission. This board features the MAX399, a precise CMOS analog multiplexer that allows four remote RS-232 transceivers to share a single UART from Maxim Integrated. It offers fast switching speeds with a transition time of less than 250ns and low on-resistance less than 100Ω while retains CMOS-logic input compatibility and fast switching. Channel selection is performed through a set of specific GPIO pins and possesses additional functionality such as the manual ON/OFF feature. This Click board™ is suitable for a wide range of applications, from industrial and instrumentation to a consumer, communications, data-acquisition systems, and many more.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.2"
+}
+

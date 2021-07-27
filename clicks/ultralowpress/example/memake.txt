@@ -1,0 +1,13 @@
+type: executable
+target: example_ultralowpress
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.UltraLowPress
+}
+
+sources: {
+    main.c
+}

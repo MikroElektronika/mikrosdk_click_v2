@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Battery Charger",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "UPS 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.ups3",
+    "product_link": "https://www.mikroe.com/ups-3",
+    "short_description": "UPS 3 Click is a compact add-on board that represents a bidirectional active charge/balancing solution. This board features the LTC3110, a bidirectional buck-boost DC/DC regulator/charger combination with selectable operation modes for charging and system backup from Analog Devices. It can autonomously transition from Charge to Backup mode or switch modes based on an external command. A proprietary low noise switching algorithm optimizes efficiency with capacitor/battery voltages above, below, or equal to the system output voltage. Additional features include voltage supervisors for direction control and end of a charge and a general-purpose comparator with open-collector output for interfacing with MCU. This Click board™ is suitable for a backup power source for a wide range of battery-operated embedded applications.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.3"
+}
+
+
+

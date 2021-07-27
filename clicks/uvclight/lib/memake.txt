@@ -1,0 +1,40 @@
+type: library
+
+target: lib_uvclight
+
+alias: Click.UvcLight
+
+sources: {
+    src/uvclight.c
+}
+
+headers: {
+    include/uvclight.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/uvclight.h) dst(include/uvclight.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

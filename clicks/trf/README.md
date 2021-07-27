@@ -12,7 +12,7 @@ tRF click is a complete short-range RF communication solution, operating in the 
 </p>
 
 
-[click Product page](<https://www.mikroe.com/trf-click>)
+[click Product page](https://www.mikroe.com/trf-click)
 
 ---
 

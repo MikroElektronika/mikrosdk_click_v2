@@ -1,0 +1,33 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "USB",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "USB UART 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.usbuart2",
+    "product_link": "https://www.mikroe.com/usb-uart-2-click",
+    "short_description": "USB UART 2 click provides USB isolation and carries the ADUM4160BRWZ USB port isolator. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over UART interface, with additional functionality provided the following pins on the mikroBUS™ line: RST, CS, PWM, INT.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.0"
+}

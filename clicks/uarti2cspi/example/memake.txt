@@ -1,0 +1,17 @@
+type: executable
+target: example_uarti2cspi
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.UARTI2CSPI
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

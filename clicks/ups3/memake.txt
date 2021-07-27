@@ -1,0 +1,8 @@
+type: subdirs
+
+project: Ups3
+
+subdirs: {
+    lib
+    example
+}

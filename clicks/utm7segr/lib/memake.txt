@@ -1,0 +1,36 @@
+type: library
+
+target: lib_utm7segr
+
+sources: {
+    src/utm7segr.c
+}
+
+headers: {
+    include/utm7segr.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/utm7segr.h) dst(include/utm7segr.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.UT-M7-SEGR

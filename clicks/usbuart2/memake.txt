@@ -1,0 +1,7 @@
+type: subdirs
+project: USBUART2
+
+subdirs: {
+    lib
+    example
+}

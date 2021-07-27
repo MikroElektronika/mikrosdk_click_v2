@@ -8,7 +8,7 @@ The UART Mux click is a Click board™ that switches the UART pins (RX and TX) f
   <img src="https://download.mikroe.com/images/click_for_ide/uartmux_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/uart-mux-click>)
+[click Product page](https://www.mikroe.com/uart-mux-click)
 
 ---
 

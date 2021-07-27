@@ -1,0 +1,8 @@
+{
+    "name": "UT-M 7-SEG R Click",
+    "description": "UT-M 7-SEG R click carries two SMD ultra thin LED 7-SEG displays and the MAX6969 constant-current LED driver from Maxim Integrated. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over SPI interface.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","MAX6969"],
+    "category" : ["LED segment"]
+}

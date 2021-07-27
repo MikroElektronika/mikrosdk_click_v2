@@ -1,0 +1,17 @@
+type: executable
+target: example_uvc
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Uvc
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

@@ -1,0 +1,40 @@
+type: library
+
+target: lib_uarti2cspi
+
+alias: Click.UARTI2CSPI
+
+sources: {
+    src/uarti2cspi.c
+}
+
+headers: {
+    include/uarti2cspi.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/uarti2cspi.h) dst(include/uarti2cspi.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

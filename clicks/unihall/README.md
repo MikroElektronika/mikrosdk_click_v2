@@ -12,7 +12,7 @@ UNI HALL click is a simple solution for adding an unipolar Hall switch to your d
 </p>
 
 
-[click Product page](<https://www.mikroe.com/uni-hall-click>)
+[click Product page](https://www.mikroe.com/uni-hall-click)
 
 ---
 

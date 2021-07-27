@@ -11,7 +11,7 @@ Touchpad click is a capacitive touch input device driven by Microchip’s low-po
   <img src="https://download.mikroe.com/images/click_for_ide/touchpad_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/touchpad-click>)
+[click Product page](https://www.mikroe.com/touchpad-click)
 
 ---
 

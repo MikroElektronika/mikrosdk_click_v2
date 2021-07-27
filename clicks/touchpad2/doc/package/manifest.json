@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Capacitive",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "TouchPad 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.touchpad2",
+    "product_link": "https://www.mikroe.com/touchpad-2-click",
+    "short_description": "Touchpad 2 Click is a compact add-on board that easily integrates projected capacitive touch into their applications. This board features the IQS525, a projected capacitive touch and proximity trackpad/touchscreen controller from Azoteq. It features best in class sensitivity, signal-to-noise ratio, and automatic tuning of electrodes, in addition to the multi-touch and multi-hover feature. This Click board™ is characterized by embedded gesture engine recognition for simple gestures (tap, swipes, hold), as well as built-in noise detection and filtering. This Click board™ is suitable for human-machine interfaces, keypad or scrolling functions, single-finger gesture-based interfaces, and more.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.2"
+}
+
