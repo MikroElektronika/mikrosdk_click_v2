@@ -1,0 +1,8 @@
+{
+    "name": "RTC 12 Click",
+    "description": "RTC 12 Click is a compact add-on board that measures the passage of time. This board features the DS1343, a low-current SPI-configurable real-time clock (RTC) from Maxim Integrated. This timekeeping device provides an extremely low standby current permitting longer life from a backup supply source. Its clock/calendar feature provides seconds, minutes, hours, day, date, month, and year information.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","DS1343"],
+    "category" : ["RTC"]
+}

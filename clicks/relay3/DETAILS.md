@@ -8,7 +8,7 @@ Relay click 3 is a dual relay Click board, featuring two single-pole double-thro
   <img src="https://download.mikroe.com/images/click_for_ide/relay3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/relay-3-click>)
+[click Product page](https://www.mikroe.com/relay-3-click)
 
 ---
 

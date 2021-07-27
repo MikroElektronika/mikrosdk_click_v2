@@ -2,7 +2,7 @@
     "name": "RGB Driver Click",
     "description": "RGB Driver click is an RGB LED driver, capable of driving RGB LED stripes, LED fixtures and other RGB LED applications that demand an increased amount of current and voltage.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","NCP5623B"],
     "category" : ["LED Segment"] 
 }

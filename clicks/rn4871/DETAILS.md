@@ -8,7 +8,7 @@ RN4871 click carries the RN4871 Bluetooth® 4.2 low energy module from Microchip
   <img src="https://download.mikroe.com/images/click_for_ide/rn4871_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/rn4871-click>)
+[click Product page](https://www.mikroe.com/rn4871-click)
 
 ---
 

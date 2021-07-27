@@ -8,7 +8,7 @@ Qi Receiver click is based on the P9025AC 5W Qi wireless power receiver integrat
   <img src="https://download.mikroe.com/images/click_for_ide/qireceiver_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/qi-receiver-click>)
+[click Product page](https://www.mikroe.com/qi-receiver-click)
 
 ---
 

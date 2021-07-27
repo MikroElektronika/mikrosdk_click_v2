@@ -8,7 +8,7 @@ RTD click is based on MAX31865 resistance to digital converter from Maxim Integr
   <img src="https://download.mikroe.com/images/click_for_ide/rtd_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/rtd-click>)
+[click Product page](https://www.mikroe.com/rtd-click)
 
 ---
 

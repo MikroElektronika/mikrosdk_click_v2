@@ -8,7 +8,7 @@ RF Meter click is a radio frequency power measurement device covering a frequenc
   <img src="https://download.mikroe.com/images/click_for_ide/rfmeter_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/rf-meter-click-click>)
+[click Product page](https://www.mikroe.com/rf-meter-click-click)
 
 ---
 

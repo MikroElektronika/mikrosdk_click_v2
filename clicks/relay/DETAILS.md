@@ -10,7 +10,7 @@ Relay click is a dual relay Click board, which can be operated by the host MCU. 
   <img src="https://download.mikroe.com/images/click_for_ide/relay_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/relay-click>)
+[click Product page](https://www.mikroe.com/relay-click)
 
 ---
 

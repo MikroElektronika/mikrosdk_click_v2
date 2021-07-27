@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Relay",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,8 +26,15 @@
     "name": "mikroe.click.relay",
     "product_link": "https://www.mikroe.com/relay-click",
     "short_description": "Relay click is a dual relay Click board, which can be operated by the host MCU. This Click board offers an elegant and easy solution for controlling a wide range of high power applications.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.2"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        526
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.4"
 }
+
+
 

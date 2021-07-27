@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Brushed",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,9 +26,16 @@
     "name": "mikroe.click.pwmdriver",
     "product_link": "https://www.mikroe.com/pwm-driver-click",
     "short_description": "This application is controls the speed DC motors.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.2"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        1972
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.4"
 }
+
+
 
 

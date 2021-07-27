@@ -14,8 +14,7 @@
  * Reads the received data and parses it.
  * 
  * ## Additional Function
- * - samltouch_process ( ) - The general process of collecting presponce 
- *                                   that sends a module.
+ * - samltouch_process ( ) - The general process of collecting data the module sends.
  * 
  * \author MikroE Team
  *

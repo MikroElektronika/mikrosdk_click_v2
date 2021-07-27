@@ -44,7 +44,7 @@ void rng_cfg_setup ( rng_cfg_t *cfg )
 
     cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
     cfg->i2c_address = RNG_DEVICE_SLAVE_ADDRESS_GND;
-    cfg->dev_vref_cfg = 3800;
+    cfg->dev_vref_cfg = 0;
 }
 
 RNG_RETVAL rng_init ( rng_t *ctx, rng_cfg_t *cfg )
@@ -79,10 +79,11 @@ void rng_default_cfg ( rng_t *ctx )
     uint16_t conf_data = RNG_CONFIG_REG_COMP_QUEUE_DISABLE | RNG_CONFIG_REG_COMP_LAT_NON |
                          RNG_CONFIG_REG_COMP_POL_HIGH | RNG_CONFIG_REG_COMP_MODE_TRAD |
                          RNG_CONFIG_REG_DATA_RATE_128_SPS | RNG_CONFIG_REG_DEV_MODE_CONTIN |
-                         RNG_CONFIG_REG_PGA_2048 | RNG_CONFIG_REG_PGA_6144 |
-                         RNG_CONFIG_REG_OS_SINGLE_CONV;
+                         RNG_CONFIG_REG_PGA_6144 |
+                         RNG_CONFIG_REG_MUX_AINP_AINN_0_GND |
+                         RNG_CONFIG_REG_OS_NO_EFFECT;
     rng_write_function( ctx, RNG_CONFIG_REG, conf_data );
-    rng_set_vref( ctx, 3300 );
+    rng_set_vref( ctx, 6144 );
 }
 
 void rng_write_function ( rng_t *ctx, uint8_t reg, uint16_t reg_data )
@@ -106,7 +107,6 @@ uint16_t rng_read_function ( rng_t *ctx, uint8_t reg )
     r_data = data_buf[ 0 ];
     r_data <<= 8;
     r_data |= data_buf[ 1 ];
-    r_data = r_data & 0x0FFF;
 
     return r_data;
 }
@@ -133,11 +133,11 @@ void rng_set_vref ( rng_t *ctx, uint16_t vref_mv )
 float rng_get_voltage ( rng_t *ctx )
 {
     float voltage;
-    uint16_t sensor_value;
+    int16_t sensor_value;
 
     sensor_value = rng_read_function( ctx, RNG_CONVERSION_REG );
 
-    voltage = ( sensor_value / 4095.0 ) * ctx->dev_vref;
+    voltage = ( ( float ) sensor_value / 0x8000 ) * ctx->dev_vref;
 
     return voltage;
 }

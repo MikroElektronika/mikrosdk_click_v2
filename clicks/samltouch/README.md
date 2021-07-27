@@ -9,7 +9,7 @@ SAML Touch Click is a Click board™ equipped with two capacitive touch pads and
   <img src="https://download.mikroe.com/images/click_for_ide/samltouch_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/saml-touch-click>)
+[click Product page](https://www.mikroe.com/saml-touch-click)
 
 ---
 

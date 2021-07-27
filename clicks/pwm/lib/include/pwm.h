@@ -536,16 +536,6 @@ void pwm_set_pre_scale ( pwm_t *ctx, uint8_t pre_scale );
  */
 void pwm_set_all_raw ( pwm_t *ctx, uint16_t raw_dc );
 
-/**
- * @brief Set all channels  function.
- *
- * @param ctx          Click object.
- * @param raw_dc  12-bit value that defines raw DC
- *
- * @description This function is used to set the state of a specific channel.
- */
-void pwm_set_all ( pwm_t *ctx, uint8_t duty_cyc );
-
 #ifdef __cplusplus
 }
 #endif

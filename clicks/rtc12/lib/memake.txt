@@ -1,0 +1,36 @@
+type: library
+
+target: lib_rtc12
+
+sources: {
+    src/rtc12.c
+}
+
+headers: {
+    include/rtc12.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/rtc12.h) dst(include/rtc12.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Rtc12

@@ -1,0 +1,36 @@
+type: library
+
+target: lib_rfid
+
+sources: {
+    src/rfid.c
+}
+
+headers: {
+    include/rfid.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/rfid.h) dst(include/rfid.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.RFID

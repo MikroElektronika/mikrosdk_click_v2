@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Measurements",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,9 +26,16 @@
     "name": "mikroe.click.rmstodc",
     "product_link": "https://www.mikroe.com/rms-to-dc-click",
     "short_description": "RMS to DC click is a Click board™ that is used to convert the RMS of the input signal into a DC voltage, with a value directly readable over the I2C interface.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.2"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2657
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.4"
 }
+
+
 
 

@@ -1,3 +1,4 @@
+ 
 
 ---
 # RGB Driver click
@@ -8,7 +9,7 @@ RGB Driver click is an RGB LED driver, capable of driving RGB LED stripes, LED f
   <img src="https://download.mikroe.com/images/click_for_ide/rgbdriver_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/rgb-driver-click>)
+[click Product page](https://www.mikroe.com/rgb-driver-click)
 
 ---
 
@@ -58,13 +59,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This app sets the brightness over rgb value.
+> This application sets the brightness over RGB value.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Driver initialize.
+> Initializes driver and logger, and configures the click board.
 
 ```c
 
@@ -75,38 +76,61 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----\r\n" );
+    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
 
     rgbdriver_cfg_setup( &cfg );
     RGBDRIVER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rgbdriver_init( &rgbdriver, &cfg );
+    Delay_ms( 1000 );
+    
+    rgbdriver_default_cfg( &rgbdriver );
+    Delay_ms( 100 );
 }
   
 ```
 
 ### Application Task
 
-> Sets the brightness over rgb value,
-> Red value sets from 0x60 to 0x7F,
-> Green value sets from 0x80 to 0x9F and
-> Blue value sets from 0x40 to 0x5F.
+> Changes the color of RGB LED tape connected to the click board every 2 seconds.
+> The name of the selected color will be displayed on USB UART.
 
 ```c
 
 void application_task ( void )
 {
-    rgbdriver_set_color( &rgbdriver, RGBDRIVER_COLOR_RED );
+    rgbdriver_set_color( &rgbdriver, RGBDRIVER_COLOR_RED_LOW_INTENSITY );
+    log_printf( &logger, "\r\n--- RED ---\r\n" );
     Delay_1sec( );
-    rgbdriver_set_color( &rgbdriver, RGBDRIVER_COLOR_YELLOW );
     Delay_1sec( );
-    rgbdriver_set_color( &rgbdriver, RGBDRIVER_COLOR_BLUE );
+    rgbdriver_set_color( &rgbdriver, RGBDRIVER_COLOR_ORANGE_LOW_INTENSITY );
+    log_printf( &logger, "--- ORANGE ---\r\n" );
     Delay_1sec( );
-    rgbdriver_set_rgb_color( &rgbdriver, 0x40, 0x9F, 0x60 );
+    Delay_1sec( );
+    rgbdriver_set_color( &rgbdriver, RGBDRIVER_COLOR_YELLOW_LOW_INTENSITY );
+    log_printf( &logger, "--- YELLOW ---\r\n" );
+    Delay_1sec( );
+    Delay_1sec( );
+    rgbdriver_set_color( &rgbdriver, RGBDRIVER_COLOR_GREEN_LOW_INTENSITY );
+    log_printf( &logger, "--- GREEN ---\r\n" );
+    Delay_1sec( );
+    Delay_1sec( );
+    rgbdriver_set_color( &rgbdriver, RGBDRIVER_COLOR_BLUE_LOW_INTENSITY );
+    log_printf( &logger, "--- BLUE ---\r\n" );
+    Delay_1sec( );
+    Delay_1sec( );
+    rgbdriver_set_color( &rgbdriver, RGBDRIVER_COLOR_WHITE_LOW_INTENSITY );
+    log_printf( &logger, "--- WHITE ---\r\n" );
+    Delay_1sec( );
+    Delay_1sec( );
+    rgbdriver_set_color( &rgbdriver, RGBDRIVER_COLOR_PURPLE_LOW_INTENSITY );
+    log_printf( &logger, "--- PURPLE ---\r\n" );
+    Delay_1sec( );
     Delay_1sec( );
 } 
 

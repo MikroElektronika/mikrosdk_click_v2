@@ -8,7 +8,7 @@ RS232 Isolator click is a fully isolated dual transceiver click, used to provide
   <img src="https://download.mikroe.com/images/click_for_ide/rs232isolator_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/rs232-isolator-click>)
+[click Product page](https://www.mikroe.com/rs232-isolator-click)
 
 ---
 

@@ -11,7 +11,7 @@ Relay 2 click is a dual relay click board™, equipped with two single-pole soli
   <img src="https://download.mikroe.com/images/click_for_ide/relay2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/relay-2-click>)
+[click Product page](https://www.mikroe.com/relay-2-click)
 
 ---
 

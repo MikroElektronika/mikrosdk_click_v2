@@ -9,7 +9,7 @@ The RS232 communication standard is established back in the ‘60s, but thanks t
   <img src="https://download.mikroe.com/images/click_for_ide/rs2322_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/rs232-2-click>)
+[click Product page](https://www.mikroe.com/rs232-2-click)
 
 ---
 

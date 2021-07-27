@@ -11,11 +11,11 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes driver, set configuration and voltage reference.
+ * Initializes driver, then sets configuration and voltage reference.
  * 
  * ## Application Task  
- *  Measures voltage every seconds.
- * 
+ * It reads ADC value from AIN0 channel then converts it to voltage and 
+ * displays the result on USB UART each second.
  * 
  * \author MikroE Team
  *
@@ -42,7 +42,7 @@ void application_init ( void )
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -61,8 +61,8 @@ void application_task ( void )
 
     voltage = rng_get_voltage( &rng );
 
-    log_printf( &logger, "Voltage value: %.2f mV\r\n", voltage );
-    log_printf( &logger, "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \r\n" );
+    log_printf( &logger, "Voltage from AIN0: %.2f mV\r\n", voltage );
+    log_printf( &logger, "-----------------------\r\n" );
     Delay_ms( 1000 );
 }
 

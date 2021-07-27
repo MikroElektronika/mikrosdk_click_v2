@@ -110,14 +110,6 @@ void pwm_set_all_raw ( pwm_t *ctx, uint16_t raw_dc )
     i2c_master_write( &ctx->i2c, w_buffer, 5 );   
 }
 
-void pwm_set_all ( pwm_t *ctx, uint8_t duty_cyc )
-{
-    uint16_t raw_dc;
-
-    raw_dc = PWM_MAX_RESOLUTION / 100 * duty_cyc;
-    pwm_set_all_raw( ctx, raw_dc );
-}
-
 void pwm_dev_config ( pwm_t *ctx, uint8_t *config )
 {
     uint8_t config_buff;
@@ -130,7 +122,7 @@ void pwm_dev_config ( pwm_t *ctx, uint8_t *config )
     config_buff |= ( config[ 0 ] & 0x01 );
     config_buff |= ( config[ 5 ] & 0x01 ) << 7;
  
-     pwm_generic_write( ctx, PWM_MODE1_REG, &config_buff, 1 );
+    pwm_generic_write( ctx, PWM_MODE1_REG, &config_buff, 1 );
 }
 
 
@@ -148,9 +140,8 @@ void pwm_output_config ( pwm_t *ctx, uint8_t *config1 )
     output_buff[ 0 ] |= ( config1[2] & 0x01 ) << 3;
     output_buff[ 0 ] |= ( config1[4] & 0x01 ) << 4;
 
-   pwm_generic_write( ctx, PWM_MODE2_REG, output_buff, 1 );
+    pwm_generic_write( ctx, PWM_MODE2_REG, output_buff, 1 );
 }
-
 
 void pwm_channel_state ( pwm_t *ctx, uint8_t chann_id, uint8_t state )
 {
@@ -208,7 +199,6 @@ void pwm_set_channel_raw ( pwm_t *ctx, uint8_t chann_id, uint16_t raw_off_set, u
 
     i2c_master_write( &ctx->i2c, w_buffer, 5 ); 
 }
-
 
 void pwm_all_chann_state ( pwm_t *ctx, uint8_t state )
 {

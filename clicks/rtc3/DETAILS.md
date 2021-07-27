@@ -8,7 +8,7 @@ RTC3 click carries BQ32000, a real time clock with an integrated trickle charge 
   <img src="https://download.mikroe.com/images/click_for_ide/rtc3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/rtc-3-click>)
+[click Product page](https://www.mikroe.com/rtc-3-click)
 
 ---
 

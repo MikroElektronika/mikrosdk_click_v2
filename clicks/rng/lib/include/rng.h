@@ -132,8 +132,8 @@
 #define  RNG_CONFIG_REG_MUX_AINP_AINN_1_GND        0x5000
 #define  RNG_CONFIG_REG_MUX_AINP_AINN_2_GND        0x6000
 #define  RNG_CONFIG_REG_MUX_AINP_AINN_3_GND        0x7000
-#define  RNG_CONFIG_REG_OS_SINGLE_CONV             0x0000
-#define  RNG_CONFIG_REG_OS_NO_EFFECT               0x8000
+#define  RNG_CONFIG_REG_OS_SINGLE_CONV             0x8000
+#define  RNG_CONFIG_REG_OS_NO_EFFECT               0x0000
 /** \} */
  
 /**

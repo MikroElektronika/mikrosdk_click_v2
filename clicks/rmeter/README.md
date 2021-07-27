@@ -11,7 +11,7 @@ R Meter click is a mikroBUS add-on board with circuitry for measuring the value 
   <img src="https://download.mikroe.com/images/click_for_ide/rmeter_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/r-meter-click>)
+[click Product page](https://www.mikroe.com/r-meter-click)
 
 ---
 

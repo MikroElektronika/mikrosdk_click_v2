@@ -1,0 +1,13 @@
+type: executable
+target: example_rfid
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.RFID
+}
+
+sources: {
+    main.c
+}

@@ -11,7 +11,7 @@ RTC 8 click is a real time clock module which has an extremely low power consump
   <img src="https://download.mikroe.com/images/click_for_ide/rtc8_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/rtc-8-click>)
+[click Product page](https://www.mikroe.com/rtc-8-click)
 
 ---
 

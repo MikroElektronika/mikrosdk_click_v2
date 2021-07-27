@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "RTC",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,8 +26,15 @@
     "name": "mikroe.click.rtc8",
     "product_link": "https://www.mikroe.com/rtc-8-click",
     "short_description": "RTC 8 click is a real time clock module which has an extremely low power consumption, allowing it to be used with a single button cell battery, for an extended period of time. ",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.2"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2705
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.4"
 }
+
+
 

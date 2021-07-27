@@ -8,7 +8,7 @@ PWR Meter 2 click is a compact and accurate power monitoring Click board™, cap
   <img src="https://download.mikroe.com/images/click_for_ide/pwrmeter2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/pwr-meter-2-click>)
+[click Product page](https://www.mikroe.com/pwr-meter-2-click)
 
 ---
 
@@ -109,8 +109,8 @@ void application_task ( void )
     pwrmeter2_get_data( &pwrmeter2, &voltage_res, &current_res, &power_res );
 
     log_printf( &logger, "U = %ld mV \r\n", voltage_res );
-    log_printf( &logger, "I = %ld mV \r\n", current_res );
-    log_printf( &logger, "P = %lu mV \r\n", power_res );
+    log_printf( &logger, "I = %ld mA \r\n", current_res );
+    log_printf( &logger, "P = %lu mW \r\n", power_res );
 
     Delay_ms( 500 );
 }

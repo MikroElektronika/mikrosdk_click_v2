@@ -9,7 +9,7 @@ RS232 SPI click is based around the MAX3100, a universal asynchronous receiver t
   <img src="https://download.mikroe.com/images/click_for_ide/rs232spi_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/rs232-spi-click>)
+[click Product page](https://www.mikroe.com/rs232-spi-click)
 
 ---
 

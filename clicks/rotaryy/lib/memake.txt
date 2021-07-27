@@ -1,0 +1,36 @@
+type: library
+
+target: lib_rotaryy
+
+sources: {
+    src/rotaryy.c
+}
+
+headers: {
+    include/rotaryy.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/rotaryy.h) dst(include/rotaryy.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.RotaryY

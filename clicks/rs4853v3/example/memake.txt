@@ -1,0 +1,13 @@
+type: executable
+target: example_rs4853v3
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.RS4853V3
+}
+
+sources: {
+    main.c
+}

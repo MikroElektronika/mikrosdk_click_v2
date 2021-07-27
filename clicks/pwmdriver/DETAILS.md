@@ -8,7 +8,7 @@ If you need to control DC motors with loads up to 10A, PWM driver click is the p
   <img src="https://download.mikroe.com/images/click_for_ide/pwmdriver_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/pwm-driver-click>)
+[click Product page](https://www.mikroe.com/pwm-driver-click)
 
 ---
 

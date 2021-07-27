@@ -2,7 +2,7 @@
     "name": "Relay Click",
     "description": "Relay click is a dual relay Click board, which can be operated by the host MCU. This Click board offers an elegant and easy solution for controlling a wide range of high power applications.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","G6D1AASI-5DC"],
     "category" : ["Relay"] 
 }

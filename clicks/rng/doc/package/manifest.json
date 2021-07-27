@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Encryption",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,8 +26,13 @@
     "name": "mikroe.click.rng",
     "product_link": "https://www.mikroe.com/rng-click",
     "short_description": "RNG Click is a random number generator (RNG) is a device that generates a sequence of numbers or symbols that cannot be reasonably predicted better than by a random chance. This Click board™ is true hardware random-number generator (HRNG), which generate genuinely random numbers.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "related_projects":[
+        3259
+    ],
+    "version": "2.0.0.3"
 }
+
 

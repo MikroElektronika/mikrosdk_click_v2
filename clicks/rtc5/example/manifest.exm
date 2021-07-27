@@ -2,7 +2,7 @@
     "name": "RTC 5 Click",
     "description": "RTC5 click carries MCP79510, a real-time clock/calendar with an SPI interface (mikroBUS MISO, MOSI, SCK and CS pins); along with a programmable interrupt for system output.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","MCP79510"],
     "category" : ["RTC"] 
 }

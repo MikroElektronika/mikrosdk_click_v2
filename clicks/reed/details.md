@@ -8,7 +8,7 @@ REED click is a simple board that carries a standard (Single Pole Single Throw N
   <img src="https://download.mikroe.com/images/click_for_ide/reed_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/reed-click>)
+[click Product page](https://www.mikroe.com/reed-click)
 
 ---
 

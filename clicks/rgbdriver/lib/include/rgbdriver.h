@@ -68,13 +68,23 @@
  * \defgroup color_set Color Set
  * \{
  */
-#define RGBDRIVER_COLOR_RED       0x7F8040
-#define RGBDRIVER_COLOR_ORANGE    0x7F8240
-#define RGBDRIVER_COLOR_YELLOW    0x7F9440
-#define RGBDRIVER_COLOR_GREEN     0x609F40
-#define RGBDRIVER_COLOR_BLUE      0x60805F
-#define RGBDRIVER_COLOR_WHITE     0x7F9F5F
-#define RGBDRIVER_COLOR_PURPLE    0x78805C
+
+#define RGBDRIVER_COLOR_RED_HIGH_INTENSITY       0x7F8040
+#define RGBDRIVER_COLOR_ORANGE_HIGH_INTENSITY    0x7F8240
+#define RGBDRIVER_COLOR_YELLOW_HIGH_INTENSITY    0x7F9440
+#define RGBDRIVER_COLOR_GREEN_HIGH_INTENSITY     0x609F40
+#define RGBDRIVER_COLOR_BLUE_HIGH_INTENSITY      0x60805F
+#define RGBDRIVER_COLOR_WHITE_HIGH_INTENSITY     0x7F9F5F
+#define RGBDRIVER_COLOR_PURPLE_HIGH_INTENSITY    0x78805C
+
+#define RGBDRIVER_COLOR_RED_LOW_INTENSITY       0x618040
+#define RGBDRIVER_COLOR_ORANGE_LOW_INTENSITY    0x6A8140
+#define RGBDRIVER_COLOR_YELLOW_LOW_INTENSITY    0x6A8540
+#define RGBDRIVER_COLOR_GREEN_LOW_INTENSITY     0x608140
+#define RGBDRIVER_COLOR_BLUE_LOW_INTENSITY      0x608041
+#define RGBDRIVER_COLOR_WHITE_LOW_INTENSITY     0x618141
+#define RGBDRIVER_COLOR_PURPLE_LOW_INTENSITY    0x658044
+
 #define RGBDRIVER_COLOR_OFF       0x000000
 /** \} */
 
@@ -150,28 +160,24 @@ void rgbdriver_cfg_setup ( rgbdriver_cfg_t *cfg );
 RGBDRIVER_RETVAL rgbdriver_init ( rgbdriver_t *ctx, rgbdriver_cfg_t *cfg );
 
 /**
+ * @brief Click Default Configuration function.
+ *
+ * @param ctx  Click object.
+ *
+ * @description This function executes default configuration for RGB Driver click.
+ */
+RGBDRIVER_RETVAL rgbdriver_default_cfg ( rgbdriver_t *ctx );
+
+/**
  * @brief Generic write function.
  *
  * @param ctx          Click object.
- * @param reg          Register address.
  * @param data_buf     Data buf to be written.
  * @param len          Number of the bytes in data buf.
  *
  * @description This function writes data to the desired register.
  */
-void rgbdriver_generic_write ( rgbdriver_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-/**
- * @brief Generic read function.
- *
- * @param ctx          Click object.
- * @param reg          Register address.
- * @param data_buf     Output data buf.
- * @param len          Number of the bytes to be read.
- *
- * @description This function reads data from the desired register.
- */
-void rgbdriver_generic_read ( rgbdriver_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+void rgbdriver_generic_write ( rgbdriver_t *ctx, uint8_t *data_buf, uint8_t len );
 
 /**
  * @brief Function set RGB color.

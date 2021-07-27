@@ -1,0 +1,40 @@
+type: library
+
+target: lib_rs4853
+
+alias: Click.Rs4853
+
+sources: {
+    src/rs4853.c
+}
+
+headers: {
+    include/rs4853.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/rs4853.h) dst(include/rs4853.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -44,7 +44,7 @@ void rgbdriver_cfg_setup ( rgbdriver_cfg_t *cfg )
 
 RGBDRIVER_RETVAL rgbdriver_init ( rgbdriver_t *ctx, rgbdriver_cfg_t *cfg )
 {
-     i2c_master_config_t i2c_cfg;
+    i2c_master_config_t i2c_cfg;
 
     i2c_cfg.speed  = cfg->i2c_speed;
     i2c_cfg.scl    = cfg->scl;
@@ -59,34 +59,36 @@ RGBDRIVER_RETVAL rgbdriver_init ( rgbdriver_t *ctx, rgbdriver_cfg_t *cfg )
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    i2c_master_set_timeout( &ctx->i2c, 0 );
 
     return RGBDRIVER_OK;
 }
 
-void rgbdriver_generic_write ( rgbdriver_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
+RGBDRIVER_RETVAL rgbdriver_default_cfg ( rgbdriver_t *ctx )
 {
-    uint8_t tx_buf[ 256 ];
-    uint8_t cnt;
+    uint8_t write_reg[ 3 ];
     
-    tx_buf[ 0 ] = reg;
+    write_reg[ 0 ] = 0x3F;
     
-    for ( cnt = 1; cnt <= len; cnt++ )
-    {
-        tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
-    }
+    rgbdriver_shut_down( ctx );
+    rgbdriver_generic_write( ctx, write_reg, 1 );
     
-    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );    
+    return RGBDRIVER_OK;
 }
 
-void rgbdriver_generic_read ( rgbdriver_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
+void rgbdriver_generic_write ( rgbdriver_t *ctx, uint8_t *data_buf, uint8_t len )
 {
-    i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, len );
+    for ( uint8_t cnt = 0; cnt < len; cnt++ )
+    {
+        i2c_master_write( &ctx->i2c, &data_buf[ cnt ], 1 );
+        Delay_50us( );
+    }
 }
 
 void rgbdriver_set_rgb_color ( rgbdriver_t *ctx, uint8_t red, uint8_t green, uint8_t blue )
 {
     uint8_t write_reg[ 3 ];
-	
+
     if ( blue < 0x40 || blue > 0x5F )
     {
         write_reg[ 0 ] = 0x40;
@@ -114,25 +116,25 @@ void rgbdriver_set_rgb_color ( rgbdriver_t *ctx, uint8_t red, uint8_t green, uin
         write_reg[ 2 ] = green;
     }
 
-    rgbdriver_generic_write( ctx, 0x30, write_reg, 3 );
+    rgbdriver_generic_write( ctx, write_reg, 3 );
 }
 
 void rgbdriver_set_color ( rgbdriver_t *ctx, uint32_t color )
 {
     uint8_t write_reg[ 3 ];
-    write_reg[ 0 ] = color;
-    write_reg[ 1 ] = color >> 8;
-    write_reg[ 2 ] = color >> 16;
+    write_reg[ 0 ] = ( uint8_t ) ( color & 0xFF );
+    write_reg[ 1 ] = ( uint8_t ) ( ( color >> 8 ) & 0xFF );
+    write_reg[ 2 ] = ( uint8_t ) ( ( color >> 16 ) & 0xFF );
 
-    rgbdriver_generic_write( ctx, 0x30, write_reg, 3 );
+    rgbdriver_generic_write( ctx, write_reg, 3 );
 }
 
 void rgbdriver_shut_down ( rgbdriver_t *ctx )
 {
     uint8_t write_reg[ 1 ];
-    write_reg[ 0 ] = 0x00;
+    write_reg[ 0 ] = RGBDRIVER_COLOR_OFF;
 
-    rgbdriver_generic_write( ctx, 0x00, write_reg, 1 );
+    i2c_master_write( &ctx->i2c, write_reg, 1 );
 }
 
 // ------------------------------------------------------------------------- END

@@ -1,0 +1,7 @@
+type: subdirs
+project: Pwm2
+
+subdirs: {
+    lib
+    example
+}

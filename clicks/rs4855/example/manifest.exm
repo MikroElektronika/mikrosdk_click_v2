@@ -1,0 +1,8 @@
+{
+    "name": "RS485 5 Click",
+    "description": "The RS485 5 Click is a Click board™ equipped with the MAX485, low-power, slew-rate-limited transceiver for RS-485 and RS-422 communication, from Maxim Integrated. This device supports half-duplex RS-485 communication and can be used as an interface between the TTL level UART and the RS485 communication bus.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","MAX485"],
+    "category" : ["RS485"] 
+}

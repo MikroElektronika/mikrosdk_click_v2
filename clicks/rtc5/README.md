@@ -11,7 +11,7 @@ RTC5 click carries MCP79510, a real-time clock/calendar with an SPI interface (m
   <img src="https://download.mikroe.com/images/click_for_ide/rtc5_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/rtc-5-click>)
+[click Product page](https://www.mikroe.com/rtc-5-click)
 
 ---
 

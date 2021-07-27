@@ -1,0 +1,7 @@
+type: subdirs
+project: RS4855V
+
+subdirs: {
+    lib
+    example
+}

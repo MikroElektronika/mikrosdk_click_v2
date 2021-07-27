@@ -1,0 +1,40 @@
+type: library
+
+target: lib_rs485isolator
+
+alias: Click.Rs485Isolator
+
+sources: {
+    src/rs485isolator.c
+}
+
+headers: {
+    include/rs485isolator.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/rs485isolator.h) dst(include/rs485isolator.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -9,7 +9,7 @@ RadioStation click is a unique click board™ that can be used to broadcast the 
 </p>
 
 
-[click Product page](<https://www.mikroe.com/radiostation-click>)
+[click Product page](https://www.mikroe.com/radiostation-click)
 
 ---
 

@@ -9,7 +9,7 @@
 </p>
 
 
-[click Product page](<https://www.mikroe.com/rtc-2-click>)
+[click Product page](https://www.mikroe.com/rtc-2-click)
 
 ---
 

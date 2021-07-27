@@ -8,7 +8,7 @@ RMS to DC click is a Click board™ that is used to convert the RMS of the input
   <img src="https://download.mikroe.com/images/click_for_ide/rmstodc_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/rms-to-dc-click>)
+[click Product page](https://www.mikroe.com/rms-to-dc-click)
 
 ---
 

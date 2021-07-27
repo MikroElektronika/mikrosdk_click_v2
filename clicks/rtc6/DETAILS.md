@@ -8,7 +8,7 @@ RTC6 click carries Microchip’s MCP79410 Real-Time Clock/Calendar IC with built
   <img src="https://download.mikroe.com/images/click_for_ide/rtc6_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/rtc6-click>)
+[click Product page](https://www.mikroe.com/rtc6-click)
 
 ---
 

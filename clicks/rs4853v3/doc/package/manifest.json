@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "RS485",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "RS485 3V3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.rs4853v3",
+    "product_link": "https://www.mikroe.com/rs485-33v-click",
+    "short_description": "RS485 click 3.3V is a RS422/485 transceiver Click board™, which can be used as an interface between the TTL level UART and the RS422/485 communication bus. It features a half-duplex communication capability, bus Idle, open and short-circuit detection, glitch free power-up and power-down for hot-plugging applications, thermal shutdown, and more. It is well suited for transmitting data packets over long distances and noisy areas, using the twisted wire bus, which offers good electromagnetic interferences (EMI) immunity. ESD protection of the transceiver IC ensures reliable operation, exceeding 16kV for human body model (HBM).",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "related_projects":[
+        246
+    ],
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
