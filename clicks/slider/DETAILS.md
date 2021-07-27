@@ -11,7 +11,7 @@ Slider click features a mechanical slide action potentiometer - a slider, which 
   <img src="https://download.mikroe.com/images/click_for_ide/slider_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/slider-click>)
+[click Product page](https://www.mikroe.com/slider-click)
 
 ---
 

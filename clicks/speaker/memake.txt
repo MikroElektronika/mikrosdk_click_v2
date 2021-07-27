@@ -1,0 +1,8 @@
+type: subdirs
+
+project: Speaker
+
+subdirs: {
+    lib
+    example
+}

@@ -8,7 +8,7 @@ Semper Flash 2 Click is a Click board™ which features the S25HL512T from Cypre
   <img src="https://download.mikroe.com/images/click_for_ide/semperflash2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/semper-flash-2-click>)
+[click Product page](https://www.mikroe.com/semper-flash-2-click)
 
 ---
 

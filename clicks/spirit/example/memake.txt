@@ -1,0 +1,13 @@
+type: executable
+target: example_spirit
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.SPIRIT
+}
+
+sources: {
+    main.c
+}

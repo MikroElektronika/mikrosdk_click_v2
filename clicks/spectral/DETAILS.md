@@ -8,7 +8,7 @@ Spectral click is a multispectral light sensing device, which uses the state-of-
   <img src="https://download.mikroe.com/images/click_for_ide/spectral_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/spectral-click>)
+[click Product page](https://www.mikroe.com/spectral-click)
 
 ---
 
@@ -17,7 +17,7 @@ Spectral click is a multispectral light sensing device, which uses the state-of-
 
 - **Author**        : MikroE Team
 - **Date**          : Mar 2020.
-- **Type**          : UART GPS/GNSS type
+- **Type**          : UART type
 
 
 # Software Support
@@ -44,7 +44,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 #### Example key functions :
 
 - Generic read function.
-> uint16_t spectral_uart_read ( spectral_t *ctx, char *data_buf, uint16_t max_len );
+> int32_t spectral_uart_read ( spectral_t *ctx, char *data_buf, uint16_t max_len );
  
 - Send Command
 > void spectral_send_command ( spectral_t *ctx, char *command );
@@ -60,7 +60,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes driver, reset module, and send ( AT, GAIN and MODE ) command.
+> Initializes the driver and configures the sensor.
 
 ```c
 
@@ -75,7 +75,7 @@ void application_init ( void )
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---->  Spectral Click Init  <----" );
+    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
 
@@ -86,14 +86,14 @@ void application_init ( void )
     spectral_module_reset( &spectral );
     Delay_ms( 500 );
 
-    // Settings 
-
-    spectral_send_command( &spectral, SINGL_CMD_AT );
+    log_printf( &logger, "Configuring the sensor...\r\n" );
+    spectral_send_command( &spectral, SPECTRAL_CMD_AT );
     spectral_process( );
-    spectral_send_command( &spectral, SINGL_CMD_GAIN );
+    spectral_send_command( &spectral, SPECTRAL_CMD_GAIN );
     spectral_process( );
-    spectral_send_command( &spectral, SINGL_CMD_MODE );
+    spectral_send_command( &spectral, SPECTRAL_CMD_MODE );
     spectral_process( );
+    log_printf( &logger, "The sensor has been configured!\r\n" );
     Delay_ms( 1000 );
 }
   
@@ -101,16 +101,13 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads the received data and parses it.
+> Reads the values of all 6 channels and parses it to the USB UART each second.
 
 ```c
 
 void application_task ( void )
 {
-    spectral_send_command( &spectral, SINGL_CMD_DATA );
-    spectral_process( );
- 
-    parser_application(  );   
+    parser_application( );  
 } 
 
 ```

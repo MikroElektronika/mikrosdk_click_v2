@@ -8,7 +8,7 @@ Shake2Wake click carries an ADXL362 ultralow power, 3-axis MEMS accelerometer an
   <img src="https://download.mikroe.com/images/click_for_ide/shake2wake_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/shake-2-wake-click>)
+[click Product page](https://www.mikroe.com/shake-2-wake-click)
 
 ---
 

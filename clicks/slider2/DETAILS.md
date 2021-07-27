@@ -10,7 +10,7 @@ The Slider 2 click is a very accurate potentiometer Click Board, featuring a hig
 </p>
 
 
-[click Product page](<https://www.mikroe.com/slider-2-click>)
+[click Product page](https://www.mikroe.com/slider-2-click)
 
 ---
 

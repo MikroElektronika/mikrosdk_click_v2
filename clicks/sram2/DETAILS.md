@@ -9,7 +9,7 @@ SRAM 2 Click is based on ANV32A62A SRAM memory from Anvo-Systems Dresden. It's a
 </p>
 
 
-[click Product page](<https://www.mikroe.com/sram-2-click>)
+[click Product page](https://www.mikroe.com/sram-2-click)
 
 ---
 

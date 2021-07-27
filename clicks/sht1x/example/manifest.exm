@@ -2,7 +2,7 @@
     "name": "SHT1x Click",
     "description": "SHT11 Click is an accessory board in mikroBus™ form factor. It includes a digital humidity and temperature sensor SHT11.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","SHT11"],
     "category" : ["Temperature & humidity"] 
 }

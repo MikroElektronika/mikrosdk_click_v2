@@ -70,7 +70,8 @@
  * \defgroup driver Driver define
  * \{
  */
-#define DRV_RX_BUFFER_SIZE 500
+#define DRV_RX_BUFFER_SIZE 200
+#define DRV_TX_BUFFER_SIZE 100
 /** \} */
 
 /** \} */ // End group macro 
@@ -97,7 +98,7 @@ typedef struct
     uart_t uart;
 
     char uart_rx_buffer[ DRV_RX_BUFFER_SIZE ];
-    char uart_tx_buffer[ DRV_RX_BUFFER_SIZE ];
+    char uart_tx_buffer[ DRV_TX_BUFFER_SIZE ];
 
 } spectral3_t;
 
@@ -196,7 +197,7 @@ void spectral3_generic_write ( spectral3_t *ctx, char *data_buf, uint16_t len );
  * 
  * @return Number of reads data.
  */
-uint16_t spectral3_generic_read ( spectral3_t *ctx, char *data_buf, uint16_t max_len );
+int32_t spectral3_generic_read ( spectral3_t *ctx, char *data_buf, uint16_t max_len );
 
 /**
  * @brief Send command

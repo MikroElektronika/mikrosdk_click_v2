@@ -8,7 +8,7 @@ The Semper Flash Click is a Click board™ which features the S25HS512T, a perfe
   <img src="https://download.mikroe.com/images/click_for_ide/semperflash_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/semper-flash-click>)
+[click Product page](https://www.mikroe.com/semper-flash-click)
 
 ---
 

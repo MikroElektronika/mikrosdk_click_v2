@@ -9,7 +9,7 @@ Spectral 3 click is a multispectral sensing device, which uses the state-of-the-
   <img src="https://download.mikroe.com/images/click_for_ide/spectral3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/spectral-3-click>)
+[click Product page](https://www.mikroe.com/spectral-3-click)
 
 ---
 
@@ -61,7 +61,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes driver and reset module.
+> Initializes the driver and configures the sensor.
 
 ```c
 
@@ -86,10 +86,15 @@ void application_init ( void )
 
     spectral3_module_reset( &spectral3 );
     Delay_ms( 500 );
-
+    
+    log_printf( &logger, "Configuring the sensor...\r\n" );
     spectral3_send_command( &spectral3, SPECTRAL3_CMD_AT );
+    spectral3_process( );
     spectral3_send_command( &spectral3, SPECTRAL3_CMD_GAIN );
+    spectral3_process( );
     spectral3_send_command( &spectral3, SPECTRAL3_CMD_MODE );
+    spectral3_process( );
+    log_printf( &logger, "The sensor has been configured!\r\n" );
     Delay_ms( 1000 );
 }
   
@@ -97,13 +102,12 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads the received data and parses it.
+> Reads the values of all 6 channels and parses it to the USB UART each second.
 
 ```c
 
 void application_task ( void )
 {
-    spectral3_process( );
     parser_application( );
 } 
 

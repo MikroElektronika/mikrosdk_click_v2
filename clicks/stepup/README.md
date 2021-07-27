@@ -11,7 +11,7 @@ Step Up Click is a fixed frequency DC-DC step-up (boost) regulator, which can be
   <img src="https://download.mikroe.com/images/click_for_ide/stepup_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/step-up-click>)
+[click Product page](https://www.mikroe.com/step-up-click)
 
 ---
 

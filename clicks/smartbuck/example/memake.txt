@@ -1,0 +1,17 @@
+type: executable
+target: example_smartbuck
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.SMARTBUCK
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

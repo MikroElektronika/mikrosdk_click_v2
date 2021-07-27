@@ -8,7 +8,7 @@ SHT click is a temperature and humidity sensing click board that carries Sensiro
   <img src="https://download.mikroe.com/images/click_for_ide/sht_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/sht-click>)
+[click Product page](https://www.mikroe.com/sht-click)
 
 ---
 

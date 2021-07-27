@@ -1,0 +1,7 @@
+type: subdirs
+project: SPIRIT
+
+subdirs: {
+    lib
+    example
+}

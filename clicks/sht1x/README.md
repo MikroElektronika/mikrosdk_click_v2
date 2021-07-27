@@ -9,7 +9,7 @@ SHT11 Click is an accessory board in mikroBus™ form factor. It includes a digi
   <img src="https://download.mikroe.com/images/click_for_ide/sht1x_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/sht1x-click>)
+[click Product page](https://www.mikroe.com/sht1x-click)
 
 ---
 

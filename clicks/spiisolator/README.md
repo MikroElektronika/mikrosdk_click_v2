@@ -9,7 +9,7 @@ SPI Isolator click carries the ADuM4154 5kV digital isolator optimized for a ser
   <img src="https://download.mikroe.com/images/click_for_ide/spiisolator_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/spi-isolator-click>)
+[click Product page](https://www.mikroe.com/spi-isolator-click)
 
 ---
 

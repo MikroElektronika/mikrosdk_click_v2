@@ -11,7 +11,7 @@ processing features with a high signal-to-noise ratio.
   <img src="https://download.mikroe.com/images/click_for_ide/sht_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/sht-click>)
+[click Product page](https://www.mikroe.com/sht-click)
 
 ---
 

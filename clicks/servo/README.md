@@ -9,7 +9,7 @@ Servo click is a 16-channel PWM servo driver with the voltage sensing circuitry.
   <img src="https://download.mikroe.com/images/click_for_ide/servo_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/servo-click>)
+[click Product page](https://www.mikroe.com/servo-click)
 
 ---
 

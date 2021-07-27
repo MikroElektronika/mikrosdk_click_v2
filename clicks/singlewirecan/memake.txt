@@ -1,0 +1,7 @@
+type: subdirs
+project: SingleWireCan
+
+subdirs: {
+    lib
+    example
+}

@@ -8,7 +8,7 @@ Shuttle click is a mikroBUS™ socket expansion board, which provides an easy an
   <img src="https://download.mikroe.com/images/click_for_ide/shuttle_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/shuttle-click>)
+[click Product page](https://www.mikroe.com/shuttle-click)
 
 ---
 

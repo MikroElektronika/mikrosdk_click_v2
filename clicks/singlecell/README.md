@@ -11,7 +11,7 @@ The Single Cell click is a Click board™ which features MCP16251 synchronous bo
   <img src="https://download.mikroe.com/images/click_for_ide/singlecell_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/single-cell-click>)
+[click Product page](https://www.mikroe.com/single-cell-click)
 
 ---
 

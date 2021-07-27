@@ -10,7 +10,7 @@ SRAM Click presents additional 1Mbit SRAM memory that can be added to device.
 </p>
 
 
-[click Product page](<https://www.mikroe.com/sram-click>)
+[click Product page](https://www.mikroe.com/sram-click)
 
 ---
 

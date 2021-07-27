@@ -30,6 +30,7 @@
 #include "spectral3.h"
 #include "string.h"
 #include "stdlib.h"
+#include "generic_pointer.h"
 
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
@@ -45,7 +46,7 @@ void spectral3_cfg_setup ( spectral3_cfg_t *cfg )
     cfg->rst = HAL_PIN_NC;
     cfg->int_pin = HAL_PIN_NC;
 
-    cfg->baud_rate      = 9600;
+    cfg->baud_rate      = 115200;
     cfg->data_bit       = UART_DATA_BITS_DEFAULT;
     cfg->parity_bit     = UART_PARITY_DEFAULT;
     cfg->stop_bit       = UART_STOP_BITS_DEFAULT;
@@ -108,7 +109,7 @@ void spectral3_generic_write ( spectral3_t *ctx, char *data_buf, uint16_t len )
     uart_write( &ctx->uart, data_buf, len );
 }
 
-uint16_t spectral3_generic_read ( spectral3_t *ctx, char *data_buf, uint16_t max_len )
+int32_t spectral3_generic_read ( spectral3_t *ctx, char *data_buf, uint16_t max_len )
 {
     return uart_read( &ctx->uart, data_buf, max_len );
 }
@@ -122,49 +123,49 @@ void spectral3_send_command ( spectral3_t *ctx, char *command )
     len = strlen( command );
     
     strncpy( tmp_buf, command, len );
-    strcat( tmp_buf, "\r" );
+    strcat( tmp_buf, "\r\n" );
 
     spectral3_generic_write( ctx, tmp_buf, strlen( tmp_buf ) );
 }
 
 void spectral3_get_data ( char *rsp, uint16_t *c_data )
 {
-    char *tmp_start;
-    char *tmp_end;
+    char * __generic tmp_start;
+    char * __generic tmp_end;
     char buff[ 10 ] = { 0 };
 
     tmp_start = rsp;
-    tmp_end = strchr( tmp_start + 1, ',' );
+    tmp_end = strstr( tmp_start + 1, "," );
     strncpy( buff, tmp_start, tmp_end - ( tmp_start ) );
     c_data[ 0 ] = atof( buff );
     memset( buff, 0, 10 );
     
-    tmp_start = strchr( rsp, ',' );
-    tmp_end = strchr( tmp_start + 1, ',' );
+    tmp_start = strstr( rsp, "," );
+    tmp_end = strstr( tmp_start + 1, "," );
     strncpy( buff, tmp_start + 2, tmp_end - ( tmp_start + 2 ) );
     c_data[ 1 ] = atof( buff );
     memset( buff, 0, 10 );
     
     tmp_start = ( tmp_end );
-    tmp_end = strchr( tmp_start + 1, ',' );
+    tmp_end = strstr( tmp_start + 1, "," );
     strncpy( buff, tmp_start + 2, tmp_end - ( tmp_start + 2 ) );
     c_data[ 2 ] = atof( buff );
     memset( buff, 0, 10 );
     
-    tmp_start = ( tmp_end );
-    tmp_end = strchr( tmp_start + 1, ',' );
+    tmp_start = ( tmp_end ); 
+    tmp_end = strstr( tmp_start + 1, "," );
     strncpy( buff, tmp_start + 2, tmp_end - ( tmp_start + 2 ) );
     c_data[ 3 ] = atof( buff );
     memset( buff, 0, 10 );
     
     tmp_start = ( tmp_end );
-    tmp_end = strchr( tmp_start + 1, ',' );
+    tmp_end = strstr( tmp_start + 1, "," );
     strncpy( buff, tmp_start + 2, tmp_end - ( tmp_start + 2 ) );
     c_data[ 4 ] = atof( buff );
     memset( buff, 0, 10 );
 
     tmp_start = ( tmp_end );
-    tmp_end = strchr( tmp_start + 1, 'O' );
+    tmp_end = strstr( tmp_start + 1, "O" );
     strncpy( buff, tmp_start + 2, tmp_end - ( tmp_start + 2 ) );
     c_data[ 5 ] = atof( buff );
 }

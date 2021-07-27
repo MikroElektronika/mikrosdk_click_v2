@@ -9,7 +9,7 @@ Spectral 2 click is a multispectral color sensing device, which uses the state-o
 </p>
 
 
-[click Product page](<https://www.mikroe.com/spectral-2-click>)
+[click Product page](https://www.mikroe.com/spectral-2-click)
 
 ---
 

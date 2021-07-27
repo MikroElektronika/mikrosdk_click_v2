@@ -1,0 +1,8 @@
+type: subdirs
+
+project: Stepper15
+
+subdirs: {
+    lib
+    example
+}

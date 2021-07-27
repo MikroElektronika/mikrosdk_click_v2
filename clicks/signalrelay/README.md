@@ -11,7 +11,7 @@ Signal Relay click can be used for ON/OFF control in various devices. It carries
   <img src="https://download.mikroe.com/images/click_for_ide/signalrelay_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/signal-relay-click>)
+[click Product page](https://www.mikroe.com/signal-relay-click)
 
 ---
 

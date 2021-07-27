@@ -70,7 +70,8 @@
  * \defgroup driver Driver define
  * \{
  */
-#define DRV_RX_BUFFER_SIZE 500
+#define DRV_RX_BUFFER_SIZE 200
+#define DRV_TX_BUFFER_SIZE 100
 /** \} */
 
 /** \} */ // End group macro 
@@ -97,7 +98,7 @@ typedef struct
     uart_t uart;
 
     char uart_rx_buffer[ DRV_RX_BUFFER_SIZE ];
-    char uart_tx_buffer[ DRV_RX_BUFFER_SIZE ];
+    char uart_tx_buffer[ DRV_TX_BUFFER_SIZE ];
 
 } spectral_t;
 

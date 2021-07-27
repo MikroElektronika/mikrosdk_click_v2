@@ -11,7 +11,7 @@ The Slider 2 click is a very accurate potentiometer Click Board, featuring a hig
   <img src="https://download.mikroe.com/images/click_for_ide/slider2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/slider-2-click>)
+[click Product page](https://www.mikroe.com/slider-2-click)
 
 ---
 

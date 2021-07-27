@@ -8,14 +8,13 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes driver and reset module.
+ * Initializes the driver and configures the sensor.
  * 
  * ## Application Task  
- * Reads the received data and parses it.
+ * Reads the values of all 6 channels and parses it to the USB UART each second.
  * 
  * ## Additional Function
- * - spectral3_process ( ) - The general process of collecting presponce 
- *                                   that sends a module.
+ * - spectral3_process ( ) - The general process of collecting the sensor responses.
  * 
  * \author MikroE Team
  *
@@ -28,8 +27,8 @@
 #include "string.h"
 
 #define PROCESS_COUNTER 10
-#define PROCESS_RX_BUFFER_SIZE 500
-#define PROCESS_PARSER_BUFFER_SIZE 1000
+#define PROCESS_RX_BUFFER_SIZE 200
+#define PROCESS_PARSER_BUFFER_SIZE 400
 
 #define SPECTRAL3_CMD_DATA      "ATDATA"
 #define SPECTRAL3_CMD_AT        "AT" 
@@ -47,7 +46,7 @@ static char current_parser_buf[ PROCESS_PARSER_BUFFER_SIZE ];
 
 static void spectral3_process ( void )
 {
-    uint16_t rsp_size;
+    int32_t rsp_size;
     uint16_t rsp_cnt = 0;
     
     char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
@@ -61,7 +60,7 @@ static void spectral3_process ( void )
     {
         rsp_size = spectral3_generic_read( &spectral3, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
 
-        if ( rsp_size != 0 )
+        if ( rsp_size > 0 )
         {  
             // Validation of the received data
             for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
@@ -100,14 +99,14 @@ static void parser_application ( )
     spectral3_process( );
 
     spectral3_get_data( current_parser_buf, read_data );
-
-    log_printf( &logger, "\r\n-----------------------\r\n" ); 
+ 
     log_printf( &logger, "-- R value: %d \r\n", read_data[ 0 ] );   
     log_printf( &logger, "-- S value: %d \r\n", read_data[ 1 ] );
     log_printf( &logger, "-- T value: %d \r\n", read_data[ 2 ] );
     log_printf( &logger, "-- U value: %d \r\n", read_data[ 3 ] );
     log_printf( &logger, "-- V value: %d \r\n", read_data[ 4 ] );
-    log_printf( &logger, "-- W value: %d \r\n", read_data[ 5 ] ); 
+    log_printf( &logger, "-- W value: %d \r\n", read_data[ 5 ] );
+    log_printf( &logger, "-----------------\r\n" );
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -133,16 +132,20 @@ void application_init ( void )
 
     spectral3_module_reset( &spectral3 );
     Delay_ms( 500 );
-
+    
+    log_printf( &logger, "Configuring the sensor...\r\n" );
     spectral3_send_command( &spectral3, SPECTRAL3_CMD_AT );
+    spectral3_process( );
     spectral3_send_command( &spectral3, SPECTRAL3_CMD_GAIN );
+    spectral3_process( );
     spectral3_send_command( &spectral3, SPECTRAL3_CMD_MODE );
+    spectral3_process( );
+    log_printf( &logger, "The sensor has been configured!\r\n" );
     Delay_ms( 1000 );
 }
 
 void application_task ( void )
 {
-    spectral3_process( );
     parser_application( );
 }
 

@@ -9,7 +9,7 @@ The Step Down 2 click is a Click board™ equipped with the L6986HTR, a synchron
 </p>
 
 
-[click Product page](<https://www.mikroe.com/step-down-2-click>)
+[click Product page](https://www.mikroe.com/step-down-2-click)
 
 ---
 

@@ -14,7 +14,7 @@ There are many battery chargers and solar energy harvesters out there already, b
 
 
 
-[click Product page](<https://www.mikroe.com/solar-energy-click>)
+[click Product page](https://www.mikroe.com/solar-energy-click)
 
 ---
 

@@ -30,6 +30,7 @@
 #include "spectral.h"
 #include "string.h"
 #include "stdlib.h"
+#include "generic_pointer.h"
 
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
@@ -124,79 +125,79 @@ void spectral_send_command ( spectral_t *ctx, char *command )
 
 void spectral_get_color_data ( uint8_t *rsp, uint8_t *xyz_data )
 {
-    char *tmp_start;
-    char *tmp_end;
+    char * __generic tmp_start;
+    char * __generic tmp_end;
     char buff[ 10 ] = { 0 };
     
     tmp_start = rsp;
-    tmp_end = strchr( tmp_start + 1, ',' );
+    tmp_end = strstr( tmp_start + 1, "," );
     strncpy( buff, tmp_start, tmp_end - ( tmp_start ) );
     xyz_data[ 0 ] = atof( buff );
     memset( buff, 0, 10 );
     
-    tmp_start = strchr( rsp, ',' );
-    tmp_end = strchr( tmp_start + 1, ',' );
+    tmp_start = strstr( rsp, "," );
+    tmp_end = strstr( tmp_start + 1, "," );
     strncpy( buff, tmp_start + 2, tmp_end - ( tmp_start + 2 ) );
     xyz_data[ 1 ] = atof( buff );
     memset( buff, 0, 10 );
     
     tmp_start = ( tmp_end );
-    tmp_end = strchr( tmp_start + 1, 'O' );
+    tmp_end = strstr( tmp_start + 1, "O" );
     strncpy( buff, tmp_start + 2, tmp_end - ( tmp_start + 2 )  );
     xyz_data[ 2 ] = atof( buff );
 }
 
 void spectral_get_xyz_data ( uint8_t *rsp, uint8_t *xyzr_data )
 {
-    char *tmp_start;
-    char *tmp_end;
+    char * __generic tmp_start;
+    char * __generic tmp_end;
     char buff[ 10 ] = { 0 };
 
     tmp_start = rsp;
-    tmp_end = strchr( tmp_start + 1, ',' );
+    tmp_end = strstr( tmp_start + 1, "," );
     strncpy( buff, tmp_start, tmp_end - ( tmp_start ) );
     xyzr_data[ 0 ] = atof( buff );
     memset( buff, 0, 10 );
     
-    tmp_start = strchr( rsp, ',' );
-    tmp_end = strchr( tmp_start + 1, ',' );
+    tmp_start = strstr( rsp, "," );
+    tmp_end = strstr( tmp_start + 1, "," );
     strncpy( buff, tmp_start + 2, tmp_end - ( tmp_start + 2 ) );
     xyzr_data[ 1 ] = atof( buff );
     memset( buff, 0, 10 );
     
     tmp_start = tmp_end;
-    tmp_end = strchr( tmp_start + 1, 'O' );
+    tmp_end = strstr( tmp_start + 1, "O" );
     strncpy( buff, tmp_start + 2, tmp_end - ( tmp_start + 2 ) );
     xyzr_data[ 2 ] = atof( buff );
 }
 
 void spectral_get_xy_small_data ( uint8_t *rsp, uint8_t *xy_data )
 {
-    char *tmp_start;
-    char *tmp_end;
+    char * __generic tmp_start;
+    char * __generic tmp_end;
     char buff[ 10 ] = { 0 };
 
     tmp_start = rsp;
-    tmp_end = strchr( tmp_start + 1, ',' );
+    tmp_end = strstr( tmp_start + 1, "," );
     strncpy( buff, tmp_start, tmp_end - ( tmp_start ) );
     xy_data[ 0 ] = atof( buff );
     memset( buff, 0, 10 );
     
     tmp_start = tmp_end;
-    tmp_end = strchr( tmp_start + 1, 'O' );
+    tmp_end = strstr( tmp_start + 1, "O" );
     strncpy( buff, tmp_start + 2, tmp_end - ( tmp_start + 2 ) );
     xy_data[ 1 ] = atof( buff );
 }
 
 uint8_t spectral_get_lux_data ( uint8_t *rsp )
 {
-    char *tmp_start;
-    char *tmp_end;
+    char * __generic tmp_start;
+    char * __generic tmp_end;
     char buff[ 10 ] = { 0 };
     uint8_t lux_data;
 
     tmp_start = rsp;
-    tmp_end = strchr( tmp_start + 1, 'O' );
+    tmp_end = strstr( tmp_start + 1, "O" );
     strncpy( buff, tmp_start, tmp_end - ( tmp_start ) );
     lux_data = atof( buff );
 
@@ -205,13 +206,13 @@ uint8_t spectral_get_lux_data ( uint8_t *rsp )
 
 uint8_t spectral_get_cct_data ( uint8_t *rsp )
 {
-    char *tmp_start;
-    char *tmp_end;
+    char * __generic tmp_start;
+    char * __generic tmp_end;
     char buff[ 10 ] = { 0 };
     uint8_t cct_data;
 
     tmp_start = rsp;
-    tmp_end = strchr( tmp_start + 1, 'O' );
+    tmp_end = strstr( tmp_start + 1, "O" );
     strncpy( buff, tmp_start, tmp_end - ( tmp_start ) );
     cct_data = atof( buff );
 
@@ -220,85 +221,85 @@ uint8_t spectral_get_cct_data ( uint8_t *rsp )
 
 void spectral_get_uv_data ( uint8_t *rsp, uint16_t *uv_data)
 {
-    char *tmp_start;
-    char *tmp_end;
+    char * __generic tmp_start;
+    char * __generic tmp_end;
     char buff[ 10 ] = { 0 };
 
     tmp_start = rsp;
-    tmp_end = strchr( tmp_start + 1, ',' );
+    tmp_end = strstr( tmp_start + 1, "," );
     strncpy( buff, tmp_start, tmp_end - ( tmp_start ) );
     uv_data[ 0 ] = atof( buff ) * 1000;
     memset( buff, 0, 10 );
     
-    tmp_start = strchr( rsp, ',' );
-    tmp_end = strchr( tmp_start + 1, ',' );
+    tmp_start = strstr( rsp, "," );
+    tmp_end = strstr( tmp_start + 1, "," );
     strncpy( buff, tmp_start + 2, tmp_end - ( tmp_start + 2 ) );
     uv_data[ 1 ] = atof( buff ) * 1000;
     memset( buff, 0, 10 );
     
     tmp_start = tmp_end;
-    tmp_end = strchr( tmp_start + 1, ',' );
+    tmp_end = strstr( tmp_start + 1, "," );
     strncpy( buff, tmp_start + 2, tmp_end - ( tmp_start + 2 ) );
     uv_data[ 3 ] = atof( buff ) * 1000 ;
     memset( buff, 0, 10 );
     
     tmp_start = ( tmp_end );
-    tmp_end = strchr( tmp_start + 1, 'O' );
+    tmp_end = strstr( tmp_start + 1, "O" );
     strncpy( buff, tmp_start + 2, tmp_end - ( tmp_start + 2 ) );
     uv_data[ 4 ] = atof( buff ) * 1000;
 }
 
 void spectral_get_data ( char *rsp, uint16_t *c_data )
 {
-    char *tmp_start;
-    char *tmp_end;
+    char * __generic tmp_start;
+    char * __generic tmp_end;
     char buff[ 10 ] = { 0 };
 
     tmp_start = rsp;
-    tmp_end = strchr( tmp_start + 1, ',' );
+    tmp_end = strstr( tmp_start + 1, "," );
     strncpy( buff, tmp_start, tmp_end - ( tmp_start ) );
     c_data[ 0 ] = atof( buff );
     memset( buff, 0, 10 );
     
-    tmp_start = strchr( rsp, ',' );
-    tmp_end = strchr( tmp_start + 1, ',' );
+    tmp_start = strstr( rsp, "," );
+    tmp_end = strstr( tmp_start + 1, "," );
     strncpy( buff, tmp_start + 2, tmp_end - ( tmp_start + 2 ) );
     c_data[ 1 ] = atof( buff );
     memset( buff, 0, 10 );
     
     tmp_start = ( tmp_end );
-    tmp_end = strchr( tmp_start + 1, ',' );
+    tmp_end = strstr( tmp_start + 1, "," );
     strncpy( buff, tmp_start + 2, tmp_end - ( tmp_start + 2 ) );
     c_data[ 2 ] = atof( buff );
     memset( buff, 0, 10 );
     
     tmp_start = ( tmp_end );
-    tmp_end = strchr( tmp_start + 1, ',' );
+    tmp_end = strstr( tmp_start + 1, "," );
     strncpy( buff, tmp_start + 2, tmp_end - ( tmp_start + 2 ) );
     c_data[ 3 ] = atof( buff );
     memset( buff, 0, 10 );
     
     tmp_start = ( tmp_end );
-    tmp_end = strchr( tmp_start + 1, ',' );
+    tmp_end = strstr( tmp_start + 1, "," );
     strncpy( buff, tmp_start + 2, tmp_end - ( tmp_start + 2 ) );
     c_data[ 4 ] = atof( buff );
     memset( buff, 0, 10 );
 
     tmp_start = ( tmp_end );
-    tmp_end = strchr( tmp_start + 1, 'O' );
+    tmp_end = strstr( tmp_start + 1, "O" );
     strncpy( buff, tmp_start + 2, tmp_end - ( tmp_start + 2 ) );
     c_data[ 5 ] = atof( buff );
 }
 
 uint8_t spectral_get_duv_data ( uint8_t *rsp )
 {
-    char *tmp_start;
-    char *tmp_end;
+    char * __generic tmp_start;
+    char * __generic tmp_end;
     char buff[ 10 ] = { 0 };
     uint8_t duv_data;
 
     tmp_start = rsp;
-    tmp_end = strchr( tmp_start + 1, 'O' );
+    tmp_end = strstr( tmp_start + 1, "O" );
     strncpy( buff, tmp_start, tmp_end - ( tmp_start ) );
     duv_data = atof( buff );
 

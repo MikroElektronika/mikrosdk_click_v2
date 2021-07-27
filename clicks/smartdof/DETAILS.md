@@ -9,7 +9,7 @@ SmartDOF click features a highly advanced integrated system-in-package (SiP) sol
 </p>
 
 
-[click Product page](<https://www.mikroe.com/smart-dof-click>)
+[click Product page](https://www.mikroe.com/smart-dof-click)
 
 ---
 

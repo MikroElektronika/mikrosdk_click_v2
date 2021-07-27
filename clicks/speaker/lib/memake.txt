@@ -1,0 +1,36 @@
+type: library
+
+target: lib_speaker
+
+sources: {
+    src/speaker.c
+}
+
+headers: {
+    include/speaker.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/speaker.h) dst(include/speaker.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Speaker

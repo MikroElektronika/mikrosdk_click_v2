@@ -10,7 +10,7 @@ Smoke click carries the MAX30105 high-sensitivity optical sensor for smoke detec
 </p>
 
 
-[click Product page](<https://www.mikroe.com/smoke-click>)
+[click Product page](https://www.mikroe.com/smoke-click)
 
 ---
 

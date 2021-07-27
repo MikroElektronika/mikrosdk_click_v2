@@ -9,7 +9,7 @@ SHT AN Click is a sensorics based add on board which can be used for measuring h
   <img src="https://download.mikroe.com/images/click_for_ide/shtan_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/sht-an-click>)
+[click Product page](https://www.mikroe.com/sht-an-click)
 
 ---
 
