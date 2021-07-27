@@ -1,0 +1,8 @@
+{
+    "name": "Air Flow Click",
+    "description": "Air Flow Click is a compact add-on board that contains a flow-based 2-in-1 differential pressure sensor. This board features the LHDULTRAM012UB3, LHD ULTRA series micro-flow differential pressure sensor from TE Connectivity Measurement Specialties. ",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","ULTRAM012UB3S"],
+    "category" : ["Pressure"]
+}

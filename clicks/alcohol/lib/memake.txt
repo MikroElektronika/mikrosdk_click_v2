@@ -1,0 +1,36 @@
+type: library
+
+target: lib_alcohol
+
+sources: {
+    src/alcohol.c
+}
+
+headers: {
+    include/alcohol.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/alcohol.h) dst(include/alcohol.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Alcohol

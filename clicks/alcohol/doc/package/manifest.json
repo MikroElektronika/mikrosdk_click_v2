@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Gas",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Alcohol click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.alcohol",
+    "product_link": "https://www.mikroe.com/alcohol-click",
+    "short_description": "Alcohol click has a high sensitivity to alcohol and it can be used to detect alcohol in concentrations from 0.04 to 4mg/l.Alcohol click carries an MQ-3 Semiconductor sensor for alcohol. The click is designed to run on a 5V power supply only. It communicates with the target microcontroller through the AN pin on the mikroBUS™ line. ",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+	"related_projects":[
+        1025
+    ],
+    "version": "2.0.0.0"
+}

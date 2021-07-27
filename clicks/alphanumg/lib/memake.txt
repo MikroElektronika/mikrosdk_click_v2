@@ -1,0 +1,36 @@
+type: library
+
+target: lib_alphanumg
+
+sources: {
+    src/alphanumg.c
+}
+
+headers: {
+    include/alphanumg.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/alphanumg.h) dst(include/alphanumg.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.AlphaNumG

@@ -1,0 +1,8 @@
+type: subdirs
+
+project: AirFlow
+
+subdirs: {
+    lib
+    example
+}

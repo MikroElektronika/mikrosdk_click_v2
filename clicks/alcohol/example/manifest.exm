@@ -1,0 +1,8 @@
+{
+    "name": "Alcohol Click",
+    "description": "Alcohol click has a high sensitivity to alcohol and it can be used to detect alcohol in concentrations from 0.04 to 4mg/l. Alcohol click carries an MQ-3 Semiconductor sensor for alcohol. The click is designed to run on a 5V power supply only. It communicates with the target microcontroller through the AN pin on the mikroBUS™ line. ",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","MQ-3"],
+    "category" : ["Gas"]
+}

@@ -4,7 +4,7 @@
 ---
 # ADC 10 click
 
-ADC 10 Click is a compact add-on board that contains a high-performance data converter. This board features the ADS122U04, a 24-bit precision ?S analog-to-digital converter with UART compatible interface from Texas Instruments.
+ADC 10 Click is a compact add-on board that contains a high-performance data converter. This board features the ADS122U04, a 24-bit precision ΔΣ analog-to-digital converter with UART compatible interface from Texas Instruments.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/adc10-click.png" height=300px>

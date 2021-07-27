@@ -1,0 +1,13 @@
+type: executable
+target: example_alcohol
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Alcohol
+}
+
+sources: {
+    main.c
+}

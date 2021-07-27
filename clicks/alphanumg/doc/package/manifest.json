@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "LED segment",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "AlphaNum G click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.alphanumg",
+    "product_link": "https://www.mikroe.com/alphanum-g-click",
+    "short_description": "AlphaNum click is a simple solution for adding 14-segment alphanumeric display to your device. The board carries two TLC5926 16-bit Constant-Current LED sink Drivers",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "related_projects":[
+        1266
+    ],
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.0"
+}

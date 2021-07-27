@@ -1,0 +1,36 @@
+type: library
+
+target: lib_airflow
+
+sources: {
+    src/airflow.c
+}
+
+headers: {
+    include/airflow.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/airflow.h) dst(include/airflow.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.AirFlow
