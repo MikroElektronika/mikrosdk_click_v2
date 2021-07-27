@@ -9,7 +9,7 @@ LED driver click carries the MCP1662 high-voltage step-up voltage driver from Mi
   <img src="https://download.mikroe.com/images/click_for_ide/leddriver_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/led-driver-click>)
+[click Product page](https://www.mikroe.com/led-driver-click)
 
 ---
 

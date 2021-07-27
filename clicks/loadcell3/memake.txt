@@ -1,0 +1,7 @@
+type: subdirs
+project: LoadCell3
+
+subdirs: {
+    lib
+    example
+}

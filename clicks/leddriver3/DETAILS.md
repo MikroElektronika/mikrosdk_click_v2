@@ -9,7 +9,7 @@ LED Driver 3 click is an RGB LED driver, capable of driving RGB LEDs with up to 
 </p>
 
 
-[click Product page](<https://www.mikroe.com/led-driver-3-click>)
+[click Product page](https://www.mikroe.com/led-driver-3-click)
 
 ---
 

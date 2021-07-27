@@ -13,7 +13,7 @@ The click is designed to run on either 3.3V or 5V power supply. It communicates 
   <img src="https://download.mikroe.com/images/click_for_ide/loadcell_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/load-cell-click>)
+[click Product page](https://www.mikroe.com/load-cell-click)
 
 ---
 

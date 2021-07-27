@@ -8,7 +8,7 @@ LED Flash click functions as a high power LED flash, and carries the CAT3224 fla
   <img src="https://download.mikroe.com/images/click_for_ide/ledflash_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/led-flash-click>)
+[click Product page](https://www.mikroe.com/led-flash-click)
 
 ---
 

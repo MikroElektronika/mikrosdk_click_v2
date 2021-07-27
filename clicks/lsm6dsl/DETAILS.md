@@ -8,7 +8,7 @@ LSM6DSL click measures linear and angular velocity with six degrees of freedom. 
   <img src="https://download.mikroe.com/images/click_for_ide/lsm6dsl_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/lsm6dsl-click>)
+[click Product page](https://www.mikroe.com/lsm6dsl-click)
 
 ---
 

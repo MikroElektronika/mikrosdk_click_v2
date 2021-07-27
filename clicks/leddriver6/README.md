@@ -9,7 +9,7 @@ LED driver 6 Click is a high brightness LED or LED strip driver, designed to be 
   <img src="https://download.mikroe.com/images/click_for_ide/leddriver6_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/led-driver-6-click>)
+[click Product page](https://www.mikroe.com/led-driver-6-click)
 
 ---
 

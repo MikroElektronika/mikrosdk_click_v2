@@ -11,7 +11,7 @@ LED Flash 2 click is a powerful flash/torch click, featuring the MIC2870 from Mi
   <img src="https://download.mikroe.com/images/click_for_ide/ledflash2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/led-flash-2-click>)
+[click Product page](https://www.mikroe.com/led-flash-2-click)
 
 ---
 
@@ -79,10 +79,11 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----\r\n" );
+    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
 
@@ -98,9 +99,9 @@ void application_init ( void )
 
 ### Application Task
 
->This function will demonstrate how to use the flash mode,
-> and the torch mode, with different power settings. It will then turn the click
-> off.
+> This function will demonstrate how to use the flash mode,
+> and the torch mode, with different power settings. 
+> It will then turn the click off.
 
 ```c
 
@@ -120,20 +121,26 @@ void application_task ( void )
     Delay_ms( 1000 );
     log_printf( &logger, "Cheese!\r\n" );
 
-    ledflash2_set_mode( &ledflash2, LEDFLASH2_MODE_FLASH, LEDFLASH2_CUR_100, LEDFLASH2_FTMR_312 );
-
+    ledflash2_set_mode( &ledflash2, LEDFLASH2_MODE_FLASH, LEDFLASH2_CUR_50, LEDFLASH2_FTMR_312 );
     Delay_ms( 350 );
     ledflash2_set_mode( &ledflash2, LEDFLASH2_MODE_OFF, 0, 0 );
     Delay_ms( 2000 );
+    
     log_printf( &logger, "Switching to the torch mode in a moment...\r\n" );
     Delay_ms( 2000 );
     ledflash2_set_mode( &ledflash2, LEDFLASH2_MODE_TORCH, LEDFLASH2_CUR_100, 0 );
-    Delay_ms( 5000 );
+    Delay_ms( 3000 );
     log_printf( &logger, "Dimming the torch light...\r\n" );
-    ledflash2_set_mode( &ledflash2, LEDFLASH2_MODE_TORCH, LEDFLASH2_CUR_18, 0 );
-    Delay_ms( 5000 );
+    
+    for ( uint8_t cnt = LEDFLASH2_CUR_100; cnt <= LEDFLASH2_CUR_18; cnt++ )
+    {
+        ledflash2_set_mode( &ledflash2, LEDFLASH2_MODE_TORCH, cnt, 0 );
+        Delay_ms( 500 );
+    }
+    Delay_ms( 1000 );
     log_printf( &logger, "Switching off...\r\n" );
     ledflash2_set_mode( &ledflash2, LEDFLASH2_MODE_OFF, 0, 0 );
+    log_printf( &logger, "------------------------------------------------\r\n" );
 }
  
 

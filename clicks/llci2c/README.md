@@ -10,7 +10,7 @@ LLC I2C click can be utilized as the level converter for logic signals, which ma
 </p>
 
 
-[click Product page](<https://www.mikroe.com/llc-i2c-click>)
+[click Product page](https://www.mikroe.com/llc-i2c-click)
 
 ---
 

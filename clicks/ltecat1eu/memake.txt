@@ -1,0 +1,7 @@
+type: subdirs
+project: LTECat1EU
+
+subdirs: {
+    lib
+    example
+}

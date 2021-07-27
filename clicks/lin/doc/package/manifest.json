@@ -1,0 +1,40 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "LIN",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "LIN click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.lin",
+    "product_link": "https://www.mikroe.com/lin-click",
+    "short_description": "The LIN Click is a Click board™ that features the TLE7259-3GE, a LIN transceiver from Infineon Technologies, with integrated wake-up and protection features.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2923
+    ],
+    "version": "2.0.0.5"
+}
+
+
+
+

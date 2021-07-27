@@ -12,10 +12,10 @@
  * 
  * ## Application Task  
  * This function will demonstrate how to use the flash mode,
- * and the torch mode, with different power settings. It will then turn the click
- * off.
+ * and the torch mode, with different power settings. 
+ * It will then turn the click off.
  * 
- * *note:* 
+ * ## NOTE 
  * LED lights can be very bright, even on lowest power settings.
  * Avoid looking directly into the light when click is in operation.
  * 
@@ -59,7 +59,7 @@ void application_init ( void )
 }
 
 void application_task ( void )
-{
+{ 
     Delay_ms( 1000 );
     log_printf( &logger, "Do not look directly into the led lights.\r\n" );
     log_printf( &logger, "Triggering flash in 5...\r\n" );
@@ -74,20 +74,26 @@ void application_task ( void )
     Delay_ms( 1000 );
     log_printf( &logger, "Cheese!\r\n" );
 
-    ledflash2_set_mode( &ledflash2, LEDFLASH2_MODE_FLASH, LEDFLASH2_CUR_100, LEDFLASH2_FTMR_312 );
-
+    ledflash2_set_mode( &ledflash2, LEDFLASH2_MODE_FLASH, LEDFLASH2_CUR_50, LEDFLASH2_FTMR_312 );
     Delay_ms( 350 );
     ledflash2_set_mode( &ledflash2, LEDFLASH2_MODE_OFF, 0, 0 );
     Delay_ms( 2000 );
+    
     log_printf( &logger, "Switching to the torch mode in a moment...\r\n" );
     Delay_ms( 2000 );
     ledflash2_set_mode( &ledflash2, LEDFLASH2_MODE_TORCH, LEDFLASH2_CUR_100, 0 );
-    Delay_ms( 5000 );
+    Delay_ms( 3000 );
     log_printf( &logger, "Dimming the torch light...\r\n" );
-    ledflash2_set_mode( &ledflash2, LEDFLASH2_MODE_TORCH, LEDFLASH2_CUR_18, 0 );
-    Delay_ms( 5000 );
+    
+    for ( uint8_t cnt = LEDFLASH2_CUR_100; cnt <= LEDFLASH2_CUR_18; cnt++ )
+    {
+        ledflash2_set_mode( &ledflash2, LEDFLASH2_MODE_TORCH, cnt, 0 );
+        Delay_ms( 500 );
+    }
+    Delay_ms( 1000 );
     log_printf( &logger, "Switching off...\r\n" );
     ledflash2_set_mode( &ledflash2, LEDFLASH2_MODE_OFF, 0, 0 );
+    log_printf( &logger, "------------------------------------------------\r\n" );
 }
 
 void main ( void )

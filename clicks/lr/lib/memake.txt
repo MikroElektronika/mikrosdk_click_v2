@@ -1,0 +1,39 @@
+type: library
+
+target: lib_lr
+
+sources: {
+    src/lr.c
+}
+
+headers: {
+    include/lr.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/lr.h) dst(include/lr.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    MikroSDK.Driver
+    MikroSDK.Conversions
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.LR

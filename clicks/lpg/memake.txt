@@ -1,0 +1,8 @@
+type: subdirs
+
+project: LPG
+
+subdirs: {
+    lib
+    example
+}

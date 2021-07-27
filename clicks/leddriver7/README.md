@@ -9,7 +9,7 @@ LED Driver 7 click is a Click board™ equipped with the LTC3490, single cell 35
   <img src="https://download.mikroe.com/images/click_for_ide/leddriver7_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/led-driver-7-click>)
+[click Product page](https://www.mikroe.com/led-driver-7-click)
 
 ---
 

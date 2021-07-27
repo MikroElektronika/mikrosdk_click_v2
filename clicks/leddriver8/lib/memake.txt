@@ -1,0 +1,40 @@
+type: library
+
+target: lib_leddriver8
+
+alias: Click.LedDriver8
+
+sources: {
+    src/leddriver8.c
+}
+
+headers: {
+    include/leddriver8.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/leddriver8.h) dst(include/leddriver8.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

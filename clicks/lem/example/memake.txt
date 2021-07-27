@@ -1,0 +1,17 @@
+type: executable
+target: example_lem
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Lem
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

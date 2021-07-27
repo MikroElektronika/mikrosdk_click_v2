@@ -1,0 +1,8 @@
+{
+    "name": "LIN Click",
+    "description": "The LIN Click is a Click board™ that features the TLE7259-3GE, a LIN transceiver from Infineon Technologies, with integrated wake-up and protection features.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","TLE7259-3GE"],
+    "category" : ["LIN"] 
+}

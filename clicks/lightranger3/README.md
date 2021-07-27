@@ -11,7 +11,7 @@ Light Ranger 3 click is an accurate distance measurement Click board™ based on
   <img src="https://download.mikroe.com/images/click_for_ide/lightranger3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/lightranger-3-click>)
+[click Product page](https://www.mikroe.com/lightranger-3-click)
 
 ---
 

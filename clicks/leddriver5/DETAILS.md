@@ -9,7 +9,7 @@ LED Driver 5 click is a Click board™ capable of driving an array of high-power
   <img src="https://download.mikroe.com/images/click_for_ide/leddriver5_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/led-driver-5-click>)
+[click Product page](https://www.mikroe.com/led-driver-5-click)
 
 ---
 

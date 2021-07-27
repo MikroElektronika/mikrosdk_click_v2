@@ -1,0 +1,38 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Proximity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "LightRanger click",
+    "example_list": [
+      {
+        "project_path": "Examples/example"
+      }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+      "file_path": "",
+      "id": "46"
+    },
+    "name": "mikroe.click.lightranger",
+    "product_link": "https://www.mikroe.com/lightranger-click",
+    "short_description": "LightRanger click is a proximity sensor carrying STs VL6180X IC. This chip is based on STs patented FlightSense technology...",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        1450
+    ],
+    "version": "2.0.0.3"
+}
+
+

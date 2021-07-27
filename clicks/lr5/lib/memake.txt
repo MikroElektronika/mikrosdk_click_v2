@@ -1,0 +1,40 @@
+type: library
+
+target: lib_lr5
+
+alias: Click.LR5
+
+sources: {
+    src/lr5.c
+}
+
+headers: {
+    include/lr5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/lr5.h) dst(include/lr5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

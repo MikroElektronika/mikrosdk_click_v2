@@ -9,7 +9,7 @@ LED ring  R click is a mikroBUS™ add-on board with a ring of 32 red LEDs drive
   <img src="https://download.mikroe.com/images/click_for_ide/ledringr_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/led-ring-r-click>)
+[click Product page](https://www.mikroe.com/led-ring-r-click)
 
 ---
 

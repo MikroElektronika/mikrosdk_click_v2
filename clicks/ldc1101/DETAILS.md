@@ -10,7 +10,7 @@ LDC1101 click is an inductance-to-digital converter Click Board™. It is design
   <img src="https://download.mikroe.com/images/click_for_ide/ldc1101_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/ldc1101-click>)
+[click Product page](https://www.mikroe.com/ldc1101-click)
 
 ---
 

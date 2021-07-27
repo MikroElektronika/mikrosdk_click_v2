@@ -1,0 +1,8 @@
+{
+    "name": "Load Cell 5 Click",
+    "description": "Load Cell 5 Click is a compact add-on board that represents a weigh scale solution. This board features the AD7780, a pin-programmable, low power, 24-bit sigma-delta ΣΔ ADC from Analog Devices. It interfaces directly to the load cell, where the low-level signal from the load cell is amplified by the AD7780’s internal low noise programmable gain amplifier programmed to operate with a gain of 128 or 1. It also has a power-down mode allowing the user to switch off the power to the bridge sensor and power-down the AD7780 when not converting, increasing the product battery life.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","AD7780"],
+    "category" : ["Force"]
+}

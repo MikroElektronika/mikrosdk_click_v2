@@ -9,7 +9,7 @@ Light click is the add-on board with PD15-22CTR8 PIN photodiode, providing an ef
   <img src="https://download.mikroe.com/images/click_for_ide/light_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/light-click>)
+[click Product page](https://www.mikroe.com/light-click)
 
 ---
 

@@ -1,0 +1,36 @@
+type: library
+
+target: lib_loadcell5
+
+sources: {
+    src/loadcell5.c
+}
+
+headers: {
+    include/loadcell5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/loadcell5.h) dst(include/loadcell5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.LoadCell5

@@ -11,7 +11,7 @@ LSM303AGR click is a magnetometer and accelerometer device, capable of sensing b
   <img src="https://download.mikroe.com/images/click_for_ide/lsm303agr_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/lsm303agr-click-click>)
+[click Product page](https://www.mikroe.com/lsm303agr-click-click)
 
 ---
 

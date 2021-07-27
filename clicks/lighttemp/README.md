@@ -9,7 +9,7 @@ Light Temp Click is a dual-channel LED driver, designed to be used in tunable Sm
   <img src="https://download.mikroe.com/images/click_for_ide/lighttemp_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/light-temp-click>)
+[click Product page](https://www.mikroe.com/light-temp-click)
 
 ---
 

@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Force",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -31,6 +32,8 @@
     "related_projects":[
         2410
     ],
-    "version": "2.0.0.4"
+    "version": "2.0.0.6"
 }
+
+
 

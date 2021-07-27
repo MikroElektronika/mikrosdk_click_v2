@@ -2,7 +2,7 @@
     "name": "Led Driver 5 Click",
     "description": "LED Driver 5 click is a Click board™ capable of driving an array of high-power LEDs with constant current, up to 1.5A.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","TPS54200"],
     "category" : ["LED Drivers"] 
 }

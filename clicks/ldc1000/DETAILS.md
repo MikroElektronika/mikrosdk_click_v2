@@ -9,7 +9,7 @@ LDC1000 click carries the world's first inductance-to-digital converter IC, alon
 </p>
 
 
-[click Product page](<https://www.mikroe.com/ldc1000-click>)
+[click Product page](https://www.mikroe.com/ldc1000-click)
 
 ---
 

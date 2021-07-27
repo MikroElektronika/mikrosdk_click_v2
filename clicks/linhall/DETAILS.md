@@ -8,7 +8,7 @@ LIN HALL click carries an MLX90242 linear Hall sensor IC (with built-in active e
   <img src="https://download.mikroe.com/images/click_for_ide/linhall_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/lin-hall-click>)
+[click Product page](https://www.mikroe.com/lin-hall-click)
 
 ---
 

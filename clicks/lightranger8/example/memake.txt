@@ -1,0 +1,13 @@
+type: executable
+target: example_lightranger8
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.LightRanger8
+}
+
+sources: {
+    main.c
+}
