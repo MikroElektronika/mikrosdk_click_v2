@@ -9,7 +9,7 @@ The Thermo 17 Click is a Click board™ based on the TMP451-Q1, a high-accuracy,
   <img src="https://download.mikroe.com/images/click_for_ide/thermo17_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/thermo-17-click>)
+[click Product page](https://www.mikroe.com/thermo-17-click)
 
 ---
 

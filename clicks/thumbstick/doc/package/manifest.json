@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Pushbutton/Switches",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,10 +26,17 @@
     "name": "mikroe.click.thumbstick",
     "product_link": "https://www.mikroe.com/thumbstick-click",
     "short_description": "Thumbstick click is a high precision input device.It features a dual axis, spring return, pushbutton enabled joystick, and a MCP3204 12-bit A/D converter.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.4"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        1051
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.6"
 }
+
+
 
 
 

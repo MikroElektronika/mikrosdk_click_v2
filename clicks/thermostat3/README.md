@@ -11,7 +11,7 @@ Thermostat 3 Click is a general-purpose thermostat Click board™ designed to be
   <img src="https://download.mikroe.com/images/click_for_ide/thermostat3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/thermostat-3-click>)
+[click Product page](https://www.mikroe.com/thermostat-3-click)
 
 ---
 

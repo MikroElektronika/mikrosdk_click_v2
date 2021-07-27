@@ -8,7 +8,7 @@ Thermo 14 Click uses the STTS22H digital temperature sensor and thermal watchdog
   <img src="https://download.mikroe.com/images/click_for_ide/thermo14_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/thermo-14-click>)
+[click Product page](https://www.mikroe.com/thermo-14-click)
 
 ---
 

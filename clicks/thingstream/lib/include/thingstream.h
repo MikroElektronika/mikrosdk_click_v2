@@ -69,7 +69,8 @@
  * \defgroup driver Driver define
  * \{
  */
-#define DRV_RX_BUFFER_SIZE 500
+#define DRV_RX_BUFFER_SIZE 600
+#define DRV_TX_BUFFER_SIZE 100
 /** \} */
 
 #define  THINGSTREAM_PIN_STATE_HIGH  1
@@ -84,7 +85,7 @@
  */
 #define THINGSTREAM_NEMA_CGNSINF 1
 #define THINGSTREAM_NEMA_GPGLL 3
-#define THINGSTREAM_NEMA_CGNSINF_NUM_ELEMENT 15
+#define THINGSTREAM_NEMA_CGNSINF_NUM_ELEMENT 20
 #define THINGSTREAM_NEMA_GPGLL_NUM_ELEMENT 5
 /** \} */
 
@@ -176,7 +177,7 @@ typedef struct
     uart_t uart;
 
     char uart_rx_buffer[ DRV_RX_BUFFER_SIZE ];
-    char uart_tx_buffer[ DRV_RX_BUFFER_SIZE ];
+    char uart_tx_buffer[ DRV_TX_BUFFER_SIZE ];
 
 } thingstream_t;
 

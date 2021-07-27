@@ -1,16 +1,17 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Capacitive",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
     "details": "Resources/DETAILS.md",
-    "display_name": "Touch Key 4 click",
+    "display_name": "TouchKey 4 click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -31,6 +32,7 @@
     "related_projects":[
         2363
     ],
-    "version": "2.0.0.3"
+    "version": "2.0.0.6"
 }
+
 

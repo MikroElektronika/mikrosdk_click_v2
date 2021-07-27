@@ -19,12 +19,10 @@
  * TouchKey 4 is configured to work in Combo mode (Active and Standby mode). Input 1 is
  * enabled in Active mode, input 3 is enabled in Standby mode, and input 2 is enabled to
  * work in both modes. In this example the interrupt will be generated when touch is
- * detected and when touch is released. Also input 2 will generate interrupt as long
- * as the touch is detected (press and hold event), while input 1 and input 3 will
- * generate interrupt only once on one touch detection, after which the touch will be 
- * released. Standby mode should be used when fewer sensor inputs are enabled, and when
+ * detected and when touch is released. 
+ * Standby mode should be used when fewer sensor inputs are enabled, and when
  * they are programmed to have more sensitivity.
- * Somethimes it is neccessary to cycle the board power supply if click doesn't work. 
+ * Sometimes it is neccessary to cycle the board power supply if click doesn't work. 
  * </pre>
  * \author MikroE Team
  *

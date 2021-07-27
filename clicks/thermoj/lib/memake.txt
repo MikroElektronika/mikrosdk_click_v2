@@ -1,0 +1,40 @@
+type: library
+
+target: lib_thermoj
+
+alias: Click.ThermoJ
+
+sources: {
+    src/thermoj.c
+}
+
+headers: {
+    include/thermoj.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/thermoj.h) dst(include/thermoj.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

@@ -11,7 +11,7 @@ Thermo 7 click is a Click board™ equipped with the sensor IC, which can digiti
   <img src="https://download.mikroe.com/images/click_for_ide/thermo7_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/thermo-7-click>)
+[click Product page](https://www.mikroe.com/thermo-7-click)
 
 ---
 

@@ -1,32 +1,39 @@
 {
-  "architecture": "ARM",
-  "category": "Motion",
-  "changelog": "Resources/CHANGELOG.md",
-  "contains": [
-    "libraries",
-    "hex_files",
-    "examples"
-  ],
-  "dependency_list": [
-  ],
-  "details": "Resources/DETAILS.md",
-  "display_name": "TMR Angle click",
-  "example_list": [
-    {
-      "project_path": "Examples/example"
-    }
-  ],
-  "help": "Help/doc",
-  "icon": "Resources/click_icon.png",
-  "license": {
-    "file_path": "",
-    "id": "46"
-  },
-  "name": "mikroe.click.tmrangle",
-  "product_link": "https://www.mikroe.com/tmr-angle-click",
-  "short_description": "TMR Angle Click is a Click board perfectly suited for developing applications that range from steering angle applications with the highest functional safety requirements to motors for wipers, pumps and actuators and electric motors in general.",
-  "supported_compiler": "mikroC",
-  "type": "Library",
-  "version": "2.0.0.1"
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Motion",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "TMR Angle click",
+    "example_list": [
+      {
+        "project_path": "Examples/example"
+      }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+      "file_path": "",
+      "id": "46"
+    },
+    "name": "mikroe.click.tmrangle",
+    "product_link": "https://www.mikroe.com/tmr-angle-click",
+    "short_description": "TMR Angle Click is a Click board perfectly suited for developing applications that range from steering angle applications with the highest functional safety requirements to motors for wipers, pumps and actuators and electric motors in general.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2950
+    ],
+    "version": "2.0.0.3"
 }
+
+
 

@@ -1,0 +1,38 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Temperature & humidity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Thermo J click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.thermoj",
+    "product_link": "https://www.mikroe.com/thermo-j-click",
+    "short_description": "Thermo J Click is a temperature measurement click board™, which uses a thermocouple type-J probe, connected to a PPC-SMP-J onboard connector.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2235
+    ],
+    "version": "2.0.0.3"
+}
+
+

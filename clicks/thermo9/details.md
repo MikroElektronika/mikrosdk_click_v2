@@ -10,7 +10,7 @@ The TSYS01 is a single chip, versatile, new technology temperature sensor. The T
   <img src="https://download.mikroe.com/images/click_for_ide/thermo9_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/thermo-9-click>)
+[click Product page](https://www.mikroe.com/thermo-9-click)
 
 ---
 

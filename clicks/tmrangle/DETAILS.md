@@ -13,7 +13,7 @@ general.
 </p>
 
 
-[click Product page](<https://www.mikroe.com/tmr-angle-click>)
+[click Product page](https://www.mikroe.com/tmr-angle-click)
 
 ---
 

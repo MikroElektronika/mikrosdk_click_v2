@@ -13,7 +13,7 @@ It features a dual axis, spring return, pushbutton enabled joystick, and a MCP32
   <img src="https://download.mikroe.com/images/click_for_ide/thumbstick_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/thumbstick-click>)
+[click Product page](https://www.mikroe.com/thumbstick-click)
 
 ---
 

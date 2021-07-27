@@ -14,8 +14,11 @@
  * Reads the received data and parses it.
  * 
  * ## Additional Function
- * - thingstream_process ( ) - The general process of collecting presponce 
- *                                   that sends a module.
+ * - thingstream_process ( ) - The general process of collecting data the module sends.
+ * 
+ * @note
+ * The click board needs to be registered with a redemption code to a Thingstream Domain.
+ * For more information please refer to the Thingstream click user manual available on the product page.
  * 
  * \author MikroE Team
  *
@@ -27,11 +30,9 @@
 #include "thingstream.h"
 #include "string.h"
 
-#define PROCESS_COUNTER 10
-#define PROCESS_RX_BUFFER_SIZE 500
-#define PROCESS_PARSER_BUFFER_SIZE 1000
-
-char demo_cmd[ 16 ] = "+IOTCGNSINF";
+#define PROCESS_COUNTER 600
+#define PROCESS_RX_BUFFER_SIZE 600
+#define PROCESS_PARSER_BUFFER_SIZE 600
 
 #define THINGSTREAM_INFO      "AT+IOTINFO"
 #define THINGSTREAM_CREATE    "AT+IOTCREATE"
@@ -41,16 +42,11 @@ char demo_cmd[ 16 ] = "+IOTCGNSINF";
 #define THINGSTREAM_PUBLISH   "AT+IOTPUBLISH=\"home/temperature\",0,\"23 degrees\""
 #define THINGSTREAM_GPS_INFO  "AT+IOTCGNSINF"
 
-#define THINGSTREAM_CMD_CGNSPWR "AT+CGNSPWR=1"
-#define THINGSTREAM_CMD_CGNSSEQ "AT+CGNSSEQ=\"GGA\""
-#define THINGSTREAM_CMD_CGNSINF "AT+CGNSINF"
-
 // ------------------------------------------------------------------ VARIABLES
 
 static thingstream_t thingstream;
 static log_t logger;
 
-static char data_buf[ 20 ] = "12.2";
 static char current_parser_buf[ PROCESS_PARSER_BUFFER_SIZE ];
 static uint8_t send_data_cnt = 0; 
 
@@ -63,8 +59,7 @@ static void thingstream_process ( void )
     
     char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
     uint8_t check_buf_cnt;
-    uint8_t process_cnt = PROCESS_COUNTER;
-    
+    uint16_t process_cnt = PROCESS_COUNTER;
     // Clear parser buffer
     memset( current_parser_buf, 0 , PROCESS_PARSER_BUFFER_SIZE ); 
     
@@ -72,7 +67,7 @@ static void thingstream_process ( void )
     {
         rsp_size = thingstream_generic_read( &thingstream, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
 
-        if ( rsp_size != -1 )
+        if ( rsp_size > 0 )
         {  
             // Validation of the received data
             for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
@@ -88,7 +83,10 @@ static void thingstream_process ( void )
             {
                 strncat( current_parser_buf, uart_rx_buffer, rsp_size );
             }
-            
+            if ( strchr( uart_rx_buffer, '+' ) )
+            {
+                process_cnt = 20;
+            }
             // Clear RX buffer
             memset( uart_rx_buffer, 0, PROCESS_RX_BUFFER_SIZE );
         } 
@@ -100,23 +98,27 @@ static void thingstream_process ( void )
             Delay_ms( 100 );
         }
     }
-    log_printf( &logger, "%s\r\n", current_parser_buf );
 }
 
 static void parser_application ( char *rsp )
 {
     char element_buf[ 200 ] = { 0 };
     
-    thingstream_process( );
-    
-    log_printf( &logger, "\r\n_______________________________\r\n" ); 
+    log_printf( &logger, "\r\n-----------------------\r\n" ); 
     thingstream_generic_parser( rsp, THINGSTREAM_NEMA_CGNSINF, THINGSTREAM_CGNSINF_LATITUDE, element_buf );
-    log_printf( &logger, "Latitude:  %s \r\n", element_buf );    
-    thingstream_generic_parser( rsp, THINGSTREAM_NEMA_CGNSINF, THINGSTREAM_CGNSINF_LONGITUDE, element_buf );
-    log_printf( &logger, "Longitude:  %s \r\n", element_buf );  
-    thingstream_generic_parser( rsp, THINGSTREAM_NEMA_CGNSINF, THINGSTREAM_CGNSINF_ALTITUDE, element_buf );
-    log_printf( &logger, "Alitude: %s \r\n", element_buf );  
-    log_printf( &logger, "\r\n_______________________________\r\n" ); 
+    if ( strlen( element_buf ) > 0 )
+    {
+        log_printf( &logger, "Latitude:  %s degrees \r\n", element_buf );
+        thingstream_generic_parser( rsp, THINGSTREAM_NEMA_CGNSINF, THINGSTREAM_CGNSINF_LONGITUDE, element_buf );
+        log_printf( &logger, "Longitude:  %s degrees \r\n", element_buf );
+        memset( element_buf, 0, sizeof( element_buf ) );
+        thingstream_generic_parser( rsp, THINGSTREAM_NEMA_CGNSINF, THINGSTREAM_CGNSINF_ALTITUDE, element_buf );
+        log_printf( &logger, "Altitude: %s m", element_buf );  
+    }
+    else
+    {
+        log_printf( &logger, "Waiting for the position fix..." );
+    }
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -145,48 +147,42 @@ void application_init ( void )
 
     log_printf( &logger, " --->>> INFO.. \r\n" );
     thingstream_send_command( &thingstream, THINGSTREAM_INFO );
-    Delay_ms( 5000 );
     thingstream_process( );
+    log_printf( &logger, "%s", current_parser_buf );
         
     log_printf( &logger, " --->>> CREATE.. \r\n" );
     thingstream_send_command( &thingstream, THINGSTREAM_CREATE );
-    Delay_ms( 5000 );
     thingstream_process( );
+    log_printf( &logger, "%s", current_parser_buf );
 
     log_printf( &logger, " --->>> CONNECT.. \r\n" );
     thingstream_send_command( &thingstream, THINGSTREAM_CONNECT );
-    Delay_ms( 5000 );
     thingstream_process( );
+    log_printf( &logger, "%s", current_parser_buf );
 
     log_printf( &logger, " --->>> GPS POWER.. \r\n" );
     thingstream_send_command( &thingstream, THINGSTREAM_GPS_PWR );
-    Delay_ms( 5000 );
     thingstream_process( );
+    log_printf( &logger, "%s", current_parser_buf );
 
     log_printf( &logger, " --->>> SUBSCRIBE.. \r\n" );
     thingstream_send_command( &thingstream, THINGSTREAM_SUBSCRIBE );
-    Delay_ms( 5000 );
     thingstream_process( );
+    log_printf( &logger, "%s", current_parser_buf );
 
     log_printf( &logger, " --->>> PUBLISH.. \r\n" );
     thingstream_send_command( &thingstream, THINGSTREAM_PUBLISH );
-    Delay_ms( 5000 );
     thingstream_process( );
+    log_printf( &logger, "%s", current_parser_buf );
 
     log_printf( &logger, " --->>> APP INIT <<<--- \r\n" );
-    log_printf( &logger, " ______________________ \r\n\r\n" );
 }
 
 void application_task ( void )
 {
-    log_printf( &logger, " --->>> GPS INFO \r\n" );
-    thingstream_send_command( &thingstream, THINGSTREAM_GPS_INFO );   
+    thingstream_send_command( &thingstream, THINGSTREAM_GPS_INFO );  
     thingstream_process( );
-
     parser_application( current_parser_buf );
-    thingstream_process( );
-
-    Delay_ms( 5000 );
 }
 
 void main ( void )

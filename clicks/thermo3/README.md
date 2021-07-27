@@ -9,7 +9,7 @@ Thermo 3 click carries TMP102, a digital temperature sensor IC with a tiny footp
   <img src="https://download.mikroe.com/images/click_for_ide/thermo3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/thermo-3-click>)
+[click Product page](https://www.mikroe.com/thermo-3-click)
 
 ---
 

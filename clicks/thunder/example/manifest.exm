@@ -2,7 +2,7 @@
     "name": "Thunder Click",
     "description": "Thunder click features AS3935 lightning sensor as well as MA5532 coil antenna. It detects the presence and proximity of potentially hazardous lightning activity in the vicinity and provides estimated distance to the center of the storm. It can also provide information on the noise level. Thunder click communicates with the target board microcontroller via SPI and INT lines. The board is designed to use 3.3V or 5V power supply. LED diode (GREEN) indicates the presence of power supply.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","AS3935"],
     "category" : ["Miscellaneous"] 
 }

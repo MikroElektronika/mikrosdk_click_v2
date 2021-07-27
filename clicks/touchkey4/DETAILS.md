@@ -9,7 +9,7 @@ Touch Key 4 click is a capacitive touch sensing Click board™, with the advance
   <img src="https://download.mikroe.com/images/click_for_ide/touchkey4_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/touch-key-4-click>)
+[click Product page](https://www.mikroe.com/touch-key-4-click)
 
 ---
 
@@ -152,10 +152,8 @@ void application_task ( void )
 > TouchKey 4 is configured to work in Combo mode (Active and Standby mode). Input 1 is
 > enabled in Active mode, input 3 is enabled in Standby mode, and input 2 is enabled to
 > work in both modes. In this example the interrupt will be generated when touch is
-> detected and when touch is released. Also input 2 will generate interrupt as long
-> as the touch is detected (press and hold event), while input 1 and input 3 will
-> generate interrupt only once on one touch detection, after which the touch will be 
-> released. Standby mode should be used when fewer sensor inputs are enabled, and when
+> detected and when touch is released. 
+> Standby mode should be used when fewer sensor inputs are enabled, and when
 > they are programmed to have more sensitivity.
 > Somethimes it is neccessary to cycle the board power supply if click doesn't work. 
 

@@ -147,7 +147,7 @@ void thingstream_send_command ( thingstream_t *ctx, char *command )
     len = strlen( command );
     
     strncpy( tmp_buf, command, len );
-    strcat( tmp_buf, "\r" );
+    strcat( tmp_buf, "\r\n" );
 
     thingstream_generic_write( ctx, tmp_buf, strlen( tmp_buf ) );
 }
@@ -160,19 +160,19 @@ thingstream_error_t thingstream_generic_parser ( char *rsp,  uint8_t command, ui
     uint8_t element_cnt = 0;
     char * __generic element_start;
     char * __generic element_end;
-    char current_cmd_buf[ 10 ];
+    char current_cmd_buf[ 15 ];
     // check command and element
     if ( check_support_command( command, element, current_cmd_buf ) != 0 )
     {
         return THINGSTREAM_ERROR_COMMAND_OR_ELEMENT;
     }
     start_rsp = strstr( rsp, current_cmd_buf );
-    end_rsp = strstr( start_rsp + 1 , "+" );
+    end_rsp = strstr( start_rsp, "\r" );
     if ( ( end_rsp != 0 ) && ( start_rsp != 0 ) )
     {
         strncpy( rsp_buf, start_rsp, end_rsp - start_rsp );
         element_start = rsp_buf;
-        while ( element_cnt++ < element )
+        while ( ++element_cnt < element )
         {
             element_start = strstr( element_start, "," );
             if ( element_start != 0 )

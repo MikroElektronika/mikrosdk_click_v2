@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Capacitive",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,9 +26,16 @@
     "name": "mikroe.click.touchclamp",
     "product_link": "https://www.mikroe.com/touchclamp-click",
     "short_description": "TouchClamp click is a mikroBUS™ add-on board with NXP’s MPR121 proximity capacitive touch sensor controller. It has seven plated holes for clamps which can be used to connect any – literally any – conductive object in order to use it as an input button to send an interrupt to the target board MCU.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.2"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        1789
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.4"
 }
+
+
 
 

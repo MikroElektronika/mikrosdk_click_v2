@@ -8,7 +8,7 @@ Thingstream Click is an IoT gateway Click board™ with the Thingstream client S
   <img src="https://download.mikroe.com/images/click_for_ide/thingstream_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/thingstream-click>)
+[click Product page](https://www.mikroe.com/thingstream-click)
 
 ---
 
@@ -92,36 +92,35 @@ void application_init ( void )
 
     log_printf( &logger, " --->>> INFO.. \r\n" );
     thingstream_send_command( &thingstream, THINGSTREAM_INFO );
-    Delay_ms( 5000 );
     thingstream_process( );
+    log_printf( &logger, "%s", current_parser_buf );
         
     log_printf( &logger, " --->>> CREATE.. \r\n" );
     thingstream_send_command( &thingstream, THINGSTREAM_CREATE );
-    Delay_ms( 5000 );
     thingstream_process( );
+    log_printf( &logger, "%s", current_parser_buf );
 
     log_printf( &logger, " --->>> CONNECT.. \r\n" );
     thingstream_send_command( &thingstream, THINGSTREAM_CONNECT );
-    Delay_ms( 5000 );
     thingstream_process( );
+    log_printf( &logger, "%s", current_parser_buf );
 
     log_printf( &logger, " --->>> GPS POWER.. \r\n" );
     thingstream_send_command( &thingstream, THINGSTREAM_GPS_PWR );
-    Delay_ms( 5000 );
     thingstream_process( );
+    log_printf( &logger, "%s", current_parser_buf );
 
     log_printf( &logger, " --->>> SUBSCRIBE.. \r\n" );
     thingstream_send_command( &thingstream, THINGSTREAM_SUBSCRIBE );
-    Delay_ms( 5000 );
     thingstream_process( );
+    log_printf( &logger, "%s", current_parser_buf );
 
     log_printf( &logger, " --->>> PUBLISH.. \r\n" );
     thingstream_send_command( &thingstream, THINGSTREAM_PUBLISH );
-    Delay_ms( 5000 );
     thingstream_process( );
+    log_printf( &logger, "%s", current_parser_buf );
 
     log_printf( &logger, " --->>> APP INIT <<<--- \r\n" );
-    log_printf( &logger, " ______________________ \r\n\r\n" );
 }
   
 ```
@@ -134,18 +133,17 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    log_printf( &logger, " --->>> GPS INFO \r\n" );
-    thingstream_send_command( &thingstream, THINGSTREAM_GPS_INFO );   
+    thingstream_send_command( &thingstream, THINGSTREAM_GPS_INFO );  
     thingstream_process( );
-
     parser_application( current_parser_buf );
-    thingstream_process( );
-
-    Delay_ms( 5000 );
 } 
 
 ```
 
+## Note
+
+> The click board needs to be registered with a redemption code to a Thingstream Domain.
+> For more information please refer to the Thingstream click user manual available on the product page.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

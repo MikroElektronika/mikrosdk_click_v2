@@ -8,7 +8,7 @@ Tilt 2 click is a tilt sensor switch, which breaks the circuit when tilted to an
   <img src="https://download.mikroe.com/images/click_for_ide/tilt2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/tilt-2-click>)
+[click Product page](https://www.mikroe.com/tilt-2-click)
 
 ---
 

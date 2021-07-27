@@ -1,0 +1,8 @@
+{
+    "name": "TMR mix-sens Click",
+    "description": "The TMR mix-sens Click is an add-on board equipped with the TMR digital push-pull and analog magnetic sensors, as well as intensity of magnetic field indicator.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","RR111-1DC2-331, RR121-1A23-311, RR121-3C63-311 and LM3914"],
+    "category" : ["Magnetic"] 
+}

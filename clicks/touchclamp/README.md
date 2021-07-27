@@ -12,7 +12,7 @@ TouchClamp click is a mikroBUS™ add-on board with NXP’s MPR121 proximity cap
 </p>
 
 
-[click Product page](<https://www.mikroe.com/touchclamp-click>)
+[click Product page](https://www.mikroe.com/touchclamp-click)
 
 ---
 

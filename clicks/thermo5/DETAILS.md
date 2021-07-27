@@ -8,7 +8,7 @@ THERMO 5 click measures temperature in default range of 0°C to 127°C and exten
   <img src="https://download.mikroe.com/images/click_for_ide/thermo5_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/thermo-5-click>)
+[click Product page](https://www.mikroe.com/thermo-5-click)
 
 ---
 

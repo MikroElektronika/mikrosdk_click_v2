@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Temperature & humidity",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,10 +26,18 @@
     "name": "mikroe.click.thermo15",
     "product_link": "https://www.mikroe.com/thermo-15-click",
     "short_description": "Thermo 15 Click is a Click board™ equipped with the sensor IC, which can digitize temperature measurements between -55°C and +125°C so that the temperature measurement data can be processed by the host MCU.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.11"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2854
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.14"
 }
+
+
+
 
 
 

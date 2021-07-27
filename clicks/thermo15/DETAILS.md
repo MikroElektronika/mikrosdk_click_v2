@@ -10,7 +10,7 @@ Thermo 15 Click is a Click board™ equipped with the sensor IC, which can digit
   <img src="https://download.mikroe.com/images/click_for_ide/thermo15_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/thermo-15-click>)
+[click Product page](https://www.mikroe.com/thermo-15-click)
 
 ---
 

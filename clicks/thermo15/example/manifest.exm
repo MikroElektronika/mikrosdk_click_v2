@@ -2,7 +2,7 @@
     "name": "Thermo 15 Click",
     "description": "Thermo 15 Click is a Click board™ equipped with the sensor IC, which can digitize temperature measurements between -55°C and +125°C so that the temperature measurement data can be processed by the host MCU.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","NCT75"],
     "category" : ["Temperature & humidity"] 
 }

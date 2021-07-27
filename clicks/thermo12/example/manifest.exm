@@ -2,7 +2,7 @@
     "name": "Thermo 12 Click",
     "description": "Thermo 12 click is a Click board™ equipped with the sensor IC, which can digitize temperature measurements between -40°C and +150°C so that the temperature measurement data can be processed by the host MCU. Thermo 12 click provides an accuracy of ±0.2°C in the range from -10°C to +85°C.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","ADT7420"],
     "category" : ["Temperature & humidity"] 
 }

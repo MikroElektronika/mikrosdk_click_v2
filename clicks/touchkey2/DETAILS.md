@@ -8,7 +8,7 @@ TouchKey 2 click has four capacitive pads powered by Microchip's ATtiny817 which
 </p>
 
 
-[click Product page](<https://www.mikroe.com/touchkey-2-click>)
+[click Product page](https://www.mikroe.com/touchkey-2-click)
 
 ---
 

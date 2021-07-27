@@ -8,7 +8,7 @@ Thermo 8 click is a very accurate thermometer Click board™, with a very high t
   <img src="https://download.mikroe.com/images/click_for_ide/thermo8_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/thermo-8-click>)
+[click Product page](https://www.mikroe.com/thermo-8-click)
 
 ---
 

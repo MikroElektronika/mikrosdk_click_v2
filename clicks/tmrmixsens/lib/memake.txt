@@ -1,0 +1,40 @@
+type: library
+
+target: lib_tmrmixsens
+
+alias: Click.Tmrmixsens
+
+sources: {
+    src/tmrmixsens.c
+}
+
+headers: {
+    include/tmrmixsens.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/tmrmixsens.h) dst(include/tmrmixsens.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

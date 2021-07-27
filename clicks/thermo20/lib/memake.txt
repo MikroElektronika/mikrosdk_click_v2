@@ -1,0 +1,36 @@
+type: library
+
+target: lib_thermo20
+
+sources: {
+    src/thermo20.c
+}
+
+headers: {
+    include/thermo20.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/thermo20.h) dst(include/thermo20.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Thermo20

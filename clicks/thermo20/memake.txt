@@ -1,0 +1,7 @@
+type: subdirs
+project: Thermo20
+
+subdirs: {
+    lib
+    example
+}

@@ -2,7 +2,7 @@
     "name": "Thingstream Click",
     "description": "Thingstream Click is an IoT gateway Click board™ with the Thingstream client SDK preinstalled.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","STM32F407VGT6"],
     "category" : ["GPS+GNSS,Cloud Routers"] 
 }

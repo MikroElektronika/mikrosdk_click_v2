@@ -1,8 +1,8 @@
 {
     "name": "Thermo 4 Click",
     "description": "THERMO 4 click carries the LM75A digital temperature sensor and thermal watchdog. The sensor has the range from −55 °C to +125 °C.",
-    "image" : "https://cdn1-shop.mikroe.com/img/product/thermo-4-click/thermo-4-click-large_default-22x.jpg",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","LM75A"],
     "category" : ["Temperature and humidity"] 
 }

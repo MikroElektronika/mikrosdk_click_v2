@@ -8,7 +8,7 @@ Thermo 12 click is a Click board™ equipped with the sensor IC, which can digit
   <img src="https://download.mikroe.com/images/click_for_ide/thermo12_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/thermo-12-click>)
+[click Product page](https://www.mikroe.com/thermo-12-click)
 
 ---
 

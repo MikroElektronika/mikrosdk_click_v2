@@ -8,7 +8,7 @@ TILT-n-SHAKE click carries Freescale’s MMA8491Q IC. It’s a multifunctional 3
   <img src="https://download.mikroe.com/images/click_for_ide/tiltnshake_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/tilt-n-shake-click>)
+[click Product page](https://www.mikroe.com/tilt-n-shake-click)
 
 ---
 

@@ -9,7 +9,7 @@ There are many kinds of touch sensors on the market, but every one of them has s
 </p>
 
 
-[click Product page](<https://www.mikroe.com/touchkey-3-click>)
+[click Product page](https://www.mikroe.com/touchkey-3-click)
 
 ---
 

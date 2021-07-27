@@ -8,7 +8,7 @@ Timer click is a mikroBUS add-on board with Maxim’s DS1682 total elapsed time 
   <img src="https://download.mikroe.com/images/click_for_ide/timer_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/timer-click>)
+[click Product page](https://www.mikroe.com/timer-click)
 
 ---
 

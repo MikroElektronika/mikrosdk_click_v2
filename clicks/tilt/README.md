@@ -11,7 +11,7 @@ Tilt click carries RPI-1035, a 4-directional optical tilt sensor. This type of s
   <img src="https://download.mikroe.com/images/click_for_ide/tilt_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/tilt-click>)
+[click Product page](https://www.mikroe.com/tilt-click)
 
 ---
 

@@ -12,7 +12,7 @@ Thunder click features AS3935 lightning sensor as well as MA5532 coil antenna. I
 </p>
 
 
-[click Product page](<https://www.mikroe.com/thunder-click>)
+[click Product page](https://www.mikroe.com/thunder-click)
 
 ---
 
