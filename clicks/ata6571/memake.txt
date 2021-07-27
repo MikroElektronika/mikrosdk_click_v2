@@ -1,0 +1,7 @@
+type: subdirs
+project: ATA6571
+
+subdirs: {
+    lib
+    example
+}

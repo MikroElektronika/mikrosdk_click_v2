@@ -1,0 +1,36 @@
+type: library
+
+target: lib_ata6571
+
+sources: {
+    src/ata6571.c
+}
+
+headers: {
+    include/ata6571.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/ata6571.h) dst(include/ata6571.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.ATA6571
