@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Power Switch",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Power MUX 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.powermux2",
+    "product_link": "https://www.mikroe.com/power-mux-2-click",
+    "short_description": "Power MUX 2 Click is a compact add-on board that contains a highly configurable power mux. This board features the TPS2120, a dual-input single-output power multiplexer with an automatic switchover feature from Texas Instruments. This Click board™ prioritizes the main supply when present and quickly switches to auxiliary supply when the main supply drops. During switchover, the voltage drop is controlled to block reverse current before it happens and provide uninterrupted power to the load with minimal hold-up capacitance. This Click board™ is suitable for applications as a backup and standby power, input source selection, and various systems having multiple power sources.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.3"
+}
+

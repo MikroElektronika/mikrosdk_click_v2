@@ -8,7 +8,7 @@ PowerBank Click is a USB charging expansion board which can be used for creating
   <img src="https://download.mikroe.com/images/click_for_ide/powerbank_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/power-bank-click>)
+[click Product page](https://www.mikroe.com/power-bank-click)
 
 ---
 

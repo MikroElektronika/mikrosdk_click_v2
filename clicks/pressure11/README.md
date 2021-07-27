@@ -9,7 +9,7 @@ Pressure 11 Click is a digital barometer on a Click board™. Pressure 11 is equ
   <img src="https://download.mikroe.com/images/click_for_ide/pressure11_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/pressure-11-click>)
+[click Product page](https://www.mikroe.com/pressure-11-click)
 
 ---
 

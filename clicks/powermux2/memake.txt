@@ -1,0 +1,7 @@
+type: subdirs
+project: PowerMux2
+
+subdirs: {
+    lib
+    example
+}

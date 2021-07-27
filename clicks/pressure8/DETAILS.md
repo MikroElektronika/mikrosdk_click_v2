@@ -8,7 +8,7 @@ Pressure 8 Click is an accurate and fully calibrated pressure sensor, equipped w
   <img src="https://download.mikroe.com/images/click_for_ide/pressure8_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/pressure-8-click>)
+[click Product page](https://www.mikroe.com/pressure-8-click)
 
 ---
 

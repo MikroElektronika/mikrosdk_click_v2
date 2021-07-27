@@ -8,7 +8,7 @@ Pressure 7 click features an integrated digital barometric pressure and temperat
   <img src="https://download.mikroe.com/images/click_for_ide/pressure7_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/pressure-7-click>)
+[click Product page](https://www.mikroe.com/pressure-7-click)
 
 ---
 

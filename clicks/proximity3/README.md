@@ -11,7 +11,7 @@ Proximity 3 click is an intelligent proximity and light sensing device, which fe
   <img src="https://download.mikroe.com/images/click_for_ide/proximity3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/proximity-3-click>)
+[click Product page](https://www.mikroe.com/proximity-3-click)
 
 ---
 

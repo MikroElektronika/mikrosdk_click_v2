@@ -1,8 +1,8 @@
 {
     "name": "Proximity 6 click",
     "description": "Proximity 6 click is a versatile proximity detection device on a Click board™.",
-    "image" : "https://cdn1-shop.mikroe.com/img/product/proximity-6-click/proximity-6-click-large_default-2.jpg",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","ADUX1020","PCA9306","SN74LVC1T45"],
     "category" : ["Proximity"] 
 }

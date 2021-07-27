@@ -9,7 +9,7 @@ Proximity 13 Click based on SI1153-AB09-GMR IC from Silicon Labs that can be use
   <img src="https://download.mikroe.com/images/click_for_ide/proximity13_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/proximity-13-click>)
+[click Product page](https://www.mikroe.com/proximity-13-click)
 
 ---
 

@@ -11,7 +11,7 @@ Power/Reset Click is equipped with two capacitive touch pads on a single click b
   <img src="https://download.mikroe.com/images/click_for_ide/powerreset_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/power-reset-click>)
+[click Product page](https://www.mikroe.com/power-reset-click)
 
 ---
 

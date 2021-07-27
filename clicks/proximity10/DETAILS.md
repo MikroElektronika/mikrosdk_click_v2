@@ -8,7 +8,7 @@ Proximity 10 Click is a versatile proximity detection device on a Click board™
   <img src="https://download.mikroe.com/images/click_for_ide/proximity10_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/proximity-10-click>)
+[click Product page](https://www.mikroe.com/proximity-10-click)
 
 ---
 

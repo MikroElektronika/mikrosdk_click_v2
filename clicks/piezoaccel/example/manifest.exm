@@ -1,0 +1,8 @@
+{
+    "name": "Piezo Accel Click",
+    "description": "Piezo Accel Click is a compact add-on board containing an acceleration sensor based on PE technology.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic32"],
+    "hw" : ["click","820M1-0025"],
+    "category" : ["Motion"]
+}

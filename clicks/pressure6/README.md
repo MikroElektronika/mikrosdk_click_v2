@@ -11,7 +11,7 @@ Pressure 6 Click features a simple, yet highly accurate and reliable pressure se
   <img src="https://download.mikroe.com/images/click_for_ide/pressure6_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/pressure-6-click>)
+[click Product page](https://www.mikroe.com/pressure-6-click)
 
 ---
 

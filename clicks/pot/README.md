@@ -9,7 +9,7 @@ Click board with the accurate selectable reference voltage output.
   <img src="https://download.mikroe.com/images/click_for_ide/pot_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/pot-click>)
+[click Product page](https://www.mikroe.com/pot-click)
 
 ---
 

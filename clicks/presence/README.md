@@ -11,7 +11,7 @@ Presence click is an infrared sensing Click board™ which can be used for prese
   <img src="@{CLICK_IMAGE_LINK}">
 </p>
 
-[click Product page](<https://www.mikroe.com/presence-click>)
+[click Product page](https://www.mikroe.com/presence-click)
 
 ---
 

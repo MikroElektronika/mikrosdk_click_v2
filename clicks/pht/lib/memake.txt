@@ -1,0 +1,36 @@
+type: library
+
+target: lib_pht
+
+sources: {
+    src/pht.c
+}
+
+headers: {
+    include/pht.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/pht.h) dst(include/pht.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.PHT

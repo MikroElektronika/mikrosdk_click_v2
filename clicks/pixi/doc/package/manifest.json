@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "ADC-DAC",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,9 +26,16 @@
     "name": "mikroe.click.pixi",
     "product_link": "https://www.mikroe.com/pixi-click",
     "short_description": "PIXI™ click is equipped with MAX11300 IC from Maxim Integrated, which features Maxim Integrated's versatile, proprietary PIXI™ technology - it is the industry's first configurable 20-channel mixed-signal data converter. Besides the 12bit multichannel SAR ADC and buffered DAC, it also features one internal and two external temperature sensors for tracking the junction and the environmental temperatures.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.2"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2225
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.4"
 }
+
+
 
 

@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Pressure",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,10 +26,17 @@
     "name": "mikroe.click.pressure11",
     "product_link": "https://www.mikroe.com/pressure-11-click",
     "short_description": "This sensor offers many benefits, including low power consumption, high resolution of the pressure data, embedded thermal compensation, FIFO buffer with several operating modes, temperature measurement, etc.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.4"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2720
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.6"
 }
+
+
 
 
 

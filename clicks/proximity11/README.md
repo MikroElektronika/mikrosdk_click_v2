@@ -10,7 +10,7 @@ Proximity 11 Click is a close-range proximity sensing Click board™, equipped w
 </p>
 
 
-[click Product page](<https://www.mikroe.com/proximity-11-click>)
+[click Product page](https://www.mikroe.com/proximity-11-click)
 
 ---
 

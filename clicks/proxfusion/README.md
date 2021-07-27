@@ -11,7 +11,7 @@ ProxFusion click is a multifunctional capacitive and Hall-effect sensor device. 
   <img src="https://download.mikroe.com/images/click_for_ide/proxfusion_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/proxfusion-click>)
+[click Product page](https://www.mikroe.com/proxfusion-click)
 
 ---
 

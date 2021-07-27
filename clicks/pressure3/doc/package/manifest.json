@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Pressure",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,8 +26,15 @@
     "name": "mikroe.click.pressure3",
     "product_link": "https://www.mikroe.com/pressure-3-click",
     "short_description": "Pressure 3 click is a mikroBUS add-on board that carries an Infineon DPS310 digital barometric pressure sensor. It has an operating range from 300 to 1200 hPa with a relative accuracy of 0.06 hPa and absolute accuracy of 1 hPa.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.2"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        1897
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.4"
 }
+
+
 

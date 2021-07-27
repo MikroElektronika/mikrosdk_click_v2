@@ -1,0 +1,13 @@
+type: executable
+target: example_piezoaccel
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.PiezoAccel
+}
+
+sources: {
+    main.c
+}

@@ -92,14 +92,10 @@ uint16_t pot3_read_adc ( pot3_t* ctx )
 {
 	uint16_t ret_val;
 
-	uint8_t tx_buf[ 2 ];
 	uint8_t rx_buf[ 2 ];
 
-	tx_buf[ 0 ] = POT3_DUMMY;
-	tx_buf[ 1 ] = POT3_DUMMY;
-
 	spi_master_select_device( ctx->chip_select );
-	spi_master_write_then_read( &ctx->spi, tx_buf, 2, rx_buf, 2 );
+	spi_master_read( &ctx->spi, rx_buf, 2 );
 	spi_master_deselect_device( ctx->chip_select );  
 
 	ret_val = rx_buf[ 0 ];

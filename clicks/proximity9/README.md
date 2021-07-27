@@ -11,7 +11,7 @@ Proximity 9 click is a very accurate and reliable proximity sensing (PS) and amb
   <img src="https://download.mikroe.com/images/click_for_ide/proximity9_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/proximity-9-click>)
+[click Product page](https://www.mikroe.com/proximity-9-click)
 
 ---
 

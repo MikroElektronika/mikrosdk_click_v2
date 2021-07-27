@@ -1,0 +1,36 @@
+type: library
+
+target: lib_plugntrust
+
+sources: {
+    src/plugntrust.c
+}
+
+headers: {
+    include/plugntrust.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/plugntrust.h) dst(include/plugntrust.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.PlugnTrust

@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Proximity",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,10 +26,18 @@
     "name": "mikroe.click.proximity2",
     "product_link": "https://www.mikroe.com/proximity-2-click",
     "short_description": "Proximity 2 Click features MAX44000, an IC that integrates an ambient light as well as a proximity sensor. The chip consists of an array of photodiodes that convert light into current, which the internal circuitry then converts into a digital value.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.3"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        1364
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.6"
 }
+
+
+
 
 
 

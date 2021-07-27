@@ -8,10 +8,10 @@
 Pressure 2 click carries MS5803, a high resolution MEMS pressure sensor that is both precise and robust.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/pressure_click.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/pressure-2-click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/pressure-2-click>)
+[click Product page](https://www.mikroe.com/pressure-2-click)
 
 ---
 

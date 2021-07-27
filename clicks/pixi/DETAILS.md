@@ -8,7 +8,7 @@ PIXI™ click is equipped with MAX11300 IC from Maxim Integrated, which features
   <img src="https://download.mikroe.com/images/click_for_ide/pixi_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/pixi-click>)
+[click Product page](https://www.mikroe.com/pixi-click)
 
 ---
 

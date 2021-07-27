@@ -9,10 +9,10 @@ Pressure Click is a compact and easy solution for adding pressure measurement to
 It features LPS331AP digital output pressure sensor.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/presence_click.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/pressure_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/presence-click>)
+[click Product page](https://www.mikroe.com/pressure-click)
 
 ---
 

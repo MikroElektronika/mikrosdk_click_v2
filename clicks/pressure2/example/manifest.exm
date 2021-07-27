@@ -2,7 +2,7 @@
     "name": "Pressure 2 Click",
     "description": "Pressure 2 click carries MS5803, a high resolution MEMS pressure sensor that is both precise and robust. Its measurement range is from 0 to 14 bars (with a resolution of up to 0.2 mbars), but because of the stainless steel cap enclosure, the sensor can withstand up to 30 bars of pressure. Pressure 2 click communicates with the target board MCU either through mikroBUS SPI or I2C lines, depending on the position in which the onboard jumpers are soldered.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","MS5803"],
     "category" : ["Pressure"] 
 }

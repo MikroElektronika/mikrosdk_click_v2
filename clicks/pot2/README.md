@@ -11,7 +11,7 @@ POT 2 click is a Click board™ with the accurate selectable reference voltage o
   <img src="https://download.mikroe.com/images/click_for_ide/pot2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/pot-2-click>)
+[click Product page](https://www.mikroe.com/pot-2-click)
 
 ---
 

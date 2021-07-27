@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/proximity7_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/proximity-7-click>)
+[click Product page](https://www.mikroe.com/proximity-7-click)
 
 ---
 

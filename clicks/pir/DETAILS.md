@@ -7,7 +7,7 @@ PIR Click is a pyroelectric sensor which generates a voltage when exposed to inf
   <img src="https://download.mikroe.com/images/click_for_ide/pir_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/pir-click>)
+[click Product page](https://www.mikroe.com/pir-click)
 
 ---
 

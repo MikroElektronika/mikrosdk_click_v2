@@ -11,7 +11,7 @@ PLL click is a frequency multiplier which uses the Phase-Locked Loop (PLL) techn
   <img src="https://download.mikroe.com/images/click_for_ide/pll_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/pll-click>)
+[click Product page](https://www.mikroe.com/pll-click)
 
 ---
 

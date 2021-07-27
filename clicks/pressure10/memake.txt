@@ -1,0 +1,7 @@
+type: subdirs
+project: Pressure10
+
+subdirs: {
+    lib
+    example
+}

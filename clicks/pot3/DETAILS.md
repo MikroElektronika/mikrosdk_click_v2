@@ -10,7 +10,7 @@ this Click board can provide very accurate voltage output.
   <img src="https://download.mikroe.com/images/click_for_ide/pot3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/pot-3-click>)
+[click Product page](https://www.mikroe.com/pot-3-click)
 
 ---
 

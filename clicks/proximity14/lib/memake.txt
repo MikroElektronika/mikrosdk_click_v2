@@ -1,0 +1,36 @@
+type: library
+
+target: lib_proximity14
+
+sources: {
+    src/proximity14.c
+}
+
+headers: {
+    include/proximity14.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/proximity14.h) dst(include/proximity14.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Proximity14

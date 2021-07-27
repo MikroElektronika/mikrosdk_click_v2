@@ -11,7 +11,7 @@ Pressure 9 click is a digital barometric air pressure sensor Click board™. It 
   <img src="https://download.mikroe.com/images/click_for_ide/pressure9_click.png" height=300px>
 </p>
 
-> - [click Product page](<https://www.mikroe.com/pressure-9-click>)
+> - [click Product page](https://www.mikroe.com/pressure-9-click)
 
 ---
 

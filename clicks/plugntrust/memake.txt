@@ -1,0 +1,10 @@
+type: subdirs
+project: PlugnTrust
+
+subdirs: {
+    lib
+    example
+}
+
+depends: {
+}

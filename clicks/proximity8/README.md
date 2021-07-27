@@ -11,7 +11,7 @@ Proximity 8 click is a close-range proximity sensing Click board™, equipped wi
   <img src="https://download.mikroe.com/images/click_for_ide/proximity8_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/proximity-8-click>)
+[click Product page](https://www.mikroe.com/proximity-8-click)
 
 ---
 

@@ -11,7 +11,7 @@ Pressure 5 click is a barometric pressure measurement Click board™, which feat
   <img src="https://download.mikroe.com/images/click_for_ide/pressure5_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/pressure-5-click>)
+[click Product page](https://www.mikroe.com/pressure-5-click)
 
 ---
 

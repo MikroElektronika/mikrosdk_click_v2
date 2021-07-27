@@ -8,7 +8,7 @@ Pressure 4 click is an absolute barometric pressure measurement Click board™, 
   <img src="https://download.mikroe.com/images/click_for_ide/pressure4_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/pressure-4-click>)
+[click Product page](https://www.mikroe.com/pressure-4-click)
 
 ---
 
