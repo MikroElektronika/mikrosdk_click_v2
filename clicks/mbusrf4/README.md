@@ -9,7 +9,7 @@ M-BUS RF 4 Click is a mikroBUS™ add-on board with a MIPOT 32001324 RF wireless
   <img src="https://download.mikroe.com/images/click_for_ide/mbusrf4_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/m-bus-rf-4-click>)
+[click Product page](https://www.mikroe.com/m-bus-rf-4-click)
 
 ---
 

@@ -1,4 +1,4 @@
- 
+
 ---
 # M Bus Master click
 
@@ -8,7 +8,7 @@ The M-Bus Master is a Click board™ is complete solution for a master node in M
   <img src="https://download.mikroe.com/images/click_for_ide/mbusmaster_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/m-bus-master-click>)
+[click Product page](https://www.mikroe.com/m-bus-master-click)
 
 ---
 
@@ -43,22 +43,21 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- Generic single read function.
-> mbusmaster_data_t mbusmaster_generic_single_read ( mbusmaster_t *ctx );
+- Generic write function.
+> void mbusmaster_generic_write ( mbusmaster_t *ctx, char *data_buf, uint16_t len );
 
-- Generic single write function.
-> void mbusmaster_generic_single_write ( mbusmaster_t *ctx, mbusmaster_data_t tx_data );
+- Generic read function.
+> int32_t mbusmaster_generic_read ( mbusmaster_t *ctx, char *data_buf, uint16_t max_len );
 
 ## Examples Description
 
-> This application used for remote reading of heat meters,
-> and other types of consumption.
+> This example reads and processes data from M-Bus Master clicks.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes driver init
+> Initializes the driver.
 
 ```c
 
@@ -69,55 +68,45 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
+    Delay_ms( 100 );
 
     //  Click initialization.
 
     mbusmaster_cfg_setup( &cfg );
     MBUSMASTER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     mbusmaster_init( &mbusmaster, &cfg );
+    Delay_ms( 100 );
 }
   
 ```
 
 ### Application Task
 
-> Sends a message "MikroE" to the M-BUS connector every 2 seconds.
+> Depending on the selected mode, it reads all the received data or sends the desired message every 2 seconds.
 
 ```c
 
 void application_task ( void )
 {
-    mbusmaster_data_t tmp;
-    
 #ifdef DEMO_APP_RECEIVER
-
-       // RECEIVER - UART polling
-
-       tmp =  mbusmaster_generic_single_read( &mbusmaster );
-       log_printf( &logger, &tmp, LOG_FORMAT_BYTE );
-#endif
-
-    log_printf( &logger, ">> MESSAGE SENT << \r\n" );
+    mbusmaster_process( );
+#endif    
+    
+#ifdef DEMO_APP_TRANSMITTER
+    mbusmaster_generic_write( &mbusmaster, TEXT_TO_SEND, strlen( TEXT_TO_SEND ) );
+    log_info( &logger, "---- Data sent ----" );
     Delay_ms( 2000 );
-
-#ifdef DEMO_APP_TRANSMITER
-
-       // TRANSMITER - TX each 2 sec
-       
-       mbusmaster_generic_multi_write( &mbusmaster, demo_message, 9 );
-       Delay_ms( 2000 );
-#endif
-
+#endif  
 }  
 
 ```
 
 ## Note
-
 
 > M-Bus master communication works at 36v.
 > This click acts only as 'master', therefore it must be connected to appropriate 'slave'.

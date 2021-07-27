@@ -9,7 +9,7 @@ MAGNETO Click carries contactless magnetic angle position sensor which delivers 
   <img src="https://download.mikroe.com/images/click_for_ide/magneto_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/magneto-click>)
+[click Product page](https://www.mikroe.com/magneto-click)
 
 ---
 

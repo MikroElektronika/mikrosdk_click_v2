@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Microphone",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,8 +26,15 @@
     "name": "mikroe.click.mic",
     "product_link": "https://www.mikroe.com/mic-click",
     "short_description": "Mic click carries the SPQ0410HR5H-B surface mount silicon microphone with maximum RF protection. The click is designed to run on a 3.3V power supply. It communicates with the target microcontroller over the AN pin on the mikroBUS™ line.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2057
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.3"
 }
+
+
 

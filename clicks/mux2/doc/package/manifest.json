@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "DAC",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,9 +26,16 @@
     "name": "mikroe.click.mux2",
     "product_link": "https://www.mikroe.com/mux-2-click",
     "short_description": "MUX 2 click is a Click board™ that switches one of the eight inputs to one output. It employs the MUX508, a modern CMOS analog multiplexing integrated circuit, produced by Texas Instruments.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.3"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2597
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.5"
 }
+
+
 
 

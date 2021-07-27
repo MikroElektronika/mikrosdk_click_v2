@@ -1,4 +1,5 @@
 
+
 ---
 # Magnetic linear click
 
@@ -8,7 +9,7 @@ Magnetic linear click is a very accurate position sensing Click board™ which u
   <img src="https://download.mikroe.com/images/click_for_ide/magneticlinear_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/magnetic-linear-click>)
+[click Product page](https://www.mikroe.com/magnetic-linear-click)
 
 ---
 
@@ -52,13 +53,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This app reads magnetics linear data.
+> This application reads magnetics linear data.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initialization device.
+> Device initialization.
 
 ```c
 
@@ -69,10 +70,11 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 9600;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----\r\n" );
+    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
 
@@ -85,7 +87,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads Magnetics linear data and this data logs to USBUART every 200ms.
+> Reads magnetic linear data and logs it to USB UART every 500ms.
 
 ```c
 
@@ -96,8 +98,7 @@ void application_task ( void )
     magnetic_data = magneticlinear_read_data( &magneticlinear );
 
     log_printf( &logger, " Magnetic Linear data : %u\r\n", magnetic_data );
-    log_printf( &logger, "_______________________\r\n", magnetic_data );
-    Delay_ms( 200 );
+    Delay_ms( 500 );
 } 
 
 ```

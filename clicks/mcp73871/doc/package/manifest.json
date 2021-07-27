@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Battery charger",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,9 +26,16 @@
     "name": "mikroe.click.mcp73871",
     "product_link": "https://www.mikroe.com/mcp73871-click",
     "short_description": "MCP73871 click is a fully integrated solution for system power delivery and Li-Po/Li-Ion battery charge management.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.3"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2209
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.5"
 }
+
+
 
 

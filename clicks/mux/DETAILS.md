@@ -10,7 +10,7 @@ MUX click is a Click board™ that switches one of the four differential inputs 
 </p>
 
 
-[click Product page](<https://www.mikroe.com/mux-click>)
+[click Product page](https://www.mikroe.com/mux-click)
 
 ---
 

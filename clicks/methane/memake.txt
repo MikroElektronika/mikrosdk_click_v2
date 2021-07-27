@@ -1,0 +1,8 @@
+type: subdirs
+
+project: Methane
+
+subdirs: {
+    lib
+    example
+}

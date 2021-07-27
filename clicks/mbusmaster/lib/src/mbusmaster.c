@@ -72,28 +72,14 @@ MBUSMASTER_RETVAL mbusmaster_init ( mbusmaster_t *ctx, mbusmaster_cfg_t *cfg )
     return MBUSMASTER_OK;
 }
 
-void mbusmaster_generic_multi_write ( mbusmaster_t *ctx, char *data_buf,  uint8_t len )
+void mbusmaster_generic_write ( mbusmaster_t *ctx, char *data_buf, uint16_t len )
 {
     uart_write( &ctx->uart, data_buf, len );
 }
 
-void mbusmaster_generic_multi_read ( mbusmaster_t *ctx, char *data_buf,  uint8_t len )
+int32_t mbusmaster_generic_read ( mbusmaster_t *ctx, char *data_buf, uint16_t max_len )
 {
-    uart_read( &ctx->uart, data_buf, len );
-}
-
-char mbusmaster_generic_single_read ( mbusmaster_t *ctx )
-{
-    char rx_data;
-
-    uart_read( &ctx->uart, &rx_data, 1 );  
-    
-    return rx_data;
-}
-
-void mbusmaster_generic_single_write ( mbusmaster_t *ctx, char tx_data )
-{
-    uart_write( &ctx->uart, &tx_data, 1 );
+    return uart_read( &ctx->uart, data_buf, max_len );
 }
 
 // ------------------------------------------------------------------------- END

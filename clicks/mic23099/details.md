@@ -9,7 +9,7 @@ MIC23099 click represent single AA/AAA cell step-down/step-up regulator with bat
   <img src="https://download.mikroe.com/images/click_for_ide/mic23099_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/mic23099-click>)
+[click Product page](https://www.mikroe.com/mic23099-click)
 
 ---
 

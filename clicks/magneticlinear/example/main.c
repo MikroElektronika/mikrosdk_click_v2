@@ -3,15 +3,15 @@
  * \brief Magneticlinear Click example
  * 
  * # Description
- * This app reads magnetics linear data.
+ * This application reads magnetics linear data.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initialization device.
+ * Device initialization.
  * 
  * ## Application Task  
- * Reads Magnetics linear data and this data logs to USBUART every 200ms.
+ * Reads magnetic linear data and logs it to USB UART every 500ms.
  * 
  * \author MikroE Team
  *
@@ -56,8 +56,7 @@ void application_task ( void )
     magnetic_data = magneticlinear_read_data( &magneticlinear );
 
     log_printf( &logger, " Magnetic Linear data : %u\r\n", magnetic_data );
-    log_printf( &logger, "_______________________\r\n", magnetic_data );
-    Delay_ms( 200 );
+    Delay_ms( 500 );
 }
 
 void main ( void )

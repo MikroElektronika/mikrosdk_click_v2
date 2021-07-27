@@ -56,6 +56,8 @@
  * \defgroup threshold Threshold Target
  * \{
  */
+#define MICROWAVE_THRESHOLD_10       10
+#define MICROWAVE_THRESHOLD_25       25
 #define MICROWAVE_THRESHOLD_50       50
 #define MICROWAVE_THRESHOLD_100      100
 #define MICROWAVE_THRESHOLD_200      200

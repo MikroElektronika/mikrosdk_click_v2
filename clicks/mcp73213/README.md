@@ -11,7 +11,7 @@ MCP73213 click carries the MCP73213 dual-cell Li-Ion/Li-Polymer battery charge m
   <img src="https://download.mikroe.com/images/click_for_ide/mcp73213_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/mcp73213-click>)
+[click Product page](https://www.mikroe.com/mcp73213-click)
 
 ---
 

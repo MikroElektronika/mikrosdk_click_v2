@@ -11,7 +11,7 @@ Moisture click is a Click board™ that can be used to easily detect a moisture 
   <img src="https://download.mikroe.com/images/click_for_ide/moisture_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/moisture-click>)
+[click Product page](https://www.mikroe.com/moisture-click)
 
 ---
 

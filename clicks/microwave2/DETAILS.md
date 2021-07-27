@@ -8,7 +8,7 @@ Microwave 2 click is an accurate and reliable short to medium range motion detec
   <img src="https://download.mikroe.com/images/click_for_ide/microwave2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/microwave-2-eu-click>)
+[click Product page](https://www.mikroe.com/microwave-2-eu-click)
 
 ---
 

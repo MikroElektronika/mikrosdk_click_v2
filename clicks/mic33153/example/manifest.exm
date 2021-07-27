@@ -1,0 +1,8 @@
+{
+    "name": "MIC33153 Click",
+    "description": "MIC33153 click is a DC-DC adjustable step-down (buck) converter that is designed to deliver a substantial amount of current to very demanding loads, with the voltage output up to 3.5V.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","MIC33153"],
+    "category" : ["Buck"] 
+}

@@ -8,7 +8,7 @@ MPU IMU Click carries the integrated 6-axis motion tracking device that combines
   <img src="https://download.mikroe.com/images/click_for_ide/mpuimu_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/mpu-imu-click>)
+[click Product page](https://www.mikroe.com/mpu-imu-click)
 
 ---
 

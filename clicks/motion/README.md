@@ -11,7 +11,7 @@ MOTION click is a motion detector sensitive only to live bodies. It carries PIR5
   <img src="https://download.mikroe.com/images/click_for_ide/motion_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/motion-click>)
+[click Product page](https://www.mikroe.com/motion-click)
 
 ---
 

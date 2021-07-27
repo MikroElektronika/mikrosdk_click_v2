@@ -1,0 +1,36 @@
+type: library
+
+target: lib_methane
+
+sources: {
+    src/methane.c
+}
+
+headers: {
+    include/methane.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/methane.h) dst(include/methane.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Methane

@@ -8,7 +8,7 @@ Manometer 2 click carries the MS5525DSO-SB001GS digital pressure sensor, based o
   <img src="https://download.mikroe.com/images/click_for_ide/manometer2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/manometer-2-click>)
+[click Product page](https://www.mikroe.com/manometer-2-click)
 
 ---
 

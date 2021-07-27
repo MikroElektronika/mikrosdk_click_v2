@@ -2,7 +2,7 @@
     "name": "LTE IoT Click",
     "description": "LTE IoT click is a Click board™ that allows connection to the LTE and 2G networks",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","TXB0106, MCP1826"],
     "category" : ["LTE IoT"] 
 }

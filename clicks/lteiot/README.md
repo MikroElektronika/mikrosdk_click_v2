@@ -9,7 +9,7 @@ LTE IoT click is a Click board™ that allows connection to the LTE and 2G netwo
   <img src="https://download.mikroe.com/images/click_for_ide/lteiot_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/lte-iot-click>)
+[click Product page](https://www.mikroe.com/lte-iot-click)
 
 ---
 
@@ -36,113 +36,188 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void lteiot_cfg_setup ( lteiot_cfg_t *cfg ); 
+- LTE IoT configuration object setup function.
+> void lteiot_cfg_setup ( lteiot_cfg_t *cfg );
  
-- Initialization function.
-> LTEIOT_RETVAL lteiot_init ( lteiot_t *ctx, lteiot_cfg_t *cfg );
+- LTE IoT initialization function.
+> err_t lteiot_init ( lteiot_t *ctx, lteiot_cfg_t *cfg );
 
 #### Example key functions :
 
-- Power module.
-> void lteiot_module_power( lteiot_t *ctx, uint8_t power_state );
+- LTE IoT module power on.
+> void lteiot_power_on ( lteiot_t *ctx );
 
-- Send command.
-> void lteiot_send_command ( lteiot_t *ctx, char *command );
+- Send command function.
+> void lteiot_send_cmd ( lteiot_t *ctx, char *cmd );
 
 ## Examples Description
 
-> This example reads and processes data from LTE IoT clicks.
+> This example reads and processes data from LTE IoT click.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes driver and power module.
+> Initializes driver and wake-up module and sets default configuration for connecting device to network.
 
 ```c
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
-    lteiot_cfg_t cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    lteiot_cfg_t lteiot_cfg;  /**< Click config object. */
 
-    //  Logger initialization.
-
+    // Logger initialization.
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
     log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
-
-    //  Click initialization.
-
-    lteiot_cfg_setup( &cfg );
-    LTEIOT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    lteiot_init( &lteiot, &cfg );
-
-    lteiot_module_power( &lteiot, LTEIOT_MODULE_POWER_ON );
-
-    // MODULE INIT
+    log_info( &logger, " Application Init " );
+    Delay_ms( 1000 );
     
-    lteiot_send_command( &lteiot, LTEIOT_AT );
+    // Click initialization.
+    lteiot_cfg_setup( &lteiot_cfg );
+    LTEIOT_MAP_MIKROBUS( lteiot_cfg, MIKROBUS_1 );
+    err_t init_flag  = lteiot_init( &lteiot, &lteiot_cfg );
+    if ( init_flag == UART_ERROR )
+    {
+        log_error( &logger, " Application Init Error. " );
+        log_info( &logger, " Please, run program again... " );
+
+        for ( ; ; );
+    }
+    
+    log_info( &logger, " Power on device... " );
+    lteiot_power_on( &lteiot );
+    
+    // dummy read
     lteiot_process( );
-    Delay_1sec( );
-    lteiot_send_command( &lteiot, LTEIOT_ATE1 );
-    lteiot_process( );
-    Delay_1sec( );
-    lteiot_send_command( &lteiot, LTEIOT_AT_CMEE );
-    lteiot_process( );
-    Delay_1sec( );
-    lteiot_send_command( &lteiot, LTEIOT_AT_CGATT );
-    lteiot_process( );
-    Delay_1sec( );
-    lteiot_send_command( &lteiot, LTEIOT_AT_CEREG );
-    lteiot_process( );
-    Delay_1sec( );
-    lteiot_send_command( &lteiot, LTEIOT_AT_COPS );
-    lteiot_process( );
-    Delay_1sec( );
-    lteiot_send_command( &lteiot, LTEIOT_AT_COPS_1 );
-    lteiot_process( );
-    Delay_1sec( );
-    lteiot_send_command( &lteiot, LTEIOT_AT_USOCR );
-    lteiot_process( );
-    Delay_1sec( );
-    lteiot_send_command( &lteiot, LTEIOT_AT_USOST );
-    lteiot_process( );
-    Delay_1sec( );
-    lteiot_send_command( &lteiot, LTEIOT_AT_USORF );
-    lteiot_process( );
-    Delay_1sec( );
-    lteiot_send_command( &lteiot, LTEIOT_AT_USOCL );
-    lteiot_process( );
-    Delay_1sec( );
+    lteiot_clear_app_buf( );
+    
+    // AT
+    lteiot_send_cmd( &lteiot, LTEIOT_CMD_AT );
+    app_error_flag = lteiot_rsp_check( );
+    lteiot_error_check( app_error_flag );
+    Delay_ms( 500 );
+    
+    // ATI - product information
+    lteiot_send_cmd( &lteiot, LTEIOT_CMD_ATI );
+    app_error_flag = lteiot_rsp_check(  );
+    lteiot_error_check( app_error_flag );
+    Delay_ms( 500 );
+    
+    // CGMR - firmware version
+    lteiot_send_cmd( &lteiot, LTEIOT_CMD_CGMR );
+    app_error_flag = lteiot_rsp_check(  );
+    lteiot_error_check( app_error_flag );
+    Delay_ms( 500 );
+    
+    // COPS - deregister from network
+    lteiot_send_cmd_with_parameter( &lteiot, LTEIOT_CMD_COPS, "2" );
+    app_error_flag = lteiot_rsp_check(  );
+    lteiot_error_check( app_error_flag );
+    Delay_ms( 500 );
+    
+    // CGDCONT - set sim apn
+    lteiot_set_sim_apn( &lteiot, SIM_APN );
+    app_error_flag = lteiot_rsp_check(  );
+    lteiot_error_check( app_error_flag );
+    Delay_ms( 500 );
+     
+    // CFUN - full funtionality
+    lteiot_send_cmd_with_parameter( &lteiot, LTEIOT_CMD_CFUN, "1" );
+    app_error_flag = lteiot_rsp_check(  );
+    lteiot_error_check( app_error_flag );
+    Delay_ms( 500 );
+    
+    // COPS - automatic mode
+    lteiot_send_cmd_with_parameter( &lteiot, LTEIOT_CMD_COPS, "0" );
+    app_error_flag = lteiot_rsp_check(  );
+    lteiot_error_check( app_error_flag );
+    Delay_ms( 2000 );
+    
+    // CEREG - network registration status
+    lteiot_send_cmd_with_parameter( &lteiot, LTEIOT_CMD_CEREG, "2" );
+    app_error_flag = lteiot_rsp_check(  );
+    lteiot_error_check( app_error_flag );
+    Delay_ms( 500 );
+    
+    // CIMI - request IMSI
+    lteiot_send_cmd( &lteiot, LTEIOT_CMD_CIMI );
+    app_error_flag = lteiot_rsp_check(  );
+    lteiot_error_check( app_error_flag );
+    Delay_ms( 500 );
+    
+    app_buf_len = 0;
+    app_buf_cnt = 0;
+    app_connection_status = WAIT_FOR_CONNECTION;
+    log_info( &logger, " Application Task " );
+    Delay_ms( 5000 );
 }
   
 ```
 
 ### Application Task
 
-> Reads the received data.
+> Waits for device to connect to network and then sends SMS to selected phone number.
 
 ```c
 
 void application_task ( void )
 {
-    if ( send_data_cnt == 5 )
+    if ( app_connection_status == WAIT_FOR_CONNECTION )
     {
-        lteiot_process( );
-        send_data_cnt = 0;
+        // CGATT - request IMSI
+        lteiot_send_cmd_check( &lteiot, LTEIOT_CMD_CGATT );
+        app_error_flag = lteiot_rsp_check(  );
+        lteiot_error_check( app_error_flag );
+        Delay_ms( 500 );
+        
+        // CEREG - network registration status
+        lteiot_send_cmd_check( &lteiot, LTEIOT_CMD_CEREG );
+        app_error_flag = lteiot_rsp_check(  );
+        lteiot_error_check( app_error_flag );
+        Delay_ms( 500 );
+        
+        // CSQ - signal quality
+        lteiot_send_cmd( &lteiot, LTEIOT_CMD_CSQ );
+        app_error_flag = lteiot_rsp_check(  );
+        lteiot_error_check( app_error_flag );
+        Delay_ms( 5000 );
     }
     else
     {
-        send_data_cnt++;
+        log_info( &logger, "CONNECTED TO NETWORK" );
+        
+        // SMS message format - text mode
+        lteiot_send_cmd_with_parameter( &lteiot, "AT+CMGF", "1" );
+        app_error_flag = lteiot_rsp_check(  );
+        lteiot_error_check( app_error_flag );
+        Delay_ms( 3000 );
+        
+        for( ; ; )
+        {   
+            log_printf( &logger, "> Sending message to phone number...\r\n" );
+            lteiot_send_text_message( &lteiot, PHONE_NUMBER_TO_MESSAGE, MESSAGE_CONTENT );
+            app_error_flag = lteiot_rsp_check(  );
+            lteiot_error_check( app_error_flag );
+            Delay_ms( 10000 );
+            Delay_ms( 10000 );
+            Delay_ms( 10000 );
+        }
     }
 } 
 
 ```
 
+## Note
+
+> In order for the example to work, 
+> user needs to set the phone number and sim apn to which he wants to send an SMS
+> Enter valid data for the following macros: SIM_APN and PHONE_NUMBER_TO_MESSAGE.
+>> E.g. 
+   >> * SIM_APN "vipmobile"
+   >> * PHONE_NUMBER_TO_MESSAGE "999999999"
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

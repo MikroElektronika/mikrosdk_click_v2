@@ -9,7 +9,7 @@ Magnetic rotary click is a very accurate position sensing Click board™ which u
   <img src="https://download.mikroe.com/images/click_for_ide/magneticrotary_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/magnetic-rotary-click>)
+[click Product page](https://www.mikroe.com/magnetic-rotary-click)
 
 ---
 

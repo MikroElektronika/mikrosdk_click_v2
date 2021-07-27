@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Motion",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Motion 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.motion3",
+    "product_link": "https://www.mikroe.com/motion-3-click",
+    "short_description": "Motion 3 Click is a Click board™ based on EKMC1606112, PIR motion sensor from Panasonic Corporation that's used as human motion detector. Also featured on Motion 3 Click bord is TLP241A photorelay from Toshiba that is used to provide a reinforced galvanic isolation for the external signals used to drive some external high power electronic equipment when motion is detected. It's allowing up to 40V between the SSR contacts in OFF state, and currents up to 2A while in ON state, thanks to a very low ON-state resistance. Motion 3 Click board™ is supported by a mikroSDK compliant library, which includes functions that simplify software development. This Click board™ comes as a fully tested product, ready to be used on a system equipped with the mikroBUS™ socket.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+	"related_projects":[
+        3244
+    ],
+    "version": "2.0.0.1"
+}

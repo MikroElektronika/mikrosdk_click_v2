@@ -9,7 +9,7 @@ MPU 9DOF click carries the MPU–9250 System in Package, which is the world’s 
 </p>
 
 
-[click Product page](<https://www.mikroe.com/mpu-9dof-click>)
+[click Product page](https://www.mikroe.com/mpu-9dof-click)
 
 ---
 

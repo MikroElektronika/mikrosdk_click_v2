@@ -10,7 +10,7 @@ Mic click carries the SPQ0410HR5H-B surface mount silicon microphone with maximu
 </p>
 
 
-[click Product page](<https://www.mikroe.com/mic-click>)
+[click Product page](https://www.mikroe.com/mic-click)
 
 ---
 

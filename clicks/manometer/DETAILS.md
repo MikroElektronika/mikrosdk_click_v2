@@ -7,7 +7,7 @@ Manometer click carries a piezoresistive silicon pressure sensor,the HSCMAND060P
   <img src="https://download.mikroe.com/images/click_for_ide/manometer_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/manometer-click>)
+[click Product page](https://www.mikroe.com/manometer-click)
 
 ---
 

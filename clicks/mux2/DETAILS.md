@@ -9,7 +9,7 @@ MUX 2 click is a Click board™ that switches one of the eight inputs to one out
   <img src="https://download.mikroe.com/images/click_for_ide/mux2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/mux-2-click>)
+[click Product page](https://www.mikroe.com/mux-2-click)
 
 ---
 

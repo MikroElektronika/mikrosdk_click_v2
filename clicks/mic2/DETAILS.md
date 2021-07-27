@@ -8,7 +8,7 @@ MIC 2 click is equipped with a small electret microphone, accompanied by a suita
   <img src="https://download.mikroe.com/images/click_for_ide/mic2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/mic-2-click>)
+[click Product page](https://www.mikroe.com/mic-2-click)
 
 ---
 

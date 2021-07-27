@@ -9,7 +9,7 @@ MRAM click features MRAM module which contains 262,144 magnetoresistive memory c
   <img src="https://download.mikroe.com/images/click_for_ide/mram_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/mram-click>)
+[click Product page](https://www.mikroe.com/mram-click)
 
 ---
 

@@ -1,0 +1,7 @@
+type: subdirs
+project: LTEIoT8
+
+subdirs: {
+    lib
+    example
+}

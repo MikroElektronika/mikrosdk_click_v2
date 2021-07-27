@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,9 +26,15 @@
     "name": "mikroe.click.microwave",
     "product_link": "https://www.mikroe.com/microwave-click",
     "short_description": "Microwave click detects movement, thanks to the PD-V11 a 24GHz microwave motion sensor. The typical use for Microwave click is a proximity or motion detector in various applications and devices.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.3"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2205
+    ],
+    "version": "2.0.0.6"
 }
+
+
 
 

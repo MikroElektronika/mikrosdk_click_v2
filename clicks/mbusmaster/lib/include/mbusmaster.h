@@ -148,47 +148,21 @@ void mbusmaster_cfg_setup ( mbusmaster_cfg_t *cfg );
 MBUSMASTER_RETVAL mbusmaster_init ( mbusmaster_t *ctx, mbusmaster_cfg_t *cfg );
 
 /**
- * @brief Generic multi write function.
- *
- * @param ctx          Click object.
- * @param data_buf     Input data buffer
- * @param len          Number of the bytes in the data buffer
- *
- * @description This function writes data.
+ * @brief Generic write function.
+ * @param mbusmaster Click object.
+ * @param data_buf Data buffer for sends.
+ * @param len Number of bytes for sends.
  */
-void mbusmaster_generic_multi_write ( mbusmaster_t *ctx, char *data_buf,  uint8_t len );
+void mbusmaster_generic_write ( mbusmaster_t *ctx, char *data_buf, uint16_t len );
 
 /**
- * @brief Generic multi read function.
- *
- * @param ctx        Click object.
- * @param data_buf   Output data buffer.
- * @param len        Number of the bytes in data buffer.
- *
- * @description This function reads data.
+ * @brief Generic read function.
+ * @param mbusmaster Click object.
+ * @param data_buf Data buffer for read data.
+ * @param max_len The maximum length of data that can be read.
+ * @return Number of reads data.
  */
-void mbusmaster_generic_multi_read ( mbusmaster_t *ctx, char *data_buf,  uint8_t len );
-
-
-/**
- * @brief Generic single read function.
- *
- * @param ctx        Click object.
- * @return one byte data
- *
- * @description This function read one byte data.
- */
-char mbusmaster_generic_single_read ( mbusmaster_t *ctx );
-
-/**
- * @brief Generic single write function.
- *
- * @param ctx          Click object.
- * @param tx_data      Input data 
- *
- * @description This function write one byte data.
- */
-void mbusmaster_generic_single_write ( mbusmaster_t *ctx, char tx_data );
+int32_t mbusmaster_generic_read ( mbusmaster_t *ctx, char *data_buf, uint16_t max_len );
 
 #ifdef __cplusplus
 }

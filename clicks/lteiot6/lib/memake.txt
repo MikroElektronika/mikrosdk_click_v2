@@ -1,0 +1,41 @@
+type: library
+
+target: lib_lteiot6
+
+alias: Click.LTEIoT6
+
+sources: {
+    src/lteiot6.c
+}
+
+headers: {
+    include/lteiot6.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/lteiot6.h) dst(include/lteiot6.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+    MikroSDK.Conversions
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

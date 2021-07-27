@@ -2,7 +2,7 @@
     "name": "MIC 2 Click",
     "description": "MIC 2 click is equipped with a small electret microphone, accompanied by a suitable pre-amplifying circuit. The small electret microphone is not capable of providing sufficient line-level output; therefore, the pre-amp has to be used",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","MCP6022"],
     "category" : ["Microphone"] 
 }

@@ -9,7 +9,7 @@ MCP1664 click contains 4 high-power white LEDs. It carries the MCP1664, a high-v
   <img src="https://download.mikroe.com/images/click_for_ide/mcp1664_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/mcp1664-click>)
+[click Product page](https://www.mikroe.com/mcp1664-click)
 
 ---
 

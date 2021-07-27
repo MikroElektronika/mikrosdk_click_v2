@@ -1,0 +1,40 @@
+type: library
+
+target: lib_mbusslave
+
+alias: Click.MBusSlave
+
+sources: {
+    src/mbusslave.c
+}
+
+headers: {
+    include/mbusslave.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/mbusslave.h) dst(include/mbusslave.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

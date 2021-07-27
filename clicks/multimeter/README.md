@@ -10,7 +10,7 @@
 </p>
 
 
-[click Product page](<https://www.mikroe.com/multimeter-click>)
+[click Product page](https://www.mikroe.com/multimeter-click)
 
 ---
 

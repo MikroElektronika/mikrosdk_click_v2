@@ -49,7 +49,7 @@ microwave_init( microwave_t *ctx, microwave_cfg_t *cfg )
     analog_in_configure_default( &adc_cfg );
     adc_cfg.input_pin  = cfg->out;
 
-    if ( analog_in_open( &ctx->adc, &adc_cfg ) != ACQUIRE_FAIL )
+    if ( analog_in_open( &ctx->adc, &adc_cfg ) == ADC_ERROR )
     {
         return MICROWAVE_ERR_INIT_ADC;
     }

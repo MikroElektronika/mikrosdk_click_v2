@@ -1,0 +1,40 @@
+type: library
+
+target: lib_mcp2542
+
+alias: Click.Mcp2542
+
+sources: {
+    src/mcp2542.c
+}
+
+headers: {
+    include/mcp2542.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/mcp2542.h) dst(include/mcp2542.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

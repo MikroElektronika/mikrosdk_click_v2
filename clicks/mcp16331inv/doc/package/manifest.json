@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Buck-Boost",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,8 +26,15 @@
     "name": "mikroe.click.mcp16331inv",
     "product_link": "https://www.mikroe.com/mcp16331-inv-click",
     "short_description": "MCP16331 INV click works as a buck-boost voltage regulator, a switching regulator topology that combines principles of the buck conversion (step-down) and the boost conversion (step-up).",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2331
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.3"
 }
+
+
 

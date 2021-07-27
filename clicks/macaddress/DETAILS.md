@@ -8,7 +8,7 @@ MAC Address click provides a unique node address for your application. It also h
   <img src="https://download.mikroe.com/images/click_for_ide/macaddress_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/mac-address-click>)
+[click Product page](https://www.mikroe.com/mac-address-click)
 
 ---
 

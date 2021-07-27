@@ -1,0 +1,8 @@
+{
+    "name": "LTE IoT 8 Click",
+    "description": "LTE IoT 8 Click is a compact add-on board that contains a low-power solution for LTE and NB-IoT connectivity. This board features the SKY66430-11, a multi-band multi-chip System-in-Package (SiP) supporting 5G Massive IoT (LTE-M/NB-IoT) platforms from Skyworks Solutions and Sequans Communications.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","SKY66430-11"],
+    "category" : ["LTE IoT"]
+}

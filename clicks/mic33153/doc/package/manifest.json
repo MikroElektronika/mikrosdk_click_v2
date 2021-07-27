@@ -1,0 +1,38 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Buck",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "MIC33153 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.mic33153",
+    "product_link": "https://www.mikroe.com/mic33153-click",
+    "short_description": "MIC33153 click is a DC-DC adjustable step-down (buck) converter that is designed to deliver a substantial amount of current to very demanding loads, with the voltage output up to 3.5V.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type": "mikroSDK Library",
+    "related_projects":[
+        2271
+    ],
+    "version": "2.0.0.3"
+}
+
+

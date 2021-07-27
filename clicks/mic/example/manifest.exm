@@ -2,7 +2,7 @@
     "name": "Mic Click",
     "description": "Mic click carries the SPQ0410HR5H-B surface mount silicon microphone with maximum RF protection. The click is designed to run on a 3.3V power supply. It communicates with the target microcontroller over the AN pin on the mikroBUS™ line.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","SPQ0410HR5H-B"],
     "category" : ["Microphone"] 
 }

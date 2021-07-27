@@ -11,7 +11,7 @@ Magneto 7 Click is a high-resolution magnetic sensor Click board™ which allows
   <img src="https://download.mikroe.com/images/click_for_ide/magneto7_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/magneto-7-click>)
+[click Product page](https://www.mikroe.com/magneto-7-click)
 
 ---
 

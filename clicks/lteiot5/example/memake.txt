@@ -1,0 +1,13 @@
+type: executable
+target: example_lteiot5
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.LTEIoT5
+}
+
+sources: {
+    main.c
+}

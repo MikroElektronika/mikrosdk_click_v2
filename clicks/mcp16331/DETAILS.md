@@ -8,7 +8,7 @@ MCP16331 click functions as a buck-boost voltage regulator, a switching regulato
   <img src="https://download.mikroe.com/images/click_for_ide/mcp16331_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/mcp16331-click>)
+[click Product page](https://www.mikroe.com/mcp16331-click)
 
 ---
 

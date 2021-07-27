@@ -8,7 +8,7 @@ Matrix RGB click is a mikroBUS™ add-on board powered by a 32-bit FT900 MCU des
   <img src="https://download.mikroe.com/images/click_for_ide/matrixrgb_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/matrix-rgb-click>)
+[click Product page](https://www.mikroe.com/matrix-rgb-click)
 
 ---
 

@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "LTE IoT",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "LTE IoT 5 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.lteiot5",
+    "product_link": "https://www.mikroe.com/lte-iot-5-click",
+    "short_description": "LTE IoT 5 Click is add-on board with compact and cost-effective secure cloud multi-band module solution designed for IoT applications. This board features the SARA-R510M8S, a cellular module that supports LTE-M/NB-IoT* bands with integrated high performance standard precision M8 GNSS receiver for global position acquisition from u-Blox.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.2"
+}
+
+
