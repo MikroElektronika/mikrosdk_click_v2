@@ -9,7 +9,7 @@ GNSS2 click carries Quectel’s L76 module and an SMA antenna connector.
   <img src="https://download.mikroe.com/images/click_for_ide/gnss2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/gnss-2-click>)
+[click Product page](https://www.mikroe.com/gnss-2-click)
 
 ---
 

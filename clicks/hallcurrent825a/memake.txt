@@ -1,0 +1,8 @@
+type: subdirs
+
+project: HallCurrent825A
+
+subdirs: {
+    lib
+    example
+}

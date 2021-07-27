@@ -2,7 +2,7 @@
     "name": "Gyro 2 Click",
     "description": "The Gyro 2 click is a three-axis digital angular rate sensor which can sense the angular movement and velocity in three perpendicular axes.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","FXAS21002C"],
     "category" : ["Motion"] 
 }

@@ -11,7 +11,7 @@ Hall Switch click is a magnetic field activated dual-relay Click board™. Hall 
   <img src="https://download.mikroe.com/images/click_for_ide/hallswitch_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/hall-switch-click>)
+[click Product page](https://www.mikroe.com/hall-switch-click)
 
 ---
 

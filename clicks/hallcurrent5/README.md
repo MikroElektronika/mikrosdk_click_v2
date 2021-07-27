@@ -11,7 +11,7 @@ Hall Current 5 Click is a very accurate electric current measurement Click board
   <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent5_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/hall-current-5-click>)
+[click Product page](https://www.mikroe.com/hall-current-5-click)
 
 ---
 

@@ -9,7 +9,7 @@ The Gyro 2 click is a three-axis digital angular rate sensor which can sense the
   <img src="https://download.mikroe.com/images/click_for_ide/gyro2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/gyro-2-click>)
+[click Product page](https://www.mikroe.com/gyro-2-click)
 
 ---
 

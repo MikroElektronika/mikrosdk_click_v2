@@ -9,7 +9,7 @@ Determine your current position with GNSS 7 click. It carries the NEO-M9N GNSS r
   <img src="https://download.mikroe.com/images/click_for_ide/gnss7_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/gnss-7-click>)
+[click Product page](https://www.mikroe.com/gnss-7-click)
 
 ---
 

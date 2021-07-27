@@ -11,7 +11,7 @@ The Hall Current 4 click is designed to measure relatively high current by using
   <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent4_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/hall-current-4-click>)
+[click Product page](https://www.mikroe.com/hall-current-4-click)
 
 ---
 

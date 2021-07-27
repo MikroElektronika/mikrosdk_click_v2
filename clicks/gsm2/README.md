@@ -9,7 +9,7 @@ GSM2 click is a compact quad-band GSM cellular network communication solution, f
   <img src="https://download.mikroe.com/images/click_for_ide/gsm2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/gsm-2-click>)
+[click Product page](https://www.mikroe.com/gsm-2-click)
 
 ---
 

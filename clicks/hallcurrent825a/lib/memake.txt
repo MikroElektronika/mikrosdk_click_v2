@@ -1,0 +1,36 @@
+type: library
+
+target: lib_hallcurrent825a
+
+sources: {
+    src/hallcurrent825a.c
+}
+
+headers: {
+    include/hallcurrent825a.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/hallcurrent825a.h) dst(include/hallcurrent825a.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.HallCurrent825A

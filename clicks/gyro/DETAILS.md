@@ -9,7 +9,7 @@ Gyro click is an add-on board in mikroBUS form factor. It features L3GD20 three-
   <img src="https://download.mikroe.com/images/click_for_ide/gyro_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/gyro-click>)
+[click Product page](https://www.mikroe.com/gyro-click)
 
 ---
 

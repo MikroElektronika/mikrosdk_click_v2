@@ -57,8 +57,8 @@ void gps_cfg_setup ( gps_cfg_t *cfg )
     
     // Additional gpio pins
 
-     cfg->reset = HAL_PIN_NC;
-     cfg->tmpls = HAL_PIN_NC;
+    cfg->reset = HAL_PIN_NC;
+    cfg->tmpls = HAL_PIN_NC;
 
     cfg->baud_rate      = 9600;
     cfg->data_bit       = UART_DATA_BITS_DEFAULT;
@@ -93,15 +93,13 @@ GPS_RETVAL gps_init ( gps_t *ctx, gps_cfg_t *cfg )
 
     // Output pins 
 
-     digital_out_init( &ctx->reset, cfg->reset );
+    digital_out_init( &ctx->reset, cfg->reset );
 
     // Input pins
    
-     digital_in_init( &ctx->tmpls, cfg->tmpls );
+    digital_in_init( &ctx->tmpls, cfg->tmpls );
     
-
     return GPS_OK;
-
 }
 
 void gps_module_wakeup ( gps_t *ctx )
@@ -130,7 +128,7 @@ void gps_generic_write ( gps_t *ctx, char *data_buf, uint16_t len )
     uart_write( &ctx->uart, data_buf, len );
 }
 
-int16_t gps_generic_read ( gps_t *ctx, char *data_buf, uint16_t max_len )
+int32_t gps_generic_read ( gps_t *ctx, char *data_buf, uint16_t max_len )
 {
     return uart_read( &ctx->uart, data_buf, max_len );
 }
@@ -187,8 +185,6 @@ gps_error_t gps_generic_parser
     
     return GPS_NO_ERROR;
 }
-
-
 
 // ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
 

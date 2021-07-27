@@ -8,7 +8,7 @@ GSM click is a compact and powerful GSM cellular network communication solution,
   <img src="https://download.mikroe.com/images/click_for_ide/gsm_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/gsm-click>)
+[click Product page](https://www.mikroe.com/gsm-click)
 
 ---
 

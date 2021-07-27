@@ -9,7 +9,7 @@ GainAMP 2 click is a 6-channel programmable gain amplifier, used to amplify sign
   <img src="https://download.mikroe.com/images/click_for_ide/gainapm2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/gainamp-2-click>)
+[click Product page](https://www.mikroe.com/gainamp-2-click)
 
 ---
 

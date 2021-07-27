@@ -1,0 +1,8 @@
+{
+    "name": "GNSS RTK Click",
+    "description": "GNSS RTK Click is a compact add-on board made for positioning and wireless communication purposes. This board features the ZED-F9P, a multi-band GNSS module with integrated multi-band Real Time Kinematics (RTK) technology offering centimeter-level accuracy from U-blox. ",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","ZED-F9P"],
+    "category" : ["GPS/GNSS"]
+}

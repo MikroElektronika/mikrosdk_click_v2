@@ -9,7 +9,7 @@ HDC1000 Click is a humidity and temperature measurement click board carrying the
   <img src="https://download.mikroe.com/images/click_for_ide/hdc1000_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/hdc1000-click>)
+[click Product page](https://www.mikroe.com/hdc1000-click)
 
 ---
 

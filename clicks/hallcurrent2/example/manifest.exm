@@ -1,0 +1,8 @@
+{
+    "name": "Hall current 2 click",
+    "description": "Hall current 2 click is a very accurate current measurement Click board™, which relies on the Hall effect.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","ACS711"],
+    "category" : ["Current sensor"] 
+}

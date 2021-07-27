@@ -1,0 +1,40 @@
+type: library
+
+target: lib_hbridge7
+
+alias: Click.Hbridge7
+
+sources: {
+    src/hbridge7.c
+}
+
+headers: {
+    include/hbridge7.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/hbridge7.h) dst(include/hbridge7.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

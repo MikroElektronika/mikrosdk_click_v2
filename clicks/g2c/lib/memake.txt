@@ -1,0 +1,40 @@
+type: library
+
+target: lib_g2c
+
+alias: Click.G2C
+
+sources: {
+    src/g2c.c
+}
+
+headers: {
+    include/g2c.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/g2c.h) dst(include/g2c.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

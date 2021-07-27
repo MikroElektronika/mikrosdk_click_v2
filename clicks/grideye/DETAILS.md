@@ -8,7 +8,7 @@ Grid-EYE click is a 8x8 thermal array sensor-detector that carries the AMG8853 i
   <img src="https://download.mikroe.com/images/click_for_ide/grideye_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/grid-eye-click>)
+[click Product page](https://www.mikroe.com/grid-eye-click)
 
 ---
 

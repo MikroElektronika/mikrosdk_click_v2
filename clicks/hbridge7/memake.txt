@@ -1,0 +1,7 @@
+type: subdirs
+project: Hbridge7
+
+subdirs: {
+    lib
+    example
+}

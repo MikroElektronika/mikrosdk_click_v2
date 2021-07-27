@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Current sensor",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Hall Current 9 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.hallcurrent9",
+    "product_link": "https://www.mikroe.com/hall-current-9-click",
+    "short_description": "Hall Current 9 Click is a compact add-on board that contains the coreless current sensor corresponding to the safety standards. This board features the CQ3300, a high-speed response coreless current sensor using a Hall sensor that outputs the analog voltage proportional to the AC/DC from AKM Semiconductor.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.3"
+}
+
+
+

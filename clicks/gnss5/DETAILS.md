@@ -8,7 +8,7 @@ Determine your current position with GNSS 5 click. It carries the NEO-M8N GNSS r
   <img src="https://download.mikroe.com/images/click_for_ide/gnss5_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/gnss-5-click>)
+[click Product page](https://www.mikroe.com/gnss-5-click)
 
 ---
 

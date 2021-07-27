@@ -1,0 +1,13 @@
+type: executable
+target: example_hallcurrent9
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.HallCurrent9
+}
+
+sources: {
+    main.c
+}

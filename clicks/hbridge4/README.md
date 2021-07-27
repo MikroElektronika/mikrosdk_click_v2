@@ -11,7 +11,7 @@ H-Bridge 4 Click is a Click board™ that contains the AP1010AEN, which is a two
   <img src="https://download.mikroe.com/images/click_for_ide/hbridge4_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/h-bridge-4-click>)
+[click Product page](https://www.mikroe.com/h-bridge-4-click)
 
 ---
 

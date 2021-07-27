@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "GPS/GNSS",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "GNSS RTK click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.gnssrtk",
+    "product_link": "https://www.mikroe.com/gnss-rtk-click",
+    "short_description": "GNSS RTK Click is a compact add-on board made for positioning and wireless communication purposes. This board features the ZED-F9P, a multi-band GNSS module with integrated multi-band Real Time Kinematics (RTK) technology offering centimeter-level accuracy from U-blox.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.5"
+}
+
+
+

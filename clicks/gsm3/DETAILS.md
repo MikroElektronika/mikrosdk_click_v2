@@ -7,7 +7,7 @@ GSM3 click is a complete quad-band GSM cellular network communication solution, 
   <img src="https://download.mikroe.com/images/click_for_ide/gsm3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/gsm-3-click>)
+[click Product page](https://www.mikroe.com/gsm-3-click)
 
 ---
 

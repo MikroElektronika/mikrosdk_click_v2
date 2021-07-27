@@ -123,7 +123,8 @@
  * \defgroup driver Driver define
  * \{
  */
-#define DRV_RX_BUFFER_SIZE 500
+#define DRV_RX_BUFFER_SIZE 600
+#define DRV_TX_BUFFER_SIZE 100
 /** \} */
 
 /** \} */ // End group macro 
@@ -151,7 +152,7 @@ typedef struct
     uart_t uart;
 
     char uart_rx_buffer[ DRV_RX_BUFFER_SIZE ];
-    char uart_tx_buffer[ DRV_RX_BUFFER_SIZE ];
+    char uart_tx_buffer[ DRV_TX_BUFFER_SIZE ];
 
 } gps4_t;
 
@@ -218,15 +219,6 @@ void gps4_cfg_setup ( gps4_cfg_t *cfg );
 GPS4_RETVAL gps4_init ( gps4_t *ctx, gps4_cfg_t *cfg );
 
 /**
- * @brief Click Default Configuration function.
- *
- * @param ctx  Click object.
- *
- * @description This function executes default configuration for Gps4 click.
- */
-void gps4_default_cfg ( gps4_t *ctx );
-
-/**
  * @brief Wake-up module.
  * @param gps4 Click object.
  */
@@ -274,7 +266,7 @@ void gps4_generic_write ( gps4_t *ctx, char *data_buf, uint16_t len );
  * @param max_len The maximum length of data that can be read.
  * @return Number of reads data.
  */
-int16_t gps4_generic_read ( gps4_t *ctx, char *data_buf, uint16_t max_len );
+int32_t gps4_generic_read ( gps4_t *ctx, char *data_buf, uint16_t max_len );
 
 /**
  * @brief Generic parser function.

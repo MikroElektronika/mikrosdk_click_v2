@@ -8,7 +8,7 @@ GNSS ZOE Click is a evaluation board for ultra small ZOE-M8Q GNSS SiP receiver f
   <img src="https://download.mikroe.com/images/click_for_ide/gnsszoe_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/gnss-zoe-click>)
+[click Product page](https://www.mikroe.com/gnss-zoe-click)
 
 ---
 

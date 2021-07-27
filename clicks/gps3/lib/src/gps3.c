@@ -119,7 +119,7 @@ void gps3_generic_write ( gps3_t *ctx, char *data_buf, uint16_t len )
     uart_write( &ctx->uart, data_buf, len );
 }
 
-int16_t gps3_generic_read ( gps3_t *ctx, char *data_buf, uint16_t max_len )
+int32_t gps3_generic_read ( gps3_t *ctx, char *data_buf, uint16_t max_len )
 {
     return uart_read( &ctx->uart, data_buf, max_len );
 }

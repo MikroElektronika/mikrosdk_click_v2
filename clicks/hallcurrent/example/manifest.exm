@@ -2,7 +2,7 @@
     "name": "Hall current Click",
     "description": "Hall current click is a high precision current sensor. It carries a galvanically isolated TLI4970-D050T4 miniature magnetic digital current sensor that utilizes the Hall effect to measure electric current.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","TLI4970-D050T4"],
     "category" : ["Magnetic"] 
 }

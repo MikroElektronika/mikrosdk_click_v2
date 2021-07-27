@@ -8,7 +8,7 @@ Go to Cloud (G2C) 3G click is a gateway Click board™ which provides a simple a
   <img src="https://download.mikroe.com/images/click_for_ide/g2c3g_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/go-to-cloud-g2c-3g-click>)
+[click Product page](https://www.mikroe.com/go-to-cloud-g2c-3g-click)
 
 ---
 

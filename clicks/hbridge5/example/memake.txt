@@ -1,0 +1,17 @@
+type: executable
+target: example_hbridge5
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.HBridge5
+}
+
+uses: {
+    MikroC.Core
+}
+
+sources: {
+    main.c
+}

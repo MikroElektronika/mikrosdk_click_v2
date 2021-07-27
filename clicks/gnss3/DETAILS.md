@@ -8,7 +8,7 @@ GNSS3 click carries SIMCom’s SIM33ELA standalone GNSS module with an integrate
   <img src="https://download.mikroe.com/images/click_for_ide/gnss3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/gnss-3-click>)
+[click Product page](https://www.mikroe.com/gnss-3-click)
 
 ---
 

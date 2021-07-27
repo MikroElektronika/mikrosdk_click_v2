@@ -1,0 +1,42 @@
+type: library
+
+target: lib_gsmgnss
+
+alias: Click.GsmGnss
+
+sources: {
+    src/gsmgnss.c
+}
+
+headers: {
+    include/gsmgnss.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/gsmgnss.h) dst(include/gsmgnss.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+    MikroSDK.GenericPointer
+    MikroSDK.Conversions
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

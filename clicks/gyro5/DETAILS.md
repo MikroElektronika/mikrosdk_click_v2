@@ -9,7 +9,7 @@ Gyro 5 Click is a three-axis gyroscope Click board™ that can sense motion over
   <img src="https://download.mikroe.com/images/click_for_ide/gyro5_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/gyro-5-click>)
+[click Product page](https://www.mikroe.com/gyro-5-click)
 
 ---
 

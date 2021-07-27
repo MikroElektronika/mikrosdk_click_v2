@@ -57,9 +57,9 @@ void gps4_cfg_setup ( gps4_cfg_t *cfg )
     
     // Additional gpio pins
 
-     cfg->fon   = HAL_PIN_NC;
-     cfg->rst = HAL_PIN_NC;
-     cfg->stb = HAL_PIN_NC;
+    cfg->fon   = HAL_PIN_NC;
+    cfg->rst = HAL_PIN_NC;
+    cfg->stb = HAL_PIN_NC;
 
     cfg->baud_rate      = 9600;
     cfg->data_bit       = UART_DATA_BITS_DEFAULT;
@@ -94,21 +94,14 @@ GPS4_RETVAL gps4_init ( gps4_t *ctx, gps4_cfg_t *cfg )
 
     // Output pins 
 
-     digital_out_init( &ctx->rst, cfg->rst );
+    digital_out_init( &ctx->rst, cfg->rst );
 
     // Input pins
 
-     digital_in_init( &ctx->fon, cfg->fon );
-     digital_in_init( &ctx->stb, cfg->stb );
-
+    digital_in_init( &ctx->fon, cfg->fon );
+    digital_in_init( &ctx->stb, cfg->stb );
 
     return GPS4_OK;
-
-}
-
-void gps4_default_cfg ( gps4_t *ctx )
-{
-    // Click default configuration 
 }
 
 void gps4_module_wakeup ( gps4_t *ctx )
@@ -154,7 +147,7 @@ void gps4_generic_write ( gps4_t *ctx, char *data_buf, uint16_t len )
     uart_write( &ctx->uart, data_buf, len );
 }
 
-int16_t gps4_generic_read ( gps4_t *ctx, char *data_buf, uint16_t max_len )
+int32_t gps4_generic_read ( gps4_t *ctx, char *data_buf, uint16_t max_len )
 {
     return uart_read( &ctx->uart, data_buf, max_len );
 }
@@ -211,8 +204,6 @@ gps4_error_t gps4_generic_parser
     
     return GPS4_NO_ERROR;
 }
-
-
 
 // ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
 

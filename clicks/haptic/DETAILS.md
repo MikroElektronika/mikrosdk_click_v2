@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/haptic_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/haptic-click>)
+[click Product page](https://www.mikroe.com/haptic-click)
 
 ---
 

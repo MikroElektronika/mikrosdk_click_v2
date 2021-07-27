@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Magnetic",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,8 +26,15 @@
     "name": "mikroe.click.gmrangle",
     "product_link": "https://www.mikroe.com/gmr-angle-click",
     "short_description": "The GMR Angle Click is a Click board™ that features the TLI5012B E1000, which is a pre-calibrated 360° angle sensor that detects the orientation of a magnetic field, made by Infineon. The GMR Angle click is ideal for angular position sensing in industrial and consumer applications such as electrical commutated motor (e.g. BLDC), fans or pumps.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2960
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.3"
 }
+
+
 

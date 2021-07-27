@@ -9,7 +9,7 @@ Hall current 3 click is a very accurate current measurement Click board™, whic
   <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/hall-current-3-click>)
+[click Product page](https://www.mikroe.com/hall-current-3-click)
 
 ---
 

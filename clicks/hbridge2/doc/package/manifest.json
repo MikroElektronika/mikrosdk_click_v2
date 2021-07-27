@@ -1,16 +1,17 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Brushed",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
     "details": "Resources/DETAILS.md",
-    "display_name": "H BRIDGE 2 click",
+    "display_name": "H-Bridge 2 click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -25,8 +26,15 @@
     "name": "mikroe.click.hbridge2",
     "product_link": "https://www.mikroe.com/h-bridge-2-click",
     "short_description": "This application controls the speed and direction of motor",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "related_projects": [ 
+        2388
+     ],
+    "version": "2.0.0.4"
 }
+
+
+
 

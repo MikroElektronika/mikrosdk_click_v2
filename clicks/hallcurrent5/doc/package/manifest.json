@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Current sensor",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,9 +26,16 @@
     "name": "mikroe.click.hallcurrent5",
     "product_link": "https://www.mikroe.com/hall-current-5-click",
     "short_description": "Hall Current 5 Click is a very accurate electric current measurement Click board™ based on the ACS733 IC. This IC is a galvanically isolated current sensor, which utilizes the Hall-effect principle.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.3"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2699
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.5"
 }
+
+
 
 

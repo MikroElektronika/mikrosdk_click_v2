@@ -9,7 +9,7 @@ GPS click is a compact solution for adding GPS functionality to your device. It 
   <img src="https://download.mikroe.com/images/click_for_ide/gps_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/gps-click>)
+[click Product page](https://www.mikroe.com/gps-click)
 
 ---
 
@@ -42,9 +42,6 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 - Initialization function.
 > GPS_RETVAL gps_init ( gps_t *ctx, gps_cfg_t *cfg );
 
-- Click Default Configuration function.
-> void gps_default_cfg ( gps_t *ctx );
-
 
 #### Example key functions :
 
@@ -52,10 +49,10 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 > gps_error_t gps_generic_parser ( char *rsp,  uint8_t command, uint8_t element, char *parser_buf );
  
 - Generic read function.
-> uint16_t gps_generic_read ( gps_t *ctx, char *data_buf, uint16_t max_len );
+> int32_t gps_generic_read ( gps_t *ctx, char *data_buf, uint16_t max_len );
 
-- uint8_t gps_get_tmpls_pin ( gps_t *ctx );
-> uint8_t gps_get_tmpls_pin ( gps_t *ctx );
+- Wake-up module.
+> void gps_module_wakeup ( gps_t *ctx );
 
 ## Examples Description
 

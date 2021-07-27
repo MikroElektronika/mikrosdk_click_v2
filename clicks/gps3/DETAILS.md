@@ -1,4 +1,4 @@
- 
+
 ---
 # GPS3 click
 
@@ -8,7 +8,7 @@ GPS3 click carries Quectel’s L80 GPS module, a high-sensitivity ultra slim GPS
   <img src="https://download.mikroe.com/images/click_for_ide/gps3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/gps-3-click>)
+[click Product page](https://www.mikroe.com/gps-3-click)
 
 ---
 
@@ -54,11 +54,11 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 > gps3_error_t gps3_generic_parser ( char *rsp,  uint8_t command, uint8_t element, char *parser_buf );
 
 - Generic read function
-> uint16_t gps3_generic_read ( gps3_t *ctx, char *data_buf, uint16_t max_len );
+> int32_t gps3_generic_read ( gps3_t *ctx, char *data_buf, uint16_t max_len );
 
 ## Examples Description
 
-> This example reads and processes data from GPS3 clicks.
+> This example reads and processes data from GPS3 click.
 
 **The demo application is composed of two sections :**
 

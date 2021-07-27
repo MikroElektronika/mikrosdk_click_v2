@@ -1,0 +1,40 @@
+type: library
+
+target: lib_gaussmeter
+
+alias: Click.Gaussmeter
+
+sources: {
+    src/gaussmeter.c
+}
+
+headers: {
+    include/gaussmeter.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/gaussmeter.h) dst(include/gaussmeter.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

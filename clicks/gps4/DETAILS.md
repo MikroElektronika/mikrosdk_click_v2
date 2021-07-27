@@ -1,4 +1,4 @@
- 
+
 ---
 # GPS4 click
 
@@ -8,7 +8,7 @@ GPS 4 click carries the L70 compact GPS module from Quectel.
   <img src="https://download.mikroe.com/images/click_for_ide/gps4_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/gps-4-click>)
+[click Product page](https://www.mikroe.com/gps-4-click)
 
 ---
 
@@ -41,17 +41,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 - Initialization function.
 > GPS4_RETVAL gps4_init ( gps4_t *ctx, gps4_cfg_t *cfg );
 
-- Click Default Configuration function.
-> void gps4_default_cfg ( gps4_t *ctx );
-
-
 #### Example key functions :
 
 - Generic parser function.
 > gps4_error_t gps4_generic_parser ( char *rsp,  uint8_t command, uint8_t element, char *parser_buf );
  
 - Generic read function.
-> uint16_t gps4_generic_read ( gps4_t *ctx, char *data_buf, uint16_t max_len );
+> int32_t gps4_generic_read ( gps4_t *ctx, char *data_buf, uint16_t max_len );
 
 - Wake-up module.
 > void gps4_module_wakeup ( gps4_t *ctx );

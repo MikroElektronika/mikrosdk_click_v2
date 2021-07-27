@@ -2,7 +2,7 @@
     "name": "Gyro 4 Click",
     "description": "Gyro 4 Click  is a two-axis MEMS gyroscope for optical image stabilization applications.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","L20G20IS"],
     "category" : ["Motion"] 
 }

@@ -8,7 +8,7 @@ The GMR Angle Click is a Click board™ that features the TLI5012B E1000, which 
   <img src="https://download.mikroe.com/images/click_for_ide/gmrangle_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/gmr-angle-click>)
+[click Product page](https://www.mikroe.com/gmr-angle-click)
 
 ---
 

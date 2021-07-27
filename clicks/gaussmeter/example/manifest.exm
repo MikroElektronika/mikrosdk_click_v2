@@ -1,0 +1,8 @@
+{
+    "name": "Gaussmeter Click",
+    "description": "Gaussmeter click is a device that is used for measuring the magnetic field in X, Y and Z axes. This Click board™ features the MLX90393, a micropower magnetometer based on the proprietary Triaxis® technology, from Melexis.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","MLX90393"],
+    "category" : ["Magnetic"] 
+}

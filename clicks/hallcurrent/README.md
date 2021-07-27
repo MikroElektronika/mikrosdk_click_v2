@@ -11,7 +11,7 @@ Hall current click is a high precision current sensor. It carries a galvanically
   <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/hall-current-click>)
+[click Product page](https://www.mikroe.com/hall-current-click)
 
 ---
 

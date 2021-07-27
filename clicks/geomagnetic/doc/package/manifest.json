@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Magnetic",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,8 +26,15 @@
     "name": "mikroe.click.geomagnetic",
     "product_link": "<https://www.mikroe.com/geomagnetic-click>",
     "short_description": "GeoMagnetic click is a digital magnetometric click board which can measure the geomagnetic field in three perpendicular axes. The onboard sensor uses FlipCore - a proprietary technology from Bosch, which results with a carefully tuned performance, tailored for demanding 3-axis mobile applications, such as a tilt-compensated electronic compass, gaming controllers, augmented reality applications and similar applications which require reliable and precise 3-axis magnetometric measurement.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2347
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.3"
 }
+
+
 
