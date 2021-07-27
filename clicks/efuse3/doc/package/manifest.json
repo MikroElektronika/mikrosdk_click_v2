@@ -1,0 +1,33 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Power Switch",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "e Fuse 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.efuse3",
+    "product_link": "https://www.mikroe.com/efuse-3-click",
+    "short_description": "eFuse 3 Click is a compact add-on board that contains an electronic eFuse. This board features the NIS6150, a resettable fuse that can significantly enhance the reliability of a USB application from both catastrophic and shutdown failures from ON Semiconductor. It is designed to buffer the load device from the excessive input voltage, which can damage sensitive circuits and protect the input side from reverse currents. It includes an over-voltage clamp circuit that limits the output voltage during transients but doesn’t shut the unit down, allowing the load circuit to continue its operation.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}

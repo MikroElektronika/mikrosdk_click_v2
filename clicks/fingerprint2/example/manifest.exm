@@ -1,0 +1,8 @@
+{
+    "name": "Fingerprint 2 Click",
+    "description": "Fingerprint 2 Click is a new fingerprint scanner Click board simplified for everyone's use and it's very easy to implement! This add-on board consists of a high-speed Nuvoton processor which carries high-performance fingerprint algorithm developed for on-board A-172-MRQ fingerprint sensor from company ByNew Technology Inc. This board can be used as a standalone device when connected over USB to PC or it can be controlled by the MCU/processor over serial UART interface.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","A-172-MRQ-K05A13001"],
+    "category" : ["Fingerprint"] 
+}

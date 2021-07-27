@@ -11,7 +11,7 @@ Fan Click carries an EMC2301 controller for powering and regulating the operatio
   <img src="https://download.mikroe.com/images/click_for_ide/fan_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/fan-click>)
+[click Product page](https://www.mikroe.com/fan-click)
 
 ---
 

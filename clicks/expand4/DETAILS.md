@@ -9,7 +9,7 @@ Expand 4 click carries TPCIC6A595, a chip that combines an 8-bit serial-in, para
   <img src="https://download.mikroe.com/images/click_for_ide/expand4_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/expand-4-click>)
+[click Product page](https://www.mikroe.com/expand-4-click)
 
 ---
 

@@ -1,0 +1,8 @@
+{
+    "name": "Flash 4 Click",
+    "description": "Flash 4 click is a perfect solution for the mass storage option in various embedded applications. With fast performance being one of its key features, Flash 4 click can also be used for the code shadowing, execute-in-place (XIP), and data storage.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","S25FL512S"],
+    "category" : ["FLASH"] 
+}

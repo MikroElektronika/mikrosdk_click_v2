@@ -173,8 +173,22 @@ ENVIRONMENT_RETVAL environment_init ( environment_t *ctx, environment_cfg_t *cfg
 
 void environment_default_cfg ( environment_t *ctx )
 {
+
     environment_soft_reset( ctx );
     environment_get_calibration_data( ctx );
+    
+    
+    ctx->tph_sett.os_hum = ENVIRONMENT_OS_2X;
+    ctx->tph_sett.os_pres = ENVIRONMENT_OS_4X;
+    ctx->tph_sett.os_temp = ENVIRONMENT_OS_8X;
+    ctx->tph_sett.filter = ENVIRONMENT_FILTER_SIZE_3;
+
+    ctx->gas_sett.run_gas = ENVIRONMENT_ENABLE_GAS_MEAS;
+
+    ctx->gas_sett.heatr_temp = 320;
+    ctx->gas_sett.heatr_dur = 150;
+
+    ctx->device_power_mode = ENVIRONMENT_FORCED_MODE;
     environment_default_config( ctx );
     hw_reset_delay( );
 }
@@ -310,17 +324,6 @@ void environment_get_calibration_data ( environment_t *ctx )
 
 void environment_default_config ( environment_t *ctx )
 {
-    ctx->tph_sett.os_hum = ENVIRONMENT_OS_2X;
-    ctx->tph_sett.os_pres = ENVIRONMENT_OS_4X;
-    ctx->tph_sett.os_temp = ENVIRONMENT_OS_8X;
-    ctx->tph_sett.filter = ENVIRONMENT_FILTER_SIZE_3;
-
-    ctx->gas_sett.run_gas = ENVIRONMENT_ENABLE_GAS_MEAS;
-
-    ctx->gas_sett.heatr_temp = 320;
-    ctx->gas_sett.heatr_dur = 150;
-
-    ctx->device_power_mode = ENVIRONMENT_FORCED_MODE;
 
     bme680_set_sensor_settings( ctx, ENVIRONMENT_OST_SEL | 
                                ENVIRONMENT_OSP_SEL |

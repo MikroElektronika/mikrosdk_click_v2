@@ -8,7 +8,7 @@ Excelon LP click carries a ferroelectric RAM module. Ferroelectric RAM, also kno
   <img src="https://download.mikroe.com/images/click_for_ide/excelonlp_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/excelon-lp-click>)
+[click Product page](https://www.mikroe.com/excelon-lp-click)
 
 ---
 

@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/expand_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/expand-click>)
+[click Product page](https://www.mikroe.com/expand-click)
 
 ---
 

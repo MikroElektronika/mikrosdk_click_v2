@@ -11,7 +11,7 @@ The used Flash module has very good endurance and it can withstand up to 100,000
   <img src="https://download.mikroe.com/images/click_for_ide/flash_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/flash-click>)
+[click Product page](https://www.mikroe.com/flash-click)
 
 ---
 

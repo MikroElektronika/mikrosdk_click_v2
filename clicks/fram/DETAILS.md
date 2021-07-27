@@ -8,7 +8,7 @@ FRAM click is a Click board™ that carries a ferroelectric RAM module. Ferroele
   <img src="https://download.mikroe.com/images/click_for_ide/fram_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/fram-click>)
+[click Product page](https://www.mikroe.com/fram-click)
 
 ---
 

@@ -1,0 +1,36 @@
+type: library
+
+target: lib_force5
+
+sources: {
+    src/force5.c
+}
+
+headers: {
+    include/force5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/force5.h) dst(include/force5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Force5

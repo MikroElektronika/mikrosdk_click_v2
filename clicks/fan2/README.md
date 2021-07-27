@@ -13,7 +13,7 @@ Fan 2 click can also control two fans at the same time.
   <img src="https://download.mikroe.com/images/click_for_ide/fan2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/fan-2-click>)
+[click Product page](https://www.mikroe.com/fan-2-click)
 
 ---
 

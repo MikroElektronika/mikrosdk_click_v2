@@ -1,0 +1,7 @@
+type: subdirs
+project: Eink154Inch
+
+subdirs: {
+    lib
+    example
+}

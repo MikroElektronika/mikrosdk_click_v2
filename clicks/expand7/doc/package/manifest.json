@@ -1,0 +1,37 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Port expander",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Expand 7 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.expand7",
+    "product_link": "https://www.mikroe.com/expand-7-click",
+    "short_description": "EXPAND 7 Click is a compact add-on board that contains a multi-port I/O expander with bi-directional input/outputs or PWM outputs.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type": "mikroSDK Library",
+    "related_projects":[
+        3851
+    ],
+    "version": "2.0.0.1"
+}
+

@@ -1,0 +1,8 @@
+{
+    "name": "eINK 1.54 inch display",
+    "description": "eINK click is an adapter Click board™, used to interface a compatible eINK display with the host MCU.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","SSD1606"],
+    "category" : ["Electronic Paper Display"] 
+}

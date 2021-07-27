@@ -2,7 +2,7 @@
     "name": "Flash Click",
     "description": "Flash Click is 8,388,608 bits (8 Mbit) on a Click board, organized into 1,048,576 bytes (1 MB). In other words, this Click board is a Flash memory medium with the capacity of 1 MB.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","EN25Q80B"],
     "category" : ["FLASH"] 
 }

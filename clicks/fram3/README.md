@@ -11,7 +11,7 @@ The FRAM 3 Click is a Click board™ that carries a ferroelectric RAM module. Fe
   <img src="https://download.mikroe.com/images/click_for_ide/fram3_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/fram-3-click>)
+[click Product page](https://www.mikroe.com/fram-3-click)
 
 ---
 

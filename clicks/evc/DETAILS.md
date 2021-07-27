@@ -8,7 +8,7 @@ EVC Click is a six-channel digital volume controller, equipped with an integrate
   <img src="https://download.mikroe.com/images/click_for_ide/evc_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/evc-click>)
+[click Product page](https://www.mikroe.com/evc-click)
 
 ---
 

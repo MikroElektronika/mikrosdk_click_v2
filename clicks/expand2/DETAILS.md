@@ -1,4 +1,4 @@
- 
+
 ---
 # Expand 2 click
 
@@ -9,7 +9,7 @@ EXPAND 2 click is an accessory board in mikroBUS form factor. It includes a 16-b
 </p>
 
 
-[click Product page](<https://www.mikroe.com/expand-2-click>)
+[click Product page](https://www.mikroe.com/expand-2-click)
 
 ---
 
@@ -59,14 +59,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This application enables use of the expand 2 click.
+> This application demonstrates the use of the Expand 2 click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initialization driver enable's - I2C and GPIO, reset Expand 2 click, set PORTA to be output, set PORTB to be input.
- 
+> Initializes the driver and logger, and then sets the click default configuration: PORTA as output, PORTB as input with pull-ups on all pins.
 
 ```c
 
@@ -102,9 +101,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This is a example which demonstrates the use of Expand 2 Click board. 
-> Expand 2 Click communicates with register via I2C by write to register and read from register,
-> set configuration of ports and set or get ports status.
+> Sets other pin of PORTA every 3 seconds, then reads and displays the status of both ports on USB UART.
 
 ```c
 
@@ -117,13 +114,13 @@ void application_task ( void )
 
     for ( pin_position = 0; pin_position < 8; pin_position++ )
     {
-        expand2_set_potr_a( &expand2, pin_position );
+        expand2_set_port_a( &expand2, EXPAND2_I2C_MODULE_ADDRESS_0, pin_position );
         
-        port_status = expand2_read_port_a( &expand2, EXPAND2_I2C__MODULE_ADDRESS_5 );
+        port_status = expand2_read_port_a( &expand2, EXPAND2_I2C_MODULE_ADDRESS_0 );
 
         log_printf( &logger, " Status PA (output): %d\r\n", (uint16_t) port_status );
         
-        port_status = expand2_read_port_b( &expand2, EXPAND2_I2C__MODULE_ADDRESS_5 );
+        port_status = expand2_read_port_b( &expand2, EXPAND2_I2C_MODULE_ADDRESS_0 );
 
         log_printf( &logger, " Status PB (input) : %d  \r\n", (uint16_t) port_status );
         log_printf( &logger, "----------------\r\n" );

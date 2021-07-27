@@ -1,0 +1,49 @@
+type: library
+
+target: lib_eink_154inch
+
+alias: Click.Eink154Inch
+
+#begin python
+if (MEMAKE_TOOLCHAIN_ID == "mikrocpic"):
+    image_mode_only = "IMAGE_MODE_ONLY"
+#end python
+
+defines: {
+    <[image_mode_only]>
+}
+
+sources: {
+    src/eink_154inch.c
+}
+
+headers: {
+    include/eink_154inch.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/eink_154inch.h) dst(include/eink_154inch.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}

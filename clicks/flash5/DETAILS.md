@@ -10,7 +10,7 @@ Flash 5 Click is a perfect solution for the mass storage option in various embed
 </p>
 
 
-[click Product page](<https://www.mikroe.com/flash-5-click>)
+[click Product page](https://www.mikroe.com/flash-5-click)
 
 ---
 

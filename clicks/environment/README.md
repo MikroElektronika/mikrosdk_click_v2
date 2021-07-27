@@ -9,7 +9,7 @@ Environment click measures temperature, relative humidity, pressure and VOC (Vol
   <img src="https://download.mikroe.com/images/click_for_ide/enviroment_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/environment-click>)
+[click Product page](https://www.mikroe.com/environment-click)
 
 ---
 

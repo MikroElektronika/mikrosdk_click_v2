@@ -44,7 +44,7 @@ void expand2_cfg_setup ( expand2_cfg_t *cfg )
     cfg->int_pin = HAL_PIN_NC;
 
     cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
-    cfg->i2c_address = EXPAND2_I2C_ADDRESS;
+    cfg->i2c_address = EXPAND2_I2C_MODULE_ADDRESS_0;
 }
 
 EXPAND2_RETVAL expand2_init ( expand2_t *ctx, expand2_cfg_t *cfg )
@@ -75,16 +75,17 @@ EXPAND2_RETVAL expand2_init ( expand2_t *ctx, expand2_cfg_t *cfg )
     digital_in_init( &ctx->int_pin, cfg->int_pin );
 
     return EXPAND2_OK;
-
 }
 
 void expand2_default_cfg ( expand2_t *ctx )
 {
     expand2_reset( ctx );
 
-    expand2_set_direction_port_a( ctx, EXPAND2_I2C__MODULE_ADDRESS_5, EXPAND2_PORT_DIRECTION_OUTPUT );
+    expand2_set_direction_port_a( ctx, EXPAND2_I2C_MODULE_ADDRESS_0, EXPAND2_PORT_DIRECTION_OUTPUT );
 
-    expand2_set_direction_port_b( ctx, EXPAND2_I2C__MODULE_ADDRESS_5, EXPAND2_PORT_DIRECTION_INPUT );
+    expand2_set_direction_port_b( ctx, EXPAND2_I2C_MODULE_ADDRESS_0, EXPAND2_PORT_DIRECTION_INPUT );
+    
+    expand2_set_pull_ups_port_b ( ctx, EXPAND2_I2C_MODULE_ADDRESS_0, 0xFF );
 }
 
 void expand2_generic_write ( expand2_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
@@ -112,7 +113,8 @@ void expand2_set_bits ( expand2_t *ctx, uint8_t module_address, uint8_t reg_addr
     uint8_t temp;
     
     ctx->slave_address = module_address;
-
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
+    
     expand2_generic_read( ctx, reg_address, &temp, 1 );
     
     temp |= bit_mask;
@@ -125,6 +127,7 @@ void expand2_clear_bits ( expand2_t *ctx, uint8_t module_address, uint8_t reg_ad
     uint8_t temp;
 
     ctx->slave_address = module_address;
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
 
     expand2_generic_read( ctx, reg_address, &temp, 1 );
     
@@ -138,6 +141,7 @@ void expand2_toggle_bits ( expand2_t *ctx, uint8_t module_address, uint8_t reg_a
     uint8_t temp;
 
     ctx->slave_address = module_address;
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     
     expand2_generic_read( ctx, reg_address, &temp, 1 );
     
@@ -151,6 +155,7 @@ uint8_t expand2_read_port_a ( expand2_t *ctx, uint8_t module_address )
     uint8_t temp;
 
     ctx->slave_address = module_address;
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
 
     expand2_generic_read( ctx, EXPAND2_GPIOA_BANK0, &temp, 1 );
 
@@ -162,6 +167,7 @@ uint8_t expand2_read_port_b ( expand2_t *ctx, uint8_t module_address )
     uint8_t temp;
 
     ctx->slave_address = module_address;
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
 
     expand2_generic_read( ctx, EXPAND2_GPIOB_BANK0, &temp, 1 );
 
@@ -186,6 +192,7 @@ uint16_t expand2_read_both_ports ( expand2_t *ctx, uint8_t module_address )
 void expand2_write_port_a ( expand2_t *ctx, uint8_t module_address, uint8_t write_data )
 {
     ctx->slave_address = module_address;
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     expand2_generic_write( ctx, EXPAND2_OLATA_BANK0, &write_data, 1 );
 }
 
@@ -207,6 +214,7 @@ void expand2_toggle_bit_port_a ( expand2_t *ctx, uint8_t module_address, uint8_t
 void expand2_write_port_b ( expand2_t *ctx, uint8_t module_address, uint8_t write_data )
 {
     ctx->slave_address = module_address;
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     expand2_generic_write( ctx, EXPAND2_OLATB_BANK0, &write_data, 1 );
 }
 
@@ -228,6 +236,7 @@ void expand2_toggle_bit_port_b ( expand2_t *ctx, uint8_t module_address, uint8_t
 void expand2_set_direction_port_a ( expand2_t *ctx, uint8_t module_address, uint8_t write_data )
 {
     ctx->slave_address = module_address;
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     expand2_generic_write( ctx, EXPAND2_IODIRA_BANK0, &write_data, 1 );
 }
 
@@ -244,6 +253,7 @@ void expand2_set_output_dir_port_a ( expand2_t *ctx, uint8_t module_address, uin
 void expand2_set_direction_port_b ( expand2_t *ctx, uint8_t module_address, uint8_t write_data )
 {
     ctx->slave_address = module_address;
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     expand2_generic_write( ctx, EXPAND2_IODIRB_BANK0, &write_data, 1 );
 }
 
@@ -260,16 +270,18 @@ void expand2_set_output_dir_port_b ( expand2_t *ctx, uint8_t module_address, uin
 void expand2_set_pull_ups_port_a ( expand2_t *ctx, uint8_t module_address, uint8_t write_data )
 {
     ctx->slave_address = module_address;
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     expand2_generic_write( ctx, EXPAND2_GPPUA_BANK0, &write_data, 1 );
 }
 
 void expand2_set_pull_ups_port_b ( expand2_t *ctx, uint8_t module_address, uint8_t write_data )
 {
     ctx->slave_address = module_address;
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
     expand2_generic_write( ctx, EXPAND2_GPPUB_BANK0, &write_data, 1 );
 }
 
-void expand2_set_potr_a ( expand2_t *ctx, uint8_t position )
+void expand2_set_port_a ( expand2_t *ctx, uint8_t module_address, uint8_t position )
 {
     uint8_t write_data;
     
@@ -277,10 +289,10 @@ void expand2_set_potr_a ( expand2_t *ctx, uint8_t position )
     
     write_data = 0x01 << position;
     
-    expand2_write_port_a( ctx, EXPAND2_I2C__MODULE_ADDRESS_5, write_data );
+    expand2_write_port_a( ctx, module_address, write_data );
 }
 
-void expand2_set_potr_b ( expand2_t *ctx, uint8_t position )
+void expand2_set_port_b ( expand2_t *ctx, uint8_t module_address, uint8_t position )
 {
     uint8_t write_data;
 
@@ -288,7 +300,7 @@ void expand2_set_potr_b ( expand2_t *ctx, uint8_t position )
 
     write_data = 0x01 << position;
 
-    expand2_write_port_b( ctx, EXPAND2_I2C__MODULE_ADDRESS_5, write_data );
+    expand2_write_port_b( ctx, module_address, write_data );
 }
 
 void expand2_reset( expand2_t *ctx )

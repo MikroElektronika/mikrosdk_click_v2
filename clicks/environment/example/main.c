@@ -12,8 +12,8 @@
  * 
  * ## Application Task  
  * This is an example which demonstrates the use of Environment Click board.
- * Measured temperature, humidity, pressure and gas resistance data from the BME680 chip sensor.
- * Display ambient temperature data to degrees Celsius [ �C ],
+ * Measures temperature, humidity, pressure and gas resistance data from the BME680 chip sensor.
+ * Displays ambient temperature data [ degrees Celsius ],
  * humidity data [ % ], pressure data [ mbar ] and gas resistance.
  * Results are being sent to the Usart Terminal where you can track their changes.
  * All data logs write on usb uart changes for every 2 sec.

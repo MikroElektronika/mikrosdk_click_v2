@@ -11,7 +11,7 @@ Fan 4 click is a very compact, two-wire fan driver. It utilizes an integrated 5V
   <img src="https://download.mikroe.com/images/click_for_ide/fan4_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/fan-4-click>)
+[click Product page](https://www.mikroe.com/fan-4-click)
 
 ---
 

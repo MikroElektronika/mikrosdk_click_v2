@@ -12,7 +12,7 @@ FRAM 2 click carries a ferroelectric RAM module. Ferroelectric RAM, also known a
 </p>
 
 
-[click Product page](<https://www.mikroe.com/fram-2-click>)
+[click Product page](https://www.mikroe.com/fram-2-click)
 
 ---
 

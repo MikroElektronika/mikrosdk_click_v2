@@ -1,0 +1,7 @@
+type: subdirs
+project: Force5
+
+subdirs: {
+    lib
+    example
+}

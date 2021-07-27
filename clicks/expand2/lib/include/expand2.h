@@ -71,16 +71,14 @@
  * \defgroup addr Address
  * \{
  */
-#define EXPAND2_I2C_ADDRESS                                         0x20
-
-#define EXPAND2_I2C__MODULE_ADDRESS_0                               0x00
-#define EXPAND2_I2C__MODULE_ADDRESS_1                               0x01
-#define EXPAND2_I2C__MODULE_ADDRESS_2                               0x02
-#define EXPAND2_I2C__MODULE_ADDRESS_3                               0x03
-#define EXPAND2_I2C__MODULE_ADDRESS_4                               0x04
-#define EXPAND2_I2C__MODULE_ADDRESS_5                               0x05
-#define EXPAND2_I2C__MODULE_ADDRESS_6                               0x06
-#define EXPAND2_I2C__MODULE_ADDRESS_7                               0x07
+#define EXPAND2_I2C_MODULE_ADDRESS_0                                0x20
+#define EXPAND2_I2C_MODULE_ADDRESS_1                                0x21
+#define EXPAND2_I2C_MODULE_ADDRESS_2                                0x22
+#define EXPAND2_I2C_MODULE_ADDRESS_3                                0x23
+#define EXPAND2_I2C_MODULE_ADDRESS_4                                0x24
+#define EXPAND2_I2C_MODULE_ADDRESS_5                                0x25
+#define EXPAND2_I2C_MODULE_ADDRESS_6                                0x26
+#define EXPAND2_I2C_MODULE_ADDRESS_7                                0x27
 /** \} */
 
 /**
@@ -533,21 +531,23 @@ void expand2_set_pull_ups_port_b ( expand2_t *ctx, uint8_t module_address, uint8
  * @brief Active pin by position on PORTA function
  *
  * @param ctx                               Click object.
+ * @param module_address                    module address
  * @param position                          pin position
  *
  * @description Function activate pin on PORTA by position, from PA0 to PA7.
  */
-void expand2_set_potr_a ( expand2_t *ctx, uint8_t position );
+void expand2_set_port_a ( expand2_t *ctx, uint8_t module_address, uint8_t position );
 
 /**
  * @brief Active pin by position on PORTB function
  *
  * @param ctx                               Click object.
+ * @param module_address                    module address
  * @param position                          pin position
  *
  * @description Function activate pin on PORTB by position, from PB0 to PB7.
  */
-void expand2_set_potr_b ( expand2_t *ctx, uint8_t position );
+void expand2_set_port_b ( expand2_t *ctx, uint8_t module_address, uint8_t position );
 
 /**
  * @brief Reset function

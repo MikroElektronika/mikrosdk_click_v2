@@ -11,7 +11,7 @@ The Fan 6 click is a Click board™ which features EMC2103, an SMBus compliant f
   <img src="https://download.mikroe.com/images/click_for_ide/fan6_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/fan-6-click>)
+[click Product page](https://www.mikroe.com/fan-4-click)
 
 ---
 

@@ -12,7 +12,7 @@ Fever click features a specially designed sensor, which is capable of accurate m
 </p>
 
 
-[click Product page](<https://www.mikroe.com/fever-click>)
+[click Product page](https://www.mikroe.com/fever-click)
 
 ---
 

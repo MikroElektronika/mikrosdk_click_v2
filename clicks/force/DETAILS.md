@@ -8,7 +8,7 @@ Force click is a mikroBUS™ add-on board with circuitry for implementing Interl
   <img src="https://download.mikroe.com/images/click_for_ide/force_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/force-click>)
+[click Product page](https://www.mikroe.com/force-click)
 
 ---
 

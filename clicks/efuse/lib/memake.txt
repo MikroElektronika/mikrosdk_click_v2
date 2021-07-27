@@ -1,0 +1,36 @@
+type: library
+
+target: lib_efuse
+
+sources: {
+    src/efuse.c
+}
+
+headers: {
+    include/efuse.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/efuse.h) dst(include/efuse.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.eFuse

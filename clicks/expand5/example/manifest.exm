@@ -1,0 +1,8 @@
+{
+    "name": "Expand 5 Click",
+    "description": "EXPAND 5 Click features a low-voltage 24-bit I2C and SMBus I/O expander. This 24-bit I/O expander is designed to provide general-purpose remote I/O expansion for most microcontroller families via the I2C serial interface.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","TCA6424A"],
+    "category" : ["Port expander"] 
+}

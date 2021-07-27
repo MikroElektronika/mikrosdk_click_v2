@@ -7,7 +7,7 @@ FLICKER click is the perfect, simple solution if you need to turn a device on an
   <img src="https://download.mikroe.com/images/click_for_ide/flicker_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/flicker-click>)
+[click Product page](https://www.mikroe.com/flicker-click)
 
 ---
 

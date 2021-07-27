@@ -8,7 +8,7 @@ Fiber Opt click is a compact and easy solution for adding fiber-optic communicat
   <img src="https://download.mikroe.com/images/click_for_ide/fiberopt_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/fiber-opt-33v-click>)
+[click Product page](https://www.mikroe.com/fiber-opt-33v-click)
 
 ---
 

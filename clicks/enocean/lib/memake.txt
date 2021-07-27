@@ -1,0 +1,40 @@
+type: library
+
+target: lib_enocean
+
+alias: Click.enOcean
+
+sources: {
+    src/enocean.c
+}
+
+headers: {
+    include/enocean.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/enocean.h) dst(include/enocean.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+uses: {
+    MikroC.Core
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
