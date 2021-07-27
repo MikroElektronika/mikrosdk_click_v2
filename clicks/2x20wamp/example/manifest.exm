@@ -2,7 +2,7 @@
     "name": "2x20W Amp Click",
     "description": "2x20W Amp click carries the MAX9744 stereo class D audio power amplifier from Maxim Integrated. This click brings the Class AB sound performance with Class D efficiency.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","MAX9744"],
     "category" : ["Amplifier"] 
 }

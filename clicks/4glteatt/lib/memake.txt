@@ -1,0 +1,37 @@
+type: library
+
+target: lib_c4glteatt
+
+sources: {
+    src/c4glteatt.c
+}
+
+headers: {
+    include/c4glteatt.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/c4glteatt.h) dst(include/c4glteatt.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+    MikroSDK.Conversions
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.C4GLTEATT

@@ -30,6 +30,19 @@
  *     4|   |2
  *      |_3_|.7
  * 
+ * Timeing sequence chart:
+ *          -----------|     T0L
+ *              T0H    |______________
+ * Logic 0: 
+ *          T0H ~ 250-550ns
+ *          T0L ~ 700-1000ns
+ * 
+ *          -----------|     T1L
+ *              T1H    |______________
+ * Logic 1: 
+ *          T1H ~ 700-1000ns
+ *          T1L ~ 250-550ns
+ * 
  * \author MikroE Team
  *
  */

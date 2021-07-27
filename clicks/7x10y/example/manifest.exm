@@ -1,0 +1,8 @@
+{
+    "name": "7x10 Y Click",
+    "description": "7x10 Y click is a LED dot matrix display click, which can be used to display graphics or letters in a very simple and easy way. The click board has two LED dot matrix modules with 7x5 stylish, round, dot-like LED elements. These displays produce clean and uniform patterns since the elements are optically isolated from each other and there is no light bleeding between the adjacent LED cells. Additionally, turn-on and turn-off times of the matrix cells are optimized for a clean and fluid display performance, with no flickering or lag.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","74HC595"],
+    "category" : ["LED matrix"]
+}

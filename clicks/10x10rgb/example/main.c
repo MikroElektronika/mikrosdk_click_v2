@@ -16,6 +16,20 @@
  * This function first displays 3 bytes { R, G, B }, the string "Mikroe", the company logo and
  * a rainbow in the end.
  * 
+ * @note
+ * Timeing sequence chart:
+ *          -----------|     T0L
+ *              T0H    |______________
+ * Logic 0: 
+ *          T0H ~ 200-400ns
+ *          T0L ~ 600-1000ns
+ * 
+ *          -----------|     T1L
+ *              T1H    |______________
+ * Logic 1: 
+ *          T1H ~ 600-1000ns
+ *          T1L ~ 600-1000ns
+ * 
  * \author MikroE Team
  *
  */
@@ -111,7 +125,7 @@ static void logic_one ( void )
     digital_out_write( &c10x10rgb.di_pin, C10X10RGB_CTRL_PIN_HIGH );
     DELAY_LONG( );
     digital_out_write( &c10x10rgb.di_pin, C10X10RGB_CTRL_PIN_LOW );
-    DELAY_SHORT( );
+    DELAY_LONG( );
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS

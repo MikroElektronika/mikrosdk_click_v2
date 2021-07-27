@@ -1,0 +1,12 @@
+type: subdirs
+project: C3GAA
+
+subdirs: {
+    lib
+    example
+}
+
+depends: {
+    MikroSDK.GenericPointer
+    MikroSDK.Conversions
+}

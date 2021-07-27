@@ -1,0 +1,11 @@
+type: subdirs
+project: C4GLTENA
+
+subdirs: {
+    lib
+    example
+}
+
+depends: {
+    MikroSDK.Conversions
+}

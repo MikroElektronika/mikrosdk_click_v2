@@ -1,0 +1,8 @@
+{
+    "name": "3G-EA Click",
+    "description": "3G-EA click is a versatile cellular network communication solution, featuring the compact 3G UMTS/HSPA Quectel UG95 module. This module features a full set of options for the cellular networking and communication, such as the network indication, embedded TCP/UDP stack, HTTP/HTTPS stack, full GSM/GPRS/EDGE implementation, UMTS/HSDPA/HSUPA protocol implementation and more. 3G-EA click features data-rates of 7.2 Mb/s (downlink) and 5.76 Mb/s (uplink) in HSPA mode. Onboard 16bit audio CODEC IC adds high-quality voice communication capability.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","Quectel UG95"],
+    "category" : ["GSM/LTE"]
+}

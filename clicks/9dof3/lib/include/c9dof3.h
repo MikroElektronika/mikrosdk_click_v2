@@ -76,9 +76,6 @@
  * \{
  */
 #define C9DOF3_RETVAL  uint8_t
-
-#define C9DOF3_OK           0x00
-#define C9DOF3_INIT_ERROR   0xFF
 /** \} */
 
 /**
@@ -417,13 +414,6 @@
 #define C9DOF3_PIN_STATE_HIGH                                       0x01
 /** \} */
 
-/**
- * \defgroup communication Communication
- * \{
- */
-#define SPI_COMMUNICATION                                           1
-#define I2C_COMMUNICATION                                           2
-/** \} */
 /** \} */ // End group macro 
 // --------------------------------------------------------------- PUBLIC TYPES
 /**
@@ -432,14 +422,20 @@
  */
 
 /**
- * @brief Communication type.
+ * @brief 9DOF 3 Click driver selector.
+ * @details Selects target driver interface of 9DOF 3 Click driver.
  */
-typedef uint8_t  c9dof3_select_t;
+typedef enum
+{
+   C9DOF3_DRV_SEL_SPI,      /**< SPI driver descriptor. */
+   C9DOF3_DRV_SEL_I2C       /**< I2C driver descriptor. */
+} c9dof3_drv_t;
 
 /**
- * @brief Master Input/Output type.
+ * @brief 9DOF 3 Click driver interface.
+ * @details Definition of driver interface of 9DOF 3 Click driver.
  */
-typedef void ( *c9dof3_master_io_t )( struct c9dof3_s*, uint8_t, uint8_t*, uint8_t );
+typedef void ( *c9dof3_master_io_t )( struct c9dof3_s*, uint8_t, uint8_t*, uint8_t ); /**< Driver serial interface. */
 
 /**
  * @brief Click ctx object definition.
@@ -448,6 +444,7 @@ typedef struct c9dof3_s
 {
     // Output pins 
 
+    digital_out_t cs1;
     digital_out_t cs2;
     digital_out_t cs3;
 
@@ -457,17 +454,19 @@ typedef struct c9dof3_s
     
     // Modules 
 
-    i2c_master_t i2c;
-    spi_master_t spi;
+    i2c_master_t  i2c;                   /**< I2C driver object. */
+    spi_master_t  spi;                   /**< SPI driver object. */
 
     // ctx variable 
 
-   hal_i2c_address_t slave_address;
-   c9dof3_master_io_t  write_f;
-   c9dof3_master_io_t  read_f;
-   c9dof3_select_t master_sel;
+    uint8_t     slave_address;           /**< Device slave address (used for I2C driver). */
+    pin_name_t  chip_select;             /**< Chip select pin descriptor (used for SPI driver). */
+    c9dof3_drv_t  drv_sel;               /**< Master driver interface selector. */
 
-   uint8_t sel_mode;
+    c9dof3_master_io_t  write_f;         /**< Master write function. */
+    c9dof3_master_io_t  read_f;          /**< Master read function. */
+    
+    uint8_t sel_mode;
 
 } c9dof3_t;
 
@@ -484,21 +483,23 @@ typedef struct
     pin_name_t mosi;
     pin_name_t sck;
     pin_name_t cs1;
+    pin_name_t cs2;
+    pin_name_t cs3;
     
     // Additional gpio pins 
 
-    pin_name_t cs2;
-    pin_name_t cs3;
     pin_name_t int_pin;
 
     // static variable 
 
-    hal_i2c_speed_t i2c_speed;
-    hal_i2c_address_t i2c_address;
-    hal_spi_speed_t spi_speed;
-    hal_spi_mode_t spi_mode;
+    uint32_t  i2c_speed;                                /**< I2C serial speed. */
+    uint8_t   i2c_address;                              /**< I2C slave address. */
 
-   c9dof3_select_t sel;
+    uint32_t                           spi_speed;       /**< SPI serial speed. */
+    spi_master_mode_t                  spi_mode;        /**< SPI master mode. */
+    spi_master_chip_select_polarity_t  cs_polarity;     /**< Chip select pin polarity. */
+
+    c9dof3_drv_t  drv_sel;                              /**< Master driver interface selector. */
 
 } c9dof3_cfg_t;
 
@@ -526,6 +527,17 @@ typedef struct
 }
 c9dof3_mag_t;
 
+/**
+ * @brief 9DOF 3 Click return value data.
+ * @details Predefined enum values for driver return values.
+ */
+typedef enum
+{
+   C9DOF3_OK = 0,
+   C9DOF3_ERROR = -1
+
+} c9dof3_return_value_t;
+
 /** \} */ // End types group
 // ----------------------------------------------- PUBLIC FUNCTION DECLARATIONS
 /**
@@ -546,6 +558,22 @@ extern "C"{
  * @note All used pins will be set to unconnected state.
  */
 void c9dof3_cfg_setup ( c9dof3_cfg_t *cfg );
+
+/**
+ * @brief 9DOF 3 driver interface setup function.
+ * @details This function sets a serial driver interface which will be used
+ * further in the click driver.
+ * @param[out] cfg : Click configuration structure.
+ * See #c9dof3_cfg_t object definition for detailed explanation.
+ * @param[in] drv_sel : Driver interface selection.
+ * See #c9dof3_drv_t object definition for detailed explanation.
+ * @return Nothing.
+ * @note This driver selection should be call before init function to configure
+ * the driver to work with the serial interface which is consistent with the
+ * real state of the hardware. If this function is not called, the default
+ * driver interface will be set.
+ */
+void c9dof3_drv_interface_selection ( c9dof3_cfg_t *cfg, c9dof3_drv_t drv_sel );
 
 /**
  * @brief Initialization function.

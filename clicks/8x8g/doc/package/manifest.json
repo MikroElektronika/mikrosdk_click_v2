@@ -1,0 +1,37 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "LED matrix",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "8x8 G click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.c8x8g",
+    "product_link": "https://www.mikroe.com/8x8-g-click",
+    "short_description": "8x8 G click is a 64 LED matrix display Click board™, composed of SMD LEDs organized in 8 rows by 8 columns. It has a digital brightness control in 16 steps, it can control every LED in the display matrix independently, it blanks the display on power up to eliminate glitches and it requires a single resistor to control the current through all the LEDs at once, which simplifies the design. 8x8 G click uses a fast SPI communication protocol, allowing fast display response and no lag.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        2322
+    ],
+    "version": "2.0.0.2"
+}
+

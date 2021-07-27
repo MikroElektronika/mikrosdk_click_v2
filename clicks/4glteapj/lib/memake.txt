@@ -1,0 +1,37 @@
+type: library
+
+target: lib_c4glteapj
+
+sources: {
+    src/c4glteapj.c
+}
+
+headers: {
+    include/c4glteapj.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/c4glteapj.h) dst(include/c4glteapj.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+    MikroSDK.Conversions
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.C4GLTEAPJ

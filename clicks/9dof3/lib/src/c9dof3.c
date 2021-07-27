@@ -51,7 +51,7 @@ static void dev_set_slave_addr ( c9dof3_t *ctx );
 
 static void dev_start_chip_select ( c9dof3_t *ctx );
 
-static void dev_stop_chip_select ( c9dof3_t *ctx, uint8_t sel_mode );
+static void dev_stop_chip_select ( c9dof3_t *ctx );
 
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
@@ -59,87 +59,121 @@ void c9dof3_cfg_setup ( c9dof3_cfg_t *cfg )
 {
     // Communication gpio pins 
 
-    cfg->scl = HAL_PIN_NC;
-    cfg->sda = HAL_PIN_NC;
-    cfg->sck = HAL_PIN_NC;
+    cfg->scl  = HAL_PIN_NC;
+    cfg->sda  = HAL_PIN_NC;
+    cfg->sck  = HAL_PIN_NC;
     cfg->miso = HAL_PIN_NC;
     cfg->mosi = HAL_PIN_NC;
-    cfg->cs1 = HAL_PIN_NC;
+    cfg->cs1  = HAL_PIN_NC;
+    cfg->cs2  = HAL_PIN_NC;
+    cfg->cs3  = HAL_PIN_NC;
     
     // Additional gpio pins
 
-    cfg->cs2 = HAL_PIN_NC;
-    cfg->cs3 = HAL_PIN_NC;
     cfg->int_pin = HAL_PIN_NC;
 
-    cfg->i2c_speed = I2C_STANDARD_SPEED; 
+    cfg->i2c_speed   = I2C_MASTER_SPEED_FULL;
     cfg->i2c_address = C9DOF3_ACC_I2C_SLAVE_ADDRESS;
-    cfg->spi_speed = SPI_MEDIUM; 
-    cfg->spi_mode = SPI_MODE_0;
-    cfg->sel = C9DOF3_MASTER_I2C;
+
+    cfg->spi_speed   = 100000;
+    cfg->spi_mode    = SPI_MASTER_MODE_0;
+    cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
+
+    cfg->drv_sel = C9DOF3_DRV_SEL_SPI;
+}
+
+void c9dof3_drv_interface_selection ( c9dof3_cfg_t *cfg, c9dof3_drv_t drv_sel ) 
+{
+    cfg->drv_sel = drv_sel;
 }
 
 C9DOF3_RETVAL c9dof3_init ( c9dof3_t *ctx, c9dof3_cfg_t *cfg )
 {
     // Only in case it is necessary to check somewhere which communication is set
-    ctx->master_sel = cfg->sel;
+    ctx->drv_sel = cfg->drv_sel;
 
-    if ( ctx->master_sel == C9DOF3_MASTER_I2C )
+    // Output pins 
+    
+    digital_out_init( &ctx->cs1, cfg->cs1 );
+    digital_out_init( &ctx->cs2, cfg->cs2 );
+    digital_out_init( &ctx->cs3, cfg->cs3 );
+    
+    digital_out_high( &ctx->cs1 );
+    digital_out_high( &ctx->cs2 );
+    digital_out_high( &ctx->cs3 );
+    
+    // Input pins
+
+    digital_in_init( &ctx->int_pin, cfg->int_pin );
+    
+    if ( ctx->drv_sel == C9DOF3_DRV_SEL_I2C ) 
     {
         i2c_master_config_t i2c_cfg;
 
         i2c_master_configure_default( &i2c_cfg );
-        i2c_cfg.speed    = cfg->i2c_speed;
-        i2c_cfg.pins.scl = cfg->scl;
-        i2c_cfg.pins.sda = cfg->sda;
+
+        i2c_cfg.scl = cfg->scl;
+        i2c_cfg.sda = cfg->sda;
 
         ctx->slave_address = cfg->i2c_address;
 
-        if (  i2c_master_open( &ctx->i2c, &i2c_cfg ) != I2C_SUCCESS )
+        if ( i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_ERROR ) 
         {
-            return C9DOF3_INIT_ERROR;
+            return I2C_MASTER_ERROR;
         }
 
-        ctx->read_f = c9dof3_i2c_read;
+        if ( i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address ) == I2C_MASTER_ERROR ) 
+        {
+            return I2C_MASTER_ERROR;
+        }
+
+        if ( i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed ) == I2C_MASTER_ERROR ) 
+        {
+            return I2C_MASTER_ERROR;
+        }
+
+        ctx->read_f  = c9dof3_i2c_read;
         ctx->write_f = c9dof3_i2c_write;
-    }
-    else
+    } 
+    else 
     {
         spi_master_config_t spi_cfg;
 
         spi_master_configure_default( &spi_cfg );
-        spi_cfg.mode        = cfg->spi_mode;
-        spi_cfg.speed       = cfg->spi_speed;
-        spi_cfg.pins.sck    = cfg->sck;
-        spi_cfg.pins.miso   = cfg->miso;
-        spi_cfg.pins.mosi   = cfg->mosi;
-        spi_cfg.chip_select = cfg->cs1;
 
-        if (  spi_master_open( &ctx->spi, &spi_cfg ) != SPI_SUCCESS )
+        spi_cfg.sck  = cfg->sck;
+        spi_cfg.miso = cfg->miso;
+        spi_cfg.mosi = cfg->mosi;
+
+        ctx->chip_select = cfg->cs1;
+
+        if ( spi_master_open( &ctx->spi, &spi_cfg ) == SPI_MASTER_ERROR ) 
         {
-            return  C9DOF3_INIT_ERROR;
+            return SPI_MASTER_ERROR;
         }
 
-         spi_master_set_dummy_data( &ctx->spi, C9DOF3_DUMMY );
-        
-        ctx->read_f = c9dof3_spi_read;
+        if ( spi_master_set_default_write_data( &ctx->spi, C9DOF3_DUMMY ) == SPI_MASTER_ERROR ) 
+        {
+            return SPI_MASTER_ERROR;
+        }
+
+        if ( spi_master_set_mode( &ctx->spi, cfg->spi_mode ) == SPI_MASTER_ERROR ) 
+        {
+            return SPI_MASTER_ERROR;
+        }
+
+        if ( spi_master_set_speed( &ctx->spi, cfg->spi_speed ) == SPI_MASTER_ERROR ) 
+        {
+            return SPI_MASTER_ERROR;
+        }
+
+        spi_master_set_chip_select_polarity( cfg->cs_polarity );
+        spi_master_deselect_device( ctx->chip_select );
+
+        ctx->read_f  = c9dof3_spi_read;
         ctx->write_f = c9dof3_spi_write;
     }
     
-    // Output pins 
-
-    digital_out_init( &ctx->cs2, cfg->cs2 );
-    digital_out_init( &ctx->cs3, cfg->cs3 );
-
-    // Input pins
-
-    digital_in_init( &ctx->int_pin, cfg->int_pin );
-
-    spi_master_stop( &ctx->spi ); 
-    digital_out_high( &ctx->cs2 );
-    digital_out_high( &ctx->cs3 );
-
-
     return C9DOF3_OK;
 }
 
@@ -228,6 +262,28 @@ uint8_t c9dof3_check_communication ( c9dof3_t *ctx )
     uint8_t gyro_id;
     uint8_t mag_id;
     uint8_t comm_status;
+    uint8_t write_data;
+
+    // Accel Soft Reset
+    ctx->sel_mode = COMMUNICATION_MODE_ACCEL;
+    write_data = C9DOF3_INITIATED_SOFT_RESET;
+    c9dof3_generic_write ( ctx, C9DOF3_REG_ACC_BGW_SOFTRESET, &write_data, 1 );
+    dev_soft_reset_delay( );
+  
+    // Gyro Soft Reset
+    ctx->sel_mode = COMMUNICATION_MODE_GYRO;
+    c9dof3_generic_write( ctx, C9DOF3_REG_GYRO_BGW_SOFTRESET, &write_data, 1 );
+    dev_soft_reset_delay( );
+  
+    // Mag Soft Reset
+    ctx->sel_mode = COMMUNICATION_MODE_MAG;
+    write_data = C9DOF3_MAG_POW_CTL_SOFT_RESET;
+    c9dof3_generic_write( ctx, C9DOF3_REG_MAG_PWR_CNTL1, &write_data, 1 );
+    dev_soft_reset_delay( );
+    
+    write_data = C9DOF3_MAG_POW_CTL_SLEEP_MODE;
+    c9dof3_generic_write( ctx, C9DOF3_REG_MAG_PWR_CNTL1, &write_data, 1 );
+    dev_mag_wake_up_delay( );
     
     comm_status = 0;
 
@@ -288,21 +344,21 @@ void c9dof3_read_accel_data ( c9dof3_t *ctx, c9dof3_accel_t *accel_data )
 
     tmp = rx_buf[ 1 ];
     tmp <<= 8;
-    tmp |= ( rx_buf[ 0 ] << 4 );
+    tmp |= rx_buf[ 0 ];
     sign_res = ( int16_t ) tmp;
     sign_res >>= 4;
     accel_data->x = sign_res;
 
     tmp = rx_buf[ 3 ];
     tmp <<= 8;
-    tmp |= ( rx_buf[ 2 ] << 4 );
+    tmp |= rx_buf[ 2 ];
     sign_res = ( int16_t ) tmp;
     sign_res >>= 4;
     accel_data->y = sign_res;
 
     tmp = rx_buf[ 5 ];
     tmp <<= 8;
-    tmp |= ( rx_buf[ 4 ] << 4 );
+    tmp |= rx_buf[ 4 ];
     sign_res = ( int16_t ) tmp;
     sign_res >>= 4;
     accel_data->z = sign_res;
@@ -347,21 +403,21 @@ void c9dof3_read_mag_data ( c9dof3_t *ctx, c9dof3_mag_t *mag_data )
 
     tmp = rx_buf[ 1 ];
     tmp <<= 8;
-    tmp |= ( rx_buf[ 0 ] << 3 );
+    tmp |= rx_buf[ 0 ];
     sign_res = ( int16_t ) tmp;
     sign_res >>= 3;
     mag_data->x = sign_res;
 
     tmp = rx_buf[ 3 ];
     tmp <<= 8;
-    tmp |= ( rx_buf[ 2 ] << 3 );
+    tmp |= rx_buf[ 2 ];
     sign_res = ( int16_t ) tmp;
     sign_res >>= 3;
     mag_data->y = sign_res;
 
     tmp = rx_buf[ 5 ];
     tmp <<= 8;
-    tmp |= ( rx_buf[ 4 ] << 3 );
+    tmp |= rx_buf[ 4 ];
     sign_res = ( int16_t ) tmp;
     sign_res >>= 3;
     mag_data->z = sign_res;
@@ -385,57 +441,31 @@ uint8_t c9dof3_check_interrupt ( c9dof3_t *ctx )
 
 static void c9dof3_i2c_write ( c9dof3_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
-    i2c_master_transfer_t i2c_transfer;
-    uint8_t tx_buf[ 256 ];
-    uint16_t cnt;
-    
+    uint8_t tx_buf[ 257 ];
+    uint8_t cnt;
+
     tx_buf[ 0 ] = reg;
-    
-    for ( cnt = 1; cnt <= len; cnt++ )
+
+    for ( cnt = 1; cnt <= len; cnt++ ) 
     {
-        tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
+        tx_buf[ cnt ] = data_buf[ cnt - 1 ];
     }
-    
     dev_set_slave_addr( ctx );
 
-    i2c_transfer.slave_address = ctx->slave_address;
-    i2c_transfer.buffer   = tx_buf;
-    i2c_transfer.count    = len + 1;
-    i2c_transfer.end_mode = I2C_STOP_MODE;
-
-    i2c_master_start( &ctx->i2c );
-    i2c_master_write( &ctx->i2c, &i2c_transfer );    
+    i2c_master_write( &ctx->i2c, tx_buf, len + 1 );
 }
 
 static void c9dof3_i2c_read ( c9dof3_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
-    i2c_master_transfer_t i2c_transfer;
-    uint8_t tx_buf[ 3 ];
-
-    tx_buf [ 0 ] = reg;
-
     dev_set_slave_addr( ctx );
     
-    i2c_transfer.slave_address = ctx->slave_address;
-    i2c_transfer.buffer   = tx_buf;
-    i2c_transfer.count    = 1;
-    i2c_transfer.end_mode = I2C_RESTART_MODE;
-
-    i2c_master_start( &ctx->i2c );
-    i2c_master_write( &ctx->i2c, &i2c_transfer );
-    
-    i2c_transfer.buffer   = data_buf;
-    i2c_transfer.count    = len;
-    i2c_transfer.end_mode = I2C_STOP_MODE;
-
-    i2c_master_read( &ctx->i2c, &i2c_transfer );
+    i2c_master_write( &ctx->i2c, &reg, 1 );
+    i2c_master_read( &ctx->i2c, data_buf, len );
 }
 
 static void c9dof3_spi_write ( c9dof3_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
-    spi_master_transfer_data_t block;
-
-    uint8_t tx_buf[ 265 ];
+    uint8_t tx_buf[ 257 ];
     uint8_t cnt;
 
     tx_buf[ 0 ] = reg & C9DOF3_BIT_MASK_SPI_CMD_WRITE;
@@ -444,39 +474,20 @@ static void c9dof3_spi_write ( c9dof3_t *ctx, uint8_t reg, uint8_t *data_buf, ui
         tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
     }
 
-    block.tx_buffer = tx_buf;
-    block.rx_buffer = 0;
-    block.tx_length = len + 1;
-    block.rx_length = 0;
-
     dev_start_chip_select( ctx );
-    spi_master_transfer( &ctx->spi, &block );
-    dev_start_chip_select( ctx );    
+    spi_master_write( &ctx->spi, tx_buf, len + 1 );
+    dev_stop_chip_select( ctx );    
 }
 
 static void c9dof3_spi_read ( c9dof3_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
-    spi_master_transfer_data_t block;
+    uint8_t tx_buf;
 
-    uint8_t tx_buf[ 3 ];
-    uint8_t rx_buf[ 265 ];
-    uint8_t cnt;
-
-    tx_buf[ 0 ] = reg | C9DOF3_BIT_MASK_SPI_CMD_READ;
-    
-    block.tx_buffer = tx_buf;
-    block.rx_buffer = rx_buf;
-    block.tx_length = 1;
-    block.rx_length = len + 1;
+    tx_buf = reg | C9DOF3_BIT_MASK_SPI_CMD_READ;
     
     dev_start_chip_select( ctx );
-    spi_master_transfer( &ctx->spi, &block );
-    dev_start_chip_select( ctx );  
-
-    for ( cnt = 0; cnt < len; cnt++ )
-    {
-        data_buf[ cnt ] = rx_buf [ cnt + 1];
-    }
+    spi_master_write_then_read( &ctx->spi, &tx_buf, 1, data_buf, len );
+    dev_stop_chip_select( ctx );  
 }
 
 static void dev_soft_reset_delay ( void )
@@ -515,6 +526,9 @@ static void dev_set_slave_addr ( c9dof3_t *ctx )
             break;
         }
     }
+    
+    i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
+    Delay_1ms( );
 }
 
 static void dev_start_chip_select ( c9dof3_t *ctx )
@@ -523,7 +537,7 @@ static void dev_start_chip_select ( c9dof3_t *ctx )
     {
         case COMMUNICATION_MODE_ACCEL:
         {
-            spi_master_start( &ctx->spi ); 
+            digital_out_low( &ctx->cs1 );
             break;
         }
         case COMMUNICATION_MODE_GYRO:
@@ -538,19 +552,20 @@ static void dev_start_chip_select ( c9dof3_t *ctx )
         }
         default:
         {
-            spi_master_start( &ctx->spi ); 
+            digital_out_low( &ctx->cs1 );
             break;
         }
     }
+    Delay_1ms( );
 }
 
-static void dev_stop_chip_select ( c9dof3_t *ctx, uint8_t sel_mode )
+static void dev_stop_chip_select ( c9dof3_t *ctx )
 {
-    switch ( sel_mode )
+    switch ( ctx->sel_mode )
     {
         case COMMUNICATION_MODE_ACCEL:
         {
-            spi_master_stop( &ctx->spi ); 
+            digital_out_high( &ctx->cs1 );
             break;
         }
         case COMMUNICATION_MODE_GYRO:
@@ -565,10 +580,13 @@ static void dev_stop_chip_select ( c9dof3_t *ctx, uint8_t sel_mode )
         }
         default:
         {
-            spi_master_stop( &ctx->spi ); 
+            digital_out_high( &ctx->cs1 );
+            digital_out_high( &ctx->cs2 );
+            digital_out_high( &ctx->cs3 );
             break;
         }
     }
+    Delay_1ms( );
 }
 
 // ------------------------------------------------------------------------- END

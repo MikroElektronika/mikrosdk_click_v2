@@ -202,7 +202,9 @@ void application_task ( void )
             c5gnbiot_send_text_message( &c5gnbiot, SIM_SMSC, PHONE_NUMBER_TO_MESSAGE, MESSAGE_CONTENT );
             app_error_flag = c5gnbiot_rsp_check(  );
             c5gnbiot_error_check( app_error_flag );
-            Delay_ms( 30000 );
+            Delay_ms( 10000 );
+            Delay_ms( 10000 );
+            Delay_ms( 10000 );
         }
     }
 }

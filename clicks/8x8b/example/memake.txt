@@ -1,0 +1,13 @@
+type: executable
+target: example_c8x8b
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.8X8B
+}
+
+sources: {
+    main.c
+}

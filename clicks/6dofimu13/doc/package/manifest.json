@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Motion",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "6DOF IMU 13 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.c6dofimu13",
+    "product_link": "https://www.mikroe.com/6dof-imu-13-click",
+    "short_description": "6DOF IMU 13 Click is a compact add-on board that contains an eCompass that consists of a 3-axis linear accelerometer and a 3-axis magnetic field sensor. This board features the MC6470, an accelerometer and magnetometer for a 6 DoF (6 Degrees of Freedom) sensor solution, from mCube Inc.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        3836
+    ],
+    "version": "2.0.0.0"
+}

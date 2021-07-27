@@ -1,11 +1,11 @@
- 
+
 ---
-# 9DOF 3  click
+# 9DOF 3 click
 
 9DOF 3 Click introduces the BMX055, a small-scale absolute orientation sensor in the class of low-noise 9-axis measurement units, from Bosch Sensortec. It comprises the full functionality of a triaxial, low-g acceleration sensor, a triaxial angular rate sensor and a triaxial geomagnetic sensor. All three sensor components of the BMX055 can be operated and addressed independently from each other. On top, the BMX055 integrates a multitude of features that facilitate its use especially in the area of motion detection applications, such as device orientation measurement, gaming, HMI or menu browser control. 9DOF 3 Click offers both SPI and I2C digital interfaces for easy and fast system integration.
 
 <p align="center">
-  <img src="@{CLICK_IMAGE_LINK}" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/9dof3_click.png" height=300px>
 </p>
 
 
@@ -81,8 +81,9 @@ void application_init ( void )
 
     //  Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -91,10 +92,11 @@ void application_init ( void )
     c9dof3_cfg_setup( &cfg );
     C9DOF3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c9dof3_init( &c9dof3, &cfg );
+    Delay_ms ( 100 );
 
-    if ( c9dof3_check_communication( &c9dof3 ) == C9DOF3_ACC_COMM_SUCCESS  |
-                                                  C9DOF3_GYRO_COMM_SUCCESS |
-                                                  C9DOF3_MAG_COMM_SUCCESS )
+    if ( c9dof3_check_communication( &c9dof3 ) == ( C9DOF3_ACC_COMM_SUCCESS  |
+                                                    C9DOF3_GYRO_COMM_SUCCESS |
+                                                    C9DOF3_MAG_COMM_SUCCESS ) )
     {
         log_printf( &logger, "    Communication OK     \r\n" );
     }
@@ -116,8 +118,7 @@ void application_init ( void )
 ### Application Task
 
 > This is an example which demonstrates the use of 9DOF 3 Click board.
-> Measured and display Accel, Gyroscope and Magnetometer
-> data coordinates values for X-axis, Y-axis and Z-axis.
+> Measures and displays Accel, Gyroscope and Magnetometer values for X-axis, Y-axis and Z-axis.
 > Results are being sent to the Usart Terminal where you can track their changes.
 > All data logs write on USB uart changes for every 1 sec.
 
@@ -131,7 +132,7 @@ void application_task ( void )
     log_printf( &logger, " Accel Y: %d | Gyro Y: %d |  Mag Y: %d\r\n", accel_data.y, gyro_data.y, mag_data.y );
     log_printf( &logger, " Accel Z: %d | Gyro Z: %d |  Mag Z: %d\r\n", accel_data.z, gyro_data.z, mag_data.z );
 
-    log_printf( &logger, "-------------------------\r\n" );
+    log_printf( &logger, "------------------------------------------\r\n" );
 
     Delay_ms( 1000 );
 } 

@@ -1,0 +1,13 @@
+type: executable
+target: example_c4gltena
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.C4GLTENA
+}
+
+sources: {
+    main.c
+}

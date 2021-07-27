@@ -1,0 +1,36 @@
+type: library
+
+target: lib_c8x8r
+
+sources: {
+    src/c8x8r.c
+}
+
+headers: {
+    include/c8x8r.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/c8x8r.h) dst(include/c8x8r.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.8x8R

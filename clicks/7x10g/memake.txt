@@ -1,0 +1,7 @@
+type: subdirs
+project: c7x10G
+
+subdirs: {
+    lib
+    example
+}

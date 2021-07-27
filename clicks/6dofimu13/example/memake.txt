@@ -1,0 +1,13 @@
+type: executable
+target: example_c6dofimu13
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.6DOFIMU13
+}
+
+sources: {
+    main.c
+}

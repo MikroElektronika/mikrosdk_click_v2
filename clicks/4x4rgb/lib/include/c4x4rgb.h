@@ -78,13 +78,13 @@
  * \defgroup color  Color
  * \{
  */
-#define C4X4RGB_COLOR_WHITE         0x002F2F2F
-#define C4X4RGB_COLOR_RED           0x002F0000
-#define C4X4RGB_COLOR_GREEN         0x00002F00
-#define C4X4RGB_COLOR_BLUE          0x0000002F
-#define C4X4RGB_COLOR_LIGHT_BLUE    0x00002F2F
-#define C4X4RGB_COLOR_YELLOW        0x002F2F00
-#define C4X4RGB_COLOR_PURPLE        0x002F002F
+#define C4X4RGB_COLOR_WHITE         0x001F1F1F
+#define C4X4RGB_COLOR_RED           0x001F0000
+#define C4X4RGB_COLOR_GREEN         0x00001F00
+#define C4X4RGB_COLOR_BLUE          0x0000001F
+#define C4X4RGB_COLOR_LIGHT_BLUE    0x00001F1F
+#define C4X4RGB_COLOR_YELLOW        0x001F1F00
+#define C4X4RGB_COLOR_PURPLE        0x001F001F
 /** \} */
 
 /** \} */ // End group macro 

@@ -1,0 +1,13 @@
+type: executable
+target: example_c4glteapj
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.C4GLTEAPJ
+}
+
+sources: {
+    main.c
+}

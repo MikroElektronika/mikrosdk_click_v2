@@ -1,0 +1,36 @@
+type: library
+
+target: lib_c6dofimu13
+
+sources: {
+    src/c6dofimu13.c
+}
+
+headers: {
+    include/c6dofimu13.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/c6dofimu13.h) dst(include/c6dofimu13.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.6DOFIMU13

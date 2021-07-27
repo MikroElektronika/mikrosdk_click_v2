@@ -1,0 +1,38 @@
+type: library
+
+target: lib_c3gaa
+
+sources: {
+    src/c3gaa.c
+}
+
+headers: {
+    include/c3gaa.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/c3gaa.h) dst(include/c3gaa.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+    MikroSDK.Conversions
+    MikroSDK.GenericPointer
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.C3GAA
