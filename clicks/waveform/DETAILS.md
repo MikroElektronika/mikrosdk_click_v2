@@ -9,7 +9,7 @@ Waveform Click is a precise sine/triangle/square waveform generator, capable of 
   <img src="https://download.mikroe.com/images/click_for_ide/waveform_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/waveform-click>)
+[click Product page](https://www.mikroe.com/waveform-click)
 
 ---
 
@@ -62,7 +62,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initialize the communication interface and configure the click board.
+> Initializes the communication interface and configures the click board.
 
 ```c
 
@@ -95,8 +95,7 @@ void application_init ( )
 ### Application Task
 
 > Predefined characters are inputed from the serial port.
-> Depending on the character sent the signal frequency, waveform or amplitude 
-> will be changed.
+> Changes the signal frequency, waveform or amplitude depending on the receiver character.
 
 ```c
 

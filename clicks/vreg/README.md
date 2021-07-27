@@ -1,5 +1,7 @@
 \mainpage Main Page
  
+
+
 ---
 # VREG click
 
@@ -9,7 +11,7 @@ VReg click is a digitally controlled DC Voltage regulator in mikroBUS™ form fa
   <img src="https://download.mikroe.com/images/click_for_ide/vreg_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/vreg-click>)
+[click Product page](https://www.mikroe.com/vreg-click)
 
 ---
 
@@ -55,13 +57,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
  
-> The design is based on the well-known LM317-M circuit, with the addition of a 12-bit DAC, 12-bit ADC, and an Operational Amplifier. 
+> This is an example that demonstrates the use of VREG click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initialization driver enables - SPI, set output voltage.
+> Initializes driver and sets output voltage.
 
 ```c
 
@@ -101,10 +103,8 @@ void application_init ( void )
 
 ### Application Task
 
-> This is a example which demonstrates the use of VREG click board.
-  VREG click communicates with the device via SPI driver set DAC value and get ADC value.
-  Results are being sent to the Usart Terminal where you can track their changes.
-  All data logs write on usb uart changes for every 1 sec. 
+> Reads ADC data from all 3 channels, converts those values to voltage 
+> and displays the results on USB UART.
 
 ```c
 
@@ -120,14 +120,14 @@ void application_task ( void )
     ch_in = vreg_get_adc( &vreg, VREG_CHANNEL_2 );
     voltage = ch_in / 182.0;
     
-    log_printf( &logger, " CH In   : %.2f V\r\n ", voltage );
+    log_printf( &logger, " CH In   : %.2f V\r\n", voltage );
     
     Delay_10ms( );
     
     ch_out = vreg_get_adc( &vreg, VREG_CHANNEL_1 );
     voltage = ch_out / 182.0;
     
-    log_printf( &logger, " CH Out  : %.2f  V\r\n", voltage );
+    log_printf( &logger, " CH Out  : %.2f V\r\n", voltage );
     
     Delay_1sec( );
     log_printf( &logger, " ---------------------- \r\n" );

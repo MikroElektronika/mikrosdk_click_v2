@@ -1,5 +1,6 @@
 \mainpage Main Page
  
+
 ---
 # V to Hz click
 
@@ -9,7 +10,7 @@ V to HZ click is a device that converts an analog voltage input signal into a pu
   <img src="https://download.mikroe.com/images/click_for_ide/vtohz_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/v-to-hz-click>)
+[click Product page](https://www.mikroe.com/v-to-hz-click)
 
 ---
 
@@ -61,7 +62,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> v2hz_setOutputFrequency - Sets the PWM duty cycle to required value, changing the output frequency. 
+> Initializes driver and enables the click board. 
 
 ```c
 
@@ -115,7 +116,7 @@ void application_task ( void )
 
 ## Note
 
-> Note: Output frequency may vary, depending on the offset and gain potentiometers on board the click.
+> Output frequency may vary depending on the offset and gain potentiometers on board the click.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

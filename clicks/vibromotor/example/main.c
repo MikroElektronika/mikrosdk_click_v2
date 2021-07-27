@@ -1,7 +1,7 @@
 /*!
- * \file 
- * \brief VibroMotor Click example
- * 
+ * @file main.c
+ * @brief VibroMotor Click example
+ *
  * # Description
  * This application contorl the speed of vibro motor.
  *
@@ -9,75 +9,79 @@
  * 
  * ## Application Init 
  * Initializes GPIO driver and PWM.
- * Configures PWM to 20kHz frequency, calculates maximum duty ratio and starts PWM 
+ * Configures PWM to 5kHz frequency, calculates maximum duty ratio and starts PWM 
  * with duty ratio value 0.
  * 
  * ## Application Task  
  * Allows user to enter desired command to control
  * Vibro Motor Click board.
- * 
- * 
- * \author MikroE Team
+ *
+ * @author Stefan Ilic
  *
  */
-// ------------------------------------------------------------------- INCLUDES
 
 #include "board.h"
 #include "log.h"
 #include "vibromotor.h"
 
-// ------------------------------------------------------------------ VARIABLES
 
 static vibromotor_t vibromotor;
 static log_t logger;
 
-static float duty_cycle = 0.1;
+void application_init ( void ) {
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    vibromotor_cfg_t vibromotor_cfg;  /**< Click config object. */
 
-void application_init ( void )
-{
-    log_cfg_t log_cfg;
-    vibromotor_cfg_t cfg;
-
-    //  Logger initialization.
+    // Logger initialization.
 
     LOG_MAP_USB_UART( log_cfg );
     log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 9600;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
+    // Click initialization.
 
-    vibromotor_cfg_setup( &cfg );
-    VIBROMOTOR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    vibromotor_init( &vibromotor, &cfg );
+    vibromotor_cfg_setup( &vibromotor_cfg );
+    VIBROMOTOR_MAP_MIKROBUS( vibromotor_cfg, MIKROBUS_1 );
+    err_t init_flag  = vibromotor_init( &vibromotor, &vibromotor_cfg );
+    if ( PWM_ERROR == init_flag ) {
+        log_error( &logger, " Application Init Error. " );
+        log_info( &logger, " Please, run program again... " );
 
-    vibromotor_pwm_start( &vibromotor );
-}
-
-void application_task ( void )
-{
-    //  Task implementation.
-    
-    if ( duty_cycle > 1 )
-    {
-        duty_cycle = 0;
+        for ( ; ; );
     }
-    
-    vibromotor_set_duty_cycle ( &vibromotor, duty_cycle );
-    duty_cycle += 0.1;
-    Delay_100ms();
+
+    vibromotor_set_duty_cycle ( &vibromotor, 0.0 );
+    vibromotor_pwm_start( &vibromotor );
+
+    log_info( &logger, " Application Task " );
 }
 
-void main ( void )
-{
+void application_task ( void ) {
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
+    
+    vibromotor_set_duty_cycle ( &vibromotor, duty );
+    log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    
+    Delay_ms( 500 );
+    
+    if ( 10 == duty_cnt ) {
+        duty_inc = -1;
+    } else if ( 0 == duty_cnt ) {
+        duty_inc = 1;
+    }
+    duty_cnt += duty_inc;
+}
+
+void main ( void ) {
     application_init( );
 
-    for ( ; ; )
-    {
+    for ( ; ; ) {
         application_task( );
     }
 }
-
 
 // ------------------------------------------------------------------------ END

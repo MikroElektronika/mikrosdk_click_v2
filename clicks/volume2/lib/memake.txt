@@ -1,0 +1,36 @@
+type: library
+
+target: lib_volume2
+
+sources: {
+    src/volume2.c
+}
+
+headers: {
+    include/volume2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/volume2.h) dst(include/volume2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Volume2

@@ -8,7 +8,7 @@ WiFi BLE click is a Click board™ which provides WiFi and BT/BLE connectivity f
   <img src="https://download.mikroe.com/images/click_for_ide/wifible_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/wifi-ble-click>)
+[click Product page](https://www.mikroe.com/wifi-ble-click)
 
 ---
 

@@ -8,7 +8,7 @@ Water Detect click is used for detecting water and other electroconductive liqui
   <img src="https://download.mikroe.com/images/click_for_ide/waterdetect_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/water-detect-click>)
+[click Product page](https://www.mikroe.com/water-detect-click)
 
 ---
 

@@ -1,0 +1,36 @@
+type: library
+
+target: lib_vibromotor2
+
+sources: {
+    src/vibromotor2.c
+}
+
+headers: {
+    include/vibromotor2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/vibromotor2.h) dst(include/vibromotor2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.VibroMotor2

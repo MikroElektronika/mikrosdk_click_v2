@@ -1,0 +1,39 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "WiFi",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "WiFi ESP click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.wifiesp",
+    "product_link": "https://www.mikroe.com/wifi-esp-click",
+    "short_description": "WiFi ESP click carries the ESP-WROOM-02 module that integrates ESP8266EX.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type": "mikroSDK Library",
+    "related_projects":[
+        2033
+    ],
+    "version": "2.0.0.4"
+}
+
+
+

@@ -2,8 +2,6 @@ type: library
 
 target: lib_vibromotor
 
-alias: Click.VibroMotor
-
 sources: {
     src/vibromotor.c
 }
@@ -29,12 +27,10 @@ depends: {
     MikroSDK.Driver
 }
 
-uses: {
-    MikroC.Core
-}
-
 others: {
     ../README.md
     ../DETAILS.md
     ../CHANGELOG.md
 }
+
+alias: Click.VibroMotor

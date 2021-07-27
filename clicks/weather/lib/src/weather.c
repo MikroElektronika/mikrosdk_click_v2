@@ -451,7 +451,7 @@ static void read_calibration_params ( weather_t *ctx, weather_digital_data_t *di
     dig_data->press_9 |= rx_buffer[ 16 ];
 
 
-    weather_generic_read( ctx, WEATHER_REG_CALIB_HUMIDITY, rx_buffer, 1);
+    weather_generic_read( ctx, WEATHER_REG_CALIB_HUMIDITY, rx_buffer, 9);
     dig_data->hum_1  = rx_buffer[ 0 ];
     dig_data->hum_2  = rx_buffer[ 2 ];
     dig_data->hum_2 <<= 8;

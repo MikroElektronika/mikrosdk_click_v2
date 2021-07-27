@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,8 +26,16 @@
     "name": "mikroe.click.vibrasense",
     "product_link": "https://www.mikroe.com/vibra-sense-click",
     "short_description": "Vibra Sense click is a low cost micro shock vibration sensor with a digital output which can be set as an Interrupt (mikroBUS INT pin) An onboard potentiometer lets you set the interrupt threshold.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        1561
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.4"
 }
+
+
+
 

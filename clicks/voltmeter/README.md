@@ -12,7 +12,7 @@ The board is designed to measure Direct Current only, and has a measurement rang
   <img src="https://download.mikroe.com/images/click_for_ide/voltmeter_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/voltmeter-click>)
+[click Product page](https://www.mikroe.com/voltmeter-click)
 
 ---
 

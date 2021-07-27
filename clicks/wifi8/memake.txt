@@ -1,0 +1,7 @@
+type: subdirs
+project: WiFi8
+
+subdirs: {
+    lib
+    example
+}

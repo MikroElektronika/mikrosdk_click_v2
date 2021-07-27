@@ -10,7 +10,7 @@ Weather click carries BME280 integrated environmental unit from Bosch.
   <img src="https://download.mikroe.com/images/click_for_ide/weather_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/weather-click>)
+[click Product page](https://www.mikroe.com/weather-click)
 
 ---
 

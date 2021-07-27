@@ -8,12 +8,11 @@
  * The application is composed of two sections :
  * 
  * ## Application Init 
- * Initialize the communication interface and configure the click board.
+ * Initializes the communication interface and configures the click board.
  * 
  * ## Application Task  
  * Predefined characters are inputed from the serial port.
- * Depending on the character sent the signal frequency, waveform or amplitude 
- * will be changed.
+ * Changes the signal frequency, waveform or amplitude depending on the receiver character.
  * 
  * ## Additional Functions
  * uint32_t waveform_aprox_freqcalculation ( float freqency ) - This function is used

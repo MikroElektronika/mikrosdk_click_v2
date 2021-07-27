@@ -2,7 +2,7 @@
     "name": "Waveform Click",
     "description": "Waveform Click is a precise sine/triangle/square waveform generator, capable of reproducing frequencies up to 12MHz",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","AD9833"],
     "category" : ["Measurements"] 
 }

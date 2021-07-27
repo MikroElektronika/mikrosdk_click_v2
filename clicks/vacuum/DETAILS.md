@@ -8,7 +8,7 @@ Vacuum click is an accurate vacuum pressure sensing click board™, capable of m
   <img src="https://download.mikroe.com/images/click_for_ide/vacuum_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/vacuum-click>)
+[click Product page](https://www.mikroe.com/vacuum-click)
 
 ---
 

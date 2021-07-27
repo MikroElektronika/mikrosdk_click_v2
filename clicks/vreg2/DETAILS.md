@@ -8,7 +8,7 @@ VREG 2 click is a voltage regulator click, with outstanding performances.
   <img src="https://download.mikroe.com/images/click_for_ide/vreg2_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/vreg-2-click>)
+[click Product page](https://www.mikroe.com/vreg-2-click)
 
 ---
 

@@ -1,0 +1,36 @@
+type: library
+
+target: lib_vavpress
+
+sources: {
+    src/vavpress.c
+}
+
+headers: {
+    include/vavpress.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/vavpress.h) dst(include/vavpress.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.VavPress

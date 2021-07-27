@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "Linear",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -31,6 +32,7 @@
     "related_projects":[
         1929
     ],
-    "version": "2.0.0.2"
+    "version": "2.0.0.4"
 }
+
 

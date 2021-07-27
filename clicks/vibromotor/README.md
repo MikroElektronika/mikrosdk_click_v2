@@ -1,36 +1,34 @@
 \mainpage Main Page
- 
----
-# VIBRO MOTOR click
 
-Vibro Motor click features a compact size Eccentric Rotating Mass (ERM) motor, labeled as C1026B002F. This type of motor is often used for haptic feedback on many small handheld devices, such as the cellphones, pagers, RFID scanners and similar devices. 
+---
+# Vibro Motor click
+
+Vibro Motor click features a compact size Eccentric Rotating Mass (ERM) motor, labeled as C1026B002F. This type of motor is often used for haptic feedback on many small handheld devices, such as the cellphones, pagers, RFID scanners and similar devices. This motor contains a small eccentric weight on its rotor, so while rotating it also produces vibration effect. This kind of motors is sometimes referred to as coin motors, due to its shape.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/grupe/vibro-motor-click-group.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/vibromotor_click.png" height=300px>
 </p>
 
-[click Product page - Vibro Motor ](<https://www.mikroe.com/vibro-motor-click>)
-
-[click Product page - Vibro Motor 2 ](<https://www.mikroe.com/vibro-motor-2-click>)
+[click Product page](https://www.mikroe.com/vibro-motor-click)
 
 ---
 
 
-#### Click library 
+#### Click library
 
-- **Author**        : MikroE Team
-- **Date**          : Jan 2020.
+- **Author**        : Stefan Ilic
+- **Date**          : Jun 2021.
 - **Type**          : PWM type
 
 
 # Software Support
 
-We provide a library for the VibroMotor Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+We provide a library for the VibroMotor Click
+as well as a demo application (example), developed using MikroElektronika
+[compilers](https://www.mikroe.com/necto-studio).
+The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 
 ## Library Description
 
@@ -38,76 +36,107 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void vibromotor_cfg_setup ( vibromotor_cfg_t *cfg ); 
- 
-- Initialization function.
-> VIBROMOTOR_RETVAL vibromotor_init ( vibromotor_t *ctx, vibromotor_cfg_t *cfg );
+- `vibromotor_cfg_setup` Config Object Initialization function.
+```c
+void vibromotor_cfg_setup ( vibromotor_cfg_t *cfg );
+```
 
-
+- `vibromotor_init` Initialization function.
+```c
+err_t vibromotor_init ( vibromotor_t *ctx, vibromotor_cfg_t *cfg );
+```
 
 #### Example key functions :
 
+- `vibromotor_set_duty_cycle` This function sets the PWM duty cycle in percentages ( Range[ 0..1 ] ).
+```c
+err_t vibromotor_set_duty_cycle ( vibromotor_t *ctx, float duty_cycle );
+```
 
-## Examples Description
+- `vibromotor_pwm_stop` This function stops the PWM moudle output.
+```c
+err_t vibromotor_pwm_stop ( vibromotor_t *ctx );
+```
+
+- `vibromotor_pwm_start` This function starts the PWM moudle output.
+```c
+err_t vibromotor_pwm_start ( vibromotor_t *ctx );
+```
+
+## Example Description
 
 > This application contorl the speed of vibro motor.
 
-
 **The demo application is composed of two sections :**
 
-### Application Init 
+### Application Init
 
-> Initializes GPIO driver and PWM. Configures PWM to 20kHz frequency, calculates maximum duty ratio and starts PWM with duty ratio value 0.
+> Configures PWM to 5kHz frequency, calculates maximum duty ratio and starts PWM with duty ratio value 0.
 
 ```c
 
-void application_init ( void )
-{
-    log_cfg_t log_cfg;
-    vibromotor_cfg_t cfg;
+void application_init ( void ) {
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    vibromotor_cfg_t vibromotor_cfg;  /**< Click config object. */
 
-    //  Logger initialization.
+    // Logger initialization.
 
-    log_cfg.level = LOG_LEVEL_DEBUG;
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.level = LOG_LEVEL_DEBUG;
+    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
+    // Click initialization.
 
-    vibromotor_cfg_setup( &cfg );
-    VIBROMOTOR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    vibromotor_init( &vibromotor, &cfg );
+    vibromotor_cfg_setup( &vibromotor_cfg );
+    VIBROMOTOR_MAP_MIKROBUS( vibromotor_cfg, MIKROBUS_1 );
+    err_t init_flag  = vibromotor_init( &vibromotor, &vibromotor_cfg );
+    if ( PWM_ERROR == init_flag ) {
+        log_error( &logger, " Application Init Error. " );
+        log_info( &logger, " Please, run program again... " );
 
+        for ( ; ; );
+    }
+
+    vibromotor_set_duty_cycle ( &vibromotor, 0.0 );
     vibromotor_pwm_start( &vibromotor );
+
+    log_info( &logger, " Application Task " );
 }
-  
+
 ```
 
 ### Application Task
 
-> Allows user to enter desired command to control Vibro Motor  Click board.
+> Allows user to enter desired command to control Vibro Motor Click board.
 
 ```c
 
-void application_task ( void )
-{
-    if ( duty_cycle > vibromotor.pwm_period )
-    {
-        duty_cycle = 100;
-    }
+void application_task ( void ) {
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
     
-    vibromotor_set_duty_cycle ( &vibromotor, duty_cycle );
-    duty_cycle += 50;
-    Delay_100ms();
-}  
+    vibromotor_set_duty_cycle ( &vibromotor, duty );
+    log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    
+    Delay_ms( 500 );
+    
+    if ( 10 == duty_cnt ) {
+        duty_inc = -1;
+    } else if ( 0 == duty_cnt ) {
+        duty_inc = 1;
+    }
+    duty_cnt += duty_inc;
+}
 
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
-**Other mikroE Libraries used in the example:** 
+The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+
+**Other Mikroe Libraries used in the example:**
 
 - MikroSDK.Board
 - MikroSDK.Log
@@ -115,15 +144,12 @@ The full application code, and ready to use projects can be  installed directly 
 
 **Additional notes and informations**
 
-Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+Depending on the development board you are using, you may need
+[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
+[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
+development systems with no UART to USB interface available on the board. UART
+terminal is available in all MikroElektronika
+[compilers](https://shop.mikroe.com/compilers).
 
 ---

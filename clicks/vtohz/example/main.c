@@ -7,13 +7,16 @@
  *
  * The demo application is composed of two sections :
  * 
- * ## Application Init 
- * v2hz_setOutputFrequency - Sets the PWM duty cycle to required value, changing the output frequency.
+ * ## Application Init
+ * Initializes driver and enables the click board. 
  * 
  * ## Application Task  
  * Alternates between different output frequencies.
  * 
- * Note: Output frequency may vary, depending on the offset and gain potentiometers on board the click.
+ * ## Additional functions
+ *  - set_output_frequency - Changing the output frequency by setting the PWM duty cycle to desired value. 
+ * 
+ * @note Output frequency may vary depending on the offset and gain potentiometers on board the click.
  * 
  * \author MikroE Team
  *

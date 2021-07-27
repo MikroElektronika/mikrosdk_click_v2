@@ -9,7 +9,7 @@ Vibra Sense click is a low cost micro shock vibration sensor with a digital outp
   <img src="https://download.mikroe.com/images/click_for_ide/vibrasense_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/vibra-sense-click>)
+[click Product page](https://www.mikroe.com/vibra-sense-click)
 
 ---
 

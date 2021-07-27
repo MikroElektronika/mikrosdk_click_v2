@@ -2,7 +2,7 @@
     "name": "Vibra sense Click",
     "description": "Vibra Sense click is a low cost micro shock vibration sensor with a digital output which can be set as an Interrupt (mikroBUS INT pin) An onboard potentiometer lets you set the interrupt threshold.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","CD4093BCM"],
     "category" : ["Vibration,Motion"] 
 }

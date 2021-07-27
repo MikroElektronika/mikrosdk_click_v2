@@ -1,0 +1,7 @@
+type: subdirs
+project: VibroMotor2
+
+subdirs: {
+    lib
+    example
+}
