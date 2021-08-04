@@ -7,9 +7,9 @@ All click examples and libraries are developed using [MikroSDK2.0](https://githu
 
 A full list of all clicks in this repository is defined below:
 
-| Click name | Link to repository | Click name | Link to repository | Click name | Link to repository |
-|:-----------|:-------------------|:-----------|:-------------------|:-----------|:-------------------|
-| 10DOF click | [Click Here](./clicks/10dof) | I2C MUX click | [Click Here](./clicks/i2cmux) | I2C MUX click | [Click Here](./clicks/i2cmux) |
+| Click name | Link to repository | Click name | Link to repository |
+|:----------:|:------------------:|:----------:|:------------------:|
+| 10DOF click | [Click Here](./clicks/10dof) | I2C MUX click | [Click Here](./clicks/i2cmux) |
 | 10x10 RGB click | [Click Here](./clicks/10x10rgb) | I2C MUX 2 click | [Click Here](./clicks/i2cmux2) |
 | 13DOF click | [Click Here](./clicks/13dof) | I2C MUX 3 click | [Click Here](./clicks/i2cmux3) |
 | 16x12 click | [Click Here](./clicks/16x12) | I2C MUX 4 click | [Click Here](./clicks/i2cmux4) |
