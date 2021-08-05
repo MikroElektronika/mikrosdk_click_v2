@@ -256,7 +256,7 @@ A full list of all clicks in this repository is defined below:
 | Clock Gen click | [Click Here](./clicks/clockgen) | RF Meter click | [Click Here](./clicks/rfmeter) |
 | Clock Gen 2 click | [Click Here](./clicks/clockgen2) | RGB Driver click | [Click Here](./clicks/rgbdriver) |
 | Clock Gen 3 click | [Click Here](./clicks/clockgen3) | R Meter click | [Click Here](./clicks/rmeter) |
-| Clock Gen 5 click | [Click Here](./clicks/clockgen5) |  | [Click Here](./clicks/rmstodc) |
+| Clock Gen 5 click | [Click Here](./clicks/clockgen5) | RMS to DC click | [Click Here](./clicks/rmstodc) |
 | CO click | [Click Here](./clicks/co) | RN4678 click | [Click Here](./clicks/rn4678) |
 | Color click | [Click Here](./clicks/color) | RN4870 click | [Click Here](./clicks/rn4870) |
 | Color 10 click | [Click Here](./clicks/color10) | RN4871 click | [Click Here](./clicks/rn4871) |
