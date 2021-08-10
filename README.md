@@ -445,4 +445,4 @@ A full list of all clicks in this repository is defined below:
 | HZ to V 2 click | [Click Here](./clicks/hztov2) | Wifi 9 click | [Click Here](./clicks/wifi9) |
 | I2C 1 Wire click | [Click Here](./clicks/i2c1wire) | WiFi BLE click | [Click Here](./clicks/wifible) |
 | I2C isolator click | [Click Here](./clicks/i2cisolator) | Wifi ESP click | [Click Here](./clicks/wifiesp) |
-| I2C Isolator 2 click | [Click Here](./clicks/i2cisolator2) |
+| I2C Isolator 2 click | [Click Here](./clicks/i2cisolator2) | Inclinometer click | [Click Here](./clicks/inclinometer) |
