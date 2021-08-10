@@ -1,6 +1,6 @@
 # MikroSDK 2.0 Click Repository
 
-This repository contains all MikroE Click Board&trade; librariy sources with appropriate
+This repository contains all MikroE Click Board&trade; library sources with appropriate
 click examples.
 
 All click examples and libraries are developed using [MikroSDK2.0](https://github.com/MikroElektronika/mikrosdk_v2).

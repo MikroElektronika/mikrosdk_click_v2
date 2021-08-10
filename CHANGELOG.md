@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20210810](#20210810)**
 + **[20200727](#20200727)**
 + **[20200429](#20200429)**
 + **[20200317](#20200317)**
@@ -13,6 +14,16 @@
 
 ---
 ---
+---
+
+## `20210810`
+
+*Following click board have been updated:*
+
++ `Inclinometer click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20200727`
