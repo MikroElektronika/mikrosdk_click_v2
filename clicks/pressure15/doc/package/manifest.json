@@ -24,10 +24,11 @@
         "id": "46"
     },
     "name": "mikroe.click.pressure15",
-    "product_link": "<PRODUCT_PAGE_CLICK_LINK>",
-    "short_description": "<PRODUCT_PAGE_CLICK_DESCRIPTION>",
+    "product_link": "https://www.mikroe.com/pressure-15-click",
+    "short_description": "Pressure 15 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the LPS27HHW, an ultra-compact piezoresistive absolute pressure sensor that functions as a digital output barometer from STMicroelectronics.",
     "supported_compiler": "mikroC AI",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

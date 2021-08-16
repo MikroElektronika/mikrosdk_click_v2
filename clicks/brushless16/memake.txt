@@ -1,0 +1,8 @@
+type: subdirs
+
+project: Brushless16
+
+subdirs: {
+    lib
+    example
+}

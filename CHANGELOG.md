@@ -4,10 +4,11 @@
 
 **Updates by date of commit:**
 
-+ **[20200727](#20200727)**
-+ **[20200429](#20200429)**
-+ **[20200317](#20200317)**
-+ **[20200316](#20200316)**
++ **[20210816](#20210816)**
++ **[20210727](#20210727)**
++ **[20210429](#20210429)**
++ **[20210317](#20210317)**
++ **[20210316](#20210316)**
 + **[20201225](#20201225)**
 + **[20201002](#20201002)**
 
@@ -15,7 +16,34 @@
 ---
 ---
 
-## `20200727`
+## `20210816`
+
+*Following click boards have been added:*
+
++ `Hall Current 10`
++ `IRNSS`
++ `Color 13`
++ `Brushless 16`
++ `ADC 13`
++ `Inclinometer`
++ `LED Driver 10`
++ `Hall Switch 2`
++ `MUX 4`
+
+*Following click boards have been updated:*
+
++ `DAC 10`
++ `TouchPad 4`
++ `Pressure 15`
++ `eFuse`
++ `Proximity 14`
++ `Brushless 14`
+
+**[BACK TO TOP](#changelog)**
+
+---
+
+## `20210727`
 
 *All packages fixed and updated.*
 
@@ -873,7 +901,7 @@
 
 ---
 
-## `20200429`
+## `20210429`
 
 *Click board libraries now support PIC32MX and PIC32MZ chips.*
 
@@ -1117,7 +1145,7 @@
 
 ---
 
-## `20200317`
+## `20210317`
 
 *Click boards updated:*
 
@@ -1313,7 +1341,7 @@
 
 ---
 
-## `20200316`
+## `20210316`
 
 *Click boards updated:*
 

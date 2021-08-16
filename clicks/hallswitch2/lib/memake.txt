@@ -1,0 +1,36 @@
+type: library
+
+target: lib_hallswitch2
+
+sources: {
+    src/hallswitch2.c
+}
+
+headers: {
+    include/hallswitch2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/hallswitch2.h) dst(include/hallswitch2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.HallSwitch2

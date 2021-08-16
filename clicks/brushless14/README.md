@@ -3,13 +3,13 @@
 ---
 # Brushless 14 click
 
-> <PRVIH_PAR_RECENICA_SA_PRODUCT_PAGE_DA_ISPRATE_CELINU>
+> Brushless 14 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the TB67B001FTG, a three-phase, brushless, Hall sensorless driver IC from Toshiba Semiconductor.
 
 <p align="center">
-  <img src="CLICK_IMAGE_LINK" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/brushless_14_click.png" height=300px>
 </p>
 
-[click Product page](<CLICK_PRODUCT_PAGE_LINK>)
+[click Product page](https://www.mikroe.com/brushless-14-click)
 
 ---
 

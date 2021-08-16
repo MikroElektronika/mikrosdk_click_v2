@@ -73,6 +73,8 @@ err_t touchpad4_init ( touchpad4_t *ctx, touchpad4_cfg_t *cfg )
 
     digital_out_init( &ctx->mclr, cfg->mclr );
     digital_in_init( &ctx->rdy, cfg->rdy );
+    digital_out_high( &ctx->mclr );
+    Delay_100ms( );
 
     return I2C_MASTER_SUCCESS;
 }
@@ -213,6 +215,18 @@ err_t touchpad4_generic_read ( touchpad4_t *ctx, uint8_t reg, uint16_t *rx_data 
 uint8_t touchpad4_get_ready ( touchpad4_t *ctx )
 {
     return digital_in_read( &ctx->rdy );
+}
+
+void touchpad4_set_rst ( touchpad4_t *ctx, uint8_t state )
+{
+    if ( state )
+    {
+        digital_out_high( &ctx->mclr );
+    }
+    else
+    {
+        digital_out_low( &ctx->mclr );
+    }
 }
 
 void touchpad4_reset ( touchpad4_t *ctx )

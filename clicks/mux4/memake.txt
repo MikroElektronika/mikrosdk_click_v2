@@ -1,0 +1,8 @@
+type: subdirs
+
+project: MUX4
+
+subdirs: {
+    lib
+    example
+}

@@ -3,13 +3,13 @@
 ---
 # Pressure 15 click
 
-<PRVIH_PAR_RECENICA_SA_PRODUCT_PAGE_DA_ISPRATE_CELINU>
+> Pressure 15 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the LPS27HHW, an ultra-compact piezoresistive absolute pressure sensor that functions as a digital output barometer from STMicroelectronics.
 
 <p align="center">
-  <img src="CLICK_IMAGE_LINK" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/pressure_15_click.png" height=300px>
 </p>
 
-[click Product page](<CLICK_PRODUCT_PAGE_LINK>)
+[click Product page](https://www.mikroe.com/pressure-15-click)
 
 ---
 
@@ -43,7 +43,7 @@ void pressure15_cfg_setup ( pressure15_cfg_t *cfg );
 
 - `pressure15_init` Initialization function.
 ```c
-PRESSURE15_RETVAL pressure15_init ( pressure15_t *ctx, pressure15_cfg_t *cfg );
+err_t pressure15_init ( pressure15_t *ctx, pressure15_cfg_t *cfg );
 ```
 
 - `pressure15_default_cfg` Click Default Configuration function.

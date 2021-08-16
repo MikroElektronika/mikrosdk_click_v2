@@ -2,13 +2,13 @@
 ---
 # DAC 10 click
 
-<PRVIH_PAR_RECENICA_SA_PRODUCT_PAGE_DA_ISPRATE_CELINU>
+DAC 10 Click is a compact add-on board that contains a fully-featured, highly accurate digital-to-analog converter. This board features the DAC53401, a 10-bit voltage-output smart digital-to-analog converter from Texas Instruments.
 
 <p align="center">
-  <img src="CLICK_IMAGE_LINK" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/dac_10_click.png" height=300px>
 </p>
 
-[click Product page](<CLICK_PRODUCT_PAGE_LINK>)
+[click Product page](https://www.mikroe.com/dac-10-click)
 
 ---
 

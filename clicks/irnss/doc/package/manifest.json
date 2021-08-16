@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "GPS/GNSS",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "IRNSS click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.irnss",
+    "product_link": "https://www.mikroe.com/irnss-click",
+    "short_description": "IRNSS Click is a compact add-on board that provides fast positioning capability. This board features the L89H, a high-performance IRNSS-enabled GNSS module capable of acquiring and tracking GPS, IRNSS, GLONASS, BeiDou, Galileo, and QZSS signals from Quectel Wireless Solutions.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.2"
+}
+
+

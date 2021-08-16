@@ -24,10 +24,10 @@
         "id": "46"
     },
     "name": "mikroe.click.efuse",
-    "product_link": "<PRODUCT_PAGE_CLICK_LINK>",
-    "short_description": "<PRODUCT_PAGE_CLICK_DESCRIPTION>",
+    "product_link": "https://www.mikroe.com/efuse-click",
+    "short_description": "Fuse Click is a compact add-on board that contains a programmable electronic power breaker. This board features the STPW12, an integrated electronic power breaker optimized to monitor the input power from STMicroelectronics. Connected in series to the power rail, it can disconnect the electronic circuitry on its output if the power consumption overcomes the programmed limit. The intervention of the protection is communicated to the MCU through a signal on the fault pin. The device can also be enabled/disabled through a dedicated Enable pin with a direct PWM mode, which can be achieved through an external PWM signal.",
     "supported_compiler": "mikroC AI",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
