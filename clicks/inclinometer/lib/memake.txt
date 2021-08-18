@@ -1,0 +1,35 @@
+type: library
+target: lib_inclinometer
+
+sources: {
+    src/inclinometer.c
+}
+
+headers: {
+    include/inclinometer.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/inclinometer.h) dst(include/inclinometer.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Inclinometer

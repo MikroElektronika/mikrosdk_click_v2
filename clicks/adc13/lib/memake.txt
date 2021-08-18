@@ -1,0 +1,36 @@
+type: library
+
+target: lib_adc13
+
+sources: {
+    src/adc13.c
+}
+
+headers: {
+    include/adc13.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/adc13.h) dst(include/adc13.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.ADC13

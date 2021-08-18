@@ -1,0 +1,8 @@
+{
+    "name": "Brushless 16 Click",
+    "description": "Brushless 16 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the LB11685AV, a three-phase full-wave current-linear-drive motor driver from ON Semiconductor.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","LB11685AV"],
+    "category" : ["Brushless"]
+}

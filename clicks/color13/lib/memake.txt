@@ -1,0 +1,36 @@
+type: library
+
+target: lib_color13
+
+sources: {
+    src/color13.c
+}
+
+headers: {
+    include/color13.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/color13.h) dst(include/color13.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Color13

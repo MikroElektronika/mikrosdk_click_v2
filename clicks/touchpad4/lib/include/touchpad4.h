@@ -374,6 +374,16 @@ err_t touchpad4_generic_read ( touchpad4_t *ctx, uint8_t reg, uint16_t *rx_data 
 uint8_t touchpad4_get_ready ( touchpad4_t *ctx );
 
 /**
+ * @brief Set reset pin state.
+ * @details This function sets mclr/rst pin state.
+ * @param[in] ctx : Click context object.
+ * See #touchpad4_t object definition for detailed explanation.
+ * @param[in] state : Logic state.
+ * @return Nothing.
+ */
+void touchpad4_set_rst ( touchpad4_t *ctx, uint8_t state );
+
+/**
  * @brief Reset function.
  * @details This function resets device.
  * @param[in] ctx : Click context object.
