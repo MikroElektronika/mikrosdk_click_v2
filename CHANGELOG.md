@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20210820](#20210820)**
 + **[20210816](#20210816)**
 + **[20210727](#20210727)**
 + **[20210429](#20210429)**
@@ -14,6 +15,23 @@
 
 ---
 ---
+---
+
+## `20210820`
+
+*Following click boards have been added:*
+
++ `Stepper 11`
++ `Current 4`
++ `Proximity 12`
++ `ISO ADC 5`
+
+*Updated:*
+
++ `Clearing .bat files`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20210816`

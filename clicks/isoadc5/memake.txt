@@ -1,0 +1,7 @@
+type: subdirs
+project: ISOADC5
+
+subdirs: {
+    lib
+    example
+}
