@@ -1,0 +1,8 @@
+{
+    "name": "Proximity 12 Click",
+    "description": "Proximity 12 Click is a compact add-on board that contains a high-performance light and proximity sensing solution. This board features the TMD3719, an optical sensor that integrates ambient light sensing, proximity detection, and flicker detection sensing from AMS-AG.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","TMD3719M"],
+    "category" : ["Proximity"]
+}

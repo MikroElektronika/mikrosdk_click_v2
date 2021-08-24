@@ -1,0 +1,13 @@
+type: executable
+target: example_isoadc5
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.ISOADC5
+}
+
+sources: {
+    main.c
+}
