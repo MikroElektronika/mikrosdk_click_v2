@@ -1,0 +1,36 @@
+type: library
+
+target: lib_dcmotor18
+
+sources: {
+    src/dcmotor18.c
+}
+
+headers: {
+    include/dcmotor18.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/dcmotor18.h) dst(include/dcmotor18.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.DCMotor18

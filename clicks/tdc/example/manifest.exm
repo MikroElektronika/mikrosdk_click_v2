@@ -1,0 +1,8 @@
+{
+    "name": "TDC Click",
+    "description": "TDC Click is a compact add-on board that recognizes events and provides a digital representation of the time they occurred. This board features the TDC7200, a time-to-digital converter from Texas Instruments. The Time to Digital Converter (TDC) performs the function of a stopwatch and measures the elapsed time (time-of-flight or TOF) between a START pulse and up to five STOP pulses. The ability to measure from START to multiple STOPs gives users the flexibility to select which STOP pulse yields the best echo performance.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","TDC7200"],
+    "category" : ["Clock & Timing"]
+}
