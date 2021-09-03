@@ -1,0 +1,13 @@
+type: executable
+target: example_c8800retro
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.8800Retro
+}
+
+sources: {
+    main.c
+}

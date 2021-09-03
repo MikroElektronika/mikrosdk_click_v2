@@ -1,0 +1,36 @@
+type: library
+
+target: lib_c8800retro
+
+sources: {
+    src/c8800retro.c
+}
+
+headers: {
+    include/c8800retro.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/c8800retro.h) dst(include/c8800retro.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.8800Retro
