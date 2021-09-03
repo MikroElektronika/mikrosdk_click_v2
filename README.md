@@ -5,7 +5,7 @@ click examples.
 
 All click examples and libraries are developed using [MikroSDK2.0](https://github.com/MikroElektronika/mikrosdk_v2).
 
-A full list of all clicks in this repository is defined below:
+A full list of all clicks in this repository is defined below: 
 
 | Click name | Link to repository | Click name | Link to repository |
 |:----------:|:------------------:|:----------:|:------------------:|
