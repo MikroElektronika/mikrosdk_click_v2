@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20210903](#20210903)**
 + **[20210827](#20210827)**
 + **[20210820](#20210820)**
 + **[20210816](#20210816)**
@@ -16,6 +17,19 @@
 
 ---
 ---
+---
+
+## `20210903`
+
+*Following click boards have been added:*
+
++ `8800 Retro`
++ `Led Driver 11`
++ `Ambient 12`
++ `6DOF IMU 17`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20210827`

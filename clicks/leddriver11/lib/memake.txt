@@ -1,0 +1,36 @@
+type: library
+
+target: lib_leddriver11
+
+sources: {
+    src/leddriver11.c
+}
+
+headers: {
+    include/leddriver11.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/leddriver11.h) dst(include/leddriver11.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.LEDDriver11
