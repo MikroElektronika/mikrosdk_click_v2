@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20210910](#20210910)**
 + **[20210903](#20210903)**
 + **[20210827](#20210827)**
 + **[20210820](#20210820)**
@@ -17,6 +18,20 @@
 
 ---
 ---
+---
+
+## `20210910`
+
+*Following click boards have been added:*
+
++ `BarGraph 4`
++ `Ambient 10`
++ `LDC`
++ `Tilt 3`
++ `Charger 16`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20210903`
