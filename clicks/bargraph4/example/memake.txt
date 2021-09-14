@@ -1,0 +1,13 @@
+type: executable
+target: example_bargraph4
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.BarGraph4
+}
+
+sources: {
+    main.c
+}

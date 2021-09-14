@@ -1,0 +1,13 @@
+type: executable
+target: example_tilt3
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Tilt3
+}
+
+sources: {
+    main.c
+}

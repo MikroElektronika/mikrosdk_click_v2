@@ -1,0 +1,36 @@
+type: library
+
+target: lib_ldc
+
+sources: {
+    src/ldc.c
+}
+
+headers: {
+    include/ldc.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/ldc.h) dst(include/ldc.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.LDC

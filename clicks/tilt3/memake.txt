@@ -1,0 +1,8 @@
+type: subdirs
+
+project: Tilt3
+
+subdirs: {
+    lib
+    example
+}
