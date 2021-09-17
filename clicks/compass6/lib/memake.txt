@@ -1,0 +1,36 @@
+type: library
+
+target: lib_compass6
+
+sources: {
+    src/compass6.c
+}
+
+headers: {
+    include/compass6.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/compass6.h) dst(include/compass6.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Compass6

@@ -1,0 +1,36 @@
+type: library
+
+target: lib_magneto9
+
+sources: {
+    src/magneto9.c
+}
+
+headers: {
+    include/magneto9.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/magneto9.h) dst(include/magneto9.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Magneto9

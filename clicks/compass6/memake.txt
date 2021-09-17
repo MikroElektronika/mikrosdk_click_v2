@@ -1,0 +1,7 @@
+type: subdirs
+project: Compass6
+
+subdirs: {
+    lib
+    example
+}

@@ -1,0 +1,13 @@
+type: executable
+target: example_dac11
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.DAC11
+}
+
+sources: {
+    main.c
+}
