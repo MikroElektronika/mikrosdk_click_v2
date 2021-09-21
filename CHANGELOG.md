@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20210917](#20210917)**
 + **[20210910](#20210910)**
 + **[20210903](#20210903)**
 + **[20210827](#20210827)**
@@ -18,6 +19,20 @@
 
 ---
 ---
+---
+
+## `20210917`
+
+*Following click boards have been added:*
+
++ `Magneto 9`
++ `Compass 6`
++ `Hall Current 11`
++ `RTC 14`
++ `DAC 11`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20210910`

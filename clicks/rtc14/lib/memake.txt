@@ -1,0 +1,36 @@
+type: library
+
+target: lib_rtc14
+
+sources: {
+    src/rtc14.c
+}
+
+headers: {
+    include/rtc14.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/rtc14.h) dst(include/rtc14.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.RTC14
