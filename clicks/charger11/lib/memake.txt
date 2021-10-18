@@ -1,0 +1,48 @@
+type: library
+target: lib_charger11
+
+#begin python
+import re
+
+if ( re.match("(^PIC18F(.+)[KQ]4[23]$)|(^PIC32(.+)$)",MEMAKE_MCU_NAME) ):
+    sample_mode_reg_case = "SAMPLE_REG_CASE_1"
+else:
+    sample_mode_reg_case = "SAMPLE_REG_CASE_2"
+#end python
+
+defines: {
+    <[sample_mode_reg_case]>
+}
+
+sources: {
+    src/charger11.c
+}
+
+headers: {
+    include/charger11.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/charger11.h) dst(include/charger11.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Charger11

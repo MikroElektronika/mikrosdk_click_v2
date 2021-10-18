@@ -1,0 +1,8 @@
+{
+    "name": "FAN 8 Click",
+    "description": "Fan 8 Click is a compact add-on board that represents a compliant fan controller. This board features the MAX6615, a fan-speed controller, and a dual-channel temperature monitor with external thermistor inputs from Maxim Integrated, now part of Analog Devices. The MAX6615 controls the speed of two cooling fans based on the temperatures of external thermistors and the device's internal temperature, reporting temperature values in a digital form using the I2C serial interface.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","MAX6615"],
+    "category" : ["Brushless"]
+}

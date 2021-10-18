@@ -1,4 +1,4 @@
-{
+﻿{
     "architecture": "ARM|PIC|PIC32",
     "category": "Environmental",
     "changelog": "Resources/CHANGELOG.md",
@@ -29,7 +29,9 @@
     "supported_compiler": "mikroC AI",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.0.0.3"
+    "version": "2.0.0.6"
 }
+
+
 
 

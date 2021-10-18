@@ -50,10 +50,16 @@ void application_init( void )
     digipot5_reset( &digipot5 );
     digipot5_default_cfg( &digipot5 );
 
-    //  Console module initialization.
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
     LOG_MAP_USB_UART( console_cfg );
-    console_cfg.level = LOG_LEVEL_DEBUG;
-    console_cfg.baud = 57600;
     log_init( &console, &console_cfg );
     log_printf( &console, "***  DIGI POT 5 Initialization Done  ***\r\n" );
     log_printf( &console, "****************************************\r\n" );

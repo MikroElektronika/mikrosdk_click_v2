@@ -1,0 +1,38 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Clock generator",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Waveform 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.waveform2",
+    "product_link": "https://www.mikroe.com/waveform-2-click",
+    "short_description": "Waveform 2 Click is a compact add-on board that contains a direct digital synthesis device for waveform generator applications. This board features the AD9834, a 75 MHz low power DDS device capable of producing high-performance sine/triangle/square outputs from Analog Devices. It provides the capability for phase and frequency modulation and has an on-board comparator that allows the production of a square wave signal for clock generation.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "related_projects":[
+        2688
+    ],
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.2"
+}
+
+

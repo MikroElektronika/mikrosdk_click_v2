@@ -144,13 +144,13 @@ extern "C"{
 typedef struct
 {
     // Output pins
-    digital_out_t  en;      /**< Enable. */
-    digital_out_t  dir;     /**< Direction. */
-    digital_out_t  rst;     /**< Reset. */
-    digital_out_t  clk;     /**< Clock. */
+    digital_out_t  en;      /**< Description. */
+    digital_out_t  dir;     /**< Description. */
+    digital_out_t  rst;     /**< Description. */
+    digital_out_t  clk;     /**< Description. */
 
     // Input pins
-    digital_in_t  int_pin;  /**< Interrupt. */
+    digital_in_t  int_pin;  /**< Description. */
 
     // Modules
     i2c_master_t i2c;       /**< I2C driver object. */
@@ -159,8 +159,8 @@ typedef struct
     uint8_t slave_address;  /**< Device slave address (used for I2C driver). */
     // ctx variable
     uint16_t steps;             /**< Motor steps. */
-    float resolution;           /**< Motor resolution. */
-    uint8_t step_resolution;    /**< Step resolution. */
+    float resolution;           /**< Description. */
+    uint8_t step_resolution;    /**< Description. */
 
 } stepper11_t;
 
@@ -173,14 +173,14 @@ typedef struct
     pin_name_t  scl;        /**< Clock pin descriptor for I2C driver. */
     pin_name_t  sda;        /**< Bidirectional data pin descriptor for I2C driver. */
 
-    pin_name_t  en;         /**< Enable. */
-    pin_name_t  dir;        /**< Direction. */
-    pin_name_t  rst;        /**< Reset. */
-    pin_name_t  clk;        /**< Clock. */
-    pin_name_t  int_pin;    /**< Interrupt. */
+    pin_name_t  en;         /**< Description. */
+    pin_name_t  dir;         /**< Description. */
+    pin_name_t  rst;       /**< Description. */
+    pin_name_t  clk;       /**< Description. */
+    pin_name_t  int_pin;       /**< Description. */
 
-    uint32_t  i2c_speed;    /**< I2C serial speed. */
-    uint8_t   i2c_address;  /**< I2C slave address. */
+    uint32_t  i2c_speed;                                /**< I2C serial speed. */
+    uint8_t   i2c_address;                              /**< I2C slave address. */
 
 } stepper11_cfg_t;
 

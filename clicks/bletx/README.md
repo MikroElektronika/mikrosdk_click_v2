@@ -3,13 +3,13 @@
 ---
 # BLE TX click
 
-<PRVIH_PAR_RECENICA_SA_PRODUCT_PAGE_DA_ISPRATE_CELINU>
+BLE TX Click is a compact add-on board that contains a low-energy Bluetooth transmitter. This board features the AK1595, a Bluetooth 5.2 transmitter with incorporated proprietary algorithm software from AKM Semiconductor. The AK1595 transmitter simplifies wireless connectivity to a system with no need to develop complicated, proprietary microcontroller code. Bluetooth Low Energy compliant advertising transmission can be achieved by simply configuring the transmission power, data, and transmission start-trigger via the UART or I2C interface.
 
 <p align="center">
-  <img src="CLICK_IMAGE_LINK" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/ble_tx_click.png" height=300px>
 </p>
 
-[click Product page](<CLICK_PRODUCT_PAGE_LINK>)
+[click Product page](https://www.mikroe.com/ble-tx-click)
 
 ---
 

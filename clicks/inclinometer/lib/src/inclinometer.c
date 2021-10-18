@@ -144,7 +144,7 @@ err_t inclinometer_init ( inclinometer_t *ctx, inclinometer_cfg_t *cfg )
 
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
     spi_master_deselect_device( ctx->chip_select );
-
+    
     ctx->resolution = 0;
 
     return SPI_MASTER_SUCCESS;
@@ -164,19 +164,19 @@ err_t inclinometer_default_cfg ( inclinometer_t *ctx )
     inclinometer_generic_read( ctx, INCLINOMETER_REG_STATUS, &temp_data );
     inclinometer_generic_read( ctx, INCLINOMETER_REG_STATUS, &temp_data );
     inclinometer_generic_read( ctx, INCLINOMETER_REG_STATUS, &temp_data );
-
+    
     inclinometer_raw_write( ctx, INCLINOMETER_CMD_EN_ANGLE_OUT );
-
+    
     inclinometer_generic_read( ctx, INCLINOMETER_REG_WHOAMI, &temp_data );
     inclinometer_generic_read( ctx, INCLINOMETER_REG_WHOAMI, &temp_data );
-
+    
     err_t ret_val = INCLINOMETER_OK;
-
+    
     if ( 0xC1 != temp_data )
     {
         ret_val = INCLINOMETER_ERROR;
     }
-
+    
     return INCLINOMETER_OK;
 }
 
@@ -207,24 +207,24 @@ err_t inclinometer_generic_read ( inclinometer_t *ctx, uint8_t reg, uint16_t *da
     uint8_t data_buf[ 3 ] = { 0 };
     uint8_t dummy = 0;
     uint8_t crc = inclinometer_calculate_crc( ( ( uint32_t )write_reg << 24 ) );
-
+    
     spi_master_select_device( ctx->chip_select );
-
+    
     spi_master_set_default_write_data( &ctx->spi, write_reg );
     err_t error_flag = spi_master_read( &ctx->spi, &ctx->rs, 1 );
-
+    
     spi_master_set_default_write_data( &ctx->spi, DUMMY );
     error_flag |= spi_master_read( &ctx->spi, data_buf, 2 );
-
+    
     spi_master_set_default_write_data( &ctx->spi, crc );
     error_flag = spi_master_read( &ctx->spi, &dummy, 1 );
-
+    
     Delay_10us( );
     spi_master_deselect_device( ctx->chip_select );
     spi_master_set_default_write_data( &ctx->spi, DUMMY );
-
+    
     *data_out = ( ( uint16_t )data_buf[ 0 ] << 8 ) | data_buf[ 1 ];
-
+    
     if ( data_buf[ 2 ]  != inclinometer_calculate_crc( ( ( uint32_t )ctx->rs << 24 ) | ( ( uint32_t )*data_out << 8 ) ) )
     {
         error_flag = INCLINOMETER_CRC_ERROR;
@@ -255,7 +255,7 @@ err_t inclinometer_get_temperature ( inclinometer_t *ctx, float *temperature )
     uint16_t temp = 0;
     ret_val |= inclinometer_cmd_read( ctx, INCLINOMETER_CMD_READ_TEMP, &temp );
     *temperature = TEMPERATURE_OFFSET + ( temp / TEMPERATURE_RES );
-
+    
     return ret_val;
 }
 
@@ -263,22 +263,22 @@ err_t inclinometer_get_axes ( inclinometer_t *ctx, inclinometer_accel_t *axes_da
 {
     err_t ret_val = INCLINOMETER_OK;
     uint16_t temp = 0;
-
+    
     if ( 0 == ctx->resolution )
     {
         ret_val |= inclinometer_cmd_read( ctx, INCLINOMETER_CMD_READ_MODE, &temp );
         ctx->resolution = inclinometer_resolution( temp & 3 );
     }
-
+    
     ret_val |= inclinometer_cmd_read( ctx, INCLINOMETER_CMD_READ_ACC_X, &temp );
     axes_data->x = ( int16_t )temp / ctx->resolution;
-
+    
     ret_val |= inclinometer_cmd_read( ctx, INCLINOMETER_CMD_READ_ACC_Y, &temp );
     axes_data->y = ( int16_t )temp / ctx->resolution;
-
+    
     ret_val |= inclinometer_cmd_read( ctx, INCLINOMETER_CMD_READ_ACC_Z, &temp );
     axes_data->z = ( int16_t )temp / ctx->resolution;
-
+    
     return ret_val;
 }
 
@@ -293,7 +293,7 @@ err_t inclinometer_get_angle ( inclinometer_t *ctx, inclinometer_accel_t *angle_
     angle_data->y = ( int16_t )temp / ANGLE_RES1 * ANGLE_RES2;
     ret_val |= inclinometer_cmd_read( ctx, INCLINOMETER_CMD_READ_ANG_Z, &temp );
     angle_data->z = ( int16_t )temp / ANGLE_RES1 * ANGLE_RES2;
-
+    
     return ret_val;
 }
 
@@ -336,7 +336,7 @@ static err_t inclinometer_raw_write ( inclinometer_t *ctx, uint32_t raw_val )
     tx_buf[ 1 ] = raw_val >> 16;
     tx_buf[ 2 ] = raw_val >> 8;
     tx_buf[ 3 ] = raw_val;
-
+    
     spi_master_set_default_write_data( &ctx->spi, tx_buf[ 0 ] );
     spi_master_select_device( ctx->chip_select );
     ret_val |= spi_master_read( &ctx->spi, &ctx->rs, 1 );
@@ -345,9 +345,9 @@ static err_t inclinometer_raw_write ( inclinometer_t *ctx, uint32_t raw_val )
     spi_master_deselect_device( ctx->chip_select );
     spi_master_set_default_write_data( &ctx->spi, DUMMY );
     Delay_10us( );
-
+    
     ctx->rs &= 0x3;
-
+    
     return ret_val;
 }
 
@@ -360,7 +360,7 @@ static err_t inclinometer_raw_read ( inclinometer_t *ctx, uint32_t cmd, uint32_t
     tx_buf[ 1 ] = cmd >> 16;
     tx_buf[ 2 ] = cmd >> 8;
     tx_buf[ 3 ] = cmd;
-
+    
     spi_master_select_device( ctx->chip_select );
     for ( uint8_t index = 0; index < 4; index++ )
     {
@@ -370,10 +370,10 @@ static err_t inclinometer_raw_read ( inclinometer_t *ctx, uint32_t cmd, uint32_t
     Delay_10us( );
     spi_master_deselect_device( ctx->chip_select );
     spi_master_set_default_write_data( &ctx->spi, DUMMY );
-
+    
     *raw_val = ( (uint32_t)rx_buf[0] << 24 ) | ( (uint32_t)rx_buf[1] << 16 ) | 
                ( (uint32_t)rx_buf[2] << 8 ) | rx_buf[ 3 ];
-
+               
     Delay_10us( );
     return ret_val;
 }
@@ -402,7 +402,7 @@ static float inclinometer_resolution ( uint8_t mode )
         default:
             break;
     }
-
+    
     return ret_val;
 }
 

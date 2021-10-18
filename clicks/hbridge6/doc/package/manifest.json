@@ -1,0 +1,38 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Brushless",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "H-Bridge 6 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.hbridge6",
+    "product_link": "https://www.mikroe.com/h-bridge-6-click",
+    "short_description": "H-Bridge 6 Click is a compact add-on board that contains a DC motor driver for automotive applications. This board features the VNHD7008AY, an H-bridge motor driver for automotive DC motor driving from STMicroelectronics. The VNHD7008AY, features an undervoltage shutdown, load current limitation, overload active power limitation, overtemperature shutdown, and more.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "related_projects":[
+        3844
+    ],
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.3"
+}
+
+

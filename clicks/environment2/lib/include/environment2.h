@@ -105,6 +105,41 @@ extern "C"{
 #define ENVIRONMENT2_SEL_SGP40                                   0x00
 #define ENVIRONMENT2_SEL_SHT40                                   0x01
 
+/**
+ * @brief Environment 2 fixed point arithmetic parts.
+ * @details Specified the fixed point arithmetic parts for VOC algorithm of
+ * Environment 2 Click driver.
+ */
+#define F16(x) \
+    ((fix16_t)(((x) >= 0) ? ((x)*65536.0 + 0.5) : ((x)*65536.0 - 0.5)))
+#define VocAlgorithm_SAMPLING_INTERVAL (1.)
+#define VocAlgorithm_INITIAL_BLACKOUT (45.)
+#define VocAlgorithm_VOC_INDEX_GAIN (230.)
+#define VocAlgorithm_SRAW_STD_INITIAL (50.)
+#define VocAlgorithm_SRAW_STD_BONUS (220.)
+#define VocAlgorithm_TAU_MEAN_VARIANCE_HOURS (12.)
+#define VocAlgorithm_TAU_INITIAL_MEAN (20.)
+#define VocAlgorithm_INIT_DURATION_MEAN ((3600. * 0.75))
+#define VocAlgorithm_INIT_TRANSITION_MEAN (0.01)
+#define VocAlgorithm_TAU_INITIAL_VARIANCE (2500.)
+#define VocAlgorithm_INIT_DURATION_VARIANCE ((3600. * 1.45))
+#define VocAlgorithm_INIT_TRANSITION_VARIANCE (0.01)
+#define VocAlgorithm_GATING_THRESHOLD (340.)
+#define VocAlgorithm_GATING_THRESHOLD_INITIAL (510.)
+#define VocAlgorithm_GATING_THRESHOLD_TRANSITION (0.09)
+#define VocAlgorithm_GATING_MAX_DURATION_MINUTES ((60. * 3.))
+#define VocAlgorithm_GATING_MAX_RATIO (0.3)
+#define VocAlgorithm_SIGMOID_L (500.)
+#define VocAlgorithm_SIGMOID_K (-0.0065)
+#define VocAlgorithm_SIGMOID_X0 (213.)
+#define VocAlgorithm_VOC_INDEX_OFFSET_DEFAULT (100.)
+#define VocAlgorithm_LP_TAU_FAST (20.0)
+#define VocAlgorithm_LP_TAU_SLOW (500.0)
+#define VocAlgorithm_LP_ALPHA (-0.2)
+#define VocAlgorithm_PERSISTENCE_UPTIME_GAMMA ((3. * 3600.))
+#define VocAlgorithm_MEAN_VARIANCE_ESTIMATOR__GAMMA_SCALING (64.)
+#define VocAlgorithm_MEAN_VARIANCE_ESTIMATOR__FIX16_MAX (32767.)
+
 /*! @} */ // environment2_set
 
 /**
@@ -172,6 +207,48 @@ typedef struct
     uint8_t   i2c_address;    /**< I2C slave address. */
 
 } environment2_cfg_t;
+
+typedef int32_t fix16_t;
+
+
+/**
+ * @brief Environment 2 Click VOC algorithm object.
+ * @details Struct to hold all the states of the VOC algorithm.
+ */
+typedef struct {
+    fix16_t mVoc_Index_Offset;
+    fix16_t mTau_Mean_Variance_Hours;
+    fix16_t mGating_Max_Duration_Minutes;
+    fix16_t mSraw_Std_Initial;
+    fix16_t mUptime;
+    fix16_t mSraw;
+    fix16_t mVoc_Index;
+    fix16_t m_Mean_Variance_Estimator__Gating_Max_Duration_Minutes;
+    bool m_Mean_Variance_Estimator___Initialized;
+    fix16_t m_Mean_Variance_Estimator___Mean;
+    fix16_t m_Mean_Variance_Estimator___Sraw_Offset;
+    fix16_t m_Mean_Variance_Estimator___Std;
+    fix16_t m_Mean_Variance_Estimator___Gamma;
+    fix16_t m_Mean_Variance_Estimator___Gamma_Initial_Mean;
+    fix16_t m_Mean_Variance_Estimator___Gamma_Initial_Variance;
+    fix16_t m_Mean_Variance_Estimator__Gamma_Mean;
+    fix16_t m_Mean_Variance_Estimator__Gamma_Variance;
+    fix16_t m_Mean_Variance_Estimator___Uptime_Gamma;
+    fix16_t m_Mean_Variance_Estimator___Uptime_Gating;
+    fix16_t m_Mean_Variance_Estimator___Gating_Duration_Minutes;
+    fix16_t m_Mean_Variance_Estimator___Sigmoid__L;
+    fix16_t m_Mean_Variance_Estimator___Sigmoid__K;
+    fix16_t m_Mean_Variance_Estimator___Sigmoid__X0;
+    fix16_t m_Mox_Model__Sraw_Std;
+    fix16_t m_Mox_Model__Sraw_Mean;
+    fix16_t m_Sigmoid_Scaled__Offset;
+    fix16_t m_Adaptive_Lowpass__A1;
+    fix16_t m_Adaptive_Lowpass__A2;
+    bool m_Adaptive_Lowpass___Initialized;
+    fix16_t m_Adaptive_Lowpass___X1;
+    fix16_t m_Adaptive_Lowpass___X2;
+    fix16_t m_Adaptive_Lowpass___X3;
+} environment2_voc_algorithm_params;
 
 /**
  * @brief Environment 2 Click return value data.
@@ -267,8 +344,8 @@ err_t environment2_generic_read ( environment2_t *ctx, uint8_t select_device, ui
  * by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #environment2_t object definition for detailed explanation.
- * @param[out] humidity    : Relative Humidity.
- * @param[out] temperature : Temperature.
+ * @param[out] humidity    : Relative Humidity [ %RH ].
+ * @param[out] temperature : Temperature [ degree Celsius ].
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  *
@@ -350,6 +427,91 @@ err_t environment2_sgp40_heater_off ( environment2_t *ctx );
  * @endcode
  */
 err_t environment2_sgp40_soft_reset ( environment2_t *ctx );
+
+/**
+ * @brief Environment 2 VOC algorithm configuration function.
+ * @details This function initialize VOC algorithm.
+ * @param[in] environment2_voc_algorithm_params : Struct to hold all the states of the VOC algorithm.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ *
+ * See #err_t definition for detailed explanation.
+ * @note None
+ *
+ * @endcode
+ */
+err_t environment2_voc_algorithm_configuration ( environment2_voc_algorithm_params *params );
+
+/**
+ * @brief Environment 2 sensors configuration  function.
+ * @details This function general performs sensors configuration and initialize VOC algorithm of the
+ * SGP40 Indoor Air Quality Sensor for VOC Measurements.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ *
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ *
+ * @endcode
+ */
+err_t environment2_config_sensors ( void );
+
+/**
+ * @brief Environment 2 VOC algorithm process function.
+ * @details This function calculate the VOC index value from the raw sensor value.
+ * @param[in] ctx : Click context object.
+ * See #environment2_t object definition for detailed explanation.
+ * @param[in] params : Pointer to the environment2_voc_algorithm_params struct.
+ * @param[in] sraw : Air quality SRAW data.
+ * @param[out] voc_index : Calculated VOC index value from the raw sensor value. 
+ * Zero during initial blackout period and 1..500 afterwards.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ *
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ *
+ * @endcode
+ */
+err_t environment2_voc_algorithm_process ( environment2_voc_algorithm_params *params, int32_t sraw, int32_t *voc_index );
+
+/**
+ * @brief Environment 2 measure VOC index with relative humidity and temperature function.
+ * @details This function measure the humidity-compensated VOC Index,  
+ * ambient temperature and relative humidity.
+ * @param[in] ctx : Click context object.
+ * See #environment2_t object definition for detailed explanation.
+ * @param[out] voc_index : Pointer to buffer for measured VOC index. Range 0..500. 
+ * @param[out] relative_humidity : Relative Humidity [ milli %RH ].
+ * @param[out] temperature : Temperature [ milli degree Celsius ].
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ *
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ *
+ * @endcode
+ */
+err_t environment2_measure_voc_index_with_rh_t ( environment2_t *ctx, int32_t *voc_index, int32_t *relative_humidity, int32_t *temperature );
+
+/**
+ * @brief Environment 2 get VOC index function.
+ * @details This function measurement triggers a humidity reading,
+ * sets the value on the SGP for humidity compensation 
+ * and runs the gas signal through the VOC algorithm for
+ * the final result.
+ * @param[in] ctx : Click context object.
+ * See #environment2_t object definition for detailed explanation.
+ * @param[out] voc_index : Pointer to buffer for measured VOC index. Range 0..500. 
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ *
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ *
+ * @endcode
+ */
+err_t environment2_get_voc_index ( environment2_t *ctx, int32_t *voc_index );
 
 #ifdef __cplusplus
 }

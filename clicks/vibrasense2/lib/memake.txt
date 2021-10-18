@@ -1,0 +1,36 @@
+type: library
+
+target: lib_vibrasense2
+
+sources: {
+    src/vibrasense2.c
+}
+
+headers: {
+    include/vibrasense2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/vibrasense2.h) dst(include/vibrasense2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.VibraSense2

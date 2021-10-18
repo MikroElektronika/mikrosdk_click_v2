@@ -15,7 +15,7 @@
  * every 2 seconds.
  *
  * ## Additional Function
- * - static err_t spirit_process ( void )
+ * - static err_t spirit_process ( void ) - The general process of collecting the received data.
  *
  * @author Jelena Milosavljevic
  *
@@ -27,7 +27,7 @@
 #include "spirit.h"
 
 #define PROCESS_BUFFER_SIZE 500
-#define PROCESS_COUNTER        20
+#define PROCESS_COUNTER     20
 
 #define TEXT_TO_SEND           "MikroE - SPIRIT click board\r\n"
 
@@ -42,7 +42,7 @@ static int32_t app_buf_len = 0;
 static int32_t app_buf_cnt = 0;
 
 /**
- * @brief SPIRIT 2 data reading function.
+ * @brief SPIRIT data reading function.
  * @details This function reads data from device and concatenates data to application buffer.
  *
  * @return @li @c  0 - Read some data.
@@ -61,11 +61,16 @@ void application_init ( void )
     log_cfg_t log_cfg;
     spirit_cfg_t cfg;
 
-    //  Logger initialization.
-
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -107,7 +112,7 @@ void application_init ( void )
 }
 
 void application_task ( void ) {
-    #ifdef DEMO_APP_RECEIVER
+#ifdef DEMO_APP_RECEIVER
     spirit_process( );
 #endif   
     
@@ -119,9 +124,11 @@ void application_task ( void ) {
 }
 
 void main ( void ) {
+   
     application_init( );
 
     for ( ; ; ) {
+        
         application_task( );
     }
 }
@@ -132,23 +139,23 @@ static void spirit_process ( void ) {
     char uart_rx_buffer[ PROCESS_BUFFER_SIZE ] = { 0 };
     uint8_t process_cnt = PROCESS_COUNTER;
 
-    while( process_cnt != 0 )
-    {
+    while( process_cnt != 0 ) {
+       
         rsp_size = spirit_generic_read( &spirit, &uart_rx_buffer, PROCESS_BUFFER_SIZE );
         
-        if ( rsp_size > 0 )
-        {  
-            for ( uint8_t cnt = 0; cnt < rsp_size; cnt++ )
-            {
+        if ( rsp_size > 0 ) {  
+            
+            for ( uint8_t cnt = 0; cnt < rsp_size; cnt++ ) {
+               
                 log_printf( &logger, "%c", uart_rx_buffer[ cnt ] );
-                if ( uart_rx_buffer[ cnt ] == '\n' )
-                {
+                if ( uart_rx_buffer[ cnt ] == '\n' ) {
+                   
                     log_printf( &logger, "-----------------------------\r\n" );
                 }
             }
         } 
-        else 
-        {
+        else {
+           
             process_cnt--;
             
             // Process delay 

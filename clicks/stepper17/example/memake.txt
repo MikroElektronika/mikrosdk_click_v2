@@ -1,0 +1,13 @@
+type: executable
+target: example_stepper17
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Stepper17
+}
+
+sources: {
+    main.c
+}

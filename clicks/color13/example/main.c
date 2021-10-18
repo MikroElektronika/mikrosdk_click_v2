@@ -56,10 +56,16 @@ void application_init ( void )
     log_cfg_t log_cfg;  /**< Logger config object. */
     color13_cfg_t color13_cfg;  /**< Click config object. */
 
-    // Logger initialization.
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
 
@@ -78,7 +84,7 @@ void application_init ( void )
     uint8_t temp_data = 0;
     init_flag = color13_generic_read( &color13, COLOR13_REG_PART_ID, &temp_data, 1 );
     log_printf( &logger, " > ID: 0x%.2X\r\n", ( uint16_t )temp_data );
-
+    
     if ( ( COLOR13_OK != init_flag ) && ( COLOR13_ID != temp_data ) )
     {
         log_error( &logger, " ID" );
@@ -86,11 +92,11 @@ void application_init ( void )
 
         for ( ; ; );
     }
-
+    
     //Select example
     example_type = COLOR13_EXAMPLE_RGB;
     color13_generic_write( &color13, COLOR13_REG_MAIN_CTRL, &example_type, 1 );
-
+    
     if ( COLOR13_EXAMPLE_PS_LS == example_type )
     {
         //Configure proximity data to 11 bit
@@ -98,7 +104,7 @@ void application_init ( void )
         temp_data |= 0x18;
         color13_generic_write( &color13, COLOR13_REG_PS_MEASRATE, &temp_data, 1 );
     }
-
+    
     Delay_ms( 1000 );
     log_info( &logger, " Application Task " );
 }
@@ -158,7 +164,7 @@ static void color13_rgb_example ( void )
     color13_color_t color_data;
 
     color13_get_rgb_ir( &color13, &color_data );
-
+    
     log_printf( &logger, " > R: %u\r\n", color_data.red );
     log_printf( &logger, " > G: %u\r\n", color_data.green );
     log_printf( &logger, " > B: %u\r\n", color_data.blue );

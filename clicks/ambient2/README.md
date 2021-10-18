@@ -91,9 +91,16 @@ void application_init( void )
     ambient2_init( &ambient2, &ambient2_cfg );
     ambient2_default_cfg( &ambient2 );
 
-    //  Console module initialization.
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
     LOG_MAP_USB_UART( console_cfg );
-    console_cfg.baud = 57600;
     log_init( &console, &console_cfg );
     log_write( &console, "* * *  Ambient 2 initialization done  * * *", LOG_FORMAT_LINE );
     log_write( &console, "*******************************************", LOG_FORMAT_LINE );

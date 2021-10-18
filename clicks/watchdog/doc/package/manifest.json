@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Clock & Timing",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Watchdog click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.watchdog",
+    "product_link": "mikroe.com/watchdog-click",
+    "short_description": "Watchdog Click is a compact add-on board that contains a simple countdown timer for a wide variety of applications. This board features the TPS3430, a standalone watchdog timer with a programmable watchdog window and programmable reset delay from Texas Instruments.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "related_projects":[
+        4084
+    ],
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.0"
+}

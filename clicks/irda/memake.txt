@@ -1,7 +1,0 @@
-type: subdirs
-project: Irda
-
-subdirs: {
-    lib
-    example
-}

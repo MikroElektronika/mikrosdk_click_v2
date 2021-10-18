@@ -1,0 +1,7 @@
+type: subdirs
+project: Expand8
+
+subdirs: {
+    lib
+    example
+}

@@ -1,0 +1,7 @@
+type: subdirs
+project: eFuse2
+
+subdirs: {
+    lib
+    example
+}

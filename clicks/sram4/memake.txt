@@ -1,0 +1,7 @@
+type: subdirs
+project: SRAM4
+
+subdirs: {
+    lib
+    example
+}

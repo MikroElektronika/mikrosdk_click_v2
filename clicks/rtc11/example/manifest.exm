@@ -1,0 +1,8 @@
+{
+    "name": "RTC 11 Click",
+    "description": "RTC 11 Click is a compact add-on board that contains a real-time clock IC designed to maximize battery life and reduce overall battery requirements in wearable applications. This board features the AB0815, an ultra-low-power coupled with a highly sophisticated feature set the real-time clock from Abracon LLC.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","AB0815,"],
+    "category" : ["RTC"]
+}

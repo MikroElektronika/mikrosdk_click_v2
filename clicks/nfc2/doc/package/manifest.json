@@ -1,0 +1,38 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "RFID/NFC",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "NFC 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.nfc2",
+    "product_link": "https://www.mikroe.com/nfc-2-click",
+    "short_description": "NFC 2 Click is a compact add-on board that contains a highly integrated NFC transceiver for contactless communication. This board features the PN7150, the best plug&play high-performance full NFC solution with integrated firmware and NCI interface designed for contactless communication at 13.56 MHz from NXP USA Inc.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "related_projects":[
+        3841
+    ],
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.2"
+}
+
+

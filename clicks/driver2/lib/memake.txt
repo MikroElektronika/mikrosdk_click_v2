@@ -1,0 +1,36 @@
+type: library
+
+target: lib_driver2
+
+sources: {
+    src/driver2.c
+}
+
+headers: {
+    include/driver2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/driver2.h) dst(include/driver2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Driver2

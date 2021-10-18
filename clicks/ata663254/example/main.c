@@ -16,7 +16,6 @@
  * 
  * \author MikroE Team
  *
- */
 // ------------------------------------------------------------------- INCLUDES
 
 #include "board.h"
@@ -25,8 +24,8 @@
 
 // ------------------------------------------------------------------ VARIABLES
 
-// #define DEMO_APP_RECEIVER
-#define DEMO_APP_TRANSMITTER
+#define DEMO_APP_RECEIVER
+// #define DEMO_APP_TRANSMITTER
 
 static ata663254_t ata663254;
 static log_t logger;
@@ -41,11 +40,16 @@ void application_init ( void )
     log_cfg_t log_cfg;
     ata663254_cfg_t cfg;
 
-    //  Logger initialization.
-
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -66,7 +70,7 @@ void application_task ( void )
     // RECEIVER - UART polling
     
     int32_t len = ata663254_generic_read( &ata663254, rec_buf, 50 );
-    if ( len > 6 )
+    if ( len > 0 )
     {
         log_printf( &logger, "Received data: " );
         for ( int32_t cnt = 0; cnt < len; cnt++  )

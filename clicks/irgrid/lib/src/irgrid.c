@@ -1,37 +1,32 @@
-/*
- * MikroSDK - MikroE Software Development Kit
- * Copyright© 2020 MikroElektronika d.o.o.
- * 
- * Permission is hereby granted, free of charge, to any person 
- * obtaining a copy of this software and associated documentation 
- * files (the "Software"), to deal in the Software without restriction, 
- * including without limitation the rights to use, copy, modify, merge, 
- * publish, distribute, sublicense, and/or sell copies of the Software, 
- * and to permit persons to whom the Software is furnished to do so, 
- * subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be 
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
- * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE 
- * OR OTHER DEALINGS IN THE SOFTWARE. 
- */
+/****************************************************************************
+** Copyright (C) 2020 MikroElektronika d.o.o.
+** Contact: https://www.mikroe.com/contact
+**
+** Permission is hereby granted, free of charge, to any person obtaining a copy
+** of this software and associated documentation files (the "Software"), to deal
+** in the Software without restriction, including without limitation the rights
+** to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+** copies of the Software, and to permit persons to whom the Software is
+** furnished to do so, subject to the following conditions:
+** The above copyright notice and this permission notice shall be
+** included in all copies or substantial portions of the Software.
+**
+** THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+** EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+** OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+** IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+** DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
+** OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+**  USE OR OTHER DEALINGS IN THE SOFTWARE.
+****************************************************************************/
 
 /*!
- * \file
- *
+ * @file irgrid.c
+ * @brief IR Grid Click Driver.
  */
 
 #include "irgrid.h"
-#include "string.h"
 #include "math.h"
-
-// ---------------------------------------------- PRIVATE FUNCTION DECLARATIONS 
 
 static uint16_t get_cfg ( irgrid_t *ctx );
 static void get_eeprom ( irgrid_t *ctx, irgrid_data_t *data_str );
@@ -43,40 +38,45 @@ static void set_trim ( irgrid_t *ctx, irgrid_data_t *data_str );
 static void calc_ta ( irgrid_t *ctx, irgrid_data_t *data_str );
 static void calc_to ( irgrid_t *ctx, irgrid_data_t *data_str );
 
-// ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
-
-void irgrid_cfg_setup ( irgrid_cfg_t *cfg )
+void irgrid_cfg_setup ( irgrid_cfg_t *cfg ) 
 {
-    // Communication gpio pins 
+    // Communication gpio pins
+    cfg->scl  = HAL_PIN_NC;
+    cfg->sda  = HAL_PIN_NC;
 
-    cfg->scl = HAL_PIN_NC;
-    cfg->sda = HAL_PIN_NC;
-
-    cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
+    cfg->i2c_speed   = I2C_MASTER_SPEED_STANDARD;
     cfg->i2c_ram_address = 0x60;
     cfg->i2c_eeprom_address = 0x50;
 }
 
-IRGRID_RETVAL irgrid_init ( irgrid_t *ctx, irgrid_cfg_t *cfg )
+err_t irgrid_init ( irgrid_t *ctx, irgrid_cfg_t *cfg ) 
 {
     i2c_master_config_t i2c_cfg;
 
     i2c_master_configure_default( &i2c_cfg );
-    i2c_cfg.speed  = cfg->i2c_speed;
-    i2c_cfg.scl    = cfg->scl;
-    i2c_cfg.sda    = cfg->sda;
+
+    i2c_cfg.scl = cfg->scl;
+    i2c_cfg.sda = cfg->sda;
 
     ctx->slave_ram_address = cfg->i2c_ram_address;
     ctx->slave_eeprom_address = cfg->i2c_eeprom_address;
 
-    if ( i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_ERROR )
+    if ( I2C_MASTER_ERROR == i2c_master_open( &ctx->i2c, &i2c_cfg ) ) 
     {
-        return IRGRID_INIT_ERROR;
+        return I2C_MASTER_ERROR;
     }
 
-    i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
+    if ( I2C_MASTER_ERROR == i2c_master_set_slave_address( &ctx->i2c, ctx->slave_ram_address ) ) 
+    {
+        return I2C_MASTER_ERROR;
+    }
 
-    return IRGRID_OK;
+    if ( I2C_MASTER_ERROR == i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed ) ) 
+    {
+        return I2C_MASTER_ERROR;
+    }
+
+    return I2C_MASTER_SUCCESS;
 }
 
 void irgrid_write_ram( irgrid_t *ctx, uint8_t *data_buf, uint8_t len )
@@ -185,8 +185,6 @@ void irgrid_get_temperature ( irgrid_data_t *data_str, float *buffer )
 {
     memcpy( buffer, data_str->temperature_data, sizeof( float ) * 64 );
 }
-
-// ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
 
 static void get_eeprom ( irgrid_t *ctx, irgrid_data_t *data_str ) 
 {
@@ -442,4 +440,3 @@ static void calc_to ( irgrid_t *ctx, irgrid_data_t *data_str )
 }
 
 // ------------------------------------------------------------------------- END
-

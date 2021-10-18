@@ -1,0 +1,8 @@
+{
+    "name": "RF Switch Click",
+    "description": "RF Switch Click is a Click board™ equipped with the MASWSS0115, a GaAs PHEMT MMIC single-pole, double-throw (SPDT) switch developed by Macom for switching between small signal components such as filter banks, single-band LNAs, converters, etc. The MASWSS0115 is ideally suited for applications where a very small size and low cost are required.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","MASWSS0115"],
+    "category" : ["Port expander"]
+}

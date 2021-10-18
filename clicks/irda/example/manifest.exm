@@ -1,8 +1,0 @@
-{
-    "name": "IrDA Click",
-    "description": "IrDA click is a compact and easy solution for adding infrared communication to your device.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","TFDU4101","MCP2120"],
-    "category" : ["Optical"] 
-}

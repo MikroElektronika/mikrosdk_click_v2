@@ -1,0 +1,13 @@
+type: executable
+target: example_dac9
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.DAC9
+}
+
+sources: {
+    main.c
+}

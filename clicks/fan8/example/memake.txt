@@ -1,0 +1,13 @@
+type: executable
+target: example_fan8
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.FAN8
+}
+
+sources: {
+    main.c
+}

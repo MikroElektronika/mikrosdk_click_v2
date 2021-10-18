@@ -37,5 +37,4 @@ others: {
     ../README.md
     ../DETAILS.md
     ../CHANGELOG.md
-    ../build.bat
 }

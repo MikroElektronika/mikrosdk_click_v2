@@ -57,9 +57,9 @@ err_t adc13_init ( adc13_t *ctx, adc13_cfg_t *cfg )
     spi_cfg.sck  = cfg->sck;
     spi_cfg.miso = cfg->miso;
     spi_cfg.mosi = cfg->mosi;
-
+    
     ctx->chip_select = cfg->cs;
-
+    
     if ( spi_master_open( &ctx->spi, &spi_cfg ) == SPI_MASTER_ERROR ) 
     {
         return SPI_MASTER_ERROR;
@@ -69,7 +69,7 @@ err_t adc13_init ( adc13_t *ctx, adc13_cfg_t *cfg )
     {
         return SPI_MASTER_ERROR;
     }
-
+    
     if ( spi_master_set_mode( &ctx->spi, cfg->spi_mode ) == SPI_MASTER_ERROR ) 
     {
         return SPI_MASTER_ERROR;
@@ -82,7 +82,7 @@ err_t adc13_init ( adc13_t *ctx, adc13_cfg_t *cfg )
 
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
     spi_master_deselect_device( ctx->chip_select );
-
+    
     digital_out_init( &ctx->rst, cfg->rst );
     digital_out_init( &ctx->str, cfg->str );
 
@@ -95,20 +95,20 @@ err_t adc13_default_cfg ( adc13_t *ctx )
 {
     adc13_power_up ( ctx );
     err_t error_flag = adc13_reset_by_command( ctx );
-
+    
     // Clear reset flag
     error_flag |= adc13_set_register_bits( ctx, ADC13_REG_POWER, ADC13_POWER_RESET_MASK, ADC13_POWER_RESET_NO_NEW_RESET );
-
+    
     // Set sample rate and gain
     error_flag |= adc13_set_gain( ctx, ADC13_MODE2_GAIN_1 );
     error_flag |= adc13_set_sample_rate( ctx, ADC13_MODE2_DR_20SPS );
-
+    
     // Set input channels
     error_flag |= adc13_set_input_channel( ctx, ADC13_INPMUX_MUXP_AIN0, ADC13_INPMUX_MUXN_AIN1 );
-
+    
     // Set voltage reference
     error_flag |= adc13_set_voltage_reference( ctx, ADC13_REFMUX_RMUXP_INTERNAL, ADC13_REFMUX_RMUXN_INTERNAL );
-
+    
     return error_flag;
 }
 
@@ -203,47 +203,47 @@ err_t adc13_write_register ( adc13_t *ctx, uint8_t reg, uint8_t data_in )
 err_t adc13_read_registers ( adc13_t *ctx, uint8_t reg, uint8_t *data_out, uint8_t count )
 {
     uint8_t opcode[ 2 ] = { 0 };
-
+    
     reg &= ADC13_REG_COUNT_MASK;
     count &= ADC13_REG_COUNT_MASK;
-
+    
     if ( ( reg + count - 1 ) > ADC13_REG_GPIODAT || count < 1 )
     {
         return ADC13_ERROR;
     }
     opcode[ 0 ] = reg | ADC13_CMD_RREG;
     opcode[ 1 ] = count - 1;
-
+    
     spi_master_select_device( ctx->chip_select );
     err_t error_flag = spi_master_write_then_read( &ctx->spi, opcode, 2, data_out, count );
     spi_master_deselect_device( ctx->chip_select );
-
+    
     return error_flag;
 }
 
 err_t adc13_write_registers ( adc13_t *ctx, uint8_t reg, uint8_t *data_in, uint8_t count )
 {
     uint8_t tx_buf[ ADC13_REG_GPIODAT + 3 ] = { 0 };
-
+    
     reg &= ADC13_REG_COUNT_MASK;
     count &= ADC13_REG_COUNT_MASK;
-
+    
     if ( ( reg + count - 1 ) > ADC13_REG_GPIODAT || count < 1 )
     {
         return ADC13_ERROR;
     }
     tx_buf[ 0 ] = reg | ADC13_CMD_WREG;
     tx_buf[ 1 ] = count - 1;
-
+    
     for ( uint8_t cnt = 0; cnt < count; cnt++ )
     {
         tx_buf[ cnt + 2 ] = data_in[ cnt ];
     }
-
+    
     spi_master_select_device( ctx->chip_select );
     err_t error_flag = spi_master_write( &ctx->spi, tx_buf, count + 2 );
     spi_master_deselect_device( ctx->chip_select );
-
+    
     return error_flag;
 }
 
@@ -272,13 +272,13 @@ err_t adc13_read_raw_data ( adc13_t *ctx, int32_t *data_out )
     while ( adc13_get_dtr_pin ( ctx ) );
     err_t error_flag = adc13_generic_read( ctx, ADC13_CMD_RDATA1, rx_buf, 6 );
     adc13_set_str_pin( ctx, 0 );
-
+    
     if ( ( rx_buf[ 0 ] & ADC13_STATUS_ADC1_NEW_DATA ) == 0 )
     {
         return ADC13_ERROR;
     }
     checksum = checksum + rx_buf[ 1 ] + rx_buf[ 2 ] + rx_buf[ 3 ] + rx_buf[ 4 ];
-
+    
     if ( rx_buf[ 5 ] != ( checksum & 0x00FF ) )
     {
         return ADC13_ERROR;
@@ -299,14 +299,14 @@ err_t adc13_measure_voltage ( adc13_t *ctx, float vref, float *voltage )
     int32_t raw_adc = 0;
     uint8_t gain = 0;
     err_t error_flag = adc13_read_raw_data ( ctx, &raw_adc );
-
+    
     error_flag |= adc13_get_register_bits( ctx, ADC13_REG_MODE2, ADC13_MODE2_GAIN_MASK, &gain );
     gain = 1 << gain;
-
+    
     *voltage = vref / gain;
     *voltage /=  ( 1ul << 31 );
     *voltage *= raw_adc;
-
+    
     return error_flag;
 }
 
@@ -320,24 +320,24 @@ err_t adc13_measure_temperature ( adc13_t *ctx, float *temperature )
     uint8_t vref_neg = 0;
     uint8_t inp_pos = 0;
     uint8_t inp_neg = 0;
-
+    
     err_t error_flag = adc13_get_register_bits( ctx, ADC13_REG_MODE2, ADC13_MODE2_GAIN_MASK, &gain );
     error_flag |= adc13_set_gain( ctx, ADC13_MODE2_GAIN_1 );
-
+    
     error_flag |= adc13_get_register_bits( ctx, ADC13_REG_MODE2, ADC13_MODE2_BYPASS_MASK, &pga );
     error_flag |= adc13_set_register_bits( ctx, ADC13_REG_MODE2, ADC13_MODE2_BYPASS_MASK, ADC13_MODE2_BYPASS_PGA_ENABLED );
-
+    
     error_flag |= adc13_get_register_bits( ctx, ADC13_REG_MODE0, ADC13_MODE0_CHOP_MASK, &chop );
     error_flag |= adc13_set_register_bits( ctx, ADC13_REG_MODE0, ADC13_MODE0_CHOP_MASK, ADC13_MODE0_CHOP_DISABLE );
-
+    
     error_flag |= adc13_get_register_bits( ctx, ADC13_REG_INPMUX, ADC13_INPMUX_MUXP_MASK, &inp_pos );
     error_flag |= adc13_get_register_bits( ctx, ADC13_REG_INPMUX, ADC13_INPMUX_MUXN_MASK, &inp_neg );
     error_flag |= adc13_set_input_channel( ctx, ADC13_INPMUX_MUXP_TEMP_SENSOR_POS, ADC13_INPMUX_MUXN_TEMP_SENSOR_NEG );
-
+    
     error_flag |= adc13_get_register_bits( ctx, ADC13_REG_REFMUX, ADC13_REFMUX_RMUXP_MASK, &vref_pos );
     error_flag |= adc13_get_register_bits( ctx, ADC13_REG_REFMUX, ADC13_REFMUX_RMUXN_MASK, &vref_neg );
     error_flag |= adc13_set_voltage_reference( ctx, ADC13_REFMUX_RMUXP_INTERNAL, ADC13_REFMUX_RMUXN_INTERNAL );
-
+    
     error_flag |= adc13_measure_voltage( ctx, ADC13_VREF_INTERNAL, &voltage );
     *temperature = ( ( voltage * ADC13_TEMP_V_TO_MV - ADC13_TEMP_MILIVOLTS ) / ADC13_TEMP_COEFF ) + ADC13_TEMP_OFFSET;
     *temperature -= ADC13_TEMP_HEAT_OFFSET;
@@ -346,7 +346,7 @@ err_t adc13_measure_temperature ( adc13_t *ctx, float *temperature )
     error_flag |= adc13_set_register_bits( ctx, ADC13_REG_MODE0, ADC13_MODE0_CHOP_MASK, chop );
     error_flag |= adc13_set_input_channel( ctx, inp_pos, inp_neg );
     error_flag |= adc13_set_voltage_reference( ctx, vref_pos, vref_neg );
-
+    
     return error_flag;
 }
 
@@ -358,7 +358,7 @@ err_t adc13_set_input_channel ( adc13_t *ctx, uint8_t pos, uint8_t neg )
     }
     err_t error_flag = adc13_set_register_bits( ctx, ADC13_REG_INPMUX, ADC13_INPMUX_MUXP_MASK, pos );
     error_flag |= adc13_set_register_bits( ctx, ADC13_REG_INPMUX, ADC13_INPMUX_MUXN_MASK, neg );
-
+    
     return error_flag;
 }
 
@@ -370,7 +370,7 @@ err_t adc13_set_voltage_reference ( adc13_t *ctx, uint8_t pos, uint8_t neg )
     }
     err_t error_flag = adc13_set_register_bits( ctx, ADC13_REG_REFMUX, ADC13_REFMUX_RMUXP_MASK, pos );
     error_flag |= adc13_set_register_bits( ctx, ADC13_REG_REFMUX, ADC13_REFMUX_RMUXN_MASK, neg );
-
+    
     return error_flag;
 }
 

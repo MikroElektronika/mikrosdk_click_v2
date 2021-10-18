@@ -85,6 +85,7 @@ WIFIESP_RETVAL wifiesp_init ( wifiesp_t *ctx, wifiesp_cfg_t *cfg )
 
 void wifiesp_default_cfg ( wifiesp_t *ctx )
 {
+    Delay_100ms( );
     digital_out_high( &ctx->rst );
     digital_out_high( &ctx->cs );
 }

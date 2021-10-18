@@ -57,16 +57,16 @@ extern "C"{
  * @brief LTE Cat.1-EU description setting.
  * @details Specified setting for description of LTE Cat.1-EU Click driver.
  */
-#define LTECAT1EU_CMD_AT            "AT"
+#define LTECAT1EU_CMD_AT          "AT"
 #define LTECAT1EU_CMD_ATI         "ATI"
 #define LTECAT1EU_CMD_CGMR        "AT+CGMR"
 
 #define LTECAT1EU_CMD_CFUN        "AT+CFUN"
 #define LTECAT1EU_CMD_CREG        "AT+CREG"
 #define LTECAT1EU_CMD_CEREG       "AT+CEREG"
-#define LTECAT1EU_CMD_CGDCONT  "AT+CGDCONT"
+#define LTECAT1EU_CMD_CGDCONT     "AT+CGDCONT"
 #define LTECAT1EU_CMD_CIMI        "AT+CIMI"
-#define LTECAT1EU_CMD_CGATT      "AT+CGATT"
+#define LTECAT1EU_CMD_CGATT       "AT+CGATT"
 #define LTECAT1EU_CMD_CSQ         "AT+CSQ"
 #define LTECAT1EU_CMD_CESQ        "AT+CESQ"
 #define LTECAT1EU_CMD_COPS        "AT+COPS"

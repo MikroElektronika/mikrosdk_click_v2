@@ -1,0 +1,8 @@
+{
+    "name": "Qi RX Click",
+    "description": "Qi RX Click is a compact add-on board made for the purpose of wireless power transfer. This board features the PIC16F15313, a general-purpose 8-bit MCU that makes a flexible, low-cost alternative to the wireless charging solutions based on ASICs from Microchip.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","PIC16F15313"],
+    "category" : ["Wireless Charging"]
+}

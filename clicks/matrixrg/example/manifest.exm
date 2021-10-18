@@ -1,8 +1,0 @@
-{
-    "name": "Matrix RG Click",
-    "description": "Matrix RG click is a mikroBUS add-on board with two red 5x7 matrices driven by two MAX7219 8-bit LED Display Drivers. The active area of each matrix is 7.62mm high and 5.08 mm wide.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic"],
-    "hw" : ["click","MAX7219"],
-    "category" : ["LED Matrix"] 
-}

@@ -101,10 +101,10 @@ void c4glteapj_cfg_setup ( c4glteapj_cfg_t *cfg ) {
 
     // Additional gpio pins
     cfg->sta   = HAL_PIN_NC;
-    cfg->pwk = HAL_PIN_NC;
+    cfg->pwk   = HAL_PIN_NC;
     cfg->rts   = HAL_PIN_NC;
-    cfg->ring = HAL_PIN_NC;
-    cfg->cts = HAL_PIN_NC;
+    cfg->ring  = HAL_PIN_NC;
+    cfg->cts   = HAL_PIN_NC;
 
     cfg->baud_rate      = 115200;
     cfg->data_bit       = UART_DATA_BITS_DEFAULT;

@@ -13,7 +13,7 @@
  *
  * ## Application Task
  * In this example, we adjusts different frequencies every 3 sec.
- * Results are being sent to the Usart Terminal where you can track their changes.
+ * Results are being sent to the Uart Terminal where you can track their changes.
  *
  *
  * @author Stefan Ilic
@@ -31,10 +31,16 @@ void application_init ( void ) {
     log_cfg_t log_cfg;  /**< Logger config object. */
     clockgen5_cfg_t clockgen5_cfg;  /**< Click config object. */
 
-    // Logger initialization.
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
 

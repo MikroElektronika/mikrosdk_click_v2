@@ -1,0 +1,8 @@
+{
+    "name": "Proximity 15 Click",
+    "description": "Proximity 15 Click is a compact add-on board that contains a close-range proximity sensing solution. This board features the VL53L1, a state-of-the-art, Time-of-Flight (ToF), a laser-ranging miniature sensor from STMicroelectronics.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","VL53L1"],
+    "category" : ["Proximity"]
+}

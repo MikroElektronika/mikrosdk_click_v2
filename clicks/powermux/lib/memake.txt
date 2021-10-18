@@ -1,0 +1,36 @@
+type: library
+
+target: lib_powermux
+
+sources: {
+    src/powermux.c
+}
+
+headers: {
+    include/powermux.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/powermux.h) dst(include/powermux.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.PowerMUX

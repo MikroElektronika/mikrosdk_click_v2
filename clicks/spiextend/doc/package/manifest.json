@@ -1,0 +1,38 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "SPI",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "SPI Extend click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.spiextend",
+    "product_link": "https://www.mikroe.com/spi-extend-click",
+    "short_description": "SPI Extend Click is a compact add-on board for applications that require extending the SPI communication bus over a long distance. This board features the LTC4332, an SPI slave extender device, from Analog Devices. Using a ±60V fault protected differential transceiver, the LTC4332 can transmit SPI data, including an interrupt signal, up to 2MHz over two twisted-pair cables.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+	"related_projects":[
+        3808
+    ],	
+    "version": "2.0.0.2"
+}
+
+

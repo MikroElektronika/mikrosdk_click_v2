@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20211018](#20211018)**
 + **[20210917](#20210917)**
 + **[20210910](#20210910)**
 + **[20210903](#20210903)**
@@ -19,6 +20,16 @@
 
 ---
 ---
+---
+
+## `20211018`
+
+* Sync click boards
+* Added support for NXP
+* Update log initialization for all click boards
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20210917`

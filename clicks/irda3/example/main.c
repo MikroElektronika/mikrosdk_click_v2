@@ -18,10 +18,6 @@
  * Uncomment one of the below macros to select which example will be executed.
  * By default the DEMO_APP_TRANSMITTER_1 example is selected.
  *
- * ## Additional Function
- * - static void irda3_clear_app_buf ( void )
- * - static err_t irda3_process ( void )
- *
  * @author Jelena Milosavljevic
  *
  */
@@ -52,11 +48,16 @@ void application_init( void ) {
     irda3_cfg_t irda3_cfg;
     log_cfg_t logger_cfg;
 
-    //  Logger initialization.
-
-    LOG_MAP_USB_UART( logger_cfg );
-    logger_cfg.level = LOG_LEVEL_DEBUG;
-    logger_cfg.baud = 115200;
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
+    LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &logger_cfg );
     log_printf( &logger, "***  IrDA initialization done  ***\r\n" );
     log_printf( &logger, "**********************************\r\n" );

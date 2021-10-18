@@ -152,7 +152,7 @@ typedef struct
     spi_master_t  spi;          /**< SPI driver object. */
 
     pin_name_t  chip_select;    /**< Chip select pin descriptor (used for SPI driver). */
-
+    
     uint8_t rs;                 /**< Return status. */
     float resolution;           /**< Resolution. */
 

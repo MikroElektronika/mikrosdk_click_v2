@@ -1,0 +1,36 @@
+type: library
+
+target: lib_headphoneamp
+
+sources: {
+    src/headphoneamp.c
+}
+
+headers: {
+    include/headphoneamp.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/headphoneamp.h) dst(include/headphoneamp.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.HeadphoneAMP

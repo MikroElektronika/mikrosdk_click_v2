@@ -116,8 +116,8 @@ typedef struct
     pin_name_t tx_pin;                          /**< TX pin. */
 
     // Additional gpio pins
-    pin_name_t rst;                            /**< Description. */
-    pin_name_t wkp;                            /**< Description. */
+     pin_name_t rst;                            /**< Description. */
+     pin_name_t wkp;                            /**< Description. */
 
     // Static variable
     uint32_t          baud_rate;                /**< Clock speed. */

@@ -1,0 +1,36 @@
+type: library
+
+target: lib_vibromotor3
+
+sources: {
+    src/vibromotor3.c
+}
+
+headers: {
+    include/vibromotor3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/vibromotor3.h) dst(include/vibromotor3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.VibroMotor3

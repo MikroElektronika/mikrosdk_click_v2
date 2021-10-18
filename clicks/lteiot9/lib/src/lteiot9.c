@@ -77,10 +77,10 @@ err_t lteiot9_init ( lteiot9_t *ctx, lteiot9_cfg_t *cfg )
     // Output pins
     digital_out_init( &ctx->smi, cfg->smi );
     digital_out_init( &ctx->on, cfg->on );
-    digital_out_init( &ctx->cts, cfg->rts );
+    digital_out_init( &ctx->rts, cfg->rts );
 
     // Input pins
-    digital_in_init( &ctx->rts, cfg->cts );
+    digital_in_init( &ctx->cts, cfg->cts );
 
     return UART_SUCCESS;
 }

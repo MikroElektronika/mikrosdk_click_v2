@@ -1,0 +1,7 @@
+type: subdirs
+project: ISO9141
+
+subdirs: {
+    lib
+    example
+}

@@ -1,0 +1,13 @@
+type: executable
+target: example_watchdog
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Watchdog
+}
+
+sources: {
+    main.c
+}

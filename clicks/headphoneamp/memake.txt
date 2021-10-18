@@ -1,0 +1,8 @@
+type: subdirs
+
+project: HeadphoneAMP
+
+subdirs: {
+    lib
+    example
+}

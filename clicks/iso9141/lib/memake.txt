@@ -1,0 +1,36 @@
+type: library
+
+target: lib_iso9141
+
+sources: {
+    src/iso9141.c
+}
+
+headers: {
+    include/iso9141.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/iso9141.h) dst(include/iso9141.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.ISO9141

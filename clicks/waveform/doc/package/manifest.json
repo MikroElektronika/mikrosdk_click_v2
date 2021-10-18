@@ -1,6 +1,6 @@
 {
     "architecture": "ARM|PIC|PIC32",
-    "category": "Measurements",
+    "category": "Clock generator",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -32,8 +32,10 @@
     "related_projects":[
         2614
     ],
-    "version": "2.0.0.8"
+    "version": "2.0.0.10"
 }
+
+
 
 
 

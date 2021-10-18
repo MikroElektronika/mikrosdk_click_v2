@@ -1,11 +1,12 @@
 {
-    "architecture": "ARM",
+    "architecture": "ARM|PIC|PIC32",
     "category": "OSD",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
         "hex_files",
-        "examples"
+        "examples",
+        "source_files"
     ],
     "dependency_list": [
     ],
@@ -25,8 +26,17 @@
     "name": "mikroe.click.osd",
     "product_link": "https://www.mikroe.com/osd-click",
     "short_description": "OSD Click features MAX7456 single-channel monochrome OSD module with integrated EEPROM memory as well as two RCA sockets. It is used to create on-screen menus and other video overlays, such as custom graphics, company logo, time and date using 256 user-programmable characters or pictographs.",
-    "supported_compiler": "mikroC",
+    "supported_compiler": "mikroC AI",
     "type": "Library",
-    "version": "2.0.0.1"
+    "_type":"mikroSDK Library",
+    "related_projects":[
+        505
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.0.0.5"
 }
+
+
+
+
 

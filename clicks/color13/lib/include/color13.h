@@ -78,7 +78,7 @@ extern "C"{
 #define COLOR13_REG_LS_DATA_RED_0   0x13
 #define COLOR13_REG_LS_DATA_RED_1   0x14
 #define COLOR13_REG_LS_DATA_RED_2   0x15
-#define COLOR13_REG_INT_CFG         0x19
+#define COLOR13_REG_INT_CFG         0x19        
 #define COLOR13_REG_INT_PST         0x1A
 #define COLOR13_REG_PS_THRES_UP_0   0x1B
 #define COLOR13_REG_PS_THRES_UP_1   0x1C

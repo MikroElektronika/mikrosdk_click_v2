@@ -34,10 +34,10 @@ void ltecat1eu_cfg_setup ( ltecat1eu_cfg_t *cfg ) {
     cfg->tx_pin = HAL_PIN_NC;
 
     // Additional gpio pins
-    cfg->rst = HAL_PIN_NC;
+    cfg->rst   = HAL_PIN_NC;
     cfg->cts   = HAL_PIN_NC;
-    cfg->cs = HAL_PIN_NC;
-    cfg->rts = HAL_PIN_NC;
+    cfg->cs    = HAL_PIN_NC;
+    cfg->rts   = HAL_PIN_NC;
 
     cfg->baud_rate      = 115200;
     cfg->data_bit       = UART_DATA_BITS_DEFAULT;

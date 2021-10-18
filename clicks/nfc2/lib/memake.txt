@@ -1,0 +1,36 @@
+type: library
+
+target: lib_nfc2
+
+sources: {
+    src/nfc2.c
+}
+
+headers: {
+    include/nfc2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/nfc2.h) dst(include/nfc2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.NFC2

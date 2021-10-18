@@ -85,14 +85,14 @@ err_t bucknboost_default_cfg ( bucknboost_t *ctx )
     bucknboost_device_enable( ctx, BUCKNBOOST_ENABLE );
     Delay_100ms( );
     err_t error_check = bucknboost_reg_standby_mode ( ctx, BUCKNBOOST_WAKE_UP );
-    error_check != bucknboost_send_cmd ( ctx, BUCKNBOOST_CMD_RESET );
+    error_check |= bucknboost_send_cmd ( ctx, BUCKNBOOST_CMD_RESET );
     Delay_100ms( );
-    error_check != bucknboost_write_byte ( ctx, BUCKNBOOST_REG_STBY_CTRL, BUCKNBOOST_NORMAL_MODE_ALL );
-    error_check != bucknboost_write_byte ( ctx, BUCKNBOOST_REG_ILIMIT_1_2, BUCKNBOOST_CURRENT_LIMIT_1100mA );
-    error_check != bucknboost_write_byte ( ctx, BUCKNBOOST_REG_ILIMIT_3_4, BUCKNBOOST_CURRENT_LIMIT_1100mA );
-    error_check != bucknboost_write_byte ( ctx, BUCKNBOOST_REG_ILIMIT_5_6, BUCKNBOOST_CURRENT_LIMIT_1100mA );
+    error_check |= bucknboost_write_byte ( ctx, BUCKNBOOST_REG_STBY_CTRL, BUCKNBOOST_NORMAL_MODE_ALL );
+    error_check |= bucknboost_write_byte ( ctx, BUCKNBOOST_REG_ILIMIT_1_2, BUCKNBOOST_CURRENT_LIMIT_1100mA );
+    error_check |= bucknboost_write_byte ( ctx, BUCKNBOOST_REG_ILIMIT_3_4, BUCKNBOOST_CURRENT_LIMIT_1100mA );
+    error_check |= bucknboost_write_byte ( ctx, BUCKNBOOST_REG_ILIMIT_5_6, BUCKNBOOST_CURRENT_LIMIT_1100mA );
     
-    error_check != bucknboost_send_cmd ( ctx, BUCKNBOOST_CMD_SAVECONFIG );
+    error_check |= bucknboost_send_cmd ( ctx, BUCKNBOOST_CMD_SAVECONFIG );
     Delay_100ms( );
     
     error_check |= bucknboost_set_buck_out_voltage( ctx, BUCKNBOOST_OUTPUT_CH_1, 

@@ -77,7 +77,7 @@ err_t hallcurrent10_init ( hallcurrent10_t *ctx, hallcurrent10_cfg_t *cfg )
 err_t hallcurrent10_default_cfg ( hallcurrent10_t *ctx ) 
 {
     uint16_t read_adc;
-
+    
     return hallcurrent10_read_adc( ctx, &read_adc );
 }
 
@@ -85,14 +85,14 @@ err_t hallcurrent10_read_adc ( hallcurrent10_t *ctx, uint16_t *read_adc )
 {
     uint8_t rx_buf[ 2 ];
     uint16_t adc_val;
-
+    
     err_t err_flag = i2c_master_read( &ctx->i2c, rx_buf, 2 );
 
     adc_val = rx_buf[ 0 ];
     adc_val <<= 8;
     adc_val |= rx_buf[ 1 ];
     adc_val &= HALLCURRENT10_DATA_12_BIT;
-
+    
     *read_adc = adc_val;
 
     return err_flag;
@@ -101,9 +101,9 @@ err_t hallcurrent10_read_adc ( hallcurrent10_t *ctx, uint16_t *read_adc )
 err_t hallcurrent10_get_adc_voltage ( hallcurrent10_t *ctx, float *adc_vtg ) 
 {
     uint16_t adc_val;
-
+    
     err_t err_flag = hallcurrent10_read_adc( ctx, &adc_val );
-
+    
     *adc_vtg = ( float ) ( adc_val );
     *adc_vtg *= HALLCURRENT10_VREF_5000_mV;
     *adc_vtg /= HALLCURRENT10_ADC_FULL_RESOLUTION;
@@ -119,7 +119,7 @@ err_t hallcurrent10_get_current ( hallcurrent10_t *ctx, float *current )
     err_t err_flag;
 
     for ( uint8_t n_cnt = 0; n_cnt < HALLCURRENT10_ADC_NUM_OF_MEASURE; n_cnt++ ) 
-    {
+    {       
         err_flag |= hallcurrent10_get_adc_voltage( ctx, &adc_vtg );
         adc_vtg_sum += adc_vtg;
         Delay_1ms( );
@@ -127,7 +127,7 @@ err_t hallcurrent10_get_current ( hallcurrent10_t *ctx, float *current )
 
     *current = adc_vtg_sum;
     *current /= HALLCURRENT10_ADC_NUM_OF_MEASURE;
-
+    
     *current /= HALLCURRENT10_CURRENT_RANGE;
     *current *= HALLCURRENT10_CONV_A_TO_mA;
 

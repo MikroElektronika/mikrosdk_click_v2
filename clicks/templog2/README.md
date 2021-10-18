@@ -89,7 +89,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 void application_init( void )
 {
     templog2_cfg_t templog2_cfg;
-    log_cfg_t logger_cfg;
+    log_cfg_t log_cfg;
 
     //  Click initialization.
     templog2_cfg_setup( &templog2_cfg );
@@ -99,11 +99,17 @@ void application_init( void )
     //  Click default configuration.
     templog2_default_config( &templog2 );
 
-    //  Logger console initialization.
-    logger_cfg.level = LOG_LEVEL_DEBUG;
-    LOG_MAP_USB_UART( logger_cfg );
-	logger_cfg.baud = 57600;
-    log_init( &logger, &logger_cfg );
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
+    LOG_MAP_USB_UART( log_cfg );
+    log_init( &logger, &log_cfg );
     log_info( &logger, "----  Temp-Log 2 Application Init Done  ----\r\n" );
 }
 

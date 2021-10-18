@@ -1,0 +1,36 @@
+type: library
+
+target: lib_pressure13
+
+sources: {
+    src/pressure13.c
+}
+
+headers: {
+    include/pressure13.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/pressure13.h) dst(include/pressure13.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Pressure13

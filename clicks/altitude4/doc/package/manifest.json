@@ -1,6 +1,6 @@
 {
     "architecture": "ARM|PIC|PIC32",
-    "category": "Measurement",
+    "category": "Pressure",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -33,8 +33,11 @@
         3284
     ],
     "_type": "mikroSDK Library",
-    "version": "2.0.0.3"
+    "version": "2.0.0.6"
 }
+
+
+
 
 
 

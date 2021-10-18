@@ -39,7 +39,7 @@ err_t brushless16_init ( brushless16_t *ctx, brushless16_cfg_t *cfg )
     err_t return_flag = 0;
 
     return_flag |= digital_out_init( &ctx->en, cfg->en );
-
+    
     return_flag |= digital_in_init( &ctx->fg, cfg->fg );
     return_flag |= digital_in_init( &ctx->rd, cfg->rd );
 

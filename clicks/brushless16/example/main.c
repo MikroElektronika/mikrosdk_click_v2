@@ -31,10 +31,16 @@ void application_init ( void )
     log_cfg_t log_cfg;  /**< Logger config object. */
     brushless16_cfg_t brushless16_cfg;  /**< Click config object. */
 
-    // Logger initialization.
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
 
@@ -56,23 +62,23 @@ void application_task ( void )
 {
     static uint16_t timer = 5000;
     static uint8_t state = 1;
-
+    
     if ( brushless16_get_rd( &brushless16 ) )
     {
         log_info( &logger, " Motor Lock" );
         Delay_ms( 500 );
     }
-
+    
     if ( brushless16_get_fg( &brushless16 ) )
     {
         log_info( &logger, " FG" );
         Delay_ms( 500 );
     }
-
+    
     if ( !( timer-- ) )
     {
         timer = 5000;
-
+        
         if ( state )
         {
             log_info( &logger, " Motor stop" );
@@ -81,11 +87,11 @@ void application_task ( void )
         {
             log_info( &logger, " Motor rotating" );
         }
-
+        
         brushless16_set_en( &brushless16, state );
         state = !state;
     }
-
+    
     Delay_ms( 1 );
 }
 

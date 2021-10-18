@@ -1,7 +1,0 @@
-type: subdirs
-project: Rotary
-
-subdirs: {
-    lib
-    example
-}

@@ -163,7 +163,7 @@ void gsm4_send_command ( gsm4_t *ctx, char *command )
     len = strlen( command );
     
     strncpy( tmp_buf, command, len );
-    strcat( tmp_buf, "\n" );
+    strcat( tmp_buf, "\r\n" );
 
     gsm4_generic_write( ctx, tmp_buf, strlen( tmp_buf ) );
 }

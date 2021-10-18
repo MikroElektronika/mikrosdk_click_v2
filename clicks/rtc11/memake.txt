@@ -1,0 +1,7 @@
+type: subdirs
+project: RTC11
+
+subdirs: {
+    lib
+    example
+}

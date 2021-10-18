@@ -43,7 +43,7 @@ void irda3_cfg_setup ( irda3_cfg_t *cfg );
 
 - `irda3_init` Initialization function.
 ```c
-IRDA3_RETVAL irda3_init ( irda3_t *ctx, irda3_cfg_t *cfg );
+err_t irda3_init ( irda3_t *ctx, irda3_cfg_t *cfg );
 ```
 
 - `irda3_default_cfg` Click Default Configuration function.
@@ -83,11 +83,16 @@ void application_init( void ) {
     irda3_cfg_t irda3_cfg;
     log_cfg_t logger_cfg;
 
-    //  Logger initialization.
-
-    LOG_MAP_USB_UART( logger_cfg );
-    logger_cfg.level = LOG_LEVEL_DEBUG;
-    logger_cfg.baud = 115200;
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
+    LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &logger_cfg );
     log_printf( &logger, "***  IrDA initialization done  ***\r\n" );
     log_printf( &logger, "**********************************\r\n" );

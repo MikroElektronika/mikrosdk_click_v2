@@ -1,72 +1,60 @@
-/*
- * MikroSDK - MikroE Software Development Kit
- * Copyright© 2020 MikroElektronika d.o.o.
- * 
- * Permission is hereby granted, free of charge, to any person 
- * obtaining a copy of this software and associated documentation 
- * files (the "Software"), to deal in the Software without restriction, 
- * including without limitation the rights to use, copy, modify, merge, 
- * publish, distribute, sublicense, and/or sell copies of the Software, 
- * and to permit persons to whom the Software is furnished to do so, 
- * subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be 
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
- * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE 
- * OR OTHER DEALINGS IN THE SOFTWARE. 
- */
+/****************************************************************************
+** Copyright (C) 2020 MikroElektronika d.o.o.
+** Contact: https://www.mikroe.com/contact
+**
+** Permission is hereby granted, free of charge, to any person obtaining a copy
+** of this software and associated documentation files (the "Software"), to deal
+** in the Software without restriction, including without limitation the rights
+** to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+** copies of the Software, and to permit persons to whom the Software is
+** furnished to do so, subject to the following conditions:
+** The above copyright notice and this permission notice shall be
+** included in all copies or substantial portions of the Software.
+**
+** THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+** EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+** OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+** IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+** DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
+** OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+**  USE OR OTHER DEALINGS IN THE SOFTWARE.
+****************************************************************************/
 
 /*!
- * \file
- *
- * \brief This file contains API for IR Grid Click driver.
- *
- * \addtogroup irgrid IR Grid Click Driver
- * @{
+ * @file irgrid.h
+ * @brief This file contains API for IR Grid Click Driver.
  */
-// ----------------------------------------------------------------------------
 
 #ifndef IRGRID_H
 #define IRGRID_H
+
+#ifdef __cplusplus
+extern "C"{
+#endif
 
 #include "drv_digital_out.h"
 #include "drv_digital_in.h"
 #include "drv_i2c_master.h"
 
-// -------------------------------------------------------------- PUBLIC MACROS 
-/**
- * \defgroup macros Macros
- * \{
+/*!
+ * @addtogroup irgrid IR Grid Click Driver
+ * @brief API for configuring and manipulating IR Grid Click driver.
+ * @{
  */
 
 /**
- * \defgroup map_mikrobus MikroBUS
- * \{
+ * @defgroup irgrid_reg IR Grid Registers List
+ * @brief List of registers of IR Grid Click driver.
  */
-#define IRGRID_MAP_MIKROBUS( cfg, mikrobus ) \
-  cfg.scl  = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
-  cfg.sda  = MIKROBUS( mikrobus, MIKROBUS_SDA )
-/** \} */
 
 /**
- * \defgroup error_code Error Code
- * \{
+ * @addtogroup irgrid_reg
+ * @{
  */
-#define IRGRID_RETVAL  uint8_t
-
-#define IRGRID_OK           0x00
-#define IRGRID_INIT_ERROR   0xFF
-/** \} */
 
 /**
- * \defgroup registers Registers
- * \{
+ * @brief IR Grid description register.
+ * @details Specified register for description of IR Grid Click driver.
  */
 #define IRGRID_CAL_ACOMMON_L        0xD0
 #define IRGRID_CAL_ACOMMON_H        0xD1
@@ -92,25 +80,45 @@
 #define IRGRID_CAL_EMIS_L           0xE4
 #define IRGRID_CAL_EMIS_H           0xE5
 #define IRGRID_OSC_TRIM_VALUE       0xF7
-/** \} */
-/** \} */ // End group macro 
-// --------------------------------------------------------------- PUBLIC TYPES
+
+/*! @} */ // irgrid_reg
+
 /**
- * \defgroup type Types
- * \{
+ * @defgroup irgrid_set IR Grid Registers Settings
+ * @brief Settings for registers of IR Grid Click driver.
  */
 
 /**
- * @brief Click ctx object definition.
+ * @defgroup irgrid_map IR Grid MikroBUS Map
+ * @brief MikroBUS pin mapping of IR Grid Click driver.
+ */
+
+/**
+ * @addtogroup irgrid_map
+ * @{
+ */
+
+/**
+ * @brief MikroBUS pin mapping.
+ * @details Mapping pins of IR Grid Click to the selected MikroBUS.
+ */
+#define IRGRID_MAP_MIKROBUS( cfg, mikrobus ) \
+    cfg.scl = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
+    cfg.sda = MIKROBUS( mikrobus, MIKROBUS_SDA );
+
+/*! @} */ // irgrid_map
+/*! @} */ // irgrid
+
+/**
+ * @brief IR Grid Click context object.
+ * @details Context object definition of IR Grid Click driver.
  */
 typedef struct
-{    
-    // Modules 
+{
+    // Modules
+    i2c_master_t i2c;       /**< I2C driver object. */
 
-    i2c_master_t i2c;
-
-    // ctx variable 
-
+    // I2C slave address
     uint8_t slave_ram_address;
     uint8_t slave_eeprom_address;
 
@@ -124,20 +132,17 @@ typedef struct
 } irgrid_t;
 
 /**
- * @brief Click configuration structure definition.
+ * @brief IR Grid Click configuration object.
+ * @details Configuration object definition of IR Grid Click driver.
  */
 typedef struct
 {
-    // Communication gpio pins 
+    pin_name_t  scl;            /**< Clock pin descriptor for I2C driver. */
+    pin_name_t  sda;            /**< Bidirectional data pin descriptor for I2C driver. */
 
-    pin_name_t scl;
-    pin_name_t sda;
-
-    // static variable 
-
-    uint32_t i2c_speed;
-    uint8_t i2c_ram_address;
-    uint8_t i2c_eeprom_address;
+    uint32_t  i2c_speed;        /**< I2C serial speed. */
+    uint8_t i2c_ram_address;    /**< I2C ram address. */
+    uint8_t i2c_eeprom_address; /**< I2C eeprom address. */
 
 } irgrid_cfg_t;
 
@@ -157,37 +162,49 @@ typedef struct
 
 } irgrid_data_t;
 
-/** \} */ // End types group
-// ----------------------------------------------- PUBLIC FUNCTION DECLARATIONS
-
 /**
- * \defgroup public_function Public function
- * \{
+ * @brief IR Grid Click return value data.
+ * @details Predefined enum values for driver return values.
  */
- 
-#ifdef __cplusplus
-extern "C"{
-#endif
+typedef enum
+{
+    IRGRID_OK = 0,
+    IRGRID_ERROR = -1
+
+} irgrid_return_value_t;
+
+/*!
+ * @addtogroup irgrid IR Grid Click Driver
+ * @brief API for configuring and manipulating IR Grid Click driver.
+ * @{
+ */
 
 /**
- * @brief Config Object Initialization function.
- *
- * @param cfg  Click configuration structure.
- *
- * @description This function initializes click configuration structure to init state.
- * @note All used pins will be set to unconnected state.
+ * @brief IR Grid configuration object setup function.
+ * @details This function initializes click configuration structure to initial
+ * values.
+ * @param[out] cfg : Click configuration structure.
+ * See #irgrid_cfg_t object definition for detailed explanation.
+ * @return Nothing.
+ * @note The all used pins will be set to unconnected state.
  */
 void irgrid_cfg_setup ( irgrid_cfg_t *cfg );
 
 /**
- * @brief Initialization function.
- * 
- * @param ctx Click object.
- * @param cfg Click configuration structure.
- * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @brief IR Grid initialization function.
+ * @details This function initializes all necessary pins and peripherals used
+ * for this click board.
+ * @param[out] ctx : Click context object.
+ * See #irgrid_t object definition for detailed explanation.
+ * @param[in] cfg : Click configuration structure.
+ * See #irgrid_cfg_t object definition for detailed explanation.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ *
+ * See #err_t definition for detailed explanation.
+ * @note None.
  */
-IRGRID_RETVAL irgrid_init ( irgrid_t *ctx, irgrid_cfg_t *cfg );
+err_t irgrid_init ( irgrid_t *ctx, irgrid_cfg_t *cfg );
 
 /**
  * @brief Device Initialization
@@ -295,9 +312,8 @@ float irgrid_get_amb_temperature ( irgrid_t *ctx );
 #ifdef __cplusplus
 }
 #endif
-#endif  // _IRGRID_H_
+#endif // IRGRID_H
 
-/** \} */ // End public_function group
-/// \}    // End click Driver group  
-/*! @} */
-// ------------------------------------------------------------------------- END
+/*! @} */ // irgrid
+
+// ------------------------------------------------------------------------ END

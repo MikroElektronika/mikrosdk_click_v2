@@ -1,7 +1,0 @@
-type: subdirs
-project: Eeram
-
-subdirs: {
-    lib
-    example
-}

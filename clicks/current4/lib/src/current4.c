@@ -65,7 +65,7 @@ err_t current4_init ( current4_t *ctx, current4_cfg_t *cfg )
     {
         return ADC_ERROR;
     }
-
+    
     ctx->ic_vref = 0;
 
     return ADC_SUCCESS;
@@ -85,9 +85,9 @@ err_t current4_read_load_current ( current4_t *ctx, float *load_current )
 {
     float voltage = 0;
     err_t ret_val = current4_read_an_pin_voltage( ctx, &voltage );
-
+    
     *load_current = ( voltage - ctx->ic_vref ) / GAIN;
-
+    
     return voltage;
 }
 

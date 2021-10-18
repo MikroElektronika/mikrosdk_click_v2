@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Wireless Charging",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Qi RX click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.qirx",
+    "product_link": "https://libstock.mikroe.com/projects/view/3875/hvac-click",
+    "short_description": "Qi RX Click is a compact add-on board made for the purpose of wireless power transfer. This board features the PIC16F15313, a general-purpose 8-bit MCU that makes a flexible, low-cost alternative to the wireless charging solutions based on ASICs from Microchip.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "related_projects":[
+        3895
+    ],
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.0"
+}

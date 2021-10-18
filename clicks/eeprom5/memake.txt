@@ -1,0 +1,7 @@
+type: subdirs
+project: EEPROM5
+
+subdirs: {
+    lib
+    example
+}

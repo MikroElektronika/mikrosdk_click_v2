@@ -1,0 +1,36 @@
+type: library
+
+target: lib_powermonitor
+
+sources: {
+    src/powermonitor.c
+}
+
+headers: {
+    include/powermonitor.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/powermonitor.h) dst(include/powermonitor.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.PowerMonitor
