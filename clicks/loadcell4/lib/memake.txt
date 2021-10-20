@@ -1,0 +1,36 @@
+type: library
+
+target: lib_loadcell4
+
+sources: {
+    src/loadcell4.c
+}
+
+headers: {
+    include/loadcell4.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/loadcell4.h) dst(include/loadcell4.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.LoadCell4

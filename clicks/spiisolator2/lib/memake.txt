@@ -1,0 +1,36 @@
+type: library
+
+target: lib_spiisolator2
+
+sources: {
+    src/spiisolator2.c
+}
+
+headers: {
+    include/spiisolator2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/spiisolator2.h) dst(include/spiisolator2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.SPIIsolator2

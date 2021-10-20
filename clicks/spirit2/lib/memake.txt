@@ -1,0 +1,36 @@
+type: library
+
+target: lib_spirit2
+
+sources: {
+    src/spirit2.c
+}
+
+headers: {
+    include/spirit2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/spirit2.h) dst(include/spirit2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.SPIRIT2

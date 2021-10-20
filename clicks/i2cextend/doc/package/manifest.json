@@ -1,0 +1,38 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "I2C",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "I2C Extend click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.i2cextend",
+    "product_link": "https://www.mikroe.com/i2c-extend-click",
+    "short_description": "I2C Extend Click is a compact add-on board for applications that require extending the I2C communication bus over a long distance. This board features the LTC4331 - an I2C slave device extender over a rugged differential link, from Analog Devices.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "related_projects":[
+        3281
+    ],
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.3"
+}
+
+

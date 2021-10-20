@@ -114,10 +114,16 @@ void application_init ( void )
     log_cfg_t log_cfg;  /**< Logger config object. */
     irnss_cfg_t irnss_cfg;  /**< Click config object. */
 
-    // Logger initialization.
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
     Delay_ms( 500 );
@@ -146,16 +152,18 @@ void application_init ( void )
 void application_task ( void ) 
 {
     irnss_process();
-
+    
+    
     err_t error_flag = irnss_element_parser( RSP_GNGGA, RSP_GNGGA_LATITUDE_ELEMENT, 
                                              latitude_data );
-
+    
     error_flag |= irnss_element_parser(  RSP_GNGGA, RSP_GNGGA_LONGITUDE_ELEMENT, 
                                          longitude_data );
-
+    
     error_flag |= irnss_element_parser(  RSP_GNGGA, RSP_GNGGA_ALTITUDE_ELEMENT, 
                                          altitude_data );
-
+    
+    
     if ( error_flag == 0 )
     {
         if ( last_error_flag != 0)
@@ -181,7 +189,7 @@ void application_task ( void )
         }
         log_printf( &logger, "." );
     }
-
+    
     if ( error_flag != -1 )
     {
         last_error_flag = error_flag;
@@ -247,23 +255,23 @@ static err_t irnss_process ( void )
 static err_t irnss_cmd_parser ( char *cmd )
 {
     err_t ret_flag = 0;
-
+    
     if ( strstr( app_buf, cmd ) != 0 )
     {
         char * __generic gngga_ptr;
-
+        
         gngga_ptr = strstr( app_buf, cmd );
-
+        
         while (strchr( gngga_ptr, '$' ) == 0)
         {
             irnss_process();
         }
-
+        
         for ( ; ; )
         {
             log_printf( &logger, "%c", *gngga_ptr );
             gngga_ptr++;
-
+            
             if ( ( *gngga_ptr == '$' ) )
             {
                 break;
@@ -274,28 +282,29 @@ static err_t irnss_cmd_parser ( char *cmd )
     {
         ret_flag = -1;
     }
-
+    
     return ret_flag;
 }
 
 static err_t irnss_element_parser ( char *cmd, uint8_t element, char *element_data )
 {
     err_t ret_flag = 0;
-
+    
+    
     if ( strstr( app_buf, cmd ) != 0 )
     {
         uint8_t element_cnt = 0;
         char data_buf[ 30 ] = { 0 };
         uint8_t data_cnt = 0;
         char * __generic gngga_ptr;
-
+        
         gngga_ptr = strstr( app_buf, cmd );
-
+        
         while (strchr( gngga_ptr, '$' ) == 0)
         {
             irnss_process();
         }
-
+        
         for ( ; ; )
         {
             if ( ( *gngga_ptr == '$' ) )
@@ -303,7 +312,7 @@ static err_t irnss_element_parser ( char *cmd, uint8_t element, char *element_da
                 ret_flag = -2;
                 break;
             }
-
+            
             if ( *gngga_ptr == ',' )
             {
                 if (element_cnt == element)
@@ -315,22 +324,22 @@ static err_t irnss_element_parser ( char *cmd, uint8_t element, char *element_da
                     strcpy( element_data, data_buf );
                     break;
                 }
-
+                
                 element_cnt++;
             }
-
+            
             if ( ( element == element_cnt ) && ( *gngga_ptr != ',' ) )
             {
                 data_buf[ data_cnt ] = *gngga_ptr;
                 data_cnt++;
-
+                
                 if ( data_cnt >= 30 )
                 {
                     ret_flag = -3;
                     break;
                 }
             }
-
+            
             gngga_ptr++;
         }
     }
@@ -338,7 +347,7 @@ static err_t irnss_element_parser ( char *cmd, uint8_t element, char *element_da
     {
         ret_flag = -1;
     }
-
+    
     return ret_flag;
 }
 

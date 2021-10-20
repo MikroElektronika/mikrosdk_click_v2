@@ -154,7 +154,7 @@ err_t c6dofimu13_mag_init ( c6dofimu13_t *ctx, uint8_t res, uint8_t op_mode, uin
     error_check = c6dofimu13_set_slave_address ( ctx, C6DOFIMU13_DEV_ADDRESS_MAG );
     
     cmd_byte = C6DOFIMU13_MAG_CTL_3_SRST_SR;
-    error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_3, &cmd_byte, 1 );
+    error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_3, &cmd_byte, 1 );
     
     if ( temp_meas == 1 )
     {
@@ -182,9 +182,9 @@ err_t c6dofimu13_mag_init ( c6dofimu13_t *ctx, uint8_t res, uint8_t op_mode, uin
                        C6DOFIMU13_MAG_CTL_1_ODR_100 | 
                        C6DOFIMU13_MAG_CTL_1_FS_DEF;
                        
-            error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_3, &force_state, 1 );
-            error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_4, &range_byte, 1 );
-            error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_1, &cmd_byte, 1 );
+            error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_3, &force_state, 1 );
+            error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_4, &range_byte, 1 );
+            error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_1, &cmd_byte, 1 );
             break;
         }
         case C6DOFIMU13_MAG_OP_MODE_CONT:
@@ -192,8 +192,8 @@ err_t c6dofimu13_mag_init ( c6dofimu13_t *ctx, uint8_t res, uint8_t op_mode, uin
             force_state |= C6DOFIMU13_MAG_CTL_3_FRC_SM;
             cmd_byte = C6DOFIMU13_MAG_CTL_1_PC_NORM | C6DOFIMU13_MAG_CTL_1_ODR_100;
             
-            error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_4, &range_byte, 1 );
-            error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_1, &cmd_byte, 1 );
+            error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_4, &range_byte, 1 );
+            error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_1, &cmd_byte, 1 );
             break;
         }
         default:
@@ -202,9 +202,9 @@ err_t c6dofimu13_mag_init ( c6dofimu13_t *ctx, uint8_t res, uint8_t op_mode, uin
                        C6DOFIMU13_MAG_CTL_1_ODR_100 | 
                        C6DOFIMU13_MAG_CTL_1_FS_DEF;
                        
-            error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_3, &force_state, 1 );
-            error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_4, &range_byte, 1 );
-            error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_1, &cmd_byte, 1 );
+            error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_3, &force_state, 1 );
+            error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_4, &range_byte, 1 );
+            error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_1, &cmd_byte, 1 );
             break;
         }
     }
@@ -221,9 +221,9 @@ err_t c6dofimu13_mag_get_x ( c6dofimu13_t *ctx, float *result )
     
     error_check = c6dofimu13_set_slave_address ( ctx, C6DOFIMU13_DEV_ADDRESS_MAG );
 
-    error_check != c6dofimu13_generic_read( ctx, C6DOFIMU13_MAG_CTL_4, &range, 1 );
+    error_check |= c6dofimu13_generic_read( ctx, C6DOFIMU13_MAG_CTL_4, &range, 1 );
 
-    error_check != c6dofimu13_generic_read( ctx, C6DOFIMU13_MAG_OUT_X_LSB, rx_buf, 2 );
+    error_check |= c6dofimu13_generic_read( ctx, C6DOFIMU13_MAG_OUT_X_LSB, rx_buf, 2 );
 
     adc_val = rx_buf[ 1 ];
     adc_val <<= 8;
@@ -260,9 +260,9 @@ err_t c6dofimu13_mag_get_y ( c6dofimu13_t *ctx, float *result )
     
     error_check = c6dofimu13_set_slave_address ( ctx, C6DOFIMU13_DEV_ADDRESS_MAG );
     
-    error_check != c6dofimu13_generic_read( ctx, C6DOFIMU13_MAG_CTL_4, &range, 1 );
+    error_check |= c6dofimu13_generic_read( ctx, C6DOFIMU13_MAG_CTL_4, &range, 1 );
 
-    error_check != c6dofimu13_generic_read( ctx, C6DOFIMU13_MAG_OUT_Y_LSB, rx_buf, 2 );
+    error_check |= c6dofimu13_generic_read( ctx, C6DOFIMU13_MAG_OUT_Y_LSB, rx_buf, 2 );
 
     adc_val = rx_buf[ 1 ];
     adc_val <<= 8;
@@ -299,9 +299,9 @@ err_t c6dofimu13_mag_get_z ( c6dofimu13_t *ctx, float *result )
     
     error_check = c6dofimu13_set_slave_address ( ctx, C6DOFIMU13_DEV_ADDRESS_MAG );
     
-    error_check != c6dofimu13_generic_read( ctx, C6DOFIMU13_MAG_CTL_4, &range, 1 );
+    error_check |= c6dofimu13_generic_read( ctx, C6DOFIMU13_MAG_CTL_4, &range, 1 );
 
-    error_check != c6dofimu13_generic_read( ctx, C6DOFIMU13_MAG_OUT_Z_LSB, rx_buf, 2 );
+    error_check |= c6dofimu13_generic_read( ctx, C6DOFIMU13_MAG_OUT_Z_LSB, rx_buf, 2 );
 
     adc_val = rx_buf[ 1 ];
     adc_val <<= 8;
@@ -350,10 +350,10 @@ err_t c6dofimu13_mag_offset ( c6dofimu13_t *ctx, int16_t offset, uint8_t axis )
     error_check = c6dofimu13_set_slave_address ( ctx, C6DOFIMU13_DEV_ADDRESS_MAG );
 
     force_state = C6DOFIMU13_MAG_CTL_1_FS_DEF;
-    error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_3, &force_state, 1 );
+    error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_3, &force_state, 1 );
 
     cmd_byte = C6DOFIMU13_MAG_CTL_3_OCL_EN;
-    error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_3, &cmd_byte, 1 );
+    error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_3, &cmd_byte, 1 );
 
     tx_buf[ 0 ] = offset & 0xFF;
     tx_buf[ 1 ] = ( offset >> 8 ) & 0xFF;
@@ -362,20 +362,20 @@ err_t c6dofimu13_mag_offset ( c6dofimu13_t *ctx, int16_t offset, uint8_t axis )
     {
         case C6DOFIMU13_MAG_AXIS_X :
         {
-            error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_OFFS_X_LSB, tx_buf, 2 );
+            error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_OFFS_X_LSB, tx_buf, 2 );
         }
         case C6DOFIMU13_MAG_AXIS_Y :
         {
-            error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_OFFS_Y_LSB, tx_buf, 2 );
+            error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_OFFS_Y_LSB, tx_buf, 2 );
         }
         case C6DOFIMU13_MAG_AXIS_Z :
         {
-            error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_OFFS_Z_LSB, tx_buf, 2 );
+            error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_OFFS_Z_LSB, tx_buf, 2 );
         }
     }
 
     cmd_byte &= ~C6DOFIMU13_MAG_CTL_3_OCL_EN;
-    error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_3, &cmd_byte, 1 );
+    error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_MAG_CTL_3, &cmd_byte, 1 );
     
     return error_check;
 }
@@ -390,13 +390,13 @@ err_t c6dofimu13_accel_init ( c6dofimu13_t *ctx, uint8_t samp_rate, uint8_t samp
     error_check = c6dofimu13_set_slave_address ( ctx, ctx->slave_address );
     
     cmd_byte = C6DOFIMU13_ACCEL_MODE_STDBY;
-    error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_ACCEL_MODE, &cmd_byte, 1 );
+    error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_ACCEL_MODE, &cmd_byte, 1 );
 
     cmd_byte = samp_rate & 0x0F;
-    error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_ACCEL_SRTFR, &cmd_byte, 1 );
+    error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_ACCEL_SRTFR, &cmd_byte, 1 );
 
     cmd_byte = ( samp_range & 0x70 ) | ( samp_res & 0x07 );
-    error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_ACCEL_OUTCFG, &cmd_byte, 1 );
+    error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_ACCEL_OUTCFG, &cmd_byte, 1 );
     
     switch( samp_res )
     {
@@ -469,7 +469,7 @@ err_t c6dofimu13_accel_init ( c6dofimu13_t *ctx, uint8_t samp_rate, uint8_t samp
     ctx->calc_coef = res_val / range_val;
     
     cmd_byte = C6DOFIMU13_ACCEL_MODE_WAKE;
-    error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_ACCEL_MODE, &cmd_byte, 1 );
+    error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_ACCEL_MODE, &cmd_byte, 1 );
     
     return error_check;
 }
@@ -482,12 +482,12 @@ err_t c6dofimu13_accel_get_raw_x ( c6dofimu13_t *ctx, int16_t *result )
     
     error_check = c6dofimu13_set_slave_address ( ctx, ctx->slave_address );
     
-    error_check != c6dofimu13_generic_read( ctx, C6DOFIMU13_ACCEL_OUTCFG, &res, 1 );
+    error_check |= c6dofimu13_generic_read( ctx, C6DOFIMU13_ACCEL_OUTCFG, &res, 1 );
     res &= 0x07;
     
     if ( res < C6DOFIMU13_ACCEL_OUTCFG_RES_10 )
     {
-        error_check != c6dofimu13_generic_read( ctx, C6DOFIMU13_ACCEL_XOUT_EX_L, rx_buf, 1 );
+        error_check |= c6dofimu13_generic_read( ctx, C6DOFIMU13_ACCEL_XOUT_EX_L, rx_buf, 1 );
         *result = rx_buf[ 0 ];
         switch( res )
         {
@@ -530,7 +530,7 @@ err_t c6dofimu13_accel_get_raw_x ( c6dofimu13_t *ctx, int16_t *result )
     }
     else
     {
-        error_check != c6dofimu13_generic_read( ctx, C6DOFIMU13_ACCEL_XOUT_EX_L, rx_buf, 2 );
+        error_check |= c6dofimu13_generic_read( ctx, C6DOFIMU13_ACCEL_XOUT_EX_L, rx_buf, 2 );
         *result = rx_buf[ 1 ];
         *result <<= 8;
         *result |= rx_buf[ 0 ];
@@ -587,12 +587,12 @@ err_t c6dofimu13_accel_get_raw_y ( c6dofimu13_t *ctx, int16_t *result )
     
     error_check = c6dofimu13_set_slave_address ( ctx, ctx->slave_address );
     
-    error_check != c6dofimu13_generic_read( ctx, C6DOFIMU13_ACCEL_OUTCFG, &res, 1 );
+    error_check |= c6dofimu13_generic_read( ctx, C6DOFIMU13_ACCEL_OUTCFG, &res, 1 );
     res &= 0x07;
     
     if ( res < C6DOFIMU13_ACCEL_OUTCFG_RES_10 )
     {
-        error_check != c6dofimu13_generic_read( ctx, C6DOFIMU13_ACCEL_YOUT_EX_L, rx_buf, 1 );
+        error_check |= c6dofimu13_generic_read( ctx, C6DOFIMU13_ACCEL_YOUT_EX_L, rx_buf, 1 );
         *result = rx_buf[ 0 ];
         switch( res )
         {
@@ -635,7 +635,7 @@ err_t c6dofimu13_accel_get_raw_y ( c6dofimu13_t *ctx, int16_t *result )
     }
     else
     {
-        error_check != c6dofimu13_generic_read( ctx, C6DOFIMU13_ACCEL_YOUT_EX_L, rx_buf, 2 );
+        error_check |= c6dofimu13_generic_read( ctx, C6DOFIMU13_ACCEL_YOUT_EX_L, rx_buf, 2 );
         *result = rx_buf[ 1 ];
         *result <<= 8;
         *result |= rx_buf[ 0 ];
@@ -692,12 +692,12 @@ err_t c6dofimu13_accel_get_raw_z ( c6dofimu13_t *ctx, int16_t *result )
     
     error_check = c6dofimu13_set_slave_address ( ctx, ctx->slave_address );
     
-    error_check != c6dofimu13_generic_read( ctx, C6DOFIMU13_ACCEL_OUTCFG, &res, 1 );
+    error_check |= c6dofimu13_generic_read( ctx, C6DOFIMU13_ACCEL_OUTCFG, &res, 1 );
     res &= 0x07;
     
     if ( res < C6DOFIMU13_ACCEL_OUTCFG_RES_10 )
     {
-        error_check != c6dofimu13_generic_read( ctx, C6DOFIMU13_ACCEL_ZOUT_EX_L, rx_buf, 1 );
+        error_check |= c6dofimu13_generic_read( ctx, C6DOFIMU13_ACCEL_ZOUT_EX_L, rx_buf, 1 );
         *result = rx_buf[ 0 ];
         switch( res )
         {
@@ -740,7 +740,7 @@ err_t c6dofimu13_accel_get_raw_z ( c6dofimu13_t *ctx, int16_t *result )
     }
     else
     {
-        error_check != c6dofimu13_generic_read( ctx, C6DOFIMU13_ACCEL_ZOUT_EX_L, rx_buf, 2 );
+        error_check |= c6dofimu13_generic_read( ctx, C6DOFIMU13_ACCEL_ZOUT_EX_L, rx_buf, 2 );
         *result = rx_buf[ 1 ];
         *result <<= 8;
         *result |= rx_buf[ 0 ];
@@ -848,7 +848,7 @@ err_t c6dofimu13_accel_offset ( c6dofimu13_t *ctx, int16_t offset, uint8_t axis 
     error_check = c6dofimu13_set_slave_address ( ctx, ctx->slave_address );
 
     cmd_byte = C6DOFIMU13_ACCEL_MODE_STDBY;
-    error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_ACCEL_MODE, &cmd_byte, 1 );
+    error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_ACCEL_MODE, &cmd_byte, 1 );
 
     tx_buf[ 0 ] = offset & 0xFF;
     tx_buf[ 1 ] = ( offset >> 8 ) & 0xFF;
@@ -856,20 +856,20 @@ err_t c6dofimu13_accel_offset ( c6dofimu13_t *ctx, int16_t offset, uint8_t axis 
     {
         case C6DOFIMU13_ACCEL_AXIS_X :
         {
-            error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_ACCEL_XOFFL, tx_buf, 2 );
+            error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_ACCEL_XOFFL, tx_buf, 2 );
         }
         case C6DOFIMU13_ACCEL_AXIS_Y :
         {
-            error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_ACCEL_YOFFL, tx_buf, 2 );
+            error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_ACCEL_YOFFL, tx_buf, 2 );
         }
         case C6DOFIMU13_ACCEL_AXIS_Z :
         {
-            error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_ACCEL_ZOFFL, tx_buf, 2 );
+            error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_ACCEL_ZOFFL, tx_buf, 2 );
         }
     }
 
     cmd_byte = C6DOFIMU13_ACCEL_MODE_WAKE;
-    error_check != c6dofimu13_generic_write( ctx, C6DOFIMU13_ACCEL_MODE, &cmd_byte, 1 );
+    error_check |= c6dofimu13_generic_write( ctx, C6DOFIMU13_ACCEL_MODE, &cmd_byte, 1 );
     
     return error_check;
 }

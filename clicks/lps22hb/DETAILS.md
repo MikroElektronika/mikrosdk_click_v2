@@ -8,7 +8,7 @@ LPS22HB click is an easy solution for adding a digital barometer to your design.
   <img src="https://download.mikroe.com/images/click_for_ide/lps22hb_click.png" height=300px>
 </p>
 
-[click Product page](<https://www.mikroe.com/lps22hb-click>)
+[click Product page](https://www.mikroe.com/lps22hb-click)
 
 ---
 
@@ -78,9 +78,15 @@ void application_init ( void )
     log_cfg_t log_cfg;
     lps22hb_cfg_t cfg;
 
-    //  Logger initialization.
-
-    log_cfg.level = LOG_LEVEL_DEBUG;
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_printf( &logger, "--------------------------\r\n\n" );

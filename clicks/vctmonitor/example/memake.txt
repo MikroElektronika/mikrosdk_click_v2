@@ -1,0 +1,13 @@
+type: executable
+target: example_vctmonitor
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.VCTMonitor
+}
+
+sources: {
+    main.c
+}

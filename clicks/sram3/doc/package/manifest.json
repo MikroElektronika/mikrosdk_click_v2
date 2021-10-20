@@ -1,0 +1,38 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "SRAM",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "SRAM 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.sram3",
+    "product_link": "https://www.mikroe.com/sram-3-click",
+    "short_description": "SRAM 3 Click is a compact add-on board that contains a serial non-volatile SRAM with a high storage capacity. This board features the ANV32AA1WDK66, a 1Mb serial SRAM with a non-volatile SONOS storage element included with each memory cell organized as 128k words of 8 bits each from Anvo-System Dresden. The serial SRAM provides fast access & cycle times, high data accuracy, ease of use, and unlimited read & write accessed by a high-speed SPI compatible bus. This Click board™ is suitable to store drive profiles, configurations, and similar data, or for applications such as medical devices, industrial automation (for example, motor control and robotics), smart metering systems, and many others.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+	"related_projects":[
+        3890
+    ],
+    "version": "2.0.0.2"
+}
+
+

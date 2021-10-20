@@ -1,0 +1,36 @@
+type: library
+
+target: lib_eeprom5
+
+sources: {
+    src/eeprom5.c
+}
+
+headers: {
+    include/eeprom5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/eeprom5.h) dst(include/eeprom5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.EEPROM5

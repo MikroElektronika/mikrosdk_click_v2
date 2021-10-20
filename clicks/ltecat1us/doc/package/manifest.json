@@ -11,7 +11,7 @@
     "dependency_list": [
     ],
     "details": "Resources/DETAILS.md",
-    "display_name": "LTE Cat 1-US click",
+    "display_name": "LTE Cat.1-US click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -29,8 +29,9 @@
     "supported_compiler": "mikroC AI",
     "type": "Library",
     "related_projects":[
-        3104
+        3103
     ],
     "_type":"mikroSDK Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
+

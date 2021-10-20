@@ -1,0 +1,13 @@
+type: executable
+target: example_pressure13
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Pressure13
+}
+
+sources: {
+    main.c
+}

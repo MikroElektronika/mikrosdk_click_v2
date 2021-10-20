@@ -25,9 +25,9 @@
 /*!
  * \file
  *
- * \brief This file contains API for Thumbstiick Click driver.
+ * \brief This file contains API for Thumbstick Click driver.
  *
- * \addtogroup thumbstick Thumbstiick Click Driver
+ * \addtogroup thumbstick Thumbstick Click Driver
  * @{
  */
 // ----------------------------------------------------------------------------

@@ -240,7 +240,6 @@ err_t c4gltena_generic_write ( c4gltena_t *ctx, char *data_buf, uint16_t len );
  */
 err_t c4gltena_generic_read ( c4gltena_t *ctx, char *data_buf, uint16_t max_len );
 
-
 /**
  * @brief Sets state of the RTS pin.
  * @details This function sets RTS pin state.

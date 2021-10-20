@@ -1,0 +1,36 @@
+type: library
+
+target: lib_usbcsource
+
+sources: {
+    src/usbcsource.c
+}
+
+headers: {
+    include/usbcsource.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/usbcsource.h) dst(include/usbcsource.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.USBCSource

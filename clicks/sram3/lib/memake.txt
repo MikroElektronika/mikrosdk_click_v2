@@ -1,0 +1,36 @@
+type: library
+
+target: lib_sram3
+
+sources: {
+    src/sram3.c
+}
+
+headers: {
+    include/sram3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/sram3.h) dst(include/sram3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.SRAM3

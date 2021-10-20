@@ -1,0 +1,13 @@
+type: executable
+target: example_proximity15
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Proximity15
+}
+
+sources: {
+    main.c
+}

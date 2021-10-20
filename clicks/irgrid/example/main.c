@@ -1,7 +1,7 @@
 /*!
- * \file 
- * \brief IrGrid Click example
- * 
+ * @file main.c
+ * @brief IRGrid Click example
+ *
  * # Description
  * IR Grid click is a thermal imaging sensor. It has an array of 64 very sensitive factory 
  * calibrated IR elements (pixels), arranged in 4 rows of 16 pixels, each measuring an 
@@ -15,52 +15,54 @@
  * ## Application Task  
  * Reads the temperature of all pixels and creates a pixel temperature matrix that logs 
  * on usbuart every half of second
- * 
  *
- * \author MikroE Team
+ * @author Mikroe Team
  *
  */
-// ------------------------------------------------------------------- INCLUDES
 
 #include "board.h"
 #include "log.h"
 #include "irgrid.h"
 
-// ------------------------------------------------------------------ VARIABLES
-
 static irgrid_t irgrid;
 static irgrid_data_t irgrid_data;
 static log_t logger;
-
 
 static float   ir_tmp[ 64 ];
 static uint8_t i;
 static uint8_t rc;
 static uint8_t cc;
 
-// ------------------------------------------------------ APPLICATION FUNCTIONS
-
-void application_init ( void )
+void application_init ( void ) 
 {
-    log_cfg_t log_cfg;
-    irgrid_cfg_t cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    irgrid_cfg_t irgrid_cfg;  /**< Click config object. */
 
-    //  Logger initialization.
-
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
-    irgrid_cfg_setup( &cfg );
-    IRGRID_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    irgrid_init( &irgrid, &cfg );
-
+    // Click initialization.
+    irgrid_cfg_setup( &irgrid_cfg );
+    IRGRID_MAP_MIKROBUS( irgrid_cfg, MIKROBUS_1 );
+    if ( I2C_MASTER_ERROR == irgrid_init( &irgrid, &irgrid_cfg ) ) 
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
+    
     irgrid_device_init( &irgrid, &irgrid_data, 16 );
-    log_printf( &logger, "IR GRID INITIALIZED \r\n" );
+    
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )
@@ -87,11 +89,11 @@ void application_task ( void )
     Delay_ms( 500 );
 }
 
-void main ( void )
+void main ( void ) 
 {
     application_init( );
 
-    for ( ; ; )
+    for ( ; ; ) 
     {
         application_task( );
     }

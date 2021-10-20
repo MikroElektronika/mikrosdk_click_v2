@@ -158,7 +158,7 @@ float vcpmonitor_get_current ( vcpmonitor_t *ctx )
 }
 float vcpmonitor_get_voltage ( vcpmonitor_t *ctx )
 {
-    int16_t raw_data;
+    uint16_t raw_data;
     float voltage_val;
 
     raw_data = vcpmonitor_read_data( ctx, VCPMONITOR_REG_BUS_VOLTAGE_DATA );
@@ -169,7 +169,7 @@ float vcpmonitor_get_voltage ( vcpmonitor_t *ctx )
 
 float vcpmonitor_get_power ( vcpmonitor_t *ctx )
 {
-    int16_t raw_data;
+    uint16_t raw_data;
     float power_val;
 
     raw_data = vcpmonitor_read_data( ctx, VCPMONITOR_REG_POWER_DATA );

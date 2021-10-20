@@ -117,20 +117,11 @@ void duallin_bus2_status ( duallin_t *ctx, uint8_t state )
 
 void duallin_send_command ( duallin_t *ctx, char *command )
 {
-    char tmp_buf[ 100 ];
-    uint8_t len;
-    uint8_t cnt;
-
-    memset( tmp_buf, 0, 100 );
-    len = strlen( command );
-    
-    strncpy( tmp_buf, command, len );
-
-    for ( cnt = 0; cnt < len; cnt ++ )
+    for ( uint8_t cnt_len = 0; cnt_len < strlen(command); cnt_len++ )
     {
-        duallin_generic_write( ctx, &tmp_buf[ cnt ], 1 );
-        Delay_100ms( );
-    }    
+        duallin_generic_write( ctx, &command[ cnt_len ], 1 );
+        Delay_100ms( ); 
+    }
 }
 
 // ------------------------------------------------------------------------- END

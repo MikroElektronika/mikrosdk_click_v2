@@ -1,6 +1,6 @@
 {
     "architecture": "ARM|PIC|PIC32",
-    "category": "Measurement",
+    "category": "Optical",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -32,6 +32,9 @@
     "related_projects":[
         3758
     ],
-    "version": "2.0.0.1"
+    "version": "2.0.0.4"
 }
+
+
+
 

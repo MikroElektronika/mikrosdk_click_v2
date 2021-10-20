@@ -1,0 +1,7 @@
+type: subdirs
+project: GainAMP
+
+subdirs: {
+    lib
+    example
+}

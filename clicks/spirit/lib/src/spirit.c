@@ -49,6 +49,7 @@ void spirit_cfg_setup ( spirit_cfg_t *cfg ) {
 }
 
 err_t spirit_init ( spirit_t *ctx, spirit_cfg_t *cfg ) {
+    
     uart_config_t uart_cfg;
 
     // Default config
@@ -68,6 +69,7 @@ err_t spirit_init ( spirit_t *ctx, spirit_cfg_t *cfg ) {
     uart_cfg.rx_ring_size = sizeof( ctx->uart_rx_buffer );
 
     if ( uart_open( &ctx->uart, &uart_cfg ) == UART_ERROR ) {
+        
         return UART_ERROR;
     }
     uart_set_baud( &ctx->uart, cfg->baud_rate );
@@ -87,64 +89,73 @@ err_t spirit_init ( spirit_t *ctx, spirit_cfg_t *cfg ) {
 }
 
 void spirit_power_module ( spirit_t *ctx, uint8_t power_state ) {
+   
     if ( power_state != 0 ) {
+        
         digital_out_high( &ctx->shd ); 
-        Delay_100ms( );
-        Delay_100ms( );
-        Delay_100ms( );
+        Delay_ms( 100 );
+        Delay_ms( 100 );
+        Delay_ms( 100 );
     }
     else {
+        
         digital_out_low( &ctx->shd ); 
-        Delay_100ms( );
-        Delay_100ms( );
-        Delay_100ms( );
+        Delay_ms( 100 );
+        Delay_ms( 100 );
+        Delay_ms( 100 );
     }
 }
 
 void spirit_reset ( spirit_t *ctx ) {
+    
     digital_out_high( &ctx->rst );
-    Delay_100ms( );
+    Delay_ms( 100 );
     digital_out_low( &ctx->rst );
-    Delay_100ms( );
+    Delay_ms( 100 );
     digital_out_high( &ctx->rst );
-    Delay_100ms( );
+    Delay_ms( 100 );
 }
 
 void spirit_set_mode ( spirit_t *ctx, uint8_t mode ) {
+    
     if ( mode != 0 ) {
+        
         digital_out_high( &ctx->cmd ); 
-        Delay_100ms( );
+        Delay_ms( 100 );
     }
     else  {
+        
         digital_out_low( &ctx->shd ); 
-        Delay_100ms( );
+        Delay_ms( 100 );
     }
 }
 
 void spirit_generic_write ( spirit_t *ctx, char *data_buf, uint16_t len ) {
+    
     uart_write( &ctx->uart, data_buf, len );
 }
 
 int32_t spirit_generic_read ( spirit_t *ctx, char *data_buf, uint16_t max_len ) {
+    
     return uart_read( &ctx->uart, data_buf, max_len );
 }
 
-void spirit_send_cmd ( spirit_t *ctx, char *cmd )
-{
+void spirit_send_cmd ( spirit_t *ctx, char *cmd ) {
+   
     char cr_lf[ 3 ] = { 13, 10, 0 };
     
-    while ( *cmd != 0 )
-    {
+    while ( *cmd != 0 ) {
+        
         uart_write( &ctx->uart, cmd, 1 );
         cmd++;
     }
     
     uart_write( &ctx->uart, cr_lf, 2 );
-    Delay_100ms(  );
+    Delay_ms( 100 );
 }
 
-void spirit_send_cmd_with_parameter ( spirit_t *ctx, char *at_cmd_buf, char *param_buf )
-{
+void spirit_send_cmd_with_parameter ( spirit_t *ctx, char *at_cmd_buf, char *param_buf ) {
+    
     char final_cmd[ 100 ] = { 0 };
     char check_char[ 2 ] = { '=', 0 };
     
@@ -155,8 +166,8 @@ void spirit_send_cmd_with_parameter ( spirit_t *ctx, char *at_cmd_buf, char *par
     spirit_send_cmd( ctx, final_cmd );
 }
 
-void spirit_send_cmd_check ( spirit_t *ctx, char *at_cmd_buf )
-{
+void spirit_send_cmd_check ( spirit_t *ctx, char *at_cmd_buf ) {
+    
     char final_cmd[ 100 ] = { 0 };
     char check_char[ 2 ] = { '?', 0 };
     
@@ -166,8 +177,8 @@ void spirit_send_cmd_check ( spirit_t *ctx, char *at_cmd_buf )
     spirit_send_cmd( ctx, final_cmd );
 }
 
-void spirit_send_cmd_parameter_check ( spirit_t *ctx, char *at_cmd_buf )
-{
+void spirit_send_cmd_parameter_check ( spirit_t *ctx, char *at_cmd_buf ) {
+    
     char final_cmd[ 100 ] = { 0 };
     char check_char[ 3 ] = { '=' , '?', 0 };
     

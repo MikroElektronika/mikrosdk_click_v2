@@ -1,0 +1,13 @@
+type: executable
+target: example_efuse2
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.eFuse2
+}
+
+sources: {
+    main.c
+}

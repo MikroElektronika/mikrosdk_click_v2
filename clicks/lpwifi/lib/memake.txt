@@ -1,0 +1,37 @@
+type: library
+
+target: lib_lpwifi
+
+sources: {
+    src/lpwifi.c
+}
+
+headers: {
+    include/lpwifi.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/lpwifi.h) dst(include/lpwifi.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+    MikroSDK.Conversions
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.LPWiFi

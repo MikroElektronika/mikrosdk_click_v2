@@ -1,0 +1,8 @@
+type: subdirs
+
+project: Watchdog
+
+subdirs: {
+    lib
+    example
+}

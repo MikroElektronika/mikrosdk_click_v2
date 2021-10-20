@@ -14,8 +14,8 @@
  * Reads the received data.
  * 
  * ## Additional Function
- * - uartmux_process ( ) - The general process of collecting presponce 
- *                                   that sends a module.
+ * - uartmux_process ( ) - The general process of collecting response
+ *                                   from module.
  * 
  * \author MikroE Team
  *
@@ -51,7 +51,7 @@ static void uartmux_process ( void )
 {
     rsp_size = uartmux_generic_read( &uartmux, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE, &channel );
 
-    if ( rsp_size != -1 )
+    if ( rsp_size > 0 )
     {  
         for ( int32_t cnt = 0; cnt < rsp_size; cnt++ )
         {
@@ -67,11 +67,16 @@ void application_init ( void )
     log_cfg_t log_cfg;
     uartmux_cfg_t cfg;
 
-    //  Logger initialization.
-
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -91,21 +96,11 @@ void application_task ( void )
 #endif
 
 #ifdef DEMO_APP_TRANSMITER
-    uartmux_process( );
-
     channel.state_a = UARTMUX_STATE_A_CHANNEL_1;
     channel.state_b = UARTMUX_STATE_B_CHANNEL_1;
 
-    if ( send_data_cnt == 2 )
-    {
-        uartmux_send_command( &uartmux, TEXT_TO_SEND, &channel );
-        uartmux_process( );
-        send_data_cnt = 0;
-    }
-    else
-    {
-        send_data_cnt++;
-    }
+    uartmux_generic_write( &uartmux, TEXT_TO_SEND, strlen( TEXT_TO_SEND ), &channel );
+    Delay_ms( 2000 );
 #endif
 }
 

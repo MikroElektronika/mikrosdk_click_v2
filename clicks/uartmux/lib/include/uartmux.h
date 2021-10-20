@@ -217,9 +217,10 @@ UARTMUX_RETVAL uartmux_init ( uartmux_t *ctx, uartmux_cfg_t *cfg );
  * 
  * @param uartmux  Click object.
  * @param data_buf Data buffer for sends.
+ * @param data_len Data buffer len.
  * @param channel  Struct of channel ( 1, 2, 3, 4 )
  */
-void uartmux_generic_write ( uartmux_t *ctx, char *data_buf, uartmux_channel_t *channel );
+void uartmux_generic_write ( uartmux_t *ctx, char *data_buf, uint16_t data_len, uartmux_channel_t *channel );
 /**
  * @brief Generic read function.
  * 
@@ -231,15 +232,6 @@ void uartmux_generic_write ( uartmux_t *ctx, char *data_buf, uartmux_channel_t *
  * @return Number of reads data.
  */
 int32_t uartmux_generic_read ( uartmux_t *ctx, char *data_buf, uint16_t max_len, uartmux_channel_t *channel );
-
-/**
- * @brief Send command.
- * 
- * @param uartmux Click object.
- * @param command Data to be send.
- * @param channel Struct of channel ( 1, 2, 3, 4 )
- */
-void uartmux_send_command ( uartmux_t *ctx, char *command, uartmux_channel_t *channel );
 
 /**
  * @brief Set INT pin

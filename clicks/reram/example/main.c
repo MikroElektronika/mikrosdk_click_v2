@@ -60,10 +60,16 @@ void application_init( void )
     //  Click start configuration.
     reram_default_cfg( &reram );
 
-    //  Logger initialization.
-    LOG_MAP_USB_UART( logger_cfg );
-    logger_cfg.level = LOG_LEVEL_DEBUG;
-    logger_cfg.baud = 115200;
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
+    LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &logger_cfg );
     
     reram_wake_up( &reram );

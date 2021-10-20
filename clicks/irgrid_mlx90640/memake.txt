@@ -1,7 +1,0 @@
-type: subdirs
-project: IrGridMlx90640
-
-subdirs: {
-    lib
-    example
-}

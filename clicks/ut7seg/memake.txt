@@ -1,7 +1,0 @@
-type: subdirs
-project: Ut7Seg
-
-subdirs: {
-    lib
-    example
-}

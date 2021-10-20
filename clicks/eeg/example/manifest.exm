@@ -1,0 +1,8 @@
+{
+    "name": "EEG Click",
+    "description": "EEG Click is a Click board™ that allows monitoring of brain activity. Although not suitable for clinical examination, it is quite sufficient to allow some insight into brain activity. EEG click is equipped with a high-sensitivity circuit which amplifies faint electrical signals from the brain, allowing them to be sampled by a host MCU.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","INA114"],
+    "category" : ["Measurements"]
+}

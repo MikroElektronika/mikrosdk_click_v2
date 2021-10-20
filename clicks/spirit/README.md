@@ -43,7 +43,7 @@ void spirit_cfg_setup ( spirit_cfg_t *cfg );
 
 - `spirit_init` Initialization function.
 ```c
-SPIRIT_RETVAL spirit_init ( spirit_t *ctx, spirit_cfg_t *cfg );
+err_t spirit_init ( spirit_t *ctx, spirit_cfg_t *cfg );
 ```
 
 #### Example key functions :
@@ -80,11 +80,16 @@ void application_init ( void )
     log_cfg_t log_cfg;
     spirit_cfg_t cfg;
 
-    //  Logger initialization.
-
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
@@ -134,7 +139,7 @@ void application_init ( void )
 ```c
 
 void application_task ( void ) {
-    #ifdef DEMO_APP_RECEIVER
+#ifdef DEMO_APP_RECEIVER
     spirit_process( );
 #endif   
     

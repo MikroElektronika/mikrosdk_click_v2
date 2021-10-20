@@ -3,7 +3,7 @@
 ---
 # DHT22 2 click
 
-DHT22 2 click is used for measuring the environmental temperature and relative humidity. It uses the CM2322 sensor, with very accurate thermal and humidity measuring capabilities. It can use either 1-Wire or I2C protocol to communicate with the integrated circuit.
+DHT22 2 click is used for measuring the environmental temperature and relative humidity. It uses the AM2322 sensor, with very accurate thermal and humidity measuring capabilities. It can use either 1-Wire or I2C protocol to communicate with the integrated circuit.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/dht222_click.png" height=300px>
@@ -75,9 +75,15 @@ void application_init ( void )
     log_cfg_t log_cfg;
     dht222_cfg_t cfg;
 
-    //  Logger initialization.
-
-    log_cfg.level = LOG_LEVEL_DEBUG;
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_printf( &logger, "---- Application Init ----" );

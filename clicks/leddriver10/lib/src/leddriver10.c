@@ -44,7 +44,7 @@ void leddriver10_cfg_setup ( leddriver10_cfg_t *cfg )
     cfg->spi_speed   = 100000;
     cfg->spi_mode    = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
-
+    
     cfg->dev_pwm_freq = LEDDRIVER10_DEF_FREQ;
 }
 
@@ -82,7 +82,7 @@ err_t leddriver10_init ( leddriver10_t *ctx, leddriver10_cfg_t *cfg )
 
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
     spi_master_deselect_device( ctx->chip_select );
-
+    
     pwm_config_t pwm_cfg;
 
     pwm_configure_default( &pwm_cfg );
@@ -104,27 +104,27 @@ err_t leddriver10_init ( leddriver10_t *ctx, leddriver10_cfg_t *cfg )
 err_t leddriver10_set_channels ( leddriver10_t *ctx, uint16_t ch_mask )
 {
     uint8_t tx_buf[ 2 ] = { 0 };
-
+    
     tx_buf[ 0 ] = ( uint8_t ) ( ( ch_mask >> 8 ) & 0xFF );
     tx_buf[ 1 ] = ( uint8_t ) ( ch_mask & 0xFF );
-
+    
     err_t error_flag = spi_master_write( &ctx->spi, tx_buf, 2 );
     spi_master_deselect_device( ctx->chip_select );
     Delay_1ms( );
     spi_master_select_device( ctx->chip_select );
-
+    
     return error_flag;
 }
 
 err_t leddriver10_read_channels ( leddriver10_t *ctx, uint16_t *ch_mask )
 {
     uint8_t rx_buf[ 2 ] = { 0 };
-
+    
     err_t error_flag = spi_master_read( &ctx->spi, rx_buf, 2 );
-
+    
     *ch_mask = ( uint16_t ) rx_buf[ 0 ] << 8;
     *ch_mask |= ( rx_buf[ 1 ] & 0xFF );
-
+    
     return error_flag;
 }
 

@@ -10,12 +10,13 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes I2C driver and triggers the built-in self-test checking.
+ * Initializes I2C driver and triggers the built-in self-test checking,
+ * set heater off, performs sensors configuration and initialize VOC algorithm.
  *
  * ## Application Task
  * This is an example that demonstrates the use of the Environment 2 Click board.
  * Measured and display air quality ( raw data ), 
- * temperature ( degrees Celsius ) and relative humidity ( % ) data.
+ * temperature ( degrees Celsius ), relative humidity ( % ) and VOC Index.
  * Results are being sent to the Usart Terminal where you can track their changes.
  * All data logs write on USB UART changes every 2 sec.
  *
@@ -29,21 +30,29 @@
 
 static environment2_t environment2;
 static log_t logger;
+
 static uint16_t air_quality;
 static float humidity;
 static float temperature;
+static int32_t voc_index;
+static environment2_voc_algorithm_params voc_algorithm_params;
 
 void application_init ( void ) {
     log_cfg_t log_cfg;                    /**< Logger config object. */
     environment2_cfg_t environment2_cfg;  /**< Click config object. */
 
-    // Logger initialization.
-
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
-    log_printf( &logger, "\r\n    Application Init\r\n" );
+    log_info( &logger, " Application Init " );
 
     // Click initialization.
 
@@ -74,15 +83,28 @@ void application_init ( void ) {
     
     environment2_sgp40_heater_off( &environment2 );
     Delay_ms( 100 );
+    
+    environment2_config_sensors( );
+    Delay_ms( 100 );
 }
 
 void application_task ( void ) {
     environment2_get_temp_hum(  &environment2, &humidity, &temperature );
+    Delay_ms( 100 );
+    
     log_printf( &logger, " Humidity    : %.2f %% \r\n", humidity );
     log_printf( &logger, " Temperature : %.2f C \r\n", temperature );
     
     environment2_get_air_quality( &environment2, &air_quality );
+    Delay_ms( 100 );
+    
     log_printf( &logger, " Air Quality : %d \r\n", air_quality );
+    log_printf( &logger, "- - - - - - - - - -  - \r\n" );
+    
+    environment2_get_voc_index( &environment2, &voc_index );
+    Delay_ms( 100 );
+    
+    log_printf( &logger, " VOC Index   : %d  \r\n", ( uint16_t ) voc_index );
     log_printf( &logger, "-----------------------\r\n" );
     Delay_ms( 2000 );
 }

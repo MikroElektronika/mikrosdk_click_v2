@@ -40,7 +40,6 @@ void uartmux_cfg_setup ( uartmux_cfg_t *cfg )
     cfg->tx_pin = HAL_PIN_NC;
     
     // Additional gpio pins
-
     cfg->inh = HAL_PIN_NC;
     cfg->a   = HAL_PIN_NC;
     cfg->b = HAL_PIN_NC;
@@ -77,7 +76,6 @@ UARTMUX_RETVAL uartmux_init ( uartmux_t *ctx, uartmux_cfg_t *cfg )
     uart_set_blocking( &ctx->uart, cfg->uart_blocking );
 
     // Output pins 
-
     digital_out_init( &ctx->inh, cfg->inh );
     digital_out_init( &ctx->a, cfg->a );
     digital_out_init( &ctx->b, cfg->b );
@@ -85,12 +83,12 @@ UARTMUX_RETVAL uartmux_init ( uartmux_t *ctx, uartmux_cfg_t *cfg )
     return UARTMUX_OK;
 }
 
-void uartmux_generic_write ( uartmux_t *ctx, char *data_buf, uartmux_channel_t *channel )
+void uartmux_generic_write ( uartmux_t *ctx, char *data_buf, uint16_t data_len, uartmux_channel_t *channel )
 {
     digital_out_write( &ctx->a, channel->state_a );
     digital_out_write( &ctx->b, channel->state_b );
 
-    uart_write( &ctx->uart, data_buf, 1 );
+    uart_write( &ctx->uart, data_buf, data_len );
 }
 
 int32_t uartmux_generic_read ( uartmux_t *ctx, char *data_buf, uint16_t max_len, uartmux_channel_t *channel )
@@ -99,24 +97,6 @@ int32_t uartmux_generic_read ( uartmux_t *ctx, char *data_buf, uint16_t max_len,
     digital_out_write( &ctx->b, channel->state_b );
 
     return uart_read( &ctx->uart, data_buf, max_len );
-}
-
-void uartmux_send_command ( uartmux_t *ctx, char *command, uartmux_channel_t *channel )
-{
-    char tmp_buf[ 100 ];
-    uint8_t len;
-    uint8_t cnt;
-
-    memset( tmp_buf, 0, 100 );
-    len = strlen( command );
-    
-    strncpy( tmp_buf, command, len );
-
-    for ( cnt = 0; cnt < len; cnt ++ )
-    {
-        uartmux_generic_write( ctx, &tmp_buf[ cnt ], channel );
-        Delay_100ms( );
-    }
 }
 
 void uartmux_set_inhibit_communication ( uartmux_t *ctx, uint8_t state )

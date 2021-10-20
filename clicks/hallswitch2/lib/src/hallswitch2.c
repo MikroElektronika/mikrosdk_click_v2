@@ -47,12 +47,12 @@ uint8_t hallswitch2_check_state ( hallswitch2_t *ctx )
     {
         return HALLSWITCH2_N_POLE_DETECTED;
     }
-
+    
     if ( !digital_in_read( &ctx->s ) )
     {
         return HALLSWITCH2_S_POLE_DETECTED;
     }
-
+    
     return HALLSWITCH2_NO_MAGNET_DETECTED;
 }
 

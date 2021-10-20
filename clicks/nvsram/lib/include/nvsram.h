@@ -110,8 +110,6 @@ extern "C"{
 #define NVSRAM_NO_SNL                  0x00
 #define NVSRAM_SNL                     0x40
 
-
-// Memory enable
 /**
  * @brief nvSRAM description of memory enable and disable.
  * @details Specified description of memory enable and disable nvSRAM Click driver.
@@ -159,7 +157,7 @@ extern "C"{
 typedef struct
 {
     // Output pins
-    digital_out_t  wp;     /**< Write protection. */
+    digital_out_t  wp;                               /**< Write protection. */
 
     // Modules
     i2c_master_t i2c;                                /**< I2C driver object. */
@@ -178,7 +176,7 @@ typedef struct
     pin_name_t  scl;        /**< Clock pin descriptor for I2C driver. */
     pin_name_t  sda;        /**< Bidirectional data pin descriptor for I2C driver. */
 
-    pin_name_t  wp;       /**< Write protection. */
+    pin_name_t  wp;         /**< Write protection. */
 
     uint32_t  i2c_speed;                                /**< I2C serial speed. */
     uint8_t   i2c_address;                              /**< I2C slave address. */

@@ -35,8 +35,8 @@
 
 // ------------------------------------------------------------------ VARIABLES
 
-#define DEMO_APP_RECEIVER
-//#define DEMO_APP_TRANSMITER
+// #define DEMO_APP_RECEIVER
+#define DEMO_APP_TRANSMITER
 
 static ft_t ft;
 static log_t logger;
@@ -62,7 +62,7 @@ static void ft_process ( void )
     {
         rsp_size = ft_generic_read( &ft, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
 
-        if ( rsp_size != -1 )
+        if ( rsp_size > 0 )
         {  
             // Validation of the received data
             for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
@@ -90,11 +90,16 @@ void application_init ( void )
     log_cfg_t log_cfg;
     ft_cfg_t cfg;
 
-    //  Logger initialization.
-
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
     Delay_ms( 100 );

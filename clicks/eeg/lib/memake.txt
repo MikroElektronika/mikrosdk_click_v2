@@ -1,0 +1,36 @@
+type: library
+
+target: lib_eeg
+
+sources: {
+    src/eeg.c
+}
+
+headers: {
+    include/eeg.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/eeg.h) dst(include/eeg.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.EEG

@@ -11,7 +11,7 @@
     "dependency_list": [
     ],
     "details": "Resources/DETAILS.md",
-    "display_name": "4G LTE-NA  click",
+    "display_name": "4G LTE-NA click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -28,9 +28,8 @@
     "short_description": "4G LTE click is an LTE Cat 1 multimode cellular network solution, featuring the compact LARA-R2 series modem from u-blox. This module supports up two LTE bands. It also features a full range of options for the high speed cellular networking and communication, such as the network indication, full embedded TCP/UDP stack, HTTP and HTTPS transfer protocols, IPv4/IPv6 dual-stack support, secondary antenna for the RX diversity, antenna detection, jamming signal detection, embedded TLS 1.2 protocol for the improved security and more. 4G LARA click can achieve data rates up to 10.3 Mbps/5.2 Mbps (downlink/uplink).",
     "supported_compiler": "mikroC AI",
     "type": "Library",
-    "related_projects":[
-        2058
-    ],
     "_type":"mikroSDK Library",
-    "version": "2.0.0.0"
+    "version": "2.0.0.3"
 }
+
+

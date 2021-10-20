@@ -1,0 +1,13 @@
+type: executable
+target: example_ldc2
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.LDC2
+}
+
+sources: {
+    main.c
+}

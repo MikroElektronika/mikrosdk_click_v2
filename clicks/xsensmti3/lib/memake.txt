@@ -1,0 +1,36 @@
+type: library
+
+target: lib_xsensmti3
+
+sources: {
+    src/xsensmti3.c
+}
+
+headers: {
+    include/xsensmti3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/xsensmti3.h) dst(include/xsensmti3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.XSENSMTi3

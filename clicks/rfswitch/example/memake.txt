@@ -1,0 +1,13 @@
+type: executable
+target: example_rfswitch
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.RFSwitch
+}
+
+sources: {
+    main.c
+}

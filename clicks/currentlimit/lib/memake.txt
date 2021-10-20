@@ -1,0 +1,48 @@
+type: library
+target: lib_currentlimit
+
+#begin python
+import re
+
+if ( re.match("(^PIC18F(.+)[KQ]4[23]$)|(^PIC32(.+)$)",MEMAKE_MCU_NAME) ):
+    sample_mode_reg_case = "SAMPLE_REG_CASE_1"
+else:
+    sample_mode_reg_case = "SAMPLE_REG_CASE_2"
+#end python
+
+defines: {
+    <[sample_mode_reg_case]>
+}
+
+sources: {
+    src/currentlimit.c
+}
+
+headers: {
+    include/currentlimit.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/currentlimit.h) dst(include/currentlimit.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.CurrentLimit

@@ -77,7 +77,8 @@ uint16_t environment2_sgp40_measure_test ( environment2_t *ctx );
 
 ### Application Init
 
-> Initializes I2C driver and triggers the built-in self-test checking.
+> Initializes I2C driver and triggers the built-in self-test checking,
+> set heater off, performs sensors configuration and initialize VOC algorithm.
 
 ```c
 
@@ -122,6 +123,9 @@ void application_init ( void ) {
     
     environment2_sgp40_heater_off( &environment2 );
     Delay_ms( 100 );
+    
+    environment2_config_sensors( );
+    Delay_ms( 100 );
 }
 
 ```
@@ -130,7 +134,7 @@ void application_init ( void ) {
 
 > This is an example that demonstrates the use of the Environment 2 Click board.
 > Measured and display air quality ( raw data ), 
-> temperature ( degrees Celsius ) and relative humidity ( % ) data.
+> temperature ( degrees Celsius ), relative humidity ( % ) and VOC Index.
 > Results are being sent to the Usart Terminal where you can track their changes.
 > All data logs write on USB UART changes every 2 sec.
 
@@ -138,11 +142,21 @@ void application_init ( void ) {
 
 void application_task ( void ) {
     environment2_get_temp_hum(  &environment2, &humidity, &temperature );
+    Delay_ms( 100 );
+    
     log_printf( &logger, " Humidity    : %.2f %% \r\n", humidity );
     log_printf( &logger, " Temperature : %.2f C \r\n", temperature );
     
     environment2_get_air_quality( &environment2, &air_quality );
+    Delay_ms( 100 );
+    
     log_printf( &logger, " Air Quality : %d \r\n", air_quality );
+    log_printf( &logger, "- - - - - - - - - -  - \r\n" );
+    
+    environment2_get_voc_index( &environment2, &voc_index );
+    Delay_ms( 100 );
+    
+    log_printf( &logger, " VOC Index   : %d  \r\n", ( uint16_t ) voc_index );
     log_printf( &logger, "-----------------------\r\n" );
     Delay_ms( 2000 );
 }

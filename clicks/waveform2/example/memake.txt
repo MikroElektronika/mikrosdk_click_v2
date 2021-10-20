@@ -1,0 +1,13 @@
+type: executable
+target: example_waveform2
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Waveform2
+}
+
+sources: {
+    main.c
+}

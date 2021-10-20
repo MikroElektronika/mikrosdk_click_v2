@@ -1,0 +1,36 @@
+type: library
+
+target: lib_i2cextend2
+
+sources: {
+    src/i2cextend2.c
+}
+
+headers: {
+    include/i2cextend2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/i2cextend2.h) dst(include/i2cextend2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.I2CExtend2

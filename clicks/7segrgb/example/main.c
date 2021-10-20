@@ -52,35 +52,80 @@
 #include "log.h"
 #include "c7segrgb.h"
 
-#if defined __MIKROC_AI_FOR_ARM__
+// #if defined __MIKROC_AI_FOR_ARM__
+// #define D_S    3
+// #define D_L    9
+// 
+// #define DELAY_SHORT( void ) \
+//     Delay_Cyc( D_S );
+//     
+// #define DELAY_LONG( void ) \
+//     Delay_Cyc( D_L );
+// #endif
+// #if defined __MIKROC_AI_FOR_PIC32__
+//     
+// #define D_L    4
+//     
+// #define DELAY_SHORT( void ) \
+//     asm nop
+//     
+// #define DELAY_LONG( void ) \
+//     Delay_Cyc( D_L );
+// #endif
+// #if !defined(__MIKROC_AI_FOR_ARM__) && !defined(__MIKROC_AI_FOR_PIC32__)
+// #define D_S    1
+// #define D_L    2
+// 
+// #define DELAY_SHORT( void ) \
+//     Delay_Cyc( D_S );
+//     
+// #define DELAY_LONG( void ) \
+//     Delay_Cyc( D_L );
+// #endif
+
+#ifdef __MIKROC_AI_FOR_ARM__
+
+#ifdef __STM32__/*< STM32F407ZG*/
+
 #define D_S    3
 #define D_L    9
 
-#define DELAY_SHORT( void ) \
+#define DELAY_SHORT \
     Delay_Cyc( D_S );
     
-#define DELAY_LONG( void ) \
+#define DELAY_LONG \
     Delay_Cyc( D_L );
-#endif
-#if defined __MIKROC_AI_FOR_PIC32__
     
+#elif __KINETIS__/*< MKV58F1M0VLQ24*/
+    
+#define D_S    2
+#define D_L    11
+
+#define DELAY_SHORT \
+    Delay_Cyc( D_S );
+    
+#define DELAY_LONG \
+    Delay_Cyc( D_L );
+    
+#endif
+
+#elif __MIKROC_AI_FOR_PIC32__ /*< PIC32MZ2048EFH144 */
+
 #define D_L    4
     
-#define DELAY_SHORT( void ) \
+#define DELAY_SHORT \
     asm nop
     
-#define DELAY_LONG( void ) \
+#define DELAY_LONG \
     Delay_Cyc( D_L );
 #endif
-#if !defined(__MIKROC_AI_FOR_ARM__) && !defined(__MIKROC_AI_FOR_PIC32__)
-#define D_S    1
-#define D_L    2
-
-#define DELAY_SHORT( void ) \
-    Delay_Cyc( D_S );
     
-#define DELAY_LONG( void ) \
-    Delay_Cyc( D_L );
+/*< You need to define long and short delay */
+#if !defined(DELAY_SHORT) && !defined(DELAY_LONG)
+
+#define DELAY_SHORT     
+#define DELAY_LONG 
+
 #endif
 
 
@@ -120,19 +165,19 @@ static c7segrgb_segment_t segments_data[ 8 ] = {
 void logic_one ( void )
 {
     digital_out_high( &c7segrgb.pwm );
-    DELAY_LONG( );
+    DELAY_LONG;
     
     digital_out_low( &c7segrgb.pwm);
-    DELAY_SHORT( );
+    DELAY_SHORT;
 }
 
 void logic_zero ( void )
 {
     digital_out_high( &c7segrgb.pwm );
-    DELAY_SHORT( );
+    DELAY_SHORT;
     
     digital_out_low( &c7segrgb.pwm);
-    DELAY_LONG( );
+    DELAY_LONG;
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -142,9 +187,15 @@ void application_init ( void )
     log_cfg_t log_cfg;
     c7segrgb_cfg_t cfg;
 
-    //  Logger initialization.
-
-    log_cfg.level = LOG_LEVEL_DEBUG;
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );

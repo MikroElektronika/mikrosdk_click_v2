@@ -122,11 +122,11 @@ err_t isoadc5_write_register ( isoadc5_t *ctx, uint8_t reg, uint16_t data_in )
     }
     uint8_t tx_buf[ 4 ] = { 0 };
     err_t error_flag = ISOADC5_ERROR;
-
+    
     tx_buf[ 0 ] = ( reg << 2 ) | ISOADC5_SPI_WRITE;
     tx_buf[ 1 ] = ( uint8_t )( data_in >> 8 );
     tx_buf[ 2 ] = ( uint8_t )( data_in & 0xFF );
-
+    
     spi_master_select_device( ctx->chip_select );
     if ( ISOADC5_EN_CRC == isoadc5_check_crc_enable( ctx ) )
     {
@@ -150,7 +150,7 @@ err_t isoadc5_read_register ( isoadc5_t *ctx, uint8_t reg, uint16_t *data_out )
     }
     uint8_t data_len = 2;
     uint8_t tmp_buf[ 4 ] = { 0 };
-
+    
     if ( ISOADC5_EN_CRC == isoadc5_check_crc_enable( ctx ) )
     {
         data_len = 3;
@@ -159,7 +159,7 @@ err_t isoadc5_read_register ( isoadc5_t *ctx, uint8_t reg, uint16_t *data_out )
     spi_master_select_device( ctx->chip_select );
     err_t error_flag = spi_master_write_then_read( &ctx->spi, &tmp_buf[ 0 ], 1, &tmp_buf[ 1 ], data_len );
     spi_master_deselect_device( ctx->chip_select );
-
+    
     if ( data_len == 3 )
     {
         if ( tmp_buf[ data_len ] != isoadc5_calculate_crc ( tmp_buf, data_len ) )
@@ -167,7 +167,7 @@ err_t isoadc5_read_register ( isoadc5_t *ctx, uint8_t reg, uint16_t *data_out )
             return ISOADC5_ERROR;
         }
     }
-
+    
     *data_out = tmp_buf[ 1 ];
     *data_out <<= 8;
     *data_out |= tmp_buf[ 2 ];
@@ -183,7 +183,7 @@ err_t isoadc5_read_register_burst ( isoadc5_t *ctx, uint8_t filt, isoadc5_burst_
     }
     uint8_t data_len = 10;
     uint8_t tmp_buf[ 12 ] = { 0 };
-
+    
     if ( ISOADC5_EN_CRC == isoadc5_check_crc_enable( ctx ) )
     {
         data_len = 11;
@@ -199,7 +199,7 @@ err_t isoadc5_read_register_burst ( isoadc5_t *ctx, uint8_t filt, isoadc5_burst_
     spi_master_select_device( ctx->chip_select );
     err_t error_flag = spi_master_write_then_read( &ctx->spi, &tmp_buf[ 0 ], 1, &tmp_buf[ 1 ], data_len );
     spi_master_deselect_device( ctx->chip_select );
-
+    
     if ( data_len == 11 )
     {
         if ( tmp_buf[ data_len ] != isoadc5_calculate_crc ( tmp_buf, data_len ) )
@@ -207,7 +207,7 @@ err_t isoadc5_read_register_burst ( isoadc5_t *ctx, uint8_t filt, isoadc5_burst_
             return ISOADC5_ERROR;
         }
     }
-
+    
     if ( ISOADC5_ADC_UNFILTERED == filt )
     {
         if ( ( tmp_buf[ 1 ] | tmp_buf[ 3 ] | tmp_buf[ 5 ] | tmp_buf[ 7 ] ) & ( ISOADC5_ADC_NOT_UPDATED >> 8 ) )
@@ -215,27 +215,27 @@ err_t isoadc5_read_register_burst ( isoadc5_t *ctx, uint8_t filt, isoadc5_burst_
             return ISOADC5_ERROR;
         }
     }
-
+    
     payload->adc_1 = tmp_buf[ 1 ];
     payload->adc_1 <<= 8;
     payload->adc_1 |= tmp_buf[ 2 ];
     payload->adc_1 &= ISOADC5_ADC_12BIT_MASK;
-
+    
     payload->adc_2 = tmp_buf[ 3 ];
     payload->adc_2 <<= 8;
     payload->adc_2 |= tmp_buf[ 4 ];
     payload->adc_2 &= ISOADC5_ADC_12BIT_MASK;
-
+    
     payload->adc_3 = tmp_buf[ 5 ];
     payload->adc_3 <<= 8;
     payload->adc_3 |= tmp_buf[ 6 ];
     payload->adc_3 &= ISOADC5_ADC_12BIT_MASK;
-
+    
     payload->adc_4 = tmp_buf[ 7 ];
     payload->adc_4 <<= 8;
     payload->adc_4 |= tmp_buf[ 8 ];
     payload->adc_4 &= ISOADC5_ADC_12BIT_MASK;
-
+    
     payload->int_status = tmp_buf[ 9 ];
     payload->int_status <<= 8;
     payload->int_status |= tmp_buf[ 10 ];
@@ -252,9 +252,9 @@ err_t isoadc5_read_voltage( isoadc5_t *ctx, uint8_t filt, uint8_t ch, float *vol
         return ISOADC5_ERROR;
     }
     uint16_t raw_adc = 0;
-
+    
     err_t error_flag = isoadc5_read_register ( ctx, ch + filt * ISOADC5_ADC_CHANNEL_4, &raw_adc );
-
+    
     if ( ISOADC5_ADC_UNFILTERED == filt )
     {
         if ( raw_adc & ISOADC5_ADC_NOT_UPDATED )
@@ -262,9 +262,9 @@ err_t isoadc5_read_voltage( isoadc5_t *ctx, uint8_t filt, uint8_t ch, float *vol
             return error_flag;
         }
     }
-
+    
     *volt = ( float ) ( raw_adc * ISOADC5_MAX_VOLTAGE ) / ISOADC5_ADC_12BIT_MASK;
-
+    
     return error_flag;
 }
 
@@ -280,7 +280,7 @@ static err_t isoadc5_check_crc_enable ( isoadc5_t *ctx )
     spi_master_select_device( ctx->chip_select );
     err_t error_flag = spi_master_write_then_read( &ctx->spi, &reg, 1, rx_buf, 3 );
     spi_master_deselect_device( ctx->chip_select );
-
+    
     if ( ( ISOADC5_EN_CRC >> 8 ) == rx_buf[ 0 ] )
     {
         return ISOADC5_EN_CRC;
@@ -292,7 +292,7 @@ static err_t isoadc5_check_crc_enable ( isoadc5_t *ctx )
 static uint8_t isoadc5_calculate_crc( uint8_t *data_buf, uint8_t len )
 {
     uint8_t crc = 0x00;
-
+    
     for ( uint8_t i = 0; i < len; i++ ) 
     {
         crc ^= data_buf[ i ];

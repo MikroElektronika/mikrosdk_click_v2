@@ -1,0 +1,13 @@
+type: executable
+target: example_currentlimit
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.CurrentLimit
+}
+
+sources: {
+    main.c
+}

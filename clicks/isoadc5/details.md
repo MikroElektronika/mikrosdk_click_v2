@@ -79,10 +79,16 @@ void application_init ( void )
     log_cfg_t log_cfg;          /**< Logger config object. */
     isoadc5_cfg_t isoadc5_cfg;  /**< Click config object. */
 
-    // Logger initialization.
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
     Delay_ms( 100 );
     log_info( &logger, " Application Init " );
@@ -116,7 +122,7 @@ void application_task ( void )
     error_flag |= isoadc5_read_voltage( &isoadc5, ISOADC5_ADC_FILTERED, ISOADC5_ADC_CHANNEL_2, &v_ain2 );
     error_flag |= isoadc5_read_voltage( &isoadc5, ISOADC5_ADC_FILTERED, ISOADC5_ADC_CHANNEL_3, &v_ain3 );
     error_flag |= isoadc5_read_voltage( &isoadc5, ISOADC5_ADC_FILTERED, ISOADC5_ADC_CHANNEL_4, &v_ain4 );
-
+    
     if ( ISOADC5_OK == error_flag )
     {
         log_printf( &logger, " AIN 1 voltage: %.3f V\r\n", v_ain1 );

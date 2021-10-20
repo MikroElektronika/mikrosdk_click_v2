@@ -1,0 +1,38 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Magnetic",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Compass 5 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.compass5",
+    "product_link": "https://www.mikroe.com/compass-5-click",
+    "short_description": "Compass 5 Click is a compact add-on board that contains a 3-axis magnetometer device suitable for compass application. This board features the AK09918C, a 3-axis electronic compass with high sensitive Hall sensor technology from AKM Semiconductor.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+	"related_projects":[
+        3924
+    ],
+    "version": "2.0.0.3"
+}
+
+

@@ -1,6 +1,6 @@
 {
     "architecture": "ARM|PIC|PIC32",
-    "category": "Clock & Timing",
+    "category": "Clock generator",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -29,5 +29,8 @@
     "supported_compiler": "mikroC AI",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "version": "2.0.0.4"
 }
+
+
+

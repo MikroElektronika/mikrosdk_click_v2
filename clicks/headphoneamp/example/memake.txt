@@ -1,0 +1,13 @@
+type: executable
+target: example_headphoneamp
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.HeadphoneAMP
+}
+
+sources: {
+    main.c
+}

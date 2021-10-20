@@ -1,0 +1,36 @@
+type: library
+
+target: lib_hbridge8
+
+sources: {
+    src/hbridge8.c
+}
+
+headers: {
+    include/hbridge8.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/hbridge8.h) dst(include/hbridge8.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.HBridge8

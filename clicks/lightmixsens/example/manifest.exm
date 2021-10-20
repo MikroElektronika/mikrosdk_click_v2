@@ -1,0 +1,8 @@
+{
+    "name": "Light mix-sens Click",
+    "description": "Light mix-sens Click is carrying TMD37253, an advanced proximity measurement, color sense (RGBC+IR), and digital ambient light sensing (ALS) device. The TMD37253 slim module package has been designed to accommodate a “single hole” aperture approach that incorporates an IR LED and factory calibrated LED driver. The proximity detection feature provides object detection (e.g., mobile device screen to the user’s ear) by photodiode detection of reflected IR energy (sourced by the integrated LED). The ALS detection feature provides photopic light intensity data. The color photodiodes have UV and IR blocking filters and a dedicated data converters producing 16-bit data.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","TMD37253"],
+    "category" : ["Optical"] 
+}

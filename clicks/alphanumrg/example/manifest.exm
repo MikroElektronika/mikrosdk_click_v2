@@ -1,8 +1,0 @@
-{
-    "name": "AlphaNumRG Click",
-    "description": "AlphaNumRG click is a simple solution for adding 14-segment alphanumeric display to your device. The board carries two TLC5926 16-bit Constant-Current LED sink Drivers as well as a dual character red LED 14-segment display (with two additional segments for commas). AlphaNumRG click communicates with the target board through mikroBUS RST, CS, SCK, MISO, MOSI, PWM and INT pins (marked here as LE2, LE1, CLK, DOUT, DIN, NUMSEL and NUMSEL# respectively).",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
-    "hw" : ["click","TLC5926"],
-    "category" : ["LED Segment"] 
-}

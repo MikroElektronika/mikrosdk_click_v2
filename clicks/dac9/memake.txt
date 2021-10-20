@@ -1,0 +1,8 @@
+type: subdirs
+
+project: DAC9
+
+subdirs: {
+    lib
+    example
+}

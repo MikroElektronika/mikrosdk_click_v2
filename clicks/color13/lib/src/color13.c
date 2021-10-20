@@ -50,25 +50,25 @@ const color13_resolution_t color_lux[ 25 ] =
     { /*1*/0, /*18*/2, 100, 0.548 },
     { /*1*/0, /*19*/1, 200, 0.273 },
     { /*1*/0, /*20*/0, 400, 0.136 },
-
+    
     { /*3*/1, /*16*/4, 25,  0.722 },
     { /*3*/1, /*17*/3, 50,  0.359 },
     { /*3*/1, /*18*/2, 100, 0.18 },
     { /*3*/1, /*19*/1, 200, 0.09 },
     { /*3*/1, /*20*/0, 400, 0.045 },
-
+    
     { /*6*/2, /*16*/4, 25,  0.360 },
     { /*6*/2, /*17*/3, 50,  0.179 },
     { /*6*/2, /*18*/2, 100, 0.09 },
     { /*6*/2, /*19*/1, 200, 0.045 },
     { /*6*/2, /*20*/0, 400, 0.022 },
-
+    
     { /*9*/3, /*16*/4, 25,  0.239 },
     { /*9*/3, /*17*/3, 50,  0.119 },
     { /*9*/3, /*18*/2, 100, 0.059 },
     { /*9*/3, /*19*/1, 200, 0.03 },
     { /*9*/3, /*20*/0, 400, 0.015 },
-
+    
     { /*18*/4, /*16*/4, 25,  0.117 },
     { /*18*/4, /*17*/3, 50,  0.059 },
     { /*18*/4, /*18*/2, 100, 0.029 },
@@ -120,7 +120,7 @@ err_t color13_init ( color13_t *ctx, color13_cfg_t *cfg )
     {
         return I2C_MASTER_ERROR;
     }
-
+    
     digital_in_init( &ctx->int_pin, cfg->int_pin );
 
     return I2C_MASTER_SUCCESS;
@@ -155,30 +155,30 @@ err_t color13_get_proximity ( color13_t *ctx, uint16_t *ps_data )
 {
     uint8_t temp_buf[ 2 ] = { 0 };
     uint16_t temp_data = 0;
-
+    
     *ps_data = 0;
-
+    
     err_t error_flag = color13_generic_read( ctx, COLOR13_REG_MAIN_CTRL, temp_buf, 1 );
-
+    
     if ( !( temp_buf[ 0 ] & 1 ) )
     {
         error_flag = COLOR13_ERROR_CFG;
     }
-
+    
     if ( !error_flag )
     {
         error_flag = color13_generic_read( ctx, COLOR13_REG_PS_DATA_0, temp_buf, 2 );
 
         temp_data = ( ( uint16_t )temp_buf[ 1 ] << 8 ) | temp_buf[ 0 ];
-
+        
         *ps_data = temp_data & 0x07FF;
-
+        
         if ( temp_data & 0x0800 )
         {
             error_flag = COLOR13_ERROR_OVF;
         }
     }
-
+    
     return error_flag;
 }
 
@@ -187,9 +187,9 @@ err_t color13_ls_color ( color13_t *ctx, uint8_t ls_reg, uint32_t *ls_data )
     uint32_t temp_data = 0;
     uint8_t ls_buf[ 3 ] = { 0 };
     err_t error_flag = COLOR13_OK;
-
+    
     *ls_data = 0;
-
+    
     if ( ( COLOR13_REG_LS_DATA_RED_0 != ls_reg ) && 
          ( COLOR13_REG_LS_DATA_GREEN_0 != ls_reg ) && 
          ( COLOR13_REG_LS_DATA_BLUE_0 != ls_reg ) && 
@@ -197,11 +197,11 @@ err_t color13_ls_color ( color13_t *ctx, uint8_t ls_reg, uint32_t *ls_data )
     {
         error_flag = COLOR13_ERROR_PARAM;
     }
-
+    
     if ( !error_flag )
     {
         error_flag = color13_generic_read( ctx, ls_reg, ls_buf, 3 );
-
+        
         if ( !error_flag )
         {
             temp_data = ( ( uint32_t )ls_buf[ 2 ] << 16 ) | 
@@ -217,7 +217,7 @@ err_t color13_get_rgb_ir ( color13_t *ctx, color13_color_t *color_data )
 {
     err_t error_flag = COLOR13_OK;
     uint32_t ls_data = 0;
-
+    
     //Red
     error_flag |= color13_ls_color( ctx, COLOR13_REG_LS_DATA_RED_0, &ls_data );
     color_data->red = ls_data;
@@ -230,7 +230,7 @@ err_t color13_get_rgb_ir ( color13_t *ctx, color13_color_t *color_data )
     //IR
     error_flag |= color13_ls_color( ctx, COLOR13_REG_LS_DATA_IR_0, &ls_data );
     color_data->ir = ls_data;
-
+    
     return error_flag;
 }
 
@@ -240,16 +240,16 @@ err_t color13_get_als ( color13_t *ctx, float *als_data )
     uint32_t ls_data = 0;
     static uint8_t resolution = 0;
     uint8_t temp_data;
-
+    
     if ( 0 == resolution )
     {
         resolution = 1;
         color13_get_als_resolution( ctx );
     }
-
+    
     color13_ls_color( ctx, COLOR13_REG_LS_DATA_GREEN_0, &ls_data );
     *als_data = ls_data * ctx->lux_resolution;
-
+    
     return error_flag;
 }
 
@@ -259,12 +259,12 @@ float color13_get_als_resolution ( color13_t *ctx )
     uint8_t gain;
     uint8_t resolution;
     uint8_t temp_data;
-
+    
     color13_generic_read( ctx, COLOR13_REG_LS_GAIN, &gain, 1 );
     gain &= 0x7;
     color13_generic_read( ctx, COLOR13_REG_LS_MEAS_RATE, &temp_data, 1 );
     resolution = ( temp_data & 0x70 ) >> 4;
-
+    
     for ( uint8_t cnt = 0; cnt < 25; cnt += 5 )
     {
         if ( color_lux[cnt].gain == gain )
@@ -283,9 +283,9 @@ float color13_get_als_resolution ( color13_t *ctx )
             }
         }
     }
-
+    
     ctx->lux_resolution = res;
-
+    
     return res;
 }
 

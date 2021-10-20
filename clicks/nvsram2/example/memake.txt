@@ -1,0 +1,13 @@
+type: executable
+target: example_nvsram2
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.nvSRAM2
+}
+
+sources: {
+    main.c
+}

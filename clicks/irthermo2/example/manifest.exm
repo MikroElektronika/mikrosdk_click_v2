@@ -1,0 +1,8 @@
+{
+    "name": "IrThermo 2 Click",
+    "description": "IrThermo 2 click is a non-contact temperature measurement solution. The click board carries the TMP007 infrared thermopile sensor with an integrated math engine.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","TMP007"],
+    "category" : ["Temperature & humidity"] 
+}

@@ -1,0 +1,8 @@
+{
+    "name": "H-Bridge 6 Click",
+    "description": "H-Bridge 6 Click is a compact add-on board that contains a DC motor driver for automotive applications. This board features the VNHD7008AY, an H-bridge motor driver for automotive DC motor driving from STMicroelectronics. The VNHD7008AY, features an undervoltage shutdown, load current limitation, overload active power limitation, overtemperature shutdown, and more.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","PCA9538A"],
+    "category" : ["Brushless"]
+}

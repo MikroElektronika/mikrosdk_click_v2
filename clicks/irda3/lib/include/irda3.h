@@ -53,13 +53,6 @@ extern "C"{
  */
 
 /**
- * @brief IrDA 3 description setting.
- * @details Specified setting for description of IrDA 3 Click driver.
- */
-#define IRDA3_CMD_AT            "AT"
-#define IRDA3_CMD_DESCRIPTION   0x00
-
-/**
  * @brief IrDA 3 driver buffer size.
  * @details Specified size of driver ring buffer.
  * @note Increase buffer size if needed.
