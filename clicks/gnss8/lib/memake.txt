@@ -1,0 +1,36 @@
+type: library
+
+target: lib_gnss8
+
+sources: {
+    src/gnss8.c
+}
+
+headers: {
+    include/gnss8.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/gnss8.h) dst(include/gnss8.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.GNSS8

@@ -1,0 +1,7 @@
+type: subdirs
+project: GNSS8
+
+subdirs: {
+    lib
+    example
+}

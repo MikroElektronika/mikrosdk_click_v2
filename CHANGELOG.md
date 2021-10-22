@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20211022](#20211022)**
 + **[20211018](#20211018)**
 + **[20210917](#20210917)**
 + **[20210910](#20210910)**
@@ -20,6 +21,19 @@
 
 ---
 ---
+---
+
+## `20211022`
+
+*Following click boards have been added:*
+
++ `RTC 13`
++ `GainAMP 3`
++ `GNSS 8`
++ `Hall Current 12`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20211018`

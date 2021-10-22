@@ -1,0 +1,36 @@
+type: library
+
+target: lib_hallcurrent12
+
+sources: {
+    src/hallcurrent12.c
+}
+
+headers: {
+    include/hallcurrent12.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/hallcurrent12.h) dst(include/hallcurrent12.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.HallCurrent12
