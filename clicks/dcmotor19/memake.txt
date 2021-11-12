@@ -1,0 +1,8 @@
+type: subdirs
+
+project: DCMotor19
+
+subdirs: {
+    lib
+    example
+}

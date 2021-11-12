@@ -79,8 +79,6 @@ void application_init( void )
 {
     reram_cfg_t reram_cfg;
     log_cfg_t logger_cfg;
-    reram_spi_data_t data_in[ RERAM_TRANSFER_BYTES_MAX ];
-    uint16_t cnt;
 
     //  Click object initialization.
     reram_cfg_setup( &reram_cfg );
@@ -99,22 +97,26 @@ void application_init( void )
      * need to define them manually for log to work. 
      * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
      */
-    LOG_MAP_USB_UART( log_cfg );
+    LOG_MAP_USB_UART( logger_cfg );
     log_init( &logger, &logger_cfg );
-    log_write( &logger, "***  ReRAM Initialization Done  ***", LOG_FORMAT_LINE );
-    log_write( &logger, "***********************************", LOG_FORMAT_LINE );
-
-    //  Memory writing.
-    data_in[ RERAM_MEM_ADDR_START ] = 0;
-
-    for (cnt = 0x1; cnt < RERAM_TRANSFER_BYTES_MAX; cnt++)
+    
+    reram_wake_up( &reram );
+    
+    uint32_t id_data = reram_read_id( &reram );
+    
+    if ( RERAM_ID_DATA != id_data )
     {
-        data_in[ cnt ] = data_in[ cnt - 1 ] + 1;
+        log_printf( &logger, "***  ReRAM Error ID  ***\r\n" );
+        for( ; ; );
+    }
+    else
+    {    
+        log_printf( &logger, "***  ReRAM Initialization Done  ***\r\n" );
+        log_printf( &logger, "***********************************\r\n" );
     }
 
+
     reram_send_cmd( &reram, RERAM_CMD_WREN );
-    reram_write_memory( &reram, RERAM_MEM_ADDR_START, data_in,
-                        RERAM_TRANSFER_BYTES_MAX );
     Delay_ms( 1000 );
 }
 

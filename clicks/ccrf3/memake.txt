@@ -1,0 +1,7 @@
+type: subdirs
+project: ccRF3
+
+subdirs: {
+    lib
+    example
+}

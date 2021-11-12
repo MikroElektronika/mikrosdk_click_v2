@@ -28,6 +28,7 @@ include: {
 
 install: {
     src(include/clockgen5.h) dst(include/clockgen5.h)
+    src(include/spi_specifics.h) dst(include/spi_specifics.h)
 }
 
 expInclude: {

@@ -17,6 +17,7 @@ include: {
 
 install: {
     src(include/oledb.h) dst(include/oledb.h)
+    src(include/resources.h) dst(include/resources.h)
 }
 
 expInclude: {

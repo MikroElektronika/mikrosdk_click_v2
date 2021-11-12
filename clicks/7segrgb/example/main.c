@@ -52,37 +52,6 @@
 #include "log.h"
 #include "c7segrgb.h"
 
-// #if defined __MIKROC_AI_FOR_ARM__
-// #define D_S    3
-// #define D_L    9
-// 
-// #define DELAY_SHORT( void ) \
-//     Delay_Cyc( D_S );
-//     
-// #define DELAY_LONG( void ) \
-//     Delay_Cyc( D_L );
-// #endif
-// #if defined __MIKROC_AI_FOR_PIC32__
-//     
-// #define D_L    4
-//     
-// #define DELAY_SHORT( void ) \
-//     asm nop
-//     
-// #define DELAY_LONG( void ) \
-//     Delay_Cyc( D_L );
-// #endif
-// #if !defined(__MIKROC_AI_FOR_ARM__) && !defined(__MIKROC_AI_FOR_PIC32__)
-// #define D_S    1
-// #define D_L    2
-// 
-// #define DELAY_SHORT( void ) \
-//     Delay_Cyc( D_S );
-//     
-// #define DELAY_LONG( void ) \
-//     Delay_Cyc( D_L );
-// #endif
-
 #ifdef __MIKROC_AI_FOR_ARM__
 
 #ifdef __STM32__/*< STM32F407ZG*/

@@ -1,0 +1,49 @@
+type: library
+target: lib_vcpmonitor3
+
+#begin python
+import re
+
+if ( re.match("(^PIC18F(.+)[KQ]4[23]$)|(^PIC32(.+)$)",MEMAKE_MCU_NAME) ):
+    sample_mode_reg_case = "SAMPLE_REG_CASE_1"
+else:
+    sample_mode_reg_case = "SAMPLE_REG_CASE_2"
+#end python
+
+defines: {
+    <[sample_mode_reg_case]>
+}
+
+sources: {
+    src/vcpmonitor3.c
+}
+
+headers: {
+    include/vcpmonitor3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/vcpmonitor3.h) dst(include/vcpmonitor3.h)
+    src(include/spi_specifics.h) dst(include/spi_specifics.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.VCPMonitor3

@@ -57,14 +57,12 @@ err_t dac11_default_cfg ( dac11_t *ctx );
 err_t dac11_write_control_reg( dac11_t *ctx, uint8_t cmd, uint16_t data_in );
 ```
 
-- `dac11_set_all_ch_voltage` This function sets the output voltage of all channels depending on the vref value defined by the VCC SEL on-board jumper. 
-The VREF and Voltage values can be either in Volts or Milivolts.
+- `dac11_set_all_ch_voltage` This function sets the output voltage of all channels depending on the vref value defined by the VCC SEL on-board jumper. The VREF and Voltage values can be either in Volts or Milivolts.
 ```c
 err_t dac11_set_all_ch_voltage( dac11_t *ctx, float vref, float voltage );
 ```
 
-- `dac11_set_specific_ch_voltage` This function sets the output voltage of the specific channels depending on the vref value defined by the VCC SEL on-board jumper. 
-The VREF and Voltage values can be either in Volts or Milivolts.
+- `dac11_set_specific_ch_voltage` This function sets the output voltage of the specific channels depending on the vref value defined by the VCC SEL on-board jumper. The VREF and Voltage values can be either in Volts or Milivolts.
 ```c
 err_t dac11_set_specific_ch_voltage( dac11_t *ctx, uint8_t channel, float vref, float voltage );
 ```

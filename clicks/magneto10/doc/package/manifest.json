@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Magnetic",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Magneto 10 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.magneto10",
+    "product_link": "https://www.mikroe.com/magneto-10-click",
+    "short_description": "Magneto 10 Click is a compact add-on board that contains a 3D magnetometer. This board features the MLX90392, a +/-5mT range magnetometer for low-noise applications from Melexis Technologies. The MLX90392, specially designed for micropower applications, measures magnetic fields along the three axes (X, Y being in a plane parallel to the surface of the die, and Z being perpendicular to the surface).",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

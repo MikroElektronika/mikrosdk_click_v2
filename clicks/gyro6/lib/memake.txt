@@ -28,6 +28,7 @@ include: {
 
 install: {
     src(include/gyro6.h) dst(include/gyro6.h)
+    src(include/spi_specifics.h) dst(include/spi_specifics.h)
 }
 
 expInclude: {

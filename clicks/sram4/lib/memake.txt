@@ -28,6 +28,7 @@ include: {
 
 install: {
     src(include/sram4.h) dst(include/sram4.h)
+    src(include/spi_specifics.h) dst(include/spi_specifics.h)
 }
 
 expInclude: {

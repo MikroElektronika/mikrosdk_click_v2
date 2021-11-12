@@ -28,6 +28,7 @@ include: {
 
 install: {
     src(include/dcmotor16.h) dst(include/dcmotor16.h)
+    src(include/spi_specifics.h) dst(include/spi_specifics.h)
 }
 
 expInclude: {

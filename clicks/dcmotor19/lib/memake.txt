@@ -1,0 +1,36 @@
+type: library
+
+target: lib_dcmotor19
+
+sources: {
+    src/dcmotor19.c
+}
+
+headers: {
+    include/dcmotor19.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/dcmotor19.h) dst(include/dcmotor19.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.DCMotor19

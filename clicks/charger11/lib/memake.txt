@@ -28,6 +28,7 @@ include: {
 
 install: {
     src(include/charger11.h) dst(include/charger11.h)
+    src(include/spi_specifics.h) dst(include/spi_specifics.h)
 }
 
 expInclude: {

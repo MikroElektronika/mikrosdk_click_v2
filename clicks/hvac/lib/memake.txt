@@ -1,0 +1,36 @@
+type: library
+
+target: lib_hvac
+
+sources: {
+    src/hvac.c
+}
+
+headers: {
+    include/hvac.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/hvac.h) dst(include/hvac.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Hvac

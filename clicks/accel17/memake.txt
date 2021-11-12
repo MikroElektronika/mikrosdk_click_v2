@@ -1,0 +1,7 @@
+type: subdirs
+project: Accel17
+
+subdirs: {
+    lib
+    example
+}

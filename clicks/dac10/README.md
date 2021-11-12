@@ -58,8 +58,7 @@ err_t dac10_check_device_id ( dac10_t *ctx );
 err_t dac10_enable_dac ( dac10_t *ctx );
 ```
 
-- `dac10_set_output_voltage` This function sets the output voltage depending on the vref value defined by 
-the VCC SEL on-board jumper. VREF and Voltage values can be either in Volts or Milivolts.
+- `dac10_set_output_voltage` This function sets the output voltage depending on the vref value defined by the VCC SEL on-board jumper. VREF and Voltage values can be either in Volts or Milivolts.
 ```c
 err_t dac10_set_output_voltage ( dac10_t *ctx, float vref, float voltage );
 ```

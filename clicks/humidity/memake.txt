@@ -1,0 +1,7 @@
+type: subdirs
+project: Humidity
+
+subdirs: {
+    lib
+    example
+}

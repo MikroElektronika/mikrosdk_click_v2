@@ -19,6 +19,7 @@ include: {
 
 install: {
     src(include/c6dofimu12.h) dst(include/c6dofimu12.h)
+    src(include/c6dofimu12_config.h) dst(include/c6dofimu12_config.h)
 }
 
 expInclude: {

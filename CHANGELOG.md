@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20211112](#20211112)**
 + **[20211022](#20211022)**
 + **[20211018](#20211018)**
 + **[20210917](#20210917)**
@@ -21,6 +22,16 @@
 
 ---
 ---
+---
+
+## `20211112`
+
+* Added click boards released since last sync
+* Added support for Tiva
+* Unused files have been removed
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20211022`

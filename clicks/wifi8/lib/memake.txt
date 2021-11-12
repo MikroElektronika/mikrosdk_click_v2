@@ -17,6 +17,7 @@ include: {
 
 install: {
     src(include/wifi8.h) dst(include/wifi8.h)
+    src(include/wifi8_types.h) dst(include/wifi8_types.h)
 }
 
 expInclude: {

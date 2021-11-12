@@ -1,0 +1,10 @@
+type: subdirs
+project: Accel16
+
+subdirs: {
+    lib
+    example
+}
+
+depends: {
+}

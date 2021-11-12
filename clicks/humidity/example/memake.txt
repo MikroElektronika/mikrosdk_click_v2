@@ -1,0 +1,13 @@
+type: executable
+target: example_humidity
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Humidity
+}
+
+sources: {
+    main.c
+}

@@ -17,6 +17,7 @@ include: {
 
 install: {
     src(include/oledw.h) dst(include/oledw.h)
+    src(include/resources.h) dst(include/resources.h)
 }
 
 expInclude: {

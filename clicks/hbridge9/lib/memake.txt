@@ -28,6 +28,7 @@ include: {
 
 install: {
     src(include/hbridge9.h) dst(include/hbridge9.h)
+    src(include/spi_specifics.h) dst(include/spi_specifics.h)
 }
 
 expInclude: {

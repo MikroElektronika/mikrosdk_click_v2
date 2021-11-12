@@ -28,6 +28,7 @@ include: {
 
 install: {
     src(include/dac11.h) dst(include/dac11.h)
+    src(include/spi_specifics.h) dst(include/spi_specifics.h)
 }
 
 expInclude: {
