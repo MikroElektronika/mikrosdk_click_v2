@@ -1,0 +1,33 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Current sensor",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "PROFET 10A click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.profet10a",
+    "product_link": "https://www.mikroe.com/profet-click-10a",
+    "short_description": "PROFET Click is a compact add-on board that contains a smart high-side power switch. This board features the BTS7008-1EPA, a single-channel, high-side power switch with embedded protection and diagnosis feature from Infineon Technologies. This switch has a driving capability suitable for 10A loads featuring a ReverSave™, which causes the power transistor to switch on in case of reverse polarity.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.0"
+}

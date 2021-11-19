@@ -1,0 +1,8 @@
+{
+    "name": "Environment 3 Click",
+    "description": "Environment 3 Click is a compact add-on board that contains a four-in-one environmental measurement solution. This board features BME688, a first gas sensor with Artificial Intelligence (AI), and integrated high-linearity/high-accuracy pressure, humidity, and temperature sensors from Bosch Sensortech. The BME688 can detect Volatile Organic Compounds (VOCs), Volatile Sulfur Compounds (VSCs), and other gases such as carbon monoxide and hydrogen in part per billion (ppb) range. It provides absolute temperature accuracy, typical of ±1°C, and best performance when operated within the pressure, temperature, and humidity range of 300-110hPa, 0-65°C, and 10-90%RH.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","BME688"],
+    "category" : ["Environmental"]
+}
