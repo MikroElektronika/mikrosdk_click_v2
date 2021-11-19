@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "ADC",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "DAQ click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.daq",
+    "product_link": "https://www.mikroe.com/daq-click",
+    "short_description": "DAQ Click is a compact add-on board representing a data acquisition solution. This board features the ADAQ7768-1, a 24-bit precision data acquisition (DAQ) μModule system that encapsulates signal conditioning, conversion, and processing blocks into one SiP from Analog Devices. It supports a fully differential input signal with a maximum voltage range of ±12V with an excellent common-mode rejection ratio (CMRR). The input signal is fully buffered with a low input bias current, enabling the ADAQ7768-1 to interface to sensors with high output impedance directly.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

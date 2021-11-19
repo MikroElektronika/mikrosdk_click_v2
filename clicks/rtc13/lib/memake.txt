@@ -28,6 +28,7 @@ include: {
 
 install: {
     src(include/rtc13.h) dst(include/rtc13.h)
+    src(include/spi_specifics.h) dst(include/spi_specifics.h)
 }
 
 expInclude: {

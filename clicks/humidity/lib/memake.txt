@@ -1,0 +1,36 @@
+type: library
+
+target: lib_humidity
+
+sources: {
+    src/humidity.c
+}
+
+headers: {
+    include/humidity.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/humidity.h) dst(include/humidity.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Humidity

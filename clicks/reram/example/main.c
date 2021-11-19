@@ -69,7 +69,7 @@ void application_init( void )
      * need to define them manually for log to work. 
      * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
      */
-    LOG_MAP_USB_UART( log_cfg );
+    LOG_MAP_USB_UART( logger_cfg );
     log_init( &logger, &logger_cfg );
     
     reram_wake_up( &reram );

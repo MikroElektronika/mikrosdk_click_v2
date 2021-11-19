@@ -1,0 +1,36 @@
+type: library
+
+target: lib_hbridgedriver
+
+sources: {
+    src/hbridgedriver.c
+}
+
+headers: {
+    include/hbridgedriver.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/hbridgedriver.h) dst(include/hbridgedriver.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.HBridgeDriver

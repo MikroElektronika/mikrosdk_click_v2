@@ -18,6 +18,7 @@ include: {
 
 install: {
     src(include/oledswitch.h) dst(include/oledswitch.h)
+    src(include/oledswitch_image.h) dst(include/oledswitch_image.h)
 }
 
 expInclude: {

@@ -1,0 +1,8 @@
+type: subdirs
+
+project: PROFET23A
+
+subdirs: {
+    lib
+    example
+}

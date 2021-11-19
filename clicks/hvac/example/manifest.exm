@@ -1,0 +1,8 @@
+{
+    "name": "HVAC Click",
+    "description": "HVAC Click is a compact add-on board that contains Sensirion’s next-generation miniature CO2 sensor. This board features the SCD41, a carbon dioxide sensor build on the photoacoustic sensing principle, and Sensirion’s patented PASens® and CMOSens® technology to offer high accuracy at a minor form factor.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","SCD41"],
+    "category" : ["Environmental"]
+}

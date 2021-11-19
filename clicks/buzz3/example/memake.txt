@@ -1,0 +1,13 @@
+type: executable
+target: example_buzz3
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Buzz3
+}
+
+sources: {
+    main.c
+}

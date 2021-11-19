@@ -28,6 +28,7 @@ include: {
 
 install: {
     src(include/expand8.h) dst(include/expand8.h)
+    src(include/spi_specifics.h) dst(include/spi_specifics.h)
 }
 
 expInclude: {

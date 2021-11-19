@@ -17,6 +17,7 @@ include: {
 
 install: {
     src(include/c7x10y.h) dst(include/c7x10y.h)
+    src(include/c7x10y_font.h) dst(include/c7x10y_font.h)
 }
 
 expInclude: {

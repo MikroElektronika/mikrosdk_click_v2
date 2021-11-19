@@ -14,8 +14,6 @@
  * ## Application Task  
  * Reads 12 bit ADC data from AN pin and displays it using the logger module.
  * 
- * #NOTE: Dje me ovo zapade...
- * 
  * \author MikroE Team
  *
  */

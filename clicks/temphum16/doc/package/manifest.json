@@ -25,12 +25,13 @@
     },
     "name": "mikroe.click.temphum16",
     "product_link": "https://www.mikroe.com/temphum-16-click",
-    "short_description": "Temp&Hum 16 Click is a compact add-on board that represents temperature and humidity sensing solutions. This board features the WSEN-HIDS (252.0.0.40001), a MEMS-based capacitive humidity sensor with an integrated ASIC and I2C and SPI serial communication from Würth Elektronik. A silicon-based temperature sensor is also integrated within the same package. ASIC contains the multiplier, operational amplifier, analog-to-digital converter, and other signal conditioning blocks like controller logics and interrupts. It converts the analog signal from humidity and temperature sensing elements into 16-bit digital humidity and temperature values. The 252.0.0.40001 is factory calibrated for both humidity and temperature measurements with no further calibration required. This Click board™ is an ideal solution to be used in various temperature and humidity-related applications.",
+    "short_description": "Temp&Hum 16 Click is a compact add-on board that represents temperature and humidity sensing solutions. This board features the WSEN-HIDS (252.0.0.50001), a MEMS-based capacitive humidity sensor with an integrated ASIC and I2C and SPI serial communication from Würth Elektronik. A silicon-based temperature sensor is also integrated within the same package. ASIC contains the multiplier, operational amplifier, analog-to-digital converter, and other signal conditioning blocks like controller logics and interrupts. It converts the analog signal from humidity and temperature sensing elements into 16-bit digital humidity and temperature values. The 252.0.0.50001 is factory calibrated for both humidity and temperature measurements with no further calibration required. This Click board™ is an ideal solution to be used in various temperature and humidity-related applications.",
     "supported_compiler": "mikroC AI",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.0.0.4"
+    "version": "2.0.0.5"
 }
+
 
 
 
