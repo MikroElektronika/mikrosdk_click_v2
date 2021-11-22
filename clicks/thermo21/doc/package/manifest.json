@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Temperature & humidity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Thermo 21 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.thermo21",
+    "product_link": "https://www.mikroe.com/thermo-21-click",
+    "short_description": "Thermo 21 Click is a compact add-on board that provides an accurate temperature measurement. This board features the ADT7301, a high-precision digital temperature sensor from Analog Devices. The ADT7301 houses an on-chip temperature sensor, a 13-bit A/D converter, a reference circuit, and serial interface logic functions in one package. Characterized by its high accuracy (up to ±0.5°C typical) and high resolution of 0.03125°C, this temperature sensor provides temperature data to the host controller with a configurable SPI interface. This Click board™ is appropriate for process control, environmental monitoring, domestic appliances, electronic test equipment, or other temperature measurement applications.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

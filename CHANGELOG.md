@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20211119](#20211119)**
 + **[20211112](#20211112)**
 + **[20211022](#20211022)**
 + **[20211018](#20211018)**
@@ -22,6 +23,20 @@
 
 ---
 ---
+---
+
+## `20211119`
+
+*Following click boards have been added:*
+
++ `PROFET 10A`
++ `Thermo 21`
++ `Environment 3`
++ `TempHum 18`
++ `Altitude 6`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20211112`

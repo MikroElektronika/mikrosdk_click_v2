@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Environmental",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Environment 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.environment3",
+    "product_link": "https://www.mikroe.com/environment-3-click",
+    "short_description": "Environment 3 Click is a compact add-on board that contains a four-in-one environmental measurement solution. This board features BME688, a first gas sensor with Artificial Intelligence (AI), and integrated high-linearity/high-accuracy pressure, humidity, and temperature sensors from Bosch Sensortech. The BME688 can detect Volatile Organic Compounds (VOCs), Volatile Sulfur Compounds (VSCs), and other gases such as carbon monoxide and hydrogen in part per billion (ppb) range. It provides absolute temperature accuracy, typical of ±1°C, and best performance when operated within the pressure, temperature, and humidity range of 300-110hPa, 0-65°C, and 10-90%RH.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.2"
+}
+

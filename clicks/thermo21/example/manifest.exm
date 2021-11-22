@@ -1,0 +1,8 @@
+{
+    "name": "Thermo 21 Click",
+    "description": "Thermo 21 Click is a compact add-on board that provides an accurate temperature measurement. This board features the ADT7301, a high-precision digital temperature sensor from Analog Devices. The ADT7301 houses an on-chip temperature sensor, a 13-bit A/D converter, a reference circuit, and serial interface logic functions in one package. Characterized by its high accuracy (up to ±0.5°C typical) and high resolution of 0.03125°C, this temperature sensor provides temperature data to the host controller with a configurable SPI interface. This Click board™ is appropriate for process control, environmental monitoring, domestic appliances, electronic test equipment, or other temperature measurement applications.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","ADT7301ARTZ"],
+    "category" : ["Temperature & humidity"]
+}
