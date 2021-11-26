@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Temperature & humidity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "TempHum 20 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.temphum20",
+    "product_link": "https://www.mikroe.com/temphum-20-click",
+    "short_description": "Temp&Hum 20 Click is a compact add-on board that represents temperature and humidity sensing solution. This board features the CC2D23, a highly accurate, fully-calibrated relative humidity and temperature sensor from Amphenol. This sensor, characterized by its high accuracy (±2% from 20% to 80%RH (±3% over entire humidity range)) and high resolution, provides factory-calibrated 14-bit data to the host controller with a configurable I2C interface. It also comes with alarm features for preset control at a minimum and maximum humidity.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.2"
+}
+
