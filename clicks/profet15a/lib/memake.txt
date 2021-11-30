@@ -1,0 +1,36 @@
+type: library
+
+target: lib_profet15a
+
+sources: {
+    src/profet15a.c
+}
+
+headers: {
+    include/profet15a.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/profet15a.h) dst(include/profet15a.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.PROFET15A

@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Current sensor",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "PROFET 15A click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.profet15a",
+    "product_link": "https://www.mikroe.com/profet-click-15a",
+    "short_description": "PROFET Click is a compact add-on board that contains a smart high-side power switch. This board features the BTS70041EPPXUMA1, a single-channel, high-side power switch with embedded protection and diagnosis feature from Infineon Technologies. This switch has a driving capability suitable for 15A loads featuring a ReverSave™, which causes the power transistor to switch on in case of reverse polarity. Besides its protection features, it also has pin-configurable diagnosis features such as proportional load current sense, open Load in ON and OFF state, and short circuit to ground and battery.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

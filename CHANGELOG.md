@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20211126](#20211126)**
 + **[20211119](#20211119)**
 + **[20211112](#20211112)**
 + **[20211022](#20211022)**
@@ -23,6 +24,20 @@
 
 ---
 ---
+---
+
+## `20211126`
+
+*Following click boards have been added:*
+
++ `DC Motor 21`
++ `PROFET 15A`
++ `Brushless 15`
++ `TempHum 20`
++ `Accel 20`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20211119`
