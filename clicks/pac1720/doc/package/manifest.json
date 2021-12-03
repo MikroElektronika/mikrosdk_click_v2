@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Measurements",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "PAC1720 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.pac1720",
+    "product_link": "https://www.mikroe.com/pac1720-click",
+    "short_description": "PAC1720 Click is a compact add-on board that contains an energy monitoring solution. This board features the PAC1720, an I2C configurable dual high-side bidirectional current sensing monitor with precision voltage measurement capabilities from Microchip Technology. The PAC1720 measures the voltage developed across external sense resistors to represent the high-side current of a battery or voltage regulator.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

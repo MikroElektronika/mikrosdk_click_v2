@@ -1,0 +1,36 @@
+type: library
+
+target: lib_zigbee
+
+sources: {
+    src/zigbee.c
+}
+
+headers: {
+    include/zigbee.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/zigbee.h) dst(include/zigbee.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.ZigBee

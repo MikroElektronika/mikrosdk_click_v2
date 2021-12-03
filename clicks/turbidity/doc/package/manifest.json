@@ -1,0 +1,33 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Environmental",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Turbidity click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.turbidity",
+    "product_link": "https://www.mikroe.com/turbidity-click",
+    "short_description": "Turbidity Click is an adapter Click board™, used to interface a compatible turbidity sensor with the host MCU. This board features one 1x3 2.5mm connector suitable for connecting a TSD-10 Turbidity Sensor via an additional 3-wire cable for Turbidity Click specially made for this purpose. It allows users to upgrade their projects with a sensor that senses the cloudiness or haziness of a fluid caused by large numbers of individual particles invisible to the naked eye. This sensor also measures temperature as well as turbidity.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}

@@ -1,0 +1,36 @@
+type: library
+
+target: lib_pac1720
+
+sources: {
+    src/pac1720.c
+}
+
+headers: {
+    include/pac1720.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/pac1720.h) dst(include/pac1720.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.PAC1720

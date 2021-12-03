@@ -1,0 +1,13 @@
+type: executable
+target: example_pac1720
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.PAC1720
+}
+
+sources: {
+    main.c
+}
