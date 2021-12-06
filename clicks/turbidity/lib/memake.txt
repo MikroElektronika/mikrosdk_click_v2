@@ -1,0 +1,36 @@
+type: library
+
+target: lib_turbidity
+
+sources: {
+    src/turbidity.c
+}
+
+headers: {
+    include/turbidity.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/turbidity.h) dst(include/turbidity.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Turbidity

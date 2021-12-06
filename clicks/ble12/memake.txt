@@ -1,0 +1,7 @@
+type: subdirs
+project: BLE12
+
+subdirs: {
+    lib
+    example
+}

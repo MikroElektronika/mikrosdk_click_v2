@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20211203](#20211203)**
 + **[20211126](#20211126)**
 + **[20211119](#20211119)**
 + **[20211112](#20211112)**
@@ -24,6 +25,21 @@
 
 ---
 ---
+---
+
+## `20211203`
+
+*Following click boards have been added:*
+
++ `Turbidity`
++ `BLE 12`
++ `PAC1720`
++ `Air Quality 8`
++ `ECG 2`
++ `ZigBee`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20211126`

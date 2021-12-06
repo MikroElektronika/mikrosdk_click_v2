@@ -1,0 +1,13 @@
+type: executable
+target: example_ecg2
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.ECG2
+}
+
+sources: {
+    main.c
+}

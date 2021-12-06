@@ -1,0 +1,36 @@
+type: library
+
+target: lib_airquality8
+
+sources: {
+    src/airquality8.c
+}
+
+headers: {
+    include/airquality8.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/airquality8.h) dst(include/airquality8.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.AirQuality8

@@ -1,0 +1,8 @@
+{
+    "name": "Air Quality 8 Click",
+    "description": "Air quality 8 Click is a compact add-on board containing a best-in-class air-quality sensing solution. This board features the ZMOD4510, a fully calibrated digital sensor solution that detects air quality in various indoor and outdoor applications from Renesas. The ZMOD4510 comes with selective ozone measurement capabilities, offering visibility into the air quality in users' environments for a personalized experience. This Click board™ is an I2C configurable and characterized by outstanding long-term stability and lifetime. Many additional features such as low power consumption, wide NO2 and O3 detection range, and high sensitivity make this Click board™ an excellent choice for detecting unhealthy conditions in outdoor air, such as personal air-quality monitor, HVAC, and other various air quality-related applications.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","ZMOD4510"],
+    "category" : ["Gas"]
+}
