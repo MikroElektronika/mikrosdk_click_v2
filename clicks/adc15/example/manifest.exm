@@ -1,0 +1,8 @@
+{
+    "name": "ADC 15 Click",
+    "description": "ADC 15 Click is a compact add-on board that contains a high-performance data converter. This board features the ADS131M02, a two-channel, simultaneously sampling, 24-bit, delta-sigma (ΔΣ), analog-to-digital converter from Texas Instruments. The ADC inputs can be independently configured via serial peripheral interface depending on the sensor input. A low noise, programmable gain amplifier (PGA) provides gains ranging from 1 to 128 to amplify low-level signals.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","ADS131M02","LTC6903"],
+    "category" : ["ADC"]
+}

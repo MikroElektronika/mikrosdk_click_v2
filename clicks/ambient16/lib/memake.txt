@@ -1,0 +1,36 @@
+type: library
+
+target: lib_ambient16
+
+sources: {
+    src/ambient16.c
+}
+
+headers: {
+    include/ambient16.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/ambient16.h) dst(include/ambient16.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Ambient16

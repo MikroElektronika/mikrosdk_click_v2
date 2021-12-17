@@ -1,0 +1,7 @@
+type: subdirs
+project: ReRAM2
+
+subdirs: {
+    lib
+    example
+}

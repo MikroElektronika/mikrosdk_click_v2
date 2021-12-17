@@ -1,0 +1,7 @@
+type: subdirs
+project: HeartRate5
+
+subdirs: {
+    lib
+    example
+}

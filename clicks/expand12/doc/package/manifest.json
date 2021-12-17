@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Port expander",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Expand 12 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.expand12",
+    "product_link": "https://www.mikroe.com/expand-12-click",
+    "short_description": "Expand 12 Click is a compact add-on board that contains a multi-port I/O expander. This board features the MAX7300, a general-purpose I/O expander providing remote I/O expansion for most MCU’s families from Maxim Integrated, now part of Analog Devices. The MAX7300 comes in a 28-port configuration and allows easy addition of I/O through a standard I2C serial interface. Each port is user-configurable to either a logic input or logic output, capable of sinking 10mA and sourcing 4.5mA.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.2"
+}
+

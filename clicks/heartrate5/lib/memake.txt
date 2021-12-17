@@ -1,0 +1,36 @@
+type: library
+
+target: lib_heartrate5
+
+sources: {
+    src/heartrate5.c
+}
+
+headers: {
+    include/heartrate5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/heartrate5.h) dst(include/heartrate5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.HeartRate5

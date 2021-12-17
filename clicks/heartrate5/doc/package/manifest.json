@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Biometrics",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Heart Rate 5 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.heartrate5",
+    "product_link": "https://www.mikroe.com/heart-rate-5-click",
+    "short_description": "Heart Rate 5 click is the optical biosensor Click board™ which can be used for the heart-rate monitoring (HRM), as well as the peripheral capillary oxygen saturation monitoring (SpO2). This Click board™ employs a very sensitive analog front-end IC with high dynamic range, which ensures accurate and reliable readings. ",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "related_projects":[
+        2368
+    ],
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.0"
+}

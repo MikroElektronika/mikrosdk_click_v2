@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Temperature & humidity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "TempHum 19 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.temphum19",
+    "product_link": "https://www.mikroe.com/temphum-19-click",
+    "short_description": "Temp&Hum 19 Click is a compact add-on board that represents temperature and humidity sensing solution. This board features the BPS240, a highly accurate relative humidity and temperature sensor from Bourns. This sensor, characterized by its high accuracy (±2% from 20% to 80%RH (±4% over entire humidity range)) and high resolution, provides 10-bit data to the host controller with a configurable I2C interface.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

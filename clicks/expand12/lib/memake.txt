@@ -1,0 +1,36 @@
+type: library
+
+target: lib_expand12
+
+sources: {
+    src/expand12.c
+}
+
+headers: {
+    include/expand12.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/expand12.h) dst(include/expand12.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Expand12
