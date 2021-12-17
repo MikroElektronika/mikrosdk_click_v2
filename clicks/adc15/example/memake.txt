@@ -1,0 +1,13 @@
+type: executable
+target: example_adc15
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.ADC15
+}
+
+sources: {
+    main.c
+}

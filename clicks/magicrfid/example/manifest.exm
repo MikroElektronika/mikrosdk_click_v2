@@ -1,0 +1,8 @@
+{
+    "name": "Magic RFID Click",
+    "description": "Magic RFID Click is a compact add-on board that contains an embedded RFID module. This board features the M6E-NANO, UHF RFID module with ultra-low power consumption from JADAK. Supporting the EPC Gen2V2 and ISO 18000-63 standard, the M6E-NANO module is available for global use. It operates in the Ultra High Frequency (UHF) band in a range from 859 up to 930MHz and can be used for write/read applications.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic32"],
+    "hw" : ["click","M6E-NANO"],
+    "category" : ["RFID/NFC"]
+}

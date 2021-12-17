@@ -1,0 +1,36 @@
+type: library
+
+target: lib_heartrate7
+
+sources: {
+    src/heartrate7.c
+}
+
+headers: {
+    include/heartrate7.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/heartrate7.h) dst(include/heartrate7.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.HeartRate7

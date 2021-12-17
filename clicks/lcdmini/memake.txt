@@ -1,0 +1,7 @@
+type: subdirs
+project: LCDmini
+
+subdirs: {
+    lib
+    example
+}

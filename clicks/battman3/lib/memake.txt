@@ -1,0 +1,36 @@
+type: library
+
+target: lib_battman3
+
+sources: {
+    src/battman3.c
+}
+
+headers: {
+    include/battman3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/battman3.h) dst(include/battman3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.BATT-MAN3

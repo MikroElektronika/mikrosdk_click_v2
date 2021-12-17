@@ -1,0 +1,8 @@
+{
+    "name": "LCD mini Click",
+    "description": "LCD mini click displays 2x16 monochrome characters on an LMB162XFW LCD display. It features the MCP23S17 port expander and the MCP4161 digital potentiometer, both from Microchip.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","MCP23S17"],
+    "category" : ["LCD"]
+}

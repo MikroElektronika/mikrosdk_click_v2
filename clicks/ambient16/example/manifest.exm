@@ -1,0 +1,8 @@
+{
+    "name": "Ambient 16 Click",
+    "description": "Ambient 16 Click is a compact add-on board used to measure the amount of the present ambient light. This board features the BH1726NUC, a 16-bit digital-output ambient light sensor with an I2C interface from Rohm Semiconductor. The BH1726NUC can detect a wide range of illuminance up to 30klx and provides excellent responsivity close to the human eyes' response. It is designed to control the brightness in various applications based on ambient light availability, brightness for optimum visibility, and energy efficiency.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","BH1726NUC"],
+    "category" : ["Optical"]
+}

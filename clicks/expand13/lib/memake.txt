@@ -1,0 +1,36 @@
+type: library
+
+target: lib_expand13
+
+sources: {
+    src/expand13.c
+}
+
+headers: {
+    include/expand13.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/expand13.h) dst(include/expand13.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Expand13

@@ -1,0 +1,8 @@
+{
+    "name": "BATT-MAN 3 Click",
+    "description": "BATT-MAN 3 Click is a compact add-on board representing an advanced battery management solution. This board features the ADP5350, a power management IC with inductive boost LED, and three LDO regulators from Analog Devices. This I2C programmable board supports USB optimized for USB voltage input. It combines one high-performance buck regulator for single Li-Ion/Li-Ion polymer battery charging, a fuel gauge, a highly programmable boost regulator for LED backlight illumination, and three 150mA LDO regulators.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","ADP5350"],
+    "category" : ["Power Management"]
+}

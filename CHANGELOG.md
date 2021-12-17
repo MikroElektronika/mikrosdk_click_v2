@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20211217](#20211217)**
 + **[20211203](#20211203)**
 + **[20211126](#20211126)**
 + **[20211119](#20211119)**
@@ -25,6 +26,28 @@
 
 ---
 ---
+---
+
+## `20211217`
+
+*Following click boards have been added:*
+
++ `ADC 15`
++ `Waveform 4`
++ `Expand 12`
++ `ReRAM 2`
++ `LCD mini`
++ `Heart Rate 5`
++ `Heart Rate 7`
++ `IR`
++ `Expand 13`
++ `Ambient 16`
++ `TempHum 19`
++ `BATT-MAN 3`
++ `Magic RFID`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20211203`

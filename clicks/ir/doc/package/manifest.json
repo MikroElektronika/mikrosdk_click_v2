@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Optical",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "IR click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.ir",
+    "product_link": "https://www.mikroe.com/ir-click",
+    "short_description": "IR Click is an add-on board in mikroBUS form factor. It’s a compact and easy solution for adding infrared (IR) remote control module to your design.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "related_projects":[
+        540
+    ],
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.0"
+}
