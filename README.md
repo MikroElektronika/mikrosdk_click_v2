@@ -93,69 +93,70 @@ A full list of all clicks in this repository is defined below:
 | BARGRAPH 3 click | [Click Here](./clicks/bargraph3) | BarGraph 4 click | [Click Here](./clicks/bargraph4) |
 | Barometer click | [Click Here](./clicks/barometer) | Barometer 2 click | [Click Here](./clicks/barometer2) |
 | Barometer 3 click | [Click Here](./clicks/barometer3) | Barometer 4 click | [Click Here](./clicks/barometer4) |
-| BATT-MAN click | [Click Here](./clicks/battman) | BATT-MAN 3 click | [Click Here](./clicks/battman3) |
-| BATT-MON click | [Click Here](./clicks/battmon) | BEE click | [Click Here](./clicks/bee) |
-| BIG 7-SEG click | [Click Here](./clicks/big7seg) | BI HALL click | [Click Here](./clicks/bihall) |
-| BLE 12 click | [Click Here](./clicks/ble12) | BLE 3 click | [Click Here](./clicks/ble3) |
-| BLE 4 click | [Click Here](./clicks/ble4) | BLE 7 click | [Click Here](./clicks/ble7) |
-| BLE 8 click | [Click Here](./clicks/ble8) | BLE 9 click | [Click Here](./clicks/ble9) |
-| BLE TINY click | [Click Here](./clicks/bletiny) | BLE TX click | [Click Here](./clicks/bletx) |
-| Bluetooth click | [Click Here](./clicks/bluetooth) | Bluetooth 2 click | [Click Here](./clicks/bluetooth2) |
-| BOOST click | [Click Here](./clicks/boost) | Boost 2 click | [Click Here](./clicks/boost2) |
-| Boost 3 click | [Click Here](./clicks/boost3) | Boost 4 click | [Click Here](./clicks/boost4) |
-| Boost 6 click | [Click Here](./clicks/boost6) | Boost-INV click | [Click Here](./clicks/boostinv) |
-| Boost-inv 2 click | [Click Here](./clicks/boostinv2) | Brushless click | [Click Here](./clicks/brushless) |
-| Brushless 12 click | [Click Here](./clicks/brushless12) | Brushless 14 click | [Click Here](./clicks/brushless14) |
-| Brushless 15 click | [Click Here](./clicks/brushless15) | Brushless 16 click | [Click Here](./clicks/brushless16) |
-| Brushless 2 click | [Click Here](./clicks/brushless2) | Brushless 3 click | [Click Here](./clicks/brushless3) |
-| Brushless 4 click | [Click Here](./clicks/brushless4) | Brushless 5 click | [Click Here](./clicks/brushless5) |
-| Brushless 6 click | [Click Here](./clicks/brushless6) | Brushless 7 click | [Click Here](./clicks/brushless7) |
-| Brushless 8 click | [Click Here](./clicks/brushless8) | Brushless 9 click | [Click Here](./clicks/brushless9) |
-| BT click | [Click Here](./clicks/bt) | BT Audio click | [Click Here](./clicks/btaudio) |
-| BT-EZ click | [Click Here](./clicks/btez) | BUCK click | [Click Here](./clicks/buck) |
-| Buck 10 click | [Click Here](./clicks/buck10) | Buck 11 click | [Click Here](./clicks/buck11) |
-| Buck 12 click | [Click Here](./clicks/buck12) | Buck 13 click | [Click Here](./clicks/buck13) |
-| Buck 14 click | [Click Here](./clicks/buck14) | Buck 16 click | [Click Here](./clicks/buck16) |
-| Buck 2 click | [Click Here](./clicks/buck2) | Buck 3 click | [Click Here](./clicks/buck3) |
-| Buck 5 click | [Click Here](./clicks/buck5) | BUCK 6 click | [Click Here](./clicks/buck6) |
-| BUCK 7 click | [Click Here](./clicks/buck7) | Buck 8 click | [Click Here](./clicks/buck8) |
-| Buck 9 click | [Click Here](./clicks/buck9) | Buck-Boost click | [Click Here](./clicks/buckboost) |
-| Buck Boost 2 click | [Click Here](./clicks/buckboost2) | Buck-Boost 3 click | [Click Here](./clicks/buckboost3) |
-| Buck n Boost click | [Click Here](./clicks/bucknboost) | Button ALARM click | [Click Here](./clicks/buttonalarm) |
-| Button G click | [Click Here](./clicks/buttong) | Button PLAY click | [Click Here](./clicks/buttonplay) |
-| Button Power click | [Click Here](./clicks/buttonpower) | Button R click | [Click Here](./clicks/buttonr) |
-| Button Y click | [Click Here](./clicks/buttony) | BUZZ click | [Click Here](./clicks/buzz) |
-| BUZZ 2 click | [Click Here](./clicks/buzz2) | Buzz 3 click | [Click Here](./clicks/buzz3) |
-| CAN Bus click | [Click Here](./clicks/canbus) | CAN FD click | [Click Here](./clicks/canfd) |
-| CAN FD 2 click | [Click Here](./clicks/canfd2) | CAN FD 3 click | [Click Here](./clicks/canfd3) |
-| CAN FD 4 click | [Click Here](./clicks/canfd4) | CAN FD 5 click | [Click Here](./clicks/canfd5) |
-| CAN FD 6 click | [Click Here](./clicks/canfd6) | CAN Isolator click | [Click Here](./clicks/canisolator) |
-| Cap Extend click | [Click Here](./clicks/capextend) | Cap Extend 3 click | [Click Here](./clicks/capextend3) |
-| CapSense click | [Click Here](./clicks/capsense) | CAP Slider 2 click | [Click Here](./clicks/capslider2) |
-| Cap Touch click | [Click Here](./clicks/captouch) | Cap Touch 2 click | [Click Here](./clicks/captouch2) |
-| Cap Touch 5 click | [Click Here](./clicks/captouch5) | CAP WHEEL click | [Click Here](./clicks/capwheel) |
-| Cap Wheel 2 click | [Click Here](./clicks/capwheel2) | ccRF 2 click | [Click Here](./clicks/ccrf2) |
-| ccRF 3 click | [Click Here](./clicks/ccrf3) | Charger 11 click | [Click Here](./clicks/charger11) |
-| CHARGER 12 click | [Click Here](./clicks/charger12) | Charger 13 click | [Click Here](./clicks/charger13) |
-| Charger 16 click | [Click Here](./clicks/charger16) | Charger 2 click | [Click Here](./clicks/charger2) |
-| Charger 3 click | [Click Here](./clicks/charger3) | Charger 5 click | [Click Here](./clicks/charger5) |
-| Charger 6 click | [Click Here](./clicks/charger6) | Charger 8 click | [Click Here](./clicks/charger8) |
-| Charger 9 click | [Click Here](./clicks/charger9) | Clock Gen click | [Click Here](./clicks/clockgen) |
-| Clock Gen 2 click | [Click Here](./clicks/clockgen2) | Clock Gen 3 click | [Click Here](./clicks/clockgen3) |
-| Clock Gen 4 click | [Click Here](./clicks/clockgen4) | Clock Gen 5 click | [Click Here](./clicks/clockgen5) |
-| CO click | [Click Here](./clicks/co) | Color click | [Click Here](./clicks/color) |
-| Color 10 click | [Click Here](./clicks/color10) | Color 13 click | [Click Here](./clicks/color13) |
-| Color 14 click | [Click Here](./clicks/color14) | Color 2 click | [Click Here](./clicks/color2) |
-| Color 3 click | [Click Here](./clicks/color3) | Color 6 click | [Click Here](./clicks/color6) |
-| Color 7 click | [Click Here](./clicks/color7) | Color 8 click | [Click Here](./clicks/color8) |
-| Color 9 click | [Click Here](./clicks/color9) | Comparator click | [Click Here](./clicks/comparator) |
-| Compass click | [Click Here](./clicks/compass) | Compass 2 click | [Click Here](./clicks/compass2) |
-| Compass 3 click | [Click Here](./clicks/compass3) | Compass 4 click | [Click Here](./clicks/compass4) |
-| Compass 5 click | [Click Here](./clicks/compass5) | Compass 6 click | [Click Here](./clicks/compass6) |
-| Counter click | [Click Here](./clicks/counter) | CO 2 click | [Click Here](./clicks/co_2) |
-| Current click | [Click Here](./clicks/current) | Current 2 click | [Click Here](./clicks/current2) |
-| Current 3 click | [Click Here](./clicks/current3) | Current 4 click | [Click Here](./clicks/current4) |
-| Current Limit click | [Click Here](./clicks/currentlimit) | CXPI click | [Click Here](./clicks/cxpi) |
+| Barometer 5 click | [Click Here](./clicks/barometer5) | BATT-MAN click | [Click Here](./clicks/battman) |
+| BATT-MAN 3 click | [Click Here](./clicks/battman3) | BATT-MON click | [Click Here](./clicks/battmon) |
+| BEE click | [Click Here](./clicks/bee) | BIG 7-SEG click | [Click Here](./clicks/big7seg) |
+| BI HALL click | [Click Here](./clicks/bihall) | BLE 12 click | [Click Here](./clicks/ble12) |
+| BLE 3 click | [Click Here](./clicks/ble3) | BLE 4 click | [Click Here](./clicks/ble4) |
+| BLE 7 click | [Click Here](./clicks/ble7) | BLE 8 click | [Click Here](./clicks/ble8) |
+| BLE 9 click | [Click Here](./clicks/ble9) | BLE TINY click | [Click Here](./clicks/bletiny) |
+| BLE TX click | [Click Here](./clicks/bletx) | Bluetooth click | [Click Here](./clicks/bluetooth) |
+| Bluetooth 2 click | [Click Here](./clicks/bluetooth2) | BOOST click | [Click Here](./clicks/boost) |
+| Boost 2 click | [Click Here](./clicks/boost2) | Boost 3 click | [Click Here](./clicks/boost3) |
+| Boost 4 click | [Click Here](./clicks/boost4) | Boost 6 click | [Click Here](./clicks/boost6) |
+| Boost-INV click | [Click Here](./clicks/boostinv) | Boost-inv 2 click | [Click Here](./clicks/boostinv2) |
+| Brushless click | [Click Here](./clicks/brushless) | Brushless 12 click | [Click Here](./clicks/brushless12) |
+| Brushless 14 click | [Click Here](./clicks/brushless14) | Brushless 15 click | [Click Here](./clicks/brushless15) |
+| Brushless 16 click | [Click Here](./clicks/brushless16) | Brushless 2 click | [Click Here](./clicks/brushless2) |
+| Brushless 3 click | [Click Here](./clicks/brushless3) | Brushless 4 click | [Click Here](./clicks/brushless4) |
+| Brushless 5 click | [Click Here](./clicks/brushless5) | Brushless 6 click | [Click Here](./clicks/brushless6) |
+| Brushless 7 click | [Click Here](./clicks/brushless7) | Brushless 8 click | [Click Here](./clicks/brushless8) |
+| Brushless 9 click | [Click Here](./clicks/brushless9) | BT click | [Click Here](./clicks/bt) |
+| BT Audio click | [Click Here](./clicks/btaudio) | BT-EZ click | [Click Here](./clicks/btez) |
+| BUCK click | [Click Here](./clicks/buck) | Buck 10 click | [Click Here](./clicks/buck10) |
+| Buck 11 click | [Click Here](./clicks/buck11) | Buck 12 click | [Click Here](./clicks/buck12) |
+| Buck 13 click | [Click Here](./clicks/buck13) | Buck 14 click | [Click Here](./clicks/buck14) |
+| Buck 16 click | [Click Here](./clicks/buck16) | Buck 2 click | [Click Here](./clicks/buck2) |
+| Buck 3 click | [Click Here](./clicks/buck3) | Buck 5 click | [Click Here](./clicks/buck5) |
+| BUCK 6 click | [Click Here](./clicks/buck6) | BUCK 7 click | [Click Here](./clicks/buck7) |
+| Buck 8 click | [Click Here](./clicks/buck8) | Buck 9 click | [Click Here](./clicks/buck9) |
+| Buck-Boost click | [Click Here](./clicks/buckboost) | Buck Boost 2 click | [Click Here](./clicks/buckboost2) |
+| Buck-Boost 3 click | [Click Here](./clicks/buckboost3) | Buck n Boost click | [Click Here](./clicks/bucknboost) |
+| Button ALARM click | [Click Here](./clicks/buttonalarm) | Button G click | [Click Here](./clicks/buttong) |
+| Button PLAY click | [Click Here](./clicks/buttonplay) | Button Power click | [Click Here](./clicks/buttonpower) |
+| Button R click | [Click Here](./clicks/buttonr) | Button Y click | [Click Here](./clicks/buttony) |
+| BUZZ click | [Click Here](./clicks/buzz) | BUZZ 2 click | [Click Here](./clicks/buzz2) |
+| Buzz 3 click | [Click Here](./clicks/buzz3) | CAN Bus click | [Click Here](./clicks/canbus) |
+| CAN FD click | [Click Here](./clicks/canfd) | CAN FD 2 click | [Click Here](./clicks/canfd2) |
+| CAN FD 3 click | [Click Here](./clicks/canfd3) | CAN FD 4 click | [Click Here](./clicks/canfd4) |
+| CAN FD 5 click | [Click Here](./clicks/canfd5) | CAN FD 6 click | [Click Here](./clicks/canfd6) |
+| CAN Isolator click | [Click Here](./clicks/canisolator) | Cap Extend click | [Click Here](./clicks/capextend) |
+| Cap Extend 3 click | [Click Here](./clicks/capextend3) | CapSense click | [Click Here](./clicks/capsense) |
+| CAP Slider 2 click | [Click Here](./clicks/capslider2) | Cap Touch click | [Click Here](./clicks/captouch) |
+| Cap Touch 2 click | [Click Here](./clicks/captouch2) | Cap Touch 5 click | [Click Here](./clicks/captouch5) |
+| CAP WHEEL click | [Click Here](./clicks/capwheel) | Cap Wheel 2 click | [Click Here](./clicks/capwheel2) |
+| ccRF 2 click | [Click Here](./clicks/ccrf2) | ccRF 3 click | [Click Here](./clicks/ccrf3) |
+| Charger 11 click | [Click Here](./clicks/charger11) | CHARGER 12 click | [Click Here](./clicks/charger12) |
+| Charger 13 click | [Click Here](./clicks/charger13) | Charger 16 click | [Click Here](./clicks/charger16) |
+| Charger 2 click | [Click Here](./clicks/charger2) | Charger 3 click | [Click Here](./clicks/charger3) |
+| Charger 5 click | [Click Here](./clicks/charger5) | Charger 6 click | [Click Here](./clicks/charger6) |
+| Charger 8 click | [Click Here](./clicks/charger8) | Charger 9 click | [Click Here](./clicks/charger9) |
+| Clock Gen click | [Click Here](./clicks/clockgen) | Clock Gen 2 click | [Click Here](./clicks/clockgen2) |
+| Clock Gen 3 click | [Click Here](./clicks/clockgen3) | Clock Gen 4 click | [Click Here](./clicks/clockgen4) |
+| Clock Gen 5 click | [Click Here](./clicks/clockgen5) | CO click | [Click Here](./clicks/co) |
+| Color click | [Click Here](./clicks/color) | Color 10 click | [Click Here](./clicks/color10) |
+| Color 13 click | [Click Here](./clicks/color13) | Color 14 click | [Click Here](./clicks/color14) |
+| Color 2 click | [Click Here](./clicks/color2) | Color 3 click | [Click Here](./clicks/color3) |
+| Color 6 click | [Click Here](./clicks/color6) | Color 7 click | [Click Here](./clicks/color7) |
+| Color 8 click | [Click Here](./clicks/color8) | Color 9 click | [Click Here](./clicks/color9) |
+| Comparator click | [Click Here](./clicks/comparator) | Compass click | [Click Here](./clicks/compass) |
+| Compass 2 click | [Click Here](./clicks/compass2) | Compass 3 click | [Click Here](./clicks/compass3) |
+| Compass 4 click | [Click Here](./clicks/compass4) | Compass 5 click | [Click Here](./clicks/compass5) |
+| Compass 6 click | [Click Here](./clicks/compass6) | Counter click | [Click Here](./clicks/counter) |
+| CO 2 click | [Click Here](./clicks/co_2) | Current click | [Click Here](./clicks/current) |
+| Current 2 click | [Click Here](./clicks/current2) | Current 3 click | [Click Here](./clicks/current3) |
+| Current 4 click | [Click Here](./clicks/current4) | Current Limit click | [Click Here](./clicks/currentlimit) |
+| Current Limit 6 click | [Click Here](./clicks/currentlimit6) | CXPI click | [Click Here](./clicks/cxpi) |
 | DAC click | [Click Here](./clicks/dac) | DAC 10 click | [Click Here](./clicks/dac10) |
 | DAC 11 click | [Click Here](./clicks/dac11) | DAC 2 click | [Click Here](./clicks/dac2) |
 | DAC 3 click | [Click Here](./clicks/dac3) | DAC 4 click | [Click Here](./clicks/dac4) |
@@ -306,18 +307,19 @@ A full list of all clicks in this repository is defined below:
 | LLC SPI click | [Click Here](./clicks/llcspi) | Load cell click | [Click Here](./clicks/loadcell) |
 | Load Cell 2 click | [Click Here](./clicks/loadcell2) | Load Cell 3 click | [Click Here](./clicks/loadcell3) |
 | Load Cell 4 click | [Click Here](./clicks/loadcell4) | Load Cell 5 click | [Click Here](./clicks/loadcell5) |
-| LPG click | [Click Here](./clicks/lpg) | LPS22HB click | [Click Here](./clicks/lps22hb) |
-| LP WiFi click | [Click Here](./clicks/lpwifi) | LR click | [Click Here](./clicks/lr) |
-| LR 2 click | [Click Here](./clicks/lr2) | LR 3 click | [Click Here](./clicks/lr3) |
-| LR 4 click | [Click Here](./clicks/lr4) | LR 5 click | [Click Here](./clicks/lr5) |
-| LSM303AGR click | [Click Here](./clicks/lsm303agr) | LSM6DSL click | [Click Here](./clicks/lsm6dsl) |
-| LTE Cat.1-EU click | [Click Here](./clicks/ltecat1eu) | LTE Cat.1-US click | [Click Here](./clicks/ltecat1us) |
-| LTE IoT click | [Click Here](./clicks/lteiot) | LTE IoT 2 click | [Click Here](./clicks/lteiot2) |
-| LTE IoT 4 click | [Click Here](./clicks/lteiot4) | LTE IoT 5 click | [Click Here](./clicks/lteiot5) |
-| LTE IoT 6 click | [Click Here](./clicks/lteiot6) | LTE IoT 8 click | [Click Here](./clicks/lteiot8) |
-| LTE IoT 9 click | [Click Here](./clicks/lteiot9) | MAC Address click | [Click Here](./clicks/macaddress) |
-| Magic RFID click | [Click Here](./clicks/magicrfid) | Magnetic linear click | [Click Here](./clicks/magneticlinear) |
-| Magnetic Rotary click | [Click Here](./clicks/magneticrotary) | MAGNETO click | [Click Here](./clicks/magneto) |
+| Load Cell 6 click | [Click Here](./clicks/loadcell6) | LPG click | [Click Here](./clicks/lpg) |
+| LPS22HB click | [Click Here](./clicks/lps22hb) | LP WiFi click | [Click Here](./clicks/lpwifi) |
+| LR click | [Click Here](./clicks/lr) | LR 2 click | [Click Here](./clicks/lr2) |
+| LR 3 click | [Click Here](./clicks/lr3) | LR 4 click | [Click Here](./clicks/lr4) |
+| LR 5 click | [Click Here](./clicks/lr5) | LSM303AGR click | [Click Here](./clicks/lsm303agr) |
+| LSM6DSL click | [Click Here](./clicks/lsm6dsl) | LTE Cat.1-EU click | [Click Here](./clicks/ltecat1eu) |
+| LTE Cat.1-US click | [Click Here](./clicks/ltecat1us) | LTE IoT click | [Click Here](./clicks/lteiot) |
+| LTE IoT 2 click | [Click Here](./clicks/lteiot2) | LTE IoT 4 click | [Click Here](./clicks/lteiot4) |
+| LTE IoT 5 click | [Click Here](./clicks/lteiot5) | LTE IoT 6 click | [Click Here](./clicks/lteiot6) |
+| LTE IoT 8 click | [Click Here](./clicks/lteiot8) | LTE IoT 9 click | [Click Here](./clicks/lteiot9) |
+| MAC Address click | [Click Here](./clicks/macaddress) | Magic RFID click | [Click Here](./clicks/magicrfid) |
+| Magnetic linear click | [Click Here](./clicks/magneticlinear) | Magnetic Rotary click | [Click Here](./clicks/magneticrotary) |
+| Magnetic Rotary 2 click | [Click Here](./clicks/magneticrotary2) | MAGNETO click | [Click Here](./clicks/magneto) |
 | Magneto 10 click | [Click Here](./clicks/magneto10) | Magneto 2 click | [Click Here](./clicks/magneto2) |
 | MAGNETO 4 click | [Click Here](./clicks/magneto4) | Magneto 5 click | [Click Here](./clicks/magneto5) |
 | Magneto 7 click | [Click Here](./clicks/magneto7) | Magneto 8 click | [Click Here](./clicks/magneto8) |

@@ -1,0 +1,33 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Force",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Load Cell 6 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.loadcell6",
+    "product_link": "https://www.mikroe.com/load-cell-6-click",
+    "short_description": "Load Cell 6 Click is a compact add-on board representing a weigh scale solution. This board features the MAX11270, a high-performance 24-bit delta-sigma ADC that achieves excellent 130dB SNR while dissipating an ultra-low 10mW from Maxim Integrated, now part of Analog Devices. This SPI-configurable ADC sample rates up to 64ksps allow precision DC and AC measurements, with integral non-linearity guaranteed to 4ppm maximum. The MAX11270 offers a 6.5nV/√Hz noise programmable gain amplifier with gain settings between 1x to 128x. Optional buffers are also included to isolate the signal inputs from the switched capacitor sampling network, which allows the MAX11270 to be used with high-impedance sources without compromising the available dynamic range.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}

@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20211224](#20211224)**
 + **[20211217](#20211217)**
 + **[20211203](#20211203)**
 + **[20211126](#20211126)**
@@ -26,6 +27,19 @@
 
 ---
 ---
+---
+
+## `20211224`
+
+*Following click boards have been added:*
+
++ `Load Cell 6`
++ `Magnetic Rotary 2`
++ `Barometer 5`
++ `Current Limit 6`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20211217`
