@@ -1,0 +1,8 @@
+{
+    "name": "Current Limit 6 Click",
+    "description": "Current Limit 6 Click is a compact add-on board representing a current-limiting solution. This board features the MAX17608, adjustable overvoltage, and overcurrent protection device from Maxim Integrated, now part of Analog Devices. This Click board™ is ideal for protecting systems with the flexible input overvoltage protection range from 4.5V to 60V, and the adjustable input undervoltage protection range is 4.5V to 59V. Also, the maximum current limit is 1A and can be programmed through a digital potentiometer MAX5401. When the device current reaches the programmed threshold, the device prevents further current increases by modulating the FET resistance.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","MAX17608"],
+    "category" : ["Power Switch"]
+}
