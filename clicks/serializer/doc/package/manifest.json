@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Port expander",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Serializer click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.serializer",
+    "product_link": "https://www.mikroe.com/serializer-click",
+    "short_description": "Serializer Click is a compact add-on board that contains a digital input translator/serializer. This board features the MAX31910, an eight-channel digital input serializer for high-channel density digital input modules in industrial and process automation from Analog Devices. The MAX31910 translates, conditions, and serializes the 24V digital output of sensors and switches to 5V CMOS-compatible signals required by the MCU. It provides the front-end interface circuit of a programmable logic controller (PLC) digital input module. It communicates with MCU via the SPI interface and comes in configuration with an installed digital isolator. This Click board™ is suited for various applications such as industrial, process, and building automation, digital input modules for PLCs, and more.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+
