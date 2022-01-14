@@ -1,0 +1,8 @@
+type: subdirs
+
+project: SmartSens
+
+subdirs: {
+    lib
+    example
+}

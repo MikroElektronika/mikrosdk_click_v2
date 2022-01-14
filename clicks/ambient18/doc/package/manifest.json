@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Optical",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Ambient 18 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.ambient18",
+    "product_link": "https://www.mikroe.com/ambient-18-click",
+    "short_description": "Ambient 18 Click is a compact add-on board used to sense the amount of the present ambient light. This board features the BH1680FVC, an analog current-output ambient light sensor from Rohm Semiconductor. The BH1680FVC can detect a wide range of illuminance up to 10klx and provides excellent responsivity close to the human eyes' response. Besides, it is also characterized by low sensitivity variation across various light sources, a built-in shutdown function, and the ability to process the output signal in analog or digital form. This Click board™ is the most suitable for obtaining ambient light data for adjusting brightness in applications that require power saving and better visibility.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

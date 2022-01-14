@@ -1,0 +1,13 @@
+type: executable
+target: example_barometer7
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Barometer7
+}
+
+sources: {
+    main.c
+}

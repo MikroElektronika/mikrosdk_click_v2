@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20220114](#20220114)**
 + **[20211217](#20211217)**
 + **[20211203](#20211203)**
 + **[20211126](#20211126)**
@@ -26,6 +27,26 @@
 
 ---
 ---
+---
+
+## `20220114`
+
+*Following click boards have been added:*
+
++ `UVA`
++ `BATT-MAN 2`
++ `Current 5`
++ `Serializer`
++ `Accel 19`
++ `3D Hall 9`
++ `Barometer 7`
++ `Smart Sens`
++ `Terminal 2`
++ `Ambient 18`
++ `Oximeter 5`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20211217`

@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC32",
+    "category": "Motion",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Smart Sens click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.smartsens",
+    "product_link": "https://www.mikroe.com/smart-sens-click",
+    "short_description": "Smart Sens Click is a compact add-on board that contains an intelligent sensor hub with an integrated IMU sensor. This board utilizes the BHI260 and BMM150, an environmental sensor and magnetometer from Bosch Sensortech. The BHI260 includes a programmable and powerful 32-bit MCU, a 6-axis IMU, and a robust software framework. In addition to its internal functions, it also performs signal data processing from the BMM150 that performs measurements of the magnetic field in three perpendicular axes.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.2"
+}
+
+

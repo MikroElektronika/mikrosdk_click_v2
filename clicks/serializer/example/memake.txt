@@ -1,0 +1,13 @@
+type: executable
+target: example_serializer
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Serializer
+}
+
+sources: {
+    main.c
+}

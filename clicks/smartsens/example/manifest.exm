@@ -1,0 +1,8 @@
+{
+    "name": "Smart Sens Click",
+    "description": "Smart Sens Click is a compact add-on board that contains an intelligent sensor hub with an integrated IMU sensor. This board utilizes the BHI260 and BMM150, an environmental sensor and magnetometer from Bosch Sensortech. The BHI260 includes a programmable and powerful 32-bit MCU, a 6-axis IMU, and a robust software framework. In addition to its internal functions, it also performs signal data processing from the BMM150 that performs measurements of the magnetic field in three perpendicular axes.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic32"],
+    "hw" : ["click","BHI260","BMM150"],
+    "category" : ["Motion"]
+}

@@ -1,0 +1,8 @@
+{
+    "name": "Current 5 Click",
+    "description": "Current 5 Click is a compact add-on board that provides a precise and accurate current sensing solution. This board features the INA381, a high-speed current-sense amplifier with an integrated comparator from Texas Instruments. This device has selectable operating modes (transparent or latched) and detects overcurrent conditions by measuring the voltage developed across a current shunt resistor. Then it compares that voltage to a user-defined threshold limit set by the comparator reference potentiometer. The current-shunt monitor can measure differential voltage signals on common-mode voltages that vary from –0.2V to 26V, independent of the supply voltage. This Click board™ delivers higher performance to applications such as test and measurement, load and power supplies monitoring, low-side phase motor control, and many more.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","INA381A4","ADC121S021"],
+    "category" : ["Current sensor"]
+}

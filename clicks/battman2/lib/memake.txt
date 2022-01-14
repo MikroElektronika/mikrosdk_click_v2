@@ -1,0 +1,36 @@
+type: library
+
+target: lib_battman2
+
+sources: {
+    src/battman2.c
+}
+
+headers: {
+    include/battman2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/battman2.h) dst(include/battman2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.BATTMAN2

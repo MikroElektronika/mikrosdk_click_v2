@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Optical",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "UVA click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.uva",
+    "product_link": "https://www.mikroe.com/uva-click",
+    "short_description": "UVA Click is a compact add-on board used to detect solar UV index. This board features the GUVA-C32SM, an ultraviolet light sensor capable of measuring UV index between 0 to 14 from Genicom Co., Ltd. It contains the GaN-based chip die, amplifiers, ADC, digital control logic, and I2C interface circuit to measure UVA volumes, working in the spectral range of 220-370nm. The GUVA-C32M can acquire the intensity of UVA, respectively, and outputs digital count according to each intensity.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Adapter",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Terminal 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.terminal2",
+    "product_link": "https://www.mikroe.com/terminal-2-click",
+    "short_description": "Terminal 2 Click is an adapter Click board™ used as a mikroBUS™ socket expansion board. It provides an easy and elegant solution for adding the external connection capability to the Click board™, plugged on a mikroBUS™ socket. Featuring two 9-position 2.54mm pitch terminal blocks makes it an easy way to expand the development system's connectivity with the mikroBUS™ socket while keeping the bus free to use with any Click board™.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

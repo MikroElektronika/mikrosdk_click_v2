@@ -1,0 +1,36 @@
+type: library
+
+target: lib_uva
+
+sources: {
+    src/uva.c
+}
+
+headers: {
+    include/uva.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/uva.h) dst(include/uva.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.UVA
