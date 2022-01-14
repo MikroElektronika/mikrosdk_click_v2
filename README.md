@@ -17,35 +17,34 @@ A full list of all clicks in this repository is defined below:
 | 3D Hall 2 click | [Click Here](./clicks/3dhall2) | 3D Hall 3 click | [Click Here](./clicks/3dhall3) |
 | 3D Hall 5 click | [Click Here](./clicks/3dhall5) | 3D Hall 6 click | [Click Here](./clicks/3dhall6) |
 | 3D Hall 7 click | [Click Here](./clicks/3dhall7) | 3D Hall 8 click | [Click Here](./clicks/3dhall8) |
-| 3D Hall 9 click | [Click Here](./clicks/3dhall9) | 3G-AA click | [Click Here](./clicks/3gaa) |
-| 3G-EA click | [Click Here](./clicks/3gea) | 3G SARA click | [Click Here](./clicks/3gsara) |
-| 3 x Buck click | [Click Here](./clicks/3xbuck) | 4-20 mA R click | [Click Here](./clicks/420mar) |
-| 4-20 mA T click | [Click Here](./clicks/420mat) | 4Dot-Matrix R click | [Click Here](./clicks/4dotmatrixr) |
-| 4G LTE-APJ click | [Click Here](./clicks/4glteapj) | 4G LTE-ATT click | [Click Here](./clicks/4glteatt) |
-| 4G LTE-E click | [Click Here](./clicks/4gltee) | 4G LTE-NA click | [Click Here](./clicks/4gltena) |
-| 4x4 Key click | [Click Here](./clicks/4x4key) | 4x4 RGB click | [Click Here](./clicks/4x4rgb) |
-| 5G NB IoT click | [Click Here](./clicks/5gnbiot) | 6DOF IMU click | [Click Here](./clicks/6dofimu) |
-| 6DOF IMU 10 click | [Click Here](./clicks/6dofimu10) | 6DOF IMU 11 click | [Click Here](./clicks/6dofimu11) |
-| 6DOF IMU 12 click | [Click Here](./clicks/6dofimu12) | 6DOF IMU 13 click | [Click Here](./clicks/6dofimu13) |
-| 6DOF IMU 14 click | [Click Here](./clicks/6dofimu14) | 6DOF IMU 15 click | [Click Here](./clicks/6dofimu15) |
-| 6DOF IMU 17 click | [Click Here](./clicks/6dofimu17) | 6DOF IMU 2 click | [Click Here](./clicks/6dofimu2) |
-| 6DOF IMU 3 click | [Click Here](./clicks/6dofimu3) | 6DOF IMU 4 click | [Click Here](./clicks/6dofimu4) |
-| 6DOF IMU 5 click | [Click Here](./clicks/6dofimu5) | 6DOF IMU 6 click | [Click Here](./clicks/6dofimu6) |
-| 6DOF IMU 7 click | [Click Here](./clicks/6dofimu7) | 6DOF IMU 8 click | [Click Here](./clicks/6dofimu8) |
-| 6DOF IMU 9 click | [Click Here](./clicks/6dofimu9) | 7seg click | [Click Here](./clicks/7seg) |
-| 7-SEG RGB click | [Click Here](./clicks/7segrgb) | 7x10 B click | [Click Here](./clicks/7x10b) |
-| 7x10 G click | [Click Here](./clicks/7x10g) | 7x10 R click | [Click Here](./clicks/7x10r) |
-| 7x10 Y click | [Click Here](./clicks/7x10y) | 8800 Retro click | [Click Here](./clicks/8800retro) |
-| 8-pin I2C click | [Click Here](./clicks/8pini2c) | 8x8 B click | [Click Here](./clicks/8x8b) |
-| 8x8 G click | [Click Here](./clicks/8x8g) | 8x8 R click | [Click Here](./clicks/8x8r) |
-| 8x8 Y click | [Click Here](./clicks/8x8y) | 9DOF click | [Click Here](./clicks/9dof) |
-| 9DOF 2 click | [Click Here](./clicks/9dof2) | 9DOF 3 click | [Click Here](./clicks/9dof3) |
-| Accel click | [Click Here](./clicks/accel) | Accel 10 click | [Click Here](./clicks/accel10) |
-| Accel 11 click | [Click Here](./clicks/accel11) | Accel 12 click | [Click Here](./clicks/accel12) |
-| Accel 13 click | [Click Here](./clicks/accel13) | Accel 14 click | [Click Here](./clicks/accel14) |
-| Accel 15 click | [Click Here](./clicks/accel15) | Accel 16 click | [Click Here](./clicks/accel16) |
-| Accel 17 click | [Click Here](./clicks/accel17) | Accel 18 click | [Click Here](./clicks/accel18) |
-| Accel 19 click | [Click Here](./clicks/accel19) | Accel 2 click | [Click Here](./clicks/accel2) |
+| 3G-AA click | [Click Here](./clicks/3gaa) | 3G-EA click | [Click Here](./clicks/3gea) |
+| 3G SARA click | [Click Here](./clicks/3gsara) | 3 x Buck click | [Click Here](./clicks/3xbuck) |
+| 4-20 mA R click | [Click Here](./clicks/420mar) | 4-20 mA T click | [Click Here](./clicks/420mat) |
+| 4Dot-Matrix R click | [Click Here](./clicks/4dotmatrixr) | 4G LTE-APJ click | [Click Here](./clicks/4glteapj) |
+| 4G LTE-ATT click | [Click Here](./clicks/4glteatt) | 4G LTE-E click | [Click Here](./clicks/4gltee) |
+| 4G LTE-NA click | [Click Here](./clicks/4gltena) | 4x4 Key click | [Click Here](./clicks/4x4key) |
+| 4x4 RGB click | [Click Here](./clicks/4x4rgb) | 5G NB IoT click | [Click Here](./clicks/5gnbiot) |
+| 6DOF IMU click | [Click Here](./clicks/6dofimu) | 6DOF IMU 10 click | [Click Here](./clicks/6dofimu10) |
+| 6DOF IMU 11 click | [Click Here](./clicks/6dofimu11) | 6DOF IMU 12 click | [Click Here](./clicks/6dofimu12) |
+| 6DOF IMU 13 click | [Click Here](./clicks/6dofimu13) | 6DOF IMU 14 click | [Click Here](./clicks/6dofimu14) |
+| 6DOF IMU 15 click | [Click Here](./clicks/6dofimu15) | 6DOF IMU 17 click | [Click Here](./clicks/6dofimu17) |
+| 6DOF IMU 2 click | [Click Here](./clicks/6dofimu2) | 6DOF IMU 3 click | [Click Here](./clicks/6dofimu3) |
+| 6DOF IMU 4 click | [Click Here](./clicks/6dofimu4) | 6DOF IMU 5 click | [Click Here](./clicks/6dofimu5) |
+| 6DOF IMU 6 click | [Click Here](./clicks/6dofimu6) | 6DOF IMU 7 click | [Click Here](./clicks/6dofimu7) |
+| 6DOF IMU 8 click | [Click Here](./clicks/6dofimu8) | 6DOF IMU 9 click | [Click Here](./clicks/6dofimu9) |
+| 7seg click | [Click Here](./clicks/7seg) | 7-SEG RGB click | [Click Here](./clicks/7segrgb) |
+| 7x10 B click | [Click Here](./clicks/7x10b) | 7x10 G click | [Click Here](./clicks/7x10g) |
+| 7x10 R click | [Click Here](./clicks/7x10r) | 7x10 Y click | [Click Here](./clicks/7x10y) |
+| 8800 Retro click | [Click Here](./clicks/8800retro) | 8-pin I2C click | [Click Here](./clicks/8pini2c) |
+| 8x8 B click | [Click Here](./clicks/8x8b) | 8x8 G click | [Click Here](./clicks/8x8g) |
+| 8x8 R click | [Click Here](./clicks/8x8r) | 8x8 Y click | [Click Here](./clicks/8x8y) |
+| 9DOF click | [Click Here](./clicks/9dof) | 9DOF 2 click | [Click Here](./clicks/9dof2) |
+| 9DOF 3 click | [Click Here](./clicks/9dof3) | Accel click | [Click Here](./clicks/accel) |
+| Accel 10 click | [Click Here](./clicks/accel10) | Accel 11 click | [Click Here](./clicks/accel11) |
+| Accel 12 click | [Click Here](./clicks/accel12) | Accel 13 click | [Click Here](./clicks/accel13) |
+| Accel 14 click | [Click Here](./clicks/accel14) | Accel 15 click | [Click Here](./clicks/accel15) |
+| Accel 16 click | [Click Here](./clicks/accel16) | Accel 17 click | [Click Here](./clicks/accel17) |
+| Accel 18 click | [Click Here](./clicks/accel18) | Accel 2 click | [Click Here](./clicks/accel2) |
 | Accel 20 click | [Click Here](./clicks/accel20) | Accel 3 click | [Click Here](./clicks/accel3) |
 | Accel 5 click | [Click Here](./clicks/accel5) | Accel 6 click | [Click Here](./clicks/accel6) |
 | Accel 7 click | [Click Here](./clicks/accel7) | Accel 8 click | [Click Here](./clicks/accel8) |
@@ -70,32 +69,31 @@ A full list of all clicks in this repository is defined below:
 | Altitude 5 click | [Click Here](./clicks/altitude5) | Altitude 6 click | [Click Here](./clicks/altitude6) |
 | Ambient click | [Click Here](./clicks/ambient) | Ambient 10 click | [Click Here](./clicks/ambient10) |
 | Ambient 11 click | [Click Here](./clicks/ambient11) | Ambient 12 click | [Click Here](./clicks/ambient12) |
-| Ambient 16 click | [Click Here](./clicks/ambient16) | Ambient 18 click | [Click Here](./clicks/ambient18) |
-| Ambient 2 click | [Click Here](./clicks/ambient2) | Ambient 3 click | [Click Here](./clicks/ambient3) |
-| Ambient 4 click | [Click Here](./clicks/ambient4) | Ambient 5 click | [Click Here](./clicks/ambient5) |
-| Ambient 6 click | [Click Here](./clicks/ambient6) | Ambient 7 click | [Click Here](./clicks/ambient7) |
-| Ambient 8 click | [Click Here](./clicks/ambient8) | Ambient 9 click | [Click Here](./clicks/ambient9) |
-| AM/FM click | [Click Here](./clicks/amfm) | Ammeter click | [Click Here](./clicks/ammeter) |
-| Ammonia click | [Click Here](./clicks/ammonia) | AMR Angle click | [Click Here](./clicks/amrangle) |
-| AMR Current click | [Click Here](./clicks/amrcurrent) | Analog Key click | [Click Here](./clicks/analogkey) |
-| Analog MUX click | [Click Here](./clicks/analogmux) | Analog MUX 2 click | [Click Here](./clicks/analogmux2) |
-| Analog MUX 3 click | [Click Here](./clicks/analogmux3) | Angle click | [Click Here](./clicks/angle) |
-| Angle 2 click | [Click Here](./clicks/angle2) | Angle 3 click | [Click Here](./clicks/angle3) |
-| Angle 4 click | [Click Here](./clicks/angle4) | Angle 5 click | [Click Here](./clicks/angle5) |
-| ATA6570 click | [Click Here](./clicks/ata6570) | ATA6571 click | [Click Here](./clicks/ata6571) |
-| ATA663211 click | [Click Here](./clicks/ata663211) | ATA663254 click | [Click Here](./clicks/ata663254) |
-| AudioAMP click | [Click Here](./clicks/audioamp) | AudioAmp 2 click | [Click Here](./clicks/audioamp2) |
-| AudioAmp 3 click | [Click Here](./clicks/audioamp3) | AudioAmp 4 click | [Click Here](./clicks/audioamp4) |
-| AudioAmp 5 click | [Click Here](./clicks/audioamp5) | AudioAmp 6 click | [Click Here](./clicks/audioamp6) |
-| AudioMUX click | [Click Here](./clicks/audiomux) | Audio Xover click | [Click Here](./clicks/audioxover) |
-| Balancer 2 click | [Click Here](./clicks/balancer2) | Balancer 3 click | [Click Here](./clicks/balancer3) |
-| Balancer 5 click | [Click Here](./clicks/balancer5) | Barcode click | [Click Here](./clicks/barcode) |
-| Barcode 2 click | [Click Here](./clicks/barcode2) | BarGraph click | [Click Here](./clicks/bargraph) |
-| Bargraph 2 click | [Click Here](./clicks/bargraph2) | BARGRAPH 3 click | [Click Here](./clicks/bargraph3) |
-| BarGraph 4 click | [Click Here](./clicks/bargraph4) | Barometer click | [Click Here](./clicks/barometer) |
-| Barometer 2 click | [Click Here](./clicks/barometer2) | Barometer 3 click | [Click Here](./clicks/barometer3) |
-| Barometer 4 click | [Click Here](./clicks/barometer4) | Barometer 7 click | [Click Here](./clicks/barometer7) |
-| BATT-MAN click | [Click Here](./clicks/battman) | BATT-MAN 2 click | [Click Here](./clicks/battman2) |
+| Ambient 16 click | [Click Here](./clicks/ambient16) | Ambient 2 click | [Click Here](./clicks/ambient2) |
+| Ambient 3 click | [Click Here](./clicks/ambient3) | Ambient 4 click | [Click Here](./clicks/ambient4) |
+| Ambient 5 click | [Click Here](./clicks/ambient5) | Ambient 6 click | [Click Here](./clicks/ambient6) |
+| Ambient 7 click | [Click Here](./clicks/ambient7) | Ambient 8 click | [Click Here](./clicks/ambient8) |
+| Ambient 9 click | [Click Here](./clicks/ambient9) | AM/FM click | [Click Here](./clicks/amfm) |
+| Ammeter click | [Click Here](./clicks/ammeter) | Ammonia click | [Click Here](./clicks/ammonia) |
+| AMR Angle click | [Click Here](./clicks/amrangle) | AMR Current click | [Click Here](./clicks/amrcurrent) |
+| Analog Key click | [Click Here](./clicks/analogkey) | Analog MUX click | [Click Here](./clicks/analogmux) |
+| Analog MUX 2 click | [Click Here](./clicks/analogmux2) | Analog MUX 3 click | [Click Here](./clicks/analogmux3) |
+| Angle click | [Click Here](./clicks/angle) | Angle 2 click | [Click Here](./clicks/angle2) |
+| Angle 3 click | [Click Here](./clicks/angle3) | Angle 4 click | [Click Here](./clicks/angle4) |
+| Angle 5 click | [Click Here](./clicks/angle5) | ATA6570 click | [Click Here](./clicks/ata6570) |
+| ATA6571 click | [Click Here](./clicks/ata6571) | ATA663211 click | [Click Here](./clicks/ata663211) |
+| ATA663254 click | [Click Here](./clicks/ata663254) | AudioAMP click | [Click Here](./clicks/audioamp) |
+| AudioAmp 2 click | [Click Here](./clicks/audioamp2) | AudioAmp 3 click | [Click Here](./clicks/audioamp3) |
+| AudioAmp 4 click | [Click Here](./clicks/audioamp4) | AudioAmp 5 click | [Click Here](./clicks/audioamp5) |
+| AudioAmp 6 click | [Click Here](./clicks/audioamp6) | AudioMUX click | [Click Here](./clicks/audiomux) |
+| Audio Xover click | [Click Here](./clicks/audioxover) | Balancer 2 click | [Click Here](./clicks/balancer2) |
+| Balancer 3 click | [Click Here](./clicks/balancer3) | Balancer 5 click | [Click Here](./clicks/balancer5) |
+| Barcode click | [Click Here](./clicks/barcode) | Barcode 2 click | [Click Here](./clicks/barcode2) |
+| BarGraph click | [Click Here](./clicks/bargraph) | Bargraph 2 click | [Click Here](./clicks/bargraph2) |
+| BARGRAPH 3 click | [Click Here](./clicks/bargraph3) | BarGraph 4 click | [Click Here](./clicks/bargraph4) |
+| Barometer click | [Click Here](./clicks/barometer) | Barometer 2 click | [Click Here](./clicks/barometer2) |
+| Barometer 3 click | [Click Here](./clicks/barometer3) | Barometer 4 click | [Click Here](./clicks/barometer4) |
+| Barometer 5 click | [Click Here](./clicks/barometer5) | BATT-MAN click | [Click Here](./clicks/battman) |
 | BATT-MAN 3 click | [Click Here](./clicks/battman3) | BATT-MON click | [Click Here](./clicks/battmon) |
 | BEE click | [Click Here](./clicks/bee) | BIG 7-SEG click | [Click Here](./clicks/big7seg) |
 | BI HALL click | [Click Here](./clicks/bihall) | BLE 12 click | [Click Here](./clicks/ble12) |
@@ -157,8 +155,8 @@ A full list of all clicks in this repository is defined below:
 | Compass 6 click | [Click Here](./clicks/compass6) | Counter click | [Click Here](./clicks/counter) |
 | CO 2 click | [Click Here](./clicks/co_2) | Current click | [Click Here](./clicks/current) |
 | Current 2 click | [Click Here](./clicks/current2) | Current 3 click | [Click Here](./clicks/current3) |
-| Current 4 click | [Click Here](./clicks/current4) | Current 5 click | [Click Here](./clicks/current5) |
-| Current Limit click | [Click Here](./clicks/currentlimit) | CXPI click | [Click Here](./clicks/cxpi) |
+| Current 4 click | [Click Here](./clicks/current4) | Current Limit click | [Click Here](./clicks/currentlimit) |
+| Current Limit 6 click | [Click Here](./clicks/currentlimit6) | CXPI click | [Click Here](./clicks/cxpi) |
 | DAC click | [Click Here](./clicks/dac) | DAC 10 click | [Click Here](./clicks/dac10) |
 | DAC 11 click | [Click Here](./clicks/dac11) | DAC 2 click | [Click Here](./clicks/dac2) |
 | DAC 3 click | [Click Here](./clicks/dac3) | DAC 4 click | [Click Here](./clicks/dac4) |
@@ -309,18 +307,19 @@ A full list of all clicks in this repository is defined below:
 | LLC SPI click | [Click Here](./clicks/llcspi) | Load cell click | [Click Here](./clicks/loadcell) |
 | Load Cell 2 click | [Click Here](./clicks/loadcell2) | Load Cell 3 click | [Click Here](./clicks/loadcell3) |
 | Load Cell 4 click | [Click Here](./clicks/loadcell4) | Load Cell 5 click | [Click Here](./clicks/loadcell5) |
-| LPG click | [Click Here](./clicks/lpg) | LPS22HB click | [Click Here](./clicks/lps22hb) |
-| LP WiFi click | [Click Here](./clicks/lpwifi) | LR click | [Click Here](./clicks/lr) |
-| LR 2 click | [Click Here](./clicks/lr2) | LR 3 click | [Click Here](./clicks/lr3) |
-| LR 4 click | [Click Here](./clicks/lr4) | LR 5 click | [Click Here](./clicks/lr5) |
-| LSM303AGR click | [Click Here](./clicks/lsm303agr) | LSM6DSL click | [Click Here](./clicks/lsm6dsl) |
-| LTE Cat.1-EU click | [Click Here](./clicks/ltecat1eu) | LTE Cat.1-US click | [Click Here](./clicks/ltecat1us) |
-| LTE IoT click | [Click Here](./clicks/lteiot) | LTE IoT 2 click | [Click Here](./clicks/lteiot2) |
-| LTE IoT 4 click | [Click Here](./clicks/lteiot4) | LTE IoT 5 click | [Click Here](./clicks/lteiot5) |
-| LTE IoT 6 click | [Click Here](./clicks/lteiot6) | LTE IoT 8 click | [Click Here](./clicks/lteiot8) |
-| LTE IoT 9 click | [Click Here](./clicks/lteiot9) | MAC Address click | [Click Here](./clicks/macaddress) |
-| Magic RFID click | [Click Here](./clicks/magicrfid) | Magnetic linear click | [Click Here](./clicks/magneticlinear) |
-| Magnetic Rotary click | [Click Here](./clicks/magneticrotary) | MAGNETO click | [Click Here](./clicks/magneto) |
+| Load Cell 6 click | [Click Here](./clicks/loadcell6) | LPG click | [Click Here](./clicks/lpg) |
+| LPS22HB click | [Click Here](./clicks/lps22hb) | LP WiFi click | [Click Here](./clicks/lpwifi) |
+| LR click | [Click Here](./clicks/lr) | LR 2 click | [Click Here](./clicks/lr2) |
+| LR 3 click | [Click Here](./clicks/lr3) | LR 4 click | [Click Here](./clicks/lr4) |
+| LR 5 click | [Click Here](./clicks/lr5) | LSM303AGR click | [Click Here](./clicks/lsm303agr) |
+| LSM6DSL click | [Click Here](./clicks/lsm6dsl) | LTE Cat.1-EU click | [Click Here](./clicks/ltecat1eu) |
+| LTE Cat.1-US click | [Click Here](./clicks/ltecat1us) | LTE IoT click | [Click Here](./clicks/lteiot) |
+| LTE IoT 2 click | [Click Here](./clicks/lteiot2) | LTE IoT 4 click | [Click Here](./clicks/lteiot4) |
+| LTE IoT 5 click | [Click Here](./clicks/lteiot5) | LTE IoT 6 click | [Click Here](./clicks/lteiot6) |
+| LTE IoT 8 click | [Click Here](./clicks/lteiot8) | LTE IoT 9 click | [Click Here](./clicks/lteiot9) |
+| MAC Address click | [Click Here](./clicks/macaddress) | Magic RFID click | [Click Here](./clicks/magicrfid) |
+| Magnetic linear click | [Click Here](./clicks/magneticlinear) | Magnetic Rotary click | [Click Here](./clicks/magneticrotary) |
+| Magnetic Rotary 2 click | [Click Here](./clicks/magneticrotary2) | MAGNETO click | [Click Here](./clicks/magneto) |
 | Magneto 10 click | [Click Here](./clicks/magneto10) | Magneto 2 click | [Click Here](./clicks/magneto2) |
 | MAGNETO 4 click | [Click Here](./clicks/magneto4) | Magneto 5 click | [Click Here](./clicks/magneto5) |
 | Magneto 7 click | [Click Here](./clicks/magneto7) | Magneto 8 click | [Click Here](./clicks/magneto8) |
@@ -365,112 +364,110 @@ A full list of all clicks in this repository is defined below:
 | Opto Encoder 2 click | [Click Here](./clicks/optoencoder2) | Opto Encoder 3 click | [Click Here](./clicks/optoencoder3) |
 | OSD click | [Click Here](./clicks/osd) | Oximeter click | [Click Here](./clicks/oximeter) |
 | Oximeter2 click | [Click Here](./clicks/oximeter2) | Oximeter 3 click | [Click Here](./clicks/oximeter3) |
-| Oximeter 5 click | [Click Here](./clicks/oximeter5) | Ozone 2 click | [Click Here](./clicks/ozone2) |
-| Ozone 3 click | [Click Here](./clicks/ozone3) | PAC1720 click | [Click Here](./clicks/pac1720) |
-| PAC1921 click | [Click Here](./clicks/pac1921) | Pac1934 click | [Click Here](./clicks/pac1934) |
-| PAC1944 click | [Click Here](./clicks/pac1944) | PAC1954 click | [Click Here](./clicks/pac1954) |
-| Pedometer click | [Click Here](./clicks/pedometer) | Pedometer 3 click | [Click Here](./clicks/pedometer3) |
-| Peltier click | [Click Here](./clicks/peltier) | pH click | [Click Here](./clicks/ph) |
-| PHT click | [Click Here](./clicks/pht) | Piezo Accel click | [Click Here](./clicks/piezoaccel) |
-| PIR click | [Click Here](./clicks/pir) | Pixi click | [Click Here](./clicks/pixi) |
-| PLL click | [Click Here](./clicks/pll) | Plug n Trust click | [Click Here](./clicks/plugntrust) |
-| Pollution click | [Click Here](./clicks/pollution) | POT click | [Click Here](./clicks/pot) |
-| POT 2 click | [Click Here](./clicks/pot2) | Pot 3 click | [Click Here](./clicks/pot3) |
-| PowerBank click | [Click Here](./clicks/powerbank) | PowerBank 2 click | [Click Here](./clicks/powerbank2) |
-| Power Monitor click | [Click Here](./clicks/powermonitor) | Power MUX click | [Click Here](./clicks/powermux) |
-| Power MUX 2 click | [Click Here](./clicks/powermux2) | Power/Reset click | [Click Here](./clicks/powerreset) |
-| Presence click | [Click Here](./clicks/presence) | Pressure click | [Click Here](./clicks/pressure) |
-| Pressure 10 click | [Click Here](./clicks/pressure10) | Pressure 11 click | [Click Here](./clicks/pressure11) |
-| Pressure 12 click | [Click Here](./clicks/pressure12) | Pressure 13 click | [Click Here](./clicks/pressure13) |
-| Pressure 14 click | [Click Here](./clicks/pressure14) | Pressure 15 click | [Click Here](./clicks/pressure15) |
-| Pressure 16 click | [Click Here](./clicks/pressure16) | Pressure 2 click | [Click Here](./clicks/pressure2) |
-| Pressure 3 click | [Click Here](./clicks/pressure3) | Pressure 4 click | [Click Here](./clicks/pressure4) |
-| Pressure 5 click | [Click Here](./clicks/pressure5) | Pressure 6 click | [Click Here](./clicks/pressure6) |
-| Pressure 7 click | [Click Here](./clicks/pressure7) | Pressure 8 click | [Click Here](./clicks/pressure8) |
-| Pressure 9 click | [Click Here](./clicks/pressure9) | PROFET 10A click | [Click Here](./clicks/profet10a) |
-| PROFET 15A click | [Click Here](./clicks/profet15a) | PROFET 2 3A click | [Click Here](./clicks/profet23a) |
-| PROFET 2 7A click | [Click Here](./clicks/profet27a) | ProxFusion click | [Click Here](./clicks/proxfusion) |
-| ProxFusion 2 click | [Click Here](./clicks/proxfusion2) | ProxFusion 3 click | [Click Here](./clicks/proxfusion3) |
-| Proximity click | [Click Here](./clicks/proximity) | Proximity 10 click | [Click Here](./clicks/proximity10) |
-| Proximity 11 click | [Click Here](./clicks/proximity11) | Proximity 12 click | [Click Here](./clicks/proximity12) |
-| Proximity 13 click | [Click Here](./clicks/proximity13) | Proximity 14 click | [Click Here](./clicks/proximity14) |
-| Proximity 15 click | [Click Here](./clicks/proximity15) | Proximity 2 click | [Click Here](./clicks/proximity2) |
-| Proximity 3 click | [Click Here](./clicks/proximity3) | Proximity 5 click | [Click Here](./clicks/proximity5) |
-| Proximity 6 click | [Click Here](./clicks/proximity6) | PROXIMITY 7 click | [Click Here](./clicks/proximity7) |
-| Proximity 8 click | [Click Here](./clicks/proximity8) | Proximity 9 click | [Click Here](./clicks/proximity9) |
-| PWM click | [Click Here](./clicks/pwm) | PWM 2 click | [Click Here](./clicks/pwm2) |
-| Pwm Driver click | [Click Here](./clicks/pwmdriver) | PWR Meter click | [Click Here](./clicks/pwrmeter) |
-| PWR Meter 2 click | [Click Here](./clicks/pwrmeter2) | Qi Receiver click | [Click Here](./clicks/qireceiver) |
-| Qi RX click | [Click Here](./clicks/qirx) | RadioStation click | [Click Here](./clicks/radiostation) |
-| Rec N Play click | [Click Here](./clicks/recnplay) | REED click | [Click Here](./clicks/reed) |
-| Relay click | [Click Here](./clicks/relay) | Relay 2 click | [Click Here](./clicks/relay2) |
-| Relay 3 click | [Click Here](./clicks/relay3) | Remote Temp click | [Click Here](./clicks/remotetemp) |
-| ReRAM click | [Click Here](./clicks/reram) | ReRAM 2 click | [Click Here](./clicks/reram2) |
-| RFID click | [Click Here](./clicks/rfid) | RFID 2 click | [Click Here](./clicks/rfid2) |
-| RF Meter click | [Click Here](./clicks/rfmeter) | RF Switch click | [Click Here](./clicks/rfswitch) |
-| RGB Driver click | [Click Here](./clicks/rgbdriver) | R Meter click | [Click Here](./clicks/rmeter) |
-| RMS to DC click | [Click Here](./clicks/rmstodc) | RN4678 click | [Click Here](./clicks/rn4678) |
-| RN4870 click | [Click Here](./clicks/rn4870) | RN4871 click | [Click Here](./clicks/rn4871) |
-| RNG click | [Click Here](./clicks/rng) | ROTARY B click | [Click Here](./clicks/rotaryb) |
-| ROTARY G click | [Click Here](./clicks/rotaryg) | ROTARY O click | [Click Here](./clicks/rotaryo) |
-| ROTARY R click | [Click Here](./clicks/rotaryr) | ROTARY Y click | [Click Here](./clicks/rotaryy) |
-| RS232 click | [Click Here](./clicks/rs232) | RS232 2 click | [Click Here](./clicks/rs2322) |
-| RS232 Isolator click | [Click Here](./clicks/rs232isolator) | RS232 Isolator 2 click | [Click Here](./clicks/rs232isolator2) |
-| RS232 SPI click | [Click Here](./clicks/rs232spi) | RS485 2 click | [Click Here](./clicks/rs4852) |
-| RS485 3 click | [Click Here](./clicks/rs4853) | RS485 3V3 click | [Click Here](./clicks/rs4853v3) |
-| RS485 4 click | [Click Here](./clicks/rs4854) | RS485 5 click | [Click Here](./clicks/rs4855) |
-| RS485 5V click | [Click Here](./clicks/rs4855v) | RS485 6 click | [Click Here](./clicks/rs4856) |
-| RS485 Isolator click | [Click Here](./clicks/rs485isolator) | RS485 Isolator 2 click | [Click Here](./clicks/rs485isolator2) |
-| RTC 10 click | [Click Here](./clicks/rtc10) | RTC 11 click | [Click Here](./clicks/rtc11) |
-| RTC 12 click | [Click Here](./clicks/rtc12) | RTC 13 click | [Click Here](./clicks/rtc13) |
-| RTC 14 click | [Click Here](./clicks/rtc14) | RTC 2 click | [Click Here](./clicks/rtc2) |
-| RTC 3 click | [Click Here](./clicks/rtc3) | RTC 5 click | [Click Here](./clicks/rtc5) |
-| RTC 6 click | [Click Here](./clicks/rtc6) | RTC 7 click | [Click Here](./clicks/rtc7) |
-| RTC 8 click | [Click Here](./clicks/rtc8) | RTC 9 click | [Click Here](./clicks/rtc9) |
-| RTD click | [Click Here](./clicks/rtd) | RTD 2 click | [Click Here](./clicks/rtd2) |
-| SAML Touch click | [Click Here](./clicks/samltouch) | Scanner click | [Click Here](./clicks/scanner) |
-| Semper Flash click | [Click Here](./clicks/semperflash) | Semper Flash 2 click | [Click Here](./clicks/semperflash2) |
-| Serializer click | [Click Here](./clicks/serializer) | Servo click | [Click Here](./clicks/servo) |
+| Ozone 2 click | [Click Here](./clicks/ozone2) | Ozone 3 click | [Click Here](./clicks/ozone3) |
+| PAC1720 click | [Click Here](./clicks/pac1720) | PAC1921 click | [Click Here](./clicks/pac1921) |
+| Pac1934 click | [Click Here](./clicks/pac1934) | PAC1944 click | [Click Here](./clicks/pac1944) |
+| PAC1954 click | [Click Here](./clicks/pac1954) | Pedometer click | [Click Here](./clicks/pedometer) |
+| Pedometer 3 click | [Click Here](./clicks/pedometer3) | Peltier click | [Click Here](./clicks/peltier) |
+| pH click | [Click Here](./clicks/ph) | PHT click | [Click Here](./clicks/pht) |
+| Piezo Accel click | [Click Here](./clicks/piezoaccel) | PIR click | [Click Here](./clicks/pir) |
+| Pixi click | [Click Here](./clicks/pixi) | PLL click | [Click Here](./clicks/pll) |
+| Plug n Trust click | [Click Here](./clicks/plugntrust) | Pollution click | [Click Here](./clicks/pollution) |
+| POT click | [Click Here](./clicks/pot) | POT 2 click | [Click Here](./clicks/pot2) |
+| Pot 3 click | [Click Here](./clicks/pot3) | PowerBank click | [Click Here](./clicks/powerbank) |
+| PowerBank 2 click | [Click Here](./clicks/powerbank2) | Power Monitor click | [Click Here](./clicks/powermonitor) |
+| Power MUX click | [Click Here](./clicks/powermux) | Power MUX 2 click | [Click Here](./clicks/powermux2) |
+| Power/Reset click | [Click Here](./clicks/powerreset) | Presence click | [Click Here](./clicks/presence) |
+| Pressure click | [Click Here](./clicks/pressure) | Pressure 10 click | [Click Here](./clicks/pressure10) |
+| Pressure 11 click | [Click Here](./clicks/pressure11) | Pressure 12 click | [Click Here](./clicks/pressure12) |
+| Pressure 13 click | [Click Here](./clicks/pressure13) | Pressure 14 click | [Click Here](./clicks/pressure14) |
+| Pressure 15 click | [Click Here](./clicks/pressure15) | Pressure 16 click | [Click Here](./clicks/pressure16) |
+| Pressure 2 click | [Click Here](./clicks/pressure2) | Pressure 3 click | [Click Here](./clicks/pressure3) |
+| Pressure 4 click | [Click Here](./clicks/pressure4) | Pressure 5 click | [Click Here](./clicks/pressure5) |
+| Pressure 6 click | [Click Here](./clicks/pressure6) | Pressure 7 click | [Click Here](./clicks/pressure7) |
+| Pressure 8 click | [Click Here](./clicks/pressure8) | Pressure 9 click | [Click Here](./clicks/pressure9) |
+| PROFET 10A click | [Click Here](./clicks/profet10a) | PROFET 15A click | [Click Here](./clicks/profet15a) |
+| PROFET 2 3A click | [Click Here](./clicks/profet23a) | PROFET 2 7A click | [Click Here](./clicks/profet27a) |
+| ProxFusion click | [Click Here](./clicks/proxfusion) | ProxFusion 2 click | [Click Here](./clicks/proxfusion2) |
+| ProxFusion 3 click | [Click Here](./clicks/proxfusion3) | Proximity click | [Click Here](./clicks/proximity) |
+| Proximity 10 click | [Click Here](./clicks/proximity10) | Proximity 11 click | [Click Here](./clicks/proximity11) |
+| Proximity 12 click | [Click Here](./clicks/proximity12) | Proximity 13 click | [Click Here](./clicks/proximity13) |
+| Proximity 14 click | [Click Here](./clicks/proximity14) | Proximity 15 click | [Click Here](./clicks/proximity15) |
+| Proximity 2 click | [Click Here](./clicks/proximity2) | Proximity 3 click | [Click Here](./clicks/proximity3) |
+| Proximity 5 click | [Click Here](./clicks/proximity5) | Proximity 6 click | [Click Here](./clicks/proximity6) |
+| PROXIMITY 7 click | [Click Here](./clicks/proximity7) | Proximity 8 click | [Click Here](./clicks/proximity8) |
+| Proximity 9 click | [Click Here](./clicks/proximity9) | PWM click | [Click Here](./clicks/pwm) |
+| PWM 2 click | [Click Here](./clicks/pwm2) | Pwm Driver click | [Click Here](./clicks/pwmdriver) |
+| PWR Meter click | [Click Here](./clicks/pwrmeter) | PWR Meter 2 click | [Click Here](./clicks/pwrmeter2) |
+| Qi Receiver click | [Click Here](./clicks/qireceiver) | Qi RX click | [Click Here](./clicks/qirx) |
+| RadioStation click | [Click Here](./clicks/radiostation) | Rec N Play click | [Click Here](./clicks/recnplay) |
+| REED click | [Click Here](./clicks/reed) | Relay click | [Click Here](./clicks/relay) |
+| Relay 2 click | [Click Here](./clicks/relay2) | Relay 3 click | [Click Here](./clicks/relay3) |
+| Remote Temp click | [Click Here](./clicks/remotetemp) | ReRAM click | [Click Here](./clicks/reram) |
+| ReRAM 2 click | [Click Here](./clicks/reram2) | RFID click | [Click Here](./clicks/rfid) |
+| RFID 2 click | [Click Here](./clicks/rfid2) | RF Meter click | [Click Here](./clicks/rfmeter) |
+| RF Switch click | [Click Here](./clicks/rfswitch) | RGB Driver click | [Click Here](./clicks/rgbdriver) |
+| R Meter click | [Click Here](./clicks/rmeter) | RMS to DC click | [Click Here](./clicks/rmstodc) |
+| RN4678 click | [Click Here](./clicks/rn4678) | RN4870 click | [Click Here](./clicks/rn4870) |
+| RN4871 click | [Click Here](./clicks/rn4871) | RNG click | [Click Here](./clicks/rng) |
+| ROTARY B click | [Click Here](./clicks/rotaryb) | ROTARY G click | [Click Here](./clicks/rotaryg) |
+| ROTARY O click | [Click Here](./clicks/rotaryo) | ROTARY R click | [Click Here](./clicks/rotaryr) |
+| ROTARY Y click | [Click Here](./clicks/rotaryy) | RS232 click | [Click Here](./clicks/rs232) |
+| RS232 2 click | [Click Here](./clicks/rs2322) | RS232 Isolator click | [Click Here](./clicks/rs232isolator) |
+| RS232 Isolator 2 click | [Click Here](./clicks/rs232isolator2) | RS232 SPI click | [Click Here](./clicks/rs232spi) |
+| RS485 2 click | [Click Here](./clicks/rs4852) | RS485 3 click | [Click Here](./clicks/rs4853) |
+| RS485 3V3 click | [Click Here](./clicks/rs4853v3) | RS485 4 click | [Click Here](./clicks/rs4854) |
+| RS485 5 click | [Click Here](./clicks/rs4855) | RS485 5V click | [Click Here](./clicks/rs4855v) |
+| RS485 6 click | [Click Here](./clicks/rs4856) | RS485 Isolator click | [Click Here](./clicks/rs485isolator) |
+| RS485 Isolator 2 click | [Click Here](./clicks/rs485isolator2) | RTC 10 click | [Click Here](./clicks/rtc10) |
+| RTC 11 click | [Click Here](./clicks/rtc11) | RTC 12 click | [Click Here](./clicks/rtc12) |
+| RTC 13 click | [Click Here](./clicks/rtc13) | RTC 14 click | [Click Here](./clicks/rtc14) |
+| RTC 2 click | [Click Here](./clicks/rtc2) | RTC 3 click | [Click Here](./clicks/rtc3) |
+| RTC 5 click | [Click Here](./clicks/rtc5) | RTC 6 click | [Click Here](./clicks/rtc6) |
+| RTC 7 click | [Click Here](./clicks/rtc7) | RTC 8 click | [Click Here](./clicks/rtc8) |
+| RTC 9 click | [Click Here](./clicks/rtc9) | RTD click | [Click Here](./clicks/rtd) |
+| RTD 2 click | [Click Here](./clicks/rtd2) | SAML Touch click | [Click Here](./clicks/samltouch) |
+| Scanner click | [Click Here](./clicks/scanner) | Semper Flash click | [Click Here](./clicks/semperflash) |
+| Semper Flash 2 click | [Click Here](./clicks/semperflash2) | Servo click | [Click Here](./clicks/servo) |
 | Shake2Wake click | [Click Here](./clicks/shake2wake) | SHT click | [Click Here](./clicks/sht) |
 | SHT1x click | [Click Here](./clicks/sht1x) | SHT AN click | [Click Here](./clicks/shtan) |
 | Shuttle click | [Click Here](./clicks/shuttle) | Signal Relay click | [Click Here](./clicks/signalrelay) |
 | Single Cell click | [Click Here](./clicks/singlecell) | Single Wire CAN click | [Click Here](./clicks/singlewirecan) |
 | Slider click | [Click Here](./clicks/slider) | Slider 2 click | [Click Here](./clicks/slider2) |
 | Smart Buck click | [Click Here](./clicks/smartbuck) | Smart DOF click | [Click Here](./clicks/smartdof) |
-| Smart Sens click | [Click Here](./clicks/smartsens) | Smoke click | [Click Here](./clicks/smoke) |
-| SOLAR ENERGY click | [Click Here](./clicks/solarenergy) | SolidSwitch click | [Click Here](./clicks/solidswitch) |
-| Speaker click | [Click Here](./clicks/speaker) | Spectral click | [Click Here](./clicks/spectral) |
-| Spectral 2 click | [Click Here](./clicks/spectral2) | Spectral 3 click | [Click Here](./clicks/spectral3) |
-| Spectrometer click | [Click Here](./clicks/spectrometer) | SPI Extend click | [Click Here](./clicks/spiextend) |
-| SPI Isolator click | [Click Here](./clicks/spiisolator) | SPI Isolator 2 click | [Click Here](./clicks/spiisolator2) |
-| SPI Isolator 3 click | [Click Here](./clicks/spiisolator3) | SPIRIT click | [Click Here](./clicks/spirit) |
-| SPIRIT 2 click | [Click Here](./clicks/spirit2) | SQI FLASH click | [Click Here](./clicks/sqiflash) |
-| SRAM click | [Click Here](./clicks/sram) | SRAM 2 click | [Click Here](./clicks/sram2) |
-| SRAM 3 click | [Click Here](./clicks/sram3) | SRAM 4 click | [Click Here](./clicks/sram4) |
-| Step Down 2 click | [Click Here](./clicks/stepdown2) | Stepper 11 click | [Click Here](./clicks/stepper11) |
-| Stepper 15 click | [Click Here](./clicks/stepper15) | Stepper 16 click | [Click Here](./clicks/stepper16) |
-| Stepper 17 click | [Click Here](./clicks/stepper17) | Stepper 18 click | [Click Here](./clicks/stepper18) |
-| Step Up click | [Click Here](./clicks/stepup) | StereoAmp click | [Click Here](./clicks/stereoamp) |
-| Stretch click | [Click Here](./clicks/stretch) | STSPIN233 click | [Click Here](./clicks/stspin233) |
-| STSPIN250 click | [Click Here](./clicks/stspin250) | Surface Temp click | [Click Here](./clicks/surfacetemp) |
-| Surface Temp 2 click | [Click Here](./clicks/surfacetemp2) | SWI EEPROM click | [Click Here](./clicks/mikrosdk_click_v2) |
-| SwipeSwitch click | [Click Here](./clicks/swipeswitch) | Tamper click | [Click Here](./clicks/tamper) |
-| Tamper 2 click | [Click Here](./clicks/tamper2) | TDC click | [Click Here](./clicks/tdc) |
-| TempHum click | [Click Here](./clicks/temphum) | TempHum 10 click | [Click Here](./clicks/temphum10) |
-| TempHum 11 click | [Click Here](./clicks/temphum11) | TempHum 12 click | [Click Here](./clicks/temphum12) |
-| TempHum 13 click | [Click Here](./clicks/temphum13) | TempHum 14 click | [Click Here](./clicks/temphum14) |
-| TempHum 15 click | [Click Here](./clicks/temphum15) | TempHum 16 click | [Click Here](./clicks/temphum16) |
-| TempHum 17 click | [Click Here](./clicks/temphum17) | TempHum 18 click | [Click Here](./clicks/temphum18) |
-| TempHum 19 click | [Click Here](./clicks/temphum19) | TempHum 2 click | [Click Here](./clicks/temphum2) |
-| TempHum 20 click | [Click Here](./clicks/temphum20) | TempHum 3 click | [Click Here](./clicks/temphum3) |
-| TempHum 4 click | [Click Here](./clicks/temphum4) | TempHum 5 click | [Click Here](./clicks/temphum5) |
-| TempHum 6 click | [Click Here](./clicks/temphum6) | TempHum 7 click | [Click Here](./clicks/temphum7) |
-| TempHum 8 click | [Click Here](./clicks/temphum8) | TempHum 9 click | [Click Here](./clicks/temphum9) |
-| Temp-Log click | [Click Here](./clicks/templog) | Temp-Log 2 click | [Click Here](./clicks/templog2) |
-| Temp-Log 3 click | [Click Here](./clicks/templog3) | Temp-Log 4 click | [Click Here](./clicks/templog4) |
-| Temp-Log 5 click | [Click Here](./clicks/templog5) | Temp-Log 6 click | [Click Here](./clicks/templog6) |
-| Temp Probe click | [Click Here](./clicks/tempprobe) | Terminal click | [Click Here](./clicks/terminal) |
-| Terminal 2 click | [Click Here](./clicks/terminal2) | Tester click | [Click Here](./clicks/tester) |
+| Smoke click | [Click Here](./clicks/smoke) | SOLAR ENERGY click | [Click Here](./clicks/solarenergy) |
+| SolidSwitch click | [Click Here](./clicks/solidswitch) | Speaker click | [Click Here](./clicks/speaker) |
+| Spectral click | [Click Here](./clicks/spectral) | Spectral 2 click | [Click Here](./clicks/spectral2) |
+| Spectral 3 click | [Click Here](./clicks/spectral3) | Spectrometer click | [Click Here](./clicks/spectrometer) |
+| SPI Extend click | [Click Here](./clicks/spiextend) | SPI Isolator click | [Click Here](./clicks/spiisolator) |
+| SPI Isolator 2 click | [Click Here](./clicks/spiisolator2) | SPI Isolator 3 click | [Click Here](./clicks/spiisolator3) |
+| SPIRIT click | [Click Here](./clicks/spirit) | SPIRIT 2 click | [Click Here](./clicks/spirit2) |
+| SQI FLASH click | [Click Here](./clicks/sqiflash) | SRAM click | [Click Here](./clicks/sram) |
+| SRAM 2 click | [Click Here](./clicks/sram2) | SRAM 3 click | [Click Here](./clicks/sram3) |
+| SRAM 4 click | [Click Here](./clicks/sram4) | Step Down 2 click | [Click Here](./clicks/stepdown2) |
+| Stepper 11 click | [Click Here](./clicks/stepper11) | Stepper 15 click | [Click Here](./clicks/stepper15) |
+| Stepper 16 click | [Click Here](./clicks/stepper16) | Stepper 17 click | [Click Here](./clicks/stepper17) |
+| Stepper 18 click | [Click Here](./clicks/stepper18) | Step Up click | [Click Here](./clicks/stepup) |
+| StereoAmp click | [Click Here](./clicks/stereoamp) | Stretch click | [Click Here](./clicks/stretch) |
+| STSPIN233 click | [Click Here](./clicks/stspin233) | STSPIN250 click | [Click Here](./clicks/stspin250) |
+| Surface Temp click | [Click Here](./clicks/surfacetemp) | Surface Temp 2 click | [Click Here](./clicks/surfacetemp2) |
+| SWI EEPROM click | [Click Here](./clicks/mikrosdk_click_v2) | SwipeSwitch click | [Click Here](./clicks/swipeswitch) |
+| Tamper click | [Click Here](./clicks/tamper) | Tamper 2 click | [Click Here](./clicks/tamper2) |
+| TDC click | [Click Here](./clicks/tdc) | TempHum click | [Click Here](./clicks/temphum) |
+| TempHum 10 click | [Click Here](./clicks/temphum10) | TempHum 11 click | [Click Here](./clicks/temphum11) |
+| TempHum 12 click | [Click Here](./clicks/temphum12) | TempHum 13 click | [Click Here](./clicks/temphum13) |
+| TempHum 14 click | [Click Here](./clicks/temphum14) | TempHum 15 click | [Click Here](./clicks/temphum15) |
+| TempHum 16 click | [Click Here](./clicks/temphum16) | TempHum 17 click | [Click Here](./clicks/temphum17) |
+| TempHum 18 click | [Click Here](./clicks/temphum18) | TempHum 19 click | [Click Here](./clicks/temphum19) |
+| TempHum 2 click | [Click Here](./clicks/temphum2) | TempHum 20 click | [Click Here](./clicks/temphum20) |
+| TempHum 3 click | [Click Here](./clicks/temphum3) | TempHum 4 click | [Click Here](./clicks/temphum4) |
+| TempHum 5 click | [Click Here](./clicks/temphum5) | TempHum 6 click | [Click Here](./clicks/temphum6) |
+| TempHum 7 click | [Click Here](./clicks/temphum7) | TempHum 8 click | [Click Here](./clicks/temphum8) |
+| TempHum 9 click | [Click Here](./clicks/temphum9) | Temp-Log click | [Click Here](./clicks/templog) |
+| Temp-Log 2 click | [Click Here](./clicks/templog2) | Temp-Log 3 click | [Click Here](./clicks/templog3) |
+| Temp-Log 4 click | [Click Here](./clicks/templog4) | Temp-Log 5 click | [Click Here](./clicks/templog5) |
+| Temp-Log 6 click | [Click Here](./clicks/templog6) | Temp Probe click | [Click Here](./clicks/tempprobe) |
+| Terminal click | [Click Here](./clicks/terminal) | Tester click | [Click Here](./clicks/tester) |
 | THERMO click | [Click Here](./clicks/thermo) | Thermo 11 click | [Click Here](./clicks/thermo11) |
 | Thermo 12 click | [Click Here](./clicks/thermo12) | Thermo 13 click | [Click Here](./clicks/thermo13) |
 | Thermo 14 click | [Click Here](./clicks/thermo14) | Thermo 15 click | [Click Here](./clicks/thermo15) |
@@ -503,24 +500,24 @@ A full list of all clicks in this repository is defined below:
 | UT-L 7-SEG R click | [Click Here](./clicks/utl7segr) | UT-M 7-SEG R click | [Click Here](./clicks/utm7segr) |
 | UT-S 7-SEG R click | [Click Here](./clicks/uts7segr) | UV click | [Click Here](./clicks/uv) |
 | UV 2 click | [Click Here](./clicks/uv2) | UV 3 click | [Click Here](./clicks/uv3) |
-| UV 4 click | [Click Here](./clicks/uv4) | UVA click | [Click Here](./clicks/uva) |
-| UVB click | [Click Here](./clicks/uvb) | UVC click | [Click Here](./clicks/uvc) |
-| UVC Light click | [Click Here](./clicks/uvclight) | UWB click | [Click Here](./clicks/uwb) |
-| Vacuum click | [Click Here](./clicks/vacuum) | VAV Press click | [Click Here](./clicks/vavpress) |
-| VCP Monitor click | [Click Here](./clicks/vcpmonitor) | VCP Monitor 2 click | [Click Here](./clicks/vcpmonitor2) |
-| VCP Monitor 3 click | [Click Here](./clicks/vcpmonitor3) | VCP Monitor 4 click | [Click Here](./clicks/vcpmonitor4) |
-| VCT Monitor click | [Click Here](./clicks/vctmonitor) | Vibra sense click | [Click Here](./clicks/vibrasense) |
-| Vibra Sense 2 click | [Click Here](./clicks/vibrasense2) | Vibro Motor click | [Click Here](./clicks/vibromotor) |
-| Vibro Motor 2 click | [Click Here](./clicks/vibromotor2) | Vibro Motor 3 click | [Click Here](./clicks/vibromotor3) |
-| Vibro Motor 4 click | [Click Here](./clicks/vibromotor4) | Voltmeter click | [Click Here](./clicks/voltmeter) |
-| Volume click | [Click Here](./clicks/volume) | Volume 2 click | [Click Here](./clicks/volume2) |
-| VREG click | [Click Here](./clicks/vreg) | VREG 2 click | [Click Here](./clicks/vreg2) |
-| V to Hz click | [Click Here](./clicks/vtohz) | V to Hz 2 click | [Click Here](./clicks/vtohz2) |
-| Watchdog click | [Click Here](./clicks/watchdog) | Water Detect click | [Click Here](./clicks/waterdetect) |
-| Waveform click | [Click Here](./clicks/waveform) | Waveform 2 click | [Click Here](./clicks/waveform2) |
-| Waveform 3 click | [Click Here](./clicks/waveform3) | Waveform 4 click | [Click Here](./clicks/waveform4) |
-| Weather click | [Click Here](./clicks/weather) | WiFi 11 click | [Click Here](./clicks/wifi11) |
-| WiFi 8 click | [Click Here](./clicks/wifi8) | Wifi 9 click | [Click Here](./clicks/wifi9) |
-| WiFi BLE click | [Click Here](./clicks/wifible) | WiFi ESP click | [Click Here](./clicks/wifiesp) |
-| XSENS MTi-3 click | [Click Here](./clicks/xsensmti3) | ZigBee click | [Click Here](./clicks/zigbee) |
+| UV 4 click | [Click Here](./clicks/uv4) | UVB click | [Click Here](./clicks/uvb) |
+| UVC click | [Click Here](./clicks/uvc) | UVC Light click | [Click Here](./clicks/uvclight) |
+| UWB click | [Click Here](./clicks/uwb) | Vacuum click | [Click Here](./clicks/vacuum) |
+| VAV Press click | [Click Here](./clicks/vavpress) | VCP Monitor click | [Click Here](./clicks/vcpmonitor) |
+| VCP Monitor 2 click | [Click Here](./clicks/vcpmonitor2) | VCP Monitor 3 click | [Click Here](./clicks/vcpmonitor3) |
+| VCP Monitor 4 click | [Click Here](./clicks/vcpmonitor4) | VCT Monitor click | [Click Here](./clicks/vctmonitor) |
+| Vibra sense click | [Click Here](./clicks/vibrasense) | Vibra Sense 2 click | [Click Here](./clicks/vibrasense2) |
+| Vibro Motor click | [Click Here](./clicks/vibromotor) | Vibro Motor 2 click | [Click Here](./clicks/vibromotor2) |
+| Vibro Motor 3 click | [Click Here](./clicks/vibromotor3) | Vibro Motor 4 click | [Click Here](./clicks/vibromotor4) |
+| Voltmeter click | [Click Here](./clicks/voltmeter) | Volume click | [Click Here](./clicks/volume) |
+| Volume 2 click | [Click Here](./clicks/volume2) | VREG click | [Click Here](./clicks/vreg) |
+| VREG 2 click | [Click Here](./clicks/vreg2) | V to Hz click | [Click Here](./clicks/vtohz) |
+| V to Hz 2 click | [Click Here](./clicks/vtohz2) | Watchdog click | [Click Here](./clicks/watchdog) |
+| Water Detect click | [Click Here](./clicks/waterdetect) | Waveform click | [Click Here](./clicks/waveform) |
+| Waveform 2 click | [Click Here](./clicks/waveform2) | Waveform 3 click | [Click Here](./clicks/waveform3) |
+| Waveform 4 click | [Click Here](./clicks/waveform4) | Weather click | [Click Here](./clicks/weather) |
+| WiFi 11 click | [Click Here](./clicks/wifi11) | WiFi 8 click | [Click Here](./clicks/wifi8) |
+| Wifi 9 click | [Click Here](./clicks/wifi9) | WiFi BLE click | [Click Here](./clicks/wifible) |
+| WiFi ESP click | [Click Here](./clicks/wifiesp) | XSENS MTi-3 click | [Click Here](./clicks/xsensmti3) |
+| ZigBee click | [Click Here](./clicks/zigbee) |
 
