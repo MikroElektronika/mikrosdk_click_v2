@@ -1,0 +1,8 @@
+{
+    "name": "Ambient 15 Click",
+    "description": "Ambient 15 Click is a compact add-on board used to measure the amount of the present ambient light. This board features the TSL2584TSV, a very-high sensitivity light-to-digital converter with an I2C interface that transforms light intensity into a digital output signal from AMS-AG. The TSL2584TSV’s near-photopic response produces a highly accurate lux measurement up to 33klx even when mounted behind dark glass. Filtering out unwanted IR light enables the sensor to measure the ambient light more accurately, thus producing a near-photopic response.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","TSL2584TSV"],
+    "category" : ["Optical"]
+}

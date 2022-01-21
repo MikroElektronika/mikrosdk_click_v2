@@ -1,0 +1,36 @@
+type: library
+
+target: lib_btaudio3
+
+sources: {
+    src/btaudio3.c
+}
+
+headers: {
+    include/btaudio3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/btaudio3.h) dst(include/btaudio3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.BTAudio3

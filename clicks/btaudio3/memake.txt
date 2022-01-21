@@ -1,0 +1,7 @@
+type: subdirs
+project: BTAudio3
+
+subdirs: {
+    lib
+    example
+}

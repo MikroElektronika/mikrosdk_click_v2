@@ -1,0 +1,36 @@
+type: library
+
+target: lib_ambient15
+
+sources: {
+    src/ambient15.c
+}
+
+headers: {
+    include/ambient15.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/ambient15.h) dst(include/ambient15.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Ambient15

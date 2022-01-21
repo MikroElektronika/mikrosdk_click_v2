@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Optical",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Ambient 15 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.ambient15",
+    "product_link": "https://www.mikroe.com/ambient-15-click",
+    "short_description": "Ambient 15 Click is a compact add-on board used to measure the amount of the present ambient light. This board features the TSL2584TSV, a very-high sensitivity light-to-digital converter with an I2C interface that transforms light intensity into a digital output signal from AMS-AG. The TSL2584TSV’s near-photopic response produces a highly accurate lux measurement up to 33klx even when mounted behind dark glass. Filtering out unwanted IR light enables the sensor to measure the ambient light more accurately, thus producing a near-photopic response.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+
