@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20220121](#20220121)**
 + **[20220114](#20220114)**
 + **[20211224](#20211224)**
 + **[20211217](#20211217)**
@@ -28,6 +29,19 @@
 
 ---
 ---
+---
+
+## `20220121`
+
+*Following click boards have been added:*
+
++ `Ambient 15`
++ `BT Audio 3`
++ `LED Driver 13`
++ `Pressure 17`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20220114`

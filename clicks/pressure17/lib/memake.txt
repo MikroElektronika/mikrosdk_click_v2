@@ -1,0 +1,36 @@
+type: library
+
+target: lib_pressure17
+
+sources: {
+    src/pressure17.c
+}
+
+headers: {
+    include/pressure17.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/pressure17.h) dst(include/pressure17.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Pressure17
