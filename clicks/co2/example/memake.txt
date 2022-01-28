@@ -1,0 +1,13 @@
+type: executable
+target: example_co2
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.CO2
+}
+
+sources: {
+    main.c
+}

@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20220128](#20220128)**
 + **[20220121](#20220121)**
 + **[20220114](#20220114)**
 + **[20211224](#20211224)**
@@ -29,6 +30,19 @@
 
 ---
 ---
+---
+
+## `20220128`
+
+*Following click boards have been added:*
+
++ `Barometer 6`
++ `CO2`
++ `Angle 8`
++ `H-Bridge Driver 2`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20220121`

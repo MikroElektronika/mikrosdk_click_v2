@@ -1,0 +1,13 @@
+type: executable
+target: example_hbridgedriver2
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.HBridgeDriver2
+}
+
+sources: {
+    main.c
+}
