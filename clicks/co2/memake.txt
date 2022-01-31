@@ -1,0 +1,7 @@
+type: subdirs
+project: CO2
+
+subdirs: {
+    lib
+    example
+}

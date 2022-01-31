@@ -1,0 +1,7 @@
+type: subdirs
+project: HBridgeDriver2
+
+subdirs: {
+    lib
+    example
+}
