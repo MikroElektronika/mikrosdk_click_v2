@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20220204](#20220204)**
 + **[20220128](#20220128)**
 + **[20220121](#20220121)**
 + **[20220114](#20220114)**
@@ -30,6 +31,18 @@
 
 ---
 ---
+---
+
+## `20220204`
+
+*Following click boards have been added:*
+
++ `TFmini`
++ `Diff Press 2`
++ `Current Limit 7`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20220128`

@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Adapter",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "TFmini click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.tfmini",
+    "product_link": "https://www.mikroe.com/tfmini-click",
+    "short_description": "TFmini Click is an adapter Click board™ used to interface a compatible ToF (Time of Flight) LiDAR sensor with the host MCU. This board features one four positions 1.25mm connector suitable for a TFmini LiDAR module (TFmini Plus and TFmini-S) specially made to measure an object's distance. Depending on the used LiDAR module, it is possible to achieve different measurement ranges and the use of a different serial interface, such as the UART or I2C. This Click board™ is suitable for various industrial environments like pedestrian detection, vehicle testing, and altitude.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+
