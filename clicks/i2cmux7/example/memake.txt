@@ -1,0 +1,13 @@
+type: executable
+target: example_i2cmux7
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.I2CMUX7
+}
+
+sources: {
+    main.c
+}

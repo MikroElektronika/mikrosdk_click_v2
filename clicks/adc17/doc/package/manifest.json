@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "ADC",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "ADC 17 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.adc17",
+    "product_link": "https://www.mikroe.com/adc-17-click",
+    "short_description": "ADC 17 Click is a compact add-on board that contains a high-performance data converter. This board features the MAX11645, a low-power two-channel 12-bit analog-to-digital converter from Analog Devices. The MAX11645 measures two single-ended or one differential input. The fully differential analog inputs are software configurable (I2C interface) for unipolar or bipolar, and single-ended or differential operation. The 2.048V internal reference determines its full-scale analog input range. This Click board™ offers complete, high accuracy solutions for the most demanding applications from energy-harvesting sensors to portable consumer electronics, point-of-load monitoring (voltage, current, and temperature), and more.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

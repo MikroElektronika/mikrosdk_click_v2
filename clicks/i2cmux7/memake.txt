@@ -1,0 +1,7 @@
+type: subdirs
+project: I2CMUX7
+
+subdirs: {
+    lib
+    example
+}
