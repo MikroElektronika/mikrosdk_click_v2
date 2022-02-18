@@ -1,0 +1,36 @@
+type: library
+
+target: lib_tfmini
+
+sources: {
+    src/tfmini.c
+}
+
+headers: {
+    include/tfmini.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/tfmini.h) dst(include/tfmini.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.TFmini
