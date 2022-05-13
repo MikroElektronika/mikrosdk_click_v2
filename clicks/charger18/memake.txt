@@ -1,0 +1,8 @@
+type: subdirs
+
+project: Charger18
+
+subdirs: {
+    lib
+    example
+}

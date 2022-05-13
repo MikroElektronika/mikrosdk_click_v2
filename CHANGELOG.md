@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20220218](#20220218)**
 + **[20220204](#20220204)**
 + **[20220128](#20220128)**
 + **[20220121](#20220121)**
@@ -31,6 +32,25 @@
 
 ---
 ---
+---
+
+## `20220218`
+
+*Following click boards have been added:*
+
++ `Thermo 22`
++ `ADC 17`
++ `Hall Current 13`
++ `I2C MUX 7`
++ `Thermo 2`
++ `Current 6`
++ `Brushless 21`
++ `Magneto 11`
++ `Charger 18`
++ `RF Meter 3`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20220204`

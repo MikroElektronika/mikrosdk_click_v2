@@ -1,0 +1,8 @@
+{
+    "name": "Charger 18 Click",
+    "description": "Charger 18 Click is a compact add-on board representing a single-cell battery charger. This board features the LTC3553, a micropower, highly integrated power management, and battery charger for single-cell Li-Ion/Polymer battery applications from Analog Devices. Designed specifically for USB applications, it also includes a PowerPath manager with automatic load prioritization and input current limit, a battery charger, and numerous internal protection features. It also indicates a battery charge state, and it comes with a synchronous 200mA buck regulator and a 150mA low dropout linear regulator (LDO).",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","LTC3553EUD"],
+    "category" : ["Battery Charger"]
+}

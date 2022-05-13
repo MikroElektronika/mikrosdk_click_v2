@@ -1,0 +1,36 @@
+type: library
+
+target: lib_charger18
+
+sources: {
+    src/charger18.c
+}
+
+headers: {
+    include/charger18.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/charger18.h) dst(include/charger18.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Charger18

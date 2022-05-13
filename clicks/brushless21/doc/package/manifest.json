@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Brushless",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Brushless 21 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.brushless21",
+    "product_link": "https://www.mikroe.com/brushless-21-click",
+    "short_description": "Brushless 21 Click is a compact add-on board suitable for controlling brushless DC (BLDC) motors with any MCU. This board features the AMT49400, an advanced 3-phase, sensorless BLDC motor driver with integrated power MOSFETs from Allegro Microsystems. The AMT49400 is rated for an operating voltage range from 4V to 16V. Motor rotation speed is controlled by applying a duty cycle command to the PWM input, while a simple I2C interface is provided for setting motor-rated voltage, rated current, rated speed, resistance, and startup profiles.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.2"
+}
+
+
