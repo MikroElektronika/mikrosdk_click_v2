@@ -1,6 +1,6 @@
 /*!
- * \file 
- * \brief LedDriver5 Click example
+ * @file 
+ * @brief LedDriver5 Click example
  * 
  * # Description
  * The application is a capable of driving an array of high-power LEDs. 
@@ -11,10 +11,13 @@
  * Initialization driver init and pwm init
  * 
  * ## Application Task  
- * Controls the brightness of the LED using PWM
+ * This is an example that demonstrates the use of the LED Driver 5 Click board.
+ * This example shows the automatic control of Led light intensity,
+ * the first intensity of light is rising and then the intensity of light is falling.
+ * Results are being sent to the Usart Terminal where you can track their changes.
  * 
  * 
- * \author MikroE Team
+ * @author Nikola Peric
  *
  */
 // ------------------------------------------------------------------- INCLUDES
@@ -27,8 +30,6 @@
 
 static leddriver5_t leddriver5;
 static log_t logger;
-
-static float duty_cycle = 0.5;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -61,11 +62,24 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    for ( duty_cycle = 0.1; duty_cycle <= 1.0; duty_cycle += 0.1 )
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
+    
+    leddriver5_set_duty_cycle( &leddriver5, duty );
+    log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    
+    Delay_ms( 500 );
+    
+    if ( 10 == duty_cnt ) 
     {
-        leddriver5_set_duty_cycle ( &leddriver5, duty_cycle );
-        Delay_ms( 500 );
+        duty_inc = -1;
     }
+    else if ( 0 == duty_cnt ) 
+    {
+        duty_inc = 1;
+    }
+    duty_cnt += duty_inc;
 }
 
 void main ( void )

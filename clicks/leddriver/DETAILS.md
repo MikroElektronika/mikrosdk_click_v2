@@ -15,8 +15,8 @@ LED driver click carries the MCP1662 high-voltage step-up voltage driver from Mi
 
 #### Click library 
 
-- **Author**        : MikroE Team
-- **Date**          : Jan 2020.
+- **Author**        : Nikola Peric
+- **Date**          : Feb 2022.
 - **Type**          : PWM type
 
 
@@ -46,7 +46,8 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This application controls the brightness. 
+>  This library contains API for the LED Driver Click driver.
+>  This application controls the brightness. 
 
 **The demo application is composed of two sections :**
 
@@ -78,58 +79,55 @@ void application_init ( void )
 
     leddriver_cfg_setup( &cfg );
     LEDDRIVER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    leddriver_init( &leddriver, &cfg );
 
-    log_printf( &logger, "   Initialization PWM    \r\n" );
-    leddriver_set_duty_cycle( &leddriver, duty_cycle );
+    if ( LEDDRIVER_OK != leddriver_init( &leddriver, &cfg ) )
+    {
+        log_info( &logger, "---- Init Error ----" );
+        log_info( &logger, "---- Run program again ----" );
+
+        for ( ; ; );
+    }
+
+    log_info( &logger, "---- Init Done ----\r\n" );
+    leddriver_set_duty_cycle ( &leddriver, 0.0 );
     leddriver_pwm_start( &leddriver );
-    log_printf( &logger, "-------------------------\r\n" );
-    Delay_100ms();
+    Delay_ms( 100 );
+    log_info( &logger, "---- Application Task ----\r\n" );
 }
   
 ```
 
 ### Application Task
 
-> This is an example which demonstrates the use of LED Driver Click board.LED Driver Click communicates with register via PWM interface. This example shows the automatic control halogen bulb light intensity, the first intensity of light is rising and then the intensity of light is falling. Results are being sent to the Usart Terminal where you can track their changes.
+> This is an example that demonstrates the use of the LED Driver Click board.
+> LED Driver Click communicates with register via PWM interface.
+> This example shows the automatic control halogen bulb light intensity,
+> the first intensity of light is rising and then the intensity of light is falling.
+> Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
 
-void application_task ( void )
+void application_task ( void ) 
 {
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
     
-    if ( duty_cycle > leddriver.pwm_period )
-    {
-        duty_cycle = 100;
-    }
+    leddriver_set_duty_cycle ( &leddriver, duty );
+    log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
     
-    leddriver_set_duty_cycle ( &leddriver, duty_cycle );
-    duty_cycle += 50;
-    Delay_100ms();
-
-    log_printf( &logger, " Light Intensity Rising  \r\n" );
-    Delay_1sec();
-
-    for ( duty_cycle = 5; duty_cycle < 255; duty_cycle += 25 )
+    Delay_ms( 100 );
+    
+    if ( 10 == duty_cnt ) 
     {
-        leddriver_set_duty_cycle(  &leddriver, duty_cycle );
-        log_printf( &logger, " >\r\n" );
-        Delay_1sec();
+        duty_inc = -1;
     }
-
-    log_printf( &logger, "-------------------------\r\n" );
-    log_printf( &logger, " Light Intensity Falling \r\n" );
-    Delay_1sec();
-
-    for ( duty_cycle = 255; duty_cycle > 5; duty_cycle -= 25 )
+    else if ( 0 == duty_cnt ) 
     {
-        leddriver_set_duty_cycle(  &leddriver, duty_cycle );
-        log_printf( &logger, " <\r\n" );
-        Delay_1sec();
+        duty_inc = 1;
     }
-
-    log_printf( &logger, "-------------------------\r\n" );
-    Delay_1sec();
+    duty_cnt += duty_inc;
+    
 }  
 
 ```

@@ -1,5 +1,4 @@
 
-
 ---
 # STSPIN250 click
 
@@ -17,8 +16,8 @@ STSPIN250 click is a brushed DC motor driver with the current limiting and curre
 
 #### Click library 
 
-- **Author**        : MikroE Team
-- **Date**          : Jan 2020.
+- **Author**        : Nikola Peric
+- **Date**          : Feb 2022.
 - **Type**          : PWM type
 
 
@@ -97,25 +96,65 @@ void application_init ( void )
     stspin250_init( &stspin250, &cfg );
 
     stspin250_enable( &stspin250, STSPIN250_DEVICE_ENABLE );
-    stspin250_set_duty_cycle ( &stspin250, duty_cycle );
+    stspin250_set_duty_cycle ( &stspin250, 0.0 );
 
     stspin250_pwm_start( &stspin250 );
+    log_info( &logger, "---- Application Task ----" );
+    Delay_ms( 500 );
 }
   
 ```
 
 ### Application Task
 
-> Controls the motor speed in both directions and logs all data on UART.
+>  This is a example which demonstrates the use of Stspin250 Click board.
+>  Stspin250 Click communicates with register via PWM interface.
+>  It shows moving in the left direction from slow to fast speed
+>  and from fast to slow speed.
+>  Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
 
 void application_task ( void )
 {
-    clockwise( );
-    
-    counter_clockwise( );
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
+
+    if ( motor_direction == 1 )
+    {
+        stspin250_set_ph( &stspin250, 1 );
+        log_printf( &logger, "> CLOCKWISE <\r\n" );
+    }
+    else
+    {
+        stspin250_set_ph( &stspin250, 0 );
+        log_printf( &logger, "> COUNTER CLOCKWISE <\r\n" );
+    }
+
+    stspin250_set_duty_cycle ( &stspin250, duty );
+    log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    Delay_ms( 500 );
+
+    if ( 10 == duty_cnt ) 
+    {
+        duty_inc = -1;
+    }
+    else if ( 0 == duty_cnt ) 
+    {
+        duty_inc = 1;
+        if ( motor_direction == 1 )
+        {
+            motor_direction = 0;
+        }
+        else if ( motor_direction == 0 )
+        {
+            motor_direction = 1;
+        }
+    }
+    duty_cnt += duty_inc;
 }
+
 
 ```
 

@@ -1,6 +1,6 @@
 /*!
- * \file 
- * \brief UvcLight Click example
+ * @file 
+ * @brief UvcLight Click example
  * 
  * # Description
  * This click has ultraviolet LEDs with 275nm wavelength. UVC radiation refers to wavelengths 
@@ -14,10 +14,11 @@
  * 
  * ## Application Task  
  * Increases and decreases the pwm duty cycle.
+ * Results are being sent to the Usart Terminal where you can track their changes.
  * 
  * CAUTION! High intensity UV Light - avoid eye and skin exposure. Avoid looking direclty at light!
  * 
- * \author MikroE Team
+ * @author Nikola Peric
  *
  */
 // ------------------------------------------------------------------- INCLUDES
@@ -30,8 +31,6 @@
 
 static uvclight_t uvclight;
 static log_t logger;
-
-static float duty_cycle = 0.5;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -59,31 +58,33 @@ void application_init ( void )
     UVCLIGHT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     uvclight_init( &uvclight, &cfg );
 
+    uvclight_set_duty_cycle ( &uvclight, 0.0 );
     uvclight_pwm_start( &uvclight );
     Delay_ms( 100 );
+    log_info( &logger, "---- Application Task ----" );
 }
 
 void application_task ( void )
 {
-    log_printf( &logger, "Increasing PWM duty cycle...\r\n" );
-    
-    for ( duty_cycle = 0; duty_cycle < 1.0; duty_cycle += 0.1 )
-    {
-        uvclight_set_duty_cycle ( &uvclight, duty_cycle );
-        Delay_ms( 100 );
-    }
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
 
+    uvclight_set_duty_cycle ( &uvclight, duty );
+    log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
     Delay_ms( 500 );
-    
-    log_printf( &logger, "Decreasing PWM duty cycle...\r\n" );
-    for ( duty_cycle = 1.0; duty_cycle >= 0; duty_cycle-= 0.1 )
-    {
-        uvclight_set_duty_cycle ( &uvclight, duty_cycle );
-        Delay_ms( 100 );
-    }
-    log_printf( &logger, "-------------------------------\r\n" );
 
-    Delay_ms( 500 );
+    if ( 10 == duty_cnt ) 
+    {
+        duty_inc = -1;
+    }
+    else if ( 0 == duty_cnt ) 
+    {
+        log_printf( &logger, "Cooldown 2 SEC\r\n");
+        Delay_ms( 2000 );
+        duty_inc = 1;
+    }
+    duty_cnt += duty_inc;
 }
 
 void main ( void )
@@ -95,6 +96,5 @@ void main ( void )
         application_task( );
     }
 }
-
 
 // ------------------------------------------------------------------------ END

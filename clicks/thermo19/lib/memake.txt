@@ -1,0 +1,36 @@
+type: library
+
+target: lib_thermo19
+
+sources: {
+    src/thermo19.c
+}
+
+headers: {
+    include/thermo19.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/thermo19.h) dst(include/thermo19.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Thermo19

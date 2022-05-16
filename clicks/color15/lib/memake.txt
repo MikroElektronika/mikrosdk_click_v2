@@ -1,0 +1,36 @@
+type: library
+
+target: lib_color15
+
+sources: {
+    src/color15.c
+}
+
+headers: {
+    include/color15.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/color15.h) dst(include/color15.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Color15

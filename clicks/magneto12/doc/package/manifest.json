@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Magnetic",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Magneto 12 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.magneto12",
+    "product_link": "https://www.mikroe.com/magneto-12-click",
+    "short_description": "Magneto 12 Click is a compact add-on board that contains an accurate and reliable magnetic sensing device. This board features the A31315, a magnetic position sensor designed for on- and off-axis rotary and linear stroke position measurement from Allegro Microsystems. This sensor integrates vertical and planar Hall-effect elements with precision temperature-compensating circuitry to detect two out of three magnetic field components (X and Y). Using configurable signal processing (the user is allowed to process the output signal in analog or digital form), linearization and angle calculation allows the A31315 to accurately resolve the absolute rotary (full 360° and short-stroke <360°) or linear position of a moving magnetic target.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

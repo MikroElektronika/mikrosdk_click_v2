@@ -1,0 +1,16 @@
+type: subdirs
+project: GSMGNSS2
+
+subdirs: {
+    lib
+    example
+}
+
+depends: {
+    MikroSDK.GenericPointer
+    Click.GSMGNSS2
+    MikroSDK.Log
+    MikroSDK.Conversions
+    MikroSDK.Board
+    MikroC.Core
+}

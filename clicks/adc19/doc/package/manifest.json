@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "ADC",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "ADC 19 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.adc19",
+    "product_link": "https://www.mikroe.com/adc-19-click",
+    "short_description": "ADC 19 Click is a compact add-on board that contains a high-performance data converter. This board features the ADC122S101, a low-power two-channel CMOS 12-bit analog-to-digital converter from Texas Instruments. This SPI configurable analog-to-digital converter (ADC) is fully specified over a sample rate range of 500ksps to 1Msps, offering high reliability and performance. The converter is based on a successive-approximation register architecture with an internal track-and-hold circuit configurable to accept one or two input signals at its input channels.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

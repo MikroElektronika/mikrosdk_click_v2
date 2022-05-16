@@ -1,6 +1,6 @@
 /*!
- * \file 
- * \brief Brushless 4 Click example
+ * @file 
+ * @brief Brushless 4 Click example
  * 
  * # Description
  * This click has many features for driving a wide range of small to medium BLDC motors.
@@ -13,11 +13,13 @@
  * and configures the PWM peripheral for controlling the speed of the motor.
  * 
  * ## Application Task  
- * Increases and decreases the speed of the motor
- * demonstrating the speed controll.
+ * This is an example that demonstrates the use of a Brushless 4 Click board.
+ * Brushless 4 Click communicates with the register via the PWM interface.  
+ * Increases and decreasing the speed of the motor demonstrate speed control.
+ * Results are being sent to the Usart Terminal where you can track their changes.
  * 
  * 
- * \author MikroE Team
+ * @author Nikola Peric
  *
  */
 // ------------------------------------------------------------------- INCLUDES
@@ -30,15 +32,6 @@
 
 static brushless4_t brushless4;
 static log_t logger;
-
-static float duty_cycle = 0.5;
-
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
-
-void set_speed ( uint16_t speed )
-{
-    brushless4_set_duty_cycle( &brushless4, duty_cycle );
-}
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -65,41 +58,35 @@ void application_init ( void )
     brushless4_cfg_setup( &cfg );
     BRUSHLESS4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     brushless4_init( &brushless4, &cfg );
-
-    brushless4_pwm_start( &brushless4 );  
-    brushless4_set_duty_cycle ( &brushless4, duty_cycle );  
-    Delay_ms( 1000 );
     
-    log_printf( &logger, "---------------------- \r\n" );
+    brushless4_set_duty_cycle ( &brushless4, 0.0 );
+    brushless4_pwm_start( &brushless4 );  
+      
+    log_info( &logger, "---- Application Task ----" );
+    Delay_ms( 1000 );
 }
 
 void application_task ( void )
 {
-    brushless4_pwm_start( &brushless4 );
-    Delay_ms( 100 );
-    
-    log_printf( &logger, "    acceleration      \r\n" );
-    
-    for ( duty_cycle = 0.1; duty_cycle <= 1.0; duty_cycle += 0.1 )
-    {
-        brushless4_set_duty_cycle ( &brushless4, duty_cycle );
-        log_printf( &logger," > " );
-        Delay_ms( 500 );
-    }
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
 
-    log_printf( &logger,  "\r\n ---------------------- \r\n" ); 
-    log_printf( &logger, "    slowing down     \r\n" );
-    
-    for ( duty_cycle = 1.0; duty_cycle > 0; duty_cycle -= 0.1 )
+    brushless4_set_duty_cycle ( &brushless4, duty );
+    log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    Delay_ms( 500 );
+
+    if ( 10 == duty_cnt ) 
     {
-        brushless4_set_duty_cycle ( &brushless4, duty_cycle );
-        log_printf( &logger," < " );
-        Delay_ms( 500 );
+        duty_inc = -1;
+        log_printf( &logger, " Slowing down... \r\n" );
     }
-    
-    brushless4_pwm_stop( &brushless4 );
-    log_printf( &logger,  "\r\n ---------------------- \r\n" ); 
-    Delay_ms( 100 );
+    else if ( 0 == duty_cnt ) 
+    {
+        duty_inc = 1;
+        log_printf( &logger, " Increasing the motor speed... \r\n" );
+    }
+    duty_cnt += duty_inc;
 }
 
 void main ( void )

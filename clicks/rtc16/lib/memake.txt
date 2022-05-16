@@ -1,0 +1,37 @@
+type: library
+
+target: lib_rtc16
+
+sources: {
+    src/rtc16.c
+}
+
+headers: {
+    include/rtc16.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/rtc16.h) dst(include/rtc16.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+    MikroSDK.Conversions
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.RTC16

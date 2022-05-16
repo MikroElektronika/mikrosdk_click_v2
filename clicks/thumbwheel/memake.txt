@@ -1,0 +1,7 @@
+type: subdirs
+project: Thumbwheel
+
+subdirs: {
+    lib
+    example
+}

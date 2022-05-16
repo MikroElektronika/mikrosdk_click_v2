@@ -1,0 +1,37 @@
+type: library
+
+target: lib_gps6
+
+sources: {
+    src/gps6.c
+}
+
+headers: {
+    include/gps6.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/gps6.h) dst(include/gps6.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+    MikroSDK.GenericPointer
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.GPS6

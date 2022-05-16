@@ -15,8 +15,8 @@ DC MOTOR 5 click carries the DRV8701 brushed DC motor gate driver from Texas Ins
 
 #### Click library 
 
-- **Author**        : MikroE Team
-- **Date**          : jan 2020.
+- **Author**        : Nikola Peric
+- **Date**          : Feb 2022.
 - **Type**          : PWM type
 
 
@@ -54,7 +54,8 @@ Package can be downloaded/installed directly from compilers IDE(recommended way)
 
 ## Examples Description
 
-> This application enables usage of brushed DC motor gate driver.
+>  This library contains API for the DC Motor 5 Click driver.
+>  This application enables usage of brushed DC motor 5 gate driver.
 
 **The demo application is composed of two sections :**
 
@@ -87,29 +88,79 @@ void application_init ( void )
     dcmotor5_cfg_setup( &cfg );
     DCMOTOR5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     dcmotor5_init( &dcmotor5, &cfg );
+    
+    log_printf( &logger, " Initialization  PWM \r\n" );
 
     dcmotor5_pwm_start( &dcmotor5 );
-
-    dcmotor5_enable( &dcmotor5 );
-
-    Delay_1sec( );
+    dcmotor5_enable ( &dcmotor5 );
+    Delay_ms( 500 );
+    log_printf( &logger, "---------------------\r\n" );
+    log_info( &logger, "---- Application Task ----" );
 }
   
 ```
 
 ### Application Task
 
-> This function drives the motor in both directions increasing and decreasing the speed of the motor.
+> This is a example which demonstrates the use of DC Motor 5 Click board.
+> DC Motor 5 Click controls DC Motor speed via PWM interface.
+> It shows moving in the both directions from slow to fast speed
+> and from fast to slow speed.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
 
-void application_task ( void )
-{
-    clockwise( );
-    pull_brake( );
-    counter_clockwise( );
-    high_z( );
+void application_task ( )
+{    
+    static float duty;
+    static uint8_t n_cnt;
+    
+    
+    dcmotor5_clockwise ( &dcmotor5 );
+    log_printf( &logger, "\r\n> CLOCKWISE <\r\n" );
+    dcmotor5_enable ( &dcmotor5 );
+    
+    for ( n_cnt = 10; n_cnt > 0; n_cnt--  )
+    {
+        duty = ( float ) n_cnt ;
+        duty /= 10;
+        log_printf( &logger, " >" );
+        dcmotor5_set_duty_cycle( &dcmotor5, duty );
+        Delay_ms( 500 );
+    }
+    for ( n_cnt = 1; n_cnt <= 10; n_cnt++ )
+    {
+        duty = ( float ) n_cnt ;
+        duty /= 10;
+        log_printf( &logger, " <" );
+        dcmotor5_set_duty_cycle( &dcmotor5,  duty );
+        Delay_ms( 500 );
+    }
+    
+    log_printf( &logger, "\r\n * Pull break *\r\n" );
+    dcmotor5_short_brake( &dcmotor5 );
+    Delay_ms( 1000 );
+    
+    dcmotor5_counter_clockwise ( &dcmotor5 );
+    log_printf( &logger, "\r\n> COUNTER CLOCKWISE <\r\n" );
+        
+    for ( n_cnt = 1; n_cnt <= 10; n_cnt++  )
+    {
+        duty = ( float ) n_cnt ;
+        duty /= 10;
+        dcmotor5_set_duty_cycle( &dcmotor5, duty );
+        log_printf( &logger, " >" );
+        Delay_ms( 500 );
+    }
+    for ( n_cnt = 10; n_cnt > 0; n_cnt-- )
+    {
+        duty = ( float ) n_cnt ;
+        duty /= 10;
+        dcmotor5_set_duty_cycle( &dcmotor5,  duty );
+        log_printf( &logger, " <" );
+        Delay_ms( 500 );
+    }
+        
 }
 
 ```

@@ -1,5 +1,4 @@
-\mainpage Main Page
- 
+
 ---
 # Led Driver 5 click
 
@@ -16,8 +15,8 @@ LED Driver 5 click is a Click board™ capable of driving an array of high-power
 
 #### Click library 
 
-- **Author**        : MikroE Team
-- **Date**          : Jan 2020.
+- **Author**        : Nikola Peric
+- **Date**          : Mar 2022.
 - **Type**          : PWM type
 
 
@@ -59,20 +58,22 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> The application is a capable of driving an array of high-power LEDs. 
+> This app enables usage of compact, high-efficiency, fixed frequency,
+> synchronous step-up converter, optimized to drive one LED with the constant current.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
->Initialization driver init and pwm init 
+> Initialization driver enables - GPIO,
+> PWM initialization set PWM duty cycle and start PWM. 
 
 ```c
 
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    leddriver5_cfg_t cfg;
+    leddriver2_cfg_t cfg;
 
     /** 
      * Logger initialization.
@@ -89,11 +90,11 @@ void application_init ( void )
 
     //  Click initialization.
 
-    leddriver5_cfg_setup( &cfg );
-    LEDDRIVER5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    leddriver5_init( &leddriver5, &cfg );
+    leddriver2_cfg_setup( &cfg );
+    LEDDRIVER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    leddriver2_init( &leddriver2, &cfg );
 
-    leddriver5_pwm_start( &leddriver5 );
+    leddriver2_pwm_start( &leddriver2 );
 }
 
   
@@ -101,17 +102,33 @@ void application_init ( void )
 
 ### Application Task
 
->Controls the brightness of the LED using PWM
+>  This is an example that demonstrates the use of the LED Driver 5 Click board.
+>  This example shows the automatic control of Led light intensity,
+>  the first intensity of light is rising and then the intensity of light is falling.
+>  Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
 
 void application_task ( void )
 {
-    for ( duty_cycle = 0.1; duty_cycle <= 1.0; duty_cycle += 0.1 )
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
+    
+    leddriver5_set_duty_cycle( &leddriver5, duty );
+    log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    
+    Delay_ms( 500 );
+    
+    if ( 10 == duty_cnt ) 
     {
-        leddriver5_set_duty_cycle ( &leddriver5, duty_cycle );
-        Delay_ms( 500 );
+        duty_inc = -1;
     }
+    else if ( 0 == duty_cnt ) 
+    {
+        duty_inc = 1;
+    }
+    duty_cnt += duty_inc;
 }
 
 ```

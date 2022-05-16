@@ -2,7 +2,7 @@
 ---
 # DC MOTOR  click
 
-DC MOTOR click is a DC motor driver board in mikroBUS form factor. It features the DRV8833RTYH-Bridge motor driver, 74HC4053 multiplexer and two screw terminals >
+< DC MOTOR click is a DC motor driver board in mikroBUS form factor. It features the DRV8833RTYH-Bridge motor driver, 74HC4053 multiplexer and two screw terminals >
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/dcmotor_click.png" height=300px>
@@ -15,8 +15,8 @@ DC MOTOR click is a DC motor driver board in mikroBUS form factor. It features t
 
 #### Click library 
 
-- **Author**        : MikroE Team
-- **Date**          : Jan 2020.
+- **Author**        : Nikola Peric
+- **Date**          : Feb 2022.
 - **Type**          : PWM type
 
 
@@ -60,7 +60,8 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initialization driver enable's - GPIO, PWM initialization, set PWM duty cycle and PWM frequency, enable the motor, start PWM and start write log.
+> Initialization driver enable's - GPIO, PWM initialization, set PWM duty cycle and PWM frequency,
+> enable the motor, start PWM and start write log.
 
 ```c
 
@@ -89,10 +90,9 @@ void application_init ( void )
     dcmotor_init( &dcmotor, &cfg );
 
     log_printf( &logger, " Initialization  PWM \r\n" );
-    dcmotor_set_duty_cycle( &dcmotor, duty_cycle );
-    dcmotor_enable( &dcmotor );
+    
+    dcmotor_set_duty_cycle ( &dcmotor, 0.0 );
     dcmotor_pwm_start( &dcmotor );
-    Delay_ms( 1000 );
     log_printf( &logger, "---------------------\r\n" );
 }
   
@@ -100,56 +100,59 @@ void application_init ( void )
 
 ### Application Task
 
->  This is a example which demonstrates the use of DC Motor Click board. DC Motor Click communicates with register via PWM interface. It shows moving in the left direction from slow to fast speed and moving in the right direction from fast to slow speed. Results are being sent to the Usart Terminal where you can track their changes.
+>  This is a example which demonstrates the use of DC Motor Click board.
+>  DC Motor Click communicates with register via PWM interface.
+>  It shows moving in the left direction from slow to fast speed
+>  and from fast to slow speed.
+>  Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
 
-void application_task ( void )
-{
- //  Task implementation.
+void application_task ( )
+{    
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
+
+    if ( dcmotor_direction == 1 )
+    {
+        dcmotor_sleep_mode ( &dcmotor );
+        dcmotor_right_direction_slow ( &dcmotor );
+        log_printf( &logger, "> CLOCKWISE <\r\n" );
+        dcmotor_enable ( &dcmotor );
+    }
+    else
+    {
+        dcmotor_sleep_mode ( &dcmotor );
+        dcmotor_left_direction_slow ( &dcmotor );
+        log_printf( &logger, "> COUNTER CLOCKWISE <\r\n" );
+        dcmotor_enable ( &dcmotor );
+    }
+
+    dcmotor_set_duty_cycle ( &dcmotor, duty );
     
-    if ( duty_cycle > dcmotor.pwm_period )
+    Delay_ms( 500 );
+
+    if ( 10 == duty_cnt ) 
     {
-        duty_cycle = 100;
+        duty_inc = -1;
+        
+        if ( dcmotor_direction == 1 )
+        {
+            dcmotor_direction = 0;
+        }
+        else if ( dcmotor_direction == 0 )
+        {
+            dcmotor_direction = 1;
+        }
     }
-    
-    dcmotor_set_duty_cycle ( &dcmotor, duty_cycle );
-    duty_cycle += 50;
-    Delay_100ms();
-
-    log_printf( &logger, "    Left Direction   \r\n" );
-    dcmotor_left_direction_slow( &dcmotor );
-    dcmotor_enable( &dcmotor );
-    Delay_ms( 1000 );
-
-    for ( duty_cycle = 500; duty_cycle < 3000; duty_cycle += 250 )
+    else if ( 0 == duty_cnt ) 
     {
-        dcmotor_set_duty_cycle( &dcmotor, duty_cycle );
-        log_printf( &logger, " <\r\n" );
-        Delay_ms( 1000 );
+        duty_inc = 1;
     }
+    duty_cnt += duty_inc;
 
-    dcmotor_sleep_mode( &dcmotor );
-    Delay_ms( 1000 );
-    log_printf( &logger, "---------------------\r\n" );
-    log_printf( &logger, "   Right Direction   \r\n" );
-
-    dcmotor_right_direction_fast( &dcmotor );
-    dcmotor_enable( &dcmotor );
-    Delay_ms( 1000 );
-
-    for ( duty_cycle = 500; duty_cycle < 3000; duty_cycle += 250 )
-    {
-        dcmotor_set_duty_cycle( &dcmotor, duty_cycle );
-        log_printf( &logger, " >\r\n" );
-        Delay_ms( 1000 );
-    }
-
-  
-    log_printf( &logger, "---------------------\r\n" );
-    dcmotor_sleep_mode( &dcmotor );
-    Delay_ms( 1000 );
-}  
+}
 
 ```
 

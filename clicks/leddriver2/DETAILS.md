@@ -1,4 +1,4 @@
-
+ 
 ---
 # LED Driver 2 click
 
@@ -16,8 +16,8 @@ fixed frequency, synchronous step-up converter, optimized to drive one LED with 
 
 #### Click library 
 
-- **Author**        : MikroE Team
-- **Date**          : jan 2020.
+- **Author**        : Nikola Peric
+- **Date**          : Feb 2022.
 - **Type**          : PWM type
 
 
@@ -99,37 +99,33 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example which demonstrates the use of LED Driver 2 Click board.
+> This is an example that demonstrates the use of the LED Driver 2 Click board.
 > This example shows the automatic control halogen bulb light intensity,
 > the first intensity of light is rising and then the intensity of light is falling.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
 
-void application_task ( void )
+void application_task ( void ) 
 {
-    log_printf( &logger, " Light Intensity Rising  \r\n" );
-    Delay_1sec( );
-
-    for( duty_cycle = 0.1; duty_cycle < 1.0; duty_cycle += 0.1 )
-    {
-        leddriver2_set_duty_cycle( &leddriver2, duty_cycle );
-        log_printf( &logger, "  > " );
-        Delay_ms( 500 );
-    }
-        
-    log_printf( &logger, "\r\n-------------------------\r\n" );
-    log_printf( &logger, " Light Intensity Falling \r\n" );
-    Delay_1sec( );
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
     
-    for( duty_cycle = 1.0; duty_cycle > 0.0; duty_cycle -= 0.1 )
+    leddriver2_set_duty_cycle ( &leddriver2, duty );
+    log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    
+    Delay_ms( 500 );
+    
+    if ( 10 == duty_cnt ) 
     {
-        leddriver2_set_duty_cycle( &leddriver2, duty_cycle );
-        log_printf( &logger, "  < " );
-        Delay_ms( 500 );
+        duty_inc = -1;
     }
-
-    log_printf( &logger, "\r\n-------------------------\r\n" );
+    else if ( 0 == duty_cnt ) 
+    {
+        duty_inc = 1;
+    }
+    duty_cnt += duty_inc;
 }
 
 ```

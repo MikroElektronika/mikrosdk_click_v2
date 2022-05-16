@@ -15,8 +15,8 @@ DC MOTOR 4 click is capable of driving motors with a supply voltage from 4.5V to
 
 #### Click library 
 
-- **Author**        : MikroE Team
-- **Date**          : Jan 2020.
+- **Author**        : Nikola Peric
+- **Date**          : Feb 2022.
 - **Type**          : PWM type
 
 
@@ -55,7 +55,8 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
  
-> The click is designed to run on either 3.3V or 5V power supply.
+>  This library contains API for the DC Motor 4 Click driver.
+>  Application change the speed and direction.
 
 **The demo application is composed of two sections :**
 
@@ -68,7 +69,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ```c
 
-void application_init ( void )
+void application_init ( )
 {
     log_cfg_t log_cfg;
     dcmotor4_cfg_t cfg;
@@ -85,13 +86,13 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
-    Delay_100ms();
+    Delay_ms( 100 );
 
     //  Click initialization.
 
     dcmotor4_cfg_setup( &cfg );
     DCMOTOR4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    Delay_100ms();
+    Delay_ms( 100 );
     dcmotor4_init( &dcmotor4, &cfg );
     dcmotor4_pwm_start( &dcmotor4 );
 }
@@ -100,18 +101,59 @@ void application_init ( void )
 
 ### Application Task
 
-> This is a example which demonstrates the use of DC Motor 4 Click board.
-  DC Motor 4 Click communicates with register via PWM.
+>  This is an example that demonstrates the use of the DC Motor 4 Click board.
+>  DC Motor 4 Click communicates with register via PWM interface.
+>  It shows moving in the Clockwise direction from slow to fast speed
+>  and from fast to slow speed, then rotating Counter Clockwise,
+>  Results are being sent to the Usart Terminal where you can track their changes.
  
 
 ```c
 
-void application_task ( void )
-{
-    counter_clockwise( );
+void application_task ( )
+{    
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
+
+    if ( dcmotor_direction == 1 )
+    {
+        dcmotor4_run_clockwise ( &dcmotor4 );
+        log_printf( &logger, "> CLOCKWISE <\r\n" );
+    }
+    else
+    {
+        dcmotor4_run_counter_clockwise ( &dcmotor4 );
+        log_printf( &logger, "> COUNTER CLOCKWISE <\r\n" );
+    }
     
-    clockwise( );
-}  
+    dcmotor4_set_duty_cycle ( &dcmotor4, duty );
+    dcmotor4_enable_motor ( &dcmotor4 );
+    
+    log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    Delay_ms( 500 );
+
+    if ( 10 == duty_cnt ) 
+    {
+        duty_inc = -1;
+    }
+    else if ( 0 == duty_cnt ) 
+    {
+        duty_inc = 1;
+        
+        if ( dcmotor_direction == 1 )
+        {
+            dcmotor_direction = 0;
+        }
+        else
+        {
+            dcmotor_direction = 1;
+        }
+    }
+    duty_cnt += duty_inc;
+
+    dcmotor4_disable_motor ( &dcmotor4 );
+}
 
 ```
 

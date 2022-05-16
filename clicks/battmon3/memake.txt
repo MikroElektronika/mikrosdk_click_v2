@@ -1,0 +1,7 @@
+type: subdirs
+project: BATTMON3
+
+subdirs: {
+    lib
+    example
+}

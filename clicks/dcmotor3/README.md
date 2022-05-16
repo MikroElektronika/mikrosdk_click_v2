@@ -16,8 +16,8 @@ DC MOTOR 3 click is a mikroBUS™ add-on board with a Toshiba TB6549FG full-brid
 
 #### Click library 
 
-- **Author**        : MikroE Team
-- **Date**          : Jan 2020.
+- **Author**        : Nikola Peric
+- **Date**          : Feb 2022.
 - **Type**          : PWM type
 
 
@@ -95,65 +95,68 @@ void application_init ( void )
     DCMOTOR3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     dcmotor3_init( &dcmotor3, &cfg );
 
+    dcmotor3_set_duty_cycle ( &dcmotor3, 0.0 );
     dcmotor3_pwm_start( &dcmotor3 );
-    Delay_1sec( );
+    Delay_ms( 1000 );
     dcmotor3_enable( &dcmotor3 );
-    Delay_1sec( );
+    Delay_ms( 1000 );
+    log_info( &logger, "---- Application Task ----" );
 }
   
 ```
 
 ### Application Task
 
-> This is a example which demonstrates the use of DC Motor 3 Click board.
-> DC Motor 3 Click communicates with register via PWM interface.
-> It shows moving in the clockwise direction of rotation from slow to fast speed
-> and moving in the counter clockwise direction of rotation from fast to slow speed.
-> Results are being sent to the Usart Terminal where you can track their changes. 
+>  This is a example which demonstrates the use of DC Motor 3 Click board.
+>  DC Motor 3 Click communicates with register via PWM interface.
+>  It shows moving in the left direction from slow to fast speed
+>  and from fast to slow speed.
+>  Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
 
 void application_task ( void )
-{
-    log_printf( &logger, "   Brake the engine  \r\n" );
-    dcmotor3_short_brake( &dcmotor3 );
-    Delay_1sec();
+{    
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
 
-    log_printf( &logger, "---------------------\r\n" );
-    log_printf( &logger, "      Clockwise      \r\n" );
-    dcmotor3_clockwise( &dcmotor3 );
-    Delay_1sec();
-
-    for ( duty_cycle = 500; duty_cycle <  dcmotor3.pwm_period; duty_cycle += 700 )
+    if ( dcmotor3_direction == 1 )
     {
-        dcmotor3_set_duty_cycle ( &dcmotor3, duty_cycle );
-        log_printf( &logger, " >" );
-        Delay_1sec( );
+        dcmotor3_clockwise( &dcmotor3 );
+        log_printf( &logger, ">>>> CLOCKWISE " );
+        dcmotor3_enable ( &dcmotor3 );
+    }
+    else
+    {
+        dcmotor3_counter_clockwise( &dcmotor3 );
+        log_printf( &logger, "<<<< COUNTER CLOCKWISE " );
+        dcmotor3_enable ( &dcmotor3 );
     }
 
-    log_printf( &logger, "\r\n" );
-    log_printf( &logger, "---------------------\r\n" );
-    log_printf( &logger, "   Brake the engine  \r\n" );
-    dcmotor3_short_brake( &dcmotor3 );
-    Delay_1sec( );
+    dcmotor3_set_duty_cycle ( &dcmotor3, duty );
+    log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    Delay_ms( 500 );
 
-    log_printf( &logger, "---------------------\r\n" );
-    log_printf( &logger, "  Counter Clockwise  \r\n" );
-    dcmotor3_counter_clockwise( &dcmotor3 );
-    Delay_1sec();
-    
-    for ( duty_cycle = dcmotor3.pwm_period; duty_cycle > 500; duty_cycle -= 700 )
+    if ( 10 == duty_cnt ) 
     {
-        dcmotor3_set_duty_cycle ( &dcmotor3, duty_cycle );
-        log_printf( &logger, " <" );
-        Delay_1sec( );
+        duty_inc = -1;
     }
-
-    log_printf( &logger, "\r\n" );
-    log_printf( &logger, "---------------------\r\n" );
-    dcmotor3_stop( &dcmotor3 );
-    Delay_1sec();
-}  
+    else if ( 0 == duty_cnt ) 
+    {
+        duty_inc = 1;
+                
+        if ( dcmotor3_direction == 1 )
+        {
+            dcmotor3_direction = 0;
+        }
+        else if ( dcmotor3_direction == 0 )
+        {
+            dcmotor3_direction = 1;
+        }
+    }
+    duty_cnt += duty_inc;
+} 
 
 ```
 

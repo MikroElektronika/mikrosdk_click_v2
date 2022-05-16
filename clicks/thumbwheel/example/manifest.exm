@@ -1,0 +1,8 @@
+{
+    "name": "Thumbwheel Click",
+    "description": "Thumbwheel click is a mikroBUS add-on board with a 10-position rotary sprocket connected to a 1-Wire 8-Channel Addressable Switch.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","DS2408"],
+    "category" : ["Pushbutton/Switches"]
+}

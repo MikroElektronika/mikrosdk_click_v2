@@ -1,0 +1,36 @@
+type: library
+
+target: lib_multisteppertb67s261
+
+sources: {
+    src/multisteppertb67s261.c
+}
+
+headers: {
+    include/multisteppertb67s261.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/multisteppertb67s261.h) dst(include/multisteppertb67s261.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.MultiStepperTB67S261

@@ -1,0 +1,13 @@
+type: executable
+target: example_rtc17
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.RTC17
+}
+
+sources: {
+    main.c
+}

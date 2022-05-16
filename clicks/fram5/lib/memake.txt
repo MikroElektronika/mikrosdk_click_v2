@@ -1,0 +1,36 @@
+type: library
+
+target: lib_fram5
+
+sources: {
+    src/fram5.c
+}
+
+headers: {
+    include/fram5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/fram5.h) dst(include/fram5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.FRAM5

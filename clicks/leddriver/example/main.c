@@ -3,6 +3,7 @@
  * \brief LedDriver Click example
  * 
  * # Description
+ * This library contains API for the LED Driver Click driver.
  * This application controls the brightness.
  *
  * The demo application is composed of two sections :
@@ -11,13 +12,13 @@
  * PWM initialization set PWM duty cycle and PWM frequency and start PWM.
  * 
  * ## Application Task  
- * This is an example which demonstrates the use of LED Driver Click board.
+ * This is an example that demonstrates the use of the LED Driver Click board.
  * LED Driver Click communicates with register via PWM interface.
  * This example shows the automatic control halogen bulb light intensity,
  * the first intensity of light is rising and then the intensity of light is falling.
  * Results are being sent to the Usart Terminal where you can track their changes.
  * 
- * \author MikroE Team
+ * \author Nikola Peric
  *
  */
 // ------------------------------------------------------------------- INCLUDES
@@ -30,9 +31,6 @@
 
 static leddriver_t leddriver;
 static log_t logger;
-
-static float duty_ratio;
-
 
 void application_init ( void )
 {
@@ -65,33 +63,33 @@ void application_init ( void )
         for ( ; ; );
     }
 
-    duty_ratio = 0;
-
     log_info( &logger, "---- Init Done ----\r\n" );
-    leddriver_set_duty_cycle( &leddriver, duty_ratio );
+    leddriver_set_duty_cycle ( &leddriver, 0.0 );
     leddriver_pwm_start( &leddriver );
     Delay_ms( 100 );
+    log_info( &logger, "---- Application Task ----\r\n" );
 }
 
-void application_task ( void )
+void application_task ( void ) 
 {
-    log_printf( &logger, "-------------------------\r\n" );
-    log_printf( &logger, " Light Intensity Rising\r\n" );
-
-    for ( duty_ratio = 0.1; duty_ratio < 1; duty_ratio += 0.1 )
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
+    
+    leddriver_set_duty_cycle ( &leddriver, duty );
+    log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    
+    Delay_ms( 500 );
+    
+    if ( 10 == duty_cnt ) 
     {
-        leddriver_set_duty_cycle(  &leddriver, duty_ratio );
-        Delay_ms( 1000 );
+        duty_inc = -1;
     }
-
-    log_printf( &logger, "-------------------------\r\n" );
-    log_printf( &logger, " Light Intensity Falling\r\n" );
-
-    for ( duty_ratio = 1; duty_ratio >= 0; duty_ratio -= 0.1 )
+    else if ( 0 == duty_cnt ) 
     {
-        leddriver_set_duty_cycle(  &leddriver, duty_ratio );
-        Delay_ms( 1000 );
+        duty_inc = 1;
     }
+    duty_cnt += duty_inc;
 }
 
 void main ( void )

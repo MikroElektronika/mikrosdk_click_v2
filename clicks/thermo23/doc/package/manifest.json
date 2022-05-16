@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Temperature & humidity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Thermo 23 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.thermo23",
+    "product_link": "https://www.mikroe.com/thermo-23-click",
+    "short_description": "Thermo 23 Click is a compact add-on board that provides an accurate temperature measurement. This board features the TMP144, a high-precision digital temperature sensor from Texas Instruments. The temperature sensor in the TMP144 is the chip itself, that houses temperature sensor circuitry, 12-bit analog-to-digital converter (ADC), a control logic, and a serial interface block in one package. Characterized by its high accuracy (up to ±0.5°C typical) and high resolution of 0.0625°C, this temperature sensor provides temperature data to the host controller with a configurable UART interface.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

@@ -1,6 +1,6 @@
 /*!
- * \file 
- * \brief DcMotor8 Click example
+ * @file 
+ * @brief DcMotor8 Click example
  * 
  * # Description
  * This click can drive simple DC motors with brushes, providing them with a significant amount 
@@ -16,9 +16,12 @@
  * Initializes the driver and enables the click board.
  * 
  * ## Application Task  
- * Demonstrates the use of DC Motor 8 click board by increasing and decreasing the motor speed.
+ * This is an example that demonstrates the use of DC Motor 8 click
+ * board by increasing and decreasing the motor speed.
+ * DC Motor 8 Click communicates with the register via the PWM interface.
+ * Results are being sent to the Usart Terminal where you can track their changes.
  * 
- * \author MikroE Team
+ * @author Nikola Peric
  *
  */
 // ------------------------------------------------------------------- INCLUDES
@@ -58,29 +61,32 @@ void application_init ( void )
     DCMOTOR8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     dcmotor8_init( &dcmotor8, &cfg );
 
+    dcmotor8_set_duty_cycle ( &dcmotor8, 0.0 );
     dcmotor8_enable ( &dcmotor8, DCMOTOR8_ENABLE );
     dcmotor8_pwm_start( &dcmotor8 );
+    log_info( &logger, "---- Application Task ----" );
+    Delay_ms( 500 );
 }
 
 void application_task ( void )
 {
-    log_printf( &logger,"\r\nIncreasing the motor RPM...\r\n" );
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
     
-    for ( float duty_cycle = 0.1; duty_cycle <= 1.0; duty_cycle += 0.1 )
+    dcmotor8_set_duty_cycle ( &dcmotor8, duty );
+    log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    Delay_ms( 500 );
+    
+    if ( 10 == duty_cnt ) 
     {
-        dcmotor8_set_duty_cycle ( &dcmotor8, duty_cycle );
-        log_printf( &logger," > " );
-        Delay_ms( 200 );
+        duty_inc = -1;
     }
-    
-    log_printf( &logger,"\r\nSlowing down...\r\n" );
-    
-    for ( float duty_cycle = 1.0; duty_cycle > 0; duty_cycle -= 0.1 )
+    else if ( 0 == duty_cnt ) 
     {
-        dcmotor8_set_duty_cycle ( &dcmotor8, duty_cycle );
-        log_printf( &logger," < " );
-        Delay_ms( 200 );
+        duty_inc = 1;
     }
+    duty_cnt += duty_inc;
 }
 
 void main ( void )

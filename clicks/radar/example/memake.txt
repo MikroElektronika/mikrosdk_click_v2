@@ -1,0 +1,13 @@
+type: executable
+target: example_radar
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Radar
+}
+
+sources: {
+    main.c
+}

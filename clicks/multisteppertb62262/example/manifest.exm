@@ -1,0 +1,8 @@
+{
+    "name": "Multi Stepper TB62262 Click",
+    "description": "Multi Stepper Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the TB62262FTG, CLOCK-in controlled bipolar stepping motor driver from Toshiba Semiconductor. It supports a PWM constant-current control drive and allows full-, half-, and quarter-step operation for less motor noise and smoother control. It has a wide operating voltage range of 10V to 38V with an output current capacity of 1.2A in addition to several built-in error detection circuits.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","TB62262"],
+    "category" : ["Stepper"]
+}

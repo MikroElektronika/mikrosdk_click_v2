@@ -1,0 +1,36 @@
+type: library
+
+target: lib_radar
+
+sources: {
+    src/radar.c
+}
+
+headers: {
+    include/radar.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/radar.h) dst(include/radar.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Radar

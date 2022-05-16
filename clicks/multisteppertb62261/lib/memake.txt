@@ -1,0 +1,36 @@
+type: library
+
+target: lib_multisteppertb62261
+
+sources: {
+    src/multisteppertb62261.c
+}
+
+headers: {
+    include/multisteppertb62261.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/multisteppertb62261.h) dst(include/multisteppertb62261.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.MultiStepperTB62261

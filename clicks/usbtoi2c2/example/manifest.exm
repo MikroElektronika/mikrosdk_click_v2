@@ -1,0 +1,8 @@
+{
+    "name": "USB to I2C 2 Click",
+    "description": "USB to I2C 2 Click is a compact add-on board that contains a general-purpose USB to I2C serial interface. This board features the FT201X, a full-speed USB to I2C protocol converter from FTDI. The FT201X converts USB2.0 full-speed to an I2C serial interface capable of operating up to 3.4MBit/s, with low power consumption (typical 8mA). The entire USB protocol is handled on the chip itself, where no USB-specific firmware programming is required. It also has a fully-integrated 2048 byte Multi-Time-Programmable (MTP) memory for storing device descriptors and CBUS I/O user-desirable configuration. This Click board™ includes the complete FT-X series feature set and enables USB to be added into a system design quickly and easily over an I2C interface.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","FT201XQ-R"],
+    "category" : ["USB"]
+}

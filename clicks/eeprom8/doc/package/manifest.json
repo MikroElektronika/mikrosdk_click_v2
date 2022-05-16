@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "EEPROM",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "EEPROM 8 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.eeprom8",
+    "product_link": "https://www.mikroe.com/eeprom-8-click",
+    "short_description": "EEPROM 8 Click is a compact add-on board that contains a highly reliable nonvolatile memory solution. This board features the CAV24C512, a 512-Kb electrically erasable programmable memory with enhanced hardware write protection for entire memory from ON Semiconductor. Internally organized as 65,536 words of 8 bits each, the CAV24C512 comes up with the compatible I2C serial interface. The CAV24C512 combines unprecedented data storage with excellent energy efficiency. It lasts one million full-memory read/write/erase cycles with more than 100 years of data retention.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

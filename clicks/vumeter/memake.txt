@@ -1,0 +1,7 @@
+type: subdirs
+project: VUMeter
+
+subdirs: {
+    lib
+    example
+}

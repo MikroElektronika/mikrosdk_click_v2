@@ -1,0 +1,7 @@
+type: subdirs
+project: CapSense2
+
+subdirs: {
+    lib
+    example
+}

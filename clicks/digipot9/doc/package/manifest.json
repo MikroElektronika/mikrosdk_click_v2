@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Digital potentiometer",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "DIGI POT 9 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.digipot9",
+    "product_link": "https://www.mikroe.com/digi-pot-9-click",
+    "short_description": "DIGI POT 9 Click is a compact add-on board used as a digitally controlled potentiometer. This board features the AD5235, a dual-channel, nonvolatile memory, digitally controlled potentiometer from Analog Devices. The AD5235's versatile programming via an SPI-compatible serial interface allows multiple modes of operation and adjustment. The resistor wiper position is determined by the RDAC register contents, which act as a scratchpad register, allowing unlimited changes of resistance settings. The nominal resistance of the RDAC between terminal A and terminal B (RAB) is 250 kΩ with 1024 positions (10-bit resolution).",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

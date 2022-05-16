@@ -1,0 +1,7 @@
+type: subdirs
+project: ADC16
+
+subdirs: {
+    lib
+    example
+}

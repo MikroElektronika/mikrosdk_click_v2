@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Motion",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "IR Gesture 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.irgesture2",
+    "product_link": "https://www.mikroe.com/ir-gesture-2-click",
+    "short_description": "IR Gesture 2 Click is a compact add-on board that provides contactless gesture recognition. This board features the MAX25405, a data-acquisition system for the gesture and proximity sensing from Analog Devices. Detection distance is improved by integrating a complete optical system with a lens, aperture, visible light filter, and a 6x10 photodetector array. The proximity, hand detection, and gesture recognition functions of the MAX25405 operate by detecting the light reflected from the controlled IR-LED light sources driven directly from the MAX25405. It can also detect these gestures even when exposed to bright ambient light and process data from the sensor through an SPI interface.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

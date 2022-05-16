@@ -16,8 +16,8 @@ If you need to control DC motors with loads up to 10A, PWM driver click is the p
 
 #### Click library 
 
-- **Author**        : MikroE Team
-- **Date**          : Jan 2020.
+- **Author**        : Nikola Peric
+- **Date**          : Feb 2022.
 - **Type**          : PWM type
 
 
@@ -93,54 +93,47 @@ void application_init ( void )
     PWMDRIVER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pwmdriver_init( &pwmdriver, &cfg );
 
-    pwmdriver_pwm_start( &pwmdriver );
-
-    Delay_100ms( );
+    Delay_ms( 100 );
     
     log_printf( &logger, "   Initialization PWM  \r\n  " );
-    pwmdriver_set_duty_cycle( &pwmdriver, duty_cycle );
+    pwmdriver_set_duty_cycle( &pwmdriver, 0.0 );
     pwmdriver_pwm_start( &pwmdriver );
-    Delay_1sec( );
-    log_printf( &logger, "------------------------- \r\n  " );
+    Delay_ms( 1000 );
+    log_info( &logger, "---- Application Task ----" );
 }
   
 ```
 
 ### Application Task
 
->This is an example which demonstrates the use of PWM driver Click board.
+> This is an example that demonstrates the use of the PWM driver Click board.
+> This example shows the automatic control of PWM,
+> the first increases duty cycle and then the duty cycle is falling.
+> Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
 
 void application_task ( void )
 {
-    //  Task implementation.
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
 
-    log_printf( &logger," Light Intensity Rising  \r\n  " );
-    Delay_1sec( );
-
-    for ( duty_cycle = 0; duty_cycle < 1; duty_cycle += 0.1 )
+    pwmdriver_set_duty_cycle ( &pwmdriver, duty );
+    log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    Delay_ms( 500 );
+    
+    if ( 10 == duty_cnt ) 
     {
-        pwmdriver_set_duty_cycle( &pwmdriver,duty_cycle );
-        log_printf( &logger," >  \r\n " );
-        Delay_1sec( );
+        duty_inc = -1;
     }
-
-    log_printf( &logger,"-------------------------  \r\n " );
-    log_printf( &logger," Light Intensity Falling  \r\n " );
-    Delay_1sec( );
-
-    for ( duty_cycle = 1; duty_cycle > 0; duty_cycle -= 0.1 )
+    else if ( 0 == duty_cnt ) 
     {
-        pwmdriver_set_duty_cycle( &pwmdriver,duty_cycle );
-        log_printf( &logger," <  \r\n " );
-        Delay_1sec( );
+        duty_inc = 1;
     }
-
-    log_printf( &logger,"   \r\n " );
-    log_printf( &logger,"---------------------  \r\n " );
-    Delay_1sec( );
+    duty_cnt += duty_inc;
 }
+
 
 ```
 

@@ -1,6 +1,6 @@
 /*!
- * \file 
- * \brief LightTemp Click example
+ * @file 
+ * @brief LightTemp Click example
  * 
  * # Description
  * This application controls light intensity of LEDs.
@@ -11,12 +11,15 @@
  * Initialization driver init and pwm init for all LED's
  * 
  * ## Application Task  
- * Increases/decreases light intensity.
+ * This is an example that demonstrates the use of the Light Temp Click board.
+ * This example shows the automatic control of the LED light intensity,
+ * the first intensity of light is rising and then the intensity of light is falling.
+ * Results are being sent to the Usart Terminal where you can track their changes.
  * 
  * ## NOTE
  * In order to control LED2 via PWM, the PWM module should be available at CS pin. 
  * 
- * \author MikroE Team
+ * @author Nikola Peric
  *
  */
 // ------------------------------------------------------------------- INCLUDES
@@ -29,8 +32,6 @@
 
 static lighttemp_t lighttemp;
 static log_t logger;
-
-static float duty_cycle = 0.5;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -58,36 +59,39 @@ void application_init ( void )
     lighttemp_cfg_setup( &cfg );
     LIGHTTEMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     lighttemp_init( &lighttemp, &cfg );
+    
+    lighttemp_led1_set_duty_cycle ( &lighttemp, 0.0 );
+    lighttemp_led2_set_duty_cycle ( &lighttemp, 0.0 );
+    
+    log_info( &logger, "---- Application Task ----" );
 
-    Delay_ms( 100 );
+    Delay_ms( 500 );
 }
 
 void application_task ( void )
 {
-    log_printf( &logger, ">>> Increasing LEDs light intensity \r\n" );
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
+
+    lighttemp_led1_set_duty_cycle ( &lighttemp, duty );
+    lighttemp_led2_set_duty_cycle ( &lighttemp, duty );
     
     lighttemp_led1_pwm_start( &lighttemp );
     lighttemp_led2_pwm_start( &lighttemp );
+
+    log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    Delay_ms( 500 );
     
-    for ( duty_cycle = 0.1; duty_cycle <= 0.5; duty_cycle += 0.1 )
+    if ( 10 == duty_cnt ) 
     {
-        lighttemp_led1_set_duty_cycle ( &lighttemp, duty_cycle );
-        lighttemp_led2_set_duty_cycle ( &lighttemp, duty_cycle );
-        Delay_ms( 500 );
+        duty_inc = -1;
     }
-    Delay_ms( 1000 );
-    
-    
-    log_printf( &logger, ">>> Decreasing LEDs light intensity \r\n" );
-    for ( duty_cycle = 0.5; duty_cycle > 0; duty_cycle -= 0.1 )
+    else if ( 0 == duty_cnt ) 
     {
-        lighttemp_led1_set_duty_cycle ( &lighttemp, duty_cycle );
-        lighttemp_led2_set_duty_cycle ( &lighttemp, duty_cycle );
-        Delay_ms( 500 );
+        duty_inc = 1;
     }
-    lighttemp_led1_pwm_stop( &lighttemp );
-    lighttemp_led2_pwm_stop( &lighttemp );
-    Delay_ms( 1000 );
+    duty_cnt += duty_inc;
 }
 
 void main ( void )

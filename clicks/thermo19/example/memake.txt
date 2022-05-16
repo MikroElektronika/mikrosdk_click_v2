@@ -1,0 +1,13 @@
+type: executable
+target: example_thermo19
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Thermo19
+}
+
+sources: {
+    main.c
+}

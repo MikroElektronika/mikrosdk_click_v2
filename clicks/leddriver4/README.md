@@ -16,8 +16,8 @@ LED Driver 4 click is a form of a high-efficiency boost converter that is ideall
 
 #### Click library 
 
-- **Author**        : MikroE Team
-- **Date**          : Jan 2020.
+- **Author**        : Nikola Peric
+- **Date**          : Feb 2022.
 - **Type**          : PWM type
 
 
@@ -88,41 +88,42 @@ void application_init ( void )
     leddriver4_cfg_setup( &cfg );
     LEDDRIVER4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     leddriver4_init( &leddriver4, &cfg );
-
+    
+    leddriver4_set_duty_cycle ( &leddriver4, 0.0 );
     leddriver4_pwm_start( &leddriver4 );
+    log_info( &logger, "---- Application Task ----" );
+    Delay_ms( 500 );
 }
   
 ```
 
 ### Application Task
 
-> Increases and decreases LED array intensity
-> ( first increases light intensity to the maximum and then decreases to the minimum ).
+>  Increases and decreases LED array intensity
+>  ( first increases light intensity to the maximum and then decreases to the minimum ).
+>  Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
 
 void application_task ( void )
 {
-    log_printf( &logger, "Increasing light intensity...\r\n" );
-    Delay_ms( 1000 );
-    
-    for ( duty_cycle = 0; duty_cycle < 1.0; duty_cycle += 0.1 )
-    {
-        leddriver4_set_duty_cycle( &leddriver4, duty_cycle );
-        Delay_ms( 300 );
-    }
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
 
-    log_printf( &logger, "Decreasing light intensity...\r\n" );
-    Delay_ms( 1000 );
+    leddriver4_set_duty_cycle ( &leddriver4, duty );
+    log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    Delay_ms( 500 );
     
-    for ( duty_cycle = 1.0; duty_cycle > 0; duty_cycle -= 0.1 )
+    if ( 10 == duty_cnt ) 
     {
-        leddriver4_set_duty_cycle( &leddriver4, duty_cycle );
-        Delay_ms( 300 );
+        duty_inc = -1;
     }
-    
-    log_printf( &logger, "-------------------------------\r\n" );
-    Delay_ms( 1000 );
+    else if ( 0 == duty_cnt ) 
+    {
+        duty_inc = 1;
+    }
+    duty_cnt += duty_inc;
 }
  
 

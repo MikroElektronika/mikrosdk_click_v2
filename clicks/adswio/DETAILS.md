@@ -105,7 +105,7 @@ void application_init ( void )
     adswio_res  = DUMMY;
     adswio_err  = ADSWIO_ERR_STATUS_OK;
 
-    log_printf( &logger, " AD-SDIO click initialization done \r\n");
+    log_printf( &logger, " AD-SWIO click initialization done \r\n");
     log_printf( &logger, "************************************\r\n");
 }
   

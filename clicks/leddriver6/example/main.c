@@ -1,6 +1,6 @@
 /*!
- * \file 
- * \brief Leddriver6 Click example
+ * @file 
+ * @brief Leddriver6 Click example
  *
  * # Description
  * This application designed to be used in tunable Smart Connected Lighting applications.
@@ -11,10 +11,12 @@
  * Initializes I2C driver and PWM driver for the LED driver 6 control.
  *
  * ## Application Task
- * Shows the best way how the LED driver 6 click board can be controlled by using
- * functions from this click driver.
+ * This is an example that demonstrates the use of the LED Driver 6 Click board.
+ * This example shows the automatic control LED light intensity,
+ * the first intensity of light is rising and then the intensity of light is falling.
+ * Results are being sent to the Usart Terminal where you can track their changes.
  *
- * \author Nemanja Medakovic
+ * @author Nikola Peric
  *
  */
 
@@ -58,7 +60,8 @@ void application_init ( void )
     }
 
     log_info( &logger, "---- Application Init Done. ----" );
-
+    
+    leddriver6_set_duty_cycle ( &leddriver6, 0.0 );
     if ( leddriver6_pwm_start( &leddriver6 ) == LEDDRIVER6_INIT_ERROR )
     {
         log_info( &logger, "---- PWM can't be started. ----" );
@@ -68,43 +71,29 @@ void application_init ( void )
     }
 
     log_info( &logger, "---- PWM is started. ----" );
+    log_info( &logger, "---- Application Task ----" );
+    Delay_ms( 500 );
 }
 
 void application_task ( void )
 {
-    log_info( &logger, "---- PWM ratio increasing. ----" );
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
 
-    for ( float duty_ratio = 0.1; duty_ratio <= 1; duty_ratio += 0.1 )
+    leddriver6_set_duty_cycle ( &leddriver6, duty );
+    log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    Delay_ms( 500 );
+    
+    if ( 10 == duty_cnt ) 
     {
-        leddriver6_set_duty_cycle( &leddriver6, duty_ratio );
-
-        Delay_ms( 1000 );
+        duty_inc = -1;
     }
-
-    log_info( &logger, "---- PWM ratio decreasing. ----" );
-
-    for ( float duty_ratio = 0.9; duty_ratio >= 0.2; duty_ratio -= 0.1 )
+    else if ( 0 == duty_cnt ) 
     {
-        leddriver6_set_duty_cycle( &leddriver6, duty_ratio );
-
-        Delay_ms( 1000 );
+        duty_inc = 1;
     }
-
-    float leddriver6_pg_vol;
-
-    if ( leddriver6_get_pg_voltage( &leddriver6, &leddriver6_pg_vol ) == LEDDRIVER6_OK )
-    {
-        log_printf( &logger, "---- Power Good Voltage [V] : %.2f ----\r\n", leddriver6_pg_vol );
-
-        Delay_ms( 1000 );
-    }
-
-    if ( !leddriver6_get_interrupt_state( &leddriver6 ) )
-    {
-        log_info( &logger, "---- Fault conditions report! ----" );
-
-        Delay_ms( 1000 );
-    }
+    duty_cnt += duty_inc;
 }
 
 void main ( void )

@@ -1,0 +1,36 @@
+type: library
+
+target: lib_eeprom6
+
+sources: {
+    src/eeprom6.c
+}
+
+headers: {
+    include/eeprom6.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/eeprom6.h) dst(include/eeprom6.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.EEPROM6

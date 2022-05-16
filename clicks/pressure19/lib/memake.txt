@@ -1,0 +1,36 @@
+type: library
+
+target: lib_pressure19
+
+sources: {
+    src/pressure19.c
+}
+
+headers: {
+    include/pressure19.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/pressure19.h) dst(include/pressure19.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Pressure19

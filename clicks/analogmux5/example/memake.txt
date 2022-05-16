@@ -1,0 +1,13 @@
+type: executable
+target: example_analogmux5
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.AnalogMUX5
+}
+
+sources: {
+    main.c
+}

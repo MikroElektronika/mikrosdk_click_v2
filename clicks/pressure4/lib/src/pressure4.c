@@ -144,41 +144,41 @@ PRESSURE4_RETVAL pressure4_init ( pressure4_t *ctx, pressure4_cfg_t *cfg )
 void pressure4_default_cfg ( pressure4_t *ctx )
 {
     pressure4_write_reg_8_bit( ctx, PRESSURE4_RESET, 0xB6 );
+    Delay_100ms ( );
     pressure4_read_constants( ctx );
-    pressure4_write_reg_8_bit( ctx, PRESSURE4_CTL_MEAS & 0x7F, 0x3F );
+    pressure4_write_reg_8_bit( ctx, PRESSURE4_CTL_MEAS, 0x3F );
     ctx->t1_calc_1 = pressure4_dig_t1_calc( ctx );
     ctx->p3_calc_1 = pressure4_dig_p3_calc( ctx ); 
 }
 
 void pressure4_generic_write ( pressure4_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
-    ctx->write_f( ctx, reg, data_buf, len ); 
+    ctx->write_f( ctx, reg, data_buf, len );
+    Delay_1ms ( );
 }
 
 void pressure4_generic_read ( pressure4_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
     ctx->read_f( ctx, reg, data_buf, len );
+    Delay_1ms ( );
 }
 
 void pressure4_write_reg_8_bit ( pressure4_t *ctx, uint8_t w_reg, uint8_t w_data )
 {
-    uint8_t dummy[ 3 ];
-
     pressure4_generic_write( ctx, w_reg, &w_data, 1 );
 }
 
 uint8_t pressure4_read_reg_8_bit ( pressure4_t *ctx, uint8_t r_reg )
 {
-    static uint8_t reg_read[ 5 ];
-
-    pressure4_generic_read( ctx, r_reg, reg_read, 1 );
-
-    return reg_read[ 0 ];
+    uint8_t reg_read;
+    pressure4_generic_read( ctx, r_reg, &reg_read, 1 );
+    return reg_read;
 }
 
 uint8_t pressure4_read_id ( pressure4_t *ctx )
 {
     pressure4_write_reg_8_bit( ctx, PRESSURE4_RESET, 0xB6 );
+    Delay_100ms ( );
     return pressure4_read_reg_8_bit( ctx, PRESSURE4_ID );
 }
 
@@ -194,11 +194,12 @@ double pressure4_get_temperature ( pressure4_t *ctx )
  
     if ( pressure4_conv_status( ctx ) )
     {
-      adc_t = pressure4_read_reg_24_bit( ctx, PRESSURE4_TEMP_MSB );
-      var_1 = ( ( ( double )adc_t ) / 16384.0 - ( ( double )ctx->dig_t1 ) / 1024.0 ) * ( ( double )ctx->dig_t2 );
-      var_2 = ( ( ( ( double )adc_t ) / 131072.0 - ( ( double )ctx->dig_t1 ) / 8192.0 ) * ( ( ( double ) adc_t ) / 131072.0 - ( ( double )ctx->dig_t1 ) / 8192.0 ) ) * ( ( double )ctx->dig_t3 );
-      ctx->t_fine = ( int32_t )( var_1 + var_2 );
-      t = ( var_1 + var_2 ) / 5120.0;
+        adc_t = pressure4_read_reg_24_bit( ctx, PRESSURE4_TEMP_MSB );
+        var_1 = ( ( ( double )adc_t ) / 16384.0 - ( ( double )ctx->dig_t1 ) / 1024.0 ) * ( ( double )ctx->dig_t2 );
+        var_2 = ( ( ( ( double )adc_t ) / 131072.0 - ( ( double )ctx->dig_t1 ) / 8192.0 ) * 
+                ( ( ( double ) adc_t ) / 131072.0 - ( ( double )ctx->dig_t1 ) / 8192.0 ) ) * ( ( double )ctx->dig_t3 );
+        ctx->t_fine = ( int32_t )( var_1 + var_2 );
+        t = ( var_1 + var_2 ) / 5120.0;
     }
     return t;
 }
@@ -220,7 +221,7 @@ double pressure4_get_pressure ( pressure4_t *ctx )
     var1 = ( 1.0 + var1 / 32768.0 )*( ( double )ctx->dig_p1 );
     if( var1 == 0.0 )
     {
-      return 0;
+        return 0.0;
     }
 
     p123 = 1048576.0 - ( double )adc_p;
@@ -259,7 +260,7 @@ static void pressure4_spi_write ( pressure4_t *ctx, uint8_t reg, uint8_t *data_b
     uint8_t tx_buf[ 256 ];
     uint8_t cnt;
 
-    tx_buf[ 0 ] = reg;
+    tx_buf[ 0 ] = reg & 0x7F;
     for ( cnt = 1; cnt <= len; cnt++ )
     {
         tx_buf[ cnt ] = data_buf[ cnt - 1 ]; 
@@ -272,14 +273,11 @@ static void pressure4_spi_write ( pressure4_t *ctx, uint8_t reg, uint8_t *data_b
 
 static void pressure4_spi_read ( pressure4_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
-    uint8_t tx_buf[ 1 ];
     uint8_t rx_buf[ 256 ];
     uint8_t cnt;
-
-    tx_buf[ 0 ] = reg | 0x80;
-    
+    reg |= 0x80;
     spi_master_select_device( ctx->chip_select );
-    spi_master_write_then_read( &ctx->spi, tx_buf, 1, rx_buf, len );
+    spi_master_write_then_read( &ctx->spi, &reg, 1, rx_buf, len );
     spi_master_deselect_device( ctx->chip_select ); 
 
     for ( cnt = 0; cnt < len; cnt++ )
@@ -305,42 +303,30 @@ static uint8_t pressure4_conv_status ( pressure4_t *ctx )
 
 static uint16_t pressure4_read_reg_16_bit ( pressure4_t *ctx, uint8_t r_reg )
 {
-    static uint8_t reg_read[ 5 ];
-    uint16_t tmp;
-
+    uint8_t reg_read[ 2 ];
     pressure4_generic_read( ctx, r_reg, reg_read, 2 );
-    tmp = ( uint16_t )( reg_read[ 0 ] << 8 ) | reg_read[ 1 ];
-    return tmp;
+    return ( ( uint16_t ) reg_read[ 0 ] << 8 ) | reg_read[ 1 ];
 }
 
 static int16_t pressure4_read_reg_s_16_bit ( pressure4_t *ctx, uint8_t r_reg )
 {
-    int16_t tmp;
-
-    tmp = ( int16_t )pressure4_read_reg_16_bit( ctx, r_reg );
-
-    return tmp;
+    return ( int16_t ) pressure4_read_reg_16_bit( ctx, r_reg );
 }
 
 static uint32_t pressure4_read_reg_24_bit ( pressure4_t *ctx, uint8_t r_reg )
 {
     uint32_t tmp;
-
-    tmp = ( uint32_t )pressure4_read_reg_16_bit( ctx, r_reg );
+    tmp = ( uint32_t ) pressure4_read_reg_16_bit( ctx, r_reg );
     tmp <<= 8;
-    tmp |= ( uint32_t )pressure4_read_reg_8_bit( ctx, r_reg + 2 );
+    tmp |= ( uint32_t ) pressure4_read_reg_8_bit( ctx, r_reg + 2 );
     return tmp >> 4 ;
 }
 
 static uint16_t pressure4_read_const ( pressure4_t *ctx, uint8_t addr )
 {
-    uint8_t reg_read[ 5 ];
-    uint16_t tmp;
-
+    uint8_t reg_read[ 2 ];
     pressure4_generic_read( ctx, addr, reg_read, 2 );
-    tmp = ( uint16_t )( reg_read[ 1 ] << 8 ) | reg_read[ 0 ];
-
-    return tmp;
+    return ( ( uint16_t ) reg_read[ 1 ] << 8 ) | reg_read[ 0 ];
 }
 
 static void pressure4_read_constants ( pressure4_t *ctx )

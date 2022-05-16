@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "FLASH",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Flash 9 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.flash9",
+    "product_link": "https://www.mikroe.com/flash-9-click",
+    "short_description": "Flash 9 Click is a compact add-on board that contains a highly reliable memory solution. This board features the W25Q02JV, an SPI configurable serial Flash memory solution from Winbond Electronics. It represents a four 512Mb stack die supporting linear addressing for the full 2Gb memory address range, offering flexibility and performance well beyond ordinary Serial Flash devices. The W25Q02JV array is organized into 1,048,576 programmable pages of 256-bytes each, where up to 256 bytes can be programmed at a time. This memory also has advanced security features, can withstand many write cycles (minimum 100k), and has a data retention period greater than 20 years.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

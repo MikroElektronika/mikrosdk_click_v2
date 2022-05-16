@@ -1,0 +1,13 @@
+type: executable
+target: example_multisteppertb62261
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.MultiStepperTB62261
+}
+
+sources: {
+    main.c
+}

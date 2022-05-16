@@ -1,0 +1,8 @@
+{
+    "name": "ADC 16 Click",
+    "description": "ADC 16 Click is a compact add-on board that contains a high-performance data converter. This board features the ADS7142-Q1, a low-power two-channel 12-bit analog-to-digital converter from Texas Instruments. This I2C configurable 140kSPS successive approximation register (SAR) analog-to-digital converter (ADC) can autonomously monitor signals while maximizing system power, reliability, and performance. It implements event-triggered interrupts per channel using a digital window comparator with programmable high and low thresholds, hysteresis, and event counter.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","ADS7142QDQCRQ1"],
+    "category" : ["ADC"]
+}

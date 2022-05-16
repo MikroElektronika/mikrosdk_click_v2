@@ -88,7 +88,7 @@ float diffpress_get_pressure_difference( diffpress_t *ctx )
     
     pressure_difference = ( float )adc_data - 2048.0;
     pressure_difference /= 2048.0;
-    pressure_difference *= 3.5;
+    pressure_difference *= 7.0;
     
     return pressure_difference;
 }

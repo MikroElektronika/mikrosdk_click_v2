@@ -1,9 +1,10 @@
 /*!
- * \file 
- * \brief IrBeacon Click example
+ * @file 
+ * @brief IrBeacon Click example
  * 
  * # Description
- * This application sets the brightness on Leds.
+ * This library contains an API for the IrBeacon Click driver.
+ * This application is suitable for high pulse current operation.
  * 
  * The demo application is composed of two sections :
  * 
@@ -13,8 +14,9 @@
  * ## Application Task  
  * This is a example which demonstrates the use of IR Beacon Click board.
  * It shows how to enable the device and gradualy increase the duty cycle.
+ * Results are being sent to the Usart Terminal where you can track their changes.
  * 
- * \author MikroE Team
+ * @author Nikola Peric
  *
  */
 // ------------------------------------------------------------------- INCLUDES
@@ -54,21 +56,32 @@ void application_init ( void )
     IRBEACON_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     irbeacon_init( &irbeacon, &cfg );
     irbeacon_pwm_start( &irbeacon );
+    
+    log_info( &logger, "---- Application Task ----" );
     Delay_ms( 1000 );
 }
 
 void application_task ( void )
 {
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
+
+    irbeacon_set_duty_cycle ( &irbeacon, duty );
     irbeacon_enable_mod( &irbeacon );
-
-    for ( float duty_cycle = 0.1; duty_cycle <= 1; duty_cycle += 0.1 )
+    log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    Delay_ms( 500 );
+    
+    if ( 10 == duty_cnt ) 
     {
-        irbeacon_set_duty_cycle( &irbeacon, duty_cycle );
-        Delay_ms( 1000 );
+        duty_inc = -1;
     }
-
-    irbeacon_disable_mod( &irbeacon );
-    Delay_ms( 1000 );
+    else if ( 0 == duty_cnt ) 
+    {
+        irbeacon_disable_mod( &irbeacon );
+        duty_inc = 1;
+    }
+    duty_cnt += duty_inc;
 }
 
 void main ( void )

@@ -16,8 +16,8 @@ Button ALARM Click is a very interesting interactive gadget on a Click board™.
 
 #### Click library
 
-- **Author**        : Jelena Milosavljevic
-- **Date**          : Jun 2021.
+- **Author**        : Nikola Peric
+- **Date**          : Feb 2022.
 - **Type**          : GPIO type
 
 
@@ -65,7 +65,9 @@ uint8_t buttonalarm_get_button_state ( buttonalarm_t *ctx );
 
 ## Example Description
 
-> This example showcases how to initialize and use the whole family of Button clicks. One library is used for every single one of them. They are simple touch detectors which send a pressed/released signal and receive a PWM output which controls the backlight on the button.
+> This example showcases how to initialize and use the whole family of Button clicks. 
+> One library is used for every single one of them. They are simple touch detectors that send 
+> a pressed/released signal and receive a PWM output which controls the backlight on the button.
 
 **The demo application is composed of two sections :**
 
@@ -75,7 +77,8 @@ uint8_t buttonalarm_get_button_state ( buttonalarm_t *ctx );
 
 ```c
 
-void application_init ( void )  {
+void application_init ( void )  
+{
     log_cfg_t log_cfg;                 /**< Logger config object. */
     buttonalarm_cfg_t buttonalarm_cfg;   /**< Click config object. */
 
@@ -97,7 +100,8 @@ void application_init ( void )  {
     buttonalarm_cfg_setup( &buttonalarm_cfg );
     BUTTONALARM_MAP_MIKROBUS( buttonalarm_cfg, MIKROBUS_1 );
     err_t init_flag  = buttonalarm_init( &buttonalarm, &buttonalarm_cfg );
-    if ( PWM_ERROR == init_flag ) {
+    if ( PWM_ERROR == init_flag ) 
+    {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
 
@@ -105,18 +109,9 @@ void application_init ( void )  {
     }
     Delay_ms( 500 );
     
-    buttonalarm_set_duty_cycle ( &buttonalarm, 0.0 );
+    buttonalarm_set_duty_cycle ( &buttonalarm, 0.1 );
     buttonalarm_pwm_start( &buttonalarm );
-    
-    backlight_on( );
-    Delay_ms( 500 );
-    
-    backligh_off( );
-    Delay_ms( 500 );
-    
-    backlight_on( );
-    button_state = buttonalarm_get_button_state( &buttonalarm );
-    button_state_old = button_state;
+
     log_info( &logger, " Application Task " );
 }
 
@@ -124,20 +119,42 @@ void application_init ( void )  {
 
 ### Application Task
 
-> This function first turns the backlight on the button ON/OFF and then checks if the button has been pressed and reports the event in the console using UART communication.
+> This example first increases the backlight on the button and then decreases the intensity of the
+> backlight. When the button is touched,  
+> reports the event in the console using UART communication.
 
 ```c
 
-void application_task ( void ) {
+void application_task ( void ) 
+{
+    static float duty_cycle;
+    static uint8_t button_state;
+    static uint8_t button_state_old;
+
     button_state = buttonalarm_get_button_state( &buttonalarm );
-    if ( button_state && ( button_state != button_state_old ) ) {
-        backligh_off( );
+    
+    if ( button_state && ( button_state != button_state_old ) ) 
+    {
+        log_printf( &logger, " <-- Button pressed --> \r\n" );
+        for ( uint8_t n_cnt = 1; n_cnt <= 100; n_cnt++  )
+        {
+            duty_cycle = ( float ) n_cnt ;
+            duty_cycle /= 100;
+            buttonalarm_set_duty_cycle( &buttonalarm, duty_cycle );
+            Delay_ms( 10 );
+        }
         button_state_old = button_state;
-        Delay_ms( 500 );
-    } else if ( !button_state && ( button_state != button_state_old ) ) {
-        backlight_on( );
+    } 
+    else if ( !button_state && ( button_state != button_state_old ) ) 
+    {
+        for ( uint8_t n_cnt = 100; n_cnt > 0; n_cnt-- )
+        {
+            duty_cycle = ( float ) n_cnt ;
+            duty_cycle /= 100;
+            buttonalarm_set_duty_cycle( &buttonalarm,  duty_cycle );
+            Delay_ms( 10 );
+        }
         button_state_old = button_state;
-        Delay_ms( 500 );
     }
 }
 
