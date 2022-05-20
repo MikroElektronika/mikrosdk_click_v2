@@ -217,10 +217,6 @@ void application_task ( void ) {
 
 ```
 
-## Note
-
-> <NOTE_IF_REQUIRED>
-
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 
 **Other mikroE Libraries used in the example:**

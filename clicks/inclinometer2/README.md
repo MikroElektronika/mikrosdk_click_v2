@@ -6,7 +6,7 @@
 > Inclinometer 2 Click is a compact add-on board that measures the orientation angle of an object with respect to the force of gravity. This board features the IIS2ICLX, high accuracy, and resolution two-axis inclinometer from STMicroelectronics. It allows selectable full-scale measurements in ranges of ±0.5/±1/±2/±3g in two axes with a configurable host interface that supports both SPI and I2C serial communication. The sensing element is manufactured using a dedicated micromachining process developed by STMicroelectronics to produce inertial sensors and actuators on silicon wafers.
 
 <p align="center">
-  <img src="CLICK_IMAGE_LINK" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/inclinometer2_click.png" height=300px>
 </p>
 
 [click Product page](https://www.mikroe.com/inclinometer-2-click)

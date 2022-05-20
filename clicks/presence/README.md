@@ -8,7 +8,7 @@
 Presence click is an infrared sensing Click board™ which can be used for presence sensing, motion detection, and a remote overtemperature protection. 
 
 <p align="center">
-  <img src="@{CLICK_IMAGE_LINK}">
+  <img src="https://download.mikroe.com/images/click_for_ide/presence_click.png">
 </p>
 
 [click Product page](https://www.mikroe.com/presence-click)

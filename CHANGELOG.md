@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20220520](#20220520)**
 + **[20220513](#20220513)**
 + **[20220218](#20220218)**
 + **[20220204](#20220204)**
@@ -33,6 +34,32 @@
 
 ---
 ---
+---
+
+## `20220520`
+
+*Following click boards have been added:*
+
++ `Accel 4`
++ `I2C MUX 6`
++ `MRAM 3`
+
+*Following click boards have been modified:*
+
++ `Balancer 2`
++ `Load Cell 2`
++ `LTE IoT 9`
++ `Proximity 13`
++ `SRAM 2`
++ `Thermo 17`
++ `UT-L 7-SEG R`
++ `Presence`
++ `Inclinometer 2`
++ `AD-SWIO 2`
++ `LightRanger 5`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20220513`
