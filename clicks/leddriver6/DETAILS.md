@@ -1,4 +1,5 @@
 
+---
 # LED driver 6 click
 
 LED driver 6 Click is a high brightness LED or LED strip driver, designed to be used in tunable Smart Connected Lighting (SCL) applications. It is based on the AL1781, a single-channel PWM dimmable linear LED driver.
@@ -14,8 +15,8 @@ LED driver 6 Click is a high brightness LED or LED strip driver, designed to be 
 
 #### Click library 
 
-- **Author**        : MikroE Team
-- **Date**          : jan 2020.
+- **Author**        : Nikola Peric
+- **Date**          : Feb 2022.
 - **Type**          : PWM type
 
 
@@ -67,7 +68,6 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    leddriver6_cfg_t cfg;
 
     /** 
      * Logger initialization.
@@ -80,56 +80,70 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, "---- Application Init... ----" );
 
-    leddriver6_cfg_setup( &cfg );
-    LEDDRIVER6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    leddriver6_init( &leddriver6, &cfg );
+    leddriver6_cfg_t leddriver6_cfg;
 
-    leddriver6_pwm_start( &leddriver6 );
+    //  Click initialization.
+
+    leddriver6_cfg_setup( &leddriver6_cfg );
+    LEDDRIVER6_MAP_MIKROBUS( leddriver6_cfg, MIKROBUS_1 );
+
+    if ( leddriver6_init( &leddriver6, &leddriver6_cfg ) == LEDDRIVER6_INIT_ERROR )
+    {
+        log_info( &logger, "---- Application Init Error. ----" );
+        log_info( &logger, "---- Please, run program again... ----" );
+
+        for ( ; ; );
+    }
+
+    log_info( &logger, "---- Application Init Done. ----" );
+    
+    leddriver6_set_duty_cycle ( &leddriver6, 0.0 );
+    if ( leddriver6_pwm_start( &leddriver6 ) == LEDDRIVER6_INIT_ERROR )
+    {
+        log_info( &logger, "---- PWM can't be started. ----" );
+        log_info( &logger, "---- Please, run program again... ----" );
+
+        for ( ; ; );
+    }
+
+    log_info( &logger, "---- PWM is started. ----" );
+    log_info( &logger, "---- Application Task ----" );
+    Delay_ms( 500 );
 }
   
 ```
 
 ### Application Task
 
-> Waits for valid user input and executes functions based on set of valid commands. 
+>  This is an example that demonstrates the use of the LED Driver 6 Click board.
+>  This example shows the automatic control LED light intensity,
+>  the first intensity of light is rising and then the intensity of light is falling.
+>  Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
 
 void application_task ( void )
 {
-  uint8_t cnt;
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
 
-  if ( duty_cycle > leddriver6.pwm_period )
-  {
-      duty_cycle = 100;
-  }
-  
-  leddriver6_set_duty_cycle ( &leddriver6, duty_cycle );
-  duty_cycle += 50;
-  Delay_100ms( );
-  
-  increase( );
-  Delay_10ms( );
-  decrease( );
-  Delay_10ms( );
-  current_pg_voltage( );
-
-  for( cnt = 0; cnt < 5; cnt++ )
-  {
-      increase( );
-      Delay_10ms( );
-  }
-  for( cnt = 0; cnt < 3; cnt++ )
-  {
-      decrease( );
-      Delay_10ms( );
-  }
-  current_pg_voltage( );
-
-  Delay_1s( );
-}  
+    leddriver6_set_duty_cycle ( &leddriver6, duty );
+    log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    Delay_ms( 500 );
+    
+    if ( 10 == duty_cnt ) 
+    {
+        duty_inc = -1;
+    }
+    else if ( 0 == duty_cnt ) 
+    {
+        duty_inc = 1;
+    }
+    duty_cnt += duty_inc;
+}
 
 ```
 

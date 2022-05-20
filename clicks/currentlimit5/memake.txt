@@ -1,0 +1,7 @@
+type: subdirs
+project: CurrentLimit5
+
+subdirs: {
+    lib
+    example
+}

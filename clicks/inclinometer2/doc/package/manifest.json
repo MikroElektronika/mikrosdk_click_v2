@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Motion",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Inclinometer 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.inclinometer2",
+    "product_link": "https://www.mikroe.com/inclinometer-2-click",
+    "short_description": "Inclinometer 2 Click is a compact add-on board that measures the orientation angle of an object with respect to the force of gravity. This board features the IIS2ICLX, high accuracy, and resolution two-axis inclinometer from STMicroelectronics. It allows selectable full-scale measurements in ranges of ±0.5/±1/±2/±3g in two axes with a configurable host interface that supports both SPI and I2C serial communication. The sensing element is manufactured using a dedicated micromachining process developed by STMicroelectronics to produce inertial sensors and actuators on silicon wafers.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

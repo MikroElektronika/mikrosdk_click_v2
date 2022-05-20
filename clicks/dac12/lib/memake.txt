@@ -1,0 +1,49 @@
+type: library
+target: lib_dac12
+
+#begin python
+import re
+
+if ( re.match("(^PIC18F(.+)[KQ]4[23]$)|(^PIC32(.+)$)",MEMAKE_MCU_NAME) ):
+    sample_mode_reg_case = "SAMPLE_REG_CASE_1"
+else:
+    sample_mode_reg_case = "SAMPLE_REG_CASE_2"
+#end python
+
+defines: {
+    <[sample_mode_reg_case]>
+}
+
+sources: {
+    src/dac12.c
+}
+
+headers: {
+    include/dac12.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/dac12.h) dst(include/dac12.h)
+    src(include/spi_specifics.h) dst(include/spi_specifics.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.DAC12

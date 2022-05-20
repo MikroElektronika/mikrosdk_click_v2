@@ -15,10 +15,10 @@
  * This is a example which demonstrates the use of DC Motor Click board.
  * DC Motor Click communicates with register via PWM interface.
  * It shows moving in the left direction from slow to fast speed
- * and moving in the right direction from fast to slow speed.
+ * and from fast to slow speed.
  * Results are being sent to the Usart Terminal where you can track their changes.
  * 
- * \author MikroE Team
+ * \author Nikola Peric
  *
  */
 // ------------------------------------------------------------------- INCLUDES
@@ -31,9 +31,7 @@
 
 static dcmotor_t dcmotor;
 static log_t logger;
-
-static float duty_cycle = 0.5;
-
+uint8_t dcmotor_direction = 1;
 
 void application_init ( void )
 {
@@ -60,49 +58,54 @@ void application_init ( void )
     dcmotor_init( &dcmotor, &cfg );
 
     log_printf( &logger, " Initialization  PWM \r\n" );
-   
-    dcmotor_enable( &dcmotor );
+    
+    dcmotor_set_duty_cycle ( &dcmotor, 0.0 );
     dcmotor_pwm_start( &dcmotor );
-    Delay_ms( 1000 );
     log_printf( &logger, "---------------------\r\n" );
 }
 
-void application_task ( void )
-{
-    //  Task implementation.
-   
-    log_printf( &logger, "    Left Direction   \r\n" );
-    dcmotor_left_direction_slow( &dcmotor );
-    dcmotor_enable( &dcmotor );
-    Delay_ms( 100 );
+void application_task ( )
+{    
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
 
-    for ( duty_cycle = 0.1; duty_cycle < 1; duty_cycle += 0.1 )
+    if ( dcmotor_direction == 1 )
     {
-        dcmotor_set_duty_cycle( &dcmotor, duty_cycle );
-        log_printf( &logger, " <\r\n" );
-        Delay_ms( 1000 );
+        dcmotor_sleep_mode ( &dcmotor );
+        dcmotor_right_direction_slow ( &dcmotor );
+        log_printf( &logger, "> CLOCKWISE <\r\n" );
+        dcmotor_enable ( &dcmotor );
+    }
+    else
+    {
+        dcmotor_sleep_mode ( &dcmotor );
+        dcmotor_left_direction_slow ( &dcmotor );
+        log_printf( &logger, "> COUNTER CLOCKWISE <\r\n" );
+        dcmotor_enable ( &dcmotor );
     }
 
-    dcmotor_sleep_mode( &dcmotor );
-    Delay_ms( 1000 );
-    log_printf( &logger, "---------------------\r\n" );
-    log_printf( &logger, "   Right Direction   \r\n" );
+    dcmotor_set_duty_cycle ( &dcmotor, duty );
+    Delay_ms( 500 );
 
-    dcmotor_right_direction_slow( &dcmotor );
-    dcmotor_enable( &dcmotor );
-    Delay_ms( 100 );
-
-    for ( duty_cycle = 0.1; duty_cycle < 1; duty_cycle += 0.1)
+    if ( 10 == duty_cnt ) 
     {
-        dcmotor_set_duty_cycle( &dcmotor, duty_cycle );
-        log_printf( &logger, " >\r\n" );
-        Delay_ms( 1000 );
+        duty_inc = -1;
+        
+        if ( dcmotor_direction == 1 )
+        {
+            dcmotor_direction = 0;
+        }
+        else if ( dcmotor_direction == 0 )
+        {
+            dcmotor_direction = 1;
+        }
     }
-  
-    log_printf( &logger, "---------------------\r\n" );
-    dcmotor_sleep_mode( &dcmotor );
-    Delay_ms( 1000 );
-
+    else if ( 0 == duty_cnt ) 
+    {
+        duty_inc = 1;
+    }
+    duty_cnt += duty_inc;
 
 }
 
@@ -115,6 +118,5 @@ void main ( void )
         application_task( );
     }
 }
-
 
 // ------------------------------------------------------------------------ END

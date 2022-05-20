@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Microphone",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "VU Meter click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.vumeter",
+    "product_link": "https://www.mikroe.com/vu-meter-click",
+    "short_description": "VU Meter Click is a compact add-on board representing a volume unit meter that displays the intensity of an audio signal. This board features the LM3914, a monolithic integrated circuit that senses analog voltage levels and drives a 10-segment bar graph display from Texas Instruments. This Click board™ is manufactured with a sound detecting device (microphone), Op-Amp, and the LM3914, which gleams the bar graph display according to the sound’s quality. The LM3914 is an analog-controlled driver meaning it can control (turn ON or OFF) a display by an analog input voltage and eliminates the need for additional programming.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.2"
+}
+
+

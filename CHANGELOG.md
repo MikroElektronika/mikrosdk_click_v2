@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20220513](#20220513)**
 + **[20220218](#20220218)**
 + **[20220204](#20220204)**
 + **[20220128](#20220128)**
@@ -32,6 +33,126 @@
 
 ---
 ---
+---
+
+## `20220513`
+
+*Following click boards have been added:*
+
++ `3D Hall 10`
++ `3D Hall 11`
++ `Accel 22`
++ `ADC 16`
++ `ADC 18`
++ `ADC 19`
++ `Air Quality 9`
++ `Ambient 17`
++ `Analog MUX 5`
++ `Barometer 8`
++ `BATT-MON 3`
++ `BATT-MON 4`
++ `BLE 10`
++ `Brushless 17`
++ `Brushless 22`
++ `Brushless 23`
++ `CapSense 2`
++ `Color 15`
++ `Current 7`
++ `Current Limit 5`
++ `DAC 12`
++ `DIGI POT 9`
++ `EEPROM 6`
++ `EEPROM 8`
++ `Flash 9`
++ `FRAM 5`
++ `GNSS 10`
++ `GPS 6`
++ `GSM/GNSS 2`
++ `Gyro 7`
++ `HAPTIC 3`
++ `H-Bridge 10`
++ `Inclinometer 2`
++ `IR 2`
++ `IR Gesture 2`
++ `LED Driver 12`
++ `LED Driver 14`
++ `LTE IoT 3`
++ `Magneto 12`
++ `MCP251863`
++ `Multi Stepper TB62261`
++ `Multi Stepper TB62262`
++ `Multi Stepper TB62269`
++ `Multi Stepper TB67S101`
++ `Multi Stepper TB67S102`
++ `Multi Stepper TB67S109`
++ `Multi Stepper TB67S209`
++ `Multi Stepper TB67S261`
++ `Multi Stepper TB67S269`
++ `NTAG 5 Link`
++ `Pressure 19`
++ `Pressure 20`
++ `Proximity 17`
++ `Radar`
++ `RS232 3`
++ `RS232 to I2C`
++ `RTC 16`
++ `RTC 17`
++ `RTC 4`
++ `Smart Mic`
++ `SolidSwitch 3`
++ `Thermo 19`
++ `Thermo 23`
++ `Thermo 24`
++ `Thermostat 2`
++ `Thumbwheel`
++ `UNIQUE ID`
++ `USB to I2C 2`
++ `VU Meter`
+
+*Following click boards have been modified:*
+
++ `AC Current`
++ `AD SWIO`
++ `AD SWIO 2`
++ `ATA663254`
++ `Brushless`
++ `Brushless 2`
++ `Brushless 4`
++ `Brushless 5`
++ `Brushless 8`
++ `Brushless 9`
++ `Button ALARM`
++ `Button G`
++ `Button PLAY`
++ `Button Power`
++ `Button R`
++ `Button Y`
++ `DC Motor`
++ `DC Motor 2`
++ `DC Motor 3`
++ `DC Motor 4`
++ `DC Motor 5`
++ `DC Motor 8`
++ `DC Motor 9`
++ `Diff Press`
++ `GSM/GNSS`
++ `HAPTIC 2`
++ `H-Bridge 3`
++ `IR Beacon`
++ `LED Driver`
++ `LED Driver 2`
++ `LED Driver 4`
++ `LED Driver 5`
++ `LED Driver 6`
++ `Light Temp`
++ `Pressure 4`
++ `PWM Driver`
++ `Qi RX`
++ `STSPIN250`
++ `UVC Light`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20220218`

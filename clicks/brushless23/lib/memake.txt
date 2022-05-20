@@ -1,0 +1,36 @@
+type: library
+
+target: lib_brushless23
+
+sources: {
+    src/brushless23.c
+}
+
+headers: {
+    include/brushless23.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/brushless23.h) dst(include/brushless23.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Brushless23

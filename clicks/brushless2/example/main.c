@@ -1,6 +1,6 @@
 /*!
- * \file 
- * \brief Brushless2 Click example
+ * @file 
+ * @brief Brushless2 Click example
  * 
  * # Description
  * This application controlled speed motor.
@@ -15,7 +15,7 @@
  * Brushless 2 Click communicates with register via PWM interface.
  * Results are being sent to the Usart Terminal where you can track their changes.
  * 
- * \author MikroE Team
+ * @author Nikola Peric
  *
  */
 // ------------------------------------------------------------------- INCLUDES
@@ -28,9 +28,6 @@
 
 static brushless2_t brushless2;
 static log_t logger;
-
-static float duty_cycle = 0.5;
-static uint8_t flag = 0;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -59,38 +56,34 @@ void application_init ( void )
     brushless2_init( &brushless2, &cfg );
     
     log_printf( &logger, "---------------------- \r\n" );
+    
+    brushless2_set_duty_cycle ( &brushless2, 0.0 );
+    brushless2_pwm_start ( &brushless2 );
+    Delay_ms( 500 );
+    log_info( &logger, "---- Application Task ----" );
 }
 
 void application_task ( void )
 {    
-    brushless2_invert_direction( &brushless2 );
-    Delay_ms( 6000 );
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
     
-    brushless2_pwm_start( &brushless2 );
-    Delay_ms( 100 );
+    brushless2_set_duty_cycle ( &brushless2, duty );
+    brushless2_clockwise ( &brushless2 );
+    log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
     
-    log_printf( &logger, "    acceleration      \r\n" );
+    Delay_ms( 500 );
     
-    for ( duty_cycle = 0.1; duty_cycle <= 1.0; duty_cycle += 0.1 )
+    if ( 10 == duty_cnt ) 
     {
-        brushless2_set_duty_cycle ( &brushless2, duty_cycle );
-        log_printf( &logger," > " );
-        Delay_ms( 500 );
+        duty_inc = -1;
     }
-
-    log_printf( &logger,  "\r\n ---------------------- \r\n" ); 
-    log_printf( &logger, "    slowing down     \r\n" );
-    
-    for ( duty_cycle = 1.0; duty_cycle > 0.09; duty_cycle -= 0.1 )
+    else if ( 0 == duty_cnt ) 
     {
-        brushless2_set_duty_cycle ( &brushless2, duty_cycle );
-        log_printf( &logger," < " );
-        Delay_ms( 500 );
+        duty_inc = 1;
     }
-    
-    brushless2_pwm_stop( &brushless2 );
-    log_printf( &logger,  "\r\n ---------------------- \r\n" ); 
-    Delay_ms( 100 );
+    duty_cnt += duty_inc;
 }
 
 void main ( void )

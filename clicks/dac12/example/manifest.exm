@@ -1,0 +1,8 @@
+{
+    "name": "DAC 12 Click",
+    "description": "DAC 12 Click is a compact add-on board that contains a highly accurate digital-to-analog converter. This board features the DAC60508, a general-purpose octal 12-bit analog voltage-output DAC from Texas Instruments. It includes a 2.5V, 5ppm/°C internal reference, eliminating the need for an external precision reference in most applications, and supports the SPI serial interface, which operates at clock rates up to 40MHz. A user interface-selectable gain configuration provides full-scale output voltages of 1.25V, 2.5V, or 5 V. This Click board™ represents an excellent choice for digital gain and offset adjustment applications, programmable voltage, and current sources, programmable reference, and many more.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","DAC60508MRTER"],
+    "category" : ["DAC"]
+}

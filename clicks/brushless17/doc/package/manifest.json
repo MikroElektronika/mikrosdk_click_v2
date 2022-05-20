@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Brushless",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Brushless 17 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.brushless17",
+    "product_link": "https://www.mikroe.com/brushless-17-click",
+    "short_description": "Brushless 17 Click is a compact add-on board suitable for controlling brushless DC (BLDC) motors with any MCU. This board features the L6229Q, DMOS fully integrated three-phase BLDC motor driver with overcurrent protection from STMicroelectronics. This motor driver combines isolated DMOS power transistors with CMOS and bipolar circuits on the same chip, realized in BCD (Bipolar-CMOS-DMOS) multipower technology. It includes all the circuitry for a three-phase BLDC motor drive, including a three-phase DMOS bridge, a constant off-time PWM current controller, and the decoding logic for single-ended hall sensors that generate the required sequence for the power stage.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.2"
+}
+
+

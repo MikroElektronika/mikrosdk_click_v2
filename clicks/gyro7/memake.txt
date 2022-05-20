@@ -1,0 +1,7 @@
+type: subdirs
+project: Gyro7
+
+subdirs: {
+    lib
+    example
+}

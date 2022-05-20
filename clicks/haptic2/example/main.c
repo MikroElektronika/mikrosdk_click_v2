@@ -15,10 +15,10 @@
  * ## Application Task
  * This is an example that demonstrates the use of the Haptic 2 Click board.
  * In this example, we switched PWM signal back and forth 
- * from 10% ( 0.1 ) duty cycle to 90% ( 0.9 ) duty cycle every 500 milliseconds.
+ * from 10% duty cycle to 90% duty cycle every 500 milliseconds.
  * Results are being sent to the Usart Terminal where you can track their changes.
  *
- * @author Nenad Filipovic
+ * @author Nikola Peric
  *
  */
 
@@ -30,7 +30,8 @@
 static haptic2_t haptic2;
 static log_t logger;
 
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;          /**< Logger config object. */
     haptic2_cfg_t haptic2_cfg;  /**< Click config object. */
 
@@ -53,7 +54,8 @@ void application_init ( void ) {
     haptic2_cfg_setup( &haptic2_cfg );
     HAPTIC2_MAP_MIKROBUS( haptic2_cfg, MIKROBUS_1 );
     err_t init_flag  = haptic2_init( &haptic2, &haptic2_cfg );
-    if ( init_flag == PWM_ERROR ) {
+    if ( init_flag == PWM_ERROR ) 
+    {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
 
@@ -68,31 +70,33 @@ void application_init ( void ) {
     log_info( &logger, " Application Task " );
 }
 
-void application_task ( void ) {
-    //  Task implementation.
-    log_printf( &logger, "--------------------------\r\n" );
+void application_task ( void ) 
+{
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
+
+    haptic2_set_duty_cycle ( &haptic2, duty );
+    log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    Delay_ms( 500 );
     
-    for ( float duty = 0.1; duty < 0.9; duty += 0.1 ) {
-        Delay_ms( 500 );
-        haptic2_set_duty_cycle ( &haptic2, duty );
-        log_printf( &logger, "   PWM duty cycle : %.1f \r\n", duty );
+    if ( 10 == duty_cnt ) 
+    {
+        duty_inc = -1;
     }
-
-    Delay_ms( 1000 );
-
-    for ( float duty = 0.8; duty >= 0; duty -= 0.1 ) {
-        Delay_ms( 500 );
-        haptic2_set_duty_cycle ( &haptic2, duty );
-        log_printf( &logger, "   PWM duty cycle : %.1f \r\n", duty );
+    else if ( 0 == duty_cnt ) 
+    {
+        duty_inc = 1;
     }
-
-    Delay_ms( 1000 );
+    duty_cnt += duty_inc;
 }
 
-void main ( void ) {
+void main ( void ) 
+{
     application_init( );
 
-    for ( ; ; ) {
+    for ( ; ; ) 
+    {
         application_task( );
     }
 }

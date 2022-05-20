@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "RS232",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "RS232 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.rs2323",
+    "product_link": "https://www.mikroe.com/rs232-3-click",
+    "short_description": "RS232 3 Click is a compact add-on board representing a universal usable RS232 transceiver. This board features the SP3221E, a low-power RS232 transceiver from MaxLinear. The SP3221E uses an internal high-efficiency, charge-pump power supply and is compliant with EIA/TIA-232-F standards when powered by any of the mikroBUS™ power rails. The AUTO ON-LINE® feature allows the SP3221E to automatically Wake-Up from a Shutdown state when an RS232 cable is connected and a peripheral device is turned on. When not connected or not in use, the SP3221E will automatically shut down, drawing less supply current.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

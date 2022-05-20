@@ -1,0 +1,8 @@
+type: subdirs
+
+project: SmartMic
+
+subdirs: {
+    lib
+    example
+}

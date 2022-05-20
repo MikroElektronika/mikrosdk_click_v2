@@ -1,0 +1,71 @@
+type: library
+target: lib_smartmic
+
+#begin python
+import re
+
+if ( re.match("(^PIC18F(.+)[KQ]4[23]$)|(^PIC32(.+)$)",MEMAKE_MCU_NAME) ):
+    sample_mode_reg_case = "SAMPLE_REG_CASE_1"
+else:
+    sample_mode_reg_case = "SAMPLE_REG_CASE_2"
+#end python
+
+defines: {
+    <[sample_mode_reg_case]>
+}
+
+sources: {
+    src/smartmic.c
+}
+
+headers: {
+    include/smartmic.h
+    include/resources/firmware_i2c.h
+    include/resources/firmware_spi.h
+    include/resources/firmware_uart.h
+    include/resources/system_config_6sec_to.h
+    include/resources/system_config_6sec_to_utk.h
+    include/resources/system_config_6sec_to_vid.h
+    include/resources/keyword_hello_voice_q2.h
+    include/resources/keyword_next_song.h
+    include/resources/keyword_switch_the_light.h
+    include/resources/keyword_baidu_yixia.h
+}
+
+include: {
+    include
+    include/resources
+}
+
+install: {
+    src(include/smartmic.h) dst(include/smartmic.h)
+    src(include/spi_specifics.h) dst(include/spi_specifics.h)
+    src(include/resources/firmware_i2c.h) dst(include/resources/firmware_i2c.h)
+    src(include/resources/firmware_spi.h) dst(include/resources/firmware_spi.h)
+    src(include/resources/firmware_uart.h) dst(include/resources/firmware_uart.h)
+    src(include/resources/system_config_6sec_to.h) dst(include/resources/system_config_6sec_to.h)
+    src(include/resources/system_config_6sec_to_utk.h) dst(include/resources/system_config_6sec_to_utk.h)
+    src(include/resources/system_config_6sec_to_vid.h) dst(include/resources/system_config_6sec_to_vid.h)
+    src(include/resources/keyword_hello_voice_q2.h) dst(include/resources/keyword_hello_voice_q2.h)
+    src(include/resources/keyword_next_song.h) dst(include/resources/keyword_next_song.h)
+    src(include/resources/keyword_switch_the_light.h) dst(include/resources/keyword_switch_the_light.h)
+    src(include/resources/keyword_baidu_yixia.h) dst(include/resources/keyword_baidu_yixia.h)
+}
+
+expInclude: {
+    include
+    include/resources
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.SmartMic

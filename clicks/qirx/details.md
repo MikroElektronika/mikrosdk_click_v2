@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/qi_rx_click.png" height=300px>
 </p>
 
-[click Product page](https://libstock.mikroe.com/projects/view/3875/hvac-click)
+[click Product page](https://www.mikroe.com/qi-rx-click)
 
 ---
 

@@ -168,7 +168,7 @@ adswio_err_t adswio_generic_write ( adswio_t *ctx, uint8_t reg_addr, uint16_t da
     {
         if ( ctx->err_handler != ADSWIO_NULL )
         {
-            ctx->err_handler( "ADSDIO ERROR REGISTER ADDRESS" );
+            ctx->err_handler( "ADSWIO ERROR REGISTER ADDRESS" );
         }
 
         return ADSWIO_ERR_REG_ADDR;
@@ -200,7 +200,7 @@ adswio_err_t adswio_generic_read ( adswio_t *ctx, uint8_t reg_addr, uint16_t *da
     {
         if ( ctx->err_handler != ADSWIO_NULL )
         {
-            ctx->err_handler( "ADSDIO ERROR REGISTER ADDRESS" );
+            ctx->err_handler( "ADSWIO ERROR REGISTER ADDRESS" );
         }
 
         return ADSWIO_ERR_REG_ADDR;
@@ -227,7 +227,7 @@ adswio_err_t adswio_generic_read ( adswio_t *ctx, uint8_t reg_addr, uint16_t *da
     {
         if ( ctx->err_handler != ADSWIO_NULL )
         {
-            ctx->err_handler( "ADSDIO ERROR READBACK STATUS" );
+            ctx->err_handler( "ADSWIO ERROR READBACK STATUS" );
         }
 
         return ADSWIO_ERR_RD_STATUS;
@@ -239,7 +239,7 @@ adswio_err_t adswio_generic_read ( adswio_t *ctx, uint8_t reg_addr, uint16_t *da
     {
         if ( ctx->err_handler != ADSWIO_NULL )
         {
-            ctx->err_handler( "ADSDIO ERROR CRC" );
+            ctx->err_handler( "ADSWIO ERROR CRC" );
         }
 
         return ADSWIO_ERR_CRC;
@@ -276,7 +276,7 @@ adswio_err_t adswio_generic_multi_read ( adswio_t *ctx, adswio_read_t *rd )
     {
         if ( ctx->err_handler != ADSWIO_NULL )
         {
-            ctx->err_handler( "ADSDIO ERROR REGISTER ADDRESS" );
+            ctx->err_handler( "ADSWIO ERROR REGISTER ADDRESS" );
         }
 
         return ADSWIO_ERR_REG_ADDR;
@@ -286,7 +286,7 @@ adswio_err_t adswio_generic_multi_read ( adswio_t *ctx, adswio_read_t *rd )
     {
         if ( ctx->err_handler != ADSWIO_NULL )
         {
-            ctx->err_handler( "ADSDIO ERROR READBACK NUMBER OF WORDS" );
+            ctx->err_handler( "ADSWIO ERROR READBACK NUMBER OF WORDS" );
         }
 
         return ADSWIO_ERR_RD_NWORDS;
@@ -297,7 +297,7 @@ adswio_err_t adswio_generic_multi_read ( adswio_t *ctx, adswio_read_t *rd )
     {
         if ( ctx->err_handler != ADSWIO_NULL )
         {
-            ctx->err_handler( "ADSDIO ERROR AUTO READ MODE SETUP" );
+            ctx->err_handler( "ADSWIO ERROR AUTO READ MODE SETUP" );
         }
 
         return ADSWIO_ERR_RD_MODE;
@@ -324,7 +324,7 @@ adswio_err_t adswio_generic_multi_read ( adswio_t *ctx, adswio_read_t *rd )
     {
         if ( ctx->err_handler != ADSWIO_NULL )
         {
-            ctx->err_handler( "ADSDIO ERROR READBACK STATUS" );
+            ctx->err_handler( "ADSWIO ERROR READBACK STATUS" );
         }
 
         return ADSWIO_ERR_RD_STATUS;
@@ -334,7 +334,7 @@ adswio_err_t adswio_generic_multi_read ( adswio_t *ctx, adswio_read_t *rd )
     {
         if ( ctx->err_handler != ADSWIO_NULL )
         {
-            ctx->err_handler( "ADSDIO ERROR READBACK STATUS" );
+            ctx->err_handler( "ADSWIO ERROR READBACK STATUS" );
         }
 
         return ADSWIO_ERR_RD_STATUS;
@@ -353,7 +353,7 @@ adswio_err_t adswio_generic_multi_read ( adswio_t *ctx, adswio_read_t *rd )
             {
                 if ( ctx->err_handler != ADSWIO_NULL )
                 {
-                    ctx->err_handler( "ADSDIO ERROR CRC" );
+                    ctx->err_handler( "ADSWIO ERROR CRC" );
                 }
 
                 return ADSWIO_ERR_CRC;
@@ -387,7 +387,7 @@ adswio_err_t adswio_exe_command ( adswio_t *ctx, uint16_t cmd_key )
     {
         if ( ctx->err_handler != ADSWIO_NULL )
         {
-            ctx->err_handler( "ADSDIO ERROR COMMAND KEY" );
+            ctx->err_handler( "ADSWIO ERROR COMMAND KEY" );
         }
 
         return ADSWIO_ERR_CMD_KEY;
@@ -486,7 +486,7 @@ adswio_err_t adswio_set_conv_mode ( adswio_t *ctx, uint8_t mode )
     {
         if ( ctx->err_handler != ADSWIO_NULL )
         {
-            ctx->err_handler( "ADSDIO ERROR CONVERSION MODE" );
+            ctx->err_handler( "ADSWIO ERROR CONVERSION MODE" );
         }
 
         return ADSWIO_ERR_CONV_MODE;
@@ -514,7 +514,7 @@ adswio_err_t adswio_enable_ch ( adswio_t *ctx, uint8_t channel )
     {
         if ( ctx->err_handler != ADSWIO_NULL )
         {
-            ctx->err_handler( "ADSDIO ERROR CHANNEL SELECTION" );
+            ctx->err_handler( "ADSWIO ERROR CHANNEL SELECTION" );
         }
 
         return ADSWIO_ERR_EN_CH;
@@ -542,7 +542,7 @@ adswio_err_t adswio_enable_diag ( adswio_t *ctx, uint8_t diagnostic )
     {
         if ( ctx->err_handler != ADSWIO_NULL )
         {
-            ctx->err_handler( "ADSDIO ERROR DIAGNOSTIC SELECTION" );
+            ctx->err_handler( "ADSWIO ERROR DIAGNOSTIC SELECTION" );
         }
 
         return ADSWIO_ERR_EN_DIAG;
@@ -570,7 +570,7 @@ adswio_err_t adswio_set_ch_func ( adswio_t *ctx, uint8_t channel, uint8_t ch_fun
     {
         if ( ctx->err_handler != ADSWIO_NULL )
         {
-            ctx->err_handler( "ADSDIO ERROR CHANNEL SELECTION" );
+            ctx->err_handler( "ADSWIO ERROR CHANNEL SELECTION" );
         }
 
         return ADSWIO_ERR_EN_CH;
@@ -580,7 +580,7 @@ adswio_err_t adswio_set_ch_func ( adswio_t *ctx, uint8_t channel, uint8_t ch_fun
     {
         if ( ctx->err_handler != ADSWIO_NULL )
         {
-            ctx->err_handler( "ADSDIO ERROR CHANNEL FUNCTION" );
+            ctx->err_handler( "ADSWIO ERROR CHANNEL FUNCTION" );
         }
 
         return ADSWIO_ERR_CH_FUNC;
@@ -605,7 +605,7 @@ adswio_err_t adswio_assign_diag ( adswio_t *ctx, uint8_t diagnostic, uint8_t dut
     {
         if ( ctx->err_handler != ADSWIO_NULL )
         {
-            ctx->err_handler( "ADSDIO ERROR DIAGNOSTIC SELECTION" );
+            ctx->err_handler( "ADSWIO ERROR DIAGNOSTIC SELECTION" );
         }
 
         return ADSWIO_ERR_EN_DIAG;
@@ -615,7 +615,7 @@ adswio_err_t adswio_assign_diag ( adswio_t *ctx, uint8_t diagnostic, uint8_t dut
     {
         if ( ctx->err_handler != ADSWIO_NULL )
         {
-            ctx->err_handler( "ADSDIO ERROR DIAGNOSTIC ASSIGN" );
+            ctx->err_handler( "ADSWIO ERROR DIAGNOSTIC ASSIGN" );
         }
 
         return ADSWIO_ERR_DIAG_ASSIGN;
@@ -674,7 +674,7 @@ adswio_err_t adswio_get_conv_results ( adswio_t *ctx, uint8_t channel, uint16_t 
     {
         if ( ctx->err_handler != ADSWIO_NULL )
         {
-            ctx->err_handler( "ADSDIO ERROR CHANNEL SELECTION" );
+            ctx->err_handler( "ADSWIO ERROR CHANNEL SELECTION" );
         }
 
         return ADSWIO_ERR_EN_CH;
@@ -709,7 +709,7 @@ adswio_err_t adswio_get_diag_results ( adswio_t *ctx, uint8_t diagnostic, uint16
     {
         if ( ctx->err_handler != ADSWIO_NULL )
         {
-            ctx->err_handler( "ADSDIO ERROR DIAGNOSTIC SELECTION" );
+            ctx->err_handler( "ADSWIO ERROR DIAGNOSTIC SELECTION" );
         }
 
         return ADSWIO_ERR_EN_DIAG;

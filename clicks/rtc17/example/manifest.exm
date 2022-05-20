@@ -1,0 +1,8 @@
+{
+    "name": "RTC 17 Click",
+    "description": "RTC 17 Click is a compact add-on board that accurately keeps the time of a day. This board features the RV5C387A, a CMOS real-time clock with a built-in interrupt generation function from Nisshinbo Micro Devices Inc, to perform serial transmission of time and calendar data to the MCU. The BU9873 provides information like year, month, day, weekday, hours, minutes, and seconds based on a 32.768kHz quartz crystal through an I2C serial interface to transmit time and calendar data to the MCU. It also has an alarm function that outputs an interrupt signal to the MCU when the day of the week, hour, or minute matches with the preset time.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","RV5C387A-E2-F"],
+    "category" : ["RTC"]
+}

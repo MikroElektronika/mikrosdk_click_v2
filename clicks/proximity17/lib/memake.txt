@@ -1,0 +1,36 @@
+type: library
+
+target: lib_proximity17
+
+sources: {
+    src/proximity17.c
+}
+
+headers: {
+    include/proximity17.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/proximity17.h) dst(include/proximity17.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Proximity17

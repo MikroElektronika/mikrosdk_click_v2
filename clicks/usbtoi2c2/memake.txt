@@ -1,0 +1,7 @@
+type: subdirs
+project: USBtoI2C2
+
+subdirs: {
+    lib
+    example
+}

@@ -1,0 +1,36 @@
+type: library
+
+target: lib_brushless17
+
+sources: {
+    src/brushless17.c
+}
+
+headers: {
+    include/brushless17.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/brushless17.h) dst(include/brushless17.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Brushless17

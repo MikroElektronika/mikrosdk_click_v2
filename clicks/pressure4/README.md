@@ -100,21 +100,23 @@ void application_init ( void )
 
 ### Application Task
 
-> The preassure and temperature data is read from the sensor 
+> The pressure and temperature data is read from the sensor 
 > and it is printed to the UART.
 
 ```c
 
 void application_task ( void )
 {
-    double tmp;
+    double pressure;
+    double temperature;
 
-    tmp = pressure4_get_temperature( &pressure4 );
-    log_printf( &logger, "Temperature : %lf \r\n", tmp );
-
-    tmp = pressure4_get_pressure( &pressure4 );
-    log_printf( &logger, "Pressure : %lf hPa \r\n", tmp );
-    log_printf( &logger, "========================\r\n", tmp );
+    temperature = pressure4_get_temperature( &pressure4 );
+    log_printf( &logger, "Temperature : %.2lf \r\n", temperature );
+    Delay_ms( 100 );
+    
+    pressure = pressure4_get_pressure( &pressure4 );
+    log_printf( &logger, "Pressure : %.2lf hPa \r\n", pressure );
+    log_printf( &logger, "========================\r\n" );
 
     Delay_ms( 500 );
 } 

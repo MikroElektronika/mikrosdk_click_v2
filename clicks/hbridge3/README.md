@@ -16,8 +16,8 @@ H-Bridge 3 Click is designed for the control of small DC motors and inductive lo
 
 #### Click library 
 
-- **Author**        : MikroE Team
-- **Date**          : Jan 2020.
+- **Author**        : Nikola Peric
+- **Date**          : Feb 2022.
 - **Type**          : PWM type
 
 
@@ -94,55 +94,56 @@ void application_init ( void )
     hbridge3_cfg_setup( &cfg );
     HBRIDGE3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     hbridge3_init( &hbridge3, &cfg );
-
     Delay_ms( 500 );
     
     hbridge3_pwm_start( &hbridge3 );
+    log_info( &logger, "---- Application Task ----" );
+    log_printf( &logger, "> CLOCKWISE <\r\n" );
 }
   
 ```
 
 ### Application Task
 
->  Initializes SPI driver and PWM module, sets minimum PWM duty cycle and starts PWM
+>  This example demonstrates the use of H-Bridge 3 Click board, 
+>  by running dc motor in both directions - increasing and decreasing PWM duty cycle.
+>  Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
 
 void application_task ( void )
 {
-    log_printf( &logger, "------------------------------\r\n" );
-    case_direction1( );
-    Delay_ms( 20 );
-    for ( duty_cycle = 0.1; duty_cycle < 1; duty_cycle += 0.1 )
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
+
+
+    hbridge3_set_duty_cycle ( &hbridge3, duty );
+    log_printf( &logger, " Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    Delay_ms( 500 );
+
+    if ( 10 == duty_cnt ) 
     {
-        hbridge3_set_duty_cycle( &hbridge3, duty_cycle );
-        log_printf( &logger, "> duty cycle : %.2f\r\n", duty_cycle );
-        Delay_ms( 300 );
+        duty_inc = -1;
     }
-    
-    for ( duty_cycle = 1; duty_cycle > 0.09; duty_cycle -= 0.1 )
+    else if ( 0 == duty_cnt ) 
     {
-        hbridge3_set_duty_cycle( &hbridge3, duty_cycle );
-        log_printf( &logger, "> duty cycle : %.2f\r\n", duty_cycle );
-        Delay_ms( 300 );
+        duty_inc = 1;
+        
+        if ( motor_direction == 1 )
+        {
+            log_printf( &logger, "> COUNTER CLOCKWISE <\r\n" );
+            motor_direction = 0;
+             hbridge3_dir_set ( &hbridge3 , 0 );
+        }
+        else if ( motor_direction == 0 )
+        {
+            log_printf( &logger, "> CLOCKWISE <\r\n" );
+            motor_direction = 1;
+            hbridge3_dir_set ( &hbridge3 , 1 );
+        }
     }
-    
-    log_printf( &logger, "------------------------------\r\n" );
-    case_direction2( );
-    Delay_ms( 20 );
-    for ( duty_cycle = 0.1; duty_cycle < 1; duty_cycle += 0.1 )
-    {
-        hbridge3_set_duty_cycle( &hbridge3, duty_cycle );
-        log_printf( &logger, "> duty cycle : %.2f\r\n", duty_cycle );
-        Delay_ms( 300 );
-    }
-    
-    for ( duty_cycle = 1; duty_cycle > 0.09; duty_cycle -= 0.1 )
-    {
-        hbridge3_set_duty_cycle( &hbridge3, duty_cycle );
-        log_printf( &logger, "> duty cycle : %.2f\r\n", duty_cycle );
-        Delay_ms( 300 );
-    }
+    duty_cnt += duty_inc;
 }
   
 

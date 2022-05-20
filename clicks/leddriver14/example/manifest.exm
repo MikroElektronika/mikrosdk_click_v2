@@ -1,0 +1,8 @@
+{
+    "name": "LED Driver 14 Click",
+    "description": "LED Driver 14 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the BD18337EFV-M, a reliable four-channel constant current LED driver from Rohm Semiconductor. It is powered by an external power supply in the range of 5.5V to 20V, providing a maximum output current of 150mA per channel. The BD18337EFV-M also comes with the possibility for up to 3 LEDs in series on its output OUTx pin and built-in energy sharing control, selectable operational mode, and multiple built-in protection functions that protect the circuit during abnormalities. This Click board™ is ideal for LED rear lamps (turn/stop), fog lamps, and turn signals for automotive applications.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","BD18337EFV","MCP4661T-503E"],
+    "category" : ["LED Drivers"]
+}

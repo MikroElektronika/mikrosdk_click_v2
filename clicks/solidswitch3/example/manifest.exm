@@ -1,0 +1,8 @@
+{
+    "name": "SolidSwitch 3 Click",
+    "description": "SolidSwitch 3 Click is a compact add-on board that contains a load switching device. This board features the BD8LB600FS-C, an automotive eight-channel low-side switch from Rohm Semiconductor. Every switch is controlled via an SPI interface and includes an N-channel MOSFET that supports a maximum current of 1A. The BD8LB600FS-C also has built-in protection circuits, namely the overcurrent, the thermal shutdown, the open-load detection, and the voltage lock-out circuits. Moreover, this device also possesses a diagnostic output function during abnormal detection.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","BD8LB600FS-CE2"],
+    "category" : ["Port expander"]
+}

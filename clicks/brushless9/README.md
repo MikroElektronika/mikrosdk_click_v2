@@ -17,8 +17,8 @@ Brushless 9 Click is a compact add-on board suitable for controlling BLDC motors
 
 #### Click library
 
-- **Author**        : Luka Filipovic
-- **Date**          : Dec 2020.
+- **Author**        : Nikola Peric
+- **Date**          : Mar 2022.
 - **Type**          : PWM type
 
 
@@ -115,36 +115,54 @@ void application_init ( void )
     brushless9_set_duty_cycle ( &brushless9, 0 );
     brushless9_pwm_start( &brushless9 );
     log_info( &logger, " Application Task " );
+    Delay_ms( 1000 );
 }
 
 ```
 
 ### Application Task
 
-> This example demonstrates the use of Brushless 9 click board.
-> Brushless 9 click communicates with the device via PWM driver in order to
-> set adequate voltage level for connected motor.
-> Current PWM settings being output are sent via logger.
+>  This is an example that demonstrates the use of a Brushless 9 Click board.
+>  Brushless 9 Click controls motor speed via PWM interface.
+>  It shows moving in the left direction from slow to fast speed
+>  and from fast to slow speed.
+>  Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
 
-void application_task ( void )
+void application_task ( void ) 
 {
-    log_info( &logger, " Starting... " );
-    brushless9_set_brk( &brushless9, 0 );
-    for ( float duty = 0.1; duty < 1; duty += 0.1 )
-    {
-        Delay_ms( DUTY_CHANGE_DELAY );
-        brushless9_set_duty_cycle ( &brushless9, duty );
-        log_printf( &logger, "Duty: %u%%\r\n", ( uint16_t )ceil( duty * 100 ) );
-    }
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
 
-    for ( float duty = 0.9; duty >= 0; duty -= 0.1 )
+    brushless9_set_duty_cycle ( &brushless9, duty );
+    log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    Delay_ms( 500 );
+
+    if ( 10 == duty_cnt ) 
     {
-        Delay_ms( DUTY_CHANGE_DELAY );
-        brushless9_set_duty_cycle ( &brushless9, duty );
-        log_printf( &logger, "Duty: %u%%\r\n", ( uint16_t )ceil( duty * 100 ) );
+        duty_inc = -1;
     }
+    else if ( 0 == duty_cnt ) 
+    {
+        duty_inc = 1;
+        
+        if ( direction == 1 )
+        {
+        direction = !direction;
+        brushless9_set_brk( &brushless9, 0 );
+        brushless9_set_dir( &brushless9, direction );
+        }
+        else if ( direction == 0 )
+        {
+        direction = !direction;
+        brushless9_set_brk( &brushless9, 1 );
+        brushless9_set_dir( &brushless9, direction );
+        }
+    }
+    duty_cnt += duty_inc;
+}
 
     Delay_ms( DUTY_CHANGE_DELAY );
     log_info( &logger, " Stopping... " );

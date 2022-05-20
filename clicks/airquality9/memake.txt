@@ -1,0 +1,8 @@
+type: subdirs
+
+project: AirQuality9
+
+subdirs: {
+    lib
+    example
+}

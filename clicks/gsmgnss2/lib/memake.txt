@@ -1,0 +1,38 @@
+type: library
+
+target: lib_gsmgnss2
+
+sources: {
+    src/gsmgnss2.c
+}
+
+headers: {
+    include/gsmgnss2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/gsmgnss2.h) dst(include/gsmgnss2.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Conversions
+    MikroSDK.Driver
+    MikroSDK.GenericPointer
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.GSMGNSS2

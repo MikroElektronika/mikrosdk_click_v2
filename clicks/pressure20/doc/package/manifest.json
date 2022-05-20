@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Pressure",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Pressure 20 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.pressure20",
+    "product_link": "https://www.mikroe.com/pressure-20-click",
+    "short_description": "Pressure 20 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the ICP-20100, a high-accuracy digital barometric pressure and temperature sensor from TDK InvenSense. The ICP-20100 is based on MEMS capacitive technology with ultra-low noise, low power consumption, and temperature stability alongside programmable output: all-pressure, all-temperature, or pressure and temperature output. It converts output data into a 20-bit digital value and sends the information via a configurable host interface that supports SPI and I2C serial communications. It measures pressure from 30kPa up to 110kPa with an accuracy of ±20Pa over a wide operating temperature range.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

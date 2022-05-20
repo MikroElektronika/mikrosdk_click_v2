@@ -15,8 +15,8 @@
 
 #### Click library 
 
-- **Author**        : MikroE Team
-- **Date**          : Jan 2020.
+- **Author**        : Nikola Peric
+- **Date**          : Feb 2022.
 - **Type**          : PWM type
 
 # Software Support
@@ -61,9 +61,10 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example showcases how to initialize and use the DC Motor 2 click. The click contains a 
-  Driver IC for DC motors which can spin the motor clockwise, counter-clockwise, break it and
-  completely stop the motor. The example needs a DC motor and a power supply in order to work. 
+>  This library contains API for the DC Motor 2 Click driver.
+>  This example showcases how to initialize and use the DC Motor 2 click. The click contains a 
+>  Driver IC for DC motors which can spin the motor clockwise, counter-clockwise, break it and
+>  completely stop the motor. The example needs a DC motor and a power supply in order to work.
 
 **The demo application is composed of two sections :**
 
@@ -90,41 +91,75 @@ void application_init ( )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
-    Delay_100ms( );
+    Delay_ms( 100 );
 
     //  Click initialization.
 
     dcmotor2_cfg_setup( &cfg );
     DCMOTOR2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    Delay_100ms( );
+    Delay_ms( 100 );
     dcmotor2_init( &dcmotor2, &cfg );
     dcmotor2_pwm_start( &dcmotor2 );
-    Delay_1sec( );
+    Delay_ms( 1000 );
+    log_info( &logger, "---- Application Task ----" );
 }
   
 ```
 
 ### Application Task
 
-> This function breaks the motor, starts spinning it clockwise and changes the rotation speed 
-  from min to max, breaks the motor again and spins it counter clockwise from max speed to min.
-  It waits for one second after each action. 
+>  This is an example that demonstrates the use of the DC Motor 2 Click board.
+>  DC Motor 2 Click communicates with register via PWM interface.
+>  It shows moving in the Clockwise direction from slow to fast speed
+>  and from fast to slow speed, then rotating Counter Clockwise,
+>  Results are being sent to the Usart Terminal where you can track their changes. 
 
 ```c
 
 void application_task ( )
 {    
-    dcmotor2_enable_motor( &dcmotor2 );
-    Delay_1sec( );
-       
-    clockwise( );
-    pull_brake( );
-    counter_clockwise( );
-    pull_brake( );
-    
-    dcmotor2_stop_motor( &dcmotor2 );
-    Delay_1sec( );
-}  
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
+
+    if ( dcmotor_direction == 1 )
+    {
+        dcmotor2_pull_brake ( &dcmotor2 );
+        dcmotor2_spin_clockwise ( &dcmotor2 );
+        log_printf( &logger, "> CLOCKWISE <\r\n" );
+        dcmotor2_enable_motor ( &dcmotor2 );
+    }
+    else
+    {
+        dcmotor2_pull_brake ( &dcmotor2 );
+        dcmotor2_spin_counter_clockwise ( &dcmotor2 );
+        log_printf( &logger, "> COUNTER CLOCKWISE <\r\n" );
+        dcmotor2_enable_motor ( &dcmotor2 );
+    }
+
+    dcmotor2_set_duty_cycle ( &dcmotor2, duty );
+    log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    Delay_ms( 500 );
+
+    if ( 10 == duty_cnt ) 
+    {
+        duty_inc = -1;
+    }
+    else if ( 0 == duty_cnt ) 
+    {
+        duty_inc = 1;        
+        if ( dcmotor_direction == 1 )
+        {
+            dcmotor_direction = 0;
+        }
+        else if ( dcmotor_direction == 0 )
+        {
+            dcmotor_direction = 1;
+        }
+    }
+    duty_cnt += duty_inc;
+
+}
 
 ```
 

@@ -3,7 +3,7 @@
 ---
 # Brushless click
 
-<Brushless click carries Toshiba's TB6575FNG IC for driving 3-phase full-wave Brushless DC motors — which are ideal for powering flying drones. The click is able to safely drive external motors with up to 32V/2A. The board features three pairs of onboard screw terminals. VBAT is for connecting an external 7-32V DC power supply.>
+Brushless click carries Toshiba's TB6575FNG IC for driving 3-phase full-wave Brushless DC motors — which are ideal for powering flying drones. The click is able to safely drive external motors with up to 32V/2A. The board features three pairs of onboard screw terminals. VBAT is for connecting an external 7-32V DC power supply.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/brushless_click.png" height=300px>
@@ -15,8 +15,8 @@
 
 #### Click library 
 
-- **Author**        : MikroE Team
-- **Date**          : Jan 2020.
+- **Author**        : Nikola peric
+- **Date**          : Feb 2022.
 - **Type**          : PWM type
 
 # Software Support
@@ -57,9 +57,10 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example showcases how to initialize and use the Brushless click. The click has a bru-
-> shless motor driver which controls the work of the motor through the BLDC terminal. In order
-> for this example to work a motor and a power supply are needed. 
+>  This example showcases how to initialize and use the Brushless click. 
+>  The click has a brushless motor driver which controls the work 
+>  of the motor through the BLDC terminal. 
+>  In order for this example to work a motor and a power supply are needed.
 
 **The demo application is composed of two sections :**
 
@@ -86,31 +87,71 @@ void application_init ( )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
-    Delay_100ms( );
+    Delay_ms( 100 );
 
     //  Click initialization.
-
     brushless_cfg_setup( &cfg );
     BRUSHLESS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    Delay_100ms( );
+    Delay_ms( 100 );
+    
     brushless_init( &brushless, &cfg );
     brushless_pwm_start( &brushless );
-    Delay_1sec( );
+    log_info( &logger, "---- Application Task ----" );
+    Delay_ms( 1000 );
 }
   
 ```
 
 ### Application Task
 
-> This function drives the motor in both directions increasing and decreasing the speed of the motor.
+>  This is an example that demonstrates the use of a Brushless Click board.
+>  Brushless Click communicates with the register via the PWM interface.
+>  It shows moving in the left direction from slow to fast speed
+>  and from fast to slow speed.
+>  Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
 
 void application_task ( )
 {    
-    clockwise( );
-    counter_clockwise( );
-}  
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
+
+    if ( brushless_direction == 1 )
+    {
+        brushless_spin_clockwise ( &brushless );
+        log_printf( &logger, "<<<< " );
+    }
+    else
+    {
+        brushless_spin_counter_clockwise ( &brushless );
+        log_printf( &logger, ">>>> " );
+    }
+
+    brushless_set_duty_cycle ( &brushless, duty );
+    log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    Delay_ms( 500 );
+
+    if ( 10 == duty_cnt ) 
+    {
+        duty_inc = -1;
+    }
+    else if ( 0 == duty_cnt ) 
+    {
+        duty_inc = 1;
+                
+        if ( brushless_direction == 1 )
+        {
+            brushless_direction = 0;
+        }
+        else if ( brushless_direction == 0 )
+        {
+            brushless_direction = 1;
+        }
+    }
+    duty_cnt += duty_inc;
+}
 
 ```
 

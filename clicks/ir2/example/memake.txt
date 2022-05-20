@@ -1,0 +1,13 @@
+type: executable
+target: example_ir2
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.IR2
+}
+
+sources: {
+    main.c
+}

@@ -16,8 +16,8 @@ IR Beacon click is a mikroBUS™ add-on board with an array of nine high speed i
 
 #### Click library 
 
-- **Author**        : MikroE Team
-- **Date**          : Jan 2020.
+- **Author**        : Nikola Peric
+- **Date**          : Feb 2022.
 - **Type**          : PWM type
 
 
@@ -55,7 +55,8 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This application sets the brightness on Leds.
+>  This library contains an API for the IrBeacon Click driver.
+>  This application is suitable for high pulse current operation.
 
 **The demo application is composed of two sections :**
 
@@ -88,9 +89,9 @@ void application_init ( void )
     irbeacon_cfg_setup( &cfg );
     IRBEACON_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     irbeacon_init( &irbeacon, &cfg );
-
-    irbeacon_set_duty_cycle( &irbeacon, duty_cycle );
     irbeacon_pwm_start( &irbeacon );
+    
+    log_info( &logger, "---- Application Task ----" );
     Delay_ms( 1000 );
 }
   
@@ -98,23 +99,33 @@ void application_init ( void )
 
 ### Application Task
 
-> This is a example which demonstrates the use of IR Beacon Click board.
-> It shows how to enable the device and gradualy increase the duty cycle.
+>  This is a example which demonstrates the use of IR Beacon Click board.
+>  It shows how to enable the device and gradualy increase the duty cycle.
+>  Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
 
 void application_task ( void )
 {
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
+
+    irbeacon_set_duty_cycle ( &irbeacon, duty );
     irbeacon_enable_mod( &irbeacon );
+    log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    Delay_ms( 500 );
     
-    for ( duty_cycle = 250; duty_cycle < 3000; duty_cycle += 250 )
+    if ( 10 == duty_cnt ) 
     {
-        irbeacon_set_duty_cycle( &irbeacon, duty_cycle );
-        Delay_ms( 500 );
+        duty_inc = -1;
     }
-    
-    irbeacon_disable_mod( );
-    Delay_ms( 1000 );
+    else if ( 0 == duty_cnt ) 
+    {
+        irbeacon_disable_mod( &irbeacon );
+        duty_inc = 1;
+    }
+    duty_cnt += duty_inc;
 }
 
 ```

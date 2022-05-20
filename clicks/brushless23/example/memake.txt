@@ -1,0 +1,13 @@
+type: executable
+target: example_brushless23
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Brushless23
+}
+
+sources: {
+    main.c
+}

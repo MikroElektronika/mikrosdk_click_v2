@@ -1,0 +1,36 @@
+type: library
+
+target: lib_current7
+
+sources: {
+    src/current7.c
+}
+
+headers: {
+    include/current7.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/current7.h) dst(include/current7.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.Current7

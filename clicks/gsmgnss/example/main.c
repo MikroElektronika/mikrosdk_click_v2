@@ -345,7 +345,7 @@ static err_t gsmgnss_process ( void )
 
 static err_t gsmgnss_rsp_check ( void )
 {
-    uint16_t timeout_cnt = 0;
+    uint32_t timeout_cnt = 0;
     uint32_t timeout = 100000;
     
     err_t error_flag = gsmgnss_process(  );

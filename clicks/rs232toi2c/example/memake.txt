@@ -1,0 +1,13 @@
+type: executable
+target: example_rs232toi2c
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.RS232toI2C
+}
+
+sources: {
+    main.c
+}

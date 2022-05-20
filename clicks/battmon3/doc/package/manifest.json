@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Power management",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "BATT-MON 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.battmon3",
+    "product_link": "https://www.mikroe.com/batt-mon-3-click",
+    "short_description": "BATT-MON 3 Click is a compact add-on board representing an advanced battery monitoring solution. This board features the BQ35100, battery fuel gauge, and end-of-service monitor from Texas Instruments. The BQ35100 provides highly configurable fuel gauging for non-rechargeable (primary) lithium batteries without requiring a forced battery discharge. It uses patented TI gauging algorithms to support the option to replace an old battery with a new one seamlessly. It provides accurate results with ultra-low average power consumption, alongside an I2C interface through which the host can read the gathered data.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

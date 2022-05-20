@@ -3,9 +3,10 @@
  * \brief Brushless Click example
  * 
  * # Description
- * This example showcases how to initialize and use the Brushless click. The click has a bru-
- * shless motor driver which controls the work of the motor through the BLDC terminal. In order
- * for this example to work a motor and a power supply are needed. 
+ * This example showcases how to initialize and use the Brushless click. 
+ * The click has a brushless motor driver which controls the work 
+ * of the motor through the BLDC terminal. 
+ * In order for this example to work a motor and a power supply are needed. 
  *
  * The demo application is composed of two sections :
  * 
@@ -13,9 +14,13 @@
  * This function initializes and configures the logger and click modules.
  * 
  * ## Application Task  
- * This function drives the motor in both directions increasing and decreasing the speed of the motor.
+ * This is an example that demonstrates the use of a Brushless Click board.
+ * Brushless Click communicates with the register via the PWM interface.
+ * It shows moving in the left direction from slow to fast speed
+ * and from fast to slow speed.
+ * Results are being sent to the Usart Terminal where you can track their changes.
  * 
- * \author MikroE Team
+ * \author Nikola Peric
  *
  */
 // ------------------------------------------------------------------- INCLUDES
@@ -28,56 +33,7 @@
 
 static brushless_t brushless;
 static log_t logger;
-
-static float duty_cycle;
-
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
-
-static void clockwise ( )
-{
-    log_printf( &logger, "\r\n------------------------------\r\n" );
-    log_printf( &logger, " * Clockwise *\r\n" );
-    brushless_spin_clockwise( &brushless );
-    Delay_1sec( );
-    
-    for( duty_cycle = 0.3; duty_cycle <= 1.0; duty_cycle += 0.1 )
-    {
-        brushless_set_duty_cycle( &brushless, duty_cycle );
-        log_printf( &logger, "  > " );
-        Delay_1sec( );
-    }
-    log_printf( &logger, "\r\n" );
-    
-    for( duty_cycle = 1.0; duty_cycle > 0.2; duty_cycle -= 0.1 )
-    {
-        brushless_set_duty_cycle( &brushless, duty_cycle );
-        log_printf( &logger, "  < " );
-        Delay_1sec( );
-    }
-}
-
-static void counter_clockwise ( )
-{
-    log_printf( &logger, "\r\n------------------------------\r\n" );
-    log_printf( &logger, " * Counter clockwise *\r\n" );
-    brushless_spin_counter_clockwise( &brushless );
-    Delay_1sec( );
-
-    for( duty_cycle = 0.3; duty_cycle <= 1.0; duty_cycle += 0.1 )
-    {
-        brushless_set_duty_cycle( &brushless, duty_cycle );
-        log_printf( &logger, "  > " );
-        Delay_1sec( );
-    }
-    log_printf( &logger, "\r\n" );
-    
-    for( duty_cycle = 1.0; duty_cycle > 0.2; duty_cycle -= 0.1 )
-    {
-        brushless_set_duty_cycle( &brushless, duty_cycle );
-        log_printf( &logger, "  < " );
-        Delay_1sec( );
-    }
-}
+uint8_t brushless_direction = 1;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -98,22 +54,58 @@ void application_init ( )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
-    Delay_100ms( );
+    Delay_ms( 100 );
 
     //  Click initialization.
-
     brushless_cfg_setup( &cfg );
     BRUSHLESS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    Delay_100ms( );
+    Delay_ms( 100 );
+    
     brushless_init( &brushless, &cfg );
     brushless_pwm_start( &brushless );
-    Delay_1sec( );
+    log_info( &logger, "---- Application Task ----" );
+    Delay_ms( 1000 );
 }
 
 void application_task ( )
 {    
-    clockwise( );
-    counter_clockwise( );
+    static int8_t duty_cnt = 1;
+    static int8_t duty_inc = 1;
+    float duty = duty_cnt / 10.0;
+
+    if ( brushless_direction == 1 )
+    {
+        brushless_spin_clockwise ( &brushless );
+        log_printf( &logger, "<<<< " );
+    }
+    else
+    {
+        brushless_spin_counter_clockwise ( &brushless );
+        log_printf( &logger, ">>>> " );
+    }
+
+    brushless_set_duty_cycle ( &brushless, duty );
+    log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    Delay_ms( 500 );
+
+    if ( 10 == duty_cnt ) 
+    {
+        duty_inc = -1;
+    }
+    else if ( 0 == duty_cnt ) 
+    {
+        duty_inc = 1;
+                
+        if ( brushless_direction == 1 )
+        {
+            brushless_direction = 0;
+        }
+        else if ( brushless_direction == 0 )
+        {
+            brushless_direction = 1;
+        }
+    }
+    duty_cnt += duty_inc;
 }
 
 void main ( )

@@ -1,0 +1,36 @@
+type: library
+
+target: lib_haptic3
+
+sources: {
+    src/haptic3.c
+}
+
+headers: {
+    include/haptic3.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/haptic3.h) dst(include/haptic3.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.HAPTIC3

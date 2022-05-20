@@ -1,0 +1,36 @@
+type: library
+
+target: lib_digipot9
+
+sources: {
+    src/digipot9.c
+}
+
+headers: {
+    include/digipot9.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/digipot9.h) dst(include/digipot9.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.DIGIPOT9
