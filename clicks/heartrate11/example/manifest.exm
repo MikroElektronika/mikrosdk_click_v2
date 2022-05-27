@@ -1,0 +1,8 @@
+{
+    "name": "Heart Rate 11 Click",
+    "description": "Heart Rate 11 Click is a compact add-on board suitable for heart rate monitoring applications. This board features the OB1203, a multi-channel light sensor (LS/CS), a proximity sensor (PS), and a photoplethysmography sensor (PPG) from Renesas. It can be configured as an ambient light sensor to measure ambient light similar to the human eye experience or as an RGB color sensor. The OB1203 establishes communication to and from the module entirely through a standard I2C compatible interface and has a fully integrated biosensor for reflective photoplethysmography.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","OB1203SD-C4V"],
+    "category" : ["Biometrics"]
+}

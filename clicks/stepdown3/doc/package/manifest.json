@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Click Boards > Power management > Buck",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Step Down 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.stepdown3",
+    "product_link": "https://www.mikroe.com/step-down-3-click",
+    "short_description": "Step Down 3 Click is a compact add-on board that steps down the voltage from its input to its output. This board features the ST1PS03, a nano-quiescent miniaturized synchronous step-down converter with a load switch from STMicroelectronics. The ST1PS03 can provide up to 400mA output current with an input voltage ranging from 1.8V to 5.5V, specifically designed for applications where high efficiency is crucial. It also embeds a controlled switch accessible from auxiliary channel input to supply a subsystem, output voltage from 1.6V to 3.3V set using three digital control inputs, and a Power Good signal to indicate stabilized output voltages.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.2"
+}
+
+
