@@ -1,0 +1,13 @@
+type: executable
+target: example_compass7
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.Compass7
+}
+
+sources: {
+    main.c
+}

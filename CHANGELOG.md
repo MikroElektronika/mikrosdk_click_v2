@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20220603](#20220603)**
 + **[20220527](#20220527)**
 + **[20220520](#20220520)**
 + **[20220513](#20220513)**
@@ -35,6 +36,23 @@
 
 ---
 ---
+---
+
+## `20220603`
+
+*Following click boards have been added:*
+
++ `Hall Current 15`
++ `GNSS MAX`
++ `LightRanger 10`
++ `Compass 7`
+
+*Following click boards have been removed:*
+
++ `Thermo 12`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20220527`

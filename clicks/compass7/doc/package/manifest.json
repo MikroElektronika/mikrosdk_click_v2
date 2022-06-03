@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Click Boards > Sensors > Magnetic",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Compass 7 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.compass7",
+    "product_link": "https://www.mikroe.com/compass-7-click",
+    "short_description": "Compass 7 Click is a compact add-on board perfect for applications like an electronic compass. This board features the MMC5633NJL, a monolithic complete 3-axis AMR magnetic sensor with on-chip signal processing and an integrated digital bus from MEMSIC. It can measure magnetic fields within the full-scale range of ±30 Gauss (G) with up to 0.0625mG per LSB resolution at 20bits operation mode and 2mG total RMS noise level, enabling heading accuracy of ±1º in electronic compass applications. Also, an integrated SET/RESET function eliminates thermal variation-induced offset error (Null field output) and clears the residual magnetization resulting from powerful external fields.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+
