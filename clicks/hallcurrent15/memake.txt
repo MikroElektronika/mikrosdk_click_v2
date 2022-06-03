@@ -1,0 +1,8 @@
+type: subdirs
+
+project: HallCurrent15
+
+subdirs: {
+    lib
+    example
+}

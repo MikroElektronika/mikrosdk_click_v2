@@ -1,0 +1,36 @@
+type: library
+
+target: lib_gnssmax
+
+sources: {
+    src/gnssmax.c
+}
+
+headers: {
+    include/gnssmax.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/gnssmax.h) dst(include/gnssmax.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.GNSSMAX
