@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20220527](#20220527)**
 + **[20220520](#20220520)**
 + **[20220513](#20220513)**
 + **[20220218](#20220218)**
@@ -34,6 +35,25 @@
 
 ---
 ---
+---
+
+## `20220527`
+
+*Following click boards have been added:*
+
++ `Heart Rate 11`
++ `Step Down 3`
++ `Spectrometer 2`
++ `DC Motor 22`
+
+*Following click boards have been modified:*
+
++ `Accel 11`
++ `Accel 12`
++ `Accel 13`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20220520`

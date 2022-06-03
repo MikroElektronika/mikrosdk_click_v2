@@ -1,0 +1,36 @@
+type: library
+
+target: lib_dcmotor22
+
+sources: {
+    src/dcmotor22.c
+}
+
+headers: {
+    include/dcmotor22.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/dcmotor22.h) dst(include/dcmotor22.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.DCMotor22

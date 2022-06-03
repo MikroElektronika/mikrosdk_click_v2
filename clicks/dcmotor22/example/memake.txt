@@ -1,0 +1,13 @@
+type: executable
+target: example_dcmotor22
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.DCMotor22
+}
+
+sources: {
+    main.c
+}
