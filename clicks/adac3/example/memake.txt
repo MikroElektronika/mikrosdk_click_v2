@@ -1,0 +1,13 @@
+type: executable
+target: example_adac3
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.ADAC3
+}
+
+sources: {
+    main.c
+}
