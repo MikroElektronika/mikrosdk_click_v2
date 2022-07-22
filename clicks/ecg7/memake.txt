@@ -1,0 +1,8 @@
+type: subdirs
+
+project: ECG7
+
+subdirs: {
+    lib
+    example
+}

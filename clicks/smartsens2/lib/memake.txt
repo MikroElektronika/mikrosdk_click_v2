@@ -1,0 +1,51 @@
+type: library
+target: lib_smartsens2
+
+#begin python
+import re
+
+if ( re.match("(^PIC18F(.+)[KQ]4[23]$)|(^PIC32(.+)$)",MEMAKE_MCU_NAME) ):
+    sample_mode_reg_case = "SAMPLE_REG_CASE_1"
+else:
+    sample_mode_reg_case = "SAMPLE_REG_CASE_2"
+#end python
+
+defines: {
+    <[sample_mode_reg_case]>
+}
+
+sources: {
+    src/smartsens2.c
+}
+
+headers: {
+    include/smartsens2.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/smartsens2.h) dst(include/smartsens2.h)
+    src(include/spi_specifics.h) dst(include/spi_specifics.h)
+    src(include/bhi260_aux_bmm150_bmp390_bme688.h) dst(include/bhi260_aux_bmm150_bmp390_bme688.h)
+    src(include/bhi260_aux_bmm150_bmp390_bme688_flash.h) dst(include/bhi260_aux_bmm150_bmp390_bme688_flash.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.SmartSens2
