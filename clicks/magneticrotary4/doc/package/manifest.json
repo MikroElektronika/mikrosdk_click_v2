@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Click Boards > Sensors > Magnetic",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Magnetic Rotary 4 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.magneticrotary4",
+    "product_link": "https://www.mikroe.com/magnetic-rotary-4-click",
+    "short_description": "Magnetic Rotary 4 Click is a compact add-on board for accurate magnet-position sensing. This board features the AS5047D, an SPI-configurable high-resolution rotary position sensor for fast absolute angle measurement over a full 360-degree range from ams AG. The AS5047D is equipped with revolutionary integrated dynamic angle error compensation (DAEC™) with almost 0 latency and offers a robust design that suppresses the influence of any homogenous external stray magnetic field. It also comes with an onboard header reserved for incremental and commutation signals of their respective A/B/I and U/V/W signals alongside embedded self-diagnostics, including magnetic field strength, lost magnet, and other related diagnostic features.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

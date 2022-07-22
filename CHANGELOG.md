@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20220722](#20220722)**
 + **[20220610](#20220610)**
 + **[20220603](#20220603)**
 + **[20220527](#20220527)**
@@ -37,6 +38,33 @@
 
 ---
 ---
+---
+
+## `20220722`
+
+*Following click boards have been added:*
+
++ `Magnetic Rotary 3`
++ `Touchpad 5`
++ `Angle 7`
++ `NFC Tag 5`
++ `RTC 18`
++ `AudioAmp 8`
++ `LDC Touch`
++ `LightRanger 9`
++ `TempHum 21`
++ `Expand 14`
++ `Ambient 19`
++ `Clock Gen 6`
++ `V to Hz 3`
++ `Hall Current 14`
++ `Magnetic Rotary 4`
++ `SPI Isolator 6`
++ `Excelon-Ultra`
++ `Balancer 4`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20220610`

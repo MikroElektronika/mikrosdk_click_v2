@@ -1,0 +1,36 @@
+type: library
+
+target: lib_temphum21
+
+sources: {
+    src/temphum21.c
+}
+
+headers: {
+    include/temphum21.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/temphum21.h) dst(include/temphum21.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.TempHum21

@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Click Boards > Storage > FRAM",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Excelon-Ultra click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.excelonultra",
+    "product_link": "https://www.mikroe.com/excelon-ultra-click",
+    "short_description": "Excelon-Ultra Click is a compact add-on board that contains the most reliable nonvolatile memory. This board features the CY15B116QSN, a high-performance 16-Mbit nonvolatile memory that employs an advanced ferroelectric process from Infineon Technologies.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.3"
+}
+
+
+

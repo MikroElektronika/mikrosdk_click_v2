@@ -1,0 +1,34 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Click Boards > Interface > SPI",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "SPI Isolator 6 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.spiisolator6",
+    "product_link": "https://www.mikroe.com/spi-isolator-6-click",
+    "short_description": "SPI Isolator 6 Click is a compact add-on board representing a digital isolator optimized for a serial peripheral interface. This board features the MAX22345, a fast, low-power 4-channel digital galvanic isolator from Analog Devices. This device comes with a maximum data rate of 200Mbps and transfers digital signals between circuits with different power domains featuring reinforced isolation for a withstand voltage rating of 3.75kVRMS for 60 seconds.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.1"
+}
+

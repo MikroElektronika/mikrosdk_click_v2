@@ -1,0 +1,36 @@
+type: library
+
+target: lib_touchpad5
+
+sources: {
+    src/touchpad5.c
+}
+
+headers: {
+    include/touchpad5.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/touchpad5.h) dst(include/touchpad5.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.TouchPad5

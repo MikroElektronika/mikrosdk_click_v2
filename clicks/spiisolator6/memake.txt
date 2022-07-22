@@ -1,0 +1,7 @@
+type: subdirs
+project: SPIIsolator6
+
+subdirs: {
+    lib
+    example
+}

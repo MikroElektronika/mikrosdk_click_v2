@@ -1,0 +1,8 @@
+{
+    "name": "LightRanger 9 Click",
+    "description": "LightRanger 9 Click is a compact add-on board suitable for range-finding and distance sensing applications. This board features the TMF8828, a dToF (direct time of flight) optical distance sensor with an integrated Vertical Cavity Surface Emitting Laser (VCSEL) achieving up to 5m target detection distance from ams AG. Due to its lens on the SPAD, it supports 3x3, 4x4, 3x6, and 8x8 multizone output data and a wide, dynamically adjustable field of view. All raw data processing is performed inside the TMF8828, providing distance information and confidence values through its I2C interface. A unique addition to this Click board™ represents an additional 0.7mm thick protective lens that further reduces interference and improves the sensor's accuracy.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "hw" : ["click","TMF8828"],
+    "category" : ["Click Boards > Sensors > Optical"]
+}

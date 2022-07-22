@@ -1,0 +1,36 @@
+type: library
+
+target: lib_audioamp8
+
+sources: {
+    src/audioamp8.c
+}
+
+headers: {
+    include/audioamp8.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/audioamp8.h) dst(include/audioamp8.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.AudioAmp8

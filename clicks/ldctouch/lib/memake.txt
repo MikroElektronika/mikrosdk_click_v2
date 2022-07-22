@@ -1,0 +1,36 @@
+type: library
+
+target: lib_ldctouch
+
+sources: {
+    src/ldctouch.c
+}
+
+headers: {
+    include/ldctouch.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/ldctouch.h) dst(include/ldctouch.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.LDCTouch

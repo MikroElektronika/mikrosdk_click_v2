@@ -1,0 +1,7 @@
+type: subdirs
+project: LDCTouch
+
+subdirs: {
+    lib
+    example
+}
