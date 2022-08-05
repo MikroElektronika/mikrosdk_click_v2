@@ -1,0 +1,13 @@
+type: executable
+target: example_magneticrotary3
+
+depends: {
+    MikroC.Core
+    MikroSDK.Board
+    MikroSDK.Log
+    Click.MagneticRotary3
+}
+
+sources: {
+    main.c
+}

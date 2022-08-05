@@ -1,0 +1,37 @@
+type: library
+
+target: lib_rtc18
+
+sources: {
+    src/rtc18.c
+}
+
+headers: {
+    include/rtc18.h
+}
+
+include: {
+    include
+}
+
+install: {
+    src(include/rtc18.h) dst(include/rtc18.h)
+}
+
+expInclude: {
+    include
+}
+
+depends: {
+    MikroC.Core
+    MikroSDK.Driver
+    MikroSDK.Conversions
+}
+
+others: {
+    ../README.md
+    ../DETAILS.md
+    ../CHANGELOG.md
+}
+
+alias: Click.RTC18

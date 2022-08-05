@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32",
+    "category": "Click Boards > Mixed signal > Measurements",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [
+    ],
+    "details": "Resources/DETAILS.md",
+    "display_name": "V to Hz 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.vtohz3",
+    "product_link": "https://www.mikroe.com/v-to-hz-3-click",
+    "short_description": "V to Hz 3 Click is a compact add-on board that converts an analog voltage input signal into a specific frequency pulse wave signal. This board features the AD7740, an ultrasmall synchronous voltage-to-frequency converter from Analog Devices. The AD7740 has a linear response, so applying a voltage from 3V up to 5V on its VIN terminal will generate the pulse with a frequency linearly proportional to the input voltage. It contains an integrated 2.5V bandgap reference defining the span of the VFC and can be overdriven using an external reference. The full-scale output frequency is synchronous with the input clock signal provided by the LTC6903 programmable oscillator, with a maximum input frequency of 1MHz. Based on the analog input value, the output frequency goes from 10% to 90% of the input frequency.",
+    "supported_compiler": "mikroC AI",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.0.0.2"
+}
+
+

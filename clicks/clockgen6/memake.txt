@@ -1,0 +1,8 @@
+type: subdirs
+
+project: ClockGen6
+
+subdirs: {
+    lib
+    example
+}

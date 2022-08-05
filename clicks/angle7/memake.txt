@@ -1,0 +1,7 @@
+type: subdirs
+project: Angle7
+
+subdirs: {
+    lib
+    example
+}
