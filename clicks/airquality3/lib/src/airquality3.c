@@ -27,6 +27,8 @@
  *
  */
 
+//Este es un comentario de prueba!
+
 #include "airquality3.h"
 
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
