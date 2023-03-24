@@ -1,7 +1,0 @@
-type: subdirs
-project: PHT
-
-subdirs: {
-    lib
-    example
-}

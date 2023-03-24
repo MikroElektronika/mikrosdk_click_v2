@@ -1,7 +1,0 @@
-type: subdirs
-project: OOKTX
-
-subdirs: {
-    lib
-    example
-}

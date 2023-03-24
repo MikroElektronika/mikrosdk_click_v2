@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Pressure",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Pressure",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Manometer 2 click",
     "example_list": [
@@ -26,23 +25,16 @@
     "name": "mikroe.click.manometer2",
     "product_link": "https://www.mikroe.com/manometer-2-click",
     "short_description": "Manometer 2 click carries the MS5525DSO-SB001GS digital pressure sensor, based on leading MEMS technology.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2099
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.12"
+    "version": "2.1.0.14",
+    "cmake": true,
+    "alias": "Click.Manometer2",
+    "subdir_name": "lib_manometer2"
 }
-
-
-
-
-
-
-
-
-
 
 

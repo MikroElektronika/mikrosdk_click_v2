@@ -1,7 +1,0 @@
-type: subdirs
-project: MultiStepperTB67S102
-
-subdirs: {
-    lib
-    example
-}

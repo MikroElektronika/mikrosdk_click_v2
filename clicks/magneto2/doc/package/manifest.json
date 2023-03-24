@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Motion",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Magnetic",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,34 +8,34 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Magneto 2 click",
     "example_list": [
-      {
-        "project_path": "Examples/example"
-      }
+        {
+            "project_path": "Examples/example"
+        }
     ],
     "help": "Help/doc",
     "icon": "Resources/click_icon.png",
     "license": {
-      "file_path": "",
-      "id": "46"
+        "file_path": "",
+        "id": "46"
     },
     "name": "mikroe.click.magneto2",
     "product_link": "https://www.mikroe.com/magneto-2-click",
     "short_description": "Magneto 2 click is a mikroBUS add-on board with Melexis's MLX90316 monolithic rotary position sensor.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         1913
     ],
-    "version": "2.0.0.7"
+    "version": "2.1.0.12",
+    "cmake": true,
+    "alias": "Click.Magneto2",
+    "subdir_name": "lib_magneto2"
 }
-
-
 
 
 

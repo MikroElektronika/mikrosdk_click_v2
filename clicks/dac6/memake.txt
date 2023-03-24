@@ -1,7 +1,0 @@
-type: subdirs
-project: Dac6
-
-subdirs: {
-    lib
-    example
-}

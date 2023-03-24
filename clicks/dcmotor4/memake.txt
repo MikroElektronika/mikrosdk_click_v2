@@ -1,7 +1,0 @@
-type: subdirs
-project: DcMotor4
-
-subdirs: {
-    lib
-    example
-}

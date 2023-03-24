@@ -1,0 +1,8 @@
+{
+    "name": "Flash 10 Click",
+    "description": "Flash 10 Click is a compact add-on board representing a highly reliable memory solution. This board features the AT25FF321A, an SPI configurable 32Mbit (2Mx16) serial Flash memory solution from Dialog Semiconductor. The AT25FF321A is an ideal solution for systems in which program code is shadowed from Flash memory into embedded or external RAM (code shadow) for execution and where small amounts of data are stored and updated locally in the Flash memory. It has a flexible and optimized erase architecture for code and data storage applications, non-volatile protection, and four specialized 128-byte OTP security registers to store a unique device ID and locked key storage. This memory can withstand many write cycles (minimum 100k) and has a data retention period greater than 20 years.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "hw" : ["click","AT25FF321A-SSHN-B"],
+    "category" : ["Click Boards > Storage > FLASH"]
+}

@@ -45,7 +45,7 @@ void application_init ( void ) {
     // Click initialization.
 
     utm7segr_cfg_setup( &utm7segr_cfg );
-    UTM7SEGR_MAP_MIKROBUS( utm7segr_cfg, MIKROBUS_5 );
+    UTM7SEGR_MAP_MIKROBUS( utm7segr_cfg, MIKROBUS_1 );
     err_t init_flag  = utm7segr_init( &utm7segr, &utm7segr_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

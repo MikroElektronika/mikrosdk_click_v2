@@ -1,7 +1,0 @@
-type: subdirs
-project: NTAG5Link
-
-subdirs: {
-    lib
-    example
-}

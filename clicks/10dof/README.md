@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be  installed directly 
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.C10Dof
+- Click.10Dof
 
 **Additional notes and informations**
 

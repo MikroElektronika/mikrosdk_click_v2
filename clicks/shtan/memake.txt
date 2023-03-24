@@ -1,7 +1,0 @@
-type: subdirs
-project: ShtAn
-
-subdirs: {
-    lib
-    example
-}

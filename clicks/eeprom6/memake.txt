@@ -1,7 +1,0 @@
-type: subdirs
-project: EEPROM6
-
-subdirs: {
-    lib
-    example
-}

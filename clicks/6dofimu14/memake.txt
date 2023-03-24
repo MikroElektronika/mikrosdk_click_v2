@@ -1,8 +1,0 @@
-type: subdirs
-
-project: 6DOFIMU14
-
-subdirs: {
-    lib
-    example
-}

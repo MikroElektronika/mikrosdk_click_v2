@@ -1,19 +1,19 @@
 /*!
- * \file 
+ * \file
  * \brief Relay Click example
- * 
+ *
  * # Description
  * Demo application is used to shows basic controls Relay click
  *
  * The demo application is composed of two sections :
- * 
- * ## Application Init 
- * Configuring clicks and log objects. 
+ *
+ * ## Application Init
+ * Configuring clicks and log objects.
  * Settings the click in the default configuration.
- * 
- * ## Application Task  
+ *
+ * ## Application Task
  * Alternately sets relays to ON-OFF state...
- * 
+ *
  * \author Katarina Perendic
  *
  */
@@ -35,13 +35,13 @@ void application_init ( void )
     log_cfg_t log_cfg;
     relay_cfg_t cfg;
 
-    /** 
+    /**
      * Logger initialization.
      * Default baud rate: 115200
      * Default log level: LOG_LEVEL_DEBUG
-     * @note If USB_UART_RX and USB_UART_TX 
-     * are defined as HAL_PIN_NC, you will 
-     * need to define them manually for log to work. 
+     * @note If USB_UART_RX and USB_UART_TX
+     * are defined as HAL_PIN_NC, you will
+     * need to define them manually for log to work.
      * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
      */
     LOG_MAP_USB_UART( log_cfg );
@@ -61,15 +61,15 @@ void application_init ( void )
 void application_task ( void )
 {
     uint8_t cnt;
-    
+
     //  Task implementation.
-    
+
     for ( cnt = 1; cnt <= 2; cnt++)
     {
-        log_info( &logger, "*** Relay %d state is ON \r\n", cnt);
+        log_info( &logger, "*** Relay %d state is ON \r\n", (uint16_t)cnt);
         relay_set_state( &relay, cnt, RELAY_STATE_ON );
         Delay_ms ( 1000 );
-        log_info( &logger, "*** Relay %d state is OFF \r\n", cnt);
+        log_info( &logger, "*** Relay %d state is OFF \r\n", (uint16_t)cnt);
         relay_set_state( &relay, cnt, RELAY_STATE_OFF );
         Delay_ms ( 200 );
     }

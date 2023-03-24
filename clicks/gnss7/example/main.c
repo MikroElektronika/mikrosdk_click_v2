@@ -1,120 +1,78 @@
 /*!
- * \file 
- * \brief Gnss7 Click example
- * 
+ * @file main.c
+ * @brief GNSS 7 Click Example.
+ *
  * # Description
- * This example reads and processes data from GNSS7 clicks.
+ * This example demonstrates the use of GNSS 7 click by reading and displaying
+ * the GPS coordinates.
  *
  * The demo application is composed of two sections :
- * 
- * ## Application Init 
- * Initializes driver and wake-up module.
- * 
- * ## Application Task  
- * Reads the received data and parses it.
- * 
+ *
+ * ## Application Init
+ * Initializes the driver and logger.
+ *
+ * ## Application Task
+ * Reads the received data, parses the GNGGA info from it, and once it receives the position fix
+ * it will start displaying the coordinates on the USB UART.
+ *
  * ## Additional Function
- * - gnss7_process ( ) - The general process of collecting presponce 
- *                                   that sends a module.
+ * - static void gnss7_clear_app_buf ( void )
+ * - static err_t gnss7_process ( gnss7_t *ctx )
+ * - static void gnss7_parser_application ( char *rsp )
  * 
- * 
- * \author MikroE Team
+ * @author Stefan Filipovic
  *
  */
-// ------------------------------------------------------------------- INCLUDES
 
 #include "board.h"
 #include "log.h"
 #include "gnss7.h"
 #include "string.h"
 
-#define PROCESS_COUNTER 20
-#define PROCESS_RX_BUFFER_SIZE 600
-#define PROCESS_PARSER_BUFFER_SIZE 600
-
-// ------------------------------------------------------------------ VARIABLES
+#define PROCESS_BUFFER_SIZE 200
 
 static gnss7_t gnss7;
 static log_t logger;
 
-static char current_parser_buf[ PROCESS_PARSER_BUFFER_SIZE ];
+static char app_buf[ PROCESS_BUFFER_SIZE ] = { 0 };
+static int32_t app_buf_len = 0;
 
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
+/**
+ * @brief GNSS 7 clearing application buffer.
+ * @details This function clears memory of application buffer and reset its length.
+ * @return None.
+ * @note None.
+ */
+static void gnss7_clear_app_buf ( void );
 
-static void gnss7_process ( void )
+/**
+ * @brief GNSS 7 data reading function.
+ * @details This function reads data from device and concatenates data to application buffer.
+ * @param[in] ctx : Click context object.
+ * See #gnss7_t object definition for detailed explanation.
+ * @return @li @c  0 - Read some data.
+ *         @li @c -1 - Nothing is read.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+static err_t gnss7_process ( gnss7_t *ctx );
+
+/**
+ * @brief GNSS 7 parser application function.
+ * @details This function parses GNSS data and logs it on the USB UART. It clears app and ring buffers
+ * after successfully parsing data.
+ * @param[in] ctx : Click context object.
+ * See #gnss7_t object definition for detailed explanation.
+ * @param[in] rsp Response buffer.
+ * @return None.
+ * @note None.
+ */
+static void gnss7_parser_application ( gnss7_t *ctx, char *rsp );
+
+void application_init ( void ) 
 {
-    int32_t rsp_size;
-    uint16_t rsp_cnt = 0;
-    
-    char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
-    uint16_t check_buf_cnt;   
-    uint8_t process_cnt = PROCESS_COUNTER;
-    
-    // Clear parser buffer
-    memset( current_parser_buf, 0 , PROCESS_PARSER_BUFFER_SIZE ); 
-    
-    while( process_cnt != 0 )
-    {
-        rsp_size = gnss7_generic_read( &gnss7, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
-
-        if ( rsp_size > 0 )
-        {  
-            // Validation of the received data
-            for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
-            {
-                if ( uart_rx_buffer[ check_buf_cnt ] == 0 ) 
-                {
-                    uart_rx_buffer[ check_buf_cnt ] = 13;
-                }
-            }
-            
-            // Storages data in parser buffer
-            rsp_cnt += rsp_size;
-            if ( rsp_cnt < PROCESS_PARSER_BUFFER_SIZE )
-            {
-                strncat( current_parser_buf, uart_rx_buffer, rsp_size );
-            }
-            
-            // Clear RX buffer
-            memset( uart_rx_buffer, 0, PROCESS_RX_BUFFER_SIZE );
-        } 
-        else 
-        {
-            process_cnt--;
-            
-            // Process delay 
-            Delay_100ms( );
-        }
-    }
-}
-
-static void parser_application ( char *rsp )
-{
-    char element_buf[ 200 ] = { 0 };
-    
-    log_printf( &logger, "\r\n-----------------------\r\n" ); 
-    gnss7_generic_parser( rsp, GNSS7_NEMA_GNGGA, GNSS7_GNGGA_LATITUDE, element_buf );
-    if ( strlen( element_buf ) > 0 )
-    {
-        log_printf( &logger, "Latitude:  %.2s degrees, %s minutes \r\n", element_buf, &element_buf[ 2 ] );
-        gnss7_generic_parser( rsp, GNSS7_NEMA_GNGGA, GNSS7_GNGGA_LONGITUDE, element_buf );
-        log_printf( &logger, "Longitude:  %.3s degrees, %s minutes \r\n", element_buf, &element_buf[ 3 ] );
-        memset( element_buf, 0, sizeof( element_buf ) );
-        gnss7_generic_parser( rsp, GNSS7_NEMA_GNGGA, GNSS7_GNGGA_ALTITUDE, element_buf );
-        log_printf( &logger, "Alitude: %s m", element_buf );  
-    }
-    else
-    {
-        log_printf( &logger, "Waiting for the position fix..." );
-    }
-}
-
-// ------------------------------------------------------ APPLICATION FUNCTIONS
-
-void application_init ( void )
-{
-    log_cfg_t log_cfg;
-    gnss7_cfg_t cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    gnss7_cfg_t gnss7_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -127,33 +85,103 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
-    gnss7_cfg_setup( &cfg );
-    GNSS7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    gnss7_init( &gnss7, &cfg );
-
-    gnss7_module_wakeup( &gnss7 );
-    Delay_ms( 5000 );
+    // Click initialization.
+    gnss7_cfg_setup( &gnss7_cfg );
+    GNSS7_MAP_MIKROBUS( gnss7_cfg, MIKROBUS_1 );
+    if ( UART_ERROR == gnss7_init( &gnss7, &gnss7_cfg ) ) 
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
+    log_info( &logger, " Application Task " );
 }
 
-void application_task ( void )
+void application_task ( void ) 
 {
-    gnss7_process(  );
-    parser_application( current_parser_buf );
+    if ( GNSS7_OK == gnss7_process( &gnss7 ) )
+    {
+        if ( PROCESS_BUFFER_SIZE == app_buf_len )
+        {
+            gnss7_parser_application( &gnss7, app_buf );
+        }
+    }
 }
 
-void main ( void )
+void main ( void ) 
 {
     application_init( );
 
-    for ( ; ; )
+    for ( ; ; ) 
     {
         application_task( );
     }
 }
 
+static void gnss7_clear_app_buf ( void ) 
+{
+    memset( app_buf, 0, app_buf_len );
+    app_buf_len = 0;
+}
+
+static err_t gnss7_process ( gnss7_t *ctx ) 
+{
+    char rx_buf[ PROCESS_BUFFER_SIZE ] = { 0 };
+    int32_t rx_size = 0;
+    rx_size = gnss7_generic_read( ctx, rx_buf, PROCESS_BUFFER_SIZE );
+    if ( rx_size > 0 ) 
+    {
+        int32_t buf_cnt = app_buf_len;
+        if ( ( ( app_buf_len + rx_size ) > PROCESS_BUFFER_SIZE ) && ( app_buf_len > 0 ) ) 
+        {
+            buf_cnt = PROCESS_BUFFER_SIZE - ( ( app_buf_len + rx_size ) - PROCESS_BUFFER_SIZE );
+            memmove ( app_buf, &app_buf[ PROCESS_BUFFER_SIZE - buf_cnt ], buf_cnt );
+        }
+        for ( int32_t rx_cnt = 0; rx_cnt < rx_size; rx_cnt++ ) 
+        {
+            if ( rx_buf[ rx_cnt ] ) 
+            {
+                app_buf[ buf_cnt++ ] = rx_buf[ rx_cnt ];
+                if ( app_buf_len < PROCESS_BUFFER_SIZE )
+                {
+                    app_buf_len++;
+                }
+            }
+        }
+        return GNSS7_OK;
+    }
+    return GNSS7_ERROR;
+}
+
+static void gnss7_parser_application ( gnss7_t *ctx, char *rsp )
+{
+    char element_buf[ 100 ] = { 0 };
+    if ( GNSS7_OK == gnss7_parse_gngga( rsp, GNSS7_GNGGA_LATITUDE, element_buf ) )
+    {
+        static uint8_t wait_for_fix_cnt = 0;
+        if ( strlen( element_buf ) > 0 )
+        {
+            log_printf( &logger, "\r\n Latitude: %.2s degrees, %s minutes \r\n", element_buf, &element_buf[ 2 ] );
+            gnss7_parse_gngga( rsp, GNSS7_GNGGA_LONGITUDE, element_buf );
+            log_printf( &logger, " Longitude: %.3s degrees, %s minutes \r\n", element_buf, &element_buf[ 3 ] );
+            memset( element_buf, 0, sizeof( element_buf ) );
+            gnss7_parse_gngga( rsp, GNSS7_GNGGA_ALTITUDE, element_buf );
+            log_printf( &logger, " Altitude: %s m \r\n", element_buf );
+            wait_for_fix_cnt = 0;
+        }
+        else
+        {
+            if ( wait_for_fix_cnt % 5 == 0 )
+            {
+                log_printf( &logger, " Waiting for the position fix...\r\n\n" );
+                wait_for_fix_cnt = 0;
+            }
+            wait_for_fix_cnt++;
+        }
+        gnss7_clear_ring_buffers( ctx );
+        gnss7_clear_app_buf( );
+    }
+}
 
 // ------------------------------------------------------------------------ END

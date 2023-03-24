@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "OLED",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Display & LED > OLED",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "OLED B click",
     "example_list": [
@@ -26,14 +25,19 @@
     "name": "mikroe.click.oledb",
     "product_link": "https://www.mikroe.com/oled-b-click",
     "short_description": "OLED B click carries a 96 x 39px blue monochrome passive matrix OLED display. The display is bright, has a wide viewing angle and low power consumption.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "related_projects":[
+    "related_projects": [
         1111
     ],
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.5"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.11",
+    "cmake": true,
+    "alias": "Click.OLEDB",
+    "subdir_name": "lib_oledb"
 }
+
+
 
 
 

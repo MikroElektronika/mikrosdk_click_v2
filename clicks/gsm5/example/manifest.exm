@@ -1,0 +1,8 @@
+{
+    "name": "GSM 5 Click",
+    "description": "GSM 5 Click is a compact add-on board representing a compact GSM cellular network communication solution. This board features the SARA-G450, a GSM/GPRS quad-band cellular module certified and approved by the main regulatory bodies and operators from u-blox. It features class 12 GSM/GPRS connectivity in the popular u-blox SARA form factor and comes with a comprehensive feature set, including an extensive set of internet protocols designed to provide fully integrated access to u-blox GNSS positioning with embedded A-GPS (AssistNow Online and AssistNow Offline) functionality. Besides a data rate up to 85.6 kbps and an advanced jamming detection feature, this board also offers a high-quality integrated audio interface allowing voice communication.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
+    "hw" : ["click","SARA-G450-01C-01"],
+    "category" : ["Click Boards > Wireless connectivity > GSM/LTE"]
+}

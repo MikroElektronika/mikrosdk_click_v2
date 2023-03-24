@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "BT/BLE",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Wireless connectivity > BT/BLE",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Bluetooth click",
     "example_list": [
@@ -26,16 +25,17 @@
     "name": "mikroe.click.bluetooth",
     "product_link": "https://www.mikroe.com/bluetooth-click",
     "short_description": "With the range up to a 100m and low power consumption, Bluetooth click is a great solution if you are looking for a simple way to integrate Bluetooth 2.1 communication to your device. It features the RN-41 low power, class 1 Bluetooth radio module. Bluetooth click communicates with the target board MCU through UART interface and is designed to run on 3.3V power supply only.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "related_projects":[
+    "related_projects": [
         220
     ],
-    "version": "2.0.0.7"
+    "version": "2.1.0.11",
+    "cmake": true,
+    "alias": "Click.Bluetooth",
+    "subdir_name": "lib_bluetooth"
 }
-
-
 
 
 

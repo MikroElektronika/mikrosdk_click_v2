@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Capacitive",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > HMI > Capacitive",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Touchpad 4 click",
     "example_list": [
@@ -26,11 +25,15 @@
     "name": "mikroe.click.touchpad4",
     "product_link": "https://www.mikroe.com/touchpad-4-click",
     "short_description": "Touchpad 4 Click is a compact add-on board that easily integrates projected capacitive touch into user's applications. This board features the IQS7211A, a tiny capacitive touch controller from Azoteq.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.4"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.8",
+    "cmake": true,
+    "alias": "Click.Touchpad4",
+    "subdir_name": "lib_touchpad4"
 }
+
 
 
 

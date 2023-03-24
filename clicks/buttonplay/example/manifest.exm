@@ -2,7 +2,7 @@
     "name": "Button PLAY Click",
     "description": "Button PLAY click is a very interesting interactive gadget on a Click board™. It is an integrated capacitive touch sensor display in the form of a button. By utilizing an advanced capacitive touch sensing technology, the CTHS15CIC05ARROW sensor can successfully replace the traditional mechanical button, allowing very simplified yet reliable user interfaces to be developed. Besides the touch detection, this sensor also features a green arrow icon with backlight, which makes the Click board™ very useful for building various stylized and visually appealing interfaces.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","CTHS15CIC05ARROW"],
     "category" : ["Capacitive"]
 }

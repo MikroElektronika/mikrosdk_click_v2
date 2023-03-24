@@ -1,0 +1,8 @@
+{
+    "name": "eFuse 5 Click",
+    "description": "eFuse 5 Click is a compact add-on board with a power path protection solution that limits circuit currents and voltages to safe levels during fault conditions. This board features the TPS16530, an easy-to-use, positive 58V, 4.5A eFuse with a 31mΩ integrated FET from Texas Instruments. This industrial eFuse has programmable undervoltage, overcurrent, inrush current protection, and output current monitoring features. Besides, it allows flexibility to configure the device between the two current-limiting fault responses (latch off and auto-retry).",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "hw" : ["click","TPS16530"],
+    "category" : ["Click Boards > Power management > Power Switch"]
+}

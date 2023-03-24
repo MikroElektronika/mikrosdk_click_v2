@@ -2,7 +2,7 @@
     "name": "POT 2 Click",
     "description": "POT 2 click is a Click board™ with the accurate selectable reference voltage output.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MCP6022","MCP1541"],
     "category" : ["Potentiometer"] 
 }

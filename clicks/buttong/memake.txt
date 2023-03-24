@@ -1,8 +1,0 @@
-type: subdirs
-
-project: ButtonG
-
-subdirs: {
-    lib
-    example
-}

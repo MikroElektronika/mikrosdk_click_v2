@@ -1,7 +1,0 @@
-type: subdirs
-project: 3DHall3
-
-subdirs: {
-    lib
-    example
-}

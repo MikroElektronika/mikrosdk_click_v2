@@ -1,7 +1,0 @@
-type: subdirs
-project: AnalogKey
-
-subdirs: {
-    lib
-    example
-}

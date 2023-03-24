@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Optical",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Optical",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Opto Encoder click",
     "example_list": [
@@ -26,15 +25,17 @@
     "name": "mikroe.click.optoencoder",
     "product_link": "https://www.mikroe.com/opto-encoder-click",
     "short_description": "Opto Encoder click is a linear incremental optical sensor/encoder click, which can be used for the movement or rotation encoding.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2350
     ],
-    "version": "2.0.0.6"
+    "version": "2.1.0.10",
+    "cmake": true,
+    "alias": "Click.OptoEncoder",
+    "subdir_name": "lib_optoencoder"
 }
-
 
 
 

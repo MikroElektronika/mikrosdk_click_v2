@@ -1,7 +1,0 @@
-type: subdirs
-project: Accel14
-
-subdirs: {
-    lib
-    example
-}

@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Wireless connectivity > RFID/NFC",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+"dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "NFC 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.nfc3",
+    "product_link": "https://www.mikroe.com/nfc-3-click",
+    "short_description": "NFC 3 Click is a compact add-on board that contains an NFC transceiver for contactless communication at 13.56MHz. This board features the PN5180A0HN, a highly integrated high-performance full NFC Forum-compliant frontend from NXP Semiconductors. The PN5180A0HN utilizes an outstanding modulation and demodulation concept for different contactless communication methods and protocols. It is fully compliant with many Reader/Writer standards (ISO 14443A/B, ISO 15693, ISO 18092, and more), alongside support for reading all NFC tag types (type 1, 2, 3, 4A, and 4B). Besides the SPI host interface, it also features high RF output power to drive an antenna etched on the PCB directly, besides its tuning circuit, at high efficiency.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.0",
+    "cmake": true,
+    "alias": "Click.NFC3",
+    "subdir_name": "lib_nfc3"
+}

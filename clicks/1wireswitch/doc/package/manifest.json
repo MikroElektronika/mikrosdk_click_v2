@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Interface > 1-Wire",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "1-Wire Switch click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.c1wireswitch",
+    "product_link": "https://www.mikroe.com/1-wire-switch-click",
+    "short_description": "1-Wire Switch Click is a compact add-on board that allows you to switch a device remotely using a 1-wire signal. This board features the DS2413, a dual-channel programmable I/O 1-Wire switch from Analog Devices. ",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.c1WireSwitch",
+    "subdir_name": "lib_c1wireswitch"
+}
+

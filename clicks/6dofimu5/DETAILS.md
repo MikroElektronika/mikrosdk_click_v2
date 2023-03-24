@@ -169,7 +169,7 @@ The full application code, and ready to use projects can be  installed directly 
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.C6DofImu5
+- Click.6DofImu5
 
 **Additional notes and informations**
 

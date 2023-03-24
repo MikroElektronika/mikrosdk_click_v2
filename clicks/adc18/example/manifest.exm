@@ -2,7 +2,7 @@
     "name": "ADC 18 Click",
     "description": "ADC 18 Click is a compact add-on board that contains a high-performance data converter. This board features the MAX22005, an SPI-configurable twelve-channel 24-bit analog-to-digital converter (ADC) from Analog Devices.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MAX22005ALM"],
     "category" : ["ADC"]
 }

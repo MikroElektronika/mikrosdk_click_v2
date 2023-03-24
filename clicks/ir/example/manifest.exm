@@ -2,7 +2,7 @@
     "name": "IR Click",
     "description": "IR Click is an add-on board in mikroBUS form factor. It’s a compact and easy solution for adding infrared (IR) remote control module to your design.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
     "hw" : ["click","TSOP38338"],
     "category" : ["Optical"]
 }

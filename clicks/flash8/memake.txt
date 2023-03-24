@@ -1,0 +1,7 @@
+type: subdirs
+project: Flash8
+
+subdirs: {
+    lib
+    example
+}

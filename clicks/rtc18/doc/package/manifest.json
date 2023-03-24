@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
     "category": "Click Boards > Clock & Timing > RTC",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "RTC 18 click",
     "example_list": [
@@ -25,9 +24,14 @@
     },
     "name": "mikroe.click.rtc18",
     "product_link": "https://www.mikroe.com/rtc-18-click",
-    "short_description": "RTC 18 Click is a compact add-on board that accurately keeps the time of a day. This board features the RV-3032-C7, an I2C-configurable real-time clock module that incorporates an integrated CMOS circuit and an XTAL from Micro Crystal AG. The RV-3032-C7 is a temperature compensated RTC with premium accuracy (0.22 sec/day) and extremely low power consumption, allowing it to be used with a single button cell battery for an extended period. It can measure temperature with a typical accuracy of ±1°C and a resolution of 0.0625°C/step with a programmable alarm on top and bottom temperature limits. It features standard RTC functions with automatic leap year correction, and standard interrupt for Periodic Countdown Timer and Periodic Time Update (seconds, minutes), date/hour/minute alarm, and an external event.",
-    "supported_compiler": "mikroC AI",
+    "short_description": "RTC 18 Click is a compact add-on board that accurately keeps the time of a day. This board features the RV-3032-C7, an I2C-configurable real-time clock module that incorporates an integrated CMOS circuit and an XTAL from Micro Crystal AG. The RV-3032-C7 is a temperature compensated RTC with premium accuracy (0.22 sec/day) and extremely low power consumption, allowing it to be used with a single button cell battery for an extended period. It can measure temperature with a typical accuracy of Â±1Â°C and a resolution of 0.0625Â°C/step with a programmable alarm on top and bottom temperature limits. It features standard RTC functions with automatic leap year correction, and standard interrupt for Periodic Countdown Timer and Periodic Time Update (seconds, minutes), date/hour/minute alarm, and an external event.",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.3",
+    "alias": "Click.RTC18",
+    "cmake": true,
+    "subdir_name": "lib_rtc18"
 }
+
+

@@ -1,8 +1,0 @@
-type: subdirs
-
-project: Environment3
-
-subdirs: {
-    lib
-    example
-}

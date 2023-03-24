@@ -1,7 +1,0 @@
-type: subdirs
-project: Manometer2
-
-subdirs: {
-    lib
-    example
-}

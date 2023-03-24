@@ -1,7 +1,0 @@
-type: subdirs
-project: TempHum18
-
-subdirs: {
-    lib
-    example
-}

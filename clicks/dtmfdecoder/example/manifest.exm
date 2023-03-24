@@ -2,7 +2,7 @@
     "name": "DTMF Decoder Click",
     "description": "DTMF Decoder Click is a compact add-on board that contains an integrated DTMF receiver with enhanced sensitivity. This board features the MT8870D, a complete DTMF receiver integrating the band-split filter and digital decoder functions from Microchip Technology.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MT8870"],
     "category" : ["Signal processing"]
 }

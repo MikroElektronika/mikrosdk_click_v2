@@ -1,7 +1,0 @@
-type: subdirs
-project: MonarchAdapter
-
-subdirs: {
-    lib
-    example
-}

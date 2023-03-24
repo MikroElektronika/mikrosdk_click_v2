@@ -2,7 +2,7 @@
     "name": "PROFET 2 7A Click",
     "description": "PROFET 2 Click is a compact add-on board that contains a smart high-side power switch. This board features the BTS70082EPAXUMA1, a dual-channel, high-side power switch with embedded protection and diagnosis feature from Infineon Technologies. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","BTS70082EPAXUMA1"],
     "category" : ["Current sensor"]
 }

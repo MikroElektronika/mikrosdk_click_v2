@@ -2,7 +2,7 @@
     "name": "Microwave 2 Click",
     "description": "Microwave 2 click is an accurate and reliable short to medium range motion detection Click board™, based on a Doppler radar principle.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
     "hw" : ["click","NJR4265RF2C1"],
     "category" : ["Motion"] 
 }

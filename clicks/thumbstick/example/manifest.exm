@@ -2,7 +2,7 @@
     "name": "Thumbstick Click",
     "description": "Thumbstick click is a high precision input device. It features a dual axis, spring return, pushbutton enabled joystick (similar to the ones used on joypads on popular gaming consoles), and a MCP3204 12-bit A/D converter.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MCP3204"],
     "category" : ["Pushbutton/Switches"] 
 }

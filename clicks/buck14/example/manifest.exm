@@ -2,7 +2,7 @@
     "name": "Buck 14 Click",
     "description": "The Buck 14 Click is a Click board™ based around the BMR4613001/001, a PoL regulator from Flex. It's high-efficiency step-down converter which provides a highly regulated output voltage derived from the connected power source, rated from 4.5 to 14V.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","BMR4613001/001"],
     "category" : ["Buck"] 
 }

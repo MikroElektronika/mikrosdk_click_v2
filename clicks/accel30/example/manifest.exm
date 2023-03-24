@@ -1,0 +1,8 @@
+{
+    "name": "Accel 30 Click",
+    "description": "Accel 30 Click is a compact add-on board that contains an acceleration sensor. This board features the MC3635, an ultra-low power, low-noise, integrated digital output 3-axis accelerometer from MEMSIC. The MC3635 allows selectable full-scale acceleration measurements in ranges of ±2g, ±4g, ±8g, ±12g, or ±16g in three axes with a configurable host interface that supports both SPI and I2C serial communication. It also supports high-resolution, low-power operating modes and interrupt feature for various events allowing maximum flexibility to meet multiple use case needs.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "hw" : ["click","MC3635"],
+    "category" : ["Click Boards > Sensors > Motion"]
+}

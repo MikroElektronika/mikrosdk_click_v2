@@ -1,0 +1,39 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Proximity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+"dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Proximity 16 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.proximity16",
+    "product_link": "https://www.mikroe.com/proximity-16-click",
+    "short_description": "Proximity 16 Click is a compact add-on board that contains a close-range proximity sensing solution. This board features the VL53L5CX, a Time-of-Flight (ToF) multizone ranging sensor from STMicroelectronics. The VL53L5CX integrates a SPAD array, physical infrared filters, and diffractive optical elements (DOE) to achieve the best-ranging performance in various ambient lighting conditions with different cover glass materials. It allows absolute distance measurement, whatever the target color and reflectance, provides accurate ranging up to 400cm, and can work at fast speeds (60Hz). Also, multizone distance measurements are possible with either 4x4 or 8x8 separate zones with broad 63° diagonal software-configurable Field-of-View (FoV).",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.4",
+    "cmake": true,
+    "alias": "Click.Proximity16",
+    "subdir_name": "lib_proximity16"
+}
+
+
+
+

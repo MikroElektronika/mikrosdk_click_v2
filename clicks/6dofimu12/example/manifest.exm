@@ -2,7 +2,7 @@
     "name": "6DOF IMU 12 Click",
     "description": "6DOF IMU 12 Click carries the ultra-low-power BMI270 from Bosch Sensortec, inertial measurement unit optimized for wearables providing precise acceleration, angular rate measurement and intelligent on-chip motion-triggered interrupt features.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic32","gcc-riscv"],
     "hw" : ["click","BMI270"],
     "category" : ["Motion"] 
 }

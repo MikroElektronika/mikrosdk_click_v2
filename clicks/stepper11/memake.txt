@@ -1,7 +1,0 @@
-type: subdirs
-project: Stepper11
-
-subdirs: {
-    lib
-    example
-}

@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Magnetic",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Magnetic",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Angle 8 click",
     "example_list": [
@@ -26,9 +25,16 @@
     "name": "mikroe.click.angle8",
     "product_link": "https://www.mikroe.com/angle-8-click",
     "short_description": "Angle 8 Click is a compact add-on board that detects the absolute angular position of a permanent magnet. This board features the MA782GGU, a low-power angle sensor with integrated wake-up angle detection from Monolithic Power Systems. With its power cycling ability, the MA782GGU can be optimized for applications that require low average power. It supports a wide range of magnetic field strengths and spatial configurations, with both end-of-shaft and off-axis (side-shaft mounting), supported configurations. Fast data acquisition and processing provides accurate angle measurement at an applied magnetic field of 60mT, alongside magnetic field strength detection with programmable thresholds. This Click board™ is suitable for general-purpose angle measurements, in embedded motion control applications, as a power/speed control trigger solution, and more.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.7",
+    "cmake": true,
+    "alias": "Click.Angle8",
+    "subdir_name": "lib_angle8"
 }
+
+
+
+
 

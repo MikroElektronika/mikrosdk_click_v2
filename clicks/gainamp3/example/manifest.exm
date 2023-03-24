@@ -2,7 +2,7 @@
     "name": "GainAMP 3 Click",
     "description": "GainAMP 3 Click is a compact add-on board that contains a 4-channel programmable gain amplifier. This board features the ADA4254, a zero drift, high voltage, programmable gain instrumentation amplifier from Analog Devices. It features 12 binary weighted gains and three scaling gain options resulting in 36 possible gain settings. It comes with an input multiplexer providing ±60V protection to the high impedance inputs of the amplifier and an excitation current source output available to bias sensors such as resistance temperature detectors (RTDs).",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","ADA4254"],
     "category" : ["Amplifier"]
 }

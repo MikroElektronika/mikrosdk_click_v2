@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Amplifier",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Audio & voice > Signal processing",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Headphone AMP click",
     "example_list": [
@@ -26,9 +25,15 @@
     "name": "mikroe.click.headphoneamp",
     "product_link": "https://www.mikroe.com/headphone-amp-click",
     "short_description": "Headphone Amp Click is a compact add-on board that contains a stereo headphone amplifier. This board features the LM4811, Boomer® audio power amplifier capable of delivering 105mW per channel with digital volume control from Texas Instruments. The Boomer® amplifiers are specifically designed to provide high-quality output power with a minimal amount of external components. Since the LM4811 does not require bootstrap capacitors or snubber networks, it is optimally suited for low-power portable systems. It features a digital volume control that sets the amplifier's gain from +12dB to −33dB in 16 discrete steps, in addition to a micro-power consumption Shutdown mode.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.2"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.6",
+    "cmake": true,
+    "alias": "Click.HeadphoneAMP",
+    "subdir_name": "lib_headphoneamp"
 }
+
+
+
 

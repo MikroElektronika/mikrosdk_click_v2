@@ -1,0 +1,38 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Temperature & humidity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "TempHum 23 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.temphum23",
+    "product_link": "https://www.mikroe.com/temphum-23-click",
+    "short_description": "Temp&Hum 23 Click is a compact add-on board representing temperature and humidity sensing solution. This board features the SHT45, a 4th generation ultra-low-power relative humidity and temperature sensor from Sensirion. The SHT45 is characterized by its high accuracy (±1% RH and ±0.1°C over a wide operating temperature range) and high resolution providing 16-bit data to the host controller with a configurable I2C interface. Also, it is designed for reliable operation in harsh conditions such as condensing environments. This Click board™ is perfectly suitable for high-volume applications.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.3",
+    "cmake": true,
+    "alias": "Click.TempHum23",
+    "subdir_name": "lib_temphum23"
+}
+
+
+

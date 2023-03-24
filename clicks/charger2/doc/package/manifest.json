@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Battery charger",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Power management > Battery Charger",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Charger 2 click",
     "example_list": [
@@ -26,16 +25,17 @@
     "name": "mikroe.click.charger2",
     "product_link": "https://www.mikroe.com/charger-2-click",
     "short_description": "Charger 2 click is a LiPo/Li-Ion battery charger with the additional monitoring IC onboard. This Click board™ as a whole, offers unpreceded battery charging and monitoring solution for 3.7V LiPo/Li-Ion batteries, with the capacity measurement/gas gauge function, for up to 7000 mAh.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2403
     ],
-    "version": "2.0.0.7"
+    "version": "2.1.0.11",
+    "cmake": true,
+    "alias": "Click.Charger2",
+    "subdir_name": "lib_charger2"
 }
-
-
 
 
 

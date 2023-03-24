@@ -1,7 +1,0 @@
-type: subdirs
-project: RTC16
-
-subdirs: {
-    lib
-    example
-}

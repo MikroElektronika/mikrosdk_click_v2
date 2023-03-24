@@ -1,7 +1,0 @@
-type: subdirs
-project: IRGrid3
-
-subdirs: {
-    lib
-    example
-}

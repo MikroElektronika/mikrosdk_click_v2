@@ -1,7 +1,0 @@
-type: subdirs
-project: WaterDetect
-
-subdirs: {
-    lib
-    example
-}

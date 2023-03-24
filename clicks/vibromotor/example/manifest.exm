@@ -2,7 +2,7 @@
     "name": "Vibro Motor Click",
     "description": "Vibro Motor click features a compact size Eccentric Rotating Mass (ERM) motor, labeled as C1026B002F. This type of motor is often used for haptic feedback on many small handheld devices, such as the cellphones, pagers, RFID scanners and similar devices. This motor contains a small eccentric weight on its rotor, so while rotating it also produces vibration effect. This kind of motors is sometimes referred to as coin motors, due to its shape.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","C1026B002F"],
     "category" : ["Haptic"]
 }

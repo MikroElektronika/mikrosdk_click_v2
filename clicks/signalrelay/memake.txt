@@ -1,7 +1,0 @@
-type: subdirs
-project: SignalRelay
-
-subdirs: {
-    lib
-    example
-}

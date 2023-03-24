@@ -84,14 +84,21 @@ void application_init ( void )
      * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
      */
     LOG_MAP_USB_UART( log_cfg );
-    log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
-
-    //  Click initialization.
-
-    templog_cfg_setup( &cfg );
+    log_init( &logger, &log_cfg );    
+    log_info( &logger, " Application Init " );
+    
+    // Click initialization.
+    templog_cfg_setup ( &cfg );    
     TEMPLOG_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    templog_init( &templog, &cfg );
+    if ( TEMPLOG_OK != templog_init ( &templog, &cfg ) )
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
+    
+    templog_default_cfg ( &templog );
+    
+    log_info( &logger, " Application Task " );
 }
   
 ```

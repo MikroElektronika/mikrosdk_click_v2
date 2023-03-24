@@ -1,7 +1,0 @@
-type: subdirs
-project: Touchpad
-
-subdirs: {
-    lib
-    example
-}

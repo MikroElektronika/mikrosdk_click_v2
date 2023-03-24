@@ -1,8 +1,0 @@
-type: subdirs
-
-project: NFC4
-
-subdirs: {
-    lib
-    example
-}

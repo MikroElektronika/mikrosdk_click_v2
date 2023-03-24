@@ -86,7 +86,7 @@ void application_task ( void ) {
     char inx;
     if ( log_read( &logger, &inx, 1 ) != CURRENTLIMIT_ERROR ) {
         if ( inx >= '1' && inx <= '8' ) {
-            currentlimit_set_limit( &currentlimit, lim_val[ inx - 1 ] );
+            currentlimit_set_limit( &currentlimit, lim_val[ inx - 49 ] );
             log_printf( &logger, " Selected mode %d, \r\n Current limit is %d mA \r\n", ( uint16_t ) inx - 48, lim_data[ inx - 49 ] );
             log_printf( &logger, "- - - - - - - - - - - - - - - \r\n" );
         } else { 

@@ -1,7 +1,0 @@
-type: subdirs
-project: IrThermo5V
-
-subdirs: {
-    lib
-    example
-}

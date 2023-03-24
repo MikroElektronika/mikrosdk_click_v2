@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "CAN",
+    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "category": "Click Boards > Interface > CAN",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "CAN FD click",
     "example_list": [
@@ -26,14 +25,18 @@
     "name": "mikroe.click.canfd",
     "product_link": "https://www.mikroe.com/can-fd-click",
     "short_description": "CAN FD Click is a add-on board based on TLE9252V CAN network transceiver, designed for HS CAN networks up to 5 Mbit/s in automotive and industrial applications.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "related_projects":[
+    "related_projects": [
         3105
     ],
-    "version": "2.0.0.5"
+    "version": "2.1.0.9",
+    "cmake": true,
+    "alias": "Click.CanFd",
+    "subdir_name": "lib_canfd"
 }
+
 
 
 

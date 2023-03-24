@@ -4,5 +4,5 @@
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","mikrocpic32"],
     "hw" : ["click","BHI260AP","BMM150","BMP390","BME688"],
-    "category" : ["Click Boards > Sensors > Motion"]
+    "category" : ["Click Boards > Sensors > Environmental"]
 }

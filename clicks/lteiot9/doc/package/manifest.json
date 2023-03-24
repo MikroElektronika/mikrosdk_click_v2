@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "LTE IoT",
+    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "category": "Click Boards > Wireless connectivity > LTE IoT",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "LTE IoT 9 click",
     "example_list": [
@@ -26,15 +25,14 @@
     "name": "mikroe.click.lteiot9",
     "product_link": "https://www.mikroe.com/lte-iot-9-click",
     "short_description": "LTE IoT 9 Click is a compact add-on board containing a cellular IoT Module that supports 3GPP Release 14 and all LTE bands.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.8"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.13",
+    "cmake": true,
+    "alias": "Click.LTEIoT9",
+    "subdir_name": "lib_lteiot9"
 }
-
-
-
-
 
 
 

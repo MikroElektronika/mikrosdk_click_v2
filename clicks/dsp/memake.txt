@@ -1,8 +1,0 @@
-type: subdirs
-
-project: Dsp
-
-subdirs: {
-    lib
-    example
-}

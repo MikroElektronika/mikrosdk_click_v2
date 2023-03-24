@@ -2,7 +2,7 @@
     "name": "Flash 6 Click",
     "description": "The Flash 6 Click based on W25Q128JV (128M-bit) flash memory from Winbond provides a storage solution for systems with limited space, pins and power.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","W25Q128JV"],
     "category" : ["Flash"] 
 }

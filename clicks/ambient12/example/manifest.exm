@@ -2,7 +2,7 @@
     "name": "Ambient 12 Click",
     "description": "Ambient 12 Click is a compact add-on board used to sense the amount of the present ambient light. This board features the BH1620FVC, an analog current-output type ambient light sensor from Rohm Semiconductor.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","BH1620FVC-TR"],
     "category" : ["Optical"]
 }

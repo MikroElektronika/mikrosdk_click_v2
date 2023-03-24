@@ -227,7 +227,7 @@ The full application code, and ready to use projects can be installed directly f
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.C4GLTENA
+- Click.4GLTENA
 
 **Additional notes and informations**
 

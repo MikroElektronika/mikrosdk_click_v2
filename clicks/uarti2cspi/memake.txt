@@ -1,7 +1,0 @@
-type: subdirs
-project: UARTI2CSPI
-
-subdirs: {
-    lib
-    example
-}

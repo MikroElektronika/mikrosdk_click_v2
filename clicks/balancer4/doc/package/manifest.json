@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
     "category": "Click Boards > Power management > Battery Charger",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Balancer 4 click",
     "example_list": [
@@ -25,10 +24,12 @@
     },
     "name": "mikroe.click.balancer4",
     "product_link": "https://www.mikroe.com/balancer-4-click",
-    "short_description": "Balancer 4 Click is a compact add-on board optimized for overvoltage protection balancing the voltage of serially connected batteries. This board features the MP2672A, a highly integrated, flexible switch-mode battery charger for Lithium-Ion batteries with two cells in series from Monolithic Power Systems (MPS). The MP2672A has a narrow voltage DC (NVDC) power structure and monitors the voltage across each cell, equalizing the cell’s voltages if the difference between the two cells exceeds the mismatch threshold. It also has two selective operating modes with configurable output current up to 2A via register setting via I2C serial interface, alongside selectable MP2672A power supply, LED indication, and protection features allowing a reliable operation.",
-    "supported_compiler": "mikroC AI",
+    "short_description": "Balancer 4 Click is a compact add-on board optimized for overvoltage protection balancing the voltage of serially connected batteries. This board features the MP2672A, a highly integrated, flexible switch-mode battery charger for Lithium-Ion batteries with two cells in series from Monolithic Power Systems (MPS). The MP2672A has a narrow voltage DC (NVDC) power structure and monitors the voltage across each cell, equalizing the cell�s voltages if the difference between the two cells exceeds the mismatch threshold. It also has two selective operating modes with configurable output current up to 2A via register setting via I2C serial interface, alongside selectable MP2672A power supply, LED indication, and protection features allowing a reliable operation.",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.0",
+    "alias": "Click.Balancer4",
+    "cmake": true,
+    "subdir_name": "lib_balancer4"
 }
-

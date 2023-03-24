@@ -1,7 +1,0 @@
-type: subdirs
-project: NfcTag4
-
-subdirs: {
-    lib
-    example
-}

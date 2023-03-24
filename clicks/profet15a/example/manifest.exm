@@ -2,7 +2,7 @@
     "name": "PROFET 15A Click",
     "description": "PROFET Click is a compact add-on board that contains a smart high-side power switch. This board features the BTS70041EPPXUMA1, a single-channel, high-side power switch with embedded protection and diagnosis feature from Infineon Technologies. This switch has a driving capability suitable for 15A loads featuring a ReverSave™, which causes the power transistor to switch on in case of reverse polarity. Besides its protection features, it also has pin-configurable diagnosis features such as proportional load current sense, open Load in ON and OFF state, and short circuit to ground and battery.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","BTS70041EPPXUMA1"],
     "category" : ["Current sensor"]
 }

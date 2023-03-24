@@ -2,7 +2,7 @@
     "name": "BI HALL Click",
     "description": "Bi Hall click is a simple solution for adding a bipolar Hall switch to your design. It carries the Melexis US2882 bipolar Hall-effect switch and a 74LVC1T45 single bit, dual supply transceiver.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","US2882"],
     "category" : ["Magnetic"] 
 }

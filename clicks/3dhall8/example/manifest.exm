@@ -2,7 +2,7 @@
     "name": "3D Hall 8 Click",
     "description": "3D Hall 8 Click is a compact add-on board containing an ultra-small 3D-magnetic sensor for industrial and consumer applications.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","TLI493D-W2BW"],
     "category" : ["Magnetic"]
 }

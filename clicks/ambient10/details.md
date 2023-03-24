@@ -121,7 +121,7 @@ void application_task ( void )
 {
     float voltage = 0;
     
-    if ( AMBIENT10_OK == ambient10_read_adc_voltage ( &ambient10, &voltage ) )
+    if ( AMBIENT10_OK == ambient10_read_an_pin_voltage ( &ambient10, &voltage ) )
     {
         log_printf( &logger, " Illuminance : %u Lux\r\n\n", ambient10_voltage_to_lux( &ambient10, voltage ) );
     }

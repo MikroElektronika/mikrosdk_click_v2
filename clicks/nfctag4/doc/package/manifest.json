@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "RFID/NFC",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Wireless connectivity > RFID/NFC",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,34 +8,34 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "NFC Tag 4 click",
     "example_list": [
-      {
-        "project_path": "Examples/example"
-      }
+        {
+            "project_path": "Examples/example"
+        }
     ],
     "help": "Help/doc",
     "icon": "Resources/click_icon.png",
     "license": {
-      "file_path": "",
-      "id": "46"
+        "file_path": "",
+        "id": "46"
     },
     "name": "mikroe.click.nfctag4",
     "product_link": "https://www.mikroe.com/nfc-tag-4-click",
     "short_description": "NFC Tag 4 Click is NFC tag device, offering 16 Kbit of electrically erasable programmable memory (EEPROM). ",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2886
     ],
-  "version": "2.0.0.7"
+    "version": "2.1.0.11",
+    "cmake": true,
+    "alias": "Click.NfcTag4",
+    "subdir_name": "lib_nfctag4"
 }
-
-
 
 
 

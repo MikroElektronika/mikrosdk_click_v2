@@ -1,7 +1,0 @@
-type: subdirs
-project: USBUART4
-
-subdirs: {
-    lib
-    example
-}

@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "LoRa",
+    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "category": "Click Boards > Wireless connectivity > LoRa",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Nano LR click",
     "example_list": [
@@ -26,11 +25,15 @@
     "name": "mikroe.click.nanolr",
     "product_link": "https://www.mikroe.com/nano-lr-click",
     "short_description": "Nano LR Click is a compact add-on board that contains a long-range transceiver. This board features the EMB-LR1276S, RF technology-based SRD transceiver, which operates at a frequency of 868MHz from Embit.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.0.0.4"
+    "version": "2.1.0.9",
+    "cmake": true,
+    "alias": "Click.NanoLR",
+    "subdir_name": "lib_nanolr"
 }
+
 
 
 

@@ -1,7 +1,0 @@
-type: subdirs
-project: DIGIPOT8
-
-subdirs: {
-    lib
-    example
-}

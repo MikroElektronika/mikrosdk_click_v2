@@ -1,0 +1,8 @@
+{
+    "name": "Angle 6 Click",
+    "description": "Angle 6 Click is a compact add-on board that detects the absolute angular position of a permanent magnet, typically a diametrically magnetized cylinder on a rotating shaft. This board features the MAQ470GQE, a 12-bit contactless angle sensor with PWM output from Monolithic Power Systems. It supports a wide range of magnetic field strengths and spatial configurations, with both end-of-shaft and off-axis (side-shaft mounting), supported configurations. Fast data acquisition and processing provides accurate angle measurement at speeds from 0 to 60,000 rpm, alongside magnetic field strength detection with programmable thresholds.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "hw" : ["click","MAQ470GQE-AEC1-Z"],
+    "category" : ["Click Boards > Sensors > Magnetic"]
+}

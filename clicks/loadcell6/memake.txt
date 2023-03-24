@@ -1,7 +1,0 @@
-type: subdirs
-project: LoadCell6
-
-subdirs: {
-    lib
-    example
-}

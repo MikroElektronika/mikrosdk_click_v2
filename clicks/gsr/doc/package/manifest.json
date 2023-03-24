@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Biometrics",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Biometrics",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "GSR click",
     "example_list": [
@@ -26,17 +25,16 @@
     "name": "mikroe.click.gsr",
     "product_link": "https://www.mikroe.com/gsr-click",
     "short_description": "GSR click can be used to measure the electrodermal activity (EDA) of the human body, also known as the galvanic skin response (GSR). ",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2224
     ],
-    "version": "2.0.0.7"
+    "version": "2.1.0.9",
+    "cmake": true,
+    "alias": "Click.Gsr",
+    "subdir_name": "lib_gsr"
 }
-
-
-
-
 
 

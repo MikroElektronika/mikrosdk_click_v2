@@ -2,7 +2,7 @@
     "name": "Vibro Motor 2 Click",
     "description": "Vibro Motor 2 Click features a compact size Eccentric Rotating Mass (ERM) motor, labeled as Z4FC1B1301781 as well as DMG3420U MOSFET to drive the ERM motor, since the MCU itself cannot provide enough power for the motor driving. This type of motor is often used for haptic feedback on many small handheld devices, such as the cellphones, pagers, RFID scanners and similar devices. This motor contains a small eccentric weight on its rotor, so while rotating it also produces vibration effect",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","Z4FC1B1301781"],
     "category" : ["Haptic"]
 }

@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Gas",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Gas",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Air quality click",
     "example_list": [
@@ -26,14 +25,18 @@
     "name": "mikroe.click.airquality",
     "product_link": "https://www.mikroe.com/air-quality-click",
     "short_description": "Air quality click carries an MQ-135 sensor for detecting poisonous gases that impact air quality in homes and offices. The click is designed to run on a 5V power supply. It communicates with the target microcontroller over the AN pin on the mikroBUS™ line.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-	"related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         1045
     ],
-    "version": "2.0.0.5"
+    "version": "2.1.0.9",
+    "cmake": true,
+    "alias": "Click.Airquality",
+    "subdir_name": "lib_airquality"
 }
+
 
 
 

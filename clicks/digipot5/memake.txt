@@ -1,7 +1,0 @@
-type: subdirs
-project: DigiPot5
-
-subdirs: {
-    lib
-    example
-}

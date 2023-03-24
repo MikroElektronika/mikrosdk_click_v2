@@ -1,7 +1,0 @@
-type: subdirs
-project: ISOADC3
-
-subdirs: {
-    lib
-    example
-}

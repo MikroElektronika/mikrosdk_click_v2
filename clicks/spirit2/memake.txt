@@ -1,7 +1,0 @@
-type: subdirs
-project: SPIRIT2
-
-subdirs: {
-    lib
-    example
-}

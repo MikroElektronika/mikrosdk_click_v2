@@ -2,7 +2,7 @@
     "name": "RTC 14 Click",
     "description": "RTC 14 Click is a compact add-on board that measures the passage of time. This board features the ISL1221, a low-power RTC with battery-backed SRAM and event detection from Renesas. The ISL1221 tracks time with separate registers for hours, minutes, and seconds, operating in normal and battery mode. It also can timestamp an event by either issuing an output signal, containing the second, minute, hour, date, month, and year that the triggering event occurred, or by stopping the RTC registers from advancing at the moment the event occurs. The calendar feature is exceptionally accurate through 2099, with automatic leap year correction. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","ISL1221"],
     "category" : ["RTC"]
 }

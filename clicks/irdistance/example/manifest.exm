@@ -2,7 +2,7 @@
     "name": "IR distance Click",
     "description": "IR distance click carries Sharp’s GP2Y0A60SZ0F distance measuring sensor, which comprises of an integrated PSD (position sensitive detector), an infrared LED and a signal processing circuit. The measuring range is between 10 and 150 cm. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over RST and AN pin on the mikroBUS™ line.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","GP2Y0A60SZ0F"],
     "category" : ["Optical"] 
 }

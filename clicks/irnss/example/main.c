@@ -3,113 +3,70 @@
  * @brief IRNSS Click Example.
  *
  * # Description
- * This example application reads data, checks for specific command. If command 
- * is found checks for data validation and if it's found logs that data to UART terminal.
+ * This example demonstrates the use of IRNSS click by reading and displaying
+ * the GPS coordinates.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes log and device communication modules.
+ * Initializes the driver and resets the click board.
  *
  * ## Application Task
- * Collects data and waits for Latitude, longitude, and altitude data from the device. 
- * When it's received logs data, and while waiting it will log '.' until data is received.
+ * Reads the received data, parses the GNGGA info from it, and once it receives the position fix
+ * it will start displaying the coordinates on the USB UART.
  *
  * ## Additional Function
- * - static void irnss_clear_app_buf ( void )           - Function clears memory of app_buf.
- * - static err_t irnss_process ( void )                - The general process of collecting 
- *                                                        presponce that a module sends.
- * - static err_t irnss_cmd_parser ( char *cmd )        - This function searches @b app_buf 
- *                                                        for @b cmd and logs data of that command.
- * - static err_t irnss_element_parser 
- * ( char *cmd, uint8_t element, char *element_data )   - This function searches @b app_buf 
- *                                                        for @b cmd and it's @b element and 
- *                                                        copies data to @b element_data buffer.
+ * - static void irnss_clear_app_buf ( void )
+ * - static err_t irnss_process ( irnss_t *ctx )
+ * - static void irnss_parser_application ( char *rsp )
  *
- * *note:* 
- * - For the device to connect it can take it from 1 to 8 minutes to get useful data from satellites.
- *   Time to connect is depending on weather, do you have an external antenna, etc.
- * 
- * @author Luka Filipovic
+ * @author Stefan Filipovic
  *
  */
 
 #include "board.h"
 #include "log.h"
 #include "irnss.h"
-#include "string.h"
 
-#define PROCESS_BUFFER_SIZE                 700
-
-#define RSP_GNGGA                           "GNGGA"
-
-#define RSP_GNGGA_LATITUDE_ELEMENT          2
-#define RSP_GNGGA_LONGITUDE_ELEMENT         4
-#define RSP_GNGGA_ALTITUDE_ELEMENT          9
+#define PROCESS_BUFFER_SIZE 200
 
 static irnss_t irnss;
 static log_t logger;
 
-static char app_buf[ PROCESS_BUFFER_SIZE ]  = { 0 };
-static int32_t app_buf_len                  = 0;
-static int32_t app_buf_cnt                  = 0;
-
-static char latitude_data[ 30 ]             = { 0 };
-static char longitude_data[ 30 ]            = { 0 };
-static char altitude_data[ 30 ]             = { 0 };
-
-err_t last_error_flag;
+static char app_buf[ PROCESS_BUFFER_SIZE ] = { 0 };
+static int32_t app_buf_len = 0;
+static int32_t app_buf_cnt = 0;
 
 /**
  * @brief IRNSS clearing application buffer.
- * @details This function clears memory of application buffer and reset it's length and counter.
+ * @details This function clears memory of application buffer and reset its length and counter.
+ * @return None.
  * @note None.
  */
 static void irnss_clear_app_buf ( void );
 
 /**
  * @brief IRNSS data reading function.
- * @details This function reads data from device and concats data to application buffer.
- *
+ * @details This function reads data from device and concatenates data to application buffer.
+ * @param[in] ctx : Click context object.
+ * See #irnss_t object definition for detailed explanation.
  * @return @li @c  0 - Read some data.
- *         @li @c -1 - Nothing is read.
- *         @li @c -2 - Application buffer overflow.
- *
+ *         @li @c -1 - Nothing is read or Application buffer overflow.
  * See #err_t definition for detailed explanation.
  * @note None.
  */
-static err_t irnss_process ( void );
+static err_t irnss_process ( irnss_t *ctx );
 
 /**
- * @brief IRNSS command data parser.
- * @details This function searches @b app_buf for @b cmd and logs data of that command.
- *
- * @param[in] cmd : Command to parese.
- * 
- * @return @li @c  0 - Parsed data succes.
- *         @li @c -1 - No @b cmd in application buffer.
- *
- * See #err_t definition for detailed explanation.
+ * @brief IRNSS parser application.
+ * @param[in] rsp Response buffer.
+ * @details This function logs GNSS data on the USB UART.
+ * @return None.
  * @note None.
  */
-static err_t irnss_cmd_parser ( char *cmd );
+static void irnss_parser_application ( char *rsp );
 
-/**
- * @brief IRNSS element of command data parser.
- * @details This function searches @b app_buf for @b cmd and it's 
- *          @b element and copies data to @b element_data buffer.
- *
- * @return @li @c  0 - Read some data.
- *         @li @c -1 - No @b cmd in application buffer.
- *         @li @c -2 - No data for @b element in @b cmd.
- *         @li @c -3 - Data buffer overflow.
- *
- * See #err_t definition for detailed explanation.
- * @note None.
- */
-static err_t irnss_element_parser ( char *cmd, uint8_t element, char *element_data );
-
-void application_init ( void ) 
+void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
     irnss_cfg_t irnss_cfg;  /**< Click config object. */
@@ -126,82 +83,32 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
-    Delay_ms( 500 );
 
     // Click initialization.
     irnss_cfg_setup( &irnss_cfg );
     IRNSS_MAP_MIKROBUS( irnss_cfg, MIKROBUS_1 );
-    err_t init_flag  = irnss_init( &irnss, &irnss_cfg );
-    if ( init_flag == UART_ERROR )
+    if ( UART_ERROR == irnss_init( &irnss, &irnss_cfg ) ) 
     {
-        log_error( &logger, " Application Init Error. " );
-        log_info( &logger, " Please, run program again... " );
-
+        log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-
-    app_buf_len = 0;
-    app_buf_cnt = 0;
-    last_error_flag = 0;
     log_info( &logger, " Application Task " );
-    Delay_ms( 500 );
-    irnss_process();
-    irnss_clear_app_buf(  );
 }
 
-void application_task ( void ) 
+void application_task ( void )
 {
-    irnss_process();
-    
-    
-    err_t error_flag = irnss_element_parser( RSP_GNGGA, RSP_GNGGA_LATITUDE_ELEMENT, 
-                                             latitude_data );
-    
-    error_flag |= irnss_element_parser(  RSP_GNGGA, RSP_GNGGA_LONGITUDE_ELEMENT, 
-                                         longitude_data );
-    
-    error_flag |= irnss_element_parser(  RSP_GNGGA, RSP_GNGGA_ALTITUDE_ELEMENT, 
-                                         altitude_data );
-    
-    
-    if ( error_flag == 0 )
+    irnss_process( &irnss );
+    if ( app_buf_len > ( sizeof ( ( char * ) IRNSS_RSP_GNGGA ) + IRNSS_GNGGA_ELEMENT_SIZE ) ) 
     {
-        if ( last_error_flag != 0)
-        {
-            log_printf( &logger, "\r\n" );
-        }
-        log_printf( &logger, ">Latitude:\r\n - deg: %.2s \r\n - min: %s\r\n", 
-                    latitude_data, &latitude_data[ 2 ] );
-        
-        log_printf( &logger, ">Longitude:\r\n - deg: %.3s \r\n - min: %s\r\n", 
-                    longitude_data, &longitude_data[ 3 ] );
-        
-        log_printf( &logger, ">Altitude:\r\n - %sm\r\n", 
-                    altitude_data );
-        
-        log_printf( &logger, "----------------------------------------\r\n" );
-    }
-    else if ( error_flag < -1 )
-    {
-        if ( last_error_flag == 0 )
-        {
-            log_printf( &logger, "Waiting for data" );
-        }
-        log_printf( &logger, "." );
-    }
-    
-    if ( error_flag != -1 )
-    {
-        last_error_flag = error_flag;
-        irnss_clear_app_buf(  );
+        irnss_parser_application( app_buf );
     }
 }
 
-void main ( void ) 
+void main ( void )
 {
     application_init( );
 
-    for ( ; ; ) 
+    for ( ; ; )
     {
         application_task( );
     }
@@ -214,141 +121,68 @@ static void irnss_clear_app_buf ( void )
     app_buf_cnt = 0;
 }
 
-static err_t irnss_process ( void ) 
+static err_t irnss_process ( irnss_t *ctx ) 
 {
-    int32_t rx_size;
-    char rx_buff[ PROCESS_BUFFER_SIZE ] = { 0 };
-
-    rx_size = irnss_generic_read( &irnss, rx_buff, PROCESS_BUFFER_SIZE );
-
-    if ( rx_size > 0 )
+    int32_t rx_size = 0;
+    char rx_buf[ PROCESS_BUFFER_SIZE ] = { 0 };
+    rx_size = irnss_generic_read( ctx, rx_buf, PROCESS_BUFFER_SIZE );
+    if ( rx_size > 0 ) 
     {
         int32_t buf_cnt = 0;
-
-        if ( app_buf_len + rx_size >= PROCESS_BUFFER_SIZE )
+        if ( ( app_buf_len + rx_size ) > PROCESS_BUFFER_SIZE ) 
         {
             irnss_clear_app_buf(  );
-            return -2;
-        }
-        else
+            return IRNSS_ERROR;
+        } 
+        else 
         {
             buf_cnt = app_buf_len;
             app_buf_len += rx_size;
         }
-
-        for ( int32_t rx_cnt = 0; rx_cnt < rx_size; rx_cnt++ )
+        for ( int32_t rx_cnt = 0; rx_cnt < rx_size; rx_cnt++ ) 
         {
-            if ( rx_buff[ rx_cnt ] != 0 )
+            if ( rx_buf[ rx_cnt ] ) 
             {
-                app_buf[ ( buf_cnt + rx_cnt ) ] = rx_buff[ rx_cnt ];
+                app_buf[ ( buf_cnt + rx_cnt ) ] = rx_buf[ rx_cnt ];
             }
             else
             {
                 app_buf_len--;
+                buf_cnt--;
             }
         }
-        return 0;
+        return IRNSS_OK;
     }
-    return -1;
+    return IRNSS_ERROR;
 }
 
-static err_t irnss_cmd_parser ( char *cmd )
+static void irnss_parser_application ( char *rsp )
 {
-    err_t ret_flag = 0;
-    
-    if ( strstr( app_buf, cmd ) != 0 )
+    char element_buf[ 100 ] = { 0 };
+    if ( IRNSS_OK == irnss_parse_gngga( rsp, IRNSS_GNGGA_LATITUDE, element_buf ) )
     {
-        char * __generic gngga_ptr;
-        
-        gngga_ptr = strstr( app_buf, cmd );
-        
-        while (strchr( gngga_ptr, '$' ) == 0)
+        static uint8_t wait_for_fix_cnt = 0;
+        if ( strlen( element_buf ) > 0 )
         {
-            irnss_process();
+            log_printf( &logger, "\r\n Latitude: %.2s degrees, %s minutes \r\n", element_buf, &element_buf[ 2 ] );
+            irnss_parse_gngga( rsp, IRNSS_GNGGA_LONGITUDE, element_buf );
+            log_printf( &logger, " Longitude: %.3s degrees, %s minutes \r\n", element_buf, &element_buf[ 3 ] );
+            memset( element_buf, 0, sizeof( element_buf ) );
+            irnss_parse_gngga( rsp, IRNSS_GNGGA_ALTITUDE, element_buf );
+            log_printf( &logger, " Altitude: %s m \r\n", element_buf );
+            wait_for_fix_cnt = 0;
         }
-        
-        for ( ; ; )
+        else
         {
-            log_printf( &logger, "%c", *gngga_ptr );
-            gngga_ptr++;
-            
-            if ( ( *gngga_ptr == '$' ) )
+            if ( wait_for_fix_cnt % 5 == 0 )
             {
-                break;
+                log_printf( &logger, " Waiting for the position fix...\r\n\n" );
+                wait_for_fix_cnt = 0;
             }
+            wait_for_fix_cnt++;
         }
+        irnss_clear_app_buf(  );
     }
-    else
-    {
-        ret_flag = -1;
-    }
-    
-    return ret_flag;
-}
-
-static err_t irnss_element_parser ( char *cmd, uint8_t element, char *element_data )
-{
-    err_t ret_flag = 0;
-    
-    
-    if ( strstr( app_buf, cmd ) != 0 )
-    {
-        uint8_t element_cnt = 0;
-        char data_buf[ 30 ] = { 0 };
-        uint8_t data_cnt = 0;
-        char * __generic gngga_ptr;
-        
-        gngga_ptr = strstr( app_buf, cmd );
-        
-        while (strchr( gngga_ptr, '$' ) == 0)
-        {
-            irnss_process();
-        }
-        
-        for ( ; ; )
-        {
-            if ( ( *gngga_ptr == '$' ) )
-            {
-                ret_flag = -2;
-                break;
-            }
-            
-            if ( *gngga_ptr == ',' )
-            {
-                if (element_cnt == element)
-                {
-                    if ( data_cnt == 0 )
-                    {
-                        ret_flag = -2;
-                    }
-                    strcpy( element_data, data_buf );
-                    break;
-                }
-                
-                element_cnt++;
-            }
-            
-            if ( ( element == element_cnt ) && ( *gngga_ptr != ',' ) )
-            {
-                data_buf[ data_cnt ] = *gngga_ptr;
-                data_cnt++;
-                
-                if ( data_cnt >= 30 )
-                {
-                    ret_flag = -3;
-                    break;
-                }
-            }
-            
-            gngga_ptr++;
-        }
-    }
-    else
-    {
-        ret_flag = -1;
-    }
-    
-    return ret_flag;
 }
 
 // ------------------------------------------------------------------------ END

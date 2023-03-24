@@ -1,7 +1,0 @@
-type: subdirs
-project: Motion
-
-subdirs: {
-    lib
-    example
-}

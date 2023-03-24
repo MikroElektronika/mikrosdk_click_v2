@@ -1,7 +1,0 @@
-type: subdirs
-project: Tdc
-
-subdirs: {
-    lib
-    example
-}

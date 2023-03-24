@@ -2,7 +2,7 @@
     "name": "BLE 7 Click",
     "description": "The BLE 7 click is a Click board™ witch provide BT/BLE connectivity for any embedded application. BLE 7 click based on the BGX13S22GA-V31, a SiP module from Silicon Labs with a buit-in antenna. Click board™ an ultra-small, high-performing, Bluetooth low energy module for easy integration of Bluetooth low energy connectivity (BLE) into various electronic devices. Given its features, this click can be used for health, sports, and wellness devices as well as Industrial, home, and building automation; and smart phone, tablet, and PC accessories.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","BGX13S22GA-V31"],
     "category" : ["Bluetooth®"] 
 }

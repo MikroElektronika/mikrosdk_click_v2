@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Motion",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "6DOF IMU 11 click",
     "example_list": [
@@ -26,19 +25,17 @@
     "name": "mikroe.click.c6dofimu11",
     "product_link": "https://www.mikroe.com/6dof-imu-11-click",
     "short_description": "The 6DOF IMU 11 click is a Click board™ based on the KMX63, a 6 Degrees-of-Freedom inertial sensor system on a single, silicon chip, which is designed to strike a balance between current consumption and noise performance with excellent bias stability over temperature.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2991
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.9"
+    "version": "2.1.0.13",
+    "cmake": true,
+    "alias": "Click.6DofImu11",
+    "subdir_name": "lib_c6dofimu11"
 }
-
-
-
-
 
 
 

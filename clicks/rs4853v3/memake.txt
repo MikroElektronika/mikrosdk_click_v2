@@ -1,7 +1,0 @@
-type: subdirs
-project: RS4853V3
-
-subdirs: {
-    lib
-    example
-}

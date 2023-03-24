@@ -1,7 +1,0 @@
-type: subdirs
-project: GNSSMAX
-
-subdirs: {
-    lib
-    example
-}

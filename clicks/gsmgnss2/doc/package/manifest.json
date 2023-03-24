@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "GSM+GPS",
+    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "category": "Click Boards > Wireless connectivity > GSM+GPS",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "GSM/GNSS 2 click",
     "example_list": [
@@ -26,11 +25,12 @@
     "name": "mikroe.click.gsmgnss2",
     "product_link": "https://www.mikroe.com/gsmgnss-2-click",
     "short_description": "GSM/GNSS 2 click combines GPS/GLONASS location tracking with GSM module capability for mobile communication. The click carries SIM868 quad-band GSM/GPRS module.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
-        2039
-    ],    
-    "version": "2.0.0.0"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.3",
+    "cmake": true,
+    "alias": "Click.GsmGnss2",
+    "subdir_name": "lib_gsmgnss2"
 }
+

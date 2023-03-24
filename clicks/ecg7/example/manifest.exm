@@ -2,7 +2,7 @@
     "name": "ECG 7 Click",
     "description": "ECG 7 Click is a compact add-on board that records the heart's electrical activity. This board features the MCP6N16, a single zero-drift instrumentation amplifier with selectable gain from Microchip. In addition to the jack connector provided for connecting the cable with ECG electrodes, this Click board™ offers the possibility of connecting electrodes through screw terminals or an onboard header if the electrode connection does not match the jack connector. Besides, the user is allowed to process the output signal in analog or digital form.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MCP6002T","MCP6N16","MCP3221A5T"],
     "category" : ["Click Boards > Sensors > Biometrics"]
 }

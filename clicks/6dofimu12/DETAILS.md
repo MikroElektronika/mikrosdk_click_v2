@@ -178,7 +178,7 @@ The full application code, and ready to use projects can be  installed directly 
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.C6DofImu12
+- Click.6DofImu12
 
 **Additional notes and informations**
 

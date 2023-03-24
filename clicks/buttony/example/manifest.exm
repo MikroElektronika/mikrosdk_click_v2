@@ -2,7 +2,7 @@
     "name": "Button Y Click",
     "description": "Button Y click is a Click board™ equipped with the tactile switch, sometimes referred to as a pushbutton. A pushbutton is a component that is used very often in various designs, allowing the user to interact with the application. Although it sounds simple, a button needs to comply with a range of application requirements. It needs to have a very good mechanical endurance while retaining its specifications, a predictable bouncing time, a very low ON resistance, very high OFF resistance, and it needs to fulfill aesthetical requirements.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","3006.2111"],
     "category" : ["Pushbutton/Switches"]
 }

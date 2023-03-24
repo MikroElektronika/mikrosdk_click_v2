@@ -2,7 +2,7 @@
     "name": "Load Cell 6 Click",
     "description": "Load Cell 6 Click is a compact add-on board representing a weigh scale solution. This board features the MAX11270, a high-performance 24-bit delta-sigma ADC that achieves excellent 130dB SNR while dissipating an ultra-low 10mW from Maxim Integrated, now part of Analog Devices. This SPI-configurable ADC sample rates up to 64ksps allow precision DC and AC measurements, with integral non-linearity guaranteed to 4ppm maximum. The MAX11270 offers a 6.5nV/√Hz noise programmable gain amplifier with gain settings between 1x to 128x. Optional buffers are also included to isolate the signal inputs from the switched capacitor sampling network, which allows the MAX11270 to be used with high-impedance sources without compromising the available dynamic range.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MAX11270"],
     "category" : ["Force"]
 }

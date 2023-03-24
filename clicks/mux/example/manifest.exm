@@ -2,7 +2,7 @@
     "name": "MUX Click",
     "description": "MUX click is a Click board™ that switches one of the four differential inputs to one differential output. It employs the MUX509, a modern CMOS analog multiplexing integrated circuit, produced by Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MUX509"],
     "category" : ["DAC"] 
 }

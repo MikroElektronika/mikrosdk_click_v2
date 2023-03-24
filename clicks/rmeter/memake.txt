@@ -1,7 +1,0 @@
-type: subdirs
-project: Rmeter
-
-subdirs: {
-    lib
-    example
-}

@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "GPS/GNSS",
+    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "category": "Click Boards > Wireless connectivity > GPS/GNSS",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "GNSS click",
     "example_list": [
@@ -26,18 +25,16 @@
     "name": "mikroe.click.gnss",
     "product_link": "https://www.mikroe.com/gnss-click",
     "short_description": "GNSS click carries Quectel’s L86 GNSS module with a patch antenna along with an external antenna connector.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         1262
     ],
-    "version": "2.0.0.13"
+    "version": "2.1.0.15",
+    "cmake": true,
+    "alias": "Click.Gnss",
+    "subdir_name": "lib_gnss"
 }
-
-
-
-
-
 
 

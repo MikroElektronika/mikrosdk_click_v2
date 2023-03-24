@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "GPS/GNSS",
+    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "category": "Click Boards > Wireless connectivity > GPS/GNSS",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,10 +8,9 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "GNSS5 click",
+    "display_name": "GNSS 5 click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -26,14 +25,20 @@
     "name": "mikroe.click.gnss5",
     "product_link": "https://www.mikroe.com/gnss-5-click",
     "short_description": "Determine your current position with GNSS 5 click. It carries the NEO-M8N GNSS receiver module from u-blox.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2119
     ],
-    "version": "2.0.0.12"
+    "version": "2.1.0.19",
+    "cmake": true,
+    "alias": "Click.Gnss5",
+    "subdir_name": "lib_gnss5"
 }
+
+
+
 
 
 

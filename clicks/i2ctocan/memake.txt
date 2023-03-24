@@ -1,7 +1,0 @@
-type: subdirs
-project: I2cToCan
-
-subdirs: {
-    lib
-    example
-}

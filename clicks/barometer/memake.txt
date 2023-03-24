@@ -1,7 +1,0 @@
-type: subdirs
-project: Barometer
-
-subdirs: {
-    lib
-    example
-}

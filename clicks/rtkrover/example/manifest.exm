@@ -1,0 +1,8 @@
+{
+    "name": "RTK Rover Click",
+    "description": "RTK Rover Click is a compact add-on board that enhances the precision of position data derived from compatible RTK Base Station. This board features Quectel’s LG69TAMMD, a dual-band multi-constellation GNSS module featuring a high-performance and high-reliability positioning engine. This module facilitates a fast and precise GNSS positioning capability for centimeter-level accuracy, featuring the fifth generation of STMicroelectronics® positioning receiver platform with 80 tracking and four fast acquisition channels. It supports up to 3 concurrent global constellations (GPS/QZSS, Galileo, and BDS) alongside NMEA 0183/RTCM 3.x protocol and commonly used UART interface.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
+    "hw" : ["click","LG69T-AM"],
+    "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"]
+}

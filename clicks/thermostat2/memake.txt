@@ -1,7 +1,0 @@
-type: subdirs
-project: Thermostat2
-
-subdirs: {
-    lib
-    example
-}

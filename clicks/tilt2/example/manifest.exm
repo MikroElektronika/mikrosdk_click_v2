@@ -2,7 +2,7 @@
     "name": "Tilt 2 Click",
     "description": "Tilt 2 click is a tilt sensor switch, which breaks the circuit when tilted to an angle of 45° or when shaken. It is a single-pole-double-throw type of switch (SPDT), which can be operated with up to 24V.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","RB-441-45"],
     "category" : ["Motion"] 
 }

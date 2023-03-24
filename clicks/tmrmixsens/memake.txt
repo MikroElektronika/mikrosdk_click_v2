@@ -1,7 +1,0 @@
-type: subdirs
-project: Tmrmixsens
-
-subdirs: {
-    lib
-    example
-}

@@ -2,7 +2,7 @@
     "name": "Pressure 19 Click",
     "description": "Pressure 19 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the MLX90817, a factory-calibrated absolute pressure sensor delivering ratiometric analog output from Melexis Technologies. The MLX90817 comes with a configurable host interface that supports I2C serial communication and configurable signal processing (the user is allowed to process the output signal in analog or digital form). It measures pressure from 0.2 up to 3bar with a pressure accuracy of ±33mbar. Its DSP-based architecture using a 16bit microcontroller provides outstanding performance in terms of initial accuracy and assures operation in a temperature range of -40°C to +120°C, ensuring stable operation under extreme conditions.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MLX90817LXE-DBG-012-RE"],
     "category" : ["Pressure"]
 }

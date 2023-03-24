@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Optical",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Optical",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "UVB click",
     "example_list": [
@@ -26,12 +25,18 @@
     "name": "mikroe.click.uvb",
     "product_link": "https://www.mikroe.com/uvb-click",
     "short_description": "UVB Click is ultraviolet sensing board based on GUVB-C31SM sensor from GenUV, capable of measuring UV index between 0 to 16. UVB Click supports integrated functions of ultraviolet light sensors such that can be easily configured and used in user applications. Overexposure to UVB radiation not only can cause sunburn but also some forms of skin cancer, so knowing amount of UVB light can be quite important and this Click board™ is perfect solution for that task.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "related_projects":[
+    "related_projects": [
         3768
     ],
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.5",
+    "cmake": true,
+    "alias": "Click.UVB",
+    "subdir_name": "lib_uvb"
 }
+
+
+
 

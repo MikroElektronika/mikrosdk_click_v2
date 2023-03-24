@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Environmental",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Environmental",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Hydro Probe click",
     "example_list": [
@@ -26,13 +25,16 @@
     "name": "mikroe.click.hydroprobe",
     "product_link": "https://www.mikroe.com/hydro-probe-click",
     "short_description": "Hydro Probe Click is a capacitive soil moisture sensor based on capacitive changes that are used to detect the volumetric water content in the soil. Water detection is achieved by using function oscillator MIC1557 and ADC converter MCP3221 from Microchip, which allow you to convert moisture presents to the digital value. Compared to resistant soil moisture sensors, its capacitive style reduces electrode erosion making it corrosion resistant and a better choice for applications such as soil moisture detection and automatic plant watering.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "related_projects":[
+    "related_projects": [
         3730
     ],
-    "version": "2.0.0.5"
+    "version": "2.1.0.9",
+    "cmake": true,
+    "alias": "Click.HydroProbe",
+    "subdir_name": "lib_hydroprobe"
 }
 
 

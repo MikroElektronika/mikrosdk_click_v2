@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Amplifier",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Audio & voice > Amplifier",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "2x20W Amp Click",
     "example_list": [
@@ -26,22 +25,17 @@
     "name": "mikroe.click.c2x20wamp",
     "product_link": "https://www.mikroe.com/2x20w-amp-click",
     "short_description": "2x20W Amp click carries the MAX9744 stereo class D audio power amplifier from Maxim Integrated. This click brings the Class AB sound performance with Class D efficiency.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2191
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.12"
+    "version": "2.1.0.17",
+    "cmake": true,
+    "alias": "Click.2x20WAmp",
+    "subdir_name": "lib_c2x20wamp"
 }
-
-
-
-
-
-
-
 
 
 

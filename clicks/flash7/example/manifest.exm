@@ -2,7 +2,7 @@
     "name": "Flash 7 Click",
     "description": "Flash 7 Click is a compact add-on board that contains a high-performance memory solution. This board features the GD25LQ16C, a high-performance 16Mbit SPI NOR Flash Memory solution with advanced security features from GigaDevice Semiconductor. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","GD25LQ16C"],
     "category" : ["FLASH"]
 }

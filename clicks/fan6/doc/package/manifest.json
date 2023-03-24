@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Brushless",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Motor control > Brushless",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Fan 6 click",
     "example_list": [
@@ -26,16 +25,17 @@
     "name": "mikroe.click.fan6",
     "product_link": "https://www.mikroe.com/fan-6-click",
     "short_description": "The Fan 6 click is a Click board™ which features EMC2103, an SMBus compliant fan controller with up to up to 3 external and 1 internal temperature channels.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2362
     ],
-    "version": "2.0.0.7"
+    "version": "2.1.0.11",
+    "cmake": true,
+    "alias": "Click.Fan6",
+    "subdir_name": "lib_fan6"
 }
-
-
 
 
 

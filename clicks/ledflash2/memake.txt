@@ -1,7 +1,0 @@
-type: subdirs
-project: LedFlash2
-
-subdirs: {
-    lib
-    example
-}

@@ -45,7 +45,7 @@ void application_init ( void ) {
     // Click initialization.
 
     alcohol_cfg_setup( &alcohol_cfg );
-    ALCOHOL_MAP_MIKROBUS( alcohol_cfg, MIKROBUS_5 );
+    ALCOHOL_MAP_MIKROBUS( alcohol_cfg, MIKROBUS_1 );
     if ( alcohol_init( &alcohol, &alcohol_cfg ) == ADC_ERROR ) {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Temperature & humidity",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Temperature & humidity",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "TempHum 8 click",
     "example_list": [
@@ -26,19 +25,17 @@
     "name": "mikroe.click.temphum8",
     "product_link": "https://www.mikroe.com/temp-hum-8-click",
     "short_description": "Temp&Hum 8 click is based on a sensor from the popular SHT family, designed to measure temperature and humidity. ",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "related_projects":[
+    "related_projects": [
         2656
     ],
-    "version": "2.0.0.10"
+    "version": "2.1.0.14",
+    "cmake": true,
+    "alias": "Click.TempHum8",
+    "subdir_name": "lib_temphum8"
 }
-
-
-
-
-
 
 
 

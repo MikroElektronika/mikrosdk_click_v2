@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Power Switch",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Power management > Power Switch",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Current Limit 7 click",
     "example_list": [
@@ -26,8 +25,15 @@
     "name": "mikroe.click.currentlimit7",
     "product_link": "https://www.mikroe.com/current-limit-7-click",
     "short_description": "Current Limit 7 Click is a compact add-on board representing a current-limiting solution. This board features the MAX14575A, an adjustable current-limit switch from Analog Devices. This Click board™ features internal current limiting to prevent damage to host devices due to faulty load conditions, has a low 32mΩ on-resistance, and operates from a 2.3V to 5.5V input voltage range. Also, the current limit is adjustable from 250mA to 2.5A programmed through AD5272 digital rheostat and set via onboard range switch. This Click board™ is suitable for applications in portable equipment and condition monitoring or power supplies, protecting them in short circuits or other overload conditions.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.6",
+    "cmake": true,
+    "alias": "Click.CurrentLimit7",
+    "subdir_name": "lib_currentlimit7"
 }
+
+
+
+

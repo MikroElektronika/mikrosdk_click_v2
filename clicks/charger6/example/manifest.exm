@@ -2,7 +2,7 @@
     "name": "Charger 6 Click",
     "description": "Charger 6 Click is a compact add-on board that represents a single-cell battery charger. This board features the BQ25601, an I2C controlled battery charger for high input voltage and narrow voltage DC power path management from Texas Instruments. This buck charger supports USB, and it’s optimized for USB voltage input. The low impedance power path optimizes switch-mode operation efficiency, reduces battery charging time, and extends battery life during discharge. It also has a programmable current limiting, allowing it to use an external power supply rated up to 13.5V. This Click board™ is suitable as a Li-Ion and Li-polymer battery charger for portable devices and accessories, power tools, and more.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","BQ25601"],
     "category" : ["Battery Charger"]
 }

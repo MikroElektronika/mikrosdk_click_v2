@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Brushed",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Motor control > Brushed",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "DC Motor 14 click",
     "example_list": [
@@ -26,13 +25,16 @@
     "name": "mikroe.click.dcmotor14",
     "product_link": "https://www.mikroe.com/dc-motor-14-click",
     "short_description": "This IC includes one channel of motor output block, using a wide range of supply voltages, while delivering reasonably high current to the connected DC motors.  ",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "related_projects":[
+    "related_projects": [
         2989
     ],
-    "version": "2.0.0.4"
+    "version": "2.1.0.8",
+    "cmake": true,
+    "alias": "Click.Dcmotor14",
+    "subdir_name": "lib_dcmotor14"
 }
 
 

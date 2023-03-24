@@ -1,7 +1,0 @@
-type: subdirs
-project: VibraSense2
-
-subdirs: {
-    lib
-    example
-}

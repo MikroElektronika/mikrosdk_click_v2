@@ -1,7 +1,0 @@
-type: subdirs
-project: current2
-
-subdirs: {
-    lib
-    example
-}

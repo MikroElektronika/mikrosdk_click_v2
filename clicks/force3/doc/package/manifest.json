@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Force",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Force",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Force 3 click",
     "example_list": [
@@ -26,13 +25,16 @@
     "name": "mikroe.click.force3",
     "product_link": "https://www.mikroe.com/force-3-click",
     "short_description": "Force 3 Click is a compact add-on board with circuitry for implementing Force Sensing Resistor into your projects whose resistance changes when a force, pressure, or mechanical stress is applied.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "related_projects":[
+    "related_projects": [
         3766
     ],
-    "version": "2.0.0.4"
+    "version": "2.1.0.9",
+    "cmake": true,
+    "alias": "Click.Force3",
+    "subdir_name": "lib_force3"
 }
 
 

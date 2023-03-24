@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Pressure",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Pressure",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Barometer 8 click",
     "example_list": [
@@ -26,9 +25,14 @@
     "name": "mikroe.click.barometer8",
     "product_link": "https://www.mikroe.com/barometer-8-click",
     "short_description": "Barometer 8 Click is a compact add-on board used to measure air pressure in a specific environment. This board features the ILPS22QS, an ultra-compact piezoresistive absolute pressure sensor that functions as a digital output barometer from STMicroelectronics. The ILPS22QS comprises a sensing element and an IC chip for signal processing in one package, converts pressure into a 24-bit digital value, and sends the information via a configurable host interface that supports SPI and I2C serial communications. It has a selectable dual full-scale absolute pressure range, up to 1260hPa and 4060hPa, with an accuracy of 0.5hPa over a wide operating temperature range.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.4",
+    "alias": "Click.Barometer8",
+    "cmake": true,
+    "subdir_name": "lib_barometer8"
 }
+
+
 

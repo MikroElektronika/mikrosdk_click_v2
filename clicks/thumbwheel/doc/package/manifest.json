@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Pushbutton/Switches",
+    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "category": "Click Boards > HMI > Pushbutton/Switches",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Thumbwheel click",
     "example_list": [
@@ -26,11 +25,16 @@
     "name": "mikroe.click.thumbwheel",
     "product_link": "https://www.mikroe.com/thumbwheel-click",
     "short_description": "Thumbwheel click is a mikroBUS add-on board with a 10-position rotary sprocket connected to a 1-Wire 8-Channel Addressable Switch",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         1869
     ],
-    "version": "2.0.0.0"
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.Thumbwheel",
+    "subdir_name": "lib_thumbwheel"
 }
+
+

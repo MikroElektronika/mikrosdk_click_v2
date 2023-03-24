@@ -3,26 +3,26 @@
  * @brief ISMRX3 Click example
  *
  * # Description
- * This example showcases ability of click board to configure 
+ * This example showcases ability of click board to configure
  * and read incoming rf signal and parses data using data and clock line.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initialization of communication modules (SPI, UART), and additional 
+ * Initialization of communication modules (SPI, UART), and additional
  * communication pins. Resets device, reads device ID, and sets default
  * configuration that sets ASK modulation and 433.92MHz with 5bps data rate.
  *
  * ## Application Task
  * Reads clock pin and gets samples of data pin state, converts it in manchester
- * data that is stored in a buffer. When it fills out manchester buffer checks if 
+ * data that is stored in a buffer. When it fills out manchester buffer checks if
  * expected preamble data is received. If it is, checks the next byte(it should be
  * received data length). Then parses rest of data and if it's correct shows it on log.
  *
  * @note
  * The expected data that is received is:
  * _PREAMBLE_WORD_(2bytes), _DATA_LENGTH_(1byte), _DATA_(1..255bytes)
- * 
+ *
  * By default _PREAMBLE_WORD_ is set to be 0xAAAA.
  *
  * @author Luka FIlipovic
@@ -38,7 +38,7 @@ static ismrx3_t ismrx3;
 static log_t logger;
 
 #define MANCHESTER_BUF_LEN  1500/*<Manchester buffer size*/
-#define PREAMBLE_WORD       "01100110011001100110011001100110"/*<Preamble word, 
+#define PREAMBLE_WORD       "01100110011001100110011001100110"/*<Preamble word,
                                                                 by default: 0xAAAA*/
 
 uint8_t manchester_buf[ MANCHESTER_BUF_LEN ] = { 0 };/*<Manchester buffer*/
@@ -50,7 +50,7 @@ static uint8_t consecutive;/*<Consecutive number of same data pin state from clo
 
 /**
  * @brief Parse and convert manchester buffer.
- * @details This function checks if preamble data is received. 
+ * @details This function checks if preamble data is received.
  * If received converts manchester data buffer to data and logs result.
  * @param[in] ctx : Click context object.
  * See #ismrx3_t object definition for detailed explanation.
@@ -59,7 +59,7 @@ static uint8_t consecutive;/*<Consecutive number of same data pin state from clo
  *         @li @c -1 - Data not complete.
  *
  * See #err_t definition for detailed explanation.
- * @note Expected data to receive: 
+ * @note Expected data to receive:
  * PREAMBLE_WORD(0xAAAA), DATA_LEN(0x6), DATA("MikroE").
  */
 static err_t parse_samples( void );
@@ -69,13 +69,13 @@ void application_init ( void )
     log_cfg_t log_cfg;  /**< Logger config object. */
     ismrx3_cfg_t ismrx3_cfg;  /**< Click config object. */
 
-    /** 
+    /**
      * Logger initialization.
      * Default baud rate: 115200
      * Default log level: LOG_LEVEL_DEBUG
-     * @note If USB_UART_RX and USB_UART_TX 
-     * are defined as HAL_PIN_NC, you will 
-     * need to define them manually for log to work. 
+     * @note If USB_UART_RX and USB_UART_TX
+     * are defined as HAL_PIN_NC, you will
+     * need to define them manually for log to work.
      * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
      */
     LOG_MAP_USB_UART( log_cfg );
@@ -125,7 +125,7 @@ void application_task ( void )
         sample = ismrx3_get_data( &ismrx3 );
         if ( last_sample == sample )
         {
-            consecutive++; 
+            consecutive++;
         }
         else
         {
@@ -147,7 +147,7 @@ void application_task ( void )
 
     if ( manchester_counter >= MANCHESTER_BUF_LEN - 1 )
     {
-        parse_samples(  ); 
+        parse_samples(  );
         manchester_counter = 0;
     }
 }
@@ -165,7 +165,7 @@ void main ( void )
 static err_t parse_samples( void )
 {
     //check preamble data
-    char * __generic manchester_data = strstr( manchester_buf, ( char * )PREAMBLE_WORD );
+    char * __generic_ptr manchester_data = strstr( manchester_buf, ( char * )PREAMBLE_WORD );
     if ( manchester_data )
     {
         manchester_data += strlen( ( char * )PREAMBLE_WORD );

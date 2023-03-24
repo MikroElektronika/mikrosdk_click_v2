@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Motion",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Gyro 5 click",
     "example_list": [
@@ -26,18 +25,17 @@
     "name": "mikroe.click.gyro5",
     "product_link": "https://www.mikroe.com/gyro-5-click",
     "short_description": "Gyro 5 Click is a three-axis gyroscope Click board™ that can sense motion over three perpendicular axes. It is equipped with the ITG-3701, a three-axis digital gyroscope.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2882
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.8"
+    "version": "2.1.0.12",
+    "cmake": true,
+    "alias": "Click.Gyro5",
+    "subdir_name": "lib_gyro5"
 }
-
-
-
 
 
 

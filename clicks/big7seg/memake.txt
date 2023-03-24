@@ -1,7 +1,0 @@
-type: subdirs
-project: Big7Seg
-
-subdirs: {
-    lib
-    example
-}

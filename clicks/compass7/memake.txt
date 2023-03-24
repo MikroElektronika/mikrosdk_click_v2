@@ -1,7 +1,0 @@
-type: subdirs
-project: Compass7
-
-subdirs: {
-    lib
-    example
-}

@@ -2,7 +2,7 @@
     "name": "ZigBee Click",
     "description": "ZigBee Click is a compact add-on board that contains a fully integrated Zigbee transceiver with a 32-bit ARM® Cortex M3TM microprocessor, Flash and RAM memory, and peripherals. This board features the ETRX357, 2.4 GHz Zigbee Radio module from Silicon Labs, which has been designed to be easily integrated and to provide a fast, simple, and low-cost wireless mesh networking interface.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
     "hw" : ["click","ETRX357"],
     "category" : ["ZigBee"]
 }

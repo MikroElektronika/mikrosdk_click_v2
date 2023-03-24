@@ -4,5 +4,5 @@
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
     "hw" : ["click","ADXL345"],
-    "category" : ["Motion","Acceleration"] 
+    "category" : ["Click Boards > Sensors > Motion"] 
 }

@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Boost",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Power management > Boost",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Boost 4 click",
     "example_list": [
@@ -26,13 +25,16 @@
     "name": "mikroe.click.boost4",
     "product_link": "https://www.mikroe.com/boost-4-click",
     "short_description": "Boost 4 click carries the TPS61230A, a high efficiency fully integrated synchronous boost converter from Texas Instruments. The click is designed to run on a 3.3V power supply.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2160
     ],
-    "version": "2.0.0.10"
+    "version": "2.1.0.14",
+    "cmake": true,
+    "alias": "Click.Boost4",
+    "subdir_name": "lib_boost4"
 }
 
 

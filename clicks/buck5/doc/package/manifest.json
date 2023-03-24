@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Buck",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Power management > Buck",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Buck 5 click",
     "example_list": [
@@ -26,17 +25,17 @@
     "name": "mikroe.click.buck5",
     "product_link": "https://www.mikroe.com/buck-5-click",
     "short_description": "Buck 5 Click is a high-efficiency buck (step-down) DC/DC converter, which can provide digitally adjusted step-down voltage on its output while delivering a considerable amount of current. Buck 5 click accepts a wide voltage range on its input - from 5V to 30V. ",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "related_projects":[
+    "related_projects": [
         2358
     ],
-    "version": "2.0.0.9"
+    "version": "2.1.0.13",
+    "cmake": true,
+    "alias": "Click.Buck5",
+    "subdir_name": "lib_buck5"
 }
-
-
-
 
 
 

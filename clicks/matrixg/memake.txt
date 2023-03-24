@@ -1,7 +1,0 @@
-type: subdirs
-project: MatrixG
-
-subdirs: {
-    lib
-    example
-}

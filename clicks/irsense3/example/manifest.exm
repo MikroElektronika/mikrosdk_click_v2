@@ -2,7 +2,7 @@
     "name": "IR Sense 3 Click",
     "description": "IR Sense 3 Click is the infrared sensor Click board, designed to be used for the short range IR sensing applications.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","AK9754"],
     "category" : ["Temperature & humidity"] 
 }

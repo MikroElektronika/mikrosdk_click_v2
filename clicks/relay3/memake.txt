@@ -1,7 +1,0 @@
-type: subdirs
-project: Relay3
-
-subdirs: {
-    lib
-    example
-}

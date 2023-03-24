@@ -1,8 +1,0 @@
-type: subdirs
-
-project: OLEDW
-
-subdirs: {
-    lib
-    example
-}

@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Brushless",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Motor control > Brushless",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Brushless 23 click",
     "example_list": [
@@ -24,12 +23,18 @@
         "id": "46"
     },
     "name": "mikroe.click.brushless23",
+    "alias": "Click.Brushless23",
     "product_link": "https://www.mikroe.com/brushless-23-click",
     "short_description": "Brushless 23 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the TC78B011FTG, a three-phase sine-wave PWM pre-driver realized with six external MOSFETs to drive sensorless brushless motors from Toshiba Semiconductor. Some of the main features are a built-in closed-loop speed control function with internal non-volatile memory (NVM) for speed profile setting and the ability to set other features such as rotation direction selection, brake, Standby mode, and others. It also has a wide operating voltage range of 11V to 27V with an output current capacity of 5A and several built-in error detection circuits.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.2"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.7",
+    "cmake": true,
+    "subdir_name": "lib_brushless23"
 }
+
+
+
 
 

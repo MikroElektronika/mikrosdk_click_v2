@@ -1,7 +1,0 @@
-type: subdirs
-project: OledSwitch
-
-subdirs: {
-    lib
-    example
-}

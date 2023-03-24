@@ -2,7 +2,7 @@
     "name": "DIGI POT 8 Click",
     "description": "DIGI POT 8 Click is a compact add-on board used as a digitally controlled potentiometer. This board features the AD5206, 6-channel 256-position digitally controlled variable resistor device from Analog Devices.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","AD5206BRZ100"],
     "category" : ["Digital potentiometer"]
 }

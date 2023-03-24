@@ -1,7 +1,0 @@
-type: subdirs
-project: AmrCurrent
-
-subdirs: {
-    lib
-    example
-}

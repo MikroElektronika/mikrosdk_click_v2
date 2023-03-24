@@ -2,7 +2,7 @@
     "name": "Monarch Adapter Click",
     "description": "The Monarch Adapter Click is used to connect a compatible Monarch Go LTE-M modems from Sequanse to your development board or prototype device.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
     "hw" : ["click","TXB0106PWR"],
     "category" : ["Adapter"] 
 }

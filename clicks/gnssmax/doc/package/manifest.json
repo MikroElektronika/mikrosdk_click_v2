@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32",
+    "architecture": "ARM|PIC|PIC32|RISC-V",
     "category": "Click Boards > Wireless connectivity > GPS/GNSS",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "GNSS MAX click",
     "example_list": [
@@ -26,9 +25,15 @@
     "name": "mikroe.click.gnssmax",
     "product_link": "https://www.mikroe.com/gnss-max-click",
     "short_description": "GNSS MAX Click is a compact add-on board that provides fast positioning capability. This board features the MAX-M10S, an ultra-low-power GNSS receiver for high-performance asset-tracking from u-blox. The MAX-M10S supports the concurrent reception of four GNSS (GPS, GLONASS, Galileo, and BeiDou), which maximizes the position availability, particularly under challenging conditions such as in deep urban canyons. It is built on the u-blox M10 GNSS platform, which provides exceptional sensitivity and acquisition times for all L1 GNSS systems. It also comes with a configurable host interface, and advanced jamming and spoofing detection.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.4",
+    "cmake": true,
+    "alias": "Click.GNSSMAX",
+    "subdir_name": "lib_gnssmax"
 }
+
+
+
 

@@ -92,7 +92,8 @@ void application_init ( void )
     capsldr2_enable_chann( &capslider2, CAPSLDR2_CH0_PROX_EN | CAPSLDR2_CH1_EN | CAPSLDR2_CH2_EN | CAPSLDR2_CH3_EN | CAPSLDR2_CH4_EN | CAPSLDR2_CH5_EN | CAPSLDR2_CH6_EN | CAPSLDR2_CH7_EN | CAPSLDR2_CH8_EN | CAPSLDR2_CH9_EN );
     capsldr2_config( &capslider2 );
     capsldr2_set_threshold( &capslider2, 0x04 );
-    Delay_ms( 4000 );
+    Delay_ms( 2000 );
+    Delay_ms( 2000 );
     
     log_printf( &logger, "CAP Slider 2 is initialized\r\n" );
 

@@ -2,7 +2,7 @@
     "name": "SAML Touch Click",
     "description": "SAML Touch Click is a Click board™ equipped with two capacitive touch pads and one capacitive slider.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","ATSAML10"],
     "category" : ["Capacitive"] 
 }

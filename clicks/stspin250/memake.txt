@@ -1,7 +1,0 @@
-type: subdirs
-project: Stspin250
-
-subdirs: {
-    lib
-    example
-}

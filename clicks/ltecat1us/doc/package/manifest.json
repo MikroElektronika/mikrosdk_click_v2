@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "GSM/LTE",
+    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "category": "Click Boards > Wireless connectivity > GSM/LTE",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "LTE Cat.1-US click",
     "example_list": [
@@ -26,13 +25,14 @@
     "name": "mikroe.click.ltecat1us",
     "product_link": "https://www.mikroe.com/lte-cat1-us-click-for-united-states",
     "short_description": "LTE Cat.1-US click is a Click board™ based on Thales Cinterion® ELS61 wireless module that delivers highly efficient Cat 1 LTE connectivity for M2M IoT solutions offering seamless fall back to 2G and 3G networks. The best in class solution enables M2M optimized speeds of 10Mbit/s download and 5Mbit/s uplink making it ideal for the vast number of M2M and industrial IoT applications that are not dependent on speed but that requires the longevity of LTE networks, while still providing 3G and 2G connectivity to ensure complete population and geographic coverage as LTE rolls out.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "related_projects":[
+    "related_projects": [
         3103
     ],
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.2"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.LTECat1US",
+    "subdir_name": "lib_ltecat1us"
 }
-
-

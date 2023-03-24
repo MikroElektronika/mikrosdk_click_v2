@@ -1,8 +1,0 @@
-type: subdirs
-
-project: RFMeter3
-
-subdirs: {
-    lib
-    example
-}

@@ -16,7 +16,7 @@ LR Click is a compact add-on board that contains a low-power, long-range transce
 #### Click library
 
 - **Author**        : Stefan Ilic
-- **Date**          : Jun 2021.
+- **Date**          : Feb 2023.
 - **Type**          : UART type
 
 
@@ -69,19 +69,20 @@ void lr_tick_conf ( lr_t *ctx, uint32_t timer_limit );
 
 ## Example Description
 
-> This example reads and processes data from LR clicks.
+> This example shows the usage of the LR Click board by transmitting and receiving data.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes driver init and LR init.
+> IInitializes the driver and performs default configuration and reads System version.
 
 ```c
 
-void application_init ( void ) {
-    log_cfg_t log_cfg;
-    lr_cfg_t cfg;
+void application_init ( void ) 
+{
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    lr_cfg_t lr_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -92,64 +93,66 @@ void application_init ( void ) {
      * need to define them manually for log to work. 
      * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
      */
+    
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
-    lr_cfg_setup( &cfg );
-    LR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    lr_init( &lr, &cfg );
-
-    lr_default_cfg( &lr, 0, &lr_cbk );
-
-    lr_cmd( &lr, LR_CMD_SYS_GET_VER, &tmp_txt[ 0 ] );
-
-    lr_cmd( &lr, LR_CMD_MAC_PAUSE,  &tmp_txt[ 0 ] );
-    log_printf( &logger, "mac pause\r\n" );
-    for ( cnt = 0; cnt < 10; cnt++ ) {
-        log_printf( &logger, "%c", tmp_txt[ cnt ] );
+    // Click initialization.
+    lr_cfg_setup( &lr_cfg );
+    LR_MAP_MIKROBUS( lr_cfg, MIKROBUS_1 );
+    if ( UART_ERROR == lr_init( &lr, &lr_cfg ) ) 
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
     }
+    
+    lr_default_cfg( &lr, 0, 0 );
 
-    log_printf( &logger, "\r\n" );
+    lr_cmd( &lr, LR_CMD_SYS_GET_VER, resp_buf );
+    log_printf( &logger, "System VER: %s \r\n", resp_buf );
+    
+    lr_cmd( &lr, LR_CMD_MAC_PAUSE, resp_buf );
+    log_printf( &logger, "MAC PAUSE: %s \r\n", resp_buf );
 
-    lr_cmd( &lr, LR_CMD_RADIO_SET_WDT, &tmp_txt[ 0 ] );
-
-    log_printf( &logger, "radio set wdt 0\r\n" );
-    log_printf( &logger, "%s\r\n", &tmp_txt[ 0 ] );
+    lr_cmd( &lr, LR_CMD_RADIO_SET_WDT, resp_buf );
+    log_printf( &logger, "RADIO SET WDT 0: %s \r\n", resp_buf );
+    
+    log_info( &logger, " Application Task " );
 }
 
 ```
 
 ### Application Task
 
-> Transmitter mode - sends one by one byte sequence of the desired message each second and checks if it is sent successfully. Receiver mode - displays all the received characters on USB UART.
+> Transmitter mode - sends one-by-one byte sequence of the desired message each second and 
+ checks if it is sent successfully
+ Receiver mode - displays all the received characters on USB UART.
 
 ```c
 
-void application_task ( void ) {
-    char *ptr;
+void application_task ( void ) 
+{
     lr_process( );
     
 #ifdef DEMO_APP_RECEIVER
-    rx_state = lr_rx( &lr, LR_ARG_0, &tmp_txt[ 0 ] );
-    if ( rx_state == 0 ) {
-        tmp_txt[ 12 ] = 0;
-        ptr = ( char* )&int_data;
-        hex_to_int( &tmp_txt[ 10 ], ptr );
-
+    char *ptr;
+    uint8_t int_data;
+    if ( LR_OK == lr_rx( &lr, LR_ARG_0, resp_buf ) ) 
+    {
+        resp_buf[ 12 ] = 0;
+        ptr = ( char* ) &int_data;
+        hex_to_int( &resp_buf[ 10 ], ptr );
         log_printf( &logger, "%c", int_data  );
     }
 #endif
-
 #ifdef DEMO_APP_TRANSMITTER
-    for ( cnt = 0; cnt < 9; cnt++ ) {
-        send_data = send_message[ cnt ] ;
-        int8_to_hex( send_data, send_hex );
-        tx_state = lr_tx( &lr, &send_hex[ 0 ] );
-        if ( tx_state == 0 ) {
-            log_printf( &logger, "  Response : %s\r\n", &tmp_txt[ 0 ] );
+    for ( uint8_t cnt = 0; cnt < 9; cnt++ ) 
+    {
+        int8_to_hex( send_message[ cnt ], send_hex );
+        if ( LR_OK == lr_tx( &lr, &send_hex[ 0 ] ) ) 
+        {
+            log_printf( &logger, " Response : %s \r\n", resp_buf );
         }
         Delay_ms( 1000 );
     }

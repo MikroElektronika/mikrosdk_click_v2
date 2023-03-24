@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "RS232",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Interface > RS232",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "RS232 SPI click",
     "example_list": [
@@ -26,17 +25,17 @@
     "name": "mikroe.click.rs232spi",
     "product_link": "https://www.mikroe.com/rs232-spi-click",
     "short_description": "RS232 SPI click is based around the MAX3100, a universal asynchronous receiver transmitter (UART) - the first UART specifically optimized for small microcontroller-based systems, from Maxim Integrated. Because of the features contained in its modules, the RS232 SPI click can be used for handheld instruments, small networks in HVAC or Building control, UART in SPI systems, battery-powered systems, PDAs, notebooks and many more.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2961
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.6"
+    "version": "2.1.0.10",
+    "cmake": true,
+    "alias": "Click.Rs232Spi",
+    "subdir_name": "lib_rs232spi"
 }
-
-
 
 
 

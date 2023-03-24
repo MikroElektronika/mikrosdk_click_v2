@@ -1,7 +1,0 @@
-type: subdirs
-project: 4x4Key
-
-subdirs: {
-    lib
-    example
-}

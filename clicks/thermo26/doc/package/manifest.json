@@ -1,0 +1,37 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Temperature & humidity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Thermo 26 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.thermo26",
+    "product_link": "https://www.mikroe.com/thermo-26-click",
+    "short_description": "Thermo 26 Click is a compact add-on board that accurately measures temperature. This board features the STS31-DIS, a high-accuracy digital temperature sensor from Sensirion. Characterized by its high accuracy (up to ±0.2°C typical) and high resolution of 0.01°C, the STS31-DIS provides temperature data to the host controller with a configurable I2C interface. It relies on the industry-proven CMOSens® technology, providing increased intelligence, reliability, and improved accuracy specifications, including enhanced signal processing, user-selectable I2C addresses, and up to 1 MHz communication speeds.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.3",
+    "cmake": true,
+    "alias": "Click.Thermo26",
+    "subdir_name": "lib_thermo26"
+}
+
+

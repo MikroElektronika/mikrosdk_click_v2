@@ -1,7 +1,0 @@
-type: subdirs
-project: HBridge6
-
-subdirs: {
-    lib
-    example
-}

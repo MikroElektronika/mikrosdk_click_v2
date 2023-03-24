@@ -2,7 +2,7 @@
     "name": "Light Ranger 3 Click",
     "description": "Light Ranger 3 click is an accurate distance measurement Click board™ based on a ToF ( Time of Flight ) measurement principle. The Simblee™ enabled RFD77402 rangefinder module from RF Digital is a complete measurement stack on the chip.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","RFD77402"],
     "category" : ["Optical"] 
 }

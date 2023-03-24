@@ -2,7 +2,7 @@
     "name": "ADC 19 Click",
     "description": "ADC 19 Click is a compact add-on board that contains a high-performance data converter. This board features the ADC122S101, a low-power two-channel CMOS 12-bit analog-to-digital converter from Texas Instruments. This SPI configurable analog-to-digital converter (ADC) is fully specified over a sample rate range of 500ksps to 1Msps, offering high reliability and performance. The converter is based on a successive-approximation register architecture with an internal track-and-hold circuit configurable to accept one or two input signals at its input channels.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","ADC122S101"],
     "category" : ["ADC"]
 }

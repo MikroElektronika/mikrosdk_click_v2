@@ -1,7 +1,0 @@
-type: subdirs
-project: nvSRAM4
-
-subdirs: {
-    lib
-    example
-}

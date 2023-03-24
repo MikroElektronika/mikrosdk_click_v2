@@ -1,7 +1,0 @@
-type: subdirs
-project: OOKRX
-
-subdirs: {
-    lib
-    example
-}

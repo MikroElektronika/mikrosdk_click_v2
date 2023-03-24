@@ -227,7 +227,7 @@ The full application code, and ready to use projects can be installed directly f
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.C4GLTEE
+- Click.4GLTEE
 
 **Additional notes and informations**
 

@@ -2,7 +2,7 @@
     "name": "UVA Click",
     "description": "UVA Click is a compact add-on board used to detect solar UV index. This board features the GUVA-C32SM, an ultraviolet light sensor capable of measuring UV index between 0 to 14 from Genicom Co., Ltd. It contains the GaN-based chip die, amplifiers, ADC, digital control logic, and I2C interface circuit to measure UVA volumes, working in the spectral range of 220-370nm. The GUVA-C32M can acquire the intensity of UVA, respectively, and outputs digital count according to each intensity.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","GUVA-C32SM"],
     "category" : ["Optical"]
 }

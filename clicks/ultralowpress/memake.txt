@@ -1,7 +1,0 @@
-type: subdirs
-project: UltraLowPress
-
-subdirs: {
-    lib
-    example
-}

@@ -1,7 +1,0 @@
-type: subdirs
-project: Weather
-
-subdirs: {
-    lib
-    example
-}

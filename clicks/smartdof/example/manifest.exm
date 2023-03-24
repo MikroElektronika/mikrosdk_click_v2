@@ -2,7 +2,7 @@
     "name": "Smart DOF Click",
     "description": "SmartDOF click features a highly advanced integrated system-in-package (SiP) solution with three different sensors on-chip: triaxial accelerometer, magnetometer, and triaxial gyroscope are all integrated on the same die, along with the powerful 32-bit ARM® Cortex®-M0+ MCU. Thanks to the integrated MCU, the BN080 SiP provides extensive signal processing.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","BNO080"],
     "category" : ["Motion"] 
 }

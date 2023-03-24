@@ -2,7 +2,7 @@
     "name": "Heater click",
     "description": "Heater Click is designed with intention of PCB heater concept testing and useful tool for heating complete casing where staying in specified temperature range is crucial. Exact PCB temperature can be set and controlled using TMP235 on board temperature sensor from Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","TMP235"],
     "category" : ["Temperature & humidity"] 
 }

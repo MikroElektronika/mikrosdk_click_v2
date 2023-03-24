@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Magnetic",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Magnetic",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "3D Hall 11 click",
     "example_list": [
@@ -26,9 +25,15 @@
     "name": "mikroe.click.c3dhall11",
     "product_link": "https://www.mikroe.com/3d-hall-11-click",
     "short_description": "3D Hall 11 Click is a compact add-on board used to detect the strength of a magnetic field in all three dimensions. This board features the TMAG5273, a low-power linear 3D Hall-effect sensor from Texas Instruments. A precision analog signal chain alongside an integrated 12-bit ADC digitizes the measured analog magnetic field values and passes them via the I2C interface to the microcontroller for further processing. It can achieve ultra-high precision at speeds up to 20kSPS for faster and more accurate real-time control and has an integrated temperature sensor available for multiple system functions.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.5",
+    "alias": "Click.3DHall11",
+    "cmake": true,
+    "subdir_name": "lib_c3dhall11"
 }
+
+
+
 

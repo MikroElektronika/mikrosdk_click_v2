@@ -2,7 +2,7 @@
     "name": "CAN Isolator Click",
     "description": "CAN Isolator click provides isolated CAN communication. It carries the ADM3053 signal and power isolated CAN transceiver with an integrated isolated DC-to-DC converter.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
     "hw" : ["click","ADM3053"],
     "category" : ["CAN"] 
 }

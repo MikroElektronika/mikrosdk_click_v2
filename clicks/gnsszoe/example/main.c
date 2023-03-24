@@ -1,109 +1,75 @@
 /*!
- * \file 
- * \brief Gnsszoe Click example
- * 
+ * @file main.c
+ * @brief GNSS ZOE Click example
+ *
  * # Description
- * This example reads and processes data from GNSS ZOE clicks.
+ * This example demonstrates the use of GNSS ZOE click by reading and displaying
+ * the GNSS coordinates.
  *
  * The demo application is composed of two sections :
- * 
- * ## Application Init 
- * Initializes driver and wake-up module.
- * 
- * ## Application Task  
- * Reads the received data and parses it.
- * 
+ *
+ * ## Application Init
+ * Initializes the driver and resets the click board.
+ *
+ * ## Application Task
+ * Reads the received data, parses the GNGGA info from it, and once it receives the position fix
+ * it will start displaying the coordinates on the USB UART.
+ *
  * ## Additional Function
- * - gnsszoe_process ( ) - The general process of collecting data the module sends.
- * 
- * 
- * \author MikroE Team
+ * - static void gnsszoe_clear_app_buf ( void )
+ * - static err_t gnsszoe_process ( gnsszoe_t *ctx )
+ * - static void gnsszoe_parser_application ( char *rsp )
+ *
+ * @author Stefan Filipovic
  *
  */
-// ------------------------------------------------------------------- INCLUDES
 
 #include "board.h"
 #include "log.h"
 #include "gnsszoe.h"
 
-#define PROCESS_RX_BUFFER_SIZE 300
-#define PROCESS_PARSER_BUFFER_SIZE 600
-
-// ------------------------------------------------------------------ VARIABLES
+#define PROCESS_BUFFER_SIZE 300
 
 static gnsszoe_t gnsszoe;
 static log_t logger;
 
-uint8_t aux_char = 0;
-uint32_t i = 0;
+static char app_buf[ PROCESS_BUFFER_SIZE ] = { 0 };
+static int32_t app_buf_len = 0;
+static int32_t app_buf_cnt = 0;
 
+/**
+ * @brief GNSS ZOE clearing application buffer.
+ * @details This function clears memory of application buffer and reset its length and counter.
+ * @return None.
+ * @note None.
+ */
+static void gnsszoe_clear_app_buf ( void );
 
-char demo_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
-static char current_parser_buf[ PROCESS_PARSER_BUFFER_SIZE ];
+/**
+ * @brief GNSS ZOE data reading function.
+ * @details This function reads data from device and concatenates data to application buffer.
+ * @param[in] ctx : Click context object.
+ * See #gnsszoe_t object definition for detailed explanation.
+ * @return @li @c  0 - Read some data.
+ *         @li @c -1 - Nothing is read or Application buffer overflow.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+static err_t gnsszoe_process ( gnsszoe_t *ctx );
 
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
-
-static void gnsszoe_process ( void )
-{
-    int16_t rsp_size;
-    uint16_t rsp_cnt = 0;
-    uint16_t check_buf_cnt; 
-
-    memset( current_parser_buf, 0 , PROCESS_PARSER_BUFFER_SIZE ); 
-
-    gnsszoe_generic_read( &gnsszoe, demo_buffer, PROCESS_RX_BUFFER_SIZE );
-
-    rsp_size = strlen( demo_buffer );
-
-    if ( rsp_size > 0 )
-    {
-      for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
-            {
-                if ( demo_buffer[ check_buf_cnt ] == 0 ) 
-                {
-                    demo_buffer[ check_buf_cnt ] = 13;
-                }
-            }  
-           
-            rsp_cnt += rsp_size;
-            if ( rsp_cnt < PROCESS_PARSER_BUFFER_SIZE )
-            {
-                strncat( current_parser_buf, demo_buffer, rsp_size );
-            }
-
-             memset( demo_buffer, 0, PROCESS_RX_BUFFER_SIZE );
-    }
-    
-    Delay_ms( 1000 );
-}
-
-static void parser_application ( char *rsp )
-{
-    char element_buf[ 200 ] = { 0 };
-    
-    log_printf( &logger, "\r\n-----------------------\r\n" ); 
-    gnsszoe_generic_parser( rsp, GNSSZOE_NEMA_GNGGA, GNSSZOE_GNGGA_LATITUDE, element_buf );
-    if ( strlen( element_buf ) > 0 )
-    {
-        log_printf( &logger, "Latitude:  %.2s degrees, %s minutes \r\n", element_buf, &element_buf[ 2 ] );
-        gnsszoe_generic_parser( rsp, GNSSZOE_NEMA_GNGGA, GNSSZOE_GNGGA_LONGITUDE, element_buf );
-        log_printf( &logger, "Longitude:  %.3s degrees, %s minutes \r\n", element_buf, &element_buf[ 3 ] );
-        memset( element_buf, 0, sizeof( element_buf ) );
-        gnsszoe_generic_parser( rsp, GNSSZOE_NEMA_GNGGA, GNSSZOE_GNGGA_ALTITUDE, element_buf );
-        log_printf( &logger, "Alitude: %s m", element_buf );  
-    }
-    else
-    {
-        log_printf( &logger, "Waiting for the position fix..." );
-    }  
-}
-
-// ------------------------------------------------------ APPLICATION FUNCTIONS
+/**
+ * @brief GNSS ZOE parser application.
+ * @param[in] rsp Response buffer.
+ * @details This function logs GNSS data on the USB UART.
+ * @return None.
+ * @note None.
+ */
+static void gnsszoe_parser_application ( char *rsp );
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
-    gnsszoe_cfg_t cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    gnsszoe_cfg_t gnsszoe_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -116,23 +82,28 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
+
+    // Click initialization.
+    gnsszoe_cfg_setup( &gnsszoe_cfg );
+    GNSSZOE_MAP_MIKROBUS( gnsszoe_cfg, MIKROBUS_1 );
+    err_t init_flag = gnsszoe_init( &gnsszoe, &gnsszoe_cfg );
+    if ( ( UART_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
     
-    //  Click initialization.
-
-    gnsszoe_cfg_setup( &cfg );
-    GNSSZOE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    gnsszoe_init( &gnsszoe, &cfg );
-
-    gnsszoe_module_reset( &gnsszoe );
-
-    Delay_ms( 1000 );
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )
 {
-    gnsszoe_process(  );
-    parser_application( current_parser_buf );
+    gnsszoe_process( &gnsszoe );
+    if ( app_buf_len > ( sizeof ( GNSSZOE_RSP_GNGGA ) + GNSSZOE_GNGGA_ELEMENT_SIZE ) ) 
+    {
+        gnsszoe_parser_application( app_buf );
+    }
 }
 
 void main ( void )
@@ -145,5 +116,88 @@ void main ( void )
     }
 }
 
+static void gnsszoe_clear_app_buf ( void ) 
+{
+    memset( app_buf, 0, app_buf_len );
+    app_buf_len = 0;
+    app_buf_cnt = 0;
+}
+
+static err_t gnsszoe_process ( gnsszoe_t *ctx ) 
+{
+    int32_t rx_size = 0;
+    char rx_buf[ PROCESS_BUFFER_SIZE ] = { 0 };
+    if ( GNSSZOE_DRV_SEL_UART == ctx->drv_sel )
+    {
+        rx_size = gnsszoe_generic_read( ctx, rx_buf, PROCESS_BUFFER_SIZE );
+    }
+    else if ( ( GNSSZOE_DRV_SEL_I2C == ctx->drv_sel ) || ( GNSSZOE_DRV_SEL_SPI == ctx->drv_sel ) )
+    {
+        if ( GNSSZOE_OK == gnsszoe_generic_read( ctx, rx_buf, 1 ) )
+        {
+            if ( GNSSZOE_DUMMY != rx_buf[ 0 ] )
+            {
+                rx_size = 1;
+            }
+        }
+    }
+    if ( rx_size > 0 ) 
+    {
+        int32_t buf_cnt = 0;
+        if ( ( app_buf_len + rx_size ) > PROCESS_BUFFER_SIZE ) 
+        {
+            gnsszoe_clear_app_buf(  );
+            return GNSSZOE_ERROR;
+        } 
+        else 
+        {
+            buf_cnt = app_buf_len;
+            app_buf_len += rx_size;
+        }
+        for ( int32_t rx_cnt = 0; rx_cnt < rx_size; rx_cnt++ ) 
+        {
+            if ( rx_buf[ rx_cnt ] ) 
+            {
+                app_buf[ ( buf_cnt + rx_cnt ) ] = rx_buf[ rx_cnt ];
+            }
+            else
+            {
+                app_buf_len--;
+                buf_cnt--;
+            }
+        }
+        return GNSSZOE_OK;
+    }
+    return GNSSZOE_ERROR;
+}
+
+static void gnsszoe_parser_application ( char *rsp )
+{
+    char element_buf[ 100 ] = { 0 };
+    if ( GNSSZOE_OK == gnsszoe_parse_gngga( rsp, GNSSZOE_GNGGA_LATITUDE, element_buf ) )
+    {
+        static uint8_t wait_for_fix_cnt = 0;
+        if ( strlen( element_buf ) > 0 )
+        {
+            log_printf( &logger, "\r\n Latitude: %.2s degrees, %s minutes \r\n", element_buf, &element_buf[ 2 ] );
+            gnsszoe_parse_gngga( rsp, GNSSZOE_GNGGA_LONGITUDE, element_buf );
+            log_printf( &logger, " Longitude: %.3s degrees, %s minutes \r\n", element_buf, &element_buf[ 3 ] );
+            memset( element_buf, 0, sizeof( element_buf ) );
+            gnsszoe_parse_gngga( rsp, GNSSZOE_GNGGA_ALTITUDE, element_buf );
+            log_printf( &logger, " Altitude: %s m \r\n", element_buf );
+            wait_for_fix_cnt = 0;
+        }
+        else
+        {
+            if ( wait_for_fix_cnt % 5 == 0 )
+            {
+                log_printf( &logger, " Waiting for the position fix...\r\n\n" );
+                wait_for_fix_cnt = 0;
+            }
+            wait_for_fix_cnt++;
+        }
+        gnsszoe_clear_app_buf(  );
+    }
+}
 
 // ------------------------------------------------------------------------ END

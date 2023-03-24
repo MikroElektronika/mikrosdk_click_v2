@@ -2,7 +2,7 @@
     "name": "Analog MUX 2 Click",
     "description": "Analog MUX 2 Click is a compact add-on board that switches one of the eight inputs to one output. This board features the ADG728, a low voltage, CMOS 8-channel analog matrix switch with a serially controlled 2-wire interface from Analog Devices. The ADG728 can operate equally well as either multiplexer, demultiplexer, or switch array easily connected to a 9 pole spring action block terminal. It provides flexibility and features a low on-resistance closely matched between switches and very flat over the full signal range. This Click board™ is suitable for a wide range of applications, from industrial and instrumentation to medical, consumer, communications, and automotive systems.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","ADG728BRUZ"],
     "category" : ["Measurements"]
 }

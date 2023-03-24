@@ -168,8 +168,6 @@ void application_init ( void )
 
 void application_task ( void ) 
 {
-    // Busy wait for communication window availability
-    touchpad5_wait_ready( &touchpad5 );
     // Get touchpad XY data
     touchpad5_get_touch( &touchpad5, &touch_data );
     
@@ -180,7 +178,7 @@ void application_task ( void )
         log_printf( &logger, "\r\n* Snap (click) event occured with strength: %u *\r\n", 
                                                                         ( uint16_t ) touch_data.touch_strength ); 
         log_printf( &logger, "----------------------------------------------------------------\r\n" );
-        Delay_ms( 100 );
+        Delay_1sec( );
     }
     // Detecting the touch criteria
     else if ( touch_data.x_pos > 0 && touch_data.y_pos > 0 && touch_data.touch_strength > TOUCH_STRENGTH_THRESHOLD )
@@ -202,8 +200,6 @@ void application_task ( void )
         log_error( &logger, "\r\n Unexpected reset occured. \r\n" ); 
         log_printf( &logger, "----------------------------------------------------------------\r\n\r\n" );
     }
-
-    Delay_ms( 50 );    
 }
 
 void main ( void ) 
@@ -220,10 +216,6 @@ bool touchpad5_get_snap_sample( touchpad5_t *ctx, uint16_t *snap_data )
 {
     bool status = false;
     uint16_t snap_reg_data_avg = 0;
-    
-    Delay_ms( 20 );
-    
-    touchpad5_wait_ready( ctx );
     
     // Get snap status for desired number of channels
     if ( TOUCHPAD5_ERROR == touchpad5_get_status( ctx, TOUCHPAD5_SNAP_STATUS, &snap_reg_data, SNAP_NUMBER_OF_CHANNELS ) )

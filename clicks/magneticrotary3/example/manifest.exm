@@ -2,7 +2,7 @@
     "name": "Magnetic Rotary 3 Click",
     "description": "Magnetic Rotary 3 Click is a compact add-on board for accurate magnet-position sensing. This board features the AS5147, an SPI-configurable high-resolution rotary position sensor for fast absolute angle measurement over a full 360-degree range from ams AG.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","AS5147U-HTSM"],
     "category" : ["Click Boards > Sensors > Magnetic"]
 }

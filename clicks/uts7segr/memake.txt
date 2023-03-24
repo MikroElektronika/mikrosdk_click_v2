@@ -1,7 +1,0 @@
-type: subdirs
-project: UT-S7-SEGR
-
-subdirs: {
-    lib
-    example
-}

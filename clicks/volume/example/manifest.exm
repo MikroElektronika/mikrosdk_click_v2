@@ -2,7 +2,7 @@
     "name": "Volume Click",
     "description": "Volume Click is a compact add-on board that provides the user with complete digital volume control. This board features the CS3310, a stereo digital volume control designed specifically for audio systems from Cirrus Logic.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","CS3310"],
     "category" : ["Signal processing"]
 }

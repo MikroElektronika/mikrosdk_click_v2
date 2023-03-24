@@ -1,7 +1,0 @@
-type: subdirs
-project: Light
-
-subdirs: {
-    lib
-    example
-}

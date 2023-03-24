@@ -1,118 +1,78 @@
 /*!
- * \file 
- * \brief Gps3 Click example
- * 
+ * @file main.c
+ * @brief GPS 3 Click Example.
+ *
  * # Description
- * This example reads and processes data from GPS3 click.
+ * This example demonstrates the use of GPS 3 click by reading and displaying
+ * the GPS coordinates.
  *
  * The demo application is composed of two sections :
- * 
- * ## Application Init 
- * Initializes driver and wake-up module.
- * 
- * ## Application Task  
- * Reads the received data and parses it.
- * 
+ *
+ * ## Application Init
+ * Initializes the driver and logger.
+ *
+ * ## Application Task
+ * Reads the received data, parses the GPGGA info from it, and once it receives the position fix
+ * it will start displaying the coordinates on the USB UART.
+ *
  * ## Additional Function
- * - gps3_process ( ) - The general process of collecting data the module sends.
+ * - static void gps3_clear_app_buf ( void )
+ * - static err_t gps3_process ( gps3_t *ctx )
+ * - static void gps3_parser_application ( char *rsp )
  * 
- * 
- * \author MikroE Team
+ * @author Stefan Filipovic
  *
  */
-// ------------------------------------------------------------------- INCLUDES
 
 #include "board.h"
 #include "log.h"
 #include "gps3.h"
 #include "string.h"
 
-#define PROCESS_COUNTER 15
-#define PROCESS_RX_BUFFER_SIZE 600
-#define PROCESS_PARSER_BUFFER_SIZE 600
-
-// ------------------------------------------------------------------ VARIABLES
+#define PROCESS_BUFFER_SIZE 200
 
 static gps3_t gps3;
 static log_t logger;
 
-static char current_parser_buf[ PROCESS_PARSER_BUFFER_SIZE ];
+static char app_buf[ PROCESS_BUFFER_SIZE ] = { 0 };
+static int32_t app_buf_len = 0;
 
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
+/**
+ * @brief GPS 3 clearing application buffer.
+ * @details This function clears memory of application buffer and reset its length.
+ * @return None.
+ * @note None.
+ */
+static void gps3_clear_app_buf ( void );
 
-static void gps3_process ( void )
+/**
+ * @brief GPS 3 data reading function.
+ * @details This function reads data from device and concatenates data to application buffer.
+ * @param[in] ctx : Click context object.
+ * See #gps3_t object definition for detailed explanation.
+ * @return @li @c  0 - Read some data.
+ *         @li @c -1 - Nothing is read.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+static err_t gps3_process ( gps3_t *ctx );
+
+/**
+ * @brief GPS 3 parser application function.
+ * @details This function parses GNSS data and logs it on the USB UART. It clears app and ring buffers
+ * after successfully parsing data.
+ * @param[in] ctx : Click context object.
+ * See #gps3_t object definition for detailed explanation.
+ * @param[in] rsp Response buffer.
+ * @return None.
+ * @note None.
+ */
+static void gps3_parser_application ( gps3_t *ctx, char *rsp );
+
+void application_init ( void ) 
 {
-    int32_t rsp_size;
-    uint16_t rsp_cnt = 0;
-    
-    char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
-    uint16_t check_buf_cnt;
-    uint8_t process_cnt = PROCESS_COUNTER;
-    
-    // Clear parser buffer
-    memset( current_parser_buf, 0 , PROCESS_PARSER_BUFFER_SIZE ); 
-    
-    while( process_cnt != 0 )
-    {
-        rsp_size = gps3_generic_read( &gps3, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
-
-        if ( rsp_size >0 )
-        {  
-            // Validation of the received data
-            for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
-            {
-                if ( uart_rx_buffer[ check_buf_cnt ] == 0 ) 
-                {
-                    uart_rx_buffer[ check_buf_cnt ] = 13;
-                }
-            }
-            
-            // Storages data in parser buffer
-            rsp_cnt += rsp_size;
-            if ( rsp_cnt < PROCESS_PARSER_BUFFER_SIZE )
-            {
-                strncat( current_parser_buf, uart_rx_buffer, rsp_size );
-            }
-            // Clear RX buffer
-            memset( uart_rx_buffer, 0, PROCESS_RX_BUFFER_SIZE );
-        } 
-        else 
-        {
-            process_cnt--;
-            
-            // Process delay 
-            Delay_100ms( );
-        }
-    }
-}
-
-static void parser_application ( char *rsp )
-{
-    char element_buf[ 200 ] = { 0 };
-    
-    log_printf( &logger, "\r\n-----------------------\r\n" ); 
-    gps3_generic_parser( rsp, GPS3_NEMA_GPGGA, GPS3_GPGGA_LATITUDE, element_buf );
-    if ( strlen( element_buf ) > 0 )
-    {
-        log_printf( &logger, "Latitude:  %.2s degrees, %s minutes \r\n", element_buf, &element_buf[ 2 ] );
-        gps3_generic_parser( rsp, GPS3_NEMA_GPGGA, GPS3_GPGGA_LONGITUDE, element_buf );
-        log_printf( &logger, "Longitude:  %.3s degrees, %s minutes \r\n", element_buf, &element_buf[ 3 ] );
-        memset( element_buf, 0, sizeof( element_buf ) );
-        gps3_generic_parser( rsp, GPS3_NEMA_GPGGA, GPS3_GPGGA_ALTITUDE, element_buf );
-        log_printf( &logger, "Altitude: %s m", element_buf );  
-    }
-    else
-    {
-        log_printf( &logger, "Waiting for the position fix..." );
-    }
-}
-
-// ------------------------------------------------------ APPLICATION FUNCTIONS
-
-void application_init ( void )
-{
-    log_cfg_t log_cfg;
-    gps3_cfg_t cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    gps3_cfg_t gps3_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -125,33 +85,103 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
-    gps3_cfg_setup( &cfg );
-    GPS3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    gps3_init( &gps3, &cfg );
-
-    gps3_module_wakeup( &gps3 );
-    Delay_ms( 5000 );
+    // Click initialization.
+    gps3_cfg_setup( &gps3_cfg );
+    GPS3_MAP_MIKROBUS( gps3_cfg, MIKROBUS_1 );
+    if ( UART_ERROR == gps3_init( &gps3, &gps3_cfg ) ) 
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
+    log_info( &logger, " Application Task " );
 }
 
-void application_task ( void )
+void application_task ( void ) 
 {
-    gps3_process(  );
-    parser_application( current_parser_buf );
+    if ( GPS3_OK == gps3_process( &gps3 ) )
+    {
+        if ( PROCESS_BUFFER_SIZE == app_buf_len )
+        {
+            gps3_parser_application( &gps3, app_buf );
+        }
+    }
 }
 
-void main ( void )
+void main ( void ) 
 {
     application_init( );
 
-    for ( ; ; )
+    for ( ; ; ) 
     {
         application_task( );
     }
 }
 
+static void gps3_clear_app_buf ( void ) 
+{
+    memset( app_buf, 0, app_buf_len );
+    app_buf_len = 0;
+}
+
+static err_t gps3_process ( gps3_t *ctx ) 
+{
+    char rx_buf[ PROCESS_BUFFER_SIZE ] = { 0 };
+    int32_t rx_size = 0;
+    rx_size = gps3_generic_read( ctx, rx_buf, PROCESS_BUFFER_SIZE );
+    if ( rx_size > 0 ) 
+    {
+        int32_t buf_cnt = app_buf_len;
+        if ( ( ( app_buf_len + rx_size ) > PROCESS_BUFFER_SIZE ) && ( app_buf_len > 0 ) ) 
+        {
+            buf_cnt = PROCESS_BUFFER_SIZE - ( ( app_buf_len + rx_size ) - PROCESS_BUFFER_SIZE );
+            memmove ( app_buf, &app_buf[ PROCESS_BUFFER_SIZE - buf_cnt ], buf_cnt );
+        }
+        for ( int32_t rx_cnt = 0; rx_cnt < rx_size; rx_cnt++ ) 
+        {
+            if ( rx_buf[ rx_cnt ] ) 
+            {
+                app_buf[ buf_cnt++ ] = rx_buf[ rx_cnt ];
+                if ( app_buf_len < PROCESS_BUFFER_SIZE )
+                {
+                    app_buf_len++;
+                }
+            }
+        }
+        return GPS3_OK;
+    }
+    return GPS3_ERROR;
+}
+
+static void gps3_parser_application ( gps3_t *ctx, char *rsp )
+{
+    char element_buf[ 100 ] = { 0 };
+    if ( GPS3_OK == gps3_parse_gpgga( rsp, GPS3_GPGGA_LATITUDE, element_buf ) )
+    {
+        static uint8_t wait_for_fix_cnt = 0;
+        if ( strlen( element_buf ) > 0 )
+        {
+            log_printf( &logger, "\r\n Latitude: %.2s degrees, %s minutes \r\n", element_buf, &element_buf[ 2 ] );
+            gps3_parse_gpgga( rsp, GPS3_GPGGA_LONGITUDE, element_buf );
+            log_printf( &logger, " Longitude: %.3s degrees, %s minutes \r\n", element_buf, &element_buf[ 3 ] );
+            memset( element_buf, 0, sizeof( element_buf ) );
+            gps3_parse_gpgga( rsp, GPS3_GPGGA_ALTITUDE, element_buf );
+            log_printf( &logger, " Altitude: %s m \r\n", element_buf );
+            wait_for_fix_cnt = 0;
+        }
+        else
+        {
+            if ( wait_for_fix_cnt % 5 == 0 )
+            {
+                log_printf( &logger, " Waiting for the position fix...\r\n\n" );
+                wait_for_fix_cnt = 0;
+            }
+            wait_for_fix_cnt++;
+        }
+        gps3_clear_ring_buffers( ctx );
+        gps3_clear_app_buf( );
+    }
+}
 
 // ------------------------------------------------------------------------ END

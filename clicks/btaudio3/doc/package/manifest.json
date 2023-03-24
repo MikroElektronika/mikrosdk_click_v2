@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "BT/BLE",
+    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "category": "Click Boards > Wireless connectivity > BT/BLE",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "BT Audio 3 click",
     "example_list": [
@@ -26,9 +25,16 @@
     "name": "mikroe.click.btaudio3",
     "product_link": "https://www.mikroe.com/bt-audio-3-click",
     "short_description": "BT Audio 3 Click is a compact add-on board with high-performing voice and audio post-processing capability for Bluetooth audio applications. This board features the BM83, a fully certified Bluetooth v5.0 stereo audio module from Microchip. The BM83 contains an onboard Bluetooth stack and audio profiles and supports 24-bit/96 kHz high-resolution audio formats to enable high-fidelity wireless audio. An integrated Digital Signal Processor (DSP) decodes AAC and SBC codecs and executes advanced audio and voice processing such as Wide-Band (WB) speech, Acoustic Echo Cancellation (AEC), and Noise Reduction (NR). Configured in Host mode, the BM83 allows data processing via the UART interface, and in addition, comes with many additional features such as audio control buttons, onboard microphones, LED indicators, and more.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.7",
+    "cmake": true,
+    "alias": "Click.BTAudio3",
+    "subdir_name": "lib_btaudio3"
 }
+
+
+
+
 

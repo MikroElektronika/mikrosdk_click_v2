@@ -2,7 +2,7 @@
     "name": "Microwave Click",
     "description": "Microwave click detects movement, thanks to the PD-V11 a 24GHz microwave motion sensor. The typical use for Microwave click is a proximity or motion detector in various applications and devices.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","PD-V11"],
     "category" : ["Motion"] 
 }

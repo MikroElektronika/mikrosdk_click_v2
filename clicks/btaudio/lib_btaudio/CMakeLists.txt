@@ -1,0 +1,32 @@
+cmake_minimum_required(VERSION 3.21)
+if (${TOOLCHAIN_LANGUAGE} MATCHES "MikroC")
+    project(lib_btaudio LANGUAGES MikroC)
+else()
+    project(lib_btaudio LANGUAGES C ASM)
+endif()
+
+if (NOT PROJECT_TYPE)
+    set(PROJECT_TYPE "mikrosdk" CACHE STRING "" FORCE)
+endif()
+
+add_library(lib_btaudio STATIC
+        src/btaudio.c
+        include/btaudio.h
+)
+add_library(Click.BtAudio  ALIAS lib_btaudio)
+
+
+
+target_include_directories(lib_btaudio PUBLIC
+        include
+)
+
+find_package(MikroC.Core REQUIRED)
+target_link_libraries(lib_btaudio PUBLIC MikroC.Core)
+find_package(MikroSDK.Driver REQUIRED)
+target_link_libraries(lib_btaudio PUBLIC MikroSDK.Driver)
+find_package(MikroSDK.Conversions REQUIRED)
+target_link_libraries(lib_btaudio PUBLIC MikroSDK.Conversions)
+
+include(mikroeUtils)
+math_check_target(${PROJECT_NAME})

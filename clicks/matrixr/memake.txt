@@ -1,7 +1,0 @@
-type: subdirs
-project: MatrixR
-
-subdirs: {
-    lib
-    example
-}

@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Temperature & humidity",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Temperature & humidity",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,34 +8,34 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "THERMO click",
     "example_list": [
-      {
-        "project_path": "Examples/example"
-      }
+        {
+            "project_path": "Examples/example"
+        }
     ],
     "help": "Help/doc",
     "icon": "Resources/click_icon.png",
     "license": {
-      "file_path": "",
-      "id": "46"
+        "file_path": "",
+        "id": "46"
     },
     "name": "mikroe.click.thermo",
     "product_link": "https://www.mikroe.com/thermo-click",
     "short_description": "THERMO click features the MAX31855K thermocouple-to-digital converter as well as PCC-SMP connector for K-type thermocouple probes. The click is designed to run on a 3.3V power supply. ",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         381
     ],
-    "version": "2.0.0.6"
+    "version": "2.1.0.10",
+    "cmake": true,
+    "alias": "Click.Thermo",
+    "subdir_name": "lib_thermo"
 }
-
-
 
 
 

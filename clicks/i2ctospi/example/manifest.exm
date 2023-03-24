@@ -2,7 +2,7 @@
     "name": "I2C to SPI Click",
     "description": "I2C to SPi Click is an all-in-one solution which allows serving as an interface between a standard I2C-bus of a microcontroller and an SPi bus, which allows the microcontroller to communicate directly with SPi devices through its I2C-bus. It is equipped with the stacking headers, so it can be easily connected.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","SC18IS602B"],
     "category" : ["I2C"] 
 }

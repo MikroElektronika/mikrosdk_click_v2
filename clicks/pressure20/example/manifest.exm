@@ -2,7 +2,7 @@
     "name": "Pressure 20 Click",
     "description": "Pressure 20 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the ICP-20100, a high-accuracy digital barometric pressure and temperature sensor from TDK InvenSense. The ICP-20100 is based on MEMS capacitive technology with ultra-low noise, low power consumption, and temperature stability alongside programmable output: all-pressure, all-temperature, or pressure and temperature output. It converts output data into a 20-bit digital value and sends the information via a configurable host interface that supports SPI and I2C serial communications. It measures pressure from 30kPa up to 110kPa with an accuracy of ±20Pa over a wide operating temperature range.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","ICP-20100"],
     "category" : ["Pressure"]
 }

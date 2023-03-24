@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC",
-    "category": "LED matrix",
+    "architecture": "ARM|PIC|RISC-V|AVR",
+    "category": "Click Boards > Display & LED > LED matrix",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "8800 Retro click",
     "example_list": [
@@ -26,11 +25,15 @@
     "name": "mikroe.click.c8800retro",
     "product_link": "https://www.mikroe.com/8800-retro-click",
     "short_description": "8800 Retro Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the AS1115, compact LED driver for 8x8 display screen programmed via a compatible 2-wire I2C interface from ASM-AG.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.5"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.9",
+    "cmake": true,
+    "alias": "Click.8800Retro",
+    "subdir_name": "lib_c8800retro"
 }
+
 
 
 

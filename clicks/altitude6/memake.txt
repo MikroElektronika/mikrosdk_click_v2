@@ -1,8 +1,0 @@
-type: subdirs
-
-project: Altitude6
-
-subdirs: {
-    lib
-    example
-}
