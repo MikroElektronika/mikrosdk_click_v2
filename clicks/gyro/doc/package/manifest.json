@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Motion",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Gyro click",
     "example_list": [
@@ -26,18 +25,17 @@
     "name": "mikroe.click.gyro",
     "product_link": "https://www.mikroe.com/gyro-click",
     "short_description": "Gyro click is an add-on board in mikroBUS form factor. It features L3GD20 three-axis digital gyroscope module capable of providing the measured angular rate, as well as ambient temperature.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         553
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.7"
+    "version": "2.1.0.11",
+    "cmake": true,
+    "alias": "Click.Gyro",
+    "subdir_name": "lib_gyro"
 }
-
-
-
 
 
 

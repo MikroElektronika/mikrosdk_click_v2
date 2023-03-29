@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "LED segment",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Display & LED > LED segment",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "UT-S 7-SEG R click",
     "example_list": [
@@ -26,14 +25,18 @@
     "name": "mikroe.click.uts7segr",
     "product_link": "https://www.mikroe.com/ut-s-7-seg-r-click",
     "short_description": "7-segment LED display is the most commonly used type of display to represent changing numerical values. The principle is very simple - seven LED segments are positioned in a certain shape and by turning specific segments on or off, the shape that resembles a specific number is lit. This method of displaying numbers was first used in the beginning of the 20th century, but after the invention of the LED in ‘70, it is the most commonly used method to display numbers. It utilizes a fairly simple and cheap design with the numbers clearly visible.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-	"related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2258
     ],
-    "version": "2.0.0.5"
+    "version": "2.1.0.9",
+    "cmake": true,
+    "alias": "Click.UT-S7-SEGR",
+    "subdir_name": "lib_uts7segr"
 }
+
 
 
 

@@ -1,7 +1,0 @@
-type: subdirs
-project: Ldc1101
-
-subdirs: {
-    lib
-    example
-}

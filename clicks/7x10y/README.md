@@ -142,7 +142,7 @@ The full application code, and ready to use projects can be installed directly f
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.c7x10Y
+- Click.7x10Y
 
 **Additional notes and informations**
 

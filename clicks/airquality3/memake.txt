@@ -1,7 +1,0 @@
-type: subdirs
-project: AirQuality3
-
-subdirs: {
-    lib
-    example
-}

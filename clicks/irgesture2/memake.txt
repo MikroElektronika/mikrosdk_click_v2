@@ -1,7 +1,0 @@
-type: subdirs
-project: IRGesture2
-
-subdirs: {
-    lib
-    example
-}

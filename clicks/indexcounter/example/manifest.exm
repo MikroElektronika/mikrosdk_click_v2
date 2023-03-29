@@ -2,7 +2,7 @@
     "name": "Index Counter Click",
     "description": "Index Counter Click is a simple prototyping high precision Hall-Effect switch solution with direction detection.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","TLE4966K"],
     "category" : ["Optical"] 
 }

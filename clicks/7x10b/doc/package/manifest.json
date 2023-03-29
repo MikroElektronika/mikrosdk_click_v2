@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "LED matrix",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Display & LED > LED matrix",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "7x10 B click",
     "example_list": [
@@ -26,13 +25,16 @@
     "name": "mikroe.click.c7x10b",
     "product_link": "https://www.mikroe.com/7x10-b-click",
     "short_description": "7x10 B click is a LED dot matrix display click, which can be used to display graphics or letters in a very simple and easy way. The click board has two LED dot matrix modules with 7x5 stylish, round, dot-like LED elements. These displays produce clean and uniform patterns since the elements are optically isolated from each other and there is no light bleeding between the adjacent LED cells. Additionally, turn-on and turn-off times of the matrix cells are optimized for a clean and fluid display performance, with no flickering or lag.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-	 "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2199
     ],
-    "version": "2.0.0.4"
+    "version": "2.1.0.8",
+    "cmake": true,
+    "alias": "Click.7x10B",
+    "subdir_name": "lib_c7x10b"
 }
 
 

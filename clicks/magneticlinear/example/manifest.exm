@@ -2,7 +2,7 @@
     "name": "Magnetic linear Click",
     "description": "Magnetic linear click is a very accurate position sensing Click board™ which utilizes the HMC1501, a magnetic field displacement sensor IC.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","HMC1501"],
     "category" : ["Magnetic"] 
 }

@@ -165,7 +165,7 @@ The full application code, and ready to use projects can be  installed directly 
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.c13DOF
+- Click.13DOF
 
 **Additional notes and informations**
 

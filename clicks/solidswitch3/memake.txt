@@ -1,7 +1,0 @@
-type: subdirs
-project: SolidSwitch3
-
-subdirs: {
-    lib
-    example
-}

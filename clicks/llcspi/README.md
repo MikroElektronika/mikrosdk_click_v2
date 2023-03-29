@@ -133,7 +133,7 @@ The full application code, and ready to use projects can be  installed directly 
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.llcspi
+- Click.Llcspi
 
 **Additional notes and informations**
 

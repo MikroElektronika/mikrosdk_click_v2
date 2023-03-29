@@ -1,7 +1,0 @@
-type: subdirs
-project: ADAC3
-
-subdirs: {
-    lib
-    example
-}

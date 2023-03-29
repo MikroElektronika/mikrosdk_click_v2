@@ -117,7 +117,7 @@ The full application code, and ready to use projects can be  installed directly 
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.C420mat
+- Click.420mat
 
 **Additional notes and informations**
 

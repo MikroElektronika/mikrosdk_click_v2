@@ -16,8 +16,8 @@
 
 #### Click library
 
-- **Author**        : Luka Filipovic
-- **Date**          : Dec 2020.
+- **Author**        : Stefan Filipovic
+- **Date**          : Nov 2022.
 - **Type**          : UART type
 
 
@@ -32,50 +32,49 @@ Package can be downloaded/installed directly from *NECTO Studio Package Manager*
 
 ## Library Description
 
-```
-This library contains API for IRNSS Click driver.
-```
+> This library contains API for IRNSS Click driver.
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-```
+- `irnss_cfg_setup` Config Object Initialization function.
+```c
 void irnss_cfg_setup ( irnss_cfg_t *cfg );
 ```
 
-- Initialization function.
-```
+- `irnss_init` Initialization function.
+```c
 err_t irnss_init ( irnss_t *ctx, irnss_cfg_t *cfg );
 ```
 
 #### Example key functions :
 
-> IRNSS data writing function.
-```
-err_t irnss_generic_write ( irnss_t *ctx, char *data_buf, uint16_t len );
-```
-
-> IRNSS data reading function.
-```
-err_t irnss_generic_read ( irnss_t *ctx, char *data_buf, uint16_t max_len );
-```
-
-> Sets state of the rst pin setting.
-```
+- `irnss_set_rst_pin_state` This function sets rst pin output to state setting.
+```c
 void irnss_set_rst_pin_state ( irnss_t *ctx, uint8_t state );
 ```
 
-## Examples Description
+- `irnss_generic_read` This function reads a desired number of data bytes by using UART serial interface.
+```c
+err_t irnss_generic_read ( irnss_t *ctx, char *data_buf, uint16_t max_len );
+```
 
-> This example application reads data, checks for specific command. If command is found checks for data validation and if it's found logs that data to UART terminal.
+- `irnss_parse_gngga` This function parses the GNGGA data from the read response buffer.
+```c
+err_t irnss_parse_gngga ( char *rsp_buf, uint8_t gngga_element, char *element_data );
+```
+
+## Example Description
+
+> This example demonstrates the use of IRNSS click by reading and displaying the GPS coordinates.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes log and device communication modules
+> Initializes the driver and resets the click board.
 
-```
+```c
+
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -93,89 +92,33 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
-    Delay_ms( 500 );
 
     // Click initialization.
     irnss_cfg_setup( &irnss_cfg );
     IRNSS_MAP_MIKROBUS( irnss_cfg, MIKROBUS_1 );
-    err_t init_flag  = irnss_init( &irnss, &irnss_cfg );
-    if ( init_flag == UART_ERROR )
+    if ( UART_ERROR == irnss_init( &irnss, &irnss_cfg ) ) 
     {
-        log_error( &logger, " Application Init Error. " );
-        log_info( &logger, " Please, run program again... " );
-
+        log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-
-    app_buf_len = 0;
-    app_buf_cnt = 0;
-    last_error_flag = 0;
     log_info( &logger, " Application Task " );
-    Delay_ms( 500 );
-    irnss_process();
-    irnss_clear_app_buf(  );
 }
 ```
 
 ### Application Task
 
->Collects data and waits for Latitude, longitude, and altitude data from the device.\
-When it's received logs data, and while waiting it will log '.' until data is received.
+> Reads the received data, parses the GNGGA info from it, and once it receives the position fix it will start displaying the coordinates on the USB UART.
 
-```
+```c
 void application_task ( void ) 
 {
-    irnss_process();
-    
-    
-    err_t error_flag = irnss_element_parser( RSP_GNGGA, RSP_GNGGA_LATITUDE_ELEMENT, 
-                                             latitude_data );
-    
-    error_flag |= irnss_element_parser(  RSP_GNGGA, RSP_GNGGA_LONGITUDE_ELEMENT, 
-                                         longitude_data );
-    
-    error_flag |= irnss_element_parser(  RSP_GNGGA, RSP_GNGGA_ALTITUDE_ELEMENT, 
-                                         altitude_data );
-    
-    
-    if ( error_flag == 0 )
-    {
-        if ( last_error_flag != 0)
+    irnss_process( &irnss );
+    if ( app_buf_len > ( sizeof ( ( char * ) IRNSS_RSP_GNGGA ) + IRNSS_GNGGA_ELEMENT_SIZE ) ) 
         {
-            log_printf( &logger, "\r\n" );
-        }
-        log_printf( &logger, ">Latitude:\r\n - deg: %.2s \r\n - min: %s\r\n", 
-                    latitude_data, &latitude_data[ 2 ] );
-        
-        log_printf( &logger, ">Longitude:\r\n - deg: %.3s \r\n - min: %s\r\n", 
-                    longitude_data, &longitude_data[ 3 ] );
-        
-        log_printf( &logger, ">Altitude:\r\n - %sm\r\n", 
-                    altitude_data );
-        
-        log_printf( &logger, "----------------------------------------\r\n" );
-    }
-    else if ( error_flag < -1 )
-    {
-        if ( last_error_flag == 0 )
-        {
-            log_printf( &logger, "Waiting for data" );
-        }
-        log_printf( &logger, "." );
-    }
-    
-    if ( error_flag != -1 )
-    {
-        last_error_flag = error_flag;
-        irnss_clear_app_buf(  );
+        irnss_parser_application( app_buf );
     }
 }
 ```
-
-## Note
-
-> For the device to connect it can take it from 1 to 8 minutes to get useful data from satellites.\
-Time to connect is depending on weather, do you have an external antenna, etc.
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 

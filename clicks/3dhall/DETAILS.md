@@ -160,7 +160,7 @@ The full application code, and ready to use projects can be  installed directly 
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.c3DHall
+- Click.3DHall
 
 **Additional notes and informations**
 

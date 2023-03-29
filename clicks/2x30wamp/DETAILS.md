@@ -134,7 +134,7 @@ The full application code, and ready to use projects can be  installed directly 
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.c2x30wAmp
+- Click.2x30wAmp
 
 **Additional notes and informations**
 

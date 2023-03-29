@@ -1,7 +1,0 @@
-type: subdirs
-project: Ecg6
-
-subdirs: {
-    lib
-    example
-}

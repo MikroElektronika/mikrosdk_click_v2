@@ -1,7 +1,0 @@
-type: subdirs
-project: Multimeter
-
-subdirs: {
-    lib
-    example
-}

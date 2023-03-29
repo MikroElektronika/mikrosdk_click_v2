@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Speakers",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Audio & voice > Speakers",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Buzz 3 click",
     "example_list": [
@@ -26,11 +25,17 @@
     "name": "mikroe.click.buzz3",
     "product_link": "https://www.mikroe.com/buzz-3-click",
     "short_description": "Buzz 3 Click is a compact add-on board that contains a sounder driver that produces higher volume with a lower current. This board features the PAM8904, a piezo-sounder driver with an integrated Multi-Mode charge pump boost converter from Diodes Incorporated.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-	"related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         4090
     ],
-    "version": "2.0.0.0"
+    "version": "2.1.0.3",
+    "cmake": true,
+    "alias": "Click.Buzz3",
+    "subdir_name": "lib_buzz3"
 }
+
+
+

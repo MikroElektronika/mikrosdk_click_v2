@@ -1,7 +1,0 @@
-type: subdirs
-project: C420mat
-
-subdirs: {
-    lib
-    example
-}

@@ -229,7 +229,7 @@ The full application code, and ready to use projects can be installed directly f
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.C4GLTEAPJ
+- Click.4GLTEAPJ
 
 **Additional notes and informations**
 

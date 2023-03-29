@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Measurements",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Mixed signal > Measurements",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Analog MUX 2 click",
     "example_list": [
@@ -26,14 +25,14 @@
     "name": "mikroe.click.analogmux2",
     "product_link": "https://www.mikroe.com/analog-mux-2-click",
     "short_description": "Analog MUX 2 Click is a compact add-on board that switches one of the eight inputs to one output. This board features the ADG728, a low voltage, CMOS 8-channel analog matrix switch with a serially controlled 2-wire interface from Analog Devices. The ADG728 can operate equally well as either multiplexer, demultiplexer, or switch array easily connected to a 9 pole spring action block terminal. It provides flexibility and features a low on-resistance closely matched between switches and very flat over the full signal range. This Click board™ is suitable for a wide range of applications, from industrial and instrumentation to medical, consumer, communications, and automotive systems.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.10"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.15",
+    "cmake": true,
+    "alias": "Click.AnalogMux2",
+    "subdir_name": "lib_analogmux2"
 }
-
-
-
 
 
 

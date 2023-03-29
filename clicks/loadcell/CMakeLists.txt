@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 3.21)
+if (${TOOLCHAIN_LANGUAGE} MATCHES "MikroC")
+    project(example_loadcell LANGUAGES MikroC)
+else()
+    project(example_loadcell LANGUAGES C ASM)
+endif()
+
+if (NOT PROJECT_TYPE)
+    set(PROJECT_TYPE "mikrosdk" CACHE STRING "" FORCE)
+endif()
+
+add_executable(example_loadcell
+        example/main.c
+
+)
+
+
+############################ example_loadcell GENERATED CODE START ###########################
+find_package(MikroC.Core REQUIRED)
+target_link_libraries(example_loadcell PUBLIC MikroC.Core)
+find_package(MikroSDK.Board REQUIRED)
+target_link_libraries(example_loadcell PUBLIC MikroSDK.Board)
+find_package(MikroSDK.Log REQUIRED)
+target_link_libraries(example_loadcell PUBLIC MikroSDK.Log)
+add_subdirectory(lib_loadcell)
+target_link_libraries(example_loadcell PUBLIC Click.LoadCell)
+############################ example_loadcell GENERATED CODE END ###########################

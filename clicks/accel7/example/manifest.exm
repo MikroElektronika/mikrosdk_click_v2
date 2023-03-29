@@ -2,7 +2,7 @@
     "name": "Accel 7 Click",
     "description": "The Accel 7 click is a tri-axis acceleration sensing Click board™ powered by the KXTJ3-1057 14-bit tri-axis digital accelerometer from Kionix.  This sensor was developed using proprietary Kionix micromachining technology, resulting in high accuracy and excellent noise immunity.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","KXTJ3-1057"],
     "category" : ["Acceleration"] 
 }

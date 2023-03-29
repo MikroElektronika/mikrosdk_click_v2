@@ -156,6 +156,12 @@ void application_init ( void )
     lteiot2_error_check( app_error_flag );
     Delay_ms( 500 );
     
+    // QGPS - Set to 1 to turn ON GNSS
+    lteiot2_send_cmd_with_parameter( &lteiot2, LTEIOT2_CMD_QGPS, "1" );
+    app_error_flag = lteiot2_rsp_check(  );
+    lteiot2_error_check( app_error_flag );
+    Delay_ms( 500 );
+    
     app_buf_len = 0;
     app_buf_cnt = 0;
     app_connection_status = WAIT_FOR_CONNECTION;

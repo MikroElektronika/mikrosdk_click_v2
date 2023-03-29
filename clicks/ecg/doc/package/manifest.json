@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Biometrics",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Biometrics",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "ECG click",
     "example_list": [
@@ -26,19 +25,16 @@
     "name": "mikroe.click.ecg",
     "product_link": "https://www.mikroe.com/ecg-click",
     "short_description": "This is an ECG (or EKG) machine on a click board. It measures the electrical activity of a beating heart through electrodes taped to the skin. The board requires little setup, and the final measurement results can be displayed as an Electrocardiogram using a free Windows app.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         1936
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.7"
+    "version": "2.1.0.10",
+    "cmake": true,
+    "alias": "Click.Ecg",
+    "subdir_name": "lib_ecg"
 }
-
-
-
-
-
 
 

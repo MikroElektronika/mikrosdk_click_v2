@@ -1,7 +1,0 @@
-type: subdirs
-project: Boost
-
-subdirs: {
-    lib
-    example
-}

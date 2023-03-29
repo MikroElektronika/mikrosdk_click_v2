@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Inductance",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Inductance",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "LDC 1101 click",
     "example_list": [
@@ -26,17 +25,17 @@
     "name": "mikroe.click.ldc1101",
     "product_link": "https://www.mikroe.com/ldc1101-click",
     "short_description": "LDC1101 click is an inductance-to-digital converter Click Board. It is designed for a range of different applications, based on the inductivity measurements. ",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2548
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.7"
+    "version": "2.1.0.11",
+    "cmake": true,
+    "alias": "Click.Ldc1101",
+    "subdir_name": "lib_ldc1101"
 }
-
-
 
 
 

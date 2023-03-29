@@ -1,7 +1,0 @@
-type: subdirs
-project: Gyro4
-
-subdirs: {
-    lib
-    example
-}

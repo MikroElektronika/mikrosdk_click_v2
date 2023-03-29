@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "BT/BLE",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Wireless connectivity > BT/BLE",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "BLE 4 click",
     "example_list": [
@@ -26,16 +25,17 @@
     "name": "mikroe.click.ble4",
     "product_link": "https://www.mikroe.com/ble-4-click",
     "short_description": "BLE 4 Click is fully embedded stand-alone Bluetooth 5.0 low energy connectivity module, equipped with the NINA-B312, an ultra-small, high-performing, standalone Bluetooth low energy module for easy integration of Bluetooth low energy connectivity (BLE) into various electronic devices. This module combines a high-performance Arm® Cortex®-M4 CPU microprocessor with FPU, and state-of-the-art power performance.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2937
     ],
-    "version": "2.0.0.7"
+    "version": "2.1.0.11",
+    "cmake": true,
+    "alias": "Click.BLE4",
+    "subdir_name": "lib_ble4"
 }
-
-
 
 
 

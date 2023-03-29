@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Motion",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Accel 3 click",
     "example_list": [
@@ -26,19 +25,16 @@
     "name": "mikroe.click.accel3",
     "product_link": "https://www.mikroe.com/accel3-click",
     "short_description": "Accel 3 Click represent 3-axis linear accelerometer.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         1795
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.7"
+    "version": "2.1.0.9",
+    "cmake": true,
+    "alias": "Click.Accel3",
+    "subdir_name": "lib_accel3"
 }
-
-
-
-
-
 
 

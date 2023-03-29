@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Signal processing",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Audio & voice > Signal processing",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "DSP click",
     "example_list": [
@@ -26,10 +25,13 @@
     "name": "mikroe.click.dsp",
     "product_link": "https://www.mikroe.com/dsp-click?adtoken=48b980cc0840208867ff3317ac2fc531db4a1dd7&ad=mikromanage&id_employee=33",
     "short_description": "DSP Click is a compact add-on board that contains a multi-effects digital signal processor. This board features the V1000, a complete multi-effects audio DSP with ultra-high quality audio performance in a rapid ‘time-to-market’ solution from Coolaudio. The V1000 includes its integrated RAM with 16 built-in multi-effects and reverb controlled via I/O pins or I2C interface. Combined with a low-cost A/D-D/A codec like the V4220, this Click board™ provides an ultra-low cost FX solution. This Click board™ is suitable for applications as a standalone audio player, PC accessories, and Hi-Tech toys, conventional consumer electronic devices, and many more.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.0.0.5"
+    "version": "2.1.0.9",
+    "cmake": true,
+    "alias": "Click.Dsp",
+    "subdir_name": "lib_dsp"
 }
 
 

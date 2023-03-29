@@ -1,7 +1,0 @@
-type: subdirs
-project: Magneto
-
-subdirs: {
-    lib
-    example
-}

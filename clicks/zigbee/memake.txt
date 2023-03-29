@@ -1,7 +1,0 @@
-type: subdirs
-project: ZigBee
-
-subdirs: {
-    lib
-    example
-}

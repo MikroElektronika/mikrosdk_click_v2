@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Environmental",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Environment 4 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.environment4",
+    "product_link": "https://www.mikroe.com/environment-4-click",
+    "short_description": "Environment 4 Click is a compact add-on board combining 4th-generation SHT humidity and SGP air-quality sensing solutions from Sensirion. This board features SHT41A-AD1B and SGP41, an I2C-configurable high-accuracy relative humidity/temperature combined with a MOx-based gas sensor. The SHT41A-AD1B offers linearized digital output alongside temperature/humidity accuracy up to ±0.3°C/±2%RH. It performs best within the operating range of 5-60°C and 20-80%RH. With the help of SGP41, which features a temperature-controlled micro hotplate, it also provides a humidity-compensated VOC and NOx-based indoor air quality signal.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.Environment4",
+    "subdir_name": "lib_environment4"
+}
+

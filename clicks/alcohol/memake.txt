@@ -1,8 +1,0 @@
-type: subdirs
-
-project: Alcohol
-
-subdirs: {
-    lib
-    example
-}

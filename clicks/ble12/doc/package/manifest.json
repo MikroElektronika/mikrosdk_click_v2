@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "BT/BLE",
+    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "category": "Click Boards > Wireless connectivity > BT/BLE",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "BLE 12 click",
     "example_list": [
@@ -26,8 +25,16 @@
     "name": "mikroe.click.ble12",
     "product_link": "https://www.mikroe.com/ble-12-click",
     "short_description": "BLE 12 Click is a compact add-on board that provides BT/BLE connectivity for any embedded application. This board features the BM832A, a powerful and highly flexible, ultra low power Bluetooth Low Energy (BLE) module from Fanstel. Based on the Nordic nRF52 SoC, the BM832A supports Bluetooth 5.0 Low-Energy (BLE) connectivity while delivering RF range and performance, debugging and enhanced security features, and low power consumption. It also comes with an ARM Cortex™ M4(F) MCU up to 192kB flash and 24kB RAM, embedded 2.4GHz multi-protocol transceiver, and an integrated PCB trace antenna. This Click board™ is suitable for low-cost Bluetooth low energy applications such as building automation and sensor networks, portable medical, connected home, and more.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.7",
+    "cmake": true,
+    "alias": "Click.BLE12",
+    "subdir_name": "lib_ble12"
 }
+
+
+
+
+

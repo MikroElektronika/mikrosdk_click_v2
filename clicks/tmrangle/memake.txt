@@ -1,7 +1,0 @@
-type: subdirs
-project: TMRAngle
-
-subdirs: {
-    lib
-    example
-}

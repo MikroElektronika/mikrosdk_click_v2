@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Temperature & humidity",
+    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "category": "Click Boards > Sensors > Temperature & humidity",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Thermo 23 click",
     "example_list": [
@@ -25,10 +24,15 @@
     },
     "name": "mikroe.click.thermo23",
     "product_link": "https://www.mikroe.com/thermo-23-click",
-    "short_description": "Thermo 23 Click is a compact add-on board that provides an accurate temperature measurement. This board features the TMP144, a high-precision digital temperature sensor from Texas Instruments. The temperature sensor in the TMP144 is the chip itself, that houses temperature sensor circuitry, 12-bit analog-to-digital converter (ADC), a control logic, and a serial interface block in one package. Characterized by its high accuracy (up to ±0.5°C typical) and high resolution of 0.0625°C, this temperature sensor provides temperature data to the host controller with a configurable UART interface.",
-    "supported_compiler": "mikroC AI",
+    "short_description": "Thermo 23 Click is a compact add-on board that provides an accurate temperature measurement. This board features the TMP144, a high-precision digital temperature sensor from Texas Instruments. The temperature sensor in the TMP144 is the chip itself, that houses temperature sensor circuitry, 12-bit analog-to-digital converter (ADC), a control logic, and a serial interface block in one package. Characterized by its high accuracy (up to Â±0.5Â°C typical) and high resolution of 0.0625Â°C, this temperature sensor provides temperature data to the host controller with a configurable UART interface.",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.4",
+    "alias": "Click.Thermo23",
+    "cmake": true,
+    "subdir_name": "lib_thermo23"
 }
+
+
 

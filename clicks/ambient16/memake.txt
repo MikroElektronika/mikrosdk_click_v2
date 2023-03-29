@@ -1,7 +1,0 @@
-type: subdirs
-project: Ambient16
-
-subdirs: {
-    lib
-    example
-}

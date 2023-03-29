@@ -129,9 +129,9 @@ void application_task ( void )
     
     log_printf( &logger, "        Accelerometer       \r\n" );
     log_printf( &logger, "----------------------------\r\n" );
-    log_printf( &logger, "        X = %6d \r\n", accel3_data.x );
-    log_printf( &logger, "        Y = %6d \r\n", accel3_data.y );
-    log_printf( &logger, "        Z = %6d \r\n", accel3_data.z );
+    log_printf( &logger, "        X = %d \r\n", accel3_data.x );
+    log_printf( &logger, "        Y = %d \r\n", accel3_data.y );
+    log_printf( &logger, "        Z = %d \r\n", accel3_data.z );
     log_printf( &logger, "----------------------------\r\n" );
     
     Delay_ms ( 1000 );

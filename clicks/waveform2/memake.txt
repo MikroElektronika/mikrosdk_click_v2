@@ -1,8 +1,0 @@
-type: subdirs
-
-project: Waveform2
-
-subdirs: {
-    lib
-    example
-}

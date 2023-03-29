@@ -1,7 +1,0 @@
-type: subdirs
-project: Wifi11
-
-subdirs: {
-    lib
-    example
-}

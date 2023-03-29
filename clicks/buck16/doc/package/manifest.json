@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Buck",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Power management > Buck",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Buck 16 click",
     "example_list": [
@@ -26,11 +25,16 @@
     "name": "mikroe.click.buck16",
     "product_link": "https://www.mikroe.com/buck-16-click",
     "short_description": "Buck 16 Click is a compact add-on board that contains a DC-DC power converter that steps down the voltage from its input to its output. This board features the TPS62912, a high-efficiency, low noise, and low ripple current-mode synchronous buck converter from Texas Instruments.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.3"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.8",
+    "cmake": true,
+    "alias": "Click.Buck16",
+    "subdir_name": "lib_buck16"
 }
+
+
 
 
 

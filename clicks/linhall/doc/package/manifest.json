@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Magnetic",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Magnetic",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "LIN HALL click",
     "example_list": [
@@ -26,17 +25,17 @@
     "name": "mikroe.click.linhall",
     "product_link": "https://www.mikroe.com/lin-hall-click",
     "short_description": "LIN HALL click carries an MLX90242 linear Hall sensor IC (with built-in active error correction circuitry) and an MCP3201 12-bit ADC.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         1083
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.7"
+    "version": "2.1.0.11",
+    "cmake": true,
+    "alias": "Click.LinHall",
+    "subdir_name": "lib_linhall"
 }
-
-
 
 
 

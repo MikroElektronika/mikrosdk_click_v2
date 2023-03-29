@@ -2,7 +2,7 @@
     "name": "RS232 SPI Click",
     "description": "RS232 SPI click is based around the MAX3100, a universal asynchronous receiver transmitter (UART) - the first UART specifically optimized for small microcontroller-based systems, from Maxim Integrated. Because of the features contained in its modules, the RS232 SPI click can be used for handheld instruments, small networks in HVAC or Building control, UART in SPI systems, battery-powered systems, PDAs, notebooks and many more.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MAX3100"],
     "category" : ["RS232"] 
 }

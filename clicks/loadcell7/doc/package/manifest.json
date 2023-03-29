@@ -1,0 +1,40 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Force",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+"dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Load Cell 7 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.loadcell7",
+    "product_link": "https://www.mikroe.com/load-cell-7-click",
+    "short_description": "Load Cell 7 Click is a compact add-on board representing a weigh scale solution. This board features the ADS1230, a high-precision 20-bit delta-sigma analog-to-digital converter (ADC) with an outstanding noise performance from Texas Instruments. This SPI-configurable ADC (read-only) offers selectable gain and data rate values, supporting a full-scale differential input of ±39mV/±19.5mV and 10SPS/80SPS, respectively. It comes with an onboard low-noise programmable gain amplifier (PGA) and onboard oscillator providing a complete front-end solution.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.7",
+    "cmake": true,
+    "alias": "Click.LoadCell7",
+    "subdir_name": "lib_loadcell7"
+}
+
+
+
+
+

@@ -1,7 +1,0 @@
-type: subdirs
-project: Hvac
-
-subdirs: {
-    lib
-    example
-}

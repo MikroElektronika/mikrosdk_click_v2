@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Measurements",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Mixed signal > Measurements",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "HZ to V 2 click",
     "example_list": [
@@ -26,16 +25,17 @@
     "name": "mikroe.click.hztov2",
     "product_link": "https://www.mikroe.com/hz-to-v-2-click",
     "short_description": "HZ to V 2 click is a device that can convert input frequency of the signal with virtually any wave shape to a DC voltage output, with a level proportional to the input frequency.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2428
     ],
-    "version": "2.0.0.6"
+    "version": "2.1.0.9",
+    "cmake": true,
+    "alias": "Click.HzToV2",
+    "subdir_name": "lib_hztov2"
 }
-
-
 
 
 

@@ -2,7 +2,7 @@
     "name": "PWR Meter Click",
     "description": "PWR Meter click is a power measurement Click board™, capable of measuring voltage and current through the load, connected to either AC or DC power source. PWR Meter click uses the MCP39F511A, a very sophisticated monitoring IC from Microchip, with 16-bit processing core.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MCP39F511A"],
     "category" : ["Measurements"] 
 }

@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "FRAM",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Storage > FRAM",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "FRAM 5 click",
     "example_list": [
@@ -26,9 +25,15 @@
     "name": "mikroe.click.fram5",
     "product_link": "https://www.mikroe.com/fram-5-click",
     "short_description": "FRAM 5 Click is a compact add-on board representing a highly reliable ferroelectric random access memory solution. This board features the FM24V10, a 1Mbit nonvolatile memory employing an advanced ferroelectric process organized as 128K words of 8 bits each from Infineon. This I2C configurable FRAM performs read and write operations similar to a RAM providing reliable data retention for 151 years while eliminating the complexities, overhead, and system-level reliability problems caused by EEPROM and other nonvolatile memories.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.5",
+    "alias": "Click.FRAM5",
+    "cmake": true,
+    "subdir_name": "lib_fram5"
 }
+
+
+
 

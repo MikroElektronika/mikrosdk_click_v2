@@ -1,7 +1,0 @@
-type: subdirs
-project: MBusMaster
-
-subdirs: {
-    lib
-    example
-}

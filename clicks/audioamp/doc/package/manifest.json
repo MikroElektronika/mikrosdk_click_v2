@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Amplifier",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Audio & voice > Amplifier",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "AudioAMP click",
     "example_list": [
@@ -26,19 +25,17 @@
     "name": "mikroe.click.audioamp",
     "product_link": "https://www.mikroe.com/audioamp-board",
     "short_description": "AudioAmp Click is a stereo audio amplifier",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         1871
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.8"
+    "version": "2.1.0.12",
+    "cmake": true,
+    "alias": "Click.AudioAmp",
+    "subdir_name": "lib_audioamp"
 }
-
-
-
-
 
 
 

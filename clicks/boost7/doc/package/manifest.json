@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Power management > Boost",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Boost 7 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.boost7",
+    "product_link": "https://www.mikroe.com/boost-7-click",
+    "short_description": "Boost 7 Click is a compact add-on board that steps up the voltage from its input (supply) to its output (load). This board features the BD8316GWL, a dual DC/DC converter from Rohm Semiconductor. Each converter inside the BD8316GWL is designed with up to 200mA current limit generating well-regulated positive and negative outputs of ±3.3V or ±5V, making the BD8316GWL ideal for various applications. In addition to the possibility of working with both mikroBUS™ power rails, it also provides the opportunity of using an external power supply with a very low voltage of 2.5V.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.Boost7",
+    "subdir_name": "lib_boost7"
+}
+

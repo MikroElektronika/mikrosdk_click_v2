@@ -1,7 +1,0 @@
-type: subdirs
-project: BLE10
-
-subdirs: {
-    lib
-    example
-}

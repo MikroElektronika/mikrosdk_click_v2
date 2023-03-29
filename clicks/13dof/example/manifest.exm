@@ -2,7 +2,7 @@
     "name": "13DOF Click",
     "description": "13DOF Click is an advanced 13-axis motion tracking Click board™, which utilizes three different sensor ICs onboard: BME680, a digital gas, humidity, pressure and temperature sensor and BMM150, a geomagnetic sensor and a BMI088, small, versatile 6DoF sensor module.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","BME680"],
     "category" : ["Motion"] 
 }

@@ -2,7 +2,7 @@
     "name": "Volume 2 Click",
     "description": "Volume 2 Click is a compact add-on board that provides the user with complete digital volume control. This board features the NJU72341, a 2-channel I2C configurable electronic volume IC with external mute control from NJRC.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","NJU72341"],
     "category" : ["Signal processing"]
 }

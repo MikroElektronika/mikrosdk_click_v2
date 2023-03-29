@@ -1,7 +1,0 @@
-type: subdirs
-project: Mp32
-
-subdirs: {
-    lib
-    example
-}

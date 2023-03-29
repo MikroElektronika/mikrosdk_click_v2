@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "2.4 GHz Transceivers",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Wireless connectivity > Sub-1 GHz Transceivers",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "ccRF 3 click",
     "example_list": [
@@ -26,12 +25,19 @@
     "name": "mikroe.click.ccrf3",
     "product_link": "https://www.mikroe.com/ccrf-3-click",
     "short_description": "The clicks will enable you to add a low-power consumption radio transceiver at 433 MHz frequency. ccRF 3 click is designed to run on a 3.3V power supply. It communicates with the target microcontroller over SPI interface.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "related_projects":[
+    "related_projects": [
         2045
     ],
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.7",
+    "cmake": true,
+    "alias": "Click.ccRF3",
+    "subdir_name": "lib_ccrf3"
 }
+
+
+
+
 

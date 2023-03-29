@@ -2,7 +2,7 @@
     "name": "Pressure 17 Click",
     "description": "Pressure 17 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the BM1390GLV-Z, a high-precision piezoresistive pressure sensor from Rohm Semiconductor. The BM1390GLV-Z comes with a configurable host interface that supports I2C serial communication and measures pressure in a range from 300hPa up to 1300hPa with an accuracy of ±1hPa.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","BM1390GLV-ZTR"],
     "category" : ["Pressure"]
 }

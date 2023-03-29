@@ -1,0 +1,37 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Optical",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Ambient 20 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.ambient20",
+    "product_link": "https://www.mikroe.com/ambient-20-click",
+    "short_description": "Ambient 20 Click is a compact add-on board used to measure the amount of the present ambient light. This board features the BU27030NUC, a 16-bit digital-output ambient light sensor with an I2C interface from Rohm Semiconductor. The BU27030NUC has a flexible and wide operating range of up to 20klx with a maximum resolution of 0.0007lux/count, providing an excellent responsivity close to the human eyes' response. It also features inherent 50Hz/60Hz light noise rejection and excellent IR-cut characteristics for high robustness at high sensitivity.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.Ambient20",
+    "subdir_name": "lib_ambient20"
+}
+
+

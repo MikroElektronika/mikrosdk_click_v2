@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Digital potentiometer",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Mixed signal > Digital potentiometer",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "DIGI POT 5 click",
     "example_list": [
@@ -26,17 +25,17 @@
     "name": "mikroe.click.digipot5",
     "product_link": "https://www.mikroe.com/digipot-5-click",
     "short_description": "DIGI POT 5 click is a digitally controlled quad potentiometer, with the resistance of 10KΩ. It has an 8bit wiper step resolution, which allows the wiper to take 257 different discrete positions (across 256 internal resistors). The digital wiper position can be controlled via the SPI interface.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2247
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.7"
+    "version": "2.1.0.11",
+    "cmake": true,
+    "alias": "Click.DigiPot5",
+    "subdir_name": "lib_digipot5"
 }
-
-
 
 
 

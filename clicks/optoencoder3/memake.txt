@@ -1,7 +1,0 @@
-type: subdirs
-project: OptoEncoder3
-
-subdirs: {
-    lib
-    example
-}

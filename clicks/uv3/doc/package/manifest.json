@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Optical",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Optical",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "UV 3 click",
     "example_list": [
@@ -26,17 +25,17 @@
     "name": "mikroe.click.uv3",
     "product_link": "https://www.mikroe.com/uv-3-click",
     "short_description": "UV 3 click is an advanced ultraviolet (UV) light sensor with I2C protocol interface. The click carries VEML6070 UVA light sensor designed by the CMOS process. UV 3 click runs on either 3.3V or 5V power supply.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2137
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.6"
+    "version": "2.1.0.10",
+    "cmake": true,
+    "alias": "Click.Uv3",
+    "subdir_name": "lib_uv3"
 }
-
-
 
 
 

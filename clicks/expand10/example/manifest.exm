@@ -2,7 +2,7 @@
     "name": "Expand 10 Click",
     "description": "Expand 10 Click is a compact add-on board that contains a multi-port I/O expander. This board features the PCAL6524, a 24-bit general-purpose I/O expander providing remote I/O expansion for most MCU’s families via the Fast-mode Plus I2C-serial interface from NXP Semiconductors.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","PCAL6524"],
     "category" : ["Port expander"]
 }

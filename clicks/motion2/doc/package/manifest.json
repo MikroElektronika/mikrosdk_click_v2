@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Motion",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Motion 2 click",
     "example_list": [
@@ -26,14 +25,16 @@
     "name": "mikroe.click.motion2",
     "product_link": "https://www.mikroe.com/motion-2-click",
     "short_description": "Motion 2 Click is a Click board™ based on EKMC1607112, PIR motion sensor from Panasonic Corporation that's used as human motion detector. Also featured on Motion 2 Click bord is TLP241A photorelay from Toshiba that is used to provide a reinforced galvanic isolation for the external signals used to drive some external high power electronic equipment when motion is detected. It's allowing up to 40V between the SSR contacts in OFF state, and currents up to 2A while in ON state, thanks to a very low ON-state resistance. Motion 2 Click board™ is supported by a mikroSDK compliant library, which includes functions that simplify software development. This Click board™ comes as a fully tested product, ready to be used on a system equipped with the mikroBUS™ socket.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         3232
     ],
-    "version": "2.0.0.3"
+    "version": "2.1.0.5",
+    "cmake": true,
+    "alias": "Click.Motion2",
+    "subdir_name": "lib_motion2"
 }
-
 
 

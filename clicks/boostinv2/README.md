@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be  installed directly 
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.boostinv2
+- Click.Boostinv2
 
 **Additional notes and informations**
 

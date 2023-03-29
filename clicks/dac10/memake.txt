@@ -1,7 +1,0 @@
-type: subdirs
-project: DAC10
-
-subdirs: {
-    lib
-    example
-}

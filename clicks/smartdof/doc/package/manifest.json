@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Motion",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Smart DOF click",
     "example_list": [
@@ -26,18 +25,17 @@
     "name": "mikroe.click.smartdof",
     "product_link": "https://www.mikroe.com/smart-dof-click",
     "short_description": "SmartDOF click features a highly advanced integrated system-in-package (SiP) solution with three different sensors on-chip: triaxial accelerometer, magnetometer, and triaxial gyroscope are all integrated on the same die, along with the powerful 32-bit ARM® Cortex®-M0+ MCU. Thanks to the integrated MCU, the BN080 SiP provides extensive signal processing.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2793
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.7"
+    "version": "2.1.0.13",
+    "cmake": true,
+    "alias": "Click.SmartDof",
+    "subdir_name": "lib_smartdof"
 }
-
-
-
 
 
 

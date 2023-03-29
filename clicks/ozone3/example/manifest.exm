@@ -2,7 +2,7 @@
     "name": "Ozone 3 Click",
     "description": "Ozone 3 Click is a compact add-on board suitable for ozone concentration detection and monitoring. This board features the 110-407, a high-performance ultra-thin electrochemical gas sensor from SPEC Sensors supported by the LMP91000, a high-precision integrated analog front-end IC (AFE) ideal for this sensing application. It provides the reference voltage required by the sensor and offers a choice between the analog output from the AFE IC buffered with the low noise Op-Amp and digital output from the 12-bit SAR A/D converter.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","DGS-O3"],
     "category" : ["Gas"]
 }

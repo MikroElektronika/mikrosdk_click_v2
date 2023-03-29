@@ -1,7 +1,0 @@
-type: subdirs
-project: CurrentLimit7
-
-subdirs: {
-    lib
-    example
-}

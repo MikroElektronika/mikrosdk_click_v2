@@ -1,7 +1,0 @@
-type: subdirs
-project: MRAM3
-
-subdirs: {
-    lib
-    example
-}

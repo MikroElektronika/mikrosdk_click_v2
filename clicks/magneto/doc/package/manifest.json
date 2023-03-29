@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Magnetic",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Magnetic",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "MAGNETO click",
     "example_list": [
@@ -26,17 +25,17 @@
     "name": "mikroe.click.magneto",
     "product_link": "https://www.mikroe.com/magneto-click",
     "short_description": "MAGNETO Click carries contactless magnetic angle position sensor which delivers precise angle measurements down to 0.05º in 14-bit resolution.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         1681
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.7"
+    "version": "2.1.0.12",
+    "cmake": true,
+    "alias": "Click.Magneto",
+    "subdir_name": "lib_magneto"
 }
-
-
 
 
 

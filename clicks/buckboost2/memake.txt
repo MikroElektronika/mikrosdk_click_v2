@@ -1,7 +1,0 @@
-type: subdirs
-project: BuckBoost2
-
-subdirs: {
-    lib
-    example
-}

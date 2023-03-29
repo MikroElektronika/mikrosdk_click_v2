@@ -2,7 +2,7 @@
     "name": "LED Driver 7 Click",
     "description": "LED Driver 7 click is a Click board™ equipped with the LTC3490, single cell 350mA LED driver from Analog Devices.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","LTC3490"],
     "category" : ["LED Drivers"] 
 }

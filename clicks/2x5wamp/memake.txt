@@ -1,7 +1,0 @@
-type: subdirs
-project: 2x5WAmp
-
-subdirs: {
-    lib
-    example
-}

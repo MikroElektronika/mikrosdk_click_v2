@@ -2,7 +2,7 @@
     "name": "MRAM 3 Click",
     "description": "MRAM 3 Click is a compact add-on board representing a magneto-resistive random-access memory solution. This board features the AS3001204, 1Mb high-performance serial SPI MRAM memory organized as 128K words of 8 bits each from Avalanche Technology. The MRAM technology is analog to Flash technology with SRAM compatible read/write timings (Persistent SRAM, P-SRAM), where data is always non-volatile. It also has a hardware write-protection feature and performs read and write operations with data retention for one million years and a write endurance of 1014 cycles.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","AS3001204-0054X0IWAY"],
     "category" : ["MRAM"]
 }

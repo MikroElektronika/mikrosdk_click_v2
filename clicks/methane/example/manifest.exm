@@ -2,7 +2,7 @@
     "name": "Methane Click",
     "description": "Methane click carries an MQ-4 sensor for methane (CH4). The gas sensing layer on the sensor unit is made of tin dioxide (SnO2), which has lower conductivity in clean air.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MQ-4"],
     "category" : ["Gas"]
 }

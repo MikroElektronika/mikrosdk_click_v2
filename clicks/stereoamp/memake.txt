@@ -1,7 +1,0 @@
-type: subdirs
-project: StereoAmp
-
-subdirs: {
-    lib
-    example
-}

@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Brushed",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Motor control > Brushed",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "DC Motor 10 click",
     "example_list": [
@@ -26,18 +25,17 @@
     "name": "mikroe.click.dcmotor10",
     "product_link": "https://www.mikroe.com/dc-motor-10-click",
     "short_description": "DC Motor 10 Click is a brushed DC motor driver with the current limiting and current sensing. It is based on the TLE 6208-6 G, an Hex-Half-Bridge / Double Six-Driver IC, optimized for motor driving applications.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "related_projects": [ 
+    "related_projects": [
         2939
     ],
-    "version": "2.0.0.8"
+    "version": "2.1.0.12",
+    "cmake": true,
+    "alias": "Click.DcMotor10",
+    "subdir_name": "lib_dcmotor10"
 }
-
-
-
-
 
 
 

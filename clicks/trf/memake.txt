@@ -1,7 +1,0 @@
-type: subdirs
-project: Trf
-
-subdirs: {
-    lib
-    example
-}

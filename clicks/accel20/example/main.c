@@ -95,7 +95,7 @@ void application_task ( void )
     if ( accel20_get_int_1( &accel20 ) == ACCEL20_INT1_DATA_READY )
     {
         accel20_get_axis_data( &accel20, &axis );
-        log_printf( &logger, "\tX : %5d \r\n\tY : %5d \r\n\tZ : %5d \r\n", axis.x, axis.y, axis.z );
+        log_printf( &logger, "\tX : %d \r\n\tY : %d \r\n\tZ : %d \r\n", axis.x, axis.y, axis.z );
         log_printf( &logger, "-------------------------\r\n" );
         Delay_ms( 1000 );     
     }

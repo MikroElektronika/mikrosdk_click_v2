@@ -1,7 +1,0 @@
-type: subdirs
-project: Force3
-
-subdirs: {
-    lib
-    example
-}

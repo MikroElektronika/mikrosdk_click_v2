@@ -2,7 +2,7 @@
     "name": "Charger 11 Click",
     "description": "Charger 11 Click is a LiFePO4 (lithium iron phosphate) battery charger. This click can be used for Low-Cost LiFePO4 battery chargers, or Power Tools, toys, backup energy storage solutions, etc. Charger 11 is based on MCP73123T controller which has some extra features enabling charging without too much hassle. This click board has charging current control which uses SPI interface through MCP4161 IC, which is an 8-bit digital potentiometer.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MCP73123T"],
     "category" : ["Battery Charger"]
 }

@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "USB",
+    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "category": "Click Boards > Interface > USB",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "USB UART 4 click",
     "example_list": [
@@ -26,14 +25,19 @@
     "name": "mikroe.click.usbuart4",
     "product_link": "https://www.mikroe.com/usb-uart-4-click",
     "short_description": "USB UART 4 click offers a USB to asynchronous serial data (UART) interface, allowing the microcontroller based designs to communicate with the personal computer, in a very simple way. It is equipped with the FT232RL, a very popular USB to UART interface IC, used on many MikroElektronika devices - both for its reliability and simplicity. USB UART click is used for whenever there is a need to seamlessly and effortlessly interface the UART lines to a personal computer",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "related_projects":[
+    "related_projects": [
         2310
     ],
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.3"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.9",
+    "cmake": true,
+    "alias": "Click.USBUART4",
+    "subdir_name": "lib_usbuart4"
 }
+
+
 
 
 

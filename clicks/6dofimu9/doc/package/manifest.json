@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Motion",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "6DOF IMU 9 click",
     "example_list": [
@@ -26,18 +25,17 @@
     "name": "mikroe.click.c6dofimu9",
     "product_link": "https://www.mikroe.com/6dof-imu-9-click",
     "short_description": "The 6DOF IMU 9 Click is a Click board™ which features the IAM-20680, a 6-axis MotionTracking device that combines a 3-axis gyroscope and a 3-axis accelerometer, from TDK InvenSense.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2974
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.7"
+    "version": "2.1.0.11",
+    "cmake": true,
+    "alias": "Click.6DOFIMU9",
+    "subdir_name": "lib_c6dofimu9"
 }
-
-
-
 
 
 

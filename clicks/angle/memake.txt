@@ -1,7 +1,0 @@
-type: subdirs
-project: Angle
-
-subdirs: {
-    lib
-    example
-}

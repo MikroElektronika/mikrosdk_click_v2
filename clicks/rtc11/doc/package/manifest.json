@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "RTC",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Clock & Timing > RTC",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "RTC 11 click",
     "example_list": [
@@ -26,14 +25,18 @@
     "name": "mikroe.click.rtc11",
     "product_link": "https://www.mikroe.com/rtc-11-click",
     "short_description": "RTC 11 Click is a compact add-on board that contains a real-time clock IC designed to maximize battery life and reduce overall battery requirements in wearable applications. This board features the AB0815, an ultra-low-power coupled with a highly sophisticated feature set the real-time clock from Abracon LLC.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "related_projects":[
+    "related_projects": [
         3872
     ],
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.4"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.8",
+    "cmake": true,
+    "alias": "Click.RTC11",
+    "subdir_name": "lib_rtc11"
 }
+
 
 
 

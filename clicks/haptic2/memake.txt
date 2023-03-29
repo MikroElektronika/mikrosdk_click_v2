@@ -1,7 +1,0 @@
-type: subdirs
-project: Haptic2
-
-subdirs: {
-    lib
-    example
-}

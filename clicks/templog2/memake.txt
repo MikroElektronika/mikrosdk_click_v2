@@ -1,7 +1,0 @@
-type: subdirs
-project: TempLog2
-
-subdirs: {
-    lib
-    example
-}

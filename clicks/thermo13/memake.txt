@@ -1,7 +1,0 @@
-type: subdirs
-project: Thermo13
-
-subdirs: {
-    lib
-    example
-}

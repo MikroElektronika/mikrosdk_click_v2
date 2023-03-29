@@ -2,7 +2,7 @@
     "name": "Multi Stepper TB67S101 Click",
     "description": "Multi Stepper Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the TB67S101AFG, a PHASE-in controlled bipolar stepping motor driver from Toshiba Semiconductor. It supports a PWM constant-current control drive and full-, half-, and quarter-step operation for less motor noise and smoother control. It has a wide operating voltage range of 10V to 47V with an output current capacity of 2.8A in addition to several built-in error detection circuits.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","TB67S101"],
     "category" : ["Stepper"]
 }

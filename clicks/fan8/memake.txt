@@ -1,7 +1,0 @@
-type: subdirs
-project: FAN8
-
-subdirs: {
-    lib
-    example
-}

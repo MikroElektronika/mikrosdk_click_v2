@@ -1,0 +1,8 @@
+{
+    "name": "PWR Meter 3 Click",
+    "description": "PWR Meter 3 Click is a compact add-on board that measures voltage and current through the connected load. This board features the ACS37800, an I2C-configurable power monitoring solution from Allegro MicroSystems, which simplifies the addition of power monitoring to many AC/DC powered systems. The ACS37800’s Hall-effect-based current sensing technology achieves reinforced isolation ratings (4800 VRMS) alongside a reliable ±90A bidirectional current sensing. It also has two LED indicators for the realization of visual detection of some anomalies in operation, such as under/overvoltage and fast overcurrent fault detection.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "hw" : ["click","ACS37800KMACLU-090B3-I2C"],
+    "category" : ["Click Boards > Mixed signal > Measurements"]
+}

@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Motion",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Tilt 2 click",
     "example_list": [
@@ -26,17 +25,17 @@
     "name": "mikroe.click.tilt2",
     "product_link": "https://www.mikroe.com/tilt-2-click",
     "short_description": "Tilt 2 click is a tilt sensor switch, which breaks the circuit when tilted to an angle of 45° or when shaken. It is a single-pole-double-throw type of switch (SPDT), which can be operated with up to 24V.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2692
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.6"
+    "version": "2.1.0.10",
+    "cmake": true,
+    "alias": "Click.Tilt2",
+    "subdir_name": "lib_tilt2"
 }
-
-
 
 
 

@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "BT/BLE",
+    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "category": "Click Boards > Wireless connectivity > BT/BLE",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "BLE 10 click",
     "example_list": [
@@ -26,9 +25,14 @@
     "name": "mikroe.click.ble10",
     "product_link": "https://www.mikroe.com/ble-10-click",
     "short_description": "BLE 10 Click is a compact add-on board that provides BT/BLE connectivity for any embedded application. This board features the PAN1780-AT, a Bluetooth® 5 Low Energy Module based on Nordic's nRF52840 single-chip controller from Panasonic. ",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.2"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.4",
+    "cmake": true,
+    "alias": "Click.BLE10",
+    "subdir_name": "lib_ble10"
 }
+
+
 

@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "RS485",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Interface > RS485",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "RS485 3 click",
     "example_list": [
@@ -26,15 +25,18 @@
     "name": "mikroe.click.rs4853",
     "product_link": "https://www.mikroe.com/rs485-3-click",
     "short_description": "RS485 3 click is an RS422/485 transceiver Click board™, which can be used as an interface between the TTL level UART and the RS422/485 communication bus. ",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2236
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.10"
+    "version": "2.1.0.15",
+    "cmake": true,
+    "alias": "Click.Rs4853",
+    "subdir_name": "lib_rs4853"
 }
+
 
 
 

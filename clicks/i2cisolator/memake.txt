@@ -1,7 +1,0 @@
-type: subdirs
-project: I2Cisolator
-
-subdirs: {
-    lib
-    example
-}

@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Battery Charger",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Power management > Battery Charger",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Charger 11 click",
     "example_list": [
@@ -26,13 +25,19 @@
     "name": "mikroe.click.charger11",
     "product_link": "https://www.mikroe.com/charger-11-click",
     "short_description": "Charger 11 Click is a LiFePO4 (lithium iron phosphate) battery charger. This click can be used for Low-Cost LiFePO4 battery chargers, or Power Tools, toys, backup energy storage solutions, etc. Charger 11 is based on MCP73123T controller which has some extra features enabling charging without too much hassle. This click board has charging current control which uses SPI interface through MCP4161 IC, which is an 8-bit digital potentiometer.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "related_projects":[
+    "related_projects": [
         2863
     ],
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.2"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.7",
+    "cmake": true,
+    "alias": "Click.Charger11",
+    "subdir_name": "lib_charger11"
 }
+
+
+
 
 

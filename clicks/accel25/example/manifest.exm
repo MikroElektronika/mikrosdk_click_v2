@@ -1,0 +1,8 @@
+{
+    "name": "Accel 25 Click",
+    "description": "Accel 25 Click is a compact add-on board that contains an acceleration sensor. This board features the MXC4005XC, a 12-bit three-axis thermal accelerometer from MEMSIC. It allows selectable full-scale acceleration measurements of ±2g, ±4g, or ±8g in three axes with a compatible I2C serial interface with 400KHz fast mode operation. ",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "hw" : ["click","MXC4005XC"],
+    "category" : ["Click Boards > Sensors > Motion"]
+}

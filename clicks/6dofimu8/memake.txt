@@ -1,7 +1,0 @@
-type: subdirs
-project: 6DofImu8
-
-subdirs: {
-    lib
-    example
-}

@@ -1,0 +1,39 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Storage > DRAM",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "DRAM click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.dram",
+    "product_link": "https://www.mikroe.com/dram-click",
+    "short_description": "DRAM Click is a compact add-on board representing a dynamic random-access memory solution. This board features the APS6404L-3SQR, 64Mb high-performance SPI/QPI PSRAM memory organized as 8M x 8 bits each from AP Memory. This Pseudo-SRAM device features a high speed, low pin count interface and incorporates a seamless self-managed refresh mechanism to maximize the performance of memory read operation. It has 4 SDR I/O pins and operates in SPI or QPI (quad peripheral interface) mode with frequencies up to 133 MHz.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.4",
+    "cmake": true,
+    "alias": "Click.DRAM",
+    "subdir_name": "lib_dram"
+}
+
+
+
+

@@ -3,19 +3,22 @@
  * \brief Gnss3 Click example
  * 
  * # Description
- * This example reads and processes data from GNSS3 clicks.
+ * This example demonstrates the use of GNSS 3 click by reading and displaying
+ * the GPS coordinates.
  *
  * The demo application is composed of two sections :
- * 
- * ## Application Init 
- * Initializes driver and wake-up module.
- * 
- * ## Application Task  
- * Reads the received data and parses it.
- * 
+ *
+ * ## Application Init
+ * Initializes the driver and resets the click board.
+ *
+ * ## Application Task
+ * Reads the received data, parses the GNGGA info from it, and once it receives the position fix
+ * it will start displaying the coordinates on the USB UART.
+ *
  * ## Additional Function
- * - gnss3_process ( ) - The general process of collecting data the module sends.
- * 
+ * - static void gnss3_clear_app_buf ( void )
+ * - static err_t gnss3_process ( gnss3_t *ctx )
+ * - static void gnss3_parser_application ( char *rsp )
  * 
  * \author MikroE Team
  *
@@ -25,90 +28,44 @@
 #include "board.h"
 #include "log.h"
 #include "gnss3.h"
-#include "string.h"
 
-#define PROCESS_COUNTER 15
-#define PROCESS_RX_BUFFER_SIZE 600
-#define PROCESS_PARSER_BUFFER_SIZE 600
-
-// ------------------------------------------------------------------ VARIABLES
+#define PROCESS_BUFFER_SIZE 200
 
 static gnss3_t gnss3;
 static log_t logger;
 
-static char current_parser_buf[ PROCESS_PARSER_BUFFER_SIZE ];
+static char app_buf[ PROCESS_BUFFER_SIZE ] = { 0 };
+static int32_t app_buf_len = 0;
+static int32_t app_buf_cnt = 0;
 
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
+/**
+ * @brief GNSS 3 clearing application buffer.
+ * @details This function clears memory of application buffer and reset its length and counter.
+ * @return None.
+ * @note None.
+ */
+static void gnss3_clear_app_buf ( void );
 
-static void gnss3_process ( void )
-{
-    int32_t rsp_size;
-    uint16_t rsp_cnt = 0;
-    
-    char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
-    uint16_t check_buf_cnt;
-    uint8_t process_cnt = PROCESS_COUNTER;
-    
-    // Clear parser buffer
-    memset( current_parser_buf, 0 , PROCESS_PARSER_BUFFER_SIZE ); 
-    
-    while( process_cnt != 0 )
-    {
-        rsp_size = gnss3_generic_read( &gnss3, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
+/**
+ * @brief GNSS 3 data reading function.
+ * @details This function reads data from device and concatenates data to application buffer.
+ * @param[in] ctx : Click context object.
+ * See #gnss3_t object definition for detailed explanation.
+ * @return @li @c  0 - Read some data.
+ *         @li @c -1 - Nothing is read or Application buffer overflow.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+static err_t gnss3_process ( gnss3_t *ctx );
 
-        if ( rsp_size > 0 )
-        {  
-            // Validation of the received data
-            for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
-            {
-                if ( uart_rx_buffer[ check_buf_cnt ] == 0 ) 
-                {
-                    uart_rx_buffer[ check_buf_cnt ] = 13;
-                }
-            }
-            
-            // Storages data in parser buffer
-            rsp_cnt += rsp_size;
-            if ( rsp_cnt < PROCESS_PARSER_BUFFER_SIZE )
-            {
-                strncat( current_parser_buf, uart_rx_buffer, rsp_size );
-            }
-            
-            // Clear RX buffer
-            memset( uart_rx_buffer, 0, PROCESS_RX_BUFFER_SIZE );
-        } 
-        else 
-        {
-            process_cnt--;
-            
-            // Process delay 
-            Delay_ms( 100 );
-        }
-    }
-}
-
-static void parser_application ( char *rsp )
-{
-    char element_buf[ 200 ] = { 0 };
-    
-    log_printf( &logger, "\r\n-----------------------\r\n" ); 
-    gnss3_generic_parser( rsp, GNSS3_NEMA_GPGGA, GNSS3_GPGGA_LATITUDE, element_buf );
-    if ( strlen( element_buf ) > 0 )
-    {
-        log_printf( &logger, "Latitude:  %.2s degrees, %s minutes \r\n", element_buf, &element_buf[ 2 ] );
-        gnss3_generic_parser( rsp, GNSS3_NEMA_GPGGA, GNSS3_GPGGA_LONGITUDE, element_buf );
-        log_printf( &logger, "Longitude:  %.3s degrees, %s minutes \r\n", element_buf, &element_buf[ 3 ] );
-        memset( element_buf, 0, sizeof( element_buf ) );
-        gnss3_generic_parser( rsp, GNSS3_NEMA_GPGGA, GNSS3_GPGGA_ALTITUDE, element_buf );
-        log_printf( &logger, "Alitude: %s m", element_buf );  
-    }
-    else
-    {
-        log_printf( &logger, "Waiting for the position fix..." );
-    }
-}
-
-// ------------------------------------------------------ APPLICATION FUNCTIONS
+/**
+ * @brief GNSS 3 parser application.
+ * @param[in] rsp Response buffer.
+ * @details This function logs GNSS data on the USB UART.
+ * @return None.
+ * @note None.
+ */
+static void gnss3_parser_application ( char *rsp );
 
 void application_init ( void )
 {
@@ -140,8 +97,11 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    gnss3_process(  );
-    parser_application( current_parser_buf );
+    gnss3_process( &gnss3 );
+    if ( app_buf_len > ( sizeof ( ( char * ) GNSS3_RSP_GNGGA ) + GNSS3_GNGGA_ELEMENT_SIZE ) ) 
+    {
+        gnss3_parser_application( app_buf );
+    }
 }
 
 void main ( void )
@@ -154,5 +114,75 @@ void main ( void )
     }
 }
 
+static void gnss3_clear_app_buf ( void ) 
+{
+    memset( app_buf, 0, app_buf_len );
+    app_buf_len = 0;
+    app_buf_cnt = 0;
+}
+
+static err_t gnss3_process ( gnss3_t *ctx ) 
+{
+    int32_t rx_size = 0;
+    char rx_buf[ PROCESS_BUFFER_SIZE ] = { 0 };
+    rx_size = gnss3_generic_read( ctx, rx_buf, PROCESS_BUFFER_SIZE );
+    if ( rx_size > 0 ) 
+    {
+        int32_t buf_cnt = 0;
+        if ( ( app_buf_len + rx_size ) > PROCESS_BUFFER_SIZE ) 
+        {
+            gnss3_clear_app_buf(  );
+            return GNSS3_ERROR;
+        } 
+        else 
+        {
+            buf_cnt = app_buf_len;
+            app_buf_len += rx_size;
+        }
+        for ( int32_t rx_cnt = 0; rx_cnt < rx_size; rx_cnt++ ) 
+        {
+            if ( rx_buf[ rx_cnt ] ) 
+            {
+                app_buf[ ( buf_cnt + rx_cnt ) ] = rx_buf[ rx_cnt ];
+            }
+            else
+            {
+                app_buf_len--;
+                buf_cnt--;
+            }
+        }
+        return GNSS3_OK;
+    }
+    return GNSS3_ERROR;
+}
+
+static void gnss3_parser_application ( char *rsp )
+{
+    char element_buf[ 100 ] = { 0 };
+    if ( GNSS3_OK == gnss3_parse_gngga( rsp, GNSS3_GNGGA_LATITUDE, element_buf ) )
+    {
+        static uint8_t wait_for_fix_cnt = 0;
+        if ( strlen( element_buf ) > 0 )
+        {
+            log_printf( &logger, "\r\n Latitude: %.2s degrees, %s minutes \r\n", element_buf, &element_buf[ 2 ] );
+            gnss3_parse_gngga( rsp, GNSS3_GNGGA_LONGITUDE, element_buf );
+            log_printf( &logger, " Longitude: %.3s degrees, %s minutes \r\n", element_buf, &element_buf[ 3 ] );
+            memset( element_buf, 0, sizeof( element_buf ) );
+            gnss3_parse_gngga( rsp, GNSS3_GNGGA_ALTITUDE, element_buf );
+            log_printf( &logger, " Altitude: %s m \r\n", element_buf );
+            wait_for_fix_cnt = 0;
+        }
+        else
+        {
+            if ( wait_for_fix_cnt % 5 == 0 )
+            {
+                log_printf( &logger, " Waiting for the position fix...\r\n\n" );
+                wait_for_fix_cnt = 0;
+            }
+            wait_for_fix_cnt++;
+        }
+        gnss3_clear_app_buf(  );
+    }
+}
 
 // ------------------------------------------------------------------------ END

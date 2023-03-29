@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "WIFI",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Wireless connectivity > WIFI",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "G2C click",
     "example_list": [
@@ -26,15 +25,18 @@
     "name": "mikroe.click.g2c",
     "product_link": "https://www.mikroe.com/g2c-click",
     "short_description": "Go to Cloud (G2C) click is a gateway Click board™ which provides a simple and reliable connection to the Click Cloud platform.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2628
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.9"
+    "version": "2.1.0.15",
+    "cmake": true,
+    "alias": "Click.G2C",
+    "subdir_name": "lib_g2c"
 }
+
 
 
 

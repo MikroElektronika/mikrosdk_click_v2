@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Clock generator",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Clock & Timing > Clock generator",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Clock Gen 2 click",
     "example_list": [
@@ -26,17 +25,17 @@
     "name": "mikroe.click.clockgen2",
     "product_link": "https://www.mikroe.com/clock-gen-2-click",
     "short_description": "Clock Gen 2 click is an accurate square wave generator that can generate a clock signal in the range from 260kHz to 66.6MHz.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2395
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.6"
+    "version": "2.1.0.11",
+    "cmake": true,
+    "alias": "Click.ClockGen2",
+    "subdir_name": "lib_clockgen2"
 }
-
-
 
 
 

@@ -16,8 +16,8 @@ OLED B click carries a 96 x 39px blue monochrome passive matrix OLED display. Th
 
 #### Click library
 
-- **Author**        : Stefan Ilic
-- **Date**          : Jun 2021.
+- **Author**        : MikroE Team
+- **Date**          : Feb 2023.
 - **Type**          : I2C/SPI type
 
 
@@ -48,19 +48,19 @@ err_t oledb_init ( oledb_t *ctx, oledb_cfg_t *cfg );
 
 #### Example key functions :
 
-- `oledb_send` This function sends commands or data to OLED W click.
-```c
-err_t oledB_send( oledb_t *ctx, oledb_data_t tx_data, oledb_data_mode_t data_mode );
-```
-
-- `oledb_display_picture` This function allows user to display picture for page addressing mode.
+- `oledb_display_picture` This function allows user to display picture for on the screen.
 ```c
 void oledb_display_picture( oledb_t *ctx, oledb_resources_t *pic );
 ```
 
-- `oledb_set_contrast` This function sets the display contrast level (0 to 255).
+- `oledb_clear_display` This function clears SSD1306 controller display.
 ```c
-void oledb_set_contrast( oledb_t *ctx, oledb_data_t value );
+void oledb_clear_display( oledb_t *ctx );
+```
+
+- `oledb_write_string` This function writes a text string from the selected position in a 5x7 or 6x8 font size.
+```c
+void oledb_write_string( oledb_t *ctx, uint8_t font, uint8_t row, uint8_t position, uint8_t *data_in );
 ```
 
 ## Example Description
@@ -90,17 +90,16 @@ void application_init ( void ) {
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    Delay_ms( 100 );
     log_info( &logger, " Application Init " );
 
     // Click initialization.
     oledb_cfg_setup( &oledb_cfg );
     OLEDB_MAP_MIKROBUS( oledb_cfg, MIKROBUS_1 );
     err_t init_flag  = oledb_init( &oledb, &oledb_cfg );
-    if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) ) {
+    if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) ) 
+    {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
 
@@ -117,45 +116,59 @@ void application_init ( void ) {
 ```c
 
 void application_task ( void ) {
-    uint8_t i;
+    oledb_clear_display( &oledb );
+    Delay_ms( 100 );
 
-    oledb_display_picture( &oledb, oledb_img );
+    oledb_write_string( &oledb, OLEDB_FONT_6X8, 0, 0, "     MIKROE     " );
+    oledb_write_string( &oledb, OLEDB_FONT_6X8, 1, 0, "  OLED B click  " );
+    oledb_write_string( &oledb, OLEDB_FONT_6X8, 2, 0, "  with SSD1306  " );
+    oledb_write_string( &oledb, OLEDB_FONT_6X8, 3, 0, "   controller   " );
+    oledb_write_string( &oledb, OLEDB_FONT_6X8, 4, 0, "  TEST EXAMPLE  " );
+    Delay_ms( 3000 );
+    
+    oledb_write_string( &oledb, OLEDB_FONT_6X8, 0, 0, " TEXT SCROLL EXAMPLE " );
+    oledb_write_string( &oledb, OLEDB_FONT_6X8, 4, 0, " TEXT SCROLL EXAMPLE " );
+    Delay_ms( 1000 );
+    
+    oledb_scroll_right( &oledb, 4, 0 );
+    Delay_ms( 6000 );
+    oledb_stop_scroll( &oledb );
+    
+    oledb_clear_display( &oledb );
+    Delay_ms( 100 );
+    
+    oledb_display_picture( &oledb, oledb_img_mikroe );
     Delay_ms( 500 );
-    oledb_send( &oledb, OLEDB_INVERTDISPLAY, OLEDB_COMMAND );
+    oledb_send_cmd( &oledb, OLEDB_INVERTDISPLAY );
     Delay_ms( 500 );
-    oledb_send( &oledb, OLEDB_NORMALDISPLAY, OLEDB_COMMAND );
+    oledb_send_cmd( &oledb, OLEDB_NORMALDISPLAY );
     Delay_ms( 500 );
-    oledb_send( &oledb, OLEDB_INVERTDISPLAY, OLEDB_COMMAND );
+    oledb_send_cmd( &oledb, OLEDB_INVERTDISPLAY );
     Delay_ms( 500 );
-    oledb_send( &oledb, OLEDB_NORMALDISPLAY, OLEDB_COMMAND );
+    oledb_send_cmd( &oledb, OLEDB_NORMALDISPLAY );
     Delay_ms( 300 );
 
-    for (i = 0xAF; i > 0x00; i--) {
-        oledb_set_contrast( &oledb, i );
+    for ( uint8_t contrast = 0xAF; contrast > 0x00; contrast-- ) 
+    {
+        oledb_set_contrast( &oledb, contrast );
         Delay_ms( 5 );
     }
 
-    for (i = 0x00; i < 0xAF; i++) {
-        oledb_set_contrast( &oledb, i );
+    for ( uint8_t contrast = 0x00; contrast < 0xAF; contrast++ ) 
+    {
+        oledb_set_contrast( &oledb, contrast );
         Delay_ms( 5 );
     }
 
-    oledb_scroll_right( &oledb, 0x00, 0x05 );
+    oledb_scroll_left( &oledb, 0, 4 );
     Delay_ms( 1000 );
     oledb_stop_scroll( &oledb );
-    oledb_display_picture( &oledb, oledb_img );
 
-    oledb_scroll_left( &oledb, 0x00, 0x05 );
-    Delay_ms( 1000 );
+    oledb_scroll_right( &oledb, 0, 4 );
+    Delay_ms( 2000 );
     oledb_stop_scroll( &oledb );
-    oledb_display_picture( &oledb, oledb_img );
-
-    oledb_scroll_diag_right( &oledb, 0x00, 0x05 );
-    Delay_ms( 1000 );
-    oledb_stop_scroll( &oledb );
-    oledb_display_picture( &oledb, oledb_img );
-
-    oledb_scroll_diag_left( &oledb, 0x00, 0x05 );
+    
+    oledb_scroll_left( &oledb, 0, 4 );
     Delay_ms( 1000 );
     oledb_stop_scroll( &oledb );
 }

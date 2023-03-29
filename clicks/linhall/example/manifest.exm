@@ -2,7 +2,7 @@
     "name": "LIN HALL Click",
     "description": "LIN HALL click carries an MLX90242 linear Hall sensor IC (with built-in active error correction circuitry) and an MCP3201 12-bit ADC.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MLX90242"],
     "category" : ["Magnetic"] 
 }

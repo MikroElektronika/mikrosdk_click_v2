@@ -1,7 +1,0 @@
-type: subdirs
-project: Sram2
-
-subdirs: {
-    lib
-    example
-}

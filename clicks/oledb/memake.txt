@@ -1,8 +1,0 @@
-type: subdirs
-
-project: OLEDB
-
-subdirs: {
-    lib
-    example
-}

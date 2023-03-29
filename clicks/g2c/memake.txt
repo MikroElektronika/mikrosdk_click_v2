@@ -1,7 +1,0 @@
-type: subdirs
-project: G2C
-
-subdirs: {
-    lib
-    example
-}

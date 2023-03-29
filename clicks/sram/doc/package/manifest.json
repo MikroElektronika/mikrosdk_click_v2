@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "SRAM",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Storage > SRAM",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "SRAM click",
     "example_list": [
@@ -26,17 +25,17 @@
     "name": "mikroe.click.sram",
     "product_link": "https://www.mikroe.com/sram-click",
     "short_description": "SRAM Click presents additional 1Mbit SRAM memory that can be added to device.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         1522
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.7"
+    "version": "2.1.0.12",
+    "cmake": true,
+    "alias": "Click.Sram",
+    "subdir_name": "lib_sram"
 }
-
-
 
 
 

@@ -2,7 +2,7 @@
     "name": "AlphaNum G Click",
     "description": "AlphaNum click is a simple solution for adding 14-segment alphanumeric display to your device. The board carries two TLC5926 16-bit Constant-Current LED sink Drivers",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","TLC5926"],
     "category" : ["LED segment"]
 }

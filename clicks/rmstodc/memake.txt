@@ -1,7 +1,0 @@
-type: subdirs
-project: RmstoDc
-
-subdirs: {
-    lib
-    example
-}

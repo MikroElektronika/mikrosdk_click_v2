@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Gas",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Gas",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Ozone 2 click",
     "example_list": [
@@ -26,20 +25,17 @@
     "name": "mikroe.click.ozone2",
     "product_link": "https://www.mikroe.com/ozone-2-click",
     "short_description": "Ozone 2 click is an Ozone detection (O3) sensor, based on the MQ131 gas sensor. This gas sensor has a sensitive layer made of SnO2, which changes its resistance when exposed to ozone. ",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2177
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.9"
+    "version": "2.1.0.14",
+    "cmake": true,
+    "alias": "Click.Ozone2",
+    "subdir_name": "lib_ozone2"
 }
-
-
-
-
-
 
 
 

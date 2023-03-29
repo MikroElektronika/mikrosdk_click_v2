@@ -1,7 +1,0 @@
-type: subdirs
-project: SpiIsolator3
-
-subdirs: {
-    lib
-    example
-}

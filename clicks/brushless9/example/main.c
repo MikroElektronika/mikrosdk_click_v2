@@ -3,8 +3,7 @@
  * @brief Brushlesss9 Click example
  *
  * # Description
- * This application is a schowcase of controlling speed and direction 
- * of brushless motor with hall sesnor.
+ * This application is a schowcase of controlling speed and direction of brushless motor with hall sesnor.
  *
  * The demo application is composed of two sections :
  *
@@ -12,13 +11,9 @@
  * Initialization of LOG, PWM module and additional pins for controlling motor.
  *
  * ## Application Task
- * This is an example that demonstrates the use of a Brushless 9 Click board.
- * Brushless 9 Click controls motor speed via PWM interface.
- * It shows moving in the left direction from slow to fast speed
- * and from fast to slow speed.
- * Results are being sent to the Usart Terminal where you can track their changes.
- * 
- * @author Nikola Peric
+ * In span of 2 seconds changes duty cycle from 0 to 100% and then back to 0, at the end changes direction of motor.
+ *
+ * @author Luka Filipovic
  *
  */
 
@@ -71,41 +66,34 @@ void application_init ( void )
     brushless9_set_duty_cycle ( &brushless9, 0 );
     brushless9_pwm_start( &brushless9 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 1000 );
 }
 
 void application_task ( void ) 
 {
-    static int8_t duty_cnt = 1;
-    static int8_t duty_inc = 1;
-    float duty = duty_cnt / 10.0;
-
-    brushless9_set_duty_cycle ( &brushless9, duty );
-    log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
-    Delay_ms( 500 );
-
-    if ( 10 == duty_cnt ) 
+    log_info( &logger, " Starting... " );
+    brushless9_set_brk( &brushless9, 0 );
+    for ( float duty = 0.1; duty < 1; duty += 0.1 )
     {
-        duty_inc = -1;
+        Delay_ms( DUTY_CHANGE_DELAY );
+        brushless9_set_duty_cycle ( &brushless9, duty );
+        log_printf( &logger, "Duty: %u%%\r\n", ( uint16_t )ceil( duty * 100 ) );
     }
-    else if ( 0 == duty_cnt ) 
+
+    for ( float duty = 0.9; duty >= 0; duty -= 0.1 )
     {
-        duty_inc = 1;
-        
-        if ( direction == 1 )
-        {
-        direction = !direction;
-        brushless9_set_brk( &brushless9, 0 );
-        brushless9_set_dir( &brushless9, direction );
-        }
-        else if ( direction == 0 )
-        {
-        direction = !direction;
-        brushless9_set_brk( &brushless9, 1 );
-        brushless9_set_dir( &brushless9, direction );
-        }
+        Delay_ms( DUTY_CHANGE_DELAY );
+        brushless9_set_duty_cycle ( &brushless9, duty );
+        log_printf( &logger, "Duty: %u%%\r\n", ( uint16_t )ceil( duty * 100 ) );
     }
-    duty_cnt += duty_inc;
+
+    Delay_ms( DUTY_CHANGE_DELAY );
+    log_info( &logger, " Stopping... " );
+    brushless9_set_duty_cycle ( &brushless9, 0 );
+    brushless9_set_brk( &brushless9, 1 );
+    Delay_ms( BREAK_DELAY );
+    log_info( &logger, " Changing direction... " );
+    direction = !direction;
+    brushless9_set_dir( &brushless9, direction );
 }
 
 void main ( void ) 

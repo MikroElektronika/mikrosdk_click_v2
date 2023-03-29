@@ -2,7 +2,7 @@
     "name": "SPI Isolator Click",
     "description": "SPI Isolator click carries the ADuM4154 5kV digital isolator optimized for a serial peripheral interface (SPI).",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","ADuM4154"],
     "category" : ["SPI"] 
 }

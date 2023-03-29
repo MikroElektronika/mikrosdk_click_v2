@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "LED Drivers",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Display & LED > LED Drivers",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "LED Driver 13 click",
     "example_list": [
@@ -26,8 +25,15 @@
     "name": "mikroe.click.leddriver13",
     "product_link": "https://www.mikroe.com/led-driver-13-click",
     "short_description": "LED Driver 13 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the A80604-1, a 4-channel LED driver designed at a switching frequency of 400kHz that provides 150mA per channel from Allegro Microsystems. It is powered by an external power supply in the range of 6V to 18V, providing an output voltage of approximately 26V, which is used to power LEDs connected to LED channels. On the logical side, this board uses both 3V3 and 5V with mikroBUS™ power rails and communicates with the MCU via GPIO pins. In addition, the user is given the option of analog or digital LED dimming selection, using a PWM pin from the mikroBUS™ socket or via an onboard potentiometer/external PWM signal.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.5",
+    "cmake": true,
+    "alias": "Click.LEDDriver13",
+    "subdir_name": "lib_leddriver13"
 }
+
+
+
+

@@ -3,19 +3,19 @@
  * @brief BLE TINY Click Example.
  *
  * # Description
- * This example reads and processes data from BLE TINY clicks. 
+ * This example reads and processes data from BLE TINY clicks.
  * Application waits for connection with Click board with phone.
- * Then checks its Coadless FW version and checks connected device. 
- * Then waits for command to be stored in it's memory on 0 slot. 
+ * Then checks its Coadless FW version and checks connected device.
+ * Then waits for command to be stored in it's memory on 0 slot.
  * After that depending on the command stored it executes that type of example.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes driver and resets device and seds Disconnect and Reset IO commands. 
- * Then it waits for the connection to device. When connected it sends commands to 
- * check Coadless FW, connected device, its BLE address and signal quality of 
- * connection. In the end it waits for command from its memory. After valid 
+ * Initializes driver and resets device and seds Disconnect and Reset IO commands.
+ * Then it waits for the connection to device. When connected it sends commands to
+ * check Coadless FW, connected device, its BLE address and signal quality of
+ * connection. In the end it waits for command from its memory. After valid
  * command is stored in memory on 0 slot it contines to Application Task.
  *
  * ## Application Task
@@ -128,7 +128,7 @@ static void bletiny_log_app_buf ( void );
 /**
  * @brief Response check.
  * @details This function checks for response and returns the status of response.
- * 
+ *
  * @return @li @c  >=0 - Success,
  *         @li @c   <0 - Error.
  *
@@ -139,8 +139,8 @@ static err_t bletiny_rsp_check ( void );
 /**
  * @brief Selecting application task.
  * @details This function selects application task that will be executed.
- * @note Select task by sending command for sending string in memory(0 slot) 
- * with phone application. Example of command: AT+MEM=0,I2C. If memory is 
+ * @note Select task by sending command for sending string in memory(0 slot)
+ * with phone application. Example of command: AT+MEM=0,I2C. If memory is
  * not empty the string detected will be shown on UART Terminal.
  */
 static void bletiny_example_init ( void );
@@ -148,7 +148,7 @@ static void bletiny_example_init ( void );
 /**
  * @brief Application example.
  * @details This function executes task for using phone application.
- * @note Example logs if any data is read from Click board. This example 
+ * @note Example logs if any data is read from Click board. This example
  * should be selected if you want to control device with phone application.
  */
 static void bletiny_application_example ( void );
@@ -157,7 +157,7 @@ static void bletiny_application_example ( void );
  * @brief I2C example.
  * @details This function executes task for using EEPROM Click board.
  * @note Example configures IO pins for I2C communication and configures I2C.
- * Then writes "MikroE" to memory of EEPROM Click board and then reads it 
+ * Then writes "MikroE" to memory of EEPROM Click board and then reads it
  * back and logs it to UART Terminal.
  */
 static void bletiny_i2c_example ( void );
@@ -167,7 +167,7 @@ static void bletiny_i2c_example ( void );
  * @details This function executes task for using EEPROM 2 Click board.
  * @note Example configures IO pins for SPI communication and configures SPI.
  * When configured, it sends command for enableing write to Click board memory.
- * Then writes "MikroE" to memory of EEPROM 2 Click board and then reads it 
+ * Then writes "MikroE" to memory of EEPROM 2 Click board and then reads it
  * back and logs it to UART Terminal.
  */
 static void bletiny_spi_example ( void );
@@ -178,51 +178,51 @@ static void bletiny_spi_example ( void );
  */
 static void bletiny_clear_char( uint8_t *str, char chr );
 
-void application_init ( void ) 
-{   
+void application_init ( void )
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     bletiny_cfg_t bletiny_cfg;  /**< Click config object. */
 
-    /** 
+    /**
      * Logger initialization.
      * Default baud rate: 115200
      * Default log level: LOG_LEVEL_DEBUG
-     * @note If USB_UART_RX and USB_UART_TX 
-     * are defined as HAL_PIN_NC, you will 
-     * need to define them manually for log to work. 
+     * @note If USB_UART_RX and USB_UART_TX
+     * are defined as HAL_PIN_NC, you will
+     * need to define them manually for log to work.
      * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_printf( &logger, "\r\nApplication Init\r\n" );
     Delay_ms( 1000 );
-    
+
     // Click initialization.
     bletiny_cfg_setup( &bletiny_cfg );
     BLETINY_MAP_MIKROBUS( bletiny_cfg, MIKROBUS_1 );
     err_t init_flag  = bletiny_init( &bletiny, &bletiny_cfg );
-    
-    if ( init_flag == UART_ERROR ) 
+
+    if ( init_flag == UART_ERROR )
     {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
 
         for ( ; ; );
-    }    
+    }
     bletiny_default_cfg ( &bletiny );
-    
+
     bletiny_send_cmd( &bletiny, BLETINY_CMD_ATR );
     bletiny_send_cmd( &bletiny, BLETINY_CMD_ATZ );
     bletiny_send_cmd( &bletiny, BLETINY_CMD_GAPDISCONNECT );
     bletiny_process( );
     bletiny_clear_app_buf( );
-    
+
     app_buf_len = 0;
     app_buf_cnt = 0;
-    
+
     //wait for connection
     log_printf( &logger, " Waiting for phone to connect\r\n" );
-    while ( 0 == strstr( app_buf, BLETINY_CONNECTED ) ) 
+    while ( 0 == strstr( app_buf, BLETINY_CONNECTED ) )
     {
         bletiny_process( );
     }
@@ -242,7 +242,7 @@ void application_init ( void )
     }
     Delay_ms( 1000 );
     //send command to check ble address
-    bletiny_send_cmd( &bletiny, BLETINY_CMD_BDADDR );    
+    bletiny_send_cmd( &bletiny, BLETINY_CMD_BDADDR );
     app_error_flag = bletiny_rsp_check();
     if ( BLETINY_OK == app_error_flag )
     {
@@ -281,12 +281,12 @@ void application_init ( void )
     }
     //select example to execute
     bletiny_example_init( );
-    
+
     bletiny_clear_app_buf( );
     log_printf( &logger, " Application Task \r\n" );
 }
 
-void application_task ( void ) 
+void application_task ( void )
 {
     static uint8_t info = 0;
     switch ( example_type )
@@ -334,48 +334,48 @@ void application_task ( void )
     }
 }
 
-void main ( void ) 
+void main ( void )
 {
     application_init( );
 
-    for ( ; ; ) 
+    for ( ; ; )
     {
         application_task( );
     }
 }
 
-static void bletiny_clear_app_buf ( void ) 
+static void bletiny_clear_app_buf ( void )
 {
     memset( app_buf, 0, app_buf_len );
     app_buf_len = 0;
     app_buf_cnt = 0;
 }
 
-static err_t bletiny_process ( void ) 
+static err_t bletiny_process ( void )
 {
     int32_t rx_size;
     char rx_buff[ PROCESS_BUFFER_SIZE ] = { 0 };
 
     rx_size = bletiny_generic_read( &bletiny, rx_buff, PROCESS_BUFFER_SIZE );
 
-    if ( rx_size > 0 ) 
+    if ( rx_size > 0 )
     {
         int32_t buf_cnt = 0;
 
-        if ( app_buf_len + rx_size >= PROCESS_BUFFER_SIZE ) 
+        if ( app_buf_len + rx_size >= PROCESS_BUFFER_SIZE )
         {
            bletiny_clear_app_buf(  );
             return BLETINY_ERROR;
-        } 
-        else 
+        }
+        else
         {
             buf_cnt = app_buf_len;
             app_buf_len += rx_size;
         }
 
-        for ( int32_t rx_cnt = 0; rx_cnt < rx_size; rx_cnt++ ) 
+        for ( int32_t rx_cnt = 0; rx_cnt < rx_size; rx_cnt++ )
         {
-            if ( rx_buff[ rx_cnt ] != 0 ) 
+            if ( rx_buff[ rx_cnt ] != 0 )
             {
                 app_buf[ ( buf_cnt + rx_cnt ) ] = rx_buff[ rx_cnt ];
             }
@@ -395,14 +395,14 @@ static err_t bletiny_rsp_check ( void )
 {
     uint16_t timeout_cnt = 0;
     uint16_t timeout = 10000;
-    
+
     err_t error_flag = bletiny_process(  );
     if ( ( error_flag != 0 ) && ( error_flag != -1 ) )
     {
         return error_flag;
     }
-    
-    while ( ( strstr( app_buf, BLETINY_RSP_OK ) == 0 ) && 
+
+    while ( ( strstr( app_buf, BLETINY_RSP_OK ) == 0 ) &&
             ( strstr( app_buf, BLETINY_RSP_ERROR ) == 0 ) )
     {
         error_flag = bletiny_process(  );
@@ -410,17 +410,17 @@ static err_t bletiny_rsp_check ( void )
         {
             return error_flag;
         }
-        
+
         timeout_cnt++;
         if ( timeout_cnt > timeout )
         {
             bletiny_clear_app_buf(  );
             return BLETINY_ERROR_TIMEOUT;
         }
-        
+
         Delay_ms( 1 );
     }
-    
+
     if ( strstr( app_buf, BLETINY_RSP_OK ) )
         return BLETINY_OK;
     else if ( strstr( app_buf, BLETINY_RSP_ERROR ) )
@@ -463,18 +463,18 @@ static void bletiny_example_init ( void )
     log_info( &logger, " Send value to 0 memory index via phone app to select example type." );
     log_info( &logger, " Example of command is: AT+MEM=0,I2C" );
     log_info( &logger, " Types:\r\n > SPI\r\n > I2C \r\n > APP" );
-    
+
     for ( ; ; )
     {
         bletiny_send_cmd( &bletiny, BLETINY_CMD_CHECK_MEM );
-        
+
         if ( BLETINY_OK == bletiny_rsp_check() )
         {
             bletiny_clear_char(app_buf, 13);
             bletiny_clear_char(app_buf, 10);
-            
-            volatile char *__generic ok_rsp = strstr( app_buf, BLETINY_RSP_OK );
-            
+
+            volatile char *__generic_ptr ok_rsp = strstr( app_buf, BLETINY_RSP_OK );
+
             if ( ok_rsp )
             {
                 for ( uint8_t index = 0; index < EXAMPLE_CMD_LEN; index++ )
@@ -499,15 +499,15 @@ static void bletiny_example_init ( void )
                             example_state = BLETINY_CONFIGURE_MASTER;
                             return;
                         }
-                        else 
+                        else
                         {
                             example_type = BLETINY_APP_CTRL;
                             return;
                         }
                     }
                 }
-                char *__generic echo_rsp = strstr( app_buf, BLETINY_CMD_CHECK_MEM );
-                
+                char *__generic_ptr echo_rsp = strstr( app_buf, BLETINY_CMD_CHECK_MEM );
+
                 if (echo_rsp)
                 {
                     echo_rsp += sizeof(BLETINY_CMD_CHECK_MEM);
@@ -516,7 +516,7 @@ static void bletiny_example_init ( void )
                 {
                     echo_rsp = app_buf;
                 }
-                
+
                 if ( strcmp(echo_rsp, ok_rsp) )
                 {
                     log_printf( &logger, " cmd not found but found: " );
@@ -530,17 +530,17 @@ static void bletiny_example_init ( void )
             }
             bletiny_clear_app_buf(  );
         }
-            
+
         Delay_ms( 2000 );
     }
-    
+
     Delay_ms( 1000 );
 }
 
 static void bletiny_application_example ( void )
 {
     bletiny_process( );
-    if ( app_buf_len > 0 ) 
+    if ( app_buf_len > 0 )
     {
         log_printf( &logger, "%s", app_buf );
         bletiny_clear_app_buf(  );
@@ -565,12 +565,14 @@ static void bletiny_i2c_example ( void )
             for ( uint8_t cnt = 0; cnt < 6; cnt++ )
             {
                 bletiny_i2c_write( &bletiny, 0x50, cnt + 1, mem_value[ cnt ] );
-                 Delay_ms( 100 );
+                Delay_ms( 100 );
             }
-           
-            bletiny_i2c_read ( &bletiny, 0x50, 0x01 , mem_value, 6 );
-            log_printf ( &logger, "Data read: %s\r\n", mem_value );
-            
+
+            if ( BLETINY_OK == bletiny_i2c_read ( &bletiny, 0x50, 0x01 , mem_value, 6 ) )
+            {
+                log_printf ( &logger, "Data read: %s\r\n", mem_value );
+            }
+
             break;
         }
         default:
@@ -588,17 +590,17 @@ static void bletiny_spi_example ( void )
         case BLETINY_CONFIGURE_MASTER:
         {
             log_printf( &logger, " Configure master for SPI communication\r\n" );
-            
+
             bletiny_spi_config( &bletiny, BLETINY_SPI_CFG_SPEED_2MHZ, BLETINY_SPI_CFG_MODE0 );
-            
+
             example_state = BLETINY_CONFIGURE_SLAVE;
             break;
         }
         case BLETINY_CONFIGURE_SLAVE:
-        {            
+        {
             uint8_t write_enable = 0x06;
             bletiny_spi_write( &bletiny, &write_enable, 1 );
-            
+
             example_state = BLETINY_EXAMPLE;
             break;
         }
@@ -608,7 +610,7 @@ static void bletiny_spi_example ( void )
             bletiny_spi_write ( &bletiny, buf, 10 );
             log_printf ( &logger, "Writing Mikroe to EEPROM 2 click\r\n" );
             Delay_ms( 1000 );
-            
+
             uint8_t data_in[ 4 ] = { 0x03, 0x00, 0x00, 0x01 };
             uint8_t read_data[ 7 ] = { 0 };
             bletiny_spi_write_then_read( &bletiny, data_in, 4, read_data, 6 );

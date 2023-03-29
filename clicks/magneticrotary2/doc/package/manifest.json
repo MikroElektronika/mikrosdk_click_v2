@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Magnetic",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Magnetic",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Magnetic Rotary 2 click",
     "example_list": [
@@ -26,9 +25,14 @@
     "name": "mikroe.click.magneticrotary2",
     "product_link": "https://www.mikroe.com/magnetic-rotary-2-click",
     "short_description": "Magnetic Rotary 2 Click is a compact add-on board used for accurate magnet-position sensing. This board features the AEAT-9922, an angular magnetic rotary sensor providing accurate angular measurement over a full 360 degrees of rotation from Broadcom Limited. The AEAT-9922 uses integrated Hall sensor elements with complex analog and digital signal processing within a single device. The absolute angle measurement provides an instant indication of the magnet's angular position with a selectable and one-time programmable resolution from 10 to 18 bits.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.4",
+    "cmake": true,
+    "alias": "Click.MagneticRotary2",
+    "subdir_name": "lib_magneticrotary2"
 }
+
+
 

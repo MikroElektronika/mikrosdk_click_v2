@@ -1,7 +1,0 @@
-type: subdirs
-project: MagneticRotary4
-
-subdirs: {
-    lib
-    example
-}

@@ -2,7 +2,7 @@
     "name": "LTE IoT 3 Click",
     "description": "LTE IoT 3 Click is a compact add-on board that contains a Low Power Wide Area (LPWA) Wireless IoT module that allows connections to the LTE CAT-M1, CAT NB1/2, and 2G networks. This board features the EXS82-W, LTE-IoT Wireless Module from Thales that offers a rich set of Internet protocols and industry-standard interfaces such as UART, USB, etc. Global IoT connectivity, integrated GNSS support, SMS support, extended coverage range, and reduced power consumption makes this single IoT module an excellent choice for device makers while ensuring worldwide reliability.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
     "hw" : ["click","EXS82-W"],
-    "category" : ["GSM/LTE"]
+    "category" : ["Click Boards > Wireless connectivity > LTE IoT"]
 }

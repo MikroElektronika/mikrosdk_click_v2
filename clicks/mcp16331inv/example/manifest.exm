@@ -2,7 +2,7 @@
     "name": "MCP16331 INV Click",
     "description": "MCP16331 INV click works as a buck-boost voltage regulator, a switching regulator topology that combines principles of the buck conversion (step-down) and the boost conversion (step-up).",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MCP16331","LM318","ADM8828","MCP4921"],
     "category" : ["Buck-Boost"] 
 }

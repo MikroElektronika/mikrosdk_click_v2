@@ -1,0 +1,39 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "category": "Click Boards > Audio & voice > Speech recognition",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "SpeakUp 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.speakup3",
+    "product_link": "https://www.mikroe.com/speakup-3-click",
+    "short_description": "SpeakUP 3 Click is a compact add-on board providing an offline speech recognition solution. This board features the VC-02, a low-cost pure offline speech recognition module developed by Ai-Thinker Technology. The VC-02 module uses an integrated voice chip US516P6 based on a 32-bit RSIC architecture core, a DSP instruction set for signal processing and speech recognition, an FPU arithmetic unit, and an FFT accelerator. The VC-02 supports offline identification of 150 local instructions, RTOS lightweight system, firmware update feature, as well as the selection of the communication method with the module.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.4",
+    "cmake": true,
+    "alias": "Click.SpeakUp3",
+    "subdir_name": "lib_speakup3"
+}
+
+
+
+

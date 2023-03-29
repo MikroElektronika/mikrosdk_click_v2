@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "CAN",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Interface > CAN",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "ATA6570 click",
     "example_list": [
@@ -26,16 +25,16 @@
     "name": "mikroe.click.ata6570",
     "product_link": "https://www.mikroe.com/ata6570-click",
     "short_description": "ATA6570 click is a CAN Partial Networking interface board. The click carries the ATA6570, a high-speed CAN transceiver that interfaces a Controller Area Network (CAN) protocol controller and the physical two-wire CAN bus. ",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2294
     ],
-    "version": "2.0.0.5"
+    "version": "2.1.0.7",
+    "cmake": true,
+    "alias": "Click.Ata6570",
+    "subdir_name": "lib_ata6570"
 }
-
-
-
 
 

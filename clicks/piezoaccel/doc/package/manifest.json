@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC32",
-    "category": "Motion",
+    "architecture": "ARM|PIC32|RISC-V",
+    "category": "Click Boards > Sensors > Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Piezo Accel click",
     "example_list": [
@@ -26,10 +25,13 @@
     "name": "mikroe.click.piezoaccel",
     "product_link": "https://www.mikroe.com/piezo-accel-click",
     "short_description": "Piezo Accel Click is a compact add-on board containing an acceleration sensor based on PE technology.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.4"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.9",
+    "cmake": true,
+    "alias": "Click.PiezoAccel",
+    "subdir_name": "lib_piezoaccel"
 }
 
 

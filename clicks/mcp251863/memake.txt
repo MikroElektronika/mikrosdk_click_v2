@@ -1,7 +1,0 @@
-type: subdirs
-project: MCP251863
-
-subdirs: {
-    lib
-    example
-}

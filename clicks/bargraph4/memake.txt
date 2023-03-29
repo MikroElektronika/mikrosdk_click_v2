@@ -1,7 +1,0 @@
-type: subdirs
-project: BarGraph4
-
-subdirs: {
-    lib
-    example
-}

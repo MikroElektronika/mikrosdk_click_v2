@@ -95,7 +95,7 @@ void application_task ( )
     for( cnt = 0; cnt < 10; cnt++ )
     {
         adc_val = adac_read_adc( &adac, &chan );
-        log_printf( &logger, "   channel : %d\r\n", chan );
+        log_printf( &logger, "   channel : %d\r\n", ( uint16_t ) chan );
         log_printf( &logger, "       val : %d\r\n", adc_val ); 
         Delay_ms( 2000 );
     }

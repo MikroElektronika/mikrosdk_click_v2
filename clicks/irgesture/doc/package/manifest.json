@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Motion",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "IR Gesture click",
     "example_list": [
@@ -26,17 +25,17 @@
     "name": "mikroe.click.irgesture",
     "product_link": "https://www.mikroe.com/ir-gesture-click",
     "short_description": "IR Gesture Click is a mikroBUS add-on board that enables contactless gesture recognition, along with ambient light and proximity sensing capabilities with the APDS-9960 IC. This sensor integrates an LED and four directional photodiodes that receive the reflecting light.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         1703
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.6"
+    "version": "2.1.0.10",
+    "cmake": true,
+    "alias": "Click.IrGesture",
+    "subdir_name": "lib_irgesture"
 }
-
-
 
 
 

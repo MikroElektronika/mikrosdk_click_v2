@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "GPS/GNSS",
+    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "category": "Click Boards > Wireless connectivity > GPS/GNSS",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "GPS 6 click",
     "example_list": [
@@ -26,9 +25,16 @@
     "name": "mikroe.click.gps6",
     "product_link": "https://www.mikroe.com/gps-6-click",
     "short_description": "GPS 6 Click is a compact add-on board that provides users with positioning, navigation, and timing services. This board features the A2200-A, a GPS receiver module that enables fast acquisition and tracking with SiRFstar IV technology from Lantronix. This small-form-factor module operates with a frequency of 1,575GHz with accuracy from 2 up to 2.5m and fully addresses the demand for the lowest power consumption. The removal of jammers guarantees operation even in hostile environments. High sensitivity during acquisition or while tracking allows for use in many different backgrounds and under the most challenging operating conditions.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.7",
+    "alias": "Click.GPS6",
+    "cmake": true,
+    "subdir_name": "lib_gps6"
 }
+
+
+
+
 

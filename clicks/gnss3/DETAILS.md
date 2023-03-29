@@ -39,16 +39,12 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 > void gnss3_cfg_setup ( gnss3_cfg_t *cfg ); 
  
 - Initialization function.
-> GNSS3_RETVAL gnss3_init ( gnss3_t *ctx, gnss3_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void gnss3_default_cfg ( gnss3_t *ctx );
-
+> err_t gnss3_init ( gnss3_t *ctx, gnss3_cfg_t *cfg );
 
 #### Example key functions :
 
-- Generic parser function.
-> gnss3_error_t gnss3_generic_parser ( char *rsp,  uint8_t command, uint8_t element, char *parser_buf );
+- GNSS 3 parse GNGGA function.
+> err_t gnss3_parse_gngga ( char *rsp_buf, uint8_t gngga_element, char *element_data );
  
 - Generic read function.
 > int32_t gnss3_generic_read ( gnss3_t *ctx, char *data_buf, uint16_t max_len );
@@ -58,13 +54,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example reads and processes data from GNSS3 clicks.
+> This example demonstrates the use of GNSS 3 click by reading and displaying the GPS coordinates.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes driver and wake-up module.
+> Initializes the driver and resets the click board.
 
 ```c
 
@@ -100,14 +96,17 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads the received data and parses it.
+> Reads the received data, parses the GNGGA info from it, and once it receives the position fix it will start displaying the coordinates on the USB UART.
 
 ```c
 
 void application_task ( void )
 {
-    gnss3_process(  );
-    parser_application( current_parser_buf );
+    gnss3_process( &gnss3 );
+    if ( app_buf_len > ( sizeof ( ( char * ) GNSS3_RSP_GNGGA ) + GNSS3_GNGGA_ELEMENT_SIZE ) ) 
+    {
+        gnss3_parser_application( app_buf );
+    }
 } 
 
 ```

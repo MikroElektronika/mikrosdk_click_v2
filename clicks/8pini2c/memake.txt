@@ -1,7 +1,0 @@
-type: subdirs
-project: 8pinI2c
-
-subdirs: {
-    lib
-    example
-}

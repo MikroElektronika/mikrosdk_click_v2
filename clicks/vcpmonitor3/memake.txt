@@ -1,8 +1,0 @@
-type: subdirs
-
-project: VCPMonitor3
-
-subdirs: {
-    lib
-    example
-}

@@ -1,7 +1,0 @@
-type: subdirs
-project: AMRAngle
-
-subdirs: {
-    lib
-    example
-}

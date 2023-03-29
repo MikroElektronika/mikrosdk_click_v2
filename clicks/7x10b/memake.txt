@@ -1,7 +1,0 @@
-type: subdirs
-project: c7x10B
-
-subdirs: {
-    lib
-    example
-}

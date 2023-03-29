@@ -2,7 +2,7 @@
     "name": "Compass 4 Click",
     "description": "Compass 4 Click is a compact add-on board that can measure the three-axis magnetic field that is perfect for implementation in applications such as electric compasses.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","AK09915"],
     "category" : ["Measurements"] 
 }

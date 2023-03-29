@@ -1,7 +1,0 @@
-type: subdirs
-project: LEDDriver14
-
-subdirs: {
-    lib
-    example
-}

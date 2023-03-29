@@ -1,8 +1,8 @@
 {
-    "name": "GNSS2 Click",
+    "name": "GNSS 2 Click",
     "description": "GNSS2 click carries Quectel’s L76 module and an SMA antenna connector.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
     "hw" : ["click","Quectel’s L76"],
-    "category" : ["GPS+GNSS"] 
+    "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"] 
 }

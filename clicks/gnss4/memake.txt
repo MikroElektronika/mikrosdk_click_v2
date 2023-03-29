@@ -1,7 +1,0 @@
-type: subdirs
-project: Gnss4
-
-subdirs: {
-    lib
-    example
-}

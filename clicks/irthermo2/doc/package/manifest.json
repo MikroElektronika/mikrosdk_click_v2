@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Temperature & humidity",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Temperature & humidity",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "IrThermo 2 click",
     "example_list": [
@@ -26,13 +25,18 @@
     "name": "mikroe.click.irthermo2",
     "product_link": "https://www.mikroe.com/irthermo-2-click",
     "short_description": "IrThermo 2 click is a non-contact temperature measurement solution. The click board carries the TMP007 infrared thermopile sensor with an integrated math engine.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "related_projects":[
+    "related_projects": [
         1468
     ],
-    "version": "2.0.0.2"
+    "version": "2.1.0.6",
+    "cmake": true,
+    "alias": "Click.IrThermo2",
+    "subdir_name": "lib_irthermo2"
 }
+
+
 
 

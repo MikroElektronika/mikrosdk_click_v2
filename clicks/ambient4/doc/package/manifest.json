@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Optical",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Optical",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Ambient 4 click",
     "example_list": [
@@ -26,18 +25,16 @@
     "name": "mikroe.click.ambient4",
     "product_link": "https://www.mikroe.com/ambient-4-click",
     "short_description": "Ambient 4 click is a light intensity-sensing and measuring Click board™, which features an accurate, light-intensity sensor labeled as BH1721FVC, made by ROHM Corporation.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2582
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.6"
+    "version": "2.1.0.8",
+    "cmake": true,
+    "alias": "Click.Ambient4",
+    "subdir_name": "lib_ambient4"
 }
-
-
-
-
 
 

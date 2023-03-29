@@ -2,7 +2,7 @@
     "name": "Humidity Click",
     "description": "Humidity Click is a compact add-on board used to sense the amount of water vapor in the air. This board features the HIH-5030, an analog output relative humidity sensor from Honeywell Sensing and Productivity Solutions. The HIH-5031 is a covered, condensation-resistant, integrated circuit humidity sensor that is factory-fitted with a hydrophobic filter allowing usage in many condensing environments.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","HIH-5030"],
     "category" : ["Temperature & humidity"]
 }

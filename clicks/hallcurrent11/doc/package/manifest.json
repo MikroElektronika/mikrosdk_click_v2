@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Current sensor",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Current sensor",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Hall Current 11 click",
     "example_list": [
@@ -26,11 +25,15 @@
     "name": "mikroe.click.hallcurrent11",
     "product_link": "https://www.mikroe.com/hall-current-11-click",
     "short_description": "Hall Current 11 Click is a compact add-on board that provides economical and precise AC or DC current sensing solutions. This board features the TMCS1108A2U, a galvanically isolated Hall-effect current sensor with high accuracy, excellent linearity, and temperature stability from Texas Instruments. The input current flows through an internal 1.8mΩ conductor that generates a magnetic field measured by an integrated Hall-effect sensor. It features a 100V functional isolation working voltage with both unidirectional and bidirectional current sensing. Based on the selected logic voltage VCC, the TMCS1108A2U allows the user to measure current in two appropriate ranges, where after that, can process the output signal in analog or digital form.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.4"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.8",
+    "cmake": true,
+    "alias": "Click.HallCurrent11",
+    "subdir_name": "lib_hallcurrent11"
 }
+
 
 
 

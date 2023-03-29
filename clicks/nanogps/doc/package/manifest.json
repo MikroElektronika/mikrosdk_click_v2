@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "GPS/GNSS",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Wireless connectivity > GPS/GNSS",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Nano GPS click",
     "example_list": [
@@ -26,14 +25,16 @@
     "name": "mikroe.click.nanogps",
     "product_link": "https://www.mikroe.com/nano-gps-click",
     "short_description": "Nano GPS click carries the Nano Hornet module from OriginGPS. It’s the smallest GPS module with an integrated patch antenna (measuring just 10x10x3.8mm).",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "related_projects":[
+    "related_projects": [
         1474
     ],
-    "version": "2.0.0.9"
+    "version": "2.1.0.11",
+    "cmake": true,
+    "alias": "Click.Nanogps",
+    "subdir_name": "lib_nanogps"
 }
-
 
 

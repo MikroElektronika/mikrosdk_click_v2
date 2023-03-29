@@ -1,7 +1,0 @@
-type: subdirs
-project: Flash7
-
-subdirs: {
-    lib
-    example
-}

@@ -2,7 +2,7 @@
     "name": "Brushless 12 Click",
     "description": "Brushless 12 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the L6235, DMOS fully integrated 3-phase motor driver with overcurrent protection from STMicroelectronics.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","L6235"],
     "category" : ["Brushless"]
 }

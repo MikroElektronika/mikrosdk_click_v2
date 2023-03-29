@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Port expander",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Interface > Port expander",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Expand 9 click",
     "example_list": [
@@ -26,8 +25,15 @@
     "name": "mikroe.click.expand9",
     "product_link": "https://www.mikroe.com/expand-9-click",
     "short_description": "Expand 9 Click is a compact add-on board that contains a multi-port I/O expander. This board features the SX1509QB, the world’s lowest voltage level shifting GPIO expander from Semtech Corporation. The SX1509QB comes in a 16-channel configuration and allows easy serial expansion of I/O through a standard I2C serial interface. It also has a built-in level shifting feature making it highly flexible in power supply systems where communication between incompatible I/O voltages is required, an integrated LED driver for enhanced lighting, and a keypad scanning engine to implement keypad applications up to 8x8 matrix.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.6",
+    "cmake": true,
+    "alias": "Click.Expand9",
+    "subdir_name": "lib_expand9"
 }
+
+
+
+

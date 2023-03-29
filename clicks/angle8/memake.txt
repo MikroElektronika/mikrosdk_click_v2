@@ -1,7 +1,0 @@
-type: subdirs
-project: Angle8
-
-subdirs: {
-    lib
-    example
-}

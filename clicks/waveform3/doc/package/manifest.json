@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Clock generator",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Clock & Timing > Clock generator",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Waveform 3 click",
     "example_list": [
@@ -26,12 +25,13 @@
     "name": "mikroe.click.waveform3",
     "product_link": "https://www.mikroe.com/waveform-3-click",
     "short_description": "Waveform 3 Click is a compact add-on board that represents a high-performance signal generator. This board features the AD9837, a low-power programmable waveform generator capable of producing sine, triangular, and square wave outputs from Analog Devices.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.4"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.6",
+    "cmake": true,
+    "alias": "Click.Waveform3",
+    "subdir_name": "lib_waveform3"
 }
-
-
 
 

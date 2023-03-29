@@ -1,0 +1,38 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Mixed signal > Measurements",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Current 9 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.current9",
+    "product_link": "https://www.mikroe.com/current-9-click",
+    "short_description": "Current 9 Click is a compact add-on board providing a precise and accurate current sensing solution. This board features the CT415-HSN830DR, high-bandwidth and ultra-low-noise XtremeSense® TMR current sensor designed for the current range up to 30A from Crocus Technology. This sensor also features an integrated current-carrying conductor which handles rated current and generates a current measurement as a linear analog output voltage, accomplishing a total output error of about ±1% full-scale. After that, the user is allowed to process the output voltage in analog or digital form.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.3",
+    "cmake": true,
+    "alias": "Click.Current9",
+    "subdir_name": "lib_current9"
+}
+
+
+

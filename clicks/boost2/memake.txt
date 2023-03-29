@@ -1,7 +1,0 @@
-type: subdirs
-project: Boost2
-
-subdirs: {
-    lib
-    example
-}

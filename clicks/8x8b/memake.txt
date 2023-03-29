@@ -1,7 +1,0 @@
-type: subdirs
-project: 8X8B
-
-subdirs: {
-    lib
-    example
-}

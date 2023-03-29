@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "LED Segment",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Display & LED > LED segment",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "LED Flash click",
     "example_list": [
@@ -26,17 +25,17 @@
     "name": "mikroe.click.ledflash",
     "product_link": "https://www.mikroe.com/led-flash-click",
     "short_description": "LED Flash click functions as a high power LED flash, and carries the CAT3224 flash LED driver.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2079
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.6"
+    "version": "2.1.0.10",
+    "cmake": true,
+    "alias": "Click.LedFlash",
+    "subdir_name": "lib_ledflash"
 }
-
-
 
 
 

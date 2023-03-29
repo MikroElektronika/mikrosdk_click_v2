@@ -1,7 +1,0 @@
-type: subdirs
-project: PwmDriver
-
-subdirs: {
-    lib
-    example
-}

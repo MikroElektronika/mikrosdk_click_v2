@@ -1,7 +1,0 @@
-type: subdirs
-project: 9Dof3
-
-subdirs: {
-    lib
-    example
-}

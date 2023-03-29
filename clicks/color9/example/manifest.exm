@@ -2,7 +2,7 @@
   "name": "Color 9 click",
   "description": "Color 9 Click is a very accurate color sensing Click board� which features the APDS-9250, IR and ambient light sensor, from Broadcom. It contains a specially designed matrix of photosensitive elements, which can sense red, green, blue and IR component.",
   "image": "../../Resources/click_icon.png",
-  "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+  "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
   "hw": [ "click", "APDS-9250" ],
   "category": [ "Optical" ]
 }

@@ -2,7 +2,7 @@
     "name": "Adapter Click",
     "description": "Adapter click™ is a breakout board which simplifies connection of add-on boards with IDC10 headers to mikroBUS™ socket. There are two ways of establishing connection: using male or female IDC10 connectors.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click"],
     "category" : ["Interface"] 
 }

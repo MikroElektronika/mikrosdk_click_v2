@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Audio & voice > Signal processing",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Headphone Amp 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.headphoneamp2",
+    "product_link": "https://www.mikroe.com/headphone-amp-2-click",
+    "short_description": "Headphone AMP 2 Click is a compact add-on board that contains a headphone amplifier. This board features the TS2007FC, a class-D audio power amplifier from STMicroelectronics. The TS2007FC can drive up to 2.3W into 4Ω load at 5V, achieving better efficiency than typical class-AB audio power amplifiers. It can switch between two gain settings, either 6 or 12dB, through one mikroBUS™ pin, has the pop and click reduction circuitry, and a Standby mode for reduced power consumption. Besides, it is equipped with protection features, allowing a reliable operation.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.HeadphoneAmp2",
+    "subdir_name": "lib_headphoneamp2"
+}

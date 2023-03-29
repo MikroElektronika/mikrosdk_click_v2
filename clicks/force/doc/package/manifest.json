@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Force",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Force",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Force click",
     "example_list": [
@@ -26,18 +25,17 @@
     "name": "mikroe.click.force",
     "product_link": "https://www.mikroe.com/force-click",
     "short_description": "Force click is a mikroBUS™ add-on board with circuitry for implementing Interlink Electronics’ Force Sensing Resistors into your projects (with a single zone force sensing resistor included with the click). The Force Sensing Resistor is a thin sensor made of two membranes that are separated by a spacer around the edges.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         1863
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.6"
+    "version": "2.1.0.9",
+    "cmake": true,
+    "alias": "Click.Force",
+    "subdir_name": "lib_force"
 }
-
-
-
 
 
 

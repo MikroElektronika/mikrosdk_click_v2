@@ -12,7 +12,7 @@
  * Initializes the driver and performs the click default configuration.
  *
  * ## Application Task
- * Controls the motor speed by changing the PWM duty cycle every 500ms.
+ * Controls the motor speed by changing the PWM duty cycle every 2 seconds.
  * The duty cycle ranges from 20% to 80%. At the minimal speed, the motor switches direction.
  * Each step will be logged on the USB UART where you can track the program flow.
  *
@@ -65,32 +65,33 @@ void application_init ( void )
 
 void application_task ( void ) 
 {
-    static int8_t duty_cnt = 3;
+    static int8_t duty_cnt = 2;
     static int8_t duty_inc = 1;
     float duty = duty_cnt / 10.0;
-    
     brushless23_pwm_set_duty_cycle ( &brushless23, duty );
-    log_printf( &logger, " Duty cycle: %u%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
-    
+    log_printf( &logger, "\r\n Duty cycle: %u%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
+    Delay_ms ( 1500 );
     float motor_speed_hz = 0;
     if ( BRUSHLESS23_OK == brushless23_get_motor_speed ( &brushless23, &motor_speed_hz ) )
     {
         log_printf( &logger, " Speed: %.1f Hz\r\n", motor_speed_hz );
     }
-    
-    if ( 8 == duty_cnt ) 
+    duty_cnt += duty_inc;
+    if ( duty_cnt > 8 ) 
     {
+        duty_cnt = 7;
         duty_inc = -1;
     }
-    else if ( 2 == duty_cnt ) 
+    else if ( duty_cnt < 2 ) 
     {
+        duty_cnt = 2;
         duty_inc = 1;
-        log_printf( &logger, " Switch direction\r\n\n" );
+        log_printf( &logger, "\r\n Switch direction\r\n" );
+        brushless23_pwm_set_duty_cycle ( &brushless23, BRUSHLESS23_DUTY_CYCLE_MIN_PCT );
+        Delay_ms ( 500 );
         brushless23_switch_direction ( &brushless23 );
     }
-    duty_cnt += duty_inc;
-    
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void main ( void ) 

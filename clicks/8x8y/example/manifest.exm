@@ -2,7 +2,7 @@
     "name": "8x8 Y Click",
     "description": "8x8 Y click is a 64 LED matrix display Click board™, composed of SMD LEDs organized in 8 rows by 8 columns. It has a digital brightness control in 16 steps, it can control every LED in the display matrix independently, it blanks the display on power up to eliminate glitches and it requires a single resistor to control the current through all the LEDs at once, which simplifies the design. 8x8 click uses a fast SPI communication protocol, allowing fast display response and no lag.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MAX7219"],
     "category" : ["LED matrix"]
 }

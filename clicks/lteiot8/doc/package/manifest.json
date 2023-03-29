@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "LTE IoT",
+    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "category": "Click Boards > Wireless connectivity > LTE IoT",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "LTE IoT 8 click",
     "example_list": [
@@ -26,12 +25,12 @@
     "name": "mikroe.click.lteiot8",
     "product_link": "https://www.mikroe.com/lte-iot-8-click",
     "short_description": "LTE IoT 8 Click is a compact add-on board that contains a low-power solution for LTE and NB-IoT connectivity. This board features the SKY66430-11, a multi-band multi-chip System-in-Package (SiP) supporting 5G Massive IoT (LTE-M/NB-IoT) platforms from Skyworks Solutions and Sequans Communications.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.4"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.5",
+    "cmake": true,
+    "alias": "Click.LTEIoT8",
+    "subdir_name": "lib_lteiot8"
 }
-
-
-
 

@@ -3,25 +3,25 @@
  * @brief GNSS 8 Click Example.
  *
  * # Description
- * This example showcases device abillity to read data outputed 
+ * This example showcases device abillity to read data outputed
  * from device and show it's coordinates and altitude when connected.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes host communication modules, additioaln GPIO's used 
+ * Initializes host communication modules, additioaln GPIO's used
  * for control of device and resets device.
  *
  * ## Application Task
- * Reads data from device and wait's untill device is connected. 
- * While not connected it will log '.'. When conneceted and received 
- * data for latitude, longitude, and altitude it will log that data 
+ * Reads data from device and wait's untill device is connected.
+ * While not connected it will log '.'. When conneceted and received
+ * data for latitude, longitude, and altitude it will log that data
  * parsed from "GNGGA" command.
  *
  * ## Additional Function
- * - static void gnss8_clear_app_buf ( void )       
- * - static err_t gnss8_process ( void )            
- * - static err_t gnss8_cmd_parser ( char *cmd )    
+ * - static void gnss8_clear_app_buf ( void )
+ * - static err_t gnss8_process ( void )
+ * - static err_t gnss8_cmd_parser ( char *cmd )
  *
  * @author Luka Filipovic
  *
@@ -78,7 +78,7 @@ static err_t gnss8_process ( void );
  * @details This function searches @b app_buf for @b cmd and logs data of that command.
  *
  * @param[in] cmd : Command to parese.
- * 
+ *
  * @return @li @c GNSS8_OK - Parsed data succes.
  *         @li @c GNSS8_ERROR - No @b cmd in application buffer.
  *
@@ -88,7 +88,7 @@ static err_t gnss8_cmd_parser ( char *cmd );
 
 /**
  * @brief GNSS8 element of command data parser.
- * @details This function searches @b app_buf for @b cmd and it's 
+ * @details This function searches @b app_buf for @b cmd and it's
  *          @b element and copies data to @b element_data buffer.
  *
  * @return @li @c GNSS8_OK - Read some data.
@@ -100,18 +100,18 @@ static err_t gnss8_cmd_parser ( char *cmd );
  */
 static err_t gnss8_element_parser ( char *cmd, uint8_t element, char *element_data );
 
-void application_init ( void ) 
+void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
     gnss8_cfg_t gnss8_cfg;  /**< Click config object. */
 
-    /** 
+    /**
      * Logger initialization.
      * Default baud rate: 115200
      * Default log level: LOG_LEVEL_DEBUG
-     * @note If USB_UART_RX and USB_UART_TX 
-     * are defined as HAL_PIN_NC, you will 
-     * need to define them manually for log to work. 
+     * @note If USB_UART_RX and USB_UART_TX
+     * are defined as HAL_PIN_NC, you will
+     * need to define them manually for log to work.
      * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
      */
     LOG_MAP_USB_UART( log_cfg );
@@ -122,7 +122,7 @@ void application_init ( void )
     gnss8_cfg_setup( &gnss8_cfg );
     GNSS8_MAP_MIKROBUS( gnss8_cfg, MIKROBUS_1 );
     err_t init_flag  = gnss8_init( &gnss8, &gnss8_cfg );
-    if ( UART_ERROR == init_flag ) 
+    if ( UART_ERROR == init_flag )
     {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
@@ -134,35 +134,35 @@ void application_init ( void )
     log_info( &logger, " Application Task " );
 }
 
-void application_task ( void ) 
+void application_task ( void )
 {
     gnss8_process();
-    
-    err_t error_flag = gnss8_element_parser( RSP_GNGGA, RSP_GNGGA_LATITUDE_ELEMENT, 
+
+    err_t error_flag = gnss8_element_parser( RSP_GNGGA, RSP_GNGGA_LATITUDE_ELEMENT,
                                              latitude_data );
-    
-    error_flag |= gnss8_element_parser(  RSP_GNGGA, RSP_GNGGA_LONGITUDE_ELEMENT, 
+
+    error_flag |= gnss8_element_parser(  RSP_GNGGA, RSP_GNGGA_LONGITUDE_ELEMENT,
                                          longitude_data );
-    
-    error_flag |= gnss8_element_parser(  RSP_GNGGA, RSP_GNGGA_ALTITUDE_ELEMENT, 
+
+    error_flag |= gnss8_element_parser(  RSP_GNGGA, RSP_GNGGA_ALTITUDE_ELEMENT,
                                          altitude_data );
-    
-    
+
+
     if ( error_flag == GNSS8_OK )
     {
         if ( last_error_flag != GNSS8_OK )
         {
             log_printf( &logger, "\r\n" );
         }
-        log_printf( &logger, ">Latitude:\r\n - deg: %.2s \r\n - min: %s\r\n", 
+        log_printf( &logger, ">Latitude:\r\n - deg: %.2s \r\n - min: %s\r\n",
                     latitude_data, &latitude_data[ 2 ] );
-        
-        log_printf( &logger, ">Longitude:\r\n - deg: %.3s \r\n - min: %s\r\n", 
+
+        log_printf( &logger, ">Longitude:\r\n - deg: %.3s \r\n - min: %s\r\n",
                     longitude_data, &longitude_data[ 3 ] );
-        
-        log_printf( &logger, ">Altitude:\r\n - %sm\r\n", 
+
+        log_printf( &logger, ">Altitude:\r\n - %sm\r\n",
                     altitude_data );
-        
+
         log_printf( &logger, "----------------------------------------\r\n" );
     }
     else if ( error_flag < GNSS8_ERROR )
@@ -173,7 +173,7 @@ void application_task ( void )
         }
         log_printf( &logger, "." );
     }
-    
+
     if ( error_flag != GNSS8_ERROR )
     {
         last_error_flag = error_flag;
@@ -181,24 +181,24 @@ void application_task ( void )
     }
 }
 
-void main ( void ) 
+void main ( void )
 {
     application_init( );
 
-    for ( ; ; ) 
+    for ( ; ; )
     {
         application_task( );
     }
 }
 
-static void gnss8_clear_app_buf ( void ) 
+static void gnss8_clear_app_buf ( void )
 {
     memset( app_buf, 0, app_buf_len );
     app_buf_len = 0;
     app_buf_cnt = 0;
 }
 
-static err_t gnss8_process ( void ) 
+static err_t gnss8_process ( void )
 {
     int32_t rx_size;
     char rx_buff[ PROCESS_BUFFER_SIZE ] = { 0 };
@@ -240,23 +240,23 @@ static err_t gnss8_process ( void )
 static err_t gnss8_cmd_parser ( char *cmd )
 {
     err_t ret_flag = GNSS8_OK;
-    
+
     if ( strstr( app_buf, cmd ) != GNSS8_OK )
     {
-        char * __generic gngga_ptr;
-        
+        char * __generic_ptr gngga_ptr;
+
         gngga_ptr = strstr( app_buf, cmd );
-        
+
         while ( strchr( gngga_ptr, RSP_START ) == GNSS8_OK )
         {
             gnss8_process();
         }
-        
+
         for ( ; ; )
         {
             log_printf( &logger, "%c", *gngga_ptr );
             gngga_ptr++;
-            
+
             if ( ( *gngga_ptr == RSP_START ) )
             {
                 break;
@@ -267,29 +267,29 @@ static err_t gnss8_cmd_parser ( char *cmd )
     {
         ret_flag = GNSS8_ERROR;
     }
-    
+
     return ret_flag;
 }
 
 static err_t gnss8_element_parser ( char *cmd, uint8_t element, char *element_data )
 {
     err_t ret_flag = 0;
-    
-    
+
+
     if ( strstr( app_buf, cmd ) != 0 )
     {
         uint8_t element_cnt = 0;
         char data_buf[ DATA_BUFFER_SIZE ] = { 0 };
         uint8_t data_cnt = 0;
-        char * __generic gngga_ptr;
-        
+        char * __generic_ptr gngga_ptr;
+
         gngga_ptr = strstr( app_buf, cmd );
-        
+
         while ( strchr( gngga_ptr, RSP_START ) == GNSS8_OK )
         {
             gnss8_process();
         }
-        
+
         for ( ; ; )
         {
             if ( ( *gngga_ptr == RSP_START ) )
@@ -297,7 +297,7 @@ static err_t gnss8_element_parser ( char *cmd, uint8_t element, char *element_da
                 ret_flag = GNSS8_ERROR_NO_DATA;
                 break;
             }
-            
+
             if ( *gngga_ptr == RSP_SEPARATOR )
             {
                 if (element_cnt == element)
@@ -309,22 +309,22 @@ static err_t gnss8_element_parser ( char *cmd, uint8_t element, char *element_da
                     strcpy( element_data, data_buf );
                     break;
                 }
-                
+
                 element_cnt++;
             }
-            
+
             if ( ( element == element_cnt ) && ( *gngga_ptr != RSP_SEPARATOR ) )
             {
                 data_buf[ data_cnt ] = *gngga_ptr;
                 data_cnt++;
-                
+
                 if ( data_cnt >= DATA_BUFFER_SIZE )
                 {
                     ret_flag = GNSS8_ERROR_OVERFLOW;
                     break;
                 }
             }
-            
+
             gngga_ptr++;
         }
     }
@@ -332,7 +332,7 @@ static err_t gnss8_element_parser ( char *cmd, uint8_t element, char *element_da
     {
         ret_flag = GNSS8_ERROR;
     }
-    
+
     return ret_flag;
 }
 

@@ -2,7 +2,7 @@
     "name": "ECG 2 Click",
     "description": "ECG 2 click contains ADS1194 16-bit delta-sigma analog-to-digital converters from Texas Instruments, a built-in programmable gain amplifier (PGA), an internal reference, and an onboard oscillator.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","ADS1194"],
     "category" : ["Biometrics"]
 }

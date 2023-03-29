@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Power Switch",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Power management > Power Switch",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Current Limit click",
     "example_list": [
@@ -26,14 +25,19 @@
     "name": "mikroe.click.currentlimit",
     "product_link": "https://www.mikroe.com/current-limit-click",
     "short_description": "Current Limit Click is a compact add-on board that contains a low-voltage, P-channel MOSFET power switch intended for high-side load switching applications. This board features the MAX890L, a low-resistance power switch with the adjustable, accurate current limit system, and thermal shutdown from Maxim Integrated.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "related_projects":[
+    "related_projects": [
         3854
     ],
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.4"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.11",
+    "cmake": true,
+    "alias": "Click.CurrentLimit",
+    "subdir_name": "lib_currentlimit"
 }
+
+
 
 
 
