@@ -1,0 +1,8 @@
+{
+    "name": "Accel 29 Click",
+    "description": "Accel 29 Click is a compact add-on board that contains an acceleration sensor. This board features the ADXL314, a three-axis ±200g accelerometer from Analog Devices. The ADXL314 offers 16-bit digital output data with a configurable host interface that supports SPI and I2C serial communication. An integrated memory management system with a 32-level FIFO buffer can store data to minimize host processor activity and lower overall system power consumption. Low power modes enable intelligent motion-based power management with threshold sensing and active acceleration measurement at low power dissipation.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "hw" : ["click","ADXL314WBCPZ"],
+    "category" : ["Click Boards > Sensors > Motion"]
+}
