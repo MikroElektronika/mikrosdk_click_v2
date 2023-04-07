@@ -1,0 +1,8 @@
+{
+    "name": "Ambient 22 Click",
+    "description": "Ambient 22 Click is a compact add-on board that measures the intensity of visible light. This board features the OPT3005, a single-chip lux meter from Texas Instruments that transforms light intensity to a digital signal output that can be directly communicated via an I2C interface. The sensor's spectral response tightly matches the human eye's photopic response along with extreme rejection to 850nm and 940nm infrared light over a wide angle of incidence. Measurements can be made from 20mlux up to 166klux without manually selecting full-scale ranges using the built-in, full-scale setting feature.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "hw" : ["click","OPT3005DTSR"],
+    "category" : ["Click Boards > Sensors > Optical"]
+}

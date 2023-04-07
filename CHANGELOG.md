@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230331](#20230331)**
 + **[20230324](#20230324)**
 + **[20220722](#20220722)**
 + **[20220610](#20220610)**
@@ -41,12 +42,27 @@
 ---
 ---
 
+## `20230331`
+
+*Following click boards have been added:*
+
++ `Accel 29`
++ `Ambient 22`
++ `DC Motor 24`
++ `RS485 Isolator 3`
+
+**[BACK TO TOP](#changelog)**
+
+---
+
 ## `20230324`
 
 * Added click boards released since the last sync.
 * All existing MEMAKE packages that have their CMAKE version published in NECTO are replaced.
 
 **[BACK TO TOP](#changelog)**
+
+---
 
 ## `20220722`
 
