@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230407](#20230407)**
 + **[20230331](#20230331)**
 + **[20230324](#20230324)**
 + **[20220722](#20220722)**
@@ -40,6 +41,20 @@
 
 ---
 ---
+---
+
+## `20230407`
+
+*Following click boards have been added:*
+
++ `ADC 21`
++ `H-Bridge 11`
++ `LED Ring 2`
++ `Step Down 5`
++ `TempHum 24`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230331`
