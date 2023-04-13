@@ -1,0 +1,8 @@
+{
+    "name": "AudioAmp 9 Click",
+    "description": "AudioAMP 9 Click is a compact add-on board reproducing input audio signals with desired volume and power levels at sound-producing output elements. This board features the PAM8124, a 10W efficient, Class-D audio power amplifier from Diodes Incorporated for driving stereo speakers in a single-ended configuration. ",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "hw" : ["click","PAM8124RHR"],
+    "category" : ["Click Boards > Audio & voice > Amplifier"]
+}

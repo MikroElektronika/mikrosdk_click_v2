@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230413](#20230413)**
 + **[20230407](#20230407)**
 + **[20230331](#20230331)**
 + **[20230324](#20230324)**
@@ -41,6 +42,23 @@
 
 ---
 ---
+---
+
+## `20230413`
+
+*Following click boards have been added:*
+
++ `GNSS 13`
++ `AudioAMP 9`
++ `Cap Touch 6`
+
+*Following click boards have been removed:*
+
++ `Headphone AMP 2`
++ `WiFi BLE`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230407`

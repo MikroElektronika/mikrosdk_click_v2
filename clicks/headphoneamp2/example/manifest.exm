@@ -1,8 +1,0 @@
-{
-    "name": "Headphone Amp 2 Click",
-    "description": "Headphone AMP 2 Click is a compact add-on board that contains a headphone amplifier. This board features the TS2007FC, a class-D audio power amplifier from STMicroelectronics. The TS2007FC can drive up to 2.3W into 4Ω load at 5V, achieving better efficiency than typical class-AB audio power amplifiers. It can switch between two gain settings, either 6 or 12dB, through one mikroBUS™ pin, has the pop and click reduction circuitry, and a Standby mode for reduced power consumption. Besides, it is equipped with protection features, allowing a reliable operation.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
-    "hw" : ["click","TS2007"],
-    "category" : ["Click Boards > Audio & voice > Signal processing"]
-}

@@ -1,0 +1,37 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Wireless connectivity > GPS/GNSS",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "GNSS 13 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.gnss13",
+    "product_link": "https://www.mikroe.com/gnss-13-click",
+    "short_description": "GNSS 13 Click is a compact add-on board that provides positioning, navigation, and timing services. This board features the LG77LICMD, a global-region standard-precision GNSS module from Quectel Wireless Solutions. This module utilizes concurrent reception of up to three GNSS systems (GPS, GLONASS (or BeiDou), and Galileo), maximizing position availability, especially under challenging conditions such as deep urban canyons. By combining EASY™ (Embedded Assist System), an advanced AGNSS feature, with GLP (GNSS Low Power), a low-power mode, the LG77LICMD module achieves high performance, low power consumption, and fully meets industrial standards. It also has a configurable host interface, anti-jamming technology, and a multi-tone active interference canceller.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.GNSS13",
+    "subdir_name": "lib_gnss13"
+}
+
+
