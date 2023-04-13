@@ -1,0 +1,8 @@
+{
+    "name": "Cap Touch 6 Click",
+    "description": "Cap Touch 6 Click is a compact add-on board that easily integrates projected capacitive touch into users' applications. This board features the IQS227D, a single-channel capacitive controller with an internal voltage regular and reference capacitor from Azoteq. Besides the capacitive sensing area, this board also has output pins for proximity and touch events with their corresponding LED indicators. The IQS227D automatically tracks slow varying environmental changes via various filters.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "hw" : ["click","IQS227D"],
+    "category" : ["Click Boards > HMI > Capacitive"]
+}

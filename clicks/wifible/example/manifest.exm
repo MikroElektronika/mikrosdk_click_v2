@@ -1,8 +1,0 @@
-{
-    "name": "WiFi BLE Click",
-    "description": "WiFi BLE click is a Click board™ which provides WiFi and BT/BLE connectivity for any embedded application.",
-    "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
-    "hw" : ["click","ESP32-WROOM-32"],
-    "category" : ["WiFi+BLE"] 
-}
