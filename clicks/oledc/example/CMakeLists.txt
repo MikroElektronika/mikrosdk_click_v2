@@ -11,7 +11,6 @@ endif()
 
 add_executable(example_oledc
         main.c
-        oledc_font.h    oledc_image.h
 )
 
 

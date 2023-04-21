@@ -1,0 +1,8 @@
+{
+    "name": "Temp-Log 7 Click",
+    "description": "Temp-Log 7 Click is a compact add-on board used to measure and record the temperature of an environment over time. This board features the TMP1826, a high-accuracy, 1-Wire® compatible digital output temperature sensor from Texas Instruments with integrated 2-kbit EEPROM. It supports a wide operating temperature range from –20°C to +85°C with its high accuracy of ±0.1°C (typical)/±0.3°C (maximum) and comes with a factory-programmed 64-bit unique identification number for addressing and NIST traceability. Besides a programmable alarm function that outputs an interrupt signal to the MCU when a specific temperature event occurs, it also has three digital I/O pins configurable for general purposes or to identify the device's position on a shared bus.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "hw" : ["click","TMP1826DGKR"],
+    "category" : ["Click Boards > Sensors > Temperature & humidity"]
+}
