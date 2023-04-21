@@ -12,6 +12,8 @@ endif()
 add_library(lib_oledc STATIC
         src/oledc.c
         include/oledc.h
+        include/oledc_font.h
+        include/oledc_image.h
 )
 add_library(Click.OledC  ALIAS lib_oledc)
 

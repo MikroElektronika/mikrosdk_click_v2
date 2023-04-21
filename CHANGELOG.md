@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230421](#20230421)**
 + **[20230413](#20230413)**
 + **[20230407](#20230407)**
 + **[20230331](#20230331)**
@@ -42,6 +43,24 @@
 
 ---
 ---
+---
+
+## `20230421`
+
+*Following click boards have been added:*
+
++ `6DOF IMU 20`
++ `Barometer 10`
++ `Expand 15`
++ `EEPROM 9`
++ `Temp-Log 7`
+
+*Following click boards have been updated:*
+
++ `OLED C`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230413`

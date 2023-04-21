@@ -1,0 +1,8 @@
+{
+    "name": "EEPROM 9 Click",
+    "description": "EEPROM 9 Click is a compact add-on board with a highly reliable nonvolatile memory solution. This board features the M95P32-I, the 32Mbit electrically erasable programmable memory with enhanced hardware write protection from STMicroelectronics. ",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "hw" : ["click","M95P32-IXMNT/E"],
+    "category" : ["Click Boards > Storage > EEPROM"]
+}

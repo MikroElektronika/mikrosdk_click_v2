@@ -105,7 +105,7 @@ void application_task ( void )
 
 
     // Image demo 
-    oledc_image( &oledc, me_logo_bmp, 0, 0 );
+    oledc_image( &oledc, mikroe_with_slogan96x96, 0, 0 );
     Delay_ms( 2000 );
 }
 
