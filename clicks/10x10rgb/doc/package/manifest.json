@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC32",
-    "category": "Optical",
+    "architecture": "ARM|PIC32|RISC-V",
+    "category": "Click Boards > Display & LED > LED matrix",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "10x10 RGB click",
     "example_list": [
@@ -26,24 +25,15 @@
     "name": "mikroe.click.c10x10rgb",
     "product_link": "https://www.mikroe.com/10x10-rgb-click",
     "short_description": "10x10 RGB Click is a matrix of 100 intelligent RGB elements, forming a 10x10 display screen. These LED elements feature internal logic, which allows them to communicate directly with the MCU.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "related_projects": [3729],
-    "version": "2.0.1.21"
+    "related_projects": [
+        3729
+    ],
+    "version": "2.1.1.22",
+    "cmake": true,
+    "alias": "Click.10x10RGB",
+    "subdir_name": "lib_c10x10rgb"
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

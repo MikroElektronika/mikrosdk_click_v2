@@ -10,14 +10,14 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules.
+ * This function initializes and configures the click board.
  * 
  * ## Application Task  
- * This function first displays 3 bytes { R, G, B }, the string "Mikroe", the company logo and
+ * This function first displays 3 chars { R, G, B }, the string "MIKROE", the company logo and
  * a rainbow in the end.
  * 
  * @note
- * Timeing sequence chart:
+ * Timing sequence chart:
  *          -----------|     T0L
  *              T0H    |______________
  * Logic 0: 
@@ -38,54 +38,79 @@
 #include "board.h"
 #include "c10x10rgb.h"
 
-#ifdef __MIKROC_AI_FOR_ARM__
-
-#ifdef __STM32__/*< STM32F407ZG*/
-
-#define D_S    2
-#define D_L    4
-
-#define DELAY_SHORT \
-    Delay_Cyc( D_S );
-    
-#define DELAY_LONG \
-    Delay_Cyc( D_L );
-    
-#elif __KINETIS__/*< MK64FN1M0VDC12*/
-    
-#define D_L    2
-    
-#define DELAY_SHORT 
-    
-#define DELAY_LONG \
-    Delay_Cyc( D_L );
-    
-#endif
-
-#elif __MIKROC_AI_FOR_PIC32__ /*< PIC32MZ2048EFH144 */
-
-#define D_L    4
-    
-#define DELAY_SHORT \
-    asm nop
-    
-#define DELAY_LONG \
-    Delay_Cyc( D_L );
-#endif
-    
-/*< You need to define long and short delay */
-#if !defined(DELAY_SHORT) && !defined(DELAY_LONG)
-
-#define DELAY_SHORT     
-#define DELAY_LONG 
-
+// Delay adjustment for specific systems.
+#ifdef STM32F407ZG
+    /*< Adjusted for STM32F407ZG */
+    #define DELAY_TOH Delay_Cyc( 3 );   // ~280ns
+    #define DELAY_TOL Delay_Cyc( 7 );   // ~820ns
+    #define DELAY_T1H Delay_Cyc( 12 );  // ~820ns
+    #define DELAY_T1L Delay_Cyc( 8 );   // ~840ns
+#elif MK64FN1M0VDC12
+    /*< Adjusted for MK64FN1M0VDC12 */
+    #define DELAY_TOH \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop;                // ~280ns
+    #define DELAY_TOL Delay_Cyc( 2 );   // ~900ns
+    #define DELAY_T1H Delay_Cyc( 7 );   // ~780ns
+    #define DELAY_T1L Delay_Cyc( 2 );   // ~760ns
+#elif TM4C129XNCZAD
+    /*< Adjusted for TM4C129XNCZAD */
+    #define DELAY_TOH                   // ~320ns
+    #define DELAY_TOL asm nop;          // ~800ns
+    #define DELAY_T1H Delay_Cyc( 6 );   // ~800ns
+    #define DELAY_T1L                   // ~800ns
+#elif GD32VF103VBT6
+    /*< Adjusted for GD32VF103VBT6 */
+    #define DELAY_TOH \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop");             // ~300ns
+    #define DELAY_TOL \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop");             // ~700ns
+    #define DELAY_T1H Delay_Cyc( 3 );   // ~800ns
+    #define DELAY_T1L \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop");             // ~700ns
+#elif PIC32MX795F512L
+    /*< Adjusted for PIC32MX795F512L */
+    #define DELAY_TOH                   // ~300ns
+    #define DELAY_TOL                   // ~940ns
+    #define DELAY_T1H Delay_Cyc( 3 );   // ~780ns
+    #define DELAY_T1L                   // ~940ns
+#else
+    #error "Logic delays are not defined for the selected system"
 #endif
 
 // ------------------------------------------------------------------ VARIABLES
 
 static c10x10rgb_t c10x10rgb;
 
-static uint32_t MIKROE_IMAGE[ 100 ] =
+const uint32_t MIKROE_IMAGE[ 100 ] =
 {
     0x000000,0x000000,0x000000,0x000000,0x000000,0x000000,0x000000,0x000000,0x000000,0x000000,
     0x000000,0x000000,0x000000,0x000000,0x000000,0x000000,0x000000,0x000000,0x000000,0x000000,
@@ -126,18 +151,18 @@ static uint16_t rainbow_speed_ms = 20;
 
 static void logic_zero ( void )
 {
-    digital_out_write( &c10x10rgb.di_pin, C10X10RGB_CTRL_PIN_HIGH );
-    DELAY_SHORT;
-    digital_out_write( &c10x10rgb.di_pin, C10X10RGB_CTRL_PIN_LOW );
-    DELAY_LONG;
+    hal_ll_gpio_set_pin_output( &c10x10rgb.di_pin.pin );
+    DELAY_TOH;
+    hal_ll_gpio_clear_pin_output( &c10x10rgb.di_pin.pin );
+    DELAY_TOL;
 }
 
 static void logic_one ( void )
 {
-    digital_out_write( &c10x10rgb.di_pin, C10X10RGB_CTRL_PIN_HIGH );
-    DELAY_LONG;
-    digital_out_write( &c10x10rgb.di_pin, C10X10RGB_CTRL_PIN_LOW );
-    DELAY_LONG;
+    hal_ll_gpio_set_pin_output( &c10x10rgb.di_pin.pin );
+    DELAY_T1H;
+    hal_ll_gpio_clear_pin_output( &c10x10rgb.di_pin.pin );
+    DELAY_T1L;
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -147,9 +172,8 @@ void application_init ( void )
     c10x10rgb_cfg_t cfg;
 
     //  Click initialization.
-
     c10x10rgb_cfg_setup( &cfg, &logic_zero, &logic_one );
-    c10X10RGB_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C10X10RGB_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c10x10rgb_init( &c10x10rgb, &cfg );
 
     c10x10rgb_fill_screen( &c10x10rgb, C10X10RGB_COLOR_OFF );

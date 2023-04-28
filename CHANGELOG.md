@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230428](#20230428)**
 + **[20230421](#20230421)**
 + **[20230413](#20230413)**
 + **[20230407](#20230407)**
@@ -43,6 +44,23 @@
 
 ---
 ---
+---
+
+## `20230428`
+
+*Following click boards have been added:*
+
++ `HW Monitor`
++ `USB-C Power`
++ `LDO`
++ `DC Motor 25`
+
+*Following click boards have been updated:*
+
++ `10x10 RGB`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230421`
