@@ -1,7 +1,0 @@
-type: subdirs
-project: 10x10RGB
-
-subdirs: {
-    lib
-    example
-}
