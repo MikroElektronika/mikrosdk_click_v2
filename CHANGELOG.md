@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230505](#20230505)**
 + **[20230428](#20230428)**
 + **[20230421](#20230421)**
 + **[20230413](#20230413)**
@@ -44,6 +45,32 @@
 
 ---
 ---
+---
+
+## `20230505`
+
+*Following click boards have been added:*
+
++ `LED Driver 17`
++ `RS485 7`
++ `AWS IoT`
++ `Magnetic Rotary 5`
+
+*Following click boards have been updated:*
+
++ `3D Hall 2`
++ `3G SARA`
++ `3G-EA`
++ `3G-AA`
++ `4x4 RGB`
++ `6DOF IMU 17`
++ `7-SEG RGB`
++ `AC Current`
++ `Accel 15`
++ `Accel 16`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230428`

@@ -69,7 +69,7 @@ err_t c6dofimu17_get_temperature ( c6dofimu17_t *ctx, float *temperature );
 
 ## Example Description
 
-> his library contains API for 6DOF IMU 17 Click driver.
+> This library contains API for 6DOF IMU 17 Click driver.
 > The library initializes and defines the I2C or SPI bus drivers 
 > to write and read data from registers. 
 > The library also includes a function for reading 
@@ -146,7 +146,7 @@ void application_init ( void )
 > Measures and displays acceleration and gyroscope data for X-axis, Y-axis, and Z-axis
 > and the temperature in degrees Celsius. 
 > Results are being sent to the USART terminal where the user can track their changes. 
-> This task repeats every 1 sec.
+> This task repeats every 100 ms.
 
 ```c
 
@@ -155,18 +155,18 @@ void application_task ( void )
     c6dofimu17_axis_t accel_data;
     c6dofimu17_axis_t gyro_data;
     float temperature;
-    
-    c6dofimu17_get_accel_data( &c6dofimu17, &accel_data );
-    c6dofimu17_get_gyro_data( &c6dofimu17, &gyro_data );
-    c6dofimu17_get_temperature( &c6dofimu17, &temperature );
-
-    log_printf( &logger, "\t Accel X: %d\t|\tGyro X: %d\r\n", accel_data.x, gyro_data.x );
-    log_printf( &logger, "\t Accel Y: %d\t|\tGyro Y: %d\r\n", accel_data.y, gyro_data.y );
-    log_printf( &logger, "\t Accel Z: %d\t|\tGyro Z: %d\r\n", accel_data.z, gyro_data.z );
-    log_printf( &logger, "\t- - - - - - - - - -  - - - - - - - - -\r\n" );
-    log_printf( &logger, "\t\t Temperature: %.2f C\r\n", temperature );
-    log_printf( &logger, "\t--------------------------------------\r\n" );
-    Delay_ms( 1000 );
+    if ( ( C6DOFIMU17_OK == c6dofimu17_get_accel_data( &c6dofimu17, &accel_data ) ) &&  
+         ( C6DOFIMU17_OK == c6dofimu17_get_gyro_data( &c6dofimu17, &gyro_data ) ) &&  
+         ( C6DOFIMU17_OK == c6dofimu17_get_temperature( &c6dofimu17, &temperature ) ) )
+    {
+        log_printf( &logger, "\t Accel X: %d\t|\tGyro X: %d\r\n", accel_data.x, gyro_data.x );
+        log_printf( &logger, "\t Accel Y: %d\t|\tGyro Y: %d\r\n", accel_data.y, gyro_data.y );
+        log_printf( &logger, "\t Accel Z: %d\t|\tGyro Z: %d\r\n", accel_data.z, gyro_data.z );
+        log_printf( &logger, "\t- - - - - - - - - -  - - - - - - - - -\r\n" );
+        log_printf( &logger, "\t\t Temperature: %.2f C\r\n", temperature );
+        log_printf( &logger, "\t--------------------------------------\r\n" );
+    }
+    Delay_ms( 100 );
 }
 
 ```

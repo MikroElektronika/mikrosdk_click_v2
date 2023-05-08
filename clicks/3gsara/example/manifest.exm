@@ -2,7 +2,7 @@
     "name": "3G SARA Click",
     "description": "3G SARA click is a versatile cellular network communication solution, featuring the compact 3.75G UMTS/HSPA SARA U-201 modem from u-blox.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
     "hw" : ["click","SARA U-201"],
-    "category" : ["GSM/LTE,3G UMTS"] 
+    "category" : ["Click Boards > Wireless connectivity > GSM/LTE"] 
 }

@@ -3,7 +3,7 @@
 ---
 # 4x4 RGB click
 
-4x4 RGB click is a matrix of 16 intelligent RGB elements, forming a 4x4 display screen. 
+4x4 RGB click is a matrix of 16 intelligent RGB elements, forming a 4x4 display screen.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/4x4rgb_click.png" height=300px>
@@ -36,23 +36,31 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void c4x4rgb_cfg_setup ( c4x4rgb_cfg_t *cfg ); 
- 
-- Initialization function.
-> C4X4RGB_RETVAL c4x4rgb_init ( c4x4rgb_t *ctx, c4x4rgb_cfg_t *cfg );
+- `c4x4rgb_cfg_setup` This function initializes click configuration structure to init state.
+```c
+void c4x4rgb_cfg_setup ( c4x4rgb_cfg_t *cfg, drv_logic_t logic_zero, drv_logic_t logic_one, uint8_t select_ctrl_pin );
+```
+
+- `c4x4rgb_init` This function initializes all necessary pins and peripherals used for this click.
+```c
+err_t c4x4rgb_init ( c4x4rgb_t *ctx, c4x4rgb_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Function for setting color color of one diode.
-> err_t c4x4rgb_set_diode ( c4x4rgb_t *ctx, uint32_t diode_num, uint32_t diode_color );
+- `c4x4rgb_set_diode` This function allows to set color of one diode.
+```c
+err_t c4x4rgb_set_diode ( c4x4rgb_t *ctx, uint32_t diode_num, uint32_t diode_color );
+```
  
-- Function for filling color of ever diode.
-> void c4x4rgb_fill_screen ( c4x4rgb_t *ctx, uint32_t fill_color, uint16_t fill_delay ); 
+- `c4x4rgb_fill_screen` This function sets every diode on selected color.
+```c
+void c4x4rgb_fill_screen ( c4x4rgb_t *ctx, uint32_t fill_color );
+```
 
 ## Examples Description
 
-> This application is used for powering 4x4 RGB LED matrices.
+> This application is used for powering 4x4 RGB LED matrix.
 
 **The demo application is composed of two sections :**
 
@@ -71,9 +79,8 @@ void application_init ( void )
     C4X4RGB_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c4x4rgb_init( &c4x4rgb, &cfg );
     
-    c4x4rgb_fill_screen( &c4x4rgb, C4X4RGB_COLOR_WHITE, 5 );
+    c4x4rgb_fill_screen( &c4x4rgb, C4X4RGB_COLOR_WHITE );
     Delay_ms( 100 ); 
-    
     
     c4x4rgb_color_mash();
     Delay_ms( 2000 );
@@ -111,7 +118,7 @@ void application_task ( void )
     c4x4rgb_snake_return( C4X4RGB_COLOR_PURPLE );
     Delay_ms( 1000 ); 
     
-    c4x4rgb_fill_screen( &c4x4rgb, C4X4RGB_COLOR_WHITE, 50 );
+    c4x4rgb_fill_screen( &c4x4rgb, C4X4RGB_COLOR_WHITE );
     Delay_ms( 100 ); 
 }
 

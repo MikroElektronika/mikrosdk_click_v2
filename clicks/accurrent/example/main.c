@@ -49,7 +49,6 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     accurrent_cfg_setup( &cfg );
     ACCURRENT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     accurrent_init( &accurrent, &cfg );
@@ -57,8 +56,7 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    float ac_current;
-
+    float ac_current = 0;
     ac_current = accurrent_get_ma( &accurrent );
     log_printf( &logger, "Current value: %.3f mA\r\n", ac_current );
     Delay_ms( 1000 );

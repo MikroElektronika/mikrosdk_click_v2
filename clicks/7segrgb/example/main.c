@@ -16,7 +16,7 @@
  * This is an example which demonstrates the use of 7-SEG RGB Click board.
  * This simple example shows all ten digits in different colors on 7-SEG RGB click.
  * 
- * *note:* 
+ * @note 
  * <pre>
  * Additional Functions :
  * void logic_one ( )  - Generic logic one function.
@@ -30,18 +30,18 @@
  *     4|   |2
  *      |_3_|.7
  * 
- * Timeing sequence chart:
+ * Timing sequence chart:
  *          -----------|     T0L
  *              T0H    |______________
  * Logic 0: 
- *          T0H ~ 250-550ns
- *          T0L ~ 700-1000ns
+ *          T0H: 400ns (+/-150ns)
+ *          T0L: 850ns (+/-150ns)
  * 
  *          -----------|     T1L
  *              T1H    |______________
  * Logic 1: 
- *          T1H ~ 700-1000ns
- *          T1L ~ 250-550ns
+ *          T1H: 850ns (+/-150ns)
+ *          T1L: 400ns (+/-150ns)
  * 
  * \author MikroE Team
  *
@@ -49,60 +49,131 @@
 // ------------------------------------------------------------------- INCLUDES
 
 #include "board.h"
-#include "log.h"
 #include "c7segrgb.h"
 
-#ifdef __MIKROC_AI_FOR_ARM__
-
-#ifdef __STM32__/*< STM32F407ZG*/
-
-#define D_S    3
-#define D_L    9
-
-#define DELAY_SHORT \
-    Delay_Cyc( D_S );
-    
-#define DELAY_LONG \
-    Delay_Cyc( D_L );
-    
-#elif __KINETIS__/*< MKV58F1M0VLQ24*/
-    
-#define D_S    2
-#define D_L    11
-
-#define DELAY_SHORT \
-    Delay_Cyc( D_S );
-    
-#define DELAY_LONG \
-    Delay_Cyc( D_L );
-    
+// Delay adjustment for specific systems.
+#ifdef STM32F407ZG
+    /*< Adjusted for STM32F407ZG */
+    #define DELAY_TOH Delay_Cyc( 5 );   // ~400ns
+    #define DELAY_TOL Delay_Cyc( 8 );   // ~860ns
+    #define DELAY_T1H Delay_Cyc( 13 );  // ~880ns
+    #define DELAY_T1L                   // ~420ns
+#elif MK64FN1M0VDC12
+    /*< Adjusted for MK64FN1M0VDC12 */
+    #define DELAY_TOH \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop;                // ~400ns
+    #define DELAY_TOL Delay_Cyc( 4 );   // ~880ns
+    #define DELAY_T1H Delay_Cyc( 8 );   // ~840ns
+    #define DELAY_T1L                   // ~500ns
+#elif TM4C129XNCZAD
+    /*< Adjusted for TM4C129XNCZAD */
+    #define DELAY_TOH \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop;                // ~400ns
+    #define DELAY_TOL                   // ~880ns
+    #define DELAY_T1H Delay_Cyc( 6 );   // ~840ns
+    #define DELAY_T1L                   // ~880ns
+#elif GD32VF103VBT6
+    /*< Adjusted for GD32VF103VBT6 */
+    #define DELAY_TOH \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop");             // ~400ns
+    #define DELAY_TOL \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop");             // ~840ns
+    #define DELAY_T1H Delay_Cyc( 4 );   // ~880ns
+    #define DELAY_T1L                   // ~620ns
+#elif PIC32MX795F512L
+    /*< Adjusted for PIC32MX795F512L */
+    #define DELAY_TOH \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop;                // ~400ns
+    #define DELAY_TOL                   // ~1020ns
+    #define DELAY_T1H Delay_Cyc( 4 );   // ~880ns
+    #define DELAY_T1L                   // ~1020ns
+#else
+    #error "Logic delays are not defined for the selected system"
 #endif
-
-#elif __MIKROC_AI_FOR_PIC32__ /*< PIC32MZ2048EFH144 */
-
-#define D_L    4
-    
-#define DELAY_SHORT \
-    asm nop
-    
-#define DELAY_LONG \
-    Delay_Cyc( D_L );
-#endif
-    
-/*< You need to define long and short delay */
-#if !defined(DELAY_SHORT) && !defined(DELAY_LONG)
-
-#define DELAY_SHORT     
-#define DELAY_LONG 
-
-#endif
-
-
 
 // ------------------------------------------------------------------ VARIABLES
 
 static c7segrgb_t c7segrgb;
-static log_t logger;
 
 static uint8_t CHARACTER_TABLE[ 10 ] = 
 {
@@ -118,60 +189,43 @@ static uint8_t CHARACTER_TABLE[ 10 ] =
     0x6F  // '9'
 };
                                        
-static c7segrgb_segment_t segments_data[ 8 ] = {
-    { true , 40, 0, 0},
-    { true , 0, 40, 0},
-    { true , 0, 0, 40},
-    { true , 10, 40, 40},
-    { true , 40, 10, 40},
-    { true , 40, 40, 10},
-    { true , 10, 20, 30},
-    { true , 30, 20, 10}
+static c7segrgb_segment_t segments_data[ 8 ] = 
+{
+    { true, 40, 0, 0 },
+    { true, 0, 40, 0 },
+    { true, 0, 0, 40 },
+    { true, 10, 40, 40 },
+    { true, 40, 10, 40 },
+    { true, 40, 40, 10 },
+    { true, 10, 20, 30 },
+    { true, 30, 20, 10 }
 };
 
 // ------------------------------------------------------- ADDITIONAL FUNCTIONS
 
 void logic_one ( void )
 {
-    digital_out_high( &c7segrgb.pwm );
-    DELAY_LONG;
-    
-    digital_out_low( &c7segrgb.pwm);
-    DELAY_SHORT;
+    hal_ll_gpio_set_pin_output( &c7segrgb.pwm.pin );
+    DELAY_T1H;
+    hal_ll_gpio_clear_pin_output( &c7segrgb.pwm.pin );
+    DELAY_T1L;
 }
 
 void logic_zero ( void )
 {
-    digital_out_high( &c7segrgb.pwm );
-    DELAY_SHORT;
-    
-    digital_out_low( &c7segrgb.pwm);
-    DELAY_LONG;
+    hal_ll_gpio_set_pin_output( &c7segrgb.pwm.pin );
+    DELAY_TOH;
+    hal_ll_gpio_clear_pin_output( &c7segrgb.pwm.pin );
+    DELAY_TOL;
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
     c7segrgb_cfg_t cfg;
 
-    /** 
-     * Logger initialization.
-     * Default baud rate: 115200
-     * Default log level: LOG_LEVEL_DEBUG
-     * @note If USB_UART_RX and USB_UART_TX 
-     * are defined as HAL_PIN_NC, you will 
-     * need to define them manually for log to work. 
-     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
-     */
-    LOG_MAP_USB_UART( log_cfg );
-    log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
-
     //  Click initialization.
-
-
     c7segrgb_cfg_setup( &cfg );
     cfg.logic_one = &logic_one;
     cfg.logic_zero = &logic_zero;
@@ -188,12 +242,9 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    uint8_t cnt_i;
-    uint8_t cnt_j;
-    
-    for ( cnt_i = 0; cnt_i < 10; cnt_i++ )
+    for ( uint8_t cnt_i = 0; cnt_i < 10; cnt_i++ )
     {
-        for ( cnt_j = 10; cnt_j > 0; cnt_j-- )
+        for ( uint8_t cnt_j = 10; cnt_j > 0; cnt_j-- )
         {
             c7segrgb_set_num( &c7segrgb, CHARACTER_TABLE[ cnt_i ], 4 * cnt_i, 4 * cnt_j, cnt_i * cnt_j );
             Delay_ms( 100 );
@@ -232,8 +283,6 @@ void application_task ( void )
 
     c7segrgb_set_num( &c7segrgb, C7SEGRGB_NINE, 20, 10, 30 );
     Delay_ms( 1000 );
-     
-    c7segrgb_pwm_low( &c7segrgb );
 }
 
 void main ( void )

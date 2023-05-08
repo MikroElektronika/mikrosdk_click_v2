@@ -43,19 +43,19 @@ void accel15_cfg_setup ( accel15_cfg_t *cfg );
 
 - `accel15_init` Initialization function.
 ```c
-ACCEL15_RETVAL accel15_init ( accel15_t *ctx, accel15_cfg_t *cfg );
+err_t accel15_init ( accel15_t *ctx, accel15_cfg_t *cfg );
 ```
 
 - `accel15_default_cfg` Click Default Configuration function.
 ```c
-void accel15_default_cfg ( accel15_t *ctx );
+err_t accel15_default_cfg ( accel15_t *ctx );
 ```
 
 #### Example key functions :
 
 - `accel15_get_axis_data` Accel 15 get accelerometer axis function.
 ```c
-void accel15_get_axis_data ( accel15_t *ctx, accel15_axis_t *axis );
+err_t accel15_get_axis_data ( accel15_t *ctx, accel15_axis_t *axis );
 ```
 
 - `accel15_generic_write` Accel 15 data writing function.
@@ -85,7 +85,8 @@ err_t accel15_generic_read ( accel15_t *ctx, uint8_t reg, uint8_t *data_out, uin
 
 ```c
 
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;          /**< Logger config object. */
     accel15_cfg_t accel15_cfg;  /**< Click config object. */
 
@@ -105,30 +106,30 @@ void application_init ( void ) {
     log_printf( &logger, "-------------------------\r\n" );
 
     // Click initialization.
-
     accel15_cfg_setup( &accel15_cfg );
     ACCEL15_MAP_MIKROBUS( accel15_cfg, MIKROBUS_1 );
     err_t init_flag  = accel15_init( &accel15, &accel15_cfg );
-    if ( ( init_flag == I2C_MASTER_ERROR ) || ( init_flag == SPI_MASTER_ERROR ) ) {
+    if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) ) 
+    {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
     
-    if ( accel15_check_id( &accel15 ) == 0 ) {
-        log_printf( &logger, "     Communication OK    \r\n" );
-        log_printf( &logger, "-------------------------\r\n" );
-    }
-    else {
+    if ( ACCEL15_ERROR == accel15_check_id( &accel15 ) ) 
+    {
         log_printf( &logger, "   Communication ERROR   \r\n" );
         log_printf( &logger, "     Reset the device    \r\n" );
         log_printf( &logger, "-------------------------\r\n" );
-
         for ( ; ; );
     }
     
-    accel15_default_cfg ( &accel15 );
+    if ( ACCEL15_ERROR == accel15_default_cfg ( &accel15 ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
+
     log_printf( &logger, "     Application Task    \r\n" );
     log_printf( &logger, "-------------------------\r\n" );
     Delay_ms( 100 );
@@ -140,20 +141,21 @@ void application_init ( void ) {
 
 > Measures and displays acceleration data for X-axis, Y-axis, and Z-axis. 
 > Results are being sent to the USART terminal where the user can track their changes. 
-> This task repeats every 1 sec.
+> This task repeats at data output rate which is set to 12.5 Hz.
 
 ```c
 
-void application_task ( void ) {
-    if ( accel15_get_int_1( &accel15 ) == ACCEL15_DRDY ) {
-        accel15_get_axis_data( &accel15, &axis );
-
-        log_printf( &logger, "\tX : %5d \r\n", axis.x );
-        log_printf( &logger, "\tY : %5d \r\n", axis.y );
-        log_printf( &logger, "\tZ : %5d \r\n", axis.z );
-        log_printf( &logger, "-------------------------\r\n" );
-        
-        Delay_ms( 1000 );    
+void application_task ( void ) 
+{
+    if ( ACCEL15_DRDY == accel15_get_int_1( &accel15 ) ) 
+    {
+        if ( ACCEL15_OK == accel15_get_axis_data( &accel15, &axis ) )
+        {
+            log_printf( &logger, "\tX : %d \r\n", axis.x );
+            log_printf( &logger, "\tY : %d \r\n", axis.y );
+            log_printf( &logger, "\tZ : %d \r\n", axis.z );
+            log_printf( &logger, "-------------------------\r\n" );
+        }
     }
 }
 
