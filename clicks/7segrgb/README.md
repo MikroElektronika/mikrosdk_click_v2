@@ -36,23 +36,27 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void c7segrgb_cfg_setup ( c7segrgb_cfg_t *cfg ); 
- 
-- Initialization function.
-> C7SEGRGB_RETVAL c7segrgb_init ( c7segrgb_t *ctx, c7segrgb_cfg_t *cfg );
+- `c7segrgb_cfg_setup` This function initializes click configuration structure to init state.
+```c
+void c7segrgb_cfg_setup ( c7segrgb_cfg_t *cfg );
+```
 
-- Click Default Configuration function.
-> void c7segrgb_default_cfg ( c7segrgb_t *ctx );
-
+- `c7segrgb_init` This function initializes all necessary pins and peripherals used for this click.
+```c
+err_t c7segrgb_init ( c7segrgb_t *ctx, c7segrgb_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- The function sets character and it's color.
-> void c7segrgb_set_num ( c7segrgb_t *ctx, uint8_t  character, uint8_t green_brightness, uint8_t red_brightness, uint8_t blue_brightness );
+- `c7segrgb_set_num` The function sets character and its color.
+```c
+void c7segrgb_set_num ( c7segrgb_t *ctx, uint8_t character, uint8_t green_brightness, uint8_t red_brightness, uint8_t blue_brightness );
+```
  
- - The function sets the state and color of every segment from click board object segment array data.
-> void c7segrgb_set_seven_seg ( c7segrgb_t *ctx );
+- `c7segrgb_set_seven_seg` The function sets the state and color of every segment from click board object segment array data.
+```c
+void c7segrgb_set_seven_seg ( c7segrgb_t *ctx );
+```
 
 ## Examples Description
 
@@ -69,25 +73,9 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
     c7segrgb_cfg_t cfg;
 
-    /** 
-     * Logger initialization.
-     * Default baud rate: 115200
-     * Default log level: LOG_LEVEL_DEBUG
-     * @note If USB_UART_RX and USB_UART_TX 
-     * are defined as HAL_PIN_NC, you will 
-     * need to define them manually for log to work. 
-     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
-     */
-    LOG_MAP_USB_UART( log_cfg );
-    log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
-
     //  Click initialization.
-
-
     c7segrgb_cfg_setup( &cfg );
     cfg.logic_one = &logic_one;
     cfg.logic_zero = &logic_zero;
@@ -113,12 +101,9 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    uint8_t cnt_i;
-    uint8_t cnt_j;
-    
-    for ( cnt_i = 0; cnt_i < 10; cnt_i++ )
+    for ( uint8_t cnt_i = 0; cnt_i < 10; cnt_i++ )
     {
-        for ( cnt_j = 10; cnt_j > 0; cnt_j-- )
+        for ( uint8_t cnt_j = 10; cnt_j > 0; cnt_j-- )
         {
             c7segrgb_set_num( &c7segrgb, CHARACTER_TABLE[ cnt_i ], 4 * cnt_i, 4 * cnt_j, cnt_i * cnt_j );
             Delay_ms( 100 );
@@ -157,8 +142,6 @@ void application_task ( void )
 
     c7segrgb_set_num( &c7segrgb, C7SEGRGB_NINE, 20, 10, 30 );
     Delay_ms( 1000 );
-     
-    c7segrgb_pwm_low( &c7segrgb );
 }
 
 ```

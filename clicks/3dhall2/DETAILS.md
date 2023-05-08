@@ -1,5 +1,4 @@
 
-
 ---
 # 3D Hall 2 click
 
@@ -23,7 +22,7 @@
 
 # Software Support
 
-We provide a library for the C3dHall2 Click 
+We provide a library for the 3d Hall 2 Click 
 as well as a demo application (example), developed using MikroElektronika 
 [compilers](https://shop.mikroe.com/compilers). 
 The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
@@ -32,29 +31,41 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Library Description
 
-> This library contains API for C3dHall2 Click driver.
+> This library contains API for 3d Hall 2 Click driver.
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void c3dhall2_cfg_setup ( c3dhall2_cfg_t *cfg ); 
- 
-- Initialization function.
-> C3DHALL2_RETVAL c3dhall2_init ( c3dhall2_t *ctx, c3dhall2_cfg_t *cfg );
+- `c3dhall2_cfg_setup` Config Object Initialization function.
+```c
+void c3dhall2_cfg_setup ( c10x10rgb_cfg_t *cfg );
+```
 
+- `c3dhall2_init` Initialization function.
+```c
+err_t c3dhall2_init ( c3dhall2_t *ctx, c3dhall2_cfg_t *cfg );
+```
+
+- `c3dhall2_default_cfg` Default configuration initialization function.
+```c
+err_t c3dhall2_default_cfg( c3dhall2_t *ctx );
+```
 
 #### Example key functions :
 
+- `c3dhall2_read_data` This function reads data from register.
+```c
+err_t c3dhall2_read_data ( c3dhall2_t *ctx, uint8_t *data_buf, uint16_t len );
+```
 
-- This function reads data from register.
-> void c3dhall2_read_data ( c3dhall2_t *ctx, uint8_t *data_buf, uint16_t len );
+- `c3dhall2_get_axis_temp_data` This function gets temperature and axis data.
+```c
+err_t c3dhall2_get_axis_temp_data ( c3dhall2_t *ctx, float *axis_data, float *temp_data );
+```
 
-- This function gets temperature and axis data.
-> void c3dhall2_get_axis_temp_data ( c3dhall2_t *ctx, float *axis_data, float *temp_data );
-
-- This function configures the chip for measurement.
-> void c3dhall2_configuration( c3dhall2_t *ctx, uint8_t settings1, uint8_t settings2);
-
+- `c3dhall2_configuration` This function configures the chip for measurement.
+```c
+err_t c3dhall2_configuration ( c3dhall2_t *ctx, uint8_t settings1, uint8_t settings2 );
+```
 
 ## Examples Description
 
@@ -64,13 +75,14 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initialization driver init and configuration chip.
+> Initializes the driver and configures the click board.
 
 ```c
 
 void application_init ( void )
 {
-     c3dhall2_cfg_t cfg;
+    log_cfg_t log_cfg;
+    c3dhall2_cfg_t cfg;
 
     /** 
      * Logger initialization.
@@ -86,7 +98,6 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     c3dhall2_cfg_setup( &cfg );
     C3DHALL2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c3dhall2_init( &c3dhall2, &cfg );
@@ -97,21 +108,22 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads X/Y/Z hall axis and Temperature data and logs values every 3 seconds.
+> Reads X/Y/Z hall axis and Temperature data. All data logs on the USBUART every 200ms.
 
 ```c
 
 void application_task ( void )
 {
-    c3dhall2_get_axis_temp_data( &c3dhall2, &xyz_axis[ 0 ], &temperature );
-
-    log_printf( &logger, " Axis X: %.2f mT\r\n", xyz_axis[ 0 ] );
-    log_printf( &logger, " Axis Y: %.2f mT\r\n", xyz_axis[ 1 ] );
-    log_printf( &logger, " Axis Z: %.2f mT\r\n", xyz_axis[ 2 ] );
-
-    log_printf( &logger, " Temperature: %.2f C\r\n", temperature );
-
-    Delay_ms( 3000 );
+    float xyz_axis[ 3 ] = { 0 };
+    float temperature = 0;
+    if ( C3DHALL2_OK == c3dhall2_get_axis_temp_data( &c3dhall2, &xyz_axis[ 0 ], &temperature ) )
+    {
+        log_printf( &logger, " Axis X: %.2f mT\r\n", xyz_axis[ 0 ] );
+        log_printf( &logger, " Axis Y: %.2f mT\r\n", xyz_axis[ 1 ] );
+        log_printf( &logger, " Axis Z: %.2f mT\r\n", xyz_axis[ 2 ] );
+        log_printf( &logger, " Temperature: %.2f C\r\n\n", temperature );
+        Delay_ms( 200 );
+    }
 }
 
 ```
@@ -122,7 +134,7 @@ The full application code, and ready to use projects can be  installed directly 
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.C3dHall2
+- Click.3dHall2
 
 **Additional notes and informations**
 

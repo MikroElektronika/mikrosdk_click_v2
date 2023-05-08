@@ -1,5 +1,5 @@
 \mainpage Main Page
- 
+
 ---
 # 3G SARA click
 
@@ -16,9 +16,9 @@
 
 #### Click library 
 
-- **Author**        : MikroE Team
-- **Date**          : Apr 2020.
-- **Type**          : UART GPS/GNSS type
+- **Author**        : Stefan Filipovic
+- **Date**          : May 2023.
+- **Type**          : UART type
 
 
 # Software Support
@@ -36,97 +36,163 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void c3gsara_cfg_setup ( c3gsara_cfg_t *cfg ); 
- 
-- Initialization function.
-> C3GSARA_RETVAL c3gsara_init ( c3gsara_t *ctx, c3gsara_cfg_t *cfg );
+- `c3gsara_cfg_setup` Config Object Initialization function.
+```c
+void c3gsara_cfg_setup ( c3gsara_cfg_t *cfg );
+```
+
+- `c3gsara_init` Initialization function.
+```c
+err_t c3gsara_init ( c3gsara_t *ctx, c3gsara_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Power module.
-> void c3gsara_module_power( c3gsara_t *ctx, uint8_t power_state );
+- `c3gsara_set_sim_apn` This function sets APN for sim card.
+```c
+void c3gsara_set_sim_apn ( c3gsara_t *ctx, uint8_t *sim_apn );
+```
 
-- Send command.
-> void c3gsara_send_command ( c3gsara_t *ctx, char *command );
+- `c3gsara_send_sms_text` This function sends text message to a phone number.
+```c
+void c3gsara_send_sms_text ( c3gsara_t *ctx, uint8_t *phone_number, uint8_t *sms_text );
+```
 
-## Examples Description
+- `c3gsara_send_sms_pdu` This function sends text message to a phone number in PDU mode.
+```c
+err_t c3gsara_send_sms_pdu ( c3gsara_t *ctx, uint8_t *service_center_number, uint8_t *phone_number, uint8_t *sms_text );
+```
 
-> This example reads and processes data from 3G SARA clicks.
+## Example Description
+
+> Application example shows device capability of connecting to the network and sending SMS or TCP/UDP messages using standard "AT" commands.
 
 **The demo application is composed of two sections :**
 
-### Application Init 
+### Application Init
 
-> Initializes driver and power module.
+> Initializes the driver, tests the communication by sending "AT" command, and after that restarts the device.
 
 ```c
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
-    c3gsara_cfg_t cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    c3gsara_cfg_t c3gsara_cfg;  /**< Click config object. */
 
-    /** 
+    /**
      * Logger initialization.
      * Default baud rate: 115200
      * Default log level: LOG_LEVEL_DEBUG
-     * @note If USB_UART_RX and USB_UART_TX 
-     * are defined as HAL_PIN_NC, you will 
-     * need to define them manually for log to work. 
+     * @note If USB_UART_RX and USB_UART_TX
+     * are defined as HAL_PIN_NC, you will
+     * need to define them manually for log to work.
      * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
+    // Click initialization.
+    c3gsara_cfg_setup( &c3gsara_cfg );
+    C3GSARA_MAP_MIKROBUS( c3gsara_cfg, MIKROBUS_1 );
+    if ( UART_ERROR == c3gsara_init( &c3gsara, &c3gsara_cfg ) )
+    {
+        log_error( &logger, " Application Init Error. " );
+        log_info( &logger, " Please, run program again... " );
+        for ( ; ; );
+    }
+    
+    c3gsara_set_power_state ( &c3gsara, C3GSARA_POWER_STATE_ON );
+    
+    c3gsara_process( );
+    c3gsara_clear_app_buf( );
 
-    c3gsara_cfg_setup( &cfg );
-    C3GSARA_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    c3gsara_init( &c3gsara, &cfg );
-
-    c3gsara_module_power( &c3gsara, true );
-
-    c3gsara_send_command( &c3gsara, C3GSARA_AT_COMMAND ); 
-    c3gsara_process( );
-    c3gsara_send_command( &c3gsara, C3GSARA_AT_COMMAND ); 
-    c3gsara_process( );
-    c3gsara_send_command( &c3gsara, C3GSARA_AT_COMMAND ); 
-    c3gsara_process( );
-    c3gsara_send_command( &c3gsara, C3GSARA_ATE0_COMMAND ); 
-    c3gsara_process( );
-    c3gsara_send_command( &c3gsara, C3GSARA_AT_IFC_COMMAND ); 
-    c3gsara_process( );
-    c3gsara_send_command( &c3gsara, C3GSARA_AT_CMGF_COMMAND ); 
-    c3gsara_process( );
+    // Check communication
+    c3gsara_send_cmd( &c3gsara, C3GSARA_CMD_AT );
+    error_flag = c3gsara_rsp_check( C3GSARA_RSP_OK );
+    c3gsara_error_check( error_flag );
+    
+    // Restart device
+    #define RESTART_DEVICE "1,1"
+    c3gsara_send_cmd_with_par( &c3gsara, C3GSARA_CMD_CFUN, RESTART_DEVICE );
+    error_flag = c3gsara_rsp_check( C3GSARA_RSP_OK );
+    c3gsara_error_check( error_flag );
+    
+    log_info( &logger, " Application Task " );
+    example_state = C3GSARA_CONFIGURE_FOR_NETWORK;
 }
   
 ```
 
 ### Application Task
 
-> Reads the received data.
+> Application task is split in few stages:
+ - C3GSARA_CONFIGURE_FOR_NETWORK: 
+   > Sets configuration to device to be able to connect to the network.
+ - C3GSARA_WAIT_FOR_CONNECTION: 
+   > Waits for the network registration indicated via CREG URC event and then checks the connection status.
+ - C3GSARA_CONFIGURE_FOR_EXAMPLE:
+   > Sets the device configuration for sending SMS or TCP/UDP messages depending on the selected demo example.
+ - C3GSARA_EXAMPLE:
+   > Depending on the selected demo example, it sends an SMS message (in PDU or TXT mode) or TCP/UDP message.
+> By default, the TCP/UDP example is selected.
 
 ```c
 
 void application_task ( void )
 {
-    c3gsara_process( );
-    
-    if ( send_data_cnt == 5 )
+    switch ( example_state )
     {
-        c3gsara_send_command( &c3gsara, C3GSARA_ATH_COMMAND );
-        c3gsara_process( );
-        send_data_cnt = 0;
-    }
-    else
-    {
-        send_data_cnt++;
+        case C3GSARA_CONFIGURE_FOR_NETWORK:
+        {
+            if ( C3GSARA_OK == c3gsara_configure_for_network( ) )
+            {
+                example_state = C3GSARA_WAIT_FOR_CONNECTION;
+            }
+            break;
+        }
+        case C3GSARA_WAIT_FOR_CONNECTION:
+        {
+            if ( C3GSARA_OK == c3gsara_check_connection( ) )
+            {
+                example_state = C3GSARA_CONFIGURE_FOR_EXAMPLE;
+            }
+            break;
+        }
+        case C3GSARA_CONFIGURE_FOR_EXAMPLE:
+        {
+            if ( C3GSARA_OK == c3gsara_configure_for_example( ) )
+            {
+                example_state = C3GSARA_EXAMPLE;
+            }
+            break;
+        }
+        case C3GSARA_EXAMPLE:
+        {
+            c3gsara_example( );
+            break;
+        }
+        default:
+        {
+            log_error( &logger, " Example state." );
+            break;
+        }
     }
 }
 
 ```
+
+## Note
+
+> In order for the examples to work, user needs to set the APN and SMSC (SMS PDU mode only)
+of entered SIM card as well as the phone number (SMS mode only) to which he wants to send an SMS.
+Enter valid values for the following macros: SIM_APN, SIM_SMSC and PHONE_NUMBER_TO_MESSAGE.
+> > Example: 
+> > - SIM_APN "internet"
+> > - SIM_SMSC "+381610401"
+> > - PHONE_NUMBER_TO_MESSAGE "+381659999999"
+
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

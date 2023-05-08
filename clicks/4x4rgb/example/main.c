@@ -3,7 +3,7 @@
  * \brief 4x4 RGB Click example
  * 
  * # Description
- * This application is used for powering 4x4 RGB LED matrices.
+ * This application is used for powering 4x4 RGB LED matrix.
  *
  * The demo application is composed of two sections :
  * 
@@ -17,7 +17,7 @@
  * These LEDs actually consist of three single colored LEDs ( Red, Green and Blue ) in a single package.
  * Various colors can be reproduced by mixing the intensity of each LED.
  * 
- * *note:* 
+ * @note
  * **Diodes layout:**
  * ----------------------
  * | 13 | 14 | 15 | 16  |
@@ -29,18 +29,18 @@
  * |  1 |  2 |  3 |  4  |
  * ----------------------
  * 
- * Timeing sequence chart:
+ * Timing sequence chart:
  *          -----------|     T0L
  *              T0H    |______________
  * Logic 0: 
- *          T0H ~ 200-500ns
- *          T0L ~ 650-1050ns
+ *          T0H: 350ns (+/-150ns)
+ *          T0L: 800ns (+/-150ns)
  * 
  *          -----------|     T1L
  *              T1H    |______________
  * Logic 1: 
- *          T1H ~ 550-850ns
- *          T1L ~ 450-750ns
+ *          T1H: 700ns (+/-150ns)
+ *          T1L: 600ns (+/-150ns)
  * 
  * \author MikroE Team
  *
@@ -48,47 +48,107 @@
 #include "board.h"
 #include "c4x4rgb.h"
 
-#ifdef __MIKROC_AI_FOR_ARM__
-
-#ifdef __STM32__/*< STM32F407ZG*/
-
-#define D_S    2
-#define D_L    4
-
-#define DELAY_SHORT \
-    Delay_Cyc( D_S );
-    
-#define DELAY_LONG \
-    Delay_Cyc( D_L );
-    
-#elif __KINETIS__/*< MK64FN1M0VDC12*/
-    
-#define DELAY_SHORT 
-    
-#define DELAY_LONG \
-    asm nop
-    
+// Delay adjustment for specific systems.
+#ifdef STM32F407ZG
+    /*< Adjusted for STM32F407ZG */
+    #define DELAY_TOH Delay_Cyc( 4 );   // ~340ns
+    #define DELAY_TOL Delay_Cyc( 6 );   // ~800ns
+    #define DELAY_T1H Delay_Cyc( 10 );  // ~700ns
+    #define DELAY_T1L Delay_Cyc( 3 );   // ~620ns
+#elif MK64FN1M0VDC12
+    /*< Adjusted for MK64FN1M0VDC12 */
+    #define DELAY_TOH \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop;                // ~350ns
+    #define DELAY_TOL Delay_Cyc( 2 );   // ~800ns
+    #define DELAY_T1H Delay_Cyc( 6 );   // ~680ns
+    #define DELAY_T1L \
+                asm nop; \
+                asm nop; \
+                asm nop;                // ~600ns
+#elif TM4C129XNCZAD
+    /*< Adjusted for TM4C129XNCZAD */
+    #define DELAY_TOH \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop;                // ~350ns
+    #define DELAY_TOL                   // ~880ns
+    #define DELAY_T1H Delay_Cyc( 4 );   // ~720ns
+    #define DELAY_T1L                   // ~880ns
+#elif GD32VF103VBT6
+    /*< Adjusted for GD32VF103VBT6 */
+    #define DELAY_TOH \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop");             // ~350ns
+    #define DELAY_TOL \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop"); \
+                asm("nop");             // ~800ns
+    #define DELAY_T1H Delay_Cyc( 2 );   // ~680ns
+    #define DELAY_T1L                   // ~620ns
+#elif PIC32MX795F512L
+    /*< Adjusted for PIC32MX795F512L */
+    #define DELAY_TOH \
+                asm nop; \
+                asm nop; \
+                asm nop; \
+                asm nop;                // ~360ns
+    #define DELAY_TOL                   // ~1020ns
+    #define DELAY_T1H Delay_Cyc( 3 );   // ~780ns
+    #define DELAY_T1L                   // ~1020ns
+#else
+    #error "Logic delays are not defined for the selected system"
 #endif
-
-#elif __MIKROC_AI_FOR_PIC32__ /*< PIC32MZ2048EFH144 */
-
-#define D_L    4
-    
-#define DELAY_SHORT \
-    asm nop
-    
-#define DELAY_LONG \
-    Delay_Cyc( D_L );
-#endif
-    
-/*< You need to define long and short delay */
-#if !defined(DELAY_SHORT) && !defined(DELAY_LONG)
-
-#define DELAY_SHORT     
-#define DELAY_LONG 
-
-#endif
-    
 
 #define SNAKE_DELAY     50
 #define MASH_DELAY      100
@@ -114,9 +174,8 @@ void application_init ( void )
     C4X4RGB_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c4x4rgb_init( &c4x4rgb, &cfg );
     
-    c4x4rgb_fill_screen( &c4x4rgb, C4X4RGB_COLOR_WHITE, 5 );
+    c4x4rgb_fill_screen( &c4x4rgb, C4X4RGB_COLOR_WHITE );
     Delay_ms( 100 ); 
-    
     
     c4x4rgb_color_mash();
     Delay_ms( 2000 );
@@ -142,7 +201,7 @@ void application_task ( void )
     c4x4rgb_snake_return( C4X4RGB_COLOR_PURPLE );
     Delay_ms( 1000 ); 
     
-    c4x4rgb_fill_screen( &c4x4rgb, C4X4RGB_COLOR_WHITE, 50 );
+    c4x4rgb_fill_screen( &c4x4rgb, C4X4RGB_COLOR_WHITE );
     Delay_ms( 100 ); 
 }
 
@@ -159,18 +218,18 @@ void main ( void )
 
 static void c4x4rgb_logic_zero ( void )
 {
-    digital_out_high( &c4x4rgb.ctrl_pin );
-    DELAY_SHORT;
-    digital_out_low( &c4x4rgb.ctrl_pin );
-    DELAY_LONG;
+    hal_ll_gpio_set_pin_output( &c4x4rgb.ctrl_pin.pin );
+    DELAY_TOH;
+    hal_ll_gpio_clear_pin_output( &c4x4rgb.ctrl_pin.pin );
+    DELAY_TOL;
 }
 
 static void c4x4rgb_logic_one ( void )
 {
-    digital_out_high( &c4x4rgb.ctrl_pin );
-    DELAY_LONG;
-    digital_out_low( &c4x4rgb.ctrl_pin );
-    DELAY_SHORT;
+    hal_ll_gpio_set_pin_output( &c4x4rgb.ctrl_pin.pin );
+    DELAY_T1H;
+    hal_ll_gpio_clear_pin_output( &c4x4rgb.ctrl_pin.pin );
+    DELAY_T1L;
 }
 
 static void c4x4rgb_color_mash ( void )

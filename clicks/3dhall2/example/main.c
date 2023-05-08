@@ -4,17 +4,17 @@
  * 
  * # Description
  * 
- * This application reads X/Y/Z hall axis and temperature data and converts it to
- * human readable format.
+ * This application reads X/Y/Z hall axis and temperature
+ * data and converts it to human readable format.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initialization driver init and configuration chip
+ * Initializes the driver and configures the click board.
  * 
  * ## Application Task  
  * Reads X/Y/Z hall axis and Temperature data.
- * All data logs on the USBUART every 3 sec.
+ * All data logs on the USBUART every 200ms.
  * 
  * \author MikroE Team
  *
@@ -29,8 +29,6 @@
 
 static c3dhall2_t c3dhall2;
 static log_t logger;
-float xyz_axis[ 3 ];
-float temperature;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -63,15 +61,16 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    c3dhall2_get_axis_temp_data( &c3dhall2, &xyz_axis[ 0 ], &temperature );
-
-    log_printf( &logger, " Axis X: %.2f mT\r\n", xyz_axis[ 0 ] );
-    log_printf( &logger, " Axis Y: %.2f mT\r\n", xyz_axis[ 1 ] );
-    log_printf( &logger, " Axis Z: %.2f mT\r\n", xyz_axis[ 2 ] );
-
-    log_printf( &logger, " Temperature: %.2f C\r\n", temperature );
-
-    Delay_ms( 2000 );
+    float xyz_axis[ 3 ] = { 0 };
+    float temperature = 0;
+    if ( C3DHALL2_OK == c3dhall2_get_axis_temp_data( &c3dhall2, &xyz_axis[ 0 ], &temperature ) )
+    {
+        log_printf( &logger, " Axis X: %.2f mT\r\n", xyz_axis[ 0 ] );
+        log_printf( &logger, " Axis Y: %.2f mT\r\n", xyz_axis[ 1 ] );
+        log_printf( &logger, " Axis Z: %.2f mT\r\n", xyz_axis[ 2 ] );
+        log_printf( &logger, " Temperature: %.2f C\r\n\n", temperature );
+        Delay_ms( 200 );
+    }
 }
 
 void main ( void )

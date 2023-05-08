@@ -15,8 +15,8 @@
  * Initialization of communication modules(SPI, UART) and 
  * additional interrupt pins. Reads device ID's and revision.
  * Then configures device to work in FIFO mode or to read data
- * from the registers, sets 2g resolution, 100Hz output data rate,
- * sets interrupt 1 active low, and powers on device.
+ * from the registers, sets 2g resolution, 12.5Hz output data rate,
+ * sets interrupt 1 active low, powers on device, and calibrates temperature.
  *
  * ## Application Task
  * Depending of the application mode selects example. 
@@ -89,9 +89,9 @@ void application_init ( void )
     uint8_t temp_buf[ 4 ] = { 0 };
     
     accel16_multiple_reg_read( &accel16, ACCEL16_REG_DEVID_AD, temp_buf, 4 );
-    log_printf( &logger, " > ID: 0x%.2X\r\n > ID: 0x%.2X\r\n > ID: 0x%.2X\r\n > REV: 0x%.2X\r\n", 
-                        temp_buf[ 0 ], temp_buf[ 1 ], temp_buf[ 2 ], temp_buf[ 3 ] );
-    
+    log_printf( &logger, " > ID0: 0x%.2X\r\n > ID1: 0x%.2X\r\n > ID2: 0x%.2X\r\n > REV: 0x%.2X\r\n", 
+                ( uint16_t ) temp_buf[ 0 ], ( uint16_t ) temp_buf[ 1 ], 
+                ( uint16_t ) temp_buf[ 2 ], ( uint16_t ) temp_buf[ 3 ] );
     
     if ( ACCEL16_ERROR == accel16_default_cfg ( &accel16 ) )
     {
@@ -114,7 +114,6 @@ void application_task ( void )
     }
 
     log_printf( &logger, "********************************************************\r\n" );
-    Delay_ms( 300 );
 }
 
 void main ( void )
@@ -167,7 +166,9 @@ static void accel16_read_fifo_data ( void )
             }
             case 0x3:
             {
-                float temperature = temp_data * 0.065;
+                float temperature = ACCEL16_ROOM_TEMPERATURE + 
+                                    ( temp_data - ACCEL16_TEMPERATURE_BIAS ) * ACCEL16_TEMPERATURE_RES - 
+                                    accel16.room_temp_offset;;
                 log_printf( &logger, " > Temperature[degC]: %.2f\r\n", temperature );
                 break;
             }
