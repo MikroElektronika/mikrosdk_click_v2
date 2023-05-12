@@ -1,0 +1,42 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Motor control > Brushed",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "DC Motor 26 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.dcmotor26",
+    "product_link": "https://www.mikroe.com/dc-motor-26-click",
+    "short_description": "DC Motor 26 Click is a compact add-on board with a brushed DC motor driver. This board features the TB9053FTG, a PWM-type, dual-channel, H-bridge, brushed DC motor driver from Toshiba Semiconductor. The TB9053FTG is rated for an operating voltage range from 4.5V to 28V, with the motor controlled directly through a PWM signal or SPI serial interface. In addition, this driver allows a dual configuration with two motors with 5A current ratings per channel or one 10A channel drive in a Parallel mode of operation. It also has complete diagnostic and protection capabilities supporting robust and reliable operation.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.DCMotor26",
+    "subdir_name": "lib_dcmotor26"
+}
+
+
+
+
+
+
+

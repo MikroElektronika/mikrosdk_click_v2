@@ -36,26 +36,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void altitude2_cfg_setup ( altitude2_cfg_t *cfg ); 
- 
-- Initialization function.
-> ALTITUDE2_RETVAL altitude2_init ( altitude2_t *ctx, altitude2_cfg_t *cfg );
+- `altitude2_cfg_setup` Config Object Initialization function.
+```c
+void altitude2_cfg_setup ( altitude2_cfg_t *cfg );
+```
 
-- Click Default Configuration function.
-> void altitude2_default_cfg ( altitude2_t *ctx );
-
+- `altitude2_init` Initialization function.
+```c
+err_t altitude2_init ( altitude2_t *ctx, altitude2_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- This function resets the device and reads calibration coefficients after reset.
-> void altitude2_reset( altitude2_t *ctx );
+- `altitude2_read_prom` This function reads calibration data from PROM.
+```c
+uint8_t altitude2_read_prom ( altitude2_t *ctx, uint8_t select_data, uint16_t *data_out );
+```
  
-- This function reads calibration data from PROM.
-> uint8_t altitude2_read_prom ( altitude2_t *ctx, uint8_t select_data, uint32_t *data_out );
+- `altitude2_reset` This function resets the device and reads calibration coefficients after reset.
+```c
+void altitude2_reset( altitude2_t *ctx );
+```
 
-- This function determines oversampling ratio for temperature and pressure measurement.
-> uint8_t altitude2_set_ratio( altitude2_t *ctx, uint8_t temp_ratio, uint8_t press_ratio );
+- `altitude2_read_data` Data read function.
+```c
+void altitude2_read_data( altitude2_t *ctx, float *temp_data, float *press_data, float *altitude_data );
+```
 
 ## Examples Description
 

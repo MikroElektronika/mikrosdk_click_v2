@@ -1,22 +1,23 @@
 /*!
  * @file main.c
- * @brief Ble9 Click example
+ * @brief BLE 9 Click example
  *
  * # Description
- * This example reads and processes data from BLE 9 click.
+ * This example demonstrates the use of BLE 9 click board by processing
+ * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes driver and starts module advertising.
+ * Initializes the driver and performs the click default configuration.
  *
  * ## Application Task
- * Reads received data.
+ * Reads and processes all incoming data and displays them on the USB UART.
  *
  * ## Additional Function
- * - ble9_process ( ) - Logs all received messages on UART, and sends
- *   the certain message back to connected device.
- *
+ * - static void ble9_clear_app_buf ( void )
+ * - static err_t ble9_process ( ble9_t *ctx )
+ * 
  * <pre>
  * For more information on the chip itself and the firmware on it,
  * please visit the following page:
@@ -27,7 +28,7 @@
  *           take into consideration that some functions might not work.
  * </pre>
  *
- * @author Strahinja Jacimovic
+ * @author MikroE Team
  */
 // ------------------------------------------------------------------- INCLUDES
 
@@ -35,62 +36,32 @@
 #include "ble9.h"
 #include "log.h"
 
-#define PROCESS_COUNTER 5
-#define PROCESS_RX_BUFFER_SIZE 50
-#define PROCESS_PARSER_BUFFER_SIZE 50
-
-// ------------------------------------------------------------------ VARIABLES
+#define PROCESS_BUFFER_SIZE 200
 
 static ble9_t ble9;
 static log_t logger;
-static uint8_t data_mode = 0;
 
-static char current_parser_buf[ PROCESS_PARSER_BUFFER_SIZE ];
+static uint8_t app_buf[ PROCESS_BUFFER_SIZE ] = { 0 };
+static int32_t app_buf_len = 0;
 
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
+/**
+ * @brief BLE 9 clearing application buffer.
+ * @details This function clears memory of application buffer and reset its length.
+ * @note None.
+ */
+static void ble9_clear_app_buf ( void );
 
-static int8_t ble9_process ( void )
-{
-    int32_t rsp_size;
-    uint16_t rsp_cnt = 0;
-
-    char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
-    uint8_t check_buf_cnt;
-    uint8_t process_cnt = PROCESS_COUNTER;
-
-    // Clear current buffer
-    memset( current_parser_buf, 0, PROCESS_PARSER_BUFFER_SIZE );
-
-    while( process_cnt != 0 )
-    {
-        rsp_size = ble9_generic_read( &ble9, uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
-
-        if ( rsp_size > 0 )
-        {
-            // Storages data in current buffer
-            rsp_cnt += rsp_size;
-            if ( rsp_cnt < PROCESS_PARSER_BUFFER_SIZE )
-            {
-                strncat( current_parser_buf, uart_rx_buffer, rsp_size );
-            }
-
-            // Clear RX buffer
-            memset( uart_rx_buffer, 0, PROCESS_RX_BUFFER_SIZE );
-
-            log_printf( &logger, "%s", current_parser_buf );
-            Delay_100ms( );
-        }
-        else
-        {
-            process_cnt--;
-
-            // Process delay
-            Delay_ms( 100 );
-        }
-    }
-
-    return 0;
-}
+/**
+ * @brief BLE 9 data reading function.
+ * @details This function reads data from device and concatenates data to application buffer. 
+ * @param[in] ctx : Click context object.
+ * See #ble9_t object definition for detailed explanation.
+ * @return @li @c  0 - Read some data.
+ *         @li @c -1 - Nothing is read.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+static err_t ble9_process ( ble9_t *ctx );
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -114,19 +85,19 @@ void application_init ( void )
     Delay_ms( 100 );
 
     //  Click initialization.
-
     ble9_cfg_setup( &cfg );
     BLE9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ble9_init( &ble9, &cfg );
+    Delay_ms( 1000 );
 
     log_printf( &logger, "Creating advertising point...\n" );
     Delay_ms( 100 );
-    ble9_advertiser_create_id( &ble9 );
+    ble9_adv_create_id ( &ble9 );
 
-    log_printf( &logger, "Starting module advertizing...\n" );
+    log_printf( &logger, "Starting module advertising...\n" );
     Delay_ms( 100 );
-    ble9_advertiser_start( &ble9, BLE9_ADVERTISER_MODE_DISCOVERABLE_GENERAL,
-                                  BLE9_ADVERTISER_MODE_CONNECTABLE_SCANNABLE );
+    ble9_adv_start ( &ble9, BLE9_ADVERTISER_MODE_DISCOVERABLE_GENERAL, 
+                     BLE9_ADVERTISER_MODE_CONNECTABLE_SCANNABLE );
 
     log_printf( &logger, "The module has been configured.\n" );
     Delay_ms( 100 );
@@ -134,7 +105,15 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    ble9_process( );
+    ble9_process ( &ble9 );
+    if ( app_buf_len > 0 ) 
+    {
+        for ( uint16_t cnt = 0; cnt < app_buf_len; cnt++ )
+        {
+            log_printf( &logger, "%.2X ", ( uint16_t ) app_buf[ cnt ] );
+        }
+        ble9_clear_app_buf( );
+    }
 }
 
 void main ( void )
@@ -145,6 +124,41 @@ void main ( void )
     {
         application_task( );
     }
+}
+
+static void ble9_clear_app_buf ( void ) 
+{
+    memset( app_buf, 0, app_buf_len );
+    app_buf_len = 0;
+}
+
+static err_t ble9_process ( ble9_t *ctx ) 
+{
+    uint8_t rx_buf[ PROCESS_BUFFER_SIZE ] = { 0 };
+    int32_t rx_size = 0;
+    rx_size = ble9_generic_read( ctx, rx_buf, PROCESS_BUFFER_SIZE );
+    if ( rx_size > 0 ) 
+    {
+        int32_t buf_cnt = app_buf_len;
+        if ( ( ( app_buf_len + rx_size ) > PROCESS_BUFFER_SIZE ) && ( app_buf_len > 0 ) ) 
+        {
+            buf_cnt = PROCESS_BUFFER_SIZE - ( ( app_buf_len + rx_size ) - PROCESS_BUFFER_SIZE );
+            memmove ( app_buf, &app_buf[ PROCESS_BUFFER_SIZE - buf_cnt ], buf_cnt );
+        }
+        for ( int32_t rx_cnt = 0; rx_cnt < rx_size; rx_cnt++ ) 
+        {
+            if ( rx_buf[ rx_cnt ] ) 
+            {
+                app_buf[ buf_cnt++ ] = rx_buf[ rx_cnt ];
+                if ( app_buf_len < PROCESS_BUFFER_SIZE )
+                {
+                    app_buf_len++;
+                }
+            }
+        }
+        return BLE9_OK;
+    }
+    return BLE9_ERROR;
 }
 
 // ------------------------------------------------------------------------ END

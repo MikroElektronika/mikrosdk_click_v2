@@ -1,8 +1,0 @@
-type: subdirs
-
-project: AnalogMUX4
-
-subdirs: {
-    lib
-    example
-}

@@ -1,7 +1,0 @@
-type: subdirs
-project: BATT-MAN3
-
-subdirs: {
-    lib
-    example
-}

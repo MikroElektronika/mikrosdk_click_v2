@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "CAN",
+    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "category": "Click Boards > Interface > CAN",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "MCP2542 click",
     "example_list": [
@@ -24,19 +23,17 @@
         "id": "46"
     },
     "name": "mikroe.click.mcp2542",
-    "product_link": "<https://www.mikroe.com/mcp2542-click",
+    "product_link": "https://www.mikroe.com/mcp2542-click",
     "short_description": "This application use for comunication",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         1887
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.5"
+    "version": "2.1.0.6",
+    "cmake": true,
+    "alias": "Click.Mcp2542",
+    "subdir_name": "lib_mcp2542"
 }
-
-
-
-
 

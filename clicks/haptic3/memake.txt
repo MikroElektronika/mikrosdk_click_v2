@@ -1,7 +1,0 @@
-type: subdirs
-project: HAPTIC3
-
-subdirs: {
-    lib
-    example
-}

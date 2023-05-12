@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230512](#20230512)**
 + **[20230505](#20230505)**
 + **[20230428](#20230428)**
 + **[20230421](#20230421)**
@@ -45,6 +46,58 @@
 
 ---
 ---
+---
+
+## `20230512`
+
+*Following click boards have been added:*
+
++ `DC Motor 26`
++ `Ambient 23`
++ `N-PLC`
++ `CO2 3`
+
+*Following click boards have been updated:*
+
++ `Accel 18`
++ `Accel`
++ `ADC 13`
++ `ADC 6`
++ `AD-SWIO`
++ `Air quality 7`
++ `Altitude 2`
++ `AM/FM`
++ `Ambient 9`
++ `ATA663211`
++ `AudioAmp 8`
++ `BATT-MAN 3`
++ `BEE`
++ `BLE 9`
++ `4G LTE 2 Voice`
++ `4G LTE-E`
++ `4G LTE-APJ`
++ `4G LTE-ATT`
++ `4G LTE-NA`
++ `Analog MUX 4`
++ `Analog MUX 5`
++ `BATT-MON 4`
++ `Counter`
++ `DC Motor 18`
++ `DC Motor 22`
++ `Expand 14`
++ `Hall Current 4`
++ `Hall Current 6`
++ `Hall Switch`
++ `HAPTIC 3`
++ `Heart Rate 11`
++ `LTE Cat.1-US`
++ `LTE IoT 3`
++ `MCP2542`
++ `Shuttle`
++ `TFmini`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230505`

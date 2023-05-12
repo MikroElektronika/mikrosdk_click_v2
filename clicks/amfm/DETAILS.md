@@ -35,26 +35,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void amfm_cfg_setup ( amfm_cfg_t *cfg ); 
+- `amfm_cfg_setup` Config Object Initialization function.
+```c
+void amfm_cfg_setup ( amfm_cfg_t *cfg );
+```
  
-- Initialization function.
-> AMFM_RETVAL amfm_init ( amfm_t *ctx, amfm_cfg_t *cfg );
+- `amfm_init` Initialization function.
+```c
+err_t amfm_init ( amfm_t *ctx, amfm_cfg_t *cfg );
+```
 
-- Click Default Configuration function.
-> void amfm_default_cfg ( amfm_t *ctx );
-
+- `amfm_default_cfg` Click Default Configuration function.
+```c
+void amfm_default_cfg ( amfm_t *ctx );
+```
 
 #### Example key functions :
 
-- This function increments current frequency for 10 KHz.
-> uint8_t amfm_tune_up ( amfm_t *ctx );
+- `amfm_tune_up` This function increments current frequency for 10 KHz.
+```c
+uint8_t amfm_tune_up ( amfm_t *ctx );
+```
  
-- This function sets volume level in range: 0 - 63.
-> uint8_t amfm_set_volume ( amfm_t *ctx, uint8_t volume );
+- `amfm_set_volume` This function sets volume level in range: 0 - 63.
+```c
+uint8_t amfm_set_volume ( amfm_t *ctx, uint8_t volume );
+```
 
-- This function checks STC bit state.
-> uint8_t amfm_get_stc ( amfm_t *ctx );
+- `amfm_get_stc` This function checks STC bit state.
+```c
+uint8_t amfm_get_stc ( amfm_t *ctx );
+```
 
 ## Examples Description
 
@@ -94,14 +105,15 @@ void application_init ( void )
 
     Delay_ms( 100 );
     status = amfm_init_device( &amfm );
-    if ( status == 0 )
+    if ( 0 == status )
     {
         log_printf( &logger, "> > > app init done < < <\r\n" );
     }
-    else if ( status == 1 )
+    else if ( 1 == status )
     {
         log_printf( &logger, "> > >    timeout    < < <\r\n" );
     }
+    Delay_ms ( 1000 );
     
     amfm_case_seek( &amfm );
     amfm_case_memorize( );

@@ -63,11 +63,11 @@
 #define DEMO_EXAMPLE                        EXAMPLE_TCP_UDP // Example selection macro
 
 // SIM APN config
-#define SIM_APN                             "internet"              // Set valid SIM APN
+#define SIM_APN                             ""              // Set valid SIM APN
 
 // SMS example parameters
-#define SIM_SMSC                            "+381610401"              // Set valid SMS Service Center Address - only in SMS PDU mode
-#define PHONE_NUMBER_TO_MESSAGE             "+381655358725"              // Set Phone number to message
+#define SIM_SMSC                            ""              // Set valid SMS Service Center Address - only in SMS PDU mode
+#define PHONE_NUMBER_TO_MESSAGE             ""              // Set Phone number to message
 #define SMS_MODE                            "1"             // SMS mode: "0" - PDU, "1" - TXT
 
 // TCP/UDP example parameters

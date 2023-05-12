@@ -15,9 +15,9 @@ BLE 9 Click is a fully embedded stand-alone Bluetooth 5.2 Energy connectivity mo
 
 #### Click library
 
-- **Author**        : Strahinja Jacimovic
+- **Author**        : MikroE Team
 - **Date**          : Dec 2020.
-- **Type**          : UART GSM/IOT type
+- **Type**          : UART type
 
 # Software Support
 
@@ -41,33 +41,30 @@ void ble9_cfg_setup ( ble9_cfg_t *cfg );
 
 - `ble9_init` function initializes all necessary peripherals.
 ```c
-BLE9_RETVAL ble9_init ( ble9_t *ctx, ble9_cfg_t *cfg );
+err_t ble9_init ( ble9_t *ctx, ble9_cfg_t *cfg );
 ```
 
 #### Example key functions :
 
-- `ble9_advertiser_create_id` function creates adequate ID.
+- `ble9_adv_create_id` function creates adequate ID.
 ```c
-BLE9_RETVAL init_flag = ble9_advertiser_create_id( &ble9 );
+err_t ble9_adv_create_id ( ble9_t *ctx );
 ```
 
-- `ble9_advertiser_start` function starts advertizing.
+- `ble9_adv_start` function starts advertising.
 ```c
-ble9_advertiser_start( &ble9, BLE9_ADVERTISER_MODE_DISCOVERABLE_GENERAL, BLE9_ADVERTISER_MODE_CONNECTABLE_SCANNABLE );
+err_t ble9_adv_start ( ble9_t *ctx, ble9_adv_mode_discoverable_t discover, ble9_adv_mode_connectable_t connect );
 ```
 
 ## Examples Description
 
-> This example reads and processes data from BLE 9 clicks.
+> This example demonstrates the use of BLE 9 click board by processing the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes driver and sets up adequate module
-> ID, as well as starting module advertizing.
-> Once in this state, the module can be connected to and
-> communicated with.
+> Initializes the driver and performs the click default configuration.
 
 ```c
 
@@ -91,19 +88,19 @@ void application_init ( void )
     Delay_ms( 100 );
 
     //  Click initialization.
-
     ble9_cfg_setup( &cfg );
     BLE9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ble9_init( &ble9, &cfg );
+    Delay_ms( 1000 );
 
     log_printf( &logger, "Creating advertising point...\n" );
     Delay_ms( 100 );
-    ble9_advertiser_create_id( &ble9 );
+    ble9_adv_create_id ( &ble9 );
 
-    log_printf( &logger, "Starting module advertizing...\n" );
+    log_printf( &logger, "Starting module advertising...\n" );
     Delay_ms( 100 );
-    ble9_advertiser_start( &ble9, BLE9_ADVERTISER_MODE_DISCOVERABLE_GENERAL,
-                                  BLE9_ADVERTISER_MODE_CONNECTABLE_SCANNABLE );
+    ble9_adv_start ( &ble9, BLE9_ADVERTISER_MODE_DISCOVERABLE_GENERAL, 
+                     BLE9_ADVERTISER_MODE_CONNECTABLE_SCANNABLE );
 
     log_printf( &logger, "The module has been configured.\n" );
     Delay_ms( 100 );
@@ -113,13 +110,21 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads received data.
+> Reads and processes all incoming data and displays them on the USB UART.
 
 ```c
 
 void application_task ( void )
 {
-    ble9_process( );
+    ble9_process ( &ble9 );
+    if ( app_buf_len > 0 ) 
+    {
+        for ( uint16_t cnt = 0; cnt < app_buf_len; cnt++ )
+        {
+            log_printf( &logger, "%.2X ", ( uint16_t ) app_buf[ cnt ] );
+        }
+        ble9_clear_app_buf( );
+    }
 }
 
 ```
