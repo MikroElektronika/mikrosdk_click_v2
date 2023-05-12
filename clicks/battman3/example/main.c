@@ -117,12 +117,21 @@ void application_init ( void )
 
 void application_task ( void ) 
 {
-    static counter = 0;
+    static uint8_t counter = 0;
+    static uint8_t ldo_enable = 1;
     float vbat = 0; 
     
-    if ( !battman3_get_power_good( &battman3 ) )
+    if ( !battman3_get_power_good( &battman3 ) && ldo_enable )
     {
         battman3_ldo( BATTMAN3_DISABLE );
+        log_printf( &logger, " > Power is not good - LDO disabled\r\n" );
+        ldo_enable = 0;
+    }
+    else if ( battman3_get_power_good( &battman3 ) && !ldo_enable )
+    {
+        battman3_ldo( BATTMAN3_ENABLE );
+        log_printf( &logger, " > Power is good - LDO enabled\r\n" );
+        ldo_enable = 1;
     }
     
     battman3_charge_status( );

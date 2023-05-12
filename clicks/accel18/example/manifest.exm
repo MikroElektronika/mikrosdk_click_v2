@@ -2,7 +2,7 @@
     "name": "Accel 18 Click",
     "description": "Accel 18 Click is a compact add-on board that contains an acceleration sensor. This board features the MC3419, a digital output 3-axis accelerometer with a feature set optimized for consumer product motion sensing from MEMSIC. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MC3419"],
     "category" : ["Motion"]
 }

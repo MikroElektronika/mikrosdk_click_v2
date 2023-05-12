@@ -32,7 +32,7 @@
 static mcp2542_t mcp2542;
 static log_t logger;
 
-static char demo_message[ 9 ] = { 'M', 'i', 'k', 'r', 'o', 'E', 13, 10, 0 };
+static uint8_t demo_message[ 9 ] = { 'M', 'i', 'k', 'r', 'o', 'E', 13, 10, 0 };
 
 
 void application_init ( void )
@@ -64,7 +64,7 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    char tmp;
+    uint8_t tmp;
     
     //  Task implementation.
     

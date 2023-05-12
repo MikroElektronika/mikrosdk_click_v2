@@ -1,0 +1,8 @@
+{
+    "name": "DC Motor 26 Click",
+    "description": "DC Motor 26 Click is a compact add-on board with a brushed DC motor driver. This board features the TB9053FTG, a PWM-type, dual-channel, H-bridge, brushed DC motor driver from Toshiba Semiconductor. The TB9053FTG is rated for an operating voltage range from 4.5V to 28V, with the motor controlled directly through a PWM signal or SPI serial interface. In addition, this driver allows a dual configuration with two motors with 5A current ratings per channel or one 10A channel drive in a Parallel mode of operation. It also has complete diagnostic and protection capabilities supporting robust and reliable operation.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "hw" : ["click","TB9053FTG"],
+    "category" : ["Click Boards > Motor control > Brushed"]
+}

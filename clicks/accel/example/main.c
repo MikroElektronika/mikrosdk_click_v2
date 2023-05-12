@@ -3,15 +3,17 @@
  * \brief Accel Click example
  * 
  * # Description
+ * This example demonstrates the use of Accel click board by reading and
+ * displaying the accelerometer data (X, Y, and Z axis).
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
  * Initializes SPI/I2C driver and settings data read format,
- * power mode, FIFO control and baud rate( 100Hz default ).
+ * power mode, FIFO control and baud rate ( 100Hz default ).
  *
  * ## Application Task
- * Reading X, Y and Z axis and logs on usbuart every 1 second.
+ * Reads X, Y and Z axis and logs on usbuart every 100 ms.
  * 
  * \author Jovan Stajkovic
  *
@@ -73,16 +75,16 @@ void application_init ( void )
 void application_task ( void )
 {
     val_x = accel_read_x_axis( &accel );
-    log_printf( &logger, "Axis X : %d\r\n", val_x );
+    log_printf( &logger, "Axis X : %.3f g\r\n", val_x / ACCEL_DATA_RES_LSB_PER_G );
 
     val_y = accel_read_y_axis( &accel );
-    log_printf( &logger, "Axis Y : %d\r\n", val_y );
+    log_printf( &logger, "Axis Y : %.3f g\r\n", val_y / ACCEL_DATA_RES_LSB_PER_G );
 
     val_z = accel_read_z_axis( &accel );
-    log_printf( &logger, "Axis Z : %d\r\n", val_z );
+    log_printf( &logger, "Axis Z : %.3f g\r\n", val_z / ACCEL_DATA_RES_LSB_PER_G );
 
     log_printf( &logger, "-------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms( 100 );
 }
 
 void main ( void )

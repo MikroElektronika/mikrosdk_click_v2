@@ -181,7 +181,7 @@ void amfm_case_minus ( amfm_t *ctx )
 
 void amfm_case_mute ( amfm_t *ctx )
 {
-    if ( mute_flag == 0 )
+    if ( 0 == mute_flag )
     {
         amfm_mute( ctx );
         log_printf( &logger, "> > > mute ON \r\n" );
@@ -242,14 +242,15 @@ void application_init ( void )
 
     Delay_ms( 100 );
     status = amfm_init_device( &amfm );
-    if ( status == 0 )
+    if ( 0 == status )
     {
         log_printf( &logger, "> > > app init done < < <\r\n" );
     }
-    else if ( status == 1 )
+    else if ( 1 == status )
     {
         log_printf( &logger, "> > >    timeout    < < <\r\n" );
     }
+    Delay_ms ( 1000 );
     
     amfm_case_seek( &amfm );
     amfm_case_memorize( );

@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Biometrics",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Biometrics",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Heart Rate 11 click",
     "example_list": [
@@ -26,9 +25,11 @@
     "name": "mikroe.click.heartrate11",
     "product_link": "https://www.mikroe.com/heart-rate-11-click",
     "short_description": "Heart Rate 11 Click is a compact add-on board suitable for heart rate monitoring applications. This board features the OB1203, a multi-channel light sensor (LS/CS), a proximity sensor (PS), and a photoplethysmography sensor (PPG) from Renesas. It can be configured as an ambient light sensor to measure ambient light similar to the human eye experience or as an RGB color sensor. The OB1203 establishes communication to and from the module entirely through a standard I2C compatible interface and has a fully integrated biosensor for reflective photoplethysmography.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.HeartRate11",
+    "subdir_name": "lib_heartrate11"
 }
-

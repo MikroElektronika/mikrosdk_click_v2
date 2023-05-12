@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "ZigBee",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Wireless connectivity > ZigBee",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+    "dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "BEE click",
     "example_list": [
@@ -26,16 +25,15 @@
     "name": "mikroe.click.bee",
     "product_link": "https://www.mikroe.com/bee-click",
     "short_description": "The click is designed to run on 3.3V power supply only.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         242
     ],
-    "version": "2.0.0.5"
+    "version": "2.1.0.6",
+    "cmake": true,
+    "alias": "Click.Bee",
+    "subdir_name": "lib_bee"
 }
-
-
-
-
 

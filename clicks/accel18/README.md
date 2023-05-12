@@ -71,15 +71,14 @@ uint8_t accel18_get_interrupt_1 ( accel18_t *ctx );
 ## Example Description
 
 > This example application showcases ability of the device
-to read axes values on detected interrupt, and check detected
-motion.
+to read axes values on detected interrupt.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
 > Initialization of comunication modules(SPI/I2C, UART) and additional
-two interrupt pins. Then configures device and sets 8g range and 25 
+two interrupt pins. Then configures device and sets 8g range and 10 Hz
 data rate, with interrupt enabled.
 
 ```c
@@ -128,48 +127,33 @@ void application_init ( void )
 
 ### Application Task
 
-> Whenever interrupt is detected checks interrupt status for motion
-detection, and then reads x, y, and z axes, calculates value and
-logs result.
+> Whenever interrupt is detected checks interrupt status for data ready,
+and then reads x, y, and z axes, calculates value and logs result.
 
 ```c
 
 void application_task ( void )
 {
+    accel18_axes_t axes_data;
     if ( !accel18_get_interrupt_1( &accel18 ) )
     {
-        //Interrupt detected check
-        uint8_t int_flag = 0;
+        // Check interrupts
         uint8_t interrupt_state = 0;
         accel18_byte_read( &accel18, ACCEL18_REG_INTERRUPT_STATUS, &interrupt_state );
-        if ( interrupt_state & ACCEL18_INT_TILT_EN )
+        if ( interrupt_state & ACCEL18_INT_ACQ_EN )
         {
-            int_flag++;
-            log_printf( &logger, ">Tilt<\t" );
+            // Axis read
+            accel18_read_axes( &accel18, &axes_data );
+            log_printf( &logger, " > X[g]: %.2f\r\n", axes_data.x );
+            log_printf( &logger, " > Y[g]: %.2f\r\n", axes_data.y );
+            log_printf( &logger, " > Z[g]: %.2f\r\n", axes_data.z );
+            log_printf( &logger, "**************************\r\n" );
         }
-        if ( interrupt_state & ACCEL18_INT_FLIP_EN )
+        // Clear interrupts
+        if ( interrupt_state )
         {
-            int_flag++;
-            log_printf( &logger, ">Flip<\t" );
+            accel18_byte_write( &accel18, ACCEL18_REG_INTERRUPT_STATUS, ~interrupt_state );
         }
-        if ( interrupt_state & ACCEL18_INT_SHAKE_EN )
-        {
-            int_flag++;
-            log_printf( &logger, ">Shake<\t" );
-        }
-        if ( int_flag )
-        {
-            log_printf( &logger, "\r\n" );
-        }
-
-        //Axis read
-        accel18_axes_t axes_data;
-        accel18_read_axes( &accel18, &axes_data );
-        log_printf( &logger, " > X[g]: %.2f\r\n", axes_data.x );
-        log_printf( &logger, " > Y[g]: %.2f\r\n", axes_data.y );
-        log_printf( &logger, " > Z[g]: %.2f\r\n", axes_data.z );
-        log_printf( &logger, "**************************\r\n" );
-        Delay_ms( 300 );
     }
 }
 

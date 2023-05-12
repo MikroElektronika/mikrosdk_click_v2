@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "ADC",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Mixed signal > ADC",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,35 +8,31 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "ADC 6 click",
     "example_list": [
-      {
-        "project_path": "Examples/example"
-      }
+        {
+            "project_path": "Examples/example"
+        }
     ],
     "help": "Help/doc",
     "icon": "Resources/click_icon.png",
     "license": {
-      "file_path": "",
-      "id": "46"
+        "file_path": "",
+        "id": "46"
     },
     "name": "mikroe.click.adc6",
     "product_link": "https://www.mikroe.com/adc-6-click",
     "short_description": "ADC 6 click is an advanced 24bit multichannel analog to digital converter (ADC), with 8 fully differential or 15 single ended/pseudo differential sampling inputs, and very flexible routing capabilities. The click board has two 2x10 pin headers, used both to configure the device and connect the input channels. ",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2337
     ],
-    "version": "2.0.0.6"
+    "version": "2.1.0.7",
+    "cmake": true,
+    "alias": "Click.Adc6",
+    "subdir_name": "lib_adc6"
 }
-
-
-
-
-
-

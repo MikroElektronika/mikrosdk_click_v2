@@ -3,18 +3,17 @@
  * \brief Bee Click example
  * 
  * # Description
- * The click is designed to run on 3.3V power supply only. 
+ * This example demonstrates the use of an BEE click board by showing
+ * the communication between the two click boards.
  *
  * The demo application is composed of two sections :
- * 
- * ## Application Init 
- * Initialization driver enables - SPI,
-    sets initialization BEE Click as a receiver, also write log.
- * 
- * ## Application Task  
- * This is an example which demonstrates the use of BEE Click board.
-    In this example, we use BEE Click to receive data.
- * 
+ *
+ * ## Application Init
+ * Initializes the driver and configures the click board.
+ *
+ * ## Application Task
+ * Depending on the selected application mode, it reads all the received data or 
+ * sends the desired message every 3 seconds.
  * 
  * \author MikroE Team
  *
@@ -26,25 +25,24 @@
 #include "bee.h"
 
 // ------------------------------------------------------------------ VARIABLES
-// #define TRANSMITTER
-#define RECEIVER
+
+// Comment out the line below in order to switch the application mode to receiver
+#define DEMO_APP_TRANSMITTER
 
 static bee_t bee;
 static log_t logger;
 
-static uint8_t short_address1[ 2 ];
-static uint8_t short_address2[ 2 ];
-static uint8_t long_address1[ 8 ];
-static uint8_t long_address2[ 8 ];
-static uint8_t pan_id1[ 2 ];
-static uint8_t pan_id2[ 2 ];
-static uint8_t cnt;
-static uint8_t rx_data_fifo[ BEE_DATA_LENGHT ];
-static uint8_t rx_data_fifo_old[ BEE_DATA_LENGHT ];
-static uint8_t data_tx1[] = { 'M', 'i', 'k', 'r', 'o', 'E', 0};
-static uint8_t data_tx2[] = { 'B', 'E', 'E', ' ', ' ', ' ', 0};
-static uint8_t tx_data_fifo[ BEE_DATA_LENGHT + BEE_HEADER_LENGHT + 2 ];
-static uint8_t tmp;
+static uint8_t short_address1[ 2 ] = { 0 };
+static uint8_t short_address2[ 2 ] = { 0 };
+static uint8_t long_address1[ 8 ] = { 0 };
+static uint8_t long_address2[ 8 ] = { 0 };
+static uint8_t pan_id1[ 2 ] = { 0 };
+static uint8_t pan_id2[ 2 ] = { 0 };
+static uint8_t rx_data_fifo[ BEE_DATA_LENGHT ] = { 0 };
+static uint8_t rx_data_fifo_old[ BEE_DATA_LENGHT ] = { 0 };
+static uint8_t data_tx1[] = { 'M', 'i', 'k', 'r', 'o', 'E', 0 };
+static uint8_t data_tx2[] = { 'B', 'E', 'E', ' ', ' ', ' ', 0 };
+static uint8_t tx_data_fifo[ BEE_DATA_LENGHT + BEE_HEADER_LENGHT + 2 ] = { 0 };
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -70,8 +68,8 @@ void application_init ( void )
     bee_cfg_setup( &cfg );
     BEE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     bee_init( &bee, &cfg );
-
-    for ( cnt = 0; cnt < 2; cnt++ )
+    
+    for ( uint8_t cnt = 0; cnt < 2; cnt++ )
     {
         short_address1[ cnt ] = 1;
         short_address2[ cnt ] = 2;
@@ -79,10 +77,10 @@ void application_init ( void )
         pan_id2[ cnt ] = 3;
     }
 
-    for ( cnt = 0; cnt < 8; cnt++ )
+    for ( uint8_t cnt = 0; cnt < 8; cnt++ )
     {
-        short_address1[ cnt ] = 1;
-        short_address2[ cnt ] = 2;
+        long_address1[ cnt ] = 1;
+        long_address2[ cnt ] = 2;
     }
 
     log_printf( &logger, "    Reset and WakeUp     \r\n"  );
@@ -91,26 +89,21 @@ void application_init ( void )
     bee_rf_reset( &bee );
     bee_enable_immediate_wake_up( &bee );
 
-#ifdef RECEIVER
-    log_printf( &logger, "    Set address and PAN ID  \r\n" );
-    bee_set_long_address( &bee, &long_address2 );
-    bee_set_short_address( &bee, &short_address2 );
-    bee_set_pan_id( &bee, &pan_id2 );
-#endif
-#ifdef TRANSMITTER
+#ifdef DEMO_APP_TRANSMITTER
     // Transmitter mode
+    log_printf( &logger, " Application Mode: Transmitter\r\n" );
     tx_data_fifo[0]  = BEE_HEADER_LENGHT;
     tx_data_fifo[1]  = BEE_HEADER_LENGHT + BEE_DATA_LENGHT;
     tx_data_fifo[2]  = 0x01;                        // control frame
     tx_data_fifo[3]  = 0x88;
-    tx_data_fifo[4]  = 0x23;                  // sequence number
-    tx_data_fifo[5]  = pan_id2[1];                 // destinatoin pan
+    tx_data_fifo[4]  = 0x23;                        // sequence number
+    tx_data_fifo[5]  = pan_id2[1];                  // destinatoin pan
     tx_data_fifo[6]  = pan_id2[0];
-    tx_data_fifo[7]  = short_address2[0];          // destination address
+    tx_data_fifo[7]  = short_address2[0];           // destination address
     tx_data_fifo[8]  = short_address2[1];
-    tx_data_fifo[9]  = pan_id1[0];                 // source pan
+    tx_data_fifo[9]  = pan_id1[0];                  // source pan
     tx_data_fifo[10] = pan_id1[1];
-    tx_data_fifo[11] = short_address1[0];          // source address
+    tx_data_fifo[11] = short_address1[0];           // source address
     tx_data_fifo[12] = short_address1[1];
     memcpy( &tx_data_fifo[ 13 ], &data_tx1[ 0 ], BEE_DATA_LENGHT );
     
@@ -118,6 +111,12 @@ void application_init ( void )
     bee_set_long_address( &bee, &long_address1 );
     bee_set_short_address( &bee, &short_address1 );
     bee_set_pan_id( &bee, &pan_id1 );
+#else
+    log_printf( &logger, " Application Mode: Receiver\r\n" );
+    log_printf( &logger, "    Set address and PAN ID  \r\n" );
+    bee_set_long_address( &bee, &long_address2 );
+    bee_set_short_address( &bee, &short_address2 );
+    bee_set_pan_id( &bee, &pan_id2 );
 #endif
     log_printf( &logger, "    Init ZigBee module:    \r\n" );
     log_printf( &logger, " - Set nonbeacon-enabled \r\n" );
@@ -137,27 +136,14 @@ void application_init ( void )
     
     log_printf( &logger, " - Device Wake Up\r\n"  );
     bee_hw_wake_up( &bee );
-    tmp = bee_read_byte_short( &bee, BEE_INTSTAT ); // clears status register
+    bee_read_byte_short( &bee, BEE_INTSTAT ); // clears status register
     
     Delay_1sec( );
 }
 
 void application_task ( void )
 {
-#ifdef RECEIVER
-    // Receiver mode
-    bee_read_rx_fifo( &bee, &rx_data_fifo[ 0 ] );
-    
-    if ( memcmp( &rx_data_fifo_old[ 0 ], &rx_data_fifo[ 0 ], BEE_DATA_LENGHT ) )
-    {
-        memcpy( &rx_data_fifo_old [ 0 ], &rx_data_fifo[ 0 ], BEE_DATA_LENGHT );
-        log_printf( &logger, " - Received data :   " );
-        log_printf( &logger, "%.6s \r\n", rx_data_fifo );
-        Delay_ms( 1500 );
-    }
-    Delay_ms( 500 );
-#endif
-#ifdef TRANSMITTER
+#ifdef DEMO_APP_TRANSMITTER
     // Transmitter mode
     memcpy( &tx_data_fifo[ 13 ], &data_tx1[ 0 ], BEE_DATA_LENGHT);
     bee_write_tx_normal_fifo( &bee, 0, &tx_data_fifo[ 0 ] );
@@ -169,6 +155,18 @@ void application_task ( void )
     log_printf( &logger, " - Sent data :   " );
     log_printf( &logger, "%.6s \r\n", data_tx2 );
     Delay_ms( 3000 );
+#else
+    // Receiver mode
+    bee_read_rx_fifo( &bee, &rx_data_fifo[ 0 ] );
+    
+    if ( memcmp( &rx_data_fifo_old[ 0 ], &rx_data_fifo[ 0 ], BEE_DATA_LENGHT ) )
+    {
+        memcpy( &rx_data_fifo_old [ 0 ], &rx_data_fifo[ 0 ], BEE_DATA_LENGHT );
+        log_printf( &logger, " - Received data :   " );
+        log_printf( &logger, "%.6s \r\n", rx_data_fifo );
+        Delay_ms( 1500 );
+    }
+    Delay_ms( 500 );
 #endif
 }
 

@@ -111,31 +111,15 @@ void application_init ( void )
     {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
 
-    audioamp8_default_cfg ( &audioamp8 );
+    if ( AUDIOAMP8_ERROR == audioamp8_default_cfg ( &audioamp8 ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
     log_info( &logger, " Application Task " );
-    
-    audioamp8_btl_config( &audioamp8 );
-    Delay_ms( 100 );
-    
-    pwr_mode.manual_pm = AUDIOAMP8_SET_MANUAL_PWR_MODE;
-    pwr_mode.pm_man    = AUDIOAMP8_PM_MAN_3;
-    pwr_mode.mthr_1to2 = AUDIOAMP8_SET_MTHR_1TO2_DEFAULT;
-    pwr_mode.mthr_2to1 = AUDIOAMP8_SET_MTHR_2TO1_DEFAULT;
-    pwr_mode.mthr_2to3 = AUDIOAMP8_SET_MTHR_2TO3_DEFAULT;
-    pwr_mode.mthr_3to2 = AUDIOAMP8_SET_MTHR_3TO2_DEFAULT;
-    audioamp8_set_config_power_mode( &audioamp8, pwr_mode );
-    Delay_ms( 100 );
-    
-    pm_profile.pm_profile = AUDIOAMP8_PM_PROFILE_3; 
-    pm_profile.pm3_man_sh = AUDIOAMP8_SCHEME_C;
-    audioamp8_set_config_power_mode_profile( &audioamp8, pm_profile );
-    Delay_ms( 100 );
-    
-    audioamp8_set_mute( &audioamp8, AUDIOAMP8_SET_DISABLE );
     log_printf( &logger, "-------------------------\r\n" );
     Delay_ms( 1000 );
 }
@@ -152,8 +136,7 @@ void application_init ( void )
 
 void application_task ( void ) 
 {
-    ch_sel = AUDIOAMP8_SET_MON_CH_0;
-    channel_status_monitoring( );
+    channel_status_monitoring( AUDIOAMP8_SET_MON_CH_0 );
     Delay_ms( 1000 );
 }
 
@@ -162,7 +145,7 @@ void application_task ( void )
 ## Additional Function
 - `channel_status_monitoring` The function displays the status monitoring channel.
 ```c
-static void channel_status_monitoring ( void );
+static void channel_status_monitoring ( uint8_t ch_sel );
 ```
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).

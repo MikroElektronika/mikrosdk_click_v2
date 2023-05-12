@@ -1,7 +1,5 @@
 \mainpage Main Page
  
- 
-
 ---
 # Accel click
 
@@ -39,35 +37,47 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void accel_cfg_setup ( accel_cfg_t *cfg ); 
- 
-- Initialization function.
-> ACCEL_RETVAL accel_init ( accel_t *ctx, accel_cfg_t *cfg );
+- `accel_cfg_setup` Config Object Initialization function.
+```c
+void accel_cfg_setup ( accel_cfg_t *cfg );
+```
 
-- Click Default Configuration function.
-> void accel_default_cfg ( accel_t *ctx );
+- `accel_init` Initialization function.
+```c
+err_t accel_init ( accel_t *ctx, accel_cfg_t *cfg );
+```
 
+- `accel_default_cfg` Click Default Configuration function.
+```c
+void accel_default_cfg ( accel_t *ctx );
+```
 
 #### Example key functions :
 
-- Function raw read X axis
-> int16_t accel_read_x_axis ( accel_t *ctx );
+- `accel_read_x_axis` Function reads X axis value from Accel.
+```c
+int16_t accel_read_x_axis ( accel_t *ctx );
+```
  
-- Function raw read Y axis
-> int16_t accel_read_y_axis ( accel_t *ctx );
+- `accel_read_y_axis` Function reads Y axis value from Accel.
+```c
+int16_t accel_read_y_axis ( accel_t *ctx );
+```
 
-- Function raw read Z axis
-> int16_t accel_read_z_axis ( accel_t *ctx );
+- `accel_read_z_axis` Function reads Z axis value from Accel.
+```c
+int16_t accel_read_z_axis ( accel_t *ctx );
+```
 
 ## Examples Description
+
+> This example demonstrates the use of Accel click board by reading and displaying the accelerometer data (X, Y, and Z axis).
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes SPI/I2C driver and settings data read format,
-> power mode, FIFO control and baud rate( 100Hz default ).
+> Initializes SPI/I2C driver and settings data read format, power mode, FIFO control and baud rate ( 100Hz default ).
 
 ```c
 void application_init ( void )
@@ -86,7 +96,7 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_printf( &logger, "---- Application Init ----\r\n" );
+    log_info( &logger, " Application Init " );
 
     accel_cfg_setup( &cfg );
     ACCEL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
@@ -109,22 +119,22 @@ void application_init ( void )
 
 ### Application Task
 
-> Reading X, Y and Z axis and logs on usbuart every 1 second.
+> Reads X, Y and Z axis and logs on usbuart every 100 ms.
 
 ```c
 void application_task ( void )
 {
     val_x = accel_read_x_axis( &accel );
-    log_printf( &logger, "Axis X : %d\r\n", val_x );
+    log_printf( &logger, "Axis X : %.3f g\r\n", val_x / ACCEL_DATA_RES_LSB_PER_G );
 
     val_y = accel_read_y_axis( &accel );
-    log_printf( &logger, "Axis Y : %d\r\n", val_y );
+    log_printf( &logger, "Axis Y : %.3f g\r\n", val_y / ACCEL_DATA_RES_LSB_PER_G );
 
     val_z = accel_read_z_axis( &accel );
-    log_printf( &logger, "Axis Z : %d\r\n", val_z );
+    log_printf( &logger, "Axis Z : %.3f g\r\n", val_z / ACCEL_DATA_RES_LSB_PER_G );
 
     log_printf( &logger, "-------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms( 100 );
 }
 ```
 

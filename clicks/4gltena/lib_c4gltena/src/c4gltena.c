@@ -92,6 +92,15 @@ static int16_t encode_pdu_message( char *sms_text, int16_t sms_text_length, uint
  */
 static int16_t encode_phone_number ( char *phone_number, uint8_t *output_buffer, uint16_t buffer_size );
 
+/**
+ * @brief 4G-LTE-NA str cut chr function.
+ * @details This function removes all selected characters from string str,
+ * and returns it to the same str without those characters.
+ * @param str Address of string.
+ * @param chr Character to cut.
+ */
+static void c4gltena_str_cut_chr ( uint8_t *str, uint8_t chr );
+
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
 void c4gltena_cfg_setup ( c4gltena_cfg_t *cfg ) {
@@ -266,25 +275,29 @@ void c4gltena_send_sms_text ( c4gltena_t *ctx, char *phone_number, char *sms_tex
 }
 
 err_t c4gltena_send_sms_pdu ( c4gltena_t *ctx, char *service_center_number, char *phone_number, char *sms_text ) {
-    char text[ SMS_MAX_PDU_LENGTH ] = { 0 };
-    char pdu_buf[ SMS_MAX_PDU_LENGTH ] = { 0 };
-    char byte_buf[ 4 ] = { 0 };
-    char ctrl_z[ ] = { 26, 0 };
-    int16_t pdu_buf_len;
-    uint8_t length;
+    uint8_t text[ SMS_MAX_PDU_LENGTH ] = { 0 };
+    uint8_t pdu_buf[ SMS_MAX_PDU_LENGTH ] = { 0 };
+    uint8_t byte_buf[ 4 ] = { 0 };
+    uint8_t ctrl_z[ 2 ] = { 26, 0 };
+    int16_t pdu_buf_len = 0;
+    uint8_t length = 0;
+    uint8_t smsc[ 32 ] = { 0 };
+    uint8_t phone_num[ 32 ] = { 0 };
+    strcpy ( smsc, service_center_number );
+    strcpy ( phone_num, phone_number );
+    c4gltena_str_cut_chr ( smsc, '+' );
+    c4gltena_str_cut_chr ( phone_num, '+' );
     
-    str_cut_chr ( service_center_number, '+' );
-    str_cut_chr ( phone_number, '+' );
+    pdu_buf_len = pdu_encode( smsc, phone_num, sms_text, pdu_buf, SMS_MAX_PDU_LENGTH );
     
-    pdu_buf_len = pdu_encode( service_center_number, phone_number, sms_text, pdu_buf, SMS_MAX_PDU_LENGTH );
-    
-    if ( pdu_buf_len < 0 ) {
+    if ( pdu_buf_len < 0 )
+    {
         return C4GLTENA_ERROR;
     }
     
-    length = pdu_buf_len - ( ( strlen( service_center_number ) - 1 ) / 2 + 3 );
+    length = pdu_buf_len - ( ( strlen( smsc ) - 1 ) / 2 + 3 );
     uint8_to_str( length, byte_buf );
-    str_cut_chr ( byte_buf, ' ');
+    c4gltena_str_cut_chr ( byte_buf, ' ' );
     
     strcpy( text, C4GLTENA_CMD_CMGS );
     strcat( text, "=" );
@@ -293,7 +306,8 @@ err_t c4gltena_send_sms_pdu ( c4gltena_t *ctx, char *service_center_number, char
     c4gltena_send_cmd( ctx, text );
     memset( text, 0, SMS_MAX_PDU_LENGTH );
     
-    for ( int16_t cnt = 0; cnt < pdu_buf_len; cnt++ ) {
+    for ( int16_t cnt = 0; cnt < pdu_buf_len; cnt++ ) 
+    {
         uint8_to_hex ( pdu_buf[ cnt ], byte_buf );
         strcat ( text, byte_buf );
     }
@@ -377,7 +391,8 @@ static int16_t encode_pdu_message( char *sms_text, int16_t sms_text_length, uint
     int16_t i = 0;
 
     for ( ; i < sms_text_length - 1; ++i ) {
-        output_buffer[ output_buffer_length++ ] = ( ( sms_text[ i ] & BITMASK_7BITS ) >> ( carry_on_bits - 1 ) ) | ( ( sms_text[ i + 1 ] & BITMASK_7BITS ) << ( 8 - carry_on_bits ) );
+        output_buffer[ output_buffer_length++ ] = ( ( sms_text[ i ] & BITMASK_7BITS ) >> ( carry_on_bits - 1 ) ) | 
+                                                  ( ( sms_text[ i + 1 ] & BITMASK_7BITS ) << ( 8 - carry_on_bits ) );
         carry_on_bits++;
         if ( carry_on_bits == 8 ) {
             carry_on_bits = 1;
@@ -411,11 +426,27 @@ static int16_t encode_phone_number ( char *phone_number, uint8_t *output_buffer,
         if ( i % 2 == 0 ) {
             output_buffer[ output_buffer_length++ ] = BITMASK_HIGH_4BITS | ( phone_number[ i ] - '0' );
         } else {
-            output_buffer[ output_buffer_length - 1 ] = ( output_buffer[ output_buffer_length - 1 ] & BITMASK_LOW_4BITS ) | ( ( phone_number[ i ] - '0' ) << 4 ); 
+            output_buffer[ output_buffer_length - 1 ] = ( output_buffer[ output_buffer_length - 1 ] & BITMASK_LOW_4BITS ) | 
+                                                        ( ( phone_number[ i ] - '0' ) << 4 ); 
         }
     }
 
     return output_buffer_length;
+}
+
+static void c4gltena_str_cut_chr ( uint8_t *str, uint8_t chr )
+{
+    uint16_t cnt_0, cnt_1;
+    for ( cnt_0 = 0; cnt_0 < strlen( str ); cnt_0++ )
+    {
+        if ( str[ cnt_0 ] == chr )
+        {
+            for ( cnt_1 = cnt_0; cnt_1 < strlen( str ); cnt_1++ )
+            {
+                str[ cnt_1 ] = str[ cnt_1 + 1 ];
+            }
+        }
+    }
 }
 
 // ------------------------------------------------------------------------- END

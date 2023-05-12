@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Pressure",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Pressure",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Altitude 2 click",
     "example_list": [
@@ -26,16 +25,14 @@
     "name": "mikroe.click.altitude2",
     "product_link": "https://www.mikroe.com/altitude-2-click",
     "short_description": "Altitude 2 click is a high-resolution barometric pressure sensor Click board™. It provides very accurate measurements of temperature and atmospheric pressure, which can be used to calculate the altitude with a very high resolution of 20cm per step. Besides that, the device also includes features such as the ultra-low noise delta-sigma 24bit ADC, low power consumption, fast conversion times, pre-programmed unique compensation values, and more.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2378
     ],
-    "version": "2.0.0.10"
+    "version": "2.1.0.10",
+    "cmake": true,
+    "alias": "Click.Altitude2",
+    "subdir_name": "lib_altitude2"
 }
-
-
-
-
-

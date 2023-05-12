@@ -1,7 +1,0 @@
-type: subdirs
-project: Ble9
-
-subdirs: {
-    lib
-    example
-}

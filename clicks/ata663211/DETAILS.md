@@ -1,4 +1,5 @@
 
+---
 # ATA663211 click
 
 ATA663211 click carries an Atmel LIN transceiver IC designed to handle low-speed data communication in vehicles and in industrial applications with electrically harsh environments. 
@@ -34,26 +35,31 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void ata663211_cfg_setup ( ata663211_cfg_t *cfg ); 
+- `ata663211_cfg_setup` Config Object Initialization function.
+```c
+void ata663211_cfg_setup ( ata663211_cfg_t *cfg );
+```
  
-- Initialization function.
-> ATA663211_RETVAL ata663211_init ( ata663211_t *ctx, ata663211_cfg_t *cfg );
+- `ata663211_init` Initialization function.
+```c
+err_t ata663211_init ( ata663211_t *ctx, ata663211_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Wake-up device function.
-> void ata663211_wake_up_device ( ata663211_t *ctx );
- 
-- Sleep mode function.
-> void ata663211_sleep_mode ( ata663211_t *ctx );
+- `ata663211_generic_write` Generic write function.
+```c
+err_t ata663211_generic_write ( ata663211_t *ctx, uint8_t *data_buf, uint16_t len );
+```
 
-- Check inhibit pin state function.
-> uint8_t ata663211_check_inh ( ata663211_t *ctx );
+- `ata663211_generic_read` Generic read function.
+```c
+err_t ata663211_generic_read ( ata663211_t *ctx, uint8_t *data_buf, uint16_t len );
+```
 
 ## Examples Description
  
-> This application is for handling low-speed data communication in vehicles and in industrial.
+> This example demonstrates the use of an ATA663211 click board by showing the communication between the two click boards.
 
 **The demo application is composed of two sections :**
 
@@ -82,39 +88,36 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     ata663211_cfg_setup( &cfg );
     ATA663211_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ata663211_init( &ata663211, &cfg );
+#ifdef DEMO_APP_TRANSMITTER
+    log_printf( &logger, " Application Mode: Transmitter\r\n" );
+#else
+    log_printf( &logger, " Application Mode: Receiver\r\n" );
+#endif
 }
   
 ```
 
 ### Application Task
 
->  Checks if new data byte have received in rx buffer (ready for reading), and if ready than reads one byte from rx buffer.
+> Depending on the selected application mode, it reads all the received data or sends the desired text message with the message counter once per second.
 
 ```c
 
 void application_task ( void )
 {
-    ata663211_data_t tmp;
-    
-    //  Task implementation.
-    
-#ifdef DEMO_APP_RECEIVER
-
-       // RECEIVER - UART polling
-
-       tmp =  ata663211_generic_single_read( &ata663211 );
-       log_printf( &logger, &tmp, LOG_FORMAT_BYTE );
-#endif
-#ifdef DEMO_APP_TRANSMITER
-
-       // TRANSMITER - TX each 2 sec
-       
-       ata663211_generic_multi_write( &ata663211, demo_message, 9 );
-       Delay_ms( 2000 );
+#ifdef DEMO_APP_TRANSMITTER
+    ata663211_generic_write( &ata663211, DEMO_TEXT_MESSAGE, strlen( DEMO_TEXT_MESSAGE ) );
+    log_printf( &logger, "%s", ( char * ) DEMO_TEXT_MESSAGE );
+    Delay_ms( 1000 ); 
+#else
+    uint8_t rx_byte = 0;
+    if ( 1 == ata663211_generic_read( &ata663211, &rx_byte, 1 ) )
+    {
+       log_printf( &logger, "%c", rx_byte );
+    }
 #endif
 }  
 

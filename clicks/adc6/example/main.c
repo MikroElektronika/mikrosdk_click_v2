@@ -9,7 +9,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes driver and sets configuration witch enables channel 0,
+ * Initializes driver and sets configuration which enables channel 0,
  * puts AIN0 on positive analog input and AIN1 on negative analog input,
  * enables internal reference voltage (approximately 2.65V (AVDD = 3.3V)),
  * and also enables bipolar operation mode and puts device on full power mode.
@@ -73,9 +73,9 @@ void application_task ( void )
 {
     uint32_t adc_value = 0;
 
-    adc_value = adc6_get_adc_data( &adc6, ADC6_SINGLE_GET_DATA_MODE );
+    adc_value = adc6_get_adc_data( &adc6 );
 
-    log_printf( &logger, "The ADC value is: %lu\r\n", adc_value );
+    log_printf( &logger, "The ADC value is: 0x%.6LX\r\n", adc_value );
 
     Delay_ms( 500 );
 }

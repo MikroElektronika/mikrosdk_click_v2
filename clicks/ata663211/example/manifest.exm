@@ -2,7 +2,7 @@
     "name": "ATA663211 Click",
     "description": "ATA663211 click carries an Atmel LIN transceiver IC designed to handle low-speed data communication in vehicles and in industrial applications with electrically harsh environments. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
     "hw" : ["click","ATA663211"],
     "category" : ["LIN"] 
 }

@@ -21,7 +21,7 @@
  * This task repeats once every 2 seconds.
  * 
  * ## Additional Function
- * - static void channel_status_monitoring ( void )  - The function displays the status monitoring channel.
+ * - static void channel_status_monitoring ( uint8_t ch_sel ) - The function displays the status monitoring channel.
  *
  * @author Nenad Filipovic
  *
@@ -36,9 +36,8 @@ static log_t logger;
 static audioamp8_pwr_mon_cfg_t pwr_mode;
 static audioamp8_pwr_mod_profile_cfg_t pm_profile;
 static audioamp8_monitor_channel_t ch_mon;
-static uint8_t ch_sel;
 
-static void channel_status_monitoring ( void ) 
+static void channel_status_monitoring ( uint8_t ch_sel ) 
 {
     audioamp8_channel_monitoring( &audioamp8, ch_sel, &ch_mon );
     Delay_ms( 100 );
@@ -135,39 +134,22 @@ void application_init ( void )
     {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
 
-    audioamp8_default_cfg ( &audioamp8 );
+    if ( AUDIOAMP8_ERROR == audioamp8_default_cfg ( &audioamp8 ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
     log_info( &logger, " Application Task " );
-
-    audioamp8_btl_config( &audioamp8 );
-    Delay_ms( 100 );
-
-    pwr_mode.manual_pm = AUDIOAMP8_SET_MANUAL_PWR_MODE;
-    pwr_mode.pm_man    = AUDIOAMP8_PM_MAN_3;
-    pwr_mode.mthr_1to2 = AUDIOAMP8_SET_MTHR_1TO2_DEFAULT;
-    pwr_mode.mthr_2to1 = AUDIOAMP8_SET_MTHR_2TO1_DEFAULT;
-    pwr_mode.mthr_2to3 = AUDIOAMP8_SET_MTHR_2TO3_DEFAULT;
-    pwr_mode.mthr_3to2 = AUDIOAMP8_SET_MTHR_3TO2_DEFAULT;
-    audioamp8_set_config_power_mode( &audioamp8, pwr_mode );
-    Delay_ms( 100 );
-
-    pm_profile.pm_profile = AUDIOAMP8_PM_PROFILE_3; 
-    pm_profile.pm3_man_sh = AUDIOAMP8_SCHEME_C;
-    audioamp8_set_config_power_mode_profile( &audioamp8, pm_profile );
-    Delay_ms( 100 );
-
-    audioamp8_set_mute( &audioamp8, AUDIOAMP8_SET_DISABLE );
     log_printf( &logger, "-------------------------\r\n" );
     Delay_ms( 1000 );
 }
 
 void application_task ( void ) 
 {
-    ch_sel = AUDIOAMP8_SET_MON_CH_0;
-    channel_status_monitoring( );
+    channel_status_monitoring( AUDIOAMP8_SET_MON_CH_0 );
     Delay_ms( 1000 );
 }
 
