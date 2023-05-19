@@ -36,27 +36,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void current3_cfg_setup ( current3_cfg_t *cfg ); 
- 
-- Initialization function.
-> CURRENT3_RETVAL current3_init ( current3_t *ctx, current3_cfg_t *cfg );
+- `current3_cfg_setup` Config Object Initialization function.
+```c
+void current3_cfg_setup ( current3_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void current3_default_cfg ( current3_t *ctx );
+- `current3_init` Initialization function.
+```c
+err_t current3_init ( current3_t *ctx, current3_cfg_t *cfg );
+```
 
+- `current3_default_cfg` Click Default Configuration function.
+```c
+void current3_default_cfg ( current3_t *ctx );
+```
 
 #### Example key functions :
 
-- The function get the temperature by read multiple data bytes from a group of contiguous registers
-> float current3_get_temperature ( current3_t *ctx, uint8_t temp_sel );
- 
-- The function source voltage registers store the voltage measured at the SENSE+ pin
-> float current3_get_source_voltage ( current3_t *ctx );
+- `current3_get_temperature` The function get the temperature by read multiple data bytes from a group of contiguous registers
+```c
+float current3_get_temperature ( current3_t *ctx, uint8_t temp_sel );
+```
 
-- The function current measurement measure the direction of current flow 
-- ( from SENSE+ to SENSE- or from SENSE- to SENSE+ )
-> float current3_get_current ( current3_t *ctx );
+- `current3_get_source_voltage` The function source voltage registers store the voltage measured at the SENSE+ pin
+```c
+float current3_get_source_voltage ( current3_t *ctx );
+```
+
+- `current3_get_current` The function current measurement measure the direction of current flow ( from SENSE+ to SENSE- or from SENSE- to SENSE+ )
+```c
+float current3_get_current ( current3_t *ctx );
+```
 
 ## Examples Description
 

@@ -2,7 +2,7 @@
     "name": "BUCK 6 Click",
     "description": "BUCK 6 click is an advanced synchronous DC-DC step down (buck) converter, with a very wide input voltage range and reasonably high output current.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MAX17572"],
     "category" : ["Buck"] 
 }

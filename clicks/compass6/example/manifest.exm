@@ -2,7 +2,7 @@
     "name": "Compass 6 Click",
     "description": "Compass 6 Click is a compact add-on board perfect for implementation in applications such as an electronic compass. This board features the HSCDTD008A, a high-sensitivity geomagnetic sensor from ALPS Alpine. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","HSCDTD008A"],
     "category" : ["Magnetic"]
 }

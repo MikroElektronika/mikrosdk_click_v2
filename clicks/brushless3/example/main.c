@@ -32,9 +32,8 @@
 static brushless3_t brushless3;
 static log_t logger;
 
-static float velocity; 
+static float velocity = 0; 
 static int16_t speed = 0;
-static float duty_cycle = 0.5;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -57,17 +56,15 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     brushless3_cfg_setup( &cfg );
     BRUSHLESS3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     brushless3_init( &brushless3, &cfg );
-    brushless3_default_cfg( &brushless3 );
-    brushless3_forward_direction( &brushless3 );
-    brushless3_set_default_param( &brushless3 );
     
-    brushless3_pwm_start( &brushless3 );
-    brushless3_set_duty_cycle ( &brushless3, duty_cycle );
-    Delay_ms( 4000 );
+    if ( BRUSHLESS3_ERROR == brushless3_default_cfg ( &brushless3 ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
 }
 
 void application_task ( void )
@@ -77,8 +74,8 @@ void application_task ( void )
     for ( speed = 100; speed <= BRUSHLESS3_MAX_SPEED; speed += 20 )
     {
         brushless3_set_speed( &brushless3, speed );
-        velocity = brushless3_get_speed( &brushless3 );
-        log_printf( &logger, " Motor frequency: %.2f Hz\r\n",  velocity );
+        brushless3_get_speed( &brushless3, &velocity );
+        log_printf( &logger, " Motor frequency: %.2f Hz\r\n", velocity );
         Delay_ms( 100 );
     }
 
@@ -88,8 +85,8 @@ void application_task ( void )
     for ( speed = BRUSHLESS3_MAX_SPEED; speed >= 50; speed -= 20 )
     {
         brushless3_set_speed( &brushless3, speed );
-        velocity = brushless3_get_speed( &brushless3 );
-        log_printf( &logger, " Motor frequency: %.2f Hz\r\n",  velocity );
+        brushless3_get_speed( &brushless3, &velocity );
+        log_printf( &logger, " Motor frequency: %.2f Hz\r\n", velocity );
         Delay_ms( 100 );
     }
     

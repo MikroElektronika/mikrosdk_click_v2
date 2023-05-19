@@ -48,8 +48,7 @@ void application_init ( void )
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
-    //  Click initialization.
-
+    // Click initialization.
     clockgen3_cfg_setup( &cfg );
     CLOCKGEN3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     clockgen3_init( &clockgen3, &cfg );

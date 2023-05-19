@@ -1,60 +1,29 @@
 /*!
  * \file 
- * \brief Dht222 Click example
+ * \brief DHT22 2 Click example
  * 
  * # Description
- * DHT22 2 click is used for measuring the environmental temperature and relative humidity. 
- * The calibration coefficient is saved in the OTP memory of an integrated MCU. The integrated 
- * MCU also provides I2C or 1-Wire interface, selectable by the onboard SMD jumper selectors. 
- * The operating voltage can also be selected by the onboard SMD jumper.
- *
+ * This example demonstrates the use of DHT22 2 click board by reading
+ * the temperature and humidity data.
+ * 
  * The demo application is composed of two sections :
- * 
- * ## Application Init 
- *  Initialization driver enable's - I2C and start write log.
- * 
- * ## Application Task  
- * This is a example which demonstrates the use of DHT22 2 Click board.
- * DHT22 2 Click communicates with register via I2C protocol read data from register,
- * measured temperature and humidity data from the AM2322 sensor.
- * Convert temperature data to degrees Celsius [ �C ] and
- * humidity data to percentarg [ % ].
- * Results are being sent to the Usart Terminal where you can track their changes.
- * All data logs on usb uart for aproximetly every 5 sec.
- * 
+ *
+ * ## Application Init
+ * Initializes the driver and logger.
+ *
+ * ## Application Task
+ * Reads the temperature (degrees C) and the relative humidity (%RH) data and 
+ * displays the results on the USB UART approximately once per second.
  * 
  * \author MikroE Team
  *
  */
-// ------------------------------------------------------------------- INCLUDES
-
 #include "board.h"
 #include "log.h"
 #include "dht222.h"
 
-// ------------------------------------------------------------------ VARIABLES
-
 static dht222_t dht222;
 static log_t logger;
-
-static uint16_t temperature;
-static uint16_t humidity;
-
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
-
-
-// Write log of humidity and temperature value as a two-digit number.
-
-void dht222_display_temp_hum ( )
-{
-    log_printf( &logger, "   Humidity   : %d.%d %\r\n", humidity / 10, humidity % 10 );
-
-    log_printf( &logger, "   Temperature: %d.%d C\r\n",  temperature / 10, temperature % 10 );
-
-    log_printf( &logger, "--------------------------\r\n" );
-}
-
-// ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
 {
@@ -75,25 +44,23 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     dht222_cfg_setup( &cfg );
     DHT222_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     dht222_init( &dht222, &cfg );
-
     Delay_ms( 500 );
 }
 
 void application_task ( void )
 {
-    temperature = dht222_get_temperature( &dht222 );
-
-    Delay_1sec( );
-
-    humidity = dht222_get_humidity( &dht222 );
-
-    dht222_display_temp_hum( );
-
-    Delay_ms( 5000 );
+    uint16_t temperature = 0;
+    uint16_t humidity = 0;
+    if ( DHT222_OK == dht222_get_temp_hum ( &dht222, &temperature, &humidity ) )
+    {
+        log_printf( &logger, " Humidity   : %.1f %%\r\n", ( float ) humidity / 10 );
+        log_printf( &logger, " Temperature: %.1f C \r\n", ( float ) temperature / 10 );
+        log_printf( &logger, "---------------------\r\n" );
+        Delay_ms ( 1000 );
+    }
 }
 
 void main ( void )

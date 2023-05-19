@@ -15,7 +15,8 @@
  * every 2 seconds.
  * 
  * ## Additional Function
- * - canfd2_process ( ) - The general process of collecting the received data.
+ * - static void canfd2_clear_app_buf ( void )
+ * - static err_t canfd2_process ( canfd2_t *ctx )
  * 
  * \author MikroE Team
  *
@@ -27,40 +28,38 @@
 #include "canfd2.h"
 #include "string.h"
 
-#define PROCESS_RX_BUFFER_SIZE 500
+// Comment out the line below in order to switch the application mode to receiver
+#define DEMO_APP_TRANSMITTER
 
-#define TEXT_TO_SEND "MikroE\r\n"
+// Text message to send in the transmitter application mode
+#define DEMO_TEXT_MESSAGE           "MIKROE - CAN FD 2 click board\r\n\0"
 
-// ------------------------------------------------------------------ VARIABLES
-
-#define DEMO_APP_RECEIVER
-// #define DEMO_APP_TRANSMITTER
+#define PROCESS_BUFFER_SIZE 200
 
 static canfd2_t canfd2;
 static log_t logger;
 
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
+static uint8_t app_buf[ PROCESS_BUFFER_SIZE ] = { 0 };
+static int32_t app_buf_len = 0;
 
-static void canfd2_process ( void )
-{
-    int32_t rsp_size;
-    
-    char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
-    uint8_t check_buf_cnt;
-    
-    rsp_size = canfd2_generic_read( &canfd2, uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
+/**
+ * @brief CAN FD 2 clearing application buffer.
+ * @details This function clears memory of application buffer and reset its length.
+ * @note None.
+ */
+static void canfd2_clear_app_buf ( void );
 
-    if ( rsp_size > 0 )
-    {  
-        log_printf( &logger, "Received data: " );
-        
-        for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
-        {
-            log_printf( &logger, "%c", uart_rx_buffer[ check_buf_cnt ] );
-        }
-    }
-    Delay_ms( 100 );
-}
+/**
+ * @brief CAN FD 2 data reading function.
+ * @details This function reads data from device and concatenates data to application buffer. 
+ * @param[in] ctx : Click context object.
+ * See #canfd2_t object definition for detailed explanation.
+ * @return @li @c  0 - Read some data.
+ *         @li @c -1 - Nothing is read.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+static err_t canfd2_process ( canfd2_t *ctx );
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -87,26 +86,11 @@ void application_init ( void )
     canfd2_cfg_setup( &cfg );
     CANFD2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     canfd2_init( &canfd2, &cfg );
-
+    
+    CANFD2_SET_DATA_SAMPLE_EDGE;
     Delay_ms( 100 );
     
-#ifdef DEMO_APP_RECEIVER
-
-    canfd2_set_mode( &canfd2, CANFD2_OP_MODE_RECEIVE_ONLY );
-    if ( CANFD2_OP_MODE_RECEIVE_ONLY == canfd2_get_mode ( &canfd2 ) )
-    {
-        log_info( &logger, "--- RECEIVER MODE ---" );
-    }
-    else
-    {
-        log_info( &logger, "--- ERROR ---" );
-        log_printf( &logger, "Please restart your system.\r\n" );
-        for ( ; ; );
-    }
-
-#endif
 #ifdef DEMO_APP_TRANSMITTER
-
     canfd2_set_mode( &canfd2, CANFD2_OP_MODE_NORMAL );
     if ( CANFD2_OP_MODE_NORMAL == canfd2_get_mode ( &canfd2 ) )
     {
@@ -118,20 +102,37 @@ void application_init ( void )
         log_printf( &logger, "Please restart your system.\r\n" );
         for ( ; ; );
     }
-
+#else
+    canfd2_set_mode( &canfd2, CANFD2_OP_MODE_RECEIVE_ONLY );
+    if ( CANFD2_OP_MODE_RECEIVE_ONLY == canfd2_get_mode ( &canfd2 ) )
+    {
+        log_info( &logger, "--- RECEIVER MODE ---" );
+    }
+    else
+    {
+        log_info( &logger, "--- ERROR ---" );
+        log_printf( &logger, "Please restart your system.\r\n" );
+        for ( ; ; );
+    }
 #endif
     Delay_ms( 100 );
 }
 
 void application_task ( void )
 {
-#ifdef DEMO_APP_RECEIVER
-    canfd2_process( );
-#endif
 #ifdef DEMO_APP_TRANSMITTER
-    canfd2_generic_write( &canfd2, TEXT_TO_SEND, 8 );
+    canfd2_generic_write( &canfd2, DEMO_TEXT_MESSAGE, strlen ( DEMO_TEXT_MESSAGE ) );
     log_info( &logger, "--- The message is sent ---" );
     Delay_ms( 3000 );
+#else
+    canfd2_process( &canfd2 );
+    if ( app_buf_len > 0 ) 
+    {
+        Delay_ms ( 100 );
+        canfd2_process ( &canfd2 );
+        log_printf( &logger, "Received data: %s", app_buf );
+        canfd2_clear_app_buf( );
+    }
 #endif
 }
 
@@ -143,6 +144,41 @@ void main ( void )
     {
         application_task( );
     }
+}
+
+static void canfd2_clear_app_buf ( void ) 
+{
+    memset( app_buf, 0, app_buf_len );
+    app_buf_len = 0;
+}
+
+static err_t canfd2_process ( canfd2_t *ctx ) 
+{
+    uint8_t rx_buf[ PROCESS_BUFFER_SIZE ] = { 0 };
+    int32_t rx_size = 0;
+    rx_size = canfd2_generic_read( ctx, rx_buf, PROCESS_BUFFER_SIZE );
+    if ( rx_size > 0 ) 
+    {
+        int32_t buf_cnt = app_buf_len;
+        if ( ( ( app_buf_len + rx_size ) > PROCESS_BUFFER_SIZE ) && ( app_buf_len > 0 ) ) 
+        {
+            buf_cnt = PROCESS_BUFFER_SIZE - ( ( app_buf_len + rx_size ) - PROCESS_BUFFER_SIZE );
+            memmove ( app_buf, &app_buf[ PROCESS_BUFFER_SIZE - buf_cnt ], buf_cnt );
+        }
+        for ( int32_t rx_cnt = 0; rx_cnt < rx_size; rx_cnt++ ) 
+        {
+            if ( rx_buf[ rx_cnt ] ) 
+            {
+                app_buf[ buf_cnt++ ] = rx_buf[ rx_cnt ];
+                if ( app_buf_len < PROCESS_BUFFER_SIZE )
+                {
+                    app_buf_len++;
+                }
+            }
+        }
+        return CANFD2_OK;
+    }
+    return CANFD2_ERROR;
 }
 
 // ------------------------------------------------------------------------ END

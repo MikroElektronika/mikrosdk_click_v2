@@ -37,36 +37,42 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void dht222_cfg_setup ( dht222_cfg_t *cfg ); 
- 
-- Initialization function.
-> DHT222_RETVAL dht222_init ( dht222_t *ctx, dht222_cfg_t *cfg );
+- `dht222_cfg_setup` Config Object Initialization function.
+```c
+void dht222_cfg_setup ( dht222_cfg_t *cfg ); 
+```
 
+- `dht222_init` Initialization function.
+```c
+err_t dht222_init ( dht222_t *ctx, dht222_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- The function calculate the temperature data from sensor data reading from the sensor AM2322. 
-> uint16_t dht222_get_temperature ( dht222_t *ctx );
- 
-- The 16-bit humidity data should be divided by 10 to obtain the exact percentage of humidity [ % RH ].
-> uint16_t dht222_get_humidity ( dht222_t *ctx );
+- `dht222_read_reg` This function reads data from the desired register.
+```c
+err_t dht222_read_reg ( dht222_t *ctx, uint8_t address, uint8_t *data_out, uint8_t len );
+```
 
-- Function read 16-bit data from 8-bit register address.
-> uint16_t dht222_read_data ( dht222_t *ctx, uint8_t address );
+- `dht222_write_reg` This function writes data to the desired register.
+```c
+err_t dht222_write_reg ( dht222_t *ctx, uint8_t address, uint8_t *data_in, uint8_t len );
+```
+
+- `dht222_get_temp_hum` The function reads the temperature and humidity data from the sensor AM2322 on the DHT22 2 Click.
+```c
+err_t dht222_get_temp_hum ( dht222_t *ctx, uint16_t *temperature, uint16_t *humidity );
+```
 
 ## Examples Description
 
-> DHT22 2 click is used for measuring the environmental temperature and relative humidity. 
-> The calibration coefficient is saved in the OTP memory of an integrated MCU. The integrated 
-> MCU also provides I2C or 1-Wire interface, selectable by the onboard SMD jumper selectors. 
-> The operating voltage can also be selected by the onboard SMD jumper.
+> This example demonstrates the use of DHT22 2 click board by reading the temperature and humidity data.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initialization driver enable's - I2C and start write log. 
+> Initializes the driver and logger.
 
 ```c
 
@@ -86,14 +92,12 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_printf( &logger, "---- Application Init ----" );
+    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     dht222_cfg_setup( &cfg );
     DHT222_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     dht222_init( &dht222, &cfg );
-
     Delay_ms( 500 );
 }
   
@@ -101,27 +105,21 @@ void application_init ( void )
 
 ### Application Task
 
-> This is a example which demonstrates the use of DHT22 2 Click board.
-> DHT22 2 Click communicates with register via I2C protocol read data from register,
-> measured temperature and humidity data from the AM2322 sensor.
-> Convert temperature data to degrees Celsius [ �C ] and
-> humidity data to percentarg [ % ].
-> Results are being sent to the Usart Terminal where you can track their changes.
-> All data logs on usb uart for aproximetly every 5 sec.
+> Reads the temperature (degrees C) and the relative humidity (%RH) data and displays the results on the USB UART approximately once per second.
 
 ```c
 
 void application_task ( void )
 {
-    temperature = dht222_get_temperature( &dht222 );
-
-    Delay_1sec( );
-
-    humidity = dht222_get_humidity( &dht222 );
-
-    dht222_display_temp_hum( );
-
-    Delay_ms( 5000 );
+    uint16_t temperature = 0;
+    uint16_t humidity = 0;
+    if ( DHT222_OK == dht222_get_temp_hum ( &dht222, &temperature, &humidity ) )
+    {
+        log_printf( &logger, " Humidity   : %.1f %%\r\n", ( float ) humidity / 10 );
+        log_printf( &logger, " Temperature: %.1f C \r\n", ( float ) temperature / 10 );
+        log_printf( &logger, "---------------------\r\n" );
+        Delay_ms ( 1000 );
+    }
 }
 
 ``` 

@@ -80,12 +80,14 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     earthquake_cfg_setup( &cfg );
     EARTHQUAKE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     earthquake_init( &earthquake, &cfg );
-
-    Delay_ms( 100 );
+    Delay_ms ( 1000 );
+    display_status( earthquake_read_status( &earthquake ) );
+    Delay_ms ( 2000 );
+    earthquake_clear_memory( &earthquake );
+    Delay_ms ( 2000 );
 
     log_printf( &logger, "------------------------\r\n" );
     log_printf( &logger, "    Earthquake Click    \r\n" );
@@ -106,12 +108,12 @@ void application_task ( void )
             display_status( earthquake_read_status( &earthquake ) );
 
             read_data = earthquake_read_si( &earthquake );
-            log_printf( &logger, " Max SI : %5d\r\n", read_data );
+            log_printf( &logger, " Max SI : %d\r\n", read_data );
             log_printf( &logger, "------------------------ \r\n" );
             Delay_ms( 5000 );
         }
 
-        earthquake_clear_mememory( &earthquake );
+        earthquake_clear_memory( &earthquake );
         log_printf( &logger, " Afterquake  processing \r\n" );
         log_printf( &logger, "     please wait...     \r\n" );
         Delay_ms( 20000 );

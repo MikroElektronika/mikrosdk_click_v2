@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230519](#20230519)**
 + **[20230512](#20230512)**
 + **[20230505](#20230505)**
 + **[20230428](#20230428)**
@@ -46,6 +47,59 @@
 
 ---
 ---
+---
+
+## `20230519`
+
+*Following click boards have been added:*
+
++ `Color 12`
++ `I2C Isolator 5`
++ `Brushless 25`
++ `LED Driver 19`
++ `Binho Nova`
+
+*Following click boards have been updated:*
+
++ `ADC 10`
++ `Brushless 3`
++ `Brushless 6`
++ `Buck n Boost`
++ `Buck 3`
++ `Buck-Boost 3`
++ `BUZZ 2`
++ `CAN FD 2`
++ `CapSense`
++ `Clock Gen 3`
++ `Color 2`
++ `Color 3`
++ `Compass 6`
++ `Current 3`
++ `Current 4`
++ `Current 5`
++ `DAC 4`
++ `DAC 5`
++ `DHT22 2`
++ `Diff Press`
++ `Earthquake`
++ `BATT-MON`
++ `ADC 15`
++ `ATA663254`
++ `ADC 11`
++ `3 x Buck`
++ `Brushless 4`
++ `Clock Gen 4`
++ `EVC`
++ `Buck 6`
++ `EnOcean 4`
++ `DC Motor 11`
++ `DC Motor 19`
++ `DC Motor 20`
++ `Comparator`
++ `Current 6`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230512`

@@ -40,26 +40,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void earthquake_cfg_setup ( earthquake_cfg_t *cfg ); 
- 
-- Initialization function.
-> EARTHQUAKE_RETVAL earthquake_init ( earthquake_t *ctx, earthquake_cfg_t *cfg );
+- `earthquake_cfg_setup` Config Object Initialization function.
+```c
+void earthquake_cfg_setup ( earthquake_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void earthquake_default_cfg ( earthquake_t *ctx );
-
+- `earthquake_init` Initialization function.
+```c
+EARTHQUAKE_RETVAL earthquake_init ( earthquake_t *ctx, earthquake_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Shutoff output function.
-> uint8_t earthquake_proc_notify ( earthquake_t *ctx );
- 
-- Read status function.
-> uint8_t earthquake_read_status ( earthquake_t *ctx );
+- `earthquake_proc_notify` Shutoff output function.
+```c
+uint8_t earthquake_proc_notify ( earthquake_t *ctx );
+```
 
-- Read SI function.
-> uint16_t earthquake_read_si ( earthquake_t *ctx );
+- `earthquake_read_status` Read status function.
+```c
+uint8_t earthquake_read_status ( earthquake_t *ctx );
+```
+
+- `earthquake_read_si` Read SI function.
+```c
+uint16_t earthquake_read_si ( earthquake_t *ctx );
+```
 
 ## Examples Description
 
@@ -94,15 +100,17 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_printf( &logger, "---- Application Init ----\r\n" );
+    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     earthquake_cfg_setup( &cfg );
     EARTHQUAKE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     earthquake_init( &earthquake, &cfg );
-
-    Delay_ms( 100 );
+    Delay_ms ( 1000 );
+    display_status( earthquake_read_status( &earthquake ) );
+    Delay_ms ( 2000 );
+    earthquake_clear_memory( &earthquake );
+    Delay_ms ( 2000 );
 
     log_printf( &logger, "------------------------\r\n" );
     log_printf( &logger, "    Earthquake Click    \r\n" );
@@ -135,12 +143,12 @@ void application_task ( void )
             display_status( earthquake_read_status( &earthquake ) );
 
             read_data = earthquake_read_si( &earthquake );
-            log_printf( &logger, " Max SI : %5d\r\n", read_data );
+            log_printf( &logger, " Max SI : %d\r\n", read_data );
             log_printf( &logger, "------------------------ \r\n" );
             Delay_ms( 5000 );
         }
 
-        earthquake_clear_mememory( &earthquake );
+        earthquake_clear_memory( &earthquake );
         log_printf( &logger, " Afterquake  processing \r\n" );
         log_printf( &logger, "     please wait...     \r\n" );
         Delay_ms( 20000 );
@@ -152,12 +160,6 @@ void application_task ( void )
 }  
 
 ```
-
-## Note
-
-> 
-> 
-> 
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

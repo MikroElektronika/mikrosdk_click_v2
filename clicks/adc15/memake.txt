@@ -1,7 +1,0 @@
-type: subdirs
-project: ADC15
-
-subdirs: {
-    lib
-    example
-}

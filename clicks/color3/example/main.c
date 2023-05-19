@@ -1,18 +1,20 @@
 /*!
  * \file 
- * \brief Color3 Click example
+ * \brief Color 3 Click example
  * 
  * # Description
- * This application return the color of object.
+ * This example demonstrates the use of Color 3 click board by reading data
+ * from RGBC channels and converting them to HSL color and displaying those data as 
+ * well as the detected color name on the USB UART.
  *
  * The demo application is composed of two sections :
- * 
- * ## Application Init 
- * Initalizes I2C driver, applies default settings and makes an initial log.
- * 
- * ## Application Task  
- * Checks which color is detected by the sensor.
- * The detected color name is being logged on the USBUART.
+ *
+ * ## Application Init
+ * Initializes the driver and performs the click default configuration.
+ *
+ * ## Application Task
+ * Reads the values of all channels and converts them to HSL color and displays those data
+ * as well as the detected color name on the USB UART every 500ms approximately.
  * 
  * \author MikroE Team
  *
@@ -27,8 +29,6 @@
 
 static color3_t color3;
 static log_t logger;
-static uint8_t is_color;
-static float color_value;
 
 void application_init ( void )
 {
@@ -49,7 +49,6 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     color3_cfg_setup( &cfg );
     COLOR3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     color3_init( &color3, &cfg );
@@ -65,58 +64,69 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    color_value = color3_get_color_value( &color3 );
-    is_color = color3_get_color( color_value );
-
-    switch( is_color )
+    color3_channels_t rgbc;
+    if ( COLOR3_OK == color3_get_rgbc_data ( &color3, &rgbc ) )
     {
-        case COLOR3_ORANGE_COLOR_FLAG:
+        color3_hsl_t hsl;
+        color3_rgbc_to_hsl ( &color3, &rgbc, &hsl );
+        log_printf ( &logger, "\r\n Red: %u\r\n", rgbc.red );
+        log_printf ( &logger, " Green: %u\r\n", rgbc.green );
+        log_printf ( &logger, " Blue: %u\r\n", rgbc.blue );
+        log_printf ( &logger, " Clear: %u\r\n", rgbc.clear );
+        log_printf ( &logger, " Hue: %.1f deg\r\n", hsl.hue );
+        log_printf ( &logger, " Saturation: %.1f %%\r\n", hsl.saturation );
+        log_printf ( &logger, " Lightness: %.1f %%\r\n", hsl.lightness );
+        log_printf ( &logger, " Dominated color: " );
+        switch ( color3_get_color ( &hsl ) )
         {
-            log_printf( &logger, "--- Color: ORANGE\r\n" );
-            break;
-        }
-        case COLOR3_RED_COLOR_FLAG:
-        {
-            log_printf( &logger, "--- Color: RED\r\n" );
-            break;
-        }
-        case COLOR3_PINK_COLOR_FLAG:
-        {
-            log_printf( &logger, "--- Color: PINK\r\n" );
-            break;
-        }
-        case COLOR3_PURPLE_COLOR_FLAG:
-        {
-            log_printf( &logger, "--- Color: PURPLE\r\n" );
-            break;
-        }
-        case COLOR3_BLUE_COLOR_FLAG:
-        {
-            log_printf( &logger, "--- Color: BLUE\r\n" );
-            break;
-        }
-        case COLOR3_CYAN_COLOR_FLAG:
-        {
-            log_printf( &logger, "--- Color: CYAN\r\n" );
-            break;
-        }
-        case COLOR3_GREEN_COLOR_FLAG:
-        {
-            log_printf( &logger, "--- Color: GREEN\r\n" );
-            break;
-        }
-        case COLOR3_YELLOW_COLOR_FLAG:
-        {
-            log_printf( &logger, "--- Color: YELLOW\r\n" );
-            break;
-        }
-        default:
-        {
-            break;
+            case COLOR3_RED_COLOR:
+            {
+                log_printf ( &logger, "RED\r\n" );
+                break;
+            }
+            case COLOR3_YELLOW_COLOR:
+            {
+                log_printf ( &logger, "YELLOW\r\n" );
+                break;
+            }
+            case COLOR3_GREEN_COLOR:
+            {
+                log_printf ( &logger, "GREEN\r\n" );
+                break;
+            }
+            case COLOR3_CYAN_COLOR:
+            {
+                log_printf ( &logger, "CYAN\r\n" );
+                break;
+            }
+            case COLOR3_BLUE_COLOR:
+            {
+                log_printf ( &logger, "BLUE\r\n" );
+                break;
+            }
+            case COLOR3_MAGENTA_COLOR:
+            {
+                log_printf ( &logger, "MAGENTA\r\n" );
+                break;
+            }
+            case COLOR3_WHITE_COLOR:
+            {
+                log_printf ( &logger, "WHITE\r\n" );
+                break;
+            }
+            case COLOR3_BLACK_COLOR:
+            {
+                log_printf ( &logger, "BLACK\r\n" );
+                break;
+            }
+            default:
+            {
+                log_printf ( &logger, "UNKNOWN\r\n" );
+                break;
+            }
         }
     }
-
-    Delay_ms( 300 );
+    Delay_ms ( 500 );
 }
 
 void main ( void )

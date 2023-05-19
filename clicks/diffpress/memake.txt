@@ -1,7 +1,0 @@
-type: subdirs
-project: DiffPress
-
-subdirs: {
-    lib
-    example
-}
