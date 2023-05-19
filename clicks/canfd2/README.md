@@ -36,22 +36,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void canfd2_cfg_setup ( canfd2_cfg_t *cfg ); 
+- `canfd2_cfg_setup` Config Object Initialization function.
+```c
+void canfd2_cfg_setup ( canfd2_cfg_t *cfg );
+```
  
-- Initialization function.
-> CANFD2_RETVAL canfd2_init ( canfd2_t *ctx, canfd2_cfg_t *cfg );
+- `canfd2_init` Initialization function.
+```c
+err_t canfd2_init ( canfd2_t *ctx, canfd2_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Generic read function.
-> int32_t canfd2_generic_read ( canfd2_t *ctx, char *data_buf, uint16_t max_len );
+- `canfd2_generic_read` Generic read function.
+```c
+int32_t canfd2_generic_read ( canfd2_t *ctx, uint8_t *data_buf, uint16_t max_len );
+```
  
-- Generic write the byte of data function
-> void canfd2_write_data ( canfd2_t *ctx, uint8_t reg_addr, uint8_t write_data );
+- `canfd2_write_data` Generic write the byte of data function
+```c
+void canfd2_write_data ( canfd2_t *ctx, uint8_t reg_addr, uint8_t write_data );
+```
 
-- Get operating mode function
-> uint8_t canfd2_get_mode ( canfd2_t *ctx );
+- `canfd2_get_mode` Get operating mode function
+```c
+uint8_t canfd2_get_mode ( canfd2_t *ctx );
+```
 
 ## Examples Description
 
@@ -88,26 +98,11 @@ void application_init ( void )
     canfd2_cfg_setup( &cfg );
     CANFD2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     canfd2_init( &canfd2, &cfg );
-
+    
+    CANFD2_SET_DATA_SAMPLE_EDGE;
     Delay_ms( 100 );
     
-#ifdef DEMO_APP_RECEIVER
-
-    canfd2_set_mode( &canfd2, CANFD2_OP_MODE_RECEIVE_ONLY );
-    if ( CANFD2_OP_MODE_RECEIVE_ONLY == canfd2_get_mode ( &canfd2 ) )
-    {
-        log_info( &logger, "--- RECEIVER MODE ---" );
-    }
-    else
-    {
-        log_info( &logger, "--- ERROR ---" );
-        log_printf( &logger, "Please restart your system.\r\n" );
-        for ( ; ; );
-    }
-
-#endif
 #ifdef DEMO_APP_TRANSMITTER
-
     canfd2_set_mode( &canfd2, CANFD2_OP_MODE_NORMAL );
     if ( CANFD2_OP_MODE_NORMAL == canfd2_get_mode ( &canfd2 ) )
     {
@@ -119,7 +114,18 @@ void application_init ( void )
         log_printf( &logger, "Please restart your system.\r\n" );
         for ( ; ; );
     }
-
+#else
+    canfd2_set_mode( &canfd2, CANFD2_OP_MODE_RECEIVE_ONLY );
+    if ( CANFD2_OP_MODE_RECEIVE_ONLY == canfd2_get_mode ( &canfd2 ) )
+    {
+        log_info( &logger, "--- RECEIVER MODE ---" );
+    }
+    else
+    {
+        log_info( &logger, "--- ERROR ---" );
+        log_printf( &logger, "Please restart your system.\r\n" );
+        for ( ; ; );
+    }
 #endif
     Delay_ms( 100 );
 }
@@ -134,13 +140,19 @@ void application_init ( void )
 
 void application_task ( void )
 {
-#ifdef DEMO_APP_RECEIVER
-    canfd2_process( );
-#endif
 #ifdef DEMO_APP_TRANSMITTER
-    canfd2_generic_write( &canfd2, TEXT_TO_SEND, 8 );
+    canfd2_generic_write( &canfd2, DEMO_TEXT_MESSAGE, strlen ( DEMO_TEXT_MESSAGE ) );
     log_info( &logger, "--- The message is sent ---" );
     Delay_ms( 3000 );
+#else
+    canfd2_process( &canfd2 );
+    if ( app_buf_len > 0 ) 
+    {
+        Delay_ms ( 100 );
+        canfd2_process ( &canfd2 );
+        log_printf( &logger, "Received data: %s", app_buf );
+        canfd2_clear_app_buf( );
+    }
 #endif
 }
 

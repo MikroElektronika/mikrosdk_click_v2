@@ -146,7 +146,7 @@ void application_init ( void )
 ### Application Task
 
 > Checks Data ready pin and if asserted high it will read data of all
-3 axes(x, y, z) and log data to Terminal and set delay of 500ms.
+3 axes(x, y, z) and log data to Terminal.
 
 ```c
 
@@ -160,7 +160,6 @@ void application_task ( void )
         log_printf( &logger, " > Y: %d\r\n", axes_data.y );
         log_printf( &logger, " > Z: %d\r\n", axes_data.z );
         log_printf( &logger, "*********************\r\n" );
-        Delay_ms( 500 );
     }
 }
 

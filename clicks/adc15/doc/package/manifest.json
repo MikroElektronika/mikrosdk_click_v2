@@ -1,6 +1,6 @@
-    {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "ADC",
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Mixed signal > ADC",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "ADC 15 click",
     "example_list": [
@@ -26,10 +25,11 @@
     "name": "mikroe.click.adc15",
     "product_link": "https://www.mikroe.com/adc-15-click",
     "short_description": "ADC 15 Click is a compact add-on board that contains a high-performance data converter. This board features the ADS131M02, a two-channel, simultaneously sampling, 24-bit, delta-sigma (ΔΣ), analog-to-digital converter from Texas Instruments. The ADC inputs can be independently configured via serial peripheral interface depending on the sensor input. A low noise, programmable gain amplifier (PGA) provides gains ranging from 1 to 128 to amplify low-level signals.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.2"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.ADC15",
+    "subdir_name": "lib_adc15"
 }
-
-

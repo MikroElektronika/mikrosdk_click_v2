@@ -35,26 +35,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void dac4_cfg_setup ( dac4_cfg_t *cfg ); 
- 
-- Initialization function.
-> DAC4_RETVAL dac4_init ( dac4_t *ctx, dac4_cfg_t *cfg );
+- `dac4_cfg_setup` Config Object Initialization function.
+```c
+void dac4_cfg_setup ( dac4_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void dac4_default_cfg ( dac4_t *ctx );
-
+- `dac4_init` Initialization function.
+```c
+err_t dac4_init ( dac4_t *ctx, dac4_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Setting channel voltage reference values
-> uint8_t dac4_voltage_reference_set ( dac4_t *ctx, uint8_t v_ref_channel_a, uint8_t v_ref_channel_b, uint8_t v_ref_channel_c, uint8_t v_ref_channel_d );
- 
-- Writing channel gain values
-> uint8_t dac4_gain_set ( dac4_t *ctx, uint8_t gain_channel_a, uint8_t gain_channel_b, uint8_t gain_channel_c, uint8_t gain_channel_d );
+- `dac4_voltage_reference_set` Setting channel voltage reference values
+```c
+uint8_t dac4_voltage_reference_set ( dac4_t *ctx, uint8_t v_ref_channel_a, uint8_t v_ref_channel_b, uint8_t v_ref_channel_c, uint8_t v_ref_channel_d );
+```
 
-- Reading channel data and forming reports
-> uint8_t dac4_data_report ( dac4_t *ctx, dac_channel_setting_t * channel_buffer );
+- `dac4_gain_set` Writing channel gain values
+```c
+uint8_t dac4_gain_set ( dac4_t *ctx, uint8_t gain_channel_a, uint8_t gain_channel_b, uint8_t gain_channel_c, uint8_t gain_channel_d );
+```
+
+- `dac4_data_report` Reading channel data and forming reports
+```c
+uint8_t dac4_data_report ( dac4_t *ctx, dac_channel_setting_t * channel_buffer );
+```
 
 ## Examples Description
 
@@ -64,7 +70,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes I2C driver, executes general call reset and wake up commands and initializes variables to zero
+> Initializes I2C driver, executes general call reset and wake up commands.
 
 ```c
 
@@ -99,16 +105,14 @@ void application_init ( void )
     dac4_general_call_wake_up( &dac4 );
     Delay_ms( 500 );
 
-    dac4_default_cfg( &dac4 );
-    
-    log_printf( &logger, "~-- App init done \r\n \r\n" );
+    log_printf( &logger, "--- App init done \r\n \r\n" );
 }
   
 ```
 
 ### Application Task
 
-> Waits for user input and based on it logs reports or sets output value for specified channel
+> Changes the output voltage of channels every 3 seconds, and displays the channels status on the USB UART.
 
 ```c
 

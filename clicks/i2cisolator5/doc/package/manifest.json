@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Interface > I2C",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "I2C Isolator 5 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.i2cisolator5",
+    "product_link": "https://www.mikroe.com/i2c-isolator-5-click",
+    "short_description": "I2C Isolator 5 Click is a compact add-on board that offers completely isolated bidirectional communication. This board features ISO1644, a hot-swappable bidirectional I2C isolator with enhanced EMC and GPIOs from Texas Instruments. The ISO1644 provides two bidirectional channels, supporting a completely isolated I2C interface that eliminates the need for splitting I2C signals into separate transmit and receive signals for use with standalone optocouplers.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.4",
+    "cmake": true,
+    "alias": "Click.I2CIsolator5",
+    "subdir_name": "lib_i2cisolator5"
+}

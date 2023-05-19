@@ -35,26 +35,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void brushless3_cfg_setup ( brushless3_cfg_t *cfg ); 
- 
-- Initialization function.
-> BRUSHLESS3_RETVAL brushless3_init ( brushless3_t *ctx, brushless3_cfg_t *cfg );
+- `brushless3_cfg_setup` Config Object Initialization function.
+```c
+void brushless3_cfg_setup ( brushless3_cfg_t *cfg );
+```
 
-- Click Default Configuration function.
-> void brushless3_default_cfg ( brushless3_t *ctx );
+- `brushless3_init` Initialization function.
+```c
+err_t brushless3_init ( brushless3_t *ctx, brushless3_cfg_t *cfg );
+```
 
+- `brushless3_default_cfg` Click Default Configuration function.
+```c
+err_t brushless3_default_cfg ( brushless3_t *ctx );
+```
 
 #### Example key functions :
 
-- Function get the speed command ( % ) based on analog or PWM or I2C by read the value from the target Speed CMD register address.
-> float brushless3_get_speed_cmd ( brushless3_t *ctx );
- 
-- Function set the direction of rotation in the forward direction by sets PWM and RST pin on Brushless 3 Click board.
-> void brushless3_forward_direction ( brushless3_t *ctx );
+- `brushless3_set_speed` Set speed function
+```c
+err_t brushless3_set_speed ( brushless3_t *ctx, uint16_t motor_speed_hz );
+```
 
-- Function set the direction of rotation in the reverse direction by sets PWM and clear RST pin on Brushless 3 Click board.
-> void brushless3_reverse_direction ( brushless3_t *ctx ); 
+- `brushless3_get_speed` Get speed function
+```c
+err_t brushless3_get_speed ( brushless3_t *ctx, float *speed );
+```
+
+- `brushless3_forward_direction` Set the direction of rotation in the forward direction function
+```c
+void brushless3_forward_direction ( brushless3_t *ctx );
+```
 
 ## Examples Description
 
@@ -87,17 +98,15 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     brushless3_cfg_setup( &cfg );
     BRUSHLESS3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     brushless3_init( &brushless3, &cfg );
-    brushless3_default_cfg( &brushless3 );
-    brushless3_forward_direction( &brushless3 );
-    brushless3_set_default_param( &brushless3 );
     
-    brushless3_pwm_start( &brushless3 );
-    brushless3_set_duty_cycle ( &brushless3, duty_cycle );
-    Delay_ms( 4000 );
+    if ( BRUSHLESS3_ERROR == brushless3_default_cfg ( &brushless3 ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
 }
   
 ```
@@ -118,8 +127,8 @@ void application_task ( void )
     for ( speed = 100; speed <= BRUSHLESS3_MAX_SPEED; speed += 20 )
     {
         brushless3_set_speed( &brushless3, speed );
-        velocity = brushless3_get_speed( &brushless3 );
-        log_printf( &logger, " Motor frequency: %.2f Hz\r\n",  velocity );
+        brushless3_get_speed( &brushless3, &velocity );
+        log_printf( &logger, " Motor frequency: %.2f Hz\r\n", velocity );
         Delay_ms( 100 );
     }
 
@@ -129,8 +138,8 @@ void application_task ( void )
     for ( speed = BRUSHLESS3_MAX_SPEED; speed >= 50; speed -= 20 )
     {
         brushless3_set_speed( &brushless3, speed );
-        velocity = brushless3_get_speed( &brushless3 );
-        log_printf( &logger, " Motor frequency: %.2f Hz\r\n",  velocity );
+        brushless3_get_speed( &brushless3, &velocity );
+        log_printf( &logger, " Motor frequency: %.2f Hz\r\n", velocity );
         Delay_ms( 100 );
     }
     

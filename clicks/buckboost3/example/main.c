@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initialization driver init and enable device
+ * Initialization driver init and enable device.
  * 
  * ## Application Task  
  * It checks if the input voltage is below the operating voltage.
@@ -52,21 +52,18 @@ void application_init ( void )
     buckboost3_cfg_setup( &cfg );
     BUCKBOOST3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     buckboost3_init( &buckboost3, &cfg );
+    
+    buckboost3_enable ( &buckboost3, BUCKBOOST3_DEVICE_ENABLE );
+    log_info( &logger, " Device enabled " );
+    Delay_ms( 2000 );
 }
 
 void application_task ( void )
 {
-     uint8_t interrupt_state;
-
-    //  Task implementation.
-
-    interrupt_state = buckboost3_get_interrupt_state( &buckboost3 );
-    
-    if ( interrupt_state == 0 )
+    if ( !buckboost3_get_interrupt_state( &buckboost3 ) )
     {
-        log_printf( &logger, " Low input voltage !!!\r\n" );
+        log_error( &logger, " Low input voltage !!!" );
     }
-
     Delay_ms( 1000 );
 }
 

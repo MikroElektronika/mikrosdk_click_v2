@@ -2,7 +2,7 @@
     "name": "Diff Press Click",
     "description": "Diff Press Click is an accurate pressure sensor Click board™ capable of measuring differential pressure.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MPXV7007DP"],
     "category" : ["Pressure"] 
 }

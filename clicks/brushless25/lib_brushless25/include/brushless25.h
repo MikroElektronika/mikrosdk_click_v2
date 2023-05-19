@@ -1,0 +1,2156 @@
+/****************************************************************************
+** Copyright (C) 2020 MikroElektronika d.o.o.
+** Contact: https://www.mikroe.com/contact
+**
+** Permission is hereby granted, free of charge, to any person obtaining a copy
+** of this software and associated documentation files (the "Software"), to deal
+** in the Software without restriction, including without limitation the rights
+** to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+** copies of the Software, and to permit persons to whom the Software is
+** furnished to do so, subject to the following conditions:
+** The above copyright notice and this permission notice shall be
+** included in all copies or substantial portions of the Software.
+**
+** THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+** EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+** OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+** IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+** DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
+** OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+**  USE OR OTHER DEALINGS IN THE SOFTWARE.
+****************************************************************************/
+
+/*!
+ * @file brushless25.h
+ * @brief This file contains API for Brushless 25 Click Driver.
+ */
+
+#ifndef BRUSHLESS25_H
+#define BRUSHLESS25_H
+
+#ifdef __cplusplus
+extern "C"{
+#endif
+
+#include "drv_digital_out.h"
+#include "drv_digital_in.h"
+#include "drv_i2c_master.h"
+#include "drv_spi_master.h"
+#include "spi_specifics.h"
+#include "drv_pwm.h"
+
+/*!
+ * @addtogroup brushless25 Brushless 25 Click Driver
+ * @brief API for configuring and manipulating Brushless 25 Click driver.
+ * @{
+ */
+
+/**
+ * @defgroup brushless25_reg Brushless 25 Registers List
+ * @brief List of registers of Brushless 25 Click driver.
+ */
+
+/**
+ * @addtogroup brushless25_reg
+ * @{
+ */
+
+/**
+ * @brief Brushless 25 description register.
+ * @details Specified register for description of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_REG_ISD_CONFIG                  0x80
+#define BRUSHLESS25_REG_MOTOR_STARTUP1              0x82
+#define BRUSHLESS25_REG_MOTOR_STARTUP2              0x84
+#define BRUSHLESS25_REG_CLOSED_LOOP1                0x86
+#define BRUSHLESS25_REG_CLOSED_LOOP2                0x88
+#define BRUSHLESS25_REG_CLOSED_LOOP3                0x8A
+#define BRUSHLESS25_REG_CLOSED_LOOP4                0x8C
+#define BRUSHLESS25_REG_CONST_SPEED                 0x8E
+#define BRUSHLESS25_REG_CONST_PWR                   0x90
+#define BRUSHLESS25_REG_FAULT_CONFIG1               0x92
+#define BRUSHLESS25_REG_FAULT_CONFIG2               0x94
+#define BRUSHLESS25_REG_TRAP_CONFIG1                0x9A
+#define BRUSHLESS25_REG_TRAP_CONFIG2                0x9C
+#define BRUSHLESS25_REG_150_DEG_TWO_PH_PROFILE      0x96
+#define BRUSHLESS25_REG_150_DEG_THREE_PH_PROFILE    0x98
+#define BRUSHLESS25_REG_PIN_CONFIG1                 0xA4
+#define BRUSHLESS25_REG_PIN_CONFIG2                 0xA6
+#define BRUSHLESS25_REG_DEVICE_CONFIG               0xA8
+#define BRUSHLESS25_REG_PERIPH_CONFIG               0xAA
+#define BRUSHLESS25_REG_GD_CONFIG1                  0xAC
+#define BRUSHLESS25_REG_GD_CONFIG2                  0xAE
+#define BRUSHLESS25_REG_GATE_DRIVER_FAULT_STATUS    0xE0
+#define BRUSHLESS25_REG_CONTROLLER_FAULT_STATUS     0xE2
+#define BRUSHLESS25_REG_SYS_STATUS1                 0xE4
+#define BRUSHLESS25_REG_SYS_STATUS2                 0xEA
+#define BRUSHLESS25_REG_SYS_STATUS3                 0xEC
+#define BRUSHLESS25_REG_ALGO_CTRL1                  0xE6
+#define BRUSHLESS25_REG_DEVICE_CTRL                 0xE8
+
+/**
+ * @brief Brushless 25 memory selection.
+ * @details Specified memory selection for description of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_MEM_SEC                         0x00
+#define BRUSHLESS25_MEM_PAGE                        0x00
+
+
+
+/*! @} */ // brushless25_reg
+
+/**
+ * @defgroup brushless25_set Brushless 25 Registers Settings
+ * @brief Settings for registers of Brushless 25 Click driver.
+ */
+
+/**
+ * @addtogroup brushless25_set
+ * @{
+ */
+
+/**
+ * @brief Brushless 25 description setting.
+ * @details Specified setting for description of Brushless 25 Click driver.
+ */
+
+/**
+ * @brief Brushless 25 ISD_CONFIG register setting.
+ * @details Specified setting for ISD_CONFIG register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_ISD_EN                          0x40000000ul
+#define BRUSHLESS25_BRAKE_EN                        0x20000000ul
+#define BRUSHLESS25_HIZ_EN                          0x10000000ul
+#define BRUSHLESS25_RVS_DR_EN                       0x08000000ul
+#define BRUSHLESS25_RESYNC_EN                       0x04000000ul
+#define BRUSHLESS25_STAT_BRK_EN                     0x02000000ul
+#define BRUSHLESS25_STAT_DETECT_THR_5mV             0x00000000ul
+#define BRUSHLESS25_STAT_DETECT_THR_10mV            0x00400000ul
+#define BRUSHLESS25_STAT_DETECT_THR_15mV            0x00800000ul
+#define BRUSHLESS25_STAT_DETECT_THR_20mV            0x00C00000ul
+#define BRUSHLESS25_STAT_DETECT_THR_25mV            0x01000000ul
+#define BRUSHLESS25_STAT_DETECT_THR_30mV            0x01400000ul
+#define BRUSHLESS25_STAT_DETECT_THR_50mV            0x01800000ul
+#define BRUSHLESS25_STAT_DETECT_THR_1000mV          0x01C00000ul
+#define BRUSHLESS25_LOW_SIDE_BRAKE                  0x00000000ul
+#define BRUSHLESS25_HIGH_SIDE_BRAKE                 0x00200000ul
+#define BRUSHLESS25_BRK_CURR_THR_USED               0x00100000ul
+#define BRUSHLESS25_BRK_CURR_THR_5mV                0x00000000ul
+#define BRUSHLESS25_BRK_CURR_THR_10mV               0x00020000ul
+#define BRUSHLESS25_BRK_CURR_THR_15mV               0x00040000ul
+#define BRUSHLESS25_BRK_CURR_THR_20mV               0x00060000ul
+#define BRUSHLESS25_BRK_CURR_THR_25mV               0x00080000ul
+#define BRUSHLESS25_BRK_CURR_THR_30mV               0x000A0000ul
+#define BRUSHLESS25_BRK_CURR_THR_50mV               0x000C0000ul
+#define BRUSHLESS25_BRK_CURR_THR_100mV              0x000E0000ul
+#define BRUSHLESS25_BRK_TIME_10mS                   0x00000000ul
+#define BRUSHLESS25_BRK_TIME_50mS                   0x00002000ul
+#define BRUSHLESS25_BRK_TIME_100mS                  0x00004000ul
+#define BRUSHLESS25_BRK_TIME_200mS                  0x00006000ul
+#define BRUSHLESS25_BRK_TIME_300mS                  0x00008000ul
+#define BRUSHLESS25_BRK_TIME_400mS                  0x0000A000ul
+#define BRUSHLESS25_BRK_TIME_500mS                  0x0000C000ul
+#define BRUSHLESS25_BRK_TIME_750mS                  0x0000E000ul
+#define BRUSHLESS25_BRK_TIME_1S                     0x00010000ul
+#define BRUSHLESS25_BRK_TIME_2S                     0x00012000ul
+#define BRUSHLESS25_BRK_TIME_3S                     0x00014000ul
+#define BRUSHLESS25_BRK_TIME_4S                     0x00016000ul 
+#define BRUSHLESS25_BRK_TIME_5S                     0x00018000ul 
+#define BRUSHLESS25_BRK_TIME_7S5                    0x0001A000ul
+#define BRUSHLESS25_BRK_TIME_10S                    0x0001C000ul
+#define BRUSHLESS25_BRK_TIME_15S                    0x0001E000ul
+#define BRUSHLESS25_HIZ_TIME_10mS                   0x00000000ul
+#define BRUSHLESS25_HIZ_TIME_50mS                   0x00000200ul
+#define BRUSHLESS25_HIZ_TIME_100mS                  0x00000400ul
+#define BRUSHLESS25_HIZ_TIME_200mS                  0x00000600ul
+#define BRUSHLESS25_HIZ_TIME_300mS                  0x00000800ul
+#define BRUSHLESS25_HIZ_TIME_400mS                  0x00000A00ul
+#define BRUSHLESS25_HIZ_TIME_500mS                  0x00000C00ul
+#define BRUSHLESS25_HIZ_TIME_750mS                  0x00000E00ul
+#define BRUSHLESS25_HIZ_TIME_1S                     0x00001000ul
+#define BRUSHLESS25_HIZ_TIME_2S                     0x00001200ul
+#define BRUSHLESS25_HIZ_TIME_3S                     0x00001600ul
+#define BRUSHLESS25_HIZ_TIME_4S                     0x00001800ul
+#define BRUSHLESS25_HIZ_TIME_5S                     0x00001A00ul
+#define BRUSHLESS25_HIZ_TIME_7S5                    0x00001C00ul
+#define BRUSHLESS25_HIZ_TIME_10S                    0x00001E00ul
+#define BRUSHLESS25_HIZ_TIME_15S                    0x00000000ul
+#define BRUSHLESS25_STARTUP_BRK_TIME_1mS            0x00000000ul
+#define BRUSHLESS25_STARTUP_BRK_TIME_10mS           0x00000040ul
+#define BRUSHLESS25_STARTUP_BRK_TIME_25mS           0x00000080ul
+#define BRUSHLESS25_STARTUP_BRK_TIME_50mS           0x000000C0ul
+#define BRUSHLESS25_STARTUP_BRK_TIME_100mS          0x00000100ul
+#define BRUSHLESS25_STARTUP_BRK_TIME_250mS          0x00000140ul
+#define BRUSHLESS25_STARTUP_BRK_TIME_500mS          0x00000180ul
+#define BRUSHLESS25_STARTUP_BRK_TIME_1000mS         0x000001C0ul
+#define BRUSHLESS25_RESYNC_MIN_THRESHOLD_MIN_DUTY   0x00000000ul
+#define BRUSHLESS25_RESYNC_MIN_THRESHOLD_300mV      0x00000008ul
+#define BRUSHLESS25_RESYNC_MIN_THRESHOLD_400mV      0x00000010ul
+#define BRUSHLESS25_RESYNC_MIN_THRESHOLD_500mV      0x00000018ul
+#define BRUSHLESS25_RESYNC_MIN_THRESHOLD_600mV      0x00000020ul
+#define BRUSHLESS25_RESYNC_MIN_THRESHOLD_800mV      0x00000028ul
+#define BRUSHLESS25_RESYNC_MIN_THRESHOLD_1V         0x00000030ul
+#define BRUSHLESS25_RESYNC_MIN_THRESHOLD_1V25       0x00000038ul
+
+/**
+ * @brief Brushless 25 MOTOR_STARTUP1 register setting.
+ * @details Specified setting for MOTOR_STARTUP1 register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_MTR_STARTUP_ALIGN               0x00000000ul
+#define BRUSHLESS25_MTR_STARTUP_DUBLE_ALIGN         0x20000000ul
+#define BRUSHLESS25_MTR_STARTUP_IPN                 0x40000000ul
+#define BRUSHLESS25_MTR_STARTUP_SLOW_FIRST_CYCLE    0x60000000ul
+#define BRUSHLESS25_ALIGN_RAMP_RATE_POINT1_V_PER_S  0x00000000ul
+#define BRUSHLESS25_ALIGN_RAMP_RATE_POINT2_V_PER_S  0x02000000ul
+#define BRUSHLESS25_ALIGN_RAMP_RATE_POINT5_V_PER_S  0x04000000ul
+#define BRUSHLESS25_ALIGN_RAMP_RATE_1_V_PER_S       0x06000000ul
+#define BRUSHLESS25_ALIGN_RAMP_RATE_2V5_V_PER_S     0x08000000ul
+#define BRUSHLESS25_ALIGN_RAMP_RATE_5_V_PER_S       0x0A000000ul
+#define BRUSHLESS25_ALIGN_RAMP_RATE_7V5_V_PER_S     0x0C000000ul
+#define BRUSHLESS25_ALIGN_RAMP_RATE_10_V_PER_S      0x0E000000ul
+#define BRUSHLESS25_ALIGN_RAMP_RATE_25_V_PER_S      0x10000000ul
+#define BRUSHLESS25_ALIGN_RAMP_RATE_50_V_PER_S      0x12000000ul
+#define BRUSHLESS25_ALIGN_RAMP_RATE_75_V_PER_S      0x14000000ul
+#define BRUSHLESS25_ALIGN_RAMP_RATE_100_V_PER_S     0x16000000ul
+#define BRUSHLESS25_ALIGN_RAMP_RATE_250_V_PER_S     0x18000000ul
+#define BRUSHLESS25_ALIGN_RAMP_RATE_500_V_PER_S     0x1A000000ul
+#define BRUSHLESS25_ALIGN_RAMP_RATE_750_V_PER_S     0x1C000000ul
+#define BRUSHLESS25_ALIGN_RAMP_RATE_1000_V_PER_S    0x1E000000ul
+#define BRUSHLESS25_ALIGN_TIME_5_mS                 0x00000000ul
+#define BRUSHLESS25_ALIGN_TIME_10_mS                0x00200000ul
+#define BRUSHLESS25_ALIGN_TIME_25_mS                0x00400000ul
+#define BRUSHLESS25_ALIGN_TIME_50_mS                0x00600000ul
+#define BRUSHLESS25_ALIGN_TIME_75_mS                0x00800000ul
+#define BRUSHLESS25_ALIGN_TIME_100_mS               0x00A00000ul
+#define BRUSHLESS25_ALIGN_TIME_200_mS               0x00C00000ul
+#define BRUSHLESS25_ALIGN_TIME_400_mS               0x00E00000ul
+#define BRUSHLESS25_ALIGN_TIME_600_mS               0x01000000ul
+#define BRUSHLESS25_ALIGN_TIME_800_mS               0x01200000ul
+#define BRUSHLESS25_ALIGN_TIME_1_S                  0x01400000ul
+#define BRUSHLESS25_ALIGN_TIME_2_S                  0x01600000ul
+#define BRUSHLESS25_ALIGN_TIME_4_S                  0x01800000ul
+#define BRUSHLESS25_ALIGN_TIME_6_S                  0x01A00000ul
+#define BRUSHLESS25_ALIGN_TIME_8_S                  0x01C00000ul
+#define BRUSHLESS25_ALIGN_TIME_10_S                 0x01E00000ul
+#define BRUSHLESS25_ALIGN_CURR_THR_NA               0x00000000ul
+#define BRUSHLESS25_ALIGN_CURR_THR_POINT1_V         0x00020000ul
+#define BRUSHLESS25_ALIGN_CURR_THR_POINT2_V         0x00040000ul
+#define BRUSHLESS25_ALIGN_CURR_THR_POINT3_V         0x00060000ul
+#define BRUSHLESS25_ALIGN_CURR_THR_POINT4_V         0x00080000ul
+#define BRUSHLESS25_ALIGN_CURR_THR_POINT5_V         0x000A0000ul
+#define BRUSHLESS25_ALIGN_CURR_THR_POINT6_V         0x000C0000ul
+#define BRUSHLESS25_ALIGN_CURR_THR_POINT7_V         0x000E0000ul
+#define BRUSHLESS25_ALIGN_CURR_THR_POINT8_V         0x00100000ul
+#define BRUSHLESS25_ALIGN_CURR_THR_POINT9_V         0x00120000ul
+#define BRUSHLESS25_ALIGN_CURR_THR_1_V              0x00140000ul
+#define BRUSHLESS25_ALIGN_CURR_THR_1POINT1_V        0x00160000ul
+#define BRUSHLESS25_ALIGN_CURR_THR_1POINT2_V        0x00180000ul
+#define BRUSHLESS25_ALIGN_CURR_THR_1POINT3_V        0x001A0000ul
+#define BRUSHLESS25_ALIGN_CURR_THR_1POINT4_V        0x001C0000ul
+#define BRUSHLESS25_ALIGN_CURR_THR_1POINT5_V        0x001E0000ul 
+#define BRUSHLESS25_IPD_CLK_FREQ_50Hz               0x00000000ul
+#define BRUSHLESS25_IPD_CLK_FREQ_100Hz              0x00004000ul
+#define BRUSHLESS25_IPD_CLK_FREQ_250Hz              0x00008000ul
+#define BRUSHLESS25_IPD_CLK_FREQ_500Hz              0x0000C000ul
+#define BRUSHLESS25_IPD_CLK_FREQ_1000Hz             0x00010000ul
+#define BRUSHLESS25_IPD_CLK_FREQ_2000Hz             0x00014000ul
+#define BRUSHLESS25_IPD_CLK_FREQ_5000Hz             0x00018000ul 
+#define BRUSHLESS25_IPD_CLK_FREQ_10000Hz            0x0001C000ul 
+#define BRUSHLESS25_IPD_CURR_THR_POINT1_V           0x00000000ul
+#define BRUSHLESS25_IPD_CURR_THR_POINT2_V           0x00000400ul
+#define BRUSHLESS25_IPD_CURR_THR_POINT3_V           0x00000800ul
+#define BRUSHLESS25_IPD_CURR_THR_POINT4_V           0x00000C00ul
+#define BRUSHLESS25_IPD_CURR_THR_POINT5_V           0x00001400ul
+#define BRUSHLESS25_IPD_CURR_THR_POINT6_V           0x00001800ul
+#define BRUSHLESS25_IPD_CURR_THR_POINT7_V           0x00001C00ul
+#define BRUSHLESS25_IPD_CURR_THR_POINT8_V           0x00002000ul
+#define BRUSHLESS25_IPD_CURR_THR_POINT9_V           0x00002400ul
+#define BRUSHLESS25_IPD_CURR_THR_1_V                0x00002800ul
+#define BRUSHLESS25_IPD_CURR_THR_1POINT1_V          0x00002C00ul
+#define BRUSHLESS25_IPD_CURR_THR_1POINT2_V          0x00003000ul
+#define BRUSHLESS25_IPD_CURR_THR_1POINT3_V          0x00003400ul
+#define BRUSHLESS25_IPD_CURR_THR_1POINT4_V          0x00003800ul 
+#define BRUSHLESS25_IPD_CURR_THR_1POINT5_V          0x00003C00ul 
+#define BRUSHLESS25_IPD_RLS_MODE_BRAKE              0x00000000ul
+#define BRUSHLESS25_IPD_RLS_MODE_TRISTATE           0x00000100ul
+#define BRUSHLESS25_IPD_ADV_ANGLE_0DEG              0x00000000ul
+#define BRUSHLESS25_IPD_ADV_ANGLE_30DEG             0x00000040ul
+#define BRUSHLESS25_IPD_ADV_ANGLE_60DEG             0x00000080ul 
+#define BRUSHLESS25_IPD_ADV_ANGLE_90DEG             0x000000C0ul 
+#define BRUSHLESS25_IPD_REPEAT_ONE                  0x00000000ul
+#define BRUSHLESS25_IPD_REPEAT_AVERAGE_OF_2         0x00000010ul
+#define BRUSHLESS25_IPD_REPEAT_AVERAGE_OF_3         0x00000020ul 
+#define BRUSHLESS25_IPD_REPEAT_AVERAGE_OF_4         0x00000030ul 
+#define BRUSHLESS25_SLOW_FIRST_CYC_FREQ_POINT05_Hz  0x00000000ul
+#define BRUSHLESS25_SLOW_FIRST_CYC_FREQ_POINT1_Hz   0x00000001ul
+#define BRUSHLESS25_SLOW_FIRST_CYC_FREQ_POINT25_Hz  0x00000002ul
+#define BRUSHLESS25_SLOW_FIRST_CYC_FREQ_POINT5_Hz   0x00000003ul
+#define BRUSHLESS25_SLOW_FIRST_CYC_FREQ_1_Hz        0x00000004ul
+#define BRUSHLESS25_SLOW_FIRST_CYC_FREQ_2_Hz        0x00000005ul
+#define BRUSHLESS25_SLOW_FIRST_CYC_FREQ_3_Hz        0x00000006ul
+#define BRUSHLESS25_SLOW_FIRST_CYC_FREQ_5_Hz        0x00000007ul
+#define BRUSHLESS25_SLOW_FIRST_CYC_FREQ_10_Hz       0x00000008ul
+#define BRUSHLESS25_SLOW_FIRST_CYC_FREQ_15_Hz       0x00000009ul
+#define BRUSHLESS25_SLOW_FIRST_CYC_FREQ_25_Hz       0x0000000Bul
+#define BRUSHLESS25_SLOW_FIRST_CYC_FREQ_50_Hz       0x0000000Cul
+#define BRUSHLESS25_SLOW_FIRST_CYC_FREQ_100_Hz      0x0000000Dul
+#define BRUSHLESS25_SLOW_FIRST_CYC_FREQ_150_Hz      0x0000000Eul
+#define BRUSHLESS25_SLOW_FIRST_CYC_FREQ_200_Hz      0x0000000Ful
+
+/**
+ * @brief Brushless 25 MOTOR_STARTUP2 register setting.
+ * @details Specified setting for MOTOR_STARTUP2 register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_OL_LIMIT_CONFIG_EN              0x00000000ul
+#define BRUSHLESS25_OL_ILIMIT_CONFIG_EN             0x40000000ul
+#define BRUSHLESS25_OL_DUTY_10_PERCENT              0x00000000ul
+#define BRUSHLESS25_OL_DUTY_15_PERCENT              0x08000000ul
+#define BRUSHLESS25_OL_DUTY_20_PERCENT              0x10000000ul
+#define BRUSHLESS25_OL_DUTY_25_PERCENT              0x18000000ul
+#define BRUSHLESS25_OL_DUTY_30_PERCENT              0x20000000ul
+#define BRUSHLESS25_OL_DUTY_40_PERCENT              0x28000000ul
+#define BRUSHLESS25_OL_DUTY_50_PERCENT              0x30000000ul
+#define BRUSHLESS25_OL_DUTY_100_PERCENT             0x38000000ul
+#define BRUSHLESS25_OL_LIMIT_NA                     0x00000000ul
+#define BRUSHLESS25_OL_LIMIT_POINT1_v               0x00800000ul
+#define BRUSHLESS25_OL_LIMIT_POINT2_v               0x01000000ul
+#define BRUSHLESS25_OL_LIMIT_POINT3_v               0x01800000ul
+#define BRUSHLESS25_OL_LIMIT_POINT4_v               0x02000000ul
+#define BRUSHLESS25_OL_LIMIT_POINT5_v               0x02800000ul
+#define BRUSHLESS25_OL_LIMIT_POINT6_v               0x03000000ul
+#define BRUSHLESS25_OL_LIMIT_POINT7_v               0x03800000ul
+#define BRUSHLESS25_OL_LIMIT_POINT8_v               0x04000000ul
+#define BRUSHLESS25_OL_LIMIT_POINT9_v               0x04800000ul
+#define BRUSHLESS25_OL_LIMIT_1_v                    0x05000000ul
+#define BRUSHLESS25_OL_LIMIT_1V1_v                  0x05800000ul
+#define BRUSHLESS25_OL_LIMIT_1V2_v                  0x06000000ul
+#define BRUSHLESS25_OL_LIMIT_1V3_v                  0x06800000ul
+#define BRUSHLESS25_OL_LIMIT_1V4_v                  0x07000000ul
+#define BRUSHLESS25_OL_LIMIT_1V5_v                  0x07800000ul
+#define BRUSHLESS25_OL_ACC_A1_0POINT005_Hz_S        0x00000000ul      
+#define BRUSHLESS25_OL_ACC_A1_0POINT01_Hz_S         0x00040000ul      
+#define BRUSHLESS25_OL_ACC_A1_0POINT025_Hz_S        0x00080000ul      
+#define BRUSHLESS25_OL_ACC_A1_0POINT05_Hz_S         0x000C0000ul
+#define BRUSHLESS25_OL_ACC_A1_0POINT1_Hz_S          0x00100000ul
+#define BRUSHLESS25_OL_ACC_A1_0POINT25_Hz_S         0x00140000ul
+#define BRUSHLESS25_OL_ACC_A1_0POINT5_Hz_S          0x00180000ul
+#define BRUSHLESS25_OL_ACC_A1_1_Hz_S                0x001C0000ul      
+#define BRUSHLESS25_OL_ACC_A1_2POINT5_Hz_S          0x00200000ul      
+#define BRUSHLESS25_OL_ACC_A1_5_Hz_S                0x00240000ul      
+#define BRUSHLESS25_OL_ACC_A1_7POINT5_Hz_S          0x00280000ul      
+#define BRUSHLESS25_OL_ACC_A1_10_Hz_S               0x002C0000ul      
+#define BRUSHLESS25_OL_ACC_A1_12POINT5_Hz_S         0x00300000ul      
+#define BRUSHLESS25_OL_ACC_A1_15_Hz_S               0x00340000ul      
+#define BRUSHLESS25_OL_ACC_A1_20_Hz_S               0x00380000ul      
+#define BRUSHLESS25_OL_ACC_A1_30_Hz_S               0x003C0000ul      
+#define BRUSHLESS25_OL_ACC_A1_40_Hz_S               0x00400000ul      
+#define BRUSHLESS25_OL_ACC_A1_50_Hz_S               0x00440000ul      
+#define BRUSHLESS25_OL_ACC_A1_60_Hz_S               0x00480000ul      
+#define BRUSHLESS25_OL_ACC_A1_75_Hz_S               0x004C0000ul      
+#define BRUSHLESS25_OL_ACC_A1_100_Hz_S              0x00500000ul      
+#define BRUSHLESS25_OL_ACC_A1_125_Hz_S              0x00540000ul      
+#define BRUSHLESS25_OL_ACC_A1_150_Hz_S              0x00580000ul      
+#define BRUSHLESS25_OL_ACC_A1_175_Hz_S              0x005C0000ul      
+#define BRUSHLESS25_OL_ACC_A1_200_Hz_S              0x00600000ul      
+#define BRUSHLESS25_OL_ACC_A1_250_Hz_S              0x00640000ul      
+#define BRUSHLESS25_OL_ACC_A1_300_Hz_S              0x00680000ul      
+#define BRUSHLESS25_OL_ACC_A1_400_Hz_S              0x006C0000ul      
+#define BRUSHLESS25_OL_ACC_A1_500_Hz_S              0x00700000ul      
+#define BRUSHLESS25_OL_ACC_A1_750_Hz_S              0x00740000ul      
+#define BRUSHLESS25_OL_ACC_A1_1000_Hz_S             0x00780000ul      
+#define BRUSHLESS25_OL_ACC_A1_NO_LIMIT              0x007C0000ul      
+#define BRUSHLESS25_OL_ACC_A2_0POINT005_Hz_S        0x00000000ul      
+#define BRUSHLESS25_OL_ACC_A2_0POINT01_Hz_S         0x00002000ul      
+#define BRUSHLESS25_OL_ACC_A2_0POINT025_Hz_S        0x00004000ul      
+#define BRUSHLESS25_OL_ACC_A2_0POINT05_Hz_S         0x00006000ul
+#define BRUSHLESS25_OL_ACC_A2_0POINT1_Hz_S          0x00008000ul
+#define BRUSHLESS25_OL_ACC_A2_0POINT25_Hz_S         0x0000A000ul
+#define BRUSHLESS25_OL_ACC_A2_0POINT5_Hz_S          0x0000C000ul
+#define BRUSHLESS25_OL_ACC_A2_1_Hz_S                0x0000E000ul      
+#define BRUSHLESS25_OL_ACC_A2_2POINT5_Hz_S          0x00010000ul      
+#define BRUSHLESS25_OL_ACC_A2_5_Hz_S                0x00012000ul      
+#define BRUSHLESS25_OL_ACC_A2_7POINT5_Hz_S          0x00014000ul      
+#define BRUSHLESS25_OL_ACC_A2_10_Hz_S               0x00016000ul      
+#define BRUSHLESS25_OL_ACC_A2_12POINT5_Hz_S         0x00018000ul      
+#define BRUSHLESS25_OL_ACC_A2_15_Hz_S               0x0001A000ul      
+#define BRUSHLESS25_OL_ACC_A2_20_Hz_S               0x0001C000ul      
+#define BRUSHLESS25_OL_ACC_A2_30_Hz_S               0x0001E000ul      
+#define BRUSHLESS25_OL_ACC_A2_40_Hz_S               0x00020000ul      
+#define BRUSHLESS25_OL_ACC_A2_50_Hz_S               0x00022000ul      
+#define BRUSHLESS25_OL_ACC_A2_60_Hz_S               0x00024000ul      
+#define BRUSHLESS25_OL_ACC_A2_75_Hz_S               0x00026000ul      
+#define BRUSHLESS25_OL_ACC_A2_100_Hz_S              0x00028000ul      
+#define BRUSHLESS25_OL_ACC_A2_125_Hz_S              0x0002A000ul      
+#define BRUSHLESS25_OL_ACC_A2_150_Hz_S              0x0002C000ul      
+#define BRUSHLESS25_OL_ACC_A2_175_Hz_S              0x0002E000ul      
+#define BRUSHLESS25_OL_ACC_A2_200_Hz_S              0x00030000ul      
+#define BRUSHLESS25_OL_ACC_A2_250_Hz_S              0x00032000ul      
+#define BRUSHLESS25_OL_ACC_A2_300_Hz_S              0x00034000ul      
+#define BRUSHLESS25_OL_ACC_A2_400_Hz_S              0x00036000ul      
+#define BRUSHLESS25_OL_ACC_A2_500_Hz_S              0x00038000ul      
+#define BRUSHLESS25_OL_ACC_A2_750_Hz_S              0x0003A000ul      
+#define BRUSHLESS25_OL_ACC_A2_1000_Hz_S             0x0003C000ul      
+#define BRUSHLESS25_OL_ACC_A2_NO_LIMIT              0x0003E000ul 
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_1Hz          0x00000000ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_4Hz          0x00000100ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_8Hz          0x00000200ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_12Hz         0x00000300ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_16Hz         0x00000400ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_20Hz         0x00000500ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_24Hz         0x00000600ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_28Hz         0x00000700ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_32Hz         0x00000800ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_36Hz         0x00000900ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_40Hz         0x00000A00ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_45Hz         0x00000B00ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_50Hz         0x00000C00ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_55Hz         0x00000D00ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_60Hz         0x00000E00ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_65Hz         0x00000F00ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_70Hz         0x00001000ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_75Hz         0x00001100ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_80Hz         0x00001200ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_85Hz         0x00001300ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_90Hz         0x00001400ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_100Hz        0x00001500ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_150Hz        0x00001600ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_200Hz        0x00001700ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_250Hz        0x00001800ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_300Hz        0x00001900ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_350Hz        0x00001A00ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_400Hz        0x00001B00ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_450Hz        0x00001C00ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_500Hz        0x00001D00ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_550Hz        0x00001E00ul
+#define BRUSHLESS25_OPN_CL_HANDOFF_THE_600Hz        0x00001F00ul
+#define BRUSHLESS25_AUTO_HANDOFF_ENABLE             0x00000080ul
+#define BRUSHLESS25_FIRST_CYCLE_FREQ_SEL_0_Hz       0x00000040ul
+#define BRUSHLESS25_MIN_DUTY_1POINT5_PERCENT        0x00000000ul
+#define BRUSHLESS25_MIN_DUTY_2_PERCENT              0x00000004ul
+#define BRUSHLESS25_MIN_DUTY_3_PERCENT              0x00000008ul
+#define BRUSHLESS25_MIN_DUTY_4_PERCENT              0x0000000Cul
+#define BRUSHLESS25_MIN_DUTY_5_PERCENT              0x00000010ul
+#define BRUSHLESS25_MIN_DUTY_6_PERCENT              0x00000014ul
+#define BRUSHLESS25_MIN_DUTY_7_PERCENT              0x00000018ul
+#define BRUSHLESS25_MIN_DUTY_8_PERCENT              0x0000001Cul
+#define BRUSHLESS25_MIN_DUTY_9_PERCENT              0x00000020ul
+#define BRUSHLESS25_MIN_DUTY_10_PERCENT             0x00000024ul
+#define BRUSHLESS25_MIN_DUTY_12_PERCENT             0x00000028ul
+#define BRUSHLESS25_MIN_DUTY_15_PERCENT             0x0000002Cul
+#define BRUSHLESS25_MIN_DUTY_17POINT5_PERCENT       0x00000030ul
+#define BRUSHLESS25_MIN_DUTY_20_PERCENT             0x00000034ul
+#define BRUSHLESS25_MIN_DUTY_25_PERCENT             0x00000038ul
+#define BRUSHLESS25_MIN_DUTY_30_PERCENT             0x0000003Cul
+
+/**
+ * @brief Brushless 25 CLOSED_LOOP1 register setting.
+ * @details Specified setting for CLOSED_LOOP1 register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_COMM_CONTROL_120_DEG            0x00000000ul
+#define BRUSHLESS25_COMM_CONTROL_120_TO_150_DEG     0x20000000ul
+#define BRUSHLESS25_CL_ACC_0POINT005_V_S            0x00000000ul
+#define BRUSHLESS25_CL_ACC_0POINT01_V_S             0x01000000ul
+#define BRUSHLESS25_CL_ACC_0POINT025_V_S            0x02000000ul
+#define BRUSHLESS25_CL_ACC_0POINT05_V_S             0x03000000ul
+#define BRUSHLESS25_CL_ACC_0POINT1_V_S              0x04000000ul
+#define BRUSHLESS25_CL_ACC_0POINT25_V_S             0x05000000ul
+#define BRUSHLESS25_CL_ACC_0POINT5_V_S              0x06000000ul
+#define BRUSHLESS25_CL_ACC_1_V_S                    0x07000000ul
+#define BRUSHLESS25_CL_ACC_2POINT5_V_S              0x08000000ul
+#define BRUSHLESS25_CL_ACC_5_V_S                    0x09000000ul
+#define BRUSHLESS25_CL_ACC_7POINT5_V_S              0x0A000000ul
+#define BRUSHLESS25_CL_ACC_10_V_S                   0x0B000000ul
+#define BRUSHLESS25_CL_ACC_12POINT5_V_S             0x0C000000ul
+#define BRUSHLESS25_CL_ACC_15_V_S                   0x0D000000ul
+#define BRUSHLESS25_CL_ACC_20_V_S                   0x0E000000ul
+#define BRUSHLESS25_CL_ACC_30_V_S                   0x0F000000ul
+#define BRUSHLESS25_CL_ACC_40_V_S                   0x10000000ul
+#define BRUSHLESS25_CL_ACC_50_V_S                   0x11000000ul
+#define BRUSHLESS25_CL_ACC_60_V_S                   0x12000000ul
+#define BRUSHLESS25_CL_ACC_75_V_S                   0x13000000ul
+#define BRUSHLESS25_CL_ACC_100_V_S                  0x14000000ul
+#define BRUSHLESS25_CL_ACC_125_V_S                  0x15000000ul
+#define BRUSHLESS25_CL_ACC_150_V_S                  0x16000000ul
+#define BRUSHLESS25_CL_ACC_175_V_S                  0x17000000ul
+#define BRUSHLESS25_CL_ACC_200_V_S                  0x18000000ul
+#define BRUSHLESS25_CL_ACC_250_V_S                  0x19000000ul
+#define BRUSHLESS25_CL_ACC_300_V_S                  0x1A000000ul
+#define BRUSHLESS25_CL_ACC_400_V_S                  0x1B000000ul
+#define BRUSHLESS25_CL_ACC_500_V_S                  0x1C000000ul
+#define BRUSHLESS25_CL_ACC_750_V_S                  0x1D000000ul
+#define BRUSHLESS25_CL_ACC_1000_V_S                 0x1E000000ul
+#define BRUSHLESS25_CL_ACC_32767_V_S                0x1F000000ul
+#define BRUSHLESS25_CL_DEC_CONFIG_BY_CL_DEC         0x00000000ul
+#define BRUSHLESS25_CL_DEC_CONFIG_BY_CL_ACC         0x00800000ul
+#define BRUSHLESS25_CL_DEC_0POINT005_V_S            0x00000000ul
+#define BRUSHLESS25_CL_DEC_0POINT01_V_S             0x00040000ul
+#define BRUSHLESS25_CL_DEC_0POINT025_V_S            0x00080000ul
+#define BRUSHLESS25_CL_DEC_0POINT05_V_S             0x000C0000ul
+#define BRUSHLESS25_CL_DEC_0POINT1_V_S              0x00100000ul
+#define BRUSHLESS25_CL_DEC_0POINT25_V_S             0x00140000ul
+#define BRUSHLESS25_CL_DEC_0POINT5_V_S              0x00180000ul
+#define BRUSHLESS25_CL_DEC_1_V_S                    0x001C0000ul
+#define BRUSHLESS25_CL_DEC_2POINT5_V_S              0x00200000ul
+#define BRUSHLESS25_CL_DEC_5_V_S                    0x00240000ul
+#define BRUSHLESS25_CL_DEC_7POINT5_V_S              0x00280000ul
+#define BRUSHLESS25_CL_DEC_10_V_S                   0x002C0000ul
+#define BRUSHLESS25_CL_DEC_12POINT5_V_S             0x00300000ul
+#define BRUSHLESS25_CL_DEC_15_V_S                   0x00340000ul
+#define BRUSHLESS25_CL_DEC_20_V_S                   0x00380000ul
+#define BRUSHLESS25_CL_DEC_30_V_S                   0x003C0000ul
+#define BRUSHLESS25_CL_DEC_40_V_S                   0x00400000ul
+#define BRUSHLESS25_CL_DEC_50_V_S                   0x00440000ul
+#define BRUSHLESS25_CL_DEC_60_V_S                   0x00480000ul
+#define BRUSHLESS25_CL_DEC_75_V_S                   0x004C0000ul
+#define BRUSHLESS25_CL_DEC_100_V_S                  0x00500000ul
+#define BRUSHLESS25_CL_DEC_125_V_S                  0x00540000ul
+#define BRUSHLESS25_CL_DEC_150_V_S                  0x00580000ul
+#define BRUSHLESS25_CL_DEC_175_V_S                  0x005C0000ul
+#define BRUSHLESS25_CL_DEC_200_V_S                  0x00600000ul
+#define BRUSHLESS25_CL_DEC_250_V_S                  0x00640000ul
+#define BRUSHLESS25_CL_DEC_300_V_S                  0x00680000ul
+#define BRUSHLESS25_CL_DEC_400_V_S                  0x006C0000ul
+#define BRUSHLESS25_CL_DEC_500_V_S                  0x00700000ul
+#define BRUSHLESS25_CL_DEC_750_V_S                  0x00740000ul
+#define BRUSHLESS25_CL_DEC_1000_V_S                 0x00780000ul
+#define BRUSHLESS25_CL_DEC_32767_V_S                0x007C0000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_5_KHz              0x00000000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_6_KHz              0x00002000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_7_KHz              0x00004000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_8_KHz              0x00006000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_9_KHz              0x00008000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_10_KHz             0x0000A000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_11_KHz             0x0000C000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_12_KHz             0x0000E000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_13_KHz             0x00010000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_14_KHz             0x00012000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_15_KHz             0x00014000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_16_KHz             0x00016000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_17_KHz             0x00018000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_18_KHz             0x0001A000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_19_KHz             0x0001C000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_20_KHz             0x0001E000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_25_KHz             0x00020000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_30_KHz             0x00022000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_35_KHz             0x00024000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_40_KHz             0x00026000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_45_KHz             0x00028000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_50_KHz             0x0002A000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_55_KHz             0x0002C000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_60_KHz             0x0002E000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_65_KHz             0x00030000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_70_KHz             0x00032000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_75_KHz             0x00034000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_80_KHz             0x00036000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_85_KHz             0x00038000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_90_KHz             0x0003A000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_95_KHz             0x0003C000ul
+#define BRUSHLESS25_PWM_FREQ_OUT_100_KHz            0x0003E000ul
+#define BRUSHLESS25_PWM_MODUL_HIGH_SIDE_MODULATION  0x00000000ul
+#define BRUSHLESS25_PWM_MODUL_LOW_SIDE_MODULATION   0x00000800ul
+#define BRUSHLESS25_PWM_MODUL_MIXED_MODULATION      0x00001000ul
+#define BRUSHLESS25_PWM_MODE_SINGLE_ENDED_MODE      0x00000000ul
+#define BRUSHLESS25_PWM_MODE_COMPLEMENTARY_MODE     0x00000400ul
+#define BRUSHLESS25_LD_ANGLE_POLARITY_NEGATICE      0x00000000ul
+#define BRUSHLESS25_LD_ANGLE_POLARITY_POSITIVE      0x00000200ul
+
+/**
+ * @brief Brushless 25 CLOSED_LOOP2 register setting.
+ * @details Specified setting for CLOSED_LOOP2 register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_FG_OPEN_IN_OL_AND_CL            0x00000000ul
+#define BRUSHLESS25_FG_OPEN_ONLY_IN_CL              0x20000000ul
+#define BRUSHLESS25_FG_OPEN_FOR_FIRS_TRY            0x40000000ul
+#define BRUSHLESS25_DIV_IS_3_NO_OF_POLES_2          0x00000000ul
+#define BRUSHLESS25_DIV_IS_1_NO_OF_POLES_2          0x02000000ul
+#define BRUSHLESS25_DIV_IS_2_NO_OF_POLES_4          0x04000000ul
+#define BRUSHLESS25_DIV_IS_3_NO_OF_POLES_6          0x06000000ul
+#define BRUSHLESS25_DIV_IS_4_NO_OF_POLES_8          0x08000000ul
+#define BRUSHLESS25_DIV_IS_5_NO_OF_POLES_10         0x0A000000ul
+#define BRUSHLESS25_DIV_IS_6_NO_OF_POLES_12         0x0C000000ul
+#define BRUSHLESS25_DIV_IS_7_NO_OF_POLES_14         0x0E000000ul
+#define BRUSHLESS25_DIV_IS_8_NO_OF_POLES_16         0x10000000ul
+#define BRUSHLESS25_DIV_IS_9_NO_OF_POLES_18         0x12000000ul
+#define BRUSHLESS25_DIV_IS_10_NO_OF_POLES_20        0x14000000ul
+#define BRUSHLESS25_DIV_IS_11_NO_OF_POLES_22        0x16000000ul
+#define BRUSHLESS25_DIV_IS_12_NO_OF_POLES_24        0x18000000ul
+#define BRUSHLESS25_DIV_IS_13_NO_OF_POLES_26        0x1A000000ul
+#define BRUSHLESS25_DIV_IS_14_NO_OF_POLES_28        0x1C000000ul
+#define BRUSHLESS25_DIV_IS_15_NO_OF_POLES_30        0x1E000000ul
+#define BRUSHLESS25_FG_ACTIVE_UNTILL_SPEED_DROPS    0x00000000ul
+#define BRUSHLESS25_FG_ACTIVE_WHEN_MOTOR_IS_RUNNING 0x01000000ul
+#define BRUSHLESS25_FG_BEMF_THR_1_mV                0x00000000ul
+#define BRUSHLESS25_FG_BEMF_THR_2_mV                0x00200000ul
+#define BRUSHLESS25_FG_BEMF_THR_5_mV                0x00400000ul
+#define BRUSHLESS25_FG_BEMF_THR_10_mV               0x00600000ul
+#define BRUSHLESS25_FG_BEMF_THR_20_mV               0x00800000ul
+#define BRUSHLESS25_FG_BEMF_THR_30_mV               0x00A00000ul
+#define BRUSHLESS25_MTR_STOP_HI_Z                   0x00000000ul
+#define BRUSHLESS25_MTR_STOP_RECIRCULATION          0x00040000ul
+#define BRUSHLESS25_MTR_STOP_LOW_SIDE_BRAKING       0x00080000ul
+#define BRUSHLESS25_MTR_STOP_HIGH_SIDE_BRAKING      0x000C0000ul
+#define BRUSHLESS25_MTR_STOP_ACTIVE_SPIN_DOWN       0x00100000ul
+#define BRUSHLESS25_MTR_STOP_BRK_TIME_1_mS          0x00000000ul
+#define BRUSHLESS25_MTR_STOP_BRK_TIME_2_mS          0x00004000ul
+#define BRUSHLESS25_MTR_STOP_BRK_TIME_5_mS          0x00008000ul
+#define BRUSHLESS25_MTR_STOP_BRK_TIME_10_mS         0x0000C000ul
+#define BRUSHLESS25_MTR_STOP_BRK_TIME_15_mS         0x00010000ul
+#define BRUSHLESS25_MTR_STOP_BRK_TIME_25_mS         0x00014000ul
+#define BRUSHLESS25_MTR_STOP_BRK_TIME_50_mS         0x00018000ul
+#define BRUSHLESS25_MTR_STOP_BRK_TIME_75_mS         0x0001C000ul
+#define BRUSHLESS25_MTR_STOP_BRK_TIME_100_mS        0x00020000ul
+#define BRUSHLESS25_MTR_STOP_BRK_TIME_250_mS        0x00024000ul
+#define BRUSHLESS25_MTR_STOP_BRK_TIME_500_mS        0x00028000ul
+#define BRUSHLESS25_MTR_STOP_BRK_TIME_1000_mS       0x0002C000ul
+#define BRUSHLESS25_MTR_STOP_BRK_TIME_2500_mS       0x00030000ul
+#define BRUSHLESS25_MTR_STOP_BRK_TIME_5000_mS       0x00034000ul
+#define BRUSHLESS25_MTR_STOP_BRK_TIME_10000_mS      0x00038000ul
+#define BRUSHLESS25_MTR_STOP_BRK_TIME_15000_mS      0x0003C000ul
+#define BRUSHLESS25_ACT_SPIN_BRK_THR_IMMEDIATE      0x00000000ul
+#define BRUSHLESS25_ACT_SPIN_BRK_THR_50_PERCENT     0x00000800ul
+#define BRUSHLESS25_ACT_SPIN_BRK_THR_25_PERCENT     0x00001000ul
+#define BRUSHLESS25_ACT_SPIN_BRK_THR_15_PERCENT     0x00001800ul
+#define BRUSHLESS25_ACT_SPIN_BRK_THR_10_PERCENT     0x00002000ul
+#define BRUSHLESS25_ACT_SPIN_BRK_THR_7_PERCENT_5    0x00002800ul
+#define BRUSHLESS25_ACT_SPIN_BRK_THR_5_PERCENT      0x00003000ul
+#define BRUSHLESS25_ACT_SPIN_BRK_THR_2_PERCENT_5    0x00003800ul
+#define BRUSHLESS25_BRAKE_DUTY_THR_IMMEDIATE        0x00000000ul
+#define BRUSHLESS25_BRAKE_DUTY_THR_50_PERCENT       0x00000100ul
+#define BRUSHLESS25_BRAKE_DUTY_THR_25_PERCENT       0x00000200ul
+#define BRUSHLESS25_BRAKE_DUTY_THR_15_PERCENT       0x00000300ul
+#define BRUSHLESS25_BRAKE_DUTY_THR_10_PERCENT       0x00000400ul
+#define BRUSHLESS25_BRAKE_DUTY_THR_7_PERCENT_5      0x00000500ul
+#define BRUSHLESS25_BRAKE_DUTY_THR_5_PERCENT        0x00000600ul
+#define BRUSHLESS25_BRAKE_DUTY_THR_2_PERCENT_5      0x00000700ul
+#define BRUSHLESS25_AVS_EN                          0x00000080ul
+#define BRUSHLESS25_CBC_LIMIT_NA                    0x00000000ul
+#define BRUSHLESS25_CBC_LIMIT_0_POINT_1_V           0x00000008ul
+#define BRUSHLESS25_CBC_LIMIT_0_POINT_2_V           0x00000010ul
+#define BRUSHLESS25_CBC_LIMIT_0_POINT_3_V           0x00000018ul
+#define BRUSHLESS25_CBC_LIMIT_0_POINT_4_V           0x00000020ul
+#define BRUSHLESS25_CBC_LIMIT_0_POINT_5_V           0x00000028ul
+#define BRUSHLESS25_CBC_LIMIT_0_POINT_6_V           0x00000030ul
+#define BRUSHLESS25_CBC_LIMIT_0_POINT_7_V           0x00000038ul
+#define BRUSHLESS25_CBC_LIMIT_0_POINT_8_V           0x00000040ul
+#define BRUSHLESS25_CBC_LIMIT_0_POINT_9_V           0x00000048ul
+#define BRUSHLESS25_CBC_LIMIT_1_V                   0x00000050ul
+#define BRUSHLESS25_CBC_LIMIT_1_POINT_1_V           0x00000058ul
+#define BRUSHLESS25_CBC_LIMIT_1_POINT_2_V           0x00000060ul
+#define BRUSHLESS25_CBC_LIMIT_1_POINT_3_V           0x00000068ul
+#define BRUSHLESS25_CBC_LIMIT_1_POINT_4_V           0x00000070ul
+#define BRUSHLESS25_CBC_LIMIT_1_POINT_5_V           0x00000078ul
+
+/**
+ * @brief Brushless 25 CLOSED_LOOP3 register setting.
+ * @details Specified setting for CLOSED_LOOP3 register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_DYN_DGS_FILT_COUNT_2            0x00000000ul
+#define BRUSHLESS25_DYN_DGS_FILT_COUNT_3            0x20000000ul
+#define BRUSHLESS25_DYN_DGS_FILT_COUNT_4            0x40000000ul
+#define BRUSHLESS25_DYN_DGS_FILT_COUNT_5            0x60000000ul
+#define BRUSHLESS25_DGS_UPPER_LMT_VM_SUB_90_mV      0x00000000ul
+#define BRUSHLESS25_DGS_UPPER_LMT_VM_SUB_120_mV     0x08000000ul
+#define BRUSHLESS25_DGS_UPPER_LMT_VM_SUB_150_mV     0x10000000ul
+#define BRUSHLESS25_DGS_UPPER_LMT_VM_SUB_180_mV     0x18000000ul
+#define BRUSHLESS25_DYN_DGS_LOWER_LMT_30_mV         0x00000000ul
+#define BRUSHLESS25_DYN_DGS_LOWER_LMT_60_mV         0x02000000ul
+#define BRUSHLESS25_DYN_DGS_LOWER_LMT_90_mV         0x04000000ul
+#define BRUSHLESS25_DYN_DGS_LOWER_LMT_120_mV        0x06000000ul
+#define BRUSHLESS25_INTEG_CYCL_THR_LOW_3            0x00000000ul
+#define BRUSHLESS25_INTEG_CYCL_THR_LOW_4            0x00800000ul
+#define BRUSHLESS25_INTEG_CYCL_THR_LOW_6            0x01000000ul
+#define BRUSHLESS25_INTEG_CYCL_THR_LOW_8            0x01800000ul
+#define BRUSHLESS25_INTEG_CYCL_THR_HIGH_4           0x00000000ul
+#define BRUSHLESS25_INTEG_CYCL_THR_HIGH_6           0x00200000ul
+#define BRUSHLESS25_INTEG_CYCL_THR_HIGH_8           0x00400000ul
+#define BRUSHLESS25_INTEG_CYCL_THR_HIGH_10          0x00600000ul
+#define BRUSHLESS25_INTEG_DUTY_THR_LOW_12_PERCENT   0x00000000ul
+#define BRUSHLESS25_INTEG_DUTY_THR_LOW_15_PERCENT   0x00080000ul
+#define BRUSHLESS25_INTEG_DUTY_THR_LOW_18_PERCENT   0x00100000ul
+#define BRUSHLESS25_INTEG_DUTY_THR_LOW_20_PERCENT   0x00180000ul
+#define BRUSHLESS25_INTEG_DUTY_THR_HIGH_12_PERCENT  0x00000000ul
+#define BRUSHLESS25_INTEG_DUTY_THR_HIGH_15_PERCENT  0x00020000ul
+#define BRUSHLESS25_INTEG_DUTY_THR_HIGH_18_PERCENT  0x00040000ul
+#define BRUSHLESS25_INTEG_DUTY_THR_HIGH_20_PERCENT  0x00060000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_0               0x00000000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_25              0x00000800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_50              0x00001000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_75              0x00001800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_100             0x00002000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_125             0x00002800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_150             0x00003000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_175             0x00003800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_200             0x00004000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_225             0x00004800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_250             0x00005000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_275             0x00005800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_300             0x00006000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_325             0x00006800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_350             0x00007000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_375             0x00007800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_400             0x00008000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_425             0x00008800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_450             0x00009000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_475             0x00009800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_500             0x0000A000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_525             0x0000A800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_550             0x0000B000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_575             0x0000B800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_600             0x0000C000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_625             0x0000C800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_650             0x0000D000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_675             0x0000D800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_700             0x0000E000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_725             0x0000E800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_750             0x0000F000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_775             0x0000F800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_800             0x00010000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_850             0x00010800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_900             0x00011000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_950             0x00011800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_1000            0x00012000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_1050            0x00012800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_1100            0x00013000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_1150            0x00013800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_1200            0x00014000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_1250            0x00014800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_1300            0x00015000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_1350            0x00015800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_1400            0x00016000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_1450            0x00016800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_1500            0x00017000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_1550            0x00017800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_1600            0x00018000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_1700            0x00018800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_1800            0x00019000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_1900            0x00019800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_2000            0x0001A000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_2100            0x0001A800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_2200            0x0001B000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_2300            0x0001B800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_2400            0x0001C000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_2600            0x0001C800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_2800            0x0001D000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_3000            0x0001D800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_3200            0x0001E000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_3400            0x0001E800ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_3600            0x0001F000ul
+#define BRUSHLESS25_BEMF_THRESHOLD2_3800            0x0001F800ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_0               0x00000000ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_25              0x00000020ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_50              0x00000040ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_75              0x00000060ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_100             0x00000080ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_125             0x000000A0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_150             0x000000C0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_175             0x000000E0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_200             0x00000100ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_225             0x00000120ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_250             0x00000140ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_275             0x00000160ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_300             0x00000180ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_325             0x000001A0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_350             0x000001C0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_375             0x000001E0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_400             0x00000200ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_425             0x00000220ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_450             0x00000240ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_475             0x00000260ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_500             0x00000280ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_525             0x000002A0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_550             0x000002C0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_575             0x000002E0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_600             0x00000300ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_625             0x00000320ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_650             0x00000340ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_675             0x00000360ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_700             0x00000380ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_725             0x000003A0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_750             0x000003C0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_775             0x000003E0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_800             0x00000400ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_850             0x00000420ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_900             0x00000440ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_950             0x00000460ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_1000            0x00000480ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_1050            0x000004A0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_1100            0x000004C0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_1150            0x000004E0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_1200            0x00000500ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_1250            0x00000520ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_1300            0x00000540ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_1350            0x00000560ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_1400            0x00000580ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_1450            0x000005A0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_1500            0x000005C0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_1550            0x000005E0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_1600            0x00000600ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_1700            0x00000620ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_1800            0x00000640ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_1900            0x00000660ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_2000            0x00000680ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_2100            0x000006A0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_2200            0x000006C0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_2300            0x000006E0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_2400            0x00000700ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_2600            0x00000720ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_2800            0x00000740ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_3000            0x00000760ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_3200            0x00000780ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_3400            0x000007A0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_3600            0x000007C0ul
+#define BRUSHLESS25_BEMF_THRESHOLD1_3800            0x000007E0ul
+#define BRUSHLESS25_INTEG_ZC_METHOD_ZC              0x00000000ul
+#define BRUSHLESS25_INTEG_ZC_INTEGRATION            0x00000010ul
+#define BRUSHLESS25_DEGAUSS_MAX_WIN_22POINT5_DEG    0x00000000ul
+#define BRUSHLESS25_DEGAUSS_MAX_WIN_10_DEG          0x00000002ul
+#define BRUSHLESS25_DEGAUSS_MAX_WIN_15_DEG          0x00000004ul
+#define BRUSHLESS25_DEGAUSS_MAX_WIN_18_DEG          0x00000006ul
+#define BRUSHLESS25_DEGAUSS_MAX_WIN_30_DEG          0x00000008ul
+#define BRUSHLESS25_DEGAUSS_MAX_WIN_37POINT5_DEG    0x0000000Aul
+#define BRUSHLESS25_DEGAUSS_MAX_WIN_45_DEG          0x0000000Cul
+#define BRUSHLESS25_DEGAUSS_MAX_WIN_60_DEG          0x0000000Eul
+#define BRUSHLESS25_DYN_DEGAUSS_EN                  0x00000001ul
+
+/**
+ * @brief Brushless 25 CLOSED_LOOP4 register setting.
+ * @details Specified setting for CLOSED_LOOP4 register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_WCOMP_BLANK_EN                  0x00080000ul
+#define BRUSHLESS25_FAST_DEC_DUTY_WIN_0_PER         0x00000000ul
+#define BRUSHLESS25_FAST_DEC_DUTY_WIN_2POINT5_PER   0x00010000ul
+#define BRUSHLESS25_FAST_DEC_DUTY_WIN_5_PER         0x00020000ul
+#define BRUSHLESS25_FAST_DEC_DUTY_WIN_7POINT5_PER   0x00030000ul
+#define BRUSHLESS25_FAST_DEC_DUTY_WIN_10_PER        0x00040000ul
+#define BRUSHLESS25_FAST_DEC_DUTY_WIN_15_PER        0x00050000ul
+#define BRUSHLESS25_FAST_DEC_DUTY_WIN_20_PER        0x00060000ul
+#define BRUSHLESS25_FAST_DEC_DUTY_WIN_25_PER        0x00070000ul
+#define BRUSHLESS25_FAST_DEC_DUTY_THR_100_PER       0x00000000ul
+#define BRUSHLESS25_FAST_DEC_DUTY_THR_95_PER        0x00002000ul
+#define BRUSHLESS25_FAST_DEC_DUTY_THR_90_PER        0x00004000ul
+#define BRUSHLESS25_FAST_DEC_DUTY_THR_85_PER        0x00006000ul
+#define BRUSHLESS25_FAST_DEC_DUTY_THR_80_PER        0x00008000ul
+#define BRUSHLESS25_FAST_DEC_DUTY_THR_75_PER        0x0000A000ul
+#define BRUSHLESS25_FAST_DEC_DUTY_THR_70_PER        0x0000C000ul
+#define BRUSHLESS25_FAST_DEC_DUTY_THR_65_PER        0x0000E000ul
+#define BRUSHLESS25_DYN_BRK_CURR_LOW_LIM_NA         0x00000000ul
+#define BRUSHLESS25_DYN_BRK_CURR_LOW_LIM_100_mv     0x00000200ul
+#define BRUSHLESS25_DYN_BRK_CURR_LOW_LIM_200_mv     0x00000400ul
+#define BRUSHLESS25_DYN_BRK_CURR_LOW_LIM_300_mv     0x00000600ul
+#define BRUSHLESS25_DYN_BRK_CURR_LOW_LIM_400_mv     0x00000800ul
+#define BRUSHLESS25_DYN_BRK_CURR_LOW_LIM_500_mv     0x00000A00ul
+#define BRUSHLESS25_DYN_BRK_CURR_LOW_LIM_600_mv     0x00000C00ul
+#define BRUSHLESS25_DYN_BRK_CURR_LOW_LIM_700_mv     0x00000E00ul
+#define BRUSHLESS25_DYN_BRK_CURR_LOW_LIM_800_mv     0x00001000ul
+#define BRUSHLESS25_DYN_BRK_CURR_LOW_LIM_900_mv     0x00001200ul
+#define BRUSHLESS25_DYN_BRK_CURR_LOW_LIM_1000_mv    0x00001400ul
+#define BRUSHLESS25_DYN_BRK_CURR_LOW_LIM_1100_mv    0x00001600ul
+#define BRUSHLESS25_DYN_BRK_CURR_LOW_LIM_1200_mv    0x00001800ul
+#define BRUSHLESS25_DYN_BRK_CURR_LOW_LIM_1300_mv    0x00001A00ul
+#define BRUSHLESS25_DYN_BRK_CURR_LOW_LIM_1400_mv    0x00001C00ul
+#define BRUSHLESS25_DYN_BRK_CURR_LOW_LIM_1500_mv    0x00001E00ul
+#define BRUSHLESS25_DYNAMIC_BRK_CURR_EN             0x00000100ul
+#define BRUSHLESS25_DYNAMIC_FAST_DECEL_EN           0x00000080ul
+#define BRUSHLESS25_FAST_DECEL_CURR_LIM_NA          0x00000000ul
+#define BRUSHLESS25_FAST_DECEL_CURR_LIM_100_mV      0x00000008ul
+#define BRUSHLESS25_FAST_DECEL_CURR_LIM_200_mV      0x00000010ul
+#define BRUSHLESS25_FAST_DECEL_CURR_LIM_300_mV      0x00000018ul
+#define BRUSHLESS25_FAST_DECEL_CURR_LIM_400_mV      0x00000020ul
+#define BRUSHLESS25_FAST_DECEL_CURR_LIM_500_mV      0x00000028ul
+#define BRUSHLESS25_FAST_DECEL_CURR_LIM_600_mV      0x00000030ul
+#define BRUSHLESS25_FAST_DECEL_CURR_LIM_700_mV      0x00000038ul
+#define BRUSHLESS25_FAST_DECEL_CURR_LIM_800_mV      0x00000040ul
+#define BRUSHLESS25_FAST_DECEL_CURR_LIM_900_mV      0x00000048ul
+#define BRUSHLESS25_FAST_DECEL_CURR_LIM_1000_mV     0x00000050ul
+#define BRUSHLESS25_FAST_DECEL_CURR_LIM_1100_mV     0x00000058ul
+#define BRUSHLESS25_FAST_DECEL_CURR_LIM_1200_mV     0x00000060ul
+#define BRUSHLESS25_FAST_DECEL_CURR_LIM_1300_mV     0x00000068ul
+#define BRUSHLESS25_FAST_DECEL_CURR_LIM_1400_mV     0x00000070ul
+#define BRUSHLESS25_FAST_DECEL_CURR_LIM_1500_mV     0x00000078ul
+#define BRUSHLESS25_FAST_BRK_DELTA_0POINT5_PERCENT  0x00000000ul
+#define BRUSHLESS25_FAST_BRK_DELTA_1_PERCENT        0x00000001ul
+#define BRUSHLESS25_FAST_BRK_DELTA_1POINT5_PERCENT  0x00000002ul
+#define BRUSHLESS25_FAST_BRK_DELTA_2_PERCENT        0x00000003ul
+#define BRUSHLESS25_FAST_BRK_DELTA_2POINT5_PERCENT  0x00000004ul
+#define BRUSHLESS25_FAST_BRK_DELTA_3_PERCENT        0x00000005ul
+#define BRUSHLESS25_FAST_BRK_DELTA_4_PERCENT        0x00000006ul
+#define BRUSHLESS25_FAST_BRK_DELTA_5_PERCENT        0x00000007ul
+
+/**
+ * @brief Brushless 25 CONST_SPEED register setting.
+ * @details Specified setting for CONST_SPEED register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_SPD_POWER_V_MAX_100_PERCENT     0x00000000ul
+#define BRUSHLESS25_SPD_POWER_V_MAX_95_PERCENT      0x00000020ul
+#define BRUSHLESS25_SPD_POWER_V_MAX_90_PERCENT      0x00000040ul
+#define BRUSHLESS25_SPD_POWER_V_MAX_85_PERCENT      0x00000060ul
+#define BRUSHLESS25_SPD_POWER_V_MAX_80_PERCENT      0x00000080ul
+#define BRUSHLESS25_SPD_POWER_V_MAX_75_PERCENT      0x000000A0ul
+#define BRUSHLESS25_SPD_POWER_V_MAX_70_PERCENT      0x000000C0ul
+#define BRUSHLESS25_SPD_POWER_V_MAX_65_PERCENT      0x000000E0ul
+#define BRUSHLESS25_SPD_POWER_V_MIN_0_PERCENT       0x00000000ul
+#define BRUSHLESS25_SPD_POWER_V_MIN_2POINT5_PERCENT 0x00000004ul
+#define BRUSHLESS25_SPD_POWER_V_MIN_5_PERCENT       0x00000008ul
+#define BRUSHLESS25_SPD_POWER_V_MIN_7POINT5_PERCENT 0x0000000Cul
+#define BRUSHLESS25_SPD_POWER_V_MIN_10_PERCENT      0x00000010ul
+#define BRUSHLESS25_SPD_POWER_V_MIN_15_PERCENT      0x00000014ul
+#define BRUSHLESS25_SPD_POWER_V_MIN_20_PERCENT      0x00000018ul
+#define BRUSHLESS25_SPD_POWER_V_MIN_25_PERCENT      0x0000001Cul
+#define BRUSHLESS25_CLOSED_LOOP_MODE_DISABLED       0x00000000ul
+#define BRUSHLESS25_CLOSED_LOOP_MODE_SPEED_LOOP     0x00000001ul
+#define BRUSHLESS25_CLOSED_LOOP_MODE_POWER_LOOP     0x00000002ul
+
+/**
+ * @brief Brushless 25 CONST_PWR register setting.
+ * @details Specified setting for CONST_PWR register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_DEADTIME_COMP_EN                0x00004000ul
+#define BRUSHLESS25_CONST_POWER_LIMIT_HYST_5        0x00000000ul
+#define BRUSHLESS25_CONST_POWER_LIMIT_HYST_7POINT5  0x00000004ul
+#define BRUSHLESS25_CONST_POWER_LIMIT_HYST_10       0x00000008ul
+#define BRUSHLESS25_CONST_POWER_LIMIT_HYST_12POINT5 0x0000000Cul
+#define BRUSHLESS25_CONST_POWER_MODE_DISABLED       0x00000000ul
+#define BRUSHLESS25_CONST_POWER_MODE_CL_POWER       0x00000001ul
+#define BRUSHLESS25_CONST_POWER_MODE_POWER_LIMIT    0x00000002ul
+
+/**
+ * @brief Brushless 25 150_DEG_TWO_PH_PROFILE register setting.
+ * @details Specified setting for 150_DEG_TWO_PH_PROFILE register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_TWOPH_STEP0_0_PERCENT           0x00000000ul
+#define BRUSHLESS25_TWOPH_STEP0_50_PERCENT          0x10000000ul
+#define BRUSHLESS25_TWOPH_STEP0_75_PERCENT          0x20000000ul
+#define BRUSHLESS25_TWOPH_STEP0_83_PERCENT          0x30000000ul
+#define BRUSHLESS25_TWOPH_STEP0_87_PERCENT          0x40000000ul
+#define BRUSHLESS25_TWOPH_STEP0_93_PERCENT          0x50000000ul
+#define BRUSHLESS25_TWOPH_STEP0_97_PERCENT          0x60000000ul
+#define BRUSHLESS25_TWOPH_STEP0_99_PERCENT          0x70000000ul
+#define BRUSHLESS25_TWOPH_STEP1_0_PERCENT           0x00000000ul
+#define BRUSHLESS25_TWOPH_STEP1_50_PERCENT          0x02000000ul
+#define BRUSHLESS25_TWOPH_STEP1_75_PERCENT          0x04000000ul
+#define BRUSHLESS25_TWOPH_STEP1_83_PERCENT          0x06000000ul
+#define BRUSHLESS25_TWOPH_STEP1_87_PERCENT          0x08000000ul
+#define BRUSHLESS25_TWOPH_STEP1_93_PERCENT          0x0A000000ul
+#define BRUSHLESS25_TWOPH_STEP1_97_PERCENT          0x0C000000ul
+#define BRUSHLESS25_TWOPH_STEP1_99_PERCENT          0x0E000000ul
+#define BRUSHLESS25_TWOPH_STEP2_0_PERCENT           0x00000000ul
+#define BRUSHLESS25_TWOPH_STEP2_50_PERCENT          0x00400000ul
+#define BRUSHLESS25_TWOPH_STEP2_75_PERCENT          0x00800000ul
+#define BRUSHLESS25_TWOPH_STEP2_83_PERCENT          0x00C00000ul
+#define BRUSHLESS25_TWOPH_STEP2_87_PERCENT          0x01000000ul
+#define BRUSHLESS25_TWOPH_STEP2_93_PERCENT          0x01400000ul
+#define BRUSHLESS25_TWOPH_STEP2_97_PERCENT          0x01800000ul
+#define BRUSHLESS25_TWOPH_STEP2_99_PERCENT          0x01C00000ul
+#define BRUSHLESS25_TWOPH_STEP3_0_PERCENT           0x00000000ul
+#define BRUSHLESS25_TWOPH_STEP3_50_PERCENT          0x00080000ul
+#define BRUSHLESS25_TWOPH_STEP3_75_PERCENT          0x00100000ul
+#define BRUSHLESS25_TWOPH_STEP3_83_PERCENT          0x00180000ul
+#define BRUSHLESS25_TWOPH_STEP3_87_PERCENT          0x00200000ul
+#define BRUSHLESS25_TWOPH_STEP3_93_PERCENT          0x00280000ul
+#define BRUSHLESS25_TWOPH_STEP3_97_PERCENT          0x00300000ul
+#define BRUSHLESS25_TWOPH_STEP3_99_PERCENT          0x00380000ul
+#define BRUSHLESS25_TWOPH_STEP4_0_PERCENT           0x00000000ul
+#define BRUSHLESS25_TWOPH_STEP4_50_PERCENT          0x00010000ul
+#define BRUSHLESS25_TWOPH_STEP4_75_PERCENT          0x00020000ul
+#define BRUSHLESS25_TWOPH_STEP4_83_PERCENT          0x00030000ul
+#define BRUSHLESS25_TWOPH_STEP4_87_PERCENT          0x00040000ul
+#define BRUSHLESS25_TWOPH_STEP4_93_PERCENT          0x00050000ul
+#define BRUSHLESS25_TWOPH_STEP4_97_PERCENT          0x00060000ul
+#define BRUSHLESS25_TWOPH_STEP4_99_PERCENT          0x00070000ul
+#define BRUSHLESS25_TWOPH_STEP5_0_PERCENT           0x00000000ul
+#define BRUSHLESS25_TWOPH_STEP5_50_PERCENT          0x00002000ul
+#define BRUSHLESS25_TWOPH_STEP5_75_PERCENT          0x00004000ul
+#define BRUSHLESS25_TWOPH_STEP5_83_PERCENT          0x00006000ul
+#define BRUSHLESS25_TWOPH_STEP5_87_PERCENT          0x00008000ul
+#define BRUSHLESS25_TWOPH_STEP5_93_PERCENT          0x0000A000ul
+#define BRUSHLESS25_TWOPH_STEP5_97_PERCENT          0x0000C000ul
+#define BRUSHLESS25_TWOPH_STEP5_99_PERCENT          0x0000E000ul
+#define BRUSHLESS25_TWOPH_STEP6_0_PERCENT           0x00000000ul
+#define BRUSHLESS25_TWOPH_STEP6_50_PERCENT          0x00000400ul
+#define BRUSHLESS25_TWOPH_STEP6_75_PERCENT          0x00000800ul
+#define BRUSHLESS25_TWOPH_STEP6_83_PERCENT          0x00000C00ul
+#define BRUSHLESS25_TWOPH_STEP6_87_PERCENT          0x00001000ul
+#define BRUSHLESS25_TWOPH_STEP6_93_PERCENT          0x00001400ul
+#define BRUSHLESS25_TWOPH_STEP6_97_PERCENT          0x00001800ul
+#define BRUSHLESS25_TWOPH_STEP6_99_PERCENT          0x00001C00ul
+#define BRUSHLESS25_TWOPH_STEP7_0_PERCENT           0x00000000ul
+#define BRUSHLESS25_TWOPH_STEP7_50_PERCENT          0x00000080ul
+#define BRUSHLESS25_TWOPH_STEP7_75_PERCENT          0x00000100ul
+#define BRUSHLESS25_TWOPH_STEP7_83_PERCENT          0x00000180ul
+#define BRUSHLESS25_TWOPH_STEP7_87_PERCENT          0x00000200ul
+#define BRUSHLESS25_TWOPH_STEP7_93_PERCENT          0x00000280ul
+#define BRUSHLESS25_TWOPH_STEP7_97_PERCENT          0x00000300ul
+#define BRUSHLESS25_TWOPH_STEP7_99_PERCENT          0x00000380ul
+
+/**
+ * @brief Brushless 25 150_DEG_THREE_PH_PROFILE register setting.
+ * @details Specified setting for 150_DEG_THREE_PH_PROFILE register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_THREEPH_STEP0_0_PERCENT         0x00000000ul
+#define BRUSHLESS25_THREEPH_STEP0_50_PERCENT        0x10000000ul
+#define BRUSHLESS25_THREEPH_STEP0_75_PERCENT        0x20000000ul
+#define BRUSHLESS25_THREEPH_STEP0_83_PERCENT        0x30000000ul
+#define BRUSHLESS25_THREEPH_STEP0_87_PERCENT        0x40000000ul
+#define BRUSHLESS25_THREEPH_STEP0_93_PERCENT        0x50000000ul
+#define BRUSHLESS25_THREEPH_STEP0_97_PERCENT        0x60000000ul
+#define BRUSHLESS25_THREEPH_STEP0_99_PERCENT        0x70000000ul
+#define BRUSHLESS25_THREEPH_STEP1_0_PERCENT         0x00000000ul
+#define BRUSHLESS25_THREEPH_STEP1_50_PERCENT        0x02000000ul
+#define BRUSHLESS25_THREEPH_STEP1_75_PERCENT        0x04000000ul
+#define BRUSHLESS25_THREEPH_STEP1_83_PERCENT        0x06000000ul
+#define BRUSHLESS25_THREEPH_STEP1_87_PERCENT        0x08000000ul
+#define BRUSHLESS25_THREEPH_STEP1_93_PERCENT        0x0A000000ul
+#define BRUSHLESS25_THREEPH_STEP1_97_PERCENT        0x0C000000ul
+#define BRUSHLESS25_THREEPH_STEP1_99_PERCENT        0x0E000000ul
+#define BRUSHLESS25_THREEPH_STEP2_0_PERCENT         0x00000000ul
+#define BRUSHLESS25_THREEPH_STEP2_50_PERCENT        0x00400000ul
+#define BRUSHLESS25_THREEPH_STEP2_75_PERCENT        0x00800000ul
+#define BRUSHLESS25_THREEPH_STEP2_83_PERCENT        0x00C00000ul
+#define BRUSHLESS25_THREEPH_STEP2_87_PERCENT        0x01000000ul
+#define BRUSHLESS25_THREEPH_STEP2_93_PERCENT        0x01400000ul
+#define BRUSHLESS25_THREEPH_STEP2_97_PERCENT        0x01800000ul
+#define BRUSHLESS25_THREEPH_STEP2_99_PERCENT        0x01C00000ul
+#define BRUSHLESS25_THREEPH_STEP3_0_PERCENT         0x00000000ul
+#define BRUSHLESS25_THREEPH_STEP3_50_PERCENT        0x00080000ul
+#define BRUSHLESS25_THREEPH_STEP3_75_PERCENT        0x00100000ul
+#define BRUSHLESS25_THREEPH_STEP3_83_PERCENT        0x00180000ul
+#define BRUSHLESS25_THREEPH_STEP3_87_PERCENT        0x00200000ul
+#define BRUSHLESS25_THREEPH_STEP3_93_PERCENT        0x00280000ul
+#define BRUSHLESS25_THREEPH_STEP3_97_PERCENT        0x00300000ul
+#define BRUSHLESS25_THREEPH_STEP3_99_PERCENT        0x00380000ul
+#define BRUSHLESS25_THREEPH_STEP4_0_PERCENT         0x00000000ul
+#define BRUSHLESS25_THREEPH_STEP4_50_PERCENT        0x00010000ul
+#define BRUSHLESS25_THREEPH_STEP4_75_PERCENT        0x00020000ul
+#define BRUSHLESS25_THREEPH_STEP4_83_PERCENT        0x00030000ul
+#define BRUSHLESS25_THREEPH_STEP4_87_PERCENT        0x00040000ul
+#define BRUSHLESS25_THREEPH_STEP4_93_PERCENT        0x00050000ul
+#define BRUSHLESS25_THREEPH_STEP4_97_PERCENT        0x00060000ul
+#define BRUSHLESS25_THREEPH_STEP4_99_PERCENT        0x00070000ul
+#define BRUSHLESS25_THREEPH_STEP5_0_PERCENT         0x00000000ul
+#define BRUSHLESS25_THREEPH_STEP5_50_PERCENT        0x00002000ul
+#define BRUSHLESS25_THREEPH_STEP5_75_PERCENT        0x00004000ul
+#define BRUSHLESS25_THREEPH_STEP5_83_PERCENT        0x00006000ul
+#define BRUSHLESS25_THREEPH_STEP5_87_PERCENT        0x00008000ul
+#define BRUSHLESS25_THREEPH_STEP5_93_PERCENT        0x0000A000ul
+#define BRUSHLESS25_THREEPH_STEP5_97_PERCENT        0x0000C000ul
+#define BRUSHLESS25_THREEPH_STEP5_99_PERCENT        0x0000E000ul
+#define BRUSHLESS25_THREEPH_STEP6_0_PERCENT         0x00000000ul
+#define BRUSHLESS25_THREEPH_STEP6_50_PERCENT        0x00000400ul
+#define BRUSHLESS25_THREEPH_STEP6_75_PERCENT        0x00000800ul
+#define BRUSHLESS25_THREEPH_STEP6_83_PERCENT        0x00000C00ul
+#define BRUSHLESS25_THREEPH_STEP6_87_PERCENT        0x00001000ul
+#define BRUSHLESS25_THREEPH_STEP6_93_PERCENT        0x00001400ul
+#define BRUSHLESS25_THREEPH_STEP6_97_PERCENT        0x00001800ul
+#define BRUSHLESS25_THREEPH_STEP6_99_PERCENT        0x00001C00ul
+#define BRUSHLESS25_THREEPH_STEP7_0_PERCENT         0x00000000ul
+#define BRUSHLESS25_THREEPH_STEP7_50_PERCENT        0x00000080ul
+#define BRUSHLESS25_THREEPH_STEP7_75_PERCENT        0x00000100ul
+#define BRUSHLESS25_THREEPH_STEP7_83_PERCENT        0x00000180ul
+#define BRUSHLESS25_THREEPH_STEP7_87_PERCENT        0x00000200ul
+#define BRUSHLESS25_THREEPH_STEP7_93_PERCENT        0x00000280ul
+#define BRUSHLESS25_THREEPH_STEP7_97_PERCENT        0x00000300ul
+#define BRUSHLESS25_THREEPH_STEP7_99_PERCENT        0x00000380ul
+#define BRUSHLESS25_LEAD_ANGLE_150DEG_ADV_0_DEG     0x00000000ul
+#define BRUSHLESS25_LEAD_ANGLE_150DEG_ADV_5_DEG     0x00000020ul
+#define BRUSHLESS25_LEAD_ANGLE_150DEG_ADV_10_DEG    0x00000040ul
+#define BRUSHLESS25_LEAD_ANGLE_150DEG_ADV_15_DEG    0x00000060ul
+
+/**
+ * @brief Brushless 25 TRAP_CONFIG1 register setting.
+ * @details Specified setting for TRAP_CONFIG1 register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_OL_HANDOFF_CYCLES_3             0x00000000ul
+#define BRUSHLESS25_OL_HANDOFF_CYCLES_6             0x00400000ul
+#define BRUSHLESS25_OL_HANDOFF_CYCLES_12            0x00800000ul
+#define BRUSHLESS25_OL_HANDOFF_CYCLES_24            0x00C00000ul
+#define BRUSHLESS25_AVS_NEG_CURR_LIMIT_0            0x00000000ul
+#define BRUSHLESS25_AVS_NEG_CURR_LIMIT_NEG40        0x00010000ul
+#define BRUSHLESS25_AVS_NEG_CURR_LIMIT_NEG30        0x00020000ul
+#define BRUSHLESS25_AVS_NEG_CURR_LIMIT_NEG20        0x00030000ul
+#define BRUSHLESS25_AVS_NEG_CURR_LIMIT_NEG10        0x00040000ul
+#define BRUSHLESS25_AVS_NEG_CURR_LIMIT_10           0x00050000ul
+#define BRUSHLESS25_AVS_NEG_CURR_LIMIT_20           0x00060000ul
+#define BRUSHLESS25_AVS_NEG_CURR_LIMIT_30           0x00070000ul
+#define BRUSHLESS25_AVS_LIMIT_HYST_20               0x00000000ul
+#define BRUSHLESS25_AVS_LIMIT_HYST_10               0x00008000ul
+#define BRUSHLESS25_ISD_BEMF_THR_0                  0x00000000ul
+#define BRUSHLESS25_ISD_BEMF_THR_200                0x00000400ul
+#define BRUSHLESS25_ISD_BEMF_THR_400                0x00000800ul
+#define BRUSHLESS25_ISD_BEMF_THR_600                0x00000C00ul
+#define BRUSHLESS25_ISD_BEMF_THR_800                0x00001000ul
+#define BRUSHLESS25_ISD_BEMF_THR_1000               0x00001400ul
+#define BRUSHLESS25_ISD_BEMF_THR_1200               0x00001800ul
+#define BRUSHLESS25_ISD_BEMF_THR_1400               0x00001C00ul
+#define BRUSHLESS25_ISD_BEMF_THR_1600               0x00002000ul
+#define BRUSHLESS25_ISD_BEMF_THR_1800               0x00002400ul
+#define BRUSHLESS25_ISD_BEMF_THR_2000               0x00002800ul
+#define BRUSHLESS25_ISD_BEMF_THR_2200               0x00002C00ul
+#define BRUSHLESS25_ISD_BEMF_THR_2400               0x00003000ul
+#define BRUSHLESS25_ISD_BEMF_THR_2600               0x00003400ul
+#define BRUSHLESS25_ISD_BEMF_THR_2800               0x00003800ul
+#define BRUSHLESS25_ISD_BEMF_THR_3000               0x00003C00ul
+#define BRUSHLESS25_ISD_BEMF_THR_3200               0x00004000ul
+#define BRUSHLESS25_ISD_BEMF_THR_3400               0x00004400ul
+#define BRUSHLESS25_ISD_BEMF_THR_3600               0x00004800ul
+#define BRUSHLESS25_ISD_BEMF_THR_3800               0x00004C00ul
+#define BRUSHLESS25_ISD_BEMF_THR_4000               0x00005000ul
+#define BRUSHLESS25_ISD_BEMF_THR_4200               0x00005400ul
+#define BRUSHLESS25_ISD_BEMF_THR_4400               0x00005800ul
+#define BRUSHLESS25_ISD_BEMF_THR_4600               0x00005C00ul
+#define BRUSHLESS25_ISD_BEMF_THR_4800               0x00006000ul
+#define BRUSHLESS25_ISD_BEMF_THR_5000               0x00006400ul
+#define BRUSHLESS25_ISD_BEMF_THR_5200               0x00006800ul
+#define BRUSHLESS25_ISD_BEMF_THR_5400               0x00006C00ul
+#define BRUSHLESS25_ISD_BEMF_THR_5600               0x00007000ul
+#define BRUSHLESS25_ISD_BEMF_THR_5800               0x00007400ul
+#define BRUSHLESS25_ISD_BEMF_THR_6000               0x00007800ul
+#define BRUSHLESS25_ISD_BEMF_THR_6200               0x00007C00ul
+#define BRUSHLESS25_ISD_CYCLE_THR_2                 0x00000000ul
+#define BRUSHLESS25_ISD_CYCLE_THR_5                 0x00000080ul
+#define BRUSHLESS25_ISD_CYCLE_THR_8                 0x00000100ul
+#define BRUSHLESS25_ISD_CYCLE_THR_11                0x00000180ul
+#define BRUSHLESS25_ISD_CYCLE_THR_14                0x00000200ul
+#define BRUSHLESS25_ISD_CYCLE_THR_17                0x00000280ul
+#define BRUSHLESS25_ISD_CYCLE_THR_20                0x00000300ul
+#define BRUSHLESS25_ISD_CYCLE_THR_22                0x00000380ul
+#define BRUSHLESS25_ZC_ANGLE_OL_THR_5_DEG           0x00000000ul
+#define BRUSHLESS25_ZC_ANGLE_OL_THR_8_DEG           0x00000004ul
+#define BRUSHLESS25_ZC_ANGLE_OL_THR_12_DEG          0x00000008ul
+#define BRUSHLESS25_ZC_ANGLE_OL_THR_15_DEG          0x0000000Cul
+#define BRUSHLESS25_FAST_STARTUP_DIV_FACTOR_1       0x00000000ul
+#define BRUSHLESS25_FAST_STARTUP_DIV_FACTOR_2       0x00000001ul
+#define BRUSHLESS25_FAST_STARTUP_DIV_FACTOR_4       0x00000002ul
+#define BRUSHLESS25_FAST_STARTUP_DIV_FACTOR_8       0x00000003ul
+
+/**
+ * @brief Brushless 25 TRAP_CONFIG2 register setting.
+ * @details Specified setting for TRAP_CONFIG2 register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_TBLANK_0_uS                     0x00000000ul
+#define BRUSHLESS25_TBLANK_1_uS                     0x08000000ul
+#define BRUSHLESS25_TBLANK_2_uS                     0x10000000ul
+#define BRUSHLESS25_TBLANK_3_uS                     0x18000000ul
+#define BRUSHLESS25_TBLANK_4_uS                     0x20000000ul
+#define BRUSHLESS25_TBLANK_5_uS                     0x28000000ul
+#define BRUSHLESS25_TBLANK_6_uS                     0x30000000ul
+#define BRUSHLESS25_TBLANK_7_uS                     0x38000000ul
+#define BRUSHLESS25_TBLANK_8_uS                     0x40000000ul
+#define BRUSHLESS25_TBLANK_9_uS                     0x48000000ul
+#define BRUSHLESS25_TBLANK_10_uS                    0x50000000ul
+#define BRUSHLESS25_TBLANK_11_uS                    0x58000000ul
+#define BRUSHLESS25_TBLANK_12_uS                    0x60000000ul
+#define BRUSHLESS25_TBLANK_13_uS                    0x68000000ul
+#define BRUSHLESS25_TBLANK_14_uS                    0x70000000ul
+#define BRUSHLESS25_TBLANK_15_uS                    0x78000000ul
+#define BRUSHLESS25_TPWDTH_0_uS                     0x00000000ul
+#define BRUSHLESS25_TPWDTH_1_uS                     0x01000000ul
+#define BRUSHLESS25_TPWDTH_2_uS                     0x02000000ul
+#define BRUSHLESS25_TPWDTH_3_uS                     0x03000000ul
+#define BRUSHLESS25_TPWDTH_4_uS                     0x04000000ul
+#define BRUSHLESS25_TPWDTH_5_uS                     0x05000000ul
+#define BRUSHLESS25_TPWDTH_6_uS                     0x06000000ul
+#define BRUSHLESS25_TPWDTH_7_uS                     0x07000000ul
+#define BRUSHLESS25_ALIGN_DUTY_10_PERCENT           0x00000000ul
+#define BRUSHLESS25_ALIGN_DUTY_15_PERCENT           0x00040000ul
+#define BRUSHLESS25_ALIGN_DUTY_20_PERCENT           0x00080000ul
+#define BRUSHLESS25_ALIGN_DUTY_25_PERCENT           0x000C0000ul
+#define BRUSHLESS25_ALIGN_DUTY_30_PERCENT           0x00100000ul
+#define BRUSHLESS25_ALIGN_DUTY_40_PERCENT           0x00140000ul
+#define BRUSHLESS25_ALIGN_DUTY_50_PERCENT           0x00180000ul
+#define BRUSHLESS25_ALIGN_DUTY_100_PERCENT          0x001C0000ul
+
+/**
+ * @brief Brushless 25 FAULT_CONFIG1 register setting.
+ * @details Specified setting for FAULT_CONFIG1 register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_NO_MTR_DEG_TIME_1_mS            0x00000000ul
+#define BRUSHLESS25_NO_MTR_DEG_TIME_10_mS           0x08000000ul
+#define BRUSHLESS25_NO_MTR_DEG_TIME_25_mS           0x10000000ul
+#define BRUSHLESS25_NO_MTR_DEG_TIME_50_mS           0x18000000ul
+#define BRUSHLESS25_NO_MTR_DEG_TIME_100_mS          0x20000000ul
+#define BRUSHLESS25_NO_MTR_DEG_TIME_250_mS          0x28000000ul
+#define BRUSHLESS25_NO_MTR_DEG_TIME_500_mS          0x30000000ul
+#define BRUSHLESS25_NO_MTR_DEG_TIME_1000_mS         0x38000000ul
+#define BRUSHLESS25_CBC_ILIMIT_AUTO_REC_PWM_FLT_EN  0x00000000ul
+#define BRUSHLESS25_CBC_ILIMIT_AUTO_REC_PWM_FLT_DIS 0x00800000ul
+#define BRUSHLESS25_CBC_ILIMIT_AUTO_REC_FLT_EN_HI   0x01000000ul
+#define BRUSHLESS25_CBC_ILIMIT_AUTO_REC_FLT_DIS_HI  0x01800000ul
+#define BRUSHLESS25_CBC_ILIMIT_CBC_AUTO_REC_FLT_EN  0x02000000ul
+#define BRUSHLESS25_CBC_ILIMIT_CBC_AUTO_REC_FLT_DIS 0x02800000ul
+#define BRUSHLESS25_CBC_ILIMIT_DISABLED             0x07800000ul
+#define BRUSHLESS25_LOCK_ILIMIT_NA                  0x00000000ul
+#define BRUSHLESS25_LOCK_ILIMIT_100_mV              0x00080000ul
+#define BRUSHLESS25_LOCK_ILIMIT_200_mV              0x00100000ul
+#define BRUSHLESS25_LOCK_ILIMIT_300_mV              0x00180000ul
+#define BRUSHLESS25_LOCK_ILIMIT_400_mV              0x00200000ul
+#define BRUSHLESS25_LOCK_ILIMIT_500_mV              0x00280000ul
+#define BRUSHLESS25_LOCK_ILIMIT_600_mV              0x00300000ul
+#define BRUSHLESS25_LOCK_ILIMIT_700_mV              0x00380000ul
+#define BRUSHLESS25_LOCK_ILIMIT_800_mV              0x00400000ul
+#define BRUSHLESS25_LOCK_ILIMIT_900_mV              0x00480000ul
+#define BRUSHLESS25_LOCK_ILIMIT_1000_mV             0x00500000ul
+#define BRUSHLESS25_LOCK_ILIMIT_1100_mV             0x00580000ul
+#define BRUSHLESS25_LOCK_ILIMIT_1200_mV             0x00600000ul
+#define BRUSHLESS25_LOCK_ILIMIT_1300_mV             0x00680000ul
+#define BRUSHLESS25_LOCK_ILIMIT_1400_mV             0x00700000ul
+#define BRUSHLESS25_LOCK_ILIMIT_1500_mV             0x00780000ul
+#define BRUSHLESS25_LOCK_ILIMIT_FLT_ACTIVE_GATE_TRI 0x00000000ul
+#define BRUSHLESS25_LOCK_ILIMIT_FLT_ACTIVE_GATE_REC 0x00008000ul
+#define BRUSHLESS25_LOCK_ILIMIT_FLT_ACTIVE_GATE_HIG 0x00010000ul
+#define BRUSHLESS25_LOCK_ILIMIT_FLT_ACTIVE_GATE_LOW 0x00018000ul
+#define BRUSHLESS25_LOCK_ILIMIT_AUTO_REC_LCK_GATE_T 0x00020000ul
+#define BRUSHLESS25_LOCK_ILIMIT_AUTO_REC_LCK_GATE_R 0x00028000ul
+#define BRUSHLESS25_LOCK_ILIMIT_AUTO_REC_LCK_GATE_H 0x00030000ul
+#define BRUSHLESS25_LOCK_ILIMIT_AUTO_REC_LCK_GATE_L 0x00038000ul
+#define BRUSHLESS25_LOCK_ILIMIT_ENABLED_NO_ACTION   0x00040000ul
+#define BRUSHLESS25_LOCK_ILIMIT_DISABLED            0x00078000ul
+#define BRUSHLESS25_LOCK_ILIMIT_DEG_1_mS            0x00000000ul
+#define BRUSHLESS25_LOCK_ILIMIT_DEG_2_mS            0x00000800ul
+#define BRUSHLESS25_LOCK_ILIMIT_DEG_5_mS            0x00001000ul
+#define BRUSHLESS25_LOCK_ILIMIT_DEG_10_mS           0x00001800ul
+#define BRUSHLESS25_LOCK_ILIMIT_DEG_25_mS           0x00002000ul
+#define BRUSHLESS25_LOCK_ILIMIT_DEG_50_mS           0x00002800ul
+#define BRUSHLESS25_LOCK_ILIMIT_DEG_75_mS           0x00003000ul
+#define BRUSHLESS25_LOCK_ILIMIT_DEG_100_mS          0x00003800ul
+#define BRUSHLESS25_LOCK_ILIMIT_DEG_250_mS          0x00004000ul
+#define BRUSHLESS25_LOCK_ILIMIT_DEG_500_mS          0x00004800ul
+#define BRUSHLESS25_LOCK_ILIMIT_DEG_1000_mS         0x00005000ul
+#define BRUSHLESS25_LOCK_ILIMIT_DEG_2500_mS         0x00005800ul
+#define BRUSHLESS25_LOCK_ILIMIT_DEG_5000_mS         0x00006000ul
+#define BRUSHLESS25_LOCK_ILIMIT_DEG_10_S            0x00006800ul
+#define BRUSHLESS25_LOCK_ILIMIT_DEG_25_S            0x00007000ul
+#define BRUSHLESS25_LOCK_ILIMIT_DEG_50_S            0x00007800ul
+#define BRUSHLESS25_CBC_RETRY_PWM_CYC_0             0x00000000ul
+#define BRUSHLESS25_CBC_RETRY_PWM_CYC_1             0x00000100ul
+#define BRUSHLESS25_CBC_RETRY_PWM_CYC_2             0x00000200ul
+#define BRUSHLESS25_CBC_RETRY_PWM_CYC_3             0x00000300ul
+#define BRUSHLESS25_CBC_RETRY_PWM_CYC_4             0x00000400ul
+#define BRUSHLESS25_CBC_RETRY_PWM_CYC_5             0x00000500ul
+#define BRUSHLESS25_CBC_RETRY_PWM_CYC_6             0x00000600ul
+#define BRUSHLESS25_CBC_RETRY_PWM_CYC_7             0x00000700ul
+#define BRUSHLESS25_MTR_LCK_FLT_EN_GATE_TRISTATED   0x00000000ul
+#define BRUSHLESS25_MTR_LCK_FLT_EN_GATE_RECIRCULAT  0x00000008ul
+#define BRUSHLESS25_MTR_LCK_FLT_EN_HIGH_SIDE_BRAKE  0x00000010ul
+#define BRUSHLESS25_MTR_LCK_FLT_EN_LOW_SIDE_BRAKE   0x00000018ul
+#define BRUSHLESS25_MTR_LCK_AUTO_REC_LCK_RETR_TRI   0x00000020ul
+#define BRUSHLESS25_MTR_LCK_AUTO_REC_LCK_RETR_REC   0x00000028ul
+#define BRUSHLESS25_MTR_LCK_AUTO_REC_LCK_HIGH_BRAKE 0x00000030ul
+#define BRUSHLESS25_MTR_LCK_AUTO_REC_LCK_LOW_BRAKE  0x00000038ul
+#define BRUSHLESS25_MTR_LCK_EN_NO_ACTION            0x00000040ul
+#define BRUSHLESS25_MTR_LCK_DISABLED                0x00000078ul
+#define BRUSHLESS25_LCK_RETRY_100_mS                0x00000000ul
+#define BRUSHLESS25_LCK_RETRY_500_mS                0x00000001ul
+#define BRUSHLESS25_LCK_RETRY_1000_mS               0x00000002ul
+#define BRUSHLESS25_LCK_RETRY_2000_mS               0x00000003ul
+#define BRUSHLESS25_LCK_RETRY_3000_mS               0x00000004ul
+#define BRUSHLESS25_LCK_RETRY_5000_mS               0x00000005ul
+#define BRUSHLESS25_LCK_RETRY_7500_mS               0x00000006ul
+#define BRUSHLESS25_LCK_RETRY_10000_mS              0x00000007ul
+
+/**
+ * @brief Brushless 25 FAULT_CONFIG2 register setting.
+ * @details Specified setting for FAULT_CONFIG2 register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_LOCK1_EN                        0x40000000ul
+#define BRUSHLESS25_LOCK2_EN                        0x20000000ul
+#define BRUSHLESS25_LOCK3_EN                        0x10000000ul
+#define BRUSHLESS25_LOCK_ABN_SPEED_250_Hz           0x00000000ul
+#define BRUSHLESS25_LOCK_ABN_SPEED_500_Hz           0x01000000ul
+#define BRUSHLESS25_LOCK_ABN_SPEED_750_Hz           0x02000000ul
+#define BRUSHLESS25_LOCK_ABN_SPEED_1000_Hz          0x03000000ul
+#define BRUSHLESS25_LOCK_ABN_SPEED_1250_Hz          0x04000000ul
+#define BRUSHLESS25_LOCK_ABN_SPEED_1500_Hz          0x05000000ul
+#define BRUSHLESS25_LOCK_ABN_SPEED_1750_Hz          0x06000000ul
+#define BRUSHLESS25_LOCK_ABN_SPEED_2000_Hz          0x07000000ul
+#define BRUSHLESS25_LOCK_ABN_SPEED_2250_Hz          0x08000000ul
+#define BRUSHLESS25_LOCK_ABN_SPEED_2500_Hz          0x09000000ul
+#define BRUSHLESS25_LOCK_ABN_SPEED_2750_Hz          0x0A000000ul
+#define BRUSHLESS25_LOCK_ABN_SPEED_3000_Hz          0x0B000000ul
+#define BRUSHLESS25_LOCK_ABN_SPEED_3250_Hz          0x0C000000ul
+#define BRUSHLESS25_LOCK_ABN_SPEED_3500_Hz          0x0D000000ul
+#define BRUSHLESS25_LOCK_ABN_SPEED_3750_Hz          0x0E000000ul
+#define BRUSHLESS25_LOCK_ABN_SPEED_4000_Hz          0x0F000000ul
+#define BRUSHLESS25_LOSS_SYNC_TIMES_2               0x00000000ul
+#define BRUSHLESS25_LOSS_SYNC_TIMES_3               0x00200000ul
+#define BRUSHLESS25_LOSS_SYNC_TIMES_4               0x00400000ul
+#define BRUSHLESS25_LOSS_SYNC_TIMES_5               0x00600000ul
+#define BRUSHLESS25_LOSS_SYNC_TIMES_6               0x00800000ul
+#define BRUSHLESS25_LOSS_SYNC_TIMES_7               0x00A00000ul
+#define BRUSHLESS25_LOSS_SYNC_TIMES_8               0x00C00000ul
+#define BRUSHLESS25_LOSS_SYNC_TIMES_9               0x00E00000ul
+#define BRUSHLESS25_NO_MTR_THR_5_mV                 0x00000000ul
+#define BRUSHLESS25_NO_MTR_THR_7POINT5_mV           0x00040000ul
+#define BRUSHLESS25_NO_MTR_THR_10_mV                0x00080000ul
+#define BRUSHLESS25_NO_MTR_THR_12PIONT5_mV          0x000C0000ul
+#define BRUSHLESS25_NO_MTR_THR_20_mV                0x00100000ul
+#define BRUSHLESS25_NO_MTR_THR_25_mV                0x00140000ul
+#define BRUSHLESS25_NO_MTR_THR_30_mV                0x00180000ul
+#define BRUSHLESS25_NO_MTR_THR_40_mV                0x001C0000ul
+#define BRUSHLESS25_MAX_VM_MODE_OVERVOLTAGE_LATCH   0x00000000ul
+#define BRUSHLESS25_MAX_VM_MODE_AUTO_CLEAR          0x00020000ul
+#define BRUSHLESS25_MAX_VM_MOTOR_NO_LIMIT           0x00000000ul
+#define BRUSHLESS25_MAX_VM_MOTOR_20_V               0x00004000ul
+#define BRUSHLESS25_MAX_VM_MOTOR_25_V               0x00008000ul
+#define BRUSHLESS25_MAX_VM_MOTOR_30_V               0x0000C000ul
+#define BRUSHLESS25_MAX_VM_MOTOR_35_V               0x00010000ul
+#define BRUSHLESS25_MAX_VM_MOTOR_40_V               0x00014000ul
+#define BRUSHLESS25_MAX_VM_MOTOR_50_V               0x00018000ul
+#define BRUSHLESS25_MAX_VM_MOTOR_60_V               0x0001C000ul
+#define BRUSHLESS25_MIX_VM_MODE_UNDERVOLTAGE_LATCH  0x00000000ul
+#define BRUSHLESS25_MIX_VM_MODE_AUTO_CLEAR          0x00002000ul
+#define BRUSHLESS25_MIN_VM_MOTOR_NO_LIMIT           0x00000000ul
+#define BRUSHLESS25_MIN_VM_MOTOR_6_V                0x00000400ul
+#define BRUSHLESS25_MIN_VM_MOTOR_7_V                0x00000800ul
+#define BRUSHLESS25_MIN_VM_MOTOR_8_V                0x00000C00ul
+#define BRUSHLESS25_MIN_VM_MOTOR_9_V                0x00001000ul
+#define BRUSHLESS25_MIN_VM_MOTOR_10_V               0x00001400ul
+#define BRUSHLESS25_MIN_VM_MOTOR_12_V               0x00001800ul
+#define BRUSHLESS25_MIN_VM_MOTOR_15_V               0x00001C00ul
+#define BRUSHLESS25_AUTO_RETRY_TIMES_NO_LIMIT       0x00000000ul
+#define BRUSHLESS25_AUTO_RETRY_TIMES_2              0x00000080ul
+#define BRUSHLESS25_AUTO_RETRY_TIMES_3              0x00000100ul
+#define BRUSHLESS25_AUTO_RETRY_TIMES_5              0x00000180ul
+#define BRUSHLESS25_AUTO_RETRY_TIMES_7              0x00000200ul
+#define BRUSHLESS25_AUTO_RETRY_TIMES_10             0x00000280ul
+#define BRUSHLESS25_AUTO_RETRY_TIMES_15             0x00000300ul
+#define BRUSHLESS25_AUTO_RETRY_TIMES_20             0x00000380ul
+#define BRUSHLESS25_LOCK_MIN_SPEED_0POINT5_HZ       0x00000000ul
+#define BRUSHLESS25_LOCK_MIN_SPEED_1_HZ             0x00000010ul
+#define BRUSHLESS25_LOCK_MIN_SPEED_2_HZ             0x00000020ul
+#define BRUSHLESS25_LOCK_MIN_SPEED_3_HZ             0x00000030ul
+#define BRUSHLESS25_LOCK_MIN_SPEED_5_HZ             0x00000040ul
+#define BRUSHLESS25_LOCK_MIN_SPEED_10_HZ            0x00000050ul
+#define BRUSHLESS25_LOCK_MIN_SPEED_15_HZ            0x00000060ul
+#define BRUSHLESS25_LOCK_MIN_SPEED_25_HZ            0x00000070ul
+#define BRUSHLESS25_ABN_LOCK_SPD_RATIO_2            0x00000000ul
+#define BRUSHLESS25_ABN_LOCK_SPD_RATIO_4            0x00000004ul
+#define BRUSHLESS25_ABN_LOCK_SPD_RATIO_6            0x00000008ul
+#define BRUSHLESS25_ABN_LOCK_SPD_RATIO_8            0x0000000Cul
+#define BRUSHLESS25_ZERO_DUTY_THR_1_PERCENT         0x00000000ul
+#define BRUSHLESS25_ZERO_DUTY_THR_1POINT5_PERCENT   0x00000001ul
+#define BRUSHLESS25_ZERO_DUTY_THR_2_PERCENT         0x00000002ul
+#define BRUSHLESS25_ZERO_DUTY_THR_2POINT5_PERCENT   0x00000003ul
+
+/**
+ * @brief Brushless 25 PIN_CONFIG1 register setting.
+ * @details Specified setting for PIN_CONFIG1 register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_BRAKE_INPUT_HARDWARE_BRAKE      0x00000000ul
+#define BRUSHLESS25_BRAKE_INPUT_BRAKE_ENABLED       0x00000020ul
+#define BRUSHLESS25_BRAKE_INPUT_BRAKE_DISABLED      0x00000040ul
+#define BRUSHLESS25_BRAKE_INPUT_BRAKE_MASK          0x00000060ul
+#define BRUSHLESS25_DIR_INPUT_HARDWARE_DIR          0x00000000ul
+#define BRUSHLESS25_DIR_INPUT_OVERWRITE_A_B_C       0x00000008ul
+#define BRUSHLESS25_DIR_INPUT_OVERWRITE_NA          0x00000018ul
+#define BRUSHLESS25_SPD_CTRL_MODE_ANALOG_MODE       0x00000000ul
+#define BRUSHLESS25_SPD_CTRL_MODE_PWM_MODE          0x00000002ul
+#define BRUSHLESS25_SPD_CTRL_MODE_I2C_MODE          0x00000004ul
+#define BRUSHLESS25_SPD_CTRL_MODE_FREQUENCY_MODE    0x00000006ul
+#define BRUSHLESS25_SPD_CTRL_MODE_MASK              0x00000006ul
+
+/**
+ * @brief Brushless 25 PIN_CONFIG2 register setting.
+ * @details Specified setting for PIN_CONFIG2 register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_DAC_SOX_CONFIG_DACOUT2          0x00000000ul
+#define BRUSHLESS25_DAC_SOX_CONFIG_SOA              0x20000000ul
+#define BRUSHLESS25_DAC_SOX_CONFIG_SOB              0x40000000ul
+#define BRUSHLESS25_DAC_SOX_CONFIG_SOC              0x60000000ul
+#define BRUSHLESS25_DAC_XTAL_CONFIG_NA              0x00000000ul
+#define BRUSHLESS25_DAC_XTAL_CONFIG_DACOUT1         0x08000000ul
+#define BRUSHLESS25_SLEEP_TIME_50_uS                0x00000000ul
+#define BRUSHLESS25_SLEEP_TIME_200_uS               0x00040000ul
+#define BRUSHLESS25_SLEEP_TIME_20_mS                0x00080000ul
+#define BRUSHLESS25_SLEEP_TIME_200_mS               0x000C0000ul
+#define BRUSHLESS25_EXT_WD_EN                       0x00020000ul
+#define BRUSHLESS25_EXT_WD_INPUT_I2C                0x00000000ul
+#define BRUSHLESS25_EXT_WD_INPUT_GPIO               0x00010000ul
+#define BRUSHLESS25_EXT_WD_FAULT_REPORT_ONLY        0x00000000ul
+#define BRUSHLESS25_EXT_WD_FAULT_LATCHED_HIZ_OUTPUT 0x00008000ul
+#define BRUSHLESS25_EXT_WD_FREQ_10_Hz               0x00000000ul
+#define BRUSHLESS25_EXT_WD_FREQ_5_Hz                0x00002000ul
+#define BRUSHLESS25_EXT_WD_FREQ_2_Hz                0x00004000ul
+#define BRUSHLESS25_EXT_WD_FREQ_1_Hz                0x00006000ul
+
+/**
+ * @brief Brushless 25 DEVICE_CONFIG register setting.
+ * @details Specified setting for DEVICE_CONFIG register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_STL_ENABLE                      0x00008000ul
+#define BRUSHLESS25_SSM_CONFIG_ENABLE               0x00000000ul
+#define BRUSHLESS25_SSM_CONFIG_DISABLE              0x00004000ul
+#define BRUSHLESS25_DEV_MODE_STANDBY                0x00000000ul
+#define BRUSHLESS25_DEV_MODE_SLEEP                  0x00000800ul
+#define BRUSHLESS25_SPD_PWM_RANGE_SELECT_325_95_Hz  0x00000000ul
+#define BRUSHLESS25_SPD_PWM_RANGE_SELECT_10_325_Hz  0x00000400ul
+#define BRUSHLESS25_CLK_SEL_INTERNAL_OSCILLATOR     0x00000000ul           
+#define BRUSHLESS25_CLK_SEL_INTERNAL_NA             0x00000200ul           
+#define BRUSHLESS25_CLK_SEL_INTERNAL_EXTERNAL_CLOCK 0x00000300ul           
+#define BRUSHLESS25_EXT_CLK_EN                      0x00000040ul           
+#define BRUSHLESS25_EXT_CLK_CONFIG_8_Hz             0x00000000ul
+#define BRUSHLESS25_EXT_CLK_CONFIG_16_Hz            0x00000008ul
+#define BRUSHLESS25_EXT_CLK_CONFIG_32_Hz            0x00000010ul
+#define BRUSHLESS25_EXT_CLK_CONFIG_64_Hz            0x00000018ul
+#define BRUSHLESS25_EXT_CLK_CONFIG_128_Hz           0x00000020ul
+#define BRUSHLESS25_EXT_CLK_CONFIG_256_Hz           0x00000028ul
+#define BRUSHLESS25_EXT_CLK_CONFIG_512_Hz           0x00000030ul
+#define BRUSHLESS25_EXT_CLK_CONFIG_1024_Hz          0x00000038ul
+
+/**
+ * @brief Brushless 25 GD_CONFIG1 register setting.
+ * @details Specified setting for GD_CONFIG1 register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_SLEW_RATE_25_V_PER_uS           0x00000000ul
+#define BRUSHLESS25_SLEW_RATE_50_V_PER_uS           0x04000000ul
+#define BRUSHLESS25_SLEW_RATE_125_V_PER_uS          0x08000000ul
+#define BRUSHLESS25_SLEW_RATE_200_V_PER_uS          0x0C000000ul
+#define BRUSHLESS25_OVP_SEL_32_V                    0x00000000ul
+#define BRUSHLESS25_OVP_SEL_20_V                    0x00080000ul
+#define BRUSHLESS25_OVP_EN                          0x00040000ul
+#define BRUSHLESS25_OTW_REP_ENABLE                  0x00010000ul
+#define BRUSHLESS25_OCP_DEG_0POINT2_uS              0x00000000ul
+#define BRUSHLESS25_OCP_DEG_0POINT6_uS              0x00001000ul
+#define BRUSHLESS25_OCP_DEG_1POINT1_uS              0x00002000ul
+#define BRUSHLESS25_OCP_DEG_1POINT6_uS              0x00003000ul
+#define BRUSHLESS25_OCP_RETRY_5_mS                  0x00000000ul
+#define BRUSHLESS25_OCP_RETRY_500_mS                0x00000800ul
+#define BRUSHLESS25_OCP_LVL_16_A                    0x00000000ul
+#define BRUSHLESS25_OCP_LVL_24_A                    0x00000400ul
+#define BRUSHLESS25_OCP_MODE_LATCHED_FAULT          0x00000000ul
+#define BRUSHLESS25_OCP_MODE_AUTO_RETRYING_FAULT    0x00000100ul
+#define BRUSHLESS25_OCP_MODE_REPORT_ONLY            0x00000200ul
+#define BRUSHLESS25_OCP_MODE_NO_REPORT              0x00000300ul
+#define BRUSHLESS25_ADCOMP_TH_LS_100_mA             0x00000000ul
+#define BRUSHLESS25_ADCOMP_TH_LS_150_mA             0x00000020ul
+#define BRUSHLESS25_ADCOMP_TH_HS_100_mA             0x00000000ul
+#define BRUSHLESS25_ADCOMP_TH_HS_150_mA             0x00000010ul
+#define BRUSHLESS25_EN_ASR_ENABLE                   0x00000008ul
+#define BRUSHLESS25_EN_AAR_ENABLE                   0x00000004ul
+#define BRUSHLESS25_CSA_GAIN_150_mV_PER_A           0x00000000ul
+#define BRUSHLESS25_CSA_GAIN_300_mV_PER_A           0x00000001ul
+#define BRUSHLESS25_CSA_GAIN_600_mV_PER_A           0x00000002ul
+#define BRUSHLESS25_CSA_GAIN_1200_mV_PER_A          0x00000003ul
+
+/**
+ * @brief Brushless 25 GD_CONFIG2 register setting.
+ * @details Specified setting for GD_CONFIG2 register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_DELAY_COMP_EN                   0x40000000ul
+#define BRUSHLESS25_TARGET_DELAY_AUTO               0x00000000ul
+#define BRUSHLESS25_TARGET_DELAY_0POINT4_uS         0x04000000ul
+#define BRUSHLESS25_TARGET_DELAY_0POINT6_uS         0x08000000ul
+#define BRUSHLESS25_TARGET_DELAY_0POINT8_uS         0x0C000000ul
+#define BRUSHLESS25_TARGET_DELAY_1_uS               0x10000000ul
+#define BRUSHLESS25_TARGET_DELAY_1POINT2_uS         0x14000000ul
+#define BRUSHLESS25_TARGET_DELAY_1POINT4_uS         0x18000000ul
+#define BRUSHLESS25_TARGET_DELAY_1POINT6_uS         0x1C000000ul
+#define BRUSHLESS25_TARGET_DELAY_1POINT8_uS         0x20000000ul
+#define BRUSHLESS25_TARGET_DELAY_2_uS               0x24000000ul
+#define BRUSHLESS25_TARGET_DELAY_2POINT2_uS         0x28000000ul
+#define BRUSHLESS25_TARGET_DELAY_2POINT4_uS         0x2C000000ul
+#define BRUSHLESS25_TARGET_DELAY_2POINT6_uS         0x30000000ul
+#define BRUSHLESS25_TARGET_DELAY_2POINT8_uS         0x34000000ul
+#define BRUSHLESS25_TARGET_DELAY_3_uS               0x38000000ul
+#define BRUSHLESS25_TARGET_DELAY_3POINT2_uS         0x3C000000ul
+#define BRUSHLESS25_BUCK_SR_1000_V_PER_uS           0x00000000ul
+#define BRUSHLESS25_BUCK_SR_200_V_PER_uS            0x02000000ul
+#define BRUSHLESS25_BUCK_PS_ENABLE                  0x00000000ul
+#define BRUSHLESS25_BUCK_PS_DISABLE                 0x01000000ul
+#define BRUSHLESS25_BUCK_CL_600_mA                  0x00000000ul
+#define BRUSHLESS25_BUCK_CL_150_mA                  0x00800000ul
+#define BRUSHLESS25_BUCK_SEL_3V3                    0x00000000ul
+#define BRUSHLESS25_BUCK_SEL_5V                     0x00200000ul
+#define BRUSHLESS25_BUCK_SEL_4V                     0x00400000ul
+#define BRUSHLESS25_BUCK_SEL_5V7                    0x00600000ul
+#define BRUSHLESS25_BUCK_ENABLE                     0x00000000ul
+#define BRUSHLESS25_BUCK_DISABLE                    0x00100000ul
+
+/**
+ * @brief Brushless 25 GATE_DRIVER_FAULT_STATUS register setting.
+ * @details Specified setting for GATE_DRIVER_FAULT_STATUS register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_DRIVER_FAULT_DETECTED           0x80000000ul
+#define BRUSHLESS25_BK_FLT_DETECTED                 0x40000000ul
+#define BRUSHLESS25_OCP_DETECTED                    0x10000000ul
+#define BRUSHLESS25_NPOR_DETECTED                   0x08000000ul
+#define BRUSHLESS25_OVP_DETECTED                    0x04000000ul
+#define BRUSHLESS25_OT_DETECTED                     0x02000000ul
+#define BRUSHLESS25_OTW_DETECTED                    0x00800000ul
+#define BRUSHLESS25_TSD_DETECTED                    0x00400000ul
+#define BRUSHLESS25_OCP_HC_DETECTED                 0x00200000ul
+#define BRUSHLESS25_OCP_LC_DETECTED                 0x00100000ul
+#define BRUSHLESS25_OCP_HB_DETECTED                 0x00080000ul
+#define BRUSHLESS25_OCP_LB_DETECTED                 0x00040000ul
+#define BRUSHLESS25_OCP_HA_DETECTED                 0x00020000ul
+#define BRUSHLESS25_OCP_LA_DETECTED                 0x00010000ul
+#define BRUSHLESS25_OTP_ERR_DETECTED                0x00004000ul
+#define BRUSHLESS25_BUCK_OCP_DETECTED               0x00002000ul
+#define BRUSHLESS25_BUCK_UV_DETECTED                0x00001000ul
+#define BRUSHLESS25_VCP_UV_DETECTED                 0x00000800ul
+
+/**
+ * @brief Brushless 25 CONTROLLER_FAULT_STATUS register setting.
+ * @details Specified setting for CONTROLLER_FAULT_STATUS register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_CONTROLLER_FAULT_DETECTED       0x80000000ul
+#define BRUSHLESS25_IPD_FREQ_FAULT_DETECTED         0x20000000ul
+#define BRUSHLESS25_IPD_T1_FAULT_DETECTED           0x10000000ul
+#define BRUSHLESS25_IPD_T2_FAULT_DETECTED           0x08000000ul
+#define BRUSHLESS25_ABN_SPEED_DETECTED              0x00800000ul
+#define BRUSHLESS25_LOSS_OF_SYNC_DETECTED           0x00400000ul
+#define BRUSHLESS25_NO_MTR_DETECTED                 0x00200000ul
+#define BRUSHLESS25_MTR_LCK_DETECTED                0x00100000ul
+#define BRUSHLESS25_CBC_ILIMIT_DETECTED             0x00080000ul
+#define BRUSHLESS25_LOCK_ILIMIT_DETECTED            0x00040000ul
+#define BRUSHLESS25_MTR_UNDER_VOLTAGE_DETECTED      0x00020000ul
+#define BRUSHLESS25_MTR_OVER_VOLTAGE_DETECTED       0x00010000ul
+#define BRUSHLESS25_EXT_WD_TIMEOUT_DETECTED         0x00008000ul
+#define BRUSHLESS25_STL_EN_DETECTED                 0x00000004ul
+#define BRUSHLESS25_STL_STATUS_DETECTED             0x00000002ul
+#define BRUSHLESS25_APP_RESET_DETECTED              0x00000001ul
+
+/**
+ * @brief Brushless 25 SYS_STATUS2 register setting.
+ * @details Specified setting for SYS_STATUS2 register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_STATE_SYSTEM_IDLE               0x00000000ul
+#define BRUSHLESS25_STATE_MOTOR_START               0x10000000ul
+#define BRUSHLESS25_STATE_MOTOR_RUN                 0x20000000ul                
+#define BRUSHLESS25_STATE_SYSTEM_INIT               0x30000000ul                
+#define BRUSHLESS25_STATE_MOTOR_IPD                 0x40000000ul                
+#define BRUSHLESS25_STATE_MOTOR_ALIGN               0x50000000ul                
+#define BRUSHLESS25_STATE_MOTOR_IDLE                0x60000000ul                
+#define BRUSHLESS25_STATE_MOTOR_STOP                0x70000000ul                
+#define BRUSHLESS25_STATE_FAULT                     0x80000000ul                
+#define BRUSHLESS25_STATE_MOTOR_DIRECTION           0x90000000ul                
+#define BRUSHLESS25_STATE_HALL_ALIGN                0xA0000000ul                
+#define BRUSHLESS25_STATE_MOTOR_FREEWHEEL           0xC0000000ul                
+#define BRUSHLESS25_STATE_MOTOR_DESCEL              0xD0000000ul                
+#define BRUSHLESS25_STATE_MOTOR_BRAKE               0xE0000000ul                
+#define BRUSHLESS25_STATE_MASK                      0xF0000000ul                
+#define BRUSHLESS25_STL_FAULT_PASS                  0x00000000ul                
+#define BRUSHLESS25_STL_FAULT_FAIL                  0x00020000ul
+
+/**
+ * @brief Brushless 25 SYS_STATUS3 register setting.
+ * @details Specified setting for SYS_STATUS3 register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_DC_BUS_CURR_MASK                0xFFFF0000ul 
+#define BRUSHLESS25_DC_BATT_POW_MASK                0x0000FFFFul 
+
+/**
+ * @brief Brushless 25 ALGO_CTRL1 register setting.
+ * @details Specified setting for ALGO_CTRL1 register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_EEPROM_WRITE                    0x80000000ul 
+#define BRUSHLESS25_EEPROM_READ                     0x40000000ul
+#define BRUSHLESS25_CLR_FLT                         0x20000000ul
+#define BRUSHLESS25_CLR_FLT_RETRY_COUNT             0x10000000ul
+#define BRUSHLESS25_EXT_WD_STATUS_SET_AUTO          0x00000000ul 
+#define BRUSHLESS25_EXT_WD_STATUS_SET               0x00000001ul 
+
+/**
+ * @brief Brushless 25 DEVICE_CTRL register setting.
+ * @details Specified setting for DEVICE_CTRL register of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_SPEED_CTRL_MASK                 0x7FFF0000ul
+#define BRUSHLESS25_SPEED_CMD_USING_AN_FREQ_PWM     0x00000000ul
+#define BRUSHLESS25_SPEED_CMD_USING_SPEED_CTRL      0x00008000ul
+#define BRUSHLESS25_SPEED_CMD_MULTIPLAYER           32767
+
+/**
+ * @brief Brushless 25 control world setting.
+ * @details Specified setting for control world configuration of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_OP_R_CW                         0x80
+#define BRUSHLESS25_OP_W_CW                         0x00
+#define BRUSHLESS25_CRC_EN_CW                       0x40
+#define BRUSHLESS25_CRC_DIS_CW                      0x00
+#define BRUSHLESS25_16_BIT_DATA_CW                  0x00
+#define BRUSHLESS25_32_BIT_DATA_CW                  0x10
+#define BRUSHLESS25_64_BIT_DATA_CW                  0x20
+
+/**
+ * @brief Brushless 25 speed setting.
+ * @details Specified setting for speed configuration of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_POT_WRITE_REG_CMD               0x00
+#define BRUSHLESS25_POT_DEC_WIPER_CMD               0x02
+#define BRUSHLESS25_POT_INC_WIPER_CMD               0x01
+#define BRUSHLESS25_POT_VOLATILE_WIPER0_REG         0x00
+#define BRUSHLESS25_POT_NON_VOLATILE_WIPER0_REG     0x02
+#define BRUSHLESS25_POT_MAX_VAL                     0x0100
+
+/**
+ * @brief Brushless 25 speed setting.
+ * @details Specified setting for speed configuration of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_ANALOG_SPD_CTRL                 0x00
+#define BRUSHLESS25_PWM_SPD_CTRL                    0x01
+#define BRUSHLESS25_I2C_SPD_CTRL                    0x02
+
+/**
+ * @brief Brushless 25 brake control setting.
+ * @details Specified setting for brake control configuration of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_HW_CTRL_BRAKE                   0x00
+#define BRUSHLESS25_BRAKE_ON                        0x01
+#define BRUSHLESS25_BRAKE_OFF                       0x02
+
+/**
+ * @brief Brushless 25 slow start setting.
+ * @details Specified setting for slow start configuration of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_SLOW_START_ISD_CONFIG           0x6F04C180ul
+#define BRUSHLESS25_SLOW_START_MOTOR_STARTUP1       0x2F889192ul
+#define BRUSHLESS25_SLOW_START_MOTOR_STARTUP2       0x1A1CF990ul
+#define BRUSHLESS25_SLOW_START_CLOSED_LOOP1         0x09220200ul
+#define BRUSHLESS25_SLOW_START_CLOSED_LOOP2         0x02A6E4B0ul
+#define BRUSHLESS25_SLOW_START_CLOSED_LOOP3         0x4CC40100ul
+#define BRUSHLESS25_SLOW_START_CLOSED_LOOP4         0x000CE944ul
+#define BRUSHLESS25_SLOW_START_CONST_SPEED          0x00A00504ul
+#define BRUSHLESS25_SLOW_START_CONST_PWR            0x5DC04C84ul
+#define BRUSHLESS25_SLOW_START_150_DEG_TWO_PH       0x36DB6DA6ul
+#define BRUSHLESS25_SLOW_START_150_DEG_THREE_PH     0x36DB6D80ul
+#define BRUSHLESS25_SLOW_START_TRAP_CONFIG1         0x054BA106ul
+#define BRUSHLESS25_SLOW_START_TRAP_CONFIG2         0x52880000ul
+#define BRUSHLESS25_SLOW_START_FAULT_CONFIG1        0x78F43025ul
+#define BRUSHLESS25_SLOW_START_FAULT_CONFIG2        0x7447A009ul
+#define BRUSHLESS25_SLOW_START_GD_CONFIG1           0x1C440000ul
+#define BRUSHLESS25_SLOW_START_GD_CONFIG2           0x14000000ul
+#define BRUSHLESS25_SLOW_START_PIN_CONFIG1          0x2D720600ul
+#define BRUSHLESS25_SLOW_START_PIN_CONFIG2          0x080C0000ul
+#define BRUSHLESS25_SLOW_START_DEVICE_CONFIG        0x7FFF0000ul
+#define BRUSHLESS25_SLOW_START_PERIPH_CONFIG        0x00000000ul
+
+/**
+ * @brief Brushless 25 fast start setting.
+ * @details Specified setting for fast start configuration of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_FAST_START_ISD_CONFIG           0x6F04C100ul
+#define BRUSHLESS25_FAST_START_MOTOR_STARTUP1       0x38C8D197ul
+#define BRUSHLESS25_FAST_START_MOTOR_STARTUP2       0x1A399990ul
+#define BRUSHLESS25_FAST_START_CLOSED_LOOP1         0x11466200ul
+#define BRUSHLESS25_FAST_START_CLOSED_LOOP2         0x02A6E4B0ul
+#define BRUSHLESS25_FAST_START_CLOSED_LOOP3         0x4CC40101ul
+#define BRUSHLESS25_FAST_START_CLOSED_LOOP4         0x000CE944ul
+#define BRUSHLESS25_FAST_START_CONST_SPEED          0x00A00504ul
+#define BRUSHLESS25_FAST_START_CONST_PWR            0x5DC04C84ul
+#define BRUSHLESS25_FAST_START_150_DEG_TWO_PH       0x36DB6DA6ul
+#define BRUSHLESS25_FAST_START_150_DEG_THREE_PH     0x36DB6D80ul
+#define BRUSHLESS25_FAST_START_TRAP_CONFIG1         0x054BA106ul
+#define BRUSHLESS25_FAST_START_TRAP_CONFIG2         0x2A880000ul
+#define BRUSHLESS25_FAST_START_FAULT_CONFIG1        0x78F43025ul
+#define BRUSHLESS25_FAST_START_FAULT_CONFIG2        0x7947A009ul
+#define BRUSHLESS25_FAST_START_GD_CONFIG1           0x1C440000ul
+#define BRUSHLESS25_FAST_START_GD_CONFIG2           0x14000000ul
+#define BRUSHLESS25_FAST_START_PIN_CONFIG1          0x2D720600ul
+#define BRUSHLESS25_FAST_START_PIN_CONFIG2          0x080C0000ul
+#define BRUSHLESS25_FAST_START_DEVICE_CONFIG        0x7FFF0000ul
+#define BRUSHLESS25_FAST_START_PERIPH_CONFIG        0x00000000ul
+
+/**
+ * @brief Brushless 25 ultra fast start setting.
+ * @details Specified setting for ultra fast start configuration of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_ULTRA_START_ISD_CONFIG          0x6EC4C000ul
+#define BRUSHLESS25_ULTRA_START_MOTOR_STARTUP1      0x3E07118Bul
+#define BRUSHLESS25_ULTRA_START_MOTOR_STARTUP2      0x3B52239Cul
+#define BRUSHLESS25_ULTRA_START_CLOSED_LOOP1        0x1F326200ul
+#define BRUSHLESS25_ULTRA_START_CLOSED_LOOP2        0x02A224B0ul
+#define BRUSHLESS25_ULTRA_START_CLOSED_LOOP3        0x4D640111ul
+#define BRUSHLESS25_ULTRA_START_CLOSED_LOOP4        0x000CE944ul
+#define BRUSHLESS25_ULTRA_START_CONST_SPEED         0x00A00504ul
+#define BRUSHLESS25_ULTRA_START_CONST_PWR           0x5DC04C84ul
+#define BRUSHLESS25_ULTRA_START_150_DEG_TWO_PH      0x36DB6DA6ul
+#define BRUSHLESS25_ULTRA_START_150_DEG_THREE_PH    0x36DB6D80ul
+#define BRUSHLESS25_ULTRA_START_TRAP_CONFIG1        0x050BA106ul
+#define BRUSHLESS25_ULTRA_START_TRAP_CONFIG2        0x221C0000ul
+#define BRUSHLESS25_ULTRA_START_FAULT_CONFIG1       0x60F43025ul
+#define BRUSHLESS25_ULTRA_START_FAULT_CONFIG2       0x7487A009ul
+#define BRUSHLESS25_ULTRA_START_GD_CONFIG1          0x1C440000ul
+#define BRUSHLESS25_ULTRA_START_GD_CONFIG2          0x14000000ul
+#define BRUSHLESS25_ULTRA_START_PIN_CONFIG1         0x2D720600ul
+#define BRUSHLESS25_ULTRA_START_PIN_CONFIG2         0x08000000ul
+#define BRUSHLESS25_ULTRA_START_DEVICE_CONFIG       0x7FFF0000ul
+#define BRUSHLESS25_ULTRA_START_PERIPH_CONFIG       0x00000000ul
+
+#define BRUSHLESS25_CRC_ENABLED                     0x01
+#define BRUSHLESS25_CRC_DISABLED                    0x00
+
+/**
+ * @brief Brushless 25 default PWM frequency.
+ * @details Specified setting for default PWM frequency of Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_DEF_FREQ                        5000
+
+/**
+ * @brief Brushless 25 device address setting.
+ * @details Specified setting for device slave address selection of
+ * Brushless 25 Click driver.
+ */
+#define BRUSHLESS25_DEVICE_ADDRESS                  0x00
+
+/**
+ * @brief Data sample selection.
+ * @details This macro sets data samples for SPI modules.
+ * @note Available only on Microchip PIC family devices.
+ * This macro will set data sampling for all SPI modules on MCU. 
+ * Can be overwritten with @b brushless25_init which will set
+ * @b SET_SPI_DATA_SAMPLE_MIDDLE by default on the mapped mikrobus.
+ */
+#define BRUSHLESS25_SET_DATA_SAMPLE_EDGE      SET_SPI_DATA_SAMPLE_EDGE
+#define BRUSHLESS25_SET_DATA_SAMPLE_MIDDLE    SET_SPI_DATA_SAMPLE_MIDDLE
+
+/*! @} */ // brushless25_set
+
+/**
+ * @defgroup brushless25_map Brushless 25 MikroBUS Map
+ * @brief MikroBUS pin mapping of Brushless 25 Click driver.
+ */
+
+/**
+ * @addtogroup brushless25_map
+ * @{
+ */
+
+/**
+ * @brief MikroBUS pin mapping.
+ * @details Mapping pins of Brushless 25 Click to the selected MikroBUS.
+ */
+#define BRUSHLESS25_MAP_MIKROBUS( cfg, mikrobus ) \
+    cfg.scl  = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
+    cfg.sda  = MIKROBUS( mikrobus, MIKROBUS_SDA ); \
+    cfg.miso = MIKROBUS( mikrobus, MIKROBUS_MISO ); \
+    cfg.mosi = MIKROBUS( mikrobus, MIKROBUS_MOSI ); \
+    cfg.sck  = MIKROBUS( mikrobus, MIKROBUS_SCK ); \
+    cfg.cs   = MIKROBUS( mikrobus, MIKROBUS_CS ); \
+    cfg.flt = MIKROBUS( mikrobus, MIKROBUS_AN ); \
+    cfg.rst = MIKROBUS( mikrobus, MIKROBUS_RST ); \
+    cfg.pwm = MIKROBUS( mikrobus, MIKROBUS_PWM ); \
+    cfg.fg = MIKROBUS( mikrobus, MIKROBUS_INT );
+
+/*! @} */ // brushless25_map
+/*! @} */ // brushless25
+
+
+/**
+ * @brief Brushless 25 Click context object.
+ * @details Context object definition of Brushless 25 Click driver.
+ */
+typedef struct brushless25_s
+{
+    digital_out_t rst;      /**< Driver OFF pin. */
+
+    digital_in_t flt;       /**< Fault indicator. */
+    digital_in_t fg;        /**< Motor speed indicator. */
+    
+    pwm_t pwm;                                  /**< PWM driver object. */
+
+    // ctx variable
+    uint32_t pwm_freq;                          /**< PWM frequency value. */
+
+    i2c_master_t i2c;                               /**< I2C driver object. */
+    spi_master_t spi;                               /**< SPI driver object. */
+
+    uint8_t      slave_address;                     /**< Device slave address (used for I2C driver). */
+    pin_name_t   chip_select;                       /**< Chip select pin descriptor (used for SPI driver). */
+    
+    uint8_t spd_ctrl_mode;      /**< Speed control selector. */   
+    uint8_t crc_en;             /**< CRC enabled/disabled. */   
+    
+} brushless25_t;
+
+/**
+ * @brief Brushless 25 Click configuration object.
+ * @details Configuration object definition of Brushless 25 Click driver.
+ */
+typedef struct
+{
+    pin_name_t scl;    /**< Clock pin descriptor for I2C driver. */
+    pin_name_t sda;    /**< Bidirectional data pin descriptor for I2C driver. */
+    pin_name_t miso;   /**< Master input - slave output pin descriptor for SPI driver. */
+    pin_name_t mosi;   /**< Master output - slave input pin descriptor for SPI driver. */
+    pin_name_t sck;    /**< Clock pin descriptor for SPI driver. */
+    pin_name_t cs;     /**< Chip select pin descriptor for SPI driver. */
+    pin_name_t pwm;    /**< PWM pin. */
+    pin_name_t flt;    /**< Fault indicator. */
+    pin_name_t rst;    /**< Driver OFF pin. */
+    pin_name_t fg;     /**< Motor speed indicator. */
+
+    uint32_t   i2c_speed;       /**< I2C serial speed. */
+    uint8_t    i2c_address;     /**< I2C slave address. */
+    
+    uint32_t dev_pwm_freq;                      /**< PWM frequency value. */
+
+    uint32_t                          spi_speed;    /**< SPI serial speed. */
+    spi_master_mode_t                 spi_mode;     /**< SPI master mode. */
+    spi_master_chip_select_polarity_t cs_polarity;  /**< Chip select pin polarity. */
+
+} brushless25_cfg_t;
+
+/**
+ * @brief Brushless 25 Click return value data.
+ * @details Predefined enum values for driver return values.
+ */
+typedef enum
+{
+    BRUSHLESS25_OK = 0,
+    BRUSHLESS25_ERROR = -1
+
+} brushless25_return_value_t;
+
+/*!
+ * @addtogroup brushless25 Brushless 25 Click Driver
+ * @brief API for configuring and manipulating Brushless 25 Click driver.
+ * @{
+ */
+
+/**
+ * @brief Brushless 25 configuration object setup function.
+ * @details This function initializes click configuration structure to initial
+ * values.
+ * @param[out] cfg : Click configuration structure.
+ * See #brushless25_cfg_t object definition for detailed explanation.
+ * @return Nothing.
+ * @note The all used pins will be set to unconnected state.
+ */
+void brushless25_cfg_setup ( brushless25_cfg_t *cfg );
+
+/**
+ * @brief Brushless 25 initialization function.
+ * @details This function initializes all necessary pins and peripherals used
+ * for this click board.
+ * @param[out] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @param[in] cfg : Click configuration structure.
+ * See #brushless25_cfg_t object definition for detailed explanation.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_init ( brushless25_t *ctx, brushless25_cfg_t *cfg );
+
+/**
+ * @brief Brushless 24 sets PWM duty cycle.
+ * @details This function sets the PWM duty cycle in percentages ( Range[ 0..1 ] ).
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @param[in] duty_cycle : PWM duty cycle.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_set_duty_cycle ( brushless25_t *ctx, float duty_cycle );
+
+/**
+ * @brief Brushless 24 stop PWM module.
+ * @details This function stops the PWM module output.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_pwm_stop ( brushless25_t *ctx );
+
+/**
+ * @brief Brushless 24 start PWM module.
+ * @details This function starts the PWM module output.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_pwm_start ( brushless25_t *ctx );
+
+/**
+ * @brief Brushless 25 default configuration function.
+ * @details This function executes a default configuration of Brushless 25
+ * click board.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note This function can consist any necessary configuration or setting to put
+ * device into operating mode.
+ */
+err_t brushless25_default_cfg ( brushless25_t *ctx );
+
+/**
+ * @brief Brushless 25 I2C writing function.
+ * @details This function writes a desired number of data bytes starting from
+ * the selected register by using I2C serial interface.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @param[in] reg : Start register address.
+ * @param[in] data_in : Data to be written.
+ * @param[in] len : Number of bytes to be written.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_i2c_write ( brushless25_t *ctx, uint8_t reg, uint8_t *data_in, uint8_t len );
+
+/**
+ * @brief Brushless 25 I2C reading function.
+ * @details This function reads a desired number of data bytes starting from
+ * the selected register by using I2C serial interface.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @param[in] reg : Start register address.
+ * @param[out] data_out : Output read data.
+ * @param[in] len : Number of bytes to be read.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_i2c_read ( brushless25_t *ctx, uint8_t reg, uint8_t *data_out, uint8_t len );
+
+/**
+ * @brief Brushless 25 SPI writing function.
+ * @details This function writes a desired number of data bytes starting from
+ * the selected register by using SPI serial interface.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @param[in] reg : Start register address.
+ * @param[in] data_in : Data to be written.
+ * @param[in] len : Number of bytes to be written.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_spi_write ( brushless25_t *ctx, uint8_t reg, uint8_t *data_in, uint8_t len );
+
+/**
+ * @brief Brushless 25 enable drvoff mode function.
+ * @details This function is used to enable drvoff mode.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @return Nothing.
+ * @note None.
+ */
+void brushless25_enable_drvoff ( brushless25_t *ctx );
+
+/**
+ * @brief Brushless 25 disable drvoff mode function.
+ * @details This function is used to disable drvoff mode.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @return Nothing.
+ * @note None.
+ */
+void brushless25_disable_drvoff ( brushless25_t *ctx );
+
+/**
+ * @brief Brushless 25 config writing function.
+ * @details This function writes a 32 bite data to
+ * the selected register by using SPI serial interface.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @param[in] reg : Start register address.
+ * @param[in] data_in : Data to be written.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_cfg_write ( brushless25_t *ctx, uint16_t reg, uint32_t data_in  );
+
+/**
+ * @brief Brushless 25 config writing function with crc on.
+ * @details This function writes a 32 bite data and crc check to
+ * the selected register by using SPI serial interface.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @param[in] reg : Start register address.
+ * @param[in] data_in : Data to be written.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_cfg_write_with_crc ( brushless25_t *ctx, uint16_t reg, uint32_t data_in );
+
+/**
+ * @brief Brushless 25 data writing function.
+ * @details This function writes a 32 bite data to
+ * the selected register by using SPI serial interface.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @param[in] reg : Start register address.
+ * @param[in] data_in : Data to be written.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_register_write ( brushless25_t *ctx, uint16_t reg, uint32_t data_in );
+
+/**
+ * @brief Brushless 25 config reading function.
+ * @details This function reads a 32 bite data from
+ * the selected register by using SPI serial interface.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @param[in] reg : Start register address.
+ * @param[out] data_out : Output read data.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_cfg_read ( brushless25_t *ctx, uint16_t reg, uint32_t *data_out  );
+
+/**
+ * @brief Brushless 25 config reading function.
+ * @details This function reads a 32 bite data and crc check from
+ * the selected register by using SPI serial interface.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @param[in] reg : Start register address.
+ * @param[out] data_out : Output read data.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_cfg_read_with_crc ( brushless25_t *ctx, uint16_t reg, uint32_t *data_out );
+
+/**
+ * @brief Brushless 25 data reading function.
+ * @details This function reads a 32 bite data from
+ * the selected register by using SPI serial interface.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @param[in] reg : Start register address.
+ * @param[out] data_out : Output read data.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_register_read ( brushless25_t *ctx, uint16_t reg, uint32_t *data_out );
+
+/**
+ * @brief Brushless 25 pot writing function.
+ * @details This function writes a desired data into register using I2C interface.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @param[in] cmd : Command to be sent.
+ * @param[in] reg : Start register address.
+ * @param[out] data_in : Data to be written.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_pot_write ( brushless25_t *ctx, uint8_t cmd, uint8_t reg, uint16_t data_in );
+
+/**
+ * @brief Brushless 25 set pot wiper position function.
+ * @details This function is used to set the wiper position of the potentiometer using I2C interface.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @param[in] data_in : Position of the wiper.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_set_wiper_position ( brushless25_t *ctx, uint16_t data_in );
+
+/**
+ * @brief Brushless 25 set speed control mode function.
+ * @details This function is used to set the motor speed control mode.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @param[in] mode : @li @c 0 - Analog speed control,
+ *                   @li @c 1 - PWM speed control,
+ *                   @li @c 2 - I2C speed control,
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_set_speed_ctrl_mode ( brushless25_t *ctx, uint8_t mode );
+
+/**
+ * @brief Brushless 25 set speed function.
+ * @details This function is used to set the motor speed.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @param[in] spd_val : Value of the motor speed in percentages.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_set_speed_value ( brushless25_t *ctx, float spd_val );
+
+/**
+ * @brief Brushless 25 set brake state function.
+ * @details This function is used to set motor brake state.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @param[in] brake_state : State of the brake.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_set_brake_state ( brushless25_t *ctx, uint8_t brake_state );
+
+/**
+ * @brief Brushless 25 slow start function.
+ * @details This function is used to set device into a slow start mode.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_slow_start_config ( brushless25_t *ctx );
+
+/**
+ * @brief Brushless 25 fast start function.
+ * @details This function is used to set device into a fast start mode.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_fast_start_config ( brushless25_t *ctx );
+
+/**
+ * @brief Brushless 25 ultra fast start function.
+ * @details This function is used to set device into a ultra fast start mode.
+ * @param[in] ctx : Click context object.
+ * See #brushless25_t object definition for detailed explanation.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t brushless25_ultra_fast_start_config ( brushless25_t *ctx );
+
+#ifdef __cplusplus
+}
+#endif
+#endif // BRUSHLESS25_H
+
+/*! @} */ // brushless25
+
+// ------------------------------------------------------------------------ END

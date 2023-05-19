@@ -1,9 +1,8 @@
 
-
 ---
 # ADC 10 click
 
-ADC 10 Click is a compact add-on board that contains a high-performance data converter. This board features the ADS122U04, a 24-bit precision ΔΣ analog-to-digital converter with UART compatible interface from Texas Instruments.
+> ADC 10 Click is a compact add-on board that contains a high-performance data converter. This board features the ADS122U04, a 24-bit precision ΔΣ analog-to-digital converter with UART compatible interface from Texas Instruments.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/adc10-click.png" height=300px>
@@ -32,57 +31,56 @@ Package can be downloaded/installed directly from *NECTO Studio Package Manager*
 
 ## Library Description
 
-```
-This library contains API for Adc10 Click driver.
-```
+> This library contains API for ADC 10 Click driver.
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-```
+- `adc10_cfg_setup` Config Object Initialization function.
+```c
 void adc10_cfg_setup ( adc10_cfg_t *cfg );
 ```
 
-- Initialization function.
-```
-ADC10_RETVAL adc10_init ( adc10_t *ctx, adc10_cfg_t *cfg );
+- `adc10_init` Initialization function.
+```c
+err_t adc10_init ( adc10_t *ctx, adc10_cfg_t *cfg );
 ```
 
-- Click Default Configuration function.
-```
+- `adc10_default_cfg` Click Default Configuration function.
+```c
 void adc10_default_cfg ( adc10_t *ctx );
 ```
 
 #### Example key functions :
 
-- ADC 10 Start the synchronization function.
-```
+- `adc10_start_sync` ADC 10 Start the synchronization function.
+```c
 void adc10_start_sync ( adc10_t *ctx );
 ```
 
-- ADC 10 Get the channel output function.
-```
+- `adc10_get_ch_output` ADC 10 Get the channel output function.
+```c
 int32_t adc10_get_ch_output ( adc10_t *ctx, uint8_t sel_ch );
 ```
 
-- ADC 10 Calculate the voltage function.
-```
+- `adc10_calc_voltage` ADC 10 Calculate the voltage function.
+```c
 float adc10_calc_voltage ( adc10_t *ctx, int32_t adc_data, float vref, uint8_t gain );
 ```
 
 ## Examples Description
 
-This is an example that demonstrates the use of the ADC 10 click board.
+> This is an example that demonstrates the use of the ADC 10 click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-Initialization driver enables - UART,
+> Initialization driver enables - UART,
 select analog input channel 0, perform a hardware and software reset
 and set the default device configuration, also, write a log.
 
-```
+```c
+
 void application_init ( void ) {
     log_cfg_t log_cfg;      /**< Logger config object. */
     adc10_cfg_t adc10_cfg;  /**< Click config object. */
@@ -131,17 +129,19 @@ void application_init ( void ) {
     log_info( &logger, " Application Task " );
     Delay_ms( 100 );
 }
+
 ```
 
 ### Application Task
 
-In this example, we monitor and display
+> In this example, we monitor and display
 24-bits of data ( from 0 to 8388607 ) of ADC and voltage ( from 0 mV to 2048 mV )
 on the selected channel ( CH-0, CH-1, CH-2 or CH-3 ).
 Results are being sent to the Usart Terminal where you can track their changes.
 All data logs write on USB uart changes approximately for every 1 sec.
 
-```
+```c
+
 void application_task ( void ) {   
     adc10_start_sync( &adc10 );
     Delay_ms( 1 );
@@ -156,6 +156,7 @@ void application_task ( void ) {
     log_printf( &logger, "  Voltage  : %.2f mV\r\n", voltage );
     Delay_ms( 1000 );
 }
+
 ```
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).

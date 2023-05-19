@@ -36,22 +36,32 @@ Package can be downloaded/installed directly from compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void clockgen3_cfg_setup ( clockgen3_cfg_t *cfg ); 
+- `clockgen3_cfg_setup` Config Object Initialization function.
+```c
+void clockgen3_cfg_setup ( clockgen3_cfg_t *cfg );
+```
  
-- Initialization function.
-> CLOCKGEN3_RETVAL clockgen3_init ( clockgen3_t *ctx, clockgen3_cfg_t *cfg );
+- `clockgen3_init` Initialization function.
+```c
+err_t clockgen3_init ( clockgen3_t *ctx, clockgen3_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Sets CS pin state
-> void clockgen3_set_cs_pin ( clockgen3_t *ctx, uint8_t state );
+- `clockgen3_set_cs_pin` Sets CS pin state
+```c
+void clockgen3_set_cs_pin ( clockgen3_t *ctx, uint8_t state );
+```
  
-- Generic write function.
-> void clockgen3_generic_write ( clockgen3_t *ctx, uint8_t *data_buf, uint8_t len );
+- `clockgen3_generic_write` Generic write function.
+```c
+void clockgen3_generic_write ( clockgen3_t *ctx, uint8_t *data_buf, uint8_t len );
+```
 
-- Sets Frequency
-> void clockgen3_set_freq ( clockgen3_t *ctx, float freq );
+- `clockgen3_set_freq` Sets Frequency
+```c
+void clockgen3_set_freq ( clockgen3_t *ctx, float freq );
+```
 
 ## Examples Description
 
@@ -83,8 +93,7 @@ void application_init ( void )
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
-    //  Click initialization.
-
+    // Click initialization.
     clockgen3_cfg_setup( &cfg );
     CLOCKGEN3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     clockgen3_init( &clockgen3, &cfg );

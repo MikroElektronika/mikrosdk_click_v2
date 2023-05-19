@@ -57,26 +57,16 @@ void application_init ( void )
 
     buck3_default_cfg( &buck3 );
     log_info( &logger, "---- Buck 3 is activated ----" );
-	Delay_1sec( );
+    Delay_1sec( );
 }
 
 void application_task ( void )
 {
-    uint8_t pg_state;
-
-    //  Task implementation.
-    
-    pg_state = buck3_get_power_good( &buck3 );
-	
-    if ( pg_state == 0 )
+    if ( !buck3_get_power_good( &buck3 ) )
     {
-        log_info
-        ( 
-            &logger, 
-            "---- Overvoltage or thermal shutdown detected ----" 
-        );
+        log_info ( &logger, "---- Overvoltage or thermal shutdown detected ----" );
     }
-	Delay_1sec( );
+    Delay_1sec( );
 }
 
 void main ( void )

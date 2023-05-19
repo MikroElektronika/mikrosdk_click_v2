@@ -1,7 +1,0 @@
-type: subdirs
-project: Adc10
-
-subdirs: {
-    lib
-    example
-}

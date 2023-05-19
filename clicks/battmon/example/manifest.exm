@@ -2,7 +2,7 @@
     "name": "BATT-MON Click",
     "description": "BATT-MON Click is a very versatile, high accuracy, multiple-chemistry battery gauge for applications single-cell batteries.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","STC3115"],
     "category" : ["Battery charger"] 
 }

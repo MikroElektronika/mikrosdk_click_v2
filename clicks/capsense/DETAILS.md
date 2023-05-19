@@ -37,21 +37,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void capsense_cfg_setup ( capsense_cfg_t *cfg ); 
+- `capsense_cfg_setup` Config Object Initialization function.
+```c
+void capsense_cfg_setup ( capsense_cfg_t *cfg ); 
+```
  
-- Initialization function.
-> CAPSENSE_RETVAL capsense_init ( capsense_t *ctx, capsense_cfg_t *cfg );
+- `capsense_init` Initialization function.
+```c
+err_t capsense_init ( capsense_t *ctx, capsense_cfg_t *cfg );
+```
 
-- Click Default Configuration function.
-> void capsense_default_cfg ( capsense_t *ctx );
-
+- `capsense_default_cfg` Click Default Configuration function.
+```c
+err_t capsense_default_cfg ( capsense_t *ctx );
+```
 
 #### Example key functions :
 
-- This function gets slider level.
-> uint16_t capsense_get_slider_lvl ( capsense_t *ctx );
- 
+- `capsense_get_slider_lvl` This function gets slider level.
+```c
+err_t capsense_get_slider_lvl( capsense_t *ctx, uint8_t *slider_lvl );
+```
+
+- `capsense_read_data` Read one byte from register address
+```c
+err_t capsense_read_data( capsense_t *ctx, uint8_t reg_address, uint8_t *read_data );
+```
+
+- `capsense_write_data` Generic write data function
+```c
+err_t capsense_write_data( capsense_t *ctx, uint8_t reg_address, uint8_t write_command );
+```
 
 ## Examples Description
 
@@ -84,11 +100,17 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     capsense_cfg_setup( &cfg );
     CAPSENSE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     capsense_init( &capsense, &cfg );
-    capsense_default_cfg( &capsense );
+    
+    if ( CAPSENSE_ERROR == capsense_default_cfg ( &capsense ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
+    
+    log_info( &logger, " Application Task " );
 }
   
 ```
@@ -101,37 +123,35 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    uint8_t current_led_state;
-    uint8_t button_select;
-    uint8_t slider_lvl;
-    char output_lvl[ 10 ];
-    
-    button_select = capsense_read_data( &capsense, CAPSENSE_CS_READ_STATUS0 );
-    slider_lvl = capsense_get_slider_lvl( &capsense );
+    static uint8_t current_led_state = 0;
+    uint8_t output_lvl[ 10 ] = { 0 };
+    uint8_t button_select = 0;
+    uint8_t slider_lvl = 0;
+    capsense_read_data( &capsense, CAPSENSE_CS_READ_STATUS0, &button_select );
+    capsense_get_slider_lvl( &capsense, &slider_lvl );
     capsense_write_data( &capsense, CAPSENSE_OUTPUT_PORT0, current_led_state );
-    
     Delay_ms( 100 );
 
-    if ( button_select == 8 )
+    if ( 8 == button_select )
     {
         current_led_state ^= 0x01;
         log_printf( &logger, "Toggle LED1\r\n");
         Delay_ms( 100 );
     }
-    if ( button_select == 16 )
+    if ( 16 == button_select )
     {
         current_led_state ^= 0x02;
         log_printf( &logger, "Toggle LED2\r\n");
         Delay_ms( 100 );
     }
-    if ( button_select == 24 )
+    if ( 24 == button_select )
     {
         current_led_state = ~current_led_state;
         log_printf( &logger, "Toggle both LEDs\r\n");
         Delay_ms( 100 );
     }
 
-    if ( slider_lvl != 0 )
+    if ( slider_lvl )
     {
         bits_to_str( slider_lvl, output_lvl );
         log_printf( &logger, "Slider level - channels [5-1]:\t%s \r\n", &output_lvl[ 3 ] );

@@ -1,7 +1,5 @@
 \mainpage Main Page
  
- 
-
 ---
 # Color 2 click
 
@@ -27,8 +25,8 @@ Color 2 click carries the ISL29125 RGB color light sensor. It detects red, green
 
 We provide a library for the Color2 Click 
 as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+[compilers](https:///shop.mikroe.com/compilers). 
+The demo can run on all the main MikroElektronika [development boards](https:///shop.mikroe.com/development-boards).
 
 Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
 
@@ -38,36 +36,49 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void color2_cfg_setup ( color2_cfg_t *cfg ); 
- 
-- Initialization function.
-> COLOR2_RETVAL color2_init ( color2_t *ctx, color2_cfg_t *cfg );
+- `color2_cfg_setup` Config Object Initialization function.
+```c
+void color2_cfg_setup ( color2_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void color2_default_cfg ( color2_t *ctx );
+- `color2_init` Initialization function.
+```c
+err_t color2_init ( color2_t *ctx, color2_cfg_t *cfg );
+```
 
+- `color2_default_cfg` Click Default Configuration function.
+```c
+err_t color2_default_cfg ( color2_t *ctx );
+```
 
 #### Example key functions :
 
-- Function read blue color data from ISL29125
-> float color2_read_blue( color2_t *ctx );
- 
-- Function read byte of data from register address of ISL29125
-> uint8_t color2_read_data( color2_t *ctx, uint8_t address );
+- `color2_read_rgb` Function read red, green, and blue data from ISL29125
+```c
+err_t color2_read_rgb ( color2_t *ctx, color2_rgb_t *rgb );
+```
 
-- Function write byte of data to ISL29125
-> void color2_write_data( color2_t *ctx, uint8_t address, uint8_t write_command );
+- `color2_rgb_to_hsl` This function converts RGB (red, green, blue) to HSL (hue, saturation, lightness) color value.
+```c
+void color2_rgb_to_hsl ( color2_t *ctx, color2_rgb_t *rgb, color2_hsl_t *hsl );
+```
+
+- `color2_get_color` This function returns the color name flag from the input HSL color.
+```c
+uint8_t color2_get_color ( color2_hsl_t *hsl );
+```
 
 ## Examples Description
 
-> Example demonstrates use of Color 2 click.
+> This example demonstrates the use of Color 2 click board by reading data
+from RGB channels and converting them to HSL color and displaying those data as 
+well as the detected color name on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initialization driver enable's - initialize ISL29125 RGB color light sensor and start write log.
+> Initializes the driver and performs the click default configuration.
 
 ```c
 
@@ -90,102 +101,96 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     color2_cfg_setup( &cfg );
     COLOR2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     color2_init( &color2, &cfg );
-    color2_default_cfg ( &color2 );
+    
+    if ( COLOR2_ERROR == color2_default_cfg ( &color2 ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
+    log_info( &logger, " Application Task " );
 }
   
 ```
 
 ### Application Task
 
-> This is a example which demonstrates the use of Color 2 Click board.
-> ISL29125 RGB color light sensor on Color 2 Click, detects red, green and blue in a variety of lighting conditions
-> and outputting 16-bit resolution data on the USBUART.
-> Also read color and check which color is detected by the sensor.
-> If the color is detected, the detected color message is logged on the USBUART.
-> All data logs on usb uart for aproximetly every 3 sec.
+> Waits for the data ready interrupt, then reads the values of all channels and converts
+them to HSL color and displays those data as well as the detected color name on the USB UART
+every 100ms approximately.
 
 ```c
 
 void application_task ( void )
 {
-    //  Task implementation.
-
-    uint16_t value_red_color;
-    uint16_t value_green_color;
-    uint16_t value_blue_color;
-    uint8_t is_color;
-    float color_value;
-
-    color_value = color2_get_color_value( &color2 );
-    is_color = color2_get_color( color_value );
-
-    value_green_color = color2_read_green( &color2 );
-    value_red_color = color2_read_red( &color2 );
-    value_blue_color = color2_read_blue( &color2 );
-
-    switch(is_color)
+    // Wait for the data ready interrupt indication
+    while ( color2_get_int_pin ( &color2 ) );
+    
+    uint8_t status = 0;
+    color2_rgb_t rgb;
+    if ( ( COLOR2_OK == color2_read_status ( &color2, &status ) ) && 
+         ( COLOR2_OK == color2_read_rgb ( &color2, &rgb ) ) )
     {
-        case 1:
+        color2_hsl_t hsl;
+        color2_rgb_to_hsl ( &color2, &rgb, &hsl );
+        log_printf ( &logger, "\r\n Red: %u\r\n", rgb.red );
+        log_printf ( &logger, " Green: %u\r\n", rgb.green );
+        log_printf ( &logger, " Blue: %u\r\n", rgb.blue );
+        log_printf ( &logger, " Hue: %.1f deg\r\n", hsl.hue );
+        log_printf ( &logger, " Saturation: %.1f %%\r\n", hsl.saturation );
+        log_printf ( &logger, " Lightness: %.1f %%\r\n", hsl.lightness );
+        log_printf ( &logger, " Dominated color: " );
+        switch ( color2_get_color ( &hsl ) )
         {
-            log_printf( &logger, "    *** ORANGE ***");
-            break;
-        }
-        case 2:
-        {
-            log_printf( &logger, "    *** RED ***");
-            break;
-        }
-        case 3:
-        {
-            log_printf( &logger, "    *** PINK ***");
-            break;
-        }
-        case 4:
-        {
-            log_printf( &logger, "    *** PURPLE ***");
-            break;
-        }
-        case 5:
-        {
-            log_printf( &logger, "    *** BLUE ***");
-            break;
-        }
-        case 6:
-        {
-            log_printf( &logger, "    *** CYAN ***");
-            break;
-        }
-        case 7:
-        {
-            log_printf( &logger, "    *** GREEN ***");
-            break;
-        }
-        case 8:
-        {
-            log_printf( &logger, "    *** YELLOW ***");
-            break;
-        }
-        default:
-        {
-            break;
+            case COLOR2_RED_COLOR:
+            {
+                log_printf ( &logger, "RED\r\n" );
+                break;
+            }
+            case COLOR2_YELLOW_COLOR:
+            {
+                log_printf ( &logger, "YELLOW\r\n" );
+                break;
+            }
+            case COLOR2_GREEN_COLOR:
+            {
+                log_printf ( &logger, "GREEN\r\n" );
+                break;
+            }
+            case COLOR2_CYAN_COLOR:
+            {
+                log_printf ( &logger, "CYAN\r\n" );
+                break;
+            }
+            case COLOR2_BLUE_COLOR:
+            {
+                log_printf ( &logger, "BLUE\r\n" );
+                break;
+            }
+            case COLOR2_MAGENTA_COLOR:
+            {
+                log_printf ( &logger, "MAGENTA\r\n" );
+                break;
+            }
+            case COLOR2_WHITE_COLOR:
+            {
+                log_printf ( &logger, "WHITE\r\n" );
+                break;
+            }
+            case COLOR2_BLACK_COLOR:
+            {
+                log_printf ( &logger, "BLACK\r\n" );
+                break;
+            }
+            default:
+            {
+                log_printf ( &logger, "UNKNOWN\r\n" );
+                break;
+            }
         }
     }
-
-    log_printf( &logger, "----------------------");
-    
-    log_printf( &logger, " Red  value  : %d", value_red_color);
-    log_printf( &logger, " Green  value  : %d", value_green_color);
-    log_printf( &logger, " Blue  value  : %d", value_blue_color);
-
-    log_printf( &logger, "----------------------");
-
-    Delay_1sec();
-    Delay_1sec();
-    Delay_1sec();
 }
 
 ```
@@ -201,12 +206,12 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
+[USB UART click](https:///shop.mikroe.com/usb-uart-click), 
+[USB UART 2 Click](https:///shop.mikroe.com/usb-uart-2-click) or 
+[RS232 Click](https:///shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 
 terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
+[compilers](https:///shop.mikroe.com/compilers), or any other terminal application 
 of your choice, can be used to read the message.
 
 

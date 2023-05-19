@@ -1,7 +1,0 @@
-type: subdirs
-project: CanFd2
-
-subdirs: {
-    lib
-    example
-}
