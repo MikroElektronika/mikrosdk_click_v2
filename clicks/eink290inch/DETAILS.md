@@ -35,22 +35,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void eink_290inch_cfg_setup ( eink_290inch_cfg_t *cfg ); 
- 
-- Initialization function.
-> EINK290INCH_RETVAL eink_290inch_init ( eink_290inch_t *ctx, eink_290inch_cfg_t *cfg );
+- `eink290inch_cfg_setup` Config Object Initialization function.
+```c
+void eink290inch_cfg_setup ( eink290inch_cfg_t *cfg ); 
+```
+
+- `eink290inch_init` Initialization function.
+```c
+err_t eink290inch_init ( eink290inch_t *ctx, eink290inch_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Function that fills the screen
-> void eink_290_fill_screen ( eink_290inch_t *ctx, uint8_t color );
- 
-- Display image function
-> void eink_290_display_image ( eink_290inch_t *ctx, const uint8_t* image_buffer );
+- `eink290inch_fill_screen` Function that fills the screen
+```c
+void eink290inch_fill_screen ( eink290inch_t *ctx, uint8_t color );
+```
 
-- Set font function
-> void eink_290_set_font ( eink_290inch_t *ctx, eink_290inch_font_t *cfg_font );
+- `eink290inch_display_image` Display image function
+```c
+void eink290inch_display_image ( eink290inch_t *ctx, const uint8_t* image_buffer );
+```
+
+- `eink290inch_set_font` Set font function
+```c
+void eink290inch_set_font ( eink290inch_t *ctx, eink290inch_font_t *cfg_font );
+```
 
 ## Examples Description
 
@@ -67,49 +77,48 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 void application_init ( void )
 {
-    eink_290inch_cfg_t cfg;
-    eink_290inch_font_t cfg_font;
-    eink_290inch_set_text_t text_set;
+    eink290inch_cfg_t cfg;
+    eink290inch_font_t cfg_font;
+    eink290inch_set_text_t text_set;
 
     //  Click initialization.
-
-    eink_290inch_cfg_setup( &cfg );
+    eink290inch_cfg_setup( &cfg );
     EINK290INCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    eink_290inch_init( &eink_290inch, &cfg );
+    eink290inch_init( &eink290inch, &cfg );
 
-    eink_290_start_config( &eink_290inch );
-    eink_290_set_lut( &eink_290inch, EINK290_LUT_TABLE_1, 70 );
+    eink290inch_start_config( &eink290inch );
+    eink290inch_set_lut( &eink290inch, eink290inch_lut_table, 70 );
     Delay_ms( 1000 );
     
 #ifndef IMAGE_MODE_ONLY
     cfg_font.p_font = &guiFont_Tahoma_18_Regular[ 0 ];
-    cfg_font.color = EINK290_SCREEN_COLOR_WHITE;
-    cfg_font.orientation = EINK290_FO_HORIZONTAL;  
-    eink_290_set_font( &eink_290inch, &cfg_font );
+    cfg_font.color = EINK290INCH_SCREEN_COLOR_WHITE;
+    cfg_font.orientation = EINK290INCH_FO_HORIZONTAL;  
+    eink290inch_set_font( &eink290inch, &cfg_font );
     text_set.n_char = 4;
     text_set.text_x = 5;
     text_set.text_y = 50;
-    eink_290_text( &eink_290inch, &demo_text[ 0 ], &text_set );
+    eink290inch_text( &eink290inch, &demo_text[ 0 ], &text_set );
     Delay_ms( 1000 );
     
     cfg_font.p_font = &guiFont_Tahoma_10_Regular[ 0 ];
-    cfg_font.color = EINK290_SCREEN_COLOR_WHITE;
-    cfg_font.orientation = EINK290_FO_HORIZONTAL; 
-    eink_290_set_font( &eink_290inch, &cfg_font );
+    cfg_font.color = EINK290INCH_SCREEN_COLOR_WHITE;
+    cfg_font.orientation = EINK290INCH_FO_HORIZONTAL; 
+    eink290inch_set_font( &eink290inch, &cfg_font );
     text_set.n_char = 7;
     text_set.text_x = 5;
     text_set.text_y = 90;
-    eink_290_text( &eink_290inch, &demo_text1[ 0 ], &text_set );
+    eink290inch_text( &eink290inch, &demo_text1[ 0 ], &text_set );
     Delay_ms( 1000 );
     
     cfg_font.p_font = &guiFont_Tahoma_8_Regular[ 0 ];
-    cfg_font.color = EINK290_SCREEN_COLOR_WHITE;
-    cfg_font.orientation = EINK290_FO_HORIZONTAL; 
-    eink_290_set_font( &eink_290inch, &cfg_font );
+    cfg_font.color = EINK290INCH_SCREEN_COLOR_WHITE;
+    cfg_font.orientation = EINK290INCH_FO_HORIZONTAL; 
+    eink290inch_set_font( &eink290inch, &cfg_font );
     text_set.n_char = 9;
     text_set.text_x = 5;
     text_set.text_y = 120;
-    eink_290_text( &eink_290inch, &demo_text2[ 0 ], &text_set ); 
+    eink290inch_text( &eink290inch, &demo_text2[ 0 ], &text_set ); 
     Delay_ms( 1000 );
 #endif
 }
@@ -124,13 +133,13 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    eink_290_display_image( &eink_290inch, &demoImage_light[ 0 ] );
+    eink290inch_display_image( &eink290inch, &demoImage_light[ 0 ] );
     Delay_1sec( );
-    eink_290_display_image( &eink_290inch, &demoImage_dark[ 0 ] );
+    eink290inch_display_image( &eink290inch, &demoImage_dark[ 0 ] );
     Delay_1sec( );
-    eink_290_display_image( &eink_290inch, &demoImage_light_180[ 0 ] );
+    eink290inch_display_image( &eink290inch, &demoImage_light_180[ 0 ] );
     Delay_1sec( );
-    eink_290_display_image( &eink_290inch, &demoImage_dark_180[ 0 ] );
+    eink290inch_display_image( &eink290inch, &demoImage_dark_180[ 0 ] );
     Delay_1sec( );
 }
 
@@ -138,7 +147,7 @@ void application_task ( void )
 
 ## Note
 
-> Due to insuficient RAM memory, only the IMAGE mode is supported with 8-bit PIC microcontrollers.
+> Due to insuficient RAM memory, only the IMAGE mode is supported with 8-bit PIC and AVR microcontrollers.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

@@ -1,6 +1,6 @@
 /*!
  * \file 
- * \brief Fingerprint3 Click example
+ * \brief Fingerprint 3 Click example
  * 
  * # Description
  * This example reads and processes data from Fingerprint 3 clicks.
@@ -15,7 +15,7 @@
  * one it has just read. All data is being logged on the USB UART.
  * 
  * ## Additional Function
- * - static void display_error ( char *message )
+ * - static void display_error ( uint8_t *message )
  * - static void display_full_rsp ( fingerprint3_t *ctx )
  * - static void search_finger( fingerprint3_t *ctx )
  * - static void match_finger( fingerprint3_t *ctx, uint16_t location )
@@ -49,16 +49,16 @@ uint8_t error_check = 0;
  *
  * @param message  Input string.
  *
- * @description This function concatenates status of response to the input string and prints it on the USB UART.
+ * @details This function concatenates status of response to the input string and prints it on the USB UART.
  */
-static void display_error ( char *message );
+static void display_error ( uint8_t *message );
 
 /**
  * @brief Display full response function.
  *
  * @param ctx  Click object.
  *
- * @description This function parses and displays full response to the previously sent command on the USB UART.
+ * @details This function parses and displays full response to the previously sent command on the USB UART.
  */
 static void display_full_rsp ( fingerprint3_t *ctx );
 
@@ -67,8 +67,8 @@ static void display_full_rsp ( fingerprint3_t *ctx );
  *
  * @param ctx  Click object.
  *
- * @description This function searches the whole finger library for the template that matches the one 
- *              it stores in char_buffer 1. All data is being logged on the USB UART.
+ * @details This function searches the whole finger library for the template that matches the one 
+ * it stores in char_buffer 1. All data is being logged on the USB UART.
  */
 static void search_finger( fingerprint3_t *ctx );
 
@@ -78,8 +78,8 @@ static void search_finger( fingerprint3_t *ctx );
  * @param ctx       Click object.
  * @param location  Location in library.
  *
- * @description This function checks if the template stored at the desired location matches the fingerprint
- *              it reads. All data is being logged on the USB UART.
+ * @details This function checks if the template stored at the desired location matches the fingerprint
+ * it reads. All data is being logged on the USB UART.
  */
 static void match_finger( fingerprint3_t *ctx, uint16_t location );
 
@@ -90,7 +90,7 @@ static void match_finger( fingerprint3_t *ctx, uint16_t location );
  * @param location  Location in library where the fingerprint template will be stored.
  * @param features  Number of fingerprint images it will combine in a template.
  *
- * @description This function enrolls the fingerprint, creates a template combining the taken images and
+ * @details This function enrolls the fingerprint, creates a template combining the taken images and
  *              stores it at the desired location. All data is being logged on the USB UART.
  */
 static uint8_t enroll_finger( fingerprint3_t *ctx, uint16_t location, uint8_t features );
@@ -118,7 +118,6 @@ void application_init ( void )
     Delay_ms( 100 );
 
     //  Click initialization.
-
     fingerprint3_cfg_setup( &cfg );
     FINGERPRINT3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     err_t init_flag = fingerprint3_init( &fingerprint3, &cfg );
@@ -185,7 +184,7 @@ void main ( void )
     }
 }
 
-static void display_error ( char *message )
+static void display_error ( uint8_t *message )
 {
     log_printf( &logger, " %s: ", message );
     if ( FINGERPRINT3_OK == error_check )

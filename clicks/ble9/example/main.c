@@ -84,22 +84,39 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
     Delay_ms( 100 );
 
-    //  Click initialization.
+    // Click initialization.
     ble9_cfg_setup( &cfg );
     BLE9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ble9_init( &ble9, &cfg );
     Delay_ms( 1000 );
-
-    log_printf( &logger, "Creating advertising point...\n" );
+    
+    // Clear app buffer
+    ble9_process ( &ble9 );
+    ble9_clear_app_buf( );
+    Delay_ms( 100 );
+    
+    if ( BLE9_OK == ble9_sys_get_version ( &ble9 ) )
+    {
+        log_printf( &logger, "--- System Version ---\r\n" );
+        log_printf( &logger, " Major: 0x%.4X\r\n", ble9.ble9_version.version_major );
+        log_printf( &logger, " Minor: 0x%.4X\r\n", ble9.ble9_version.version_minor );
+        log_printf( &logger, " Patch: 0x%.4X\r\n", ble9.ble9_version.version_patch );
+        log_printf( &logger, " Build: 0x%.4X\r\n", ble9.ble9_version.version_build );
+        log_printf( &logger, " Bootloader: 0x%.8LX\r\n", ble9.ble9_version.version_bootloader );
+        log_printf( &logger, " Hash: 0x%.8LX\r\n", ble9.ble9_version.version_hash );
+        log_printf( &logger, "------------------------\r\n" );
+    }
+    
+    log_printf( &logger, "Creating advertising point...\r\n" );
     Delay_ms( 100 );
     ble9_adv_create_id ( &ble9 );
 
-    log_printf( &logger, "Starting module advertising...\n" );
+    log_printf( &logger, "Starting module advertising...\r\n" );
     Delay_ms( 100 );
     ble9_adv_start ( &ble9, BLE9_ADVERTISER_MODE_DISCOVERABLE_GENERAL, 
                      BLE9_ADVERTISER_MODE_CONNECTABLE_SCANNABLE );
 
-    log_printf( &logger, "The module has been configured.\n" );
+    log_printf( &logger, "The module has been configured.\r\n" );
     Delay_ms( 100 );
 }
 

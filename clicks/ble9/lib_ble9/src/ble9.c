@@ -105,17 +105,17 @@ err_t ble9_sys_get_version ( ble9_t *ctx )
     uint8_t tmp_array[ 22 ] = { 0 };
 
     ble9_send_command ( ctx, BLE9_CMD_SYSTEM_GET_VERSION_ID );
-    Delay_1ms ( );
+    Delay_10ms ( );
     if ( 22 == uart_read ( &ctx->uart, tmp_array, 22 ) ) 
     {
-        ctx->ble9_version->version_major = ( ( uint16_t ) tmp_array[ 6 ] << 8 ) | tmp_array[ 5 ];
-        ctx->ble9_version->version_minor = ( ( uint16_t ) tmp_array[ 8 ] << 8 ) | tmp_array[ 7 ];
-        ctx->ble9_version->version_patch = ( ( uint16_t ) tmp_array[ 10 ] << 8 ) | tmp_array[ 9 ];
-        ctx->ble9_version->version_build = ( ( uint16_t ) tmp_array[ 12 ] << 8 ) | tmp_array[ 11 ];
-        ctx->ble9_version->version_bootloader = ( ( uint32_t ) tmp_array[ 17 ] << 24 ) | ( ( uint32_t ) tmp_array[ 16 ] << 16 ) | 
-                                                ( ( uint16_t ) tmp_array[ 15 ] << 8 ) | tmp_array[ 14 ];
-        ctx->ble9_version->version_hash = ( ( uint32_t ) tmp_array[ 21 ] << 24 ) | ( ( uint32_t ) tmp_array[ 20 ] << 16 ) | 
-                                          ( ( uint16_t ) tmp_array[ 19 ] << 8 ) | tmp_array[ 18 ];;
+        ctx->ble9_version.version_major = ( ( uint16_t ) tmp_array[ 5 ] << 8 ) | tmp_array[ 6 ];
+        ctx->ble9_version.version_minor = ( ( uint16_t ) tmp_array[ 7 ] << 8 ) | tmp_array[ 8 ];
+        ctx->ble9_version.version_patch = ( ( uint16_t ) tmp_array[ 9 ] << 8 ) | tmp_array[ 10 ];
+        ctx->ble9_version.version_build = ( ( uint16_t ) tmp_array[ 11 ] << 8 ) | tmp_array[ 12 ];
+        ctx->ble9_version.version_bootloader = ( ( uint32_t ) tmp_array[ 14 ] << 24 ) | ( ( uint32_t ) tmp_array[ 15 ] << 16 ) | 
+                                               ( ( uint16_t ) tmp_array[ 16 ] << 8 ) | tmp_array[ 17 ];
+        ctx->ble9_version.version_hash = ( ( uint32_t ) tmp_array[ 18 ] << 24 ) | ( ( uint32_t ) tmp_array[ 19 ] << 16 ) | 
+                                         ( ( uint16_t ) tmp_array[ 20 ] << 8 ) | tmp_array[ 21 ];;
         return BLE9_OK;
     } 
     else 

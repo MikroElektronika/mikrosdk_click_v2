@@ -265,7 +265,7 @@ typedef struct
 typedef struct
 {
     uint8_t ble9_adv_handle;
-    ble9_version_t *ble9_version;
+    ble9_version_t ble9_version;
     // Modules
     uart_t uart;
 

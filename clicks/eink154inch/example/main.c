@@ -15,7 +15,7 @@
  * Draws two demo images to the display with a one-second delay between each drawing.
  *  
  * @note 
- * Due to insuficient RAM memory, only the IMAGE mode is supported with 8-bit PIC microcontrollers.
+ * Due to insuficient RAM memory, only the IMAGE mode is supported with 8-bit PIC and AVR microcontrollers.
  * 
  * Here is the procedure for creating an Image or Font arrays:
  * 
@@ -30,13 +30,13 @@
  *           5. Select only MSB first checkmark
  *           6. Check Reverse color and adjust Normal type
  *    The image to be generated should contain about 5000 bytes ...
- *    Insert the image into the file eINK_154_display_image.h
+ *    Insert the image into the file eink154inch_image.h
  * 
  * - Create Font:
  *    Create a new VisualTFT project
  *    Add label and adjust text font
  *    Generate source code
- *    Copy the font array from resource.c file and paste it to eINK_154_display_font.h file
+ *    Copy the font array from resource.c file and paste it to eink154inch_font.h file
  * 
  * *** Changing the LUT table can lead to loss of display performance ....
  * 
@@ -47,15 +47,15 @@
 
 #include "board.h"
 #include "log.h"
-#include "eink_154inch.h"
-#include "eINK_154_display_image.h"
-#include "eINK_154_display_font.h"
+#include "eink154inch.h"
+#include "eink154inch_image.h"
+#include "eink154inch_font.h"
 
 // ------------------------------------------------------------------ VARIABLES
 
-static eink_154inch_t eink_154inch;
+static eink154inch_t eink154inch;
 
-const uint8_t EINK154_LUT_TABLE[ 30 ] =
+const uint8_t eink154inch_lut_table[ 30 ] =
 {
     0x02, 0x02, 0x01, 0x11, 0x12, 0x12, 0x22, 0x22,
     0x66, 0x69, 0x69, 0x59, 0x58, 0x99, 0x99, 0x88,
@@ -63,55 +63,54 @@ const uint8_t EINK154_LUT_TABLE[ 30 ] =
     0x35, 0x51, 0x51, 0x19, 0x01, 0x00
 };
 
-char demo_text[ 5 ] = { 'e', 'I', 'N', 'K' , 0 };
-char demo_text1[ 8 ] = { 'D', 'i', 's', 'p', 'l', 'a', 'y', 0 };
-char demo_text2[ 10 ] = { '1', '.', '5', '4', 'i', 'n', 'c', 'h', 0 };
+uint8_t demo_text[ 5 ] = { 'e', 'I', 'N', 'K' , 0 };
+uint8_t demo_text1[ 8 ] = { 'D', 'i', 's', 'p', 'l', 'a', 'y', 0 };
+uint8_t demo_text2[ 10 ] = { '1', '.', '5', '4', 'i', 'n', 'c', 'h', 0 };
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
 {
-    eink_154inch_cfg_t cfg;   
-    eink_154inch_font_t cfg_font;
-    eink_154_text_set_t text_set;
+    eink154inch_cfg_t cfg;   
+    eink154inch_font_t cfg_font;
+    eink154inch_text_set_t text_set;
 
     //  Click initialization.
-    
-    eink_154inch_cfg_setup( &cfg );
-    EINK_154INCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    eink_154inch_init( &eink_154inch, &cfg );
+    eink154inch_cfg_setup( &cfg );
+    EINK154INCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    eink154inch_init( &eink154inch, &cfg );
 
-    eink154_start_config( &eink_154inch );
-    eink154_set_lut( &eink_154inch, EINK154_LUT_TABLE, 30 );
+    eink154inch_start_config( &eink154inch );
+    eink154inch_set_lut( &eink154inch, eink154inch_lut_table, 30 );
     Delay_ms( 1000 );
     
 #ifndef IMAGE_MODE_ONLY
     cfg_font.p_font = &guiFont_Tahoma_18_Regular[ 0 ];
-    cfg_font.color = EINK154_SCREEN_COLOR_WHITE;
-    cfg_font.orientation = EINK154_FO_HORIZONTAL;  
+    cfg_font.color = EINK154INCH_SCREEN_COLOR_WHITE;
+    cfg_font.orientation = EINK154INCH_FO_HORIZONTAL;  
     
-    eink154_set_font( &eink_154inch, &cfg_font );
+    eink154inch_set_font( &eink154inch, &cfg_font );
     text_set.n_char = 4;
     text_set.text_x = 10;
     text_set.text_y = 50;
-    eink154_text( &eink_154inch, &demo_text[ 0 ], &text_set );
+    eink154inch_text( &eink154inch, &demo_text[ 0 ], &text_set );
     text_set.n_char = 7;
     text_set.text_x = 10;
     text_set.text_y = 90;
-    eink154_text( &eink_154inch, &demo_text1[ 0 ], &text_set );
+    eink154inch_text( &eink154inch, &demo_text1[ 0 ], &text_set );
     text_set.n_char = 8;
     text_set.text_x = 10;
     text_set.text_y = 130;
-    eink154_text( &eink_154inch, &demo_text2[ 0 ], &text_set ); 
+    eink154inch_text( &eink154inch, &demo_text2[ 0 ], &text_set ); 
     Delay_ms( 5000 );
 #endif
 }
 
 void application_task ( void )
 {
-    eink154_display_image( &eink_154inch, &demoImage_light[ 0 ] );
+    eink154inch_image( &eink154inch, &demoImage_light[ 0 ] );
     Delay_1sec( );
-    eink154_display_image( &eink_154inch, &demoImage_dark[ 0 ] );
+    eink154inch_image( &eink154inch, &demoImage_dark[ 0 ] );
     Delay_1sec( );
 }
 

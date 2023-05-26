@@ -14,9 +14,6 @@
  * ## Application Task  
  * Writing data to EEPROM and then reading that data and writing it via UART.
  * 
- * *note:* 
- * <NOTE>
- * 
  * \author MikroE Team
  *
  */
@@ -30,8 +27,8 @@
 
 static eeprom2_t eeprom2;
 static log_t logger;
-uint8_t text[ 6 ] = { 'M','i','k','r','o','e' };
-char mem_value[ 6 ];
+uint8_t text[ 7 ] = { 'M','i','k','r','o','e' };
+uint8_t mem_value[ 7 ] = { 0 };
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -54,7 +51,6 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     eeprom2_cfg_setup( &cfg );
     EEPROM2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     eeprom2_init( &eeprom2, &cfg );
@@ -65,7 +61,7 @@ void application_task ( void )
     eeprom2_write_bytes ( &eeprom2, 0x01, text, 6 );
     log_printf ( &logger, "Writing Mikroe to EEPROM 2 click\r\n" );
     Delay_ms( 1000 );
-    eeprom2_read_bytes ( &eeprom2, 0x01 , mem_value, 6);
+    eeprom2_read_bytes ( &eeprom2, 0x01 , mem_value, 6 );
     log_printf ( &logger, "Data read: %s\r\n", mem_value );
     Delay_ms( 1000 );
 }

@@ -38,39 +38,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void eeprom2_cfg_setup ( eeprom2_cfg_t *cfg ); 
- 
-- Initialization function.
-> EEPROM2_RETVAL eeprom2_init ( eeprom2_t *ctx, eeprom2_cfg_t *cfg );
+- `eeprom2_cfg_setup` Config Object Initialization function.
+```c
+void eeprom2_cfg_setup ( eeprom2_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void eeprom2_default_cfg ( eeprom2_t *ctx );
-
+- `eeprom2_init` Initialization function.
+```c
+err_t eeprom2_init ( eeprom2_t *ctx, eeprom2_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- This function writes a single byte of data to the given memory address.
-> void eeprom2_write ( eeprom2_t *ctx, uint32_t memory_address, uint8_t value );
-
+- `eeprom2_write` This function writes a single byte of data to the given memory address.
+```c
+void eeprom2_write ( eeprom2_t *ctx, uint32_t memory_address, uint8_t value );
+```
  
-- This function writes bytes of data to the given memory address.
-> void eeprom2_write_bytes( eeprom2_t *ctx, uint32_t memory_address, uint8_t *value, uint8_t count );
+- `eeprom2_write_bytes` This function writes bytes of data to the given memory address.
+```c
+void eeprom2_write_bytes( eeprom2_t *ctx, uint32_t memory_address, uint8_t *value, uint8_t count );
+```
 
-- This function reads a single byte from the given memory address.
-> uint8_t eeprom2_read( eeprom2_t *ctx, uint32_t memory_address );
-
-
-- This function reads bytes from the given memory address.
-> void eeprom2_read_bytes( eeprom2_t *ctx, uint32_t memory_address, uint8_t *value, uint8_t count );
-
-
-- This function enables EEPROM memory.
-> void eeprom2_memory_enable ( eeprom2_t *ctx );
-
-
-- This function disables EEPROM memory.
-> void eeprom2_memory_disable ( eeprom2_t *ctx );
+- `eeprom2_read_bytes` This function reads bytes from the given memory address.
+```c
+void eeprom2_read_bytes( eeprom2_t *ctx, uint32_t memory_address, uint8_t *value, uint8_t count );
+```
 
 ## Examples Description
 
@@ -104,7 +97,6 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     eeprom2_cfg_setup( &cfg );
     EEPROM2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     eeprom2_init( &eeprom2, &cfg );
@@ -124,7 +116,7 @@ void application_task ( void )
     eeprom2_write_bytes ( &eeprom2, 0x01, text, 6 );
     log_printf ( &logger, "Writing Mikroe to EEPROM 2 click\r\n" );
     Delay_ms( 1000 );
-    eeprom2_read_bytes ( &eeprom2, 0x01 , mem_value, 6);
+    eeprom2_read_bytes ( &eeprom2, 0x01 , mem_value, 6 );
     log_printf ( &logger, "Data read: %s\r\n", mem_value );
     Delay_ms( 1000 );
 }  

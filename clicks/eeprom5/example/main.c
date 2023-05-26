@@ -13,8 +13,7 @@
  * ## Application Task
  * In this example, we write and then read data from EEPROM memory.
  * Results are being sent to the Usart Terminal where you can track their changes.
- * All data logs write on USB uart changes approximately for every 5 sec.
- *
+ * All data logs write on USB uart changes approximately for every 3 sec.
  *
  * @author Stefan Ilic
  *
@@ -27,12 +26,11 @@
 static eeprom5_t eeprom5;
 static log_t logger;
 
-static char demo_data[ 9 ] = { 'm', 'i', 'k', 'r', 'o', 'E', 13 ,10 , 0 };
-static char read_data[ 9 ];
-static uint8_t n_cnt;
-static char log_text[ 50 ];
+static uint8_t demo_data[ 9 ] = { 'M', 'i', 'k', 'r', 'o', 'E', 13 ,10 , 0 };
+static uint8_t read_data[ 9 ] = { 0 };
 
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     eeprom5_cfg_t eeprom5_cfg;  /**< Click config object. */
 
@@ -50,14 +48,13 @@ void application_init ( void ) {
     log_info( &logger, " Application Init " );
 
     // Click initialization.
-
     eeprom5_cfg_setup( &eeprom5_cfg );
     EEPROM5_MAP_MIKROBUS( eeprom5_cfg, MIKROBUS_1 );
     err_t init_flag  = eeprom5_init( &eeprom5, &eeprom5_cfg );
-    if ( SPI_MASTER_ERROR == init_flag ) {
+    if ( SPI_MASTER_ERROR == init_flag ) 
+    {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
     log_printf( &logger, " - - - - - - - - - - - \r\n" );
@@ -73,7 +70,8 @@ void application_init ( void ) {
     log_printf( &logger, " - - - - - - - - - - - \r\n" );
 }
 
-void application_task ( void ) {
+void application_task ( void ) 
+{
     eeprom5_enable_memory_write( &eeprom5, EEPROM5_WRITE_MEMORY_ENABLE );
     Delay_ms( 10 );
     
@@ -83,17 +81,17 @@ void application_task ( void ) {
     Delay_ms( 100 );
     
     eeprom5_read_memory( &eeprom5, 14, read_data, 9 );
-    Delay_ms( 1000 );
-    
     log_printf( &logger, " Read data : %s ", read_data );
     log_printf( &logger, " - - - - - - - - - - - \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms( 3000 );
 }
 
-void main ( void ) {
+void main ( void ) 
+{
     application_init( );
 
-    for ( ; ; ) {
+    for ( ; ; ) 
+    {
         application_task( );
     }
 }

@@ -99,7 +99,6 @@ void application_init ( void )
     log_info( &logger, " Application Init " );
 
     // Click initialization.
-
     eeram3_cfg_setup( &eeram3_cfg );
     EERAM3_MAP_MIKROBUS( eeram3_cfg, MIKROBUS_1 );
     
@@ -131,14 +130,15 @@ void application_task ( void )
         log_printf ( &logger, "Data written to address 0x%.4X: %s\r\n", ( uint16_t ) STARTING_ADDRESS, 
                                                                           ( char * ) DEMO_TEXT_MESSAGE );
     }
+    Delay_ms ( 100 );
 
     if ( EERAM3_OK == eeram3_memory_secure_read ( &eeram3, STARTING_ADDRESS, 
                                                   data_buf, strlen ( DEMO_TEXT_MESSAGE ) ) )
     {
         log_printf ( &logger, "Data read from address 0x%.4X: %s\r\n\n", ( uint16_t ) STARTING_ADDRESS, 
                                                                                       data_buf );
-        Delay_ms ( 3000 );
     }
+    Delay_ms ( 1000 );
 }
 
 ```

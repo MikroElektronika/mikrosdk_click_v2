@@ -1,7 +1,5 @@
 \mainpage Main Page
  
- 
-
 ---
 # GMR Angle click
 
@@ -38,40 +36,42 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void gmrangle_cfg_setup ( gmrangle_cfg_t *cfg ); 
- 
-- Initialization function.
-> GMRANGLE_RETVAL gmrangle_init ( gmrangle_t *ctx, gmrangle_cfg_t *cfg );
+- `gmrangle_cfg_setup` Config Object Initialization function.
+```c
+void gmrangle_cfg_setup ( gmrangle_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void gmrangle_default_cfg ( gmrangle_t *ctx );
-
+- `gmrangle_init` Initialization function.
+```c
+err_t gmrangle_init ( gmrangle_t *ctx, gmrangle_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Generic read 16-bit data function.
-> uint16_t gmrangle_read_data ( gmrangle_t *ctx, uint8_t reg );
- 
-- Generic write 16-bit data function.
-> void gmrangle_write_data ( gmrangle_t *ctx, uint8_t reg, uint16_t tx_data );
+- `gmrangle_read_data` Generic read 16-bit data function.
+```c
+uint16_t gmrangle_read_data ( gmrangle_t *ctx, uint8_t reg );
+```
 
-- Calculate angle function.
-> float gmrangle_calculate_angle ( gmrangle_t *ctx );
+- `gmrangle_write_data` Generic write 16-bit data function.
+```c
+void gmrangle_write_data ( gmrangle_t *ctx, uint8_t reg, uint16_t tx_data );
+```
+
+- `gmrangle_calculate_angle` Calculate angle function.
+```c
+float gmrangle_calculate_angle ( gmrangle_t *ctx );
+```
 
 ## Examples Description
 
-> 
 > This is an example which demonstrates the use of GMR Angle Click board.
-> 
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
->
 > Initializes GPIO pins, SPI and LOG modules.
-> 
 
 ```c
 
@@ -91,13 +91,14 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_printf( &logger, " - Application Init -\r\n" );
+    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     gmrangle_cfg_setup( &cfg );
     GMRANGLE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     gmrangle_init( &gmrangle, &cfg );
+    
+    GMRANGLE_SET_DATA_SAMPLE_EDGE; 
     
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "   GMR Angle Click\r\n" );
@@ -111,26 +112,20 @@ void application_init ( void )
 
 ### Application Task
 
->
 > Display angle value in degrees.
 > Results are being sent to the Usart Terminal where you can track their changes.
-> All data logs write on USB uart changes for every 1 sec.
-> 
+> All data logs write on USB uart changes for every 300 msec.
 
 ```c
 
 void application_task ( void )
 {
     angle = gmrangle_calculate_angle( &gmrangle );
-    log_printf( &logger, " Angle is %0.2f\r\n", angle );
-    Delay_ms( 1000 );
+    log_printf( &logger, " Angle is %.1f\r\n", angle );
+    Delay_ms( 300 );
 } 
 
 ```
-
-## Note
-
-
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

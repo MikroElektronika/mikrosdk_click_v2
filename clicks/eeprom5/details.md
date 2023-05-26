@@ -74,7 +74,8 @@ void eeprom5_write_memory ( eeprom5_t *ctx, uint32_t addr, uint8_t *p_tx_data, u
 
 ```c
 
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     eeprom5_cfg_t eeprom5_cfg;  /**< Click config object. */
 
@@ -92,14 +93,13 @@ void application_init ( void ) {
     log_info( &logger, " Application Init " );
 
     // Click initialization.
-
     eeprom5_cfg_setup( &eeprom5_cfg );
     EEPROM5_MAP_MIKROBUS( eeprom5_cfg, MIKROBUS_1 );
     err_t init_flag  = eeprom5_init( &eeprom5, &eeprom5_cfg );
-    if ( SPI_MASTER_ERROR == init_flag ) {
+    if ( SPI_MASTER_ERROR == init_flag ) 
+    {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
     log_printf( &logger, " - - - - - - - - - - - \r\n" );
@@ -123,7 +123,8 @@ void application_init ( void ) {
 
 ```c
 
-void application_task ( void ) {
+void application_task ( void ) 
+{
     eeprom5_enable_memory_write( &eeprom5, EEPROM5_WRITE_MEMORY_ENABLE );
     Delay_ms( 10 );
     
@@ -133,11 +134,9 @@ void application_task ( void ) {
     Delay_ms( 100 );
     
     eeprom5_read_memory( &eeprom5, 14, read_data, 9 );
-    Delay_ms( 1000 );
-    
     log_printf( &logger, " Read data : %s ", read_data );
     log_printf( &logger, " - - - - - - - - - - - \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms( 3000 );
 }
 
 ```

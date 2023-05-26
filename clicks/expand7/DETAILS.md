@@ -36,23 +36,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void expand7_cfg_setup ( expand7_cfg_t *cfg ); 
- 
-- Initialization function.
-> EXPAND7_RETVAL expand7_init ( expand7_t *ctx, expand7_cfg_t *cfg );
+- `expand7_cfg_setup` Config Object Initialization function.
+```c
+void expand7_cfg_setup ( expand7_cfg_t *cfg ); 
+```
 
+- `expand7_init` Initialization function.
+```c
+err_t expand7_init ( expand7_t *ctx, expand7_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Reset function
-> void expand7_reset ( expand7_t *ctx );
- 
-- Set all OUTPUT pins' logic levels function
-> void expand7_write_all ( expand7_t *ctx, uint8_t value );
+- `expand7_reset` Reset function
+```c
+void expand7_reset ( expand7_t *ctx );
+```
 
-- Set a single OUTPUT pin's logic level function
-> void expand7_write_pin ( expand7_t *ctx, uint16_t pin, uint8_t pin_val );
+- `expand7_write_all` Set all OUTPUT pins' logic levels function
+```c
+void expand7_write_all ( expand7_t *ctx, uint8_t value );
+```
+
+- `expand7_write_pin` Set a single OUTPUT pin's logic level function
+```c
+void expand7_write_pin ( expand7_t *ctx, uint8_t pin, uint8_t pin_val );
+```
 
 ## Examples Description
 
@@ -85,7 +94,6 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     expand7_cfg_setup( &cfg );
     EXPAND7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     expand7_init( &expand7, &cfg );
@@ -113,10 +121,10 @@ void application_task ( void )
     log_printf( &logger, "---------------------------------\r\n" );
     Delay_ms( 2000 );
     
-    for ( pin_num = 0; pin_num < 40; pin_num++ )
+    for ( uint8_t pin_num = 0; pin_num < 40; pin_num++ )
     {
         expand7_write_pin( &expand7, pin_num, EXPAND7_LOW );
-        log_printf( &logger, "Pin %u is set to LOW logic level!\r\n", ( uint16_t) pin_num );
+        log_printf( &logger, "Pin %u is set to LOW logic level!\r\n", ( uint16_t ) pin_num );
         Delay_ms( 300 );
     }
     log_printf( &logger, "---------------------------------\r\n" );

@@ -35,22 +35,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void eink_200inch_cfg_setup ( eink_200inch_cfg_t *cfg ); 
- 
-- Initialization function.
-> EINK_200INCH_RETVAL eink_200inch_init ( eink_200inch_t *ctx, eink_200inch_cfg_t *cfg );
+- `eink200inch_cfg_setup` Config Object Initialization function.
+```c
+void eink200inch_cfg_setup ( eink200inch_cfg_t *cfg ); 
+```
+
+- `eink200inch_init` Initialization function.
+```c
+err_t eink200inch_init ( eink200inch_t *ctx, eink200inch_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Set LUT table
-> void eink200_set_lut ( eink_200inch_t *ctx, const uint8_t *lut, uint8_t n_bytes );
- 
-- Displays image
-> void eink200_display_image ( eink_200inch_t *ctx, const uint8_t* image_buffer );
+- `eink200inch_set_lut` Set LUT table
+```c
+void eink200inch_set_lut ( eink200inch_t *ctx, const uint8_t *lut, uint8_t n_bytes );
+```
 
-- Set text font
-> void eink200_set_font ( eink_200inch_t *ctx, eink_200inch_font_t *cfg_font );
+- `eink200inch_display_image` Displays image
+```c
+void eink200inch_display_image ( eink200inch_t *ctx, const uint8_t* image_buffer );
+```
+
+- `eink200inch_set_font` Set text font
+```c
+void eink200inch_set_font ( eink200inch_t *ctx, eink200inch_font_t *cfg_font );
+```
 
 ## Examples Description
 
@@ -67,38 +77,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 void application_init ( void )
 {
-    eink_200inch_cfg_t cfg;   
-    eink_200inch_font_t cfg_font;
-    eink_200_text_set_t text_set;
+    eink200inch_cfg_t cfg;   
+    eink200inch_font_t cfg_font;
+    eink200inch_text_set_t text_set;
 
     //  Click initialization.
-    
-    eink_200inch_cfg_setup( &cfg );
-    EINK_200INCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    eink_200inch_init( &eink_200inch, &cfg );
+    eink200inch_cfg_setup( &cfg );
+    EINK200INCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    eink200inch_init( &eink200inch, &cfg );
 
-    eink200_start_config( &eink_200inch );
-    eink200_set_lut( &eink_200inch, EINK200_LUT_TABLE, 90 );
+    eink200inch_start_config( &eink200inch );
+    eink200inch_set_lut( &eink200inch, eink200inch_lut_table, 90 );
     Delay_ms( 1000 );
 
 #ifndef IMAGE_MODE_ONLY
     cfg_font.p_font = &guiFont_Tahoma_10_Regular[ 0 ];
-    cfg_font.color = EINK200_SCREEN_COLOR_WHITE;
-    cfg_font.orientation = EINK200_FO_HORIZONTAL;  
-    eink200_set_font( &eink_200inch, &cfg_font );
+    cfg_font.color = EINK200INCH_SCREEN_COLOR_WHITE;
+    cfg_font.orientation = EINK200INCH_FO_HORIZONTAL;  
+    eink200inch_set_font( &eink200inch, &cfg_font );
     
     text_set.n_char = 4;
     text_set.text_x = 10;
     text_set.text_y = 50;
-    eink200_text( &eink_200inch, &demo_text[ 0 ], &text_set );
+    eink200inch_text( &eink200inch, &demo_text[ 0 ], &text_set );
     text_set.n_char = 7;
     text_set.text_x = 10;
     text_set.text_y = 90;
-    eink200_text( &eink_200inch, &demo_text1[ 0 ], &text_set );
+    eink200inch_text( &eink200inch, &demo_text1[ 0 ], &text_set );
     text_set.n_char = 8;
     text_set.text_x = 10;
     text_set.text_y = 130;
-    eink200_text( &eink_200inch, &demo_text2[ 0 ], &text_set ); 
+    eink200inch_text( &eink200inch, &demo_text2[ 0 ], &text_set ); 
     Delay_ms( 5000 );
 #endif
 }
@@ -113,9 +122,9 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    eink200_display_image ( &eink_200inch, demo_image_black );
+    eink200inch_display_image ( &eink200inch, demo_image_black );
     Delay_1sec( );
-    eink200_display_image ( &eink_200inch, demo_image_white );
+    eink200inch_display_image ( &eink200inch, demo_image_white );
     Delay_1sec( );
 }
 

@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
     "category": "Click Boards > Sensors > Current sensor",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Hall Current 14 click",
     "example_list": [
@@ -26,9 +25,11 @@
     "name": "mikroe.click.hallcurrent14",
     "product_link": "https://www.mikroe.com/hall-current-14-click",
     "short_description": "Hall Current 14 Click is a compact add-on board that contains a precise solution for AC/DC current sensing. This board features the MCS1801, a fully integrated Hall-effect-based isolated linear current sensor designed for the current range of ±25A from Monolithic Power Systems (MPS). The galvanic isolation between the pins of the primary copper conductive path and the sensor leads allows the MCS1801 to replace optoisolators or other isolation devices. Applied current flowing through this copper conduction path generates a magnetic field that the differential Hall sensors convert into a proportional voltage, where after that, the user is given the option to process the output voltage as an analog or digital value.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.0",
+    "cmake": true,
+    "alias": "Click.HallCurrent14",
+    "subdir_name": "lib_hallcurrent14"
 }
-

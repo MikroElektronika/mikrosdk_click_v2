@@ -1,7 +1,0 @@
-type: subdirs
-project: HeartRate2
-
-subdirs: {
-    lib
-    example
-}

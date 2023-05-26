@@ -13,7 +13,6 @@
  * ## Application Task  
  * Writing data to EEPROM, reading that data and displaying it via UART
  * 
- * 
  * \author MikroE Team
  *
  */
@@ -27,8 +26,8 @@
 
 static eeprom3_t eeprom3;
 static log_t logger;
-uint8_t text[ 6 ] = { 'M','i','k','r','o','e' };
-char mem_value[ 10 ] = { 0 };
+uint8_t text[ 7 ] = { 'M','i','k','r','o','e' };
+uint8_t mem_value[ 7 ] = { 0 };
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -51,7 +50,6 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     eeprom3_cfg_setup( &cfg );
     EEPROM3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     eeprom3_init( &eeprom3, &cfg );
@@ -66,7 +64,6 @@ void application_task ( void )
     eeprom3_read( &eeprom3, 0x100, mem_value, 6 );
     log_printf( &logger, "Data read: %s\r\n", mem_value );
     Delay_ms( 1000 );
-
 }
 
 void main ( void )

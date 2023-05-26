@@ -1,0 +1,8 @@
+{
+    "name": "HW Monitor 2 Click",
+    "description": "HW Monitor 2 Click is a compact add-on board used to monitor and regulate the performance of various hardware components within an embedded system. This board features the AMC80, an I2C-configurable system hardware monitor from Texas Instruments that contains a 10-bit ADC capable of measuring seven positive voltages and local temperature. The AMC80 also has two programmable fan speed monitoring inputs besides other hardware monitoring functions like chassis intrusion detection, additional external interrupt input, and master reset for external purposes, as well as a programmable upper over-limit and lower under-limit alarms that activate when the programmed limits are exceeded.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "hw" : ["click","AMC80AIPWR"],
+    "category" : ["Click Boards > Power management > Power Switch"]
+}

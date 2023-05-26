@@ -1,0 +1,38 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Biometrics",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+"dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "ECG GSR Click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.ecggsr",
+    "product_link": "https://www.mikroe.com/ecg-gsr-click",
+    "short_description": "ECG GSR click is a complete solution for PPG, ECG and GSR application development, utilizing a specialized IC with a clinical-grade analog front-end (AFE) and electrical front-end. ECG GSR click uses the AS7030B IC, an ultra-low power, multi-channel bio-sensor, which features a wide range of different options, making it an ideal solution for development of blood oxygen level, heart rate and galvanic skin response monitoring applications, fitness applications, for the ECG bio-authentication, and similar applications related to heart monitoring. ECG GSR click is also equipped with the 3.5mm electrodes connectors, making it ready to be used out of the box.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.7",
+    "cmake": true,
+    "alias": "Click.ECGGSR",
+    "subdir_name": "lib_ecggsr"
+}
+
+
+
