@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
     "category": "Click Boards > Storage > FLASH",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Flash 8 click",
     "example_list": [
@@ -26,9 +25,11 @@
     "name": "mikroe.click.flash8",
     "product_link": "https://www.mikroe.com/flash-8-click",
     "short_description": "Flash 8 Click is a compact add-on board representing a highly reliable memory solution. This board features the GD5F2GQ5UEYIGR, a 2Gb high-density non-volatile memory storage solution for embedded systems from GigaDevice Semiconductor. It is based on an industry-standard NAND Flash memory core, representing an attractive alternative to SPI-NOR and standard parallel NAND Flash with advanced features. The GD5F2GQ5UEYIGR also has advanced security features (8K-Byte OTP region), software/hardware write protection, can withstand many write cycles (minimum 100k), and has a data retention period greater than ten years.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.0",
+    "cmake": true,
+    "alias": "Click.Flash8",
+    "subdir_name": "lib_flash8"
 }
-

@@ -35,22 +35,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void eink_154inch_cfg_setup ( eink_154inch_cfg_t *cfg ); 
- 
-- Initialization function.
-> EINK_154INCH_RETVAL eink_154inch_init ( eink_154inch_t *ctx, eink_154inch_cfg_t *cfg );
+- `eink154inch_cfg_setup` Config Object Initialization function.
+```c
+void eink154inch_cfg_setup ( eink154inch_cfg_t *cfg ); 
+```
+
+- `eink154inch_init` Initialization function.
+```c
+err_t eink154inch_init ( eink154inch_t *ctx, eink154inch_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Set LUT table
-> void eink154_set_lut ( eink_154inch_t *ctx, const uint8_t *lut, uint8_t n_bytes );
- 
-- Displays image
-> void eink154_display_image ( eink_154inch_t *ctx, const uint8_t* image_buffer );
+- `eink154inch_set_lut` Set LUT table
+```c
+void eink154inch_set_lut ( eink154inch_t *ctx, const uint8_t *lut, uint8_t n_bytes );
+```
 
-- Set text font
-> void eink154_set_font ( eink_154inch_t *ctx, eink_154inch_font_t *cfg_font );
+- `eink154inch_image` Displays image
+```c
+void eink154inch_image ( eink154inch_t *ctx, const uint8_t* image_buffer );
+```
+
+- `eink154inch_set_font` Set text font
+```c
+void eink154inch_set_font ( eink154inch_t *ctx, eink154inch_font_t *cfg_font );
+```
 
 ## Examples Description
 
@@ -67,38 +77,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 void application_init ( void )
 {
-    eink_154inch_cfg_t cfg;   
-    eink_154inch_font_t cfg_font;
-    eink_154_text_set_t text_set;
+    eink154inch_cfg_t cfg;   
+    eink154inch_font_t cfg_font;
+    eink154inch_text_set_t text_set;
 
     //  Click initialization.
-    
-    eink_154inch_cfg_setup( &cfg );
-    EINK_154INCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    eink_154inch_init( &eink_154inch, &cfg );
+    eink154inch_cfg_setup( &cfg );
+    EINK154INCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    eink154inch_init( &eink154inch, &cfg );
 
-    eink154_start_config( &eink_154inch );
-    eink154_set_lut( &eink_154inch, EINK154_LUT_TABLE, 30 );
+    eink154inch_start_config( &eink154inch );
+    eink154inch_set_lut( &eink154inch, eink154inch_lut_table, 30 );
     Delay_ms( 1000 );
     
 #ifndef IMAGE_MODE_ONLY
     cfg_font.p_font = &guiFont_Tahoma_18_Regular[ 0 ];
-    cfg_font.color = EINK154_SCREEN_COLOR_WHITE;
-    cfg_font.orientation = EINK154_FO_HORIZONTAL;  
+    cfg_font.color = EINK154INCH_SCREEN_COLOR_WHITE;
+    cfg_font.orientation = EINK154INCH_FO_HORIZONTAL;  
     
-    eink154_set_font( &eink_154inch, &cfg_font );
+    eink154inch_set_font( &eink154inch, &cfg_font );
     text_set.n_char = 4;
     text_set.text_x = 10;
     text_set.text_y = 50;
-    eink154_text( &eink_154inch, &demo_text[ 0 ], &text_set );
+    eink154inch_text( &eink154inch, &demo_text[ 0 ], &text_set );
     text_set.n_char = 7;
     text_set.text_x = 10;
     text_set.text_y = 90;
-    eink154_text( &eink_154inch, &demo_text1[ 0 ], &text_set );
+    eink154inch_text( &eink154inch, &demo_text1[ 0 ], &text_set );
     text_set.n_char = 8;
     text_set.text_x = 10;
     text_set.text_y = 130;
-    eink154_text( &eink_154inch, &demo_text2[ 0 ], &text_set ); 
+    eink154inch_text( &eink154inch, &demo_text2[ 0 ], &text_set ); 
     Delay_ms( 5000 );
 #endif
 }
@@ -113,9 +122,9 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    eink154_display_image( &eink_154inch, &demoImage_light[ 0 ] );
+    eink154inch_image( &eink154inch, &demoImage_light[ 0 ] );
     Delay_1sec( );
-    eink154_display_image( &eink_154inch, &demoImage_dark[ 0 ] );
+    eink154inch_image( &eink154inch, &demoImage_dark[ 0 ] );
     Delay_1sec( );
 }
 
@@ -123,7 +132,7 @@ void application_task ( void )
 
 ## Note
 
-> Due to insuficient RAM memory, only the IMAGE mode is supported with 8-bit PIC microcontrollers.
+> Due to insuficient RAM memory, only the IMAGE mode is supported with 8-bit PIC and AVR microcontrollers.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

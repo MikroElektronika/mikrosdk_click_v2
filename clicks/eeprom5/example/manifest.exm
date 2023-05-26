@@ -2,7 +2,7 @@
     "name": "EEPROM 5 Click",
     "description": "EEPROM 5 Click is a compact add-on board that contains the highest-density memory solution. This board features the M95M04, the 4Mbit electrically erasable programmable memory organized as 524288 x 8 bits accessed through the SPI interface from STMicroelectronics.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","M95M04"],
     "category" : ["EEPROM"]
 }

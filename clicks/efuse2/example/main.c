@@ -40,7 +40,8 @@ float op_voltage;
 float min_voltage;
 float max_voltage;
 
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     efuse2_cfg_t efuse2_cfg;  /**< Click config object. */
 
@@ -61,14 +62,18 @@ void application_init ( void ) {
     efuse2_cfg_setup( &efuse2_cfg );
     EFUSE2_MAP_MIKROBUS( efuse2_cfg, MIKROBUS_1 );
     err_t init_flag = efuse2_init( &efuse2, &efuse2_cfg );
-    if ( I2C_MASTER_ERROR == init_flag ) {
+    if ( I2C_MASTER_ERROR == init_flag ) 
+    {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
 
-    efuse2_default_cfg ( &efuse2 );
+    if ( EFUSE2_ERROR == efuse2_default_cfg ( &efuse2 ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
     Delay_ms( 100 );
     op_current = 1.2;
     op_voltage = 12.0;
@@ -89,28 +94,37 @@ void application_init ( void ) {
     log_info( &logger, " Application Task " );
 }
 
-void application_task ( void ) {
-    if ( EFUSE2_FAULT == efuse2_get_fault( &efuse2 ) ) {
+void application_task ( void ) 
+{
+    if ( EFUSE2_FAULT == efuse2_get_fault( &efuse2 ) ) 
+    {
         efuse2_operating_mode( &efuse2, EFUSE2_AD5175_SHUTDOWN_MODE );
         Delay_ms( 1000 );
 
         log_printf( &logger, "        Shutdown Mode        \r\n" );
+        log_printf( &logger, "  Turn OFF the Power Supply  \r\n" );
+        log_printf( &logger, "   and restart the system    \r\n" );
         log_printf( &logger, "-----------------------------\r\n" );
+        
         for ( ; ; );
     }
-
-    log_printf( &logger, " Oper. Voltage : %.3f V \r\n", op_voltage );
-    log_printf( &logger, " Undervoltage  : %.3f V \r\n", min_voltage );
-    log_printf( &logger, " Overvoltage   : %.3f V \r\n", max_voltage );
-    log_printf( &logger, " Current Limit : %.3f A \r\n", op_current );
-    log_printf( &logger, "-----------------------------\r\n" );
+    else
+    {
+        log_printf( &logger, " Oper. Voltage : %.3f V \r\n", op_voltage );
+        log_printf( &logger, " Undervoltage  : %.3f V \r\n", min_voltage );
+        log_printf( &logger, " Overvoltage   : %.3f V \r\n", max_voltage );
+        log_printf( &logger, " Current Limit : %.3f A \r\n", op_current );
+        log_printf( &logger, "-----------------------------\r\n" );
+    }
     Delay_ms( 2000 );
 }
 
-void main ( void ) {
+void main ( void ) 
+{
     application_init( );
 
-    for ( ; ; ) {
+    for ( ; ; ) 
+    {
         application_task( );
     }
 }

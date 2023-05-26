@@ -28,8 +28,6 @@
 static expand7_t expand7;
 static log_t logger;
 
-uint8_t pin_num;
-
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
@@ -51,7 +49,6 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     expand7_cfg_setup( &cfg );
     EXPAND7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     expand7_init( &expand7, &cfg );
@@ -71,10 +68,10 @@ void application_task ( void )
     log_printf( &logger, "---------------------------------\r\n" );
     Delay_ms( 2000 );
     
-    for ( pin_num = 0; pin_num < 40; pin_num++ )
+    for ( uint8_t pin_num = 0; pin_num < 40; pin_num++ )
     {
         expand7_write_pin( &expand7, pin_num, EXPAND7_LOW );
-        log_printf( &logger, "Pin %u is set to LOW logic level!\r\n", ( uint16_t) pin_num );
+        log_printf( &logger, "Pin %u is set to LOW logic level!\r\n", ( uint16_t ) pin_num );
         Delay_ms( 300 );
     }
     log_printf( &logger, "---------------------------------\r\n" );

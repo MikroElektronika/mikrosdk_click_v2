@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230526](#20230526)**
 + **[20230519](#20230519)**
 + **[20230512](#20230512)**
 + **[20230505](#20230505)**
@@ -47,6 +48,49 @@
 
 ---
 ---
+---
+
+## `20230526`
+
+*Following click boards have been added:*
+
++ `Magneto 13`
++ `HW Monitor 2`
++ `Color 17`
++ `IrDA 4`
+
+*Following click boards have been updated:*
+
++ `Angle 3`
++ `BLE 9`
++ `ECG GSR`
++ `EEPROM 2`
++ `EEPROM 3`
++ `EEPROM 5`
++ `EERAM 3`
++ `eFuse 2`
++ `eINK 2.00 inch display`
++ `eINK 1.54 inch display`
++ `eINK 2.13 inch display`
++ `eINK 2.90 inch display`
++ `Expand 7`
++ `Fingerprint 3`
++ `Flash 8`
++ `Force 2`
++ `GMR Angle`
++ `G2C 3G`
++ `LDC Touch`
++ `LIN`
++ `I2C Extend`
++ `Hall Current 14`
++ `Hall Current 15`
++ `Heart rate 2`
++ `MIC 3`
++ `USB to I2C 2`
++ `UART Mux`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230519`

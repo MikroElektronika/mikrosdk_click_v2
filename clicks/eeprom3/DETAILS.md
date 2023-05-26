@@ -36,27 +36,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void eeprom3_cfg_setup ( eeprom3_cfg_t *cfg ); 
- 
-- Initialization function.
-> EEPROM3_RETVAL eeprom3_init ( eeprom3_t *ctx, eeprom3_cfg_t *cfg );
+- `eeprom3_cfg_setup` Config Object Initialization function.
+```c
+void eeprom3_cfg_setup ( eeprom3_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void eeprom3_default_cfg ( eeprom3_t *ctx );
-
+- `eeprom3_init` Initialization function.
+```c
+err_t eeprom3_init ( eeprom3_t *ctx, eeprom3_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- This function writes data to the desired register.
-> void eeprom3_write_byte ( eeprom3_t *ctx, uint16_t reg_address, uint8_t data_in );
-
+- `eeprom3_write_byte` This function writes data to the desired register.
+```c
+void eeprom3_write_byte ( eeprom3_t *ctx, uint16_t reg_address, uint8_t data_in );
+```
  
-- This function writes given number of data to the desired register.
-> void eeprom3_write_page( eeprom3_t *ctx, uint16_t reg_address, uint8_t* data_in, uint8_t count );
+- `eeprom3_write_page` This function writes given number of data to the desired register.
+```c
+void eeprom3_write_page( eeprom3_t *ctx, uint16_t reg_address, uint8_t* data_in, uint8_t count );
+```
 
-- This function reads data from the desired register.
-> void eeprom3_read ( eeprom3_t *ctx, uint16_t reg_address, uint8_t *data_out, uint16_t count );
+- `eeprom3_read` This function reads data from the desired register.
+```c
+void eeprom3_read ( eeprom3_t *ctx, uint16_t reg_address, uint8_t *data_out, uint16_t count );
+```
 
 ## Examples Description
 
@@ -89,7 +94,6 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     eeprom3_cfg_setup( &cfg );
     EEPROM3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     eeprom3_init( &eeprom3, &cfg );
@@ -105,11 +109,11 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    eeprom3_write_page( &eeprom3, 0x0423, text, 6 );
+    eeprom3_write_page( &eeprom3, 0x100, text, 6 );
     log_printf( &logger, "Writing Mikroe to EEPROM 3 click\r\n" );
     Delay_ms( 1000 );
-
-    eeprom3_read( &eeprom3, 0x0423, mem_value, 6 );
+    
+    eeprom3_read( &eeprom3, 0x100, mem_value, 6 );
     log_printf( &logger, "Data read: %s\r\n", mem_value );
     Delay_ms( 1000 );
 }  

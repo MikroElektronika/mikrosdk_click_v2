@@ -38,40 +38,48 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void angle3_cfg_setup ( angle3_cfg_t *cfg ); 
- 
-- Initialization function.
-> ANGLE3_RETVAL angle3_init ( angle3_t *ctx, angle3_cfg_t *cfg );
+- `angle3_cfg_setup` Config Object Initialization function.
+```c
+void angle3_cfg_setup ( angle3_cfg_t *cfg ); 
+```
 
-
+- `angle3_init` Initialization function.
+```c
+err_t angle3_init ( angle3_t *ctx, angle3_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Writes given data to given address.
-> void angle3_write_data ( angle3_t* ctx, uint8_t opcode, uint8_t reg, uint16_t write_data );
- 
-- Reads data from given address.
-> uint16_t angle3_read_data ( angle3_t* ctx, uint8_t opcode, uint8_t reg );
+- `angle3_write_data` Writes given data to given address.
+```c
+void angle3_write_data ( angle3_t* ctx, uint8_t opcode, uint8_t reg, uint16_t write_data );
+```
 
-- Function reads the latest angle output data.
-> uint16_t angle3_read_angle_data( angle3_t* ctx );
+- `angle3_read_data` Reads data from given address.
+```c
+uint16_t angle3_read_data ( angle3_t* ctx, uint8_t opcode, uint8_t reg );
+```
+
+- `angle3_read_angle_data` Function reads the latest angle output data.
+```c
+uint16_t angle3_read_angle_data( angle3_t* ctx );
+```
 
 ## Examples Description
 
-> This example reads data from the sensor, calculates and logs the result.
+> This application reads data from the angle sensor, calculates it to degrees and writes it to the terminal.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Driver initialization, sets sensor to normal mode and starts writting to log.
+> Initialization driver enable's - SPI, set normal mode and start write log.
 
 ```c
 
 void application_init ( void )
 {
-	log_cfg_t log_cfg;
+    log_cfg_t log_cfg;
     angle3_cfg_t angle3_cfg;
 
     /** 
@@ -88,49 +96,53 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     angle3_cfg_setup( &angle3_cfg );
     ANGLE3_MAP_MIKROBUS( angle3_cfg, MIKROBUS_1 );
-    angle3_init( &angle3, &angle3_cfg );
-	angle3_default_cfg( &angle3 );
-
+    if ( ANGLE3_ERROR == angle3_init( &angle3, &angle3_cfg ) )
+    {
+        log_info( &logger, "---- Application Init Error ----" );
+        log_info( &logger, "---- Please, run program again... ----" );
+        for ( ; ; );
+    }
+    angle3_default_cfg ( &angle3 );
+    
+    log_info( &logger, "---- Application Task ----\n" );
 }
   
 ```
 
 ### Application Task
 
-> Angle 3 Click communicates with registers via SPI, reads data from the angle
-> sensor, calculates it to degrees and writes it to the terminal.
-
+> Angle 3 Click communicates with registers via SPI, reads data from the angle sensor, calculates it to degrees and writes it to the terminal.
 
 ```c
 
 void application_task ( void )
 {
-	angle_value_old = 0;
+    static uint16_t angle_value_old = 0;
 
-	if ( angle3_read_error( &angle3 ) )
-	{
-		angle_value = angle3_read_angle_data( &angle3 );
+    if ( angle3_read_error( &angle3 ) )
+    {
+        uint16_t angle_value = angle3_read_angle_data( &angle3 );
 
-		if ( angle_value_old != angle_value )
-		{
-			angle_data_degrees = angle3_calculate_degrees( &angle3, angle_value );
+        if ( angle_value_old != angle_value )
+        {
+            float angle_data_degrees = angle3_calculate_degrees( &angle3, angle_value );
 
-			log_printf( &logger, "Angle : %d deg \r\n", angle_data_degrees );
+            log_printf( &logger, " Angle : %.1f deg\r\n", angle_data_degrees );
 
-			angle_value_old = angle_value;
+            angle_value_old = angle_value;
 
-			Delay_ms( 1000 );
-		}
-	}
-	else
-	{
-		log_printf( &logger, "Magnetic Field Too Weak\r\n" );
+            Delay_ms( 300 );
+        }
+    }
+    else
+    {
+        log_printf( &logger, " Magnetic Field Too Weak\r\n" );
 
-		Delay_ms( 1000 );
-	}
+        angle_value_old = 0;
+        Delay_ms( 1000 );
+    }
 }
 
 ```

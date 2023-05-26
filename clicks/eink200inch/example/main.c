@@ -30,13 +30,13 @@
  *           5. Select only MSB first checkmark
  *           6. Check Reverse color and adjust Normal type
  *    The image to be generated should contain exact 3096 bytes ...
- *    Insert the image into the file eINK_200_display_image.h
+ *    Insert the image into the file eink200inch_display_image.h
  * 
  * - Create Font:
  *    Create a new VisualTFT project
  *    Add label and adjust text font
  *    Generate source code
- *    Copy the font array from resource.c file and paste it to eINK_200_display_font.h file
+ *    Copy the font array from resource.c file and paste it to eink200inch_font.h file
  * 
  * *** Changing the LUT table can lead to loss of display performance ....
  * 
@@ -47,15 +47,15 @@
 
 #include "board.h"
 #include "log.h"
-#include "eink_200inch.h"
-#include "eINK_200_display_image.h"
-#include "eINK_200_display_font.h"
+#include "eink200inch.h"
+#include "eink200inch_image.h"
+#include "eink200inch_font.h"
 
 // ------------------------------------------------------------------ VARIABLES
 
-static eink_200inch_t eink_200inch;
+static eink200inch_t eink200inch;
 
-const uint8_t EINK200_LUT_TABLE[ 90 ] =
+const uint8_t eink200inch_lut_table[ 90 ] =
 {
     0x82, 0x00, 0x00, 0x00, 0xAA, 0x00, 0x00, 0x00,
     0xAA, 0xAA, 0x00, 0x00, 0xAA, 0xAA, 0xAA, 0x00,
@@ -72,55 +72,54 @@ const uint8_t EINK200_LUT_TABLE[ 90 ] =
 
 };
 
-char demo_text[ 5 ] = { 'e', 'I', 'N', 'K' , 0 };
-char demo_text1[ 8 ] = { 'D', 'i', 's', 'p', 'l', 'a', 'y', 0 };
-char demo_text2[ 10 ] = { '2', '.', '0', '0', 'i', 'n', 'c', 'h', 0 };
+uint8_t demo_text[ 5 ] = { 'e', 'I', 'N', 'K' , 0 };
+uint8_t demo_text1[ 8 ] = { 'D', 'i', 's', 'p', 'l', 'a', 'y', 0 };
+uint8_t demo_text2[ 10 ] = { '2', '.', '0', '0', 'i', 'n', 'c', 'h', 0 };
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
 {
-    eink_200inch_cfg_t cfg;   
-    eink_200inch_font_t cfg_font;
-    eink_200_text_set_t text_set;
+    eink200inch_cfg_t cfg;   
+    eink200inch_font_t cfg_font;
+    eink200inch_text_set_t text_set;
 
     //  Click initialization.
-    
-    eink_200inch_cfg_setup( &cfg );
-    EINK_200INCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    eink_200inch_init( &eink_200inch, &cfg );
+    eink200inch_cfg_setup( &cfg );
+    EINK200INCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    eink200inch_init( &eink200inch, &cfg );
 
-    eink200_start_config( &eink_200inch );
-    eink200_set_lut( &eink_200inch, EINK200_LUT_TABLE, 90 );
+    eink200inch_start_config( &eink200inch );
+    eink200inch_set_lut( &eink200inch, eink200inch_lut_table, 90 );
     Delay_ms( 1000 );
 
 #ifndef IMAGE_MODE_ONLY
     cfg_font.p_font = &guiFont_Tahoma_10_Regular[ 0 ];
-    cfg_font.color = EINK200_SCREEN_COLOR_WHITE;
-    cfg_font.orientation = EINK200_FO_HORIZONTAL;  
-    eink200_set_font( &eink_200inch, &cfg_font );
+    cfg_font.color = EINK200INCH_SCREEN_COLOR_WHITE;
+    cfg_font.orientation = EINK200INCH_FO_HORIZONTAL;  
+    eink200inch_set_font( &eink200inch, &cfg_font );
     
     text_set.n_char = 4;
     text_set.text_x = 10;
     text_set.text_y = 50;
-    eink200_text( &eink_200inch, &demo_text[ 0 ], &text_set );
+    eink200inch_text( &eink200inch, &demo_text[ 0 ], &text_set );
     text_set.n_char = 7;
     text_set.text_x = 10;
     text_set.text_y = 90;
-    eink200_text( &eink_200inch, &demo_text1[ 0 ], &text_set );
+    eink200inch_text( &eink200inch, &demo_text1[ 0 ], &text_set );
     text_set.n_char = 8;
     text_set.text_x = 10;
     text_set.text_y = 130;
-    eink200_text( &eink_200inch, &demo_text2[ 0 ], &text_set ); 
+    eink200inch_text( &eink200inch, &demo_text2[ 0 ], &text_set ); 
     Delay_ms( 5000 );
 #endif
 }
 
 void application_task ( void )
 {
-    eink200_display_image ( &eink_200inch, demo_image_black );
+    eink200inch_display_image ( &eink200inch, demo_image_black );
     Delay_1sec( );
-    eink200_display_image ( &eink_200inch, demo_image_white );
+    eink200inch_display_image ( &eink200inch, demo_image_white );
     Delay_1sec( );
 }
 

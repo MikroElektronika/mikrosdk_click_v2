@@ -35,27 +35,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void force2_cfg_setup ( force2_cfg_t *cfg ); 
- 
-- Initialization function.
-> FORCE2_RETVAL force2_init ( force2_t *ctx, force2_cfg_t *cfg );
+- `force2_cfg_setup` Config Object Initialization function.
+```c
+void force2_cfg_setup ( force2_cfg_t *cfg ); 
+```
 
+- `force2_init` Initialization function.
+```c
+err_t force2_init ( force2_t *ctx, force2_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Generic read function.
-> force2_data_t force2_generic_read ( force2_t *ctx );
+- `force2_read_an_pin_value` This function reads results of AD conversion of the AN pin.
+```c
+err_t force2_read_an_pin_value ( force2_t *ctx, uint16_t *data_out );
+```
+
+- `force2_read_an_pin_voltage` This function reads results of AD conversion of the AN pin and converts them to proportional voltage level.
+```c
+err_t force2_read_an_pin_voltage ( force2_t *ctx, float *data_out );
+```
 
 ## Examples Description
 
-> This application is used to measure the pressure force.
+> This example demonstrates the use of Force 2 click board by reading and displaying the voltage from AN pin and the calculated force (N) value.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initalizes ADC driver, sets ADC channel and makes an initial log.
+> Initalizes the driver and logger and makes an initial log.
 
 ```c
 
@@ -78,42 +88,42 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     force2_cfg_setup( &cfg );
     FORCE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     force2_init( &force2, &cfg );
 
-
     log_printf( &logger, "--------------------\r\n" );
     log_printf( &logger, "    Force 2 click   \r\n" );
     log_printf( &logger, "--------------------\r\n" );
-
-    Delay_ms( 100 );
+    Delay_ms( 500 );
 }
   
 ```
 
 ### Application Task
 
-> This is an example that shows the capabilities of the Force 2 click by taking measurements from the device and displaying it via USART terminal.
+> Reads and displays the voltage from AN pin, then calculates and displays the force in N.
 
 ```c
 
 void application_task ( void )
 {
-    uint32_t disp_val;
-    force2_data_t tmp;
-    
-    //  Task implementation.
-    
-    tmp = force2_generic_read ( &force2 );
-    disp_val = force2_val_conv( tmp, 4095, 15, 0 );
-
-    log_printf( &logger, "Force: %d N\r\n", disp_val );
-    Delay_ms( 500 );
+    float voltage = 0;
+    if ( FORCE2_OK == force2_read_an_pin_voltage ( &force2, &voltage ) ) 
+    {
+        log_printf( &logger, " AN Voltage: %.3f V\r\n", voltage );
+        log_printf( &logger, " Force: %.1f N\r\n", 
+                    FORCE2_FORCE_MAX - voltage * FORCE2_FORCE_MAX / FORCE2_VREF );
+        log_printf( &logger, "-----------------------------\r\n" );
+        Delay_ms( 1000 );
+    }
 }  
 
 ```
+
+## Note
+
+> Adjust the gain and range onboard potentiometers in order to get zero N when there's no force applied to the sensor.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

@@ -13,7 +13,7 @@
  * ## Application Task  
  * Display angle value in degrees.
  * Results are being sent to the Usart Terminal where you can track their changes.
- * All data logs write on USB uart changes for every 1 sec.
+ * All data logs write on USB uart changes for every 300 msec.
  * 
  * \author MikroE Team
  *
@@ -51,10 +51,11 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     gmrangle_cfg_setup( &cfg );
     GMRANGLE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     gmrangle_init( &gmrangle, &cfg );
+    
+    GMRANGLE_SET_DATA_SAMPLE_EDGE; 
     
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "   GMR Angle Click\r\n" );
@@ -67,8 +68,8 @@ void application_init ( void )
 void application_task ( void )
 {
     angle = gmrangle_calculate_angle( &gmrangle );
-    log_printf( &logger, " Angle is %0.2f\r\n", angle );
-    Delay_ms( 1000 );
+    log_printf( &logger, " Angle is %.1f\r\n", angle );
+    Delay_ms( 300 );
 }
 
 void main ( void )

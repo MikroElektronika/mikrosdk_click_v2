@@ -36,22 +36,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void eink_213inch_cfg_setup ( eink_213inch_cfg_t *cfg ); 
- 
-- Initialization function.
-> EINK213INCH_RETVAL eink_213inch_init ( eink_213inch_t *ctx, eink_213inch_cfg_t *cfg );
+- `eink213inch_cfg_setup` Config Object Initialization function.
+```c
+void eink213inch_cfg_setup ( eink213inch_cfg_t *cfg ); 
+```
+
+- `eink213inch_init` Initialization function.
+```c
+err_t eink213inch_init ( eink213inch_t *ctx, eink213inch_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Set LUT table
-> void eink_213_set_lut ( eink_213inch_t *ctx, const uint8_t *lut, uint8_t n_bytes );
- 
-- Function for draw text on the screen
-> void eink_213_text ( eink_213inch_t *ctx, char *text, eink_213inch_set_text_t *text_set );
+- `eink213inch_set_lut` Set LUT table
+```c
+void eink213inch_set_lut ( eink213inch_t *ctx, const uint8_t *lut, uint8_t n_bytes );
+```
 
-- Display image function
-> void eink_213_display_image ( eink_213inch_t *ctx, const uint8_t* image_buffer );
+- `eink213inch_text` Function for draw text on the screen
+```c
+void eink213inch_text ( eink213inch_t *ctx, char *text, eink213inch_set_text_t *text_set );
+```
+
+- `eink213inch_display_image` Display image function
+```c
+void eink213inch_display_image ( eink213inch_t *ctx, const uint8_t* image_buffer );
+```
 
 ## Examples Description
 
@@ -68,50 +78,49 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 void application_init ( void )
 {
-    eink_213inch_cfg_t cfg;
-    eink_213inch_font_t cfg_font;
-    eink_213inch_set_text_t set_text;
+    eink213inch_cfg_t cfg;
+    eink213inch_font_t cfg_font;
+    eink213inch_set_text_t set_text;
 
     //  Click initialization.
-
-    eink_213inch_cfg_setup( &cfg );
+    eink213inch_cfg_setup( &cfg );
     EINK213INCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    eink_213inch_init( &eink_213inch, &cfg );
+    eink213inch_init( &eink213inch, &cfg );
 
-    eink_213_start_config( &eink_213inch );
-    eink_213_set_lut( &eink_213inch, &EINK213_BIG_LUT_TABLE[ 0 ], 70 );
+    eink213inch_start_config( &eink213inch );
+    eink213inch_set_lut( &eink213inch, &eink213inch_lut_table[ 0 ], 70 );
     Delay_ms( 1000 );
 
 #ifndef IMAGE_MODE_ONLY
     cfg_font.p_font = &guiFont_Tahoma_18_Regular[ 0 ]; 
-    cfg_font.color = EINK213_SCREEN_COLOR_WHITE;
-    cfg_font.orientation = EINK213_FO_HORIZONTAL;  
-    eink_213_set_font( &eink_213inch, &cfg_font );
+    cfg_font.color = EINK213INCH_SCREEN_COLOR_WHITE;
+    cfg_font.orientation = EINK213INCH_FO_HORIZONTAL;  
+    eink213inch_set_font( &eink213inch, &cfg_font );
 
     set_text.n_char = 4;
     set_text.text_x = 5;
     set_text.text_y = 50;
-    eink_213_text( &eink_213inch, &demo_text[ 0 ], &set_text );
+    eink213inch_text( &eink213inch, &demo_text[ 0 ], &set_text );
     
     cfg_font.p_font = &guiFont_Tahoma_10_Regular[ 0 ]; 
-    cfg_font.color = EINK213_SCREEN_COLOR_WHITE;
-    cfg_font.orientation = EINK213_FO_HORIZONTAL; 
-    eink_213_set_font( &eink_213inch, &cfg_font );
+    cfg_font.color = EINK213INCH_SCREEN_COLOR_WHITE;
+    cfg_font.orientation = EINK213INCH_FO_HORIZONTAL; 
+    eink213inch_set_font( &eink213inch, &cfg_font );
 
     set_text.n_char = 7;
     set_text.text_x = 5;
     set_text.text_y = 90;
-    eink_213_text( &eink_213inch, &demo_text1[ 0 ], &set_text );
+    eink213inch_text( &eink213inch, &demo_text1[ 0 ], &set_text );
     
     cfg_font.p_font = &guiFont_Tahoma_8_Regular[ 0 ]; 
-    cfg_font.color = EINK213_SCREEN_COLOR_WHITE;
-    cfg_font.orientation = EINK213_FO_HORIZONTAL; 
-    eink_213_set_font( &eink_213inch, &cfg_font );
+    cfg_font.color = EINK213INCH_SCREEN_COLOR_WHITE;
+    cfg_font.orientation = EINK213INCH_FO_HORIZONTAL; 
+    eink213inch_set_font( &eink213inch, &cfg_font );
 
     set_text.n_char = 9;
     set_text.text_x = 5;
     set_text.text_y = 120;
-    eink_213_text( &eink_213inch, &demo_text2[ 0 ], &set_text );
+    eink213inch_text( &eink213inch, &demo_text2[ 0 ], &set_text );
 #endif
     Delay_ms( 1000 );
 }
@@ -126,13 +135,13 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    eink_213_display_image( &eink_213inch, &demoImage_light[ 0 ] );
+    eink213inch_display_image( &eink213inch, &demoImage_light[ 0 ] );
     Delay_1sec( );
-    eink_213_display_image( &eink_213inch, &demoImage_dark[ 0 ] );
+    eink213inch_display_image( &eink213inch, &demoImage_dark[ 0 ] );
     Delay_1sec( );
-    eink_213_display_image( &eink_213inch, &demoImage_light_180[ 0 ] );
+    eink213inch_display_image( &eink213inch, &demoImage_light_180[ 0 ] );
     Delay_1sec( );
-    eink_213_display_image( &eink_213inch, &demoImage_dark_180[ 0 ] );
+    eink213inch_display_image( &eink213inch, &demoImage_dark_180[ 0 ] );
     Delay_1sec( );
 } 
 
@@ -140,7 +149,7 @@ void application_task ( void )
 
 ## Note
 
-> Due to insuficient RAM memory, only the IMAGE mode is supported with 8-bit PIC microcontrollers.
+> Due to insuficient RAM memory, only the IMAGE mode is supported with 8-bit PIC and AVR microcontrollers.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

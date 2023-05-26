@@ -1,7 +1,0 @@
-type: subdirs
-project: I2CExtend
-
-subdirs: {
-    lib
-    example
-}

@@ -35,25 +35,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void fingerprint3_cfg_setup ( fingerprint3_cfg_t *cfg ); 
- 
-- Initialization function.
-> FINGERPRINT3_RETVAL fingerprint3_init ( fingerprint3_t *ctx, fingerprint3_cfg_t *cfg );
+- `fingerprint3_cfg_setup` Config Object Initialization function.
+```c
+void fingerprint3_cfg_setup ( fingerprint3_cfg_t *cfg ); 
+```
 
-- Set config function.
-> uint8_t fingerprint3_set_config ( fingerprint3_t *ctx, uint32_t addr, uint32_t pass );
+- `fingerprint3_init` Initialization function.
+```c
+err_t fingerprint3_init ( fingerprint3_t *ctx, fingerprint3_cfg_t *cfg );
+```
+
+- `fingerprint3_set_config` Set config function.
+```c
+uint8_t fingerprint3_set_config ( fingerprint3_t *ctx, uint32_t addr, uint32_t pass );
+```
 
 #### Example key functions :
 
-- Take image function.
-> uint8_t fingerprint3_take_image ( fingerprint3_t *ctx );
- 
-- Aura LED control function.
-> uint8_t fingerprint3_aura_control ( fingerprint3_t *ctx, uint8_t control, uint8_t speed, uint8_t color, uint8_t times );
+- `fingerprint3_take_image` Take image function.
+```c
+uint8_t fingerprint3_take_image ( fingerprint3_t *ctx );
+```
 
-- Finger indicator function.
-> uint8_t fingerprint3_finger_indicator ( fingerprint3_t *ctx );
+- `fingerprint3_aura_control` Aura LED control function.
+```c
+uint8_t fingerprint3_aura_control ( fingerprint3_t *ctx, uint8_t control, uint8_t speed, uint8_t color, uint8_t times );
+```
+
+- `fingerprint3_finger_indicator` Finger indicator function.
+```c
+uint8_t fingerprint3_finger_indicator ( fingerprint3_t *ctx );
+```
 
 ## Examples Description
 
@@ -87,7 +99,6 @@ void application_init ( void )
     Delay_ms( 100 );
 
     //  Click initialization.
-
     fingerprint3_cfg_setup( &cfg );
     FINGERPRINT3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     err_t init_flag = fingerprint3_init( &fingerprint3, &cfg );

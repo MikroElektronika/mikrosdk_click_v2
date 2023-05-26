@@ -47,7 +47,7 @@ err_t flash8_init ( flash8_t *ctx, flash8_cfg_t *cfg );
 
 - `flash8_default_cfg` Click Default Configuration function.
 ```c
-err_t flash8_default_cfg ( flash8_t *ctx );
+void flash8_default_cfg ( flash8_t *ctx );
 ```
 
 #### Example key functions :
@@ -87,7 +87,8 @@ err_t flash8_read_id ( flash8_t *ctx, uint8_t *manufacture_id, uint8_t *device_i
 
 ```c
 
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;        /**< Logger config object. */
     flash8_cfg_t flash8_cfg;  /**< Click config object. */
 
@@ -105,14 +106,12 @@ void application_init ( void ) {
     log_info( &logger, " Application Init " );
 
     // Click initialization.
- 
     flash8_cfg_setup( &flash8_cfg );
     FLASH8_MAP_MIKROBUS( flash8_cfg, MIKROBUS_1 );
-    err_t init_flag  = flash8_init( &flash8, &flash8_cfg );
-    if ( init_flag == SPI_MASTER_ERROR ) {
+    if ( SPI_MASTER_ERROR == flash8_init( &flash8, &flash8_cfg ) ) 
+    {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
 
@@ -122,16 +121,19 @@ void application_init ( void ) {
     
     flash8_read_id( &flash8, &manufacture_id, &device_id, &organization_id );
     log_printf( &logger, "--------------------------\r\n" );
-    log_printf( &logger, "  Manufacture ID  : 0x%.2X\r\n", manufacture_id );
-    log_printf( &logger, "  Device ID       : 0x%.2X\r\n", device_id );
-    log_printf( &logger, "  Organization ID : 0x%.2X\r\n", organization_id );
+    log_printf( &logger, "  Manufacture ID  : 0x%.2X\r\n", ( uint16_t) manufacture_id );
+    log_printf( &logger, "  Device ID       : 0x%.2X\r\n", ( uint16_t) device_id );
+    log_printf( &logger, "  Organization ID : 0x%.2X\r\n", ( uint16_t) organization_id );
     log_printf( &logger, "--------------------------\r\n" );
     Delay_ms( 100 );   
       
     flash8_sw_reset( &flash8, &feature_status_out );
-    if (  feature_status_out & FLASH8_GET_PRG_F_PROGRAM_FAIL ) {
+    if ( feature_status_out & FLASH8_GET_PRG_F_PROGRAM_FAIL ) 
+    {
         log_printf( &logger, "\tProgram Fail \r\n" );    
-    } else {
+    } 
+    else 
+    {
         log_printf( &logger, "\tProgram Pass \r\n" );    
     }
     log_printf( &logger, "--------------------------\r\n" );
@@ -149,9 +151,12 @@ void application_init ( void ) {
     Delay_ms( 100 );
     
     flash8_block_erase( &flash8, 123, &feature_status_out );
-    if (  feature_status_out & FLASH8_GET_ERS_F_ERASE_FAIL ) {
+    if ( feature_status_out & FLASH8_GET_ERS_F_ERASE_FAIL ) 
+    {
         log_printf( &logger, "\tErase Fail \r\n" );    
-    } else {
+    } 
+    else 
+    {
         log_printf( &logger, "\tErase Pass \r\n" );    
     }
     log_printf( &logger, "--------------------------\r\n" );
@@ -161,26 +166,31 @@ void application_init ( void ) {
     log_printf( &logger, "--------------------------\r\n" );
     log_printf( &logger, "        Write status:\r\n"  );
     flash8_write_memory( &flash8, 123, 456, &demo_data[ 0 ], 9, &feature_status_out );
-    if (  feature_status_out & FLASH8_GET_OIP_BUSY_STATE ) {
+    if ( feature_status_out & FLASH8_GET_OIP_BUSY_STATE ) 
+    {
         log_printf( &logger, " Operation is in progress.\r\n" );    
-    } else {
+    } 
+    else 
+    {
         log_printf( &logger, " Operation is not in progress.\r\n" );    
     }
     log_printf( &logger, "- - - - - - - - - - -  - -\r\n" );
     Delay_ms( 1000 );
     
     log_printf( &logger, "    Check data ready...\r\n" );  
-    while ( feature_status_out != FLASH8_GET_OIP_READY_STATE ) {
+    while ( FLASH8_GET_OIP_READY_STATE != feature_status_out ) 
+    {
         flash8_get_feature( &flash8, FLASH8_FEATURE_C0, &feature_status_out );
         log_printf( &logger, "\tBusy state.\r\n" );  
         Delay_ms( 100 );    
     }
     
-    if (  feature_status_out == FLASH8_GET_OIP_READY_STATE ) {
+    if ( FLASH8_GET_OIP_READY_STATE == feature_status_out ) 
+    {
         log_printf( &logger, "\tReady state.\r\n" );    
     }
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms( 100 );
 }
 
 ```
@@ -195,7 +205,8 @@ void application_init ( void ) {
 
 ```c
 
-void application_task ( void ) {   
+void application_task ( void ) 
+{   
     flash8_read_memory( &flash8, 123, 456, &rx_data[ 0 ], 9, &feature_status_out );
     log_printf( &logger, "    Read data : %s", rx_data );
     log_printf( &logger, "--------------------------\r\n" );
