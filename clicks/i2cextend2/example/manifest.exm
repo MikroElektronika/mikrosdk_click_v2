@@ -2,7 +2,7 @@
     "name": "I2C Extend 2 Click",
     "description": "I2C Extend 2 Click is a compact add-on board suitable for I2C communication bus extension. This board features the PCA9615, a 2-channel multipoint differential I2C bus buffer with hot-swap logic from NXP Semiconductors. The PCA9615 converts the two default I2C signals into four differential signals, two for SCL and two for SDA.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","PCA9615"],
     "category" : ["I2C"]
 }

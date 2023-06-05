@@ -38,13 +38,13 @@
 #include "generic_pointer.h"
 
 // Set AP SSID
-#define AP_SSID                     ""   
+#define AP_SSID                     ""
 
 // Set AP password - if the AP is OPEN remain this NULL
-#define AP_PASSWORD                 ""     
+#define AP_PASSWORD                 ""
 
 // Set Local port on which the TCP server and UDP socket will be created.
-#define LOCAL_PORT                  1    
+#define LOCAL_PORT                  1
 
 #define APP_OK                      0
 #define APP_ERROR_DRIVER            -1
@@ -109,7 +109,7 @@ static void lpwifi_log_app_buf ( void );
 /**
  * @brief LP WiFi response check.
  * @details This function checks for response and returns the status of response.
- * 
+ *
  * @return application status.
  * See #err_t definition for detailed explanation.
  * @note None.
@@ -118,25 +118,34 @@ static err_t lpwifi_rsp_check ( void );
 
 /**
  * @brief LP WiFi check connection.
- * @details This function checks connection to the AP, and fills the assigned_ip_address buffer and 
+ * @details This function checks connection to the AP, and fills the assigned_ip_address buffer and
  *          logs the response on the USB UART if it is connected successfully.
- * 
+ *
  * @note None.
  */
 static void lpwifi_check_connection( void );
 
-void application_init ( void ) 
+/**
+ * @brief LP WiFi str cut chr function.
+ * @details This function removes all selected characters from string str,
+ * and returns it to the same str without those characters.
+ * @param str Address of string.
+ * @param chr Character to cut.
+ */
+static void lpwifi_str_cut_chr ( uint8_t *str, uint8_t chr );
+
+void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
     lpwifi_cfg_t lpwifi_cfg;  /**< Click config object. */
 
-    /** 
+    /**
      * Logger initialization.
      * Default baud rate: 115200
      * Default log level: LOG_LEVEL_DEBUG
-     * @note If USB_UART_RX and USB_UART_TX 
-     * are defined as HAL_PIN_NC, you will 
-     * need to define them manually for log to work. 
+     * @note If USB_UART_RX and USB_UART_TX
+     * are defined as HAL_PIN_NC, you will
+     * need to define them manually for log to work.
      * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
      */
     LOG_MAP_USB_UART( log_cfg );
@@ -149,7 +158,7 @@ void application_init ( void )
     lpwifi_cfg_setup( &lpwifi_cfg );
     LPWIFI_MAP_MIKROBUS( lpwifi_cfg, MIKROBUS_1 );
     err_t init_flag = lpwifi_init( &lpwifi, &lpwifi_cfg );
-    if ( UART_ERROR == init_flag ) 
+    if ( UART_ERROR == init_flag )
     {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
@@ -159,15 +168,15 @@ void application_init ( void )
 
     lpwifi_default_cfg( &lpwifi );
     Delay_ms( 500 );
-    
+
     // Initiate the communication
     lpwifi_send_cmd( &lpwifi, LPWIFI_CMD_AT );
     Delay_ms( 1000 );
-    
+
     // Dummy read
     lpwifi_process( );
     lpwifi_clear_app_buf( );
-    
+
     log_printf( &logger, "\r\n --- Factory reset --- \r\n" );
     lpwifi_factory_reset_device ( &lpwifi );
     Delay_ms( 500 );
@@ -177,7 +186,7 @@ void application_init ( void )
     lpwifi_error_check( app_error_flag );
     Delay_ms( 500 );
     log_printf( &logger, " ----------------------------------------------- \r\n" );
-    
+
     log_printf( &logger, "\r\n --- Connecting to the access point --- \r\n" );
     // Connect to AP
     lpwifi_connect_to_ap( &lpwifi, AP_SSID, AP_PASSWORD );
@@ -205,7 +214,7 @@ void application_init ( void )
     app_error_flag = lpwifi_rsp_check( );
     lpwifi_error_check( app_error_flag );
     Delay_ms( 500 );
-    
+
     log_printf( &logger, " ----------------------------------------------- \r\n" );
     log_printf( &logger, "\r\n --- Creating a UDP socket --- \r\n" );
     // Create UDP socket
@@ -213,69 +222,69 @@ void application_init ( void )
     app_error_flag = lpwifi_rsp_check( );
     lpwifi_error_check( app_error_flag );
     Delay_ms( 500 );
-    
+
     log_printf( &logger, " ----------------------------------------------- \r\n" );
     log_printf( &logger, " TCP server and UDP socket are available at: \r\n" );
-    log_printf( &logger, "    SSID: \"%s\"\r\n    IP: %s\r\n    Port: %u", ( char * ) AP_SSID, 
-                                                                           ( char * ) assigned_ip_address, 
+    log_printf( &logger, "    SSID: \"%s\"\r\n    IP: %s\r\n    Port: %u", ( char * ) AP_SSID,
+                                                                           ( char * ) assigned_ip_address,
                                                                          ( uint16_t ) LOCAL_PORT );
     log_printf( &logger, "\r\n ----------------------------------------------- \r\n" );
     log_printf( &logger, " You can connect to it via a TCP/UDP client." );
     log_printf( &logger, "\r\n ----------------------------------------------- \r\n" );
 }
 
-void application_task ( void ) 
+void application_task ( void )
 {
     lpwifi_process( );
     lpwifi_log_app_buf( );
 }
 
-void main ( void ) 
+void main ( void )
 {
     application_init( );
 
-    for ( ; ; ) 
+    for ( ; ; )
     {
         application_task( );
     }
 }
 
-static void lpwifi_clear_app_buf ( void ) 
+static void lpwifi_clear_app_buf ( void )
 {
     memset( app_buf, 0, app_buf_len );
     app_buf_len = 0;
     app_buf_cnt = 0;
 }
 
-static err_t lpwifi_process ( void ) 
+static err_t lpwifi_process ( void )
 {
     int32_t rx_size;
     char rx_buff[ PROCESS_BUFFER_SIZE ] = { 0 };
 
     rx_size = lpwifi_generic_read( &lpwifi, rx_buff, PROCESS_BUFFER_SIZE );
 
-    if ( rx_size > 0 ) 
+    if ( rx_size > 0 )
     {
         int32_t buf_cnt = 0;
 
-        if ( app_buf_len + rx_size >= PROCESS_BUFFER_SIZE ) 
+        if ( app_buf_len + rx_size >= PROCESS_BUFFER_SIZE )
         {
             lpwifi_clear_app_buf(  );
             return LPWIFI_ERROR;
-        } 
-        else 
+        }
+        else
         {
             buf_cnt = app_buf_len;
             app_buf_len += rx_size;
         }
 
-        for ( int32_t rx_cnt = 0; rx_cnt < rx_size; rx_cnt++ ) 
+        for ( int32_t rx_cnt = 0; rx_cnt < rx_size; rx_cnt++ )
         {
-            if ( rx_buff[ rx_cnt ] != 0 ) 
+            if ( rx_buff[ rx_cnt ] != 0 )
             {
                 app_buf[ ( buf_cnt + rx_cnt ) ] = rx_buff[ rx_cnt ];
-            } 
-            else 
+            }
+            else
             {
                 app_buf_len--;
                 buf_cnt--;
@@ -291,14 +300,14 @@ static err_t lpwifi_rsp_check ( void )
 {
     uint16_t timeout_cnt = 0;
     uint16_t timeout = 10000;
-    
+
     err_t error_flag = lpwifi_process(  );
-    
+
     if ( ( error_flag != 0 ) && ( error_flag != -1 ) )
     {
         return error_flag;
     }
-    
+
     while ( ( strstr( app_buf, RSP_OK ) == 0 ) && ( strstr( app_buf, RSP_ERROR ) == 0 ) )
     {
         error_flag = lpwifi_process(  );
@@ -306,7 +315,7 @@ static err_t lpwifi_rsp_check ( void )
         {
             return error_flag;
         }
-        
+
         timeout_cnt++;
         if ( timeout_cnt > timeout )
         {
@@ -328,12 +337,12 @@ static err_t lpwifi_rsp_check ( void )
             lpwifi_clear_app_buf(  );
             return APP_ERROR_TIMEOUT;
         }
-        
+
         Delay_ms( 1 );
     }
-    
+
     lpwifi_log_app_buf();
-    
+
     return APP_OK;
 }
 
@@ -361,7 +370,7 @@ static void lpwifi_log_app_buf ( void )
     {
         log_printf( &logger, "%c", app_buf[ buf_cnt ] );
     }
-    
+
     lpwifi_clear_app_buf(  );
 }
 
@@ -369,26 +378,41 @@ static void lpwifi_check_connection( void )
 {
     #define CONNECTED     "+WFJAP:1"
     #define NOT_CONNECTED "+WFJAP:0"
-    
+
     lpwifi_process( );
     if ( 0 != strstr( app_buf, CONNECTED ) )
     {
         #define IP_DELIMITER "',"
-        char * __generic app_buf_ptr;
+        char * __generic_ptr app_buf_ptr;
         Delay_ms( 200 );
         lpwifi_process( );
         app_buf_ptr = strstr( app_buf, IP_DELIMITER );
         strcpy( assigned_ip_address, app_buf_ptr );
-        str_cut_chr( assigned_ip_address, '\'' );
-        str_cut_chr( assigned_ip_address, ',' );
-        str_cut_chr( assigned_ip_address, '\r' );
-        str_cut_chr( assigned_ip_address, '\n' );
+        lpwifi_str_cut_chr( assigned_ip_address, '\'' );
+        lpwifi_str_cut_chr( assigned_ip_address, ',' );
+        lpwifi_str_cut_chr( assigned_ip_address, '\r' );
+        lpwifi_str_cut_chr( assigned_ip_address, '\n' );
         lpwifi_log_app_buf( );
         app_connection_status = CONNECTED_TO_AP;
     }
     else if ( 0 != strstr( app_buf, NOT_CONNECTED ) )
     {
         app_connection_status = NOT_CONNECTED_TO_AP;
+    }
+}
+
+static void lpwifi_str_cut_chr ( uint8_t *str, uint8_t chr )
+{
+    uint16_t cnt_0, cnt_1;
+    for ( cnt_0 = 0; cnt_0 < strlen( str ); cnt_0++ )
+    {
+        if ( str[ cnt_0 ] == chr )
+        {
+            for ( cnt_1 = cnt_0; cnt_1 < strlen( str ); cnt_1++ )
+            {
+                str[ cnt_1 ] = str[ cnt_1 + 1 ];
+            }
+        }
     }
 }
 

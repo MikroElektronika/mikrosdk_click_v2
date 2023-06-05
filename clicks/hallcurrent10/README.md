@@ -3,7 +3,7 @@
 ---
 # Hall Current 10 click
 
-Hall Current 10 Click is a compact add-on board that provides economical and precise AC or DC current sensing solutions. This board features the ACHS-7194, a fully integrated Hall-effect-based isolated linear current sensor designed for the current range of ±40A from Broadcom Limited. Inside ACHS-7194 is a precise, low-offset, linear Hall circuit with a copper conduction path located near the surface of the die. Applied current flowing through this copper conduction path generates a magnetic field that the differential Hall sensors convert into a proportional voltage, where after that, the user is given the option to process the output voltage as an analog or digital value. This Click board™ is suitable for AC or DC current-sensing in industrial, commercial, and communications systems.
+> Hall Current 10 Click is a compact add-on board that provides economical and precise AC or DC current sensing solutions. This board features the ACHS-7194, a fully integrated Hall-effect-based isolated linear current sensor designed for the current range of ±40A from Broadcom Limited. Inside ACHS-7194 is a precise, low-offset, linear Hall circuit with a copper conduction path located near the surface of the die. Applied current flowing through this copper conduction path generates a magnetic field that the differential Hall sensors convert into a proportional voltage, where after that, the user is given the option to process the output voltage as an analog or digital value. This Click board™ is suitable for AC or DC current-sensing in industrial, commercial, and communications systems.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent10_click.png" height=300px>
@@ -43,7 +43,7 @@ void hallcurrent10_cfg_setup ( hallcurrent10_cfg_t *cfg );
 
 - `hallcurrent10_init` Initialization function.
 ```c
-HALLCURRENT10_RETVAL hallcurrent10_init ( hallcurrent10_t *ctx, hallcurrent10_cfg_t *cfg );
+err_t hallcurrent10_init ( hallcurrent10_t *ctx, hallcurrent10_cfg_t *cfg );
 ```
 
 - `hallcurrent10_default_cfg` Click Default Configuration function.
@@ -55,17 +55,17 @@ void hallcurrent10_default_cfg ( hallcurrent10_t *ctx );
 
 - `hallcurrent10_read_adc` Hall Current 10 I2C ADC reading function.
 ```c
-HALLCURRENT10_RETVAL hallcurrent10_read_adc ( hallcurrent10_t *ctx, uint16_t *read_adc );
+err_t hallcurrent10_read_adc ( hallcurrent10_t *ctx, uint16_t *read_adc );
 ```
 
 - `hallcurrent10_get_adc_volatge` Hall Current 10 get ADC voltage function.
 ```c
-HALLCURRENT10_RETVAL hallcurrent10_get_adc_voltage ( hallcurrent10_t *ctx, float *adc_vtg );
+err_t hallcurrent10_get_adc_voltage ( hallcurrent10_t *ctx, float *adc_vtg );
 ```
 
 - `hallcurrent10_get_current` Hall Current 10 get current function.
 ```c
-HALLCURRENT10_RETVAL hallcurrent10_get_current ( hallcurrent10_t *ctx, float *current );
+err_t hallcurrent10_get_current ( hallcurrent10_t *ctx, float *current );
 ```
 
 ## Example Description
@@ -103,16 +103,13 @@ void application_init ( void )
     // Click initialization.
     hallcurrent10_cfg_setup( &hallcurrent10_cfg );
     HALLCURRENT10_MAP_MIKROBUS( hallcurrent10_cfg, MIKROBUS_1 );
-    err_t init_flag = hallcurrent10_init( &hallcurrent10, &hallcurrent10_cfg );
-    if ( I2C_MASTER_ERROR == init_flag ) 
+    if ( I2C_MASTER_ERROR == hallcurrent10_init( &hallcurrent10, &hallcurrent10_cfg ) ) 
     {
         log_info( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
 
-    hallcurrent10_default_cfg ( &hallcurrent10 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, "--------------------------\r\n" );
     Delay_ms( 100 );
@@ -134,7 +131,7 @@ void application_task ( void )
     log_printf( &logger, " ADC Value   : %d \r\n", adc_data );
     Delay_ms( 100 );
     
-    hallcurrent10_get_adc_volatge( &hallcurrent10, &adc_voltage );
+    hallcurrent10_get_adc_voltage( &hallcurrent10, &adc_voltage );
     log_printf( &logger, " ADC Voltage : %.2f mV \r\n", adc_voltage );
     log_printf( &logger, "- - - - - - - - - - -  - -\r\n" );
     Delay_ms( 100 );

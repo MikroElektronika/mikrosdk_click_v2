@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 3.21)
+if (${TOOLCHAIN_LANGUAGE} MATCHES "MikroC")
+    project(example_recnplay LANGUAGES MikroC)
+else()
+    project(example_recnplay LANGUAGES C ASM)
+endif()
+
+if (NOT PROJECT_TYPE)
+    set(PROJECT_TYPE "mikrosdk" CACHE STRING "" FORCE)
+endif()
+
+add_executable(example_recnplay
+        example/main.c
+
+)
+
+
+############################ example_recnplay GENERATED CODE START ###########################
+find_package(MikroC.Core REQUIRED)
+target_link_libraries(example_recnplay PUBLIC MikroC.Core)
+find_package(MikroSDK.Board REQUIRED)
+target_link_libraries(example_recnplay PUBLIC MikroSDK.Board)
+find_package(MikroSDK.Log REQUIRED)
+target_link_libraries(example_recnplay PUBLIC MikroSDK.Log)
+add_subdirectory(lib_recnplay)
+target_link_libraries(example_recnplay PUBLIC Click.RecNPlay)
+############################ example_recnplay GENERATED CODE END ###########################

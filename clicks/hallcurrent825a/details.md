@@ -2,10 +2,10 @@
 ---
 # Hall Current 8 25A click
 
-Hall Current 8 Click is a compact add-on board that contains a precise solution for AC/DC current sensing. This board features the TLI4971-A025T5, a high-precision coreless current sensor for industrial/consumer applications from Infineon Technologies. The TLI4971-A025T5 has an analog interface and two fast overcurrent detection outputs, which support the protection of the power circuitry. Galvanic isolation is also provided according to the magnetic sensing principle. Infineon's monolithic Hall technology enables accurate and highly linear measurement of currents with a full scale up to 25A. This Click board™ is suitable for AC/DC current measurement applications: electrical drives, general-purpose inverters, chargers, current monitoring, overload, over-current detection, and many more.
+> Hall Current 8 Click is a compact add-on board that contains a precise solution for AC/DC current sensing. This board features the TLI4971-A025T5, a high-precision coreless current sensor for industrial/consumer applications from Infineon Technologies. The TLI4971-A025T5 has an analog interface and two fast overcurrent detection outputs, which support the protection of the power circuitry. Galvanic isolation is also provided according to the magnetic sensing principle. Infineon's monolithic Hall technology enables accurate and highly linear measurement of currents with a full scale up to 25A. This Click board™ is suitable for AC/DC current measurement applications: electrical drives, general-purpose inverters, chargers, current monitoring, overload, over-current detection, and many more.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent-825a_click.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent825a_click.png" height=300px>
 </p>
 
 [click Product page](https://www.mikroe.com/hall-current-8-click-25a)
@@ -42,29 +42,24 @@ void hallcurrent825a_cfg_setup ( hallcurrent825a_cfg_t *cfg );
 
 - `hallcurrent825a_init` Initialization function.
 ```c
-HALLCURRENT825A_RETVAL hallcurrent825a_init ( hallcurrent825a_t *ctx, hallcurrent825a_cfg_t *cfg );
-```
-
-- `hallcurrent825a_default_cfg` Click Default Configuration function.
-```c
-void hallcurrent825a_default_cfg ( hallcurrent825a_t *ctx );
+err_t hallcurrent825a_init ( hallcurrent825a_t *ctx, hallcurrent825a_cfg_t *cfg );
 ```
 
 #### Example key functions :
 
-- `hallcurrent825a_calibration` This function sets the calibration value into the offset data structure of the TLI4971 high precision coreless current sensor on Hall Current 8 25A Click board.
+- `hallcurrent825a_calibration` This function sets the calibration value into the offset data from context object of the TLI4971 high precision coreless current sensor on Hall Current 8 25A Click board.
 ```c
-HALLCURRENT825A_RETVAL hallcurrent825a_calibration ( hallcurrent825a_t *ctx, hallcurrent825a_offset_t *offset_val );
+err_t hallcurrent825a_calibration ( hallcurrent825a_t *ctx );
 ```
 
 - `hallcurrent825a_get_voltage` This function reads results of AD conversion of the AN pin and converts them to proportional voltage level.
 ```c
-HALLCURRENT825A_RETVAL hallcurrent825a_get_voltage ( hallcurrent825a_t *ctx, float *avr_voltage );
+err_t hallcurrent825a_get_voltage ( hallcurrent825a_t *ctx, float *avr_voltage );
 ```
 
 - `hallcurrent825a_get_current` This function reads results of AD conversion of the AN pin and converts them to proportional current level.
 ```c
-HALLCURRENT825A_RETVAL hallcurrent825a_get_current ( hallcurrent825a_t *ctx, hallcurrent825a_offset_t *offset_val, float *current );
+err_t hallcurrent825a_get_current ( hallcurrent825a_t *ctx, float *current );
 ```
 
 ## Example Description
@@ -79,8 +74,9 @@ HALLCURRENT825A_RETVAL hallcurrent825a_get_current ( hallcurrent825a_t *ctx, hal
 
 ```c
 
-void application_init ( void ) {
-    log_cfg_t log_cfg;                          /**< Logger config object. */
+void application_init ( void ) 
+{
+    log_cfg_t log_cfg;                            /**< Logger config object. */
     hallcurrent825a_cfg_t hallcurrent825a_cfg;  /**< Click config object. */
 
     /** 
@@ -98,66 +94,64 @@ void application_init ( void ) {
 
     // Click initialization.
 
-   hallcurrent825a_cfg_setup( &hallcurrent825a_cfg );
-   HALLCURRENT825A_MAP_MIKROBUS( hallcurrent825a_cfg, MIKROBUS_1 );
-    if ( hallcurrent825a_init( &hallcurrent825a, &hallcurrent825a_cfg ) == ADC_ERROR ) {
+    hallcurrent825a_cfg_setup( &hallcurrent825a_cfg );
+    HALLCURRENT825A_MAP_MIKROBUS( hallcurrent825a_cfg, MIKROBUS_1 );
+    if ( ADC_ERROR == hallcurrent825a_init( &hallcurrent825a, &hallcurrent825a_cfg ) ) 
+    {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
-   Delay_ms( 1000 );
-
-   log_printf( &logger, "---------------------------\r\n" );
-   log_printf( &logger, " Turn OFF the power supply \r\n" );
-   Delay_ms( 5000 );
-   
-   log_printf( &logger, "---------------------------\r\n" );
-   log_printf( &logger, "     Start Calibration     \r\n" );
-   hallcurrent825a_calibration ( &hallcurrent825a, &offset_val );
-   Delay_ms( 1000 );
-   
-   log_printf( &logger, "---------------------------\r\n");
-   log_printf( &logger, " Turn ON the power supply  \r\n" );
-   Delay_ms( 5000 );
-   
-   log_printf( &logger, "---------------------------\r\n");
-   log_printf( &logger, "    Start measurements :   \r\n");
-   log_printf( &logger, "---------------------------\r\n");
+    Delay_ms( 1000 );
+    
+    log_printf( &logger, "---------------------------\r\n" );
+    log_printf( &logger, " Turn OFF the power supply \r\n" );
+    Delay_ms( 5000 );
+    
+    log_printf( &logger, "---------------------------\r\n" );
+    log_printf( &logger, "     Start Calibration     \r\n" );
+    hallcurrent825a_calibration ( &hallcurrent825a );
+    Delay_ms( 1000 );
+    
+    log_printf( &logger, "---------------------------\r\n");
+    log_printf( &logger, " Turn ON the power supply  \r\n" );
+    Delay_ms( 5000 );
+    
+    log_printf( &logger, "---------------------------\r\n");
+    log_printf( &logger, "    Start measurements :   \r\n");
+    log_printf( &logger, "---------------------------\r\n");
 }
 
 ```
 
 ### Application Task
 
-> This is an example that demonstrates the use of the Hall Current 8 25A click board. In this example, we read and display current data [A],  ADC value and AN pin voltage level [V]. Results are being sent to the Usart Terminal where you can track their changes.
+> This is an example that demonstrates the use of the Hall Current 8 25A click board. 
+In this example, we read and display current data [A], AN pin voltage level [V]. 
+Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
 
-void application_task ( void ) {
-    float hallcurrent825a_current = 0;
+void application_task ( void ) 
+{
+    float current = 0;
+    float avg_voltage = 0;
     
-    if ( hallcurrent825a_get_current ( &hallcurrent825a, &offset_val, &hallcurrent825a_current ) != ADC_ERROR ) {
-        log_printf( &logger, "   Current     : %.2f [A]\r\n", hallcurrent825a_current );
+    if ( HALLCURRENT825A_OK == hallcurrent825a_get_current ( &hallcurrent825a, &current ) ) 
+    {
+        log_printf( &logger, " Current        : %.2f [A]\r\n", current );
     }
     
-    uint16_t hallcurrent825a_an_value = 0;
-
-    if ( hallcurrent825a_read_an_pin_value ( &hallcurrent825a, &hallcurrent825a_an_value ) != ADC_ERROR ) {
-        log_printf( &logger, "   ADC Value   : %u\r\n", hallcurrent825a_an_value );
-    }
-
-    float hallcurrent825a_an_voltage = 0;
-
-    if ( hallcurrent825a_read_an_pin_voltage ( &hallcurrent825a, &hallcurrent825a_an_voltage ) != ADC_ERROR ) {
-        log_printf( &logger, "   AN Voltage  : %.2f [V]\r\n", hallcurrent825a_an_voltage );
+    if ( HALLCURRENT825A_OK == hallcurrent825a_get_voltage ( &hallcurrent825a, &avg_voltage ) ) 
+    {
+        log_printf( &logger, " AN pin voltage : %.2f [V]\r\n", avg_voltage );
     }
     log_printf( &logger, "---------------------------\r\n");
     Delay_ms( 1000 );
 }
 
 ```
-
+ 
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 

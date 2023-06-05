@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Optical",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Optical",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+    "dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Illuminance click",
     "example_list": [
@@ -25,18 +24,18 @@
     },
     "name": "mikroe.click.illuminance",
     "product_link": "https://www.mikroe.com/illuminance-click",
-    "short_description": "Illuminance click carries a TSL2561 light-to-digital converter with a sensor that’s designed to mimic the way humans perceive light.",
-    "supported_compiler": "mikroC AI",
+    "short_description": "Illuminance Click is a compact add-on board that mimics how humans perceive light. This board features ams AG’s TSL2583, a very-high sensitivity light-to-digital converter that transforms light intensity to a digital signal output capable of the direct I2C interface. It combines one broadband photodiode (visible plus infrared) and one infrared-responding photodiode on a single CMOS integrated circuit capable of providing a near-photopic response over an effective 16-bit dynamic range (16-bit resolution).",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         1135
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.6"
+    "version": "2.1.0.0",
+    "cmake": true,
+    "alias": "Click.Illuminance",
+    "subdir_name": "lib_illuminance"
 }
-
-
 
 
 

@@ -11,7 +11,7 @@ endif()
 
 add_executable(example_g2c
         example/main.c
-
+    
 )
 
 
@@ -22,6 +22,9 @@ find_package(MikroSDK.Board REQUIRED)
 target_link_libraries(example_g2c PUBLIC MikroSDK.Board)
 find_package(MikroSDK.Log REQUIRED)
 target_link_libraries(example_g2c PUBLIC MikroSDK.Log)
+find_package(MikroSDK.Conversions REQUIRED)
+target_link_libraries(example_g2c PUBLIC MikroSDK.Conversions)
 add_subdirectory(lib_g2c)
 target_link_libraries(example_g2c PUBLIC Click.G2C)
 ############################ example_g2c GENERATED CODE END ###########################
+

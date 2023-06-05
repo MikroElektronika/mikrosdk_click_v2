@@ -2,7 +2,7 @@
     "name": "Hall Current 10 Click",
     "description": "<Hall Current 10 Click is a compact add-on board that provides economical and precise AC or DC current sensing solutions. This board features the ACHS-7194, a fully integrated Hall-effect-based isolated linear current sensor designed for the current range of ±40A from Broadcom Limited. Inside ACHS-7194 is a precise, low-offset, linear Hall circuit with a copper conduction path located near the surface of the die. Applied current flowing through this copper conduction path generates a magnetic field that the differential Hall sensors convert into a proportional voltage, where after that, the user is given the option to process the output voltage as an analog or digital value. This Click board™ is suitable for AC or DC current-sensing in industrial, commercial, and communications systems.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","ACHS-7194"],
     "category" : [" Current sensor"]
 }

@@ -75,7 +75,8 @@ void i2cextend2_enable ( i2cextend2_t *ctx, uint8_t en_extend );
 
 ```c
 
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     i2cextend2_cfg_t i2cextend2_cfg;  /**< Click config object. */
 
@@ -95,36 +96,39 @@ void application_init ( void ) {
     // Click initialization.
     i2cextend2_cfg_setup( &i2cextend2_cfg );
     I2CEXTEND2_MAP_MIKROBUS( i2cextend2_cfg, MIKROBUS_1 );
-    err_t init_flag = i2cextend2_init( &i2cextend2, &i2cextend2_cfg );
-    if ( I2C_MASTER_ERROR == init_flag ) {
+    if ( I2C_MASTER_ERROR == i2cextend2_init( &i2cextend2, &i2cextend2_cfg ) ) 
+    {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
-    
+
     i2cextend2_enable( &i2cextend2, I2CEXTEND2_EXTEND_ENABLE );
 
-    if ( i2cextend2_rmt_read( &i2cextend2, C6DOFIMU11_REG_WHO_AM_I ) == C6DOFIMU11_WHO_AM_I_WIA_ID ) {
+    if ( C6DOFIMU11_WHO_AM_I_WIA_ID == i2cextend2_rmt_read( &i2cextend2, C6DOFIMU11_REG_WHO_AM_I ) ) 
+    {
         log_printf( &logger, "        SUCCESS         \r\n" );
         log_printf( &logger, "------------------------\r\n" );
-    } else {
+    } 
+    else 
+    {
         log_printf( &logger, "         ERROR          \r\n" );
         log_printf( &logger, "    Reset the device    \r\n" );
         log_printf( &logger, "------------------------\r\n" );
         for ( ; ; );
     }
-    i2cextend2_rmt_write( &i2cextend2, C6DOFIMU11_REG_CNTL2, C6DOFIMU11_CNTL2_TEMP_EN_STANDBY_MODE |
-                                                             C6DOFIMU11_CNTL2_MAG_EN_STANDBY_MODE |
-                                                             C6DOFIMU11_CNTL2_ACCEL_EN_STANDBY_MODE );
+    i2cextend2_rmt_write ( &i2cextend2, C6DOFIMU11_REG_CNTL2, C6DOFIMU11_CNTL2_TEMP_EN_STANDBY_MODE |
+                                                              C6DOFIMU11_CNTL2_MAG_EN_STANDBY_MODE |
+                                                              C6DOFIMU11_CNTL2_ACCEL_EN_STANDBY_MODE );
 
-    i2cextend2_rmt_write ( &i2cextend2, C6DOFIMU11_REG_INC3, C6DOFIMU11_INC3_IEL2_FIFO_TRIG | 
+    i2cextend2_rmt_write ( &i2cextend2, C6DOFIMU11_REG_INC3, C6DOFIMU11_INC3_IEL2_FIFO_TRIG |
                                                              C6DOFIMU11_INC3_IEL1_FIFO_TRIG );
 
-    i2cextend2_rmt_write ( &i2cextend2, C6DOFIMU11_REG_CNTL2, C6DOFIMU11_CNTL2_GSEL_8G | 
-                                                              C6DOFIMU11_CNTL2_RES_MAX2 | 
-                                                              C6DOFIMU11_CNTL2_MAG_EN_OPERATING_MODE | 
+    i2cextend2_rmt_write ( &i2cextend2, C6DOFIMU11_REG_CNTL2, C6DOFIMU11_CNTL2_GSEL_8G |
+                                                              C6DOFIMU11_CNTL2_RES_MAX2 |
+                                                              C6DOFIMU11_CNTL2_MAG_EN_OPERATING_MODE |
                                                               C6DOFIMU11_CNTL2_ACCEL_EN_OPERATING_MODE );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, "------------------------\r\n" );
 }
@@ -137,25 +141,26 @@ void application_init ( void ) {
 
 ```c
 
-void application_task ( void ) {
+void application_task ( void ) 
+{
     log_printf( &logger, "\t   Accel   \t|\t    Mag    \r\n" );
     log_printf( &logger, "------------------------------------------------\r\n" );
-    
+
     i2cextend2_6dofimu11_get_axis( &i2cextend2, C6DOFIMU11_REG_ACCEL_XOUT_L );
     log_printf( &logger, "\t Accel X: %d\t|", axis );
     i2cextend2_6dofimu11_get_axis( &i2cextend2, C6DOFIMU11_REG_MAG_XOUT_L );
     log_printf( &logger, "\t Mag X: %d\r\n", axis );
-    
+
     i2cextend2_6dofimu11_get_axis( &i2cextend2, C6DOFIMU11_REG_ACCEL_YOUT_L );
     log_printf( &logger, "\t Accel Y: %d\t|", axis );
     i2cextend2_6dofimu11_get_axis( &i2cextend2, C6DOFIMU11_REG_MAG_YOUT_L );
     log_printf( &logger, "\t Mag Y: %d\r\n", axis );
-    
+
     i2cextend2_6dofimu11_get_axis( &i2cextend2, C6DOFIMU11_REG_ACCEL_ZOUT_L );
     log_printf( &logger, "\t Accel Z: %d\t|", axis );
     i2cextend2_6dofimu11_get_axis( &i2cextend2, C6DOFIMU11_REG_MAG_ZOUT_L );
     log_printf( &logger, "\t Mag Z: %d\r\n", axis );
-    
+
     log_printf( &logger, "------------------------------------------------\r\n" );
     Delay_ms( 1000 );
 }

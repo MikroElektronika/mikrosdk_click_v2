@@ -1,8 +1,0 @@
-type: subdirs
-
-project: StepDown3
-
-subdirs: {
-    lib
-    example
-}

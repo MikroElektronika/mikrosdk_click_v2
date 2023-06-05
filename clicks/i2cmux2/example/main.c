@@ -18,6 +18,10 @@
  * Channel 3 : Compass 3 click   [slave address: 0x30; reg: 0x2F; id val.: 0x0C].
  * All data logs write on USB UART changes every 2 sec.
  * 
+ * @note
+ * Disable all unconnected channels from the example using ENABLE_CHANNEL_x macros
+ * below to prevent the I2C bus from blocking waiting for a device response.
+ * 
  * \author MikroE Team
  *
  */
@@ -28,6 +32,12 @@
 #include "i2cmux2.h"
 
 // ------------------------------------------------------------------ VARIABLES
+
+// Comment out the following lines to exclude unconnected channels from the example
+#define ENABLE_CHANNEL_0
+#define ENABLE_CHANNEL_1
+#define ENABLE_CHANNEL_2
+#define ENABLE_CHANNEL_3
 
 static i2cmux2_t i2cmux2;
 static log_t logger;
@@ -102,7 +112,6 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     i2cmux2_cfg_setup( &cfg );
     I2CMUX2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     i2cmux2_init( &i2cmux2, &cfg );
@@ -123,29 +132,37 @@ void application_task ( void )
     log_printf( &logger, "  CH  |   ID   |  INT \r\n" );
     log_printf( &logger, "----------------------\r\n" );
     
+#ifdef ENABLE_CHANNEL_0
     // SET CHANNEL 0: 6DOF IMU 11 click
     i2cmux2_set_channel( &i2cmux2, I2CMUX2_CMD_SET_CH_0, 0x0E );
     Delay_ms( 100 );
     i2cmux2_generic_read( &i2cmux2, 0x00, &rx_data, 1 );
     display_log( I2CMUX2_CMD_SET_CH_0 );
+#endif
     
+#ifdef ENABLE_CHANNEL_1
     // SET CHANNEL 1: Altitude click
     i2cmux2_set_channel( &i2cmux2, I2CMUX2_CMD_SET_CH_1, 0x60 );
     Delay_ms( 100 );
     i2cmux2_generic_read( &i2cmux2, 0x0C, &rx_data, 1 );
     display_log( I2CMUX2_CMD_SET_CH_1 );
+#endif
     
+#ifdef ENABLE_CHANNEL_2
     // SET CHANNEL 2: 6DOF IMU 9 click
     i2cmux2_set_channel( &i2cmux2, I2CMUX2_CMD_SET_CH_2, 0x69 );
     Delay_ms( 100 );
     i2cmux2_generic_read( &i2cmux2, 0x75, &rx_data, 1 );
     display_log( I2CMUX2_CMD_SET_CH_2 );
+#endif
 
+#ifdef ENABLE_CHANNEL_3
     // SET CHANNEL 3: Compass 3 click
     i2cmux2_set_channel( &i2cmux2, I2CMUX2_CMD_SET_CH_3, 0x30 );
     Delay_ms( 100 );
     i2cmux2_generic_read( &i2cmux2, 0x2F, &rx_data, 1 );
     display_log( I2CMUX2_CMD_SET_CH_3 );
+#endif
 
     log_printf( &logger, "----------------------\r\n" );
     Delay_ms( 2000 );

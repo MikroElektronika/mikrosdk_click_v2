@@ -2,7 +2,7 @@
 ---
 # ISM click
 
-ISM Click is a compact add-on board that contains a complete wireless RF digital data transceiver. This board features the RFM75, a low-power, high-performance 2.4GHz GFSK transceiver from RF Solutions. The RFM75 transceiver is configurable through SPI serial interface and operates with only 3.3V in the worldwide ISM frequency band from 2400MHz up to 2527MHz. The embedded packet processing engines enable their entire operation with a simple MCU as a radio system. Burst mode transmission and up to 2Mbps air data rate make it suitable for applications requiring ultra-low power consumption.
+> ISM Click is a compact add-on board that contains a complete wireless RF digital data transceiver. This board features the RFM75, a low-power, high-performance 2.4GHz GFSK transceiver from RF Solutions. The RFM75 transceiver is configurable through SPI serial interface and operates with only 3.3V in the worldwide ISM frequency band from 2400MHz up to 2527MHz. The embedded packet processing engines enable their entire operation with a simple MCU as a radio system. Burst mode transmission and up to 2Mbps air data rate make it suitable for applications requiring ultra-low power consumption.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ism_click.png" height=300px>
@@ -42,7 +42,7 @@ void ism_cfg_setup ( ism_cfg_t *cfg );
 
 - `ism_init` Initialization function.
 ```c
-ISM_RETVAL ism_init ( ism_t *ctx, ism_cfg_t *cfg );
+err_t ism_init ( ism_t *ctx, ism_cfg_t *cfg );
 ```
 
 - `ism_default_cfg` Click Default Configuration function.
@@ -71,90 +71,86 @@ err_t ism_transmit_packet ( ism_t *ctx, uint8_t type, uint8_t *tx_data, uint8_t 
 
 > This library contains API for the ISM Click driver.
 > This example transmits/receives and processes data from ISM clicks.
-> The library initializes and defines the UART bus drivers 
-> to transmit or receive data.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes driver and set performs the default configuration.
+> Initializes driver and performs the default configuration. 
 
 ```c
 
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     ism_cfg_t ism_cfg;  /**< Click config object. */
 
-    // Logger initialization.
-
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
     LOG_MAP_USB_UART( log_cfg );
-    log_cfg.level = LOG_LEVEL_DEBUG;
-    log_cfg.baud = 115200;
     log_init( &logger, &log_cfg );
-    log_printf( &logger, "------------------\r\n" );
     log_info( &logger, " Application Init " );
 
     // Click initialization.
-
     ism_cfg_setup( &ism_cfg );
     ISM_MAP_MIKROBUS( ism_cfg, MIKROBUS_1 );
-    err_t init_flag  = ism_init( &ism, &ism_cfg );
-    if ( init_flag == SPI_MASTER_ERROR ) {
+    if ( SPI_MASTER_ERROR == ism_init( &ism, &ism_cfg ) ) 
+    {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
 
     ism_default_cfg ( &ism );
-    log_info( &logger, " Application Task " );
-    log_printf( &logger, "------------------\r\n" );
     Delay_ms( 100 );
-
-    #ifdef RECEIVER   
-        ism_switch_rx_mode( &ism );
-        log_printf( &logger, "   Receive data  \r\n" );
-    #endif
-   
-    #ifdef TRANSMITTER
-        ism_switch_tx_mode( &ism );
-        log_printf( &logger, "  Transmit data   \r\n" );
-    #endif
-        
-    log_printf( &logger, "------------------\r\n" );
+    
+#ifdef DEMO_APP_TRANSMITTER
+    ism_switch_tx_mode( &ism );
+    log_printf( &logger, " Application Mode: Transmitter\r\n" );
+#else
+    ism_switch_rx_mode( &ism );
+    log_printf( &logger, " Application Mode: Receiver\r\n" );
+#endif
+    log_info( &logger, " Application Task " );
 }
 
 ```
 
 ### Application Task
 
-> Transmitter/Receiver task depends  on uncommented code.
+> Transmitter/Receiver task depends on uncommented code.
 > Receiver logging each received byte to the UART for data logging,
-> while transmitted send messages every 1 second.
+> while transmitter send messages every 1 second.
 
 ```c
 
-void application_task ( void ) {
-    #ifdef RECEIVER
-        uint8_t rx_buf[ ISM_MAX_PACKET_LEN ] = { 0 };
+void application_task ( void ) 
+{
+#ifdef DEMO_APP_TRANSMITTER
+    ism_transmit_packet( &ism, ISM_CMD_W_TX_PAYLOAD_NOACK, demo_message_1, 9 );
+    log_printf( &logger, "  Tx : %s", demo_message_1 );
+    Delay_ms( 1000 );
 
-        ism_receive_packet( &ism, &rx_buf[ 0 ] );
-    
-        if ( rx_buf[ 0 ] != 0 ) {
-            log_printf( &logger, "  Rx : %s", rx_buf );
-        }
-    #endif
+    ism_transmit_packet( &ism, ISM_CMD_W_TX_PAYLOAD_NOACK, demo_message_2, 12 );
+    log_printf( &logger, "  Tx : %s", demo_message_2 );
+    Delay_ms( 1000 );
+#else
+    uint8_t rx_buf[ ISM_MAX_PACKET_LEN ] = { 0 };
 
-    #ifdef TRANSMITTER
-        ism_transmit_packet( &ism, ISM_CMD_W_TX_PAYLOAD_NOACK, &demo_message_1[ 0 ], 9 );
-        log_printf( &logger, "  Tx : %s", demo_message_1 );
-        Delay_ms( 1000 );
-    
-        ism_transmit_packet( &ism, ISM_CMD_W_TX_PAYLOAD_NOACK, &demo_message_2[ 0 ], 12 );
-        log_printf( &logger, "  Tx : %s", demo_message_2 );
-        Delay_ms( 1000 );
-    #endif
+    ism_receive_packet( &ism, &rx_buf[ 0 ] );
+
+    if ( rx_buf[ 0 ] ) 
+    {
+        log_printf( &logger, "  Rx : %s", rx_buf );
+    }
+#endif
 }
 
 ```

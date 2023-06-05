@@ -1,7 +1,0 @@
-type: subdirs
-project: Rs232Isolator2
-
-subdirs: {
-    lib
-    example
-}

@@ -1,49 +1,36 @@
 /*!
- * \file 
- * \brief Illuminance Click example
- * 
+ * @file main.c
+ * @brief Illuminance Click example
+ *
  * # Description
- * This example demonstrates basic Illuminance Click functionality.
+ * This example demonstrates the use of Illuminance click board by reading
+ * and displaying the RAW channels data measurements.
  *
  * The demo application is composed of two sections :
- * 
- * ## Application Init 
- * Initialize device and driver.
- * 
- * ## Application Task  
- * Every second calculate illuminance measured by sensor and log 
- * results to UART Terminal.
- * 
- * *note:* 
- * By default, integration time is set to 402ms but it may be modified
- * by user using illuminance_write_data() function and provided macros.
- * 
- * \author MikroE Team
+ *
+ * ## Application Init
+ * Initializes the driver and performs the click default configuration.
+ *
+ * ## Application Task
+ * Waits for the data ready interrupt, then reads the RAW channels data measurements
+ * and displays the results on the USB UART. By default, the data ready interrupt triggers 
+ * upon every ADC cycle which will be performed every 200ms.
+ *
+ * @author Stefan Filipovic
  *
  */
-// ------------------------------------------------------------------- INCLUDES
 
 #include "board.h"
 #include "log.h"
 #include "illuminance.h"
 
-// ------------------------------------------------------------------ VARIABLES
-
 static illuminance_t illuminance;
 static log_t logger;
 
-static uint16_t value_ch0;
-static uint16_t value_ch1;
-static uint16_t lux_value;
-static uint16_t lux_value_old;
-static uint8_t sensitivity;
-
-// ------------------------------------------------------ APPLICATION FUNCTIONS
-
-void application_init ( void )
+void application_init ( void ) 
 {
-    log_cfg_t log_cfg;
-    illuminance_cfg_t cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    illuminance_cfg_t illuminance_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -56,45 +43,45 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
-    illuminance_cfg_setup( &cfg );
-    ILLUMINANCE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    illuminance_init( &illuminance, &cfg );
-    illuminance_default_cfg ( &illuminance );
-
-    // Variable Initializations for this example.
+    // Click initialization.
+    illuminance_cfg_setup( &illuminance_cfg );
+    ILLUMINANCE_MAP_MIKROBUS( illuminance_cfg, MIKROBUS_1 );
+    if ( I2C_MASTER_ERROR == illuminance_init( &illuminance, &illuminance_cfg ) ) 
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
     
-    lux_value_old = 0;
-    sensitivity = 50;
+    if ( ILLUMINANCE_ERROR == illuminance_default_cfg ( &illuminance ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
+    
+    log_info( &logger, " Application Task " );
 }
 
-void application_task ( void )
+void application_task ( void ) 
 {
-    illuminance_get_result( &illuminance, &value_ch0, &value_ch1 );
-
-    lux_value = illuminance_calculate_lux( ILLUMINANCE_TSL2561_GAIN_0X, ILLUMINANCE_TSL2561_INTEGRATIONTIME_402MS , value_ch0, value_ch1 );
-    Delay_ms( 1000 );
-
-    if ( ( ( lux_value - lux_value_old ) > sensitivity ) && ( ( lux_value_old - lux_value ) > sensitivity ) )
+    if ( !illuminance_get_int_pin ( &illuminance ) )
     {
-        log_printf( &logger, "\r\n--------------------------------" );
-        log_printf( &logger, "\r\nFull  Spectrum: %u [ lux ]", lux_value );
-        log_printf( &logger, "\r\nVisible  Value: %u [ lux ]", value_ch0 - value_ch1 );
-        log_printf( &logger, "\r\nInfrared Value: %u [ lux ]", value_ch1 );    
-        log_printf( &logger, "\r\n--------------------------------\r\n" );
-        
-        lux_value_old = lux_value;
+        uint16_t ch0 = 0;
+        uint16_t ch1 = 0;
+        if ( ILLUMINANCE_OK == illuminance_read_raw_data ( &illuminance, &ch0, &ch1 ) )
+        {
+            log_printf ( &logger, " CH0: %u\r\n", ch0 );
+            log_printf ( &logger, " CH1: %u\r\n\n", ch1 );
+        }
     }
 }
 
-void main ( void )
+void main ( void ) 
 {
     application_init( );
 
-    for ( ; ; )
+    for ( ; ; ) 
     {
         application_task( );
     }

@@ -1,35 +1,33 @@
 
-
 ---
 # Illuminance click
 
-Illuminance click carries a TSL2561 light-to-digital converter with a sensor that’s designed to mimic the way humans perceive light.
+> Illuminance Click is a compact add-on board that mimics how humans perceive light. This board features ams AG’s TSL2583, a very-high sensitivity light-to-digital converter that transforms light intensity to a digital signal output capable of the direct I2C interface. It combines one broadband photodiode (visible plus infrared) and one infrared-responding photodiode on a single CMOS integrated circuit capable of providing a near-photopic response over an effective 16-bit dynamic range (16-bit resolution).
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/illuminance_click.png" height=300px>
 </p>
-
 
 [click Product page](https://www.mikroe.com/illuminance-click)
 
 ---
 
 
-#### Click library 
+#### Click library
 
-- **Author**        : MikroE Team
-- **Date**          : Dec 2019.
+- **Author**        : Stefan Filipovic
+- **Date**          : Jun 2023.
 - **Type**          : I2C type
 
 
 # Software Support
 
-We provide a library for the Illuminance Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+We provide a library for the Illuminance Click
+as well as a demo application (example), developed using MikroElektronika
+[compilers](https://www.mikroe.com/necto-studio).
+The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 
 ## Library Description
 
@@ -37,44 +35,54 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void illuminance_cfg_setup ( illuminance_cfg_t *cfg ); 
- 
-- Initialization function.
-> ILLUMINANCE_RETVAL illuminance_init ( illuminance_t *ctx, illuminance_cfg_t *cfg );
+- `illuminance_cfg_setup` Config Object Initialization function.
+```c
+void illuminance_cfg_setup ( illuminance_cfg_t *cfg );
+```
 
-- Click Default Configuration function.
-> void illuminance_default_cfg ( illuminance_t *ctx );
+- `illuminance_init` Initialization function.
+```c
+err_t illuminance_init ( illuminance_t *ctx, illuminance_cfg_t *cfg );
+```
 
+- `illuminance_default_cfg` Click Default Configuration function.
+```c
+err_t illuminance_default_cfg ( illuminance_t *ctx );
+```
 
 #### Example key functions :
 
-- This function gets Visible & Infrared value.
-> void illuminance_get_result( illuminance_t *ctx, uint16_t *value_ch0, uint16_t *value_ch1 );
+- `illuminance_set_atime` This function sets the timing register for the selected integration time.
+```c
+err_t illuminance_set_atime ( illuminance_t *ctx, float atime_ms );
+```
 
- 
-- This function calculates lux value from the TSL2561 sensor.
-> uint16_t illuminance_calculate_lux( uint16_t value_gain, uint16_t value_int,
->                                     uint16_t ch0, uint16_t ch1 );
+- `illuminance_set_gain` This function sets the gain level.
+```c
+err_t illuminance_set_gain ( illuminance_t *ctx, uint8_t gain );
+```
 
+- `illuminance_read_raw_data` This function checks if the data is ready and then reads the raw ADC data from two channels.
+```c
+err_t illuminance_read_raw_data ( illuminance_t *ctx, uint16_t *ch_0, uint16_t *ch_1 );
+```
 
-## Examples Description
+## Example Description
 
-This example demonstrates basic Illuminance Click functionality - calculates
-illuminance measured by sensor and logs results to UART Terminal.
+> This example demonstrates the use of Illuminance click board by reading and displaying the RAW channels data measurements.
 
 **The demo application is composed of two sections :**
 
-### Application Init 
+### Application Init
 
-Device and driver initialization.
+> Initializes the driver and performs the click default configuration.
 
 ```c
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
-    illuminance_cfg_t cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    illuminance_cfg_t illuminance_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -87,57 +95,55 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
-    illuminance_cfg_setup( &cfg );
-    ILLUMINANCE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    illuminance_init( &illuminance, &cfg );
-    illuminance_default_cfg ( &illuminance );
-
-    // Variable Initialization for this example.
+    // Click initialization.
+    illuminance_cfg_setup( &illuminance_cfg );
+    ILLUMINANCE_MAP_MIKROBUS( illuminance_cfg, MIKROBUS_1 );
+    if ( I2C_MASTER_ERROR == illuminance_init( &illuminance, &illuminance_cfg ) ) 
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
     
-    lux_value_old = 0;
-    sensitivity = 50;
+    if ( ILLUMINANCE_ERROR == illuminance_default_cfg ( &illuminance ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
+    
+    log_info( &logger, " Application Task " );
 }
-  
+
 ```
 
 ### Application Task
 
-> Every second calculate illuminance and logs result to the terminal.
+> Waits for the data ready interrupt, then reads the RAW channels data measurements
+and displays the results on the USB UART. By default, the data ready interrupt triggers 
+upon every ADC cycle which will be performed every 200ms.
 
 ```c
 
 void application_task ( void )
 {
-    illuminance_get_result( &illuminance, &value_ch0, &value_ch1 );
-
-    lux_value = illuminance_calculate_lux( ILLUMINANCE_TSL2561_GAIN_0X, ILLUMINANCE_TSL2561_INTEGRATIONTIME_402MS , value_ch0, value_ch1 );
-    Delay_ms( 1000 );
-
-    if ( ( ( lux_value - lux_value_old ) > sensitivity ) && ( ( lux_value_old - lux_value ) > sensitivity ) )
+    if ( !illuminance_get_int_pin ( &illuminance ) )
     {
-        log_printf( &logger, "\r\n--------------------------------" );
-        log_printf( &logger, "\r\nFull  Spectrum: %u [ lux ]", lux_value );
-        log_printf( &logger, "\r\nVisible  Value: %u [ lux ]", value_ch0 - value_ch1 );
-        log_printf( &logger, "\r\nInfrared Value: %u [ lux ]", value_ch1 );    
-        log_printf( &logger, "\r\n--------------------------------\r\n" );
-
-        lux_value_old = lux_value;
+        uint16_t ch0 = 0;
+        uint16_t ch1 = 0;
+        if ( ILLUMINANCE_OK == illuminance_read_raw_data ( &illuminance, &ch0, &ch1 ) )
+        {
+            log_printf ( &logger, " CH0: %u\r\n", ch0 );
+            log_printf ( &logger, " CH1: %u\r\n\n", ch1 );
+        }
     }
 }
+
 ```
 
-## Note
+The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 
-By default, integration time is set to 402ms but it may be modified
-by user using illuminance_write_data() function and provided macros.
-
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
-
-**Other mikroE Libraries used in the example:** 
+**Other Mikroe Libraries used in the example:**
 
 - MikroSDK.Board
 - MikroSDK.Log
@@ -145,15 +151,12 @@ The full application code, and ready to use projects can be  installed directly 
 
 **Additional notes and informations**
 
-Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+Depending on the development board you are using, you may need
+[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
+[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
+development systems with no UART to USB interface available on the board. UART
+terminal is available in all MikroElektronika
+[compilers](https://shop.mikroe.com/compilers).
 
 ---

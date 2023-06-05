@@ -3,7 +3,7 @@
 ---
 # IrDA 2 click
 
-IrDA2 click features the TFDU4101 infrared transceiver module as well as MCP2120 infrared encoder/decoder from Microchip connected with the 7.3728 MHz external crystal. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target board via UART interface and the following mikroBUS™ pins: AN, RST, CS.
+> IrDA2 click features the TFDU4101 infrared transceiver module as well as MCP2120 infrared encoder/decoder from Microchip connected with the 7.3728 MHz external crystal. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target board via UART interface and the following mikroBUS™ pins: AN, RST, CS.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/irda2_click.png" height=300px>
@@ -16,8 +16,8 @@ IrDA2 click features the TFDU4101 infrared transceiver module as well as MCP2120
 
 #### Click library
 
-- **Author**        : Jelena Milosavljevic
-- **Date**          : Jun 2021.
+- **Author**        : MikroE Team
+- **Date**          : Jun 2023.
 - **Type**          : UART type
 
 
@@ -53,14 +53,14 @@ void irda2_default_cfg ( irda2_t *ctx );
 
 #### Example key functions :
 
-- `irda2_mode_setup` This function allows IrDA 2 click mode to be set.
+- `irda2_generic_write` This function writes a desired number of data bytes by using UART serial interface.
 ```c
-void irda2_mode_setup( irda2_t *ctx, irda2_mode_t state );
+err_t irda2_generic_write ( irda2_t *ctx, uint8_t *data_in, uint16_t len )
 ```
 
-- `irda2_pwr_setup` This function allows IrDA 2 click power mode to be set.
+- `irda2_generic_read` This function reads a desired number of data bytes by using UART serial interface.
 ```c
-void irda2_pwr_setup( irda2_t *ctx, irda2_pwr_t state );
+err_t irda2_generic_read ( irda2_t *ctx, uint8_t *data_out, uint16_t len );
 ```
 
 - `irda2_reset` This function executes a device reset operation.
@@ -70,17 +70,18 @@ void irda2_reset( irda2_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of IrDA 2 click boards. The example can perform both roles, transmitter and receiver.
+> This example demonstrates the use of an IrDA 2 click board by showing the communication between the two click boards.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes UART driver and all used control pins. Also clears the response buffer.
+> Initalizes device and makes an initial log.
 
 ```c
 
-void application_init( void ) {
+void application_init( void ) 
+{
     irda2_cfg_t irda2_cfg;
     log_cfg_t logger_cfg;
 
@@ -95,75 +96,48 @@ void application_init( void ) {
      */
     LOG_MAP_USB_UART( logger_cfg );
     log_init( &logger, &logger_cfg );
-    log_printf( &logger, "***  IrDA initialization done  ***\r\n" );
-    log_printf( &logger, "**********************************\r\n" );
+    log_info( &logger, " Application Init " );
     
     //  Click initialization.
-    
     irda2_cfg_setup( &irda2_cfg );
     IRDA2_MAP_MIKROBUS( irda2_cfg, MIKROBUS_1 );
-    irda2_init( &irda2, &irda2_cfg );
+    if ( UART_ERROR == irda2_init( &irda2, &irda2_cfg ) ) 
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
     irda2_default_cfg( &irda2 );
     irda2_reset( &irda2 );
 
-    //  Clear response.
-    
-    memset( rx_message, 0, sizeof( rx_message ) );
+#ifdef DEMO_APP_TRANSMITTER
+    log_printf( &logger, " Application Mode: Transmitter\r\n" );
+#else
+    log_printf( &logger, " Application Mode: Receiver\r\n" );
+#endif
+    log_info( &logger, " Application Task " );
 }
 
 ```
 
 ### Application Task
 
-> Demonstrates the use of IrDA clicks which can be used as transmitter or receiver. There are four different examples in this project. 
-Uncomment one of the below macros to select which example will be executed. By default the DEMO_APP_TRANSMITTER_1 example is selected.
+> Depending on the selected application mode, it reads all the received data or sends the desired text message once per second.
 
 ```c
 
-void application_task( void ) {
-
-#ifdef DEMO_APP_RECEIVER_1
-    rx_message[ 0 ] = irda2_generic_single_receive( &irda2 );
-
-    if ( rx_message[ 0 ] != 0 ) {
-        log_printf( &logger, "%c", ( char ) rx_message[ 0 ] );
+void application_task( void ) 
+{
+#ifdef DEMO_APP_TRANSMITTER
+    irda2_generic_write( &irda2, DEMO_TEXT_MESSAGE, strlen( DEMO_TEXT_MESSAGE ) );
+    log_printf( &logger, "%s", ( char * ) DEMO_TEXT_MESSAGE );
+    Delay_ms( 1000 ); 
+#else
+    uint8_t rx_byte = 0;
+    if ( 1 == irda2_generic_read( &irda2, &rx_byte, 1 ) )
+    {
+       log_printf( &logger, "%c", rx_byte );
     }
-    Delay_ms( 100 );
-
 #endif
-
-#ifdef DEMO_APP_RECEIVER_2
-
-    irda2_generic_multiple_receive( &irda2, rx_message, '\n' );
-
-    log_printf( &logger, "RECEIVED MESSAGE : " );
-    log_printf( &logger, "%s\r\n", rx_message );
-    Delay_ms( 100 );
-
-#endif
-    
-#ifdef DEMO_APP_TRANSMITTER_1
-
-    irda2_generic_multiple_send( &irda2, tx_message );
-
-    log_printf( &logger, "MESSAGE SENT\r\n" );
-    Delay_ms( 2000 );
-
-#endif
-    
-#ifdef DEMO_APP_TRANSMITTER_2
-
-    idx = 0;
-
-    while ( tx_message[ idx ] != '\0' ) {
-        irda2_generic_single_send( &irda2, tx_message[ idx++ ] );
-    }
-
-    log_printf( &logger, "MESSAGE SENT\r\n" );
-    Delay_ms( 2000 );
-
-#endif
-
 }
 
 ```

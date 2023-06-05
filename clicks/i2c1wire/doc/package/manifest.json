@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "1-Wire",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Interface > 1-Wire",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+    "dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "I2C 1-Wire click",
     "example_list": [
@@ -25,19 +24,15 @@
     },
     "name": "mikroe.click.i2c1wire",
     "product_link": "https://www.mikroe.com/i2c-1-wire-click",
-    "short_description": "I2C 1-Wire click carries DS2482-800, a “bridge device” that performs bidirectional conversions between I2C masters and 1-Wire slave devices. These can be EEPROM chips, temperature sensors and similar devices that have momentary high source current modes.",
-    "supported_compiler": "mikroC AI",
+    "short_description": "I2C 1-Wire click carries DS2482-800, a bridge device that performs bidirectional conversions between I2C masters and 1-Wire slave devices. These can be EEPROM chips, temperature sensors and similar devices that have momentary high source current modes.",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "related_projects": [ 
+    "related_projects": [
         1439
     ],
-    "version": "2.0.0.7"
+    "version": "2.1.0.8",
+    "cmake": true,
+    "alias": "Click.I2C1Wire",
+    "subdir_name": "lib_i2c1wire"
 }
-
-
-
-
-
-
-

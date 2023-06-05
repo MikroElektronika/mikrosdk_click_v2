@@ -17,7 +17,7 @@ add_library(Click.G2C  ALIAS lib_g2c)
 
 
 
-target_include_directories(lib_g2c PUBLIC
+target_include_directories(lib_g2c PUBLIC 
         include
 )
 
@@ -25,3 +25,4 @@ find_package(MikroC.Core REQUIRED)
 target_link_libraries(lib_g2c PUBLIC MikroC.Core)
 find_package(MikroSDK.Driver REQUIRED)
 target_link_libraries(lib_g2c PUBLIC MikroSDK.Driver)
+

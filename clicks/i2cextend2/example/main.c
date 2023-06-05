@@ -32,20 +32,19 @@ static i2cextend2_t i2cextend2;
 static log_t logger;
 int16_t axis;
 
-void i2cextend2_6dofimu11_get_axis ( i2cextend2_t *ctx, uint8_t axis_out_reg ) {
-    uint16_t rx_val;
-    uint8_t rx_buf[ 2 ];
+void i2cextend2_6dofimu11_get_axis ( i2cextend2_t *ctx, uint8_t axis_out_reg ) 
+{
+    uint16_t rx_val = 0;
 
-    i2cextend2_rmt_multi_read( ctx, axis_out_reg, &rx_buf[ 0 ], 2 );
-
-    rx_val = rx_buf[ 1 ];
+    rx_val = i2cextend2_rmt_read( ctx, axis_out_reg + 1 );
     rx_val <<= 8;
-    rx_val |= rx_buf[ 0 ];
+    rx_val |= i2cextend2_rmt_read( ctx, axis_out_reg );
 
     axis = ( int16_t ) rx_val;
 }
 
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     i2cextend2_cfg_t i2cextend2_cfg;  /**< Click config object. */
 
@@ -65,41 +64,45 @@ void application_init ( void ) {
     // Click initialization.
     i2cextend2_cfg_setup( &i2cextend2_cfg );
     I2CEXTEND2_MAP_MIKROBUS( i2cextend2_cfg, MIKROBUS_1 );
-    err_t init_flag = i2cextend2_init( &i2cextend2, &i2cextend2_cfg );
-    if ( I2C_MASTER_ERROR == init_flag ) {
+    if ( I2C_MASTER_ERROR == i2cextend2_init( &i2cextend2, &i2cextend2_cfg ) ) 
+    {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
 
     i2cextend2_enable( &i2cextend2, I2CEXTEND2_EXTEND_ENABLE );
 
-    if ( i2cextend2_rmt_read( &i2cextend2, C6DOFIMU11_REG_WHO_AM_I ) == C6DOFIMU11_WHO_AM_I_WIA_ID ) {
+    if ( C6DOFIMU11_WHO_AM_I_WIA_ID == i2cextend2_rmt_read( &i2cextend2, C6DOFIMU11_REG_WHO_AM_I ) ) 
+    {
         log_printf( &logger, "        SUCCESS         \r\n" );
         log_printf( &logger, "------------------------\r\n" );
-    } else {
+    } 
+    else 
+    {
         log_printf( &logger, "         ERROR          \r\n" );
         log_printf( &logger, "    Reset the device    \r\n" );
         log_printf( &logger, "------------------------\r\n" );
         for ( ; ; );
     }
-    i2cextend2_rmt_write( &i2cextend2, C6DOFIMU11_REG_CNTL2, C6DOFIMU11_CNTL2_TEMP_EN_STANDBY_MODE |
-                                                             C6DOFIMU11_CNTL2_MAG_EN_STANDBY_MODE |
-                                                             C6DOFIMU11_CNTL2_ACCEL_EN_STANDBY_MODE );
+    i2cextend2_rmt_write ( &i2cextend2, C6DOFIMU11_REG_CNTL2, C6DOFIMU11_CNTL2_TEMP_EN_STANDBY_MODE |
+                                                              C6DOFIMU11_CNTL2_MAG_EN_STANDBY_MODE |
+                                                              C6DOFIMU11_CNTL2_ACCEL_EN_STANDBY_MODE );
 
     i2cextend2_rmt_write ( &i2cextend2, C6DOFIMU11_REG_INC3, C6DOFIMU11_INC3_IEL2_FIFO_TRIG |
                                                              C6DOFIMU11_INC3_IEL1_FIFO_TRIG );
 
     i2cextend2_rmt_write ( &i2cextend2, C6DOFIMU11_REG_CNTL2, C6DOFIMU11_CNTL2_GSEL_8G |
-                                                             C6DOFIMU11_CNTL2_RES_MAX2 |
-                                                             C6DOFIMU11_CNTL2_MAG_EN_OPERATING_MODE |
-                                                             C6DOFIMU11_CNTL2_ACCEL_EN_OPERATING_MODE );
+                                                              C6DOFIMU11_CNTL2_RES_MAX2 |
+                                                              C6DOFIMU11_CNTL2_MAG_EN_OPERATING_MODE |
+                                                              C6DOFIMU11_CNTL2_ACCEL_EN_OPERATING_MODE );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, "------------------------\r\n" );
 }
 
-void application_task ( void ) {
+void application_task ( void ) 
+{
     log_printf( &logger, "\t   Accel   \t|\t    Mag    \r\n" );
     log_printf( &logger, "------------------------------------------------\r\n" );
 
@@ -122,10 +125,12 @@ void application_task ( void ) {
     Delay_ms( 1000 );
 }
 
-void main ( void ) {
+void main ( void ) 
+{
     application_init( );
 
-    for ( ; ; ) {
+    for ( ; ; ) 
+    {
         application_task( );
     }
 }
