@@ -2,7 +2,7 @@
     "name": "Servo Click",
     "description": "Servo click is a 16-channel PWM servo driver with the voltage sensing circuitry. It can be used to simultaneously control 16 servo motors, each with its own programmable PWM signal.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","PCA9685"],
     "category" : ["Servo"] 
 }

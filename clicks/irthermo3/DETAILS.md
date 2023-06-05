@@ -1,6 +1,4 @@
 
- 
-
 ---
 # IrThermo 3 click
 
@@ -17,7 +15,7 @@ IrThermo 3 click is a device which allows contactless measurement of the object 
 
 #### Click library 
 
-- **Author**        : Jovan Stajokovic
+- **Author**        : MikroE Team
 - **Date**          : nov 2019.
 - **Type**          : I2C type
 
@@ -37,37 +35,42 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void irthermo3_cfg_setup ( irthermo3_cfg_t *cfg ); 
- 
-- Initialization function.
-> IRTHERMO3_RETVAL irthermo3_init ( irthermo3_t *ctx, irthermo3_cfg_t *cfg );
+- `irthermo3_cfg_setup` Config Object Initialization function.
+```c
+void irthermo3_cfg_setup ( irthermo3_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void irthermo3_default_cfg ( irthermo3_t *ctx );
-
+- `irthermo3_init` Initialization function.
+```c
+err_t irthermo3_init ( irthermo3_t *ctx, irthermo3_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Read Object Temperature function
-> float irthermo3_get_object_temperature ( irthermo3_t *ctx );
+- `irthermo3_cal` Calibration function
+```c
+void irthermo3_cal ( irthermo3_t *ctx );
+```
 
-- Read Ambient Temperature function
-> float irthermo3_get_ambient_temperature ( irthermo3_t *ctx );
+- `irthermo3_get_ambient_temp` Read Ambient Temperature function
+```c
+float irthermo3_get_ambient_temp ( irthermo3_t *ctx );
+```
 
-- Set device mode function
-> void irthermo3_set_mode( irthermo3_t *ctx, uint8_t mode );
+- `irthermo3_get_object_temp` Read Object Temperature function
+```c
+float irthermo3_get_object_temp ( irthermo3_t *ctx );
+```
 
 ## Examples Description
 
-> The demo application displays ambient and object temperature measurementss
-> using IrThermo 3 click.
+> The demo application displays ambient and object temperature measurements using IrThermo 3 click.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes Driver ,resets the devic and performs calibration.
+> Initializes the driver, resets the device and performs calibration.
 
 ```c
 void application_init ( void )
@@ -89,12 +92,10 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     irthermo3_cfg_setup( &cfg );
     IRTHERMO3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     irthermo3_init( &irthermo3, &cfg );
 
-    irthermo3_global_write ( &irthermo3, adr_rst, 4 );
     irthermo3_cal ( &irthermo3 );
     Delay_ms( 500 );
 }
@@ -102,17 +103,16 @@ void application_init ( void )
 
 ### Application Task
 
-> The device measures ambient and object temperatures and displays data in
-> degree centigrade every second.
+> The device measures ambient and object temperature in degrees Celsius and displays them on the USB UART once per second.
 
 ```c
 void application_task ( void )
 {
-    amb_temp = irthermo3_get_ambient_temperature( &irthermo3 );
-    log_printf( &logger, "Ambient temperature: %.2f °C \r\n", amb_temp );
+    amb_temp = irthermo3_get_ambient_temp( &irthermo3 );
+    log_printf( &logger, "Ambient temperature: %.2f degC \r\n", amb_temp );
 
-    obj_temp = irthermo3_get_object_temperature( &irthermo3 );
-    log_printf( &logger, "Object temperature: %.2f °C \r\n", obj_temp );
+    obj_temp = irthermo3_get_object_temp( &irthermo3 );
+    log_printf( &logger, "Object temperature: %.2f degC \r\n", obj_temp );
 
     log_printf( &logger, "----------------------------\r\n" );
     Delay_ms( 1000 );

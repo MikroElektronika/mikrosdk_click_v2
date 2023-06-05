@@ -52,16 +52,13 @@ void application_init ( void )
     // Click initialization.
     hallcurrent10_cfg_setup( &hallcurrent10_cfg );
     HALLCURRENT10_MAP_MIKROBUS( hallcurrent10_cfg, MIKROBUS_1 );
-    err_t init_flag = hallcurrent10_init( &hallcurrent10, &hallcurrent10_cfg );
-    if ( I2C_MASTER_ERROR == init_flag ) 
+    if ( I2C_MASTER_ERROR == hallcurrent10_init( &hallcurrent10, &hallcurrent10_cfg ) ) 
     {
         log_info( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
 
-    hallcurrent10_default_cfg ( &hallcurrent10 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, "--------------------------\r\n" );
     Delay_ms( 100 );
@@ -73,7 +70,7 @@ void application_task ( void )
     log_printf( &logger, " ADC Value   : %d \r\n", adc_data );
     Delay_ms( 100 );
     
-    hallcurrent10_get_adc_volatge( &hallcurrent10, &adc_voltage );
+    hallcurrent10_get_adc_voltage( &hallcurrent10, &adc_voltage );
     log_printf( &logger, " ADC Voltage : %.2f mV \r\n", adc_voltage );
     log_printf( &logger, "- - - - - - - - - - -  - -\r\n" );
     Delay_ms( 100 );

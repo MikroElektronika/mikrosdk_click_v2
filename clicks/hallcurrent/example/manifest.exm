@@ -1,8 +1,8 @@
 {
     "name": "Hall current Click",
-    "description": "Hall current click is a high precision current sensor. It carries a galvanically isolated TLI4970-D050T4 miniature magnetic digital current sensor that utilizes the Hall effect to measure electric current.",
+    "description": "Hall Current Click is a compact add-on board that contains a precise solution for AC/DC current sensing. This board features the TLI4970-D050T4, a 16-bit digital SPI output (13-bit current value) coreless magnetic current sensor designed for the current range of ±25A from Infineon Technology. A differential measurement principle allows effective stray field suppression with a highly linear output signal without hysteresis. Due to the integrated primary conductor (current rail), there is no need for external calibration. The TLI4970-D050T4 is highly accurate over temperature range and lifetime with fast overcurrent detection with a configurable threshold.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","TLI4970-D050T4"],
     "category" : ["Magnetic"] 
 }

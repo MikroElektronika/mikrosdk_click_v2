@@ -1,7 +1,0 @@
-type: subdirs
-project: Peltier
-
-subdirs: {
-    lib
-    example
-}

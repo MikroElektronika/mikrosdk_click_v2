@@ -11,13 +11,11 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes ADC driver, calibrate AD conversion 
- * of the AN pin and start to write log.
+ * Initializes ADC driver, calibrate AD conversion of the AN pin and start to write log.
  *
  * ## Application Task
  * This is an example that demonstrates the use of the Hall Current 8 120A click board.
- * In this example, we read and display current data [A], 
- * ADC value and AN pin voltage level [V]. 
+ * In this example, we read and display current data [A], AN pin voltage level [V]. 
  * Results are being sent to the Usart Terminal where you can track their changes.
  *
  * @author Stefan Ilic
@@ -31,9 +29,8 @@
 static hallcurrent8120a_t hallcurrent8120a;   /**< Hall Current 8 120A Click driver object. */
 static log_t logger;                          /**< Logger object. */
 
-hallcurrent8120a_offset_t offset_val;
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;                            /**< Logger config object. */
     hallcurrent8120a_cfg_t hallcurrent8120a_cfg;  /**< Click config object. */
 
@@ -54,10 +51,10 @@ void application_init ( void ) {
 
     hallcurrent8120a_cfg_setup( &hallcurrent8120a_cfg );
     HALLCURRENT8120A_MAP_MIKROBUS( hallcurrent8120a_cfg, MIKROBUS_1 );
-    if ( hallcurrent8120a_init( &hallcurrent8120a, &hallcurrent8120a_cfg ) == ADC_ERROR ) {
+    if ( ADC_ERROR == hallcurrent8120a_init( &hallcurrent8120a, &hallcurrent8120a_cfg ) ) 
+    {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
     Delay_ms( 1000 );
@@ -68,7 +65,7 @@ void application_init ( void ) {
     
     log_printf( &logger, "---------------------------\r\n" );
     log_printf( &logger, "     Start Calibration     \r\n" );
-    hallcurrent8120a_calibration ( &hallcurrent8120a, &offset_val );
+    hallcurrent8120a_calibration ( &hallcurrent8120a );
     Delay_ms( 1000 );
     
     log_printf( &logger, "---------------------------\r\n");
@@ -80,23 +77,19 @@ void application_init ( void ) {
     log_printf( &logger, "---------------------------\r\n");
 }
 
-void application_task ( void ) {
-    float hallcurrent8120a_current = 0;
+void application_task ( void ) 
+{
+    float current = 0;
+    float avg_voltage = 0;
     
-    if ( hallcurrent8120a_get_current ( &hallcurrent8120a, &offset_val, &hallcurrent8120a_current ) != ADC_ERROR ) {
-        log_printf( &logger, "   Current     : %.2f [A]\r\n", hallcurrent8120a_current );
+    if ( HALLCURRENT8120A_OK == hallcurrent8120a_get_current ( &hallcurrent8120a, &current ) ) 
+    {
+        log_printf( &logger, " Current        : %.2f [A]\r\n", current );
     }
     
-    uint16_t hallcurrent8120a_an_value = 0;
-
-    if ( hallcurrent8120a_read_an_pin_value ( &hallcurrent8120a, &hallcurrent8120a_an_value ) != ADC_ERROR ) {
-        log_printf( &logger, "   ADC Value   : %u\r\n", hallcurrent8120a_an_value );
-    }
-
-    float hallcurrent8120a_an_voltage = 0;
-
-    if ( hallcurrent8120a_read_an_pin_voltage ( &hallcurrent8120a, &hallcurrent8120a_an_voltage ) != ADC_ERROR ) {
-        log_printf( &logger, "   AN Voltage  : %.2f [V]\r\n", hallcurrent8120a_an_voltage );
+    if ( HALLCURRENT8120A_OK == hallcurrent8120a_get_voltage ( &hallcurrent8120a, &avg_voltage ) ) 
+    {
+        log_printf( &logger, " AN pin voltage : %.2f [V]\r\n", avg_voltage );
     }
     log_printf( &logger, "---------------------------\r\n");
     Delay_ms( 1000 );

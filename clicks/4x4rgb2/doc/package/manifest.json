@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Display & LED > LED matrix",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "4x4 RGB 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.c4x4rgb2",
+    "product_link": "https://www.mikroe.com/4x4-rgb-2-click",
+    "short_description": "4x4 RGB 2 Click is a compact add-on board that contains a matrix of 16 intelligent RGB LEDs, forming a 4x4 display screen. This board features 16 IN-PC55TBTRGB, 5x5mm RGB LEDs with an integrated IC from Inolux. The LEDs feature an 8-bit color control in 256 steps (256-level greyscale) and a 5-bit brightness control in 32 steps. The intelligent LEDs are cascaded (daisy-chained); thus, every one of them can communicate with the host MCU using the same data lines.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.4x4RGB2",
+    "subdir_name": "lib_c4x4rgb2"
+}
+

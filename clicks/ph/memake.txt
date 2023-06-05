@@ -1,7 +1,0 @@
-type: subdirs
-project: pH
-
-subdirs: {
-    lib
-    example
-}

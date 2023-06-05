@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230602](#20230602)**
 + **[20230526](#20230526)**
 + **[20230519](#20230519)**
 + **[20230512](#20230512)**
@@ -48,6 +49,63 @@
 
 ---
 ---
+---
+
+## `20230602`
+
+*Following click boards have been added:*
+
++ `Smart DOF 2`
++ `4x4 RGB 2`
++ `Stepper 21`
++ `UART MUX 4`
+
+*Following click boards have been updated:*
+
++ `G2C`
++ `GSM`
++ `GSM 2`
++ `GSM 3`
++ `GSM 4`
++ `Gyro 6`
++ `Hall Current 8 120A`
++ `Hall Current 8 25A`
++ `Hall Current 10`
++ `Hall Current 12`
++ `Hall Current`
++ `H-Bridge Driver 2`
++ `Heart rate 3`
++ `I2C 1-Wire`
++ `I2C MUX 2`
++ `I2C MUX 6`
++ `I2C Extend 2`
++ `Illuminance`
++ `Inclinometer 2`
++ `IrDA 2`
++ `IrThermo 3`
++ `ISM`
++ `Pollution`
++ `Relay 2`
++ `Rec n Play`
++ `LP WiFi`
++ `Peltier`
++ `RGB Driver`
++ `pH`
++ `RS232 Isolator 2`
++ `RS232 3`
++ `Terminal`
++ `SPI Extend`
++ `RS485 6`
++ `STSPIN233`
++ `Step Down 3`
++ `UPS 3`
++ `Speaker`
++ `Servo`
++ `Thermostat 3`
++ `Spectral 3`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230526`

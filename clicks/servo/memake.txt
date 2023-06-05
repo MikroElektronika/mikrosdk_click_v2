@@ -1,7 +1,0 @@
-type: subdirs
-project: Servo
-
-subdirs: {
-    lib
-    example
-}

@@ -1,0 +1,34 @@
+cmake_minimum_required(VERSION 3.21)
+if (${TOOLCHAIN_LANGUAGE} MATCHES "MikroC")
+    project(lib_spiextend LANGUAGES MikroC)
+else()
+    project(lib_spiextend LANGUAGES C ASM)
+endif()
+
+if (NOT PROJECT_TYPE)
+    set(PROJECT_TYPE "mikrosdk" CACHE STRING "" FORCE)
+endif()
+
+add_library(lib_spiextend STATIC
+        src/spiextend.c
+        include/spiextend.h
+)
+add_library(Click.SPIExtend  ALIAS lib_spiextend)
+
+if (${MCU_NAME} MATCHES "(^PIC18F(.+)[KQ]4[23]$)|(^PIC32(.+)$)")
+    set(sample_mode_reg_case "SAMPLE_REG_CASE_1")
+else()
+    set(sample_mode_reg_case "SAMPLE_REG_CASE_2")
+endif()
+
+target_compile_definitions(lib_spiextend PUBLIC ${sample_mode_reg_case})
+
+
+target_include_directories(lib_spiextend PUBLIC
+        include
+)
+
+find_package(MikroC.Core REQUIRED)
+target_link_libraries(lib_spiextend PUBLIC MikroC.Core)
+find_package(MikroSDK.Driver REQUIRED)
+target_link_libraries(lib_spiextend PUBLIC MikroSDK.Driver)

@@ -17,7 +17,7 @@
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Jul 2021.
-- **Type**          : I2C type
+- **Type**          : ADC/I2C type
 
 
 # Software Support
@@ -45,21 +45,16 @@ void hallcurrent12_cfg_setup ( hallcurrent12_cfg_t *cfg );
 err_t hallcurrent12_init ( hallcurrent12_t *ctx, hallcurrent12_cfg_t *cfg );
 ```
 
-- `hallcurrent12_default_cfg` Click Default Configuration function.
-```c
-err_t hallcurrent12_default_cfg ( hallcurrent12_t *ctx );
-```
-
 #### Example key functions :
+
+- `hallcurrent12_calibration` Hall Current 12 calibration function.
+```c
+err_t hallcurrent12_calibration ( hallcurrent12_t *ctx )
+```
 
 - `hallcurrent12_get_adc` Hall Current 12 get ADC function.
 ```c
-err_t hallcurrent12_get_adc ( hallcurrent12_t *ctx, uint16_t *data_out );
-```
-
-- `hallcurrent12_get_adc_voltage` Hall Current 12 get ADC voltage function.
-```c
-err_t hallcurrent12_get_adc_voltage ( hallcurrent12_t *ctx, float *adc_vtg );
+err_t hallcurrent12_get_adc ( hallcurrent12_t *ctx, float *adc_vtg );
 ```
 
 - `hallcurrent12_get_current` Hall Current 12 get current function.
@@ -69,15 +64,13 @@ err_t hallcurrent12_get_current ( hallcurrent12_t *ctx, float *current );
 
 ## Example Description
 
-> This library contains API for Hall Current 12 Click driver.
-> The demo application reads ADC value and current ( A ).
+> This library contains API for Hall Current 12 Click driver. The demo application reads ADC voltage ( V ) and current ( A ).
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes I2C driver and log UART.
-> After driver initialization the app set default settings.
+> Initializes the driver and logger and calibrates the device offset.
 
 ```c
 
@@ -102,16 +95,24 @@ void application_init ( void )
     // Click initialization.
     hallcurrent12_cfg_setup( &hallcurrent12_cfg );
     HALLCURRENT12_MAP_MIKROBUS( hallcurrent12_cfg, MIKROBUS_1 );
-    err_t init_flag = hallcurrent12_init( &hallcurrent12, &hallcurrent12_cfg );
-    if ( I2C_MASTER_ERROR == init_flag ) 
+    if ( I2C_MASTER_ERROR == hallcurrent12_init( &hallcurrent12, &hallcurrent12_cfg ) ) 
     {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
+    
+    log_info( &logger, " Calibrating device, remove input current in the next 5 seconds..." );
+    Delay_ms( 5000 );
+    
+    if ( I2C_MASTER_ERROR == hallcurrent12_calibration ( &hallcurrent12 ) )
+    {
+        log_error( &logger, " Calibration Error. " );
+        log_info( &logger, " Please, run program again... " );
+        for ( ; ; );
+    }
+    log_info( &logger, " Calibration done!" );
 
-    hallcurrent12_default_cfg ( &hallcurrent12 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, "--------------------------\r\n" );
     Delay_ms( 100 );
@@ -122,23 +123,24 @@ void application_init ( void )
 ### Application Task
 
 > This is an example that demonstrates the use of the Hall Current 12 Click board™.
-> In this example, we read and display the ADC values and current ( A ) data.
+> In this example, we read and display the ADC voltage ( V ) and current ( A ) data.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
 
 void application_task ( void ) 
 {
-    static uint16_t adc_data;
-    static float current;
-    
-    hallcurrent12_get_adc( &hallcurrent12, &adc_data );
-    log_printf( &logger, " ADC Value   : %d \r\n", adc_data );
-    Delay_ms( 100 );
-    
-    hallcurrent12_get_current ( &hallcurrent12, &current );
-    log_printf( &logger, " Current     : %.3f A \r\n", current );
-    log_printf( &logger, "--------------------------\r\n" );
+    static float adc_voltage = 0;
+    static float current = 0;
+    if ( HALLCURRENT12_OK == hallcurrent12_get_adc( &hallcurrent12, &adc_voltage ) )
+    {
+        log_printf( &logger, " ADC voltage : %.3f V \r\n", adc_voltage );
+    }
+    if ( HALLCURRENT12_OK == hallcurrent12_get_current ( &hallcurrent12, &current ) )
+    {
+        log_printf( &logger, " Current     : %.3f A \r\n", current );
+        log_printf( &logger, "--------------------------\r\n" );
+    }
     Delay_ms( 1000 );
 }
 
@@ -148,8 +150,8 @@ void application_task ( void )
 
 > Switches: 
 >    Sensitivity : Low ( GAIN = 1 ),
->    Vout_Sel    : ADC ( I2C serial interface ),
->    Vref_Sel    : GND (  unidirectional measurement ).
+>    Vout_Sel    : AN  ( Analog interface ),
+>    Vref_Sel    : VCC/2 ( bidirectional measurement ).
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 

@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Servo",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Motor control > Servo",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Servo click",
     "example_list": [
@@ -26,17 +25,14 @@
     "name": "mikroe.click.servo",
     "product_link": "https://www.mikroe.com/servo-click",
     "short_description": "Servo click is a 16-channel PWM servo driver with the voltage sensing circuitry. It can be used to simultaneously control 16 servo motors, each with its own programmable PWM signal.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2352
     ],
-    "version": "2.0.0.7"
+    "version": "2.1.0.7",
+    "cmake": true,
+    "alias": "Click.Servo",
+    "subdir_name": "lib_servo"
 }
-
-
-
-
-
-

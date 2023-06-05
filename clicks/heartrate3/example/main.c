@@ -16,6 +16,9 @@
  * mode, and reads reflected red, green and ir values and displays the results 
  * on USART terminal.
  * 
+ * @note
+ * We recommend using the SerialPlot tool for data visualizing.
+ * 
  * \author Jovan Stajkovic
  *
  */
@@ -42,7 +45,7 @@ static uint32_t led_1_aled_1;
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    heartrate3_cfg_t cfg;
+    heartrate3_cfg_t heartrate3_cfg;
 
     /** 
      * Logger initialization.
@@ -58,40 +61,47 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
-    heartrate3_cfg_setup( &cfg );
-    HEARTRATE3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    heartrate3_init( &heartrate3, &cfg );
+    heartrate3_cfg_setup( &heartrate3_cfg );
+    HEARTRATE3_MAP_MIKROBUS( heartrate3_cfg, MIKROBUS_1 );
+    if ( I2C_MASTER_ERROR == heartrate3_init( &heartrate3, &heartrate3_cfg ) ) 
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
+    
     log_printf( &logger, "----------------------\r\n" );
     log_printf( &logger, "  Heart rate 3 Click  \r\n" );
     log_printf( &logger, "----------------------\r\n" );
     
-    heartrate3_rst_state ( &heartrate3, HEARTRATE3_PIN_STATE_LOW );
-    Delay_us( 100 );
-    
-    heartrate3_rst_state ( &heartrate3, HEARTRATE3_PIN_STATE_HIGH );
-    Delay_ms( 1000 );
-    
-    heartrate3_default_cfg ( &heartrate3 );
-    Delay_ms( 100 );
+    if ( HEARTRATE3_ERROR == heartrate3_default_cfg ( &heartrate3 ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
     
     log_printf( &logger, "     Initialised!     \r\n" );
-    log_printf( &logger, "----------------------\r\n" );
-    Delay_ms(100);
+    log_printf( &logger, "----------------------\r\n" );    
+    log_info( &logger, " Application Task " );
+    Delay_ms( 100 );
 }
 
 void application_task ( void )
 {
-    led_2 = heartrate3_read_u32( &heartrate3, HEARTRATE3_LED2VAL );
-    aled_2 = heartrate3_read_u32( &heartrate3, HEARTRATE3_ALED2VAL );
-    led_1 = heartrate3_read_u32( &heartrate3, HEARTRATE3_LED1VAL );
-    aled_1 = heartrate3_read_u32( &heartrate3, HEARTRATE3_ALED1VAL );
-    led_2_aled_2 = heartrate3_read_u32( &heartrate3, HEARTRATE3_LED2_ALED2VAL );
-    led_1_aled_1 = heartrate3_read_u32( &heartrate3, HEARTRATE3_LED1_ALED1VAL );
-    
-    log_printf( &logger, "%.0f,%.0f,%.0f,%.0f,%.0f,%.0f \r\n", (float)led_2, (float)aled_2, 
-                (float)led_1, (float)aled_1, (float)led_2_aled_2, (float)led_1_aled_1 );
-    Delay_ms(3);
+    err_t error_flag = HEARTRATE3_OK;
+    if ( heartrate3_check_data_ready ( &heartrate3 ) )
+    {
+        error_flag |= heartrate3_read_24bit( &heartrate3, HEARTRATE3_REG_LED2VAL, &led_2 );
+        error_flag |= heartrate3_read_24bit( &heartrate3, HEARTRATE3_REG_ALED2VAL, &aled_2 );
+        error_flag |= heartrate3_read_24bit( &heartrate3, HEARTRATE3_REG_LED1VAL, &led_1 );
+        error_flag |= heartrate3_read_24bit( &heartrate3, HEARTRATE3_REG_ALED1VAL, &aled_1 );
+        error_flag |= heartrate3_read_24bit( &heartrate3, HEARTRATE3_REG_LED2_ALED2VAL, &led_2_aled_2 );
+        error_flag |= heartrate3_read_24bit( &heartrate3, HEARTRATE3_REG_LED1_ALED1VAL, &led_1_aled_1 );
+        if ( HEARTRATE3_OK == error_flag )
+        {
+            log_printf( &logger, "%lu;%lu;%lu;%lu;%lu;%lu;\r\n", 
+                        led_2, aled_2, led_1, aled_1, led_2_aled_2, led_1_aled_1 );
+        }
+    }
 }
 
 void main ( void )

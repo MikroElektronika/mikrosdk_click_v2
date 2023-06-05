@@ -2,7 +2,7 @@
 ---
 # Hall Current click
 
-Hall current click is a high precision current sensor. It carries a galvanically isolated TLI4970-D050T4 miniature magnetic digital current sensor that utilizes the Hall effect to measure electric current.
+> Hall Current Click is a compact add-on board that contains a precise solution for AC/DC current sensing. This board features the TLI4970-D050T4, a 16-bit digital SPI output (13-bit current value) coreless magnetic current sensor designed for the current range of ±25A from Infineon Technology. A differential measurement principle allows effective stray field suppression with a highly linear output signal without hysteresis. Due to the integrated primary conductor (current rail), there is no need for external calibration. The TLI4970-D050T4 is highly accurate over temperature range and lifetime with fast overcurrent detection with a configurable threshold.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent_click.png" height=300px>
@@ -35,27 +35,36 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void hallcurrent_cfg_setup ( hallcurrent_cfg_t *cfg ); 
- 
-- Initialization function.
-> HALLCURRENT_RETVAL hallcurrent_init ( hallcurrent_t *ctx, hallcurrent_cfg_t *cfg );
+- `hallcurrent_cfg_setup` Config Object Initialization function.
+```c
+void hallcurrent_cfg_setup ( hallcurrent_cfg_t *cfg ); 
+```
 
+- `hallcurrent_init` Initialization function.
+```c
+err_t hallcurrent_init ( hallcurrent_t *ctx, hallcurrent_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Generic read 16-bit data function
->  hallcurrent_read_data ( hallcurrent_t *ctx )
- 
-- Check status of read data function.
-> hallcurrent_chack_status ( hallcurrent_t *ctx )
+- `hallcurrent_read_data` Generic read 16-bit data function
+```c
+uint16_t hallcurrent_read_data ( hallcurrent_t *ctx );
+```
 
-- Read electric current function
-> hallcurrent_read_current ( hallcurrent_t *ctx )
+- `hallcurrent_check_status` Check status of read data function.
+```c
+uint8_t hallcurrent_check_status ( hallcurrent_t *ctx );
+```
+
+- `hallcurrent_read_current` Read electric current function
+```c
+float hallcurrent_read_current ( hallcurrent_t *ctx );
+```
 
 ## Examples Description
 
->  The application is current sensor.
+> The application is current sensor.
 
 **The demo application is composed of two sections :**
 
@@ -84,11 +93,12 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     hallcurrent_cfg_setup( &cfg );
     HALLCURRENT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     hallcurrent_init( &hallcurrent, &cfg );
-
+    
+    HALLCURRENT_SET_DATA_SAMPLE_EDGE;
+    
     log_printf( &logger,"------------------------\r\n" );
     log_printf( &logger,  "       Hall Current     \r\n" );
     log_printf( &logger, "------------------------\r\n" );
@@ -98,22 +108,15 @@ void application_init ( void )
 
 ### Application Task
 
-> This is a example which demonstrates the use of Hall Current Click board.
+> This is an example which demonstrates the use of Hall Current Click board.
 
 ```c
 
 void application_task ( void )
 {
-    float current_read_float;
-    current_read_float = hallcurrent_read_current( &hallcurrent );
-    
-    Delay_ms( 100 );
-
-    log_printf( &logger, " Current : %f ", current_read_float );
-    log_printf( &logger, " [ A ] \r\n" );
+    log_printf( &logger, " Current : %.3f A \r\n", hallcurrent_read_current( &hallcurrent ) );
     log_printf( &logger, "------------------------\r\n" );
-
-    Delay_ms( 5000 );
+    Delay_ms( 1000 );
 } 
 
 ```

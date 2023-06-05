@@ -36,47 +36,54 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void heartrate3_cfg_setup ( heartrate3_cfg_t *cfg ); 
- 
-- Initialization function.
-> HEARTRATE3_RETVAL heartrate3_init ( heartrate3_t *ctx, heartrate3_cfg_t *cfg );
+- `heartrate3_cfg_setup` Config Object Initialization function.
+```c
+void heartrate3_cfg_setup ( heartrate3_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void heartrate3_default_cfg ( heartrate3_t *ctx );
+- `heartrate3_init` Initialization function.
+```c
+err_t heartrate3_init ( heartrate3_t *ctx, heartrate3_cfg_t *cfg );
+```
 
+- `heartrate3_default_cfg` Click Default Configuration function.
+```c
+err_t heartrate3_default_cfg ( heartrate3_t *ctx );
+```
 
 #### Example key functions :
 
-- Function is used to read 32-bit value from register.
-> uint32_t heartrate3_read_u32 ( heartrate3_t *ctx, uint8_t reg_adr );
- 
-- Function is used to set or clear rst pin.
-> void heartrate3_rst_state ( heartrate3_t *ctx, uint8_t state );
+- `heartrate3_check_data_ready` Function is used to check data ready flag.
+```c
+uint8_t heartrate3_check_data_ready ( heartrate3_t *ctx );
+```
 
-- Function is used to write 32-bit data into register.
-> void heartrate3_write_data ( heartrate3_t *ctx, uint8_t reg_adr, uint32_t wr_data );
+- `heartrate3_write_data` Function is used to write 32-bit data into register.
+```c
+err_t heartrate3_write_data ( heartrate3_t *ctx, uint8_t reg_adr, uint32_t wr_data );
+```
+
+- `heartrate3_read_24bit` Function is used to read 24-bit value from register.
+```c
+err_t heartrate3_read_24bit ( heartrate3_t *ctx, uint8_t reg_adr, uint32_t *data_out );
+```
 
 ## Examples Description
 
-> 
 > The demo application shows reflected red, green and ir values.
-> 
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
->
 > Initalizes click driver, resets the device, applies default settings and makes an initial log.
-> 
 
 ```c
 
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    heartrate3_cfg_t cfg;
+    heartrate3_cfg_t heartrate3_cfg;
 
     /** 
      * Logger initialization.
@@ -89,67 +96,66 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_printf( &logger, "---- Application Init ----\r\n" );
+    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
-    heartrate3_cfg_setup( &cfg );
-    HEARTRATE3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    heartrate3_init( &heartrate3, &cfg );
+    heartrate3_cfg_setup( &heartrate3_cfg );
+    HEARTRATE3_MAP_MIKROBUS( heartrate3_cfg, MIKROBUS_1 );
+    if ( I2C_MASTER_ERROR == heartrate3_init( &heartrate3, &heartrate3_cfg ) ) 
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
+    
     log_printf( &logger, "----------------------\r\n" );
     log_printf( &logger, "  Heart rate 3 Click  \r\n" );
     log_printf( &logger, "----------------------\r\n" );
     
-    heartrate3_rst_state ( &heartrate3, HEARTRATE3_PIN_STATE_LOW );
-    Delay_us( 50 );
-    
-    heartrate3_rst_state ( &heartrate3, HEARTRATE3_PIN_STATE_HIGH );
-    Delay_ms( 100 );
-    
-    heartrate3_default_cfg ( &heartrate3 );
-    Delay_ms( 100 );
+    if ( HEARTRATE3_ERROR == heartrate3_default_cfg ( &heartrate3 ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
     
     log_printf( &logger, "     Initialised!     \r\n" );
-    log_printf( &logger, "----------------------\r\n" );
+    log_printf( &logger, "----------------------\r\n" );    
+    log_info( &logger, " Application Task " );
+    Delay_ms( 100 );
 }
   
 ```
 
 ### Application Task
 
->
 > This example demonstrates the use of Heart rate 3 board. It is set in default mode,
-  and reads reflected red, green and ir values and displays the results on USART terminal.
-> 
+and reads reflected red, green and ir values and displays the results on USART terminal.
 
 ```c
 
 void application_task ( void )
 {
-    led_2 = heartrate3_read_u32( &heartrate3, HEARTRATE3_LED2VAL );
-    log_printf( &logger, "LED2: %d \r\n", led_2 );
-    
-    aled_2 = heartrate3_read_u32( &heartrate3, HEARTRATE3_ALED2VAL );
-    log_printf( &logger, "ALED2: %d \r\n", aled_2 );
-    
-    led_1 = heartrate3_read_u32( &heartrate3, HEARTRATE3_LED1VAL );
-    log_printf( &logger, "LED1: %d \r\n", led_1 );
-    
-    aled_1 = heartrate3_read_u32( &heartrate3, HEARTRATE3_ALED1VAL );
-    log_printf( &logger, "ALED1: %d \r\n", aled_1 );
-    
-    led_2_aled_2 = heartrate3_read_u32( &heartrate3, HEARTRATE3_LED2_ALED2VAL );
-    log_printf( &logger, "LED2ALED2: %d \r\n", led_2_aled_2 );
-    
-    led_1_aled_1 = heartrate3_read_u32( &heartrate3, HEARTRATE3_LED1_ALED1VAL );
-    log_printf( &logger, "LED1ALED1: %d \r\n", led_1_aled_1 );
-    
-    log_printf( &logger, "----------------------\r\n" );
-    Delay_ms( 1000 );
+    err_t error_flag = HEARTRATE3_OK;
+    if ( heartrate3_check_data_ready ( &heartrate3 ) )
+    {
+        error_flag |= heartrate3_read_24bit( &heartrate3, HEARTRATE3_REG_LED2VAL, &led_2 );
+        error_flag |= heartrate3_read_24bit( &heartrate3, HEARTRATE3_REG_ALED2VAL, &aled_2 );
+        error_flag |= heartrate3_read_24bit( &heartrate3, HEARTRATE3_REG_LED1VAL, &led_1 );
+        error_flag |= heartrate3_read_24bit( &heartrate3, HEARTRATE3_REG_ALED1VAL, &aled_1 );
+        error_flag |= heartrate3_read_24bit( &heartrate3, HEARTRATE3_REG_LED2_ALED2VAL, &led_2_aled_2 );
+        error_flag |= heartrate3_read_24bit( &heartrate3, HEARTRATE3_REG_LED1_ALED1VAL, &led_1_aled_1 );
+        if ( HEARTRATE3_OK == error_flag )
+        {
+            log_printf( &logger, "%lu;%lu;%lu;%lu;%lu;%lu;\r\n", 
+                        led_2, aled_2, led_1, aled_1, led_2_aled_2, led_1_aled_1 );
+        }
+    }
 }  
 
 ```
 
+## Note
+
+> We recommend using the SerialPlot tool for data visualizing.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

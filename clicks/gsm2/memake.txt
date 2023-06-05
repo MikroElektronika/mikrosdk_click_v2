@@ -1,7 +1,0 @@
-type: subdirs
-project: Gsm2
-
-subdirs: {
-    lib
-    example
-}
