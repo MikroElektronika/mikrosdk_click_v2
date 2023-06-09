@@ -11,8 +11,8 @@
  * Initializes click driver.
  * 
  * ## Application Task  
- * Writes 6 bytes of buffer data in memory with start address 0x0000. Then reads
- * 3 bytes from memory with start address 0x0002 and shows result on USB UART.
+ * Writes 10 bytes of buffer data in memory with start address 0x0001. Then reads
+ * 10 bytes from memory with start address 0x0001 and shows result on USB UART.
  * 
  * 
  * \author MikroE Team

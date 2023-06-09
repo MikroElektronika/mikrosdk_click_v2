@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Sub-1 GHz Transceivers",
+    "architecture": "ARM|PIC32|RISC-V",
+    "category": "Click Boards > Wireless connectivity > Sub-1 GHz Transceivers",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+    "dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "ISM RX click",
     "example_list": [
@@ -26,13 +25,11 @@
     "name": "mikroe.click.ismrx",
     "product_link": "https://www.mikroe.com/ism-rx-click",
     "short_description": "ISM RX Click is a compact add-on board that contains a complete wireless RF digital data receiver. This board features the MAX1471, a low-power CMOS RF dual-channel receiver configurable through SPI serial interface from Maxim Integrated. ",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.5"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.6",
+    "cmake": true,
+    "alias": "Click.ISMRX",
+    "subdir_name": "lib_ismrx"
 }
-
-
-
-
-

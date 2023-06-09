@@ -2,7 +2,7 @@
     "name": "ISO ADC 5 Click",
     "description": "ISO ADC 5 Click is a compact add-on board that contains quad-channel isolated ADC with field supply. This board features the MAX22530, galvanically isolated, 4-channel, multiplexed, 12-bit, analog-to-digital converter (ADC), providing 5kVRMS isolation from Maxim Integrated.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MAX22530"],
     "category" : ["ADC"]
 }

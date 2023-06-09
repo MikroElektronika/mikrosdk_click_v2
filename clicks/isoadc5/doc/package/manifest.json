@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "ADC",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Mixed signal > ADC",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "ISO ADC 5 click",
     "example_list": [
@@ -26,11 +25,11 @@
     "name": "mikroe.click.isoadc5",
     "product_link": "https://www.mikroe.com/iso-adc-5-click",
     "short_description": "ISO ADC 5 Click is a compact add-on board that contains quad-channel isolated ADC with field supply. This board features the MAX22530, galvanically isolated, 4-channel, multiplexed, 12-bit, analog-to-digital converter (ADC), providing 5kVRMS isolation from Maxim Integrated.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.4"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.4",
+    "cmake": true,
+    "alias": "Click.ISOADC5",
+    "subdir_name": "lib_isoadc5"
 }
-
-
-

@@ -42,12 +42,12 @@ void ismrx_cfg_setup ( ismrx_cfg_t *cfg );
 
 - `ismrx_init` Initialization function.
 ```c
-ISMRX_RETVAL ismrx_init ( ismrx_t *ctx, ismrx_cfg_t *cfg );
+err_t ismrx_init ( ismrx_t *ctx, ismrx_cfg_t *cfg );
 ```
 
 - `ismrx_default_cfg` Click Default Configuration function.
 ```c
-void ismrx_default_cfg ( ismrx_t *ctx );
+err_t ismrx_default_cfg ( ismrx_t *ctx );
 ```
 
 #### Example key functions :
@@ -57,9 +57,9 @@ void ismrx_default_cfg ( ismrx_t *ctx );
 err_t ismrx_generic_write ( ismrx_t *ctx, uint8_t reg, uint8_t data_in )
 ```
 
-- `ismrx_start_drx` ISM RX start receiving signal.
+- `ismrx_master_reset` This sends command for resetting device.
 ```c
-void ismrx_start_drx ( ismrx_t *ctx )
+err_t ismrx_master_reset ( ismrx_t *ctx );
 ```
 
 - `ismrx_get_data` ISM RX get miso pin state.
@@ -91,13 +91,13 @@ void application_init ( void )
     log_cfg_t log_cfg;  /**< Logger config object. */
     ismrx_cfg_t ismrx_cfg;  /**< Click config object. */
 
-    /** 
+    /**
      * Logger initialization.
      * Default baud rate: 115200
      * Default log level: LOG_LEVEL_DEBUG
-     * @note If USB_UART_RX and USB_UART_TX 
-     * are defined as HAL_PIN_NC, you will 
-     * need to define them manually for log to work. 
+     * @note If USB_UART_RX and USB_UART_TX
+     * are defined as HAL_PIN_NC, you will
+     * need to define them manually for log to work.
      * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
      */
     LOG_MAP_USB_UART( log_cfg );
@@ -105,15 +105,12 @@ void application_init ( void )
     log_info( &logger, " Application Init " );
 
     // Click initialization.
-
     ismrx_cfg_setup( &ismrx_cfg );
     ISMRX_MAP_MIKROBUS( ismrx_cfg, MIKROBUS_1 );
-    err_t init_flag  = ismrx_init( &ismrx, &ismrx_cfg );
-    if ( init_flag == SPI_MASTER_ERROR )
+    if ( SPI_MASTER_ERROR == ismrx_init( &ismrx, &ismrx_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
     Delay_ms( 1000 );
@@ -127,20 +124,19 @@ void application_init ( void )
     {
         log_error( &logger, " Default configuration error. " );
         log_info( &logger, " Please, select signal modulation and/or receive mode... " );
-
         for ( ; ; );
     }
-    
+
     if ( ismrx_task_init( &ismrx, &ismrx_cfg ) < 0 )
     {
         log_error( &logger, " Application Task Error. " );
     }
 
     log_info( &logger, " Application Task " );
-    
+
     if ( ISMRX_RECEIVE_MODE_DRX == ismrx.receive_mode )
     {
-       ismrx_start_drx( &ismrx ); 
+       ismrx_start_drx( &ismrx );
     }
 }
 
@@ -151,40 +147,52 @@ void application_init ( void )
 > Collects samples of data from data line(MISO) when buffer 
 is full converts samples to manchester encoded data, 
 and checks for preamble(sync) data. If data is valid 
-decodes data and converts bit's to valid data and logs 
+decodes data and converts bits to valid data and logs 
 result of received decoded data.
 
 ```c
 
 void application_task ( void )
 {
-    if ( ismrx_get_data( &ismrx ) )
-    {
-        buffer[ buffer_cnt ] = '1';
-    }
-    else
-    {
-        buffer[ buffer_cnt ] = '0';
-    }
-
-    buffer_cnt++;
+    uint8_t transition = 0;
     
-    //Delay for sample ratio to be effective
-    Delay_us( 60 );
+    clear_buffers ( );
+    wait_for_data ( );
+    Delay_50us ( );
 
-    if ( buffer_cnt > BUFFER_SIZE )
-    {        
-        proces_samples();
-        clear_buffers();
+    while ( manchester_cnt < MAN_BUF_SIZE )
+    {
+        transition = ismrx_get_data ( &ismrx );
+        while ( transition == ismrx_get_data ( &ismrx ) );
+        
+        if ( transition )
+        {
+            manchester_buf[ manchester_cnt++ ] = '1';
+            manchester_buf[ manchester_cnt++ ] = '0';
+        }
+        else
+        {
+            manchester_buf[ manchester_cnt++ ] = '0';
+            manchester_buf[ manchester_cnt++ ] = '1';
+        }
+        Delay_500us ( );
+        Delay_50us ( );
+    }
+    
+    man_to_hex_array ( );
+    
+    for ( uint16_t byte_cnt = 0; byte_cnt < data_cnt; byte_cnt++ )
+    {
+        log_printf( &logger, "%.2X ", ( uint16_t ) data_buf[ byte_cnt ] );
+    }
+
+    if ( data_cnt )
+    {
+        log_printf( &logger, "\r\n%s\r\n", &data_buf[ 2 ] );
     }
 }
 
 ```
-
-## Note
-
-> Macros for checking sample data and delay in application_task
- can be prone to change depending of speed of MCU. 
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 

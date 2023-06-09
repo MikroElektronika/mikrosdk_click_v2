@@ -8,11 +8,11 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes GPIO driver and resets encoder counter to 0 (zero)
+ * Initializes GPIO driver and resets encoder counter to 0 (zero).
  * 
  * ## Application Task  
  * If motion is detected - encoder increments or decrements position 
- * on each rising edge on Channel A (INT pin) and logs encoder position
+ * on each rising edge on Channel A (INT pin) and logs encoder position.
  * 
  * \author MikroE Team
  *
@@ -49,7 +49,6 @@ void application_init ( void )
     log_info(&logger, "---- Application Init ----");
 
     //  Click initialization.
-
     optoencoder2_cfg_setup( &cfg );
     OPTOENCODER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     optoencoder2_init( &optoencoder2, &cfg );

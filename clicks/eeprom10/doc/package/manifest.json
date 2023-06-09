@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Storage > EEPROM",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "EEPROM 10 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.eeprom10",
+    "product_link": "https://www.mikroe.com/eeprom-10-click",
+    "short_description": "EEPROM 10 Click is a compact add-on board that contains the highest-density memory solution. This board features the N24C32, a 32Kb I2C CMOS Serial EEPROM from ON Semiconductor. It is internally organized as 128 pages of 32 bytes each, with a 32-byte page write buffer and a fast write time of up to 4ms. ",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.3",
+    "cmake": true,
+    "alias": "Click.EEPROM10",
+    "subdir_name": "lib_eeprom10"
+}

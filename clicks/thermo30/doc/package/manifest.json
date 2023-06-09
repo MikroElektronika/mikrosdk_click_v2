@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Temperature & humidity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Thermo 30 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.thermo30",
+    "product_link": "https://www.mikroe.com/thermo-30-click",
+    "short_description": "Thermo 30 Click is a compact add-on board that accurately measures temperature. This board features the STS32-DIS-10KS, a third-generation, high-reliability, certified digital temperature sensor from Sensirion. It is a digitally calibrated and ISO17025-certified temperature sensor with an operating temperature range of -40 to 125°C. ",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.3",
+    "cmake": true,
+    "alias": "Click.Thermo30",
+    "subdir_name": "lib_thermo30"
+}

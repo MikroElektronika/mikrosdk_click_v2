@@ -10,15 +10,14 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initialization of log and communication, set's signal modulation, 
- * resets device, and set's default configuration for selected modulation.
-
+ * Initialization of log and communication, sets signal modulation, 
+ * resets device, and sets default configuration for selected modulation.
  *
  * ## Application Task
- * Transmits data via external antenna in span of 500ms.
+ * Transmits data via external antenna in span of 100ms.
  *
- * *note:*
- * Default configuration configures device and set's transmission frequency to 433.92 MHz.
+ * @note
+ * Default configuration configures device and sets transmission frequency to 433.92 MHz.
  * If selected modulation is FSK frequency deviation is set to 40kHz.
  *
  * @author Luka Filipovic
@@ -31,11 +30,10 @@
 
 #define PREAMBLE_BYTE   0xFF
 
-#define TX_DATA         "MikroE"
+uint8_t tx_data_buf[ 9 ] = { 'M', 'I', 'K', 'R', 'O', 'E', '\r', '\n', 0 };
 
 static ismtx_t ismtx;
 static log_t logger;
-
 
 void application_init ( void ) 
 {
@@ -58,12 +56,10 @@ void application_init ( void )
     // Click initialization.
     ismtx_cfg_setup( &ismtx_cfg );
     ISMTX_MAP_MIKROBUS( ismtx_cfg, MIKROBUS_1 );
-    err_t init_flag  = ismtx_init( &ismtx, &ismtx_cfg );
-    if ( init_flag == SPI_MASTER_ERROR ) 
+    if ( SPI_MASTER_ERROR == ismtx_init( &ismtx, &ismtx_cfg ) ) 
     {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
 
@@ -75,7 +71,6 @@ void application_init ( void )
     {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, select correct signal modulation... " );
-
         for ( ; ; );
     }
     
@@ -84,9 +79,9 @@ void application_init ( void )
 
 void application_task ( void ) 
 {
-    log_info( &logger, " Data sent! [%s]", TX_DATA );
-    ismtx_transmit_data( &ismtx, PREAMBLE_BYTE, TX_DATA, strlen( TX_DATA ) );
-    Delay_ms( 500 );
+    log_info( &logger, " Data sent: %s", tx_data_buf );
+    ismtx_transmit_data( &ismtx, PREAMBLE_BYTE, tx_data_buf, sizeof( tx_data_buf ) );
+    Delay_ms( 100 );
 }
 
 void main ( void ) 

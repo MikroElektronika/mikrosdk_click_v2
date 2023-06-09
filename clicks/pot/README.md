@@ -1,9 +1,8 @@
 \mainpage Main Page
 
----
 # POT click
 
-Click board with the accurate selectable reference voltage output.
+> Click board with the accurate selectable reference voltage output.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/pot_click.png" height=300px>
@@ -36,21 +35,31 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void pot_cfg_setup ( pot_cfg_t *cfg ); 
- 
-- Initialization function.
-> POT_RETVAL pot_init ( pot_t *ctx, pot_cfg_t *cfg );
+- `pot_cfg_setup` Config Object Initialization function.
+```c
+void pot_cfg_setup ( pot_cfg_t *cfg ); 
+```
 
+- `pot_init` Initialization function.
+```c
+err_t pot_init ( pot_t *ctx, pot_cfg_t *cfg );
+```
 
 #### Example key functions :
  
-- This function read ADC data.
-> pot_data_t pot_generic_read ( pot_t *ctx );
+- `pot_read_an_pin_value` This function reads results of AD conversion of the AN pin.
+```c
+err_t pot_read_an_pin_value ( pot_t *ctx, uint16_t *data_out );
+```
+
+- `pot_read_an_pin_voltage` This function reads results of AD conversion of the AN pin and converts them to proportional voltage level.
+```c
+err_t pot_read_an_pin_voltage ( pot_t *ctx, float *data_out );
+```
 
 ## Examples Description
 
-> AD conversion where results will be calculated to millivolts [mV]. 
+> Click board with the accurate selectable reference voltage output.
 
 **The demo application is composed of two sections :**
 
@@ -58,13 +67,12 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 > Performs logger and Click initialization.
 
-
 ```c
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
-    pot_cfg_t cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    pot_cfg_t pot_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -77,82 +85,39 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
-    pot_cfg_setup( &cfg );
-    POT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    pot_init( &pot, &cfg );
+    // Click initialization.
+    pot_cfg_setup( &pot_cfg );
+    POT_MAP_MIKROBUS( pot_cfg, MIKROBUS_1 );
+    if ( ADC_ERROR == pot_init( &pot, &pot_cfg ) )
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
+    
+    log_info( &logger, " Application Task " );
 }
   
 ```
 
 ### Application Task
 
-> Makes the averaged results by using the desired number of samples of AD conversion.
-> The averaged results will be calculated to millivolts [mV] and sent to the uart terminal.
-
+> Reads and displays on the USB UART the voltage level measured from AN pin.
 
 ```c
 
 void application_task ( void )
 {
-    pot_data_t tmp;
-    uint16_t adc_read;
-    uint16_t n_samples;
-    uint16_t adc_max;
-    uint16_t adc_min;
-    float adc_avrg;
-
-    #define N_SAMPLES         = 100;
-    #define ADC_V_REF_MV      = 1790;
-    #define ADC_12BIT_RESOL   = 4096;
-    #define ADC_10BIT_RESOL   = 1024;
-    
-    //  Task implementation.
-
-    for ( n_samples = 0; n_samples < N_SAMPLES; n_samples++ )
+    float voltage = 0;
+    if ( POT_OK == pot_read_an_pin_voltage ( &pot, &voltage ) ) 
     {
-        adc_read = ADC1_Get_Sample( 4 );
-        
-        if ( n_samples == 0 )
-        {
-            adc_max = adc_read;
-            adc_min = adc_read;
-        }
-
-        if ( adc_read > adc_max )
-        {
-            adc_max = adc_read;
-        }
-
-        else if ( adc_read < adc_min )
-        {
-            adc_min = adc_read;
-        }
-        
-        Delay_ms( 1 );
+        log_printf( &logger, " AN Voltage : %.3f[V]\r\n\n", voltage );
+        Delay_ms( 1000 );
     }
-
-    adc_avrg = adc_max;
-    adc_avrg += adc_min;
-    adc_avrg /= 2;
-    adc_avrg /= ADC_12BIT_RESOL;
-    adc_avrg *= ADC_V_REF_MV;
-    adc_aead = adc_avrg;
-    
-    tmp = pot_generic_read ( &pot );
-    log_printf( &logger, "** AN : [DEC]- %d, [HEX]- 0x%x mV\r\n", tmp, tmp );
-    Delay_ms( 1000 );
-
 }  
 
 ```
-
-## Note
-
-> The AD conversion will be performed on the analog (AN) pin on the mikrobus 1.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

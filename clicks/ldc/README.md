@@ -124,7 +124,7 @@ void application_init ( void )
     uint16_t temp_data = 0;
     ldc_generic_read( &ldc, LDC_REG_MANUFACTURER_ID, &temp_data );
     log_printf( &logger, "> Manufacturer ID: 0x%.4X\r\n", temp_data );
-    if ( temp_data != LDC_MANUFACTURER_ID )
+    if ( LDC_MANUFACTURER_ID != temp_data )
     {
         log_error( &logger, " Manufacturer ID. " );
         for ( ; ; );
@@ -132,7 +132,7 @@ void application_init ( void )
     
     ldc_generic_read( &ldc, LDC_REG_DEVICE_ID, &temp_data );
     log_printf( &logger, "> Device ID 0x%.4X\r\n", temp_data );
-    if ( temp_data != LDC_DEVICE_ID )
+    if ( LDC_DEVICE_ID != temp_data )
     {
         log_error( &logger, " Device ID. " );
         for ( ; ; );
@@ -141,7 +141,6 @@ void application_init ( void )
     ldc_generic_read( &ldc, LDC_REG_CLOCK_DIVIDERS_CH0, &temp_data );
     divider = temp_data & 0x3FF;
     
-    Delay_ms( 1000 );
     log_info( &logger, " Application Task " );
 }
 
@@ -158,26 +157,31 @@ It will log error and error values if it occurred.
 
 void application_task ( void ) 
 {
-    if ( ldc_get_interrupt( &ldc ) )
+    if ( !ldc_get_interrupt( &ldc ) )
     {
         float frequency = 0.0;
         float inductance = 0.0;
-        err_t ret_val = ldc_get_frequency( &ldc, LDC_REG_DATA_CH0, divider, &frequency );
-        if ( !ret_val )
+        uint16_t status = 0;
+        ldc_generic_read( &ldc, LDC_REG_STATUS, &status );
+        if ( status & LDC_STATUS_DRDY )
         {
-            log_printf( &logger, "> Freq[MHz]: %.3f\r\n", frequency );
-            if (frequency > 0 )
+            err_t ret_val = ldc_get_frequency( &ldc, LDC_REG_DATA_CH0, divider, &frequency );
+            if ( !ret_val )
             {
-                inductance = ldc_calculate_inductance( frequency );
+                log_printf( &logger, "> Freq[MHz]: %.3f\r\n", frequency );
+                if ( frequency > 0 )
+                {
+                    inductance = ldc_calculate_inductance( frequency );
+                }
+                log_printf( &logger, "> L[uH]: %.3f\r\n", inductance );
+                log_printf( &logger, "> ************************\r\n" );
+                
+                Delay_ms( 500 );
             }
-            log_printf( &logger, "> L[uH]: %.3f\r\n", inductance );
-            log_printf( &logger, "> ************************\r\n" );
-            
-            Delay_ms( 500 );
-        }
-        else
-        {
-            log_error( &logger, " Reading data: %ld", ret_val );
+            else
+            {
+                log_error( &logger, " Reading data: %ld", ret_val );
+            }
         }
     }
 }

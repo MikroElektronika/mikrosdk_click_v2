@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Sub-1 GHz Transceivers",
+    "architecture": "ARM|PIC|RISC-V",
+    "category": "Click Boards > Wireless connectivity > Sub-1 GHz Transceivers",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+    "dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "ISM TX click",
     "example_list": [
@@ -26,23 +25,14 @@
     "name": "mikroe.click.ismtx",
     "product_link": "https://www.mikroe.com/ism-tx-click",
     "short_description": "ISM TX Click is a compact add-on board that contains an ASK and (G)FSK transmitter with a programmable SPI interface. This board features the MAX41460, a UHF sub-GHz ISM/SRD transmitter designed to transmit On-Off Keying (OOK), Amplitude- Shift Keying (ASK), Frequency-Shift Keying (FSK), and Gaussian (G)FSK (or 2GFSK) data from Maxim Integrated.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects": [ 3834 ],
-    "version": "2.0.0.15"
+    "_type": "mikroSDK Library",
+    "related_projects": [
+        3834
+    ],
+    "version": "2.1.0.15",
+    "cmake": true,
+    "alias": "Click.ISMTX",
+    "subdir_name": "lib_ismtx"
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

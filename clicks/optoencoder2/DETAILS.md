@@ -36,23 +36,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void optoencoder2_cfg_setup ( optoencoder2_cfg_t *cfg ); 
- 
-- Initialization function.
-> OPTOENCODER2_RETVAL optoencoder2_init ( optoencoder2_t *ctx, optoencoder2_cfg_t *cfg );
+- `optoencoder2_cfg_setup` Config Object Initialization function.
+```c
+void optoencoder2_cfg_setup ( optoencoder2_cfg_t *cfg ); 
+```
 
+- `optoencoder2_init` Initialization function.
+```c
+err_t optoencoder2_init ( optoencoder2_t *ctx, optoencoder2_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Getting PWM pin state
-> uint8_t optoencoder2_pwm_get ( optoencoder2_t *ctx );
- 
-- Getting INT pin state
-> uint8_t optoencoder2_int_get ( optoencoder2_t *ctx );
+- `optoencoder2_pwm_get` Getting PWM pin state
+```c
+uint8_t optoencoder2_pwm_get ( optoencoder2_t *ctx );
+```
 
-- Getting encoder position
-> int32_t optoencoder2_get_position ( optoencoder2_t *ctx );
+- `optoencoder2_int_get` Getting INT pin state
+```c
+uint8_t optoencoder2_int_get ( optoencoder2_t *ctx );
+```
+
+- `optoencoder2_get_position` Getting encoder position
+```c
+int32_t optoencoder2_get_position ( optoencoder2_t *ctx );
+```
 
 ## Examples Description
 
@@ -62,7 +71,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes GPIO driver and resets encoder counter to 0 (zero)
+> Initializes GPIO driver and resets encoder counter to 0 (zero).
 
 ```c
 
@@ -85,7 +94,6 @@ void application_init ( void )
     log_info(&logger, "---- Application Init ----");
 
     //  Click initialization.
-
     optoencoder2_cfg_setup( &cfg );
     OPTOENCODER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     optoencoder2_init( &optoencoder2, &cfg );
@@ -97,7 +105,7 @@ void application_init ( void )
 
 ### Application Task
 
-> If motion is detected - encoder increments or decrements position on each rising edge on Channel A (INT pin) and logs encoder position
+> If motion is detected - encoder increments or decrements position on each rising edge on Channel A (INT pin) and logs encoder position.
 
 ```c
 

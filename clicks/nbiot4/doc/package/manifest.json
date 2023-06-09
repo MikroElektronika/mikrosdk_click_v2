@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "LTE IoT",
+    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "category": "Click Boards > Wireless connectivity > GSM/LTE",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+    "dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "NB IoT 4 click",
     "example_list": [
@@ -26,11 +25,13 @@
     "name": "mikroe.click.nbiot4",
     "product_link": "https://www.mikroe.com/nb-iot-4-click",
     "short_description": "NB IoT 4 Click is a compact add-on board that contains a cellular IoT-based module with integrated eSIM for global data connectivity. This board features the C1-RM, a three-band NB-IoT, IoT/2G wireless communication module supporting Band 3, 5, and 8 mainly applied to low power data transmission service from Cavli Wireless.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.3"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.0",
+    "cmake": true,
+    "alias": "Click.NBIoT4",
+    "subdir_name": "lib_nbiot4"
 }
-
 
 

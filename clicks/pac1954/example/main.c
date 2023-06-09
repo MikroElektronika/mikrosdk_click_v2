@@ -61,27 +61,27 @@ void application_init ( void )
 
 void application_task ( void ) 
 {
-    float vsource;
-    float isense;
-    float power;
+    float vsource = 0;
+    float isense = 0;
+    float power = 0;
 
-    pac1954_refresh_cmd( &pac1954 );
+    pac1954_refresh_cmd ( &pac1954 );
     
-    pac1954_get_calc_measurement( &pac1954, PAC1954_MEAS_SEL_V_SOURCE, 
-                                            PAC1954_CH_SEL_CH_1, 
-                                            PAC1954_AVG_SEL_ENABLE, 
-                                            PAC1954_MEAS_MODE_BIPOLAR_FSR,
-                                            &vsource );
-    pac1954_get_calc_measurement( &pac1954, PAC1954_MEAS_SEL_I_SENSE, 
-                                            PAC1954_CH_SEL_CH_1, 
-                                            PAC1954_AVG_SEL_ENABLE, 
-                                            PAC1954_MEAS_MODE_BIPOLAR_FSR, 
-                                            &isense );
-    pac1954_get_calc_measurement( &pac1954, PAC1954_MEAS_SEL_P_SENSE, 
-                                            PAC1954_CH_SEL_CH_1, 
-                                            0, 
-                                            PAC1954_MEAS_MODE_BIPOLAR_FSR, 
-                                            &power );
+    pac1954_get_calc_measurement ( &pac1954, PAC1954_MEAS_SEL_V_SOURCE, 
+                                             PAC1954_CH_SEL_CH_1, 
+                                             PAC1954_AVG_SEL_ENABLE, 
+                                             PAC1954_MEAS_MODE_BIPOLAR_FSR,
+                                             &vsource );
+    pac1954_get_calc_measurement ( &pac1954, PAC1954_MEAS_SEL_I_SENSE, 
+                                             PAC1954_CH_SEL_CH_1, 
+                                             PAC1954_AVG_SEL_ENABLE, 
+                                             PAC1954_MEAS_MODE_BIPOLAR_FSR, 
+                                             &isense );
+    pac1954_get_calc_measurement ( &pac1954, PAC1954_MEAS_SEL_P_SENSE, 
+                                             PAC1954_CH_SEL_CH_1, 
+                                             0, 
+                                             PAC1954_MEAS_MODE_BIPOLAR_FSR, 
+                                             &power );
     
     log_printf( &logger, " Voltage: %.3f V\r\n", vsource );
     log_printf( &logger, " Current: %.3f A\r\n", isense );

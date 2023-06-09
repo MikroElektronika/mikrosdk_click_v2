@@ -11,11 +11,7 @@
  * Performs logger and Click initialization.
  * 
  * ## Application Task  
- * Makes the averaged results by using the desired number of samples of AD conversion.
-  The averaged results will be calculated to millivolts [mV] and sent to the uart terminal.
- * 
- * *note:* 
- * The AD conversion will be performed on the analog (AN) pin on the mikrobus 1.
+ * Reads and displays on the USB UART the voltage level measured from AN pin.
  * 
  * \author Nemanja Medakovic
  *
@@ -35,8 +31,8 @@ static log_t logger;
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
-    pot_cfg_t cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    pot_cfg_t pot_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -49,30 +45,28 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init... ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
-    pot_cfg_setup( &cfg );
-    POT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    if ( pot_init( &pot, &cfg ) == ADC_ERROR )
+    // Click initialization.
+    pot_cfg_setup( &pot_cfg );
+    POT_MAP_MIKROBUS( pot_cfg, MIKROBUS_1 );
+    if ( ADC_ERROR == pot_init( &pot, &pot_cfg ) )
     {
-        log_info( &logger, "---- Application Init Error. ----" );
-        log_info( &logger, "---- Please, run program again... ----" );
-
+        log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-    log_info( &logger, "---- Application Init Done. ----\n" );
+    
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )
 {
-    float an_voltage;
-
-    an_voltage = pot_read_voltage( &pot );
-
-    log_printf( &logger, " AN [V] : %.2f\r\n", an_voltage );
-    Delay_ms( 1000 );
+    float voltage = 0;
+    if ( POT_OK == pot_read_an_pin_voltage ( &pot, &voltage ) ) 
+    {
+        log_printf( &logger, " AN Voltage : %.3f[V]\r\n\n", voltage );
+        Delay_ms( 1000 );
+    }
 }
 
 void main ( void )

@@ -1,7 +1,0 @@
-type: subdirs
-project: ISMRX
-
-subdirs: {
-    lib
-    example
-}

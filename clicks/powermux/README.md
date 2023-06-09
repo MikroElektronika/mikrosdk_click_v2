@@ -78,8 +78,8 @@ void powermux_set_mode ( powermux_t *ctx, uint8_t mode );
 
 void application_init ( void ) 
 {
-    log_cfg_t log_cfg;  /**< Logger config object. */
-    powermux_cfg_t powermux_cfg;  /**< Click config object. */
+    log_cfg_t log_cfg;
+    powermux_cfg_t powermux_cfg;
 
     /** 
      * Logger initialization.
@@ -97,72 +97,38 @@ void application_init ( void )
     // Click initialization.
     powermux_cfg_setup( &powermux_cfg );
     POWERMUX_MAP_MIKROBUS( powermux_cfg, MIKROBUS_1 );
-    if ( DIGITAL_OUT_UNSUPPORTED_PIN == powermux_init( &powermux, &powermux_cfg ) ) {
+    if ( DIGITAL_OUT_UNSUPPORTED_PIN == powermux_init( &powermux, &powermux_cfg ) ) 
+    {
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
     powermux_default_cfg ( &powermux );
     
     log_info( &logger, " Application Task " );
-    log_printf( &logger, "-----------------------------\r\n " );
-    log_printf( &logger, "      Select mode: \r\n " );
-    log_printf( &logger, "-----------------------------\r\n " );
-    log_printf( &logger, " 1. Input from channel 1. \r\n " );
-    log_printf( &logger, " 2. Input from channel 2. \r\n " );
-    log_printf( &logger, " 3. Input OFF. \r\n " );
-    log_printf( &logger, " 3. Auto mode. \r\n " );
-    log_printf( &logger, "-----------------------------\r\n " );
 }
 
 ```
 
 ### Application Task
 
-> Waits for user input in order to change input mode of the Power MUX Click. 
+> Changes power inputs every 3 seconds and displays the currently set mode on the USB UART.
 
 ```c
 
 void application_task ( void ) 
 {
-    char uart_char;
-    if ( log_read( &logger, &uart_char, 1 ) ) {
-        switch ( uart_char ) {
-            case '1' : {
-                log_printf( &logger, " Output mode : Input channel 1 \r\n " );
-                powermux_set_mode( &powermux, POWERMUX_INPUT_CHANNEL_1_ON );
-                log_printf( &logger, "-----------------------------\r\n " );
-                break;
-            }
-            case '2' : {
-                log_printf( &logger, " Output mode : Input channel 2 \r\n " );
-                powermux_set_mode( &powermux, POWERMUX_INPUT_CHANNEL_2_ON );
-                log_printf( &logger, "-----------------------------\r\n " );
-                break;
-            }
-            case '3' : {
-                log_printf( &logger, " Output mode : Input channels OFF \r\n " );
-                powermux_set_mode( &powermux, POWERMUX_INPUT_CHANNEL_OFF );
-                log_printf( &logger, "-----------------------------\r\n " );
-                break;
-            }
-            case '4' : {
-                log_printf( &logger, " Output mode : AUTO \r\n " );
-                powermux_set_mode( &powermux, POWERMUX_INPUT_CHANNEL_AUTO );
-                log_printf( &logger, "-----------------------------\r\n " );
-                break;
-            }
-            default : {
-                log_printf( &logger, "      Select mode: \r\n " );
-                log_printf( &logger, "-----------------------------\r\n " );
-                log_printf( &logger, " 1. Input from channel 1. \r\n " );
-                log_printf( &logger, " 2. Input from channel 2. \r\n " );
-                log_printf( &logger, " 3. Input OFF. \r\n " );
-                log_printf( &logger, " 3. Auto mode. \r\n " );
-                log_printf( &logger, "-----------------------------\r\n " );
-                break;
-            }
-        }
-    }
+    log_printf( &logger, " OUTPUT : IN1\r\n\n" );
+    powermux_set_mode( &powermux, POWERMUX_INPUT_CHANNEL_1_ON );
+    Delay_ms ( 3000 );
+    log_printf( &logger, " OUTPUT : IN2\r\n\n" );
+    powermux_set_mode( &powermux, POWERMUX_INPUT_CHANNEL_2_ON );
+    Delay_ms ( 3000 );
+    log_printf( &logger, " OUTPUT : OFF\r\n\n" );
+    powermux_set_mode( &powermux, POWERMUX_INPUT_CHANNEL_OFF );
+    Delay_ms ( 3000 );
+    log_printf( &logger, " OUTPUT : AUTO\r\n\n" );
+    powermux_set_mode( &powermux, POWERMUX_INPUT_CHANNEL_AUTO );
+    Delay_ms ( 3000 );
 }
 
 ```

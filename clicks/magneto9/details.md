@@ -120,7 +120,7 @@ void application_task ( void )
 {
     float voltage = 0;
     
-    if ( MAGNETO9_OK == magneto9_read_adc_voltage ( &magneto9, &voltage ) )
+    if ( MAGNETO9_OK == magneto9_read_an_pin_voltage ( &magneto9, &voltage ) )
     {
         float field_strength = MAGNETO9_VOLTAGE_TO_FIELD_STRENGTH ( voltage );
         log_printf( &logger, " ADC Voltage : %.3f V\r\n", voltage );

@@ -36,38 +36,47 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void noise_cfg_setup ( noise_cfg_t *cfg ); 
- 
-- Initialization function.
-> NOISE_RETVAL noise_init ( noise_t *ctx, noise_cfg_t *cfg );
+- `noise_cfg_setup` Config Object Initialization function.
+```c
+void noise_cfg_setup ( noise_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void noise_default_cfg ( noise_t *ctx );
+- `noise_init` Initialization function.
+```c
+err_t noise_init ( noise_t *ctx, noise_cfg_t *cfg );
+```
 
+- `noise_default_cfg` Click Default Configuration function.
+```c
+void noise_default_cfg ( noise_t *ctx );
+```
 
 #### Example key functions :
 
-- This function sets command register.
-> uint8_t noise_set_command_register ( noise_t *ctx, uint8_t configuration,
->                                      uint16_t threshold );
- 
-- This function switches click on or off.
-> void noise_set_state ( noise_t *ctx, uint8_t state );
+- `noise_set_cmd_reg` This function sets command register.
+```c
+err_t noise_set_cmd_reg ( noise_t *ctx, uint8_t configuration, uint16_t threshold );
+```
 
-- This function reads value from adc.
-> noise_data_t noise_read_adc ( noise_t *ctx );
+- `noise_set_state` This function switches click on or off.
+```c
+void noise_set_state ( noise_t *ctx, uint8_t state );
+```
+
+- `noise_read_an_pin_voltage` This function reads results of AD conversion of the AN pin and converts them to proportional voltage level.
+```c
+err_t noise_read_an_pin_voltage ( noise_t *ctx, float *data_out );
+```
 
 ## Examples Description
 
-This example performs noise monitoring and 2D graph 
-plotting based on measured ambient noise using Noise Click.  
+> This example performs an ambient noise monitoring using the Noise click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-Device initialization.
+> Device initialization.
 
 ```c
 
@@ -90,7 +99,6 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     noise_cfg_setup( &cfg );
     NOISE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     noise_init( &noise, &cfg );
@@ -102,38 +110,31 @@ void application_init ( void )
 
 ### Application Task
 
-Every 5 ms measure ambient noise and if it's above threshold
-alarm message is being shown.
-Monitoring results are being plotted on serial plotter. 
+> Reads the voltage from AN pin which presents the noise level and displays it
+on the USB UART every 5ms. If the noise is above predefined threshold
+(25 percents of max noise, i.e. about 0.4V) an alarm message is being shown. 
 
 ```c
 
 void application_task ( void )
 {
-    uint8_t interrupt_status;
-    interrupt_status = noise_check_int_pin( &noise );
-
-    adc_value = noise_read_adc( &noise );
-    plot_data( adc_value );
-    Delay_ms( 5 );
-
-    if (interrupt_status == 1)
+    float voltage = 0;
+    if ( NOISE_OK == noise_read_an_pin_voltage ( &noise, &voltage ) )
     {
-        log_printf( &logger, " Sound threshold exceeded \r\n" );
+        log_printf( &logger, "%.3f\r\n", voltage );
     }
+    if ( noise_check_int_pin( &noise ) )
+    {
+        log_printf( &logger, " Sound overlimit detected!\r\n" );
+    }
+    Delay_ms ( 5 );
 }
 
 ```
 
 ## Note
 
-When ambient noise is above specified threshold, an interrupt
-is triggered. Default threshold value is set to 0x64 = 52.
-
-Additional functions:
-
-- void plot_data ( uint16_t data_plot ) - plots 2D graph
-based on provided ADC value.
+> We recommend using the SerialPlot tool for data visualizing.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
@@ -141,7 +142,7 @@ The full application code, and ready to use projects can be  installed directly 
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.noise
+- Click.Noise
 
 **Additional notes and informations**
 
