@@ -1,10 +1,9 @@
 /*!
  * \file 
- * \brief noise Click example
+ * \brief Noise click example
  * 
  * # Description
- * This example performs noise monitoring and 2D graph 
- * plotting based on measured ambient noise using Noise Click.  
+ * This example performs an ambient noise monitoring using the Noise click board.
  *
  * The demo application is composed of two sections :
  * 
@@ -12,44 +11,22 @@
  * Device initialization.
  * 
  * ## Application Task  
- * Every 5 ms measure ambient noise and if it's above threshold
- * alarm message is being shown.
- * Monitoring results are being plotted on serial plotter. 
- *
- * *note:* 
- * When ambient noise is above specified threshold, an interrupt
- * is triggered. Default threshold value is set to 0x64 = 52.
- *
- * Additional functions:
- * - void plot_data ( uint16_t data_plot ) - plots 2D graph
- * based on provided ADC value. 
+ * Reads the voltage from AN pin which presents the noise level and displays it
+ * on the USB UART every 5ms. If the noise is above predefined threshold
+ * (25 percents of max noise, i.e. about 0.4V) an alarm message is being shown.
+ * 
+ * @note 
+ * We recommend using the SerialPlot tool for data visualizing.
  * 
  * \author MikroE Team
  *
  */
-// ------------------------------------------------------------------- INCLUDES
-
 #include "board.h"
 #include "log.h"
 #include "noise.h"
 
-// ------------------------------------------------------------------ VARIABLES
-
 static noise_t noise;
 static log_t logger;
-
-static uint16_t adc_value;
-static uint16_t plot_time;
-
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
-
-void plot_data ( uint16_t data_plot )
-{
-    log_printf( &logger, "%u,%u\r\n", data_plot, plot_time++ );
-    Delay_ms(2);
-}
-
-// ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
 {
@@ -70,7 +47,6 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     noise_cfg_setup( &cfg );
     NOISE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     noise_init( &noise, &cfg );
@@ -80,17 +56,16 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    uint8_t interrupt_status;
-    interrupt_status = noise_check_int_pin( &noise );
-
-    adc_value = noise_generic_read( &noise );
-    plot_data( adc_value );
-    Delay_ms( 5 );
-
-    if (interrupt_status == 1)
+    float voltage = 0;
+    if ( NOISE_OK == noise_read_an_pin_voltage ( &noise, &voltage ) )
     {
-        log_printf( &logger, " Sound threshold exceeded \r\n" );
+        log_printf( &logger, "%.3f\r\n", voltage );
     }
+    if ( noise_check_int_pin( &noise ) )
+    {
+        log_printf( &logger, " Sound overlimit detected!\r\n" );
+    }
+    Delay_ms ( 5 );
 }
 
 void main ( void )

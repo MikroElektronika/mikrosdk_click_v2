@@ -3,7 +3,7 @@
 ---
 # PAC1954 click
 
-PAC1954 Click is a compact add-on board that contains an energy monitoring solution. This board features the PAC1954, a four-channel DC power/energy monitor from Microchip Technology. It uses real-time calibration to minimize offset and gain errors with no input filters required for this device.
+> PAC1954 Click is a compact add-on board that contains an energy monitoring solution. This board features the PAC1954, a four-channel DC power/energy monitor from Microchip Technology. It uses real-time calibration to minimize offset and gain errors with no input filters required for this device.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/pac1954_click.png" height=300px>
@@ -53,22 +53,17 @@ err_t pac1954_default_cfg ( pac1954_t *ctx );
 
 #### Example key functions :
 
-- `pac1954_refresh_cmd` This function updates the readable registers for the VBUS, VSENSE, Power, accumulator 
-outputs and accumulator count by issuing the REFRESH command. The values will be static until 
-the next REFRESH command.
+- `pac1954_refresh_cmd` This function updates the readable registers for the VBUS, VSENSE, Power, accumulator outputs and accumulator count by issuing the REFRESH command. The values will be static until the next REFRESH command.
 ```c
 err_t pac1954_refresh_cmd ( pac1954_t *ctx );
 ```
 
-- `pac1954_get_calc_measurement` This function calls the function for getting the selected 
-measurement data and performs all the necessary calculations to get 
-the measurement value in standard unit.
+- `pac1954_get_calc_measurement` This function calls the function for getting the selected measurement data and performs all the necessary calculations to get the measurement value in standard unit.
 ```c
-err_t pac1954_get_calc_measurement( pac1954_t *ctx, uint8_t meas_sel, uint8_t ch_sel, uint8_t avg_sel, uint8_t meas_mode, float *data_out );
+err_t pac1954_get_calc_measurement ( pac1954_t *ctx, uint8_t meas_sel, uint8_t ch_sel, uint8_t avg_sel, uint8_t meas_mode, float *data_out );
 ```
 
-- `pac1954_generic_write` This function writes a desired number of data bytes starting from
-the selected register by using I2C serial interface.
+- `pac1954_generic_write` This function writes a desired number of data bytes starting from the selected register by using I2C serial interface.
 ```c
 err_t pac1954_generic_write ( pac1954_t *ctx, uint8_t reg, uint8_t *tx_buf, uint8_t tx_len );
 ```
@@ -130,27 +125,27 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    float vsource;
-    float isense;
-    float power;
+    float vsource = 0;
+    float isense = 0;
+    float power = 0;
 
-    pac1954_refresh_cmd( &pac1954 );
+    pac1954_refresh_cmd ( &pac1954 );
     
-    pac1954_get_calc_measurement( &pac1954, PAC1954_MEAS_SEL_V_SOURCE, 
-                                            PAC1954_CH_SEL_CH_1, 
-                                            PAC1954_AVG_SEL_ENABLE, 
-                                            PAC1954_MEAS_MODE_BIPOLAR_FSR,
-                                            &vsource );
-    pac1954_get_calc_measurement( &pac1954, PAC1954_MEAS_SEL_I_SENSE, 
-                                            PAC1954_CH_SEL_CH_1, 
-                                            PAC1954_AVG_SEL_ENABLE, 
-                                            PAC1954_MEAS_MODE_BIPOLAR_FSR, 
-                                            &isense );
-    pac1954_get_calc_measurement( &pac1954, PAC1954_MEAS_SEL_P_SENSE, 
-                                            PAC1954_CH_SEL_CH_1, 
-                                            0, 
-                                            PAC1954_MEAS_MODE_BIPOLAR_FSR, 
-                                            &power );
+    pac1954_get_calc_measurement ( &pac1954, PAC1954_MEAS_SEL_V_SOURCE, 
+                                             PAC1954_CH_SEL_CH_1, 
+                                             PAC1954_AVG_SEL_ENABLE, 
+                                             PAC1954_MEAS_MODE_BIPOLAR_FSR,
+                                             &vsource );
+    pac1954_get_calc_measurement ( &pac1954, PAC1954_MEAS_SEL_I_SENSE, 
+                                             PAC1954_CH_SEL_CH_1, 
+                                             PAC1954_AVG_SEL_ENABLE, 
+                                             PAC1954_MEAS_MODE_BIPOLAR_FSR, 
+                                             &isense );
+    pac1954_get_calc_measurement ( &pac1954, PAC1954_MEAS_SEL_P_SENSE, 
+                                             PAC1954_CH_SEL_CH_1, 
+                                             0, 
+                                             PAC1954_MEAS_MODE_BIPOLAR_FSR, 
+                                             &power );
     
     log_printf( &logger, " Voltage: %.3f V\r\n", vsource );
     log_printf( &logger, " Current: %.3f A\r\n", isense );

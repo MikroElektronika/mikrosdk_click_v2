@@ -1,6 +1,5 @@
 \mainpage Main Page
  
- 
 
 ---
 # MRAM click
@@ -38,26 +37,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void mram_cfg_setup ( mram_cfg_t *cfg ); 
- 
-- Initialization function.
-> MRAM_RETVAL mram_init ( mram_t *ctx, mram_cfg_t *cfg );
+- `mram_cfg_setup` Config Object Initialization function.
+```c
+void mram_cfg_setup ( mram_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void mram_default_cfg ( mram_t *ctx );
+- `mram_init` Initialization function.
+```c
+err_t mram_init ( mram_t *ctx, mram_cfg_t *cfg );
+```
 
+- `mram_default_cfg` Click Default Configuration function.
+```c
+void mram_default_cfg ( mram_t *ctx );
+```
 
 #### Example key functions :
 
-- Function writes n bytes of data from the buffer.
-> void mram_write_data_bytes ( mram_t *ctx, const uint16_t address, uint8_t *buffer, const uint16_t n_bytes);
- 
-- Function reads n bytes of data and saves it in buffer.
-> void mram_read_data_bytes ( mram_t *ctx, const uint16_t address, uint8_t *buffer, const uint16_t n_bytes);
+- `mram_write_data_bytes` Function writes n bytes of data from the buffer.
+```c
+void mram_write_data_bytes ( mram_t *ctx, const uint16_t address, uint8_t *buffer, const uint16_t nBytes);
+```
 
-- Function enables or disables write protect.
-> void mram_enable_write_protect ( mram_t *ctx, uint8_t state);
+- `mram_read_data_bytes` Function reads n bytes of data and saves it in buffer.
+```c
+void mram_read_data_bytes ( mram_t *ctx, const uint16_t address, uint8_t *buffer, const uint16_t n_bytes);
+```
+
+- `mram_enable_write_protect` Function enables or disables write protect.
+```c
+void mram_enable_write_protect ( mram_t *ctx, uint8_t state);
+```
 
 ## Examples Description
 
@@ -94,14 +104,15 @@ void application_init ( void )
     mram_cfg_setup( &cfg );
     MRAM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     mram_init( &mram, &cfg );
+    mram_default_cfg( &mram );
 }
   
 ```
 
 ### Application Task
 
-> Writes 6 bytes of buffer data in memory with start address 0x0000. 
-> Then reads 3 bytes from memory with start address 0x0002 and shows result on USB UART.
+> Writes 10 bytes of buffer data in memory with start address 0x0001. 
+> Then reads 10 bytes from memory with start address 0x0001 and shows result on USB UART.
 
 ```c
 
@@ -110,30 +121,29 @@ void application_task ( void )
     uint8_t number_bytes_write;
     uint8_t number_bytes_read;
     uint16_t i;
-    uint8_t data_write[ 10 ] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    uint8_t data_read[ 20 ] = {0};
+    uint8_t data_write[ 10 ] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    uint8_t data_read[ 20 ] = { 0 };
     
     number_bytes_write = 10;
     number_bytes_read = 10;
 
     log_printf( &logger, " Data written!\r\n" );
-    mram_write_data_bytes ( &mram, 0x0000, data_write, number_bytes_write );
+    mram_write_data_bytes ( &mram, 0x0001, data_write, number_bytes_write );
     
     log_printf( &logger, " Read data:\r\n" );
-    mram_read_data_bytes ( &mram, 0x0000, data_read, number_bytes_read );
+    mram_read_data_bytes ( &mram, 0x0001, data_read, number_bytes_read );
     
-    for(i = 0; i < number_bytes_read; i++)
+    for ( i = 0; i < number_bytes_read; i++ )
     {
-        log_printf( &logger, "%d ", data_read[i] );
+        log_printf( &logger, "%d ", ( uint16_t )data_read[ i ] );
     }
     
-    log_printf(&logger, "\n");
+    log_printf( &logger, "\n" );
 
-    Delay_ms(3000);
+    Delay_ms( 3000 );
 }
 
 ```
-
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

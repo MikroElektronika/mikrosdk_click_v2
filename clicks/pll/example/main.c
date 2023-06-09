@@ -11,12 +11,7 @@
  * Initializes device.
  * 
  * ## Application Task  
- * Every 2 seconds, the PLL increases the input clock in the order of x4, x5, x6 and x8.
- * 
- * *note:*
- * If you use PLL x4, x5, x6 or x8, set S0 (RST pin) and S1 (AN pin) as OUTPUT.
- * If you use PLL x3.125 or x6.25, set S1 ( AN pin ) as INPUT and S0( RST pin ) as OUTPUT.
- * If you use PLL x3 or x5.3125, set S0 ( RST pin ) as INPUT and S1 ( AN pin ) as OUTPUT.
+ * Every 2 seconds, the PLL increases the input clock from min (x2) to max (x8) level.
  * 
  * \author MikroE Team
  *
@@ -50,10 +45,9 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info(&logger, "---- Application Init ----");
+    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     pll_cfg_setup( &cfg );
     PLL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pll_init( &pll, &cfg );
@@ -62,12 +56,31 @@ void application_init ( void )
 
 void application_task ( void )
 {
+    log_printf( &logger, " PLL level: x2\r\n\n" );
+    pll_set_pll_2x( &pll );
+    Delay_ms( 2000 );
+    log_printf( &logger, " PLL level: x3\r\n\n" );
+    pll_set_pll_3x( &pll );
+    Delay_ms( 2000 );
+    log_printf( &logger, " PLL level: x3.125\r\n\n" );
+    pll_set_pll_3_125x( &pll );
+    Delay_ms( 2000 );
+    log_printf( &logger, " PLL level: x4\r\n\n" );
     pll_set_pll_4x( &pll );
     Delay_ms( 2000 );
+    log_printf( &logger, " PLL level: x5\r\n\n" );
     pll_set_pll_5x( &pll );
     Delay_ms( 2000 );
+    log_printf( &logger, " PLL level: x5.3125\r\n\n" );
+    pll_set_pll_5_3125x( &pll );
+    Delay_ms( 2000 );
+    log_printf( &logger, " PLL level: x6\r\n\n" );
     pll_set_pll_6x( &pll );
     Delay_ms( 2000 );
+    log_printf( &logger, " PLL level: x6.25\r\n\n" );
+    pll_set_pll_6_25x( &pll );
+    Delay_ms( 2000 );
+    log_printf( &logger, " PLL level: x8\r\n\n" );
     pll_set_pll_8x( &pll );
     Delay_ms( 2000 );
 }

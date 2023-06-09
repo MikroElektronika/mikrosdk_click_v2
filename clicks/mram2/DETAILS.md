@@ -35,22 +35,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void mram2_cfg_setup ( mram2_cfg_t *cfg ); 
- 
-- Initialization function.
-> MRAM2_RETVAL mram2_init ( mram2_t *ctx, mram2_cfg_t *cfg );
+- `mram2_cfg_setup` Config Object Initialization function.
+```c
+void mram2_cfg_setup ( mram2_cfg_t *cfg ); 
+```
+
+- `mram2_init` Initialization function.
+```c
+err_t mram2_init ( mram2_t *ctx, mram2_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Write Enable function
-> void mram2_wren ( mram2_t *ctx );
- 
-- Enter Sleep Mode function
-> void mram2_sleep ( mram2_t *ctx );
+- `mram2_wren` Write Enable function
+```c
+void mram2_wren ( mram2_t *ctx );
+```
 
-- Write Data Bytes function
-> void mram2_write ( mram2_t *ctx, uint32_t mem_adr, uint8_t *wr_data, uint8_t n_bytes );
+- `mram2_read` Read Data Bytes function
+```c
+void mram2_read ( mram2_t *ctx, uint32_t mem_adr, uint8_t *rd_data, uint8_t n_bytes );
+```
+
+- `mram2_write` Write Data Bytes function
+```c
+void mram2_write ( mram2_t *ctx, uint32_t mem_adr, uint8_t *wr_data, uint8_t n_bytes );
+```
 
 ## Examples Description
 

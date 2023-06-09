@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230609](#20230609)**
 + **[20230602](#20230602)**
 + **[20230526](#20230526)**
 + **[20230519](#20230519)**
@@ -49,6 +50,48 @@
 
 ---
 ---
+---
+
+## `20230609`
+
+*Following click boards have been added:*
+
++ `DIGI POT 12`
++ `Thermo 30`
++ `H-Bridge 12`
++ `Flash 11`
++ `EEPROM 10`
+
+*Following click boards have been updated:*
+
++ `ISM TX`
++ `ISM RX`
++ `ISO ADC 5`
++ `LCD Mono`
++ `LDC`
++ `LightRanger 8`
++ `Magneto 8`
++ `Magneto 9`
++ `MRAM 2`
++ `MRAM`
++ `Nano Power 2`
++ `NB IoT 4`
++ `NB IoT 5`
++ `Noise`
++ `Opto Encoder 2`
++ `PAC1954`
++ `Pedometer 3`
++ `PLL`
++ `POT`
++ `Power MUX`
++ `V to Hz`
++ `V to Hz 3`
++ `USB UART 3`
++ `UVC`
++ `BLE 8`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230602`

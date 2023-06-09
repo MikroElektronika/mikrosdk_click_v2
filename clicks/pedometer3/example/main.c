@@ -15,12 +15,7 @@
  *
  * ## Application Task
  * Reads Accel and High Pass Accel X/Y/Z axis and detect Tilt Position.
- * All data logs on the USBUART every 500 ms.
- *
- * *note:*
- * The start default configuration chip is required at the beginning of each program
- * so that the chip wakes up and prepares for operation and measurement.
- * What is included and set in the start-up function can be viewed in the help file.
+ * All data logs on the USBUART every 400 ms.
  *
  * \author Katarina Perendic
  *
@@ -58,13 +53,11 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     pedometer3_cfg_setup( &cfg );
     PEDOMETER3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pedometer3_init( &pedometer3, &cfg );
 
     // Default click configurations
-
     pedometer3_default_cfg( &pedometer3 );
 
     tmp = PEDOMETER3_CNTL1_MODE_LOW_POWER | PEDOMETER3_CNTL1_MODE_LOW_POWER |
@@ -82,18 +75,18 @@ void application_task ( void )
     pedometer3_axis_t highpass_axis;
     pedometer3_tilt_position_t tilt;
 
-    //  Task implementation.
-
     pedometer3_get_accel_axis( &pedometer3, &accel_axis );
-    pedometer3_get_highpass_accel_axis( &pedometer3, &highpass_axis );
+    pedometer3_get_hp_accel_axis( &pedometer3, &highpass_axis );
     ped_step += pedometer3_get_step_counter( &pedometer3 );
 
     log_printf( &logger, "___________ Pedometer 3 click _____________\r\n");
 
-    log_printf( &logger, "--  Accel : [ X ]: %d / [ Y ]: %d / [ Z ]: %d \r\n", accel_axis.x, accel_axis.y, accel_axis.z);
-    log_printf( &logger, "--  HP Accel : [ X ]: %d / [ Y ]: %d / [ Z ]: %d \r\n", highpass_axis.x, highpass_axis.y, highpass_axis.z);
+    log_printf( &logger, "--  Accel : [ X ]: %d / [ Y ]: %d / [ Z ]: %d \r\n", 
+                accel_axis.x, accel_axis.y, accel_axis.z );
+    log_printf( &logger, "--  HP Accel : [ X ]: %d / [ Y ]: %d / [ Z ]: %d \r\n", 
+                highpass_axis.x, highpass_axis.y, highpass_axis.z );
 
-    log_printf( &logger, "--  Step counter : [ STEP ]: %d \r\n", ped_step);
+    log_printf( &logger, "--  Step counter : [ STEP ]: %d \r\n", ped_step );
 
     pedometer3_get_tilt_position( &pedometer3, &tilt);
 

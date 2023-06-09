@@ -1,15 +1,14 @@
 \mainpage Main Page
  
- 
-
 ---
 # PLL click
 
-PLL click is a frequency multiplier which uses the Phase-Locked Loop (PLL) techniques to provide a high-frequency clock output from a cheap, standard fundamental mode crystal oscillator. 
+> PLL click is a frequency multiplier which uses the Phase-Locked Loop (PLL) techniques to provide a high-frequency clock output from a cheap, standard fundamental mode crystal oscillator. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/pll_click.png" height=300px>
 </p>
+
 
 [click Product page](https://www.mikroe.com/pll-click)
 
@@ -38,26 +37,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void pll_cfg_setup ( pll_cfg_t *cfg ); 
- 
-- Initialization function.
-> PLL_RETVAL pll_init ( pll_t *ctx, pll_cfg_t *cfg );
+- `pll_cfg_setup` Config Object Initialization function.
+```c
+void pll_cfg_setup ( pll_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void pll_default_cfg ( pll_t *ctx );
-
+- `pll_init` Initialization function.
+```c
+err_t pll_init ( pll_t *ctx, pll_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- This function settings clock output.
-> void pll_set_clock_output ( pll_t *ctx, uint8_t mode );
- 
-- This function settings PLL x4.
-> void pll_set_pll_4x ( pll_t *ctx );
+- `pll_set_clock_output` This function settings clock output.
+```c
+void pll_set_clock_output ( pll_t *ctx, uint8_t mode );
+```
 
-- This function settings PLL x6.
-> void pll_set_pll_6x ( pll_t *ctx );
+- `pll_set_pll_4x` This function settings PLL x4.
+```c
+void pll_set_pll_4x ( pll_t *ctx );
+```
+
+- `pll_set_pll_6x` This function settings PLL x6.
+```c
+void pll_set_pll_6x ( pll_t *ctx );
+```
 
 ## Examples Description
 
@@ -87,10 +92,9 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info(&logger, "---- Application Init ----");
+    log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     pll_cfg_setup( &cfg );
     PLL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pll_init( &pll, &cfg );
@@ -101,29 +105,42 @@ void application_init ( void )
 
 ### Application Task
 
-> Every 2 seconds, the PLL increases the input clock in the order of x4, x5, x6 and x8.
+> Every 2 seconds, the PLL increases the input clock from min (x2) to max (x8) level.
 
 ```c
 
 void application_task ( void )
 {
+    log_printf( &logger, " PLL level: x2\r\n\n" );
+    pll_set_pll_2x( &pll );
+    Delay_ms( 2000 );
+    log_printf( &logger, " PLL level: x3\r\n\n" );
+    pll_set_pll_3x( &pll );
+    Delay_ms( 2000 );
+    log_printf( &logger, " PLL level: x3.125\r\n\n" );
+    pll_set_pll_3_125x( &pll );
+    Delay_ms( 2000 );
+    log_printf( &logger, " PLL level: x4\r\n\n" );
     pll_set_pll_4x( &pll );
     Delay_ms( 2000 );
+    log_printf( &logger, " PLL level: x5\r\n\n" );
     pll_set_pll_5x( &pll );
     Delay_ms( 2000 );
+    log_printf( &logger, " PLL level: x5.3125\r\n\n" );
+    pll_set_pll_5_3125x( &pll );
+    Delay_ms( 2000 );
+    log_printf( &logger, " PLL level: x6\r\n\n" );
     pll_set_pll_6x( &pll );
     Delay_ms( 2000 );
+    log_printf( &logger, " PLL level: x6.25\r\n\n" );
+    pll_set_pll_6_25x( &pll );
+    Delay_ms( 2000 );
+    log_printf( &logger, " PLL level: x8\r\n\n" );
     pll_set_pll_8x( &pll );
     Delay_ms( 2000 );
 } 
 
 ```
-
-## Note
-
-> If you use PLL x4, x5, x6 or x8, set S0 (RST pin) and S1 (AN pin) as OUTPUT.
-> If you use PLL x3.125 or x6.25, set S1 ( AN pin ) as INPUT and S0( RST pin ) as OUTPUT.
-> If you use PLL x3 or x5.3125, set S0 ( RST pin ) as INPUT and S1 ( AN pin ) as OUTPUT.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

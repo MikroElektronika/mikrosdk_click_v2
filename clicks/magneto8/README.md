@@ -37,26 +37,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void magneto8_cfg_setup ( magneto8_cfg_t *cfg ); 
- 
-- Initialization function.
-> MAGNETO8_RETVAL magneto8_init ( magneto8_t *ctx, magneto8_cfg_t *cfg );
+- `magneto8_cfg_setup` Config Object Initialization function.
+```c 
+void magneto8_cfg_setup ( magneto8_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void magneto8_default_cfg ( magneto8_t *ctx );
+- `magneto8_init` Initialization function.
+```c
+err_t magneto8_init ( magneto8_t *ctx, magneto8_cfg_t *cfg );
+```
 
+- `magneto8_default_cfg` Click Default Configuration function.
+```c
+void magneto8_default_cfg ( magneto8_t *ctx );
+```
 
 #### Example key functions :
 
-- Gets magnitude data
-> uint16_t magneto8_get_magnitude ( magneto8_t *ctx );
- 
-- Gets Angle data
-> uint16_t magneto8_get_angle_data ( magneto8_t *ctx );
+- `magneto8_get_magnitude` Gets magnitude data
+```c
+uint16_t magneto8_get_magnitude ( magneto8_t *ctx );
+```
 
-- Gets PSH pin state
-> uint8_t magneto8_psh_pin_state ( magneto8_t *ctx );
+- `magneto8_get_angle_data` Gets Angle data
+```c
+float magneto8_get_angle_data ( magneto8_t *ctx );
+```
+
+- `magneto8_psh_pin_state` Gets PSH pin state
+```c
+uint8_t magneto8_psh_pin_state ( magneto8_t *ctx );
+```
 
 ## Examples Description
 
@@ -109,14 +120,14 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    uint16_t angle;
+    float angle;
     uint16_t mag;
 
     mag  = magneto8_get_magnitude( &magneto8 );
     log_printf( &logger, "Magnitude: %d \r\n", mag );
     
     angle = magneto8_get_angle_data( &magneto8 );
-    log_printf( &logger, "Angle : %d \r\n", angle );
+    log_printf( &logger, "Angle : %.1f deg\r\n", angle );
 
     log_printf( &logger, "---------------------- \r\n" );
     Delay_ms( 500 );

@@ -43,19 +43,19 @@ void lightranger8_cfg_setup ( lightranger8_cfg_t *cfg );
 
 - `lightranger8_init` Initialization function.
 ```c
-LIGHTRANGER8_RETVAL lightranger8_init ( lightranger8_t *ctx, lightranger8_cfg_t *cfg );
+err_t lightranger8_init ( lightranger8_t *ctx, lightranger8_cfg_t *cfg );
 ```
 
 - `lightranger8_default_cfg` Click Default Configuration function.
 ```c
-void lightranger8_default_cfg ( lightranger8_t *ctx );
+err_t lightranger8_default_cfg ( lightranger8_t *ctx );
 ```
 
 #### Example key functions :
 
 - `lightranger8_set_measurement_timing_budget` This function sets the timing budget of the VL53Lx ranging sensor.
 ```c
-LIGHTRANGER8_RETVAL lightranger8_set_measurement_timing_budget ( lightranger8_t *ctx, uint32_t budget_us );
+err_t lightranger8_set_measurement_timing_budget ( lightranger8_t *ctx, uint32_t budget_us );
 ```
 
 - `lightranger8_start_measurement` This function enables the range measuring with the adjusted intermeasurement period.
@@ -157,13 +157,14 @@ the 2 seconds delay so the terminal is possible to read.
 void application_task ( void ) {
     uint16_t distance;
     
-    while ( lightranger8_new_data_ready( &lightranger8 ) != 0 ) {
+    while ( lightranger8_get_interrupt_state( &lightranger8 ) != 0 ) {
         Delay_1ms();
     }
 
     distance = lightranger8_get_distance( &lightranger8 );
     log_printf( &logger, " ----------------------\r\n" );
     log_printf( &logger, " Distance: %.1f cm \r\n", ( float )distance / 10 );
+    lightranger8_system_interrupt_clear ( &lightranger8 );
     Delay_ms( 2000 );
 }
 

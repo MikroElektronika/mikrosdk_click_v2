@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Linear",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Power management > Linear",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,36 +8,31 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Nano Power 2 click",
     "example_list": [
-      {
-        "project_path": "Examples/example"
-      }
+        {
+            "project_path": "Examples/example"
+        }
     ],
     "help": "Help/doc",
     "icon": "Resources/click_icon.png",
     "license": {
-      "file_path": "",
-      "id": "46"
+        "file_path": "",
+        "id": "46"
     },
     "name": "mikroe.click.nanopower2",
     "product_link": "https://www.mikroe.com/nano-power-2-click",
     "short_description": "Nano Power 2 click is a very low power voltage comparator, aimed at portable and battery-powered applications. It allows detecting a difference of two voltage potentials, applied on two input pins. ",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2370
     ],
-    "version": "2.0.0.7"
+    "version": "2.1.0.7",
+    "cmake": true,
+    "alias": "Click.NanoPower2",
+    "subdir_name": "lib_nanopower2"
 }
-
-
-
-
-
-
-

@@ -99,13 +99,14 @@ void application_init ( void ) {
 void application_task ( void ) {
     uint16_t distance;
     
-    while ( lightranger8_new_data_ready( &lightranger8 ) != 0 ) {
+    while ( lightranger8_get_interrupt_state( &lightranger8 ) != 0 ) {
         Delay_1ms();
     }
 
     distance = lightranger8_get_distance( &lightranger8 );
     log_printf( &logger, " ----------------------\r\n" );
     log_printf( &logger, " Distance: %.1f cm \r\n", ( float )distance / 10 );
+    lightranger8_system_interrupt_clear ( &lightranger8 );
     Delay_ms( 2000 );
 }
 

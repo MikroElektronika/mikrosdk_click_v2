@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Potentiometer",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > HMI > Potentiometers",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+    "dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "POT click",
     "example_list": [
@@ -26,19 +25,14 @@
     "name": "mikroe.click.pot",
     "product_link": "https://www.mikroe.com/pot-click",
     "short_description": "POT Click is a Click board™ with the accurate selectable reference voltage output. By employing a high-quality 10mm carbon potentiometer, this Click board™ can provide very accurate voltage output. ",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2700
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.7"
+    "version": "2.1.0.7",
+    "cmake": true,
+    "alias": "Click.Pot",
+    "subdir_name": "lib_pot"
 }
-
-
-
-
-
-
-

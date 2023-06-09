@@ -1,11 +1,9 @@
 \mainpage Main Page
  
- 
-
 ---
 # Pedometer 3 click
 
-Pedometer 3 click is a three-axis acceleration sensing Click board
+> Pedometer 3 click is a three-axis acceleration sensing Click board
 which utilizes the KX126-1063. An advanced tri-axis acceleration sensor, KX126-1063 includes the pedometer algorithm support.
 
 <p align="center">
@@ -39,29 +37,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void pedometer3_cfg_setup ( pedometer3_cfg_t *cfg ); 
- 
-- Initialization function.
-> PEDOMETER3_RETVAL pedometer3_init ( pedometer3_t *ctx, pedometer3_cfg_t *cfg );
+- `pedometer3_cfg_setup` Config Object Initialization function.
+```c
+void pedometer3_cfg_setup ( pedometer3_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void pedometer3_default_cfg ( pedometer3_t *ctx );
+- `pedometer3_init` Initialization function.
+```c
+err_t pedometer3_init ( pedometer3_t *ctx, pedometer3_cfg_t *cfg );
+```
 
+- `pedometer3_default_cfg` Click Default Configuration function.
+```c
+void pedometer3_default_cfg ( pedometer3_t *ctx );
+```
 
 #### Example key functions :
 
-- High Pass Accel axis data
-> void pedometer3_get_highpass_accel_axis ( pedometer3_t *ctx, pedometer3_axis_t *axis );
- 
-- Accel axis data
-> void pedometer3_get_accel_axis ( pedometer3_t *ctx, pedometer3_axis_t *axis );
+- `pedometer3_get_hp_accel_axis` High Pass Accel axis data
+```c
+void pedometer3_get_hp_accel_axis ( pedometer3_t *ctx, pedometer3_axis_t *axis );
+```
 
-- Pedometer step counter
-> uint16_t pedometer3_get_step_counter ( pedometer3_t *ctx );
+- `pedometer3_get_accel_axis` Accel axis data
+```c
+void pedometer3_get_accel_axis ( pedometer3_t *ctx, pedometer3_axis_t *axis );
+```
 
-- Tilt current and previous position
-> void pedometer3_get_tilt_position ( pedometer3_t *ctx, pedometer3_tilt_position_t *tilt );
+- `pedometer3_get_step_counter` Pedometer step counter
+```c
+uint16_t pedometer3_get_step_counter ( pedometer3_t *ctx );
+```
 
 ## Examples Description
 
@@ -81,6 +87,7 @@ void application_init ( void )
 {
     log_cfg_t log_cfg;
     pedometer3_cfg_t cfg;
+    uint8_t tmp;
 
     /** 
      * Logger initialization.
@@ -96,13 +103,11 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     pedometer3_cfg_setup( &cfg );
     PEDOMETER3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pedometer3_init( &pedometer3, &cfg );
 
     // Default click configurations
-
     pedometer3_default_cfg( &pedometer3 );
 
     tmp = PEDOMETER3_CNTL1_MODE_LOW_POWER | PEDOMETER3_CNTL1_MODE_LOW_POWER |
@@ -117,7 +122,7 @@ void application_init ( void )
 ### Application Task
 
 > Reads Accel and High Pass Accel X/Y/Z axis and detect Tilt Position.
-> All data logs on the USBUART every 500 ms.
+> All data logs on the USBUART every 400 ms.
 
 ```c
 void application_task ( void )
@@ -127,18 +132,18 @@ void application_task ( void )
     pedometer3_axis_t highpass_axis;
     pedometer3_tilt_position_t tilt;
 
-    //  Task implementation.
-
     pedometer3_get_accel_axis( &pedometer3, &accel_axis );
-    pedometer3_get_highpass_accel_axis( &pedometer3, &highpass_axis );
+    pedometer3_get_hp_accel_axis( &pedometer3, &highpass_axis );
     ped_step += pedometer3_get_step_counter( &pedometer3 );
 
     log_printf( &logger, "___________ Pedometer 3 click _____________\r\n");
 
-    log_printf( &logger, "--  Accel : [ X ]: %d / [ Y ]: %d / [ Z ]: %d \r\n", accel_axis.x, accel_axis.y, accel_axis.z);
-    log_printf( &logger, "--  HP Accel : [ X ]: %d / [ Y ]: %d / [ Z ]: %d \r\n", highpass_axis.x, highpass_axis.y, highpass_axis.z);
+    log_printf( &logger, "--  Accel : [ X ]: %d / [ Y ]: %d / [ Z ]: %d \r\n", 
+                accel_axis.x, accel_axis.y, accel_axis.z );
+    log_printf( &logger, "--  HP Accel : [ X ]: %d / [ Y ]: %d / [ Z ]: %d \r\n", 
+                highpass_axis.x, highpass_axis.y, highpass_axis.z );
 
-    log_printf( &logger, "--  Step counter : [ STEP ]: %d \r\n", ped_step);
+    log_printf( &logger, "--  Step counter : [ STEP ]: %d \r\n", ped_step );
 
     pedometer3_get_tilt_position( &pedometer3, &tilt);
 

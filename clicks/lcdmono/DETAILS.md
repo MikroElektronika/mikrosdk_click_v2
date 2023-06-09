@@ -35,22 +35,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void lcdmono_cfg_setup ( lcdmono_cfg_t *cfg ); 
- 
-- Initialization function.
-> LCDMONO_RETVAL lcdmono_init ( lcdmono_t *ctx, lcdmono_cfg_t *cfg );
+- `lcdmono_cfg_setup` Config Object Initialization function.
+```c
+void lcdmono_cfg_setup ( lcdmono_cfg_t *cfg ); 
+```
+
+- `lcdmono_init` Initialization function.
+```c
+err_t lcdmono_init ( lcdmono_t *ctx, lcdmono_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Draw text on the screen
-> void lcdmono_draw_text ( lcdmono_t *ctx, char *text_buf, lcdmono_text_settings_t *cfg , uint8_t end_mode);
- 
-- Display Power State
-> void lcdmono_display_power ( lcdmono_t *ctx, uint8_t ctrl );
+- `lcdmono_draw_text` Draw text on the screen
+```c
+void lcdmono_draw_text ( lcdmono_t *ctx, uint8_t * __generic_ptr text_buf, lcdmono_text_settings_t *tx_set, uint8_t end_mode );
+```
 
-- Reset procedure
-> void lcdmono_display_reset ( lcdmono_t *ctx );
+- `lcdmono_display_power` Display Power State
+```c
+void lcdmono_display_power ( lcdmono_t *ctx, uint8_t ctrl );
+```
+
+- `lcdmono_display_reset` Reset procedure
+```c
+void lcdmono_display_reset ( lcdmono_t *ctx );
+```
 
 ## Examples Description
 
@@ -66,30 +76,15 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
     lcdmono_cfg_t cfg;
     lcdmono_text_settings_t tx_set;
     lcdmono_font_t font_cfg;
 
-    /** 
-     * Logger initialization.
-     * Default baud rate: 115200
-     * Default log level: LOG_LEVEL_DEBUG
-     * @note If USB_UART_RX and USB_UART_TX 
-     * are defined as HAL_PIN_NC, you will 
-     * need to define them manually for log to work. 
-     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
-     */
-    LOG_MAP_USB_UART( log_cfg );
-    log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
-
     //  Click initialization.
-
     lcdmono_cfg_setup( &cfg );
     LCDMONO_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     lcdmono_init( &lcdmono, &cfg );
-    
+
     lcdmono_display_reset( &lcdmono );
     lcdmono_clear( &lcdmono );
 
@@ -98,26 +93,24 @@ void application_init ( void )
     // Display text
     font_cfg.this_font = lcdmono_font_tahoma_16;
     lcdmono_set_font( &lcdmono, &font_cfg );
-    
+
     tx_set.len = 3;
     tx_set.start_cord_x = 25;
     tx_set.start_cord_y = 15;
-    tx_set.text_color = LCDMONO_COLOR_BLACK;
     lcdmono_draw_text( &lcdmono, demo_text_lcd, &tx_set, LCDMONO_REFRESH_TEXT_BUFFER | 
-                                                                       LCDMONO_CHECK_NEW_TEXT );
+                                                         LCDMONO_CHECK_NEW_TEXT );
+
     font_cfg.this_font = lcdmono_font_tahoma_8;
     lcdmono_set_font( &lcdmono, &font_cfg );
-    
+
     tx_set.len = 4;
     tx_set.start_cord_x = 60;
     tx_set.start_cord_y = 50;
-    tx_set.text_color = LCDMONO_COLOR_BLACK;
     lcdmono_draw_text( &lcdmono, demo_text_mono, &tx_set, LCDMONO_CHECK_NEW_TEXT );
 
     tx_set.len = 9;
     tx_set.start_cord_x = 10;
     tx_set.start_cord_y = 80;
-    tx_set.text_color = LCDMONO_COLOR_BLACK;
     lcdmono_draw_text( &lcdmono, demo_text_128x128px, &tx_set, LCDMONO_REFRESH_DISPLAY_END );
 
     Delay_ms( 5000 );
@@ -134,13 +127,13 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    lcdmono_draw_const_frame( &lcdmono, demo_img_mikroe_light );
+    lcdmono_draw_frame( &lcdmono, demo_img_mikroe_light );
     Delay_ms( 3000 );
-    lcdmono_draw_const_frame( &lcdmono, demo_img_mikroe );
+    lcdmono_draw_frame( &lcdmono, demo_img_mikroe );
     Delay_ms( 3000 );
-    lcdmono_draw_const_frame( &lcdmono, demo_img_logo_light );
+    lcdmono_draw_frame( &lcdmono, demo_img_logo_light );
     Delay_ms( 3000 );
-    lcdmono_draw_const_frame( &lcdmono, demo_img_logo );
+    lcdmono_draw_frame( &lcdmono, demo_img_logo );
     Delay_ms( 3000 );
 }
 
@@ -159,13 +152,13 @@ void application_task ( void )
 >             5. Check only MSB first
 >             6. Check Reverse color and adjust Normal type
 >  The image to be generated should contain about 2048 bytes ...
->  Insert the image into the file Click_LCD_Mono_image.h
+>  Insert the image into the file lcdmono_image.h
 > 
 >  - Create Font:
 >      Close existing project, open a new VTFT project
 >      Add label and adjust text font
 >      Generate source code
->      Copy the font from resource.c file to this project in file Click_LCD_Mono_font.h
+>      Copy the font from resource.c file to this project in file lcdmono_font.h
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

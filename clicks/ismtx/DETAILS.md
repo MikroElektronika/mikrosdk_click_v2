@@ -42,12 +42,12 @@ void ismtx_cfg_setup ( ismtx_cfg_t *cfg );
 
 - `ismtx_init` Initialization function.
 ```c
-ISMTX_RETVAL ismtx_init ( ismtx_t *ctx, ismtx_cfg_t *cfg );
+err_t ismtx_init ( ismtx_t *ctx, ismtx_cfg_t *cfg );
 ```
 
 - `ismtx_default_cfg` Click Default Configuration function.
 ```c
-void ismtx_default_cfg ( ismtx_t *ctx );
+err_t ismtx_default_cfg ( ismtx_t *ctx );
 ```
 
 #### Example key functions :
@@ -62,9 +62,9 @@ err_t ismtx_set_cfg ( ismtx_t *ctx, uint8_t cfg_macro, uint8_t cfg_value )
 err_t ismtx_set_frequency ( ismtx_t *ctx, uint32_t freq )
 ```
 
-- `ismtx_transmit_raw_data` Function for trinsmiting data.
+- `ismtx_transmit_data` Function for transmitting data with preamble byte and lenght.
 ```c
-err_t ismtx_transmit_raw_data ( ismtx_t *ctx, uint8_t *tx_data, uint8_t tx_len )
+err_t ismtx_transmit_data ( ismtx_t *ctx, uint8_t preamble_byte, uint8_t *tx_data, uint8_t tx_data_len );
 ```
 
 ## Example Description
@@ -103,12 +103,10 @@ void application_init ( void )
     // Click initialization.
     ismtx_cfg_setup( &ismtx_cfg );
     ISMTX_MAP_MIKROBUS( ismtx_cfg, MIKROBUS_1 );
-    err_t init_flag  = ismtx_init( &ismtx, &ismtx_cfg );
-    if ( init_flag == SPI_MASTER_ERROR ) 
+    if ( SPI_MASTER_ERROR == ismtx_init( &ismtx, &ismtx_cfg ) ) 
     {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
 
@@ -120,7 +118,6 @@ void application_init ( void )
     {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, select correct signal modulation... " );
-
         for ( ; ; );
     }
     
@@ -131,15 +128,15 @@ void application_init ( void )
 
 ### Application Task
 
-> Transmits data via external antenna in span of 500ms.
+> Transmits data via external antenna in span of 100ms.
 
 ```c
 
 void application_task ( void ) 
 {
-    log_info( &logger, " Data sent! [%s]", TX_DATA );
-    ismtx_transmit_data( &ismtx, PREAMBLE_BYTE, TX_DATA, strlen( TX_DATA ) );
-    Delay_ms( 500 );
+    log_info( &logger, " Data sent: %s", tx_data_buf );
+    ismtx_transmit_data( &ismtx, PREAMBLE_BYTE, tx_data_buf, sizeof( tx_data_buf ) );
+    Delay_ms( 100 );
 }
 
 ```

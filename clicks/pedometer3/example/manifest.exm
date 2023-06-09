@@ -2,7 +2,7 @@
     "name": "Pedometer 3 Click",
     "description": "Pedometer 3 click is a three-axis acceleration sensing Click board which utilizes the KX126-1063. An advanced tri-axis acceleration sensor, KX126-1063 includes the pedometer algorithm support.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","KX126-1063"],
     "category" : ["Motion"] 
 }
