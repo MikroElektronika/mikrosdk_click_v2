@@ -11,8 +11,7 @@
  * Initialization device and logger module, reset device and set PSI range.
  * 
  * ## Application Task  
- * Reads Pressure data and this data logs every 1 sec.
- *
+ * Reads pressure data in mBar and logs it on the USB UART once per second.
  * 
  * \author MikroE Team
  *
@@ -46,24 +45,26 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
     //  Click initialization.
-
     pressure8_cfg_setup( &cfg );
     PRESSURE8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pressure8_init( &pressure8, &cfg );
 
     pressure8_device_reset( &pressure8 );
-    pressure8_set_psi_range( 0, 25 );
+    pressure8_set_psi_range( &pressure8, 0, 25 );
+    Delay_ms ( 1000 );
+    
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )
 {
-    float pressure_data;
+    float pressure = 0;
     
-    pressure_data = pressure8_get_pressure( &pressure8, PRESSURE8_DATA_IN_mBar );
-    log_printf( &logger, "--- Pressure data : %f mBar\r\n", pressure_data );
+    pressure = pressure8_get_pressure( &pressure8, PRESSURE8_DATA_IN_MBAR );
+    log_printf( &logger, " Pressure: %.1f mBar\r\n", pressure );
 
     Delay_ms( 1000 );
 }

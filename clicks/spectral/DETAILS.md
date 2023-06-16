@@ -2,7 +2,7 @@
 ---
 # Spectral click
 
-Spectral click is a multispectral light sensing device, which uses the state-of-the-art sensor IC for a very accurate chromatic white color sensing.
+> Spectral click is a multispectral light sensing device, which uses the state-of-the-art sensor IC for a very accurate chromatic white color sensing.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/spectral_click.png" height=300px>
@@ -35,22 +35,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void spectral_cfg_setup ( spectral_cfg_t *cfg ); 
- 
-- Initialization function.
-> SPECTRAL_RETVAL spectral_init ( spectral_t *ctx, spectral_cfg_t *cfg );
+- `spectral_cfg_setup` Config Object Initialization function.
+```c
+void spectral_cfg_setup ( spectral_cfg_t *cfg ); 
+```
+
+- `spectral_init` Initialization function.
+```c
+err_t spectral_init ( spectral_t *ctx, spectral_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Generic read function.
-> int32_t spectral_uart_read ( spectral_t *ctx, char *data_buf, uint16_t max_len );
- 
-- Send Command
-> void spectral_send_command ( spectral_t *ctx, char *command );
+- `spectral_uart_read` Generic read function.
+```c
+int32_t spectral_uart_read ( spectral_t *ctx, uint8_t *data_buf, uint16_t max_len );
+```
 
-- Read raw X, Y, Z and NIR data as well as two special internal registers D, & C.
-> void spectral_get_data ( char *rsp, uint16_t *c_data );
+- `spectral_send_command` Send Command
+```c
+void spectral_send_command ( spectral_t *ctx, uint8_t *command );
+```
+
+- `spectral_get_data` Read raw X, Y, Z and NIR data as well as two special internal registers D, & C.
+```c
+void spectral_get_data ( uint8_t *rsp, uint16_t *c_data );
+```
 
 ## Examples Description
 
@@ -82,8 +92,7 @@ void application_init ( void )
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
-    //  Click initialization.
-
+    // Click initialization.
     spectral_cfg_setup( &cfg );
     SPECTRAL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     spectral_init( &spectral, &cfg );

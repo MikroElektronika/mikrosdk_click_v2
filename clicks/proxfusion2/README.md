@@ -1,11 +1,9 @@
 \mainpage Main Page
  
- 
-
 ---
 # ProxFusion 2 click
 
-ProxFusion® 2 Click is an ambient lighting, capacitive, Hall-effect, and inductive sensing Click board™ which features a single multifunctional sensor IC. 
+> ProxFusion 2 Click is an ambient lighting, capacitive, Hall-effect, and inductive sensing Click board™ which features a single multifunctional sensor IC. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/proxfusion2_click.png" height=300px>
@@ -38,26 +36,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void proxfusion2_cfg_setup ( proxfusion2_cfg_t *cfg ); 
- 
-- Initialization function.
-> PROXFUSION2_RETVAL proxfusion2_init ( proxfusion2_t *ctx, proxfusion2_cfg_t *cfg );
+- `proxfusion2_cfg_setup` Config Object Initialization function.
+```c
+void proxfusion2_cfg_setup ( proxfusion2_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void proxfusion2_default_cfg ( proxfusion2_t *ctx );
+- `proxfusion2_init` Initialization function.
+```c
+err_t proxfusion2_init ( proxfusion2_t *ctx, proxfusion2_cfg_t *cfg );
+```
 
+- `proxfusion2_default_cfg` Click Default Configuration function.
+```c
+err_t proxfusion2_default_cfg ( proxfusion2_t *ctx );
+```
 
 #### Example key functions :
 
-- Function for detect Touch
-> uint8_t proxfusion2_detect_touch ( proxfusion2_t *ctx );
- 
-- Function for read ambient light
-> uint8_t proxfusion2_detect_dark_light ( proxfusion2_t *ctx, uint8_t *als_range );
+- `proxfusion2_detect_touch` Function for detect Touch
+```c
+uint8_t proxfusion2_detect_touch ( proxfusion2_t *ctx );
+```
 
-- Function for read Hall-effect 
-> uint8_t proxfusion2_detect_hall ( proxfusion2_t *ctx );
+- `proxfusion2_detect_dark_light` Function for read ambient light
+```c
+uint8_t proxfusion2_detect_dark_light ( proxfusion2_t *ctx, uint8_t *als_range );
+```
+
+- `proxfusion2_detect_hall` Function for read Hall-effect 
+```c
+uint8_t proxfusion2_detect_hall ( proxfusion2_t *ctx );
+```
 
 ## Examples Description
 
@@ -67,14 +76,14 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes and configures the sensor.
+> Initializes the driver and performs the click default configuration.
 
 ```c
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
-    proxfusion2_cfg_t cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    proxfusion2_cfg_t proxfusion2_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -87,76 +96,84 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
-    proxfusion2_cfg_setup( &cfg );
-    PROXFUSION2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    proxfusion2_init( &proxfusion2, &cfg );
-    proxfusion2_default_cfg( &proxfusion2 );
+    // Click initialization.
+    proxfusion2_cfg_setup( &proxfusion2_cfg );
+    PROXFUSION2_MAP_MIKROBUS( proxfusion2_cfg, MIKROBUS_1 );
+    if ( I2C_MASTER_ERROR == proxfusion2_init( &proxfusion2, &proxfusion2_cfg ) )
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
+    
+    if ( PROXFUSION2_ERROR == proxfusion2_default_cfg ( &proxfusion2 ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
+    
+    log_info( &logger, " Application Task " );
 }
   
 ```
 
 ### Application Task
 
-> Checks whether Touch is detected and measures the output detection.
-> Measures Ambient lighting - whether it's Light or Dark, ALS range and ALS output.
-> Checks the orientation of the magnet and measures the HALL output.
+> - Checks whether Touch is detected and measures the output detection.
+> - Measures Ambient lighting - whether it's Light or Dark, ALS range and ALS output.
+> - Checks the orientation of the magnet and measures the HALL output.
 
 ```c
 
 void application_task ( void )
 {
-    //  Task implementation.
-
-    log_printf( &logger, "\n_________________________________________________________________________\n");
-    log_printf( &logger, "\n| TOUCH  |  T - UI  | AMBIENT | ALS RANGE |  ALS UI  |  HALL  | HALL UI |\n");
-
-    touch = proxfusion2_read_byte( &proxfusion2 , 0x13);
-    if ((touch & 0x02) != 0)
+    uint8_t als_range = 0;
+    uint8_t hall_detect = 0;
+    uint16_t read_data = 0;
+    if ( PROXFUSION2_TOUCH_DETECTED == proxfusion2_detect_touch( &proxfusion2 ) )
     {
-        log_printf( &logger, "|  YES   |");
+        log_printf( &logger, " TOUCH: YES\r\n" );
     }
     else
     {
-        log_printf( &logger, "|   NO   |");
+        log_printf( &logger, " TOUCH: NO\r\n" );
     }
-    data_read = proxfusion2_read_data( &proxfusion2 , PROXFUSION2_HYSTERESIS_UI_OUTPUT );
-    log_printf( &logger, "%d   |", data_read);
+    read_data = proxfusion2_read_data( &proxfusion2 , PROXFUSION2_HYSTERESIS_UI_OUTPUT );
+    log_printf( &logger, " LEVEL: %u\r\n\n", read_data );
  
-    dark_light_ambient = proxfusion2_detect_dark_light( &proxfusion2, &als_range);
-    if (dark_light_ambient == PROXFUSION2_DARK_AMBIENT )
+    if ( PROXFUSION2_AMBIENT_DARK == proxfusion2_detect_dark_light( &proxfusion2, &als_range ) )
     {
-        log_printf( &logger, "  DARK   |");
+        log_printf( &logger, " AMBIENT: DARK\r\n" );
     }
     else
     {
-        log_printf( &logger, "  LIGHT   |");
+        log_printf( &logger, " AMBIENT: LIGHT\r\n" );
     }
-    log_printf( &logger, "%d   |", als_range);
+    log_printf( &logger, " RANGE: %u\r\n", ( uint16_t ) als_range );
  
-    data_read = proxfusion2_read_data( &proxfusion2, PROXFUSION2_ALS_UI_OUTPUT );
+    read_data = proxfusion2_read_data( &proxfusion2, PROXFUSION2_ALS_UI_OUTPUT );
 
-    log_printf( &logger, "%d   |", data_read);
+    log_printf( &logger, " LEVEL: %u\r\n\n", read_data );
  
     hall_detect = proxfusion2_detect_hall( &proxfusion2 );
-    if (hall_detect != 0)
+    if ( PROXFUSION2_HALL_NORTH == hall_detect )
     {
-        if( hall_detect == 1 )
-        {
-            log_printf( &logger, "NORTH  |");
-        }
-        else
-        {
-            log_printf( &logger, "SOUTH  |");
-        }
+        log_printf( &logger, " HALL: NORTH\r\n" );
     }
-    data_read = proxfusion2_read_data( &proxfusion2, PROXFUSION2_HALL_EFFECT_UI_OUTPUT );
-    log_printf( &logger, "%d   |", data_read);
+    else if ( PROXFUSION2_HALL_SOUTH == hall_detect )
+    {
+        log_printf( &logger, " HALL: SOUTH\r\n" );
+    }
+    else
+    {
+        log_printf( &logger, " HALL: UNKNOWN\r\n" );
+    }
+    read_data = proxfusion2_read_data( &proxfusion2, PROXFUSION2_HALL_EFFECT_UI_OUTPUT );
+    log_printf( &logger, " LEVEL: %u\r\n", read_data );
     
-    Delay_ms( 3000 );
+    log_printf( &logger, " --------------\r\n" );
+    Delay_ms( 1000 );
 }
 
 ```

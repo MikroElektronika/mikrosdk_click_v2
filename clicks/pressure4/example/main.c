@@ -46,29 +46,28 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
     //  Click initialization.
-
     pressure4_cfg_setup( &cfg );
     PRESSURE4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pressure4_init( &pressure4, &cfg );
 
     pressure4_default_cfg( &pressure4 );
-    Delay_ms( 100 );
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )
 {
-    double pressure;
-    double temperature;
+    float pressure = 0;
+    float temperature = 0;
 
     temperature = pressure4_get_temperature( &pressure4 );
-    log_printf( &logger, "Temperature : %.2lf \r\n", temperature );
+    log_printf( &logger, "Temperature : %.2f degC\r\n", temperature );
     Delay_ms( 100 );
     
     pressure = pressure4_get_pressure( &pressure4 );
-    log_printf( &logger, "Pressure : %.2lf hPa \r\n", pressure );
+    log_printf( &logger, "Pressure : %.2f mBar\r\n", pressure );
     log_printf( &logger, "========================\r\n" );
 
     Delay_ms( 500 );

@@ -32,8 +32,8 @@ static log_t logger;
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
-    proxfusion_cfg_t cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    proxfusion_cfg_t proxfusion_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -46,41 +46,42 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
-    proxfusion_cfg_setup( &cfg );
-    PROXFUSION_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    proxfusion_init( &proxfusion, &cfg );
-
-    proxfusion_default_cfg( &proxfusion );
-    Delay_ms( 1500 );
-    log_info( &logger, "- It waits for a new touch press event. " );
+    // Click initialization.
+    proxfusion_cfg_setup( &proxfusion_cfg );
+    PROXFUSION_MAP_MIKROBUS( proxfusion_cfg, MIKROBUS_1 );
+    if ( I2C_MASTER_ERROR == proxfusion_init( &proxfusion, &proxfusion_cfg ) )
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
+    
+    if ( PROXFUSION_ERROR == proxfusion_default_cfg ( &proxfusion ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
+    
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )
 {
-    uint8_t touch;
-
-    //  Task implementation.
-
-    touch = proxfusion_get_touch( &proxfusion );
-
-    if (  touch == 1  )
+    uint8_t touch = proxfusion_get_touch( &proxfusion );
+    if ( 1 == touch )
     {
-        log_printf( &logger, "** Touch 1 is pressed..\r\n" );
+        log_printf( &logger, " Touch button 1 is pressed\r\n" );
     }
-    else if ( touch == 2 )
+    else if ( 2 == touch )
     {
-        log_printf( &logger, "** Touch 2 is pressed..\r\n" );
+        log_printf( &logger, " Touch button 2 is pressed\r\n" );
     }
-    else if ( touch == 3 )
+    else if ( 3 == touch )
     {
-        log_printf( &logger, "** All the touch is pressed..\r\n" );
+        log_printf( &logger, " Both touch buttons are pressed\r\n" );
     }
-
-    Delay_100ms();
+    Delay_ms( 100 );
 }
 
 void main ( void )

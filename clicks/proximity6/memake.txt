@@ -1,7 +1,0 @@
-type: subdirs
-project: Proximity6
-
-subdirs: {
-    lib
-    example
-}

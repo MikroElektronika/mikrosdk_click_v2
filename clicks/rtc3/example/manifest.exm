@@ -2,7 +2,7 @@
     "name": "RTC 3 Click",
     "description": "RTC3 click carries BQ32000, a real time clock with an integrated trickle charge circuit for automatic switchover to a backup power supply (the circuit maintains the backup charge with an onboard super capacitor).",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","BQ32000"],
     "category" : ["RTC"] 
 }

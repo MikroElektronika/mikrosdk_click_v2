@@ -2,7 +2,7 @@
     "name": "Proximity 6 click",
     "description": "Proximity 6 click is a versatile proximity detection device on a Click board™.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","ADUX1020","PCA9306","SN74LVC1T45"],
     "category" : ["Proximity"] 
 }

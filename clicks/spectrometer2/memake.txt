@@ -1,7 +1,0 @@
-type: subdirs
-project: Spectrometer2
-
-subdirs: {
-    lib
-    example
-}

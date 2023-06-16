@@ -2,7 +2,7 @@
 ---
 # Pressure 4 click
 
-Pressure 4 click is an absolute barometric pressure measurement Click board™, which features a low power consumption, high precision barometric pressure sensor.
+> Pressure 4 click is an absolute barometric pressure measurement Click board™, which features a low power consumption, high precision barometric pressure sensor. Capable of using both SPI and I2C communication protocols, Pressure 4 click allows being interfaced with a broad range of various microcontroller units (MCUs). The sensor used on this Click board™ features onboard processing capabilities, such as the IIR filtering, used to filter out abrupt changes of pressure. Low power consumption allows Pressure 4 click to be used in many portable, battery-powered applications.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/pressure4_click.png" height=300px>
@@ -34,26 +34,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void pressure4_cfg_setup ( pressure4_cfg_t *cfg ); 
- 
-- Initialization function.
-> PRESSURE4_RETVAL pressure4_init ( pressure4_t *ctx, pressure4_cfg_t *cfg );
+- `pressure4_cfg_setup` Config Object Initialization function.
+```c
+void pressure4_cfg_setup ( pressure4_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void pressure4_default_cfg ( pressure4_t *ctx );
+- `pressure4_init` Initialization function.
+```c
+err_t pressure4_init ( pressure4_t *ctx, pressure4_cfg_t *cfg );
+```
 
+- `pressure4_default_cfg` Click Default Configuration function.
+```c
+void pressure4_default_cfg ( pressure4_t *ctx );
+```
 
 #### Example key functions :
 
-- This function returns the contents of the chipid register.
-> uint8_t pressure4_read_id ( pressure4_t *ctx );
- 
-- This function returning the calulated temperature value.
-> double pressure4_get_temperature ( pressure4_t *ctx );
+- `pressure4_read_id` This function returns the contents of the chipid register.
+```c
+uint8_t pressure4_read_id ( pressure4_t *ctx );
+```
 
-- This function returning the calulated value of the pressure.
-> double pressure4_get_pressure ( pressure4_t *ctx );
+- `pressure4_get_temperature` This function returning the calculated temperature value.
+```c
+float pressure4_get_temperature ( pressure4_t *ctx );
+```
+
+- `pressure4_get_pressure` This function returning the calculated value of the pressure.
+```c
+float pressure4_get_pressure ( pressure4_t *ctx );
+```
 
 ## Examples Description
 
@@ -83,16 +94,15 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----\r\n" );
+    log_info( &logger, " Application Init " );
 
     //  Click initialization.
-
     pressure4_cfg_setup( &cfg );
     PRESSURE4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pressure4_init( &pressure4, &cfg );
 
     pressure4_default_cfg( &pressure4 );
-    Delay_ms( 100 );
+    log_info( &logger, " Application Task " );
 }
   
 ```
@@ -106,15 +116,15 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    double pressure;
-    double temperature;
+    float pressure = 0;
+    float temperature = 0;
 
     temperature = pressure4_get_temperature( &pressure4 );
-    log_printf( &logger, "Temperature : %.2lf \r\n", temperature );
+    log_printf( &logger, "Temperature : %.2f degC\r\n", temperature );
     Delay_ms( 100 );
     
     pressure = pressure4_get_pressure( &pressure4 );
-    log_printf( &logger, "Pressure : %.2lf hPa \r\n", pressure );
+    log_printf( &logger, "Pressure : %.2f mBar\r\n", pressure );
     log_printf( &logger, "========================\r\n" );
 
     Delay_ms( 500 );

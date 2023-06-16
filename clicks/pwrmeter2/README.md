@@ -1,9 +1,9 @@
 \mainpage Main Page
- 
+  
 ---
 # PWR Meter 2 click
 
-PWR Meter 2 click is a compact and accurate power monitoring Click board™, capable of measuring and monitoring voltage up to 24V and current up to 5A.
+> PWR Meter 2 click is a compact and accurate power monitoring Click board™, capable of measuring and monitoring voltage up to 24V and current up to 5A.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/pwrmeter2_click.png" height=300px>
@@ -36,26 +36,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void pwrmeter2_cfg_setup ( pwrmeter2_cfg_t *cfg ); 
- 
-- Initialization function.
-> PWRMETER2_RETVAL pwrmeter2_init ( pwrmeter2_t *ctx, pwrmeter2_cfg_t *cfg );
+- `pwrmeter2_cfg_setup` Config Object Initialization function.
+```c
+void pwrmeter2_cfg_setup ( pwrmeter2_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void pwrmeter2_default_cfg ( pwrmeter2_t *ctx );
+- `pwrmeter2_init` Initialization function.
+```c
+err_t pwrmeter2_init ( pwrmeter2_t *ctx, pwrmeter2_cfg_t *cfg );
+```
 
+- `pwrmeter2_default_cfg` Click Default Configuration function.
+```c
+err_t pwrmeter2_default_cfg ( pwrmeter2_t *ctx );
+```
 
 #### Example key functions :
 
-- This function waits until conversion, for the desired channel, is finished and returns information about data width.
-> uint8_t pwrmeter2_check_data_ready ( pwrmeter2_t *ctx, uint8_t sel_chann );
- 
-- This function returns the state of the modulator output for the channel 1.
-> uint8_t pwrmeter2_get_modulator_1 ( pwrmeter2_t *ctx );
+- `pwrmeter2_get_data` This function gets the calculated voltage( V ), current( A ) and power( W ) data.
+```c
+err_t pwrmeter2_get_data ( pwrmeter2_t *ctx, float *voltage, float *current, float *power );
+```
 
-- This function returns the state of the Data Ready ( DR ) pin.
-> uint8_t pwrmeter2_check_ready_pin ( pwrmeter2_t *ctx );
+- `pwrmeter2_write_reg` This function writes 24-bit data to the register.
+```c
+err_t pwrmeter2_write_reg ( pwrmeter2_t *ctx, uint8_t reg, uint32_t data_in );
+```
+
+- `pwrmeter2_read_reg` This function reads the desired number of 24-bit data from the register/registers.
+```c
+err_t pwrmeter2_read_reg ( pwrmeter2_t *ctx, uint8_t reg, uint32_t *data_out, uint8_t len );
+```
 
 ## Examples Description
 
@@ -71,8 +82,8 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
-    pwrmeter2_cfg_t cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    pwrmeter2_cfg_t pwrmeter2_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -85,41 +96,46 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----\r\n" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
-    pwrmeter2_cfg_setup( &cfg );
-    PWRMETER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    pwrmeter2_init( &pwrmeter2, &cfg );
-
-    pwrmeter2_default_cfg( &pwrmeter2 );
-    log_printf( &logger, "PWR Meter 2 is initialized \r\n" );
-    Delay_ms( 200 );
+    // Click initialization.
+    pwrmeter2_cfg_setup( &pwrmeter2_cfg );
+    PWRMETER2_MAP_MIKROBUS( pwrmeter2_cfg, MIKROBUS_1 );
+    if ( SPI_MASTER_ERROR == pwrmeter2_init( &pwrmeter2, &pwrmeter2_cfg ) )
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
+    
+    if ( PWRMETER2_ERROR == pwrmeter2_default_cfg ( &pwrmeter2 ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
+    
+    log_info( &logger, " Application Task " );
 }
   
 ```
 
 ### Application Task
 
-> Gets calculated voltage, current and power data every 500 miliseconds
-> and shows results on UART.
+> Gets calculated voltage, current and power data every 500 milliseconds and shows results on UART.
 
 ```c
 
 void application_task ( void )
 {
-    int32_t voltage_res;
-    int32_t current_res;
-    uint32_t power_res;
-
-    pwrmeter2_get_data( &pwrmeter2, &voltage_res, &current_res, &power_res );
-
-    log_printf( &logger, "U = %ld mV \r\n", voltage_res );
-    log_printf( &logger, "I = %ld mA \r\n", current_res );
-    log_printf( &logger, "P = %lu mW \r\n", power_res );
-
-    Delay_ms( 500 );
+    float voltage = 0;
+    float current = 0;
+    float power = 0;
+    if ( PWRMETER2_OK == pwrmeter2_get_data( &pwrmeter2, &voltage, &current, &power ) )
+    {
+        log_printf( &logger, " U = %.3f V\r\n", voltage );
+        log_printf( &logger, " I = %.3f A\r\n", current );
+        log_printf( &logger, " P = %.3f W\r\n\n", power );
+        Delay_ms( 500 );
+    }
 }
 
 ```

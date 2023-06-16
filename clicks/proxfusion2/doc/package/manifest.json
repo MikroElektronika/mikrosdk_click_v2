@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Capacitive",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > HMI > Capacitive",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+    "dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "ProxFusion 2 click",
     "example_list": [
@@ -25,20 +24,15 @@
     },
     "name": "mikroe.click.proxfusion2",
     "product_link": "https://www.mikroe.com/proxfusion-2-click",
-    "short_description": "ProxFusion® 2 Click is an ambient lighting, capacitive, Hall-effect, and inductive sensing Click board™ which features a single multifunctional sensor IC.",
-    "supported_compiler": "mikroC AI",
+    "short_description": "ProxFusion 2 Click is an ambient lighting, capacitive, Hall-effect, and inductive sensing Click board™ which features a single multifunctional sensor IC.",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2547
     ],
-    "_type": "mikroSDK Library",
-    "version": "2.0.0.7"
+    "version": "2.1.0.7",
+    "cmake": true,
+    "alias": "Click.ProxFusion2",
+    "subdir_name": "lib_proxfusion2"
 }
-
-
-
-
-
-
-

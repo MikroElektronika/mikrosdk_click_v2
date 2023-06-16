@@ -2,7 +2,7 @@
 ---
 # RTD 2 click
 
-RTD 2 Click is a compact add-on board used for applications with resistive elements that change resistance over temperature. This board features the ADS1247, 24-bit analog-to-digital converter with a programmable gain amplifier (PGA) for sensor measurement applications from Texas Instruments.
+> RTD 2 Click is a compact add-on board used for applications with resistive elements that change resistance over temperature. This board features the ADS1247, 24-bit analog-to-digital converter with a programmable gain amplifier (PGA) for sensor measurement applications from Texas Instruments.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/rtd2_click.png" height=300px>
@@ -35,30 +35,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void rtd2_cfg_setup ( rtd2_cfg_t *cfg ); 
- 
-- Initialization function.
-> RTD2_RETVAL rtd2_init ( rtd2_t *ctx, rtd2_cfg_t *cfg );
+- `rtd2_cfg_setup` Config Object Initialization function.
+```c
+void rtd2_cfg_setup ( rtd2_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void rtd2_default_cfg ( rtd2_t *ctx );
+- `rtd2_init` Initialization function.
+```c
+err_t rtd2_init ( rtd2_t *ctx, rtd2_cfg_t *cfg );
+```
 
+- `rtd2_default_cfg` Click Default Configuration function.
+```c
+void rtd2_default_cfg ( rtd2_t *ctx );
+```
 
 #### Example key functions :
 
-- The function check new data ready of the 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters
-- With Programmable Gain Amplifier (PGA) For Sensor Measurement on the RTD 2 click board.
-> uint8_t rtd2_check_new_data_ready ( rtd2_t *ctx );
- 
-- The function read output data and return ambient temperature from the PT100 3-wire temperature 
-- probe wired to the 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With Programmable 
-- Gain Amplifier (PGA) For Sensor Measurement on the RTD 2 click board.
-> float rtd2_get_temperature ( rtd2_t *ctx );
+- `rtd2_check_new_data_ready` The function check new data ready of the 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With Programmable Gain Amplifier (PGA) For Sensor Measurement on the RTD 2 click board.
+```c
+uint8_t rtd2_check_new_data_ready ( rtd2_t *ctx );
+```
 
-- The function enables ADC conversion of the 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital 
-- Converters With Programmable Gain Amplifier (PGA) For Sensor Measurement on the RTD 2 click.
-> void rtd2_enable_start ( rtd2_t *ctx, uint8_t en_start );
+- `rtd2_get_temperature` The function read output data and return ambient temperature from the PT100 3-wire temperature probe wired to the 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With Programmable Gain Amplifier (PGA) For Sensor Measurement on the RTD 2 click board.
+```c
+float rtd2_get_temperature ( rtd2_t *ctx );
+```
+
+- `rtd2_enable_start` The function enables ADC conversion of the 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With Programmable Gain Amplifier (PGA) For Sensor Measurement on the RTD 2 click.
+```c
+void rtd2_enable_start ( rtd2_t *ctx, uint8_t en_start );
+```
 
 ## Examples Description
 
@@ -91,11 +98,9 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     rtd2_cfg_setup( &cfg );
     RTD2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rtd2_init( &rtd2, &cfg );
-
     Delay_ms( 200 );
 
     log_printf( &logger, "----- Hardware Reset ------\r\n" );

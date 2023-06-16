@@ -13,8 +13,8 @@
  * 
  * ## Application Task  
  * This is an example that shows the capabilities of the Shake2Wake click by
- * reading values of an accelerometer and logging them on USART terminal and, in case of an interrupt, it
- * raises voltage on the connector.
+ * reading values of an accelerometer and logging them on USART terminal and,
+ * in case of an interrupt, it raises voltage on the connector.
  * 
  * \author MikroE Team
  *
@@ -51,25 +51,25 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     shake2wake_cfg_setup( &cfg );
     SHAKE2WAKE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     shake2wake_init( &shake2wake, &cfg );
-
     Delay_ms( 100 );
+
     log_printf( &logger, "--------------------------\r\n" );
     log_printf( &logger, "    Shake2Wake  Click     \r\n" );
     log_printf( &logger, "--------------------------\r\n" );
 
     shake2wake_default_cfg( &shake2wake );
+    Delay_ms( 1000 );
 }
 
 void application_task ( void )
 {
-    float temperature;
-    int16_t x_val;
-    int16_t y_val;
-    int16_t z_val;
+    float temperature = 0;
+    int16_t x_val = 0;
+    int16_t y_val = 0;
+    int16_t z_val = 0;
 
     shake2wake_get_raw_data( &shake2wake, &x_val, &y_val, &z_val );
     temperature = shake2wake_read_temperature( &shake2wake );
@@ -77,7 +77,7 @@ void application_task ( void )
     log_printf( &logger, "X axis: %d\r\n", x_val );
     log_printf( &logger, "Y axis: %d\r\n", y_val );
     log_printf( &logger, "Z axis: %d\r\n", z_val );
-    log_printf( &logger, "Temperature: %f \r\n", temperature );
+    log_printf( &logger, "Temperature: %.2f degC\r\n", temperature );
     log_printf( &logger, "--------------------------\r\n" );
     Delay_ms( 1000 );
 }

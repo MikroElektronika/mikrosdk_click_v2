@@ -2,7 +2,7 @@
 ---
 # RTC 7 click
 
-RTC 7 Click is a real time clock module which has an extremely low power consumption, allowing it to be used with a single button cell battery or a super capacitor, for an extended period of time. 
+> RTC 7 Click is a real time clock module which has an extremely low power consumption, allowing it to be used with a single button cell battery or a super capacitor, for an extended period of time. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/rtc7_click.png" height=300px>
@@ -35,26 +35,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void rtc7_cfg_setup ( rtc7_cfg_t *cfg ); 
- 
-- Initialization function.
-> RTC7_RETVAL rtc7_init ( rtc7_t *ctx, rtc7_cfg_t *cfg );
+- `rtc7_cfg_setup` Config Object Initialization function.
+```c
+void rtc7_cfg_setup ( rtc7_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void rtc7_default_cfg ( rtc7_t *ctx );
+- `rtc7_init` Initialization function.
+```c
+err_t rtc7_init ( rtc7_t *ctx, rtc7_cfg_t *cfg );
+```
 
+- `rtc7_default_cfg` Click Default Configuration function.
+```c
+err_t rtc7_default_cfg ( rtc7_t *ctx );
+```
 
 #### Example key functions :
 
-- This function performs the device initialization.
-> uint8_t rtc7_init_time ( rtc7_t *ctx, int8_t time_zone, uint8_t time_mode );
- 
-- This function performs the oscillator to be configured and enabled.
-> uint8_t rtc7_set_osc ( rtc7_t *ctx, uint8_t enable_osc, uint8_t clk_in, uint8_t clk_out );
+- `rtc7_check_interrupt` This function returns the interrupt state, state of INTA pin.
+```c
+uint8_t rtc7_check_interrupt ( rtc7_t *ctx );
+```
 
-- This function gets the gmt time data in both time formats.
-> void rtc7_get_gmt_time ( rtc7_t *ctx, rtc7_time_t *gmt_time );
+- `rtc7_read_reg` This function writes one byte data to the register.
+```c
+err_t rtc7_read_reg ( rtc7_t *ctx, uint8_t reg, uint8_t *data_out, uint8_t len );
+```
+
+- `rtc7_get_local_time` This function gets the local time data including the determined time zone in calculations.
+```c
+err_t rtc7_get_local_time ( rtc7_t *ctx, rtc7_time_t *local_time );
+```
 
 ## Examples Description
 
@@ -84,64 +95,59 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----\r\n" );
+    log_info( &logger, " Application Init " );
 
     //  Click initialization.
-
     rtc7_cfg_setup( &cfg );
     RTC7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rtc7_init( &rtc7, &cfg );
-    
     Delay_ms( 300 );
-
+    
     time_set.seconds = 40;
     time_set.minutes = 59;
-    time_set.hours = 1;
+    time_set.hours = 23;
     time_set.weekdays = 1;
-    time_set.monthday = 1;
-    time_set.month = 1;
-    time_set.year = 18;
+    time_set.monthday = 31;
+    time_set.month = 12;
+    time_set.year = 22;
     
-    check_change = 0;
-    check_year = 0;
-    
-    rtc7_reset( &rtc7 );
-    rtc7_disable_dst( &rtc7 );
-    rtc7_init_time ( &rtc7, -2, RTC7_12HR_FORMAT );
-    rtc7_set_gmt_time( &rtc7, &time_set );
-    log_printf( &logger, "RTC 7 is initialized \r\n" );
-    Delay_ms( 1000 );
-    rtc7_set_osc( &rtc7, RTC7_ENABLE_OSC, RTC7_INPUT_FREQ_32768HZ, RTC7_OUTPUT_FREQ_32768HZ );
-    rtc7_set_timer( &rtc7, RTC7_TIMER_EN, RTC7_TIMER_FREQ_16HZ );
-
+    err_t error_flag = rtc7_reset( &rtc7 );
+    error_flag |= rtc7_init_time ( &rtc7, 0 );
+    error_flag |= rtc7_set_gmt_time( &rtc7, &time_set );
+    error_flag |= rtc7_set_osc( &rtc7, RTC7_ENABLE_OSC, RTC7_INPUT_FREQ_32768HZ, RTC7_OUTPUT_FREQ_32768HZ );
+    error_flag |= rtc7_write_reg( &rtc7, RTC7_TIMER_INIT_REG, 15 );
+    error_flag |= rtc7_set_timer( &rtc7, RTC7_TIMER_EN, RTC7_TIMER_FREQ_16HZ );
+    Delay_ms( 100 );
+    if ( RTC7_ERROR == error_flag )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
+    log_info( &logger, " Application Task " );
 }
   
 ```
 
 ### Application Task
 
-> Waits until device be stable and logs time after each second.
+> Waits for a second count-up interrupt and then reads and logs the current time and date on the USB UART.
 
 ```c
 
 void application_task ( void )
 {
-    rtc7_get_local_time( &rtc7, &time_date );
+    // Wait for timer count-down interrupt which is set to 1Hz
+    while ( rtc7_check_interrupt ( &rtc7 ) );
+
+    // Clear interrupt status
+    uint8_t int_status = 0;
+    rtc7_read_reg( &rtc7, RTC7_INT_STATUS_REG, &int_status, 1 );
     
-    if ( check_year == 0 )
+    // Read time
+    if ( RTC7_OK == rtc7_get_local_time( &rtc7, &time_date ) )
     {
-        log_printf( &logger, "Wait... \r\n" );
-        while ( ( time_date.year != time_set.year ) && ( time_date.year != ( time_set.year + 1 ) ) && ( time_date.year != ( time_set.year - 1 ) ) )
-        {
-            rtc7_get_local_time( &rtc7, &time_date );
-        }
-        check_year = 1;
-    }
-    
-    if ( check_change != time_date.seconds )
-    {
+        // Display time
         rtc7_display_results( &rtc7 );
-        check_change = time_date.seconds;
     }
 }
 

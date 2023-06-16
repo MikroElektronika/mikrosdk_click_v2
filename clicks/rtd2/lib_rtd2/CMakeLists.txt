@@ -1,0 +1,33 @@
+cmake_minimum_required(VERSION 3.21)
+if (${TOOLCHAIN_LANGUAGE} MATCHES "MikroC")
+    project(lib_rtd2 LANGUAGES MikroC)
+else()
+    project(lib_rtd2 LANGUAGES C ASM)
+endif()
+
+if (NOT PROJECT_TYPE)
+    set(PROJECT_TYPE "mikrosdk" CACHE STRING "" FORCE)
+endif()
+
+add_library(lib_rtd2 STATIC
+        src/rtd2.c
+        include/rtd2.h
+)
+add_library(Click.Rtd2  ALIAS lib_rtd2)
+
+if (${MCU_NAME} MATCHES "(^PIC18F(.+)[KQ]4[23]$)|(^PIC32(.+)$)")
+    set(sample_mode_reg_case "SAMPLE_REG_CASE_1")
+else()
+    set(sample_mode_reg_case "SAMPLE_REG_CASE_2")
+endif()
+
+target_compile_definitions(lib_rtd2 PUBLIC ${sample_mode_reg_case})
+
+target_include_directories(lib_rtd2 PUBLIC
+        include
+)
+
+find_package(MikroC.Core REQUIRED)
+target_link_libraries(lib_rtd2 PUBLIC MikroC.Core)
+find_package(MikroSDK.Driver REQUIRED)
+target_link_libraries(lib_rtd2 PUBLIC MikroSDK.Driver)

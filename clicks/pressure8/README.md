@@ -1,11 +1,9 @@
 \mainpage Main Page
  
- 
-
 ---
 # Pressure 8 click
 
-Pressure 8 Click is an accurate and fully calibrated pressure sensor, equipped with the MPR series integrated piezoresistive silicon pressure sensor IC. 
+> Pressure 8 Click is an accurate and fully calibrated pressure sensor, equipped with the MPR series integrated piezoresistive silicon pressure sensor IC. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/pressure8_click.png" height=300px>
@@ -38,23 +36,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void pressure8_cfg_setup ( pressure8_cfg_t *cfg ); 
- 
-- Initialization function.
-> PRESSURE8_RETVAL pressure8_init ( pressure8_t *ctx, pressure8_cfg_t *cfg );
+- `pressure8_cfg_setup` Config Object Initialization function.
+```c
+void pressure8_cfg_setup ( pressure8_cfg_t *cfg ); 
+```
 
+- `pressure8_init` Initialization function.
+```c
+err_t pressure8_init ( pressure8_t *ctx, pressure8_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Functions for get Pressure data
-> float pressure8_get_pressure ( pressure8_t *ctx, uint8_t press_foramt );
- 
-- Functions for get device status
-> uint8_t pressure8_get_device_status ( pressure8_t *ctx );
+- `pressure8_get_pressure` Functions for get Pressure data
+```c
+float pressure8_get_pressure ( pressure8_t *ctx, uint8_t press_format );
+```
 
-- Functions for set PSI range
-> void pressure8_set_psi_range ( float psi_min, float psi_max );
+- `pressure8_get_device_status` Functions for get device status
+```c
+uint8_t pressure8_get_device_status ( pressure8_t *ctx );
+```
+
+- `pressure8_set_psi_range` Functions for set PSI range
+```c
+void pressure8_set_psi_range ( pressure8_t *ctx, float psi_min, float psi_max );
+```
 
 ## Examples Description
 
@@ -83,30 +90,32 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
     //  Click initialization.
-
     pressure8_cfg_setup( &cfg );
     PRESSURE8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pressure8_init( &pressure8, &cfg );
 
     pressure8_device_reset( &pressure8 );
-    pressure8_set_psi_range( 0, 25 );
+    pressure8_set_psi_range( &pressure8, 0, 25 );
+    Delay_ms ( 1000 );
+    
+    log_info( &logger, " Application Task " );
 }
 ```
 
 ### Application Task
 
-> Reads Pressure data and this data logs every 1 sec.
+> Reads pressure data in mBar and logs it on the USB UART once per second.
 
 ```c
 void application_task ( void )
 {
-    float pressure_data;
+    float pressure = 0;
     
-    pressure_data = pressure8_get_pressure( &pressure8, PRESSURE8_DATA_IN_mBar );
-    log_printf( &logger, "--- Pressure data : %f mBar\r\n", pressure_data );
+    pressure = pressure8_get_pressure( &pressure8, PRESSURE8_DATA_IN_MBAR );
+    log_printf( &logger, " Pressure: %.1f mBar\r\n", pressure );
 
     Delay_ms( 1000 );
 }

@@ -2,7 +2,7 @@
     "name": "Presence Click",
     "description": "Presence click is an infrared sensing Click board™ which can be used for presence sensing, motion detection, and a remote overtemperature protection.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","TPiS 1S 1385"],
     "category" : ["Miscellaneous"] 
 }

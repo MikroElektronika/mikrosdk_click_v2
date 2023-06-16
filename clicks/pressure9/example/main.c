@@ -9,10 +9,8 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initialization driver init, test comunication, software reset, 
- * configuration module for measurement and
- * calls the function to update calibration coefficients 
- * - this function must be called before the measurement starts.
+ * Initialization the driver, test comunication, and performs the click
+ * default configuration.
  *
  * ## Application Task
  * Reads Temperature data in [C] and Pressure data in [mBar] and this 
@@ -32,7 +30,6 @@
 static pressure9_t pressure9;
 static log_t logger;
 
-static uint8_t tmp;
 static float temperature;
 static float pressure;
 
@@ -54,40 +51,36 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
     //  Click initialization.
-
     pressure9_cfg_setup( &cfg );
     PRESSURE9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pressure9_init( &pressure9, &cfg );
+    Delay_ms( 100 );
 
     // Test comunication
-
-    pressure9_generic_read( &pressure9, PRESSURE9_REG_PRODUCT_ID, &tmp, 1 );
-
-    if ( tmp == PRESSURE9_PRODUCT_ID )
+    uint8_t product_id = 0;
+    pressure9_generic_read( &pressure9, PRESSURE9_REG_PRODUCT_ID, &product_id, 1 );
+    if ( PRESSURE9_PRODUCT_ID != product_id )
     {
-        log_printf( &logger, "---- Comunication OK!!! ----\r\n" );
-    }
-    else
-    {
-        log_printf( &logger, "---- Comunication ERROR!!! ----\r\n" );
+        log_error( &logger, "Read product ID." );
         for ( ; ; );
     }
 
     pressure9_default_cfg( &pressure9 );
-    log_printf( &logger, "---- Start Measurement ----\r\n" );
     Delay_ms( 100 );
+
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )
 {
     pressure = pressure9_get_pressure_data( &pressure9 );
-    log_printf( &logger, "-- Pressure : %.2f mBar\r\n", pressure );
+    log_printf( &logger, " Pressure: %.2f mBar\r\n", pressure );
 
     temperature = pressure9_get_temperature_data( &pressure9 );
-    log_printf( &logger, "-- Temperature : %.2f °C\r\n", temperature );
+    log_printf( &logger, " Temperature: %.2f degC\r\n", temperature );
 
     log_printf( &logger, "-----------------------------\r\n" );
     Delay_ms( 2000 );
