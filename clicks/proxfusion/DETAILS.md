@@ -1,10 +1,8 @@
 
- 
-
 ---
 # ProxFusion click
 
-ProxFusion click is a multifunctional capacitive and Hall-effect sensor device. This click can detect touch by using two onboard sensor pads, and it can sense a rotation angle of a magnetic field, parallel with the surface of the click board.
+> ProxFusion click is a multifunctional capacitive and Hall-effect sensor device. This click can detect touch by using two onboard sensor pads, and it can sense a rotation angle of a magnetic field, parallel with the surface of the click board.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/proxfusion_click.png" height=300px>
@@ -37,26 +35,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void proxfusion_cfg_setup ( proxfusion_cfg_t *cfg ); 
- 
-- Initialization function.
-> PROXFUSION_RETVAL proxfusion_init ( proxfusion_t *ctx, proxfusion_cfg_t *cfg );
+- `proxfusion_cfg_setup` Config Object Initialization function.
+```c
+void proxfusion_cfg_setup ( proxfusion_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void proxfusion_default_cfg ( proxfusion_t *ctx );
+- `proxfusion_init` Initialization function.
+```c
+err_t proxfusion_init ( proxfusion_t *ctx, proxfusion_cfg_t *cfg );
+```
 
+- `proxfusion_default_cfg` Click Default Configuration function.
+```c
+err_t proxfusion_default_cfg ( proxfusion_t *ctx );
+```
 
 #### Example key functions :
 
-- Touch event
-> uint8_t proxfusion_get_touch ( proxfusion_t *ctx );
- 
-- Sets system register
-> void proxfusion_set_system_reg ( proxfusion_t *ctx, uint8_t cfg );
+- `proxfusion_get_touch` Touch event
+```c
+uint8_t proxfusion_get_touch ( proxfusion_t *ctx );
+```
 
-- Selecting events
-> void proxfusion_set_event_reg ( proxfusion_t *ctx, uint8_t cfg );
+- `proxfusion_set_system_reg` Sets system register
+```c
+err_t proxfusion_set_system_reg ( proxfusion_t *ctx, uint8_t cfg );
+```
+
+- `proxfusion_set_event_reg` Selecting events
+```c
+err_t proxfusion_set_event_reg ( proxfusion_t *ctx, uint8_t cfg );
+```
 
 ## Examples Description
 
@@ -72,8 +81,8 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ```c
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
-    proxfusion_cfg_t cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    proxfusion_cfg_t proxfusion_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -86,17 +95,24 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
-    proxfusion_cfg_setup( &cfg );
-    PROXFUSION_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    proxfusion_init( &proxfusion, &cfg );
-
-    proxfusion_default_cfg( &proxfusion );
-    Delay_ms( 1500 );
-    log_info( &logger, "- It waits for a new touch press event. " );
+    // Click initialization.
+    proxfusion_cfg_setup( &proxfusion_cfg );
+    PROXFUSION_MAP_MIKROBUS( proxfusion_cfg, MIKROBUS_1 );
+    if ( I2C_MASTER_ERROR == proxfusion_init( &proxfusion, &proxfusion_cfg ) )
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
+    
+    if ( PROXFUSION_ERROR == proxfusion_default_cfg ( &proxfusion ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
+    
+    log_info( &logger, " Application Task " );
 } 
 ```
 
@@ -107,22 +123,20 @@ void application_init ( void )
 ```c
 void application_task ( void )
 {
-    uint8_t touch;
-
-    //  Task implementation.
-
-    touch = proxfusion_get_touch( &proxfusion );
-
-    if ( ( touch == 1 ) || ( touch == 2 ) )
+    uint8_t touch = proxfusion_get_touch( &proxfusion );
+    if ( 1 == touch )
     {
-        log_printf( &logger, "** Touch %d is pressed..\r\n", touch );
+        log_printf( &logger, " Touch button 1 is pressed\r\n" );
     }
-    else if ( touch == 3 )
+    else if ( 2 == touch )
     {
-        log_printf( &logger, "** All the touch is pressed..\r\n" );
+        log_printf( &logger, " Touch button 2 is pressed\r\n" );
     }
-
-    Delay_100ms();
+    else if ( 3 == touch )
+    {
+        log_printf( &logger, " Both touch buttons are pressed\r\n" );
+    }
+    Delay_ms( 100 );
 }
 ```
 

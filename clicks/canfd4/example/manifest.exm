@@ -2,7 +2,7 @@
     "name": "CAN FD 4 Click",
     "description": "The CAN FD 4 Click is a Click board™ that features the NCV7344D10R2G, a Controller Area Network (CAN) transceiver, from ON Semiconductor.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
     "hw" : ["click","NCV7344D10R2G"],
     "category" : ["CAN"] 
 }

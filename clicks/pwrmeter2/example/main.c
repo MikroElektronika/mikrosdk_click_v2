@@ -11,7 +11,7 @@
  * Initializes device.
  * 
  * ## Application Task  
- * Gets calculated voltage, current and power data every 500 miliseconds
+ * Gets calculated voltage, current and power data every 500 milliseconds
  * and shows results on UART.
  * 
  * \author MikroE Team
@@ -32,8 +32,8 @@ static log_t logger;
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
-    pwrmeter2_cfg_t cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    pwrmeter2_cfg_t pwrmeter2_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -46,32 +46,38 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
-    pwrmeter2_cfg_setup( &cfg );
-    PWRMETER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    pwrmeter2_init( &pwrmeter2, &cfg );
-
-    pwrmeter2_default_cfg( &pwrmeter2 );
-    log_printf( &logger, "PWR Meter 2 is initialized \r\n" );
-    Delay_ms( 200 );
+    // Click initialization.
+    pwrmeter2_cfg_setup( &pwrmeter2_cfg );
+    PWRMETER2_MAP_MIKROBUS( pwrmeter2_cfg, MIKROBUS_1 );
+    if ( SPI_MASTER_ERROR == pwrmeter2_init( &pwrmeter2, &pwrmeter2_cfg ) )
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
+    
+    if ( PWRMETER2_ERROR == pwrmeter2_default_cfg ( &pwrmeter2 ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
+    
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )
 {
-    int32_t voltage_res;
-    int32_t current_res;
-    uint32_t power_res;
-
-    pwrmeter2_get_data( &pwrmeter2, &voltage_res, &current_res, &power_res );
-
-    log_printf( &logger, "U = %ld mV \r\n", voltage_res );
-    log_printf( &logger, "I = %ld mA \r\n", current_res );
-    log_printf( &logger, "P = %lu mW \r\n", power_res );
-
-    Delay_ms( 500 );
+    float voltage = 0;
+    float current = 0;
+    float power = 0;
+    if ( PWRMETER2_OK == pwrmeter2_get_data( &pwrmeter2, &voltage, &current, &power ) )
+    {
+        log_printf( &logger, " U = %.3f V\r\n", voltage );
+        log_printf( &logger, " I = %.3f A\r\n", current );
+        log_printf( &logger, " P = %.3f W\r\n\n", power );
+        Delay_ms( 500 );
+    }
 }
 
 void main ( void )

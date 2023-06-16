@@ -52,11 +52,9 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     rtd2_cfg_setup( &cfg );
     RTD2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rtd2_init( &rtd2, &cfg );
-
     Delay_ms( 200 );
 
     log_printf( &logger, "----- Hardware Reset ------\r\n" );

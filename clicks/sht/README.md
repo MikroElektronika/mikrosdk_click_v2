@@ -1,11 +1,9 @@
 \mainpage Main Page
- 
+  
 ---
 # SHT click
 
-SHT click is a temperature and humidity sensing click board that carries Sensiron’s SHT3x-DIS IC.
-Compared to its predecessor (SHT11), SHT3x click has increased reliability and enhanced signal
-processing features with a high signal-to-noise ratio.
+> SHT click is a temperature and humidity sensing click board that carries Sensiron’s SHT3x-DIS IC. Compared to its predecessor (SHT11), SHT3x click has increased reliability and enhanced signal processing features with a high signal-to-noise ratio.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/sht_click.png" height=300px>
@@ -38,26 +36,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void sht_cfg_setup ( sht_cfg_t *cfg ); 
- 
-- Initialization function.
-> SHT_RETVAL sht_init ( sht_t *ctx, sht_cfg_t *cfg );
+- `sht_cfg_setup` Config Object Initialization function.
+```c
+void sht_cfg_setup ( sht_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void sht_default_cfg ( sht_t *ctx );
-
+- `sht_init` Initialization function.
+```c
+err_t sht_init ( sht_t *ctx, sht_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Returns temperature measurement in single shot mode.
-> float sht_temp_ss ( sht_t *ctx );
- 
-- Returns humidity measurement in single shot mode.
-> float sht_hum_ss ( sht_t *ctx );
+- `sht_temp_ss` Returns temperature measurement in single shot mode.
+```c
+float sht_temp_ss ( sht_t *ctx );
+```
 
-- Sets the heater state.
-> void sht_heater_control ( sht_t *ctx, uint8_t state );
+- `sht_hum_ss` Returns humidity measurement in single shot mode.
+```c
+float sht_hum_ss ( sht_t *ctx );
+```
+
+- `sht_heater_control` Sets the heater state.
+```c
+void sht_heater_control ( sht_t *ctx, uint8_t state );
+```
 
 ## Examples Description
 
@@ -87,43 +91,41 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
     //  Click initialization.
-
     sht_cfg_setup( &cfg );
     SHT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     sht_init( &sht, &cfg );
+    
+    sht_reset( &sht );
+    sht_hw_reset( &sht );
+    Delay_ms( 2000 );
+    
+    log_info( &logger, " Application Task " );
 }
   
 ```
 
 ### Application Task
 
-> Temperature and humidity data is measured and read from
-> the sensor. After the data has been read it is displayed
-> on the serial port.
+> Temperature and humidity data is measured and read from the sensor. 
+> After the data has been read it is displayed on the serial port.
 
 ```c
 
 void application_task ( void )
 {
-    //  Task implementation.
-
-    float temperature;
-    float humidity;
-
-    Delay_ms( 1500 );
+    float temperature = 0;
+    float humidity = 0;
 
     temperature = sht_temp_ss( &sht );
-    log_printf( &logger, "Temperature: %.2f C \r\n", temperature );
-
-    Delay_ms( 200 );
+    log_printf( &logger, " Temperature: %.2f degC\r\n", temperature );
 
     humidity = sht_hum_ss( &sht );
-    log_printf( &logger, "Humidity: %.2f %% \r\n", humidity );
+    log_printf( &logger, " Humidity: %.2f %%\r\n\n", humidity );
 
-    Delay_ms( 200 );
+    Delay_ms( 1000 );
 }  
 
 ```

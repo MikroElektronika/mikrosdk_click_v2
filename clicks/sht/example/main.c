@@ -11,10 +11,8 @@
  * Initialize the communication interface and configure the click board.
  * 
  * ## Application Task  
- * Temperature and humidity data is measured and read from
- * the sensor. After the data has been read it is displayed
- * on the serial port.
- * 
+ * Temperature and humidity data is measured and read from the sensor. 
+ * After the data has been read it is displayed on the serial port.
  * 
  * \author MikroE Team
  *
@@ -48,36 +46,32 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
     //  Click initialization.
-
     sht_cfg_setup( &cfg );
     SHT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     sht_init( &sht, &cfg );
     
     sht_reset( &sht );
     sht_hw_reset( &sht );
+    Delay_ms( 2000 );
+    
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )
 {
-    //  Task implementation.
-
-    float temperature;
-    float humidity;
-
-    Delay_ms( 1500 );
+    float temperature = 0;
+    float humidity = 0;
 
     temperature = sht_temp_ss( &sht );
-    log_printf( &logger, "Temperature: %.2f C \r\n", temperature );
-
-    Delay_ms( 200 );
+    log_printf( &logger, " Temperature: %.2f degC\r\n", temperature );
 
     humidity = sht_hum_ss( &sht );
-    log_printf( &logger, "Humidity: %.2f %% \r\n", humidity );
+    log_printf( &logger, " Humidity: %.2f %%\r\n\n", humidity );
 
-    Delay_ms( 200 );
+    Delay_ms( 1000 );
 }
 
 void main ( void )

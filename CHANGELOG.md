@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230616](#20230616)**
 + **[20230609](#20230609)**
 + **[20230602](#20230602)**
 + **[20230526](#20230526)**
@@ -50,6 +51,49 @@
 
 ---
 ---
+---
+
+## `20230616`
+
+*Following click boards have been added:*
+
++ `Smart Buck 3`
++ `DIGI POT 13`
++ `DC Motor 13`
++ `DC Motor 23`
++ `Stepper 9`
++ `Stepper 20`
+
+*Following click boards have been updated:*
+
++ `Presence`
++ `Pressure 2`
++ `Pressure 4`
++ `Pressure 8`
++ `Pressure 9`
++ `ProxFusion`
++ `ProxFusion 2`
++ `Proximity 3`
++ `Proximity 6`
++ `PWR Meter 2`
++ `RTC 3`
++ `RTC 7`
++ `RTC 8`
++ `RTD 2`
++ `Shake2Wake`
++ `SHT`
++ `Spectral`
++ `Spectrometer 2`
++ `SPI Isolator 2`
++ `CAN FD 4`
++ `NO2`
++ `Waveform 4`
++ `Qi RX`
++ `RS232 Isolator`
++ `Flash 11`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230609`

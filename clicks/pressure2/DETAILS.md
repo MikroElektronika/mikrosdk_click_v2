@@ -1,9 +1,8 @@
 
-
 ---
 # Pressure 2 click
 
-Pressure 2 click carries MS5803, a high resolution MEMS pressure sensor that is both precise and robust.
+> Pressure 2 click carries MS5803, a high resolution MEMS pressure sensor that is both precise and robust.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/pressure-2-click.png" height=300px>
@@ -36,31 +35,42 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void pressure2_cfg_setup ( pressure2_cfg_t *cfg ); 
- 
-- Initialization function.
-> PRESSURE2_RETVAL pressure2_init ( pressure2_t *ctx, pressure2_cfg_t *cfg );
+- `pressure2_cfg_setup` Config Object Initialization function.
+```c
+void pressure2_cfg_setup ( pressure2_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void pressure2_default_cfg ( pressure2_t *ctx );
+- `pressure2_init` Initialization function.
+```c
+err_t pressure2_init ( pressure2_t *ctx, pressure2_cfg_t *cfg );
+```
 
+- `pressure2_default_cfg` Click Default Configuration function.
+```c
+err_t pressure2_default_cfg ( pressure2_t *ctx );
+```
 
 #### Example key functions :
 
-- This function read calibration coefficients and return coefficient.
-> uint16_t pressure2_read_coefficient ( pressure2_t *ctx, uint8_t index );
+- `pressure2_read_coefficient` This function read calibration coefficients and return coefficient.
+```c
+uint16_t pressure2_read_coefficient ( pressure2_t *ctx, uint8_t index );
+```
 
-- This function preforms ADC conversion and return 24bit result.
-> uint32_t pressure2_send_CmdADC ( pressure2_t *ctx, uint8_t cmd );
+- `pressure2_send_cmd_adc` This function preforms ADC conversion and return 24bit result.
+```c
+uint32_t pressure2_send_cmd_adc ( pressure2_t *ctx, uint8_t cmd );
+```
 
-- Functions for readding sensor.
-> void pressure2_read_sensor ( pressure2_t *ctx, float *P, float *T );
+- `pressure2_read_sensor` Functions for readding sensor.
+```c
+void pressure2_read_sensor ( pressure2_t *ctx, float *press, float *temp );
+```
 
 ## Examples Description
 
-> This application measures pressure in range from 0 to 14 bars (with a resolution of up to 0.2 mbars), but because of the stainless 
-> steel cap enclosure, the sensor can withstand up to 30 bars of pressure.
+> This application measures pressure in range from 0 to 14 bars (with a resolution of up to 0.2 mbars),
+but because of the stainless steel cap enclosure, the sensor can withstand up to 30 bars of pressure.
 
 **The demo application is composed of two sections :**
 
@@ -73,8 +83,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    pressure2_cfg_t cfg;
-    float pressure_res;
+    pressure2_cfg_t pressure2_cfg;
 
     /** 
      * Logger initialization.
@@ -87,29 +96,40 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
+    // Click initialization.
+    pressure2_cfg_setup( &pressure2_cfg );
+    PRESSURE2_MAP_MIKROBUS( pressure2_cfg, MIKROBUS_1 );
+    if ( SPI_MASTER_ERROR == pressure2_init( &pressure2, &pressure2_cfg ) )
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
+    
+    if ( PRESSURE2_ERROR == pressure2_default_cfg ( &pressure2 ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
 
-    pressure2_cfg_setup( &cfg );
-    PRESSURE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    pressure2_init( &pressure2, &cfg );
+    log_info( &logger, " Application Task " );
 }
   
 ```
 
 ### Application Task
 
-> Reads sensor and logs to USBUART pressure and temperature every second. 
+> Reads sensor and logs to USB UART pressure and temperature every second. 
 
 ```c
 
 void application_task ( void )
 {
-    pressure2_read_sensor( &pressure2, &pressure_p, &pressure_t );
+    pressure2_read_sensor( &pressure2, &pressure, &temperature );
     
-    log_printf( &logger,"Pressure: %.2f\r\n", pressure_p );
-    log_printf( &logger,"Temperature: %.2f\r\n", pressure_t );
+    log_printf( &logger," Pressure: %.2f mBar\r\n", pressure );
+    log_printf( &logger," Temperature: %.2f degC\r\n\n", temperature );
 
     Delay_ms( 1000 );
 }

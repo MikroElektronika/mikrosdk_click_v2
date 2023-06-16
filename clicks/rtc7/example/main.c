@@ -11,7 +11,8 @@
  * Initializes device.
  * 
  * ## Application Task  
- * Waits until device be stable and logs time after each second.
+ * Waits for a second count-up interrupt and then reads and logs the current
+ * time and date on the USB UART.
  * 
  * \author MikroE Team
  *
@@ -29,76 +30,59 @@ static log_t logger;
 
 rtc7_time_t time_set;
 rtc7_time_t time_date;
-uint8_t check_change;
-uint8_t check_year;
 
 // ------------------------------------------------------- ADDITIONAL FUNCTIONS
 
 void rtc7_display_results ( rtc7_t *ctx )
 {
-    log_printf( &logger, "%d : %d : %d ", time_date.hours, time_date.minutes, time_date.seconds );
+    log_printf( &logger, " %.2u:%.2u:%.2u\r\n", 
+                ( uint16_t ) time_date.hours, ( uint16_t ) time_date.minutes, ( uint16_t ) time_date.seconds );
 
-    if ( ( ctx->rtc7_am_pm & 0x02 ) != 0 )
-    {
-        if ( ( ctx->rtc7_am_pm & 0x01 ) == 0 )
-        {
-            log_printf( &logger, " AM \r\n" );
-        }
-        else
-        {
-            log_printf( &logger, " PM \r\n" );
-        }
-    }
-    else
-    {
-        log_printf( &logger, " " );
-    }
-
+    log_printf( &logger, " %.2u/%.2u/%.2u ", 
+                ( uint16_t ) time_date.monthday, ( uint16_t ) time_date.month, ( uint16_t ) time_date.year );
     switch ( time_date.weekdays )
     {
-        case 1 :
+        case 1:
         {
             log_printf( &logger, "MONDAY" );
             break;
         }
-        case 2 :
+        case 2:
         {
             log_printf( &logger, "TUESDAY" );
             break;
         }
-        case 3 :
+        case 3:
         {
             log_printf( &logger, "WEDNESDAY" );
             break;
         }
-        case 4 :
+        case 4:
         {
             log_printf( &logger, "THURSDAY" );
             break;
         }
-        case 5 :
+        case 5:
         {
             log_printf( &logger, "FRIDAY" );
             break;
         }
-        case 6 :
+        case 6:
         {
             log_printf( &logger, "SATURDAY" );
             break;
         }
-        case 7 :
+        case 7:
         {
             log_printf( &logger, "SUNDAY" );
             break;
         }
-        default :
+        default:
         {
-        break;
+            break;
         }
     }
-
-    log_printf( &logger, "  %d / %d / %d \r\n", time_date.monthday, time_date.month, time_date.year );
-    log_printf( &logger, "---------------------------\r\n" );
+    log_printf( &logger, "\r\n-------------------\r\n" );
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -119,56 +103,51 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
     //  Click initialization.
-
     rtc7_cfg_setup( &cfg );
     RTC7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rtc7_init( &rtc7, &cfg );
-    
     Delay_ms( 300 );
-
+    
     time_set.seconds = 40;
     time_set.minutes = 59;
-    time_set.hours = 1;
+    time_set.hours = 23;
     time_set.weekdays = 1;
-    time_set.monthday = 1;
-    time_set.month = 1;
-    time_set.year = 18;
+    time_set.monthday = 31;
+    time_set.month = 12;
+    time_set.year = 22;
     
-    check_change = 0;
-    check_year = 0;
-    
-    rtc7_reset( &rtc7 );
-    rtc7_disable_dst( &rtc7 );
-    rtc7_init_time ( &rtc7, -2, RTC7_12HR_FORMAT );
-    rtc7_set_gmt_time( &rtc7, &time_set );
-    log_printf( &logger, "RTC 7 is initialized \r\n" );
-    Delay_ms( 1000 );
-    rtc7_set_osc( &rtc7, RTC7_ENABLE_OSC, RTC7_INPUT_FREQ_32768HZ, RTC7_OUTPUT_FREQ_32768HZ );
-    rtc7_set_timer( &rtc7, RTC7_TIMER_EN, RTC7_TIMER_FREQ_16HZ );
-
+    err_t error_flag = rtc7_reset( &rtc7 );
+    error_flag |= rtc7_init_time ( &rtc7, 0 );
+    error_flag |= rtc7_set_gmt_time( &rtc7, &time_set );
+    error_flag |= rtc7_set_osc( &rtc7, RTC7_ENABLE_OSC, RTC7_INPUT_FREQ_32768HZ, RTC7_OUTPUT_FREQ_32768HZ );
+    error_flag |= rtc7_write_reg( &rtc7, RTC7_TIMER_INIT_REG, 15 );
+    error_flag |= rtc7_set_timer( &rtc7, RTC7_TIMER_EN, RTC7_TIMER_FREQ_16HZ );
+    Delay_ms( 100 );
+    if ( RTC7_ERROR == error_flag )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )
 {
-    rtc7_get_local_time( &rtc7, &time_date );
+    // Wait for timer count-down interrupt which is set to 1Hz
+    while ( rtc7_check_interrupt ( &rtc7 ) );
+
+    // Clear interrupt status
+    uint8_t int_status = 0;
+    rtc7_read_reg( &rtc7, RTC7_INT_STATUS_REG, &int_status, 1 );
     
-    if ( check_year == 0 )
+    // Read time
+    if ( RTC7_OK == rtc7_get_local_time( &rtc7, &time_date ) )
     {
-        log_printf( &logger, "Wait... \r\n" );
-        while ( ( time_date.year != time_set.year ) && ( time_date.year != ( time_set.year + 1 ) ) && ( time_date.year != ( time_set.year - 1 ) ) )
-        {
-            rtc7_get_local_time( &rtc7, &time_date );
-        }
-        check_year = 1;
-    }
-    
-    if ( check_change != time_date.seconds )
-    {
+        // Display time
         rtc7_display_results( &rtc7 );
-        check_change = time_date.seconds;
     }
 }
 

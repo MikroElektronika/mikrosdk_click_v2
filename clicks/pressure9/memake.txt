@@ -1,7 +1,0 @@
-type: subdirs
-project: Pressure9
-
-subdirs: {
-    lib
-    example
-}

@@ -1,11 +1,9 @@
 \mainpage Main Page
  
- 
-
 ---
 # RTC 8 click
 
-RTC 8 click is a real time clock module which has an extremely low power consumption, allowing it to be used with a single button cell battery, for an extended period of time. 
+> RTC 8 click is a real time clock module which has an extremely low power consumption, allowing it to be used with a single button cell battery, for an extended period of time. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/rtc8_click.png" height=300px>
@@ -18,7 +16,7 @@ RTC 8 click is a real time clock module which has an extremely low power consump
 
 #### Click library 
 
-- **Author**        : Katarina Perendic
+- **Author**        : MikroE Team
 - **Date**          : okt 2019.
 - **Type**          : I2C type
 
@@ -38,26 +36,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void rtc8_cfg_setup ( rtc8_cfg_t *cfg ); 
- 
-- Initialization function.
-> RTC8_RETVAL rtc8_init ( rtc8_t *ctx, rtc8_cfg_t *cfg );
+- `rtc8_cfg_setup` Config Object Initialization function.
+```c
+void rtc8_cfg_setup ( rtc8_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void rtc8_default_cfg ( rtc8_t *ctx );
+- `rtc8_init` Initialization function.
+```c
+err_t rtc8_init ( rtc8_t *ctx, rtc8_cfg_t *cfg );
+```
 
+- `rtc8_default_cfg` Click Default Configuration function.
+```c
+err_t rtc8_default_cfg ( rtc8_t *ctx );
+```
 
 #### Example key functions :
 
-- Get Alarm flag
-> uint8_t rtc8_get_alarm_flag( rtc8_t *ctx );
- 
-- Get RTC data ( Time and Data )
-> void rtx8_get_time_and_date ( rtc8_t *ctx, rtc8_time_t *time_s, rtc8_date_t *date_s );
+- `rtc8_set_time` Set new time - 24 hour format
+```c
+err_t rtc8_set_time ( rtc8_t *ctx, rtc8_time_t *time_s );
+```
 
-- Set UNIX time
-> void rtc8_set_unix_time ( rtc8_t *ctx, int32_t unix_time );
+- `rtc8_set_date` Set new date
+```c
+err_t rtc8_set_date ( rtc8_t *ctx, rtc8_date_t *date_s );
+```
+
+- `rtx8_get_time_and_date` Get RTC data ( Time and Data )
+```c
+err_t rtx8_get_time_and_date ( rtc8_t *ctx, rtc8_time_t *time_s, rtc8_date_t *date_s );
+```
 
 ## Examples Description
 
@@ -75,7 +84,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    rtc8_cfg_t cfg;
+    rtc8_cfg_t rtc8_cfg;
 
     /** 
      * Logger initialization.
@@ -88,44 +97,49 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
+    // Click initialization.
+    rtc8_cfg_setup( &rtc8_cfg );
+    RTC8_MAP_MIKROBUS( rtc8_cfg, MIKROBUS_1 );
+    if ( I2C_MASTER_ERROR == rtc8_init( &rtc8, &rtc8_cfg ) ) 
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
 
-    rtc8_cfg_setup( &cfg );
-    RTC8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    rtc8_init( &rtc8, &cfg );
-
-    rtc8_default_cfg( &rtc8 );
+    if ( RTC8_ERROR == rtc8_default_cfg ( &rtc8 ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
 
     // 24h format - HH,MM,SS
-
     time_s.hours = 23;
-    time_s.minutes = 58;
-    time_s.seconds = 30;
+    time_s.minutes = 59;
+    time_s.seconds = 50;
 
     rtc8_set_time( &rtc8, &time_s );
 
     // Set date format
-
+    date_s.weekdays = 5;
     date_s.day = 31;
     date_s.month = 12;
-    date_s.year = 18;
+    date_s.year = 22;
 
     rtc8_set_date( &rtc8, &date_s );
 
     // Set UNIX time
-
-    rtc8_set_unix_time( &rtc8, 1545053360 );
+    rtc8_set_unix_time( &rtc8, 1672527590ul );
 
     // Set alarm format
-
-    alarm_s.weekdays = 3;
+    alarm_s.weekdays = 6;
     alarm_s.hours = 0;
     alarm_s.minutes = 0;
 
     rtc8_set_alarm( &rtc8, &alarm_s );
-    Delay_100ms();
+
+    log_info( &logger, " Application Task " );
 } 
 ```
 
@@ -136,40 +150,37 @@ void application_init ( void )
 ```c
 void application_task ( void )
 {
-    uint8_t alarm;
-    uint32_t unix_time;
+    static uint8_t time_seconds = 0xFF;
+    uint8_t alarm = 0;
+    uint32_t unix_time = 0;
+    
+    err_t error_flag = rtx8_get_time_and_date( &rtc8, &time_s, &date_s );
+    error_flag |= rtc8_get_uinx_time( &rtc8, &unix_time );
+    error_flag |= rtc8_get_alarm_flag( &rtc8, &alarm );
 
-    //  Task implementation.
-
-    rtx8_get_time_and_date( &rtc8, &time_s, &date_s );
-    unix_time = rtc8_get_uinx_time( &rtc8 );
-
-    log_printf( &logger, "\r\n>> ----------------------------- <<\r\n" );
-
-    log_printf( &logger, ">> Time : %d : %d : %d \r\n", time_s.hours, time_s.minutes, time_s.seconds );
-    log_printf( &logger, ">> Weekday : %d \r\n", date_s.weekdays );
-    log_printf( &logger, ">> Date : %d : %d : %d \r\n", date_s.day, date_s.month, date_s.year );
-    log_printf( &logger, ">> UNIX : %ld \r\n", unix_time );
-
-    alarm  = rtc8_get_alarm_flag( &rtc8 );
-
-    if ( alarm == RTC8_ALARM_IS_ACTIVE )
+    if ( ( RTC8_OK == error_flag ) && ( time_seconds != time_s.seconds ) )
     {
-        log_printf( &logger, " - Alarm Active!!! " );
-        rtc8_reset_alarm_flag( &rtc8 );
+        display_weekday ( date_s.weekdays );
+        log_printf( &logger, " Time: %.2u:%.2u:%.2u\r\n Date: %.2u.%.2u.20%.2u.\r\n", 
+                    ( uint16_t ) time_s.hours, ( uint16_t ) time_s.minutes,
+                    ( uint16_t ) time_s.seconds, ( uint16_t ) date_s.day, 
+                    ( uint16_t ) date_s.month, ( uint16_t ) date_s.year );
+        log_printf( &logger, " UNIX: %lu\r\n", unix_time );
+        if ( RTC8_ALARM_IS_ACTIVE == alarm )
+        {
+            log_info( &logger, " Alarm Activated!!! " );
+            rtc8_reset_alarm_flag( &rtc8 );
+        }
+        log_printf( &logger, "------------------\r\n" );
+        time_seconds = time_s.seconds;
     }
-    else
-    {
-        log_printf( &logger, " - No Alarm." );
-    }
-
-    Delay_ms( 1000 );
+    Delay_ms( 200 );
 }
 ```
 
 ## Note
 
-> Comment the lines for setting date and time if you would like the 
+> Comment out the lines for setting date and time if you would like the 
 > module to keep counting time after a reset or shut down.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.

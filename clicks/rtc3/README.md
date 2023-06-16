@@ -1,9 +1,9 @@
 \mainpage Main Page
- 
+  
 ---
 # RTC 3 click
 
-RTC3 click carries BQ32000, a real time clock with an integrated trickle charge circuit for automatic switchover to a backup power supply (the circuit maintains the backup charge with an onboard super capacitor).
+> RTC3 click carries BQ32000, a real time clock with an integrated trickle charge circuit for automatic switchover to a backup power supply (the circuit maintains the backup charge with an onboard super capacitor).
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/rtc3_click.png" height=300px>
@@ -36,39 +36,42 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void rtc3_cfg_setup ( rtc3_cfg_t *cfg ); 
- 
-- Initialization function.
-> RTC3_RETVAL rtc3_init ( rtc3_t *ctx, rtc3_cfg_t *cfg );
+- `rtc3_cfg_setup` Config Object Initialization function.
+```c
+void rtc3_cfg_setup ( rtc3_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void rtc3_default_cfg ( rtc3_t *ctx );
-
+- `rtc3_init` Initialization function.
+```c
+err_t rtc3_init ( rtc3_t *ctx, rtc3_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Function sets time: hours, minutes and seconds data to
-- the target register address of PCF8583 chip on RTC 3 Click.
-> void rtc3_set_time ( rtc3_t *ctx );
- 
-- Function gets time: hours, minutes and seconds data from
--  the target register address of PCF8583 chip on RTC 3 Click.
-> void rtc3_get_time ( rtc3_t *ctx );
+- `rtc3_set_time` Set time hours, minutes, seconds function
+```c
+void rtc3_set_time ( rtc3_t *ctx );
+```
 
-- Function set calibration by write CAL_CFG1 register of BQ32000 chip.
-> void rtc3_set_calibration ( rtc3_t *ctx, uint8_t cal_sign, uint8_t cal_mumber );
+- `rtc3_get_time` Get time hours, minutes, seconds function
+```c
+void rtc3_get_time ( rtc3_t *ctx );
+```
+
+- `rtc3_get_date` Get day of the week, day, month and year function
+```c
+void rtc3_get_date ( rtc3_t *ctx );
+```
 
 ## Examples Description
 
-> This application enables time measurment over RTC3 click.
+> This example demonstrates the use of RTC 3 click board by reading and displaying the time and date values.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initialization driver enable's - I2C,
-> set start time and date, enable counting and start write log.
+> Initializes the driver and logger and then sets the starting time and date.
 
 ```c
 
@@ -88,87 +91,70 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
     //  Click initialization.
-
     rtc3_cfg_setup( &cfg );
     RTC3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rtc3_init( &rtc3, &cfg );
+    Delay_ms ( 100 );
+    
+    // Stop counting
+    rtc3_set_counting( &rtc3, 0 );
 
-    /// Set Time: 23h, 59 min, 50 sec
-
+    // Set Time: 23h, 59 min, 50 sec
     rtc3.time.time_hours = 23;
     rtc3.time.time_minutes = 59;
     rtc3.time.time_seconds = 50;
 
     rtc3_set_time( &rtc3 );
 
-    // Set Date: 1 ( Day of the week ), 31 ( day ), 12 ( month ) and 2018 ( year )
-
-    rtc3.date.day_of_the_week = 1;
+    // Set Date: 6 ( Day of the week ), 31 ( day ), 12 ( month ) and 2022 ( year )
+    rtc3.date.day_of_the_week = 6;
     rtc3.date.date_day = 31;
     rtc3.date.date_month = 12;
-    rtc3.date.date_year = 2018;
+    rtc3.date.date_year = 22;
 
     rtc3_set_date( &rtc3 );
 
     // Start counting
-   
-    rtc3_enable_disable_counting( &rtc3, 1 );
-    Delay_100ms( );
+    rtc3_set_counting( &rtc3, 1 );
+    Delay_ms( 100 );
     
-    Delay_ms( 1000 );
+    log_info( &logger, " Application Task " );
 }
   
 ```
 
 ### Application Task
 
-> This is a example which demonstrates the use of RTC 3 Click board.
-> RTC 3 Click communicates with register via I2C by write to register and read from register,
-> set time and date, get time and date, enable and disable counting
->  and set frequency by write configuration register.
-> Results are being sent to the Usart Terminal where you can track their changes.
-> All data logs write on usb uart changes for every 1 sec.
+> Reads and displays on the USB UART the current time and date values once per second.
 
 ```c
 
 void application_task ( void )
 {
-    //  Task implementation.
-
-    uint8_t time_seconds_new = 0xFF;
-    
-     
+    static uint8_t time_seconds = 0xFF;
 
     rtc3_get_time( &rtc3 );
 
     rtc3_get_date( &rtc3 );
 
-    if ( time_seconds_new != rtc3.time.time_seconds )
+    if ( time_seconds != rtc3.time.time_seconds )
     {
-        if ( ( ( rtc3.time.time_hours | rtc3.time.time_minutes | rtc3.time.time_seconds ) == 0 )  && ( ( rtc3.date.date_day | rtc3.date.date_month ) == 1 ) )
-        {
-            log_printf( &logger, "  Happy New Year  \r\n" );
-            log_printf( &logger, "------------------\r\n" );
-        }
+        display_log_day_of_the_week ( rtc3.date.day_of_the_week );
+        log_printf( &logger, " Time: %.2u:%.2u:%.2u\r\n Date: %.2u.%.2u.20%.2u.\r\n------------------\r\n", 
+                    ( uint16_t ) rtc3.time.time_hours, ( uint16_t ) rtc3.time.time_minutes,
+                    ( uint16_t ) rtc3.time.time_seconds, ( uint16_t ) rtc3.date.date_day, 
+                    ( uint16_t ) rtc3.date.date_month, ( uint16_t ) rtc3.date.date_year );
 
-        log_printf( &logger, " Time : %d:%d:%d \r\n Date: %d.%d.20%d.\r\n------------------\r\n", rtc3.time.time_hours, rtc3.time.time_minutes,
-                                                                                            rtc3.time.time_seconds, 
-                                                                                            rtc3.date.date_day, rtc3.date.date_month, rtc3.date.date_year );
-
-        time_seconds_new = rtc3.time.time_seconds;
+        time_seconds = rtc3.time.time_seconds;
     }
 
     Delay_ms( 200 );
 } 
 
 ```
-
-## Note
-
-> Time stats measuring correctly but from 0 seconds, after 10 seconds.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

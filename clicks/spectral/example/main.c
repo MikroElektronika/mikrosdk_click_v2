@@ -26,39 +26,39 @@
 #include "spectral.h"
 #include "string.h"
 
-#define PROCESS_COUNTER 10
-#define PROCESS_RX_BUFFER_SIZE 200
-#define PROCESS_PARSER_BUFFER_SIZE 400
+#define PROCESS_COUNTER             10
+#define PROCESS_RX_BUFFER_SIZE      200
+#define PROCESS_PARSER_BUFFER_SIZE  400
 
-#define SPECTRAL_CMD_DATA      "ATDATA"
-#define SPECTRAL_CMD_AT        "AT" 
-#define SPECTRAL_CMD_GAIN      "ATGAIN=2"
-#define SPECTRAL_CMD_MODE      "ATTCSMD=2"
+#define SPECTRAL_CMD_DATA           "ATDATA"
+#define SPECTRAL_CMD_AT             "AT" 
+#define SPECTRAL_CMD_GAIN           "ATGAIN=2"
+#define SPECTRAL_CMD_MODE           "ATTCSMD=2"
 
 // ------------------------------------------------------------------ VARIABLES
 
 static spectral_t spectral;
 static log_t logger;
 
-static char current_parser_buf[ PROCESS_PARSER_BUFFER_SIZE ];
+static uint8_t current_parser_buf[ PROCESS_PARSER_BUFFER_SIZE ];
 
 // ------------------------------------------------------- ADDITIONAL FUNCTIONS
 
 void spectral_process ( void )
 {
-    int32_t rsp_size;
+    int32_t rsp_size = 0;
     uint16_t rsp_cnt = 0;
     
-    char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
-    uint8_t check_buf_cnt;
+    uint8_t uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
+    uint8_t check_buf_cnt = 0;
     uint8_t process_cnt = PROCESS_COUNTER;
     
     // Clear parser buffer
-    memset( current_parser_buf, 0 , PROCESS_PARSER_BUFFER_SIZE ); 
+    memset( current_parser_buf, 0, PROCESS_PARSER_BUFFER_SIZE ); 
     
-    while( process_cnt != 0 )
+    while ( process_cnt )
     {
-        rsp_size = spectral_uart_read( &spectral, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
+        rsp_size = spectral_uart_read( &spectral, uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
 
         if ( rsp_size > 0 )
         {  
@@ -93,18 +93,18 @@ void spectral_process ( void )
 
 void parser_application ( )
 {
-    uint16_t read_data[ 6 ];
+    uint16_t read_data[ 6 ] = { 0 };
     spectral_send_command( &spectral, SPECTRAL_CMD_DATA );
     spectral_process( );
     
     spectral_get_data( current_parser_buf, read_data );
     
-    log_printf( &logger, "-- X value: %d \r\n", read_data[ 0 ] );    
-    log_printf( &logger, "-- Y value: %d \r\n", read_data[ 1 ] );  
-    log_printf( &logger, "-- Z value: %d \r\n", read_data[ 2 ] ); 
-    log_printf( &logger, "-- NIR value: %d \r\n", read_data[ 3 ] );
-    log_printf( &logger, "-- D value: %d \r\n", read_data[ 4 ] );
-    log_printf( &logger, "-- C value: %d \r\n", read_data[ 5 ] );
+    log_printf( &logger, "-- X value: %d\r\n", read_data[ 0 ] );    
+    log_printf( &logger, "-- Y value: %d\r\n", read_data[ 1 ] );  
+    log_printf( &logger, "-- Z value: %d\r\n", read_data[ 2 ] ); 
+    log_printf( &logger, "-- NIR value: %d\r\n", read_data[ 3 ] );
+    log_printf( &logger, "-- D value: %d\r\n", read_data[ 4 ] );
+    log_printf( &logger, "-- C value: %d\r\n", read_data[ 5 ] );
     log_printf( &logger, "-----------------\r\n" );
 }
 
@@ -128,8 +128,7 @@ void application_init ( void )
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
-    //  Click initialization.
-
+    // Click initialization.
     spectral_cfg_setup( &cfg );
     SPECTRAL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     spectral_init( &spectral, &cfg );

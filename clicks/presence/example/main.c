@@ -3,16 +3,18 @@
  * \brief Presence Click example
  * 
  * # Description
- * This application enables usage of sensor for motion and presence sensing and measuring of object's and ambient temperature.
+ * This application enables usage of sensor for motion and presence sensing
+ * and measuring of object's and ambient temperature.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes driver init, start eeprom process and configuration chip for measurement.
+ * Initializes driver and performs the click default configuration.
  * 
  * ## Application Task  
- * Check whether a new event (Motion, Presence or Temp threshold exceeded) is detected.
- * 
+ * Checks whether a new event (motion, presence or over-temperature) is detected. 
+ * If there's no event detected it reads the ambient and object temperature and displays
+ * the results on the USB UART.
  * 
  * \author MikroE Team
  *
@@ -28,18 +30,12 @@
 static presence_t presence;
 static log_t logger;
 
-static uint16_t log_counter = 0;
-#define LOG_INT               1000
-
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
 {
     log_cfg_t log_cfg;
     presence_cfg_t cfg;
-
-    uint8_t tmp;
-    uint8_t w_temp;
 
     /** 
      * Logger initialization.
@@ -55,85 +51,60 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
-
     presence_cfg_setup( &cfg );
-    PRESENCE_MAP_MIKROBUS( cfg, MIKROBUS_4 );
+    PRESENCE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     presence_init( &presence, &cfg );
 
-    // General call address
-
-    presence_general_call_addr( &presence );
-    Delay_1sec( );
-
-    // EEPROM
-    
-    tmp = presence_eeprom_process( &presence );
-    if ( tmp == 0 )
+    if ( PRESENCE_ERROR == presence_default_cfg ( &presence ) )
     {
-        log_printf( &logger, "----- EEPROM READ OK! ------\r\n" );
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
     }
-    else
-    {
-        log_printf( &logger, "---- EEPROM READ ERROR! ----\r\n" );
-        log_printf( &logger, "----------------------------\r\n" );
-
-        while ( 1 );
-    }
-    Delay_ms( 2000 );
-    w_temp = PRESENCE_INT_MASK1_TP_OT | PRESENCE_INT_MASK1_MOTION | PRESENCE_INT_MASK1_PRESENCE;
-    presence_generic_write( &presence, PRESENCE_REG_INTERRUPT_MASK_1, &w_temp, 1 );
-    w_temp = PRESENCE_INT_MASK2_TPOT_DIR | PRESENCE_INT_MASK2_SRC_LP1_LP2 | PRESENCE_INT_MASK2_CYCLE_TIME_30ms;
-    presence_generic_write( &presence, PRESENCE_REG_INTERRUPT_MASK_2, &w_temp, 1 );
     
-    w_temp = PRESENCE_LOW_PASS_TIME_1s;
-    presence_generic_write( &presence, PRESENCE_REG_LOW_PASS_TIME_1, &w_temp, 1 );
-    
-    w_temp = 0x22;
-    presence_generic_write( &presence, PRESENCE_REG_TP_PRESENCE_THR, &w_temp, 1 );
-    w_temp = 0x0A;
-    presence_generic_write( &presence, PRESENCE_REG_TP_MOTION_THR, &w_temp, 1 );
-    presence_generic_write( &presence, PRESENCE_REG_TP_OT_THR_1, &w_temp, 1 );
-    w_temp = 0x00;
-    presence_generic_write( &presence, PRESENCE_REG_TP_OT_THR_2, &w_temp, 1 );
-    
-    log_printf( &logger, "-------- INIT DONE ---------\r\n" );
-    log_printf( &logger, "----------------------------\r\n" );
-    Delay_ms( 3000 );
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )
 {
-    //  Task implementation.
-
-    uint8_t int_status;
-    volatile float tamb;
-    volatile float tobj;
-
-    presence_generic_read( &presence, PRESENCE_REG_INTERRUPT_STATUS, &int_status, 1 );
+    uint8_t int_status = 0;
+    uint8_t tp_presence = 0;
+    uint8_t tp_motion = 0;
+    float t_amb = 0;
+    float t_obj = 0;
     
-    if ( log_counter++ > LOG_INT )
+    if ( PRESENCE_OK == presence_generic_read( &presence, PRESENCE_REG_INTERRUPT_STATUS, &int_status, 1 ) )
     {
-        tamb = presence_ambient_temperature( &presence );
-        log_printf( &logger, "---- Ambient Temperature: %.2f\r\n", tamb );
-
-        tobj = presence_object_temperature( &presence );
-        log_printf( &logger, "---- Object Temperature: %.2f\r\n", tobj );
+        if ( int_status & PRESENCE_INT_MASK1_PRESENCE )
+        {
+            if ( PRESENCE_OK == presence_generic_read( &presence, PRESENCE_REG_TP_PRESENCE, &tp_presence, 1 ) )
+            {
+                log_info( &logger, "Presence detected! Level: %u", ( uint16_t ) tp_presence );
+            }
+        }
+        else if ( int_status & PRESENCE_INT_MASK1_MOTION )
+        {
+            if ( PRESENCE_OK == presence_generic_read( &presence, PRESENCE_REG_TP_MOTION, &tp_motion, 1 ) )
+            {
+                log_info( &logger, "Motion detected! Level: %u", ( uint16_t ) tp_motion );
+            }
+        }
+        else if ( int_status & PRESENCE_INT_MASK1_TP_OT )
+        {
+            log_info( &logger, "Temp threshold exceeded!" );
+        }
+        else
+        {
+            if ( PRESENCE_OK == presence_ambient_temperature( &presence, &t_amb ) )
+            {
+                log_printf( &logger, "Ambient temperature: %.2f degC\r\n", t_amb );
+            }
+            if ( PRESENCE_OK == presence_object_temperature( &presence, &t_obj ) )
+            {
+                log_printf( &logger, "Object temperature: %.2f degC\r\n\n", t_obj );
+            }
+        }
     }
-        
-    if ( ( int_status & 0x08 ) != 0 )
-    {
-        log_printf( &logger, "--- Presence detected! ---\r\n" );
-    }
-    else if ( ( int_status & 0x04 ) != 0 )
-    {
-        log_printf( &logger, "--- Motion detected! ---\r\n" );
-    }
-    else if ( ( int_status & 0x10 ) != 0 )
-    {
-        log_printf( &logger, "--- Temp threshold exceeded! ---\r\n" );
-    }
-
-
+    Delay_ms( 1000 );
 }
 
 void main ( void )

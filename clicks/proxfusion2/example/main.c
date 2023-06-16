@@ -8,13 +8,12 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes Driver init and configuraton and init chip
+ * Initializes the driver and performs the click default configuration.
  * 
  * ## Application Task  
- * 1) Checks whether Touch is detected and measures the output detection.
- * 2) Measures Ambient lighting - whether it's Light or Dark, ALS range and ALS output.
- * 3) Checks the orientation of the magnet and measures the HALL output.
- * 
+ * - Checks whether Touch is detected and measures the output detection.
+ * - Measures Ambient lighting - whether it's Light or Dark, ALS range and ALS output.
+ * - Checks the orientation of the magnet and measures the HALL output.
  * 
  * \author MikroE Team
  *
@@ -30,20 +29,12 @@
 static proxfusion2_t proxfusion2;
 static log_t logger;
 
-static uint8_t als_range;
-static uint8_t dark_light_ambient;
-static uint8_t hall_detect;
-static uint8_t touch;
-static uint16_t data_read;
-
-
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
-    proxfusion2_cfg_t cfg;
-    uint8_t check_init;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    proxfusion2_cfg_t proxfusion2_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -56,73 +47,73 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
-    proxfusion2_cfg_setup( &cfg );
-    PROXFUSION2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    check_init = proxfusion2_init( &proxfusion2, &cfg );
-    Delay_ms( 300 );
-    if ( check_init == PROXFUSION2_INIT_ERROR )
+    // Click initialization.
+    proxfusion2_cfg_setup( &proxfusion2_cfg );
+    PROXFUSION2_MAP_MIKROBUS( proxfusion2_cfg, MIKROBUS_1 );
+    if ( I2C_MASTER_ERROR == proxfusion2_init( &proxfusion2, &proxfusion2_cfg ) )
     {
-        log_info( &logger, "---- !ERROR INIT! ----" );
-        for( ; ; );
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
     }
-    check_init = proxfusion2_default_cfg( &proxfusion2 );
     
-    if ( check_init != 0 )
+    if ( PROXFUSION2_ERROR == proxfusion2_default_cfg ( &proxfusion2 ) )
     {
-        log_printf( &logger, "---- !ERROR CFG! ----\r\n" );
-        for( ; ; );
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
     }
+    
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )
 {
-
-    touch = proxfusion2_read_byte( &proxfusion2 , 0x13);
-    if ( ( touch & 0x02 ) != 0 )
+    uint8_t als_range = 0;
+    uint8_t hall_detect = 0;
+    uint16_t read_data = 0;
+    if ( PROXFUSION2_TOUCH_DETECTED == proxfusion2_detect_touch( &proxfusion2 ) )
     {
-        log_printf( &logger, "TOUCH: YES    ");
+        log_printf( &logger, " TOUCH: YES\r\n" );
     }
     else
     {
-        log_printf( &logger, "TOUCH: NO     ");
+        log_printf( &logger, " TOUCH: NO\r\n" );
     }
-    data_read = proxfusion2_read_data( &proxfusion2 , PROXFUSION2_HYSTERESIS_UI_OUTPUT );
-    log_printf( &logger, "T - UI: %d        ", data_read);
+    read_data = proxfusion2_read_data( &proxfusion2 , PROXFUSION2_HYSTERESIS_UI_OUTPUT );
+    log_printf( &logger, " LEVEL: %u\r\n\n", read_data );
  
-    dark_light_ambient = proxfusion2_detect_dark_light( &proxfusion2, &als_range );
-    if ( dark_light_ambient == PROXFUSION2_DARK_AMBIENT )
+    if ( PROXFUSION2_AMBIENT_DARK == proxfusion2_detect_dark_light( &proxfusion2, &als_range ) )
     {
-        log_printf( &logger, "AMBIENT: DARK     " );
+        log_printf( &logger, " AMBIENT: DARK\r\n" );
     }
     else
     {
-        log_printf( &logger, "AMBIENT: LIGHT        " );
+        log_printf( &logger, " AMBIENT: LIGHT\r\n" );
     }
-    log_printf( &logger, "ALS RANGE: %d     ", als_range );
+    log_printf( &logger, " RANGE: %u\r\n", ( uint16_t ) als_range );
  
-    data_read = proxfusion2_read_data( &proxfusion2, PROXFUSION2_ALS_UI_OUTPUT );
+    read_data = proxfusion2_read_data( &proxfusion2, PROXFUSION2_ALS_UI_OUTPUT );
 
-    log_printf( &logger, "ALS UI: %d        ", data_read );
+    log_printf( &logger, " LEVEL: %u\r\n\n", read_data );
  
     hall_detect = proxfusion2_detect_hall( &proxfusion2 );
-    if ( hall_detect != 0)
+    if ( PROXFUSION2_HALL_NORTH == hall_detect )
     {
-        if ( hall_detect == 1 )
-        {
-            log_printf( &logger, "HALL: NORTH       " );
-        }
-        else
-        {
-            log_printf( &logger, "HALL: SOUTH       " );
-        }
+        log_printf( &logger, " HALL: NORTH\r\n" );
     }
-    data_read = proxfusion2_read_data( &proxfusion2, PROXFUSION2_HALL_EFFECT_UI_OUTPUT );
-    log_printf( &logger, "HALL UI: %d\r\n", data_read );
+    else if ( PROXFUSION2_HALL_SOUTH == hall_detect )
+    {
+        log_printf( &logger, " HALL: SOUTH\r\n" );
+    }
+    else
+    {
+        log_printf( &logger, " HALL: UNKNOWN\r\n" );
+    }
+    read_data = proxfusion2_read_data( &proxfusion2, PROXFUSION2_HALL_EFFECT_UI_OUTPUT );
+    log_printf( &logger, " LEVEL: %u\r\n", read_data );
     
+    log_printf( &logger, " --------------\r\n" );
     Delay_ms( 1000 );
 }
 

@@ -2,13 +2,20 @@
 ---
 # Flash 11 click
 
-> PRVIH_PAR_RECENICA_SA_PRODUCT_PAGE_DA_ISPRATE_CELINU
+> Flash 11 Click is a compact add-on board representing a highly reliable memory solution. 
+> This board features the AT25SF321B, a 32-Mbit SPI serial Flash memory with Dual I/O 
+> and Quad I/O support from Dialog Semiconductor. It is designed for applications 
+> in which the program code is shadowed from Flash memory into embedded or external RAM 
+> for execution and where small amounts of data are stored and updated locally in the Flash memory. 
+> It has a flexible and optimized erase architecture for code and data storage applications, 
+> non-volatile protection, three specialized protected programmable 256-byte OTP security registers, 
+> and a 64-bit factory programmable UID register.
 
 <p align="center">
-  <img src="CLICK_IMAGE_LINK" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/flash11_click.png" height=300px>
 </p>
 
-[click Product page](CLICK_PRODUCT_PAGE_LINK)
+[click Product page](https://www.mikroe.com/flash-11-click)
 
 ---
 

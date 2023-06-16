@@ -1,10 +1,8 @@
 
- 
-
 ---
 # Pressure 9 click
 
-Pressure 9 click is a digital barometric air pressure sensor Click board™. It is equipped with the DPS422, barometric air pressure sensor, based on a capacitive sensor element.
+> Pressure 9 click is a digital barometric air pressure sensor Click board™. It is equipped with the DPS422, barometric air pressure sensor, based on a capacitive sensor element.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/pressure9_click.png" height=300px>
@@ -37,40 +35,47 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void pressure9_cfg_setup ( pressure9_cfg_t *cfg ); 
- 
-- Initialization function.
-> PRESSURE9_RETVAL pressure9_init ( pressure9_t *ctx, pressure9_cfg_t *cfg );
+- `pressure9_cfg_setup` Config Object Initialization function.
+```c
+void pressure9_cfg_setup ( pressure9_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void pressure9_default_cfg ( pressure9_t *ctx );
+- `pressure9_init` Initialization function.
+```c
+err_t pressure9_init ( pressure9_t *ctx, pressure9_cfg_t *cfg );
+```
 
+- `pressure9_default_cfg` Click Default Configuration function.
+```c
+void pressure9_default_cfg ( pressure9_t *ctx );
+```
 
 #### Example key functions :
 
-- Get Pressure data in mBar
-> float pressure9_get_pressure_data ( pressure9_t *ctx );
- 
-- Get Temperature data in C
-> float pressure9_get_temperature_data ( pressure9_t *ctx );
+- `pressure9_get_pressure_data` Get Pressure data in mBar
+```c
+float pressure9_get_pressure_data ( pressure9_t *ctx );
+```
 
-- Writing data to the configuration registers
-> void pressure9_configuration ( pressure9_t *ctx, uint8_t reg_adr, uint8_t data_in );
+- `pressure9_get_temperature_data` Get Temperature data in C
+```c
+float pressure9_get_temperature_data ( pressure9_t *ctx );
+```
+
+- `pressure9_configuration` Writing data to the configuration registers
+```c
+void pressure9_configuration ( pressure9_t *ctx, uint8_t reg_adr, uint8_t data_in );
+```
 
 ## Examples Description
 
-> The demo application displays the pressure and temperature 
-> measurement using Pressure 9 click.
+> The demo application displays the pressure and temperature measurement using Pressure 9 click.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initialization driver init, test comunication, software reset, 
-> configuration module for measurement and
-> calls the function to update calibration coefficients 
-> - this function must be called before the measurement starts.
+> Initialization the driver, test comunication, and performs the click default configuration.
 
 ```c
 void application_init ( void )
@@ -89,47 +94,42 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
     //  Click initialization.
-
     pressure9_cfg_setup( &cfg );
     PRESSURE9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pressure9_init( &pressure9, &cfg );
+    Delay_ms( 100 );
 
     // Test comunication
-
-    pressure9_generic_read( &pressure9, PRESSURE9_REG_PRODUCT_ID, &tmp, 1 );
-
-    if ( tmp == PRESSURE9_PRODUCT_ID )
+    uint8_t product_id = 0;
+    pressure9_generic_read( &pressure9, PRESSURE9_REG_PRODUCT_ID, &product_id, 1 );
+    if ( PRESSURE9_PRODUCT_ID != product_id )
     {
-        log_printf( &logger, "---- Comunication OK!!! ----\r\n" );
-    }
-    else
-    {
-        log_printf( &logger, "---- Comunication ERROR!!! ----\r\n" );
+        log_error( &logger, "Read product ID." );
         for ( ; ; );
     }
 
     pressure9_default_cfg( &pressure9 );
-    log_printf( &logger, "---- Start Measurement ----\r\n" );
     Delay_ms( 100 );
+
+    log_info( &logger, " Application Task " );
 } 
 ```
 
 ### Application Task
 
-> Reads Temperature data in [C] and Pressure data in [mBar] and this 
-> data logs to the USB UART every 2 sec.
+> Reads Temperature data in [C] and Pressure data in [mBar] and this data logs to the USB UART every 2 sec.
 
 ```c
 void application_task ( void )
 {
     pressure = pressure9_get_pressure_data( &pressure9 );
-    log_printf( &logger, "-- Pressure : %.2f mBar\r\n", pressure );
+    log_printf( &logger, " Pressure: %.2f mBar\r\n", pressure );
 
     temperature = pressure9_get_temperature_data( &pressure9 );
-    log_printf( &logger, "-- Temperature : %.2f °C\r\n", temperature );
+    log_printf( &logger, " Temperature: %.2f degC\r\n", temperature );
 
     log_printf( &logger, "-----------------------------\r\n" );
     Delay_ms( 2000 );
