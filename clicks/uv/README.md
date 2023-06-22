@@ -1,11 +1,10 @@
 \mainpage Main Page
- 
- 
+
 
 ---
 # UV click
 
-Design devices that warn you of excesive ultraviolet radiation levels with UV click. This click boards carries the ML8511 IC that is sensitive to UV-A (365-315 nm) and UV-B (315-280 nm) rays.
+> Design devices that warn you of excesive ultraviolet radiation levels with UV click. This click boards carries the ML8511 IC that is sensitive to UV-A (365-315 nm) and UV-B (315-280 nm) rays.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/uv_click.png" height=300px>
@@ -18,7 +17,7 @@ Design devices that warn you of excesive ultraviolet radiation levels with UV cl
 
 #### Click library 
 
-- **Author**        : Nenad Filipovic
+- **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : SPI type
 
@@ -38,37 +37,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void uv_cfg_setup ( uv_cfg_t *cfg ); 
- 
-- Initialization function.
-> UV_RETVAL uv_init ( uv_t *ctx, uv_cfg_t *cfg );
+- `uv_cfg_setup` Config Object Initialization function.
+```c
+void uv_cfg_setup ( uv_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void uv_default_cfg ( uv_t *ctx );
-
+- `uv_init` Initialization function.
+```c
+err_t uv_init ( uv_t *ctx, uv_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Read 12-bit UV data function.
-> uint16_t uv_read_data ( uv_t *ctx );
- 
-- Set power mode function.
-> void uv_set_poewr_mode ( uv_t *ctx, uint8_t pwr_en );
+- `uv_read_adc_voltage` ADC Voltage Reading function.
+```c
+err_t uv_read_adc_voltage ( uv_t *ctx, float *data_out );
+```
+
+- `uv_calc_index` UV Index Calculation function.
+```c
+void uv_calc_index ( uv_t *ctx, float data_in, uint8_t *data_out );
+```
 
 ## Examples Description
 
-> 
 > This is a example which demonstrates the use of UV Click board.
-> 
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
->
-> Configuring clicks and log objects.
-> 
+> Configuration of the click and log objects.
 
 ```c
 
@@ -88,48 +87,48 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_printf( &logger, "- Application Init -\r\n" );
+    log_info( &logger, "---- Application Init ----" );
 
-    //  Click initialization.
-
+    // Click initialization.
     uv_cfg_setup( &cfg );
     UV_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    uv_init( &uv, &cfg );
-    
-    uv_default_cfg ( &uv );
-    Delay_ms( 100 );
-    log_printf( &logger, "--------------------\r\n" );
-    log_printf( &logger, "      UV Click\r\n" );
-    log_printf( &logger, "--------------------\r\n" );
+    if ( SPI_MASTER_ERROR == uv_init( &uv, &cfg ) )
+    {
+        log_info( &logger, "---- Application Init Error ----" );
+        log_info( &logger, "---- Please, run program again ----" );
+        for ( ; ; );
+    }
+    uv_set_callback_handler( &uv, application_callback );
+    uv_device_enable( &uv );
+    Delay_ms( 1000 );
+    uv_voltage = 0;
+    uv_index = 0;
+    log_info( &logger, "---- Application Init Done ----\r\n" );
 }
   
 ```
 
 ### Application Task
 
->
-> This is a example which demonstrates the use of UV Click board.
-> Reads 12-bit UV data.
-> Results are being sent to the Usart Terminal where you can track their changes.
-> All data logs on usb uart is changed for every 5 sec.
-> 
+> Reads the result of AD conversion once per second and calculates the UV index based on that. Results are being sent to the USB UART where you can track their changes.
 
 ```c
 
 void application_task ( void )
 {
-    uint16_t uv_data;
-    
-    uv_data = uv_read_data ( &uv );
-    
-    log_printf( &logger, "     UV : %4d\r\n", uv_data );
-    log_printf( &logger, "--------------------\r\n" );
-    Delay_ms( 5000 );
+    if ( SPI_MASTER_ERROR != uv_read_adc_voltage( &uv, &uv_voltage ) )
+    {
+        uv_calc_index( &uv, uv_voltage, &uv_index );
+
+        log_printf( &logger, " UV Index [0-15] : %u\r\n", ( uint16_t ) uv_index );
+        log_printf( &logger, " UV ADC Voltage [V] : %.2f\r\n", uv_voltage );
+        log_printf( &logger, "------------------------------\r\n" );
+    }
+
+    Delay_ms( 1000 );
 }  
 
 ```
-
-## Note
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

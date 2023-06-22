@@ -79,7 +79,8 @@ uint8_t tempprobe_read_temp ( tempprobe_t *ctx, uint16_t sel_channel, float *dat
 
 ```c
 
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     tempprobe_cfg_t tempprobe_cfg;  /**< Click config object. */
 
@@ -97,23 +98,19 @@ void application_init ( void ) {
     log_info( &logger, " Application Init " );
 
     // Click initialization.
-
     tempprobe_cfg_setup( &tempprobe_cfg );
     TEMPPROBE_MAP_MIKROBUS( tempprobe_cfg, MIKROBUS_1 );
-    err_t init_flag  = tempprobe_init( &tempprobe, &tempprobe_cfg );
-    if ( SPI_MASTER_ERROR == init_flag ) {
+    if ( SPI_MASTER_ERROR == tempprobe_init( &tempprobe, &tempprobe_cfg ) ) 
+    {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
-    log_printf( &logger, " Temp Probe initialization \r\n" );
     tempprobe_reset( &tempprobe );
     Delay_ms( 300 );
-    err_t cfg_flag = tempprobe_default_cfg( &tempprobe );
-    if ( TEMPPROBE_ERROR == cfg_flag ) {
-        log_printf( &logger, " Config Error \r\n" );
-        
+    if ( TEMPPROBE_ERROR == tempprobe_default_cfg( &tempprobe ) ) 
+    {
+        log_error( &logger, " Config Error " );
         for ( ; ; );
     }
     Delay_ms( 300 );
@@ -129,19 +126,17 @@ void application_init ( void ) {
 
 ```c
 
-void application_task ( void ) {
-    uint8_t check_state;
+void application_task ( void ) 
+{
+    float temperature_k = 0;
+    float temperature_pn = 0;
+    tempprobe_write_byte( &tempprobe, TEMPPROBE_REG_COMM_STATUS, TEMPPROBE_START_CONV );
+    while ( TEMPPROBE_NO_BUSY_STATE != tempprobe_check_busy( &tempprobe ) );
 
-    tempprobe_write_byte( &tempprobe, TEMPPROBE_REG_COMM_STATUS, TEMPPROBE_START_CONV  );
-    check_state = tempprobe_check_busy( &tempprobe );
-    while ( check_state != TEMPPROBE_NO_BUSY_STATE ) {
-        check_state = tempprobe_check_busy( &tempprobe );
-    }
-
-    tempprobe_read_temp( &tempprobe, TEMPPROBE_REG_PN_JUNCTION_CONV_RES , &temperature_k );
-    log_printf( &logger, " PN-Junction: %.4f C\r\n", temperature_k );
-    tempprobe_read_temp( &tempprobe, TEMPPROBE_REG_THERMO_K_CONV_RES, &temperature_pn );
-    log_printf( &logger, " Thermo K:    %.4f C\r\n", temperature_pn );
+    tempprobe_read_temp( &tempprobe, TEMPPROBE_REG_PN_JUNCTION_CONV_RES, &temperature_pn );
+    log_printf( &logger, " PN-Junction: %.2f C\r\n", temperature_pn );
+    tempprobe_read_temp( &tempprobe, TEMPPROBE_REG_THERMO_K_CONV_RES, &temperature_k );
+    log_printf( &logger, " Thermo K:    %.2f C\r\n", temperature_k );
 
     log_printf( &logger, "------------------------\r\n" );
     Delay_ms( 1500 );

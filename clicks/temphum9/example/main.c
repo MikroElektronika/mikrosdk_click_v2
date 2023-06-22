@@ -3,35 +3,27 @@
  * \brief TempHum9 Click example
  * 
  * # Description
- * <DEMOAPP_DESCRIPTION>
+ * This example demonstrates the use of TempHum 9 click board by reading and displaying
+ * the temperature and humidity measurement results.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes I2C driver and sends SLEEP and WAKEUP dommands
+ * Initializes I2C driver and sends SLEEP and WAKEUP commands.
  * 
  * ## Application Task  
  * Performs simultaneous temperature and relative humidity measurements and logs both values
- * 
- * *note:* 
- * <NOTE>
+ * on the USB UART once per second.
  * 
  * \author MikroE Team
  *
  */
-// ------------------------------------------------------------------- INCLUDES
-
 #include "board.h"
 #include "log.h"
 #include "temphum9.h"
 
-// ------------------------------------------------------------------ VARIABLES
-
 static temphum9_t temphum9;
 static log_t logger;
-float measurement_data[ 2 ];
-
-// ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
 {
@@ -49,38 +41,37 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
     //  Click initialization.
-
     temphum9_cfg_setup( &cfg );
     TEMPHUM9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     temphum9_init( &temphum9, &cfg );
-
+    Delay_ms( 100 );
 
     temphum9_send_command( &temphum9, TEMPHUM9_SLEEP );
-    Delay_ms(500);
-    temphum9_send_command( &temphum9,  TEMPHUM9_WAKEUP );
-    Delay_ms(100);
+    Delay_ms( 500 );
+    temphum9_send_command( &temphum9, TEMPHUM9_WAKEUP );
+    Delay_ms( 500 );
     
-    log_printf( &logger, "< < < app init done > > >\r\n" );
+    log_info( &logger, " Application Task " );
 }
 
 void application_task( )
 {
-    log_printf( &logger, " " );
-
-    temhum9_get_temperature_and_humidity( &temphum9, TEMPHUM9_NORMAL_MODE, measurement_data );
+    float temperature = 0;
+    float humidity = 0;
     
-    log_printf( &logger, "> > > Temperature: %.2fC\r\n", measurement_data[ 0 ] );
-
-    log_printf( &logger, "> > > Relative humidity: %.2f %% \r\n", measurement_data[ 1 ] );
+    temhum9_get_data ( &temphum9, TEMPHUM9_NORMAL_MODE, &temperature, &humidity );
     
-    log_printf( &logger, "------------------------------------------\r\n" );
+    log_printf( &logger, " Temperature: %.2f degC\r\n", temperature );
+
+    log_printf( &logger, " Relative humidity: %.2f %%\r\n", humidity );
+    
+    log_printf( &logger, "-----------------------------\r\n" );
     
     Delay_ms( 1000 );
 }
-
 
 void main ( void )
 {
@@ -91,6 +82,5 @@ void main ( void )
         application_task( );
     }
 }
-
 
 // ------------------------------------------------------------------------ END

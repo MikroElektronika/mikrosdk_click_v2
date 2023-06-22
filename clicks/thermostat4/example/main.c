@@ -9,12 +9,13 @@
  * 
  * ## Application Init 
  * Initializes Driver init, Relay test and
- * sets hysteresis on the WARM channel ( channel B ), after thet starts uploading new data.
+ * sets hysteresis on the WARM channel ( channel B ), after that starts uploading new data.
  * 
  * ## Application Task  
- *  Reads Alert on the WARM and HOT channel.
+ * Reads Alert on the WARM and HOT channel.
  * 
- * @note: The user has the option of adjusting the hysteresis for channel B via the SPI module 
+ * @note
+ * The user has the option of adjusting the hysteresis for channel B via the SPI module 
  * while for channel A it is adjusted via the potentiometer.
  * 
  * @author MikroE Team
@@ -44,44 +45,49 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
+    // Click initialization.
     thermostat4_cfg_setup( &thermostat4_cfg );
     THERMOSTAT4_MAP_MIKROBUS( thermostat4_cfg, MIKROBUS_1 );
-    err_t init_flag  = thermostat4_init( &thermostat4, &thermostat4_cfg );
-    if ( SPI_MASTER_ERROR == init_flag ) {
+    if ( SPI_MASTER_ERROR == thermostat4_init( &thermostat4, &thermostat4_cfg ) ) 
+    {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
 
-    log_printf( &logger, ">> R-E-L-A-Y  O-N <<\r\n" );
+    log_printf( &logger, " RELAY ON\r\n" );
     thermostat4_relay_ctrl( &thermostat4, THERMOSTAT4_RELAY_ON );
     Delay_ms( 1000 );
-    log_printf( &logger, ">> R-E-L-A-Y  O-F-F <<\r\n" );
+    log_printf( &logger, " RELAY OFF\r\n" );
     thermostat4_relay_ctrl( &thermostat4, THERMOSTAT4_RELAY_OFF );
     Delay_ms( 500 );
     
     thermostat4_set_warm_hysteresis( &thermostat4, 0 );
     thermostat4_new_cfg_upload( &thermostat4 );
+    
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )
 {
-    if ( thermostat4_hot_alert_state( &thermostat4 ) == THERMOSTAT4_HOT_ALERT ) {
-        log_printf( &logger, ">> H-O-T  A-L-E-R-T <<\r\n" );
+    if ( THERMOSTAT4_HOT_ALERT == thermostat4_hot_alert_state( &thermostat4 ) ) 
+    {
+        log_printf( &logger, " HOT ALERT\r\n" );
         thermostat4_relay_ctrl( &thermostat4, THERMOSTAT4_RELAY_ON );
-    } else if ( thermostat4_warm_alert_state( &thermostat4 ) == THERMOSTAT4_WARM_ALERT ) {
-        log_printf( &logger, ">> W-A-R-M  A-L-E-R-T <<\r\n" );
+    } 
+    else if ( THERMOSTAT4_WARM_ALERT == thermostat4_warm_alert_state( &thermostat4 ) ) 
+    {
+        log_printf( &logger, " WARM ALERT\r\n" );
         thermostat4_relay_ctrl( &thermostat4, THERMOSTAT4_RELAY_ON );
-    } else { 
-        log_printf( &logger, ">> T-E-M-P-E-R-A-T-U-R-E  O-K <<\r\n" );
+    } 
+    else 
+    { 
+        log_printf( &logger, " TEMPERATURE OK\r\n" );
         thermostat4_relay_ctrl( &thermostat4, THERMOSTAT4_RELAY_OFF );
-        Delay_ms( 200 );
     }  
+    Delay_ms( 2000 );
 }
 
 void main ( void )

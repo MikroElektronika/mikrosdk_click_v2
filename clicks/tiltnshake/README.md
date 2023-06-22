@@ -1,11 +1,9 @@
 \mainpage Main Page
  
- 
-
 ---
 # TILT-n-SHAKE click
 
-TILT-n-SHAKE click carries Freescale’s MMA8491Q IC. It’s a multifunctional 3-axis digital accelerometer that can also be configured as a 45-degree Tilt sensor.
+> TILT-n-SHAKE click carries Freescale’s MMA8491Q IC. It’s a multifunctional 3-axis digital accelerometer that can also be configured as a 45-degree Tilt sensor.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/tiltnshake_click.png" height=300px>
@@ -38,25 +36,34 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void tiltnshake_cfg_setup ( tiltnshake_cfg_t *cfg ); 
- 
-- Initialization function.
-> TILTNSHAKE_RETVAL tiltnshake_init ( tiltnshake_t *ctx, tiltnshake_cfg_t *cfg );
+- `tiltnshake_cfg_setup` Config Object Initialization function.
+```c
+void tiltnshake_cfg_setup ( tiltnshake_cfg_t *cfg ); 
+```
 
+- `tiltnshake_init` Initialization function.
+```c
+err_t tiltnshake_init ( tiltnshake_t *ctx, tiltnshake_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Function for read status and axis
-> void tiltnshake_read_status_and_axis ( tiltnshake_t *ctx, uint8_t *status, uint16_t *out_x, uint16_t *out_y, uint16_t *out_z );
- 
-- Function for conversion
-> void tiltnshake_conversion ( uint16_t *out_x, uint16_t *out_y, uint16_t *out_z, float *out_x_flo, float *out_y_flo, float *out_z_flo );
+- `tiltnshake_read_status_and_axis` Function for read status and axis
+```c
+void tiltnshake_read_status_and_axis ( tiltnshake_t *ctx, uint8_t *status, float *out_x, float *out_y, float *out_z )
+```
 
-- Function for enabled chip
-> void tiltnshake_enable ( tiltnshake_t *ctx, uint8_t en );
+- `tiltnshake_enable` Function for enabling chip
+```c
+void tiltnshake_enable ( tiltnshake_t *ctx );
+```
 
-## Examples Description
+- `tiltnshake_disable` Function for disabling chip
+```c
+void tiltnshake_disable ( tiltnshake_t *ctx );
+```
+
+## Example Description
 
 > This application is multifunctional 3-axis digital accelerometer that can also be configured as a 45-degree Tilt sensor.
 
@@ -64,7 +71,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes device init.
+> Initializes device.
 
 ```c
 
@@ -84,56 +91,43 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
+    // Click initialization.
     tiltnshake_cfg_setup( &cfg );
     TILTNSHAKE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     tiltnshake_init( &tiltnshake, &cfg );
+    
+    log_info( &logger, " Application Task " );
 }
   
 ```
 
 ### Application Task
 
-> Reads every tilt and shake and logs to USBUART_A.
+> Reads 3-axis accelerometer measurement and logs results on the USB UART.
 
 ```c
 void application_task ( )
 {
-    uint8_t tiltnshake_status;
-    float tiltnshake_out_x_float;
-    float tiltnshake_out_y_float;
-    float tiltnshake_out_z_float;
-    uint16_t tiltnshake_out_x;
-    uint16_t tiltnshake_out_y;
-    uint16_t tiltnshake_out_z;
+    uint8_t status = 0;
+    float out_x = 0;
+    float out_y = 0;
+    float out_z = 0;
 
-    tiltnshake_enable( &tiltnshake, TILTNSHAKE_ENABLE );
-    tiltnshake_read_status_and_axis( &tiltnshake, &tiltnshake_status, &tiltnshake_out_x, &tiltnshake_out_y, &tiltnshake_out_z );
-    tiltnshake_enable( &tiltnshake, TILTNSHAKE_DISABLE );
+    tiltnshake_enable( &tiltnshake );
+    tiltnshake_read_status_and_axis( &tiltnshake, &status, &out_x, &out_y, &out_z );
+    tiltnshake_disable( &tiltnshake );
 
-    if ( tiltnshake_status == TILTNSHAKE_DATA_READY )
+    if ( TILTNSHAKE_DATA_READY == status )
     {
-        tiltnshake_conversion
-        ( 
-             &tiltnshake_out_x, 
-             &tiltnshake_out_y, 
-             &tiltnshake_out_z,
-             &tiltnshake_out_x_float, 
-             &tiltnshake_out_y_float, 
-             &tiltnshake_out_z_float 
-        ); 
-        
-        log_printf( &logger, " \r\n" );
-        log_printf( &logger, "X_out = %.2f \r\n", tiltnshake_out_x_float );
-        log_printf( &logger, "Y_out = %.2f\r\n", tiltnshake_out_y_float );
-        log_printf( &logger, "Z_out = %.2f\r\n", tiltnshake_out_z_float );
-        log_printf( &logger, "-----------------------------------------------\r\n");
+        log_printf( &logger, " X: %.2f\r\n", out_x );
+        log_printf( &logger, " Y: %.2f\r\n", out_y );
+        log_printf( &logger, " Z: %.2f\r\n", out_z );
+        log_printf( &logger, "----------\r\n");
         Delay_ms( 500 );
     }
-    Delay_ms( 1700 );
+    Delay_ms( 500 );
 }
 ```
 

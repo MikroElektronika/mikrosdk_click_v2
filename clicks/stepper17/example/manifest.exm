@@ -2,7 +2,7 @@
     "name": "Stepper 17 Click",
     "description": "Stepper 17 Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the TB67S539FTG, a two-phase bipolar stepping motor driver using a PWM chopper from Toshiba Semiconductor.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
-    "hw" : ["click","TB67S539FTG","PCA9555A"],
-    "category" : ["Stepper"]
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "hw" : ["click","TB67S539FTG","PCA9555AHF"],
+    "category" : ["Click Boards > Motor control > Stepper"]
 }

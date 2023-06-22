@@ -1,9 +1,8 @@
 {
     "name": "Voltmeter Click",
-    "description": "<Voltmeter click is a mikroBUS™ add-on board for measuring voltage in an external electric circuit.
-     The board is designed to measure Direct Current only, and has a measurement range from 0 to 24V (it’s possible to measure both positive and negative charges).",
+    "description": "Voltmeter click is a mikroBUS™ add-on board for measuring voltage in an external electric circuit.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
     "hw" : ["click","MCP3201"],
     "category" : ["Measurements"] 
 }
