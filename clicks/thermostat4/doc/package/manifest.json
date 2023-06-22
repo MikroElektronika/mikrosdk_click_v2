@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Temperature & humidity",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Sensors > Temperature & humidity",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+    "dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Thermostat 4 click",
     "example_list": [
@@ -26,12 +25,14 @@
     "name": "mikroe.click.thermostat4",
     "product_link": "https://www.mikroe.com/thermostat-4-click",
     "short_description": "Thermostat 4 Click is complete solution that senses the temperature of a physical system and can performs actions so that the system's temperature is maintained near a desired setpoint. It's based on Texas Instruments TMP392, a resistor programmable temperature switch that enable protection and detection of system thermal events from 30°C to 130°C.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "related_projects":[
+    "related_projects": [
         3806
     ],
-    "version": "2.0.0.1"
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.Thermostat4",
+    "subdir_name": "lib_thermostat4"
 }
-

@@ -1,32 +1,22 @@
 /*!
  * @file main.c
- * @brief Stepper17 Click example
+ * @brief Stepper 17 Click example
  *
  * # Description
- * This is an example application for showing Stepper 17 click 
- * ability to control motor. First, it sets default configuration, 
- * then runs motor on every turn it stops when makes a full circle 
- * and it changes direction on every iteration and on every CW 
- * movement changes step resolution.
+ * This example demonstrates the use of the Stepper 17 click board by driving the 
+ * motor in both directions for a desired number of steps.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initialization of UART(for logging states and errors), I2C and PWM 
- * modules and additional GPIO's. Sets default configuration for click 
- * board and starts motor rotating in CW direction in 1/32 step resolution.
+ * Initializes the driver and performs the click default configuration.
  *
  * ## Application Task
- * Runs motor one circle, stops and pauses for 2seconds, 
- * and runs motor in opposite direction. On every CW run it changes step 
- * resolution. It loops from 1/2 step resolution to 1/32 resolution.
+ * Drives the motor clockwise for 200 full steps and then counter-clockiwse for 400 quarter
+ * steps with 2 seconds delay before changing the direction. All data is being logged on
+ * the USB UART where you can track the program flow.
  *
- * @note
- * Click is tested with motor with 1 step = 1.8degree with PWM 
- * configured with 1500Hz. You may need to lower MCU frequency 
- * to reach 1500Hz PWM frequency.
- *
- * @author Luka Filipovic
+ * @author Stefan Filipovic
  *
  */
 
@@ -34,18 +24,8 @@
 #include "log.h"
 #include "stepper17.h"
 
-#define FULL_CIRCLE 50
-
 static stepper17_t stepper17;
 static log_t logger;
-
-/**
- * @brief Stepper 17 change step resolution.
- * @details This function changes step resolution for given diveder.
- * @param[in] resolution : step divider
- * @return Nothing.
- */
-static void stepper17_set_step_resolution( uint8_t resolution );
 
 void application_init ( void ) 
 {
@@ -66,92 +46,36 @@ void application_init ( void )
     log_info( &logger, " Application Init " );
 
     // Click initialization.
-
     stepper17_cfg_setup( &stepper17_cfg );
     STEPPER17_MAP_MIKROBUS( stepper17_cfg, MIKROBUS_1 );
-    err_t init_flag = stepper17_init( &stepper17, &stepper17_cfg );
-    
-    if ( init_flag == I2C_MASTER_ERROR ) 
+    if ( I2C_MASTER_ERROR == stepper17_init( &stepper17, &stepper17_cfg ) ) 
     {
-        log_error( &logger, " Application Init Error. " );
-        log_info( &logger, " Please, run program again... " );
-
-        for ( ; ; );
-    }
-
-    if ( stepper17_default_cfg ( &stepper17 ) < 0 ) 
-    {
-        log_error( &logger, " Default Configuration. " );
-        log_info( &logger, " Please, run program again... " );
-
+        log_error( &logger, " Communication init." );
         for ( ; ; );
     }
     
-    
-    stepper17_step_resolution( &stepper17, STEPPER17_STEP_HALF_A );
-    stepper17_set_dir_state( &stepper17, 1 );
-    stepper17_set_en_state( &stepper17, 1 );
+    if ( STEPPER17_ERROR == stepper17_default_cfg ( &stepper17 ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
     
     log_info( &logger, " Application Task " );
-    log_info( &logger, " Move motor CW." );
 }
 
 void application_task ( void ) 
 {
-    static uint32_t counter = 0;
-    static uint8_t run = 1;
-    static uint8_t dir = 1;
-    static uint8_t turns = 1;
-    static uint8_t step = 2;
+    log_printf ( &logger, " Move 200 full steps clockwise \r\n\n" );
+    stepper17_set_step_mode ( &stepper17, STEPPER17_MODE_FULL_STEP );
+    stepper17_set_direction ( &stepper17, STEPPER17_DIR_CW );
+    stepper17_drive_motor ( &stepper17, 200, STEPPER17_SPEED_FAST );
+    Delay_ms ( 2000 );
     
-    if ( ( 0 == stepper17_get_int_state( &stepper17 ) ) && run )
-    {
-        counter++;
-        
-        if ( counter == ( FULL_CIRCLE * turns ) )
-        {
-            //Stop motor
-            stepper17_set_en_state( &stepper17, 0 );
-            run = 0;
-            log_info( &logger, " Stop motor." );
-
-            Delay_ms( 2000 );
-            
-            //Change direction
-            if ( dir )
-            {
-                log_info( &logger, " Move motor CCW." );
-                dir = 0;
-                stepper17_set_dir_state( &stepper17, dir );
-            }
-            else
-            {
-                log_info( &logger, " Move motor CW." );
-                dir = 1;
-                stepper17_set_dir_state( &stepper17, dir );
-                
-                if ( 32 == step )
-                {
-                    step = 2;
-                }
-                else
-                {
-                    step *= 2;
-                }
-                stepper17_set_step_resolution( step );
-            }
-            
-            //Move motor
-            stepper17_set_en_state( &stepper17, 1 );
-            counter = 0;
-            run = 1;
-        }
-        else
-        {
-            while ( 0 == stepper17_get_int_state( &stepper17 ) );
-        }
-    }
-    
+    log_printf ( &logger, " Move 400 quarter steps counter-clockwise \r\n\n" );
+    stepper17_set_step_mode ( &stepper17, STEPPER17_MODE_QUARTER_STEP );
+    stepper17_set_direction ( &stepper17, STEPPER17_DIR_CCW );
+    stepper17_drive_motor ( &stepper17, 400, STEPPER17_SPEED_FAST );
+    Delay_ms ( 2000 );
 }
 
 void main ( void ) 
@@ -161,42 +85,6 @@ void main ( void )
     for ( ; ; ) 
     {
         application_task( );
-    }
-}
-
-static void stepper17_set_step_resolution( uint8_t resolution )
-{
-    switch ( resolution )
-    {
-        case 2:
-        {
-            stepper17_step_resolution( &stepper17, STEPPER17_STEP_HALF_A );
-            break;
-        }
-        case 4:
-        {
-            stepper17_step_resolution( &stepper17, STEPPER17_STEP_QUARTER );
-            break;
-        }
-        case 8:
-        {
-            stepper17_step_resolution( &stepper17, STEPPER17_STEP_1DIV8 );
-            break;
-        }
-        case 16:
-        {
-            stepper17_step_resolution( &stepper17, STEPPER17_STEP_1DIV16 );
-            break;
-        }
-        case 32:
-        {
-            stepper17_step_resolution( &stepper17, STEPPER17_STEP_1DIV32 );
-            break;
-        }
-        default:
-        {
-            log_error( &logger, " Step Resolution" );
-        }
     }
 }
 

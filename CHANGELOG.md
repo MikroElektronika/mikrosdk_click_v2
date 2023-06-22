@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230622](#20230622)**
 + **[20230616](#20230616)**
 + **[20230609](#20230609)**
 + **[20230602](#20230602)**
@@ -51,6 +52,32 @@
 
 ---
 ---
+---
+
+## `20230622`
+
+*Following click boards have been added:*
+
++ `Relay 5`
++ `Solar Energy 2`
+
+*Following click boards have been updated:*
+
++ `SQI FLASH`
++ `Stepper 17`
++ `SWI EEPROM`
++ `LR 2`
++ `TempHum 3`
++ `TempHum 9`
++ `TempHum 19`
++ `Temp Probe`
++ `Thermostat 4`
++ `TILT-n-SHAKE`
++ `UV`
++ `Voltmeter`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230616`

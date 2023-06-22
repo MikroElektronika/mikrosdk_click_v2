@@ -2,8 +2,7 @@
 ---
 # Voltmeter click
 
-Voltmeter click is a mikroBUS™ add-on board for measuring voltage in an external electric circuit.
-The board is designed to measure Direct Current only, and has a measurement range from 0 to 24V (it’s possible to measure both positive and negative charges).
+> Voltmeter click is a mikroBUS™ add-on board for measuring voltage in an external electric circuit.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/voltmeter_click.png" height=300px>
@@ -36,35 +35,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void voltmeter_cfg_setup ( voltmeter_cfg_t *cfg ); 
- 
-- Initialization function.
-> VOLTMETER_RETVAL voltmeter_init ( voltmeter_t *ctx, voltmeter_cfg_t *cfg );
+- `voltmeter_cfg_setup` Config Object Initialization function.
+```c
+void voltmeter_cfg_setup ( voltmeter_cfg_t *cfg ); 
+```
 
-
+- `voltmeter_init` Initialization function.
+```c
+err_t voltmeter_init ( voltmeter_t *ctx, voltmeter_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Generic write the byte of the data function.
-> void voltmeter_write_data ( voltmeter_t *ctx, uint16_t write_data );
- 
-- Generic read the byte of the data function.
-> uint8_t voltmeter_read_byte ( voltmeter_t *ctx );
+- `voltmeter_read_raw_data` This function reads raw ADC value.
+```c
+int16_t voltmeter_read_raw_data ( voltmeter_t *ctx );
+```
 
-- Generic reading 16-bit data function.
-> uint16_t voltmeter_read_data ( voltmeter_t *ctx );
+- `voltmeter_calculate_voltage` This function converts the raw ADC value to proportional voltage level.
+```c
+float voltmeter_calculate_voltage ( voltmeter_t *ctx, int16_t raw_adc, uint8_t iso_gnd );
+```
 
-## Examples Description
+## Example Description
 
-> This application give a voltage in milivolts
+> This application reads the voltage measurement and displays the results on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initialization driver enables - I2C,
-  start calibration reading and also write log.
+> Initialization the driver and logger.
 
 ```c
 
@@ -84,44 +85,36 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
     //  Click initialization.
-
     voltmeter_cfg_setup( &cfg );
     VOLTMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     voltmeter_init( &voltmeter, &cfg );
-
     Delay_ms( 100 );
-    log_printf( &logger, " Initialization  Driver \r\n" );
-    log_printf( &logger, "------------------------\r\n" );
-
-    voltmeter_calibration( &voltmeter );
-    Delay_ms( 100 );
-    log_printf( &logger, " Calibration  completed \r\n" );
-    log_printf( &logger, "------------------------\r\n" );
-    log_printf( &logger, " Measurement  available \r\n" );
-    log_printf( &logger, "------------------------\r\n" );
+    
+    log_info( &logger, " Application Task " );
 }
   
 ```
 
 ### Application Task
 
-> This is an example which demonstrates the use of Voltmeter Click board.
-  These examples read ADC value from the register of MCP3201 chip on the
-  Voltmeter click board and calculate the voltage value [ mV ].
-  Results are being sent to the Usart Terminal where you can track their changes.
+> Reads the raw ADC measurement once per second and converts it to the proportional voltage level.
+All data are being displayed on the USB UART where you can track their changes.
 
 ```c
 
 void application_task ( void )
 {
-    adc_value = voltmeter_read_data( &voltmeter );
+    int16_t adc_value = 0;
+    float voltage = 0;
+
+    adc_value = voltmeter_read_raw_data( &voltmeter );
     log_printf( &logger, " ADC Value: %d\r\n", adc_value );
 
-    voltage = voltmeter_get_voltage( &voltmeter, VOLTMETER_VCC_5V_COEFF_0 );
-    log_printf( &logger, " Voltage  : %f mV\r\n", voltage );
+    voltage = voltmeter_calculate_voltage( &voltmeter, adc_value, VOLTMETER_GND_ISO );
+    log_printf( &logger, " Voltage  : %.3f V\r\n", voltage );
     log_printf( &logger, "------------------------\r\n");
     Delay_ms( 1000 );
 }  

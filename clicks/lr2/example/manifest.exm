@@ -2,7 +2,7 @@
     "name": "LR 2 Click",
     "description": "LR 2 Click is a compact add-on board that contains a low-power, long-range transceiver. This board features the RN2903, RF technology-based SRD transceiver, which operates at a frequency of 915MHz from Microchip Technology. This Click board™ features an embedded LoRaWAN Class A compliant stack, providing a long-range spread spectrum communication with high interference immunity. The RN2903 module is fully compliant with the United States (FCC) and Canada (IC) regulations combined with the advanced and straightforward command interface allowing easy integration into the final application. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
     "hw" : ["click","RN2903"],
     "category" : ["LoRa"]
 }

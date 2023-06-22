@@ -11,14 +11,11 @@
  * Configuration of the click and log objects.
  *
  * ## Application Task
- * This is a example which demonstrates the use of the UV Click board.
- * This example should read a result of AD conversion and calculate it to UV
- * index level.
- * Results are being sent to the Usart Terminal where you can track their
- * changes.
- * All data logs on usb uart is changed for every 1 second.
+ * Reads the result of AD conversion once per second and calculates
+ * the UV index based on that. Results are being sent to the USB UART
+ * where you can track their changes.
  *
- * \author Nemanja Medakovic
+ * \author MikroE Team
  *
  */
 // ------------------------------------------------------------------- INCLUDES
@@ -63,14 +60,12 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     // Click initialization.
-
     uv_cfg_setup( &cfg );
     UV_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    if ( uv_init( &uv, &cfg ) == SPI_MASTER_ERROR )
+    if ( SPI_MASTER_ERROR == uv_init( &uv, &cfg ) )
     {
         log_info( &logger, "---- Application Init Error ----" );
         log_info( &logger, "---- Please, run program again ----" );
-
         for ( ; ; );
     }
     uv_set_callback_handler( &uv, application_callback );
@@ -83,11 +78,11 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    if ( uv_read_adc_voltage( &uv, &uv_voltage ) != SPI_MASTER_ERROR )
+    if ( SPI_MASTER_ERROR != uv_read_adc_voltage( &uv, &uv_voltage ) )
     {
         uv_calc_index( &uv, uv_voltage, &uv_index );
 
-        log_printf( &logger, " UV Index [0-15] : %u\r\n", (uint16_t)uv_index );
+        log_printf( &logger, " UV Index [0-15] : %u\r\n", ( uint16_t ) uv_index );
         log_printf( &logger, " UV ADC Voltage [V] : %.2f\r\n", uv_voltage );
         log_printf( &logger, "------------------------------\r\n" );
     }

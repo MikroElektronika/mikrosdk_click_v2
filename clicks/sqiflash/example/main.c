@@ -8,9 +8,9 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * SQI FASH Driver Initialization, initializes the click by setting mikroBUS to
+ * SQI FLASH Driver Initialization, initializes the click by setting mikroBUS to
  * approprieate logic levels, performing global block unlock and chip erase functions,
- * reads manufacturer ID, memory type and device ID and logs it on USB UART teminal.
+ * reads manufacturer ID, memory type and device ID and logs it on USB UART terminal.
  *
  * ## Application Task
  * Writing data to click memory and displaying the read data via UART.
@@ -26,14 +26,16 @@
 static sqiflash_t sqiflash;
 static log_t logger;
 
-uint8_t device_manufac;
-uint8_t device_type;
-uint8_t device_id;
+uint8_t device_manufac = 0;
+uint8_t device_type = 0;
+uint8_t device_id = 0;
 
-char wr_data[ 10 ] = { 'M', 'i', 'k', 'r', 'o', 'E', 13, 10 , 0 };
-char rd_data[ 10 ];
+uint8_t wr_data[ 9 ] = { 'M', 'i', 'k', 'r', 'o', 'E', 13, 10, 0 };
+uint8_t rd_data[ 9 ] = { 0 };
+uint32_t address = 0x015015ul;
 
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     sqiflash_cfg_t sqiflash_cfg;  /**< Click config object. */
 
@@ -51,14 +53,12 @@ void application_init ( void ) {
     log_info( &logger, " Application Init " );
 
     // Click initialization.
-
     sqiflash_cfg_setup( &sqiflash_cfg );
     SQIFLASH_MAP_MIKROBUS( sqiflash_cfg, MIKROBUS_1 );
-    err_t init_flag  = sqiflash_init( &sqiflash, &sqiflash_cfg );
-    if ( SPI_MASTER_ERROR == init_flag ) {
+    if ( SPI_MASTER_ERROR == sqiflash_init( &sqiflash, &sqiflash_cfg ) ) 
+    {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
     Delay_ms( 300 );
@@ -68,30 +68,32 @@ void application_init ( void ) {
     Delay_ms( 300 );
     
     device_manufac = sqiflash_device_manufac( &sqiflash );
-    log_printf( &logger, "Manufacturer ID: 0x%.2X \r\n", ( uint16_t ) device_manufac );
+    log_printf( &logger, " Manufacturer ID: 0x%.2X\r\n", ( uint16_t ) device_manufac );
     device_type = sqiflash_device_type( &sqiflash );
-    log_printf( &logger, "Memory Type:     0x%.2X \r\n", ( uint16_t ) device_type );
+    log_printf( &logger, " Memory Type: 0x%.2X\r\n", ( uint16_t ) device_type );
     device_id = sqiflash_device_id( &sqiflash );
-    log_printf( &logger, "Device ID:       0x%.2X \r\n", ( uint16_t ) device_id );
-    log_printf( &logger, "--------------------\r\n" );
+    log_printf( &logger, " Device ID: 0x%.2X\r\n", ( uint16_t ) device_id );
     log_info( &logger, " Application Task " );
 }
 
-void application_task ( void ) {
-    log_printf( &logger, "Writing data to flash memory, from address 0x015015:\r\n" );
-    log_printf( &logger, "Data written: %s ", wr_data );
-    sqiflash_write_generic( &sqiflash, 0x015015, &wr_data[ 0 ], 9 );
-    log_printf( &logger, "Reading 9 bytes of flash memory, from address 0x015015:\r\n" );
-    sqiflash_read_generic( &sqiflash, 0x015015, &rd_data[ 0 ], 9 );
-    log_printf( &logger, "Data read: %s ", rd_data );
-    log_printf( &logger, "--------------------------------------------------------\r\n" );
+void application_task ( void ) 
+{
+    log_printf( &logger, " Writing data to address: 0x%.6LX\r\n", address );
+    sqiflash_write_generic( &sqiflash, address, wr_data, 9 );
+    log_printf( &logger, " Written data: %s", wr_data );
+    log_printf( &logger, "\r\n Reading data from address: 0x%.6LX\r\n", address );
+    sqiflash_read_generic( &sqiflash, address, rd_data, 9 );
+    log_printf( &logger, " Read data: %s", rd_data );
+    log_printf( &logger, "-------------------------------------\r\n" );
     Delay_ms( 2000 );
 }
 
-void main ( void ) {
+void main ( void ) 
+{
     application_init( );
 
-    for ( ; ; ) {
+    for ( ; ; ) 
+    {
         application_task( );
     }
 }

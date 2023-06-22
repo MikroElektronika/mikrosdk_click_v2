@@ -1,11 +1,9 @@
 \mainpage Main Page
- 
- 
 
 ---
 # TempHum 3 click
 
-Temp&Hum 3 click is a smart environmental temperature and humidity sensor Click board™, packed with features which allow easy and simple integration into any design that requires accurate and reliable humidity and temperature measurements.
+> Temp&Hum 3 click is a smart environmental temperature and humidity sensor Click board™, packed with features which allow easy and simple integration into any design that requires accurate and reliable humidity and temperature measurements.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/temphum3_click.png" height=300px>
@@ -38,44 +36,54 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void temphum3_cfg_setup ( temphum3_cfg_t *cfg ); 
- 
-- Initialization function.
-> TEMPHUM3_RETVAL temphum3_init ( temphum3_t *ctx, temphum3_cfg_t *cfg );
+- `temphum3_cfg_setup` Config Object Initialization function.
+```c
+void temphum3_cfg_setup ( temphum3_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void temphum3_default_cfg ( temphum3_t *ctx );
+- `temphum3_init` Initialization function.
+```c
+err_t temphum3_init ( temphum3_t *ctx, temphum3_cfg_t *cfg );
+```
 
+- `temphum3_default_cfg` Click Default Configuration function.
+```c
+void temphum3_default_cfg ( temphum3_t *ctx );
+```
 
 #### Example key functions :
 
-- Get temperature value
-> float temphum3_get_temperature ( temphum3_t *ctx );
- 
-- Get humidity value
-> float temphum3_get_huminidy ( temphum3_t *ctx );
+- `temphum3_get_temperature` Get temperature value
+```c
+float temphum3_get_temperature ( temphum3_t *ctx );
+```
 
-- Get maximum temperature value
-> float temphum3_get_max_hum ( temphum3_t *ctx );
+- `temphum3_get_huminidy` Get humidity value
+```c
+float temphum3_get_huminidy ( temphum3_t *ctx );
+```
 
-## Examples Description
+- `temphum3_get_max_hum` Get maximum temperature value
+```c
+float temphum3_get_max_hum ( temphum3_t *ctx );
+```
 
-> This example gets the values of humidity and temperature. 
-> It uses predefined minimum and maximum offset values for temperature and humidity.
+## Example Description
+
+> This application reads temperature and humidity data.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes the module and sets predefined configuration values to the sensor.
+> Initializes the driver and performs the click default configuration.
 
 ```c
 
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    temphum3_cfg_t cfg;
+    temphum3_cfg_t temphum3_cfg;
 
     /** 
      * Logger initialization.
@@ -88,39 +96,39 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
     //  Click initialization.
-
-    temphum3_cfg_setup( &cfg );
-    TEMPHUM3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    temphum3_init( &temphum3, &cfg );
-    log_info( &logger, "---- Init done -----" );
+    temphum3_cfg_setup( &temphum3_cfg );
+    TEMPHUM3_MAP_MIKROBUS( temphum3_cfg, MIKROBUS_1 );
+    if ( I2C_MASTER_ERROR == temphum3_init( &temphum3, &temphum3_cfg ) ) 
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
     
     temphum3_default_cfg( &temphum3 );
     
-    log_info( &logger, "--- Settings Temp&Hum done---" );
+    log_info( &logger, " Application Task " );
 }
   
 ```
 
 ### Application Task
 
-> Reads the temperature and huminidy and logs to the USBUART every 500 ms.
+> Reads the temperature and huminidy and logs results to the USB UART every 500 ms.
 
 ```c
 void application_task ( void )
 {
-    float temperature;
-    float humidity;
+    float temperature = 0;
+    float humidity = 0;
 
-    //  Task implementation.
-    
     temperature = temphum3_get_temperature( &temphum3 );
-    log_printf( &logger, " Temperature : %f C \r\n", temperature );
+    log_printf( &logger, " Temperature : %.2f C \r\n", temperature );
     
     humidity = temphum3_get_humidity( &temphum3 );
-    log_printf( &logger, " Humidity : %f %% \r\n", humidity );
+    log_printf( &logger, " Humidity : %.1f %% \r\n", humidity );
     Delay_ms( 500 );
 }
 ```

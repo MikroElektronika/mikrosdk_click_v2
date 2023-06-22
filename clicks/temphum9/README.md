@@ -1,11 +1,9 @@
 \mainpage Main Page
  
- 
-
 ---
 # Temp-Hum 9 click
 
-Temp-Hum 9 click is a smart temperature and humidity sensing click board™, packed with features that allow simple integration into any design.
+> Temp-Hum 9 click is a smart temperature and humidity sensing click board™, packed with features that allow simple integration into any design.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/temphum9_click.png" height=300px>
@@ -38,41 +36,42 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void temphum9_cfg_setup ( temphum9_cfg_t *cfg ); 
- 
-- Initialization function.
-> TEMPHUM9_RETVAL temphum9_init ( temphum9_t *ctx, temphum9_cfg_t *cfg );
+- `temphum9_cfg_setup` Config Object Initialization function.
+```c
+void temphum9_cfg_setup ( temphum9_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void temphum9_default_cfg ( temphum9_t *ctx );
-
+- `temphum9_init` Initialization function.
+```c
+err_t temphum9_init ( temphum9_t *ctx, temphum9_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Calculating temperature
-> float temphum9_get_temperature ( temphum9_t *ctx, uint8_t data );
-
+- `temphum9_get_temperature` Calculating temperature
+```c
+float temphum9_get_temperature ( temphum9_t *ctx, uint8_t data_mode );
+```
  
-- Calculating relative humidity
-> temphum9_get_relative_humidity ( temphum9_t *ctx, uint8_t data );
+- `temphum9_get_humidity` Calculating relative humidity
+```c
+float temphum9_get_humidity ( temphum9_t *ctx, uint8_t data_mode );
+```
 
-- Calculating temperature and relative humidity
-> temhum9_get_temperature_and_humidity ( *ctx  uint8_t data , float *measurement_data )
+- `temhum9_get_data` Calculating temperature and relative humidity
+```c
+void temhum9_get_data ( temphum9_t *ctx, uint8_t data_mode, float *temp, float *hum );
+```
 
-## Examples Description
+## Example Description
 
-> 
-> Temp-Hum 9 click can measure the humidity in the range from 0 to 100 %RH and temperature in the range from -40 ℃ to +125 ℃ with a typical accuracy of ±2 %RH and ±0.2 ℃
-> 
+> This example demonstrates the use of TempHum 9 click board by reading and displaying the temperature and humidity measurement results.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
->
-> Initializes I2C driver and sends SLEEP and WAKEUP dommands
-> 
+> Initializes I2C driver and sends SLEEP and WAKEUP commands.
 
 ```c
 
@@ -92,46 +91,44 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
     //  Click initialization.
-
     temphum9_cfg_setup( &cfg );
     TEMPHUM9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     temphum9_init( &temphum9, &cfg );
+    Delay_ms( 100 );
 
     temphum9_send_command( &temphum9, TEMPHUM9_SLEEP );
-
-    temphum9_sendCommand( &temphum9, TEMPHUM9_SLEEP );
-    Delay_ms(500);
-    temphum9_sendCommand( &temphum9, TEMPHUM9_WAKEUP );
-    Delay_ms(100);
+    Delay_ms( 500 );
+    temphum9_send_command( &temphum9, TEMPHUM9_WAKEUP );
+    Delay_ms( 500 );
     
-    log_printf( &logger, "< < < app init done > > >" );
+    log_info( &logger, " Application Task " );
 }
   
 ```
 
 ### Application Task
 
->
-> Performs simultaneous temperature and relative humidity measurements and logs both values
-> 
+> Performs simultaneous temperature and relative humidity measurements and logs both values on the USB UART once per second.
 
 ```c
 
 void application_task( )
 {
-    log_printf( &logger, " " );
-
-    temhum9_get_temperature_and_humidity( &temphum9, TEMPHUM9_NORMAL_MODE, &measurement_data[ 0 ] );
+    float temperature = 0;
+    float humidity = 0;
     
-    log_printf( &logger, "> > > Temperature       : %d C \r\n", text );
-
-    log_printf( &logger, "> > > Relative humidity       : %d ", text );
-    log_printf( &logger, " %% \r\n" );
+    temhum9_get_data ( &temphum9, TEMPHUM9_NORMAL_MODE, &temperature, &humidity );
     
-    Delay_ms(1000);
+    log_printf( &logger, " Temperature: %.2f degC\r\n", temperature );
+
+    log_printf( &logger, " Relative humidity: %.2f %%\r\n", humidity );
+    
+    log_printf( &logger, "-----------------------------\r\n" );
+    
+    Delay_ms( 1000 );
 }
 ```
 

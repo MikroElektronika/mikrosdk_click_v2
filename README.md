@@ -514,51 +514,52 @@ A full list of all clicks in this repository is defined below:
 | Rec N Play click | [Click Here](./clicks/recnplay) | REED click | [Click Here](./clicks/reed) |
 | Relay click | [Click Here](./clicks/relay) | Relay 2 click | [Click Here](./clicks/relay2) |
 | Relay 3 click | [Click Here](./clicks/relay3) | Relay 4 click | [Click Here](./clicks/relay4) |
-| Remote Temp click | [Click Here](./clicks/remotetemp) | ReRAM click | [Click Here](./clicks/reram) |
-| ReRAM 2 click | [Click Here](./clicks/reram2) | RFID click | [Click Here](./clicks/rfid) |
-| RFID 2 click | [Click Here](./clicks/rfid2) | RF Meter click | [Click Here](./clicks/rfmeter) |
-| RF Meter 3 click | [Click Here](./clicks/rfmeter3) | RF Switch click | [Click Here](./clicks/rfswitch) |
-| RGB Driver click | [Click Here](./clicks/rgbdriver) | R Meter click | [Click Here](./clicks/rmeter) |
-| RMS to DC click | [Click Here](./clicks/rmstodc) | RN4678 click | [Click Here](./clicks/rn4678) |
-| RN4870 click | [Click Here](./clicks/rn4870) | RN4871 click | [Click Here](./clicks/rn4871) |
-| RNG click | [Click Here](./clicks/rng) | ROTARY B click | [Click Here](./clicks/rotaryb) |
-| ROTARY G click | [Click Here](./clicks/rotaryg) | ROTARY O click | [Click Here](./clicks/rotaryo) |
-| ROTARY R click | [Click Here](./clicks/rotaryr) | ROTARY Y click | [Click Here](./clicks/rotaryy) |
-| RS232 click | [Click Here](./clicks/rs232) | RS232 2 click | [Click Here](./clicks/rs2322) |
-| RS232 3 click | [Click Here](./clicks/rs2323) | RS232 Isolator click | [Click Here](./clicks/rs232isolator) |
-| RS232 Isolator 2 click | [Click Here](./clicks/rs232isolator2) | RS232 SPI click | [Click Here](./clicks/rs232spi) |
-| RS232 to I2C click | [Click Here](./clicks/rs232toi2c) | RS485 2 click | [Click Here](./clicks/rs4852) |
-| RS485 3 click | [Click Here](./clicks/rs4853) | RS485 3V3 click | [Click Here](./clicks/rs4853v3) |
-| RS485 4 click | [Click Here](./clicks/rs4854) | RS485 5 click | [Click Here](./clicks/rs4855) |
-| RS485 5V click | [Click Here](./clicks/rs4855v) | RS485 6 click | [Click Here](./clicks/rs4856) |
-| RS485 7 click | [Click Here](./clicks/rs4857) | RS485 Isolator click | [Click Here](./clicks/rs485isolator) |
-| RS485 Isolator 2 click | [Click Here](./clicks/rs485isolator2) | RS485 Isolator 3 click | [Click Here](./clicks/rs485isolator3) |
-| RTC 10 click | [Click Here](./clicks/rtc10) | RTC 11 click | [Click Here](./clicks/rtc11) |
-| RTC 12 click | [Click Here](./clicks/rtc12) | RTC 13 click | [Click Here](./clicks/rtc13) |
-| RTC 14 click | [Click Here](./clicks/rtc14) | RTC 16 click | [Click Here](./clicks/rtc16) |
-| RTC 17 click | [Click Here](./clicks/rtc17) | RTC 18 click | [Click Here](./clicks/rtc18) |
-| RTC 19 click | [Click Here](./clicks/rtc19) | RTC 2 click | [Click Here](./clicks/rtc2) |
-| RTC 20 click | [Click Here](./clicks/rtc20) | RTC 21 click | [Click Here](./clicks/rtc21) |
-| RTC 3 click | [Click Here](./clicks/rtc3) | RTC 4 click | [Click Here](./clicks/rtc4) |
-| RTC 5 click | [Click Here](./clicks/rtc5) | RTC 6 click | [Click Here](./clicks/rtc6) |
-| RTC 7 click | [Click Here](./clicks/rtc7) | RTC 8 click | [Click Here](./clicks/rtc8) |
-| RTC 9 click | [Click Here](./clicks/rtc9) | RTD click | [Click Here](./clicks/rtd) |
-| RTD 2 click | [Click Here](./clicks/rtd2) | RTK Base click | [Click Here](./clicks/rtkbase) |
-| RTK Rover click | [Click Here](./clicks/rtkrover) | SAML Touch click | [Click Here](./clicks/samltouch) |
-| Scanner click | [Click Here](./clicks/scanner) | SE051 Plug n Trust click | [Click Here](./clicks/se051plugntrust) |
-| Semper Flash click | [Click Here](./clicks/semperflash) | Semper Flash 2 click | [Click Here](./clicks/semperflash2) |
-| Serializer click | [Click Here](./clicks/serializer) | Servo click | [Click Here](./clicks/servo) |
-| Shake2Wake click | [Click Here](./clicks/shake2wake) | SHT click | [Click Here](./clicks/sht) |
-| SHT1x click | [Click Here](./clicks/sht1x) | SHT AN click | [Click Here](./clicks/shtan) |
-| Shutter click | [Click Here](./clicks/shutter) | Shuttle click | [Click Here](./clicks/shuttle) |
-| Signal Relay click | [Click Here](./clicks/signalrelay) | Single Cell click | [Click Here](./clicks/singlecell) |
-| Single Wire CAN click | [Click Here](./clicks/singlewirecan) | Slider click | [Click Here](./clicks/slider) |
-| Slider 2 click | [Click Here](./clicks/slider2) | Smart Buck click | [Click Here](./clicks/smartbuck) |
-| Smart Buck 3 click | [Click Here](./clicks/smartbuck3) | Smart Card 2 click | [Click Here](./clicks/smartcard2) |
-| Smart DOF click | [Click Here](./clicks/smartdof) | Smart DOF 2 click | [Click Here](./clicks/smartdof2) |
-| Smart Mic click | [Click Here](./clicks/smartmic) | Smart Sens click | [Click Here](./clicks/smartsens) |
-| Smart Sens 2 click | [Click Here](./clicks/smartsens2) | Smoke click | [Click Here](./clicks/smoke) |
-| SOLAR ENERGY click | [Click Here](./clicks/solarenergy) | SolidSwitch click | [Click Here](./clicks/solidswitch) |
+| Relay 5 click | [Click Here](./clicks/relay5) | Remote Temp click | [Click Here](./clicks/remotetemp) |
+| ReRAM click | [Click Here](./clicks/reram) | ReRAM 2 click | [Click Here](./clicks/reram2) |
+| RFID click | [Click Here](./clicks/rfid) | RFID 2 click | [Click Here](./clicks/rfid2) |
+| RF Meter click | [Click Here](./clicks/rfmeter) | RF Meter 3 click | [Click Here](./clicks/rfmeter3) |
+| RF Switch click | [Click Here](./clicks/rfswitch) | RGB Driver click | [Click Here](./clicks/rgbdriver) |
+| R Meter click | [Click Here](./clicks/rmeter) | RMS to DC click | [Click Here](./clicks/rmstodc) |
+| RN4678 click | [Click Here](./clicks/rn4678) | RN4870 click | [Click Here](./clicks/rn4870) |
+| RN4871 click | [Click Here](./clicks/rn4871) | RNG click | [Click Here](./clicks/rng) |
+| ROTARY B click | [Click Here](./clicks/rotaryb) | ROTARY G click | [Click Here](./clicks/rotaryg) |
+| ROTARY O click | [Click Here](./clicks/rotaryo) | ROTARY R click | [Click Here](./clicks/rotaryr) |
+| ROTARY Y click | [Click Here](./clicks/rotaryy) | RS232 click | [Click Here](./clicks/rs232) |
+| RS232 2 click | [Click Here](./clicks/rs2322) | RS232 3 click | [Click Here](./clicks/rs2323) |
+| RS232 Isolator click | [Click Here](./clicks/rs232isolator) | RS232 Isolator 2 click | [Click Here](./clicks/rs232isolator2) |
+| RS232 SPI click | [Click Here](./clicks/rs232spi) | RS232 to I2C click | [Click Here](./clicks/rs232toi2c) |
+| RS485 2 click | [Click Here](./clicks/rs4852) | RS485 3 click | [Click Here](./clicks/rs4853) |
+| RS485 3V3 click | [Click Here](./clicks/rs4853v3) | RS485 4 click | [Click Here](./clicks/rs4854) |
+| RS485 5 click | [Click Here](./clicks/rs4855) | RS485 5V click | [Click Here](./clicks/rs4855v) |
+| RS485 6 click | [Click Here](./clicks/rs4856) | RS485 7 click | [Click Here](./clicks/rs4857) |
+| RS485 Isolator click | [Click Here](./clicks/rs485isolator) | RS485 Isolator 2 click | [Click Here](./clicks/rs485isolator2) |
+| RS485 Isolator 3 click | [Click Here](./clicks/rs485isolator3) | RTC 10 click | [Click Here](./clicks/rtc10) |
+| RTC 11 click | [Click Here](./clicks/rtc11) | RTC 12 click | [Click Here](./clicks/rtc12) |
+| RTC 13 click | [Click Here](./clicks/rtc13) | RTC 14 click | [Click Here](./clicks/rtc14) |
+| RTC 16 click | [Click Here](./clicks/rtc16) | RTC 17 click | [Click Here](./clicks/rtc17) |
+| RTC 18 click | [Click Here](./clicks/rtc18) | RTC 19 click | [Click Here](./clicks/rtc19) |
+| RTC 2 click | [Click Here](./clicks/rtc2) | RTC 20 click | [Click Here](./clicks/rtc20) |
+| RTC 21 click | [Click Here](./clicks/rtc21) | RTC 3 click | [Click Here](./clicks/rtc3) |
+| RTC 4 click | [Click Here](./clicks/rtc4) | RTC 5 click | [Click Here](./clicks/rtc5) |
+| RTC 6 click | [Click Here](./clicks/rtc6) | RTC 7 click | [Click Here](./clicks/rtc7) |
+| RTC 8 click | [Click Here](./clicks/rtc8) | RTC 9 click | [Click Here](./clicks/rtc9) |
+| RTD click | [Click Here](./clicks/rtd) | RTD 2 click | [Click Here](./clicks/rtd2) |
+| RTK Base click | [Click Here](./clicks/rtkbase) | RTK Rover click | [Click Here](./clicks/rtkrover) |
+| SAML Touch click | [Click Here](./clicks/samltouch) | Scanner click | [Click Here](./clicks/scanner) |
+| SE051 Plug n Trust click | [Click Here](./clicks/se051plugntrust) | Semper Flash click | [Click Here](./clicks/semperflash) |
+| Semper Flash 2 click | [Click Here](./clicks/semperflash2) | Serializer click | [Click Here](./clicks/serializer) |
+| Servo click | [Click Here](./clicks/servo) | Shake2Wake click | [Click Here](./clicks/shake2wake) |
+| SHT click | [Click Here](./clicks/sht) | SHT1x click | [Click Here](./clicks/sht1x) |
+| SHT AN click | [Click Here](./clicks/shtan) | Shutter click | [Click Here](./clicks/shutter) |
+| Shuttle click | [Click Here](./clicks/shuttle) | Signal Relay click | [Click Here](./clicks/signalrelay) |
+| Single Cell click | [Click Here](./clicks/singlecell) | Single Wire CAN click | [Click Here](./clicks/singlewirecan) |
+| Slider click | [Click Here](./clicks/slider) | Slider 2 click | [Click Here](./clicks/slider2) |
+| Smart Buck click | [Click Here](./clicks/smartbuck) | Smart Buck 3 click | [Click Here](./clicks/smartbuck3) |
+| Smart Card 2 click | [Click Here](./clicks/smartcard2) | Smart DOF click | [Click Here](./clicks/smartdof) |
+| Smart DOF 2 click | [Click Here](./clicks/smartdof2) | Smart Mic click | [Click Here](./clicks/smartmic) |
+| Smart Sens click | [Click Here](./clicks/smartsens) | Smart Sens 2 click | [Click Here](./clicks/smartsens2) |
+| Smoke click | [Click Here](./clicks/smoke) | SOLAR ENERGY click | [Click Here](./clicks/solarenergy) |
+| Solar Energy 2 click | [Click Here](./clicks/solarenergy2) | SolidSwitch click | [Click Here](./clicks/solidswitch) |
 | SolidSwitch 2 click | [Click Here](./clicks/solidswitch2) | SolidSwitch 3 click | [Click Here](./clicks/solidswitch3) |
 | Speaker click | [Click Here](./clicks/speaker) | SpeakUp 3 click | [Click Here](./clicks/speakup3) |
 | Spectral click | [Click Here](./clicks/spectral) | Spectral 2 click | [Click Here](./clicks/spectral2) |
@@ -579,7 +580,7 @@ A full list of all clicks in this repository is defined below:
 | Step Up click | [Click Here](./clicks/stepup) | StereoAmp click | [Click Here](./clicks/stereoamp) |
 | Stretch click | [Click Here](./clicks/stretch) | STSPIN233 click | [Click Here](./clicks/stspin233) |
 | STSPIN250 click | [Click Here](./clicks/stspin250) | Surface Temp click | [Click Here](./clicks/surfacetemp) |
-| Surface Temp 2 click | [Click Here](./clicks/surfacetemp2) | SWI EEPROM click | [Click Here](./clicks/mikrosdk_click_v2) |
+| Surface Temp 2 click | [Click Here](./clicks/surfacetemp2) | SWI EEPROM click | [Click Here](./clicks/swieeprom) |
 | SwipeSwitch click | [Click Here](./clicks/swipeswitch) | Tamper click | [Click Here](./clicks/tamper) |
 | Tamper 2 click | [Click Here](./clicks/tamper2) | TDC click | [Click Here](./clicks/tdc) |
 | TDC 2 click | [Click Here](./clicks/tdc2) | TempHum click | [Click Here](./clicks/temphum) |
