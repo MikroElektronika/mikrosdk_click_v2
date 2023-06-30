@@ -3,7 +3,7 @@
  * \brief Waveform Click example
  * 
  * # Description
- * This program outputs wave forms.
+ * This example demonstrates the use of Waveform click board.
  *
  * The application is composed of two sections :
  * 
@@ -11,94 +11,44 @@
  * Initializes the communication interface and configures the click board.
  * 
  * ## Application Task  
- * Predefined characters are inputed from the serial port.
- * Changes the signal frequency, waveform or amplitude depending on the receiver character.
- * 
- * ## Additional Functions
- * uint32_t waveform_aprox_freqcalculation ( float freqency ) - This function is used
- * to calculate the aproximate value that will be written to the frequency set
- * register.
- * 
- * void output_waveform ( uint32_t frequency_temp, uint8_t output_mode ) - This function 
- * checks which wave form has been chosen and sets frequency of the wave.
- * 
- * void frequency_increment ( uint8_t output_mode ) - This function increases frequency 
- * of the wave.
- * 
- * void frequency_decrement ( uint8_t output_mode ) - This function reduces frequency
- * of the wave.
+ * Predefined commands are inputed from the serial port.
+ * Changes the signal frequency, waveform or amplitude depending on the receiver command.
  * 
  * \author MikroE Team 
  *
  */
-// ------------------------------------------------------------------- INCLUDES
 
 #include "board.h"
 #include "log.h"
 #include "waveform.h"
 
-// ------------------------------------------------------------------ VARIABLES
-
 static waveform_t waveform;
 static log_t logger;
 
-static uint32_t freq;
-static char rx_data_buffer[ 2 ];
+static uint32_t frequency = 200000;
+static uint32_t frequency_step = 10000;
 
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
+/**
+ * @brief Waveform display commands function.
+ * @details This function displays the list of supported commands on the USB UART.
+ * @return None.
+ * @note None.
+ */
+void waveform_display_commands ( void );
 
-uint32_t waveform_aprox_freqcalculation ( float freqency )
-{
-    uint32_t calculation;
-    float waveform_osc_freq = 25000000.0;
-    float waveform_constant = 268435456.0; // 2^28
-    
-    calculation = freqency * ( waveform_constant / waveform_osc_freq );
-    
-    return calculation;
-}
+/**
+ * @brief Waveform parse command function.
+ * @details This function checks if the input command is supported and executes it.
+ * @param[in] command : Command input, for more details refer to @b waveform_display_commands function.
+ * @return None.
+ * @note None.
+ */
+void waveform_parse_command ( uint8_t command );
 
-void output_waveform ( uint32_t frequency_temp, uint8_t output_mode )
-{
-    if ( output_mode == WAVEFORM_SINE_OUT )
-    {
-        waveform_sine_output( &waveform, frequency_temp );
-    }
-    else if ( output_mode == WAVEFORM_TRIANGLE_OUT )
-    {
-        waveform_triangle_output( &waveform, frequency_temp );
-    }
-    else if ( output_mode == WAVEFORM_SQUARE_OUT )
-    {
-        waveform_square_output( &waveform, frequency_temp );
-    }
-}
-
-void frequency_increment ( uint8_t output_mode )
-{
-    uint32_t frequency_temp;
-    freq += 1;
-    frequency_temp = freq << 14;
-    output_waveform( frequency_temp, output_mode );
-}
-
-void frequency_decrement ( uint8_t output_mode )
-{
-    uint32_t frequency_temp;
-    if ( freq > 1 )
-    {
-        freq -= 1;
-    }
-    frequency_temp = freq << 14;
-    output_waveform( frequency_temp, output_mode );
-}
-
-// ------------------------------------------------------ APPLICATION FUNCTIONS
-
-void application_init ( )
+void application_init ( void )
 {
     log_cfg_t log_cfg;
-    waveform_cfg_t cfg;
+    waveform_cfg_t waveform_cfg;
 
     /** 
      * Logger initialization.
@@ -111,83 +61,153 @@ void application_init ( )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
+    // Click initialization.
+    waveform_cfg_setup( &waveform_cfg );
+    WAVEFORM_MAP_MIKROBUS( waveform_cfg, MIKROBUS_1 );
+    if ( SPI_MASTER_ERROR == waveform_init( &waveform, &waveform_cfg ) )
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
 
-    waveform_cfg_setup( &cfg );
-    WAVEFORM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    waveform_init( &waveform, &cfg );
-
-    freq = waveform_aprox_freqcalculation( 5000 );
-    waveform_square_output( &waveform, freq );
-    freq = 1;
+    waveform_sine_output( &waveform, frequency );
+    log_printf( &logger, "Sine wave output set with approx. frequency: %lu Hz\r\n", frequency );
+    waveform_display_commands ( );
+    log_info( &logger, " Application Task " );
 }
 
-void application_task ( )
+void application_task ( void )
 {
-    uint8_t rx_len = log_read ( &logger, rx_data_buffer, 1 );
-    
-    if ( rx_len > 0 ) 
+    uint8_t command = 0;
+    if ( 1 == log_read ( &logger, &command, 1 ) ) 
     {
-       switch( rx_data_buffer[ 0 ] )
-       {
-           case '+': {
-                            waveform_digipot_inc( &waveform );
-                            log_printf( &logger, "Increasing amplitude of the current wave.\r\n" );
-                            break;
-                        }
-           case '-': {
-                            waveform_digipot_dec( &waveform );
-                            log_printf( &logger, "Decreasing amplitude of the current wave.\r\n" );
-                            break;
-                        }
-           case 'S': {
-                            frequency_increment( WAVEFORM_SINE_OUT );
-                            log_printf( &logger, "Increasing frequency of the sine wave.\r\n" );
-                            break;
-                        }
-           case 's': {
-                            frequency_decrement( WAVEFORM_SINE_OUT );
-                            log_printf( &logger, "Decreasing frequency of the sine wave.\r\n" );
-                            break;
-                        }
-           case 'T': {
-                            frequency_increment( WAVEFORM_TRIANGLE_OUT );
-                            log_printf( &logger, "Increasing frequency of the triangle wave.\r\n" );
-                            break;
-                        }
-           case 't': {
-                            frequency_decrement( WAVEFORM_TRIANGLE_OUT );
-                            log_printf( &logger, "Decreasing frequency of the triangle wave.\r\n" );
-                            break;
-                        }
-           case 'Q': {
-                            frequency_increment( WAVEFORM_SQUARE_OUT );
-                            log_printf( &logger, "Increasing frequency of the square wave.\r\n" );
-                            break;
-                        }
-           case 'q': {
-                            frequency_decrement( WAVEFORM_SQUARE_OUT );
-                            log_printf( &logger, "Decreasing frequency of the square wave.\r\n" );
-                            break;
-                        }
-           default :{
-                            break;
-                        }
-       }
-       rx_data_buffer[ 0 ] = 0;
-       rx_len = 0;
+        waveform_parse_command ( command );
     }
 }
 
-void main ( )
+void main ( void )
 {
     application_init( );
 
     for ( ; ; )
     {
         application_task( );
+    }
+}
+
+void waveform_display_commands ( void )
+{
+    log_printf( &logger, "-------------------------------------------\r\n" );
+    log_info( &logger, "- UART commands list -\r\n" );
+    log_printf( &logger, "'+' - Increase amplitude.\r\n" );
+    log_printf( &logger, "'-' - Decrease amplitude.\r\n" );
+    log_printf( &logger, "'S' - Select sine wave output and increase frequency.\r\n" );
+    log_printf( &logger, "'s' - Select sine wave output and decrease frequency.\r\n" );
+    log_printf( &logger, "'T' - Select triangle wave output and increase frequency.\r\n" );
+    log_printf( &logger, "'t' - Select triangle wave output and decrease frequency.\r\n" );
+    log_printf( &logger, "'Q' - Select square wave output and increase frequency.\r\n" );
+    log_printf( &logger, "'q' - Select square wave output and decrease frequency.\r\n" );
+    log_printf( &logger, "'L' or 'l' - Display commands list.\r\n" );
+    log_printf( &logger, "-------------------------------------------\r\n" );
+}
+
+void waveform_parse_command ( uint8_t command )
+{
+    switch ( command )
+    {
+        case '+': 
+        {
+            log_printf( &logger, "Increasing amplitude of the current wave.\r\n" );
+            waveform_digipot_inc ( &waveform );
+            break;
+        }
+        case '-': 
+        {
+            log_printf( &logger, "Decreasing amplitude of the current wave.\r\n" );
+            waveform_digipot_dec ( &waveform );
+            break;
+        }
+        case 'S': 
+        {
+            log_printf( &logger, "Increasing frequency of the sine wave.\r\n" );
+            frequency += frequency_step;
+            waveform_sine_output( &waveform, frequency );
+            log_printf( &logger, "Approx. frequency: %lu Hz\r\n", frequency );
+            break;
+        }
+        case 's': 
+        {
+            log_printf( &logger, "Decreasing frequency of the sine wave.\r\n" );
+            if ( frequency < frequency_step )
+            {
+                frequency = 0;
+            }
+            else
+            {
+                frequency -= frequency_step;
+            }
+            waveform_sine_output( &waveform, frequency );
+            log_printf( &logger, "Approx. frequency: %lu Hz\r\n", frequency );
+            break;
+        }
+        case 'T': 
+        {
+            log_printf( &logger, "Increasing frequency of the triangle wave.\r\n" );
+            frequency += frequency_step;
+            waveform_triangle_output( &waveform, frequency );
+            log_printf( &logger, "Approx. frequency: %lu Hz\r\n", frequency );
+            break;
+        }
+        case 't': 
+        {
+            log_printf( &logger, "Decreasing frequency of the triangle wave.\r\n" );
+            if ( frequency < frequency_step )
+            {
+                frequency = 0;
+            }
+            else
+            {
+                frequency -= frequency_step;
+            }
+            waveform_triangle_output( &waveform, frequency );
+            log_printf( &logger, "Approx. frequency: %lu Hz\r\n", frequency );
+            break;
+        }
+        case 'Q': 
+        {
+            log_printf( &logger, "Increasing frequency of the square wave.\r\n" );
+            frequency += frequency_step;
+            waveform_square_output( &waveform, frequency );
+            log_printf( &logger, "Approx. frequency: %lu Hz\r\n", frequency );
+            break;
+        }
+        case 'q': 
+        {
+            log_printf( &logger, "Decreasing frequency of the square wave.\r\n" );
+            if ( frequency < frequency_step )
+            {
+                frequency = 0;
+            }
+            else
+            {
+                frequency -= frequency_step;
+            }
+            waveform_square_output( &waveform, frequency );
+            log_printf( &logger, "Approx. frequency: %lu Hz\r\n", frequency );
+            break;
+        }
+        case 'L': case 'l': 
+        {
+            waveform_display_commands ( );
+            break;
+        }
+        default :
+        {
+            log_error( &logger, "Wrong command." );
+            break;
+        }
     }
 }
 

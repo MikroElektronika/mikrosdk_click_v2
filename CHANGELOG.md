@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230630](#20230630)**
 + **[20230622](#20230622)**
 + **[20230616](#20230616)**
 + **[20230609](#20230609)**
@@ -52,6 +53,29 @@
 
 ---
 ---
+---
+
+## `20230630`
+
+*Following click boards have been added:*
+
++ `Boost-INV 3`
++ `Accel 28`
++ `Headphone AMP 3`
++ `Magneto 14`
++ `eFuse 7`
+
+*Following click boards have been updated:*
+
++ `VREG 2`
++ `Waveform`
++ `TempHum 21`
++ `MR Angle`
++ `Smart Sens`
++ `V to Hz 2`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230622`

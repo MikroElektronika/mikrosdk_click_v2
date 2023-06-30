@@ -1,7 +1,0 @@
-type: subdirs
-project: VToHz2
-
-subdirs: {
-    lib
-    example
-}

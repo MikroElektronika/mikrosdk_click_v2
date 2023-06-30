@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Clock generator",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Clock & Timing > Clock generator",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+    "dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Waveform click",
     "example_list": [
@@ -26,19 +25,15 @@
     "name": "mikroe.click.waveform",
     "product_link": "https://www.mikroe.com/waveform-click",
     "short_description": "Waveform Click is a precise sine/triangle/square waveform generator, capable of reproducing frequencies up to 12MHz.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         2614
     ],
-    "version": "2.0.0.11"
+    "version": "2.1.0.14",
+    "cmake": true,
+    "alias": "Click.Waveform",
+    "subdir_name": "lib_waveform"
 }
-
-
-
-
-
-
-
 

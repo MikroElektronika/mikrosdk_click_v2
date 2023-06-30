@@ -2,7 +2,7 @@
 ---
 # VREG 2 click
 
-VREG 2 click is a voltage regulator click, with outstanding performances. 
+> VREG 2 click is a voltage regulator click, with outstanding performances.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/vreg2_click.png" height=300px>
@@ -15,8 +15,8 @@ VREG 2 click is a voltage regulator click, with outstanding performances.
 
 #### Click library 
 
-- **Author**        : MikroE Team
-- **Date**          : Jan 2020.
+- **Author**        : Stefan Filipovic
+- **Date**          : Jun 2023.
 - **Type**          : PWM type
 
 
@@ -35,44 +35,54 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void vreg2_cfg_setup ( vreg2_cfg_t *cfg ); 
- 
-- Initialization function.
-> VREG2_RETVAL vreg2_init ( vreg2_t *ctx, vreg2_cfg_t *cfg );
+- `vreg2_cfg_setup` Config Object Initialization function.
+```c
+void vreg2_cfg_setup ( vreg2_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void vreg2_default_cfg ( vreg2_t *ctx );
+- `vreg2_init` Initialization function.
+```c
+err_t vreg2_init ( vreg2_t *ctx, vreg2_cfg_t *cfg );
+```
 
+- `vreg2_default_cfg` Click Default Configuration function.
+```c
+err_t vreg2_default_cfg ( vreg2_t *ctx );
+```
 
 #### Example key functions :
 
-- This function starts PWM module.
-> void vreg2_pwm_start ( vreg2_t *ctx );
- 
-- This function stops PWM module.
-> void vreg2_pwm_stop ( vreg2_t *ctx );
+- `vreg2_set_duty_cycle` This function sets the PWM duty cycle in percentages ( Range[ 0..1 ] ).
+```c
+err_t vreg2_set_duty_cycle ( vreg2_t *ctx, float duty_cycle );
+```
 
-- This function sets the PWM duty cycle.
-> void vreg2_set_duty_cycle ( vreg2_t *ctx, pwm_data_t duty_cycle );
+- `vreg2_pwm_start` This function starts the PWM module output.
+```c
+err_t vreg2_pwm_start ( vreg2_t *ctx );
+```
+
+- `vreg2_pwm_stop` This function stops the PWM module output.
+```c
+err_t vreg2_pwm_stop ( vreg2_t *ctx );
+```
 
 ## Examples Description
 
-> This application enables voltage regulation.
+> This example demonstrates the use of the VREG 2 Click board by changing the voltage output every 5 seconds.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes the GPIO driver and configures the PWM 
-> peripheral for controlling VREG2 voltage output.
+> Initializes the driver and performs the click default configuration.
 
 ```c
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
-    vreg2_cfg_t cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    vreg2_cfg_t vreg2_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -85,93 +95,50 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
-    vreg2_cfg_setup( &cfg );
-    cfg.pwm = (0x3C) ; cfg.an = (0x03) ;
-    vreg2_init( &vreg2, &cfg );
-
-    vreg2_set_duty_cycle( &vreg2, duty_cycle );
-    vreg2_pwm_start( &vreg2 );
+    // Click initialization.
+    vreg2_cfg_setup( &vreg2_cfg );
+    VREG2_MAP_MIKROBUS( vreg2_cfg, MIKROBUS_1 );
+    if ( PWM_ERROR == vreg2_init( &vreg2, &vreg2_cfg ) )
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
+    
+    if ( VREG2_ERROR == vreg2_default_cfg ( &vreg2 ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
+    
+    log_info( &logger, " Application Task " );
 }
   
 ```
 
 ### Application Task
 
-> Based on the data received from the uart the voltage output will be increased or decreased.
+> Controls the voltage output by changing the PWM duty cycle every 5 seconds.
+The duty cycle ranges from 10% to 50%. Each step will be logged on the USB UART where you can track the program flow.
 
 ```c
 
 void application_task ( void )
 {
-    //  Task implementation.
-
-    switch ( ctrl_flag )
+    static int8_t duty_pct = 10;
+    static int8_t duty_step = 10;
+    if ( VREG2_OK == vreg2_set_duty_cycle ( &vreg2, ( float ) duty_pct / 100 ) )
     {
-        case 0:
-        {
-            duty_cycle = (uint32_t)vreg2.pwm_period  * 20 / 100;
-            log_printf( &logger, "Volatage set to : %d %%\r\n", duty_cycle );
-            ctrl_pre_flag = ctrl_flag;
-            ctrl_flag = 1;
-            break;
-        }
-
-        case 1:
-        {
-            duty_cycle = (uint32_t)vreg2.pwm_period * 50 / 100;
-            log_printf( &logger, "Volatage set to : %d %%\r\n", duty_cycle );
-
-            if ( ctrl_pre_flag == 0 )
-            {
-                ctrl_pre_flag = ctrl_flag;
-                ctrl_flag = 2;
-            }
-            else if ( ctrl_pre_flag == 2 )
-            {
-                ctrl_pre_flag = ctrl_flag;
-                ctrl_flag = 0;
-            }
-            break;
-        }
-        case 2:
-        {
-            duty_cycle = (uint32_t)vreg2.pwm_period  * 70 / 100;
-            log_printf( &logger, "Volatage set to : %d %%\r\n", duty_cycle );
-
-            if ( ctrl_pre_flag == 1 )
-            {
-                ctrl_pre_flag = ctrl_flag;
-                ctrl_flag = 3;
-            }
-            else if ( ctrl_pre_flag == 3 )
-            {
-                ctrl_pre_flag = ctrl_flag;
-                ctrl_flag = 1;
-            }
-            break;
-        }
-        case 3:
-        {
-            duty_cycle = (uint32_t)vreg2.pwm_period * 95 / 100;
-            log_printf( &logger, "Volatage set to : %d %%\r\n", duty_cycle );
-            ctrl_pre_flag = ctrl_flag;
-            ctrl_flag = 2;
-            break;
-
-        }
-        default:
-        {
-            log_printf( &logger, "Something broke\r\n");
-        }
+        log_printf( &logger, "\r\n Duty: %u%%\r\n", ( uint16_t ) duty_pct );
     }
-
-    vreg2_set_duty_cycle( &vreg2, duty_cycle );
-    Delay_ms( 1500 );
-    Delay_100ms();
+    duty_pct += duty_step;
+    if ( ( duty_pct > 50 ) || ( duty_pct < 10 ) ) 
+    {
+        duty_step = -duty_step;
+        duty_pct += ( duty_step * 2 );
+    }
+    Delay_ms( 5000 );
 } 
 
 ```

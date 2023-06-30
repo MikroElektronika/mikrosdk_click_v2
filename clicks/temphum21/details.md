@@ -70,7 +70,7 @@ uint8_t temphum21_get_alh_pin ( temphum21_t *ctx );
 
 ### Application Init
 
-> Initializes the driver and logger.
+> Initializes the driver and performs the click default configuration.
 
 ```c
 
@@ -101,6 +101,12 @@ void application_init ( void )
         for ( ; ; );
     }
     
+    if ( TEMPHUM21_ERROR == temphum21_default_cfg ( &temphum21 ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
+    
     log_info( &logger, " Application Task " );
 }
 
@@ -109,15 +115,27 @@ void application_init ( void )
 ### Application Task
 
 > Reads the temperature (Celsius) and humidity (Percents) data and displays the results on the USB UART approximately once per second.
+It also checks if any alarm is detected on the humidity measurement.
 
 ```c
 void application_task ( void )
 {
-    float temperature, humidity;
+    float temperature = 0;
+    float humidity = 0;
     if ( TEMPHUM21_STATUS_NORMAL_OP == temphum21_read_measurement ( &temphum21, &temperature, &humidity ) )
     {
+        if ( temphum21_get_all_pin ( &temphum21 ) )
+        {
+            log_info ( &logger, " Alarm LOW detected " );
+        }
+        else if ( temphum21_get_alh_pin ( &temphum21 ) )
+        {
+            log_info ( &logger, " Alarm HIGH detected " );
+        }
+        
         log_printf ( &logger, " Temperature: %.2f C\r\n", temperature );
         log_printf ( &logger, " Humidity: %.2f %%\r\n\n", humidity );
+        
         Delay_ms ( 1000 );
     }
 }

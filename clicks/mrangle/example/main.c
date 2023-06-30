@@ -29,7 +29,8 @@ static mrangle_t mrangle;
 static log_t logger;
 static float angle;
 
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;          /**< Logger config object. */
     mrangle_cfg_t mrangle_cfg;  /**< Click config object. */
 
@@ -44,38 +45,36 @@ void application_init ( void ) {
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_printf( &logger, "\r\n" );
     log_info( &logger, " Application Init " );
 
     // Click initialization.
-
     mrangle_cfg_setup( &mrangle_cfg );
     MRANGLE_MAP_MIKROBUS( mrangle_cfg, MIKROBUS_1 );
-    err_t init_flag  = mrangle_init( &mrangle, &mrangle_cfg );
-    if ( init_flag == SPI_MASTER_ERROR ) {
+    if ( SPI_MASTER_ERROR == mrangle_init( &mrangle, &mrangle_cfg ) ) 
+    {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
 
     mrangle_default_cfg ( &mrangle );
     log_info( &logger, " Application Task " );
-    log_printf( &logger, "-------------------------\r\n" );
-    Delay_ms( 1000 );
 }
 
-void application_task ( void ) {
+void application_task ( void ) 
+{
     mrangle_get_angle( &mrangle, &angle );
-    log_printf( &logger, "   Angle : %.2f degree   \r\n", angle );
-    log_printf( &logger, "-------------------------\r\n" );
+    log_printf( &logger, " Angle: %.2f deg\r\n", angle );
+    log_printf( &logger, "------------------\r\n" );
     Delay_ms( 1000 );
 }
 
-void main ( void ) {
+void main ( void ) 
+{
     application_init( );
 
-    for ( ; ; ) {
+    for ( ; ; ) 
+    {
         application_task( );
     }
 }

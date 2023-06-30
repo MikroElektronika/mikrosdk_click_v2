@@ -3,7 +3,7 @@
 ---
 # MR Angle click
 
-MR Angle Click is a compact add-on board that contains a magnetoresistive sensor with an integrated amplifier. This board features the KMZ60, a high precision sensor for magnetic angle measurement with single-ended cosine and sine outputs from NXP Semiconductors. The MR sensor element comes with two Wheatstone bridges for cosine and sine signals, supports functions for control circuit and signal amplification, and enables angular measurements with high accuracy by an excellent linearity and temperature drift behavior. The KMZ60 is fully automotive qualified as well as applicable for industrial and consumer applications.
+> MR Angle Click is a compact add-on board that contains a magnetoresistive sensor with an integrated amplifier. This board features the KMZ60, a high precision sensor for magnetic angle measurement with single-ended cosine and sine outputs from NXP Semiconductors. The MR sensor element comes with two Wheatstone bridges for cosine and sine signals, supports functions for control circuit and signal amplification, and enables angular measurements with high accuracy by an excellent linearity and temperature drift behavior. The KMZ60 is fully automotive qualified as well as applicable for industrial and consumer applications.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/mr_angle_click.png" height=300px>
@@ -43,7 +43,7 @@ void mrangle_cfg_setup ( mrangle_cfg_t *cfg );
 
 - `mrangle_init` Initialization function.
 ```c
-MRANGLE_RETVAL mrangle_init ( mrangle_t *ctx, mrangle_cfg_t *cfg );
+err_t mrangle_init ( mrangle_t *ctx, mrangle_cfg_t *cfg );
 ```
 
 - `mrangle_default_cfg` Click Default Configuration function.
@@ -65,7 +65,7 @@ err_t mrangle_get_temperature ( mrangle_t *ctx, float *temperature );
 
 - `mrangle_powerdown_mode` MR Angle powerdown mode function.
 ```c
-err_t mrangle_powerdown_mode ( mrangle_t *ctx, mrangle_powerdown_mode_value_t pd_mode );
+void mrangle_powerdown_mode ( mrangle_t *ctx, mrangle_powerdown_mode_value_t pd_mode );
 ```
 
 ## Example Description
@@ -82,7 +82,8 @@ err_t mrangle_powerdown_mode ( mrangle_t *ctx, mrangle_powerdown_mode_value_t pd
 
 ```c
 
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;          /**< Logger config object. */
     mrangle_cfg_t mrangle_cfg;  /**< Click config object. */
 
@@ -97,25 +98,20 @@ void application_init ( void ) {
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_printf( &logger, "\r\n" );
     log_info( &logger, " Application Init " );
 
     // Click initialization.
-
     mrangle_cfg_setup( &mrangle_cfg );
     MRANGLE_MAP_MIKROBUS( mrangle_cfg, MIKROBUS_1 );
-    err_t init_flag  = mrangle_init( &mrangle, &mrangle_cfg );
-    if ( init_flag == SPI_MASTER_ERROR ) {
+    if ( SPI_MASTER_ERROR == mrangle_init( &mrangle, &mrangle_cfg ) ) 
+    {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );
-
         for ( ; ; );
     }
 
     mrangle_default_cfg ( &mrangle );
     log_info( &logger, " Application Task " );
-    log_printf( &logger, "-------------------------\r\n" );
-    Delay_ms( 1000 );
 }
 
 ```
@@ -128,10 +124,11 @@ void application_init ( void ) {
 
 ```c
 
-void application_task ( void ) {
+void application_task ( void ) 
+{
     mrangle_get_angle( &mrangle, &angle );
-    log_printf( &logger, "   Angle : %.2f degree   \r\n", angle );
-    log_printf( &logger, "-------------------------\r\n" );
+    log_printf( &logger, " Angle: %.2f deg\r\n", angle );
+    log_printf( &logger, "------------------\r\n" );
     Delay_ms( 1000 );
 }
 

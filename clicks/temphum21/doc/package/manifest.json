@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
     "category": "Click Boards > Sensors > Temperature & humidity",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+    "dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "TempHum 21 click",
     "example_list": [
@@ -26,9 +25,11 @@
     "name": "mikroe.click.temphum21",
     "product_link": "https://www.mikroe.com/temphum-21-click",
     "short_description": "Temp&Hum 21 Click is a compact add-on board representing temperature and humidity sensing solution. This board features the HIH8130-021-001, a highly accurate, fully-calibrated digital humidity and temperature sensor from Honeywell Sensing and Productivity Solutions. This sensor, characterized by its high accuracy (±2% RH and ±0.5°C over a wide operating temperature range) and high resolution, provides factory-calibrated 14-bit data to the host controller with a configurable I2C interface. It also comes with alarm features with selectable alarm thresholds by an MCU or externally.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.TempHum21",
+    "subdir_name": "lib_temphum21"
 }
-
