@@ -18,12 +18,12 @@
  * set by user. When connected it initializes and creates socket.
  *
  * ## Application Task
- * It loops function for handleing events. Should notify and log messages when Client
+ * It loops function for handling events. Should notify and log messages when Client
  * is connected/disconnected to TCP server and returns back when receives CR or LF flag.
  *
- * *note:*
+ * @note
  * User should set @b MAIN_WLAN_SSID and @b MAIN_WLAN_PSK for connecting to local network.
- * When devices connects to network it will log it's IP that user need to connect to.
+ * When devices connects to network it will log its IP that user need to connect to.
  * After user connects it should get notification and it can send data to server. 
  * Server will return message "WiFi 8 Click" when Client sends CR or LF character in message.
  *
@@ -39,9 +39,10 @@ static wifi8_t wifi8;
 static log_t logger;
 
 /** Wi-Fi Settings */
-#define MAIN_WLAN_SSID "MikroE Public"      /* < Destination SSID */
-#define MAIN_WLAN_AUTH M2M_WIFI_SEC_WPA_PSK /* < Security type */
-#define MAIN_WLAN_PSK "mikroe.guest"        /* < Password for Destination SSID */
+#define MAIN_WLAN_SSID      "MikroE Public"         /**< Destination SSID */
+#define MAIN_WLAN_AUTH       M2M_WIFI_SEC_WPA_PSK   /**< Security type */
+#define MAIN_WLAN_PSK        "mikroe.guest"         /**< Password for Destination SSID */
+#define MAIN_TCP_SERVER_PORT 8080                   /**< TCP Server port for client connection */
 
 typedef struct s_msg_wifi_product
 {
@@ -50,15 +51,15 @@ typedef struct s_msg_wifi_product
 } t_msg_wifi_product;
 
 static t_msg_wifi_product msg_wifi_product =
-    {
-        .name = "WiFi 8 Click",
+{
+    .name = "WiFi 8 Click"
 };
 
 static uint8_t gau8_socket_test_buffer[1024] = {0};
 
 static int8_t tcp_server_socket = -1;
 static int8_t tcp_client_socket = -1;
-struct wifi8_sockaddr_in_t addr;
+wifi8_sockaddr_in_t addr;
 
 static uint8_t wifi_connected;
 
@@ -113,8 +114,14 @@ void application_init(void)
     wifi8_m2m_rev_t fw_version;
     if (WIFI8_OK == wifi8_get_full_firmware_version(&wifi8, &fw_version))
     {
-        log_printf(&logger, "Firmware HIF (%u) : %u.%u \n", ((uint8_t)(((fw_version.u16_firmware_hif_info) >> (14)) & (0x3))), ((uint8_t)(((fw_version.u16_firmware_hif_info) >> (8)) & (0x3f))), ((uint8_t)(((fw_version.u16_firmware_hif_info) >> (0)) & (0xff))));
-        log_printf(&logger, "Firmware ver   : %u.%u.%u \n", fw_version.u8_firmware_major, fw_version.u8_firmware_minor, fw_version.u8_firmware_patch);
+        log_printf(&logger, "Firmware HIF (%u) : %u.%u \n", 
+                   ((uint16_t)(((fw_version.u16_firmware_hif_info) >> (14)) & (0x3))), 
+                   ((uint16_t)(((fw_version.u16_firmware_hif_info) >> (8)) & (0x3f))), 
+                   ((uint16_t)(((fw_version.u16_firmware_hif_info) >> (0)) & (0xff))));
+        log_printf(&logger, "Firmware ver   : %u.%u.%u \n", 
+                   (uint16_t)fw_version.u8_firmware_major, 
+                   (uint16_t)fw_version.u8_firmware_minor, 
+                   (uint16_t)fw_version.u8_firmware_patch);
         log_printf(&logger, "Firmware Build %s Time %s\n", fw_version.build_date, fw_version.build_time);
     }
     else
@@ -125,7 +132,8 @@ void application_init(void)
 
     if (wifi_connected == M2M_WIFI_DISCONNECTED)
     {
-        if (WIFI8_OK != wifi8_connect(&wifi8, MAIN_WLAN_SSID, sizeof(MAIN_WLAN_SSID), MAIN_WLAN_AUTH, MAIN_WLAN_PSK, M2M_WIFI_CH_ALL))
+        if (WIFI8_OK != wifi8_connect(&wifi8, MAIN_WLAN_SSID, sizeof(MAIN_WLAN_SSID), 
+                                      MAIN_WLAN_AUTH, MAIN_WLAN_PSK, M2M_WIFI_CH_ALL))
         {
             log_error(&logger, " Connection");
             for (;;);
@@ -143,7 +151,7 @@ void application_init(void)
 
     wifi8_socket_init(&wifi8);
     addr.sin_family = 2;
-    addr.sin_port = (uint16_t)((((uint16_t)((6666))) << 8) | (((uint16_t)((6666))) >> 8));
+    addr.sin_port = (uint16_t)((((uint16_t)((MAIN_TCP_SERVER_PORT))) << 8) | (((uint16_t)((MAIN_TCP_SERVER_PORT))) >> 8));
     addr.sin_addr.s_addr = 0;
 
     log_info(&logger, " Application Task ");
@@ -162,8 +170,8 @@ void application_task(void)
         }
         else
         {
-            wifi8_socket_bind(&wifi8, tcp_server_socket, (struct wifi8_sockaddr_t *)&addr,
-                              sizeof(struct wifi8_sockaddr_in_t));
+            wifi8_socket_bind(&wifi8, tcp_server_socket, (wifi8_sockaddr_t *)&addr,
+                              sizeof(wifi8_sockaddr_in_t));
         }
     }
 }
@@ -204,7 +212,7 @@ static void wifi_cb(uint8_t u8_msg_type, void *pv_msg)
             uint16_t demo_ssid_len;
             uint16_t scan_ssid_len = strlen((char *)pstr_scan_result->au8ssid);
 
-            log_printf(&logger, "wifi_cb: [%d] SSID:%s\r\n", scan_request_index, pstr_scan_result->au8ssid);
+            log_printf(&logger, "wifi_cb: [%d] SSID:%s\r\n", (uint16_t)scan_request_index, pstr_scan_result->au8ssid);
 
             num_found_ap = wifi8.ch_num;
             if (scan_ssid_len)
@@ -255,7 +263,8 @@ static void wifi_cb(uint8_t u8_msg_type, void *pv_msg)
             volatile uint8_t *pu8ip_address = (uint8_t *)pv_msg;
 
             log_printf(&logger, "wifi_cb: IP: %u.%u.%u.%u\r\n",
-                    pu8ip_address[0], pu8ip_address[1], pu8ip_address[2], pu8ip_address[3]);
+                    (uint16_t)pu8ip_address[0], (uint16_t)pu8ip_address[1], 
+                    (uint16_t)pu8ip_address[2], (uint16_t)pu8ip_address[3]);
 
             wifi_connected = M2M_WIFI_CONNECTED;
             break;

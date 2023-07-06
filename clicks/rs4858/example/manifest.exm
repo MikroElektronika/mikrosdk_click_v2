@@ -1,0 +1,8 @@
+{
+    "name": "RS485 8 Click",
+    "description": "RS485 8 Click is a compact add-on board that enables communication over an RS485 network. This board features the THVD1426, an RS485 transceiver with auto-direction control and ESD protection from Texas Instruments. The THVD1426 offers bus protection for contact discharge, air gap discharge, fast transient burst, and +/-16V bus fault protection.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
+    "hw" : ["click","THVD1426DR"],
+    "category" : ["Click Boards > Interface > RS485"]
+}

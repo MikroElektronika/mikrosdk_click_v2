@@ -3,7 +3,7 @@
 ---
 # WiFi 8 click
 
-WiFi 8 Click is a compact add-on board that contains a wireless combo module. This board features the ATWINC3400-MR210CA, a Bluetooth 5.0 certified module optimized for low power and high-performance mobile applications from Microchip Technology. 
+> WiFi 8 Click is a compact add-on board that contains a wireless combo module. This board features the ATWINC3400-MR210CA, a Bluetooth 5.0 certified module optimized for low power and high-performance mobile applications from Microchip Technology. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/wifi_8_click.png" height=300px>
@@ -43,29 +43,29 @@ void wifi8_cfg_setup ( wifi8_cfg_t *cfg );
 
 - `wifi8_init` Initialization function.
 ```c
-WIFI8_RETVAL wifi8_init ( wifi8_t *ctx, wifi8_cfg_t *cfg );
+err_t wifi8_init ( wifi8_t *ctx, wifi8_cfg_t *cfg );
 ```
 
 - `wifi8_default_cfg` Click Default Configuration function.
 ```c
-void wifi8_default_cfg ( wifi8_t *ctx );
+err_t wifi8_default_cfg ( wifi8_t *ctx );
 ```
 
 #### Example key functions :
 
 - `wifi8_init_drv` Synchronous API to initialize the device driver.
 ```c
-err_t wifi8_init_drv(wifi8_t *ctx)
+err_t wifi8_init_drv(wifi8_t *ctx);
 ```
 
 - `wifi8_connect` Asynchronous Wi-Fi connection function.
 ```c
-err_t wifi8_connect(wifi8_t *ctx, char *pc_ssid, uint8_t u8_ssid_len, wifi8_m2m_sec_type_t u8_sec_type, void *pv_auth_info, uint16_t u16_ch)
+err_t wifi8_connect(wifi8_t *ctx, char *pc_ssid, uint8_t u8_ssid_len, wifi8_m2m_sec_type_t u8_sec_type, void *pv_auth_info, uint16_t u16_ch);
 ```
 
 - `wifi8_socket_bind` Asynchronous bind function associates the provided address and local port to the socket.
 ```c
-err_t wifi8_socket_bind(wifi8_t *ctx, int8_t sock, struct wifi8_sockaddr_t *pstr_addr, uint8_t u8_addr_len);
+err_t wifi8_socket_bind(wifi8_t *ctx, int8_t sock, wifi8_sockaddr_t *pstr_addr, uint8_t u8_addr_len);
 ```
 
 ## Example Description
@@ -130,8 +130,14 @@ void application_init(void)
     wifi8_m2m_rev_t fw_version;
     if (WIFI8_OK == wifi8_get_full_firmware_version(&wifi8, &fw_version))
     {
-        log_printf(&logger, "Firmware HIF (%u) : %u.%u \n", ((uint8_t)(((fw_version.u16_firmware_hif_info) >> (14)) & (0x3))), ((uint8_t)(((fw_version.u16_firmware_hif_info) >> (8)) & (0x3f))), ((uint8_t)(((fw_version.u16_firmware_hif_info) >> (0)) & (0xff))));
-        log_printf(&logger, "Firmware ver   : %u.%u.%u \n", fw_version.u8_firmware_major, fw_version.u8_firmware_minor, fw_version.u8_firmware_patch);
+        log_printf(&logger, "Firmware HIF (%u) : %u.%u \n", 
+                   ((uint16_t)(((fw_version.u16_firmware_hif_info) >> (14)) & (0x3))), 
+                   ((uint16_t)(((fw_version.u16_firmware_hif_info) >> (8)) & (0x3f))), 
+                   ((uint16_t)(((fw_version.u16_firmware_hif_info) >> (0)) & (0xff))));
+        log_printf(&logger, "Firmware ver   : %u.%u.%u \n", 
+                   (uint16_t)fw_version.u8_firmware_major, 
+                   (uint16_t)fw_version.u8_firmware_minor, 
+                   (uint16_t)fw_version.u8_firmware_patch);
         log_printf(&logger, "Firmware Build %s Time %s\n", fw_version.build_date, fw_version.build_time);
     }
     else
@@ -142,7 +148,8 @@ void application_init(void)
 
     if (wifi_connected == M2M_WIFI_DISCONNECTED)
     {
-        if (WIFI8_OK != wifi8_connect(&wifi8, MAIN_WLAN_SSID, sizeof(MAIN_WLAN_SSID), MAIN_WLAN_AUTH, MAIN_WLAN_PSK, M2M_WIFI_CH_ALL))
+        if (WIFI8_OK != wifi8_connect(&wifi8, MAIN_WLAN_SSID, sizeof(MAIN_WLAN_SSID), 
+                                      MAIN_WLAN_AUTH, MAIN_WLAN_PSK, M2M_WIFI_CH_ALL))
         {
             log_error(&logger, " Connection");
             for (;;);
@@ -160,7 +167,7 @@ void application_init(void)
 
     wifi8_socket_init(&wifi8);
     addr.sin_family = 2;
-    addr.sin_port = (uint16_t)((((uint16_t)((6666))) << 8) | (((uint16_t)((6666))) >> 8));
+    addr.sin_port = (uint16_t)((((uint16_t)((MAIN_TCP_SERVER_PORT))) << 8) | (((uint16_t)((MAIN_TCP_SERVER_PORT))) >> 8));
     addr.sin_addr.s_addr = 0;
 
     log_info(&logger, " Application Task ");
@@ -170,7 +177,7 @@ void application_init(void)
 
 ### Application Task
 
-> It loops function for handleing events. Should notify and log messages when Client
+> It loops function for handling events. Should notify and log messages when Client
 is connected/disconnected to TCP server and returns back when receives CR or LF flag.
 
 ```c
@@ -188,8 +195,8 @@ void application_task(void)
         }
         else
         {
-            wifi8_socket_bind(&wifi8, tcp_server_socket, (struct wifi8_sockaddr_t *)&addr,
-                              sizeof(struct wifi8_sockaddr_in_t));
+            wifi8_socket_bind(&wifi8, tcp_server_socket, (wifi8_sockaddr_t *)&addr,
+                              sizeof(wifi8_sockaddr_in_t));
         }
     }
 }
@@ -198,8 +205,8 @@ void application_task(void)
 
 ## Note
 
-> User should set @b MAIN_WLAN_SSID and @b MAIN_WLAN_PSK for connecting to local network.
-When devices connects to network it will log it's IP that user need to connect to.
+> User should set MAIN_WLAN_SSID and MAIN_WLAN_PSK for connecting to local network.
+When devices connects to network it will log its IP that user need to connect to.
 After user connects it should get notification and it can send data to server. 
 Server will return message "WiFi 8 Click" when Client sends CR or LF character in message.
 

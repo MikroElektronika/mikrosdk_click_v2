@@ -29,15 +29,8 @@
 #include "string.h"
 #include "conversions.h"
 
-#define APP_OK                                      0
-#define APP_ERROR_DRIVER                    -1
-#define APP_ERROR_OVERFLOW               -2
-#define APP_ERROR_TIMEOUT                 -3
-
-#define RSP_OK                                  "OK"
-#define RSP_READY_FOR_SEND             ">"
-#define RSP_SEND_OK                         "SEND OK"
-#define RSP_ERROR                             "ERROR"
+#define APP_SSID                            "MikroE Public"
+#define APP_PASSWORD                        "mikroe.guest"
 
 #define PROCESS_BUFFER_SIZE                 610
 
@@ -45,8 +38,8 @@
 
 uint8_t page[ ] = "<a href=\"https://www.mikroe.com/\">MikroElektronika</a>\
 <h1 style=\"color:red;\">WiFi ESP click board</h1>";
-uint8_t page_len[ 5 ];
-uint8_t send_buf[ 10 ];
+uint8_t page_len[ 10 ] = { 0 };
+uint8_t send_buf[ 10 ] = { 0 };
 static uint8_t link_id[ 2 ] = { 0 };
 
 static wifiesp_t wifiesp;
@@ -54,7 +47,6 @@ static log_t logger;
 
 static char app_buf[ PROCESS_BUFFER_SIZE ]  = { 0 };
 static int32_t app_buf_len                  = 0;
-static int32_t app_buf_cnt                  = 0;
 
 static err_t app_error_flag;
 
@@ -64,7 +56,6 @@ static void wifiesp_clear_app_buf ( void )
 {
     memset( app_buf, 0, app_buf_len );
     app_buf_len = 0;
-    app_buf_cnt = 0;
 }
 
 static void wifiesp_log_app_buf ( void )
@@ -73,159 +64,163 @@ static void wifiesp_log_app_buf ( void )
     {
         log_printf( &logger, "%c", app_buf[ buf_cnt ] );
     }
-    wifiesp_clear_app_buf(  );
 }
 
 static err_t wifiesp_process ( void )
 {
-    err_t return_flag = APP_ERROR_DRIVER;
-    int32_t rx_size;
-    char rx_buff[ PROCESS_BUFFER_SIZE ] = { 0 };
-    
-    rx_size = wifiesp_generic_read( &wifiesp, rx_buff, PROCESS_BUFFER_SIZE );
-
-    if ( rx_size > 0 )
-    { 
-        int32_t buf_cnt = 0;
-        return_flag = APP_OK;
-
-        if ( app_buf_len + rx_size >= PROCESS_BUFFER_SIZE )
+    uint8_t rx_buf[ PROCESS_BUFFER_SIZE ] = { 0 };
+    int32_t rx_size = 0;
+    rx_size = wifiesp_generic_read( &wifiesp, rx_buf, PROCESS_BUFFER_SIZE );
+    if ( rx_size > 0 ) 
+    {
+        int32_t buf_cnt = app_buf_len;
+        if ( ( ( app_buf_len + rx_size ) > PROCESS_BUFFER_SIZE ) && ( app_buf_len > 0 ) ) 
         {
-            wifiesp_clear_app_buf(  );
-            return_flag = APP_ERROR_OVERFLOW;
+            buf_cnt = PROCESS_BUFFER_SIZE - ( ( app_buf_len + rx_size ) - PROCESS_BUFFER_SIZE );
+            memmove ( app_buf, &app_buf[ PROCESS_BUFFER_SIZE - buf_cnt ], buf_cnt );
         }
-        else
+        for ( int32_t rx_cnt = 0; rx_cnt < rx_size; rx_cnt++ ) 
         {
-            buf_cnt = app_buf_len;
-            app_buf_len += rx_size;
-        }
-
-        for ( int32_t rx_cnt = 0; rx_cnt < rx_size; rx_cnt++ )
-        {
-            if ( rx_buff[ rx_cnt ] != 0 ) 
+            if ( rx_buf[ rx_cnt ] ) 
             {
-                app_buf[ ( buf_cnt + rx_cnt ) ] = rx_buff[ rx_cnt ];
-            }
-            else
-            {
-                buf_cnt--;
-                app_buf_len--;
+                app_buf[ buf_cnt++ ] = rx_buf[ rx_cnt ];
+                if ( app_buf_len < PROCESS_BUFFER_SIZE )
+                {
+                    app_buf_len++;
+                }
             }
         }
-    } 
-
-    return return_flag;
+        return WIFIESP_OK;
+    }
+    return WIFIESP_ERROR;
 }
 
 static err_t wifiesp_rsp_check ( char * response )
 {
-    uint16_t timeout_cnt = 0;
-    uint16_t timeout = 50000;
-    err_t error_flag = wifiesp_process(  );
-    if ( ( error_flag != 0 ) && ( error_flag != -1 ) )
+    uint32_t timeout_cnt = 0;
+    uint32_t timeout = 120000;
+    wifiesp_clear_app_buf( );
+    wifiesp_process( );
+    while ( ( 0 == strstr( app_buf, response ) ) &&
+            ( 0 == strstr( app_buf, WIFIESP_RSP_ERROR ) ) )
     {
-        return error_flag;
-    }
-    
-    while ( ( strstr( app_buf, response ) == 0 ) && ( strstr( app_buf, RSP_ERROR ) == 0 ) )
-    {
-        error_flag = wifiesp_process(  );
-        if ( ( error_flag != 0 ) && ( error_flag != -1 ) )
+        wifiesp_process( );
+        if ( timeout_cnt++ > timeout )
         {
-            return error_flag;
+            wifiesp_clear_app_buf( );
+            return WIFIESP_ERROR_TIMEOUT;
         }
-        
-        timeout_cnt++;
-        
-        if ( timeout_cnt > timeout )
-        {
-            wifiesp_clear_app_buf(  );
-            return APP_ERROR_TIMEOUT;
-        }
-        
-        Delay_us( 100 );
+        Delay_ms( 1 );
     }
-    if ( strcmp( response, WIFIESP_RECEIVE ) == 0 )
+    Delay_ms( 5 );
+    wifiesp_process( );
+    if ( strstr( app_buf, response ) )
     {
-        Delay_1ms( );
-        wifiesp_process(  );
-        link_id[ 0 ] = app_buf[ strstr( app_buf, response ) - &app_buf[ 0 ] + 5 ];
+        return WIFIESP_OK;
     }
-    wifiesp_log_app_buf();
-    
-    return APP_OK;
+    else if ( strstr( app_buf, WIFIESP_RSP_ERROR ) )
+    {
+        return WIFIESP_ERROR_CMD;
+    }
+    return WIFIESP_ERROR_UNKNOWN;
 }
 
 static void wifiesp_error_check( err_t error_flag )
 {
-    if ( ( error_flag != 0 ) && ( error_flag != -1 ) )
+    switch ( error_flag )
     {
-        switch ( error_flag )
+        case WIFIESP_OK:
         {
-            case -2:
-                log_error( &logger, " Overflow!" );
-                break;
-            case -3:
-                log_error( &logger, " Timeout!" );
-                break;
-            default:
-                break;
+            wifiesp_log_app_buf( );
+            break;
+        }
+        case WIFIESP_ERROR:
+        {
+            log_error( &logger, " Overflow!" );
+            break;
+        }
+        case WIFIESP_ERROR_TIMEOUT:
+        {
+            log_error( &logger, " Timeout!" );
+            break;
+        }
+        case WIFIESP_ERROR_CMD:
+        {
+            log_error( &logger, " CMD!" );
+            break;
+        }
+        case WIFIESP_ERROR_UNKNOWN:
+        default:
+        {
+            log_error( &logger, " Unknown!" );
+            break;
         }
     }
     log_printf( &logger, "\r\n-----------------------------------\r\n" );
+    Delay_ms( 500 );
 }
 
 void wifi_communication_init( void )
 {
-    wifiesp_process(  ); // dummy read
-    wifiesp_clear_app_buf(  );
+    wifiesp_process( ); // dummy read
+    wifiesp_clear_app_buf( );
     
     wifiesp_send_cmd( &wifiesp, WIFIESP_CHECK, NULL );
-    app_error_flag = wifiesp_rsp_check( RSP_OK );
+    app_error_flag = wifiesp_rsp_check( WIFIESP_RSP_OK );
     wifiesp_error_check( app_error_flag );
-    Delay_ms( 500 );
     
-    wifiesp_send_cmd( &wifiesp, WIFIESP_RST, NULL );
-    app_error_flag = wifiesp_rsp_check( RSP_OK );
+    wifiesp_send_cmd( &wifiesp, WIFIESP_RESTORE, NULL );
+    app_error_flag = wifiesp_rsp_check( WIFIESP_RSP_OK );
     wifiesp_error_check( app_error_flag );
-    Delay_ms( 500 );
-    wifiesp_process(  );
-    wifiesp_clear_app_buf();
+    uart_clear ( &wifiesp.uart );
     
     wifiesp_send_cmd( &wifiesp, WIFIESP_CHECK_FIRMWARE, NULL );
-    app_error_flag = wifiesp_rsp_check( RSP_OK );
+    app_error_flag = wifiesp_rsp_check( WIFIESP_RSP_OK );
     wifiesp_error_check( app_error_flag );
-    Delay_ms( 500 );
     
     wifiesp_send_cmd( &wifiesp, WIFIESP_SET_MODE, "1" );
-    app_error_flag = wifiesp_rsp_check( RSP_OK );
+    app_error_flag = wifiesp_rsp_check( WIFIESP_RSP_OK );
     wifiesp_error_check( app_error_flag );
-    Delay_ms( 500 );
     
-    wifiesp_send_cmd( &wifiesp, WIFIESP_CONNECT, "\"MikroE Public\",\"mikroe.guest\"" );
-    app_error_flag = wifiesp_rsp_check( RSP_OK );
+    wifiesp_clear_app_buf( );
+    strcpy ( app_buf, "\"" );
+    strcat ( app_buf, APP_SSID );
+    strcat ( app_buf, "\",\"" );
+    strcat ( app_buf, APP_PASSWORD );
+    strcat ( app_buf, "\"" );
+    app_buf_len = strlen ( app_buf );
+    wifiesp_send_cmd( &wifiesp, WIFIESP_CONNECT, app_buf );
+    wifiesp_clear_app_buf ( );
+    app_error_flag = wifiesp_rsp_check( WIFIESP_RSP_OK );
     wifiesp_error_check( app_error_flag );
-    Delay_ms( 500 );
     
     wifiesp_send_cmd( &wifiesp, WIFIESP_SET_MULTIPLE_CONNECTION, "1" );
-    app_error_flag = wifiesp_rsp_check( RSP_OK );
+    app_error_flag = wifiesp_rsp_check( WIFIESP_RSP_OK );
     wifiesp_error_check( app_error_flag );
-    Delay_ms( 500 );
     
     wifiesp_send_cmd( &wifiesp, WIFIESP_SET_AS_SERVER, "1,80" );
-    app_error_flag = wifiesp_rsp_check( RSP_OK );
+    app_error_flag = wifiesp_rsp_check( WIFIESP_RSP_OK );
     wifiesp_error_check( app_error_flag );
-    Delay_ms( 500 );
-    
-    wifiesp_send_cmd( &wifiesp, WIFIESP_CHECK_SERVER_TIMEOUT, NULL );
-    app_error_flag = wifiesp_rsp_check( RSP_OK );
-    wifiesp_error_check( app_error_flag );
-    Delay_ms( 500 );
     
     wifiesp_send_cmd( &wifiesp, WIFIESP_GET_IP, NULL );
-    app_error_flag = wifiesp_rsp_check( RSP_OK );
+    app_error_flag = wifiesp_rsp_check( WIFIESP_RSP_OK );
     wifiesp_error_check( app_error_flag );
-    Delay_ms( 500 );
+}
+
+static void wifiesp_str_cut_chr ( uint8_t *str, uint8_t chr )
+{
+    uint16_t cnt_0 = 0;
+    uint16_t cnt_1 = 0;
+    for ( cnt_0 = 0; cnt_0 < strlen( str ); cnt_0++ )
+    {
+        if ( str[ cnt_0 ] == chr )
+        {
+            for ( cnt_1 = cnt_0; cnt_1 < strlen( str ); cnt_1++ )
+            {
+                str[ cnt_1 ] = str[ cnt_1 + 1 ];
+            }
+        }
+    }
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -248,55 +243,63 @@ void application_init ( void )
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
-    //  Click initialization.
-
+    // Click initialization.
     wifiesp_cfg_setup( &cfg );
-    WIFIESP_MAP_MIKROBUS( cfg , MIKROBUS_1 );
-    wifiesp_init( &wifiesp , &cfg );
+    WIFIESP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    wifiesp_init( &wifiesp, &cfg );
     wifiesp_default_cfg( &wifiesp );
     Delay_ms( 1000 );
     
     // Communication initialization
-    
     wifi_communication_init( );
     
     uint16_to_str ( strlen( page ), page_len );
-    str_cut_chr ( page_len, ' ' );
+    wifiesp_str_cut_chr ( page_len, ' ' );
     
     log_info( &logger, "Please connect to the IP address listed above.\r\n" );
 }
 
 void application_task ( void )
 {
-    app_error_flag = wifiesp_rsp_check( WIFIESP_RECEIVE );
-    Delay_ms( 100 );
-    if ( app_error_flag == APP_OK ) 
+    if ( WIFIESP_OK == wifiesp_rsp_check( WIFIESP_RECEIVE ) ) 
     {
+        link_id[ 0 ] = *( strstr( app_buf, WIFIESP_RECEIVE ) + 5 );
         strcpy ( send_buf, link_id );
         strcat ( send_buf, "," );
         strcat ( send_buf, page_len );
-        str_cut_chr ( send_buf, ' ' );
+        wifiesp_str_cut_chr ( send_buf, ' ' );
+        wifiesp_log_app_buf( );
+        wifiesp_clear_app_buf( );
+        Delay_ms( 100 );
+        wifiesp_process( );
+        wifiesp_log_app_buf( );
         wifiesp_send_cmd( &wifiesp, WIFIESP_SEND, send_buf );
-        app_error_flag = wifiesp_rsp_check( RSP_READY_FOR_SEND );
+        app_error_flag = wifiesp_rsp_check( WIFIESP_RSP_READY_FOR_SEND );
+        wifiesp_log_app_buf( );
         Delay_ms( 100 );
         wifiesp_generic_write( &wifiesp, page, strlen( page ) );
-        app_error_flag = wifiesp_rsp_check( RSP_SEND_OK );
+        app_error_flag = wifiesp_rsp_check( WIFIESP_RSP_SEND_OK );
         wifiesp_error_check( app_error_flag );
         wifiesp_send_cmd( &wifiesp, WIFIESP_CLOSE, link_id );
-        app_error_flag = wifiesp_rsp_check( RSP_OK );
+        app_error_flag = wifiesp_rsp_check( WIFIESP_RSP_OK );
         wifiesp_error_check( app_error_flag );
+        wifiesp_clear_app_buf( );
+        
+        wifiesp_process( );
+        wifiesp_log_app_buf( );
+        wifiesp_clear_app_buf( );
+        uart_clear ( &wifiesp.uart );
         Delay_ms( 100 );
     }
 }
 
 void main ( void )
 {
-    
     application_init( );
     
     for ( ; ; )
     {
-        application_task ( void );
+        application_task ( );
     }
 }
 

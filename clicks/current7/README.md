@@ -46,39 +46,33 @@ void current7_cfg_setup ( current7_cfg_t *cfg );
 err_t current7_init ( current7_t *ctx, current7_cfg_t *cfg );
 ```
 
-- `current7_default_cfg` Click Default Configuration function.
-```c
-err_t current7_default_cfg ( current7_t *ctx );
-```
-
 #### Example key functions :
 
-- `current7_get_adc` Current 7 get ADC function.
+- `current7_read_voltage` This function reads raw ADC value and converts it to proportional voltage level.
 ```c
-err_t current7_get_adc ( current7_t *ctx, uint16_t *data_out );
+err_t current7_read_voltage ( current7_t *ctx, float *voltage );
 ```
 
-- `current7_get_adc_voltage` Current 7 get ADC voltage function.
-```c
-err_t current7_get_adc_voltage ( current7_t *ctx, float *adc_vtg );
-```
-
-- `current7_get_current` Current 7 get current function.
+- `current7_get_current` This function reads the input current level [A] based on CURRENT7_NUM_CONVERSIONS of voltage measurements.
 ```c
 err_t current7_get_current ( current7_t *ctx, float *current );
+```
+
+- `current7_set_vref` This function sets the voltage reference for Current 7 click driver.
+```c
+err_t current7_set_vref ( current7_t *ctx, float vref );
 ```
 
 ## Example Description
 
 > This library contains API for Current 7 Click driver.
-> The demo application reads ADC value and current ( A ).
+> The demo application reads current ( A ).
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
 > Initializes I2C or AN driver and log UART.
-> After driver initialization the app set default settings.
 
 ```c
 
@@ -109,14 +103,7 @@ void application_init ( void )
         for ( ; ; );
     }
     
-    if ( CURRENT7_ERROR == current7_default_cfg ( &current7 ) )
-    {
-        log_error( &logger, " Default configuration." );
-        for ( ; ; );
-    }
-    
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
 }
 
 ```
@@ -124,19 +111,14 @@ void application_init ( void )
 ### Application Task
 
 > This is an example that demonstrates the use of the Current 7 Click board™.
-> In this example, we read and display the ADC values and current ( A ) data.
+> In this example, we read and display the current ( A ) data.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
 
 void application_task ( void ) 
 {
-    static float current;
-    static uint16_t adc_val;
-    
-    current7_get_adc( &current7, &adc_val );
-    log_printf( &logger, " ADC     : %d \r\n", adc_val );
-    log_printf( &logger, "- - - - - - - - - - \r\n" );
+    float current = 0;
     current7_get_current( &current7, &current );
     log_printf( &logger, " Current : %.3f A\r\n", current );
     log_printf( &logger, "--------------------\r\n" );
