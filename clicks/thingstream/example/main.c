@@ -54,18 +54,18 @@ static uint8_t send_data_cnt = 0;
 
 static void thingstream_process ( void )
 {
-    int32_t rsp_size;
+    int32_t rsp_size = 0;
     uint16_t rsp_cnt = 0;
     
     char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
-    uint8_t check_buf_cnt;
+    uint16_t check_buf_cnt = 0;
     uint16_t process_cnt = PROCESS_COUNTER;
     // Clear parser buffer
-    memset( current_parser_buf, 0 , PROCESS_PARSER_BUFFER_SIZE ); 
+    memset( current_parser_buf, 0, PROCESS_PARSER_BUFFER_SIZE ); 
     
-    while( process_cnt != 0 )
+    while ( process_cnt != 0 )
     {
-        rsp_size = thingstream_generic_read( &thingstream, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
+        rsp_size = thingstream_generic_read( &thingstream, uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
 
         if ( rsp_size > 0 )
         {  
@@ -108,9 +108,9 @@ static void parser_application ( char *rsp )
     thingstream_generic_parser( rsp, THINGSTREAM_NEMA_CGNSINF, THINGSTREAM_CGNSINF_LATITUDE, element_buf );
     if ( strlen( element_buf ) > 0 )
     {
-        log_printf( &logger, "Latitude:  %s degrees \r\n", element_buf );
+        log_printf( &logger, "Latitude: %s degrees \r\n", element_buf );
         thingstream_generic_parser( rsp, THINGSTREAM_NEMA_CGNSINF, THINGSTREAM_CGNSINF_LONGITUDE, element_buf );
-        log_printf( &logger, "Longitude:  %s degrees \r\n", element_buf );
+        log_printf( &logger, "Longitude: %s degrees \r\n", element_buf );
         memset( element_buf, 0, sizeof( element_buf ) );
         thingstream_generic_parser( rsp, THINGSTREAM_NEMA_CGNSINF, THINGSTREAM_CGNSINF_ALTITUDE, element_buf );
         log_printf( &logger, "Altitude: %s m", element_buf );  
@@ -141,8 +141,7 @@ void application_init ( void )
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
-    //  Click initialization.
-
+    // Click initialization.
     thingstream_cfg_setup( &cfg );
     THINGSTREAM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     thingstream_init( &thingstream, &cfg );

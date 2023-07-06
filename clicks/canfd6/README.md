@@ -1,10 +1,9 @@
 \mainpage Main Page
 
-
 ---
 # CAN FD 6 click
 
-CAN FD 6 Click is a compact add-on board containing a CAN transceiver that supports CAN and CAN FD protocols. This board features the TCAN4550, a CAN FD controller that provides an interface between the CAN bus and the CAN protocol controller up to 5 megabits per second (Mbps) from Texas Instruments.
+> CAN FD 6 Click is a compact add-on board containing a CAN transceiver that supports CAN and CAN FD protocols. This board features the TCAN4550, a CAN FD controller that provides an interface between the CAN bus and the CAN protocol controller up to 5 megabits per second (Mbps) from Texas Instruments.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/canfd6_click.png" height=300px>
@@ -44,7 +43,7 @@ void canfd6_cfg_setup ( canfd6_cfg_t *cfg );
 
 - `canfd6_init` Initialization function.
 ```c
-CANFD6_RETVAL canfd6_init ( canfd6_t *ctx, canfd6_cfg_t *cfg );
+err_t canfd6_init ( canfd6_t *ctx, canfd6_cfg_t *cfg );
 ```
 
 - `canfd6_default_cfg` Click Default Configuration function.
@@ -99,7 +98,6 @@ void application_init ( void ) {
     log_info( &logger, " Application Init " );
 
     // Click initialization.
-
     canfd6_cfg_setup( &canfd6_cfg );
     CANFD6_MAP_MIKROBUS( canfd6_cfg, MIKROBUS_1 );
     err_t init_flag = canfd6_init( &canfd6, &canfd6_cfg );
@@ -112,7 +110,10 @@ void application_init ( void ) {
 
     canfd6_default_cfg( &canfd6 );
     Delay_ms( 100 );
-    
+#ifdef DEMO_APP_TRANSMITTER
+    canfd6_mcan_tx_header_t canfd6_header = { 0 };
+    uint8_t data_send_buf[ 64 ] = { 0 };
+    strcpy ( data_send_buf, "MIKROE" );
     canfd6_header.DLC = CANFD6_MCAN_DLC_6B;
     canfd6_header.ID = 0x123;
     canfd6_header.FDF = 1;
@@ -124,11 +125,8 @@ void application_init ( void ) {
     canfd6_header.ESI = 0;
     canfd6_mcan_write_txbuffer( &canfd6, CANFD6_FIRST_MSG, &canfd6_header, data_send_buf );
 
-    data_send_buf[ 0 ] = '2';
-    data_send_buf[ 1 ] = '0';
-    data_send_buf[ 2 ] = '2';
-    data_send_buf[ 3 ] = '1';
-    canfd6_header.DLC = CANFD6_MCAN_DLC_4B;
+    strcpy ( data_send_buf, "CAN FD 6 click board" );
+    canfd6_header.DLC = CANFD6_MCAN_DLC_20B;
     canfd6_header.ID = 0x456;
     canfd6_header.FDF = 1;
     canfd6_header.BRS = 1;
@@ -138,8 +136,10 @@ void application_init ( void ) {
     canfd6_header.XTD = 0;
     canfd6_header.ESI = 0;
     canfd6_mcan_write_txbuffer( &canfd6, CANFD6_SECOND_MSG, &canfd6_header, data_send_buf );
-    
-    Delay_ms( 100 );
+    log_printf( &logger, " Application Mode: Transmitter\r\n" );
+#else
+    log_printf( &logger, " Application Mode: Receiver\r\n" );
+#endif
     log_info( &logger, " Application Task " );
 }
 
@@ -152,14 +152,14 @@ void application_init ( void ) {
 ```c
 
 void application_task ( void ) {
-    #ifdef APP_TRANSMITTER
+#ifdef DEMO_APP_TRANSMITTER
+    log_printf( &logger, " Transmit first message\r\n" );
     canfd6_mcan_transmit_buffer_contents( &canfd6, CANFD6_FIRST_MSG );
-    Delay_ms( 1000 );
+    Delay_ms( 2000 );
+    log_printf( &logger, " Transmit second message\r\n" );
     canfd6_mcan_transmit_buffer_contents( &canfd6, CANFD6_SECOND_MSG );
-    Delay_ms( 3000 );
-    #endif
-    
-    #ifdef APP_RECEIVER
+    Delay_ms( 2000 );
+#else
     uint8_t cnt = 0;
     if ( !canfd6_get_int_pin( &canfd6 ) ) {
         canfd6_device_interrupts_t canfd6_dev_ir = { 0 };
@@ -180,7 +180,7 @@ void application_task ( void ) {
 
             num_bytes = canfd6_mcan_read_nextfifo( &canfd6, CANFD6_RXFIFO0, &canfd6_msg_header, data_payload );
             
-            log_printf( &logger, "Message received ID[ 0x%X ]: ", canfd6_msg_header.ID );
+            log_printf( &logger, " Message received ID[ 0x%X ]: ", canfd6_msg_header.ID );
 
             while ( cnt < 64 ) {
                 if ( data_payload[ cnt ] ) {
@@ -193,7 +193,7 @@ void application_task ( void ) {
             }
         }
     }
-    #endif
+#endif
 }
 
 ```

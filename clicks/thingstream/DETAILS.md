@@ -2,7 +2,7 @@
 ---
 # Thingstream click
 
-Thingstream Click is an IoT gateway Click board™ with the Thingstream client SDK preinstalled.
+> Thingstream Click is an IoT gateway Click board™ with the Thingstream client SDK preinstalled.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/thingstream_click.png" height=300px>
@@ -17,7 +17,7 @@ Thingstream Click is an IoT gateway Click board™ with the Thingstream client S
 
 - **Author**        : MikroE Team
 - **Date**          : Jun 2020.
-- **Type**          : UART GSM/IOT type
+- **Type**          : UART type
 
 
 # Software Support
@@ -35,26 +35,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void thingstream_cfg_setup ( thingstream_cfg_t *cfg ); 
- 
-- Initialization function.
-> THINGSTREAM_RETVAL thingstream_init ( thingstream_t *ctx, thingstream_cfg_t *cfg );
+- `thingstream_cfg_setup` Config Object Initialization function.
+```c
+void thingstream_cfg_setup ( thingstream_cfg_t *cfg ); 
+```
+
+- `thingstream_init` Initialization function.
+```c
+err_t thingstream_init ( thingstream_t *ctx, thingstream_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Set RST pin state.
-> uint8_t thingstream_reset_pin_state ( thingstream_t *ctx, uint8_t state );
- 
-- Send command.
-> void thingstream_send_command ( thingstream_t *ctx, char *command );
+- `thingstream_reset_pin_state` Set RST pin state.
+```c
+void thingstream_reset_pin_state ( thingstream_t *ctx, uint8_t state );
+```
 
-- Generic parser function.
-> thingstream_error_t thingstream_generic_parser 
-( 
-    char *rsp,  uint8_t command, 
-    uint8_t element, char *parser_buf 
-);
+- `thingstream_send_command` Send command.
+```c
+void thingstream_send_command ( thingstream_t *ctx, char *command );
+```
+
+- `thingstream_generic_parser` Generic parser function.
+```c
+thingstream_error_t thingstream_generic_parser ( char *rsp,  uint8_t command, uint8_t element, char *parser_buf );
+```
 
 ## Examples Description
 
@@ -86,8 +92,7 @@ void application_init ( void )
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
-    //  Click initialization.
-
+    // Click initialization.
     thingstream_cfg_setup( &cfg );
     THINGSTREAM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     thingstream_init( &thingstream, &cfg );

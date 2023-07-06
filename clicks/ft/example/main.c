@@ -1,94 +1,41 @@
 /*!
- * \file 
- * \brief Ft Click example
+ * @file 
+ * @brief FT Click example
  * 
  * # Description
- * This example reads and processes data from FT clicks.
+ * This example demonstrates the use of an FT click board by showing
+ * the communication between the two click boards.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initialize driver init.
+ * Initalizes device and makes an initial log.
  * 
- * ## Application Task  
- * RX mode : Reads and logs new receive data.
- * TX mode : sends (MikroE) data every 1 seconds.
+ * ## Application Task
+ * Depending on the selected application mode, it reads all the received data or 
+ * sends the desired text message once per second.
  * 
- * ## Additional Function
- * - ft_process ( ) - The general process of collecting presponce 
- *                                   that sends a module.
- * 
- * 
- * \author MikroE Team
+ * @author MikroE Team
  *
  */
-// ------------------------------------------------------------------- INCLUDES
 
 #include "board.h"
 #include "log.h"
 #include "ft.h"
-#include "string.h"
 
-#define PROCESS_COUNTER 10
-#define PROCESS_RX_BUFFER_SIZE 500
-#define PROCESS_PARSER_BUFFER_SIZE 1000
+// Comment out the line below in order to switch the application mode to receiver
+#define DEMO_APP_TRANSMITTER
 
-// ------------------------------------------------------------------ VARIABLES
-
-// #define DEMO_APP_RECEIVER
-#define DEMO_APP_TRANSMITER
+// Text message to send in the transmitter application mode
+#define DEMO_TEXT_MESSAGE           "MIKROE - FT click board\r\n\0"
 
 static ft_t ft;
 static log_t logger;
 
-static char MIKROE_DATA_BUF[ 7 ] = "MikroE";
-static uint8_t MIKROE_DATA_BUF_LEN = 6;
-static uint8_t MIKROE_DATA_QUEUE = 1;
-static uint8_t rsp_data_buf[ 256 ];
-static uint8_t rsp_data_num = 0;
-
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
-
-static void ft_process ( void )
-{
-    int32_t rsp_size;
-    uint16_t rsp_cnt = 0;
-    
-    char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
-    uint16_t check_buf_cnt;  
-    uint8_t process_cnt = PROCESS_COUNTER;
-    
-    while( process_cnt != 0 )
-    {
-        rsp_size = ft_generic_read( &ft, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
-
-        if ( rsp_size > 0 )
-        {  
-            // Validation of the received data
-            for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
-            {
-                ft_isr_parser( &ft, uart_rx_buffer[ check_buf_cnt ] ); 
-            }
-            
-            // Clear RX buffer
-            memset( uart_rx_buffer, 0, PROCESS_RX_BUFFER_SIZE );
-        } 
-        else 
-        {
-            process_cnt--;
-            
-            // Process delay 
-            Delay_ms( 100 );
-        }
-    }
-}
-
-// ------------------------------------------------------ APPLICATION FUNCTIONS
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    ft_cfg_t cfg;
+    ft_cfg_t ft_cfg;
 
     /** 
      * Logger initialization.
@@ -101,52 +48,46 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
-    Delay_ms( 100 );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
+    // Click initialization.
+    ft_cfg_setup( &ft_cfg );
+    FT_MAP_MIKROBUS( ft_cfg, MIKROBUS_1 );
+    if ( UART_ERROR == ft_init( &ft, &ft_cfg ) ) 
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
 
-    ft_cfg_setup( &cfg );
-    FT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    ft_init( &ft, &cfg );
-
-    #ifdef DEMO_APP_RECEIVER
-        log_printf( &logger, "---------------------------\r\n" );
-        log_printf( &logger, "--> CURRENT MODE [ RX ] <--\r\n" );
-        log_printf( &logger, "---------------------------\r\n" );
-    #endif
-
-    #ifdef DEMO_APP_TRANSMITER
-        log_printf( &logger, "---------------------------\r\n" );
-        log_printf( &logger, "--> CURRENT MODE [ TX ] <--\r\n" );
-        log_printf( &logger, "---------------------------\r\n" );
-    #endif
+#ifdef DEMO_APP_TRANSMITTER
+    log_printf( &logger, " Application Mode: Transmitter\r\n" );
+#else
+    log_printf( &logger, " Application Mode: Receiver\r\n" );
+#endif
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )
 {
-    #ifdef DEMO_APP_RECEIVER
-        ft_process(  );
-        if ( ft_get_data_status( &ft ) == FT_NEW_DATA_AVAILABLE )
+#ifdef DEMO_APP_TRANSMITTER
+    ft_send_package( &ft, DEMO_TEXT_MESSAGE, strlen( DEMO_TEXT_MESSAGE ), 1 );
+    log_printf( &logger, " Sent data: %s", ( char * ) DEMO_TEXT_MESSAGE );
+    Delay_ms( 1000 );
+#else
+    uint8_t rsp_data_buf[ FT_MAX_DATA_BUFFER ] = { 0 };
+    uint8_t rx_byte = 0;
+    if ( 1 == ft_generic_read( &ft, &rx_byte, 1 ) )
+    {
+        ft_isr_parser( &ft, rx_byte ); 
+        if ( FT_NEW_DATA_AVAILABLE == ft_get_data_status( &ft ) )
         {
-            ft_process(  );
-            rsp_data_num = ft_get_data( &ft, &rsp_data_buf[ 0 ] );
-            if( rsp_data_num != 0 )
+            if ( ft_get_data( &ft, rsp_data_buf ) )
             {
-                log_printf( &logger, "---------------------------\r\n" );
-                log_printf( &logger, "--> READ: %s\r\n", rsp_data_buf );
-                log_printf( &logger, "---------------------------\r\n" );
+                log_printf( &logger, " Received data: %s", rsp_data_buf );
             }
         }
-    #endif
-
-    #ifdef DEMO_APP_TRANSMITER
-        log_printf( &logger, "--------------------------\r\n" );
-        log_printf( &logger, "-->  SEND MIKROE DATA  <--\r\n" );
-        log_printf( &logger, "--------------------------\r\n" );
-        ft_send_package( &ft, &MIKROE_DATA_BUF[ 0 ], MIKROE_DATA_BUF_LEN, MIKROE_DATA_QUEUE );
-        Delay_ms( 1000 );
-    #endif
+    }
+#endif
 }
 
 void main ( void )

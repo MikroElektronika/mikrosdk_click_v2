@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC32",
-    "category": "WiFi",
+    "architecture": "ARM|PIC32|RISC-V",
+    "category": "Click Boards > Wireless connectivity > WIFI",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+    "dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "WiFi 8 click",
     "example_list": [
@@ -26,15 +25,11 @@
     "name": "mikroe.click.wifi8",
     "product_link": "https://www.mikroe.com/wifi-8-click",
     "short_description": "WiFi 8 Click is a compact add-on board that contains a wireless combo module. This board features the ATWINC3400-MR210CA, a Bluetooth 5.0 certified module optimized for low power and high-performance mobile applications from Microchip Technology.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.7"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.7",
+    "cmake": true,
+    "alias": "Click.WiFi8",
+    "subdir_name": "lib_wifi8"
 }
-
-
-
-
-
-
-

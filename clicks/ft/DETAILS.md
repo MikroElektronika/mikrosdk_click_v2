@@ -2,7 +2,7 @@
 ---
 # FT click
 
-FT Click is a compact smart transceiver add-on board that helps you add a Free Topology (FT) interface to any host board with the mikroBUS™ socket. Leveraging FT, the most reliable and easiest-to-scale wired communications media, FT Click lets you network sensors and devices to create IoT solutions for automation and control networks that are easier to develop, integrate and install. This Click board™ supports full communication stacks for LON® and BACnet FT, as well as FTMQ (MQTT like messaging format) on board to simplify integration of BACnet, LON or custom IoT networks over twisted pair wire. FT Click is ideal for markets including smart buildings, cities, machines, agriculture, manufacturing, transportation and many more where wireless communications do not provide the required reliability and scale.
+> FT Click is a compact smart transceiver add-on board that helps you add a Free Topology (FT) interface to any host board with the mikroBUS™ socket. Leveraging FT, the most reliable and easiest-to-scale wired communications media, FT Click lets you network sensors and devices to create IoT solutions for automation and control networks that are easier to develop, integrate and install. This Click board™ supports full communication stacks for LON® and BACnet FT, as well as FTMQ (MQTT like messaging format) on board to simplify integration of BACnet, LON or custom IoT networks over twisted pair wire. FT Click is ideal for markets including smart buildings, cities, machines, agriculture, manufacturing, transportation and many more where wireless communications do not provide the required reliability and scale.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ft_click.png" height=300px>
@@ -17,7 +17,7 @@ FT Click is a compact smart transceiver add-on board that helps you add a Free T
 
 - **Author**        : MikroE Team
 - **Date**          : jun 2020.
-- **Type**          : UART GSM/IOT type
+- **Type**          : UART type
 
 
 # Software Support
@@ -35,41 +35,49 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void ft_cfg_setup ( ft_cfg_t *cfg ); 
- 
-- Initialization function.
-> FT_RETVAL ft_init ( ft_t *ctx, ft_cfg_t *cfg );
+- `ft_cfg_setup` Config Object Initialization function.
+```c
+void ft_cfg_setup ( ft_cfg_t *cfg ); 
+```
 
-
+- `ft_init` Initialization function.
+```c
+err_t ft_init ( ft_t *ctx, ft_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Use this function for gets current status of data
-> uint8_t ft_get_data_status ( ft_t *ctx );
- 
-- Use this function for read received data
-> uint16_t ft_get_data ( ft_t *ctx, uint8_t *data_buf );
+- `ft_get_data_status` Use this function to get current status of data
+```c
+uint8_t ft_get_data_status ( ft_t *ctx );
+```
 
-- Use this function for send data to other module
-> void ft_send_package ( ft_t *ctx, uint8_t *data_buf, uint16_t len, uint8_t queue );
+- `ft_get_data` Use this function to read received data
+```c
+uint16_t ft_get_data ( ft_t *ctx, uint8_t *data_buf );
+```
 
-## Examples Description
+- `ft_send_package` Use this function to send data to other module
+```c
+void ft_send_package ( ft_t *ctx, uint8_t *data_buf, uint16_t len, uint8_t queue );
+```
 
-> This example reads and processes data from FT clicks. 
+## Example Description
+
+> This example demonstrates the use of an FT click board by showing the communication between the two click boards.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initialize driver init.
+> Initalizes device and makes an initial log.
 
 ```c
 
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    ft_cfg_t cfg;
+    ft_cfg_t ft_cfg;
 
     /** 
      * Logger initialization.
@@ -82,60 +90,54 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
+    // Click initialization.
+    ft_cfg_setup( &ft_cfg );
+    FT_MAP_MIKROBUS( ft_cfg, MIKROBUS_1 );
+    if ( UART_ERROR == ft_init( &ft, &ft_cfg ) ) 
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
 
-    ft_cfg_setup( &cfg );
-    FT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    ft_init( &ft, &cfg );
-
-  #ifdef DEMO_APP_RECEIVER
-        log_printf( &logger, "---------------------------\r\n" );
-        log_printf( &logger, "--> CURRENT MODE [ RX ] <--\r\n" );
-        log_printf( &logger, "---------------------------\r\n" );
-  #endif
-
-  #ifdef DEMO_APP_TRANSMITER
-        log_printf( &logger, "---------------------------\r\n" );
-        log_printf( &logger, "--> CURRENT MODE [ TX ] <--\r\n" );
-        log_printf( &logger, "---------------------------\r\n" );
-  #endif
+#ifdef DEMO_APP_TRANSMITTER
+    log_printf( &logger, " Application Mode: Transmitter\r\n" );
+#else
+    log_printf( &logger, " Application Mode: Receiver\r\n" );
+#endif
+    log_info( &logger, " Application Task " );
 }
   
 ```
 
 ### Application Task
 
-> RX mode : Reads and logs new receive data.
-> TX mode : sends (MikroE) data every 1 seconds. 
+> Depending on the selected application mode, it reads all the received data or sends the desired text message once per second.
 
 ```c
 
 void application_task ( void )
 {
-    #ifdef DEMO_APP_RECEIVER
-        ft_process(  );
-        if ( ft_get_data_status( &ft ) == FT_NEW_DATA_AVAILABLE )
+#ifdef DEMO_APP_TRANSMITTER
+    ft_send_package( &ft, DEMO_TEXT_MESSAGE, strlen( DEMO_TEXT_MESSAGE ), 1 );
+    log_printf( &logger, " Sent data: %s", ( char * ) DEMO_TEXT_MESSAGE );
+    Delay_ms( 1000 );
+#else
+    uint8_t rsp_data_buf[ FT_MAX_DATA_BUFFER ] = { 0 };
+    uint8_t rx_byte = 0;
+    if ( 1 == ft_generic_read( &ft, &rx_byte, 1 ) )
+    {
+        ft_isr_parser( &ft, rx_byte ); 
+        if ( FT_NEW_DATA_AVAILABLE == ft_get_data_status( &ft ) )
         {
-            ft_process(  );
-            rsp_data_num = ft_get_data( &ft, &rsp_data_buf[ 0 ] );
-            if( rsp_data_num != 0 )
+            if ( ft_get_data( &ft, rsp_data_buf ) )
             {
-                log_printf( &logger, "---------------------------\r\n" );
-                log_printf( &logger, "--> READ: %s\r\n", rsp_data_buf );
-                log_printf( &logger, "---------------------------\r\n" );
+                log_printf( &logger, " Received data: %s", rsp_data_buf );
             }
         }
-    #endif
-
-    #ifdef DEMO_APP_TRANSMITER
-        log_printf( &logger, "--------------------------\r\n" );
-        log_printf( &logger, "-->  SEND MIKROE DATA  <--\r\n" );
-        log_printf( &logger, "--------------------------\r\n" );
-        ft_send_package( &ft, &MIKROE_DATA_BUF[ 0 ], MIKROE_DATA_BUF_LEN, MIKROE_DATA_QUEUE );
-        Delay_ms( 1000 );
-    #endif
+    }
+#endif
 } 
 
 ```

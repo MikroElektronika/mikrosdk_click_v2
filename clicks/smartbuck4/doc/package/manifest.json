@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "category": "Click Boards > Power management > Buck",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Smart Buck 4 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.smartbuck4",
+    "product_link": "https://www.mikroe.com/smart-buck-4-click",
+    "short_description": "Smart Buck 4 Click is a compact add-on board that contains a high-frequency synchronous step-down DC-DC converter. This board features the LTS3562, a quad synchronous step-down DC-DC regulator from Analog Devices. ",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.3",
+    "cmake": true,
+    "alias": "Click.SmartBuck4",
+    "subdir_name": "lib_smartbuck4"
+}

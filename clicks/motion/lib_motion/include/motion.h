@@ -190,7 +190,7 @@ void motion_set_en_pin (  motion_t *ctx, motion_pin_state_t en_state );
  * MOTION_DETECTED ( 1 ) if a motion is detected or
  * MOTION_NO_DETECT ( 0 ) if a motion is not detected. 
  */
-motion_pin_state_t motion_get_detected ( motion_t *ctx );
+motion_detect_state_t motion_get_detected ( motion_t *ctx );
 
 #ifdef __cplusplus
 }

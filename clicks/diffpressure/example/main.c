@@ -1,6 +1,6 @@
 /*!
  * \file 
- * \brief diffpressure Click example
+ * \brief Diff pressure Click example
  * 
  * # Description
  * This application is temperature compensated and calibrated pressure sensor.
@@ -8,13 +8,13 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initialization device. Start sending log via UART.
+ * Initializes the driver and logger.
  * 
  * ## Application Task  
- * This is a example which demonstrates the use of Diff Pressure click board.
- *             The example is display
- *             values of ADC module (MPC3551) 22-bit register and
- *             value of difference pressure [ Pa ] via UART.
+ * This is an example which demonstrates the use of Diff Pressure click board.
+ * The example reads the values of ADC module (MPC3551) 22-bit register value
+ * converted to voltage and the pressure difference [ Pa ] and displays
+ * those values on the USB UART.
  * 
  * \author MikroE Team
  *
@@ -48,56 +48,33 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
+    // Click initialization.
     diffpressure_cfg_setup( &cfg );
     DIFFPRESSURE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    uint8_t err_flag = diffpressure_init( &diffpressure, &cfg );
-    
-    if ( DIFFPRESSURE_INIT_ERROR == err_flag )
+    if ( DIFFPRESSURE_OK != diffpressure_init( &diffpressure, &cfg ) )
     {
-        log_info( &logger, "---- Error Init ----" );
+        log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )
 {
+    float adc_voltage = 0;
     int32_t difference = 0;
-    int32_t adc_value = 0;
-    uint8_t status;
 
-    adc_value = diffpressure_read_data( &diffpressure );
-    difference = diffpressure_get_kpa_difference( &diffpressure, adc_value );
-    status = diffpressure_status_check( &diffpressure, adc_value );
+    adc_voltage = diffpressure_read_adc_voltage( &diffpressure );
+    difference = diffpressure_get_pa_difference( &diffpressure, adc_voltage );
 
-    if ( status == DIFFPRESSURE_OK )
-    {
-        log_printf( &logger, "ADC Value:  %ld\r\n", adc_value );
+    log_printf( &logger, " ADC Voltage: %.3f [V]\r\n", adc_voltage );
 
-        log_printf( &logger, "Difference: %ld", difference );
-        
-        log_printf( &logger, "  [Pa] \r\n" );
+    log_printf( &logger, " Pressure Diff: %ld [Pa]\r\n\n", difference );
 
-        Delay_ms( 3000 );
-    }
-
-    if ( status == DIFFPRESSURE_OVH )
-    {
-        log_printf( &logger, "Overflow happened" );
-        Delay_100ms( );
-    }
-
-    if ( status == DIFFPRESSURE_OVL )
-    {
-        log_printf( &logger, "Underflow happened" );
-        Delay_100ms( );
-    }
-
-    log_printf( &logger, "" );
+    Delay_ms( 100 );
 }
 
 void main ( void )

@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230706](#20230706)**
 + **[20230630](#20230630)**
 + **[20230622](#20230622)**
 + **[20230616](#20230616)**
@@ -53,6 +54,31 @@
 
 ---
 ---
+---
+
+## `20230706`
+
+*Following click boards have been added:*
+
++ `HOD CAP`
++ `RS485 8`
++ `Smart Buck 4`
++ `USB MUX`
+
+*Following click boards have been updated:*
+
++ `Thingstream`
++ `Motion`
++ `WiFi ESP`
++ `FT`
++ `Current 7`
++ `Diff pressure`
++ `CAN FD 6`
++ `WiFi 8`
++ `eFuse 7`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230630`

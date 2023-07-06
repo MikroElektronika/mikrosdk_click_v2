@@ -3,7 +3,7 @@
 ---
 # Wifi ESP click
 
-WiFi ESP click carries the ESP-WROOM-02 module that integrates ESP8266EX.
+> WiFi ESP click carries the ESP-WROOM-02 module that integrates ESP8266EX.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/wifiesp_click.png" height=300px>
@@ -18,7 +18,7 @@ WiFi ESP click carries the ESP-WROOM-02 module that integrates ESP8266EX.
 
 - **Author**        : MikroE Team
 - **Date**          : Jun 2020.
-- **Type**          : UART GSM/IOT type
+- **Type**          : UART type
 
 
 # Software Support
@@ -36,28 +36,39 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void wifiesp_cfg_setup ( wifiesp_cfg_t *cfg ); 
- 
-- Initialization function.
-> WIFIESP_RETVAL wifiesp_init ( wifiesp_t *ctx, wifiesp_cfg_t *cfg );
+- `wifiesp_cfg_setup` Config Object Initialization function.
+```c
+void wifiesp_cfg_setup ( wifiesp_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void wifiesp_default_cfg ( wifiesp_t *ctx );
+- `wifiesp_init` Initialization function.
+```c
+err_t wifiesp_init ( wifiesp_t *ctx, wifiesp_cfg_t *cfg );
+```
 
+- `wifiesp_default_cfg` Click Default Configuration function.
+```c
+void wifiesp_default_cfg ( wifiesp_t *ctx );
+```
 
 #### Example key functions :
 
-- Sends AT command to the module.
-> void wifiesp_send_cmd( wifiesp_t* ctx, uint8_t* cmd, uint8_t* args );
- 
-- Generic write function.
-> void wifiesp_generic_write ( wifiesp_t *ctx, char *data_buf, uint16_t len );
+- `wifiesp_send_cmd` Sends AT command to the module.
+```c
+void wifiesp_send_cmd( wifiesp_t* ctx, uint8_t* cmd, uint8_t* args );
+```
 
-- Generic read function.
-> int32_t wifiesp_generic_read ( wifiesp_t *ctx, char *data_buf, int32_t max_len );
+- `wifiesp_generic_write` Generic write function.
+```c
+void wifiesp_generic_write ( wifiesp_t *ctx, char *data_buf, uint16_t len );
+```
 
-## Examples Description
+- `wifiesp_generic_read` Generic read function.
+```c
+int32_t wifiesp_generic_read ( wifiesp_t *ctx, char *data_buf, int32_t max_len );
+```
+
+## Example Description
 
 > This example connects to the desired WiFi network and then
 > creates web server on the IP address assigned to the click board.
@@ -90,20 +101,18 @@ void application_init ( void )
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
-    //  Click initialization.
-
+    // Click initialization.
     wifiesp_cfg_setup( &cfg );
-    WIFIESP_MAP_MIKROBUS( cfg , MIKROBUS_1 );
-    wifiesp_init( &wifiesp , &cfg );
+    WIFIESP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    wifiesp_init( &wifiesp, &cfg );
     wifiesp_default_cfg( &wifiesp );
     Delay_ms( 1000 );
     
     // Communication initialization
-    
     wifi_communication_init( );
     
     uint16_to_str ( strlen( page ), page_len );
-    str_cut_chr ( page_len, ' ' );
+    wifiesp_str_cut_chr ( page_len, ' ' );
     
     log_info( &logger, "Please connect to the IP address listed above.\r\n" );
 }
@@ -120,23 +129,34 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    app_error_flag = wifiesp_rsp_check( WIFIESP_RECEIVE );
-    Delay_ms( 100 );
-    if ( app_error_flag == APP_OK ) 
+    if ( WIFIESP_OK == wifiesp_rsp_check( WIFIESP_RECEIVE ) ) 
     {
+        link_id[ 0 ] = *( strstr( app_buf, WIFIESP_RECEIVE ) + 5 );
         strcpy ( send_buf, link_id );
         strcat ( send_buf, "," );
         strcat ( send_buf, page_len );
-        str_cut_chr ( send_buf, ' ' );
+        wifiesp_str_cut_chr ( send_buf, ' ' );
+        wifiesp_log_app_buf( );
+        wifiesp_clear_app_buf( );
+        Delay_ms( 100 );
+        wifiesp_process( );
+        wifiesp_log_app_buf( );
         wifiesp_send_cmd( &wifiesp, WIFIESP_SEND, send_buf );
-        app_error_flag = wifiesp_rsp_check( RSP_READY_FOR_SEND );
+        app_error_flag = wifiesp_rsp_check( WIFIESP_RSP_READY_FOR_SEND );
+        wifiesp_log_app_buf( );
         Delay_ms( 100 );
         wifiesp_generic_write( &wifiesp, page, strlen( page ) );
-        app_error_flag = wifiesp_rsp_check( RSP_SEND_OK );
+        app_error_flag = wifiesp_rsp_check( WIFIESP_RSP_SEND_OK );
         wifiesp_error_check( app_error_flag );
         wifiesp_send_cmd( &wifiesp, WIFIESP_CLOSE, link_id );
-        app_error_flag = wifiesp_rsp_check( RSP_OK );
+        app_error_flag = wifiesp_rsp_check( WIFIESP_RSP_OK );
         wifiesp_error_check( app_error_flag );
+        wifiesp_clear_app_buf( );
+        
+        wifiesp_process( );
+        wifiesp_log_app_buf( );
+        wifiesp_clear_app_buf( );
+        uart_clear ( &wifiesp.uart );
         Delay_ms( 100 );
     }
 }
