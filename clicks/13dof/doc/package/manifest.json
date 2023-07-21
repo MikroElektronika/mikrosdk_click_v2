@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
     "category": "Click Boards > Sensors > Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,11 +31,12 @@
     "related_projects": [
         2938
     ],
-    "version": "2.1.0.19",
+    "version": "2.1.0.20",
     "cmake": true,
     "alias": "Click.13DOF",
     "subdir_name": "lib_c13dof"
 }
+
 
 
 

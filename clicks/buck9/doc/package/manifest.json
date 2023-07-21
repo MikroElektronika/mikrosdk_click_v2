@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
     "category": "Click Boards > Power management > Buck",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,11 +31,12 @@
         2687
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.Buck9",
     "subdir_name": "lib_buck9"
 }
+
 
 
 

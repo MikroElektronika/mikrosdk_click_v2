@@ -2,7 +2,7 @@
     "name": "TDC 2 Click",
     "description": "TDC 2 Click is a compact add-on board that recognizes events and provides a digital representation of the time they occurred. This board features ScioSense’s AS6500, a four-channel time-to-digital converter (TDC) frontend with high measurement performance and high data throughput. The AS6500 is characterized by simple data post-processing thanks to calibrated results (calculates calibrated stop measurements referenced to the applied reference clock).",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","AS6500-FQFM"],
     "category" : ["Click Boards > Clock & Timing > Clock generator"]
 }

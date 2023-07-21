@@ -2,7 +2,7 @@
     "name": "Timer Click",
     "description": "Timer click is a mikroBUS add-on board with Maxim’s DS1682 total elapsed time recorder. The main feature of the IC is its elapsed time counter (ETC) used in conjunction with the ALARM pin.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","Maxim’s DS1682"],
     "category" : ["RTC"] 
 }

@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "BT/BLE",
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
+    "category": "Click Boards > Wireless connectivity > BT/BLE",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "BT click",
     "example_list": [
@@ -26,14 +25,16 @@
     "name": "mikroe.click.bt",
     "product_link": "https://www.mikroe.com/bt-click",
     "short_description": "BT Click is a compact add-on board targeted for applications that require both Bluetooth Smart and Classic connectivity. This board features the BT121, a dual-mode Bluetooth Smart Ready module solution that gives unparalleled flexibility to integrate both Bluetooth Smart and Bluetooth Basic Rate/Enhanced Data Rate (BR/EDR) wireless technologies from Silicon Labs.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects":[
+    "_type": "mikroSDK Library",
+    "related_projects": [
         3947
     ],
-    "version": "2.0.0.4"
+    "version": "2.1.0.6",
+    "cmake": true,
+    "alias": "Click.BT",
+    "subdir_name": "lib_bt"
 }
-
 
 

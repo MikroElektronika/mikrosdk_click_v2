@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
     "category": "Click Boards > Wireless connectivity > Sub-1 GHz Transceivers",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,11 +31,12 @@
     "related_projects": [
         2075
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.iqRF",
     "subdir_name": "lib_iqrf"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "MCP1664 Click",
     "description": "MCP1664 click contains 4 high-power white LEDs. It carries the MCP1664, a high-voltage step-up LED driver from Microchip.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MCP1664"],
     "category" : ["LED Drivers"] 
 }

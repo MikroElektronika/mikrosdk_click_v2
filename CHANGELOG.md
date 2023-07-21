@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230721](#20230721)**
 + **[20230706](#20230706)**
 + **[20230630](#20230630)**
 + **[20230622](#20230622)**
@@ -54,6 +55,49 @@
 
 ---
 ---
+---
+
+## `20230721`
+
+*Added support for dsPIC to all click boards.*
+
+*Following click boards have been added:*
+
++ `CAN Isolator 2`
++ `RS Transceiver`
++ `Thermo K 3`
++ `IR Gesture 3`
++ `Charger 17`
++ `Microwave 5`
++ `Pressure 22`
++ `Step Down 7`
++ `Wheatstone`
+
+*Following click boards have been updated:*
+
++ `UWB`
++ `RTD`
++ `IR 2`
++ `Balancer 3`
++ `AD-SWIO 2`
++ `IR Grid 2`
++ `I2C MUX 5`
++ `WiFi 9`
++ `GNSS RTK`
++ `Fiber Opt`
++ `BT`
++ `Plug n Trust`
++ `Opto 3`
++ `BLE TX`
++ `OBDII`
++ `Thunder`
++ `Oximeter`
++ `LED Driver 8`
++ `Stepper 15`
++ `Environment 3`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230706`

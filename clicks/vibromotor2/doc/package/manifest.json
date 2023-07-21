@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
     "category": "Click Boards > HMI > Haptic",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,11 +31,12 @@
         2906
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.VibroMotor2",
     "subdir_name": "lib_vibromotor2"
 }
+
 
 
 

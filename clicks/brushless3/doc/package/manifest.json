@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
     "category": "Click Boards > Motor control > Brushless",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,8 +31,9 @@
     "related_projects": [
         2165
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Brushless3",
     "subdir_name": "lib_brushless3"
 }
+

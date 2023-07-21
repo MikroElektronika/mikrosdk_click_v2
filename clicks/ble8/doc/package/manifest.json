@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
     "category": "Click Boards > Wireless connectivity > BT/BLE",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,9 +31,10 @@
     "related_projects": [
         2897
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.Ble8",
     "subdir_name": "lib_ble8"
 }
+
 

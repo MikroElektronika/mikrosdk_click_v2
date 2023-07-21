@@ -2,7 +2,7 @@
     "name": "Stepper 11 Click",
     "description": "Stepper 11 Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the TB9120AFTG, a two-phase bipolar stepping motor driver with a clock input interface and a PWM constant-current control system from Toshiba Semiconductor.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TB9120AFTG"],
     "category" : ["Stepper"]
 }

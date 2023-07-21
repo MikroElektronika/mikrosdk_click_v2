@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
     "category": "Click Boards > Interface > Adapter",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,11 +31,12 @@
     "related_projects": [
         3811
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.MonarchAdapter",
     "subdir_name": "lib_monarchadapter"
 }
+
 
 
 

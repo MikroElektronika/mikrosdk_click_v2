@@ -1,7 +1,0 @@
-type: subdirs
-project: IR2
-
-subdirs: {
-    lib
-    example
-}

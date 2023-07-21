@@ -14,7 +14,6 @@
  * Depending on the selected mode, it reads all the received data or sends the desired message
  * every 2 seconds.
  * 
- * 
  * \author MikroE Team
  *
  */
@@ -29,20 +28,21 @@
 static uwb_t uwb;
 static log_t logger;
 
-// Device mode setter - selects the module working mode RX(receiver)/TX(transmiter)
+// Device mode setter - selects the module working mode RX(receiver)/TX(transmitter)
 static uint8_t dev_mode = UWB_MODE_TX;
 
-// Transmit buffer
-static char data_tx[ 7 ] = "MikroE";
+// Transmit buffers
+static uint8_t data_tx_1[ 7 ] = "MikroE";
+static uint8_t data_tx_2[ 10 ] = "UWB click";
 
 // Transmit length read var
-static uint16_t temp_len;
+static uint16_t temp_len = 0;
 
 // Recieved data buffer
-static char transmit_data[ 256 ];
+static uint8_t transmit_data[ 256 ] = { 0 };
 
 // Dev_status var
-static uint8_t dev_status;
+static uint8_t dev_status = { 0 };
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -50,9 +50,6 @@ void application_init ( void )
 {
     log_cfg_t log_cfg;
     uwb_cfg_t cfg;
-
-    uint16_t tag_data;
-    uint8_t id_raw[ 4 ];
 
     /** 
      * Logger initialization.
@@ -67,8 +64,7 @@ void application_init ( void )
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
-    //  Click initialization.
-
+    // Click initialization.
     uwb_cfg_setup( &cfg );
     UWB_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     uwb_init( &uwb, &cfg );
@@ -77,10 +73,11 @@ void application_init ( void )
     uwb_enable ( &uwb );
     Delay_ms( 100 );
     
+    uint8_t id_raw[ 4 ] = { 0 };
     uwb.offset = UWB_SUB_NO;                               
     uwb_generic_read( &uwb, UWB_REG_DEV_ID, &id_raw[ 0 ], 4 );
                                  
-    tag_data = ( id_raw[ 3 ] << 8 ) | id_raw[ 2 ];
+    uint16_t tag_data = ( ( uint16_t ) id_raw[ 3 ] << 8 ) | id_raw[ 2 ];
     
     if ( UWB_TAG != tag_data )
     {
@@ -139,13 +136,14 @@ void application_init ( void )
         // Setup for first transmit
         uwb_set_mode( &uwb, UWB_MODE_IDLE );
         uwb_clear_status( &uwb );
-        uwb_set_transmit( &uwb, &data_tx[ 0 ], 6 );
+        uwb_set_transmit( &uwb, &data_tx_1[ 0 ], 6 );
         uwb_set_mode( &uwb, UWB_MODE_TX );
         uwb_start_transceiver( &uwb );
+        log_printf( &logger, " - Transmit 1 done - \r\n" );
     }
 
     log_printf( &logger, " ***** APP TASK ***** \r\n" );
-    Delay_ms( 500 );
+    Delay_ms( 2000 );
 }
 
 void application_task ( void )
@@ -156,7 +154,7 @@ void application_task ( void )
     {
         if ( dev_status )
         {
-            // Reading transtimed data logs it and reseting to receive mode
+            // Reading transmitted data, logs it and resetting to receive mode
             uwb_set_mode( &uwb, UWB_MODE_IDLE );
             uwb_clear_status( &uwb );
             temp_len = uwb_get_transmit_len( &uwb );
@@ -171,13 +169,20 @@ void application_task ( void )
     {
         if ( dev_status )
         {
-            // Transmits data reseting to transmit mode and setts 2sec delay
-            log_printf( &logger, " - Transmit done - \r\n" );
+            // Transmits data, resetting to transmit mode and sets 2sec delay
             uwb_set_mode( &uwb, UWB_MODE_IDLE );
             uwb_clear_status( &uwb );
-            uwb_set_transmit( &uwb, &data_tx[ 0 ], 6 );
+            uwb_set_transmit( &uwb, &data_tx_2[ 0 ], 9 );
             uwb_set_mode( &uwb, UWB_MODE_TX );
             uwb_start_transceiver( &uwb );
+            log_printf( &logger, " - Transmit 2 done - \r\n" );
+            Delay_ms( 2000 );
+            uwb_set_mode( &uwb, UWB_MODE_IDLE );
+            uwb_clear_status( &uwb );
+            uwb_set_transmit( &uwb, &data_tx_1[ 0 ], 6 );
+            uwb_set_mode( &uwb, UWB_MODE_TX );
+            uwb_start_transceiver( &uwb );
+            log_printf( &logger, " - Transmit 1 done - \r\n" );
             Delay_ms( 2000 );
         }
     }

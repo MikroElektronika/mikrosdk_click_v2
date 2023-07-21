@@ -2,7 +2,7 @@
     "name": "UART 1-Wire Click",
     "description": "UART 1-Wire click is used to convert standard UART or RS232 signals into 1-Wire® signals. Apart from other features such as the slew rate control for larger 1-Wire® busses, selectable data rate, an accurate self-calibrating time base, ESD protection and more, the main feature of the UART 1-Wire® click, is that it manages all the sensitive signal timings involved in 1-Wire® communication, allowing rapid development of UART to 1-Wire® applications.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
     "hw" : ["click","DS2480B"],
     "category" : ["1-Wire"] 
 }

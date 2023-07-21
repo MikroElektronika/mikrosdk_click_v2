@@ -1,7 +1,0 @@
-type: subdirs
-project: BT
-
-subdirs: {
-    lib
-    example
-}

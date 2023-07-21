@@ -2,7 +2,7 @@
     "name": "I2C to CAN Click",
     "description": "I2C to CAN Click is a compact add-on board that contains I2C to CAN-physical transceiver, which extends a single-master I2C bus through harsh or noisy environments. This board features the LT3960, a robust high-speed transceiver that extends a single-master I2C bus up to 400kbps using the CAN-physical layer from Analog Devices. One LT3960 from SCL and SDA I2C lines creates equivalent differential buses (CAN) on two twisted pairs, while the second LT3960 recreates the I2C bus locally for any slave I2C devices on the other end of the twisted pairs. A built-in 3.3V LDO powers both the I2C and CAN lines from a single input supply from 4V to 60V. This Click board™ is suitable for industrial and automotive networking, remote sensor applications, and more.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LT3960"],
     "category" : ["I2C"]
 }

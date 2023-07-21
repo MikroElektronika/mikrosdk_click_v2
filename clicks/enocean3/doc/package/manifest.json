@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
     "category": "Click Boards > Wireless connectivity > Sub-1 GHz Transceivers",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,8 +31,9 @@
     "related_projects": [
         2737
     ],
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.Enocean3",
     "subdir_name": "lib_enocean3"
 }
+

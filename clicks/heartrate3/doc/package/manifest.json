@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
     "category": "Click Boards > Sensors > Biometrics",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,8 +31,9 @@
     "related_projects": [
         1908
     ],
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.HeartRate3",
     "subdir_name": "lib_heartrate3"
 }
+

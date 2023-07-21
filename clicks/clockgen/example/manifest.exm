@@ -2,7 +2,7 @@
     "name": "Clock Gen Click",
     "description": "Clock Gen Click offers an ideal replacement for crystals, crystal oscillators, VCXOs, phase-locked loops (PLLs), and fanout buffers in cost-sensitive applications. This click features the Si5351A from Silicon Labs, an I2C configurable clock generator based on a PLL + high resolution MultiSynth fractional divider architecture which can generate any frequency up to 200 MHz on each of its outputs with 0 ppm error.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","Si5351A"],
     "category" : ["Clock generator"] 
 }

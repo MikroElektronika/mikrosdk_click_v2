@@ -2,7 +2,7 @@
     "name": "pH Click",
     "description": "pH Click is a compact add-on board that provides an opportunity for the user to read pH with the same accuracy and capabilities as with some other expensive solutions. This board features the pH EZO™, a 6th generation embedded pH circuit that offers the highest level of stability and accuracy from AtlasScientific.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
     "hw" : ["click","pH EZO"],
     "category" : ["Environmental"]
 }

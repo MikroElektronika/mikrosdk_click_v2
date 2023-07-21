@@ -2,7 +2,7 @@
 ---
 # IR Grid 2 click
 
-IR Grid 2 click is a thermal imaging sensor. It has an array of 768 very sensitive factory calibrated IR elements (pixels), arranged in 32 rows of 24 pixels. Each one of them is measuring an object temperature up to 300˚C within its local Field of View (FOV). The MLX90640ESF-BAB IR sensor used on this Click board™ has just four pins, and it is mounted inside of the industry standard TO39 package. It is equipped with 2Kbit of EEPROM for storing the compensation and calibration parameters.
+> IR Grid 2 click is a thermal imaging sensor. It has an array of 768 very sensitive factory calibrated IR elements (pixels), arranged in 32 rows of 24 pixels. Each one of them is measuring an object temperature up to 300˚C within its local Field of View (FOV). The MLX90640ESF-BAB IR sensor used on this Click board™ has just four pins, and it is mounted inside of the industry standard TO39 package. It is equipped with 2Kbit of EEPROM for storing the compensation and calibration parameters.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/irgrid2_click.png" height=300px>
@@ -98,7 +98,7 @@ void application_init ( void ) {
 
     // Click initialization.
     irgrid2_cfg_setup( &irgrid2_cfg );
-    IRGRID2_MAP_MIKROBUS( irgrid2_cfg, MIKROBUS_5 );
+    IRGRID2_MAP_MIKROBUS( irgrid2_cfg, MIKROBUS_1 );
     err_t init_flag = irgrid2_init( &irgrid2, &irgrid2_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

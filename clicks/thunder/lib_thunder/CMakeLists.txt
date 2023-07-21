@@ -15,7 +15,21 @@ add_library(lib_thunder STATIC
 )
 add_library(Click.Thunder  ALIAS lib_thunder)
 
+if (${CORE_NAME} MATCHES "DSPIC")
+    if (${MCU_NAME} MATCHES "(^PIC24FV?(0[48]|16)K[ML][1234](.+)$)")
+        set(sample_mode_reg_case "SAMPLE_REG_CASE_2")
+    else()
+        set(sample_mode_reg_case "SAMPLE_REG_CASE_1")
+    endif()
+else()
+    if (${MCU_NAME} MATCHES "(^PIC18F(.+)[KQ]4[23]$)|(^PIC32(.+)$)")
+        set(sample_mode_reg_case "SAMPLE_REG_CASE_1")
+    else()
+        set(sample_mode_reg_case "SAMPLE_REG_CASE_2")
+    endif()
+endif()
 
+target_compile_definitions(lib_thunder PUBLIC ${sample_mode_reg_case})
 
 target_include_directories(lib_thunder PUBLIC
         include

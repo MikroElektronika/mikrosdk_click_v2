@@ -1,11 +1,9 @@
 \mainpage Main Page
  
- 
-
 ---
 # Opto 3 click
 
-Opto 3 click is a relay Click board™, equipped with two pairs of optically isolated solid-state relays (SSR).
+> Opto 3 click is a relay Click board™, equipped with two pairs of optically isolated solid-state relays (SSR).
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/opto3_click.png" height=300px>
@@ -38,28 +36,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void opto3_cfg_setup ( opto3_cfg_t *cfg ); 
- 
-- Initialization function.
-> OPTO3_RETVAL opto3_init ( opto3_t *ctx, opto3_cfg_t *cfg );
+- `opto3_cfg_setup` Config Object Initialization function.
+```c
+void opto3_cfg_setup ( opto3_cfg_t *cfg ); 
+```
 
+- `opto3_init` Initialization function.
+```c
+err_t opto3_init ( opto3_t *ctx, opto3_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Gets input
-> OPTO3_STATE opto3_get_in1 ( opto3_t *ctx );
- 
-- Gets input
-> OPTO3_STATE opto3_get_in2 ( opto3_t *ctx );
+- `opto3_get_in1` This function gets input 1 pin state.
+```c
+uint8_t opto3_get_in1 ( opto3_t *ctx );
+```
 
-- Gets output
->  void opto3_set_out1 ( opto3_t *ctx, OPTO3_SWITCH state );
+- `opto3_get_in2` This function gets input 2 pin state.
+```c
+uint8_t opto3_get_in2 ( opto3_t *ctx );
+```
 
-- Gets output
->  void opto3_set_out2 ( opto3_t *ctx, OPTO3_SWITCH state );
-
-
+- `opto3_set_out1` This function sets output 1 pin state.
+```c
+void opto3_set_out1 ( opto3_t *ctx, uint8_t state );
+```
 
 ## Examples Description
 
@@ -89,47 +91,48 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
+    // Click initialization.
     opto3_cfg_setup( &cfg );
     OPTO3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     opto3_init( &opto3, &cfg );
 
-    log_printf( &logger, "** Opto 3 is initialized **\r\n" );
+    log_info( &logger, " Application Task " );
 }
 ```
 
 ### Application Task
 
-> Switches ON or switches OFF the both outputs depending on the
-> states of the inputs, respectively.
+> Reads the input pins state and sets their respective output pins to the same logic state.
+> The output pins state will be displayed on the USB UART where you can track their changes.
 
 ```c
 void application_task ( void )
 {
-    OPTO3_STATE state_in1;
-    OPTO3_STATE state_in2;
-    OPTO3_SWITCH state_out1;
-    OPTO3_SWITCH state_out2;
+    static uint8_t out1_state = 0;
+    static uint8_t out2_state = 0;
+    uint8_t in1_state = 0;
+    uint8_t in2_state = 0;
 
-    state_in1 = opto3_get_in1( &opto3 );
-    state_in2 = opto3_get_in2( &opto3 );
+    in1_state = opto3_get_in1( &opto3 );
+    in2_state = opto3_get_in2( &opto3 );
     
-    state_out1 = state_in1 ^ 1;
-    state_out2 = state_in2 ^ 1;
+    if ( in1_state != out1_state )
+    {
+        out1_state = in1_state;
+        opto3_set_out1( &opto3, out1_state );
+        log_printf( &logger, " OUT1 state: %u\r\n", ( uint16_t ) out1_state );
+    }
     
-    log_printf( &logger, "** Opto 3 out1 is**\r\n" );
-    opto3_set_out1( &opto3, state_out1 );
-    log_printf( &logger, "** Opto 3 out2 is **\r\n" );
-    opto3_set_out2( &opto3, state_out2 );
+    if ( in2_state != out2_state )
+    {
+        out2_state = in2_state;
+        opto3_set_out2( &opto3, out2_state );
+        log_printf( &logger, " OUT2 state: %u\r\n", ( uint16_t ) out2_state );
+    }
 }
 ```
-
-## Note
-
-> Input state is active low, and output state is active high.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

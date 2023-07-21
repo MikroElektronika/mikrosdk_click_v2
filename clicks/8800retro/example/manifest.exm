@@ -2,7 +2,7 @@
     "name": "8800 Retro Click",
     "description": "8800 Retro Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the AS1115, compact LED driver for 8x8 display screen programmed via a compatible 2-wire I2C interface from ASM-AG.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","AS1115"],
     "category" : ["LED matrix"]
 }

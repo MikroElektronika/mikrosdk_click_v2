@@ -2,7 +2,7 @@
     "name": "Load Cell 4 Click",
     "description": "Load Cell 4 Click is a compact add-on board that contains a resistive sensor signal conditioner with a fast power-up data output response. This board features the ZSC31014, a CMOS integrated circuit for highly accurate amplification and analog-to-digital conversion of differential and half-bridge input signals from Renesas. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ZSC31014"],
     "category" : ["Force"]
 }

@@ -2,7 +2,7 @@
     "name": "Current Limit 5 Click",
     "description": "Current Limit 5 Click is a compact add-on board representing a current-limiting solution. This board features the MIC2099, a current-limit power distribution switch from Microchip Technology. This Click board™ represents a programmable current limit solution with various protection features and fault indication, which operates from a 2.5V to 5.5V input voltage range. Also, the current limit is adjustable from 100mA up to 1.05A programmed through the MCP4561 digital potentiometer. This Click board™ is suitable for applications in portable equipment and condition monitoring or power supplies, protecting them in short circuits or other overload conditions.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MIC2099-1YMT","MCP4561T-502E"],
     "category" : ["Power Switch"]
 }

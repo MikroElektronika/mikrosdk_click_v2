@@ -2,7 +2,7 @@
     "name": "Grid Eye Click",
     "description": "Grid-EYE click is a 8x8 thermal array sensor-detector that carries the AMG8853 infrared array sensor from Panasonic.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","AMG8853"],
     "category" : ["	Temperature & humidity"] 
 }

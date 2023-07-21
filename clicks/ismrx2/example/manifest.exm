@@ -2,7 +2,7 @@
     "name": "ISM RX 2 Click",
     "description": "ISM RX 2 Click is a compact add-on board that contains a pin configurable, low current, sub-GHz EZRadio® receiver. This board features the Si4356, a standalone Sub-GHz RF receiver IC, from Silicon Labs, which provides a true plug-and-play receive option.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
     "hw" : ["click","SI4356"],
     "category" : ["Click Boards > Wireless connectivity > Sub-1 GHz Transceivers"]
 }

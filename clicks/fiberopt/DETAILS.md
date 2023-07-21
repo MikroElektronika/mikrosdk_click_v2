@@ -2,7 +2,7 @@
 ---
 # Fiber Opt click
 
-Fiber Opt click is a compact and easy solution for adding fiber-optic communication to your design. It features IF-D91 fiber-optic photodiode, IF-E97 fiber-optic LED diode as well as two operational amplifiers.
+> Fiber Opt click is a compact and easy solution for adding fiber-optic communication to your design. It features IF-D91 fiber-optic photodiode, IF-E97 fiber-optic LED diode as well as two operational amplifiers.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/fiberopt_click.png" height=300px>
@@ -35,32 +35,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void fiberopt_cfg_setup ( fiberopt_cfg_t *cfg ); 
- 
-- Initialization function.
-> FIBEROPT_RETVAL fiberopt_init ( fiberopt_t *ctx, fiberopt_cfg_t *cfg );
+- `fiberopt_cfg_setup` Config Object Initialization function.
+```c
+void fiberopt_cfg_setup ( fiberopt_cfg_t *cfg ); 
+```
+
+- `fiberopt_init` Initialization function.
+```c
+err_t fiberopt_init ( fiberopt_t *ctx, fiberopt_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Generic single write function.
-> void fiberopt_generic_single_write ( fiberopt_t *ctx, fiberopt_data_t tx_data );
- 
-- Generic single read function.
-> fiberopt_data_t fiberopt_generic_single_read ( fiberopt_t *ctx );
+- `fiberopt_generic_write` Generic single write function.
+```c
+err_t fiberopt_generic_write ( fiberopt_t *ctx, uint8_t *data_buf, uint16_t len );
+```
 
-- Generic multi read function.
-> void fiberopt_generic_multi_read ( fiberopt_t *ctx, fiberopt_data_t *data_buf,  uart_length_t len );
+- `fiberopt_generic_read` Generic single read function.
+```c
+err_t fiberopt_generic_read ( fiberopt_t *ctx, uint8_t *data_buf, uint16_t len );
+```
 
 ## Examples Description
 
-> This application is an add-on for fiber-optical communication.
+> This example demonstrates the use of an Fiber Opt click board by showing the communication between the two click boards.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initalizes UART driver and makes an initial log.
+> Initalizes device and makes an initial log.
 
 ```c
 
@@ -80,46 +85,43 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    /log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
+    // Click initialization.
     fiberopt_cfg_setup( &cfg );
     FIBEROPT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     fiberopt_init( &fiberopt, &cfg );
 
-    log_printf( &logger, "Initialized \r\n" );
-    Delay_ms( 100 );
+#ifdef DEMO_APP_TRANSMITTER
+    log_printf( &logger, " Application Mode: Transmitter\r\n" );
+#else
+    log_printf( &logger, " Application Mode: Receiver\r\n" );
+#endif
+    log_info( &logger, " Application Task " );
+    Delay_ms ( 100 );
 }
   
 ```
 
 ### Application Task
 
-> Example can either check if new data byte is received in rx buffer (ready for reading),
-> if ready than reads one byte from rx buffer and displays on USART terminal, or transmit message every 2 seconds.
+> Depending on the selected application mode, it reads all the received data or 
+sends the desired text message with the message counter once per second.
 
 ```c
 
 void application_task ( void )
 {
-    fiberopt_data_t tmp;
-    
-    //  Task implementation.
-    
-#ifdef DEMO_APP_RECEIVER
-
-       // RECEIVER - UART polling
-
-       tmp =  fiberopt_generic_single_read( &fiberopt );
-       log_write( &logger, &tmp, LOG_FORMAT_BYTE );
-#endif
-#ifdef DEMO_APP_TRANSMITER
-
-       // TRANSMITER - TX each 2 sec
-       
-       fiberopt_generic_multi_write( &fiberopt, demo_message, 9 );
-       Delay_ms( 2000 );
+#ifdef DEMO_APP_TRANSMITTER
+    fiberopt_generic_write( &fiberopt, DEMO_TEXT_MESSAGE, strlen( DEMO_TEXT_MESSAGE ) );
+    log_printf( &logger, "%s", ( char * ) DEMO_TEXT_MESSAGE );
+    Delay_ms( 1000 ); 
+#else
+    uint8_t rx_byte = 0;
+    if ( 1 == fiberopt_generic_read( &fiberopt, &rx_byte, 1 ) )
+    {
+       log_printf( &logger, "%c", rx_byte );
+    }
 #endif
 }
 

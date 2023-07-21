@@ -1,0 +1,37 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Sensors > Temperature & humidity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Thermo K 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.thermok3",
+    "product_link": "https://www.mikroe.com/thermo-k-3-click",
+    "short_description": "Thermo K 3 Click is a compact add-on board that provides accurate temperature measurements with a thermocouple probe. This board features the MAX6675, a cold-junction-compensated K-thermocouple-to-digital converter from Analog Devices. With the versatile type-K probe, this board enables precise temperature measurements of up to +700°C in 12-bit (0.25°C) resolution. This board can measure temperatures as high as +1024°C but with less precision. It features cold-junction compensation sensing and correction and open thermocouple detection.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.ThermoK3",
+    "subdir_name": "lib_thermok3"
+}
+
+

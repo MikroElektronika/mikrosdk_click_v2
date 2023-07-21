@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
     "category": "Click Boards > Motor control > Stepper",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -28,9 +28,10 @@
     "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.Stepper20",
     "subdir_name": "lib_stepper20"
 }
+
 

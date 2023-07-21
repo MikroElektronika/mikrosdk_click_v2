@@ -1,7 +1,8 @@
 
+---
 # GNSS RTK click
 
-> GNSS RTK Click is a compact add-on board made for positioning and wireless communication purposes. This board features the ZED-F9P, a multi-band GNSS module with integrated multi-band Real Time Kinematics (RTK) technology offering centimeter-level accuracy from U-blox.
+> GNSS RTK Click is a compact add-on board used to enhance the precision of position data derived from satellite-based positioning systems. This board features the ZED-F9P, a multi-band GNSS module with integrated multi-band Real Time Kinematics (RTK) technology offering centimeter-level accuracy from U-blox. This module concurrently uses GNSS signals from all four GNSS constellations (GPS, GLONASS, Galileo, and BeiDou), and provides multi-band RTK with fast convergence times, reliable performance, and easy integration. It also includes moving base support, allowing both base and rover to move while computing a centimeter-level accurate position between them.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/gnssrtk_click.png" height=300px>
@@ -14,72 +15,72 @@
 
 #### Click library
 
-- **Author**        : Stefan Nikolic
-- **Date**          : nov 2020.
-- **Type**          : UART type
+- **Author**        : Stefan Filipovic
+- **Date**          : Jul 2023.
+- **Type**          : UART/I2C/SPI type
 
 
 # Software Support
 
-We provide a library for the GNSSRTK Click
+We provide a library for the GNSS RTK Click
 as well as a demo application (example), developed using MikroElektronika
 [compilers](https://www.mikroe.com/necto-studio).
 The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 
 ## Library Description
 
-```
-This library contains API for GNSSRTK Click driver.
-```
+> This library contains API for GNSS RTK Click driver.
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-```
+- `gnssrtk_cfg_setup` Config Object Initialization function.
+```c
 void gnssrtk_cfg_setup ( gnssrtk_cfg_t *cfg );
 ```
 
-- Initialization function.
-```
-GNSSRTK_RETVAL gnssrtk_init ( gnssrtk_t *ctx, gnssrtk_cfg_t *cfg );
+- `gnssrtk_init` Initialization function.
+```c
+err_t gnssrtk_init ( gnssrtk_t *ctx, gnssrtk_cfg_t *cfg );
 ```
 
-- Click Default Configuration function.
-```
-void gnssrtk_default_cfg ( gnssrtk_t *ctx );
+- `gnssrtk_default_cfg` Click Default Configuration function.
+```c
+err_t gnssrtk_default_cfg ( gnssrtk_t *ctx );
 ```
 
 #### Example key functions :
 
-- Generic parser function.
-```
-gnssrtk_error_t gnssrtk_generic_parser ( char *rsp,  uint8_t command, uint8_t element, char *parser_buf );
-```
-
-- Generic read function.
-```
-err_t gnssrtk_generic_read ( gnssrtk_t *ctx, char *data_buf, uint16_t max_len );
+- `gnssrtk_reset_device` This function resets the device by toggling the RST pin.
+```c
+void gnssrtk_reset_device ( gnssrtk_t *ctx );
 ```
 
-- Module cold start function.
-```
-void gnssrtk_module_cold_start ( gnssrtk_t *ctx );
+- `gnssrtk_generic_read` This function reads a desired number of data bytes from the module.
+```c
+err_t gnssrtk_generic_read ( gnssrtk_t *ctx, uint8_t *data_out, uint8_t len );
 ```
 
-## Examples Description
+- `gnssrtk_parse_gngga` This function parses the GNGGA data from the read response buffer.
+```c
+err_t gnssrtk_parse_gngga ( char *rsp_buf, uint8_t gngga_element, char *element_data );
+```
 
-This example reads and processes data from GNSS RTK click.
+## Example Description
+
+> This example demonstrates the use of GNSS RTK click by reading and displaying the GNSS coordinates.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-Initializes driver and starts the module.
+> Initializes the driver and resets the click board.
 
-```
-void application_init ( void ) {
+```c
+
+void application_init ( void )
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     gnssrtk_cfg_t gnssrtk_cfg;  /**< Click config object. */
 
@@ -97,38 +98,38 @@ void application_init ( void ) {
     log_info( &logger, " Application Init " );
 
     // Click initialization.
-
     gnssrtk_cfg_setup( &gnssrtk_cfg );
     GNSSRTK_MAP_MIKROBUS( gnssrtk_cfg, MIKROBUS_1 );
-    Delay_ms( 100 );
-    err_t init_flag  = gnssrtk_init( &gnssrtk, &gnssrtk_cfg );
-    if ( init_flag == UART_ERROR ) {
-        log_error( &logger, " Application Init Error. " );
-        log_info( &logger, " Please, run program again... " );
-
+    err_t init_flag = gnssrtk_init( &gnssrtk, &gnssrtk_cfg );
+    if ( ( UART_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
+    {
+        log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-
-    gnssrtk_default_cfg ( &gnssrtk );
+    
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
 }
+
 ```
 
 ### Application Task
 
-Reads the received data and parses it.
+> Reads the received data, parses the GNGGA info from it, and once it receives the position fix it will start displaying the coordinates on the USB UART.
 
-```
-void application_task ( void ) {
-    gnssrtk_process();
-    parser_application( current_parser_buf );
+```c
+void application_task ( void )
+{
+    gnssrtk_process( &gnssrtk );
+    if ( app_buf_len > ( sizeof ( GNSSRTK_RSP_GNGGA ) + GNSSRTK_GNGGA_ELEMENT_SIZE ) ) 
+    {
+        gnssrtk_parser_application( app_buf );
+    }
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 
-**Other mikroE Libraries used in the example:**
+**Other Mikroe Libraries used in the example:**
 
 - MikroSDK.Board
 - MikroSDK.Log
@@ -141,7 +142,7 @@ Depending on the development board you are using, you may need
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART
-terminal is available in all Mikroelektronika
+terminal is available in all MikroElektronika
 [compilers](https://shop.mikroe.com/compilers).
 
 ---

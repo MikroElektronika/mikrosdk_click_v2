@@ -2,7 +2,7 @@
     "name": "USB MUX Click",
     "description": "USB MUX Click is a compact add-on board with a high-bandwidth switch designed for switching and isolating high-speed USB 2.0 signals in systems with limited USB I/Os. This board features the TS3USB30E, a USB 2.0 1:2 multiplexer/demultiplexer switch with a single enable from Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TS3USB30EDGSR"],
     "category" : ["Click Boards > Interface > USB"]
 }

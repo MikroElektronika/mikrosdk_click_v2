@@ -2,7 +2,7 @@
     "name": "Load Cell 3 Click",
     "description": "Load Cell 3 Click is a compact add-on board that represents a weigh scale solution. This board features the PGA302, a low-drift, low-noise, programmable signal-conditioner device designed for various resistive bridge-sensing applications from Texas Instruments. It creates 2.5V of bridge excitation and a current output source with programmable current output up to 1mA. Two identical analog front-end (AFE) channels followed by a 16-bit Sigma-Delta ADC are available at the input, where each AFE channel has a dedicated programmable gain amplifier with gain up to 200V/V. It also comes with an on-chip temperature sensor and integrated EEPROM memory for device configuration, calibration, and user data.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","PGA302"],
     "category" : ["Force"]
 }

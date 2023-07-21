@@ -2,7 +2,7 @@
     "name": "Heart Rate 7 Click",
     "description": "Heart Rate 7 click is an optical biosensor Click board™ which can be used for heart-rate monitoring (HRM). This Click board™ employs a very sensitive analog front-end IC with high dynamic range, which ensures accurate and reliable readings. This analog front-end IC is coupled with the optical front end, which consists of a sensitive photo-diode (PD) and two high brightness green LEDs.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","AFE4404"],
     "category" : ["Biometrics"]
 }

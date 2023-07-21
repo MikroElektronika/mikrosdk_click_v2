@@ -2,7 +2,7 @@
     "name": "3D HALL 5 Click",
     "description": "3D HALL 5 click is a very accurate, magnetic field sensing Click board, used to measure the intensity of the magnetic field across three perpendicular axes.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","74HC4053","IIS2MDCTR"],
     "category" : ["Magnetic"] 
 }

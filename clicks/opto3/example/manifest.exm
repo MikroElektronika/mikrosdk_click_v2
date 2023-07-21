@@ -2,7 +2,7 @@
     "name": " Opto 3 Click",
     "description": "Opto 3 click is a relay Click board™, equipped with two pairs of optically isolated solid-state relays (SSR).",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TLP241A"],
     "category" : ["Optocoupler"] 
 }

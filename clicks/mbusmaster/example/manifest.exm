@@ -2,7 +2,7 @@
     "name": "M-Bus Master Click",
     "description": "The M-Bus Master is a Click board™ is complete solution for a master node in M-Bus networks.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
     "hw" : ["click","MC33072ADR2G"],
     "category" : ["RS232"] 
 }

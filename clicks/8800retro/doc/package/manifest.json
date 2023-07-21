@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|RISC-V|AVR",
+    "architecture": "ARM|PIC|RISC-V|AVR|dsPIC",
     "category": "Click Boards > Display & LED > LED matrix",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -28,11 +28,12 @@
     "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.8800Retro",
     "subdir_name": "lib_c8800retro"
 }
+
 
 
 

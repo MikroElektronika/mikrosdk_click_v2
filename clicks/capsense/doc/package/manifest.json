@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
     "category": "Click Boards > HMI > Capacitive",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,8 +31,9 @@
     "related_projects": [
         851
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.CapSense",
     "subdir_name": "lib_capsense"
 }
+

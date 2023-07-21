@@ -2,7 +2,7 @@
     "name": "One Shot Click",
     "description": "One Shot Click is equipped with the monostable multivibrator (also known as a “one-shot” pulse generator) with a programmable pulse width of 1μs to 33.6 seconds. The used LTC6993-2 is part of the TimerBlox® family of versatile silicon timing devices, from Analog Devices.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LTC6993"],
     "category" : ["Signal generator"] 
 }

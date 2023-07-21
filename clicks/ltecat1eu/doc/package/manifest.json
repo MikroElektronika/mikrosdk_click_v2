@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
     "category": "Click Boards > Wireless connectivity > GSM/LTE",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,11 +31,12 @@
         3104
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.LTECat1EU",
     "subdir_name": "lib_ltecat1eu"
 }
+
 
 
 

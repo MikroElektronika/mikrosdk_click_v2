@@ -2,7 +2,7 @@
     "name": "Charger 23 Click",
     "description": "Charger 23 Click is a compact add-on board providing a single-cell battery charging solution. This board features the ISL78693, a single-cell Li-ion or Li-polymer battery charger from Renesas. The ISL78693 can operate with an input voltage as low as 2.6V and works as a linear charger with the battery charged in a Constant Current/Constant Voltage (CC/CV) profile. The charge current is selectable with an external resistor between 250 and 500mA. Additional features include the preconditioning of an over-discharged battery, an NTC thermistor interface for charging the battery in a safe temperature range, automatic recharge, and more.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ISL78692-1CR3Z-T7A"],
     "category" : ["Click Boards > Power management > Battery Charger"]
 }

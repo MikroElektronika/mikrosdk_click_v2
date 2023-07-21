@@ -2,7 +2,7 @@
     "name": "ECG 3 Click",
     "description": "ECG 3 click is a complete solution for ECG and HR application development, utilizing a specialized IC with a clinical-grade analog front-end (AFE). ECG 3 click uses the MAX30003 IC, an ultra-low power, single-channel bio-sensor, which features a wide range of different options, making it an ideal solution for development of heart rate and ECG monitoring applications, fitness applications, for the ECG bio-authentication, and similar applications related to heart monitoring. ECG 3 click is also equipped with the 3.5mm electrodes connector, making it ready to be used out of the box.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MAX30003"],
     "category" : ["Biometrics"] 
 }

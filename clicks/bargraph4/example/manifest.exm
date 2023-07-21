@@ -2,7 +2,7 @@
     "name": "BarGraph 4 Click",
     "description": "BarGraph 4 Click is a compact add-on board that contains four green four-segment LED bar graph displays. This board features the TLC59283, a 16-channel, constant-current sink light-emitting diode (LED) driver from Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TLC59283RGER"],
     "category" : ["LED segment"]
 }

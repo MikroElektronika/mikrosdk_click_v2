@@ -2,7 +2,7 @@
     "name": "UWB Click",
     "description": "UWB Click is an Ultra-Wideband transceiver Click board™ that can be used in 2-way ranging or TDOA location systems to locate assets to a precision of 10 cm and supports data rates of up to 6.8 Mbps. This Click board™ features the DWM1000 module based on Decawave's DW1000 Ultra-Wideband (UWB) transceiver from Decawave Limited.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","DWM1000"],
     "category" : ["Wireless connectivity"] 
 }

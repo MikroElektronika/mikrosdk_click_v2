@@ -2,7 +2,7 @@
     "name": "Hall Current 8 120A Click",
     "description": "Hall Current 8 Click is a compact add-on board that contains a precise solution for AC/DC current sensing. This board features the TLI4971-A120T5, a high-precision coreless current sensor for industrial/consumer applications from Infineon Technologies. The TLI4971-A120T5 has an analog interface and two fast overcurrent detection outputs, which support the protection of the power circuitry. Galvanic isolation is also provided according to the magnetic sensing principle. Infineon's monolithic Hall technology enables accurate and highly linear measurement of currents with a full scale up to 120A. This Click board™ is suitable for AC/DC current measurement applications: electrical drives, general-purpose inverters, chargers, current monitoring, overload, over-current detection, and many more.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TLI4971"],
     "category" : ["Current sensor"]
 }

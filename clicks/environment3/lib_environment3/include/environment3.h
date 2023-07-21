@@ -723,7 +723,7 @@ float environment3_get_pressure ( environment3_t *ctx );
  *         @li - Gas resistance value in Ohms.
  * @note None.
  */
-uint32_t environment3_get_gas_resistance ( environment3_t *ctx );
+float environment3_get_gas_resistance ( environment3_t *ctx );
 
 /**
  * @brief Environment 3 read data from register address function.

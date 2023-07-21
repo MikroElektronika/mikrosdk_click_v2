@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
     "category": "Click Boards > Interface > RS232",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -28,10 +28,11 @@
     "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.UARTtoI2C",
     "subdir_name": "lib_uarttoi2c"
 }
+
 
 

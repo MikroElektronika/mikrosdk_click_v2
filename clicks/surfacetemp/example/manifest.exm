@@ -2,7 +2,7 @@
     "name": "Surface Temp Click",
     "description": "Surface temp Click is high accuracy digital temperature sensor Click board™, offering breakthrough performance over a wide industrial range. It is equipped with the ADT7420 - an accurate 16-Bit Digital I2C temperature sensor from Analog Devices.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ADT7420"],
     "category" : ["Temperature & humidity"] 
 }

@@ -2,7 +2,7 @@
     "name": "LDC 2 Click",
     "description": "LDC 2 Click is a compact add-on board that measures inductance change which a conductive target causes when it moves into the inductor's AC magnetic field. This board features the LDC1041, inductance-to-digital converter (LDC) for inductive sensing solutions from Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LDC1041"],
     "category" : ["Inductance"]
 }

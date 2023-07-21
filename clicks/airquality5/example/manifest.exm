@@ -2,7 +2,7 @@
     "name": "Air quality 5  Click",
     "description": "Air quality 5 click is a triple MOS sensor on a single Click board™, which can detect gas pollution for a number of different gases. The onboard sensor is specially designed to detect the pollution from automobile exhausts, as well as the gas pollution from the industrial or agricultural industry.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MiCS-6814"],
     "category" : ["Gas,Air Quality"] 
 }

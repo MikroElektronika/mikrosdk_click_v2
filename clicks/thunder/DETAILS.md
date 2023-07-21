@@ -2,7 +2,7 @@
 ---
 # Thunder click
 
-Thunder click features AS3935 lightning sensor as well as MA5532 coil antenna. It detects the presence and proximity of potentially hazardous lightning activity in the vicinity and provides estimated distance to the center of the storm. It can also provide information on the noise level. Thunder click communicates with the target board microcontroller via SPI and INT lines. The board is designed to use 3.3V or 5V power supply. LED diode (GREEN) indicates the presence of power supply.
+> Thunder click features AS3935 lightning sensor as well as MA5532 coil antenna. It detects the presence and proximity of potentially hazardous lightning activity in the vicinity and provides estimated distance to the center of the storm. It can also provide information on the noise level. Thunder click communicates with the target board microcontroller via SPI and INT lines. The board is designed to use 3.3V or 5V power supply. LED diode (GREEN) indicates the presence of power supply.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/thunder_click.png" height=300px>
@@ -36,38 +36,49 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void thunder_cfg_setup ( thunder_cfg_t *cfg ); 
- 
-- Initialization function.
-> THUNDER_RETVAL thunder_init ( thunder_t *ctx, thunder_cfg_t *cfg );
+- `thunder_cfg_setup` Config Object Initialization function.
+```c
+void thunder_cfg_setup ( thunder_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void thunder_default_cfg ( thunder_t *ctx );
+- `thunder_init` Initialization function.
+```c
+err_t thunder_init ( thunder_t *ctx, thunder_cfg_t *cfg );
+```
 
+- `thunder_default_cfg` Click Default Configuration function.
+```c
+void thunder_default_cfg ( thunder_t *ctx );
+```
 
 #### Example key functions :
 
-- Function checks and returns the interrupt value.
-> uint8_t thunder_check_interr ( thunder_t *ctx );
- 
-- Function gets energy of the single lightning and distance estimation for the head of the storm.
-> void thunder_get_storm_info ( thunder_t *ctx, uint32_t *energy_out, uint8_t *distance_out );
+- `thunder_check_int` Function checks and returns the interrupt value.
+```c
+uint8_t thunder_check_int ( thunder_t *ctx );
+```
 
-- Function reads the desired number of bytes from the registers.
-> uint8_t thunder_read_reg ( thunder_t *ctx, uint8_t reg_addr, uint8_t *data_out, uint8_t n_bytes );
+- `thunder_get_storm_info` Function gets energy of the single lightning and distance estimation for the head of the storm.
+```c
+void thunder_get_storm_info ( thunder_t *ctx, uint32_t *energy_out, uint8_t *distance_out );
+```
+
+- `thunder_read_reg` Function reads a data byte from the registers.
+```c
+err_t thunder_read_reg ( thunder_t *ctx, uint8_t reg, uint8_t *data_out );
+```
 
 ## Examples Description
 
-> This application detects the presence and proximity of potentially lightning activity and provides estimated distance to the center of the storm. It can also provide information on the noise level.
-
+> This application detects the presence and proximity of potentially 
+lightning activity and provides estimated distance to the center of the storm. 
+It can also provide information on the noise level.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes SPI driver and performs the reset command and RCO calibrate command.
-> Also configures the device for working properly. 
+> Initializes SPI driver and performs the reset command and RCO calibrate command. Also configures the device for working properly.
 
 ```c
 
@@ -87,44 +98,42 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
+    // Click initialization.
     thunder_cfg_setup( &cfg );
     THUNDER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     thunder_init( &thunder, &cfg );
 
     thunder_default_cfg( &thunder );
-    Delay_ms( 300 );
+    log_info( &logger, " Application Task " );
 }
   
 ```
 
 ### Application Task
 
-> Always checks is interrupt event happend (Listening mode) and after that gets the informations about storm. Results logs on UART.
+> Checks if the interrupt event has occured (Listening mode) and after that reads the storm information and logs the results on the USB UART.
 
 ```c
 
 void application_task ( void )
 {
-    storm_mode = thunder_check_interr( &thunder );
+    storm_mode = thunder_check_int ( &thunder );
 
-    if ( storm_mode == THUNDER_NOISE_LEVEL_INTERR )
+    if ( THUNDER_NOISE_LEVEL_INTERR == storm_mode )
     {
-        log_printf( &logger, "Noise level too high\r\n" );
+        log_printf( &logger, "Noise level too high\r\n\n" );
     }
-    else if ( storm_mode == THUNDER_DISTURBER_INTERR )
+    else if ( THUNDER_DISTURBER_INTERR == storm_mode )
     {
-        log_printf( &logger, "Disturber detected\r\n" );
+        log_printf( &logger, "Disturber detected\r\n\n" );
     }
-    else if ( storm_mode ==  THUNDER_LIGHTNING_INTERR )
+    else if ( THUNDER_LIGHTNING_INTERR == storm_mode )
     {
         thunder_get_storm_info( &thunder, &storm_energy, &storm_distance );
-
-        log_printf( &logger, "Energy of the single lightning : %ld\r\n", storm_energy );
-        log_printf( &logger, "Distance estimation :  %d km\r\n", storm_distance );
+        log_printf( &logger, "Energy of the single lightning : %lu\r\n", storm_energy );
+        log_printf( &logger, "Distance estimation : %u km\r\n\n", ( uint16_t ) storm_distance );
     }
 } 
 

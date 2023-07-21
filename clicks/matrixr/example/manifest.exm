@@ -2,7 +2,7 @@
     "name": "Matrix R Click",
     "description": "Matrix R click is a mikroBUS add-on board with two red 5x7 matrices driven by two MAX7219 8-bit LED Display Drivers. The active area of each matrix is 7.62mm high and 5.08 mm wide. 7x5 is a standard resolution for displaying ASCII characters, so the click is essentially a dual-character display capable of showing letters in more readable typefaces compared to a 14-segment display. The click communicates with the target MCU through the mikroBUS:tm: SPI interface with two separate Chip Select lines for each matrix (CSL for the left, CSR for the right). This board is designed to use a 5V power supply.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MAX7219"],
     "category" : ["LED matrix"]
 }

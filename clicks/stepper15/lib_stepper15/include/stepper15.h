@@ -364,23 +364,6 @@ extern "C"{
 /*! @} */ // stepper15
 
 /**
- * @brief Stepper 15 Click driver selector.
- * @details Selects target driver interface of Stepper 15 Click driver.
- */
-typedef enum
-{
-    STEPPER15_DRV_SEL_SPI,      /**< SPI driver descriptor. */
-    STEPPER15_DRV_SEL_I2C       /**< I2C driver descriptor. */
-
-} stepper15_drv_t;
-
-/**
- * @brief Stepper 15 Click driver interface.
- * @details Definition of driver interface of Stepper 15 Click driver.
- */
-typedef err_t ( *stepper15_master_io_t )( struct stepper15_s*, uint8_t, uint8_t*, uint8_t ); /**< Driver serial interface. */
-
-/**
  * @brief Stepper 15 Click context object.
  * @details Context object definition of Stepper 15 Click driver.
  */
@@ -396,10 +379,6 @@ typedef struct stepper15_s
 
     uint8_t     slave_address;       /**< Device slave address (used for I2C driver). */
     pin_name_t  chip_select;         /**< Chip select pin descriptor (used for SPI driver). */
-    stepper15_drv_t  drv_sel;        /**< Master driver interface selector. */
-
-    stepper15_master_io_t  write_f;  /**< Master write function. */
-    stepper15_master_io_t  read_f;   /**< Master read function. */
 
 } stepper15_t;
 
@@ -426,8 +405,6 @@ typedef struct
     uint32_t                           spi_speed;       /**< SPI serial speed. */
     spi_master_mode_t                  spi_mode;        /**< SPI master mode. */
     spi_master_chip_select_polarity_t  cs_polarity;     /**< Chip select pin polarity. */
-
-    stepper15_drv_t  drv_sel;                          /**< Master driver interface selector. */
 
 } stepper15_cfg_t;
 
@@ -458,22 +435,6 @@ typedef enum
  * @note The all used pins will be set to unconnected state.
  */
 void stepper15_cfg_setup ( stepper15_cfg_t *cfg );
-
-/**
- * @brief Stepper 15 driver interface setup function.
- * @details This function sets a serial driver interface which will be used
- * further in the click driver.
- * @param[out] cfg : Click configuration structure.
- * See #stepper15_cfg_t object definition for detailed explanation.
- * @param[in] drv_sel : Driver interface selection.
- * See #stepper15_drv_t object definition for detailed explanation.
- * @return Nothing.
- * @note This driver selection should be call before init function to configure
- * the driver to work with the serial interface which is consistent with the
- * real state of the hardware. If this function is not called, the default
- * driver interface will be set.
- */
-void stepper15_drv_interface_selection ( stepper15_cfg_t *cfg, stepper15_drv_t drv_sel );
 
 /**
  * @brief Stepper 15 initialization function.
@@ -507,9 +468,9 @@ err_t stepper15_init ( stepper15_t *ctx, stepper15_cfg_t *cfg );
 err_t stepper15_default_cfg ( stepper15_t *ctx );
 
 /**
- * @brief Stepper 15 data writing function.
+ * @brief Stepper 15 I2C writing function.
  * @details This function writes a desired number of data bytes starting from
- * the selected register.
+ * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #stepper15_t object definition for detailed explanation.
  * @param[in] reg : Start register address.
@@ -521,7 +482,57 @@ err_t stepper15_default_cfg ( stepper15_t *ctx );
  * See #err_t definition for detailed explanation.
  * @note None.
  */
-err_t stepper15_generic_write ( stepper15_t *ctx, uint8_t reg, uint8_t *data_in, uint8_t len );
+err_t stepper15_i2c_write ( stepper15_t *ctx, uint8_t reg, uint8_t *data_in, uint8_t len );
+
+/**
+ * @brief Stepper 15 I2C reading function.
+ * @details This function reads a desired number of data bytes starting from
+ * the selected register by using I2C serial interface.
+ * @param[in] ctx : Click context object.
+ * See #stepper15_t object definition for detailed explanation.
+ * @param[in] reg : Start register address.
+ * @param[out] data_out : Output read data.
+ * @param[in] len : Number of bytes to be read.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ *
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t stepper15_i2c_read ( stepper15_t *ctx, uint8_t reg, uint8_t *data_out, uint8_t len );
+
+/**
+ * @brief Stepper 15 SPI writing function.
+ * @details This function writes a desired number of data bytes starting from
+ * the selected register by using SPI serial interface.
+ * @param[in] ctx : Click context object.
+ * See #stepper15_t object definition for detailed explanation.
+ * @param[in] reg : Start register address.
+ * @param[in] data_in : Data to be written.
+ * @param[in] len : Number of bytes to be written.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ *
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t stepper15_spi_write ( stepper15_t *ctx, uint8_t reg, uint8_t *data_in, uint8_t len );
+
+/**
+ * @brief Stepper 15 SPI reading function.
+ * @details This function reads a desired number of data bytes starting from
+ * the selected register by using SPI serial interface.
+ * @param[in] ctx : Click context object.
+ * See #stepper15_t object definition for detailed explanation.
+ * @param[in] reg : Start register address.
+ * @param[out] data_out : Output read data.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ *
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t stepper15_spi_read ( stepper15_t *ctx, uint8_t reg, uint8_t *data_out );
 
 /**
  * @brief Stepper 15 reset function.
@@ -723,8 +734,6 @@ uint8_t stepper15_get_fault_condition ( stepper15_t *ctx );
  * @note None.
  */
 err_t stepper15_step_by_angle ( stepper15_t *ctx, uint8_t step_speed, float angle, uint16_t step_360 );
-
-
 
 #ifdef __cplusplus
 }

@@ -2,7 +2,7 @@
     "name": "ReRAM 2 Click",
     "description": "ReRAM 2 Click is a compact add-on board containing highly reliable resistive random-access memory. This board features the MB85AS8MT, an 8Mbit memory organized as 1,048,576 words of 8 bits from Fujitsu Semiconductor. The MB85AS8MT uses the resistance-variable memory process and silicon-gate CMOS process technologies to form nonvolatile memory cells. This SPI configurable ReRAM can withstand many write cycles (1x106 rewrite operations), has a data retention period greater than ten years, and can read and write to random addresses with very negligible delay. This Click board™ is ideal as a nonvolatile storage media or temporary RAM expansion for storing variables in any embedded application that requires rapid writes and unlimited endurance.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MB85AS8MT"],
     "category" : [" Storage"]
 }

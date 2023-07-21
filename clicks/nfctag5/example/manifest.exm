@@ -2,7 +2,7 @@
     "name": "NFC Tag 5 Click",
     "description": "NFC Tag 5 Click is a compact add-on board that contains a compact NFC tag IC. This board features the M24LR64E-R, a dynamic NFC/RFID tag IC with a dual interface 64-Kbit EEPROM from STMicroelectronics. It features an I2C interface alongside an RF contactless interface operating at 13.56MHz, organized as 8192×8 bits in the I2C mode and 2048×32 bits in the ISO 15693 and ISO 18000-3 mode 1 RF mode. The M24LR64E-R also features an energy harvesting analog output and a user-configurable digital output pin, used as an interrupt, toggling during either RF write in progress or RF busy mode.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","M24LR64E-RDW6T/2"],
     "category" : ["Click Boards > Wireless connectivity > RFID/NFC"]
 }

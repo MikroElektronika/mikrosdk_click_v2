@@ -2,7 +2,7 @@
     "name": "5G NB IoT Click",
     "description": "5G NB IoT Click is a Click board™ based on Gemalto's Cinterion® ENS22 NB-IoT Wireless Module platform that boosts highly efficient future 5G connectivity for the IoT.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ENS22"],
     "category" : ["LTE IoT"] 
 }

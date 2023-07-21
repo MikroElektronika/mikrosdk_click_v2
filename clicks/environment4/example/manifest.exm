@@ -2,7 +2,7 @@
     "name": "Environment 4 Click",
     "description": "Environment 4 Click is a compact add-on board combining 4th-generation SHT humidity and SGP air-quality sensing solutions from Sensirion. This board features SHT41A-AD1B and SGP41, an I2C-configurable high-accuracy relative humidity/temperature combined with a MOx-based gas sensor. The SHT41A-AD1B offers linearized digital output alongside temperature/humidity accuracy up to ±0.3°C/±2%RH. It performs best within the operating range of 5-60°C and 20-80%RH. With the help of SGP41, which features a temperature-controlled micro hotplate, it also provides a humidity-compensated VOC and NOx-based indoor air quality signal.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","SGP41-D-R4","SHT41A-AD1B-R2"],
     "category" : ["Click Boards > Sensors > Environmental"]
 }

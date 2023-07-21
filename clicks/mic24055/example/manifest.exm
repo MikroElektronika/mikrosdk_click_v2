@@ -2,7 +2,7 @@
     "name": "MIC24055 Click",
     "description": "MIC24055 click is the buck regulator that can deliver continuous output current up to 8A and can step down voltages from up to 19V which makes this click board easy to use with many power sources commonly available.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MIC24055"],
     "category" : ["Buck"] 
 }

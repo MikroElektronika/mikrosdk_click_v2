@@ -2,7 +2,7 @@
     "name": "BLE 3 Click",
     "description": "BLE 3 click is a quick and simple solution if you want to add Bluetooth Low Energy to your project. It features the NINA-B1 Bluetooth 4.2 module, from u-blox. This click also comes with an integrated antenna mounted on the PCB.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","NINA-B1 Bluetooth 4.2 module"],
     "category" : ["BT/BLE"] 
 }

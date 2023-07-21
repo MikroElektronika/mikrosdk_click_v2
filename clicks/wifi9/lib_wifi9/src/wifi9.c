@@ -35,17 +35,15 @@
 void wifi9_cfg_setup ( wifi9_cfg_t *cfg )
 {
     // Communication gpio pins 
-
     cfg->rx_pin = HAL_PIN_NC;
     cfg->tx_pin = HAL_PIN_NC;
     
     // Additional gpio pins
-
-     cfg->adr   = HAL_PIN_NC;
-     cfg->rst = HAL_PIN_NC;
-     cfg->rts   = HAL_PIN_NC;
-     cfg->mcr = HAL_PIN_NC;
-     cfg->cts = HAL_PIN_NC;
+    cfg->adr = HAL_PIN_NC;
+    cfg->rst = HAL_PIN_NC;
+    cfg->rts = HAL_PIN_NC;
+    cfg->mcr = HAL_PIN_NC;
+    cfg->cts = HAL_PIN_NC;
 
     cfg->baud_rate      = 115200;
     cfg->data_bit       = UART_DATA_BITS_DEFAULT;
@@ -54,7 +52,7 @@ void wifi9_cfg_setup ( wifi9_cfg_t *cfg )
     cfg->uart_blocking  = false;
 }
 
-WIFI9_RETVAL wifi9_init ( wifi9_t *ctx, wifi9_cfg_t *cfg )
+err_t wifi9_init ( wifi9_t *ctx, wifi9_cfg_t *cfg )
 {
     uart_config_t uart_cfg;
     
@@ -79,30 +77,37 @@ WIFI9_RETVAL wifi9_init ( wifi9_t *ctx, wifi9_cfg_t *cfg )
     uart_set_blocking( &ctx->uart, cfg->uart_blocking );
 
     // Output pins 
-
-     digital_out_init( &ctx->adr, cfg->adr );
-     digital_out_init( &ctx->rst, cfg->rst );
-     digital_out_init( &ctx->rts, cfg->rts );
+    digital_out_init( &ctx->adr, cfg->adr );
+    digital_out_init( &ctx->rst, cfg->rst );
+    digital_out_init( &ctx->rts, cfg->rts );
 
     // Input pins
-
-     digital_in_init( &ctx->mcr, cfg->mcr );
-     digital_in_init( &ctx->cts, cfg->cts );
+    digital_in_init( &ctx->mcr, cfg->mcr );
+    digital_in_init( &ctx->cts, cfg->cts );
 
     return WIFI9_OK;
-
 }
 
-void wifi9_module_power ( wifi9_t *ctx )
+void wifi9_reset_device ( wifi9_t *ctx )
 {
-    digital_out_write( &ctx->rst, 0 );
-    Delay_100ms();
-    Delay_100ms();
-    Delay_100ms();
-    digital_out_write( &ctx->rst, 1 );
-    Delay_100ms();
-    Delay_100ms();
-    Delay_100ms();
+    digital_out_write( &ctx->rst, WIFI9_MODULE_POWER_OFF );
+    Delay_100ms( );
+    Delay_100ms( );
+    Delay_100ms( );
+    digital_out_write( &ctx->rst, WIFI9_MODULE_POWER_ON );
+    Delay_100ms( );
+    Delay_100ms( );
+    Delay_100ms( );
+}
+
+void wifi9_set_rst_pin ( wifi9_t *ctx, uint8_t state )
+{
+    digital_out_write( &ctx->rst, state );
+}
+
+void wifi9_set_rts_pin ( wifi9_t *ctx, uint8_t state )
+{
+    digital_out_write( &ctx->rts, state );
 }
 
 void wifi9_select_uart ( wifi9_t *ctx, uint8_t uart_select )
@@ -110,37 +115,36 @@ void wifi9_select_uart ( wifi9_t *ctx, uint8_t uart_select )
     digital_out_write( &ctx->adr, uart_select );
 }
 
-uint8_t wifi9_get_state_net_led ( wifi9_t *ctx )
+uint8_t wifi9_get_mcr_pin ( wifi9_t *ctx )
 {
     return digital_in_read( &ctx->mcr );
 }
 
-uint8_t wifi9_get_state_conn_led ( wifi9_t *ctx )
+uint8_t wifi9_get_cts_pin ( wifi9_t *ctx )
 {
-    return digital_in_read( &ctx->rst );
+    return digital_in_read( &ctx->cts );
 }
 
-void wifi9_generic_write ( wifi9_t *ctx, char *data_buf, uint16_t len )
+void wifi9_generic_write ( wifi9_t *ctx, uint8_t *data_buf, uint16_t len )
 {
     uart_write( &ctx->uart, data_buf, len );
 }
 
-int32_t wifi9_generic_read ( wifi9_t *ctx, char *data_buf, uint16_t max_len )
+int32_t wifi9_generic_read ( wifi9_t *ctx, uint8_t *data_buf, uint16_t max_len )
 {
     return uart_read( &ctx->uart, data_buf, max_len );
 }
 
-void wifi9_send_command ( wifi9_t *ctx, char *command )
+void wifi9_send_command ( wifi9_t *ctx, uint8_t *command )
 {
-    char tmp_buf[ 100 ];
-    uint8_t len;
-    memset( tmp_buf, 0, 100 );
-    len = strlen( command );
-    
-    strncpy( tmp_buf, command, len );
-    strcat( tmp_buf, "\r\n" );
-
-    wifi9_generic_write( ctx, tmp_buf, strlen( tmp_buf ) );
+    uint8_t cr_lf[ 2 ] = { 13, 10 };
+    while ( *command )
+    {
+        uart_write( &ctx->uart, command, 1 );
+        command++;
+    }
+    uart_write( &ctx->uart, cr_lf, 2 );
+    Delay_100ms(  );
 }
 
 // ------------------------------------------------------------------------- END

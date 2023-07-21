@@ -2,7 +2,7 @@
     "name": "A5000 Plug n Trust Click",
     "description": "A5000 Plug&Trust Click is a compact add-on board representing a ready-to-use secure IoT authenticator. This board features the A5000, an Edge Lock® Secure Authenticator from NXP Semiconductors. The A5000 provides a root of trust at the IC level, giving an IoT authentication system state-of-the-art security capability. It allows for securely storing and provisioning credentials and performing cryptographic operations for security-critical communication and authentication functions. It has an independent Common Criteria EAL 6+ security certification up to OS level and supports ECC asymmetric cryptographic and AES/3DES symmetric algorithms.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","A5000R2HQ1"],
     "category" : ["Click Boards > Miscellaneous > Encryption"]
 }

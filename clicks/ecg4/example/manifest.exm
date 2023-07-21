@@ -2,7 +2,7 @@
     "name": "ECG 4 Click",
     "description": "ECG 4 Click is a complete solution for the development of ECG and Heart-Rate (HR) applications, based on the BMD101, a specialized bio-signal sensing System-on-Chip (SoC).",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
     "hw" : ["click","BMD101"],
     "category" : ["Biometrics"] 
 }

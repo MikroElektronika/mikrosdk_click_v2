@@ -24,7 +24,7 @@
 #include "log.h"
 #include "ir2.h"
 
-// #define IR2_TRANSMITTER_MODE    // Uncomment this line to switch to the transmitter mode
+#define IR2_TRANSMITTER_MODE    // Uncomment this line to switch to the transmitter mode
 
 #define IR2_ADDRESS     0xAB
 #define IR2_DATA        "MikroE - IR 2 click board\r\n"
@@ -59,41 +59,40 @@ void application_init ( void )
         for ( ; ; );
     }
     
+    log_printf( &logger, "- - - - - - - - - - - - \r\n" );
+#ifdef IR2_TRANSMITTER_MODE
+    log_printf( &logger, "-  Transmitter mode   - \r\n" );
+#else
+    log_printf( &logger, "-    Receiver mode    - \r\n" );
+#endif
+    log_printf( &logger, "- - - - - - - - - - - - \r\n" );
+    
     log_info( &logger, " Application Task " );
-    
-    log_printf( &logger, "- - - - - - - - - - - - \r\n" );
-    
-    #ifdef IR2_TRANSMITTER_MODE
-        log_printf( &logger, "-  Transmitter mode   - \r\n" );
-    #else
-        log_printf( &logger, "-    Receiver mode    - \r\n" );
-    #endif
-    log_printf( &logger, "- - - - - - - - - - - - \r\n" );
 }
 
 void application_task ( void ) 
 {
-    #ifdef IR2_TRANSMITTER_MODE
-        log_printf( &logger, " Sending message." );
-        
-        for ( uint8_t cnt = 0; cnt < sizeof ( IR2_DATA ); cnt++ )
-        {
-            ir2_nec_send_data ( &ir2, IR2_ADDRESS, IR2_DATA[ cnt ] );
-            log_printf( &logger, "." );
-        }
-        
-        log_printf( &logger, "\r\n Message has been sent! \r\n" );
-        log_printf( &logger, "- - - - - - - - - - - - \r\n" );
-        Delay_ms( 500 );
-    #else
-        uint8_t address;
-        uint8_t rx_data;
-        
-        if ( IR2_OK == ir2_nec_read_data ( &ir2, &address, &rx_data ) )
-        {
-            log_printf( &logger, "Address: 0x%.2X, Data: %c\r\n", ( uint16_t ) address, rx_data );
-        }
-    #endif
+#ifdef IR2_TRANSMITTER_MODE
+    log_printf( &logger, " Sending message." );
+    
+    for ( uint8_t cnt = 0; cnt < sizeof ( IR2_DATA ); cnt++ )
+    {
+        ir2_nec_send_data ( &ir2, IR2_ADDRESS, IR2_DATA[ cnt ] );
+        log_printf( &logger, "." );
+    }
+    
+    log_printf( &logger, "\r\n Message has been sent! \r\n" );
+    log_printf( &logger, "- - - - - - - - - - - - \r\n" );
+    Delay_ms( 500 );
+#else
+    uint8_t address;
+    uint8_t rx_data;
+    
+    if ( IR2_OK == ir2_nec_read_data ( &ir2, &address, &rx_data ) )
+    {
+        log_printf( &logger, "Address: 0x%.2X, Data: %c\r\n", ( uint16_t ) address, rx_data );
+    }
+#endif
 }
 
 void main ( void )  

@@ -2,7 +2,7 @@
 ---
 # RTD click
 
-RTD click is based on MAX31865 resistance to digital converter from Maxim Integrated, optimized for platinum resistance temperature detectors, or RTD.
+> RTD click is based on MAX31865 resistance to digital converter from Maxim Integrated, optimized for platinum resistance temperature detectors, or RTD.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/rtd_click.png" height=300px>
@@ -35,26 +35,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void rtd_cfg_setup ( rtd_cfg_t *cfg ); 
- 
-- Initialization function.
-> RTD_RETVAL rtd_init ( rtd_t *ctx, rtd_cfg_t *cfg );
+- `rtd_cfg_setup` Config Object Initialization function.
+```c
+void rtd_cfg_setup ( rtd_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void rtd_default_cfg ( rtd_t *ctx );
-
+- `rtd_init` Initialization function.
+```c
+err_t rtd_init ( rtd_t *ctx, rtd_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- This function reads data from the chosen register.
-> uint8_t rtd_read_register ( rtd_t *ctx, uint8_t reg_address );
- 
-- This function reads data from temperature registers.
-> uint16_t rtd_read_temperature ( rtd_t *ctx );
+- `rtd_read_register` This function reads data from the chosen register.
+```c
+uint8_t rtd_read_register ( rtd_t *ctx, uint8_t reg_address );
+```
 
-- This function convert data from temperature registers.
-> float rtd_convert_temperature ( rtd_t *ctx, uint16_t input_data, uint16_t referent_resistance );
+- `rtd_read_temperature` This function reads data from temperature registers.
+```c
+uint16_t rtd_read_temperature ( rtd_t *ctx );
+```
+
+- `rtd_convert_temperature` This function convert data from temperature registers.
+```c
+float rtd_convert_temperature ( rtd_t *ctx, uint16_t input_data, uint16_t referent_resistance );
+```
 
 ## Examples Description
 
@@ -85,15 +91,18 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
+    // Click initialization.
     rtd_cfg_setup( &cfg );
     RTD_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rtd_init( &rtd, &cfg );
+    
+    RTD_SET_DATA_SAMPLE_EDGE;
 
     rtd_write_register( &rtd, RTD_CONFIGURATION, 0xD0 );
+    Delay_ms ( 100 );
+    log_info( &logger, " Application Task " );
 }
   
 ```
@@ -101,19 +110,19 @@ void application_init ( void )
 ### Application Task
 
 > Measures temperature, converts the data to celsius degrees,
-> and outputs them via UART. 
+> and displays it on the USB UART.
 
 ```c
 
 void application_task ( void )
 {
-    uint16_t read_value;
-    float converted_value;
+    uint16_t read_value = 0;
+    float converted_value = 0;
 
     read_value = rtd_read_temperature( &rtd );
-    converted_value = rtd_convert_temperature( &rtd, read_value, RTD_REF_RESISTANCE_470);
+    converted_value = rtd_convert_temperature( &rtd, read_value, RTD_REF_RESISTANCE_470 );
 
-    log_printf( &logger, "Current temperature: %.2f \r\n", converted_value );
+    log_printf( &logger, " Current temperature: %.2f \r\n", converted_value );
 
     Delay_ms( 300 );
 }

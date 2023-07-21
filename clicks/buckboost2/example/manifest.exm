@@ -2,7 +2,7 @@
     "name": "Buck-Boost 2 Click",
     "description": "Buck-Boost 2 click is an advanced DC-DC step-down/step-up regulator (buck/boost), which is able to provide regulated 5V on its output, regardless of the input voltage.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LTC3115-2"],
     "category" : ["Buck-Boost"] 
 }

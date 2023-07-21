@@ -2,7 +2,7 @@
     "name": "Smart Buck Click",
     "description": "Smart Buck click is the two-channel step-down DC/DC converter and regulator, with plenty of additional functions. It can provide voltage measurement at each of its two programmable voltage outputs, as well as the measurement of the current consumption.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MIC2230"],
     "category" : ["Buck"] 
 }

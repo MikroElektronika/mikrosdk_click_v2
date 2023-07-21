@@ -2,7 +2,7 @@
     "name": "EnOcean 3 Click",
     "description": "EnOcean 3 Click carries an ultra-low power TCM515 transceiver gateway module which operates at 868MHz radio band, perfectly suited for the realization of transceiver gateways, actuators and controllers for systems communicating based on the EnOcean radio standard.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
     "hw" : ["click","TCM515"],
     "category" : ["Sub-1 GHz Transceivers"] 
 }

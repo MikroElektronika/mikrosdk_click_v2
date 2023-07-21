@@ -2,7 +2,7 @@
     "name": "TemP&Hum Click",
     "description": "Temp&Hum Click carries ST’s HTS221 temperature and relative humidity sensor. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","HTS221"],
     "category" : ["Temperature & humidity"] 
 }

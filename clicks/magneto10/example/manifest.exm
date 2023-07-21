@@ -2,7 +2,7 @@
     "name": "Magneto 10 Click",
     "description": "Magneto 10 Click is a compact add-on board that contains a 3D magnetometer. This board features the MLX90392, a +/-5mT range magnetometer for low-noise applications from Melexis Technologies. The MLX90392, specially designed for micropower applications, measures magnetic fields along the three axes (X, Y being in a plane parallel to the surface of the die, and Z being perpendicular to the surface).",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MLX90392ELQ-AAA-010"],
     "category" : ["Magnetic"]
 }

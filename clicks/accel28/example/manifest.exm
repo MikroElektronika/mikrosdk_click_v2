@@ -2,7 +2,7 @@
     "name": "Accel 28 Click",
     "description": "Accel 28 Click is a compact add-on board that contains an acceleration sensor. This board features the LIS2HH12TR, an ultra-low-power high-performance three-axis accelerometer from STMicroelectronics. It allows selectable full-scale acceleration measurements in ranges of ±2g, ±4g, and ±8g in three axes with a configurable host interface that supports both SPI and I2C serial communication. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LIS2HH12TR"],
     "category" : ["Click Boards > Sensors > Motion"]
 }

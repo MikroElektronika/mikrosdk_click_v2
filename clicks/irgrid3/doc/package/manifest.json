@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC32|RISC-V",
+    "architecture": "ARM|PIC32|RISC-V|dsPIC",
     "category": "Click Boards > Sensors > Optical",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,11 +31,12 @@
         2579
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.IRGrid3",
     "subdir_name": "lib_irgrid3"
 }
+
 
 
 

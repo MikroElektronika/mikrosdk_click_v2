@@ -2,7 +2,7 @@
     "name": "Vibro Motor 4 Click",
     "description": "Vibro Motor 4 Click is a compact add-on board that makes an ideal solution for adding simple haptic feedback in any design. This board features the G1040003D, a coin-sized linear resonant actuator (LRA) that generates vibration/haptic feedback from Jinlong Machinery & Electronics, Inc. Driven by a flexible Haptic/Vibra driver, the DRV2605, G1040003D vibrates in the Z-axis, which is perpendicular to the face of the vibration motor. It draws a maximum of 170mA while producing the highest G force/vibration energy of 2 GRMS.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","G1040003D"],
     "category" : ["Haptic"]
 }

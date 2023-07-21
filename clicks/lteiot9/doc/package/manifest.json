@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
     "category": "Click Boards > Wireless connectivity > LTE IoT",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -28,11 +28,12 @@
     "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.LTEIoT9",
     "subdir_name": "lib_lteiot9"
 }
+
 
 
 

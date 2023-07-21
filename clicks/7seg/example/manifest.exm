@@ -2,7 +2,7 @@
     "name": "7seg Click",
     "description": "7seg click is an accessory board in mikroBUS form factor. It’s a compact and easy solution for adding 2-digit seven-segment display to your device.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","74HC595 "],
     "category" : ["LED Segment,7-segment"] 
 }

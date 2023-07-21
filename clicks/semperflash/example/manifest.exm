@@ -2,7 +2,7 @@
     "name": "Semper Flash Click",
     "description": "The Semper Flash Click is a Click board™ which features the S25HS512T, a perfect solution for the mass storage option in various embedded applications. With fast performance being one of its key features, Semper Flash click can also be used for the code shadowing, execute-in-place (XIP), data logging and data storage.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","S25HS512T"],
     "category" : ["FLASH"] 
 }

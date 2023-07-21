@@ -2,7 +2,7 @@
     "name": "Waveform 2 Click",
     "description": "Waveform 2 Click is a compact add-on board that contains a direct digital synthesis device for waveform generator applications. This board features the AD9834, a 75 MHz low power DDS device capable of producing high-performance sine/triangle/square outputs from Analog Devices. It provides the capability for phase and frequency modulation and has an on-board comparator that allows the production of a square wave signal for clock generation.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","AD9834"],
     "category" : ["Clock generator"]
 }

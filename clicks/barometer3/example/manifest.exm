@@ -2,7 +2,7 @@
     "name": "Barometer 3 Click",
     "description": "Barometer 3 Click is a compact add-on board for applications which require digital barometric air pressure measurement. This board features the DPS368, a digital barometric air pressure sensor from Infineon.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","DPS368"],
     "category" : ["Pressure"] 
 }

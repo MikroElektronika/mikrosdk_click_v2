@@ -30,136 +30,136 @@
 static oximeter_t oximeter;
 static log_t logger;
 
-static uint32_t res_slot[ 100 ];
+static uint32_t res_slot[ 100 ] = { 0 };
 
 // ------------------------------------------------------- ADDITIONAL FUNCTIONS
 
-void oxim_write_res ( uint32_t data_write )
+void oximeter_write_res ( uint32_t data_write )
 {
     log_printf( &logger, "%u\r\n", data_write );
 }
 
-void oxim_plot ( uint32_t buff1, uint32_t buff2 )
+void oximeter_plot ( uint32_t buff1, uint32_t buff2 )
 {
     log_printf( &logger, "%u, %u\r\n", buff1, buff2 );
 }
 
-void oxim_plot_display ( void )
+void oximeter_plot_display ( void )
 {
-    uint8_t num_sampl;
-    enable_t main_enable;
+    uint8_t num_sampl = 0;
+    oximeter_enable_t main_enable;
     res_slot[ 1 ] = 0;
     res_slot[ 2 ] = 0;
 
     for ( num_sampl = 0; num_sampl < 10; num_sampl++ )
     {
-        oxim_set_mode( &oximeter, OXIM_DEV_PROGRAM_OP_MODE );
+        oximeter_set_mode( &oximeter, OXIMETER_DEV_PROGRAM_OP_MODE );
 
-        main_enable.enable_slot = OXIM_DIS_SLOT;
-        main_enable.enable_photodiode = OXIM_PD1_PD2_PD3_PD4_CONN;
-        main_enable.enable_led = OXIM_LEDX1_EN;
+        main_enable.enable_slot = OXIMETER_DIS_SLOT;
+        main_enable.enable_photodiode = OXIMETER_PD1_PD2_PD3_PD4_CONN;
+        main_enable.enable_led = OXIMETER_LEDX1_EN;
 
-        oxim_set_time_slot_b( &oximeter, &main_enable, OXIM_SLOT_NORM_OP_MODE );
+        oximeter_set_time_slot_b( &oximeter, &main_enable, OXIMETER_SLOT_NORM_OP_MODE );
 
-        main_enable.enable_slot = OXIM_EN_SLOT;
-        main_enable.enable_photodiode = OXIM_PD1_PD2_PD3_PD4_CONN;
-        main_enable.enable_led = OXIM_LEDX2_EN;
+        main_enable.enable_slot = OXIMETER_EN_SLOT;
+        main_enable.enable_photodiode = OXIMETER_PD1_PD2_PD3_PD4_CONN;
+        main_enable.enable_led = OXIMETER_LEDX2_EN;
 
-        oxim_set_time_slot_a( &oximeter, &main_enable, OXIM_SLOT_NORM_OP_MODE );
+        oximeter_set_time_slot_a( &oximeter, &main_enable, OXIMETER_SLOT_NORM_OP_MODE );
 
-        oxim_set_mode( &oximeter, OXIM_DEV_NORMAL_OP_MODE );
+        oximeter_set_mode( &oximeter, OXIMETER_DEV_NORMAL_OP_MODE );
 
-        oxim_read_data( &oximeter, &res_slot[ 0 ], OXIM_AVERAGE_RES_MODE );
+        oximeter_read_data( &oximeter, &res_slot[ 0 ], OXIMETER_AVERAGE_RES_MODE );
         res_slot[ 1 ] += res_slot[ 0 ];
 
-        oxim_set_mode( &oximeter, OXIM_DEV_PROGRAM_OP_MODE );
+        oximeter_set_mode( &oximeter, OXIMETER_DEV_PROGRAM_OP_MODE );
 
-        main_enable.enable_slot = OXIM_DIS_SLOT;
-        main_enable.enable_photodiode = OXIM_PD1_PD2_PD3_PD4_CONN;
-        main_enable.enable_led = OXIM_LEDX2_EN;
+        main_enable.enable_slot = OXIMETER_DIS_SLOT;
+        main_enable.enable_photodiode = OXIMETER_PD1_PD2_PD3_PD4_CONN;
+        main_enable.enable_led = OXIMETER_LEDX2_EN;
 
-        oxim_set_time_slot_a( &oximeter, &main_enable, OXIM_SLOT_NORM_OP_MODE );
+        oximeter_set_time_slot_a( &oximeter, &main_enable, OXIMETER_SLOT_NORM_OP_MODE );
 
-        main_enable.enable_slot = OXIM_EN_SLOT;
-        main_enable.enable_photodiode = OXIM_PD1_PD2_PD3_PD4_CONN;
-        main_enable.enable_led = OXIM_LEDX1_EN;
+        main_enable.enable_slot = OXIMETER_EN_SLOT;
+        main_enable.enable_photodiode = OXIMETER_PD1_PD2_PD3_PD4_CONN;
+        main_enable.enable_led = OXIMETER_LEDX1_EN;
 
-        oxim_set_time_slot_b( &oximeter, &main_enable, OXIM_SLOT_NORM_OP_MODE );
-        oxim_set_mode( &oximeter, OXIM_DEV_NORMAL_OP_MODE );
+        oximeter_set_time_slot_b( &oximeter, &main_enable, OXIMETER_SLOT_NORM_OP_MODE );
+        oximeter_set_mode( &oximeter, OXIMETER_DEV_NORMAL_OP_MODE );
 
-        oxim_read_data( &oximeter, &res_slot[ 0 ], OXIM_AVERAGE_RES_MODE );
+        oximeter_read_data( &oximeter, &res_slot[ 0 ], OXIMETER_AVERAGE_RES_MODE );
         res_slot[ 2 ] += res_slot[ 0 ];
     }
 
     res_slot[ 1 ] /= 10;
     res_slot[ 2 ] /= 10;
-    oxim_plot( res_slot[ 1 ], res_slot[ 2 ] );
+    oximeter_plot( res_slot[ 1 ], res_slot[ 2 ] );
 }
 
-void oxim_uart_display ( void )
+void oximeter_uart_display ( void )
 {
-    uint8_t num_sampl;
-    enable_t main_enable;
-    uint8_t temp_cnt;
-    uint32_t tmp_data;
-    uint32_t res_slot_b[ 100 ];
-    oxim_set_mode( &oximeter, OXIM_DEV_PROGRAM_OP_MODE );
+    uint8_t num_sampl = 0;
+    oximeter_enable_t main_enable;
+    uint8_t temp_cnt = 0;
+    uint32_t tmp_data = 0;
+    uint32_t res_slot_b[ 100 ] = { 0 };
+    oximeter_set_mode( &oximeter, OXIMETER_DEV_PROGRAM_OP_MODE );
 
-    main_enable.enable_slot = OXIM_DIS_SLOT;
-    main_enable.enable_photodiode = OXIM_PD1_PD2_PD3_PD4_CONN;
-    main_enable.enable_led = OXIM_LEDX1_EN;
+    main_enable.enable_slot = OXIMETER_DIS_SLOT;
+    main_enable.enable_photodiode = OXIMETER_PD1_PD2_PD3_PD4_CONN;
+    main_enable.enable_led = OXIMETER_LEDX1_EN;
 
-    oxim_set_time_slot_b( &oximeter, &main_enable, OXIM_SLOT_NORM_OP_MODE );
+    oximeter_set_time_slot_b( &oximeter, &main_enable, OXIMETER_SLOT_NORM_OP_MODE );
 
-    main_enable.enable_slot = OXIM_EN_SLOT;
-    main_enable.enable_photodiode = OXIM_PD1_PD2_PD3_PD4_CONN;
-    main_enable.enable_led = OXIM_LEDX2_EN;
+    main_enable.enable_slot = OXIMETER_EN_SLOT;
+    main_enable.enable_photodiode = OXIMETER_PD1_PD2_PD3_PD4_CONN;
+    main_enable.enable_led = OXIMETER_LEDX2_EN;
 
-    oxim_set_time_slot_a( &oximeter, &main_enable, OXIM_SLOT_NORM_OP_MODE );
-    oxim_set_mode( &oximeter, OXIM_DEV_NORMAL_OP_MODE );
+    oximeter_set_time_slot_a( &oximeter, &main_enable, OXIMETER_SLOT_NORM_OP_MODE );
+    oximeter_set_mode( &oximeter, OXIMETER_DEV_NORMAL_OP_MODE );
 
     for ( num_sampl = 0; num_sampl < 100; num_sampl++ )
     {
-        oxim_read_data( &oximeter, &tmp_data, OXIM_AVERAGE_RES_MODE );
+        oximeter_read_data( &oximeter, &tmp_data, OXIMETER_AVERAGE_RES_MODE );
         res_slot[ num_sampl ] = tmp_data;
     }
     Delay_ms( 300 );
 
-    oxim_set_mode( &oximeter, OXIM_DEV_PROGRAM_OP_MODE );
+    oximeter_set_mode( &oximeter, OXIMETER_DEV_PROGRAM_OP_MODE );
 
-    main_enable.enable_slot = OXIM_DIS_SLOT;
-    main_enable.enable_photodiode = OXIM_PD1_PD2_PD3_PD4_CONN;
-    main_enable.enable_led = OXIM_LEDX2_EN;
+    main_enable.enable_slot = OXIMETER_DIS_SLOT;
+    main_enable.enable_photodiode = OXIMETER_PD1_PD2_PD3_PD4_CONN;
+    main_enable.enable_led = OXIMETER_LEDX2_EN;
 
-    oxim_set_time_slot_a( &oximeter, &main_enable, OXIM_SLOT_NORM_OP_MODE );
+    oximeter_set_time_slot_a( &oximeter, &main_enable, OXIMETER_SLOT_NORM_OP_MODE );
 
-    main_enable.enable_slot = OXIM_EN_SLOT;
-    main_enable.enable_photodiode = OXIM_PD1_PD2_PD3_PD4_CONN;
-    main_enable.enable_led = OXIM_LEDX1_EN;
+    main_enable.enable_slot = OXIMETER_EN_SLOT;
+    main_enable.enable_photodiode = OXIMETER_PD1_PD2_PD3_PD4_CONN;
+    main_enable.enable_led = OXIMETER_LEDX1_EN;
 
-    oxim_set_time_slot_b( &oximeter, &main_enable, OXIM_SLOT_NORM_OP_MODE );
-    oxim_set_mode( &oximeter, OXIM_DEV_NORMAL_OP_MODE );
+    oximeter_set_time_slot_b( &oximeter, &main_enable, OXIMETER_SLOT_NORM_OP_MODE );
+    oximeter_set_mode( &oximeter, OXIMETER_DEV_NORMAL_OP_MODE );
     for ( num_sampl = 0; num_sampl < 100; num_sampl++ )
     {
-        oxim_read_data( &oximeter, &tmp_data, OXIM_AVERAGE_RES_MODE );
+        oximeter_read_data( &oximeter, &tmp_data, OXIMETER_AVERAGE_RES_MODE );
         res_slot_b[ num_sampl ] = tmp_data;
     }
     Delay_ms( 300 );
 
-    oxim_set_mode( &oximeter, OXIM_DEV_PROGRAM_OP_MODE );
+    oximeter_set_mode( &oximeter, OXIMETER_DEV_PROGRAM_OP_MODE );
 
-    main_enable.enable_slot = OXIM_DIS_SLOT;
-    main_enable.enable_photodiode = OXIM_PD1_PD2_PD3_PD4_CONN;
-    main_enable.enable_led = OXIM_LEDX1_EN;
+    main_enable.enable_slot = OXIMETER_DIS_SLOT;
+    main_enable.enable_photodiode = OXIMETER_PD1_PD2_PD3_PD4_CONN;
+    main_enable.enable_led = OXIMETER_LEDX1_EN;
 
-    oxim_set_time_slot_b( &oximeter, &main_enable, OXIM_SLOT_NORM_OP_MODE );
+    oximeter_set_time_slot_b( &oximeter, &main_enable, OXIMETER_SLOT_NORM_OP_MODE );
 
-    main_enable.enable_slot = OXIM_DIS_SLOT;
-    main_enable.enable_photodiode = OXIM_PD1_PD2_PD3_PD4_CONN;
-    main_enable.enable_led = OXIM_LEDX2_EN;
+    main_enable.enable_slot = OXIMETER_DIS_SLOT;
+    main_enable.enable_photodiode = OXIMETER_PD1_PD2_PD3_PD4_CONN;
+    main_enable.enable_led = OXIMETER_LEDX2_EN;
 
-    oxim_set_time_slot_a( &oximeter, &main_enable, OXIM_SLOT_NORM_OP_MODE );
-    oxim_set_mode( &oximeter, OXIM_DEV_NORMAL_OP_MODE );
+    oximeter_set_time_slot_a( &oximeter, &main_enable, OXIMETER_SLOT_NORM_OP_MODE );
+    oximeter_set_mode( &oximeter, OXIMETER_DEV_NORMAL_OP_MODE );
 
     for ( num_sampl = 0; num_sampl < 100; num_sampl++ )
     {
@@ -195,9 +195,9 @@ void oxim_uart_display ( void )
     }
 }
 
-void oxim_logs_results( void )
+void oximeter_logs_results( void )
 {
-    oxim_read_data( &oximeter, &res_slot[ 0 ], OXIM_AVERAGE_RES_MODE );
+    oximeter_read_data( &oximeter, &res_slot[ 0 ], OXIMETER_AVERAGE_RES_MODE );
 
     if ( oximeter.result_mode_check == 0 )
     {
@@ -205,59 +205,59 @@ void oxim_logs_results( void )
     }
     else
     {
-        log_printf( &logger, "Sum result is: " );
+        log_printf( &logger, "Sum result is: \r\n" );
     }
 
     switch ( oximeter.enabled_chann )
     {
-        case OXIM_CH1_EN:
+        case OXIMETER_CH1_EN:
         {
             log_printf( &logger, "PD1: " );
-            oxim_write_res( res_slot[ 0 ] );
+            oximeter_write_res( res_slot[ 0 ] );
             break;
         }
-        case OXIM_CH2_EN:
+        case OXIMETER_CH2_EN:
         {
             log_printf(&logger, "PD2: ");
-            oxim_write_res( res_slot[ 1 ] );
+            oximeter_write_res( res_slot[ 1 ] );
             break;
         }
-        case OXIM_CH1_CH2_EN:
+        case OXIMETER_CH1_CH2_EN:
         {
             log_printf( &logger, "PD1: " );
-            oxim_write_res( res_slot[ 0 ] );
+            oximeter_write_res( res_slot[ 0 ] );
             log_printf( &logger, "PD2: " );
-            oxim_write_res( res_slot[ 1 ] );
+            oximeter_write_res( res_slot[ 1 ] );
             break;
         }
-        case OXIM_CH3_CH4_EN:
+        case OXIMETER_CH3_CH4_EN:
         {
             log_printf( &logger, "PD3: " );
-            oxim_write_res( res_slot[ 2 ] );
+            oximeter_write_res( res_slot[ 2 ] );
             log_printf( &logger, "PD4: " );
-            oxim_write_res( res_slot[ 3 ] );
+            oximeter_write_res( res_slot[ 3 ] );
             break;
         }
-        case OXIM_CH2_CH3_CH4_EN:
+        case OXIMETER_CH2_CH3_CH4_EN:
         {
             log_printf( &logger, "PD2: " );
-            oxim_write_res( res_slot[ 1 ] );
+            oximeter_write_res( res_slot[ 1 ] );
             log_printf( &logger, "PD3: " );
-            oxim_write_res( res_slot[ 2 ] );
+            oximeter_write_res( res_slot[ 2 ] );
             log_printf( &logger, "PD4: " );
-            oxim_write_res( res_slot[ 3 ] );
+            oximeter_write_res( res_slot[ 3 ] );
             break;
         }
-        case OXIM_ALL_CHANN_EN:
+        case OXIMETER_ALL_CHANN_EN:
         {
             log_printf( &logger, "PD1: " );
-            oxim_write_res( res_slot[ 0 ] );
+            oximeter_write_res( res_slot[ 0 ] );
             log_printf( &logger, "PD2: " );
-            oxim_write_res( res_slot[ 1 ] );
+            oximeter_write_res( res_slot[ 1 ] );
             log_printf( &logger, "PD3: " );
-            oxim_write_res( res_slot[ 2 ] );
+            oximeter_write_res( res_slot[ 2 ] );
             log_printf( &logger, "PD4: " );
-            oxim_write_res( res_slot[ 3 ]);
+            oximeter_write_res( res_slot[ 3 ]);
             break;
         }
         default:
@@ -287,19 +287,20 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
+    // Click initialization.
     oximeter_cfg_setup( &cfg );
     OXIMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     oximeter_init( &oximeter, &cfg );
     oximeter_default_cfg( &oximeter );
+    
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )
 {
-    oxim_logs_results();
+    oximeter_logs_results( );
 }
 
 void main ( void )

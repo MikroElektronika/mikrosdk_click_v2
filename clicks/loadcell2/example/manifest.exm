@@ -2,7 +2,7 @@
     "name": "Load Cell 2 Click",
     "description": "Load cell 2 Click is a weight measurement click which utilizes a load cell element, in order to precisely measure the weight of an object. The Load Cell 2 Click can be used with the strain gauge type of load cells with external differential reference voltage range from 0.1V to 5V.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","NAU7802"],
     "category" : ["Force"] 
 }

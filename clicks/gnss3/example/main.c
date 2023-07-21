@@ -20,6 +20,11 @@
  * - static err_t gnss3_process ( gnss3_t *ctx )
  * - static void gnss3_parser_application ( char *rsp )
  * 
+ * @note
+ * The default baud rate for communication UART is set to 9600. If you receive 
+ * a click board on which the default baud rate for UART is set differently,
+ * you will need to change the setting in the gnss13_setup_cfg function.
+ *
  * \author MikroE Team
  *
  */

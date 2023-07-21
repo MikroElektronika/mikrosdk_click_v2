@@ -13,7 +13,7 @@
  * 
  * ## Application Task  
  * Measures temperature, converts the data to celsius degrees,
- * and outputs them via UART.
+ * and displays it on the USB UART.
  * 
  * \author MikroE Team
  *
@@ -47,26 +47,29 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
+    // Click initialization.
     rtd_cfg_setup( &cfg );
     RTD_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rtd_init( &rtd, &cfg );
+    
+    RTD_SET_DATA_SAMPLE_EDGE;
 
     rtd_write_register( &rtd, RTD_CONFIGURATION, 0xD0 );
+    Delay_ms ( 100 );
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )
 {
-    uint16_t read_value;
-    float converted_value;
+    uint16_t read_value = 0;
+    float converted_value = 0;
 
     read_value = rtd_read_temperature( &rtd );
-    converted_value = rtd_convert_temperature( &rtd, read_value, RTD_REF_RESISTANCE_470);
+    converted_value = rtd_convert_temperature( &rtd, read_value, RTD_REF_RESISTANCE_470 );
 
-    log_printf( &logger, "Current temperature: %.2f \r\n", converted_value );
+    log_printf( &logger, " Current temperature: %.2f \r\n", converted_value );
 
     Delay_ms( 300 );
 }

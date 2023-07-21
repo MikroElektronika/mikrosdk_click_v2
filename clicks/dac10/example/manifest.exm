@@ -2,7 +2,7 @@
     "name": "DAC 10 Click",
     "description": "DAC 10 Click is a compact add-on board that contains a fully-featured, highly accurate digital-to-analog converter. This board features the DAC53401, a 10-bit voltage-output smart digital-to-analog converter from Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","DAC53401DSGR"],
     "category" : ["DAC"]
 }

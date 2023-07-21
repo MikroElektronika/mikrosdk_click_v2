@@ -2,7 +2,7 @@
     "name": "Load Cell 7 Click",
     "description": "Load Cell 7 Click is a compact add-on board representing a weigh scale solution. This board features the ADS1230, a high-precision 20-bit delta-sigma analog-to-digital converter (ADC) with an outstanding noise performance from Texas Instruments. This SPI-configurable ADC (read-only) offers selectable gain and data rate values, supporting a full-scale differential input of ±39mV/±19.5mV and 10SPS/80SPS, respectively. It comes with an onboard low-noise programmable gain amplifier (PGA) and onboard oscillator providing a complete front-end solution.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ADS1230IPW"],
     "category" : ["Click Boards > Sensors > Force"]
 }
