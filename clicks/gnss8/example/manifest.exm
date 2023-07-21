@@ -2,7 +2,7 @@
     "name": "GNSS 8 Click",
     "description": "GNSS 8 Click is a compact add-on board that provides fast positioning capability. This board features the LC79DA, a high-performance dual-band and multi-constellation GNSS module from Quectel Wireless Solutions.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
     "hw" : ["click","LC79DA"],
     "category" : ["GPS/GNSS"]
 }

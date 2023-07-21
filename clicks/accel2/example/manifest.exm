@@ -2,7 +2,7 @@
     "name": "Accel 2 Click",
     "description": "Accel 2 click carries ST’s LIS3DSH IC, a low-power factory-calibrated three-axis accelerometer which embeds a FIFO buffer and two programmable state machines.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ST’s LIS3DSH IC"],
     "category" : ["Motion,Acceleration"] 
 }

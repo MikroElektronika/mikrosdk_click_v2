@@ -2,7 +2,7 @@
     "name": "Step Down 5 Click",
     "description": "Step Down 5 Click is a compact add-on board that converts a higher voltage into a lower voltage level. This board features the TPS628510, a high-efficiency, easy-to-use, synchronous step-down DC/DC converter from Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TPS628510DRLR"],
     "category" : ["Click Boards > Power management > Buck"]
 }

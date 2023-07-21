@@ -3,7 +3,7 @@
 ---
 # UWB click
 
-UWB Click is an Ultra-Wideband transceiver Click board™ that can be used in 2-way ranging or TDOA location systems to locate assets to a precision of 10 cm and supports data rates of up to 6.8 Mbps. This Click board™ features the DWM1000 module based on Decawave's DW1000 Ultra-Wideband (UWB) transceiver from Decawave Limited.
+> UWB Click is an Ultra-Wideband transceiver Click board™ that can be used in 2-way ranging or TDOA location systems to locate assets to a precision of 10 cm and supports data rates of up to 6.8 Mbps. This Click board™ features the DWM1000 module based on Decawave's DW1000 Ultra-Wideband (UWB) transceiver from Decawave Limited.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/uwb_click.png" height=300px>
@@ -36,23 +36,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void uwb_cfg_setup ( uwb_cfg_t *cfg ); 
- 
-- Initialization function.
-> UWB_RETVAL uwb_init ( uwb_t *ctx, uwb_cfg_t *cfg );
+- `uwb_cfg_setup` Config Object Initialization function.
+```c
+void uwb_cfg_setup ( uwb_cfg_t *cfg ); 
+```
 
+- `uwb_init` Initialization function.
+```c
+err_t uwb_init ( uwb_t *ctx, uwb_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- This function set device working mode.
-> void uwb_set_mode ( uwb_t *ctx, uint8_t mode );
- 
-- This function get transmit status.
-> uint8_t uwb_get_transmit_status ( uwb_t *ctx );
+- `uwb_set_mode` This function set device working mode.
+```c
+void uwb_set_mode ( uwb_t *ctx, uint8_t mode );
+```
 
-- This function start communication of device.
-> void uwb_start_transceiver ( uwb_t *ctx );
+- `uwb_get_transmit_status` This function get transmit status.
+```c
+uint8_t uwb_get_transmit_status ( uwb_t *ctx );
+```
+
+- `uwb_start_transceiver` This function start communication of device.
+```c
+void uwb_start_transceiver ( uwb_t *ctx );
+```
 
 ## Examples Description
 
@@ -71,9 +80,6 @@ void application_init ( void )
     log_cfg_t log_cfg;
     uwb_cfg_t cfg;
 
-    uint16_t tag_data;
-    uint8_t id_raw[ 4 ];
-
     /** 
      * Logger initialization.
      * Default baud rate: 115200
@@ -87,8 +93,7 @@ void application_init ( void )
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
-    //  Click initialization.
-
+    // Click initialization.
     uwb_cfg_setup( &cfg );
     UWB_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     uwb_init( &uwb, &cfg );
@@ -97,10 +102,11 @@ void application_init ( void )
     uwb_enable ( &uwb );
     Delay_ms( 100 );
     
+    uint8_t id_raw[ 4 ] = { 0 };
     uwb.offset = UWB_SUB_NO;                               
     uwb_generic_read( &uwb, UWB_REG_DEV_ID, &id_raw[ 0 ], 4 );
                                  
-    tag_data = ( id_raw[ 3 ] << 8 ) | id_raw[ 2 ];
+    uint16_t tag_data = ( ( uint16_t ) id_raw[ 3 ] << 8 ) | id_raw[ 2 ];
     
     if ( UWB_TAG != tag_data )
     {
@@ -159,13 +165,14 @@ void application_init ( void )
         // Setup for first transmit
         uwb_set_mode( &uwb, UWB_MODE_IDLE );
         uwb_clear_status( &uwb );
-        uwb_set_transmit( &uwb, &data_tx[ 0 ], 6 );
+        uwb_set_transmit( &uwb, &data_tx_1[ 0 ], 6 );
         uwb_set_mode( &uwb, UWB_MODE_TX );
         uwb_start_transceiver( &uwb );
+        log_printf( &logger, " - Transmit 1 done - \r\n" );
     }
 
     log_printf( &logger, " ***** APP TASK ***** \r\n" );
-    Delay_ms( 500 );
+    Delay_ms( 2000 );
 }
 
   
@@ -185,7 +192,7 @@ void application_task ( void )
     {
         if ( dev_status )
         {
-            // Reading transtimed data logs it and reseting to receive mode
+            // Reading transmitted data, logs it and resetting to receive mode
             uwb_set_mode( &uwb, UWB_MODE_IDLE );
             uwb_clear_status( &uwb );
             temp_len = uwb_get_transmit_len( &uwb );
@@ -200,13 +207,20 @@ void application_task ( void )
     {
         if ( dev_status )
         {
-            // Transmits data reseting to transmit mode and setts 2sec delay
-            log_printf( &logger, " - Transmit done - \r\n" );
+            // Transmits data, resetting to transmit mode and sets 2sec delay
             uwb_set_mode( &uwb, UWB_MODE_IDLE );
             uwb_clear_status( &uwb );
-            uwb_set_transmit( &uwb, &data_tx[ 0 ], 6 );
+            uwb_set_transmit( &uwb, &data_tx_2[ 0 ], 9 );
             uwb_set_mode( &uwb, UWB_MODE_TX );
             uwb_start_transceiver( &uwb );
+            log_printf( &logger, " - Transmit 2 done - \r\n" );
+            Delay_ms( 2000 );
+            uwb_set_mode( &uwb, UWB_MODE_IDLE );
+            uwb_clear_status( &uwb );
+            uwb_set_transmit( &uwb, &data_tx_1[ 0 ], 6 );
+            uwb_set_mode( &uwb, UWB_MODE_TX );
+            uwb_start_transceiver( &uwb );
+            log_printf( &logger, " - Transmit 1 done - \r\n" );
             Delay_ms( 2000 );
         }
     }

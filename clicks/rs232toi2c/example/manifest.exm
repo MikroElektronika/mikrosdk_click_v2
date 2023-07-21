@@ -2,7 +2,7 @@
     "name": "RS232 to I2C Click",
     "description": "RS232 to I2C Click is a compact add-on board representing a universal usable RS232 to I2C converter. This board features the ZDU0110RFX, a bridge between a UART port and an I2C bus from Zilog, which at the same time represents the connection between the MCU and the RS232 line driver and receiver, the MAX3232. The ZDU0110RFX provides full-duplex asynchronous communications with a 128 byte FIFO buffer, of which 64 bytes each are allocated to receive and transmit operations. It also contains a 4kbit EEPROM and GPIO with programmable interrupt capability; programmable interrupts and interrupt lines for UART and GPIO notifications.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ZDU0110RFX","MAX3232IDRG4"],
     "category" : ["RS232"]
 }

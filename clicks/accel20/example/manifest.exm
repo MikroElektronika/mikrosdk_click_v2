@@ -2,7 +2,7 @@
     "name": "Accel 20 Click",
     "description": "Accel 20 Click is a compact add-on board that contains an acceleration sensor. This board features the KX134-1211, a digital output 3-axis accelerometer optimized for machine condition monitoring from Rohm Semiconductor. It allows selectable full-scale acceleration measurements in ranges of ±8g, ±16g, ±32g, or ±64g in three axes with a configurable host interface that supports both SPI and I2C serial communication. It also features an Advanced Data Path (ADP) technology which allows noise filtering and sensor signal processing, usually carried out by the MCU, to be performed by the accelerometer. They contribute to reducing MCU load and power consumption together with improved application performance.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","KX134"],
     "category" : ["Motion"]
 }

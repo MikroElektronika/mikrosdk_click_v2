@@ -2,7 +2,7 @@
     "name": "Pressure 10 Click",
     "description": "Pressure 10 Click features a digital interface barometric pressure sensor, based on piezoresistive bridge, labeled as HSPPAD042A, from ALPS Electric. It can use both SPI and I2C communication protocols, allowing it to be interfaced with a broad range of MCUs. Besides the pressure readings, this Click board™ also offers very accurate temperature reading, which is required for the pressure readings compensation and can be used in a wide range of battery-powered and portable applications thanks to its very low power consumption.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","HSPPAD042A"],
     "category" : ["Pressure"] 
 }

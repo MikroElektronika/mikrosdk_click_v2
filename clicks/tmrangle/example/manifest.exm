@@ -2,7 +2,7 @@
   "name": "TMR Angle Click",
   "description": "TMR Angle Click is a Click board� perfectly suited for developing applications that range from steering angle applications with the highest functional safety requirements to motors for wipers, pumps and actuators and electric motors in general.",
   "image": "../../Resources/click_icon.png",
-  "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+  "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
   "hw": [ "click", "TLE5501" ],
   "category": [ "Motion" ]
 }

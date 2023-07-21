@@ -2,7 +2,7 @@
     "name": "Knob Click",
     "description": "Knob click features a combination of high-quality quadrature rotary encoder, and a LED ring composed of 24 individual green LEDs.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","PCA9956"],
     "category" : ["Rotary encoder"] 
 }

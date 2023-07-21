@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
     "category": "Click Boards > Interface > CAN",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,10 +31,11 @@
     "related_projects": [
         2294
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.Ata6570",
     "subdir_name": "lib_ata6570"
 }
+
 
 

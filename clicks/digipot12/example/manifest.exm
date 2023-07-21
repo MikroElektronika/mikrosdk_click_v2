@@ -2,7 +2,7 @@
     "name": "DIGI POT 12 Click",
     "description": "DIGI POT 12 Click is a compact add-on board that contains a digitally controlled potentiometer. This board features the AD5142A, a dual-channel, 256-position nonvolatile digital potentiometer from Analog Devices. On this Click board™, two digitally I2C-controlled potentiometers are realized with end-to-end resistance of 10KΩ and wiper resistance of only 40Ω. The DIGI POT 12 Click can be used in potentiometer and linear gain modes.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","AD5142AWBCPZ10"],
     "category" : ["Click Boards > Mixed signal > Digital potentiometer"]
 }

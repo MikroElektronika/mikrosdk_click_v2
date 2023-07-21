@@ -43,12 +43,12 @@ void plugntrust_cfg_setup ( plugntrust_cfg_t *cfg );
 
 - `plugntrust_init` Initialization function.
 ```c
-PLUGNTRUST_RETVAL plugntrust_init ( plugntrust_t *ctx, plugntrust_cfg_t *cfg );
+err_t plugntrust_init ( plugntrust_t *ctx, plugntrust_cfg_t *cfg );
 ```
 
 - `plugntrust_default_cfg` Click Default Configuration function.
 ```c
-void plugntrust_default_cfg ( plugntrust_t *ctx );
+err_t plugntrust_default_cfg ( plugntrust_t *ctx );
 ```
 
 #### Example key functions :
@@ -176,11 +176,11 @@ at the start of task.
 
 void application_task ( void ) 
 {
-    const uint8_t DATA_LEN                  = 16;
+    #define DATA_LEN 16
     static uint8_t aes_value[ DATA_LEN ]    = { 0x40, 0x41, 0x42, 0x43,0x44, 0x45, 0x46, 0x47,
                                                 0x48, 0x49, 0x4A, 0x4B,0x4C, 0x4D, 0x4E, 0x4F };
-    static uint32_t binary_id               = 0xBBBBBBBB;
-    static uint32_t aes_id                  = 0xCCCCCCCC;
+    static uint32_t binary_id               = 0xBBBBBBBBul;
+    static uint32_t aes_id                  = 0xCCCCCCCCul;
     uint8_t random_data[ DATA_LEN ]         = { 0 };
     uint8_t read_data[ DATA_LEN ]           = { 0 };
     uint8_t encrypted_data[ DATA_LEN ]      = { 0 };

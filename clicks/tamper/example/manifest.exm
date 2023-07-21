@@ -2,7 +2,7 @@
     "name": "Tamper Click",
     "description": "Tamper click is equipped with SDS001, a low profile side-actuated detect switch, made by C&K company. This is a high-quality, low-current detection switch, which is designed in a form of a push button. The switch itself is very small - only 2mm of switch overtravel length, which coupled with its low actuation force, makes it ideal for using it as a contact detector in various applications - consumer electronics devices, medical devices, smart card detection and similar applications.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","SDS001"],
     "category" : ["Pushbutton/Switches"] 
 }

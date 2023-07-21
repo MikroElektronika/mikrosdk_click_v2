@@ -2,7 +2,7 @@
     "name": "XBEE 3 Click",
     "description": "Xbee 3 Click is a compact add-on board suitable for mission-critical wireless applications. This board features the XB8X-DMUS-001, a low-power CE/RED certified Digi Xbee® RF module delivering superior performance and interference immunity from Digi International. The module can run either a proprietary DigiMesh® or point-to-multipoint networking protocol utilizing a low-power Silicon Labs MCU and an ADF7023 transceiver, along with an integrated SAW filter that offers industry-leading interference blocking. Operating between 863MHz and 870MHz (868MHz), it allows use in several regions, including approved European countries.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
     "hw" : ["click","XB8X-DMUS-001"],
     "category" : ["Click Boards > Wireless connectivity > ZigBee"]
 }

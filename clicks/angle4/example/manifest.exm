@@ -2,7 +2,7 @@
     "name": "Angle 4 Click",
     "description": "Angle 4 click is an angular magnetic rotary sensor, which can be used as a rotary encoder.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","AEAT-800-Q24"],
     "category" : ["Magnetic"] 
 }

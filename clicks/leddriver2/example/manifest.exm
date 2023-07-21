@@ -2,7 +2,7 @@
     "name": "LED Driver 2 Click",
     "description": "LED driver 2 click carries the MCP1643 - LED constant current regulator, made by Microchip. It is a compact, high-efficiency, fixed frequency, synchronous step-up converter, optimized to drive one LED with the constant current.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MCP1643"],
     "category" : ["LED Drivers"] 
 }

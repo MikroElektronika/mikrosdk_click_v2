@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "BT/BLE",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Wireless connectivity > BT/BLE",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+    "dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "BLE TX click",
     "example_list": [
@@ -26,11 +25,12 @@
     "name": "mikroe.click.bletx",
     "product_link": "https://www.mikroe.com/ble-tx-click",
     "short_description": "BLE TX Click is a compact add-on board that contains a low-energy Bluetooth transmitter. This board features the AK1595, a Bluetooth 5.2 transmitter with incorporated proprietary algorithm software from AKM Semiconductor. The AK1595 transmitter simplifies wireless connectivity to a system with no need to develop complicated, proprietary microcontroller code. Bluetooth Low Energy compliant advertising transmission can be achieved by simply configuring the transmission power, data, and transmission start-trigger via the UART or I2C interface.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.4"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.5",
+    "cmake": true,
+    "alias": "Click.BleTx",
+    "subdir_name": "lib_bletx"
 }
-
-
 

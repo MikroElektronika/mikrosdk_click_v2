@@ -2,7 +2,7 @@
     "name": "Pressure 11 Click",
     "description": "Pressure 11 Click is a digital barometer on a Click board™. Pressure 11 is equipped with the LPS33HW, an absolute piezoresistive pressure sensor, manufactured using a proprietary technology.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LPS33HW"],
     "category" : ["Pressure"] 
 }

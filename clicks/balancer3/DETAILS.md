@@ -1,7 +1,7 @@
 
 # Balancer 3 click
 
-Balancer 3 Click is overvoltage protection device for 2-series cell lithium-ion battery packs that incorporates a high-accuracy precision overvoltage detection circuit and automatic cell imbalance correction. 
+> Balancer 3 Click is overvoltage protection device for 2-series cell lithium-ion battery packs that incorporates a high-accuracy precision overvoltage detection circuit and automatic cell imbalance correction. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/balancer3_click.png" height=300px>
@@ -34,19 +34,27 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void balancer3_cfg_setup ( balancer3_cfg_t *cfg ); 
+- `balancer3_cfg_setup` Config Object Initialization function.
+```c
+void balancer3_cfg_setup ( balancer3_cfg_t *cfg ); 
+```
  
-- Initialization function.
-> BALANCER3_RETVAL balancer3_init ( balancer3_t *ctx, balancer3_cfg_t *cfg );
+- `balancer3_init` Initialization function.
+```c
+balancer3_init ( balancer3_t *ctx, balancer3_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Cell Balance Enable function.
-> void balancer3_enable_cell_balance ( balancer3_t *ctx, uint8_t state );
- 
-- Overvoltage Condition Check function.
-> uint8_t balancer3_check_overvoltage_cond ( balancer3_t *ctx );
+- `balancer3_enable_cell_balance` Cell Balance Enable function.
+```c
+void balancer3_enable_cell_balance ( balancer3_t *ctx, uint8_t state );
+```
+
+- `balancer3_check_overvoltage` Overvoltage Condition Check function.
+```c
+uint8_t balancer3_check_overvoltage ( balancer3_t *ctx );
+```
 
 ## Examples Description
 
@@ -56,16 +64,16 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes device sets the time interval variable (time_inter) to the 0, which is used for OV condition message logging.
+> Initializes device coummunication and enables cell balancing.
 
 ```c
 
 void application_init ( void )
 {
-   log_cfg_t log_cfg;
-   balancer3_cfg_t cfg;
+    log_cfg_t log_cfg;
+    balancer3_cfg_t cfg;
 
-   /** 
+    /** 
      * Logger initialization.
      * Default baud rate: 115200
      * Default log level: LOG_LEVEL_DEBUG
@@ -76,64 +84,46 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-   log_info(&logger, "---- Application Init ----");
+    log_info( &logger, " Application Init " );
 
-   balancer3_cfg_setup( &cfg );
-   BALANCER3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-   balancer3_init( &balancer3, &cfg );
+    // Click initialization.
+    balancer3_cfg_setup( &cfg );
+    BALANCER3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    balancer3_init( &balancer3, &cfg );
+         
+    balancer3_enable_cell_balance( &balancer3, BALANCER3_CELL_BALANCE_EN );
+    log_printf( &logger, "* Normal operation - Cell balance enabled *\r\n" );
+    
+    log_info( &logger, " Application Task " );
 }
   
 ```
 
 ### Application Task
 
-> Allows user to enter a commands that can enable or disable
-   cell balance and check the overvoltage condition.
-   When OV condition is not detected, the status message will be sent after every 8 seconds.
-   When OV condition is detected, the status message will be sent after every 2 seconds.
-   Press '0' when you want to disable cell balance.
-   Press '1' when you want to enable cell balance.
-   Press '2' when you want to check the OV condition status immediately.
+> Checks if overvoltage is occured and disables cell balancing. If overvoltage doesn't occur it enables cell balancing.
 
 ```c
 
 void application_task ( void )
 {
-   uint16_t time_inter;
-   uint8_t ov_cond;
-
-   balancer3_enable_cell_balance( &balancer3, BALANCER3_CELL_BALANCE_DIS );
-   log_printf( &logger, "* Cell balance is disabled * %d\r\n" );
-         
-   balancer3_enable_cell_balance( &balancer3, BALANCER3_CELL_BALANCE_EN );
-   log_printf( &logger, "* Cell balance is enabled * %d\r\n" );
-
-    
-   ov_cond = balancer3_check_overvoltage_cond( &balancer3 );
-    
-   if ( ( time_inter == 8000 ) || ( ov_cond == BALANCER3_OV_COND_DETECTED ) )
-   {
-      if ( ov_cond == BALANCER3_OV_COND_NOT_DETECTED )
+    static uint8_t old_ov_state = 0;
+    uint8_t ov_state = balancer3_check_overvoltage( &balancer3 );
+    if ( old_ov_state != ov_state )
+    {
+        old_ov_state = ov_state;
+        if ( BALANCER3_OV_COND_NOT_DETECTED == ov_state )
         {
-            log_printf( &logger, "* Overvoltage condition is not detected * %d\r\n" );
-            time_inter = 0;
-        }
-        else if ( time_inter > 2000 )
-        {
-            log_printf( &logger, "* Overvoltage condition is detected * %d\r\n", ov_cond );
-            time_inter = 0;
+            log_printf( &logger, "* Normal operation - Cell balance enabled *\r\n" );
+            balancer3_enable_cell_balance( &balancer3, BALANCER3_CELL_BALANCE_EN );
         }
         else
         {
-            time_inter++;
+            log_printf( &logger, "* Overvoltage condition - Cell balance disabled * \r\n" );
+            balancer3_enable_cell_balance( &balancer3, BALANCER3_CELL_BALANCE_DIS );
         }
-   }
-   else
-   {
-      time_inter++;
-   }
-    
-   Delay_ms( 1 );
+    }
+    Delay_ms( 1 );
 }  
 
 ```

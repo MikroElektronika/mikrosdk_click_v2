@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
     "category": "Click Boards > HMI > Pushbutton/Switches",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,10 +31,11 @@
     "related_projects": [
         1869
     ],
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.Thumbwheel",
     "subdir_name": "lib_thumbwheel"
 }
+
 
 

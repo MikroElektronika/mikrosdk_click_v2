@@ -2,7 +2,7 @@
     "name": "GNSS4 Click",
     "description": "GNSS 4 click carries SAM-M8Q patch antenna module from u-blox.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","SAM-M8Q"],
     "category" : ["GPS+GNSS"] 
 }

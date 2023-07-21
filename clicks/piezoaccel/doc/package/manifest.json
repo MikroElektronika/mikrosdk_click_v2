@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC32|RISC-V",
+    "architecture": "ARM|PIC32|RISC-V|dsPIC",
     "category": "Click Boards > Sensors > Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -28,11 +28,12 @@
     "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.PiezoAccel",
     "subdir_name": "lib_piezoaccel"
 }
+
 
 
 

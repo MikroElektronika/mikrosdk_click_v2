@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "LED Drivers",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Display & LED > LED Drivers",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+"dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "LED Driver 8 click",
     "example_list": [
@@ -26,15 +25,15 @@
     "name": "mikroe.click.leddriver8",
     "product_link": "https://www.mikroe.com/led-driver-8-click",
     "short_description": "LED Driver 8 Click is a compact add-on board optimized for dimming and blinking 32 mA RGBA LEDs. This board features the PCA9957HNMP, 24-channel SPI-compatible constant current LED driver from NXP Semiconductors.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "related_projects":[
+    "related_projects": [
         3856
     ],
-    "version": "2.0.0.4"
+    "version": "2.1.0.5",
+    "cmake": true,
+    "alias": "Click.LedDriver8",
+    "subdir_name": "lib_leddriver8"
 }
-
-
-
 

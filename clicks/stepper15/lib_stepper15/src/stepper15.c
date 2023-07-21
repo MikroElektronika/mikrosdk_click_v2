@@ -65,74 +65,6 @@ static void dev_reset_delay ( void );
  */
 static void dev_config_delay ( void );
 
-/**
- * @brief Stepper 15 I2C writing function.
- * @details This function writes a desired number of data bytes starting from
- * the selected register by using I2C serial interface.
- * @param[in] ctx : Click context object.
- * See #stepper15_t object definition for detailed explanation.
- * @param[in] reg : Start register address.
- * @param[in] data_in : Data to be written.
- * @param[in] len : Number of bytes to be written.
- * @return @li @c  0 - Success,
- *         @li @c -1 - Error.
- *
- * See #err_t definition for detailed explanation.
- * @note None.
- */
-static err_t stepper15_i2c_write ( stepper15_t *ctx, uint8_t reg, uint8_t *data_in, uint8_t len );
-
-/**
- * @brief Stepper 15 I2C reading function.
- * @details This function reads a desired number of data bytes starting from
- * the selected register by using I2C serial interface.
- * @param[in] ctx : Click context object.
- * See #stepper15_t object definition for detailed explanation.
- * @param[in] reg : Start register address.
- * @param[out] data_out : Output read data.
- * @param[in] len : Number of bytes to be read.
- * @return @li @c  0 - Success,
- *         @li @c -1 - Error.
- *
- * See #err_t definition for detailed explanation.
- * @note None.
- */
-static err_t stepper15_i2c_read ( stepper15_t *ctx, uint8_t reg, uint8_t *data_out, uint8_t len );
-
-/**
- * @brief Stepper 15 SPI writing function.
- * @details This function writes a desired number of data bytes starting from
- * the selected register by using SPI serial interface.
- * @param[in] ctx : Click context object.
- * See #stepper15_t object definition for detailed explanation.
- * @param[in] reg : Start register address.
- * @param[in] data_in : Data to be written.
- * @param[in] len : Number of bytes to be written.
- * @return @li @c  0 - Success,
- *         @li @c -1 - Error.
- *
- * See #err_t definition for detailed explanation.
- * @note None.
- */
-static err_t stepper15_spi_write ( stepper15_t *ctx, uint8_t reg, uint8_t *data_in, uint8_t len );
-
-/**
- * @brief Stepper 15 SPI reading function.
- * @details This function reads a desired number of data bytes starting from
- * the selected register by using SPI serial interface.
- * @param[in] ctx : Click context object.
- * See #stepper15_t object definition for detailed explanation.
- * @param[in] reg : Start register address.
- * @param[out] data_out : Output read data.
- * @param[in] len : Number of bytes to be read.
- * @return @li @c  0 - Success,
- *         @li @c -1 - Error.
- *
- * See #err_t definition for detailed explanation.
- * @note None.
- */
-static err_t stepper15_spi_read ( stepper15_t *ctx, uint8_t reg, uint8_t *data_out, uint8_t len );
-
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
 void stepper15_cfg_setup ( stepper15_cfg_t *cfg ) {
@@ -152,17 +84,9 @@ void stepper15_cfg_setup ( stepper15_cfg_t *cfg ) {
     cfg->spi_speed   = 100000;
     cfg->spi_mode    = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
-
-    cfg->drv_sel = STEPPER15_DRV_SEL_SPI;
 }
 
-void stepper15_drv_interface_selection ( stepper15_cfg_t *cfg, stepper15_drv_t drv_sel ) {
-    cfg->drv_sel = drv_sel;
-}
-
-    err_t stepper15_init ( stepper15_t *ctx, stepper15_cfg_t *cfg ) {
-    ctx->drv_sel = cfg->drv_sel;
-
+err_t stepper15_init ( stepper15_t *ctx, stepper15_cfg_t *cfg ) {
     i2c_master_config_t i2c_cfg;
 
     i2c_master_configure_default( &i2c_cfg );
@@ -184,9 +108,6 @@ void stepper15_drv_interface_selection ( stepper15_cfg_t *cfg, stepper15_drv_t d
         return I2C_MASTER_ERROR;
     }
 
-    ctx->read_f  = stepper15_i2c_read;
-    ctx->write_f = stepper15_i2c_write;
-    
     spi_master_config_t spi_cfg;
 
     spi_master_configure_default( &spi_cfg );
@@ -215,9 +136,6 @@ void stepper15_drv_interface_selection ( stepper15_cfg_t *cfg, stepper15_drv_t d
 
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
     spi_master_deselect_device( ctx->chip_select );
-
-    ctx->read_f  = stepper15_spi_read;
-    ctx->write_f = stepper15_spi_write;
 
     digital_out_init( &ctx->rst, cfg->rst );
     digital_out_init( &ctx->pwm, cfg->pwm );
@@ -250,31 +168,27 @@ err_t stepper15_default_cfg ( stepper15_t *ctx ) {
     tmp  = STEPPER15_SET_CTRL2_OUTPUT_ENABLE;
     tmp |= STEPPER15_SET_CTRL2_TOFF_16_us;
     tmp |= STEPPER15_SET_CTRL2_SMART_TUNE_RIPPLE_CTRL;
-    stepper15_generic_write( ctx, STEPPER15_REG_CTRL_2, &tmp, 1 );
+    stepper15_spi_write( ctx, STEPPER15_REG_CTRL_2, &tmp, 1 );
     dev_config_delay( );
     
     tmp  = STEPPER15_SET_SPI_DIR_INPUT_PIN;
     tmp |= STEPPER15_SET_SPI_STEP_INPUT_PIN;
     tmp |= STEPPER15_SET_CTRL3_SET_MICROSTEP_MODE_FULL_STEP;
-    stepper15_generic_write( ctx, STEPPER15_REG_CTRL_3, &tmp, 1 );
+    stepper15_spi_write( ctx, STEPPER15_REG_CTRL_3, &tmp, 1 );
     dev_config_delay( );
     
     tmp = STEPPER15_SET_CTRL4_UNLOCK_ALL_REG;
-    stepper15_generic_write( ctx, STEPPER15_REG_CTRL_4, &tmp, 1 );
+    stepper15_spi_write( ctx, STEPPER15_REG_CTRL_4, &tmp, 1 );
     dev_config_delay( );
     
     tmp = STEPPER15_SET_CTRL5_REPORTED_ON_FAULT;
-    stepper15_generic_write( ctx, STEPPER15_REG_CTRL_5, &tmp, 1 );
+    stepper15_spi_write( ctx, STEPPER15_REG_CTRL_5, &tmp, 1 );
     dev_config_delay( );
     
     stepper15_set_counts( ctx, 200 );
     dev_config_delay( );
     
     return error_flag;
-}
-
-err_t stepper15_generic_write ( stepper15_t *ctx, uint8_t reg, uint8_t *data_in, uint8_t len ) {
-    return ctx->write_f( ctx, reg, data_in, len );
 }
 
 void stepper15_reset ( stepper15_t *ctx ) {
@@ -385,7 +299,7 @@ err_t stepper15_set_torque_dac ( stepper15_t *ctx, uint8_t trq_data ) {
     err_t error_flag= STEPPER15_OK;
     
     trq_data &= STEPPER15_CTRL1_TRQ_DAC_MASK;
-    error_flag |= stepper15_generic_write( ctx, STEPPER15_REG_CTRL_1, &trq_data, 1 );
+    error_flag |= stepper15_spi_write( ctx, STEPPER15_REG_CTRL_1, &trq_data, 1 );
     
     return error_flag;
 }
@@ -393,7 +307,7 @@ err_t stepper15_set_torque_dac ( stepper15_t *ctx, uint8_t trq_data ) {
 err_t stepper15_set_counts ( stepper15_t *ctx, uint8_t counts ) {
     err_t error_flag= STEPPER15_OK;
     
-    error_flag |= stepper15_generic_write( ctx, STEPPER15_REG_CTRL_6, &counts, 1 );
+    error_flag |= stepper15_spi_write( ctx, STEPPER15_REG_CTRL_6, &counts, 1 );
     
     return error_flag;
 }
@@ -441,7 +355,7 @@ static void dev_step_delay ( void ) {
     Delay_1ms( );
 }
 
-static err_t stepper15_i2c_write ( stepper15_t *ctx, uint8_t reg, uint8_t *data_in, uint8_t len ) {
+err_t stepper15_i2c_write ( stepper15_t *ctx, uint8_t reg, uint8_t *data_in, uint8_t len ) {
     uint8_t tx_buf[ 257 ];
     uint8_t cnt;
 
@@ -454,11 +368,11 @@ static err_t stepper15_i2c_write ( stepper15_t *ctx, uint8_t reg, uint8_t *data_
     return i2c_master_write( &ctx->i2c, tx_buf, len + 1 );
 }
 
-static err_t stepper15_i2c_read ( stepper15_t *ctx, uint8_t reg, uint8_t *data_out, uint8_t len ) {
+err_t stepper15_i2c_read ( stepper15_t *ctx, uint8_t reg, uint8_t *data_out, uint8_t len ) {
     return i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_out, len );
 }
 
-static err_t stepper15_spi_write ( stepper15_t *ctx, uint8_t reg, uint8_t *data_in, uint8_t len ) {
+err_t stepper15_spi_write ( stepper15_t *ctx, uint8_t reg, uint8_t *data_in, uint8_t len ) {
     uint8_t tx_buf[ 257 ];
     uint8_t cnt;
 
@@ -474,7 +388,7 @@ static err_t stepper15_spi_write ( stepper15_t *ctx, uint8_t reg, uint8_t *data_
     return error_flag;
 }
 
-static err_t stepper15_spi_read ( stepper15_t *ctx, uint8_t reg, uint8_t *data_out ) {
+err_t stepper15_spi_read ( stepper15_t *ctx, uint8_t reg, uint8_t *data_out ) {
     uint8_t tx_data;
     err_t error_flag;
     

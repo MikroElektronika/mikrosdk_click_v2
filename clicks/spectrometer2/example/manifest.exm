@@ -2,7 +2,7 @@
     "name": "Spectrometer 2 Click",
     "description": "Spectrometer 2 Click is a compact add-on board that collects light waves. This board features the VD6283TX, a color sensor with advanced light flicker extraction from STMicroelectronics. The VD6283TX performs fast and accurate light measurements thanks to an individual ADC and a readout for each color channel - red, green, blue, IR, clear, and visible. It uses hybrid color filters with precise responses allowing accurate computation of the correlated color temperature (CCT) and Lux information. Its patented architecture and a high-performance photodiode design can also extract light-flickering frequencies to avoid banding effects or check that they are safe for the human eye.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","VD6283TX45"],
     "category" : ["Optical"]
 }

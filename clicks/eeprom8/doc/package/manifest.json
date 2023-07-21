@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
     "category": "Click Boards > Storage > EEPROM",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -28,10 +28,11 @@
     "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "alias": "Click.EEPROM8",
     "cmake": true,
     "subdir_name": "lib_eeprom8"
 }
+
 
 

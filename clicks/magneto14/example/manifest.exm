@@ -2,7 +2,7 @@
     "name": "Magneto 14 Click",
     "description": "Magneto 14 Click is a compact add-on board with an accurate and reliable magnetic device. This board features the MA735, a contactless angle sensor with ABZ, and PWM output from Monolithic Power Systems. The MA735 sensor has a 9-bit to 13-bit resolution of the absolute angle encoder.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MA735"],
     "category" : ["Click Boards > Sensors > Magnetic"]
 }

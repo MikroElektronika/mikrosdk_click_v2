@@ -2,7 +2,7 @@
     "name": "Charger 2 Click",
     "description": "Charger 2 click is a LiPo/Li-Ion battery charger with the additional monitoring IC onboard. This Click board™ as a whole, offers unpreceded battery charging and monitoring solution for 3.7V LiPo/Li-Ion batteries, with the capacity measurement/gas gauge function, for up to 7000 mAh.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","STBC08"],
     "category" : ["Battery charger"] 
 }

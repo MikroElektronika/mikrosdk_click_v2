@@ -2,7 +2,7 @@
     "name": "ECG GSR Click",
     "description": "ECG GSR click is a complete solution for PPG, ECG and GSR application development, utilizing a specialized IC with a clinical-grade analog front-end (AFE) and electrical front-end. ECG GSR click uses the AS7030B IC, an ultra-low power, multi-channel bio-sensor, which features a wide range of different options, making it an ideal solution for development of blood oxygen level, heart rate and galvanic skin response monitoring applications, fitness applications, for the ECG bio-authentication, and similar applications related to heart monitoring. ECG GSR click is also equipped with the 3.5mm electrodes connectors, making it ready to be used out of the box.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","AS7030B"],
     "category" : ["Biometrics"] 
 }

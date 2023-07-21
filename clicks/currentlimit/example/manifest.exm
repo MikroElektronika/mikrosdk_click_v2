@@ -2,7 +2,7 @@
     "name": "Current Limit Click",
     "description": "Current Limit Click is a compact add-on board that contains a low-voltage, P-channel MOSFET power switch intended for high-side load switching applications. This board features the MAX890L, a low-resistance power switch with the adjustable, accurate current limit system, and thermal shutdown from Maxim Integrated.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MAX890L"],
     "category" : ["Power Switch"]
 }

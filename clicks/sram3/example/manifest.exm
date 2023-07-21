@@ -2,7 +2,7 @@
     "name": "SRAM 3 Click",
     "description": "SRAM 3 Click is a compact add-on board that contains a serial non-volatile SRAM with a high storage capacity. This board features the ANV32AA1WDK66, a 1Mb serial SRAM with a non-volatile SONOS storage element included with each memory cell organized as 128k words of 8 bits each from Anvo-System Dresden. The serial SRAM provides fast access & cycle times, high data accuracy, ease of use, and unlimited read & write accessed by a high-speed SPI compatible bus. This Click board™ is suitable to store drive profiles, configurations, and similar data, or for applications such as medical devices, industrial automation (for example, motor control and robotics), smart metering systems, and many others.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ANV32AA1WDK66"],
     "category" : ["SRAM"]
 }

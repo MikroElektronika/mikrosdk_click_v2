@@ -2,7 +2,7 @@
     "name": "eFuse 4 Click",
     "description": "eFuse 4 Click is a compact add-on board with a power path protection solution that limits circuit currents and voltages to safe levels during fault conditions. This board features the TPS25940, an eFuse power switch with reverse current blocking from Texas Instruments. The TPS25940 features a full suite of protection and monitoring functions, including a DevSleep™ mode that supports compliance with the SATA™ Device Sleep standard. The wide operating range from 2.7V to 18V allows control of many popular DC bus voltages. The additional potentiometer sets the overload and short-circuit current limit of the TPS25940, while the additional header allows external current monitoring.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TPS25940"],
     "category" : ["Click Boards > Power management > Power Switch"]
 }

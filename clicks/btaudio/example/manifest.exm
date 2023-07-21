@@ -2,7 +2,7 @@
     "name": "BT Audio Click",
     "description": "If you are getting tired of all those cables you need just to listen to your favorite song over speakers.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
     "hw" : ["click","RN52"],
     "category" : ["BT/BLE"] 
 }

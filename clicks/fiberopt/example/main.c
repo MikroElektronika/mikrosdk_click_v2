@@ -1,39 +1,36 @@
 /*!
  * \file 
- * \brief FiberOpt Click example
+ * \brief Fiber Opt Click example
  * 
  * # Description
- * This application is an add-on for fiber-optical communication.
+ * This example demonstrates the use of an Fiber Opt click board by showing
+ * the communication between the two click boards.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initalizes UART driver and makes an initial log.
+ * Initalizes device and makes an initial log.
  * 
- * ## Application Task  
- * Example can either check if new data byte is received in rx buffer (ready for reading),
- * if ready than reads one byte from rx buffer and displays on USART terminal, or transmit message every 2 seconds.
+ * ## Application Task
+ * Depending on the selected application mode, it reads all the received data or 
+ * sends the desired text message with the message counter once per second.
  * 
  * \author MikroE Team
  *
  */
-// ------------------------------------------------------------------- INCLUDES
 
 #include "board.h"
 #include "log.h"
 #include "fiberopt.h"
 
-// ------------------------------------------------------------------ VARIABLES
+// Comment out the line below in order to switch the application mode to receiver
+#define DEMO_APP_TRANSMITTER
 
-#define DEMO_APP_RECEIVER
-//#define DEMO_APP_TRANSMITER
+// Text message to send in the transmitter application mode
+#define DEMO_TEXT_MESSAGE           "MIKROE - Fiber Opt click board\r\n\0"
 
 static fiberopt_t fiberopt;
 static log_t logger;
-
-static char demo_message[ 9 ] = { 'M', 'i', 'k', 'r', 'o', 'E', 13, 10, 0 };
-
-// ------------------------------------------------------ APPLICATION FUNCTIONS
 
 void application_init ( void )
 {
@@ -51,37 +48,34 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
+    // Click initialization.
     fiberopt_cfg_setup( &cfg );
     FIBEROPT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     fiberopt_init( &fiberopt, &cfg );
 
-    log_printf( &logger, "Initialized \r\n" );
-    Delay_ms( 100 );
+#ifdef DEMO_APP_TRANSMITTER
+    log_printf( &logger, " Application Mode: Transmitter\r\n" );
+#else
+    log_printf( &logger, " Application Mode: Receiver\r\n" );
+#endif
+    log_info( &logger, " Application Task " );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
 {
-    char tmp;
-    
-    //  Task implementation.
-    
-#ifdef DEMO_APP_RECEIVER
-
-       // RECEIVER - UART polling
-
-       tmp =  fiberopt_generic_single_read( &fiberopt );
-       log_printf( &logger, "%c" , &tmp );
-#endif
-#ifdef DEMO_APP_TRANSMITER
-
-       // TRANSMITER - TX each 2 sec
-       
-       fiberopt_generic_multi_write( &fiberopt, demo_message, 9 );
-       Delay_ms( 2000 );
+#ifdef DEMO_APP_TRANSMITTER
+    fiberopt_generic_write( &fiberopt, DEMO_TEXT_MESSAGE, strlen( DEMO_TEXT_MESSAGE ) );
+    log_printf( &logger, "%s", ( char * ) DEMO_TEXT_MESSAGE );
+    Delay_ms( 1000 ); 
+#else
+    uint8_t rx_byte = 0;
+    if ( 1 == fiberopt_generic_read( &fiberopt, &rx_byte, 1 ) )
+    {
+       log_printf( &logger, "%c", rx_byte );
+    }
 #endif
 }
 

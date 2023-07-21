@@ -2,7 +2,7 @@
     "name": "nvSRAM Click",
     "description": "nvSRAM Click is a compact add-on board that contains the most reliable nonvolatile memory. This board features the CY14B101J, a 1-Mbit nvSRAM organized as 128K words of 8 bits each with a nonvolatile element in each memory cell from Cypress Semiconductor. The embedded nonvolatile elements incorporate the QuantumTrap technology and provide highly reliable nonvolatile storage of data.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","CY14B101J2"],
     "category" : ["SRAM"]
 }

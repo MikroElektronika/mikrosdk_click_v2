@@ -2,7 +2,7 @@
 ---
 # AD SWIO 2 click
 
-AD-SWIO 2 Click is a quad-channel software configurable input/output solution based on AD74413R, for building and process control application. The AD74413R is a quad-channel software configurable input/output solution for building and process control applications. The device provides a fully integrated single chip solution for input and output operation. The AD-SWIO 2 Click contains four 13-bit DACs, one per chanal, and 16-bit Σ-∆ ADC. 
+> AD-SWIO 2 Click is a quad-channel software configurable input/output solution based on AD74413R, for building and process control application. The AD74413R is a quad-channel software configurable input/output solution for building and process control applications. The device provides a fully integrated single chip solution for input and output operation. The AD-SWIO 2 Click contains four 13-bit DACs, one per chanal, and 16-bit Σ-∆ ADC. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/adswio2_click.png" height=300px>
@@ -35,24 +35,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void adswio2_cfg_setup ( adswio2_cfg_t *cfg ); 
- 
-- Initialization function.
-> ADSWIO2_RETVAL adswio2_init ( adswio2_t *ctx, adswio2_cfg_t *cfg );
+- `adswio2_cfg_setup` Config Object Initialization function.
+```c
+void adswio2_cfg_setup ( adswio2_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void adswio2_default_cfg ( adswio2_t *ctx );
+- `adswio2_init` Initialization function.
+```c
+ADSWIO2_RETVAL adswio2_init ( adswio2_t *ctx, adswio2_cfg_t *cfg );
+```
 
+- `adswio2_default_cfg` Click Default Configuration function.
+```c
+void adswio2_default_cfg ( adswio2_t *ctx );
+```
 
 #### Example key functions :
 
-- This function allows user to get the converted results of the selected channel.
-> adswio2_err_t adswio2_get_conv_results ( adswio2_t *ctx, uint8_t channel, uint16_t *data_out );
- 
-- This function checks the status of the ready pin.
-> uint8_t adswio2_status_pin_ready ( adswio2_t *ctx );
+- `adswio2_get_conv_results` This function allows user to get the converted results of the selected channel.
+```c
+adswio2_err_t adswio2_get_conv_results ( adswio2_t *ctx, uint8_t channel, uint16_t *data_out );
+```
 
+- `adswio2_status_pin_ready` This function checks the status of the ready pin.
+```c
+uint8_t adswio2_status_pin_ready ( adswio2_t *ctx );
+```
 
 ## Examples Description
 

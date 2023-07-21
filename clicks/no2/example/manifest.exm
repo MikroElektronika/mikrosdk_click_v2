@@ -2,7 +2,7 @@
     "name": "NO 2 Click",
     "description": "NO2 click is a very accurate nitrogen-dioxide gas sensor Click board™, equipped with the SPEC amperometric gas sensor which electrochemically reacts with the nitrogen-dioxide (NO2).",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LMP9100SD"],
     "category" : ["NO2,Gas"] 
 }

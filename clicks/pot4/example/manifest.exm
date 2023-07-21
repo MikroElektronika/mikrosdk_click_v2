@@ -2,7 +2,7 @@
     "name": "POT 4 Click",
     "description": "POT 4 Click is a compact add-on board with accurate selectable reference voltage output. This board features the PRS11R-425F-S103B1, a high-quality 11mm rotary 10k potentiometer from Bourns. The PRS11R-425F-S103B1 features a small form factor, offers an push-on momentary switch, a flatted shaft style, and a wide operating temperature range. It comes with a high-resolution 12-bit ADC, detecting even the slightest move while digitizing its position, alongside a rail-to-rail buffering operational amplifier, which provides constant input and output impedance. Besides, the user can process the output signal in analog or digital form.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","PRS11R-425F-S103B1","MCP3221A5T"],
     "category" : ["Click Boards > HMI > Potentiometers"]
 }

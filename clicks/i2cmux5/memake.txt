@@ -1,7 +1,0 @@
-type: subdirs
-project: I2cMux5
-
-subdirs: {
-    lib
-    example
-}

@@ -2,7 +2,7 @@
     "name": "BUCK 7 Click",
     "description": "Buck 7 Click is a high-efficiency buck (step-down) DC-DC converter, which can provide digitally adjusted step-down voltage on its output while delivering up to 3.5A of current.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MAX17504"],
     "category" : ["Buck"] 
 }

@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
     "category": "Click Boards > Storage > EEPROM",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,11 +31,12 @@
     "related_projects": [
         3882
     ],
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "alias": "Click.EEPROM6",
     "cmake": true,
     "subdir_name": "lib_eeprom6"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "HTU21D Click",
     "description": "HTU21D click carries a high-precision, easy-to-use relative humidity sensor with temperature output.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","HTU21D"],
     "category" : ["Temperature & humidity"] 
 }

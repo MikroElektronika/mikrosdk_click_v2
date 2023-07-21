@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
     "category": "Click Boards > Interface > Port expander",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,9 +31,10 @@
     "related_projects": [
         2612
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Llcspi",
     "subdir_name": "lib_llcspi"
 }
+
 

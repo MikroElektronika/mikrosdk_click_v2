@@ -2,7 +2,7 @@
     "name": "4G LTE-APJ Click",
     "description": "4G LTE-APJ click is an LTE Cat 1 / UMTS multimodecellular network solution, featuring the compact LARA-R2 series modem from u-blox. This module supports up to three LTE bands and one UMTS band. It also features a full range of options for the high speed cellular networking and communication, such as the network indication, full embedded TCP/UDP stack, HTTP and HTTPS transfer protocols, IPv4/IPv6 dual-stack support, secondary antenna for the RX diversity, antenna detection, jamming signal detection, embedded TLS 1.2 protocol for the improved security and more. 4G LARA click can achieve data rates up to 10.3 Mbps/5.2 Mbps (downlink/uplink).",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
     "hw" : ["click","LARA-R2"],
     "category" : ["GSM/LTE"]
 }

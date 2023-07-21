@@ -34,20 +34,28 @@ extern "C"{
 #include "mcu_definitions.h"
 
 // mikroE toolchain specific
-#if defined(__MIKROC_AI_FOR_PIC__) || defined (__MIKROC_AI_FOR_DSPIC__) || \
+#if defined(__MIKROC_AI_FOR_PIC__) || defined(__MIKROC_AI_FOR_DSPIC__) || \
     defined(__MIKROC_AI_FOR_PIC32__)
 
 #ifdef __MIKROC_AI_FOR_PIC__
     #define BIT_INDEX 7
 #elif defined(__MIKROC_AI_FOR_PIC32__)
     #define BIT_INDEX 9
+#elif defined(__MIKROC_AI_FOR_DSPIC__)
+    #ifdef HAL_LL_SPI1_CONTROL_REG_ADDRESS
+    #define BIT_INDEX 9
+    #else
+    #define BIT_INDEX 7
+    #endif
 #endif
 
 #ifdef SAMPLE_REG_CASE_1
     #ifdef __MIKROC_AI_FOR_PIC32__
         #define SAMPLE_REG_ADDRESS(index) HAL_LL_SPI ## index ## CON_ADDRESS
-    #else
+    #elif defined (__MIKROC_AI_FOR_PIC__)
         #define SAMPLE_REG_ADDRESS(index) HAL_LL_SPI ## index ## CON1_ADDRESS
+    #else
+        #define SAMPLE_REG_ADDRESS(index) HAL_LL_SPI ## index ## _CONTROL_REG_ADDRESS
     #endif
 #else
     #define SAMPLE_REG_ADDRESS(index) HAL_LL_SSP ## index ## STAT_ADDRESS

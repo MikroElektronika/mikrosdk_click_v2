@@ -2,7 +2,7 @@
     "name": "DIGI POT 7 Click",
     "description": "DIGI POT 7 Click is a compact add-on board used as a digitally controlled potentiometer. This board features the AD5175, a single-channel 1024-position digital rheostat with less than ±1% end-to-end resistor tolerance error and 50-time programmable wiper memory from Analog Devices. This I2C configurable IC is designed to operate as a variable resistor for analog signals, within the voltage range of single-supply operation at 2.7 V to 5.5 V.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","AD5175"],
     "category" : [" Digital potentiometer"]
 }

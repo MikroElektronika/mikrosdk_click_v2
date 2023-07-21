@@ -2,7 +2,7 @@
     "name": "Fan 3 Click",
     "description": "Fan 3 click is the perfect choice for fan speed control and it can operate in seven discrete speed steps.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MIC74", "MIC29152"],
     "category" : ["Brushless"] 
 }

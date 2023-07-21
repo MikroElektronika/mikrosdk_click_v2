@@ -2,7 +2,7 @@
     "name": "LPG Click",
     "description": "LPG click carries an MQ-5 sensor for detecting liquefied petroleum gas leakage. The gas sensing layer on the sensor unit is made of Tin dioxide (SnO2), which has lower conductivity in clean air.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MQ-5"],
     "category" : ["Gas"]
 }

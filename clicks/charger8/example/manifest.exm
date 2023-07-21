@@ -2,7 +2,7 @@
     "name": "Charger 8 Click",
     "description": "Charger 8 Click is an intelligent Li-Ion battery charger, system power manager, and a battery fuel gauge Click board.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MAX8903B","MAX17201"],
     "category" : ["Battery charger"] 
 }

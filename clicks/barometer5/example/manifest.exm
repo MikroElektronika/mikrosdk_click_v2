@@ -2,7 +2,7 @@
     "name": "Barometer 5 Click",
     "description": "Barometer 5 Click is a compact add-on board used to measure air pressure in a specific environment. This board features the MS5637-02BA03, a high accuracy low voltage barometric and temperature sensor from TE Connectivity Measurement Specialties. The MS5637-02BA03 includes a high-linearity pressure sensor and an ultra-low-power 24-bit ΔΣ ADC with internal factory-calibrated coefficients, providing a precise digital 24-bit pressure and temperature value, and different operation modes allowing the user to optimize for conversion speed and current consumption. It comes with a configurable host interface that supports I2C serial communication and measures pressure in a range from 300mbar up to 1.2bar with an accuracy of ±2mbar over a wide operating temperature range.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MS5637"],
     "category" : ["Pressure"]
 }

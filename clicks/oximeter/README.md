@@ -1,11 +1,10 @@
 \mainpage Main Page
  
- 
 
 ---
 # Oximeter click
 
-Oximeter click is a versatile photometric Click board�, perfectly suited for
+> Oximeter click is a versatile photometric Click board�, perfectly suited for
 measuring the blood oxygen saturation.
 
 <p align="center">
@@ -39,28 +38,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void oximeter_cfg_setup ( oximeter_cfg_t *cfg ); 
- 
-- Initialization function.
-> OXIMETER_RETVAL oximeter_init ( oximeter_t *ctx, oximeter_cfg_t *cfg );
+- `oximeter_cfg_setup` Config Object Initialization function.
+```c
+void oximeter_cfg_setup ( oximeter_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void oximeter_default_cfg ( oximeter_t *ctx );
+- `oximeter_init` Initialization function.
+```c
+err_t oximeter_init ( oximeter_t *ctx, oximeter_cfg_t *cfg );
+```
 
+- `oximeter_default_cfg` Click Default Configuration function.
+```c
+void oximeter_default_cfg ( oximeter_t *ctx );
+```
 
 #### Example key functions :
 
-- Function writes 16-bit data to the register.
- > uint8_t oxim_write_reg ( oximeter_t* ctx, uint8_t register_address,uint16_t transfer_data );
- 
-- Function performs the configuration and enables the interrupt on this slot.
-> uint8_t oxim_set_time_slotA ( oximeter_t* ctx, uint8_t enable_slotA,
-                                uint8_t enable_photodiode, uint8_t enable_LED,
-                                uint8_t set_mode );
+- `oximeter_write_reg` Function writes 16-bit data to the register.
+```c
+err_t oximeter_write_reg ( oximeter_t* ctx, uint8_t reg, uint16_t data_in );
+```
 
-- Function determines which channel/channels be enabled.
-> uint8_t oxim_enable_channels ( oximeter_t* ctx, uint8_t select_channel );
+- `oximeter_set_time_slot_a` Function performs the configuration for Time Slot A and enables the interrupt for this Slot.
+```c
+err_t oximeter_set_time_slot_a ( oximeter_t* ctx, oximeter_enable_t* dev_enable, uint8_t set_mode );
+```
+
+- `oximeter_enable_channels` Function determines which channel/channels be enabled.
+```c
+err_t oximeter_enable_channels ( oximeter_t* ctx, uint8_t select_channel );
+```
 
 ## Examples Description
 
@@ -92,14 +100,15 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
+    // Click initialization.
     oximeter_cfg_setup( &cfg );
     OXIMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     oximeter_init( &oximeter, &cfg );
     oximeter_default_cfg( &oximeter );
+    
+    log_info( &logger, " Application Task " );
 }
   
 ```

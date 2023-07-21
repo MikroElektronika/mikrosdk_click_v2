@@ -2,7 +2,7 @@
     "name": "Boost-Inv 2 Click",
     "description": "Boost-INV 2 click is a very useful DC/DC voltage converter device, as can output both positive and negative voltage, boosted up to 15V and inverted to -15V, from a single fixed voltage input.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TPS65131"],
     "category" : ["Boost"] 
 }

@@ -2,7 +2,7 @@
     "name": "Tilt Click",
     "description": "Tilt click carries RPI-1035, a 4-directional optical tilt sensor. This type of sensor provides positional feedback for left, right, backward or forward movement (tilt).",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","RPI-1035"],
     "category" : ["Vibration,Motion"] 
 }

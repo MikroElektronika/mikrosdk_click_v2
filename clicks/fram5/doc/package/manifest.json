@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
     "category": "Click Boards > Storage > FRAM",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -28,11 +28,12 @@
     "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "alias": "Click.FRAM5",
     "cmake": true,
     "subdir_name": "lib_fram5"
 }
+
 
 
 

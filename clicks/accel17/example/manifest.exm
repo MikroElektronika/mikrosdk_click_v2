@@ -2,7 +2,7 @@
     "name": "Accel 17 Click",
     "description": "Accel 17 Click is a compact add-on board that contains an acceleration sensor. This board features the MXC62320MP, a low-power digital output dual-axis accelerometer fabricated on a standard, submicron CMOS process from MEMSIC.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MXC62320MP"],
     "category" : ["Motion"]
 }

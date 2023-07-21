@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V",
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
     "category": "Click Boards > Miscellaneous > ID",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,9 +31,10 @@
     "related_projects": [
         1359
     ],
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "alias": "Click.UNIQUEID",
     "cmake": true,
     "subdir_name": "lib_uniqueid"
 }
+
 

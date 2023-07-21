@@ -2,7 +2,7 @@
     "name": "Ambient 11 Click",
     "description": "The Ambient 11 Click is a Click board� equipped with the VEML6035,a low power, high sensitivity, I2C ambient light sensor from Vishay Semiconductors.Because of the possibilities its features offer,the Ambient 11 Click can be used as an ambient light sensor for mobile devices,industrial lighting operation, and as an optical switch for consumer,computing and industrial devices and displays.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","VEML6035"],
     "category" : [" Audio & Speech"] 
 }

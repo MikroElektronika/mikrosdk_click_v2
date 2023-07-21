@@ -2,7 +2,7 @@
     "name": "Expand 4 Click",
     "description": "Expand 4 click carries TPCIC6A595, a chip that combines an 8-bit serial-in, parallel-out shift register with an 8-bit D-type storage register.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TPCIC6A595"],
     "category" : ["Port expander"] 
 }

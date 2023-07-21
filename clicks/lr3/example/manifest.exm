@@ -2,7 +2,7 @@
     "name": "LR 3 Click",
     "description": "LR 3 Click is a compact add-on board that contains a long-range transceiver. This board features the 32001345, RF technology-based SRD transceiver, which operates at a frequency of 868MHz from Mipot.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
     "hw" : ["click","MIPOT 32001345"],
     "category" : ["LoRa"] 
 }

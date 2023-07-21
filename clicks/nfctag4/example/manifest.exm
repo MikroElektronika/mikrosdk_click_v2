@@ -2,7 +2,7 @@
   "name": "NFC Tag 4  Click",
   "description": "NFC Tag 4 Click is NFC tag device, offering 16 Kbit of electrically erasable programmable memory (EEPROM). ",
   "image": "../../Resources/click_icon.png",
-  "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+  "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
   "hw": [ "click", "ST25DV16K" ],
   "category": [ "RFID/NFC" ]
 }

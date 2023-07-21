@@ -1,138 +1,72 @@
 /*!
  * @file main.c
- * @brief GNSS RTK Click Example.
+ * @brief GNSS RTK Click example
  *
  * # Description
- * This example reads and processes data from GNSS RTK click.
+ * This example demonstrates the use of GNSS RTK click by reading and displaying
+ * the GNSS coordinates.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes driver and starts the module.
+ * Initializes the driver and resets the click board.
  *
  * ## Application Task
- * Reads the received data and parses it.
+ * Reads the received data, parses the GNGGA info from it, and once it receives the position fix
+ * it will start displaying the coordinates on the USB UART.
  *
- * ## Additional Functions
- * - static err_t gnssrtk_process ( void ) - The general process of collecting responses
- *   sent from the module.
- * - static void parser_application ( char *rsp ) - Parsing the response into a more
- *   readable form and printing it on the UART terminal.
+ * ## Additional Function
+ * - static void gnssrtk_clear_app_buf ( void )
+ * - static err_t gnssrtk_process ( gnssrtk_t *ctx )
+ * - static void gnssrtk_parser_application ( char *rsp )
  *
- * @author Stefan Nikolic
+ * @author Stefan Filipovic
  *
  */
 
 #include "board.h"
 #include "log.h"
 #include "gnssrtk.h"
-#include "string.h"
 
-#define PROCESS_COUNTER                         10
-#define PROCESS_RX_BUFFER_SIZE                  500
-#define PROCESS_PARSER_BUFFER_SIZE              500
-
-#define ELEMENT_BUFFER_NULL                     0
+#define PROCESS_BUFFER_SIZE 300
 
 static gnssrtk_t gnssrtk;
 static log_t logger;
 
-static char current_parser_buf[ PROCESS_PARSER_BUFFER_SIZE ];
+static char app_buf[ PROCESS_BUFFER_SIZE ] = { 0 };
+static int32_t app_buf_len = 0;
 
-// ------------------------------------------------------- ADDITIONAL FUNCTIONS
+/**
+ * @brief GNSS RTK clearing application buffer.
+ * @details This function clears memory of application buffer and reset its length.
+ * @return None.
+ * @note None.
+ */
+static void gnssrtk_clear_app_buf ( void );
 
-static void gnssrtk_process ( void )
+/**
+ * @brief GNSS RTK data reading function.
+ * @details This function reads data from device and concatenates data to application buffer.
+ * @param[in] ctx : Click context object.
+ * See #gnssrtk_t object definition for detailed explanation.
+ * @return @li @c  0 - Read some data.
+ *         @li @c -1 - Nothing is read or Application buffer overflow.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+static err_t gnssrtk_process ( gnssrtk_t *ctx );
+
+/**
+ * @brief GNSS RTK parser application.
+ * @param[in] rsp Response buffer.
+ * @details This function logs GNSS data on the USB UART.
+ * @return None.
+ * @note None.
+ */
+static void gnssrtk_parser_application ( char *rsp );
+
+void application_init ( void )
 {
-    int32_t rsp_size;
-    uint16_t rsp_cnt = 0;
-    
-    char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
-    uint16_t check_buf_cnt;
-    uint8_t process_cnt = PROCESS_COUNTER;
-    
-    // Clear parser buffer
-    memset( current_parser_buf, 0 , PROCESS_PARSER_BUFFER_SIZE ); 
-    
-    while( process_cnt != 0 )
-{
-        rsp_size = gnssrtk_generic_read( &gnssrtk, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
-
-        if ( rsp_size != -1 )
-        {  
-            // Validation of the received data
-            for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
-            {
-                if ( uart_rx_buffer[ check_buf_cnt ] == 0 ) 
-                {
-                    uart_rx_buffer[ check_buf_cnt ] = 13;
-                }
-            } 
-            // Storages data in parser buffer
-            rsp_cnt += rsp_size;
-            if ( rsp_cnt < PROCESS_PARSER_BUFFER_SIZE )
-            {
-                strncat( current_parser_buf, uart_rx_buffer, rsp_size );
-            }
-            
-            // Clear RX buffer
-            memset( uart_rx_buffer, 0, PROCESS_RX_BUFFER_SIZE );
-        } 
-        else 
-        {
-            process_cnt--;
-            
-            // Process delay 
-            Delay_ms( 100 );
-        }
-    }
-}
-
-static void parser_application ( char *rsp )
-{
-    char element_buf[ 200 ] = { 0 };
-    
-    log_printf( &logger, "\r\n-----------------------\r\n", element_buf ); 
-    
-    gnssrtk_generic_parser( rsp, GNSSRTK_NMEA_GNGGA, GNSSRTK_GNGGA_LATITUDE, element_buf );
-    if ( element_buf[ 0 ] == ELEMENT_BUFFER_NULL )
-    {
-        log_printf( &logger, "Latitude: No data available!", element_buf );
-    }
-    else log_printf( &logger, "Latitude:  %s ", element_buf ); 
-    
-    memset( element_buf, 0, sizeof( element_buf ) );
-    
-    gnssrtk_generic_parser( rsp, GNSSRTK_NMEA_GNGGA, GNSSRTK_GNGGA_LATITUDE_SIDE, element_buf );
-    log_printf( &logger, "%s \r\n", element_buf );
-    
-    gnssrtk_generic_parser( rsp, GNSSRTK_NMEA_GNGGA, GNSSRTK_GNGGA_LONGITUDE, element_buf );
-    if ( element_buf[ 0 ] == ELEMENT_BUFFER_NULL )
-    {
-        log_printf( &logger, "Longitude: No data available!", element_buf );
-    }
-    else log_printf( &logger, "Longitude:  %s ", element_buf );
-    
-    memset( element_buf, 0, sizeof( element_buf ) );
-    
-    gnssrtk_generic_parser( rsp, GNSSRTK_NMEA_GNGGA, GNSSRTK_GNGGA_LONGITUDE_SIDE, element_buf );
-    log_printf( &logger, "%s \r\n", element_buf );
-    
-    gnssrtk_generic_parser( rsp, GNSSRTK_NMEA_GNGGA, GNSSRTK_GNGGA_ALTITUDE, element_buf );
-    if ( element_buf[ 0 ] == ELEMENT_BUFFER_NULL )
-    {
-        log_printf( &logger, "Alitude: No data available!", element_buf );
-    }
-    else log_printf( &logger, "Alitude: %s ", element_buf ); 
-    
-    memset( element_buf, 0, sizeof( element_buf ) );
-    
-    gnssrtk_generic_parser( rsp, GNSSRTK_NMEA_GNGGA, GNSSRTK_GNGGA_ALTITUDE_UNIT, element_buf );
-    log_printf( &logger, "%s \r\n", element_buf );
-}
-
-// ------------------------------------------------------ APPLICATION FUNCTIONS
-
-void application_init ( void ) {
     log_cfg_t log_cfg;  /**< Logger config object. */
     gnssrtk_cfg_t gnssrtk_cfg;  /**< Click config object. */
 
@@ -150,33 +84,117 @@ void application_init ( void ) {
     log_info( &logger, " Application Init " );
 
     // Click initialization.
-
     gnssrtk_cfg_setup( &gnssrtk_cfg );
     GNSSRTK_MAP_MIKROBUS( gnssrtk_cfg, MIKROBUS_1 );
-    Delay_ms( 100 );
-    err_t init_flag  = gnssrtk_init( &gnssrtk, &gnssrtk_cfg );
-    if ( init_flag == UART_ERROR ) {
-        log_error( &logger, " Application Init Error. " );
-        log_info( &logger, " Please, run program again... " );
-
+    err_t init_flag = gnssrtk_init( &gnssrtk, &gnssrtk_cfg );
+    if ( ( UART_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
+    {
+        log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-
-    gnssrtk_default_cfg ( &gnssrtk );
+    
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
 }
 
-void application_task ( void ) {
-    gnssrtk_process();
-    parser_application( current_parser_buf );
+void application_task ( void )
+{
+    gnssrtk_process( &gnssrtk );
+    if ( app_buf_len > ( sizeof ( GNSSRTK_RSP_GNGGA ) + GNSSRTK_GNGGA_ELEMENT_SIZE ) ) 
+    {
+        gnssrtk_parser_application( app_buf );
+    }
 }
 
-void main ( void ) {
+void main ( void )
+{
     application_init( );
 
-    for ( ; ; ) {
+    for ( ; ; )
+    {
         application_task( );
+    }
+}
+
+static void gnssrtk_clear_app_buf ( void ) 
+{
+    memset( app_buf, 0, app_buf_len );
+    app_buf_len = 0;
+}
+
+static err_t gnssrtk_process ( gnssrtk_t *ctx ) 
+{
+    int32_t rx_size = 0;
+    char rx_buf[ PROCESS_BUFFER_SIZE ] = { 0 };
+    if ( GNSSRTK_DRV_SEL_UART == ctx->drv_sel )
+    {
+        rx_size = gnssrtk_generic_read( ctx, rx_buf, PROCESS_BUFFER_SIZE );
+    }
+    else if ( ( GNSSRTK_DRV_SEL_I2C == ctx->drv_sel ) || ( GNSSRTK_DRV_SEL_SPI == ctx->drv_sel ) )
+    {
+        if ( GNSSRTK_OK == gnssrtk_generic_read( ctx, rx_buf, 1 ) )
+        {
+            if ( GNSSRTK_DUMMY != rx_buf[ 0 ] )
+            {
+                rx_size = 1;
+            }
+        }
+    }
+    if ( rx_size > 0 ) 
+    {
+        int32_t buf_cnt = 0;
+        if ( ( app_buf_len + rx_size ) > PROCESS_BUFFER_SIZE ) 
+        {
+            gnssrtk_clear_app_buf(  );
+            return GNSSRTK_ERROR;
+        } 
+        else 
+        {
+            buf_cnt = app_buf_len;
+            app_buf_len += rx_size;
+        }
+        for ( int32_t rx_cnt = 0; rx_cnt < rx_size; rx_cnt++ ) 
+        {
+            if ( rx_buf[ rx_cnt ] ) 
+            {
+                app_buf[ ( buf_cnt + rx_cnt ) ] = rx_buf[ rx_cnt ];
+            }
+            else
+            {
+                app_buf_len--;
+                buf_cnt--;
+            }
+        }
+        return GNSSRTK_OK;
+    }
+    return GNSSRTK_ERROR;
+}
+
+static void gnssrtk_parser_application ( char *rsp )
+{
+    char element_buf[ 100 ] = { 0 };
+    if ( GNSSRTK_OK == gnssrtk_parse_gngga( rsp, GNSSRTK_GNGGA_LATITUDE, element_buf ) )
+    {
+        static uint8_t wait_for_fix_cnt = 0;
+        if ( strlen( element_buf ) > 0 )
+        {
+            log_printf( &logger, "\r\n Latitude: %.2s degrees, %s minutes \r\n", element_buf, &element_buf[ 2 ] );
+            gnssrtk_parse_gngga( rsp, GNSSRTK_GNGGA_LONGITUDE, element_buf );
+            log_printf( &logger, " Longitude: %.3s degrees, %s minutes \r\n", element_buf, &element_buf[ 3 ] );
+            memset( element_buf, 0, sizeof( element_buf ) );
+            gnssrtk_parse_gngga( rsp, GNSSRTK_GNGGA_ALTITUDE, element_buf );
+            log_printf( &logger, " Altitude: %s m \r\n", element_buf );
+            wait_for_fix_cnt = 0;
+        }
+        else
+        {
+            if ( wait_for_fix_cnt % 5 == 0 )
+            {
+                log_printf( &logger, " Waiting for the position fix...\r\n\n" );
+                wait_for_fix_cnt = 0;
+            }
+            wait_for_fix_cnt++;
+        }
+        gnssrtk_clear_app_buf(  );
     }
 }
 

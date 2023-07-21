@@ -2,7 +2,7 @@
     "name": "Pressure 16 Click",
     "description": "Pressure 16 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the WSEN-PADS (2511020213301), a high-precision MEMS-based digital absolute pressure sensor from Würth Elektronik. It has a fully-calibrated 24-bit pressure output to provide accurate atmospheric pressure data with a configurable host interface that supports both I2C and SPI serial communication and with an intelligent on-chip motion-triggered interrupt feature.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","2511020213301"],
     "category" : ["Pressure"]
 }

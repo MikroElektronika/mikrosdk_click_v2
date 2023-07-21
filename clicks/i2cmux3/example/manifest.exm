@@ -2,7 +2,7 @@
     "name": "I2C MUX 3 Click",
     "description": "I2C MUX 3 Click is a compact add-on board that contains eight bidirectional translating switches dedicated for applications with I2C slave address conflicts.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TCA9548APWR"],
     "category" : ["I2C"] 
 }

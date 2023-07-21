@@ -2,7 +2,7 @@
     "name": "LED Driver 10 Click",
     "description": "LED Driver 10 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the TLC59283, a 16-channel, constant-current sink light-emitting diode (LED) driver with pre-charge FET from Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TLC59283RGER"],
     "category" : ["LED Drivers"]
 }

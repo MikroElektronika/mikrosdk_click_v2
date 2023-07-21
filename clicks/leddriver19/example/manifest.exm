@@ -2,7 +2,7 @@
     "name": "LED Driver 19 Click",
     "description": "LED Driver 19 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the LED1202, a 12-channel low quiescent current LED driver from STMicroelectronics. It can output 5V, and each channel can provide up to 20mA with a headroom voltage of typically 350mW.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LED1202QTR"],
     "category" : ["Click Boards > Display & LED > LED Drivers"]
 }

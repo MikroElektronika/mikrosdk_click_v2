@@ -292,11 +292,11 @@ void application_init ( void )
 
 void application_task ( void ) 
 {
-    const uint8_t DATA_LEN                  = 16;
+    #define DATA_LEN 16
     static uint8_t aes_value[ DATA_LEN ]    = { 0x40, 0x41, 0x42, 0x43,0x44, 0x45, 0x46, 0x47,
                                                 0x48, 0x49, 0x4A, 0x4B,0x4C, 0x4D, 0x4E, 0x4F };
-    static uint32_t binary_id               = 0xBBBBBBBB;
-    static uint32_t aes_id                  = 0xCCCCCCCC;
+    static uint32_t binary_id               = 0xBBBBBBBBul;
+    static uint32_t aes_id                  = 0xCCCCCCCCul;
     uint8_t random_data[ DATA_LEN ]         = { 0 };
     uint8_t read_data[ DATA_LEN ]           = { 0 };
     uint8_t encrypted_data[ DATA_LEN ]      = { 0 };
@@ -452,16 +452,18 @@ static void soft_reset( void )
     if ( PLUGNTRUST_OK == plugntrust_sw_reset( &plugntrust, &atr_data ) )
     {
         log_printf( &logger, " > Protocol version: %d\r\n", ( uint16_t )atr_data.protocol_version );
-        log_printf( &logger, " > Length of Data Link Layer Parameters value: %d\r\n", atr_data.data_link_layer_parameters_len );
+        log_printf( &logger, " > Length of Data Link Layer Parameters value: %d\r\n", 
+                    ( uint16_t ) atr_data.data_link_layer_parameters_len );
         log_printf( &logger, " > Data Link Layer Parameters: 0x" );
         log_buf_hex( atr_data.data_link_layer_parameters, atr_data.data_link_layer_parameters_len );
         log_printf( &logger, "\r\n" );
         log_printf( &logger, " > Physical Layer ID: %d\r\n", ( uint16_t )atr_data.physical_layer_id );
-        log_printf( &logger, " > Length of Physical Layer Parameters value: %d\r\n", atr_data.physical_layer_parameters_len );
+        log_printf( &logger, " > Length of Physical Layer Parameters value: %d\r\n", 
+                    ( uint16_t ) atr_data.physical_layer_parameters_len );
         log_printf( &logger, " > Physical Layer Parameters: 0x" );
         log_buf_hex( atr_data.physical_layer_parameters, atr_data.physical_layer_parameters_len );
         log_printf( &logger, "\r\n" );
-        log_printf( &logger, " > Length of Historical Bytes value: %d\r\n", atr_data.historical_len );
+        log_printf( &logger, " > Length of Historical Bytes value: %d\r\n", ( uint16_t ) atr_data.historical_len );
         log_printf( &logger, " > Historical Bytes: 0x" );
         log_buf_hex( atr_data.historical, atr_data.historical_len );
         log_printf( &logger, "\r\n" );
@@ -549,7 +551,6 @@ static void get_data_identify ( void )
     //select card
     select_card_manger( );
     end_apdu_session( );
-    
     //get data identify
     typedef struct
     {
@@ -574,10 +575,6 @@ static void get_data_identify ( void )
         uint8_t length_fips_mode; //0x01 Length FIPS mode
         uint8_t fips_mode;//var FIPS mode 0x00 - FIPS mode not active, 0x01 - FIPS mode active
         
-        //uint8_t vTag_modules_enabled; //0x06 Tag modules enabled Lists enabled and disabled modules
-        //uint8_t vLength_modules_enabled; //0x02 Length modules enabled Big endian format
-        //uint8_t vBit_mask_of_enabled_modules[0x02]; //var Bit mask of enabled modules See Table 5.3
-
         uint8_t tag_pre_perso_state;//0x07 Tag pre-perso state Lists pre-perso state
         uint8_t length_pre_perso_state;//0x01 Length pre-perso state
         //var Bit mask of pre-perso state bit0 = 1 = config module available,
@@ -608,39 +605,39 @@ static void get_data_identify ( void )
     if ( frame_data.len == prsp_len )
     {
         memcpy( (uint8_t *)&identify_rsp, frame_data.apdu->payload, prsp_len );
-        log_printf( &logger, " > Tag value: 0x%0.2X\r\n", identify_rsp.tag_value_proprietary_data );
-        log_printf( &logger, " > Length value: %d\r\n", identify_rsp.length_of_following_data );
+        log_printf( &logger, " > Tag value: 0x%0.2X\r\n", ( uint16_t ) identify_rsp.tag_value_proprietary_data );
+        log_printf( &logger, " > Length value: %d\r\n", ( uint16_t ) identify_rsp.length_of_following_data );
         log_printf( &logger, " > Tag Card ID value: 0x" );
         log_buf_hex( identify_rsp.tag_card_identification_data, 2 );
         log_printf( &logger, "\r\n" );
-        log_printf( &logger, " > Length of Card ID value: %d\r\n", identify_rsp.length_of_card_identification_data );
-        log_printf( &logger, " > Tag of Configuration ID value: 0x%0.2X\r\n", identify_rsp.tag_card_identification_data );
-        log_printf( &logger, " > Length of Configuration ID value: %d\r\n", identify_rsp.length_configuration_id );
+        log_printf( &logger, " > Length of Card ID value: %d\r\n", ( uint16_t ) identify_rsp.length_of_card_identification_data );
+        log_printf( &logger, " > Tag of Configuration ID value: 0x%0.2X\r\n", ( uint16_t ) identify_rsp.tag_configuration_id );
+        log_printf( &logger, " > Length of Configuration ID value: %d\r\n", ( uint16_t ) identify_rsp.length_configuration_id );
         log_printf( &logger, " > Configuration ID: 0x" );
         log_buf_hex( identify_rsp.configuration_id, identify_rsp.length_configuration_id );
         log_printf( &logger, "\r\n" );
-        log_printf( &logger, " > Tag of Patch ID value: 0x%0.2X\r\n", identify_rsp.tag_patch_id );
-        log_printf( &logger, " > Length of Patch ID value: %d\r\n", identify_rsp.length_patch_id );
+        log_printf( &logger, " > Tag of Patch ID value: 0x%0.2X\r\n", ( uint16_t ) identify_rsp.tag_patch_id );
+        log_printf( &logger, " > Length of Patch ID value: %d\r\n", ( uint16_t ) identify_rsp.length_patch_id );
         log_printf( &logger, " > Patch ID: 0x" );
         log_buf_hex( identify_rsp.patch_id, identify_rsp.length_patch_id );
         log_printf( &logger, "\r\n" );
-        log_printf( &logger, " > Tag of Platform Build ID1 value: 0x%0.2X\r\n", identify_rsp.tag_platform_build_id1 );
-        log_printf( &logger, " > Length of Platform Build ID1 value: %d\r\n", identify_rsp.length_platform_build_id );
+        log_printf( &logger, " > Tag of Platform Build ID1 value: 0x%0.2X\r\n", ( uint16_t ) identify_rsp.tag_platform_build_id1 );
+        log_printf( &logger, " > Length of Platform Build ID1 value: %d\r\n", ( uint16_t ) identify_rsp.length_platform_build_id );
         log_printf( &logger, " > Platform Build ID1: 0x" );
         log_buf_hex( identify_rsp.platform_build_id, identify_rsp.length_platform_build_id );
         log_printf( &logger, "\r\n" );
-        log_printf( &logger, " > Tag of FIPS Mode value: 0x%0.2X\r\n", identify_rsp.tag_fips_mode );
-        log_printf( &logger, " > Length of FIPS Mode value: %d\r\n", identify_rsp.length_fips_mode );
+        log_printf( &logger, " > Tag of FIPS Mode value: 0x%0.2X\r\n", ( uint16_t ) identify_rsp.tag_fips_mode );
+        log_printf( &logger, " > Length of FIPS Mode value: %d\r\n", ( uint16_t ) identify_rsp.length_fips_mode );
         log_printf( &logger, " > FIPS Mode: 0x" );
         log_buf_hex( &identify_rsp.fips_mode, identify_rsp.length_fips_mode );
         log_printf( &logger, "\r\n" );
-        log_printf( &logger, " > Tag of Pre-Preso State value: 0x%0.2X\r\n", identify_rsp.tag_pre_perso_state );
-        log_printf( &logger, " > Length of Pre-Preso State value: %d\r\n", identify_rsp.length_pre_perso_state );
+        log_printf( &logger, " > Tag of Pre-Preso State value: 0x%0.2X\r\n", ( uint16_t ) identify_rsp.tag_pre_perso_state );
+        log_printf( &logger, " > Length of Pre-Preso State value: %d\r\n", ( uint16_t ) identify_rsp.length_pre_perso_state );
         log_printf( &logger, " > Pre-Preso State: 0x" );
         log_buf_hex( &identify_rsp.bit_mask_of_pre_perso_state, identify_rsp.length_pre_perso_state );
         log_printf( &logger, "\r\n" );
-        log_printf( &logger, " > Tag of ROM ID value: 0x%0.2X\r\n", identify_rsp.tag_rom_id );
-        log_printf( &logger, " > Length of ROM ID value: %d\r\n", identify_rsp.length_rom_id );
+        log_printf( &logger, " > Tag of ROM ID value: 0x%0.2X\r\n", ( uint16_t ) identify_rsp.tag_rom_id );
+        log_printf( &logger, " > Length of ROM ID value: %d\r\n", ( uint16_t ) identify_rsp.length_rom_id );
         log_printf( &logger, " > ROM ID: 0x" );
         log_buf_hex( identify_rsp.rom_id, identify_rsp.length_rom_id );
         log_printf( &logger, "\r\n" );
@@ -669,7 +666,7 @@ static void create_check_delete ( void )
     //create binary object
     log_info( &logger, " Write Binary" );
     uint8_t data_buf[ 7 ] = "MikroE";
-    uint32_t binary_id = 0xAAAAAAAA;
+    uint32_t binary_id = 0xAAAAAAAAul;
 
     if ( PLUGNTRUST_OK != plugntrust_write_binary_object( &plugntrust, 
             binary_id, 0, 6, data_buf ) )
@@ -700,7 +697,7 @@ static void create_check_delete ( void )
     }
     else
     {
-        log_error( &logger, " Read binray object" );
+        log_error( &logger, " Read binary object" );
     } 
     log_printf( &logger, "************************************************************************\r\n" );
     //delete object
@@ -729,7 +726,7 @@ static void create_check_delete ( void )
 
 static void list_and_delete_objects( void )
 {     
-    plugntrust_write_binary_object( &plugntrust, 0xAABBCCDD, 0, 4, "Data" );
+    plugntrust_write_binary_object( &plugntrust, 0xAABBCCDDul, 0, 4, "Data" );
     
     log_info( &logger, " Get Object list" );  
     uint32_t ids[ 30 ] = { 0 };
@@ -785,7 +782,7 @@ static void aes_cipher ( void )
     #define AES_DATA_SIZE 16
     uint8_t aes_value[ AES_DATA_SIZE ] = { 0x40, 0x41, 0x42, 0x43,0x44, 0x45, 0x46, 0x47,
                                            0x48, 0x49, 0x4A, 0x4B,0x4C, 0x4D, 0x4E, 0x4F };
-    uint32_t symm_id = 0x12345678;
+    uint32_t symm_id = 0x12345678ul;
     create_128_aes_key( symm_id, aes_value );
     
     //Encrypt Data

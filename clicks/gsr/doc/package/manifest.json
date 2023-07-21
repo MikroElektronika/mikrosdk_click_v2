@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
     "category": "Click Boards > Sensors > Biometrics",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,10 +31,11 @@
     "related_projects": [
         2224
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Gsr",
     "subdir_name": "lib_gsr"
 }
+
 
 

@@ -2,7 +2,7 @@
     "name": "Proximity 14 Click",
     "description": "Proximity 14 Click is a compact add-on board that contains a close-range proximity sensing solution. This board features the VCNL36825T, a fully integrated proximity sensor from Vishay Semiconductors. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","VCNL36825T"],
     "category" : ["Proximity"]
 }

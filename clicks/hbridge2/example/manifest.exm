@@ -2,7 +2,7 @@
     "name": "H-BRIDGE Click",
     "description": "H-Bridge 2 click can be used to drive a motor by utilizing a specific configuration of the output stage MOSFETs, known as the H-bridge. This configuration enables H-Bridge 2 click to drive a motor with up to 1.2A and 15V, providing control of the speed and direction, as well as the dynamic (rheostatic) braking capability",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MPC17510"],
     "category" : ["Brushed"] 
 }

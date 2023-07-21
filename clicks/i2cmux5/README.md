@@ -1,10 +1,9 @@
 \mainpage Main Page
 
-
 ---
 # I2C MUX 5 click
 
-I2C MUX 5 Click is a compact add-on board with translating I2C and SMBus switch intended for applications with I2C slave address conflicts.
+> I2C MUX 5 Click is a compact add-on board with translating I2C and SMBus switch intended for applications with I2C slave address conflicts.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/i2cmux5_click.png" height=300px>
@@ -33,47 +32,45 @@ Package can be downloaded/installed directly from *NECTO Studio Package Manager*
 
 ## Library Description
 
-```
 > This library contains API for I2cMux5 Click driver.
-```
 
 #### Standard key functions :
 
-> Config Object Initialization function.
-```
+- `i2cmux5_cfg_setup` Config Object Initialization function.
+```c
 void i2cmux5_cfg_setup ( i2cmux5_cfg_t *cfg );
 ```
 
-> Initialization function.
-```
-I2CMUX5_RETVAL i2cmux5_init ( i2cmux5_t *ctx, i2cmux5_cfg_t *cfg );
+- `i2cmux5_init` Initialization function.
+```c
+err_t i2cmux5_init ( i2cmux5_t *ctx, i2cmux5_cfg_t *cfg );
 ```
 
-> Click Default Configuration function.
-```
+- `i2cmux5_default_cfg` Click Default Configuration function.
+```c
 void i2cmux5_default_cfg ( i2cmux5_t *ctx );
 ```
 
 #### Example key functions :
 
-> I2C MUX 5 I2C writing function.
-```
+- `i2cmux5_generic_write` I2C MUX 5 I2C writing function.
+```c
 err_t i2cmux5_generic_write ( i2cmux5_t *ctx, uint8_t reg, uint8_t *tx_buf, uint8_t tx_len );
 ```
 
-> I2C MUX 5 I2C reading function.
-```
+- `i2cmux5_generic_read` I2C MUX 5 I2C reading function.
+```c
 err_t i2cmux5_generic_read ( i2cmux5_t *ctx, uint8_t reg, uint8_t *rx_buf, uint8_t rx_len );
 ```
 
-> I2C MUX 5 I2C channel reading function.
-```
+- `i2cmux5_channel_read_byte` I2C MUX 5 I2C channel reading function.
+```c
 uint8_t i2cmux5_channel_read_byte ( i2cmux5_t *ctx, uint8_t sel_ch, uint8_t ch_slave_addr, uint8_t reg );
 ```
 
 ## Examples Description
 
-This app reads "Who am I" and "Status" register of the connected click boards to the I2C MUX 5 click.
+> This app reads "Who am I" and "Status" register of the connected click boards to the I2C MUX 5 click.
 
 **The demo application is composed of two sections :**
 
@@ -81,7 +78,8 @@ This app reads "Who am I" and "Status" register of the connected click boards to
 
 > Initializes I2C driver, set the default configuration and start to write log.
 
-```
+```c
+
 void application_init ( void ) {
     log_cfg_t log_cfg;  /**< Logger config object. */
     i2cmux5_cfg_t i2cmux5_cfg;  /**< Click config object. */
@@ -120,6 +118,7 @@ void application_init ( void ) {
     log_printf( &logger, "-------------------------------\r\n" );
     
 }
+
 ```
 
 ### Application Task
@@ -133,7 +132,7 @@ void application_init ( void ) {
 > Channel 4 : Accel 10 click    [slave address: 0x18; reg: 0x0F; ID val.: 0x44].
 > Results are being sent to the Usart Terminal where you can track their changes.
 
-```
+```c
 void application_task ( void ) {   
     
     rx_data = i2cmux5_channel_read_byte( &i2cmux5, I2CMUX5_CH_1, I2CMUX5_SET_6DOF_IMU_9_ADDR, 0x75 );

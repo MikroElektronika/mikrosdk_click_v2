@@ -1,0 +1,8 @@
+{
+    "name": "Pressure 22 Click",
+    "description": "Pressure 22 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the MS5839-02BA, an ultra-compact chlorine-resistant digital pressure and temperature sensor from TE Connectivity. The sensor is a small digital altimeter operating from 300 up to 1200mbar, optimized for applications where chlorine and saline are present. The sensor is filled with gel, which makes it robust, and enables it to work in harsh environments.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","MS5839-02BA"],
+    "category" : ["Click Boards > Sensors > Pressure"]
+}

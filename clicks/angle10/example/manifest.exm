@@ -2,7 +2,7 @@
     "name": "Angle 10 Click",
     "description": "Angle 10 Click is a compact add-on board that detects the absolute angular position of a permanent magnet. This board features the AS5070A, a high-resolution angular position sensor with an analog output for precise absolute angle measurement from ams AG. Based on a Hall sensor technology, the AS5070A measures the orthogonal component of the flux density over a full-turn rotation and compensates for external stray magnetic fields with a robust architecture based on a 14-bit sensor array and analog front-end. Only a simple two-pole magnet rotating over the center of the AS5070A is required to measure the angle, providing an instant indication of the magnet’s angular position.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","AS5070A"],
     "category" : ["Click Boards > Sensors > Magnetic"]
 }

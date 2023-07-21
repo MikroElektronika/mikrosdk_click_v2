@@ -2,7 +2,7 @@
     "name": "Hall Switch 2 Click",
     "description": "Hall Switch 2 Click is a compact add-on board that represents a magnetic field-activated dual-relay Click board™. This board features the MHA100KN, a high-performance, low-power Hall-Effect sensor from MEMSIC.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MHA100KN"],
     "category" : ["Magnetic"]
 }

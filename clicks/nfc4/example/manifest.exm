@@ -2,7 +2,7 @@
     "name": "NFC 4 Click",
     "description": "NFC 4 Click is a compact add-on board that contains an NFC transceiver for contactless communication. This board features the ST25R3916, a multi-purpose NFC transceiver supporting passive peer-to-peer functionality and NFC card-emulation mode, as well as NFC reader operation from STMicroelectronics. It features high RF output power to directly drive an antenna etched on the PCB, alongside its tuning circuit, at high efficiency.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ST25R3916"],
     "category" : ["RFID/NFC"]
 }

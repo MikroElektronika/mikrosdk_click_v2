@@ -2,7 +2,7 @@
     "name": "HW Monitor Click",
     "description": "HW Monitor Click is a compact add-on board used to monitor and regulate the performance of various hardware components within an embedded system. This board features the LM96080, an I2C-configurable system hardware monitor from Texas Instruments that contains a 10-bit delta-sigma ADC capable of measuring seven positive voltages and local temperature. The LM96080 also has two programmable fan speed monitoring inputs besides other hardware monitoring functions like chassis intrusion detection, additional external interrupt input, master reset for external purposes, as well as a sequencer that performs watchdog window comparisons of all measured values.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LM96080"],
     "category" : ["Click Boards > Power management > Power Switch"]
 }

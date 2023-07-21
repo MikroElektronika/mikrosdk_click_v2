@@ -112,6 +112,12 @@ void application_task ( void )
 
 ```
 
+## Note
+
+> The default baud rate for communication UART is set to 9600. If you receive
+a click board on which the default baud rate for UART is set differently,
+you will need to change the setting in the gnss13_setup_cfg function.
+
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
 **Other mikroE Libraries used in the example:** 

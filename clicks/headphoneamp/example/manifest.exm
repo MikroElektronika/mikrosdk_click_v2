@@ -2,7 +2,7 @@
     "name": "Headphone AMP Click",
     "description": "Headphone Amp Click is a compact add-on board that contains a stereo headphone amplifier. This board features the LM4811, Boomer® audio power amplifier capable of delivering 105mW per channel with digital volume control from Texas Instruments. The Boomer® amplifiers are specifically designed to provide high-quality output power with a minimal amount of external components. Since the LM4811 does not require bootstrap capacitors or snubber networks, it is optimally suited for low-power portable systems. It features a digital volume control that sets the amplifier's gain from +12dB to −33dB in 16 discrete steps, in addition to a micro-power consumption Shutdown mode.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LM4811"],
     "category" : ["Amplifier"]
 }

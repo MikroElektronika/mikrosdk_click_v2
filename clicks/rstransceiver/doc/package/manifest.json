@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Interface > RS485",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "RS Transceiver click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.rstransceiver",
+    "product_link": "https://www.mikroe.com/rs-transceiver-click",
+    "short_description": "RS Transceiver is a compact add-on board that offers an interface between the TTL level UART and RS-232/RS-422/RS-485 communication buses. This board features the XR34350, an RS-232/RS-422/RS-485 serial transceiver with internal termination and wide output swing from MaxLinear. Integrated cable termination and four configuration modes allow all three protocols to be used interchangeably over a single cable over the DE-9 connector. All transmitter outputs and receiver inputs feature robust ESD protection and HBM up to ±15kV.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.RSTransceiver",
+    "subdir_name": "lib_rstransceiver"
+}
+

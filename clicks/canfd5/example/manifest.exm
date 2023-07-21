@@ -2,7 +2,7 @@
     "name": "CAN FD 5 Click",
     "description": "CAN FD 5 Click is a compact add-on board that contains CAN transceiver that supports both CAN and CAN FD protocols.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
     "hw" : ["click","UJA1162A"],
     "category" : ["CAN"] 
 }

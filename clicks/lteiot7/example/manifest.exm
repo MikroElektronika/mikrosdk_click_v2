@@ -2,7 +2,7 @@
     "name": "LTE IoT 7 Click",
     "description": "LTE IoT 7 Click is an add-on board representing a secure-cloud multi-band solution designed for IoT applications. This board features the SARA-R422M8S, a multi-band LTE-M/NB-IoT/EGPRS multi-mode solution with integrated high-performance standard precision M8 GNSS receiver for global position acquisition from u-blox. Equipped with familiar AT commands set over the UART interface, USB interface, and Network and Status indicators, it also provides over-the-air firmware updates, end-to-end trusted domain security, and u-Blox’s leading GNSS technology.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
     "hw" : ["click","SARA-R422M8S"],
     "category" : ["Click Boards > Wireless connectivity > LTE IoT"]
 }

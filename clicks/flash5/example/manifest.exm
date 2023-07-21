@@ -2,7 +2,7 @@
     "name": "Flash 5 Click",
     "description": "Flash 5 Click is a perfect solution for the mass storage option in various embedded applications. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","W25N01GVZEIG"],
     "category" : ["Flash"] 
 }

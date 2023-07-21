@@ -2,7 +2,7 @@
     "name": "IR Gesture Click",
     "description": "IR Gesture Click is a mikroBUS add-on board that enables contactless gesture recognition, along with ambient light and proximity sensing capabilities with the APDS-9960 IC. This sensor integrates an LED and four directional photodiodes that receive the reflecting light.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","APDS-9960"],
     "category" : ["Motion"] 
 }

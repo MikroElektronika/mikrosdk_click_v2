@@ -2,7 +2,7 @@
     "name": "6DOF IMU 13 Click",
     "description": "6DOF IMU 13 Click is a compact add-on board that contains an eCompass that consists of a 3-axis linear accelerometer and a 3-axis magnetic field sensor. This board features the MC6470, an accelerometer and magnetometer for a 6 DoF (6 Degrees of Freedom) sensor solution, from mCube Inc.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MC6470"],
     "category" : ["Motion"]
 }

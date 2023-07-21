@@ -2,7 +2,7 @@
     "name": "GPS 5 Click",
     "description": "GPS 5 Click is a compact add-on board that provides users with positioning, navigation, and timing services. This board features the M20050-1, a compact GPS module receiver using the MediaTek MT3333 flash chip, providing a complete GNSS receiver for optimum performance from Antenova. The receiver tracks 3 GNSS constellations concurrently (GPS+Galileo+GLONASS or GPS+Beidou) to considerably enhance location and TTFF (Time-to-first-fix) and has configurable low power modes operating from a 3.3V power supply. In addition to the possibility of using an external antenna, backup power, and various visual indicators, the M20050-1 also has an accurate 0.5ppm TXCO ensuring short TTFF alongside multi-path algorithms, which improves position accuracy in inner-city environments.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
     "hw" : ["click","M20050-1"],
     "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"]
 }

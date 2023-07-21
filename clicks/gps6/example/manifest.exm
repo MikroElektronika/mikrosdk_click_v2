@@ -2,7 +2,7 @@
     "name": "GPS 6 Click",
     "description": "GPS 6 Click is a compact add-on board that provides users with positioning, navigation, and timing services. This board features the A2200-A, a GPS receiver module that enables fast acquisition and tracking with SiRFstar IV technology from Lantronix. This small-form-factor module operates with a frequency of 1,575GHz with accuracy from 2 up to 2.5m and fully addresses the demand for the lowest power consumption. The removal of jammers guarantees operation even in hostile environments. High sensitivity during acquisition or while tracking allows for use in many different backgrounds and under the most challenging operating conditions.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
     "hw" : ["click","A2200-A"],
     "category" : ["GPS/GNSS"]
 }
