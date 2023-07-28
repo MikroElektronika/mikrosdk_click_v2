@@ -198,174 +198,292 @@ void main ( void )
     }
 }
 
-#ifdef STM32F407ZG
-void pin_init( void ) 
-{ 
-    digital_in_t sio_in;
-    digital_in_init ( &sio_in, PD12 );
-}
+#ifdef __MIKROC_AI__
+    #ifdef STM32F407ZG
+        void pin_init( void ) 
+        { 
+            digital_in_t sio_in;
+            digital_in_init ( &sio_in, PD12 );
+        }
 
-void pin_low( void ) 
-{ 
-    if ( !GPIOD_MODER.B24 ) 
-    { 
-        GPIOD_MODER.B24 = 1; 
-    }
-    GPIOD_ODR.B12 = 0;
-}
+        void pin_low( void ) 
+        { 
+            if ( !GPIOD_MODER.B24 ) 
+            { 
+                GPIOD_MODER.B24 = 1; 
+            }
+            GPIOD_ODR.B12 = 0;
+        }
 
-void pin_release( void )
-{ 
-    if ( GPIOD_MODER.B24 ) 
-    { 
-        GPIOD_MODER.B24 = 0; 
-    }
-}
+        void pin_release( void )
+        { 
+            if ( GPIOD_MODER.B24 ) 
+            { 
+                GPIOD_MODER.B24 = 0; 
+            }
+        }
 
-uint8_t pin_get( void )
-{
-    if ( GPIOD_MODER.B24 ) 
-    { 
-        GPIOD_MODER.B24 = 0; 
-    }
-    return GPIOD_IDR.B12;
-}
-#elif MK64FN1M0VDC12
-void pin_init( void ) 
-{ 
-    digital_in_t sio_in;
-    digital_in_init ( &sio_in, PE6 );
-}
+        uint8_t pin_get( void )
+        {
+            if ( GPIOD_MODER.B24 ) 
+            { 
+                GPIOD_MODER.B24 = 0; 
+            }
+            return GPIOD_IDR.B12;
+        }
+    #elif MK64FN1M0VDC12
+        void pin_init( void ) 
+        { 
+            digital_in_t sio_in;
+            digital_in_init ( &sio_in, PE6 );
+        }
 
-void pin_low( void ) 
-{ 
-    if ( !GPIOE_PDDR.B6 ) 
-    { 
-        GPIOE_PDDR.B6 = 1; 
-    }
-    GPIOE_PDOR.B6 = 0;
-}
+        void pin_low( void ) 
+        { 
+            if ( !GPIOE_PDDR.B6 ) 
+            { 
+                GPIOE_PDDR.B6 = 1; 
+            }
+            GPIOE_PDOR.B6 = 0;
+        }
 
-void pin_release( void )
-{ 
-    if ( GPIOE_PDDR.B6 ) 
-    { 
-        GPIOE_PDDR.B6 = 0; 
-    }
-}
+        void pin_release( void )
+        { 
+            if ( GPIOE_PDDR.B6 ) 
+            { 
+                GPIOE_PDDR.B6 = 0; 
+            }
+        }
 
-uint8_t pin_get( void )
-{
-    if ( GPIOE_PDDR.B6 ) 
-    { 
-        GPIOE_PDDR.B6 = 0; 
-    }
-    return GPIOE_PDIR.B6;
-}
-#elif TM4C129XNCZAD
-void pin_init( void ) 
-{ 
-    digital_in_t sio_in;
-    digital_in_init ( &sio_in, PD0 );
-}
+        uint8_t pin_get( void )
+        {
+            if ( GPIOE_PDDR.B6 ) 
+            { 
+                GPIOE_PDDR.B6 = 0; 
+            }
+            return GPIOE_PDIR.B6;
+        }
+    #elif TM4C129XNCZAD
+        void pin_init( void ) 
+        { 
+            digital_in_t sio_in;
+            digital_in_init ( &sio_in, PD0 );
+        }
 
-void pin_low( void ) 
-{ 
-    if ( !GPIO_PORTD_AHB_DIR.B0 ) 
-    { 
-        GPIO_PORTD_AHB_DIR.B0 = 1; 
-    }
-    GPIO_PORTD_AHB_DATA.B0 = 0;
-}
+        void pin_low( void ) 
+        { 
+            if ( !GPIO_PORTD_AHB_DIR.B0 ) 
+            { 
+                GPIO_PORTD_AHB_DIR.B0 = 1; 
+            }
+            GPIO_PORTD_AHB_DATA.B0 = 0;
+        }
 
-void pin_release( void )
-{ 
-    if ( GPIO_PORTD_AHB_DIR.B0 ) 
-    { 
-        GPIO_PORTD_AHB_DIR.B0 = 0; 
-    }
-}
+        void pin_release( void )
+        { 
+            if ( GPIO_PORTD_AHB_DIR.B0 ) 
+            { 
+                GPIO_PORTD_AHB_DIR.B0 = 0; 
+            }
+        }
 
-uint8_t pin_get( void )
-{
-    if ( GPIO_PORTD_AHB_DIR.B0 ) 
-    { 
-        GPIO_PORTD_AHB_DIR.B0 = 0; 
-    }
-    return GPIO_PORTD_AHB_DATA.B0;
-}
-#elif GD32VF103VBT6
-#define GPIOC9_CTL1_MASK    ( ( uint32_t ) 0x000000F0 )
-#define GPIOC9_IO_MASK      ( ( uint32_t ) 0x00000200 )
-#define GPIOC_CTL1          ( *( uint32_t * ) 0x40011004 )
-#define GPIOC_ISTAT         ( *( uint32_t * ) 0x40011008 )
-#define GPIOC_OCTL          ( *( uint32_t * ) 0x4001100C )
+        uint8_t pin_get( void )
+        {
+            if ( GPIO_PORTD_AHB_DIR.B0 ) 
+            { 
+                GPIO_PORTD_AHB_DIR.B0 = 0; 
+            }
+            return GPIO_PORTD_AHB_DATA.B0;
+        }
+    #elif PIC32MX795F512L
+        void pin_init( void ) 
+        { 
+            digital_in_t sio_in;
+            digital_in_init ( &sio_in, PD1 );
+        }
 
-void pin_init( void ) 
-{
-    static digital_in_t sio_in;
-    digital_in_init ( &sio_in, PC9 );
-}
+        void pin_low( void ) 
+        { 
+            if ( TRISD1_bit ) 
+            { 
+                TRISD1_bit = 0; 
+            }
+            LATD1_bit = 0;
+        }
 
-void pin_low( void ) 
-{ 
-    if ( ( GPIO_CFG_DIGITAL_INPUT << 4 ) == ( GPIOC_CTL1 & GPIOC9_CTL1_MASK ) ) 
-    { 
-        GPIOC_CTL1 = ( GPIOC_CTL1 & ~( GPIOC9_CTL1_MASK ) ) | ( GPIO_CFG_DIGITAL_OUTPUT << 4 );
-    }
-    GPIOC_OCTL &= ~GPIOC9_IO_MASK;
-}
+        void pin_release( void )
+        { 
+            if ( !TRISD1_bit ) 
+            { 
+                TRISD1_bit = 1; 
+            }
+        }
 
-void pin_release( void )
-{ 
-    if ( ( GPIO_CFG_DIGITAL_OUTPUT << 4 ) == ( GPIOC_CTL1 & GPIOC9_CTL1_MASK ) ) 
-    { 
-        GPIOC_CTL1 = ( GPIOC_CTL1 & ~( GPIOC9_CTL1_MASK ) ) | ( GPIO_CFG_DIGITAL_INPUT << 4 );
-    }
-}
+        uint8_t pin_get( void )
+        {
+            if ( !TRISD1_bit ) 
+            { 
+                TRISD1_bit = 1; 
+            }
+            return RD1_bit;
+        }
+    #elif dsPIC33FJ256GP710A
+        void pin_init( void ) 
+        { 
+            digital_in_t sio_in;
+            digital_in_init ( &sio_in, PD1 );
+        }
 
-uint8_t pin_get( void )
-{
-    if ( ( GPIO_CFG_DIGITAL_OUTPUT << 4 ) == ( GPIOC_CTL1 & GPIOC9_CTL1_MASK ) ) 
-    { 
-        GPIOC_CTL1 = ( GPIOC_CTL1 & ~( GPIOC9_CTL1_MASK ) ) | ( GPIO_CFG_DIGITAL_INPUT << 4 );
-    }
-    return ( GPIOC9_IO_MASK == ( GPIOC_ISTAT & GPIOC9_IO_MASK ) );
-}
-#elif PIC32MX795F512L
-void pin_init( void ) 
-{ 
-    digital_in_t sio_in;
-    digital_in_init ( &sio_in, PD1 );
-}
+        void pin_low( void ) 
+        { 
+            if ( TRISD1_bit ) 
+            { 
+                TRISD1_bit = 0; 
+            }
+            LATD1_bit = 0;
+        }
 
-void pin_low( void ) 
-{ 
-    if ( TRISD1_bit ) 
-    { 
-        TRISD1_bit = 0; 
-    }
-    LATD1_bit = 0;
-}
+        void pin_release( void )
+        { 
+            if ( !TRISD1_bit ) 
+            { 
+                TRISD1_bit = 1; 
+            }
+        }
 
-void pin_release( void )
-{ 
-    if ( !TRISD1_bit ) 
-    { 
-        TRISD1_bit = 1; 
-    }
-}
+        uint8_t pin_get( void )
+        {
+            if ( !TRISD1_bit ) 
+            { 
+                TRISD1_bit = 1; 
+            }
+            return RD1_bit;
+        }
+    #else
+        #error "Pin functions are not defined for the selected MCU"
+    #endif
+#elif __GNUC__
+    #ifdef STM32F407ZG
+        #define GPIOD_MODER             ( *( uint32_t * ) 0x40020C00 )
+        #define GPIOD_IDR               ( *( uint32_t * ) 0x40020C10 )
+        #define GPIOD_ODR               ( *( uint32_t * ) 0x40020C14 )
+        #define GPIO_MODER_PIN12_MASK   ( ( uint32_t ) 3 << 24 )
+        #define GPIO_MODER_PIN12_INPUT  ( ( uint32_t ) 0 << 24 )
+        #define GPIO_MODER_PIN12_OUTPUT ( ( uint32_t ) 1 << 24 )
+        #define GPIO_PIN12_MASK         ( ( uint32_t ) 1 << 12 )
+        void pin_init( void ) 
+        { 
+            digital_in_t sio_in;
+            digital_in_init ( &sio_in, PD12 );
+        }
 
-uint8_t pin_get( void )
-{
-    if ( !TRISD1_bit ) 
-    { 
-        TRISD1_bit = 1; 
-    }
-    return RD1_bit;
-}
+        void pin_low( void ) 
+        { 
+            if ( GPIO_MODER_PIN12_OUTPUT != ( GPIOD_MODER & GPIO_MODER_PIN12_MASK ) ) 
+            { 
+                GPIOD_MODER &= ~GPIO_MODER_PIN12_MASK;
+                GPIOD_MODER |= GPIO_MODER_PIN12_OUTPUT;
+            }
+            GPIOD_ODR &= ~GPIO_PIN12_MASK;
+        }
+
+        void pin_release( void )
+        { 
+            if ( GPIO_MODER_PIN12_INPUT != ( GPIOD_MODER & GPIO_MODER_PIN12_MASK ) ) 
+            { 
+                GPIOD_MODER &= ~GPIO_MODER_PIN12_MASK;
+            }
+        }
+    
+        uint8_t pin_get( void )
+        {
+            if ( GPIO_MODER_PIN12_INPUT != ( GPIOD_MODER & GPIO_MODER_PIN12_MASK ) ) 
+            { 
+                GPIOD_MODER &= ~GPIO_MODER_PIN12_MASK;
+            }
+            return ( GPIO_PIN12_MASK == ( GPIOD_IDR & GPIO_PIN12_MASK ) );
+        }
+    #elif MK64
+        #define GPIOE_PDOR              ( *( uint32_t * ) 0x400FF100 )
+        #define GPIOE_PDIR              ( *( uint32_t * ) 0x400FF110 )
+        #define GPIOE_PDDR              ( *( uint32_t * ) 0x400FF114 )
+        #define GPIO_PDDR_PIN6_INPUT    ( ( uint32_t ) 0 << 6 )
+        #define GPIO_PDDR_PIN6_OUTPUT   ( ( uint32_t ) 1 << 6 )
+        #define GPIO_PIN6_MASK          ( ( uint32_t ) 1 << 6 )
+        void pin_init( void ) 
+        { 
+            digital_in_t sio_in;
+            digital_in_init ( &sio_in, PE6 );
+        }
+
+        void pin_low( void ) 
+        { 
+            if ( GPIO_PDDR_PIN6_OUTPUT != ( GPIOE_PDDR & GPIO_PIN6_MASK ) ) 
+            { 
+                GPIOE_PDDR |= GPIO_PDDR_PIN6_OUTPUT;
+            }
+            GPIOE_PDOR &= ~GPIO_PIN6_MASK;
+        }
+
+        void pin_release( void )
+        { 
+            if ( GPIO_PDDR_PIN6_INPUT != ( GPIOE_PDDR & GPIO_PIN6_MASK ) ) 
+            { 
+                GPIOE_PDDR &= ~GPIO_PDDR_PIN6_OUTPUT;
+            }
+        }
+    
+        uint8_t pin_get( void )
+        {
+            if ( GPIO_PDDR_PIN6_INPUT != ( GPIOE_PDDR & GPIO_PIN6_MASK ) ) 
+            { 
+                GPIOE_PDDR &= ~GPIO_PDDR_PIN6_OUTPUT;
+            }
+            return ( GPIO_PIN6_MASK == ( GPIOE_PDIR & GPIO_PIN6_MASK ) );
+        }
+    #elif GD32VF103VBT6
+        #define GPIOC9_CTL1_MASK    ( ( uint32_t ) 0x000000F0 )
+        #define GPIOC9_IO_MASK      ( ( uint32_t ) 0x00000200 )
+        #define GPIOC_CTL1          ( *( uint32_t * ) 0x40011004 )
+        #define GPIOC_ISTAT         ( *( uint32_t * ) 0x40011008 )
+        #define GPIOC_OCTL          ( *( uint32_t * ) 0x4001100C )
+
+        void pin_init( void ) 
+        {
+            static digital_in_t sio_in;
+            digital_in_init ( &sio_in, PC9 );
+        }
+
+        void pin_low( void ) 
+        { 
+            if ( ( GPIO_CFG_DIGITAL_INPUT << 4 ) == ( GPIOC_CTL1 & GPIOC9_CTL1_MASK ) ) 
+            { 
+                GPIOC_CTL1 = ( GPIOC_CTL1 & ~( GPIOC9_CTL1_MASK ) ) | ( GPIO_CFG_DIGITAL_OUTPUT << 4 );
+            }
+            GPIOC_OCTL &= ~GPIOC9_IO_MASK;
+        }
+
+        void pin_release( void )
+        { 
+            if ( ( GPIO_CFG_DIGITAL_OUTPUT << 4 ) == ( GPIOC_CTL1 & GPIOC9_CTL1_MASK ) ) 
+            { 
+                GPIOC_CTL1 = ( GPIOC_CTL1 & ~( GPIOC9_CTL1_MASK ) ) | ( GPIO_CFG_DIGITAL_INPUT << 4 );
+            }
+        }
+
+        uint8_t pin_get( void )
+        {
+            if ( ( GPIO_CFG_DIGITAL_OUTPUT << 4 ) == ( GPIOC_CTL1 & GPIOC9_CTL1_MASK ) ) 
+            { 
+                GPIOC_CTL1 = ( GPIOC_CTL1 & ~( GPIOC9_CTL1_MASK ) ) | ( GPIO_CFG_DIGITAL_INPUT << 4 );
+            }
+            return ( GPIOC9_IO_MASK == ( GPIOC_ISTAT & GPIOC9_IO_MASK ) );
+        }
+    #else
+        #error "Pin functions are not defined for the selected MCU"
+    #endif
 #else
-    #error "Pin functions are not defined for the selected system"
+    #error "Pin functions are not defined for the selected toolchain"
 #endif
 
 static err_t swieeprom_reset ( void )
@@ -388,7 +506,7 @@ static err_t swieeprom_reset ( void )
     Delay_1us( );
     pin_release ( );
     // tDACK delay: 8-24us
-    Delay_10us( );
+    Delay_9us( );
     
     if ( pin_get ( ) )
     {

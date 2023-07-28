@@ -108,9 +108,9 @@ void rn4678_generic_write ( rn4678_t *ctx, char *data_buf, uint16_t len )
 void rn4678_write_command ( rn4678_t *ctx, char *data_buf, uint16_t len )
 {
     uint8_t tmp_buf[ 30 ] = { 0 };
-    uint8_t carriage_return = '\r';
+    uint8_t carriage_return[ ] = "\r";
     memcpy( tmp_buf, data_buf, len );
-    strcat( tmp_buf, &carriage_return );
+    strcat( tmp_buf, carriage_return );
     
     digital_out_high( &ctx->cts );
     Delay_1ms( );
