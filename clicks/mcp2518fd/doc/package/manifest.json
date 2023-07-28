@@ -1,0 +1,38 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Interface > CAN",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "MCP2518FD click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.mcp2518fd",
+    "product_link": "https://www.mikroe.com/mcp2518fd-click",
+    "short_description": "MCP2518FD Click is a compact add-on board representing a complete CAN solution used as a control node in a CAN network. This board features the MCP2518FD, an external CAN FD controller with an SPI interface, and a high-speed CAN transceiver, the ATA6563, both from Microchip. The ATA6563, a low-level physical layer IC (PHY), provides a physical connection with the CAN bus itself, while the CAN controller MCP2518FD represents an interface between the MCU and the PHY. It features three operating modes with dedicated fail-safe features, remote wake-up via CAN, and ideally passive behavior when powered off on the CAN bus. This Click board™ is suitable for developing a wide range of automotive diagnostic applications, even on MCUs that do not natively support CAN interface.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "related_projects": [
+        2452
+    ],
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.0",
+    "cmake": true,
+    "alias": "Click.MCP2518FD",
+    "subdir_name": "lib_mcp2518fd"
+}

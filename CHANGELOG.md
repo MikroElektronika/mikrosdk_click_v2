@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230728](#20230728)**
 + **[20230721](#20230721)**
 + **[20230706](#20230706)**
 + **[20230630](#20230630)**
@@ -55,6 +56,36 @@
 
 ---
 ---
+---
+
+## `20230728`
+
+*Following click boards have been added:*
+
++ `AM/FM 2`
++ `Smart DOF 3`
++ `Diff Press 3`
++ `Hall Current 16`
++ `MP3`
++ `MCP2517FD`
++ `MCP2518FD`
++ `DMX`
++ `ccRF`
++ `AnyNet 3G-EA`
++ `AnyNet 3G-AA`
++ `AnyNet 2G`
+
+*Following click boards have been updated:*
+
++ `10x10 RGB`
++ `4x4 RGB`
++ `7-SEG RGB`
++ `SWI EEPROM`
++ `RN4678`
++ `eINK`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230721`
