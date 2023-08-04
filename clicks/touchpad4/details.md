@@ -42,12 +42,12 @@ void touchpad4_cfg_setup ( touchpad4_cfg_t *cfg );
 
 - `touchpad4_init` Initialization function.
 ```c
-TOUCHPAD4_RETVAL touchpad4_init ( touchpad4_t *ctx, touchpad4_cfg_t *cfg );
+err_t touchpad4_init ( touchpad4_t *ctx, touchpad4_cfg_t *cfg );
 ```
 
 - `touchpad4_default_cfg` Click Default Configuration function.
 ```c
-void touchpad4_default_cfg ( touchpad4_t *ctx );
+err_t touchpad4_default_cfg ( touchpad4_t *ctx );
 ```
 
 #### Example key functions :

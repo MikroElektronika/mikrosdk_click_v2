@@ -64,158 +64,156 @@
  * \defgroup communication Select communication
  * \{
  */
-#define WEATHER_MASTER_I2C 0
-#define WEATHER_MASTER_SPI 1
+#define WEATHER_MASTER_I2C                  0
+#define WEATHER_MASTER_SPI                  1
 /** \} */
 
 /**
  * \defgroup error_code Error Code
  * \{
  */
-#define WEATHER_RETVAL  uint8_t
-
-#define WEATHER_OK           0x00
-#define WEATHER_INIT_ERROR   0xFF
+#define WEATHER_OK                          0
+#define WEATHER_ERROR                      -1
 /** \} */
 
 /**
  * \defgroup default_variables Default variables
  * \{
  */
-#define WEATHER_DEF_CHIP_ID 0x60
-#define WEATHER_SOFT_RESET 0xB6
+#define WEATHER_DEF_CHIP_ID                 0x60
+#define WEATHER_SOFT_RESET                  0xB6
 /** \} */
 
 /**
  * \defgroup i2c_slave_address Slave address
  * \{
  */
-#define WEATHER_I2C_ADDRESS_0 0x76
-#define WEATHER_I2C_ADDRESS_1 0x77
+#define WEATHER_I2C_ADDRESS_0               0x76
+#define WEATHER_I2C_ADDRESS_1               0x77
 /** \} */
 
 /**
  * \defgroup registers Registers
  * \{
  */
-#define WEATHER_REG_CHIP_ID          0xD0
-#define WEATHER_REG_RESET            0xE0
-#define WEATHER_REG_STATUS           0xF3
-#define WEATHER_REG_CTRL_MEASUREMENT 0xF4
-#define WEATHER_REG_CTRL_HUMIDITY    0xF2
-#define WEATHER_REG_CONFIG           0xF5
-#define WEATHER_REG_RAW_DATA         0xF7
-#define WEATHER_REG_PRESSURE_MSB     0xF7
-#define WEATHER_REG_PRESSURE_LSB     0xF8
-#define WEATHER_REG_PRESSURE_XLSB    0xF9
-#define WEATHER_REG_TEMPERATURE_MSB  0xFA
-#define WEATHER_REG_TEMPERATURE_LSB  0xFB
-#define WEATHER_REG_TEMPERATURE_XLSB 0xFC
-#define WEATHER_REG_HUMIDITY_MSB     0xFD
-#define WEATHER_REG_HUMIDITY_LSB     0xFE
+#define WEATHER_REG_CHIP_ID                 0xD0
+#define WEATHER_REG_RESET                   0xE0
+#define WEATHER_REG_STATUS                  0xF3
+#define WEATHER_REG_CTRL_MEASUREMENT        0xF4
+#define WEATHER_REG_CTRL_HUMIDITY           0xF2
+#define WEATHER_REG_CONFIG                  0xF5
+#define WEATHER_REG_RAW_DATA                0xF7
+#define WEATHER_REG_PRESSURE_MSB            0xF7
+#define WEATHER_REG_PRESSURE_LSB            0xF8
+#define WEATHER_REG_PRESSURE_XLSB           0xF9
+#define WEATHER_REG_TEMPERATURE_MSB         0xFA
+#define WEATHER_REG_TEMPERATURE_LSB         0xFB
+#define WEATHER_REG_TEMPERATURE_XLSB        0xFC
+#define WEATHER_REG_HUMIDITY_MSB            0xFD
+#define WEATHER_REG_HUMIDITY_LSB            0xFE
 /** \} */
 
 /**
  * \defgroup calibration_parameters Calibration parameters
  * \{
  */
-#define WEATHER_REG_CALIB_TEMPERATURE 0x88
-#define WEATHER_REG_CALIB_TEMP_1_LSB  0x88
-#define WEATHER_REG_CALIB_TEMP_1_MSB  0x89
-#define WEATHER_REG_CALIB_TEMP_2_LSB  0x8A
-#define WEATHER_REG_CALIB_TEMP_2_MSB  0x8B
-#define WEATHER_REG_CALIB_TEMP_3_LSB  0x8C
-#define WEATHER_REG_CALIB_TEMP_3_MSB  0x8D
+#define WEATHER_REG_CALIB_TEMPERATURE       0x88
+#define WEATHER_REG_CALIB_TEMP_1_LSB        0x88
+#define WEATHER_REG_CALIB_TEMP_1_MSB        0x89
+#define WEATHER_REG_CALIB_TEMP_2_LSB        0x8A
+#define WEATHER_REG_CALIB_TEMP_2_MSB        0x8B
+#define WEATHER_REG_CALIB_TEMP_3_LSB        0x8C
+#define WEATHER_REG_CALIB_TEMP_3_MSB        0x8D
 
-#define WEATHER_REG_CALIB_PRESSURE    0x8E
-#define WEATHER_REG_CALIB_PRESS_1_LSB 0x8E
-#define WEATHER_REG_CALIB_PRESS_1_MSB 0x8F
-#define WEATHER_REG_CALIB_PRESS_2_LSB 0x90
-#define WEATHER_REG_CALIB_PRESS_2_MSB 0x91
-#define WEATHER_REG_CALIB_PRESS_3_LSB 0x92
-#define WEATHER_REG_CALIB_PRESS_3_MSB 0x93
-#define WEATHER_REG_CALIB_PRESS_4_LSB 0x94
-#define WEATHER_REG_CALIB_PRESS_4_MSB 0x95
-#define WEATHER_REG_CALIB_PRESS_5_LSB 0x96
-#define WEATHER_REG_CALIB_PRESS_5_MSB 0x97
-#define WEATHER_REG_CALIB_PRESS_6_LSB 0x98
-#define WEATHER_REG_CALIB_PRESS_6_MSB 0x99
-#define WEATHER_REG_CALIB_PRESS_7_LSB 0x9A
-#define WEATHER_REG_CALIB_PRESS_7_MSB 0x9B
-#define WEATHER_REG_CALIB_PRESS_8_LSB 0x9C
-#define WEATHER_REG_CALIB_PRESS_8_MSB 0x9D
-#define WEATHER_REG_CALIB_PRESS_9_LSB 0x9E
-#define WEATHER_REG_CALIB_PRESS_9_MSB 0x9F
+#define WEATHER_REG_CALIB_PRESSURE          0x8E
+#define WEATHER_REG_CALIB_PRESS_1_LSB       0x8E
+#define WEATHER_REG_CALIB_PRESS_1_MSB       0x8F
+#define WEATHER_REG_CALIB_PRESS_2_LSB       0x90
+#define WEATHER_REG_CALIB_PRESS_2_MSB       0x91
+#define WEATHER_REG_CALIB_PRESS_3_LSB       0x92
+#define WEATHER_REG_CALIB_PRESS_3_MSB       0x93
+#define WEATHER_REG_CALIB_PRESS_4_LSB       0x94
+#define WEATHER_REG_CALIB_PRESS_4_MSB       0x95
+#define WEATHER_REG_CALIB_PRESS_5_LSB       0x96
+#define WEATHER_REG_CALIB_PRESS_5_MSB       0x97
+#define WEATHER_REG_CALIB_PRESS_6_LSB       0x98
+#define WEATHER_REG_CALIB_PRESS_6_MSB       0x99
+#define WEATHER_REG_CALIB_PRESS_7_LSB       0x9A
+#define WEATHER_REG_CALIB_PRESS_7_MSB       0x9B
+#define WEATHER_REG_CALIB_PRESS_8_LSB       0x9C
+#define WEATHER_REG_CALIB_PRESS_8_MSB       0x9D
+#define WEATHER_REG_CALIB_PRESS_9_LSB       0x9E
+#define WEATHER_REG_CALIB_PRESS_9_MSB       0x9F
 
-#define WEATHER_REG_CALIB_HUMIDITY  0xA1
-#define WEATHER_REG_CALIB_HUM_1     0xA1
-#define WEATHER_REG_CALIB_HUM_2_LSB 0xE1
-#define WEATHER_REG_CALIB_HUM_2_MSB 0xE2
-#define WEATHER_REG_CALIB_HUM_3     0xE3
-#define WEATHER_REG_CALIB_HUM_4_MSB 0xE4
-#define WEATHER_REG_CALIB_HUM_4_LSB 0xE5
-#define WEATHER_REG_CALIB_HUM_5_MSB 0xE6
-#define WEATHER_REG_CALIB_HUM_6     0xE7
+#define WEATHER_REG_CALIB_HUMIDITY          0xA1
+#define WEATHER_REG_CALIB_HUM_1             0xA1
+#define WEATHER_REG_CALIB_HUM_2_LSB         0xE1
+#define WEATHER_REG_CALIB_HUM_2_MSB         0xE2
+#define WEATHER_REG_CALIB_HUM_3             0xE3
+#define WEATHER_REG_CALIB_HUM_4_MSB         0xE4
+#define WEATHER_REG_CALIB_HUM_4_LSB         0xE5
+#define WEATHER_REG_CALIB_HUM_5_MSB         0xE6
+#define WEATHER_REG_CALIB_HUM_6             0xE7
 /** \} */
 
 /**
  * \defgroup ctrl_humidity CRTL humidity register
  * \{
  */
-#define WEATHER_HUM_OS_SKIPPED 0x00
-#define WEATHER_HUM_OS_1X      0x01
-#define WEATHER_HUM_OS_2X      0x02
-#define WEATHER_HUM_OS_4X      0x03
-#define WEATHER_HUM_OS_8X      0x04
-#define WEATHER_HUM_OS_16X     0x05
+#define WEATHER_HUM_OS_SKIPPED              0x00
+#define WEATHER_HUM_OS_1X                   0x01
+#define WEATHER_HUM_OS_2X                   0x02
+#define WEATHER_HUM_OS_4X                   0x03
+#define WEATHER_HUM_OS_8X                   0x04
+#define WEATHER_HUM_OS_16X                  0x05
 /** \} */
 
 /**
  * \defgroup status Status register
  * \{
  */
-#define WEATHER_STATUS_MEASURING 0x08
-#define WEATHER_STATUS_IM_UPDATE 0x01
+#define WEATHER_STATUS_MEASURING            0x08
+#define WEATHER_STATUS_IM_UPDATE            0x01
 /** \} */
 
 /**
  * \defgroup ctrl_measurement CRTL measurement register
  * \{
  */
-#define WEATHER_MCTRL_PRESS_OS_SKIPPED 0x00;
-#define WEATHER_MCTRL_PRESS_OS_1X      ( 0x01<<2 )
-#define WEATHER_MCTRL_PRESS_OS_2X      ( 0x02<<2 )
-#define WEATHER_MCTRL_PRESS_OS_4X      ( 0x03<<2 )
-#define WEATHER_MCTRL_PRESS_OS_8X      ( 0x04<<2 )
-#define WEATHER_MCTRL_PRESS_OS_16X     ( 0x05<<2 )
-#define WEATHER_MCTRL_TEMP_OS_SKIPPED  0x00
-#define WEATHER_MCTRL_TEMP_OS_1X       ( 0x01<<5 )
-#define WEATHER_MCTRL_TEMP_OS_2X       ( 0x02<<5 )
-#define WEATHER_MCTRL_TEMP_OS_4X       ( 0x03<<5 )
-#define WEATHER_MCTRL_TEMP_OS_8X       ( 0x04<<5 )
-#define WEATHER_MCTRL_TEMP_OS_16X      ( 0x05<<5 )
-#define WEATHER_MCTRL_MODE_SLEEP       0x00
-#define WEATHER_MCTRL_MODE_FORCED      0x01
-#define WEATHER_MCTRL_MODE_NORMAL      0x03
+#define WEATHER_MCTRL_PRESS_OS_SKIPPED      0x00;
+#define WEATHER_MCTRL_PRESS_OS_1X           ( 0x01<<2 )
+#define WEATHER_MCTRL_PRESS_OS_2X           ( 0x02<<2 )
+#define WEATHER_MCTRL_PRESS_OS_4X           ( 0x03<<2 )
+#define WEATHER_MCTRL_PRESS_OS_8X           ( 0x04<<2 )
+#define WEATHER_MCTRL_PRESS_OS_16X          ( 0x05<<2 )
+#define WEATHER_MCTRL_TEMP_OS_SKIPPED       0x00
+#define WEATHER_MCTRL_TEMP_OS_1X            ( 0x01<<5 )
+#define WEATHER_MCTRL_TEMP_OS_2X            ( 0x02<<5 )
+#define WEATHER_MCTRL_TEMP_OS_4X            ( 0x03<<5 )
+#define WEATHER_MCTRL_TEMP_OS_8X            ( 0x04<<5 )
+#define WEATHER_MCTRL_TEMP_OS_16X           ( 0x05<<5 )
+#define WEATHER_MCTRL_MODE_SLEEP            0x00
+#define WEATHER_MCTRL_MODE_FORCED           0x01
+#define WEATHER_MCTRL_MODE_NORMAL           0x03
 /** \} */
 
 /**
  * \defgroup config Config register
  * \{
  */
-#define WEATHER_CFG_STANDBY_TIME_0p5ms  0x00
-#define WEATHER_CFG_STANDBY_TIME_62p5ms ( 0x01<<5 )
-#define WEATHER_CFG_STANDBY_TIME_125ms  ( 0x02<<5 )
-#define WEATHER_CFG_STANDBY_TIME_250ms  ( 0x03<<5 )
-#define WEATHER_CFG_STANDBY_TIME_500ms  ( 0x04<<5 )
-#define WEATHER_CFG_STANDBY_TIME_1000ms ( 0x05<<5 )
-#define WEATHER_CFG_STANDBY_TIME_10ms   ( 0x06<<5 )
-#define WEATHER_CFG_STANDBY_TIME_20ms   ( 0x07<<5 )
-#define WEATHER_CFG_FILTER_OFF          0x00
-#define WEATHER_CFG_FILTER_2            ( 0x01<<2 )
-#define WEATHER_CFG_FILTER_4            ( 0x02<<2 )
-#define WEATHER_CFG_FILTER_8            ( 0x03<<2 )
-#define WEATHER_CFG_FILTER_16           ( 0x04<<2 )
+#define WEATHER_CFG_STANDBY_TIME_0p5ms      0x00
+#define WEATHER_CFG_STANDBY_TIME_62p5ms     ( 0x01<<5 )
+#define WEATHER_CFG_STANDBY_TIME_125ms      ( 0x02<<5 )
+#define WEATHER_CFG_STANDBY_TIME_250ms      ( 0x03<<5 )
+#define WEATHER_CFG_STANDBY_TIME_500ms      ( 0x04<<5 )
+#define WEATHER_CFG_STANDBY_TIME_1000ms     ( 0x05<<5 )
+#define WEATHER_CFG_STANDBY_TIME_10ms       ( 0x06<<5 )
+#define WEATHER_CFG_STANDBY_TIME_20ms       ( 0x07<<5 )
+#define WEATHER_CFG_FILTER_OFF              0x00
+#define WEATHER_CFG_FILTER_2                ( 0x01<<2 )
+#define WEATHER_CFG_FILTER_4                ( 0x02<<2 )
+#define WEATHER_CFG_FILTER_8                ( 0x03<<2 )
+#define WEATHER_CFG_FILTER_16               ( 0x04<<2 )
 /** \} */
 
 /** \} */ // End group macro 
@@ -226,34 +224,63 @@
  */
 
 /**
- * @brief Communication type.
- */
-typedef uint8_t  weather_select_t;
-
-/**
  * @brief Master Input/Output type.
  */
-typedef void ( *weather_master_io_t )( struct weather_s*, uint8_t, uint8_t*, uint8_t );
+typedef err_t ( *weather_master_io_t )( struct weather_s*, uint8_t, uint8_t*, uint8_t );
+
+typedef struct
+{
+    // Temperature digital value
+    uint16_t temp_1;
+    int16_t  temp_2;
+    int16_t  temp_3;
+    // Humidity digital value
+    uint8_t  hum_1;
+    int16_t  hum_2;
+    uint8_t  hum_3;
+    int16_t  hum_4;
+    int16_t  hum_5;
+    int8_t   hum_6;
+    // Pressure digital value
+    uint16_t press_1;
+    int16_t  press_2;
+    int16_t  press_3;
+    int16_t  press_4;
+    int16_t  press_5;
+    int16_t  press_6;
+    int16_t  press_7;
+    int16_t  press_8;
+    int16_t  press_9;
+
+    int32_t  t_fine;
+
+} weather_digital_data_t;
+
+typedef struct
+{
+    uint32_t temperature;
+    uint32_t pressure;
+    uint32_t humidity;
+
+} weather_raw_data_t;
 
 /**
  * @brief Click ctx object definition.
  */
 typedef struct weather_s
 {
-    digital_out_t cs;
-
     // Modules 
-
     i2c_master_t i2c;
     spi_master_t spi;
 
     // ctx variable 
-
     uint8_t slave_address;
     pin_name_t chip_select;
-   weather_master_io_t  write_f;
-   weather_master_io_t  read_f;
-   weather_select_t master_sel;
+    weather_master_io_t write_f;
+    weather_master_io_t read_f;
+    uint8_t master_sel;
+    
+    weather_digital_data_t calib_params;
 
 } weather_t;
 
@@ -263,7 +290,6 @@ typedef struct weather_s
 typedef struct
 {
    // Communication gpio pins 
-
    pin_name_t scl;
    pin_name_t sda;
    pin_name_t miso;
@@ -272,7 +298,6 @@ typedef struct
    pin_name_t cs;
 
    // static variable 
-
    uint32_t i2c_speed;
    uint8_t  i2c_address;
 
@@ -280,7 +305,7 @@ typedef struct
    spi_master_mode_t  spi_mode;
    spi_master_chip_select_polarity_t cs_polarity;
 
-   weather_select_t sel;
+   uint8_t sel;
 
 } weather_cfg_t;
 
@@ -328,7 +353,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @details This function initializes click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void weather_cfg_setup ( weather_cfg_t *cfg );
@@ -338,16 +363,16 @@ void weather_cfg_setup ( weather_cfg_t *cfg );
  * @param weather Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this click.
  */
-WEATHER_RETVAL weather_init ( weather_t *ctx, weather_cfg_t *cfg );
+err_t weather_init ( weather_t *ctx, weather_cfg_t *cfg );
 
 /**
  * @brief Click Default Configuration function.
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Weather click.
+ * @details This function executes default configuration for Weather click.
  *
  * @note Default configuration of the chip contains the settings :
  *         - oversampling huidity -  WEATHER_HUM_OS_1X;
@@ -358,7 +383,7 @@ WEATHER_RETVAL weather_init ( weather_t *ctx, weather_cfg_t *cfg );
  *         - standby_time - WEATHER_CFG_STANDBY_TIME_10ms
  *
  */
-void weather_default_cfg ( weather_t *ctx );
+err_t weather_default_cfg ( weather_t *ctx );
 
 /**
  * @brief Generic write function.
@@ -368,9 +393,9 @@ void weather_default_cfg ( weather_t *ctx );
  * @param data_buf  Data buf to be written.
  * @param len          Number of the bytes in data buf.
  *
- * @description This function writes data to the desired register.
+ * @details This function writes data to the desired register.
  */
-void weather_generic_write ( weather_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+err_t weather_generic_write ( weather_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
 
 /**
  * @brief Generic read function.
@@ -380,36 +405,36 @@ void weather_generic_write ( weather_t *ctx, uint8_t reg, uint8_t *data_buf, uin
  * @param data_buf   Output data buf
  * @param len        Number of the bytes to be read
  *
- * @description This function reads data from the desired register.
+ * @details This function reads data from the desired register.
  */
-void weather_generic_read ( weather_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+err_t weather_generic_read ( weather_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
 
 /**
  * @brief Device ID
  *
  * @param ctx      Click object.
- * @return (8 bit) Device ID - 0x60 - default
+ * @param device_id (8 bit) Device ID - 0x60 - default
  *
- * @description You can use this function as a check on click communication with your MCU.
+ * @details You can use this function as a check on click communication with your MCU.
  */
-uint8_t weather_get_device_id ( weather_t *ctx );
+err_t weather_get_device_id ( weather_t *ctx, uint8_t *device_id );
 
 /**
  * @brief Software reset function
  *
  * @param ctx      Click object.
  */
-void weather_software_reset ( weather_t *ctx );
+err_t weather_software_reset ( weather_t *ctx );
 
 /**
  * @brief Weather data
  *
  * @param ctx      Click object.
- * @param *weather_data  Structure that contains info about weather data
+ * @param weather_data  Structure that contains info about weather data
  *
- * @description Use this function to read the temperature, pressure and humidity data
+ * @details Use this function to read the temperature, pressure and humidity data
  */
-void weather_get_ambient_data( weather_t *ctx, weather_data_t *weather_data );
+err_t weather_get_ambient_data( weather_t *ctx, weather_data_t *weather_data );
 
 /**
  * @brief Measurement config
@@ -417,10 +442,9 @@ void weather_get_ambient_data( weather_t *ctx, weather_data_t *weather_data );
  * @param ctx      Click object.
  * @param cfg      Structure that contains info about new measurement data for settings
  *
- * @description Use this function to set up new settings
+ * @details Use this function to set up new settings
  */
-void weather_measurement_cfg ( weather_t *ctx, weather_measurement_cfg_t *cfg );
-
+err_t weather_measurement_cfg ( weather_t *ctx, weather_measurement_cfg_t *cfg );
 
 #ifdef __cplusplus
 }

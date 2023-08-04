@@ -1,11 +1,10 @@
 \mainpage Main Page
- 
- 
+  
 
 ---
 # Ambient click
 
-< Ambient click carries the Melexis MLX75305 IC. It’s a CMOS integrated optical sensor that consists of a photodiode, a transimpendance amplifier, and an output transistor. >
+> Ambient click carries the Melexis MLX75305 IC. It’s a CMOS integrated optical sensor that consists of a photodiode, a transimpendance amplifier, and an output transistor.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ambient_click.png" height=300px>
@@ -38,22 +37,29 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void ambient_cfg_setup ( ambient_cfg_t *cfg ); 
- 
-- Initialization function.
-> AMBIENT_RETVAL ambient_init ( ambient_t *ctx, ambient_cfg_t *cfg );
+- `ambient_cfg_setup` Config Object Initialization function.
+```c
+void ambient_cfg_setup ( ambient_cfg_t *cfg ); 
+```
 
+- `ambient_init` Initialization function.
+```c
+err_t ambient_init ( ambient_t *ctx, ambient_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Generic read function.
-> ambient_data_t ambient_generic_read ( ambient_t *ctx );
- 
-- Calculate light intensity function.
-> uint16_t ambient_calculate_light_intensity ( ambient_t *ctx, uint16_t adc_data, uint16_t vcc_val, uint16_t adc_res );
+- `ambient_read_an_pin_voltage` This function reads results of AD conversion of the AN pin and converts them to proportional voltage level.
+```c
+err_t ambient_read_an_pin_voltage ( ambient_t *ctx, float *data_out );
+```
 
-## Examples Description
+- `ambient_get_light_intensity` Calculates the light intensity from analog voltage measurement of the Melexis MLX75305 IC on Ambient click board.
+```c
+uint16_t ambient_get_light_intensity ( ambient_t *ctx );
+```
+
+## Example Description
 
 > This application turns light intensity into voltage.
 
@@ -61,13 +67,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initialization driver enables GPIO,initializationADC, also write log.
+> Initialization driver and logger.
 
 ```c
 
 void application_init ( void )
 {
- log_cfg_t log_cfg;
+    log_cfg_t log_cfg;
     ambient_cfg_t cfg;
 
     /** 
@@ -81,16 +87,14 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
+    // Click initialization.
     ambient_cfg_setup( &cfg );
     AMBIENT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ambient_init( &ambient, &cfg );
 
-    log_printf( &logger, "      Initialization ADC      " );
-    Delay_ms( 100 );
+    log_info( &logger, " Application Task " );
 }
   
 ```
@@ -98,24 +102,15 @@ void application_init ( void )
 ### Application Task
 
 > This is an example which demonstrates the use of Ambient click board.
-  Ambient click reads ADC value and converts to light intensity [ uW/cm2 ].
-  Results are being sent to the Usart Terminal where you can track their changes.
-  All data logs on USB uart change for every 1 sec.
+Ambient click reads ADC voltage once per second and converts it to light intensity [ uW/cm2 ].
+Results are being sent to the USB UART where you can track their changes.
 
 ```c
 
 void application_task ( void )
 {
-ambient_data_t tmp;
-    
-    //  Task implementation.
-    
-    tmp = ambient_generic_read ( &ambient );
-    light = ambient_calculate_light_intensity( &ambient, value_adc, AMBIENT_VCC_3_3, AMBIENT_RES_12_BIT );
-
-    log_printf( &logger, "** ADC value : [DEC]- %d, [HEX]- 0x%x \r\n", tmp, tmp );
-    log_printf( &logger, "Light Intensity: %d uW/cm2 \r\n",light );
-
+    uint16_t light_intensity = ambient_get_light_intensity( &ambient );
+    log_printf( &logger, " Light Intensity: %u uW/cm2\r\n\n", light_intensity );
     Delay_ms( 1000 );
 }  
 

@@ -1,14 +1,14 @@
 
 ---
-# Bluetooth 2 click
+# Bluetooth2 click
 
-Bluetooth 2 Click features WT41u, a long range class 1, Bluetooth® 2.1 + EDR module from Silicon Labs. WT41u is a highly integrated and sophisticated Bluetooth® module, containing all the necessary elements from Bluetooth® radio and a fully implemented protocol stack. Therefore WT41u provides an ideal solution for developers who want to integrate Bluetooth® wireless technology into their design with limited knowledge of Bluetooth® and RF technologies. WT41u optimized for long range applications is available with an integrated chip antenna. 
+> Bluetooth 2 Click features WT41u, a long range class 1, Bluetooth® 2.1 + EDR module. WT41u is a highly integrated and sophisticated Bluetooth® module, containing all the necessary elements from Bluetooth® radio and a fully implemented protocol stack. Therefore WT41u provides an ideal solution for developers who want to integrate Bluetooth® wireless technology into their design with limited knowledge of Bluetooth® and RF technologies. WT41u optimized for long range applications is available with an integrated chip antenna. By default, the WT41u module is equipped with powerful and easy-to-use iWRAP firmware which enables users to access Bluetooth® functionality with simple ASCII commands delivered to the module over serial interface - it's just like a Bluetooth® modem.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/bluetooth2_click.png" height=300px>
+  <img src="https://download.mikroe.com/images/click_for_ide/bluetooth2__click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/bluetooth-2-click)
+[click Product page](https://www.mikroe.com/bluetooth2-click)
 
 ---
 
@@ -17,7 +17,7 @@ Bluetooth 2 Click features WT41u, a long range class 1, Bluetooth® 2.1 + EDR mo
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Jun 2021.
-- **Type**          : I2C/SPI type
+- **Type**          : UART type
 
 
 # Software Support
@@ -69,7 +69,7 @@ err_t bluetooth2_generic_write ( bluetooth2_t *ctx, char *data_buf, uint16_t len
 
 ## Example Description
 
-> This example reads and processes data from Bluetooth 2 clicks.
+> This example reads and processes data from Bluetooth2 clicks.
 
 **The demo application is composed of two sections :**
 

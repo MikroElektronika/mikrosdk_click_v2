@@ -31,7 +31,7 @@ void methane_cfg_setup ( methane_cfg_t *cfg )
 {
     cfg->an = HAL_PIN_NC;
 
-    cfg->resolution = ANALOG_IN_RESOLUTION_12_BIT;
+    cfg->resolution = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->vref       = 3.3;
 }
 

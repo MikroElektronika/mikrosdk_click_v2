@@ -35,7 +35,7 @@ void analogkey_cfg_setup ( analogkey_cfg_t *cfg )
 {
     cfg->an_pin = HAL_PIN_NC;
 
-    cfg->resolution = ANALOG_IN_RESOLUTION_10_BIT;
+    cfg->resolution = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->vref       = 3.3;
     cfg->vsel       = 3.3;
 }

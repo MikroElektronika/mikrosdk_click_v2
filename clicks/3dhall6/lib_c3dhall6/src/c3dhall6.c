@@ -80,29 +80,38 @@ void c3dhall6_cfg_setup ( c3dhall6_cfg_t *cfg )
     cfg->dev_aux_ref.aux_ref_volt = 3.3;
 }
 
-C3DHALL6_RETVAL c3dhall6_init ( c3dhall6_t *ctx, c3dhall6_cfg_t *cfg )
+err_t c3dhall6_init ( c3dhall6_t *ctx, c3dhall6_cfg_t *cfg )
 {
     spi_master_config_t spi_cfg;
 
     spi_master_configure_default( &spi_cfg );
-    spi_cfg.speed     = cfg->spi_speed;
-    spi_cfg.mode      = cfg->spi_mode;
-    spi_cfg.sck       = cfg->sck;
-    spi_cfg.miso      = cfg->miso;
-    spi_cfg.mosi      = cfg->mosi;
-    spi_cfg.default_write_data = C3DHALL6_DUMMY;
 
-    digital_out_init( &ctx->cs, cfg->cs );
+    spi_cfg.sck  = cfg->sck;
+    spi_cfg.miso = cfg->miso;
+    spi_cfg.mosi = cfg->mosi;
+
     ctx->chip_select = cfg->cs;
 
-    if ( spi_master_open( &ctx->spi, &spi_cfg ) == SPI_MASTER_ERROR )
+    if ( SPI_MASTER_ERROR == spi_master_open( &ctx->spi, &spi_cfg ) ) 
     {
-        return C3DHALL6_INIT_ERROR;
+        return SPI_MASTER_ERROR;
     }
 
-    spi_master_set_default_write_data( &ctx->spi, C3DHALL6_DUMMY );
-    spi_master_set_mode( &ctx->spi, spi_cfg.mode );
-    spi_master_set_speed( &ctx->spi, spi_cfg.speed );
+    if ( SPI_MASTER_ERROR == spi_master_set_default_write_data( &ctx->spi, C3DHALL6_DUMMY ) ) 
+    {
+        return SPI_MASTER_ERROR;
+    }
+
+    if ( SPI_MASTER_ERROR == spi_master_set_mode( &ctx->spi, cfg->spi_mode ) ) 
+    {
+        return SPI_MASTER_ERROR;
+    }
+
+    if ( SPI_MASTER_ERROR == spi_master_set_speed( &ctx->spi, cfg->spi_speed ) ) 
+    {
+        return SPI_MASTER_ERROR;
+    }
+
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
     spi_master_deselect_device( ctx->chip_select );
 
@@ -121,34 +130,37 @@ void c3dhall6_spi_get ( c3dhall6_t *ctx, uint8_t *data_in, uint8_t *data_out, ui
     c3dhall6_generic_transfer( ctx, data_in, 1, data_out, n_bytes );
 }
 
-void c3dhall6_set_reference_values ( c3dhall6_t *ctx, float reference_voltage, float ref_adc_ch0, float ref_adc_ch1, float ref_adc_ch2, float ref_adc_ch3 )
+void c3dhall6_set_reference_values ( c3dhall6_t *ctx, c3dhall6_aux_ref_t ref_val )
 {
-    ctx->device_aux_ref.aux_ref_adc_ch0 = ref_adc_ch0;
-    ctx->device_aux_ref.aux_ref_adc_ch0 = ref_adc_ch1;
-    ctx->device_aux_ref.aux_ref_adc_ch2 = ref_adc_ch2;
-    ctx->device_aux_ref.aux_ref_adc_ch3 = ref_adc_ch3;
-    ctx->device_aux_ref.aux_ref_volt = reference_voltage;
+    ctx->device_aux_ref.aux_ref_adc_ch0 = ref_val.aux_ref_adc_ch0;
+    ctx->device_aux_ref.aux_ref_adc_ch1 = ref_val.aux_ref_adc_ch1;
+    ctx->device_aux_ref.aux_ref_adc_ch2 = ref_val.aux_ref_adc_ch2;
+    ctx->device_aux_ref.aux_ref_adc_ch3 = ref_val.aux_ref_adc_ch3;
+    ctx->device_aux_ref.aux_ref_volt = ref_val.aux_ref_volt;
 }
 
 void c3dhall6_get_adc_value ( c3dhall6_t *ctx, uint8_t channel_no, uint16_t *adc_value )
 {
-    ctx->in_buf[ 0 ] = 0x06;
-    ctx->in_buf[ 1 ] = channel_no;
-    c3dhall6_spi_get( ctx, ctx->in_buf, ctx->out_buf, 5 );
-    *adc_value = ( uint16_t )( ctx->out_buf[ 1 ] );
+    uint8_t data_buf[ 3 ] = { 0 };
+    
+    data_buf[ 0 ] = 0x06;
+    
+    spi_master_select_device( ctx->chip_select );
+    spi_master_write( &ctx->spi, &data_buf[ 0 ], 1 );
+    spi_master_set_default_write_data( &ctx->spi, channel_no );
+    spi_master_read( &ctx->spi, &data_buf[ 1 ], 2 );
+    spi_master_set_default_write_data( &ctx->spi, C3DHALL6_DUMMY );
+    spi_master_deselect_device( ctx->chip_select );
+    *adc_value = ( uint16_t )( data_buf[ 1 ] & 0x0F );
     *adc_value <<= 8;
-    *adc_value |= ( uint16_t )( ctx->out_buf[ 2 ] );
+    *adc_value |= ( uint16_t )( data_buf[ 2 ] );
 }
 
 void c3dhall6_get_volt( c3dhall6_t *ctx, uint8_t channel_no, float *channel_voltage )
 {
-    ctx->in_buf[ 0 ] = 0x06;
-    ctx->in_buf[ 1 ] = channel_no;
-    c3dhall6_spi_get( ctx, ctx->in_buf, ctx->out_buf, 5 );
-    ctx->aux_var = ( uint16_t )( ctx->out_buf[ 1 ] );
-    ctx->aux_var <<= 8;
-    ctx->aux_var |= ( uint16_t )( ctx->out_buf[ 2 ] );
-    *channel_voltage = ( float )( ctx->aux_var );
+    uint16_t adc_value = 0;
+    c3dhall6_get_adc_value ( ctx, channel_no, &adc_value );
+    *channel_voltage = ( float )( adc_value );
     *channel_voltage *= ctx->device_aux_ref.aux_ref_volt;
     *channel_voltage /= 4096.0;
 }
@@ -157,52 +169,27 @@ void c3dhall6_get_angle_deg ( c3dhall6_t *ctx, uint8_t die, float *angle_value )
 {
     if ( die == C3DHALL6_DIE_A )
     {
-        ctx->in_buf[ 0 ] = 0x06;
-        ctx->in_buf[ 1 ] = C3DHALL6_CHANNEL_0;
-
-        c3dhall6_spi_get( ctx, ctx->in_buf, ctx->out_buf, 5 );
-
-        ctx->device_aux_ch.aux_ch0 = ( uint16_t )( ctx->out_buf[ 1 ] );
-        ctx->device_aux_ch.aux_ch0 <<= 8;
-        ctx->device_aux_ch.aux_ch0 |= ( uint16_t )( ctx->out_buf[ 2 ] );
-
-        ctx->in_buf[ 0 ] = 0x06;
-        ctx->in_buf[ 1 ] = C3DHALL6_CHANNEL_1;
-
-        c3dhall6_spi_get( ctx, ctx->in_buf, ctx->out_buf, 5 );
-
-        ctx->device_aux_ch.aux_ch1 = ( uint16_t )( ctx->out_buf[ 1 ] );
-        ctx->device_aux_ch.aux_ch1 <<= 8;
-        ctx->device_aux_ch.aux_ch1 |= ( uint16_t )( ctx->out_buf[ 2 ] );
+        c3dhall6_get_adc_value ( ctx, C3DHALL6_CHANNEL_0, &ctx->device_aux_ch.aux_ch0 );
+        c3dhall6_get_adc_value ( ctx, C3DHALL6_CHANNEL_1, &ctx->device_aux_ch.aux_ch1 );
 
         ctx->device_float_ch.aux_float_ch0 = ( float )( ctx->device_aux_ch.aux_ch0 ) - ctx->device_aux_ref.aux_ref_adc_ch0;
         ctx->device_float_ch.aux_float_ch1 = ( float )( ctx->device_aux_ch.aux_ch1 ) - ctx->device_aux_ref.aux_ref_adc_ch1;
 
-        *angle_value = c3dhall6_atan2( ( float )( ctx->device_float_ch.aux_float_ch1 ), ( float )( ctx->device_float_ch.aux_float_ch0 ) );
+        *angle_value = c3dhall6_atan2( ( float )( ctx->device_float_ch.aux_float_ch1 ), 
+                                       ( float )( ctx->device_float_ch.aux_float_ch0 ) );
         *angle_value *= 180.0;
         *angle_value /= SINGLE_PI_CONST;
     }
     else if ( die == C3DHALL6_DIE_B )
     {
-        ctx->in_buf[ 0 ] = 0x06;
-        ctx->in_buf[ 1 ] = C3DHALL6_CHANNEL_2;
-        c3dhall6_spi_get( ctx, ctx->in_buf, ctx->out_buf, 5 );
-        ctx->device_aux_ch.aux_ch2 = ( uint16_t )( ctx->out_buf[ 1 ] );
-        ctx->device_aux_ch.aux_ch2 <<= 8;
-        ctx->device_aux_ch.aux_ch2 |= ( uint16_t )( ctx->out_buf[ 2 ] );
-
-        ctx->in_buf[ 0 ] = 0x06;
-        ctx->in_buf[ 1 ] = C3DHALL6_CHANNEL_3;
-        c3dhall6_spi_get( ctx, ctx->in_buf, ctx->out_buf, 5 );
-
-        ctx->device_aux_ch.aux_ch3 = ( uint16_t )( ctx->out_buf[ 1 ] );
-        ctx->device_aux_ch.aux_ch3 <<= 8;
-        ctx->device_aux_ch.aux_ch3 |= ( uint16_t )( ctx->out_buf[ 2 ] );
+        c3dhall6_get_adc_value ( ctx, C3DHALL6_CHANNEL_2, &ctx->device_aux_ch.aux_ch2 );
+        c3dhall6_get_adc_value ( ctx, C3DHALL6_CHANNEL_3, &ctx->device_aux_ch.aux_ch3 );
 
         ctx->device_float_ch.aux_float_ch2 = ( float )( ctx->device_aux_ch.aux_ch2 ) - ctx->device_aux_ref.aux_ref_adc_ch2;
         ctx->device_float_ch.aux_float_ch3 = ( float )( ctx->device_aux_ch.aux_ch3 ) - ctx->device_aux_ref.aux_ref_adc_ch3;
 
-        *angle_value = c3dhall6_atan2( ( float )( ctx->device_float_ch.aux_float_ch3 ), ( float )( ctx->device_float_ch.aux_float_ch2 ) );
+        *angle_value = c3dhall6_atan2( ( float )( ctx->device_float_ch.aux_float_ch3 ), 
+                                       ( float )( ctx->device_float_ch.aux_float_ch2 ) );
         *angle_value *= 180.0;
         *angle_value /= SINGLE_PI_CONST;
     }
@@ -212,50 +199,25 @@ void c3dhall6_get_angle_rad ( c3dhall6_t *ctx, uint8_t die, float *angle_value )
 {
     if ( die == C3DHALL6_DIE_A )
     {
-        ctx->in_buf[0] = 0x06;
-        ctx->in_buf[1] = C3DHALL6_CHANNEL_0;
-
-        c3dhall6_spi_get( ctx, ctx->in_buf, ctx->out_buf, 5 );
-
-        ctx->device_aux_ch.aux_ch0 = ( uint16_t )( ctx->out_buf[ 1 ] );
-        ctx->device_aux_ch.aux_ch0 <<= 8;
-        ctx->device_aux_ch.aux_ch0 |= ( uint16_t )( ctx->out_buf[ 2 ] );
-
-        ctx->in_buf[ 0 ] = 0x06;
-        ctx->in_buf[ 1 ] = C3DHALL6_CHANNEL_1;
-        c3dhall6_spi_get( ctx, ctx->in_buf, ctx->out_buf, 5 );
-
-        ctx->device_aux_ch.aux_ch1 = ( uint16_t )( ctx->out_buf[ 1 ] );
-        ctx->device_aux_ch.aux_ch1 <<= 8;
-        ctx->device_aux_ch.aux_ch1 |= ( uint16_t )( ctx->out_buf[ 2 ] );
+        c3dhall6_get_adc_value ( ctx, C3DHALL6_CHANNEL_0, &ctx->device_aux_ch.aux_ch0 );
+        c3dhall6_get_adc_value ( ctx, C3DHALL6_CHANNEL_1, &ctx->device_aux_ch.aux_ch1 );
 
         ctx->device_float_ch.aux_float_ch0 = ( float )( ctx->device_aux_ch.aux_ch0 ) - ctx->device_aux_ref.aux_ref_adc_ch0;
         ctx->device_float_ch.aux_float_ch1 = ( float )( ctx->device_aux_ch.aux_ch1 ) - ctx->device_aux_ref.aux_ref_adc_ch1;
 
-        *angle_value = c3dhall6_atan2( ( float )( ctx->device_float_ch.aux_float_ch1 ), ( float )( ctx->device_float_ch.aux_float_ch0 ) );
+        *angle_value = c3dhall6_atan2( ( float )( ctx->device_float_ch.aux_float_ch1 ), 
+                                       ( float )( ctx->device_float_ch.aux_float_ch0 ) );
     }
     else if ( die == C3DHALL6_DIE_B )
     {
-        ctx->in_buf[ 0 ] = 0x06;
-        ctx->in_buf[ 1 ] = C3DHALL6_CHANNEL_2;
-        c3dhall6_spi_get( ctx, ctx->in_buf, ctx->out_buf, 5 );
-
-        ctx->device_aux_ch.aux_ch2 = ( uint16_t )( ctx->out_buf[ 1 ] );
-        ctx->device_aux_ch.aux_ch2 <<= 8;
-        ctx->device_aux_ch.aux_ch2 |= ( uint16_t )( ctx->out_buf[ 2 ] );
-
-        ctx->in_buf[ 0 ] = 0x06;
-        ctx->in_buf[ 1 ] = C3DHALL6_CHANNEL_3;
-        c3dhall6_spi_get( ctx, ctx->in_buf, ctx->out_buf, 5 );
-
-        ctx->device_aux_ch.aux_ch3 = ( uint16_t )( ctx->out_buf[ 1 ] );
-        ctx->device_aux_ch.aux_ch3 <<= 8;
-        ctx->device_aux_ch.aux_ch3 |= ( uint16_t )( ctx->out_buf[ 2 ] );
+        c3dhall6_get_adc_value ( ctx, C3DHALL6_CHANNEL_2, &ctx->device_aux_ch.aux_ch2 );
+        c3dhall6_get_adc_value ( ctx, C3DHALL6_CHANNEL_3, &ctx->device_aux_ch.aux_ch3 );
 
         ctx->device_float_ch.aux_float_ch2 = ( float )( ctx->device_aux_ch.aux_ch2 ) - ctx->device_aux_ref.aux_ref_adc_ch2;
         ctx->device_float_ch.aux_float_ch3 = ( float )( ctx->device_aux_ch.aux_ch3 ) - ctx->device_aux_ref.aux_ref_adc_ch3;
 
-        *angle_value = c3dhall6_atan2( ( float )( ctx->device_float_ch.aux_float_ch3 ), ( float )( ctx->device_float_ch.aux_float_ch2 ) );
+        *angle_value = c3dhall6_atan2( ( float )( ctx->device_float_ch.aux_float_ch3 ), 
+                                       ( float )( ctx->device_float_ch.aux_float_ch2 ) );
     }
 }
 
@@ -266,7 +228,7 @@ static float c3dhall6_eval_poly ( float x, const float code *d, int n )
     float res;
 
     res = d[ n ];
-    while( n )
+    while ( n )
     {
         res = x * res + d[ --n ];
     }

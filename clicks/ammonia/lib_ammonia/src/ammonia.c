@@ -54,7 +54,7 @@ void ammonia_cfg_setup ( ammonia_cfg_t *cfg )
     cfg->spi_mode = SPI_MASTER_MODE_3;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 
-    cfg->resolution = ANALOG_IN_RESOLUTION_12_BIT;
+    cfg->resolution = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->vref = AMMONIA_ADC_VREF_VAL;    /**< [V] - recommended. */
 
     cfg->adc_sel = AMMONIA_ADC_SEL_SPI;  /**< ADC selection. */

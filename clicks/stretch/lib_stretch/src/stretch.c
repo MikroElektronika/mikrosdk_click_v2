@@ -41,7 +41,7 @@ void stretch_cfg_setup ( stretch_cfg_t *cfg )
 
     cfg->pwm = HAL_PIN_NC;
    
-    cfg->resolution   = ANALOG_IN_RESOLUTION_10_BIT;
+    cfg->resolution   = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->vref         = 3.3;
 }
 

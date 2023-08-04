@@ -40,7 +40,7 @@ void brushless9_cfg_setup ( brushless9_cfg_t *cfg )
     cfg->brk   = HAL_PIN_NC;
     cfg->int_pin = HAL_PIN_NC;
 
-	cfg->dev_pwm_freq = BRUSHLESS9_DEF_FREQ;
+    cfg->dev_pwm_freq = BRUSHLESS9_DEF_FREQ;
 }
 
 err_t brushless9_init ( brushless9_t *ctx, brushless9_cfg_t *cfg ) 
@@ -49,8 +49,8 @@ err_t brushless9_init ( brushless9_t *ctx, brushless9_cfg_t *cfg )
 
     pwm_configure_default( &pwm_cfg );
 
-	pwm_cfg.pin      = cfg->pwm;
-	pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
+    pwm_cfg.pin      = cfg->pwm;
+    pwm_cfg.freq_hz  = cfg->dev_pwm_freq;
 
     ctx->pwm_freq = cfg->dev_pwm_freq;
 
@@ -119,7 +119,5 @@ uint8_t brushless9_get_int_pin ( brushless9_t *ctx )
 {
     return digital_in_read( &ctx->int_pin );
 }
-
-
 
 // ------------------------------------------------------------------------- END

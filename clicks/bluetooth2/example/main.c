@@ -1,9 +1,9 @@
 /*!
  * @file main.c
- * @brief Bluetooth 2 Click Example.
+ * @brief Bluetooth2 Click Example.
  *
  * # Description
- * This example reads and processes data from Bluetooth 2 clicks.
+ * This example reads and processes data from Bluetooth2 clicks.
  *
  * The demo application is composed of two sections :
  *
@@ -40,10 +40,10 @@
 #define RSP_NO_CARRIER      "NO CARRIER"
 
 // Local device name.
-#define DEVICE_NAME         "Bluetooth 2 Click"
+#define DEVICE_NAME         "Bluetooth2 Click"
 
 // Message which will be sent to the connected device.
-#define TEXT_TO_SEND        "MikroE - Bluetooth 2 click\r\n" 
+#define TEXT_TO_SEND        "MikroE - Bluetooth2 click\r\n" 
 
 // Text sending frequency in miliseconds.
 #define SENDING_FREQ        5000  
@@ -58,14 +58,14 @@ static uint8_t connection_flag = 0;
 static uint16_t send_cnt = 0;
 
 /**
- * @brief Bluetooth 2 clearing application buffer.
+ * @brief Bluetooth2 clearing application buffer.
  * @details This function clears memory of application buffer and reset its length and counter.
  * @note None.
  */
 static void bluetooth2_clear_app_buf ( void );
 
 /**
- * @brief Bluetooth 2 data reading function.
+ * @brief Bluetooth2 data reading function.
  * @details This function reads data from device and concatenates data to application buffer.
  *
  * @return @li @c  0 - Read some data.
@@ -78,7 +78,7 @@ static void bluetooth2_clear_app_buf ( void );
 static err_t bluetooth2_process ( void );
 
 /**
- * @brief Bluetooth 2 display response function.
+ * @brief Bluetooth2 display response function.
  * @details This function reads data from device until it sends OK or READY message or until
  * it exceeds the timeout value.
  * @param[in] timeout : Timeout value in miliseconds.

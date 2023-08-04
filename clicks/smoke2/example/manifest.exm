@@ -1,0 +1,8 @@
+{
+    "name": "Smoke 2 Click",
+    "description": "Smoke 2 Click is a compact add-on board that contains the most efficient version of the smoke detector. This board features the ADPD188BI, a complete photometric system for smoke detection using optical dual-wavelength technology from Analog Devices.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","ADPD188BI"],
+    "category" : ["Proximity"]
+}

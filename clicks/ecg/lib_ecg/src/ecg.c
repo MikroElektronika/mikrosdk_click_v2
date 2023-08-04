@@ -39,7 +39,7 @@ void ecg_cfg_setup ( ecg_cfg_t *cfg )
     
     // Additional gpio pins
 
-    cfg->resolution   = ANALOG_IN_RESOLUTION_10_BIT;
+    cfg->resolution   = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->vref         = 3.3;
 }
 

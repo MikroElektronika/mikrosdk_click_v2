@@ -173,14 +173,16 @@ void touchpad4_channel_reading ( void )
     touchpad_get_channels( &touchpad4, &ch_status );
     
     uint8_t shift = 19;
-    char row[ 10 ] = { 0 };
+    uint8_t row[ 10 ] = { 0 };
     for ( uint8_t r = 0; r < 5; r++ )
     {
         uint8_t row_char_cnt = 6;
         for ( uint8_t y = 0; y < 4; y++ )
         {
-            if (y)
+            if ( y )
+            {
                 row[ row_char_cnt-- ] = '|';
+            }
             
             if ( ( ch_status >> shift ) & 1 )
             {
@@ -203,7 +205,7 @@ void touchpad4_gesture_reading ( void )
     uint16_t gesture_data = 0;
     
     touchpad4_generic_read( &touchpad4, TOUCHPAD4_REG_GESTURES, &gesture_data );
-    gesture_data &= 0x002F;
+    gesture_data &= 0x003F;
     
     if ( gesture_data & 0x0001 )
     {
@@ -211,7 +213,7 @@ void touchpad4_gesture_reading ( void )
     }
     if ( gesture_data & 0x0002 )
     {
-        log_printf( &logger, " > SPress And Hold <\r\n" );
+        log_printf( &logger, " > Press And Hold <\r\n" );
     }
     if ( gesture_data & 0x0004 )
     {

@@ -42,7 +42,7 @@ void hztov2_cfg_setup ( hztov2_cfg_t *cfg )
 
     cfg->en  = HAL_PIN_NC;
 
-    cfg->resolution   = ANALOG_IN_RESOLUTION_12_BIT;
+    cfg->resolution   = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->vref         = 3.3;
     cfg->dev_pwm_freq   = HZTOV2_DEF_FREQ;
 }

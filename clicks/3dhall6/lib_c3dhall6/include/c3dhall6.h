@@ -61,10 +61,8 @@
  * \defgroup error_code Error Code
  * \{
  */
-#define C3DHALL6_RETVAL  uint8_t
-
-#define C3DHALL6_OK             0x00
-#define C3DHALL6_INIT_ERROR     0xFF
+#define C3DHALL6_OK             0
+#define C3DHALL6_ERROR         -1
 /** \} */
 
 /**
@@ -106,6 +104,7 @@ typedef struct
     uint16_t aux_ch1;
     uint16_t aux_ch2;
     uint16_t aux_ch3;
+    
 } c3dhall6_aux_ch_t;
 
 typedef struct 
@@ -114,6 +113,7 @@ typedef struct
     float aux_float_ch1;
     float aux_float_ch2;
     float aux_float_ch3;
+    
 } c3dhall6_aux_float_ch_t ;
 
 typedef struct 
@@ -123,6 +123,7 @@ typedef struct
    float aux_ref_adc_ch2;
    float aux_ref_adc_ch3;
    float aux_ref_volt;
+   
 } c3dhall6_aux_ref_t ;
 
 /**
@@ -130,17 +131,10 @@ typedef struct
  */
 typedef struct
 {
-    digital_out_t cs;
     // Modules 
-
     spi_master_t spi;
     pin_name_t chip_select;
     
-    uint8_t in_buf[ 10 ];
-    uint8_t out_buf[ 10 ];
-
-    uint16_t aux_var;
-
     c3dhall6_aux_ref_t device_aux_ref;
     c3dhall6_aux_ch_t device_aux_ch;
     c3dhall6_aux_float_ch_t device_float_ch;
@@ -153,14 +147,12 @@ typedef struct
 typedef struct
 {
     // Communication gpio pins 
-
     pin_name_t miso;
     pin_name_t mosi;
     pin_name_t sck;
     pin_name_t cs;
 
     // static variable 
-
     uint32_t spi_speed;
     spi_master_mode_t   spi_mode;
     spi_master_chip_select_polarity_t cs_polarity;
@@ -185,7 +177,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @details This function initializes click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c3dhall6_cfg_setup ( c3dhall6_cfg_t *cfg );
@@ -196,57 +188,32 @@ void c3dhall6_cfg_setup ( c3dhall6_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this click.
  */
-C3DHALL6_RETVAL c3dhall6_init ( c3dhall6_t *ctx, c3dhall6_cfg_t *cfg );
+err_t c3dhall6_init ( c3dhall6_t *ctx, c3dhall6_cfg_t *cfg );
 
 /**
  * @brief Click Default Configuration function.
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for 3D Hall 6 click.
+ * @details This function executes default configuration for 3D Hall 6 click.
  */
 void c3dhall6_default_cfg ( c3dhall6_t *ctx );
 
 /**
- * @brief Generic transfer function.
- *
- * @param ctx          Click object.
- * @param wr_buf       Write data buffer
- * @param wr_len       Number of byte in write data buffer
- * @param rd_buf       Read data buffer
- * @param rd_len       Number of byte in read data buffer
- *
- * @description Generic SPI transfer, for sending and receiving packages
- */
-void c3dhall6_generic_transfer ( c3dhall6_t *ctx, uint8_t *wr_buf, uint16_t wr_len, uint8_t *rd_buf, uint16_t rd_len );
-
-/**
- * @brief Getting raw data function.
- *
- * @param ctx          Click object.
- * @param data_in      Input data buffer.
- * @param data_out     Output data buffer.
- * @param n_bytes      Number of bytes to transfer.
- *
- * @description This function gets raw data from device.
- */
-void c3dhall6_spi_get ( c3dhall6_t *ctx, uint8_t *data_in, uint8_t *data_out, uint8_t n_bytes );
-
-/**
  * @brief Setting reference values function.
  *
- * @param ctx                   Click object.
- * @param reference_voltage     Reference voltage in Volts or miliVolts ( measure this voltage between GND and 3V3 pin ).
- * @param ref_adc_ch0           Reference adc value from channel 0 - perform adc measurement on channel 0 with no permanent magnet.
- * @param ref_adc_ch1           Reference adc value from channel 1 - perform adc measurement on channel 1 with no permanent magnet.
- * @param ref_adc_ch2           Reference adc value from channel 2 - perform adc measurement on channel 2 with no permanent magnet.
- * @param ref_adc_ch3           Reference adc value from channel 3 - perform adc measurement on channel 3 with no permanent magnet.
+ * @param ctx           Click object.
+ * @param ref_val       Reference voltage in Volts or miliVolts ( measure this voltage between GND and 3V3 pin ).
+ *                      Reference adc value from channel 0 - perform adc measurement on channel 0 with no permanent magnet.
+ *                      Reference adc value from channel 1 - perform adc measurement on channel 1 with no permanent magnet.
+ *                      Reference adc value from channel 2 - perform adc measurement on channel 2 with no permanent magnet.
+ *                      Reference adc value from channel 3 - perform adc measurement on channel 3 with no permanent magnet.
  *
- * @description This function sets reference values for voltage and angle calculations.
+ * @details This function sets reference values for voltage and angle calculations.
  */
-void c3dhall6_set_reference_values ( c3dhall6_t *ctx, float reference_voltage, float ref_adc_ch0, float ref_adc_ch1, float ref_adc_ch2, float ref_adc_ch3 );
+void c3dhall6_set_reference_values ( c3dhall6_t *ctx, c3dhall6_aux_ref_t ref_val );
 
 /**
  * @brief Getting ADC value on each channel function.
@@ -255,7 +222,7 @@ void c3dhall6_set_reference_values ( c3dhall6_t *ctx, float reference_voltage, f
  * @param channel_no   Channel number (channels: CH0, CH1, CH2, CH3).
  * @param adc_value    ADC value on selected channel.
  *
- * @description This function reads ADC value on selected channel.
+ * @details This function reads ADC value on selected channel.
  */
 void c3dhall6_get_adc_value ( c3dhall6_t *ctx, uint8_t channel_no, uint16_t *adc_value );
 
@@ -266,7 +233,7 @@ void c3dhall6_get_adc_value ( c3dhall6_t *ctx, uint8_t channel_no, uint16_t *adc
  * @param channel_no         Channel number (channels: CH0, CH1, CH2, CH3).
  * @param channel_voltage    voltage value on selected channel.
  *
- * @description This function reads ADC value on selected channel and converts that value to Volts or miliVolts - depending on reference voltage setting.
+ * @details This function reads ADC value on selected channel and converts that value to Volts or miliVolts - depending on reference voltage setting.
  */
 void c3dhall6_get_volt( c3dhall6_t *ctx, uint8_t channel_no, float *channel_voltage );
 
@@ -277,7 +244,7 @@ void c3dhall6_get_volt( c3dhall6_t *ctx, uint8_t channel_no, float *channel_volt
  * @param die                Device uses two dies for measurement (dies: die A, die B).
  * @param angle_value        Calculated angle value (range: from -180 to 180 degrees).
  *
- * @description This function reads ADC values for selected die and calculates angle value in degrees.
+ * @details This function reads ADC values for selected die and calculates angle value in degrees.
  */
 void c3dhall6_get_angle_deg ( c3dhall6_t *ctx, uint8_t die, float *angle_value );
 
@@ -288,7 +255,7 @@ void c3dhall6_get_angle_deg ( c3dhall6_t *ctx, uint8_t die, float *angle_value )
  * @param die                Device uses two dies for measurement (dies: die A, die B).
  * @param angle_value        Calculated angle value (range: from -1 to 1 pi radians).
  *
- * @description This function reads ADC values for selected die and calculates angle value in radians.
+ * @details This function reads ADC values for selected die and calculates angle value in radians.
  */
 void c3dhall6_get_angle_rad ( c3dhall6_t *ctx, uint8_t die, float *angle_value );
 

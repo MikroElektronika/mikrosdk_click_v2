@@ -90,7 +90,7 @@ void hallcurrent11_cfg_setup ( hallcurrent11_cfg_t *cfg )
     cfg->i2c_speed   = I2C_MASTER_SPEED_STANDARD;
     cfg->i2c_address = HALLCURRENT11_SET_DEV_ADDR;
     
-    cfg->resolution = ANALOG_IN_RESOLUTION_12_BIT;
+    cfg->resolution = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->vref       = HALLCURRENT11_VREF_3300_mV;
     
     cfg->drv_sel = HALLCURRENT11_DRV_SEL_I2C;

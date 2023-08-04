@@ -43,7 +43,7 @@ void slider2_cfg_setup ( slider2_cfg_t *cfg )
     cfg->en  = HAL_PIN_NC;
     cfg->rsl = HAL_PIN_NC;
 
-    cfg->resolution   = ANALOG_IN_RESOLUTION_10_BIT;
+    cfg->resolution   = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->vref         = 3.3;
 }
 

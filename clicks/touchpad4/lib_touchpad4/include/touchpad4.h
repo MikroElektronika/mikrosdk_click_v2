@@ -103,7 +103,9 @@ extern "C"{
 #define TOUCHPAD4_REG_OTHER_SETTINGS                        0x52
 #define TOUCHPAD4_REG_TOUCH_CLEAR_SET_THRESH                0x53
 #define TOUCHPAD4_REG_ALP_THRESH                            0x54
+#define TOUCHPAD4_REG_OPEN_0                                0x55
 #define TOUCHPAD4_REG_ALP_CLEAR_SET_DEBOUNCE                0x56
+#define TOUCHPAD4_REG_OPEN_1                                0x57
 #define TOUCHPAD4_REG_TRACKPAD_CONVER_FREQ                  0x58
 #define TOUCHPAD4_REG_ALP_CONVER_FREQ                       0x59
 #define TOUCHPAD4_REG_TRACKPAD_HW_SETTINGS                  0x5A
@@ -170,7 +172,6 @@ extern "C"{
 #define TOUCHPAD4_REG_TRACKPAD_DELTA_VAL                    0xE2
 #define TOUCHPAD4_REG_TRACKPAD_ATI_COMPENSATION_VAL         0xE3
 
-
 /*! @} */ // touchpad4_reg
 
 /**
@@ -184,11 +185,250 @@ extern "C"{
  */
 
 /**
+ * @brief Change the ATI Settings.
+ * @details Memory Map Position 0x30 - 0x39.
+ */
+#define TOUCHPAD4_TP_ATI_MULTIPLIERS_DIVIDERS_0             0xE1
+#define TOUCHPAD4_TP_ATI_MULTIPLIERS_DIVIDERS_1             0x3B
+#define TOUCHPAD4_TP_COMPENSATION_DIV_0                     0x0F
+#define TOUCHPAD4_TP_COMPENSATION_DIV_1                     0x00
+#define TOUCHPAD4_TP_ATI_TARGET_0                           0xFA
+#define TOUCHPAD4_TP_ATI_TARGET_1                           0x00
+#define TOUCHPAD4_TP_REF_DRIFT_LIMIT_0                      0x32
+#define TOUCHPAD4_TP_REF_DRIFT_LIMIT_1                      0x00
+#define TOUCHPAD4_TP_MIN_COUNT_REATI_0                      0x32
+#define TOUCHPAD4_TP_MIN_COUNT_REATI_1                      0x00
+#define TOUCHPAD4_REATI_RETRY_TIME_0                        0x05
+#define TOUCHPAD4_REATI_RETRY_TIME_1                        0x00
+#define TOUCHPAD4_ALP_ATI_MULTIPLIERS_DIVIDERS_0            0x82
+#define TOUCHPAD4_ALP_ATI_MULTIPLIERS_DIVIDERS_1            0x28
+#define TOUCHPAD4_ALP_COMPENSATION_DIV_0                    0x05
+#define TOUCHPAD4_ALP_COMPENSATION_DIV_1                    0x00
+#define TOUCHPAD4_ALP_ATI_TARGET_0                          0xFA
+#define TOUCHPAD4_ALP_ATI_TARGET_1                          0x00
+#define TOUCHPAD4_ALP_LTA_DRIFT_LIMIT_0                     0x14
+#define TOUCHPAD4_ALP_LTA_DRIFT_LIMIT_1                     0x00
+
+/**
+ * @brief Change the ALP ATI Compensation.
+ * @details Memory Map Position 0x3A - 0x3B.
+ */
+#define TOUCHPAD4_ALP_COMPENSATION_A_0                      0xC4
+#define TOUCHPAD4_ALP_COMPENSATION_A_1                      0x01
+#define TOUCHPAD4_ALP_COMPENSATION_B_0                      0xE8
+#define TOUCHPAD4_ALP_COMPENSATION_B_1                      0x01
+
+/**
+ * @brief Change the Report Rates and Timing.
+ * @details Memory Map Position 0x40 - 0x4A.
+ */
+#define TOUCHPAD4_ACTIVE_MODE_REPORT_RATE_0                 0x0A
+#define TOUCHPAD4_ACTIVE_MODE_REPORT_RATE_1                 0x00
+#define TOUCHPAD4_IDLE_TOUCH_MODE_REPORT_RATE_0             0x32
+#define TOUCHPAD4_IDLE_TOUCH_MODE_REPORT_RATE_1             0x00
+#define TOUCHPAD4_IDLE_MODE_REPORT_RATE_0                   0x32
+#define TOUCHPAD4_IDLE_MODE_REPORT_RATE_1                   0x00
+#define TOUCHPAD4_LP1_MODE_REPORT_RATE_0                    0x32
+#define TOUCHPAD4_LP1_MODE_REPORT_RATE_1                    0x00
+#define TOUCHPAD4_LP2_MODE_REPORT_RATE_0                    0x64
+#define TOUCHPAD4_LP2_MODE_REPORT_RATE_1                    0x00
+#define TOUCHPAD4_ACTIVE_MODE_TIMEOUT_0                     0x0A
+#define TOUCHPAD4_ACTIVE_MODE_TIMEOUT_1                     0x00
+#define TOUCHPAD4_IDLE_TOUCH_MODE_TIMEOUT_0                 0x3C
+#define TOUCHPAD4_IDLE_TOUCH_MODE_TIMEOUT_1                 0x00
+#define TOUCHPAD4_IDLE_MODE_TIMEOUT_0                       0x14
+#define TOUCHPAD4_IDLE_MODE_TIMEOUT_1                       0x00
+#define TOUCHPAD4_LP1_MODE_TIMEOUT_0                        0x0A
+#define TOUCHPAD4_LP1_MODE_TIMEOUT_1                        0x00
+#define TOUCHPAD4_REF_UPDATE_TIME_0                         0x08
+#define TOUCHPAD4_REF_UPDATE_TIME_1                         0x00
+#define TOUCHPAD4_I2C_TIMEOUT_0                             0x64
+#define TOUCHPAD4_I2C_TIMEOUT_1                             0x00
+
+/**
+ * @brief Change the System Settings.
+ * @details Memory Map Position 0x50 - 0x5B.
+ */
+#define TOUCHPAD4_SYSTEM_CONTROL_0                          0x00
+#define TOUCHPAD4_SYSTEM_CONTROL_1                          0x00
+#define TOUCHPAD4_CONFIG_SETTINGS0                          0x3C
+#define TOUCHPAD4_CONFIG_SETTINGS1                          0x06
+#define TOUCHPAD4_OTHER_SETTINGS_0                          0x20
+#define TOUCHPAD4_OTHER_SETTINGS_1                          0xFF
+#define TOUCHPAD4_TRACKPAD_TOUCH_SET_THRESHOLD              0x1A
+#define TOUCHPAD4_TRACKPAD_TOUCH_CLEAR_THRESHOLD            0x14
+#define TOUCHPAD4_ALP_THRESHOLD_0                           0x08
+#define TOUCHPAD4_ALP_THRESHOLD_1                           0x00
+#define TOUCHPAD4_OPEN_0_0                                  0xFF
+#define TOUCHPAD4_OPEN_0_1                                  0xFF
+#define TOUCHPAD4_ALP_SET_DEBOUNCE                          0x02
+#define TOUCHPAD4_ALP_CLEAR_DEBOUNCE                        0x04
+#define TOUCHPAD4_OPEN_1_0                                  0xFF
+#define TOUCHPAD4_OPEN_1_1                                  0xFF
+#define TOUCHPAD4_TP_CONVERSION_FREQUENCY_UP_PASS_LENGTH    0x05
+#define TOUCHPAD4_TP_CONVERSION_FREQUENCY_FRACTION_VALUE    0x7F
+#define TOUCHPAD4_ALP_CONVERSION_FREQUENCY_UP_PASS_LENGTH   0x05
+#define TOUCHPAD4_ALP_CONVERSION_FREQUENCY_FRACTION_VALUE   0x7F
+#define TOUCHPAD4_TRACKPAD_HARDWARE_SETTINGS_0              0x01
+#define TOUCHPAD4_TRACKPAD_HARDWARE_SETTINGS_1              0x0D
+#define TOUCHPAD4_ALP_HARDWARE_SETTINGS_0                   0x65
+#define TOUCHPAD4_ALP_HARDWARE_SETTINGS_1                   0x1D
+
+/**
+ * @brief Change the Trackpad Settings.
+ * @details Memory Map Position 0x60 - 0x69.
+ */
+#define TOUCHPAD4_TRACKPAD_SETTINGS_0_0                     0x28
+#define TOUCHPAD4_TRACKPAD_SETTINGS_0_1                     0x04
+#define TOUCHPAD4_TRACKPAD_SETTINGS_1_0                     0x05
+#define TOUCHPAD4_TRACKPAD_SETTINGS_1_1                     0x01
+#define TOUCHPAD4_X_RESOLUTION_0                            0x00
+#define TOUCHPAD4_X_RESOLUTION_1                            0x03
+#define TOUCHPAD4_Y_RESOLUTION_0                            0x00
+#define TOUCHPAD4_Y_RESOLUTION_1                            0x04
+#define TOUCHPAD4_XY_DYNAMIC_FILTER_BOTTOM_SPEED_0          0x06
+#define TOUCHPAD4_XY_DYNAMIC_FILTER_BOTTOM_SPEED_1          0x00
+#define TOUCHPAD4_XY_DYNAMIC_FILTER_TOP_SPEED_0             0x7C
+#define TOUCHPAD4_XY_DYNAMIC_FILTER_TOP_SPEED_1             0x00
+#define TOUCHPAD4_XY_DYNAMIC_FILTER_BOTTOM_BETA             0x07
+#define TOUCHPAD4_XY_DYNAMIC_FILTER_STATIC_FILTER_BETA      0x80
+#define TOUCHPAD4_STATIONARY_TOUCH_MOV_THRESHOLD            0x14
+#define TOUCHPAD4_FINGER_SPLIT_FACTOR                       0x00
+#define TOUCHPAD4_X_TRIM_VALUE_0                            0x14
+#define TOUCHPAD4_X_TRIM_VALUE_1                            0x00
+#define TOUCHPAD4_Y_TRIM_VALUE_0                            0x14
+#define TOUCHPAD4_Y_TRIM_VALUE_1                            0x00
+
+/**
+ * @brief Change the ALP Settings.
+ * @details Memory Map Position 0x70 - 0x73.
+ */
+#define TOUCHPAD4_ALP_COUNT_FILTER_BETA_0                   0xB4
+#define TOUCHPAD4_OPEN_0                                    0x00
+#define TOUCHPAD4_ALP_LTA_BETA_LP1                          0x06
+#define TOUCHPAD4_ALP_LTA_BETA_LP2                          0x04
+#define TOUCHPAD4_ALP_SETUP_0                               0x33
+#define TOUCHPAD4_ALP_SETUP_1                               0x03
+#define TOUCHPAD4_ALP_TX_ENABLE_0                           0x40
+#define TOUCHPAD4_ALP_TX_ENABLE_1                           0x05
+
+/**
+ * @brief Change the Settings Version Numbers.
+ * @details Memory Map Position 0x74 - 0x74.
+ */
+#define TOUCHPAD4_MINOR_VERSION                             0x00
+#define TOUCHPAD4_MAJOR_VERSION                             0x01
+
+/**
+ * @brief Change the Gesture Settings.
+ * @details Memory Map Position 0x80 - 0x87.
+ */
+#define TOUCHPAD4_GESTURE_ENABLE_0                          0x3F
+#define TOUCHPAD4_GESTURE_ENABLE_1                          0x0F
+#define TOUCHPAD4_TAP_TIME_0                                0x96
+#define TOUCHPAD4_TAP_TIME_1                                0x00
+#define TOUCHPAD4_TAP_DISTANCE_0                            0x32
+#define TOUCHPAD4_TAP_DISTANCE_1                            0x00
+#define TOUCHPAD4_HOLD_TIME_0                               0x2C
+#define TOUCHPAD4_HOLD_TIME_1                               0x01
+#define TOUCHPAD4_SWIPE_TIME_0                              0x96
+#define TOUCHPAD4_SWIPE_TIME_1                              0x00
+#define TOUCHPAD4_SWIPE_X_DISTANCE_0                        0xC8
+#define TOUCHPAD4_SWIPE_X_DISTANCE_1                        0x00
+#define TOUCHPAD4_SWIPE_Y_DISTANCE_0                        0xC8
+#define TOUCHPAD4_SWIPE_Y_DISTANCE_1                        0x00
+#define TOUCHPAD4_SWIPE_ANGLE_0                             0x17
+#define TOUCHPAD4_GESTURE_OPEN_0                            0x00
+
+/**
+ * @brief Change the RxTx Mapping.
+ * @details Memory Map Position 0x90 - 0x96.
+ */
+#define TOUCHPAD4_RX_TX_MAP_0                               0x05
+#define TOUCHPAD4_RX_TX_MAP_1                               0x04
+#define TOUCHPAD4_RX_TX_MAP_2                               0x01
+#define TOUCHPAD4_RX_TX_MAP_3                               0x00
+#define TOUCHPAD4_RX_TX_MAP_4                               0x0A
+#define TOUCHPAD4_RX_TX_MAP_5                               0x09
+#define TOUCHPAD4_RX_TX_MAP_6                               0x08
+#define TOUCHPAD4_RX_TX_MAP_7                               0x07
+#define TOUCHPAD4_RX_TX_MAP_8                               0x06
+#define TOUCHPAD4_RX_TX_MAP_9                               0x0A
+#define TOUCHPAD4_RX_TX_MAP_10                              0x09
+#define TOUCHPAD4_RX_TX_MAP_11                              0x08
+#define TOUCHPAD4_RX_TX_MAP_12                              0x00
+#define TOUCHPAD4_RX_TX_MAP_13                              0x00
+
+/**
+ * @brief Change the Allocation of channels into cycles 0-9.
+ * @details Memory Map Position 0xA0 - 0xAE.
+ */
+#define TOUCHPAD4_PLACEHOLDER_0                             0x05
+#define TOUCHPAD4_CH_1_CYCLE_0                              0x00
+#define TOUCHPAD4_CH_2_CYCLE_0                              0x02
+#define TOUCHPAD4_PLACEHOLDER_1                             0x05
+#define TOUCHPAD4_CH_1_CYCLE_1                              0x01
+#define TOUCHPAD4_CH_2_CYCLE_1                              0x03
+#define TOUCHPAD4_PLACEHOLDER_2                             0x05
+#define TOUCHPAD4_CH_1_CYCLE_2                              0x04
+#define TOUCHPAD4_CH_2_CYCLE_2                              0x06
+#define TOUCHPAD4_PLACEHOLDER_3                             0x05
+#define TOUCHPAD4_CH_1_CYCLE_3                              0x05
+#define TOUCHPAD4_CH_2_CYCLE_3                              0x07
+#define TOUCHPAD4_PLACEHOLDER_4                             0x05
+#define TOUCHPAD4_CH_1_CYCLE_4                              0x08
+#define TOUCHPAD4_CH_2_CYCLE_4                              0x0A
+#define TOUCHPAD4_PLACEHOLDER_5                             0x05
+#define TOUCHPAD4_CH_1_CYCLE_5                              0x09
+#define TOUCHPAD4_CH_2_CYCLE_5                              0x0B
+#define TOUCHPAD4_PLACEHOLDER_6                             0x05
+#define TOUCHPAD4_CH_1_CYCLE_6                              0x0C
+#define TOUCHPAD4_CH_2_CYCLE_6                              0x0E
+#define TOUCHPAD4_PLACEHOLDER_7                             0x05
+#define TOUCHPAD4_CH_1_CYCLE_7                              0x0D
+#define TOUCHPAD4_CH_2_CYCLE_7                              0x0F
+#define TOUCHPAD4_PLACEHOLDER_8                             0x05
+#define TOUCHPAD4_CH_1_CYCLE_8                              0x10
+#define TOUCHPAD4_CH_2_CYCLE_8                              0x12
+#define TOUCHPAD4_PLACEHOLDER_9                             0x05
+#define TOUCHPAD4_CH_1_CYCLE_9                              0x11
+#define TOUCHPAD4_CH_2_CYCLE_9                              0x13
+
+/**
+ * @brief Change the Allocation of channels into cycles 10-17.
+ * @details Memory Map Position 0xB0 - 0xBB.
+ */
+#define TOUCHPAD4_PLACEHOLDER_10                            0x05
+#define TOUCHPAD4_CH_1_CYCLE_10                             0xFF
+#define TOUCHPAD4_CH_2_CYCLE_10                             0xFF
+#define TOUCHPAD4_PLACEHOLDER_11                            0x05
+#define TOUCHPAD4_CH_1_CYCLE_11                             0xFF
+#define TOUCHPAD4_CH_2_CYCLE_11                             0xFF
+#define TOUCHPAD4_PLACEHOLDER_12                            0x05
+#define TOUCHPAD4_CH_1_CYCLE_12                             0xFF
+#define TOUCHPAD4_CH_2_CYCLE_12                             0xFF
+#define TOUCHPAD4_PLACEHOLDER_13                            0x05
+#define TOUCHPAD4_CH_1_CYCLE_13                             0xFF
+#define TOUCHPAD4_CH_2_CYCLE_13                             0xFF
+#define TOUCHPAD4_PLACEHOLDER_14                            0x05
+#define TOUCHPAD4_CH_1_CYCLE_14                             0xFF
+#define TOUCHPAD4_CH_2_CYCLE_14                             0xFF
+#define TOUCHPAD4_PLACEHOLDER_15                            0x05
+#define TOUCHPAD4_CH_1_CYCLE_15                             0xFF
+#define TOUCHPAD4_CH_2_CYCLE_15                             0xFF
+#define TOUCHPAD4_PLACEHOLDER_16                            0x05
+#define TOUCHPAD4_CH_1_CYCLE_16                             0xFF
+#define TOUCHPAD4_CH_2_CYCLE_16                             0xFF
+#define TOUCHPAD4_PLACEHOLDER_17                            0x05
+#define TOUCHPAD4_CH_1_CYCLE_17                             0xFF
+#define TOUCHPAD4_CH_2_CYCLE_17                             0xFF
+
+/**
  * @brief Touchpad 4 device address setting.
  * @details Specified setting for device slave address selection of
  * Touchpad 4 Click driver.
  */
-#define TOUCHPAD4_SET_DEV_ADDR  0x56
+#define TOUCHPAD4_SET_DEV_ADDR                              0x56
 
 /*! @} */ // touchpad4_set
 
@@ -222,7 +462,7 @@ extern "C"{
 typedef struct
 {
     // Output pins
-    digital_out_t mclr;      /**< Reset. */
+    digital_out_t mclr;     /**< Reset. */
     
     // Input pins
     digital_in_t  rdy;      /**< Ready. */
@@ -283,8 +523,8 @@ typedef struct
  */
 typedef enum
 {
-   TOUCHPAD4_OK = 0,
-   TOUCHPAD4_ERROR = -1
+    TOUCHPAD4_OK = 0,
+    TOUCHPAD4_ERROR = -1
 
 } touchpad4_return_value_t;
 

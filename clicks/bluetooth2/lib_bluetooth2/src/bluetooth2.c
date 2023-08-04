@@ -22,7 +22,7 @@
 
 /*!
  * @file bluetooth2.c
- * @brief Bluetooth 2 Click Driver.
+ * @brief Bluetooth2 Click Driver.
  */
 
 #include "bluetooth2.h"

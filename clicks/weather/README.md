@@ -1,11 +1,9 @@
 \mainpage Main Page
  
- 
-
 ---
 # Weather click
 
-Weather click carries BME280 integrated environmental unit from Bosch.
+> Weather click carries BME280 integrated environmental unit from Bosch.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/weather_click.png" height=300px>
@@ -18,7 +16,7 @@ Weather click carries BME280 integrated environmental unit from Bosch.
 
 #### Click library 
 
-- **Author**        : Katarina Perendic
+- **Author**        : MikroE Team
 - **Date**          : okt 2019.
 - **Type**          : I2C/SPI type
 
@@ -38,28 +36,39 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void weather_cfg_setup ( weather_cfg_t *cfg ); 
- 
-- Initialization function.
-> WEATHER_RETVAL weather_init ( weather_t *ctx, weather_cfg_t *cfg );
+- `weather_cfg_setup` Config Object Initialization function.
+```c
+void weather_cfg_setup ( weather_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void weather_default_cfg ( weather_t *ctx );
+- `weather_init` Initialization function.
+```c
+err_t weather_init ( weather_t *ctx, weather_cfg_t *cfg );
+```
 
+- `weather_default_cfg` Click Default Configuration function.
+```c
+err_t weather_default_cfg ( weather_t *ctx );
+```
 
 #### Example key functions :
 
-- Weather data
-> void weather_get_ambient_data( weather_t *ctx, weather_data_t *weather_data );
- 
-- Measurement configuration
-> void weather_measurement_cfg ( weather_t *ctx, weather_measurement_cfg_t *cfg );
+- `weather_get_ambient_data` Use this function to read the temperature, pressure and humidity data
+```c
+err_t weather_get_ambient_data( weather_t *ctx, weather_data_t *weather_data );
+```
 
-- Software reset function
-> void weather_software_reset ( weather_t *ctx );
+- `weather_get_device_id` You can use this function as a check on click communication with your MCU.
+```c
+err_t weather_get_device_id ( weather_t *ctx, uint8_t *device_id );
+```
 
-## Examples Description
+- `weather_measurement_cfg` Use this function to set up new settings
+```c
+err_t weather_measurement_cfg ( weather_t *ctx, weather_measurement_cfg_t *cfg );
+```
+
+## Example Description
 
 > This demo-app shows the temperature, pressure and humidity measurement using Weather click.
 
@@ -74,7 +83,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    weather_cfg_t cfg;
+    weather_cfg_t weather_cfg;
 
     /** 
      * Logger initialization.
@@ -87,38 +96,45 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
-    weather_cfg_setup( &cfg );
-    WEATHER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    weather_init( &weather, &cfg );
-
-    weather_default_cfg( &weather );
+    // Click initialization.
+    weather_cfg_setup( &weather_cfg );
+    WEATHER_MAP_MIKROBUS( weather_cfg, MIKROBUS_1 );
+    if ( WEATHER_OK != weather_init( &weather, &weather_cfg ) )
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
+    
+    if ( WEATHER_OK != weather_default_cfg ( &weather ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
+    
+    log_info( &logger, " Application Task " );
 } 
 ```
 
 ### Application Task
 
-> Reads Temperature data, Relative Huminidy data and Pressure data, 
-> this data logs to USBUART every 1500ms.
+> Reads Temperature data, Relative Humidity data and Pressure data, and displays them on USB UART every 1500ms.
 
 ```c
 void application_task ( void )
 {
     weather_data_t weather_data;
 
-    //  Task implementation.
+    if ( WEATHER_OK == weather_get_ambient_data( &weather, &weather_data ) )
+    {
+        log_printf( &logger, " \r\n ---- Weather data ----- \r\n" );
+        log_printf( &logger, "[PRESSURE]: %.2f mBar.\n\r", weather_data.pressure );
+        log_printf( &logger, "[TEMPERATURE]: %.2f C.\n\r", weather_data.temperature );
+        log_printf( &logger, "[HUMIDITY]: %.2f %%.\n\r", weather_data.humidity );
 
-    weather_get_ambient_data( &weather, &weather_data );
-
-    log_printf( &logger, " \r\n ---- Weather data ----- \r\n" );
-    log_printf( &logger, "[PRESSURE]: %.2f mBar.\n\r", weather_data.pressure );
-    log_printf( &logger, "[TEMPERATURE]: %.2f C.\n\r", weather_data.temperature );
-    log_printf( &logger, "[HUMIDITY]: %.2f %%.\n\r", weather_data.humidity );
-
-    Delay_ms( 1500 );
+        Delay_ms( 1500 );
+    }
 }
 ```
 
