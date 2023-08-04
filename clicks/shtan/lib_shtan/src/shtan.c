@@ -42,7 +42,7 @@ void shtan_cfg_setup ( shtan_cfg_t *cfg )
     cfg->rst = HAL_PIN_NC;
     cfg->cs  = HAL_PIN_NC;
 
-    cfg->resolution = ANALOG_IN_RESOLUTION_12_BIT;
+    cfg->resolution = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->vref       = 3.3;
     cfg->vdd        = 3.3;
 }

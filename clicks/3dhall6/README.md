@@ -1,16 +1,13 @@
 \mainpage Main Page
  
- 
- 
 ---
 # 3D Hall 6 click
 
-3D Hall 6 Click is a very accurate, magnetic field sensing Click board™, used to measure the intensity of the magnetic field across three perpendicular axes. 
+> 3D Hall 6 Click is a very accurate, magnetic field sensing Click board™, used to measure the intensity of the magnetic field across three perpendicular axes. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/3dhall6_click.png" height=300px>
 </p>
-
 
 [click Product page](https://www.mikroe.com/3d-hall-6-click)
 
@@ -39,28 +36,34 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void c3dhall6_cfg_setup ( c3dhall6_cfg_t *cfg ); 
- 
-- Initialization function.
-> C3DHALL6_RETVAL c3dhall6_init ( c3dhall6_t *ctx, c3dhall6_cfg_t *cfg );
+- `c3dhall6_cfg_setup` Config Object Initialization function.
+```c
+void c3dhall6_cfg_setup ( c3dhall6_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void c3dhall6_default_cfg ( c3dhall6_t *ctx );
-
+- `c3dhall6_init` Initialization function.
+```c
+err_t c3dhall6_init ( c3dhall6_t *ctx, c3dhall6_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- This function sets reference values for voltage and angle calculations.
-> void c3dhall6_set_reference_values ( c3dhall6_t *ctx, float reference_voltage, float ref_adc_ch0, float ref_adc_ch1, float ref_adc_ch2, float ref_adc_ch3 );
- 
-- This function reads ADC value on selected channel.
-> void c3dhall6_get_adc_value ( c3dhall6_t *ctx, uint8_t channel_no, uint16_t *adc_value );
+- `c3dhall6_set_reference_values` This function sets reference values for voltage and angle calculations.
+```c
+void c3dhall6_set_reference_values ( c3dhall6_t *ctx, c3dhall6_aux_ref_t ref_val );
+```
 
-- This function reads ADC value on selected channel and converts that value to Volts or miliVolts - depending on reference voltage setting.
-> void c3dhall6_get_volt( c3dhall6_t *ctx, uint8_t channel_no, float *channel_voltage );
+- `c3dhall6_get_adc_value` This function reads ADC value on selected channel.
+```c
+void c3dhall6_get_adc_value ( c3dhall6_t *ctx, uint8_t channel_no, uint16_t *adc_value );
+```
 
-## Examples Description
+- `c3dhall6_get_volt` This function reads ADC value on selected channel and converts that value to Volts or miliVolts - depending on reference voltage setting.
+```c
+void c3dhall6_get_volt( c3dhall6_t *ctx, uint8_t channel_no, float *channel_voltage );
+```
+
+## Example Description
 
 > This application measure the intensity of the magnetic field across three perpendicular axes.
 
@@ -88,22 +91,31 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
+    // Click initialization.
     c3dhall6_cfg_setup( &cfg );
     C3DHALL6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c3dhall6_init( &c3dhall6, &cfg );
 
-    Delay_ms( 300 );
-    c3dhall6_set_reference_values( &c3dhall6, 3.3, 2048.0, 2048.0, 2048.0, 2048.0 );
+    c3dhall6_aux_ref_t ref_val = 
+    {
+        .aux_ref_adc_ch0 = 2048.0,
+        .aux_ref_adc_ch1 = 2048.0,
+        .aux_ref_adc_ch2 = 2048.0,
+        .aux_ref_adc_ch3 = 2048.0,
+        .aux_ref_volt = 3.3
+    };
+    c3dhall6_set_reference_values( &c3dhall6, ref_val );
+    
+    log_info( &logger, " Application Task " );
 }
   
 ```
 
 ### Application Task
 
+> Executes one or more 'c3dhall6_log_xxx_task' functions
 > Additional Functions :
 >
 > - c3dhall6_log_adc_task() - performs and logs adc measurements on all channels

@@ -91,7 +91,7 @@ void altitude5_cfg_setup ( altitude5_cfg_t *cfg )
     cfg->i2c_speed   = I2C_MASTER_SPEED_STANDARD;
     cfg->i2c_address = ALTITUDE5_SET_DEV_ADDR;
     
-    cfg->resolution = ANALOG_IN_RESOLUTION_12_BIT;
+    cfg->resolution = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->vref       = ALTITUDE5_VREF_5000_mV;
     
     cfg->adc_offset = 0;

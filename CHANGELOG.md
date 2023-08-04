@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230804](#20230804)**
 + **[20230728](#20230728)**
 + **[20230721](#20230721)**
 + **[20230706](#20230706)**
@@ -56,6 +57,79 @@
 
 ---
 ---
+---
+
+## `20230804`
+
+*Following click boards have been added:*
+
++ `Angle 9`
++ `Step Down 6`
++ `Barometer 12`
++ `Zero-Cross`
++ `Microwave 4`
++ `BLE 6`
++ `Bluetooth 2`
++ `RTC`
++ `Smoke 2`
+
+*Following click boards have been updated:*
+
++ `3D Hall 6`
++ `7x10 B`
++ `7x10 G`
++ `7x10 R`
++ `7x10 Y`
++ `Air quality`
++ `Alcohol`
++ `Altitude 5`
++ `Ambient`
++ `Ambient 7`
++ `Ammonia`
++ `AMR Angle`
++ `Analog Key`
++ `Analog MUX`
++ `Analog MUX 3`
++ `Bluetooth2`
++ `Brushless`
++ `Brushless 3`
++ `Brushless 9`
++ `CO`
++ `DAC 7`
++ `DC Motor 18`
++ `DC Motor 9`
++ `DIGI POT 8`
++ `ECG`
++ `Force`
++ `GainAMP 2`
++ `Hall Current 11`
++ `Hall Current 5`
++ `Hydrogen`
++ `Hz to V`
++ `Hz to V 2`
++ `IR Distance`
++ `IR Gesture 3`
++ `LPG`
++ `Methane`
++ `MIC`
++ `MIC 2`
++ `Microwave`
++ `Ozone 2`
++ `Piezo Accel`
++ `POT 2`
++ `Pressure 12`
++ `R Meter`
++ `SHT AN`
++ `Slider 2`
++ `Stretch`
++ `TempHum 24`
++ `Thermo 16`
++ `TMR mix-sens`
++ `Touchpad 4`
++ `Weather`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230728`

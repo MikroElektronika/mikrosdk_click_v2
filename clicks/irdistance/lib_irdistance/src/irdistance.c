@@ -36,7 +36,7 @@ void irdistance_cfg_setup ( irdistance_cfg_t *cfg )
     cfg->out = HAL_PIN_NC;
     cfg->en  = HAL_PIN_NC;
 
-    cfg->resolution = ANALOG_IN_RESOLUTION_10_BIT;
+    cfg->resolution = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->vref       = 3.3;
 }
 

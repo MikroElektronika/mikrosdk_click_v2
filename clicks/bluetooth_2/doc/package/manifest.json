@@ -1,0 +1,44 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
+    "category": "Click Boards > Wireless connectivity > BT/BLE",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Bluetooth 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.bluetooth_2",
+    "product_link": "https://www.mikroe.com/bluetooth-2-click",
+    "short_description": "Bluetooth 2 Click features WT41u, a long range class 1, Bluetooth® 2.1 + EDR module from Silicon Labs. WT41u is a highly integrated and sophisticated Bluetooth® module, containing all the necessary elements from Bluetooth® radio and a fully implemented protocol stack. Therefore WT41u provides an ideal solution for developers who want to integrate Bluetooth® wireless technology into their design with limited knowledge of Bluetooth® and RF technologies. WT41u optimized for long range applications is available with an integrated chip antenna.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type": "mikroSDK Library",
+    "related_projects": [
+        570
+    ],
+    "version": "2.1.0.10",
+    "cmake": true,
+    "alias": "Click.Bluetooth2",
+    "subdir_name": "lib_bluetooth2"
+}
+
+
+
+
+
+

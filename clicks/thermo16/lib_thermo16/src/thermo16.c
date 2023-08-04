@@ -44,7 +44,7 @@ void thermo16_cfg_setup ( thermo16_cfg_t *cfg )
 
     cfg->an_pin = HAL_PIN_NC;
 
-    cfg->resolution   = ANALOG_IN_RESOLUTION_12_BIT;
+    cfg->resolution   = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->vref         = 3.3;
 }
 

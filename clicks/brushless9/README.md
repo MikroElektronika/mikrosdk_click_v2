@@ -4,7 +4,7 @@
 
 # Brushless 9 click
 
-Brushless 9 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the TC78B027FTG, a 1-Hall sine-wave PWM controller for three-phase brushless DC motors from Toshiba Semiconductor. It simplifies the motor selection by using only one Hall sensor input that can be used with either a single Hall sensor motor or the more conventional 3 Hall sensor motors.
+> Brushless 9 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the TC78B027FTG, a 1-Hall sine-wave PWM controller for three-phase brushless DC motors from Toshiba Semiconductor. It simplifies the motor selection by using only one Hall sensor input that can be used with either a single Hall sensor motor or the more conventional 3 Hall sensor motors.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/brushless-9-click-necto.png" height=300px>
@@ -49,33 +49,30 @@ err_t brushless9_init ( brushless9_t *ctx, brushless9_cfg_t *cfg );
 
 #### Example key functions :
 
-- `brushless9_cfg_setup` function initializes click configuration structure to initial values.
+- `brushless9_set_duty_cycle` This function sets the PWM duty cycle in percentages ( Range[ 0..1 ] ).
 ```c
-void brushless9_cfg_setup ( brushless9_cfg_t *cfg );
+err_t brushless9_set_duty_cycle ( brushless9_t *ctx, float duty_cycle );
 ```
 
-- `brushless9_init` function initializes all necessary peripherals.
+- `brushless9_set_dir` This function sets dir pin output to status setting.
 ```c
-BRUSHLESS9_RETVAL brushless9_init ( brushless9_t *ctx, brushless9_cfg_t *cfg );
+void brushless9_set_dir ( brushless9_t *ctx, uint8_t state );
 ```
 
-- `brushless9_default_cfg` function sets default configuration.
+- `brushless9_set_brk` This function sets brk pin output to status setting.
 ```c
-void brushless9_default_cfg ( brushless9_t *ctx );
+void brushless9_set_brk ( brushless9_t *ctx, uint8_t state );
 ```
 
-## Examples Description
+## Example Description
 
-> This example works with motors using adequate PWM pin.
+> This application is a showcase of controlling speed and direction of brushless motor with hall sensor.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes driver and sets up adequate module
-> configuration.
-> Once in this state, the module is ready to
-> operate.
+> Initialization of LOG, PWM module and additional pins for controlling motor.
 
 ```c
 
@@ -121,10 +118,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This example demonstrates the use of Brushless 9 click board.
-> Brushless 9 click communicates with the device via PWM driver in order to
-> set adequate voltage level for connected motor.
-> Current PWM settings being output are sent via logger.
+> In span of 2 seconds changes duty cycle from 0 to 100% and then back to 0, at the end changes direction of motor.
 
 ```c
 
@@ -132,18 +126,18 @@ void application_task ( void )
 {
     log_info( &logger, " Starting... " );
     brushless9_set_brk( &brushless9, 0 );
-    for ( float duty = 0.1; duty < 1; duty += 0.1 )
+    for ( uint8_t duty_cnt = 1; duty_cnt < 10; duty_cnt++ )
     {
         Delay_ms( DUTY_CHANGE_DELAY );
-        brushless9_set_duty_cycle ( &brushless9, duty );
-        log_printf( &logger, "Duty: %u%%\r\n", ( uint16_t )ceil( duty * 100 ) );
+        brushless9_set_duty_cycle ( &brushless9, ( float ) duty_cnt / 10.0 );
+        log_printf( &logger, "Duty cycle: %u%%\r\n", ( uint16_t ) ( duty_cnt * 10 ) );
     }
 
-    for ( float duty = 0.9; duty >= 0; duty -= 0.1 )
+    for ( uint8_t duty_cnt = 10; duty_cnt > 0; duty_cnt-- )
     {
         Delay_ms( DUTY_CHANGE_DELAY );
-        brushless9_set_duty_cycle ( &brushless9, duty );
-        log_printf( &logger, "Duty: %u%%\r\n", ( uint16_t )ceil( duty * 100 ) );
+        brushless9_set_duty_cycle ( &brushless9, ( float ) duty_cnt / 10.0 );
+        log_printf( &logger, "Duty cycle: %u%%\r\n", ( uint16_t ) ( duty_cnt * 10 ) );
     }
 
     Delay_ms( DUTY_CHANGE_DELAY );
@@ -157,8 +151,6 @@ void application_task ( void )
 }
 
 ```
-
-## Note
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

@@ -22,7 +22,7 @@
 
 /*!
  * @file bluetooth2.h
- * @brief This file contains API for Bluetooth 2 Click Driver.
+ * @brief This file contains API for Bluetooth2 Click Driver.
  */
 
 #ifndef BLUETOOTH2_H
@@ -38,14 +38,14 @@ extern "C"{
 #include "drv_uart.h"
 
 /*!
- * @addtogroup bluetooth2 Bluetooth 2 Click Driver
- * @brief API for configuring and manipulating Bluetooth 2 Click driver.
+ * @addtogroup bluetooth2 Bluetooth2 Click Driver
+ * @brief API for configuring and manipulating Bluetooth2 Click driver.
  * @{
  */
 
 /**
- * @defgroup bluetooth2_set Bluetooth 2 Registers Settings
- * @brief Settings for registers of Bluetooth 2 Click driver.
+ * @defgroup bluetooth2_set Bluetooth2 Registers Settings
+ * @brief Settings for registers of Bluetooth2 Click driver.
  */
 
 /**
@@ -54,8 +54,8 @@ extern "C"{
  */
 
 /**
- * @brief Bluetooth 2 list of AT commands.
- * @brief AT commands list of Bluetooth 2 Click driver.
+ * @brief Bluetooth2 list of AT commands.
+ * @brief AT commands list of Bluetooth2 Click driver.
  */
 #define BLUETOOTH2_ESCAPE_SEQUENCE                  "+++"
 #define BLUETOOTH2_FACTORY_RESET                    "SET RESET"
@@ -70,7 +70,7 @@ extern "C"{
 #define BLUETOOTH2_DEV_ADDRESS_FORMAT               "xx:xx:xx:xx:xx:xx"
 
 /**
- * @brief Bluetooth 2 driver buffer size.
+ * @brief Bluetooth2 driver buffer size.
  * @details Specified size of driver ring buffer.
  * @note Increase buffer size if needed.
  */
@@ -79,8 +79,8 @@ extern "C"{
 /*! @} */ // bluetooth2_set
 
 /**
- * @defgroup bluetooth2_map Bluetooth 2 MikroBUS Map
- * @brief MikroBUS pin mapping of Bluetooth 2 Click driver.
+ * @defgroup bluetooth2_map Bluetooth2 MikroBUS Map
+ * @brief MikroBUS pin mapping of Bluetooth2 Click driver.
  */
 
 /**
@@ -90,7 +90,7 @@ extern "C"{
 
 /**
  * @brief MikroBUS pin mapping.
- * @details Mapping pins of Bluetooth 2 Click to the selected MikroBUS.
+ * @details Mapping pins of Bluetooth2 Click to the selected MikroBUS.
  */
 #define BLUETOOTH2_MAP_MIKROBUS( cfg, mikrobus ) \
     cfg.tx_pin  = MIKROBUS( mikrobus, MIKROBUS_TX ); \
@@ -104,8 +104,8 @@ extern "C"{
 /*! @} */ // bluetooth2_map
 /*! @} */ // bluetooth2
 /**
- * @brief Bluetooth 2 Click context object.
- * @details Context object definition of Bluetooth 2 Click driver.
+ * @brief Bluetooth2 Click context object.
+ * @details Context object definition of Bluetooth2 Click driver.
  */
 typedef struct bluetooth2_s
 {
@@ -123,8 +123,8 @@ typedef struct bluetooth2_s
 } bluetooth2_t;
 
 /**
- * @brief Bluetooth 2 Click configuration object.
- * @details Configuration object definition of Bluetooth 2 Click driver.
+ * @brief Bluetooth2 Click configuration object.
+ * @details Configuration object definition of Bluetooth2 Click driver.
  */
 typedef struct
 {
@@ -148,7 +148,7 @@ typedef struct
 } bluetooth2_cfg_t;
 
 /**
- * @brief Bluetooth 2 Click return value data.
+ * @brief Bluetooth2 Click return value data.
  * @details Predefined enum values for driver return values.
  */
 typedef enum
@@ -159,13 +159,13 @@ typedef enum
 } bluetooth2_return_value_t;
 
 /*!
- * @addtogroup bluetooth2 Bluetooth 2 Click Driver
- * @brief API for configuring and manipulating Bluetooth 2 Click driver.
+ * @addtogroup bluetooth2 Bluetooth2 Click Driver
+ * @brief API for configuring and manipulating Bluetooth2 Click driver.
  * @{
  */
 
 /**
- * @brief Bluetooth 2 configuration object setup function.
+ * @brief Bluetooth2 configuration object setup function.
  * @details This function initializes click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
@@ -176,7 +176,7 @@ typedef enum
 void bluetooth2_cfg_setup ( bluetooth2_cfg_t *cfg );
 
 /**
- * @brief Bluetooth 2 initialization function.
+ * @brief Bluetooth2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
  * for this click board.
  * @param[out] ctx : Click context object.
@@ -192,8 +192,8 @@ void bluetooth2_cfg_setup ( bluetooth2_cfg_t *cfg );
 err_t bluetooth2_init ( bluetooth2_t *ctx, bluetooth2_cfg_t *cfg );
 
 /**
- * @brief Bluetooth 2 default configuration function.
- * @details This function executes a default configuration of Bluetooth 2
+ * @brief Bluetooth2 default configuration function.
+ * @details This function executes a default configuration of Bluetooth2
  * click board.
  * @param[in] ctx : Click context object.
  * See #bluetooth2_t object definition for detailed explanation.
@@ -204,7 +204,7 @@ err_t bluetooth2_init ( bluetooth2_t *ctx, bluetooth2_cfg_t *cfg );
 void bluetooth2_default_cfg ( bluetooth2_t *ctx );
 
 /**
- * @brief Bluetooth 2 data writing function.
+ * @brief Bluetooth2 data writing function.
  * @details This function writes a desired number of data bytes by using UART serial interface.
  * @param[in] ctx : Click context object.
  * See #bluetooth2_t object definition for detailed explanation.
@@ -219,7 +219,7 @@ void bluetooth2_default_cfg ( bluetooth2_t *ctx );
 err_t bluetooth2_generic_write ( bluetooth2_t *ctx, char *data_buf, uint16_t len );
 
 /**
- * @brief Bluetooth 2 data reading function.
+ * @brief Bluetooth2 data reading function.
  * @details This function reads a desired number of data bytes by using UART serial interface.
  * @param[in] ctx : Click context object.
  * See #bluetooth2_t object definition for detailed explanation.
@@ -234,7 +234,7 @@ err_t bluetooth2_generic_write ( bluetooth2_t *ctx, char *data_buf, uint16_t len
 err_t bluetooth2_generic_read ( bluetooth2_t *ctx, char *data_buf, uint16_t max_len );
 
 /**
- * @brief Bluetooth 2 read AN pin value function.
+ * @brief Bluetooth2 read AN pin value function.
  * @details This function reads results of AD conversion of the AN pin.
  * @param[in] ctx : Click context object.
  * See #bluetooth2_t object definition for detailed explanation.
@@ -248,7 +248,7 @@ err_t bluetooth2_generic_read ( bluetooth2_t *ctx, char *data_buf, uint16_t max_
 err_t bluetooth2_read_an_pin_value ( bluetooth2_t *ctx, uint16_t *data_out );
 
 /**
- * @brief Bluetooth 2 read AN pin voltage level function.
+ * @brief Bluetooth2 read AN pin voltage level function.
  * @details This function reads results of AD conversion of the AN pin and
  * converts them to proportional voltage level.
  * @param[in] ctx : Click context object.
@@ -264,7 +264,7 @@ err_t bluetooth2_read_an_pin_value ( bluetooth2_t *ctx, uint16_t *data_out );
 err_t bluetooth2_read_an_pin_voltage ( bluetooth2_t *ctx, float *data_out );
 
 /**
- * @brief Bluetooth 2 set clear to send pin function.
+ * @brief Bluetooth2 set clear to send pin function.
  * @details This function sets the CTS pin to a desired state.
  * @param[in] ctx : Click context object.
  * See #bluetooth2_t object definition for detailed explanation.
@@ -275,7 +275,7 @@ err_t bluetooth2_read_an_pin_voltage ( bluetooth2_t *ctx, float *data_out );
 void bluetooth2_set_cts_pin ( bluetooth2_t *ctx, uint8_t state );
 
 /**
- * @brief Bluetooth 2 set reset pin function.
+ * @brief Bluetooth2 set reset pin function.
  * @details This function sets the RST pin to a desired state.
  * @param[in] ctx : Click context object.
  * See #bluetooth2_t object definition for detailed explanation.
@@ -286,7 +286,7 @@ void bluetooth2_set_cts_pin ( bluetooth2_t *ctx, uint8_t state );
 void bluetooth2_set_rst_pin ( bluetooth2_t *ctx, uint8_t state );
 
 /**
- * @brief Bluetooth 2 set PIO7 pin function.
+ * @brief Bluetooth2 set PIO7 pin function.
  * @details This function sets the PIO7 pin to a desired state.
  * @param[in] ctx : Click context object.
  * See #bluetooth2_t object definition for detailed explanation.
@@ -297,7 +297,7 @@ void bluetooth2_set_rst_pin ( bluetooth2_t *ctx, uint8_t state );
 void bluetooth2_set_io7_pin ( bluetooth2_t *ctx, uint8_t state );
 
 /**
- * @brief Bluetooth 2 get request to send pin function.
+ * @brief Bluetooth2 get request to send pin function.
  * @details This function returns the RTS pin logic state.
  * @param[in] ctx : Click context object.
  * See #bluetooth2_t object definition for detailed explanation.
@@ -307,7 +307,7 @@ void bluetooth2_set_io7_pin ( bluetooth2_t *ctx, uint8_t state );
 uint8_t bluetooth2_get_rts_pin ( bluetooth2_t *ctx );
 
 /**
- * @brief Bluetooth 2 write command function.
+ * @brief Bluetooth2 write command function.
  * @details This function sends a desired command with the CR byte appended to.
  * @param[in] ctx : Click context object.
  * See #bluetooth2_t object definition for detailed explanation.
@@ -321,7 +321,7 @@ uint8_t bluetooth2_get_rts_pin ( bluetooth2_t *ctx );
 err_t bluetooth2_write_command ( bluetooth2_t *ctx, char *data_buf );
 
 /**
- * @brief Bluetooth 2 hw reset function.
+ * @brief Bluetooth2 hw reset function.
  * @details This function resets the module by toggling the RST pin.
  * @param[in] ctx : Click context object.
  * See #bluetooth2_t object definition for detailed explanation.
@@ -331,7 +331,7 @@ err_t bluetooth2_write_command ( bluetooth2_t *ctx, char *data_buf );
 void bluetooth2_hw_reset ( bluetooth2_t *ctx );
 
 /**
- * @brief Bluetooth 2 toggle mode function.
+ * @brief Bluetooth2 toggle mode function.
  * @details This function is used to toggle between command mode and data mode
  * by issuing the escape sequence.
  * @param[in] ctx : Click context object.
@@ -345,7 +345,7 @@ void bluetooth2_hw_reset ( bluetooth2_t *ctx );
 err_t bluetooth2_toggle_mode ( bluetooth2_t *ctx );
 
 /**
- * @brief Bluetooth 2 factory reset function.
+ * @brief Bluetooth2 factory reset function.
  * @details This function factory resets the device.
  * @param[in] ctx : Click context object.
  * See #bluetooth2_t object definition for detailed explanation.
@@ -358,7 +358,7 @@ err_t bluetooth2_toggle_mode ( bluetooth2_t *ctx );
 err_t bluetooth2_factory_reset ( bluetooth2_t *ctx );
 
 /**
- * @brief Bluetooth 2 sw reset function.
+ * @brief Bluetooth2 sw reset function.
  * @details This function sw resets the device.
  * @param[in] ctx : Click context object.
  * See #bluetooth2_t object definition for detailed explanation.
@@ -371,7 +371,7 @@ err_t bluetooth2_factory_reset ( bluetooth2_t *ctx );
 err_t bluetooth2_sw_reset ( bluetooth2_t *ctx );
 
 /**
- * @brief Bluetooth 2 remove pairings function.
+ * @brief Bluetooth2 remove pairings function.
  * @details This function removes all the device pairings.
  * @param[in] ctx : Click context object.
  * See #bluetooth2_t object definition for detailed explanation.
@@ -384,7 +384,7 @@ err_t bluetooth2_sw_reset ( bluetooth2_t *ctx );
 err_t bluetooth2_remove_pairings ( bluetooth2_t *ctx );
 
 /**
- * @brief Bluetooth 2 list current pairings function.
+ * @brief Bluetooth2 list current pairings function.
  * @details This function lists all current pairings.
  * @param[in] ctx : Click context object.
  * See #bluetooth2_t object definition for detailed explanation.
@@ -397,7 +397,7 @@ err_t bluetooth2_remove_pairings ( bluetooth2_t *ctx );
 err_t bluetooth2_list_pairings ( bluetooth2_t *ctx );
 
 /**
- * @brief Bluetooth 2 set local device name function.
+ * @brief Bluetooth2 set local device name function.
  * @details This function sets the local device name.
  * @param[in] ctx : Click context object.
  * See #bluetooth2_t object definition for detailed explanation.
@@ -411,7 +411,7 @@ err_t bluetooth2_list_pairings ( bluetooth2_t *ctx );
 err_t bluetooth2_set_device_name ( bluetooth2_t *ctx, char *dev_name );
 
 /**
- * @brief Bluetooth 2 find other devices function.
+ * @brief Bluetooth2 find other devices function.
  * @details This function is used to find other Bluetooth devices in the area i.e. 
  * to make a device discovery.
  * @param[in] ctx : Click context object.
@@ -427,7 +427,7 @@ err_t bluetooth2_set_device_name ( bluetooth2_t *ctx, char *dev_name );
 err_t bluetooth2_find_other_devices ( bluetooth2_t *ctx, uint8_t timeout );
 
 /**
- * @brief Bluetooth 2 set local device name function.
+ * @brief Bluetooth2 set local device name function.
  * @details This function sets the local device name.
  * @param[in] ctx : Click context object.
  * See #bluetooth2_t object definition for detailed explanation.
@@ -442,7 +442,7 @@ err_t bluetooth2_find_other_devices ( bluetooth2_t *ctx, uint8_t timeout );
 err_t bluetooth2_pair ( bluetooth2_t *ctx, uint8_t *dev_addr );
 
 /**
- * @brief Bluetooth 2 enable OK response function.
+ * @brief Bluetooth2 enable OK response function.
  * @details This function enables OK response. 
  * The module will display "OK." after each successful command.
  * @param[in] ctx : Click context object.

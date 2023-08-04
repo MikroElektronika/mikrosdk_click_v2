@@ -17,8 +17,8 @@
  *
  *  - c3dhall6_log_adc_task() - performs and logs adc measurements on all channels
  *  - c3dhall6_log_volt_task() - performs and logs voltage measurements on all channels
- *  - c3dhall6_log_angleRad_task() - performs and logs angle measurements in radians on each die
- *  - c3dhall6_log_angleDeg_task() - performs and logs angle measurements in degrees on each die
+ *  - c3dhall6_log_angle_rad_task() - performs and logs angle measurements in radians on each die
+ *  - c3dhall6_log_angle_deg_task() - performs and logs angle measurements in degrees on each die
  * 
  * \author MikroE Team
  *
@@ -48,10 +48,10 @@ static void c3dhall6_log_adc_task( )
     c3dhall6_get_adc_value( &c3dhall6, C3DHALL6_CHANNEL_2, &ch2_adc_value );
     c3dhall6_get_adc_value( &c3dhall6, C3DHALL6_CHANNEL_3, &ch3_adc_value );
     
-    log_printf( &logger, "ADC on CH0 : %d \r\n", ch0_adc_value );
-    log_printf( &logger, "ADC on CH1 : %d \r\n", ch1_adc_value );
-    log_printf( &logger, "ADC on CH2 : %d \r\n", ch2_adc_value );
-    log_printf( &logger, "ADC on CH3 : %d \r\n", ch3_adc_value );
+    log_printf( &logger, "ADC on CH0 : %u \r\n", ch0_adc_value );
+    log_printf( &logger, "ADC on CH1 : %u \r\n", ch1_adc_value );
+    log_printf( &logger, "ADC on CH2 : %u \r\n", ch2_adc_value );
+    log_printf( &logger, "ADC on CH3 : %u \r\n", ch3_adc_value );
 }
 
 void c3dhall6_log_volt_task( )
@@ -66,10 +66,10 @@ void c3dhall6_log_volt_task( )
     c3dhall6_get_volt( &c3dhall6, C3DHALL6_CHANNEL_2, &ch2_voltage );
     c3dhall6_get_volt( &c3dhall6, C3DHALL6_CHANNEL_3, &ch3_voltage );
    
-    log_printf( &logger, "Voltage on CH0 : %f V \r\n", ch0_voltage );
-    log_printf( &logger, "Voltage on CH1 : %f V \r\n", ch1_voltage );
-    log_printf( &logger, "Voltage on CH2 : %f V \r\n", ch2_voltage );
-    log_printf( &logger, "Voltage on CH3 : %f V \r\n", ch3_voltage );
+    log_printf( &logger, "Voltage on CH0 : %.3f V \r\n", ch0_voltage );
+    log_printf( &logger, "Voltage on CH1 : %.3f V \r\n", ch1_voltage );
+    log_printf( &logger, "Voltage on CH2 : %.3f V \r\n", ch2_voltage );
+    log_printf( &logger, "Voltage on CH3 : %.3f V \r\n", ch3_voltage );
 }
 
 void c3dhall6_log_angle_rad_task( )
@@ -80,21 +80,20 @@ void c3dhall6_log_angle_rad_task( )
     c3dhall6_get_angle_rad( &c3dhall6, C3DHALL6_DIE_A, &die_a_angle );
     c3dhall6_get_angle_rad( &c3dhall6, C3DHALL6_DIE_B, &die_b_angle );
 
-    log_printf( &logger, "DIE A Angle value :  %f rad \r\n", die_a_angle );
-    log_printf( &logger, "DIE B Angle value :  %f rad \r\n", die_b_angle );    
+    log_printf( &logger, "DIE A Angle value :  %.1f rad \r\n", die_a_angle );
+    log_printf( &logger, "DIE B Angle value :  %.1f rad \r\n", die_b_angle );    
 }
 
 void c3dhall6_log_angle_deg_task( )
 {
     float die_a_angle;
     float die_b_angle;
-    char degree_unit[2] = { 176, 0 };
 
     c3dhall6_get_angle_deg( &c3dhall6, C3DHALL6_DIE_A, &die_a_angle );
     c3dhall6_get_angle_deg( &c3dhall6, C3DHALL6_DIE_B, &die_b_angle );
 
-    log_printf( &logger, "DIE A Angle value :  %f %c \r\n", die_a_angle, degree_unit );
-    log_printf( &logger, "DIE B Angle value :  %f %c \r\n", die_b_angle, degree_unit ); 
+    log_printf( &logger, "DIE A Angle value :  %.1f deg \r\n", die_a_angle );
+    log_printf( &logger, "DIE B Angle value :  %.1f deg \r\n", die_b_angle ); 
     
 }
 
@@ -116,17 +115,24 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-
-    //  Click initialization.
-
+    // Click initialization.
     c3dhall6_cfg_setup( &cfg );
     C3DHALL6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c3dhall6_init( &c3dhall6, &cfg );
 
-    Delay_ms( 300 );
-    c3dhall6_set_reference_values( &c3dhall6, 3.3, 2048.0, 2048.0, 2048.0, 2048.0 );
+    c3dhall6_aux_ref_t ref_val = 
+    {
+        .aux_ref_adc_ch0 = 2048.0,
+        .aux_ref_adc_ch1 = 2048.0,
+        .aux_ref_adc_ch2 = 2048.0,
+        .aux_ref_adc_ch3 = 2048.0,
+        .aux_ref_volt = 3.3
+    };
+    c3dhall6_set_reference_values( &c3dhall6, ref_val );
+    
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )

@@ -58,20 +58,17 @@
  * \defgroup error_code Error Code
  * \{
  */
-#define AMBIENT_RETVAL  uint8_t
-
-#define AMBIENT_OK           0x00
-#define AMBIENT_INIT_ERROR   0xFF
+#define AMBIENT_OK                      0
+#define AMBIENT_ERROR                  -1
 /** \} */
 
 /**
  * \defgroup ambient_parameters Ambient parameters.
  * \{
  */
-#define AMBIENT_VCC_5_0                 5000
-#define AMBIENT_VCC_3_3                 3300
-#define AMBIENT_RES_10_BIT              1024
-#define AMBIENT_RES_12_BIT              4096
+#define AMBIENT_VCC_5_0                 5.0f
+#define AMBIENT_VCC_3_3                 3.3f
+#define AMBIENT_VOLTS_TO_MILLIVOLTS     1000.0f
 #define AMBIENT_GAIN                    7
 /** \} */
 
@@ -83,17 +80,11 @@
  */
 
 /**
- * @brief Analog data type 
- */
-typedef  uint16_t ambient_data_t;
-
-/**
  * @brief Click ctx object definition.
  */
 typedef struct
 {
     // Modules 
-
     analog_in_t adc;
 
 } ambient_t;
@@ -104,13 +95,11 @@ typedef struct
 typedef struct
 {
     // Communication gpio pins 
-
     pin_name_t an_pin;
 
     // static variable 
-
-    analog_in_resolution_t  resolution;   // Resolution
-    float vref;                           // VRef        
+    analog_in_resolution_t resolution;   // Resolution
+    float vref;                          // VRef        
 
 } ambient_cfg_t;
 
@@ -131,7 +120,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @details This function initializes click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void ambient_cfg_setup ( ambient_cfg_t *cfg );
@@ -142,32 +131,48 @@ void ambient_cfg_setup ( ambient_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this click.
  */
-AMBIENT_RETVAL ambient_init ( ambient_t *ctx, ambient_cfg_t *cfg );
+err_t ambient_init ( ambient_t *ctx, ambient_cfg_t *cfg );
 
 /**
- * @brief Generic read function.
- *
- * @param ctx        Click object.
- * @return ADC data
- *
- * @description This function read ADC data.
+ * @brief Ambient read AN pin value function.
+ * @details This function reads results of AD conversion of the AN pin.
+ * @param[in] ctx : Click context object.
+ * See #ambient_t object definition for detailed explanation.
+ * @param[out] data_out : Output ADC result.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
  */
-ambient_data_t ambient_generic_read ( ambient_t *ctx );
+err_t ambient_read_an_pin_value ( ambient_t *ctx, uint16_t *data_out );
+
+/**
+ * @brief Ambient read AN pin voltage level function.
+ * @details This function reads results of AD conversion of the AN pin and
+ * converts them to proportional voltage level.
+ * @param[in] ctx : Click context object.
+ * See #ambient_t object definition for detailed explanation.
+ * @param[out] data_out : Output voltage level of the analog pin [V].
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note The conversion to voltage depends on the entered configuration of the
+ * ADC (resolution, reference voltage).
+ */
+err_t ambient_read_an_pin_voltage ( ambient_t *ctx, float *data_out );
 
 /**
  * @brief Calculate light intensity function.
  *
  * @param ctx        Click object.
- * @param adc_data   16-bit read ADC data.
- * @param vcc_val    16-bit VCC value.
- * @param adc_res    16-bit ADC resolution.
+ * @return Light intensity value.
  *
- * @Function calculate light intensity from ADC data, VCC value and ADC resolution
+ * @details Calculates the light intensity from analog voltage measurement
  * of the Melexis MLX75305 IC on Ambient click board.
  */
-uint16_t ambient_calculate_light_intensity ( ambient_t *ctx, uint16_t adc_data, uint16_t vcc_val, uint16_t adc_res );
+uint16_t ambient_get_light_intensity ( ambient_t *ctx );
 
 #ifdef __cplusplus
 }

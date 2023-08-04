@@ -98,7 +98,6 @@ err_t irgesture3_default_cfg ( irgesture3_t *ctx )
 
     // Set GPIO0 to Active LOW interrupt
     error_flag |= irgesture3_write_register ( ctx, IRGESTURE3_REG_GPIO_DRV, IRGESTURE3_GPIO_DRV_GPIO0_ENA_MASK | 
-                                                                            IRGESTURE3_GPIO_DRV_GPIO0_DRV_MASK | 
                                                                             IRGESTURE3_GPIO_DRV_GPIO0_POL_MASK );
     
     // Enable slot A

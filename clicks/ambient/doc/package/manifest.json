@@ -8,7 +8,7 @@
         "examples",
         "source_files"
     ],
-"dependency_list": [],
+    "dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Ambient click",
     "example_list": [
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.ambient",
     "product_link": "https://www.mikroe.com/ambient-click",
-    "short_description": " This application turns light intensity into voltage",
+    "short_description": "Ambient click carries the Melexis MLX75305 IC. It’s a CMOS integrated optical sensor that consists of a photodiode, a transimpendance amplifier, and an output transistor.",
     "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1463
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Ambient",
     "subdir_name": "lib_ambient"
 }
+
 
 
 

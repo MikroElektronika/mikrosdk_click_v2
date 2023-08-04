@@ -25,6 +25,3 @@ find_package(MikroC.Core REQUIRED)
 target_link_libraries(lib_brushless9 PUBLIC MikroC.Core)
 find_package(MikroSDK.Driver REQUIRED)
 target_link_libraries(lib_brushless9 PUBLIC MikroSDK.Driver)
-
-include(mikroeUtils)
-math_check_target(${PROJECT_NAME})

@@ -30,7 +30,7 @@
 void co_cfg_setup ( co_cfg_t *cfg ) {
     cfg->an = HAL_PIN_NC;
 
-    cfg->resolution = ANALOG_IN_RESOLUTION_10_BIT;
+    cfg->resolution = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->vref       = 3.3;
 }
 

@@ -1,73 +1,76 @@
-/*
- * MikroSDK - MikroE Software Development Kit
- * Copyright© 2020 MikroElektronika d.o.o.
- * 
- * Permission is hereby granted, free of charge, to any person 
- * obtaining a copy of this software and associated documentation 
- * files (the "Software"), to deal in the Software without restriction, 
- * including without limitation the rights to use, copy, modify, merge, 
- * publish, distribute, sublicense, and/or sell copies of the Software, 
- * and to permit persons to whom the Software is furnished to do so, 
- * subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be 
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
- * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE 
- * OR OTHER DEALINGS IN THE SOFTWARE. 
- */
+/****************************************************************************
+** Copyright (C) 2020 MikroElektronika d.o.o.
+** Contact: https://www.mikroe.com/contact
+**
+** Permission is hereby granted, free of charge, to any person obtaining a copy
+** of this software and associated documentation files (the "Software"), to deal
+** in the Software without restriction, including without limitation the rights
+** to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+** copies of the Software, and to permit persons to whom the Software is
+** furnished to do so, subject to the following conditions:
+** The above copyright notice and this permission notice shall be
+** included in all copies or substantial portions of the Software.
+**
+** THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+** EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+** OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+** IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+** DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
+** OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+**  USE OR OTHER DEALINGS IN THE SOFTWARE.
+****************************************************************************/
 
 /*!
- * \file
- *
+ * @file ambient7.c
+ * @brief Ambient 7 Click Driver.
  */
 
 #include "ambient7.h"
 
-// ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
-
 void ambient7_cfg_setup ( ambient7_cfg_t *cfg )
 {
-    // Communication gpio pins 
-
     cfg->an_pin = HAL_PIN_NC;
     
-    // Additional gpio pins
-
-    cfg->resolution   = ANALOG_IN_RESOLUTION_10_BIT;
-    cfg->vref         = 3.3;
+    cfg->resolution = ANALOG_IN_RESOLUTION_DEFAULT; /*< Should leave this by default for portability purposes. 
+                                                        Different MCU's have different resolutions. 
+                                                        Change only if necessary.*/
+    cfg->vref       = 3.3;
 }
 
-AMBIENT7_RETVAL ambient7_init ( ambient7_t *ctx, ambient7_cfg_t *cfg )
+err_t ambient7_init ( ambient7_t *ctx, ambient7_cfg_t *cfg ) 
 {
     analog_in_config_t adc_cfg;
 
     analog_in_configure_default( &adc_cfg );
-    adc_cfg.input_pin  = cfg->an_pin;
 
-    if ( analog_in_open( &ctx->adc, &adc_cfg ) == ACQUIRE_FAIL )
+    adc_cfg.input_pin = cfg->an_pin;
+
+    if ( ADC_ERROR == analog_in_open( &ctx->adc, &adc_cfg ) ) 
     {
-        return AMBIENT7_INIT_ERROR;
+        return ADC_ERROR;
     }
 
-    analog_in_set_vref_value( &ctx->adc, cfg->vref );
-    analog_in_set_resolution( &ctx->adc, cfg->resolution );
+    if ( ADC_ERROR == analog_in_set_vref_value( &ctx->adc, cfg->vref ) ) 
+    {
+        return ADC_ERROR;
+    }
+
+    if ( ADC_ERROR == analog_in_set_resolution( &ctx->adc, cfg->resolution ) ) 
+    {
+        return ADC_ERROR;
+    }
 
     return AMBIENT7_OK;
 }
 
-ambient7_data_t ambient7_generic_read ( ambient7_t *ctx )
+err_t ambient7_read_an_pin_value ( ambient7_t *ctx, uint16_t *data_out ) 
 {
-    ambient7_data_t rx_data;
+    return analog_in_read( &ctx->adc, data_out );
+}
 
-    analog_in_read( &ctx->adc, &rx_data );
-    
-    return rx_data;
+err_t ambient7_read_an_pin_voltage ( ambient7_t *ctx, float *data_out ) 
+{
+    return analog_in_read_voltage( &ctx->adc, data_out );
 }
 
 // ------------------------------------------------------------------------- END

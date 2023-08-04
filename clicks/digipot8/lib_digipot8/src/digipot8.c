@@ -41,7 +41,7 @@ void digipot8_cfg_setup ( digipot8_cfg_t *cfg )
     cfg->cs   = HAL_PIN_NC;
     cfg->an_pin   = HAL_PIN_NC;
 
-    cfg->resolution  = ANALOG_IN_RESOLUTION_10_BIT;
+    cfg->resolution  = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->spi_speed   = 100000;
     cfg->spi_mode    = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;

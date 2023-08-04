@@ -66,7 +66,7 @@ void c7x10y_cfg_setup ( c7x10y_cfg_t *cfg ) {
 
     cfg->spi_mode = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
-    cfg->spi_speed = 10000000; 
+    cfg->spi_speed = 1000000; 
 }
 
 c7x10y_return_value_t c7x10y_init ( c7x10y_t *ctx, c7x10y_cfg_t *cfg ) {

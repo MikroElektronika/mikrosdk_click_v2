@@ -56,7 +56,7 @@ void dac7_cfg_setup ( dac7_cfg_t *cfg )
     cfg->mosi = HAL_PIN_NC;
     cfg->cs   = HAL_PIN_NC;
 
-    cfg->spi_speed = 10000000; 
+    cfg->spi_speed = 100000; 
     cfg->spi_mode = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 }
@@ -66,24 +66,35 @@ DAC7_RETVAL dac7_init ( dac7_t *ctx, dac7_cfg_t *cfg )
     spi_master_config_t spi_cfg;
 
     spi_master_configure_default( &spi_cfg );
-    spi_cfg.speed     = cfg->spi_speed;
-    spi_cfg.sck       = cfg->sck;
-    spi_cfg.miso      = cfg->miso;
-    spi_cfg.mosi      = cfg->mosi;
-    spi_cfg.default_write_data = DAC7_DUMMY;
 
-    digital_out_init( &ctx->cs, cfg->cs );
+    spi_cfg.sck  = cfg->sck;
+    spi_cfg.miso = cfg->miso;
+    spi_cfg.mosi = cfg->mosi;
+
     ctx->chip_select = cfg->cs;
 
-    if (  spi_master_open( &ctx->spi, &spi_cfg ) == SPI_MASTER_ERROR )
+    if ( SPI_MASTER_ERROR == spi_master_open( &ctx->spi, &spi_cfg ) ) 
     {
-        return DAC7_INIT_ERROR;
+        return SPI_MASTER_ERROR;
     }
 
-    spi_master_set_default_write_data( &ctx->spi, DAC7_DUMMY );
-    spi_master_set_speed( &ctx->spi, cfg->spi_speed );
-    spi_master_set_mode( &ctx->spi, cfg->spi_mode );
+    if ( SPI_MASTER_ERROR == spi_master_set_default_write_data( &ctx->spi, DAC7_DUMMY ) ) 
+    {
+        return SPI_MASTER_ERROR;
+    }
+
+    if ( SPI_MASTER_ERROR == spi_master_set_mode( &ctx->spi, cfg->spi_mode ) ) 
+    {
+        return SPI_MASTER_ERROR;
+    }
+
+    if ( SPI_MASTER_ERROR == spi_master_set_speed( &ctx->spi, cfg->spi_speed ) ) 
+    {
+        return SPI_MASTER_ERROR;
+    }
+
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
+    spi_master_deselect_device( ctx->chip_select );
 
     return DAC7_OK;
 }
@@ -91,19 +102,12 @@ DAC7_RETVAL dac7_init ( dac7_t *ctx, dac7_cfg_t *cfg )
 void dac7_write_data ( dac7_t *ctx, uint8_t def_cmd, uint8_t addr_cmd, uint16_t write_data )
 {
     uint8_t tx_buf[ 3 ];
-    uint8_t rx_buf;
     
-    def_cmd  &= DAC7_MASK_BIT_COMMAND;
-    addr_cmd &= DAC7_MASK_BIT_ADDRESS;
-
-    tx_buf[ 0 ]  = ( uint8_t ) def_cmd;
-    tx_buf[ 0 ] |= ( uint8_t ) addr_cmd;
+    tx_buf[ 0 ]  = ( uint8_t ) ( def_cmd & DAC7_MASK_BIT_COMMAND );
+    tx_buf[ 0 ] |= ( uint8_t ) ( addr_cmd & DAC7_MASK_BIT_ADDRESS );
     
-    write_data  &= DAC7_MASK_BIT_12_BITS;
-    write_data <<= 4;
-    
-    tx_buf[ 1 ] = ( uint8_t ) ( ( write_data >> 8 ) & DAC7_MASK_BIT_LBS );
-    tx_buf[ 2 ] = ( uint8_t ) write_data;
+    tx_buf[ 1 ] = ( uint8_t ) ( ( ( write_data & DAC7_MASK_BIT_12_BITS ) >> 4 ) & DAC7_MASK_BIT_LBS );
+    tx_buf[ 2 ] = ( uint8_t ) ( ( write_data & DAC7_MASK_BIT_12_BITS ) << 4 );
     
     spi_master_select_device( ctx->chip_select );
     spi_master_write( &ctx->spi, tx_buf, 3 );
@@ -134,7 +138,7 @@ DAC7_RETVAL_T dac7_set_channel ( dac7_t *ctx, uint8_t set_cmd, uint8_t addr_ch, 
 
 DAC7_RETVAL_T dac7_set_ch_voltage ( dac7_t *ctx, uint8_t addr_ch, uint16_t vol_val, uint16_t v_ref_mv )
 {
-    uint16_t tmp;
+    uint16_t tmp = 0;
     
     if ( ( v_ref_mv == DAC7_VREF_4096mV ) || ( v_ref_mv == DAC7_VREF_5000mV ) )
     {
@@ -181,7 +185,6 @@ DAC7_RETVAL_T dac7_update_channel ( dac7_t *ctx, uint8_t addr_ch, uint16_t ch_da
 DAC7_RETVAL_T dac7_set_power ( dac7_t *ctx, uint8_t pwr_en, uint8_t sel_ch )
 {
     uint8_t tx_buf[ 3 ];
-    uint8_t rx_buf;
     
     if ( sel_ch > DAC7_MASK_BIT_SEL_CHANNEL )
     {
@@ -205,7 +208,6 @@ DAC7_RETVAL_T dac7_set_power ( dac7_t *ctx, uint8_t pwr_en, uint8_t sel_ch )
 DAC7_RETVAL_T dac7_sw_reset ( dac7_t *ctx )
 {
     uint8_t tx_buf[ 3 ];
-    uint8_t rx_buf;
 
     tx_buf[ 0 ] = DAC7_COMMAND_RESET;
     tx_buf[ 1 ] = DAC7_DONT_CARE_COMMAND;
@@ -221,7 +223,6 @@ DAC7_RETVAL_T dac7_sw_reset ( dac7_t *ctx )
 DAC7_RETVAL_T dac7_set_ldac ( dac7_t *ctx, uint8_t sel_ch )
 {
     uint8_t tx_buf[ 3 ];
-    uint8_t rx_buf[ 3 ];
 
     if ( sel_ch > DAC7_MASK_BIT_SEL_CHANNEL )
     {
@@ -244,7 +245,6 @@ DAC7_RETVAL_T dac7_set_ldac ( dac7_t *ctx, uint8_t sel_ch )
 DAC7_RETVAL_T dac7_set_internal_reference ( dac7_t *ctx, uint8_t int_ref_en )
 {
     uint8_t tx_buf[ 3 ];
-    uint8_t rx_buf[ 3 ];
 
     tx_buf[ 0 ] = DAC7_COMMAND_REFERENCE_ONOFF;
     tx_buf[ 1 ] = DAC7_DONT_CARE_COMMAND;

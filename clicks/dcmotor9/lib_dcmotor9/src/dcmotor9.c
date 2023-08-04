@@ -40,7 +40,7 @@ void dcmotor9_cfg_setup ( dcmotor9_cfg_t *cfg )
    
     cfg->dev_pwm_freq = DCMOTOR9_DEF_FREQ;
 
-    cfg->resolution = ANALOG_IN_RESOLUTION_10_BIT;
+    cfg->resolution = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->vref       = DCMOTOR9_DEF_VREF;
 }
 

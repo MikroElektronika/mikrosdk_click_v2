@@ -3,7 +3,7 @@
  * @brief Brushlesss9 Click example
  *
  * # Description
- * This application is a schowcase of controlling speed and direction of brushless motor with hall sesnor.
+ * This application is a showcase of controlling speed and direction of brushless motor with hall sensor.
  *
  * The demo application is composed of two sections :
  *
@@ -20,7 +20,6 @@
 #include "board.h"
 #include "log.h"
 #include "brushless9.h"
-#include "math.h"
 
 #define DUTY_CHANGE_DELAY   2000
 #define BREAK_DELAY         5000
@@ -72,18 +71,18 @@ void application_task ( void )
 {
     log_info( &logger, " Starting... " );
     brushless9_set_brk( &brushless9, 0 );
-    for ( float duty = 0.1; duty < 1; duty += 0.1 )
+    for ( uint8_t duty_cnt = 1; duty_cnt < 10; duty_cnt++ )
     {
         Delay_ms( DUTY_CHANGE_DELAY );
-        brushless9_set_duty_cycle ( &brushless9, duty );
-        log_printf( &logger, "Duty: %u%%\r\n", ( uint16_t )ceil( duty * 100 ) );
+        brushless9_set_duty_cycle ( &brushless9, ( float ) duty_cnt / 10.0 );
+        log_printf( &logger, "Duty cycle: %u%%\r\n", ( uint16_t ) ( duty_cnt * 10 ) );
     }
 
-    for ( float duty = 0.9; duty >= 0; duty -= 0.1 )
+    for ( uint8_t duty_cnt = 10; duty_cnt > 0; duty_cnt-- )
     {
         Delay_ms( DUTY_CHANGE_DELAY );
-        brushless9_set_duty_cycle ( &brushless9, duty );
-        log_printf( &logger, "Duty: %u%%\r\n", ( uint16_t )ceil( duty * 100 ) );
+        brushless9_set_duty_cycle ( &brushless9, ( float ) duty_cnt / 10.0 );
+        log_printf( &logger, "Duty cycle: %u%%\r\n", ( uint16_t ) ( duty_cnt * 10 ) );
     }
 
     Delay_ms( DUTY_CHANGE_DELAY );

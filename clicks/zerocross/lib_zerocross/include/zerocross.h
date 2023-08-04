@@ -1,0 +1,178 @@
+/****************************************************************************
+** Copyright (C) 2020 MikroElektronika d.o.o.
+** Contact: https://www.mikroe.com/contact
+**
+** Permission is hereby granted, free of charge, to any person obtaining a copy
+** of this software and associated documentation files (the "Software"), to deal
+** in the Software without restriction, including without limitation the rights
+** to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+** copies of the Software, and to permit persons to whom the Software is
+** furnished to do so, subject to the following conditions:
+** The above copyright notice and this permission notice shall be
+** included in all copies or substantial portions of the Software.
+**
+** THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+** EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+** OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+** IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+** DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
+** OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+**  USE OR OTHER DEALINGS IN THE SOFTWARE.
+****************************************************************************/
+
+/*!
+ * @file zerocross.h
+ * @brief This file contains API for Zero-Cross Click Driver.
+ */
+
+#ifndef ZEROCROSS_H
+#define ZEROCROSS_H
+
+#ifdef __cplusplus
+extern "C"{
+#endif
+
+#include "drv_digital_out.h"
+#include "drv_digital_in.h"
+
+/*!
+ * @addtogroup zerocross Zero-Cross Click Driver
+ * @brief API for configuring and manipulating Zero-Cross Click driver.
+ * @{
+ */
+
+/**
+ * @defgroup zerocross_set Zero-Cross Registers Settings
+ * @brief Settings for registers of Zero-Cross Click driver.
+ */
+
+/**
+ * @addtogroup zerocross_set
+ * @{
+ */
+
+/**
+ * @brief Zero-Cross description setting.
+ * @details Specified setting for description of Zero-Cross Click driver.
+ */
+#define ZEROCROSS_PIN_STATE_LOW             0x00
+#define ZEROCROSS_PIN_STATE_HIGH            0x01
+
+/*! @} */ // zerocross_set
+
+/**
+ * @defgroup zerocross_map Zero-Cross MikroBUS Map
+ * @brief MikroBUS pin mapping of Zero-Cross Click driver.
+ */
+
+/**
+ * @addtogroup zerocross_map
+ * @{
+ */
+
+/**
+ * @brief MikroBUS pin mapping.
+ * @details Mapping pins of Zero-Cross Click to the selected MikroBUS.
+ */
+#define ZEROCROSS_MAP_MIKROBUS( cfg, mikrobus ) \
+    cfg.zc = MIKROBUS( mikrobus, MIKROBUS_INT )
+
+/*! @} */ // zerocross_map
+/*! @} */ // zerocross
+
+/**
+ * @brief Zero-Cross Click context object.
+ * @details Context object definition of Zero-Cross Click driver.
+ */
+typedef struct
+{
+    digital_in_t zc;       /**< Zero-Cross detection pin. */
+
+} zerocross_t;
+
+/**
+ * @brief Zero-Cross Click configuration object.
+ * @details Configuration object definition of Zero-Cross Click driver.
+ */
+typedef struct
+{
+    pin_name_t zc;          /**< Zero-Cross detection pin. */
+
+} zerocross_cfg_t;
+
+/**
+ * @brief Zero-Cross Click return value data.
+ * @details Predefined enum values for driver return values.
+ */
+typedef enum
+{
+    ZEROCROSS_OK = 0,
+    ZEROCROSS_ERROR = -1
+
+} zerocross_return_value_t;
+
+/*!
+ * @addtogroup zerocross Zero-Cross Click Driver
+ * @brief API for configuring and manipulating Zero-Cross Click driver.
+ * @{
+ */
+
+/**
+ * @brief Zero-Cross configuration object setup function.
+ * @details This function initializes click configuration structure to initial
+ * values.
+ * @param[out] cfg : Click configuration structure.
+ * See #zerocross_cfg_t object definition for detailed explanation.
+ * @return Nothing.
+ * @note The all used pins will be set to unconnected state.
+ */
+void zerocross_cfg_setup ( zerocross_cfg_t *cfg );
+
+/**
+ * @brief Zero-Cross initialization function.
+ * @details This function initializes all necessary pins and peripherals used
+ * for this click board.
+ * @param[out] ctx : Click context object.
+ * See #zerocross_t object definition for detailed explanation.
+ * @param[in] cfg : Click configuration structure.
+ * See #zerocross_cfg_t object definition for detailed explanation.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t zerocross_init ( zerocross_t *ctx, zerocross_cfg_t *cfg );
+
+/**
+ * @brief Zero-Cross pin reading function.
+ * @details This function reads the state of the ZC pin of Zero-Cross
+ * click board.
+ * @param[in] ctx : Click context object.
+ * See #zerocross_t object definition for detailed explanation.
+ * @return @li @c 0 - Low pin state,
+ *         @li @c 1 - High pin state.
+ * @note None.
+ */
+uint8_t zerocross_pin_read ( zerocross_t *ctx );
+
+/**
+ * @brief Zero-Cross frequency reading function.
+ * @details This function reads the frequency of the Zero-Cross
+ * click board.
+ * @param[in] ctx : Click context object.
+ * See #zerocross_t object definition for detailed explanation.
+ * @param[out] freq : Read frequency.
+ * @return Nothing.
+ * @note This function is reading the number of ZC events 
+ * in a span of 1 second to get the frequency.
+ */
+void zerocross_get_freq ( zerocross_t *ctx, float *freq );
+
+#ifdef __cplusplus
+}
+#endif
+#endif // ZEROCROSS_H
+
+/*! @} */ // zerocross
+
+// ------------------------------------------------------------------------ END

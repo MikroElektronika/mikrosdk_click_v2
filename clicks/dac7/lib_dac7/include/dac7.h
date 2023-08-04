@@ -180,10 +180,7 @@
  */
 typedef struct
 {
-    digital_out_t cs;
-
     // Modules 
-
     spi_master_t spi;
     pin_name_t chip_select;
 

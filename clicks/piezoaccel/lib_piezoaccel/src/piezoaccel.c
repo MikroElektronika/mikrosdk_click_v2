@@ -85,7 +85,7 @@ void piezoaccel_cfg_setup ( piezoaccel_cfg_t *cfg ) {
     cfg->spi_mode    = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
     
-    cfg->resolution = ANALOG_IN_RESOLUTION_12_BIT;
+    cfg->resolution = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->vref       = 3.3;  // Should be set via CODEGRIP since it uses the dev board Vref
 }
 

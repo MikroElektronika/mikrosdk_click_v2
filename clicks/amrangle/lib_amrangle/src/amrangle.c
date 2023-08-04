@@ -100,7 +100,7 @@ void amrangle_cfg_setup ( amrangle_cfg_t *cfg, uint8_t sel_toolchain ) {
     }
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
     
-    cfg->resolution = ANALOG_IN_RESOLUTION_12_BIT;
+    cfg->resolution = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->vref       = 3.3;  // Should be set via CODEGRIP since it uses the dev board Vref
 }
 

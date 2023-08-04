@@ -1,9 +1,7 @@
 \mainpage Main Page
-  
----
-# Ambient 7 click
+  # Ambient 7 click
 
-Ambient 7 Click is a light intensity-sensing and measuring Click board™, which features an accurate light-intensity sensor labeled as SFH 5701 A01, made by Osram Opto Semiconductors.
+> Ambient 7 Click is a light intensity-sensing and measuring Click board™, which features an accurate light-intensity sensor labeled as SFH 5701 A01, made by Osram Opto Semiconductors.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ambient7_click.png" height=300px>
@@ -36,20 +34,31 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void ambient7_cfg_setup ( ambient7_cfg_t *cfg ); 
- 
-- Initialization function.
-> AMBIENT7_RETVAL ambient7_init ( ambient7_t *ctx, ambient7_cfg_t *cfg );
+- `ambient7_cfg_setup` Config Object Initialization function.
+```c
+void ambient7_cfg_setup ( ambient7_cfg_t *cfg ); 
+```
+
+- `ambient7_init` Initialization function.
+```c
+err_t ambient7_init ( ambient7_t *ctx, ambient7_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Generic read function.
-> ambient7_data_t ambient7_generic_read ( ambient7_t *ctx );
+- `ambient7_read_an_pin_value` This function reads results of AD conversion of the AN pin.
+```c
+err_t ambient7_read_an_pin_value ( ambient7_t *ctx, uint16_t *data_out );
+```
+
+- `ambient7_read_an_pin_voltage` This function reads results of AD conversion of the AN pin and converts them to proportional voltage level.
+```c
+err_t ambient7_read_an_pin_voltage ( ambient7_t *ctx, float *data_out );
+```
 
 ## Examples Description
 
-> Reads 12-bit ADC value.
+> Reads the AN pin voltage.
 
 **The demo application is composed of two sections :**
 
@@ -75,48 +84,39 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
-    log_printf( &logger, "------------------\r\n" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
+    // Click initialization.
     ambient7_cfg_setup( &cfg );
     AMBIENT7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ambient7_init( &ambient7, &cfg );
     
-    log_printf( &logger, " Ambient 7 Click\r\n" );
-    log_printf( &logger, "------------------\r\n" );
-    Delay_ms( 100 );
+    log_info( &logger, " Application Task " );
 }
   
 ```
 
 ### Application Task
 
-> Reads ADC value and this data logs to USBUART every 1 sec.
+> Reads the AN pin voltage and displays the results on the USB UART once per second.
 
 ```c
 
 void application_task ( void )
 {
-    ambient7_data_t tmp;
-    
-    //  Task implementation.
-    
-    tmp = ambient7_generic_read ( &ambient7 );
-    log_printf( &logger, "     ADC value \r\n" );
-    log_printf( &logger, " [ DEC ]  : %d\r\n", tmp );
-    log_printf( &logger, " [ HEX ]  : 0x%x \r\n", tmp );
-    log_printf( &logger, "------------------\r\n" );
-    Delay_ms( 1000 );
+    float voltage = 0;
+    if ( AMBIENT7_OK == ambient7_read_an_pin_voltage ( &ambient7, &voltage ) ) 
+    {
+        log_printf( &logger, " AN Voltage : %.3f[V]\r\n\n", voltage );
+        Delay_ms( 1000 );
+    }
 }  
 
 ```
 
 ## Note
 
-> Illuminance range [ EV ] - from 0.01 [ lx ] to 10k [ lx ] 
-> depending on the ADC you are using.
+> Illuminance range [ EV ] - from 0.01 [ lx ] to 10k [ lx ]
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

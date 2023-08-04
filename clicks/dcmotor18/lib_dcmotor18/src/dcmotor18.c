@@ -48,7 +48,7 @@ void dcmotor18_cfg_setup ( dcmotor18_cfg_t *cfg )
 
     cfg->dev_pwm_freq = DCMOTOR18_DEF_FREQ;
 
-    cfg->resolution = ANALOG_IN_RESOLUTION_10_BIT; /*< Should leave this by default for portability purposes. 
+    cfg->resolution = ANALOG_IN_RESOLUTION_DEFAULT; /*< Should leave this by default for portability purposes. 
                                                         Different MCU's have different resolutions. 
                                                         Change only if necessary.*/
     cfg->vref       = 3.3;

@@ -48,7 +48,7 @@ void gainamp2_cfg_setup ( gainamp2_cfg_t *cfg )
     
     cfg->vout = HAL_PIN_NC;
     
-    cfg->resolution = ANALOG_IN_RESOLUTION_10_BIT;
+    cfg->resolution = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->vref       = 3.3;
     cfg->spi_mode = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;

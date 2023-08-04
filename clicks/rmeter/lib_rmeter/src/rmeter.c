@@ -71,7 +71,7 @@ void rmeter_cfg_setup ( rmeter_cfg_t *cfg )
     cfg->spi_mode    = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 
-    cfg->adc_resolution = ANALOG_IN_RESOLUTION_12_BIT;
+    cfg->adc_resolution = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->adc_vref       = 3.3;
 }
 
