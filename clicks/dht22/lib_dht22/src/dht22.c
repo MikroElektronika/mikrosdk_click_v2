@@ -1,30 +1,28 @@
-/*
- * MikroSDK - MikroE Software Development Kit
- * Copyright© 2020 MikroElektronika d.o.o.
- * 
- * Permission is hereby granted, free of charge, to any person 
- * obtaining a copy of this software and associated documentation 
- * files (the "Software"), to deal in the Software without restriction, 
- * including without limitation the rights to use, copy, modify, merge, 
- * publish, distribute, sublicense, and/or sell copies of the Software, 
- * and to permit persons to whom the Software is furnished to do so, 
- * subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be 
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
- * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE 
- * OR OTHER DEALINGS IN THE SOFTWARE. 
- */
+/****************************************************************************
+** Copyright (C) 2020 MikroElektronika d.o.o.
+** Contact: https://www.mikroe.com/contact
+**
+** Permission is hereby granted, free of charge, to any person obtaining a copy
+** of this software and associated documentation files (the "Software"), to deal
+** in the Software without restriction, including without limitation the rights
+** to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+** copies of the Software, and to permit persons to whom the Software is
+** furnished to do so, subject to the following conditions:
+** The above copyright notice and this permission notice shall be
+** included in all copies or substantial portions of the Software.
+**
+** THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+** EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+** OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+** IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+** DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
+** OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+**  USE OR OTHER DEALINGS IN THE SOFTWARE.
+****************************************************************************/
 
 /*!
- * \file
- *
+ * @file dht22.c
+ * @brief DHT22 Click Driver.
  */
 
 #include "dht22.h"
@@ -72,62 +70,44 @@ err_t dht22_start_signal ( dht22_t *ctx )
     return DHT22_OK;
 }
 
-err_t dht22_check_sensor_response ( dht22_t *ctx, uint8_t *check_out )
+err_t dht22_check_sensor_response ( dht22_t *ctx )
 {
     if ( ctx->sda_in_stat == DIGITAL_IN_UNSUPPORTED_PIN )
     {
         return DHT22_ERROR;
     }
 
-    while ( digital_in_read( &ctx->sda_in ) )
-    {
-        Delay_1us( );
-    }
+    while ( digital_in_read( &ctx->sda_in ) );
     
-    while ( !digital_in_read( &ctx->sda_in ) )
-    {
-        Delay_1us( );
-    }
+    while ( !digital_in_read( &ctx->sda_in ) );
 
-    while ( digital_in_read( &ctx->sda_in ) )
-    {
-        Delay_1us( );
-    }
-
-    *check_out = DHT22_RESP_READY;
+    while ( digital_in_read( &ctx->sda_in ) );
 
     return DHT22_OK;
 }
 
-err_t dht22_get_sensor_data ( dht22_t *ctx, uint32_t *data_out )
+err_t dht22_get_sensor_data ( dht22_t *ctx, uint16_t *hum_data, uint16_t *temp_data )
 {
-    uint8_t read_buffer[ 5 ];
-    uint32_t results;
-    uint8_t cnt_j;
-    uint8_t cnt_i;
+    uint8_t read_buffer[ 5 ] = { 0 };
     uint8_t tim_cnt = 0;
-    uint8_t sensor_byte_buffer;
+    uint8_t sensor_byte_buffer = 0;
 
-    for ( cnt_i = 0; cnt_i < 5; cnt_i++ )
+    for ( uint8_t cnt_i = 0; cnt_i < 5; cnt_i++ )
     {
         sensor_byte_buffer = 0;
-        
-        for ( cnt_j = 0; cnt_j < 8; cnt_j++ )
+        for ( uint8_t cnt_j = 0; cnt_j < 8; cnt_j++ )
         {
             tim_cnt = 0;
-            while ( !digital_in_read( &ctx->sda_in ) )
-            {
-                Delay_1us( );
-            }
+            while ( !digital_in_read( &ctx->sda_in ) );
             
             while ( digital_in_read( &ctx->sda_in ) )
             {
-                Delay_1us( );
+                Delay_10us( );
                 tim_cnt++;
             }
             
             sensor_byte_buffer <<= 1;
-            if( tim_cnt > 30 )
+            if( tim_cnt > 3 )
             {
                 sensor_byte_buffer |= 1;
             }
@@ -135,41 +115,27 @@ err_t dht22_get_sensor_data ( dht22_t *ctx, uint32_t *data_out )
         read_buffer[ cnt_i ] = sensor_byte_buffer;
     }
     
-    results = read_buffer[ 0 ];
-    results <<= 8;
-    results |= read_buffer[ 1 ];
-    results <<= 8;
-    results |= read_buffer[ 2 ];
-    results <<= 8;
-    results |= read_buffer[ 3 ];
-
-    *data_out = results;
+    *hum_data = read_buffer[ 0 ];
+    *hum_data <<= 8;
+    *hum_data |= read_buffer[ 1 ];
+    
+    *temp_data = read_buffer[ 2 ];
+    *temp_data <<= 8;
+    *temp_data |= read_buffer[ 3 ];
 
     return DHT22_OK;
 }
 
-uint16_t dht22_get_temperature ( dht22_t *ctx, uint32_t sensor_data )
+err_t dht22_get_measurement_data ( dht22_t *ctx, float *humidity, float *temperature ) 
 {
-    return ( uint16_t )sensor_data;
-}
-
-float dht22_calculate_temperature ( dht22_t *ctx, uint32_t sensor_data )
-{
-    uint16_t temp_data = dht22_get_temperature( ctx, sensor_data );
-
-    return ( float )temp_data / 10;
-}
-
-uint16_t dht22_get_humidity ( dht22_t *ctx, uint32_t sensor_data )
-{
-    return ( uint16_t )( sensor_data >> 16 );
-}
-
-float dht22_calculate_humidity ( dht22_t *ctx, uint32_t sensor_data )
-{
-    uint16_t hum_data = dht22_get_humidity( ctx, sensor_data );
-
-    return ( float )hum_data / 10;
+    uint16_t hum_data = 0, temp_data = 0;
+    err_t err_flag = dht22_get_sensor_data( ctx, &hum_data, &temp_data );
+    *humidity = ( float ) hum_data;
+    *humidity /= 10.0;
+    *temperature = ( float ) temp_data;
+    *temperature /= 10.0;
+    
+    return err_flag;
 }
 
 err_t dht22_init_sda_input ( dht22_t *ctx )

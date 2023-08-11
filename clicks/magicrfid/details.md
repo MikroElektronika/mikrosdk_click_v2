@@ -15,7 +15,7 @@
 
 #### Click library
 
-- **Author**        : Stefan Ilic
+- **Author**        : MikroE Team
 - **Date**          : Sep 2021.
 - **Type**          : UART type
 
@@ -52,19 +52,19 @@ void magicrfid_default_cfg ( magicrfid_t *ctx );
 
 #### Example key functions :
 
-- `magicrfid_device_reset` Magic RFID device reset function.
+- `magicrfid_get_response` Magic RFID get response function.
 ```c
-void magicrfid_device_reset ( magicrfid_t *ctx );
+err_t magicrfid_get_response ( magicrfid_t *ctx, magicrfid_response_t *rsp );
 ```
 
-- `magicrfid_send_command` Magic RFID send command function.
+- `magicrfid_parse_tag_rssi` This function parses RSSI value of the tag.
 ```c
-void magicrfid_send_command ( magicrfid_t *ctx, uint8_t *tx_buf, uint8_t len );
+int8_t magicrfid_parse_tag_rssi ( magicrfid_response_t rsp );
 ```
 
-- `magicrfid_get_tag_rssi` Get Tag RSSI value.
+- `magicrfid_parse_tag_epc` This function parses EPC bytes of the tag.
 ```c
-int8_t magicrfid_get_tag_rssi ( magicrfid_data_t *data_obj );
+void magicrfid_parse_tag_epc ( magicrfid_response_t rsp, magicrfid_epc_t *epc );
 ```
 
 ## Example Description
@@ -105,10 +105,7 @@ void application_init ( void )
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-    log_printf( &logger, " >> Please, wait for device setup. \r\n" );
     magicrfid_default_cfg ( &magicrfid );
-    Delay_ms( 1000 );
-    log_printf( &logger, " >> Initialization done, reading tag is available. \r\n" );
     log_info( &logger, " Application Task " );
 }
 
@@ -116,25 +113,42 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads TAG information and RSSI value of the TAG and logs it on UART.
+> Scans for RFID TAGs and displays on the USB UART the EPC bytes of the detected tag.
+It also parses and displays the RSSI as well as the frequency this tag was detected at.
 
 ```c
 
 void application_task ( void ) 
 {
-    magicrfid_process( &magicrfid, &tag );
-    if ( magicrfid_get_data_status( &tag ) == 1 ) 
+    magicrfid_response_t rsp = { 0 };
+    if ( ( MAGICRFID_OK == magicrfid_get_response ( &magicrfid, &rsp ) ) && 
+         ( MAGICRFID_OPCODE_READ_TAG_ID_MULTIPLE == rsp.opcode ) )
     {
-        magicrfid_tag_parser( &tag );
-
-        log_printf( &logger, " >> TAG INFO: 0x" );
-        for( uint8_t cnt = 0; cnt < 12; cnt++ ) 
+        if ( 0 == rsp.data_len )
         {
-            log_printf( &logger, "%.2X", ( uint16_t ) tag.tag_buf[ cnt ] );
+            log_printf( &logger, "\r\n --- SCANNING ---\r\n" );
         }
-        log_printf( &logger, "\r\n" );
-        log_printf( &logger, " >> TAG RSSI: %d\r\n", ( uint16_t ) tag.tag_rssi );
-        magicrfid_reset_data( &tag );
+        else
+        {
+            log_printf( &logger, "\r\n --- TAG DETECTED ---\r\n" );
+            int8_t tag_rssi = 0;
+            uint32_t tag_freq = 0;
+            magicrfid_epc_t epc = { 0 };
+            tag_rssi = magicrfid_parse_tag_rssi ( rsp );
+            log_printf( &logger, " RSSI: %d\r\n", ( int16_t ) tag_rssi );
+            tag_freq = magicrfid_parse_tag_freq ( rsp );
+            log_printf( &logger, " FREQ: %lu\r\n", tag_freq );
+            magicrfid_parse_tag_epc ( rsp, &epc );
+            log_printf( &logger, " EPC PC: 0x%.4X\r\n", epc.epc_pc );
+            log_printf( &logger, " EPC ID (len: %u): ", ( uint16_t ) epc.data_len );
+            for ( uint8_t cnt = 0; cnt < epc.data_len; cnt++ )
+            {
+                log_printf( &logger, "%.2X", ( uint16_t ) epc.data_buf[ cnt ] );
+            }
+            log_printf( &logger, "\r\n EPC CRC: 0x%.4X\r\n", epc.epc_crc );
+            Delay_ms ( 100 );
+            magicrfid_clear_buffers ( &magicrfid );
+        }
     }
 }
 

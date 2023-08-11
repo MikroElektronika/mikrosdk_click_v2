@@ -68,9 +68,9 @@
 #define WIFI_PASS                           "mikroe.guest"   // Set valid WiFi Password
 
 // Cloud device config parameters
-#define DEVICE_KEY                          "vxg29q70r4aceyi9"  // Cloud device key
-#define DEVICE_PASSWORD                     "aa892ccd-4168-4cf4-8b9c-64b0183f7a5c"  // Cloud device password
-#define DEVICE_SENSOR_REF                   "TEMP_SEN_R"  // Cloud device sensor reference
+#define DEVICE_KEY                          ""  // Cloud device key
+#define DEVICE_PASSWORD                     ""  // Cloud device password
+#define DEVICE_SENSOR_REF                   ""  // Cloud device sensor reference
 
 // Application buffer size
 #define APP_BUFFER_SIZE                     300
