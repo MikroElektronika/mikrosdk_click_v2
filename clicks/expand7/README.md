@@ -100,8 +100,6 @@ void application_init ( void )
     expand7_init( &expand7, &cfg );
     Delay_ms( 100 );
     
-    expand7_reset( &expand7 );
-    Delay_ms( 1000 );
     log_printf( &logger, "------------------- \r\n" );
     log_printf( &logger, "   EXPAND 7 click   \r\n" );
     log_printf( &logger, "------------------- \r\n" );

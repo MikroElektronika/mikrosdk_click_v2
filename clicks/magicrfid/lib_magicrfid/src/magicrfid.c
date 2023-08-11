@@ -31,7 +31,7 @@
  * @brief Magic RFID Click CRC-CCITT table.
  * @details CRC-CCITT 16-bit table for calculating CRC of Magic RFID Click driver.
  */
-static uint16_t crctable[] =
+static uint16_t magicrfid_crc_table[ ] =
 {
     0x0000,
     0x1021,
@@ -54,18 +54,27 @@ static uint16_t crctable[] =
 // -------------------------------------------- PRIVATE FUNCTION DECLARATIONS 
 
 /**
+ * @brief Magic RFID calculate CRC function.
+ * @details This function calculates CRC of the selected input data.
+ * @param[in] data_buf : Data to be calculated.
+ * @param[in] len : Number of bytes to be calculated.
+ * @return CRC value.
+ */
+static uint16_t magicrfid_calculate_crc ( uint8_t *data_buf, uint8_t len );
+
+/**
  * @brief Magic RFID device delay function.
  * @details This function initializes click configuration structure to initial
  * values.
  * @param[in] time_ms : Duration of the delay.
  */
-void dev_delay_com ( uint16_t time_ms );
+static void magicrfid_delay_com ( uint16_t time_ms );
 
 /**
  * @brief Magic RFID device reset delay function.
  * @details Reset delay of  300 milliseconds.
  */
-void dev_reset_delay ( void );
+static void magicrfid_reset_delay ( void );
 
 // --------------------------------------------------------- PUBLIC FUNCTIONS 
 
@@ -120,39 +129,41 @@ err_t magicrfid_init ( magicrfid_t *ctx, magicrfid_cfg_t *cfg )
 }
 
 void magicrfid_default_cfg ( magicrfid_t *ctx ) 
-{        
+{
     magicrfid_device_reset( ctx );
-    dev_delay_com( MAGICRFID_LONG_DELAY_TIME );
-    magicrfid_send_command( ctx, MAGICRFID_OPCODE_VERSION, 0, 0 );
-    dev_delay_com( MAGICRFID_NORMAL_DELAY_TIME );
-    magicrfid_send_command( ctx, MAGICRFID_OPCODE_GET_POWER_MODE, 0, 0 );
-    dev_delay_com( MAGICRFID_NORMAL_DELAY_TIME );
-    magicrfid_send_command( ctx, MAGICRFID_OPCODE_GET_READER_OPTIONAL_PARAMS, 0, 0 );
-    dev_delay_com( MAGICRFID_NORMAL_DELAY_TIME );
+    magicrfid_delay_com( MAGICRFID_LONG_DELAY_TIME );
+    
     magicrfid_set_baud_rate( ctx, 115200 );
-    dev_delay_com( MAGICRFID_NORMAL_DELAY_TIME );
+    magicrfid_delay_com( MAGICRFID_NORMAL_DELAY_TIME );
+    
     magicrfid_set_region( ctx, MAGICRFID_REGION_OPEN );
-    dev_delay_com( MAGICRFID_NORMAL_DELAY_TIME );
+    magicrfid_delay_com( MAGICRFID_NORMAL_DELAY_TIME );
+    
     magicrfid_set_read_power( ctx, 500 );
-    dev_delay_com( MAGICRFID_NORMAL_DELAY_TIME );
+    magicrfid_delay_com( MAGICRFID_NORMAL_DELAY_TIME );
+    
     magicrfid_set_write_power( ctx, 500 );
-    dev_delay_com( MAGICRFID_NORMAL_DELAY_TIME );
+    magicrfid_delay_com( MAGICRFID_NORMAL_DELAY_TIME );
+    
     magicrfid_set_antenna_port( ctx );
-    dev_delay_com( MAGICRFID_NORMAL_DELAY_TIME );
+    magicrfid_delay_com( MAGICRFID_NORMAL_DELAY_TIME );
+    
     magicrfid_set_tag_protocol( ctx, MAGICRFID_TAG_PROTOCOL_GEN2 );
-    dev_delay_com( MAGICRFID_NORMAL_DELAY_TIME );
-    magicrfid_set_reader_configuration ( ctx, 0x0C, 0x00 );
-    dev_delay_com( MAGICRFID_NORMAL_DELAY_TIME );
+    magicrfid_delay_com( MAGICRFID_NORMAL_DELAY_TIME );
+    
+    magicrfid_set_reader_config ( ctx, 0x0C, 0x00 );
+    magicrfid_delay_com( MAGICRFID_NORMAL_DELAY_TIME );
+    
     magicrfid_start_reading( ctx );
-    dev_delay_com( MAGICRFID_NORMAL_DELAY_TIME );
+    magicrfid_delay_com( MAGICRFID_NORMAL_DELAY_TIME );
 }
 
-err_t magicrfid_generic_write ( magicrfid_t *ctx, char *data_buf, uint16_t len ) 
+err_t magicrfid_generic_write ( magicrfid_t *ctx, uint8_t *data_buf, uint16_t len ) 
 {
     return uart_write( &ctx->uart, data_buf, len );
 }
 
-err_t magicrfid_generic_read ( magicrfid_t *ctx, char *data_buf, uint16_t max_len ) 
+err_t magicrfid_generic_read ( magicrfid_t *ctx, uint8_t *data_buf, uint16_t max_len ) 
 {
     return uart_read( &ctx->uart, data_buf, max_len );
 }
@@ -160,289 +171,243 @@ err_t magicrfid_generic_read ( magicrfid_t *ctx, char *data_buf, uint16_t max_le
 void magicrfid_device_reset ( magicrfid_t *ctx ) 
 {
     digital_out_low( &ctx->en );
-    dev_reset_delay( );
+    magicrfid_reset_delay( );
     digital_out_high( &ctx->en );
 }
 
-void magicrfid_send_command ( magicrfid_t *ctx, uint8_t opcode, uint8_t *data_in, uint8_t size )
+void magicrfid_send_command ( magicrfid_t *ctx, magicrfid_command_t cmd )
 {
-    uint8_t tx_data[ DRV_BUFFER_SIZE ];
-    uint16_t crc;
+    uint8_t tx_data[ MAGICRFID_TX_DRV_BUFFER_SIZE ] = { 0 };
+    uint16_t crc = 0;
     
-    tx_data[ 0 ] = MAGICRFID_UNIVERSAL_HEADER; 
-    tx_data[ 1 ] = size;
-    tx_data[ 2 ] = opcode;
+    uart_clear ( &ctx->uart );
     
-    if ( size > 0 ) 
+    tx_data[ 0 ] = MAGICRFID_HEADER; 
+    tx_data[ 1 ] = cmd.data_len;
+    tx_data[ 2 ] = cmd.opcode;
+    
+    for ( uint8_t cnt = 0; cnt < cmd.data_len; cnt++ )
     {
-        for ( uint8_t n_cnt = 0; n_cnt < size; n_cnt++ )
+        tx_data[ cnt + 3 ] = cmd.data_buf[ cnt ];
+    }
+    
+    crc = magicrfid_calculate_crc( &tx_data[ 1 ], cmd.data_len + 2 );
+    
+    tx_data[ cmd.data_len + 3 ] = ( uint8_t ) ( ( crc >> 8 ) & 0xFF );
+    tx_data[ cmd.data_len + 4 ] = ( uint8_t ) ( crc & 0xFF );
+    
+    uart_write( &ctx->uart, tx_data, cmd.data_len + 5 );
+    Delay_10ms ( );
+}
+
+err_t magicrfid_get_response ( magicrfid_t *ctx, magicrfid_response_t *rsp )
+{
+    uint8_t rx_data[ MAGICRFID_RX_DRV_BUFFER_SIZE ] = { 0 };
+    uint16_t crc = 0;
+    uint16_t timeout_cnt = 0;
+    if ( NULL == rsp )
+    {
+        return MAGICRFID_ERROR;
+    }
+    memset ( rsp->data_buf, 0, MAGICRFID_RESPONSE_MAX_DATA_LEN );
+    
+    while ( ( 1 != magicrfid_generic_read( ctx, rx_data, 1 ) ) && 
+            ( MAGICRFID_HEADER != rx_data[ 0 ] ) )
+    {
+        if ( ++timeout_cnt > MAGICRFID_TIMEOUT_MS )
         {
-            tx_data[ 3 + n_cnt ] = data_in[ n_cnt ];
+            return MAGICRFID_ERROR;
         }
+        Delay_1ms ( );
     }
-    
-    
-    crc = magicrfid_calculate_crc( &tx_data[ 1 ], size + 2 );
-    
-    tx_data[ size + 3 ] = crc >> 8;
-    tx_data[ size + 4 ] = crc & 0xFF;
-    
-    uart_write( &ctx->uart, tx_data, size + 5 );
-}
-
-
-int8_t magicrfid_get_tag_rssi ( magicrfid_data_t *data_obj ) 
-{
-    return ( data_obj->drv_rsp_buff[ 12 ] - 256 );
-}
-
-void magicrfid_process ( magicrfid_t *ctx, magicrfid_data_t *data_obj ) 
-{
-    uint8_t rsp_data;
-    uint8_t buf_size;
-    
-    buf_size = magicrfid_generic_read( ctx, &rsp_data, 1 );
-    if ( buf_size > 0) 
+    Delay_1ms ( );
+    if ( 4 != magicrfid_generic_read( ctx, &rx_data[ 1 ], 4 ) )
     {
-        buf_size = magicrfid_generic_read( ctx, &rsp_data, 1 );
-        if( data_obj->drv_new_data ==  0 ) 
-        {
-            if ( data_obj->drv_start_package == 1) 
-            { 
-                data_obj->drv_rsp_buff[ data_obj->drv_buff_cnt++ ] = rsp_data;
-            } 
-            else 
-            {
-                if ( ( data_obj->drv_rsp_flag == 0 ) && ( rsp_data == 0xFF ) ) 
-                { 
-                    data_obj->drv_rsp_flag = 1;
-                    data_obj->drv_rsp_buff[ data_obj->drv_buff_cnt++ ] = rsp_data;
-                }
-                else if ( ( data_obj->drv_rsp_flag == 1 ) && ( rsp_data == 0x21 ) ) 
-                { 
-                    data_obj->drv_rsp_flag = 2;
-                    data_obj->drv_rsp_buff[ data_obj->drv_buff_cnt++ ] = rsp_data;
-                }
-                else if ( ( data_obj->drv_rsp_flag == 2 ) && ( rsp_data == 0x22 ) ) 
-                { 
-                    data_obj->drv_start_package = 1; 
-                    data_obj->drv_rsp_buff[ data_obj->drv_buff_cnt++ ] = rsp_data;
-                }
-            }
-            
-            if ( data_obj->drv_buff_cnt > 47 ) 
-            {
-                data_obj->drv_new_data = 1;
-            }
-        }
+        return MAGICRFID_ERROR;
     }
+    Delay_10ms ( );
+    if ( ( rx_data[ 1 ] + 2 ) != magicrfid_generic_read( ctx, &rx_data[ 5 ], rx_data[ 1 ] + 2 ) )
+    {
+        return MAGICRFID_ERROR;
+    }
+
+    crc = ( ( uint16_t ) rx_data[ rx_data[ 1 ] + 5 ] << 8 ) | rx_data[ rx_data[ 1 ] + 6 ];
+    
+    if ( crc != magicrfid_calculate_crc( &rx_data[ 1 ], rx_data[ 1 ] + 4 ) )
+    {
+        return MAGICRFID_ERROR;
+    }
+    rsp->data_len = rx_data[ 1 ];
+    rsp->opcode = rx_data[ 2 ];
+    rsp->status = ( ( uint16_t ) rx_data[ 3 ] << 8 ) | rx_data[ 4 ];
+    memcpy ( rsp->data_buf, &rx_data[ 5 ], rsp->data_len );
+    return MAGICRFID_OK;
 }
 
-uint8_t magicrfid_get_data_status ( magicrfid_data_t *data_obj ) 
+int8_t magicrfid_parse_tag_rssi ( magicrfid_response_t rsp )
 {
-    return data_obj->drv_new_data;
+    return ( rsp.data_buf[ 7 ] - 256 );
 }
 
-void magicrfid_reset_data ( magicrfid_data_t *data_obj ) 
+uint32_t magicrfid_parse_tag_freq ( magicrfid_response_t rsp )
 {
-    data_obj->drv_new_data = 0;
-    data_obj->drv_start_package = 0;
-    data_obj->drv_rsp_flag = 0;
-    data_obj->drv_buff_cnt = 0;
+    uint32_t tag_freq = ( ( uint32_t ) rsp.data_buf[ 9 ] << 16 ) | 
+                        ( ( uint16_t ) rsp.data_buf[ 10 ] << 8 ) | 
+                        rsp.data_buf[ 11 ];
+    return tag_freq;
 }
 
-void magicrfid_tag_parser ( magicrfid_data_t *data_obj ) 
+void magicrfid_parse_tag_epc ( magicrfid_response_t rsp, magicrfid_epc_t *epc )
 {
-    uint8_t cnt;
-    
-    for ( cnt = 31; cnt < 43; cnt++ )
+    uint16_t emb_data_num_bits = ( ( uint16_t ) rsp.data_buf[ 19 ] << 8 ) | rsp.data_buf[ 20 ];
+    uint8_t emb_data_num_bytes = ( emb_data_num_bits / 8 );
+    if ( emb_data_num_bits % 8 )
     {
-       data_obj->tag_buf[ cnt - 31 ] = data_obj->drv_rsp_buff[ cnt ];
+        emb_data_num_bytes++;
     }
-    data_obj->tag_rssi = magicrfid_get_tag_rssi( data_obj );
+    uint16_t epc_data_num_bits = ( ( uint16_t ) rsp.data_buf[ 22 + emb_data_num_bytes ] << 8 ) | 
+                                 rsp.data_buf[ 23 + emb_data_num_bytes ];
+    uint8_t epc_data_num_bytes = epc_data_num_bits / 8;
+    if ( epc_data_num_bits % 8 )
+    {
+        epc_data_num_bytes++;
+    }
+    if ( epc && ( epc_data_num_bytes <= MAGICRFID_EPC_MAX_DATA_LEN ) )
+    {
+        epc->data_len = epc_data_num_bytes - 4;
+        epc->epc_pc = ( ( uint16_t ) rsp.data_buf[ 24 + emb_data_num_bytes ] << 8 ) | 
+                      rsp.data_buf[ 25 + emb_data_num_bytes ];
+        memcpy ( epc->data_buf, &rsp.data_buf[ 26 + emb_data_num_bytes ], epc->data_len );
+        epc->epc_crc = ( ( uint16_t ) rsp.data_buf[ 22 + emb_data_num_bytes + epc_data_num_bytes ] << 8 ) | 
+                      rsp.data_buf[ 23 + emb_data_num_bytes + epc_data_num_bytes ];
+    }
 }
 
-void magicrfid_write_data ( magicrfid_t *ctx, uint8_t bank, uint32_t address, uint8_t *data_in, 
-                            uint8_t len, uint16_t timeout )
+void magicrfid_set_tag_protocol ( magicrfid_t *ctx, uint8_t protocol )
 {
-    uint8_t tx_data[ DRV_BUFFER_SIZE ];
-    tx_data[ 0 ] = ( timeout >> 8 ) & 0xFF;
-    tx_data[ 1 ] = timeout & 0xFF;
-    tx_data[ 2 ] = 0x00;
-    
-    for ( uint8_t n_cnt = 0; n_cnt < sizeof( address ); n_cnt++ )
-    {
-        tx_data[ 3 + n_cnt ] = address >> ( 8 * ( 3 - n_cnt )) & 0xFF;
-    }
-    tx_data[ 7 ] = bank;
-    
-    for ( uint8_t n_cnt = 0; n_cnt < len; n_cnt++ )
-    {
-        tx_data[ 8 + n_cnt ] = data_in[ n_cnt ];
-    }
-    
-    uart_write( &ctx->uart, tx_data, sizeof( tx_data ) );
+    magicrfid_command_t cmd;
+    cmd.opcode = MAGICRFID_OPCODE_SET_TAG_PROTOCOL;
+    cmd.data_len = 2;
+    cmd.data_buf[ 0 ] = 0;
+    cmd.data_buf[ 1 ] = protocol;
+    magicrfid_send_command( ctx, cmd );
 }
 
-void magicrfid_read_data ( magicrfid_t *ctx, uint8_t bank, uint32_t address, uint8_t *data_out, 
-                           uint8_t tx_len, uint8_t *rx_len, uint16_t time_out )
+void magicrfid_set_region ( magicrfid_t *ctx, uint8_t region )
 {
-    uint8_t tx_data[ 8 ];
-    uint8_t rx_data[ DRV_BUFFER_SIZE ];
-    uint16_t status;
-    uint8_t lenght;
-    uint8_t response_lenght;
-    
-    lenght = tx_len;
-    
-    tx_data[ 0 ] = time_out >> 8 & 0xFF;
-    tx_data[ 1 ] = time_out & 0xFF;
-    
-    tx_data[ 2 ] = bank;
-    
-    for ( uint8_t n_cnt = 0; n_cnt < 4; n_cnt++ )
-    {
-        tx_data[ 3 + n_cnt ] = address >> ( 8 * ( 3 - n_cnt ) ) & 0xFF;
-    }
-    
-    tx_data[ 7 ] = ( lenght / 2 );
-    
-    if ( bank == 0x03 )
-    {
-        tx_data[ 7 ] = 0x00;
-    }
-    
-    magicrfid_send_command( ctx, MAGICRFID_OPCODE_READ_TAG_DATA, tx_data, 8 );
-    
-    magicrfid_generic_read( ctx, rx_data, DRV_BUFFER_SIZE );
-    
-    if ( rx_data[ 0 ] == 0x00 )
-    {
-        status = ( rx_data[ 3 ] << 8 ) | rx_data[ 4 ];
-        
-        if ( status == 0x0000 )
-        {
-            response_lenght = rx_data[ 1 ];
-            
-            if ( response_lenght < lenght ) 
-            {
-                *rx_len = response_lenght;
-                for ( uint8_t n_cnt = 0; n_cnt < response_lenght; n_cnt++ )
-                {
-                    data_out[ n_cnt ] = rx_data[ 5 + n_cnt ];
-                }
-            }
-        }
-    }
-    
+    magicrfid_command_t cmd;
+    cmd.opcode = MAGICRFID_OPCODE_SET_REGION;
+    cmd.data_len = 1;
+    cmd.data_buf[ 0 ] = region;
+    magicrfid_send_command( ctx, cmd );
 }
 
-uint16_t magicrfid_calculate_crc ( uint8_t *data_val, uint8_t len )
+void magicrfid_set_antenna_port ( magicrfid_t *ctx )
+{
+    magicrfid_command_t cmd;
+    cmd.opcode = MAGICRFID_OPCODE_SET_ANTENNA_PORT;
+    cmd.data_len = 2;
+    cmd.data_buf[ 0 ] = 0x01;
+    cmd.data_buf[ 1 ] = 0x01;
+    magicrfid_send_command( ctx, cmd );
+}
+
+void magicrfid_set_baud_rate ( magicrfid_t *ctx, uint32_t baud_rate )
+{
+    magicrfid_command_t cmd;
+    cmd.opcode = MAGICRFID_OPCODE_SET_BAUD_RATE;
+    cmd.data_len = 4;
+    cmd.data_buf[ 0 ] = ( uint8_t ) ( ( baud_rate >> 24 ) & 0xFF );
+    cmd.data_buf[ 1 ] = ( uint8_t ) ( ( baud_rate >> 16 ) & 0xFF );
+    cmd.data_buf[ 2 ] = ( uint8_t ) ( ( baud_rate >> 8 ) & 0xFF );
+    cmd.data_buf[ 3 ] = ( uint8_t ) ( baud_rate & 0xFF );
+    magicrfid_send_command( ctx, cmd );
+}
+
+void magicrfid_set_read_power ( magicrfid_t *ctx, uint16_t power_setting )
+{
+    if ( power_setting > 2700 )
+    {
+        power_setting = 2700;
+    }
+    magicrfid_command_t cmd;
+    cmd.opcode = MAGICRFID_OPCODE_SET_READ_TX_POWER;
+    cmd.data_len = 2;
+    cmd.data_buf[ 0 ] = ( uint8_t ) ( ( power_setting >> 8 ) & 0xFF );
+    cmd.data_buf[ 1 ] = ( uint8_t ) ( power_setting & 0xFF );
+    magicrfid_send_command( ctx, cmd );
+}
+
+void magicrfid_set_write_power ( magicrfid_t *ctx, uint16_t power_setting )
+{
+    if ( power_setting > 2700 )
+    {
+        power_setting = 2700;
+    }
+    magicrfid_command_t cmd;
+    cmd.opcode = MAGICRFID_OPCODE_SET_WRITE_TX_POWER;
+    cmd.data_len = 2;
+    cmd.data_buf[ 0 ] = ( uint8_t ) ( ( power_setting >> 8 ) & 0xFF );
+    cmd.data_buf[ 1 ] = ( uint8_t ) ( power_setting & 0xFF );
+    magicrfid_send_command( ctx, cmd );
+}
+
+void magicrfid_set_reader_config ( magicrfid_t *ctx, uint8_t option1, uint8_t option2 )
+{
+    magicrfid_command_t cmd;
+    cmd.opcode = MAGICRFID_OPCODE_SET_READER_OPTIONAL_PARAMS;
+    cmd.data_len = 3;
+    cmd.data_buf[ 0 ] = 1;
+    cmd.data_buf[ 1 ] = option1;
+    cmd.data_buf[ 2 ] = option2;
+    magicrfid_send_command( ctx, cmd );
+}
+
+void magicrfid_start_reading ( magicrfid_t *ctx )
+{
+    magicrfid_command_t cmd;
+    cmd.opcode = MAGICRFID_OPCODE_MULTI_PROTOCOL_TAG_OP;
+    cmd.data_len = 16;
+    cmd.data_buf[ 0 ] = 0x00;
+    cmd.data_buf[ 1 ] = 0x00;
+    cmd.data_buf[ 2 ] = 0x01;
+    cmd.data_buf[ 3 ] = 0x22;
+    cmd.data_buf[ 4 ] = 0x00;
+    cmd.data_buf[ 5 ] = 0x00;
+    cmd.data_buf[ 6 ] = 0x05;
+    cmd.data_buf[ 7 ] = 0x07;
+    cmd.data_buf[ 8 ] = 0x22;
+    cmd.data_buf[ 9 ] = 0x10;
+    cmd.data_buf[ 10 ] = 0x00;
+    cmd.data_buf[ 11 ] = 0x1B;
+    cmd.data_buf[ 12 ] = 0x03;
+    cmd.data_buf[ 13 ] = 0xE8;
+    cmd.data_buf[ 14 ] = 0x01;
+    cmd.data_buf[ 15 ] = 0xFF;
+    magicrfid_send_command( ctx, cmd );
+}
+
+void magicrfid_clear_buffers ( magicrfid_t *ctx )
+{
+    uart_clear ( &ctx->uart );
+}
+
+// --------------------------------------------- PRIVATE FUNCTION DEFINITIONS 
+
+static uint16_t magicrfid_calculate_crc ( uint8_t *data_buf, uint8_t len )
 {
     uint16_t crc = 0xFFFF;
     
     for ( uint8_t n_cnt = 0; n_cnt < len; n_cnt++ )
     {
-        crc = ( ( crc << 4 ) | ( data_val[ n_cnt ] >> 4 ) ) ^ crctable[ crc >> 12 ];
-        crc = ( ( crc << 4 ) | ( data_val[ n_cnt ] & 0x0F ) ) ^ crctable[ crc >> 12 ];
+        crc = ( ( crc << 4 ) | ( data_buf[ n_cnt ] >> 4 ) ) ^ magicrfid_crc_table[ crc >> 12 ];
+        crc = ( ( crc << 4 ) | ( data_buf[ n_cnt ] & 0x0F ) ) ^ magicrfid_crc_table[ crc >> 12 ];
     }
     
     return crc;
 }
 
-void magicrfid_set_tag_protocol ( magicrfid_t *ctx, uint8_t protocol )
-{
-    uint8_t tx_data[ 2 ];
-    tx_data[ 0 ] = 0;
-    tx_data[ 1 ] = protocol;
-    
-    magicrfid_send_command( ctx, MAGICRFID_OPCODE_SET_TAG_PROTOCOL, tx_data, 2 );
-}
-
-void magicrfid_set_region ( magicrfid_t *ctx, uint8_t region )
-{
-    magicrfid_send_command( ctx, MAGICRFID_OPCODE_SET_REGION, &region, 1 );
-}
-
-void magicrfid_set_antenna_port ( magicrfid_t *ctx )
-{
-    uint8_t tx_data[ 2 ] = { 0x01, 0x01 };
-    magicrfid_send_command( ctx, MAGICRFID_OPCODE_SET_ANTENNA_PORT, tx_data, 2 );
-}
-
-void magicrfid_set_antenna_search_list ( magicrfid_t *ctx )
-{
-    uint8_t tx_data[ 3 ] = { 0x02, 0x01, 0x01 };
-    magicrfid_send_command( ctx, MAGICRFID_OPCODE_SET_ANTENNA_PORT, tx_data, 3 );
-}
-
-void magicrfid_set_baud_rate ( magicrfid_t *ctx, uint32_t baud_rate )
-{
-    uint8_t tx_data[ 4 ];
-    for ( uint8_t n_cnt = 0; n_cnt < 4; n_cnt++ )
-    {
-        tx_data[ n_cnt ] = ( uint8_t ) baud_rate >> ( 8 * ( 3 - n_cnt ) );
-    }
-    
-    magicrfid_send_command( ctx, MAGICRFID_OPCODE_SET_BAUD_RATE, tx_data, 4 );
-}
-
-void magicrfid_set_read_power ( magicrfid_t *ctx, uint16_t power_setting )
-{
-    uint8_t tx_data[ 2 ];
-    uint16_t power_val;
-    power_val = power_setting;
-    
-    if ( power_val > 2700 )
-    {
-        power_val = 2700;
-    }
-    
-    tx_data[ 0 ] = ( uint8_t ) power_val >> 8;
-    tx_data[ 1 ] = ( uint8_t ) power_val & 0xFF;
-    
-    magicrfid_send_command( ctx, MAGICRFID_OPCODE_SET_READ_TX_POWER, tx_data, 2 );
-}
-
-void magicrfid_set_write_power ( magicrfid_t *ctx, uint16_t power_setting )
-{
-    uint8_t tx_data[ 2 ];
-    uint16_t power_val;
-    power_val = power_setting;
-    
-    if ( power_val > 2700 )
-    {
-        power_val = 2700;
-    }
-    
-    tx_data[ 0 ] = ( uint8_t ) power_val >> 8;
-    tx_data[ 1 ] = ( uint8_t ) power_val & 0xFF;
-    
-    magicrfid_send_command( ctx, MAGICRFID_OPCODE_SET_WRITE_TX_POWER, tx_data, 2 );
-}
-
-void magicrfid_set_reader_configuration ( magicrfid_t *ctx, uint8_t option1, uint8_t option2 )
-{
-    uint8_t tx_data[ 3 ];
-    
-    tx_data[ 0 ] = 1;
-    tx_data[ 1 ] = option1;
-    tx_data[ 2 ] = option2;
-    
-    magicrfid_send_command( ctx, MAGICRFID_OPCODE_SET_READER_OPTIONAL_PARAMS, tx_data, 3 );
-}
-
-void magicrfid_start_reading ( magicrfid_t *ctx )
-{
-    uint8_t tx_data[] = { 0x00, 0x00, 0x01, 0x22, 0x00, 0x00, 0x05, 0x07, 0x22, 0x10, 0x00, 0x1B, 
-                          0x03, 0xE8, 0x01, 0xFF };
-
-    magicrfid_send_command( ctx, MAGICRFID_OPCODE_MULTI_PROTOCOL_TAG_OP, tx_data, 16 );
-}
-
-// --------------------------------------------- PRIVATE FUNCTION DEFINITIONS 
-
-void dev_delay_com ( uint16_t time_ms ) 
+static void magicrfid_delay_com ( uint16_t time_ms ) 
 {
     for ( uint16_t cnt = 0; cnt < time_ms; cnt++ ) 
     {
@@ -450,7 +415,7 @@ void dev_delay_com ( uint16_t time_ms )
     }
 }
 
-void dev_reset_delay( void ) 
+static void magicrfid_reset_delay( void ) 
 {
     Delay_100ms( );
     Delay_100ms( );

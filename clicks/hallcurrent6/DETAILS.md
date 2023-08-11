@@ -2,7 +2,7 @@
 ---
 # Hall Current 6 click
 
-Hall Current 6 Click is a very accurate current measurement Click board™, based on the ACS723 IC. This IC is a galvanically isolated current sensor, which utilizes the Hall-effect principle.
+> Hall Current 6 Click is a very accurate current measurement Click board™, based on the ACS723 IC. This IC is a galvanically isolated current sensor, which utilizes the Hall-effect principle.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent6_click.png" height=300px>
@@ -35,34 +35,34 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void hallcurrent6_cfg_setup ( hallcurrent6_cfg_t *cfg ); 
- 
-- Initialization function.
-> HALLCURRENT6_RETVAL hallcurrent6_init ( hallcurrent6_t *ctx, hallcurrent6_cfg_t       *cfg );
+- `hallcurrent6_cfg_setup` Config Object Initialization function.
+```c
+void hallcurrent6_cfg_setup ( hallcurrent6_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void hallcurrent6_default_cfg ( hallcurrent6_t *ctx );
-
+- `hallcurrent6_init` Initialization function.
+```c
+HALLCURRENT6_RETVAL hallcurrent6_init ( hallcurrent6_t *ctx, hallcurrent6_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Config Object Initialization function.
-> This function initializes click configuration structure to init state.
- 
-- Initialization function.
-> This function initializes all necessary pins and peripherals used for this            click.
+- `hallcurrent6_read_data` Reads ADC current data
+```c
+uint16_t hallcurrent6_read_data ( hallcurrent6_t *ctx );
+```
 
-- Generic write function.
-> This function writes data from the desired register.
+- `hallcurrent6_get_current` Reads current data
+```c
+float hallcurrent6_get_current ( hallcurrent6_t *ctx );
+```
 
-- Reads ADC current data
-> The value of 2065 is 0A
+- `hallcurrent6_generic_read` Generic read function.
+```c
+void hallcurrent6_generic_read ( hallcurrent6_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+```
 
-- Reads current data
-> Bipolar current sensor - nominal 400mV/A or 5A full scale
-
-## Examples Description
+## Example Description
 
 > 
 > This application reads current data.
@@ -117,25 +117,14 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    uint8_t reg; 
-    uint8_t *data_buf;
     float current;
 
-    current = hallcurrent6_get_current(&hallcurrent6, reg, &data_buf);
-
-    log_printf( &logger, " Current value: %f.2  mA \r\n" , current);
-
-    log_printf( &logger, " --------------------------------- \r\n" );
+    current = hallcurrent6_get_current( &hallcurrent6 );
+    log_printf( &logger, " Current value: %.2f mA \r\n" , current);
     Delay_ms( 1000 );
 }  
 
 ```
-
-## Note
-
-> 
-> <NOTE>
-> 
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

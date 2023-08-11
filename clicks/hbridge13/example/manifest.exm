@@ -1,0 +1,8 @@
+{
+    "name": "H-Bridge 13 Click",
+    "description": "H-Bridge 13 Click is a compact add-on board with an H-bridge gate driver, also known as a full-bridge pre-driver. This board features the DRV8411A, a dual H-bridge motor driver with current regulations from Texas Instruments. It can drive one bipolar stepper motor, one or two brushed DC motors, solenoids, and other inductive loads.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","DRV8411ARTER"],
+    "category" : ["Click Boards > Motor control > Brushed"]
+}

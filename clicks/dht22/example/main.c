@@ -1,6 +1,6 @@
 /*!
- * \file 
- * \brief DHT22 Click example
+ * @file main.c
+ * @brief DHT22 Click Example.
  *
  * # Description
  * This is a example which demonstrates the use of DHT22 Click board by
@@ -16,20 +16,22 @@
  * Reads the temperature and humidity from the sensor and 
  * displays the values on the USB UART.
  *
- * \author Nemanja Medakovic
+ * @author Mikroe Team
  *
  */
+
 
 #include "board.h"
 #include "log.h"
 #include "dht22.h"
 
-static dht22_t dht22;
-static log_t logger;
+static dht22_t dht22;   /**< DHT22 Click driver object. */
+static log_t logger;    /**< Logger object. */
 
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    dht22_cfg_t dht22_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -42,20 +44,15 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init... ----" );
+    log_info( &logger, " Application Init " );
 
-    dht22_cfg_t dht22_cfg;
-
-    //  Click initialization.
-
+    // Click initialization.
     dht22_cfg_setup( &dht22_cfg );
     DHT22_MAP_MIKROBUS( dht22_cfg, MIKROBUS_1 );
 
-    if ( dht22_init( &dht22, &dht22_cfg ) == DHT22_ERROR )
+   if ( DIGITAL_OUT_UNSUPPORTED_PIN == dht22_init( &dht22, &dht22_cfg ) ) 
     {
-        log_info( &logger, "---- Application Init Error. ----" );
-        log_info( &logger, "---- Please, run program again... ----" );
-
+        log_error( &logger, " Communication init." );
         for ( ; ; );
     }
 
@@ -64,32 +61,21 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    uint8_t resp_stat = DHT22_RESP_NOT_READY;
-    uint32_t sens_meas = 0;
-    float dht22_temp = 0;
-    float dht22_hum = 0;
+    static float temperature = 0;
+    static float humidity = 0;
     
     dht22_init_sda_output( &dht22 );
-    
-    if ( dht22_start_signal( &dht22 ) == DHT22_OK )
+    if ( DHT22_OK == dht22_start_signal( &dht22 ) )
     {
         dht22_init_sda_input( &dht22 );
-        
-        if ( dht22_check_sensor_response( &dht22, &resp_stat ) == DHT22_OK )
+        if ( DHT22_OK == dht22_check_sensor_response( &dht22 ) )
         {
-            if ( resp_stat == DHT22_RESP_READY )
+            if ( DHT22_OK == dht22_get_measurement_data( &dht22, &humidity, &temperature ) )
             {
-                if ( dht22_get_sensor_data( &dht22, &sens_meas ) == DHT22_OK )
-                {
-                    dht22_temp = dht22_calculate_temperature( &dht22, sens_meas );
-                    dht22_hum = dht22_calculate_humidity( &dht22, sens_meas );
-
-                    log_printf( &logger, " Humidity : %.2f %%\r\n", dht22_hum );
-                    log_printf( &logger, " Temperature : %.2f degC\r\n", dht22_temp );
-                    log_printf( &logger, " ---------------------------\r\n", dht22_temp );
-                    Delay_ms( 1000 );
-                }
-                
+                log_printf( &logger, " Humidity : %.2f %%\r\n", humidity );
+                log_printf( &logger, " Temperature : %.2f degC\r\n", temperature );
+                log_printf( &logger, " ---------------------------\r\n" );
+                Delay_ms( 1000 );
             }
         }
     }

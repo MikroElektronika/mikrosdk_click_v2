@@ -31,7 +31,7 @@
     "related_projects": [
         3851
     ],
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.Expand7",
     "subdir_name": "lib_expand7"

@@ -56,7 +56,6 @@ extern "C"{
  * @brief Magic RFID control commands.
  * @details Specified setting for control commands of Magic RFID Click driver.
  */
-
 #define MAGICRFID_OPCODE_VERSION                        0x03
 #define MAGICRFID_OPCODE_SET_BAUD_RATE                  0x06
 #define MAGICRFID_OPCODE_READ_TAG_ID_SINGLE             0x21
@@ -80,6 +79,10 @@ extern "C"{
 #define MAGICRFID_OPCODE_SET_READER_OPTIONAL_PARAMS     0x9A
 #define MAGICRFID_OPCODE_SET_PROTOCOL_PARAM             0x9B
 
+/**
+ * @brief Magic RFID region commands.
+ * @details Specified setting for region commands of Magic RFID Click driver.
+ */
 #define MAGICRFID_REGION_INDIA                          0x04
 #define MAGICRFID_REGION_JAPAN                          0x05
 #define MAGICRFID_REGION_CHINA                          0x06
@@ -90,6 +93,10 @@ extern "C"{
 #define MAGICRFID_REGION_NORTHAMERICA                   0x0D
 #define MAGICRFID_REGION_OPEN                           0xFF
 
+/**
+ * @brief Magic RFID tag protocol commands.
+ * @details Specified setting for tag protocol commands of Magic RFID Click driver.
+ */
 #define MAGICRFID_TAG_PROTOCOL_NONE                     0x00
 #define MAGICRFID_TAG_PROTOCOL_ISO180006B               0x03
 #define MAGICRFID_TAG_PROTOCOL_GEN2                     0x05
@@ -98,19 +105,30 @@ extern "C"{
 #define MAGICRFID_TAG_PROTOCOL_IPX256                   0x08
 #define MAGICRFID_TAG_PROTOCOL_ATA                      0x1D
 
-#define MAGICRFID_COMMAND_TIME_OUT                      2000 
-
+/**
+ * @brief Magic RFID timeout and delays.
+ * @details Specified setting for timeout and delays of Magic RFID Click driver.
+ */
 #define MAGICRFID_NORMAL_DELAY_TIME                     50
 #define MAGICRFID_LONG_DELAY_TIME                       100
+#define MAGICRFID_TIMEOUT_MS                            3000
 
-#define MAGICRFID_UNIVERSAL_HEADER                      0xFF
+/**
+ * @brief Magic RFID command and response settings.
+ * @details Specified setting for command and response of Magic RFID Click driver.
+ */
+#define MAGICRFID_HEADER                                0xFF
+#define MAGICRFID_COMMAND_MAX_DATA_LEN                  250
+#define MAGICRFID_RESPONSE_MAX_DATA_LEN                 248
+#define MAGICRFID_EPC_MAX_DATA_LEN                      16
 
 /**
  * @brief Magic RFID driver buffer size.
  * @details Specified size of driver ring buffer.
  * @note Increase buffer size if needed.
  */
-#define DRV_BUFFER_SIZE                                 200
+#define MAGICRFID_TX_DRV_BUFFER_SIZE                    255
+#define MAGICRFID_RX_DRV_BUFFER_SIZE                    255
 
 /*! @} */ // magicrfid_cmd
 
@@ -129,8 +147,8 @@ extern "C"{
  * @details Mapping pins of Magic RFID Click to the selected MikroBUS.
  */
 #define MAGICRFID_MAP_MIKROBUS( cfg, mikrobus ) \
-    cfg.tx_pin  = MIKROBUS( mikrobus, MIKROBUS_TX ); \
-    cfg.rx_pin  = MIKROBUS( mikrobus, MIKROBUS_RX ); \
+    cfg.tx_pin = MIKROBUS( mikrobus, MIKROBUS_TX ); \
+    cfg.rx_pin = MIKROBUS( mikrobus, MIKROBUS_RX ); \
     cfg.en = MIKROBUS( mikrobus, MIKROBUS_CS )
 
 /*! @} */ // magicrfid_map
@@ -143,14 +161,14 @@ extern "C"{
 typedef struct
 {
     // Output pins
-    digital_out_t en;                               /**< Shutdown Control. */
+    digital_out_t en;       /**< Shutdown Control. */
 
     // Modules
-    uart_t uart;                                    /**< UART driver object. */
+    uart_t uart;            /**< UART driver object. */
 
     // Buffers
-    char uart_rx_buffer[ DRV_BUFFER_SIZE ];         /**< Buffer size. */
-    char uart_tx_buffer[ DRV_BUFFER_SIZE ];         /**< Buffer size. */
+    uint8_t uart_rx_buffer[ MAGICRFID_RX_DRV_BUFFER_SIZE ];     /**< Buffer size. */
+    uint8_t uart_tx_buffer[ MAGICRFID_TX_DRV_BUFFER_SIZE ];     /**< Buffer size. */
 
 } magicrfid_t;
 
@@ -161,36 +179,58 @@ typedef struct
 typedef struct
 {
     // Communication gpio pins
-    pin_name_t rx_pin;                                  /**< RX pin. */
-    pin_name_t tx_pin;                                  /**< TX pin. */
+    pin_name_t rx_pin;      /**< RX pin. */
+    pin_name_t tx_pin;      /**< TX pin. */
 
     // Additional gpio pins
-    pin_name_t en;                                      /**< Shutdown Control. */
+    pin_name_t en;          /**< Shutdown Control. */
 
     // Static variable
-    uint32_t          baud_rate;                        /**< Clock speed. */
-    bool              uart_blocking;                    /**< Wait for interrupt or not. */
-    uart_data_bits_t  data_bit;                         /**< Data bits. */
-    uart_parity_t     parity_bit;                       /**< Parity bit. */
-    uart_stop_bits_t  stop_bit;                         /**< Stop bits. */
+    uint32_t          baud_rate;        /**< Clock speed. */
+    bool              uart_blocking;    /**< Wait for interrupt or not. */
+    uart_data_bits_t  data_bit;         /**< Data bits. */
+    uart_parity_t     parity_bit;       /**< Parity bit. */
+    uart_stop_bits_t  stop_bit;         /**< Stop bits. */
 
 } magicrfid_cfg_t;
 
 /**
- * @brief Magic RFID Click data object.
- * @details Data object definition of Magic RFID Click driver.
+ * @brief Magic RFID Click command object.
+ * @details Command object definition of Magic RFID Click driver.
  */
 typedef struct
 {
-    uint8_t tag_buf[ 16 ];
-    uint8_t tag_rssi;
-    uint8_t drv_new_data;
-    uint8_t drv_start_package;
-    uint8_t drv_rsp_buff[ 200 ];
-    uint8_t drv_buff_cnt;
-    uint8_t drv_rsp_flag;
+    uint8_t data_len;
+    uint8_t opcode;
+    uint8_t data_buf[ MAGICRFID_COMMAND_MAX_DATA_LEN ];
 
-} magicrfid_data_t;
+} magicrfid_command_t;
+
+/**
+ * @brief Magic RFID Click response object.
+ * @details Response object definition of Magic RFID Click driver.
+ */
+typedef struct
+{
+    uint8_t data_len;
+    uint8_t opcode;
+    uint16_t status;
+    uint8_t data_buf[ MAGICRFID_RESPONSE_MAX_DATA_LEN ];
+
+} magicrfid_response_t;
+
+/**
+ * @brief Magic RFID Click EPC data object.
+ * @details EPC data object definition of Magic RFID Click driver.
+ */
+typedef struct
+{
+    uint8_t data_len;
+    uint16_t epc_pc;
+    uint8_t data_buf[ MAGICRFID_EPC_MAX_DATA_LEN ];
+    uint16_t epc_crc;
+
+} magicrfid_epc_t;
 
 /**
  * @brief Magic RFID Click return value data.
@@ -230,7 +270,6 @@ void magicrfid_cfg_setup ( magicrfid_cfg_t *cfg );
  * See #magicrfid_cfg_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
- *
  * See #err_t definition for detailed explanation.
  * @note None.
  */
@@ -242,10 +281,7 @@ err_t magicrfid_init ( magicrfid_t *ctx, magicrfid_cfg_t *cfg );
  * click board.
  * @param[in] ctx : Click context object.
  * See #magicrfid_t object definition for detailed explanation.
- * @return @li @c  0 - Success,
- *         @li @c -1 - Error.
- *
- * See #err_t definition for detailed explanation.
+ * @return None.
  * @note This function can consist any necessary configuration or setting to put
  * device into operating mode.
  */
@@ -260,10 +296,9 @@ void magicrfid_default_cfg ( magicrfid_t *ctx );
  * @param[in] len : Number of bytes for sending.
  * @return @li @c  >=0 - Success,
  *         @li @c   <0 - Error.
- *
  * See #err_t definition for detailed explanation.
  */
-err_t magicrfid_generic_write ( magicrfid_t *ctx, char *data_buf, uint16_t len );
+err_t magicrfid_generic_write ( magicrfid_t *ctx, uint8_t *data_buf, uint16_t len );
 
 /**
  * @brief Magic RFID data reading function.
@@ -274,10 +309,9 @@ err_t magicrfid_generic_write ( magicrfid_t *ctx, char *data_buf, uint16_t len )
  * @param[in] max_len : Number of bytes to be read.
  * @return @li @c  >0 - Number of data bytes read,
  *         @li @c <=0 - Error/Empty Ring buffer.
- *
  * See #err_t definition for detailed explanation.
  */
-err_t magicrfid_generic_read ( magicrfid_t *ctx, char *data_buf, uint16_t max_len );
+err_t magicrfid_generic_read ( magicrfid_t *ctx, uint8_t *data_buf, uint16_t max_len );
 
 /**
  * @brief Magic RFID device reset function.
@@ -293,94 +327,53 @@ void magicrfid_device_reset ( magicrfid_t *ctx );
  * @details Send command function.
  * @param[in] ctx : Click context object.
  * See #magicrfid_t object definition for detailed explanation.
- * @param[in] opcode : Operation code of the command.
- * @param[in] data_in : Data buffer.
- * @param[in] size : Number of the bytes in buffer.
+ * @param[in] cmd : Command object.
+ * See #magicrfid_command_t object definition for detailed explanation.
  * @return Nothing.
  */
-void magicrfid_send_command ( magicrfid_t *ctx, uint8_t opcode, uint8_t *data_in, uint8_t size );
+void magicrfid_send_command ( magicrfid_t *ctx, magicrfid_command_t cmd );
 
 /**
- * @brief Get Tag RSSI value.
- * @details This function reads RSSI value of the tag.
- * @param[out] data_obj : Tag data structure.
+ * @brief Magic RFID get response function.
+ * @details Get response function.
+ * @param[in] ctx : Click context object.
+ * See #magicrfid_t object definition for detailed explanation.
+ * @param[out] rsp : Response object.
+ * See #magicrfid_response_t object definition for detailed explanation.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ */
+err_t magicrfid_get_response ( magicrfid_t *ctx, magicrfid_response_t *rsp );
+
+/**
+ * @brief Parse Tag RSSI value.
+ * @details This function parses RSSI value of the tag.
+ * @param[in] rsp : Response object.
+ * See #magicrfid_response_t object definition for detailed explanation.
  * @return RSSI value
  */
-int8_t magicrfid_get_tag_rssi ( magicrfid_data_t *data_obj );
+int8_t magicrfid_parse_tag_rssi ( magicrfid_response_t rsp );
 
 /**
- * @brief General collecting response function
- * @details This function reads data from the tag.
- * @param[in] ctx : Click context object.
- * See #magicrfid_t object definition for detailed explanation.
- * @param[out] data_obj : Tag data structure.
+ * @brief Parse Tag Freq value.
+ * @details This function parses the frequency value the tag was detected at.
+ * @param[in] rsp : Response object.
+ * See #magicrfid_response_t object definition for detailed explanation.
+ * @return Frequency value.
+ */
+uint32_t magicrfid_parse_tag_freq ( magicrfid_response_t rsp );
+
+/**
+ * @brief Parse Tag EPC bytes.
+ * @details This function parses EPC bytes of the tag.
+ * @param[in] rsp : Response object.
+ * See #magicrfid_response_t object definition for detailed explanation.
+ * @param[out] epc : EPC data object.
+ * See #magicrfid_epc_t object definition for detailed explanation.
  * @return Nothing.
  */
-void magicrfid_process ( magicrfid_t *ctx, magicrfid_data_t *data_obj );
-
-/**
- * @brief Get current data status.
- * @details This function gets data status.
- * @param[out] data_obj : Tag data structure.
- * @return Data status
- */
-uint8_t magicrfid_get_data_status ( magicrfid_data_t *data_obj );
-
-/**
- * @brief Reset collecting data and start new measurement.
- * @details This function resets data of data object structure.
- * @param[out] data_obj : Tag data structure.
- * @return Nothing.
- */
-void magicrfid_reset_data ( magicrfid_data_t *data_obj );
-
-/**
- * @brief Gets Tag value after parsing.
- * @details This function is used to parse data after reading it.
- * @param[out] data_obj : Tag data structure.
- * @return Nothing.
- */
-void magicrfid_tag_parser ( magicrfid_data_t *data_obj );
-
-/**
- * @brief Magic RFID data writing function.
- * @details This function writes a desired number of data bytes by using UART serial interface.
- * @param[in] ctx : Click context object.
- * See #magicrfid_t object definition for detailed explanation.
- * @param[in] bank : User data bank.
- * @param[in] address : Address of the register.
- * @param[in] data_in : Data buffer for sending.
- * @param[in] len : Number of bytes for sending.
- * @param[in] timeout : Number of ms before stop waiting for response from module.
- * @return Nothing.
- */
-void magicrfid_write_data ( magicrfid_t *ctx, uint8_t bank, uint32_t address, uint8_t *data_in, 
-                            uint8_t len, uint16_t timeout );
-
-/**
- * @brief Magic RFID data read function.
- * @details This function reads a desired number of data bytes by using UART serial interface.
- * @param[in] ctx : Click context object.
- * See #magicrfid_t object definition for detailed explanation.
- * @param[in] bank : User data bank.
- * @param[in] address : Address of the register.
- * @param[out] data_out : Output read data.
- * @param[in] tx_len : Number of bytes for sending.
- * @param[out] rx_len : Number of read bytes.
- * @param[in] timeout : Number of ms before stop waiting for response from module.
- * @return Nothing.
- */
-void magicrfid_read_data ( magicrfid_t *ctx, uint8_t bank, uint32_t address, uint8_t *data_out, 
-                           uint8_t tx_len, uint8_t *rx_len, uint16_t time_out );
-
-/**
- * @brief Magic RFID calculate CRC function.
- * @details This function calculates CRC of the selected input data.
- * @param[in] data_val : Data to be calculated.
- * @param[in] len : Number of bytes to be calculated.
- * @return CRC value.
- */
-uint16_t magicrfid_calculate_crc ( uint8_t *data_val, uint8_t len );
+void magicrfid_parse_tag_epc ( magicrfid_response_t rsp, magicrfid_epc_t *epc );
 
 /**
  * @brief Magic RFID set protocol function.
@@ -405,7 +398,7 @@ void magicrfid_set_tag_protocol ( magicrfid_t *ctx, uint8_t protocol );
 void magicrfid_set_region ( magicrfid_t *ctx, uint8_t region );
 
 /**
- * @brief Magic RFID turn on antena port function.
+ * @brief Magic RFID turn on antenna port function.
  * @details This function is used for setting up antenna port of Magic RFID Click Board by using 
  * UART serial interface.
  * @param[in] ctx : Click context object.
@@ -413,16 +406,6 @@ void magicrfid_set_region ( magicrfid_t *ctx, uint8_t region );
  * @return Nothing.
  */
 void magicrfid_set_antenna_port ( magicrfid_t *ctx );
-
-/**
- * @brief Magic RFID turn on antena search list function.
- * @details This function is used for setting up antenna search list of Magic RFID Click Board by 
- * using UART serial interface.
- * @param[in] ctx : Click context object.
- * See #magicrfid_t object definition for detailed explanation.
- * @return Nothing.
- */
-void magicrfid_set_antenna_search_list ( magicrfid_t *ctx );
 
 /**
  * @brief Magic RFID set baud rate function.
@@ -465,7 +448,7 @@ void magicrfid_set_write_power ( magicrfid_t *ctx, uint16_t power_setting );
  * See #magicrfid_t object definition for detailed explanation.
  * @return Nothing.
  */
-void magicrfid_set_reader_configuration ( magicrfid_t *ctx, uint8_t option1, uint8_t option2 );
+void magicrfid_set_reader_config ( magicrfid_t *ctx, uint8_t option1, uint8_t option2 );
 
 /**
  * @brief Magic RFID enable reading function.
@@ -476,6 +459,15 @@ void magicrfid_set_reader_configuration ( magicrfid_t *ctx, uint8_t option1, uin
  * @return Nothing.
  */
 void magicrfid_start_reading ( magicrfid_t *ctx );
+
+/**
+ * @brief Magic RFID clear buffers function.
+ * @details This function clears UART ring buffers.
+ * @param[in] ctx : Click context object.
+ * See #magicrfid_t object definition for detailed explanation.
+ * @return Nothing.
+ */
+void magicrfid_clear_buffers ( magicrfid_t *ctx );
 
 #ifdef __cplusplus
 }

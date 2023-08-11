@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC32|RISC-V|dsPIC",
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
     "category": "Click Boards > Wireless connectivity > RFID/NFC",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -8,7 +8,7 @@
         "examples",
         "source_files"
     ],
-"dependency_list": [],
+    "dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "Magic RFID click",
     "example_list": [
@@ -31,11 +31,12 @@
         3810
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.MagicRFID",
     "subdir_name": "lib_magicrfid"
 }
+
 
 
 

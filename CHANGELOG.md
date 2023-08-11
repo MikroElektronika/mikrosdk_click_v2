@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230811](#20230811)**
 + **[20230804](#20230804)**
 + **[20230728](#20230728)**
 + **[20230721](#20230721)**
@@ -57,6 +58,26 @@
 
 ---
 ---
+---
+
+## `20230811`
+
+*Following click boards have been added:*
+
++ `USB-C Sink 2`
++ `CAN Isolator 3`
++ `H-Bridge 13`
+
+*Following click boards have been updated:*
+
++ `G2C`
++ `Hall Current 6`
++ `Magic RFID`
++ `DHT22`
++ `Expand 7`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230804`

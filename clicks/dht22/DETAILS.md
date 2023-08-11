@@ -1,8 +1,8 @@
-
+ 
 ---
 # DHT22 click
 
-DHT22 click is a temperature and humidity measurement board carrying the sensor of the same name.
+> DHT22 click is a temperature and humidity measurement board carrying the sensor of the same name.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/dht22_click.png" height=300px>
@@ -35,22 +35,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void dht22_cfg_setup ( dht22_cfg_t *cfg ); 
- 
-- Initialization function.
-> DHT22_RETVAL dht22_init ( dht22_t *ctx, dht22_cfg_t *cfg );
+- `dht22_cfg_setup` Config Object Initialization function.
+```c
+void dht22_cfg_setup ( dht22_cfg_t *cfg );
+```
+
+- `dht22_init` Initialization function.
+```c
+err_t dht22_init ( dht22_t *ctx, dht22_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Sends start signal to the sensor function.
-> void dht22_start_signal ( dht22_t *ctx );
- 
-- Release the bus to wait the sensor response signal function.
-> uint8_t dht22_check_sensor_response ( dht22_t *ctx );
+- `dht22_get_measurement_data` DHT22 get measurement data from the sensor function.
+```c
+err_t dht22_get_measurement_data ( dht22_t *ctx, float *humidity, float *temperature );
+``` 
 
-- Reading data from the sensor function.
-> uint32_t dht22_get_sensor_data ( dht22_t *ctx );
+- `dht22_start_signal` DHT22 sends start signal to the sensor function.
+```c
+void dht22_start_signal ( dht22_t *ctx );
+```
+
+- `dht22_check_sensor_response` DHT22 release the bus to wait the sensor response signal function.
+```c
+uint8_t dht22_check_sensor_response ( dht22_t *ctx );
+``` 
 
 ## Examples Description
 
@@ -63,10 +73,10 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 > Initializes the SDA data pin depending on the selected GPIO pin (SDA1/SDA2) and log module.
 
 ```c
-
 void application_init ( void )
 {
-    log_cfg_t log_cfg;
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    dht22_cfg_t dht22_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -79,26 +89,20 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init... ----" );
+    log_info( &logger, " Application Init " );
 
-    dht22_cfg_t dht22_cfg;
-
-    //  Click initialization.
-
+    // Click initialization.
     dht22_cfg_setup( &dht22_cfg );
     DHT22_MAP_MIKROBUS( dht22_cfg, MIKROBUS_1 );
 
-    if ( dht22_init( &dht22, &dht22_cfg ) == DHT22_ERROR )
+   if ( DIGITAL_OUT_UNSUPPORTED_PIN == dht22_init( &dht22, &dht22_cfg ) ) 
     {
-        log_info( &logger, "---- Application Init Error. ----" );
-        log_info( &logger, "---- Please, run program again... ----" );
-
+        log_error( &logger, " Communication init." );
         for ( ; ; );
     }
 
     log_info( &logger, "---- Application Init done. ----" );
 }
-  
 ```
 
 ### Application Task
@@ -106,40 +110,27 @@ void application_init ( void )
 > Reads the temperature and humidity from the sensor and displays the values on the USB UART. 
 
 ```c
-
 void application_task ( void )
 {
-    uint8_t resp_stat = DHT22_RESP_NOT_READY;
-    uint32_t sens_meas = 0;
-    float dht22_temp = 0;
-    float dht22_hum = 0;
+    static float temperature = 0;
+    static float humidity = 0;
     
     dht22_init_sda_output( &dht22 );
-    
-    if ( dht22_start_signal( &dht22 ) == DHT22_OK )
+    if ( DHT22_OK == dht22_start_signal( &dht22 ) )
     {
         dht22_init_sda_input( &dht22 );
-        
-        if ( dht22_check_sensor_response( &dht22, &resp_stat ) == DHT22_OK )
+        if ( DHT22_OK == dht22_check_sensor_response( &dht22 ) )
         {
-            if ( resp_stat == DHT22_RESP_READY )
+            if ( DHT22_OK == dht22_get_measurement_data( &dht22, &humidity, &temperature ) )
             {
-                if ( dht22_get_sensor_data( &dht22, &sens_meas ) == DHT22_OK )
-                {
-                    dht22_temp = dht22_calculate_temperature( &dht22, sens_meas );
-                    dht22_hum = dht22_calculate_humidity( &dht22, sens_meas );
-
-                    log_printf( &logger, " Humidity : %.2f %%\r\n", dht22_hum );
-                    log_printf( &logger, " Temperature : %.2f degC\r\n", dht22_temp );
-                    log_printf( &logger, " ---------------------------\r\n", dht22_temp );
-                    Delay_ms( 1000 );
-                }
-                
+                log_printf( &logger, " Humidity : %.2f %%\r\n", humidity );
+                log_printf( &logger, " Temperature : %.2f degC\r\n", temperature );
+                log_printf( &logger, " ---------------------------\r\n" );
+                Delay_ms( 1000 );
             }
         }
     }
-}  
-
+}
 ``` 
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.

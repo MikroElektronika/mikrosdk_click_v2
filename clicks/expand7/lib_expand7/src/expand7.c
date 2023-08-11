@@ -56,6 +56,14 @@ void expand7_cfg_setup ( expand7_cfg_t *cfg )
 
 err_t expand7_init ( expand7_t *ctx, expand7_cfg_t *cfg )
 {
+    // Output pins 
+    digital_out_init( &ctx->rst, cfg->rst );
+
+    // Input pins
+    digital_in_init( &ctx->int_pin, cfg->int_pin );
+    
+    expand7_reset( ctx );
+    
     i2c_master_config_t i2c_cfg;
 
     i2c_master_configure_default( &i2c_cfg );
@@ -84,12 +92,6 @@ err_t expand7_init ( expand7_t *ctx, expand7_cfg_t *cfg )
     {
         return I2C_MASTER_ERROR;
     }
-
-    // Output pins 
-    digital_out_init( &ctx->rst, cfg->rst );
-
-    // Input pins
-    digital_in_init( &ctx->int_pin, cfg->int_pin );
 
     port_slave_addr = EXPAND7_M_PORT_BASE_ADR | ctx->slave_address;
     eeprom_slave_addr = EXPAND7_EEPROM_BASE_ADR | ctx->slave_address;
