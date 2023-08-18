@@ -1,6 +1,6 @@
 /*!
  * \file 
- * \brief Rs485Isolator Click example
+ * \brief RS485 Isolator Click example
  * 
  * # Description
  * This example reads and processes data from RS485 Isolator clicks.
@@ -32,14 +32,14 @@
 #include "rs485isolator.h"
 #include "string.h"
 
-#define PROCESS_RX_BUFFER_SIZE 500
+// Comment out the line below in order to switch the application mode to receiver
+#define DEMO_APP_TRANSMITTER
 
-#define TEXT_TO_SEND "MikroE\r\n"
+#define TEXT_TO_SEND "MIKROE - RS485 Isolator click\r\n"
+
+#define PROCESS_RX_BUFFER_SIZE 100
 
 // ------------------------------------------------------------------ VARIABLES
-
-#define DEMO_APP_RECEIVER
-// #define DEMO_APP_TRANSMITTER
 
 static rs485isolator_t rs485isolator;
 static log_t logger;
@@ -48,20 +48,26 @@ static log_t logger;
 
 static void rs485isolator_process ( void )
 {
-    int32_t rsp_size;
+    uint8_t uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
     
-    char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
-    uint8_t check_buf_cnt;
-    
-    rsp_size = rs485isolator_generic_read( &rs485isolator, uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
+    int32_t rsp_size = rs485isolator_generic_read( &rs485isolator, uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
 
     if ( rsp_size > 0 )
     {  
         log_printf( &logger, "Received data: " );
         
-        for ( check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
+        for ( uint8_t check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
         {
             log_printf( &logger, "%c", uart_rx_buffer[ check_buf_cnt ] );
+        }
+        Delay_ms ( 100 );
+        rsp_size = rs485isolator_generic_read( &rs485isolator, uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
+        if ( rsp_size > 0 )
+        { 
+            for ( uint8_t check_buf_cnt = 0; check_buf_cnt < rsp_size; check_buf_cnt++ )
+            {
+                log_printf( &logger, "%c", uart_rx_buffer[ check_buf_cnt ] );
+            }
         }
     }
     Delay_ms( 100 );
@@ -85,25 +91,24 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
+    // Click initialization.
     rs485isolator_cfg_setup( &cfg );
     RS485ISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rs485isolator_init( &rs485isolator, &cfg );
+    
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )
 {
-#ifdef DEMO_APP_RECEIVER
-    rs485isolator_process( );
-#endif    
-    
 #ifdef DEMO_APP_TRANSMITTER
-    rs485isolator_generic_write( &rs485isolator, TEXT_TO_SEND, 8 );
+    rs485isolator_generic_write( &rs485isolator, TEXT_TO_SEND, strlen ( TEXT_TO_SEND ) );
     log_info( &logger, "---- Data sent ----" );
     Delay_ms( 2000 );
+#else
+    rs485isolator_process( );
 #endif    
 }
 

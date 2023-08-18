@@ -1,0 +1,8 @@
+{
+    "name": "ClickID",
+    "description": "Hardware and software solution based on a secure authenticator device (EEPROM) that enables the hot-plugging of peripheral add-on Click Boards™ to any mikroBUS™ compatible system.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","DS28E36BQ"],
+    "category" : ["Click Boards > Miscellaneous > ID"]
+}

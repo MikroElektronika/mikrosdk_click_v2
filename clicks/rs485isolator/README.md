@@ -3,7 +3,7 @@
 ---
 # RS485 Isolator click
 
-RS485 Isolator click is an RS485 communication isolator and carries the ADM2682EBRIZ, a 5 kV rms signal and power isolated RS-485 transceiver.
+> RS485 Isolator click is an RS485 communication isolator and carries the ADM2682EBRIZ, a 5 kV rms signal and power isolated RS-485 transceiver.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/rs485isolator_click.png" height=300px>
@@ -18,7 +18,7 @@ RS485 Isolator click is an RS485 communication isolator and carries the ADM2682E
 
 - **Author**        : MikroE Team
 - **Date**          : Apr 2020.
-- **Type**          : UART GPS/GNSS type
+- **Type**          : UART type
 
 
 # Software Support
@@ -36,22 +36,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void rs485isolator_cfg_setup ( rs485isolator_cfg_t *cfg ); 
- 
-- Initialization function.
-> RS485ISOLATOR_RETVAL rs485isolator_init ( rs485isolator_t *ctx, rs485isolator_cfg_t *cfg );
+- `rs485isolator_cfg_setup` Config Object Initialization function.
+```c
+void rs485isolator_cfg_setup ( rs485isolator_cfg_t *cfg ); 
+```
+
+- `rs485isolator_init` Initialization function.
+```c
+err_t rs485isolator_init ( rs485isolator_t *ctx, rs485isolator_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Set receiver state
-> void rs485isolator_set_receiver_mode ( rs485isolator_t *ctx, uint8_t state );
- 
-- Generic read function.
-> int32_t rs485isolator_generic_read ( rs485isolator_t *ctx, char *data_buf, uint16_t max_len );
+- `rs485isolator_set_receiver_mode` Set receiver state
+```c
+void rs485isolator_set_receiver_mode ( rs485isolator_t *ctx, uint8_t state );
+```
 
-- Generic write function.
-> void rs485isolator_generic_write ( rs485isolator_t *ctx, char *data_buf, uint16_t len );
+- `rs485isolator_generic_read` Generic read function.
+```c
+err_t rs485isolator_generic_read ( rs485isolator_t *ctx, uint8_t *data_buf, uint16_t max_len );
+```
+
+- `rs485isolator_generic_write` Generic write function.
+```c
+void rs485isolator_generic_write ( rs485isolator_t *ctx, uint8_t *data_buf, uint16_t len );
+```
 
 ## Examples Description
 
@@ -81,13 +91,14 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
+    // Click initialization.
     rs485isolator_cfg_setup( &cfg );
     RS485ISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rs485isolator_init( &rs485isolator, &cfg );
+    
+    log_info( &logger, " Application Task " );
 }
   
 ```
@@ -100,14 +111,12 @@ void application_init ( void )
 
 void application_task ( void )
 {
-#ifdef DEMO_APP_RECEIVER
-    rs485isolator_process( );
-#endif    
-    
 #ifdef DEMO_APP_TRANSMITTER
-    rs485isolator_generic_write( &rs485isolator, TEXT_TO_SEND, 8 );
+    rs485isolator_generic_write( &rs485isolator, TEXT_TO_SEND, strlen ( TEXT_TO_SEND ) );
     log_info( &logger, "---- Data sent ----" );
     Delay_ms( 2000 );
+#else
+    rs485isolator_process( );
 #endif    
 }
 

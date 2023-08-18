@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Power management > USB-C PD",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "USB-C Sink 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.usbcsink3",
+    "product_link": "https://www.mikroe.com/usb-c-sink-3-click",
+    "short_description": "USB C Sink 3 Click is a compact add-on board with a standalone autonomous USB power delivery controller. This board features the AP33771, a high-performance USB PD sink controller from Diodes Incorporated. It supports dead battery mode to allow a system to be powered from an external source directly, establishes a valid source-to-sink connection, and negotiates a USB power delivery (PD) contract with a PD-capable source device. It also supports a flexible PD3.0 and PPS for applications that require direct voltage and current requests, with fine-tuning capabilities.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.3",
+    "cmake": true,
+    "alias": "Click.USBCSink3",
+    "subdir_name": "lib_usbcsink3"
+}
