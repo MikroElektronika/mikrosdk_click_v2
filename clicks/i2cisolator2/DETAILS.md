@@ -2,7 +2,7 @@
 ---
 # I2C Isolator 2 click
 
-I2C Isolator 2 click provides I2C lines and power isolation for slave devices. It carries the ADM3260 dual I2C isolator with an integrated DC-to-DC converter. I2C Isolator 2 click is designed to run on either 3.3V or 5V power supply.
+> I2C Isolator 2 click provides I2C lines and power isolation for slave devices. It carries the ADM3260 dual I2C isolator with an integrated DC-to-DC converter. I2C Isolator 2 click is designed to run on either 3.3V or 5V power supply.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/i2cisolator2_click.png" height=300px>
@@ -36,26 +36,37 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void i2cisolator2_cfg_setup ( i2cisolator2_cfg_t *cfg ); 
- 
-- Initialization function.
-> I2CISOLATOR2_RETVAL i2cisolator2_init ( i2cisolator2_t *ctx, i2cisolator2_cfg_t *cfg );
+- `i2cisolator2_cfg_setup` Config Object Initialization function.
+```c
+void i2cisolator2_cfg_setup ( i2cisolator2_cfg_t *cfg ); 
+```
 
-- This function sets PDIS pin state.
-> void i2cisolator2_enable_power ( i2cisolator2_t *ctx, uint8_t state );
+- `i2cisolator2_init` Initialization function.
+```c
+err_t i2cisolator2_init ( i2cisolator2_t *ctx, i2cisolator2_cfg_t *cfg );
+```
 
+- `i2cisolator2_enable_power` This function sets PDIS pin state.
+```c
+void i2cisolator2_enable_power ( i2cisolator2_t *ctx, uint8_t state );
+```
 
 #### Example key functions :
 
-- Generic write function for two-byte registers.
-> void i2cisolator2_write_two_byte_reg ( i2cisolator2_t *ctx, uint16_t reg, uint8_t *data_buf, uint8_t len );
+- `i2cisolator2_write` This function writes a desired data to I2C bus.
+```c
+err_t i2cisolator2_write ( i2cisolator2_t *ctx, uint8_t *data_in, uint16_t len );
+```
 
-- Generic read function for two-byte registers.
-> void i2cisolator2_read_two_byte_reg ( i2cisolator2_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+- `i2cisolator2_read` This function reads a desired number of data bytes from I2C bus.
+```c
+err_t i2cisolator2_read ( i2cisolator2_t *ctx, uint8_t *data_out, uint16_t len );
+```
 
-- Set slave address function.
-> void i2cisolator2_set_slave_address ( i2cisolator2_t *ctx, uint8_t slave_addr );
+- `i2cisolator2_set_slave_address` This function sets the slave address.
+```c
+err_t i2cisolator2_set_slave_address ( i2cisolator2_t *ctx, uint8_t slave_addr );
+```
 
 ## Examples Description
 
@@ -87,16 +98,17 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
+    // Click initialization.
     i2cisolator2_cfg_setup( &cfg );
     I2CISOLATOR2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     i2cisolator2_init( &i2cisolator2, &cfg );
     
     i2cisolator2_enable_power( &i2cisolator2, I2CISOLATOR2_POWER_ENABLE );
     Delay_ms( 100 );
+
+    log_info( &logger, " Application Task " );
 }
   
 ```
@@ -110,18 +122,28 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    char read_buf[ 100 ] = { 0 };
-    log_printf( &logger, "Writing a DEMO_TEXT message to EEPROM 3 click..\r\n" );
-    eeprom3_write_page ( 0x10000, EEPROM3_DEMO_TEXT, strlen( EEPROM3_DEMO_TEXT ) );
+    uint8_t read_buf[ 100 ] = { 0 };
+    if ( I2CISOLATOR2_OK == eeprom3_write_page ( EEPROM3_MEMORY_ADDRESS, EEPROM3_DEMO_TEXT, 
+                                                 strlen( EEPROM3_DEMO_TEXT ) ) )
+    {
+        log_printf( &logger, " Demo text message is written to EEPROM 3 click!\r\n" );
+    }
     Delay_ms( 1000 );
     
-    eeprom3_read_page ( 0x10000, read_buf, strlen( EEPROM3_DEMO_TEXT ) );
-    read_buf[ strlen( EEPROM3_DEMO_TEXT ) ] = 0;
-    log_printf( &logger, "Read data: \"%s\"\r\n\r\n", read_buf );
+    if ( I2CISOLATOR2_OK == eeprom3_read_page ( EEPROM3_MEMORY_ADDRESS, read_buf, 
+                                                strlen( EEPROM3_DEMO_TEXT ) ) )
+    {
+        read_buf[ strlen( EEPROM3_DEMO_TEXT ) ] = 0;
+        log_printf( &logger, " Read data: \"%s\"\r\n\n", read_buf );
+    }
     Delay_ms( 1000 );
 }  
 
 ``` 
+
+## Note
+
+> Make sure to provide the VCC power supply on VCC pin and EEPROM 3 click.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

@@ -1,0 +1,8 @@
+{
+    "name": "Nano Power 3 Click",
+    "description": "Nano Power 3 Click is a compact add-on board that steps down voltages from its input (supply) to output (load). This board features the RPL-3.0-R, a buck converter with an integrated inductor from Recom Power. This thermally-enhanced converter uses, as input, voltage from 4 up to 18VDC, thus allowing 5V and 12V supply rails to be used.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","RPL-3.0-R"],
+    "category" : ["Click Boards > Power management > Linear"]
+}

@@ -187,7 +187,9 @@ err_t proximity16_read_multi ( proximity16_t *ctx, uint16_t reg, uint8_t *data_o
     uint8_t data_buf[ 2 ] = { 0 };
     data_buf[ 0 ] = ( uint8_t ) ( ( reg >> 8 ) & 0xFF );
     data_buf[ 1 ] = ( uint8_t ) ( reg & 0xFF );
-    return i2c_master_write_then_read( &ctx->i2c, data_buf, 2, data_out, len );
+    err_t error_flag = i2c_master_write ( &ctx->i2c, data_buf, 2 );
+    error_flag |= i2c_master_read ( &ctx->i2c, data_out, len );
+    return error_flag;
 }
 
 err_t proximity16_write_byte ( proximity16_t *ctx, uint16_t reg, uint8_t data_in )

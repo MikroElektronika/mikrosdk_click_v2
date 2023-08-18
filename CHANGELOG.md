@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230818](#20230818)**
 + **[20230811](#20230811)**
 + **[20230804](#20230804)**
 + **[20230728](#20230728)**
@@ -58,6 +59,26 @@
 
 ---
 ---
+---
+
+## `20230818`
+
+*Following click boards have been added:*
+
++ `Nano Power 3`
++ `USB-C Sink 3`
++ `AudioAMP 12`
++ `microSD`
++ `ClickID`
+
+*Following click boards have been updated:*
+
++ `Proximity 16`
++ `RS485 Isolator`
++ `I2C Isolator 2`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230811`
