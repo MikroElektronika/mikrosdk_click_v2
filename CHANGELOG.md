@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230908](#20230908)**
 + **[20230818](#20230818)**
 + **[20230811](#20230811)**
 + **[20230804](#20230804)**
@@ -59,6 +60,30 @@
 
 ---
 ---
+---
+
+## `20230908`
+
+*Following click boards have been added:*
+
++ `Headphone AMP 2`
++ `Ultrasonic 5`
++ `Microwave 6`
++ `IoT ExpressLink`
++ `ADC 22`
++ `ESP8684`
++ `Step Down 8`
++ `NanoBeacon`
++ `LightRanger 7`
++ `DC Motor 27`
++ `Nano GPS 3`
+
+*Following click boards have been updated:*
+
++ `AudioAmp`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230818`

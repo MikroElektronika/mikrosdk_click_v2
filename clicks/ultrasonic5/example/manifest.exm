@@ -1,0 +1,8 @@
+{
+    "name": "Ultrasonic 5 Click",
+    "description": "Ultrasonic 5 Click is a compact add-on board that contains circuits for processing the ultrasonic sensor's output. This board features the TUSS4470, a transformer-drive ultrasonic sensor IC with a logarithmic amplifier from Texas Instruments. In addition to the high selectability of the power supply of the IC itself, this board also allows you to choose between 40kHz and 1MHz operating frequency, with a signal zero crossing comparator as an option. The ultrasonic sensor, the UTR-1440K from PUI Audio, also comes in the same package with this Click board™.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
+    "hw" : ["click","TUSS4470TRTJT"],
+    "category" : ["Click Boards > Sensors > Miscellaneous"]
+}
