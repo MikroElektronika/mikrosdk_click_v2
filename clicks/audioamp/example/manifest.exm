@@ -1,8 +1,8 @@
 {
-    "name": "AudioAMP Click",
-    "description": "The AudioAMP Board features an on-board power amplifier LM386 designed for use in low voltage consumer applications.",
+    "name": "AudioAmp Click",
+    "description": "AudioAmp Click is a compact add-on board that can add a mono audio amplifier function to your application. This board features the LM48100Q-Q1, a Boomer™ mono 1.3W audio power amplifier with output fault detection and volume control from Texas Instruments. The AudioAmp Click has one dual 3.5mm audio input jack and, next to it, a screw terminal for connecting output wires to a 1.3W, 8 Ohm passive speaker. Each input has its own independent 32-step volume control.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
-    "hw" : ["click","LM386 "],
-    "category" : ["Amplifier"] 
+    "hw" : ["click","LM48100Q"],
+    "category" : ["Click Boards > Audio & voice > Amplifier"] 
 }

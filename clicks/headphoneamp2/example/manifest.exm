@@ -1,0 +1,8 @@
+{
+    "name": "Headphone AMP 2 Click",
+    "description": "Headphone AMP 2 Click is a compact add-on board that contains a stereo headphone amplifier. This board features the MAX9723, a stereo DirectDrive headphone amplifier with BassMax, volume control, and I2C from Analog Devices. The amplifier delivers 62mW into a 16Ω load, and features a high 90dB PSRR at 1KHz and a low 0.006% THD+N. It also features an integrated 32-level volume control, click-and-pop suppression, ±8kV HBM ESD-protected headphone outputs, short-circuit and thermal-overload protection, and more.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","MAX9723C"],
+    "category" : ["Click Boards > Audio & voice > Signal processing"]
+}
