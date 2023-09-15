@@ -1,7 +1,0 @@
-type: subdirs
-project: OSD
-
-subdirs: {
-    lib
-    example
-}

@@ -1,6 +1,6 @@
 {
-    "architecture": "ARM|PIC|PIC32",
-    "category": "Motion",
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
+    "category": "Click Boards > Sensors > Motion",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
         "libraries",
@@ -8,8 +8,7 @@
         "examples",
         "source_files"
     ],
-    "dependency_list": [
-    ],
+    "dependency_list": [],
     "details": "Resources/DETAILS.md",
     "display_name": "XSENS MTi-3 click",
     "example_list": [
@@ -26,12 +25,14 @@
     "name": "mikroe.click.xsensmti3",
     "product_link": "https://www.mikroe.com/xsens-mti-3-click",
     "short_description": "XSENS MTi-3 Click is a compact add-on board that contains a fully functional module that can be configured as an Inertial Measurement Unit, Vertical reference Unit, or even an Attitude & Heading Reference System. This board features the MTi-3, a module outputting 3D orientation, 3D rate of turn, 3D accelerations, and 3D magnetic field, depending on the product configuration from Xsens.",
-    "supported_compiler": "mikroC AI",
+    "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
-    "related_projects":[
+    "related_projects": [
         3780
     ],
-    "_type":"mikroSDK Library",
-    "version": "2.0.0.1"
+    "_type": "mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.XSENSMTi3",
+    "subdir_name": "lib_xsensmti3"
 }
-

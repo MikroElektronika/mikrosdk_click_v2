@@ -112,7 +112,7 @@ void thunder_default_cfg ( thunder_t *ctx )
                                                   THUNDER_DEFAULT_SREJ );
     thunder_write_reg( ctx, THUNDER_REG_CONFIG_3_INTERR, THUNDER_DIV_RATIO_16 | 
                                                          THUNDER_UNMASK_DISTURBER );
-    Delay_1sec ( );
+    Delay_100ms ( );
     thunder_check_int ( ctx );
     Delay_100ms ( );
 }

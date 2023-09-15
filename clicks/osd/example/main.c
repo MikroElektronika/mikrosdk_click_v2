@@ -3,8 +3,7 @@
  * \brief OSD Click example
  * 
  * # Description
- * This demo performs basic OSD Click functionality - write text on
- * screen.
+ * This demo performs basic OSD Click functionality - write text on screen.
  *
  * The demo application is composed of two sections :
  * 
@@ -14,7 +13,6 @@
  * ## Application Task  
  * Write text on the screen, write character per 1 second
  * in the first, seventh and fifteenth row of the screen.
- * 
  * 
  * \author MikroE Team
  *
@@ -30,13 +28,21 @@
 static osd_t osd;
 static log_t logger;
 
-uint8_t cnt;
-const uint8_t HEADER_TEXT[ 30 ]  = { ' ', ' ', 'O', 'S', 'D', ' ', 'c', 'l', 'i', 'c', 'k', ' ',
-' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
-const uint8_t MESSAGE_TEXT[ 30 ] = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
-'m', 'i', 'k', 'r', 'o', 'E', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
-const uint8_t FOOTER_TEXT[ 30 ]  = { ' ', 'w', 'w', 'w', '.', 'm', 'i', 'k', 'r', 'o', 'e', '.',
-'c', 'o', 'm', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
+const uint8_t HEADER_TEXT[ 30 ]  = 
+{ 
+    ' ', ' ', 'O', 'S', 'D', ' ', 'c', 'l', 'i', 'c', 'k', ' ', ' ', ' ', ' ', ' ', 
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' 
+};
+const uint8_t MESSAGE_TEXT[ 30 ] = 
+{ 
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'm', 'i', 'k', 'r', 
+    'o', 'E', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' 
+};
+const uint8_t FOOTER_TEXT[ 30 ]  = 
+{ 
+    ' ', 'w', 'w', 'w', '.', 'm', 'i', 'k', 'r', 'o', 'e', '.', 'c', 'o', 'm', ' ', 
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' 
+};
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -56,21 +62,22 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
+    // Click initialization.
     osd_cfg_setup( &cfg );
     OSD_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     osd_init( &osd, &cfg );
 
     osd_default_cfg( &osd );
     osd_clears_char_places( &osd, 0, 0, 16, 30 );
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void )
 {
-    for ( cnt = 0; cnt < 30; cnt++ )
+    log_printf( &logger, "\r\n Writing characters on the screen...\r\n" );
+    for ( uint8_t cnt = 0; cnt < 30; cnt++ )
     {
         if ( HEADER_TEXT[ cnt ] != ' ' )
         {
@@ -90,8 +97,9 @@ void application_task ( void )
         Delay_ms( 1000 );
     }
     
+    log_printf( &logger, " Clear display\r\n" );
     osd_clears_char_places( &osd, 0, 0, 16, 30 );
-    Delay_ms( 1000 );
+    Delay_ms( 3000 );
 }
 
 void main ( void )
@@ -103,6 +111,5 @@ void main ( void )
         application_task( );
     }
 }
-
 
 // ------------------------------------------------------------------------ END

@@ -201,7 +201,7 @@
 #define THUNDER_SRCO_ON_IRQ_PIN                 0x40
 #define THUNDER_TRCO_ON_IRQ_PIN                 0x20
 #define THUNDER_NO_DISPLAY_ON_IRQ_PIN           0x00
-#define THUNDER_DEFAULT_TUNE_CAP                0x03
+#define THUNDER_DEFAULT_TUNE_CAP                0x00
 /** \} */
 
 /**

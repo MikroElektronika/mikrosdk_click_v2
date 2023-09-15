@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
+    "category": "Click Boards > Wireless connectivity > BT/BLE",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "ANNA-B412 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.annab412",
+    "product_link": "https://www.mikroe.com/anna-b412-click",
+    "short_description": "ANNA-B412 Click is a compact add-on board that provides BT/BLE connectivity for any embedded application. This board features the ANNA-B412, a standalone Bluetooth 5.1 low-energy module from u-blox. It is a System-in-Package (SiP) design with pre-flashed u-connectXpress software, which supports Bluetooth LE Serial port service, GATT client and server, Bluetooth beacons, Bluetooth long-range, NFC, and simultaneous peripheral and central roles. The Bluetooth module in LE mode can achieve up to 2Mbps data rates.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.ANNAB412",
+    "subdir_name": "lib_annab412"
+}

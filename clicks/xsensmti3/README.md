@@ -123,7 +123,6 @@ void application_task ( void )
     // STARTS COLLECTING DATA
     if ( active_flag == XSENSMTI3_WAIT_FOR_START )
     {
-        Delay_ms( 25 );
         memset( &current_parser_buf[ 0 ], 0 , PROCESS_PARSER_BUFFER_SIZE );
         parser_buf_cnt = 0;
         active_flag = 0;
@@ -158,7 +157,7 @@ void application_task ( void )
 
        for ( cnt = 0; cnt < 4; cnt++ )
        {
-           log_printf( &logger, ">> Q: %e\r\n", parse_data_obj.quat_obj.quat_data[ cnt ] );
+           log_printf( &logger, ">> Q: %f\r\n", parse_data_obj.quat_obj.quat_data[ cnt ] );
        }
 
        log_printf( &logger, "--------------\r\n" );

@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230915](#20230915)**
 + **[20230908](#20230908)**
 + **[20230818](#20230818)**
 + **[20230811](#20230811)**
@@ -60,6 +61,26 @@
 
 ---
 ---
+---
+
+## `20230915`
+
+*Following click boards have been added:*
+
++ `ANNA-B412`
++ `UWB 2`
++ `UT-L 7-SEG B`
++ `DAC 15`
+
+*Following click boards have been updated:*
+
++ `OSD`
++ `XSENS MTi-3`
++ `ISO 9141`
++ `Thunder`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230908`

@@ -2,7 +2,7 @@
 ---
 # OSD click
 
-OSD Click features MAX7456 single-channel monochrome OSD module with integrated EEPROM memory as well as two RCA sockets. It is used to create on-screen menus and other video overlays, such as custom graphics, company logo, time and date using 256 user-programmable characters or pictographs.
+> OSD Click features MAX7456 single-channel monochrome OSD module with integrated EEPROM memory as well as two RCA sockets. It is used to create on-screen menus and other video overlays, such as custom graphics, company logo, time and date using 256 user-programmable characters or pictographs.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/osd_click.png" height=300px>
@@ -35,40 +35,47 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void osd_cfg_setup ( osd_cfg_t *cfg ); 
- 
-- Initialization function.
-> OSD_RETVAL osd_init ( osd_t *ctx, osd_cfg_t *cfg );
+- `osd_cfg_setup` Config Object Initialization function.
+```c
+void osd_cfg_setup ( osd_cfg_t *cfg ); 
+```
 
-- Click Default Configuration function.
-> void osd_default_cfg ( osd_t *ctx );
+- `osd_init` Initialization function.
+```c
+err_t osd_init ( osd_t *ctx, osd_cfg_t *cfg );
+```
 
+- `osd_default_cfg` Click Default Configuration function.
+```c
+void osd_default_cfg ( osd_t *ctx );
+```
 
 #### Example key functions :
 
-- This function clears display memory.
-> void osd_clear_display_memory( osd_t *ctx );
+- `osd_clear_display_memory` This function clears display memory.
+```c
+void osd_clear_display_memory( osd_t *ctx );
+```
 
- 
-- This function writes custom character.
-> void osd_insert_custom_char( osd_t *ctx, uint8_t chr_address, uint8_t custom_char );
+- `osd_insert_custom_char` This function writes custom character.
+```c
+void osd_insert_custom_char( osd_t *ctx, uint8_t chr_address, uint8_t custom_char );
+```
 
-
-- This function enables video buffer.
-> void osd_enable_video_buffer( osd_t *ctx );
-
+- `osd_enable_video_buffer` This function enables video buffer.
+```c
+void osd_enable_video_buffer( osd_t *ctx );
+```
 
 ## Examples Description
 
-This demo performs basic OSD Click functionality - write text on
-screen.
+> This demo performs basic OSD Click functionality - write text on screen.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-Device initialization.
+> Device initialization.
 
 ```c
 
@@ -88,30 +95,30 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ----" );
+    log_info( &logger, " Application Init " );
 
-    //  Click initialization.
-
+    // Click initialization.
     osd_cfg_setup( &cfg );
     OSD_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     osd_init( &osd, &cfg );
 
     osd_default_cfg( &osd );
     osd_clears_char_places( &osd, 0, 0, 16, 30 );
+    log_info( &logger, " Application Task " );
 }
   
 ```
 
 ### Application Task
 
-Write text on the screen, write character per 1 second
-in the first, seventh and fifteenth row of the screen.
+> Write text on the screen, write character per 1 second in the first, seventh and fifteenth row of the screen.
 
 ```c
 
 void application_task ( void )
 {
-    for ( cnt = 0; cnt < 30; cnt++ )
+    log_printf( &logger, "\r\n Writing characters on the screen...\r\n" );
+    for ( uint8_t cnt = 0; cnt < 30; cnt++ )
     {
         if ( HEADER_TEXT[ cnt ] != ' ' )
         {
@@ -131,8 +138,9 @@ void application_task ( void )
         Delay_ms( 1000 );
     }
     
+    log_printf( &logger, " Clear display\r\n" );
     osd_clears_char_places( &osd, 0, 0, 16, 30 );
-    Delay_ms( 1000 );
+    Delay_ms( 3000 );
 }  
 
 ```

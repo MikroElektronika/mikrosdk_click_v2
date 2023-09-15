@@ -2,7 +2,7 @@
     "name": "ISO 9141 Click",
     "description": "ISO 9141 Click is a compact add-on board that contains a monolithic bus driver with ISO 9141 interface. This board features the L9637, a monolithic integrated circuit containing standard ISO 9141 compatible interface functions from ST Microelectronics.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32"],
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
     "hw" : ["click","L9637"],
     "category" : ["CAN"]
 }
