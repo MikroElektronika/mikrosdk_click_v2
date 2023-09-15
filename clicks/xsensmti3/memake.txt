@@ -1,7 +1,0 @@
-type: subdirs
-project: XSENSMTi3
-
-subdirs: {
-    lib
-    example
-}

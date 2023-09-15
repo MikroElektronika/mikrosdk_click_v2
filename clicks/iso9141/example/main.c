@@ -3,23 +3,19 @@
  * @brief ISO 9141 Click Example.
  *
  * # Description
- * This is an example that demonstrates the use of ISO 9141 Click board that contains a monolithic bus driver with ISO 9141 interface.
+ * This example demonstrates the use of an ISO 9141 click board by showing
+ * the communication between the two click boards.
  *
  * The demo application is composed of two sections :
- *
- * ## Application Init
- * Initializes UART used for communication and another UART bus used for data logging.
- *
+ * 
+ * ## Application Init 
+ * Initalizes device and makes an initial log.
+ * 
  * ## Application Task
- * In this example transmitter/Receiver task depend on uncommented code
- * Receiver logging each received byte to the UART for data logging,
- * while transmitted send messages every 2 seconds.
+ * Depending on the selected application mode, it reads all the received data or 
+ * sends the desired text message once per second.
  *
- * ## Additional Function
- * - static void iso9141_clear_app_buf ( void ) - Function clears memory of app_buf.
- * - static err_t iso9141_process ( void ) - The general process of collecting presponce.
- *
- * @author Jelena Milosavljevic
+ * @author MikroE Team
  *
  */
 
@@ -27,44 +23,19 @@
 #include "log.h"
 #include "iso9141.h"
 
-#define PROCESS_BUFFER_SIZE 200
+// Comment out the line below in order to switch the application mode to receiver
+#define DEMO_APP_TRANSMITTER
 
-#define TRANSMIT
-//  #define RECEIVER
+// Text message to send in the transmitter application mode
+#define DEMO_TEXT_MESSAGE           "MIKROE - ISO 9141 click board\r\n\0"
 
 static iso9141_t iso9141;
 static log_t logger;
 
-static char app_buf[ PROCESS_BUFFER_SIZE ] = { 0 };
-static int32_t app_buf_len = 0;
-static int32_t app_buf_cnt = 0;
-
-/**
- * @brief ISO 9141 clearing application buffer.
- * @details This function clears memory of application buffer and reset it's length and counter.
- * @note None.
- */
-static void iso9141_clear_app_buf ( void );
-
-/**
- * @brief ISO 9141 data reading function.
- * @details This function reads data from device and concatenates data to application buffer.
- *
- * @return @li @c  0 - Read some data.
- *         @li @c -1 - Nothing is read.
- *         @li @c -2 - Application buffer overflow.
- *
- * See #err_t definition for detailed explanation.
- * @note None.
- */
-static err_t iso9141_process ( void );
-
-static uint8_t demo_message_data[ 9 ] =  { 'M', 'i', 'k', 'r', 'o', 'E', 13, 10, 0 };
-
 void application_init ( void )
 {
-    log_cfg_t log_cfg;  /**< Logger config object. */
-    iso9141_cfg_t iso9141_cfg;  /**< Click config object. */
+    iso9141_cfg_t iso9141_cfg;
+    log_cfg_t logger_cfg;
 
     /** 
      * Logger initialization.
@@ -75,60 +46,38 @@ void application_init ( void )
      * need to define them manually for log to work. 
      * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
      */
-    LOG_MAP_USB_UART( log_cfg );
-    log_init( &logger, &log_cfg );
-    log_info( &logger, " \t Application Init \r\n" );
-    log_printf( &logger, "-------------------------------------\r\n" );
-    log_printf( &logger, "           ISO 9141  click         \r\n" );
-    log_printf( &logger, "-------------------------------------\r\n" );
-
+    LOG_MAP_USB_UART( logger_cfg );
+    log_init( &logger, &logger_cfg );
+    log_info( &logger, " Application Init " );
+    
     // Click initialization.
     iso9141_cfg_setup( &iso9141_cfg );
     ISO9141_MAP_MIKROBUS( iso9141_cfg, MIKROBUS_1 );
-    err_t init_flag  = iso9141_init( &iso9141, &iso9141_cfg );
-    if ( UART_ERROR == init_flag ) {
-        log_error( &logger, " Application Init Error. \r\n" );
-        log_info( &logger, " Please, run program again... \r\n" );
-
+    if ( UART_ERROR == iso9141_init( &iso9141, &iso9141_cfg ) ) 
+    {
+        log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-
-    Delay_ms( 100 );
-    log_printf( &logger, "   Set app mode:   \r\n" );
-    Delay_ms( 100 );
-
-#ifdef TRANSMIT
-    log_printf( &logger, "   Transmit data   \r\n" );
-    log_printf( &logger, "    Send data:    \r\n" );
-    log_printf( &logger, "      MikroE      \r\n" );
-    log_printf( &logger, "------------------\r\n" );
-    Delay_ms( 1000 );
-#elif defined RECEIVER
-    log_printf( &logger, "   Receive data  \r\n" );
-    Delay_ms( 2000 );
+#ifdef DEMO_APP_TRANSMITTER
+    log_printf( &logger, " Application Mode: Transmitter\r\n" );
 #else
-    # error PLEASE SELECT TRANSMIT OR RECEIVE MODE!!!
+    log_printf( &logger, " Application Mode: Receiver\r\n" );
 #endif
-
-    log_printf( &logger, "------------------\r\n" );
+    log_info( &logger, " Application Task " );
 }
 
 void application_task ( void ) 
 {
-#ifdef TRANSMIT
-    iso9141_send_data( &iso9141, demo_message_data );
-    log_printf( &logger, "\r\n Message Sent : %s \r\n", demo_message_data );
-    Delay_ms( 2000 );
-    log_printf( &logger, "------------------\r\n" );    
-#elif defined RECEIVER
-    iso9141_process( );
-
-    if ( app_buf_len > 0 ) {
-        log_printf( &logger, "%s", app_buf );
-        iso9141_clear_app_buf(  );
-    }
+#ifdef DEMO_APP_TRANSMITTER
+    iso9141_generic_write( &iso9141, DEMO_TEXT_MESSAGE, strlen( DEMO_TEXT_MESSAGE ) );
+    log_printf( &logger, "%s", ( char * ) DEMO_TEXT_MESSAGE );
+    Delay_ms( 1000 ); 
 #else
-    # error PLEASE SELECT TRANSMIT OR RECEIVE MODE!!!
+    uint8_t rx_byte = 0;
+    if ( 1 == iso9141_generic_read( &iso9141, &rx_byte, 1 ) )
+    {
+       log_printf( &logger, "%c", rx_byte );
+    }
 #endif
 }
 
@@ -136,50 +85,10 @@ void main ( void )
 {
     application_init( );
 
-    for ( ; ; ) {
+    for ( ; ; ) 
+    {
         application_task( );
     }
-}
-
-static void iso9141_clear_app_buf ( void )
-{
-    memset( app_buf, 0, app_buf_len );
-    app_buf_len = 0;
-    app_buf_cnt = 0;
-}
-
-static err_t iso9141_process ( void )
-{
-    int32_t rx_size;
-    char rx_buff[ PROCESS_BUFFER_SIZE ] = { 0 };
-
-    rx_size = iso9141_generic_read( &iso9141, rx_buff, PROCESS_BUFFER_SIZE );
-
-    if ( rx_size > 0 ) {
-        int32_t buf_cnt = 0;
-
-        if ( app_buf_len + rx_size >= PROCESS_BUFFER_SIZE ) {
-            iso9141_clear_app_buf(  );
-            return ISO9141_ERROR;
-        }
-        else {
-            buf_cnt = app_buf_len;
-            app_buf_len += rx_size;
-        }
-
-        for ( int32_t rx_cnt = 0; rx_cnt < rx_size; rx_cnt++ ) {
-            if ( rx_buff[ rx_cnt ] != 0 ) {
-                app_buf[ ( buf_cnt + rx_cnt ) ] = rx_buff[ rx_cnt ];
-            }
-            else {
-                app_buf_len--;
-                buf_cnt--;
-            }
-
-        }
-        return ISO9141_OK;
-    }
-    return ISO9141_ERROR;
 }
 
 // ------------------------------------------------------------------------ END

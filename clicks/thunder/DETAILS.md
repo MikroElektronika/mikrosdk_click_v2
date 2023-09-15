@@ -134,6 +134,8 @@ void application_task ( void )
         thunder_get_storm_info( &thunder, &storm_energy, &storm_distance );
         log_printf( &logger, "Energy of the single lightning : %lu\r\n", storm_energy );
         log_printf( &logger, "Distance estimation : %u km\r\n\n", ( uint16_t ) storm_distance );
+        // Reset configuration to prepare for the next measurement
+        thunder_default_cfg( &thunder );
     }
 } 
 

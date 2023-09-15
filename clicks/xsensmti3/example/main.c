@@ -16,7 +16,6 @@
  * ## Additional Function
  * - void xsensmti3_process ( void ) - The general process of collecting data the module sends.
  *
- *
  * @author Mikroe Team
  *
  */
@@ -25,13 +24,13 @@
 #include "log.h"
 #include "xsensmti3.h"
 
-#define PROCESS_RX_BUFFER_SIZE 500
+#define PROCESS_RX_BUFFER_SIZE 200
 #define PROCESS_PARSER_BUFFER_SIZE 1000
 
 static xsensmti3_t xsensmti3;
 static log_t logger;
 
-static char current_parser_buf[ PROCESS_PARSER_BUFFER_SIZE ];
+static uint8_t current_parser_buf[ PROCESS_PARSER_BUFFER_SIZE ];
 static uint8_t parser_buf_cnt;
 static uint8_t active_flag;
 static uint8_t start_rsp;
@@ -39,7 +38,6 @@ static uint16_t rsp_cnt;
 
 static xsensmti3_parse_t parse_data_obj;
 static xsensmti3_data_t data_obj;
-
 
 /**
  * @brief XSENS MTi-3 data reading function.
@@ -89,7 +87,6 @@ void application_task ( void )
     // STARTS COLLECTING DATA
     if ( active_flag == XSENSMTI3_WAIT_FOR_START )
     {
-        Delay_ms( 25 );
         memset( &current_parser_buf[ 0 ], 0 , PROCESS_PARSER_BUFFER_SIZE );
         parser_buf_cnt = 0;
         active_flag = 0;
@@ -124,7 +121,7 @@ void application_task ( void )
 
        for ( cnt = 0; cnt < 4; cnt++ )
        {
-           log_printf( &logger, ">> Q: %e\r\n", parse_data_obj.quat_obj.quat_data[ cnt ] );
+           log_printf( &logger, ">> Q: %f\r\n", parse_data_obj.quat_obj.quat_data[ cnt ] );
        }
 
        log_printf( &logger, "--------------\r\n" );
@@ -155,11 +152,11 @@ static void xsensmti3_process ( void )
 {
     int32_t rsp_size;
     
-    char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
+    uint8_t uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
     
     rsp_size = xsensmti3_generic_read( &xsensmti3, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
     
-    if ( rsp_size != -1 )
+    if ( rsp_size > 0 )
     {  
         parser_buf_cnt += rsp_size;
         if ( rsp_cnt + rsp_size < PROCESS_PARSER_BUFFER_SIZE )

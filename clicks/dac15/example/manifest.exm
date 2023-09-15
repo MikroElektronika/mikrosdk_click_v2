@@ -1,0 +1,8 @@
+{
+    "name": "DAC 15 Click",
+    "description": "DAC 15 Click is a compact add-on board that provides a highly accurate digital-to-analog conversion on two channels. This board features the DAC80502, a dual 16-bit 1-LSB INL voltage-output DAC from Texas Instruments. The DAC operates at a wide power supply range and is a low-power device with as low as 1mA per channel at 5.5V. It also includes a 2.5V, 5-ppm/°C internal reference, giving a full-scale voltage buffered output ranges of 1.25V, 2.5V, and 5.5V.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","DAC80502DRXT"],
+    "category" : ["Click Boards > Mixed signal > DAC"]
+}
