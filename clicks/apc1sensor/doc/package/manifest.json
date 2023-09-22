@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Sensors > Environmental",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "APC1 Sensor Demo",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.apc1sensor",
+    "product_link": "https://www.mikroe.com/apc1-air-quality-sensor-bundle",
+    "short_description": "APC1 Air Quality Sensor Bundle - Experience advanced air quality monitoring with our bundle solution, merging the ScioSense APC1 Air Quality sensor and the MIKROE Terminal Click board™. This dynamic combination creates a compact and precise system that measures PM levels, VOCs, temperature, humidity, and more. Explore this bundle to build an effective monitoring solution perfect for ensuring healthy indoor spaces or contributing to broader air quality research efforts.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.0",
+    "cmake": true,
+    "alias": "Click.APC1Sensor",
+    "subdir_name": "lib_apc1sensor"
+}

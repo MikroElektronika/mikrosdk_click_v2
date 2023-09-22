@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230922](#20230922)**
 + **[20230915](#20230915)**
 + **[20230908](#20230908)**
 + **[20230818](#20230818)**
@@ -61,6 +62,20 @@
 
 ---
 ---
+---
+
+## `20230922`
+
+*Following click boards have been added:*
+
++ `RMS to DC 2`
++ `Water Detect 2`
++ `APC1 Sensor Demo`
++ `USB UART ISO`
++ `UV 5`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230915`
