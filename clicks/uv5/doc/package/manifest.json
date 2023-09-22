@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Sensors > Optical",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "UV 5 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.uv5",
+    "product_link": "https://www.mikroe.com/uv-5-click",
+    "short_description": "UV 5 Click is a compact add-on board that can measure UV radiation. This board features the AS7331, a spectral UVA/B/C sensor from ams. The sensor can measure UVA, UVB, and UVC, which are the main types of UV rays from the UV radiation of the sunlight. It uses ADC with a high dynamic range (16… 24-bit) for measurements from low to high radiation conditions and has a high sensitivity, which makes it usable for fluorescence light conditions.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.UV5",
+    "subdir_name": "lib_uv5"
+}
