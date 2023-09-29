@@ -1,6 +1,6 @@
 
 ---
-# USB-UART ISO click
+# USB UART ISO click
 
 > USB UART ISO Click is a compact add-on board that offers a completely isolated differential pair of lines of the USB physical interface. This board features the ISOUSB111, a full/low-speed isolated USB repeater from Texas Instruments. It is a USB 2.0-compliant device that supports low-speed (1.5Mbps) and full-speed (12Mbps) signaling, USB On-The-Go (OtG), and Type-C Dual Role Port (DRP). In addition, this Click board™ comes with the FT232R, a USB UART IC from FTDI, making it a complete USB-to-UART isolated solution.
 
@@ -22,7 +22,7 @@
 
 # Software Support
 
-We provide a library for the USB-UART ISO Click
+We provide a library for the USB UART ISO Click
 as well as a demo application (example), developed using MikroElektronika
 [compilers](https://www.mikroe.com/necto-studio).
 The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
@@ -31,7 +31,7 @@ Package can be downloaded/installed directly from *NECTO Studio Package Manager*
 
 ## Library Description
 
-> This library contains API for USB-UART ISO Click driver.
+> This library contains API for USB UART ISO Click driver.
 
 #### Standard key functions :
 
@@ -52,19 +52,19 @@ void usbuartiso_default_cfg ( usbuartiso_t *ctx );
 
 #### Example key functions :
 
-- `usbuartiso_generic_write` USB-UART ISO data writing function.
+- `usbuartiso_generic_write` USB UART ISO data writing function.
 ```c
 err_t usbuartiso_generic_write ( usbuartiso_t *ctx, uint8_t *data_in, uint16_t len );
 ```
 
-- `usbuartiso_generic_read` USB-UART ISO data reading function.
+- `usbuartiso_generic_read` USB UART ISO data reading function.
 ```c
 err_t usbuartiso_generic_read ( usbuartiso_t *ctx, uint8_t *data_out, uint16_t len );
 ```
 
 ## Example Description
 
-> This example demonstrates the use of USB-UART ISO click board by processing
+> This example demonstrates the use of USB UART ISO click board by processing
 > the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**

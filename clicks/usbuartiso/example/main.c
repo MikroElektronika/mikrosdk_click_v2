@@ -1,9 +1,9 @@
 /*!
  * @file main.c
- * @brief USB-UART ISO Click Example.
+ * @brief USB UART ISO Click Example.
  *
  * # Description
- * This example demonstrates the use of USB-UART ISO click board by processing
+ * This example demonstrates the use of USB UART ISO click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :

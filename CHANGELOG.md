@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20230929](#20230929)**
 + **[20230922](#20230922)**
 + **[20230915](#20230915)**
 + **[20230908](#20230908)**
@@ -62,6 +63,23 @@
 
 ---
 ---
+---
+
+## `20230929`
+
+*Following click boards have been added:*
+
++ `4G LTE 2 Voice-NA`
++ `DIGI POT 14`
++ `Charger 25`
++ `Step Down 9`
+
+*Following click boards have been updated:*
+
++ `USB UART ISO`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230922`
