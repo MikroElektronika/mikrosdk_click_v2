@@ -22,7 +22,7 @@
 
 /*!
  * @file usbuartiso.c
- * @brief USB-UART ISO Click Driver.
+ * @brief USB UART ISO Click Driver.
  */
 
 #include "usbuartiso.h"

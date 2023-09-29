@@ -22,7 +22,7 @@
 
 /*!
  * @file usbuartiso.h
- * @brief This file contains API for USB-UART ISO Click Driver.
+ * @brief This file contains API for USB UART ISO Click Driver.
  */
 
 #ifndef USBUARTISO_H
@@ -37,14 +37,14 @@ extern "C"{
 #include "drv_uart.h"
 
 /*!
- * @addtogroup usbuartiso USB-UART ISO Click Driver
- * @brief API for configuring and manipulating USB-UART ISO Click driver.
+ * @addtogroup usbuartiso USB UART ISO Click Driver
+ * @brief API for configuring and manipulating USB UART ISO Click driver.
  * @{
  */
 
 /**
- * @defgroup usbuartiso_cmd USB-UART ISO Device Settings
- * @brief Settings for registers of USB-UART ISO Click driver.
+ * @defgroup usbuartiso_cmd USB UART ISO Device Settings
+ * @brief Settings for registers of USB UART ISO Click driver.
  */
 
 /**
@@ -53,7 +53,7 @@ extern "C"{
  */
 
 /**
- * @brief USB-UART ISO driver buffer size.
+ * @brief USB UART ISO driver buffer size.
  * @details Specified size of driver ring buffer.
  * @note Increase buffer size if needed.
  */
@@ -63,8 +63,8 @@ extern "C"{
 /*! @} */ // usbuartiso_cmd
 
 /**
- * @defgroup usbuartiso_map USB-UART ISO MikroBUS Map
- * @brief MikroBUS pin mapping of USB-UART ISO Click driver.
+ * @defgroup usbuartiso_map USB UART ISO MikroBUS Map
+ * @brief MikroBUS pin mapping of USB UART ISO Click driver.
  */
 
 /**
@@ -74,7 +74,7 @@ extern "C"{
 
 /**
  * @brief MikroBUS pin mapping.
- * @details Mapping pins of USB-UART ISO Click to the selected MikroBUS.
+ * @details Mapping pins of USB UART ISO Click to the selected MikroBUS.
  */
 #define USBUARTISO_MAP_MIKROBUS( cfg, mikrobus )     \
     cfg.tx_pin  = MIKROBUS( mikrobus, MIKROBUS_TX ); \
@@ -88,8 +88,8 @@ extern "C"{
 /*! @} */ // usbuartiso
 
 /**
- * @brief USB-UART ISO Click context object.
- * @details Context object definition of USB-UART ISO Click driver.
+ * @brief USB UART ISO Click context object.
+ * @details Context object definition of USB UART ISO Click driver.
  */
 typedef struct
 {
@@ -111,8 +111,8 @@ typedef struct
 } usbuartiso_t;
 
 /**
- * @brief USB-UART ISO Click configuration object.
- * @details Configuration object definition of USB-UART ISO Click driver.
+ * @brief USB UART ISO Click configuration object.
+ * @details Configuration object definition of USB UART ISO Click driver.
  */
 typedef struct
 {
@@ -136,7 +136,7 @@ typedef struct
 } usbuartiso_cfg_t;
 
 /**
- * @brief USB-UART ISO Click return value data.
+ * @brief USB UART ISO Click return value data.
  * @details Predefined enum values for driver return values.
  */
 typedef enum
@@ -147,13 +147,13 @@ typedef enum
 } usbuartiso_return_value_t;
 
 /*!
- * @addtogroup usbuartiso USB-UART ISO Click Driver
- * @brief API for configuring and manipulating USB-UART ISO Click driver.
+ * @addtogroup usbuartiso USB UART ISO Click Driver
+ * @brief API for configuring and manipulating USB UART ISO Click driver.
  * @{
  */
 
 /**
- * @brief USB-UART ISO configuration object setup function.
+ * @brief USB UART ISO configuration object setup function.
  * @details This function initializes click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
@@ -164,7 +164,7 @@ typedef enum
 void usbuartiso_cfg_setup ( usbuartiso_cfg_t *cfg );
 
 /**
- * @brief USB-UART ISO initialization function.
+ * @brief USB UART ISO initialization function.
  * @details This function initializes all necessary pins and peripherals used
  * for this click board.
  * @param[out] ctx : Click context object.
@@ -179,8 +179,8 @@ void usbuartiso_cfg_setup ( usbuartiso_cfg_t *cfg );
 err_t usbuartiso_init ( usbuartiso_t *ctx, usbuartiso_cfg_t *cfg );
 
 /**
- * @brief USB-UART ISO default configuration function.
- * @details This function executes a default configuration of USB-UART ISO
+ * @brief USB UART ISO default configuration function.
+ * @details This function executes a default configuration of USB UART ISO
  * click board.
  * @param[in] ctx : Click context object.
  * See #usbuartiso_t object definition for detailed explanation.
@@ -191,7 +191,7 @@ err_t usbuartiso_init ( usbuartiso_t *ctx, usbuartiso_cfg_t *cfg );
 void usbuartiso_default_cfg ( usbuartiso_t *ctx );
 
 /**
- * @brief USB-UART ISO data writing function.
+ * @brief USB UART ISO data writing function.
  * @details This function writes a desired number of data bytes by using UART serial interface.
  * @param[in] ctx : Click context object.
  * See #usbuartiso_t object definition for detailed explanation.
@@ -205,7 +205,7 @@ void usbuartiso_default_cfg ( usbuartiso_t *ctx );
 err_t usbuartiso_generic_write ( usbuartiso_t *ctx, uint8_t *data_in, uint16_t len );
 
 /**
- * @brief USB-UART ISO data reading function.
+ * @brief USB UART ISO data reading function.
  * @details This function reads a desired number of data bytes by using UART serial interface.
  * @param[in] ctx : Click context object.
  * See #usbuartiso_t object definition for detailed explanation.
@@ -219,10 +219,10 @@ err_t usbuartiso_generic_write ( usbuartiso_t *ctx, uint8_t *data_in, uint16_t l
 err_t usbuartiso_generic_read ( usbuartiso_t *ctx, uint8_t *data_out, uint16_t len );
 
 /**
- * @brief USB-UART ISO power on function.
+ * @brief USB UART ISO power on function.
  * @details This function performs a power on 
  * of the FT232RL, USB Full Speed to Serial UART IC
- * on the USB-UART ISO click board™.  
+ * on the USB UART ISO click board™.  
  * @param[in] ctx : Click context object.
  * See #usbuartiso_t object definition for detailed explanation.
  * @return Nothing.
@@ -231,10 +231,10 @@ err_t usbuartiso_generic_read ( usbuartiso_t *ctx, uint8_t *data_out, uint16_t l
 void usbuartiso_power_on ( usbuartiso_t *ctx );
 
 /**
- * @brief USB-UART ISO power off function.
+ * @brief USB UART ISO power off function.
  * @details This function performs a power off 
  * of the FT232RL, USB Full Speed to Serial UART IC
- * on the USB-UART ISO click board™.  
+ * on the USB UART ISO click board™.  
  * @param[in] ctx : Click context object.
  * See #usbuartiso_t object definition for detailed explanation.
  * @return Nothing.
@@ -243,10 +243,10 @@ void usbuartiso_power_on ( usbuartiso_t *ctx );
 void usbuartiso_power_off ( usbuartiso_t *ctx );
 
 /**
- * @brief USB-UART ISO sleep indicator function.
+ * @brief USB UART ISO sleep indicator function.
  * @details This function indicates that the device going into USB suspend mode
  * of the FT232RL, USB Full Speed to Serial UART IC
- * on the USB-UART ISO click board™.  
+ * on the USB UART ISO click board™.  
  * @param[in] ctx : Click context object.
  * See #usbuartiso_t object definition for detailed explanation.
  * @return @li @c 0 - USB suspend mode,
@@ -256,9 +256,9 @@ void usbuartiso_power_off ( usbuartiso_t *ctx );
 uint8_t usbuartiso_get_slp_ind ( usbuartiso_t *ctx );
 
 /**
- * @brief USB-UART ISO request to send function.
+ * @brief USB UART ISO request to send function.
  * @details This function is flow control and uses to get requests to send status
- * of the USB-UART ISO click board™.  
+ * of the USB UART ISO click board™.  
  * @param[in] ctx : Click context object.
  * See #usbuartiso_t object definition for detailed explanation.
  * @return Status of the request to send.
@@ -267,9 +267,9 @@ uint8_t usbuartiso_get_slp_ind ( usbuartiso_t *ctx );
 uint8_t usbuartiso_request_to_send ( usbuartiso_t *ctx );
 
 /**
- * @brief USB-UART ISO clear to send function.
+ * @brief USB UART ISO clear to send function.
  * @details This function is flow control and uses to sets the clear to send state
- * of the USB-UART ISO click board™.  
+ * of the USB UART ISO click board™.  
  * @param[in] ctx : Click context object.
  * See #usbuartiso_t object definition for detailed explanation.
  * @param[in] cts : Clear to send state.
