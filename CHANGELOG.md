@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20231006](#20231006)**
 + **[20230929](#20230929)**
 + **[20230922](#20230922)**
 + **[20230915](#20230915)**
@@ -63,6 +64,18 @@
 
 ---
 ---
+---
+
+## `20231006`
+
+*Following click boards have been added:*
+
++ `MRAM 4`
++ `Hall Current 17`
++ `Brushless 26`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20230929`
