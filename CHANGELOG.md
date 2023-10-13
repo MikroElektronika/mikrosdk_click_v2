@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20231013](#20231013)**
 + **[20231006](#20231006)**
 + **[20230929](#20230929)**
 + **[20230922](#20230922)**
@@ -64,6 +65,19 @@
 
 ---
 ---
+---
+
+## `20231013`
+
+*Following click boards have been added:*
+
++ `Speed Radar`
++ `GNSS RTK 3`
++ `Brushless 11`
++ `ADC 23`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20231006`
