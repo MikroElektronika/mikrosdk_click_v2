@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
+    "category": "Click Boards > Wireless connectivity > 2.4 GHz Transceivers",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Wirepas click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.wirepas",
+    "product_link": "https://www.mikroe.com/wirepas-click",
+    "short_description": "Wirepas Click is a compact add-on board that allows you to implement the Wirepas Mesh wireless connectivity stack to your application. This board features the WIRL-PRO2 Thetis-I (2611011021010), a radio module with Wirepas Mesh Protocol from Würth Elektronik. It supports creating a Wirepas routing mesh protocol and is optimized for ultra-low energy consumption. The large scalability is ideal for extensive IoT networks and can work as a host-controlled device.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.9",
+    "cmake": true,
+    "alias": "Click.Wirepas",
+    "subdir_name": "lib_wirepas"
+}
+
