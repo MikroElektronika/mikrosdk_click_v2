@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20231020](#20231020)**
 + **[20231013](#20231013)**
 + **[20231006](#20231006)**
 + **[20230929](#20230929)**
@@ -65,6 +66,20 @@
 
 ---
 ---
+---
+
+## `20231020`
+
+*Following click boards have been added:*
+
++ `DIGI Isolator`
++ `SPI Isolator 5`
++ `Pressure 23`
++ `Wirepas`
++ `SPI Isolator 8`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20231013`
