@@ -3,6 +3,6 @@
     "description": "APC1 Air Quality Sensor Bundle - Experience advanced air quality monitoring with our bundle solution, merging the ScioSense APC1 Air Quality sensor and the MIKROE Terminal Click board™. This dynamic combination creates a compact and precise system that measures PM levels, VOCs, temperature, humidity, and more. Explore this bundle to build an effective monitoring solution perfect for ensuring healthy indoor spaces or contributing to broader air quality research efforts.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
-    "hw" : ["click","APC1001J"],
+    "hw" : ["click","APC1001J","APC1001U"],
     "category" : ["Click Boards > Sensors > Environmental"]
 }

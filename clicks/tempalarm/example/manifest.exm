@@ -1,0 +1,8 @@
+{
+    "name": "Temp Alarm Click",
+    "description": "Temp Alarm Click is a compact add-on board that adds temperature alarm functionalities to your project. This board features the PTMP4718, a high-accuracy remote and local temperature sensor from Texas Instruments. This temperature sensor has pin-programmable alert thresholds, with a fault queue for debounce.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","PTMP4718DGKR"],
+    "category" : ["Click Boards > Sensors > Temperature & humidity"]
+}

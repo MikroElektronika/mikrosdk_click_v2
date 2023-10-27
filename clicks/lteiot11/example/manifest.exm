@@ -1,0 +1,8 @@
+{
+    "name": "LTE IoT 11 Click",
+    "description": "LTE IoT 11 Click is a compact add-on board with an optimized global coverage module, as it supports a comprehensive set of bands required for global deployment. This board features the TX62-W, a global MTC module from Thales. It delivers global LTE-M, NB-IoT (NB1 and NB2) connectivity from a single SKU, and it is the first Thales product to adopt a revolutionary “Things” footprint. Besides, it integrates an embedded GNSS multi-constellation, state-of-the-art secure services, and more.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
+    "hw" : ["click","TX62-W"],
+    "category" : ["Click Boards > Wireless connectivity > LTE IoT"]
+}

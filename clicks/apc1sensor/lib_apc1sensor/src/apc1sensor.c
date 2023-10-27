@@ -29,10 +29,10 @@
 
 /**
  * @brief APC1 Sensor send command function.
- * @details This function sends a desired command by using I2C serial interface.
+ * @details This function sends a desired command by using I2C or UART serial interface.
  * @param[in] ctx : Demo context object.
  * See #apc1sensor_t object definition for detailed explanation.
- * @param[in] cmd : Command byte (0xE4 - set mode, 0xE9 - get info).
+ * @param[in] cmd : Command byte (0xE1 - set meas mode, 0xE2 - req meas, 0xE4 - set mode, 0xE9 - get info).
  * @param[in] mode : Mode word (0x00 - idle, 0x01 - measurement, 0x0F - reset).
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
@@ -53,47 +53,96 @@ static uint16_t apc1sensor_calculate_checksum ( uint8_t *data_in, uint8_t len );
 
 void apc1sensor_cfg_setup ( apc1sensor_cfg_t *cfg ) 
 {
-    // Communication gpio pins
     cfg->scl = HAL_PIN_NC;
     cfg->sda = HAL_PIN_NC;
-
-    // Additional gpio pins
+    cfg->rx_pin = HAL_PIN_NC;
+    cfg->tx_pin = HAL_PIN_NC;
     cfg->set = HAL_PIN_NC;
     cfg->rst = HAL_PIN_NC;
 
     cfg->i2c_speed   = I2C_MASTER_SPEED_STANDARD;
     cfg->i2c_address = APC1SENSOR_DEVICE_ADDRESS;
+
+    cfg->baud_rate     = 9600;
+    cfg->data_bit      = UART_DATA_BITS_DEFAULT;
+    cfg->parity_bit    = UART_PARITY_DEFAULT;
+    cfg->stop_bit      = UART_STOP_BITS_DEFAULT;
+    cfg->uart_blocking = false;
+
+    cfg->drv_sel = APC1SENSOR_DRV_SEL_I2C;
+}
+
+void apc1sensor_drv_interface_sel ( apc1sensor_cfg_t *cfg, apc1sensor_drv_t drv_sel ) 
+{
+    cfg->drv_sel = drv_sel;
 }
 
 err_t apc1sensor_init ( apc1sensor_t *ctx, apc1sensor_cfg_t *cfg ) 
 {
-    i2c_master_config_t i2c_cfg;
+    ctx->drv_sel = cfg->drv_sel;
 
-    i2c_master_configure_default( &i2c_cfg );
-
-    i2c_cfg.scl = cfg->scl;
-    i2c_cfg.sda = cfg->sda;
-
-    ctx->slave_address = cfg->i2c_address;
-
-    if ( I2C_MASTER_ERROR == i2c_master_open( &ctx->i2c, &i2c_cfg ) ) 
+    if ( APC1SENSOR_DRV_SEL_I2C == ctx->drv_sel ) 
     {
-        return I2C_MASTER_ERROR;
+        i2c_master_config_t i2c_cfg;
+
+        i2c_master_configure_default( &i2c_cfg );
+
+        i2c_cfg.scl = cfg->scl;
+        i2c_cfg.sda = cfg->sda;
+
+        ctx->slave_address = cfg->i2c_address;
+
+        if ( I2C_MASTER_ERROR == i2c_master_open( &ctx->i2c, &i2c_cfg ) ) 
+        {
+            return I2C_MASTER_ERROR;
+        }
+
+        if ( I2C_MASTER_ERROR == i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address ) ) 
+        {
+            return I2C_MASTER_ERROR;
+        }
+
+        if ( I2C_MASTER_ERROR == i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed ) ) 
+        {
+            return I2C_MASTER_ERROR;
+        }
     }
-
-    if ( I2C_MASTER_ERROR == i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address ) ) 
+    else
     {
-        return I2C_MASTER_ERROR;
-    }
+        uart_config_t uart_cfg;
 
-    if ( I2C_MASTER_ERROR == i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed ) ) 
-    {
-        return I2C_MASTER_ERROR;
+        // Default config
+        uart_configure_default( &uart_cfg );
+
+        // Ring buffer mapping
+        ctx->uart.tx_ring_buffer = ctx->uart_tx_buffer;
+        ctx->uart.rx_ring_buffer = ctx->uart_rx_buffer;
+
+        // UART module config
+        uart_cfg.rx_pin = cfg->rx_pin;  // UART RX pin.
+        uart_cfg.tx_pin = cfg->tx_pin;  // UART TX pin.
+        uart_cfg.tx_ring_size = sizeof( ctx->uart_tx_buffer );
+        uart_cfg.rx_ring_size = sizeof( ctx->uart_rx_buffer );
+
+        if ( UART_ERROR == uart_open( &ctx->uart, &uart_cfg ) ) 
+        {
+            return UART_ERROR;
+        }
+        uart_set_baud( &ctx->uart, cfg->baud_rate );
+        uart_set_parity( &ctx->uart, cfg->parity_bit );
+        uart_set_stop_bits( &ctx->uart, cfg->stop_bit );
+        uart_set_data_bits( &ctx->uart, cfg->data_bit );
+
+        uart_set_blocking( &ctx->uart, cfg->uart_blocking );
+
+        // Dummy read to enable RX interrupt
+        uint8_t dummy = 0;
+        uart_read ( &ctx->uart, &dummy, 1 );
     }
 
     digital_out_init( &ctx->rst, cfg->rst );
     digital_out_init( &ctx->set, cfg->set );
-
+    
     return APC1SENSOR_OK;
 }
 
@@ -101,7 +150,14 @@ err_t apc1sensor_default_cfg ( apc1sensor_t *ctx )
 {
     err_t error_flag = APC1SENSOR_OK;
     apc1sensor_set_opmode ( ctx, APC1SENSOR_OPMODE_NORMAL );
-    error_flag |= apc1sensor_sw_reset ( ctx );
+    if ( APC1SENSOR_DRV_SEL_I2C == ctx->drv_sel ) 
+    {
+        error_flag |= apc1sensor_sw_reset ( ctx );
+    }
+    else
+    {
+        error_flag |= apc1sensor_set_meas_mode ( ctx, APC1SENSOR_MEASUREMENT_PASSIVE );
+    }
     error_flag |= apc1sensor_start_measurement ( ctx );
     return error_flag;
 }
@@ -109,7 +165,6 @@ err_t apc1sensor_default_cfg ( apc1sensor_t *ctx )
 err_t apc1sensor_set_idle_mode ( apc1sensor_t *ctx )
 {
     uint16_t checksum = 0;
-    uint8_t reg = APC1SENSOR_ADDRESS_RESPONSE;
     uint8_t data_buf[ 8 ] = { 0 };
     if ( APC1SENSOR_ERROR == apc1sensor_send_command ( ctx, APC1SENSOR_CMD_SET_MODE, APC1SENSOR_MODE_IDLE ) )
     {
@@ -117,10 +172,22 @@ err_t apc1sensor_set_idle_mode ( apc1sensor_t *ctx )
     }
     Delay_100ms ( );
     Delay_100ms ( );
-    if ( APC1SENSOR_ERROR == i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, 8 ) )
+    if ( APC1SENSOR_DRV_SEL_I2C == ctx->drv_sel ) 
     {
-        return APC1SENSOR_ERROR;
+        uint8_t reg = APC1SENSOR_ADDRESS_RESPONSE;
+        if ( APC1SENSOR_ERROR == i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, 8 ) )
+        {
+            return APC1SENSOR_ERROR;
+        }
     }
+    else
+    {
+        if ( 8 != uart_read( &ctx->uart, data_buf, 8 ) )
+        {
+            return APC1SENSOR_ERROR;
+        }
+    }
+    
     checksum = ( ( uint16_t ) data_buf[ 6 ] << 8 ) | data_buf[ 7 ];
     if ( ( APC1SENSOR_HEADER_0 != data_buf[ 0 ] ) || 
          ( APC1SENSOR_HEADER_1 != data_buf[ 1 ] ) ||
@@ -141,15 +208,61 @@ err_t apc1sensor_start_measurement ( apc1sensor_t *ctx )
 
 err_t apc1sensor_sw_reset ( apc1sensor_t *ctx )
 {
+    if ( APC1SENSOR_DRV_SEL_I2C != ctx->drv_sel )
+    {
+        return APC1SENSOR_ERROR;
+    }
     err_t error_flag = apc1sensor_send_command ( ctx, APC1SENSOR_CMD_SET_MODE, APC1SENSOR_MODE_RESET );
     Delay_1sec ( );
+    return error_flag;
+}
+
+err_t apc1sensor_set_meas_mode ( apc1sensor_t *ctx, uint8_t mode )
+{
+    if ( ( APC1SENSOR_DRV_SEL_UART != ctx->drv_sel ) || 
+         ( ( APC1SENSOR_MEASUREMENT_PASSIVE != mode ) && 
+           ( APC1SENSOR_MEASUREMENT_ACTIVE != mode ) ) )
+    {
+        return APC1SENSOR_ERROR;
+    }
+    uint16_t checksum = 0;
+    uint8_t data_buf[ 8 ] = { 0 };
+    ctx->meas_mode = mode;
+    if ( APC1SENSOR_ERROR == apc1sensor_send_command ( ctx, APC1SENSOR_CMD_SET_MEAS_MODE, mode ) )
+    {
+        return APC1SENSOR_ERROR;
+    }
+    Delay_100ms ( );
+    Delay_100ms ( );
+    if ( 8 != uart_read( &ctx->uart, data_buf, 8 ) )
+    {
+        return APC1SENSOR_ERROR;
+    }
+    checksum = ( ( uint16_t ) data_buf[ 6 ] << 8 ) | data_buf[ 7 ];
+    if ( ( APC1SENSOR_HEADER_0 != data_buf[ 0 ] ) || 
+         ( APC1SENSOR_HEADER_1 != data_buf[ 1 ] ) ||
+         ( checksum != apc1sensor_calculate_checksum ( data_buf, 6 ) ) )
+    {
+        return APC1SENSOR_ERROR;
+    }
+    return APC1SENSOR_OK;
+}
+
+err_t apc1sensor_request_meas ( apc1sensor_t *ctx )
+{
+    if ( APC1SENSOR_DRV_SEL_UART != ctx->drv_sel )
+    {
+        return APC1SENSOR_ERROR;
+    }
+    err_t error_flag = apc1sensor_send_command ( ctx, APC1SENSOR_CMD_REQ_MEASUREMENT, APC1SENSOR_MODE_IDLE );
+    Delay_100ms ( );
+    Delay_100ms ( );
     return error_flag;
 }
 
 err_t apc1sensor_read_info ( apc1sensor_t *ctx, apc1sensor_info_t *info )
 {
     uint16_t checksum = 0;
-    uint8_t reg = APC1SENSOR_ADDRESS_RESPONSE;
     uint8_t data_buf[ 23 ] = { 0 };
     if ( APC1SENSOR_ERROR == apc1sensor_send_command ( ctx, APC1SENSOR_CMD_GET_INFO, APC1SENSOR_MODE_IDLE ) )
     {
@@ -157,9 +270,20 @@ err_t apc1sensor_read_info ( apc1sensor_t *ctx, apc1sensor_info_t *info )
     }
     Delay_100ms ( );
     Delay_100ms ( );
-    if ( APC1SENSOR_ERROR == i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, 23 ) )
+    if ( APC1SENSOR_DRV_SEL_I2C == ctx->drv_sel ) 
     {
-        return APC1SENSOR_ERROR;
+        uint8_t reg = APC1SENSOR_ADDRESS_RESPONSE;
+        if ( APC1SENSOR_ERROR == i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, 23 ) )
+        {
+            return APC1SENSOR_ERROR;
+        }
+    }
+    else
+    {
+        if ( 23 != uart_read( &ctx->uart, data_buf, 23 ) )
+        {
+            return APC1SENSOR_ERROR;
+        }
     }
     checksum = ( ( uint16_t ) data_buf[ 21 ] << 8 ) | data_buf[ 22 ];
     if ( ( APC1SENSOR_HEADER_0 != data_buf[ 0 ] ) || 
@@ -179,9 +303,26 @@ err_t apc1sensor_read_measurement ( apc1sensor_t *ctx, apc1sensor_measurement_t 
 {
     uint16_t checksum = 0;
     uint8_t data_buf[ 64 ] = { 0 };
-    if ( APC1SENSOR_ERROR == i2c_master_read( &ctx->i2c, data_buf, 64 ) )
+    if ( APC1SENSOR_DRV_SEL_I2C == ctx->drv_sel ) 
     {
-        return APC1SENSOR_ERROR;
+        if ( APC1SENSOR_ERROR == i2c_master_read( &ctx->i2c, data_buf, 64 ) )
+        {
+            return APC1SENSOR_ERROR;
+        }
+    }
+    else
+    {
+        if ( APC1SENSOR_MEASUREMENT_PASSIVE == ctx->meas_mode )
+        {
+            if ( APC1SENSOR_ERROR == apc1sensor_request_meas ( ctx ) )
+            {
+                return APC1SENSOR_ERROR;
+            }
+        }
+        if ( 64 != uart_read( &ctx->uart, data_buf, 64 ) )
+        {
+            return APC1SENSOR_ERROR;
+        }
     }
     checksum = ( ( uint16_t ) data_buf[ 62 ] << 8 ) | data_buf[ 63 ];
     if ( ( APC1SENSOR_HEADER_0 != data_buf[ 0 ] ) || 
@@ -260,24 +401,50 @@ static err_t apc1sensor_send_command ( apc1sensor_t *ctx, uint8_t cmd, uint16_t 
 {
     uint8_t data_buf[ 8 ] = { 0 };
     uint16_t checksum = 0;
-    if ( ( ( APC1SENSOR_CMD_SET_MODE != cmd ) && 
-           ( APC1SENSOR_CMD_GET_INFO != cmd ) ) || 
-         ( ( APC1SENSOR_MODE_IDLE != mode ) && 
-           ( APC1SENSOR_MODE_MEASUREMENT != mode ) && 
-           ( APC1SENSOR_MODE_RESET != mode ) ) )
+    if ( APC1SENSOR_DRV_SEL_I2C == ctx->drv_sel ) 
     {
-        return APC1SENSOR_ERROR;
+        if ( ( ( APC1SENSOR_CMD_SET_MODE != cmd ) && 
+               ( APC1SENSOR_CMD_GET_INFO != cmd ) ) || 
+             ( ( APC1SENSOR_MODE_IDLE != mode ) && 
+               ( APC1SENSOR_MODE_MEASUREMENT != mode ) && 
+               ( APC1SENSOR_MODE_RESET != mode ) ) )
+        {
+            return APC1SENSOR_ERROR;
+        }
+        data_buf[ 0 ] = APC1SENSOR_ADDRESS_CMD;
+        data_buf[ 1 ] = APC1SENSOR_HEADER_0;
+        data_buf[ 2 ] = APC1SENSOR_HEADER_1;
+        data_buf[ 3 ] = cmd;
+        data_buf[ 4 ] = ( uint8_t ) ( ( mode >> 8 ) & 0xFF );
+        data_buf[ 5 ] = ( uint8_t ) ( mode & 0xFF );
+        checksum = apc1sensor_calculate_checksum ( &data_buf[ 1 ], 5 );
+        data_buf[ 6 ] = ( uint8_t ) ( ( checksum >> 8 ) & 0xFF );
+        data_buf[ 7 ] = ( uint8_t ) ( checksum & 0xFF );
+        return i2c_master_write( &ctx->i2c, data_buf, 8 );
     }
-    data_buf[ 0 ] = APC1SENSOR_ADDRESS_CMD;
-    data_buf[ 1 ] = APC1SENSOR_HEADER_0;
-    data_buf[ 2 ] = APC1SENSOR_HEADER_1;
-    data_buf[ 3 ] = cmd;
-    data_buf[ 4 ] = ( uint8_t ) ( ( mode >> 8 ) & 0xFF );
-    data_buf[ 5 ] = ( uint8_t ) ( mode & 0xFF );
-    checksum = apc1sensor_calculate_checksum ( &data_buf[ 1 ], 5 );
-    data_buf[ 6 ] = ( uint8_t ) ( ( checksum >> 8 ) & 0xFF );
-    data_buf[ 7 ] = ( uint8_t ) ( checksum & 0xFF );
-    return i2c_master_write( &ctx->i2c, data_buf, 8 );
+    else
+    {
+        if ( ( ( APC1SENSOR_CMD_SET_MODE != cmd ) && 
+               ( APC1SENSOR_CMD_GET_INFO != cmd ) && 
+               ( APC1SENSOR_CMD_SET_MEAS_MODE != cmd ) && 
+               ( APC1SENSOR_CMD_REQ_MEASUREMENT != cmd ) ) || 
+             ( ( APC1SENSOR_MODE_IDLE != mode ) && 
+               ( APC1SENSOR_MODE_MEASUREMENT != mode ) ) )
+        {
+            return APC1SENSOR_ERROR;
+        }
+        data_buf[ 0 ] = APC1SENSOR_HEADER_0;
+        data_buf[ 1 ] = APC1SENSOR_HEADER_1;
+        data_buf[ 2 ] = cmd;
+        data_buf[ 3 ] = ( uint8_t ) ( ( mode >> 8 ) & 0xFF );
+        data_buf[ 4 ] = ( uint8_t ) ( mode & 0xFF );
+        checksum = apc1sensor_calculate_checksum ( &data_buf[ 0 ], 5 );
+        data_buf[ 5 ] = ( uint8_t ) ( ( checksum >> 8 ) & 0xFF );
+        data_buf[ 6 ] = ( uint8_t ) ( checksum & 0xFF );
+        uart_clear ( &ctx->uart );
+        uart_write( &ctx->uart, data_buf, 7 );
+        return APC1SENSOR_OK;
+    }
 }
 
 static uint16_t apc1sensor_calculate_checksum ( uint8_t *data_in, uint8_t len )
