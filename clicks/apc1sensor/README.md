@@ -18,7 +18,7 @@
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Sep 2023.
-- **Type**          : I2C type
+- **Type**          : I2C/UART type
 
 
 # Software Support
@@ -101,13 +101,13 @@ void application_init ( void )
     // Sensor initialization.
     apc1sensor_cfg_setup( &apc1sensor_cfg );
     APC1SENSOR_MAP_MIKROBUS( apc1sensor_cfg, MIKROBUS_1 );
-    if ( I2C_MASTER_ERROR == apc1sensor_init( &apc1sensor, &apc1sensor_cfg ) ) 
+    if ( APC1SENSOR_OK != apc1sensor_init( &apc1sensor, &apc1sensor_cfg ) ) 
     {
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
     
-    if ( APC1SENSOR_ERROR == apc1sensor_default_cfg ( &apc1sensor ) )
+    if ( APC1SENSOR_OK != apc1sensor_default_cfg ( &apc1sensor ) )
     {
         log_error( &logger, " Default configuration." );
         for ( ; ; );
@@ -171,6 +171,13 @@ void application_task ( void )
     Delay_ms ( 1000 );
 }
 ```
+
+## Note
+
+> By default, the I2C communication interface is selected in the library,
+which is compatible with APC1001J sensor. If you are using an UART version
+of the sensor (APC1001U) refer to the apc1sensor_drv_interface_sel function
+description in order to properly change the interface selection in the library.
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 

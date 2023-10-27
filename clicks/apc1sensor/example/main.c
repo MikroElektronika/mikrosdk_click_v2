@@ -17,6 +17,12 @@
  * Reads the measurement results and displays all data on the USB UART
  * once per second.
  * 
+ * @note
+ * By default, the I2C communication interface is selected in the library,
+ * which is compatible with APC1001J sensor. If you are using an UART version
+ * of the sensor (APC1001U) refer to the apc1sensor_drv_interface_sel function
+ * description in order to properly change the interface selection in the library.
+ * 
  * @author Stefan Filipovic
  *
  */
@@ -49,13 +55,13 @@ void application_init ( void )
     // Sensor initialization.
     apc1sensor_cfg_setup( &apc1sensor_cfg );
     APC1SENSOR_MAP_MIKROBUS( apc1sensor_cfg, MIKROBUS_1 );
-    if ( I2C_MASTER_ERROR == apc1sensor_init( &apc1sensor, &apc1sensor_cfg ) ) 
+    if ( APC1SENSOR_OK != apc1sensor_init( &apc1sensor, &apc1sensor_cfg ) ) 
     {
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
     
-    if ( APC1SENSOR_ERROR == apc1sensor_default_cfg ( &apc1sensor ) )
+    if ( APC1SENSOR_OK != apc1sensor_default_cfg ( &apc1sensor ) )
     {
         log_error( &logger, " Default configuration." );
         for ( ; ; );

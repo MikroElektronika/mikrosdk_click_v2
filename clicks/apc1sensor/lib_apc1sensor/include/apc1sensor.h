@@ -35,6 +35,7 @@ extern "C"{
 #include "drv_digital_out.h"
 #include "drv_digital_in.h"
 #include "drv_i2c_master.h"
+#include "drv_uart.h"
 
 /*!
  * @addtogroup apc1sensor APC1 Sensor Demo Driver
@@ -58,6 +59,8 @@ extern "C"{
  */
 #define APC1SENSOR_ADDRESS_CMD              0x40
 #define APC1SENSOR_ADDRESS_RESPONSE         0x47
+#define APC1SENSOR_CMD_SET_MEAS_MODE        0xE1
+#define APC1SENSOR_CMD_REQ_MEASUREMENT      0xE2
 #define APC1SENSOR_CMD_SET_MODE             0xE4
 #define APC1SENSOR_CMD_GET_INFO             0xE9
 
@@ -81,6 +84,13 @@ extern "C"{
 #define APC1SENSOR_HEADER_1                 0x4D
 
 /**
+ * @brief APC1 Sensor measurement mode definition.
+ * @details Specified measurement mode definition of APC1 Sensor Demo driver.
+ */
+#define APC1SENSOR_MEASUREMENT_PASSIVE      0x00
+#define APC1SENSOR_MEASUREMENT_ACTIVE       0x01
+
+/**
  * @brief APC1 Sensor commands mode definition.
  * @details Specified commands mode definition of APC1 Sensor Demo driver.
  */
@@ -95,6 +105,14 @@ extern "C"{
 #define APC1SENSOR_OPMODE_NORMAL            0
 #define APC1SENSOR_OPMODE_DEEP_SLEEP        1
 #define APC1SENSOR_OPMODE_RESET             2
+
+/**
+ * @brief APC1 Sensor driver buffer size.
+ * @details Specified size of driver ring buffer.
+ * @note Increase buffer size if needed.
+ */
+#define APC1SENSOR_TX_DRV_BUFFER_SIZE       100
+#define APC1SENSOR_RX_DRV_BUFFER_SIZE       300
 
 /**
  * @brief APC1 Sensor device address setting.
@@ -120,6 +138,8 @@ extern "C"{
  * @details Mapping pins of APC1 Sensor Demo to the selected MikroBUS.
  */
 #define APC1SENSOR_MAP_MIKROBUS( cfg, mikrobus ) \
+    cfg.tx_pin = MIKROBUS( mikrobus, MIKROBUS_TX ); \
+    cfg.rx_pin = MIKROBUS( mikrobus, MIKROBUS_RX ); \
     cfg.scl = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
     cfg.sda = MIKROBUS( mikrobus, MIKROBUS_SDA ); \
     cfg.set = MIKROBUS( mikrobus, MIKROBUS_CS ); \
@@ -129,20 +149,36 @@ extern "C"{
 /*! @} */ // apc1sensor
 
 /**
+ * @brief APC1 Sensor Click driver selector.
+ * @details Selects target driver interface of APC1 Sensor Click driver.
+ */
+typedef enum
+{
+    APC1SENSOR_DRV_SEL_I2C,     /**< UART driver descriptor. */
+    APC1SENSOR_DRV_SEL_UART     /**< I2C driver descriptor. */
+
+} apc1sensor_drv_t;
+
+/**
  * @brief APC1 Sensor Demo context object.
  * @details Context object definition of APC1 Sensor Demo driver.
  */
 typedef struct
 {
-    // Output pins
     digital_out_t set;          /**< Operating mode set pin. */
     digital_out_t rst;          /**< Reset pin. */
 
-    // Modules
     i2c_master_t i2c;           /**< I2C driver object. */
+    uart_t uart;                /**< UART driver object. */
 
-    // I2C slave address
     uint8_t slave_address;      /**< Device slave address (used for I2C driver). */
+
+    uint8_t uart_rx_buffer[ APC1SENSOR_RX_DRV_BUFFER_SIZE ];  /**< Buffer size. */
+    uint8_t uart_tx_buffer[ APC1SENSOR_TX_DRV_BUFFER_SIZE ];  /**< Buffer size. */
+
+    apc1sensor_drv_t drv_sel;   /**< Master driver interface selector. */
+
+    uint8_t meas_mode;          /**< Measurement mode selection (UART only). */
 
 } apc1sensor_t;
 
@@ -154,12 +190,22 @@ typedef struct
 {
     pin_name_t scl;             /**< Clock pin descriptor for I2C driver. */
     pin_name_t sda;             /**< Bidirectional data pin descriptor for I2C driver. */
+    pin_name_t rx_pin;          /**< RX pin. */
+    pin_name_t tx_pin;          /**< TX pin. */
 
     pin_name_t set;             /**< Operating mode set pin. */
     pin_name_t rst;             /**< Reset pin. */
 
     uint32_t   i2c_speed;       /**< I2C serial speed. */
     uint8_t    i2c_address;     /**< I2C slave address. */
+
+    uint32_t         baud_rate;         /**< Clock speed. */
+    bool             uart_blocking;     /**< Wait for interrupt or not. */
+    uart_data_bits_t data_bit;          /**< Data bits. */
+    uart_parity_t    parity_bit;        /**< Parity bit. */
+    uart_stop_bits_t stop_bit;          /**< Stop bits. */
+
+    apc1sensor_drv_t drv_sel;   /**< Master driver interface selector. */
 
 } apc1sensor_cfg_t;
 
@@ -238,6 +284,22 @@ typedef enum
 void apc1sensor_cfg_setup ( apc1sensor_cfg_t *cfg );
 
 /**
+ * @brief APC1 Sensor driver interface setup function.
+ * @details This function sets a serial driver interface which will be used
+ * further in the click driver.
+ * @param[out] cfg : Click configuration structure.
+ * See #apc1sensor_cfg_t object definition for detailed explanation.
+ * @param[in] drv_sel : Driver interface selection.
+ * See #apc1sensor_drv_t object definition for detailed explanation.
+ * @return Nothing.
+ * @note This driver selection should be called before init function to configure
+ * the driver to work with the serial interface which is consistent with the
+ * real state of the hardware. If this function is not called, the default
+ * driver interface will be set.
+ */
+void apc1sensor_drv_interface_sel ( apc1sensor_cfg_t *cfg, apc1sensor_drv_t drv_sel );
+
+/**
  * @brief APC1 Sensor initialization function.
  * @details This function initializes all necessary pins and peripherals used
  * for this demo board.
@@ -292,7 +354,7 @@ err_t apc1sensor_start_measurement ( apc1sensor_t *ctx );
 
 /**
  * @brief APC1 Sensor sw reset function.
- * @details This function performs a device software reset.
+ * @details This function performs a device software reset (I2C only).
  * @param[in] ctx : Demo context object.
  * See #apc1sensor_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -301,6 +363,32 @@ err_t apc1sensor_start_measurement ( apc1sensor_t *ctx );
  * @note None.
  */
 err_t apc1sensor_sw_reset ( apc1sensor_t *ctx );
+
+/**
+ * @brief APC1 Sensor set meas mode function.
+ * @details This function sets measurement mode to active or passive (UART only).
+ * @param[in] ctx : Demo context object.
+ * See #apc1sensor_t object definition for detailed explanation.
+ * @param[in] mode : @li @c 0 - Passive,
+ *                   @li @c 1 - Active.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t apc1sensor_set_meas_mode ( apc1sensor_t *ctx, uint8_t mode );
+
+/**
+ * @brief APC1 Sensor request meas function.
+ * @details This function requests measurement in passive measurement mode (UART only).
+ * @param[in] ctx : Demo context object.
+ * See #apc1sensor_t object definition for detailed explanation.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t apc1sensor_request_meas ( apc1sensor_t *ctx );
 
 /**
  * @brief APC1 Sensor read info function.

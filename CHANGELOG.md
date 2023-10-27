@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20231027](#20231027)**
 + **[20231020](#20231020)**
 + **[20231013](#20231013)**
 + **[20231006](#20231006)**
@@ -66,6 +67,24 @@
 
 ---
 ---
+---
+
+## `20231027`
+
+*Following click boards have been added:*
+
++ `LTE IoT 11`
++ `Water Detect 3`
++ `Timer Relay`
++ `Temp Alarm`
++ `EEPROM 11`
+
+*Following click boards have been updated:*
+
++ `APC1 Sensor Demo`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20231020`
