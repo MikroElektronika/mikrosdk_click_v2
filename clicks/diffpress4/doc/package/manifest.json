@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Sensors > Pressure",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Diff Press 4 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.diffpress4",
+    "product_link": "https://www.mikroe.com/diff-press-4-click",
+    "short_description": "Diff Press 4 Click is a compact add-on board that can measure differential pressure. This board features the SM9336-BCE-S-250-000, a digital pressure and altimeter sensor module from TE Connectivity. The SM9336-BCE-S-250-000 has a configurable host interface that supports I2C serial communication and measures pressure in a wide range with an accuracy of 3%. It comes as calibrated and temperature-compensated with high reliability/long-term stability. It operates in a compensated temperature range of -20°C to 85°C, ensuring stable operation under extreme conditions.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.DiffPress4",
+    "subdir_name": "lib_diffpress4"
+}

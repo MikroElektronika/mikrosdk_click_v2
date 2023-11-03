@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20231103](#20231103)**
 + **[20231027](#20231027)**
 + **[20231020](#20231020)**
 + **[20231013](#20231013)**
@@ -67,6 +68,19 @@
 
 ---
 ---
+---
+
+## `20231103`
+
+*Following click boards have been added:*
+
++ `Diff Press 4`
++ `PRESS`
++ `ADC 14`
++ `Charger 26`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20231027`
