@@ -86,7 +86,7 @@ err_t rtkrover_init ( rtkrover_t *ctx, rtkrover_cfg_t *cfg )
     digital_in_init( &ctx->int_pin, cfg->int_pin );
     
     digital_out_high( &ctx->shd );
-    digital_out_low( &ctx->rst );
+    digital_out_high( &ctx->rst );
     digital_out_low( &ctx->wup );
     digital_out_low( &ctx->bt );
     Delay_100ms ( );
