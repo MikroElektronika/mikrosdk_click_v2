@@ -21,33 +21,32 @@
 ****************************************************************************/
 
 /*!
- * @file rtkbase.c
- * @brief RTK Base Click Driver.
+ * @file iotexpresslink3.c
+ * @brief IoT ExpressLink 3 Click Driver.
  */
 
-#include "rtkbase.h"
+#include "iotexpresslink3.h"
 
-void rtkbase_cfg_setup ( rtkbase_cfg_t *cfg ) 
+void iotexpresslink3_cfg_setup ( iotexpresslink3_cfg_t *cfg ) 
 {
     // Communication gpio pins
     cfg->rx_pin = HAL_PIN_NC;
     cfg->tx_pin = HAL_PIN_NC;
 
     // Additional gpio pins
-    cfg->shd = HAL_PIN_NC;
+    cfg->rsn = HAL_PIN_NC;
     cfg->rst = HAL_PIN_NC;
-    cfg->wup = HAL_PIN_NC;
-    cfg->bt  = HAL_PIN_NC;
-    cfg->int_pin = HAL_PIN_NC;
+    cfg->wake = HAL_PIN_NC;
+    cfg->event = HAL_PIN_NC;
 
-    cfg->baud_rate      = 115200;
-    cfg->data_bit       = UART_DATA_BITS_DEFAULT;
-    cfg->parity_bit     = UART_PARITY_DEFAULT;
-    cfg->stop_bit       = UART_STOP_BITS_DEFAULT;
-    cfg->uart_blocking  = false;
+    cfg->baud_rate     = 115200;
+    cfg->data_bit      = UART_DATA_BITS_DEFAULT;
+    cfg->parity_bit    = UART_PARITY_DEFAULT;
+    cfg->stop_bit      = UART_STOP_BITS_DEFAULT;
+    cfg->uart_blocking = false;
 }
 
-err_t rtkbase_init ( rtkbase_t *ctx, rtkbase_cfg_t *cfg ) 
+err_t iotexpresslink3_init ( iotexpresslink3_t *ctx, iotexpresslink3_cfg_t *cfg ) 
 {
     uart_config_t uart_cfg;
 
@@ -76,94 +75,73 @@ err_t rtkbase_init ( rtkbase_t *ctx, rtkbase_cfg_t *cfg )
     uart_set_blocking( &ctx->uart, cfg->uart_blocking );
 
     // Output pins
-    digital_out_init( &ctx->shd, cfg->shd );
     digital_out_init( &ctx->rst, cfg->rst );
-    digital_out_init( &ctx->wup, cfg->wup );
-    digital_out_init( &ctx->bt, cfg->bt );
-
-    // Input pins
-    digital_in_init( &ctx->int_pin, cfg->int_pin );
+    digital_out_low ( &ctx->rst );
     
-    digital_out_high( &ctx->shd );
-    digital_out_high( &ctx->rst );
-    digital_out_low( &ctx->wup );
-    digital_out_low( &ctx->bt );
-    Delay_100ms ( );
-    rtkbase_enable_rx_interrupt ( ctx );
+    // Input pins
+    digital_in_init( &ctx->event, cfg->event );
+    digital_in_init( &ctx->wake, cfg->wake );
+    digital_in_init( &ctx->rsn, cfg->rsn );
+    
+    // Perform a dummy read in order to enable RX interrupt
+    uint8_t dummy = 0;
+    iotexpresslink3_generic_read ( ctx, &dummy, 1 );
 
     return UART_SUCCESS;
 }
 
-err_t rtkbase_generic_write ( rtkbase_t *ctx, char *data_in, uint16_t len ) 
+err_t iotexpresslink3_generic_write ( iotexpresslink3_t *ctx, uint8_t *data_in, uint16_t len )
 {
     return uart_write( &ctx->uart, data_in, len );
 }
 
-err_t rtkbase_generic_read ( rtkbase_t *ctx, char *data_out, uint16_t len ) 
+err_t iotexpresslink3_generic_read ( iotexpresslink3_t *ctx, uint8_t *data_out, uint16_t len )
 {
     return uart_read( &ctx->uart, data_out, len );
 }
 
-void rtkbase_clear_ring_buffers ( rtkbase_t *ctx )
-{    
+void iotexpresslink3_send_cmd ( iotexpresslink3_t *ctx, uint8_t *cmd )
+{
+    uint8_t eol[ 2 ] = { 13, 10 };
     uart_clear( &ctx->uart );
+    uart_write( &ctx->uart, cmd, strlen ( cmd ) );
+    uart_write( &ctx->uart, eol, 2 );
+    Delay_100ms( );
 }
 
-err_t rtkbase_rx_bytes_available ( rtkbase_t *ctx )
-{    
-    return uart_bytes_available ( &ctx->uart );
-}
-
-void rtkbase_enable_rx_interrupt ( rtkbase_t *ctx )
+void iotexpresslink3_enable_device ( iotexpresslink3_t *ctx )
 {
-    uint8_t dummy;
-    rtkbase_generic_read( ctx, &dummy, 1 );
+    digital_out_high ( &ctx->rst );
+    Delay_1sec ( );
 }
 
-void rtkbase_set_rst_pin ( rtkbase_t *ctx, uint8_t state )
+void iotexpresslink3_disable_device ( iotexpresslink3_t *ctx )
 {
-    digital_out_write ( &ctx->rst, state );
+    digital_out_low ( &ctx->rst );
+    Delay_100ms ( );
 }
 
-void rtkbase_set_wup_pin ( rtkbase_t *ctx, uint8_t state )
+void iotexpresslink3_reset_device ( iotexpresslink3_t *ctx )
 {
-    digital_out_write ( &ctx->wup, state );
+    digital_out_low ( &ctx->rst );
+    Delay_100ms ( );
+    digital_out_high ( &ctx->rst );
+    Delay_1sec ( );
 }
 
-void rtkbase_set_boot_pin ( rtkbase_t *ctx, uint8_t state )
+uint8_t iotexpresslink3_get_rsn_pin ( iotexpresslink3_t *ctx )
 {
-    digital_out_write ( &ctx->bt, state );
+    return digital_in_read ( &ctx->rsn );
 }
 
-void rtkbase_set_shd_pin ( rtkbase_t *ctx, uint8_t state )
+uint8_t iotexpresslink3_get_event_pin ( iotexpresslink3_t *ctx )
 {
-    digital_out_write ( &ctx->shd, state );
+    return digital_in_read ( &ctx->event );
 }
 
-uint8_t rtkbase_get_int_pin ( rtkbase_t *ctx )
+uint8_t iotexpresslink3_get_wake_pin ( iotexpresslink3_t *ctx )
 {
-    return digital_in_read ( &ctx->int_pin );
-}
-
-uint32_t rtkbase_calculate_crc24( uint8_t *data_buf, uint16_t data_len )
-{
-    static uint32_t crc_table[ ] = 
-    {
-        0x00000000ul, 0x01864CFBul, 0x038AD50Dul, 0x020C99F6ul,
-        0x0793E6E1ul, 0x0615AA1Aul, 0x041933ECul, 0x059F7F17ul,
-        0x0FA18139ul, 0x0E27CDC2ul, 0x0C2B5434ul, 0x0DAD18CFul,
-        0x083267D8ul, 0x09B42B23ul, 0x0BB8B2D5ul, 0x0A3EFE2Eul
-    };
-
-    uint32_t crc = 0;
-    for ( uint16_t cnt = 0; cnt < data_len; cnt++ )
-    {
-        crc ^= ( uint32_t ) data_buf[ cnt ] << 16;
-        crc = ( crc << 4 ) ^ crc_table[ ( crc >> 20 ) & 0x0F ];
-        crc = ( crc << 4 ) ^ crc_table[ ( crc >> 20 ) & 0x0F ];
-    }
-
-    return ( crc & 0xFFFFFFul );
+    return digital_in_read ( &ctx->wake );
 }
 
 // ------------------------------------------------------------------------- END

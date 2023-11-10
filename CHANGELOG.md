@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20231110](#20231110)**
 + **[20231103](#20231103)**
 + **[20231027](#20231027)**
 + **[20231020](#20231020)**
@@ -68,6 +69,25 @@
 
 ---
 ---
+---
+
+## `20231110`
+
+*Following click boards have been added:*
+
++ `IoT ExpressLink 3`
++ `LightRanger 11`
++ `Color 11`
++ `CAN FD 7`
++ `Hall Current 18`
+
+*Following click boards have been updated:*
+
++ `RTK Base`
++ `RTK Rover`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20231103`
