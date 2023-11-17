@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20231117](#20231117)**
 + **[20231110](#20231110)**
 + **[20231103](#20231103)**
 + **[20231027](#20231027)**
@@ -69,6 +70,19 @@
 
 ---
 ---
+---
+
+## `20231117`
+
+*Following click boards have been added:*
+
++ `Step Down 10`
++ `EEPROM 12`
++ `2x2 RGB`
++ `Gyro 9`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20231110`

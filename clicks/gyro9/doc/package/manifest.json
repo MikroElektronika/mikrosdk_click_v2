@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Sensors > Motion",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Gyro 9 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.gyro9",
+    "product_link": "https://www.mikroe.com/gyro-9-click",
+    "short_description": "Gyro 9 Click is a compact add-on board that contains a high-performance gyroscope. This board features the A3G4250D, a MEMS motion sensor from STMicroelectronics. It is a low-power 3-axes digital output gyroscope that provides unprecedented stability at zero rate level and sensitivity over temperature and time and is equipped with an embedded temperature sensor. The gyroscope has a 16-bit rate value data output with an 8-bit compensation temperature data output.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.Gyro9",
+    "subdir_name": "lib_gyro9"
+}

@@ -1,0 +1,8 @@
+{
+    "name": "Step Down 10 Click",
+    "description": "Step Down 10 Click is a compact add-on board that converts higher voltages into a lower voltage level. This board features the TPSM63610, a high-density synchronous buck DC/DC power module with enhanced HotRodTM from Texas Instruments. ",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","TPSM63608RDFR"],
+    "category" : ["Click Boards > Power management > Buck"]
+}
