@@ -17,7 +17,7 @@ add_library(Click.OOKTX  ALIAS lib_ooktx)
 
 
 
-target_include_directories(lib_ooktx PUBLIC
+target_include_directories(lib_ooktx PUBLIC 
         include
 )
 
@@ -25,3 +25,4 @@ find_package(MikroC.Core REQUIRED)
 target_link_libraries(lib_ooktx PUBLIC MikroC.Core)
 find_package(MikroSDK.Driver REQUIRED)
 target_link_libraries(lib_ooktx PUBLIC MikroSDK.Driver)
+

@@ -4,5 +4,5 @@
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MICRF114"],
-    "category" : ["Sub-1 GHz Transceievers"] 
+    "category" : ["Click Boards > Wireless connectivity > Sub-1 GHz Transceivers"]
 }

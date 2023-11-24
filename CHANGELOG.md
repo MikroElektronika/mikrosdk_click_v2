@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20231124](#20231124)**
 + **[20231117](#20231117)**
 + **[20231110](#20231110)**
 + **[20231103](#20231103)**
@@ -70,6 +71,24 @@
 
 ---
 ---
+---
+
+## `20231124`
+
+*Following click boards have been added:*
+
++ `Piezo Driver`
++ `Brushless 13`
++ `GNSS 11`
++ `Brushless 27`
+
+*Following click boards have been updated:*
+
++ `OOK TX`
++ `OOK RX`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20231117`

@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Wireless connectivity > GPS/GNSS",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "GNSS 11 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.gnss11",
+    "product_link": "https://www.mikroe.com/gnss-11-click",
+    "short_description": "GNSS 11 Click is a compact add-on board that provides fast positioning capability. This board features the EVA-M8M, a concurrent GNSS module from u-blox. The module provides a reception of GPS, GLONASS, Galileo, QZSS, SBAS, and BeiDou. It delivers high sensitivity and minimal acquisition times, with concurrent reception of up to three GNSS, achieved by a dual-frequency RF front-end architecture. This Click board™ makes the perfect solution for the development of both acquisition and tracking devices and represents an ideal product for automotive, consumer, and industrial tracking applications.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.GNSS11",
+    "subdir_name": "lib_gnss11"
+}
+
