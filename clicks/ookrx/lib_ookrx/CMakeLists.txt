@@ -17,7 +17,7 @@ add_library(Click.OOKRX  ALIAS lib_ookrx)
 
 
 
-target_include_directories(lib_ookrx PUBLIC
+target_include_directories(lib_ookrx PUBLIC 
         include
 )
 
@@ -25,3 +25,4 @@ find_package(MikroC.Core REQUIRED)
 target_link_libraries(lib_ookrx PUBLIC MikroC.Core)
 find_package(MikroSDK.Driver REQUIRED)
 target_link_libraries(lib_ookrx PUBLIC MikroSDK.Driver)
+

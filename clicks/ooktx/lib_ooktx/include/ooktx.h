@@ -1,210 +1,238 @@
-/*
- * MikroSDK - MikroE Software Development Kit
- * Copyright© 2020 MikroElektronika d.o.o.
- * 
- * Permission is hereby granted, free of charge, to any person 
- * obtaining a copy of this software and associated documentation 
- * files (the "Software"), to deal in the Software without restriction, 
- * including without limitation the rights to use, copy, modify, merge, 
- * publish, distribute, sublicense, and/or sell copies of the Software, 
- * and to permit persons to whom the Software is furnished to do so, 
- * subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be 
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
- * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE 
- * OR OTHER DEALINGS IN THE SOFTWARE. 
- */
+/****************************************************************************
+** Copyright (C) 2020 MikroElektronika d.o.o.
+** Contact: https://www.mikroe.com/contact
+**
+** Permission is hereby granted, free of charge, to any person obtaining a copy
+** of this software and associated documentation files (the "Software"), to deal
+** in the Software without restriction, including without limitation the rights
+** to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+** copies of the Software, and to permit persons to whom the Software is
+** furnished to do so, subject to the following conditions:
+** The above copyright notice and this permission notice shall be
+** included in all copies or substantial portions of the Software.
+**
+** THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+** EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+** OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+** IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+** DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
+** OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+**  USE OR OTHER DEALINGS IN THE SOFTWARE.
+****************************************************************************/
 
 /*!
- * \file
- *
- * \brief This file contains API for OOK TX Click driver.
- *
- * \addtogroup ooktx OOK TX Click Driver
- * @{
+ * @file ooktx.h
+ * @brief This file contains API for OOK TX Click Driver.
  */
-// ----------------------------------------------------------------------------
 
 #ifndef OOKTX_H
 #define OOKTX_H
 
-#include "drv_digital_out.h"
-#include "drv_digital_in.h"
-
-// -------------------------------------------------------------- PUBLIC MACROS 
-/**
- * \defgroup macros Macros
- * \{
- */
-
-/**
- * \defgroup map_mikrobus MikroBUS
- * \{
- */
-#define OOKTX_MAP_MIKROBUS( cfg, mikrobus ) \
-  cfg.sda = MIKROBUS( mikrobus, MIKROBUS_CS ); \
-  cfg.scl = MIKROBUS( mikrobus, MIKROBUS_PWM )
-/** \} */
-
-/**
- * \defgroup error_code Error Code
- * \{
- */
-#define OOKTX_RETVAL  uint8_t
-
-#define OOKTX_OK           0x00
-#define OOKTX_INIT_ERROR   0xFF
-/** \} */
-
-/**
- * \defgroup configuration_values Configuration Values
- * \{
- */
-#define OOKTX_CALIBRATION_ENABLE      0x01
-#define OOKTX_CALIBRATION_DISABLE     0x00
-#define OOKTX_CONFIGURATION_ENABLE    0x01
-#define OOKTX_CONFIGURATION_DISABLE   0x00
-#define OOKTX_CFG_DEFAULT             0xF6F0
-#define OOKTX_CFG_F_433MHZ            0xF000
-#define OOKTX_CFG_CX_18PF             0x0600
-#define OOKTX_CFG_P_13DB              0x00F0
-#define OOKTX_CFG_P_10DB              0x00C0
-#define OOKTX_CFG_P_7DB               0x0090
-#define OOKTX_CFG_P_3DB               0x0050
-#define OOKTX_CFG_P_0DB               0x0020
-#define OOKTX_CFG_CT_0PF              0x0000
-#define OOKTX_PREAMBULE               0xAA
-/** \} */
-
-/** \} */ // End group macro 
-// --------------------------------------------------------------- PUBLIC TYPES
-/**
- * \defgroup type Types
- * \{
- */
- 
-/**
- * @brief Click ctx object definition.
- */
-typedef struct
-{
-    // Output pins 
-
-    digital_out_t sda;
-    digital_out_t scl;
-
-} ooktx_t;
-
-/**
- * @brief Click configuration structure definition.
- */
-typedef struct
-{
-    // Additional gpio pins 
-
-    pin_name_t sda;
-    pin_name_t scl;
-
-} ooktx_cfg_t;
-
-/** \} */ // End types group
-// ----------------------------------------------- PUBLIC FUNCTION DECLARATIONS
-
-/**
- * \defgroup public_function Public function
- * \{
- */
- 
 #ifdef __cplusplus
 extern "C"{
 #endif
 
+#include "drv_digital_out.h"
+#include "drv_digital_in.h"
+
+/*!
+ * @addtogroup ooktx OOK TX Click Driver
+ * @brief API for configuring and manipulating OOK TX Click driver.
+ * @{
+ */
+
 /**
- * @brief Config Object Initialization function.
- *
- * @param cfg  Click configuration structure.
- *
- * @description This function initializes click configuration structure to init state.
- * @note All used pins will be set to unconnected state.
+ * @defgroup ooktx_cfg OOK TX Settings
+ * @brief Settings for configuration of OOK TX Click driver.
+ */
+
+/**
+ * @addtogroup ooktx_cfg
+ * @{
+ */
+
+/**
+ * @brief OOK TX default settings.
+ * @details Specified setting for default training bytes, manchester settings, data length,
+ * and communication start settings of OOK TX Click driver.
+ */
+#define OOKTX_TRAINING_BYTES      { 0xAA, 0xAA, 0xAA, 0xAA }
+#define OOKTX_MAN_MSB               0x8000
+#define OOKTX_MAN_BIT_LEN_US        2000
+#define OOKTX_MAX_DATA_LEN          255
+#define OOKTX_CALIB_ENABLE          0x01
+#define OOKTX_CALIB_DISABLE         0x00
+#define OOKTX_CFG_ENABLE            0x01
+#define OOKTX_CFG_DISABLE           0x00
+#define OOKTX_CFG_DEFAULT           0xF6F0
+#define OOKTX_CFG_F_433MHZ          0xF000
+#define OOKTX_CFG_CX_18PF           0x0600
+#define OOKTX_CFG_P_13DB            0x00F0
+#define OOKTX_CFG_P_10DB            0x00C0
+#define OOKTX_CFG_P_7DB             0x0090
+#define OOKTX_CFG_P_3DB             0x0050
+#define OOKTX_CFG_P_0DB             0x0020
+#define OOKTX_CFG_CT_0PF            0x0000
+
+/*! @} */ // ooktx_cfg
+
+/**
+ * @defgroup ooktx_map OOK TX MikroBUS Map
+ * @brief MikroBUS pin mapping of OOK TX Click driver.
+ */
+
+/**
+ * @addtogroup ooktx_map
+ * @{
+ */
+
+/**
+ * @brief MikroBUS pin mapping.
+ * @details Mapping pins of OOK TX Click to the selected MikroBUS.
+ */
+#define OOKTX_MAP_MIKROBUS( cfg, mikrobus ) \
+    cfg.sda = MIKROBUS( mikrobus, MIKROBUS_CS ); \
+    cfg.sck = MIKROBUS( mikrobus, MIKROBUS_PWM )
+
+/*! @} */ // ooktx_map
+/*! @} */ // ooktx
+
+/**
+ * @brief OOK TX Click context object.
+ * @details Context object definition of OOK TX Click driver.
+ */
+typedef struct
+{
+    digital_out_t sda;      /**< Data pin. */
+    digital_out_t sck;      /**< Clock pin. */
+
+} ooktx_t;
+
+/**
+ * @brief OOK TX Click configuration object.
+ * @details Configuration object definition of OOK TX Click driver.
+ */
+typedef struct
+{
+    pin_name_t sda;         /**< Data pin. */
+    pin_name_t sck;         /**< Clock pin. */
+
+} ooktx_cfg_t;
+
+/**
+ * @brief OOK TX Click return value data.
+ * @details Predefined enum values for driver return values.
+ */
+typedef enum
+{
+    OOKTX_OK = 0,
+    OOKTX_ERROR = -1
+
+} ooktx_return_value_t;
+
+/*!
+ * @addtogroup ooktx OOK TX Click Driver
+ * @brief API for configuring and manipulating OOK TX Click driver.
+ * @{
+ */
+
+/**
+ * @brief OOK TX configuration object setup function.
+ * @details This function initializes click configuration structure to initial
+ * values.
+ * @param[out] cfg : Click configuration structure.
+ * See #ooktx_cfg_t object definition for detailed explanation.
+ * @return Nothing.
+ * @note The all used pins will be set to unconnected state.
  */
 void ooktx_cfg_setup ( ooktx_cfg_t *cfg );
 
 /**
- * @brief Initialization function.
- * @param ooktx Click object.
- * @param cfg Click configuration structure.
- * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @brief OOK TX initialization function.
+ * @details This function initializes all necessary pins and peripherals used
+ * for this click board.
+ * @param[out] ctx : Click context object.
+ * See #ooktx_t object definition for detailed explanation.
+ * @param[in] cfg : Click configuration structure.
+ * See #ooktx_cfg_t object definition for detailed explanation.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
  */
-OOKTX_RETVAL ooktx_init ( ooktx_t *ctx, ooktx_cfg_t *cfg );
+err_t ooktx_init ( ooktx_t *ctx, ooktx_cfg_t *cfg );
 
 /**
- * @brief Communication initiation function.
- * 
- * @param ctx             Click object.
- * @param calibration     Calibration byte.
- * @param configuration   Configuration byte. 
- * @param cfg_settings    Config settings byte.
- * 
- * @description This function initiates the OOK communication.
+ * @brief OOK TX set data pin function.
+ * @details This function sets the data pin to high logic state.
+ * @param[in] ctx : Click context object.
+ * See #ooktx_t object definition for detailed explanation.
+ * @return None.
+ * @note None.
  */
-void ooktx_communication_init ( ooktx_t *ctx, uint8_t calibration, 
-                                uint8_t configuration, uint16_t cfg_settings );
-/**
- * @brief Communication stop function.
- * 
- * @param ctx   Click object.
- * 
- * @description This function stops the OOK communication.
- */
-void ooktx_communication_stop ( ooktx_t *ctx );
+void ooktx_set_data_pin ( ooktx_t *ctx );
 
 /**
- * @brief Communication transmit function.
- * 
- * @param ctx             Click object.
- * @param transmit_data   Data package byte. 
- * 
- * @description This function transmits data in the OOK communication.
+ * @brief OOK TX clear data pin function.
+ * @details This function clears the data pin to low logic state.
+ * @param[in] ctx : Click context object.
+ * See #ooktx_t object definition for detailed explanation.
+ * @return None.
+ * @note None.
  */
-void ooktx_communication_transmit ( ooktx_t *ctx, uint8_t transmit_data );
+void ooktx_clear_data_pin ( ooktx_t *ctx );
 
 /**
- * @brief Communication transmit function.
- * 
- * @param ctx             Click object.
- * @param preable_word   Preable word. 
- * @param transmit_byte   Data package byte. 
- * 
- * @description This function transmits data in the OOK communication.
+ * @brief OOK TX set clock pin function.
+ * @details This function sets the clock pin to high logic state.
+ * @param[in] ctx : Click context object.
+ * See #ooktx_t object definition for detailed explanation.
+ * @return None.
+ * @note None.
  */
-void ooktx_transmit_byte ( ooktx_t *ctx, uint16_t preable_word, uint8_t transmit_byte );
+void ooktx_set_clock_pin ( ooktx_t *ctx );
 
 /**
- * @brief Communication transmit function.
- * 
- * @param ctx             Click object.
- * @param preable_word   Preable word. 
- * @param transmit_data   Data package. 
- * @param transmit_len   Data package length. 
- * 
- * @description This function transmits data in the OOK communication.
+ * @brief OOK TX clear clock pin function.
+ * @details This function clears the clock pin to low logic state.
+ * @param[in] ctx : Click context object.
+ * See #ooktx_t object definition for detailed explanation.
+ * @return None.
+ * @note None.
  */
-void ooktx_transmit_data ( ooktx_t *ctx, uint16_t preable_word, uint8_t *transmit_data, uint8_t transmit_len );
+void ooktx_clear_clock_pin ( ooktx_t *ctx );
+
+/**
+ * @brief OOK TX start function.
+ * @details This function starts transmit with the selected settings.
+ * @param[in] ctx : Click context object.
+ * See #ooktx_t object definition for detailed explanation.
+ * @param[in] calib_en : Calibration enable flag.
+ * @param[in] cfg_en : Configuration enable flag.
+ * @param[in] cfg : Configuration word.
+ * @return None.
+ * @note None.
+ */
+void ooktx_start ( ooktx_t *ctx, uint8_t calib_en, uint8_t cfg_en, uint16_t cfg );
+
+/**
+ * @brief OOK TX stop function.
+ * @details This function stops transmit.
+ * @param[in] ctx : Click context object.
+ * See #ooktx_t object definition for detailed explanation.
+ * @param[in] calib_en : Calibration enable flag.
+ * @param[in] cfg_en : Configuration enable flag.
+ * @param[in] cfg : Configuration word.
+ * @return None.
+ * @note None.
+ */
+void ooktx_stop ( ooktx_t *ctx );
 
 #ifdef __cplusplus
 }
 #endif
-#endif  // _OOKTX_H_
+#endif // OOKTX_H
 
-/** \} */ // End public_function group
-/// \}    // End click Driver group  
-/*! @} */
-// ------------------------------------------------------------------------- END
+/*! @} */ // ooktx
+
+// ------------------------------------------------------------------------ END

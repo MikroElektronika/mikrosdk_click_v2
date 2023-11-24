@@ -11,7 +11,7 @@ endif()
 
 add_executable(example_ooktx
         main.c
-
+    
 )
 
 
@@ -25,3 +25,4 @@ target_link_libraries(example_ooktx PUBLIC MikroSDK.Log)
 add_subdirectory(lib_ooktx)
 target_link_libraries(example_ooktx PUBLIC Click.OOKTX)
 ############################ example_ooktx GENERATED CODE END ###########################
+
