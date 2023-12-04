@@ -1,0 +1,8 @@
+{
+    "name": "Charger 19 Click",
+    "description": "Charger 19 Click is a compact add-on board that contains a battery charger. This board features the nPM1100, an integrated power management IC from Nordic Semiconductor. It has a highly efficient DC/DC buck regulator with automatic selection between hysteretic and PWM modes.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","NPM1100-QDAA-R"],
+    "category" : ["Click Boards > Power management > Battery Charger"]
+}
