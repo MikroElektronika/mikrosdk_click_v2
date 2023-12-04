@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20231201](#20231201)**
 + **[20231124](#20231124)**
 + **[20231117](#20231117)**
 + **[20231110](#20231110)**
@@ -71,6 +72,19 @@
 
 ---
 ---
+---
+
+## `20231201`
+
+*Following click boards have been added:*
+
++ `Rotary W 2`
++ `Charger 19`
++ `Smart Buck 2`
++ `GNSS 6`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20231124`

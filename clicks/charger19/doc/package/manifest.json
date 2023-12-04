@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Power management > Battery Charger",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Charger 19 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.charger19",
+    "product_link": "https://www.mikroe.com/charger-19-click",
+    "short_description": "Charger 19 Click is a compact add-on board that contains a battery charger. This board features the nPM1100, an integrated power management IC from Nordic Semiconductor. It has a highly efficient DC/DC buck regulator with automatic selection between hysteretic and PWM modes.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.Charger19",
+    "subdir_name": "lib_charger19"
+}
