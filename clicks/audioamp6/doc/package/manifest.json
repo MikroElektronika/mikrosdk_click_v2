@@ -31,11 +31,12 @@
     "related_projects": [
         2763
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.AudioAmp6",
     "subdir_name": "lib_audioamp6"
 }
+
 
 
 

@@ -31,11 +31,12 @@
     "related_projects": [
         2656
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.TempHum8",
     "subdir_name": "lib_temphum8"
 }
+
 
 
 

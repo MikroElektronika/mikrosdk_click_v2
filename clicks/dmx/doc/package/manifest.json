@@ -31,8 +31,9 @@
     "related_projects": [
         2870
     ],
-    "version": "2.1.0.0",
+    "version": "2.1.0.1",
     "cmake": true,
     "alias": "Click.Dmx",
     "subdir_name": "lib_dmx"
 }
+

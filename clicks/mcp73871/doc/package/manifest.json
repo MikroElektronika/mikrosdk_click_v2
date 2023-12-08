@@ -31,11 +31,12 @@
     "related_projects": [
         2209
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Mcp73871",
     "subdir_name": "lib_mcp73871"
 }
+
 
 
 

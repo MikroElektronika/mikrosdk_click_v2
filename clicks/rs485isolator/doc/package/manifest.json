@@ -31,8 +31,9 @@
     "related_projects": [
         2501
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Rs485Isolator",
     "subdir_name": "lib_rs485isolator"
 }
+

@@ -31,9 +31,10 @@
     "related_projects": [
         3806
     ],
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.Thermostat4",
     "subdir_name": "lib_thermostat4"
 }
+
 

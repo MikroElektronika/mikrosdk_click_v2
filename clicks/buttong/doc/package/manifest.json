@@ -31,11 +31,12 @@
     "related_projects": [
         1639
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.ButtonG",
     "subdir_name": "lib_buttong"
 }
+
 
 
 

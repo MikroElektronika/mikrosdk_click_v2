@@ -31,11 +31,12 @@
     "related_projects": [
         3194
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Dac6",
     "subdir_name": "lib_dac6"
 }
+
 
 
 

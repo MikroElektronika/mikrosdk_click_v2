@@ -31,10 +31,11 @@
     "related_projects": [
         3808
     ],
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.SPIExtend",
     "subdir_name": "lib_spiextend"
 }
+
 
 

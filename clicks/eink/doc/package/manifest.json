@@ -31,9 +31,10 @@
     "related_projects": [
         2077
     ],
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.Eink",
     "subdir_name": "lib_eink"
 }
+
 

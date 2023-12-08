@@ -31,9 +31,10 @@
     "related_projects": [
         2129
     ],
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.Buzz2",
     "subdir_name": "lib_buzz2"
 }
+
 

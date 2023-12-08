@@ -31,11 +31,12 @@
     "related_projects": [
         2149
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.UT-M7-SEGR",
     "subdir_name": "lib_utm7segr"
 }
+
 
 
 

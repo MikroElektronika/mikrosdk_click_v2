@@ -31,11 +31,12 @@
     "related_projects": [
         2580
     ],
-    "version": "2.1.0.18",
+    "version": "2.1.0.19",
     "cmake": true,
     "alias": "Click.Pressure6",
     "subdir_name": "lib_pressure6"
 }
+
 
 
 

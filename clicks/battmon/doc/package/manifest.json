@@ -31,9 +31,10 @@
     "related_projects": [
         2828
     ],
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.BattMon",
     "subdir_name": "lib_battmon"
 }
+
 

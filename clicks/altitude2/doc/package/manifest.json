@@ -31,9 +31,10 @@
     "related_projects": [
         2378
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Altitude2",
     "subdir_name": "lib_altitude2"
 }
+
 

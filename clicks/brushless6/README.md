@@ -1,5 +1,6 @@
 \mainpage Main Page
  
+
 ---
 # Brushless 6 click
 
@@ -36,23 +37,32 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- Config Object Initialization function.
-> void brushless6_cfg_setup ( brushless6_cfg_t *cfg ); 
- 
-- Initialization function.
-> BRUSHLESS6_RETVAL brushless6_init ( brushless6_t *ctx, brushless6_cfg_t *cfg );
+- `brushless6_cfg_setup` Config Object Initialization function.
+```c
+void brushless6_cfg_setup ( brushless6_cfg_t *cfg ); 
+```
 
+- `brushless6_init` Initialization function.
+```c
+BRUSHLESS6_RETVAL brushless6_init ( brushless6_t *ctx, brushless6_cfg_t *cfg );
+```
 
 #### Example key functions :
 
-- Start PWM module.
-> void brushless4_pwm_start ( brushless4_t *ctx );
- 
-- Stop PWM module.
-> void brushless4_pwm_stop ( brushless4_t *ctx );
+- `brushless6_pwm_start` Start PWM module.
+```c
+void brushless6_pwm_start ( brushless6_t *ctx );
+```
 
-- Generic sets PWM duty cycle.
-> void brushless4_set_duty_cycle ( brushless4_t *ctx, pwm_data_t duty_cycle );
+- `brushless6_pwm_stop` Stop PWM module.
+```c
+void brushless6_pwm_stop ( brushless6_t *ctx );
+```
+
+- `brushless6_set_duty_cycle` Generic sets PWM duty cycle.
+```c
+void brushless6_set_duty_cycle ( brushless6_t *ctx, float duty_cycle );
+```
 
 ## Examples Description
 

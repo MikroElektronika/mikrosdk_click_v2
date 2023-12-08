@@ -31,9 +31,10 @@
     "related_projects": [
         3231
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Force2",
     "subdir_name": "lib_force2"
 }
+
 

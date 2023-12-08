@@ -31,9 +31,10 @@
     "related_projects": [
         3776
     ],
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.NBIoT2",
     "subdir_name": "lib_nbiot2"
 }
+
 

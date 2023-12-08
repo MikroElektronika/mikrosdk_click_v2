@@ -31,9 +31,10 @@
         2563
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.IRGrid2",
     "subdir_name": "lib_irgrid2"
 }
+
 

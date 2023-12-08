@@ -31,11 +31,12 @@
     "related_projects": [
         3766
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Force3",
     "subdir_name": "lib_force3"
 }
+
 
 
 

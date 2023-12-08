@@ -31,11 +31,12 @@
     "related_projects": [
         1900
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.UV2",
     "subdir_name": "lib_uv2"
 }
+
 
 
 

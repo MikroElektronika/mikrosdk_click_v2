@@ -31,9 +31,10 @@
     "related_projects": [
         4092
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.SPIIsolator2",
     "subdir_name": "lib_spiisolator2"
 }
+
 

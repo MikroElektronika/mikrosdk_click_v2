@@ -35,6 +35,16 @@
 #ifndef EINK290INCH_H
 #define EINK290INCH_H
 
+#include "mikrosdk_version.h"
+
+#ifdef __GNUC__
+#if mikroSDK_GET_VERSION < 20800ul
+#include "rcu_delays.h"
+#else
+#include "delays.h"
+#endif
+#endif
+
 #include "drv_digital_out.h"
 #include "drv_digital_in.h"
 #include "drv_spi_master.h"

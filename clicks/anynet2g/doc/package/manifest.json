@@ -31,11 +31,12 @@
         2234
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.0",
+    "version": "2.1.0.1",
     "cmake": true,
     "alias": "Click.AnyNet2G",
     "subdir_name": "lib_anynet2g"
 }
+
 
 
 

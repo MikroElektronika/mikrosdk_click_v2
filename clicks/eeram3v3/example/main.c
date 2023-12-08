@@ -74,12 +74,16 @@ void application_task ( void ){
     log_info( &logger, "Data read: %s", rd_data );
     Delay_ms( 1000 );
 }
-void main ( void ) {
+int main ( void ) 
+{
     application_init( );
-
-    for ( ; ; ) {
+    
+    for ( ; ; ) 
+    {
         application_task( );
     }
+
+    return 0;
 }
 
 // ------------------------------------------------------------------------ END

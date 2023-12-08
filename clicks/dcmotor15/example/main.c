@@ -98,14 +98,16 @@ void application_task ( void )
     display_current ( &dcmotor15, IDLE_PERIOD );
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 // ------------------------------------------------------------------------ END

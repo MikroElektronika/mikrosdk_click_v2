@@ -31,9 +31,10 @@
     "related_projects": [
         1938
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.3gSara",
     "subdir_name": "lib_c3gsara"
 }
+
 

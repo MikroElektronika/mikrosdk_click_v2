@@ -31,11 +31,12 @@
     "related_projects": [
         2943
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Rtc10",
     "subdir_name": "lib_rtc10"
 }
+
 
 
 

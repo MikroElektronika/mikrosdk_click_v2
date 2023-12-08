@@ -28,8 +28,9 @@
     "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.WaterDetect2",
     "subdir_name": "lib_waterdetect2"
 }
+

@@ -31,11 +31,12 @@
         1212
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.GSM3",
     "subdir_name": "lib_gsm3"
 }
+
 
 
 

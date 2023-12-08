@@ -31,10 +31,11 @@
     "related_projects": [
         2414
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Vreg2",
     "subdir_name": "lib_vreg2"
 }
+
 
 

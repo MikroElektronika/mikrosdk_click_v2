@@ -142,14 +142,16 @@ void application_task ( void )
     log_printf( &logger, "---------------------------------\r\n\n" );
 }
 
-void main ( void )
+int main ( void ) 
 {
     application_init( );
-
-    for ( ; ; )
+    
+    for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static void fingerprint4_error_check ( char *message, err_t error_flag )

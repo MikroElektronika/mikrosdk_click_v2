@@ -227,14 +227,16 @@ void application_task ( void )
     rn4678_process( PROCESS_LOG_RSP );
 }
 
-void main ( void )
+int main ( void ) 
 {
     application_init( );
-
-    for ( ; ; )
+    
+    for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 

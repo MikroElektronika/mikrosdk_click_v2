@@ -75,14 +75,16 @@ void application_task ( void )
     Delay_ms( 1000 );
 }
 
-void main ( void )
+int main ( void ) 
 {
     application_init( );
-
-    for ( ; ; )
+    
+    for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 void spiisolator6_get_accel22_device_id ( spiisolator6_t *ctx )

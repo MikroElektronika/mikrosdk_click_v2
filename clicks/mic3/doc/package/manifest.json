@@ -31,9 +31,10 @@
         3748
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.MIC3",
     "subdir_name": "lib_mic3"
 }
+
 

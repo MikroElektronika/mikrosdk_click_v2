@@ -28,9 +28,10 @@
     "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.I2cToCan",
     "subdir_name": "lib_i2ctocan"
 }
+
 

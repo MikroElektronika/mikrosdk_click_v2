@@ -31,11 +31,12 @@
     "related_projects": [
         2553
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.CapSlider2",
     "subdir_name": "lib_capslider2"
 }
+
 
 
 

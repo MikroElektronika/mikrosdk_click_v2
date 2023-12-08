@@ -31,9 +31,10 @@
         3281
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.I2CExtend",
     "subdir_name": "lib_i2cextend"
 }
+
 

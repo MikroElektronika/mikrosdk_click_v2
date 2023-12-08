@@ -31,9 +31,10 @@
     "related_projects": [
         2705
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Rtc8",
     "subdir_name": "lib_rtc8"
 }
+
 

@@ -98,14 +98,16 @@ void application_task ( void )
     pwm_duty += pwm_duty_step;
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 // ------------------------------------------------------------------------ END

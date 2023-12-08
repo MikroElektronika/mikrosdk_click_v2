@@ -31,9 +31,10 @@
     "related_projects": [
         3829
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Ft",
     "subdir_name": "lib_ft"
 }
+
 

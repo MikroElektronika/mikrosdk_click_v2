@@ -146,12 +146,16 @@ void application_task ( void ) {
     dtmfgenerator_transmit_out_tone( &dtmfgenerator, DTMFGENERATOR_OUT_TONE_STOP, signal_duration );
  }
 
-void main ( void ) {
+int main ( void ) 
+{
     application_init( );
-
-    for ( ; ; ) {
+    
+    for ( ; ; ) 
+    {
         application_task( );
     }
+
+    return 0;
 }
 
 // ------------------------------------------------------------------------ END

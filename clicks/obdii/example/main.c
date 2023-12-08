@@ -166,14 +166,16 @@ void application_task ( void )
     Delay_ms ( 1000 );
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static void obdii_clear_app_buf ( void ) 

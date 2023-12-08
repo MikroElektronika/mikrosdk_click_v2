@@ -31,11 +31,12 @@
     "related_projects": [
         3263
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.5gNbIot",
     "subdir_name": "lib_c5gnbiot"
 }
+
 
 
 

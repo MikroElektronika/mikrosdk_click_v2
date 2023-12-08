@@ -31,11 +31,12 @@
     "related_projects": [
         1804
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.CapExtend",
     "subdir_name": "lib_capextend"
 }
+
 
 
 

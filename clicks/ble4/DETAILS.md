@@ -138,17 +138,7 @@ void application_init ( void )
 void application_task ( void )
 {
     ble4_process( );
-}
-
-void main ( void )
-{
-    application_init( );
-
-    for ( ; ; )
-    {
-        application_task( );
-    }
-}  
+} 
 
 ```
 

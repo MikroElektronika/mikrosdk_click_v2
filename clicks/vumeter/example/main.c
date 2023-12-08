@@ -65,14 +65,16 @@ void application_task ( void )
     log_printf( &logger, " VU level: %.3f VU\r\n", vumeter_calculate_vu_level ( &vumeter, 100 ) );
 }
 
-void main ( void )
+int main ( void ) 
 {
     application_init( );
-
-    for ( ; ; )
+    
+    for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 // ------------------------------------------------------------------------ END

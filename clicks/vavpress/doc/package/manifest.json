@@ -28,9 +28,11 @@
     "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.VavPress",
     "subdir_name": "lib_vavpress"
 }
+
+
 

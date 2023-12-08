@@ -127,14 +127,16 @@ void application_task ( void )
     log_printf( &logger, "\n");
 }
 
-void main ( void )
+int main ( void ) 
 {
     application_init( );
-
-    for ( ; ; )
+    
+    for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 

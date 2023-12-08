@@ -31,10 +31,11 @@
     "related_projects": [
         2135
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.7SegRgb",
     "subdir_name": "lib_c7segrgb"
 }
+
 
 

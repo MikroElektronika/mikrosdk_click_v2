@@ -174,14 +174,16 @@ void application_task ( void )
     search_finger( &fingerprint3 );
 }
 
-void main ( void )
+int main ( void ) 
 {
     application_init( );
-
-    for ( ; ; )
+    
+    for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static void display_error ( uint8_t *message )

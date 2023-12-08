@@ -31,9 +31,10 @@
     "related_projects": [
         2858
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Wifi9",
     "subdir_name": "lib_wifi9"
 }
+
 

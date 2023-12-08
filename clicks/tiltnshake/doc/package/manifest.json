@@ -31,9 +31,10 @@
     "related_projects": [
         1515
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.TiltNshake",
     "subdir_name": "lib_tiltnshake"
 }
+
 

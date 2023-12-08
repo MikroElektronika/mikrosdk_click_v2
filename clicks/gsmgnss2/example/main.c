@@ -290,14 +290,16 @@ void application_task ( void )
     }
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static void gsmgnss2_clear_app_buf ( void )

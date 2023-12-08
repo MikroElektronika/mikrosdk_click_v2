@@ -163,14 +163,16 @@ void application_task ( void ) {
     }
 }
 
-void main ( void ) {
-    
+int main ( void ) 
+{
     application_init( );
-
-    for ( ; ; ) {
-        
+    
+    for ( ; ; ) 
+    {
         application_task( );
     }
+
+    return 0;
 }
 
 void spiextend_accel14_get_axis ( uint8_t axis_out_reg ) {

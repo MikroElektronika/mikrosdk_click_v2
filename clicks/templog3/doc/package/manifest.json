@@ -31,11 +31,12 @@
     "related_projects": [
         2683
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.TempLog3",
     "subdir_name": "lib_templog3"
 }
+
 
 
 

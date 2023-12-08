@@ -132,14 +132,16 @@ void application_task ( void )
 #endif
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static void ata6571_clear_app_buf ( void ) 

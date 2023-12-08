@@ -31,11 +31,12 @@
     "related_projects": [
         780
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Color",
     "subdir_name": "lib_color"
 }
+
 
 
 

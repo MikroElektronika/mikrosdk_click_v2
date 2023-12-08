@@ -31,11 +31,12 @@
     "related_projects": [
         2365
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.EERAM5V",
     "subdir_name": "lib_eeram5v"
 }
+
 
 
 

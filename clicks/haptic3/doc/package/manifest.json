@@ -28,9 +28,10 @@
     "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "alias": "Click.HAPTIC3",
     "cmake": true,
     "subdir_name": "lib_haptic3"
 }
+
 

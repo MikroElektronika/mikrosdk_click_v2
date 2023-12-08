@@ -119,14 +119,16 @@ void application_task ( void )
     
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 void boost8_list_of_commands( void )

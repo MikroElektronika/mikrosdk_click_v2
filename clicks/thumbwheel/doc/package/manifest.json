@@ -31,11 +31,12 @@
     "related_projects": [
         1869
     ],
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.Thumbwheel",
     "subdir_name": "lib_thumbwheel"
 }
+
 
 
 

@@ -147,14 +147,16 @@ void application_task ( void )
     Delay_ms( 100 );
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static void battman3_charge_status ( void )

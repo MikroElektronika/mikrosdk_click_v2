@@ -31,9 +31,10 @@
     "related_projects": [
         3876
     ],
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.ISO9141",
     "subdir_name": "lib_iso9141"
 }
+
 

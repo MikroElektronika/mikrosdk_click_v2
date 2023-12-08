@@ -31,11 +31,12 @@
     "related_projects": [
         3283
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Powerbank2",
     "subdir_name": "lib_powerbank2"
 }
+
 
 
 
