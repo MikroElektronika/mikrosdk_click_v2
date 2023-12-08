@@ -103,14 +103,16 @@ void application_task ( ) {
     Delay_ms( 100 );
 }
 
-void main ( ) {
-    
+int main ( void ) 
+{
     application_init( );
-
-    for ( ; ; )
+    
+    for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 // ------------------------------------------------------------------------ END

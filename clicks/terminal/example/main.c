@@ -117,14 +117,16 @@ void application_task ( )
     all_off( );
 }
 
-void main ( )
+int main ( void ) 
 {
     application_init( );
-
-    for ( ; ; )
+    
+    for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 // ------------------------------------------------------------------------ END

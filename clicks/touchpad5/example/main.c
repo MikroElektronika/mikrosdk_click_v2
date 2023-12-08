@@ -202,14 +202,16 @@ void application_task ( void )
     }
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
   
 bool touchpad5_get_snap_sample( touchpad5_t *ctx, uint16_t *snap_data )

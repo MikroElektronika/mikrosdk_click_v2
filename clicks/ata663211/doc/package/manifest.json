@@ -31,10 +31,11 @@
     "related_projects": [
         1960
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Ata663211",
     "subdir_name": "lib_ata663211"
 }
+
 
 

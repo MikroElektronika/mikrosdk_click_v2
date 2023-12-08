@@ -147,16 +147,6 @@ void application_task ( void )
     log_info( &logger, "---- Input mute/unmute control test done. ----" );
 }
 
-void main ( void )
-{
-    application_init( );
-
-    for ( ; ; )
-    {
-        application_task( );
-    }
-} 
-
 ```
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.

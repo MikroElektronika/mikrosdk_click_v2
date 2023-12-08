@@ -31,11 +31,12 @@
     "related_projects": [
         2162
     ],
-    "version": "2.1.0.20",
+    "version": "2.1.0.21",
     "cmake": true,
     "alias": "Click.16x12",
     "subdir_name": "lib_c16x12"
 }
+
 
 
 

@@ -31,9 +31,10 @@
     "related_projects": [
         2214
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.Proximity3",
     "subdir_name": "lib_proximity3"
 }
+
 

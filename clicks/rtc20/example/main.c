@@ -113,14 +113,16 @@ void application_task ( void )
     Delay_ms( 1 );
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static void display_day_of_week ( void ) 

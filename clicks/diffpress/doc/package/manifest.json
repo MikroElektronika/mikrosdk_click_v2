@@ -31,9 +31,10 @@
     "related_projects": [
         2665
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.DiffPress",
     "subdir_name": "lib_diffpress"
 }
+
 

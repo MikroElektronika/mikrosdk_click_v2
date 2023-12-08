@@ -28,9 +28,10 @@
     "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "alias": "Click.Balancer4",
     "cmake": true,
     "subdir_name": "lib_balancer4"
 }
+
 

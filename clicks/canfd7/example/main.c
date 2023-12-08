@@ -100,14 +100,16 @@ void application_task ( void )
 #endif
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static err_t canfd7_process ( canfd7_t *ctx ) 

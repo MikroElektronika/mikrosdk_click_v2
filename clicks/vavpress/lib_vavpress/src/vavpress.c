@@ -108,13 +108,14 @@ err_t vavpress_get_readout_data ( vavpress_t *ctx, int16_t *press_data, int16_t 
     tx_buf[ 0 ] = VAVPRESS_SET_CMD_START_PRESSURE_CONVERSION;
 
     err_t error_flag = i2c_master_write( &ctx->i2c, tx_buf, 1 );
+    Delay_100ms ( );
     error_flag |= i2c_master_read( &ctx->i2c, rx_buf, 4 );
     
     tmp = rx_buf[ 1 ];
-    tmp <<= 9;
+    tmp <<= 8;
     tmp |= rx_buf[ 0 ];
     
-    *press_data = tmp >> 1;
+    *press_data = tmp;
     
     tmp = rx_buf[ 3 ];
     tmp <<= 8;

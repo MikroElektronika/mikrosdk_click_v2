@@ -30,9 +30,10 @@
     "related_projects": [
         2158
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Angle3",
     "subdir_name": "lib_angle3"
 }
+
 

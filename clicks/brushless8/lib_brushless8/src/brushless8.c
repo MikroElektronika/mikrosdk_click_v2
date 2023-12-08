@@ -42,7 +42,7 @@ void brushless8_cfg_setup ( brushless8_cfg_t *cfg )
 
     cfg->dev_pwm_freq = 18000;
 
-    cfg->resolution = ANALOG_IN_RESOLUTION_12_BIT;
+    cfg->resolution = ANALOG_IN_RESOLUTION_DEFAULT;
     cfg->vref       = 2.5;
 
     /* Sets PWM mode by default. */

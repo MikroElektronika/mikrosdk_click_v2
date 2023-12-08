@@ -108,12 +108,16 @@ void application_task ( void ) {
     hbridge6_pwm_start( &hbridge6 );
 }
 
-void main ( void ) {
+int main ( void ) 
+{
     application_init( );
-
-    for ( ; ; ) {
+    
+    for ( ; ; ) 
+    {
         application_task( );
     }
+
+    return 0;
 }
 
 // ------------------------------------------------------------------------ END

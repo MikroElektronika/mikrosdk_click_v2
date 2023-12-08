@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20231208](#20231208)**
 + **[20231201](#20231201)**
 + **[20231124](#20231124)**
 + **[20231117](#20231117)**
@@ -72,6 +73,21 @@
 
 ---
 ---
+---
+
+## `20231208`
+
+*Following click boards have been added:*
+
++ `IoT ExpressLink 2`
++ `Thunder EMU`
++ `3D Hall 4`
++ `H-Bridge 14`
+
+*Added main return and delays include to all click boards.*
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20231201`

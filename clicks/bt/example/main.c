@@ -135,14 +135,16 @@ void application_task ( void )
     bt_event_handler( &bt );
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static void bt_event_handler ( bt_t *ctx )

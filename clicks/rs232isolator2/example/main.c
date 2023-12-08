@@ -140,12 +140,16 @@ void application_task ( void ) {
     #endif
 }
 
-void main ( void ) {
+int main ( void ) 
+{
     application_init( );
-
-    for ( ; ; ) {
+    
+    for ( ; ; ) 
+    {
         application_task( );
     }
+
+    return 0;
 }
 
 static void rs232isolator2_clear_app_buf ( void ) {

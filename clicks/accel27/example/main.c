@@ -95,14 +95,16 @@ void application_task ( void )
     log_printf( &logger, " Z: %.1f g\r\n\n", axes.z );
 }
 
-void main ( void )
+int main ( void ) 
 {
     application_init( );
-
-    for ( ; ; )
+    
+    for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 // ------------------------------------------------------------------------ END

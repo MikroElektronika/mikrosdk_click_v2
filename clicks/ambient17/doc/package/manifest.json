@@ -28,11 +28,12 @@
     "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "alias": "Click.Ambient17",
     "cmake": true,
     "subdir_name": "lib_ambient17"
 }
+
 
 
 

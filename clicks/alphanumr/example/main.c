@@ -70,12 +70,16 @@ void application_task ( void ) {
     alphanumr_write_number( &alphanumr, 3,  4 );
 }
 
-void main ( void ) {
+int main ( void ) 
+{
     application_init( );
-
-    for ( ; ; ) {
+    
+    for ( ; ; ) 
+    {
         application_task( );
     }
+
+    return 0;
 }
 
 // ------------------------------------------------------------------------ END

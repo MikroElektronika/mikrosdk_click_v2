@@ -31,10 +31,11 @@
     "related_projects": [
         1488
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Relay2",
     "subdir_name": "lib_relay2"
 }
+
 
 

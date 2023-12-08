@@ -31,10 +31,11 @@
     "related_projects": [
         1884
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Ammeter",
     "subdir_name": "lib_ammeter"
 }
+
 
 

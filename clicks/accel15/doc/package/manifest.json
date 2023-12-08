@@ -28,9 +28,10 @@
     "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Accel15",
     "subdir_name": "lib_accel15"
 }
+
 

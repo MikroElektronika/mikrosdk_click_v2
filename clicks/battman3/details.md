@@ -186,16 +186,6 @@ void application_task ( void )
     Delay_ms( 100 );
 }
 
-void main ( void ) 
-{
-    application_init( );
-
-    for ( ; ; ) 
-    {
-        application_task( );
-    }
-}
-
 ```
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).

@@ -72,14 +72,16 @@ void application_task ( void )
     }
 }
 
-void main ( void )  
+int main ( void ) 
 {
-    application_init( );    
+    application_init( );
     
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 // ------------------------------------------------------------------------ END

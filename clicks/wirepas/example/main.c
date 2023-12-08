@@ -224,14 +224,16 @@ void application_task ( void )
 #endif
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 err_t wirepas_get_resp ( wirepas_t *ctx )

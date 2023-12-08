@@ -128,14 +128,16 @@ void application_task ( void )
     time_cnt++;
 }
 
-void main ( void )
+int main ( void ) 
 {
     application_init( );
-
-    for ( ; ; )
+    
+    for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 

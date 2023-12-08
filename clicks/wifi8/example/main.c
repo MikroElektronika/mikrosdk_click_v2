@@ -176,14 +176,16 @@ void application_task(void)
     }
 }
 
-void main(void)
+int main ( void ) 
 {
-    application_init();
-
-    for (;;)
+    application_init( );
+    
+    for ( ; ; ) 
     {
-        application_task();
+        application_task( );
     }
+
+    return 0;
 }
 
 static void wifi_cb(uint8_t u8_msg_type, void *pv_msg)

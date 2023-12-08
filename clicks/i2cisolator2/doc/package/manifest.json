@@ -31,8 +31,9 @@
     "related_projects": [
         2928
     ],
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.I2CIsolator2",
     "subdir_name": "lib_i2cisolator2"
 }
+

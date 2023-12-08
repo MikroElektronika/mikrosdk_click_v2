@@ -31,9 +31,10 @@
     "related_projects": [
         1589
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Shake2Wake",
     "subdir_name": "lib_shake2wake"
 }
+
 

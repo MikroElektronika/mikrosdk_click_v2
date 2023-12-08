@@ -89,14 +89,16 @@ void application_task ( void )
     dcmotor27_pwm_start( &dcmotor27 );
 }
 
-void main ( void )  
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 // ------------------------------------------------------------------------ END

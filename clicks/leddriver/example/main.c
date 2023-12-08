@@ -92,14 +92,16 @@ void application_task ( void )
     duty_cnt += duty_inc;
 }
 
-void main ( void )
+int main ( void ) 
 {
     application_init( );
-
-    for ( ; ; )
+    
+    for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 

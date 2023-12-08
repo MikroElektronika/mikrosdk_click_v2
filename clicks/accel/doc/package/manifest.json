@@ -31,9 +31,10 @@
     "related_projects": [
         371
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.Accel",
     "subdir_name": "lib_accel"
 }
+
 

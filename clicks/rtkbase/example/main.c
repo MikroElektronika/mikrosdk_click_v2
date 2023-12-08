@@ -93,14 +93,16 @@ void application_task ( void )
     rtkbase_clear_app_buf( );
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static void rtkbase_clear_app_buf ( void ) 

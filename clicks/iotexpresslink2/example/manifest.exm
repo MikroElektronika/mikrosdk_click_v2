@@ -1,0 +1,8 @@
+{
+    "name": "IoT ExpressLink 2 Click",
+    "description": "IoT ExpressLink 2 Click is a compact add-on board that allows users to connect to IoT ExpressLink services easily and securely interact with cloud applications and other services. This board features the SARA-R510AWS, an LTE-M AWS IoT EsxpressLink module from u-blox. It supports a comprehensive set of 3GPP Rel. 14 features that are relevant for IoT applications, like improvements to power consumption, coverage, data rate, mobility, and positioning. They are 5G-ready, meaning customers will be able to (software) upgrade their deployed devices once 5G LTE has been fully rolled out by mobile operators, greatly improving end-product scalability and lifetime.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
+    "hw" : ["click","SARA-R510AWS-01B"],
+    "category" : ["Click Boards > Wireless connectivity > LTE IoT"]
+}

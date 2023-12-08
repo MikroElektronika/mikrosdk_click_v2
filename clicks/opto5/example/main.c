@@ -65,12 +65,16 @@ void application_task ( void ) {
     opto5_pin_toggle( &opto5 );
 }
 
-void main ( void ) {
+int main ( void ) 
+{
     application_init( );
-
-    for ( ; ; ) {
+    
+    for ( ; ; ) 
+    {
         application_task( );
     }
+
+    return 0;
 }
 
 // ------------------------------------------------------------------------ END

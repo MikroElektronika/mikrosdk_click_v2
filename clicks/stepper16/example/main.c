@@ -118,14 +118,16 @@ void application_task ( void )
     Delay_ms( 2000 );
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static void check_error ( stepper16_t *ctx )

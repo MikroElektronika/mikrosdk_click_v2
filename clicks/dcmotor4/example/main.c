@@ -111,14 +111,16 @@ void application_task ( )
     dcmotor4_disable_motor ( &dcmotor4 );
 }
 
-void main ( )
+int main ( void ) 
 {
     application_init( );
-
-    for ( ; ; )
+    
+    for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 

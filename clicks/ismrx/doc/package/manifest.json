@@ -28,9 +28,10 @@
     "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.ISMRX",
     "subdir_name": "lib_ismrx"
 }
+
 

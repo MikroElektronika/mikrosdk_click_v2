@@ -100,14 +100,16 @@ void application_task ( void )
     duty_pct += duty_step;
 }
 
-void main ( void )
+int main ( void ) 
 {
     application_init( );
-
-    for ( ; ; )
+    
+    for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static void dcmotor24_display_diag ( uint16_t diag )

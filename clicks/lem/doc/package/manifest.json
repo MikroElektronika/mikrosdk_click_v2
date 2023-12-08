@@ -31,11 +31,12 @@
     "related_projects": [
         2061
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Lem",
     "subdir_name": "lib_lem"
 }
+
 
 
 

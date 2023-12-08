@@ -104,12 +104,16 @@ void application_task ( void ) {
     oledw_stop_scroll( &oledw );
 }
 
-void main ( void ) {
+int main ( void ) 
+{
     application_init( );
-
-    for ( ; ; ) {
+    
+    for ( ; ; ) 
+    {
         application_task( );
     }
+
+    return 0;
 }
 
 // ------------------------------------------------------------------------ END

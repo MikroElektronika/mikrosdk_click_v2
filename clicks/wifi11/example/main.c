@@ -209,14 +209,16 @@ void application_task ( void )
     wifi11_log_app_buf( );
 }
 
-void main ( void )
+int main ( void ) 
 {
     application_init( );
-
-    for ( ; ; )
+    
+    for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static void wifi11_clear_app_buf ( void )

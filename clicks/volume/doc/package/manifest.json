@@ -28,11 +28,12 @@
     "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Volume",
     "subdir_name": "lib_volume"
 }
+
 
 
 

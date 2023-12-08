@@ -31,11 +31,12 @@
     "related_projects": [
         4110
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.I2CIsolator3",
     "subdir_name": "lib_i2cisolator3"
 }
+
 
 
 

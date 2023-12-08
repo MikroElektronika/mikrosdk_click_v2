@@ -258,14 +258,16 @@ void application_task ( void )
     }
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static void g2c3g_clear_app_buf ( void ) 

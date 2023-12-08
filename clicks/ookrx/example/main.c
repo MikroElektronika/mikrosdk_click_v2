@@ -147,14 +147,16 @@ void application_task ( void )
     Delay_ms ( 100 );
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static void ookrx_wait_ready ( ookrx_t *ctx )

@@ -31,10 +31,11 @@
     "related_projects": [
         242
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.Bee",
     "subdir_name": "lib_bee"
 }
+
 
 

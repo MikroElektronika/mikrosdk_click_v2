@@ -31,10 +31,11 @@
     "related_projects": [
         2628
     ],
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.G2C",
     "subdir_name": "lib_g2c"
 }
+
 
 

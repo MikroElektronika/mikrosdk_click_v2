@@ -61,14 +61,16 @@ void application_task ( void )
     log_printf( &logger, " Freq %.2f Hz \n\r", freq_val );
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 // ------------------------------------------------------------------------ END

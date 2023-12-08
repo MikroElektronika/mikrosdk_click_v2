@@ -98,14 +98,16 @@ void application_task ( void )
     Delay_ms ( 3000 );
 }
 
-void main ( void )
+int main ( void ) 
 {
     application_init( );
-
-    for ( ; ; )
+    
+    for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static void hbridge11_check_fault ( void )

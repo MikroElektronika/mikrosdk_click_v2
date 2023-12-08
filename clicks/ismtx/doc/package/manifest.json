@@ -31,9 +31,10 @@
     "related_projects": [
         3834
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.ISMTX",
     "subdir_name": "lib_ismtx"
 }
+
 

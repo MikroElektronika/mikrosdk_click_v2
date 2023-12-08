@@ -31,9 +31,10 @@
     "related_projects": [
         3215
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.AdSwio2",
     "subdir_name": "lib_adswio2"
 }
+
 

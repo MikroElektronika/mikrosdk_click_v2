@@ -31,11 +31,12 @@
     "related_projects": [
         1149
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Mpu9Dof",
     "subdir_name": "lib_mpu9dof"
 }
+
 
 
 

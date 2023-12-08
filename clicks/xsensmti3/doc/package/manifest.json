@@ -31,8 +31,9 @@
         3780
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.XSENSMTi3",
     "subdir_name": "lib_xsensmti3"
 }
+

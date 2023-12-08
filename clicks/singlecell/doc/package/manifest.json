@@ -31,9 +31,10 @@
     "related_projects": [
         2922
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.SingleCell",
     "subdir_name": "lib_singlecell"
 }
+
 

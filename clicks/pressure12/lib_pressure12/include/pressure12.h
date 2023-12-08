@@ -35,6 +35,16 @@
 #ifndef PRESSURE12_H
 #define PRESSURE12_H
 
+#include "mikrosdk_version.h"
+
+#ifdef __GNUC__
+#if mikroSDK_GET_VERSION < 20800ul
+#include "rcu_delays.h"
+#else
+#include "delays.h"
+#endif
+#endif
+
 #include "drv_analog_in.h"
 
 // -------------------------------------------------------------- PUBLIC MACROS

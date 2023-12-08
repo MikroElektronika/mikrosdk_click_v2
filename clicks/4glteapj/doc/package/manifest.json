@@ -28,10 +28,11 @@
     "supported_compiler": "mikroC AI|GCC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.4GLTEAPJ",
     "subdir_name": "lib_c4glteapj"
 }
+
 
 

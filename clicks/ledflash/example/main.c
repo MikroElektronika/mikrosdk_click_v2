@@ -89,14 +89,16 @@ void application_task (  )
     log_printf( &logger, "----------------------------------\r\n" );
 }
 
-void main ( void )
+int main ( void ) 
 {
     application_init( );
-
-    for ( ; ; )
+    
+    for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 // ------------------------------------------------------------------------ END

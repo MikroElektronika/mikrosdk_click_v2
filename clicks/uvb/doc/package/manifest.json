@@ -31,11 +31,12 @@
         3768
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.UVB",
     "subdir_name": "lib_uvb"
 }
+
 
 
 

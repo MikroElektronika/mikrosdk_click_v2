@@ -122,14 +122,16 @@ void application_task ( void )
     Delay_ms ( 3000 );
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static void ooktx_send_data ( ooktx_t *ctx, uint16_t preamble, uint8_t *data_in, uint8_t len )

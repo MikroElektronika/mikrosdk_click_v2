@@ -31,11 +31,12 @@
     "related_projects": [
         2196
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Boost",
     "subdir_name": "lib_boost"
 }
+
 
 
 

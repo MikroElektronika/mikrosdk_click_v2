@@ -31,11 +31,12 @@
     "related_projects": [
         1904
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.DcMotor3",
     "subdir_name": "lib_dcmotor3"
 }
+
 
 
 

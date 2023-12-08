@@ -31,9 +31,10 @@
     "related_projects": [
         3229
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.HeartRate2",
     "subdir_name": "lib_heartrate2"
 }
+
 

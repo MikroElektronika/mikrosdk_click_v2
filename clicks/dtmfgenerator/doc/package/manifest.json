@@ -31,11 +31,12 @@
         3883
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.DTMFGenerator",
     "subdir_name": "lib_dtmfgenerator"
 }
+
 
 
 

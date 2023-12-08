@@ -31,10 +31,11 @@
     "related_projects": [
         2356
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Spectral3",
     "subdir_name": "lib_spectral3"
 }
+
 
 

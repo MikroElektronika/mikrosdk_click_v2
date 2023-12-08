@@ -104,14 +104,16 @@ void application_task ( void )
     Delay_ms ( 1000 );
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static uint8_t *rtc21_get_day_of_week_name ( uint8_t day_of_week )

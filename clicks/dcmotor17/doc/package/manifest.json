@@ -28,11 +28,12 @@
     "supported_compiler": "mikroC AI|GCC",
     "_type": "mikroSDK Library",
     "type": "Library",
-    "version": "2.1.0.29",
+    "version": "2.1.0.30",
     "cmake": true,
     "alias": "Click.DcMotor17",
     "subdir_name": "lib_dcmotor17"
 }
+
 
 
 

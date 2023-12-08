@@ -31,9 +31,10 @@
     "related_projects": [
         1878
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.Noise",
     "subdir_name": "lib_noise"
 }
+
 

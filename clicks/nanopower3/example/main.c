@@ -83,14 +83,16 @@ void application_task ( void )
     }
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static void print_selected_output_level ( uint8_t sel_level )

@@ -185,14 +185,16 @@ void application_task ( void )
     }
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 static err_t c8800retro_select_demo_example( c8800retro_t *ctx )

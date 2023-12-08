@@ -31,9 +31,10 @@
         1943
     ],
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.NFC",
     "subdir_name": "lib_nfc"
 }
+
 

@@ -31,11 +31,12 @@
     "related_projects": [
         3803
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Expand5",
     "subdir_name": "lib_expand5"
 }
+
 
 
 

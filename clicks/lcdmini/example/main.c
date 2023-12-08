@@ -94,14 +94,16 @@ void application_task ( void )
     lcdmini_send_cmd( &lcdmini, LCDMINI_SHIFT_LEFT ); 
 }
 
-void main ( void )
+int main ( void ) 
 {
     application_init( );
-
-    for ( ; ; )
+    
+    for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 // ------------------------------------------------------------------------ END

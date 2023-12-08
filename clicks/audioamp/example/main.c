@@ -89,14 +89,16 @@ void application_task ( void )
     log_info( &logger, "---- Input mute/unmute control test done. ----" );
 }
 
-void main ( void )
+int main ( void ) 
 {
     application_init( );
-
-    for ( ; ; )
+    
+    for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 // ------------------------------------------------------------------------ END

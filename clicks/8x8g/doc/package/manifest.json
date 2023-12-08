@@ -31,11 +31,12 @@
     "related_projects": [
         2322
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.8x8G",
     "subdir_name": "lib_c8x8g"
 }
+
 
 
 

@@ -31,10 +31,11 @@
     "related_projects": [
         596
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Current",
     "subdir_name": "lib_current"
 }
+
 
 

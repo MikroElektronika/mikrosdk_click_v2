@@ -63,14 +63,16 @@ void application_task ( )
     Delay_1sec( );
 }
 
-void main ( )
+int main ( void ) 
 {
     application_init( );
-
-    for ( ; ; )
+    
+    for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 // ------------------------------------------------------------------------ END

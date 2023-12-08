@@ -122,14 +122,16 @@ void application_task ( void )
     Delay_ms( 6000 );
 }
 
-void main ( void ) 
+int main ( void ) 
 {
     application_init( );
-
+    
     for ( ; ; ) 
     {
         application_task( );
     }
+
+    return 0;
 }
 
 // First pass: writing zero values into eeprom memory and reading them back

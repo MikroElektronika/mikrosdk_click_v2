@@ -31,11 +31,12 @@
     "related_projects": [
         2331
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Mcp16331Inv",
     "subdir_name": "lib_mcp16331inv"
 }
+
 
 
 

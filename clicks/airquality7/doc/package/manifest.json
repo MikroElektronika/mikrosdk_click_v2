@@ -31,10 +31,11 @@
     "related_projects": [
         3817
     ],
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.AirQuality7",
     "subdir_name": "lib_airquality7"
 }
+
 
 

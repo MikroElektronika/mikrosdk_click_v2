@@ -31,8 +31,9 @@
         2164
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.0",
+    "version": "2.1.0.1",
     "cmake": true,
     "alias": "Click.MCP2517FD",
     "subdir_name": "lib_mcp2517fd"
 }
+
