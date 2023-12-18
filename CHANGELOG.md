@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20231215](#20231215)**
 + **[20231208](#20231208)**
 + **[20231201](#20231201)**
 + **[20231124](#20231124)**
@@ -73,6 +74,22 @@
 
 ---
 ---
+---
+
+## `20231215`
+
+*Following click boards have been added:*
+
++ `UWB 3`
++ `Rotary B 2`
++ `Current Limit 9`
++ `AlphaNum G 2`
++ `I2C Isolator 7`
+
+*Bug fixes for 44 different click boards.*
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20231208`

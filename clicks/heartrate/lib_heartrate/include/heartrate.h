@@ -442,7 +442,7 @@ void hr_temp_enable ( heartrate_t *ctx, bool enable );
  * 
  * @description Sets the operating state of the MAX30100
  */
-uint8_t hr_set_mode ( heartrate_t *ctx, uint8_t mode );
+int8_t hr_set_mode ( heartrate_t *ctx, uint8_t mode );
 
 /**
  * @brief Function for setting the SpO2 ADC resolution

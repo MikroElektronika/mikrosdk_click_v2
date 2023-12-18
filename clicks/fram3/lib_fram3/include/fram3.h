@@ -217,13 +217,13 @@ void fram3_generic_write ( fram3_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t
  * @brief Generic read function.
  * 
  * @param ctx          Click object.
- * @param reg          Register address.
+ * @param tx_buf       Register buffer.
  * @param data_buf     Output data buf
  * @param len          Number of the bytes to be read
  *
  * @description This function reads data from the desired register.
  */
-void fram3_generic_read ( fram3_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+void fram3_generic_read ( fram3_t *ctx, uint8_t *tx_buf, uint8_t *data_buf, uint8_t len );
 
 /**
  * @brief Memory read function

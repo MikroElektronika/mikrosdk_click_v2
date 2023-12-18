@@ -181,6 +181,7 @@ typedef uint8_t  uarti2cspi_select_t;
 /**
  * @brief Master Input/Output type.
  */
+struct uarti2cspi_s;
 typedef void ( *uarti2cspi_master_write_t )( struct uarti2cspi_s*, uint8_t, uint8_t );
 typedef void ( *uarti2cspi_master_read_t )( struct uarti2cspi_s*, uint8_t, uint8_t* );
 
@@ -282,23 +283,21 @@ UARTI2CSPI_RETVAL uarti2cspi_init ( uarti2cspi_t *ctx, uarti2cspi_cfg_t *cfg );
  * @param ctx        Click object.
  * @param reg        Register address.
  * @param data_buf   Output data buf
- * @param len        Number of the bytes to be read
  *
  * @description This function writes data to the desired register.
  */
-void uarti2cspi_generic_write ( uarti2cspi_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+void uarti2cspi_generic_write ( uarti2cspi_t *ctx, uint8_t reg, uint8_t data_buf );
 
 /**
  * @brief Generic read function.
  *
  * @param ctx      Click object.
- * @param reg          Register address.
- * @param data_buf  Data buf to be written.
- * @param len          Number of the bytes in data buf.
+ * @param reg      Register address.
+ * @param data_buf Data buf to be written.
  *
  * @description This function reads data from the desired register.
  */
-void uarti2cspi_generic_read ( uarti2cspi_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+void uarti2cspi_generic_read ( uarti2cspi_t *ctx, uint8_t reg, uint8_t *data_buf );
 
 /**
  * @brief Set RST pin state function.

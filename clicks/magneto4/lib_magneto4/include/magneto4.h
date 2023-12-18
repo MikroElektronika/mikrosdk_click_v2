@@ -325,7 +325,7 @@ uint8_t magneto4_get_magnetic_status ( magneto4_t *ctx, mag_status_t *mag_status
  *
  * @description This function gives you information on the direction of the magnet movement.
  */
-uint8_t magneto4_get_encoder_direction ( magneto4_t *ctx, mag_status_t *mag_status );
+uint8_t magneto4_get_encoder_direction ( magneto4_t *ctx );
 
 /**
  * @brief Encoder position

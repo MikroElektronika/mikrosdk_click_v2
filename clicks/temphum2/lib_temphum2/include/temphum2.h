@@ -227,13 +227,13 @@ void temphum2_generic_write ( temphum2_t *ctx, uint8_t reg, uint8_t *data_buf, u
  * @brief Generic read function.
  *
  * @param ctx          Click object.
- * @param reg          Register address.
+ * @param tx_buf       Register buffer.
  * @param data_buf     Output data buf
  * @param len          Number of the bytes to be read
  *
  * @description This function reads data from the desired register.
  */
-void temphum2_generic_read ( temphum2_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+void temphum2_generic_read ( temphum2_t *ctx, uint8_t *tx_buf, uint8_t *data_buf, uint8_t len );
 
 /**
  * @brief This function for reads Firmware Revision

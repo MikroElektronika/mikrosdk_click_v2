@@ -442,11 +442,14 @@ void sram3_read( sram3_t *ctx, uint32_t mem_adr, uint8_t *read_buf, uint8_t buf_
  * See #sram3_t object definition for detailed explanation.
  * @param[in] mem_adr : Address to read from.
  * @param[in] read_buf : Buffer to store data.
- * @return Nothing.
+ * @param[in] buf_size : Buffer size.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
  *
+ * See #err_t definition for detailed explanation.
  * @note None.
  */
-err_t sram3_secure_read( sram3_t *ctx, uint32_t mem_adr, uint8_t *read_buf );
+err_t sram3_secure_read( sram3_t *ctx, uint32_t mem_adr, uint8_t *read_buf, uint8_t buf_size );
 
 /**
  * @brief SRAM 3 writing data function.
@@ -469,12 +472,13 @@ void sram3_write( sram3_t *ctx, uint32_t mem_adr, uint8_t *write_buf, uint8_t bu
  * See #sram3_t object definition for detailed explanation.
  * @param[in] mem_adr : Address to read from.
  * @param[in] write_buf : Data to be written.
+ * @param[in] buf_size : Buffer size.
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  *
  * @note None.
  */
-err_t sram3_secure_write( sram3_t *ctx, uint32_t mem_adr, uint8_t *write_buf );
+err_t sram3_secure_write( sram3_t *ctx, uint32_t mem_adr, uint8_t *write_buf, uint8_t buf_size );
 
 #ifdef __cplusplus
 }

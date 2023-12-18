@@ -119,34 +119,34 @@ void captouch5_device_config ( captouch5_t *ctx, T_CAPTOUCH5_DEVICE_CONFIG *devi
     
     cfg_temp = 0x00;
 
-    cfg_temp = device_cfg->cfg0->medFilter;
+    cfg_temp = device_cfg->cfg0.medFilter;
     cfg_temp <<= 1;
-    cfg_temp |= device_cfg->cfg0->iirFilter;
+    cfg_temp |= device_cfg->cfg0.iirFilter;
     captouch5_write_byte( ctx, CAPTOUCH5_REG_DEVICE_CFG0, cfg_temp );
 
     cfg_temp = 0x00;
 
-    cfg_temp = device_cfg->cfg1->sysDiagnostic;
+    cfg_temp = device_cfg->cfg1.sysDiagnostic;
     captouch5_write_byte( ctx, CAPTOUCH5_REG_DEVICE_CFG1, cfg_temp );
 
     cfg_temp = 0x00;
 
-    cfg_temp = device_cfg->cfg2->proximityAutoReset;
+    cfg_temp = device_cfg->cfg2.proximityAutoReset;
     cfg_temp <<= 6;
-    cfg_temp |= device_cfg->cfg2->buttonAutoReset;
+    cfg_temp |= device_cfg->cfg2.buttonAutoReset;
     cfg_temp <<= 4;
-    cfg_temp |= device_cfg->cfg2->autoThreshold;
+    cfg_temp |= device_cfg->cfg2.autoThreshold;
     cfg_temp <<= 3;
-    cfg_temp |= device_cfg->cfg2->emcSolution;
+    cfg_temp |= device_cfg->cfg2.emcSolution;
     cfg_temp <<= 2;
-    cfg_temp |= device_cfg->cfg2->guardSens;
+    cfg_temp |= device_cfg->cfg2.guardSens;
     cfg_temp <<= 1;
-    cfg_temp |= device_cfg->cfg2->shieldSens;
+    cfg_temp |= device_cfg->cfg2.shieldSens;
     captouch5_write_byte( ctx, CAPTOUCH5_REG_DEVICE_CFG2, cfg_temp );
 
     cfg_temp = 0x00;
 
-    cfg_temp = device_cfg->cfg3->powerSupply;
+    cfg_temp = device_cfg->cfg3.powerSupply;
     captouch5_write_byte( ctx, CAPTOUCH5_REG_DEVICE_CFG3, cfg_temp );
 }
 

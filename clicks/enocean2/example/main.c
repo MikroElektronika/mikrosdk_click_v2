@@ -38,7 +38,7 @@
 
 static enocean2_t enocean2;
 static enocean2_ring_buffer_t enocean2_rb;
-static enocean2_rx_data_t enocean2_rx;
+static enocean2_rx_data_t enocean2_rx_data;
 static log_t logger;
 
 uint8_t rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
@@ -50,7 +50,7 @@ char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
 static void clear_app_buf ( void )
 {
     Delay_ms( 200 );
-    enocean2_generic_read( &enocean2, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
+    enocean2_generic_read( &enocean2, uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
     memset( uart_rx_buffer, 0, PROCESS_RX_BUFFER_SIZE );
 }
 
@@ -99,7 +99,7 @@ static void enocean2_process ( void )
     
     while( process_cnt != 0 )
     {
-        rsp_size = enocean2_generic_read( &enocean2, &uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
+        rsp_size = enocean2_generic_read( &enocean2, uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
         if ( rsp_size > 0 )
         {  
             // Validation of the received data
@@ -148,12 +148,12 @@ void application_init ( void )
     ENOCEAN2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     enocean2_init( &enocean2, &cfg );
 
-    enocean2_rx.rx_buffer   = &rx_buffer[ 0 ];
-    enocean2_rx.rx_size     = ENOCEAN2_RX_BUFFER_SIZE;
-    enocean2_rx.data_buffer = &data_buffer[ 0 ];
-    enocean2_rx.data_size   = ENOCEAN2_RX_BUFFER_SIZE;
+    enocean2_rx_data.rx_buffer   = &rx_buffer[ 0 ];
+    enocean2_rx_data.rx_size     = ENOCEAN2_RX_BUFFER_SIZE;
+    enocean2_rx_data.data_buffer = &data_buffer[ 0 ];
+    enocean2_rx_data.data_size   = ENOCEAN2_RX_BUFFER_SIZE;
 
-    enocean2_init_rx_buff( &enocean2, &enocean2_rb, &enocean2_rx );
+    enocean2_init_rx_buff( &enocean2, &enocean2_rb, &enocean2_rx_data );
     enocean2_set_callback_handler( &enocean2, callback_handler );
 }
 

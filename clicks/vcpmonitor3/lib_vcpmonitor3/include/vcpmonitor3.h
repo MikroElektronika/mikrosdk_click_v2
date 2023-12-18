@@ -450,7 +450,7 @@ extern "C"{
     cfg.mosi = MIKROBUS( mikrobus, MIKROBUS_MOSI ); \
     cfg.sck  = MIKROBUS( mikrobus, MIKROBUS_SCK ); \
     cfg.cs   = MIKROBUS( mikrobus, MIKROBUS_CS ); \
-    cfg.io   = MIKROBUS( mikrobus, MIKROBUS_PWM ); \
+    cfg.gpio = MIKROBUS( mikrobus, MIKROBUS_PWM ); \
     cfg.alr  = MIKROBUS( mikrobus, MIKROBUS_INT )
 
 /*! @} */ // vcpmonitor3_map
@@ -479,7 +479,7 @@ typedef err_t ( *vcpmonitor3_master_io_t )( struct vcpmonitor3_s*, uint8_t, uint
  */
 typedef struct vcpmonitor3_s
 {
-    digital_out_t  io;       /**< GPIO. */
+    digital_out_t gpio;      /**< GPIO. */
     digital_in_t  alr;       /**< Alert pin. */
 
     i2c_master_t  i2c;                              /**< I2C driver object. */
@@ -506,7 +506,7 @@ typedef struct
     pin_name_t  mosi;       /**< Master output - slave input pin descriptor for SPI driver. */
     pin_name_t  sck;        /**< Clock pin descriptor for SPI driver. */
     pin_name_t  cs;         /**< Chip select pin descriptor for SPI driver. */
-    pin_name_t  io;         /**< GPIO. */
+    pin_name_t  gpio;       /**< GPIO. */
     pin_name_t  alr;        /**< Alert pin. */
 
     uint32_t  i2c_speed;                                /**< I2C serial speed. */

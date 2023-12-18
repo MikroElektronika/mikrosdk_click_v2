@@ -2288,7 +2288,7 @@ err_t mcp251863_operation_mode_select ( mcp251863_t *ctx, uint8_t op_mode );
  * See #mcp251863_t object definition for detailed explanation.
  * @returns Operation mode.
  */
-uint8_t mcp251863_operation_mode_get ( mcp251863_t *ctx );
+err_t mcp251863_operation_mode_get ( mcp251863_t *ctx );
 
 /**
  * @brief Configure Transmit FIFO.
@@ -2386,7 +2386,7 @@ err_t mcp251863_transmit_channel_status_get ( mcp251863_t *ctx, uint8_t channel,
  *
  * See #err_t definition for detailed explanation.
  */
-err_t mcp251863_transmit_channel_reset ( mcp251863_t *ctx, uint8_t channel );
+int8_t mcp251863_transmit_channel_reset ( mcp251863_t *ctx, uint8_t channel );
 
 /**
  * @brief Transmit FIFO Update.
@@ -2960,7 +2960,7 @@ err_t mcp251863_receive_event_overflow_get ( mcp251863_t *ctx, uint32_t *rxovif 
  * @param idx : Transmit Channel Index to be read.  
  * @returns  Transmit channel index.
  */
-err_t mcp251863_receive_channel_index_get ( mcp251863_t *ctx, uint8_t channel, uint8_t *idx );
+int8_t mcp251863_receive_channel_index_get ( mcp251863_t *ctx, uint8_t channel, uint8_t *idx );
 
 /**
  * @brief Receive FIFO Event Enable
@@ -3691,7 +3691,7 @@ err_t mcp251863_gpio_pin_read ( mcp251863_t *ctx, uint8_t pos, uint8_t *state );
  *
  * See #err_t definition for detailed explanation.
  */
-err_t mcp251863_gpio_clock_output_configure ( mcp251863_t *ctx, uint8_t mode );
+err_t mcp251863_gpio_clock_output_configure ( mcp251863_t *ctx, int8_t mode );
 
 /**
  * @brief  DLC to number of actual data_bytes conversion.

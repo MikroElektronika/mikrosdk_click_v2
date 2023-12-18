@@ -118,7 +118,7 @@ void vcpmonitor3_cfg_setup ( vcpmonitor3_cfg_t *cfg )
     cfg->miso = HAL_PIN_NC;
     cfg->mosi = HAL_PIN_NC;
     cfg->cs   = HAL_PIN_NC;
-    cfg->io = HAL_PIN_NC;
+    cfg->gpio = HAL_PIN_NC;
     cfg->alr = HAL_PIN_NC;
 
     cfg->i2c_speed   = I2C_MASTER_SPEED_STANDARD;
@@ -208,19 +208,19 @@ err_t vcpmonitor3_init ( vcpmonitor3_t *ctx, vcpmonitor3_cfg_t *cfg )
         ctx->write_f = vcpmonitor3_spi_write;
     }
 
-    digital_out_init( &ctx->io, cfg->io );
+    digital_out_init( &ctx->gpio, cfg->gpio );
 
     digital_in_init( &ctx->alr, cfg->alr );
 
     if ( VCPMONITOR3_DRV_SEL_I2C == ctx->drv_sel )
     {
         spi_master_select_device( ctx->chip_select );
-        digital_out_low( &ctx->io );
+        digital_out_low( &ctx->gpio );
     }
     else
     {
         spi_master_deselect_device( ctx->chip_select );  
-        digital_out_high( &ctx->io );
+        digital_out_high( &ctx->gpio );
     }
 
     return 0;

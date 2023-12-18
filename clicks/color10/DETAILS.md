@@ -131,7 +131,7 @@ void application_task ( void )
     read_data = color10_generic_read ( &color10, COLOR10_CMD_REG_IR );
     log_printf( &logger, " -IR value: %d\r\n", read_data );
     log_printf( &logger, " -Color: " );
-    write_color( void );
+    write_color( );
 
     log_printf( &logger, " ********************** \r\n" );
     Delay_ms( 1000 );

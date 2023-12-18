@@ -170,7 +170,7 @@ HALLCURRENT2_RETVAL hallcurrent2_init ( hallcurrent2_t *ctx, hallcurrent2_cfg_t 
  * @description This function reads data from the desired register.
  * @note On 0A loads at the input returns vcc / 2 (1.65V).
  */
-void hallcurrent2_generic_read ( hallcurrent2_t *ctx );
+uint16_t hallcurrent2_generic_read ( hallcurrent2_t *ctx );
 
 /** @defgroup HALLCURRENT2_FUNC Driver Functions */                   /** @{ */
 

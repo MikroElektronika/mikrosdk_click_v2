@@ -199,12 +199,10 @@ LEDDRIVER3_RETVAL leddriver3_init ( leddriver3_t *ctx, leddriver3_cfg_t *cfg );
  *
  * @param ctx          Click object.
  * @param reg          Register address.
- * @param data_buf     Data buf to be written.
- * @param mode         I2C mode select.
  *
  * @description This function writes data to the desired register.
  */
-void leddriver3_generic_write ( leddriver3_t *ctx, uint8_t reg, uint8_t mode );
+void leddriver3_generic_write ( leddriver3_t *ctx, uint8_t reg );
 
 /**
  * @brief Generic read function.

@@ -241,11 +241,11 @@ err_t hodcap_mux_channel_selection ( hodcap_t *ctx, uint8_t sen_pos )
         sen_pos <<= 2;
         sen_pos &= ( uint8_t ) HODCAP_SET_MUX_CTRL_SEL_BIT_MASK;
         err_flag = hodcap_read_reg( ctx, HODCAP_REG_MUX_CTRL, &data_buf );
-        Delay_55us( );
+        Delay_80us( );
         
         data_buf &= ~HODCAP_SET_MUX_CTRL_MODE_NO_OP;
         err_flag |= hodcap_write_reg( ctx, HODCAP_REG_MUX_CTRL, data_buf );
-        Delay_55us( );
+        Delay_80us( );
         
         data_buf &= ~HODCAP_SET_MUX_CTRL_SEL_BIT_MASK;
         data_buf |= ( uint16_t ) sen_pos;

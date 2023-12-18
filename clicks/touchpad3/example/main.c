@@ -116,7 +116,7 @@ void application_init ( void ) {
     status_data = touchpad3_config_touch( &touchpad3, TOUCHPAD3_TOUCH_GESTURE_ENABLE );
     
     log_printf( &logger, "     Touch Enable Status:     \r\n");
-    display_status( void );
+    display_status( );
     log_printf( &logger, "------------------------------\r\n" );
     Delay_ms( 100 );
 }

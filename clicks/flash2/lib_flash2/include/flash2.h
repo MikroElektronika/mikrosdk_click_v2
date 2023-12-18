@@ -230,8 +230,8 @@ FLASH2_RETVAL flash2_init ( flash2_t *ctx, flash2_cfg_t *cfg );
  *
  * @description Generic SPI transfer, for sending and receiving packages
  */
-void flash2_generic_transfer ( flash2_t *ctx, uint32_t address, uint8_t *buffer,
-                        uint32_t data_count );
+void flash2_generic_transfer ( flash2_t *ctx, uint8_t *wr_buf, 
+                               uint16_t wr_len, uint8_t *rd_buf, uint16_t rd_len );
 
 /**
  * @brief  Flash 2 Busy 

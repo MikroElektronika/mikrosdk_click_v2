@@ -103,11 +103,11 @@ static void dev_voc_algorithm_adaptive_lowpass_init ( environment2_voc_algorithm
 
 static void dev_voc_algorithm_init_instances ( environment2_voc_algorithm_params *params );
 
-inline fix16_t fix16_from_int ( int32_t a ) {
+fix16_t fix16_from_int ( int32_t a ) {
     return a * FIX16_ONE;
 }
 
-inline int32_t fix16_cast_to_int ( fix16_t a ) {
+int32_t fix16_cast_to_int ( fix16_t a ) {
     return ( a >> 16 );
 }
 
@@ -255,7 +255,7 @@ err_t environment2_init ( environment2_t *ctx, environment2_cfg_t *cfg ) {
     return I2C_MASTER_SUCCESS;
 }
 
-err_t environment2_generic_write ( environment2_t *ctx, uint8_t select_device, uint16_t cmd, uint8_t *tx_buf ) {
+err_t environment2_generic_write ( environment2_t *ctx, uint8_t select_device, uint16_t cmd ) {
     uint8_t tx_buf[ 2 ];
     err_t status;
     
@@ -277,7 +277,6 @@ err_t environment2_generic_write ( environment2_t *ctx, uint8_t select_device, u
 
 err_t environment2_generic_read ( environment2_t *ctx, uint8_t select_device, uint16_t cmd, uint8_t *rx_buf ) {
     uint8_t tx_buf[ 2 ];
-    uint8_t rx_buf[ 6 ];
     err_t status;
     
     status = ENVIRONMENT2_ERROR;

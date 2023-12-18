@@ -30,7 +30,7 @@
 
 static gaussmeter_t gaussmeter;
 static log_t logger;
-static uint8_t index;
+static uint8_t buf_idx;
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -74,7 +74,7 @@ void application_task ( )
     if ( !error_bit )
     {
         axis_check = 1;
-        index = 0;
+        buf_idx = 0;
     }
 
     for ( cnt = 0; cnt < 4; cnt++ )
@@ -83,22 +83,22 @@ void application_task ( )
         {
             case 1:
             {
-                log_printf( &logger, " * Temperature: %.2f C\r\n", temp_buf[ index++ ] );
+                log_printf( &logger, " * Temperature: %.2f C\r\n", temp_buf[ buf_idx++ ] );
                 break;
             }
             case 2:
             {
-                log_printf( &logger, " * X-axis: %.2f microT\r\n", temp_buf[ index++ ] );
+                log_printf( &logger, " * X-axis: %.2f microT\r\n", temp_buf[ buf_idx++ ] );
                 break;
             }
             case 4:
             {
-                log_printf( &logger, " * Y-axis: %.2f microT\r\n", temp_buf[ index++ ] );
+                log_printf( &logger, " * Y-axis: %.2f microT\r\n", temp_buf[ buf_idx++ ] );
                 break;
             }
             case 8:
             {
-                log_printf( &logger, " * Z-axis: %.2f microT\r\n", temp_buf[ index++ ] );
+                log_printf( &logger, " * Z-axis: %.2f microT\r\n", temp_buf[ buf_idx++ ] );
             }
         }
         axis_check <<= 1;

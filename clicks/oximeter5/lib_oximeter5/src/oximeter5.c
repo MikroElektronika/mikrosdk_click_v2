@@ -657,7 +657,10 @@ static void dev_find_peaks ( int32_t *pn_locs, int32_t *n_npks,  int32_t  *pn_x,
 {
     dev_peaks_above_min_height( pn_locs, n_npks, pn_x, n_size, n_min_height );
     dev_remove_close_peaks( pn_locs, n_npks, pn_x, n_min_distance );
-    *n_npks = min( *n_npks, n_max_num );
+    if ( *n_npks > n_max_num )
+    {
+        *n_npks = n_max_num;
+    }
 }
 
 // ------------------------------------------------------------------------- END

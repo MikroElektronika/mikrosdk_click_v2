@@ -114,7 +114,7 @@ void application_task ( void )
     smartbuck_get_data( &smartbuck, &voltage_res[ 0 ], &current_res[ 0 ], &power_res[ 0 ] );
     
     check_byte = 0x80;
-    index = 0;
+    idx = 0;
     
     for ( cnt = 0; cnt < 4; cnt++ )
     {
@@ -122,11 +122,11 @@ void application_task ( void )
         {
             channel_log();
             
-            log_printf( &logger, "U: %.2f V    ", voltage_res[ index ] );
-            log_printf( &logger, "I: %.2f mA    ", current_res[ index ] );
-            log_printf( &logger, "P: %.2f mW    ", power_res[ index ] );
+            log_printf( &logger, "U: %.2f V    ", voltage_res[ idx ] );
+            log_printf( &logger, "I: %.2f mA    ", current_res[ idx ] );
+            log_printf( &logger, "P: %.2f mW    ", power_res[ idx ] );
             
-            index++;
+            idx++;
         }
         check_byte >>= 1;
     }

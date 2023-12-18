@@ -255,11 +255,10 @@ void rs232spi_reg_write ( rs232spi_t *ctx, uint16_t write_data );
  * @brief Register read function.
  *
  * @param ctx          Click object.
- * @param write_data   Write data variable.
  *
  * @description This function reads two bytes of data using the SPI serial interface.
  */
-uint16_t rs232spi_reg_read ( rs232spi_t *ctx, uint16_t write_data );
+uint8_t rs232spi_reg_read ( rs232spi_t *ctx );
 
 /**
  * @brief SPI transfer function.

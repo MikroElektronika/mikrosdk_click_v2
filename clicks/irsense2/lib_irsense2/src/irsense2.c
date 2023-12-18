@@ -121,7 +121,7 @@ void irsense2_data_read ( irsense2_t *ctx, float *ir_data, float *temp_data )
 
     irsense2_generic_read( ctx, STATUS_1_ST1, &read_data, 1 );
     
-    while ( read_data.B0 == ST1_RST );
+    Delay_50us ( );
 
     irsense2_get_int( ctx );
 
