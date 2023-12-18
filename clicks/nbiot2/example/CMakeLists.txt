@@ -16,12 +16,14 @@ add_executable(example_nbiot2
 
 
 ############################ example_nbiot2 GENERATED CODE START ###########################
-find_package(MikroC.Core REQUIRED)
-target_link_libraries(example_nbiot2 PUBLIC MikroC.Core)
-find_package(MikroSDK.Board REQUIRED)
-target_link_libraries(example_nbiot2 PUBLIC MikroSDK.Board)
 find_package(MikroSDK.Log REQUIRED)
 target_link_libraries(example_nbiot2 PUBLIC MikroSDK.Log)
+find_package(MikroSDK.Conversions REQUIRED)
+target_link_libraries(example_nbiot2 PUBLIC MikroSDK.Conversions)
+find_package(MikroSDK.Board REQUIRED)
+target_link_libraries(example_nbiot2 PUBLIC MikroSDK.Board)
+find_package(MikroC.Core REQUIRED)
+target_link_libraries(example_nbiot2 PUBLIC MikroC.Core)
 add_subdirectory(lib_nbiot2)
 target_link_libraries(example_nbiot2 PUBLIC Click.NBIoT2)
 ############################ example_nbiot2 GENERATED CODE END ###########################

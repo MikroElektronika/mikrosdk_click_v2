@@ -100,27 +100,17 @@ void application_init ( void )
     CAPTOUCH5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     captouch5_init( &captouch5, &cfg );
     captouch5_default_cfg ( &captouch5, &device_cfg );
-    
-//     uint8_t fam_id = captouch5_get_family_id( &captouch5 );
-//     if ( CAPTOUCH5_FAMILY_ID != fam_id )
-//     {
-//         log_info( &logger, "---- ID ERROR ----" );
-//         for ( ; ; );
-//     }
 }
 
 void application_task ( void )
 {
     uint16_t temp_byte;
     uint16_t last_temp;
-    uint8_t error_data;
     uint8_t temp_slider;
 
     state_check = 0;
 
-    error_data = captouch5_process( &captouch5 );
-
-    if ( error_data == CAPTOUCH5_ERROR )
+    if ( CAPTOUCH5_ERROR == captouch5_process( &captouch5 ) )
     {
         log_printf( &logger, "***** ERROR *****" );
         state_check = 1;

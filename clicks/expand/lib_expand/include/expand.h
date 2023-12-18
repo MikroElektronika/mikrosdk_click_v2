@@ -404,7 +404,7 @@ void expand_write_port_a ( expand_t *ctx, uint8_t mod_cmd, uint8_t write_data );
  *
  * @description Function clear bit from 8-bit register address from PORTA of MCP23S17 chip.
  */
-void expand_clear_bit_port_a( uint8_t mod_cmd, uint8_t bit_mask );
+void expand_clear_bit_port_a ( expand_t *ctx, uint8_t mod_cmd, uint8_t bit_mask );
 
 /**
  * @brief Set bit to register for PORTA function

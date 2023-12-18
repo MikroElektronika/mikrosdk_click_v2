@@ -362,7 +362,7 @@ err_t nvsram3_set_rtc_date ( nvsram3_t *ctx, nvsram3_rtc_date_t rtc_date )
             num_day = 31;
             break;
         }
-        case 3: case 6: case 9: case 11: 
+        case 4: case 6: case 9: case 11: 
         {
             num_day = 30;
             break;

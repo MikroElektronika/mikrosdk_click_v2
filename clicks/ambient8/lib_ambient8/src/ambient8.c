@@ -87,14 +87,12 @@ AMBIENT8_RETVAL ambient8_init ( ambient8_t *ctx, ambient8_cfg_t *cfg )
     return AMBIENT8_OK;
 }
 
-void ambient8_set_register ( ambient8_t *ctx, uint8_t *write_buf, 
-                             uint8_t n_bytes )
+void ambient8_set_register ( ambient8_t *ctx, uint8_t *write_buf, uint8_t n_bytes )
 {   
     i2c_master_write( &ctx->i2c, write_buf, n_bytes ); 
 }
 
-void ambient8_get_register ( ambient8_t *ctx, uint8_t reg_addr, 
-                             uint8_t *data_buf, uint8_t n_bytes )
+void ambient8_get_register ( ambient8_t *ctx, uint8_t reg_addr, uint8_t *data_buf, uint8_t n_bytes )
 {
     i2c_master_write_then_read( &ctx->i2c, &reg_addr, 1, data_buf, n_bytes );
 }

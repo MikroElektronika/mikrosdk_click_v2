@@ -164,7 +164,7 @@ KEYLOCK2_RETVAL keylock2_init ( keylock2_t *ctx, keylock2_cfg_t *cfg );
  *
  * @description This function gets states of pins in1, in2 and in3 on Key Lock 2 click.
  */
-uint8_t keylock2_get_pin_state ( uint8_t pin );
+uint8_t keylock2_get_pin_state ( keylock2_t *ctx, uint8_t pin );
 
 /**
  * @brief Get Pin State.

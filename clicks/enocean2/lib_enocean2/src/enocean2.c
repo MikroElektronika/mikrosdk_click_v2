@@ -74,7 +74,7 @@ static void serialize_header ( enocean2_packet_t *packet, uint8_t *buffer );
 
 static void deserialize_header ( enocean2_t *ctx, enocean2_packet_t *packet, uint8_t *buffer );
 
-static uint32_t packet_size ( enocean2_packet_t *packet );
+static uint32_t calc_packet_size ( enocean2_packet_t *packet );
 
 static void inc_tail ( enocean2_ring_buffer_t *rb, uint16_t size );
 
@@ -168,14 +168,14 @@ uint8_t enocean2_send ( enocean2_t *ctx, enocean2_packet_t *packet )
     uint32_t packet_size;
     uint16_t i;
 
-    packet_size = packet_size( packet );
+    packet_size = calc_packet_size( packet );
 
     if ( packet_size == 0 )
     {
         return ENOCEAN2_ERR_INVALID_SIZE;
     }
 
-    serialize_header( packet, &header );
+    serialize_header( packet, header );
     write_data = ENOCEAN2_SYNC_BYTE;
     enocean2_generic_write( ctx, &write_data, 1 );
 
@@ -184,7 +184,7 @@ uint8_t enocean2_send ( enocean2_t *ctx, enocean2_packet_t *packet )
        enocean2_generic_write( ctx, &header[ i ], 1 );
     }
 
-    write_data = crc8( &header, ENOCEAN2_HEADER_SIZE );
+    write_data = crc8( header, ENOCEAN2_HEADER_SIZE );
     enocean2_generic_write( ctx, &write_data, 1 );
 
     for ( i = 0; i < packet_size; i++ )
@@ -242,7 +242,7 @@ uint8_t enocean2_packet_recieve ( enocean2_t *ctx, enocean2_ring_buffer_t *rb )
                 if ( sync_buffer[ ENOCEAN2_CRC8H_OFFSET ] == crc8h )
                 {
                     deserialize_header( ctx, &ctx->rx_packet, &sync_buffer[ ENOCEAN2_HEADER_OFFSET ] );
-                    ctx->rx_packet_size = packet_size( &ctx->rx_packet );
+                    ctx->rx_packet_size = calc_packet_size( &ctx->rx_packet );
 
                     if ( ctx->rx_packet_size > ctx->rx_packet_capacity )
                     {
@@ -312,7 +312,7 @@ static void deserialize_header ( enocean2_t *ctx, enocean2_packet_t *packet, uin
     ctx->rx_packet.type = buffer[ 3 ];
 }
 
-static uint32_t packet_size ( enocean2_packet_t *packet )
+static uint32_t calc_packet_size ( enocean2_packet_t *packet )
 {
     uint32_t size;
 

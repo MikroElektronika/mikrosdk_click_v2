@@ -160,7 +160,7 @@ void sram3_write_status( sram3_t *ctx, uint8_t status ) {
     wrsr_buf[ 1 ] = status;
     
     spi_master_select_device( ctx->chip_select );
-    spi_master_write( &ctx->spi, &wrsr_buf, 2 );
+    spi_master_write( &ctx->spi, wrsr_buf, 2 );
     spi_master_deselect_device( ctx->chip_select );
 }
 
@@ -250,7 +250,7 @@ void sram3_write_serial( sram3_t *ctx, uint8_t *buf ) {
     uint8_t len = SRAM3_SERIAL_LEN;
     
     spi_master_select_device( ctx->chip_select );
-    spi_master_write( &ctx->spi, &wrsnr_buf, len + 1 );
+    spi_master_write( &ctx->spi, wrsnr_buf, len + 1 );
     spi_master_deselect_device( ctx->chip_select );
 }
 
@@ -271,8 +271,6 @@ void sram3_read( sram3_t *ctx, uint32_t mem_adr, uint8_t *read_buf, uint8_t buf_
 }
 
 err_t sram3_secure_read( sram3_t *ctx, uint32_t mem_adr, uint8_t *read_buf, uint8_t buf_size ) {
-    static const ADDRESS_BYTES = 3;
-    static const uint8_t extra_info = 4;
     err_t err_flag;
     
     uint8_t tx_buff[ 4 ] = { 0 };

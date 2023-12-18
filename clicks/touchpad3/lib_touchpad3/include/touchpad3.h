@@ -555,7 +555,6 @@ void touchpad3_hw_reset ( touchpad3_t *ctx );
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #touchpad3_t object definition for detailed explanation.
- * @param[in] reg : Start register address.
  * @param[in] tx_buf : Data to be written.
  * @param[in] tx_len : Number of bytes to be written.
  * @return @li @c  0 - Success,
@@ -564,7 +563,7 @@ void touchpad3_hw_reset ( touchpad3_t *ctx );
  * See #err_t definition for detailed explanation.
  * @note None.
  */
-err_t touchpad3_generic_write ( touchpad3_t *ctx, uint8_t reg, uint8_t *tx_buf, uint8_t tx_len );
+void touchpad3_generic_write ( touchpad3_t *ctx,  uint8_t *tx_buf, uint8_t tx_len );
 
 /**
  * @brief Touchpad 3 I2C reading function.

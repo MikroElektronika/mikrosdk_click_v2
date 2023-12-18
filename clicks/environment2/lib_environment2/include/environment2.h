@@ -316,7 +316,6 @@ err_t environment2_init ( environment2_t *ctx, environment2_cfg_t *cfg );
  * See #environment2_t object definition for detailed explanation.
  * @param[in] select_device : Device selection.
  * @param[in] cmd : Command to be written.
- * @param[in] tx_buf : Data to be written.
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  *
@@ -325,7 +324,7 @@ err_t environment2_init ( environment2_t *ctx, environment2_cfg_t *cfg );
  *
  * @endcode
  */
-err_t environment2_generic_write ( environment2_t *ctx, uint8_t select_device, uint16_t cmd, uint8_t *tx_buf );
+err_t environment2_generic_write ( environment2_t *ctx, uint8_t select_device, uint16_t cmd );
 
 /**
  * @brief Environment 2 I2C reading function.

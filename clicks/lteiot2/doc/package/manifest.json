@@ -1,5 +1,5 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "architecture": "ARM|PIC32|RISC-V|dsPIC",
     "category": "Click Boards > Wireless connectivity > LTE IoT",
     "changelog": "Resources/CHANGELOG.md",
     "contains": [
@@ -31,11 +31,12 @@
     "related_projects": [
         2482
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.LteIot2",
     "subdir_name": "lib_lteiot2"
 }
+
 
 
 

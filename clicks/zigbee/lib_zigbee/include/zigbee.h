@@ -454,12 +454,10 @@ uint8_t zigbee_resp ( zigbee_t *ctx, char *data_in );
 /**
  * @brief Function for converting error code to error message.
  * @details This function is used for converting error code to error message.
- * @param[in] ctx : Click context object.
- * See #zigbee_t object definition for detailed explanation.
  * @param[in] error_code : Error hex code.
  * @return Returns string for certain error_code
 **/
-char *zigbee_error_handler ( zigbee_t *ctx, uint8_t error_code );
+char *zigbee_error_handler ( uint8_t error_code );
 
 /**
  * @brief Function setting RST pin status.

@@ -108,14 +108,11 @@ void application_task ( void )
 {
     uint16_t temp_byte;
     uint16_t last_temp;
-    uint8_t error_data;
     uint8_t temp_slider;
 
     state_check = 0;
 
-    error_data = captouch5_process( &captouch5 );
-
-    if ( error_data == CAPTOUCH5_ERROR )
+    if ( CAPTOUCH5_ERROR == captouch5_process( &captouch5 ) )
     {
         log_printf( &logger, "***** ERROR *****" );
         state_check = 1;

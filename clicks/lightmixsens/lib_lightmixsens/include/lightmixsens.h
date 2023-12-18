@@ -328,14 +328,11 @@ void lightmixsens_default_cfg ( lightmixsens_t *ctx );
  * @param[in] ctx : Click context object.
  * See #lightmixsens_t object definition for detailed explanation.
  * @param[in] reg : Start register address.
- * @param[in] tx_buf : Data to be written.
- * @param[in] tx_len : Number of bytes to be written.
- * @return @li @c  0 - Success,
- *         @li @c -1 - Error.
- *
- * See #err_t definition for detailed explanation.
+ * @param[in] data_buf : Data to be written.
+ * @param[in] len : Number of bytes to be written.
+ * @return None.
  */
-err_t lightmixsens_generic_write ( lightmixsens_t *ctx, uint8_t reg, uint8_t *tx_buf, uint8_t tx_len );
+void lightmixsens_generic_write ( lightmixsens_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
 
 /**
  * @brief Light mix sens I2C reading function.
@@ -344,14 +341,11 @@ err_t lightmixsens_generic_write ( lightmixsens_t *ctx, uint8_t reg, uint8_t *tx
  * @param[in] ctx : Click context object.
  * See #lightmixsens_t object definition for detailed explanation.
  * @param[in] reg : Start register address.
- * @param[out] rx_buf : Output read data.
- * @param[in] rx_len : Number of bytes to be read.
- * @return @li @c  0 - Success,
- *         @li @c -1 - Error.
- *
- * See #err_t definition for detailed explanation.
+ * @param[out] data_buf : Output read data.
+ * @param[in] len : Number of bytes to be read.
+ * @return None.
  */
-err_t lightmixsens_generic_read ( lightmixsens_t *ctx, uint8_t reg, uint8_t *rx_buf, uint8_t rx_len );
+void lightmixsens_generic_read ( lightmixsens_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
 
 
 /**

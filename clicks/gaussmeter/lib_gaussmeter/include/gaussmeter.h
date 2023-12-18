@@ -172,6 +172,7 @@ typedef uint8_t  gaussmeter_select_t;
 /**
  * @brief Master Input/Output type.
  */
+struct gaussmeter_s;
 typedef void ( *gaussmeter_master_io_t )( struct gaussmeter_s*, uint8_t*, uint8_t, uint8_t*, uint8_t );
 
 /**

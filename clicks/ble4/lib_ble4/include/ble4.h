@@ -303,7 +303,7 @@ uint8_t ble4_response_ready( ble4_t *ctx );
  * @brief Transmit function
  *
  * @param ctx         Click object.  
- * @param tx_data     Data to be transmitted
+ * @param command     Data to be transmitted
  * @param term_char   Command termination character
  *
  * @description This function allows user to transmit data and send commands to the module.
@@ -311,7 +311,7 @@ uint8_t ble4_response_ready( ble4_t *ctx );
  * @note This function will send a termination character ('\r' default) automatically at 
  * the end of the data transmitting.
  */
-void ble4_send_command ( ble4_t *ctx, char *command );
+void ble4_send_command ( ble4_t *ctx, char * command, uint8_t term_char );
 
 /**
  * @brief Factory Reset command

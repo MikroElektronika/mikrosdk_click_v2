@@ -175,13 +175,12 @@ void buck11_generic_write ( buck11_t *ctx, uint8_t reg, uint8_t *data_buf, uint8
  *
  * 
  * @param ctx          Click object.
- * @param reg          Register address.
  * @param data_buf     Output data buf
  * @param len          Number of the bytes to be read
  *
  * @description This function reads data from the desired register.
  */
-void buck11_generic_read ( buck11_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+void buck11_generic_read ( buck11_t *ctx, uint8_t *data_buf, uint8_t len );
 
 /**
  * @brief Set VDD Value function

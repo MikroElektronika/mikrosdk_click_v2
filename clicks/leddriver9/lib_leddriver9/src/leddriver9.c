@@ -157,7 +157,7 @@ err_t leddriver9_generic_read ( leddriver9_t *ctx, uint8_t reg, uint8_t *rx_buf,
 err_t leddriver9_mode1_reg_write ( leddriver9_t *ctx, leddriver9_mode_reg_t *mode_reg ) {
     uint8_t reg_value;
     
-    reg_value = mode_reg->mode_1->byte & DEV_REG_MODE1_BITMASK;
+    reg_value = mode_reg->mode_1.byte & DEV_REG_MODE1_BITMASK;
     
     return leddriver9_generic_write( ctx, LEDDRIVER9_REG_MODE1, &reg_value, 1 );
 }
@@ -168,7 +168,7 @@ err_t leddriver9_mode1_reg_read ( leddriver9_t *ctx, leddriver9_mode_reg_t *mode
     
     status = leddriver9_generic_read( ctx, LEDDRIVER9_REG_MODE1, &reg_value, 1 );
     
-    mode_reg->mode_1->byte = reg_value;
+    mode_reg->mode_1.byte = reg_value;
     
     return status;
 }
@@ -176,7 +176,7 @@ err_t leddriver9_mode1_reg_read ( leddriver9_t *ctx, leddriver9_mode_reg_t *mode
 err_t leddriver9_mode2_reg_write ( leddriver9_t *ctx, leddriver9_mode_reg_t *mode_reg ) {
     uint8_t reg_value;
     
-    reg_value = mode_reg->mode_2->byte & DEV_REG_MODE2_BITMASK;
+    reg_value = mode_reg->mode_2.byte & DEV_REG_MODE2_BITMASK;
     
     return leddriver9_generic_write( ctx, LEDDRIVER9_REG_MODE2, &reg_value, 1 );
 }
@@ -187,7 +187,7 @@ err_t leddriver9_mode2_reg_read ( leddriver9_t *ctx, leddriver9_mode_reg_t *mode
     
     status = leddriver9_generic_read( ctx, LEDDRIVER9_REG_MODE2, &reg_value, 1 );
     
-    mode_reg->mode_2->byte = reg_value;
+    mode_reg->mode_2.byte = reg_value;
     
     return status;
 }
@@ -200,28 +200,28 @@ err_t leddriver9_ledout_state ( leddriver9_t *ctx, leddriver9_output_state_t *ou
     status = LEDDRIVER9_OK;
     start_reg = LEDDRIVER9_REG_LEDOUT0;
     
-    reg_value = output_state->LEDOUT0->byte;
+    reg_value = output_state->LEDOUT0.byte;
     status = leddriver9_generic_write( ctx, start_reg, &reg_value, 1 );
     
     if ( status ) {
         return status;
     }
     
-    reg_value = output_state->LEDOUT1->byte;
+    reg_value = output_state->LEDOUT1.byte;
     status = leddriver9_generic_write( ctx, ++start_reg, &reg_value, 1 );
     
     if ( status ) {
         return status;
     }
     
-    reg_value = output_state->LEDOUT2->byte;
+    reg_value = output_state->LEDOUT2.byte;
     status = leddriver9_generic_write( ctx, ++start_reg, &reg_value, 1 );
     
     if ( status ) {
         return status;
     }
     
-    reg_value = output_state->LEDOUT3->byte;
+    reg_value = output_state->LEDOUT3.byte;
     status = leddriver9_generic_write( ctx, ++start_reg, &reg_value, 1 );
     
     return status;

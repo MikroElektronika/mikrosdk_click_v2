@@ -274,7 +274,7 @@ err_t fram6_write_opcode ( fram6_t *ctx, uint8_t opcode );
  * See #err_t definition for detailed explanation.
  * @note None.
  */
-err_t fram6_read_opcode ( fram6_t *ctx, uint8_t opcode, uint8_t *data_out, uint16_t len );
+err_t fram6_read_opcode ( fram6_t *ctx, uint8_t opcode, uint8_t *data_out, uint8_t len );
 
 /**
  * @brief FRAM 6 check communication function.

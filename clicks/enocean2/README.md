@@ -91,12 +91,12 @@ void application_init ( void )
     ENOCEAN2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     enocean2_init( &enocean2, &cfg );
 
-    enocean2_rx.rx_buffer   = &rx_buffer[ 0 ];
-    enocean2_rx.rx_size     = ENOCEAN2_RX_BUFFER_SIZE;
-    enocean2_rx.data_buffer = &data_buffer[ 0 ];
-    enocean2_rx.data_size   = ENOCEAN2_RX_BUFFER_SIZE;
+    enocean2_rx_data.rx_buffer   = &rx_buffer[ 0 ];
+    enocean2_rx_data.rx_size     = ENOCEAN2_RX_BUFFER_SIZE;
+    enocean2_rx_data.data_buffer = &data_buffer[ 0 ];
+    enocean2_rx_data.data_size   = ENOCEAN2_RX_BUFFER_SIZE;
 
-    enocean2_init_rx_buff( &enocean2, &enocean2_rb, &enocean2_rx );
+    enocean2_init_rx_buff( &enocean2, &enocean2_rb, &enocean2_rx_data );
     enocean2_set_callback_handler( &enocean2, callback_handler );
 }
   

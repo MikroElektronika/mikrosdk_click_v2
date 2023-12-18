@@ -575,7 +575,7 @@ err_t ccrf3_read_reg ( ccrf3_t *ctx, uint16_t reg_address, uint8_t *read_data, u
  * @param[in] n_bytes : Number of bytes to be written.
  * @returns 8-bit status data.
  */
-uint8_t ccrf3_write_reg ( ccrf3_t *ctx, uint16_t reg_address, uint8_t *write_data, uint8_t n_bytes );
+err_t ccrf3_write_reg ( ccrf3_t *ctx, uint16_t reg_address, uint8_t *write_data, uint8_t n_bytes );
 
 /**
  * @brief Write one byte data function.

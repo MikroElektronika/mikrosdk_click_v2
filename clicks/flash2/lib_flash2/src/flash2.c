@@ -100,7 +100,7 @@ FLASH2_RETVAL flash2_init ( flash2_t *ctx, flash2_cfg_t *cfg )
 }
 
 void flash2_generic_transfer ( flash2_t *ctx, uint8_t *wr_buf, 
-                            uint16_t wr_len, uint8_t *rd_buf, uint16_t rd_len  )
+                               uint16_t wr_len, uint8_t *rd_buf, uint16_t rd_len )
 {
     spi_master_select_device( ctx->chip_select );
     spi_master_write_then_read( &ctx->spi, wr_buf, wr_len, rd_buf, rd_len );

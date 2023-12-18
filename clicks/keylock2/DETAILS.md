@@ -49,7 +49,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 #### Example key functions :
 
 - This function gets states of pins out1, out2 and out3 on Key Lock 2 click.
-> uint8_t keylock2_get_pin_state ( uint8_t pin );
+> uint8_t keylock2_get_pin_state ( keylock2_t *ctx, uint8_t pin );
  
 - This function gets Position (First, Second, Third) of pins 
 out1, out2 and out3 on Key Lock 2 click.

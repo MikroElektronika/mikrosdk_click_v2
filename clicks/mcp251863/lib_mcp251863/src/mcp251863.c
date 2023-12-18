@@ -353,8 +353,6 @@ err_t mcp251863_transmit_message ( mcp251863_t *ctx, uint8_t *data_in, uint16_t 
 
         if ( attempts == 0 )
         {
-            asm nop;
-            asm nop;
             mcp251863_error_count_state_get( ctx, &ctx->glb_data.tec, &ctx->glb_data.rec, &ctx->glb_data.error_flags );
             return MCP251863_ERROR;
         }

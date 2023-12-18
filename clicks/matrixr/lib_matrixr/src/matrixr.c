@@ -235,16 +235,18 @@ void matrixr_set_csn_low ( matrixr_t *ctx ) {
 
 static void dev_display_left ( matrixr_t *ctx, uint8_t row, uint8_t column ) {
     
+    column++;
     spi_master_select_device( ctx->chip_select );
-    spi_master_write( &ctx->spi, &++column, 1 );
+    spi_master_write( &ctx->spi, &column, 1 );
     spi_master_write( &ctx->spi, &row, 1 );
     spi_master_deselect_device( ctx->chip_select ); 
 }
 
 static void dev_display_right ( matrixr_t *ctx, uint8_t row, uint8_t column ) {
     
+    column++;
     digital_out_low( &ctx->csn );
-    spi_master_write( &ctx->spi, &++column, 1 );
+    spi_master_write( &ctx->spi, &column, 1 );
     spi_master_write( &ctx->spi, &row, 1 );
     digital_out_high( &ctx->csn );
 }

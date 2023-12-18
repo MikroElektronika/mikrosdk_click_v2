@@ -77,7 +77,7 @@ err_t ble12_init ( ble12_t *ctx, ble12_cfg_t *cfg )
     
     digital_in_init( &ctx->req, cfg->req );
     
-    digital_out_low( &ctx->rst );
+    digital_out_high( &ctx->rst );
     dev_startup_cfg_delay( );
 
     digital_out_high( &ctx->cmd );
@@ -144,7 +144,7 @@ err_t ble12_generic_read ( ble12_t *ctx, char *data_buf, uint16_t max_len )
 
 err_t ble12_wake_up_device ( ble12_t *ctx ) 
 {
-    digital_out_low( &ctx->rst );
+    digital_out_high( &ctx->rst );
     dev_startup_cfg_delay( );
     
     digital_out_high( &ctx->cmd );

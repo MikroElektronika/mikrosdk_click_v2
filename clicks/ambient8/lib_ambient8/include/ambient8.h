@@ -225,7 +225,7 @@ void ambient8_set_register ( ambient8_t* ctx, uint8_t* write_buf, uint8_t n_byte
  *
  * @description This function reads n_bytes - registers(bytes) from device memory
  */
-void ambient8_get_register ( ambient8_t* ctx, uint8_t reg_addr,  uint8_t n_bytes );
+void ambient8_get_register ( ambient8_t *ctx, uint8_t reg_addr, uint8_t *data_buf, uint8_t n_bytes );
 
 /**
  * @brief Setting constants for lux level calculation

@@ -296,9 +296,8 @@ uint16_t proximity7_get_proximity_data( proximity7_t *ctx )
     return proximity_data;
 }
 
-uint8_t proximity7_set_proximity_offset( proximity7_t *ctx, uint8_t proximity_offset_magnitude )
+uint8_t proximity7_set_proximity_offset( proximity7_t *ctx, uint8_t proximity_offset_sign, uint8_t proximity_offset_magnitude )
 {
-    uint8_t proximity_offset_sign;
     uint8_t write_buffer[ 1 ];
 
     if ( proximity_offset_magnitude < 128 )
