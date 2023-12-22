@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Mixed signal > ADC-DAC",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "AD-SWIO 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.adswio3",
+    "product_link": "https://www.mikroe.com/ad-swio-3-click",
+    "short_description": "AD-SWIO 3 Click is a compact add-on board representing a software configurable input/output solution for various purposes. This board features the AD74115H, a single-channel, software-configurable input and output with HART mode from Analog Devices. It provides many functionality for analog input, analog output, digital input, digital output, 2-wire, 3-wire, and 4-wire resistance temperature detector (RTD), and thermocouple measurement capability. The supply power and isolation part are managed by the ADP1034, a 3-channel isolated micropower management unit with seven digital isolators and programmable power control, also from Analog Devices.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.ADSWIO3",
+    "subdir_name": "lib_adswio3"
+}
