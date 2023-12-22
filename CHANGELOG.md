@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20231222](#20231222)**
 + **[20231215](#20231215)**
 + **[20231208](#20231208)**
 + **[20231201](#20231201)**
@@ -74,6 +75,20 @@
 
 ---
 ---
+---
+
+## `20231222`
+
+*Following click boards have been added:*
+
++ `AD-SWIO 3`
++ `Opto 7`
++ `LIN Hall 2`
++ `Rotary O 2`
++ `DC Motor 29`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20231215`
