@@ -1,0 +1,8 @@
+{
+    "name": "LTE Cat.1 2 Click",
+    "description": "LTE Cat.1 2 Click (EU) is a compact add-on board that provides your application with complete LTE and VoLTE with CSFB functionalities. This board features the ELS62-E, a single antenna LTE cat.1bis module from Telit.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
+    "hw" : ["click","ELS62-E"],
+    "category" : ["Click Boards > Wireless connectivity > GSM/LTE"]
+}
