@@ -174,7 +174,7 @@ void usbuart3_cfg_setup ( usbuart3_cfg_t *cfg );
 
 /**
  * @brief Initialization function.
- * @param usbuart3 Click object.
+ * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
  * @description This function initializes all necessary pins and peripherals used for this click.
@@ -183,7 +183,7 @@ USBUART3_RETVAL usbuart3_init ( usbuart3_t *ctx, usbuart3_cfg_t *cfg );
 
 /**
  * @brief Generic write function.
- * @param usbuart3 Click object.
+ * @param ctx Click object.
  * @param data_buf Data buffer for sends.
  * @param len Number of bytes for sends.
  */
@@ -191,7 +191,7 @@ void usbuart3_generic_write ( usbuart3_t *ctx, char *data_buf, uint16_t len );
 
 /**
  * @brief Generic read function.
- * @param usbuart3 Click object.
+ * @param ctx Click object.
  * @param data_buf Data buffer for read data.
  * @param max_len The maximum length of data that can be read.
  * @return Number of reads data.
@@ -208,13 +208,13 @@ int32_t usbuart3_generic_read ( usbuart3_t *ctx, char *data_buf, uint16_t max_le
 void usbuart3_reset ( usbuart3_t *ctx );
 
 /**
- * @brief Set device mode
+ * @brief Get USB suspend pin
  *
  * @param ctx          Click object.
  *
  * @return SUS (USB suspend) pin state
  */
-uint8_t usbuart3_get_susp ( usbuart3_t *ctx );
+uint8_t usbuart3_get_sus ( usbuart3_t *ctx );
 
 
 #ifdef __cplusplus

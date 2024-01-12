@@ -31,10 +31,11 @@
     "related_projects": [
         2422
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.UsbUart3",
     "subdir_name": "lib_usbuart3"
 }
+
 
 

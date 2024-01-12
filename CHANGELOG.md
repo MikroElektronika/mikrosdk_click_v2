@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240112](#20240112)**
 + **[20231222](#20231222)**
 + **[20231215](#20231215)**
 + **[20231208](#20231208)**
@@ -75,6 +76,31 @@
 
 ---
 ---
+---
+
+## `20240112`
+
+*Following click boards have been added:*
+
++ `EZO Carrier pH`
++ `H-Bridge 15`
++ `Current Limit 10`
++ `Step Down 11`
++ `DIGI Isolator 2`
++ `H-Bridge 16`
++ `Opto Encoder 4`
++ `6DOF IMU 16`
++ `NeoMesh 868MHz`
++ `NeoMesh 915MHz`
++ `NeoMesh 2`
++ `LTE Cat.1 2`
+
+*Following click boards have been updated:*
+
++ `USB UART 3`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20231222`
