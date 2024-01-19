@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240119](#20240119)**
 + **[20240112](#20240112)**
 + **[20231222](#20231222)**
 + **[20231215](#20231215)**
@@ -76,6 +77,18 @@
 
 ---
 ---
+---
+
+## `20240119`
+
+*Following click boards have been added:*
+
++ `Speed Sense`
++ `IR Sense 4`
++ `LTE Cat.4 3`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240112`
