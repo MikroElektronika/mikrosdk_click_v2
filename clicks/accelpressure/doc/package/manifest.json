@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Sensors > Motion",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "AccelPressure click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.accelpressure",
+    "product_link": "https://www.mikroe.com/accelpressure-click",
+    "short_description": "Accel&Pressure Click is a compact add-on board representing a rate-of-climb sensing solution for your application. This board features the FXLS8974CF, a 3-axis low-g accelerometer, and the MPL3115A2, a precision pressure sensor with altimetry, both from NXP Semiconductor. Those two sensors are high-performance, low-power devices covering all of Earth's surface elevations. By combining the acceleration and the barometric pressure data, you can easily determine the vertical velocity (the rate of climb) of the device on which the Accel&Pressure Click is integrated.",
+    "supported_compiler": "mikroC AI|GCC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.AccelPressure",
+    "subdir_name": "lib_accelpressure"
+}

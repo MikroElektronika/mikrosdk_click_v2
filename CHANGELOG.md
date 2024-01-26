@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240126](#20240126)**
 + **[20240119](#20240119)**
 + **[20240112](#20240112)**
 + **[20231222](#20231222)**
@@ -77,6 +78,23 @@
 
 ---
 ---
+---
+
+## `20240126`
+
+*Following click boards have been added:*
+
++ `AccelPressure`
++ `Hall Switch 3`
++ `MagAccel`
++ `Silent Step 2`
+
+*Following click boards have been updated:*
+
++ `I2C Extend`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240119`

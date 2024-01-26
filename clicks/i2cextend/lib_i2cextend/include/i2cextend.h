@@ -191,6 +191,7 @@ extern "C"{
     cfg.sda = MIKROBUS( mikrobus, MIKROBUS_SDA ); \
     cfg.cs = MIKROBUS( mikrobus, MIKROBUS_CS ); \
     cfg.rst = MIKROBUS( mikrobus, MIKROBUS_RST ); \
+    cfg.on = MIKROBUS( mikrobus, MIKROBUS_PWM ); \
     cfg.int_pin = MIKROBUS( mikrobus, MIKROBUS_INT )
 
 /*! @} */ // i2cextend_map
@@ -203,8 +204,9 @@ extern "C"{
 typedef struct
 {
     // Output pins
-    digital_out_t  cs;                                  /**< Reset pin. */
-    digital_out_t  rst;                                 /**< Chip Select. */
+    digital_out_t  cs;                                  /**< Chip pin. */
+    digital_out_t  rst;                                 /**< Reset Select. */
+    digital_out_t  on;                                  /**< ON pin. */
     
     // Input pins
     digital_in_t  int_pin;                              /**< Interrupt pin. */
@@ -226,8 +228,9 @@ typedef struct
     pin_name_t  scl;                                    /**< Clock pin descriptor for I2C driver. */
     pin_name_t  sda;                                    /**< Bidirectional data pin descriptor for I2C driver. */
 
-    pin_name_t  cs;                                     /**< Reset pin. */
-    pin_name_t  rst;                                    /**< Chip Select. */
+    pin_name_t  cs;                                     /**< Chip pin. */
+    pin_name_t  rst;                                    /**< Reset Select. */
+    pin_name_t  on;                                     /**< ON pin. */
     pin_name_t  int_pin;                                /**< Interrupt pin. */
 
     uint32_t  i2c_speed;                                /**< I2C serial speed. */
@@ -487,6 +490,17 @@ void i2cextend_set_rst ( i2cextend_t *ctx, uint8_t en_rst );
  * @return Nothing.
  */
 void i2cextend_set_cs ( i2cextend_t *ctx, uint8_t en_cs );
+
+/**
+ * @brief Set ON pin state function.
+ * @details Function set ON pin state
+ * of I2c Extend click in Local Mode.
+ * @param[in] ctx : Click context object.
+ * See #i2cextend_t object definition for detailed explanation.
+ * @param[in] on_state : ON pin state.
+ * @return Nothing.
+ */
+void i2cextend_set_on ( i2cextend_t *ctx, uint8_t on_state );
 
 /**
  * @brief Check interrupt ststus function.
