@@ -29,12 +29,13 @@
 
 void i2cextend_cfg_setup ( i2cextend_cfg_t *cfg ) {
     // Communication gpio pins
-    cfg->scl  = HAL_PIN_NC;
-    cfg->sda  = HAL_PIN_NC;
+    cfg->scl = HAL_PIN_NC;
+    cfg->sda = HAL_PIN_NC;
 
     // Additional gpio pins
-    cfg->cs   = HAL_PIN_NC;
+    cfg->cs  = HAL_PIN_NC;
     cfg->rst = HAL_PIN_NC;
+    cfg->on  = HAL_PIN_NC;
     cfg->int_pin = HAL_PIN_NC;
 
     cfg->i2c_speed   = I2C_MASTER_SPEED_STANDARD;
@@ -64,8 +65,17 @@ err_t i2cextend_init ( i2cextend_t *ctx, i2cextend_cfg_t *cfg ) {
     }
 
     digital_out_init( &ctx->rst, cfg->rst );
+    digital_out_init( &ctx->cs, cfg->cs );
+    digital_out_init( &ctx->on, cfg->on );
 
     digital_in_init( &ctx->int_pin, cfg->int_pin );
+
+    i2cextend_set_rst ( ctx, I2CEXTEND_PIN_STATE_HIGH );
+    i2cextend_set_cs ( ctx, I2CEXTEND_PIN_STATE_HIGH );
+    i2cextend_set_on ( ctx, I2CEXTEND_PIN_STATE_LOW );
+    Delay_100ms ( );
+    i2cextend_set_on ( ctx, I2CEXTEND_PIN_STATE_HIGH );
+    Delay_100ms ( );
 
     return I2C_MASTER_SUCCESS;
 }
@@ -243,6 +253,14 @@ void i2cextend_set_cs ( i2cextend_t *ctx, uint8_t en_cs ) {
         digital_out_low( &ctx->cs );
     } else { 
         digital_out_high( &ctx->cs );
+    }
+}
+
+void i2cextend_set_on ( i2cextend_t *ctx, uint8_t on_state ) {
+    if ( on_state == I2CEXTEND_PIN_STATE_LOW ) {
+        digital_out_low( &ctx->on );
+    } else { 
+        digital_out_high( &ctx->on );
     }
 }
 
