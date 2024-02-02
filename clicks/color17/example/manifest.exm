@@ -2,7 +2,7 @@
     "name": "Color 17 Click",
     "description": "Color 17 Click is a compact add-on board representing an accurate color-sensing solution. This board features the OPT4048, a high-speed precision tristimulus XYZ color sensor from Texas Instruments. The sensor has four sensing channels and uses precision optical filters to mimic the normal vision of the human eye. The OPT4048 also has 12 configurable conversion times that range from 600μs up to 800ms, with measurements that can be read synchronously or asynchronously. It is not excessively sensitive to micro-shadows and the small particles on the optical surface.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","OPT4048DTSR"],
     "category" : ["Click Boards > Sensors > Optical"]
 }

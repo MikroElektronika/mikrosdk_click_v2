@@ -25,14 +25,15 @@
     "name": "mikroe.click.accel19",
     "product_link": "https://www.mikroe.com/accel-19-click",
     "short_description": "Accel 19 Click is a compact add-on board that contains an acceleration sensor. This board features the LIS2DTW12, an ultra-low-power high-performance three-axis accelerometer from STMicroelectronics. It allows selectable full-scale acceleration measurements in ranges of ±2g, ±4g, ±8g, or ±16g in three axes with a configurable host interface that supports both SPI and I2C serial communication. Alongside an embedded 0.8°C accuracy temperature sensor with ODRs ranging from 50 to 1.6Hz and resolution from 8 to 12 bits, it has a dedicated internal engine to process motion and acceleration detection.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.Accel19",
     "subdir_name": "lib_accel19"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "CAN Isolator 2 Click",
     "description": "CAN Isolator 2 Click is a compact add-on board that provides isolated CAN communication. This board features the ISO1042, an isolated CAN transceiver from Texas Instruments. This galvanically-isolated CAN transceiver meets the ISO11898-2 specifications and offers a +/-70V DC bus fault protection, along with the +/-30V of common mode voltage range. The transceiver supports two CAN modes, with speeds of up to 1Mbps in Classic CAN and flexible data rate (FD) CAN, which allows much faster transfer of payload compared to the classic CAN with up to 5Mbps.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
     "hw" : ["click","ISO1042"],
     "category" : ["Click Boards > Interface > CAN"]
 }

@@ -2,7 +2,7 @@
     "name": "USB UART ISO Click",
     "description": "USB UART ISO Click is a compact add-on board that offers a completely isolated differential pair of lines of the USB physical interface. This board features the ISOUSB111, a full/low-speed isolated USB repeater from Texas Instruments. It is a USB 2.0-compliant device that supports low-speed (1.5Mbps) and full-speed (12Mbps) signaling, USB On-The-Go (OtG), and Type-C Dual Role Port (DRP). In addition, this Click board™ comes with the FT232R, a USB UART IC from FTDI, making it a complete USB-to-UART isolated solution.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
     "hw" : ["click","ISOUSB111DWXR"],
     "category" : ["Click Boards > Interface > USB"]
 }

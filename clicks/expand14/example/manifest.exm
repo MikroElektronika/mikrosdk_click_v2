@@ -2,7 +2,7 @@
     "name": "Expand 14 Click",
     "description": "Expand 14 Click is a compact add-on board that contains a multi-port I/O expander. This board features the CAT9555, a CMOS device that provides 16-bit parallel input/output port expansion from ON Semiconductor. The CAT9555 contains two 8-bit configuration ports (input or output), input, output, and polarity inversion registers, alongside an I2C-compatible serial interface. Any of the sixteen I/Os can be configured as an input or output by writing to the configuration register. It also features an active-low interrupt output, indicating to the host controller that an input state has been changed.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","CAT9555YI"],
     "category" : ["Click Boards > Interface > Port expander"]
 }

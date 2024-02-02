@@ -25,17 +25,18 @@
     "name": "mikroe.click.lteiot2",
     "product_link": "https://www.mikroe.com/lte-iot-2-click",
     "short_description": "LTE IoT 2 click is a Click board™ that allows connection to the LTE networks, featuring Quectel BG96 LTE module, which offers two LTE technologies aimed at Machine to Machine communication (M2M) and Internet of Things (IoT).",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2482
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.LteIot2",
     "subdir_name": "lib_lteiot2"
 }
+
 
 
 

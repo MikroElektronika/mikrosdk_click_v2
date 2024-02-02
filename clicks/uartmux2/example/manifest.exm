@@ -2,7 +2,7 @@
     "name": "UART MUX 2 Click",
     "description": "UART MUX 2 Click is a compact add-on board that enables pseudo-multidrop RS232 transmission. This board features the MAX399, a precise CMOS analog multiplexer that allows four remote RS-232 transceivers to share a single UART from Maxim Integrated. It offers fast switching speeds with a transition time of less than 250ns and low on-resistance less than 100Ω while retains CMOS-logic input compatibility and fast switching. Channel selection is performed through a set of specific GPIO pins and possesses additional functionality such as the manual ON/OFF feature.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
     "hw" : ["click","MAX399"],
     "category" : ["RS232"]
 }

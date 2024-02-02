@@ -25,17 +25,18 @@
     "name": "mikroe.click.spirit2",
     "product_link": "https://www.mikroe.com/spirit-2-click",
     "short_description": "SPIRIT 2 Click features the SP1ML-915, an ultra-low power, fully integrated RF module, which operates at 915 MHz ISM band. This Click board™ can be used to add wireless connectivity to any application, requiring no extensive RF communication experience. The module integrates all the required components, including the 32-bit STM32L1 MCU, a compact chip antenna, and accompanying circuitry. The SP1ML-915 module supports several types of modulation schemes, including 2-FSK, GFSK, GMSK, OOK, and ASK, allowing it to fulfill different RF transmission requirements.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2829
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.SPIRIT2",
     "subdir_name": "lib_spirit2"
 }
+
 
 
 

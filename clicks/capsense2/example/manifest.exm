@@ -2,7 +2,7 @@
     "name": "CapSense 2 Click",
     "description": "CapSense 2 Click is a compact add-on board that easily integrates projected capacitive touch into user's applications. This board features the CAP1114, a multi-channel capacitive touch sensor that takes human body capacitance as an input and directly provides the real-time sensor information via the I2C serial interface from Microchip. This board contains capacitive sensing elements, a 7-segment slider, two buttons, and four LED indicators that visually detect the activation on some of these parts. This Click board™ offers reliable and accurate sensing for any application that uses capacitive touch sensing functions.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","CAP1114-1"],
     "category" : ["Capacitive"]
 }

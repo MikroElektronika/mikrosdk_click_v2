@@ -2,7 +2,7 @@
     "name": "ADC 17 Click",
     "description": "ADC 17 Click is a compact add-on board that contains a high-performance data converter. This board features the MAX11645, a low-power two-channel 12-bit analog-to-digital converter from Analog Devices. The MAX11645 measures two single-ended or one differential input. The fully differential analog inputs are software configurable (I2C interface) for unipolar or bipolar, and single-ended or differential operation. The 2.048V internal reference determines its full-scale analog input range. This Click board™ offers complete, high accuracy solutions for the most demanding applications from energy-harvesting sensors to portable consumer electronics, point-of-load monitoring (voltage, current, and temperature), and more.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MAX11645EUA"],
     "category" : ["ADC"]
 }

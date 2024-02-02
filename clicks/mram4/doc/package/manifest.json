@@ -25,12 +25,13 @@
     "name": "mikroe.click.mram4",
     "product_link": "https://www.mikroe.com/mram-4-click",
     "short_description": "MRAM 4 Click is a compact add-on board representing a magneto-resistive random-access memory solution. This board features the EM064LX, an industrial STT-MRAM persistent memory from Everspin Technologies. It is a 64Mb MRAM IC RAM and can achieve up to 200MHz as a single and double data rate (STR/DTR). The MRAM technology is analog to Flash technology with SRAM-compatible read/write timings (Persistent SRAM, P-SRAM), where data is always non-volatile. It also has a hardware write-protection feature and performs read and write operations with data retention for ten years and unlimited read, write, and erase operations for the supported life of the chip.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.MRAM4",
     "subdir_name": "lib_mram4"
 }
+
 

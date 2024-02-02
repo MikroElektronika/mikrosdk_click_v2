@@ -2,7 +2,7 @@
     "name": "10x10 RGB Click",
     "description": "10x10 RGB Click is a matrix of 100 intelligent RGB elements, forming a 10x10 display screen. These LED elements feature internal logic, which allows them to communicate directly with the MCU.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic32","gcc-riscv"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","gcc-riscv","clang-riscv"],
     "hw" : ["click","WS2812"],
     "category" : ["Optical"] 
 }

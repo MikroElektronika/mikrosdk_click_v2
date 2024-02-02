@@ -25,13 +25,14 @@
     "name": "mikroe.click.isoadc5",
     "product_link": "https://www.mikroe.com/iso-adc-5-click",
     "short_description": "ISO ADC 5 Click is a compact add-on board that contains quad-channel isolated ADC with field supply. This board features the MAX22530, galvanically isolated, 4-channel, multiplexed, 12-bit, analog-to-digital converter (ADC), providing 5kVRMS isolation from Maxim Integrated.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.ISOADC5",
     "subdir_name": "lib_isoadc5"
 }
+
 
 

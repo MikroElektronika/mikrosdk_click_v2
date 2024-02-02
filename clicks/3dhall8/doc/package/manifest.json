@@ -25,14 +25,15 @@
     "name": "mikroe.click.c3dhall8",
     "product_link": "https://www.mikroe.com/3d-hall-8-click",
     "short_description": "3D Hall 8 Click is a compact add-on board containing an ultra-small 3D-magnetic sensor for industrial and consumer applications.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.3DHall8",
     "subdir_name": "lib_c3dhall8"
 }
+
 
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.c2x30wamp",
     "product_link": "https://www.mikroe.com/2x30w-amp-click",
     "short_description": "2x30W Amp click is a class-D audio amplifier with a tremendous output power, considering its size and lack of huge heatsinks, usually associated with the audio amplifiers. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2386
     ],
-    "version": "2.1.0.18",
+    "version": "2.1.0.19",
     "cmake": true,
     "alias": "Click.2x30wAmp",
     "subdir_name": "lib_c2x30wamp"
 }
+
 
 
 

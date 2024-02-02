@@ -25,15 +25,16 @@
     "name": "mikroe.click.rs485isolator",
     "product_link": "https://www.mikroe.com/rs485-isolator-click",
     "short_description": "RS485 Isolator click is an RS485 communication isolator and carries the ADM2682EBRIZ, a 5 kV rms signal and power isolated RS-485 transceiver.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2501
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Rs485Isolator",
     "subdir_name": "lib_rs485isolator"
 }
+
 

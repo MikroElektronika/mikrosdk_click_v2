@@ -2,7 +2,7 @@
     "name": "VREG Click",
     "description": "VReg click is a digitally controlled DC Voltage regulator in mikroBUS™ form factor.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LM317-M, MCP4921 12-bit DAC, MCP3204 12-bit ADC, ZXMP7A17K MOSFET, LMx58"],
     "category" : ["Linear"] 
 }

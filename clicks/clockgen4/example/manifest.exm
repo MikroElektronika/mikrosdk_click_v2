@@ -2,7 +2,7 @@
     "name": "Clock Gen 4 Click",
     "description": "Clock Gen 4 Click is a compact add-on board that contains both a clock generator and a multiplier/jitter reduced clock frequency synthesizer. This board features the CS2200-CP, an analog PLL architecture comprised of a Delta-Sigma fractional-N frequency synthesizer from Cirrus Logic. This clocking device utilizes a programmable phase lock loop and allows frequency synthesis and clock generation from a stable reference clock. It generates a low-jitter PLL clock from an external crystal, supports both I²C and SPI for full software control, and also has configurable auxiliary clock output. This Click board™ is suitable for MCU clock source, or in applications like digital effects processors, digital mixing consoles, and many more.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","CS2200-CP"],
     "category" : ["Clock generator"]
 }

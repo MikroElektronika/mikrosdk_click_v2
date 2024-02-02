@@ -2,7 +2,7 @@
     "name": "SPI Isolator 2 Click",
     "description": "SPI Isolator 2 Click is a compact add-on board that contains a digital isolator optimized for a serial peripheral interface. This board features the ISO7741, a high-performance quad-channel digital isolator with a double capacitive silicon dioxide insulation barrier capable of galvanic isolation up to 5000Vrms from Texas Instruments. The ISO7741 provides high electromagnetic immunity and low emissions at low power consumption while isolating digital I/Os. It has three forward and one reverse-direction channel with enable pins that can be used to put the respective outputs in Hi-Z state. This Click board™ provides a simple, compact solution for isolated SPI data communication.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ISO7741"],
     "category" : ["SPI"]
 }

@@ -25,11 +25,12 @@
     "name": "mikroe.click.hbridge15",
     "product_link": "https://www.mikroe.com/h-bridge-15-click",
     "short_description": "H-Bridge 15 Click is a compact add-on board with an H-Bridge gate driver, also known as a full-bridge pre-driver. This board features the DRV8834, a dual-bridge stepper or DC motor driver from Texas Instruments. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.HBridge15",
     "subdir_name": "lib_hbridge15"
 }
+

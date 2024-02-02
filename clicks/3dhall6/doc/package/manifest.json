@@ -25,17 +25,18 @@
     "name": "mikroe.click.c3dhall6",
     "product_link": "https://www.mikroe.com/3d-hall-6-click",
     "short_description": "3D Hall 6 Click is a very accurate, magnetic field sensing Click board™, used to measure the intensity of the magnetic field across three perpendicular axes.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2778
     ],
-    "version": "2.1.0.22",
+    "version": "2.1.0.23",
     "cmake": true,
     "alias": "Click.3dHall6",
     "subdir_name": "lib_c3dhall6"
 }
+
 
 
 

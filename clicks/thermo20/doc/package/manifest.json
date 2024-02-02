@@ -25,17 +25,18 @@
     "name": "mikroe.click.thermo20",
     "product_link": "https://www.mikroe.com/thermo-20-click",
     "short_description": "Thermo 20 Click is a compact add-on board that provides an accurate temperature measurement. This board features the TSYS03, a miniature digital temperature sensor that comes up with factory calibrated, highly accurate temperature data from TE Connectivity.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3900
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.Thermo20",
     "subdir_name": "lib_thermo20"
 }
+
 
 
 

@@ -24,13 +24,14 @@
     "name": "mikroe.click.ismrx3",
     "product_link": "https://www.mikroe.com/ism-rx-3-click",
     "short_description": "ISM RX 3 Click is a compact add-on board that contains a Sub-GHz RF receiver. This board features the MAX41470, a high-performance, low-power receiver ideal for amplitude shift-keyed (ASK) and frequency shift-keyed (FSK) data from Maxim Integrated, now part of Analog Devices.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.ISMRX3",
     "subdir_name": "lib_ismrx3"
 }
+
 
 

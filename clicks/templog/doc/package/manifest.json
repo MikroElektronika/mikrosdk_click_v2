@@ -25,17 +25,18 @@
     "name": "mikroe.click.templog",
     "product_link": "https://www.mikroe.com/temp-log-click",
     "short_description": "Temp-Log click is a precise ambient temperature measurement device, equipped with 8Kbit (1024 bytes) of EEPROM memory, which can be used to permanently store system configuration or log application specific or user preference data. This click covers a range of temperatures from -55°C to +125°C with the highest accuracy of ±0.5°C, in the range of 0°C to 85°C. The device can also send an ALERT signal to the INT pin of the mikroBUS™ every time programmed temperature thresholds are reached.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2264
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.TempLog",
     "subdir_name": "lib_templog"
 }
+
 
 
 

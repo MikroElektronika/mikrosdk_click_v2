@@ -25,12 +25,13 @@
     "name": "mikroe.click.clickid",
     "product_link": "https://www.mikroe.com/clickid",
     "short_description": "Hardware and software solution based on a secure authenticator device (EEPROM) that enables the hot-plugging of peripheral add-on Click Boards™ to any mikroBUS™ compatible system.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.ClickID",
     "subdir_name": "lib_clickid"
 }
+
 

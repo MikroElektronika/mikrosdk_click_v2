@@ -25,16 +25,17 @@
     "name": "mikroe.click.rtc3",
     "product_link": "https://www.mikroe.com/rtc-3-click",
     "short_description": "RTC3 click carries BQ32000, a real time clock with an integrated trickle charge circuit for automatic switchover to a backup power supply (the circuit maintains the backup charge with an onboard super capacitor).",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1241
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Rtc3",
     "subdir_name": "lib_rtc3"
 }
+
 
 

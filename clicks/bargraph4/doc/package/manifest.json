@@ -25,14 +25,15 @@
     "name": "mikroe.click.bargraph4",
     "product_link": "https://www.mikroe.com/bargraph-4-click",
     "short_description": "BarGraph 4 Click is a compact add-on board that contains four green four-segment LED bar graph displays. This board features the TLC59283, a 16-channel, constant-current sink light-emitting diode (LED) driver from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.BarGraph4",
     "subdir_name": "lib_bargraph4"
 }
+
 
 
 

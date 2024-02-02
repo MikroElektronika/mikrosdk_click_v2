@@ -2,7 +2,7 @@
     "name": "Clock Gen 5 Click",
     "description": "Clock Gen 5 Click is a compact add-on board that contains a digital programmable oscillator solution. This board features the LTC6903, a low-power self-contained digital frequency source providing a precision frequency from 1kHz to 68MHz set through a 3-wire SPI digital interface from Analog Devices. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LTC6903"],
     "category" : ["Clock generator"]
 }

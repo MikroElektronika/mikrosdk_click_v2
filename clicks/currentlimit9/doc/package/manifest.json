@@ -25,11 +25,12 @@
     "name": "mikroe.click.currentlimit9",
     "product_link": "https://www.mikroe.com/current-limit-9-click",
     "short_description": "Current Limit 9 Click is a compact add-on board representing a current-limiting solution for your application. This board features the NPS4053, a load switch with a precision adjustable current limit from Nexperia. It is a 5.5V, 55mΩ load switch that allows precise adjustment of the current limit in a range of 110mA up to 2.5A while preserving the constant current during the current limiting.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.CurrentLimit9",
     "subdir_name": "lib_currentlimit9"
 }
+

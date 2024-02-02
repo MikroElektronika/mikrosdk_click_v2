@@ -25,13 +25,14 @@
     "name": "mikroe.click.hwmonitor2",
     "product_link": "https://www.mikroe.com/hw-monitor-2-click",
     "short_description": "HW Monitor 2 Click is a compact add-on board used to monitor and regulate the performance of various hardware components within an embedded system. This board features the AMC80, an I2C-configurable system hardware monitor from Texas Instruments that contains a 10-bit ADC capable of measuring seven positive voltages and local temperature. The AMC80 also has two programmable fan speed monitoring inputs besides other hardware monitoring functions like chassis intrusion detection, additional external interrupt input, and master reset for external purposes, as well as a programmable upper over-limit and lower under-limit alarms that activate when the programmed limits are exceeded.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.HWMonitor2",
     "subdir_name": "lib_hwmonitor2"
 }
+
 
 

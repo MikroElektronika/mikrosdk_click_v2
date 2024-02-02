@@ -25,14 +25,15 @@
     "name": "mikroe.click.leddriver16",
     "product_link": "https://www.mikroe.com/led-driver-16-click",
     "short_description": "LED Driver 16 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the PCA9745B, an SPI-configurable sixteen-channel constant current LED driver from NXP Semiconductors. Each LED output has an 8-bit resolution (256 steps) fixed-frequency individual PWM controller that operates at 31.25kHz with an adjustable duty cycle from 0 to 100% to allow the LED to be set to a specific brightness value. Powered through a selected mikroBUS™ power rail, either 3.3V or 5V, it provides a maximum output current of 57mA per channel and multiple built-in protection functions that protect the circuit during abnormalities.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.LEDDriver16",
     "subdir_name": "lib_leddriver16"
 }
+
 
 
 

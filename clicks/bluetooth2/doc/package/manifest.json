@@ -25,17 +25,18 @@
     "name": "mikroe.click.bluetooth2",
     "product_link": "https://www.mikroe.com/bluetooth2-click",
     "short_description": "Bluetooth 2 Click features WT41u, a long range class 1, Bluetooth® 2.1 + EDR module. WT41u is a highly integrated and sophisticated Bluetooth® module, containing all the necessary elements from Bluetooth® radio and a fully implemented protocol stack. Therefore WT41u provides an ideal solution for developers who want to integrate Bluetooth® wireless technology into their design with limited knowledge of Bluetooth® and RF technologies. WT41u optimized for long range applications is available with an integrated chip antenna. By default, the WT41u module is equipped with powerful and easy-to-use iWRAP firmware which enables users to access Bluetooth® functionality with simple ASCII commands delivered to the module over serial interface - it's just like a Bluetooth® modem.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         570
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Bluetooth2",
     "subdir_name": "lib_bluetooth2"
 }
+
 
 
 

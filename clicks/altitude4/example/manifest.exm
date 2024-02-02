@@ -2,7 +2,7 @@
     "name": "Altitude 4 Click",
     "description": "Altitude 4 Click introduces an absolute pressure sensor with digital output for low-cost applications labeled as NPA-201. Altitude 4 click employs a MEMS pressure sensor with a signal-conditioning IC to provide accurate pressure measurements from 260 to 1260 mBar.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","NPA-201"],
     "category" : ["Altitude"] 
 }

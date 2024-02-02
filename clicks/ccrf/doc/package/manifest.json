@@ -25,15 +25,16 @@
     "name": "mikroe.click.ccrf",
     "product_link": "https://www.mikroe.com/ccrf-click",
     "short_description": "ccRF click is a low-power 2.4 GHz transceiver designed for the 2400- 2483.5 MHz ISM and SRD frequency bands. It features CC2500 Low-Power 2.4 GHz RF transceiver as well as PCB trace antenna. The CC2500 is integrated with a highly configurable baseband modem that supports various modulation formats and has data rate up to 500 kBaud.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         726
     ],
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.ccRf",
     "subdir_name": "lib_ccrf"
 }
+
 

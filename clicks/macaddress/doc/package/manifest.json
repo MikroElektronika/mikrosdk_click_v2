@@ -25,17 +25,18 @@
     "name": "mikroe.click.macaddress",
     "product_link": "https://www.mikroe.com/mac-address-click",
     "short_description": "MAC Address click provides a unique node address for your application. It also has 1Kbit of writable EEPROM memory.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2134
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.MacAddress",
     "subdir_name": "lib_macaddress"
 }
+
 
 
 

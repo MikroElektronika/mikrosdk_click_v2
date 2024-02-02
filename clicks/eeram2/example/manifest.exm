@@ -2,7 +2,7 @@
     "name": "EERAM 2 Click",
     "description": "EERAM 2 Click is a standalone serial SRAM memory that includes shadow non-volatile backup. EERAM uses a small external capacitor to provide the energy needed to move the contents of the SRAM to the non-volatile cells when system power is lost.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","48LM01"],
     "category" : ["SRAM"] 
 }

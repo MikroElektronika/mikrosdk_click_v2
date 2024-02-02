@@ -25,13 +25,14 @@
     "name": "mikroe.click.expand14",
     "product_link": "https://www.mikroe.com/expand-14-click",
     "short_description": "Expand 14 Click is a compact add-on board that contains a multi-port I/O expander. This board features the CAT9555, a CMOS device that provides 16-bit parallel input/output port expansion from ON Semiconductor. The CAT9555 contains two 8-bit configuration ports (input or output), input, output, and polarity inversion registers, alongside an I2C-compatible serial interface. Any of the sixteen I/Os can be configured as an input or output by writing to the configuration register. It also features an active-low interrupt output, indicating to the host controller that an input state has been changed.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.Expand14",
     "subdir_name": "lib_expand14"
 }
+
 
 

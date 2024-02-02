@@ -25,17 +25,18 @@
     "name": "mikroe.click.brushless12",
     "product_link": "https://www.mikroe.com/brushless-12-click",
     "short_description": "Brushless 12 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the L6235, DMOS fully integrated 3-phase motor driver with overcurrent protection from STMicroelectronics.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3846
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Brushless12",
     "subdir_name": "lib_brushless12"
 }
+
 
 
 

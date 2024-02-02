@@ -2,7 +2,7 @@
     "name": "Barometer 10 Click",
     "description": "Barometer 10 Click is a compact add-on board that measures air pressure in a specific environment. This board features the LPS28DFW, an ultra-compact piezoresistive absolute pressure sensor that functions as a digital output barometer from STMicroelectronics. The LPS28DFW comprises a sensing element and an IC chip for signal processing in one package, converts pressure into a 24-bit digital value, and sends the information via I2C serial interface. It has a selectable dual full-scale absolute pressure range of up to 1260hPa and 4060hPa, with an absolute pressure accuracy of 0.5hPa over a wide operating temperature range.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LPS28DFW"],
     "category" : ["Click Boards > Sensors > Pressure"]
 }

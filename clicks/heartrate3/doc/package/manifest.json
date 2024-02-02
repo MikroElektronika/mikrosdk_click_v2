@@ -25,16 +25,17 @@
     "name": "mikroe.click.heartrate3",
     "product_link": "https://www.mikroe.com/heart-rate-3-click",
     "short_description": "Heart rate 3 click is a mikroBUS add-on board whose functionality is determined by two components: an OSRAM’s SFH7050 pulse oximetry and heart rate monitoring module, and a TI AFE4404 (analong-front-end) IC specialized for bio-sensing.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1908
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.HeartRate3",
     "subdir_name": "lib_heartrate3"
 }
+
 
 

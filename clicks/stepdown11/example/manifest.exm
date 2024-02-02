@@ -2,7 +2,7 @@
     "name": "Step Down 11 Click",
     "description": "Step Down 11 Click is a compact add-on board that converts higher voltages into lower voltage levels. This board features the TPSM82913, a low-noise and low-ripple buck power module from Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TPSM82913RDUR"],
     "category" : ["Click Boards > Power management > Buck"]
 }

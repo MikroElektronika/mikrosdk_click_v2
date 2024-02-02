@@ -25,17 +25,18 @@
     "name": "mikroe.click.c3dhall",
     "product_link": "https://www.mikroe.com/3d-hall-click",
     "short_description": "This application use to determine angle position",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1584
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.3DHall",
     "subdir_name": "lib_c3dhall"
 }
+
 
 
 

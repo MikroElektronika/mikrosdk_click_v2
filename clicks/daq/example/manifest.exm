@@ -2,7 +2,7 @@
     "name": "DAQ Click",
     "description": "DAQ Click is a compact add-on board representing a data acquisition solution. This board features the ADAQ7768-1, a 24-bit precision data acquisition (DAQ) μModule system that encapsulates signal conditioning, conversion, and processing blocks into one SiP from Analog Devices. It supports a fully differential input signal with a maximum voltage range of ±12V with an excellent common-mode rejection ratio (CMRR). The input signal is fully buffered with a low input bias current, enabling the ADAQ7768-1 to interface to sensors with high output impedance directly.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ADAQ7768-1"],
     "category" : ["ADC"]
 }

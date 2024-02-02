@@ -25,17 +25,18 @@
     "name": "mikroe.click.adc3",
     "product_link": "https://www.mikroe.com/adc-3-click",
     "short_description": "ADC 3 Click represent 16-bit multichannel analog-to-digital converter. The click has four pairs of screw terminals onboard, letting you access the chip’s four differential input channels.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1572
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Adc3",
     "subdir_name": "lib_adc3"
 }
+
 
 
 

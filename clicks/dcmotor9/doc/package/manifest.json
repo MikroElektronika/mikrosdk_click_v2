@@ -25,17 +25,18 @@
     "name": "mikroe.click.dcmotor9",
     "product_link": "https://www.mikroe.com/dc-motor-9-click",
     "short_description": "DC Motor 9 Click is a brushed DC motor driver with the current limiting and current sensing. It is based on the DRV8871, an integrated H-Bridge driver IC, optimized for motor driving applications. It can be operated by two logic signals, allowing to drive the connected motor in two different ways: it can use fixed logic levels for the direction control, or it can be controlled by a PWM signal, offering an additional speed control option. The DRV8871 also contains a set of protection features, offering a very high level of reliability. Besides driving capabilities, DC Motor 9 click can also sense current consumption at its output.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2711
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.DcMotor9",
     "subdir_name": "lib_dcmotor9"
 }
+
 
 
 

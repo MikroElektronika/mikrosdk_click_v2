@@ -25,13 +25,14 @@
     "name": "mikroe.click.stepdown7",
     "product_link": "https://www.mikroe.com/step-down-7-click",
     "short_description": "Step Down 7 Click is a compact add-on board that converts higher voltages into a lower voltages level. This board features the MAX17624, a synchronous step-down converter with integrated MOSFETs from Analog Devices.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.StepDown7",
     "subdir_name": "lib_stepdown7"
 }
+
 
 

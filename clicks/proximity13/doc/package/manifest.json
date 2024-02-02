@@ -25,17 +25,18 @@
     "name": "mikroe.click.proximity13",
     "product_link": "https://www.mikroe.com/proximity-13-click",
     "short_description": "Proximity 13 Click based on SI1153-AB09-GMR IC from Silicon Labs that can be used as an proximity, and gesture detector with I2C digital interface and programmable-event interrupt output.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3189
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.Proximity13",
     "subdir_name": "lib_proximity13"
 }
+
 
 
 

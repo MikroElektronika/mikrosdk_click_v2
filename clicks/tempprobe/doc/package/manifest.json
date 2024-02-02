@@ -25,16 +25,17 @@
     "name": "mikroe.click.tempprobe",
     "product_link": "https://www.mikroe.com/temp-probe-click",
     "short_description": "Temp Probe Click is a compact add-on board used as thermocouple temperature monitoring system. This board features the LTC2986, a high accuracy digital temperature measurement system used to directly digitize thermocouples with 0.1°C accuracy and 0.001°C resolution from Analog Devices.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         2505
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.TempProbe",
     "subdir_name": "lib_tempprobe"
 }
+
 
 

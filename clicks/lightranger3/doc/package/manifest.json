@@ -25,17 +25,18 @@
     "name": "mikroe.click.lightranger3",
     "product_link": "https://www.mikroe.com/lightranger-3-click",
     "short_description": "Light Ranger 3 click is an accurate distance measurement Click board™ based on a ToF ( Time of Flight ) measurement principle. The Simblee™ enabled RFD77402 rangefinder module from RF Digital is a complete measurement stack on the chip.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2398
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.LightRanger3",
     "subdir_name": "lib_lightranger3"
 }
+
 
 
 

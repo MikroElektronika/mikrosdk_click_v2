@@ -2,7 +2,7 @@
     "name": "ISM Click",
     "description": "ISM Click is a compact add-on board that contains a complete wireless RF digital data transceiver. This board features the RFM75, a low-power, high-performance 2.4GHz GFSK transceiver from RF Solutions. The RFM75 transceiver is configurable through SPI serial interface and operates with only 3.3V in the worldwide ISM frequency band from 2400MHz up to 2527MHz. The embedded packet processing engines enable their entire operation with a simple MCU as a radio system. Burst mode transmission and up to 2Mbps air data rate make it suitable for applications requiring ultra-low power consumption.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","RFM75"],
     "category" : ["2.4 GHz Trancevers"]
 }

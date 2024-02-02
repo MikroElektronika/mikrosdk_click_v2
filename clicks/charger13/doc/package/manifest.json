@@ -25,17 +25,18 @@
     "name": "mikroe.click.charger13",
     "product_link": "https://www.mikroe.com/charger-13-click",
     "short_description": "Charger 13 Click is a single lithium-ion (Li+) cell battery charger. This click can be used for Low-Cost Li-Ion battery chargers, or Power Tools, toys, backup energy storage solutions, etc.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2924
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Charger13",
     "subdir_name": "lib_charger13"
 }
+
 
 
 

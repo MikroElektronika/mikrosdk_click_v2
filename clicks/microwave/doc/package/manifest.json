@@ -25,17 +25,18 @@
     "name": "mikroe.click.microwave",
     "product_link": "https://www.mikroe.com/microwave-click",
     "short_description": "Microwave click detects movement, thanks to the PD-V11 a 24GHz microwave motion sensor. The typical use for Microwave click is a proximity or motion detector in various applications and devices.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2205
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.Microwave",
     "subdir_name": "lib_microwave"
 }
+
 
 
 

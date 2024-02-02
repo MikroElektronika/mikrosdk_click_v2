@@ -25,17 +25,18 @@
     "name": "mikroe.click.adc2",
     "product_link": "https://www.mikroe.com/adc-2-click",
     "short_description": "ADC 2 click carries MCP3551/3, which is a 22-bit ADC with automatic internal offset and gain calibration.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1482
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Adc2",
     "subdir_name": "lib_adc2"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "PowerBank Click",
     "description": "PowerBank Click is a USB charging expansion board which can be used for creating power bank devices or adding charging option to your device.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MP2632BGR-Z"],
     "category" : ["Battery Charger"] 
 }

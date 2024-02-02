@@ -25,17 +25,18 @@
     "name": "mikroe.click.dcmotor14",
     "product_link": "https://www.mikroe.com/dc-motor-14-click",
     "short_description": "This IC includes one channel of motor output block, using a wide range of supply voltages, while delivering reasonably high current to the connected DC motors.  ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2989
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Dcmotor14",
     "subdir_name": "lib_dcmotor14"
 }
+
 
 
 

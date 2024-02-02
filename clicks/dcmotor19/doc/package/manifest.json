@@ -25,13 +25,14 @@
     "name": "mikroe.click.dcmotor19",
     "product_link": "https://www.mikroe.com/dc-motor-19-click",
     "short_description": "DC Motor 19 Click is a compact add-on board that contains a brushed DC motor driver. This board features the TC78H653FTG, a dual H-bridge driver for one or two DC brushed motors or one stepping motor, which incorporates DMOS with low ON resistance in output transistors from Toshiba Semiconductor.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.DCMotor19",
     "subdir_name": "lib_dcmotor19"
 }
+
 
 

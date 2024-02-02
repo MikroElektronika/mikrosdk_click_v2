@@ -25,13 +25,14 @@
     "name": "mikroe.click.hbridge12",
     "product_link": "https://www.mikroe.com/h-bridge-12-click",
     "short_description": "H Bridge 12 Click is a compact add-on board with an H-Bridge gate driver, also known as a full-bridge pre-driver. This board features the DRV8823, a 4-bridge serial interface motor driver from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.HBridge12",
     "subdir_name": "lib_hbridge12"
 }
+
 
 

@@ -25,12 +25,13 @@
     "name": "mikroe.click.adc22",
     "product_link": "https://www.mikroe.com/adc-22-click",
     "short_description": "ADC 22 Click is a compact add-on board with a high-performance data converter. This board features the ADS8665, a high-speed single-supply SAR ADC data acquisition system with programmable bipolar input ranges from Texas Instruments. It features a high-speed, high-precision A/D converter based on successive approximation (SAR). This 12-bit resolution ADC with an integrated analog front-end (AFE) input driver circuit can achieve speeds of up to 500ksps.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.ADC22",
     "subdir_name": "lib_adc22"
 }
+
 

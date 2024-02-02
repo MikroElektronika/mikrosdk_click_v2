@@ -25,13 +25,14 @@
     "name": "mikroe.click.digipot13",
     "product_link": "https://www.mikroe.com/digi-pot-13-click",
     "short_description": "DIGI POT 13 Click is a compact add-on board that contains a digitally controlled potentiometer. This board features the MAX5419, a 256-tap non-volatile digital potentiometer from Analog Devices. On this Click board™, one digitally I2C-controlled potentiometer is realized with typical end-to-end resistance values of 200kΩ. It can operate from both 3.3V and 5V power supplies and provides a low 35ppm/ºC end-to-end nominal resistance temperature coefficient and only 5ppm/ºC ratiometric.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.DIGIPOT13",
     "subdir_name": "lib_digipot13"
 }
+
 
 

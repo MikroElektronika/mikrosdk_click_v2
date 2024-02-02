@@ -25,13 +25,14 @@
     "name": "mikroe.click.efuse7",
     "product_link": "https://www.mikroe.com/efuse-7-click",
     "short_description": "eFuse 7 Click is a compact add-on board with a power path protection solution that limits circuit currents and voltages to safe levels during fault conditions. This board features the LS12052BD33, an eFuse with over-voltage protection and blocking FET control from Littelfuse. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.eFuse7",
     "subdir_name": "lib_efuse7"
 }
+
 
 

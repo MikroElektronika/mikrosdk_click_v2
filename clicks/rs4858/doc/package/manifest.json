@@ -25,13 +25,14 @@
     "name": "mikroe.click.rs4858",
     "product_link": "https://www.mikroe.com/rs485-8-click",
     "short_description": "RS485 8 Click is a compact add-on board that enables communication over an RS485 network. This board features the THVD1426, an RS485 transceiver with auto-direction control and ESD protection from Texas Instruments. The THVD1426 offers bus protection for contact discharge, air gap discharge, fast transient burst, and +/-16V bus fault protection.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.RS4858",
     "subdir_name": "lib_rs4858"
 }
+
 
 

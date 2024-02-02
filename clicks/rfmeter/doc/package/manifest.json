@@ -25,17 +25,18 @@
     "name": "mikroe.click.rfmeter",
     "product_link": "https://www.mikroe.com/rf-meter-click-click",
     "short_description": "RF Meter click is a radio frequency power measurement device covering a frequency span from 1 MHz to 8 GHz over a 60 dB range (approximately).",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1688
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.RfMeter",
     "subdir_name": "lib_rfmeter"
 }
+
 
 
 

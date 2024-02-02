@@ -25,14 +25,15 @@
     "name": "mikroe.click.a5000plugntrust",
     "product_link": "https://www.mikroe.com/a5000-plugtrust-click",
     "short_description": "A5000 Plug&Trust Click is a compact add-on board representing a ready-to-use secure IoT authenticator. This board features the A5000, an Edge Lock® Secure Authenticator from NXP Semiconductors. The A5000 provides a root of trust at the IC level, giving an IoT authentication system state-of-the-art security capability. It allows for securely storing and provisioning credentials and performing cryptographic operations for security-critical communication and authentication functions. It has an independent Common Criteria EAL 6+ security certification up to OS level and supports ECC asymmetric cryptographic and AES/3DES symmetric algorithms.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.A5000PlugnTrust",
     "subdir_name": "lib_a5000plugntrust"
 }
+
 
 
 

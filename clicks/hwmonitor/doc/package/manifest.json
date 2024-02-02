@@ -25,13 +25,14 @@
     "name": "mikroe.click.hwmonitor",
     "product_link": "https://www.mikroe.com/hw-monitor-click",
     "short_description": "HW Monitor Click is a compact add-on board used to monitor and regulate the performance of various hardware components within an embedded system. This board features the LM96080, an I2C-configurable system hardware monitor from Texas Instruments that contains a 10-bit delta-sigma ADC capable of measuring seven positive voltages and local temperature. The LM96080 also has two programmable fan speed monitoring inputs besides other hardware monitoring functions like chassis intrusion detection, additional external interrupt input, master reset for external purposes, as well as a sequencer that performs watchdog window comparisons of all measured values.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.HWMonitor",
     "subdir_name": "lib_hwmonitor"
 }
+
 
 

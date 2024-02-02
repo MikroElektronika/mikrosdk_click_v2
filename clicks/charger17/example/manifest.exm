@@ -2,7 +2,7 @@
     "name": "Charger 17 Click",
     "description": "Charger 17 Click is a compact add-on board that provides a single-cell battery charging solution. This board features the RT9471, a 3A single-cell switching battery charger from Richtek. It is a highly-integrated battery charge and system power-path management device for single-cell Li-Ion and Li-Polymer batteries. The high-efficiency 1.5MHz synchronous switch-mode buck charger achieves up to 92% charge efficiency at 2A with 5V input and 3.8V battery.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","RT9471GQW"],
     "category" : ["Click Boards > Power management > Battery Charger"]
 }

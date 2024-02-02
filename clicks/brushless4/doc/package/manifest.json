@@ -25,16 +25,17 @@
     "name": "mikroe.click.brushless4",
     "product_link": "https://www.mikroe.com/brushless-4-click",
     "short_description": "Brushless 4 click is a 3 phase sensorless BLDC motor driver, which features a 180° sinusoidal drive, providing high efficiency and low acoustic noise. This type of drivers inherently provides higher torque in general, compared to classical 120° BLDC motor drivers.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2391
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Brushless4",
     "subdir_name": "lib_brushless4"
 }
+
 
 

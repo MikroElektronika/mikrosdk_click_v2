@@ -25,17 +25,18 @@
     "name": "mikroe.click.htu21d",
     "product_link": "https://www.mikroe.com/htu21d-click",
     "short_description": "The application is composed of two sections.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1133
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Htu21d",
     "subdir_name": "lib_htu21d"
 }
+
 
 
 

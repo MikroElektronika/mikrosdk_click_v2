@@ -2,7 +2,7 @@
     "name": "Shake2Wake Click",
     "description": "Shake2Wake click carries an ADXL362 ultralow power, 3-axis MEMS accelerometer and ADP195 load switch. The distinguishing feature of this IC is that it incorporates several activity detection modes.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ADXL362"],
     "category" : ["Motion"] 
 }

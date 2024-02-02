@@ -25,17 +25,18 @@
     "name": "mikroe.click.llcspi",
     "product_link": "https://www.mikroe.com/llc-spi-click",
     "short_description": "The LLC SPI click is a very useful Click board™ which can be utilized as the level converter for logic signals.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2612
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Llcspi",
     "subdir_name": "lib_llcspi"
 }
+
 
 
 

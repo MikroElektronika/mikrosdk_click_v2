@@ -25,17 +25,18 @@
     "name": "mikroe.click.proximity9",
     "product_link": "https://www.mikroe.com/proximity-9-click",
     "short_description": "Proximity 9 click is a very accurate and reliable proximity sensing (PS) and ambient light sensing (ALS) device, equipped with the VCNL4040, an integrated PS and ALS sensor which features the Filtron™ technology.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2774
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Proximity9",
     "subdir_name": "lib_proximity9"
 }
+
 
 
 

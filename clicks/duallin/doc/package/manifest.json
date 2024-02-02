@@ -25,17 +25,18 @@
     "name": "mikroe.click.duallin",
     "product_link": "https://www.mikroe.com/dual-lin-click",
     "short_description": "The Dual LIN click is a Click board™ based on the TLE7268SKXUMA1, a Dual LIN transceiver from Infineon.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2953
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.DualLin",
     "subdir_name": "lib_duallin"
 }
+
 
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.charger8",
     "product_link": "https://www.mikroe.com/charger-8-click",
     "short_description": "Charger 8 Click is an intelligent Li-Ion battery charger, system power manager, and a battery fuel gauge Click board™.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2686
     ],
-    "version": "2.1.0.18",
+    "version": "2.1.0.19",
     "cmake": true,
     "alias": "Click.Charger8",
     "subdir_name": "lib_charger8"
 }
+
 
 
 

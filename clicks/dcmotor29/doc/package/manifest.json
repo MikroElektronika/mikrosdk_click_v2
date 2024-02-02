@@ -25,11 +25,12 @@
     "name": "mikroe.click.dcmotor29",
     "product_link": "https://www.mikroe.com/dc-motor-29-click",
     "short_description": "DC Motor 29 Click is a compact add-on board that contains a high-performance DC motor driver. This board features the DRV8245P, an automotive H-Bridge driver with integrated current sense and diagnostic from Texas Instruments. It can be configured as a single full-bridge driver or independent half-bridge driver. The driver offers excellent power handling and thermal capability due to a BiCMOS high power process technology mode, in which it is designed.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.DCMotor29",
     "subdir_name": "lib_dcmotor29"
 }
+

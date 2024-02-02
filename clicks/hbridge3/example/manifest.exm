@@ -2,7 +2,7 @@
     "name": "H Bridge 3 Click",
     "description": "H-Bridge 3 Click is designed for the control of small DC motors and inductive loads, it features TLE9201SG a general purpose 6A H-Bridge perfectly suited for industrial and automotive applications. This IC meets the harsh automotive environmental conditions and it is qualified in accordance with the AEC-Q100 standard, also has set of features such as the short circuit and over-temperature protection, under-voltage protection, detailed SPI diagnosis or simple error flag and fully 3.3/5.5V compatible logic inputs.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TLE9201SG"],
     "category" : ["Stepper"] 
 }

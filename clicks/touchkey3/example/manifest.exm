@@ -2,7 +2,7 @@
     "name": "TouchKey 3 Click",
     "description": "There are many kinds of touch sensors on the market, but every one of them has some unique features that make it stand out from the crowd. TouchKey 3 click is equipped with seven advanced capacitive sensors, based on the proprietary QTouch® technology. Besides quite a large number of QTouch® capacitive sensor channels, TouchKey 3 click also offers some additional features, such as the Adjacent Key Suppression (AKS®), a technology that ensures correct button press, even when the touch sensing pads are placed close to each other.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","AT42QT1110"],
     "category" : ["Capacitive"] 
 }

@@ -25,17 +25,18 @@
     "name": "mikroe.click.ammeter",
     "product_link": "https://www.mikroe.com/ammeter-click",
     "short_description": "Ammeter click is a mikroBUS add-on board with circuitry for measuring electric current (both AC and DC).",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1884
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Ammeter",
     "subdir_name": "lib_ammeter"
 }
+
 
 
 

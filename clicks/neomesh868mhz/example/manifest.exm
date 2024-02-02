@@ -2,7 +2,7 @@
     "name": "NeoMesh 868MHz Click",
     "description": "NeoMesh Click - 868MHz is a compact add-on board with a low-power, long-range transceiver, ideal for Mesh wireless networking. This board features the NC1000C-8, a wireless Mesh network module from NeoCortec. With an additional antenna that MikroE offers connected to the module’s u.Fl connector, you can create a fully functional wireless Mesh network node that will work in the Sub-GHz frequency band of 868MHz. The module has a generic application layer that can configured to suit applications.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
     "hw" : ["click","NC1000C-8"],
     "category" : ["Click Boards > Wireless connectivity > Sub-1 GHz Transceivers"]
 }

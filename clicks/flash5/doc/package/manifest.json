@@ -25,17 +25,18 @@
     "name": "mikroe.click.flash5",
     "product_link": "https://www.mikroe.com/flash-5-click",
     "short_description": "Flash 5 Click is a perfect solution for the mass storage option in various embedded applications.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2948
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.Flash5",
     "subdir_name": "lib_flash5"
 }
+
 
 
 

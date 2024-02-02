@@ -25,17 +25,18 @@
     "name": "mikroe.click.illuminance",
     "product_link": "https://www.mikroe.com/illuminance-click",
     "short_description": "Illuminance Click is a compact add-on board that mimics how humans perceive light. This board features ams AG’s TSL2583, a very-high sensitivity light-to-digital converter that transforms light intensity to a digital signal output capable of the direct I2C interface. It combines one broadband photodiode (visible plus infrared) and one infrared-responding photodiode on a single CMOS integrated circuit capable of providing a near-photopic response over an effective 16-bit dynamic range (16-bit resolution).",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1135
     ],
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.Illuminance",
     "subdir_name": "lib_illuminance"
 }
+
 
 
 

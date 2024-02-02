@@ -25,13 +25,14 @@
     "name": "mikroe.click.shuttle",
     "product_link": "https://www.mikroe.com/shuttle-click",
     "short_description": "Shuttle click is a mikroBUS™ socket expansion board, which provides an easy and elegant solution for stacking up to four click boards™ on a single mikroBUS™. It is a perfect solution for expanding the capacity of the development system with additional mikroBUS™ sockets when there is a demand for using more click boards™ than the used development system is able to support.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Shuttle",
     "subdir_name": "lib_shuttle"
 }
+
 
 

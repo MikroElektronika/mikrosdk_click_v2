@@ -25,17 +25,18 @@
     "name": "mikroe.click.thermo2",
     "product_link": "https://www.mikroe.com/thermo-2-click",
     "short_description": "THERMO 2 click carries DS1825, a programmable resolution digital thermometer IC with a unique 64-bit address. The click is designed to run on a 3.3V power supply. The board communicates with the target microcontroller through a 1-wire interface. Using the onboard jumper you can select between two outputs: GP1 (default mikroBUS™ AN pin), and GPO (default PWM pin).",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1242
     ],
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.Thermo2",
     "subdir_name": "lib_thermo2"
 }
+
 
 
 

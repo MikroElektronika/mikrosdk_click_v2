@@ -25,14 +25,15 @@
     "name": "mikroe.click.ultralowpress",
     "product_link": "https://www.mikroe.com/ultra-low-press-click",
     "short_description": "Ultra-Low Press Click is a compact add-on board containing a mountable gage pressure sensor for pneumatic pressure measurements.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.UltraLowPress",
     "subdir_name": "lib_ultralowpress"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "Ultra-Low Press Click",
     "description": "Ultra-Low Press Click is a compact add-on board containing a mountable gage pressure sensor for pneumatic pressure measurements.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","SM8436"],
     "category" : ["Pressure"]
 }

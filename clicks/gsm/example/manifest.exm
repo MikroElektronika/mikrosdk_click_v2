@@ -2,7 +2,7 @@
     "name": "GSM Click",
     "description": "GSM click is a compact and powerful GSM cellular network communication solution, featuring the GSM/GPRS Telit GL865-QUAD module. This module features a full set of options for the cellular networking and communication, such as the network status indication, jamming detection, embedded TCP/IP stack, including TCP, IP, UDP, SMTP, ICMP and FTP protocols, full GPRS class 10 implementation; GSM supplementary functions such as the call barring, waiting, forwarding, and holding, calling line identification presentation or restriction (CLIP/CLIR), integrated voice communication codecs, and more.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
     "hw" : ["click","GL865-QUAD"],
     "category" : ["GSM/LTE"]
 }

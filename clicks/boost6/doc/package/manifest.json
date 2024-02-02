@@ -25,17 +25,18 @@
     "name": "mikroe.click.boost6",
     "product_link": "https://www.mikroe.com/boost-6-click",
     "short_description": "The Boost 6 Click is a Click board™ which features the TPS55332-Q1, a monolithic high-voltage switching regulator with integrated 3-A, 60-V power MOSFET.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2970
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Boost6",
     "subdir_name": "lib_boost6"
 }
+
 
 
 

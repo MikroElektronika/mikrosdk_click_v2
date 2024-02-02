@@ -25,12 +25,13 @@
     "name": "mikroe.click.hallcurrent17",
     "product_link": "https://www.mikroe.com/hall-current-17-click",
     "short_description": "Hall Current 17 Click is a compact add-on board that contains a precise solution for AC/DC current sensing. This board features the ACS37010, a high-accuracy current sensor from Allegro MicroSystems. The ACS37010 has a high operating bandwidth of 450kHz and a fast response time of 1.3μs response time. It features a highly isolated compact surface-mount package, low internal primary conductor resistance, low sensitivity error, low offset voltage over temperature, and more.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.HallCurrent17",
     "subdir_name": "lib_hallcurrent17"
 }
+
 

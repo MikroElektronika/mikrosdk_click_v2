@@ -25,17 +25,18 @@
     "name": "mikroe.click.force5",
     "product_link": "https://www.mikroe.com/force-5-click",
     "short_description": "Force 5 Click is a compact add-on board that contains a stable and flexible compensated/amplified micro force sensor. This board features the FMAMSDXX025WC2C3, a piezoresistive-based force sensors offering a digital output for reading force over the specified full-scale force span and a temperature range from Honeywell Sensing and Productivity Solutions.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         3896
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Force5",
     "subdir_name": "lib_force5"
 }
+
 
 
 

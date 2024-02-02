@@ -25,17 +25,18 @@
     "name": "mikroe.click.c6dofimu7",
     "product_link": "https://www.mikroe.com/6dof-imu-7-click",
     "short_description": "6DOF IMU 7 click is based on the ICM-20649, a high-performance, 6-axis MEMS MotionTracking™ IC from TDK Invensense. It is an advanced, integrated microelectromechanical gyroscope and accelerometer sensor (MEMS). This allows very high integration and very small dimensions, at an affordable cost.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2934
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.6DofImu7",
     "subdir_name": "lib_c6dofimu7"
 }
+
 
 
 

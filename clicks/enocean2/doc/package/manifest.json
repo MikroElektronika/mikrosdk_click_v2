@@ -25,17 +25,18 @@
     "name": "mikroe.click.enocean2",
     "product_link": "https://www.mikroe.com/enocean-2-click",
     "short_description": "EnOcean 2 click carries the TCM 515Z transceiver, based on the 2.4 GHz IEEE 802.15.4 radio standard. The click is designed to run on a 3.3V power supply. It communicates with the target microcontroller over UART interface.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2014
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.EnOcean2",
     "subdir_name": "lib_enocean2"
 }
+
 
 
 

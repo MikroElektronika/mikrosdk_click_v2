@@ -25,14 +25,15 @@
     "name": "mikroe.click.oximeter2",
     "product_link": "https://www.mikroe.com/oximeter-2-click",
     "short_description": "Oximeter 2 Click is a compact add-on board perfectly suited for measuring the blood oxygen saturation.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Oximeter2",
     "subdir_name": "lib_oximeter2"
 }
+
 
 
 

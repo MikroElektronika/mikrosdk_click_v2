@@ -25,16 +25,17 @@
     "name": "mikroe.click.pot",
     "product_link": "https://www.mikroe.com/pot-click",
     "short_description": "POT Click is a Click board™ with the accurate selectable reference voltage output. By employing a high-quality 10mm carbon potentiometer, this Click board™ can provide very accurate voltage output. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2700
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Pot",
     "subdir_name": "lib_pot"
 }
+
 
 

@@ -2,7 +2,7 @@
     "name": "Touch Key 4 Click",
     "description": "Touch Key 4 click is a capacitive touch sensing Click board™, with the advanced touch/proximity sensor IC. It has three independently configurable channels and can work in several operating modes, including multiple button pattern detection mode, combo mode, press and hold detection mode, power button mode, and more.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","CAP1293"],
     "category" : ["Capacitive"] 
 }

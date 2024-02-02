@@ -25,17 +25,18 @@
     "name": "mikroe.click.analogmux",
     "product_link": "https://www.mikroe.com/analog-mux-click",
     "short_description": "Analog MUX Click is a Click board™ that switches one of the sixteen inputs to one output. It employs the CD74HC4067, a High-Speed CMOS Logic 16-Channel Analog Multiplexer/Demultiplexer, produced by Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3262
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.AnalogMUX",
     "subdir_name": "lib_analogmux"
 }
+
 
 
 

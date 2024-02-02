@@ -25,12 +25,13 @@
     "name": "mikroe.click.hallcurrent16",
     "product_link": "https://www.mikroe.com/hall-current-16-click",
     "short_description": "Hall Current 16 Click is a compact add-on board that contains a precise solution for AC/DC current sensing. This board features the ACS37002, a 400kHz high-accuracy current sensor from Allegro Microsystems. This sensor features pin-selectable gains that can be used to configure the device to one of the four defined sensitivities and corresponding current ranges, increasing design flexibility. In addition, an adjustable overcurrent fast fault provides short-circuit detection.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.HallCurrent16",
     "subdir_name": "lib_hallcurrent16"
 }
+
 

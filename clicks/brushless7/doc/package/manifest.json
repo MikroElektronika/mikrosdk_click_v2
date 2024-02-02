@@ -25,17 +25,18 @@
     "name": "mikroe.click.brushless7",
     "product_link": "https://www.mikroe.com/brushless-7-click",
     "short_description": "Brushless 7 Click is, as its name said, a motor driver based expansion board for controlling BLCD motors with any microcontroller.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3807
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Brushless7",
     "subdir_name": "lib_brushless7"
 }
+
 
 
 

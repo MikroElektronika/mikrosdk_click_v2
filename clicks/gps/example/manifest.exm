@@ -2,7 +2,7 @@
     "name": "GPS Click",
     "description": "GPS click is a compact solution for adding GPS functionality to your device. It carries the u-blox LEA-6S high-performance position engine.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LEA-6S"],
     "category" : ["GPS+GNSS"] 
 }

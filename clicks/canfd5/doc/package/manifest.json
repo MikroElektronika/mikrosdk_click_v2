@@ -25,17 +25,18 @@
     "name": "mikroe.click.canfd5",
     "product_link": "https://www.mikroe.com/can-fd-5-click",
     "short_description": "CAN FD 5 Click is a compact add-on board that contains CAN transceiver that supports both CAN and CAN FD protocols.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3871
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.CanFd5",
     "subdir_name": "lib_canfd5"
 }
+
 
 
 

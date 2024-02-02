@@ -25,17 +25,18 @@
     "name": "mikroe.click.temphum14",
     "product_link": "https://www.mikroe.com/temphum-14-click",
     "short_description": "Temp & Hum 14 Click is a compact add-on board that contains one of the smallest and most accurate humidity and temperature sensors on the market. This board features the HTU31D, a highly accurate digital relative humidity sensor with temperature output from TE Connectivity. With power consumption down to 3.78μW and accuracy of ±2%RH and ±0.2°C, this Click board™ provides fast response time, precision measurement, low hysteresis, and sustained performance even when exposed to extreme temperature up to 125°C and humidity environments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         3898
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.TempHum14",
     "subdir_name": "lib_temphum14"
 }
+
 
 
 

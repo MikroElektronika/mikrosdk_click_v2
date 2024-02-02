@@ -2,7 +2,7 @@
     "name": "SHT AN Click",
     "description": "SHT AN Click is a sensorics based add on board which can be used for measuring humidity and temperature. It features fully calibrated, linearized and temperature compensated SHT31-ARP-B sensor with analog output.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","SHT31-ARP"],
     "category" : ["Temperature & humidity"] 
 }

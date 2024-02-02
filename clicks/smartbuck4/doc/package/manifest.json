@@ -25,13 +25,14 @@
     "name": "mikroe.click.smartbuck4",
     "product_link": "https://www.mikroe.com/smart-buck-4-click",
     "short_description": "Smart Buck 4 Click is a compact add-on board that contains a high-frequency synchronous step-down DC-DC converter. This board features the LTS3562, a quad synchronous step-down DC-DC regulator from Analog Devices. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.SmartBuck4",
     "subdir_name": "lib_smartbuck4"
 }
+
 
 

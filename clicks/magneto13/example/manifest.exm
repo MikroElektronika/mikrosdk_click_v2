@@ -2,7 +2,7 @@
     "name": "Magneto 13 Click",
     "description": "Magneto 13 Click is a compact add-on board with an accurate and reliable magnetic device. This board features the MA736, a contactless digital angle sensor from Monolithic Power Systems. It is a MagAlpha sensor that detects the absolute angular position of a permanent magnet, typically a diametrically magnetized cylinder or a rotating shaft. The MA736 sensor supports a wide range of magnetic field strengths, end-of-shaft, and side-shaft (off-axis mounting) spatial configurations.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MA736"],
     "category" : ["Click Boards > Sensors > Magnetic"]
 }

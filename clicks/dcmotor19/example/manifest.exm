@@ -2,7 +2,7 @@
     "name": "DC Motor 19 Click",
     "description": "DC Motor 19 Click is a compact add-on board that contains a brushed DC motor driver. This board features the TC78H653FTG, a dual H-bridge driver for one or two DC brushed motors or one stepping motor, which incorporates DMOS with low ON resistance in output transistors from Toshiba Semiconductor.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TC78H653FTG"],
     "category" : ["Brushed"]
 }

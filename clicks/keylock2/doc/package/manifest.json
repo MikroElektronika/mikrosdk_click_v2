@@ -25,17 +25,18 @@
     "name": "mikroe.click.keylock2",
     "product_link": "https://www.mikroe.com/keylock-2-click",
     "short_description": "Keylock 2 Click carries antistatic process sealed keylock mechanism that has three positions.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2781
     ],
-    "version": "2.1.0.17",
+    "version": "2.1.0.18",
     "cmake": true,
     "alias": "Click.KeyLock2",
     "subdir_name": "lib_keylock2"
 }
+
 
 
 

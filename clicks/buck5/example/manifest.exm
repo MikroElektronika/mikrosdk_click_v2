@@ -2,7 +2,7 @@
     "name": "Buck 5 Click",
     "description": "Buck 5 Click is a high-efficiency buck (step-down) DC/DC converter, which can provide digitally adjusted step-down voltage on its output while delivering a considerable amount of current. Buck 5 click accepts a wide voltage range on its input - from 5V to 30V.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MAX17506, MAX5401"],
     "category" : ["Buck"] 
 }

@@ -25,17 +25,18 @@
     "name": "mikroe.click.proximity10",
     "product_link": "https://www.mikroe.com/proximity-10-click",
     "short_description": "Proximity 10 Click is a versatile proximity detection device on a Click board™. It can detect a foreign object distanced up to 20cm.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2779
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Proximity10",
     "subdir_name": "lib_proximity10"
 }
+
 
 
 

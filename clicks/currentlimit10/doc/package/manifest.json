@@ -25,11 +25,12 @@
     "name": "mikroe.click.currentlimit10",
     "product_link": "https://www.mikroe.com/current-limit-10-click",
     "short_description": "Current Limit 10 Click is a compact add-on board representing a current-limiting solution for your application. This board features the HS2950P, a load protection HotSwitch from Semtech. It features a wide input voltage range of 2.7V up to 29V and can provide up to 5A output current. The HS2950P features an adjustable current limit, over-voltage protection, automatic output discharge, and soft start. It automatically restarts from all faults except OVP and UVLO.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.CurrentLimit10",
     "subdir_name": "lib_currentlimit10"
 }
+

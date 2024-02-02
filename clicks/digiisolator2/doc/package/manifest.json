@@ -25,11 +25,12 @@
     "name": "mikroe.click.digiisolator2",
     "product_link": "https://www.mikroe.com/digi-isolator-2-click",
     "short_description": "DIGI Isolator 2 Click is a compact add-on board that provides isolated digital input signals to your application. This board features the ISO1228, an eight-channel isolated digital input from Texas Instruments. It comes with 8-channel isolated 24V digital input receivers, with a current limit and diagnostics. The device also provides a field-side input-current-powered LED indication to reduce system power dissipation and reduce the board temperatures.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.DIGIIsolator2",
     "subdir_name": "lib_digiisolator2"
 }
+

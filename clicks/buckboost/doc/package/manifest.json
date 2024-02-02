@@ -25,17 +25,18 @@
     "name": "mikroe.click.buckboost",
     "product_link": "https://www.mikroe.com/buck-boost-click",
     "short_description": "Buck-Boost click™ features LTC3129-1, a buck-boost DC/DC conversion integrated circuit. The click supports a wide input voltage range and can output eight discrete regulated output voltage levels, selectable by the digital output voltage selection pins, ranging from 2.5V to 15V. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2216
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.BuckBoost",
     "subdir_name": "lib_buckboost"
 }
+
 
 
 

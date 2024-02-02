@@ -25,17 +25,18 @@
     "name": "mikroe.click.i2cmux3",
     "product_link": "https://www.mikroe.com/i2c-mux-3-click",
     "short_description": "I2C MUX 3 Click is a compact add-on board that contains eight bidirectional translating switches dedicated for applications with I2C slave address conflicts.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3857
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.I2cMux3",
     "subdir_name": "lib_i2cmux3"
 }
+
 
 
 

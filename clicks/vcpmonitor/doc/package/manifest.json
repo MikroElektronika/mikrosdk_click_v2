@@ -25,17 +25,18 @@
     "name": "mikroe.click.vcpmonitor",
     "product_link": "https://www.mikroe.com/vcp-monitor-click",
     "short_description": "The VCP Monitor Click is add-on board power monitor system. This Click board™ is based on INA260AIPWR - precision digital current and power monitor with low-drift, integrated precision shunt resistor, from Texas Instruments. Therefore, using VCP Monitor Click, current, voltage and power can be monitored.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3241
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.VCPmonitor",
     "subdir_name": "lib_vcpmonitor"
 }
+
 
 
 

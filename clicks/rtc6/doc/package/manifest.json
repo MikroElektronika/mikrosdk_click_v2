@@ -25,17 +25,18 @@
     "name": "mikroe.click.rtc6",
     "product_link": "https://www.mikroe.com/rtc6-click",
     "short_description": "RTC6 click carries Microchip’s MCP79410 Real-Time Clock/Calendar IC with built-in 64 bytes of battery-backed SRAM an additional 1 Kbit of EEPROM.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2459
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.Rtc6",
     "subdir_name": "lib_rtc6"
 }
+
 
 
 

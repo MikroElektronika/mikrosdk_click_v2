@@ -2,7 +2,7 @@
     "name": "Proximity 5 Click",
     "description": "Proximity 5 click is a very accurate and reliable proximity sensing (PS) and ambient light sensing (ALS) device, equipped with the state-of-the-art PS and ALS sensor. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","VCNL4035X01"],
     "category" : ["Proximity"] 
 }

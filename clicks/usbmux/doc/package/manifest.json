@@ -25,13 +25,14 @@
     "name": "mikroe.click.usbmux",
     "product_link": "https://www.mikroe.com/usb-mux-click",
     "short_description": "USB MUX Click is a compact add-on board with a high-bandwidth switch designed for switching and isolating high-speed USB 2.0 signals in systems with limited USB I/Os. This board features the TS3USB30E, a USB 2.0 1:2 multiplexer/demultiplexer switch with a single enable from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.USBMUX",
     "subdir_name": "lib_usbmux"
 }
+
 
 

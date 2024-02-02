@@ -2,7 +2,7 @@
     "name": "MagAccel Click",
     "description": "Mag&Accel Click is a compact add-on board representing a moving object and magnetic switch as a single solution. This board features the NMH1000, a Hall-effect magnetic field switch, and the FXLS8974CF, a 3-axis low-g accelerometer, both from NXP Semiconductor.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","FXLS8974,NMH1000"],
     "category" : ["Click Boards > Sensors > Motion"]
 }

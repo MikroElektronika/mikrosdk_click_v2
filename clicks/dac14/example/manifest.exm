@@ -2,7 +2,7 @@
     "name": "DAC 14 Click",
     "description": "DAC 14 Click is a compact add-on board providing highly accurate digital-to-analog conversion. This board features the DAC53202, a 10-bit dual-channel programmable voltage/current-output DAC from Texas Instruments. The DAC53202 supports high-speed I2C and SPI serial interface alongside Hi-Z Power-Down mode and Hi-Z output during Power-OFF conditions. It has a programmable comparator mode for both DAC channels and one general-purpose I/O pin configurable as multiple functions allowing this smart DAC for processor-less applications.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","DAC53202RTER"],
     "category" : ["Click Boards > Mixed signal > DAC"]
 }

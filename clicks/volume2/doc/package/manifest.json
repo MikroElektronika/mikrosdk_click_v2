@@ -25,14 +25,15 @@
     "name": "mikroe.click.volume2",
     "product_link": "https://www.mikroe.com/volume-2-click",
     "short_description": "Volume 2 Click is a compact add-on board that provides the user with complete digital volume control. This board features the NJU72341, a 2-channel I2C configurable electronic volume IC with external mute control from NJRC.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Volume2",
     "subdir_name": "lib_volume2"
 }
+
 
 
 

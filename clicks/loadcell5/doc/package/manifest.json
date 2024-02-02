@@ -25,14 +25,15 @@
     "name": "mikroe.click.loadcell5",
     "product_link": "https://www.mikroe.com/load-cell-5-click",
     "short_description": "Load Cell 5 Click is a compact add-on board that represents a weigh scale solution. This board features the AD7780, a pin-programmable, low power, 24-bit sigma-delta ΣΔ ADC from Analog Devices. It interfaces directly to the load cell, where the low-level signal from the load cell is amplified by the AD7780’s internal low noise programmable gain amplifier programmed to operate with a gain of 128 or 1. It also has a power-down mode allowing the user to switch off the power to the bridge sensor and power-down the AD7780 when not converting, increasing the product battery life. This Click board™ has many features that make it a perfect solution for safety-critical and weight measurement applications.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.LoadCell5",
     "subdir_name": "lib_loadcell5"
 }
+
 
 
 

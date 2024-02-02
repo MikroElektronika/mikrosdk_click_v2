@@ -25,16 +25,17 @@
     "name": "mikroe.click.diffpress",
     "product_link": "https://www.mikroe.com/diff-press-click",
     "short_description": "Diff Press Click is an accurate pressure sensor Click board™ capable of measuring differential pressure.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2665
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.DiffPress",
     "subdir_name": "lib_diffpress"
 }
+
 
 

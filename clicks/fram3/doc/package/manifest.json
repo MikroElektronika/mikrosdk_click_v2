@@ -25,17 +25,18 @@
     "name": "mikroe.click.fram3",
     "product_link": "https://www.mikroe.com/fram-3-click",
     "short_description": "The FRAM 3 Click is a Click board™ that carries a ferroelectric RAM module. Ferroelectric RAM, also known as FRAM, is a non-volatile memory type, with characteristics that are comparable to much faster DRAM memory modules. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2962
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.FRAM3",
     "subdir_name": "lib_fram3"
 }
+
 
 
 

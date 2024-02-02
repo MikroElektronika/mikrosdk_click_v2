@@ -25,17 +25,18 @@
     "name": "mikroe.click.templog4",
     "product_link": "https://www.mikroe.com/temp-log-4-click",
     "short_description": "Temp-Log 4 Click is a temperature measuring Click board™ featuring the SE97B IC, an accurate temperature sensor IC with integrated EEPROM.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2684
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.TempLog4",
     "subdir_name": "lib_templog4"
 }
+
 
 
 

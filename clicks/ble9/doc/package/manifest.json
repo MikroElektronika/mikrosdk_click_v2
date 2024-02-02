@@ -25,14 +25,15 @@
     "name": "mikroe.click.ble9",
     "product_link": "https://www.mikroe.com/ble-9-click",
     "short_description": "BLE 9 Click is a fully embedded stand-alone Bluetooth 5.2 Energy connectivity module, equipped with the EFR32BG22 Series 2 Modules, an ultra-small, high-performing, standalone Bluetooth low energy module for easy integration of Bluetooth low energy connectivity (BLE) into various electronic devices. This module combines a high-performance Arm® Cortex®-M33 CPU microprocessor with FPU, and state-of-the-art power performance. Reliable and easy to use, BLE 9 click is a perfect solution for development of various IoT applications, smart home applications, BLE enabled toys, advanced robotics, and other similar applications.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.Ble9",
     "subdir_name": "lib_ble9"
 }
+
 
 
 

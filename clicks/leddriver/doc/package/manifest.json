@@ -25,17 +25,18 @@
     "name": "mikroe.click.leddriver",
     "product_link": "https://www.mikroe.com/led-driver-click",
     "short_description": "This application controls the brightness.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2114
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.LedDriver",
     "subdir_name": "lib_leddriver"
 }
+
 
 
 

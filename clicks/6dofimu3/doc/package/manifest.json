@@ -25,17 +25,18 @@
     "name": "mikroe.click.c6dofimu3",
     "product_link": "https://www.mikroe.com/6dof-imu-3-click",
     "short_description": "6DOF IMU 3 Click is a complete 6-axis detection development board suitable for movement and position tracking devices.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3248
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.6Dofimu3",
     "subdir_name": "lib_c6dofimu3"
 }
+
 
 
 

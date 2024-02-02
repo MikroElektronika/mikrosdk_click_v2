@@ -25,17 +25,18 @@
     "name": "mikroe.click.fan",
     "product_link": "https://www.mikroe.com/fan-click",
     "short_description": "Fan Click carries an EMC2301 controller for powering and regulating the operation of 5V four-wire fans, which are commonly utilized as coolers in computers and other electronics.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1596
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Fan",
     "subdir_name": "lib_fan"
 }
+
 
 
 

@@ -25,14 +25,15 @@
     "name": "mikroe.click.vibromotor4",
     "product_link": "https://www.mikroe.com/vibro-motor-4-click",
     "short_description": "Vibro Motor 4 Click is a compact add-on board that makes an ideal solution for adding simple haptic feedback in any design. This board features the G1040003D, a coin-sized linear resonant actuator (LRA) that generates vibration/haptic feedback from Jinlong Machinery & Electronics, Inc. Driven by a flexible Haptic/Vibra driver, the DRV2605, G1040003D vibrates in the Z-axis, which is perpendicular to the face of the vibration motor. It draws a maximum of 170mA while producing the highest G force/vibration energy of 2 GRMS. This Click board™ makes an excellent choice for devices with limited battery capacity and for users who require crisp haptic feedback and low power consumption.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.VibroMotor4",
     "subdir_name": "lib_vibromotor4"
 }
+
 
 
 

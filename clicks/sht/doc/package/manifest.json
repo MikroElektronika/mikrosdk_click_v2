@@ -25,16 +25,17 @@
     "name": "mikroe.click.sht",
     "product_link": "https://www.mikroe.com/sht-click",
     "short_description": "SHT click is a temperature and humidity sensing click board that carries Sensiron’s SHT3x-DIS IC. Compared to its predecessor (SHT11), SHT3x click has increased reliability and enhanced signal processing features with a high signal-to-noise ratio.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1777
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Sht",
     "subdir_name": "lib_sht"
 }
+
 
 

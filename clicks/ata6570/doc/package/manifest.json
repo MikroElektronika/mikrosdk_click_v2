@@ -25,17 +25,18 @@
     "name": "mikroe.click.ata6570",
     "product_link": "https://www.mikroe.com/ata6570-click",
     "short_description": "ATA6570 click is a CAN Partial Networking interface board. The click carries the ATA6570, a high-speed CAN transceiver that interfaces a Controller Area Network (CAN) protocol controller and the physical two-wire CAN bus. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2294
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Ata6570",
     "subdir_name": "lib_ata6570"
 }
+
 
 
 

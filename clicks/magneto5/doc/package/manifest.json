@@ -25,17 +25,18 @@
     "name": "mikroe.click.magneto5",
     "product_link": "https://www.mikroe.com/magneto-5-click",
     "short_description": "Magneto 5 click is a very accurate and reliable magnetic sensor device, which features the MEMSIC MMC34160PJ, a 3-axis magnetic sensor IC",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2361
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Magneto5",
     "subdir_name": "lib_magneto5"
 }
+
 
 
 

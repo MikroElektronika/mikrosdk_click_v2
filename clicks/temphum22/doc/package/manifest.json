@@ -25,14 +25,15 @@
     "name": "mikroe.click.temphum22",
     "product_link": "https://www.mikroe.com/temphum-22-click",
     "short_description": "Temp&Hum 22 Click is a compact add-on board representing temperature and humidity sensing solution. This board features the SHT41A, a 4th generation automotive-grade relative humidity and temperature sensor from Sensirion. The SHT41A is characterized by its high accuracy (±2% RH and ±0.3°C over a wide operating temperature range) and high resolution providing 16-bit data to the host controller with a configurable I2C interface. Also, it is designed for reliable operation in harsh conditions such as condensing environments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.TempHum22",
     "subdir_name": "lib_temphum22"
 }
+
 
 
 

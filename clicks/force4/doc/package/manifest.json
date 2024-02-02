@@ -25,17 +25,18 @@
     "name": "mikroe.click.force4",
     "product_link": "https://www.mikroe.com/force-4-click",
     "short_description": "Force 4 Click is based on HSFPAR003A piezoresistive force sensor from Alpsalpine. This product is a force sensor using the effect of a piezoresistive bridge circuit formed on silicon diaphragm.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3794
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.Force4",
     "subdir_name": "lib_force4"
 }
+
 
 
 

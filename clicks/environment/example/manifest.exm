@@ -2,7 +2,7 @@
     "name": "Environment Click",
     "description": "Environment click measures temperature, relative humidity, pressure and VOC (Volatile Organic compounds gases). The click carries the BME680 environmental sensor from Bosch.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","BME680"],
     "category" : ["Environmental"] 
 }

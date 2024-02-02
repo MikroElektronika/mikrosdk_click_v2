@@ -25,17 +25,18 @@
     "name": "mikroe.click.gsmgnss",
     "product_link": "https://www.mikroe.com/gsm-gnss-click",
     "short_description": "GSM/GNSS click combines GPS/GLONASS location tracking with GSM module capability for mobile communication. The click features Quectel’s MC60 quad-band module.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1990
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.GsmGnss",
     "subdir_name": "lib_gsmgnss"
 }
+
 
 
 

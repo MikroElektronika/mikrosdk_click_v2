@@ -2,7 +2,7 @@
     "name": "M-BUS RF 4 Click",
     "description": "M-BUS RF 4 Click is a mikroBUS™ add-on board with a MIPOT 32001324 RF wireless transceiver. This module operates in the 868 MHz SRD Band. Thanks to its small LCC form factor (15 x 25 mm only) and its low power consumption this module allows the implementation of highly integrated low power (battery operated) solutions for water, gas, heat or electricity metering applications, both on meter or concentrator devices.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MIPOT 32001324 RF"],
     "category" : ["Sub-1 GHz Transceivers"] 
 }

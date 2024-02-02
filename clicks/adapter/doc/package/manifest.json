@@ -25,17 +25,18 @@
     "name": "mikroe.click.adapter",
     "product_link": "https://www.mikroe.com/adapter-click",
     "short_description": "Adapter click™ is a breakout board which simplifies connection of add-on boards with IDC10 headers to mikroBUS™ socket. There are two ways of establishing connection: using male or female IDC10 connectors.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2827
     ],
-    "version": "2.1.0.17",
+    "version": "2.1.0.18",
     "cmake": true,
     "alias": "Click.Adapter",
     "subdir_name": "lib_adapter"
 }
+
 
 
 

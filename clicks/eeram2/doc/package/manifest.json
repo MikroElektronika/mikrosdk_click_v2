@@ -25,17 +25,18 @@
     "name": "mikroe.click.eeram2",
     "product_link": "https://www.mikroe.com/eeram-2-click",
     "short_description": "EERAM 2 Click is a standalone serial SRAM memory that includes shadow non-volatile backup. EERAM uses a small external capacitor to provide the energy needed to move the contents of the SRAM to the non-volatile cells when system power is lost.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3717
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Eeram2",
     "subdir_name": "lib_eeram2"
 }
+
 
 
 

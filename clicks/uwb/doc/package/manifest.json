@@ -25,16 +25,17 @@
     "name": "mikroe.click.uwb",
     "product_link": "https://www.mikroe.com/uwb-click",
     "short_description": "UWB Click is an Ultra-Wideband transceiver Click board™ that can be used in 2-way ranging or TDOA location systems to locate assets to a precision of 10 cm and supports data rates of up to 6.8 Mbps. This Click board™ features the DWM1000 module based on Decawave's DW1000 Ultra-Wideband (UWB) transceiver from Decawave Limited.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3819
     ],
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.Uwb",
     "subdir_name": "lib_uwb"
 }
+
 
 

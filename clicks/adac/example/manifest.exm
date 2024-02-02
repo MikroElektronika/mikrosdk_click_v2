@@ -2,7 +2,7 @@
     "name": "ADAC Click",
     "description": "The click is designed to run on either 3.3V or 5V power supply. ADAC click communicates with the target microcontroller over I2C interface, with additional functionality provided by the RST pin on the mikroBUS™ line.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","AD5593R"],
     "category" : ["ADC-DAC"] 
 }

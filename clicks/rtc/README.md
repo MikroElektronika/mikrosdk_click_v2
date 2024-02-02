@@ -36,31 +36,31 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- `rtc_cfg_setup` Config Object Initialization function.
+- `rtc_c_cfg_setup` Config Object Initialization function.
 ```c
-void rtc_cfg_setup ( rtc_cfg_t *cfg ); 
+void rtc_c_cfg_setup ( rtc_c_cfg_t *cfg ); 
 ```
 
-- `rtc_init` Initialization function.
+- `rtc_c_init` Initialization function.
 ```c
-err_t rtc_init ( rtc_t *ctx, rtc_cfg_t *cfg );
+err_t rtc_c_init ( rtc_c_t *ctx, rtc_c_cfg_t *cfg );
 ```
 
 #### Example key functions :
 
-- `rtc_set_time` Function sets time: hours, minutes and seconds data to the target register address of PCF8583 chip on RTC Click.
+- `rtc_c_set_time` Function sets time: hours, minutes and seconds data to the target register address of PCF8583 chip on RTC Click.
 ```c
-void rtc_set_time ( rtc_t *ctx );
+void rtc_c_set_time ( rtc_c_t *ctx );
 ```
 
-- `rtc_get_time` Function gets time: hours, minutes and seconds data from the target register address of PCF8583 chip on RTC Click.
+- `rtc_c_get_time` Function gets time: hours, minutes and seconds data from the target register address of PCF8583 chip on RTC Click.
 ```c
-void rtc_get_time ( rtc_t *ctx );
+void rtc_c_get_time ( rtc_c_t *ctx );
 ```
 
-- `rtc_enable_disable_counting` Function that enables or disables counting on RTC Click.
+- `rtc_c_enable_disable_counting` Function that enables or disables counting on RTC Click.
 ```c
-void rtc_enable_disable_counting ( rtc_t *ctx, uint8_t en_dis );
+void rtc_c_enable_disable_counting ( rtc_c_t *ctx, uint8_t en_dis );
 ```
 
 ## Example Description
@@ -78,7 +78,7 @@ void rtc_enable_disable_counting ( rtc_t *ctx, uint8_t en_dis );
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    rtc_cfg_t cfg;
+    rtc_c_cfg_t cfg;
 
     /** 
      * Logger initialization.
@@ -94,25 +94,25 @@ void application_init ( void )
     log_info( &logger, " Application Init " );
 
     // Click initialization.
-    rtc_cfg_setup( &cfg );
-    RTC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    rtc_init( &rtc, &cfg );
+    rtc_c_cfg_setup( &cfg );
+    RTC_C_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    rtc_c_init( &rtc_c, &cfg );
 
     log_printf( &logger, "------------------\r\n" );
     log_printf( &logger, "     RTC Click    \r\n" );
     log_printf( &logger, "------------------\r\n" );
 
     // Set Time: 23h, 59 min, 50 sec and 10 ms
-    rtc.time.time_hours = 23;
-    rtc.time.time_minutes = 59;
-    rtc.time.time_seconds = 50;
-    rtc.time.time_hun_sec = 10;
+    rtc_c.time.time_hours = 23;
+    rtc_c.time.time_minutes = 59;
+    rtc_c.time.time_seconds = 50;
+    rtc_c.time.time_hun_sec = 10;
 
-    rtc_set_time( &rtc );
+    rtc_c_set_time( &rtc_c );
     Delay_100ms( );
     
     // Start counting
-    rtc_enable_disable_counting( &rtc, 1 );
+    rtc_c_enable_disable_counting( &rtc_c, 1 );
     Delay_100ms( );
     
     log_info( &logger, " Application Task " );
@@ -134,18 +134,18 @@ void application_task ( void )
 {
     static uint8_t time_seconds_new = 0xFF;
 
-    rtc_get_time( &rtc );
+    rtc_c_get_time( &rtc_c );
 
-    if ( time_seconds_new != rtc.time.time_seconds )
+    if ( time_seconds_new != rtc_c.time.time_seconds )
     {
         log_printf( &logger, " Time : %.2u:%.2u:%.2u\r\n", 
-                    ( uint16_t ) rtc.time.time_hours, 
-                    ( uint16_t ) rtc.time.time_minutes, 
-                    ( uint16_t ) rtc.time.time_seconds );
+                    ( uint16_t ) rtc_c.time.time_hours, 
+                    ( uint16_t ) rtc_c.time.time_minutes, 
+                    ( uint16_t ) rtc_c.time.time_seconds );
 
         log_printf( &logger, "------------------\r\n" );
 
-        time_seconds_new = rtc.time.time_seconds;
+        time_seconds_new = rtc_c.time.time_seconds;
     }
 
     Delay_ms( 500 );

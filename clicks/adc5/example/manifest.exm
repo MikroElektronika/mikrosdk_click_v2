@@ -2,7 +2,7 @@
     "name": "ADC 5 Click",
     "description": "ADC 5 click is a Click board™ used to sample an analog voltage on the input and convert it to a digital information. ADC 5 click is equipped with the ADC121S021, a low power, single channel 12-bit CMOS analog to digital converter (ADC), with a high-speed serial interface.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ADC121S021"],
     "category" : ["ADC"] 
 }

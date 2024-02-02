@@ -2,7 +2,7 @@
     "name": "DC Motor 8 Click",
     "description": "DC Motor 8 click is a DC motor driver. It can drive simple DC motors with brushes, providing them with a significant amount of current and voltage up to 40V. The click has one control input, that uses the PWM signal from the host MCU. It uses the half-bridge topology to regulate the speed of the motor rotation, employs advanced dead-time circuitry that monitors the output stage, providing maximum switching efficiency and features an advanced technique to avoid shoot-through currents.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MIC4605, MIC2606"],
     "category" : ["Brushed"] 
 }

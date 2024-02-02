@@ -25,13 +25,14 @@
     "name": "mikroe.click.co23",
     "product_link": "https://www.mikroe.com/co2-3-click",
     "short_description": "CO2 3 Click is a compact add-on board that allows for precise and reliable indoor air quality measurements. This board features XENSIV™ PASCO2V01BUMA1, a highly accurate CO2 sensor module from Infineon Technologies that uses photoacoustic spectroscopy technology to measure indoor air quality. The module comprises a gas measuring cell, an IR emitter, a microphone, and a microcontroller for data processing. Its key components are developed in-house, ensuring the highest quality and performance. Other major characteristics include high accuracy, low power consumption, and versatile configuration options.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.CO23",
     "subdir_name": "lib_co23"
 }
+
 
 

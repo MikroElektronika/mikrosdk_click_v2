@@ -25,17 +25,18 @@
     "name": "mikroe.click.dcmotor15",
     "product_link": "https://www.mikroe.com/dc-motor-15-click",
     "short_description": "DC Motor 15 Click is a compact add-on board that contains a motor driver with current sense and regulation. This board features the DRV8874, an integrated motor driver with N-channel H-bridge, charge pump, current sensing, and adjustment from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3903
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.DCMotor15",
     "subdir_name": "lib_dcmotor15"
 }
+
 
 
 

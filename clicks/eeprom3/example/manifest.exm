@@ -2,7 +2,7 @@
     "name": "EEPROM 3 Click",
     "description": "EEPROM 3 click provides 2 Mbit (2,097,152 bits) of Electrically Erasable Programmable Read Only Memory, organized in bytes. In other words, this click board™ is an EEPROM memory medium with the capacity of 256 KB. The used EEPROM module has outstanding endurance, with 1,000,000 write cycles and data retention period of over 100 years.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","AT24CM02"],
     "category" : ["EEPROM"] 
 }

@@ -25,17 +25,18 @@
     "name": "mikroe.click.ambient",
     "product_link": "https://www.mikroe.com/ambient-click",
     "short_description": "Ambient click carries the Melexis MLX75305 IC. It’s a CMOS integrated optical sensor that consists of a photodiode, a transimpendance amplifier, and an output transistor.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1463
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Ambient",
     "subdir_name": "lib_ambient"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "Power Monitor Click",
     "description": "Power Monitor Click is a compact add-on board that represents an ultra-precise power monitoring solution. This board features the INA228, a digital power monitor with a 20-bit delta-sigma ADC specifically designed for current-sensing applications from Texas Instruments. The INA228 reports current, bus voltage, temperature, power, energy, and charge accumulation while employing a precision ±0.5 % integrated oscillator, all while performing the needed calculations in the background. It can measure a full-scale differential input of ±163.84mV or ±40.96mV across a resistive shunt sense element, with common-mode voltage support up to +85V. This Click board™ is suitable for current-sensing applications in DC-DC converters, power inverters, telecom equipment, industrial measurements, and many more.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","INA228"],
     "category" : ["Current sensor"]
 }

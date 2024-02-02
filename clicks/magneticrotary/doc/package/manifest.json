@@ -25,17 +25,18 @@
     "name": "mikroe.click.magneticrotary",
     "product_link": "https://www.mikroe.com/magnetic-rotary-click",
     "short_description": "Magnetic rotary click is a very accurate position sensing Click board™ which utilizes the HMC1512, a magnetic field displacement sensor IC.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2655
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.MagneticRotary",
     "subdir_name": "lib_magneticrotary"
 }
+
 
 
 

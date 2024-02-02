@@ -25,14 +25,15 @@
     "name": "mikroe.click.charger17",
     "product_link": "https://www.mikroe.com/charger-17-click",
     "short_description": "Charger 17 Click is a compact add-on board that provides a single-cell battery charging solution. This board features the RT9471, a 3A single-cell switching battery charger from Richtek. It is a highly-integrated battery charge and system power-path management device for single-cell Li-Ion and Li-Polymer batteries. The high-efficiency 1.5MHz synchronous switch-mode buck charger achieves up to 92% charge efficiency at 2A with 5V input and 3.8V battery.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.Charger17",
     "subdir_name": "lib_charger17"
 }
+
 
 
 

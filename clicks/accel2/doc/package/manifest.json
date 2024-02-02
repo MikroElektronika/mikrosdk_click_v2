@@ -25,17 +25,18 @@
     "name": "mikroe.click.accel2",
     "product_link": "https://www.mikroe.com/accel-2-click",
     "short_description": "Accel 2 click carries ST’s LIS3DSH IC, a low-power factory-calibrated three-axis accelerometer which embeds a FIFO buffer and two programmable state machines.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1465
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Accel2",
     "subdir_name": "lib_accel2"
 }
+
 
 
 

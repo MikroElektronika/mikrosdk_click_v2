@@ -2,7 +2,7 @@
     "name": "USB-C Sink Click",
     "description": "USB-C Sink Click is a compact add-on board that contains a standalone autonomous USB power delivery controller. This board features the STUSB4500, a USB-C sink-only controller compatible with Power-Delivery (PD) from STMicroelectronics. It supports dead battery mode to allow a system to be powered from an external source directly, establishes a valid source-to-sink connection, and negotiates a USB power delivery (PD) contract with a PD capable source device.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","STUSB4500"],
     "category" : ["USB-C PD"]
 }

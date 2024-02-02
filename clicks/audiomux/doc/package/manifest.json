@@ -25,17 +25,18 @@
     "name": "mikroe.click.audiomux",
     "product_link": "https://www.mikroe.com/audiomux-click",
     "short_description": "AudioMUX click is a sound processing Click board™ with digital controls, based on the TDA7468D IC. It can be used to select one of four audio input channels, adjust its frequency response and volume, and send it to the output.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2626
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.AudioMUX",
     "subdir_name": "lib_audiomux"
 }
+
 
 
 

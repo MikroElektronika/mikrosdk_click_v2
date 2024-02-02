@@ -25,13 +25,14 @@
     "name": "mikroe.click.adc13",
     "product_link": "https://www.mikroe.com/adc-13-click",
     "short_description": "ADC 13 Click is a compact add-on board that contains a high-performance data converter. This board features the ADS1262, a 32-bit, high precision, 38-kSPS, analog-to-digital converter with programmable gain amplifier and voltage reference from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.ADC13",
     "subdir_name": "lib_adc13"
 }
+
 
 

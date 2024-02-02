@@ -25,17 +25,18 @@
     "name": "mikroe.click.heartrate5",
     "product_link": "https://www.mikroe.com/heart-rate-5-click",
     "short_description": "Heart Rate 5 click is the optical biosensor Click board™ which can be used for the heart-rate monitoring (HRM), as well as the peripheral capillary oxygen saturation monitoring (SpO2). This Click board™ employs a very sensitive analog front-end IC with high dynamic range, which ensures accurate and reliable readings. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         2368
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.HeartRate5",
     "subdir_name": "lib_heartrate5"
 }
+
 
 
 

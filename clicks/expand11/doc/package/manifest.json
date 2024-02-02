@@ -25,14 +25,15 @@
     "name": "mikroe.click.expand11",
     "product_link": "https://www.mikroe.com/expand-11-click",
     "short_description": "Expand 11 Click is a compact add-on board that contains a multi-port I/O expander. This board features the TCA9536, a general-purpose remote I/O expansion for most microcontroller families from Texas Instruments. The TCA9536 comes in a 4-port configuration and allows easy addition of I/O through a standard I2C serial interface. Each port is user-configurable to either a logic input or logic output by writing to the I/O configuration register bits. The data for each input or output is kept in the corresponding input or output register. There is an additional special function register that port P3, in addition to its standard I/O function, can also configure as an interrupt feature.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.Expand11",
     "subdir_name": "lib_expand11"
 }
+
 
 
 

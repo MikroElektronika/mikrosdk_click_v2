@@ -25,17 +25,18 @@
     "name": "mikroe.click.uarti2cspi",
     "product_link": "https://www.mikroe.com/uart-i2cspi-click",
     "short_description": "UART I2C/SPI Click is an all-in-one solution which allows ESD-protected RS-232 connectivity to any embedded application while bridging the UART and I2C/SPI interfaces at the same time. It is equipped with the DE-9 connector, so it can be easily connected.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2608
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.UARTI2CSPI",
     "subdir_name": "lib_uarti2cspi"
 }
+
 
 
 

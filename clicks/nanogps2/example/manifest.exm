@@ -2,7 +2,7 @@
     "name": "Nano GPS 2 Click",
     "description": "Nano GPS 2 Click features the smallest GPS module with an integrated patch antenna, the ORG1510-MK05 a module from OriginGPS.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ORG1510-MK05"],
     "category" : ["GPS/GNSS"] 
 }

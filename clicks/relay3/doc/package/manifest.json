@@ -25,17 +25,18 @@
     "name": "mikroe.click.relay3",
     "product_link": "https://www.mikroe.com/relay-3-click",
     "short_description": "Relay click 3 is a dual relay Click board, featuring two single-pole double-throw relays which can be operated by output pins of the host microcontroller (MCU). It offers an elegant and easy solution for controlling a wide range of power applications.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2662
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Relay3",
     "subdir_name": "lib_relay3"
 }
+
 
 
 

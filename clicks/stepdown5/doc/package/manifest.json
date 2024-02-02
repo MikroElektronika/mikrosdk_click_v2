@@ -25,13 +25,14 @@
     "name": "mikroe.click.stepdown5",
     "product_link": "https://www.mikroe.com/step-down-5-click",
     "short_description": "Step Down 5 Click is a compact add-on board that converts a higher voltage into a lower voltage level. This board features the TPS628510, a high-efficiency, easy-to-use, synchronous step-down DC/DC converter from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.StepDown5",
     "subdir_name": "lib_stepdown5"
 }
+
 
 

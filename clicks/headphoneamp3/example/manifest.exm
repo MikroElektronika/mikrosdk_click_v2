@@ -2,7 +2,7 @@
     "name": "Headphone AMP 3 Click",
     "description": "Headphone AMP 3 Click is a compact add-on board that contains a stereo headphone amplifier. This board features the INA1620, a high-fidelity audio operational amplifier with integrated thin-film resistors and EMI filters from Texas Instruments. Over its dual amplifiers, it achieves a very low noise density and drives a 32Ω load at 150mW of output power. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","INA1620RTWR"],
     "category" : ["Click Boards > Audio & voice > Signal processing"]
 }

@@ -25,16 +25,17 @@
     "name": "mikroe.click.voltmeter",
     "product_link": "https://www.mikroe.com/voltmeter-click",
     "short_description": "Voltmeter click is a mikroBUS™ add-on board for measuring voltage in an external electric circuit.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1921
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Voltmeter",
     "subdir_name": "lib_voltmeter"
 }
+
 
 

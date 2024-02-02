@@ -25,16 +25,17 @@
     "name": "mikroe.click.fingerprint3",
     "product_link": "https://www.mikroe.com/fingerprint-3-click",
     "short_description": "Fingerprint 3 Click is an adapter Click board™, used to interface a compatible Fingerprint Sensor with Two-Color LED Ring with the host MCU.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3832
     ],
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.Fingerprint3",
     "subdir_name": "lib_fingerprint3"
 }
+
 
 

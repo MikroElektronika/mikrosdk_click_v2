@@ -25,14 +25,15 @@
     "name": "mikroe.click.fram6",
     "product_link": "https://www.mikroe.com/fram-6-click",
     "short_description": "FRAM 6 Click is a compact add-on board that contains highly reliable ferroelectric random access memory. This board features the CY15B102Q, a 2Mbit nonvolatile memory employing an advanced ferroelectric process organized as 256K words of 8 bits each from Cypress Semiconductor, now part of Infineon.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.FRAM6",
     "subdir_name": "lib_fram6"
 }
+
 
 
 

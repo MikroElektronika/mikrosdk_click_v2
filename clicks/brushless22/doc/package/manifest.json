@@ -25,14 +25,15 @@
     "name": "mikroe.click.brushless22",
     "product_link": "https://www.mikroe.com/brushless-22-click",
     "short_description": "Brushless 22 Click is a compact add-on board suitable for controlling brushless DC (BLDC) motors with any MCU. This board features the MTD6508, a 3-phase full-wave sensorless driver for BLDC motors from Microchip Technology. It features 180° sinusoidal drive, high torque output, and silent drive, rated for an operating voltage range including both mikroBUS™ power rails, and comes with speed control achieved through pulse-width modulation (PWM). Besides, it features several diagnostic circuits and drive-control functions such as motor lock protection, overcurrent limitation, and thermal shutdown protection.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Brushless22",
     "subdir_name": "lib_brushless22"
 }
+
 
 
 

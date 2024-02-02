@@ -2,7 +2,7 @@
     "name": "Ambient 4 Click",
     "description": "Ambient 4 click is a light intensity-sensing and measuring Click board™, which features an accurate, light-intensity sensor labeled as BH1721FVC, made by ROHM Corporation.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","BH1721FVC"],
     "category" : ["Optical"] 
 }

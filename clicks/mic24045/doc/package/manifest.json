@@ -25,17 +25,18 @@
     "name": "mikroe.click.mic24045",
     "product_link": "https://www.mikroe.com/mic24045-click",
     "short_description": "MIC24045 click carries MIC24045 I2C-programmable, high-efficiency, wide input range, 5A synchronous step-down regulator from Microchip.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2048
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Mic24045",
     "subdir_name": "lib_mic24045"
 }
+
 
 
 

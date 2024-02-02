@@ -25,16 +25,17 @@
     "name": "mikroe.click.oximeter",
     "product_link": "https://www.mikroe.com/oximeter-click",
     "short_description": "Oximeter click is a versatile photometric Click board�, perfectly suited for measuring the blood oxygen saturation. It employs ADPD105, a highly configurable photometric front end (AFE) device from Analog Devices. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2399
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Oximeter",
     "subdir_name": "lib_oximeter"
 }
+
 
 

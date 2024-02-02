@@ -2,7 +2,7 @@
     "name": "USB UART 3 Click",
     "description": "USB UART 3 click is a versatile and feature-rich USB to UART interface from Silicon Labs.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","CP2102N"],
     "category" : ["USB"] 
 }

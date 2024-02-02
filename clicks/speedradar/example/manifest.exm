@@ -2,7 +2,7 @@
     "name": "Speed Radar Click",
     "description": "Speed Radar Click is a compact add-on board that comes with a radar motion detector. This board features the K-LD2, a radar transceiver from RFbeam. It is a 24GHz radar with a detection distance for humans of up to 15m and cars of up to 30m. Its digital structure makes it easy to use in an MCU-based application or as a standalone device where movement detection or even a speed measurement is required.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
     "hw" : ["click","K-LD2-RFB-00H-02"],
     "category" : ["Click Boards > Sensors > Motion"]
 }

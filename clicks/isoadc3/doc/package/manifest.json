@@ -25,17 +25,18 @@
     "name": "mikroe.click.isoadc3",
     "product_link": "https://www.mikroe.com/iso-adc-3-click",
     "short_description": "ISO ADC 3 Click is a compact add-on board that contains a single-channel precision isolation amplifier. This board features the AMC1100, a precision isolation amplifier with an output separated from the input circuitry by a silicon dioxide barrier that is highly resistant to magnetic interference from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         3925
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.ISOADC3",
     "subdir_name": "lib_isoadc3"
 }
+
 
 
 

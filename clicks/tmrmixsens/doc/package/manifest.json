@@ -25,17 +25,18 @@
     "name": "mikroe.click.tmrmixsens",
     "product_link": "https://www.mikroe.com/tmr-mix-sens-click",
     "short_description": "The TMR mix-sens Click has three types of magnetic field sensors: Two digital and one analog sensor.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3197
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Tmrmixsens",
     "subdir_name": "lib_tmrmixsens"
 }
+
 
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.ata663211",
     "product_link": "https://www.mikroe.com/ata663211-click",
     "short_description": "ATA663211 click carries an Atmel LIN transceiver IC designed to handle low-speed data communication in vehicles and in industrial applications with electrically harsh environments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1960
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Ata663211",
     "subdir_name": "lib_ata663211"
 }
+
 
 
 

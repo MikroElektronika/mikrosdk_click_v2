@@ -2,7 +2,7 @@
     "name": "UART MUX 4 Click",
     "description": "UART MUX 4 Click is a compact add-on board that switches the UART pins (RX and TX) from the mikroBUS™ socket to one of the two available outputs. This board features the 74HC4066D, a quad single-pole, single-throw analog switch from Nexperia. The UART MUX 4 Click allows you to switch from one multiplexed UART to another easily, but not both simultaneously.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
     "hw" : ["click","74HC4066D"],
     "category" : ["Click Boards > Interface > RS232"]
 }

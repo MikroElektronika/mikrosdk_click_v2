@@ -25,17 +25,18 @@
     "name": "mikroe.click.gaussmeter",
     "product_link": "https://www.mikroe.com/gaussmeter-click",
     "short_description": "Gaussmeter click is a device that is used for measuring the magnetic field in X, Y and Z axes. This Click board™ features the MLX90393, a micropower magnetometer based on the proprietary Triaxis® technology, from Melexis.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2375
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Gaussmeter",
     "subdir_name": "lib_gaussmeter"
 }
+
 
 
 

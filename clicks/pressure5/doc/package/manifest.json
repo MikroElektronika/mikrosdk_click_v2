@@ -25,17 +25,18 @@
     "name": "mikroe.click.pressure5",
     "product_link": "https://www.mikroe.com/pressure-5-click",
     "short_description": "Pressure 5 click is a barometric pressure measurement Click board™, which features the BMP388, an accurate absolute barometric pressure sensor. Due to its very high sensing accuracy, it is perfectly suited for precise altitude tracking applications.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2784
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Pressure5",
     "subdir_name": "lib_pressure5"
 }
+
 
 
 

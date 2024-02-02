@@ -25,17 +25,18 @@
     "name": "mikroe.click.c6dofimu15",
     "product_link": "https://www.mikroe.com/6dof-imu-15-click",
     "short_description": "6DOF IMU 15 Click is a compact add-on board that contains a 6-axis MEMS motion tracking device combining a 3-axis gyroscope and a 3-axis accelerometer.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3870
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.6DofImu15",
     "subdir_name": "lib_c6dofimu15"
 }
+
 
 
 

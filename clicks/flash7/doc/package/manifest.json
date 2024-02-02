@@ -25,17 +25,18 @@
     "name": "mikroe.click.flash7",
     "product_link": "https://www.mikroe.com/flash-7-click",
     "short_description": "Flash 7 Click is a compact add-on board that contains a high-performance memory solution. This board features the GD25LQ16C, a high-performance 16Mbit SPI NOR Flash Memory solution with advanced security features from GigaDevice Semiconductor. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         4106
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Flash7",
     "subdir_name": "lib_flash7"
 }
+
 
 
 

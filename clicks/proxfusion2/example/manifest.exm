@@ -2,7 +2,7 @@
     "name": "ProxFusion 2 Click",
     "description": "ProxFusion 2 Click is an ambient lighting, capacitive, Hall-effect, and inductive sensing Click board™ which features a single multifunctional sensor IC.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","IQS621"],
     "category" : ["Capacitive"] 
 }

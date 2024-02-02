@@ -25,14 +25,15 @@
     "name": "mikroe.click.proximity14",
     "product_link": "https://www.mikroe.com/proximity-14-click",
     "short_description": "Proximity 14 Click is a compact add-on board that contains a close-range proximity sensing solution. This board features the VCNL36825T, a fully integrated proximity sensor from Vishay Semiconductors.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Proximity14",
     "subdir_name": "lib_proximity14"
 }
+
 
 
 

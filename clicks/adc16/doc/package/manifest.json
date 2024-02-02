@@ -25,14 +25,15 @@
     "name": "mikroe.click.adc16",
     "product_link": "https://www.mikroe.com/adc-16-click",
     "short_description": "ADC 16 Click is a compact add-on board that contains a high-performance data converter. This board features the ADS7142-Q1, a low-power two-channel 12-bit analog-to-digital converter from Texas Instruments. This I2C configurable 140kSPS successive approximation register (SAR) analog-to-digital converter (ADC) can autonomously monitor signals while maximizing system power, reliability, and performance. It implements event-triggered interrupts per channel using a digital window comparator with programmable high and low thresholds, hysteresis, and event counter.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.ADC16",
     "subdir_name": "lib_adc16"
 }
+
 
 
 

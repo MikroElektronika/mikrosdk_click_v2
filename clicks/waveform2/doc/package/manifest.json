@@ -25,17 +25,18 @@
     "name": "mikroe.click.waveform2",
     "product_link": "https://www.mikroe.com/waveform-2-click",
     "short_description": "Waveform 2 Click is a compact add-on board that contains a direct digital synthesis device for waveform generator applications. This board features the AD9834, a 75 MHz low power DDS device capable of producing high-performance sine/triangle/square outputs from Analog Devices. It provides the capability for phase and frequency modulation and has an on-board comparator that allows the production of a square wave signal for clock generation.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         2688
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Waveform2",
     "subdir_name": "lib_waveform2"
 }
+
 
 
 

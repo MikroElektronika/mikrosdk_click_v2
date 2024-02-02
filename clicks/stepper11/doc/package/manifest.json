@@ -25,14 +25,15 @@
     "name": "mikroe.click.stepper11",
     "product_link": "https://www.mikroe.com/stepper-11-click",
     "short_description": "Stepper 11 Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the TB9120AFTG, a two-phase bipolar stepping motor driver with a clock input interface and a PWM constant-current control system from Toshiba Semiconductor.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Stepper11",
     "subdir_name": "lib_stepper11"
 }
+
 
 
 

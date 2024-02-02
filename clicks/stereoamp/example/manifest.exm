@@ -2,7 +2,7 @@
     "name": "StereoAmp Click",
     "description": "This is an example which demonstrates the use of StereoAmp Click board - stereo amplifier and is ideal for battery operated devices or as a lab amplifier.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LM48100Q-Q1"],
     "category" : ["Amplifier"] 
 }

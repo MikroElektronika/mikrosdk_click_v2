@@ -25,17 +25,18 @@
     "name": "mikroe.click.pwm2",
     "product_link": "https://www.mikroe.com/pwm-2-click",
     "short_description": "This application send the PWM signal in one or more outputs.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2480
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Pwm2",
     "subdir_name": "lib_pwm2"
 }
+
 
 
 

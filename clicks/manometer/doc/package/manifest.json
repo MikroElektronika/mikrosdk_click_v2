@@ -25,17 +25,18 @@
     "name": "mikroe.click.manometer",
     "product_link": "https://www.mikroe.com/manometer-click",
     "short_description": "<Manometer click carries a piezoresistive silicon pressure sensor,the HSCMAND060PA3A3 from Honeywell, an industry-leading module with an extremely high accuracy of ±0.25%FSS BFSL.>",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1781
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Manometer",
     "subdir_name": "lib_manometer"
 }
+
 
 
 

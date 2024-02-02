@@ -25,13 +25,14 @@
     "name": "mikroe.click.canfd6",
     "product_link": "https://www.mikroe.com/can-fd-6-click",
     "short_description": "CAN FD 6 Click is a compact add-on board containing a CAN transceiver that supports CAN and CAN FD protocols. This board features the TCAN4550, a CAN FD controller that provides an interface between the CAN bus and the CAN protocol controller up to 5 megabits per second (Mbps) from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.CANFD6",
     "subdir_name": "lib_canfd6"
 }
+
 
 

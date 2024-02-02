@@ -25,17 +25,18 @@
     "name": "mikroe.click.leddriver7",
     "product_link": "https://www.mikroe.com/led-driver-7-click",
     "short_description": "LED Driver 7 click is a Click board™ equipped with the LTC3490, single cell 350mA LED driver from Analog Devices.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2990
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.LedDriver7",
     "subdir_name": "lib_leddriver7"
 }
+
 
 
 

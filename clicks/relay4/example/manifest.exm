@@ -2,7 +2,7 @@
     "name": "Relay 4 Click",
     "description": "Relay 4 Click is a compact add-on board with a general-purpose relay that any host MCU can control. This board features the J1031C3VDC, high-current single-pole double-throw (SPDT) signal relay from CIT Relay and Switch. Highly sensitive, the J1031C3VDC offers a low coil power consumption in a small, lightweight package with PC pin mounting. It comes with a dimension of 12.5x7.5x10 millimetre (LxWxH) and a 1C contact arrangement with a coil voltage of 3VDC, providing a switching voltage of 125VAC/60VDC maximum.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","J1031C3VDC.15S"],
     "category" : ["Click Boards > Miscellaneous > Relay"]
 }

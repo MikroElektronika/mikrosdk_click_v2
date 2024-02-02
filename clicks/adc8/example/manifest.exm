@@ -2,7 +2,7 @@
     "name": "ADC 8 Click",
     "description": "ADC 8 Click is a high precision, low-power, 16-bit analog-to-digital converter (ADC), based around the ADS1115 IC.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ADS1115"],
     "category" : ["ADC"] 
 }

@@ -1,4 +1,4 @@
 ## Changelog
 
-### Version 2.1.1.25
+### Version 2.1.1.26
  - Initial release

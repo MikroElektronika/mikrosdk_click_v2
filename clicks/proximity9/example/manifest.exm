@@ -2,7 +2,7 @@
     "name": "Proximity 9 Click",
     "description": "Proximity 9 click is a very accurate and reliable proximity sensing (PS) and ambient light sensing (ALS) device, equipped with the VCNL4040, an integrated PS and ALS sensor which features the Filtron™ technology.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","VCNL4040"],
     "category" : ["Proximity"] 
 }

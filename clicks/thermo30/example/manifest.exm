@@ -2,7 +2,7 @@
     "name": "Thermo 30 Click",
     "description": "Thermo 30 Click is a compact add-on board that accurately measures temperature. This board features the STS32-DIS-10KS, a third-generation, high-reliability, certified digital temperature sensor from Sensirion. It is a digitally calibrated and ISO17025-certified temperature sensor with an operating temperature range of -40 to 125°C. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","STS32-DIS-10KS"],
     "category" : ["Click Boards > Sensors > Temperature & humidity"]
 }

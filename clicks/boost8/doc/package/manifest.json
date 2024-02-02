@@ -25,14 +25,15 @@
     "name": "mikroe.click.boost8",
     "product_link": "https://www.mikroe.com/boost-8-click",
     "short_description": "Boost 8 Click is a compact add-on board that steps up the voltage from its input (supply) to its output (load).",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.Boost8",
     "subdir_name": "lib_boost8"
 }
+
 
 
 

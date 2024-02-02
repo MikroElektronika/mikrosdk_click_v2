@@ -25,14 +25,15 @@
     "name": "mikroe.click.accel4",
     "product_link": "https://www.mikroe.com/accel-4-click",
     "short_description": "Accel 4 Click is a compact add-on board that contains an acceleration sensor. This board features the FXLS8964AF, a 12-bit three-axis accelerometer from NXP Semiconductors. It allows selectable full-scale acceleration measurements in ranges of ï¿½2g, ï¿½4g, ï¿½8g, or ï¿½16g in three axes with a configurable host interface that supports both SPI and I2C serial communication. The FXLS8964AF supports both high-performance and low-power operating modes, allowing maximum flexibility to meet the resolution and power needs for various unique use cases.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Accel4",
     "subdir_name": "lib_accel4"
 }
+
 
 
 

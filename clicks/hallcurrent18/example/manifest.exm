@@ -2,7 +2,7 @@
     "name": "Hall Current 18 Click",
     "description": "Hall Current 18 Click is a compact add-on board that contains a precise solution for AC/DC current sensing. This board features the MCS1806, an isolated Hall-effect current sensor from MPS. The sensor is immune to external magnetic fields via differential sensing and has no magnetic hysteresis. The MCS1806 features galvanic isolation between the pins of the primary conductive path and the sensor leads, allowing it to replace optoisolators and other isolation devices.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MCS1806GS-3-40-P"],
     "category" : ["Click Boards > Sensors > Current sensor"]
 }

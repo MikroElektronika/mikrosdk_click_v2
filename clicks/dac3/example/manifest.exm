@@ -2,7 +2,7 @@
     "name": "DAC 3 Click",
     "description": "DAC3 click carries Microchip’s MCP4726 IC, a 12-bit digital-to-analog converter, along with voltage output screw terminals. The digital value is converted to the appropriate voltage level in the range between GND and REFERENCE (VCC or 4.096V), which is proportional to the received 12-bit number.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MCP4726"],
     "category" : ["DAC"] 
 }

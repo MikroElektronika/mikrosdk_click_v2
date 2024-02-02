@@ -25,17 +25,18 @@
     "name": "mikroe.click.c6dofimu14",
     "product_link": "https://www.mikroe.com/6dof-imu-14-click",
     "short_description": "6DOF IMU 14 Click is a compact add-on board that contains a 6-axis MEMS motion tracking device combining a 3-axis gyroscope and a 3-axis accelerometer. This board features the ICM-42688-P, high precision 6-axis MEMS motion tracking device, from TDK InvenSense.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3845
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.6DOFIMU14",
     "subdir_name": "lib_c6dofimu14"
 }
+
 
 
 

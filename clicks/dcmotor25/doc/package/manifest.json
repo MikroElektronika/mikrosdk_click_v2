@@ -25,13 +25,14 @@
     "name": "mikroe.click.dcmotor25",
     "product_link": "https://www.mikroe.com/dc-motor-25-click",
     "short_description": "DC Motor 25 Click is a compact add-on board with a brushed DC motor driver. This board features the A3908, a low-voltage bidirectional DC motor driver from Allegro Microsystems. The A3908 is rated for an operating voltage range compatible with mikroBUS™ power rails and output currents up to 500mA. The unique output full-bridge incorporates source-side linear operation to allow a constant voltage across the motor coil. Logic input pins are provided to control the motor direction of rotation, brake, and standby modes. It also has complete protection capabilities supporting robust and reliable operation.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.DCMotor25",
     "subdir_name": "lib_dcmotor25"
 }
+
 
 

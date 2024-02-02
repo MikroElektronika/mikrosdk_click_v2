@@ -25,17 +25,18 @@
     "name": "mikroe.click.lteiot",
     "product_link": "https://www.mikroe.com/lte-iot-click",
     "short_description": "LTE IoT click is a Click board™ that allows connection to the LTE and 2G networks",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2493
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.LteIot",
     "subdir_name": "lib_lteiot"
 }
+
 
 
 

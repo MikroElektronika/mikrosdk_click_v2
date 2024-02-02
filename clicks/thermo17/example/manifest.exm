@@ -2,7 +2,7 @@
     "name": "Thermo 17 Click",
     "description": "The Thermo 17 Click is a Click board™ based on the TMP451-Q1, a high-accuracy, lowpower remote temperature sensor monitor with a built-in local temperature sensor from Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TMP451AQDQFRQ1"],
     "category" : ["Temperature & humidity"] 
 }

@@ -25,14 +25,15 @@
     "name": "mikroe.click.solidswitch2",
     "product_link": "https://www.mikroe.com/solidswitch-2-click",
     "short_description": "SolidSwitch 2 Click is a compact add-on board that contains a load switching device. This board features the L9026, an automotive eight-channel relay driver from STMicroelectronics. The L9026 incorporates two high-side drivers and six configurable high-side/low-side drivers driven by an SPI interface or by two dedicated parallel inputs. Operating from an external power supply from 3V up to 18V, it provides a maximum current of 1A on its output terminals. It also offers advanced diagnostic and protection features such as short-to-ground, open load, overcurrent, and overtemperature detections.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.SolidSwitch2",
     "subdir_name": "lib_solidswitch2"
 }
+
 
 
 

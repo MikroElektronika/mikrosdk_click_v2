@@ -25,14 +25,15 @@
     "name": "mikroe.click.thermo29",
     "product_link": "https://www.mikroe.com/thermo-29-click",
     "short_description": "Thermo 29 Click is a compact add-on board for accurate temperature measurements. This board features the TMP126, a high-accuracy SPI-configurable digital temperature sensor from Texas Instruments. The TMP126 consists of an internal thermal BJT factory-calibrated sensor, 14-bit ADC, and a digital signal processor, offering a high accuracy of ±0.25°C and a temperature resolution of 0.03125°C per LSB. It also has a programmable alarm function that outputs an interrupt signal to the MCU when a specific temperature event occurs.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.Thermo29",
     "subdir_name": "lib_thermo29"
 }
+
 
 
 

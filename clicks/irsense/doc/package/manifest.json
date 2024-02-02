@@ -25,17 +25,18 @@
     "name": "mikroe.click.irsense",
     "product_link": "https://www.mikroe.com/ir-sense-click",
     "short_description": "This application return the temperature of object.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2116
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.IrSense",
     "subdir_name": "lib_irsense"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "ProxFusion 3 Click",
     "description": "ProxFusion 3 Click is a compact add-on board that represents a multifunctional touch sensing Click board™.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","IQS269A"],
     "category" : ["Capacitive"]
 }

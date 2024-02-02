@@ -25,17 +25,18 @@
     "name": "mikroe.click.lem",
     "product_link": "https://www.mikroe.com/lem-click",
     "short_description": "LEM click carries the LTS 6-NP current transducer and MCP3201 ADC converter. The click can measure AC and DC current with exceptional speed, up to 200 KHz.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2061
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Lem",
     "subdir_name": "lib_lem"
 }
+
 
 
 

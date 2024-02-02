@@ -25,13 +25,14 @@
     "name": "mikroe.click.battmon4",
     "product_link": "https://www.mikroe.com/batt-mon-4-click",
     "short_description": "BATT-MON 4 Click is a compact add-on board representing an advanced battery monitoring solution. This board features the LTC3337, a primary battery state of health (SOH) monitor with a built-in precision coulomb counter from Analog Devices. The LTC3337 is designed to be placed in series with a primary battery with minimal associated series voltage drop. The patented infinite dynamic range coulomb counter tallies all accumulated battery discharge and stores it in an internal register accessible via an I2C interface. In addition, this Click board™ also can set the input current limit and has an additional discharge alarm interrupt and SOH monitoring which measures and reports via an I2C interface.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.BATTMON4",
     "subdir_name": "lib_battmon4"
 }
+
 
 

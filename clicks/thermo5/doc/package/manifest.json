@@ -25,17 +25,18 @@
     "name": "mikroe.click.thermo5",
     "product_link": "https://www.mikroe.com/thermo-5-click",
     "short_description": "THERMO 5 click measures temperature in default range of 0°C to 127°C and extended range of -64°C to 191°C with ±1°C accuracy. It carries the EMC1414 temperature sensor.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2062
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.THERMO5",
     "subdir_name": "lib_thermo5"
 }
+
 
 
 

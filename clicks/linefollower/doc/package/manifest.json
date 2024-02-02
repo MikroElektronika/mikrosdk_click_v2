@@ -25,17 +25,18 @@
     "name": "mikroe.click.linefollower",
     "product_link": "https://www.mikroe.com/line-follower-click",
     "short_description": "Line Follower Click carries an array of five QRE1113 miniature reflective object sensors. As the name implies, Line Follower click is best used for line following robots and cars.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1628
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.LineFollower",
     "subdir_name": "lib_linefollower"
 }
+
 
 
 

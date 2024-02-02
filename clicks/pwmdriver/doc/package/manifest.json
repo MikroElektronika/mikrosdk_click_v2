@@ -25,17 +25,18 @@
     "name": "mikroe.click.pwmdriver",
     "product_link": "https://www.mikroe.com/pwm-driver-click",
     "short_description": "This application is controls the speed DC motors.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1972
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.PwmDriver",
     "subdir_name": "lib_pwmdriver"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "Rec & Play Click",
     "description": "Rec&Play Click is a digital voice recorder on a Click board™. It is based on the ISD3900, a multi-message record and playback device. It features the ChipCorder® technology, offering digital sound compression, smart message management, digitally configurable signal path, and more.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ISD3900"],
     "category" : ["Signal processing"] 
 }

@@ -25,17 +25,18 @@
     "name": "mikroe.click.semperflash2",
     "product_link": "https://www.mikroe.com/semper-flash-2-click",
     "short_description": "Semper Flash 2 Click is a Click board™ which features the S25HL512T from Cypress, a perfect solution for the mass storage option in various embedded applications. With fast performance being one of its key features, Semper Flash 2 click can also be used for the code shadowing, execute-in-place (XIP), and data storage.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3252
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.SemperFlash2",
     "subdir_name": "lib_semperflash2"
 }
+
 
 
 

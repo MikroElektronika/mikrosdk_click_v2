@@ -2,7 +2,7 @@
     "name": "ADC 22 Click",
     "description": "ADC 22 Click is a compact add-on board with a high-performance data converter. This board features the ADS8665, a high-speed single-supply SAR ADC data acquisition system with programmable bipolar input ranges from Texas Instruments. It features a high-speed, high-precision A/D converter based on successive approximation (SAR). This 12-bit resolution ADC with an integrated analog front-end (AFE) input driver circuit can achieve speeds of up to 500ksps.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ADS8665IPW"],
     "category" : ["Click Boards > Mixed signal > ADC"]
 }

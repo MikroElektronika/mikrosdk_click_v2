@@ -2,7 +2,7 @@
     "name": "Touchpad 4 Click",
     "description": "Touchpad 4 Click is a compact add-on board that easily integrates projected capacitive touch into user's applications. This board features the IQS7211A, a tiny capacitive touch controller from Azoteq.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","IQS7211A"],
     "category" : ["Capacitive"]
 }

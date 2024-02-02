@@ -2,7 +2,7 @@
     "name": "Touchpad 5 Click",
     "description": "Touchpad 5 Click is a compact add-on board that easily integrates projected capacitive touch into user's applications. This board features the IQS550, a projected capacitive touch and proximity trackpad/touchscreen controller from Azoteq.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","IQS550-BL-QNR"],
     "category" : ["Click Boards > HMI > Capacitive"]
 }

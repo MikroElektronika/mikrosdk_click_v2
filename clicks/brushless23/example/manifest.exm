@@ -2,7 +2,7 @@
     "name": "Brushless 23 Click",
     "description": "Brushless 23 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the TC78B011FTG, a three-phase sine-wave PWM pre-driver realized with six external MOSFETs to drive sensorless brushless motors from Toshiba Semiconductor. Some of the main features are a built-in closed-loop speed control function with internal non-volatile memory (NVM) for speed profile setting and the ability to set other features such as rotation direction selection, brake, Standby mode, and others. It also has a wide operating voltage range of 11V to 27V with an output current capacity of 5A and several built-in error detection circuits.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TC78B011FTG"],
     "category" : ["Brushless"]
 }

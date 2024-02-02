@@ -2,7 +2,7 @@
     "name": "ADC 23 Click",
     "description": "ADC 23 Click is a compact add-on board that converts an analog voltage into a digital representation. This board features the ADS127L11, a wide-bandwidth 24-bit delta-sigma analog-to-digital converter from Texas Instruments. It is capable of data rates up to 400ksps using a wideband filter and up to 1067ksps using a low-latency filter. It also offers an excellent combination of AC performance and DC precision with low power consumption.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ADS127L11IPWR"],
     "category" : ["Click Boards > Mixed signal > ADC"]
 }

@@ -25,17 +25,18 @@
     "name": "mikroe.click.light",
     "product_link": "https://www.mikroe.com/light-click",
     "short_description": "This application return the ambient light intensity",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         630
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Light",
     "subdir_name": "lib_light"
 }
+
 
 
 

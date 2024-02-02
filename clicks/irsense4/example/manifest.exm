@@ -2,7 +2,7 @@
     "name": "IR Sense 4 Click",
     "description": "IR Sense 4 Click is a compact add-on board that can be used in short-range IR sensing applications. This board features the STHS34PF80, a low-power high-sensitivity infrared (IR) sensor from STMicroelectronics. It is a sensor for presence and motion detection and can reach up to 4m without a lens for object measuring. The sensor can detect stationary objects and distinguish them from moving objects.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","STHS34PF80"],
     "category" : ["Click Boards > Sensors > Optical"]
 }

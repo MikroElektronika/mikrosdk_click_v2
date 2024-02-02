@@ -25,17 +25,18 @@
     "name": "mikroe.click.ecg2",
     "product_link": "https://www.mikroe.com/ecg-2-click",
     "short_description": "ECG 2 click contains ADS1194 16-bit delta-sigma analog-to-digital converters from Texas Instruments, a built-in programmable gain amplifier (PGA), an internal reference, and an onboard oscillator.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         1989
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.ECG2",
     "subdir_name": "lib_ecg2"
 }
+
 
 
 

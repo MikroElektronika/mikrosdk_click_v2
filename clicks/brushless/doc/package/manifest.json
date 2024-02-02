@@ -25,17 +25,18 @@
     "name": "mikroe.click.brushless",
     "product_link": "https://www.mikroe.com/brushless",
     "short_description": "Brushless click carries Toshiba's TB6575FNG IC for driving 3-phase full-wave Brushless DC motors — which are ideal for powering flying drones. The click is able to safely drive external motors with up to 32V/2A. The board features three pairs of onboard screw terminals. VBAT is for connecting an external 7-32V DC power supply.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1951
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.Brushless",
     "subdir_name": "lib_brushless"
 }
+
 
 
 

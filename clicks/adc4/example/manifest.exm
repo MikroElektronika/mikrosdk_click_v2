@@ -2,7 +2,7 @@
     "name": "ADC 4 Click",
     "description": "ADC 4 click is an advanced analog to digital multichannel converter, which can sample inputs from 16 single-ended channels or 8 differential input channel pairs",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","AD7175-8"],
     "category" : ["ADC"] 
 }

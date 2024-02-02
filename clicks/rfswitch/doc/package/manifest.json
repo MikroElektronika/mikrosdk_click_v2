@@ -25,17 +25,18 @@
     "name": "mikroe.click.rfswitch",
     "product_link": "https://www.mikroe.com/rf-switch-click",
     "short_description": "RF Switch Click is a Click board™ equipped with the MASWSS0115, a GaAs PHEMT MMIC single-pole, double-throw (SPDT) switch developed by Macom for switching between small signal components such as filter banks, single-band LNAs, converters, etc. The MASWSS0115 is ideally suited for applications where a very small size and low cost are required.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         2919
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.RFSwitch",
     "subdir_name": "lib_rfswitch"
 }
+
 
 
 

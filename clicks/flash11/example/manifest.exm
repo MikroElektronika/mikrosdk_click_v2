@@ -2,7 +2,7 @@
     "name": "Flash 11 Click",
     "description": "Flash 11 Click is a compact add-on board representing a highly reliable memory solution. This board features the AT25SF321B, a 32-Mbit SPI serial Flash memory with Dual I/O and Quad I/O support from Dialog Semiconductor. It is designed for applications in which the program code is shadowed from Flash memory into embedded or external RAM for execution and where small amounts of data are stored and updated locally in the Flash memory. It has a flexible and optimized erase architecture for code and data storage applications, non-volatile protection, three specialized protected programmable 256-byte OTP security registers, and a 64-bit factory programmable UID register.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","AT25SF321B"],
     "category" : ["Click Boards > Storage > FLASH"]
 }

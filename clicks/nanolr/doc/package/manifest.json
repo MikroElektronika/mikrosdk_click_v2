@@ -25,14 +25,15 @@
     "name": "mikroe.click.nanolr",
     "product_link": "https://www.mikroe.com/nano-lr-click",
     "short_description": "Nano LR Click is a compact add-on board that contains a long-range transceiver. This board features the EMB-LR1276S, RF technology-based SRD transceiver, which operates at a frequency of 868MHz from Embit.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.NanoLR",
     "subdir_name": "lib_nanolr"
 }
+
 
 
 

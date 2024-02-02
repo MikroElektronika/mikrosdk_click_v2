@@ -25,17 +25,18 @@
     "name": "mikroe.click.thermo7",
     "product_link": "https://www.mikroe.com/thermo-7-click",
     "short_description": "Thermo 7 click is a Click board™ equipped with the sensor IC, which can digitize temperature measurements between -55°C and +125°C so that the temperature measurement data can be processed by the host MCU.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2367
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Thermo7",
     "subdir_name": "lib_thermo7"
 }
+
 
 
 

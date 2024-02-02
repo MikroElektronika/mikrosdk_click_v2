@@ -25,11 +25,12 @@
     "name": "mikroe.click.irsense4",
     "product_link": "https://www.mikroe.com/ir-sense-4-click",
     "short_description": "IR Sense 4 Click is a compact add-on board that can be used in short-range IR sensing applications. This board features the STHS34PF80, a low-power high-sensitivity infrared (IR) sensor from STMicroelectronics. It is a sensor for presence and motion detection and can reach up to 4m without a lens for object measuring. The sensor can detect stationary objects and distinguish them from moving objects.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.IRSense4",
     "subdir_name": "lib_irsense4"
 }
+

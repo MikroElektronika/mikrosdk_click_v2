@@ -2,7 +2,7 @@
     "name": "Barometer 7 Click",
     "description": "Barometer 7 Click is a compact add-on board used to measure air pressure in a specific environment. This board features the KP264XTMA1, a high-accuracy digital barometric air pressure sensor based on a capacitive principle from Infineon Technologies. The KP264XTMA1 is surface micromachined with a monolithic integrated signal conditioning circuit implemented in BiCMOS technology that converts pressure into a 10-bit digital value and sends the information via the SPI interface. It measures pressure from 40kPa up to 115kPa with an accuracy of ±1.5kPa over a wide operating temperature range.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","KP264"],
     "category" : ["Pressure"]
 }

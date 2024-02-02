@@ -25,16 +25,17 @@
     "name": "mikroe.click.buckboost3",
     "product_link": "https://www.mikroe.com/buck-boost-3-click",
     "short_description": "The Buck-Boost 3 click is a voltage converter regulator, which is able to provide a regulated voltage of 3.3V or 5V on the output, even when the input voltage drops under 3V.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2624
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.BuckBoost3",
     "subdir_name": "lib_buckboost3"
 }
+
 
 

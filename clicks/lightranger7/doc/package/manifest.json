@@ -25,13 +25,14 @@
     "name": "mikroe.click.lightranger7",
     "product_link": "https://www.mikroe.com/lightranger-7-click",
     "short_description": "LightRanger 7 Click is a compact add-on board capable of precise distance measurement and motion tracking. This board features the AFBR-S50, a medium-range 3D multipixel Time-of-Flight (ToF) sensor from Broadcom. Besides a VCSEL-based ToF sensor (Laser Class 1 eye safety), optimized to measure various distances working equally well on white, black, colored, and metallic reflective surfaces, this board also includes a 32-bit MCU, RA4M2 group of Renesas MCU with Arm® Cortex®-M33 core, alongside a 4-pin standard CAN connections compatible with Pixhawk®, a popular general-purpose flight controller.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.LightRanger7",
     "subdir_name": "lib_lightranger7"
 }
+
 
 

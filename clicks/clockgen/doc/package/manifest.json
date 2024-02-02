@@ -25,17 +25,18 @@
     "name": "mikroe.click.clockgen",
     "product_link": "https://www.mikroe.com/clock-gen-click",
     "short_description": "Clock Gen Click offers an ideal replacement for crystals, crystal oscillators, VCXOs, phase-locked loops (PLLs), and fanout buffers in cost-sensitive applications. This click features the Si5351A from Silicon Labs, an I2C configurable clock generator based on a PLL + high resolution MultiSynth fractional divider architecture which can generate any frequency up to 200 MHz on each of its outputs with 0 ppm error.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3264
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.ClockGen",
     "subdir_name": "lib_clockgen"
 }
+
 
 
 

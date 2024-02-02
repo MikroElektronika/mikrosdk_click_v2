@@ -2,7 +2,7 @@
     "name": "POT 5 Click",
     "description": "POT 5 Click is a compact add-on board with accurate selectable reference voltage output. This board features the PDB081-P10-103B1, a high-quality 8mm micro rotary 10k potentiometer from Bourns. The PDB081-P10-103B1 potentiometers operate over a wide temperature range, withstanding 50V maximum voltage. This rotary potentiometer offers 5Ω maximum resistance, 0.03W power rating, and 100mV maximum sliding noise.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","PDB081-P10-103B1","MCP3221A5T"],
     "category" : ["Click Boards > HMI > Potentiometers"]
 }

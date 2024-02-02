@@ -25,17 +25,18 @@
     "name": "mikroe.click.temphum10",
     "product_link": "https://www.mikroe.com/temphum-10-click",
     "short_description": "Temp&Hum 10 Click is a smart temperature and humidity sensing Click board™, aimed towards IoT applications, due to its extremely small size and very low power consumption.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2693
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.TempHum10",
     "subdir_name": "lib_temphum10"
 }
+
 
 
 

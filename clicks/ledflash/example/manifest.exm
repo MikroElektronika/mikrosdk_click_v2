@@ -2,7 +2,7 @@
     "name": "LED Flash Click",
     "description": "LED Flash click functions as a high power LED flash, and carries the CAT3224 flash LED driver.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","CAT3224"],
     "category" : ["LED Segment"] 
 }

@@ -25,17 +25,18 @@
     "name": "mikroe.click.accel7",
     "product_link": "https://www.mikroe.com/accel-7-click",
     "short_description": "The acceleration sensing is based on the principle of measuring the differential capacitance, which further decreases errors due to manufacturing imperfections, temperature and other environmental influences. The micro-electromechanical sensor (MEMS) is coupled with a very advanced application specific integrated circuit (ASIC), which allows the simplicity of the KXTJ3-1057 design, requiring a low number of additional external components.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2479
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Accel7",
     "subdir_name": "lib_accel7"
 }
+
 
 
 

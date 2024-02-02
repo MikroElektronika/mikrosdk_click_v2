@@ -25,17 +25,18 @@
     "name": "mikroe.click.powerreset",
     "product_link": "https://www.mikroe.com/power-reset-click",
     "short_description": "Power/Reset Click is equipped with two capacitive touch pads on a single click board™.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2832
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.PowerReset",
     "subdir_name": "lib_powerreset"
 }
+
 
 
 

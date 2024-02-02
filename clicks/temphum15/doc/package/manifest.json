@@ -25,14 +25,15 @@
     "name": "mikroe.click.temphum15",
     "product_link": "https://www.mikroe.com/blog/temphum-15-click",
     "short_description": "Temp&Hum 15 Click is a compact add-on board that contains the 4th generation of best-in-class SHT humidity sensing solution from Sensirion. This board features the SHT40, a high-accuracy ultra-low-power 16-bit relative humidity, and temperature sensor.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.TempHum15",
     "subdir_name": "lib_temphum15"
 }
+
 
 
 

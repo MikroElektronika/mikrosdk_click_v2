@@ -25,14 +25,15 @@
     "name": "mikroe.click.tdc2",
     "product_link": "https://www.mikroe.com/tdc-2-click",
     "short_description": "TDC 2 Click is a compact add-on board that recognizes events and provides a digital representation of the time they occurred. This board features ScioSense’s AS6500, a four-channel time-to-digital converter (TDC) frontend with high measurement performance and high data throughput. The AS6500 is characterized by simple data post-processing thanks to calibrated results (calculates calibrated stop measurements referenced to the applied reference clock).",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.TDC2",
     "subdir_name": "lib_tdc2"
 }
+
 
 
 

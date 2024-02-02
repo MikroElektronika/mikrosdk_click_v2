@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240202](#20240202)**
 + **[20240126](#20240126)**
 + **[20240119](#20240119)**
 + **[20240112](#20240112)**
@@ -78,6 +79,20 @@
 
 ---
 ---
+---
+
+## `20240202`
+
+*Following click boards have been added:*
+
++ `Barometer 13`
++ `Charger 27`
++ `ISO ADC 6`
+
+*Added Clang to manifests to all click boards.*
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240126`

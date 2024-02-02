@@ -2,7 +2,7 @@
     "name": "IR Gesture 3 Click",
     "description": "IR Gesture 3 Click is a compact add-on board that provides contactless gesture recognition. This board features the ADPD1080, a photometric front-end from Analog Devices. The IR Gesture 3 Click allows gesture recognition in two dimensions, with a built-in optical filter and a sharp visible light cutoff. It eliminates the need for external lenses and preserves the dynamic range of the sensor when placed under sunlight or indoor lighting. It does not require a precise alignment because its sensor maintains a linear response within the ±35° angular field of view.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ADPD1080BCPZR7","ADPD2140BCPZN-R7"],
     "category" : ["Click Boards > Sensors > Motion"]
 }

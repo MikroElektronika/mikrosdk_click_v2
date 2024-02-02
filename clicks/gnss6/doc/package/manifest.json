@@ -25,13 +25,14 @@
     "name": "mikroe.click.gnss6",
     "product_link": "https://www.mikroe.com/gnss-6-click",
     "short_description": "GNSS 6 Click is a compact add-on board that provides fast positioning capabilities. This board features the Teseo-LIV3FL, a tiny low-power GNSS module from STMicroelectronics. It is an easy-to-use global navigation satellite system that embeds the Teseo III single-die standalone positioning receiver, which can work simultaneously on multiple constellations (GPS, Galileo, Glonass, BeiDou, and QZSS). It provides proven accuracy and robustness of the Teseo ICs and comes with embedded firmware that saves development time.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.GNSS6",
     "subdir_name": "lib_gnss6"
 }
+
 
 

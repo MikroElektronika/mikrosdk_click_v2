@@ -25,14 +25,15 @@
     "name": "mikroe.click.opto5",
     "product_link": "https://www.mikroe.com/opto-5-click",
     "short_description": "Opto 5 Click is a compact add-on board that provides uncomplicated safety isolation from the high voltage. This board features the FOD4216, a random phase snubberless Triac driver from ON Semiconductor.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Opto5",
     "subdir_name": "lib_opto5"
 }
+
 
 
 

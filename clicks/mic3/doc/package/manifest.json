@@ -25,16 +25,17 @@
     "name": "mikroe.click.mic3",
     "product_link": "https://www.mikroe.com/mic-3-click",
     "short_description": "The MIC 3 Click is a Click board™ that features the SSM2167-1RMZ-R7, a Microphone Preamplifier, from Analog Device. This Click board™ is a low voltage Microphone preamplifier with Variable compression and noise gating.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         3748
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.MIC3",
     "subdir_name": "lib_mic3"
 }
+
 
 

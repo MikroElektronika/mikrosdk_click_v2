@@ -25,14 +25,15 @@
     "name": "mikroe.click.currentlimit5",
     "product_link": "https://www.mikroe.com/current-limit-5-click",
     "short_description": "Current Limit 5 Click is a compact add-on board representing a current-limiting solution. This board features the MIC2099, a current-limit power distribution switch from Microchip Technology. This Click board™ represents a programmable current limit solution with various protection features and fault indication, which operates from a 2.5V to 5.5V input voltage range. Also, the current limit is adjustable from 100mA up to 1.05A programmed through the MCP4561 digital potentiometer. This Click board™ is suitable for applications in portable equipment and condition monitoring or power supplies, protecting them in short circuits or other overload conditions.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.CurrentLimit5",
     "subdir_name": "lib_currentlimit5"
 }
+
 
 
 

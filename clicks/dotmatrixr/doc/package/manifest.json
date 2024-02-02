@@ -25,17 +25,18 @@
     "name": "mikroe.click.dotmatrixr",
     "product_link": "https://www.mikroe.com/dot-matrix-r-click",
     "short_description": "Dot Matrix R Click is a display device Click board™ based on a four-digit dot matrix display module, labeled as HCMS-3906 from a company Avago (Broadcom Inc).",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3770
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.DotMatrixR",
     "subdir_name": "lib_dotmatrixr"
 }
+
 
 
 

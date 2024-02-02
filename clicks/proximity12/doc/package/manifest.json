@@ -25,14 +25,15 @@
     "name": "mikroe.click.proximity12",
     "product_link": "https://www.mikroe.com/proximity-12-click",
     "short_description": "Proximity 12 Click is a compact add-on board that contains a high-performance light and proximity sensing solution. This board features the TMD3719, an optical sensor that integrates ambient light sensing, proximity detection, and flicker detection sensing from AMS-AG.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Proximity12",
     "subdir_name": "lib_proximity12"
 }
+
 
 
 

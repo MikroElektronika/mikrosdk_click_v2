@@ -25,16 +25,17 @@
     "name": "mikroe.click.color3",
     "product_link": "https://www.mikroe.com/color-3-click",
     "short_description": "This application return the color of object.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1925
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Color3",
     "subdir_name": "lib_color3"
 }
+
 
 

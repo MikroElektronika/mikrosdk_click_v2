@@ -2,7 +2,7 @@
     "name": "Temp&Hum 8 Click",
     "description": "Temp&Hum 8 click is based on a sensor from the popular SHT family, designed to measure temperature and humidity.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","SHT21"],
     "category" : ["Temperature & humidity"] 
 }

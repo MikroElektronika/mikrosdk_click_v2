@@ -25,16 +25,17 @@
     "name": "mikroe.click.eeprom2",
     "product_link": "https://www.mikroe.com/eeprom-2-click",
     "short_description": "EEPROM2 click provides 2 Mbit (2,097,152 bits) of Electrically Erasable and Programmable Read Only Memory, organized in bytes. In other words, this Click board™ is an EEPROM memory medium with the capacity of 256 KB. The used EEPROM module has an impressive endurance of 4,000,000 write cycles and data retention period of over 200 years.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1497
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Eeprom2",
     "subdir_name": "lib_eeprom2"
 }
+
 
 

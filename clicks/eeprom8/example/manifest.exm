@@ -2,7 +2,7 @@
     "name": "EEPROM 8 Click",
     "description": "EEPROM 8 Click is a compact add-on board that contains a highly reliable nonvolatile memory solution. This board features the CAV24C512, a 512-Kb electrically erasable programmable memory with enhanced hardware write protection for entire memory from ON Semiconductor. Internally organized as 65,536 words of 8 bits each, the CAV24C512 comes up with the compatible I2C serial interface. The CAV24C512 combines unprecedented data storage with excellent energy efficiency. It lasts one million full-memory read/write/erase cycles with more than 100 years of data retention.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","CAV24C512WE-GT3"],
     "category" : ["EEPROM"]
 }

@@ -25,17 +25,18 @@
     "name": "mikroe.click.ups",
     "product_link": "https://www.mikroe.com/ups-click",
     "short_description": "UPS click is a supercapacitor charger click that provides continuous power for a load connected to the output terminals.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2353
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Ups",
     "subdir_name": "lib_ups"
 }
+
 
 
 

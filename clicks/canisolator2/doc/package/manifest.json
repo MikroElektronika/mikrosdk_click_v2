@@ -25,13 +25,14 @@
     "name": "mikroe.click.canisolator2",
     "product_link": "https://www.mikroe.com/can-isolator-2-click",
     "short_description": "CAN Isolator 2 Click is a compact add-on board that provides isolated CAN communication. This board features the ISO1042, an isolated CAN transceiver from Texas Instruments. This galvanically-isolated CAN transceiver meets the ISO11898-2 specifications and offers a +/-70V DC bus fault protection, along with the +/-30V of common mode voltage range. The transceiver supports two CAN modes, with speeds of up to 1Mbps in Classic CAN and flexible data rate (FD) CAN, which allows much faster transfer of payload compared to the classic CAN with up to 5Mbps.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.CanIsolator2",
     "subdir_name": "lib_canisolator2"
 }
+
 
 

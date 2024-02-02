@@ -2,7 +2,7 @@
     "name": "Hall Switch 3 Click",
     "description": "Hall Switch 3 Click is a compact add-on board representing a magnetic field-activated switch. This board features the NMH1000, a Hall-effect magnetic switch from NXP Semiconductor. It is a low-voltage, low-current, and low-output data rate device with a very small size. The switch is most sensitive to a vertical field passing through the top-bottom surfaces, orthogonal to the plane of the Hall Switch 3 Click board™.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","NMH1000"],
     "category" : ["Click Boards > Sensors > Magnetic"]
 }

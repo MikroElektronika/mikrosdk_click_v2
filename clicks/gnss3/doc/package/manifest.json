@@ -25,17 +25,18 @@
     "name": "mikroe.click.gnss3",
     "product_link": "https://www.mikroe.com/gnss-3-click",
     "short_description": "GNSS3 click carries SIMCom’s SIM33ELA standalone GNSS module with an integrated antenna (and a connector for an external one).",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1532
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Gnss3",
     "subdir_name": "lib_gnss3"
 }
+
 
 
 

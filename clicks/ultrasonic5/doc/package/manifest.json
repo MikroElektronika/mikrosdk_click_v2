@@ -25,12 +25,13 @@
     "name": "mikroe.click.ultrasonic5",
     "product_link": "https://www.mikroe.com/ultrasonic-5-click",
     "short_description": "Ultrasonic 5 Click is a compact add-on board that contains circuits for processing the ultrasonic sensor's output. This board features the TUSS4470, a transformer-drive ultrasonic sensor IC with a logarithmic amplifier from Texas Instruments. In addition to the high selectability of the power supply of the IC itself, this board also allows you to choose between 40kHz and 1MHz operating frequency, with a signal zero crossing comparator as an option. The ultrasonic sensor, the UTR-1440K from PUI Audio, also comes in the same package with this Click board™.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.Ultrasonic5",
     "subdir_name": "lib_ultrasonic5"
 }
+
 

@@ -25,13 +25,14 @@
     "name": "mikroe.click.c6dofimu20",
     "product_link": "https://www.mikroe.com/6dof-imu-20-click",
     "short_description": "6DOF IMU 20 Click is a compact add-on board with a 6-axis inertial measurement unit. This board features the BMI323, a high-performance, low-power inertial measurement unit (IMU) from Bosch Sensortec.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.6DOFIMU20",
     "subdir_name": "lib_c6dofimu20"
 }
+
 
 

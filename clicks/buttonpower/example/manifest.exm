@@ -2,7 +2,7 @@
     "name": "Button Power Click",
     "description": "Button Power Click is a very interesting interactive gadget on a Click board™. It is an integrated capacitive touch sensor display in the form of a button. By utilizing an advanced capacitive touch sensing technology, the CTHS15CIC05ONOFF sensor can successfully replace the traditional mechanical button, allowing very simplified yet reliable user interfaces to be developed. Besides the touch detection, this sensor also features a green power symbol icon with backlight, which makes the Click board™ very useful for building various stylized and visually appealing interfaces.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","CTHS15CIC05ONOFF"],
     "category" : ["Capacitive"]
 }

@@ -25,14 +25,15 @@
     "name": "mikroe.click.barometer6",
     "product_link": "https://www.mikroe.com/barometer-6-click",
     "short_description": "Barometer 6 Click is a compact add-on board used to measure air pressure in a specific environment. This board features the 2SMPB-02E, a high-accuracy digital barometric air pressure sensor with low current consumption from Omron Electronics. The 2SMPB-02E has a calibration parameter for broader pressure and temperature range, features a MEMS chip for sensing air pressure and an IC chip for signal processing. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.Barometer6",
     "subdir_name": "lib_barometer6"
 }
+
 
 
 

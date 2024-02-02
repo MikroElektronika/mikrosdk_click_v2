@@ -25,14 +25,15 @@
     "name": "mikroe.click.lteiot3",
     "product_link": "https://www.mikroe.com/lte-iot-3-click",
     "short_description": "LTE IoT 3 Click is a compact add-on board that contains a Low Power Wide Area (LPWA) Wireless IoT module that allows connections to the LTE CAT-M1, CAT NB1/2, and 2G networks. This board features the EXS82-W, LTE-IoT Wireless Module from Thales that offers a rich set of Internet protocols and industry-standard interfaces such as UART, USB, etc. Global IoT connectivity, integrated GNSS support, SMS support, extended coverage range, and reduced power consumption makes this single IoT module an excellent choice for device makers while ensuring worldwide reliability.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.LTEIoT3",
     "subdir_name": "lib_lteiot3"
 }
+
 
 
 

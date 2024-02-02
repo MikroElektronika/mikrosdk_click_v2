@@ -25,17 +25,18 @@
     "name": "mikroe.click.ltecat1eu",
     "product_link": "https://www.mikroe.com/lte-cat1-eu-click-for-europe",
     "short_description": "LTE Cat.1-EU click is a Click board™ based on Thales Cinterion® ELS61 wireless module that delivers highly efficient Cat 1 LTE connectivity for M2M IoT solutions offering seamless fall back to 2G and 3G networks. The best in class solution enables M2M optimized speeds of 10Mbit/s download and 5Mbit/s uplink making it ideal for the vast number of M2M and industrial IoT applications that are not dependent on speed but that requires the longevity of LTE networks, while still providing 3G and 2G connectivity to ensure complete population and geographic coverage as LTE rolls out.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         3104
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.LTECat1EU",
     "subdir_name": "lib_ltecat1eu"
 }
+
 
 
 

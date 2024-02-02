@@ -25,14 +25,15 @@
     "name": "mikroe.click.touchpad5",
     "product_link": "https://www.mikroe.com/touchpad-5-click",
     "short_description": "Touchpad 5 Click is a compact add-on board that easily integrates projected capacitive touch into user's applications. This board features the IQS550, a projected capacitive touch and proximity trackpad/touchscreen controller from Azoteq.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "alias": "Click.TouchPad5",
     "cmake": true,
     "subdir_name": "lib_touchpad5"
 }
+
 
 
 

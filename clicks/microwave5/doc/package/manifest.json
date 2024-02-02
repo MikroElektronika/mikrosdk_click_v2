@@ -25,13 +25,14 @@
     "name": "mikroe.click.microwave5",
     "product_link": "https://www.mikroe.com/microwave-5-click",
     "short_description": "Microwave 5 Click is a compact add-on board that utilizes the Doppler Shift Phenomenon to sense motion. This board features the PD-V10-G5, a miniature X-band microwave transceiver from Ningbo Pdlux Electronic Technology. The transmitter on this transceiver works on a 10.525GHz frequency over the patch antenna, with a 2-4kHz pulse repetition frequency. The strength of the sensor’s output, in other words, the detection range, depends on the Signal-to-Noise ratio.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.Microwave5",
     "subdir_name": "lib_microwave5"
 }
+
 
 
