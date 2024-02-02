@@ -279,7 +279,7 @@ void ccrf_default_cfg ( ccrf_t *ctx );
  *
  * @details Function for getting state of GD0 pin function
  */
-uint8_t ccrf_get_start( ctx );
+uint8_t ccrf_get_start( ccrf_t *ctx );
 
 /**
  * @brief Write the byte of data to the 8-bit register address function

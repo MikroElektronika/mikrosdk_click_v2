@@ -2,7 +2,7 @@
     "name": "Color 3 Click",
     "description": "Color 3 click is a mikroBUS™ add-on board with a TCS3771 color sensor (also known as a light-to-digital converter) and a narrow beam Infrared LED. The circuit can also function as a proximity sensor",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TCS3771"],
     "category" : ["Optical,Color Sensing"] 
 }

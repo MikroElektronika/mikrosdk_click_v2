@@ -25,17 +25,18 @@
     "name": "mikroe.click.oledw",
     "product_link": "https://www.mikroe.com/oled-w-click",
     "short_description": "OLED W click carries a 96 x 39px white monochrome passive matrix OLED display. The display is bright, has a wide viewing angle and low power consumption.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         1112
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.OLEDW",
     "subdir_name": "lib_oledw"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "UNI HALL Click",
     "description": "UNI HALL click is a simple solution for adding an unipolar Hall switch to your design. It carries the Melexis US5881 unipolar Hall-effect switch and a 74LVC1T45 single bit, dual supply translating transceiver.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","US5881,74LVC1T45"],
     "category" : ["Magnetic"] 
 }

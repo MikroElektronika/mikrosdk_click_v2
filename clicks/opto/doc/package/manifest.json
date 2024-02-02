@@ -25,17 +25,18 @@
     "name": "mikroe.click.opto",
     "product_link": "https://www.mikroe.com/opto-click",
     "short_description": "OPTO Click is an accessory board in mikroBUS form factor. It features two VO2630 dual channel, high speed optocoupler modules.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2929
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.OPTO",
     "subdir_name": "lib_opto"
 }
+
 
 
 

@@ -32,8 +32,8 @@
  */
 // ----------------------------------------------------------------------------
 
-#ifndef RTC_H
-#define RTC_H
+#ifndef RTC_C_H
+#define RTC_C_H
 
 #include "mikrosdk_version.h"
 
@@ -60,7 +60,7 @@
  * \defgroup map_mikrobus MikroBUS
  * \{
  */
-#define RTC_MAP_MIKROBUS( cfg, mikrobus ) \
+#define RTC_C_MAP_MIKROBUS( cfg, mikrobus ) \
   cfg.scl  = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
   cfg.sda  = MIKROBUS( mikrobus, MIKROBUS_SDA ); \
   cfg.int_pin = MIKROBUS( mikrobus, MIKROBUS_INT ); 
@@ -70,38 +70,38 @@
  * \defgroup error_code Error Code
  * \{
  */
-#define RTC_OK                                          0
-#define RTC_ERROR                                      -1
+#define RTC_C_OK                                          0
+#define RTC_C_ERROR                                      -1
 /** \} */
 
 /**
  * \defgroup slave_addr Slave Address
  * \{
  */
-#define RTC_I2C_ADDRESS_0                               0x50
-#define RTC_I2C_ADDRESS_1                               0x51
+#define RTC_C_I2C_ADDRESS_0                               0x50
+#define RTC_C_I2C_ADDRESS_1                               0x51
 /** \} */
 
 /**
  * \defgroup reg_addr Register Address
  * \{
  */
-#define RTC_REG_CONTROL                                 0x00
-#define RTC_REG_TIME_HUN_SEC                            0x01
-#define RTC_REG_TIME_SEC                                0x02
-#define RTC_REG_TIME_MIN                                0x03
-#define RTC_REG_TIME_HOUR                               0x04
-#define RTC_REG_TIME_DATE_DAY_AND_YEAR                  0x05
-#define RTC_REG_TIME_DAY_OF_THE_WEEK_AND_MONTH          0x06
-#define RTC_REG_TIMER                                   0x07
-#define RTC_REG_TIME_ALARM_CONTROL                      0x08
-#define RTC_REG_TIME_ALARM_HUN_SEC                      0x09
-#define RTC_REG_TIME_ALARM_SEC                          0x0A
-#define RTC_REG_TIME_ALARM_MIN                          0x0B
-#define RTC_REG_TIME_ALARM_HOUR                         0x0C
-#define RTC_REG_TIME_ALARM_DATE_DAY_AND_YEAR            0x0D
-#define RTC_REG_TIME_ALARM_DAY_OF_THE_WEEK_AND_MONTH    0x0E
-#define RTC_REG_TIME_ALARM_TIMER                        0x0F
+#define RTC_C_REG_CONTROL                                 0x00
+#define RTC_C_REG_TIME_HUN_SEC                            0x01
+#define RTC_C_REG_TIME_SEC                                0x02
+#define RTC_C_REG_TIME_MIN                                0x03
+#define RTC_C_REG_TIME_HOUR                               0x04
+#define RTC_C_REG_TIME_DATE_DAY_AND_YEAR                  0x05
+#define RTC_C_REG_TIME_DAY_OF_THE_WEEK_AND_MONTH          0x06
+#define RTC_C_REG_TIMER                                   0x07
+#define RTC_C_REG_TIME_ALARM_CONTROL                      0x08
+#define RTC_C_REG_TIME_ALARM_HUN_SEC                      0x09
+#define RTC_C_REG_TIME_ALARM_SEC                          0x0A
+#define RTC_C_REG_TIME_ALARM_MIN                          0x0B
+#define RTC_C_REG_TIME_ALARM_HOUR                         0x0C
+#define RTC_C_REG_TIME_ALARM_DATE_DAY_AND_YEAR            0x0D
+#define RTC_C_REG_TIME_ALARM_DAY_OF_THE_WEEK_AND_MONTH    0x0E
+#define RTC_C_REG_TIME_ALARM_TIMER                        0x0F
 /** \} */
 
 /** \} */ // End group macro 
@@ -121,7 +121,7 @@ typedef struct
     uint8_t date_month;
     uint16_t date_year;
 
-} rtc_date_t;
+} rtc_c_date_t;
 
 /**
  * @brief Time data structure.
@@ -133,7 +133,7 @@ typedef struct
     uint8_t time_seconds;
     int8_t time_hun_sec;
 
-} rtc_time_t;
+} rtc_c_time_t;
 
 /**
  * @brief Click ctx object definition.
@@ -150,10 +150,10 @@ typedef struct
     uint8_t slave_address;      /**< Device slave address (used for I2C driver). */
 
     // time and date data
-    rtc_date_t date;
-    rtc_time_t time;
+    rtc_c_date_t date;
+    rtc_c_time_t time;
 
-} rtc_t;
+} rtc_c_t;
 
 /**
  * @brief Click configuration structure definition.
@@ -171,7 +171,7 @@ typedef struct
     uint32_t   i2c_speed;       /**< I2C serial speed. */
     uint8_t    i2c_address;     /**< I2C slave address. */
 
-} rtc_cfg_t;
+} rtc_c_cfg_t;
 
 
 
@@ -195,7 +195,7 @@ extern "C"{
  * @details This function initializes click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
-void rtc_cfg_setup ( rtc_cfg_t *cfg );
+void rtc_c_cfg_setup ( rtc_c_cfg_t *cfg );
 
 /**
  * @brief Initialization function.
@@ -204,14 +204,14 @@ void rtc_cfg_setup ( rtc_cfg_t *cfg );
  * 
  * @details This function initializes all necessary pins and peripherals used for this click.
  */
-err_t rtc_init ( rtc_t *ctx, rtc_cfg_t *cfg );
+err_t rtc_c_init ( rtc_c_t *ctx, rtc_c_cfg_t *cfg );
 
 /**
  * @brief RTC I2C writing function.
  * @details This function writes a desired number of data bytes starting from
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
- * See #rtc_t object definition for detailed explanation.
+ * See #rtc_c_t object definition for detailed explanation.
  * @param[in] reg : Start register address.
  * @param[in] data_in : Data to be written.
  * @param[in] len : Number of bytes to be written.
@@ -220,14 +220,14 @@ err_t rtc_init ( rtc_t *ctx, rtc_cfg_t *cfg );
  * See #err_t definition for detailed explanation.
  * @note None.
  */
-err_t rtc_generic_write ( rtc_t *ctx, uint8_t reg, uint8_t *data_in, uint8_t len );
+err_t rtc_c_generic_write ( rtc_c_t *ctx, uint8_t reg, uint8_t *data_in, uint8_t len );
 
 /**
  * @brief RTC I2C reading function.
  * @details This function reads a desired number of data bytes starting from
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
- * See #rtc_t object definition for detailed explanation.
+ * See #rtc_c_t object definition for detailed explanation.
  * @param[in] reg : Start register address.
  * @param[out] data_out : Output read data.
  * @param[in] len : Number of bytes to be read.
@@ -236,7 +236,7 @@ err_t rtc_generic_write ( rtc_t *ctx, uint8_t reg, uint8_t *data_in, uint8_t len
  * See #err_t definition for detailed explanation.
  * @note None.
  */
-err_t rtc_generic_read ( rtc_t *ctx, uint8_t reg, uint8_t *data_out, uint8_t len );
+err_t rtc_c_generic_read ( rtc_c_t *ctx, uint8_t reg, uint8_t *data_out, uint8_t len );
 
 /**
  * @brief Enable/Disable counting function
@@ -246,7 +246,7 @@ err_t rtc_generic_read ( rtc_t *ctx, uint8_t reg, uint8_t *data_out, uint8_t len
  * 
  * @details Function that enables or disables counting on RTC Click.
  */
-void rtc_enable_disable_counting ( rtc_t *ctx, uint8_t en_dis );
+void rtc_c_enable_disable_counting ( rtc_c_t *ctx, uint8_t en_dis );
 
 /**
  * @brief Set control register to read time function
@@ -256,7 +256,7 @@ void rtc_enable_disable_counting ( rtc_t *ctx, uint8_t en_dis );
  * @details Function sets control register to read time by clearing read location bit
  * of PCF8583 chip on RTC Click.
  */
-void rtc_read_time ( rtc_t *ctx );
+void rtc_c_read_time ( rtc_c_t *ctx );
 
 /**
  * @brief Set control register to read date function
@@ -266,7 +266,7 @@ void rtc_read_time ( rtc_t *ctx );
  * @details Function sets control register to read time by setting read location bit
  * of PCF8583 chip on RTC Click.
  */
-void rtc_read_date ( rtc_t *ctx );
+void rtc_c_read_date ( rtc_c_t *ctx );
 
 /**
  * @brief Get time value function
@@ -280,7 +280,7 @@ void rtc_read_date ( rtc_t *ctx );
  * @details Function gets hundredths of a second, seconds, minutes or hours data from
  * the target register address of PCF8583 chip on RTC Click.
  */
-uint8_t rtc_get_time_value ( rtc_t *ctx, uint8_t time_part );
+uint8_t rtc_c_get_time_value ( rtc_c_t *ctx, uint8_t time_part );
 
 /**
  * @brief Set time values function
@@ -292,7 +292,7 @@ uint8_t rtc_get_time_value ( rtc_t *ctx, uint8_t time_part );
  * @details Function sets seconds data to the target register address
  * of PCF8583 chip on RTC Click.
  */
-void rtc_set_time_value ( rtc_t *ctx, uint8_t time_part, uint8_t time_addr );
+void rtc_c_set_time_value ( rtc_c_t *ctx, uint8_t time_part, uint8_t time_addr );
 
 /**
  * @brief Get day function
@@ -304,7 +304,7 @@ void rtc_set_time_value ( rtc_t *ctx, uint8_t time_part, uint8_t time_addr );
  * @details Function gets day data from the target register address
  * of PCF8583 chip on RTC Click.
  */
-uint8_t rtc_get_date_day ( rtc_t *ctx );
+uint8_t rtc_c_get_date_day ( rtc_c_t *ctx );
 
 /**
  * @brief Set day function
@@ -315,7 +315,7 @@ uint8_t rtc_get_date_day ( rtc_t *ctx );
  * @details Function sets day data from the target register address
  * of PCF8583 chip on RTC Click.
  */
-void rtc_set_date_day ( rtc_t *ctx, uint8_t date_day );
+void rtc_c_set_date_day ( rtc_c_t *ctx, uint8_t date_day );
 
 /**
  * @brief Get year function
@@ -327,7 +327,7 @@ void rtc_set_date_day ( rtc_t *ctx, uint8_t date_day );
  * @details Function gets year data from the target register address
  * of PCF8583 chip on RTC Click.
  */
-uint8_t rtc_get_date_year ( rtc_t *ctx );
+uint8_t rtc_c_get_date_year ( rtc_c_t *ctx );
 
 /**
  * @brief Set year function
@@ -338,7 +338,7 @@ uint8_t rtc_get_date_year ( rtc_t *ctx );
  * @details Function sets year data from the target register address
  * of PCF8583 chip on RTC Click.
  */
-void rtc_set_date_year ( rtc_t *ctx, uint16_t date_year );
+void rtc_c_set_date_year ( rtc_c_t *ctx, uint16_t date_year );
 
 /**
  * @brief Check if it's a leap year function
@@ -354,7 +354,7 @@ void rtc_set_date_year ( rtc_t *ctx, uint16_t date_year );
  * @details Function check if it's a leap year by read from the target register address
  * of PCF8583 chip on RTC Click.
  */
-uint8_t rtc_check_leap_year ( rtc_t *ctx );
+uint8_t rtc_c_check_leap_year ( rtc_c_t *ctx );
 
 /**
  * @brief Get day of the week function
@@ -366,7 +366,7 @@ uint8_t rtc_check_leap_year ( rtc_t *ctx );
  * @details Function gets day of the week data from tne target register address
  * of PCF8583 chip on RTC Click.
  */
-uint8_t rtc_get_day_of_the_week ( rtc_t *ctx );
+uint8_t rtc_c_get_day_of_the_week ( rtc_c_t *ctx );
 
 /**
  * @brief Set day of the week function
@@ -386,7 +386,7 @@ uint8_t rtc_get_day_of_the_week ( rtc_t *ctx );
  * @details Function sets day of the week data to the target register address
  * of PCF8583 chip on RTC Click.
  */
-void rtc_set_day_of_the_week ( rtc_t *ctx, uint8_t w_day );
+void rtc_c_set_day_of_the_week ( rtc_c_t *ctx, uint8_t w_day );
 
 /**
  * @brief Get month function
@@ -398,7 +398,7 @@ void rtc_set_day_of_the_week ( rtc_t *ctx, uint8_t w_day );
  * @details Function gets month data from the target register address
  * of PCF8583 chip on RTC Click.
  */
-uint8_t rtc_get_date_month ( rtc_t *ctx );
+uint8_t rtc_c_get_date_month ( rtc_c_t *ctx );
 
 /**
  * @brief Set month function
@@ -409,7 +409,7 @@ uint8_t rtc_get_date_month ( rtc_t *ctx );
  * @details Function sets month data from the target register address
  * of PCF8583 chip on RTC Click.
  */
-void rtc_set_date_month ( rtc_t *ctx, uint8_t date_month );
+void rtc_c_set_date_month ( rtc_c_t *ctx, uint8_t date_month );
 
 /**
  * @brief Set time hours, minutes, seconds and hundredth of a seconds function
@@ -419,7 +419,7 @@ void rtc_set_date_month ( rtc_t *ctx, uint8_t date_month );
  * @details Function sets time: hours, minutes and seconds data to
  * the target register address of PCF8583 chip on RTC Click.
  */
-void rtc_set_time ( rtc_t *ctx );
+void rtc_c_set_time ( rtc_c_t *ctx );
 
 /**
  * @brief Get time hours, minutes, seconds and hundredth of a seconds function
@@ -429,7 +429,7 @@ void rtc_set_time ( rtc_t *ctx );
  * @details Function gets time: hours, minutes and seconds data from
  * the target register address of PCF8583 chip on RTC Click.
  */
-void rtc_get_time ( rtc_t *ctx );
+void rtc_c_get_time ( rtc_c_t *ctx );
 
 /**
  * @brief Set date hours, minutes and seconds function
@@ -439,7 +439,7 @@ void rtc_get_time ( rtc_t *ctx );
  * @details Function sets date: day of the week, day, month and year data to
  * the target register address of PCF8583 chip on RTC Click.
  */
-void rtc_set_date ( rtc_t *ctx );
+void rtc_c_set_date ( rtc_c_t *ctx );
 
 /**
  * @brief Get time hours, minutes and seconds function
@@ -449,7 +449,7 @@ void rtc_set_date ( rtc_t *ctx );
  * @details Function gets date: day of the week, day, month and year data from
  * the target register address of PCF8583 chip on RTC Click.
  */
-void rtc_get_date ( rtc_t *ctx );
+void rtc_c_get_date ( rtc_c_t *ctx );
 
 /**
  * @brief Enable/Disable alarm function
@@ -460,7 +460,7 @@ void rtc_get_date ( rtc_t *ctx );
  * @details Function enable alarm by set alarm control bit register
  * to the target register address of PCF8583 chip on RTC Click.
  */
-void rtc_enable_disable_alarm ( rtc_t *ctx, uint8_t en_dis );
+void rtc_c_enable_disable_alarm ( rtc_c_t *ctx, uint8_t en_dis );
 
 /**
  * @brief Set alarm time value
@@ -472,7 +472,7 @@ void rtc_enable_disable_alarm ( rtc_t *ctx, uint8_t en_dis );
  * @details Function set alarm time - hundredth of a seconds, seconds, minutes or hours by writing time part
  * value to the target register address of PCF8583 chip on RTC Click.
  */
-void rtc_set_alarm_value ( rtc_t *ctx, uint8_t al_time_val, uint8_t al_time_type );
+void rtc_c_set_alarm_value ( rtc_c_t *ctx, uint8_t al_time_val, uint8_t al_time_type );
 
 /**
  * @brief Get alarm time value function
@@ -486,7 +486,7 @@ void rtc_set_alarm_value ( rtc_t *ctx, uint8_t al_time_val, uint8_t al_time_type
  * @details Function getx alarm time value ( hundredth of a second, seconds, minutes or hours ) 
  * by reading time value from the target register address of PCF8583 chip on RTC Click.
  */
-uint8_t rtc_get_alarm_value ( rtc_t *ctx, uint8_t alarm_addr );
+uint8_t rtc_c_get_alarm_value ( rtc_c_t *ctx, uint8_t alarm_addr );
 
 /**
  * @brief Set alarm time - minutes function
@@ -496,7 +496,7 @@ uint8_t rtc_get_alarm_value ( rtc_t *ctx, uint8_t alarm_addr );
  * @details Function set alarm time - minutes by write minutes value
  * to the target register address of PCF8583 chip on RTC Click.
  */
-void rtc_set_time_alarm ( rtc_t *ctx );
+void rtc_c_set_time_alarm ( rtc_c_t *ctx );
 
 /**
  * @brief Get the alarm time hours, minutes, seconds and hundredth of a seconds function
@@ -506,7 +506,7 @@ void rtc_set_time_alarm ( rtc_t *ctx );
  * @details Function gets the alarm time: hours, minutes and seconds data from
  * the target register address of PCF8583 chip on RTC Click.
  */
-void rtc_get_time_alarm ( rtc_t *ctx );
+void rtc_c_get_time_alarm ( rtc_c_t *ctx );
 
 /**
  * @brief Enable alarm interrupt function
@@ -517,7 +517,7 @@ void rtc_get_time_alarm ( rtc_t *ctx );
  * @details Function enables/disables alarm interrupt by setting alarm interrupt bit register
  * to the target register address of PCF8583 chip on RTC Click.
  */
-void rtc_enable_disable_interrupt( rtc_t *ctx, uint8_t flag );
+void rtc_c_enable_disable_interrupt( rtc_c_t *ctx, uint8_t flag );
 
 /**
  * @brief Get state of interrupt pin function
@@ -531,12 +531,12 @@ void rtc_enable_disable_interrupt( rtc_t *ctx, uint8_t flag );
  *
  * @details Function get state of interrupt ( INT ) pin.
  */
-uint8_t rtc_get_interrupt( rtc_t *ctx );
+uint8_t rtc_c_get_interrupt( rtc_c_t *ctx );
 
 #ifdef __cplusplus
 }
 #endif
-#endif  // _RTC_H_
+#endif  // _RTC_C_H_
 
 /** \} */ // End public_function group
 /// \}    // End click Driver group  

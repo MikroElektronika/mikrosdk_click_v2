@@ -25,13 +25,14 @@
     "name": "mikroe.click.compass6",
     "product_link": "https://www.mikroe.com/compass-6-click",
     "short_description": "Compass 6 Click is a compact add-on board perfect for implementation in applications such as an electronic compass. This board features the HSCDTD008A, a high-sensitivity geomagnetic sensor from ALPS Alpine. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.Compass6",
     "subdir_name": "lib_compass6"
 }
+
 
 

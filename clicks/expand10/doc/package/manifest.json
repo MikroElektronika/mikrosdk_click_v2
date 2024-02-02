@@ -25,14 +25,15 @@
     "name": "mikroe.click.expand10",
     "product_link": "https://www.mikroe.com/expand-10-click",
     "short_description": "Expand 10 Click is a compact add-on board that contains a multi-port I/O expander. This board features the PCAL6524, a 24-bit general-purpose I/O expander providing remote I/O expansion for most MCU’s families via the Fast-mode Plus I2C-serial interface from NXP Semiconductors.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Expand10",
     "subdir_name": "lib_expand10"
 }
+
 
 
 

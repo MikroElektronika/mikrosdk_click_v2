@@ -25,16 +25,17 @@
     "name": "mikroe.click.diffpressure",
     "product_link": "https://www.mikroe.com/diff-pressure-click",
     "short_description": "Diff pressure click carries NXP’s MPXV5010DP signal conditioned, temperature compensated and calibrated pressure sensor with two axial ports to accommodate industrial grade tubing.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1901
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Diffpressure",
     "subdir_name": "lib_diffpressure"
 }
+
 
 

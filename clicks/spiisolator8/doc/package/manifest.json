@@ -25,12 +25,13 @@
     "name": "mikroe.click.spiisolator8",
     "product_link": "https://www.mikroe.com/spi-isolator-8-click",
     "short_description": "SPI Isolator 8 Click is a compact add-on board representing a digital isolator optimized for a serial peripheral interface. This board features the ISOW7743, a quad-channel digital isolator from Texas Instruments. This device has a maximum data rate of 100Mbps and transfers digital signals between circuits with different power domains featuring reinforced isolation for a withstand voltage rating of 5kVRMS for 60 seconds.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.SPIIsolator8",
     "subdir_name": "lib_spiisolator8"
 }
+
 

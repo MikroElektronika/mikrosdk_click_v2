@@ -25,17 +25,18 @@
     "name": "mikroe.click.force3",
     "product_link": "https://www.mikroe.com/force-3-click",
     "short_description": "Force 3 Click is a compact add-on board with circuitry for implementing Force Sensing Resistor into your projects whose resistance changes when a force, pressure, or mechanical stress is applied.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3766
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Force3",
     "subdir_name": "lib_force3"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "Hall Current 12 Click",
     "description": "Hall Current 12 Click is a compact add-on board that provides economical and precise AC or DC current sensing solutions. This board features the TMCS1100, a galvanically isolated Hall-effect current sensor capable of DC or AC current measurement with high accuracy, excellent linearity, and temperature stability from Texas Instruments. It enables the lowest drift, <1% full-scale error, and highest accuracy over time and temperature. It also provides a reliable 600V lifetime working voltage and 3kVRMS isolation between the current path and circuitry with uni/bidirectional current sensing. Besides, the user is allowed to process the output signal in analog or digital form.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TMCS1100A4"],
     "category" : ["Current sensor"]
 }

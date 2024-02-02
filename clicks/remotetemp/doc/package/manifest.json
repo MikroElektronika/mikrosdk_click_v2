@@ -25,17 +25,18 @@
     "name": "mikroe.click.remotetemp",
     "product_link": "https://www.mikroe.com/remote-temp-click",
     "short_description": "Remote Temp Click is a temperature sensing Click board™, which features the EMC1833 from Microchip, a specifically designed IC, capable of measuring remote temperature. This option makes Remote Temp click well-suited for monitoring the temperature of a CPU, GPU or FPGA, where the BJT model junction can be a substrate PNP or NPN.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2822
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.RemoteTemp",
     "subdir_name": "lib_remotetemp"
 }
+
 
 
 

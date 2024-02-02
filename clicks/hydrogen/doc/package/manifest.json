@@ -25,17 +25,18 @@
     "name": "mikroe.click.hydrogen",
     "product_link": "https://www.mikroe.com/hydrogen-click",
     "short_description": "Hydrogen click carries an MQ-8 sensor for hydrogen (H2). The gas sensing layer on the sensor unit is made of tin dioxide (SnO2), which has lower conductivity in clean air.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1066
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Hydrogen",
     "subdir_name": "lib_hydrogen"
 }
+
 
 
 

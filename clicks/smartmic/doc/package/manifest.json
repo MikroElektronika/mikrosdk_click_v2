@@ -25,14 +25,15 @@
     "name": "mikroe.click.smartmic",
     "product_link": "https://www.mikroe.com/smart-mic-click",
     "short_description": "Smart Mic Click is a compact add-on board that provides wake-on-voice capabilities with secured privacy without compromising performance. This board features the IA611, an “Always-On” voice-wake acoustic processor from Knowles Electronics. The IA611 offers flexibility by supporting the most relevant audio and data interfaces and enables ultra-low-power voice and event detection, including voice UI supporting keywords, voice commands, and acoustic event detection. Its integrated programmable DSP is made available to 3rd party algorithms with 168kB of RAM, enabling unlimited creativity.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.SmartMic",
     "subdir_name": "lib_smartmic"
 }
+
 
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.rs4854",
     "product_link": "https://www.mikroe.com/rs485-4-click",
     "short_description": "RS485 4 Click offers an UART to RS485 signal conversion, featuring the ADM2795E specialized IC with the complete galvanic isolation.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2713
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Rs4854",
     "subdir_name": "lib_rs4854"
 }
+
 
 
 

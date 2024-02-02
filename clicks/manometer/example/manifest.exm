@@ -2,7 +2,7 @@
     "name": "Manometer Click",
     "description": "<Manometer click carries a piezoresistive silicon pressure sensor,the HSCMAND060PA3A3 from Honeywell, an industry-leading module with an extremely high accuracy of ±0.25%FSS BFSL.>",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","HSCMAND060PA3A3"],
     "category" : ["Pressure"] 
 }

@@ -25,16 +25,17 @@
     "name": "mikroe.click.noise",
     "product_link": "https://www.mikroe.com/noise-click",
     "short_description": "Noise click is a mikroBUS add-on board with noise detecting circuitry. It enables you to set a noise detection threshold for alarm systems, environmental monitoring or data logging.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1878
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Noise",
     "subdir_name": "lib_noise"
 }
+
 
 

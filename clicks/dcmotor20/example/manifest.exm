@@ -2,7 +2,7 @@
     "name": "DC Motor 20 Click",
     "description": "DC Motor 20 Click is a compact add-on board that contains a brushed DC motor driver. This board features the TC78H651AFNG, a dual H-bridge driver for one or two DC brushed motors, which incorporates DMOS with low ON resistance in output transistors from Toshiba Semiconductor.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TC78H651AFNG"],
     "category" : ["Brushed"]
 }

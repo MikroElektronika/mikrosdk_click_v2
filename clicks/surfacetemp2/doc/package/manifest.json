@@ -25,17 +25,18 @@
     "name": "mikroe.click.surfacetemp2",
     "product_link": "https://www.mikroe.com/surface-temp-2-click",
     "short_description": "Surface temp 2 Click is a compact add-on board that contains a high accuracy temperature sensor offering breakthrough performance over a wide industrial temperature range.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3848
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.SurfaceTemp2",
     "subdir_name": "lib_surfacetemp2"
 }
+
 
 
 

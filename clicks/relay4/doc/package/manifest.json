@@ -25,14 +25,15 @@
     "name": "mikroe.click.relay4",
     "product_link": "https://www.mikroe.com/relay-4-click",
     "short_description": "Relay 4 Click is a compact add-on board with a general-purpose relay that any host MCU can control. This board features the J1031C3VDC, high-current single-pole double-throw (SPDT) signal relay from CIT Relay and Switch. Highly sensitive, the J1031C3VDC offers a low coil power consumption in a small, lightweight package with PC pin mounting. It comes with a dimension of 12.5x7.5x10 millimetre (LxWxH) and a 1C contact arrangement with a coil voltage of 3VDC, providing a switching voltage of 125VAC/60VDC maximum.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.Relay4",
     "subdir_name": "lib_relay4"
 }
+
 
 
 

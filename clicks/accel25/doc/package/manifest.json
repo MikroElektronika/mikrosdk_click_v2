@@ -25,13 +25,14 @@
     "name": "mikroe.click.accel25",
     "product_link": "https://www.mikroe.com/accel-25-click",
     "short_description": "Accel 25 Click is a compact add-on board that contains an acceleration sensor. This board features the MXC4005XC, a 12-bit three-axis thermal accelerometer from MEMSIC. It allows selectable full-scale acceleration measurements of ±2g, ±4g, or ±8g in three axes with a compatible I2C serial interface with 400KHz fast mode operation. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.Accel25",
     "subdir_name": "lib_accel25"
 }
+
 
 

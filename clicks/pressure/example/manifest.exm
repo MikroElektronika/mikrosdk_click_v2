@@ -2,7 +2,7 @@
     "name": "Pressure Click",
     "description": "Pressure Click is a compact and easy solution for adding pressure measurement to your design. It features LPS331AP digital output pressure sensor.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LPS331AP"],
     "category" : ["Pressure"] 
 }

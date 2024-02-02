@@ -25,17 +25,18 @@
     "name": "mikroe.click.hztov2",
     "product_link": "https://www.mikroe.com/hz-to-v-2-click",
     "short_description": "HZ to V 2 click is a device that can convert input frequency of the signal with virtually any wave shape to a DC voltage output, with a level proportional to the input frequency.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2428
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.HzToV2",
     "subdir_name": "lib_hztov2"
 }
+
 
 
 

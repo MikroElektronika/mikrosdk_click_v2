@@ -25,17 +25,18 @@
     "name": "mikroe.click.c4dotmatrixr",
     "product_link": "https://www.mikroe.com/4dot-matrix-r-click",
     "short_description": "4Dot-Matrix R click is a display device Click board™, which contains a four-digit dot matrix display module, labeled as SLO2016.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2105
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.4dotmatrixr",
     "subdir_name": "lib_c4dotmatrixr"
 }
+
 
 
 

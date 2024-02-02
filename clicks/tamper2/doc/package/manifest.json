@@ -25,17 +25,18 @@
     "name": "mikroe.click.tamper2",
     "product_link": "https://www.mikroe.com/tamper-2-click",
     "short_description": "Tamper 2 click contains a levered D2HW-A221D switch by Omron, which outputs signal in both positions - pressed and released.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2223
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Tamper2",
     "subdir_name": "lib_tamper2"
 }
+
 
 
 

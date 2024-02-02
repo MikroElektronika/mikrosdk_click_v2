@@ -25,11 +25,12 @@
     "name": "mikroe.click.opto7",
     "product_link": "https://www.mikroe.com/opto-7-click",
     "short_description": "Opto 7 Click is a compact add-on board that provides uncomplicated safety isolation from high voltage. This board features two ISOM8710, high-speed single-channel opto-emulators from Texas Instruments. The ISOM8710 opto-emulator has a diode-emulator input and digital output",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.Opto7",
     "subdir_name": "lib_opto7"
 }
+

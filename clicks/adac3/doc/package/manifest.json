@@ -25,13 +25,14 @@
     "name": "mikroe.click.adac3",
     "product_link": "https://www.mikroe.com/adac-3-click",
     "short_description": "ADAC 3 Click is a compact add-on board representing the ADC/DAC combo solution. This board features the PCF8591, a low-power 8-bit CMOS data acquisition device with four analog inputs, one analog output, and a serial I2C interface from NXP Semiconductors. The PCF8591 includes analog input multiplexing, an on-chip track and hold function and 8-bit analog-to-digital conversion alongside an 8-bit digital-to-analog conversion. In addition, the user is given the option to select the PCF8591 reference voltage value, choosing between 2,048 and 4,096V.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.ADAC3",
     "subdir_name": "lib_adac3"
 }
+
 
 

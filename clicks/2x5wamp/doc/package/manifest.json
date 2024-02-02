@@ -25,17 +25,18 @@
     "name": "mikroe.click.c2x5wamp",
     "product_link": "https://www.mikroe.com/2x5w-amp-click",
     "short_description": "2x5W AMP click functions as an amplifier and features the TDA7491LP 2x5-watt dual BTL class-D audio amplifier. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over the following pins on the mikroBUS™ line: AN, RST, CS, PWM, INT.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3346
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.2x5WAmp",
     "subdir_name": "lib_c2x5wamp"
 }
+
 
 
 

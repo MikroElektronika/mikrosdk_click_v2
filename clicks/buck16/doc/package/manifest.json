@@ -25,14 +25,15 @@
     "name": "mikroe.click.buck16",
     "product_link": "https://www.mikroe.com/buck-16-click",
     "short_description": "Buck 16 Click is a compact add-on board that contains a DC-DC power converter that steps down the voltage from its input to its output. This board features the TPS62912, a high-efficiency, low noise, and low ripple current-mode synchronous buck converter from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Buck16",
     "subdir_name": "lib_buck16"
 }
+
 
 
 

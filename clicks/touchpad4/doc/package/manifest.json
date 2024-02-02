@@ -25,14 +25,15 @@
     "name": "mikroe.click.touchpad4",
     "product_link": "https://www.mikroe.com/touchpad-4-click",
     "short_description": "Touchpad 4 Click is a compact add-on board that easily integrates projected capacitive touch into user's applications. This board features the IQS7211A, a tiny capacitive touch controller from Azoteq.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Touchpad4",
     "subdir_name": "lib_touchpad4"
 }
+
 
 
 

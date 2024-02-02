@@ -25,13 +25,14 @@
     "name": "mikroe.click.lr",
     "product_link": "https://www.mikroe.com/lr-click",
     "short_description": "LR Click is a compact add-on board that contains a low-power, long-range transceiver. This board features the RN2483, RF technology-based SRD transceiver, which operates at a frequency of 433/868MHz from Microchip Technology. This Click board™ features an embedded LoRaWAN Class A compliant stack, providing a long-range spread spectrum communication with high interference immunity. The RN2483 module is a fully certified 433/868MHz European R&TTE directive assessed radio modem combined with the advanced and straightforward command interface.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.LR",
     "subdir_name": "lib_lr"
 }
+
 
 

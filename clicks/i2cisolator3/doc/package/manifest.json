@@ -25,17 +25,18 @@
     "name": "mikroe.click.i2cisolator3",
     "product_link": "https://www.mikroe.com/i2c-isolator-3-click",
     "short_description": "I2C Isolator 3 Click is a compact add-on board that offers completely isolated bidirectional communication. This board features the CPC5902, a dual optically isolated bidirectional logic-bus repeater from IXYS Integrated Circuits Division.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         4110
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.I2CIsolator3",
     "subdir_name": "lib_i2cisolator3"
 }
+
 
 
 

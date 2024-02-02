@@ -2,7 +2,7 @@
     "name": "I2C Isolator 4 Click",
     "description": "I2C Isolator 4 Click is a compact add-on board that offers completely isolated bidirectional communication. This board features the MAX14937, a two-channel, 5kVRMS I2C digital isolator from Analog Devices. The MAX14937 provides two bidirectional, open-drain channels for applications that require data to be transmitted in both directions on the same line. It supports data rates from DC up to 1.7MHz and can be used in isolated I2C busses with or without clock stretching.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MAX14937"],
     "category" : ["I2C"]
 }

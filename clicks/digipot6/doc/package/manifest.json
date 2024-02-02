@@ -25,17 +25,18 @@
     "name": "mikroe.click.digipot6",
     "product_link": "https://www.mikroe.com/digi-pot-6-click",
     "short_description": "DIGI POT 6 Click features the MCP41HVX1 family of devices which have dual power rails (analog and digital). The analog power rail allows high voltage on the resistor network terminal pins.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3280
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.DIGIPOT6",
     "subdir_name": "lib_digipot6"
 }
+
 
 
 

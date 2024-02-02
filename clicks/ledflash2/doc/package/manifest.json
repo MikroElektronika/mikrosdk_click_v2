@@ -25,17 +25,18 @@
     "name": "mikroe.click.ledflash2",
     "product_link": "https://www.mikroe.com/led-flash-2-click",
     "short_description": "LED Flash 2 click is a powerful flash/torch click, featuring the MIC2870 from Microchip, a high-efficiency flash LED driver, optimized for driving one or two high-brightness camera flash LEDs.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2219
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.LedFlash2",
     "subdir_name": "lib_ledflash2"
 }
+
 
 
 

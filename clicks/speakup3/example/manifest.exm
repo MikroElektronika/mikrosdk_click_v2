@@ -2,7 +2,7 @@
     "name": "SpeakUp 3 Click",
     "description": "SpeakUP 3 Click is a compact add-on board providing an offline speech recognition solution. This board features the VC-02, a low-cost pure offline speech recognition module developed by Ai-Thinker Technology. The VC-02 module uses an integrated voice chip US516P6 based on a 32-bit RSIC architecture core, a DSP instruction set for signal processing and speech recognition, an FPU arithmetic unit, and an FFT accelerator. The VC-02 supports offline identification of 150 local instructions, RTOS lightweight system, firmware update feature, as well as the selection of the communication method with the module.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
     "hw" : ["click","VC-02"],
     "category" : ["Click Boards > Audio & voice > Speech recognition"]
 }

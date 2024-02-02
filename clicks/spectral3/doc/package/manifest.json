@@ -25,17 +25,18 @@
     "name": "mikroe.click.spectral3",
     "product_link": "https://www.mikroe.com/spectral-3-click",
     "short_description": "Spectral 3 click is a multispectral sensing device, which uses the state-of-the-art sensor IC for a very accurate near-IR (NIR) sensing.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2356
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Spectral3",
     "subdir_name": "lib_spectral3"
 }
+
 
 
 

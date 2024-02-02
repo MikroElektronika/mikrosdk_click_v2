@@ -25,17 +25,18 @@
     "name": "mikroe.click.dcmotor",
     "product_link": "https://www.mikroe.com/dc-motor-click",
     "short_description": "This application change the speed and direction of DC Motor",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         922
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.DcMotor",
     "subdir_name": "lib_dcmotor"
 }
+
 
 
 

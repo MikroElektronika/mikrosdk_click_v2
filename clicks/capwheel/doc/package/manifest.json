@@ -25,17 +25,18 @@
     "name": "mikroe.click.capwheel",
     "product_link": "https://www.mikroe.com/cap-wheel-click",
     "short_description": "This application is use for controling various devices",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2549
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.CapWheel",
     "subdir_name": "lib_capwheel"
 }
+
 
 
 

@@ -25,14 +25,15 @@
     "name": "mikroe.click.pressure17",
     "product_link": "https://www.mikroe.com/pressure-17-click",
     "short_description": "Pressure 17 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the BM1390GLV-Z, a high-precision piezoresistive pressure sensor from Rohm Semiconductor. The BM1390GLV-Z comes with a configurable host interface that supports I2C serial communication and measures pressure in a range from 300hPa up to 1300hPa with an accuracy of ±1hPa.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.Pressure17",
     "subdir_name": "lib_pressure17"
 }
+
 
 
 

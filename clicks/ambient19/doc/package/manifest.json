@@ -25,14 +25,15 @@
     "name": "mikroe.click.ambient19",
     "product_link": "https://www.mikroe.com/ambient-19-click",
     "short_description": "Ambient 19 Click is a compact add-on board used to measure the amount of the present ambient light. This board features the APM-16D24-310-DF8/TR8, a digital output ambient light and proximity sensor with an I2C interface and interrupt from Everlight Electronics. It has a flexible and wide operating range for the ambient light sensor with a maximum resolution of 0.0023Lux/count and full detectable illumination of 57880Lux. The proximity function has an adjustable number of IR pulses from 1 to 256, and a flexible IR LED driving current to meet different application requirements. It is also equipped with an integrated filter to reduce unwanted IR signals and noise from the environment.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.Ambient19",
     "subdir_name": "lib_ambient19"
 }
+
 
 
 

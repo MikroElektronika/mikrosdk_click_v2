@@ -25,14 +25,15 @@
     "name": "mikroe.click.multisteppertb67s261",
     "product_link": "https://www.mikroe.com/multi-stepper-click-tb67s261",
     "short_description": "Multi Stepper Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the TB67S261FTG, a PHASE-in controlled bipolar stepping motor driver from Toshiba Semiconductor. It supports a PWM constant-current control drive and full-, half-, and quarter-step operation for less motor noise and smoother control. It has a wide operating voltage range of 10V to 47V with an output current capacity of 1.4A in addition to several built-in error detection circuits.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.MultiStepperTB67S261",
     "subdir_name": "lib_multisteppertb67s261"
 }
+
 
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.dcmotor10",
     "product_link": "https://www.mikroe.com/dc-motor-10-click",
     "short_description": "DC Motor 10 Click is a brushed DC motor driver with the current limiting and current sensing. It is based on the TLE 6208-6 G, an Hex-Half-Bridge / Double Six-Driver IC, optimized for motor driving applications.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2939
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.DcMotor10",
     "subdir_name": "lib_dcmotor10"
 }
+
 
 
 

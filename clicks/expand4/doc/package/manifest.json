@@ -25,17 +25,18 @@
     "name": "mikroe.click.expand4",
     "product_link": "https://www.mikroe.com/expand-4-click",
     "short_description": "Expand 4 click carries TPCIC6A595, a chip that combines an 8-bit serial-in, parallel-out shift register with an 8-bit D-type storage register.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1499
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Expand4",
     "subdir_name": "lib_expand4"
 }
+
 
 
 

@@ -25,14 +25,15 @@
     "name": "mikroe.click.hbridge8",
     "product_link": "https://www.mikroe.com/h-bridge-8-click",
     "short_description": "H-Bridge 8 Click is a compact add-on board that contains H-bridge current regulator. This board features the MP6519, a monolithic, step-down, current-source driver for applications that require accurate and fast current-response control from Monolithic Power Systems (MPS). It achieves excellent load and line regulation over a wide input supply range up to 28V. The four integrated MOSFET H-bridge control provide a fast dynamic load response and an ultra-high efficiency solution. Complete protection features include load open, load-short protection, over-current protection (OCP), over-temperature protection (OTP), and input over-voltage protection (OVP). This Click board™ is suitable as a current-regulator brushed DC motor/solenoid driver for various applications",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.HBridge8",
     "subdir_name": "lib_hbridge8"
 }
+
 
 
 

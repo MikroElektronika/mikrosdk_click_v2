@@ -25,11 +25,12 @@
     "name": "mikroe.click.hbridge16",
     "product_link": "https://www.mikroe.com/h-bridge-16-click",
     "short_description": "H-Bridge 16 Click is a compact add-on board with an H-Bridge gate driver, also known as a full-bridge pre-driver. This board features the DRV8262, a dual H-Bridge motor driver from Texas Instruments. The motor driver is designed for a variety of industrial applications and can drive one or two brushed DC motors, one stepper motor, and one or two thermoelectric coolers (TEC). It can operate in a wide supply voltage range of 4.5V to 65V.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.HBridge16",
     "subdir_name": "lib_hbridge16"
 }
+

@@ -2,7 +2,7 @@
     "name": "PROFET 10A Click",
     "description": "PROFET Click is a compact add-on board that contains a smart high-side power switch. This board features the BTS7008-1EPA, a single-channel, high-side power switch with embedded protection and diagnosis feature from Infineon Technologies. This switch has a driving capability suitable for 10A loads featuring a ReverSave™, which causes the power transistor to switch on in case of reverse polarity.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","BTS7008-1EPA"],
     "category" : ["Current sensor"]
 }

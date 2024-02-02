@@ -25,16 +25,17 @@
     "name": "mikroe.click.rgbdriver",
     "product_link": "https://www.mikroe.com/rgb-driver-click",
     "short_description": "RGB Driver click is an RGB LED driver, capable of driving RGB LED stripes, LED fixtures and other RGB LED applications that demand an increased amount of current and voltage.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2329
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.RgbDriver",
     "subdir_name": "lib_rgbdriver"
 }
+
 
 

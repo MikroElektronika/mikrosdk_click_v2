@@ -2,7 +2,7 @@
     "name": "Pressure 18 Click",
     "description": "Pressure 18 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the BMP384, a robust barometric pressure sensor delivering market-leading accuracy in a compact package from Bosch Sensortec. The BMP384 provides a relative accuracy of ±9Pa and typical absolute accuracy of ±50Pa with ultra-low noise, low power consumption, and a temperature coefficient offset of ±1Pa/K. It converts output data into a 24-bit digital value and sends the information via a configurable host interface that supports SPI and I2C serial communications. It measures pressure from 300hPa to 1250hPa over a wide operating temperature range.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","BMP384"],
     "category" : ["Click Boards > Sensors > Pressure"]
 }

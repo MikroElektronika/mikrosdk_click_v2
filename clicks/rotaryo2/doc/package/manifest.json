@@ -25,11 +25,12 @@
     "name": "mikroe.click.rotaryo2",
     "product_link": "https://www.mikroe.com/rotary-o-2-click",
     "short_description": "Rotary O 2 Click is a compact add-on board that allows you to add a precision input knob to your design. This board features the TLC5925, a low-power 16-channel constant-current LED sink driver from Texas Instruments that, combined with a high-quality rotary encoder from ALPS, the EC12D1564402, allows you to add a precision input knob to your design. It also features an LED ring composed of 16 individual orange LEDs that can visually represent the encoder position and more.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.RotaryO2",
     "subdir_name": "lib_rotaryo2"
 }
+

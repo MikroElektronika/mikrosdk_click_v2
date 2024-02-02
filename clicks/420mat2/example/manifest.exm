@@ -2,7 +2,7 @@
     "name": "4-20mA T 2 Click",
     "description": "4-20mA T 2 Click is a compact add-on board for transmitting an analog output current over an industry-standard 4-20mA current loop. This board features DAC161S997, a low-power 16-bit ΣΔ digital-to-analog converter (DAC) from Texas Instruments. It has a programmable Power-Up condition and loop-error detection/reporting accessible via simple 4-wire SPI for data transfer and configuration of the DAC functions. In addition, it is characterized by low power consumption and the possibility of simple Highway Addressable Remote Transducer (HART) modulator interfacing, allowing the injection of FSK-modulated digital data into the 4-20mA current loop.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","DAC161S997"],
     "category" : ["Click Boards > Interface > Current"]
 }

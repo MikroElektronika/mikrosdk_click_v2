@@ -2,7 +2,7 @@
     "name": "Color 4 Click",
     "description": "Color 4 Click is a compact add-on board providing an accurate color-sensing solution. This board features the VEML6040, a 16-bit RGBW color sensor offering spectral response through a compatible I2C interface from Vishay Semiconductors. The VEML6040 is based on the Filtron™ technology achieving the closest ambient light spectral sensitivity to real-human eye responses. Alongside the color sensor, this IC also incorporates a signal conditioning circuit consisting of photodiodes, amplifiers, and A/D circuits placed into a single chip using the CMOS process. It provides a selectable measurement range up to 16.496lx with the highest sensitivity of 0.007865lx/step.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","VEML6040"],
     "category" : ["Optical"]
 }

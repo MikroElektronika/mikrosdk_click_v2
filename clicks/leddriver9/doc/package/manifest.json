@@ -25,14 +25,15 @@
     "name": "mikroe.click.leddriver9",
     "product_link": "https://www.mikroe.com/led-driver-9-click",
     "short_description": "LED Driver 9 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the TLC59116, I2C bus-controlled 16-channel LED driver optimized for red/green/blue/amber (RGBA) color mixing and backlight application from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.LEDDriver9",
     "subdir_name": "lib_leddriver9"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "HAPTIC Click",
     "description": "Haptic click carries DRV2605, a Haptic Driver for ERM and LRA vibration motors (acronyms stand for Eccentric Rotating Mass and Linear Resonant Actuator, respectively)",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","DRV2605"],
     "category" : ["Haptic"] 
 }

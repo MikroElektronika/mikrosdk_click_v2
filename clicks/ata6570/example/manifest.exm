@@ -2,7 +2,7 @@
     "name": "ATA6570 Click",
     "description": "ATA6570 click is a CAN Partial Networking interface board. The click carries the ATA6570, a high-speed CAN transceiver that interfaces a Controller Area Network (CAN) protocol controller and the physical two-wire CAN bus. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ATA6570"],
     "category" : ["CAN"] 
 }

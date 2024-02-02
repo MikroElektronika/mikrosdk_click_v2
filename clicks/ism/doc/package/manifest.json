@@ -24,13 +24,14 @@
     "name": "mikroe.click.ism",
     "product_link": "https://www.mikroe.com/ism-click",
     "short_description": "ISM Click is a compact add-on board that contains a complete wireless RF digital data transceiver. This board features the RFM75, a low-power, high-performance 2.4GHz GFSK transceiver from RF Solutions. The RFM75 transceiver is configurable through SPI serial interface and operates with only 3.3V in the worldwide ISM frequency band from 2400MHz up to 2527MHz. The embedded packet processing engines enable their entire operation with a simple MCU as a radio system. Burst mode transmission and up to 2Mbps air data rate make it suitable for applications requiring ultra-low power consumption.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Ism",
     "subdir_name": "lib_ism"
 }
+
 
 

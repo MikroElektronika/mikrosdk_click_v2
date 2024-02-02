@@ -25,14 +25,15 @@
     "name": "mikroe.click.gsmgnss2",
     "product_link": "https://www.mikroe.com/gsmgnss-2-click",
     "short_description": "GSM/GNSS 2 click combines GPS/GLONASS location tracking with GSM module capability for mobile communication. The click carries SIM868 quad-band GSM/GPRS module.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.GsmGnss2",
     "subdir_name": "lib_gsmgnss2"
 }
+
 
 
 

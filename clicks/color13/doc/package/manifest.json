@@ -25,14 +25,15 @@
     "name": "mikroe.click.color13",
     "product_link": "https://www.mikroe.com/color-13-click",
     "short_description": "Color 13 Click is a compact add-on board that measures the subtlest changes in light. This board features the APDS-9999, I2C compatible RGB, proximity detector, and vertical-cavity surface-emitting laser (VCSEL) in one optical module from Broadcom Limited.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Color13",
     "subdir_name": "lib_color13"
 }
+
 
 
 

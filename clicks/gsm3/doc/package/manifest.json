@@ -25,17 +25,18 @@
     "name": "mikroe.click.gsm3",
     "product_link": "https://www.mikroe.com/gsm-3-click",
     "short_description": "GSM3 click is a complete quad-band GSM cellular network communication solution, featuring the SIM800H-BT, a quad-band 2G GSM/GPRS module. This module is GSM Phase 2/2+ compliant, featuring a full set of options for the cellular networking and communication. It has a network status indication, jamming detection, embedded internet protocols including TCP/IP, UDP, FTP, PPP, HTTP, E-mail, MMS, and more. It also features advanced voice/audio functions, including the FM radio interface. The GPRS multislot class 12 implementation allows 4 uplink and 4 downlink slots, with 5 slots open in total.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         1212
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.GSM3",
     "subdir_name": "lib_gsm3"
 }
+
 
 
 

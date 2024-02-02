@@ -25,14 +25,15 @@
     "name": "mikroe.click.leddriver12",
     "product_link": "https://www.mikroe.com/led-driver-12-click",
     "short_description": "LED Driver 12 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the PCA9532, a 16-bit I2C-configurable I/O expander optimized for dimming LEDs in 256 discrete Red/Green/Blue (RGB) steps from NXP Semiconductors. The PCA9532 offers high efficiency, supporting up to 16 LED channels and delivering a maximum of up to 25mA of LED current per channel. It contains an internal oscillator with two user-programmable blink rates and duty cycles coupled to the output PWM. Any bits not used for controlling the LEDs can be used for GPIO expansion, which provides a simple solution when additional I/O is needed for some sensors, push-buttons, or alarm monitoring. This Click board™ is suitable for color mixing and backlight application for amusement products, LED status signalization, home automation projects, and many more.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.LEDDriver12",
     "subdir_name": "lib_leddriver12"
 }
+
 
 
 

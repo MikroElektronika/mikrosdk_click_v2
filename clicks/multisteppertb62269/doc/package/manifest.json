@@ -25,14 +25,15 @@
     "name": "mikroe.click.multisteppertb62269",
     "product_link": "https://www.mikroe.com/multi-stepper-click-tb62269",
     "short_description": "Multi Stepper Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the TB62269FTG, PWM method CLOCK-in controlled bipolar stepping motor driver from Toshiba Semiconductor. It supports a PWM constant-current control drive and allows from full-step up to 1/32 steps resolution for less motor noise and smoother control. It has a wide operating voltage range of 10V to 38V with an output current capacity of 1.2A in addition to several built-in error detection circuits.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.MultiStepperTB62269",
     "subdir_name": "lib_multisteppertb62269"
 }
+
 
 
 

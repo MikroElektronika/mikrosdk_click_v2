@@ -25,12 +25,13 @@
     "name": "mikroe.click.esp8684",
     "product_link": "https://www.mikroe.com/esp8684-click",
     "short_description": "ESP8664 Click is a compact add-on board that contains a wireless combo module. This board features the ESP8684-MINI-1, a highly integrated WiFi, and a Bluetooth 5 module from Espressif Systems. It simultaneously supports BSS in Station mode, SoftAP mode, Station + SoftAP mode, and promiscuous mode. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.ESP8684",
     "subdir_name": "lib_esp8684"
 }
+
 

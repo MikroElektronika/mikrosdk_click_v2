@@ -25,17 +25,18 @@
     "name": "mikroe.click.temphum11",
     "product_link": "https://www.mikroe.com/temp-hum-11-click",
     "short_description": "Temp-hum 11 click is a temperature and humidity sensing Click board™, equipped with the HDC1080, a high accuracy digital humidity, and temperature sensor. Its key features are its low power consumption, and the measurement accuracy achieved with that much energy.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2746
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.TempHum11",
     "subdir_name": "lib_temphum11"
 }
+
 
 
 

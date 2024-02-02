@@ -25,17 +25,18 @@
     "name": "mikroe.click.thermo15",
     "product_link": "https://www.mikroe.com/thermo-15-click",
     "short_description": "Thermo 15 Click is a Click board™ equipped with the sensor IC, which can digitize temperature measurements between -55°C and +125°C so that the temperature measurement data can be processed by the host MCU.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2854
     ],
-    "version": "2.1.0.23",
+    "version": "2.1.0.24",
     "cmake": true,
     "alias": "Click.Thermo15",
     "subdir_name": "lib_thermo15"
 }
+
 
 
 

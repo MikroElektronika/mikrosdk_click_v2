@@ -25,13 +25,14 @@
     "name": "mikroe.click.nanobeacon",
     "product_link": "https://www.mikroe.com/nanobeacon-click",
     "short_description": "NanoBeacon Click is a compact add-on board that provides a powerful and efficient Bluetooth beacon solution. This board features the IN100, an ultra-low power Bluetooth 5.3 Beacon SoC from InPlay, that sets a new standard in beacon technology. Its ultra-low power consumption, enhanced privacy mode, and three beacon modes offer seamless compatibility with no Bluetooth programming required - plug and play. Its compact design houses two types of built-in memory (4Kb OTP and 4KB SRAM), UART and I2C interfaces, and a hardware security engine.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.NanoBeacon",
     "subdir_name": "lib_nanobeacon"
 }
+
 
 

@@ -1,0 +1,8 @@
+{
+    "name": "Barometer 13 Click",
+    "description": "Barometer 13 Click is a compact add-on board that measures air pressure in a specific environment. This board features the BMP585, a barometric pressure sensor from Bosch Sensortec. It has a nominal operating pressure range of 30 up to 125kPa and a temperature operating range from -40 to +85°C. The sensor provides true absolute pressure and temperature readings due to on-chip linearization and temperature compensation.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","BMP585"],
+    "category" : ["Click Boards > Sensors > Pressure"]
+}

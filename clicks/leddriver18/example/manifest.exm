@@ -2,7 +2,7 @@
     "name": "LED Driver 18 Click",
     "description": "LED Driver 18 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the TLC5947, a 24-channel LED driver from Texas Instruments. Each channel is individually adjustable with 4096 pulse-width modulated (PWM) steps and has a programmable current value of all channels with a maximum of 30mA of LED current per channel.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TLC5947RHBR"],
     "category" : ["Click Boards > Display & LED > LED Drivers"]
 }

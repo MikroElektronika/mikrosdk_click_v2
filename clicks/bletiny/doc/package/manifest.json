@@ -25,14 +25,15 @@
     "name": "mikroe.click.bletiny",
     "product_link": "https://www.mikroe.com/ble-tiny-click",
     "short_description": "BLE TINY Click is a compact add-on board that provides BLE connectivity for any embedded application. This board features the DA14531, SmartBond TINY module based on the world’s smallest and lowest power Bluetooth 5.1 System-on-Chip (SoC) from Dialog Semiconductor.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.BLETINY",
     "subdir_name": "lib_bletiny"
 }
+
 
 
 

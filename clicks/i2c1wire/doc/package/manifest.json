@@ -25,16 +25,17 @@
     "name": "mikroe.click.i2c1wire",
     "product_link": "https://www.mikroe.com/i2c-1-wire-click",
     "short_description": "I2C 1-Wire click carries DS2482-800, a bridge device that performs bidirectional conversions between I2C masters and 1-Wire slave devices. These can be EEPROM chips, temperature sensors and similar devices that have momentary high source current modes.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1439
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.I2C1Wire",
     "subdir_name": "lib_i2c1wire"
 }
+
 
 

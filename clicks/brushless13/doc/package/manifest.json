@@ -25,12 +25,13 @@
     "name": "mikroe.click.brushless13",
     "product_link": "https://www.mikroe.com/brushless-13-click",
     "short_description": "Brushless 13 Click is a compact add-on board that controls brushless DC motors with any MCU. This board features the STSPIN830, a compact and versatile three-phase and three-sense motor driver from STMicroelectronics. The driver integrates both the control logic and a fully protected low RDson triple half-bridge power stage.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.Brushless13",
     "subdir_name": "lib_brushless13"
 }
+
 

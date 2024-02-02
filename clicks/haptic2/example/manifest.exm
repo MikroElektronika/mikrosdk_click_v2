@@ -2,7 +2,7 @@
     "name": "HAPTIC 2 Click",
     "description": "HAPTIC 2 Click is a compact add-on board that contains a linear vibration driver. This board features the LC898302AXA, a motor driver dedicated to LRA and ERM applications from ON Semiconductor. Controlled by only one pin, it allows crisp vibration thanks to automatic braking and over-driving feature and ignores the deviation of resonance frequency thanks to auto-tuning function. The original driving waveform will enable you to reduce power consumption, and it is helpful to maintain battery lifetime.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LC898302AXA-MH"],
     "category" : ["Haptic"]
 }

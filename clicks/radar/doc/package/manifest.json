@@ -25,14 +25,15 @@
     "name": "mikroe.click.radar",
     "product_link": "https://www.mikroe.com/radar-click",
     "short_description": "Radar Click is a compact add-on board that alerts you to the presence of an intruder via interpreting the infrared radiation that emanates from their body. This board features the MM5D91-00, a presence detection sensor module that integrates 60GHz mmWave technology that counts the number of people entering or exiting an entrance from Jorjin Technologies Inc. It includes the ARM Cortex-M4F based processor system, 1Tx, 3Rx antenna, and integrated regulator, alongside azimuth and elevation field of view of Â±45Â° and Â±40Â°. Its detection goes up to 10m for macro and 5m for micro motion with environmental-factors immunity such as temperature, wind, sunlight, and dust. This Click boardâ„¢ is suitable for various presence sensing applications, from office and home to commercial buildings and more.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "alias": "Click.Radar",
     "cmake": true,
     "subdir_name": "lib_radar"
 }
+
 
 
 

@@ -25,14 +25,15 @@
     "name": "mikroe.click.stepper12",
     "product_link": "https://www.mikroe.com/stepper-12-click",
     "short_description": "Stepper 12 Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the TB67S549FTG, a two-phase bipolar stepping motor driver from Toshiba Semiconductor. It supports a PWM constant-current control drive without a current sense resistor for motor-current detection and allows full-step to 1/32 steps resolution for less motor noise and smoother control. It has a wide operating voltage range of 4.5V to 34V with an output current capacity of 1.2A maximum and several anomaly detection indicators.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.Stepper12",
     "subdir_name": "lib_stepper12"
 }
+
 
 
 

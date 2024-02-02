@@ -25,16 +25,17 @@
     "name": "mikroe.click.proxfusion2",
     "product_link": "https://www.mikroe.com/proxfusion-2-click",
     "short_description": "ProxFusion 2 Click is an ambient lighting, capacitive, Hall-effect, and inductive sensing Click board™ which features a single multifunctional sensor IC.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2547
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.ProxFusion2",
     "subdir_name": "lib_proxfusion2"
 }
+
 
 

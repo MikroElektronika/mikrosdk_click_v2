@@ -2,7 +2,7 @@
     "name": "Accel 24 Click",
     "description": "Accel 24 Click is a compact add-on board that contains an acceleration sensor. This board features the MXC6655XA, a 12-bit three-axis accelerometer from MEMSIC. It allows selectable full-scale acceleration measurements in ranges of ±2g, ±4g, or ±8g in three axes with a compatible I2C serial interface with 400KHz fast mode operation. Alongside low offset and temperature signal with high accuracy, the MXC6655XA also detects six orientation positions, X/Y shake, and shake directions with an appropriate interrupt signal for these states.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MXC6655XA"],
     "category" : ["Click Boards > Sensors > Motion"]
 }

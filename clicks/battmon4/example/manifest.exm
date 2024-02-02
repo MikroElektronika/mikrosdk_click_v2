@@ -2,7 +2,7 @@
     "name": "BATT-MON 4 Click",
     "description": "BATT-MON 4 Click is a compact add-on board representing an advanced battery monitoring solution. This board features the LTC3337, a primary battery state of health (SOH) monitor with a built-in precision coulomb counter from Analog Devices. The LTC3337 is designed to be placed in series with a primary battery with minimal associated series voltage drop. The patented infinite dynamic range coulomb counter tallies all accumulated battery discharge and stores it in an internal register accessible via an I2C interface. In addition, this Click board™ also can set the input current limit and has an additional discharge alarm interrupt and SOH monitoring which measures and reports via an I2C interface.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LTC3337ERC"],
     "category" : ["Power management"]
 }

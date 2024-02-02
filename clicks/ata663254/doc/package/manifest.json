@@ -25,16 +25,17 @@
     "name": "mikroe.click.ata663254",
     "product_link": "https://www.mikroe.com/ata663254-click",
     "short_description": "ATA663254 click is a fully integrated LIN transceiver device with an integrated 5V LDO voltage regulator.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2259
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Ata663254",
     "subdir_name": "lib_ata663254"
 }
+
 
 

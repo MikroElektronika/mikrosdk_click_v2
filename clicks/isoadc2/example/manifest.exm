@@ -2,7 +2,7 @@
     "name": "ISO ADC 2 Click",
     "description": "ISO ADC 2 Click is a compact add-on board that represents a completely isolated 12-bit, 300 kSPS data acquisition system. This board features the AD7091R, successive-approximation analog-to-digital converter (ADC) from Analog Devices. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","AD7091R"],
     "category" : ["ADC"]
 }

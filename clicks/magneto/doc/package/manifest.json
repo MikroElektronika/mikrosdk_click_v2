@@ -25,17 +25,18 @@
     "name": "mikroe.click.magneto",
     "product_link": "https://www.mikroe.com/magneto-click",
     "short_description": "MAGNETO Click carries contactless magnetic angle position sensor which delivers precise angle measurements down to 0.05º in 14-bit resolution.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1681
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Magneto",
     "subdir_name": "lib_magneto"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "G2C Click",
     "description": "Go to Cloud (G2C) click is a gateway Click board™ which provides a simple and reliable connection to the Click Cloud platform, a cloud-based rapid prototyping environment, hosted by MikroElektronika. Go to Cloud (G2C) click offers an unprecedented simplicity for adding Click Cloud connectivity to any embedded application, by utilizing the simple UART interface: it can be configured and managed using a minimal set of well-documented AT commands.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
     "hw" : ["click","MK64FN1M0VDC12"],
     "category" : ["Click Boards > Wireless connectivity > GSM/LTE"]
 }

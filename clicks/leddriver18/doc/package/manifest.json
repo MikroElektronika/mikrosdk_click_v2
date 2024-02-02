@@ -25,13 +25,14 @@
     "name": "mikroe.click.leddriver18",
     "product_link": "https://www.mikroe.com/led-driver-18-click",
     "short_description": "LED Driver 18 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the TLC5947, a 24-channel LED driver from Texas Instruments. Each channel is individually adjustable with 4096 pulse-width modulated (PWM) steps and has a programmable current value of all channels with a maximum of 30mA of LED current per channel.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.LEDDriver18",
     "subdir_name": "lib_leddriver18"
 }
+
 
 

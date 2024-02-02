@@ -2,7 +2,7 @@
     "name": "Clock Gen 6 Click",
     "description": "Clock Gen 6 Click is a compact add-on board representing a digital oscillator solution. This board features the MIC1557, an IttyBitty CMOS RC oscillator designed to provide rail-to-rail pulses for precise time delay or frequency generation from Microchip Technology. The MIC1557 has a single threshold and trigger connection, internally connected, for astable (oscillator) operation only. It also has an enable/reset control signal routed to the RST pin of the mikroBUS™ socket, which controls the bias supply to the oscillator’s internal circuitry and optimizes power consumption used for oscillator power ON/OFF purposes. In addition, it provides the ability to select the desired frequency programmed via a digital potentiometer, the MAX5401.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MIC1557YM5-TR","MAX5401EKA"],
     "category" : ["Click Boards > Clock & Timing > Clock generator"]
 }

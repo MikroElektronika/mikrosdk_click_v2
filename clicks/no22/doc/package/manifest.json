@@ -25,17 +25,18 @@
     "name": "mikroe.click.no22",
     "product_link": "https://www.mikroe.com/no2-2-click",
     "short_description": "NO2 2 Click is a gas sensor Click board™, equipped with the MiCS-2714, a compact metal oxide (MOS) sensor. This sensor reacts to the presence of nitrogen dioxide (NO2) and hydrogen (H2).",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2954
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.NO22",
     "subdir_name": "lib_no22"
 }
+
 
 
 

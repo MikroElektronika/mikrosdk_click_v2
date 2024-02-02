@@ -2,7 +2,7 @@
     "name": "Terminal 2 Click",
     "description": "Terminal 2 Click is an adapter Click board™ used as a mikroBUS™ socket expansion board. It provides an easy and elegant solution for adding the external connection capability to the Click board™, plugged on a mikroBUS™ socket. Featuring two 9-position 2.54mm pitch terminal blocks makes it an easy way to expand the development system's connectivity with the mikroBUS™ socket while keeping the bus free to use with any Click board™.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click"],
     "category" : ["Adapter"]
 }

@@ -25,17 +25,18 @@
     "name": "mikroe.click.excelonlp",
     "product_link": "https://www.mikroe.com/excelon-lp-click",
     "short_description": "Excelon LP click carries a ferroelectric RAM module. Ferroelectric RAM, also known as FRAM, is a non-volatile memory type, with characteristics comparable to much faster DRAM memory modules.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2535
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.ExcelonLP",
     "subdir_name": "lib_excelonlp"
 }
+
 
 
 

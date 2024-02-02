@@ -25,17 +25,18 @@
     "name": "mikroe.click.gps",
     "product_link": "https://www.mikroe.com/gps-click",
     "short_description": "GPS click is a compact solution for adding GPS functionality to your device. It carries the u-blox LEA-6S high-performance position engine.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         251
     ],
-    "version": "2.1.0.21",
+    "version": "2.1.0.22",
     "cmake": true,
     "alias": "Click.Gps",
     "subdir_name": "lib_gps"
 }
+
 
 
 

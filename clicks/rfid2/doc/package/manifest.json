@@ -25,17 +25,18 @@
     "name": "mikroe.click.rfid2",
     "product_link": "https://www.mikroe.com/rfid-2-click",
     "short_description": "RFID 2 Click is a compact add-on board that contains a stand-alone RFID reader with a built-in antenna easy-to-use for embedded applications. This board features the ID-12LA-SA, an advanced low-cost RFID reader module usable with 38 different tags from ID Innovations.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2622
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.RFID2",
     "subdir_name": "lib_rfid2"
 }
+
 
 
 

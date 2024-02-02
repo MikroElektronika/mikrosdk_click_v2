@@ -2,7 +2,7 @@
     "name": "Vibra Sense 2 Click",
     "description": "Vibra Sense 2 Click is a compact add-on board that contains a piezo sensor suitable for vibration measurements. This board features the LDT0-028K, a flexible 28 μm thick piezoelectric PVDF polymer film with screen-printed silver ink electrodes, laminated to a 0.125 mm polyester substrate, and fitted with two crimped contacts from TE Connectivity.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MCP3221"],
     "category" : ["Motion"]
 }

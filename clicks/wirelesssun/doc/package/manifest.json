@@ -25,14 +25,15 @@
     "name": "mikroe.click.wirelesssun",
     "product_link": "https://www.mikroe.com/wireless-sun-click",
     "short_description": "Wireless SUN Click is a compact add-on board representing a Wireless Smart Utility Network for Field Area Network (Wi-SUN FAN) solution. This board features the BP35C5, a Wi-SUN FAN-compatible wireless communication module from Rohm Semiconductor. The BP35C5 operates in the 920MHz band and includes a Wi-SUN software stack that enables operation at different transmission modes for high efficiency. Besides, certification under ARIB and the FCC allows immediate use in Japan and the US in large-scale (up to 1,000-node Sub-GHz) multi-hop mesh networks supporting channel hopping.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.WirelessSUN",
     "subdir_name": "lib_wirelesssun"
 }
+
 
 
 

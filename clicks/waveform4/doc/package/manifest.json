@@ -25,13 +25,14 @@
     "name": "mikroe.click.waveform4",
     "product_link": "https://www.mikroe.com/waveform-4-click",
     "short_description": "Waveform 4 Click is a compact add-on board that represents a high-performance signal generator. This board features the AD9106, a quad-channel, 12-bit, 180MSPS waveform generator, integrating on-chip static random access memory (SRAM) and direct digital synthesis (DDS) for complex waveform generation from Analog Devices. The DDS is up to a 180 MHz master clock sinewave generator with a 24-bit tuning word allowing 10.8 Hz/LSB frequency resolution.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.Waveform4",
     "subdir_name": "lib_waveform4"
 }
+
 
 

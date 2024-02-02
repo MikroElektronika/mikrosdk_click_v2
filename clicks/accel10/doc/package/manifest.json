@@ -25,17 +25,18 @@
     "name": "mikroe.click.accel10",
     "product_link": "https://www.mikroe.com/accel-10-click",
     "short_description": "Accel 10 Click features an ultra-low power triaxial `femto` accelerometer sensor with embedded intelligence, labeled as the LIS2DW12TR.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3230
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Accel10",
     "subdir_name": "lib_accel10"
 }
+
 
 
 

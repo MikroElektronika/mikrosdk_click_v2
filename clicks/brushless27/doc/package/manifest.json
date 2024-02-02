@@ -25,12 +25,13 @@
     "name": "mikroe.click.brushless27",
     "product_link": "https://www.mikroe.com/brushless-27-click",
     "short_description": "Brushless 27 Click is a compact add-on board that controls DC brushless motors with any MCU. This board features the TMC6300, a power driver for BLDC/PMSM motors from TRINAMIC. It is a highly efficient low voltage, zero standby driver for 3-phase BLDC/PMSM motors with up to 2A peak current.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.Brushless27",
     "subdir_name": "lib_brushless27"
 }
+
 

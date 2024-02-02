@@ -25,17 +25,18 @@
     "name": "mikroe.click.gyro4",
     "product_link": "https://www.mikroe.com/gyro-4-click",
     "short_description": "Gyro 4 Click  is a two-axis MEMS gyroscope for optical image stabilization applications.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2883
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Gyro4",
     "subdir_name": "lib_gyro4"
 }
+
 
 
 

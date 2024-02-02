@@ -25,16 +25,17 @@
     "name": "mikroe.click.fiberopt",
     "product_link": "https://www.mikroe.com/fiber-opt-33v-click",
     "short_description": "Fiber Opt click is a compact and easy solution for adding fiber-optic communication to your design. It features IF-D91 fiber-optic photodiode, IF-E97 fiber-optic LED diode as well as two operational amplifiers.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         728
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.FiberOpt",
     "subdir_name": "lib_fiberopt"
 }
+
 
 

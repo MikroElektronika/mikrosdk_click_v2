@@ -25,17 +25,18 @@
     "name": "mikroe.click.brushless3",
     "product_link": "https://www.mikroe.com/brushless-3-click",
     "short_description": "Brushless 3 click carries the DRV10983, a three-phase sensorless motor driver with integrated power MOSFETs. When an external power supply is applied, you can drive a brushless DC motor through the PWM pin, AN pin or I2C interface.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2165
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Brushless3",
     "subdir_name": "lib_brushless3"
 }
+
 
 
 

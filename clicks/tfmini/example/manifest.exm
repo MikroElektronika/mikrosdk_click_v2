@@ -2,7 +2,7 @@
     "name": "TFmini Click",
     "description": "TFmini Click is an adapter Click board™ used to interface a compatible ToF (Time of Flight) LiDAR sensor with the host MCU. This board features one four positions 1.25mm connector suitable for a TFmini LiDAR module (TFmini Plus and TFmini-S) specially made to measure an object's distance. Depending on the used LiDAR module, it is possible to achieve different measurement ranges and the use of a different serial interface, such as the UART or I2C. This Click board™ is suitable for various industrial environments like pedestrian detection, vehicle testing, and altitude.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
     "hw" : ["click"],
     "category" : ["Adapter"]
 }

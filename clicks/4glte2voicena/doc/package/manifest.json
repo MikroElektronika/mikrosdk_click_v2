@@ -25,14 +25,15 @@
     "name": "mikroe.click.c4glte2voicena",
     "product_link": "https://www.mikroe.com/4g-lte-2-click-voice-for-north-america",
     "short_description": "4G LTE 2 Click - Voice (for North America) is a compact add-on board representing a secure-cloud multi-band solution offering universal connectivity and reliable performance. This board features the LARA-R6401, an ideal LTE Cat 1 solution for North America from u-blox, supporting all relevant LTE bands for use on AT&T, FirstNet, Verizon, or T-Mobile mobile networks in single SKU for the North American market. Equipped with familiar AT commands set over the UART interface, USB interface, and Network and Status indicators, the LARA-R6401 also has a comprehensive certification scheme and multi-band/multi-mode capabilities providing excellent flexibility alongside the support of voice/audio application.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.4GLTE2VoiceNA",
     "subdir_name": "lib_c4glte2voicena"
 }
+
 
 
 

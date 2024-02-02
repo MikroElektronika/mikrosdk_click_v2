@@ -25,12 +25,13 @@
     "name": "mikroe.click.digiisolator",
     "product_link": "https://www.mikroe.com/digi-isolator-click",
     "short_description": "DIGI Isolator Click is a compact add-on board that provides electrical isolation and signal conditioning for the serial peripheral interface and a UART interface. This board features two DCL540C01, high-speed, quad-channel digital isolators from Toshiba Semiconductor. Depending on the usage, this CMOS isolator can achieve data rates of up to 150Mbps, while withstanding up to 5kVrms voltage. DIGI Isolator Click is designed to isolate two additional IO pins besides SPI and UART interfaces.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.DIGIIsolator",
     "subdir_name": "lib_digiisolator"
 }
+
 

@@ -2,7 +2,7 @@
     "name": "IR Sense 2 Click",
     "description": "IR Sense 2 click is the infrared sensor Click board™, designed to be used for the short range IR sensing applications.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","AK9752"],
     "category" : ["Temperature & humidity"] 
 }

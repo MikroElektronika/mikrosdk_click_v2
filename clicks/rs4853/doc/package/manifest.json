@@ -25,17 +25,18 @@
     "name": "mikroe.click.rs4853",
     "product_link": "https://www.mikroe.com/rs485-3-click",
     "short_description": "RS485 3 click is an RS422/485 transceiver Click board™, which can be used as an interface between the TTL level UART and the RS422/485 communication bus. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2236
     ],
-    "version": "2.1.0.17",
+    "version": "2.1.0.18",
     "cmake": true,
     "alias": "Click.Rs4853",
     "subdir_name": "lib_rs4853"
 }
+
 
 
 

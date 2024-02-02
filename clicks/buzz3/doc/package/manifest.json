@@ -25,17 +25,18 @@
     "name": "mikroe.click.buzz3",
     "product_link": "https://www.mikroe.com/buzz-3-click",
     "short_description": "Buzz 3 Click is a compact add-on board that contains a sounder driver that produces higher volume with a lower current. This board features the PAM8904, a piezo-sounder driver with an integrated Multi-Mode charge pump boost converter from Diodes Incorporated.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         4090
     ],
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.Buzz3",
     "subdir_name": "lib_buzz3"
 }
+
 
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.altitude3",
     "product_link": "https://www.mikroe.com/altitude-3-click",
     "short_description": "Altitude 3 click allows high-resolution barometric pressure measurement, by utilizing the ICP-10100, an integrated barometric pressure and temperature sensor.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2695
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Altitude3",
     "subdir_name": "lib_altitude3"
 }
+
 
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.gnsszoe",
     "product_link": "https://www.mikroe.com/gnss-zoe-click",
     "short_description": "GNSS ZOE Click is a evaluation board for ultra small ZOE-M8Q GNSS SiP receiver from u-blox.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2878
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Gnsszoe",
     "subdir_name": "lib_gnsszoe"
 }
+
 
 
 

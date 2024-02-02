@@ -25,12 +25,13 @@
     "name": "mikroe.click.pressure23",
     "product_link": "https://www.mikroe.com/pressure-23-click",
     "short_description": "Pressure 23 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the MS5849-30BA, an ultra-compact chlorine-resistant absolute pressure sensor from TE Connectivity. The sensor is a small digital altimeter operating from 300 up to 30000mbar, optimized for applications where chlorine is present. The sensor’s stainless-steel housing is filled with gel, which makes it robust and enables it to work in harsh environments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.Pressure23",
     "subdir_name": "lib_pressure23"
 }
+
 

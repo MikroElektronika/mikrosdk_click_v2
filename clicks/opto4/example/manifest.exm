@@ -2,7 +2,7 @@
     "name": "OPTO 4 Click",
     "description": "Opto 4 click is a galvanically isolated power switch, which uses a power MOSFET in combination with an optocoupler.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LTV-817S"],
     "category" : ["Optocoupler"] 
 }

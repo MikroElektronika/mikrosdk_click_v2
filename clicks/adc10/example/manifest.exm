@@ -2,7 +2,7 @@
     "name": "ADC 10 Click",
     "description": "ADC 10 Click is a compact add-on board that contains a high-performance data converter. This board features the ADS122U04, a 24-bit precision ΔΣ analog-to-digital converter with UART compatible interface from Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
     "hw" : ["click","ADS122U04IPWR"],
     "category" : ["ADC"]
 }

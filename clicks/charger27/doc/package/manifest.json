@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Power management > Battery Charger",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Charger 27 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.charger27",
+    "product_link": "https://www.mikroe.com/charger-27-click",
+    "short_description": "Charger 27 Click is a compact add-on board that provides a single-cell charging solution. This board features the MP2639B, a Li-Ion or Li-Polymer switching charger from MPS. It is a highly integrated, flexible switch-mode battery charging management device for a single-cell battery for various portable applications. It uses a 4.5V up to 16V external input voltage to provide up to 2A of programmable charging current.",
+    "supported_compiler": "mikroC AI|GCC|Clang",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.Charger27",
+    "subdir_name": "lib_charger27"
+}

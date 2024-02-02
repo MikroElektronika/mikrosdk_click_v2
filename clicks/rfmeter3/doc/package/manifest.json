@@ -25,14 +25,15 @@
     "name": "mikroe.click.rfmeter3",
     "product_link": "https://www.mikroe.com/rf-meter-3-click",
     "short_description": "RF Meter 3 Click is a compact add-on board that collects information, analyzes RF power, and displays information in an easy-to-read digital format. This board features the LT5581, a low-power monolithic precision RMS power detector from Analog Devices. The RMS detector uses a proprietary technique to accurately measure the RF power in a range from 2GHz up to 2.6GHz, well-suited for signals with high crest factors. It outputs a DC voltage in linear scale proportional to an RF input signal power in dBm.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.RFMeter3",
     "subdir_name": "lib_rfmeter3"
 }
+
 
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.ph",
     "product_link": "https://www.mikroe.com/ph-click",
     "short_description": "pH Click is a compact add-on board that provides an opportunity for the user to read pH with the same accuracy and capabilities as with some other expensive solutions. This board features the pH EZO™, a 6th generation embedded pH circuit that offers the highest level of stability and accuracy from AtlasScientific.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         3869
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.pH",
     "subdir_name": "lib_ph"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "H-Bridge 11 Click",
     "description": "H-Bridge 11 Click is a compact add-on board that allows a voltage to be applied across a load in either direction. This board features the MAX22200, an octal serial-controlled solenoid and motor driver from Analog Devices. The MAX22200 is SPI-configurable and rated for an operating voltage range from 4.5V to 36V. Each channel features a low impedance push-pull output stage with sink-and-source driving capability up to 1A RMS driving current. Its internal half-bridges can be configured as low-side or high-side drivers, supports two control methods (voltage and current drive regulation), and features a full set of protections and diagnostic functions.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MAX22200ETJ"],
     "category" : ["Click Boards > Motor control > Brushed"]
 }

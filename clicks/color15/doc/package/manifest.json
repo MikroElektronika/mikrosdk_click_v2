@@ -25,14 +25,15 @@
     "name": "mikroe.click.color15",
     "product_link": "https://www.mikroe.com/color-15-click",
     "short_description": "Color 15 Click is a compact add-on board representing an accurate color sensing solution. This board features the CLS-16D24-44-DF8/TR8, a low power, high sensitivity, color light sensor from Everlight Electronics. This Click boardâ„¢, with an I2C configurable color sensor, senses red, green, blue, white (RGBW), and infrared light and converts them to digital values. The RGBW sensor is designed to reject IR in light sources allowing the device to operate in environments from sunlight to dark rooms. The integrating ADC rejects 50Hz and 60Hz flickers caused by artificial light sources.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "alias": "Click.Color15",
     "cmake": true,
     "subdir_name": "lib_color15"
 }
+
 
 
 

@@ -25,14 +25,15 @@
     "name": "mikroe.click.stepper15",
     "product_link": "https://www.mikroe.com/stepper-15-click",
     "short_description": "Stepper 15 Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the DRV8889A, an automotive stepper driver with integrated current sense and stall detection from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Stepper15",
     "subdir_name": "lib_stepper15"
 }
+
 
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.motion4",
     "product_link": "https://www.mikroe.com/motion-4-click",
     "short_description": "Motion 4 Click is a long distance PaPIR's motion sensor with plastic lense and controllable output. This Click board features EKMC1603111, a PIR motion sensor from Panasonic Corporation which can be used as human motion detector and is able to detect movement up to 12m with 170uA current consumption. Also featured on Motion 4 Click bord is TLP241A photorelay from Toshiba that is used to provide a reinforced galvanic isolation for the external signals used to drive some external high power electronic equipment when motion is detected. It's allowing up to 40V between the SSR contacts in OFF state, and currents up to 2A while in ON state, thanks to a very low ON-state resistance. Motion 4 Click board™ is supported by a mikroSDK compliant library, which includes functions that simplify software development. This Click board™ comes as a fully tested product, ready to be used on a system equipped with the mikroBUS™ socket.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3245
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Motion4",
     "subdir_name": "lib_motion4"
 }
+
 
 
 

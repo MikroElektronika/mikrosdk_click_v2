@@ -25,17 +25,18 @@
     "name": "mikroe.click.c6dofimu4",
     "product_link": "https://www.mikroe.com/6dof-imu-4-click",
     "short_description": "6DOF IMU 4 Click is an advanced 6-axis motion tracking Click board™, which utilizes the ICM-20602, a high-performance integrated motion sensor, equipped with a 3-axis gyroscope, and a 3-axis accelerometer. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2732
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.6DofImu4",
     "subdir_name": "lib_c6dofimu4"
 }
+
 
 
 

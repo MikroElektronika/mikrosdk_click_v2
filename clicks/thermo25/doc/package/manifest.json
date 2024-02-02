@@ -25,14 +25,15 @@
     "name": "mikroe.click.thermo25",
     "product_link": "https://www.mikroe.com/thermo-25-click",
     "short_description": "Thermo 25 Click is a compact add-on board that accurately measures temperature. This board features the TMP127-Q1, a high-precision digital temperature sensor from Texas Instruments. This SPI-configurable factory-calibrated temperature sensor has a high accuracy of 0.8°C, supporting an ambient temperature range from -55°C to 175°C. It features a 14-bit signed temperature resolution (0.03125 °C per LSB) while operating over a supply range.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.Thermo25",
     "subdir_name": "lib_thermo25"
 }
+
 
 
 

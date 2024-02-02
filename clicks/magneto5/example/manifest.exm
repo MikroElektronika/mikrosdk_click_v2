@@ -2,7 +2,7 @@
     "name": "Magneto 5 Click",
     "description": "Magneto 5 click is a very accurate and reliable magnetic sensor device, which features the MEMSIC MMC34160PJ, a 3-axis magnetic sensor IC>",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MMC34160PJ"],
     "category" : ["Magnetic"] 
 }

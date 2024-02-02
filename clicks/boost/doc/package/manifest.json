@@ -25,17 +25,18 @@
     "name": "mikroe.click.boost",
     "product_link": "https://www.mikroe.com/boost-click",
     "short_description": "Boost click provides an adjustable output voltage through the onboard DAC that drives the FB pin of the MIC2606 to set desired output voltage. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2196
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Boost",
     "subdir_name": "lib_boost"
 }
+
 
 
 

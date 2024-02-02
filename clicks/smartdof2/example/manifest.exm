@@ -2,7 +2,7 @@
     "name": "Smart DOF 2 Click",
     "description": "Smart DOF 2 Click is a compact add-on board with a highly advanced integrated 6-axis IMU measurement unit. This board features the LSM6DSV16XTR, a high-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, and OIS/EIS paths from STMicroelectronics. The IMU unit features an accelerometer and gyroscope that can be turned off independently of each other, still allowed to have different ODRs and power modes. The unit can be configured as a finite state machine (FSM), machine learning core (MLC), and Qvar sensing.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LSM6DSV16X"],
     "category" : ["Click Boards > Sensors > Motion"]
 }

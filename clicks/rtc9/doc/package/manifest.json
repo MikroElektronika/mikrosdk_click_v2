@@ -25,17 +25,18 @@
     "name": "mikroe.click.rtc9",
     "product_link": "https://www.mikroe.com/rtc-9-click",
     "short_description": "RTC 9 Click is a real-time clock module that has an extremely low power consumption, allowing it to be used with a single button cell battery, for an extended period of time. This board features the M41T82, real-time clock (RTC) with battery switchover, from ST Microelectronics.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3274
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Rtc9",
     "subdir_name": "lib_rtc9"
 }
+
 
 
 

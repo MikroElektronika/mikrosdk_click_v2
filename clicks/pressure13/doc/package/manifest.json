@@ -25,17 +25,18 @@
     "name": "mikroe.click.pressure13",
     "product_link": "https://www.mikroe.com/pressure-13-click",
     "short_description": "Pressure 13 Click is a compact add-on board that contains an integrated pressure sensor for manifold air pressure measurement applications. This board features the KP229E2701, a miniaturized analog manifold air pressure sensor based on a capacitive principle from Infineon.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         3880
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Pressure13",
     "subdir_name": "lib_pressure13"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "6DOF IMU 3 Click",
     "description": "6DOF IMU 3 Click is a complete 6-axis detection development board suitable for movement and position tracking devices.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","FXOS8700CQ"],
     "category" : ["Motion"] 
 }

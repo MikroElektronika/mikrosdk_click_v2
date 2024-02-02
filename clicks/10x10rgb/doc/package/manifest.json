@@ -25,17 +25,18 @@
     "name": "mikroe.click.c10x10rgb",
     "product_link": "https://www.mikroe.com/10x10-rgb-click",
     "short_description": "10x10 RGB Click is a matrix of 100 intelligent RGB elements, forming a 10x10 display screen. These LED elements feature internal logic, which allows them to communicate directly with the MCU.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3729
     ],
-    "version": "2.1.1.25",
+    "version": "2.1.1.26",
     "cmake": true,
     "alias": "Click.10x10RGB",
     "subdir_name": "lib_c10x10rgb"
 }
+
 
 
 

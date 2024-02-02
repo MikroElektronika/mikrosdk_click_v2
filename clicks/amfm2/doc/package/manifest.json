@@ -25,12 +25,13 @@
     "name": "mikroe.click.amfm2",
     "product_link": "https://www.mikroe.com/amfm-2-click",
     "short_description": "AM/FM 2 Click is a compact add-on board that can be used to listen to music from the AM and FM radio bands. This board features the Si4732, a broadcast AM/FM/SE/LW/RDS radio receiver from Skyworks. This radio receiver integrates the complete broadcast tuner and receiver function from antenna input to digital audio output. In addition to the radio receiver, this Click board™ is equipped with the LM4910, a Boomer output capacitor-less stereo 35mW headphone amplifier from Texas Instruments. This amplifier can deliver 35mW of continuous average power to a 32Ω load with less than 1% distortion.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.AMFM2",
     "subdir_name": "lib_amfm2"
 }
+
 

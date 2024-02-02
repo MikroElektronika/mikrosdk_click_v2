@@ -25,14 +25,15 @@
     "name": "mikroe.click.buck20",
     "product_link": "https://www.mikroe.com/buck-20-click",
     "short_description": "Buck 20 Click is a compact add-on board that contains a DC-DC power converter that steps down the voltage from its input to its output. This board features the MP2316, a fully-integrated, high-efficiency, synchronous, step-down switch-mode converter from Monolithic Power Systems (MPS). The MP2316 achieves 3A continuous output current over a wide input supply range from 4V to 19V. It has excellent load and line regulation and can operate efficiently over a vast output voltage load range. The MP2316 also offers advanced protection features such as undervoltage, overcurrent, and short-circuit detections.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.Buck20",
     "subdir_name": "lib_buck20"
 }
+
 
 
 

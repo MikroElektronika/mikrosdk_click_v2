@@ -2,7 +2,7 @@
     "name": "CHARGER 12 Click",
     "description": "<Charger 12 Click is a single lithium-ion (Li+) cell or three-cell NiMH/NiCd battery charger. This click can be used for Low-Cost Li-Ion battery chargers, or Power Tools, toys, backup energy storage solutions, etc. Charger 12 click is based on MAX1501 controller which has some extra features enabling charging without too much hassle.>",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MAX1501"],
     "category" : ["Battery charger"] 
 }

@@ -25,17 +25,18 @@
     "name": "mikroe.click.expand6",
     "product_link": "https://www.mikroe.com/expand-6-click",
     "short_description": "EXPAND 6 Click is a compact add-on board that contains an I2C configurable multi-port I/O expander with independently configurable pins as bi-directional input/outputs or PWM outputs.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3842
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Expand6",
     "subdir_name": "lib_expand6"
 }
+
 
 
 

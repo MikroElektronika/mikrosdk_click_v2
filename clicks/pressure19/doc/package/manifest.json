@@ -25,14 +25,15 @@
     "name": "mikroe.click.pressure19",
     "product_link": "https://www.mikroe.com/pressure-19-click",
     "short_description": "Pressure 19 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the MLX90817, a factory-calibrated absolute pressure sensor delivering ratiometric analog output from Melexis Technologies. The MLX90817 comes with a configurable host interface that supports I2C serial communication and configurable signal processing (the user is allowed to process the output signal in analog or digital form). It measures pressure from 0.2 up to 3bar with a pressure accuracy of Â±33mbar. Its DSP-based architecture using a 16bit microcontroller provides outstanding performance in terms of initial accuracy and assures operation in a temperature range of -40Â°C to +120Â°C, ensuring stable operation under extreme conditions.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "alias": "Click.Pressure19",
     "cmake": true,
     "subdir_name": "lib_pressure19"
 }
+
 
 
 

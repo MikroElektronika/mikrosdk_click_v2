@@ -25,17 +25,18 @@
     "name": "mikroe.click.emg",
     "product_link": "https://www.mikroe.com/emg-click",
     "short_description": "EMG click measures the electrical activity produced by the skeletal muscles. It carries MCP609 operational amplifier and MAX6106 micropower voltage reference.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         2063
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.EMG",
     "subdir_name": "lib_emg"
 }
+
 
 
 

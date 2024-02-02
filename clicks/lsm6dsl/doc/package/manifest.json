@@ -25,17 +25,18 @@
     "name": "mikroe.click.lsm6dsl",
     "product_link": "https://www.mikroe.com/lsm6dsl-click",
     "short_description": "LSM6DSL click measures linear and angular velocity with six degrees of freedom. It carries the LSM6DSL high-performance 3-axis digital accelerometer and 3-axis digital gyroscope. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2128
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Lsm6Dsl",
     "subdir_name": "lib_lsm6dsl"
 }
+
 
 
 

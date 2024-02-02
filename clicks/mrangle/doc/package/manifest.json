@@ -25,13 +25,14 @@
     "name": "mikroe.click.mrangle",
     "product_link": "https://www.mikroe.com/mr-angle-click",
     "short_description": "MR Angle Click is a compact add-on board that contains a magnetoresistive sensor with an integrated amplifier. This board features the KMZ60, a high precision sensor for magnetic angle measurement with single-ended cosine and sine outputs from NXP Semiconductors. The MR sensor element comes with two Wheatstone bridges for cosine and sine signals, supports functions for control circuit and signal amplification, and enables angular measurements with high accuracy by an excellent linearity and temperature drift behavior. The KMZ60 is fully automotive qualified as well as applicable for industrial and consumer applications. This Click board™ is suitable for rotor position detection for BLDC motors and Electronic Power Steering (EPS) applications, steering angle measurement, window wiper position detection, and general contactless angular measurement (e.g., throttle valves or actuators).",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.MrAngle",
     "subdir_name": "lib_mrangle"
 }
+
 
 

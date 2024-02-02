@@ -25,17 +25,18 @@
     "name": "mikroe.click.nfctag4",
     "product_link": "https://www.mikroe.com/nfc-tag-4-click",
     "short_description": "NFC Tag 4 Click is NFC tag device, offering 16 Kbit of electrically erasable programmable memory (EEPROM). ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2886
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.NfcTag4",
     "subdir_name": "lib_nfctag4"
 }
+
 
 
 

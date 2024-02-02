@@ -25,17 +25,18 @@
     "name": "mikroe.click.temphum12",
     "product_link": "https://www.mikroe.com/temphum-12-click",
     "short_description": "Temp&Hum 12 click is a smart environmental temperature and humidity sensor Click board™, packed with features which allow easy and simple integration into any design that requires accurate and reliable humidity and temperature measurements.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2747
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.TempHum12",
     "subdir_name": "lib_temphum12"
 }
+
 
 
 

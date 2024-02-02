@@ -25,17 +25,18 @@
     "name": "mikroe.click.ozone2",
     "product_link": "https://www.mikroe.com/ozone-2-click",
     "short_description": "Ozone 2 click is an Ozone detection (O3) sensor, based on the MQ131 gas sensor. This gas sensor has a sensitive layer made of SnO2, which changes its resistance when exposed to ozone. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2177
     ],
-    "version": "2.1.0.17",
+    "version": "2.1.0.18",
     "cmake": true,
     "alias": "Click.Ozone2",
     "subdir_name": "lib_ozone2"
 }
+
 
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.spirit",
     "product_link": "https://www.mikroe.com/spirit-click",
     "short_description": "SPIRIT click carries the SP1ML 868MHz ultra low-power RF module. The board is designed to use 3.3V power supply and 3.3V or 5V I/O voltage levels. It communicates with the target MCU over UART interface, with additional functionality provided by the following pins on the mikroBUS™ line: PWM, RST, CS.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2043
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.SPIRIT",
     "subdir_name": "lib_spirit"
 }
+
 
 
 

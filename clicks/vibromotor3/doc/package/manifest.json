@@ -25,17 +25,18 @@
     "name": "mikroe.click.vibromotor3",
     "product_link": "https://www.mikroe.com/vibro-motor-3-click",
     "short_description": "Vibro Motor 3 Click is a compact add-on board that makes an ideal solution for adding simple haptic feedback in any design. This board features the G0832022D, a coin-sized linear resonant actuator (LRA) that generates vibration/haptic feedback in the Z plane, perpendicular to the motor's surface from Jinlong Machinery & Electronics, Inc.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         3902
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.VibroMotor3",
     "subdir_name": "lib_vibromotor3"
 }
+
 
 
 

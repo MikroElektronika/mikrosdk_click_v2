@@ -25,17 +25,18 @@
     "name": "mikroe.click.touchkey2",
     "product_link": "https://www.mikroe.com/touchkey-2-click",
     "short_description": "TouchKey 2 click has four capacitive pads powered by Microchip's ATtiny817 which has an integrated touch QTouch® controller.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2030
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.Touchkey2",
     "subdir_name": "lib_touchkey2"
 }
+
 
 
 

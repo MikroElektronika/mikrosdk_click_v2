@@ -2,7 +2,7 @@
     "name": "Boost-INV 3 Click",
     "description": "Boost-INV 3 Click is a compact add-on board designed to supply positive/negative-driven applications. This board features the TPS65132, a dual-output power supply from Texas Instruments. The TPS65132 uses a single inductor scheme for both outputs to provide the user with the smallest solution size and high efficiency. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TPS65132WRVCT"],
     "category" : ["Click Boards > Power management > Boost"]
 }

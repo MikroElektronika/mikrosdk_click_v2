@@ -161,7 +161,7 @@ void application_task ( void )
 ## Note
 
 > This application is written for the following MCUs and specifically for MIKROBUS 1:
-STM32F407ZG, MK64FN1M0VDC12, TM4C129XNCZAD, GD32VF103VBT6, PIC32MX795F512L
+STM32F407ZG, MK64FN1M0VDC12, TM4C129XNCZAD, GD32VF103VBT6, PIC32MX795F512L, dsPIC33FJ256GP710A
 In order to use it on another MCUs the pin_x functions must be defined in a way
 it matches the required timing specifications for the Single Wire interface.
 

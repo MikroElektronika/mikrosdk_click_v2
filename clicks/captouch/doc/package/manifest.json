@@ -25,17 +25,18 @@
     "name": "mikroe.click.captouch",
     "product_link": "https://www.mikroe.com/cap-touch-click",
     "short_description": "Cap Touch click is a capacitive touch sensing button, integrated on a click board. It can be activated by touch.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2267
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.CapTouch",
     "subdir_name": "lib_captouch"
 }
+
 
 
 

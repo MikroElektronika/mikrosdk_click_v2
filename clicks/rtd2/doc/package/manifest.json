@@ -25,16 +25,17 @@
     "name": "mikroe.click.rtd2",
     "product_link": "https://www.mikroe.com/rtd-2-click",
     "short_description": "RTD 2 Click is a compact add-on board used for applications with resistive elements that change resistance over temperature. This board features the ADS1247, 24-bit analog-to-digital converter with a programmable gain amplifier (PGA) for sensor measurement applications from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3858
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Rtd2",
     "subdir_name": "lib_rtd2"
 }
+
 
 

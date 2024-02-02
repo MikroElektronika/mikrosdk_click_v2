@@ -25,13 +25,14 @@
     "name": "mikroe.click.barometer10",
     "product_link": "https://www.mikroe.com/barometer-10-click",
     "short_description": "Barometer 10 Click is a compact add-on board that measures air pressure in a specific environment. This board features the LPS28DFW, an ultra-compact piezoresistive absolute pressure sensor that functions as a digital output barometer from STMicroelectronics. The LPS28DFW comprises a sensing element and an IC chip for signal processing in one package, converts pressure into a 24-bit digital value, and sends the information via I2C serial interface. It has a selectable dual full-scale absolute pressure range of up to 1260hPa and 4060hPa, with an absolute pressure accuracy of 0.5hPa over a wide operating temperature range.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.Barometer10",
     "subdir_name": "lib_barometer10"
 }
+
 
 

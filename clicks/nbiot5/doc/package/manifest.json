@@ -25,14 +25,15 @@
     "name": "mikroe.click.nbiot5",
     "product_link": "https://www.mikroe.com/nb-iot-5-click",
     "short_description": "NB IoT 5 Click is a compact add-on board suitable as narrow-band Internet of Things universal wireless communication solution. This board features the OT01-5, a high-performance NB-IoT module with ultra-low power consumption allowing battery life of about ten years from Notioni.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.NBIoT5",
     "subdir_name": "lib_nbiot5"
 }
+
 
 
 

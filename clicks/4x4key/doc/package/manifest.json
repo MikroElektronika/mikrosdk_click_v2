@@ -25,17 +25,18 @@
     "name": "mikroe.click.c4x4key",
     "product_link": "https://www.mikroe.com/4x4-key-click",
     "short_description": "4x4 Key click carries a 16 button keypad. The design of the board — inputs are read by a pair of connected 8-bit parallel-in serial-out shift registers — allows for multiple key presses at the same time.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1459
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.4x4Key",
     "subdir_name": "lib_c4x4key"
 }
+
 
 
 

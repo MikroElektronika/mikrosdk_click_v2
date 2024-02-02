@@ -2,7 +2,7 @@
     "name": "Thermostat 3 Click",
     "description": "Thermostat 3 Click is a general-purpose thermostat Click board™ designed to be used with any temperature sensor based on the MAX31855 sensor design.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MAX31855"],
     "category" : ["Temperature & humidity"] 
 }

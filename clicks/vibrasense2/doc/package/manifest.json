@@ -25,17 +25,18 @@
     "name": "mikroe.click.vibrasense2",
     "product_link": "https://www.mikroe.com/vibra-sense-2-click",
     "short_description": "Vibra Sense 2 Click is a compact add-on board that contains a piezo sensor suitable for vibration measurements. This board features the LDT0-028K, a flexible 28 μm thick piezoelectric PVDF polymer film with screen-printed silver ink electrodes, laminated to a 0.125 mm polyester substrate, and fitted with two crimped contacts from TE Connectivity.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         3894
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.VibraSense2",
     "subdir_name": "lib_vibrasense2"
 }
+
 
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.driver2",
     "product_link": "https://www.mikroe.com/driver-2-click",
     "short_description": "Driver 2 Click is a compact add-on board that contains a gate driver with a level-shift technology with an additional Shutdown function. This board features the IR2104S, a high voltage, high-speed power MOSFET and IGBT driver with typical 0.21 A source and 0.36 A sink currents and independent high and low side referenced output channels from Infineon Technologies.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         3923
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Driver2",
     "subdir_name": "lib_driver2"
 }
+
 
 
 

@@ -25,12 +25,13 @@
     "name": "mikroe.click.lightranger11",
     "product_link": "https://www.mikroe.com/lightranger-11-click",
     "short_description": "LightRanger 11 Click is a compact add-on board suitable for range-finding and distance-sensing applications. This board features the VL53L7CX, a time-of-flight 8x8 multizone ranging sensor from STMicroelectronics. It is a fast and accurate multizone distance-ranging sensor width of 90° wide FoV. The multizone-ranging output with either 4x4 or 8x8 separate zones, width multitarget detection, and distance measurement in each zone. As a multizone-ranging device, its range is only up to 350cm.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.LightRanger11",
     "subdir_name": "lib_lightranger11"
 }
+
 

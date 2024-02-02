@@ -25,17 +25,18 @@
     "name": "mikroe.click.audioamp5",
     "product_link": "https://www.mikroe.com/audioamp-5-click",
     "short_description": "AudioAmp 5 Click is a stereo audio amplifier, capable of delivering up to 10W per channel with the 8Ω load.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2716
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.AudioAmp5",
     "subdir_name": "lib_audioamp5"
 }
+
 
 
 

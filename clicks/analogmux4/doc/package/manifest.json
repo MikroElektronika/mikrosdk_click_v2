@@ -25,13 +25,14 @@
     "name": "mikroe.click.analogmux4",
     "product_link": "https://www.mikroe.com/analog-mux-4-click",
     "short_description": "Analog MUX 4 Click is a compact add-on board that switches one of many analog inputs to one digital output. This board features the TMUX1308, a general-purpose 8:1 single-ended CMOS multiplexer (MUX) from Texas Instruments. The TMUX1308 has an internal injection current control which eliminates the need for external diode and resistor networks to protect the switch and keep the input signals within the supply voltage. It also supports bidirectional analog and digital signals ranging from 0 to 5V, alongside several protection features allowing a reliable operation and protecting the device from potential damage.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.AnalogMUX4",
     "subdir_name": "lib_analogmux4"
 }
+
 
 

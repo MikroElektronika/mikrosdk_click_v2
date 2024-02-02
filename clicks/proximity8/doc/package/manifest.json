@@ -25,17 +25,18 @@
     "name": "mikroe.click.proximity8",
     "product_link": "https://www.mikroe.com/proximity-8-click",
     "short_description": "Proximity 8 click is a close-range proximity sensing Click board™, equipped with the VCNL36687S, a very accurate and power-efficient proximity sensor (PS) with VCSEL. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2765
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Proximity8",
     "subdir_name": "lib_proximity8"
 }
+
 
 
 

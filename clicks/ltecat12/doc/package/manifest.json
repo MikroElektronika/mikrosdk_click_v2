@@ -25,11 +25,12 @@
     "name": "mikroe.click.ltecat12",
     "product_link": "https://www.mikroe.com/lte-cat1-2-click-for-eu",
     "short_description": "LTE Cat.1 2 Click (EU) is a compact add-on board that provides your application with complete LTE and VoLTE with CSFB functionalities. This board features the ELS62-E, a single antenna LTE cat.1bis module from Telit.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.LTECat12",
     "subdir_name": "lib_ltecat12"
 }
+

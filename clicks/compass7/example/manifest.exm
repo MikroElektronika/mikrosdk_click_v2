@@ -2,7 +2,7 @@
     "name": "Compass 7 Click",
     "description": "Compass 7 Click is a compact add-on board perfect for applications like an electronic compass. This board features the MMC5633NJL, a monolithic complete 3-axis AMR magnetic sensor with on-chip signal processing and an integrated digital bus from MEMSIC. It can measure magnetic fields within the full-scale range of ±30 Gauss (G) with up to 0.0625mG per LSB resolution at 20bits operation mode and 2mG total RMS noise level, enabling heading accuracy of ±1º in electronic compass applications. Also, an integrated SET/RESET function eliminates thermal variation-induced offset error (Null field output) and clears the residual magnetization resulting from powerful external fields.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MMC5633NJL"],
     "category" : ["Click Boards > Sensors > Magnetic"]
 }

@@ -25,14 +25,15 @@
     "name": "mikroe.click.hallswitch2",
     "product_link": "https://www.mikroe.com/hall-switch-2-click",
     "short_description": "Hall Switch 2 Click is a compact add-on board that represents a magnetic field-activated dual-relay Click board™. This board features the MHA100KN, a high-performance, low-power Hall-Effect sensor from MEMSIC.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.HallSwitch2",
     "subdir_name": "lib_hallswitch2"
 }
+
 
 
 

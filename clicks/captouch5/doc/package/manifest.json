@@ -25,17 +25,18 @@
     "name": "mikroe.click.captouch5",
     "product_link": "https://www.mikroe.com/cap-touch-5-click",
     "short_description": "Cap Touch 5 Click is a capacitive touch sensing Click board™ which features the CY8CMBR3106S-LQXI CapSense® Express™ controller which enables advanced, yet easy-to-implement, capacitive touch sensing user interface solutions.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2957
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.CapTouch5",
     "subdir_name": "lib_captouch5"
 }
+
 
 
 

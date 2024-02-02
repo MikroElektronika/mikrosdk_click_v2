@@ -25,17 +25,18 @@
     "name": "mikroe.click.barometer3",
     "product_link": "https://www.mikroe.com/barometer-3-click",
     "short_description": "Barometer 3 Click is a compact add-on board for applications which require digital barometric air pressure measurement. This board features the DPS368, a digital barometric air pressure sensor from Infineon.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3812
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Barometer3",
     "subdir_name": "lib_barometer3"
 }
+
 
 
 

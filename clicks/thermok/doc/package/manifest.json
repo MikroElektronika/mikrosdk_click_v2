@@ -25,17 +25,18 @@
     "name": "mikroe.click.thermok",
     "product_link": "https://www.mikroe.com/thermo-k-click",
     "short_description": "THERMO K click carries the MCP9600 IC from Microchip. Depending on the type of probe it uses the click can measure temperatures from −200 °C to +1372 °C.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1976
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.ThermoK",
     "subdir_name": "lib_thermok"
 }
+
 
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.leddriver4",
     "product_link": "https://www.mikroe.com/led-driver-4-click",
     "short_description": "LED Driver 4 click is a form of a high-efficiency boost converter that is ideally suited for driving an array of white LEDs. The driver has the ability to dim the connected LED array, without producing any noise on the output. The Click board is capable of driving a LED array with up to 26V, providing a constant current to the LED segments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2288
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.LedDriver4",
     "subdir_name": "lib_leddriver4"
 }
+
 
 
 

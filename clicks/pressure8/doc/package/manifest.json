@@ -25,16 +25,17 @@
     "name": "mikroe.click.pressure8",
     "product_link": "https://www.mikroe.com/pressure-8-click",
     "short_description": "Pressure 8 Click is an accurate and fully calibrated pressure sensor, equipped with the MPR series integrated piezoresistive silicon pressure sensor IC.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2647
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Pressure8",
     "subdir_name": "lib_pressure8"
 }
+
 
 

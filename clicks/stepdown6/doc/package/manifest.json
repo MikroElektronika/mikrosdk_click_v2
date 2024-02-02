@@ -25,12 +25,13 @@
     "name": "mikroe.click.stepdown6",
     "product_link": "https://www.mikroe.com/step-down-6-click",
     "short_description": "Step Down 6 Click is a compact add-on board that converts higher voltages into lower ones. This board features the MPM54304, a quad-output power module from Monolithic Power Systems (MPS). It is a quad-output, DC/DC step-down power module with up to 3A per output on channels 1 and 2 and up to 2A per channels 3 and 4, providing continuous current on all four channels.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.StepDown6",
     "subdir_name": "lib_stepdown6"
 }
+
 

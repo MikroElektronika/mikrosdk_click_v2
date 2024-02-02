@@ -25,17 +25,18 @@
     "name": "mikroe.click.heater",
     "product_link": "https://www.mikroe.com/heater-click",
     "short_description": "Heater Click is designed with intention of PCB heater concept testing and useful tool for heating complete casing where staying in specified temperature range is crucial. Exact PCB temperature can be set and controlled using TMP235 on board temperature sensor from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3216
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Heater",
     "subdir_name": "lib_heater"
 }
+
 
 
 

@@ -25,13 +25,14 @@
     "name": "mikroe.click.haptic3",
     "product_link": "https://www.mikroe.com/haptic-3-click",
     "short_description": "Haptic 3 Click is a compact add-on board that uses advanced vibration patterns and waveforms to convey information to a user. This board features the DA7282, a linear resonant actuator (LRA), and an eccentric rotating mass (ERM) haptic driver from Dialog Semiconductor. The DA7282 features LRA or ERM drive capability with automatic closed-loop LRA resonant frequency tracking, guaranteeing consistency across LRA production tolerances. It also offers wideband operation that fully utilizes the capabilities of newer wideband and multi-directional LRAs, alongside three external general-purpose inputs for triggering up to six independent haptic sequences.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "alias": "Click.HAPTIC3",
     "cmake": true,
     "subdir_name": "lib_haptic3"
 }
+
 
 

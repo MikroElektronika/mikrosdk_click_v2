@@ -25,13 +25,14 @@
     "name": "mikroe.click.irda4",
     "product_link": "https://www.mikroe.com/irda-4-click",
     "short_description": "IrDA 4 Click is a compact add-on board that provides a cost-effective solution for sending and receiving IR serial data. This board features the TFBS4650, an infrared transceiver from Vishay Semiconductors. The transceiver includes a PIN photodiode, an infrared emitter, and a low-power integral circuit and complies with the IrDA physical layer specification. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.IrDA4",
     "subdir_name": "lib_irda4"
 }
+
 
 

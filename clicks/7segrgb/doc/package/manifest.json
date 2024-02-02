@@ -25,17 +25,18 @@
     "name": "mikroe.click.c7segrgb",
     "product_link": "https://www.mikroe.com/7-seg-rgb-click",
     "short_description": "7-SEG RGB click carries a full color single 7 segment digit display. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over the CS, and PWM pin on the mikroBUS™ line.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2135
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.7SegRgb",
     "subdir_name": "lib_c7segrgb"
 }
+
 
 
 

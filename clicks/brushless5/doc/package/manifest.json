@@ -25,17 +25,18 @@
     "name": "mikroe.click.brushless5",
     "product_link": "https://www.mikroe.com/brushless-5-click",
     "short_description": "Brushless 5 click is a 3 phase sensorless BLDC motor controller, with a soft-switching feature for reduced motor noise and EMI, and precise BEMF motor sensing, which eliminates the need for Hall-sensors in motor applications.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2390
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Brushless5",
     "subdir_name": "lib_brushless5"
 }
+
 
 
 

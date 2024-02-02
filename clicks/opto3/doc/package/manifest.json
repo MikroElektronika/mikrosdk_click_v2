@@ -25,16 +25,17 @@
     "name": "mikroe.click.opto3",
     "product_link": "https://www.mikroe.com/opto-3-click",
     "short_description": "Opto 3 click is a relay Click board™, equipped with two pairs of optically isolated solid-state relays (SSR).",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2659
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Opto3",
     "subdir_name": "lib_opto3"
 }
+
 
 

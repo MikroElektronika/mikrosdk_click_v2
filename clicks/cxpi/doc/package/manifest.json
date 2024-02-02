@@ -25,17 +25,18 @@
     "name": "mikroe.click.cxpi",
     "product_link": "https://www.mikroe.com/cxpi-click",
     "short_description": "CXPI Click is a compact add-on board that contains a transceiver that supports the next-generation automotive communication protocol. This board features the BD41000AFJ-C, a transceiver for the CXPI (Clock Extension Peripheral Interface) communication from Rohm Semiconductor.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         3893
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.CXPI",
     "subdir_name": "lib_cxpi"
 }
+
 
 
 

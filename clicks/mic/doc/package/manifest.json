@@ -25,17 +25,18 @@
     "name": "mikroe.click.mic",
     "product_link": "https://www.mikroe.com/mic-click",
     "short_description": "Mic click carries the SPQ0410HR5H-B surface mount silicon microphone with maximum RF protection. The click is designed to run on a 3.3V power supply. It communicates with the target microcontroller over the AN pin on the mikroBUS™ line.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2057
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Mic",
     "subdir_name": "lib_mic"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "Hall Current 7 Click",
     "description": "Hall Current 7 Click is a compact add-on board that provides economical and precise solutions for AC or DC current sensing. This board features the ACS770, a thermally enhanced, fully integrated, Hall effect-based high precision linear current sensor with 100µΩ current conductor from Allegro MicroSystems. Applied current flows directly into the integrated conductor generating a magnetic field, and an integrated low-hysteresis core concentrates the magnetic field sensed by the Hall element with a typical accuracy of ±1% and 120 kHz bandwidth.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ACS770"],
     "category" : ["Current sensor"]
 }

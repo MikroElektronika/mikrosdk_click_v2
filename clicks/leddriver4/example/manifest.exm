@@ -2,7 +2,7 @@
     "name": "LED Driver 4 Click",
     "description": "LED Driver 4 click is a form of a high-efficiency boost converter that is ideally suited for driving an array of white LEDs. The driver has the ability to dim the connected LED array, without producing any noise on the output. The Click board is capable of driving a LED array with up to 26V, providing a constant current to the LED segments.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TPS61160A"],
     "category" : ["LED Drivers"] 
 }

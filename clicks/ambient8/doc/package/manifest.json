@@ -25,17 +25,18 @@
     "name": "mikroe.click.ambient8",
     "product_link": "https://www.mikroe.com/ambient-8-click",
     "short_description": "Ambient 8 click is equipped with the ambient light sensor (ALS) IC, providing measurements of the ambient light intensity in a digital format. It utilizes the LTR-329ALS-01, an ALS with the I2C interface.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2717
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Ambient8",
     "subdir_name": "lib_ambient8"
 }
+
 
 
 

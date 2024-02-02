@@ -25,17 +25,18 @@
     "name": "mikroe.click.gyro5",
     "product_link": "https://www.mikroe.com/gyro-5-click",
     "short_description": "Gyro 5 Click is a three-axis gyroscope Click board™ that can sense motion over three perpendicular axes. It is equipped with the ITG-3701, a three-axis digital gyroscope.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2882
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Gyro5",
     "subdir_name": "lib_gyro5"
 }
+
 
 
 

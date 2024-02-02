@@ -25,17 +25,18 @@
     "name": "mikroe.click.usbcsource",
     "product_link": "https://www.mikroe.com/usb-c-source-click",
     "short_description": "USB-C Source Click is a compact add-on board that contains a standalone autonomous USB power delivery controller. This board features the STUSB4700, an independent USB power delivery controller optimized as a provider to negotiate a given amount of power to be sourced to an inquiring consumer device from STMicroelectronics.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         3859
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.USBCSource",
     "subdir_name": "lib_usbcsource"
 }
+
 
 
 

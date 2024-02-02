@@ -25,14 +25,15 @@
     "name": "mikroe.click.ldc2",
     "product_link": "https://www.mikroe.com/ldc-2-click",
     "short_description": "LDC 2 Click is a compact add-on board that measures inductance change which a conductive target causes when it moves into the inductor's AC magnetic field. This board features the LDC1041, inductance-to-digital converter (LDC) for inductive sensing solutions from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.LDC2",
     "subdir_name": "lib_ldc2"
 }
+
 
 
 

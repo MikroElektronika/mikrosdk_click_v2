@@ -25,17 +25,18 @@
     "name": "mikroe.click.bargraph",
     "product_link": "https://www.mikroe.com/bargraph-click",
     "short_description": "BarGraph click is a 10-segment bar graph display click, which uses a high-quality bar graph LED display. The bar graph display is a very popular device for displaying various properties, whether it be an audio level, current/voltage level, the position of the encoder, or any other property that can be displayed in a form of a bar graph.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         631
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.BarGraph",
     "subdir_name": "lib_bargraph"
 }
+
 
 
 

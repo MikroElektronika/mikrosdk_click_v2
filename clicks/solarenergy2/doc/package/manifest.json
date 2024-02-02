@@ -25,13 +25,14 @@
     "name": "mikroe.click.solarenergy2",
     "product_link": "https://www.mikroe.com/solar-energy-2-click",
     "short_description": "Solar Energy 2 Click is a compact add-on board that can recharge a battery by harvesting the solar power of the Sun or by other means. This board features the EM8500, a power management controller with an energy harvesting interface from EM Microelectronic. The controller is specifically designed for efficient harvesting over various DC sources such as photovoltaic (solar) or thermal electric generators (TEG). It can recharge the connected LiPo battery or supercapacitor (or even a conventional capacitor). In addition, the EM8500 can use the same battery as a power source for powering the connected system.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.SolarEnergy2",
     "subdir_name": "lib_solarenergy2"
 }
+
 
 

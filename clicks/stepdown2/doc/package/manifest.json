@@ -25,17 +25,18 @@
     "name": "mikroe.click.stepdown2",
     "product_link": "https://www.mikroe.com/step-down-2-click",
     "short_description": "The Step Down 2 click is a Click board™ equipped with the L6986HTR, a synchronous step-down switching regulator with operating input voltages from 4V to 38V and output voltage adjustability ranges from 0.85 V to VIN. Because of the main possibilities its features offer, the Step Down 2 click is ideally used for programmable logic controllers (PLCs), decentralized intelligent nodes, sensors, and low noise applications (LNM).",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3014
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.StepDown2",
     "subdir_name": "lib_stepdown2"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "Color 2 Click",
     "description": "Color 2 click carries the ISL29125 RGB color light sensor. It detects red, green and blue in a variety of lighting conditions, outputting 16-bit resolution data in a measuring range from 5.7 m lux to 10,000 lux.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ISL29125"],
     "category" : ["Optical"] 
 }

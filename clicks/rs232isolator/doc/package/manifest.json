@@ -25,16 +25,17 @@
     "name": "mikroe.click.rs232isolator",
     "product_link": "https://www.mikroe.com/rs232-isolator-click",
     "short_description": "RS232 Isolator click is a fully isolated dual transceiver click, used to provide secure and easy UART to RS232 conversion, with the galvanic isolation.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2744
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Rs232Isolator",
     "subdir_name": "lib_rs232isolator"
 }
+
 
 

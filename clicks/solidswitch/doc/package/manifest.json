@@ -25,14 +25,15 @@
     "name": "mikroe.click.solidswitch",
     "product_link": "https://www.mikroe.com/solidswitch-click",
     "short_description": "SolidSwitch Click is a compact add-on board that contains load switch devices. This board features the TPS22918, four single-channel load switches from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.SolidSwitch",
     "subdir_name": "lib_solidswitch"
 }
+
 
 
 

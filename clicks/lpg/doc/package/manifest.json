@@ -25,17 +25,18 @@
     "name": "mikroe.click.lpg",
     "product_link": "https://www.mikroe.com/lpg-click",
     "short_description": "LPG click carries an MQ-5 sensor for detecting liquefied petroleum gas leakage. The gas sensing layer on the sensor unit is made of Tin dioxide (SnO2), which has lower conductivity in clean air.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1043
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.LPG",
     "subdir_name": "lib_lpg"
 }
+
 
 
 

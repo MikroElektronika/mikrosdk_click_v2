@@ -2,7 +2,7 @@
     "name": "1-Wire Switch Click",
     "description": "1-Wire Switch Click is a compact add-on board that allows you to switch a device remotely using a 1-wire signal. This board features the DS2413, a dual-channel programmable I/O 1-Wire switch from Analog Devices. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","DS2413P+"],
     "category" : ["Click Boards > Interface > 1-Wire"]
 }

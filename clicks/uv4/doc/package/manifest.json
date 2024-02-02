@@ -25,17 +25,18 @@
     "name": "mikroe.click.uv4",
     "product_link": "https://www.mikroe.com/uv-4-click",
     "short_description": "UV 4 click is a powerful Ultra Violet (UV) sensing device and Ambient Light Sensor (ALS) Click board�, featuring a sensor with a very wide dynamic range of detectable light intensity, across two ADC range settings. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2357
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.UV4",
     "subdir_name": "lib_uv4"
 }
+
 
 
 

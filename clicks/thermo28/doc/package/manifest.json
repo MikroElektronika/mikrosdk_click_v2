@@ -25,14 +25,15 @@
     "name": "mikroe.click.thermo28",
     "product_link": "https://www.mikroe.com/thermo-28-click",
     "short_description": "Thermo 28 Click is a compact add-on board that accurately measures temperature. This board features the ams AG’s AS6221, a high-accuracy digital temperature sensor. The AS6221 consists of a Si bandgap temperature factory-calibrated sensor, 16-bit ADC, and a digital signal processor, offering a high accuracy of ±0.9°C. It provides temperature data to the host controller through a compatible I2C interface, reliability, user-selectable I2C addresses, and alert functionality, which triggers an interrupt to protect the device from excessive temperatures.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.Thermo28",
     "subdir_name": "lib_thermo28"
 }
+
 
 
 

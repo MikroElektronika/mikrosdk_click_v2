@@ -25,17 +25,18 @@
     "name": "mikroe.click.mbusmaster",
     "product_link": "https://www.mikroe.com/m-bus-master-click",
     "short_description": "The M-Bus Master is a Click board™ is complete solution for a master node in M-Bus networks.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2972
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.MBusMaster",
     "subdir_name": "lib_mbusmaster"
 }
+
 
 
 

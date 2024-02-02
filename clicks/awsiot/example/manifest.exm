@@ -2,7 +2,7 @@
     "name": "AWS IoT Click",
     "description": "AWS IoT Click is a compact add-on board that allows users to easily connected to AWS IoT services and securely interact with cloud applications and other devices. This board features the ESP32-C3-MINI-1-N4-A, a small 2.4GHz WiFi (802.11 b/g/n) and Bluetooth® 5 module from Espressif Systems that use ESP32C3 series of SoC RISCV single-core microprocessor (ESP32-C3FN4) with 4MB flash in a single chip package. The module uses UART communication alongside several other features like standalone possibility via USB interface, firmware boot, JTAG for debugging, and others.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
     "hw" : ["click","ESP32-C3-MINI-1-N4-A"],
     "category" : ["Click Boards > Wireless connectivity > WIFI"]
 }

@@ -25,17 +25,18 @@
     "name": "mikroe.click.opto2",
     "product_link": "https://www.mikroe.com/opto-2-click",
     "short_description": "Opto 2 click is a galvanic isolator Click board™, used to provide an optical isolation of sensitive microcontroller (MCU) pins, when operated by external signals.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2383
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Opto2",
     "subdir_name": "lib_opto2"
 }
+
 
 
 

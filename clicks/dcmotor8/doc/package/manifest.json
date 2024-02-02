@@ -25,17 +25,18 @@
     "name": "mikroe.click.dcmotor8",
     "product_link": "https://www.mikroe.com/dc-motor-8-click",
     "short_description": "DC Motor 8 click is a DC motor driver. It can drive simple DC motors with brushes, providing them with a significant amount of current and voltage up to 40V. The click has one control input, that uses the PWM signal from the host MCU. It uses the half-bridge topology to regulate the speed of the motor rotation, employs advanced dead-time circuitry that monitors the output stage, providing maximum switching efficiency and features an advanced technique to avoid shoot-through currents.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2273
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.DcMotor8",
     "subdir_name": "lib_dcmotor8"
 }
+
 
 
 

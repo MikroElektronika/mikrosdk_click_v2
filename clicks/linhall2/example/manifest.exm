@@ -2,7 +2,7 @@
     "name": "LIN Hall 2 Click",
     "description": "LIN Hall 2 Click is a compact add-on board representing a linear Hall-effect sensing solution. This board features the TMAG5253, a low-power linear Hall-effect sensor from Texas Instruments. The sensor responds proportionally to the magnetic flux density with a magnetic sensitivity range of ±80mT and outputs proportional analog voltage.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","PTMAG5253A3IQDMRR"],
     "category" : ["Click Boards > Sensors > Magnetic"]
 }

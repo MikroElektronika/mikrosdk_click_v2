@@ -25,13 +25,14 @@
     "name": "mikroe.click.eeprom9",
     "product_link": "https://www.mikroe.com/eeprom-9-click",
     "short_description": "EEPROM 9 Click is a compact add-on board with a highly reliable nonvolatile memory solution. This board features the M95P32-I, the 32Mbit electrically erasable programmable memory with enhanced hardware write protection from STMicroelectronics. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.EEPROM9",
     "subdir_name": "lib_eeprom9"
 }
+
 
 

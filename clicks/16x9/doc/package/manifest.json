@@ -25,17 +25,18 @@
     "name": "mikroe.click.c16x9",
     "product_link": "https://www.mikroe.com/16x9-g-click",
     "short_description": "16x9 click is an array of 144 LEDs, driven by a single IC with relatively low pin count (28).",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2003
     ],
-    "version": "2.1.0.21",
+    "version": "2.1.0.22",
     "cmake": true,
     "alias": "Click.16x9",
     "subdir_name": "lib_c16x9"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "EEPROM 11 Click",
     "description": "EEPROM 11 Click is a compact add-on board with a highly reliable, nonvolatile memory solution. This board features the S-34C04AB, an EEPROM for DIMM serial presence detection from ABLIC. The EEPROM is internally organized as 2 pages of 256 words x 8-bit, and a capacity of 4Kbits and is an EE1004-1 JEDEC standard-compliant.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","S-34C04AB-A8T3U5"],
     "category" : ["Click Boards > Storage > EEPROM"]
 }

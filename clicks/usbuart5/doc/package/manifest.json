@@ -25,14 +25,15 @@
     "name": "mikroe.click.usbuart5",
     "product_link": "https://www.mikroe.com/usb-uart-5-click",
     "short_description": "USB UART 5 Click is a compact add-on board with a general-purpose USB to UART serial interface. This board features the CP2110, a highly-integrated USB-to-UART bridge controller from Silicon Labs. The CP2110 uses the standard USB HID device class, requiring no custom driver and a UART interface that implements all RS-232 signals, including control and hardware handshaking, so existing system firmware does not need to be modified. The UART capabilities of the CP2110 also include baud rate support from 300 to 1Mbps, hardware flow control, RS-485 support, and GPIO signals that are user-defined for status and control information.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.USBUART5",
     "subdir_name": "lib_usbuart5"
 }
+
 
 
 

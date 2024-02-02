@@ -25,16 +25,17 @@
     "name": "mikroe.click.enocean4",
     "product_link": "https://www.mikroe.com/enocean-4-click",
     "short_description": "EnOcean 4 Click carries a ultra-low power TCM515U transceiver gateway module which operates at 902MHz radio band, perfectly suited for the realization of transceiver gateways, actuators and controllers for systems communicating based on the EnOcean radio standard.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2821
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Enocean4",
     "subdir_name": "lib_enocean4"
 }
+
 
 

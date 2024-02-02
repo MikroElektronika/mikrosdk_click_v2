@@ -2,7 +2,7 @@
     "name": "Pressure 14 Click",
     "description": "Pressure 14 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the ABP2LANT060PG2A3XX, a piezoresistive silicon pressure sensor offering a digital output for reading pressure over the specified full-scale pressure span and a temperature range from Honeywell Sensing and Productivity Solutions. This I2C configurable sensor is calibrated and temperature compensated for sensor offset, sensitivity, temperature effects, and accuracy errors, including non-linearity, repeatability, and hysteresis, using an on-board ASIC. This Click board™ is suitable for pressure measurements in automotive applications, industrial and consumer applications.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ABP2LANT060PG2A3XX"],
     "category" : ["Pressure"]
 }

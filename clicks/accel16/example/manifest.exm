@@ -2,7 +2,7 @@
     "name": "Accel 16 Click",
     "description": "Accel 16 Click is a compact add-on board that contains an acceleration sensor. This board features the ADXL363, a micropower three-sensor combination including acceleration and temperature from Analog Devices. This device combines a 3-axis MEMS accelerometer, a temperature sensor, and an analog-to-digital converter (ADC) input for synchronized conversions of external signals.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ADXL363"],
     "category" : ["Motion"]
 }

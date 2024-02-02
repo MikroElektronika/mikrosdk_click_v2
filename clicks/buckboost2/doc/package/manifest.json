@@ -25,17 +25,18 @@
     "name": "mikroe.click.buckboost2",
     "product_link": "https://www.mikroe.com/buck-boost-2-click",
     "short_description": "Buck-Boost 2 click is an advanced DC-DC step-down/step-up regulator (buck/boost), which is able to provide regulated 5V on its output, regardless of the input voltage.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2327
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.BuckBoost2",
     "subdir_name": "lib_buckboost2"
 }
+
 
 
 

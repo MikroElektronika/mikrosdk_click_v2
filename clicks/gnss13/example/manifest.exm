@@ -2,7 +2,7 @@
     "name": "GNSS 13 Click",
     "description": "GNSS 13 Click is a compact add-on board that provides positioning, navigation, and timing services. This board features the LG77LICMD, a global-region standard-precision GNSS module from Quectel Wireless Solutions. This module utilizes concurrent reception of up to three GNSS systems (GPS, GLONASS (or BeiDou), and Galileo), maximizing position availability, especially under challenging conditions such as deep urban canyons. By combining EASY™ (Embedded Assist System), an advanced AGNSS feature, with GLP (GNSS Low Power), a low-power mode, the LG77LICMD module achieves high performance, low power consumption, and fully meets industrial standards. It also has a configurable host interface, anti-jamming technology, and a multi-tone active interference canceller.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LG77LICMD"],
     "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"]
 }

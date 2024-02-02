@@ -25,17 +25,18 @@
     "name": "mikroe.click.c10dof",
     "product_link": "https://www.mikroe.com/10dof-click",
     "short_description": "10DOF click is a mikroBUS add-on board for enhancing hardware prototypes with 10DOF functionality (10 degrees of freedom).",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1695
     ],
-    "version": "2.1.0.17",
+    "version": "2.1.0.18",
     "cmake": true,
     "alias": "Click.10Dof",
     "subdir_name": "lib_c10dof"
 }
+
 
 
 

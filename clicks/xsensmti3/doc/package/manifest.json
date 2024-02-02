@@ -25,15 +25,16 @@
     "name": "mikroe.click.xsensmti3",
     "product_link": "https://www.mikroe.com/xsens-mti-3-click",
     "short_description": "XSENS MTi-3 Click is a compact add-on board that contains a fully functional module that can be configured as an Inertial Measurement Unit, Vertical reference Unit, or even an Attitude & Heading Reference System. This board features the MTi-3, a module outputting 3D orientation, 3D rate of turn, 3D accelerations, and 3D magnetic field, depending on the product configuration from Xsens.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "related_projects": [
         3780
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.XSENSMTi3",
     "subdir_name": "lib_xsensmti3"
 }
+
 

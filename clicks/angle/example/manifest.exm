@@ -2,7 +2,7 @@
     "name": "Angle Click",
     "description": "Angle click is a precise Hall-effect angle sensing click board that can be used to measure the rotational angle of the magnetic field in the X-Y plane above it (parallel to the surface of the click), through the whole range of 360°. The click yields very precise results for both off-axis and axis operation, which make it a perfect choice for precise measuring of the rotational angle in a wide range of different high-speed applications, for example in the automotive industry: electronic power steering, transmission, torsion bar, or the motor shaft rotation.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","A1335"],
     "category" : ["Magnetic"] 
 }

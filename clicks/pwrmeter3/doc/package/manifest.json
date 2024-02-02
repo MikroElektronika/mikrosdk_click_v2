@@ -25,14 +25,15 @@
     "name": "mikroe.click.pwrmeter3",
     "product_link": "https://www.mikroe.com/pwr-meter-3-click",
     "short_description": "PWR Meter 3 Click is a compact add-on board that measures voltage and current through the connected load. This board features the ACS37800, an I2C-configurable power monitoring solution from Allegro MicroSystems, which simplifies the addition of power monitoring to many AC/DC powered systems. The ACS37800’s Hall-effect-based current sensing technology achieves reinforced isolation ratings (4800 VRMS) alongside a reliable ±90A bidirectional current sensing. It also has two LED indicators for the realization of visual detection of some anomalies in operation, such as under/overvoltage and fast overcurrent fault detection.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.PWRMeter3",
     "subdir_name": "lib_pwrmeter3"
 }
+
 
 
 

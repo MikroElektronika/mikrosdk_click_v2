@@ -25,17 +25,18 @@
     "name": "mikroe.click.current",
     "product_link": "https://www.mikroe.com/current-click",
     "short_description": "Current click is an add-on board used for measurement of electric current. It features INA196 current shunt monitor, MCP3201 12-bit ADC, MAX6106 voltage reference as well as two screw terminals.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         596
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Current",
     "subdir_name": "lib_current"
 }
+
 
 
 

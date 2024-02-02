@@ -2,7 +2,7 @@
     "name": "BLE 9 Click",
     "description": "BLE 9 Click is a fully embedded stand-alone Bluetooth 5.2 Energy connectivity module, equipped with the EFR32BG22 Series 2 Modules, an ultra-small, high-performing, standalone Bluetooth low energy module for easy integration of Bluetooth low energy connectivity (BLE) into various electronic devices. This module combines a high-performance Arm® Cortex®-M33 CPU microprocessor with FPU, and state-of-the-art power performance. Reliable and easy to use, BLE 9 click is a perfect solution for development of various IoT applications, smart home applications, BLE enabled toys, advanced robotics, and other similar applications.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
     "hw" : ["click","BGM220P","gecko","silabs","bluetooth","ble9"],
     "category" : ["BT/BLE"]
 }

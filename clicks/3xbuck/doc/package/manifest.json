@@ -25,16 +25,17 @@
     "name": "mikroe.click.c3xbuck",
     "product_link": "https://www.mikroe.com/3xbuck-click",
     "short_description": "3xBuck click is a triple step-down (buck) converter Click board. It features three independent output terminals that can provide 1.8V, 3.3V, and 5V with the combined current output up to 3A.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2577
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.3xBuck",
     "subdir_name": "lib_c3xbuck"
 }
+
 
 

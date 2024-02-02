@@ -2,7 +2,7 @@
     "name": "Smart Sens 2 Click",
     "description": "Smart Sens 2 Click is a compact add-on board that contains a smart sensor system with an integrated IMU sensor. This board utilizes the BHI260AP, BME688, BMP390, and BMM150, an ultra-low-power programmable smart sensor, environmental and pressure sensor, and a magnetometer from Bosch Sensortec. The BHI260AP includes a powerful 32-bit MCU and a 6-axis IMU (3-axis accelerometer and 3-axis gyroscope) alongside an event-driven software framework. In addition to its internal functions also perform signal data processing from several onboard sensors performing measurements of various parameters such as an environmental and magnetic field. In addition to these primary functions, this Click board™ allows users to select the desired serial interface, use the debug interface, and select BOOT mode.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic32","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","mikrocdspic"],
     "hw" : ["click","BHI260AP","BMM150","BMP390","BME688"],
     "category" : ["Click Boards > Sensors > Environmental"]
 }

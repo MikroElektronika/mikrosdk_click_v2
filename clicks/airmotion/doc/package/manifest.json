@@ -25,13 +25,14 @@
     "name": "mikroe.click.airmotion",
     "product_link": "https://www.mikroe.com/air-motion-click",
     "short_description": "Air Motion Click is a compact add-on board that contains a 6-axis inertial measurement unit. This board features TDK InvenSense’s ICM-40627, a 6-axis MEMS MotionTracking™ device that combines a 3-axis user-selectable gyroscope accelerometer.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.AirMotion",
     "subdir_name": "lib_airmotion"
 }
+
 
 

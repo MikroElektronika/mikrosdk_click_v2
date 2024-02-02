@@ -2,7 +2,7 @@
     "name": "Accel 5 Click",
     "description": "Accel 5 click features an ultra-low power triaxial accelerometer sensor, labeled as the BMA400. This Click board™ allows linear motion and gravitational force measurements in ranges of ±2 g, ±4 g, ±8, and ±16 g in three perpendicular axes.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","BMA400"],
     "category" : ["Motion,Acceleration"] 
 }

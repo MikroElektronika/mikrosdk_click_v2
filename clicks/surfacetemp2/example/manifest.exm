@@ -2,7 +2,7 @@
     "name": "Surface Temp 2 Click",
     "description": "Surface temp 2 Click is a compact add-on board that contains a high accuracy temperature sensor offering breakthrough performance over a wide industrial temperature range.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ADT7422"],
     "category" : ["Temperature & humidity"] 
 }

@@ -25,16 +25,17 @@
     "name": "mikroe.click.pwrmeter",
     "product_link": "https://www.mikroe.com/pwr-meter-click",
     "short_description": "PWR Meter click is a power measurement Click board™, capable of measuring voltage and current through the load, connected to either AC or DC power source. PWR Meter click uses the MCP39F511A, a very sophisticated monitoring IC from Microchip, with 16-bit processing core.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2529
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.PwrMeter",
     "subdir_name": "lib_pwrmeter"
 }
+
 
 

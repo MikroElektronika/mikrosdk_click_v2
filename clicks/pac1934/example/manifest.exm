@@ -2,7 +2,7 @@
     "name": "Pac 1934 Click",
     "description": "PAC1934 click carries the PAC1934 four channel DC power/energy monitor from Microchip. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over an I2C interface.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","PAC1934"],
     "category" : ["Measurements"] 
 }

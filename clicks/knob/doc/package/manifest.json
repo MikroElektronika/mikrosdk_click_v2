@@ -25,17 +25,18 @@
     "name": "mikroe.click.knob",
     "product_link": "https://www.mikroe.com/knob-g-click",
     "short_description": "Knob G click features a combination of high-quality quadrature rotary encoder, and a LED ring composed of 24 individual green LEDs. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2600
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Knob",
     "subdir_name": "lib_knob"
 }
+
 
 
 

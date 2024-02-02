@@ -25,17 +25,18 @@
     "name": "mikroe.click.reed",
     "product_link": "https://www.mikroe.com/reed-click",
     "short_description": "REED click is a simple board that carries a standard (Single Pole Single Throw Normally Open) reed switch. A reed switch comprises of two thin magnetic contacts sealed inside a casing.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1632
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Reed",
     "subdir_name": "lib_reed"
 }
+
 
 
 

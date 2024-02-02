@@ -2,7 +2,7 @@
     "name": "TempHum13 Click",
     "description": "Temp&Hum 13 Click is a Click board™ which is perfectly suited for measuring the relative humidity (RH) and temperature. The Click board™ is equipped with the HTU21DF, an accurate and reliable sensor IC, packed in a miniature 3x3mm DFN package.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","HTU21DF"],
     "category" : ["Temperature & humidity"] 
 }

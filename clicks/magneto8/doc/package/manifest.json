@@ -25,16 +25,17 @@
     "name": "mikroe.click.magneto8",
     "product_link": "https://www.mikroe.com/magneto-8-click",
     "short_description": "Magneto 8 Click is a compact add-on board that contains an easy-to-program magnetic rotary position sensor with incremental quadrature (A/B) and 12-bit digital outputs. This board features the AS5601, 12-bit programmable contactless encoder IC from AMS-AG.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3824
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.Magneto8",
     "subdir_name": "lib_magneto8"
 }
+
 
 

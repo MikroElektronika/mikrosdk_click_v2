@@ -25,17 +25,18 @@
     "name": "mikroe.click.shtan",
     "product_link": "https://www.mikroe.com/sht-an-click",
     "short_description": "SHT AN Click is a sensorics based add on board which can be used for measuring humidity and temperature. It features fully calibrated, linearized and temperature compensated SHT31-ARP-B sensor with analog output.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3188
     ],
-    "version": "2.1.0.20",
+    "version": "2.1.0.21",
     "cmake": true,
     "alias": "Click.ShtAn",
     "subdir_name": "lib_shtan"
 }
+
 
 
 

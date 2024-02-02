@@ -2,7 +2,7 @@
     "name": "SPI Isolator 8 Click",
     "description": "SPI Isolator 8 Click is a compact add-on board representing a digital isolator optimized for a serial peripheral interface. This board features the ISOW7743, a quad-channel digital isolator from Texas Instruments. This device has a maximum data rate of 100Mbps and transfers digital signals between circuits with different power domains featuring reinforced isolation for a withstand voltage rating of 5kVRMS for 60 seconds.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","ISOW7741FBDFMR"],
     "category" : ["Click Boards > Interface > SPI"]
 }

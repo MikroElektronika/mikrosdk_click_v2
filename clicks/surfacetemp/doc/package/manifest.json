@@ -25,17 +25,18 @@
     "name": "mikroe.click.surfacetemp",
     "product_link": "https://www.mikroe.com/surface-temp-click",
     "short_description": "Surface temp Click is high accuracy digital temperature sensor Click board™, offering breakthrough performance over a wide industrial range. It is equipped with the ADT7420 - an accurate 16-Bit Digital I2C temperature sensor from Analog Devices.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3793
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.SurfaceTemp",
     "subdir_name": "lib_surfacetemp"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "DSP Click",
     "description": "DSP Click is a compact add-on board that contains a multi-effects digital signal processor. This board features the V1000, a complete multi-effects audio DSP with ultra-high quality audio performance in a rapid ‘time-to-market’ solution from Coolaudio. The V1000 includes its integrated RAM with 16 built-in multi-effects and reverb controlled via I/O pins or I2C interface. Combined with a low-cost A/D-D/A codec like the V4220, this Click board™ provides an ultra-low cost FX solution.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","V1000"],
     "category" : ["Signal processing"]
 }

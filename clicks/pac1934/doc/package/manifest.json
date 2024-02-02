@@ -25,17 +25,18 @@
     "name": "mikroe.click.pac1934",
     "product_link": "https://www.mikroe.com/pac1934-click",
     "short_description": "PAC1934 click carries the PAC1934 four channel DC power/energy monitor from Microchip. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over an I2C interface.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2173
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Pac1934",
     "subdir_name": "lib_pac1934"
 }
+
 
 
 

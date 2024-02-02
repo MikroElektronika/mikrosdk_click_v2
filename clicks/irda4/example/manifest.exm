@@ -2,7 +2,7 @@
     "name": "IrDA 4 Click",
     "description": "IrDA 4 Click is a compact add-on board that provides a cost-effective solution for sending and receiving IR serial data. This board features the TFBS4650, an infrared transceiver from Vishay Semiconductors. The transceiver includes a PIN photodiode, an infrared emitter, and a low-power integral circuit and complies with the IrDA physical layer specification. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
     "hw" : ["click","TFBS4650-TT3"],
     "category" : ["Click Boards > Sensors > Optical"]
 }

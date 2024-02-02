@@ -25,14 +25,15 @@
     "name": "mikroe.click.accel17",
     "product_link": "https://www.mikroe.com/accel-17-click",
     "short_description": "Accel 17 Click is a compact add-on board that contains an acceleration sensor. This board features the MXC62320MP, a low-power digital output dual-axis accelerometer fabricated on a standard, submicron CMOS process from MEMSIC.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.Accel17",
     "subdir_name": "lib_accel17"
 }
+
 
 
 

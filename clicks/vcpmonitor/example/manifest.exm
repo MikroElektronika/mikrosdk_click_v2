@@ -2,7 +2,7 @@
     "name": "VCP Monitor Click",
     "description": "The VCP Monitor Click is add-on board power monitor system. This Click board™ is based on INA260AIPWR - precision digital current and power monitor with low-drift, integrated precision shunt resistor, from Texas Instruments. Therefore, using VCP Monitor Click, current, voltage and power can be monitored.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","NA260AIPWR"],
     "category" : ["Current sensor"] 
 }

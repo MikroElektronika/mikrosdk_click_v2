@@ -25,17 +25,18 @@
     "name": "mikroe.click.proximity11",
     "product_link": "https://www.mikroe.com/proximity-11-click",
     "short_description": "Proximity 11 Click is a close-range proximity sensing Click board™, equipped with the RPR-0521RS, a very accurate and power-efficient proximity and ambient Light Sensor with IrLED.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2844
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Proximity11",
     "subdir_name": "lib_proximity11"
 }
+
 
 
 

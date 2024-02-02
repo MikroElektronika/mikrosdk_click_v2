@@ -2,7 +2,7 @@
     "name": "BATT-MAN 2 Click",
     "description": "BATT-MAN 2 Click is a compact add-on board representing an advanced battery and power management solution. This board features the MAX77654, a single inductor, multiple-output (SIMO) power management IC (PMIC) from Maxim Integrated, now part of Analog Devices. This I2C programmable board features a buck-boost regulator that provides three independently programmable power rails from a single inductor. Also, it has one 100mA LDO output with ripple rejection for audio and other noise-sensitive applications and a highly-configurable linear charger that supports a wide range of Li+ battery capacities featuring battery temperature monitoring for additional safety (JEITA).",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MAX77654"],
     "category" : ["Buck-Boost"]
 }

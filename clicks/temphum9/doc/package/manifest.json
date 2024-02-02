@@ -25,16 +25,17 @@
     "name": "mikroe.click.temphum9",
     "product_link": "https://www.mikroe.com/temphum-9-click",
     "short_description": "Temp-Hum 9 click is a smart temperature and humidity sensing click board™, packed with features that allow simple integration into any design.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2671
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.TempHum9",
     "subdir_name": "lib_temphum9"
 }
+
 
 

@@ -2,7 +2,7 @@
     "name": "LDC 1101 Click",
     "description": "LDC1101 click is an inductance-to-digital converter Click Board™. It is designed for a range of different applications, based on the inductivity measurements.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","LDC1101"],
     "category" : ["Inductance"] 
 }

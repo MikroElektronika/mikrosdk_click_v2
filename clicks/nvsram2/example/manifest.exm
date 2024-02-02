@@ -2,7 +2,7 @@
     "name": "nvSRAM 2 Click",
     "description": "nvSRAM 2 Click is a compact add-on board that contains the most reliable nonvolatile memory. This board features the CY14B101Q, a 1Mbit nvSRAM organized as 128K words of 8 bits each with a nonvolatile element in each memory cell from Cypress Semiconductor. The embedded nonvolatile elements incorporate the QuantumTrap technology and provide highly reliable nonvolatile storage of data. Data transfer, initiated by the user through SPI commands, from SRAM to the nonvolatile elements takes place automatically at Power-Down. On the other hand, during the Power-Up, data is restored to the SRAM from the nonvolatile memory. This Click board™ is suitable for all applications that require fast access and high reliability of stored data, and unlimited endurance.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","CY14B101Q"],
     "category" : ["SRAM"]
 }

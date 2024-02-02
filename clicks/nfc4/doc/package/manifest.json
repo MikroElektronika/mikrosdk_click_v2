@@ -25,14 +25,15 @@
     "name": "mikroe.click.nfc4",
     "product_link": "https://www.mikroe.com/nfc-4-click",
     "short_description": "NFC 4 Click is a compact add-on board that contains an NFC transceiver for contactless communication. This board features the ST25R3916, a multi-purpose NFC transceiver supporting passive peer-to-peer functionality and NFC card-emulation mode, as well as NFC reader operation from STMicroelectronics. It features high RF output power to directly drive an antenna etched on the PCB, alongside its tuning circuit, at high efficiency.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.NFC4",
     "subdir_name": "lib_nfc4"
 }
+
 
 
 

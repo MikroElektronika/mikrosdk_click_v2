@@ -25,13 +25,14 @@
     "name": "mikroe.click.terminal",
     "product_link": "https://www.mikroe.com/terminal-click",
     "short_description": "Terminal click can be especially interesting for the development systems that are equipped with mikroBUS™ slots only, or small number of GPIO pins available, such as the Clicker family of development systems.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Terminal",
     "subdir_name": "lib_terminal"
 }
+
 
 

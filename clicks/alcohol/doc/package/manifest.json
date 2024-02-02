@@ -25,17 +25,18 @@
     "name": "mikroe.click.alcohol",
     "product_link": "https://www.mikroe.com/alcohol-click",
     "short_description": "Alcohol click has a high sensitivity to alcohol and it can be used to detect alcohol in concentrations from 0.04 to 4mg/l.Alcohol click carries an MQ-3 Semiconductor sensor for alcohol. The click is designed to run on a 5V power supply only. It communicates with the target microcontroller through the AN pin on the mikroBUS™ line. ",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1025
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Alcohol",
     "subdir_name": "lib_alcohol"
 }
+
 
 
 

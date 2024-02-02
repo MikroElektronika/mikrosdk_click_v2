@@ -25,12 +25,13 @@
     "name": "mikroe.click.canfd7",
     "product_link": "https://www.mikroe.com/can-fd-7-click",
     "short_description": "CAN FD 7 Click is a compact add-on board that contains a CAN transceiver that supports both CAN and CAN FD protocols. This board features the TCAN1462, an automotive fault-protected CAN FD transceiver from Texas Instruments. It is a high-speed Controller Area Network (CAN) transceiver that meets the ISO 11898-2:2016 high-speed CAN specification and the CiA 601-4 signal improvement capability (SIC) specification.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.CANFD7",
     "subdir_name": "lib_canfd7"
 }
+
 

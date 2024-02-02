@@ -25,17 +25,18 @@
     "name": "mikroe.click.ble8",
     "product_link": "https://www.mikroe.com/ble-8-click",
     "short_description": "BLE 8 Click is fully embedded stand-alone Bluetooth 5.0 Energy connectivity module, equipped with the ANNA-B112, an ultra-small, high-performing, standalone Bluetooth low energy module for easy integration of Bluetooth low energy connectivity (BLE) into various electronic devices. This module combines a high-performance Arm® Cortex®-M4 CPU microprocessor with FPU, and state-of-the-art power performance. Reliable and easy to use, BLE 8 click is a perfect solution for development of various IoT applications, smart home applications, BLE enabled toys, advanced robotics, and other similar applications.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2897
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Ble8",
     "subdir_name": "lib_ble8"
 }
+
 
 
 

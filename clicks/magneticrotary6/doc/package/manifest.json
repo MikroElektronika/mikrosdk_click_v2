@@ -25,14 +25,15 @@
     "name": "mikroe.click.magneticrotary6",
     "product_link": "https://www.mikroe.com/magnetic-rotary-6-click",
     "short_description": "Magnetic Rotary 6 Click is a compact add-on board for accurate magnet-position sensing. This board features the AS5247U, an SPI-configurable high-resolution dual rotary position sensor for fast absolute angle measurement over a full 360-degree range from ams AG. The AS5047D is equipped with revolutionary integrated dynamic angle error compensation (DAEC™) with almost 0 latency and offers a robust design that suppresses the influence of any homogenous external stray magnetic field. It also comes with onboard headers reserved for incremental and commutation signals of their respective A/B/I and U/V/W signals, with a maximum resolution of 16384 steps / 4096 pulses per revolution, alongside embedded self-diagnostics features.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.MagneticRotary6",
     "subdir_name": "lib_magneticrotary6"
 }
+
 
 
 

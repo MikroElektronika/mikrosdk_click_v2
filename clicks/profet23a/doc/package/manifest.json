@@ -25,14 +25,15 @@
     "name": "mikroe.click.profet23a",
     "product_link": "https://www.mikroe.com/profet-2-click-3a",
     "short_description": "PROFET 2 Click is a compact add-on board that contains a smart high-side power switch. This board features the BTS70802EPAXUMA1, a dual-channel, high-side power switch with embedded protection and diagnosis feature from Infineon Technologies.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.PROFET23A",
     "subdir_name": "lib_profet23a"
 }
+
 
 
 

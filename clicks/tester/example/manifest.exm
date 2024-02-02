@@ -2,7 +2,7 @@
     "name": "Tester Click",
     "description": "Tester click is a Click board™ used as a diagnostic tool on the mikroBUS™ socket.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","2x6 red colored LEDs"],
     "category" : ["Proto"] 
 }

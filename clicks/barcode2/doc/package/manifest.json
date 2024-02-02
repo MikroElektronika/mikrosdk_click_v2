@@ -25,17 +25,18 @@
     "name": "mikroe.click.barcode2",
     "product_link": "https://www.mikroe.com/barcode-2-click",
     "short_description": "Barcode 2 Click is an adapter add-on board that contains a computerized image recognition system that is compliant with a wide range of different 1D and 2D barcode protocols.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3822
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Barcode2",
     "subdir_name": "lib_barcode2"
 }
+
 
 
 

@@ -25,11 +25,12 @@
     "name": "mikroe.click.speedsense",
     "product_link": "https://www.mikroe.com/speed-sense-click",
     "short_description": "Speed Sense Click is a compact add-on board that allows you to measure the speed and rotation of a spinning object. This board features the A17501, a dual output differential speed and direction sensor from Allegro Microsystems. It has a high-speed switching bandwidth of up to 40kHz for two different signals. The sensor has two independent output channels with options for high-resolution XOR speed, pulse, and direction protocol.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.SpeedSense",
     "subdir_name": "lib_speedsense"
 }
+

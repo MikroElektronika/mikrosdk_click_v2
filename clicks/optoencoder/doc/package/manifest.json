@@ -25,17 +25,18 @@
     "name": "mikroe.click.optoencoder",
     "product_link": "https://www.mikroe.com/opto-encoder-click",
     "short_description": "Opto Encoder click is a linear incremental optical sensor/encoder click, which can be used for the movement or rotation encoding.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2350
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.OptoEncoder",
     "subdir_name": "lib_optoencoder"
 }
+
 
 
 

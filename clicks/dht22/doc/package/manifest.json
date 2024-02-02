@@ -25,17 +25,18 @@
     "name": "mikroe.click.dht22",
     "product_link": "https://www.mikroe.com/dht22-click",
     "short_description": "It’s a low cost reliable solution that communicates with the target board microcontroller through a single Serial Data Line.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1211
     ],
-    "version": "2.1.0.17",
+    "version": "2.1.0.18",
     "cmake": true,
     "alias": "Click.Dht22",
     "subdir_name": "lib_dht22"
 }
+
 
 
 

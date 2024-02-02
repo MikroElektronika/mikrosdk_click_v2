@@ -25,16 +25,17 @@
     "name": "mikroe.click.counter",
     "product_link": "https://www.mikroe.com/counter-click",
     "short_description": "Counter click carries an LS7366R 32-bit quadrature counter. The top of the board has a pinout for interfacing with incremental encoders. The interface has ENCA and ENCB pins, along with ENCI, which is a programmable index.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1588
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Counter",
     "subdir_name": "lib_counter"
 }
+
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.gyro",
     "product_link": "https://www.mikroe.com/gyro-click",
     "short_description": "Gyro click is an add-on board in mikroBUS form factor. It features L3GD20 three-axis digital gyroscope module capable of providing the measured angular rate, as well as ambient temperature.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         553
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Gyro",
     "subdir_name": "lib_gyro"
 }
+
 
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.g2c",
     "product_link": "https://www.mikroe.com/g2c-click",
     "short_description": "Go to Cloud (G2C) click is a gateway Click board™ which provides a simple and reliable connection to the Click Cloud platform, a cloud-based rapid prototyping environment, hosted by MikroElektronika. Go to Cloud (G2C) click offers an unprecedented simplicity for adding Click Cloud connectivity to any embedded application, by utilizing the simple UART interface: it can be configured and managed using a minimal set of well-documented AT commands.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
     "related_projects": [
         2628
     ],
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.G2C",
     "subdir_name": "lib_g2c"
 }
+
 
 
 

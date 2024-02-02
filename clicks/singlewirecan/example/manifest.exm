@@ -2,7 +2,7 @@
     "name": "Single Wire CAN Click",
     "description": "Single Wire CAN Click is a compact add-on board that contains an IC for a single wire data link capable of operating with various protocols such as the Controller Area Network (CAN). This board features the NCV7356D1R2G, Single Wire CAN transceiver from ON Semiconductor, which operates from a supply voltage from 5V to 27V with bus speed up to 40 kbps.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
     "hw" : ["click","NCV7356D1R2G"],
     "category" : ["CAN"] 
 }

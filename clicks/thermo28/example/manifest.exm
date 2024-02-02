@@ -2,7 +2,7 @@
     "name": "Thermo 28 Click",
     "description": "Thermo 28 Click is a compact add-on board that accurately measures temperature. This board features the ams AG’s AS6221, a high-accuracy digital temperature sensor. The AS6221 consists of a Si bandgap temperature factory-calibrated sensor, 16-bit ADC, and a digital signal processor, offering a high accuracy of ±0.9°C. It provides temperature data to the host controller through a compatible I2C interface, reliability, user-selectable I2C addresses, and alert functionality, which triggers an interrupt to protect the device from excessive temperatures.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","AS6221"],
     "category" : ["Click Boards > Sensors > Temperature & humidity"]
 }

@@ -25,17 +25,18 @@
     "name": "mikroe.click.expand2",
     "product_link": "https://www.mikroe.com/expand-2-click",
     "short_description": "EXPAND 2 click is an accessory board in mikroBUS form factor. It includes a 16-bit I/O expander MCP23017 with I²C clock speeds up to 10 MHz for higher throughput applications.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1250
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Expand2",
     "subdir_name": "lib_expand2"
 }
+
 
 
 

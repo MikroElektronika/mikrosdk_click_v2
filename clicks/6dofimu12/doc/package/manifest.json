@@ -25,17 +25,18 @@
     "name": "mikroe.click.c6dofimu12",
     "product_link": "https://www.mikroe.com/6dof-imu-12-click",
     "short_description": "6DOF IMU 12 Click carries the ultra-low-power BMI270 from Bosch Sensortec, inertial measurement unit optimized for wearables providing precise acceleration, angular rate measurement and intelligent on-chip motion-triggered interrupt features.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3222
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.6DofImu12",
     "subdir_name": "lib_c6dofimu12"
 }
+
 
 
 

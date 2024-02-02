@@ -25,17 +25,18 @@
     "name": "mikroe.click.analogkey",
     "product_link": "https://www.mikroe.com/analog-key-click",
     "short_description": "Analog Key Click is an analog keyboard on a Click board. It contains six tactile pushbuttons, used to select one of six different voltage levels. The idea behind this click is very simple: six resistors form a voltage divider.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2682
     ],
-    "version": "2.1.0.18",
+    "version": "2.1.0.19",
     "cmake": true,
     "alias": "Click.AnalogKey",
     "subdir_name": "lib_analogkey"
 }
+
 
 
 

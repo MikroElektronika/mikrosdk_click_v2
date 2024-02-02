@@ -25,17 +25,18 @@
     "name": "mikroe.click.ambient11",
     "product_link": "https://www.mikroe.com/ambient-11-click",
     "short_description": "The Ambient 11 Click is a Click board™ equipped with the VEML6035,a low power, high sensitivity, I2C ambient light sensor from Vishay Semiconductors.Because of the possibilities its features offer,the Ambient 11 Click can be used as an ambient light sensor for mobile devices,industrial lighting operation, and as an optical switch for consumer,computing and industrial devices and displays.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3191
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.Ambient11",
     "subdir_name": "lib_ambient11"
 }
+
 
 
 

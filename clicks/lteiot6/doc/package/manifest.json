@@ -25,14 +25,15 @@
     "name": "mikroe.click.lteiot6",
     "product_link": "https://www.mikroe.com/lte-iot-6-click",
     "short_description": "LTE IoT 6 Click is a compact add-on board that contains an IoT module with worldwide coverage.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.LTEIoT6",
     "subdir_name": "lib_lteiot6"
 }
+
 
 
 

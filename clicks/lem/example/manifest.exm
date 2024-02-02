@@ -2,7 +2,7 @@
     "name": "LEM Click",
     "description": "LEM click carries the LTS 6-NP current transducer and MCP3201 ADC converter. The click can measure AC and DC current with exceptional speed, up to 200 KHz.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","MCP3201"],
     "category" : ["Measurements"] 
 }

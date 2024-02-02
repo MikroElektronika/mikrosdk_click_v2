@@ -25,16 +25,17 @@
     "name": "mikroe.click.hallcurrent",
     "product_link": "https://www.mikroe.com/hall-current-click",
     "short_description": "Hall Current Click is a compact add-on board that contains a precise solution for AC/DC current sensing. This board features the TLI4970-D050T4, a 16-bit digital SPI output (13-bit current value) coreless magnetic current sensor designed for the current range of ±25A from Infineon Technology. A differential measurement principle allows effective stray field suppression with a highly linear output signal without hysteresis. Due to the integrated primary conductor (current rail), there is no need for external calibration. The TLI4970-D050T4 is highly accurate over temperature range and lifetime with fast overcurrent detection with a configurable threshold.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1039
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.HallCurrent",
     "subdir_name": "lib_hallcurrent"
 }
+
 
 

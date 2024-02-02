@@ -2,7 +2,7 @@
     "name": "Ambient 17 Click",
     "description": "Ambient 17 Click is a compact add-on board used to measure the amount of the present ambient light. This board features the TSL2572, a digital-output ambient light sensor with an I2C interface from ams AG. The TSL2572 can detect a wide range of illuminance up to 60klx and provides excellent responsivity close to the human eyes' response. It is designed to control the brightness in various applications based on ambient light availability, brightness for optimum visibility, and energy efficiency. Operation in a temperature range of -30°C to 70°C ensures stable operation under extreme conditions.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","mikrocpic","mikrocpic32","gcc-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
     "hw" : ["click","TSL25721FN"],
     "category" : ["Optical"]
 }

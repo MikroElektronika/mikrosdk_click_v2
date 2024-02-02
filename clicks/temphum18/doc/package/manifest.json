@@ -25,14 +25,15 @@
     "name": "mikroe.click.temphum18",
     "product_link": "https://www.mikroe.com/temphum-18",
     "short_description": "Temp&Hum 18 Click is a compact add-on board that represents temperature and humidity sensing solutions. This board features the HS3003, a highly accurate, fully calibrated relative humidity and temperature sensor from Renesas. It features proprietary sensor-level protection, ensuring high reliability and long-term stability. Integrated calibration and temperature-compensation logic provides fully corrected RH and temperature values via standard I2C output. No user calibration of the output data is required. The high accuracy, fast measurement response time, and long-term stability make this Click board™ ideal for various temperature and humidity-related applications and a vast number of applications ranging from portable devices to products designed for harsh environments.",
-    "supported_compiler": "mikroC AI|GCC",
+    "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.TempHum18",
     "subdir_name": "lib_temphum18"
 }
+
 
 
 
