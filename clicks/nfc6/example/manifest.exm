@@ -1,0 +1,8 @@
+{
+    "name": "NFC 6 Click",
+    "description": "NFC 6 Click is a compact add-on board that contains an NFC transceiver for contactless communication. This board features the ST25R95, a near-field communication transceiver from STMicroelectronics. It supports reader and writer operating modes and emulates ISO/IEC 14443-3 Type A cards. The RF communications are done over the 13.56MHz. The transceiver features tag detection mode, field detection mode, transmission and reception modes, and more.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","ST25R95-VMD5T"],
+    "category" : ["Click Boards > Wireless connectivity > RFID/NFC"]
+}

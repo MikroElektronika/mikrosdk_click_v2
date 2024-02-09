@@ -1,0 +1,37 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Wireless connectivity > RFID/NFC",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "NFC 6 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.nfc6",
+    "product_link": "https://www.mikroe.com/nfc-6-click",
+    "short_description": "NFC 6 Click is a compact add-on board that contains an NFC transceiver for contactless communication. This board features the ST25R95, a near-field communication transceiver from STMicroelectronics. It supports reader and writer operating modes and emulates ISO/IEC 14443-3 Type A cards. The RF communications are done over the 13.56MHz. The transceiver features tag detection mode, field detection mode, transmission and reception modes, and more.",
+    "supported_compiler": "mikroC AI|GCC|Clang",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.NFC6",
+    "subdir_name": "lib_nfc6"
+}
+
+
