@@ -1,0 +1,8 @@
+{
+    "name": "Charger Click",
+    "description": "Charger Click is a compact add-on board providing a standalone battery charger and monitor. This board features Microchip's MCP73831, a miniature single-cell, fully integrated Li-Ion, Li-Polymer charge management controller. The charge voltage of the MCP73831 is set to 4.20V, and a charge current to 250mA with an external resistor. In addition, this Click board™ features the DS2438, a smart battery monitor that monitors the total amount of current going into and out of the battery.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","DS2438","MCP73831"],
+    "category" : ["Click Boards > Power management > Battery Charger"]
+}

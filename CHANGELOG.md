@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240209](#20240209)**
 + **[20240202](#20240202)**
 + **[20240126](#20240126)**
 + **[20240119](#20240119)**
@@ -79,6 +80,24 @@
 
 ---
 ---
+---
+
+## `20240209`
+
+*Following click boards have been added:*
+
++ `CDC`
++ `Buck-Boost 4`
++ `Silent Step 4`
++ `NFC 6`
++ `GNSS 14`
++ `1-Wire I2C`
++ `Charger`
++ `Expand 3`
++ `iButton`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240202`

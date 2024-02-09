@@ -1,0 +1,28 @@
+cmake_minimum_required(VERSION 3.21)
+if (${TOOLCHAIN_LANGUAGE} MATCHES "MikroC")
+    project(example_gnss14 LANGUAGES MikroC)
+else()
+    project(example_gnss14 LANGUAGES C ASM)
+endif()
+
+if (NOT PROJECT_TYPE)
+    set(PROJECT_TYPE "mikrosdk" CACHE STRING "" FORCE)
+endif()
+
+add_executable(example_gnss14
+        main.c
+    
+)
+
+
+############################ example_gnss14 GENERATED CODE START ###########################
+find_package(MikroC.Core REQUIRED)
+target_link_libraries(example_gnss14 PUBLIC MikroC.Core)
+find_package(MikroSDK.Board REQUIRED)
+target_link_libraries(example_gnss14 PUBLIC MikroSDK.Board)
+find_package(MikroSDK.Log REQUIRED)
+target_link_libraries(example_gnss14 PUBLIC MikroSDK.Log)
+add_subdirectory(lib_gnss14)
+target_link_libraries(example_gnss14 PUBLIC Click.GNSS14)
+############################ example_gnss14 GENERATED CODE END ###########################
+
