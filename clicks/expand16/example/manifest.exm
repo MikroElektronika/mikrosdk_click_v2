@@ -1,0 +1,8 @@
+{
+    "name": "Expand 16 Click",
+    "description": "Expand 16 Click is a compact add-on board with a multi-port I/O expander. This board features the FLX6408, a fully configurable 8-bit GPIO expander from ON Semiconductor. It brings eight independently configurable input/output ports, with a 6mA output drive, when configured in the output mode. ",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","FXL6408UMX"],
+    "category" : ["Click Boards > Interface > Port expander"]
+}

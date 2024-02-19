@@ -1,0 +1,8 @@
+{
+    "name": "EEPROM 13 Click",
+    "description": "EEPROM 13 Click is a compact add-on board that contains a highly reliable, nonvolatile memory solution. This board features the M24M01E, an electrically erasable programmable memory with enhanced hardware write protection for entire memory from STMicroelectronics. Its memory size of 1Mbit is organized as 128K words of 8bits each, with a page size of 256 bytes and an additional 256 bytes of identification page. The identification page can be used to store sensitive application parameters, which can be (later) permanently locked in read-only mode.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","M24M01E-FMN6TP"],
+    "category" : ["Click Boards > Storage > EEPROM"]
+}
