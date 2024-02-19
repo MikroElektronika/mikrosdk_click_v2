@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240219](#20240219)**
 + **[20240209](#20240209)**
 + **[20240202](#20240202)**
 + **[20240126](#20240126)**
@@ -80,6 +81,24 @@
 
 ---
 ---
+---
+
+## `20240219`
+
+*Following click boards have been added:*
+
++ `BATT Boost`
++ `LED Flash 3`
++ `EZO Carrier DO`
++ `Expand 16`
++ `EEPROM 13`
++ `BT Audio 2`
++ `AN to PWM 2`
++ `FTDI`
++ `H-Bridge`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240209`
