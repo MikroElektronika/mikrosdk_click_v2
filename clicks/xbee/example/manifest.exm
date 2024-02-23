@@ -1,0 +1,8 @@
+{
+    "name": "XBEE Click",
+    "description": "XBee Click is a compact add-on board providing wireless connectivity to end-point devices in ZigBee mesh networks. This board features the XB24CZ7PIS-004, a low-power Digi XBee® RF module delivering superior performance and interference immunity from Digi International. With its ultra-sensitive receiver, the XB24CZ7PIS-004 operates in the 2.4GHz ISM band (indoor/urban range of 60m and outdoor of 1200m), allowing the formation of robust mesh network optimized for use in the US, Canada, Europe, Australia, and Japan (worldwide acceptance). Alongside firmware updates, it supports commissioning and LED behaviors to aid device deployment and commissioning.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "hw" : ["click","XB24CZ7PIS-004"],
+    "category" : ["Click Boards > Wireless connectivity > ZigBee"]
+}

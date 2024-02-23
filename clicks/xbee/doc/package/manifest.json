@@ -1,0 +1,38 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
+    "category": "Click Boards > Wireless connectivity > ZigBee",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "XBEE click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.xbee",
+    "product_link": "https://www.mikroe.com/xbee-click",
+    "short_description": "XBee Click is a compact add-on board providing wireless connectivity to end-point devices in ZigBee mesh networks. This board features the XB24CZ7PIS-004, a low-power Digi XBee® RF module delivering superior performance and interference immunity from Digi International. With its ultra-sensitive receiver, the XB24CZ7PIS-004 operates in the 2.4GHz ISM band (indoor/urban range of 60m and outdoor of 1200m), allowing the formation of robust mesh network optimized for use in the US, Canada, Europe, Australia, and Japan (worldwide acceptance). Alongside firmware updates, it supports commissioning and LED behaviors to aid device deployment and commissioning.",
+    "supported_compiler": "mikroC AI|GCC|Clang",
+    "type": "Library",
+    "_type": "mikroSDK Library",
+    "related_projects": [
+        1624
+    ],
+    "version": "2.1.0.0",
+    "cmake": true,
+    "alias": "Click.XBEE",
+    "subdir_name": "lib_xbee"
+}
