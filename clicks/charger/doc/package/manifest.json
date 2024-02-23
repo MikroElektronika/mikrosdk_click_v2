@@ -28,8 +28,12 @@
     "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.0",
+    "related_projects": [
+        1677
+    ],
+    "version": "2.1.0.1",
     "cmake": true,
     "alias": "Click.Charger",
     "subdir_name": "lib_charger"
 }
+

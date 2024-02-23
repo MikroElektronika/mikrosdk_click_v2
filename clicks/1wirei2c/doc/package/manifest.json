@@ -28,8 +28,12 @@
     "supported_compiler": "mikroC AI|GCC|Clang",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.0",
+    "related_projects": [
+        2154
+    ],
+    "version": "2.1.0.1",
     "cmake": true,
     "alias": "Click.1WireI2C",
     "subdir_name": "lib_c1wirei2c"
 }
+

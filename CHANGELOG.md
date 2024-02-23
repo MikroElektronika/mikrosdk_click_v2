@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240223](#20240223)**
 + **[20240219](#20240219)**
 + **[20240209](#20240209)**
 + **[20240202](#20240202)**
@@ -81,6 +82,38 @@
 
 ---
 ---
+---
+
+## `20240223`
+
+*Following click boards have been added:*
+
++ `PCR`
++ `EZO Carrier RTD`
++ `UT-S 7-SEG B 2`
++ `Barometer 9`
++ `GNSS 15`
++ `ISO ADC`
++ `LightHz`
++ `Magneto 6`
++ `MCP2003B`
++ `XBEE`
++ `Stepper`
++ `Stepper 2`
+
+*Following click boards have been updated:*
+
++ `1-Wire I2C`
++ `Charger`
++ `Expand 3`
++ `iButton`
++ `BT Audio 2`
++ `AN to PWM 2`
++ `FTDI`
++ `H-Bridge`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240219`

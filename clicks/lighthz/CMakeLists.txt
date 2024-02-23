@@ -1,0 +1,28 @@
+cmake_minimum_required(VERSION 3.21)
+if (${TOOLCHAIN_LANGUAGE} MATCHES "MikroC")
+    project(example_lighthz LANGUAGES MikroC)
+else()
+    project(example_lighthz LANGUAGES C ASM)
+endif()
+
+if (NOT PROJECT_TYPE)
+    set(PROJECT_TYPE "mikrosdk" CACHE STRING "" FORCE)
+endif()
+
+add_executable(example_lighthz
+        example/main.c
+    
+)
+
+
+############################ example_lighthz GENERATED CODE START ###########################
+find_package(MikroC.Core REQUIRED)
+target_link_libraries(example_lighthz PUBLIC MikroC.Core)
+find_package(MikroSDK.Board REQUIRED)
+target_link_libraries(example_lighthz PUBLIC MikroSDK.Board)
+find_package(MikroSDK.Log REQUIRED)
+target_link_libraries(example_lighthz PUBLIC MikroSDK.Log)
+add_subdirectory(lib_lighthz)
+target_link_libraries(example_lighthz PUBLIC Click.LightHz)
+############################ example_lighthz GENERATED CODE END ###########################
+

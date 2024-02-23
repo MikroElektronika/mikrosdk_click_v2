@@ -1,0 +1,8 @@
+{
+    "name": "GNSS 15 Click",
+    "description": "GNSS 15 Click is a compact add-on board for advanced automotive navigation and tracking applications. This board features the TESEO-VIC3DA, an automotive GNSS dead-reckoning module from STMicroelectronics. This module combines a 6-axis IMU with multi-constellation satellite reception, offering exceptional accuracy and dead-reckoning capabilities. It stands out for its rapid time-to-first-fix and the ability to receive firmware updates for enhanced performance. Designed for flexibility, it supports both UART and I2C communications, includes pins for precise odometer readings, and features an SMA antenna connector for superior signal quality.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","TESEO-VIC3DA"],
+    "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"]
+}
