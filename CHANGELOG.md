@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240301](#20240301)**
 + **[20240223](#20240223)**
 + **[20240219](#20240219)**
 + **[20240209](#20240209)**
@@ -82,6 +83,28 @@
 
 ---
 ---
+---
+
+## `20240301`
+
+*Following click boards have been added:*
+
++ `7-SEG 2`
++ `EZO Carrier ORP`
++ `Rotary R 2`
++ `IPD 2015`
++ `IPD 2017`
++ `Silent Step`
++ `Silent Step 3`
++ `Stepper 3`
++ `Stepper 4`
++ `Stepper 5`
++ `Stepper 6`
++ `Stepper 7`
++ `Stepper 8`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240223`

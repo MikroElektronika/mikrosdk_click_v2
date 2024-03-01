@@ -1,0 +1,8 @@
+{
+    "name": "Silent Step 3 Click",
+    "description": "Silent Step 3 Click is the complete integrated bipolar step motor driver solution, rich with many features that allow extremely smooth and silent operation of the connected motor while being able to provide up to 4A peak motor current and withstand up to 30V supply voltage. The specialized TMC2660 IC driver from Trinamic company far exceeds the capabilities of similar step motor drivers that are commonly used.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","TMC2660-PA"],
+    "category" : ["Click Boards > Motor control > Stepper"]
+}
