@@ -1,0 +1,8 @@
+{
+    "name": "Stepper 3 Click",
+    "description": "Stepper 3 click is designed to drive unipolar stepper motors, with a supply voltage applied to the common wire. The current flows through the common wire and the motor coil, via the activated current sink driver, to the ground. This Click board™ uses the ULN2003A, a high voltage and current Darlington transistors array IC, as the sink driver. This IC is an ideal solution for this purpose, as it has seven high power Darlington output stages, activated by TTL/CMOS logic level signals, applied to the control pins. This allows driving unipolar stepper motors with up to 30V and 500mA per coil.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","ULN2003"],
+    "category" : ["Click Boards > Motor control > Stepper"]
+}

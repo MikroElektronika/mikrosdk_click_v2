@@ -1,0 +1,37 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Display & LED > LED segment",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "7-SEG 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.c7seg2",
+    "product_link": "https://www.mikroe.com/7-seg-2-click",
+    "short_description": "7-SEG 2 Click is a compact add-on board that represents an easy solution for adding a numeric or hexadecimal display to your application. This board features the LDT-M2804RI, a three-digit seven-segment display from Lumex. The display has a 0.28” height, red LED segments, gray faces, and white diffused segments. All three digits come with a following dot point that can be used as a decimal point in displaying the number values.",
+    "supported_compiler": "mikroC AI|GCC|Clang",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.7SEG2",
+    "subdir_name": "lib_c7seg2"
+}
+
+
