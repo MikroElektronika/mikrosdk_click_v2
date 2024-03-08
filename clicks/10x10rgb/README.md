@@ -70,7 +70,7 @@ void c10x10rgb_display_string ( c10x10rgb_t *ctx, c10x10rgb_byte_t *data_obj, ui
 
 ## Examples Description
 
-> This example showcases how to initialize, configure and use the 10x10 RGB click moduel. The
+> This example showcases how to initialize, configure and use the 10x10 RGB click module. The
 click has a 10 by 10 RGB LED matrix which can be programmed to show different colors or even
 images. LED elements that form the matrix communicate by a single line with the host MCU. 
 
@@ -121,6 +121,10 @@ void application_task ( void )
 } 
 
 ``` 
+
+## Note
+
+> Make sure the logic delays are defined for your system in the c10x10rgb_delays.h file.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 

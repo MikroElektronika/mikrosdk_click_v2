@@ -18,6 +18,8 @@
  * Various colors can be reproduced by mixing the intensity of each LED.
  * 
  * @note
+ * Make sure the logic delays are defined for your system in the c4x4rgb_delays.h file.
+ *
  * **Diodes layout:**
  * ----------------------
  * | 13 | 14 | 15 | 16  |
@@ -29,197 +31,12 @@
  * |  1 |  2 |  3 |  4  |
  * ----------------------
  * 
- * Timing sequence chart:
- *          -----------|     T0L
- *              T0H    |______________
- * Logic 0: 
- *          T0H: 350ns (+/-150ns)
- *          T0L: 800ns (+/-150ns)
- * 
- *          -----------|     T1L
- *              T1H    |______________
- * Logic 1: 
- *          T1H: 700ns (+/-150ns)
- *          T1L: 600ns (+/-150ns)
- * 
  * \author MikroE Team
  *
  */
 #include "board.h"
 #include "c4x4rgb.h"
-
-// Delay adjustment for specific systems.
-#ifdef __MIKROC_AI__
-    #ifdef STM32F407ZG
-        /*< Adjusted for STM32F407ZG */
-        #define DELAY_TOH Delay_Cyc( 4 );   // ~340ns
-        #define DELAY_TOL Delay_Cyc( 6 );   // ~800ns
-        #define DELAY_T1H Delay_Cyc( 10 );  // ~700ns
-        #define DELAY_T1L Delay_Cyc( 3 );   // ~620ns
-    #elif MK64FN1M0VDC12
-        /*< Adjusted for MK64FN1M0VDC12 */
-        #define DELAY_TOH \
-                    asm nop; \
-                    asm nop; \
-                    asm nop; \
-                    asm nop; \
-                    asm nop; \
-                    asm nop; \
-                    asm nop; \
-                    asm nop; \
-                    asm nop; \
-                    asm nop; \
-                    asm nop; \
-                    asm nop; \
-                    asm nop; \
-                    asm nop; \
-                    asm nop; \
-                    asm nop; \
-                    asm nop; \
-                    asm nop; \
-                    asm nop; \
-                    asm nop;                // ~310ns
-        #define DELAY_TOL Delay_Cyc( 2 );   // ~860ns
-        #define DELAY_T1H Delay_Cyc( 7 );   // ~710ns
-        #define DELAY_T1L \
-                    asm nop; \
-                    asm nop; \
-                    asm nop; \
-                    asm nop;                // ~580ns
-    #elif TM4C129XNCZAD
-        /*< Adjusted for TM4C129XNCZAD */
-        #define DELAY_TOH asm nop;          // ~330ns
-        #define DELAY_TOL                   // ~890ns
-        #define DELAY_T1H Delay_Cyc( 4 );   // ~720ns
-        #define DELAY_T1L                   // ~920ns
-    #elif PIC32MX795F512L
-        /*< Adjusted for PIC32MX795F512L */
-        #define DELAY_TOH  \
-                    asm nop; \
-                    asm nop;                // ~340ns
-        #define DELAY_TOL                   // ~1.06us
-        #define DELAY_T1H Delay_Cyc( 3 );   // ~750ns
-        #define DELAY_T1L                   // ~1.07us
-    #else
-        #error "Logic delays are not defined for the selected MCU"
-    #endif
-#elif __GNUC__ 
-    #ifdef STM32F407ZG
-        /*< Adjusted for STM32F407ZG */
-        #define DELAY_TOH \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop");             // ~330ns
-        #define DELAY_TOL Delay_Cyc( 2 );   // ~850ns
-        #define DELAY_T1H Delay_Cyc( 5 );   // ~710ns
-        #define DELAY_T1L  \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop");             // ~600ns
-    #elif MK64
-        /*< Adjusted for MK64FN1M0VDC12 */
-        #define DELAY_TOH \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop");            // ~350ns
-        #define DELAY_TOL  \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop");             // ~810ns
-        #define DELAY_T1H Delay_Cyc( 7 );   // ~700ns
-        #define DELAY_T1L                   // ~600ns
-    #elif TM4C129
-        /*< Adjusted for TM4C129XNCZAD */
-        #define DELAY_TOH                   // ~430ns
-        #define DELAY_TOL                   // ~910ns
-        #define DELAY_T1H Delay_Cyc( 2 );   // ~900ns
-        #define DELAY_T1L                   // ~930ns
-    #elif GD32VF103VBT6
-        /*< Adjusted for GD32VF103VBT6 */
-        #define DELAY_TOH \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop");             // ~330ns
-        #define DELAY_TOL \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop"); \
-                    asm("nop");             // ~770ns
-        #define DELAY_T1H Delay_Cyc( 2 );   // ~680ns
-        #define DELAY_T1L                   // ~630ns
-    #else
-        #error "Logic delays are not defined for the selected MCU"
-    #endif
-#else
-    #error "Logic delays are not defined for the selected toolchain"
-#endif
+#include "c4x4rgb_delays.h"
 
 #define SNAKE_DELAY     50
 #define MASH_DELAY      100

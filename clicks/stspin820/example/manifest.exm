@@ -1,0 +1,8 @@
+{
+    "name": "STSPIN820 Click",
+    "description": "STSPIN820 click is a stepper motor driver with the PWM current control, selectable microstepping up to 256 microsteps, and a wide voltage range. It is based on the STSPIN820, a stepper motor driver from STSPIN8 series. Designed to be a bullet-proof solution for the new wave of demanding industrial applications, it integrates two full-bridges with low ON resistance, the control logic, and a full set of protection features, in a small 4x4mm QFN package. Its output stage implements the PWM current control with the fixed OFF time. The device can be used with the step motor voltage ranging from 7V up to 45V, and current up to 1.5A per bridge.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","STSPIN820"],
+    "category" : ["Click Boards > Motor control > Stepper"]
+}

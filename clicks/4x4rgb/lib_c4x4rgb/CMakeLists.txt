@@ -9,9 +9,11 @@ if (NOT PROJECT_TYPE)
     set(PROJECT_TYPE "mikrosdk" CACHE STRING "" FORCE)
 endif()
 
-add_library(lib_c4x4rgb STATIC
-        src/c4x4rgb.c
-        include/c4x4rgb.h
+add_library(lib_c4x4rgb
+STATIC
+src/c4x4rgb.c
+include/c4x4rgb.h
+include/c4x4rgb_delays.h
 )
 add_library(Click.4x4Rgb  ALIAS lib_c4x4rgb)
 
