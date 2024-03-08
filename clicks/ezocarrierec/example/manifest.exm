@@ -1,0 +1,8 @@
+{
+    "name": "EZO Carrier EC Click",
+    "description": "EZO Carrier Click - Conductivity is a compact add-on board for measuring conductivity, salinity, and Total Dissolved Solids (TDS) in various applications from chemical production to hydroponics. This board features the EZO-EC™, an ISO 7888 compliant embedded conductivity circuit board from Atlas Scientific.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "hw" : ["click","EZO-EC"],
+    "category" : ["Click Boards > Sensors > Environmental"]
+}

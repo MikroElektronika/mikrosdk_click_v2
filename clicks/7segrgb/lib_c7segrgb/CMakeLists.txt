@@ -9,9 +9,11 @@ if (NOT PROJECT_TYPE)
     set(PROJECT_TYPE "mikrosdk" CACHE STRING "" FORCE)
 endif()
 
-add_library(lib_c7segrgb STATIC
-        src/c7segrgb.c
-        include/c7segrgb.h
+add_library(lib_c7segrgb
+STATIC
+src/c7segrgb.c
+include/c7segrgb.h
+include/c7segrgb_delays.h
 )
 add_library(Click.7SegRgb  ALIAS lib_c7segrgb)
 

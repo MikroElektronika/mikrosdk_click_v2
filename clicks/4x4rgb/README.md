@@ -124,6 +124,10 @@ void application_task ( void )
 
 ```
 
+## Note
+
+> Make sure the logic delays are defined for your system in the c4x4rgb_delays.h file.
+
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
 **Other mikroE Libraries used in the example:** 

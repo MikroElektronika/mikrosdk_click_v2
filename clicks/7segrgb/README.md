@@ -148,6 +148,8 @@ void application_task ( void )
 
 ## Note
 
+> Make sure the logic delays are defined for your system in the c7segrgb_delays.h file.
+>
 > <pre>
 > Additional Functions :
 > void logic_one ( )  - Generic logic one function.

@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240308](#20240308)**
 + **[20240301](#20240301)**
 + **[20240223](#20240223)**
 + **[20240219](#20240219)**
@@ -83,6 +84,31 @@
 
 ---
 ---
+---
+
+## `20240308`
+
+*Following click boards have been added:*
+
++ `EZO Carrier EC`
++ `LR 10`
++ `Ai-WB2-12F`
++ `Buck 15`
++ `Stepper 10`
++ `Stepper 13`
++ `Stepper 14`
++ `STSPIN220`
++ `STSPIN820`
+
+*Following click boards have been updated:*
+
++ `10x10 RGB`
++ `4x4 RGB`
++ `7-SEG RGB`
++ `SWI EEPROM`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240301`
