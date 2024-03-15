@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240315](#20240315)**
 + **[20240308](#20240308)**
 + **[20240301](#20240301)**
 + **[20240223](#20240223)**
@@ -84,6 +85,20 @@
 
 ---
 ---
+---
+
+## `20240315`
+
+*Following click boards have been added:*
+
++ `DTMF`
++ `Flash 12`
++ `EasyPull`
++ `ISM 5`
++ `6DOF IMU 22`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240308`

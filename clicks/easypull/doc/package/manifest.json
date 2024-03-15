@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Interface > Adapter",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "EasyPull click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.easypull",
+    "product_link": "https://www.mikroe.com/easypull-click",
+    "short_description": "EasyPull Click is a compact add-on board designed to easily configure mikroBUS™ signals into pull-up or pull-down states, perfect for various applications. It features a universal setup with 4.7kΩ resistors to ensure stable performance across vital communication lines such as SPI, UART, I2C, and standard mikroBUS™ signals (AN, RST, PWM, INT).",
+    "supported_compiler": "mikroC AI|GCC|Clang",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.3",
+    "cmake": true,
+    "alias": "Click.EasyPull",
+    "subdir_name": "lib_easypull"
+}
