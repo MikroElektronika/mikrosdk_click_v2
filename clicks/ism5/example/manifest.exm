@@ -1,0 +1,8 @@
+{
+    "name": "ISM 5 Click",
+    "description": "ISM 5 Click is a compact add-on board designed for seamless integration into a wide range of applications requiring efficient communication in the Sub-GHz 868MHz frequency band. This board features the Si4461, a high-performance, low-current transceiver from Silicon Labs known for its robust operation in time division duplexing (TDD) mode, enabling alternating transmission and reception of data packets.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","SI4461-C2A-GMR"],
+    "category" : ["Click Boards > Wireless connectivity > Sub-1 GHz Transceivers"]
+}

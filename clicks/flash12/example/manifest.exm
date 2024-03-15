@@ -1,0 +1,8 @@
+{
+    "name": "Flash 12 Click",
+    "description": "Flash 12 Click is a compact add-on board representing a highly reliable memory solution. This board features the AT25EU0041A, a 4Mbit serial flash memory from Renesas, known for its ultra-low power consumption. This Click board™ is specifically designed to address the needs of systems operating at the IoT network's edge, providing an optimal solution for program code storage and execution directly from NOR Flash memory. It stands out for its innovative erase architecture, offering short erase times and low power consumption across operations, including reading, programming, and erasing.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "hw" : ["click","AT25EU0041A-SSHN-T"],
+    "category" : ["Click Boards > Storage > FLASH"]
+}
