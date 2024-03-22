@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240322](#20240322)**
 + **[20240315](#20240315)**
 + **[20240308](#20240308)**
 + **[20240301](#20240301)**
@@ -85,6 +86,18 @@
 
 ---
 ---
+---
+
+## `20240322`
+
+*Following click boards have been added:*
+
++ `Haptic 4`
++ `Current Sens 2`
++ `ADC 24`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240315`
