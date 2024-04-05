@@ -32,14 +32,18 @@
 extern "C"{
 #endif
 
-#include "mikrosdk_version.h"
-
-#ifdef __GNUC__
-#if mikroSDK_GET_VERSION < 20800ul
-#include "rcu_delays.h"
-#else
-#include "delays.h"
+/**
+ * Any initialization code needed for MCU to function properly.
+ * Do not remove this line or clock might not be set correctly.
+ */
+#ifdef PREINIT_SUPPORTED
+#include "preinit.h"
 #endif
+
+#ifdef MikroCCoreVersion
+    #if MikroCCoreVersion >= 1
+        #include "delays.h"
+    #endif
 #endif
 
 #include "drv_digital_out.h"
@@ -92,6 +96,10 @@ extern "C"{
 #define WIREPAS_MSAP_STACK_STOP_CONFIRM         0x86
 #define WIREPAS_MSAP_STACK_STATE_INDICATION     0x07
 #define WIREPAS_MSAP_STACK_STATE_RESPONSE       0x87
+#define WIREPAS_MSAP_APP_CONFIG_DATA_RX_IND     0x3F
+#define WIREPAS_MSAP_APP_CONFIG_DATA_RX_RESP    0xBF
+#define WIREPAS_MSAP_SCAN_NBORS_INDICATION      0x22
+#define WIREPAS_MSAP_SCAN_NBORS_RESPONSE        0xA2
 
 /**
 * @brief Wirepas CSAP attributes primitive ID.
@@ -144,8 +152,8 @@ extern "C"{
  * @details Specified size of driver ring buffer.
  * @note Increase buffer size if needed.
  */
-#define WIREPAS_TX_DRV_BUFFER_SIZE    100
-#define WIREPAS_RX_DRV_BUFFER_SIZE    300
+#define WIREPAS_TX_DRV_BUFFER_SIZE              200
+#define WIREPAS_RX_DRV_BUFFER_SIZE              500
 
 /*! @} */ // wirepas_cmd
 
@@ -164,13 +172,26 @@ extern "C"{
  * @details Mapping pins of Wirepas Click to the selected MikroBUS.
  */
 #define WIREPAS_MAP_MIKROBUS( cfg, mikrobus ) \
-    cfg.tx_pin  = MIKROBUS( mikrobus, MIKROBUS_TX ); \
-    cfg.rx_pin  = MIKROBUS( mikrobus, MIKROBUS_RX ); \
+    cfg.tx_pin = MIKROBUS( mikrobus, MIKROBUS_TX ); \
+    cfg.rx_pin = MIKROBUS( mikrobus, MIKROBUS_RX ); \
     cfg.rst = MIKROBUS( mikrobus, MIKROBUS_RST ); \
     cfg.din = MIKROBUS( mikrobus, MIKROBUS_INT );
 
 /*! @} */ // wirepas_map
 /*! @} */ // wirepas
+
+/**
+ * @brief Wirepas Click frame data object.
+ * @details Frame data object definition of Wirepas Click driver.
+ */
+typedef struct
+{
+    uint8_t primitive_id;                    
+    uint8_t frame_id;                 
+    uint8_t payload_len;               
+    uint8_t payload[ 256 ];            
+
+} wirepas_frame_t;
 
 /**
  * @brief Wirepas Click context object.
@@ -190,6 +211,9 @@ typedef struct
     // Buffers
     uint8_t uart_rx_buffer[ WIREPAS_RX_DRV_BUFFER_SIZE ];  /**< Buffer size. */
     uint8_t uart_tx_buffer[ WIREPAS_TX_DRV_BUFFER_SIZE ];  /**< Buffer size. */
+
+    wirepas_frame_t frame;
+    uint8_t tx_frame_id;
 
 } wirepas_t;
 
@@ -351,9 +375,6 @@ void wirepas_hw_reset ( wirepas_t *ctx );
  * @param[in] ctx : Click context object.
  * See #wirepas_t object definition for detailed explanation.
  * @param[in] primitive_id : The PDU ID can be used to keep track of APDUs processed.
- * @param[in] frame_id : Frame identifier. The initiating peer decides the ID and responding
- *                       peer uses the same value in the response frame.
- * @param[in] primitive_id : The PDU ID can be used to keep track of APDUs processed.
  * @param[in] payload_length : Payload length in octets, excluding the CRC octets.
  * @param[in] payload : The payload of the frame, depends on the primitive in question.
  * @return @li @c  >=0 - Success,
@@ -361,16 +382,29 @@ void wirepas_hw_reset ( wirepas_t *ctx );
  * See #err_t definition for detailed explanation.
  * @note None.
  */
-err_t wirepas_send_command ( wirepas_t *ctx, uint8_t primitive_id, uint8_t frame_id, 
+err_t wirepas_send_command ( wirepas_t *ctx, uint8_t primitive_id,  
                              uint8_t payload_length, uint8_t *payload );
+
+/**
+ * @brief Wirepas send ack function.
+ * @details This function is used to send response to sent data.
+ * @param[in] ctx : Click context object.
+ * See #wirepas_t object definition for detailed explanation.
+ * @param[in] primitive_id : The PDU ID can be used to keep track of APDUs processed.
+ * @param[in] frame_id : Message frame id.
+ * @param[in] result : Indication result.
+ * @return @li @c  >=0 - Success,
+ *         @li @c   <0 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t wirepas_send_ack ( wirepas_t *ctx, uint8_t primitive_id, uint8_t frame_id, uint8_t result );
 
 /**
  * @brief Wirepas write CSAP attribute function.
  * @details This function is used to set specific CSAP attribute.
  * @param[in] ctx : Click context object.
  * See #wirepas_t object definition for detailed explanation.
- * @param[in] frame_id : Frame identifier. The initiating peer decides the ID and responding
- *                       peer uses the same value in the response frame.
  * @param[in] attribute_id : The ID of the attribute that is written.
  * @param[in] attribute_len : The length (in octets) of the attribute that is written.
  * @param[in] attribute_val : The value that is written to the attribute specified by the set attribute ID.
@@ -379,7 +413,7 @@ err_t wirepas_send_command ( wirepas_t *ctx, uint8_t primitive_id, uint8_t frame
  * See #err_t definition for detailed explanation.
  * @note None.
  */
-err_t wirepas_write_csap_attribute ( wirepas_t *ctx, uint8_t frame_id, uint16_t attribute_id, 
+err_t wirepas_write_csap_attribute ( wirepas_t *ctx, uint16_t attribute_id, 
                                      uint8_t attribute_len, uint8_t *attribute_val );
 
 /**
@@ -387,8 +421,6 @@ err_t wirepas_write_csap_attribute ( wirepas_t *ctx, uint8_t frame_id, uint16_t 
  * @details This function is used to read value specific CSAP attribute.
  * @param[in] ctx : Click context object.
  * See #wirepas_t object definition for detailed explanation.
- * @param[in] frame_id : Frame identifier. The initiating peer decides the ID and responding
- *                       peer uses the same value in the response frame.
  * @param[in] attribute_id : The ID of the attribute that is written.
  * @param[out] attribute_len : The length (in octets) of the attribute that is read.
  * @param[out] attribute_val : The value that is read.
@@ -397,7 +429,7 @@ err_t wirepas_write_csap_attribute ( wirepas_t *ctx, uint8_t frame_id, uint16_t 
  * See #err_t definition for detailed explanation.
  * @note None.
  */
-err_t wirepas_read_csap_attribute ( wirepas_t *ctx, uint8_t frame_id, uint16_t attribute_id, 
+err_t wirepas_read_csap_attribute ( wirepas_t *ctx, uint16_t attribute_id, 
                                     uint8_t *attribute_len, uint8_t *attribute_val );
 
 /**
@@ -405,55 +437,45 @@ err_t wirepas_read_csap_attribute ( wirepas_t *ctx, uint8_t frame_id, uint16_t a
  * @details This function is used to set node address.
  * @param[in] ctx : Click context object.
  * See #wirepas_t object definition for detailed explanation.
- * @param[in] frame_id : Frame identifier. The initiating peer decides the ID and responding
- *                       peer uses the same value in the response frame.
  * @param[in] address : Node address.
  * @return @li @c  >=0 - Success,
  *         @li @c   <0 - Error.
  * See #err_t definition for detailed explanation.
  * @note None.
  */
-err_t wirepas_set_node_address ( wirepas_t *ctx, uint8_t frame_id, uint32_t address );
+err_t wirepas_set_node_address ( wirepas_t *ctx, uint32_t address );
 
 /**
  * @brief @brief Wirepas set net address function.
  * @details This function is used to set net address.
  * @param[in] ctx : Click context object.
  * See #wirepas_t object definition for detailed explanation.
- * @param[in] frame_id : Frame identifier. The initiating peer decides the ID and responding
- *                       peer uses the same value in the response frame.
  * @param[in] net_address : Net address.
  * @return @li @c  >=0 - Success,
  *         @li @c   <0 - Error.
  * See #err_t definition for detailed explanation.
  * @note None.
  */
-err_t wirepas_set_net_address ( wirepas_t *ctx, uint8_t frame_id, uint32_t net_address );
+err_t wirepas_set_net_address ( wirepas_t *ctx, uint32_t net_address );
 
 /**
- * @brief @brief Wirepas poll indication function.
- * @details This function is used to send poll indication command to prepare device to send or 
- * receive data, and to get data that was sent.
+ * @brief @brief Wirepas read frame function.
+ * @details This function is used to read whole frame of the Wirepas click data.
  * @param[in] ctx : Click context object.
  * See #wirepas_t object definition for detailed explanation.
- * @param[in] frame_id : Frame identifier. The initiating peer decides the ID and responding
- *                       peer uses the same value in the response frame.
- * @param[out] rx_data : Read data, it is available only if data_rdy is 1.
- * @param[out] data_rdy : Data ready indicator.
+ * @param[out] frame : Read frame data.
  * @return @li @c  >=0 - Success,
  *         @li @c   <0 - Error.
  * See #err_t definition for detailed explanation.
  * @note None.
  */
-err_t wirepas_poll_indication ( wirepas_t *ctx, uint8_t frame_id, uint8_t *rx_data, uint8_t *data_rdy );
+err_t wirepas_read_frame ( wirepas_t *ctx, wirepas_frame_t *frame );
 
 /**
  * @brief @brief Wirepas send data function.
  * @details This function is used to send data to the other devices.
  * @param[in] ctx : Click context object.
  * See #wirepas_t object definition for detailed explanation.
- * @param[in] frame_id : Frame identifier. The initiating peer decides the ID and responding
- *                       peer uses the same value in the response frame.
  * @param[in] sink_data : Sink data object.
  * @param[in] tx_op : The TX options are indicated as a bit field with individual bits.
  * @param[in] apdu_length : The length of the following APDU in octets.
@@ -463,7 +485,7 @@ err_t wirepas_poll_indication ( wirepas_t *ctx, uint8_t frame_id, uint8_t *rx_da
  * See #err_t definition for detailed explanation.
  * @note None.
  */
-err_t wirepas_send_data ( wirepas_t *ctx, uint8_t frame_id, wirepas_sink_data sink_data, 
+err_t wirepas_send_data ( wirepas_t *ctx, wirepas_sink_data sink_data, 
                           uint8_t tx_op, uint8_t apdu_length, uint8_t *apdu );
 
 #ifdef __cplusplus

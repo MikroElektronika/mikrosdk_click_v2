@@ -121,7 +121,7 @@ void application_init ( void )
     }
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );    
+    Delay_ms ( 100 );    
 }
 ```
 
@@ -144,7 +144,11 @@ void application_task ( void )
             display_status( );    
         }
     }
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

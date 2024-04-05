@@ -64,16 +64,23 @@ void application_task ( void )
     log_printf ( &logger, " Move 200 steps clockwise, speed: slow\r\n\n" );
     stspin220_set_direction ( &stspin220, STSPIN220_DIR_CW );
     stspin220_drive_motor ( &stspin220, 200, STSPIN220_SPEED_SLOW );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf ( &logger, " Move 200 steps counter-clockwise, speed: fast\r\n\n" );
     stspin220_set_direction ( &stspin220, STSPIN220_DIR_CCW );
     stspin220_drive_motor ( &stspin220, 200, STSPIN220_SPEED_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -103,7 +103,11 @@ void application_init ( void )
     }
     
     log_printf( &logger, " Remove all goods from the scale in the following 5 sec.\r\n");
-    Delay_ms ( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " Calculating tare scale...\r\n");
     if ( LOADCELL7_OK == loadcell7_tare_scale ( &loadcell7 ) ) 
     {
@@ -117,7 +121,11 @@ void application_init ( void )
     
     log_printf( &logger, " Place a %ug calibration weight on the scale in the following 5 sec.\r\n", 
                 ( uint16_t ) LOADCELL7_CALIBRATION_WEIGHT_G );
-    Delay_ms ( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " Calibrating weight...\r\n");
     if ( LOADCELL7_OK == loadcell7_calibrate_weight ( &loadcell7, LOADCELL7_CALIBRATION_WEIGHT_G ) ) 
     {

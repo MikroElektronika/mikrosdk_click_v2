@@ -67,7 +67,7 @@ void application_init ( void )
     }
     
     reram2_wake_up( &reram2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( RERAM2_ERROR == reram2_check_device_id( &reram2 ) )
     {
@@ -77,7 +77,7 @@ void application_init ( void )
     }
 
     reram2_send_command( &reram2, RERAM2_CMD_WREN );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
     
@@ -85,7 +85,7 @@ void application_init ( void )
     log_printf( &logger, "\r\n  Write data : %s", demo_data );
     reram2_write_memory( &reram2, memory_addr, &demo_data[ 0 ], 9 );
     log_printf( &logger, "-----------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -95,11 +95,17 @@ void application_task ( void )
     reram2_read_memory( &reram2, memory_addr, &rx_data[ 0 ], 9 );
     log_printf( &logger, "  Read data  : %s", rx_data ); 
     log_printf( &logger, "-----------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

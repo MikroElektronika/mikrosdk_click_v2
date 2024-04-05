@@ -25,14 +25,15 @@
     "name": "mikroe.click.magneto6",
     "product_link": "https://www.mikroe.com/magneto-6-click",
     "short_description": "Magneto 6 Click features low power three dimensional Hall effect sensor, TLI493D-A2B6, designed for magnetic sensing applications. It measures the magnetic field in X, Y, and Z direction. Each X, Y and Z Hall probe is connected sequentially to a multiplexer, which is then connected to an Analog to Digital Converter (ADC). Optional, the temperature can be determined as well after the three Hall channels. The data measurement is provided in digital format to the microcontroller over the standard I2C interface. Some of the benefits of this Click board™ are wide application range addressable due to high flexibility and component reduction due to the 3D magnetic measurement principle.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
     "related_projects": [
         3757
     ],
-    "version": "2.1.0.0",
+    "version": "2.1.0.1",
     "cmake": true,
     "alias": "Click.Magneto6",
     "subdir_name": "lib_magneto6"
 }
+

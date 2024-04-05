@@ -92,7 +92,7 @@ void application_init ( void )
     voltmeter_cfg_setup( &cfg );
     VOLTMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     voltmeter_init( &voltmeter, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
 }
@@ -117,7 +117,7 @@ void application_task ( void )
     voltage = voltmeter_calculate_voltage( &voltmeter, adc_value, VOLTMETER_GND_ISO );
     log_printf( &logger, " Voltage  : %.3f V\r\n", voltage );
     log_printf( &logger, "------------------------\r\n");
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

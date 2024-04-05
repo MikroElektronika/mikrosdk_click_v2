@@ -114,7 +114,7 @@ void application_init ( void )
 void application_task ( void )
 {
     radiostation_get_asq_status( &radiostation, &radiostation_cmd, &buff[ 0 ] );
-    Delay_ms( 50 );
+    Delay_ms ( 50 );
 }  
 
 ```

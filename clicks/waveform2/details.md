@@ -113,16 +113,16 @@ void application_init ( void ) {
     waveform2_eeprom_write_string( &waveform2, 0x0123, demo_tx_buf, 6 );
     waveform2_eeprom_read_string ( &waveform2, 0x0123, demo_rx_buf, 6 );
     log_printf( &logger, ">> Read data: %s  from address 0x0123.... \r\n ", demo_rx_buf );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     waveform2_hw_reset( &waveform2 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "---- Waveform set freqency ----\r\n" );
     int32_t freqency;
     freqency = aprox_freq_calculation( value );
     waveform2_set_freq( &waveform2, freqency );
     waveform2_triangle_output( &waveform2 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, " Application Task " );
 }
 

@@ -133,7 +133,7 @@ void application_init ( void ) {
     }
     dsp_default_cfg ( &dsp );   
     log_info( &logger, " Application Task \r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "-------------------------------\r\n" );
     log_printf( &logger, "           DSP click           \r\n" );
@@ -151,11 +151,26 @@ void application_task ( void ) {
         effects = DSP_SET_EFFECT_MEDIUM;
     }
 
-    Delay_ms( 10000 );  
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );  
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

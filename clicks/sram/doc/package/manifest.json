@@ -25,17 +25,18 @@
     "name": "mikroe.click.sram",
     "product_link": "https://www.mikroe.com/sram-click",
     "short_description": "SRAM Click presents additional 1Mbit SRAM memory that can be added to device.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1522
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.Sram",
     "subdir_name": "lib_sram"
 }
+
 
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.dcmotor16",
     "product_link": "https://www.mikroe.com/dc-motor-16-click",
     "short_description": "DC Motor 16 Click is a compact add-on board that contains a high-performance single phase reversible DC motor drive with speed control. This board features the ZXBM5210, a fully-featured DC motor drive solution with an average current capability of up to 700mA from Diodes Incorporated. The ZXBM5210 has several modes of operations selected by two GPIO pins, has a wide supply voltage range from 3V to 18V, and low power consumption.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         3887
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.DCMotor16",
     "subdir_name": "lib_dcmotor16"
 }
+
 
 
 

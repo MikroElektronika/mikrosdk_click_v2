@@ -122,14 +122,15 @@ void application_init ( void ) {
         log_printf( &logger, "      mikroE      \r\n" );
         log_printf( &logger, "------------------\r\n" );
         log_printf( &logger, "  Transmit data   \r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
 
     #endif
         
     #ifdef RECIEVER
 
         log_printf( &logger, "   Receive data  \r\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     
     #endif
         
@@ -152,7 +153,8 @@ void application_task ( void ) {
     
     rs232isolator2_send_data( &rs232isolator2, demo_message );
     log_printf( &logger, "%s", demo_message );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "------------------\r\n" );    
     
     #endif

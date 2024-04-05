@@ -2,7 +2,7 @@
     "name": "Boost 7 Click",
     "description": "Boost 7 Click is a compact add-on board that steps up the voltage from its input (supply) to its output (load). This board features the BD8316GWL, a dual DC/DC converter from Rohm Semiconductor. Each converter inside the BD8316GWL is designed with up to 200mA current limit generating well-regulated positive and negative outputs of ±3.3V or ±5V, making the BD8316GWL ideal for various applications. In addition to the possibility of working with both mikroBUS™ power rails, it also provides the opportunity of using an external power supply with a very low voltage of 2.5V.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","BD8316GWL"],
     "category" : ["Click Boards > Power management > Boost"]
 }

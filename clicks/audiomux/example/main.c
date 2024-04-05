@@ -77,19 +77,27 @@ void application_task ( void )
         init_check = 1;
 
         log_printf( &logger, "Playing from IN1 " );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 
     if (mess_cnt < 5)
     {
         log_printf( &logger, ". " );
-        Delay_ms( 4000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
         mess_cnt++;
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

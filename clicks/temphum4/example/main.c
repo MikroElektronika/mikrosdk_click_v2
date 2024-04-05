@@ -55,7 +55,7 @@ void application_init ( void )
     temphum4_init( &temphum4, &cfg );
     
     temphum4_set_mode( &temphum4, TEMPHUM4_MODE_ACTIVE );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     uint16_t dev_id = temphum4_get_manifacturer_id( &temphum4 );
     log_printf( &logger, " ID[HEX] : 0x%X\r\n", dev_id );
@@ -65,12 +65,12 @@ void application_init ( void )
         log_info( &logger, "---- Error Init ----" ); 
         for(;;);
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     temphum4_default_cfg( &temphum4 );
 
     log_info( &logger, "---Temp&Hum 4 Configured---" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void application_task ( void )
@@ -83,11 +83,16 @@ void application_task ( void )
     humidity = temphum4_get_humidity( &temphum4 );
     log_printf( &logger, " Humidity : %.2f %%\r\n", humidity );
     log_printf( &logger, "*********************************\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

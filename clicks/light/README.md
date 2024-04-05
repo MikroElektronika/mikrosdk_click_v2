@@ -119,7 +119,7 @@ void application_task ( void )
         percent_old = light_percent;
         Delay_100ms();
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

@@ -25,14 +25,15 @@
     "name": "mikroe.click.waveform3",
     "product_link": "https://www.mikroe.com/waveform-3-click",
     "short_description": "Waveform 3 Click is a compact add-on board that represents a high-performance signal generator. This board features the AD9837, a low-power programmable waveform generator capable of producing sine, triangular, and square wave outputs from Analog Devices.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Waveform3",
     "subdir_name": "lib_waveform3"
 }
+
 
 
 

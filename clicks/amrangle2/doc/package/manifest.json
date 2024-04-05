@@ -25,14 +25,15 @@
     "name": "mikroe.click.amrangle2",
     "product_link": "https://www.mikroe.com/amr-angle-2-click",
     "short_description": "AMR Angle 2 Click is a compact add-on board containing an anisotropic magnetoresistive measurement solution ideal for either angle or linear position measurements. This board features the ADA4570, an integrated AMR angle sensor with an integrated signal conditioner and differential outputs from Analog Devices. The ADA4570 delivers amplified differential cosine and sine output signals, with respect to the angle measuring from 0° to 180° when the magnetic field is rotating in the x-axis and the y-axis (x-y) plane, processed later by MAX11122, SAR ADC, which forwards the digital angle information to MCU via SPI interface for further processing.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.AMRAngle2",
     "subdir_name": "lib_amrangle2"
 }
+
 
 
 

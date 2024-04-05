@@ -145,7 +145,7 @@ void application_task ( void )
         log_printf( &logger, " Accel Y: %.2f mg\r\n", acc_axis.y );
         log_printf( &logger, " Accel Z: %.2f mg\r\n", acc_axis.z );
         log_printf( &logger, "_________________\r\n" );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 }
 ```

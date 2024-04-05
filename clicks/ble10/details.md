@@ -142,7 +142,7 @@ void application_task ( void )
     ble10_process( );
     if ( app_buf_len > 0 ) 
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         ble10_process( );
         for ( int32_t buf_cnt = 0; buf_cnt < app_buf_len; buf_cnt++ )
         {
@@ -176,7 +176,7 @@ void application_task ( void )
         }
         ble10_clear_app_buf( );
     }
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 }
 
 ```

@@ -132,7 +132,8 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     canisolator3_generic_write( &canisolator3, TX_MESSAGE, strlen( TX_MESSAGE ) );
     log_info( &logger, "---- Data sent ----" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #else
     canisolator3_process( &canisolator3 );
 #endif

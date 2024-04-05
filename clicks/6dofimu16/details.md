@@ -146,7 +146,7 @@ void application_task ( void )
     log_printf( &logger, " X: %.2f g  | %.2f dps \r\n", accel_data.x_data, gyro_data.x_data );
     log_printf( &logger, " Y: %.2f g  | %.2f dps \r\n", accel_data.y_data, gyro_data.y_data );
     log_printf( &logger, " Z: %.2f g  | %.2f dps \r\n", accel_data.z_data, gyro_data.z_data );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

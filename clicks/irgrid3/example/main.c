@@ -55,7 +55,7 @@ void application_init ( void ) {
     }
 
     irgrid3_default_cfg ( &irgrid3 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, "---- Start measurement ----" );
 }
 
@@ -75,11 +75,16 @@ void application_task ( void ) {
         }
     }
     log_printf( &logger, "\r\n** Ambient (sensor) temperature is %.2f Celsius\r\n", temp_ambient );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

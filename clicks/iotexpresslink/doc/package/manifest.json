@@ -25,13 +25,14 @@
     "name": "mikroe.click.iotexpresslink",
     "product_link": "https://www.mikroe.com/iot-expresslink-click",
     "short_description": "IoT ExpressLink Click is a compact add-on board that allows users to easily connected to IoT ExpressLink services and securely interact with cloud applications and other devices. This board features the ESP32-C3-MINI-1-N4-A, a small 2.4GHz WiFi (802.11 b/g/n) and Bluetooth® 5 module from Espressif Systems that use ESP32C3 series of SoC RISCV single-core microprocessor (ESP32-C3FN4) with 4MB flash in a single chip package. The module uses UART communication alongside several other features like the JTAG interface, module wake-up, various operational event detection, additional UART for debugging, and others.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.IoTExpressLink",
     "subdir_name": "lib_iotexpresslink"
 }
+
 
 

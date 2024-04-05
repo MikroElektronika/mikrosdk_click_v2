@@ -109,7 +109,7 @@ void application_init ( void )
     rtc7_cfg_setup( &cfg );
     RTC7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rtc7_init( &rtc7, &cfg );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
     
     time_set.seconds = 40;
     time_set.minutes = 59;
@@ -125,7 +125,7 @@ void application_init ( void )
     error_flag |= rtc7_set_osc( &rtc7, RTC7_ENABLE_OSC, RTC7_INPUT_FREQ_32768HZ, RTC7_OUTPUT_FREQ_32768HZ );
     error_flag |= rtc7_write_reg( &rtc7, RTC7_TIMER_INIT_REG, 15 );
     error_flag |= rtc7_set_timer( &rtc7, RTC7_TIMER_EN, RTC7_TIMER_FREQ_16HZ );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     if ( RTC7_ERROR == error_flag )
     {
         log_error( &logger, " Default configuration." );
@@ -153,6 +153,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

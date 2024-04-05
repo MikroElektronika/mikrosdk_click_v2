@@ -25,17 +25,18 @@
     "name": "mikroe.click.temphum7",
     "product_link": "https://www.mikroe.com/temp-hum-7-click",
     "short_description": "Temp&Hum 7 click is a Click board™ which is perfectly suited for measuring the relative humidity (RH) and temperature. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2669
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.TempHum7",
     "subdir_name": "lib_temphum7"
 }
+
 
 
 

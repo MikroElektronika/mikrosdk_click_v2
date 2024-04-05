@@ -62,12 +62,17 @@ void application_task ( void )
     for ( cnt = 0; cnt <= 10; cnt++ )
     {
         bargraph_display( &bargraph, cnt );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -58,14 +58,14 @@ void application_init ( void )
     timer_cfg_setup( &cfg );
     TIMER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     timer_init( &timer, &cfg );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 
     log_printf( &logger, "   Driver  Init   \r\n" );
     log_printf( &logger, "------------------\r\n" );
     log_printf( &logger, "    Soft Reset    \r\n" );
     
     timer_soft_reset( &timer );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_printf( &logger, "------------------\r\n" );
     log_printf( &logger, "  Set ETC and EC  \r\n" );
@@ -77,7 +77,7 @@ void application_init ( void )
     log_printf( &logger, "  Hardwere Reset  \r\n" );
     
     timer_hw_reset( &timer );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_printf( &logger, "------------------\r\n" );
     log_printf( &logger, "        ETC       \r\n" );
@@ -108,11 +108,16 @@ void application_task ( )
         log_printf( &logger, "------------------\r\n" );
         time_seconds_new = time_seconds;
     }
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

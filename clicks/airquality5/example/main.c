@@ -75,11 +75,16 @@ void application_task ( void )
     log_printf( &logger," CO data: %d\r\n", CO_sensor_data );
      
     log_printf( &logger, " -------- ");
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -100,7 +100,7 @@ void application_init ( void )
     }
     uv_set_callback_handler( &uv, application_callback );
     uv_device_enable( &uv );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     uv_voltage = 0;
     uv_index = 0;
     log_info( &logger, "---- Application Init Done ----\r\n" );
@@ -125,7 +125,7 @@ void application_task ( void )
         log_printf( &logger, "------------------------------\r\n" );
     }
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

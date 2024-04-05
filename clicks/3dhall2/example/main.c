@@ -69,12 +69,17 @@ void application_task ( void )
         log_printf( &logger, " Axis Y: %.2f mT\r\n", xyz_axis[ 1 ] );
         log_printf( &logger, " Axis Z: %.2f mT\r\n", xyz_axis[ 2 ] );
         log_printf( &logger, " Temperature: %.2f C\r\n\n", temperature );
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

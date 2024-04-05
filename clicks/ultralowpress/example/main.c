@@ -74,7 +74,7 @@ void application_init ( void )
         log_printf( &logger, " > Serial number: 0x%.8LX\r\n", serial_read );
     }
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, " Application Task " );
 }
 
@@ -87,11 +87,16 @@ void application_task ( void )
         float press = ultralowpress_get_press( &ultralowpress );
         log_printf( &logger, " > Temperature[ C ]: %.2f\r\n > Pressure[ Pa ]: %.2f\r\n", temp, press );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

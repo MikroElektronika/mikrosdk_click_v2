@@ -120,7 +120,7 @@ void application_init ( void )
     
     app_buf_len = 0;
     app_buf_cnt = 0;
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Task " );
     
     log_printf( &logger, "-------------------------------\r\n" );
@@ -128,28 +128,28 @@ void application_init ( void )
     log_printf( &logger, "-------------------------------\r\n" );
     log_printf( &logger, "\t  Command mode\r\n" );
     ble12_set_op_mode( &ble12, BLE12_OP_MODE_CMD );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     ble12_event_startup( &ble12 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
      
     ble12_set_led_state( &ble12, BLE12_LED_RED, BLE12_LED_OFF );
     ble12_set_led_state( &ble12, BLE12_LED_YELLOW, BLE12_LED_OFF );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "- - - - - - - - - - - - - - - -\r\n" );
     log_printf( &logger, "> Set device name:" );
     log_printf( &logger, " BLE 12 Click\r\n" );
     ble12_set_device_name( &ble12, "BLE 12 Click" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "> Set Adv. Interval: 99 ms\r\n" );
     ble12_set_adv_interval( &ble12, "0099" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "> Disconnect all connections\r\n" );
     ble12_disconnect( &ble12 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "-------------------------------\r\n" );
     log_printf( &logger, "  Please connect your device\r\n" );
@@ -158,28 +158,28 @@ void application_init ( void )
     {
         ble12_process(); 
         ble12_set_led_state( &ble12, BLE12_LED_YELLOW, BLE12_LED_ON );
-        Delay_ms( 50 );
+        Delay_ms ( 50 );
         ble12_set_led_state( &ble12, BLE12_LED_YELLOW, BLE12_LED_OFF );
-        Delay_ms( 50 );
+        Delay_ms ( 50 );
     }
     while ( !strstr( app_buf, BLE12_EVT_CONNECTED ) );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     ble12_set_led_state( &ble12, BLE12_LED_RED, BLE12_LED_OFF );
     ble12_set_led_state( &ble12, BLE12_LED_YELLOW, BLE12_LED_ON );
     log_printf( &logger, "- - - - - - - - - - - - - - - -\r\n" );
     log_printf( &logger, "\tDevice connected\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     ble12_set_op_mode( &ble12, BLE12_OP_MODE_DATA );
     log_printf( &logger, "-------------------------------\r\n" );
     log_printf( &logger, "\t    Data mode\r\n" );
     log_printf( &logger, "- - - - - - - - - - - - - - - -\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     ble12_process();
     ble12_clear_app_buf( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```

@@ -145,7 +145,9 @@ void application_task ( void )
     {
         log_printf ( &logger, " OUTB: Clockwise\r\n\n" );
     }
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     if ( DCMOTOR23_OK == dcmotor23_set_decay( &dcmotor23, DCMOTOR23_SEL_OUT_A ) )
     {
@@ -155,7 +157,9 @@ void application_task ( void )
     {
         log_printf ( &logger, " OUTB: Decay\r\n\n" );
     }
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     if ( DCMOTOR23_OK == dcmotor23_set_counter_clockwise( &dcmotor23, DCMOTOR23_SEL_OUT_A ) )
     {
@@ -165,7 +169,9 @@ void application_task ( void )
     {
         log_printf ( &logger, " OUTB: Counter-Clockwise\r\n\n" );
     }
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     if ( DCMOTOR23_OK == dcmotor23_set_decay( &dcmotor23, DCMOTOR23_SEL_OUT_A ) )
     {
@@ -176,7 +182,9 @@ void application_task ( void )
         log_printf ( &logger, " OUTB: Decay\r\n\n" );
     }
     log_printf ( &logger, "--------------------------\r\n" );
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

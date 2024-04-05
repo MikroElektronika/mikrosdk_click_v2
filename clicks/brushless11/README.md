@@ -134,11 +134,12 @@ void application_task ( void )
     {
         brushless11_set_speed( &brushless11, speed_cnt );
         log_printf( &logger, " Speed is: %d%% \r\n", ( uint16_t ) speed_cnt );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     log_printf( &logger, " Motor brake is on \r\n" );
     brushless11_set_brake( &brushless11, BRUSHLESS11_BRAKE_ON );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

@@ -61,25 +61,30 @@ void application_init ( void ) {
 
     c8x8b_default_cfg ( &c8x8b );
     log_info( &logger, " Application Task " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void ) {    
     c8x8b_display_byte( &c8x8b, demo_char );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     c8x8b_display_string( &c8x8b, &demo_string[ 0 ] );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     c8x8b_display_image( &c8x8b, &demo_img_on[ 0 ] );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     c8x8b_display_image( &c8x8b, &demo_img_off[ 0 ] );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

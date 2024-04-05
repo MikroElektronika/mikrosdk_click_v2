@@ -136,7 +136,11 @@ void application_init ( void )
     strcpy( last_reading, app_buf );
     log_printf( &logger, "Place the probe into the boiling water,\r\n" );
     log_printf( &logger, "for single-point calibration \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "Waiting for stable readings \r\n" );
     while ( n_cnt <= 5 )
     {
@@ -153,7 +157,7 @@ void application_init ( void )
             }
         }
         log_printf( &logger, "- " );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
         ezocarrierrtd_clear_app_buf( );
     }
     
@@ -178,11 +182,20 @@ void application_task ( void )
     ezocarrierrtd_send_cmd( &ezocarrierrtd, EZOCARRIERRTD_CMD_SINGLE_READ );
     error_flag = ezocarrierrtd_rsp_check( &ezocarrierrtd, EZOCARRIERRTD_RSP_OK );
     ezocarrierrtd_error_check( error_flag );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -249,9 +262,9 @@ static err_t ezocarrierrtd_rsp_check ( ezocarrierrtd_t *ctx, uint8_t *rsp )
             ezocarrierrtd_clear_app_buf( );
             return EZOCARRIERRTD_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     error_flag |= ezocarrierrtd_process( ctx );
     if ( strstr( app_buf, rsp ) )
     {
@@ -293,7 +306,7 @@ static void ezocarrierrtd_error_check ( err_t error_flag )
         }
     }
     log_printf( &logger, "- - - - - - - - - - - - - - -\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 // ------------------------------------------------------------------------ END

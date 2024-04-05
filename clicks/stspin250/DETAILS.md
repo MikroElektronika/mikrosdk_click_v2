@@ -100,7 +100,7 @@ void application_init ( void )
 
     stspin250_pwm_start( &stspin250 );
     log_info( &logger, "---- Application Task ----" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
   
 ```
@@ -134,7 +134,7 @@ void application_task ( void )
 
     stspin250_set_duty_cycle ( &stspin250, duty );
     log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     if ( 10 == duty_cnt ) 
     {

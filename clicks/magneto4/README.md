@@ -109,10 +109,11 @@ void application_init ( void )
     {
         magnetic_field = magneto4_get_magnetic_field( &magneto4 );
         log_printf( &logger, " Magnetic field strength : %d\r\n", magnetic_field );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     
-    Delay_ms( 1500 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 500 );
     log_printf( &logger, " --- Magnetic Linear Position ---\r\n" );
 }
   

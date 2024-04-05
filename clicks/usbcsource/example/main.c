@@ -83,9 +83,9 @@ void application_init ( void ) {
     }
 
     usbcsource_hw_reset( &usbcsource );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     usbcsource_default_config( &usbcsource );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     log_printf( &logger, "- - - - - - - - - - - - - -\r\n" );
     
     usbcsource_get_pdo_config( &usbcsource, USBCSOURCE_SEL_PDO1, &pdo_data );
@@ -119,26 +119,35 @@ void application_init ( void ) {
 void application_task ( void ) {
     usbcsource_get_port_status( &usbcsource, &port_status );
     display_port_status( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "- - - - - - - - - - - - - - " );
     log_printf( &logger, "- - - - - - - - - - - - - -\r\n" );
     
     usbcsource_get_monitoring_status( &usbcsource, &monitor_status );
     display_monitoring_status( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "- - - - - - - - - - - - - - " );
     log_printf( &logger, "- - - - - - - - - - - - - -\r\n" );
     
     usbcsource_get_connection_status( &usbcsource, &conn_status );
     display_connection_status( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "- - - - - - - - - - - - - - " );
     log_printf( &logger, "- - - - - - - - - - - - - -\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

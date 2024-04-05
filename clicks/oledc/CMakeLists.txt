@@ -13,6 +13,9 @@ add_executable(example_oledc
         example/main.c
 )
 
+if (${MCU_NAME} MATCHES "(^dsPIC)")
+	add_compile_definitions(IMAGE_MODE_ONLY)
+endif()
 
 ############################ example_oledc GENERATED CODE START ###########################
 find_package(MikroC.Core REQUIRED)

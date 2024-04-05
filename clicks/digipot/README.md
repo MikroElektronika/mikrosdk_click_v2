@@ -116,7 +116,11 @@ void application_task ( void ) {
     for ( uint16_t n_cnt = 127; n_cnt < 255; n_cnt += 10 ) {
         wiper_pos = ( uint8_t ) n_cnt;
         digipot_set_wiper_positions( &digipot, wiper_pos );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

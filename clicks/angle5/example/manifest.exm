@@ -2,7 +2,7 @@
     "name": "Angle 5 Click",
     "description": "Angle 5 Click is a compact add-on board that detects the absolute angular position of a permanent magnet, typically a diametrically magnetized cylinder on a rotating shaft.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","MA302"],
     "category" : ["Magnetic"] 
 }

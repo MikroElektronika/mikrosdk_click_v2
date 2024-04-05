@@ -129,12 +129,14 @@ void application_task ( void )
     log_printf ( &logger, " Move 200 steps clockwise \r\n\n" );
     multisteppertb67s269_set_direction ( &multisteppertb67s269, MULTISTEPPERTB67S269_DIR_CW );
     multisteppertb67s269_drive_motor ( &multisteppertb67s269, 200, MULTISTEPPERTB67S269_SPEED_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf ( &logger, " Move 100 steps counter-clockwise \r\n\n" );
     multisteppertb67s269_set_direction ( &multisteppertb67s269, MULTISTEPPERTB67S269_DIR_CCW );
     multisteppertb67s269_drive_motor ( &multisteppertb67s269, 100, MULTISTEPPERTB67S269_SPEED_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

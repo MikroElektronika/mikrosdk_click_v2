@@ -88,20 +88,41 @@ void application_task ( void )
 {
     set_output_frequency( 1000 );        //1000 Hz output
     log_printf( &logger, "Output frequency: \t 1000 Hz\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     set_output_frequency( 2000 );        //2000 Hz output
     log_printf( &logger, "Output frequency: \t 2000 Hz\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     set_output_frequency( 5000 );        //5000 Hz output
     log_printf( &logger, "Output frequency: \t 5000 Hz\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     set_output_frequency( 10000 );       //10000 Hz output
     log_printf( &logger, "Output frequency: \t 10000 Hz\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -25,14 +25,15 @@
     "name": "mikroe.click.adc18",
     "product_link": "https://www.mikroe.com/adc-18-click",
     "short_description": "ADC 18 Click is a compact add-on board that contains a high-performance data converter. This board features the MAX22005, an SPI-configurable twelve-channel 24-bit analog-to-digital converter (ADC) from Analog Devices.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "alias": "Click.ADC18",
     "cmake": true,
     "subdir_name": "lib_adc18"
 }
+
 
 
 

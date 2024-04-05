@@ -104,13 +104,13 @@ void application_init ( void ) {
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "     Soft reset      \r\n" );
     dac9_soft_reset( &dac9 );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
     
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "  Vref divided by 2  \r\n" );
     log_printf( &logger, "  Set DAC gain of 2  \r\n" );
     dac9_set_gain( &dac9, DAC9_GAIN_REF_DIV_2, DAC9_GAIN_BUFF_GAIN_2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "---------------------\r\n" );
     log_info( &logger, " Application Task " );
@@ -129,7 +129,8 @@ void application_task ( void ) {
     for ( n_cnt = 0; n_cnt <= res; n_cnt += 500 ) {
         log_printf( &logger, "Output Voltage : %d mV\r\n", ( uint16_t ) n_cnt );
         dac9_set_vout( &dac9, n_cnt );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

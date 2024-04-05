@@ -142,7 +142,8 @@ void application_task ( void )
         log_printf( &logger, " Thermo 5 internal temperature :  %.2f\r\n", temp_value );
         log_printf( &logger, "--------------------------\r\n" );
     
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

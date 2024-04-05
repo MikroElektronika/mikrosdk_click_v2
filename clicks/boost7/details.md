@@ -117,12 +117,20 @@ void application_task ( void )
     log_printf( &logger, " OUT2 (V+) : DISABLED\r\n\n" );
     boost7_enable_out1 ( &boost7 );
     boost7_disable_out2 ( &boost7 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " OUT1 (V-) : DISABLED\r\n" );
     log_printf( &logger, " OUT2 (V+) : ENABLED\r\n\n" );
     boost7_disable_out1 ( &boost7 );
     boost7_enable_out2 ( &boost7 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

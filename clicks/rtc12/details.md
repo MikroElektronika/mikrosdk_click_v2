@@ -112,20 +112,20 @@ void application_init ( void ) {
 
     rtc12_default_cfg ( &rtc12 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     date.day_of_week = 4;
     date.day = 27;
     date.month = 5;
     date.year = 21;
     rtc12_set_date( &rtc12, date );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     time.hours = 23;
     time.min = 59;
     time.sec = 50;
     rtc12_set_time( &rtc12, time );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -142,16 +142,16 @@ void application_init ( void ) {
 
 void application_task ( void ) {   
     rtc12_get_time( &rtc12, &time );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
     rtc12_get_date( &rtc12, &date );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
     
     if ( time.sec != new_sec ) {
         log_printf( &logger, "  Date      : %.2d-%.2d-%.2d\r\n", ( uint16_t ) date.day, ( uint16_t ) date.month, ( uint16_t ) date.year );
         log_printf( &logger, "  Time      : %.2d:%.2d:%.2d\r\n", ( uint16_t ) time.hours, ( uint16_t ) time.min, ( uint16_t ) time.sec );
         log_printf( &logger, "- - - - - - - - - - - -\r\n" );
         new_sec = time.sec;
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
      }
 }
 

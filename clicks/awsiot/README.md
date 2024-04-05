@@ -105,12 +105,14 @@ void application_init ( void )
     
     log_printf( &logger, "Reset device\r\n\n" );
     awsiot_reset_device ( &awsiot );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "Factory reset\r\n" );
     strcpy ( app_buf, AWSIOT_CMD_FACTORY_RESET );
     awsiot_send_cmd ( &awsiot, app_buf );
     awsiot_read_response ( &awsiot );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "Vendor model\r\n" );
     strcpy ( app_buf, AWSIOT_CMD_CONF_CHECK );

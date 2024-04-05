@@ -111,7 +111,7 @@ void application_task ( void )
     temperature = thermo15_get_temperature_data( &thermo15, THERMO15_TEMP_IN_CELSIUS );
     log_printf( &logger, "** Temperature: %.2f C \r\n", temperature );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

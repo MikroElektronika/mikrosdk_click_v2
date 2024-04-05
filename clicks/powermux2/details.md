@@ -125,13 +125,21 @@ void application_task ( void ) {
     log_printf( &logger, " Resistance    ~ 100 kOhm \r\n" );
     log_printf( &logger, " Current Limit ~   1.23 A \r\n" );
     powermux2_set_resistance( &powermux2, 100 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "--------------------------\r\n" );
     log_printf( &logger, " Resistance    ~  50 kOhm \r\n" );
     log_printf( &logger, " Current Limit ~   2.25 A \r\n" );
     powermux2_set_resistance( &powermux2, 50 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

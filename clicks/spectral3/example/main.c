@@ -136,7 +136,7 @@ void application_init ( void )
     spectral3_init( &spectral3, &cfg );
 
     spectral3_module_reset( &spectral3 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_printf( &logger, "Configuring the sensor...\r\n" );
     spectral3_send_command( &spectral3, SPECTRAL3_CMD_AT );
@@ -146,7 +146,7 @@ void application_init ( void )
     spectral3_send_command( &spectral3, SPECTRAL3_CMD_MODE );
     spectral3_process( );
     log_printf( &logger, "The sensor has been configured!\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -156,6 +156,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

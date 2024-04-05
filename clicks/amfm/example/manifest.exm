@@ -2,7 +2,7 @@
     "name": "AMFM Click",
     "description": "AM/FM Click is a RADIO RECEIVER click board™ that can be used to listen to music from the AM and FM radio bands.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","Si4731 IC"],
     "category" : ["FM"] 
 }

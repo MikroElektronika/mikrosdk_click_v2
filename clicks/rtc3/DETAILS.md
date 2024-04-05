@@ -118,7 +118,7 @@ void application_init ( void )
 
     // Start counting
     rtc3_set_counting( &rtc3, 1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
 }
@@ -150,7 +150,7 @@ void application_task ( void )
         time_seconds = rtc3.time.time_seconds;
     }
 
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 } 
 
 ```

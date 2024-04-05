@@ -25,16 +25,17 @@
     "name": "mikroe.click.rtc",
     "product_link": "https://www.mikroe.com/rtc-click",
     "short_description": "RTC Click is an accessory board in mikroBus™ form factor. It features the PCF8583 serial real-time clock (RTC)",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1678
     ],
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.Rtc",
     "subdir_name": "lib_rtc"
 }
+
 
 

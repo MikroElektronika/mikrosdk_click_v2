@@ -114,7 +114,7 @@ void application_task ( )
     tmp = force_generic_read ( &force );
     log_printf( &logger, " * ADC value : %d \r\n", tmp );
     log_printf( &logger, "--------------------- \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

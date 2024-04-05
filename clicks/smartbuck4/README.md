@@ -150,7 +150,11 @@ void application_task ( void )
             smartbuck4_disable_regulators( &smartbuck4 );
             for ( ; ; );
         }
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

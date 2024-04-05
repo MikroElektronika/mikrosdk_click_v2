@@ -112,11 +112,11 @@ void application_task ( void )
 {
     eeprom3_write_page( &eeprom3, 0x100, text, 6 );
     log_printf( &logger, "Writing Mikroe to EEPROM 3 click\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     eeprom3_read( &eeprom3, 0x100, mem_value, 6 );
     log_printf( &logger, "Data read: %s\r\n", mem_value );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

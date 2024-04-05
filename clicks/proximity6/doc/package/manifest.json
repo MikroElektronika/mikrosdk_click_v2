@@ -25,17 +25,18 @@
     "name": "mikroe.click.proximity6",
     "product_link": "https://www.mikroe.com/proximity-6-click",
     "short_description": "Proximity 6 click is a versatile proximity detection device on a Click board™.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2394
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Proximity6",
     "subdir_name": "lib_proximity6"
 }
+
 
 
 

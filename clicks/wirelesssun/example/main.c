@@ -224,18 +224,27 @@ void application_task ( void )
         log_printf( &logger, "\r\n - Sending \"%s\" message via TCP -\r\n", demo_text_msg );
         wirelesssun_send_cmd_with_parameter ( &wirelesssun, WIRELESSSUN_CMD_TCPS, tcp_udp_params );
         wirelesssun_rsp_check ( );
-        Delay_ms ( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
         
         log_printf( &logger, "\r\n - Sending \"%s\" message via UDP -\r\n", demo_text_msg );
         wirelesssun_send_cmd_with_parameter ( &wirelesssun, WIRELESSSUN_CMD_UDPS, tcp_udp_params );
         wirelesssun_rsp_check ( );
-        Delay_ms ( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 #endif
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -305,7 +314,7 @@ static err_t wirelesssun_rsp_check ( void )
             log_error( &logger, " Timeout!" );
             return WIRELESSSUN_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
     log_printf( &logger, "\r\n" );     
     return WIRELESSSUN_OK;
@@ -326,7 +335,7 @@ static void wirelesssun_wait_for_connection ( void )
             wirelesssun_rsp_check ( );
             timeout_cnt = 0;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
         if ( ( strstr( app_buf, FMNG_JOIN_STATE_5 ) ) || 
              ( strstr( app_buf, FSTAT_OPERATIONAL ) ) )
         {
@@ -359,7 +368,7 @@ static void wirelesssun_get_parent_gbl_address ( uint8_t *gbl_addr )
                 if ( start_gbl_ptr )
                 {
                     start_gbl_ptr += 4;
-                    Delay_ms( 100 );
+                    Delay_ms ( 100 );
                     wirelesssun_process( );
                     char * __generic_ptr end_gbl_ptr = strstr( start_gbl_ptr, GBL_ADDRESS_END );
                     memcpy ( gbl_addr, start_gbl_ptr, end_gbl_ptr - start_gbl_ptr );
@@ -372,7 +381,7 @@ static void wirelesssun_get_parent_gbl_address ( uint8_t *gbl_addr )
             {
                 break;
             }
-            Delay_ms( 1 );
+            Delay_ms ( 1 );
         }
     }
 }

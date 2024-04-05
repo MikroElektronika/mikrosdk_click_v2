@@ -116,10 +116,10 @@ void application_task ( void )
             //Converts the key index into ascii character ( 0 - 7 -> '1' - '7')
             temp = counter + 49;
             log_info( &logger, "%d\r\n", temp );
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
         }
     }
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 } 
 
 ```

@@ -60,7 +60,7 @@ static void canfd4_process ( void )
             log_printf( &logger, "%c", uart_rx_buffer[ check_buf_cnt ] );
         }
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -90,7 +90,7 @@ void application_init ( void )
     canfd4_init( &canfd4, &cfg );
 
     canfd4_set_dev_mode ( &canfd4, CANFD4_NORMAL_MODE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -101,12 +101,18 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     canfd4_generic_write( &canfd4, TEXT_TO_SEND, 8 );
     log_info( &logger, "--- The message is sent ---" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif 
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

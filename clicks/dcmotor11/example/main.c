@@ -84,7 +84,8 @@ void application_task ( void )
         dcmotor11_control( &dcmotor11, motor_dir, motor_speed );
     }
 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     // Speed decrease 
     motor_speed -= 4;
@@ -101,7 +102,8 @@ void application_task ( void )
         dcmotor11_control( &dcmotor11, motor_dir, motor_speed );
     }
 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     // Stop / Start
     if( f_motor_state == 1 )
@@ -118,7 +120,8 @@ void application_task ( void )
         dcmotor11_control( &dcmotor11, motor_dir, motor_speed );
     }
 
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     // Direction - Forward / Backword 
     if ( motor_dir == 2 )
@@ -137,6 +140,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

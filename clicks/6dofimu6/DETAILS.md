@@ -95,7 +95,7 @@ void application_init ( void )
     C6DOFIMU6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c6dofimu6_init( &c6dofimu6, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     c6dofimu6_generic_read ( &c6dofimu6, C6DOFIMU6_WHO_AM_I, &id_val, 1 );
     if ( id_val == C6DOFIMU6_WHO_AM_I_VAL )
     {
@@ -117,7 +117,7 @@ void application_init ( void )
     log_printf( &logger, "    ---Initialised---    \r\n" );
     log_printf( &logger, "-------------------------\r\n" );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -148,7 +148,7 @@ void application_task ( void )
     log_printf( &logger, "Y-axis: %.2f\r\n", y_accel );
     log_printf( &logger, "Z-axis: %.2f\r\n", z_accel );
     log_printf( &logger, "---------------------\r\n\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

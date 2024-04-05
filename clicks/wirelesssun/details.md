@@ -205,12 +205,16 @@ void application_task ( void )
         log_printf( &logger, "\r\n - Sending \"%s\" message via TCP -\r\n", demo_text_msg );
         wirelesssun_send_cmd_with_parameter ( &wirelesssun, WIRELESSSUN_CMD_TCPS, tcp_udp_params );
         wirelesssun_rsp_check ( );
-        Delay_ms ( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
         
         log_printf( &logger, "\r\n - Sending \"%s\" message via UDP -\r\n", demo_text_msg );
         wirelesssun_send_cmd_with_parameter ( &wirelesssun, WIRELESSSUN_CMD_UDPS, tcp_udp_params );
         wirelesssun_rsp_check ( );
-        Delay_ms ( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 #endif
 }

@@ -2,7 +2,7 @@
     "name": "H-Bridge Driver Click",
     "description": "H-Bridge Driver Click is a compact add-on board that contains an H-bridge gate driver, also known as a full-bridge pre-driver. This board features the MC33883, an H-Bridge gate driver with an integrated charge pump and independent high and low side gate drive channels from NXP Semiconductors.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click"," MC33883"],
     "category" : ["Motor control"]
 }

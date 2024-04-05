@@ -130,7 +130,9 @@ void application_task ( void )
             digipot_wiper = BUCK20_WIPER_ZERO_SCALE;
         }
     }
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

@@ -73,11 +73,16 @@ void application_task ( void )
         
     expand12_read_all_pins_value( &expand12, &pins_status );
     log_printf( &logger, " Pins status (32-bit) : 0x%.8LX\r\n\n", pins_status );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

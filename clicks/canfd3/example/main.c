@@ -57,7 +57,7 @@ static void canfd3_process ( void )
             log_printf( &logger, "%c", uart_rx_buffer[ check_buf_cnt ] );
         }
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -87,7 +87,7 @@ void application_init ( void )
     canfd3_init( &canfd3, &cfg );
 
     canfd3_set_cs_pin( &canfd3, CANFD3_MODE_NORMAL );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -98,11 +98,17 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     canfd3_generic_write( &canfd3, TEXT_TO_SEND, 8 );
     log_info( &logger, "--- The message is sent ---" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif 
 }
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -72,13 +72,13 @@ void application_init ( void ) {
 
     analogmux3_default_cfg ( &analogmux3 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) {
     for ( uint8_t ch_pos = ANALOGMUX3_SET_CHANNEL_0; ch_pos <= ANALOGMUX3_SET_CHANNEL_7; ch_pos++ ) {
         analogmux3_set_channel( &analogmux3, ch_pos );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
         
         uint16_t analogmux3_an_value = 0;
     
@@ -101,6 +101,11 @@ void application_task ( void ) {
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.radiostation",
     "product_link": "https://www.mikroe.com/radiostation-click",
     "short_description": "RadioStation click is a unique click board™ that can be used to broadcast the music via the FM radio band. It features the Si4713-B30 from Silicon Labs, the best in class integrated FM broadcast stereo transmitter, which operates in the frequency range of 76MHz to 108MHz. It can also broadcast RDS/RDBS data. The click board™ can be equipped with a small FM antenna, which is used to extend the broadcasting range.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2250
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.RadioStation",
     "subdir_name": "lib_radiostation"
 }
+
 
 
 

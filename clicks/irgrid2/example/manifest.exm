@@ -2,7 +2,7 @@
     "name": "IR Grid 2 Click",
     "description": "IR Grid 2 click is a thermal imaging sensor. It has an array of 768 very sensitive factory calibrated IR elements (pixels), arranged in 32 rows of 24 pixels. Each one of them is measuring an object temperature up to 300˚C within its local Field of View (FOV). The MLX90640ESF-BAB IR sensor used on this Click board™ has just four pins, and it is mounted inside of the industry standard TO39 package. It is equipped with 2Kbit of EEPROM for storing the compensation and calibration parameters.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","PCA9306"],
     "category" : ["Optical"]
 }

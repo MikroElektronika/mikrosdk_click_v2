@@ -2,7 +2,7 @@
     "name": "2x2 Key Click",
     "description": "2x2 Key click has a 4 button keypad and allows multiple key presses.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","74HC32"],
     "category" : ["Pushbutton/Switches"] 
 }

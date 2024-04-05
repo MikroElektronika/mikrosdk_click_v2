@@ -125,7 +125,7 @@ void application_task ( void )
     if ( AMBIENT18_OK == ambient18_read_voltage ( &ambient18, &voltage ) ) 
     {
         log_printf( &logger, " Illuminance : %ld Lux\r\n\n", ambient18_voltage_to_lux( &ambient18, voltage ) );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

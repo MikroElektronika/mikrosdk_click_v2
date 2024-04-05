@@ -2,7 +2,7 @@
     "name": "Silent Step Click",
     "description": "Silent Step Click is the complete integrated bipolar step motor driver solution, rich with many features that allow extremely smooth and silent operation of the connected motor while being able to provide up to 2.5A peak motor current and withstand up to 46V supply voltage. The specialized TMC5130 IC driver from Trinamic Company far exceeds the capabilities of similar step motor drivers that are commonly used.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","TMC5130A-TA-T"],
     "category" : ["Click Boards > Motor control > Stepper"]
 }

@@ -112,19 +112,19 @@ void application_init ( void ) {
     touch_id_state = 0;
     log_printf( &logger, "------------------------------\r\n" );
     device_id = touchpad3_get_device_id( &touchpad3 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "     Get Device ID : %d \r\n      ", device_id );
     log_printf( &logger, "------------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     status_data = touchpad3_config_touch( &touchpad3, TOUCHPAD3_TOUCH_GESTURE_ENABLE );
     
     log_printf( &logger, "     Touch Enable Status:     \r\n");
     display_status( );
     log_printf( &logger, "------------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -139,13 +139,13 @@ void application_task ( void ) {
     if ( touchpad3_get_int( &touchpad3 ) == TOUCHPAD3_INT_STATUS_HIGH ) {
        
        touchpad3_get_touch( &touchpad3, &touch_data, &x_axis, &y_axis );
-       Delay_ms( 100 );
+       Delay_ms ( 100 );
 
         if ( ( touch_data.tch_state == TOUCHPAD3_STATE_TCH ) && ( touch_data.touch_id == touch_id_state ) ) {   
             log_printf( &logger, "  X Coordinate : %d   \r\n" , x_axis );
             log_printf( &logger, "  Y Coordinate : %d   \r\n" , y_axis );
             log_printf( &logger, "------------------------------\r\n" );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
 }

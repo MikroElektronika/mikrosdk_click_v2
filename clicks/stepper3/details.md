@@ -119,13 +119,15 @@ void application_task ( void )
     stepper3_set_step_mode ( &stepper3, STEPPER3_MODE_FULL_STEP );
     stepper3_set_direction ( &stepper3, STEPPER3_DIR_CW );
     stepper3_drive_motor ( &stepper3, 64, STEPPER3_SPEED_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf ( &logger, " Move 128 half steps counter-clockwise \r\n\n" );
     stepper3_set_step_mode ( &stepper3, STEPPER3_MODE_HALF_STEP );
     stepper3_set_direction ( &stepper3, STEPPER3_DIR_CCW );
     stepper3_drive_motor ( &stepper3, 128, STEPPER3_SPEED_VERY_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

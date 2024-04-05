@@ -2,7 +2,7 @@
     "name": "LBAND RTK Click",
     "description": "LBAND RTK Click is a compact add-on board that provides global and easy access to satellite L-Band GNSS corrections. This board features the NEO-D9S-00B, an professional-grade satellite data receiver for L-band correction broadcast from u-blox. Operating in a frequency range from 1525MHz to 1559MHz, the NEO-D9S-00B decodes the satellite transmission and outputs a correction stream, enabling a high-precision GNSS receiver to reach accuracies down to centimeter level. It can also select the GNSS correction data delivery channel alongside advanced security features such as signature and anti-jamming.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","NEO-D9S-00B"],
     "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"]
 }

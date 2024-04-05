@@ -25,17 +25,18 @@
     "name": "mikroe.click.monarchadapter",
     "product_link": "https://www.mikroe.com/monarch-adapter-click",
     "short_description": "The Monarch Adapter Click is used to connect a compatible Monarch Go LTE-M modems from Sequanse to your development board or prototype device.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3811
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.MonarchAdapter",
     "subdir_name": "lib_monarchadapter"
 }
+
 
 
 

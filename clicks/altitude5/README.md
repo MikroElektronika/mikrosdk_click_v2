@@ -115,7 +115,7 @@ void application_init ( void )
     altitude5_default_cfg ( &altitude5 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, "----------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -136,12 +136,12 @@ void application_task ( void )
     
     altitude5_get_pressure( &altitude5, &pressure );
     log_printf( &logger, " Pressure    : %.2f mBar \r\n", pressure );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     altitude5_get_altitude( &altitude5, &altitude );
     log_printf( &logger, " Altitude    : %.2f m \r\n", altitude );
     log_printf( &logger, "----------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

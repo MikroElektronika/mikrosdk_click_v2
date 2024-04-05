@@ -25,14 +25,15 @@
     "name": "mikroe.click.lightranger8",
     "product_link": "https://www.mikroe.com/lightranger-8-click",
     "short_description": "LightRanger 8 Click is a compact add-on board that contains a ranging sensor with multi-target detection. This board features the VL53L3CX, the latest Time-of-Flight (ToF) product that embeds third-generation FlightSense patented technology from STMicroelectronics.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.LightRanger8",
     "subdir_name": "lib_lightranger8"
 }
+
 
 
 

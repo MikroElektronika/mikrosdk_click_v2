@@ -161,22 +161,30 @@ void dac4_channel_report ( )
     log_printf( &logger, "\r\n -----> Channel A \r\n" );
     dac4_set_output( DAC4_CHANNEL_A );
     dac4_log_report( 0 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "\r\n -----> Channel B \r\n" );
     dac4_set_output( DAC4_CHANNEL_B );
     dac4_log_report( 1 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "\r\n -----> Channel C \r\n" );
     dac4_set_output( DAC4_CHANNEL_C );
     dac4_log_report( 2 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "\r\n -----> Channel D \r\n" );
     dac4_set_output( DAC4_CHANNEL_D );
     dac4_log_report( 3 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -206,11 +214,11 @@ void application_init ( void )
     dac4_init( &dac4, &cfg );
     log_info( &logger, "---- Application ----" );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     dac4_general_call_reset( &dac4 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     dac4_general_call_wake_up( &dac4 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     log_printf( &logger, "--- App init done \r\n \r\n" );
 }
@@ -222,6 +230,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

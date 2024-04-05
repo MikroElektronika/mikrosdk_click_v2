@@ -25,17 +25,18 @@
     "name": "mikroe.click.magicrfid",
     "product_link": "https://www.mikroe.com/magic-rfid-click",
     "short_description": "Magic RFID Click is a compact add-on board that contains an embedded RFID module. This board features the M6E-NANO, UHF RFID module with ultra-low power consumption from JADAK. Supporting the EPC Gen2V2 and ISO 18000-63 standard, the M6E-NANO module is available for global use. It operates in the Ultra High Frequency (UHF) band in a range from 859 up to 930MHz and can be used for write/read applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         3810
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.MagicRFID",
     "subdir_name": "lib_magicrfid"
 }
+
 
 
 

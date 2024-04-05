@@ -25,14 +25,15 @@
     "name": "mikroe.click.excelonultra",
     "product_link": "https://www.mikroe.com/excelon-ultra-click",
     "short_description": "Excelon-Ultra Click is a compact add-on board that contains the most reliable nonvolatile memory. This board features the CY15B116QSN, a high-performance 16-Mbit nonvolatile memory that employs an advanced ferroelectric process from Infineon Technologies.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.ExcelonUltra",
     "subdir_name": "lib_excelonultra"
 }
+
 
 
 

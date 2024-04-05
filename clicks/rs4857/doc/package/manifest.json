@@ -25,14 +25,15 @@
     "name": "mikroe.click.rs4857",
     "product_link": "https://www.mikroe.com/rs485-7-click",
     "short_description": "RS485 7 Click is a compact add-on board that enables communication over an RS485 network. This board features the THVD1424, a full duplex RS485 transceiver with a selectable data rate from Texas Instruments. The THVD1424 offers several pin-controlled features, including an on-chip 120Ω termination resistor, slew rate control, and the ability to switch between half and full duplex mode. With its high immunity to IEC Contact Discharge ESD events, the bus pins require no additional system-level protection components. Additionally, the chip is known for its low power consumption and glitch-free power-up/power-down functionality, which enables hot plug-in capability.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.RS4857",
     "subdir_name": "lib_rs4857"
 }
+
 
 
 

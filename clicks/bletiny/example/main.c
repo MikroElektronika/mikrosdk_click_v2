@@ -195,7 +195,7 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_printf( &logger, "\r\nApplication Init\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     // Click initialization.
     bletiny_cfg_setup( &bletiny_cfg );
@@ -240,7 +240,7 @@ void application_init ( void )
     {
         bletiny_error_check( app_error_flag );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     //send command to check ble address
     bletiny_send_cmd( &bletiny, BLETINY_CMD_BDADDR );
     app_error_flag = bletiny_rsp_check();
@@ -253,7 +253,7 @@ void application_init ( void )
     {
         bletiny_error_check( app_error_flag );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     //send ATrI command to check remote connected device
     bletiny_send_cmd( &bletiny, BLETINY_CMD_ATRI );
     app_error_flag = bletiny_rsp_check();
@@ -266,7 +266,7 @@ void application_init ( void )
     {
         bletiny_error_check( app_error_flag );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     //send RSSI command to check signal quality
     bletiny_send_cmd( &bletiny, BLETINY_CMD_RSSI );
     app_error_flag = bletiny_rsp_check();
@@ -336,6 +336,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -420,7 +425,7 @@ static err_t bletiny_rsp_check ( void )
             return BLETINY_ERROR_TIMEOUT;
         }
 
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
 
     if ( strstr( app_buf, BLETINY_RSP_OK ) )
@@ -486,7 +491,7 @@ static void bletiny_example_init ( void )
                         log_printf( &logger, " cmd foud: %s\r\n", EXAMPLE_CMD[ index ] );
                         bletiny_clear_app_buf( );
                         bletiny_send_cmd( &bletiny, BLETINY_CMD_CLEAR_MEM );
-                        Delay_ms( 500 );
+                        Delay_ms ( 500 );
                         bletiny_process( );
                         bletiny_clear_app_buf( );
                         if ( index < 2 )
@@ -533,10 +538,11 @@ static void bletiny_example_init ( void )
             bletiny_clear_app_buf(  );
         }
 
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 ); 
+        Delay_ms ( 1000 );
     }
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 static void bletiny_application_example ( void )
@@ -567,7 +573,7 @@ static void bletiny_i2c_example ( void )
             for ( uint8_t cnt = 0; cnt < 6; cnt++ )
             {
                 bletiny_i2c_write( &bletiny, 0x50, cnt + 1, mem_value[ cnt ] );
-                Delay_ms( 100 );
+                Delay_ms ( 100 );
             }
 
             if ( BLETINY_OK == bletiny_i2c_read ( &bletiny, 0x50, 0x01 , mem_value, 6 ) )
@@ -582,7 +588,8 @@ static void bletiny_i2c_example ( void )
             break;
         }
     }
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 static void bletiny_spi_example ( void )
@@ -611,7 +618,7 @@ static void bletiny_spi_example ( void )
             uint8_t buf[ 10 ] = { 0x02, 0x00, 0x00, 0x01, 'M', 'i', 'k', 'r', 'o', 'E' };
             bletiny_spi_write ( &bletiny, buf, 10 );
             log_printf ( &logger, "Writing Mikroe to EEPROM 2 click\r\n" );
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
 
             uint8_t data_in[ 4 ] = { 0x03, 0x00, 0x00, 0x01 };
             uint8_t read_data[ 7 ] = { 0 };
@@ -624,7 +631,7 @@ static void bletiny_spi_example ( void )
             break;
         }
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 static void bletiny_clear_char( uint8_t *str, char chr )

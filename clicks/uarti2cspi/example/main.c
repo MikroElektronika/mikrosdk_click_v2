@@ -60,15 +60,15 @@ void application_init ( void )
     uarti2cspi_cfg_setup( &cfg );
     UARTI2CSPI_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     uarti2cspi_init( &uarti2cspi, &cfg );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     uarti2cspi_advanced_init( &uarti2cspi, 115200, UARTI2CSPI_UART_8_BIT_DATA, 
                                                    UARTI2CSPI_UART_NOPARITY,
                                                    UARTI2CSPI_UART_ONE_STOPBIT );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     uarti2cspi_interrupt_enable( &uarti2cspi, UARTI2CSPI_RXD_INT_EN | UARTI2CSPI_THR_EMPTY_INT_EN );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
 #ifdef DEMO_APP_TRANSMITTER
     log_info( &logger, "---- TRANSMITTER MODE ----" );
@@ -76,7 +76,7 @@ void application_init ( void )
 #ifdef DEMO_APP_RECEIVER
     log_info( &logger, "---- RECEIVER MODE ----" );
 #endif
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -84,7 +84,8 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     uarti2cspi_uart_write_text( &uarti2cspi, TEXT_TO_SEND );
     log_info( &logger, "---- The message has been sent ----" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif
 #ifdef DEMO_APP_RECEIVER
     if ( uarti2cspi_uart_data_ready( &uarti2cspi ) )
@@ -97,6 +98,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

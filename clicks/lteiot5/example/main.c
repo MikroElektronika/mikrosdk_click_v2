@@ -138,7 +138,7 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     // Click initialization.
     lteiot5_cfg_setup( &lteiot5_cfg );
@@ -157,7 +157,7 @@ void application_init ( void )
     lteiot5_power_on( &lteiot5 );
     
     lteiot5_send_cmd( &lteiot5, LTEIOT5_CMD_AT );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     lteiot5_process(  );
     lteiot5_clear_app_buf(  );
     
@@ -165,96 +165,104 @@ void application_init ( void )
     lteiot5_send_cmd( &lteiot5, LTEIOT5_CMD_AT );
     app_error_flag = lteiot5_rsp_check();
     lteiot5_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     //ATI
     lteiot5_send_cmd( &lteiot5, LTEIOT5_CMD_ATI );
     app_error_flag = lteiot5_rsp_check();
     lteiot5_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     //ATI
     lteiot5_send_cmd( &lteiot5, LTEIOT5_CMD_CGMR );
     app_error_flag = lteiot5_rsp_check();
     lteiot5_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     //CFUN
     lteiot5_send_cmd_with_parameter( &lteiot5, LTEIOT5_CMD_CFUN, "0" );
     app_error_flag = lteiot5_rsp_check();
     lteiot5_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     //COPS
     lteiot5_send_cmd_with_parameter( &lteiot5, LTEIOT5_CMD_COPS, "2" );
     app_error_flag = lteiot5_rsp_check();
     lteiot5_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     //CGDCONT
     lteiot5_set_sim_apn( &lteiot5, SIM_APN );
     app_error_flag = lteiot5_rsp_check();
     lteiot5_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     //URAT
     lteiot5_send_cmd_with_parameter( &lteiot5, LTEIOT5_CMD_URAT, "7" );
     app_error_flag = lteiot5_rsp_check();
     lteiot5_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     //UBANDMASK,
     lteiot5_send_cmd_with_parameter( &lteiot5, LTEIOT5_CMD_UBANDMASK, "0,185473183" );
     app_error_flag = lteiot5_rsp_check();
     lteiot5_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     //CFUN
     lteiot5_send_cmd_with_parameter( &lteiot5, LTEIOT5_CMD_CFUN, "1" );
     app_error_flag = lteiot5_rsp_check();
     lteiot5_error_check( app_error_flag );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     //CFUN
     lteiot5_send_cmd_with_parameter( &lteiot5, LTEIOT5_CMD_CFUN, "16" );
     app_error_flag = lteiot5_rsp_check();
     lteiot5_error_check( app_error_flag );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     lteiot5_send_cmd_check( &lteiot5, LTEIOT5_CMD_CFUN );
     app_error_flag = lteiot5_rsp_check();
     lteiot5_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     //COPS
     lteiot5_send_cmd_check( &lteiot5, LTEIOT5_CMD_COPS );
     app_error_flag = lteiot5_rsp_check();
     lteiot5_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     //UANTR
     lteiot5_send_cmd_with_parameter( &lteiot5, LTEIOT5_CMD_UANTR, "0" );
     app_error_flag = lteiot5_rsp_check();
     lteiot5_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     //CEREG
     lteiot5_send_cmd_with_parameter( &lteiot5, LTEIOT5_CMD_CEREG, "2" );
     app_error_flag = lteiot5_rsp_check();
     lteiot5_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     //CIMI
     lteiot5_send_cmd( &lteiot5, LTEIOT5_CMD_CIMI );
     app_error_flag = lteiot5_rsp_check();
     lteiot5_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     app_buf_len = 0;
     app_buf_cnt = 0;
     app_connection_status = WAIT_FOR_CONNECTION;
     log_info( &logger, " Application Task " );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -264,17 +272,21 @@ void application_task ( void )
         lteiot5_send_cmd_check( &lteiot5, LTEIOT5_CMD_CGATT );
         app_error_flag = lteiot5_rsp_check();
         lteiot5_error_check( app_error_flag );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         
         lteiot5_send_cmd_check( &lteiot5, LTEIOT5_CMD_CEREG );
         app_error_flag = lteiot5_rsp_check();
         lteiot5_error_check( app_error_flag );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         
         lteiot5_send_cmd( &lteiot5, LTEIOT5_CMD_CSQ );
         app_error_flag = lteiot5_rsp_check();
         lteiot5_error_check( app_error_flag );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     else
     {
@@ -283,7 +295,9 @@ void application_task ( void )
         lteiot5_send_cmd_with_parameter( &lteiot5, "AT+CMGF", "1" );
         app_error_flag = lteiot5_rsp_check();
         lteiot5_error_check( app_error_flag );
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
         
         for( ; ; )
         {   
@@ -291,13 +305,28 @@ void application_task ( void )
             lteiot5_send_text_message( &lteiot5, PHONE_NUMBER_TO_MESSAGE, MESSAGE_CONTENT );
             app_error_flag = lteiot5_rsp_check();
             lteiot5_error_check( app_error_flag );
-            Delay_ms( 10000 );
+            // 10 seconds delay
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
         }
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -381,13 +410,13 @@ static err_t lteiot5_rsp_check ( void )
             {
                 lteiot5_send_cmd( &lteiot5, LTEIOT5_CMD_AT );
                 lteiot5_process(  );
-                Delay_ms( 100 );
+                Delay_ms ( 100 );
             }
             lteiot5_clear_app_buf(  );
             return APP_ERROR_TIMEOUT;
         }
         
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
     
     lteiot5_check_connection();

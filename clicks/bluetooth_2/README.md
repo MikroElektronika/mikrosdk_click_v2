@@ -96,7 +96,7 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Init " );
 
     // Click initialization.
@@ -149,7 +149,7 @@ void application_task ( void )
     bluetooth2_process();
     if ( app_buf_len > 0 ) 
     {
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
         bluetooth2_process();
         
         if ( strstr( app_buf, RSP_RING ) )
@@ -172,7 +172,7 @@ void application_task ( void )
         send_cnt = 0;
     }
     
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 }
 
 ```

@@ -66,21 +66,32 @@ void application_task( void )
     charger5_generic_write( &charger5, CHARGER5_REG_WIPER0_VOL,
                             CHARGER5_CURRENT_500MA );
     log_printf( &console, "Output current is set to 500 mA.\r\n" );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     charger5_increment_wiper( &charger5, CHARGER5_REG_WIPER0_VOL,
                               CHARGER5_STEPS_10 );
     log_printf( &console, "Output current value is incremented by 10 steps.\r\n" );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     charger5_decrement_wiper( &charger5, CHARGER5_REG_WIPER0_VOL,
                               CHARGER5_STEPS_5 );
     log_printf( &console, "Output current value is decremented by 5 steps.\r\n" );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

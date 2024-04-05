@@ -94,7 +94,7 @@ void application_init ( void )
     DIGIPOT3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     digipot3_init( &digipot3, &cfg );
 
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
     
     digipot3_read_dac(  &digipot3, &digital_value );
     digipot3_read_eemem( &digipot3, DIGIPOT3_RDAC_EEMEM_LOC, &eemem_value );
@@ -105,7 +105,7 @@ void application_init ( void )
     }
 
     log_printf( &logger, "DIGI POT 3 is initialized \r\n" );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 }
   
 ```
@@ -126,7 +126,8 @@ void application_task ( void )
         digipot3_send_command( &digipot3, DIGIPOT3_INCREMENT_RDAC_6DB_COMM );
         digipot3_read_dac( &digipot3, &digital_value );
         log_printf( &logger, "DAC value is: %u \r\n", digital_value );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 
     while ( digital_value > 0x0002 )
@@ -134,7 +135,8 @@ void application_task ( void )
         digipot3_send_command( &digipot3, DIGIPOT3_DECREMENT_RDAC_6DB_COMM );
         digipot3_read_dac( &digipot3, &digital_value );
         log_printf( &logger, "DAC value is: %u \r\n", digital_value );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 
     if ( eemem_value != digital_value )

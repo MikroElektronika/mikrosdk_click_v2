@@ -25,14 +25,15 @@
     "name": "mikroe.click.humidity",
     "product_link": "https://www.mikroe.com/humidity-click",
     "short_description": "Humidity Click is a compact add-on board used to sense the amount of water vapor in the air. This board features the HIH-5030, an analog output relative humidity sensor from Honeywell Sensing and Productivity Solutions. The HIH-5031 is a covered, condensation-resistant, integrated circuit humidity sensor that is factory-fitted with a hydrophobic filter allowing usage in many condensing environments.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Humidity",
     "subdir_name": "lib_humidity"
 }
+
 
 
 

@@ -61,25 +61,46 @@ void application_init ( void )
 void application_task ( )
 {
     buck7_set_output_voltage( &buck7, BUCK7_OUT_VOLTAGE_5V );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     buck7_set_output_voltage( &buck7, BUCK7_OUT_VOLTAGE_10V );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     buck7_set_output_voltage( &buck7, BUCK7_OUT_VOLTAGE_15V );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     buck7_set_output_voltage( &buck7, BUCK7_OUT_VOLTAGE_20V );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     buck7_set_output_voltage( &buck7, BUCK7_OUT_VOLTAGE_25V );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     buck7_set_output_voltage( &buck7, BUCK7_OUT_VOLTAGE_20V );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     buck7_set_output_voltage( &buck7, BUCK7_OUT_VOLTAGE_15V );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     buck7_set_output_voltage( &buck7, 0x0BB8 ); 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

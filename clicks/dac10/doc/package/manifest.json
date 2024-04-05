@@ -25,14 +25,15 @@
     "name": "mikroe.click.dac10",
     "product_link": "https://www.mikroe.com/dac-10-click",
     "short_description": "DAC 10 Click is a compact add-on board that contains a fully-featured, highly accurate digital-to-analog converter. This board features the DAC53401, a 10-bit voltage-output smart digital-to-analog converter from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.DAC10",
     "subdir_name": "lib_dac10"
 }
+
 
 
 

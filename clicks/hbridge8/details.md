@@ -114,13 +114,13 @@ void application_init ( void )
     }
 
     hbridge8_default_cfg ( &hbridge8 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
    
     hbridge8_set_mode( &hbridge8, HBRIDGE8_MODE_FORWARD );
     log_printf( &logger, "\r\n>>> Forward\r\n\r\n" );
     hbridge8_set_duty_cycle ( &hbridge8, 0.1 );
     hbridge8_pwm_start( &hbridge8 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -143,7 +143,9 @@ void application_task ( void )
     hbridge8_set_duty_cycle ( &hbridge8, duty );
     log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt ) );
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     if ( 8 == duty_cnt ) 
     {

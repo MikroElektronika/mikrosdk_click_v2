@@ -95,7 +95,7 @@ void application_init ( void )
     
     flash4_reset( &flash4 );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     flash4_read_manufacturer_id( &flash4, device_id );
     
@@ -105,7 +105,7 @@ void application_init ( void )
         log_printf( &logger, "Please restart your system.\r\n" );
         for( ; ; );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -138,7 +138,11 @@ void application_task ( void )
     
     log_printf( &logger, "--- Read buffer : %s\r\n", read_buffer );
 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

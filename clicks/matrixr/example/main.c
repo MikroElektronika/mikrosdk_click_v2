@@ -60,51 +60,56 @@ void application_init ( ) {
     matrixr_cfg_setup( &cfg );
     MATRIXR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     matrixr_init( &matrixr, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     matrixr_default_cfg( &matrixr );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( ) {
    
     matrixr_display_characters( &matrixr, ' ', 'M' );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     matrixr_display_characters( &matrixr, 'M', 'i' );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     matrixr_display_characters( &matrixr, 'i', 'k' );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     matrixr_display_characters( &matrixr, 'k', 'r' );
-    Delay_ms( 1000);
+    Delay_ms ( 1000);
     matrixr_display_characters( &matrixr, 'r', 'o' );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     matrixr_display_characters( &matrixr, 'o', 'E' );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     matrixr_display_characters( &matrixr, 'E', 'l' );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     matrixr_display_characters( &matrixr, 'l', 'e' );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     matrixr_display_characters( &matrixr, 'e', 'k' );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     matrixr_display_characters( &matrixr, 'k', 't' );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     matrixr_display_characters( &matrixr, 't', 'r' );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     matrixr_display_characters( &matrixr, 'r', 'o' );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     matrixr_display_characters( &matrixr, 'o', 'n' );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     matrixr_display_characters( &matrixr, 'n', 'i' );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     matrixr_display_characters( &matrixr, 'i', 'k' );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     matrixr_display_characters( &matrixr, 'k', 'a' );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     matrixr_display_characters( &matrixr, 'a', ' ' );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -2,7 +2,7 @@
     "name": "LTE IoT 9 Click",
     "description": "LTE IoT 9 Click is a compact add-on board containing a cellular IoT Module that supports 3GPP Release 14 and all LTE bands.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","EXS62-W"],
     "category" : ["GSM/LTE"]
 }

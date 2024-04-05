@@ -60,7 +60,7 @@ void application_init ( void )
     irthermo2_init( &irthermo2, &cfg );
 
     irthermo2_default_cfg( &irthermo2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, "---- Application Task ----" );
 }
 
@@ -71,11 +71,16 @@ void application_task ( void )
     log_printf( &logger, " Temperature : %.2f C\r\n", temperature );
     log_printf( &logger, "---------------------------\r\n" );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

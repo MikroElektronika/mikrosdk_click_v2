@@ -128,13 +128,15 @@ static int8_t ble7_process ( void )
                 if ( data_mode == 0 ) 
                 {
                     ble7_send_command( &ble7, "send Hello" );
-                    Delay_ms( 2000 );
+                    Delay_ms ( 1000 );
+                    Delay_ms ( 1000 );
                     ble7_send_command( &ble7, "send MikroE" );
                 }
                 else
                 {
                     ble7_send_command( &ble7, "Hello" );
-                    Delay_ms( 2000 );
+                    Delay_ms ( 1000 );
+                    Delay_ms ( 1000 );
                     ble7_send_command( &ble7, "MikroE" );
                 }
             }
@@ -144,7 +146,7 @@ static int8_t ble7_process ( void )
             process_cnt--;
             
             // Process delay 
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
     
@@ -265,6 +267,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

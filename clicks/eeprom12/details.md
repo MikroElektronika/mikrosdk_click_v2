@@ -95,10 +95,10 @@ void application_init ( void )
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -119,18 +119,20 @@ void application_task ( void )
                                                           strlen( DEMO_TEXT_MESSAGE_1 ) ) )
     {
         log_printf( &logger, " Write data: %s\r\n", data_buf );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     
     memset( data_buf, 0, sizeof( data_buf ) );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     if ( EEPROM12_OK == eeprom12_memory_read( &eeprom12, STARTING_ADDRESS, 
                                                          data_buf, 
                                                          strlen( DEMO_TEXT_MESSAGE_1 ) ) )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         log_printf( &logger, " Read data: %s\r\n\n", data_buf );
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     
     memcpy( data_buf, DEMO_TEXT_MESSAGE_2, strlen( DEMO_TEXT_MESSAGE_2 ) );
@@ -139,18 +141,20 @@ void application_task ( void )
                                                           strlen( DEMO_TEXT_MESSAGE_2 ) ) )
     {
         log_printf( &logger, " Write data: %s\r\n", data_buf );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     
     memset( data_buf, 0, sizeof( data_buf ) );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     if ( EEPROM12_OK == eeprom12_memory_read( &eeprom12, STARTING_ADDRESS, 
                                                          data_buf, 
                                                          strlen( DEMO_TEXT_MESSAGE_2 ) ) )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         log_printf( &logger, " Read data: %s\r\n\n", data_buf );
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

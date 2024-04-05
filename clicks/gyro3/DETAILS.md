@@ -97,7 +97,9 @@ void application_init ( void )
     gyro3_init( &gyro3, &cfg );
     gyro3_default_cfg( &gyro3 );
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```

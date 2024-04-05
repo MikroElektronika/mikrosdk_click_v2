@@ -25,14 +25,15 @@
     "name": "mikroe.click.color4",
     "product_link": "https://www.mikroe.com/color-4-click",
     "short_description": "Color 4 Click is a compact add-on board providing an accurate color-sensing solution. This board features the VEML6040, a 16-bit RGBW color sensor offering spectral response through a compatible I2C interface from Vishay Semiconductors. The VEML6040 is based on the Filtron™ technology achieving the closest ambient light spectral sensitivity to real-human eye responses. Alongside the color sensor, this IC also incorporates a signal conditioning circuit consisting of photodiodes, amplifiers, and A/D circuits placed into a single chip using the CMOS process. It provides a selectable measurement range up to 16.496lx with the highest sensitivity of 0.007865lx/step.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.Color4",
     "subdir_name": "lib_color4"
 }
+
 
 
 

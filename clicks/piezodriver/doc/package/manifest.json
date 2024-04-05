@@ -25,13 +25,14 @@
     "name": "mikroe.click.piezodriver",
     "product_link": "https://www.mikroe.com/piezo-driver-click",
     "short_description": "Piezo Driver Click is a compact add-on board that allows you easy system configuration for driving a two-terminal or three-terminal piezo sounder with few external components. This board features the PAM8906, a piezo sounder driver with self-excitation mode from Diodes Incorporated. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.PiezoDriver",
     "subdir_name": "lib_piezodriver"
 }
+
 
 

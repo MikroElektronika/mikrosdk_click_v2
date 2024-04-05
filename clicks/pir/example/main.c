@@ -64,11 +64,16 @@ void application_task ( void )
     
     log_printf( &logger, " Voltage: %.2f  miliVolts \r\n", map_out);
    
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

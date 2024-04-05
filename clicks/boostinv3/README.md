@@ -109,7 +109,7 @@ void application_init ( void )
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( BOOSTINV3_ERROR == boostinv3_default_cfg ( &boostinv3 ) )
     {
@@ -143,7 +143,11 @@ void application_task ( void )
         {
             log_printf( &logger, " Error has occurred!!! \r\n" );
         }
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

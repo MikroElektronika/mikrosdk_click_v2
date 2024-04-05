@@ -61,11 +61,11 @@ void application_init ( void )
     log_printf( &logger, " Disabling HOLD \r\n" );
     log_printf( &logger, " - - - - - - - - - - - \r\n" );
     eeprom5_set_hold( &eeprom5, EEPROM5_HOLD_DISABLE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, " Disabling Write Protection \r\n" );
     log_printf( &logger, " - - - - - - - - - - - \r\n" );
     eeprom5_set_write_protect( &eeprom5, EEPROM5_WRITE_PROTECT_DISABLE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, " - - - - - - - - - - - \r\n" );
 }
@@ -73,21 +73,28 @@ void application_init ( void )
 void application_task ( void ) 
 {
     eeprom5_enable_memory_write( &eeprom5, EEPROM5_WRITE_MEMORY_ENABLE );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     eeprom5_write_memory( &eeprom5, 14, demo_data, 9 );
     log_printf( &logger, " Write data : %s ", demo_data );
     log_printf( &logger, " - - - - - - - - - - - \r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     eeprom5_read_memory( &eeprom5, 14, read_data, 9 );
     log_printf( &logger, " Read data : %s ", read_data );
     log_printf( &logger, " - - - - - - - - - - - \r\n" );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -117,7 +117,7 @@ end-of-conversion pin ( INT ) following the pressure and temperature data acquis
 
 void application_task ( void ) {
     pressure14_measure_cmd( &pressure14 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     if ( pressure14_check_busy_flag_int( &pressure14 ) == 1 ) {
         pressure14_read_press_and_temp ( &pressure14, &status, &pressure_tmp, &temperature_tmp );    
@@ -128,7 +128,8 @@ void application_task ( void ) {
         log_printf( &logger, " Temperature : %.2f C \r\n", temperature );
         log_printf( &logger, "-------------------------\r\n" );
     }
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

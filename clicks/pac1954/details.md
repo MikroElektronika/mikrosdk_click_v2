@@ -150,7 +150,7 @@ void application_task ( void )
     log_printf( &logger, " Current: %.3f A\r\n", isense );
     log_printf( &logger, " Power: %.3f W\r\n", power );
     log_printf( &logger, "---------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

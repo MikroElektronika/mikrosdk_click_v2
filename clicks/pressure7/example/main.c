@@ -59,7 +59,7 @@ void application_init ( void )
     PRESSURE7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pressure7_init( &pressure7, &cfg );
     pressure7_default_cfg ( &pressure7 );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 
     //  Read calibrated data from the PROM
 
@@ -72,7 +72,7 @@ void application_init ( void )
     {
         log_info( &logger, "Read PROM - ERROR!\r\n" );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
 }
 
@@ -84,11 +84,18 @@ void application_task ( void )
     log_printf( &logger, "Temperature: %f C\r\n", Temperature );
     log_printf( &logger, "Pressure: %f\r\n", Pressure );
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -25,14 +25,15 @@
     "name": "mikroe.click.shutter",
     "product_link": "https://www.mikroe.com/shutter-click",
     "short_description": "Shutter Click is an adapter Click board™ used to implement an automated capturing feature. This Click board™ features one 3.5mm jack connector suitable for a camera connection with which the frame is captured. By combining two mikroBUS™ pins and the VO617A, a high-reliability phototransistor from Vishay Semiconductors used as a camera activation switch, activating the camera's Auto-Focus and the action of taking pictures is realized. This Click board™ allows you to expressly capture frames in a simple way for various types of photographic and security applications to capture those parts you need.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.Shutter",
     "subdir_name": "lib_shutter"
 }
+
 
 
 

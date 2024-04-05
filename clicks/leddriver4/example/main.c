@@ -60,7 +60,7 @@ void application_init ( void )
     leddriver4_set_duty_cycle ( &leddriver4, 0.0 );
     leddriver4_pwm_start( &leddriver4 );
     log_info( &logger, "---- Application Task ----" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void application_task ( void )
@@ -71,7 +71,7 @@ void application_task ( void )
 
     leddriver4_set_duty_cycle ( &leddriver4, duty );
     log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     if ( 10 == duty_cnt ) 
     {
@@ -86,6 +86,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

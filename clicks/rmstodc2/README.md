@@ -115,7 +115,7 @@ void application_task ( void )
     if ( RMSTODC2_OK == rmstodc2_read_voltage ( &rmstodc2, &voltage ) ) 
     {
         log_printf( &logger, " RMS voltage : %.3f[V]\r\n\n", voltage * RMSTODC2_RMS_VOLTAGE_COEF );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

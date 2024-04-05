@@ -133,7 +133,7 @@ void application_task ( void )
     brushless15_set_duty_cycle ( &brushless15, duty );
     log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     duty_cnt += duty_inc;
     if ( 8 == duty_cnt ) 
     {

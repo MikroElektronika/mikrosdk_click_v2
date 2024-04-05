@@ -119,11 +119,22 @@ void application_task ( void )
     }
     
     log_printf( &logger, " \r\nInitiating new iteration\r\n " );
-    Delay_ms( 6000 );
+    // 6 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -184,7 +195,7 @@ err_t run_first_pass( eeprom8_t* ctx, uint8_t* write_buf, uint8_t* read_buf )
         for ( cnt = 0; cnt < TEST_NBYTES; cnt++ )
         {
             log_printf( &logger, " %d", ( uint16_t ) read_buf[ cnt ] );
-            Delay_ms( 50 );
+            Delay_ms ( 50 );
         }
     
         log_printf( &logger, "\r\n\r\n" );
@@ -227,7 +238,7 @@ err_t run_second_pass( eeprom8_t* ctx, uint8_t* write_buf, uint8_t* read_buf )
     }
     eeprom8_write_protect( ctx );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     // Read bytes of the page size starting from the test memory location
     addr_offset = TEST_MEM_LOCATION;
@@ -272,7 +283,7 @@ err_t run_second_pass( eeprom8_t* ctx, uint8_t* write_buf, uint8_t* read_buf )
         for ( cnt = 0; cnt < TEST_NBYTES; cnt++ )
         {
             log_printf( &logger, " %d", ( uint16_t )read_buf[ cnt ] );
-            Delay_ms( 50 );
+            Delay_ms ( 50 );
         }
     
         log_printf( &logger, "\r\n\r\n" );

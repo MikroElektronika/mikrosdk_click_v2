@@ -95,7 +95,7 @@ void application_init ( void )
     log_printf( &logger, " - Reseting device... \r\n" );
  
     flash5_software_reset( &flash5 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, " - Erasing memory... \r\n" );   
     
@@ -113,18 +113,18 @@ void application_init ( void )
         log_printf( &logger, " - Device Error \r\n" );  
         for( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, " - Configuring device \r\n" );  
 
     flash5_write_status_data( &flash5, FLASH5_CMD_WRITE_REG_STATUS1, FLASH5_REG_STATUS_1, FLASH5_RS1_WRITE_PROTECTION_DISABLE | 
                                                                                           FLASH5_RS1_SRP1_ENABLE );
     flash5_write_status_data( &flash5, FLASH5_CMD_WRITE_REG_STATUS1, FLASH5_REG_STATUS_1, FLASH5_RS2_PAGE_READ_MODE );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "***** App init ***** \r\n" );
     log_printf( &logger, "------------------- \r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
   
 ```
@@ -147,12 +147,16 @@ void application_task ( )
     for( n_counter = 0; n_counter < 6; n_counter++ )
     {
         log_printf( &logger, " %c ", &read_buf[ n_counter ] );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     
     log_printf( &logger, " \r\n" );
     log_printf( &logger, "------------------- \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

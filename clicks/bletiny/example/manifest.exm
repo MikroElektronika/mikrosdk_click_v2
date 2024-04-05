@@ -2,7 +2,7 @@
     "name": "BLE TINY Click",
     "description": "BLE TINY Click is a compact add-on board that provides BLE connectivity for any embedded application. This board features the DA14531, SmartBond TINY module based on the world’s smallest and lowest power Bluetooth 5.1 System-on-Chip (SoC) from Dialog Semiconductor.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","DA14531"],
     "category" : ["BT/BLE"]
 }

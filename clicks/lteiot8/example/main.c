@@ -235,7 +235,11 @@ void application_task ( void )
             {
                 example_state = LTEIOT8_WAIT_FOR_CONNECTION;
             }
-            Delay_ms( 5000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
             break;
         }
         case LTEIOT8_WAIT_FOR_CONNECTION:
@@ -252,7 +256,11 @@ void application_task ( void )
             {
                 example_state = LTEIOT8_CONFIGURE_FOR_MESSAGES;
             }
-            Delay_ms( 5000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
             break;
         }
         case LTEIOT8_CONFIGURE_FOR_MESSAGES:
@@ -261,13 +269,27 @@ void application_task ( void )
             {
                 example_state = LTEIOT8_MESSAGES;
             }
-            Delay_ms( 5000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
             break;
         }
         case LTEIOT8_MESSAGES:
         {
             lteiot8_send_meesage();
-            Delay_ms( 10000 );
+            // 10 seconds delay
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
             break;
         }
         default:
@@ -280,6 +302,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -364,7 +391,7 @@ static err_t lteiot8_rsp_check ( void )
             return LTEIOT8_ERROR_TIMEOUT;
         }
         
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
     
     if ( 0 != strstr( app_buf, LTEIOT8_RSP_OK ) )
@@ -413,7 +440,7 @@ static void lteiot8_error_check( err_t error_flag )
         }
     }
     lteiot8_clear_app_buf(  );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 static void lteiot8_log_app_buf ( void )
@@ -471,7 +498,7 @@ static err_t lteiot8_check_connection( void )
     lteiot8_process();
     if ( 0 != strstr(app_buf, CONNECTED ) )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         lteiot8_process();
         lteiot8_log_app_buf( );
         lteiot8_clear_app_buf(  );

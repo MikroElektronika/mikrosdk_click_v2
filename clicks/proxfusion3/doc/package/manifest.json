@@ -25,14 +25,15 @@
     "name": "mikroe.click.proxfusion3",
     "product_link": "https://www.mikroe.com/proxfusion-3-click",
     "short_description": "ProxFusion 3 Click is a compact add-on board that represents a multifunctional touch sensing Click board™. This board features the IQS2692A, an 8-channel ProxFusion® capacitive touch and proximity controller with additional sensing such as Hall- and inductive sensing from Azoteq.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.ProxFusion3",
     "subdir_name": "lib_proxfusion3"
 }
+
 
 
 

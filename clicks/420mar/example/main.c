@@ -65,11 +65,16 @@ void application_task ( )
     log_printf( &logger, "-----------------------------\r\n" );
     log_printf( &logger, " * Current: %.3f mA * \r\n", current );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

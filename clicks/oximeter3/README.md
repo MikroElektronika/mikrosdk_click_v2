@@ -182,7 +182,7 @@ void application_task ( void )
             
             log_printf( &logger, "******************** \r\n" );
             
-            Delay_ms( 500 );
+            Delay_ms ( 500 );
         }
     }
 } 

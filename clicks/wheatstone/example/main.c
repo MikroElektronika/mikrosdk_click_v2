@@ -83,12 +83,17 @@ void application_task ( void )
         log_printf( &logger, " AN_PIN  : %.3f V\r\n", an_pin_v );
         log_printf( &logger, " VOUT    : %.3f V\r\n", vout );
         log_printf( &logger, " R_INPUT : %.3f kOhm\r\n\n", r_kohm );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

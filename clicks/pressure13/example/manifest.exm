@@ -2,7 +2,7 @@
     "name": "Pressure 13 Click",
     "description": "Pressure 13 Click is a compact add-on board that contains an integrated pressure sensor for manifold air pressure measurement applications. This board features the KP229E2701, a miniaturized analog manifold air pressure sensor based on a capacitive principle from Infineon.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","KP229E2701"],
     "category" : ["Pressure"]
 }

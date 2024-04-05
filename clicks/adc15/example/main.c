@@ -72,7 +72,7 @@ void application_init ( void )
     log_printf( &logger, " > ID: 0x%.4X\r\n", reg_val );
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -87,12 +87,17 @@ void application_task ( void )
         log_printf( &logger, " > V ch1: %.3f\r\n", channel1 );
         log_printf( &logger, " > V ch2: %.3f\r\n", channel2 );    
         log_printf( &logger, "************************\r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

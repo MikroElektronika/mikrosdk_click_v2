@@ -74,7 +74,7 @@ void application_init ( void )
 
     flash8_default_cfg ( &flash8 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     flash8_read_id( &flash8, &manufacture_id, &device_id, &organization_id );
     log_printf( &logger, "--------------------------\r\n" );
@@ -82,7 +82,7 @@ void application_init ( void )
     log_printf( &logger, "  Device ID       : 0x%.2X\r\n", ( uint16_t) device_id );
     log_printf( &logger, "  Organization ID : 0x%.2X\r\n", ( uint16_t) organization_id );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 100 );   
+    Delay_ms ( 100 );   
       
     flash8_sw_reset( &flash8, &feature_status_out );
     if ( feature_status_out & FLASH8_GET_PRG_F_PROGRAM_FAIL ) 
@@ -94,7 +94,7 @@ void application_init ( void )
         log_printf( &logger, "\tProgram Pass \r\n" );    
     }
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     feature_data.brwd   = FLASH8_SET_BRWD_ENABLE;
     feature_data.bl     = FLASH8_SET_BL_ALL_UNLOCKED;
@@ -105,7 +105,7 @@ void application_init ( void )
     feature_data.hold_d = FLASH8_SET_HOLD_D_HOLD_IS_ENABLED;
     feature_data.wel    = FLASH8_SET_WEL_WRITE_ENABLE;
     flash8_set_config_feature( &flash8, feature_data );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     flash8_block_erase( &flash8, 123, &feature_status_out );
     if ( feature_status_out & FLASH8_GET_ERS_F_ERASE_FAIL ) 
@@ -117,7 +117,7 @@ void application_init ( void )
         log_printf( &logger, "\tErase Pass \r\n" );    
     }
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "   Write data : %s", demo_data );
     log_printf( &logger, "--------------------------\r\n" );
@@ -132,14 +132,14 @@ void application_init ( void )
         log_printf( &logger, " Operation is not in progress.\r\n" );    
     }
     log_printf( &logger, "- - - - - - - - - - -  - -\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "    Check data ready...\r\n" );  
     while ( FLASH8_GET_OIP_READY_STATE != feature_status_out ) 
     {
         flash8_get_feature( &flash8, FLASH8_FEATURE_C0, &feature_status_out );
         log_printf( &logger, "\tBusy state.\r\n" );  
-        Delay_ms( 100 );    
+        Delay_ms ( 100 );    
     }
     
     if ( FLASH8_GET_OIP_READY_STATE == feature_status_out ) 
@@ -147,7 +147,7 @@ void application_init ( void )
         log_printf( &logger, "\tReady state.\r\n" );    
     }
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
@@ -155,11 +155,17 @@ void application_task ( void )
     flash8_read_memory( &flash8, 123, 456, &rx_data[ 0 ], 9, &feature_status_out );
     log_printf( &logger, "    Read data : %s", rx_data );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

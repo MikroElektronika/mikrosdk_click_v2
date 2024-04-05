@@ -59,7 +59,7 @@ void application_init ( void )
     log_printf( &logger, "--------------------------------\r\n" );
     log_printf( &logger, "        Buck Boost Click        \r\n" );
     log_printf( &logger, "--------------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -67,46 +67,83 @@ void application_task ( void )
     log_printf( &logger, " Set Output Voltage of  2500 mV \r\n" );
     log_printf( &logger, "--------------------------------\r\n" );
     buckboost_set_2500mv( &buckboost );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, " Set Output Voltage of  3300 mV \r\n" );
     log_printf( &logger, "--------------------------------\r\n" );
     buckboost_set_3300mv( &buckboost );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, " Set Output Voltage of  4100 mV \r\n" );
     log_printf( &logger, "--------------------------------\r\n" );
     buckboost_set_4100mv( &buckboost );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, " Set Output Voltage of  5000 mV \r\n" );
     log_printf( &logger, "--------------------------------\r\n" );
     buckboost_set_5000mv( &buckboost );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, " Set Output Voltage of  6900 mV \r\n" );
     log_printf( &logger, "--------------------------------\r\n" );
     buckboost_set_6900mv( &buckboost );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, " Set Output Voltage of  8200 mV \r\n" );
     log_printf( &logger, "--------------------------------\r\n" );
     buckboost_set_8200mv( &buckboost );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, " Set Output Voltage of  12000 mV \r\n" );
     log_printf( &logger, "--------------------------------\r\n" );
     buckboost_set_12000mv( &buckboost );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, " Set Output Voltage of  15000 mV \r\n" );
     log_printf( &logger, "--------------------------------\r\n" );
     buckboost_set_15000mv( &buckboost );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

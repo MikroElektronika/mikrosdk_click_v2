@@ -143,14 +143,32 @@ void application_task ( void )
         log_printf( &logger, "  Current limit:  600 mA   \r\n" );
         log_printf( &logger, "---------------------------\r\n" );
     }
-    Delay_ms( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     if ( EFUSE5_OK == efuse5_set_current_limit( &efuse5, EFUSE5_CURRENT_LIMIT_1200_mA ) )
     {
         log_printf( &logger, "  Current limit: 1200 mA   \r\n" );
         log_printf( &logger, "---------------------------\r\n" );
     }
-    Delay_ms( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

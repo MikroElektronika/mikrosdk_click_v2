@@ -25,13 +25,14 @@
     "name": "mikroe.click.stepdown8",
     "product_link": "https://www.mikroe.com/step-down-8-click",
     "short_description": "Step Down 8 Click is a compact add-on board that converts higher voltages into a lower voltage level. This board features the MAX25232, a mini buck converter from Analog Devices. It is designed to deliver up to 3A with 3.5V to 36V input voltages while using only 3.5μA quiescent current at no load.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.StepDown8",
     "subdir_name": "lib_stepdown8"
 }
+
 
 

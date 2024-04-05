@@ -25,14 +25,15 @@
     "name": "mikroe.click.airvelocity",
     "product_link": "https://www.mikroe.com/air-velocity-click",
     "short_description": "Air Velocity Click is a compact add-on board that measures direct airspeed. This board features the FS3000-1005, a surface-mount type air velocity module utilizing a MEMS thermopile-based sensor from Renesas. This I2C-configurable air velocity module features a digital output with a 12-bit resolution with a wide operational range of 0-7.2meter/second (0-16.2mph). The sensor comprises a “solid” thermal isolation technology and silicon-carbide coating to protect it from abrasive wear and water condensation.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.AirVelocity",
     "subdir_name": "lib_airvelocity"
 }
+
 
 
 

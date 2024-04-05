@@ -80,20 +80,25 @@ void application_task ( void )
     
     tmp = pollution_generic_read( &pollution );
     log_printf( &logger, " ADC value            : %u ppm\r\n", tmp );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     value_volt = pollution_measure_load_voltage( &pollution );
     log_printf( &logger, " Load voltage         : %.2f V\r\n", value_volt );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     value_res = pollution_get_corrected_resistance( &pollution );
     log_printf( &logger, " Corrected resistance : %.2f kOhm\r\n", value_res );
     log_printf( &logger, "-------------------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

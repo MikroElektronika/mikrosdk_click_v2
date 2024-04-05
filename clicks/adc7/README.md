@@ -94,7 +94,7 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     //  Click initialization.
 
@@ -121,7 +121,7 @@ void application_task ( void )
     adc7_read_results( &adc7, &voltage_data );
     log_printf( &logger, "Voltage: %.2f mV\r\n", voltage_data );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

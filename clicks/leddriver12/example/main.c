@@ -68,15 +68,22 @@ void application_task ( void )
     leddriver12_set_led_port_config ( &leddriver12, LEDDRIVER12_LED0_TO_3, LEDDRIVER12_LED_ON );
     leddriver12_set_led_port_config ( &leddriver12, LEDDRIVER12_LED4_TO_7, LEDDRIVER12_LED_ON );
     log_printf ( &logger, " LEDs 0-7 turns ON \r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     leddriver12_set_led_port_config ( &leddriver12, LEDDRIVER12_LED0_TO_3, LEDDRIVER12_LED_OFF );
     leddriver12_set_led_port_config ( &leddriver12, LEDDRIVER12_LED4_TO_7, LEDDRIVER12_LED_OFF );
     log_printf ( &logger, " LEDs 0-7 turns OFF \r\n\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

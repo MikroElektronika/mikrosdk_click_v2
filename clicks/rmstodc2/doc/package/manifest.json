@@ -25,14 +25,15 @@
     "name": "mikroe.click.rmstodc2",
     "product_link": "https://www.mikroe.com/rms-to-dc-2-click",
     "short_description": "RMS to DC 2 Click is a compact add-on board that converts the RMS of the input signal into a DC voltage. This board features the AD8436, a low-cost, low-power, true RMS-to-DC converter from Analog Devices. The AD8436 is a translinear precision, low-power, true RMS-to-DC converter that delivers true RMS or average rectified value of AC waveform. It features high accuracy, a wide dynamic input range (100μV rms to 3V rms), a wide bandwidth of up to 1MHz, and more. This Click board™ makes the perfect solution for the development of various true RMS digital multimeter applications, panel meters and gauges, AC + DC measurement applications, a true RMS measurement of an audio signal, and other similar applications that require accurate RMS value readings.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.RMStoDC2",
     "subdir_name": "lib_rmstodc2"
 }
+
 
 
 

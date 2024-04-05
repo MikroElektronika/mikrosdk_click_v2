@@ -25,17 +25,18 @@
     "name": "mikroe.click.dcmotor11",
     "product_link": "https://www.mikroe.com/dc-motor-11-click",
     "short_description": "DC Motor 11 Click is a brushed DC motor driver with the current limiting and current sensing.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2780
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.DcMotor11",
     "subdir_name": "lib_dcmotor11"
 }
+
 
 
 

@@ -110,7 +110,7 @@ void application_task ( void )
 {
     uint16_t light_intensity = ambient_get_light_intensity( &ambient );
     log_printf( &logger, " Light Intensity: %u uW/cm2\r\n\n", light_intensity );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

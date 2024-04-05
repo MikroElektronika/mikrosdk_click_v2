@@ -60,10 +60,12 @@ void application_task ( void )
 {
     log_printf( &logger, "Enabling click operation... \r\n" );
     boost2_set_en_pin( &boost2, 1 );
-    Delay_ms(3000);
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "Checking output voltage... \r\n" );
-    Delay_ms(500);
+    Delay_ms ( 500 );
     if ( boost2_get_pg_pin( &boost2 ))
     {
         log_printf( &logger, "Output voltage good. \r\n" );
@@ -72,15 +74,26 @@ void application_task ( void )
     {
         log_printf( &logger, "Output voltage incorrect. \r\n" );
     }
-    Delay_ms(3000);
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "Disabling click operation... \r\n" );
     boost2_set_en_pin( &boost2, 0 );
-    Delay_ms(5000);
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -82,7 +82,7 @@ static void rs4853v3_process ( void ) {
             process_cnt--;
             
             // Process delay 
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
 }
@@ -111,7 +111,7 @@ void application_init ( void ) {
     RS4853V3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rs4853v3_init( &rs4853v3, &cfg );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
 #ifdef DEMO_APP_TRANSMITTER
     log_printf( &logger, "------------------\r\n" );
@@ -119,7 +119,7 @@ void application_init ( void ) {
     log_printf( &logger, "      MikroE      \r\n" );
     log_printf( &logger, "------------------\r\n" );
     log_printf( &logger, "  Transmit data   \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
 #endif
     
@@ -144,13 +144,19 @@ void application_task ( void ) {
 #ifdef DEMO_APP_TRANSMITTER
     rs4853v3_send_command( &rs4853v3, &demo_message[ 0 ] );
     log_printf( &logger, "\t%s",  &demo_message[ 0 ] );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "------------------\r\n" ); 
 #endif   
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -100,7 +100,9 @@ void application_task ( void )
     read_value = ozone2_read( &ozone2 );
     log_printf( &logger, "Read Value: %u\r\n", read_value);
     
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

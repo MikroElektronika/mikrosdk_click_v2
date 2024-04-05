@@ -86,7 +86,7 @@ void application_init ( void )
     RS232_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rs232_init( &rs232, &cfg );
     
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 #ifdef RS232_RECEIVER
     log_printf( &logger, " ** RS232 Receiver **\r\n" );
 #endif
@@ -116,14 +116,14 @@ void application_task ( void )
         log_printf( &logger, "\r\n-------------------------\r\n" );
         memset( uart_rx_buffer, 0, rsp_size );
     }  
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 #endif
     
 #ifdef RS232_TRANSMITTER
     rs232_generic_write( &rs232, message, strlen( message ) );
     log_printf( &logger, "Message sent: %s", message );
     log_printf( &logger, "\r\n-------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 #endif   
 }
 

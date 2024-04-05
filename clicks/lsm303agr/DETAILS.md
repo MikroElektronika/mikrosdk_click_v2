@@ -130,7 +130,7 @@ void application_task ( void )
     read_data = lsm303agr_get_mag_axis_z ( &lsm303agr );
     log_printf(&logger, "Z Axis : %f\r\n", read_data);
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

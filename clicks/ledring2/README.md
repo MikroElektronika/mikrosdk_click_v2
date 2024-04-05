@@ -116,14 +116,14 @@ void application_init ( void )
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( LEDRING2_ERROR == ledring2_default_cfg ( &ledring2 ) )
     {
         log_error( &logger, " Default configuration." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, " LED Ring 2 Click\r\n" );
 }
@@ -143,20 +143,20 @@ void application_task ( void )
         if ( LEDRING2_OK == ledring2_set_led_brightness( &ledring2, led_pos, ( led_pos * 100 ) + 255 ) )
         {
             ledring2_set_vsync( &ledring2 );
-            Delay_ms( 10 );
+            Delay_ms ( 10 );
         }
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     for ( uint8_t led_pos = 54; led_pos > 0; led_pos-- )
     {
         if ( LEDRING2_OK == ledring2_set_led_brightness( &ledring2, led_pos, 0 ) )
         {
             ledring2_set_vsync( &ledring2 );
-            Delay_ms( 10 );
+            Delay_ms ( 10 );
         }
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

@@ -95,7 +95,7 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Init " );
 
     // Click initialization.
@@ -110,7 +110,7 @@ void application_init ( void )
 
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     if ( c6dofimu14_default_cfg ( &c6dofimu14 ) != C6DOFIMU14_OK ) 
     {
@@ -119,7 +119,7 @@ void application_init ( void )
 
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
 }
@@ -147,7 +147,7 @@ void application_task ( void )
     log_printf( &logger, " Temperature: %.2f C\r\n", temperature );
     log_printf( &logger, "----------------------------------\r\n");
         
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 ```

@@ -25,12 +25,13 @@
     "name": "mikroe.click.stepdown11",
     "product_link": "https://www.mikroe.com/step-down-11-click",
     "short_description": "Step Down 11 Click is a compact add-on board that converts higher voltages into lower voltage levels. This board features the TPSM82913, a low-noise and low-ripple buck power module from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.StepDown11",
     "subdir_name": "lib_stepdown11"
 }
+
 

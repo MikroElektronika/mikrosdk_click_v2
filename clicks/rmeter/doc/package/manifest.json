@@ -25,17 +25,18 @@
     "name": "mikroe.click.rmeter",
     "product_link": "https://www.mikroe.com/r-meter-click",
     "short_description": "R Meter click is a mikroBUS add-on board with circuitry for measuring the value of resistors. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1905
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.Rmeter",
     "subdir_name": "lib_rmeter"
 }
+
 
 
 

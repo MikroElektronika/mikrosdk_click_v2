@@ -147,7 +147,9 @@ void application_task ( void )
         {
             log_printf( &logger, "%u\r\n", ( uint16_t ) gain );
         }
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

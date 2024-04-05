@@ -79,24 +79,29 @@ void application_task ( void )
         log_printf( &logger, " Accel Z: %.2f mg\r\n", acc_axis.z );
     }
     log_printf( &logger, "_________________\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     if ( ACCELPRESSURE_OK == accelpressure_get_pressure( &accelpressure, &pressure ) )
     {
         log_printf( &logger, " Pressure: %.2f mbar\r\n", pressure );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     if ( ACCELPRESSURE_OK == accelpressure_get_temperature( &accelpressure, &temperature ) )
     {
         log_printf( &logger, " Temperature: %.2f mbar\r\n", temperature );
     }
     log_printf( &logger, "_________________\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

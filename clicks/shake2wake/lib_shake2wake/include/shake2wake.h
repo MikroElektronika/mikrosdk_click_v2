@@ -35,14 +35,18 @@
 #ifndef SHAKE2WAKE_H
 #define SHAKE2WAKE_H
 
-#include "mikrosdk_version.h"
-
-#ifdef __GNUC__
-#if mikroSDK_GET_VERSION < 20800ul
-#include "rcu_delays.h"
-#else
-#include "delays.h"
+/**
+ * Any initialization code needed for MCU to function properly.
+ * Do not remove this line or clock might not be set correctly.
+ */
+#ifdef PREINIT_SUPPORTED
+#include "preinit.h"
 #endif
+
+#ifdef MikroCCoreVersion
+    #if MikroCCoreVersion >= 1
+        #include "delays.h"
+    #endif
 #endif
 
 #include "drv_digital_out.h"

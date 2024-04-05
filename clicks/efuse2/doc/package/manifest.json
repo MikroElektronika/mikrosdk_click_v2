@@ -25,17 +25,18 @@
     "name": "mikroe.click.efuse2",
     "product_link": "https://www.mikroe.com/efuse-2-click",
     "short_description": "eFuse 2 Click is a compact add-on board that contains an integrated FET hot-swap device. This board features the TPS259631, a highly integrated circuit protection and power management solution from Texas Instruments. It provides multiple protection modes against overloads, short circuits, voltage surges, and excessive inrush current.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         3904
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.eFuse2",
     "subdir_name": "lib_efuse2"
 }
+
 
 
 

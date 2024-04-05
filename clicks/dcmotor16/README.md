@@ -121,25 +121,27 @@ void application_task ( void ) {
     dcmotor16_set_direction( &dcmotor16, DCMOTOR16_DIR_FORWARD );
     for( cnt = 0; cnt <= 0x0100; cnt+= 25 ) {
         dcmotor16_ctrl_vref( &dcmotor16, cnt );
-        Delay_ms( 250 );
+        Delay_ms ( 250 );
     }
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, ">> Motor stop \r\n" );
     dcmotor16_stop( &dcmotor16 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, ">> Motor start with direction [BACKWARD] <<\r\n" );
     dcmotor16_set_direction( &dcmotor16, DCMOTOR16_DIR_BACKWARD );
     for( cnt = 0; cnt <= 0x0100; cnt+= 25 ) {
         dcmotor16_ctrl_vref( &dcmotor16, cnt );
-        Delay_ms( 250 );
+        Delay_ms ( 250 );
     }
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, ">> Motor stop \r\n" );
     dcmotor16_stop( &dcmotor16 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

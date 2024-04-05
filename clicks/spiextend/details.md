@@ -115,7 +115,7 @@ void application_init ( void ) {
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "   SPI Extend Click  \r\n" );
     log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     spiextend_get_status( &spiextend, &spiextend_status );
     log_printf( &logger, " LINK        : " ); 
@@ -129,20 +129,20 @@ void application_init ( void ) {
     
     log_printf( &logger, " Speed Index : %d\r\n", ( uint16_t ) spiextend_status.speed_idx );
     log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "  >>> Accel 14 <<<   \r\n" );
     log_printf( &logger, " Set default config. \r\n" );
     spiextend_rmt_write ( &spiextend, SPIEXTEND_ACCEL14_REG_CTRL1_XL | SPIEXTEND_ACCEL14_SPI_WRITE, SPIEXTEND_ACCEL14_CTRL1_XL_POWER_UP | SPIEXTEND_ACCEL14_CTRL1_XL_HIGH_RES_FS | SPIEXTEND_ACCEL14_CTRL1_XL_GSEL_4G, SPIEXTEND_SLAVE_SELECT_SS1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     spiextend_rmt_write ( &spiextend, SPIEXTEND_ACCEL14_REG_CTRL3_C | SPIEXTEND_ACCEL14_SPI_WRITE, SPIEXTEND_ACCEL14_CTRL3_C_BOOT_NORMAL | SPIEXTEND_ACCEL14_CTRL3_C_BDU_READ_UPDATE | SPIEXTEND_ACCEL14_CTRL3_C_INT_ACTIVE_HIGH | SPIEXTEND_ACCEL14_CTRL3_C_PP_OD_PUSH_PULL | SPIEXTEND_ACCEL14_CTRL3_C_SIM_SPI_4_WIRE | SPIEXTEND_ACCEL14_CTRL3_C_IF_INC_ENABLE | SPIEXTEND_ACCEL14_CTRL3_C_SW_RESET_DIS, SPIEXTEND_SLAVE_SELECT_SS1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "  Acceleration data: \r\n" );
     log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task \r\n" );
 }
@@ -165,25 +165,25 @@ void application_task ( void ) {
     if ( spiextend_status.nlink == SPIEXTEND_STATUS_ACTIVE ) {
         
         spiextend_accel14_get_axis( SPIEXTEND_ACCEL14_REG_OUTX_L_A );
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
         log_printf( &logger, "  Accel X : %d \r\n", axis );
         
         spiextend_accel14_get_axis( SPIEXTEND_ACCEL14_REG_OUTY_L_A );
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
         log_printf( &logger, "  Accel Y : %d \r\n", axis );
 
         spiextend_accel14_get_axis( SPIEXTEND_ACCEL14_REG_OUTZ_L_A );
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
         log_printf( &logger, "  Accel Z : %d \r\n", axis );
 
         log_printf( &logger, "---------------------\r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     else {
         
         log_printf( &logger, " LINK not established\r\n" );
         log_printf( &logger, "---------------------\r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

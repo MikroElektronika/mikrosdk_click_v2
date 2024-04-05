@@ -93,7 +93,7 @@ void application_init ( void )
     GYRO4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     gyro4_init( &gyro4, &cfg );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     initialize_flag = gyro4_initialize( &gyro4 );
     if ( initialize_flag == 1 )
     {
@@ -136,7 +136,7 @@ void application_task ( )
     log_printf( &logger, "> X axis : %.2f %c \r\n", x_axis, degrees_per_second );
     log_printf( &logger, "> Y axis : %.2f %c \r\n", y_axis, degrees_per_second );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 ```

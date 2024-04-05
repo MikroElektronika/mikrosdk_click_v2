@@ -25,17 +25,18 @@
     "name": "mikroe.click.earthquake",
     "product_link": "https://www.mikroe.com/earthquake-click",
     "short_description": "Earthquake click carries D7S, the world’s smallest high-precision seismic sensor from Omron. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over I2C interface, with additional functionality provided by the following pins on the mikroBUS™ line: PWM, INT, CS.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2041
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Earthquake",
     "subdir_name": "lib_earthquake"
 }
+
 
 
 

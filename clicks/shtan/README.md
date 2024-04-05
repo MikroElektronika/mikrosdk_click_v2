@@ -100,7 +100,8 @@ void application_init ( void )
     log_printf( &logger, "------------------\r\n" );
     log_printf( &logger, "   SHT AN click   \r\n" );
     log_printf( &logger, "------------------\r\n" );
-    Delay_ms ( 1100 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 100 );
 
     deg_cel[ 0 ] = 32;
     deg_cel[ 1 ] = 176;
@@ -108,12 +109,12 @@ void application_init ( void )
     deg_cel[ 3 ] = 0;
 
     shtan_reset( &shtan );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     shtan_set_mode( &shtan, SHTAN_SET_ADC_MODE_TEMP );
     adc_mode = SHTAN_SET_ADC_MODE_TEMP;
     log_printf( &logger, "  Temp. & Hum.   \r\n" );
     log_printf( &logger, "--------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -135,7 +136,7 @@ void application_task ( void )
    shtan_calculate_humidity( void );
    log_printf( &logger, "  Hum.  : %.2f\r\n", humidity );
    log_printf( &logger, "--------------------------" );
-   Delay_ms( 1000 );
+   Delay_ms ( 1000 );
 }  
 
 ```

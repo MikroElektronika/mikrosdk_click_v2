@@ -129,7 +129,8 @@ void application_task ( void )
 
     pcr_get_distance ( &pcr, &distance_data );
     log_printf( &logger, " Distance: %lu mm \r\n", distance_data );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
 }
 ```

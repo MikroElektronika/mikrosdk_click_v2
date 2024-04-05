@@ -64,12 +64,12 @@ void application_init ( void )
     log_printf( &logger, "   Configure of the  \r\n" );
     log_printf( &logger, "   watchdog window   \r\n" );
     watchdog_setup_time( &watchdog, WATCHDOG_SETUP_TIME_MODE_2 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "   Watchdog enabled  \r\n" );
     log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_info( &logger, " Application Task " );
 }
@@ -80,7 +80,7 @@ void application_task ( void )
     uint8_t n_cnt = 40;
     while ( n_cnt > 0 ) {
         watchdog_send_pulse( &watchdog, 1 );
-        Delay_ms( 50 );
+        Delay_ms ( 50 );
         n_cnt--;
     }
     log_printf( &logger, "---------------------\r\n" );
@@ -89,7 +89,7 @@ void application_task ( void )
     n_cnt = 8;
     while ( n_cnt > 0 ) {
         watchdog_send_pulse( &watchdog, 1 );
-        Delay_ms( 250 );
+        Delay_ms ( 250 );
         n_cnt--;
     }
     log_printf( &logger, "---------------------\r\n" );
@@ -97,6 +97,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

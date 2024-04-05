@@ -120,7 +120,7 @@ void application_task ( void )
     {
         log_printf( &logger, " Relative Humidity [%%RH]: %.2f\r\n\n", humidity_voltage_to_rh( &humidity, voltage ) );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

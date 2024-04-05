@@ -86,19 +86,19 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     //  Click initialization.
 
     brushless5_cfg_setup( &cfg );
     BRUSHLESS5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     brushless5_init( &brushless5, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     brushless5_set_duty_cycle ( &brushless5, 0.0 );
     brushless5_pwm_start( &brushless5 );
     log_info( &logger, "---- Application Task ----" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -120,7 +120,7 @@ void application_task ( void )
 
     brushless5_set_duty_cycle ( &brushless5, duty );
     log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     if ( 10 == duty_cnt ) 
     {
@@ -133,7 +133,7 @@ void application_task ( void )
         log_printf( &logger, " Increasing the motor speed... \r\n" );
     }
     duty_cnt += duty_inc;
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 } 
 
 ```

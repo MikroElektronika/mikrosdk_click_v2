@@ -153,12 +153,30 @@ void application_task ( void )
 {
     log_printf( &logger, "        Gain 1.5 dB        \r\n" );
     stereoamp_set_volume( &stereoamp, STEREOAMP_GAIN_1_5dB );
-    Delay_ms ( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "--------------------------\r\n" );
     
     log_printf( &logger, "        Gain -13.5 dB      \r\n" );
     stereoamp_set_volume( &stereoamp, STEREOAMP_GAIN_NEG_13_5dB );
-    Delay_ms ( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "--------------------------\r\n" );
 }  
 

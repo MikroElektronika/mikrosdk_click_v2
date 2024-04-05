@@ -63,7 +63,7 @@ void application_init ( void ) {
 
 void application_task ( void ) {
     new_val = vibrasense2_vibration_level( &vibrasense2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     if ( new_val != old_val ) {
         switch ( new_val ) {
             case VIBRASENSE2_VIBRA_LVL_0: {
@@ -112,6 +112,11 @@ void application_task ( void ) {
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

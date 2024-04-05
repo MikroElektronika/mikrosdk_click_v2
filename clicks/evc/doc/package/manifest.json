@@ -25,17 +25,18 @@
     "name": "mikroe.click.evc",
     "product_link": "https://www.mikroe.com/evc-click",
     "short_description": "EVC Click is a six-channel digital volume controller, equipped with an integrated electronic volume control circuit, which can be controlled over the I2C interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2691
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.EVC",
     "subdir_name": "lib_evc"
 }
+
 
 
 

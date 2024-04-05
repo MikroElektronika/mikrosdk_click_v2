@@ -114,7 +114,7 @@ void application_task ( void )
     log_printf( &logger, "Y: %d \r\n", axes_xyz[ 1 ] );
     log_printf( &logger, "Z: %d \r\n", axes_xyz[ 2 ] );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```

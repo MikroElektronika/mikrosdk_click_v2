@@ -25,17 +25,18 @@
     "name": "mikroe.click.ammonia",
     "product_link": "https://www.mikroe.com/ammonia-click",
     "short_description": "Ammonia Click is an Ammonia detection (NH3) sensor, based on the MQ-137 gas sensor. This gas sensor has a sensitive layer made of SnO2, which changes its resistance when exposed to ammonia. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3771
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.Ammonia",
     "subdir_name": "lib_ammonia"
 }
+
 
 
 

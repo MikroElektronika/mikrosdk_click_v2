@@ -25,17 +25,18 @@
     "name": "mikroe.click.amfm",
     "product_link": "https://www.mikroe.com/amfm-click",
     "short_description": "AM/FM Click is a RADIO RECEIVER click board™ that can be used to listen to music from the AM and FM radio bands.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2694
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.AmFm",
     "subdir_name": "lib_amfm"
 }
+
 
 
 

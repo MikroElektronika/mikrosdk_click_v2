@@ -2,7 +2,7 @@
     "name": "LED Driver 16 Click",
     "description": "LED Driver 16 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the PCA9745B, an SPI-configurable sixteen-channel constant current LED driver from NXP Semiconductors. Each LED output has an 8-bit resolution (256 steps) fixed-frequency individual PWM controller that operates at 31.25kHz with an adjustable duty cycle from 0 to 100% to allow the LED to be set to a specific brightness value. Powered through a selected mikroBUS™ power rail, either 3.3V or 5V, it provides a maximum output current of 57mA per channel and multiple built-in protection functions that protect the circuit during abnormalities.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","PCA9745BTWJ"],
     "category" : ["Click Boards > Display & LED > LED Drivers"]
 }

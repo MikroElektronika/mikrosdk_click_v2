@@ -114,7 +114,7 @@ void application_init ( void ) {
 
     loadcell5_default_cfg ( &loadcell5 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 500 ); 
+    Delay_ms ( 500 ); 
     
     log_printf( &logger, "-------------------------\r\n");
     log_printf( &logger, "     Tare the scale :    \r\n");
@@ -124,12 +124,21 @@ void application_init ( void ) {
     log_printf( &logger, " In the following 10 sec \r\n");
     log_printf( &logger, " please remove all object\r\n");
     log_printf( &logger, "     from the scale.     \r\n");
-    Delay_ms( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "-------------------------\r\n");
     log_printf( &logger, "    Start tare scales    \r\n");
     loadcell5_tare ( &loadcell5, &cell_data );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     log_printf( &logger, "-------------------------\r\n");
     log_printf( &logger, "   Tarring is complete   \r\n");
@@ -142,7 +151,16 @@ void application_init ( void ) {
     log_printf( &logger, "place 100g weight etalon\r\n");
     log_printf( &logger, "    on the scale for     \r\n");
     log_printf( &logger, "   calibration purpose.  \r\n");
-    Delay_ms( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "-------------------------\r\n");
     log_printf( &logger, "    Start calibration    \r\n");
@@ -157,7 +175,16 @@ void application_init ( void ) {
         log_printf( &logger, " In the following 10 sec \r\n");
         log_printf( &logger, "   remove 100g weight   \r\n");
         log_printf( &logger, "   etalon on the scale.  \r\n");
-        Delay_ms( 10000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     else {
         log_printf( &logger, "-------------------------\r\n");
@@ -186,7 +213,7 @@ void application_task ( void ) {
 
     log_printf(&logger, "   Weight : %.2f g\r\n", weight_val );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

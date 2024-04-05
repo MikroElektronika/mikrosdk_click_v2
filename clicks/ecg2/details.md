@@ -114,14 +114,14 @@ void application_init ( void )
         log_error( &logger, " Default configuration." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     ecg2_send_command( &ecg2, ECG2_START_CONVERSION );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     ecg2_send_command( &ecg2, ECG2_ENABLE_READ_DATA_CONT_MODE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -138,7 +138,7 @@ void application_task ( void )
     ecg2_read_channel_data( &ecg2, 5, &ecg_an );
     log_printf( &logger, " %.6u, %.8lu \r\n", ecg_an, time );
     time += 5;
-    Delay_ms( 5 );   
+    Delay_ms ( 5 );   
 }
 
 ```

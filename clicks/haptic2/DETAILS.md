@@ -139,7 +139,7 @@ void application_task ( void )
 
     haptic2_set_duty_cycle ( &haptic2, duty );
     log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     if ( 10 == duty_cnt ) 
     {

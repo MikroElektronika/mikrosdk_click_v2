@@ -96,7 +96,7 @@ void application_init ( void )
     heartrate8_cfg_setup( &cfg );
     HEARTRATE8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     heartrate8_init( &heartrate8, &cfg );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     heartrate8_default_cfg( &heartrate8 );
     i = 0;
 

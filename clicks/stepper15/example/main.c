@@ -69,9 +69,9 @@ void application_init ( void ) {
     log_printf( &logger, "---------------------------------\r\n" );
     
     stepper15_set_work_mode( &stepper15, STEPPER15_WORK_MODE_ENABLE_DEVICE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     stepper15_set_output_mode( &stepper15, STEPPER15_OUTPUT_MODE_OUTPUTS_ENABLE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( stepper15_get_fault_condition( &stepper15 ) == STEPPER15_FAULT_CONDITION ) {
         log_printf( &logger, "         Fault condition         \r\n" );   
@@ -82,7 +82,7 @@ void application_init ( void ) {
     log_printf( &logger, "---------------------------------\r\n" );
     log_printf( &logger, "      Stop the stepper motor     \r\n" );
     stepper15_motor_stop( &stepper15 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void ) {
@@ -92,7 +92,8 @@ void application_task ( void ) {
     log_printf( &logger, " Step speed        :  85 %%      \r\n" );
     stepper15_set_direction ( &stepper15, STEPPER15_DIRECTION_CLOCKWISE );
     stepper15_step_by_angle( &stepper15, step_speed - 15, 90, step_360 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "---------------------------------\r\n" );
     log_printf( &logger, "     Counterclockwise motion     \r\n" );
@@ -100,7 +101,8 @@ void application_task ( void ) {
     log_printf( &logger, " Step speed        :  85 %%      \r\n" );
     stepper15_set_direction ( &stepper15, STEPPER15_DIRECTION_COUNTERCLOCKWISE );
     stepper15_step_by_angle( &stepper15, step_speed - 15, 180, step_360 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "---------------------------------\r\n" );
     log_printf( &logger, "        Clockwise motion         \r\n" );
@@ -108,7 +110,8 @@ void application_task ( void ) {
     log_printf( &logger, " Step speed        :  90 %%      \r\n" );
     stepper15_set_direction ( &stepper15, STEPPER15_DIRECTION_CLOCKWISE );
     stepper15_step_by_angle( &stepper15, step_speed - 10, 270, step_360 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "---------------------------------\r\n" );
     log_printf( &logger, "     Counterclockwise motion     \r\n" );
@@ -116,7 +119,8 @@ void application_task ( void ) {
     log_printf( &logger, " Step speed        : 100 %%      \r\n" );
     stepper15_set_direction ( &stepper15, STEPPER15_DIRECTION_COUNTERCLOCKWISE );
     stepper15_step_by_angle( &stepper15, step_speed, 360, step_360 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "---------------------------------\r\n" );
     log_printf( &logger, "        Clockwise motion         \r\n" );
@@ -124,11 +128,17 @@ void application_task ( void ) {
     log_printf( &logger, " Step speed        : 100 %%      \r\n" );
     stepper15_set_direction ( &stepper15, STEPPER15_DIRECTION_CLOCKWISE );
     stepper15_step_by_angle( &stepper15, step_speed, 360, step_360 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

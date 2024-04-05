@@ -25,17 +25,18 @@
     "name": "mikroe.click.uniqueid",
     "product_link": "https://www.mikroe.com/unique-id-click",
     "short_description": "Unique ID click carries DS2401, an enhanced silicon serial number IC. Itâ€™s a low cost solution for providing a unique registration number to your design.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1359
     ],
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "alias": "Click.UNIQUEID",
     "cmake": true,
     "subdir_name": "lib_uniqueid"
 }
+
 
 
 

@@ -89,7 +89,7 @@ void application_init ( void )
     CANFD_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     canfd_init( &canfd, &cfg );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
 #ifdef DEMO_APP_RECEIVER
     canfd_set_operating_mode( &canfd, CANFD_OPERATING_MODE_RECEIVE );
@@ -99,7 +99,7 @@ void application_init ( void )
     canfd_set_operating_mode( &canfd, CANFD_OPERATING_MODE_NORMAL );
     log_info( &logger, "--- TRANSMITTER MODE ---" );
 #endif 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -118,7 +118,8 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     canfd_generic_write( &canfd, TEXT_TO_SEND, 8 );
     log_info( &logger, "--- The message is sent ---" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif 
 }
 

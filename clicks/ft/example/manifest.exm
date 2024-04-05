@@ -2,7 +2,7 @@
     "name": "FT Click",
     "description": "FT Click is a compact smart transceiver add-on board that helps you add a Free Topology (FT) interface to any host board with the mikroBUS™ socket. Leveraging FT, the most reliable and easiest-to-scale wired communications media, FT Click lets you network sensors and devices to create IoT solutions for automation and control networks that are easier to develop, integrate and install. This Click board™ supports full communication stacks for LON® and BACnet FT, as well as FTMQ (MQTT like messaging format) on board to simplify integration of BACnet, LON or custom IoT networks over twisted pair wire. FT Click is ideal for markets including smart buildings, cities, machines, agriculture, manufacturing, transportation and many more where wireless communications do not provide the required reliability and scale.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","FT 6050"],
     "category" : ["RS485"] 
 }

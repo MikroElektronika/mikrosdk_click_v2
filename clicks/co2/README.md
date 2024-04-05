@@ -143,7 +143,7 @@ void application_init ( void )
         log_error( &logger, " Reference values." );
     }
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, " Application Task " );
 }
 
@@ -166,10 +166,10 @@ void application_task ( void )
     {
         log_printf( &logger, " > CO2[%%]: %.2f\r\n", gas_data );
         log_printf( &logger, " > Temperature[degC]: %.2f\r\n", temp_data );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 }
 
 ```

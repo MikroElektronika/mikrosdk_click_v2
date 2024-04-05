@@ -139,7 +139,7 @@ void application_task ( void )
         log_printf( &logger, " U: %.3fV, I: %.3fA, P: %.3fW\r\n\n", voltage, current, power  );
     }
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

@@ -134,15 +134,16 @@ void application_task ( void )
     stepper18_move_motor_angle( &stepper18, 360, STEPPER18_STEP_RES_FULL, STEPPER18_SPEED_MEDIUM );
     direction = !direction;
     stepper18_set_dir( &stepper18, direction );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     log_printf( &logger, "> Move 180deg in CCW direction.\r\n" );
     stepper18_move_motor_angle( &stepper18, 180, STEPPER18_STEP_RES_FULL, STEPPER18_SPEED_SLOW );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "> Move 180deg in CCW direcion.\r\n" );
     stepper18_move_motor_angle( &stepper18, 180, STEPPER18_STEP_RES_FULL, STEPPER18_SPEED_FAST );
     direction = !direction;
     stepper18_set_dir( &stepper18, direction );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

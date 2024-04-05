@@ -17,25 +17,25 @@
 #define C4X4RGB_DELAYS_H
 
 // Delay adjustment for specific systems.
-// Adjusted specifically for NECTO v6.0.2 and mikroSDK v2.10.2.
+// Adjusted specifically for NECTO v6.1.0 and mikroSDK v2.11.0.
 #ifdef __MIKROC_AI__
     #ifdef STM32F407ZG
         /*< Adjusted for STM32F407ZG */
-        #define DELAY_TOH Delay_Cyc( 3 );   // ~350ns
-        #define DELAY_TOL Delay_Cyc( 5 );   // ~800ns
-        #define DELAY_T1H Delay_Cyc( 9 );   // ~700ns
-        #define DELAY_T1L Delay_Cyc( 2 );   // ~620ns
+        #define DELAY_TOH Delay_Cyc( 3 );   // ~290ns
+        #define DELAY_TOL Delay_Cyc( 5 );   // ~730ns
+        #define DELAY_T1H Delay_Cyc( 9 );   // ~640ns
+        #define DELAY_T1L Delay_Cyc( 2 );   // ~550ns
     #elif MK64FN1M0VDC12
         /*< Adjusted for MK64FN1M0VDC12 */
         #define DELAY_TOH Delay_Cyc( 2 );   // ~300ns
-        #define DELAY_TOL Delay_Cyc( 3 );   // ~790ns
+        #define DELAY_TOL Delay_Cyc( 3 );   // ~870ns
         #define DELAY_T1H Delay_Cyc( 7 );   // ~720ns
         #define DELAY_T1L Delay_Cyc( 2 );   // ~700ns
     #elif TM4C129XNCZAD
         /*< Adjusted for TM4C129XNCZAD */
         #define DELAY_TOH                   // ~420ns
         #define DELAY_TOL                   // ~1000ns
-        #define DELAY_T1H Delay_Cyc( 2 );   // ~650ns
+        #define DELAY_T1H Delay_Cyc( 2 );   // ~690ns
         #define DELAY_T1L                   // ~1000ns
     #elif PIC32MX795F512L
         /*< Adjusted for PIC32MX795F512L */
@@ -48,9 +48,9 @@
                     asm nop; \
                     asm nop; \
                     asm nop;                // ~350ns
-        #define DELAY_TOL                   // ~870ns
-        #define DELAY_T1H Delay_Cyc( 3 );   // ~730ns
-        #define DELAY_T1L                   // ~980ns
+        #define DELAY_TOL                   // ~880ns
+        #define DELAY_T1H Delay_Cyc( 3 );   // ~700ns
+        #define DELAY_T1L                   // ~1000ns
     #else
         #error "Logic delays are not defined for the selected MCU"
     #endif
@@ -58,8 +58,8 @@
     #ifdef STM32F407ZG
         /*< Adjusted for STM32F407ZG */
         #define DELAY_TOH Delay_Cyc( 2 );   // ~370ns
-        #define DELAY_TOL Delay_Cyc( 4 );   // ~780ns
-        #define DELAY_T1H Delay_Cyc( 9 );   // ~710ns
+        #define DELAY_TOL Delay_Cyc( 4 );   // ~790ns
+        #define DELAY_T1H Delay_Cyc( 9 );   // ~700ns
         #define DELAY_T1L Delay_Cyc( 2 );   // ~690ns
     #elif MK64
         /*< Adjusted for MK64FN1M0VDC12 */
@@ -106,9 +106,9 @@
                     asm("nop"); \
                     asm("nop"); \
                     asm("nop"); \
-                    asm("nop");             // ~760ns
-        #define DELAY_T1H Delay_Cyc( 4 );   // ~700ns
-        #define DELAY_T1L                   // ~790ns
+                    asm("nop");             // ~750ns
+        #define DELAY_T1H Delay_Cyc( 4 );   // ~690ns
+        #define DELAY_T1L                   // ~750ns
     #elif GD32VF103VBT6
         /*< Adjusted for GD32VF103VBT6 */
         #define DELAY_TOH \
@@ -240,7 +240,7 @@
     #elif MK64
         /*< Adjusted for MK64FN1M0VDC12 */
         #define DELAY_TOH Delay_Cyc( 2 );   // ~390ns
-        #define DELAY_TOL Delay_Cyc( 3 );   // ~770ns
+        #define DELAY_TOL Delay_Cyc( 3 );   // ~780ns
         #define DELAY_T1H Delay_Cyc( 11 );  // ~690ns
         #define DELAY_T1L \
                     asm("nop"); \
@@ -258,11 +258,11 @@
                     asm("nop"); \
                     asm("nop"); \
                     asm("nop"); \
-                    asm("nop");             // ~600ns
+                    asm("nop");             // ~610ns
     #elif TM4C129
         /*< Adjusted for TM4C129XNCZAD */
         #define DELAY_TOH                   // ~450ns
-        #define DELAY_TOL                   // ~950ns
+        #define DELAY_TOL                   // ~960ns
         #define DELAY_T1H \
                     asm("nop"); \
                     asm("nop"); \
@@ -296,7 +296,7 @@
                     asm("nop"); \
                     asm("nop"); \
                     asm("nop");             // ~720ns
-        #define DELAY_T1L                   // ~950ns
+        #define DELAY_T1L                   // ~1020ns
     #elif GD32VF103VBT6
         /*< Adjusted for GD32VF103VBT6 */
         #define DELAY_TOH \
@@ -323,9 +323,9 @@
                     asm("nop"); \
                     asm("nop"); \
                     asm("nop"); \
-                    asm("nop");             // ~370ns
-        #define DELAY_TOL Delay_Cyc( 2 );   // ~850ns
-        #define DELAY_T1H Delay_Cyc( 4 );   // ~750ns
+                    asm("nop");             // ~350ns
+        #define DELAY_TOL Delay_Cyc( 2 );   // ~860ns
+        #define DELAY_T1H Delay_Cyc( 4 );   // ~760ns
         #define DELAY_T1L \
                     asm("nop"); \
                     asm("nop"); \

@@ -126,7 +126,11 @@ void application_init ( void )
     log_printf( &logger, "Mid point calibration \r\n" );
     log_printf( &logger, "- - - - - - - - - - - - - - -\r\n" );
     log_printf( &logger, "Place probe into pH neutral solution \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "Starting calibration \r\n" );
     log_printf( &logger, "- - - - - - - - - - - - - - -\r\n" );
     log_printf( &logger, "Waiting for stable readings \r\n" );
@@ -145,7 +149,7 @@ void application_init ( void )
             }
         }
         log_printf( &logger, "- " );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
         ezocarrierph_clear_app_buf( );
     }
     
@@ -177,7 +181,11 @@ void application_task ( void )
     ezocarrierph_send_cmd( &ezocarrierph, EZOCARRIERPH_CMD_SINGLE_READ );
     error_flag = ezocarrierph_rsp_check( &ezocarrierph, EZOCARRIERPH_RSP_OK );
     ezocarrierph_error_check( error_flag );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

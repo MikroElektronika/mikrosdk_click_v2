@@ -66,7 +66,7 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, " -----------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -84,7 +84,8 @@ void application_task ( void )
             log_printf( &logger, " Manufacturer ID: 0x%.2X\r\n", ( uint16_t ) read_id[ 4 ] );
             log_printf( &logger, " Device ID: 0x%.2X    \r\n", ( uint16_t ) read_id[ 5 ] );
             log_printf( &logger, " -----------------------\r\n" );
-            Delay_ms( 2000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
         }
     }
     
@@ -96,7 +97,8 @@ void application_task ( void )
             log_printf( &logger, "%s", app_buf );
             memset( app_buf, 0, PROCESS_BUFFER_SIZE );
             log_printf( &logger, " -----------------------\r\n" );
-            Delay_ms( 2000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
         }
     }
     
@@ -105,12 +107,18 @@ void application_task ( void )
         log_printf( &logger, " ADC\r\n" );
         log_printf( &logger, " Voltage : %.3f[V]\r\n", voltage );
         log_printf( &logger, " -----------------------\r\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 ); 
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

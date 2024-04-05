@@ -25,17 +25,18 @@
     "name": "mikroe.click.thermo13",
     "product_link": "https://www.mikroe.com/thermo-13-click",
     "short_description": "Thermo 13 Click is a Click board™ equipped with the sensor IC, which can digitize temperature measurements between -30°C and +95°C so that the temperature measurement data can be processed by the host MCU.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2865
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Thermo13",
     "subdir_name": "lib_thermo13"
 }
+
 
 
 

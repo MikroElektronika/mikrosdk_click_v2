@@ -25,17 +25,18 @@
     "name": "mikroe.click.big7seg",
     "product_link": "https://www.mikroe.com/big-7-seg-r-click",
     "short_description": "BIG 7-SEG click is what you need if you want to add a seven-segment LED display to your project.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1979
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Big7Seg",
     "subdir_name": "lib_big7seg"
 }
+
 
 
 

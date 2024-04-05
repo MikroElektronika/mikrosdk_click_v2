@@ -25,11 +25,12 @@
     "name": "mikroe.click.barometer9",
     "product_link": "https://www.mikroe.com/barometer-9-click",
     "short_description": "Barometer 9 Click is a compact add-on board ideal for precision activity tracking and indoor navigation/localization. This board features the ENS220, a barometric pressure and temperature sensor from ScioSense",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.Barometer9",
     "subdir_name": "lib_barometer9"
 }
+

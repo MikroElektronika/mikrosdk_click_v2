@@ -25,17 +25,18 @@
     "name": "mikroe.click.pedometer",
     "product_link": "https://www.mikroe.com/pedometer-click",
     "short_description": "Pedometer Click is designed to sense movement, more precisely, to sense and count steps taken by its user.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2762
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Pedometer",
     "subdir_name": "lib_pedometer"
 }
+
 
 
 

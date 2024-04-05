@@ -25,14 +25,15 @@
     "name": "mikroe.click.lr4",
     "product_link": "https://www.mikroe.com/lr-3-click",
     "short_description": "LR 4 Click is a compact add-on board that contains a long-range transceiver. This board features the 32001353, RF technology-based SRD transceiver, which operates at a frequency of 868MHz from Mipot.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.LR4",
     "subdir_name": "lib_lr4"
 }
+
 
 
 

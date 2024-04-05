@@ -57,7 +57,7 @@ void application_init ( void )
     PROXIMITY7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     proximity7_init( &proximity7, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     proximity7_default_cfg( &proximity7 );
 
@@ -92,11 +92,16 @@ void application_task ( void )
         proximity7_generic_write( &proximity7, PROXIMITY7_SPECIAL_FUNCTION | PROXIMITY7_PROXIMITY_AND_ALS_INT_PIN_CLEAR, &write_buffer[ 0 ], 1 );
     }
     
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -25,14 +25,15 @@
     "name": "mikroe.click.ambient17",
     "product_link": "https://www.mikroe.com/ambient-17-click",
     "short_description": "Ambient 17 Click is a compact add-on board used to measure the amount of the present ambient light. This board features the TSL2572, a digital-output ambient light sensor with an I2C interface from ams AG. The TSL2572 can detect a wide range of illuminance up to 60klx and provides excellent responsivity close to the human eyes' response. It is designed to control the brightness in various applications based on ambient light availability, brightness for optimum visibility, and energy efficiency. Operation in a temperature range of -30Â°C to 70Â°C ensures stable operation under extreme conditions.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "alias": "Click.Ambient17",
     "cmake": true,
     "subdir_name": "lib_ambient17"
 }
+
 
 
 

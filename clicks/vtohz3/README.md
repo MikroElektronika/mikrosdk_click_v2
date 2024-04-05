@@ -125,7 +125,7 @@ void application_task ( void )
         log_printf( &logger, " Output frequency : %lu Hz\r\n\n", 
                     vtohz3_get_frequency ( &vtohz3, voltage, VTOHZ3_VREF_INTERNAL_2V5 ) );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

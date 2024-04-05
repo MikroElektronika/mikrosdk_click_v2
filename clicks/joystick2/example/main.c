@@ -76,31 +76,31 @@ void application_task ( void )
         case JOYSTICK2_BUTTON_ACTIVE:
         {
             log_info( &logger, "--- Button is pressed!!! ---" );
-            Delay_ms( 300 );
+            Delay_ms ( 300 );
             break;
         }
         case JOYSTICK2_POSITION_RIGHT:
         {
             log_info( &logger, "--- Joystick position [RIGHT] ---" );
-            Delay_ms( 300 );
+            Delay_ms ( 300 );
             break;
         }
         case JOYSTICK2_POSITION_LEFT:
         {
             log_info( &logger, "--- Joystick position [LEFT] ---" );
-            Delay_ms( 300 );
+            Delay_ms ( 300 );
             break;
         }
         case JOYSTICK2_POSITION_UP:
         {
             log_info( &logger, "--- Joystick position [UP] ---" );
-            Delay_ms( 300 );
+            Delay_ms ( 300 );
             break;
         }
         case JOYSTICK2_POSITION_DOWN:
         {
             log_info( &logger, "--- Joystick position [DOWN] ---" );
-            Delay_ms( 300 );
+            Delay_ms ( 300 );
             break;
         }
     }
@@ -108,6 +108,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

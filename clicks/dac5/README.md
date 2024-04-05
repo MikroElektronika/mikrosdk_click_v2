@@ -102,7 +102,7 @@ void application_init ( void )
     dac5_config( &dac5, DAC5_CONFIG_GLOBAL_ENABLED );
     log_printf( &logger, "The click board is configured.\r\n" );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -126,7 +126,8 @@ void application_task ( void )
             log_printf( &logger, "Expected output on channel H:\t %d mV\r\n", ( uint16_t )( ( ( float ) cnt / DAC5_MAX_DATA ) * dac5.vref ) );
         }
         log_printf( &logger,"------------------------------------\r\n" );
-        Delay_ms ( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }  
 

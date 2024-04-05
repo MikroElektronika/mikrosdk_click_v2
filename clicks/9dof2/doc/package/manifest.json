@@ -25,17 +25,18 @@
     "name": "mikroe.click.c9dof2",
     "product_link": "https://www.mikroe.com/9dof-2-click",
     "short_description": "9DOF 2 Click is a compact add-on board for applications which require lowest power motion tracking and magnetometer functionality.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3254
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.9dof2",
     "subdir_name": "lib_c9dof2"
 }
+
 
 
 

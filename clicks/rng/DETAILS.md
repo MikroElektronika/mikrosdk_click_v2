@@ -116,7 +116,7 @@ void application_task ( void )
 
     log_printf( &logger, "Voltage from AIN0: %.2f mV\r\n", voltage );
     log_printf( &logger, "-----------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

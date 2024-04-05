@@ -102,11 +102,12 @@ void application_init ( void )
         for( ; ; );
     }
     log_printf( &logger, "-- Device communication OK --\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     c6dofimu10_default_cfg ( &c6dofimu10 );
     log_printf( &logger, "-- Device configuration --\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
   
 ```
@@ -130,15 +131,18 @@ void application_task ( void )
 
     log_printf( &logger, "-- Accelerometer axis --\r\n" );
     app_display_axis_data( &accel_axis );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "-- Magnetometer axis --\r\n" );
     app_display_axis_data( &mag_axis );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "-- Temperature data --\r\n" );
     app_display_temp_data( temperature );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

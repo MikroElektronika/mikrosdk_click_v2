@@ -119,7 +119,7 @@ void application_task ( void )
     if ( PRESSURE19_OK == pressure19_get_pressure ( &pressure19, &pressure ) ) 
     {
         log_printf( &logger, " Pressure : %u mBar\r\n\n", pressure );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

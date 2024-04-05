@@ -193,7 +193,7 @@ void application_task ( void )
         log_printf( &logger, "Coordinate Y = %u \r\n",                               touch_data.y_pos );
         log_printf( &logger, "Touch strength = %u  \r\n",               ( uint16_t ) touch_data.touch_strength );
         log_printf( &logger, "----------------------------------------------------------------\r\n\r\n" );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     
     // Monitoring to determine whether the reset occurred on the device after the last ack reset     

@@ -91,17 +91,17 @@ void application_init ( void )
     lr5_init( &lr5, &cfg );
 
     lr5_response_handler_set( &lr5, &make_response );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     lr5_reset_cmd( &lr5 );
     wait_response( );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     lr5_factory_reset_cmd( &lr5 );
     wait_response( );
     
     log_printf( &logger, "** LR 5 (MIPOT 32001409) reset is done **\r\n" );
     log_printf( &logger, "\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -162,7 +162,7 @@ void application_task ( void )
         }
     }
     log_printf( &logger, "***********************************************\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "** Activation status reading...\r\n" );
     lr5_get_activation_status_cmd( &lr5 );
@@ -195,7 +195,7 @@ void application_task ( void )
         }
     }
     log_printf( &logger, "***********************************************\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "** Next TX Data Rate setting...\r\n" );
     lr5_set_next_dr_cmd( &lr5, LR5_SF10_125KHZ );
@@ -209,12 +209,21 @@ void application_task ( void )
         log_printf( &logger, "Error!\r\n" );
     }
     log_printf( &logger, "***********************************************\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "** Channel parameters reading...\r\n" );
     lr5_get_ch_param_cmd( &lr5, LR5_CH_IDX_15 );
     wait_response( );
-    Delay_ms( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

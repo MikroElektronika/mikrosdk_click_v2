@@ -89,7 +89,7 @@ void application_init ( void )
     swipeswitch_cfg_setup( &cfg );
     SWIPESWITCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     swipeswitch_init( &swipeswitch, &cfg );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
     
     display_mode = SWIPESWITCH_GESTURE_MODE;
     
@@ -157,7 +157,7 @@ void application_task ( void )
             old_y_coordinate = y_coordinate;
         }
     }
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 
 ```

@@ -89,7 +89,7 @@ void application_init ( void )
     BLUETOOTH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     bluetooth_init( &bluetooth, &cfg );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
    
     log_printf( &logger, "Configuring the module...\n" );
     

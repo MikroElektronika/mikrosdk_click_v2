@@ -25,17 +25,18 @@
     "name": "mikroe.click.wifi11",
     "product_link": "https://www.mikroe.com/wifi-11-click",
     "short_description": "WiFi 11 Click is a compact add-on board that contains a WiFi and Bluetooth module that has dual bands for WiFi communication. This board features the BW16, a low-power dual bands Wireless LAN (WLAN) and Bluetooth Low Energy SoC module from Ai-Thinker.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3847
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Wifi11",
     "subdir_name": "lib_wifi11"
 }
+
 
 
 

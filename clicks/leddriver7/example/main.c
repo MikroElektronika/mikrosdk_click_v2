@@ -54,7 +54,7 @@ void application_init ( void )
     LEDDRIVER7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     leddriver7_init( &leddriver7, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "-------------------- \r\n" );
     log_printf( &logger, " LED Driver 7 click  \r\n" );
     log_printf( &logger, "-------------------- \r\n" );
@@ -69,12 +69,17 @@ void application_task ( void )
     {
         leddriver7_generic_write( &leddriver7, LEDDRIVER7_NORM_OP_MODE, &n_pos, 1 );
         log_printf( &logger, "Position : %d \r\n", (uint16_t)n_pos );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

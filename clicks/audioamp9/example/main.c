@@ -65,12 +65,20 @@ void application_task ( void )
     {
         audioamp9_set_gain_level( &audioamp9, vol_lvl );
         log_printf( &logger, " Volume gain level %d \r\n ", vol_lvl );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     
     log_printf( &logger, " Sound is muted \r\n " );
     audioamp9_mute_on( &audioamp9 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, " Sound is unmuted \r\n " );
     audioamp9_mute_off( &audioamp9 );
@@ -78,6 +86,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -59,16 +59,21 @@ void application_task ( void )
     relay2_relay2_control(&relay2, 1 );
     relay2_relay1_control(&relay2, 1 );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     relay2_relay2_control(&relay2, 0 );
     relay2_relay1_control(&relay2, 0 );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

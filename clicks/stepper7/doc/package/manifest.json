@@ -25,14 +25,15 @@
     "name": "mikroe.click.stepper7",
     "product_link": "https://www.mikroe.com/stepper-7-click",
     "short_description": "Stepper 7 click is a bipolar step motor driver. It features an H-bridge bipolar step motor driver, which supports full and half step control modes. Stepper 7 click also carries a port expander so that the communication can be done with a minimal number of pins, through the mikroBUS™ SPI bus.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
     "related_projects": [
         2297
     ],
-    "version": "2.1.0.0",
+    "version": "2.1.0.1",
     "cmake": true,
     "alias": "Click.Stepper7",
     "subdir_name": "lib_stepper7"
 }
+

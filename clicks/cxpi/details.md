@@ -108,13 +108,14 @@ void application_init ( void ) {
     log_printf( &logger, "------------------\r\n" );
     log_printf( &logger, "    Send data:    \r\n" );
     log_printf( &logger, "      MikroE      \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 #endif
 
 #ifdef DEMO_APP_RECEIVER 
     log_printf( &logger, "------------------\r\n" );
     log_printf( &logger, "   Receive data  \r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif
 
     log_printf( &logger, "------------------\r\n" );
@@ -141,7 +142,11 @@ void application_task ( void ) {
     cxpi_send_command( &cxpi, &demo_message[ 0 ] );
     log_printf( &logger, " Sent data : %s",  &demo_message[ 0 ] );
     log_printf( &logger, "------------------\r\n" ); 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif
 }
 

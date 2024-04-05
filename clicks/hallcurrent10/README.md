@@ -112,7 +112,7 @@ void application_init ( void )
 
     log_info( &logger, " Application Task " );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -129,17 +129,18 @@ void application_task ( void )
 {
     hallcurrent10_read_adc( &hallcurrent10, &adc_data );
     log_printf( &logger, " ADC Value   : %d \r\n", adc_data );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     hallcurrent10_get_adc_voltage( &hallcurrent10, &adc_voltage );
     log_printf( &logger, " ADC Voltage : %.2f mV \r\n", adc_voltage );
     log_printf( &logger, "- - - - - - - - - - -  - -\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     hallcurrent10_get_current ( &hallcurrent10, &current );
     log_printf( &logger, " Current     : %.2f mA \r\n", current );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

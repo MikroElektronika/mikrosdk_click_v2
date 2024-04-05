@@ -118,7 +118,7 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, "________________________\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -144,12 +144,13 @@ void application_task ( void )
                 log_printf( &logger, " SEN%d -> ", ( uint16_t ) sen_num );
                 log_printf( &logger, " I : %u |", i_data );
                 log_printf( &logger, " Q : %u \r\n", q_data );       
-                Delay_ms( 100 );
+                Delay_ms ( 100 );
             }
         }
     }
     log_printf( &logger, "________________________\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

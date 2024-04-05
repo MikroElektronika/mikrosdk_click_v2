@@ -101,7 +101,7 @@ void application_init ( void )
 
     matrixrgb_pattern_settings ( &matrixrgb, MATRIXRGB_PATTERN_1_MAP_6MM, 1000 );
     matrixrgb_set_power( &matrixrgb, 1 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     font_cfg.p_font       = Arial9x9;
     font_cfg.color        = 0xFFFF;
@@ -110,7 +110,7 @@ void application_init ( void )
     matrixrgb_set_font ( &matrixrgb, &font_cfg );
     
     matrixrgb_fill_screen( &matrixrgb, 0xFFFF );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -131,13 +131,13 @@ void application_task ( )
     for ( test = 5; test < 50; test++ )
     {
         matrixrgb_set_brightness( &matrixrgb, test );
-        Delay_ms( 50 );
+        Delay_ms ( 50 );
     }
 
     for ( test = 50; test > 5; test-- )
     {
         matrixrgb_set_brightness( &matrixrgb, test );
-        Delay_ms( 50 );
+        Delay_ms ( 50 );
     }
 
     // Pixel Write Test
@@ -145,23 +145,24 @@ void application_task ( )
     for ( test = 0; test < 32; test++ )
     {
         matrixrgb_write_pixel( &matrixrgb, test, test, 0xF100 );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     for ( test = 32; test > 0; test-- )
     {
         matrixrgb_write_pixel( &matrixrgb, 32 - test, test, 0xF100 );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 
     //Text Write Test
     matrixrgb_fill_screen( &matrixrgb, 0x0000 );
     matrixrgb_write_text( &matrixrgb, "RGB", 6, 5 );
     matrixrgb_write_text( &matrixrgb, "Demo", 4, 20 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     // Image Test
     matrixrgb_draw_image( &matrixrgb, &mikroe_logo_32x32_bmp[ 0 ] );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

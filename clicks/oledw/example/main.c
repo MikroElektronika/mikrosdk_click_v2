@@ -42,7 +42,7 @@ void application_init ( void ) {
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Init " );
 
     // Click initialization.
@@ -64,48 +64,53 @@ void application_task ( void ) {
     uint8_t i;
 
     oledw_display_picture( &oledw, oledw_img );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     oledw_send( &oledw, OLEDW_INVERTDISPLAY, OLEDW_COMMAND );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     oledw_send( &oledw, OLEDW_NORMALDISPLAY, OLEDW_COMMAND );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     oledw_send( &oledw, OLEDW_INVERTDISPLAY, OLEDW_COMMAND );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     oledw_send( &oledw, OLEDW_NORMALDISPLAY, OLEDW_COMMAND );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 
     for (i = 0xAF; i > 0x00; i--) {
         oledw_set_contrast( &oledw, i );
-        Delay_ms( 5 );
+        Delay_ms ( 5 );
     }
 
     for (i = 0x00; i < 0xAF; i++) {
         oledw_set_contrast( &oledw, i );
-        Delay_ms( 5 );
+        Delay_ms ( 5 );
     }
 
     oledw_scroll_right( &oledw, 0x00, 0x05 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     oledw_stop_scroll( &oledw );
     oledw_display_picture( &oledw, oledw_img );
 
     oledw_scroll_left( &oledw, 0x00, 0x05 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     oledw_stop_scroll( &oledw );
     oledw_display_picture( &oledw, oledw_img );
 
     oledw_scroll_diag_right( &oledw, 0x00, 0x05 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     oledw_stop_scroll( &oledw );
     oledw_display_picture( &oledw, oledw_img );
 
     oledw_scroll_diag_left( &oledw, 0x00, 0x05 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     oledw_stop_scroll( &oledw );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

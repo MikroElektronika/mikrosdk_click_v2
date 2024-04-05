@@ -25,17 +25,18 @@
     "name": "mikroe.click.nbiot",
     "product_link": "https://www.mikroe.com/nb-iot-click",
     "short_description": "NB IoT click is a Click board™ that allows LTE Cat NB1 connectivity by utilizing Quectel BC95-G, a specialized multi-band IoT module with very low power requirements and compact form factor, making it perfectly suited for various IoT-based applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2593
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.NbIot",
     "subdir_name": "lib_nbiot"
 }
+
 
 
 

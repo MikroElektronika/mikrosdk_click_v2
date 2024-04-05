@@ -25,17 +25,18 @@
     "name": "mikroe.click.captouch2",
     "product_link": "https://www.mikroe.com/cap-touch-2-click",
     "short_description": "Cap Touch 2 click is a capacitive touch sensing Click board™ which features the CAP1166, an advanced touch/proximity sensor IC, packed with a range of different touch/proximity functionalities, allowing development of robust and aesthetically pleasing touch interfaces.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2366
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.CapTouch2",
     "subdir_name": "lib_captouch2"
 }
+
 
 
 

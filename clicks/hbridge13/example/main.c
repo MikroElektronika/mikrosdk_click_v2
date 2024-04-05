@@ -68,27 +68,40 @@ void application_task ( void )
     {
         log_printf( &logger, " Motor in forward mode with speed of %d %% \r\n", ( uint16_t ) n_cnt );
         hbridge13_set_direction( &hbridge13, HBRIDGE13_DIR_FORWARD, n_cnt );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     
     log_printf( &logger, " Motor brake is on \r\n" );
     hbridge13_set_brake( &hbridge13 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     for( uint8_t n_cnt = 0; n_cnt <= 100; n_cnt += 10 )
     {
         log_printf( &logger, " Motor in reverse with speed of %d %% \r\n", ( uint16_t ) n_cnt );
         hbridge13_set_direction( &hbridge13, HBRIDGE13_DIR_REVERSE, n_cnt );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     
     log_printf( &logger, " Motor is coasting \r\n" );
     hbridge13_set_coast( &hbridge13 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

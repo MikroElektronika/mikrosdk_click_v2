@@ -94,13 +94,18 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITER
 
     rs4853_generic_write( &rs4853, TEXT_TO_SEND, 8 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
 #endif     
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.singlewirecan",
     "product_link": "https://www.mikroe.com/single-wire-can-click",
     "short_description": "Single Wire CAN Click is a compact add-on board that contains an IC for a single wire data link capable of operating with various protocols such as the Controller Area Network (CAN). This board features the NCV7356D1R2G, Single Wire CAN transceiver from ON Semiconductor, which operates from a supply voltage from 5V to 27V with bus speed up to 40 kbps.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3779
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.SingleWireCan",
     "subdir_name": "lib_singlewirecan"
 }
+
 
 
 

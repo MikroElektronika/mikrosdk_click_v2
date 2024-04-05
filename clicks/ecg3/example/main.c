@@ -57,7 +57,7 @@ void plot_ecg ( )
             meas_time_cnt++;
         }
     }
-    Delay_ms( 8 );
+    Delay_ms ( 8 );
 }
 
 void log_rtor ( )
@@ -67,7 +67,8 @@ void log_rtor ( )
         log_printf( &logger,"R - R Interval : %u ms\r\n", rr_data );
         log_printf( &logger,"Heart Rate :  %u BPM\r\n", hr_data );
     }
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -98,10 +99,10 @@ void application_init ( void )
 
     ecg3_sw_reset( &ecg3 );
     ecg3_fifo_reset( &ecg3 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     ecg3_default_cfg ( &ecg3 );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 
 void application_task ( void )
@@ -113,6 +114,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

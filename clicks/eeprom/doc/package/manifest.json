@@ -25,17 +25,18 @@
     "name": "mikroe.click.eeprom",
     "product_link": "https://www.mikroe.com/eeprom-click",
     "short_description": "EEPROM Click is an accessory board in mikroBUS form factor. It features 24C08WP - a highly reliable, high performance CMOS technology serial 8K EEPROM in DIP packaging.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         388
     ],
-    "version": "2.1.0.17",
+    "version": "2.1.0.18",
     "cmake": true,
     "alias": "Click.Eeprom",
     "subdir_name": "lib_eeprom"
 }
+
 
 
 

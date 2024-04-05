@@ -2,7 +2,7 @@
     "name": "LTE IoT 6 Click",
     "description": "LTE IoT 6 Click is a compact add-on board that contains an IoT module with worldwide coverage. This board features the SARA-R412M, a cellular module that offers multi-band data transmissions for Low Power Wide Area solutions in a compact form factor from u-Blox.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","SARA-R412M"],
     "category" : ["LTE IoT"] 
 }

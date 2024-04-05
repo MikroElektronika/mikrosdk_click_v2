@@ -25,14 +25,15 @@
     "name": "mikroe.click.stepper8",
     "product_link": "https://www.mikroe.com/stepper-8-click",
     "short_description": "Stepper 8 Click is a motor control add on board based on TC78H670FTG from Toshiba, a clock-in and serial controlled Bipolar Stepping Motor Driver which can drive a 128 micro-stepping motor with a power supply ranging from 2.5V to 16V for wide range of applications includes USB-powered, battery-powered, and standard 9-12V system devices. A perfect solution for driving stepper motors in security cameras, portable printers, handheld scanners, pico-projectors, smartphones and many more.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
     "related_projects": [
         3765
     ],
-    "version": "2.1.0.0",
+    "version": "2.1.0.1",
     "cmake": true,
     "alias": "Click.Stepper8",
     "subdir_name": "lib_stepper8"
 }
+

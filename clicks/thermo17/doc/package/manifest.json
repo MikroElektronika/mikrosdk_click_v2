@@ -25,17 +25,18 @@
     "name": "mikroe.click.thermo17",
     "product_link": "https://www.mikroe.com/thermo-17-click",
     "short_description": "The Thermo 17 Click is a Click board™ based on the TMP451-Q1, a high-accuracy, lowpower remote temperature sensor monitor with a built-in local temperature sensor from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3214
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Thermo17",
     "subdir_name": "lib_thermo17"
 }
+
 
 
 

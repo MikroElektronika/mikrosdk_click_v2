@@ -25,17 +25,18 @@
     "name": "mikroe.click.digivref",
     "product_link": "https://www.mikroe.com/digivref-click",
     "short_description": "DigiVref click is a very precise voltage reference Click board™, which allows one of four different voltage values to be selected over the SPI interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2676
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.DigiVref",
     "subdir_name": "lib_digivref"
 }
+
 
 
 

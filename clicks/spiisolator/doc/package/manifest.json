@@ -25,17 +25,18 @@
     "name": "mikroe.click.spiisolator",
     "product_link": "https://www.mikroe.com/spi-isolator-click",
     "short_description": "The click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over SPI interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2927
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.Spiisolator",
     "subdir_name": "lib_spiisolator"
 }
+
 
 
 

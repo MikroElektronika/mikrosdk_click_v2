@@ -67,7 +67,7 @@ void application_task ( void )
     float ir_data;
     uint8_t flag;
 
-    Delay_ms( 400 );
+    Delay_ms ( 400 );
 
     irsense2_data_read( &irsense2, &ir_data, &temperature );
 
@@ -77,18 +77,23 @@ void application_task ( void )
     {   log_printf( &logger, " \r\n----------------------------- \r\n");
         log_printf( &logger, "\r\n Person detected!!! \r\n" );
         log_printf( &logger, " \r\n----------------------------- \r\n");
-        Delay_ms( 300 );
+        Delay_ms ( 300 );
     }
 
     log_printf( &logger, "\r\n\r\nIR Value:       %.2f  pA ", ir_data );
     log_printf( &logger, " \r\n----------------------------- \r\n");
     log_printf( &logger, "Temperature: %.8f  C \r\n", temperature );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

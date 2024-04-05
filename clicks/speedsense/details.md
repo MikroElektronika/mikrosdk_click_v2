@@ -139,7 +139,7 @@ void application_task ( void )
     }
 
     time_cnt++;
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 }
 ```
 

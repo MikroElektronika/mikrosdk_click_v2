@@ -139,7 +139,7 @@ void application_task ( void )
                 }
             }    
             log_printf( &logger, "\r\n*********************\r\n" );
-            Delay_ms( 10 );
+            Delay_ms ( 10 );
         }
     }
 #endif
@@ -154,7 +154,7 @@ void application_task ( void )
                 log_printf( &logger, "%c", read_data[ n_cnt ] );
             }
             log_printf( &logger, "\r\n*********************\r\n" );
-            Delay_ms( 10 );
+            Delay_ms ( 10 );
         }
     }
 #endif

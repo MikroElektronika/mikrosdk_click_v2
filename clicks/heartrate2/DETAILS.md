@@ -94,10 +94,10 @@ void application_init ( void )
     heartrate2_init( &heartrate2, &cfg );
     
     log_printf( &logger, "Configuring the module...\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     heartrate2_set_en( &heartrate2, HEARTRATE2_PIN_HIGH );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     heartrate2_soft_reset ( &heartrate2 );
     
     rd_stat = heartrate2_generic_read( &heartrate2, HEARTRATE2_REG_PART_ID );
@@ -111,7 +111,7 @@ void application_init ( void )
     
     heartrate2_default_cfg( &heartrate2, HEARTRATE2_CONFIG_GREEN );
     log_printf( &logger, "The module has been configured!\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```

@@ -58,7 +58,7 @@ void application_init ( void )
                             CAPWHEEL_CH3_EN | CAPWHEEL_CH4_EN | CAPWHEEL_CH5_EN | CAPWHEEL_CH6_EN | 
                             CAPWHEEL_CH7_EN | CAPWHEEL_CH8_EN | CAPWHEEL_CH9_EN );
     capwheel_set_threshold( &capwheel, 0x03 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_printf( &logger, "CAP Wheel is initialized and ready\r\n" );
 }
@@ -80,6 +80,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

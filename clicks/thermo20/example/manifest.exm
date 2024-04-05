@@ -2,7 +2,7 @@
     "name": "Thermo 20 Click",
     "description": "Thermo 20 Click is a compact add-on board that provides an accurate temperature measurement. This board features the TSYS03, a miniature digital temperature sensor that comes up with factory calibrated, highly accurate temperature data from TE Connectivity.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","TSYS03"],
     "category" : ["Temperature & humidity"]
 }

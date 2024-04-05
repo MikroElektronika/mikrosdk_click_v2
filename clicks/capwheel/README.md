@@ -94,7 +94,7 @@ void application_init ( void )
     capwheel_reset ( &capwheel );
     capwheel_enable_chann( &capwheel, CAPWHEEL_CH0_PROX_EN | CAPWHEEL_CH1_EN | CAPWHEEL_CH2_EN | CAPWHEEL_CH3_EN | CAPWHEEL_CH4_EN | CAPWHEEL_CH5_EN | CAPWHEEL_CH6_EN | CAPWHEEL_CH7_EN | CAPWHEEL_CH8_EN | CAPWHEEL_CH9_EN );
     capwheel_set_threshold( &capwheel, 0x03 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_printf( &logger, "CAP Wheel is initialized and ready\r\n" );
 }

@@ -57,7 +57,8 @@ void application_init ( void )
 
     temphum12_default_cfg( &temphum12 );
     
-    Delay_ms( 1500 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 500 );
     log_printf( &logger, "--- Start measurement ----\r\n" );
 }
 
@@ -82,6 +83,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

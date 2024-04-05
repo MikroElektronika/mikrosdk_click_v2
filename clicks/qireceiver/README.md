@@ -98,12 +98,12 @@ void application_init ( void )
     QIRECEIVER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     qireceiver_init( &qireceiver, &cfg );
     
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     qireceiver_dev_enable( &qireceiver );
     log_printf( &logger, "-----------------\r\n" );
     log_printf( &logger, "Qi Receiver Click\r\n" );
     log_printf( &logger, "-----------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -131,7 +131,7 @@ void application_task ( void )
     log_printf( &logger, "Frequency : %.2f Hz\r\n", freq );
     
     log_printf( &logger, "-----------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

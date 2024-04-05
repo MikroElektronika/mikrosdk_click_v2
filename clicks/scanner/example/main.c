@@ -54,10 +54,10 @@ void application_init ( void )
     SCANNER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     scanner_init( &scanner, &cfg );
 
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 
     scanner_startup( &scanner );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     scanner_serial_write_reg( &scanner, SCANNER_REG_MODE, SCANNER_DATA_NORMAL_MODE );
     
@@ -88,6 +88,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

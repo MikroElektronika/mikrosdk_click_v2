@@ -62,11 +62,16 @@ void application_task ( void )
     new_angle = angle5_read_angle_deg( &angle5 );
     log_printf( &logger, "Angle: %.2f\r\n", new_angle );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -25,14 +25,15 @@
     "name": "mikroe.click.thunderemu",
     "product_link": "https://www.mikroe.com/thunder-emu-click",
     "short_description": "Thunder EMU Click is a compact add-on board that can be used to emulate lightning. This board features circuits that generate an RF signal that mimics lightning strikes. It is a thunder emulator board that allows you to mimic lightning signals that can represent different distances, thus enabling you to debug your lightning detector application for all kinds of scenarios. The RF signal has an effective range of about 5 – 15cm from the emulator antenna of this Click board™ to the sensor antenna.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.ThunderEMU",
     "subdir_name": "lib_thunderemu"
 }
+
 
 
 

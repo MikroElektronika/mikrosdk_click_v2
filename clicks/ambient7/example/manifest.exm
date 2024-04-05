@@ -2,7 +2,7 @@
     "name": "Ambient 7 Click",
     "description": "Ambient 7 Click is a light intensity-sensing and measuring Click board™, which features an accurate light-intensity sensor labeled as SFH 5701 A01, made by Osram Opto Semiconductors.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","SFH 5701 A01","OPA344"],
     "category" : ["Optical"] 
 }

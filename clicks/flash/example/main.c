@@ -63,12 +63,12 @@ void process_wait( void )
 
     for ( cnt = 0; cnt < 9; cnt++ )
     {
-        Delay_ms( 400 );
+        Delay_ms ( 400 );
         log_printf( &logger, "****" );
     }
 
     log_printf( &logger, "\r\n" );
-    Delay_ms( 400 );
+    Delay_ms ( 400 );
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -131,6 +131,11 @@ void application_task( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

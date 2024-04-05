@@ -25,14 +25,15 @@
     "name": "mikroe.click.tester",
     "product_link": "https://www.mikroe.com/tester-click",
     "short_description": "Each pin of the mikroBUS™ is routed to a red colored LED, which is protected by 1K resistor.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.Tester",
     "subdir_name": "lib_tester"
 }
+
 
 
 

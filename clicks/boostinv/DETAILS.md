@@ -98,7 +98,7 @@ void application_init ( void )
     boostinv_default_cfg ( &boostinv );
     log_printf( &logger, "     Boost INV Click\r\n" );
     log_printf( &logger, "-------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -120,22 +120,38 @@ void application_task ( void )
     log_printf( &logger, "          3200 mV\r\n" );
     log_printf( &logger, "-------------------------\r\n" );
     boostinv_set_positive_voltage( &boostinv, BOOSTINV_VOLTAGE_POSITIVE_3200_mV );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "          7750 mV\r\n" );
     log_printf( &logger, "-------------------------\r\n" );
     boostinv_set_positive_voltage( &boostinv, BOOSTINV_VOLTAGE_POSITIVE_7750_mV );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "        12000 mV\r\n" );
     log_printf( &logger, "-------------------------\r\n" );
     boostinv_set_positive_voltage( &boostinv, BOOSTINV_VOLTAGE_POSITIVE_12000_mV );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "         7750 mV\r\n" );
     log_printf( &logger, "-------------------------\r\n" );
     boostinv_set_positive_voltage( &boostinv, BOOSTINV_VOLTAGE_POSITIVE_7750_mV );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     // Sets Negative output voltage
     
@@ -144,22 +160,38 @@ void application_task ( void )
     log_printf( &logger, "        -1450 mV\r\n" );
     log_printf( &logger, "-------------------------\r\n" );
     boostinv_set_negative_voltage( &boostinv, BOOSTINV_VOLTAGE_NEGATIVE_1450_mV );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "       - 6700 mV\r\n" );
     log_printf( &logger, "-------------------------\r\n" );
     boostinv_set_negative_voltage( &boostinv, BOOSTINV_VOLTAGE_NEGATIVE_6700_mV );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "       - 11050 mV\r\n" );
     log_printf( &logger, "-------------------------\r\n" );
     boostinv_set_negative_voltage( &boostinv, BOOSTINV_VOLTAGE_NEGATIVE_11050_mV );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "       - 6700 mV\r\n" );
     log_printf( &logger, "-------------------------\r\n" );
     boostinv_set_negative_voltage( &boostinv, BOOSTINV_VOLTAGE_NEGATIVE_6700_mV );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

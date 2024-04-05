@@ -103,7 +103,7 @@ void application_init ( void )
     log_printf( &logger, "|     Accel       |       Gyro        |\r\n" );
     log_printf( &logger, "---------------------------------------\r\n" );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -123,11 +123,11 @@ void application_task ( void )
 
     lsm6dsl_get_accel( &lsm6dsl, &accel, LSM6DSL_FULLSCALE_XL_2 );
     
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     lsm6dsl_get_gyro( &lsm6dsl, &gyro, LSM6DSL_FULLSCALE_G_245 );
     
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
 
     log_printf( &logger, " Accel X : %f |  Gyro X : %f |\r\n", accel.accel_x, gyro.gyro_x );
 
@@ -137,7 +137,9 @@ void application_task ( void )
 
     log_printf( &logger, "---------------------------------------\r\n" );
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

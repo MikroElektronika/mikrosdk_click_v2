@@ -104,26 +104,26 @@ void application_init ( void )
         log_error( &logger, " Default configuration." );
         for ( ; ; );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     annab412_set_cmd_echo_on( &annab412 );
     annab412_display_rsp( RSP_OK );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     annab412_set_cmd_device_name( &annab412, DEVICE_NAME );
     annab412_display_rsp( RSP_OK );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     annab412_set_cmd_discover_mode( &annab412, ANNAB412_DISCOVERABLE_MODE_ON );
     annab412_display_rsp( RSP_OK );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     annab412_set_cmd_enter_mode( &annab412, ANNAB412_ENTER_MODE_DATA );
     annab412_display_rsp( RSP_OK );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     annab412_set_dsr_pin( &annab412, ANNAB412_PIN_STATE_LOW );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
@@ -138,6 +138,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -199,7 +204,7 @@ static err_t annab412_display_rsp ( char *rsp_end )
             if ( strstr( app_buf, rsp_end ) )
             {
                 annab412_clear_app_buf( );
-                Delay_ms( 100 );
+                Delay_ms ( 100 );
                 annab412_process( &annab412 );
                 for ( int32_t buf_cnt = 0; buf_cnt < app_buf_len; buf_cnt++ )
                 {
@@ -210,7 +215,7 @@ static err_t annab412_display_rsp ( char *rsp_end )
                 return ANNAB412_OK;
             }
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
     return ANNAB412_ERROR;
 }

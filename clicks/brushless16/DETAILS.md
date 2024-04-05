@@ -103,7 +103,7 @@ void application_init ( void )
 
         for ( ; ; );
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     log_info( &logger, " Application Task " );
 }
 
@@ -124,13 +124,13 @@ void application_task ( void )
     if ( brushless16_get_rd( &brushless16 ) )
     {
         log_info( &logger, " Motor Lock" );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
     
     if ( brushless16_get_fg( &brushless16 ) )
     {
         log_info( &logger, " FG" );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
     
     if ( !( timer-- ) )
@@ -150,7 +150,7 @@ void application_task ( void )
         state = !state;
     }
     
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 }
 
 ```

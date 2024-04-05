@@ -25,14 +25,15 @@
     "name": "mikroe.click.current4",
     "product_link": "https://www.mikroe.com/current-4-click",
     "short_description": "Current 4 Click is a compact add-on board that provides a precise and accurate current sensing solution. This board features the INA250, a bidirectional, zero-drift current-shunt monitor from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.Current4",
     "subdir_name": "lib_current4"
 }
+
 
 
 

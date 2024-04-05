@@ -111,7 +111,7 @@ void application_task ( void )
 
     current_data = hallcurrent2_get_current( &hallcurrent2 );
     log_printf( &logger, "--- Current : %d mA\r\n", current_data );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

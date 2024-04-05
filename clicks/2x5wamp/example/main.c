@@ -60,7 +60,7 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_printf( &logger, "-- Application Init --\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, "    2x5W Amp  Click    \r\n" );
@@ -71,10 +71,10 @@ void application_init ( void )
     c2x5wamp_cfg_setup( &cfg );
     C2X5WAMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c2x5wamp_init( &c2x5wamp, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     c2x5wamp_default_cfg ( &c2x5wamp );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -82,7 +82,11 @@ void application_task ( void )
     c2x5wamp_set_mode( &c2x5wamp, C2X5WAMP_MODE_MUTE );
 
     log_printf( &logger, "       MUTE  MODE      \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "-----------------------\r\n" );
 
     if ( c2x5wamp_set_mode( &c2x5wamp, C2X5WAMP_MODE_PLAY ) )
@@ -99,18 +103,37 @@ void application_task ( void )
     c2x5wamp_set_gain( &c2x5wamp, C2X5WAMP_GAIN_20DB );
 
     log_printf( &logger, "   Gain set to  20dB   \r\n" );
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "- - - - - - - - - - - -\r\n" );
 
     c2x5wamp_set_gain( &c2x5wamp, C2X5WAMP_GAIN_32DB );
 
     log_printf( &logger, "   Gain set to  32dB   \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "-----------------------\r\n" );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

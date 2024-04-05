@@ -2,7 +2,7 @@
     "name": "Color 14 Click",
     "description": "Color 14 Click is a compact add-on board that represents an accurate color sensing solution. This board features the APDS-9151, an integrated RGB, ambient light sensing, IR LED, and a complete proximity detection system from Broadcom Limited. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","APDS-9151"],
     "category" : ["Optical"]
 }

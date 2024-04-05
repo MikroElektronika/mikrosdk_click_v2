@@ -103,7 +103,7 @@ void application_init ( void )
     c6dofimu3_init( &c6dofimu3, &cfg );
 
     c6dofimu3_default_cfg( &c6dofimu3 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -128,7 +128,7 @@ void application_task ( void )
         
         log_printf( &logger, "-------------------------------------\r\n" );
 
-        Delay_ms( 800 );
+        Delay_ms ( 800 );
     }
 }
 

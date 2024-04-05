@@ -25,17 +25,18 @@
     "name": "mikroe.click.mcp73871",
     "product_link": "https://www.mikroe.com/mcp73871-click",
     "short_description": "MCP73871 click is a fully integrated solution for system power delivery and Li-Po/Li-Ion battery charge management.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2209
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Mcp73871",
     "subdir_name": "lib_mcp73871"
 }
+
 
 
 

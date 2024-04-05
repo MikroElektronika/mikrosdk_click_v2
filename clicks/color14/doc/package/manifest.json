@@ -25,14 +25,15 @@
     "name": "mikroe.click.color14",
     "product_link": "https://www.mikroe.com/color-14-click",
     "short_description": "Color 14 Click is a compact add-on board that represents an accurate color sensing solution. This board features the APDS-9151, an integrated RGB, ambient light sensing, IR LED, and a complete proximity detection system from Broadcom Limited. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Color14",
     "subdir_name": "lib_color14"
 }
+
 
 
 

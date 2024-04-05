@@ -97,7 +97,7 @@ void application_init ( void )
     brushless4_pwm_start( &brushless4 );  
       
     log_info( &logger, "---- Application Task ----" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -119,7 +119,7 @@ void application_task ( void )
 
     brushless4_set_duty_cycle ( &brushless4, duty );
     log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     if ( 10 == duty_cnt ) 
     {

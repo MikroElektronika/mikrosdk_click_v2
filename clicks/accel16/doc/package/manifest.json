@@ -25,14 +25,15 @@
     "name": "mikroe.click.accel16",
     "product_link": "https://www.mikroe.com/accel-16-click",
     "short_description": "Accel 16 Click is a compact add-on board that contains an acceleration sensor. This board features the ADXL363, a micropower three-sensor combination including acceleration and temperature from Analog Devices. This device combines a 3-axis MEMS accelerometer, a temperature sensor, and an analog-to-digital converter (ADC) input for synchronized conversions of external signals.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.Accel16",
     "subdir_name": "lib_accel16"
 }
+
 
 
 

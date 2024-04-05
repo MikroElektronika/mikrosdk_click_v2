@@ -25,17 +25,18 @@
     "name": "mikroe.click.pwrmeter2",
     "product_link": "https://www.mikroe.com/pwr-meter-2-click",
     "short_description": "PWR Meter 2 click is a compact and accurate power monitoring Click board™, capable of measuring and monitoring voltage up to 24V and current up to 5A.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2417
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.PwrMeter2",
     "subdir_name": "lib_pwrmeter2"
 }
+
 
 
 

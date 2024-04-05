@@ -107,19 +107,19 @@ void application_task ( void )
 {
     log_info( &logger, "> Display Character ..." );
     c8x8_display_byte( &spiisolator, demo_char );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_info( &logger, "> Display String ..." );
     c8x8_display_string( &spiisolator, &demo_string[ 0 ] );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_info( &logger, "> Display Image ON ..." );
     c8x8_display_image( &spiisolator, &demo_img_on[ 0 ] );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     log_info( &logger, "> Display Image OFF ..." );
     c8x8_display_image( &spiisolator, &demo_img_off[ 0 ] );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

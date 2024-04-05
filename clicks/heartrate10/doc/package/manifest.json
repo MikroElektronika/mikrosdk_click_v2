@@ -25,14 +25,15 @@
     "name": "mikroe.click.heartrate10",
     "product_link": "https://www.mikroe.com/heart-rate-10-click",
     "short_description": "Heart Rate 10 Click is a compact add-on board suitable for heart rate monitoring applications. This board features the MAX86916, an integrated optical sensor with applications in bio-sensing, proximity, and color from Maxim Integrated.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.HeartRate10",
     "subdir_name": "lib_heartrate10"
 }
+
 
 
 

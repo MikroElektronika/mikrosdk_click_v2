@@ -75,7 +75,7 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, " ----------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
@@ -85,30 +85,35 @@ void application_task ( void )
     {
         charger25_display_status( );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( CHARGER25_OK == charger25_get_vbat( &charger25, &vtg_data ) )
     {
         log_printf( &logger, " VBAT: %u [mV]\r\n", vtg_data );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( CHARGER25_OK == charger25_get_vsys_min( &charger25, &vtg_data ) )
     {
         log_printf( &logger, " VMIN: %u [mV]\r\n", vtg_data );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( CHARGER25_OK == charger25_get_vbat_lim( &charger25, &vtg_data ) )
     {
         log_printf( &logger, " VLIM: %u [mV]\r\n", vtg_data );
     }
     log_printf( &logger, " ----------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

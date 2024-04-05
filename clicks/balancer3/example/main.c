@@ -77,11 +77,16 @@ void application_task ( void )
             balancer3_enable_cell_balance( &balancer3, BALANCER3_CELL_BALANCE_DIS );
         }
     }
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

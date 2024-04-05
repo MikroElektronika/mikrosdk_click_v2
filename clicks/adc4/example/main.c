@@ -56,7 +56,7 @@ void application_init ( void )
     ADC4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     adc4_init( &adc4, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     adc4_default_cfg( &adc4 );
 
@@ -76,11 +76,16 @@ void application_task ( )
         log_printf( &logger, "Voltage at CH0 : - %d mV \r\n", voltage );
     }
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

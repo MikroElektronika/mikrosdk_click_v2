@@ -119,19 +119,19 @@ void application_init ( void )
     else
     {
         log_printf( &logger, "CRC ERROR READING REVISION. \r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
         
         for ( ; ; )
         {
             log_printf( &logger, "PLEASE, RESTART YOUR SYSTEM...\r\n" );
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
             log_printf( &logger, " \r\n \r\n " );
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
         }
     }
     
     log_printf( &logger, "----------------------------------------- \r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
   
 ```
@@ -162,7 +162,8 @@ void application_task ( void )
         log_printf( &logger, "----------------------------------------- \r\n" );
     }
     
-    Delay_ms( 1500 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 500 );
 } 
 
 ```

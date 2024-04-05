@@ -111,7 +111,7 @@ void application_init ( void ) {
     }
 
     dtmfdecoder_default_cfg ( &dtmfdecoder );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Task " );
 }
 
@@ -129,7 +129,7 @@ void application_task ( void ) {
     if ( dtmfdecoder_delayed_steering_check( &dtmfdecoder ) ) {
         result = dtmfdecoder_tone_read( &dtmfdecoder );
         log_printf( &logger, " Detected key tone:\t%c\r\n", result );
-        Delay_ms( tone_register_delay );
+        Delay_ms ( tone_register_delay );
     }
 }
 

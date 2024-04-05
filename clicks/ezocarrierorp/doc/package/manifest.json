@@ -25,11 +25,12 @@
     "name": "mikroe.click.ezocarrierorp",
     "product_link": "https://www.mikroe.com/ezo-carrier-click-orp",
     "short_description": "EZO Carrier Click - ORP is a compact add-on board suitable for determining a liquid's oxidation/reduction potential in your application. This board features the EZO-ORP™, an ISO 11271 compliant embedded ORP circuit board from Atlas Scientific. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.EZOCarrierORP",
     "subdir_name": "lib_ezocarrierorp"
 }
+

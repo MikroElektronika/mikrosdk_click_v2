@@ -119,7 +119,7 @@ void application_init ( void )
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, " Set the gain to x1  \r\n" );
     log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     buzz3_pwm_start( &buzz3 );
     buzz3_set_gain_operating_mode( &buzz3, BUZZ3_OP_MODE_GAIN_x1 );
 
@@ -139,7 +139,7 @@ void application_task ( void )
     log_printf( &logger, "   Play the music    \r\n" );
     buzz3_melody( );
     log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

@@ -2,7 +2,7 @@
     "name": "MCP2518FD Click",
     "description": "MCP2518FD Click is a compact add-on board representing a complete CAN solution used as a control node in a CAN network. This board features the MCP2518FD, an external CAN FD controller with an SPI interface, and a high-speed CAN transceiver, the ATA6563, both from Microchip. The ATA6563, a low-level physical layer IC (PHY), provides a physical connection with the CAN bus itself, while the CAN controller MCP2518FD represents an interface between the MCU and the PHY. It features three operating modes with dedicated fail-safe features, remote wake-up via CAN, and ideally passive behavior when powered off on the CAN bus. This Click board™ is suitable for developing a wide range of automotive diagnostic applications, even on MCUs that do not natively support CAN interface.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","MCP2518FD"],
     "category" : ["CAN"]
 }

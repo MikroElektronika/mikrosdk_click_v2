@@ -89,7 +89,7 @@ void application_init ( void )
     MP32_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     mp32_init( &mp32, &cfg );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     log_printf( &logger, "-------------------------\r\n" );
     log_printf( &logger, "       MP3 2 click       \r\n" );
@@ -97,12 +97,12 @@ void application_init ( void )
     Delay_100ms( );
 
     mp32_hw_reset( &mp32 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     mp32_set_device( &mp32, MP32_SDCARD );
     mp32_set_volume( &mp32, 50 );
     mp32_set_eq( &mp32, MP32_EQ_NORMAL );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -118,13 +118,33 @@ void application_task ( void )
 {
     log_printf( &logger, " >>> Play\r\n" );
     mp32_play_mode( &mp32 );
-    Delay_ms( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " >>> Next song\r\n" );
     mp32_play_next( &mp32 );
-    Delay_ms( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " >>> Pause\r\n" );
     mp32_pause_mode( &mp32 );
-    Delay_ms( 3000 );        
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );        
 }  
 
 ```

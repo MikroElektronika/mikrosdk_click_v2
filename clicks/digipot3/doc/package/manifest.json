@@ -25,17 +25,18 @@
     "name": "mikroe.click.digipot3",
     "product_link": "https://www.mikroe.com/digi-pot-3-click",
     "short_description": "DIGI POT 3 click is a versatile and feature-rich digital potentiometer click with 1024 steps and an internal non-volatile memory (EEMEM), which can be used for storing the wiper position, but also for storing various user data.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2381
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.DigiPot3",
     "subdir_name": "lib_digipot3"
 }
+
 
 
 

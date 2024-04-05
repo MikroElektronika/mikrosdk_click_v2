@@ -25,11 +25,12 @@
     "name": "mikroe.click.adc24",
     "product_link": "https://www.mikroe.com/adc-24-click",
     "short_description": "ADC 24 Click is a compact add-on board for high-speed analog to digital conversion. This board features the AD7490, a 12-bit, 16-channel successive approximation ADC from Analog Devices, optimized for efficient power usage with a consumption of just 2.5mA from a 5V supply while achieving up to 1MSPS throughput rates. The board features 16 single-ended analog inputs with a configurable input range, supported by a channel sequencer for sequential channel conversion and multiple operational modes for flexible power management. This makes ADC 24 Click ideal for extensive system monitoring applications such as multichannel system monitoring, power line monitoring, data acquisition, instrumentation, and process control, serving various industrial and tech applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.ADC24",
     "subdir_name": "lib_adc24"
 }
+

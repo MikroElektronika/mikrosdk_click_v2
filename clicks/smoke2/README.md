@@ -116,11 +116,11 @@ void application_init ( void )
     uint16_t devid = smoke2_read_data( &smoke2, SMOKE2_REG_DEVID );
     log_printf( &logger, ">> ID:  0x%.2X\r\n", ( uint16_t ) ( devid & 0xFF ) );  
     log_printf( &logger, ">> REV: 0x%.2X\r\n", ( uint16_t ) ( ( devid >> 8 ) & 0xFF ) );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, ">> Configuration <<\r\n" );
     smoke2_default_cfg( &smoke2 ); 
-    Delay_ms( 1000 ); 
+    Delay_ms ( 1000 ); 
     
 #if ( EXAMPLE_MODE == EXAMPLE_MODE_SMOKE )
     log_printf( &logger, ">> SMOKE MODE <<\r\n" );

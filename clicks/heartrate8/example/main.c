@@ -46,7 +46,7 @@ void plot_res( uint16_t plot_data )
     {
         i = 0;
     }
-    Delay_ms( 35 );
+    Delay_ms ( 35 );
 }
 
 void log_res( )
@@ -55,7 +55,7 @@ void log_res( )
     
     log_printf( &logger, "LED OFF Data : %u\n", led_data_off );
     
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -101,11 +101,16 @@ void application_task ( void )
     plot_res( led_data_on );
     int_check = heartrate8_int_clear( &heartrate8 );
     
-    Delay_ms( 5 );
+    Delay_ms ( 5 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

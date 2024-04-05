@@ -2,7 +2,7 @@
     "name": "Slider Click",
     "description": "Slider click features a mechanical slide action potentiometer - a slider, which gives a nice feeling when actuating, along with 16 SMD LEDs, that can be used for any kind of visual feedback. The onboard high-resolution 22-bit ADC can detect even the smallest move, faithfully capturing the smoothness of the slider movement, while digitizing its position. The 16 onboard SMD LEDs can give a nice visual feedback of the slider position, but those LEDs can also be used for other purposes since they are not hardwired to the slider.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","MCP3551"],
     "category" : ["ADC"] 
 }

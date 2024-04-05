@@ -108,19 +108,22 @@ void application_task ( void )
     
     log_info( &logger, "Set volume channel 1:" );
     application_error_handler( audioamp4_set_channel( &audioamp4, AUDIOAMP4_VOLUME_CHANN_1 ) );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_info( &logger, "Set volume channel 5:" );
     application_error_handler( audioamp4_set_channel( &audioamp4, AUDIOAMP4_VOLUME_CHANN_5 ) );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_info( &logger, "Set volume channel 7:" );
     application_error_handler( audioamp4_set_channel( &audioamp4, AUDIOAMP4_VOLUME_CHANN_7 ) );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_info( &logger, "Turn off device:" );
     application_error_handler( audioamp4_shutdown( &audioamp4, AUDIOAMP4_SHUTDOWN_ON ) );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 ```
 

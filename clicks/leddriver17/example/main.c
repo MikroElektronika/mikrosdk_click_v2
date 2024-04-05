@@ -76,7 +76,7 @@ void application_task ( void )
     leddriver17_set_duty_cycle ( &leddriver17, duty );
     log_printf( &logger, " Duty: %u%%\r\n\n", ( uint16_t ) ( duty_cnt * 10 ) );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     if ( 10 == duty_cnt ) 
     {
@@ -91,6 +91,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -106,7 +106,7 @@ void application_task ( void )
     for (bargraph_cnt = 0; bargraph_cnt <= 5; bargraph_cnt++)
     {
         bargraph3_display(  &bargraph3, BARGRAPH3_INCREASE_LED,  BARGRAPH3_DIRECTION_BOTTOM_TO_TOP, bargraph_cnt);
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }  
 

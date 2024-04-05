@@ -116,7 +116,7 @@ void application_init ( void )
 
     log_info( &logger, " Application Task " );
     log_printf( &logger, " -----------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -138,7 +138,11 @@ void application_task ( void )
         {
             display_status( );    
         }
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 
     if ( C420MAT2_OK == c420mat2_set_output_current( &c420mat2, 10.0 ) )
@@ -149,7 +153,11 @@ void application_task ( void )
         {
             display_status( );    
         }
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 
     if ( C420MAT2_OK == c420mat2_set_output_current( &c420mat2, 15.0 ) )
@@ -160,7 +168,11 @@ void application_task ( void )
         {
             display_status( );    
         }
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 
     if ( C420MAT2_OK == c420mat2_set_output_current( &c420mat2, 20.0 ) )
@@ -171,7 +183,11 @@ void application_task ( void )
         {
             display_status( );    
         }
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

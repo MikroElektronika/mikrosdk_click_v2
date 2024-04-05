@@ -58,7 +58,7 @@ void application_init (  )
     accel7_init( &accel7, &cfg );
     accel7_default_cfg( &accel7, resolution, range );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task (  )
@@ -77,11 +77,16 @@ void application_task (  )
     
     log_printf( &logger, "------------------\r\n" );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

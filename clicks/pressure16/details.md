@@ -129,7 +129,7 @@ void application_init ( void )
     log_printf( &logger, "---------------------------\r\n" );
     log_printf( &logger, "      Start measuring\r\n" );
     log_printf( &logger, "---------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -150,7 +150,7 @@ void application_task ( void )
     log_printf( &logger, " Pressure    : %.2f mbar \r\n", pressure );
     log_printf( &logger, " Temperature :  %.2f C \r\n", temperature );
     log_printf( &logger, "---------------------------\r\n" ); 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

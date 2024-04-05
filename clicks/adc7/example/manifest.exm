@@ -2,7 +2,7 @@
   "name": "ADC 7 Click",
   "description": "ADC 7 Click is an advanced 32-bit analog to digital converter (ADC) which uses the LTC2500-32, a 32-bit oversampling SAR ADC with a configurable digital filter. The filter provides several presets (selectable via the hardware pin), as well as programming of the filtering parameters, via the industry-standard SPI interface.",
   "image": "../../Resources/click_icon.png",
-  "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+  "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
   "hw": [ "click", "LTC2500-32" ],
   "category": [ "ADC" ]
 }

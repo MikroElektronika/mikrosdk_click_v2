@@ -141,7 +141,7 @@ void application_init ( void )
             }
         }
         log_printf( &logger, "- " );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
         ezocarrierdo_clear_app_buf( );
     }
     
@@ -172,7 +172,11 @@ void application_task ( void )
     ezocarrierdo_send_cmd( &ezocarrierdo, EZOCARRIERDO_CMD_SINGLE_READ );
     error_flag = ezocarrierdo_rsp_check( &ezocarrierdo, EZOCARRIERDO_RSP_OK );
     ezocarrierdo_error_check( error_flag );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

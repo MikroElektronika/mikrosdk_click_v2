@@ -90,7 +90,7 @@ void application_init ( void )
     POWERBANK_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     powerbank_init( &powerbank, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "------------------------\r\n" );
     log_printf( &logger, "     PowerBank click    \r\n" );
     log_printf( &logger, "------------------------\r\n" );
@@ -113,7 +113,8 @@ void application_task ( void )
     log_printf( &logger, "Battery voltage: %d mV\r\n", voltage );
     
     log_printf( &logger, "------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

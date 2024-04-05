@@ -92,7 +92,7 @@ void application_init ( void )
     LR4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     lr4_init( &lr4, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     lr4_set_ind_handler( &lr4, response_handler );
     log_printf( &logger, "Hard reset!\r\n" );
     lr4_hard_reset( &lr4 );
@@ -100,18 +100,18 @@ void application_init ( void )
     log_printf( &logger, "Factory reset!\r\n" );
     lr4_factory_reset( &lr4 );
     log_printf( &logger, "------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     uint32_t tmp_data = 0;
     log_printf( &logger, "Get FW version!\r\n" );
     lr4_get_fw_version( &lr4, &tmp_data );
     log_printf( &logger, "FW vesion is: 0x%.8LX\r\n", tmp_data );
     log_printf( &logger, "------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "Get Serial Number!\r\n" );
     lr4_get_serial_no( &lr4, &tmp_data );
     log_printf( &logger, "Serial Number is: 0x%.8LX\r\n", tmp_data );
     log_printf( &logger, "------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     uint8_t tmp_buf[ 8 ] = { 0 };
     log_printf( &logger, "Get Dev EUI!\r\n" );
     lr4_get_dev_eui( &lr4, tmp_buf );
@@ -124,11 +124,11 @@ void application_init ( void )
                                                                                ( uint16_t ) tmp_buf[ 1 ],
                                                                                ( uint16_t ) tmp_buf[ 0 ] );
     log_printf( &logger, "------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "Join Network!\r\n" );
     lr4_join_network( &lr4, LR4_JOIN_ACTIVATION_BY_PERSONALIZATION_MODE );
     log_printf( &logger, "------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -172,7 +172,7 @@ void application_task ( void )
         }
     }
     log_printf( &logger, "------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "Get Session Status!\r\n" );
     status = lr4_get_status( &lr4, LR4_GET_SESSION_STATUS_MODE );
     log_printf( &logger, "Status: " );
@@ -204,7 +204,7 @@ void application_task ( void )
         }
     }
     log_printf( &logger, "------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

@@ -131,13 +131,15 @@ void application_task ( void )
     stepper14_set_direction ( &stepper14, STEPPER14_DIR_CW );
     stepper14_set_step_mode ( &stepper14, STEPPER14_MODE_FULL_STEP );
     stepper14_drive_motor ( &stepper14, 200, STEPPER14_SPEED_MEDIUM );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf ( &logger, " Move 400 half steps counter-clockwise, speed: fast\r\n\n" );
     stepper14_set_direction ( &stepper14, STEPPER14_DIR_CCW );
     stepper14_set_step_mode ( &stepper14, STEPPER14_MODE_HALF_STEP );
     stepper14_drive_motor ( &stepper14, 400, STEPPER14_SPEED_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

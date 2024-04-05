@@ -90,16 +90,16 @@ void application_init ( )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     //  Click initialization.
 
     dcmotor2_cfg_setup( &cfg );
     DCMOTOR2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     dcmotor2_init( &dcmotor2, &cfg );
     dcmotor2_pwm_start( &dcmotor2 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, "---- Application Task ----" );
 }
   
@@ -138,7 +138,7 @@ void application_task ( )
 
     dcmotor2_set_duty_cycle ( &dcmotor2, duty );
     log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     if ( 10 == duty_cnt ) 
     {

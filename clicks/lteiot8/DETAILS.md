@@ -158,7 +158,11 @@ void application_task ( void )
             {
                 example_state = LTEIOT8_WAIT_FOR_CONNECTION;
             }
-            Delay_ms( 5000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
             break;
         }
         case LTEIOT8_WAIT_FOR_CONNECTION:
@@ -175,7 +179,11 @@ void application_task ( void )
             {
                 example_state = LTEIOT8_CONFIGURE_FOR_MESSAGES;
             }
-            Delay_ms( 5000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
             break;
         }
         case LTEIOT8_CONFIGURE_FOR_MESSAGES:
@@ -184,13 +192,26 @@ void application_task ( void )
             {
                 example_state = LTEIOT8_MESSAGES;
             }
-            Delay_ms( 5000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
             break;
         }
         case LTEIOT8_MESSAGES:
         {
             lteiot8_send_meesage();
-            Delay_ms( 10000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
             break;
         }
         default:

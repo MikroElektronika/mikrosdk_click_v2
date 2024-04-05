@@ -2,7 +2,7 @@
     "name": "Color 7 Click",
     "description": "Color 7 click is a very accurate color sensing Click board which features the TCS3472 color light to digital converter with IR filter, from ams.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","TCS3472 "],
     "category" : ["Color Sensing","Optical"] 
 }

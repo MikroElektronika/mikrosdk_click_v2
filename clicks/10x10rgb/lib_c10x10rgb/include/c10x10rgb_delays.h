@@ -17,7 +17,7 @@
 #define C10X10RGB_DELAYS_H
 
 // Delay adjustment for specific systems.
-// Adjusted specifically for NECTO v6.0.2 and mikroSDK v2.10.2.
+// Adjusted specifically for NECTO v6.1.0 and mikroSDK v2.11.0.
 #ifdef __MIKROC_AI__
     #ifdef STM32F407ZG
         /*< Adjusted for STM32F407ZG */
@@ -33,16 +33,16 @@
         #define DELAY_T1L Delay_Cyc( 3 );   // ~810ns
     #elif TM4C129XNCZAD
         /*< Adjusted for TM4C129XNCZAD */
-        #define DELAY_TOH                   // ~360ns
-        #define DELAY_TOL asm nop;          // ~820ns
-        #define DELAY_T1H Delay_Cyc( 4 );   // ~850ns
-        #define DELAY_T1L                   // ~940ns
+        #define DELAY_TOH                   // ~420ns
+        #define DELAY_TOL asm nop;          // ~930ns
+        #define DELAY_T1H Delay_Cyc( 4 );   // ~790ns
+        #define DELAY_T1L                   // ~960ns
     #elif PIC32MX795F512L
         /*< Adjusted for PIC32MX795F512L */
         #define DELAY_TOH                   // ~250ns
         #define DELAY_TOL                   // ~710ns
-        #define DELAY_T1H Delay_Cyc( 4 );   // ~840ns
-        #define DELAY_T1L                   // ~890ns
+        #define DELAY_T1H Delay_Cyc( 4 );   // ~830ns
+        #define DELAY_T1L                   // ~900ns
     #else
         #error "Logic delays are not defined for the selected MCU"
     #endif
@@ -55,10 +55,10 @@
         #define DELAY_T1L Delay_Cyc( 4 );   // ~750ns
     #elif MK64
         /*< Adjusted for MK64FN1M0VDC12 */
-        #define DELAY_TOH Delay_Cyc( 2 );   // ~400ns
-        #define DELAY_TOL Delay_Cyc( 2 );   // ~770ns
+        #define DELAY_TOH Delay_Cyc( 2 );   // ~360ns
+        #define DELAY_TOL Delay_Cyc( 2 );   // ~700ns
         #define DELAY_T1H Delay_Cyc( 12 );  // ~740ns
-        #define DELAY_T1L Delay_Cyc( 2 );   // ~800ns
+        #define DELAY_T1L Delay_Cyc( 2 );   // ~760ns
     #elif TM4C129
         /*< Adjusted for TM4C129XNCZAD */
         #define DELAY_TOH \
@@ -86,8 +86,8 @@
                     asm("nop"); \
                     asm("nop"); \
                     asm("nop"); \
-                    asm("nop");             // ~820ns
-        #define DELAY_T1H Delay_Cyc( 6 );   // ~780ns
+                    asm("nop");             // ~760ns
+        #define DELAY_T1H Delay_Cyc( 6 );   // ~820ns
         #define DELAY_T1L \
                     asm("nop"); \
                     asm("nop"); \
@@ -96,7 +96,7 @@
                     asm("nop"); \
                     asm("nop"); \
                     asm("nop"); \
-                    asm("nop");             // ~790ns
+                    asm("nop");             // ~730ns
     #elif GD32VF103VBT6
         /*< Adjusted for GD32VF103VBT6 */
         #define DELAY_TOH \
@@ -150,7 +150,7 @@
                     asm("nop"); \
                     asm("nop"); \
                     asm("nop"); \
-                    asm("nop");             // ~740ns
+                    asm("nop");             // ~730ns
     #else
         #error "Logic delays are not defined for the selected MCU"
     #endif
@@ -194,9 +194,9 @@
     #elif TM4C129
         /*< Adjusted for TM4C129XNCZAD */
         #define DELAY_TOH                   // ~470ns
-        #define DELAY_TOL                   // ~980ns
+        #define DELAY_TOL                   // ~950ns
         #define DELAY_T1H Delay_Cyc( 2 );   // ~1000ns
-        #define DELAY_T1L                   // ~990ns
+        #define DELAY_T1L                   // ~950ns
     #elif GD32VF103VBT6
         /*< Adjusted for GD32VF103VBT6 */
         #define DELAY_TOH \
@@ -218,7 +218,7 @@
                     asm("nop");             // ~270ns
         #define DELAY_TOL Delay_Cyc( 2 );   // ~850ns
         #define DELAY_T1H Delay_Cyc( 4 );   // ~770ns
-        #define DELAY_T1L Delay_Cyc( 2 );   // ~820ns
+        #define DELAY_T1L Delay_Cyc( 2 );   // ~850ns
     #else
         #error "Logic delays are not defined for the selected MCU"
     #endif

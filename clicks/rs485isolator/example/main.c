@@ -70,7 +70,7 @@ static void rs485isolator_process ( void )
             }
         }
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -106,7 +106,8 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     rs485isolator_generic_write( &rs485isolator, TEXT_TO_SEND, strlen ( TEXT_TO_SEND ) );
     log_info( &logger, "---- Data sent ----" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #else
     rs485isolator_process( );
 #endif    
@@ -114,6 +115,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

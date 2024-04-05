@@ -25,14 +25,15 @@
     "name": "mikroe.click.brushless16",
     "product_link": "https://www.mikroe.com/brushless-16-click",
     "short_description": "Brushless 16 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the LB11685AV, a three-phase full-wave current-linear-drive motor driver from ON Semiconductor.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Brushless16",
     "subdir_name": "lib_brushless16"
 }
+
 
 
 

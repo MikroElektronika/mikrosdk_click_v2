@@ -98,7 +98,7 @@ void application_task ( void )
 
     log_printf( &logger, "-- Pressure difference  : %f kPa\r\n", pressure_difference );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 

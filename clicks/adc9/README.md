@@ -105,7 +105,7 @@ void application_init ( void )
 
     adc9_default_cfg( &adc9, &adc9_rw );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -132,7 +132,7 @@ void application_task ( void )
     log_printf( &logger, "Voltage in milivolts : %.2f\r\n", m_volts );
 
     log_printf( &logger, "------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

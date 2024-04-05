@@ -25,17 +25,18 @@
     "name": "mikroe.click.i2cextend2",
     "product_link": "https://www.mikroe.com/i2c-extend-2-click",
     "short_description": "I2C Extend 2 Click is a compact add-on board suitable for I2C communication bus extension. This board features the PCA9615, a 2-channel multipoint differential I2C bus buffer with hot-swap logic from NXP Semiconductors. The PCA9615 converts the two default I2C signals into four differential signals, two for SCL and two for SDA.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         4070
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.I2CExtend2",
     "subdir_name": "lib_i2cextend2"
 }
+
 
 
 

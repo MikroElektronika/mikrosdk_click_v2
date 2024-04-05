@@ -25,17 +25,18 @@
     "name": "mikroe.click.canisolator",
     "product_link": "https://www.mikroe.com/can-isolator-click",
     "short_description": "CAN Isolator click provides isolated CAN communication. It carries the ADM3053 signal and power isolated CAN transceiver with an integrated isolated DC-to-DC converter.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2884
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.CanIsolator",
     "subdir_name": "lib_canisolator"
 }
+
 
 
 

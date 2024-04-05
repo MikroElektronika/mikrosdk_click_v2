@@ -118,7 +118,7 @@ void application_init ( void ) {
     
     lightranger5_default_cfg( &lightranger5 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( !lightranger5_check_factory_calibration( &lightranger5 ) ) {
         log_info( &logger, " Factory calibration success." );
@@ -140,7 +140,7 @@ void application_init ( void ) {
             }  
             status_old = status;
         }
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     } while ( status );
     
     lightranger5_get_factory_calib_data( &lightranger5, factory_calib_data );
@@ -213,7 +213,7 @@ void application_task ( void ) {
         log_printf( &logger, "------------------------------\r\n" );
     }
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

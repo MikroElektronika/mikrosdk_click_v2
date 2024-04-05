@@ -67,15 +67,17 @@ void application_task ( void )
     for ( pin_position = 0; pin_position < 8; pin_position++ )
     {
         expand4_disable_output( &expand4 );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
 
         expand4_turn_on_by_position( &expand4, pin_position );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
 
         log_printf( &logger, " D%d", pin_position );
 
         expand4_enable_output( &expand4 );
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 
     log_printf( &logger, "\n----------------------------------\n");
@@ -83,6 +85,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

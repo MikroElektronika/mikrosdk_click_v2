@@ -25,14 +25,15 @@
     "name": "mikroe.click.charger18",
     "product_link": "https://www.mikroe.com/charger-18-click",
     "short_description": "Charger 18 Click is a compact add-on board representing a single-cell battery charger. This board features the LTC3553, a micropower, highly integrated power management, and battery charger for single-cell Li-Ion/Polymer battery applications from Analog Devices. Designed specifically for USB applications, it also includes a PowerPath manager with automatic load prioritization and input current limit, a battery charger, and numerous internal protection features. It also indicates a battery charge state, and it comes with a synchronous 200mA buck regulator and a 150mA low dropout linear regulator (LDO).",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Charger18",
     "subdir_name": "lib_charger18"
 }
+
 
 
 

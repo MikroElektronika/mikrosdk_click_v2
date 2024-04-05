@@ -25,17 +25,18 @@
     "name": "mikroe.click.co",
     "product_link": "https://www.mikroe.com/co-click",
     "short_description": "CO click carries the MQ-7 gas sensor with high sensitivity to carbon monoxide. The click is designed to run on a 5V power supply only. It communicates with the target microcontroller over the AN pin on the mikroBUS™ line.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1026
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.CO",
     "subdir_name": "lib_co"
 }
+
 
 
 

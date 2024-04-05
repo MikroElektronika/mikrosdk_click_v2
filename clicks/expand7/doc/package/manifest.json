@@ -25,17 +25,18 @@
     "name": "mikroe.click.expand7",
     "product_link": "https://www.mikroe.com/expand-7-click",
     "short_description": "EXPAND 7 Click is a compact add-on board that contains a multi-port I/O expander with bi-directional input/outputs or PWM outputs.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3851
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Expand7",
     "subdir_name": "lib_expand7"
 }
+
 
 
 

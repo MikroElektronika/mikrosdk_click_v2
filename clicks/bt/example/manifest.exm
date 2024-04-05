@@ -2,7 +2,7 @@
     "name": "BT Click",
     "description": "BT Click is a compact add-on board targeted for applications that require both Bluetooth Smart and Classic connectivity. This board features the BT121, a dual-mode Bluetooth Smart Ready module solution that gives unparalleled flexibility to integrate both Bluetooth Smart and Bluetooth Basic Rate/Enhanced Data Rate (BR/EDR) wireless technologies from Silicon Labs.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","BT121-A"],
     "category" : ["BT/BLE"]
 }

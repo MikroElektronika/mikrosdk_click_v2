@@ -25,13 +25,14 @@
     "name": "mikroe.click.hbridge14",
     "product_link": "https://www.mikroe.com/h-bridge-14-click",
     "short_description": "H-Bridge 14 Click is a compact add-on board with an H-Bridge gate driver, also known as a full-bridge pre-driver. This board features the DRV8873, an automotive H-Bridge motor driver from Texas Instruments. The DRV8873 is an N-channel H-Bridge motor driver that can drive one bidirectional brushed DC motor, two unidirectional brushed DC motors, solenoids, or other resistive inductive loads.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.HBridge14",
     "subdir_name": "lib_hbridge14"
 }
+
 
 

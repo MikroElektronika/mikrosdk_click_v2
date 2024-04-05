@@ -132,7 +132,7 @@ void application_init ( void )
     log_printf( &logger, " Sending initial message: %s", ( char * ) DEMO_TEXT_MESSAGE );
     nplc_generic_write( &nplc, DEMO_TEXT_MESSAGE, strlen ( DEMO_TEXT_MESSAGE ) );
     log_printf( &logger, "\r\n--------------------------------\r\n" );
-    Delay_ms( 1000 ); 
+    Delay_ms ( 1000 ); 
 #else
     log_printf( &logger, " Application Mode: Receiver\r\n" );
 #endif   
@@ -144,21 +144,26 @@ void application_task ( void )
     nplc_process ( );
     if ( app_buf_len > 0 ) 
     {
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         nplc_process( );
         log_printf( &logger, " Received message: %s", app_buf );
         log_printf( &logger, "\r\n--------------------------------\r\n" );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         log_printf( &logger, " Sending echo response: %s", app_buf );
         nplc_generic_write( &nplc, app_buf, app_buf_len );
         log_printf( &logger, "\r\n--------------------------------\r\n\n" );
         nplc_clear_app_buf( );
-        Delay_ms( 1000 ); 
+        Delay_ms ( 1000 ); 
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -220,7 +225,7 @@ static err_t nplc_display_rsp ( void )
         nplc_process( );
         if ( app_buf_len > 0 ) 
         {
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
             nplc_process( );
             for ( int32_t buf_cnt = 0; buf_cnt < app_buf_len; buf_cnt++ )
             {

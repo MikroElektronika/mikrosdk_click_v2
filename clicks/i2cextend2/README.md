@@ -162,7 +162,7 @@ void application_task ( void )
     log_printf( &logger, "\t Mag Z: %d\r\n", axis );
 
     log_printf( &logger, "------------------------------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

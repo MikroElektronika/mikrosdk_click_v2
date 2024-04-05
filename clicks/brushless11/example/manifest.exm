@@ -2,7 +2,7 @@
     "name": "Brushless 11 Click",
     "description": "Brushless 11 Click is a compact add-on board that controls brushless DC motors with any MCU. This board features the A4931, a 3-phase brushless DC motor pre-driver from Allegro Microsystems. It drives six onboard N-channel power MOSFETs and supplies the motor with 8V up to 30V voltages. This pre-driver offers enable, direction, and brake inputs that can control motor functions and logic outputs for measuring motor rotation.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","A4931METTR-T"],
     "category" : ["Click Boards > Motor control > Brushless"]
 }

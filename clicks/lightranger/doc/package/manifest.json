@@ -25,17 +25,18 @@
     "name": "mikroe.click.lightranger",
     "product_link": "https://www.mikroe.com/lightranger-click",
     "short_description": "LightRanger click is a proximity sensor carrying STs VL6180X IC. This chip is based on STs patented FlightSense technology...",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1450
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.LightRanger",
     "subdir_name": "lib_lightranger"
 }
+
 
 
 

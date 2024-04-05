@@ -31,11 +31,13 @@
     "related_projects": [
         3729
     ],
-    "version": "2.1.1.27",
+    "version": "2.1.1.29",
     "cmake": true,
     "alias": "Click.10x10RGB",
     "subdir_name": "lib_c10x10rgb"
 }
+
+
 
 
 

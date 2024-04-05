@@ -2,7 +2,7 @@
     "name": "SRAM Click",
     "description": "SRAM Click presents additional 1Mbit SRAM memory that can be added to device.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","23LC1024"],
     "category" : ["SRAM"] 
 }

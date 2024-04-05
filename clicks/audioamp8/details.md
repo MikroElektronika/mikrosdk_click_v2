@@ -120,7 +120,7 @@ void application_init ( void )
     }
     log_info( &logger, " Application Task " );
     log_printf( &logger, "-------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```
@@ -136,7 +136,7 @@ void application_init ( void )
 void application_task ( void ) 
 {
     channel_status_monitoring( AUDIOAMP8_SET_MON_CH_0 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

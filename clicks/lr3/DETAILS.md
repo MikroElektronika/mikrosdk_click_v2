@@ -89,11 +89,11 @@ void application_init ( void )
     LR3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     lr3_init( &lr3, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     lr3_set_ind_handler( &lr3, indication_handler );
     lr3_hard_reset( &lr3 );
     lr3_factory_reset( &lr3 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
 #ifdef MASTER
     // Set device as MASTER
@@ -106,7 +106,7 @@ void application_init ( void )
     }
     
     log_printf( &logger, "Device configured as MASTER!\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     // Delete all network table
     if( lr3_delete_all_network_table( &lr3 ) )
@@ -115,7 +115,7 @@ void application_init ( void )
         for( ; ; );
     }
     log_printf( &logger, "All paired devices deleted!\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     // Enable pairing
     if( lr3_enable_pairing( &lr3, 1 ) )
@@ -124,7 +124,7 @@ void application_init ( void )
         for( ; ; );
     }
     log_printf( &logger, "Pairing enabled!\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 #endif
 
 #ifdef END_NODE
@@ -138,14 +138,14 @@ void application_init ( void )
     }
     
     log_printf( &logger, "Device configured as END_NODE!\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     // Send pairing request and displays MASTER ID
     uint8_t master_id[ 4 ] = { 0 };
     do
     {
         lr3_get_pairing_request( &lr3 );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     while ( lr3_get_activation_status( &lr3, master_id ) != 1 );
     log_printf( &logger, "Paired to a network!\r\n" );
@@ -180,7 +180,9 @@ void application_task ( void )
         log_printf( &logger, "------------------------\r\n" );
     }
     
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif
 #ifdef MASTER
     lr3_read_message_process( &lr3 );

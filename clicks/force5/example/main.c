@@ -64,7 +64,7 @@ void application_init ( void ) {
     log_printf( &logger, "-------------------------\r\n" );
     
     status = force5_calibration( &force5, &calib_data );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "      Completed \r\n" );
     log_printf( &logger, "-------------------------\r\n" );
@@ -85,7 +85,7 @@ void application_init ( void ) {
     log_printf( &logger, "-------------------------\r\n" );
     
     temperature = force5_get_temperature( &force5 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, " Temperature : %.2f C \r\n", temperature );
     log_printf( &logger, "-------------------------\r\n" );
@@ -97,11 +97,16 @@ void application_task ( void ) {
     force_n = force5_get_force( &force5, calib_data );
     log_printf( &logger, " Force : %.4f N \r\n", force_n );
     log_printf( &logger, "------------------\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

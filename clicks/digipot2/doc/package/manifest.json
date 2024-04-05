@@ -25,17 +25,18 @@
     "name": "mikroe.click.digipot2",
     "product_link": "https://www.mikroe.com/digipot-2-click",
     "short_description": "DIGI POT 2 click is a mikroBUS™ add-on board with a single channel digital potentiometer TPL0501 with 256 wiper positions.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         1825
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.DigiPot2",
     "subdir_name": "lib_digipot2"
 }
+
 
 
 

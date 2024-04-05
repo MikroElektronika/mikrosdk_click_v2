@@ -41,7 +41,7 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Init " );
 
     // Click initialization.
@@ -66,18 +66,23 @@ void application_task ( void )
     for ( uint8_t cnt = MUX4_SELECT_INPUT_1; cnt <= MUX4_SELECT_INPUT_8; cnt++ )
     {
         mux4_select_input( &mux4, cnt );
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
         if ( ADC_ERROR != mux4_read_an_pin_voltage ( &mux4, &mux4_an_voltage ) ) 
         {
             log_printf( &logger, " CH%u Voltage : %.3f V\r\n", ( uint16_t ) cnt, mux4_an_voltage );
         }
     }
     log_printf( &logger, " ----------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

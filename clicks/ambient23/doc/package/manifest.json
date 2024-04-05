@@ -25,14 +25,15 @@
     "name": "mikroe.click.ambient23",
     "product_link": "https://www.mikroe.com/ambient-23-click",
     "short_description": "Ambient 23 Click is a compact add-on board that measures the intensity of visible light. This board features the VEML3235SL, an advanced ambient light sensor designed by the CMOS process from Vishay Semiconductors that transforms light intensity to a 16-bit digital signal output that can be directly communicated via an I2C interface. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.Ambient23",
     "subdir_name": "lib_ambient23"
 }
+
 
 
 

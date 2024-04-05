@@ -116,18 +116,21 @@ void application_task ( void )
 {
     log_printf( &logger, " Turning OUT 1 to OUT 4 HIGH \r\n" );
     ipd2017_all_pins_set( &ipd2017 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, " Turning OUT 1 to OUT 4 LOW \r\n" );
     ipd2017_all_pins_clear( &ipd2017 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, " Turning OUT 1 to OUT 4 one by one \r\n" );
     uint8_t out_sel = IPD2017_OUT1_PIN_MASK;
     do
     {
         ipd2017_set_out_level( &ipd2017, out_sel, IPD2017_PIN_STATE_HIGH );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
         ipd2017_set_out_level( &ipd2017, out_sel, IPD2017_PIN_STATE_LOW );
         out_sel <<=  1;
     }

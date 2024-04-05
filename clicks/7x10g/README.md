@@ -107,7 +107,7 @@ void application_task ( void ) {
         c7x10g_draw_char( &c7x10g, cnt, C7X10G_DISPLAY_LEFT, C7X10G_DISPLAY_DELAY_50MS );
         c7x10g_draw_char( &c7x10g, cnt + 1, C7X10G_DISPLAY_RIGHT | C7X10G_DISPLAY_REFRESH, C7X10G_DISPLAY_DELAY_50MS );
        
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 
     // COUNTER PROCEDURE
@@ -115,7 +115,7 @@ void application_task ( void ) {
         
         c7x10g_draw_number( &c7x10g, cnt, C7X10G_DISPLAY_DELAY_50MS );
         
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
     
     // PIXELS PROCEDURE

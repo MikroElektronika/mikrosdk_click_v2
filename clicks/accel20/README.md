@@ -120,7 +120,7 @@ void application_init ( void )
     log_printf( &logger, "-------------------------\r\n" );
     log_printf( &logger, "      Accel 20 Click     \r\n" );
     log_printf( &logger, "-------------------------\r\n" );
-    Delay_ms( 100 ); 
+    Delay_ms ( 100 ); 
     
     if ( accel20_check_id( &accel20 ) == ACCEL20_OK ) 
     {
@@ -138,7 +138,7 @@ void application_init ( void )
     
     log_printf( &logger, "       Accel Data:       \r\n" );
     log_printf( &logger, "-------------------------\r\n" );
-    Delay_ms( 100 ); 
+    Delay_ms ( 100 ); 
 }
 
 ```
@@ -161,7 +161,7 @@ void application_task ( void )
         accel20_get_axis_data( &accel20, &axis );
         log_printf( &logger, "\tX : %d \r\n\tY : %d \r\n\tZ : %d \r\n", axis.x, axis.y, axis.z );
         log_printf( &logger, "-------------------------\r\n" );
-        Delay_ms( 1000 );     
+        Delay_ms ( 1000 );     
     }
 }
 

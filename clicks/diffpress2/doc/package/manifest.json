@@ -25,14 +25,15 @@
     "name": "mikroe.click.diffpress2",
     "product_link": "https://www.mikroe.com/diff-press-2-click",
     "short_description": "Diff Press 2 Click is a compact add-on board that contains Sensirion’s differential pressure sensor. This board features the SDP31-500PA, a small differential pressure sensor designed for high-volume applications. The SDP31-500PA comes with a configurable host interface that supports I2C serial communication and measures pressure in a range from -500Pa up to +500Pa with an accuracy of 3%. It comes as calibrated and temperature compensated with high reliability/long-term stability, has the best signal-to-noise ratio. It operates in a temperature range of -40°C to 85°C, ensuring stable operation under extreme conditions.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.DiffPress2",
     "subdir_name": "lib_diffpress2"
 }
+
 
 
 

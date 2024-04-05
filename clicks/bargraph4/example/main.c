@@ -41,7 +41,7 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Init " );
 
     // Click initialization.
@@ -70,12 +70,17 @@ void application_task ( void )
         bargraph4_set_channel_level( &bargraph4, BARGRAPH4_CHANNEL_C, cnt );
         bargraph4_set_channel_level( &bargraph4, BARGRAPH4_CHANNEL_D, cnt );
         log_printf( &logger, " All channels set to level %u\r\n\n", ( uint16_t ) cnt );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -90,10 +90,10 @@ void application_init ( void )
     //  Click initialization.
 
     ecg_cfg_setup( &cfg );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
     ECG_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ecg_init( &ecg, &cfg );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 
     time_read = 0;
 }
@@ -112,7 +112,7 @@ void application_task ( void )
     read_adc = ecg_generic_read( &ecg );
     plot_res( read_adc , time_read);
 
-    Delay_ms(5);
+    Delay_ms ( 5 );
 } 
 
 ```

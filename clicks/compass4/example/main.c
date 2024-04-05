@@ -58,7 +58,7 @@ void application_init ( void )
     compass4_init( &compass4, &cfg );
 
     compass4_hardware_reset( &compass4 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     device = compass4_check_device( &compass4 );
     if ( device == 0 )
@@ -98,11 +98,16 @@ void application_task ( void )
         log_printf( &logger, ">> Z: %.2f \r\n", flux.z );
     }
     log_printf( &logger, "-----------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

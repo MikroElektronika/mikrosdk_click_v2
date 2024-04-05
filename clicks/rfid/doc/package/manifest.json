@@ -25,17 +25,18 @@
     "name": "mikroe.click.rfid",
     "product_link": "https://www.mikroe.com/rfid-click",
     "short_description": "RFid click features CR95HF 13.56 MHz contactless transceiver as well as trace antenna.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         739
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.RFID",
     "subdir_name": "lib_rfid"
 }
+
 
 
 

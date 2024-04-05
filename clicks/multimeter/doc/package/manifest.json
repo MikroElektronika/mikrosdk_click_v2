@@ -25,17 +25,18 @@
     "name": "mikroe.click.multimeter",
     "product_link": "https://www.mikroe.com/multimeter-click",
     "short_description": "Since there are four distinctive properties that can be measured with Multimeter click which all require different measuring techniques, several different ICs had to be used on the Click board™. Starting with the high-quality, low noise A/D converter as the primary component, all the way to the input operational amplifiers, all components were hand-picked to ensure accuracy.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2243
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.Multimeter",
     "subdir_name": "lib_multimeter"
 }
+
 
 
 

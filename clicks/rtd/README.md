@@ -125,7 +125,7 @@ void application_task ( void )
 
     log_printf( &logger, " Current temperature: %.2f \r\n", converted_value );
 
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 
 ```

@@ -54,9 +54,9 @@ void application_init ( void )
     accel2_cfg_setup( &cfg );
     ACCEL2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     accel2_init( &accel2, &cfg );
-	Delay_ms( 100 );
+	Delay_ms ( 100 );
 	accel2_setting( &accel2 );
-	Delay_ms( 100 );
+	Delay_ms ( 100 );
 	cfg_byte = accel2_check_id( &accel2 );
 	if ( cfg_byte )
 	{
@@ -84,11 +84,16 @@ void application_task ( void )
     log_printf( &logger, "Axis Z: %d\r\n", value_z );
     log_printf( &logger, "-------------------------------\r\n" );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

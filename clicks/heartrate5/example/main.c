@@ -72,12 +72,17 @@ void application_task ( void )
         sensor_value = heartrate5_get_aled1_val( &heartrate5 );
         log_printf( &logger, "%lu,%lu \r\n", sensor_value, time );
         time += 10;
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

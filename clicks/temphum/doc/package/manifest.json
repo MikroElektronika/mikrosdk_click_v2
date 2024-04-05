@@ -25,17 +25,18 @@
     "name": "mikroe.click.temphum",
     "product_link": "https://www.mikroe.com/temp-hum-click",
     "short_description": "Temp&Hum Click carries ST’s HTS221 temperature and relative humidity sensor. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1534
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.TempHum",
     "subdir_name": "lib_temphum"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "BLE 12 Click",
     "description": "BLE 12 Click is a compact add-on board that provides BT/BLE connectivity for any embedded application. This board features the BM832A, a powerful and highly flexible, ultra low power Bluetooth Low Energy (BLE) module from Fanstel. Based on the Nordic nRF52 SoC, the BM832A supports Bluetooth 5.0 Low-Energy (BLE) connectivity while delivering RF range and performance, debugging and enhanced security features, and low power consumption. It also comes with an ARM Cortex™ M4(F) MCU up to 192kB flash and 24kB RAM, embedded 2.4GHz multi-protocol transceiver, and an integrated PCB trace antenna. This Click board™ is suitable for low-cost Bluetooth low energy applications such as building automation and sensor networks, portable medical, connected home, and more.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","BM832"],
     "category" : ["BT/BLE"]
 }

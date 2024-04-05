@@ -123,7 +123,7 @@ void application_init ( void )
     }
 
     bletx_default_cfg ( &bletx );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     adv_cfg.adv_ch_1_frequency = ADVCH1_37_Ch_2402_MHz;
     adv_cfg.adv_ch_2_frequency = ADVCH2_38_Ch_2426_MHz;
@@ -150,7 +150,7 @@ void application_init ( void )
         log_error( &logger, " Set configuration." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
 #ifdef URI
     adv_data.length_of_service_list = 3;
@@ -220,7 +220,7 @@ void application_init ( void )
 #endif
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -237,11 +237,29 @@ void application_task ( void )
 {  
     log_printf( &logger, ">>>\tStart Advertising \r\n" );
     bletx_start_advertising( &bletx );
-    Delay_ms( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, ">>>\tStop Advertising \r\n" );
     bletx_stop_advertising( &bletx );
-    Delay_ms( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

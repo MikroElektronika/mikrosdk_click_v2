@@ -132,19 +132,22 @@ void application_task ( void )
     silentstep4_set_direction ( &silentstep4, SILENTSTEP4_DIR_CW );
     silentstep4_set_step_res ( &silentstep4, SILENTSTEP4_MRES_FULLSTEP );
     silentstep4_drive_motor ( &silentstep4, 200, SILENTSTEP4_SPEED_SLOW );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf ( &logger, " Move 200 half steps counter-clockwise, speed: medium\r\n\n" );
     silentstep4_set_direction ( &silentstep4, SILENTSTEP4_DIR_CCW );
     silentstep4_set_step_res ( &silentstep4, SILENTSTEP4_MRES_2 );
     silentstep4_drive_motor ( &silentstep4, 200, SILENTSTEP4_SPEED_MEDIUM );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf ( &logger, " Move 400 quarter steps counter-clockwise, speed: fast\r\n\n" );
     silentstep4_set_direction ( &silentstep4, SILENTSTEP4_DIR_CCW );
     silentstep4_set_step_res ( &silentstep4, SILENTSTEP4_MRES_4 );
     silentstep4_drive_motor ( &silentstep4, 400, SILENTSTEP4_SPEED_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

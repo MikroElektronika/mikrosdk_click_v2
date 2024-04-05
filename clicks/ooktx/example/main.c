@@ -119,11 +119,18 @@ void application_task ( void )
 {
     log_printf ( &logger, " Sending data: %s\r\n\n", ( char * ) OOKTX_MESSAGE );
     ooktx_send_data ( &ooktx, OOKTX_PREAMBLE, OOKTX_MESSAGE, strlen ( OOKTX_MESSAGE ) );
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

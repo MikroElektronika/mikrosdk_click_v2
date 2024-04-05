@@ -133,7 +133,7 @@ void application_init ( void )
         color14_generic_write( &color14, COLOR14_REG_PS_MEASRATE, &temp_data, 1 );
     }
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, " Application Task " );
 }
 
@@ -166,7 +166,7 @@ void application_task ( void )
             break;
         }
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 ```

@@ -134,7 +134,7 @@ void application_task ( void )
         }
 
         angle_value_old = angle_value;
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }  
 

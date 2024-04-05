@@ -57,20 +57,28 @@ void application_init ( void )
         log_info( &logger, " Please, run program again... " );
         for ( ; ; );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "---------------------------\r\n" );
     log_printf( &logger, " Turn OFF the power supply \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "---------------------------\r\n" );
     log_printf( &logger, "     Start Calibration     \r\n" );
     hallcurrent8120a_calibration ( &hallcurrent8120a );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "---------------------------\r\n");
     log_printf( &logger, " Turn ON the power supply  \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "---------------------------\r\n");
     log_printf( &logger, "    Start measurements :   \r\n");
@@ -92,11 +100,16 @@ void application_task ( void )
         log_printf( &logger, " AN pin voltage : %.2f [V]\r\n", avg_voltage );
     }
     log_printf( &logger, "---------------------------\r\n");
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

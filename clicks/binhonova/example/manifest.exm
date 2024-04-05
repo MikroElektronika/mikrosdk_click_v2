@@ -2,7 +2,7 @@
     "name": "Binho Nova Click",
     "description": "Binho Nova Click is an adapter Click board™ that can be used as a multi-protocol adapter. This board features two female 1.27mm 2x5 connectors suitable for connecting the Binho Nova Multi-Protocol USB Host Adapter depending on the desired interface. This Click board™ is designed for ultimate flexibility and provides the ability to use this adapter with different communication protocols, such as I2C, SPI, or UART. It features five signal pins, which can be used as Digital Input/Output, PWM Output, Digital Interrupt, or Analog Input/Output. Along with these connectors, it also features two power jumpers that can be used to supply the host from the Binho Nova.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click"],
     "category" : ["Click Boards > Interface > Adapter"]
 }

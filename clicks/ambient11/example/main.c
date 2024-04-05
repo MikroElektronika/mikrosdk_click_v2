@@ -71,11 +71,16 @@ void application_task ( void )
     lx_val = ambient11_calc_illumination( &ambient11, resolution );
     log_printf( &logger, "Illumination : %.2f lx \r\n", lx_val );
     log_printf( &logger, "-------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

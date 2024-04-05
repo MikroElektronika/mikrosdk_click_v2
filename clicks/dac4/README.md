@@ -100,11 +100,11 @@ void application_init ( void )
     dac4_init( &dac4, &cfg );
     log_info( &logger, "---- Application ----" );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     dac4_general_call_reset( &dac4 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     dac4_general_call_wake_up( &dac4 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     log_printf( &logger, "--- App init done \r\n \r\n" );
 }

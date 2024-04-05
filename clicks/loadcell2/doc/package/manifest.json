@@ -25,17 +25,18 @@
     "name": "mikroe.click.loadcell2",
     "product_link": "https://www.mikroe.com/load-cell-2-click",
     "short_description": "Load cell 2 Click is a weight measurement click which utilizes a load cell element, in order to precisely measure the weight of an object. The Load Cell 2 Click can be used with the strain gauge type of load cells with external differential reference voltage range from 0.1V to 5V. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3235
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.LoadCell2",
     "subdir_name": "lib_loadcell2"
 }
+
 
 
 

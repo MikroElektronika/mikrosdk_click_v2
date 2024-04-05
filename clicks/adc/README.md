@@ -123,7 +123,7 @@ void application_task( void )
     log_printf( &logger, "* CH0 - CH1 = %d mV\r\n", adc.ch01 );
     log_printf( &logger, "-----------------------------\r\n" );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

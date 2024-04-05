@@ -106,7 +106,7 @@ void application_init ( void )
     WIFIESP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     wifiesp_init( &wifiesp, &cfg );
     wifiesp_default_cfg( &wifiesp );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     // Communication initialization
     wifi_communication_init( );
@@ -138,13 +138,13 @@ void application_task ( void )
         wifiesp_str_cut_chr ( send_buf, ' ' );
         wifiesp_log_app_buf( );
         wifiesp_clear_app_buf( );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         wifiesp_process( );
         wifiesp_log_app_buf( );
         wifiesp_send_cmd( &wifiesp, WIFIESP_SEND, send_buf );
         app_error_flag = wifiesp_rsp_check( WIFIESP_RSP_READY_FOR_SEND );
         wifiesp_log_app_buf( );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         wifiesp_generic_write( &wifiesp, page, strlen( page ) );
         app_error_flag = wifiesp_rsp_check( WIFIESP_RSP_SEND_OK );
         wifiesp_error_check( app_error_flag );
@@ -157,7 +157,7 @@ void application_task ( void )
         wifiesp_log_app_buf( );
         wifiesp_clear_app_buf( );
         uart_clear ( &wifiesp.uart );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 }
 

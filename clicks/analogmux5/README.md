@@ -132,7 +132,7 @@ void application_task ( void )
     float analogmux5_an_voltage = 0;
 
     analogmux5_select_ch( &analogmux5, ANALOGMUX5_SEL_CH_1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
         
     if ( ADC_ERROR != analogmux5_read_an_pin_voltage ( &analogmux5, &analogmux5_an_voltage ) ) 
     {
@@ -140,7 +140,7 @@ void application_task ( void )
     }
     
     analogmux5_select_ch( &analogmux5, ANALOGMUX5_SEL_CH_2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
         
     if ( ADC_ERROR != analogmux5_read_an_pin_voltage ( &analogmux5, &analogmux5_an_voltage ) ) 
     {
@@ -148,7 +148,7 @@ void application_task ( void )
     }
     
     analogmux5_select_ch( &analogmux5, ANALOGMUX5_SEL_CH_3 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
         
     if ( ADC_ERROR != analogmux5_read_an_pin_voltage ( &analogmux5, &analogmux5_an_voltage ) ) 
     {
@@ -156,13 +156,13 @@ void application_task ( void )
     }
     
     analogmux5_select_ch( &analogmux5, ANALOGMUX5_SEL_CH_4 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
         
     if ( ADC_ERROR != analogmux5_read_an_pin_voltage ( &analogmux5, &analogmux5_an_voltage ) ) 
     {
         log_printf( &logger, " Channel [ 4 ] ---> AN Voltage : %.3f[V]\r\n\n", analogmux5_an_voltage );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

@@ -25,17 +25,18 @@
     "name": "mikroe.click.touchkey",
     "product_link": "https://www.mikroe.com/touchkey-click",
     "short_description": "Touchkey click has four capacitive pads powered by TTP224, a touchpad detector IC. Capacitive buttons like these can be toggled even when placed under a layer of glass or paper. The board outputs an interrupt signals for each pad: OUTA, OUTB, OUTC and OUTD (in place of default mikroBUS RST, AN, PWM and INT pins, respectively).",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1486
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.TouchKey",
     "subdir_name": "lib_touchkey"
 }
+
 
 
 

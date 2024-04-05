@@ -163,7 +163,7 @@ void application_init ( void )
             }
         }
         log_printf( &logger, "- " );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
         ezocarrierec_clear_app_buf( );
     }
     #define CALIBRATION_VALUE   "80"
@@ -187,11 +187,20 @@ void application_task ( void )
     ezocarrierec_send_cmd( &ezocarrierec, EZOCARRIEREC_CMD_SINGLE_READ );
     error_flag = ezocarrierec_rsp_check( &ezocarrierec, EZOCARRIEREC_RSP_OK );
     ezocarrierec_error_check( error_flag );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -258,9 +267,9 @@ static err_t ezocarrierec_rsp_check ( ezocarrierec_t *ctx, uint8_t *rsp )
             ezocarrierec_clear_app_buf( );
             return EZOCARRIEREC_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     error_flag |= ezocarrierec_process( ctx );
     if ( strstr( app_buf, rsp ) )
     {
@@ -302,7 +311,7 @@ static void ezocarrierec_error_check ( err_t error_flag )
         }
     }
     log_printf( &logger, "- - - - - - - - - - - - - - -\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 // ------------------------------------------------------------------------ END

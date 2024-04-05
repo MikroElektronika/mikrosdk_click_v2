@@ -120,11 +120,11 @@ void application_init ( void )
     thermostat_init( &thermostat, &cfg );
 
     thermostat_soft_reset( &thermostat );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "     Configuration    \r\n");
 
     thermostat_set_configuration( &thermostat, THERMOSTAT_DEFAULT_CONFIG );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "----------------------\r\n" );
 }
   
@@ -155,7 +155,8 @@ void application_task ( void )
         thermostat_switch_off(  &thermostat  );
         log_printf( &logger, "----------------------\r\n" );
     }
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 } 
 ```
 

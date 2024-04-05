@@ -103,7 +103,7 @@ void application_init ( void )
     log_printf(&logger, " Detecting magnetic fields \r\n");
     log_printf(&logger, "---------------------------\r\n");
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```

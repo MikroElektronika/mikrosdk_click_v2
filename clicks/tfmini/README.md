@@ -119,7 +119,7 @@ void application_init ( void )
     {
         log_printf( &logger, " FW Version: 0x%.6LX\r\n", fw_version );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_info( &logger, " Application Task " );
 }

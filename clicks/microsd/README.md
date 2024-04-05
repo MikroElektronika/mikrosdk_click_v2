@@ -113,7 +113,8 @@ void application_init ( void )
     microsd_format_drive ( PATH_ROOT );
 #endif
     microsd_display_directory ( PATH_ROOT );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     // Create DIR1 directory
     microsd_create_directory ( PATH_DIR1 );
@@ -128,31 +129,37 @@ void application_init ( void )
     Delay_ms ( 500 );
     
     microsd_display_directory ( PATH_ROOT );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     // Remove DIR4 directory
     microsd_remove_path ( PATH_DIR4 );
     Delay_ms ( 500 );
     
     microsd_display_directory ( PATH_ROOT );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     microsd_display_directory ( PATH_DIR1 );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     // Rename DIR2 to DIR3
     microsd_rename_path ( PATH_DIR2, PATH_DIR3 );
     Delay_ms ( 500 );
     
     microsd_display_directory ( PATH_DIR1 );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     microsd_display_directory ( PATH_ROOT );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     // Create the FILE1
     microsd_create_file ( PATH_FILE1 );
     Delay_ms ( 500 );
     microsd_display_directory ( PATH_ROOT );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     uint8_t rw_buffer[ BUFFER_SIZE ] = { 0 };
     // Populate write buffer with bytes ranging from 0 to 255
@@ -163,27 +170,32 @@ void application_init ( void )
     microsd_write_to_file ( PATH_FILE1, rw_buffer, BUFFER_SIZE );
     Delay_ms ( 500 );
     microsd_display_directory ( PATH_ROOT );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     microsd_display_directory ( PATH_DIR3 );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     // Create the FILE2
     microsd_create_file ( PATH_FILE2 );
     Delay_ms ( 500 );
     microsd_display_directory ( PATH_DIR3 );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     // Copy data from FILE1 to FILE2
     microsd_copy_file ( PATH_FILE1, PATH_FILE2 );
     Delay_ms ( 500 );
     microsd_display_directory ( PATH_DIR3 );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     // Create DIR5 directory
     microsd_create_directory ( PATH_DIR5 );
     Delay_ms ( 500 );
     microsd_display_directory ( PATH_DIR1 );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_info( &logger, " Application Task " );
 }
@@ -198,13 +210,20 @@ void application_init ( void )
 void application_task ( void )
 {
     microsd_display_directory ( PATH_ROOT );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     microsd_display_directory ( PATH_DIR1 );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     microsd_display_directory ( PATH_DIR3 );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     microsd_display_directory ( PATH_DIR5 );
-    Delay_ms ( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf ( &logger, "\r\n\n" );
 }
 ```

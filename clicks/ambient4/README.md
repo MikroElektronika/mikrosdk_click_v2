@@ -114,7 +114,7 @@ void application_task ( void )
     
     log_printf( &logger, " Ambient light: %d \r\n", read_value );
 
-    Delay_ms( 1000);
+    Delay_ms ( 1000);
 }  
 
 ```

@@ -59,35 +59,44 @@ void application_init ( void )
         log_info( &logger, " Please, run program again... \r\n" );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     spiisolator2_output_enable( &spiisolator2, SPIISOLATOR2_OUT_ENABLE );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
 {
     spiisolator2_set_cmd( &spiisolator2, SPIISOLATOR2_EEPROM5_CMD_WREN );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
 
     spiisolator2_multi_write( &spiisolator2, 
                               ( ( uint32_t ) SPIISOLATOR2_EEPROM5_CMD_WRITE << 24 ) | memory_address, 4, demo_data, 7 );
     log_printf( &logger," Write data : %s\r\n", demo_data );
     log_printf( &logger, "- - - - - - - - - - -\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     spiisolator2_multi_read( &spiisolator2, 
                              ( ( uint32_t ) SPIISOLATOR2_EEPROM5_CMD_READ << 24 ) | memory_address, 4, read_data, 7 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, " Read data  : %s\r\n", read_data );
     log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

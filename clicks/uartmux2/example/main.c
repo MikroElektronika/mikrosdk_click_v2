@@ -99,7 +99,7 @@ void application_init ( void ) {
     app_buf_cnt = 0;
     log_printf( &logger, "\r\n Application Task \r\n" );
     log_printf( &logger, "------------------\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     #ifdef TRANSMITTER
     
@@ -107,7 +107,7 @@ void application_init ( void ) {
         log_printf( &logger, "      mikroE      \r\n" );
         log_printf( &logger, "------------------\r\n" );
         log_printf( &logger, "  Transmit data   \r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
 
     #endif
 
@@ -117,7 +117,8 @@ void application_init ( void ) {
         log_printf( &logger, "   Receive data  \r\n" );
         log_printf( &logger, "      UART%u \r\n", ( uint16_t ) uart_ch );
         uartmux2_set_channel( &uartmux2, uart_ch );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 ); 
+        Delay_ms ( 1000 );
     
     #endif
         
@@ -129,18 +130,18 @@ void application_task ( void ) {
     
     for ( uart_ch = UARTMUX2_CHANNEL_0; uart_ch <= UARTMUX2_CHANNEL_3; uart_ch++ ) {
         uartmux2_set_channel( &uartmux2, uart_ch );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         uartmux2_send_data( &uartmux2, demo_message );
         log_printf( &logger, "  UART%u : ", ( uint16_t ) uart_ch ); 
     
         for ( uint8_t cnt = 0; cnt < 9; cnt ++ ) {
             log_printf( &logger, "%c", demo_message[ cnt ] );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }     
     }
     
     log_printf( &logger, "------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     
     #endif
@@ -159,6 +160,11 @@ void application_task ( void ) {
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

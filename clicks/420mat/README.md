@@ -103,9 +103,13 @@ void application_init ( void )
 void application_task ( void )
 {
    c420mat_set_i_out( &c420mat, 56 );                   // sets Iout to 5.6mA
-   Delay_ms( 3000 );
+   Delay_ms ( 1000 );
+   Delay_ms ( 1000 );
+   Delay_ms ( 1000 );
    c420mat_set_i_out( &c420mat, 158 );                  // sets Iout to 15.8mA
-   Delay_ms( 3000 );
+   Delay_ms ( 1000 );
+   Delay_ms ( 1000 );
+   Delay_ms ( 1000 );
 }  
 
 ```

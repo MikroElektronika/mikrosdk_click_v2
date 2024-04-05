@@ -60,7 +60,7 @@ void application_init ( void )
     C2X20WAMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c2x20wamp_init( &c2x20wamp, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, "    2x20W Amp Click    \r\n" );
@@ -69,14 +69,14 @@ void application_init ( void )
     log_printf( &logger,"    Enable  Amplifier   \r\n" );
     log_printf( &logger, "-----------------------\r\n" );
 
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 }
 
 void application_task ( void )
 {
     log_printf( &logger, "       PLAY MODE       \r\n" );
     c2x20wamp_mode_play( &c2x20wamp );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 
     uint8_t volume = 32;
 
@@ -86,7 +86,11 @@ void application_task ( void )
 
     log_printf( &logger, "- - - - - - - - - - - -\r\n" );
 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     for ( uint8_t cnt = 0; cnt < 10; cnt++ )
     {
@@ -94,12 +98,16 @@ void application_task ( void )
 
         c2x20wamp_volume_up( &c2x20wamp );
 
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 
     log_printf( &logger, "- - - - - - - - - - - -\r\n" );
 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     for ( uint8_t cnt = 0; cnt < 10; cnt++ )
     {
@@ -107,12 +115,16 @@ void application_task ( void )
 
         c2x20wamp_volume_down( &c2x20wamp );
 
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 
     log_printf( &logger, "-----------------------\r\n" );
 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "       MUTE MODE       \r\n" );
 
@@ -120,11 +132,20 @@ void application_task ( void )
 
     log_printf( &logger, "-----------------------\r\n" );
 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

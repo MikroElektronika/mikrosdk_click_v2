@@ -99,7 +99,7 @@ void application_init ( void )
     clockgen3_init( &clockgen3, &cfg );
 
     clockgen3_config( &clockgen3, CLOCKGEN3_CFG_ON_CLK_180 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
   
 ```
@@ -114,22 +114,34 @@ void application_task ( void )
 {
     log_printf( &logger, ">> Set Freq = 12.000 MHz \r\n" );
     clockgen3_set_freq( &clockgen3, 12000.0 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, ">> Set Freq = 8.000 MHz \r\n" );
     clockgen3_set_freq( &clockgen3, 8000.0 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, ">> Set Freq = 5.500 MHz \r\n" );
     clockgen3_set_freq( &clockgen3, 5500.0 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, ">> Set Freq = 2.700 MHz \r\n" );
     clockgen3_set_freq( &clockgen3, 2700.0 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, ">> Set Freq = 800 KHz \r\n" );
     clockgen3_set_freq( &clockgen3, 800.0 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, ">> Set Freq = 200 KHz \r\n" );
     clockgen3_set_freq( &clockgen3, 200.0 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "---------------------------- \r\n" );
 } 
 

@@ -132,7 +132,11 @@ void application_task ( void )
         stepdown5_set_output( &stepdown5, n_cnt );
         log_printf( &logger, " Selected output is:" );
         print_selected_output_level ( n_cnt );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

@@ -87,11 +87,17 @@ void application_task ( void )
     temperature = thermo13_get_ambient_temperature_data ( &thermo13, THERMO13_TEMP_IN_CELSIUS );
     log_printf( &logger, "** temperature %.2f ** \r\n", temperature );
     log_printf( &logger, " ----------------------------\r\n" );
-    Delay_ms ( 1500 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

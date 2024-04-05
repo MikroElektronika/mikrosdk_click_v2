@@ -25,17 +25,18 @@
     "name": "mikroe.click.i2cmux2",
     "product_link": "https://www.mikroe.com/i2c-mux-2-click",
     "short_description": "I2C MUX 2 Click is a quad bidirectional translating I2C and SMBus switch with reset and interrupt functions, intended for applications with I2C slave address conflicts. It features a quad bidirectional translating switch controlled via the I2C bus, labeled as TCA9545A from Texas Instruments. Four interrupt inputs (INT3–INT0), one for each of the downstream pairs, are provided on click board. One interrupt (INT) output acts as an AND of the four interrupt inputs.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3253
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.I2cMux2",
     "subdir_name": "lib_i2cmux2"
 }
+
 
 
 

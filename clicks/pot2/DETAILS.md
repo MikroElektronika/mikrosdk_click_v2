@@ -96,7 +96,7 @@ void application_task ( void )
     
     tmp = pot2_generic_read ( &pot2 );
     log_printf( &logger, " ADC value : [DEC]- %d, [HEX]- 0x%x \r\n", tmp, tmp );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

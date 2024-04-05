@@ -59,12 +59,17 @@ void application_task ( void )
     //  Task implementation.
 
     log_printf( &logger, " *Flicker on!* \r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     flicker_engage( &flicker );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

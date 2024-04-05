@@ -87,7 +87,7 @@ void application_init ( void )
     ledflash_cfg_setup( &cfg );
     LEDFLASH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ledflash_init( &ledflash, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "----------------------------------\r\n" );
     log_printf( &logger, " LED Flash Click \r\n" );
@@ -98,7 +98,7 @@ void application_init ( void )
     log_printf( &logger, " INTO THE LEDS, \r\n" );
     log_printf( &logger, " WHILE THAY ARE ON!!! \r\n" );
     log_printf( &logger, "/////////////////\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -116,7 +116,7 @@ void application_task (  )
     
     log_printf( &logger, " Charge Supercapacitor Enable \r\n" );
     ledflash_char_supcap_enable( &ledflash );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     state = ledflash_flash_rdy_flag( &ledflash );
 
     if ( state == 0 )

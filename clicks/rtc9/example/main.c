@@ -55,7 +55,7 @@ void application_init ( void )
     RTC9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rtc9_init( &rtc9, &cfg );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     rtc9_wakeup( &rtc9 );
 
@@ -96,11 +96,16 @@ void application_task ( void )
                                                                ( uint16_t ) get_date.year + 2000 );
         log_printf( &logger, "---------------------------------------- \r\n" );
     }
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

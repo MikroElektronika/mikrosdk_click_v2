@@ -25,17 +25,18 @@
     "name": "mikroe.click.flash3",
     "product_link": "https://www.mikroe.com/flash-3-click",
     "short_description": "Flash 3 Click is a mikroBUS add-on board for adding more Flash Memory to your target board microcontroller. It carries an ISSI IS25LP128 IC with 128 Mbit capacity.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1895
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Flash3",
     "subdir_name": "lib_flash3"
 }
+
 
 
 

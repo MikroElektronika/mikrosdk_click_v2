@@ -118,7 +118,7 @@ void application_task ( void )
         log_printf( &logger, " Position: %u \r\n\n", ( uint16_t ) position );
         old_position = position; 
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 

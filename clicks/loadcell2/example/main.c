@@ -68,27 +68,27 @@ void application_init ( void )
     log_printf( &logger, "-------------------------\r\n");
     log_printf( &logger, "     Load cell click     \r\n");
     log_printf( &logger, "-------------------------\r\n");
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "-------------------------\r\n");
     log_printf( &logger, "   Reset all registers   \r\n");
     loadcell2_reset( &loadcell2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "-------------------------\r\n");
     log_printf( &logger, "        Power On         \r\n");
     loadcell2_power_on( &loadcell2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "-------------------------\r\n");
     log_printf( &logger, "   Set default config.   \r\n");
     loadcell2_default_cfg( &loadcell2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "-------------------------\r\n");
     log_printf( &logger, "      Calibrate AFE      \r\n");
     loadcell2_calibrate_afe( &loadcell2 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "-------------------------\r\n");
     log_printf( &logger, "     Tare the scale :    \r\n");
@@ -98,12 +98,22 @@ void application_init ( void )
     log_printf( &logger, " In the following 10 sec \r\n");
     log_printf( &logger, " please remove all object\r\n");
     log_printf( &logger, "     from the scale.     \r\n");
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "-------------------------\r\n");
     log_printf( &logger, "    Start tare scales    \r\n");
     loadcell2_tare ( &loadcell2, &cell_data );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     log_printf( &logger, "-------------------------\r\n");
     log_printf( &logger, "   Tarring is complete   \r\n");
@@ -116,7 +126,17 @@ void application_init ( void )
     log_printf( &logger, "place 1000g weight etalon\r\n");
     log_printf( &logger, "    on the scale for     \r\n");
     log_printf( &logger, "   calibration purpose.  \r\n");
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "-------------------------\r\n");
     log_printf( &logger, "    Start calibration    \r\n");
@@ -132,7 +152,17 @@ void application_init ( void )
         log_printf( &logger, " In the following 10 sec \r\n");
         log_printf( &logger, "   remove 1000g weight   \r\n");
         log_printf( &logger, "   etalon on the scale.  \r\n");
-        Delay_ms( 10000 );
+        // 10 seconds delay
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     else
     {
@@ -152,11 +182,16 @@ void application_task ( void )
 
     log_printf(&logger, "   Weight : %.2f g\r\n", weight_val );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -103,67 +103,72 @@ void application_init ( void )
     gsmgnss_send_cmd( &gsmgnss, GSMGNSS_CMD_AT );
     app_error_flag = gsmgnss_rsp_check( );
     gsmgnss_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // ATI - product information
     gsmgnss_send_cmd( &gsmgnss, GSMGNSS_CMD_ATI );
     app_error_flag = gsmgnss_rsp_check(  );
     gsmgnss_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CGMR - firmware version
     gsmgnss_send_cmd( &gsmgnss, GSMGNSS_CMD_CGMR );
     app_error_flag = gsmgnss_rsp_check(  );
     gsmgnss_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CMEE - Report Mobile Equipment Error
     gsmgnss_send_cmd_with_parameter( &gsmgnss, GSMGNSS_CMD_CMEE, "2" );
     app_error_flag = gsmgnss_rsp_check(  );
     gsmgnss_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // COPS - deregister from network
     gsmgnss_send_cmd_with_parameter( &gsmgnss, GSMGNSS_CMD_COPS, "2" );
     app_error_flag = gsmgnss_rsp_check(  );
     gsmgnss_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CGDCONT - set sim apn
     gsmgnss_set_sim_apn( &gsmgnss, SIM_APN );
     app_error_flag = gsmgnss_rsp_check(  );
     gsmgnss_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CFUN - full funtionality
     gsmgnss_send_cmd_with_parameter( &gsmgnss, GSMGNSS_CMD_CFUN, "1" );
     app_error_flag = gsmgnss_rsp_check(  );
     gsmgnss_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // COPS - automatic mode
     gsmgnss_send_cmd_with_parameter( &gsmgnss, GSMGNSS_CMD_COPS, "0" );
     app_error_flag = gsmgnss_rsp_check(  );
     gsmgnss_error_check( app_error_flag );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     // CREG - network registration status
     gsmgnss_send_cmd_with_parameter( &gsmgnss, GSMGNSS_CMD_CREG, "1" );
     app_error_flag = gsmgnss_rsp_check(  );
     gsmgnss_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // QGNSSC - power ON GNSS
     gsmgnss_send_cmd_with_parameter( &gsmgnss, GSMGNSS_CMD_QGNSSC, "1" );
     app_error_flag = gsmgnss_rsp_check(  );
     gsmgnss_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     app_buf_len = 0;
     app_buf_cnt = 0;
     app_connection_status = WAIT_FOR_CONNECTION;
     log_info( &logger, " Application Task " );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -183,13 +188,17 @@ void application_task ( void )
         gsmgnss_send_cmd_check( &gsmgnss, GSMGNSS_CMD_CREG );
         app_error_flag = gsmgnss_rsp_check(  );
         gsmgnss_error_check( app_error_flag );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         
         // CSQ - signal quality
         gsmgnss_send_cmd( &gsmgnss, GSMGNSS_CMD_CSQ );
         app_error_flag = gsmgnss_rsp_check(  );
         gsmgnss_error_check( app_error_flag );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     else
     {
@@ -199,7 +208,9 @@ void application_task ( void )
         gsmgnss_send_cmd_with_parameter( &gsmgnss, GSMGNSS_CMD_CMGF, "0" );
         app_error_flag = gsmgnss_rsp_check(  );
         gsmgnss_error_check( app_error_flag );
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
         
         for( ; ; )
         {   
@@ -208,7 +219,9 @@ void application_task ( void )
             gsmgnss_send_cmd_with_parameter( &gsmgnss, GSMGNSS_CMD_QGNSSRD, "\"NMEA/GGA\"" );
             app_error_flag = gsmgnss_rsp_check(  );
             gsmgnss_error_check( app_error_flag );
-            Delay_ms( 3000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
             
             if ( gnss_parser_flag == 0 )
             {
@@ -216,9 +229,36 @@ void application_task ( void )
                 gsmgnss_send_sms_pdu ( &gsmgnss, SIM_SMSC, PHONE_NUMBER_TO_MESSAGE, gnss_info_message );
                 app_error_flag = gsmgnss_rsp_check(  );
                 gsmgnss_error_check( app_error_flag );
-                Delay_ms( 10000 );
-                Delay_ms( 10000 );
-                Delay_ms( 10000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
             }
         }
     }

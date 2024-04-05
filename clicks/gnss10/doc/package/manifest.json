@@ -25,14 +25,15 @@
     "name": "mikroe.click.gnss10",
     "product_link": "https://www.mikroe.com/gnss-10-click",
     "short_description": "GNSS 10 Click is a compact add-on board that provides fast positioning capability. This board features the NEO-M8J, a standard precision GNSS module built on the high-performing M8 GNSS engine in the industry-proven NEO form factor from u-blox. This module utilizes concurrent reception of up to three GNSS systems (GPS/Galileo together with BeiDou or GLONASS), recognizes multiple constellations simultaneously, and provides outstanding positioning accuracy in scenarios where urban canyon or weak signals are involved. It supports all satellite augmentation systems for even better and faster positioning improvement, comes with a configurable host interface, and advanced jamming and spoofing detection. This Click board™ is ideally suited for industrial and automotive applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.GNSS10",
     "subdir_name": "lib_gnss10"
 }
+
 
 
 

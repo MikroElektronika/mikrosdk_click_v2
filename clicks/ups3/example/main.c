@@ -63,7 +63,7 @@ void application_init ( void ) {
     ups3_default_cfg ( &ups3 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) {      
@@ -93,19 +93,24 @@ void application_task ( void ) {
         log_printf( &logger, " Turn ON the Power Supply \r\n" );
             
         while ( ups3_get_error( &ups3 ) == UPS3_GET_ERROR_CMPIN_EMPTY ) {
-            Delay_ms( 100 );   
+            Delay_ms ( 100 );   
         }
             
         ups3_hw_reset( &ups3 );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

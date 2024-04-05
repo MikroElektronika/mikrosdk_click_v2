@@ -25,17 +25,18 @@
     "name": "mikroe.click.fm",
     "product_link": "https://www.mikroe.com/fm-click",
     "short_description": "FM Click with it’s Si4703 IC is a complete FM radio tuner in the form of add-on board. It supports worldwide FM band (76 – 108 MHz).",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         673
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Fm",
     "subdir_name": "lib_fm"
 }
+
 
 
 

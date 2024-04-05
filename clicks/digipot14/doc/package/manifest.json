@@ -25,13 +25,14 @@
     "name": "mikroe.click.digipot14",
     "product_link": "https://www.mikroe.com/digi-pot-14-click",
     "short_description": "DIGI POT 14 Click is a compact add-on board that contains a digitally controlled potentiometer. This board features the TPL0102, a dual-channel digital potentiometer with non-volatile memory from Texas Instruments. It is a 100K resistance end-to-end potentiometer with a 256-position resolution, where the wiper position can be stored in EEPROM. It can operate from both 3.3V and 5V power supplies and provides a typical 92ppm/ºC end-to-end nominal resistance temperature coefficient and only 4ppm/ºC ratiometric.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.DIGIPOT14",
     "subdir_name": "lib_digipot14"
 }
+
 
 

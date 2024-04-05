@@ -104,7 +104,7 @@ void application_init ( void )
     log_printf( &logger, "------------------------\r\n" );
     log_printf( &logger, "   Powering device on   \r\n" );
     rfswitch_power_on( &rfswitch );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "------------------------\r\n" );
     log_printf( &logger, "   Select option to     \r\n" );
     log_printf( &logger, "    select channel      \r\n" );

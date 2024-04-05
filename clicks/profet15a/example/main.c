@@ -68,7 +68,7 @@ void application_init ( void )
     log_info( &logger, " Application Task " );
     
     profet15a_set_mode( &profet15a, PROFET15A_DIAGNOSTIC_ON );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -82,7 +82,8 @@ void application_task ( void )
     {
         mode = PROFET15A_MODE_OFF;
         log_printf( &logger, " > Output ON diagnostic mode\r\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 ); 
+        Delay_ms ( 1000 );
     }
     else
     {
@@ -100,11 +101,17 @@ void application_task ( void )
     
     log_printf( &logger, "*******************************************\r\n" );
     
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

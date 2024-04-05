@@ -25,17 +25,18 @@
     "name": "mikroe.click.battmon",
     "product_link": "https://www.mikroe.com/batt-mon-click",
     "short_description": "BATT-MON Click is a very versatile, high accuracy, multiple-chemistry battery gauge for applications single-cell batteries.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2828
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.BattMon",
     "subdir_name": "lib_battmon"
 }
+
 
 
 

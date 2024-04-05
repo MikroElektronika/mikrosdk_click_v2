@@ -130,7 +130,7 @@ void application_task ( void )
     uint8_t tx_data[ 16 ] = TX_DATA;
     
     eeprom11_clear_page( &eeprom11, MEMORY_ADDRESS );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     error_flag = eeprom11_page_write( &eeprom11, MEMORY_ADDRESS, tx_data );
     if ( EEPROM11_OK == error_flag )
     {
@@ -140,7 +140,7 @@ void application_task ( void )
     {
         log_error( &logger, " Write operation failed!!! " );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     error_flag = eeprom11_generic_read( &eeprom11, MEMORY_ADDRESS, rx_data, 15 );
     if ( EEPROM11_OK == error_flag )
@@ -153,7 +153,8 @@ void application_task ( void )
     }
     log_printf( &logger, " - - - - - - - - - - - \r\n" );
     
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

@@ -66,11 +66,11 @@ void application_init ( void )
     
     log_printf( &logger, " Disabling Hold \r\n" );
     eeprom9_set_hold( &eeprom9, EEPROM9_HOLD_DISABLE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, " Disabling Write Protection \r\n" );
     eeprom9_set_write_protection( &eeprom9, EEPROM9_WRITE_PROTECT_DISABLE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, " - - - - - - - - - - - \r\n" );
@@ -81,22 +81,27 @@ void application_task ( void )
     char rx_data[ 9 ] = { 0 };
     
     eeprom9_set_write_enable( &eeprom9, EEPROM9_WRITE_ENABLE );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     eeprom9_write_memory( &eeprom9, MEMORY_ADDRESS, demo_data, 9 );
     log_printf( &logger, " Write data: %s", demo_data );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     eeprom9_read_memory( &eeprom9, MEMORY_ADDRESS, rx_data, 9 );
     log_printf( &logger, " Read data: %s", rx_data );  
     log_printf( &logger, " - - - - - - - - - - - \r\n" );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

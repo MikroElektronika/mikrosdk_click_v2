@@ -2,7 +2,7 @@
     "name": "DC Motor 9 Click",
     "description": "DC Motor 9 Click is a brushed DC motor driver with the current limiting and current sensing. It is based on the DRV8871, an integrated H-Bridge driver IC, optimized for motor driving applications. It can be operated by two logic signals, allowing to drive the connected motor in two different ways: it can use fixed logic levels for the direction control, or it can be controlled by a PWM signal, offering an additional speed control option. The DRV8871 also contains a set of protection features, offering a very high level of reliability. Besides driving capabilities, DC Motor 9 click can also sense current consumption at its output.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","DR8871, LT1999"],
     "category" : ["Brushed"] 
 }

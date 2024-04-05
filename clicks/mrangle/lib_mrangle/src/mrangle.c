@@ -66,6 +66,7 @@
  */
 #define LIN_FUN_COEFF_GRADIENT              0.00325
 #define LIN_FUN_COEFF_VERTICAL_INTERCEPT    0.22
+#define MRANGLE_MATH_TWO_PI                 6.28318530717958
 
 /**
  * @brief ADC channel constant.
@@ -317,7 +318,7 @@ err_t mrangle_get_angle ( mrangle_t *ctx, float *angle )
     
     tmp = atan2( v_cos, v_sin );
     tmp *= ADC_CONV_DEG;
-    tmp /= TWO_PI;
+    tmp /= MRANGLE_MATH_TWO_PI;
     
     if ( tmp < 0 ) 
     {

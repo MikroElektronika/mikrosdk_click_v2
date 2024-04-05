@@ -91,7 +91,7 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Init " );
 
     // Click initialization.
@@ -106,7 +106,7 @@ void application_init ( void )
 
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
 #ifdef DEMO_APP_RECEIVER
     log_printf( &logger, "---- RECEIVER MODE ----\r\n" );
@@ -120,7 +120,7 @@ void application_init ( void )
     app_buf_cnt = 0;
 
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -138,7 +138,7 @@ void application_task ( void )
 
     if ( app_buf_len > 0 ) 
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         ata6571_process();
         
         log_printf( &logger, "%s", app_buf );
@@ -150,7 +150,8 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER 
     ata6571_generic_write( &ata6571, TEXT_TO_SEND, strlen( TEXT_TO_SEND ) );
     log_printf( &logger, "---- The message has been sent ----\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif
 }
 

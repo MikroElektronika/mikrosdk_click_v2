@@ -119,7 +119,7 @@ void application_init ( void )
     barometer4_default_cfg ( &barometer4 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, "----------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     static uint16_t device_id;
     err_t err_flag = barometer4_get_device_id( &barometer4, &device_id );
@@ -132,7 +132,7 @@ void application_init ( void )
     }
     log_printf( &logger, " Device ID   : 0x%.4X \r\n", device_id );
     log_printf( &logger, "----------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```
@@ -154,7 +154,7 @@ void application_task ( void )
     log_printf( &logger, " Pressure    : %.2f Pa\r\n", pressure );
     log_printf( &logger, " Temperature : %.2f C\r\n", temperature );
     log_printf( &logger, "----------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

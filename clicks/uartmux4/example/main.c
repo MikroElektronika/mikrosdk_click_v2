@@ -59,7 +59,7 @@ void application_init ( void )
     }
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
@@ -67,7 +67,7 @@ void application_task ( void )
     log_printf( &logger, " ---------------- \r\n" );
     log_printf( &logger, " UART 1 demo message:\r\n" );
     uartmux4_enable_uart1( &uartmux4 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     for ( uint8_t n_cnt = 0; n_cnt < 5; n_cnt++ )
     {
         if ( uartmux4_generic_write ( &uartmux4, DEMO_MESSAGE, sizeof( DEMO_MESSAGE ) ) )
@@ -77,13 +77,14 @@ void application_task ( void )
                 log_printf( &logger, "%s", app_buf );
             }
         }
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 ); 
+        Delay_ms ( 1000 );
     }
     
     log_printf( &logger, " ---------------- \r\n" );
     log_printf( &logger, " UART 2 demo message:\r\n" );
     uartmux4_enable_uart2( &uartmux4 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     for ( uint8_t n_cnt = 0; n_cnt < 5; n_cnt++ )
     {
         if ( uartmux4_generic_write ( &uartmux4, DEMO_MESSAGE, sizeof( DEMO_MESSAGE ) ) )
@@ -93,12 +94,18 @@ void application_task ( void )
                 log_printf( &logger, "%s", app_buf );
             }
         }
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 ); 
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

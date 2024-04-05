@@ -25,17 +25,18 @@
     "name": "mikroe.click.moisture",
     "product_link": "https://www.mikroe.com/moisture-click",
     "short_description": "Moisture click is a Click board™ that can be used to easily detect a moisture level of the skin, by simply touching the sensitive surface of the PCB.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2433
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Moisture",
     "subdir_name": "lib_moisture"
 }
+
 
 
 

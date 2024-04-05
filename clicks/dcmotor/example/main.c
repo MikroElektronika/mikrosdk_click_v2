@@ -86,7 +86,7 @@ void application_task ( )
     }
 
     dcmotor_set_duty_cycle ( &dcmotor, duty );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     if ( 10 == duty_cnt ) 
     {
@@ -111,6 +111,11 @@ void application_task ( )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

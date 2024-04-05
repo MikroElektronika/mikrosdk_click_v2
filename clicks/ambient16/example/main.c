@@ -67,7 +67,7 @@ void application_init ( void )
     log_printf( &logger, "- - - - - - - - - - - - -\r\n" );
     log_printf( &logger, " Part ID = 0x%.2X \r\n", ( uint16_t ) id );
     log_printf( &logger, "- - - - - - - - - - - - -\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, "- - - - - - - - - - - - -\r\n" );
 }
@@ -79,11 +79,16 @@ void application_task ( void )
     log_printf( &logger, " DATA 0 = %.2f lx    \r\n", data0 );
     log_printf( &logger, " DATA 1 = %.2f lx    \r\n", data1 );
     log_printf( &logger, "- - - - - - - - - - -\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

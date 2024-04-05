@@ -99,11 +99,11 @@ void application_init ( void )
     dmx_init( &dmx, &cfg );
 
     dmx_set_auto_baud_rate( &dmx, 1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     dmx_reset( &dmx, DMX_MASTER );
     dmx_run( &dmx, DMX_CONFIG_MODE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     dmx_process( );
     dmx_clear_app_buf( );
@@ -147,7 +147,7 @@ void application_init ( void )
     dmx_run( &dmx, DMX_RUN_MODE );
 
     log_info( &logger, " Application Task " );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
   
 ```

@@ -89,7 +89,8 @@ static int8_t ble4_process ( void )
             if ( data_mode == 1) {
                 log_printf( &logger, "%s", current_parser_buf );
                 uart_write( &ble4.uart, "Hello", 5 );
-                Delay_ms( 2000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
                 uart_write( &ble4.uart, "BLE4", 4 );
             }
         } 
@@ -98,7 +99,7 @@ static int8_t ble4_process ( void )
             process_cnt--;
             
             // Process delay 
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
     
@@ -138,7 +139,7 @@ void application_init ( void )
     Delay_1sec( );
     
     ble4_set_dsr_pin( &ble4, 1 );
-    Delay_ms( 20 );
+    Delay_ms ( 20 );
 
     do {
         ble4_set_echo_cmd( &ble4, 1 );
@@ -171,7 +172,7 @@ void application_init ( void )
     while( ble4_process( ) != 1 );
     
     ble4_set_dsr_pin( &ble4, 0 );
-    Delay_ms( 20 );
+    Delay_ms ( 20 );
     data_mode = 1;
     log_printf( &logger, "The module has been configured.\n" );
 }
@@ -183,6 +184,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

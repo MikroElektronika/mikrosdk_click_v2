@@ -101,7 +101,7 @@ void application_init ( void )
     proximity2_default_cfg ( &proximity2 );
     
     log_info( &logger, "Application Init" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -125,7 +125,7 @@ void application_task ( void )
 
     log_printf( &logger, "------------------\r\n" );
     
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 
 ```

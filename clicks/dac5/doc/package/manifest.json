@@ -25,17 +25,18 @@
     "name": "mikroe.click.dac5",
     "product_link": "https://www.mikroe.com/dac-5-click",
     "short_description": "DAC 5 Click carries Texas Instruments DAC53608 IC, a low-power, eight-channel, 10-bit buffered Digital-to-Analog Converter. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2913
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Dac5",
     "subdir_name": "lib_dac5"
 }
+
 
 
 

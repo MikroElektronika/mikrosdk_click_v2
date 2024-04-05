@@ -120,7 +120,7 @@ void application_task ( void )
         {
             log_printf( &logger, " U2 wipers position: %u\r\n\n", ( DIGIPOT11_WIPER_FULL_SCALE - wiper_pos ) );
         }
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

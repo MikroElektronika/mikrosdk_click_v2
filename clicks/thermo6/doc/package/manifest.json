@@ -25,17 +25,18 @@
     "name": "mikroe.click.thermo6",
     "product_link": "https://www.mikroe.com/thermo-6-click",
     "short_description": "Thermo 6 click is a precise and versatile ambient temperature measurement click board, based on the Maxim Integrated MAX31875 temperature sensor.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2182
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Thermo6",
     "subdir_name": "lib_thermo6"
 }
+
 
 
 

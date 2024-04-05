@@ -133,7 +133,7 @@ void application_task ( void )
     log_printf( &logger, "Axis Z : %.3f g\r\n", val_z / ACCEL_DATA_RES_LSB_PER_G );
 
     log_printf( &logger, "-------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 

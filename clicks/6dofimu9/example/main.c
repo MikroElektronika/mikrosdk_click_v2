@@ -60,7 +60,7 @@ void application_init ( void )
 
     log_printf( &logger, "       Driver  Initialization        \r\n" );
     log_printf( &logger, "-------------------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     device_id = c6dofimu9_get_device_id( &c6dofimu9 );
 
@@ -84,7 +84,7 @@ void application_init ( void )
     
     log_printf( &logger, "            Start measurement             \r\n" );
     log_printf( &logger, "-------------------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( )
@@ -97,9 +97,9 @@ void application_task ( )
     int16_t gyro_axis_z;
 
     c6dofimu9_get_accel_data( &c6dofimu9, &accel_axis_x, &accel_axis_y, &accel_axis_z );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     c6dofimu9_get_gyro_data( &c6dofimu9, &gyro_axis_x,  &gyro_axis_y, &gyro_axis_z );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
 
     log_printf( &logger, " Accel X : %d ", accel_axis_x );
     log_printf( &logger, "    |     ");
@@ -114,11 +114,16 @@ void application_task ( )
     log_printf( &logger, " Gyro Z : %d \r\n", gyro_axis_z );
 
     log_printf( &logger, "-------------------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

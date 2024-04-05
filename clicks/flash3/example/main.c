@@ -54,12 +54,12 @@ void application_init ( void )
     FLASH3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     flash3_init( &flash3, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "------------------- \r\n" );
     log_printf( &logger, "  Flash  3  Click  \r\n" );
     log_printf( &logger, "-------------------\r\n" );
     flash3_setting( &flash3 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "   Initialized     \r\n" );
     log_printf( &logger, "------------------- \r\n" );
 }
@@ -75,34 +75,43 @@ void application_task ( void )
     
     log_printf( &logger, "Writing : %s\r\n", val_in );
     flash3_write( &flash3, 0x000000, &val_in[ 0 ], 6 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "------------------ \r\n" );
 
     log_printf( &logger, "Reading : %s\r\n", val_in );
     flash3_normal_read( &flash3, 0x000000, &val_in[ 0 ], 6 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "------------------ \r\n" );
 
     log_printf( &logger, "Erasing... \r\n" );
     flash3_sector_erase( &flash3, 0x000000 );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
     log_printf( &logger, "Erased!" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "------------------ \r\n"  );
 
     log_printf( &logger, "Reading : %s\r\n", val_out );
     flash3_fast_read( &flash3, 0x000000, &val_out[ 0 ], 6 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "------------------ \r\n" );
 
     log_printf( &logger, "Demonstration over!" );
     log_printf( &logger, "\r\n ___________________ \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

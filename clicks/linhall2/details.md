@@ -130,7 +130,7 @@ void application_task ( void )
         {
             log_printf( &logger, " Magnetic field oriented North \r\n\n" );
         }
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

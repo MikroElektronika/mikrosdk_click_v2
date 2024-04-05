@@ -128,11 +128,11 @@ void application_task ( void )
         if ( MUX9_OK == mux9_active_channel( &mux9, ch_pos ) )
         {
             log_printf( &logger, " The Channel %d is activated. \r\n", ( uint16_t ) ch_pos );
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
         }
     }
     log_printf( &logger, " -----------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.airquality7",
     "product_link": "https://www.mikroe.com/air-quality-7-click",
     "short_description": "Air quality 7 Click is a compact add-on board that combines state-of-the-art MOS sensor technology.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3817
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.AirQuality7",
     "subdir_name": "lib_airquality7"
 }
+
 
 
 

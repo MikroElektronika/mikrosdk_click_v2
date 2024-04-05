@@ -111,7 +111,7 @@ void application_task ( void )
     z_axis_data = accel5_get_axis( &accel5, ACCEL5_Z_AXIS );
     log_printf ( &logger, " Z axis : %d \r\n  ", z_axis_data );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }  
 
 ```

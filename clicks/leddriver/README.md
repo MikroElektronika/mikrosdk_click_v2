@@ -92,7 +92,7 @@ void application_init ( void )
     log_info( &logger, "---- Init Done ----\r\n" );
     leddriver_set_duty_cycle ( &leddriver, 0.0 );
     leddriver_pwm_start( &leddriver );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, "---- Application Task ----\r\n" );
 }
   
@@ -117,7 +117,7 @@ void application_task ( void )
     leddriver_set_duty_cycle ( &leddriver, duty );
     log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
     
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( 10 == duty_cnt ) 
     {

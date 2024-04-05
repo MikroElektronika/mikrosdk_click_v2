@@ -124,22 +124,41 @@ void application_task ( void )
 {
     charger18_suspend_control( &charger18, CHARGER18_CONTROL_DISABLE );
     log_printf( &logger, " CHARGER : ON\r\n" );
-    Delay_ms( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     charger18_suspend_control( &charger18, CHARGER18_CONTROL_ENABLE );
     log_printf( &logger, " CHARGER : OFF\r\n" );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     charger18_buck_control( &charger18, CHARGER18_CONTROL_ENABLE );
     log_printf( &logger, " BUCK    : ON\r\n" );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     charger18_buck_control( &charger18, CHARGER18_CONTROL_DISABLE );
     log_printf( &logger, " BUCK    : OFF\r\n" );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     charger18_ldo_control( &charger18, CHARGER18_CONTROL_ENABLE );
     log_printf( &logger, " LDO     : ON\r\n" );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     charger18_ldo_control( &charger18, CHARGER18_CONTROL_DISABLE );
     log_printf( &logger, " LDO     : OFF\r\n\n" );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

@@ -70,11 +70,11 @@ void application_init ( void ) {
     }
 
     pac1944_device_state( &pac1944, PAC1944_DEV_ENABLE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     pac1944_default_cfg ( &pac1944 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, "-----------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) {
@@ -104,11 +104,17 @@ void application_task ( void ) {
     log_printf( &logger, "  Current :  %.6f   A \r\n", current_sens );
     log_printf( &logger, "  Power   :  %.6f   W \r\n", power_sens );
     log_printf( &logger, "-----------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

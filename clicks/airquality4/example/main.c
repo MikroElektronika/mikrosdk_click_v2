@@ -71,11 +71,16 @@ void application_task ( void )
     log_printf( &logger, "CO2 value is: %u\n", data_buffer[ 0 ] );
     log_printf( &logger, "TVOC value is: %u\n\n", data_buffer[ 1 ] );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

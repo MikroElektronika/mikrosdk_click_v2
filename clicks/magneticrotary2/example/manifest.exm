@@ -2,7 +2,7 @@
     "name": "Magnetic Rotary 2 Click",
     "description": "Magnetic Rotary 2 Click is a compact add-on board used for accurate magnet-position sensing. This board features the AEAT-9922, an angular magnetic rotary sensor providing accurate angular measurement over a full 360 degrees of rotation from Broadcom Limited. The AEAT-9922 uses integrated Hall sensor elements with complex analog and digital signal processing within a single device. The absolute angle measurement provides an instant indication of the magnet's angular position with a selectable and one-time programmable resolution from 10 to 18 bits.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","AEAT-9922"],
     "category" : ["Magnetic"]
 }

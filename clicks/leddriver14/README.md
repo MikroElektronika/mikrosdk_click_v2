@@ -148,7 +148,7 @@ void application_task ( void )
         log_info ( &logger, " Abnormality such as LED Open or the OUTx pin short circuit occured " );
     }
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 ```
 

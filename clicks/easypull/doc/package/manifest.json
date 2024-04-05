@@ -25,11 +25,12 @@
     "name": "mikroe.click.easypull",
     "product_link": "https://www.mikroe.com/easypull-click",
     "short_description": "EasyPull Click is a compact add-on board designed to easily configure mikroBUS™ signals into pull-up or pull-down states, perfect for various applications. It features a universal setup with 4.7kΩ resistors to ensure stable performance across vital communication lines such as SPI, UART, I2C, and standard mikroBUS™ signals (AN, RST, PWM, INT).",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.EasyPull",
     "subdir_name": "lib_easypull"
 }
+

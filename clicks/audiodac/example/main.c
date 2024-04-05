@@ -77,12 +77,16 @@ void application_task ( void )
         if ( AUDIODAC_VOLUME_MUTE == volume )
         {
             log_printf ( &logger, "MUTE\r\n" );
-            Delay_ms ( 3000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
         }
         else if ( AUDIODAC_VOLUME_MAX == volume )
         {
             log_printf ( &logger, "MAX\r\n" );
-            Delay_ms ( 3000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
         }
         else
         {
@@ -99,6 +103,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

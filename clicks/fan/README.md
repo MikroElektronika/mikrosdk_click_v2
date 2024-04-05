@@ -117,13 +117,15 @@ void application_task ( void )
     {
         fan_setting( &fan, duty );
         log_printf( &logger, " Duty Ratio : %u%%\r\n", (uint16_t)duty );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
 
         uint16_t tacho = 0;
 
         fan_get_tach( &fan, &tacho );
         log_printf( &logger, " Rotation per minute : %urpm\r\n\n", tacho );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }  
 

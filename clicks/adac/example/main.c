@@ -58,13 +58,13 @@ void application_init ( )
     adac_cfg_setup( &cfg );
     ADAC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     adac_init( &adac, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     adac_hardware_reset( &adac );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     adac_set_configuration( &adac, ADAC_POWER_REF_CTRL, ADAC_VREF_ON, ADAC_NO_OP );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "\r\n Click module initialized \r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void application_task ( )
@@ -75,37 +75,43 @@ void application_task ( )
 
     log_printf( &logger, "\r\n *** DAC : write ***\r\n" );
     adac_set_configuration( &adac, ADAC_DAC_CONFIG, ADAC_NO_OP, ADAC_IO3 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     for ( cnt = 0; cnt < 0xFF; cnt +=4 )
     {
         adac_write_dac( &adac, ADAC_PB_PIN3, cnt / 0x100, cnt % 0x100 );
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
         log_printf( &logger, " > write... \r\n" );
     }
     
     log_printf( &logger, "-------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "\r\n *** ADC : read ***\r\n" );
     adac_set_configuration( &adac, ADAC_ADC_CONFIG, ADAC_NO_OP, ADAC_IO4 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     adac_set_configuration( &adac, ADAC_ADC_SEQUENCE, ADAC_SEQUENCE_ON, ADAC_IO4 );
 
     for( cnt = 0; cnt < 10; cnt++ )
     {
         adc_val = adac_read_adc( &adac, &chan );
         log_printf( &logger, "   channel : %d\r\n", ( uint16_t ) chan );
-        log_printf( &logger, "       val : %d\r\n", adc_val ); 
-        Delay_ms( 2000 );
+        log_printf( &logger, "       val : %d\r\n", adc_val );
+        Delay_ms ( 1000 ); 
+        Delay_ms ( 1000 );
     }
 
     log_printf( &logger, "-------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

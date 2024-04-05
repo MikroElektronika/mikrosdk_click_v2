@@ -121,7 +121,7 @@ static int8_t rn4678_process ( char * response )
             process_cnt--;
             
             // Process delay 
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
     
@@ -162,9 +162,9 @@ void application_init ( void )
     rn4678_init( &rn4678, &cfg );
 
     rn4678_enable ( &rn4678 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     rn4678_hw_reset ( &rn4678 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "Configuring the module...\n" );
     
@@ -229,6 +229,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

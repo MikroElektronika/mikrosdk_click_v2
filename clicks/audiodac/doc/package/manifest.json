@@ -25,14 +25,15 @@
     "name": "mikroe.click.audiodac",
     "product_link": "https://www.mikroe.com/audio-dac-click",
     "short_description": "Audio DAC Click is a compact add-on board perfect for upgrading your audio equipment. This board features the PCM5142, a 32-bit 384kHz audio stereo DAC with the DIR9001 digital audio receiver from Texas Instruments. The DIR9001 can receive 24-bit/96kHz signals at the highest via S/PDIF optical cable and complies with various digital audio standards, like IEC60958-3, JEITA CPR-1205, AES3, and EBUtech3250. The DIR9001's output is then processed via a stereo audio DAC, the PCM5142, with the latest generation of TI's advanced segment-DAC architecture to achieve excellent dynamic performance, detailed heights, and an exceptionally good sound stage.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.AudioDAC",
     "subdir_name": "lib_audiodac"
 }
+
 
 
 

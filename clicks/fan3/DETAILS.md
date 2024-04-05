@@ -97,19 +97,34 @@ void application_task ( )
 {
     log_printf( &logger, "Speed 1...\r\n" );
     fan3_set_speed( ctx, FAN3_SPEED1 );
-    Delay_ms( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "Speed 3...\r\n" );
     fan3_set_speed( ctx, FAN3_SPEED3 );
-    Delay_ms( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "Speed 5...\r\n" );
     fan3_set_speed( ctx, FAN3_SPEED5 );
-    Delay_ms( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "Speed 7...\r\n" );
     fan3_set_speed( ctx, FAN3_SPEED7 );
-    Delay_ms( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "Stopped...\r\n" );
     fan3_set_speed( ctx, FAN3_STOPPED );
-    Delay_ms( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

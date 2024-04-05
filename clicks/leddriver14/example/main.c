@@ -87,11 +87,16 @@ void application_task ( void )
         log_info ( &logger, " Abnormality such as LED Open or the OUTx pin short circuit occured " );
     }
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

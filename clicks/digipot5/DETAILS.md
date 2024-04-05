@@ -134,7 +134,9 @@ void application_task( void )
     digipot5_generic_write( &digipot5, DIGIPOT5_REG_WIPER3_VOL,
                             DIGIPOT5_RES_10KOHM_FULLSCALE );
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_write( &console, "* Decrementing wiper 3 by 5 steps.",
                LOG_FORMAT_LINE );
     for ( i = 0; i < 5; i++ )
@@ -142,7 +144,9 @@ void application_task( void )
         digipot5_decrement_wiper( &digipot5, DIGIPOT5_REG_WIPER3_VOL );
     }
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_write( &console, "* Incrementing wiper 0 by 10 steps.",
                LOG_FORMAT_LINE );
     for ( i = 0; i < 10; i++ )
@@ -150,7 +154,9 @@ void application_task( void )
         digipot5_increment_wiper( &digipot5, DIGIPOT5_REG_WIPER0_VOL );
     }
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_write( &console, "* Setting wiper 0 to 2k Ohm.", LOG_FORMAT_LINE );
     digipot5_generic_write( &digipot5, DIGIPOT5_REG_WIPER0_VOL,
                             DIGIPOT5_RES_2KOHM );
@@ -164,7 +170,9 @@ void application_task( void )
     digipot5_generic_write( &digipot5, DIGIPOT5_REG_WIPER3_VOL,
                             DIGIPOT5_RES_2KOHM );
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_write( &console, "****************************************",
                LOG_FORMAT_LINE );
 }

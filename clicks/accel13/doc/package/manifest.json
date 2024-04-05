@@ -25,17 +25,18 @@
     "name": "mikroe.click.accel13",
     "product_link": "https://www.mikroe.com/accel-13-click",
     "short_description": "Accel 13 Click features an ultra-low power triaxial accelerometer sensor with embedded intelligence, labeled as the IIS2DLPC.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2900
     ],
-    "version": "2.1.0.17",
+    "version": "2.1.0.18",
     "cmake": true,
     "alias": "Click.Accel13",
     "subdir_name": "lib_accel13"
 }
+
 
 
 

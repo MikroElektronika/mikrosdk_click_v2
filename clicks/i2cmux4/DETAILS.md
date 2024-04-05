@@ -90,10 +90,10 @@ void application_init ( void )
     i2cmux4_init( &i2cmux4, &cfg );
 
     i2cmux4_power_on( &i2cmux4, I2CMUX4_ENABLE_POWER_ON );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     i2cmux4_set_channel( &i2cmux4, I2CMUX4_SEL_CH_ALL_DISABLE, 0x00 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -111,30 +111,30 @@ void application_task ( void )
 {
     // CH 0 - 6DOF IMU 12 click
     i2cmux4_set_channel( &i2cmux4, I2CMUX4_SEL_CH_0, 0x68 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     i2cmux4_rmt_read_bytes( &i2cmux4, 0x00, &rx_data, 1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "    6DOF IMU 12 click   \r\n" );
     log_printf( &logger, "- - - - - - - - - - - - \r\n" );
     log_printf( &logger, "       ID = 0x%.2X  \r\n", ( uint16_t ) rx_data );
     log_printf( &logger, "----------------------- \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     
     // CH 1 - Compass 3 click
     i2cmux4_set_channel( &i2cmux4, I2CMUX4_SEL_CH_1, 0x30 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     i2cmux4_rmt_read_bytes( &i2cmux4, 0x2F, &rx_data, 1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "      Compass 3 click      \r\n" );
     log_printf( &logger, "- - - - - - - - - - - - \r\n" );
     log_printf( &logger, "       ID = 0x%.2X \r\n ", ( uint16_t ) rx_data );
     log_printf( &logger, "----------------------- \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

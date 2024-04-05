@@ -25,17 +25,18 @@
     "name": "mikroe.click.hbridgedriver",
     "product_link": "https://www.mikroe.com/h-bridge-driver-click",
     "short_description": "H-Bridge Driver Click is a compact add-on board that contains an H-bridge gate driver, also known as a full-bridge pre-driver. This board features the MC33883, an H-Bridge gate driver with an integrated charge pump and independent high and low side gate drive channels from NXP Semiconductors.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         3884
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.HBridgeDriver",
     "subdir_name": "lib_hbridgedriver"
 }
+
 
 
 

@@ -103,7 +103,7 @@ void application_init ( void )
     dcmotor9_enable( &dcmotor9 );
     dcmotor9_pwm_start( &dcmotor9 );
     log_info( &logger, "---- Application Task ----" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -131,19 +131,19 @@ void application_task ( void )
         duty = ( float ) n_cnt ;
         duty /= 10;
         dcmotor9_set_duty_cycle( &dcmotor9, duty );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
     for ( n_cnt = 1; n_cnt <= 10; n_cnt++ )
     {
         duty = ( float ) n_cnt ;
         duty /= 10;
         dcmotor9_set_duty_cycle( &dcmotor9,  duty );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
     
     log_printf( &logger, "* Pull break *\r\n" );
     dcmotor9_short_brake( &dcmotor9 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     dcmotor9_counter_clockwise ( &dcmotor9 );
     log_printf( &logger, "> COUNTER CLOCKWISE <\r\n" );
@@ -153,14 +153,14 @@ void application_task ( void )
         duty = ( float ) n_cnt ;
         duty /= 10;
         dcmotor9_set_duty_cycle( &dcmotor9, duty );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
     for ( n_cnt = 10; n_cnt > 0; n_cnt-- )
     {
         duty = ( float ) n_cnt ;
         duty /= 10;
         dcmotor9_set_duty_cycle( &dcmotor9,  duty );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
     
 }

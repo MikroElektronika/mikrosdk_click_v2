@@ -136,7 +136,10 @@ void application_task ( void )
 {
     timerrelay_activate_trigger( &timerrelay );
     log_printf( &logger, " Trigger activated. \r\n" );
-    Delay_ms( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

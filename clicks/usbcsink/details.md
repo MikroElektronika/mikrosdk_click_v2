@@ -104,7 +104,7 @@ void application_init ( void ) {
     }
 
     usbcsink_hw_reset( &usbcsink );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     usbcsink_set_pdo_num( USBCSINK_SET_PDO_2 );
     usbcsink_set_current( USBCSINK_SET_PDO_2, 1.5 );
@@ -115,10 +115,10 @@ void application_init ( void ) {
     log_printf( &logger , "- - - - - - - - - - - - \r\n" );
     
     usbcsink_upload_new_data( &usbcsink, USBCSINK_UPLOAD_NEW_DATA_VAL );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     usbcsink_hw_reset( &usbcsink );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_info( &logger, " Application Task " );
 }
@@ -153,7 +153,11 @@ void application_task ( void ) {
     log_printf( &logger , " Current :  %.2f A\r\n", demo_data );
 
     log_printf( &logger , "------------------------\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

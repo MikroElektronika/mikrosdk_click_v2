@@ -25,17 +25,18 @@
     "name": "mikroe.click.hallcurrent4",
     "product_link": "https://www.mikroe.com/hall-current-4-click",
     "short_description": "The Hall Current 4 click is designed to measure relatively high current by using the integrated ACS70331 sensor.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2673
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.HallCurrent4",
     "subdir_name": "lib_hallcurrent4"
 }
+
 
 
 

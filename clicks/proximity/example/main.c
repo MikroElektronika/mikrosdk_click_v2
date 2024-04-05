@@ -68,11 +68,16 @@ void application_task ( void )
     log_printf( &logger, "Proximity:   %u\r\n", proximity_proxi_value );
     log_printf( &logger, " Ambient:   %u LUX\r\n ", proximity_ambi_value );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

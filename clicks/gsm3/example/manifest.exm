@@ -2,7 +2,7 @@
     "name": "GSM 3 Click",
     "description": "GSM3 click is a complete quad-band GSM cellular network communication solution, featuring the SIM800H-BT, a quad-band 2G GSM/GPRS module. This module is GSM Phase 2/2+ compliant, featuring a full set of options for the cellular networking and communication. It has a network status indication, jamming detection, embedded internet protocols including TCP/IP, UDP, FTP, PPP, HTTP, E-mail, MMS, and more. It also features advanced voice/audio functions, including the FM radio interface. The GPRS multislot class 12 implementation allows 4 uplink and 4 downlink slots, with 5 slots open in total.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","SIM800H-BT"],
     "category" : ["GSM/LTE"]
 }

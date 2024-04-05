@@ -25,14 +25,15 @@
     "name": "mikroe.click.obdii",
     "product_link": "https://www.mikroe.com/obdii-click",
     "short_description": "OBDII click offers a unique opportunity to tap into the car diagnostic systems. It features the STN1110 Multiprotocol OBD to UART Interface, developed by the ScanTool technologies. This click can be used for the communication with the Electronic Control Unit (ECU) of a vehicle, via several different OBD II diagnostic protocols such as CAN, K LINE, L LINE and J1850. The STN1110 IC is used to process requests sent by the MCU via the UART interface and return back the responses from the ECU network nodes.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.OBDII",
     "subdir_name": "lib_obdii"
 }
+
 
 
 

@@ -112,7 +112,7 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     ata663211_generic_write( &ata663211, DEMO_TEXT_MESSAGE, strlen( DEMO_TEXT_MESSAGE ) );
     log_printf( &logger, "%s", ( char * ) DEMO_TEXT_MESSAGE );
-    Delay_ms( 1000 ); 
+    Delay_ms ( 1000 ); 
 #else
     uint8_t rx_byte = 0;
     if ( 1 == ata663211_generic_read( &ata663211, &rx_byte, 1 ) )

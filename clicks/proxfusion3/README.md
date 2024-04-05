@@ -117,13 +117,13 @@ void application_init ( void ) {
     proxfusion3_default_cfg ( &proxfusion3 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, "---------------------------\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     proxfusion3_get_version_info( &proxfusion3, &product_number, &software_version );
     log_printf( &logger, "  Product Number   : 0x%.2X \r\n", ( uint16_t )product_number );
     log_printf( &logger, "  Software Version : 0x%.2X \r\n", ( uint16_t )software_version );
     log_printf( &logger, "---------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "      Touch Detection      \r\n" );
     log_printf( &logger, "---------------------------\r\n" );
 }
@@ -139,7 +139,7 @@ Results are being sent to the Usart Terminal where you can track their changes.
 void application_task ( void ) {
     if ( proxfusion3_check_touch_event( &proxfusion3 ) == PROXFUSION3_EVENT_TOUCH ) {        
         uint8_t touch_data = proxfusion3_get_touch( &proxfusion3 );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         
         switch ( touch_data ) {
             case PROXFUSION3_TOUCH_POS_8: {
@@ -175,14 +175,14 @@ void application_task ( void ) {
                 break;
             }
             default: {
-                Delay_ms( 10 );
+                Delay_ms ( 10 );
                 break;
             }
         }
         
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
     } else {
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
     }
 }
 ```

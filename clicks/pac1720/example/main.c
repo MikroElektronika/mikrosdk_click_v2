@@ -78,11 +78,16 @@ void application_task ( void )
         log_printf( &logger, " U: %.3fV, I: %.3fA, P: %.3fW\r\n\n", voltage, current, power  );
     }
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -93,9 +93,9 @@ void application_init ( void )
     rn4678_init( &rn4678, &cfg );
 
     rn4678_enable ( &rn4678 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     rn4678_hw_reset ( &rn4678 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "Configuring the module...\n" );
     

@@ -115,7 +115,9 @@ void application_init ( void )
 
     log_printf( &logger, "\r\n Zero current calibration process\r\n" );
     log_printf( &logger, " Keep the battery disconnected in the next 5 seconds\r\n" );
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     if ( CHARGER_ERROR == charger_calibrate_current ( &charger ) )
     {
         log_error( &logger, " Calibration." );

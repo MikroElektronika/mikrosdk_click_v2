@@ -286,6 +286,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -346,9 +351,9 @@ static err_t nbiot5_rsp_check ( uint8_t *rsp )
             nbiot5_clear_app_buf( );
             return NBIOT5_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     nbiot5_process( );
     if ( strstr( app_buf, rsp ) )
     {
@@ -395,7 +400,7 @@ static void nbiot5_error_check ( err_t error_flag )
             break;
         }
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 static void nbiot5_log_app_buf ( void )
@@ -410,7 +415,11 @@ static err_t nbiot5_configure_for_network ( void )
 {
     err_t func_error = NBIOT5_OK;
 #if ( ( DEMO_EXAMPLE == EXAMPLE_TCP_UDP ) || ( DEMO_EXAMPLE == EXAMPLE_SMS ) )
-    Delay_ms ( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     // Deregister from network
     #define DEREGISTER_FROM_NETWORK "2"
@@ -457,7 +466,7 @@ static err_t nbiot5_check_connection ( void )
     nbiot5_error_check( error_flag );
     if ( strstr( app_buf, CONNECTED ) )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         // Check signal quality
         nbiot5_send_cmd( &nbiot5, NBIOT5_CMD_CSQ );
         error_flag = nbiot5_rsp_check( NBIOT5_RSP_OK );
@@ -479,7 +488,11 @@ static err_t nbiot5_configure_for_example ( void )
 {
     err_t func_error = NBIOT5_OK;
 #if ( DEMO_EXAMPLE == EXAMPLE_TCP_UDP )
-    Delay_ms ( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #elif ( DEMO_EXAMPLE == EXAMPLE_SMS )
     nbiot5_send_cmd_with_par( &nbiot5, NBIOT5_CMD_CMGF, SMS_MODE );
     error_flag = nbiot5_rsp_check( NBIOT5_RSP_OK );
@@ -632,7 +645,11 @@ static err_t nbiot5_example ( void )
     error_flag = nbiot5_rsp_check( NBIOT5_RSP_OK );
     func_error |= error_flag;
     nbiot5_error_check( error_flag );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #elif ( DEMO_EXAMPLE == EXAMPLE_SMS )
     // Check SMS mode
     #define CMGF_PDU "+CMGF: 0"
@@ -657,9 +674,37 @@ static err_t nbiot5_example ( void )
         func_error |= error_flag;
         nbiot5_error_check( error_flag );
     }
-    Delay_ms( 10000 );
-    Delay_ms( 10000 );
-    Delay_ms( 10000 );
+    // 30 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #else
     #error "No demo example selected"
 #endif

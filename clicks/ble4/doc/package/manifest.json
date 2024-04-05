@@ -25,17 +25,18 @@
     "name": "mikroe.click.ble4",
     "product_link": "https://www.mikroe.com/ble-4-click",
     "short_description": "BLE 4 Click is fully embedded stand-alone Bluetooth 5.0 low energy connectivity module, equipped with the NINA-B312, an ultra-small, high-performing, standalone Bluetooth low energy module for easy integration of Bluetooth low energy connectivity (BLE) into various electronic devices. This module combines a high-performance Arm® Cortex®-M4 CPU microprocessor with FPU, and state-of-the-art power performance.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2937
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.BLE4",
     "subdir_name": "lib_ble4"
 }
+
 
 
 

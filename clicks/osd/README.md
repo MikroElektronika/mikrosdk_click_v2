@@ -136,12 +136,14 @@ void application_task ( void )
             osd_write_character( &osd, 14, cnt, FOOTER_TEXT[ cnt ] );
         }
 
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     
     log_printf( &logger, " Clear display\r\n" );
     osd_clears_char_places( &osd, 0, 0, 16, 30 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

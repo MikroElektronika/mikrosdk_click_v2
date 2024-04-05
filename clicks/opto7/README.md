@@ -136,7 +136,11 @@ void application_task ( void )
         log_printf( &logger, " GP2 pin state LOW \r\n" );
     }
     log_printf( &logger, "- - - - - - - - - - - -\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, " GP1 pin state LOW \r\n" );
     opto7_set_gp1_pin( &opto7, OPTO7_PIN_STATE_LOW );
@@ -149,12 +153,17 @@ void application_task ( void )
         log_printf( &logger, " GP2 pin state LOW \r\n" );
     }
     log_printf( &logger, "- - - - - - - - - - - -\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #else
 #if defined TRANSMITTER
     log_printf( &logger, " Message sent! \r\n" );
     opto7_generic_write( &opto7, TX_MESSAGE, strlen( TX_MESSAGE ) );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #else
     if ( OPTO7_OK == opto7_process( &opto7 ) ) 
     {

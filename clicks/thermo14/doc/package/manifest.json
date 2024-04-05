@@ -25,17 +25,18 @@
     "name": "mikroe.click.thermo14",
     "product_link": "https://www.mikroe.com/thermo-14-click",
     "short_description": "Thermo 14 Click provides an accuracy of ±0.5°C in the range from -10°C to 60°C.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3718
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Thermo14",
     "subdir_name": "lib_thermo14"
 }
+
 
 
 

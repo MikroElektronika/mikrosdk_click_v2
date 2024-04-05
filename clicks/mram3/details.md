@@ -138,7 +138,9 @@ void application_task ( void )
     {
         log_printf ( &logger, "Data read from address  0x%.5LX: %s\r\n", ( uint32_t ) STARTING_ADDRESS, 
                                                                                       data_buf );
-        Delay_ms ( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     memcpy ( data_buf, DEMO_TEXT_MESSAGE_2, strlen ( DEMO_TEXT_MESSAGE_2 ) );
     if ( MRAM3_OK == mram3_memory_write ( &mram3, STARTING_ADDRESS, 
@@ -153,7 +155,9 @@ void application_task ( void )
     {
         log_printf ( &logger, "Data read from address  0x%.5LX: %s\r\n\n", ( uint32_t ) STARTING_ADDRESS, 
                                                                                         data_buf );
-        Delay_ms ( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

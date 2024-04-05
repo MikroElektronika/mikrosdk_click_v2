@@ -25,17 +25,18 @@
     "name": "mikroe.click.sht1x",
     "product_link": "https://www.mikroe.com/sht1x-click",
     "short_description": "This click measures temperature and humidity",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         211
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Sht1x",
     "subdir_name": "lib_sht1x"
 }
+
 
 
 

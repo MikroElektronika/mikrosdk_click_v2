@@ -126,7 +126,7 @@ void application_init ( void )
     log_printf( &logger, " > ID: 0x%.4X\r\n", reg_val );
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```
@@ -150,7 +150,7 @@ void application_task ( void )
         log_printf( &logger, " > V ch1: %f\r\n", channel1 );
         log_printf( &logger, " > V ch2: %f\r\n", channel2 );    
         log_printf( &logger, "************************\r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

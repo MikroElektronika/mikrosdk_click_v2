@@ -70,7 +70,7 @@ void application_init ( void )
 
     duallin_bus1_status( &duallin, DUALLIN_PIN_STATE_HIGH );
     duallin_bus2_status( &duallin, DUALLIN_PIN_STATE_LOW );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -85,12 +85,18 @@ void application_task ( void )
 
 #ifdef DEMO_APP_TRANSMITER
     duallin_send_command( &duallin, TEXT_TO_SEND );
-    Delay_ms( 2000 );    
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );    
 #endif
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

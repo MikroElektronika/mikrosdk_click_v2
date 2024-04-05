@@ -92,7 +92,7 @@ void application_init ( void )
     buck_cfg_setup( &cfg );
     BUCK_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     buck_init( &buck, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     buck_software_reset( &buck );
     buck_default_cfg( &buck );
@@ -113,15 +113,23 @@ void application_task ( void )
     {
         log_info( &logger, "----  Power good output voltage!  ----" );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_info( &logger, "----  Switching frequency 400kHz!  ----" );
     buck_switch_frequency( &buck, BUCK_FREQ_400KHz );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_info( &logger, "----  Switching frequency 800kHz!  ----" );
     buck_switch_frequency( &buck, BUCK_FREQ_800KHz );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

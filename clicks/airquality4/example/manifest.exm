@@ -2,7 +2,7 @@
     "name": "Air quality 4 Click",
     "description": "Air quality 4 click is an advanced air quality sensing device that combines multiple metal-oxide sensing elements on a chip to provide detailed information of the air quality parameters.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","SGP30"],
     "category" : ["Gas"] 
 }

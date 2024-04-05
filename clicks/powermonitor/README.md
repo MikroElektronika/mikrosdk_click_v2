@@ -124,7 +124,7 @@ void application_init ( void )
 
     powermonitor_default_cfg ( &powermonitor );
     log_printf( &logger, "----------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     powermonitor_get_id( &powermonitor, &manufacturer_id, &dieid, &rev_id );
     log_printf( &logger, "  Manufacturer ID  : %.2s\r\n", manufacturer_id );
@@ -133,7 +133,7 @@ void application_init ( void )
     log_printf( &logger, "----------------------------\r\n" );
     log_info( &logger, " Application Task " );
     log_printf( &logger, "----------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -154,29 +154,30 @@ void application_task ( void )
     
     powermonitor_get_vshunt( &powermonitor, &vshunt );
     log_printf( &logger, " Shunt voltage : %.2f mV\r\n", vshunt );
-    Delay_ms( 100 ); 
+    Delay_ms ( 100 ); 
     
     powermonitor_get_vbus( &powermonitor, &vbus );
     log_printf( &logger, " BUS voltage   : %.2f mV\r\n", vbus );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     powermonitor_get_current( &powermonitor, &current );
     log_printf( &logger, " Current       : %.2f mA\r\n", current );
-    Delay_ms( 100 ); 
+    Delay_ms ( 100 ); 
     
     powermonitor_get_power( &powermonitor, &power );
     log_printf( &logger, " Power         : %.6f W\r\n", power );
-    Delay_ms( 100 ); 
+    Delay_ms ( 100 ); 
     
     powermonitor_get_energy( &powermonitor, &energy );
     log_printf( &logger, " Energy        : %.6f J\r\n", energy );
     log_printf( &logger, "- - - - - - - - - - - - - - \r\n" );
-    Delay_ms( 100 ); 
+    Delay_ms ( 100 ); 
     
     powermonitor_get_temperature( &powermonitor, &temperature );
     log_printf( &logger, " Temperature   : %.2f C\r\n", temperature );
     log_printf( &logger, "----------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

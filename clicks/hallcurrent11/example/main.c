@@ -61,7 +61,7 @@ void application_init ( void )
     hallcurrent11_default_cfg ( &hallcurrent11 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
@@ -72,16 +72,21 @@ void application_task ( void )
     hallcurrent11_get_adc( &hallcurrent11, &adc_data );
     log_printf( &logger, " ADC Value   : %d \r\n", adc_data );
     log_printf( &logger, "- - - - - - - - - - -  - -\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     hallcurrent11_get_current ( &hallcurrent11, &current );
     log_printf( &logger, " Current     : %.3f A \r\n", current );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

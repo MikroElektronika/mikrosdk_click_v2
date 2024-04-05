@@ -25,14 +25,15 @@
     "name": "mikroe.click.spectrometer2",
     "product_link": "https://www.mikroe.com/spectrometer-2-click",
     "short_description": "Spectrometer 2 Click is a compact add-on board that collects light waves. This board features the VD6283TX, a color sensor with advanced light flicker extraction from STMicroelectronics. The VD6283TX performs fast and accurate light measurements thanks to an individual ADC and a readout for each color channel - red, green, blue, IR, clear, and visible. It uses hybrid color filters with precise responses allowing accurate computation of the correlated color temperature (CCT) and Lux information. Its patented architecture and a high-performance photodiode design can also extract light-flickering frequencies to avoid banding effects or check that they are safe for the human eye.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "alias": "Click.Spectrometer2",
     "cmake": true,
     "subdir_name": "lib_spectrometer2"
 }
+
 
 
 

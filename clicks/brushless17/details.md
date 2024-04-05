@@ -151,7 +151,7 @@ void application_task ( void )
         log_info ( &logger, " An overcurrent or overtemperature event has occured " );
     }
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 ```
 

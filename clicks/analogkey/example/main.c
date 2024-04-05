@@ -86,16 +86,21 @@ void application_task ( void )
         log_printf( &logger, " T%u is pressed.\r\n", (uint16_t)key );
         
         while ( analogkey_read_voltage( &analogkey ) > 0.2 ) {
-             Delay_ms( 1 );   
+             Delay_ms ( 1 );   
         }
     
         log_printf( &logger, " T%u is released.\r\n", (uint16_t)key );
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

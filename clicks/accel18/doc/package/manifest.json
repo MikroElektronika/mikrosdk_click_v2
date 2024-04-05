@@ -25,14 +25,15 @@
     "name": "mikroe.click.accel18",
     "product_link": "https://www.mikroe.com/accel-18-click",
     "short_description": "Accel 18 Click is a compact add-on board that contains an acceleration sensor. This board features the MC3419, a digital output 3-axis accelerometer with a feature set optimized for consumer product motion sensing from MEMSIC.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Accel18",
     "subdir_name": "lib_accel18"
 }
+
 
 
 

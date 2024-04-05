@@ -95,7 +95,7 @@ void application_init ( void )
     RMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rmeter_init( &rmeter, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "----------------------- \r\n" );
     log_printf( &logger, "    R Meter  Click      \r\n" );
     log_printf( &logger, "----------------------- \r\n" );
@@ -122,7 +122,7 @@ void application_task ( void )
     }
     
     log_printf( &logger, "----------------------- \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

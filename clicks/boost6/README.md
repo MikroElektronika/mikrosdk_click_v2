@@ -132,13 +132,21 @@ void application_task ( void )
     log_printf( &logger, "     Enable      \r\n" );
     log_printf( &logger, "-----------------\r\n" );
 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     boost6_power_off(  &boost6  );
     log_printf( &logger, "     Disable     \r\n" );
     log_printf( &logger, "-----------------\r\n" );
 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

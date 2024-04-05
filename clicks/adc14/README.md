@@ -103,7 +103,7 @@ void application_init ( void )
     }
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -119,7 +119,7 @@ void application_task ( void )
     if ( ADC14_OK == adc14_get_voltage( &adc14, &voltage ) )
     {
         log_printf( &logger, " Voltage : %.2f [mV]\r\n", voltage );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     } 
 }
 ```

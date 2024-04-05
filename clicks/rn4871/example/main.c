@@ -97,7 +97,7 @@ void application_init ( void )
     rn4871_cfg_setup( &cfg );
     RN4871_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rn4871_init( &rn4871, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     dev_type = RN4871_DEVICETYPE_MASTER;
 
@@ -120,12 +120,12 @@ void application_task ( void )
     rn4871_process(  );
 #ifdef DEMO_APP_TRANSMITER
     rn4871_connect( &rn4871, &RN4871_ADDR_SLAVE[ 0 ] );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, ">>> sending data  <<<\r\n" );
     rn4871_send( &rn4871, RN4871_MTYPE_MSG, RN4871_DTYPE_STRING, RN4871_ID_MASTER, &message_payload[ 0 ] );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     rn4871_disconnect( &rn4871 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 #endif
 
 #ifdef DEMO_APP_RECEIVER
@@ -142,6 +142,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -127,23 +127,23 @@ void application_task ( void )
     brushless9_set_brk( &brushless9, 0 );
     for ( uint8_t duty_cnt = 1; duty_cnt < 10; duty_cnt++ )
     {
-        Delay_ms( DUTY_CHANGE_DELAY );
+        Delay_ms ( DUTY_CHANGE_DELAY );
         brushless9_set_duty_cycle ( &brushless9, ( float ) duty_cnt / 10.0 );
         log_printf( &logger, "Duty cycle: %u%%\r\n", ( uint16_t ) ( duty_cnt * 10 ) );
     }
 
     for ( uint8_t duty_cnt = 10; duty_cnt > 0; duty_cnt-- )
     {
-        Delay_ms( DUTY_CHANGE_DELAY );
+        Delay_ms ( DUTY_CHANGE_DELAY );
         brushless9_set_duty_cycle ( &brushless9, ( float ) duty_cnt / 10.0 );
         log_printf( &logger, "Duty cycle: %u%%\r\n", ( uint16_t ) ( duty_cnt * 10 ) );
     }
 
-    Delay_ms( DUTY_CHANGE_DELAY );
+    Delay_ms ( DUTY_CHANGE_DELAY );
     log_info( &logger, " Stopping... " );
     brushless9_set_duty_cycle ( &brushless9, 0 );
     brushless9_set_brk( &brushless9, 1 );
-    Delay_ms( BREAK_DELAY );
+    Delay_ms ( BREAK_DELAY );
     log_info( &logger, " Changing direction... " );
     direction = !direction;
     brushless9_set_dir( &brushless9, direction );

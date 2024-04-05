@@ -82,7 +82,9 @@ void application_task ( void )
         if ( HBRIDGE10_OK == hbridge10_get_status ( &hbridge10, &status ) )
         {
             hbridge10_display_status ( status );
-            Delay_ms ( 3000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
         }
     }
     if ( ( HBRIDGE10_OK == hbridge10_set_output_state ( &hbridge10, HBRIDGE10_CHANNEL_OUT1, HBRIDGE10_OUT_LOW ) ) && 
@@ -93,13 +95,20 @@ void application_task ( void )
         if ( HBRIDGE10_OK == hbridge10_get_status ( &hbridge10, &status ) )
         {
             hbridge10_display_status ( status );
-            Delay_ms ( 3000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
         }
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

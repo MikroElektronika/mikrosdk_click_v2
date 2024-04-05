@@ -108,7 +108,7 @@ void application_task ( void )
     log_printf( &logger, " Humidity: %.2f ", humidity );
     log_printf( &logger, " %% \r\n", humidity );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

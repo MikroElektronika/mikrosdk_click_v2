@@ -58,7 +58,7 @@ static void plot_ecg_data ( uint32_t ecg_data )
     
     if ( tmp != 0 ) {
         log_printf( &logger, "%lu,%lu\r\n", tmp, timer );
-        Delay_ms( 5 );
+        Delay_ms ( 5 );
     }
 }
 
@@ -74,7 +74,7 @@ static void plot_ppg_data ( uint32_t ir_data, uint32_t red_data )
     
     if ( ( tmp != 0 ) && ( tmf != 0 ) ) {
         log_printf( &logger,"%lu,%lu,%lu\r\n", tmp, tmf, tmd );
-        Delay_ms( 20 );
+        Delay_ms ( 20 );
     }
 }
 
@@ -102,13 +102,13 @@ void application_init ( void )
     ECG6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ecg6_init( &ecg6, &cfg );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     DEMO_EXAMPLE = PPG_EXAMPLE;
    
     // Dummy read
     ecg6_check_path_id( &ecg6 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     device_check = ecg6_check_path_id( &ecg6 );
     
@@ -129,7 +129,7 @@ void application_init ( void )
     }
 
     log_printf( &logger, " ---- Configuration done ----- \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     time_cnt = 0;
 }
@@ -156,6 +156,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

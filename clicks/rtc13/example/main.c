@@ -67,28 +67,28 @@ void application_init ( void )
 
     rtc13_default_cfg ( &rtc13 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     date.weekday = 3;
     date.day = 4;
     date.month = 8;
     date.year = 21;
     rtc13_set_date( &rtc13, date );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     time.hours = 23;
     time.min = 59;
     time.sec = 50;
     rtc13_set_time( &rtc13, time );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
 {  
     rtc13_get_time( &rtc13, &time );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
     rtc13_get_date( &rtc13, &date );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
     
     if ( time.sec != new_sec ) 
     {
@@ -96,12 +96,17 @@ void application_task ( void )
         log_printf( &logger, "  Time      : %.2d:%.2d:%.2d\r\n", ( uint16_t ) time.hours, ( uint16_t ) time.min, ( uint16_t ) time.sec );
         log_printf( &logger, "- - - - - - - - - - - -\r\n" );
         new_sec = time.sec;
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
      }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.qirx",
     "product_link": "https://www.mikroe.com/qi-rx-click",
     "short_description": "Qi RX Click is a compact add-on board made for the purpose of wireless power transfer. This board features the PIC16F15313, a general-purpose 8-bit MCU that makes a flexible, low-cost alternative to the wireless charging solutions based on ASICs from Microchip.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         3895
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.QiRX",
     "subdir_name": "lib_qirx"
 }
+
 
 
 

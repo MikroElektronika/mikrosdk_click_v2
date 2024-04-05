@@ -25,13 +25,14 @@
     "name": "mikroe.click.smartdof3",
     "product_link": "https://www.mikroe.com/smart-dof-3-click",
     "short_description": "Smart DOF 3 Click is a compact add-on board with a highly advanced integrated system-in-package (SIP) accelerometer and gyroscope sensors. This board features the ISM330IS, an iNEMO inertial module from STMicroelectronics. The inertial module consists of an always-on 3-axis accelerometer and 3-axis gyroscope with ISPU (intelligent sensor processing unit). In addition, the ISM330IS can be configured to allow connection with external I2C sensors.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.SmartDOF3",
     "subdir_name": "lib_smartdof3"
 }
+
 
 

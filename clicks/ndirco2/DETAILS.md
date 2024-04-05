@@ -90,13 +90,13 @@ void application_init ( void )
     NDIRCO2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ndirco2_init( &ndirco2, &cfg );
 
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 
     ndirco2_reset( &ndirco2 );
     ndirco2_write_register( &ndirco2, NDIRCO2_AVERAGING_COUNT_REG, 0x03 );
     ndirco2_set_mode( &ndirco2, NDIRCO2_CONTINUOUS_OP_MODE );
     log_printf( &logger, "NDIR CO2 is initialized \r\n" );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 }
   
 ```

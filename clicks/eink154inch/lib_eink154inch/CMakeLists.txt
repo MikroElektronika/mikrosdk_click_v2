@@ -17,7 +17,7 @@ add_library(lib_eink154inch STATIC
 )
 add_library(Click.Eink154Inch  ALIAS lib_eink154inch)
 
-if (${MCU_NAME} MATCHES "(^PIC18F)|(^ATMEGA)")
+if ((${MCU_NAME} MATCHES "(^PIC18F)") OR (${MCU_NAME} MATCHES "(^dsPIC)") OR (${MCU_NAME} MATCHES "(^ATMEGA)"))
 	add_compile_definitions(IMAGE_MODE_ONLY)
 endif()
 

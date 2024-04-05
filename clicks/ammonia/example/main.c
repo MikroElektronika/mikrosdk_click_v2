@@ -74,12 +74,17 @@ void application_task ( void )
     if ( ammonia_read_measurement( &ammonia, &nh3_ppm ) == AMMONIA_OK )
     {
         log_printf( &logger, "  NH3 [ppm] : %u\r\n", nh3_ppm );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -74,12 +74,17 @@ void application_task ( void )
         digipot14_set_pot_b_wiper( &digipot14, wiper_val );
         log_printf( &logger, " Resistance = %.3f KOhm \r\n", 
                     ( DIGIPOT14_MAX_RESISTANCE_KOHM * ( wiper_val / DIGIPOT14_MAX_POSITION_NUM ) ) );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

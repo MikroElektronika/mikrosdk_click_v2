@@ -91,13 +91,13 @@ void application_init ( void )
     C2X20WAMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c2x20wamp_init( &c2x20wamp, &cfg );
     
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_info( &logger, "-----------------------\r\n    2x20W Amp Click    \r\n-----------------------" );
     c2x20wamp_enable( &c2x20wamp );
     log_info( &logger,"   Enable  Amplifier   \r\n-----------------------");
 
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 }  
 ```
 
@@ -123,7 +123,11 @@ void application_task ( void )
 
     log_info( &logger, "- - - - - - - - - - - -" );
 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     for ( cnt = 0; cnt < 10; cnt++ )
     {
@@ -131,12 +135,16 @@ void application_task ( void )
 
         c2x20wamp_volume_up( &c2x20wamp );
 
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 
     log_info( &logger, "- - - - - - - - - - - -" );
 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     for ( cnt = 0; cnt < 10; cnt++ )
     {
@@ -144,12 +152,16 @@ void application_task ( void )
 
         c2x20wamp_volume_down( &c2x20wamp );
 
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 
     log_info( &logger, "-----------------------" );
 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_info( &logger, "       MUTE MODE       " );
 
@@ -157,7 +169,11 @@ void application_task ( void )
 
     log_info( &logger, "-----------------------" );
 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ``` 
 

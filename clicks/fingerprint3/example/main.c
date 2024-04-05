@@ -115,7 +115,7 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     //  Click initialization.
     fingerprint3_cfg_setup( &cfg );
@@ -128,24 +128,24 @@ void application_init ( void )
 
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     error_check = fingerprint3_set_config ( &fingerprint3, FINGERPRINT3_DEFAULT_ADDRESS, 
                                                            FINGERPRINT3_DEFAULT_PASSWORD );
     display_error( "Set Config" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     error_check = fingerprint3_soft_reset ( &fingerprint3 );
     display_error( "Soft Reset" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     error_check = fingerprint3_check_sensor ( &fingerprint3 );
     display_error( "Check Sensor" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     error_check = fingerprint3_empty_library ( &fingerprint3 );
     display_error( "Empty the Library" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     uint8_t cnt = 0; 
     do 
@@ -164,7 +164,7 @@ void application_init ( void )
         {
             cnt++;
         }
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     while ( FINGERPRINT3_OK != error_check || cnt != NUMBER_OF_FINGERPRINTS );
 }
@@ -176,6 +176,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -247,7 +252,7 @@ static void search_finger( fingerprint3_t *ctx )
                                                                           FINGERPRINT3_AURA_LED_PURPLE, 
                                                                           FINGERPRINT3_AURA_TIME_INFINITE ) )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     for ( ; ; )
     {
@@ -255,7 +260,7 @@ static void search_finger( fingerprint3_t *ctx )
         if ( FINGERPRINT3_OK != error_check )
         {
             display_error( "Take Image" );
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
             continue;
         }
         error_check = fingerprint3_extract_features ( &fingerprint3, 1 );
@@ -263,7 +268,7 @@ static void search_finger( fingerprint3_t *ctx )
         if ( FINGERPRINT3_OK != error_check )
         {
             display_error( "Extract Features" );
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
             continue;
         }
         break;
@@ -293,26 +298,26 @@ static void search_finger( fingerprint3_t *ctx )
         fingerprint3_aura_control ( &fingerprint3, FINGERPRINT3_AURA_CTRL_BREATH, 0x80, 
                                                    FINGERPRINT3_AURA_LED_RED, 1 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, " Lift the finger of the sensor.\r\n" );
     log_printf( &logger, "--------------------------------- \r\n" );
             
     error_check = fingerprint3_take_image ( &fingerprint3 );
     while ( error_check != FINGERPRINT3_CONF_NO_FINGER )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         error_check = fingerprint3_take_image ( &fingerprint3 );
     }
     while ( fingerprint3_finger_indicator( &fingerprint3 ) != FINGERPRINT3_DETECT_NO_FINGER );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 static void match_finger( fingerprint3_t *ctx, uint16_t location )
 {
     error_check = fingerprint3_load_template ( &fingerprint3, 2, location );
     display_error( "Load Template" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "  >>> Matching Fingerprints <<<  \r\n" );
     log_printf( &logger, "--------------------------------- \r\n" );
@@ -327,7 +332,7 @@ static void match_finger( fingerprint3_t *ctx, uint16_t location )
                                                                           FINGERPRINT3_AURA_LED_PURPLE, 
                                                                           FINGERPRINT3_AURA_TIME_INFINITE ) )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     
     for ( ; ; )
@@ -336,7 +341,7 @@ static void match_finger( fingerprint3_t *ctx, uint16_t location )
         if ( FINGERPRINT3_OK != error_check )
         {
             display_error( "Take Image" );
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
             continue;
         }
         error_check = fingerprint3_extract_features ( &fingerprint3, 3 );
@@ -344,7 +349,7 @@ static void match_finger( fingerprint3_t *ctx, uint16_t location )
         if ( FINGERPRINT3_OK != error_check )
         {
             display_error( "Extract Features" );
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
             continue;
         }
         break;
@@ -374,19 +379,19 @@ static void match_finger( fingerprint3_t *ctx, uint16_t location )
         fingerprint3_aura_control ( &fingerprint3, FINGERPRINT3_AURA_CTRL_BREATH, 0x80, 
                                                    FINGERPRINT3_AURA_LED_RED, 1 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, " Lift the finger of the sensor.\r\n" );
     log_printf( &logger, "--------------------------------- \r\n" );
             
     error_check = fingerprint3_take_image ( &fingerprint3 );
     while ( error_check != FINGERPRINT3_CONF_NO_FINGER )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         error_check = fingerprint3_take_image ( &fingerprint3 );
     }
     while ( fingerprint3_finger_indicator( &fingerprint3 ) != FINGERPRINT3_DETECT_NO_FINGER );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 static uint8_t enroll_finger( fingerprint3_t *ctx, uint16_t location, uint8_t features )
@@ -408,7 +413,7 @@ static uint8_t enroll_finger( fingerprint3_t *ctx, uint16_t location, uint8_t fe
                                                                               FINGERPRINT3_AURA_LED_PURPLE, 
                                                                               FINGERPRINT3_AURA_TIME_INFINITE ) )
         {
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
 
         error_check = fingerprint3_take_image ( &fingerprint3 );
@@ -416,17 +421,17 @@ static uint8_t enroll_finger( fingerprint3_t *ctx, uint16_t location, uint8_t fe
                 
         if ( FINGERPRINT3_OK == error_check )
         {
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
             error_check = fingerprint3_extract_features ( &fingerprint3, cnt );
             display_error( "Extract Features" );
             if ( FINGERPRINT3_OK == error_check )
             {
                 cnt++;
             }
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
             fingerprint3_aura_control ( &fingerprint3, FINGERPRINT3_AURA_CTRL_BREATH, 0x80, 
                                                        FINGERPRINT3_AURA_LED_BLUE, 1 );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
             
         }
 
@@ -436,11 +441,11 @@ static uint8_t enroll_finger( fingerprint3_t *ctx, uint16_t location, uint8_t fe
         error_check = fingerprint3_take_image ( &fingerprint3 );
         while ( error_check != FINGERPRINT3_CONF_NO_FINGER )
         {
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
             error_check = fingerprint3_take_image ( &fingerprint3 );
         }
         while ( fingerprint3_finger_indicator( &fingerprint3 ) != FINGERPRINT3_DETECT_NO_FINGER );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     error_check = fingerprint3_create_template ( &fingerprint3 );
     display_error( "Create Template" );
@@ -448,14 +453,14 @@ static uint8_t enroll_finger( fingerprint3_t *ctx, uint16_t location, uint8_t fe
     {
         return error_check;
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     error_check = fingerprint3_store_template ( &fingerprint3, 1, location );
     display_error( "Store Template" );
     if ( FINGERPRINT3_OK != error_check )
     {
         return error_check;
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     return FINGERPRINT3_OK;
 }

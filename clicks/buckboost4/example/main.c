@@ -63,7 +63,7 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, "____________\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
@@ -73,15 +73,24 @@ void application_task ( void )
         if ( BUCKBOOST4_OK == buckboost4_set_vout( &buckboost4, ( float ) vout ) )
         {
             log_printf( &logger, " Vout: %dV\r\n", ( uint16_t ) vout );
-            Delay_ms( 5000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
         }
     }
     log_printf( &logger, "____________\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

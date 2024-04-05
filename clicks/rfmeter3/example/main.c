@@ -64,12 +64,17 @@ void application_task ( void )
     if ( RFMETER3_ERROR != rfmeter3_get_rf_input_power ( &rfmeter3, &rfmeter3_rf_input_power ) ) 
     {
         log_printf( &logger, " RF Input Power: %.2f dBm\r\n", rfmeter3_rf_input_power );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

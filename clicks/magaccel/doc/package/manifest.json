@@ -25,12 +25,13 @@
     "name": "mikroe.click.magaccel",
     "product_link": "https://www.mikroe.com/magaccel-click",
     "short_description": "Mag&Accel Click is a compact add-on board representing a moving object and magnetic switch as a single solution. This board features the NMH1000, a Hall-effect magnetic field switch, and the FXLS8974CF, a 3-axis low-g accelerometer, both from NXP Semiconductor.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.MagAccel",
     "subdir_name": "lib_magaccel"
 }
+
 

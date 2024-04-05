@@ -25,11 +25,12 @@
     "name": "mikroe.click.haptic4",
     "product_link": "https://www.mikroe.com/haptic-4-click",
     "short_description": "Haptic 4 Click is a compact add-on board that enables precise haptic feedback in various electronic projects. This board features the DA7280, a haptic driver designed to drive linear resonant actuator (LRA) and eccentric rotating mass (ERM) actuators from Renesas. The DA7280 boasts a differential output drive and continuous motion sensing for calibration-free operation, coupled with wide-band support to leverage the capabilities of modern LRAs. It supports six independent haptic sequences activated directly via mikroBUS™ pins or externally through I2C or PWM signals, offering extensive flexibility for haptic configuration. Ideal for enhancing user experience in wearables, electronic peripherals, automotive interfaces, industrial controls, and AR/VR controllers, this Click board™ opens new possibilities for interactive and tactile-responsive technology.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.Haptic4",
     "subdir_name": "lib_haptic4"
 }
+

@@ -109,7 +109,7 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -127,15 +127,15 @@ void application_task ( void )
     if ( DIFFPRESS3_OK == diffpress3_get_pressure( &diffpress3, &pressure ) )
     {
         log_printf( &logger, " Diff Pressure: %.3f [kPa]\r\n", pressure );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     if ( DIFFPRESS3_OK == diffpress3_get_temperature( &diffpress3, &temperature ) )
     {
         log_printf( &logger, " Temperature: %.2f [C]\r\n", temperature );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

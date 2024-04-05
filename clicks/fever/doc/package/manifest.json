@@ -25,17 +25,18 @@
     "name": "mikroe.click.fever",
     "product_link": "https://www.mikroe.com/fever-click",
     "short_description": "Fever click features a specially designed sensor, which is capable of accurate measurement of human body temperature. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2036
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Fever",
     "subdir_name": "lib_fever"
 }
+
 
 
 

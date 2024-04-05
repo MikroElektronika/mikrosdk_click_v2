@@ -139,7 +139,7 @@ void application_task ( void )
     {
         log_error( &logger, "%s - no communication!\r\n", ( char * ) DEVICE_NAME );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

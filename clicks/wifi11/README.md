@@ -92,77 +92,78 @@ void application_init ( void )
     wifi11_cfg_setup( &cfg );
     WIFI11_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     wifi11_init( &wifi11, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     wifi11_reset_device( &wifi11 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     // dummy read
     wifi11_process( );
     wifi11_clear_app_buf( );
     
     log_printf( &logger, "\r\n ---- Common commands ---- \r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // Test AT command ready
     wifi11_send_cmd( &wifi11, WIFI11_CMD_AT );
     app_error_flag = wifi11_rsp_check( );
     wifi11_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     // Query version info
     wifi11_send_cmd( &wifi11, WIFI11_CMD_ATSV );
     app_error_flag = wifi11_rsp_check( );
     wifi11_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_printf( &logger, "\r\n ---- WiFi commands ---- \r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // Set WiFi mode - Station
     wifi11_send_cmd_with_parameter( &wifi11, WIFI11_CMD_ATPW, "1" );
     app_error_flag = wifi11_rsp_check( );
     wifi11_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // Connect to AP
     wifi11_connect_to_ap( &wifi11, AP_SSID, AP_PASSWORD );
     app_error_flag = wifi11_rsp_check( );
     wifi11_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // Wifi information
     wifi11_send_cmd( &wifi11, WIFI11_CMD_ATW );
     app_error_flag = wifi11_rsp_check( );
     wifi11_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_printf( &logger, "\r\n ---- TCP/IP commands ---- \r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // Create TCP Server
     wifi11_create_tcp_udp_server( &wifi11, WIFI11_TCP_MODE, LOCAL_PORT );
     app_error_flag = wifi11_rsp_check( );
     wifi11_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // Create UDP Server
     wifi11_create_tcp_udp_server( &wifi11, WIFI11_UDP_MODE, LOCAL_PORT );
     app_error_flag = wifi11_rsp_check( );
     wifi11_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // Enable auto receive data mode
     wifi11_send_cmd_with_parameter( &wifi11, WIFI11_CMD_ATPK, "1" );
     app_error_flag = wifi11_rsp_check( );
     wifi11_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // Check network connection status
     wifi11_send_cmd( &wifi11, WIFI11_CMD_ATPI );
     app_error_flag = wifi11_rsp_check( );
     wifi11_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_printf( &logger, "\r\n ---- Please connect to the TCP/UDP server listed above via" );
     log_printf( &logger, " a TCP/UDP client ---- \r\n" ); 

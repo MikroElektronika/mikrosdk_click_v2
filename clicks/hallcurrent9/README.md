@@ -124,7 +124,11 @@ void application_init ( void ) {
     log_printf( &logger, "- - - - - - - - - - - - - -\r\n" );
     log_printf( &logger, "  In the following 5 sec.  \r\n" );
     log_printf( &logger, " turn OFF the Power Supply \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "-------------------------\r\n" );
     log_printf( &logger, "    Start calibration    \r\n" );
@@ -132,7 +136,7 @@ void application_init ( void ) {
     if ( hallcurrent9_set_calibration( &hallcurrent9, &avg_adc_data ) == HALLCURRENT9_OK ) {
         log_printf( &logger, "---------------------------\r\n" );
         log_printf( &logger, "    Calibration  Done    \r\n" );
-        Delay_ms( 1000 );    
+        Delay_ms ( 1000 );    
     }
     
     log_printf( &logger, "---------------------------\r\n" );
@@ -155,7 +159,8 @@ void application_task ( void ) {
 
     current = hallcurrent9_get_current( &hallcurrent9, &avg_adc_data );
     log_printf( &logger, "   Current : %.2f mA \r\n", current );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

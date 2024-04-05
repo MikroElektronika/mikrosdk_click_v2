@@ -25,17 +25,18 @@
     "name": "mikroe.click.recnplay",
     "product_link": "https://www.mikroe.com/recplay-click",
     "short_description": "Rec&Play Click is a digital voice recorder on a Click board™. It is based on the ISD3900, a multi-message record and playback device. It features the ChipCorder® technology, offering digital sound compression, smart message management, digitally configurable signal path, and more.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2574
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.RecNPlay",
     "subdir_name": "lib_recnplay"
 }
+
 
 
 

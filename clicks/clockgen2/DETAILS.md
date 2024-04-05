@@ -93,7 +93,7 @@ void application_init ( void )
     CLOCKGEN2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     clockgen2_init( &clockgen2, &cfg );
 
-    Delay_ms(100);
+    Delay_ms ( 100 );
 }
   
 ```
@@ -114,10 +114,12 @@ void application_task ( void )
      {
        clockgen2_set_prescaler( &clockgen2, i );
        clockgen2_output_enable( &clockgen2, 1 );
-       Delay_ms( 2000 );
+       Delay_ms ( 1000 );
+       Delay_ms ( 1000 );
 
        clockgen2_output_enable( &clockgen2, 0 );
-       Delay_ms( 2000 );
+       Delay_ms ( 1000 );
+       Delay_ms ( 1000 );
      }
 }
 

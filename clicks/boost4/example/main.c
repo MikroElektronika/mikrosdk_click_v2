@@ -61,7 +61,7 @@ void application_init ( void )
     log_printf( &logger, "        Boost 4 Click        \r\n" );
     log_printf( &logger, "-----------------------------\r\n" );
     boost4_enable( &boost4, BOOST4_ENABLE );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -69,7 +69,9 @@ void application_task ( void )
     log_printf( &logger, " Set the max Vout \r\n" );
     boost4_set_out_voltage( &boost4, BOOST4_VOUT_MAX );
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "-----------------------------\r\n" );
 
@@ -77,7 +79,9 @@ void application_task ( void )
 
     boost4_set_out_voltage( &boost4, BOOST4_VOUT_5 );
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "-----------------------------\r\n" );
 
@@ -85,7 +89,9 @@ void application_task ( void )
 
     boost4_set_out_voltage( &boost4, BOOST4_VOUT_4_5 );
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "-----------------------------\r\n" );
     
@@ -93,7 +99,9 @@ void application_task ( void )
 
     boost4_set_out_voltage( &boost4, BOOST4_VOUT_4 );
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "-----------------------------\r\n" );
     
@@ -101,7 +109,9 @@ void application_task ( void )
 
     boost4_set_out_voltage( &boost4, BOOST4_VOUT_3_5 );
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "-----------------------------\r\n" );
     
@@ -109,7 +119,9 @@ void application_task ( void )
 
     boost4_set_out_voltage( &boost4, BOOST4_VOUT_3 );
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "-----------------------------\r\n" );
     
@@ -117,7 +129,9 @@ void application_task ( void )
 
     boost4_set_out_voltage( &boost4, BOOST4_VOUT_2_5 );
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "-----------------------------\r\n" );
     
@@ -125,13 +139,20 @@ void application_task ( void )
 
     boost4_set_out_voltage( &boost4, BOOST4_VOUT_MIN );
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "-----------------------------\r\n" );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

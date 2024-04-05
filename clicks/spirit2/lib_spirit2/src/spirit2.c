@@ -93,27 +93,27 @@ void spirit2_power_module ( spirit2_t *ctx, uint8_t power_state ) {
     if ( power_state != 0 ) {
         
         digital_out_high( &ctx->shd ); 
-        Delay_ms( 100 );
-        Delay_ms( 100 );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
+        Delay_ms ( 100 );
+        Delay_ms ( 100 );
     }
     else {
         
         digital_out_low( &ctx->shd ); 
-        Delay_ms( 100 );
-        Delay_ms( 100 );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
+        Delay_ms ( 100 );
+        Delay_ms ( 100 );
     }
 }
 
 void spirit2_reset ( spirit2_t *ctx ) {
    
     digital_out_high( &ctx->rst );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     digital_out_low( &ctx->rst );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     digital_out_high( &ctx->rst );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void spirit2_set_mode ( spirit2_t *ctx, uint8_t mode ) {
@@ -121,12 +121,12 @@ void spirit2_set_mode ( spirit2_t *ctx, uint8_t mode ) {
     if ( mode != 0 ) {
        
         digital_out_high( &ctx->cmd ); 
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     else  {
         
         digital_out_low( &ctx->shd ); 
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 }
 
@@ -151,7 +151,7 @@ void spirit2_send_cmd ( spirit2_t *ctx, char *cmd ) {
     }
     
     uart_write( &ctx->uart, cr_lf, 2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void spirit2_send_cmd_with_parameter ( spirit2_t *ctx, char *at_cmd_buf, char *param_buf ) {

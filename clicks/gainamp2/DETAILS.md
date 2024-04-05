@@ -106,7 +106,7 @@ void application_task ( void )
 {
     log_printf( &logger,"Voltage at VOUT: %f \r\n", gainamp2_get_voltage( &gainamp2 ) );
     log_printf( &logger,"------------------------------- \r\n " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

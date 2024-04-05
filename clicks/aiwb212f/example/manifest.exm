@@ -2,7 +2,7 @@
     "name": "Ai-WB2-12F Click",
     "description": "Ai-WB2-12F Click is a compact add-on board for easy integration into the Internet of Things (IoT) and smart home applications. This board features the Ai-WB2-12F, a WiFi and BLE module from Ai-Thinker Technology, powered by the BL602 chip supporting WiFi 802.11b/g/n and BLE 5.0 protocols.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","Ai-WB2-12F"],
     "category" : ["Click Boards > Wireless connectivity > WiFi+BLE"]
 }

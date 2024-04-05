@@ -25,17 +25,18 @@
     "name": "mikroe.click.pressure14",
     "product_link": "https://www.mikroe.com/pressure-14-click",
     "short_description": "Pressure 14 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the ABP2LANT060PG2A3XX, a piezoresistive silicon pressure sensor offering a digital output for reading pressure over the specified full-scale pressure span and a temperature range from Honeywell Sensing and Productivity Solutions. This I2C configurable sensor is calibrated and temperature compensated for sensor offset, sensitivity, temperature effects, and accuracy errors, including non-linearity, repeatability, and hysteresis, using an on-board ASIC. This Click board™ is suitable for pressure measurements in automotive applications, industrial and consumer applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         4115
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Pressure14",
     "subdir_name": "lib_pressure14"
 }
+
 
 
 

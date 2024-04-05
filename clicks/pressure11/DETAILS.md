@@ -108,7 +108,7 @@ void application_task ( void )
     log_printf( &logger, "Pressure:  %.2f \r\n", pressure );
     log_printf( &logger, "   hPa (mBar)" );
  
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }  
 
 ```

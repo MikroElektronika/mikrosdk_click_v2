@@ -98,11 +98,16 @@ void application_task ( void )
     }
 
     time_cnt++;
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

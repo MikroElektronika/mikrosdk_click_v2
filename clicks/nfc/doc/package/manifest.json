@@ -25,17 +25,18 @@
     "name": "mikroe.click.nfc",
     "product_link": "https://www.mikroe.com/nfc-click",
     "short_description": "NFC click is a mikroBUS™ add-on board with a versatile near field communications controller from NXP — the PN7120 IC. NFC devices are used in contactless payment systems, electronic ticketing, smartcards, but also in retail and advertising — inexpensive NFC tags can be embedded into packaging labels, flyers or posters.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         1943
     ],
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.NFC",
     "subdir_name": "lib_nfc"
 }
+
 
 
 

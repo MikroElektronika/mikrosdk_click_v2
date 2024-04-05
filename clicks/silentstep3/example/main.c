@@ -69,23 +69,31 @@ void application_task ( void )
     silentstep3_set_direction ( &silentstep3, SILENTSTEP3_DIR_CW );
     silentstep3_set_step_mode ( &silentstep3, SILENTSTEP3_MODE_FULL_STEP );
     silentstep3_drive_motor ( &silentstep3, 200, SILENTSTEP3_SPEED_SLOW );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf ( &logger, " Move 200 half steps counter-clockwise, speed: medium\r\n\n" );
     silentstep3_set_direction ( &silentstep3, SILENTSTEP3_DIR_CCW );
     silentstep3_set_step_mode ( &silentstep3, SILENTSTEP3_MODE_HALF_STEP );
     silentstep3_drive_motor ( &silentstep3, 200, SILENTSTEP3_SPEED_MEDIUM );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf ( &logger, " Move 400 quarter steps counter-clockwise, speed: fast\r\n\n" );
     silentstep3_set_direction ( &silentstep3, SILENTSTEP3_DIR_CCW );
     silentstep3_set_step_mode ( &silentstep3, SILENTSTEP3_MODE_QUARTER_STEP );
     silentstep3_drive_motor ( &silentstep3, 400, SILENTSTEP3_SPEED_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

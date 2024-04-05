@@ -129,19 +129,29 @@ void application_task ( void )
 {
     log_printf( &logger, " Motor in forward mode. \r\n" );
     hbridge16_set_out_state( &hbridge16, HBRIDGE16_DRIVE_MOTOR_FORWARD );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, " Motor brake is on \r\n" );
     hbridge16_set_out_state( &hbridge16, HBRIDGE16_DRIVE_MOTOR_BRAKE );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, " Motor in reverse mode. \r\n" );
     hbridge16_set_out_state( &hbridge16, HBRIDGE16_DRIVE_MOTOR_REVERSE );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, " Motor is coasting \r\n" );
     hbridge16_set_out_state( &hbridge16, HBRIDGE16_DRIVE_MOTOR_FREEWHEEL );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.flash6",
     "product_link": "https://www.mikroe.com/flash-6-click",
     "short_description": "The Flash 6 Click based on W25Q128JV (128M-bit) flash memory from Winbond provides a storage solution for systems with limited space, pins and power.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3255
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.Flash6",
     "subdir_name": "lib_flash6"
 }
+
 
 
 

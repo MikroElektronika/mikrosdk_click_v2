@@ -100,7 +100,7 @@ oid application_init ( void )
     alcohol2_write_byte( &alcohol2, ALCOHOL2_REFCN_REG, ALCOHOL2_VREF_INT | ALCOHOL2_50_PERCENTS_INT_ZERO | ALCOHOL2_BIAS_POL_NEGATIVE | ALCOHOL2_0_PERCENTS_BIAS );
 
     log_printf( &logger, "Alcohol 2 is initialized\r\n");
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
   
 ```
@@ -115,7 +115,7 @@ void application_task ( void )
 {
     alcohol_value = alcohol2_read_alcohol( &alcohol2 );
     log_printf( &logger, "Alcohol value : %f \r\n",alcohol_value );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 } 
 
 ```

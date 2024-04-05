@@ -114,7 +114,7 @@ void application_init ( void ) {
     efuse3_default_cfg ( &efuse3 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, "---------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -151,14 +151,15 @@ void application_task ( void ) {
         }
         
         efuse3_reset( &efuse3 );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     
     log_printf( &logger, "- - - - - - - - - - - - - - \r\n" );
     efuse3_get_current( &efuse3, &current );
     log_printf( &logger, " Current : %.5f A\r\n", current );
     log_printf( &logger, "---------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

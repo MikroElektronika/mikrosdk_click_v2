@@ -25,14 +25,15 @@
     "name": "mikroe.click.pressure18",
     "product_link": "https://www.mikroe.com/pressure-18-click",
     "short_description": "Pressure 18 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the BMP384, a robust barometric pressure sensor delivering market-leading accuracy in a compact package from Bosch Sensortec. The BMP384 provides a relative accuracy of ±9Pa and typical absolute accuracy of ±50Pa with ultra-low noise, low power consumption, and a temperature coefficient offset of ±1Pa/K. It converts output data into a 24-bit digital value and sends the information via a configurable host interface that supports SPI and I2C serial communications. It measures pressure from 300hPa to 1250hPa over a wide operating temperature range.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Pressure18",
     "subdir_name": "lib_pressure18"
 }
+
 
 
 

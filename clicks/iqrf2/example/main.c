@@ -87,7 +87,7 @@ void application_init ( void )
     iqrf2_cfg_setup( &cfg );
     IQRF2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     iqrf2_init( &iqrf2, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
 #ifdef DEMO_APP_RECEIVER
     log_info( &logger, "---- Receiver mode ----" );
@@ -106,12 +106,18 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     iqrf2_generic_write( &iqrf2, TEXT_TO_SEND, strlen( TEXT_TO_SEND ) );
     log_info( &logger, "---- Data sent ----" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif   
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

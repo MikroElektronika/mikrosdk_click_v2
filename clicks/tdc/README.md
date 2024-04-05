@@ -123,7 +123,7 @@ void application_init ( void )
     
     tdc_default_cfg ( &tdc );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     cal_periods = 10;
     avg_cycles = 1;
@@ -133,7 +133,7 @@ void application_init ( void )
     count_stop = 1;
     tdc_setup_measurement( &tdc, cal_periods, avg_cycles, num_stops, sel_mode );
     log_printf( &logger, "---------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -178,7 +178,7 @@ void application_task ( void )
     log_printf( &logger, " TOF[ 1 ]         = %u us\r\n", p_tof[ 1 ] );  
     log_printf( &logger, " TOF[ 2 ]         = %u us\r\n", p_tof[ 2 ] );    
     log_printf( &logger, "---------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

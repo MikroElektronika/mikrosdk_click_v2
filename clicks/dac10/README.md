@@ -91,7 +91,7 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Init " );
 
     // Click initialization.
@@ -115,7 +115,7 @@ void application_init ( void )
     }
     
     dac10_enable_dac( &dac10 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Task " );
 }
 
@@ -140,7 +140,8 @@ void application_task ( void )
         log_printf( &logger, " DAC output voltage set to %.2f V\r\n", output_voltage );
         output_voltage += step;
         cnt++;
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.solarenergy",
     "product_link": "https://www.mikroe.com/solar-energy-click",
     "short_description": "This application charge the batery when is empty",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2228
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.SolarEnergy",
     "subdir_name": "lib_solarenergy"
 }
+
 
 
 

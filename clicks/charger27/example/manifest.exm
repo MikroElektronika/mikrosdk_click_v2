@@ -2,7 +2,7 @@
     "name": "Charger 27 Click",
     "description": "Charger 27 Click is a compact add-on board that provides a single-cell charging solution. This board features the MP2639B, a Li-Ion or Li-Polymer switching charger from MPS. It is a highly integrated, flexible switch-mode battery charging management device for a single-cell battery for various portable applications. It uses a 4.5V up to 16V external input voltage to provide up to 2A of programmable charging current.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","MP2639BGR-Z"],
     "category" : ["Click Boards > Power management > Battery Charger"]
 }

@@ -67,7 +67,7 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, "----------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
@@ -82,7 +82,7 @@ void application_task ( void )
     {
         float volume_table[ 32 ] = { OUTPUT_VOLUME_12dB };
         audioamp11_set_output_volume_level( &audioamp11, vol_ctrl );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         
         if ( vol_ctrl > AUDIOAMP11_GS_12dB_VOLCTRL_12dB )
         {
@@ -108,11 +108,16 @@ void application_task ( void )
         log_printf( &logger, "|" );    
     }
     log_printf( &logger, "\r\n----------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

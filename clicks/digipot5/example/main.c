@@ -80,21 +80,27 @@ void application_task( void )
     digipot5_generic_write( &digipot5, DIGIPOT5_REG_WIPER3_VOL,
                             DIGIPOT5_RES_10KOHM_FULLSCALE );
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &console, "* Decrementing wiper 3 by 5 steps.\r\n" );
     for ( i = 0; i < 5; i++ )
     {
         digipot5_decrement_wiper( &digipot5, DIGIPOT5_REG_WIPER3_VOL );
     }
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &console, "* Incrementing wiper 0 by 10 steps.\r\n" );
     for ( i = 0; i < 10; i++ )
     {
         digipot5_increment_wiper( &digipot5, DIGIPOT5_REG_WIPER0_VOL );
     }
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &console, "* Setting wiper 0 to 2k Ohm.\r\n" );
     digipot5_generic_write( &digipot5, DIGIPOT5_REG_WIPER0_VOL,
                             DIGIPOT5_RES_2KOHM );
@@ -108,12 +114,19 @@ void application_task( void )
     digipot5_generic_write( &digipot5, DIGIPOT5_REG_WIPER3_VOL,
                             DIGIPOT5_RES_2KOHM );
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &console, "****************************************\r\n" );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

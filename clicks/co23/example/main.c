@@ -56,18 +56,18 @@ void application_init ( void )
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( CO23_ERROR == co23_default_cfg ( &co23 ) )
     {
         log_error( &logger, " Default configuration." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, "-----------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
@@ -75,17 +75,22 @@ void application_task ( void )
     co23_meas_cfg_t meas_cfg;
     meas_cfg.op_mode = CO23_OP_MODE_SINGLE;
     co23_set_meas_cfg( &co23, meas_cfg );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     uint16_t co2_ppm = 0;
     co23_get_co2_ppm( &co23, &co2_ppm );
     log_printf( &logger, " CO2: %d ppm\r\n", co2_ppm );
     log_printf( &logger, "-----------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

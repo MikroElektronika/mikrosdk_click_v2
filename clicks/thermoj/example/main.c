@@ -64,7 +64,7 @@ void application_init ( void )
     log_printf( &logger, " Set thermocouple type:  J \r\n" );
 
     thermoj_set_thermocouple_type( &thermoj, THERMOJ_THERMOCOUPLE_TYPE_J );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "---------------------------\r\n" );
 }
@@ -80,12 +80,17 @@ void application_task ( void )
         log_printf( &logger, " Temperature : %.2f Celsius\r\n", temperature );
         log_printf( &logger, "---------------------------\r\n" );
 
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
    }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

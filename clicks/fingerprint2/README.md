@@ -92,10 +92,10 @@ void application_init ( void )
     fingerprint2_init( &fingerprint2, &cfg );
     
     fingerprint2_reset ( &fingerprint2 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     fp_reg_one( 0 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -109,7 +109,11 @@ void application_init ( void )
 void application_task ( void )
 {    
     fp_compare( );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

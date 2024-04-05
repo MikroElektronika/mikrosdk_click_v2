@@ -56,7 +56,7 @@ void application_init ( void )
     hbridge4_init( &hbridge4, &cfg );
 
     hbridge4_enable( &hbridge4, 1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "------------------- \r\n" );
     log_printf( &logger, " H-Bridge 4 click \r\n" );
     log_printf( &logger, "------------------- \r\n" );
@@ -66,23 +66,30 @@ void application_task ( )
 {
     log_printf( &logger, "The motor A is in standby mode \r\n" );
     hbridge4_motor_a_standby( &hbridge4 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "The motor A turns clockwise \r\n" );
     hbridge4_motor_acw( &hbridge4 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "The motor A applies brake \r\n" );
     hbridge4_motor_a_brake( &hbridge4 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "The motor A turns counter-clockwise \r\n" );
     hbridge4_motor_accw( &hbridge4 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "The motor A applies brake \r\n" );
     hbridge4_motor_a_brake( &hbridge4 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

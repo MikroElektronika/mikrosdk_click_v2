@@ -96,7 +96,8 @@ void application_init ( void )
     buck12_init( &buck12, &cfg );
 
     buck12_control( &buck12, BUCK12_ENABLE );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -121,7 +122,8 @@ void application_task ( void )
     log_printf( &logger, "* Vout : %f mV \r\n ", voltage);
 
     log_printf( &logger, "--------------------------\r\n");
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

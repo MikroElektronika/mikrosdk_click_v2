@@ -105,9 +105,9 @@ void application_task ( )
     for ( cnt = 1; cnt <= 10 ; cnt++ )
     {
         bargraph2_led_green( &bargraph2, cnt );
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
         bargraph2_led_red( &bargraph2, 10 - ( cnt - 1 ) );
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
     }
     
     bargraph2_lights_out ( &bargraph2 );
@@ -115,11 +115,11 @@ void application_task ( )
     // Multiple LED switch
 
     bargraph2_leds_green ( &bargraph2, 1, 10 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     bargraph2_leds_red ( &bargraph2, 1, 10 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     bargraph2_leds_yellow ( &bargraph2, 1, 10 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ``` 
 

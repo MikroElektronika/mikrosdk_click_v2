@@ -87,7 +87,7 @@ void application_init ( void )
                     ( uint16_t ) date.day, ( uint16_t ) date.month, ( uint16_t ) date.year );
     }
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "---------------------\r\n" );
 }
 
@@ -106,15 +106,20 @@ void application_task ( void )
                             ( uint16_t ) time.hour, ( uint16_t ) time.minute, ( uint16_t ) time.second );
                 log_printf( &logger, "- - - - - - - - - - -\r\n" );
                 new_sec = time.second;
-                Delay_ms( 1 );
+                Delay_ms ( 1 );
             }
         }
     }
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

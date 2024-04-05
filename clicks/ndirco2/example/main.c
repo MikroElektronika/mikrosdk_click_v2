@@ -57,13 +57,13 @@ void application_init ( void )
     NDIRCO2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ndirco2_init( &ndirco2, &cfg );
 
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 
     ndirco2_reset( &ndirco2 );
     ndirco2_write_register( &ndirco2, NDIRCO2_AVERAGING_COUNT_REG, 0x03 );
     ndirco2_set_mode( &ndirco2, NDIRCO2_CONTINUOUS_OP_MODE );
     log_printf( &logger, "NDIR CO2 is initialized \r\n" );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 }
 
 void application_task ( )
@@ -72,11 +72,16 @@ void application_task ( )
 
     ndirco2_read_co2( &ndirco2, NDIRCO2_CHECK_EACH_MEASURE, &co2_data );
     log_printf( &logger, "CO2 concentration is: %d ppm \r\n", co2_data );
-    Delay_ms(1000);
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

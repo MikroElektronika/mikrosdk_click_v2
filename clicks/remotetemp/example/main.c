@@ -195,7 +195,7 @@ void application_init ( void )
     REMOTETEMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     remotetemp_init( &remotetemp, &cfg );
     
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
     remotetemp_default_cfg( &remotetemp );
     log_printf( &logger, "> app init done \r\n" );
 }
@@ -207,11 +207,16 @@ void application_task ( void )
     remotetemp_aux_get_low_limit_status( &remotetemp );
     remotetemp_aux_get_therm_limit_status( &remotetemp );
     remotetemp_aux_get_hottest_status( &remotetemp );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

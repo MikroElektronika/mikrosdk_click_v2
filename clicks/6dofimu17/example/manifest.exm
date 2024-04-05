@@ -2,7 +2,7 @@
     "name": "6DOF IMU 17 Click",
     "description": "6DOF IMU 17 Click is a compact add-on board that contains a 6-axis inertial measurement unit. This board features the IIM-42652, a 6-axis SmartIndustrial™ MotionTracking device that supports an extended operating temperature range for industrial applications from TDK InvenSense. It combines a 3-axis gyroscope and a 3-axis accelerometer featuring a 2K-byte FIFO that can lower the traffic on the serial bus interface (SPI or I2C) and reduce power consumption by allowing the system processor to burst read sensor data and then go into a low-power mode.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","IIM-42652"],
     "category" : ["Motion"]
 }

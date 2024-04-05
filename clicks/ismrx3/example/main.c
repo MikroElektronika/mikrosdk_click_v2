@@ -99,7 +99,7 @@ void application_init ( void )
     uint8_t read_data;
     ismrx3_generic_read( &ismrx3, 0x1E, &read_data );
     log_info( &logger, " > ID: 0x%.2X", ( uint16_t )read_data );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     ismrx3.modulation = ISMRX3_MODULATION_ASK;
     ismrx3.reference_freq = ISMRX3_FREQUENCY_MHZ_433p92;
@@ -154,6 +154,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

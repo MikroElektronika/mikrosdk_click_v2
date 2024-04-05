@@ -25,11 +25,12 @@
     "name": "mikroe.click.gnss14",
     "product_link": "https://www.mikroe.com/gnss-14-click",
     "short_description": "GNSS 14 Click is a compact add-on board that provides fast positioning capability to your application. This board features the MIA-M10Q, a standard precision GNSS module from u-blox. It has an exceptional sensitivity and acquisition time for all L1 GNSS signals, attributed to its integrated M10 standard precision low-power platform. The M10 platform supports concurrent reception of four GNSS (GPS, GLONASS, Galileo, and BeiDou). The high number of visible satellites enables the receiver to select the best signals. This maximizes position availability, particularly under challenging conditions like deep urban canyons.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.GNSS14",
     "subdir_name": "lib_gnss14"
 }
+

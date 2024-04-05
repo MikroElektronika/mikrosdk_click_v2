@@ -118,7 +118,7 @@ void application_task ( void )
                     ( uint16_t ) serial_num[ 4 ], ( uint16_t ) serial_num[ 5 ] ); 
     }      
     
-    Delay_ms( 1000 ); 
+    Delay_ms ( 1000 ); 
 }
 ```
 

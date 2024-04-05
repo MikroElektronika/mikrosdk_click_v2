@@ -25,17 +25,18 @@
     "name": "mikroe.click.capextend3",
     "product_link": "https://www.mikroe.com/cap-extend-3-click",
     "short_description": "Cap Extend 3 click features four capacitive sensor pads integrated on the PCB, that can sense touch through a variety of different materials.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2315
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.CapExtend3",
     "subdir_name": "lib_capextend3"
 }
+
 
 
 

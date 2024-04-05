@@ -141,7 +141,8 @@ void application_task ( void )
         log_printf( &logger, " Extreme\r\n " );
     }
 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

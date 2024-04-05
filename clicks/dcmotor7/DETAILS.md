@@ -109,19 +109,21 @@ void application_task ( void )
 {
     dcmotor7_set_motor( &dcmotor7, DCMOTOR7_MOTOR_A, 0, 1 );
     dcmotor7_set_motor( &dcmotor7, DCMOTOR7_MOTOR_B, 0, 1 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     dcmotor7_motor_stop( &dcmotor7, DCMOTOR7_MOTOR_A );
     dcmotor7_motor_stop( &dcmotor7, DCMOTOR7_MOTOR_B );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     dcmotor7_set_motor( &dcmotor7, DCMOTOR7_MOTOR_A, 1, 0 );
     dcmotor7_set_motor( &dcmotor7, DCMOTOR7_MOTOR_B, 1, 0 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     dcmotor7_motor_stop( &dcmotor7, DCMOTOR7_MOTOR_A );
     dcmotor7_motor_stop( &dcmotor7, DCMOTOR7_MOTOR_B );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

@@ -25,17 +25,18 @@
     "name": "mikroe.click.thermostat",
     "product_link": "https://www.mikroe.com/thermostat-click",
     "short_description": "If you need a temperature sensor and relay in one device, you should look no further than Thermostat click. It can be used to measure environmental temperature and to directly switch ON/OFF cooling and heating devices, performing all the functions of a thermostat.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1984
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Thermostat",
     "subdir_name": "lib_thermostat"
 }
+
 
 
 

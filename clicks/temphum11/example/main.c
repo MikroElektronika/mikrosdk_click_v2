@@ -74,7 +74,7 @@ void application_init ( void )
 
     temphum11_default_cfg( &temphum11 );
     log_printf( &logger, "--- Start measurement --- \r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void application_task ( void )
@@ -88,11 +88,17 @@ void application_task ( void )
     log_printf( &logger, " Humidity :  %.2f\r\n", humidity );
     
     log_printf( &logger, "-----------------\r\n" );
-    Delay_ms( 1500 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

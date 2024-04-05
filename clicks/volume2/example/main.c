@@ -65,7 +65,7 @@ void application_init ( void ) {
     }
 
     volume2_default_cfg( &volume2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Task " );
 }
 
@@ -74,20 +74,25 @@ void application_task ( void ) {
         volume_upd_data.attenuation_ch1 = rising_vol;
         volume_upd_data.attenuation_ch2 = max_atten - rising_vol;
         volume2_update_vol_data( &volume2, volume_upd_data );
-        Delay_ms( 50 );
+        Delay_ms ( 50 );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     for ( rising_vol = 0 ; rising_vol < max_atten ; rising_vol++ ) {
         volume_upd_data.attenuation_ch1 = max_atten - rising_vol;
         volume_upd_data.attenuation_ch2 = rising_vol;
         volume2_update_vol_data( &volume2, volume_upd_data );
-        Delay_ms( 50 );
+        Delay_ms ( 50 );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

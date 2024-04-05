@@ -124,12 +124,14 @@ void application_task ( void )
     log_printf ( &logger, " Move 200 steps clockwise \r\n\n" );
     stepper4_set_direction ( &stepper4, STEPPER4_DIR_CW );
     stepper4_drive_motor ( &stepper4, 200, STEPPER4_SPEED_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf ( &logger, " Move 100 steps counter-clockwise \r\n\n" );
     stepper4_set_direction ( &stepper4, STEPPER4_DIR_CCW );
     stepper4_drive_motor ( &stepper4, 100, STEPPER4_SPEED_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

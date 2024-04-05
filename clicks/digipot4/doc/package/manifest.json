@@ -25,17 +25,18 @@
     "name": "mikroe.click.digipot4",
     "product_link": "https://www.mikroe.com/digi-pot-4-click",
     "short_description": "DIGI POT 4 click is a digitally controlled dual potentiometer, with the resistance of 10KΩ. It has a 10bit resolution which allows for a very smooth linear wiper positioning through 1024 steps.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2287
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.DigiPot4",
     "subdir_name": "lib_digipot4"
 }
+
 
 
 

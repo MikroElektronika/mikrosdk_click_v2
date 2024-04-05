@@ -25,17 +25,18 @@
     "name": "mikroe.click.touchpad3",
     "product_link": "https://www.mikroe.com/touchpad-3-click",
     "short_description": "Touchpad 3 Click is a compact add-on board that allows users to easily integrate projected capacitive touch into their applications. This board features the MTCH6301, a turnkey capacitive touch controller that makes it easy for users to use popular multitouch and gesture interfaces from Microchip. This controller’s sophisticated combination of Self and Mutual capacitive scanning for XY touchscreens and touchpads enables several features, including single and dual-touch drawing, the reporting of 11 single-finger gestures, and the detection of up to 10 touches. This Click board™ is suitable for human-machine interfaces, keypad or scrolling functions, single-finger gesture-based interfaces, and more.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3909
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Touchpad3",
     "subdir_name": "lib_touchpad3"
 }
+
 
 
 

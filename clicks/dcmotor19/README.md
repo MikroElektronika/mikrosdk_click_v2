@@ -123,13 +123,15 @@ void application_task ( void )
     dcmotor19_drive_motor ( &dcmotor19, DCMOTOR19_SPEED_DEFAULT, 5000 );
     log_printf ( &logger, " Pull brake!\r\n" );
     dcmotor19_set_channel_mode ( &dcmotor19, DCMOTOR19_CHANNEL_1 | DCMOTOR19_CHANNEL_2, DCMOTOR19_MODE_SHORT_BRAKE );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf ( &logger, " Driving motors in reverse...\r\n" );
     dcmotor19_set_channel_mode ( &dcmotor19, DCMOTOR19_CHANNEL_1 | DCMOTOR19_CHANNEL_2, DCMOTOR19_MODE_REVERSE );
     dcmotor19_drive_motor ( &dcmotor19, DCMOTOR19_SPEED_DEFAULT, 5000 );
     log_printf ( &logger, " Stop driving!\r\n\n" );
     dcmotor19_set_channel_mode ( &dcmotor19, DCMOTOR19_CHANNEL_1 | DCMOTOR19_CHANNEL_2, DCMOTOR19_MODE_STOP );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

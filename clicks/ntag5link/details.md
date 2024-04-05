@@ -150,7 +150,11 @@ void application_task ( void )
         log_printf( &logger, " \"%s\" has been read from memory address 0x%.4X \r\n\n", 
                     message_buf, ( uint16_t ) TEXT_MESSAGE_ADDRESS );
     }
-    Delay_ms ( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

@@ -87,7 +87,7 @@ void application_init ( void )
     touchkey3_send_command( &touchkey3, TOUCHKEY3_CMD_RESET );
     timeout_cnt = timeout_state;
     
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 
 void application_task ( void )
@@ -99,13 +99,18 @@ void application_task ( void )
         if ( ( return_data[ 1 ] >> counter ) & 0x01 )
         {
             log_printf( &logger, "Touch detected on key %d\r\n", ( uint16_t )(counter+1) );
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
         }
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

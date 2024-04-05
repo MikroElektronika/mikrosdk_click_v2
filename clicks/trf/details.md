@@ -130,10 +130,11 @@ void application_task ( void )
     for ( cnt = 0; cnt < 9; cnt ++ )
     {
         trf_generic_single_write( &trf, demo_message[ cnt ] );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
        
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
 #endif
 }

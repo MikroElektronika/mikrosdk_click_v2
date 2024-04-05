@@ -87,7 +87,7 @@ void application_init ( void )
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     //  Click initialization.
 
@@ -96,7 +96,7 @@ void application_init ( void )
     thermostat3_init( &thermostat3, &cfg );
 
     // Power on delay
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
     log_printf( &logger, "---- Start Thermostat 3 ----\r\n" );
 }
   
@@ -119,11 +119,11 @@ void application_task ( void )
 
     internal_temp = thermostat3_get_internal_temperature( &temp_val, THERMOSTAT3_TEMP_IN_CELSIUS );
     log_printf( &logger, "# Internal Temperature: %.2f", internal_temp );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
    
     thermocouple_temp = thermostat3_get_thermocouple_temperature( &temp_val, THERMOSTAT3_TEMP_IN_CELSIUS );
     log_printf( &logger, "# Thermocouple Temperature: %.2f", thermocouple_temp );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
     
     if( thermostat3.relay_flag == 1)
     {
@@ -137,7 +137,7 @@ void application_task ( void )
         thermostat3_relay_control( &thermostat3, THERMOSTAT3_RELAY_ON );
         log_printf( &logger, "# Relay ON\r\n" );
     }
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 
     if( thermostat3.fault_flag == 1 )
     {
@@ -149,7 +149,7 @@ void application_task ( void )
         thermostat3.fault_flag = 1;
         log_printf( &logger, "# Fault status -- ON\r\n" );
     }
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 
     if( thermostat3.fault_flag == 1 )
         {

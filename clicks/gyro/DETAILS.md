@@ -118,7 +118,8 @@ void application_task ( void )
     log_printf( &logger, " Axis Z : %d \r\n", gyroz );
     log_printf( &logger, " Temp.: %.2f C\r\n", temperature );
 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 

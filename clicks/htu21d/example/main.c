@@ -66,7 +66,7 @@ void application_init ( void )
     htu21d_init( &htu21d, &cfg );
     
     htu21d_send_cmd ( &htu21d, HTU21D_SOFT_RESET );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, "         HTU21D\r\n" );
@@ -83,11 +83,18 @@ void application_task ( void )
     log_printf( &logger, " Humidity    : %.2f %%\r\n", humidity );
     log_printf( &logger, "-----------------------\r\n" );
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

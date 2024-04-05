@@ -25,17 +25,18 @@
     "name": "mikroe.click.rs4855",
     "product_link": "https://www.mikroe.com/rs485-5-click",
     "short_description": "The RS485 5 Click is a Click board™ equipped with the MAX485, low-power, slew-rate-limited transceiver for RS-485 and RS-422 communication, from Maxim Integrated. This device supports half-duplex RS-485 communication and can be used as an interface between the TTL level UART and the RS485 communication bus.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3751
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Rs4855",
     "subdir_name": "lib_rs4855"
 }
+
 
 
 

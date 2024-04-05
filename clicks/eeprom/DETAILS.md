@@ -124,7 +124,7 @@ void application_task( void )
     eeprom_write_page( &eeprom, EEPROM_BLOCK_ADDR_START, transfer_data );
     eeprom_write_protect( &eeprom );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     memset( transfer_data, 0, sizeof(transfer_data) );
 
     eeprom_read_sequential( &eeprom, EEPROM_BLOCK_ADDR_START, EEPROM_NBYTES_PAGE, transfer_data );
@@ -132,7 +132,7 @@ void application_task( void )
     for (cnt = EEPROM_BLOCK_ADDR_START; cnt < EEPROM_NBYTES_PAGE; cnt++)
     {
         log_printf( &logger, " %d", transfer_data[ cnt ] );
-        Delay_ms( 300 );
+        Delay_ms ( 300 );
     }
     log_printf( &logger, "\r\n" );
 }

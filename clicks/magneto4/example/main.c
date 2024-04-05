@@ -72,10 +72,11 @@ void application_init ( void )
     {
         magnetic_field = magneto4_get_magnetic_field( &magneto4 );
         log_printf( &logger, " Magnetic field strength : %d\r\n", magnetic_field );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     
-    Delay_ms( 1500 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 500 );
     log_printf( &logger, " --- Magnetic Linear Position ---\r\n" );
 }
 
@@ -98,6 +99,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

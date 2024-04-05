@@ -134,7 +134,11 @@ void application_task ( void )
         error_flag |= stepdown6_set_out_voltage( &stepdown6, STEPDOWN6_SELECT_VOUT3, n_cnt );
         error_flag |= stepdown6_set_out_voltage( &stepdown6, STEPDOWN6_SELECT_VOUT4, n_cnt );
         log_printf( &logger, "  Set voltage : %d mV \r\n", n_cnt );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

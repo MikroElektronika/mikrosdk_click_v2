@@ -25,14 +25,15 @@
     "name": "mikroe.click.adc21",
     "product_link": "https://www.mikroe.com/adc-21-click",
     "short_description": "ADC 21 Click is a compact add-on board that converts an analog voltage into a digital representation. This board features the ADC1283, a low-power, eight-channel pure CMOS 12-bit analog-to-digital converter from STMicroelectronics. The ADC1283 is specified for conversion from 50ksps to 200ksps. Its architecture is based on a successive approximation register with an internal track-and-hold cell. It features eight single-ended multiplexed inputs, where the output serial data is straight binary and SPI-compatible.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.ADC21",
     "subdir_name": "lib_adc21"
 }
+
 
 
 

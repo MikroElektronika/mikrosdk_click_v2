@@ -117,7 +117,7 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, "----------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -137,7 +137,7 @@ void application_task ( void )
     turbidity_get_ntu( &turbidity, &ntu );
     log_printf( &logger, "\tNTU : %.2f\r\n", ntu );
     log_printf( &logger, "----------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

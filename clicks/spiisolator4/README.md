@@ -118,7 +118,7 @@ void application_init ( void )
     spiisolator4_default_cfg ( &spiisolator4 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, "--------------------------\r\n" ); 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -136,7 +136,7 @@ void application_task ( void )
     get_device_id( );
     log_printf( &logger, "  Device ID : 0x%.8LX\r\n", device_id ); 
     log_printf( &logger, "--------------------------\r\n" ); 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

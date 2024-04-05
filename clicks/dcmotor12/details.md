@@ -136,7 +136,9 @@ void application_task ( void )
     if ( DCMOTOR12_OK == dcmotor12_set_ch1_operation_mode ( &dcmotor12, DCMOTOR12_MODE_OUTPUT_OFF ) )
     {
         log_printf ( &logger, " MODE: OFF\r\n" );
-        Delay_ms ( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     if ( DCMOTOR12_OK == dcmotor12_set_ch1_operation_mode ( &dcmotor12, DCMOTOR12_MODE_FORWARD ) )
     {
@@ -159,7 +161,9 @@ void application_task ( void )
     if ( DCMOTOR12_OK == dcmotor12_set_ch1_operation_mode ( &dcmotor12, DCMOTOR12_MODE_BRAKE ) )
     {
         log_printf ( &logger, " MODE: BRAKE\r\n" );
-        Delay_ms ( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     if ( DCMOTOR12_OK == dcmotor12_set_ch1_operation_mode ( &dcmotor12, DCMOTOR12_MODE_REVERSE ) )
     {

@@ -63,12 +63,17 @@ void application_task ( void ) {
 
     for ( uint8_t cnt = 0; cnt < 100; cnt++ ) {
         utm7segr_display_number( &utm7segr, cnt, UTM7SEGR_DOT_LEFT );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

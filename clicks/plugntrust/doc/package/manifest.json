@@ -25,14 +25,15 @@
     "name": "mikroe.click.plugntrust",
     "product_link": "https://www.mikroe.com/plugtrust-click",
     "short_description": "Plug&Trust Click is a compact add-on board that contains a ready-to-use IoT secure element solution.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.PlugnTrust",
     "subdir_name": "lib_plugntrust"
 }
+
 
 
 

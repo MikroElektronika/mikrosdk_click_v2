@@ -138,7 +138,7 @@ void application_task ( )
     log_printf( &logger, " Pressure : %f \n", pressure );
 
     log_printf( &logger, "--------------------------\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

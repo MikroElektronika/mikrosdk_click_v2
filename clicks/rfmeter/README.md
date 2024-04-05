@@ -111,7 +111,7 @@ void application_task ( void )
     
     log_printf( &logger, "Signal strenght: %.2f dBm \r\n", signal );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "-----------------------\r\n" );
 }  
 

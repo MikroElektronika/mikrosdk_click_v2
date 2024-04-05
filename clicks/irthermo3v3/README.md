@@ -117,7 +117,7 @@ void application_task ( void ) {
     log_printf( &logger, " Ambient Temperature: %.2f\r\n ", measured_temperature );
     log_printf( &logger, " Object Temperature: %.2f\r\n ", object_temperature );
     log_printf( &logger, " --------------------------------\r\n " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

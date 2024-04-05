@@ -116,7 +116,7 @@ void application_task ( void )
     pressure = pressure8_get_pressure( &pressure8, PRESSURE8_DATA_IN_MBAR );
     log_printf( &logger, " Pressure: %.1f mBar\r\n", pressure );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

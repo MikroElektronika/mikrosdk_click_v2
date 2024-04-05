@@ -25,17 +25,18 @@
     "name": "mikroe.click.compass4",
     "product_link": "https://www.mikroe.com/compass-4-click",
     "short_description": "Compass 4 Click is a compact add-on board that can measure the three-axis magnetic field that is perfect for implementation in applications such as electric compasses.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3835
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Compass4",
     "subdir_name": "lib_compass4"
 }
+
 
 
 

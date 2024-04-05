@@ -25,17 +25,18 @@
     "name": "mikroe.click.gnss4",
     "product_link": "https://www.mikroe.com/gnss-4-click",
     "short_description": "GNSS 4 click carries SAM-M8Q patch antenna module from u-blox.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2028
     ],
-    "version": "2.1.0.18",
+    "version": "2.1.0.19",
     "cmake": true,
     "alias": "Click.Gnss4",
     "subdir_name": "lib_gnss4"
 }
+
 
 
 

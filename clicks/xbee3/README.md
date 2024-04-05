@@ -175,7 +175,9 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     xbee3_generic_write( &xbee3, DEMO_TEXT_MESSAGE, strlen( DEMO_TEXT_MESSAGE ) );
     log_printf( &logger, "%s", ( char * ) DEMO_TEXT_MESSAGE );
-    Delay_ms( 3000 ); 
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 ); 
 #else
     xbee3_process( );
     if ( app_buf_len > 0 ) 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.c9dof",
     "product_link": "https://www.mikroe.com/9dof-click",
     "short_description": "9DOF click carries ST’s LSM9DS1 inertial measurement module that combines a 3D accelerometer, a 3D gyroscope and a 3D magnetometer into a single device outputting so called nine degrees of freedom data...",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1598
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.9Dof",
     "subdir_name": "lib_c9dof"
 }
+
 
 
 

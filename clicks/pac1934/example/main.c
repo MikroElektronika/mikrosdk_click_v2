@@ -62,7 +62,7 @@ void application_task ( void )
     pac1934_dev_reset( &pac1934 );
     pac1934_write_byte( &pac1934, PAC1934_CHANNEL_DIS, PAC1934_CHANNEL_DIS_ALL_CHA );
     pac1934_write_byte( &pac1934, PAC1934_CTRL_REG, PAC1934_CTRL_SAMPLE_RATE_8 | PAC1934_CTRL_SINGLE_SHOT_MODE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     pac1934_send_command( &pac1934, PAC1934_REFRESH_CMD );
     
     read_value = pac1934_measure_voltage( &pac1934, 1 );
@@ -77,11 +77,16 @@ void application_task ( void )
     read_value = pac1934_measure_energy( &pac1934, 1, 8 );
     log_printf( &logger, "Energy :  %.2f J \r\n", read_value );
     log_printf( &logger, "--------------------- \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

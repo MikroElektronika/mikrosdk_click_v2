@@ -68,17 +68,18 @@ static const uint16_t crc_ccitt_lut[] =
     0X6E17, 0X7E36, 0X4E55, 0X5E74, 0X2E93, 0X3EB2, 0X0ED1, 0X1EF0 
 };
 
+
 /** 
  * @brief Calculation for CRC 16 function.
  * @details This function calculates CRC 16 with parameteres: 
  * @li @c  Width 16 bit
- * @li @c  Initialization 0xFF
+ * @li @c  Initialization 0xFFFF
  * @param[in] buf : Array of bytes to calculate crc from.
  * @param[in] len : Number of bytes to calculate crc from.
  * @return Calculated CRC.
  * @note None.
  */
-uint16_t crc_from_buffer ( uint8_t *buf, uint32_t len );
+static uint16_t crc_from_buffer ( uint8_t *buf, uint32_t len );
 
 void wirepas_cfg_setup ( wirepas_cfg_t *cfg ) 
 {
@@ -136,7 +137,11 @@ err_t wirepas_init ( wirepas_t *ctx, wirepas_cfg_t *cfg )
 
 void wirepas_default_cfg ( wirepas_t *ctx ) 
 {
+    uint8_t data_rd = 0;
+
     wirepas_hw_reset( ctx );
+    
+    wirepas_generic_read( ctx, &data_rd, 1 );
 }
 
 err_t wirepas_generic_write ( wirepas_t *ctx, uint8_t *data_in, uint16_t len ) 
@@ -169,25 +174,25 @@ void wirepas_set_rst ( wirepas_t *ctx, uint8_t pin_state )
 void wirepas_hw_reset ( wirepas_t *ctx )
 {
     wirepas_set_rst( ctx, WIREPAS_PIN_MODE_LOW );
-    Delay_100ms( );
-    Delay_100ms( );
-    Delay_100ms( );
+    Delay_1sec( );
     wirepas_set_rst( ctx, WIREPAS_PIN_MODE_HIGH );
-    Delay_100ms( );
+    Delay_1sec( );
+    Delay_1sec( );
 }
 
-err_t wirepas_send_command ( wirepas_t *ctx, uint8_t primitive_id, uint8_t frame_id, 
+err_t wirepas_send_command ( wirepas_t *ctx, uint8_t primitive_id,  
                              uint8_t payload_length, uint8_t *payload )
 {
     err_t error_flag = WIREPAS_OK;
     uint16_t crc_data = 0;
     uint8_t data_buf[ 265 ] = { 0 };
    
+    ctx->tx_frame_id = ctx->tx_frame_id + 1;
     data_buf[ 0 ] = WIREPAS_ENDCODE_OCTET;
     data_buf[ 1 ] = WIREPAS_ENDCODE_OCTET;
     data_buf[ 2 ] = WIREPAS_ENDCODE_OCTET;
     data_buf[ 3 ] = primitive_id;
-    data_buf[ 4 ] = frame_id;
+    data_buf[ 4 ] = ctx->tx_frame_id;
     data_buf[ 5 ] = payload_length;
     
     if ( 0 != payload_length )
@@ -209,7 +214,31 @@ err_t wirepas_send_command ( wirepas_t *ctx, uint8_t primitive_id, uint8_t frame
     return error_flag;
 }
 
-err_t wirepas_write_csap_attribute ( wirepas_t *ctx, uint8_t frame_id, uint16_t attribute_id, 
+err_t wirepas_send_ack ( wirepas_t *ctx, uint8_t primitive_id, uint8_t frame_id, uint8_t result )
+{
+    err_t error_flag = WIREPAS_OK;
+    uint16_t crc_data = 0;
+    uint8_t data_buf[ 10 ] = { 0 };
+    data_buf[ 0 ] = WIREPAS_ENDCODE_OCTET;
+    data_buf[ 1 ] = WIREPAS_ENDCODE_OCTET;
+    data_buf[ 2 ] = WIREPAS_ENDCODE_OCTET;
+    data_buf[ 3 ] = primitive_id;
+    data_buf[ 4 ] = frame_id;
+    data_buf[ 5 ] = 1;
+    data_buf[ 6 ] = result;
+    crc_data = crc_from_buffer( &data_buf[ 3 ], 4 );
+    data_buf[ 7 ] = ( uint8_t ) crc_data; 
+    data_buf[ 8 ] = ( uint8_t ) ( crc_data >> 8 ); 
+    data_buf[ 9 ] = WIREPAS_ENDCODE_OCTET; 
+
+    error_flag = wirepas_generic_write( ctx, data_buf, 10 );
+    Delay_100ms ( );
+    
+    return error_flag;
+}
+
+
+err_t wirepas_write_csap_attribute ( wirepas_t *ctx, uint16_t attribute_id, 
                                      uint8_t attribute_len, uint8_t *attribute_val )
 {
     err_t error_flag = WIREPAS_OK;
@@ -226,13 +255,13 @@ err_t wirepas_write_csap_attribute ( wirepas_t *ctx, uint8_t frame_id, uint16_t 
         len_cnt++;
     }
     
-    error_flag = wirepas_send_command( ctx, WIREPAS_CSAP_ATTRIBUTE_WRITE_REQUEST, frame_id, 
+    error_flag = wirepas_send_command( ctx, WIREPAS_CSAP_ATTRIBUTE_WRITE_REQUEST, 
                                        len_cnt, data_buf );
     
     return error_flag;
 }
 
-err_t wirepas_read_csap_attribute ( wirepas_t *ctx, uint8_t frame_id, uint16_t attribute_id, 
+err_t wirepas_read_csap_attribute ( wirepas_t *ctx, uint16_t attribute_id, 
                                     uint8_t *attribute_len, uint8_t *attribute_val )
 {
     err_t error_flag = WIREPAS_OK;
@@ -247,7 +276,7 @@ err_t wirepas_read_csap_attribute ( wirepas_t *ctx, uint8_t frame_id, uint16_t a
     tx_buf[ 0 ] = ( uint8_t ) attribute_id;
     tx_buf[ 1 ] = ( uint8_t ) ( attribute_id >> 8 );
     
-    error_flag |= wirepas_send_command( ctx, WIREPAS_CSAP_ATTRIBUTE_READ_REQUEST, frame_id, 0x02, tx_buf );
+    error_flag |= wirepas_send_command( ctx, WIREPAS_CSAP_ATTRIBUTE_READ_REQUEST, 0x02, tx_buf );
     Delay_10ms( );
     len_cnt = wirepas_generic_read( ctx, data_buf, WIREPAS_RX_DRV_BUFFER_SIZE );
     pay_len = data_buf[ 3 ];
@@ -257,19 +286,19 @@ err_t wirepas_read_csap_attribute ( wirepas_t *ctx, uint8_t frame_id, uint16_t a
     
     if ( crc_val != crc_data )
     {
-         return WIREPAS_ERROR;
+        return WIREPAS_ERROR;
     }
 
     att_id = ( uint16_t ) data_buf[ 4 ] << 8 | data_buf[ 5 ];
     
     if ( att_id != attribute_id )
     {
-         return WIREPAS_ERROR;
+        return WIREPAS_ERROR;
     }
     
     *attribute_len = data_buf[ 7 ];
     
-     for ( uint8_t n_cnt = 0; n_cnt < data_buf[ 7 ]; n_cnt++ )
+    for ( uint8_t n_cnt = 0; n_cnt < data_buf[ 7 ]; n_cnt++ )
     {
         attribute_val[ n_cnt ] = data_buf[ n_cnt + 8 ];
     }
@@ -277,7 +306,7 @@ err_t wirepas_read_csap_attribute ( wirepas_t *ctx, uint8_t frame_id, uint16_t a
     return error_flag;
 }
 
-err_t wirepas_set_node_address ( wirepas_t *ctx, uint8_t frame_id, uint32_t address )
+err_t wirepas_set_node_address ( wirepas_t *ctx, uint32_t address )
 {
     err_t error_flag = WIREPAS_OK;
     uint8_t address_buf[ 4 ] = { 0 };
@@ -287,13 +316,13 @@ err_t wirepas_set_node_address ( wirepas_t *ctx, uint8_t frame_id, uint32_t addr
     address_buf[ 2 ] = ( uint8_t ) ( address >> 16 );
     address_buf[ 3 ] = ( uint8_t ) ( address >> 24 );
     
-    error_flag = wirepas_write_csap_attribute( ctx, frame_id, WIREPAS_CSAP_ATTRIBUTE_NODE_ADDRESS, 
+    error_flag = wirepas_write_csap_attribute( ctx, WIREPAS_CSAP_ATTRIBUTE_NODE_ADDRESS, 
                                                4, address_buf );
     
     return error_flag;
 }
 
-err_t wirepas_set_net_address ( wirepas_t *ctx, uint8_t frame_id, uint32_t net_address )
+err_t wirepas_set_net_address ( wirepas_t *ctx, uint32_t net_address )
 {
     err_t error_flag = WIREPAS_OK;
     uint8_t net_address_buf[ 4 ] = { 0 };
@@ -302,58 +331,70 @@ err_t wirepas_set_net_address ( wirepas_t *ctx, uint8_t frame_id, uint32_t net_a
     net_address_buf[ 1 ] = ( uint8_t ) ( net_address >> 8 );
     net_address_buf[ 2 ] = ( uint8_t ) ( net_address >> 16 );
     
-    error_flag = wirepas_write_csap_attribute( ctx, frame_id, WIREPAS_CSAP_ATTRIBUTE_NETWORK_ADDRESS, 
+    error_flag = wirepas_write_csap_attribute( ctx, WIREPAS_CSAP_ATTRIBUTE_NETWORK_ADDRESS, 
                                                3, net_address_buf );
     
     return error_flag;
 }
 
-err_t wirepas_poll_indication ( wirepas_t *ctx, uint8_t frame_id, uint8_t *rx_data, uint8_t *data_rdy )
+err_t wirepas_read_frame ( wirepas_t *ctx, wirepas_frame_t *frame )
 {
-    err_t error_flag = 0;
-    uint8_t len_cnt = 0;
-    uint8_t tx_buf[ WIREPAS_TX_DRV_BUFFER_SIZE ] = { 0 };
-    uint8_t data_buf[ WIREPAS_RX_DRV_BUFFER_SIZE ] = { 0 };
-    
-    error_flag = wirepas_send_command( ctx, WIREPAS_MSAP_INDICATION_POLL_REQUEST, frame_id, 0, tx_buf );
-    Delay_10ms( );
-    len_cnt = wirepas_generic_read( ctx, data_buf, WIREPAS_RX_DRV_BUFFER_SIZE );
-    if ( len_cnt > 0 )
+    uint8_t data_buf[ 263 ] = { 0 };
+    uint32_t timeout_cnt = 0;
+    uint16_t crc = 0;
+    Delay_1ms ( );
+    while ( WIREPAS_ENDCODE_OCTET != data_buf[ 0 ] )
     {
-        if ( WIREPAS_MSAP_INDICATION_POLL_CONFIRM == data_buf[ 1 ] )
+        if ( ( 1 != wirepas_generic_read( ctx, &data_buf[ 0 ], 1 ) ) &&
+             ( timeout_cnt++ > 200 ) )
         {
-            if ( ( data_buf[ 4 ] == 0x01 ) && ( WIREPAS_MSAP_STACK_STATE_INDICATION == data_buf[ 9 ] ) )
-            {
-                tx_buf[ 0 ] = 0;
-
-                error_flag = wirepas_send_command ( ctx, WIREPAS_MSAP_STACK_STATE_RESPONSE, 
-                                                    data_buf[ 10 ], 1, tx_buf );
-            }
-           
-           else if ( ( data_buf[ 4 ] == 0x01 ) &&  ( WIREPAS_DSAP_DATA_RX_INDICATION == data_buf[ 9 ] ) )
-            {
-                tx_buf[ 0 ] = 0;
-                for ( uint8_t n_cnt = 0; n_cnt < data_buf[ 28 ]; n_cnt++ )
-                {
-                    rx_data[ n_cnt ] = data_buf[ 29 + n_cnt ];
-                }
-                *data_rdy = 1;
-                error_flag = wirepas_send_command ( ctx, WIREPAS_DSAP_DATA_RX_RESPONSE, 
-                                                    data_buf[ 10 ], 1, tx_buf );
-                
-                return WIREPAS_DATA_RDY;
-            }
+            return WIREPAS_ERROR;
         }
+        Delay_1ms ( );
     }
-    else
+    if ( 3 != wirepas_generic_read( ctx, &data_buf[ 1 ], 3 ) )
+    {
+        return WIREPAS_ERROR;
+    }
+    Delay_10ms ( );
+    if ( data_buf[ 3 ] != wirepas_generic_read( ctx, &data_buf[ 4 ], data_buf[ 3 ] ) )
     {
         return WIREPAS_ERROR;
     }
     
-    return len_cnt;
+    if ( 3 != wirepas_generic_read( ctx, &data_buf[ 4 + data_buf[ 3 ] ], 3 ) )
+    {
+        return WIREPAS_ERROR;
+    }
+
+    if ( WIREPAS_ENDCODE_OCTET != data_buf[ 6 + data_buf[ 3 ] ] )
+    {
+        if ( 1 != wirepas_generic_read( ctx, &data_buf[ 7 + data_buf[ 3 ] ], 1 ) )
+        {
+            return WIREPAS_ERROR;
+        }
+        if ( WIREPAS_ENDCODE_OCTET != data_buf[ 7 + data_buf[ 3 ] ] )
+        {
+            return WIREPAS_ERROR;
+        }
+    }
+    else
+    {
+        crc = ( ( uint16_t ) data_buf[ 5 + data_buf[ 3 ] ] << 8 ) | data_buf[ 4 + data_buf[ 3 ] ];
+        if ( crc != crc_from_buffer ( &data_buf[ 1 ], data_buf[ 3 ] + 3 ) )
+        {
+            return WIREPAS_ERROR;
+        }
+    }
+    
+    frame->primitive_id = data_buf[ 1 ];
+    frame->frame_id = data_buf[ 2 ];
+    frame->payload_len = data_buf[ 3 ];
+    memcpy ( frame->payload, &data_buf[ 4 ], frame->payload_len );
+    return WIREPAS_OK;
 }
 
-err_t wirepas_send_data ( wirepas_t *ctx, uint8_t frame_id, wirepas_sink_data sink_data, uint8_t tx_op, 
+err_t wirepas_send_data ( wirepas_t *ctx, wirepas_sink_data sink_data, uint8_t tx_op, 
                           uint8_t apdu_length, uint8_t *apdu )
 {
     err_t error_flag = WIREPAS_OK;
@@ -375,13 +416,13 @@ err_t wirepas_send_data ( wirepas_t *ctx, uint8_t frame_id, wirepas_sink_data si
         tx_buf[ 11 + n_cnt ] = apdu[ n_cnt ];
     }
     
-    error_flag = wirepas_send_command( ctx, WIREPAS_DSAP_DATA_TX_REQUEST, frame_id, 
+    error_flag = wirepas_send_command( ctx, WIREPAS_DSAP_DATA_TX_REQUEST, 
                                        (apdu_length + 11), tx_buf );
     
     return error_flag;
 }
 
-uint16_t crc_from_buffer ( uint8_t *buf, uint32_t len )
+static uint16_t crc_from_buffer ( uint8_t *buf, uint32_t len )
 {
     uint16_t crc = 0xFFFF;
     uint8_t index;

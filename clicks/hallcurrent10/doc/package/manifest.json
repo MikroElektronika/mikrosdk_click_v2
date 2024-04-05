@@ -25,14 +25,15 @@
     "name": "mikroe.click.hallcurrent10",
     "product_link": "https://www.mikroe.com/hall-current-10-click",
     "short_description": "Hall Current 10 Click is a compact add-on board that provides economical and precise AC or DC current sensing solutions. This board features the ACHS-7194, a fully integrated Hall-effect-based isolated linear current sensor designed for the current range of ±40A from Broadcom Limited. Inside ACHS-7194 is a precise, low-offset, linear Hall circuit with a copper conduction path located near the surface of the die. Applied current flowing through this copper conduction path generates a magnetic field that the differential Hall sensors convert into a proportional voltage, where after that, the user is given the option to process the output voltage as an analog or digital value. This Click board™ is suitable for AC or DC current-sensing in industrial, commercial, and communications systems.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.HallCurrent10",
     "subdir_name": "lib_hallcurrent10"
 }
+
 
 
 

@@ -137,7 +137,8 @@ void application_task ( void )
     temperature = color6_getTemperature( &color6 );
     log_printf( &logger, " Temperature :  %f ", temperature );
 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

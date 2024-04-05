@@ -60,56 +60,56 @@ void measurement_init ( adc9_t *ctx, adc9_rw_t *rw )
     rw->reg = ADC9_REG_ADC_DATA;
     rw->cmd = ADC9_CMD_INC_READ;
     adc9_read_u32( ctx, rw, &dummy_data );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 
     rw->reg = ADC9_REG_CFG_0;
     cfg_data = ADC9_CFG_0_VREF_SEL_0 | ADC9_CFG_0_CLK_SEL_2 |
                ADC9_CFG_0_CS_SEL_0 | ADC9_CFG_0_MODE_CONV;
     adc9_write_u8( ctx, rw, cfg_data );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 
     rw->reg = ADC9_REG_CFG_1;
     cfg_data = ADC9_CFG_1_PRE_1 | ADC9_CFG_1_OSR_32 | ADC9_CFG_1_DITHER_DEF;
     adc9_write_u8( ctx, rw, cfg_data );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 
     rw->reg = ADC9_REG_CFG_2;
     cfg_data = ADC9_CFG_2_BOOST_X_1 | ADC9_CFG_2_GAIN_X_1 | ADC9_CFG_2_AZ_MUX_DIS | 
                ADC9_CFG_2_AZ_VREF_EN | ADC9_CFG_2_AZ_FREQ_HIGH;
     adc9_write_u8( ctx, rw, cfg_data );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 
     rw->reg = ADC9_REG_CFG_3;
     cfg_data = ADC9_CFG_3_CONV_MODE_CONT | ADC9_CFG_3_DATA_FORMAT_DEF | 
                ADC9_CFG_3_CRC_FORMAT_16 | ADC9_CFG_3_CRC_COM_DIS | ADC9_CFG_3_CRC_OFF_CAL_EN |
                ADC9_CFG_3_CRC_GAIN_CAL_EN;
     adc9_write_u8( ctx, rw, cfg_data );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 
     rw->reg = ADC9_REG_MUX;
     cfg_data = ADC9_MUX_VIN_POS_CH0 | ADC9_MUX_VIN_NEG_CH1;
     adc9_write_u8( ctx, rw, cfg_data );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 
     cfg_data_l = 0;
     rw->reg = ADC9_REG_SCAN;
     adc9_write_u24( ctx, rw, cfg_data_l );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 
     cfg_data_l = 0;
     rw->reg = ADC9_REG_OFFSET_CAL;
     adc9_write_u24( ctx, rw, cfg_data_l );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 
     cfg_data_l = 0x00800000;
     rw->reg = ADC9_REG_GAIN_CAL;
     adc9_write_u24( ctx, rw, cfg_data_l );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 
     cfg_data_l = 0x00900F00;
     rw->reg = ADC9_RSV_REG_W_A;
     adc9_write_u24( ctx, rw, cfg_data_l );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -145,7 +145,7 @@ void application_init ( void )
 
     adc9_default_cfg( &adc9, &adc9_rw );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -163,11 +163,16 @@ void application_task ( void )
     log_printf( &logger, "Voltage in milivolts : %.2f\r\n", m_volts );
 
     log_printf( &logger, "------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

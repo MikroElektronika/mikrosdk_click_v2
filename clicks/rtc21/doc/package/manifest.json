@@ -25,14 +25,15 @@
     "name": "mikroe.click.rtc21",
     "product_link": "https://www.mikroe.com/rtc-21-click",
     "short_description": "RTC 21 Click is a compact add-on board that accurately keeps the time of the day. This board features the PT7C4311, an I2C-configurable real-time clock module with programmable square-wave output from Diodes Incorporated. The PT7C4311 includes time and calendar functions providing various information such as hour, minute, second, day, date, month, year, and century. It operates in a 24-hour format indicator, has automatic leap year compensation, and low power consumption, allowing it to be used with a single button cell battery for an extended period.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.RTC21",
     "subdir_name": "lib_rtc21"
 }
+
 
 
 

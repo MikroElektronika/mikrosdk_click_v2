@@ -117,31 +117,31 @@ void application_init ( void )
     log_printf( &logger, "-----------------------\r\n" );
     
     nvsram3_default_cfg ( &nvsram3 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, " DEVICE ID: 0x%.8LX\r\n", nvsram3_get_device_id( &nvsram3 ) );
     log_printf( &logger, "-----------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     memory_addr = 0x10000;
     
     log_printf( &logger, "  Write data : %s", demo_data );
     nvsram3_memory_write( &nvsram3, memory_addr, &demo_data[ 0 ], 9 );
     log_printf( &logger, "-----------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     date.day_of_week = 4;
     date.day = 31;
     date.month = 12;
     date.year = 2020;
     nvsram3_set_rtc_date( &nvsram3, date );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     time.hours = 23;
     time.min = 59;
     time.sec = 50;
     nvsram3_set_rtc_time( &nvsram3, time );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -180,7 +180,7 @@ void application_task ( void )
     } 
     else 
     {
-        Delay_ms( 500 );    
+        Delay_ms ( 500 );    
     }
 }
 

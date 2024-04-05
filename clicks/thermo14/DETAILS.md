@@ -86,7 +86,7 @@ void application_init ( void )
     THERMO14_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     thermo14_init( &thermo14, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     thermo14_default_cfg( &thermo14 );
 }
   
@@ -104,7 +104,9 @@ void application_task ( void )
     temp_val = thermo14_get_temperature( &thermo14 );
 
     log_printf( &logger, " Temperature: %.2f C \r\n ", temp_val );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

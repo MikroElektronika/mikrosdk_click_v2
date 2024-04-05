@@ -25,13 +25,14 @@
     "name": "mikroe.click.dcmotor27",
     "product_link": "https://www.mikroe.com/dc-motor-27-click",
     "short_description": "DC Motor 27 Click is a compact add-on board that contains a high-performance brushed DC motor driver. This board features the DRV8143, an automotive half-bridge driver with integrated current sense and diagnostic from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.DCMotor27",
     "subdir_name": "lib_dcmotor27"
 }
+
 
 

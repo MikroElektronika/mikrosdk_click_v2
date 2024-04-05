@@ -94,7 +94,7 @@ void application_init ( void )
     thermo8_cfg_setup( &cfg );
     THERMO8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     thermo8_init( &thermo8, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     thermo8_default_cfg( &thermo8 );
 }
   
@@ -115,7 +115,8 @@ void application_task ( void )
     char alert;
     char alert_on;
 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     alert = thermo8_ale_get( &thermo8 );
 
     if ( alert == 0 )

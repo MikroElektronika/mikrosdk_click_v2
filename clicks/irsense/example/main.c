@@ -63,31 +63,31 @@ void application_init ( void )
     eint.dr = IRSENSE_EINTEN_IR13_HIGH_INT_DISABLE;
     
     log_printf( &logger, "     I2C Driver Init       \r\n"  );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "---------------------------\r\n"  );
 
     irsense_power_on( &irsense );
     log_printf( &logger, "         Power On          \r\n"  );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "---------------------------\r\n"  );
 
     irsense_soft_reset( &irsense );
     log_printf( &logger, "        Soft Reset         \r\n"  );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "---------------------------\r\n"  );
 
     irsense_set_mode( &irsense, IRSENSE_ECNTL1_MODE_CONTINUOUS_0 );
     irsense_set_cutoff_frequency( &irsense, IRSENSE_ECNTL1_CUTOFF_FREQUENCY_0_6_Hz );
     log_printf( &logger, "  Set Continuous Mode 0    \r\n"  );
     log_printf( &logger, "Set cutoff frequency 0.6 Hz\r\n"  );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "---------------------------\r\n"  );
 
     irsense_set_interrupts_reg( &irsense, &eint );
 
     log_printf( &logger, " Interrupt Source Setting  \r\n"  );
     log_printf( &logger, "Enable Data Ready Interrupt\r\n"  );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "---------------------------\r\n"  );
     log_printf( &logger, "      IR Sense  Click      \r\n"  );
     log_printf( &logger, "---------------------------\r\n"  );
@@ -119,12 +119,17 @@ void application_task ( void )
         log_printf( &logger, "---------------------------\r\n" );
 
         irsense_refresh( &irsense );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

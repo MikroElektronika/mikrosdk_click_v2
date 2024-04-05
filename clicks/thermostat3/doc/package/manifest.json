@@ -25,17 +25,18 @@
     "name": "mikroe.click.thermostat3",
     "product_link": "https://www.mikroe.com/thermostat-3-click",
     "short_description": "Thermostat 3 Click is a general-purpose thermostat Click board™ designed to be used with any temperature sensor based on the MAX31855 sensor design.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2825
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Thermostat3",
     "subdir_name": "lib_thermostat3"
 }
+
 
 
 

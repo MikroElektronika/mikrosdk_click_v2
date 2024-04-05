@@ -25,17 +25,18 @@
     "name": "mikroe.click.powerbank",
     "product_link": "https://www.mikroe.com/power-bank-click",
     "short_description": "PowerBank Click is a USB charging expansion board which can be used for creating power bank devices or adding charging option to your device.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3234
     ],
-    "version": "2.1.0.17",
+    "version": "2.1.0.18",
     "cmake": true,
     "alias": "Click.PowerBank",
     "subdir_name": "lib_powerbank"
 }
+
 
 
 

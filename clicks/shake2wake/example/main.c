@@ -54,14 +54,14 @@ void application_init ( void )
     shake2wake_cfg_setup( &cfg );
     SHAKE2WAKE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     shake2wake_init( &shake2wake, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "--------------------------\r\n" );
     log_printf( &logger, "    Shake2Wake  Click     \r\n" );
     log_printf( &logger, "--------------------------\r\n" );
 
     shake2wake_default_cfg( &shake2wake );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -79,11 +79,16 @@ void application_task ( void )
     log_printf( &logger, "Z axis: %d\r\n", z_val );
     log_printf( &logger, "Temperature: %.2f degC\r\n", temperature );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

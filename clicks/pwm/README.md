@@ -92,14 +92,14 @@ void application_init ( void )
     pwm_cfg_setup( &cfg );
     PWM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pwm_init( &pwm, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     pwm_set_output( &pwm, PWM_ENABLE );
     pwm_dev_config( &pwm, &config0 );
     pwm_set_pre_scale( &pwm, 0x04 );
     pwm_dev_config( &pwm, &config1 );
     pwm_output_config( &pwm,  &config2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "--------------------------\r\n" );
     log_printf( &logger, " PWM  Click \r\n" );
@@ -122,7 +122,16 @@ void application_task ( void )
     pwm_set_all_raw( &pwm, PWM_MAX_RESOLUTION / 2 );
     log_printf( &logger, "All Channels set to 50%% duty cycle \r\n" );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     for ( chann_id = 0; chann_id < 8; chann_id++ )
     {
@@ -130,7 +139,16 @@ void application_task ( void )
     }
     log_printf( &logger, "Channels 0-7 set to 25%% duty cycle \r\n" );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     for ( chann_id = 0; chann_id < 8; chann_id++ )
     {
@@ -138,12 +156,25 @@ void application_task ( void )
     }
     log_printf( &logger, "Channels 0-7 set to 75%% duty cycle \r\n" );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     pwm_all_chann_state( &pwm, 0 );
     log_printf( &logger, "All Channels disabled \r\n " );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

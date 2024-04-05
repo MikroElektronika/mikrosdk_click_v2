@@ -106,7 +106,7 @@ void application_task (  )
     static uint8_t status_check;
 
     log_printf( &logger, " - Writing...  \r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     status_check = fram3_write_free_access_memory( &fram3, 0x00, &write_data[ 0 ], 7 );
     if ( status_check == FRAM3_ERROR )
     {
@@ -115,7 +115,7 @@ void application_task (  )
     }
     
     log_printf( &logger, " - Reading... \r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     status_check = fram3_read_free_access_memory( &fram3, 0x00, &read_data[ 0 ], 7 );
     if ( status_check == FRAM3_ERROR )
     {
@@ -126,12 +126,12 @@ void application_task (  )
     for ( cnt = 0; cnt < 7; cnt++ )
     {
         log_printf( &logger, " %c ", read_data[ cnt ] );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     log_printf( &logger, " \r\n " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "__________________________\r\n " );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 } 
 
 ```

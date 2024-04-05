@@ -25,17 +25,18 @@
     "name": "mikroe.click.stretch",
     "product_link": "https://www.mikroe.com/stretch-click",
     "short_description": "The application is for stretch measuring ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1838
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Stretch",
     "subdir_name": "lib_stretch"
 }
+
 
 
 

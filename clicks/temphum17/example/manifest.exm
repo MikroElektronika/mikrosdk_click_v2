@@ -2,7 +2,7 @@
     "name": "TempHum 17 Click",
     "description": "Temp&Hum 17 Click is a compact add-on board that represents temperature and humidity sensing solutions. This board features the HS3001, a highly accurate, fully calibrated relative humidity and temperature sensor from Renesas. It features proprietary sensor-level protection, ensuring high reliability and long-term stability. Integrated calibration and temperature-compensation logic provides fully corrected RH and temperature values via standard I2C output. No user calibration of the output data is required.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","HS3001"],
     "category" : ["Temperature & humidity"]
 }

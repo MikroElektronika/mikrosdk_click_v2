@@ -83,11 +83,12 @@ void application_init ( void )
         for( ; ; );
     }
     log_printf( &logger, "-- Device communication OK --\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     c6dofimu10_default_cfg ( &c6dofimu10 );
     log_printf( &logger, "-- Device configuration --\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void application_task ( void )
@@ -109,11 +110,16 @@ void application_task ( void )
     log_printf( &logger, "-- Temperature data --\r\n" );
     app_display_temp_data( temperature );
     log_printf( &logger, "***************************************************************************************\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

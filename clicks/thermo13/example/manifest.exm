@@ -2,7 +2,7 @@
     "name": "Thermo 13 Click",
     "description": "Thermo 13 Click is a Click board™ equipped with the sensor IC, which can digitize temperature measurements between -30°C and +95°C so that the temperature measurement data can be processed by the host MCU. Thermo 13 click provides good measurement accuracy in the range from -20°C to +85°C.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","BH1900NUX"],
     "category" : ["<Temperature & humidity>"] 
 }

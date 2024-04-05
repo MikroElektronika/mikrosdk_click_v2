@@ -99,14 +99,14 @@ void application_init ( void )
     CHARGER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     charger2_init( &charger2, &cfg );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     charger2_reset( &charger2, CHARGER2_RESET_COUNTER_MODE );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     charger2_write_reg( &charger2, CHARGER2_REG_MODE, CHARGER2_AUTO_DETECT | CHARGER2_14_BITS_RESOLUTION | CHARGER2_OPERATING_MODE );
     log_printf( &logger, "Charger 2 is initialized \r\n" );
     log_printf( &logger, "------------------------------ \r\n" );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 
 void application_task ( void )
@@ -125,11 +125,16 @@ void application_task ( void )
     results_logger( &charger2 );
     
     log_printf( &logger, "------------------------------ \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

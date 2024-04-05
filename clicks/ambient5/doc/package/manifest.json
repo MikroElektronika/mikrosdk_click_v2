@@ -25,17 +25,18 @@
     "name": "mikroe.click.ambient5",
     "product_link": "https://www.mikroe.com/ambient-5-click",
     "short_description": "Ambient 5 click can sense the intensity of the ambient light, providing measurement data in a digital format, over the I2C interface. It utilizes the VEML6030, a miniature ambient light sensor (ALS) which occupies only 2x2 mm of space. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2663
     ],
-    "version": "2.1.0.17",
+    "version": "2.1.0.18",
     "cmake": true,
     "alias": "Click.Ambient5",
     "subdir_name": "lib_ambient5"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "LED Driver 17 Click",
     "description": "LED Driver 17 Click is a compact add-on board that offers a simple solution for controlling multiple LEDs, making it an ideal choice for various applications. This board features the LTR3755, a highly efficient DC/DC controller from Analog Devices that operates as a constant-current source. It can easily drive high current LEDs and features onboard low-side external N-channel power MOSFETs driven from an internal regulated supply. The LED Driver 17 Click is capable of stable operation over a wide supply range and offers several LED protection features, including overvoltage and overcurrent protection. Additionally, the frequency adjust pin allows users to program the switching frequency from 100kHz to 1MHz, optimizing efficiency and performance.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","LT3755EUD"],
     "category" : ["Click Boards > Display & LED > LED Drivers"]
 }

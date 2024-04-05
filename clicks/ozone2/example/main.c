@@ -74,12 +74,17 @@ void application_task ( void )
     if ( ozone2_read_measurement( &ozone2, &o3_ppm ) == OZONE2_OK )
     {
         log_printf( &logger, "  O3 [ppm] : %u\r\n", o3_ppm );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

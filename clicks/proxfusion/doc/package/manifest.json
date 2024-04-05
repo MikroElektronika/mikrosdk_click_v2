@@ -25,17 +25,18 @@
     "name": "mikroe.click.proxfusion",
     "product_link": "https://www.mikroe.com/proxfusion-click",
     "short_description": "ProxFusion click is a multifunctional capacitive and Hall-effect sensor device. This click can detect touch by using two onboard sensor pads, and it can sense a rotation angle of a magnetic field, parallel with the surface of the click board.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2275
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.ProxFusion",
     "subdir_name": "lib_proxfusion"
 }
+
 
 
 

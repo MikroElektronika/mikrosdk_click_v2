@@ -25,14 +25,15 @@
     "name": "mikroe.click.angle7",
     "product_link": "https://www.mikroe.com/angle-7-click",
     "short_description": "Angle 7 Click is a compact add-on board that detects the absolute angular position of a permanent magnet. This board features the AS5600, a programmable Hall-based rotary magnetic position sensor with a high-resolution 12-bit analog or PWM output from ams AG.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.Angle7",
     "subdir_name": "lib_angle7"
 }
+
 
 
 

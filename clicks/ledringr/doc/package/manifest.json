@@ -25,17 +25,18 @@
     "name": "mikroe.click.ledringr",
     "product_link": "https://www.mikroe.com/led-ring-r-click",
     "short_description": "This library contains API for LedringR Click driver.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1815
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.LedringR",
     "subdir_name": "lib_ledringr"
 }
+
 
 
 

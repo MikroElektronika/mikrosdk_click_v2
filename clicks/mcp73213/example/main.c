@@ -58,7 +58,9 @@ void application_init ( void )
     mcp73213_init( &mcp73213, &cfg );
 
     log_printf( &logger, "   SPI Driver Init     \r\n" );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "---------------------- \r\n" );
     log_printf( &logger, "  Set Current Output   \r\n" );
 }
@@ -68,16 +70,29 @@ void application_task ( void )
     log_printf( &logger, "---------------------- \r\n" );
     log_printf( &logger, "   10 kOhm - 130 mA    \r\n" );
     mcp73213_set_current_output( &mcp73213, MCP73213_OUTPUT_130_mA );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "---------------------- \r\n" );
     log_printf( &logger, "    5 kOhm - 250 mA    \r\n" );
     mcp73213_set_current_output( &mcp73213, MCP73213_OUTPUT_250_mA );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

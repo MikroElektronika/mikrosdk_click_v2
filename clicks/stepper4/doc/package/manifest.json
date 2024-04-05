@@ -25,14 +25,15 @@
     "name": "mikroe.click.stepper4",
     "product_link": "https://www.mikroe.com/stepper-4-click",
     "short_description": "Stepper 4 click is a very versatile bipolar stepping motor driver. It features TB67S269FTG IC, fabricated with the BiCD process, allowing the Click board™ to handle significant voltage and current levels up to 35V and 1.2A. This IC has the integrated translator section, used to simplify the control: using simple step control inputs from the host MCU, the stepper motor can be driven in both directions, with the predetermined step sizes from the full step, up to 1/32 step.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
     "related_projects": [
         2150
     ],
-    "version": "2.1.0.0",
+    "version": "2.1.0.1",
     "cmake": true,
     "alias": "Click.Stepper4",
     "subdir_name": "lib_stepper4"
 }
+

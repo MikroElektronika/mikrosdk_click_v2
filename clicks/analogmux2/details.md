@@ -120,7 +120,7 @@ void application_init ( void ) {
     analogmux2_default_cfg ( &analogmux2 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, "-------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -135,7 +135,9 @@ Results are being sent to the Usart Terminal where you can track their changes.
 void application_task ( void ) {   
     for ( uint8_t ch_pos = ANALOGMUX2_SET_CHANNEL_0; ch_pos <= ANALOGMUX2_SET_CHANNEL_7; ch_pos++ ) {
         analogmux2_set_channel( &analogmux2, ch_pos );
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
         
         uint16_t analogmux2_an_value = 0;
     

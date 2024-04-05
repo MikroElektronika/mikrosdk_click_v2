@@ -2,7 +2,7 @@
     "name": "H-Bridge 7 Click",
     "description": "H-Bridge 7 Click features flexible motor driver IC for a wide variety of applications, labeled as the DRV8876N. This Click board™ integrates an N-channel H-bridge, charge pump regulator, and protection circuitry. The charge pump improves efficiency by allowing for both high-side and low-side N-channels MOSFETs and 100% duty cycle support. This IC allows the H-Bridge 7 Click to achieve ultra-low quiescent current draw by shutting down most of the internal circuitry with his low-power sleep mode.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","DRV8876N"],
     "category" : ["Brushed"] 
 }

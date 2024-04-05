@@ -63,15 +63,28 @@ void application_init ( )
 void application_task ( )
 {
     oneshot_digital_write_cs( &oneshot, 1 );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
     oneshot_digital_write_cs( &oneshot, 0 );
     log_printf( &logger, " * One shot triggered \r\n" );
     log_printf( &logger, " --------------------------- \r\n" );
-    Delay_ms( 8000 );
+    // 8 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

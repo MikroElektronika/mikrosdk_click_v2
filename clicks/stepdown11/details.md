@@ -131,7 +131,11 @@ void application_task ( void )
     {
         log_printf( &logger, " Set output voltage %dV \r\n", ( uint16_t ) vout );
         stepdown11_set_voltage ( &stepdown11, vout );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

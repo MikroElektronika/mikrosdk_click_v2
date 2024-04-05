@@ -105,7 +105,7 @@ void application_init ( void )
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "        Start\r\n" );
     log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -122,7 +122,7 @@ void application_task ( void )
 {
     angle = gmrangle_calculate_angle( &gmrangle );
     log_printf( &logger, " Angle is %.1f\r\n", angle );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 } 
 
 ```

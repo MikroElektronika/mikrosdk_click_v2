@@ -25,17 +25,18 @@
     "name": "mikroe.click.c6dofimu6",
     "product_link": "https://www.mikroe.com/6dof-imu-6-click",
     "short_description": "6DOF IMU 6 Click features a 6-axis MotionTracking device that combines a 3-axis gyroscope, a 3-axis accelerometer, and a Digital Motion Processor™ (DMP) labeled as ICM-20689. The ICM-20689 from company TDK InvenSense includes on-chip 16-bit ADCs, programmable digital filters, an embedded temperature sensor, and programmable interrupts. The gyroscope and accelerometer are full-scale range, user-programmable sensors with factory-calibrated initial sensitivity for reduced production-line calibration requirements.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3250
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.6DofImu6",
     "subdir_name": "lib_c6dofimu6"
 }
+
 
 
 

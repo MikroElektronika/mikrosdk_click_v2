@@ -118,18 +118,18 @@ void application_init ( void ) {
     // Hardware reset.
     
     adc10_hw_reset( &adc10 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     // Software reset.
     
     adc10_reset( &adc10 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     // Click default configuration.
     
     adc10_default_cfg ( &adc10 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -146,7 +146,7 @@ All data logs write on USB uart changes approximately for every 1 sec.
 
 void application_task ( void ) {   
     adc10_start_sync( &adc10 );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 
     while ( adc10_check_drdy( &adc10 ) == ADC10_NEW_DATA_NOT_READY );
 
@@ -156,7 +156,7 @@ void application_task ( void ) {
 
     voltage = adc10_calc_voltage( &adc10, out_data, ADC10_VREF_INTERNAL, ADC10_GAIN_1 );
     log_printf( &logger, "  Voltage  : %.2f mV\r\n", voltage );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

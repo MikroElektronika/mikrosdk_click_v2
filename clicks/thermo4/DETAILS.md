@@ -112,7 +112,7 @@ void application_task ( void )
     log_printf(" Temperature farenheit : %f %c\r\n", temp_in_faren, deg_far);
     log_printf(" Temperature kelvin : %f K\r\n", temp_in_kelvin);
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

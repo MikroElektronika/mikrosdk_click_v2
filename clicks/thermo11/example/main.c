@@ -66,7 +66,7 @@ void application_init ( void )
     log_printf( &logger, "** Thermo 11 is initialized ** \r\n" );
     log_printf( &logger, "************************************************ \r\n \r\n" );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void application_task ( void )
@@ -98,6 +98,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

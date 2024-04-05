@@ -2,7 +2,7 @@
   "name": "LightRanger Click",
   "description": "LightRanger click is a proximity sensor carrying ST�s VL6180X IC. This chip is based on ST�s patented FlightSense technology...",
   "image": "../../Resources/click_icon.png",
-  "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+  "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
   "hw": [ "click", "VL6180X IC" ],
   "category": [ "Proximity" ]
 }

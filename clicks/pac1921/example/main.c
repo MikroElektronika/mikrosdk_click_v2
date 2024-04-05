@@ -56,9 +56,9 @@ void application_init ( )
     pac1921_cfg_setup( &cfg );
     PAC1921_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pac1921_init( &pac1921, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     pac1921_default_cfg( &pac1921 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( )
@@ -77,11 +77,16 @@ void application_task ( )
         log_printf( &logger, " * Voltage: %.2f mV * \r\n", read_data );
     }
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

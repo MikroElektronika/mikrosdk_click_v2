@@ -113,7 +113,7 @@ void application_init ( void ) {
 
     daq3_default_cfg ( &daq3 );
     log_info( &logger, " Application Task \r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     daq3_get_voltage( &daq3 );
     log_printf( &logger, "---------------------------\r\n" );
     log_printf( &logger, "         DAQ 3 click       \r\n" );
@@ -137,7 +137,8 @@ void application_task ( void ) {
     float voltage = daq3_get_voltage( &daq3 );
     log_printf( &logger, "   Voltage : %.3f mV       \r\n", voltage );
     log_printf( &logger, "---------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

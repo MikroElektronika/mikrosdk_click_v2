@@ -106,7 +106,7 @@ void application_init ( void )
     log_info( &logger, " Application Task " );
     
     profet10a_set_mode( &profet10a, PROFET10A_DIAGNOSTIC_ON );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```
@@ -130,7 +130,8 @@ void application_task ( void )
     {
         mode = PROFET10A_MODE_OFF;
         log_printf( &logger, " > Output ON diagnostic mode\r\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     else
     {
@@ -148,7 +149,8 @@ void application_task ( void )
     
     log_printf( &logger, "*******************************************\r\n" );
     
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

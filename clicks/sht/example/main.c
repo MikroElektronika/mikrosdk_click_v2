@@ -55,7 +55,8 @@ void application_init ( void )
     
     sht_reset( &sht );
     sht_hw_reset( &sht );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_info( &logger, " Application Task " );
 }
@@ -71,11 +72,16 @@ void application_task ( void )
     humidity = sht_hum_ss( &sht );
     log_printf( &logger, " Humidity: %.2f %%\r\n\n", humidity );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

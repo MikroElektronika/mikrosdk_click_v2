@@ -56,7 +56,7 @@ void application_init ( void )
     c6dofimu4_reset( &c6dofimu4 );
 
     c6dofimu4_default_cfg( &c6dofimu4 );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 
     log_printf( &logger, "** 6DOF IMU 4 is initialized **\r\n" );
 }
@@ -92,11 +92,16 @@ void application_task ( void )
     log_printf( &logger, "** Temperature value : %d C\r\n", temperature );
     log_printf( &logger,"------------------------------------------------- \r\n" );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

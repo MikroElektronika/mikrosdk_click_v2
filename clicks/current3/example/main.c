@@ -65,7 +65,7 @@ void application_init ( void )
     CURRENT3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     current3_init( &current3, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "     Driver init. done     \r\n" );
     log_printf( &logger, "---------------------------\r\n" );
     
@@ -97,11 +97,17 @@ void application_task ( void )
     current = current3_get_current( &current3 );
     log_printf( &logger, " Current     = %.2f mA\r\n", current );
     log_printf( &logger, "---------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

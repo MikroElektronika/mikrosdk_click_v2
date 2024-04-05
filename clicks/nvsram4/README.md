@@ -116,7 +116,7 @@ void application_init ( void ) {
     }
 
     nvsram4_default_cfg ( &nvsram4 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Task " );
     
     log_printf( &logger, "-----------------------\r\n" );
@@ -126,25 +126,25 @@ void application_init ( void ) {
     memory_addr = 112233;
     
     nvsram4_set_cmd( &nvsram4, NVSRAM4_STATUS_WREN );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "  Write data : %s", demo_data );
     nvsram4_burst_write_memory( &nvsram4, memory_addr, &demo_data[ 0 ], 9 );
     log_printf( &logger, "-----------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     date.day_of_week = 4;
     date.day = 31;
     date.month = 12;
     date.year = 20;
     nvsram4_set_rtc_date( &nvsram4, date );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     time.hours = 23;
     time.min = 59;
     time.sec = 50;
     nvsram4_set_rtc_time( &nvsram4, time );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -159,21 +159,21 @@ In this example, we read a data string, which we have previously written to memo
 ```
 void application_task ( void ) {
     nvsram4_get_rtc_time( &nvsram4, &time );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
     nvsram4_get_rtc_date( &nvsram4, &date );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
     
     if ( time.sec != new_sec ) {
         log_printf( &logger, "  Date      : %.2d-%.2d-%.2d\r\n", ( uint16_t ) date.day, ( uint16_t ) date.month, ( uint16_t ) date.year );
         log_printf( &logger, "  Time      : %.2d:%.2d:%.2d\r\n", ( uint16_t ) time.hours, ( uint16_t ) time.min, ( uint16_t ) time.sec );
         log_printf( &logger, "- - - - - - - - - - - -\r\n" );
         new_sec = time.sec;
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
         
         if ( date.year != c_year ) {
             log_printf( &logger, "     Happy New Year    \r\n" );
             c_year = date.year;
-            Delay_ms( 10 );
+            Delay_ms ( 10 );
         } else {
             nvsram4_burst_read_memory( &nvsram4, memory_addr, &rx_data[ 0 ], 9 );
             log_printf( &logger, "  Read data : %s", rx_data );    
@@ -181,7 +181,7 @@ void application_task ( void ) {
                
         log_printf( &logger, "-----------------------\r\n" );
     } else {
-        Delay_ms( 1 );    
+        Delay_ms ( 1 );    
     }
 }
 ```

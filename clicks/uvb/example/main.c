@@ -68,11 +68,17 @@ void application_task ( void )
     log_printf( &logger, ">> UVB data: %d\r\n", uvb_data );
 
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 1500 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

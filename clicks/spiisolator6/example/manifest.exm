@@ -2,7 +2,7 @@
     "name": "SPI Isolator 6 Click",
     "description": "SPI Isolator 6 Click is a compact add-on board representing a digital isolator optimized for a serial peripheral interface. This board features the MAX22345, a fast, low-power 4-channel digital galvanic isolator from Analog Devices. This device comes with a maximum data rate of 200Mbps and transfers digital signals between circuits with different power domains featuring reinforced isolation for a withstand voltage rating of 3.75kVRMS for 60 seconds.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","MAX22345SAAP"],
     "category" : ["Click Boards > Interface > SPI"]
 }

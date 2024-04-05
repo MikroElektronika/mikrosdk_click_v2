@@ -289,6 +289,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -349,9 +354,9 @@ static err_t lteiot11_rsp_check ( uint8_t *rsp )
             lteiot11_clear_app_buf( );
             return LTEIOT11_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     lteiot11_process( );
     if ( strstr( app_buf, rsp ) )
     {
@@ -398,7 +403,7 @@ static void lteiot11_error_check ( err_t error_flag )
             break;
         }
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 static void lteiot11_log_app_buf ( void )
@@ -457,7 +462,7 @@ static err_t lteiot11_check_connection ( void )
     lteiot11_process( );
     if ( strstr( app_buf, CONNECTED ) )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         lteiot11_process( );
         lteiot11_log_app_buf( );
         log_printf( &logger, "\r\n" );
@@ -658,7 +663,11 @@ static err_t lteiot11_example ( void )
     error_flag = lteiot11_rsp_check( LTEIOT11_RSP_OK );
     func_error |= error_flag;
     lteiot11_error_check( error_flag );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #elif ( DEMO_EXAMPLE == EXAMPLE_SMS )
     // Check SMS mode
     #define CMGF_PDU "+CMGF: 0"
@@ -683,9 +692,37 @@ static err_t lteiot11_example ( void )
         func_error |= error_flag;
         lteiot11_error_check( error_flag );
     }
-    Delay_ms( 10000 );
-    Delay_ms( 10000 );
-    Delay_ms( 10000 );
+    // 30 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #elif ( DEMO_EXAMPLE == EXAMPLE_GNSS )
     lteiot11_process ( );
     if ( app_buf_len > ( sizeof ( LTEIOT11_RSP_GGA ) + LTEIOT11_GGA_ELEMENT_SIZE ) ) 

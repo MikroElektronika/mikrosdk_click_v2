@@ -104,7 +104,7 @@ static void btez_process ( void )
             process_cnt--;
             
             // Process delay 
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
     
@@ -139,7 +139,7 @@ void application_init ( void )
     btez_cfg_setup( &cfg );
     BTEZ_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     btez_init( &btez, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "Configuring the module...\r\n" );
     config_mode = 1;
@@ -167,6 +167,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

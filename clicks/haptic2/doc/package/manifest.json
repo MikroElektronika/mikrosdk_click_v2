@@ -25,14 +25,15 @@
     "name": "mikroe.click.haptic2",
     "product_link": "https://www.mikroe.com/haptic-2-click",
     "short_description": "HAPTIC 2 Click is a compact add-on board that contains a linear vibration driver. This board features the LC898302AXA, a motor driver dedicated to LRA and ERM applications from ON Semiconductor. Controlled by only one pin, it allows crisp vibration thanks to automatic braking and over-driving feature and ignores the deviation of resonance frequency thanks to auto-tuning function. The original driving waveform will enable you to reduce power consumption, and it is helpful to maintain battery lifetime. This Click board™ is suitable for numerous everyday applications such as indicator systems, game consoles, training equipment/simulators with haptics function, robotics and mechatronics, and many more.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Haptic2",
     "subdir_name": "lib_haptic2"
 }
+
 
 
 

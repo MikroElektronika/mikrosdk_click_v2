@@ -25,14 +25,15 @@
     "name": "mikroe.click.leddriver11",
     "product_link": "https://www.mikroe.com/led-driver-11-click",
     "short_description": "LED Driver 11 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the WLMDU9456001JT (172946001), a fully integrated constant current LED driver with the buck switching regulator and inductor in a single package from Würth Elektronik.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.LEDDriver11",
     "subdir_name": "lib_leddriver11"
 }
+
 
 
 

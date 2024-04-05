@@ -25,17 +25,18 @@
     "name": "mikroe.click.wifiesp",
     "product_link": "https://www.mikroe.com/wifi-esp-click",
     "short_description": "WiFi ESP click carries the ESP-WROOM-02 module that integrates ESP8266EX.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2033
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.WifiEsp",
     "subdir_name": "lib_wifiesp"
 }
+
 
 
 

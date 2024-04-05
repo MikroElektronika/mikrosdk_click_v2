@@ -119,13 +119,15 @@ void application_task ( void )
     hbridge_set_direction ( &hbridge, HBRIDGE_DIR_CW );
     hbridge_drive_motor ( &hbridge, 200, HBRIDGE_SPEED_MEDIUM );
     log_printf ( &logger, " Move 200 full steps clockwise\r\n\n" );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     hbridge_set_step_mode ( &hbridge, HBRIDGE_MODE_HALF_STEP );
     hbridge_set_direction ( &hbridge, HBRIDGE_DIR_CCW );
     hbridge_drive_motor ( &hbridge, 400, HBRIDGE_SPEED_FAST );
     log_printf ( &logger, " Move 400 half steps counter-clockwise\r\n\n" );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

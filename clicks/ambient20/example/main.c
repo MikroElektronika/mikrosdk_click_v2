@@ -81,11 +81,16 @@ void application_task ( void )
     log_printf( &logger, "Data 1: %.2f lx \r\n", data1 );
     log_printf( &logger, "- - - - - - - - - - - - -\r\n" );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

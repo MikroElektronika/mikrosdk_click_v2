@@ -119,7 +119,8 @@ void application_task ( void )
     voltage = qirx_read_voltage( &qirx, v_ref );
     log_printf( &logger, " Battery voltage: %d mV \r\n", voltage );
     log_printf( &logger, "----------------------- \r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

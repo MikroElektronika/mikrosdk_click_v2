@@ -25,17 +25,18 @@
     "name": "mikroe.click.pac1921",
     "product_link": "https://www.mikroe.com/pac1921-click",
     "short_description": "PAC1921 click is a versatile power monitoring and measuring device intended for the high speed, low latency measurements. This device can measure current, voltage or the power of the connected load.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2314
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.PAC1921",
     "subdir_name": "lib_pac1921"
 }
+
 
 
 

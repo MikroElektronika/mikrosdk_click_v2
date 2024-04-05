@@ -130,7 +130,7 @@ void application_init ( void )
     }
     log_printf( &logger, " Device ID   : 0x%.4X \r\n", device_id );
     log_printf( &logger, "----------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_info( &logger, " Application Task " );
 }
@@ -153,7 +153,7 @@ void application_task ( void )
     log_printf( &logger, " Pressure    : %.2f Pa\r\n", pressure );
     log_printf( &logger, " Temperature : %.2f C\r\n", temperature );
     log_printf( &logger, "----------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

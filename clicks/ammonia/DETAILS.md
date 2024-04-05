@@ -84,10 +84,10 @@ void application_init ( void )
     ammonia_cfg_setup( &cfg );
     AMMONIA_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ammonia_init( &ammonia, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     ammonia_heater( &ammonia, AMMONIA_HEATER_ON );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "-------------------- \r\n" );
     log_printf( &logger, "   Ammonia  click    \r\n" );
@@ -108,7 +108,7 @@ void application_task ( void )
 
     log_printf( &logger, "ADC value: %s \r\n", spi_adc_value );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

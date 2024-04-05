@@ -130,7 +130,8 @@ void application_task ( void )
     log_printf( &logger, " Z axis : %d\r\n", z_axis );
 
     log_printf( &logger, "---------------------------------\r\n" );
-    Delay_ms( 1500 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 500 );
 } 
 
 ```

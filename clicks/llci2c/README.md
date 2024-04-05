@@ -119,7 +119,7 @@ void application_task ( void )
     if ( temp_lsb & 0x10 ) temp_msb += 0.0625;
 
     log_info( &logger, " Ambient temperature : %2.f C", temp_msb );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

@@ -103,7 +103,7 @@ void application_init ( void )
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, " CAN Isolator  Click\r\n" );
     log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -142,10 +142,11 @@ void application_task ( void )
     for ( cnt = 0; cnt < 9; cnt ++ )
     {
         canisolator_generic_single_write( &canisolator, demo_message[ cnt ] );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
 #endif
 

@@ -69,7 +69,9 @@ void application_task ( void )
     {
         log_printf ( &logger, " VOUT: %.2f V\r\n\n", vout );
     }
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     vout += 0.5f;
     if ( vout > ( BUCK19_VOUT_MAX + BUCK19_FLOAT_COMPARE_TOLERANCE ) )
     {
@@ -79,6 +81,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -112,12 +112,12 @@ void application_task ( void )
     for ( cnt = 0; cnt <= 255; cnt += 15 )
     {
         digipot6_write_data( &digipot6, DIGIPOT6_VOLATILE_WIPER_0, cnt );
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
 
         wiper = digipot6_read_data( &digipot6, DIGIPOT6_VOLATILE_WIPER_0 );
 
         log_printf( &logger, " * Wiper position: %u *\r\n", ( uint16_t ) wiper );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 } 
 

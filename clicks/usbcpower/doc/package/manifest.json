@@ -25,14 +25,15 @@
     "name": "mikroe.click.usbcpower",
     "product_link": "https://www.mikroe.com/usb-c-power-click",
     "short_description": "USB-C Power Click is a compact add-on board that provides a quick and easy way to supply power without carrying multiple adapters or cables. This board features the TPS25750S, a highly integrated USB Type-C and Power Delivery (PD) controller with integrated power switches optimized for power applications from Texas Instruments. The TPS25750S integrates fully managed power paths (5V/3A with 36mΩ sourcing switch) with robust protection (reverse and inrush current as well as over/under voltage protection) and control for external battery charger IC for a complete USB-C PD solution. Besides web-based GUI and pre-configured firmware, the TPS25750S also has some GPIOs and LED indicators that are user-defined for either status or control information.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.USBCPower",
     "subdir_name": "lib_usbcpower"
 }
+
 
 
 

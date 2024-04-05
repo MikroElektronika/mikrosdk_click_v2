@@ -132,7 +132,7 @@ void application_task ( )
 
     dcmotor_set_duty_cycle ( &dcmotor, duty );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     if ( 10 == duty_cnt ) 
     {

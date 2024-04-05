@@ -92,7 +92,7 @@ void application_init ( void )
     mux2_cfg_setup( &cfg );
     MUX2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     mux2_init( &mux2, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "       MUX 2 Click\r\n" );
     log_printf( &logger, "------------------------\r\n" );
@@ -100,7 +100,7 @@ void application_init ( void )
     mux2_device_enable( &mux2 );
     log_printf( &logger, "    Enable MUX device\r\n" );
     log_printf( &logger, "------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -123,7 +123,11 @@ void application_task ( void )
         log_printf( &logger, "------------------------\r\n" );
         
         mux2_active_mux_channel( &mux2, n_cnt );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }  
 

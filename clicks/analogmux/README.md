@@ -118,7 +118,8 @@ void application_task ( void )
     log_printf( &logger, " Voltage: %.3f mV\r\n", val );
     log_printf( &logger, " -------------------\r\n" );
 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

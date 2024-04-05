@@ -25,17 +25,18 @@
     "name": "mikroe.click.lps22hb",
     "product_link": "https://www.mikroe.com/lps22hb-click",
     "short_description": "LPS22HB click is an easy solution for adding a digital barometer to your design. It carries the LPS22HB MEMS nano pressure sensor.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2074
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Lps22hb",
     "subdir_name": "lib_lps22hb"
 }
+
 
 
 

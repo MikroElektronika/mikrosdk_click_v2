@@ -124,7 +124,7 @@ void application_task ( void )
             balancer3_enable_cell_balance( &balancer3, BALANCER3_CELL_BALANCE_DIS );
         }
     }
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 }  
 
 ```

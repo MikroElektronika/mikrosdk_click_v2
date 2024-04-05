@@ -25,14 +25,15 @@
     "name": "mikroe.click.magneticrotary3",
     "product_link": "https://www.mikroe.com/magnetic-rotary-3-click",
     "short_description": "Magnetic Rotary 3 Click is a compact add-on board for accurate magnet-position sensing. This board features the AS5147, an SPI-configurable high-resolution rotary position sensor for fast absolute angle measurement over a full 360-degree range from ams AG.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.MagneticRotary3",
     "subdir_name": "lib_magneticrotary3"
 }
+
 
 
 

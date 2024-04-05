@@ -25,16 +25,17 @@
     "name": "mikroe.click.smoke2",
     "product_link": "https://www.mikroe.com/smoke-2-click",
     "short_description": "Smoke 2 Click is a compact add-on board that contains the most efficient version of the smoke detector. This board features the ADPD188BI, a complete photometric system for smoke detection using optical dual-wavelength technology from Analog Devices.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3816
     ],
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.Smoke2",
     "subdir_name": "lib_smoke2"
 }
+
 
 

@@ -25,14 +25,15 @@
     "name": "mikroe.click.nfctag5",
     "product_link": "https://www.mikroe.com/nfc-tag-5-click",
     "short_description": "NFC Tag 5 Click is a compact add-on board that contains a compact NFC tag IC. This board features the M24LR64E-R, a dynamic NFC/RFID tag IC with a dual interface 64-Kbit EEPROM from STMicroelectronics. It features an I2C interface alongside an RF contactless interface operating at 13.56MHz, organized as 8192Ã—8 bits in the I2C mode and 2048Ã—32 bits in the ISO 15693 and ISO 18000-3 mode 1 RF mode. The M24LR64E-R also features an energy harvesting analog output and a user-configurable digital output pin, used as an interrupt, toggling during either RF write in progress or RF busy mode.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "alias": "Click.NFCTag5",
     "cmake": true,
     "subdir_name": "lib_nfctag5"
 }
+
 
 
 

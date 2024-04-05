@@ -102,7 +102,8 @@ void application_task ( void )
 
     log_printf( &logger, "Battery voltage: %u mV\r\n", voltage );
 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

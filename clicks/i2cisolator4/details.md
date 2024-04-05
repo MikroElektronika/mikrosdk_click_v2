@@ -115,12 +115,12 @@ void application_init ( void ) {
     }
 
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "--------------------------------\r\n" );
     log_printf( &logger, "     Set I2C Slave Address      \r\n" );
     i2cisolator4_set_slave_address ( &i2cisolator4, I2CISOLATOR4_VAV_PRESS_DEV_ADDR );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -139,7 +139,8 @@ void application_task ( void ) {
     log_printf( &logger, " Diff. Pressure    : %.4f Pa\r\n", diff_press );
     log_printf( &logger, " Temperature       : %.4f C\r\n", temperature );
     log_printf( &logger, "--------------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

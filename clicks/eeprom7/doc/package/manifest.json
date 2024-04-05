@@ -25,17 +25,18 @@
     "name": "mikroe.click.eeprom7",
     "product_link": "https://www.mikroe.com/eeprom-7-click",
     "short_description": "EEPROM 7 Click is a compact add-on board that contains the highest-density memory solution. This board feature the 25CSM04, a 4-Mbit SPI Serial EEPROM with a 128-bit serial number and enhanced write protection mode from Microchip. Internally organized as 2,048 pages of 256 bytes each, the 25CSM04 comes up with the compatible SPI serial interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         4067
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.EEPROM7",
     "subdir_name": "lib_eeprom7"
 }
+
 
 
 

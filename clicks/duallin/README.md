@@ -91,7 +91,7 @@ void application_init ( void )
 
     duallin_bus1_status( &duallin, DUALLIN_PIN_STATE_HIGH );
     duallin_bus2_status( &duallin, DUALLIN_PIN_STATE_LOW );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```

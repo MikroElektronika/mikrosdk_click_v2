@@ -114,7 +114,7 @@ void application_task ( void )  {
         log_printf( &logger, " %u,%lu\r\n ", emg_an, time );
     }
     time += 5;
-    Delay_ms( 5 );
+    Delay_ms ( 5 );
 }
 
 ```

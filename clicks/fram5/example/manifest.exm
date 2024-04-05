@@ -2,7 +2,7 @@
     "name": "FRAM 5 Click",
     "description": "FRAM 5 Click is a compact add-on board representing a highly reliable ferroelectric random access memory solution. This board features the FM24V10, a 1Mbit nonvolatile memory employing an advanced ferroelectric process organized as 128K words of 8 bits each from Infineon. This I2C configurable FRAM performs read and write operations similar to a RAM providing reliable data retention for 151 years while eliminating the complexities, overhead, and system-level reliability problems caused by EEPROM and other nonvolatile memories.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","FM24V10-G"],
     "category" : ["FRAM"]
 }

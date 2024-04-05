@@ -68,7 +68,7 @@ void application_task ( void )
 {
     uv_data = uv3_read_measurements( &uv3 );
     
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 
     risk_lvl = uv3_risk_level( uv_data );
 
@@ -101,11 +101,17 @@ void application_task ( void )
         log_printf( &logger, "Extreme\r\n " );
     }
 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

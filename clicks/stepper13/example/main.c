@@ -69,23 +69,31 @@ void application_task ( void )
     stepper13_set_direction ( &stepper13, STEPPER13_DIR_CW );
     stepper13_set_step_mode ( &stepper13, STEPPER13_MODE_FULL_STEP );
     stepper13_drive_motor ( &stepper13, 200, STEPPER13_SPEED_SLOW );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf ( &logger, " Move 200 half steps counter-clockwise, speed: medium\r\n\n" );
     stepper13_set_direction ( &stepper13, STEPPER13_DIR_CCW );
     stepper13_set_step_mode ( &stepper13, STEPPER13_MODE_HALF_STEP );
     stepper13_drive_motor ( &stepper13, 200, STEPPER13_SPEED_MEDIUM );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf ( &logger, " Move 400 quarter steps counter-clockwise, speed: fast\r\n\n" );
     stepper13_set_direction ( &stepper13, STEPPER13_DIR_CCW );
     stepper13_set_step_mode ( &stepper13, STEPPER13_MODE_QUARTER_STEP );
     stepper13_drive_motor ( &stepper13, 400, STEPPER13_SPEED_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

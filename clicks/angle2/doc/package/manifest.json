@@ -25,17 +25,18 @@
     "name": "mikroe.click.angle2",
     "product_link": "https://www.mikroe.com/angle-2-click",
     "short_description": "The MA700 sensor IC features quadrature encoded outputs so that it can directly replace similar mechanical devices. The advantages of a contactless quadrature encoder are many, therefore Angular 2 click is equipped with a three-pin header, offering an easy access to these outputs.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2629
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.Angle2",
     "subdir_name": "lib_angle2"
 }
+
 
 
 

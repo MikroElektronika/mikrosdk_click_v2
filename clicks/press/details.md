@@ -129,7 +129,7 @@ void application_init ( void )
     }
 #endif
     log_printf( &logger, " ______________________ \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

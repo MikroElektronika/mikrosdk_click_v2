@@ -107,7 +107,7 @@ void application_init ( void ) {
 
     ozone3_default_cfg ( &ozone3 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 
 ```
@@ -123,7 +123,7 @@ void application_init ( void ) {
 void application_task ( void ) {
     float o3_ppm = ozone3_get_o3_ppm( &ozone3 );
     log_printf( &logger, "\tOzone : %.2f ppm \r\n", o3_ppm );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 ```

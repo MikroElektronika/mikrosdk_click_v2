@@ -98,9 +98,9 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, " Application Init " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     // Click initialization.
     lteiot6_cfg_setup( &lteiot6_cfg );
@@ -180,12 +180,12 @@ void application_task ( void )
         }
         case LTEIOT6_CHECK_CONNECTION:
         {
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
             if ( LTEIOT6_OK == lteiot6_check_connection_parameters( ) )
             {
                 example_state = LTEIOT6_CONFIGURE_FOR_MESSAGES;
             }
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
             break;
         }
         case LTEIOT6_CONFIGURE_FOR_MESSAGES:
@@ -194,13 +194,13 @@ void application_task ( void )
             {
                 example_state = LTEIOT6_MESSAGES;
             }
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
             break;
         }
         case LTEIOT6_MESSAGES:
         {
             lteiot6_send_meesage();
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
             break;
         }
         default:

@@ -25,17 +25,18 @@
     "name": "mikroe.click.audioxover",
     "product_link": "https://www.mikroe.com/audio-xover-click",
     "short_description": "Audio Xover Click is an analog active crossover solution for two-way loudspeakers. The primary purpose of the crossover circuit in a loudspeaker is to split an incoming audio signal into frequency bands that are passed to the speaker or “driver” best suited.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3251
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.AudioXover",
     "subdir_name": "lib_audioxover"
 }
+
 
 
 

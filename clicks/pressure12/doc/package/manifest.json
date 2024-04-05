@@ -25,17 +25,18 @@
     "name": "mikroe.click.pressure12",
     "product_link": "https://www.mikroe.com/pressure-12-click",
     "short_description": "Pressure 12 click is a barometric gauge pressure measuring Click board™, equipped with the Amplified Basic Pressure sensor series (ABP), which features a ratiometric analog output, which is proportional to the applied pressure.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2777
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.Pressure12",
     "subdir_name": "lib_pressure12"
 }
+
 
 
 

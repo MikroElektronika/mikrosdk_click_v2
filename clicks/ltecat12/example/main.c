@@ -273,6 +273,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -338,7 +343,7 @@ static err_t ltecat12_rsp_check ( uint8_t *rsp )
             ltecat12_clear_app_buf( );
             return LTECAT12_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
     if ( strstr( app_buf, rsp ) )
     {
@@ -386,7 +391,7 @@ static void ltecat12_error_check( err_t error_flag )
         }
     }
     ltecat12_clear_app_buf(  );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 static void ltecat12_log_app_buf ( void )
@@ -443,7 +448,7 @@ static err_t ltecat12_check_connection( void )
     ltecat12_process( );
     if ( strstr( app_buf, CONNECTED ) )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         ltecat12_process( );
         ltecat12_log_app_buf( );
         log_printf( &logger, "\r\n" );
@@ -654,7 +659,11 @@ static err_t ltecat12_example ( void )
     error_flag = ltecat12_rsp_check( LTECAT12_RSP_OK );
     func_error |= error_flag;
     ltecat12_error_check( error_flag );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #elif ( DEMO_EXAMPLE == EXAMPLE_SMS )
     // Check SMS mode
     #define CMGF_PDU "+CMGF: 0"
@@ -679,9 +688,37 @@ static err_t ltecat12_example ( void )
         func_error |= error_flag;
     }
     ltecat12_error_check( error_flag );
-    Delay_ms( 10000 );
-    Delay_ms( 10000 );
-    Delay_ms( 10000 );
+    // 30 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #elif ( DEMO_EXAMPLE == EXAMPLE_CALL )
     uint8_t cmd_buf[ 100 ] = { 0 };
     
@@ -709,8 +746,17 @@ static err_t ltecat12_example ( void )
     func_error |= error_flag;
     ltecat12_error_check( error_flag );
     
-    Delay_ms( 5000 );
-    Delay_ms( 5000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "Hanging up \r\n" );
     ltecat12_send_cmd( &ltecat12, LTECAT12_CMD_CHUP );
@@ -720,10 +766,27 @@ static err_t ltecat12_example ( void )
     ltecat12_error_check( error_flag );
     ltecat12_clear_app_buf( );
     
-    Delay_ms( 5000 );
-    Delay_ms( 5000 );
-    Delay_ms( 5000 );
-    Delay_ms( 5000 );
+    // 20 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #else
     #error "No demo example selected"
 #endif

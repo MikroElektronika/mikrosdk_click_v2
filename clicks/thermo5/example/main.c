@@ -52,10 +52,10 @@ void application_init ( void )
     thermo5_cfg_setup( &cfg );
     THERMO5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     thermo5_init( &thermo5, &cfg );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     log_printf( &logger, " Thermo 5 click ready! \r\n" );
     log_printf( &logger, "-----------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -74,11 +74,20 @@ void application_task ( void )
     exter_temp_3 = thermo5_read_extern_3_temp( &thermo5 );
     log_printf( &logger, " External temperature 3 : %.2f \r\n", exter_temp_2 );
     log_printf( &logger, "---------------------------------\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

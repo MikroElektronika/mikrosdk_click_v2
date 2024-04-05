@@ -53,7 +53,7 @@ void application_init ( void )
         for ( ; ; );
     }
     hbridgedriver_glo_enable( &hbridgedriver, HBRIDGEDRIVER_PROP_EN );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Task " );
 }
 
@@ -61,20 +61,33 @@ void application_task ( void )
 {
     log_printf( &logger, " The motor turns forward! \r\n" );
     hbridgedriver_forward( &hbridgedriver );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " The motor brakes! \r\n" );
     hbridgedriver_braking( &hbridgedriver );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " The motor turns in reverse \r\n" );
     hbridgedriver_reverse( &hbridgedriver );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " The motor coasting \r\n" );
     hbridgedriver_coasting( &hbridgedriver );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

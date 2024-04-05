@@ -32,14 +32,18 @@
 extern "C"{
 #endif
 
-#include "mikrosdk_version.h"
-
-#ifdef __GNUC__
-#if mikroSDK_GET_VERSION < 20800ul
-#include "rcu_delays.h"
-#else
-#include "delays.h"
+/**
+ * Any initialization code needed for MCU to function properly.
+ * Do not remove this line or clock might not be set correctly.
+ */
+#ifdef PREINIT_SUPPORTED
+#include "preinit.h"
 #endif
+
+#ifdef MikroCCoreVersion
+    #if MikroCCoreVersion >= 1
+        #include "delays.h"
+    #endif
 #endif
 
 #include "drv_digital_out.h"
@@ -475,8 +479,8 @@ err_t stepper10_set_sleep_pin ( stepper10_t *ctx, uint8_t state );
  * @param[in] ctx : Click context object.
  * See #stepper10_t object definition for detailed explanation.
  * @param[out] mode : Mixed decay mode:
- *                   @li @c 0 - Fast Decay: 37.5% (Fast Decay = OSCM × 6),
- *                   @li @c 1 - Fast Decay: 50% (Fast Decay = OSCM × 8),
+ *                   @li @c 0 - Fast Decay: 37.5% (Fast Decay = OSCM ï¿½ 6),
+ *                   @li @c 1 - Fast Decay: 50% (Fast Decay = OSCM ï¿½ 8),
  *                   @li @c 2 - Fast Decay only,
  *                   @li @c 3 - ADMD.
  * @return @li @c  0 - Success,
@@ -492,8 +496,8 @@ err_t stepper10_get_mixed_decay ( stepper10_t *ctx, uint8_t *mode );
  * @param[in] ctx : Click context object.
  * See #stepper10_t object definition for detailed explanation.
  * @param[in] mode : Mixed decay mode:
- *                   @li @c 0 - Fast Decay: 37.5% (Fast Decay = OSCM × 6),
- *                   @li @c 1 - Fast Decay: 50% (Fast Decay = OSCM × 8),
+ *                   @li @c 0 - Fast Decay: 37.5% (Fast Decay = OSCM ï¿½ 6),
+ *                   @li @c 1 - Fast Decay: 50% (Fast Decay = OSCM ï¿½ 8),
  *                   @li @c 2 - Fast Decay only,
  *                   @li @c 3 - ADMD.
  * @return @li @c  0 - Success,

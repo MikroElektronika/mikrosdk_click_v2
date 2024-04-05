@@ -93,10 +93,10 @@ void application_init ( void )
     brushless7_cfg_setup( &cfg );
     BRUSHLESS7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     brushless7_init( &brushless7, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     brushless7_default_cfg( &brushless7 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     demo_type_data = BRUSHLESS7_CTRL_TYPE_DUTY;
 
@@ -135,31 +135,108 @@ void application_task ( void )
 {
     brushless7_control_mode_set( &brushless7, BRUSHLESS7_CTRL_TYPE_STOP );
     brushless7_toggle_dir_pin_state ( &brushless7 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     brushless7_control_mode_set( &brushless7, demo_type_data );
     if ( BRUSHLESS7_CTRL_TYPE_DUTY == demo_type_data )
     {
         log_printf( &logger, " The motor is accelerating...\r\n" );
         log_printf( &logger, "------------------------------\r\n" );
         brushless7_change_duty( &brushless7, 70.0 );
-        Delay_ms( 20000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
         
         log_printf( &logger, " The motor is slowing down...\r\n" );
         log_printf( &logger, "------------------------------\r\n" );
         brushless7_change_duty( &brushless7, 8.0 );
-        Delay_ms( 20000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     else if ( BRUSHLESS7_CTRL_TYPE_RPM == demo_type_data )
     {
         log_printf( &logger, " The motor is accelerating...\r\n" );
         log_printf( &logger, "------------------------------\r\n" );
         brushless7_start_rpm( &brushless7, 1000 );
-        Delay_ms( 20000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
        
         log_printf( &logger, " The motor is slowing down...\r\n" );
         log_printf( &logger, "------------------------------\r\n" );
         brushless7_start_rpm( &brushless7, 100 );
-        Delay_ms( 20000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

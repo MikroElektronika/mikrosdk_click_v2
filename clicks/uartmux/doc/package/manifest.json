@@ -25,17 +25,18 @@
     "name": "mikroe.click.uartmux",
     "product_link": "https://www.mikroe.com/uart-mux-click",
     "short_description": "The UART Mux click is a Click board™ that switches the UART pins (RX and TX) from the mikroBUS™ to one of the four available outputs.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2925
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.UartMux",
     "subdir_name": "lib_uartmux"
 }
+
 
 
 

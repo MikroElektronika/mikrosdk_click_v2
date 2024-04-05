@@ -25,17 +25,18 @@
     "name": "mikroe.click.vibrasense",
     "product_link": "https://www.mikroe.com/vibra-sense-click",
     "short_description": "Vibra Sense click is a low cost micro shock vibration sensor with a digital output which can be set as an Interrupt (mikroBUS INT pin) An onboard potentiometer lets you set the interrupt threshold.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1561
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.VibraSense",
     "subdir_name": "lib_vibrasense"
 }
+
 
 
 

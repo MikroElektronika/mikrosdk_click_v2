@@ -25,14 +25,15 @@
     "name": "mikroe.click.digipot8",
     "product_link": "https://www.mikroe.com/digi-pot-8-click",
     "short_description": "DIGI POT 8 Click is a compact add-on board used as a digitally controlled potentiometer. This board features the AD5206, 6-channel 256-position digitally controlled variable resistor device from Analog Devices.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.DIGIPOT8",
     "subdir_name": "lib_digipot8"
 }
+
 
 
 

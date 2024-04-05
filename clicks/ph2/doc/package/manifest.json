@@ -25,14 +25,15 @@
     "name": "mikroe.click.ph2",
     "product_link": "https://www.mikroe.com/ph-2-click",
     "short_description": "pH 2 Click is a compact add-on board used to determine the alkalinity or acidity of a sample. This board features the MCP607, a low-bias current Op Amp from Microchip, performing level shifting and high-input impedance buffering in a single-supply pH-electrode circuit.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.pH2",
     "subdir_name": "lib_ph2"
 }
+
 
 
 

@@ -90,10 +90,10 @@ void application_init ( void )
     SCANNER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     scanner_init( &scanner, &cfg );
 
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 
     scanner_startup( &scanner );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     scanner_serial_write_reg( &scanner, SCANNER_REG_MODE, SCANNER_DATA_NORMAL_MODE );
     

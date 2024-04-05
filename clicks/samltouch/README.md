@@ -89,7 +89,7 @@ void application_init ( void )
     SAMLTOUCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     samltouch_init( &samltouch, &cfg );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
   
 ```

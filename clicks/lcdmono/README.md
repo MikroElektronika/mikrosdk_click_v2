@@ -114,7 +114,11 @@ void application_init ( void )
     tx_set.start_cord_y = 80;
     lcdmono_draw_text( &lcdmono, demo_text_128x128px, &tx_set, LCDMONO_REFRESH_DISPLAY_END );
 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     lcdmono_clear( &lcdmono );
 }
   
@@ -129,13 +133,21 @@ void application_init ( void )
 void application_task ( void )
 {
     lcdmono_draw_frame( &lcdmono, demo_img_mikroe_light );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     lcdmono_draw_frame( &lcdmono, demo_img_mikroe );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     lcdmono_draw_frame( &lcdmono, demo_img_logo_light );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     lcdmono_draw_frame( &lcdmono, demo_img_logo );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

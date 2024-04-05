@@ -25,17 +25,18 @@
     "name": "mikroe.click.trf",
     "product_link": "https://www.mikroe.com/trf-click",
     "short_description": "tRF click is a complete short-range RF communication solution, operating in the 868 MHz ISM license-free frequency band. The Click board™ is based on LE70-868 RF module, from Telit. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         969
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Trf",
     "subdir_name": "lib_trf"
 }
+
 
 
 

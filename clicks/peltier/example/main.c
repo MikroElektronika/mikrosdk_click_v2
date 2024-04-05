@@ -61,29 +61,50 @@ void application_task ( void )
     log_printf( &logger, "------------------\r\n" );
     peltier_enable_ldo1( &peltier );
     peltier_disable_ldo2( &peltier );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "   3.3V output    \r\n" );
     log_printf( &logger, "------------------\r\n" );
     peltier_disable_ldo1( &peltier );
     peltier_enable_ldo2( &peltier );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "   Both outputs   \r\n" );
     log_printf( &logger, "------------------\r\n" );
     peltier_enable_ldo1( &peltier );
     peltier_enable_ldo2( &peltier );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, " Disable  outputs \r\n" );
     log_printf( &logger, "------------------\r\n" );
     peltier_disable_ldo1( &peltier );
     peltier_disable_ldo2( &peltier );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -127,23 +127,23 @@ void application_init ( void )
 void application_task ( void )
 {
     read_volt = adc3_read_voltage( &adc3, ADC3_SELECT_CHANNEL_1, ADC3_SAMPLE_RATE_12, ADC3_PGA_GAIN_X1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "Channel 1 : %0.2f  V \r\n", read_volt );
 
     read_volt = adc3_read_voltage( &adc3, ADC3_SELECT_CHANNEL_2, ADC3_SAMPLE_RATE_12, ADC3_PGA_GAIN_X1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "Channel 2 : %0.2f  V \r\n", read_volt );
     
     read_volt = adc3_read_voltage( &adc3, ADC3_SELECT_CHANNEL_3, ADC3_SAMPLE_RATE_12, ADC3_PGA_GAIN_X1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "Channel 3 : %0.2f  V \r\n", read_volt );
     
     read_volt = adc3_read_voltage( &adc3, ADC3_SELECT_CHANNEL_4, ADC3_SAMPLE_RATE_12, ADC3_PGA_GAIN_X1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "Channel 4 : %0.2f  V \r\n", read_volt );
     
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

@@ -59,7 +59,7 @@ void application_init ( void )
     log_printf( &logger, "--------------------\r\n" );
     log_printf( &logger, " Charge the battery \r\n" );
     log_printf( &logger, "--------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -67,7 +67,17 @@ void application_task ( void )
     if ( solarenergy_check_indicator( &solarenergy ) )
     {
         solarenergy_charge_disable( &solarenergy );
-        Delay_ms ( 10000 );
+        // 10 seconds delay
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     else
     {
@@ -77,6 +87,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

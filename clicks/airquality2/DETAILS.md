@@ -93,7 +93,7 @@ void application_init ( void )
     log_printf( &logger, "----------------------------------\r\n" );
     log_printf( &logger, "           Air quality 2          \r\n" );
     log_printf( &logger, "----------------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```

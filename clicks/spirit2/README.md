@@ -98,13 +98,13 @@ void application_init ( void )
     spirit2_cfg_setup( &cfg );
     SPIRIT2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     spirit2_init( &spirit2, &cfg );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_info( &logger, "---- Configuring the module ----" );
     spirit2_power_module( &spirit2, SPIRIT2_MODULE_WAKE_UP );
     spirit2_reset( &spirit2 );
     spirit2_set_mode( &spirit2, SPIRIT2_OPERATING_MODE );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "COMMAND MODE\r\n" );
     spirit2_send_cmd( &spirit2, SPIRIT2_CMD_ENTER_COMMAND_MODE );
     spirit2_process( );
@@ -127,7 +127,7 @@ void application_init ( void )
 #ifdef DEMO_APP_TRANSMITTER
     log_info( &logger, "---- TRANSMITTER MODE ----" );
 #endif 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```
@@ -146,7 +146,8 @@ void application_task ( void ) {
 #ifdef DEMO_APP_TRANSMITTER 
     spirit2_generic_write( &spirit2, TEXT_TO_SEND, strlen( TEXT_TO_SEND ) );
     log_info( &logger, "---- The message has been sent ----" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif
 }
 

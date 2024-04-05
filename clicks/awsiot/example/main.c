@@ -123,12 +123,14 @@ void application_init ( void )
     
     log_printf( &logger, "Reset device\r\n\n" );
     awsiot_reset_device ( &awsiot );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "Factory reset\r\n" );
     strcpy ( app_buf, AWSIOT_CMD_FACTORY_RESET );
     awsiot_send_cmd ( &awsiot, app_buf );
     awsiot_read_response ( &awsiot );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "Vendor model\r\n" );
     strcpy ( app_buf, AWSIOT_CMD_CONF_CHECK );
@@ -193,6 +195,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -254,7 +261,7 @@ static err_t awsiot_read_response ( awsiot_t *ctx )
             awsiot_clear_app_buf( );
             return AWSIOT_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
     Delay_ms ( 100 );
     awsiot_process( ctx );

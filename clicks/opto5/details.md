@@ -109,10 +109,10 @@ void application_init ( void ) {
 
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     opto5_default_cfg ( &opto5 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -122,7 +122,11 @@ The output pin is toggled every 5 seconds.
 
 ```
 void application_task ( void ) {
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " Pin toggling...\r\n" );
     opto5_pin_toggle( &opto5 );
 }

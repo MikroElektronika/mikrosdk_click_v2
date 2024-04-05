@@ -95,7 +95,7 @@ static void thingstream_process ( void )
             process_cnt--;
             
             // Process delay 
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
 }
@@ -147,7 +147,9 @@ void application_init ( void )
     thingstream_init( &thingstream, &cfg );
 
     thingstream_module_power( &thingstream, true );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, " --->>> INFO.. \r\n" );
     thingstream_send_command( &thingstream, THINGSTREAM_INFO );
@@ -191,6 +193,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

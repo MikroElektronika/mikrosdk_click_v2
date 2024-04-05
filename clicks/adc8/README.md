@@ -132,7 +132,7 @@ void application_task ( void )
     log_printf( &logger, "- CH(1-3): %.2f\r\n", diff_volt.ch_1_3 );
     log_printf( &logger, "- CH(2-3): %.2f\r\n", diff_volt.ch_2_3 );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

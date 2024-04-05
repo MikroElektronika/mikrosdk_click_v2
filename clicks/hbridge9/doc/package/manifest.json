@@ -25,14 +25,15 @@
     "name": "mikroe.click.hbridge9",
     "product_link": "https://www.mikroe.com/h-bridge-9-click",
     "short_description": "H-Bridge 9 Click is a compact add-on board that contains six MOSFET half-bridge outputs. This board features the L99UDL01, a six-channel half-bridge driver monolithic integrated circuit that is PWM configurable and current regulated from STMicroelectronics.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.HBridge9",
     "subdir_name": "lib_hbridge9"
 }
+
 
 
 

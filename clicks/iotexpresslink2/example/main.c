@@ -233,11 +233,24 @@ void application_task ( void )
     strcat ( app_buf, TOPIC_NUM );
     iotexpresslink2_send_cmd ( &iotexpresslink2, app_buf );
     iotexpresslink2_read_response ( &iotexpresslink2, IOTEXPRESSLINK2_NORMAL_TIMEOUT );
-    Delay_ms ( 8000 );
+    // 8 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -303,7 +316,7 @@ static err_t iotexpresslink2_read_response ( iotexpresslink2_t *ctx, uint32_t ti
             iotexpresslink2_clear_app_buf( );
             return IOTEXPRESSLINK2_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
     Delay_ms ( 100 );
     while ( IOTEXPRESSLINK2_OK == iotexpresslink2_process( ctx ) )

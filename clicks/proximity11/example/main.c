@@ -54,7 +54,7 @@ void application_init ( void )
     PROXIMITY11_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     proximity11_init( &proximity11, &cfg );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     init_status = proximity11_default_cfg( &proximity11 );
 
@@ -81,12 +81,17 @@ void application_task ( void )
     log_printf( &logger, "PS  : %u [count]\r\n", ps_value );
     log_printf( &logger, "ALS : %.2f [Lx]\r\n\r\n", als_value );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

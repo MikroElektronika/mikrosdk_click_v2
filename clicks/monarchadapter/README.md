@@ -113,7 +113,9 @@ void application_task ( void )
 {
     monarchadapter_send_command( &monarchadapter, MONARCH_CMD_CEREG );
     monarchadapter_process( );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

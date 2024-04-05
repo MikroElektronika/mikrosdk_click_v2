@@ -100,11 +100,11 @@ void fm_case_seek ( fm_t *ctx )
 {
     fm_seek( ctx );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     fm_end_seek( ctx );
 
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
 
     received_signal_strength_indicator = fm_get_received_signal_strength_indicator( ctx );
     channel_frequency = fm_get_channel_frequency( ctx );
@@ -115,11 +115,11 @@ void fm_case_tune ( fm_t *ctx )
 {
     error_flag = fm_tune( ctx, tune_freq );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     fm_end_tune( ctx );
 
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
 
     if ( error_flag == 0 )
     {
@@ -220,11 +220,11 @@ void fm_case_station_1 ( fm_t *ctx  )
 {
     fm_tune_channel( ctx, station1 );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     fm_end_tune( ctx );
 
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
 
     received_signal_strength_indicator = fm_get_received_signal_strength_indicator( ctx );
     channel_frequency = fm_get_channel_frequency( ctx );
@@ -241,11 +241,11 @@ void fm_case_station_2 ( fm_t *ctx )
 {
     fm_tune_channel( ctx, station2 );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     fm_end_tune( ctx );
 
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
 
     received_signal_strength_indicator = fm_get_received_signal_strength_indicator( ctx );
     channel_frequency = fm_get_channel_frequency( ctx );
@@ -262,11 +262,11 @@ void fm_case_station_3 ( fm_t *ctx )
 {
     fm_tune_channel( ctx, station3 );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     fm_end_tune( ctx );
 
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
 
     received_signal_strength_indicator = fm_get_received_signal_strength_indicator( ctx );
     channel_frequency = fm_get_channel_frequency( ctx );
@@ -283,11 +283,11 @@ void fm_case_station_4 ( fm_t *ctx )
 {
     fm_tune_channel( ctx, station4 );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     fm_end_tune( ctx );
 
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
 
     received_signal_strength_indicator = fm_get_received_signal_strength_indicator( ctx );
     channel_frequency = fm_get_channel_frequency( ctx );
@@ -304,11 +304,11 @@ void fm_case_station_5 ( fm_t *ctx )
 {
     fm_tune_channel( ctx, station5 );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     fm_end_tune( ctx );
 
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
 
     received_signal_strength_indicator = fm_get_received_signal_strength_indicator( ctx );
     channel_frequency = fm_get_channel_frequency( ctx );
@@ -327,11 +327,11 @@ void fm_case_tune_up ( fm_t *ctx )
 
     if ( error_flag == 0 )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
 
         fm_end_tune( ctx );
 
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
         
         received_signal_strength_indicator = fm_get_received_signal_strength_indicator( ctx );
         channel_frequency = fm_get_channel_frequency( ctx );
@@ -356,11 +356,11 @@ void fm_case_tune_down ( fm_t *ctx )
 
     if ( error_flag == 0 )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
 
         fm_end_tune( ctx );
 
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
     
         received_signal_strength_indicator = fm_get_received_signal_strength_indicator( ctx );
         channel_frequency = fm_get_channel_frequency( ctx );
@@ -410,7 +410,7 @@ void application_init ( void )
     FM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     fm_init( &fm, &cfg );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     fm_default_cfg( &fm );
 
     memory = 0;
@@ -432,7 +432,7 @@ void application_init ( void )
         log_printf( &logger, "channel frequency: %.2f MHz\r\n", channel_frequency );
         fm_case_memorize( );
         log_printf( &logger, "-----------------------\r\n" );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         cnt++;
     }  
     
@@ -444,23 +444,78 @@ void application_init ( void )
 void application_task ( void )
 { 
     fm_case_station_1( &fm );
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
        
     fm_case_station_2( &fm );
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     fm_case_station_3( &fm );
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     fm_case_station_4( &fm );
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     fm_case_station_5( &fm );
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

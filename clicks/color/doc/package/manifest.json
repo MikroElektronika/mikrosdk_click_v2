@@ -25,17 +25,18 @@
     "name": "mikroe.click.color",
     "product_link": "https://www.mikroe.com/color-click",
     "short_description": "Color click is a color light sensing Click board™, featuring the popular TSC3471 integrated color sensor. It is capable of sensing red, green, and blue light components, as well as the clear light.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         780
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.Color",
     "subdir_name": "lib_color"
 }
+
 
 
 

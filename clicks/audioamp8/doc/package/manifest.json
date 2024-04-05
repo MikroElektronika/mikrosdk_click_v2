@@ -25,14 +25,15 @@
     "name": "mikroe.click.audioamp8",
     "product_link": "https://www.mikroe.com/audioamp-8-click",
     "short_description": "AudioAmp 8 Click is a compact add-on board that reproduces input audio signal at sound-producing output elements, with desired volume and power levels. This board features the MA12070, a super-efficient audio power amplifier from Infineon Technologies. This I2C configurable audio amplifier is based on proprietary multi-level switching technology, enabling low power loss during operation. It supports a supply voltage range from 4 to 26V, allowing it to be used in many applications. Besides, it is equipped with protection features, allowing a reliable operation.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.AudioAmp8",
     "subdir_name": "lib_audioamp8"
 }
+
 
 
 

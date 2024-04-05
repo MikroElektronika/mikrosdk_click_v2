@@ -25,17 +25,18 @@
     "name": "mikroe.click.eeg",
     "product_link": "https://www.mikroe.com/eeg-click",
     "short_description": "EEG Click is a Click board™ that allows monitoring of brain activity. Although not suitable for clinical examination, it is quite sufficient to allow some insight into brain activity. EEG click is equipped with a high-sensitivity circuit which amplifies faint electrical signals from the brain, allowing them to be sampled by a host MCU.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2594
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.EEG",
     "subdir_name": "lib_eeg"
 }
+
 
 
 

@@ -109,7 +109,7 @@ void application_task ( void )
     log_printf( &logger, " Voltage: %.2f\r\n", map_out);
    
     log_printf( &logger, " miliVolts \r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }  
 
 ```

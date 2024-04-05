@@ -109,7 +109,7 @@ void application_task ( void )
     if ( touch != 0 )
     {
         log_printf( &logger, "-- New Touch\r\n" );
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
     }
 }
 ```

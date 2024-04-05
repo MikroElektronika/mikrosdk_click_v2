@@ -101,17 +101,29 @@ void application_init ( void )
 void application_task ( void )
 {
     digivref_set_output_voltage( &digivref, DIGIVREF_REF_VOLTAGE_4096mV );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     digivref_set_output_voltage(  &digivref, DIGIVREF_REF_VOLTAGE_3072mV );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     digivref_set_output_voltage( &digivref, DIGIVREF_REF_VOLTAGE_2048mV );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     digivref_set_output_voltage( &digivref, DIGIVREF_REF_VOLTAGE_1024mV );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     digivref_set_output_voltage( &digivref, DIGIVREF_REF_VOLTAGE_2048mV );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     digivref_set_output_voltage( &digivref, DIGIVREF_REF_VOLTAGE_3072mV );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

@@ -79,11 +79,11 @@ void application_init ( void )
     TEMPLOG3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     templog3_init( &templog3, &cfg );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     templog3_default_cfg( &templog3 );
     
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 
     log_printf( &logger, "** Temp-Log 3 click is initialized ** \r\n" );
 }
@@ -101,11 +101,16 @@ void application_task ( void )
     
     check_limit_status( ret_status );
     
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -66,7 +66,7 @@ void application_init ( void ) {
 
     temphum16_default_cfg ( &temphum16 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     temphum16_get_device_id( &temphum16, &device_id );
     log_printf( &logger, "-----------------------\r\n" );
@@ -92,12 +92,17 @@ void application_task ( void ) {
         temphum16_get_humidity( &temphum16, &humidity );
         log_printf( &logger, " Humidity    : %.2f %%\r\n", humidity ); 
         log_printf( &logger, "-----------------------\r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

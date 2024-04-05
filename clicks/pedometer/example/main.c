@@ -70,13 +70,18 @@ void application_task ( void )
         s_counter = pedometer_get_step_counter( &pedometer );
         log_printf( &logger, " Step Counter : %d \r\n ", s_counter );
        
-        Delay_ms( 50 );
+        Delay_ms ( 50 );
     }
 
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

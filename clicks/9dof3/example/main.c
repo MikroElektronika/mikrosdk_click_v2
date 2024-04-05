@@ -82,7 +82,7 @@ void application_init ( void )
     
     log_printf( &logger, "-------------------------\r\n" );
     c9dof3_default_cfg( &c9dof3 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -95,11 +95,16 @@ void application_task ( void )
 
     log_printf( &logger, "------------------------------------------\r\n" );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

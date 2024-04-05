@@ -62,7 +62,7 @@ void application_init ( void )
     }
 
     pressure16_default_cfg ( &pressure16 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Task " );
     
     pressure16_get_device_id( &pressure16, &device_id );
@@ -78,7 +78,7 @@ void application_init ( void )
     log_printf( &logger, "---------------------------\r\n" );
     log_printf( &logger, "      Start measuring\r\n" );
     log_printf( &logger, "---------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
@@ -89,11 +89,16 @@ void application_task ( void )
     log_printf( &logger, " Pressure    : %.2f mbar \r\n", pressure );
     log_printf( &logger, " Temperature :  %.2f C \r\n", temperature );
     log_printf( &logger, "---------------------------\r\n" ); 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

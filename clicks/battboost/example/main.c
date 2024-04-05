@@ -72,7 +72,7 @@ void application_init ( void )
     }
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
@@ -97,7 +97,7 @@ void application_task ( void )
         {
             log_printf( &logger, " Charge cycle count: %lu \r\n", chenergy );
         }
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     else
     {
@@ -122,12 +122,17 @@ void application_task ( void )
                 }
             }
         }
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

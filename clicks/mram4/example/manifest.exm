@@ -2,7 +2,7 @@
     "name": "MRAM 4 Click",
     "description": "MRAM 4 Click is a compact add-on board representing a magneto-resistive random-access memory solution. This board features the EM064LX, an industrial STT-MRAM persistent memory from Everspin Technologies. It is a 64Mb MRAM IC RAM and can achieve up to 200MHz as a single and double data rate (STR/DTR). The MRAM technology is analog to Flash technology with SRAM-compatible read/write timings (Persistent SRAM, P-SRAM), where data is always non-volatile. It also has a hardware write-protection feature and performs read and write operations with data retention for ten years and unlimited read, write, and erase operations for the supported life of the chip.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","EM064LXQADG13IS1R"],
     "category" : ["Click Boards > Storage > MRAM"]
 }

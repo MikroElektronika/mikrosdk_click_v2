@@ -25,13 +25,14 @@
     "name": "mikroe.click.timerrelay",
     "product_link": "https://www.mikroe.com/timer-relay-click",
     "short_description": "Timer Relay Click is a compact add-on board that allows you to control the load with a timer. This board features the NE5555, a precision timer from Diodes Incorporated. It is a precision timing circuit capable of producing accurate time delays in a monostable mode of operation.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.TimerRelay",
     "subdir_name": "lib_timerrelay"
 }
+
 
 

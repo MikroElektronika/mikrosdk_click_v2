@@ -146,7 +146,8 @@ void application_task ( void )
                                           EXPAND16_PIN_MASK_GPIO_7 );
     expand16_read_reg( &expand16, EXPAND16_REG_INPUT_STATE, &tmp_data ); 
     show_input_pin_state( tmp_data );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "Output pins state: LOW \r\n" );
     log_printf( &logger, "- - - - - - - - - - - - -\r\n" );
@@ -155,7 +156,8 @@ void application_task ( void )
                                           EXPAND16_PIN_MASK_NONE );
     expand16_read_reg( &expand16, EXPAND16_REG_INPUT_STATE, &tmp_data ); 
     show_input_pin_state( tmp_data );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

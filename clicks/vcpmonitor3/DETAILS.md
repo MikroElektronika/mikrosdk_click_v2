@@ -143,7 +143,7 @@ void application_task ( void )
     log_printf( &logger, " Voltage at DVCC : %.2f V \r\n", volt_vcc );
 
     log_printf( &logger, " ------------------------------- \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

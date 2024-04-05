@@ -95,7 +95,7 @@ void application_init ( void ) {
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Init " );
 
     // Click initialization.
@@ -119,7 +119,7 @@ void application_init ( void ) {
     nvsram2_burst_write( &nvsram2, memory_addr, demo_data, 9 );
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, "-> Write data : %s \r\n", demo_data );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -134,7 +134,11 @@ void application_task ( void ) {
     nvsram2_burst_read( &nvsram2, memory_addr, rx_data, 9 );
     log_printf( &logger, "-----------------------\r\n"  );
     log_printf( &logger, "<- Read data  : %s \r\n", rx_data );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }   
 
 ```

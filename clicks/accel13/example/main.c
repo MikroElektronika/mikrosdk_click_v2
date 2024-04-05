@@ -105,7 +105,7 @@ void application_task ( void )
 
     log_printf( &logger, "* Z : %d \r\n", axis.z);
     log_printf( &logger, "-------------------------\r\n" );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
     
     // Detections Tap on the axis
     
@@ -129,6 +129,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -25,12 +25,13 @@
     "name": "mikroe.click.c6dofimu22",
     "product_link": "https://www.mikroe.com/6dof-imu-22-click",
     "short_description": "6DOF IMU 22 Click is a compact add-on board for advanced motion tracking. This board features the ICM-42670-P, a high-performance 6-axis MEMS MotionTracking IMU from TDK InvenSense. The ICM-42670-P integrates a 3-axis gyroscope and accelerometer, offering exceptional precision in motion detection. It supports both I2C and SPI interfaces for communication, features a substantial 2.25Kbytes FIFO, and includes two programmable interrupts that enhance power efficiency through a wake-on-motion feature.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.6DOFIMU22",
     "subdir_name": "lib_c6dofimu22"
 }
+
 

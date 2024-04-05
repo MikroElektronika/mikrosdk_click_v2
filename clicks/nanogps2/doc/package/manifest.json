@@ -25,17 +25,18 @@
     "name": "mikroe.click.nanogps2",
     "product_link": "https://www.mikroe.com/nano-gps-2-click",
     "short_description": "Nano GPS 2 Click features the smallest GPS module with an integrated patch antenna, the ORG1510-MK05 a module from OriginGPS.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3763
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.NanoGps2",
     "subdir_name": "lib_nanogps2"
 }
+
 
 
 

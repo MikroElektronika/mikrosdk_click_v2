@@ -25,17 +25,18 @@
     "name": "mikroe.click.mux3",
     "product_link": "https://www.mikroe.com/mux-3-click",
     "short_description": "MUX 3 Click is the general purpose multiplexer which offers multiplexing one input channel to eight single-ended output channels.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2955
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Mux3",
     "subdir_name": "lib_mux3"
 }
+
 
 
 

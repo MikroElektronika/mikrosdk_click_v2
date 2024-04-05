@@ -25,17 +25,18 @@
     "name": "mikroe.click.compass",
     "product_link": "https://www.mikroe.com/compass-click",
     "short_description": "Compass click is an add-on board in mikroBUS form factor. It features LSM303DLHC ultra compact high performance e-compass module.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         562
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Compass",
     "subdir_name": "lib_compass"
 }
+
 
 
 

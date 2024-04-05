@@ -63,12 +63,12 @@ void application_init ( void )
     altitude2_cfg_setup( &cfg );
     ALTITUDE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     altitude2_init( &altitude2, &cfg );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     altitude2_reset( &altitude2 );
     
     altitude2_set_ratio ( &altitude2, ALTITUDE2_RATIO_2048, ALTITUDE2_RATIO_2048 );
     log_printf( &logger, "Altitude 2 is initialized\r\n" );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 }
 
 void application_task ( void )
@@ -80,11 +80,16 @@ void application_task ( void )
     log_printf( &logger, "Altitude: %.2f m\r\n", altitude );
     log_printf( &logger, "---------------------------------------\r\n\r\n" );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

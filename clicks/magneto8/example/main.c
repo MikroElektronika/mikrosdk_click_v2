@@ -55,7 +55,7 @@ void application_init ( void )
 
     magneto8_default_cfg( &magneto8 );
     log_printf( &logger, "--- Configuration done ---- \r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void application_task ( void )
@@ -70,11 +70,16 @@ void application_task ( void )
     log_printf( &logger, "Angle : %.1f deg\r\n", angle );
 
     log_printf( &logger, "---------------------- \r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

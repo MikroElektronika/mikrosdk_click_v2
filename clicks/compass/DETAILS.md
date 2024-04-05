@@ -114,7 +114,7 @@ void application_task ( void )
     log_printf( &logger, "Magnet axis -- X: %d Y: %d  Z: %d \r\n", accel_axis[ 0 ], accel_axis[ 1 ], accel_axis[ 2 ] );
    
     log_printf( &logger, " \r\n");
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

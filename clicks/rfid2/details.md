@@ -101,9 +101,9 @@ void application_init ( void ) {
 
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     rfid2_reset( &rfid2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     app_buf_len = 0;
     app_buf_cnt = 0;

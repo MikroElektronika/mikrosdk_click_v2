@@ -70,11 +70,16 @@ void application_task ( void )
     magnetics_val = angle_get_magnetics( &angle );
     log_printf( &logger, "Magnetics :%d \r\n", magnetics_val );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

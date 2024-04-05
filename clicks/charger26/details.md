@@ -109,17 +109,21 @@ void application_init ( void )
     }
     
     charger26_default_cfg ( &charger26 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, " Connect input power and battery. \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " Enableing output. \r\n" );
     charger26_enable_output ( &charger26, CHARGER26_ENABLE_OUTPUT );
     
     while ( CHARGER26_PIN_STATE_LOW != charger26_get_chg_state( &charger26 ) )
     {
         log_printf( &logger, " Check connection. \r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     
     log_info( &logger, " Application Task " );
@@ -144,7 +148,7 @@ void application_task ( void )
         charger26_enable_output ( &charger26, CHARGER26_DISABLE_OUTPUT );
         for ( ; ; );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

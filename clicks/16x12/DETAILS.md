@@ -95,7 +95,7 @@ void application_init ( void )
     c16x12_init( &c16x12, &cfg );
 
     c16x12g_device_reset( &c16x12 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     c16x12_default_cfg( &c16x12 );
     c16x12g_set_global_current_control( &c16x12, 255 );
@@ -121,7 +121,17 @@ void application_init ( void )
     c16x12g_startABM( &c16x12 );
     
     c16x12g_displayByte( &c16x12, 'G' );
-    Delay_ms( 11000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     c16x12g_configABM( &c16x12, C16X12G_ABM_NUM_1, &abm_2 );
     c16x12g_startABM( &c16x12 );
@@ -147,18 +157,26 @@ void applicationTask ( void )
     for ( cnt = 1; cnt <= 12; cnt++ )
     {
         c16x12g_set_led( &c16x12, cnt, cnt, C16X12G_LED_STATE_ON, C16X12G_STOP_SETTINGS );
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
     }
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     c16x12g_display_byte( &c16x12, 'G' );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     c16x12g_display_image( &c16x12, &demo_image_light[ 0 ] );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     c16x12g_display_image( &c16x12, &demo_image_dark[ 0 ] );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     c16x12g_display_text( &c16x12, &demo_text[ 0 ], 16, scroll_speed );
 } 

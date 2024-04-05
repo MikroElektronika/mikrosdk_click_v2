@@ -89,7 +89,7 @@ void application_init ( void )
     RS4855_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rs4855_init( &rs4855, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
 #ifdef DEMO_APP_RECEIVER
     rs4855_set_re_state( &rs4855, RS4855_PIN_STATE_LOW );
@@ -120,7 +120,8 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     rs4855_generic_write( &rs4855, TEXT_TO_SEND, 8 );
     log_info( &logger, "---- Data sent ----" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif  
 }
 

@@ -66,7 +66,7 @@ void application_init ( void )
     // Wait for the powerup status
     do {
         accel4_generic_read( &accel4, ACCEL4_REG_INT_STATUS, &temp_data, 1 );
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }while ( ( temp_data & 1 ) != 1 );
     
     //Read device ID
@@ -80,7 +80,7 @@ void application_init ( void )
     
     accel4_default_cfg ( &accel4 );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, " Application Task " );
 }
 
@@ -95,12 +95,17 @@ void application_task ( void )
         log_printf( &logger, " > Y: %.2f\r\n", axes.y );
         log_printf( &logger, " > Z: %.2f\r\n", axes.z );
         log_printf( &logger, "*****************************************\r\n" );
-        Delay_ms( 300 );
+        Delay_ms ( 300 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

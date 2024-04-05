@@ -74,7 +74,9 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     mcp2003b_generic_write( &mcp2003b, DEMO_TEXT_MESSAGE, strlen( DEMO_TEXT_MESSAGE ) );
     log_printf( &logger, "%s", ( char * ) DEMO_TEXT_MESSAGE );
-    Delay_ms( 3000 ); 
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 ); 
 #else
     uint8_t rx_data = 0;
     if ( mcp2003b_generic_read( &mcp2003b, &rx_data, 1 ) > 0 )
@@ -86,6 +88,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

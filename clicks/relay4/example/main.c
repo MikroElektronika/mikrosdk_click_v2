@@ -60,17 +60,30 @@ void application_task ( void )
     log_printf( &logger, " Relay 1 set to normally open state\r\n" );
     relay4_set_relay2_close ( &relay4 );
     log_printf( &logger, " Relay 2 set to normally close state\r\n\n" );
-    Delay_ms ( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     relay4_set_relay1_close ( &relay4 );
     log_printf( &logger, " Relay 1 set to normally close state\r\n" );
     relay4_set_relay2_open ( &relay4 );
     log_printf( &logger, " Relay 2 set to normally open state\r\n\n" );
-    Delay_ms ( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

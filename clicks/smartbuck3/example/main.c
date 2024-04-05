@@ -58,14 +58,14 @@ void application_init ( void )
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( SMARTBUCK3_ERROR == smartbuck3_default_cfg ( &smartbuck3 ) )
     {
         log_error( &logger, " Default configuration." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Task " );
     vout_mv = SMARTBUCK3_VOUT_MIN;
 }
@@ -74,7 +74,7 @@ void application_task ( void )
 {
     if ( SMARTBUCK3_OK == smartbuck3_set_voltage( &smartbuck3, vout_mv ) )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         if ( SMARTBUCK3_OK == smartbuck3_get_voltage( &smartbuck3, &vout_mv ) )
         {
             log_printf ( &logger, " Vout: %u mV\r\n", vout_mv );
@@ -85,11 +85,18 @@ void application_task ( void )
     {
         vout_mv = SMARTBUCK3_VOUT_MIN;
     }
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

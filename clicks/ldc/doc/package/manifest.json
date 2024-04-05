@@ -25,14 +25,16 @@
     "name": "mikroe.click.ldc",
     "product_link": "https://www.mikroe.com/ldc-click",
     "short_description": "LDC Click is a compact add-on board that measures inductance change which a conductive target causes when it moves into the inductor's AC magnetic field. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.LDC",
     "subdir_name": "lib_ldc"
 }
+
+
 
 
 

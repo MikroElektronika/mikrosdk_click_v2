@@ -116,7 +116,9 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     rs2323_generic_write( &rs2323, DEMO_TEXT_MESSAGE, strlen( DEMO_TEXT_MESSAGE ) );
     log_printf( &logger, "%s", ( char * ) DEMO_TEXT_MESSAGE );
-    Delay_ms( 3000 ); 
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 ); 
 #else
     uint8_t rx_data;
     if ( rs2323_generic_read( &rs2323, &rx_data, 1 ) > 0 )

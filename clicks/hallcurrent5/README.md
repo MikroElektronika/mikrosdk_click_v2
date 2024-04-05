@@ -122,7 +122,7 @@ void application_task ( void )
     
     tmp = hallcurrent5_generic_read( &hallcurrent5 );
     log_printf( &logger, "** ADC value : [DEC]- %d, [HEX]- 0x%x \r\n", tmp, tmp );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     sum_adc = 0;
     for(cnt = 0; cnt < 20; cnt++)
@@ -141,7 +141,7 @@ void application_task ( void )
     log_printf( &logger, " ADC value: %d \r\n", adc_value);
     log_printf( &logger, " Current : \r\n", adc_value);
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 ```

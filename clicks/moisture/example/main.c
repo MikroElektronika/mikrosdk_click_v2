@@ -58,7 +58,7 @@ void application_init ( void )
     MOISTURE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     moisture_init( &moisture, &cfg );
     moisture_soft_reset( &moisture );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     data_res = moisture_read_word( &moisture, MOISTURE_REG_DEVICE_ID );
 
@@ -77,7 +77,7 @@ void application_init ( void )
 
     log_printf( &logger, " --- Calibration start --- \r\n" );
     moisture_cal( &moisture );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, " --- Calibration finishing --- \r\n" );
 }
@@ -86,11 +86,16 @@ void application_task ( void )
 {
     moisture_data = moisture_get_data( &moisture  );
     log_printf( &logger, " Moisture data : %d \r\n", (int16_t)moisture_data );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

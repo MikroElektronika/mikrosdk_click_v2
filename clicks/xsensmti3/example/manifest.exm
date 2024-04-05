@@ -2,7 +2,7 @@
     "name": "XSENS MTi-3 Click",
     "description": "XSENS MTi-3 Click is a compact add-on board that contains a fully functional module that can be configured as an Inertial Measurement Unit, Vertical reference Unit, or even an Attitude & Heading Reference System. This board features the MTi-3, a module outputting 3D orientation, 3D rate of turn, 3D accelerations, and 3D magnetic field, depending on the product configuration from Xsens.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","XSENS MTi-3"],
     "category" : ["Motion"]
 }

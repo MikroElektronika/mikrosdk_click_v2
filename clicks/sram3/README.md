@@ -106,7 +106,7 @@ void application_init ( void ) {
 
     log_info( &logger, " Application Task " );
     sram3_release_hold( &sram3 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -124,13 +124,14 @@ void application_task ( void ) {
     sram3_enable_write( &sram3 );
     sram3_write( &sram3, 0x00, &buf[0], 6 );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     sram3_read( &sram3, 0x00, &buff_out[0], 6 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "Data read from memory: %s \r\n", buff_out );
     log_printf( &logger, "---------------------------------------------\r\n" );
 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

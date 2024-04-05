@@ -25,17 +25,18 @@
     "name": "mikroe.click.stspin250",
     "product_link": "https://www.mikroe.com/stspin250-click",
     "short_description": "STSPIN250 click is a brushed DC motor driver with the current limiting and current sensing.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2616
     ],
-    "version": "2.1.0.17",
+    "version": "2.1.0.18",
     "cmake": true,
     "alias": "Click.Stspin250",
     "subdir_name": "lib_stspin250"
 }
+
 
 
 

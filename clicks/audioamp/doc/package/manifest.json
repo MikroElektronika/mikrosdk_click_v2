@@ -25,17 +25,18 @@
     "name": "mikroe.click.audioamp",
     "product_link": "https://www.mikroe.com/audioamp-click",
     "short_description": "AudioAmp Click is a compact add-on board that can add a mono audio amplifier function to your application. This board features the LM48100Q-Q1, a Boomer™ mono 1.3W audio power amplifier with output fault detection and volume control from Texas Instruments. The AudioAmp Click has one dual 3.5mm audio input jack and, next to it, a screw terminal for connecting output wires to a 1.3W, 8 Ohm passive speaker. Each input has its own independent 32-step volume control.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1871
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.AudioAmp",
     "subdir_name": "lib_audioamp"
 }
+
 
 
 

@@ -120,13 +120,13 @@ void application_init ( void ) {
         log_printf( &logger, "     Failed\r\n" );
     }
     log_printf( &logger, "-----------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     environment2_sgp40_heater_off( &environment2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     environment2_config_sensors( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -143,23 +143,24 @@ void application_init ( void ) {
 
 void application_task ( void ) {
     environment2_get_temp_hum(  &environment2, &humidity, &temperature );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, " Humidity    : %.2f %% \r\n", humidity );
     log_printf( &logger, " Temperature : %.2f C \r\n", temperature );
     
     environment2_get_air_quality( &environment2, &air_quality );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, " Air Quality : %d \r\n", air_quality );
     log_printf( &logger, "- - - - - - - - - -  - \r\n" );
     
     environment2_get_voc_index( &environment2, &voc_index );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, " VOC Index   : %d  \r\n", ( uint16_t ) voc_index );
     log_printf( &logger, "-----------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

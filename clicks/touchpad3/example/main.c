@@ -38,33 +38,33 @@ void display_status ( void ) {
     switch ( status_data ) {
         case ( TOUCHPAD3_CMD_STATUS_SUCCESS ) : { 
             log_printf( &logger, " Command execution successful " );
-            Delay_ms( 10 );
+            Delay_ms ( 10 );
             break;
         }
         case ( TOUCHPAD3_CMD_STATUS_PARAM_OUT_OF_RANGE ) : {  
             log_printf( &logger, "    Parameter out of range    " );
-            Delay_ms( 10 );
+            Delay_ms ( 10 );
             break;
         }
         case TOUCHPAD3_CMD_STATUS_TIMEOUT: { 
             log_printf( &logger,"           Timeout :          " );
             log_printf( &logger, "  not enough bytes received   " );
-            Delay_ms( 10 );
+            Delay_ms ( 10 );
             break;
         }
         case TOUCHPAD3_CMD_STATUS_UNRECOGNIZED: { 
             log_printf( &logger, "     Unrecognized command     ");
-            Delay_ms( 10 );
+            Delay_ms ( 10 );
             break;
         }
         case TOUCHPAD3_CMD_STATUS_INVALID_PARAM: {
             log_printf( &logger, "       Invalid parameter      " );
-            Delay_ms( 10 );
+            Delay_ms ( 10 );
             break;
         }
         case TOUCHPAD3_CMD_STATUS_MISSING_OR_EXTRA_PARAM: {
             log_printf( &logger, "  Missing or extra parameter  " );
-            Delay_ms( 10 );
+            Delay_ms ( 10 );
             break;
         }
         default: { 
@@ -106,38 +106,43 @@ void application_init ( void ) {
     touch_id_state = 0;
     log_printf( &logger, "------------------------------\r\n" );
     device_id = touchpad3_get_device_id( &touchpad3 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "     Get Device ID : %d \r\n      ", device_id );
     log_printf( &logger, "------------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     status_data = touchpad3_config_touch( &touchpad3, TOUCHPAD3_TOUCH_GESTURE_ENABLE );
     
     log_printf( &logger, "     Touch Enable Status:     \r\n");
     display_status( );
     log_printf( &logger, "------------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) {
     if ( touchpad3_get_int( &touchpad3 ) == TOUCHPAD3_INT_STATUS_HIGH ) {
        
        touchpad3_get_touch( &touchpad3, &touch_data, &x_axis, &y_axis );
-       Delay_ms( 100 );
+       Delay_ms ( 100 );
 
         if ( ( touch_data.tch_state == TOUCHPAD3_STATE_TCH ) && ( touch_data.touch_id == touch_id_state ) ) {   
             log_printf( &logger, "  X Coordinate : %d   \r\n" , x_axis );
             log_printf( &logger, "  Y Coordinate : %d   \r\n" , y_axis );
             log_printf( &logger, "------------------------------\r\n" );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

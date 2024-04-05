@@ -114,7 +114,11 @@ void application_task ( void )
         
         log_printf( &logger, " Channel  A : VOUT ~ %.2f mV\r\n", v_out );
         log_printf( &logger, "--------------------\r\n" );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 
     for ( n_cnt = 0; n_cnt < 4096; n_cnt += 315 )
@@ -128,7 +132,11 @@ void application_task ( void )
         
         log_printf( &logger, " Channel  B : VOUT ~ %.2f mV\r\n", v_out );
         log_printf( &logger, "--------------------\r\n" );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     
     for ( n_cnt = 0; n_cnt < 4096; n_cnt += 315 )
@@ -142,7 +150,11 @@ void application_task ( void )
         
         log_printf( &logger, " Channel  C : VOUT ~ %.2f mV\r\n", v_out );
         log_printf( &logger, "--------------------\r\n" );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 
     for ( n_cnt = 0; n_cnt < 4096; n_cnt += 315 )
@@ -156,10 +168,14 @@ void application_task ( void )
         
         log_printf( &logger, " Channel  D : VOUT ~ %.2f mV\r\n", v_out );
         log_printf( &logger, "--------------------\r\n" );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

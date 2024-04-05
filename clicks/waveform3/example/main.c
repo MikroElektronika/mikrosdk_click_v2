@@ -73,7 +73,7 @@ void application_init ( void ) {
     }
 
     waveform3_default_cfg( &waveform3 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     log_info( &logger, " Application Task " );
     waveform3_set_mode( &waveform3, WAVEFORM3_CFG_MODE_SINUSOIDAL, WAVEFORM3_CFG_FREQ_REG0, WAVEFORM3_CFG_PHASE_REG0 );
 }
@@ -85,20 +85,29 @@ void application_task ( void ) {
         if ( start_frequency / rising_factor < 100 ) {
             start_frequency += rising_factor;
             waveform3_set_freq( &waveform3, start_frequency, WAVEFORM3_CFG_FREQ_REG0 );
-            Delay_ms( 5 );
+            Delay_ms ( 5 );
         } else {
             rising_factor += 10;
         }
     } else {
         for ( cfg_mode_switch = 0 ; cfg_mode_switch < 4 ; cfg_mode_switch++ ) {
         waveform3_set_mode( &waveform3, cfg_mode_switch, WAVEFORM3_CFG_FREQ_REG0, WAVEFORM3_CFG_PHASE_REG0 );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
         }
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

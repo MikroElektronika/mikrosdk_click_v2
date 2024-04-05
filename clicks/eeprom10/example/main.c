@@ -76,7 +76,7 @@ void application_task ( void )
     {
         log_error( &logger, " Write operation failed!!! " );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     error_flag = eeprom10_read_n_byte( &eeprom10, EEPROM10_TEST_ADDRESS, rx_data, 14 );
     if ( EEPROM10_OK == error_flag )
@@ -87,11 +87,16 @@ void application_task ( void )
     {
         log_error( &logger, " Read operation failed!!! " );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

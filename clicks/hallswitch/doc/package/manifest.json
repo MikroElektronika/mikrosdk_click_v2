@@ -25,17 +25,18 @@
     "name": "mikroe.click.hallswitch",
     "product_link": "https://www.mikroe.com/hall-switch-click",
     "short_description": "Hall Switch click is a magnetic field activated dual-relay Click board™.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2328
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.HallSwitch",
     "subdir_name": "lib_hallswitch"
 }
+
 
 
 

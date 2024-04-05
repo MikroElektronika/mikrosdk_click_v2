@@ -94,12 +94,12 @@ void application_init ( void )
     log_printf( &logger, "----------------------\r\n" );
     log_printf( &logger, " Hardware reset\r\n" );
     ccrf2_hw_reset( &ccrf2 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "----------------------\r\n" );
     log_printf( &logger, " Default config\r\n" );
     ccrf2_default_cfg( &ccrf2 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "----------------------\r\n" );
 
@@ -115,7 +115,7 @@ void application_init ( void )
 #endif
 
     log_printf( &logger, "----------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -147,7 +147,8 @@ void application_task ( void )
     log_printf( &logger, " Sent message: MikroE\r\n" );
     log_printf( &logger, " Packet number: %u\r\n", ccrf2.packet_counter );
     log_printf( &logger, "----------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif
 }
 

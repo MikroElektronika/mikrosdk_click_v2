@@ -62,7 +62,7 @@ void application_init ( void )
     motion_default_cfg ( &motion );
     log_printf( &logger, "  Enable Motion sensor\r\n" );
     log_printf( &logger, "------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     motion_state = MOTION_NO_DETECT;
     motion_old_state = MOTION_DETECTED;
@@ -91,6 +91,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

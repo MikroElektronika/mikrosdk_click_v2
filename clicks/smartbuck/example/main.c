@@ -103,7 +103,7 @@ void application_init ( void )
 void application_task ( void )
 {
     smartbuck_send_cmd_pac( &smartbuck, SMARTBUCK_REFRESH_V_CMND );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     smartbuck_get_data( &smartbuck, &voltage_res[ 0 ], &current_res[ 0 ], &power_res[ 0 ] );
     
     check_byte = 0x80;
@@ -129,6 +129,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

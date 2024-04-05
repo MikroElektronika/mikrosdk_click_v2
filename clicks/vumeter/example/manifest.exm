@@ -2,7 +2,7 @@
     "name": "VU Meter Click",
     "description": "VU Meter Click is a compact add-on board representing a volume unit meter that displays the intensity of an audio signal. This board features the LM3914, a monolithic integrated circuit that senses analog voltage levels and drives a 10-segment bar graph display from Texas Instruments. This Click board™ is manufactured with a sound detecting device (microphone), Op-Amp, and the LM3914, which gleams the bar graph display according to the sound’s quality. The LM3914 is an analog-controlled driver meaning it can control (turn ON or OFF) a display by an analog input voltage and eliminates the need for additional programming.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","TPL0501","LM3914","XGURUGX10D"],
     "category" : ["Microphone"]
 }

@@ -25,17 +25,18 @@
     "name": "mikroe.click.buttonpower",
     "product_link": "https://www.mikroe.com/button-power-click",
     "short_description": "Button Power Click is a very interesting interactive gadget on a Click board™. It is an integrated capacitive touch sensor display in the form of a button. By utilizing an advanced capacitive touch sensing technology, the CTHS15CIC05ONOFF sensor can successfully replace the traditional mechanical button, allowing very simplified yet reliable user interfaces to be developed. Besides the touch detection, this sensor also features a green power symbol icon with backlight, which makes the Click board™ very useful for building various stylized and visually appealing interfaces.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2945
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.ButtonPower",
     "subdir_name": "lib_buttonpower"
 }
+
 
 
 

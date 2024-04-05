@@ -25,17 +25,18 @@
     "name": "mikroe.click.gsm4",
     "product_link": "https://www.mikroe.com/gsm-4-click",
     "short_description": "GSM 4 click is a compact quad-band GSM cellular network communication solution, featuring the quad-band 2.5G GSM/GPRS SARA-G350 module. This module features a full set of options for the cellular networking and communication, such as the network status indication, jamming detection, embedded internet protocols, including TCP/IP, UDP, FTP, PPP, HTTP, SMTP, full GPRS multislot class 10 implementation, and more. Data communication speed is rated up to 42.8 for the uplink and 85.6 kbps for downlink connection.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         1959
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.GSM4",
     "subdir_name": "lib_gsm4"
 }
+
 
 
 

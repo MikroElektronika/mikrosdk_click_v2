@@ -1,0 +1,37 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
+    "category": "Click Boards > Wireless connectivity > GSM/LTE",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "4G LTE GNSS click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.c4gltegnss",
+    "product_link": "https://www.mikroe.com/4g-ltegnss-click",
+    "short_description": "4G LTE&GNSS Click is a compact add-on board designed for advanced global tracking and telematics applications, enabling developers to build highly efficient and smaller solutions without compromising performance. This board features the LENA-R8, a multi-mode LTE Cat 1bis module from u-blox. It stands out for its compact size and extensive network compatibility. It supports 14 LTE bands, four GSM/GPRS bands for universal connectivity, and integrated u-blox GNSS for precise global tracking. The board facilitates seamless communication via UART and includes a USB interface for comprehensive device management and firmware updates.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.4GLTEGNSS",
+    "subdir_name": "lib_c4gltegnss"
+}
+
+

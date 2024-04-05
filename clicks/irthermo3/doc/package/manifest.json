@@ -25,17 +25,18 @@
     "name": "mikroe.click.irthermo3",
     "product_link": "https://www.mikroe.com/ir-thermo-3-click",
     "short_description": "IrThermo 3 click is a device which allows contactless measurement of the object temperature.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2504
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.IrThermo3",
     "subdir_name": "lib_irthermo3"
 }
+
 
 
 

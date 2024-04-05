@@ -125,7 +125,7 @@ void application_task ( void )
         
         pin_position <<= 1;
 
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
 }  
 

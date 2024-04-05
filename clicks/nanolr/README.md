@@ -104,7 +104,8 @@ void application_init ( void )
 #ifdef DEMO_APP_TRANSMITTER
     log_printf( &logger,  "---- TRANSMITER MODE ----\r\n" );
 #endif 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -126,7 +127,8 @@ void application_task ( void )
     nanolr_send_data( &nanolr, TEXT_TO_SEND, strlen( TEXT_TO_SEND ) );
     log_printf( &logger, "The message \"%s\" has been sent!\r\n", ( uint8_t * ) TEXT_TO_SEND );
     log_printf( &logger, "------------------------------------------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif
 }
 

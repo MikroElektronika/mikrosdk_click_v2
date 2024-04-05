@@ -63,38 +63,44 @@ void application_init ( void )
     c4x4rgb_init( &c4x4rgb, &cfg );
     
     c4x4rgb_fill_screen( &c4x4rgb, C4X4RGB_COLOR_WHITE );
-    Delay_ms( 100 ); 
+    Delay_ms ( 100 ); 
     
     c4x4rgb_color_mash();
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
 {
     c4x4rgb_snake( C4X4RGB_COLOR_BLUE );
-    Delay_ms( 500 ); 
+    Delay_ms ( 500 ); 
     
     c4x4rgb_snake_return( C4X4RGB_COLOR_LIGHT_BLUE );
-    Delay_ms( 1000 ); 
+    Delay_ms ( 1000 ); 
     
     c4x4rgb_snake(  C4X4RGB_COLOR_GREEN );
-    Delay_ms( 500 ); 
+    Delay_ms ( 500 ); 
     
     c4x4rgb_snake_return( C4X4RGB_COLOR_YELLOW );
-    Delay_ms( 1000 ); 
+    Delay_ms ( 1000 ); 
     
     c4x4rgb_snake( C4X4RGB_COLOR_RED );
-    Delay_ms( 500 ); 
+    Delay_ms ( 500 ); 
     
     c4x4rgb_snake_return( C4X4RGB_COLOR_PURPLE );
-    Delay_ms( 1000 ); 
+    Delay_ms ( 1000 ); 
     
     c4x4rgb_fill_screen( &c4x4rgb, C4X4RGB_COLOR_WHITE );
-    Delay_ms( 100 ); 
+    Delay_ms ( 100 ); 
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -125,108 +131,108 @@ static void c4x4rgb_logic_one ( void )
 static void c4x4rgb_color_mash ( void )
 {
     c4x4rgb_set_diode( &c4x4rgb, 1, C4X4RGB_COLOR_BLUE );
-    Delay_ms( MASH_DELAY );
+    Delay_ms ( MASH_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 2, C4X4RGB_COLOR_YELLOW );
-    Delay_ms( MASH_DELAY );
+    Delay_ms ( MASH_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 3, C4X4RGB_COLOR_LIGHT_BLUE );
-    Delay_ms( MASH_DELAY );
+    Delay_ms ( MASH_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 4, C4X4RGB_COLOR_WHITE );
-    Delay_ms( MASH_DELAY );
+    Delay_ms ( MASH_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 5, C4X4RGB_COLOR_PURPLE );
-    Delay_ms( MASH_DELAY );
+    Delay_ms ( MASH_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 6, C4X4RGB_COLOR_GREEN );
-    Delay_ms( MASH_DELAY );
+    Delay_ms ( MASH_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 7, C4X4RGB_COLOR_RED );
-    Delay_ms( MASH_DELAY );
+    Delay_ms ( MASH_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 8, C4X4RGB_COLOR_BLUE );
-    Delay_ms( MASH_DELAY );
+    Delay_ms ( MASH_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 9, C4X4RGB_COLOR_YELLOW );
-    Delay_ms( MASH_DELAY );
+    Delay_ms ( MASH_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 10, C4X4RGB_COLOR_LIGHT_BLUE );
-    Delay_ms( MASH_DELAY );
+    Delay_ms ( MASH_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 11, C4X4RGB_COLOR_WHITE );
-    Delay_ms( MASH_DELAY );
+    Delay_ms ( MASH_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 12, C4X4RGB_COLOR_PURPLE );
-    Delay_ms( MASH_DELAY );
+    Delay_ms ( MASH_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 13, C4X4RGB_COLOR_GREEN );
-    Delay_ms( MASH_DELAY );
+    Delay_ms ( MASH_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 14, C4X4RGB_COLOR_RED );
-    Delay_ms( MASH_DELAY );
+    Delay_ms ( MASH_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 15, C4X4RGB_COLOR_BLUE );
-    Delay_ms( MASH_DELAY );
+    Delay_ms ( MASH_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 16, C4X4RGB_COLOR_RED );
-    Delay_ms( MASH_DELAY );
+    Delay_ms ( MASH_DELAY );
 }
 
 static void c4x4rgb_snake ( uint32_t snake_color )
 {
     c4x4rgb_set_diode( &c4x4rgb, 4, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 3, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 2, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 1, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 5, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 9, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 13, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 14, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 15, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 16, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 12, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 8, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 7, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 6, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 10, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 11, snake_color );
 }
 
 static void c4x4rgb_snake_return ( uint32_t snake_color )
 {
     c4x4rgb_set_diode( &c4x4rgb, 11, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 10, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 6, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 7, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 8, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 12, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 16, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 15, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 14, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 13, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 9, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 5, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 1, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 2, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 3, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
     c4x4rgb_set_diode( &c4x4rgb, 4, snake_color );
-    Delay_ms( SNAKE_DELAY );
+    Delay_ms ( SNAKE_DELAY );
 }
 
 // ------------------------------------------------------------------------ END

@@ -25,13 +25,14 @@
     "name": "mikroe.click.nanopower3",
     "product_link": "https://www.mikroe.com/nano-power-3-click",
     "short_description": "Nano Power 3 Click is a compact add-on board that steps down voltages from its input (supply) to output (load). This board features the RPL-3.0-R, a buck converter with an integrated inductor from Recom Power. This thermally-enhanced converter uses, as input, voltage from 4 up to 18VDC, thus allowing 5V and 12V supply rails to be used.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.NanoPower3",
     "subdir_name": "lib_nanopower3"
 }
+
 
 

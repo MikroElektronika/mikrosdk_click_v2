@@ -131,19 +131,22 @@ void application_task ( void )
     stepper6_set_direction ( &stepper6, STEPPER6_DIR_CW );
     stepper6_set_step_mode ( &stepper6, STEPPER6_MODE_FULL_STEP );
     stepper6_drive_motor ( &stepper6, 200, STEPPER6_SPEED_SLOW );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf ( &logger, " Move 200 half steps counter-clockwise, speed: medium\r\n\n" );
     stepper6_set_direction ( &stepper6, STEPPER6_DIR_CCW );
     stepper6_set_step_mode ( &stepper6, STEPPER6_MODE_HALF_STEP );
     stepper6_drive_motor ( &stepper6, 200, STEPPER6_SPEED_MEDIUM );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf ( &logger, " Move 400 quarter steps counter-clockwise, speed: fast\r\n\n" );
     stepper6_set_direction ( &stepper6, STEPPER6_DIR_CCW );
     stepper6_set_step_mode ( &stepper6, STEPPER6_MODE_QUARTER_STEP );
     stepper6_drive_motor ( &stepper6, 400, STEPPER6_SPEED_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

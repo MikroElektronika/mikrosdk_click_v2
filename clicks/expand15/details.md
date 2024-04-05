@@ -135,7 +135,7 @@ void application_task ( void )
     // Setting port0 output pin ( P00, P02, P04 and P06 ) to high
     output_pin_state = EXPAND15_PIN_00_MASK | EXPAND15_PIN_02_MASK | EXPAND15_PIN_04_MASK | EXPAND15_PIN_06_MASK;
     expand15_set_out_pin_state( &expand15, EXPAND15_PORT_0, output_pin_state );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     // Checking state of the input pins on port0
     expand15_get_in_pin_state( &expand15, EXPAND15_PORT_0, &input_pin_state );
@@ -145,12 +145,12 @@ void application_task ( void )
     log_printf( &logger, " P03 : %c |", ( ( input_pin_state & EXPAND15_PIN_03_MASK ) ? 'H' : 'L' ) );
     log_printf( &logger, " P05 : %c |", ( ( input_pin_state & EXPAND15_PIN_05_MASK ) ? 'H' : 'L' ) );
     log_printf( &logger, " P07 : %c \r\n", ( ( input_pin_state & EXPAND15_PIN_07_MASK ) ? 'H' : 'L' ) );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // Setting port0 output pin ( P00, P02, P04 and P06 ) to low
     output_pin_state = EXPAND15_ALL_PINS_OFF;
     expand15_set_out_pin_state( &expand15, EXPAND15_PORT_0, output_pin_state );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     // Checking state of the input pins on port0
     expand15_get_in_pin_state( &expand15, EXPAND15_PORT_0, &input_pin_state );
@@ -161,12 +161,13 @@ void application_task ( void )
     log_printf( &logger, " P05 : %c |", ( ( input_pin_state & EXPAND15_PIN_05_MASK ) ? 'H' : 'L' ) );
     log_printf( &logger, " P07 : %c \r\n", ( ( input_pin_state & EXPAND15_PIN_07_MASK ) ? 'H' : 'L' ) );
     log_printf( &logger, "- - - - - - - - - - - - - - - - - - - - - - - - - - \r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     // Setting port1 output pin ( P10, P12, P14 and P01 ) to high
     output_pin_state = EXPAND15_PIN_10_MASK | EXPAND15_PIN_12_MASK | EXPAND15_PIN_14_MASK | EXPAND15_PIN_16_MASK;
     expand15_set_out_pin_state( &expand15, EXPAND15_PORT_1, output_pin_state );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     // Checking state of the input pins on port1
     expand15_get_in_pin_state( &expand15, EXPAND15_PORT_1, &input_pin_state );
@@ -176,12 +177,12 @@ void application_task ( void )
     log_printf( &logger, " P13 : %c |", ( ( input_pin_state & EXPAND15_PIN_13_MASK ) ? 'H' : 'L' ) );
     log_printf( &logger, " P15 : %c |", ( ( input_pin_state & EXPAND15_PIN_15_MASK ) ? 'H' : 'L' ) );
     log_printf( &logger, " P17 : %c \r\n", ( ( input_pin_state & EXPAND15_PIN_17_MASK ) ? 'H' : 'L' ) );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // Setting port1 output pin ( P10, P12, P14 and P16 ) to low
     output_pin_state = EXPAND15_ALL_PINS_OFF;
     expand15_set_out_pin_state( &expand15, EXPAND15_PORT_1, output_pin_state );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     // Checking state of the input pins on port1
     expand15_get_in_pin_state( &expand15, EXPAND15_PORT_1, &input_pin_state );
@@ -192,7 +193,8 @@ void application_task ( void )
     log_printf( &logger, " P15 : %c |", ( ( input_pin_state & EXPAND15_PIN_15_MASK ) ? 'H' : 'L' ) );
     log_printf( &logger, " P17 : %c \r\n", ( ( input_pin_state & EXPAND15_PIN_17_MASK ) ? 'H' : 'L' ) );
     log_printf( &logger, "- - - - - - - - - - - - - - - - - - - - - - - - - - \r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

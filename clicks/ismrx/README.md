@@ -114,7 +114,7 @@ void application_init ( void )
         log_info( &logger, " Please, run program again... " );
         for ( ; ; );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     ismrx_master_reset( &ismrx );
 

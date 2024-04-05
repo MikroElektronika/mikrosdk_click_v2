@@ -286,6 +286,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -346,9 +351,9 @@ static err_t c3gsara_rsp_check ( uint8_t *rsp )
             c3gsara_clear_app_buf( );
             return C3GSARA_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     c3gsara_process( );
     if ( strstr( app_buf, rsp ) )
     {
@@ -395,7 +400,7 @@ static void c3gsara_error_check ( err_t error_flag )
             break;
         }
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 static void c3gsara_log_app_buf ( void )
@@ -410,7 +415,11 @@ static err_t c3gsara_configure_for_network ( void )
 {
     err_t func_error = C3GSARA_OK;
 #if ( ( DEMO_EXAMPLE == EXAMPLE_TCP_UDP ) || ( DEMO_EXAMPLE == EXAMPLE_SMS ) )
-    Delay_ms ( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     // Deregister from network
     #define DEREGISTER_FROM_NETWORK "2"
     c3gsara_send_cmd_with_par( &c3gsara, C3GSARA_CMD_COPS, DEREGISTER_FROM_NETWORK );
@@ -457,7 +466,7 @@ static err_t c3gsara_check_connection ( void )
     c3gsara_error_check( error_flag );
     if ( strstr( app_buf, CONNECTED ) )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         c3gsara_process( );
         c3gsara_log_app_buf( );
         log_printf( &logger, "\r\n" );
@@ -581,7 +590,7 @@ static err_t c3gsara_example ( void )
         uint8_t * __generic_ptr start_response_buf = strstr( app_buf, urc_buf );
         if ( start_response_buf )
         {
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
             c3gsara_process( );
             uint8_t response_len_buf[ 5 ] = { 0 };
             uint8_t * __generic_ptr start_response_len = strstr( start_response_buf, "," ) + 1;
@@ -601,7 +610,7 @@ static err_t c3gsara_example ( void )
         {
             break;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
     timeout_cnt = 0;
 
@@ -627,7 +636,7 @@ static err_t c3gsara_example ( void )
         uint8_t * __generic_ptr start_response_buf = strstr( app_buf, urc_buf );
         if ( start_response_buf )
         {
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
             c3gsara_process( );
             uint8_t response_len_buf[ 5 ] = { 0 };
             uint8_t * __generic_ptr start_response_len = strstr( start_response_buf, "," ) + 1;
@@ -647,7 +656,7 @@ static err_t c3gsara_example ( void )
         {
             break;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
     
     // Close TCP socket
@@ -661,7 +670,11 @@ static err_t c3gsara_example ( void )
     error_flag = c3gsara_rsp_check( C3GSARA_RSP_OK );
     func_error |= error_flag;
     c3gsara_error_check( error_flag );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #elif ( DEMO_EXAMPLE == EXAMPLE_SMS )
     // Check SMS mode
     #define CMGF_PDU "+CMGF: 0"
@@ -686,9 +699,37 @@ static err_t c3gsara_example ( void )
         func_error |= error_flag;
         c3gsara_error_check( error_flag );
     }
-    Delay_ms( 10000 );
-    Delay_ms( 10000 );
-    Delay_ms( 10000 );
+    // 30 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #else
     #error "No demo example selected"
 #endif

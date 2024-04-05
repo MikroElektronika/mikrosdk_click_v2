@@ -126,7 +126,7 @@ static void mbusrf4_parser_rx ( uint8_t logg_type )
             mbusrf4_process();
 
         timeout_cnt++;
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
         if ( timeout_cnt >= TIMEOUT_EXIT )
         {
             log_error( &logger, "TIMEOUT!( Header not found )" );
@@ -159,7 +159,7 @@ static void mbusrf4_parser_rx ( uint8_t logg_type )
             mbusrf4_process();
 
         timeout_cnt++;
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
         if ( timeout_cnt >= TIMEOUT_EXIT )
         {
             log_error( &logger, "TIMEOUT! ( Response length not found )" );
@@ -190,7 +190,7 @@ static void mbusrf4_parser_rx ( uint8_t logg_type )
             mbusrf4_process();
 
         timeout_cnt++;
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
         if ( timeout_cnt >= TIMEOUT_EXIT )
         {
             log_error( &logger, "TIMEOUT! ( Response not found )" );
@@ -222,7 +222,7 @@ static void mbusrf4_parser_tx ( void )
             mbusrf4_process();
 
         timeout_cnt++;
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
         if ( timeout_cnt >= TIMEOUT_EXIT )
         {
             log_error( &logger, "TIMEOUT!( Header not found )" );
@@ -255,7 +255,7 @@ static void mbusrf4_parser_tx ( void )
             mbusrf4_process();
 
         timeout_cnt++;
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
         if ( timeout_cnt >= TIMEOUT_EXIT )
         {
             log_error( &logger, "TIMEOUT! ( Response not found )" );
@@ -347,21 +347,21 @@ void application_init ( void )
     payload_buff[ 1 ] = MBUSRF4_EEPARAM_WMBUS_MODE_S2_SHORT_PREAMBLE;
 
     mbusrf4_send_command( &mbusrf4, MBUSRF4_CMD_SET_MODE, 2, &payload_buff[ 0 ] );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     mbusrf4_process( );
     mbusrf4_parser_tx();
     mbrusrf4_clear_buff();
 
     // Reads FW version
     mbusrf4_send_command( &mbusrf4, MBUSRF4_CMD_GET_FW_VERSION, 0, &payload_buff[ 0 ] );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     mbusrf4_process( );
     log_info( &logger, "FW version:" );
     mbusrf4_parser_rx( LOG_HEX );
     log_printf( &logger, "-----------------------------------------------------------\r\n" );
     mbusrf4_process( );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, "Application Task" );
 }
 
@@ -372,7 +372,7 @@ void application_task ( void )
 
     if ( mbusrf4_get_state_ind( &mbusrf4 ) == 0 )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         mbusrf4_process( );
 
         mbusrf4_parser_rx( LOG_STR );
@@ -384,16 +384,22 @@ void application_task ( void )
     #ifdef DEMO_APP_TRANSMITER
 
     mbusrf4_transmit_data( &mbusrf4, msg, 17 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     mbrusrf4_clear_buff();
     mbusrf4_parser_tx();
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     #endif
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

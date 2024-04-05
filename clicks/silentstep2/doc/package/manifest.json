@@ -25,12 +25,13 @@
     "name": "mikroe.click.silentstep2",
     "product_link": "https://www.mikroe.com/silent-step-2-click",
     "short_description": "Silent Step 2 Click is a compact add-on board that allows extremely smooth and silent operation of the connected motor. This board features the TMC2130, a high-performance two-phase stepper motor driver from Analog Devices. The driver uses an external motor power supply of 4.75 up to 43V to power a 2-phase stepper motor up to 2A coil current (2.5A peak).",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.SilentStep2",
     "subdir_name": "lib_silentstep2"
 }
+
 

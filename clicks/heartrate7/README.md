@@ -128,7 +128,7 @@ void application_task ( void )
     sensor_value = heartrate7_get_aled1_val( &heartrate7 );
     log_printf( &logger, "%lu,%lu \r\n", sensor_value, time );
     time += 10;
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
 }
 ```
 

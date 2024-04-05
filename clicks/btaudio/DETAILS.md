@@ -87,7 +87,7 @@ void application_init ( void )
     btaudio_cfg_setup( &cfg );
     BTAUDIO_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     btaudio_init( &btaudio, &cfg );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "Power ON\r\n" );
     btaudio_set_power_on( &btaudio );

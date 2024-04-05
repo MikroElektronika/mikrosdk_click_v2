@@ -2,7 +2,7 @@
     "name": "Microwave 4 Click",
     "description": "Microwave 4 Click is a compact add-on board that utilizes the Doppler Shift Phenomenon to sense motion. This board features the PD-V12, a miniature high-frequency microwave transceiver from Ningbo Pdlux Electronic Technology. The transmitter on this transceiver works on a 24.1GHz frequency over the flat Plane antenna.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","PD-V12"],
     "category" : ["Click Boards > Sensors > Motion"]
 }

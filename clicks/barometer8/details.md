@@ -131,7 +131,7 @@ void application_task ( void )
         log_printf ( &logger, " Pressure: %.1f mBar\r\n", pressure );
         log_printf ( &logger, " Temperature: %.2f C\r\n\n", temperature );
     }
-    Delay_ms( 5 );
+    Delay_ms ( 5 );
 }
 ```
 

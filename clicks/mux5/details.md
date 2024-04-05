@@ -142,7 +142,10 @@ void application_task ( void )
     {
         ch_num = 0;
     }
-    Delay_ms ( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

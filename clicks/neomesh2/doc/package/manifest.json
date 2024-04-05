@@ -25,13 +25,14 @@
     "name": "mikroe.click.neomesh2",
     "product_link": "https://www.mikroe.com/neomesh-2-click",
     "short_description": "NeoMesh 2 Click is a compact add-on board with a low-power, long-range transceiver, ideal for Mesh wireless networking. This board features the NC2400, a wireless Mesh network module from NeoCortec. With an additional antenna that MikroE offers connected to the module’s u.Fl connector, you can create a fully functional wireless Mesh network node that will work in the Sub-GHz frequency band of 2.4GHz. The module has a generic application layer that can be configured to suit applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.NeoMesh2",
     "subdir_name": "lib_neomesh2"
 }
+
 
 

@@ -69,17 +69,24 @@ void application_task ( void )
     stepper17_set_step_mode ( &stepper17, STEPPER17_MODE_FULL_STEP );
     stepper17_set_direction ( &stepper17, STEPPER17_DIR_CW );
     stepper17_drive_motor ( &stepper17, 200, STEPPER17_SPEED_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf ( &logger, " Move 400 quarter steps counter-clockwise \r\n\n" );
     stepper17_set_step_mode ( &stepper17, STEPPER17_MODE_QUARTER_STEP );
     stepper17_set_direction ( &stepper17, STEPPER17_DIR_CCW );
     stepper17_drive_motor ( &stepper17, 400, STEPPER17_SPEED_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

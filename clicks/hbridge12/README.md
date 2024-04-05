@@ -128,19 +128,35 @@ void application_task ( void )
 {
     log_printf( &logger, " Turning motor counterclockwise \r\n" );
     hbridge12_turn_counterclockwise( &hbridge12, HBRIDGE12_AB_BRIDGE_SEL );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, " Turning motor brake on \r\n" );
     hbridge12_turn_brake_on( &hbridge12, HBRIDGE12_AB_BRIDGE_SEL );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, " Turning motor clockwise \r\n" );
     hbridge12_turn_clockwise( &hbridge12, HBRIDGE12_AB_BRIDGE_SEL );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, " Motor freewheeling \r\n" );
     hbridge12_freewheeling_on( &hbridge12, HBRIDGE12_AB_BRIDGE_SEL );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

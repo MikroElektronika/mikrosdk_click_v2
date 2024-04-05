@@ -124,7 +124,7 @@ void application_task ( )
                                                        C6DOFIMU7_TEMPERATURE_OFFSET );
 
     log_printf( &logger, " * Temperature: %.5f C * \r\n\r\n", temperature );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ``` 

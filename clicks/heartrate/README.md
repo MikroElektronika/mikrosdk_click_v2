@@ -96,7 +96,7 @@ void application_init ( void )
     heartrate_init( &heartrate, &cfg );
 
     heartrate_default_cfg( &heartrate );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```

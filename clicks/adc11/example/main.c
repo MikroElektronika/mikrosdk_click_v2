@@ -69,7 +69,11 @@ void application_init ( void ) {
     log_printf( &logger, "- - - - - - - - - - - - - -\r\n");
     log_printf( &logger, "  In the following 5 sec.  \r\n");
     log_printf( &logger, " turn OFF the Power Supply \r\n");
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "-------------------------\r\n");
     log_printf( &logger, "    Start calibration    \r\n");
@@ -77,7 +81,7 @@ void application_init ( void ) {
     if ( adc11_set_calibration( &adc11, &avg_adc_data ) == ADC11_OK ) {
         log_printf( &logger, "---------------------------\r\n");
         log_printf( &logger, "    Calibration  Done    \r\n");
-        Delay_ms( 1000 );    
+        Delay_ms ( 1000 );    
     }
     
     log_printf( &logger, "---------------------------\r\n");
@@ -89,11 +93,17 @@ void application_task ( void ) {
     adc11_get_voltage( &adc11, &avg_adc_data, &voltage );
     log_printf( &logger, "     Volatge : %.3f V      \r\n", voltage );
     log_printf( &logger, "---------------------------\r\n");
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

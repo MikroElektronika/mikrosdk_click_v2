@@ -2,7 +2,7 @@
     "name": "Buck 10 Click",
     "description": "Buck 10 Click is a high-efficiency step-down converter which provides a highly regulated output voltage derived from the connected power source, rated from 4V to 18V. The regulated output voltage can be selected between two values: 3.3V and 5V. These are voltage values ​​that are most commonly used in many embedded designs. This click is based around an integrated DC-DC converter, labeled as MPM3632C.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","MPM3632C"],
     "category" : ["Buck"]
 }

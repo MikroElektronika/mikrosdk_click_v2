@@ -69,12 +69,18 @@ void application_task ( void )
     {
         stepdown8_set_output( &stepdown8, ( float ) n_cnt );
         log_printf( &logger, " Output voltage %d V\r\n", ( uint16_t ) n_cnt );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 ); 
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

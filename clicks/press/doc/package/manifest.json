@@ -25,13 +25,14 @@
     "name": "mikroe.click.press",
     "product_link": "https://www.mikroe.com/press-click",
     "short_description": "PRESS Click is a compact add-on board that contains a board-mount pressure sensor. This board features the ILPS28QSW, an absolute digital output barometer from STMicroelectronics. It is a dual full-scale sensor with a measuring range of 260 up to 4060hPa. In addition, it comes with a Qvar detection ability, which is an electric charge variation detection and is available on two pins.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.PRESS",
     "subdir_name": "lib_press"
 }
+
 
 

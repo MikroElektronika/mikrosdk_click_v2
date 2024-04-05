@@ -92,7 +92,7 @@ void application_init ( void )
     ACCEL14_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     accel14_init( &accel14, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "   Driver init done   \r\n" );
     log_printf( &logger, "--------------------- \r\n" );
@@ -114,7 +114,7 @@ void application_init ( void )
     log_printf( &logger, " Set default config.  \r\n" );
     log_printf( &logger, "--------------------- \r\n" );
     accel14_default_cfg( &accel14 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "  Acceleration data:  \r\n" );
     log_printf( &logger, "--------------------- \r\n" );
@@ -134,7 +134,7 @@ void application_init ( void )
 void application_task ( void )
 {
     data_ready_flag = accel14_check_accel_data_ready( &accel14 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     if ( data_ready_flag == ACCEL14_NEW_DATA_AVAILABLE )
     {
@@ -144,7 +144,7 @@ void application_task ( void )
         log_printf( &logger, "  Accel Y : %d \r\n", accel_data.y );
         log_printf( &logger, "  Accel Z : %d \r\n", accel_data.z );
         log_printf( &logger, "--------------------- \r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 } 
 

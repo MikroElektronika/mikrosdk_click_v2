@@ -116,7 +116,7 @@ void application_init ( void )
     log_info( &logger, " Application Task " );
     
     leddriver13_set_duty_cycle ( &leddriver13, 0.01 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -137,7 +137,7 @@ void application_init ( void )
     
     leddriver13_set_duty_cycle ( &leddriver13, duty );
     log_printf( &logger, "> Duty: %.1f%%\r\n", duty * 100 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( 30 == duty_cnt ) 
     {

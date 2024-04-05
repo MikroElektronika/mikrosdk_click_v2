@@ -288,6 +288,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -355,7 +360,7 @@ static err_t lteiot3_rsp_check ( uint8_t *rsp )
             lteiot3_clear_app_buf( );
             return LTEIOT3_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
     if ( strstr( app_buf, rsp ) )
     {
@@ -403,7 +408,7 @@ static void lteiot3_error_check( err_t error_flag )
         }
     }
     lteiot3_clear_app_buf(  );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 static void lteiot3_log_app_buf ( void )
@@ -459,7 +464,7 @@ static err_t lteiot3_check_connection( void )
     lteiot3_process( );
     if ( strstr( app_buf, CONNECTED ) )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         lteiot3_process( );
         lteiot3_log_app_buf( );
         log_printf( &logger, "\r\n" );
@@ -660,7 +665,11 @@ static err_t lteiot3_example( void )
     error_flag = lteiot3_rsp_check( LTEIOT3_RSP_OK );
     func_error |= error_flag;
     lteiot3_error_check( error_flag );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #elif ( DEMO_EXAMPLE == EXAMPLE_SMS )
     // Check SMS mode
     #define CMGF_PDU "+CMGF: 0"
@@ -685,9 +694,37 @@ static err_t lteiot3_example( void )
         func_error |= error_flag;
     }
     lteiot3_error_check( error_flag );
-    Delay_ms( 10000 );
-    Delay_ms( 10000 );
-    Delay_ms( 10000 );
+    // 30 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #elif ( DEMO_EXAMPLE == EXAMPLE_GNSS )
     lteiot3_process ( );
     if ( app_buf_len > ( sizeof ( LTEIOT3_RSP_GGA ) + LTEIOT3_GGA_ELEMENT_SIZE ) ) 

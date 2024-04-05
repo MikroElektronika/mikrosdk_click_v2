@@ -91,7 +91,7 @@ void application_task ( void )
         {
             log_printf( &logger, "\r\n %s - Device ID: 0x%.2X\r\n", ( char * ) DEVICE0_NAME, ( uint16_t ) device_id );
         }
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     if ( I2CMUX6_OK == i2cmux6_set_channel ( &i2cmux6, DEVICE1_POSITION, DEVICE1_SLAVE_ADDRESS ) )
     {
@@ -107,12 +107,17 @@ void application_task ( void )
         {
             log_printf( &logger, "\r\n %s - Device ID: 0x%.2X\r\n", ( char * ) DEVICE1_NAME, ( uint16_t ) device_id );
         }
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

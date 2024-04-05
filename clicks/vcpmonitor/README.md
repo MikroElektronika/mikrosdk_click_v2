@@ -107,7 +107,7 @@ void application_init ( void )
     }
     
     vcpmonitor_default_cfg(&vcpmonitor );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
   
 ```
@@ -134,7 +134,8 @@ void application_task ( void )
     log_printf( &logger, ">> Power : %.2f mW\r\n", power_data );
     
     log_printf( &logger, "-------------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

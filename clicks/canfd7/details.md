@@ -132,7 +132,8 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     canfd7_generic_write( &canfd7, TX_MESSAGE, strlen( TX_MESSAGE ) );
     log_info( &logger, "---- Data sent ----" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #else
     canfd7_process( &canfd7 );
 #endif

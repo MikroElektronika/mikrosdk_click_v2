@@ -2,7 +2,7 @@
     "name": "SPI Isolator 3 Click",
     "description": "SPI Isolator 3 Click is a compact add-on board that contains a digital isolator optimized for a serial peripheral interface. This board features the MAX14483, a 6-channel 3.75kVRMS digital galvanic isolator with a very low propagation delay on the SDI, SDO, and SCLK channels from Maxim Integrated. Besides a second enable control input, which allows MAX14483 to isolate multiple SPI devices, and an auxiliary channel available for passing timing or control signals from the master side to the slave side, the MAX14483 also possesses power monitors provided for both power domains to signal if the opposite side of the isolator is ready for operation.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","MAX14483"],
     "category" : ["SPI"]
 }

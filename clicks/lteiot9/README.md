@@ -100,7 +100,7 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     // Click initialization.
 
@@ -128,16 +128,20 @@ void application_init ( void )
     lteiot9_send_cmd( &lteiot9, LTEIOT9_CMD_AT );
     app_error_flag = lteiot9_rsp_check();
     lteiot9_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     //ATI
     lteiot9_send_cmd( &lteiot9, LTEIOT9_CMD_ATI );
     app_error_flag = lteiot9_rsp_check();
     lteiot9_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     app_connection_status = CONFIGURATION_FOR_NETWORK;
     log_info( &logger, " Application Task " );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```
@@ -190,7 +194,7 @@ void application_task ( void )
         {
             log_error( &logger, "Application status error!" );
             app_connection_status = CHECK_NETWORK_CONNECTION;
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
             break;
         }
     }

@@ -117,10 +117,10 @@ void application_init ( void ) {
 
     vavpress_default_cfg ( &vavpress );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     vavpress_retrieve_electronic_signature( &vavpress, &el_signature_data );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "--------------------------------\r\n" );
     log_printf( &logger, " Firmware Version : %.3f        \r\n", el_signature_data.firmware_version );
@@ -134,13 +134,14 @@ void application_init ( void ) {
     log_printf( &logger, " Year number      : %d          \r\n", el_signature_data.year_number );
     log_printf( &logger, " Sequence number  : %d          \r\n", el_signature_data.sequence_number );
     log_printf( &logger, "--------------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     param_data.scale_factor_temp = 72;
     param_data.scale_factor_press = el_signature_data.scale_factor;
     param_data.readout_at_known_temperature = 50;
     param_data.known_temperature_c = 24.0;
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -159,7 +160,8 @@ void application_task ( void ) {
         log_printf( &logger, " Diff. Pressure    : %.4f Pa\r\n", diff_press );
         log_printf( &logger, " Temperature       : %.4f C\r\n", temperature );
         log_printf( &logger, "--------------------------------\r\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     } else {
         log_error( &logger, " Communcation Error. " );
         log_info( &logger, " Please, run program again... " );

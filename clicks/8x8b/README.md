@@ -124,16 +124,16 @@ void application_init ( void ) {
 
 void application_task ( void ) {
     c8x8b_display_byte( &c8x8b, demo_char );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     c8x8b_display_string( &c8x8b, &demo_string[ 0 ] );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     c8x8b_display_image( &c8x8b, &demo_img_on[ 0 ] );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     c8x8b_display_image( &c8x8b, &demo_img_off[ 0 ] );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

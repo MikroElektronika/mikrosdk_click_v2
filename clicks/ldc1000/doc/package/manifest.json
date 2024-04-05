@@ -25,17 +25,18 @@
     "name": "mikroe.click.ldc1000",
     "product_link": "https://www.mikroe.com/ldc1000-click",
     "short_description": "LDC1000 click carries the world's first inductance-to-digital converter IC, along with a detachable sensor (an LC tank comprising a 36-turn PCB coil and a 100pF 1% NPO capacitor). The LDC1000 IC has a sub-micron resolution in short range applications; the board is ideal for highly precise short range measurements of the position, motion or composition of conductive targets.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1069
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Ldc1000",
     "subdir_name": "lib_ldc1000"
 }
+
 
 
 

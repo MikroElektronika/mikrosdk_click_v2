@@ -25,17 +25,18 @@
     "name": "mikroe.click.tmrangle",
     "product_link": "https://www.mikroe.com/tmr-angle-click",
     "short_description": "TMR Angle Click is a Click board perfectly suited for developing applications that range from steering angle applications with the highest functional safety requirements to motors for wipers, pumps and actuators and electric motors in general.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2950
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.TMRAngle",
     "subdir_name": "lib_tmrangle"
 }
+
 
 
 

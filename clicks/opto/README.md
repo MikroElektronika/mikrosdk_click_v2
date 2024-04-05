@@ -183,7 +183,8 @@ void application_task ( void )
 
         tmp <<= 1;
     }
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

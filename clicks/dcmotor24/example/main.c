@@ -86,7 +86,7 @@ void application_task ( void )
     {
         dcmotor24_display_diag ( diag );
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     if ( ( 100 == duty_pct ) || ( 0 == duty_pct ) ) 
     {
         duty_step = -duty_step;
@@ -102,6 +102,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

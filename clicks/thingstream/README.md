@@ -99,7 +99,9 @@ void application_init ( void )
     thingstream_init( &thingstream, &cfg );
 
     thingstream_module_power( &thingstream, true );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, " --->>> INFO.. \r\n" );
     thingstream_send_command( &thingstream, THINGSTREAM_INFO );

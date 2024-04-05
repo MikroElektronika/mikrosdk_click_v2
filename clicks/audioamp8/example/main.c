@@ -40,7 +40,7 @@ static audioamp8_monitor_channel_t ch_mon;
 static void channel_status_monitoring ( uint8_t ch_sel ) 
 {
     audioamp8_channel_monitoring( &audioamp8, ch_sel, &ch_mon );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, " Frequency mode    : %d\r\n", ( uint16_t ) ch_mon.freq_mode );
     log_printf( &logger, " Power mode        : %d\r\n", ( uint16_t ) ch_mon.pwr_mode );
 
@@ -144,17 +144,22 @@ void application_init ( void )
     }
     log_info( &logger, " Application Task " );
     log_printf( &logger, "-------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void ) 
 {
     channel_status_monitoring( AUDIOAMP8_SET_MON_CH_0 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

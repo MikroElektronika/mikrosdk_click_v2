@@ -25,14 +25,15 @@
     "name": "mikroe.click.angle9",
     "product_link": "https://www.mikroe.com/angle-9-click",
     "short_description": "Angle 9 Click is a compact add-on board that detects the absolute position of a permanent magnet. This board features the AAS33001, a precision angle sensor with incremental and motor commutation outputs and on-chip linearization from Allegro Microsystems. It is a contactless angle sensor for 0° to 360° angular position, rotation speed, and directional measurement. Support for incremental output interface (ABI) and motor commutation (UVW) is also available. The same goes for the on-chip EEPROM for storing factory and customer calibration parameters.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.Angle9",
     "subdir_name": "lib_angle9"
 }
+
 
 
 

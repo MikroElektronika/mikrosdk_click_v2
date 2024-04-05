@@ -72,7 +72,7 @@ void application_init ( void )
 
     log_info( &logger, "---- PWM is started. ----" );
     log_info( &logger, "---- Application Task ----" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void application_task ( void )
@@ -83,7 +83,7 @@ void application_task ( void )
 
     leddriver6_set_duty_cycle ( &leddriver6, duty );
     log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     if ( 10 == duty_cnt ) 
     {
@@ -98,6 +98,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -59,7 +59,7 @@ void application_init ( void ) {
     log_printf( &logger, "  Set default config.  \r\n" );
     log_printf( &logger, "-----------------------\r\n" );
     hbridge6_default_cfg( &hbridge6 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
 }
@@ -76,7 +76,7 @@ void application_task ( void ) {
     while ( duty_cnt < 10 ) {
         duty = duty_cnt / 10.0;
         hbridge6_set_duty_cycle ( &hbridge6, duty );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         duty_cnt += duty_inc;
     }
 
@@ -84,7 +84,7 @@ void application_task ( void ) {
     log_printf( &logger, "-----------------------\r\n" );
     hbridge6_set_direction( &hbridge6, HBRIDGE6_DIRECTION_BRAKE );
     duty_cnt = 1;
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "    Counterclockwise   \r\n" );
     log_printf( &logger, "-----------------------\r\n" );
@@ -93,7 +93,7 @@ void application_task ( void ) {
     while ( duty_cnt < 10 ) {
         duty = duty_cnt / 10.0;
         hbridge6_set_duty_cycle ( &hbridge6, duty );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         duty_cnt += duty_inc;
     }
 
@@ -102,14 +102,22 @@ void application_task ( void ) {
     hbridge6_set_direction( &hbridge6, HBRIDGE6_DIRECTION_BRAKE );
     duty_cnt = 1;
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     hbridge6_pwm_stop( &hbridge6 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     hbridge6_pwm_start( &hbridge6 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

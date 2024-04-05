@@ -25,14 +25,15 @@
     "name": "mikroe.click.efuse4",
     "product_link": "https://www.mikroe.com/efuse-4-click",
     "short_description": "eFuse 4 Click is a compact add-on board with a power path protection solution that limits circuit currents and voltages to safe levels during fault conditions. This board features the TPS25940, an eFuse power switch with reverse current blocking from Texas Instruments. The TPS25940 features a full suite of protection and monitoring functions, including a DevSleep™ mode that supports compliance with the SATA™ Device Sleep standard. The wide operating range from 2.7V to 18V allows control of many popular DC bus voltages. The additional potentiometer sets the overload and short-circuit current limit of the TPS25940, while the additional header allows external current monitoring.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.eFuse4",
     "subdir_name": "lib_efuse4"
 }
+
 
 
 

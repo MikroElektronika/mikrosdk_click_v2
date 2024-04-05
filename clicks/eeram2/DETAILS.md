@@ -89,10 +89,10 @@ void application_init ( void )
     eeram2_init( &eeram2, &cfg );
 
     eeram2_set_on_hold_status( &eeram2, EERAM2_HOLD_DISABLE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     eeram2_set_write_status( &eeram2, EERAM2_WRITE_ENABLE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -117,7 +117,7 @@ void application_task ( void )
 
     log_printf( &logger, "     Writing...     \r\n" );
     log_printf( &logger, "--------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     check_status = eeram2_read_continuous( &eeram2, 0x00543210, &read_data[ 0 ], 9 );
 
@@ -131,7 +131,7 @@ void application_task ( void )
     log_printf( &logger, " Read data : %s", read_data );
     log_printf( &logger, "--------------------\r\n" );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

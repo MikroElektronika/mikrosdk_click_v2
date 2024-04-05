@@ -32,14 +32,18 @@
 extern "C"{
 #endif
 
-#include "mikrosdk_version.h"
-
-#ifdef __GNUC__
-#if mikroSDK_GET_VERSION < 20800ul
-#include "rcu_delays.h"
-#else
-#include "delays.h"
+/**
+ * Any initialization code needed for MCU to function properly.
+ * Do not remove this line or clock might not be set correctly.
+ */
+#ifdef PREINIT_SUPPORTED
+#include "preinit.h"
 #endif
+
+#ifdef MikroCCoreVersion
+    #if MikroCCoreVersion >= 1
+        #include "delays.h"
+    #endif
 #endif
 
 #include "drv_digital_out.h"
@@ -106,12 +110,13 @@ extern "C"{
 #define LDC_DEVICE_ID               0x3054 
 
 /**
- * @brief LDC identification data.
- * @details Specified ID's for LDC Click driver.
+ * @brief LDC measurement data.
+ * @details Specified measurement data for LDC Click driver.
  */
 #define LDC_INTERNAL_FREQUENCY      43.4/*<MHz*/
 #define LDC_FREQUENCY_RESOLUTION    4096
 #define LDC_SENSOR_CAPACITANCE      0.00022/*<uF*/
+#define LDC_MATH_TWO_PI             6.28318530717958
 
 /**
  * @brief Gain configuration.

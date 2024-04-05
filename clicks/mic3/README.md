@@ -113,11 +113,19 @@ void application_task ( void )
 {
     log_printf( &logger, " - Microphone is turned on  - \r\n" );
     mic3_shd_pin_set( &mic3, MIC3_PIN_STATE_HIGH );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, " - Microphone is turned off  - \r\n" );
     mic3_shd_pin_set( &mic3, MIC3_PIN_STATE_LOW );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

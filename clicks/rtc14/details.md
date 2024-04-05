@@ -113,7 +113,7 @@ void application_init ( void )
     }
 
     rtc14_default_cfg ( &rtc14 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     time.hours_format = RTC14_SET_HOURS_FORMAT_12;
     time.am_pm = RTC14_SET_HOURS_FORMAT_12_PM;
@@ -121,14 +121,14 @@ void application_init ( void )
     time.min = 59;
     time.sec = 50;
     rtc14_set_time( &rtc14, time );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     date.day_of_week = RTC14_DW_THURSDAY;
     date.day = 5;
     date.month = 8;
     date.year = 21;
     rtc14_set_date( &rtc14, date );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, "- - - - - - - - - - -\r\n" );
@@ -149,9 +149,9 @@ void application_init ( void )
 void application_task ( void ) 
 {    
     rtc14_get_time( &rtc14, &time );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
     rtc14_get_date( &rtc14, &date );
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
     
     if ( time.sec != new_sec ) 
     {       
@@ -160,7 +160,7 @@ void application_task ( void )
         log_printf( &logger, "%cM\r\n", ( time.am_pm == RTC14_SET_HOURS_FORMAT_12_PM ? 'P' : 'A' ) );
         log_printf( &logger, "- - - - - - - - - - -\r\n" );
         new_sec = time.sec;
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
 }
 

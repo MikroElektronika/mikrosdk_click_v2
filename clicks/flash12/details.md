@@ -140,7 +140,7 @@ void application_task ( void )
                                                        sizeof( data_buf ) ) )
     {
         log_printf( &logger, " Write data: %s\r\n", data_buf );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 
     memset( data_buf, 0, sizeof( data_buf ) );
@@ -149,7 +149,9 @@ void application_task ( void )
                                                       sizeof( data_buf ) ) )
     {
         log_printf( &logger, " Read data: %s\r\n\n", data_buf );
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 
     log_printf( &logger, " Memory address: 0x%.6LX\r\n", ( uint32_t ) STARTING_ADDRESS );
@@ -162,14 +164,16 @@ void application_task ( void )
                                              data_buf, sizeof( data_buf ) ) )
     {
         log_printf( &logger, " Write data: %s\r\n", data_buf );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     memset( data_buf, 0, sizeof ( data_buf ) );
     if ( FLASH12_OK == flash12_memory_read( &flash12, STARTING_ADDRESS, 
                                             data_buf, sizeof ( data_buf ) ) )
     {
         log_printf( &logger, " Read data: %s\r\n\n", data_buf );
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

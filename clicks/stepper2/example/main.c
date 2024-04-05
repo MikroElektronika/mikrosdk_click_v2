@@ -68,16 +68,23 @@ void application_task ( void )
     log_printf ( &logger, " Move 64 steps clockwise\r\n\n" );
     stepper2_set_direction ( &stepper2, STEPPER2_DIR_CW );
     stepper2_drive_motor ( &stepper2, 64, STEPPER2_SPEED_VERY_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf ( &logger, " Move 32 steps counter-clockwise\r\n\n" );
     stepper2_set_direction ( &stepper2, STEPPER2_DIR_CCW );
     stepper2_drive_motor ( &stepper2, 32, STEPPER2_SPEED_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

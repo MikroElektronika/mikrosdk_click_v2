@@ -25,14 +25,15 @@
     "name": "mikroe.click.fan5",
     "product_link": "https://www.mikroe.com/fan-5-click",
     "short_description": "Fan 5 Click is a compact add-on board specially designed for fan speed management. This board features Microchip’s TC654, a PWM mode fan speed controller with FanSense™ technology suitable for brushless DC fans.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.Fan5",
     "subdir_name": "lib_fan5"
 }
+
 
 
 

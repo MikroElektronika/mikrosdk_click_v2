@@ -95,7 +95,7 @@ void application_init ( void )
     PROXIMITY11_MAP_MIKROBUS( cfg, MIKROBUS_4 );
     proximity11_init( &proximity11, &cfg );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     init_status = proximity11_default_cfg( &proximity11 );
 
@@ -130,7 +130,7 @@ void application_task ( void )
     log_printf( &logger, "PS  : %ld [count]\r\n", ps_value );
     log_printf( &logger, "ALS : %.2f [Lx]\r\n\r\n", als_value );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
 }
 

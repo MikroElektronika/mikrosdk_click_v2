@@ -25,17 +25,18 @@
     "name": "mikroe.click.i2ctospi",
     "product_link": "https://www.mikroe.com/i2c-to-spi-click",
     "short_description": "I2C to SPi Click is an all-in-one solution which allows serving as an interface between a standard I2C-bus of a microcontroller and an SPi bus, which allows the microcontroller to communicate directly with SPi devices through its I2C-bus. It is equipped with the stacking headers, so it can be easily connected.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2930
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.I2cToSpi",
     "subdir_name": "lib_i2ctospi"
 }
+
 
 
 

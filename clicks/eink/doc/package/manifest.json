@@ -25,17 +25,20 @@
     "name": "mikroe.click.eink",
     "product_link": "https://www.mikroe.com/eink-click",
     "short_description": "eINK click is an adapter Click board™, used to interface a compatible eINK display with the host MCU.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2077
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Eink",
     "subdir_name": "lib_eink"
 }
+
+
+
 
 
 

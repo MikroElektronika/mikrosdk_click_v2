@@ -2,7 +2,7 @@
     "name": "BT-EZ Click",
     "description": "The BT-EZ click is a Click board™ which provide BLE connectivity for any embedded application.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","CYBT-343026-01 "],
     "category" : ["BT/BLE"] 
 }

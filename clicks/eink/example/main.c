@@ -49,7 +49,9 @@
 #include "log.h"
 #include "eink.h"
 #include "eink200inch_image.h"
+#ifndef IMAGE_MODE_ONLY
 #include "eink200inch_font.h"
+#endif
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -91,7 +93,7 @@ void application_init ( void )
 
     eink_start_config( &eink );
     eink_set_lut( &eink, eink_lut_table, 90 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
 #ifndef IMAGE_MODE_ONLY
     cfg_font.p_font = &guiFont_Tahoma_10_Regular[ 0 ];
@@ -111,7 +113,11 @@ void application_init ( void )
     text_set.text_x = 10;
     text_set.text_y = 130;
     eink_text( &eink, &demo_text2[ 0 ], &text_set ); 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif
 }
 
@@ -125,6 +131,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

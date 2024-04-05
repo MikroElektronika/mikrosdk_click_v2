@@ -25,14 +25,15 @@
     "name": "mikroe.click.pot5",
     "product_link": "https://www.mikroe.com/pot-5-click",
     "short_description": "POT 5 Click is a compact add-on board with accurate selectable reference voltage output. This board features the PDB081-P10-103B1, a high-quality 8mm micro rotary 10k potentiometer from Bourns. The PDB081-P10-103B1 potentiometers operate over a wide temperature range, withstanding 50V maximum voltage. This rotary potentiometer offers 5Ω maximum resistance, 0.03W power rating, and 100mV maximum sliding noise.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.POT5",
     "subdir_name": "lib_pot5"
 }
+
 
 
 

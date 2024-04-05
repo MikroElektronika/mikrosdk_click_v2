@@ -123,7 +123,7 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 
@@ -142,17 +142,17 @@ void application_task ( void )
         if ( HWMONITOR_OK == hwmonitor_get_analog_inputs( &hwmonitor, in_pos, &voltage ) )
         {
             log_printf( &logger, "IN %d: %.1f mV\r\n", ( uint16_t ) in_pos, voltage );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
     log_printf( &logger, "- - - - - - - - - - - - - -\r\n" );
     if ( HWMONITOR_OK == hwmonitor_get_temperature ( &hwmonitor, &temperature ) )
     {
         log_printf( &logger, " Temperature: %.3f [deg c]\r\n", temperature );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

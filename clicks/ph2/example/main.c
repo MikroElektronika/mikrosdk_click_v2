@@ -75,12 +75,20 @@ void application_init ( void )
     
     log_printf( &logger, " Connect probe back \r\n" );
     log_printf( &logger, " ================================ \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "  Place probe into pH  \r\n" );
     log_printf( &logger, " neutral substance for \r\n" );
     log_printf( &logger, " mid point calibration \r\n" );
     log_printf( &logger, " ================================ \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " Starting calibration  \r\n" );
     log_printf( &logger, " ================================ \r\n" );  
     
@@ -99,11 +107,16 @@ void application_task ( void )
     ph2_calculate_ph( &ph2, &pH_val );
     log_printf( &logger, " pH value: %.3f \r\n", pH_val );
     log_printf( &logger, " ================================ \r\n" ); 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

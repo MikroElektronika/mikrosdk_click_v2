@@ -176,7 +176,7 @@ void application_task ( void )
                 log_printf( &logger, "> L[uH]: %.3f\r\n", inductance );
                 log_printf( &logger, "> ************************\r\n" );
                 
-                Delay_ms( 500 );
+                Delay_ms ( 500 );
             }
             else
             {

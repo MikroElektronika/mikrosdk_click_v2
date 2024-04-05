@@ -2,7 +2,7 @@
     "name": "UART to I2C Click",
     "description": "UART to I2C Click is a compact add-on board allowing connections to UART controllers and I2C targets for protocol conversion. This board features the SC18IM704, a bridge between the standard UART host interface and a serial I2C bus from NXP Semiconductors. The SC18IM704 provides a high-speed UART interface with a baud rate of up to 460.8 kbit/s and 256-byte FIFO for the transfer/receive data process, alongside several user-configurable GPIO pins. The host MCU communicates with the SC18IM704 with ASCII messages protocol, allowing it to control all the specific I2C-bus sequences, protocol, arbitration, and timing.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","SC18IM704PWJ"],
     "category" : ["Click Boards > Interface > RS232"]
 }

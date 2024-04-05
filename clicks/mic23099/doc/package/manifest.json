@@ -25,17 +25,18 @@
     "name": "mikroe.click.mic23099",
     "product_link": "https://www.mikroe.com/mic23099-click",
     "short_description": "MIC23099 click represent single AA/AAA cell step-down/step-up regulator with battery monitoring.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2175
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Mic23099",
     "subdir_name": "lib_mic23099"
 }
+
 
 
 

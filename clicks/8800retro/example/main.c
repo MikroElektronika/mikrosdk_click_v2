@@ -187,6 +187,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -421,7 +426,7 @@ static err_t c8800retro_demo_full_charset( c8800retro_t *ctx )
             }
             error_flag |= c8800retro_display_char( ctx, cnt );
             
-            Delay_ms( 200 );
+            Delay_ms ( 200 );
             if ( !c8800retro_get_int_pin( ctx ) )
             {
                 uint16_t keypad = C8800RETRO_KEY_NONE;

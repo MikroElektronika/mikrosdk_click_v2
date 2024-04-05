@@ -96,7 +96,7 @@ void application_init ( void )
     surfacetemp2_set_crit_trsh( &surfacetemp2, 70.00 );
     surfacetemp2_set_hys_val( &surfacetemp2, 5 );
     log_info( &logger, "---- Application Task ----" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -111,7 +111,7 @@ void application_task ( void )
 {
     temperature = surfacetemp2_get_temperature( &surfacetemp2 );
     log_printf( &logger, " Temperature : %.2f C \r\n", temperature );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

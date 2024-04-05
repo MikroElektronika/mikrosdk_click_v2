@@ -66,11 +66,16 @@ void application_task ( void )
     log_printf( &logger, " --- Temperature : %.2f C \r\n ", data_buffer[ 0 ] );
     log_printf( &logger, " --- Humidity : %.2f RH \r\n ", data_buffer[ 1 ] );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

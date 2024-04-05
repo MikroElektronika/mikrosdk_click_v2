@@ -121,10 +121,10 @@ void application_init ( void )
     log_printf( &logger, "  Current Limit 6 Click  \r\n" );
     log_printf( &logger, "-------------------------\r\n" );
     log_printf( &logger, "- - - - - - - - - - - - -\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     display_selection( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -151,14 +151,14 @@ void application_task ( void )
             log_printf( &logger, "- - - - - - - - - - - - -\r\n" );
             log_printf( &logger, " Current limit is %.3f A \r\n", limit_value[ index - 49 ] );
             log_printf( &logger, "--------------------------\r\n" );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         } 
         else 
         { 
             log_printf( &logger, "    Data not in range!    \r\n" );
             log_printf( &logger, "--------------------------\r\n" );
             display_selection( );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
 }

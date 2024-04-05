@@ -32,14 +32,18 @@
 extern "C"{
 #endif
 
-#include "mikrosdk_version.h"
-
-#ifdef __GNUC__
-#if mikroSDK_GET_VERSION < 20800ul
-#include "rcu_delays.h"
-#else
-#include "delays.h"
+/**
+ * Any initialization code needed for MCU to function properly.
+ * Do not remove this line or clock might not be set correctly.
+ */
+#ifdef PREINIT_SUPPORTED
+#include "preinit.h"
 #endif
+
+#ifdef MikroCCoreVersion
+    #if MikroCCoreVersion >= 1
+        #include "delays.h"
+    #endif
 #endif
 
 #include "drv_digital_out.h"
@@ -133,6 +137,7 @@ extern "C"{
 #define LDC2_MIN_SENSOR_FREQ_CONST              68.94
 #define LDC2_MIN_SENSOR_FREQ_DIVIDER            2500.0
 #define LDC2_ROUND_TO_NEAREST_INT               0.5
+#define LDC2_MATH_TWO_PI                        6.28318530717958
 
 /**
  * @brief Data sample selection.

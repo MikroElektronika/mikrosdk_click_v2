@@ -60,18 +60,18 @@ void application_init ( void )
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( I2CISOLATOR7_ERROR == i2cisolator7_set_slave_address( &i2cisolator7, PRESS_DEVICE_ADDRESS ) )
     {
         log_error( &logger, " Set I2C Slave address ERROR." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_info( &logger, " Application Task " );
     log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
@@ -86,11 +86,16 @@ void application_task ( void )
             log_printf( &logger, "---------------------\r\n" );
         }
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

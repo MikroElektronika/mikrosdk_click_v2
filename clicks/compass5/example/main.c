@@ -45,7 +45,7 @@ void application_init ( void ) {
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     // Click initialization.
     compass5_cfg_setup( &compass5_cfg );
@@ -58,7 +58,7 @@ void application_init ( void ) {
         for ( ; ; );
     }
     compass5_sw_reset( &compass5 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     compass5_get_id( &compass5, &company_id, &device_id );
     
@@ -71,22 +71,22 @@ void application_init ( void ) {
         log_printf( &logger, "   Fatal error!!!   \r\n" );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "  Power Down Mode  \r\n" );
     log_printf( &logger, "-------------------\r\n" );
     compass5_set_operation_mode( &compass5, COMPASS5_MODE_POWER_DOWN );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "    Continuous     \r\n" );
     log_printf( &logger, " Measurement Mode  \r\n" );
     log_printf( &logger, "-------------------\r\n" );
     compass5_set_operation_mode( &compass5, COMPASS5_MODE_CON_MEASUREMENT_100HZ );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, " Start Measurement \r\n" );
     log_printf( &logger, "-------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Task " );
 }
 
@@ -97,18 +97,24 @@ void application_task ( void ) {
     
     if ( compass5_check_data_ready( &compass5 ) == COMPASS5_DATA_READY ) {
         compass5_measurement_axis( &compass5, &x_val, &y_val, &z_val );
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
     
         log_printf( &logger, " X-axis: %d mG\r\n", x_val );
         log_printf( &logger, " Y-axis: %d mG\r\n", y_val );
         log_printf( &logger, " Z-axis: %d mG\r\n", z_val );        
         log_printf( &logger,  "--------------------\r\n" );
     }
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

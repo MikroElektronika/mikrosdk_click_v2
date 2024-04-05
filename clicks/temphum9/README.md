@@ -97,12 +97,12 @@ void application_init ( void )
     temphum9_cfg_setup( &cfg );
     TEMPHUM9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     temphum9_init( &temphum9, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     temphum9_send_command( &temphum9, TEMPHUM9_SLEEP );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     temphum9_send_command( &temphum9, TEMPHUM9_WAKEUP );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_info( &logger, " Application Task " );
 }
@@ -128,7 +128,7 @@ void application_task( )
     
     log_printf( &logger, "-----------------------------\r\n" );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

@@ -2,7 +2,7 @@
     "name": "H-Bridge 8 Click",
     "description": "H-Bridge 8 Click is a compact add-on board that contains H-bridge current regulator. This board features the MP6519, a monolithic, step-down, current-source driver for applications that require accurate and fast current-response control from Monolithic Power Systems (MPS). It achieves excellent load and line regulation over a wide input supply range up to 28V. The four integrated MOSFET H-bridge control provide a fast dynamic load response and an ultra-high efficiency solution. Complete protection features include load open, load-short protection, over-current protection (OCP), over-temperature protection (OTP), and input over-voltage protection (OVP).",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","MP6519"],
     "category" : ["Brushed"]
 }

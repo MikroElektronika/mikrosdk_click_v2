@@ -25,11 +25,12 @@
     "name": "mikroe.click.ezocarrierrtd",
     "product_link": "https://www.mikroe.com/ezo-carrier-click-rtd",
     "short_description": "EZO Carrier Click - RTD is a compact add-on board engineered to provide temperature readings across a broad range of temperatures. This board features the EZO-RTD™, an embedded temperature circuit board from Atlas Scientific. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.EZOCarrierRTD",
     "subdir_name": "lib_ezocarrierrtd"
 }
+

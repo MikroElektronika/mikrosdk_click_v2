@@ -93,7 +93,7 @@ void application_init ( void )
     fan6_init( &fan6, &cfg );
     
     fan6_enable_device( &fan6, 1 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     fan6_default_cfg( &fan6 );
     tachometer = 0;
@@ -125,7 +125,7 @@ void application_task ( void )
     log_printf( &logger, "Tachometer value is: %lu rpm \r\n", tachometer );
     log_printf( &logger, "---------------------------------------- \r\n", tachometer );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 } 
 
 ```

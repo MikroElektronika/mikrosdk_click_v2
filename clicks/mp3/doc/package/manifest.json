@@ -25,17 +25,18 @@
     "name": "mikroe.click.mp3",
     "product_link": "https://www.mikroe.com/mp3-click",
     "short_description": "MP3 Click is an accessory board in mikroBus™ form factor. It includes a stereo MP3 decoder chip VS1053 which can decode multiple formats (Ogg vorbis, MP3, MP1, MP2, MPEG4, WMA, FLAC, WAV, MIDI).",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         207
     ],
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.Mp3",
     "subdir_name": "lib_mp3"
 }
+
 
 
 

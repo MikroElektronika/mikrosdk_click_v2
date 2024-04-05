@@ -77,29 +77,42 @@ void application_task ( void )
     log_printf( &logger, "\r\n MOTOR 0: FORWARD\r\n" );
     log_printf( &logger, " MOTOR 1: FORWARD\r\n" );
     hbridge11_check_fault ( );
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     hbridge11_set_motor_state ( &hbridge11, HBRIDGE11_MOTOR_SEL_0, HBRIDGE11_MOTOR_STATE_BRAKE );
     hbridge11_set_motor_state ( &hbridge11, HBRIDGE11_MOTOR_SEL_1, HBRIDGE11_MOTOR_STATE_BRAKE );
     log_printf( &logger, "\r\n MOTOR 0: BRAKE\r\n" );
     log_printf( &logger, " MOTOR 1: BRAKE\r\n" );
     hbridge11_check_fault ( );
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     hbridge11_set_motor_state ( &hbridge11, HBRIDGE11_MOTOR_SEL_0, HBRIDGE11_MOTOR_STATE_REVERSE );
     hbridge11_set_motor_state ( &hbridge11, HBRIDGE11_MOTOR_SEL_1, HBRIDGE11_MOTOR_STATE_REVERSE );
     log_printf( &logger, "\r\n MOTOR 0: REVERSE\r\n" );
     log_printf( &logger, " MOTOR 1: REVERSE\r\n" );
     hbridge11_check_fault ( );
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     hbridge11_set_motor_state ( &hbridge11, HBRIDGE11_MOTOR_SEL_0, HBRIDGE11_MOTOR_STATE_HI_Z );
     hbridge11_set_motor_state ( &hbridge11, HBRIDGE11_MOTOR_SEL_1, HBRIDGE11_MOTOR_STATE_HI_Z );
     log_printf( &logger, "\r\n MOTOR 0: DISCONNECTED\r\n" );
     log_printf( &logger, " MOTOR 1: DISCONNECTED\r\n" );
     hbridge11_check_fault ( );
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -131,7 +131,11 @@ void application_task ( void )
     log_printf( &logger, " Relay 2 set to normally close state\r\n" );
     relay5_set_relay3_open ( &relay5 );
     log_printf( &logger, " Relay 3 set to normally open state\r\n\n" );
-    Delay_ms ( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     relay5_set_relay1_close ( &relay5 );
     log_printf( &logger, " Relay 1 set to normally close state\r\n" );
@@ -139,7 +143,11 @@ void application_task ( void )
     log_printf( &logger, " Relay 2 set to normally open state\r\n" );
     relay5_set_relay3_close ( &relay5 );
     log_printf( &logger, " Relay 3 set to normally close state\r\n\n" );
-    Delay_ms ( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

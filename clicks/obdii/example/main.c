@@ -168,6 +168,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -235,9 +240,9 @@ static err_t obdii_rsp_check ( obdii_t *ctx, uint8_t *rsp )
             obdii_clear_app_buf( );
             return OBDII_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     obdii_process( ctx );
     if ( strstr( app_buf, rsp ) )
     {

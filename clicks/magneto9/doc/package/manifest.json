@@ -25,14 +25,15 @@
     "name": "mikroe.click.magneto9",
     "product_link": "https://www.mikroe.com/magneto-9-click",
     "short_description": "Magneto 9 Click is a compact add-on board that contains a low-power, accurate, and reliable magnetic sensing device. This board features the A1359, dual tracking output linear hall-effect sensor from Allegro MicroSystems. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.Magneto9",
     "subdir_name": "lib_magneto9"
 }
+
 
 
 

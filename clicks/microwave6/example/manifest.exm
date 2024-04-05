@@ -2,7 +2,7 @@
     "name": "Microwave 6 Click",
     "description": "Microwave 6 Click is a compact add-on board that utilizes the Doppler Shift Phenomenon to sense motion. This board features the PD-V8-S, a high-frequency microwave sensor from Ningbo Pdlux Electronic Technology. The transmitter on this transceiver works on a 5.8GHz frequency over the patch antenna, with a 2-3kHz pulse repetition frequency. The strength of the sensor’s output, in other words, the detection range, depends on the Signal-to-Noise ratio.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","PD-V8-S"],
     "category" : ["Click Boards > Sensors > Motion"]
 }

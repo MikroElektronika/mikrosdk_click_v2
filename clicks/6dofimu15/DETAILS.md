@@ -91,7 +91,7 @@ void application_init ( void )
     c6dofimu15_cfg_setup( &cfg );
     C6DOFIMU15_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c6dofimu15_init( &c6dofimu15, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     if ( c6dofimu15_who_im_i( &c6dofimu15 ) )
     {
@@ -112,7 +112,7 @@ void application_init ( void )
     log_printf( &logger, "  ---Initialised---    \r\n" );
     log_printf( &logger, "---------------------- \r\n" );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -140,7 +140,7 @@ void application_task ( void )
     log_printf( &logger, " Accel Z: %.2f \t Gyro Z: %.2f\r\n", z_accel, z_gyro );
     log_printf( &logger, "----------------------------------\r\n");
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

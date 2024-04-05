@@ -91,7 +91,7 @@ void application_init ( void ) {
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     // Click initialization.
 

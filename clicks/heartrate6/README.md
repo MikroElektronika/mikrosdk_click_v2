@@ -92,11 +92,11 @@ void application_init ( void )
     heartrate6_cfg_setup( &cfg );
     HEARTRATE6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     heartrate6_init( &heartrate6, &cfg );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     heartrate6_default_cfg( &heartrate6 );
     log_printf( &logger, " Heart rate 6 is initialized. \r\n");
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
   
 ```

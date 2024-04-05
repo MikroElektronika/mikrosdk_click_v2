@@ -45,7 +45,7 @@ void application_init ( void ){
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
     
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "---------------------" );
     log_printf( &logger, "  Clock Gen 4 Click  " );
     log_printf( &logger, "---------------------" );
@@ -63,7 +63,7 @@ void application_init ( void ){
 
     clockgen4_default_cfg ( &clockgen4 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ){
@@ -71,17 +71,22 @@ void application_task ( void ){
     log_printf( &logger, "  PLL Clock          \r\n" );
     log_printf( &logger, "  output enabled!    \r\n" );
     log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     clockgen4_dev_ctl ( &clockgen4, CLOCKGEN4_AUX_OUT_EN | CLOCKGEN4_CLK_OUT_DIS );
     log_printf( &logger, "  AUX Clock          \r\n" );
     log_printf( &logger, "  output enabled!    \r\n" );
     log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

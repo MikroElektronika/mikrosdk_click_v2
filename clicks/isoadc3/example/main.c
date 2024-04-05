@@ -61,11 +61,16 @@ void application_task ( void ) {
     voltage = isoadc3_read_voltage( &isoadc3, ISOADC3_VREF_3V3 );
     log_printf( &logger, " ADC voltage Level: %d mV \r\n", voltage );
     log_printf( &logger, "------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

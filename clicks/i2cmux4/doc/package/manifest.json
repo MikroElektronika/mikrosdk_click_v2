@@ -25,17 +25,18 @@
     "name": "mikroe.click.i2cmux4",
     "product_link": "https://www.mikroe.com/i2c-mux-4-click",
     "short_description": "I2C MUX 4 Click is a compact add-on board that contains a dual bidirectional translating switch dedicated for applications with I2C slave address conflicts.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3852
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.I2cMux4",
     "subdir_name": "lib_i2cmux4"
 }
+
 
 
 

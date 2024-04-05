@@ -25,17 +25,18 @@
     "name": "mikroe.click.accel14",
     "product_link": "https://www.mikroe.com/accel-14-click",
     "short_description": "Accel 14 Click is digital acceleration and vibration sensor Click board™. It features an ultra-wide bandwidth, low-noise, 3-axis digital vibration sensor, labeled as IIS3DWB, from STMicroelectronics. This Click board™ allows selectable full-scale acceleration measurements in ranges of ±2 g, ±4 g, ±8, and ±16 g in three axes, and it’s capable of measuring accelerations with a bandwidth up to 6 kHz with an output data rate of 26.7 kHz.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3802
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.Accel14",
     "subdir_name": "lib_accel14"
 }
+
 
 
 

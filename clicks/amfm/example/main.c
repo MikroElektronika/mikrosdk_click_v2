@@ -240,7 +240,7 @@ void application_init ( void )
     AMFM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     amfm_init( &amfm, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     status = amfm_init_device( &amfm );
     if ( 0 == status )
     {
@@ -254,48 +254,103 @@ void application_init ( void )
     
     amfm_case_seek( &amfm );
     amfm_case_memorize( );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     amfm_case_seek( &amfm );
     amfm_case_memorize( );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     amfm_case_seek( &amfm );
     amfm_case_memorize( );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     amfm_case_seek( &amfm );
     amfm_case_memorize( );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     amfm_case_seek( &amfm );
     amfm_case_memorize( );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     amfm_case_plus( &amfm );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
 {
     amfm_case_station_1( &amfm );
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
        
     amfm_case_station_2( &amfm );
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     amfm_case_station_3( &amfm );
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     amfm_case_station_4( &amfm );
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     amfm_case_station_5( &amfm );
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

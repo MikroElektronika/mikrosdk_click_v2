@@ -128,7 +128,7 @@ void application_task ( void )
     mrangle_get_angle( &mrangle, &angle );
     log_printf( &logger, " Angle: %.2f deg\r\n", angle );
     log_printf( &logger, "------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

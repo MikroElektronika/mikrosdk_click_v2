@@ -2,7 +2,7 @@
     "name": "Color 16 Click",
     "description": "Color 16 Click is a compact add-on board providing an accurate color-sensing solution. This board features ams AG’s AS7343, a 14-channel multi-purpose spectral sensor offering spectral response through a compatible I2C interface. It has a built-in aperture that controls the light entering the sensor array to increase accuracy, alongside precise optical filters integrated into standard CMOS silicon via deposited interference filter technology. The spectral response is defined by individual channels covering approximately 380nm to 1000nm with 11 channels centered in the visible spectrum, one near-infrared, and a clear channel.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","AS7343-DLGM"],
     "category" : ["Click Boards > Sensors > Optical"]
 }

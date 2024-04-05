@@ -25,15 +25,16 @@
     "name": "mikroe.click.c1wirei2c",
     "product_link": "https://www.mikroe.com/1-wire-i2c-click",
     "short_description": "1-Wire I2C click carries DS28E17 1-Wire-to-I2C master bridge from Analog Devices.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
     "related_projects": [
         2154
     ],
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.1WireI2C",
     "subdir_name": "lib_c1wirei2c"
 }
+
 

@@ -140,7 +140,7 @@ void application_task ( void )
     
     ambient23_read_light_data( &ambient23, &data_tmp );
     log_printf( &logger, "Data: %.2f lux\r\n", data_tmp );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

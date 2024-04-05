@@ -169,6 +169,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -230,9 +235,9 @@ static err_t anynet3gea_rsp_check ( uint8_t *rsp )
             anynet3gea_clear_app_buf( );
             return ANYNET3GEA_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     anynet3gea_process( );
     if ( strstr( app_buf, rsp ) )
     {
@@ -283,7 +288,7 @@ static void anynet3gea_error_check ( err_t error_flag )
             break;
         }
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 static void anynet3gea_log_app_buf ( void )

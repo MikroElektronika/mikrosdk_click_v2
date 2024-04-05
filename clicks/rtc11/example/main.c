@@ -111,7 +111,7 @@ void application_init ( void ) {
     log_printf( &logger,"------------------------\r\n" );
     log_printf( &logger," Software reset \r\n" );
     rtc11_soft_rst( &rtc11 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     time.hours = 23;
     time.min = 59;
@@ -119,7 +119,7 @@ void application_init ( void ) {
     log_printf( &logger,"------------------------\r\n" );
     log_printf( &logger," Setting time: %.2d:%.2d:%.2d \r\n", ( uint16_t ) time.hours, ( uint16_t ) time.min, ( uint16_t ) time.sec );
     rtc11_set_time ( &rtc11, time );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     date.day_of_week = 0;
     date.day = 19;
@@ -128,7 +128,7 @@ void application_init ( void ) {
     log_printf( &logger,"------------------------\r\n" );
     log_printf( &logger," Setting date: %.2d/%.2d/%.2d \r\n", ( uint16_t ) date.day, ( uint16_t ) date.month, ( uint16_t ) date.year );
     rtc11_set_date( &rtc11, date );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     rtc11_stp_sys_slk ( &rtc11, RTC11_PROP_DIS );
     log_info( &logger, " Application Task " );
@@ -137,9 +137,9 @@ void application_init ( void ) {
 
 void application_task ( void ) {
     rtc11_get_time ( &rtc11, &time );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     rtc11_get_date ( &rtc11, &date );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     if ( sec_flag != time.sec ) {
         log_printf( &logger, " Date: " );
@@ -153,6 +153,11 @@ void application_task ( void ) {
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

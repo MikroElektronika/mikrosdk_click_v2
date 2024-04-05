@@ -25,14 +25,15 @@
     "name": "mikroe.click.stepper13",
     "product_link": "https://www.mikroe.com/stepper-13-click",
     "short_description": "Stepper 13 Click is a bipolar step motor driver. It features an H-bridge bipolar step motor driver, which supports full-, half-, quarter-, or eighth-step modes. Stepper 13 click also carries a port expander so that the communication can be done with a minimal number of pins, through the mikroBUS™ I2C bus.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
     "related_projects": [
         2872
     ],
-    "version": "2.1.0.0",
+    "version": "2.1.0.1",
     "cmake": true,
     "alias": "Click.Stepper13",
     "subdir_name": "lib_stepper13"
 }
+

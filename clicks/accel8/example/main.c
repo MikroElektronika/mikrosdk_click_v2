@@ -66,15 +66,15 @@ void application_init ( void )
     log_printf( &logger, " *-* Device Reset *-* \r\n");
     temp_write = ACCEL8_PM1_DEVICE_RESET;
     accel8_generic_write( &accel8, ACCEL8_REG_PWR_MGMT_1, &temp_write, 1 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     temp_write = ACCEL8_GYRO_RESET | ACCEL8_ACCEL_RESET | ACCEL8_TEMP_RESET;
     accel8_generic_write( &accel8, ACCEL8_REG_SIGNAL_PATH_RESET, &temp_write, 1 );
-	Delay_ms( 500 );
+	Delay_ms ( 500 );
     log_printf( &logger, " *-* Device Configuration *-* \r\n" );
     accel8_default_cfg ( &accel8, ACCEL8_ACCEL_CFG_FULL_SCALE_RANGE_2g, ACCEL8_GYRO_CFG_FULL_SCALE_RANGE_250dbs, &range);
 
-    Delay_ms( 1000 );
-    log_printf( &logger, " --- Start Measurement --- \r\n" );Delay_ms( 100 );
+    Delay_ms ( 1000 );
+    log_printf( &logger, " --- Start Measurement --- \r\n" );Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -106,11 +106,17 @@ void application_task ( void )
     log_printf( &logger, "|_______|____________|\r\n" );
 
     log_printf( &logger, " \r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -192,9 +192,9 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, " Application Init " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     // Click initialization.
     lteiot6_cfg_setup( &lteiot6_cfg );
@@ -251,12 +251,12 @@ void application_task ( void )
         }
         case LTEIOT6_CHECK_CONNECTION:
         {
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
             if ( LTEIOT6_OK == lteiot6_check_connection_parameters( ) )
             {
                 example_state = LTEIOT6_CONFIGURE_FOR_MESSAGES;
             }
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
             break;
         }
         case LTEIOT6_CONFIGURE_FOR_MESSAGES:
@@ -265,13 +265,13 @@ void application_task ( void )
             {
                 example_state = LTEIOT6_MESSAGES;
             }
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
             break;
         }
         case LTEIOT6_MESSAGES:
         {
             lteiot6_send_meesage();
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
             break;
         }
         default:
@@ -284,6 +284,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -368,7 +373,7 @@ static err_t lteiot6_rsp_check ( void )
             return LTEIOT6_ERROR_TIMEOUT;
         }
         
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
     
     if ( 0 != strstr( app_buf, LTEIOT6_RSP_OK ) )
@@ -417,7 +422,7 @@ static void lteiot6_error_check( err_t error_flag )
         }
     }
     lteiot6_clear_app_buf(  );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 static void lteiot6_log_app_buf ( void )
@@ -482,7 +487,7 @@ static err_t lteiot6_check_connection( void )
     lteiot6_process();
     if ( 0 != strstr(app_buf, CONNECTED ) )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         lteiot6_process();
         lteiot6_log_app_buf( );
         lteiot6_clear_app_buf(  );

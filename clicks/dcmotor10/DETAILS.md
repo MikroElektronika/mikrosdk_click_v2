@@ -94,11 +94,11 @@ void application_init ( void )
     dcmotor10_cfg_setup( &cfg );
     DCMOTOR10_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     dcmotor10_init( &dcmotor10, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     dcmotor10_inhibit(&dcmotor10, DCMOTOR10_UNINHIBIT );
     dcmotor10_send_cmd( &dcmotor10, DCMOTOR10_RESET_STATUS_REG );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -116,15 +116,31 @@ void application_task ( void )
 {
     dcmotor10_send_cmd( &dcmotor10, DCMOTOR10_ENABLE_1 | DCMOTOR10_ENABLE_2 
                       | DCMOTOR10_ENABLE_3 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     dcmotor10_send_cmd( &dcmotor10, DCMOTOR10_ENABLE_1 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     dcmotor10_send_cmd( &dcmotor10, DCMOTOR10_ENABLE_2 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     dcmotor10_send_cmd( &dcmotor10, DCMOTOR10_ENABLE_3 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     dcmotor10_send_cmd( &dcmotor10, DCMOTOR10_RESET_STATUS_REG );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

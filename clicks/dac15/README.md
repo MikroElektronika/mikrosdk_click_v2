@@ -143,7 +143,9 @@ void application_task ( void )
                         ( float ) dac_data * DAC15_VREF_3V3 / DAC15_MAX_DAC_DATA );
         }
         log_printf( &logger, " -------------------\r\n" );
-        Delay_ms ( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

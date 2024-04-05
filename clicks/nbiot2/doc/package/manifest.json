@@ -25,17 +25,18 @@
     "name": "mikroe.click.nbiot2",
     "product_link": "https://www.mikroe.com/nb-iot-2-click",
     "short_description": "NB IoT 2 Click is a compact add-on board that contains a compact LTE Cat NB2 module with ultra-low power consumption. This board features the BC66-NA, a high-performance, multi-band LTE Cat NB2 module with extremely low power consumption from Quectel Wireless Solutions.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
     "related_projects": [
         3776
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.NBIoT2",
     "subdir_name": "lib_nbiot2"
 }
+
 
 
 

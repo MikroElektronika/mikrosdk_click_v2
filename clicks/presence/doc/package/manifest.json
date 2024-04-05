@@ -25,17 +25,18 @@
     "name": "mikroe.click.presence",
     "product_link": "https://www.mikroe.com/presence-click",
     "short_description": "Presence click is an infrared sensing Click board™ which can be used for presence sensing, motion detection, and a remote overtemperature protection. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2792
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Presence",
     "subdir_name": "lib_presence"
 }
+
 
 
 

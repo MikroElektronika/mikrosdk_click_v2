@@ -54,10 +54,10 @@ void application_init ( )
     compass2_init( &compass2, &cfg );
 
     compass2_reset( &compass2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     compass2_default_cfg( &compass2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( )
@@ -80,11 +80,17 @@ void application_task ( )
 
     log_printf( &logger, "----------------\r\n" );
     
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

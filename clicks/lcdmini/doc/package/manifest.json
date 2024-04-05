@@ -25,17 +25,18 @@
     "name": "mikroe.click.lcdmini",
     "product_link": "https://www.mikroe.com/lcd-mini-click",
     "short_description": "LCD mini click displays 2x16 monochrome characters on an LMB162XFW LCD display. It features the MCP23S17 port expander and the MCP4161 digital potentiometer, both from Microchip.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         2001
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.LCDmini",
     "subdir_name": "lib_lcdmini"
 }
+
 
 
 

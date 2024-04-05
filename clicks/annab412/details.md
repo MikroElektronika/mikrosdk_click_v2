@@ -116,26 +116,26 @@ void application_init ( void )
         log_error( &logger, " Default configuration." );
         for ( ; ; );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     annab412_set_cmd_echo_on( &annab412 );
     annab412_display_rsp( RSP_OK );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     annab412_set_cmd_device_name( &annab412, DEVICE_NAME );
     annab412_display_rsp( RSP_OK );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     annab412_set_cmd_discover_mode( &annab412, ANNAB412_DISCOVERABLE_MODE_ON );
     annab412_display_rsp( RSP_OK );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     annab412_set_cmd_enter_mode( &annab412, ANNAB412_ENTER_MODE_DATA );
     annab412_display_rsp( RSP_OK );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     annab412_set_dsr_pin( &annab412, ANNAB412_PIN_STATE_LOW );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 

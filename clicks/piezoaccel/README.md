@@ -115,7 +115,7 @@ void application_init ( void ) {
 
     piezoaccel_default_cfg( &piezoaccel, &setup_cfg_data );
     log_info( &logger, " Application Task " );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 }
 
 ```
@@ -135,7 +135,7 @@ void application_task ( void ) {
     read_val = piezoaccel_g_unit_read( &piezoaccel, &setup_cfg_data );
     log_printf( &logger, "%.2f,%.2f\r\n", read_val, time_var );
     time_var += time_incr;
-    Delay_ms( time_incr );
+    Delay_ms ( time_incr );
 }
 
 ```

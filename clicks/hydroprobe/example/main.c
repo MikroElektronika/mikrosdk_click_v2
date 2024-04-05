@@ -40,18 +40,26 @@ void hydroprobe_calib ( )
 
     log_printf( &logger, " Keep the Probe dry \r\n" );
     dry_val = hydroprobe_max_val( &hydroprobe );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " Submerge the Probe in liquid \r\n" );
     for ( cnt = 5; cnt > 0; cnt-- )
     {
         log_printf( &logger, " %d \r\n ", ( uint16_t ) cnt );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     log_printf( &logger, " Keep the Probe submerged \r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     wet_val = hydroprobe_min_val( &hydroprobe );
     log_printf( &logger, "--------------------\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -80,7 +88,7 @@ void application_init ( void )
     HYDROPROBE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     hydroprobe_init( &hydroprobe, &cfg );
     
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "  Hydro Probe click  \r\n" );
@@ -88,7 +96,9 @@ void application_init ( void )
     hydroprobe_calib( );
     log_printf( &logger, "     Calibrated      \r\n" );
     log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -96,11 +106,16 @@ void application_task ( void )
     humy_val = hydroprobe_rel_env_hum( &hydroprobe, dry_val, wet_val );
     log_printf( &logger, "Environment moisture content: %d %% \r\n ", ( uint16_t ) humy_val );
     log_printf( &logger, "------------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -132,7 +132,8 @@ void application_task ( void )
     float duty = duty_cnt / 10.0;
     brushless23_pwm_set_duty_cycle ( &brushless23, duty );
     log_printf( &logger, "\r\n Duty cycle: %u%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
-    Delay_ms ( 1500 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 500 );
     float motor_speed_hz = 0;
     if ( BRUSHLESS23_OK == brushless23_get_motor_speed ( &brushless23, &motor_speed_hz ) )
     {
