@@ -25,14 +25,15 @@
     "name": "mikroe.click.gnssrtk",
     "product_link": "https://www.mikroe.com/gnss-rtk-click",
     "short_description": "GNSS RTK Click is a compact add-on board used to enhance the precision of position data derived from satellite-based positioning systems. This board features the ZED-F9P, a multi-band GNSS module with integrated multi-band Real Time Kinematics (RTK) technology offering centimeter-level accuracy from U-blox. This module concurrently uses GNSS signals from all four GNSS constellations (GPS, GLONASS, Galileo, and BeiDou), and provides multi-band RTK with fast convergence times, reliable performance, and easy integration. It also includes moving base support, allowing both base and rover to move while computing a centimeter-level accurate position between them.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.GNSSRTK",
     "subdir_name": "lib_gnssrtk"
 }
+
 
 
 

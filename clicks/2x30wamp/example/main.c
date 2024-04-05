@@ -60,7 +60,7 @@ void application_init ( void )
 
     c2x30wamp_enable( &c2x30wamp, C2X30WAMP_ENABLE );
     log_printf( &logger, "2x30W AMP is initialized \r\n" );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 }
 
 void application_task ( void )
@@ -68,11 +68,23 @@ void application_task ( void )
     c2x30wamp_mute( &c2x30wamp, C2X30WAMP_MUTE );
     log_printf( &logger, "---------------------- \r\n" );
     log_printf( &logger, "MUTE \r\n" );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     c2x30wamp_mute( &c2x30wamp, C2X30WAMP_UNMUTE );
     log_printf( &logger, "---------------------- \r\n" );
     log_printf( &logger, "UNMUTE \r\n" );
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     uint8_t fault_check = c2x30wamp_check_diagnostic( &c2x30wamp );
 
@@ -84,6 +96,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

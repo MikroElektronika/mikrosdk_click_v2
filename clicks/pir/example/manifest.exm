@@ -2,7 +2,7 @@
     "name": "PIR Click",
     "description": "PIR Click is a pyroelectric sensor which generates a voltage when exposed to infrared radiation emitted by live bodies. It is equipped with the PL-N823-01, an infrared sensor from KEMET that uses the pyrolectric effect of ceramic by absorbing infrared rays emitted from the human body, while the the white plastic Fresnel lens covering the sensor filters visible light.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","PL-N823-01"],
     "category" : ["Optical,Motion"] 
 }

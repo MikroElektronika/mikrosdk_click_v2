@@ -94,7 +94,7 @@ void application_init ( void )
     
     mic24045_enable( &mic24045 );
     log_printf( &logger, " Output enabled!\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -110,12 +110,13 @@ void application_task ( void )
     for ( uint16_t cnt = MIC24045_MIN_VOUT_DEC; cnt <= MIC24045_MAX_VOUT_DEC; cnt += 15 )
     {
         mic24045_set_vout_decimal( &mic24045, cnt );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         current_voltage = mic24045_get_vout( &mic24045 );
     
         log_printf( &logger, " VOUT:    ~%.3f V\r\n", current_voltage );
         log_printf( &logger, "------------------\r\n" );
-        Delay_ms( 1500 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 500 );
     }
 }
 

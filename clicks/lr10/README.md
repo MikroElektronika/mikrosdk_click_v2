@@ -102,7 +102,7 @@ void application_init ( void )
     }
 
     lr10_hw_reset( &lr10 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     lr10_generic_write( &lr10, LR10_CMD_AT, strlen(LR10_CMD_AT) );
     if ( LR10_OK == lr10_process( &lr10 ) ) 
@@ -110,7 +110,7 @@ void application_init ( void )
         lr10_log_app_buf( );
         lr10_clear_app_buf( );
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     lr10_write_cmd( &lr10, LR10_CMD_VER );
     if ( LR10_OK == lr10_process( &lr10 ) ) 
@@ -118,7 +118,7 @@ void application_init ( void )
         lr10_log_app_buf( );
         lr10_clear_app_buf( );
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     lr10_write_cmd( &lr10, LR10_CMD_ID );
     if ( LR10_OK == lr10_process( &lr10 ) ) 
@@ -126,7 +126,7 @@ void application_init ( void )
         lr10_log_app_buf( );
         lr10_clear_app_buf( );
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     lr10_write_cmd_sub_param( &lr10, LR10_CMD_MODE, LR10_SUB_CMD_MODE_TEST, 
                                      LR10_SYMBOL_NULL, LR10_QUOTE_DISABLE );
@@ -135,7 +135,7 @@ void application_init ( void )
         lr10_log_app_buf( );
         lr10_clear_app_buf( );
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     lr10_write_cmd( &lr10, LR10_CMD_TEST );
     if ( LR10_OK == lr10_process( &lr10 ) ) 
@@ -143,7 +143,7 @@ void application_init ( void )
         lr10_log_app_buf( );
         lr10_clear_app_buf( );
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     lr10_inquire_cmd( &lr10, LR10_CMD_MODE );
     if ( LR10_OK == lr10_process( &lr10 ) ) 
@@ -151,7 +151,7 @@ void application_init ( void )
         lr10_log_app_buf( );
         lr10_clear_app_buf( );
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
 #ifdef DEMO_APP_TRANSMITTER
     lr10_write_cmd_sub_param( &lr10, LR10_CMD_TEST, LR10_SUB_CMD_TEST_RFCFG, 
@@ -161,7 +161,7 @@ void application_init ( void )
         lr10_log_app_buf( );
         lr10_clear_app_buf( );
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 #endif  
 }
 ```
@@ -191,7 +191,7 @@ void application_task ( void )
         lr10_clear_app_buf( );
     }
 #endif
-    Delay_ms( 1000 );   
+    Delay_ms ( 1000 );   
 }
 ```
 

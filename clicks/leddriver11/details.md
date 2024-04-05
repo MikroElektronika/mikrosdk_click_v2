@@ -130,7 +130,7 @@ void application_task ( void )
     leddriver11_set_duty_cycle ( &leddriver11, duty );
     log_printf( &logger, "> Duty: %u%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     if ( 10 == duty_cnt ) 
     {

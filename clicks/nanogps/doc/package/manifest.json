@@ -25,17 +25,19 @@
     "name": "mikroe.click.nanogps",
     "product_link": "https://www.mikroe.com/nano-gps-click",
     "short_description": "Nano GPS click carries the Nano Hornet module from OriginGPS. It’s the smallest GPS module with an integrated patch antenna (measuring just 10x10x3.8mm).",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1474
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.Nanogps",
     "subdir_name": "lib_nanogps"
 }
+
+
 
 
 

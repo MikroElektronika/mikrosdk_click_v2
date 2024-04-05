@@ -25,17 +25,18 @@
     "name": "mikroe.click.bee",
     "product_link": "https://www.mikroe.com/bee-click",
     "short_description": "The click is designed to run on 3.3V power supply only.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         242
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Bee",
     "subdir_name": "lib_bee"
 }
+
 
 
 

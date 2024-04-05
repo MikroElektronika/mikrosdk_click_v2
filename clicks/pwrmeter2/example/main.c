@@ -76,12 +76,17 @@ void application_task ( void )
         log_printf( &logger, " U = %.3f V\r\n", voltage );
         log_printf( &logger, " I = %.3f A\r\n", current );
         log_printf( &logger, " P = %.3f W\r\n\n", power );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

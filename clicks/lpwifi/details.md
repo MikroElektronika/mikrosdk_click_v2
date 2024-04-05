@@ -96,7 +96,7 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     // Click initialization.
 
@@ -112,11 +112,11 @@ void application_init ( void )
     }
 
     lpwifi_default_cfg( &lpwifi );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // Initiate the communication
     lpwifi_send_cmd( &lpwifi, LPWIFI_CMD_AT );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     // Dummy read
     lpwifi_process( );
@@ -124,12 +124,12 @@ void application_init ( void )
     
     log_printf( &logger, "\r\n --- Factory reset --- \r\n" );
     lpwifi_factory_reset_device ( &lpwifi );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     // Enable Echo
     lpwifi_send_cmd( &lpwifi, LPWIFI_CMD_ATE );
     app_error_flag = lpwifi_rsp_check( );
     lpwifi_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     log_printf( &logger, " ----------------------------------------------- \r\n" );
     
     log_printf( &logger, "\r\n --- Connecting to the access point --- \r\n" );
@@ -143,7 +143,7 @@ void application_init ( void )
         lpwifi_check_connection();
         if ( NOT_CONNECTED_TO_AP == app_connection_status )
         {
-            Delay_ms( 500 );
+            Delay_ms ( 500 );
             app_connection_status = WAIT_FOR_CONNECTION;
 
             // Connect to AP
@@ -158,7 +158,7 @@ void application_init ( void )
     lpwifi_create_tcp_server( &lpwifi, LOCAL_PORT );
     app_error_flag = lpwifi_rsp_check( );
     lpwifi_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_printf( &logger, " ----------------------------------------------- \r\n" );
     log_printf( &logger, "\r\n --- Creating a UDP socket --- \r\n" );
@@ -166,7 +166,7 @@ void application_init ( void )
     lpwifi_create_udp_socket( &lpwifi, LOCAL_PORT );
     app_error_flag = lpwifi_rsp_check( );
     lpwifi_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_printf( &logger, " ----------------------------------------------- \r\n" );
     log_printf( &logger, " TCP server and UDP socket are available at: \r\n" );

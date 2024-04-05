@@ -57,11 +57,11 @@ void application_init ( void )
     flash2_cfg_setup( &cfg );
     FLASH2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     flash2_init( &flash2, &cfg );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
     flash2_global_block_unlock( &flash2 );
-    Delay_ms( 400 );
+    Delay_ms ( 400 );
     flash2_chip_erase( &flash2 );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 
 void application_task ( void )
@@ -71,11 +71,16 @@ void application_task ( void )
     log_printf( &logger, "Reading 9 bytes of flash memory, from address 0x015015:\r\n" );
     flash2_read_generic( &flash2, 0x015015, &rd_data[ 0 ], 9 );
     log_printf( &logger, "Data read: %s\r\n", rd_data );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -111,11 +111,11 @@ void application_init ( void ) {
         for ( ; ; );
     }
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     charger3_default_cfg ( &charger3 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, " ------------------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -132,11 +132,15 @@ void application_task ( void ) {
     float result;
     
     charger3_set_current( &charger3, 0.4 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     result = charger3_calc_digipot_res( &charger3 );
     log_printf( &logger, " Digipot res value: %.2f ohm\r\n", result );
     log_printf( &logger, " ------------------------------------\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

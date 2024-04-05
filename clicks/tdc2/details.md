@@ -135,12 +135,12 @@ void application_task ( void )
     uint8_t cnt = 0;
     
     tdc2_reset_index( &tdc2 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     while ( tdc2_get_int_state( &tdc2 ) == 1 )
     {
         dev_generate_stop( &tdc2 );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     
     while ( tdc2_get_int_state( &tdc2 ) == 0 )
@@ -149,7 +149,7 @@ void application_task ( void )
         
         log_printf( &logger, "CH1: Reference Index[%d]: %lu, Stop Result[%d]: %lu \r\n", ( uint16_t ) cnt, 
                     reference_index[ cnt ], ( uint16_t ) cnt, stop_result[ cnt ] ); 
-        Delay_ms( 10 ); 
+        Delay_ms ( 10 ); 
         
         if ( cnt )
         {
@@ -158,7 +158,7 @@ void application_task ( void )
                                           stop_result[ cnt ], reference_index[ cnt ], &time );
             log_printf( &logger, "Time between STOP %d and STOP %d is %lu ms \r\n", 
                         ( uint16_t ) ( cnt - 1 ), ( uint16_t ) cnt, time / TDC2_uS_TO_mS ); 
-            Delay_ms( 10 );
+            Delay_ms ( 10 );
         }
         cnt++;
     }

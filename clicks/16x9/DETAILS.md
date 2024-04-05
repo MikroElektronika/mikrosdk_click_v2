@@ -148,19 +148,23 @@ void application_task ( void )
 
     c16x9_display_refresh( &c16x9 );
     c16x9_display_byte( &c16x9, &data_char );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     c16x9_display_refresh( &c16x9 );
     c16x9_display_image( &c16x9, &image_on );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     c16x9_display_refresh( &c16x9 );
     c16x9_display_image( &c16x9, &image_off );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     c16x9_display_refresh( &c16x9 );
     c16x9_draw_rectangle( &c16x9, &rectangle );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

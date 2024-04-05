@@ -108,19 +108,27 @@ void application_task ( void )
 {
     log_printf( &logger, "Mode - FORWARD\r\n" );
     hbridge5_forward( &hbridge5 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "Mode - SLEEP\r\n" );
     hbridge5_sleep( &hbridge5, HBRIDGE5_DISABLE_ALL_OUTPUT_PORT );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "Mode - REVERSE\r\n" );
     hbridge5_reverse( &hbridge5 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "Mode - SLEEP\r\n" );
     hbridge5_sleep( &hbridge5, HBRIDGE5_DISABLE_ALL_OUTPUT_PORT );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

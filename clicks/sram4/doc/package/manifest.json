@@ -25,14 +25,15 @@
     "name": "mikroe.click.sram4",
     "product_link": "https://www.mikroe.com/sram-4-click",
     "short_description": "SRAM 4 Click is a compact add-on board that contains highly reliable nonvolatile memory. This board features the CY14B512Q, a 512Kbit SRAM with a nonvolatile element in each memory cell from Cypress Semiconductor, now part of Infineon.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.SRAM4",
     "subdir_name": "lib_sram4"
 }
+
 
 
 

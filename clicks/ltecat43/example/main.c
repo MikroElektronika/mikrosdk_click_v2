@@ -286,6 +286,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -352,9 +357,9 @@ static err_t ltecat43_rsp_check ( void )
             ltecat43_clear_app_buf( );
             return LTECAT43_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     ltecat43_process( );
     if ( strstr( app_buf, LTECAT43_RSP_OK ) )
     {
@@ -401,14 +406,23 @@ static void ltecat43_error_check( err_t error_flag )
             break;
         }
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 static err_t ltecat43_cfg_for_network( void )
 {
     err_t func_error = LTECAT43_OK;
     // Deregister from network
-    Delay_ms ( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     #define DEREGISTER_FROM_NETWORK "2"
     ltecat43_send_cmd_par( &ltecat43, LTECAT43_CMD_COPS, DEREGISTER_FROM_NETWORK );
     error_flag = ltecat43_rsp_check();
@@ -453,7 +467,7 @@ static err_t ltecat43_check_connection( void )
     ltecat43_error_check( error_flag );
     if ( strstr( app_buf, CONNECTED ) )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         ltecat43_process( );
         ltecat43_log_app_buf( );
         log_printf( &logger, "\r\n" );
@@ -570,7 +584,7 @@ static err_t ltecat43_example( void )
         uint8_t * __generic_ptr start_response_buf = strstr( app_buf, urc_buf );
         if ( start_response_buf )
         {
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
             ltecat43_process( );
             uint8_t response_len_buf[ 5 ] = { 0 };
             uint8_t * __generic_ptr start_response_len = strstr( start_response_buf, "," ) + 1;
@@ -590,7 +604,7 @@ static err_t ltecat43_example( void )
         {
             break;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
     timeout_cnt = 0;
 
@@ -616,7 +630,7 @@ static err_t ltecat43_example( void )
         uint8_t * __generic_ptr start_response_buf = strstr( app_buf, urc_buf );
         if ( start_response_buf )
         {
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
             ltecat43_process( );
             uint8_t response_len_buf[ 5 ] = { 0 };
             uint8_t * __generic_ptr start_response_len = strstr( start_response_buf, "," ) + 1;
@@ -636,7 +650,7 @@ static err_t ltecat43_example( void )
         {
             break;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
     
     // Close TCP socket
@@ -650,7 +664,11 @@ static err_t ltecat43_example( void )
     error_flag = ltecat43_rsp_check( );
     func_error |= error_flag;
     ltecat43_error_check( error_flag );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #elif ( DEMO_EXAMPLE == EXAMPLE_SMS )
     // Check SMS mode
     #define CMGF_PDU "+CMGF: 0"
@@ -675,9 +693,37 @@ static err_t ltecat43_example( void )
         func_error |= error_flag;
         ltecat43_error_check( error_flag );
     }
-    Delay_ms( 10000 );
-    Delay_ms( 10000 );
-    Delay_ms( 10000 );
+    // 30 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #else
     #error "No demo example selected"
 #endif

@@ -2,7 +2,7 @@
     "name": "6DOF IMU Click",
     "description": "6DOF IMU click carries ST’s LSM6DS33TR 6-axis inertial measurement unit comprising a 3-axis gyroscope and a 3-axis accelerometer. The chip is a highly accurate 6 DOF inertial measurement unit with long-term stable operation over a wide range of temperatures.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","MAX21105"],
     "category" : ["Motion"] 
 }

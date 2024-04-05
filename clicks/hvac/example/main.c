@@ -66,17 +66,18 @@ void application_init ( void )
     }
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     hvac_scd40_send_cmd( &hvac, HVAC_PERFORM_FACTORY_RESET );
     log_printf( &logger, "  Perform Factory Reset   \r\n" );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     hvac_scd40_get_serial_number ( &hvac, ser_num );
     log_printf( &logger, "   SCD40 - Serial Number : %.4d-%.4d-%.4d \r\n", 
                 ( uint16_t ) ser_num[ 0 ], ( uint16_t ) ser_num[ 1 ], ( uint16_t ) ser_num[ 2 ] );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     hvac_scd40_get_feature_set_version( &hvac, &version_data );
     log_printf( &logger, "     SCD40 - Features     \r\n" );
     log_printf( &logger, " Product Type    : %d \r\n", ( uint16_t ) version_data.product_type );
@@ -85,19 +86,23 @@ void application_init ( void )
                 ( uint16_t ) version_data.product_major_version, 
                 ( uint16_t ) version_data.product_minor_version );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     hvac_sps30_start_measurement ( &hvac );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
 {
     hvac_scd40_send_cmd( &hvac, HVAC_MEASURE_SINGLE_SHOT );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     hvac_scd40_read_measurement( &hvac, &hvac_data );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, " CO2 Concent = %d \r\n ", hvac_data.co2_concent );
 
@@ -111,7 +116,7 @@ void application_task ( void )
     
     log_printf( &logger, "   Mass Concentration :   \r\n" );
     hvac_sps30_read_measured_data( &hvac, &sps30_data );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, " PM 1.0 = %.2f ug/m3 \r\n", sps30_data.mass_pm_1_0 );
     log_printf( &logger, " PM 2.5 = %.2f ug/m3 \r\n", sps30_data.mass_pm_2_5 );
@@ -126,11 +131,17 @@ void application_task ( void )
     log_printf( &logger, " PM 4.0 = %.2f n/cm3 \r\n", sps30_data.num_pm_4_0 );
     log_printf( &logger, " PM 10  = %.2f n/cm3 \r\n", sps30_data.num_pm_10 );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

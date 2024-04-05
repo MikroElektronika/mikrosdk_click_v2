@@ -54,7 +54,7 @@ void application_init ( void )
     GYRO4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     gyro4_init( &gyro4, &cfg );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     initialize_flag = gyro4_initialize( &gyro4 );
     if ( initialize_flag == 1 )
     {
@@ -87,11 +87,16 @@ void application_task ( )
     log_printf( &logger, "> X axis : %.2f degrees per second \r\n", x_axis );
     log_printf( &logger, "> Y axis : %.2f degrees per second \r\n", y_axis );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

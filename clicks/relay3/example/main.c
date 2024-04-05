@@ -118,17 +118,22 @@ void application_init ( )
 void application_task ( )
 {
     case_1( );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     case_2( );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     case_3( );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

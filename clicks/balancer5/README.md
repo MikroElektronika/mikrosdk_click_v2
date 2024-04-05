@@ -191,7 +191,11 @@ void application_task ( void )
     log_printf( &logger, "- TDIE: %.2f%s\r\n", temp_float_data, log_degree );
     
     log_printf( &logger, "____________________\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

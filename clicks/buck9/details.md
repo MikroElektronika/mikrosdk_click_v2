@@ -108,10 +108,18 @@ void application_task ( void )
 {
     buck9_set_device_mode ( &buck9, BUCK9_DEVICE_ENABLE );
     log_printf(&logger, "Output:\t ENABLED\r\n");
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     buck9_set_device_mode ( &buck9, BUCK9_DEVICE_DISABLE );
     log_printf(&logger, "Output:\t DISABLED\r\n");
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

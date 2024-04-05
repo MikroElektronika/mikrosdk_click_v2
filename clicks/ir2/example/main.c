@@ -83,7 +83,7 @@ void application_task ( void )
     
     log_printf( &logger, "\r\n Message has been sent! \r\n" );
     log_printf( &logger, "- - - - - - - - - - - - \r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 #else
     uint8_t address;
     uint8_t rx_data;
@@ -97,6 +97,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

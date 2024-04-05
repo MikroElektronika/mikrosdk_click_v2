@@ -134,7 +134,7 @@ void application_task ( void )
     
     log_printf( &logger, "\r\n Message has been sent! \r\n" );
     log_printf( &logger, "- - - - - - - - - - - - \r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 #else
     uint8_t address;
     uint8_t rx_data;

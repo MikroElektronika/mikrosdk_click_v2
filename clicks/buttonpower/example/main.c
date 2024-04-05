@@ -58,7 +58,7 @@ void application_init ( void )
 
         for ( ; ; );
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     buttonpower_pwm_start( &buttonpower );
     buttonpower_set_duty_cycle ( &buttonpower, 0.1 );
@@ -82,7 +82,7 @@ void application_task ( void )
             duty_cycle = ( float ) n_cnt ;
             duty_cycle /= 100;
             buttonpower_set_duty_cycle( &buttonpower, duty_cycle );
-            Delay_ms( 10 );
+            Delay_ms ( 10 );
         }
         button_state_old = button_state;
     } 
@@ -93,7 +93,7 @@ void application_task ( void )
             duty_cycle = ( float ) n_cnt ;
             duty_cycle /= 100;
             buttonpower_set_duty_cycle( &buttonpower, duty_cycle );
-            Delay_ms( 10 );
+            Delay_ms ( 10 );
         }
         button_state_old = button_state;
     }
@@ -101,6 +101,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

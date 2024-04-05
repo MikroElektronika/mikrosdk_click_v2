@@ -67,42 +67,42 @@ static uint8_t parse_data_command ( char * command )
     if ( strstr( command, COMMAND_VOLUME_UP ) )
     {
         btaudio_set_cmd_mode( &btaudio, 0 );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         btaudio_increase_volume( &btaudio );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         btaudio_set_cmd_mode( &btaudio, 1 );
     }
     else if ( strstr( command, COMMAND_VOLUME_DOWN ) )
     {
         btaudio_set_cmd_mode( &btaudio, 0 );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         btaudio_decrease_volume( &btaudio );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         btaudio_set_cmd_mode( &btaudio, 1 );
     }
     else if ( strstr( command, COMMAND_PLAY ) ||
               strstr( command, COMMAND_PAUSE ) )
     {
         btaudio_set_cmd_mode( &btaudio, 0 );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         btaudio_pause_play_track( &btaudio );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         btaudio_set_cmd_mode( &btaudio, 1 );
     }
     else if ( strstr( command, COMMAND_NEXT ) )
     {
         btaudio_set_cmd_mode( &btaudio, 0 );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         btaudio_next_track( &btaudio );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         btaudio_set_cmd_mode( &btaudio, 1 );
     }
     else if ( strstr( command, COMMAND_PREVIOUS ) )
     {
         btaudio_set_cmd_mode( &btaudio, 0 );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         btaudio_previous_track( &btaudio );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         btaudio_set_cmd_mode( &btaudio, 1 );
     }
     else
@@ -205,7 +205,7 @@ void application_init ( void )
     btaudio_cfg_setup( &cfg );
     BTAUDIO_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     btaudio_init( &btaudio, &cfg );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "Power ON\r\n" );
     btaudio_set_power_on( &btaudio );
@@ -232,6 +232,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

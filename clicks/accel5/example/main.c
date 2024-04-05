@@ -62,9 +62,9 @@ void application_init ( void )
     log_info( &logger, "---- Application Init Done ----\n" );
 
     accel5_soft_reset( &accel5 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     accel5_default_cfg( &accel5, ACCEL5_CFG_0_NORMAL_MODE, ACCEL5_CFG_1_ACC_RANGE_4g );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void application_task ( void )
@@ -84,11 +84,16 @@ void application_task ( void )
     z_axis_data = accel5_get_axis( &accel5, ACCEL5_Z_AXIS );
     log_printf ( &logger, " Z axis : %d\r\n\n", z_axis_data );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

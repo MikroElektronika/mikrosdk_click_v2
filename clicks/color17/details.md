@@ -120,7 +120,7 @@ void application_init ( void )
     }
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -143,7 +143,7 @@ void application_task ( void )
         color17_display_color( );
     }
     log_printf( &logger, " ----------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

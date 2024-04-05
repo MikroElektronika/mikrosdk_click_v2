@@ -113,7 +113,7 @@ void application_task ( void )
     
         llcspi_generic_write( &llcspi, tmp, 2 );
         
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }  
 

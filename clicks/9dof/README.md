@@ -103,7 +103,7 @@ void application_init ( void )
     c9dof_init( &c9dof, &cfg );
     
     c9dof_default_cfg ( &c9dof );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "              9DOF Click\r\n" );
     log_printf( &logger, "--------------------------------------\r\n" );
@@ -123,13 +123,13 @@ void application_init ( void )
 void application_task ( void )
 {
     c9dof_read_accel( &c9dof, &accel_data );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     c9dof_read_gyro( &c9dof, &gyro_data );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     c9dof_read_mag( &c9dof, &mag_data );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     log_printf( &logger, "   Accel    |    Gyro    |    Mag\r\n" );
     log_printf( &logger, "--------------------------------------\r\n" );
@@ -137,7 +137,8 @@ void application_task ( void )
     log_printf( &logger, " Y = %6d | Y = %6d | Y = %6d\r\n", accel_data.y, gyro_data.y, mag_data.y );
     log_printf( &logger, " Z = %6d | Z = %6d | Z = %6d\r\n", accel_data.z, gyro_data.z, mag_data.z );
     log_printf( &logger, "--------------------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

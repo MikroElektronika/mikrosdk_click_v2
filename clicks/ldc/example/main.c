@@ -115,7 +115,7 @@ void application_task ( void )
                 log_printf( &logger, "> L[uH]: %.3f\r\n", inductance );
                 log_printf( &logger, "> ************************\r\n" );
                 
-                Delay_ms( 500 );
+                Delay_ms ( 500 );
             }
             else
             {
@@ -127,6 +127,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

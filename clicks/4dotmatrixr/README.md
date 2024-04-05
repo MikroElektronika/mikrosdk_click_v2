@@ -114,24 +114,24 @@ void application_task ( void )
     for ( i = 0; i < 20; i++ )
     {
         c4dot_write_text(  &c4dotmatrixr, text + i );
-        Delay_ms( 150 );
+        Delay_ms ( 150 );
     }
         
     // Clear and delay.
     c4dot_clear_display( &c4dotmatrixr );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
         
     log_printf( &logger, "Displaying all integer numbers from -20 to 20 on the click board...\r\n" );
     // Write some numbers on the display.
     for ( i = -20; i <= 20; i++ )
     {
         c4dot_write_int_dec( &c4dotmatrixr, i );
-        Delay_ms( 150 );
+        Delay_ms ( 150 );
     }
 
     // Clear and delay.
     c4dot_clear_display( &c4dotmatrixr );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }  
 
 ```

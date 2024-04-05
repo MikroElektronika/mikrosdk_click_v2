@@ -104,17 +104,17 @@ void application_init ( void ) {
     log_printf( &logger, "----------------------------\r\n" );
     log_printf( &logger, " Hardware Reset \r\n" );
     digipot7_hw_reset( &digipot7 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "----------------------------\r\n" );
     log_printf( &logger, " Enable Write \r\n" );
     digipot7_enable_write( &digipot7 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "----------------------------\r\n" );
     log_printf( &logger, " Set normal operating mode \r\n" );
     digipot7_operating_mode( &digipot7, DIGIPOT7_NORMAL_MODE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "----------------------------\r\n" );
     log_info( &logger, " Application Task " );
@@ -133,22 +133,38 @@ void application_task ( void ) {
     log_printf( &logger, " Set Resistance: 1.024 kOhm \r\n" );
     log_printf( &logger, "----------------------------\r\n" );
     digipot7_set_resistance( &digipot7, 1024 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, " Set Resistance: 2.048 kOhm \r\n" );
     log_printf( &logger, "----------------------------\r\n" );
     digipot7_set_resistance( &digipot7, 2048 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, " Set Resistance: 4.096 kOhm \r\n" );
     log_printf( &logger, "----------------------------\r\n" );
     digipot7_set_resistance( &digipot7, 4096 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, " Set Resistance: 8.192 kOhm \r\n" );
     log_printf( &logger, "----------------------------\r\n" );
     digipot7_set_resistance( &digipot7, 8192 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

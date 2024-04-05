@@ -25,17 +25,18 @@
     "name": "mikroe.click.adc4",
     "product_link": "https://www.mikroe.com/adc-4-click",
     "short_description": "ADC 4 click is an advanced analog to digital multichannel converter, which can sample inputs from 16 single-ended channels or 8 differential input channel pairs.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2293
     ],
-    "version": "2.1.0.19",
+    "version": "2.1.0.20",
     "cmake": true,
     "alias": "Click.Adc4",
     "subdir_name": "lib_adc4"
 }
+
 
 
 

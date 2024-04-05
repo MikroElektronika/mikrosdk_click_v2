@@ -2,7 +2,7 @@
     "name": "Boost 4 Click",
     "description": "Boost 4 click carries the TPS61230A, a high efficiency fully integrated synchronous boost converter from Texas Instruments. The click is designed to run on a 3.3V power supply.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","TPS61230A"],
     "category" : ["Boost"] 
 }

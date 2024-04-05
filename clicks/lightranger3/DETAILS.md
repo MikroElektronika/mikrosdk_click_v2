@@ -124,7 +124,7 @@ void application_task ( void )
 
     log_printf( &logger, "Distance = %u mm \r\n ", distance );
 
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 } 
 
 ```

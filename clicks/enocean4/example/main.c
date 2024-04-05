@@ -335,16 +335,16 @@ void application_init ( void )
     ENOCEAN4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     enocean4_init( &enocean4, &cfg );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     enocean4_response_handler_set( &enocean4, &make_response );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
     rsp_check = 1;
     enocean4_reset( &enocean4 );
 
     log_printf( &logger, "** EnOcean 4 initialization done **\r\n" );
     log_printf( &logger, "***********************************\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // Clearing RX buffer
     {
@@ -360,7 +360,8 @@ void application_init ( void )
     enocean4_send_packet( &enocean4, &message );
     check_response( );
     log_printf( &logger, "***********************************\r\n" );
-    Delay_ms( 1500 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 500 );
 
     log_printf( &logger, "Add filter to filter list...\r\n" );
     message.data_length    = 0x0007;
@@ -376,7 +377,8 @@ void application_init ( void )
     enocean4_send_packet( &enocean4, &message );
     check_response( );
     log_printf( &logger, "***********************************\r\n" );
-    Delay_ms( 1500 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 500 );
 
     log_printf( &logger, "Supplied filters reading...\r\n" );
     message.data_length    = 0x0001;
@@ -388,7 +390,8 @@ void application_init ( void )
     log_printf( &logger, "***********************************\r\n" );
     log_printf( &logger, "Ready to exchange telegrams\r\n" );
     log_printf( &logger, "***********************************\r\n" );
-    Delay_ms( 1500 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 500 );
 }
 
 void application_task ( void )
@@ -412,12 +415,21 @@ void application_task ( void )
     log_printf( &logger, "Waiting for a response...\r\n" );
     check_response( );
     log_printf( &logger, "***********************************\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

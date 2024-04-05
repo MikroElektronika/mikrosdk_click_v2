@@ -2,7 +2,7 @@
     "name": "EZO Carrier pH Click",
     "description": "EZO Carrier Click - pH is a compact add-on board that allows you to measure the potential of hydrogen (the power of hydrogen) in your application. This board features the EZO™ pH, a pH measurement interface circuit board from Atlas Scientific.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","pH EZO"],
     "category" : ["Click Boards > Sensors > Environmental"]
 }

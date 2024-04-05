@@ -104,7 +104,7 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_printf( &logger, "\r\nApplication Init\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     // Click initialization.
     bletiny_cfg_setup( &bletiny_cfg );
@@ -149,7 +149,7 @@ void application_init ( void )
     {
         bletiny_error_check( app_error_flag );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     //send command to check ble address
     bletiny_send_cmd( &bletiny, BLETINY_CMD_BDADDR );    
     app_error_flag = bletiny_rsp_check();
@@ -162,7 +162,7 @@ void application_init ( void )
     {
         bletiny_error_check( app_error_flag );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     //send ATrI command to check remote connected device
     bletiny_send_cmd( &bletiny, BLETINY_CMD_ATRI );
     app_error_flag = bletiny_rsp_check();
@@ -175,7 +175,7 @@ void application_init ( void )
     {
         bletiny_error_check( app_error_flag );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     //send RSSI command to check signal quality
     bletiny_send_cmd( &bletiny, BLETINY_CMD_RSSI );
     app_error_flag = bletiny_rsp_check();

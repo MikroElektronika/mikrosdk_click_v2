@@ -64,7 +64,7 @@ void application_init ( void )
     JOYSTCIK_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     joystick_init( &joystick, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     joystick_default_cfg( &joystick );
 
@@ -74,7 +74,7 @@ void application_init ( void )
     log_printf( &logger,  "    Joystick Click   \r\n" );
     log_printf( &logger,  "*********************\r\n" );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
@@ -85,7 +85,7 @@ void application_task ( void )
 
     position = joystick_get_position( &joystick );
 
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
 
     if ( ( button_state == 1 ) && ( button_state_old == 0 ) )
     {
@@ -155,12 +155,17 @@ void application_task ( void )
 
         position_old = position;
 
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

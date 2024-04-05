@@ -75,13 +75,19 @@ void application_task ( void )
         {
             log_printf( &logger, " All channels output voltage set to %.3f V\r\n", output_voltage );
             output_voltage += step;
-            Delay_ms( 2000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
         }
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

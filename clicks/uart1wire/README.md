@@ -89,7 +89,7 @@ void application_init ( void )
     UART1WIRE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     uart1wire_init( &uart1wire, &cfg );
     
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -110,7 +110,7 @@ void application_task ( void )
     {
         log_printf( &logger, " * Temperature:     %.2f C\r\n", temp_f );
         log_printf( &logger, "------------------------------\r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 } 
 

@@ -25,14 +25,15 @@
     "name": "mikroe.click.daq3",
     "product_link": "https://www.mikroe.com/daq-3-click",
     "short_description": "DAQ 3 Click is a compact add-on board representing a precision data acquisition solution. This board features the ADAQ4003, fast and precise μModule precision data acquisition (DAQ) signal chain solution from Analog Devices. Using SIP technology, the ADAQ4003 reduces end system component count by combining multiple standard signal processing and conditioning blocks into a single device. These blocks include a high-resolution 18-bit, 2 MSPS successive approximation register ADC, fully differential ADC driver amplifier, and a stable reference buffer along with selectable gain options. This Click board™ is suitable for process control and machine automation applications, as automatic test equipment, digital control loops, and more.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Daq3",
     "subdir_name": "lib_daq3"
 }
+
 
 
 

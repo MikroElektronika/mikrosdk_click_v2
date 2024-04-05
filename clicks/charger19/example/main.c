@@ -68,12 +68,17 @@ void application_task ( void )
     if ( CHARGER19_OK == charger19_get_vbat ( &charger19, &voltage ) ) 
     {
         log_printf( &logger, " Battery Voltage : %.3f[V]\r\n\n", voltage );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

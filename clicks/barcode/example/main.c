@@ -71,7 +71,7 @@ static void barcode_process ( void )
             process_cnt--;
 
             // Process delay 
-            Delay_ms( 1 );
+            Delay_ms ( 1 );
         }
     }
 }
@@ -102,7 +102,7 @@ void application_init ( void )
     BARCODE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     barcode_init( &barcode, &cfg );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void application_task ( void )
@@ -110,11 +110,17 @@ void application_task ( void )
     barcode_enable_scaning( &barcode, BARCODE_LOGIC_ON );
     barcode_process( );
     barcode_enable_scaning( &barcode, BARCODE_LOGIC_OFF );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

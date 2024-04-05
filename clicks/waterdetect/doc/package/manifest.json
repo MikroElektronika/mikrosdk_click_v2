@@ -25,17 +25,18 @@
     "name": "mikroe.click.waterdetect",
     "product_link": "https://www.mikroe.com/water-detect-click",
     "short_description": "Water Detect click is used for detecting water and other electroconductive liquids.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2193
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.WaterDetect",
     "subdir_name": "lib_waterdetect"
 }
+
 
 
 

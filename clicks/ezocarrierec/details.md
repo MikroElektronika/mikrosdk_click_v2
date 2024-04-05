@@ -152,7 +152,7 @@ void application_init ( void )
             }
         }
         log_printf( &logger, "- " );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
         ezocarrierec_clear_app_buf( );
     }
     #define CALIBRATION_VALUE   "80"
@@ -183,7 +183,11 @@ void application_task ( void )
     ezocarrierec_send_cmd( &ezocarrierec, EZOCARRIEREC_CMD_SINGLE_READ );
     error_flag = ezocarrierec_rsp_check( &ezocarrierec, EZOCARRIEREC_RSP_OK );
     ezocarrierec_error_check( error_flag );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

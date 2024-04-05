@@ -4,7 +4,7 @@
 ---
 # Accel 4 click
 
-> Accel 4 Click is a compact add-on board that contains an acceleration sensor. This board features the FXLS8964AF, a 12-bit three-axis accelerometer from NXP Semiconductors. It allows selectable full-scale acceleration measurements in ranges of ±2g, ±4g, ±8g, or ±16g in three axes with a configurable host interface that supports both SPI and I2C serial communication. The FXLS8964AF supports both high-performance and low-power operating modes, allowing maximum flexibility to meet the resolution and power needs for various unique use cases.
+> Accel 4 Click is a compact add-on board that contains an acceleration sensor. This board features the FXLS8964AF, a 12-bit three-axis accelerometer from NXP Semiconductors. It allows selectable full-scale acceleration measurements in ranges of ï¿½2g, ï¿½4g, ï¿½8g, or ï¿½16g in three axes with a configurable host interface that supports both SPI and I2C serial communication. The FXLS8964AF supports both high-performance and low-power operating modes, allowing maximum flexibility to meet the resolution and power needs for various unique use cases.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/accel4_click.png" height=300px>
@@ -123,7 +123,7 @@ void application_init ( void )
     // Wait for the powerup status
     do {
         accel4_generic_read( &accel4, ACCEL4_REG_INT_STATUS, &temp_data, 1 );
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }while ( ( temp_data & 1 ) != 1 );
     
     //Read device ID
@@ -137,7 +137,7 @@ void application_init ( void )
     
     accel4_default_cfg ( &accel4 );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, " Application Task " );
 }
 
@@ -160,7 +160,7 @@ void application_task ( void )
         log_printf( &logger, " > Y: %.2f\r\n", axes.y );
         log_printf( &logger, " > Z: %.2f\r\n", axes.z );
         log_printf( &logger, "*****************************************\r\n" );
-        Delay_ms( 300 );
+        Delay_ms ( 300 );
     }
 }
 

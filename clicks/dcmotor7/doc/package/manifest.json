@@ -25,17 +25,18 @@
     "name": "mikroe.click.dcmotor7",
     "product_link": "https://www.mikroe.com/dc-motor-7-click",
     "short_description": "DC MOTOR 7 click is a dual brushed DC motor driving Click board™, featuring the advanced PWM chopper-type integrated DC motor driver, labeled as TB67H400AFTG.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2587
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.DcMotor7",
     "subdir_name": "lib_dcmotor7"
 }
+
 
 
 

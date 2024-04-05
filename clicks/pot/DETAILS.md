@@ -112,7 +112,7 @@ void application_task ( void )
     if ( POT_OK == pot_read_an_pin_voltage ( &pot, &voltage ) ) 
     {
         log_printf( &logger, " AN Voltage : %.3f[V]\r\n\n", voltage );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }  
 

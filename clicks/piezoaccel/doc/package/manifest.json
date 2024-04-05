@@ -25,14 +25,15 @@
     "name": "mikroe.click.piezoaccel",
     "product_link": "https://www.mikroe.com/piezo-accel-click",
     "short_description": "Piezo Accel Click is a compact add-on board containing an acceleration sensor based on PE technology.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.PiezoAccel",
     "subdir_name": "lib_piezoaccel"
 }
+
 
 
 

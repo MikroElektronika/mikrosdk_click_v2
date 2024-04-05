@@ -161,42 +161,42 @@ void application_init ( void )
 
         for ( ; ; );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     ble6_power_on( &ble6, BLE6_MODULE_POWER_ON );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     ble6_module_init( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "-> Local Version Information: \r\n" );
     ble6_send_command( &ble6, &hci_read_local_version_information[ 0 ], 4 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     ble6_handler( );
     ble6_display_log( );
     ble6_local_version_info( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "--------------------------------\r\n" );
     log_printf( &logger, "-> ACI GAP Update Value: \r\n" );
     ble6_send_command( &ble6, &aci_gatt_update_value[ 0 ], 21 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     ble6_handler( );
     ble6_display_log( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "--------------------------------\r\n" );
     log_printf( &logger, "-> HCI Set Scan. Response Data: \r\n" );
     ble6_send_command( &ble6, &hci_le_set_scan_response_data[ 0 ], 36 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     ble6_handler( );
     ble6_display_log( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "--------------------------------\r\n" );
     log_printf( &logger, "-> ACI GAP Set Discoverable: \r\n" );
     ble6_send_command( &ble6, &aci_gap_set_discoverable[ 0 ], 30 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     ble6_handler( );
     ble6_display_log( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
 }
@@ -208,7 +208,7 @@ void application_task ( void )
     while ( device_connected_flag ) 
     {
         int32_t cnt = ble6_generic_read( &ble6, rx_response, PROCESS_BUFFER_SIZE );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         if ( ( ble6_strncmp( rx_response, hci_le_serverwrite_event, 1 ) == 0 ) && ( cnt > 13 ) ) 
         {
             ble6_response_handler( );
@@ -218,6 +218,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -257,7 +262,7 @@ void ble6_connect_handler ( void )
     uint16_t tmp;
     uint8_t cnt;
     ble6_generic_read( &ble6, rx_response, PROCESS_BUFFER_SIZE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     cr_len = 0;
 
@@ -521,7 +526,7 @@ void ble6_display_log ( void )
 void ble6_event_handler ( void )
 {
     ble6_generic_read( &ble6, rx_response, PROCESS_BUFFER_SIZE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     if ( ble6_strncmp( rx_response, hci_le_meta_event_connect, 5 )
          == 0 )
     {
@@ -531,7 +536,7 @@ void ble6_event_handler ( void )
         ble6_connect_handler( );
         ble6_le_meta_event( );
         log_printf( &logger, "--------------------------------\r\n" );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
 
         device_connected_flag = 1;
     }
@@ -542,63 +547,63 @@ void ble6_module_init ( void )
     log_printf( &logger, "--------------------------------\r\n" );
     log_printf( &logger, "        *** SW Reset ***        \r\n" );
     ble6_send_command( &ble6, hci_info_confirm, 4 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     memset( rx_response, 0, 255 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     ble6_generic_read( &ble6, rx_response, PROCESS_BUFFER_SIZE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "--------------------------------\r\n" );
     log_printf( &logger, "-> Firmware Details: \r\n" );
     ble6_send_command( &ble6, aci_hal_get_fw_version, 4 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     ble6_handler( );
     ble6_display_log( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "--------------------------------\r\n" );
     log_printf( &logger, "-> HCI Reset: \r\n" );
     ble6_send_command( &ble6, hci_reset, 4 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     ble6_handler( );
     ble6_display_log( );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     ble6_handler( );
     ble6_display_log( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "--------------------------------\r\n" );
     log_printf( &logger, "-> ACI HAL Write Configuration: \r\n" );
     ble6_send_command( &ble6, aci_hal_write_config_data, 12 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     ble6_handler( );
     ble6_display_log( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "--------------------------------\r\n" );
     log_printf( &logger, "-> ACI Set Tx Power Level: \r\n" );
     ble6_send_command( &ble6, aci_hal_set_tx_power_level, 6 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     ble6_handler( );
     ble6_display_log( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "--------------------------------\r\n" );
     log_printf( &logger, "-> ACI GATT Init.: \r\n" );
     ble6_send_command( &ble6, aci_gatt_init, 4 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     ble6_handler( );
     ble6_display_log( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "--------------------------------\r\n" );
     log_printf( &logger, "-> ACI GAP Init.: \r\n" );
     ble6_send_command( &ble6, aci_gap_init, 7 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     ble6_handler( );
     ble6_display_log ();
     ble6_aci_gap_init( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 // ------------------------------------------------------------------------ END

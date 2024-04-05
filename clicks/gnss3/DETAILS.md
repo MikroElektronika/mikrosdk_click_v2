@@ -89,7 +89,7 @@ void application_init ( void )
     gnss3_init( &gnss3, &cfg );
 
     gnss3_module_wakeup( &gnss3 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```

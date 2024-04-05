@@ -127,7 +127,11 @@ void application_init ( void )
     strcpy( last_reading, app_buf );
     log_printf( &logger, "Place the probe into the calibration solution,\r\n" );
     log_printf( &logger, "for single-point calibration \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "Waiting for stable readings \r\n" );
     while ( n_cnt <= 5 )
     {
@@ -144,7 +148,7 @@ void application_init ( void )
             }
         }
         log_printf( &logger, "- " );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
         ezocarrierorp_clear_app_buf( );
     }
 
@@ -177,7 +181,11 @@ void application_task ( void )
     ezocarrierorp_send_cmd( &ezocarrierorp, EZOCARRIERORP_CMD_SINGLE_READ );
     error_flag = ezocarrierorp_rsp_check( &ezocarrierorp, EZOCARRIERORP_RSP_OK );
     ezocarrierorp_error_check( error_flag );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

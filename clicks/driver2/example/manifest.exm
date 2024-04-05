@@ -2,7 +2,7 @@
     "name": "Driver 2 Click",
     "description": "Driver 2 Click is a compact add-on board that contains a gate driver with a level-shift technology with an additional Shutdown function. This board features the IR2104S, a high voltage, high-speed power MOSFET and IGBT driver with typical 0.21 A source and 0.36 A sink currents and independent high and low side referenced output channels from Infineon Technologies.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","IR2104S"],
     "category" : ["Brushed"]
 }

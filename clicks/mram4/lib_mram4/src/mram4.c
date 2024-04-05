@@ -98,6 +98,11 @@ err_t mram4_default_cfg ( mram4_t *ctx )
     err_flag = mram4_write_enable( ctx );
     Delay_100ms( );
 
+    err_flag |= mram4_set_status( ctx, MRAM4_CMD_WRITE_STATUS_REG, 
+                                       MRAM4_STATUS_WP_BIT_MASK | 
+                                       MRAM4_STATUS_WIP_BIT_MASK );
+    Delay_100ms( );
+
     return err_flag;
 }
 

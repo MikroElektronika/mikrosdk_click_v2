@@ -78,7 +78,7 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     // Click initialization.
     lteiot_cfg_setup( &lteiot_cfg );
@@ -103,61 +103,66 @@ void application_init ( void )
     lteiot_send_cmd( &lteiot, LTEIOT_CMD_AT );
     app_error_flag = lteiot_rsp_check( );
     lteiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // ATI - product information
     lteiot_send_cmd( &lteiot, LTEIOT_CMD_ATI );
     app_error_flag = lteiot_rsp_check(  );
     lteiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CGMR - firmware version
     lteiot_send_cmd( &lteiot, LTEIOT_CMD_CGMR );
     app_error_flag = lteiot_rsp_check(  );
     lteiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // COPS - deregister from network
     lteiot_send_cmd_with_parameter( &lteiot, LTEIOT_CMD_COPS, "2" );
     app_error_flag = lteiot_rsp_check(  );
     lteiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CGDCONT - set sim apn
     lteiot_set_sim_apn( &lteiot, SIM_APN );
     app_error_flag = lteiot_rsp_check(  );
     lteiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
      
     // CFUN - full funtionality
     lteiot_send_cmd_with_parameter( &lteiot, LTEIOT_CMD_CFUN, "1" );
     app_error_flag = lteiot_rsp_check(  );
     lteiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // COPS - automatic mode
     lteiot_send_cmd_with_parameter( &lteiot, LTEIOT_CMD_COPS, "0" );
     app_error_flag = lteiot_rsp_check(  );
     lteiot_error_check( app_error_flag );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     // CEREG - network registration status
     lteiot_send_cmd_with_parameter( &lteiot, LTEIOT_CMD_CEREG, "2" );
     app_error_flag = lteiot_rsp_check(  );
     lteiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CIMI - request IMSI
     lteiot_send_cmd( &lteiot, LTEIOT_CMD_CIMI );
     app_error_flag = lteiot_rsp_check(  );
     lteiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     app_buf_len = 0;
     app_buf_cnt = 0;
     app_connection_status = WAIT_FOR_CONNECTION;
     log_info( &logger, " Application Task " );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -176,19 +181,23 @@ void application_task ( void )
         lteiot_send_cmd_check( &lteiot, LTEIOT_CMD_CGATT );
         app_error_flag = lteiot_rsp_check(  );
         lteiot_error_check( app_error_flag );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         
         // CEREG - network registration status
         lteiot_send_cmd_check( &lteiot, LTEIOT_CMD_CEREG );
         app_error_flag = lteiot_rsp_check(  );
         lteiot_error_check( app_error_flag );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         
         // CSQ - signal quality
         lteiot_send_cmd( &lteiot, LTEIOT_CMD_CSQ );
         app_error_flag = lteiot_rsp_check(  );
         lteiot_error_check( app_error_flag );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     else
     {
@@ -198,7 +207,9 @@ void application_task ( void )
         lteiot_send_cmd_with_parameter( &lteiot, "AT+CMGF", "1" );
         app_error_flag = lteiot_rsp_check(  );
         lteiot_error_check( app_error_flag );
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
         
         for( ; ; )
         {   
@@ -206,9 +217,36 @@ void application_task ( void )
             lteiot_send_text_message( &lteiot, PHONE_NUMBER_TO_MESSAGE, MESSAGE_CONTENT );
             app_error_flag = lteiot_rsp_check(  );
             lteiot_error_check( app_error_flag );
-            Delay_ms( 10000 );
-            Delay_ms( 10000 );
-            Delay_ms( 10000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
         }
     }
 } 

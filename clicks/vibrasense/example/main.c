@@ -56,14 +56,14 @@ void application_init ( void )
     vibrasense_cfg_setup( &cfg );
     VIBRASENSE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     vibrasense_init( &vibrasense, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf(&logger, "--------------------\r\n");
     log_printf(&logger, "  Vibra sense Click \r\n");
     log_printf(&logger, "--------------------\r\n");
 
     vibrasense_set_mode( &vibrasense, VIBRASENSE_ENABLE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -72,13 +72,18 @@ void application_task ( void )
     {
         log_printf(&logger, "       TILT !!!     \r\n");
         log_printf(&logger, "--------------------\r\n");
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 }
 
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

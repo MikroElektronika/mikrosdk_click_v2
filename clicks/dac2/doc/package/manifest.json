@@ -25,17 +25,18 @@
     "name": "mikroe.click.dac2",
     "product_link": "https://www.mikroe.com/dac-2-click",
     "short_description": "DAC 2 click represents a 16-bit digital-to-analog converter.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1546
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Dac2",
     "subdir_name": "lib_dac2"
 }
+
 
 
 

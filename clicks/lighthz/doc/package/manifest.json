@@ -25,15 +25,16 @@
     "name": "mikroe.click.lighthz",
     "product_link": "https://www.mikroe.com/lighthz-click",
     "short_description": "LightHz Click is a compact add-on board that effectively measures ambient light intensity. This board features the TL2L30BR, a programmable light-to-frequency converter from ams. The sensor outputs either a pulse train or a square wave (50% duty cycle) with a frequency directly proportional to light intensity (irradiance). It has programmable sensitivity and full-scale output frequency and could be used as a rough color detector with a selectable frequency range.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
     "related_projects": [
         243
     ],
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.LightHz",
     "subdir_name": "lib_lighthz"
 }
+
 

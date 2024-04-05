@@ -2,7 +2,7 @@
     "name": "Brushless 7 Click",
     "description": "Brushless 7 Click is, as its name said, a motor driver based expansion board for controlling BLCD motors with any microcontroller.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","TC78B009FTG"],
     "category" : ["Brushless"] 
 }

@@ -170,7 +170,8 @@ void application_task ( void )
                                               data_buf, sizeof ( data_buf ) ) )
     {
         log_printf ( &logger, " Read data: %s\r\n", data_buf );
-        Delay_ms ( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     // Clear whole memory
     if ( SWIEEPROM_OK == swieeprom_mem_clear ( &swieeprom ) )
@@ -184,12 +185,18 @@ void application_task ( void )
                                               data_buf, sizeof ( data_buf ) ) )
     {
         log_printf ( &logger, " Read data: %s\r\n\n", data_buf );
-        Delay_ms ( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

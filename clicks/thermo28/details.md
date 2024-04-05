@@ -112,7 +112,7 @@ void application_init ( void )
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( THERMO28_ERROR == thermo28_default_cfg ( &thermo28 ) )
     {
@@ -121,7 +121,7 @@ void application_init ( void )
     }
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -140,7 +140,7 @@ void application_task ( void )
     if ( THERMO28_OK == thermo28_get_temperature( &thermo28, &temperature ) )
     {
         log_printf( &logger, " Temperature [degC]: %.2f \r\n", temperature );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

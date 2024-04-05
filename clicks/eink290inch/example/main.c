@@ -47,7 +47,9 @@
 #include "log.h"
 #include "eink290inch.h"
 #include "eink290inch_image.h"
+#ifndef IMAGE_MODE_ONLY
 #include "eink290inch_font.h"
+#endif
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -88,7 +90,7 @@ void application_init ( void )
 
     eink290inch_start_config( &eink290inch );
     eink290inch_set_lut( &eink290inch, eink290inch_lut_table, 70 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
 #ifndef IMAGE_MODE_ONLY
     cfg_font.p_font = &guiFont_Tahoma_18_Regular[ 0 ];
@@ -99,7 +101,7 @@ void application_init ( void )
     text_set.text_x = 5;
     text_set.text_y = 50;
     eink290inch_text( &eink290inch, &demo_text[ 0 ], &text_set );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     cfg_font.p_font = &guiFont_Tahoma_10_Regular[ 0 ];
     cfg_font.color = EINK290INCH_SCREEN_COLOR_WHITE;
@@ -109,7 +111,7 @@ void application_init ( void )
     text_set.text_x = 5;
     text_set.text_y = 90;
     eink290inch_text( &eink290inch, &demo_text1[ 0 ], &text_set );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     cfg_font.p_font = &guiFont_Tahoma_8_Regular[ 0 ];
     cfg_font.color = EINK290INCH_SCREEN_COLOR_WHITE;
@@ -119,7 +121,7 @@ void application_init ( void )
     text_set.text_x = 5;
     text_set.text_y = 120;
     eink290inch_text( &eink290inch, &demo_text2[ 0 ], &text_set ); 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 #endif
 }
 
@@ -137,6 +139,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

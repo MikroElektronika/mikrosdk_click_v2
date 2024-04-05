@@ -123,25 +123,27 @@ void application_init ( void ) {
 
 void application_task ( void ) {
     eeprom7_send_cmd( &eeprom7, EEPROM7_OPCODE_STATUS_WREN );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     eeprom7_write_memory( &eeprom7, 0x00001234, &demo_data[ 0 ], 9 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, " > Write data: %s", demo_data );
 
     while ( eeprom7_is_device_ready( &eeprom7 ) == EEPROM7_DEVICE_IS_READY ) {
         check_status = eeprom7_send_cmd( &eeprom7, EEPROM7_OPCODE_STATUS_WRBP );
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
 
     eeprom7_read_memory( &eeprom7, 0x00001234, &read_data[ 0 ], 9 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, " > Read data: %s", read_data );
 
 
     log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

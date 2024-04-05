@@ -67,7 +67,7 @@ void application_init ( void )
     smoke_default_cfg ( &smoke );
 
     log_info( &logger, "---- Application Task ----" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     if ( smoke_read_leds( &smoke ) != SMOKE_OK )
     {
         log_info( &logger, "---- Init Error ----" );
@@ -89,11 +89,16 @@ void application_task ( void )
     log_printf( &logger, "Read Temperature[ degC ]: %.2f\r\n",  temperature );
     log_printf( &logger, "------------------------------\r\n" );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -108,10 +108,10 @@ void application_init ( void ) {
 
     touchpad2_default_cfg ( &touchpad2 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     touchpad2_check_version( &touchpad2, &ver_info );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( ver_info.product_num != TOUCHPAD2_IQS525_PRODUCT_NUMBER ) {
         log_error( &logger, " Communication Error. " );
@@ -127,11 +127,11 @@ void application_init ( void ) {
     log_printf( &logger, " HW ID          : %u \r\n", ver_info.hw_id );
     log_printf( &logger, " HW Revision    : %u \r\n", ver_info.hw_revision );
     log_printf( &logger, "------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, " Waiting for a new touch\r\n" );
     log_printf( &logger, "------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -150,7 +150,7 @@ void application_task ( void ) {
     touchpad2_wait_ready( &touchpad2 );
     
     touchpad2_get_touch ( &touchpad2, &touch_data );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( ( touch_data.id_tag == TOUCHPAD2_ID_TAG_TOUCH_1 ) || 
          ( touch_data.id_tag == TOUCHPAD2_ID_TAG_TOUCH_2 ) ||
@@ -164,7 +164,7 @@ void application_task ( void ) {
         log_printf( &logger, "- - - - - - - - - - - - -\r\n" );
         log_printf( &logger, "  Touch Strength   : %u  \r\n", ( uint16_t ) touch_data.touch_str );
         log_printf( &logger, "------------------------ \r\n" );
-        Delay_ms( 500 );    
+        Delay_ms ( 500 );    
     }
 }
 

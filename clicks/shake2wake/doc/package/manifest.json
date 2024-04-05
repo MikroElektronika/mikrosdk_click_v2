@@ -25,17 +25,18 @@
     "name": "mikroe.click.shake2wake",
     "product_link": "https://www.mikroe.com/shake-2-wake-click",
     "short_description": "Shake2Wake click carries an ADXL362 ultralow power, 3-axis MEMS accelerometer and ADP195 load switch. The distinguishing feature of this IC is that it incorporates several activity detection modes.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1589
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Shake2Wake",
     "subdir_name": "lib_shake2wake"
 }
+
 
 
 

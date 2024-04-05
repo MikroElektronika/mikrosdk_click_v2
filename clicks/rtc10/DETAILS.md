@@ -93,22 +93,22 @@ void application_init ( void )
     RTC10_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rtc10_init( &rtc10, &cfg );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     sec_flag = 0xFF;
 
     log_printf( &logger, "------------------- \r\n" );
     log_printf( &logger, "  Hardware  Reset   \r\n" );
     rtc10_hw_reset(  &rtc10 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     // Set Time: 23h, 59 min and 50 sec
     rtc10_set_time(  &rtc10, 23, 59, 50 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
 
     // Set Date: 6 ( Day of the week: Saturday ), 31 ( day ), 8 ( month ) and 2019 ( year )
     rtc10_set_date(  &rtc10,  6, 31, 8, 2019 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "-------------------  \r\n" );
     log_printf( &logger, "  Enable Counting  \r\n" );
@@ -116,7 +116,7 @@ void application_init ( void )
     log_printf( &logger, "     Start RTC      \r\n" );
     log_printf( &logger, "------------------- \r\n" );
     rtc10_enable_counting(  &rtc10 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -146,10 +146,10 @@ void application_task ( void )
     float temperature;
     
     rtc10_get_time( &rtc10, &time_hours, &time_minutes, &time_seconds );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     rtc10_get_date( &rtc10, &day_of_the_week, &date_day, &date_month, &date_year );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     if ( sec_flag !=  time_seconds )
     {

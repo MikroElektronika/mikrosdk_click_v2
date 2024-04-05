@@ -138,7 +138,8 @@ void application_init ( void )
     compass6_default_cfg ( &compass6 );
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

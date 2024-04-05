@@ -25,14 +25,15 @@
     "name": "mikroe.click.brushless21",
     "product_link": "https://www.mikroe.com/brushless-21-click",
     "short_description": "Brushless 21 Click is a compact add-on board suitable for controlling brushless DC (BLDC) motors with any MCU. This board features the AMT49400, an advanced 3-phase, sensorless BLDC motor driver with integrated power MOSFETs from Allegro Microsystems. The AMT49400 is rated for an operating voltage range from 4V to 16V. Motor rotation speed is controlled by applying a duty cycle command to the PWM input, while a simple I2C interface is provided for setting motor-rated voltage, rated current, rated speed, resistance, and startup profiles.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Brushless21",
     "subdir_name": "lib_brushless21"
 }
+
 
 
 

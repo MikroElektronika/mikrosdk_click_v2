@@ -99,7 +99,7 @@ void application_init ( c3dhall7_t *ctx, void )
     c3dhall7_init( &c3dhall7, &cfg );
 
     c3dhall7_device_reset( &c3dhall7 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     c3dhall7_read_data( &c3dhall7, 0x01, &red_data, 1 );
 
     Delay_100ms( );
@@ -149,7 +149,7 @@ void application_task ( void )
     log_printf( &logger, "Z axis: %d \r\n", axis.z );
     
     mikrobus_log_write( "---------------------------------------------", LOG_LINE);
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 ```

@@ -84,7 +84,7 @@ static void gnss4_process ( void )
             process_cnt--;
             
             // Process delay 
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
 }
@@ -137,7 +137,11 @@ void application_init ( void )
     gnss4_init( &gnss4, &cfg );
 
     gnss4_module_wakeup( &gnss4 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -148,6 +152,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

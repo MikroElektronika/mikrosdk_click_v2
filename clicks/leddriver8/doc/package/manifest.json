@@ -25,17 +25,18 @@
     "name": "mikroe.click.leddriver8",
     "product_link": "https://www.mikroe.com/led-driver-8-click",
     "short_description": "LED Driver 8 Click is a compact add-on board optimized for dimming and blinking 32 mA RGBA LEDs. This board features the PCA9957HNMP, 24-channel SPI-compatible constant current LED driver from NXP Semiconductors.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3856
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.LedDriver8",
     "subdir_name": "lib_leddriver8"
 }
+
 
 
 

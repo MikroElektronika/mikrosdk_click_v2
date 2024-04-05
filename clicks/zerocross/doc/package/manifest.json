@@ -25,13 +25,14 @@
     "name": "mikroe.click.zerocross",
     "product_link": "https://www.mikroe.com/zero-cross-click",
     "short_description": "Zero-Cross Click is a compact add-on board that has the ability to detect the change from positive to negative or negative to a positive level of a sinusoidal waveform. This board features circuitry that provides Zero Crossing Detection (ZCD). Whenever the sine wave crosses the ground potential, the output shifts from HIGH logic to LOW or vice-versa. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.ZeroCross",
     "subdir_name": "lib_zerocross"
 }
+
 
 

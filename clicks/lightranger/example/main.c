@@ -59,7 +59,7 @@ void application_init ( void )
     lightranger_init( &lightranger, &cfg );
     
     lightranger_default_cfg( &lightranger );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -79,11 +79,16 @@ void application_task ( void )
     log_printf( &logger, "Ambient Light: %.2f lux\r\n", lux_value );
 
     log_printf( &logger, "*******************************************\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -89,7 +89,7 @@ void application_init ( void )
     canfd3_init( &canfd3, &cfg );
 
     canfd3_set_cs_pin( &canfd3, CANFD3_MODE_NORMAL );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -108,7 +108,8 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     canfd3_generic_write( &canfd3, TEXT_TO_SEND, 8 );
     log_info( &logger, "--- The message is sent ---" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif 
 } 
 

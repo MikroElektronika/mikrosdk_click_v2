@@ -84,11 +84,16 @@ void application_task ( void )
     log_printf( &logger, " Temperature farenheit : %f F\r\n ", temp_in_faren );
     log_printf( &logger, " Temperature kelvin : %f K\r\n ", temp_in_kelvin );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -131,7 +131,8 @@ void application_task ( void )
     {
         stepdown10_set_output( &stepdown10, ( float ) n_cnt );
         log_printf( &logger, " Output voltage %d V\r\n", ( uint16_t ) n_cnt );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

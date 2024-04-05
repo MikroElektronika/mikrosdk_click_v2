@@ -94,7 +94,7 @@ void application_init ( void )
 
     uvclight_set_duty_cycle ( &uvclight, 0.0 );
     uvclight_pwm_start( &uvclight );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, "---- Application Task ----" );
 }
   
@@ -115,7 +115,7 @@ void application_task ( void )
 
     uvclight_set_duty_cycle ( &uvclight, duty );
     log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     if ( 10 == duty_cnt ) 
     {
@@ -124,7 +124,8 @@ void application_task ( void )
     else if ( 0 == duty_cnt ) 
     {
         log_printf( &logger, "Cooldown 2 SEC\r\n");
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
         duty_inc = 1;
     }
     duty_cnt += duty_inc;

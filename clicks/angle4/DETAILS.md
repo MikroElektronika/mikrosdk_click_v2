@@ -116,7 +116,7 @@ void application_task ( void )
 
     angle4_get_new_angle( &angle4, &angle_value );
     log_printf( &logger, " Angle : %d deg\r\n", angle_value );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 }
 
 ```

@@ -25,17 +25,18 @@
     "name": "mikroe.click.mpuimu",
     "product_link": "https://www.mikroe.com/mpu-imu-click",
     "short_description": "MPU IMU Click carries the integrated 6-axis motion tracking device that combines 3-axis gyroscope and accelerometer.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1002
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.MpuImu",
     "subdir_name": "lib_mpuimu"
 }
+
 
 
 

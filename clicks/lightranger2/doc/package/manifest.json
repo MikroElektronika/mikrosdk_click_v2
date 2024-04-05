@@ -25,17 +25,18 @@
     "name": "mikroe.click.lightranger2",
     "product_link": "https://www.mikroe.com/lightranger-2-click",
     "short_description": "LightRanger 2 click carries VL53L0X IC from STMicroelectronics, the worlds smallest Time-of-Flight ranging and gesture detector sensor.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1997
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.LightRanger2",
     "subdir_name": "lib_lightranger2"
 }
+
 
 
 

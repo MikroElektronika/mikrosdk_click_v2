@@ -25,14 +25,15 @@
     "name": "mikroe.click.hallcurrent15",
     "product_link": "https://www.mikroe.com/hall-current-15-click",
     "short_description": "Hall Current 15 Click is a compact add-on board that provides precise AC or DC current-sensing solution. This board features the TMCS1101-Q1, a galvanically isolated Hall-effect current sensor capable of DC or AC current measurement with high accuracy, excellent linearity, and temperature stability from Texas Instruments. A low-drift, temperature-compensated signal chain provides <1.5% full-scale error across a broad operating temperature range. It also provides a reliable 600V lifetime working voltage and 3kVRMS isolation between the current path and circuitry with uni/bidirectional current sensing. Besides, the user is allowed to process the output signal in analog or digital form.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.HallCurrent15",
     "subdir_name": "lib_hallcurrent15"
 }
+
 
 
 

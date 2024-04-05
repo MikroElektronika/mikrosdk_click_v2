@@ -65,7 +65,7 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, "----------------" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
@@ -79,7 +79,7 @@ void application_task ( void )
         {
             log_printf( &logger, "LD%d ", ( uint16_t ) led_pos );
         }
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
     }
     
     log_printf( &logger, "\r\nGREEN: " );
@@ -91,7 +91,7 @@ void application_task ( void )
         {
             log_printf( &logger, "LD%d ", ( uint16_t ) led_pos );
         }
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
     }
     
     log_printf( &logger, "\r\nBLUE: " );
@@ -103,7 +103,7 @@ void application_task ( void )
         {
             log_printf( &logger, "LD%d ", ( uint16_t ) led_pos );
         }
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
     }
     
     log_printf( &logger, "\r\nWHITE: " );
@@ -115,13 +115,18 @@ void application_task ( void )
         {
             log_printf( &logger, "LD%d ", ( uint16_t ) led_pos );
         }
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
     }
     log_printf( &logger, "\r\n----------------" );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

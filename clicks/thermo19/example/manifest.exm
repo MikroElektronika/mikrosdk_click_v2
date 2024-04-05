@@ -2,7 +2,7 @@
     "name": "Thermo 19 Click",
     "description": "Thermo 19 Click is a compact add-on board that provides an accurate temperature measurement. This board features the MAX31825, a temperature sensor that provides 8-bit to 12-bit Celsius temperature measurements with better than ±1.75°C from -45°C to +145°C from Analog Devices. It has a unique 64-bit serial code stored in an on-chip ROM, an alarm output for detection of temperature faults, temperature resolution selection from 8 to 12 bits, and it allows temperature conversion to 10-bit digital word in a period of 80ms (max).",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","MAX31825"],
     "category" : ["Temperature & humidity"]
 }

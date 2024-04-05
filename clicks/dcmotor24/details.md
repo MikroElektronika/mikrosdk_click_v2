@@ -138,7 +138,7 @@ void application_task ( void )
     {
         dcmotor24_display_diag ( diag );
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     if ( ( 100 == duty_pct ) || ( 0 == duty_pct ) ) 
     {
         duty_step = -duty_step;

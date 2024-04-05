@@ -61,18 +61,22 @@ void application_init ( void )
     }
     headphoneamp_default_cfg ( &headphoneamp );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "-------------------------\r\n" );
     log_printf( &logger, "    Performs Power-up\r\n" );
     headphoneamp_power_up( &headphoneamp );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "-------------------------\r\n" );
     log_printf( &logger, "  Set volume gain -12dB\r\n", HEADPHONEAMP_SOUND_VOLUME_NEG_12_dB );
     headphoneamp_set_sound_volume( &headphoneamp, HEADPHONEAMP_SOUND_VOLUME_NEG_12_dB ); 
     log_printf( &logger, "-------------------------\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void ) 
@@ -80,24 +84,39 @@ void application_task ( void )
     for ( uint8_t n_cnt = 0; n_cnt < 5; n_cnt++ ) {
         log_printf( &logger, "    Turning volume up\r\n" );
         headphoneamp_volume_up ( &headphoneamp ); 
-        Delay_ms( 2000 );    
+        Delay_ms ( 1000 ); 
+        Delay_ms ( 1000 );   
     }
     
     log_printf( &logger, "-------------------------\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     for ( uint8_t n_cnt = 0; n_cnt < 5; n_cnt++ ) {
         log_printf( &logger, "   Turning volume down\r\n" );
         headphoneamp_volume_down ( &headphoneamp ); 
-        Delay_ms( 2000 );    
+        Delay_ms ( 1000 ); 
+        Delay_ms ( 1000 );   
     }
        
     log_printf( &logger, "-------------------------\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

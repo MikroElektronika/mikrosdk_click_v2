@@ -2,7 +2,7 @@
     "name": "Analog MUX 3 Click",
     "description": "Analog MUX 3 Click is a compact add-on board that switches one of the eight inputs to one output. This board features the ADG738, a CMOS analog matrix switch with a serially-controlled SPI interface from Analog Devices. In an active state, the ADG738 conducts equally well in both directions, making it suitable for multiplexing and demultiplexing applications. It can also be configured as a type of switch array where any, all, or none of eight switches may be closed any time. All channels exhibit ‘break-before-make switching action, preventing momentary shorting when switching channels. This Click board™ is suitable for a wide range of applications, from industrial and instrumentation to medical, consumer, communications, and automotive systems.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","ADG738"],
     "category" : ["Port expander"]
 }

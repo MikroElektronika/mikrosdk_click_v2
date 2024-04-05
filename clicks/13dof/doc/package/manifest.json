@@ -25,17 +25,18 @@
     "name": "mikroe.click.c13dof",
     "product_link": "https://www.mikroe.com/13dof-click",
     "short_description": "13DOF Click is an advanced 13-axis motion tracking Click board™, which utilizes three different sensor ICs onboard: BME680, a digital gas, humidity, pressure and temperature sensor and BMM150, a geomagnetic sensor and a BMI088, small, versatile 6DoF sensor module. All integrated sensors ICs are made by Bosch Sensortec, featuring the state-of-the-art sensor technology processes, in order to fulfill the requirements for immersive gaming and navigation applications, which require highly accurate sensor data fusion.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2938
     ],
-    "version": "2.1.0.22",
+    "version": "2.1.0.23",
     "cmake": true,
     "alias": "Click.13DOF",
     "subdir_name": "lib_c13dof"
 }
+
 
 
 

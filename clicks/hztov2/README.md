@@ -93,7 +93,7 @@ void application_init ( void )
     
     fin = 10000;
     
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -110,13 +110,14 @@ void application_task ( void )
         fin = 10000;
     hztov2_fin_set( &hztov2, fin );
     log_printf( &logger, "Frequency: %lu Hz \r\n", fin );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     voltage = hztov2_read_voltage( &hztov2 );
     log_printf( &logger, "Voltage: %.2f V \r\n", voltage );
     
     fin += 10000;
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

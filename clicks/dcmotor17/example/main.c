@@ -73,48 +73,73 @@ void application_task ( void ) {
     log_printf( &logger, "----------------------------\r\n" );
     log_printf( &logger, "  Start the motor forward.  \r\n" );
     dcmotor17_forward( &dcmotor17, DCMOTOR17_SEL_OUT_A );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "----------------------------\r\n" );
     log_printf( &logger, "       Stop the motor.      \r\n" );
     dcmotor17_stop( &dcmotor17, DCMOTOR17_SEL_OUT_A );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "----------------------------\r\n" );
     log_printf( &logger, "  Start the motor reverse.  \r\n" );
     dcmotor17_reverse( &dcmotor17, DCMOTOR17_SEL_OUT_A );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "----------------------------\r\n" );
     log_printf( &logger, "       Stop the motor.      \r\n" );
     dcmotor17_stop( &dcmotor17, DCMOTOR17_SEL_OUT_A );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "----------------------------\r\n" );
     log_printf( &logger, "          Motor B           \r\n" );
     log_printf( &logger, "----------------------------\r\n" );
     log_printf( &logger, "  Start the motor forward.  \r\n" );
     dcmotor17_forward( &dcmotor17, DCMOTOR17_SEL_OUT_B );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "----------------------------\r\n" );
     log_printf( &logger, "       Stop the motor.      \r\n" );
     dcmotor17_stop( &dcmotor17, DCMOTOR17_SEL_OUT_B );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "----------------------------\r\n" );
     log_printf( &logger, "  Start the motor reverse.  \r\n" );
     dcmotor17_reverse( &dcmotor17, DCMOTOR17_SEL_OUT_B );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "----------------------------\r\n" );
     log_printf( &logger, "       Stop the motor.      \r\n" );
     dcmotor17_stop( &dcmotor17, DCMOTOR17_SEL_OUT_B );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

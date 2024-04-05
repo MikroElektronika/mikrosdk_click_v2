@@ -165,9 +165,9 @@ err_t c3dhall9_read_data ( c3dhall9_t *ctx, c3dhall9_data_t *data_out )
             data_out->z_axis = ( float ) raw_z / C3DHALL9_GAUSS_RESOLUTION;
             
             // Convert the X, Y and Z values into radians
-            float x_rad = ( float ) raw_x / C3DHALL9_12BIT_RESOLUTION * TWO_PI;
-            float y_rad = ( float ) raw_y / C3DHALL9_12BIT_RESOLUTION * TWO_PI;
-            float z_rad = ( float ) raw_z / C3DHALL9_12BIT_RESOLUTION * TWO_PI;
+            float x_rad = ( float ) raw_x / C3DHALL9_12BIT_RESOLUTION * C3DHALL9_MATH_TWO_PI;
+            float y_rad = ( float ) raw_y / C3DHALL9_12BIT_RESOLUTION * C3DHALL9_MATH_TWO_PI;
+            float z_rad = ( float ) raw_z / C3DHALL9_12BIT_RESOLUTION * C3DHALL9_MATH_TWO_PI;
             
             data_out->angle_xy = ( ( y_rad != 0.0f ) ? atan2( x_rad, y_rad ) : 0.0f ) * C3DHALL9_HALF_CICRLE_DEGREES / PI;
             data_out->angle_xz = ( ( z_rad != 0.0f ) ? atan2( x_rad, z_rad ) : 0.0f ) * C3DHALL9_HALF_CICRLE_DEGREES / PI;

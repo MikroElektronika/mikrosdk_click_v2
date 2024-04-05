@@ -95,7 +95,7 @@ void application_init ( void )
 
     dcmotor5_pwm_start( &dcmotor5 );
     dcmotor5_enable ( &dcmotor5 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     log_printf( &logger, "---------------------\r\n" );
     log_info( &logger, "---- Application Task ----" );
 }
@@ -128,7 +128,7 @@ void application_task ( )
         duty /= 10;
         log_printf( &logger, " >" );
         dcmotor5_set_duty_cycle( &dcmotor5, duty );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
     for ( n_cnt = 1; n_cnt <= 10; n_cnt++ )
     {
@@ -136,12 +136,12 @@ void application_task ( )
         duty /= 10;
         log_printf( &logger, " <" );
         dcmotor5_set_duty_cycle( &dcmotor5,  duty );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
     
     log_printf( &logger, "\r\n * Pull break *\r\n" );
     dcmotor5_short_brake( &dcmotor5 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     dcmotor5_counter_clockwise ( &dcmotor5 );
     log_printf( &logger, "\r\n> COUNTER CLOCKWISE <\r\n" );
@@ -152,7 +152,7 @@ void application_task ( )
         duty /= 10;
         dcmotor5_set_duty_cycle( &dcmotor5, duty );
         log_printf( &logger, " >" );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
     for ( n_cnt = 10; n_cnt > 0; n_cnt-- )
     {
@@ -160,7 +160,7 @@ void application_task ( )
         duty /= 10;
         dcmotor5_set_duty_cycle( &dcmotor5,  duty );
         log_printf( &logger, " <" );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
         
 }

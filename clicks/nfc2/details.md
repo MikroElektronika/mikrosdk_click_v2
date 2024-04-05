@@ -109,21 +109,21 @@ void application_init ( void ) {
 
     log_printf( &logger, "        HW Reset       \r\n" );
     nfc2_hw_reset( &nfc2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, " Reset and Init. Core  \r\n" );
     nfc2_cmd_core_reset( &nfc2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     nfc2_read_ctrl_packet_data( &nfc2, &ctrl_pck_data );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     nfc2_cmd_core_init( &nfc2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     nfc2_read_ctrl_packet_data( &nfc2, &ctrl_pck_data );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     display_packet( &ctrl_pck_data );
 
     while ( nfc2_check_irq( &nfc2 ) == NFC2_IRQ_STATE_HIGH );
@@ -131,10 +131,10 @@ void application_init ( void ) {
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, " Disabling Standby Mode \r\n" );
     nfc2_cmd_disable_standby_mode( &nfc2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     nfc2_read_ctrl_packet_data( &nfc2, &ctrl_pck_data );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     display_packet( &ctrl_pck_data );
 
     nfc2_test_antenna( &nfc2, &ctrl_pck_data );
@@ -142,14 +142,14 @@ void application_init ( void ) {
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, "Starting Test Procedure\r\n" );
     nfc2_cmd_test_procedure( &nfc2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     nfc2_read_ctrl_packet_data( &nfc2, &ctrl_pck_data );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     display_packet( &ctrl_pck_data );
 
     nfc2_hw_reset( &nfc2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, "       NFC Config.     \r\n" );
@@ -158,16 +158,16 @@ void application_init ( void ) {
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, "     Discovery Start   \r\n" );
     nfc2_cmd_start_discovery( &nfc2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     nfc2_read_ctrl_packet_data( &nfc2, &ctrl_pck_data );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     display_packet( &ctrl_pck_data );
 
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, "-------- START --------\r\n" );
     log_printf( &logger, "-----------------------\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     log_info( &logger, " Application Task " );
 }
@@ -188,7 +188,7 @@ void application_task ( void ) {
     while ( nfc2_check_irq( &nfc2 ) == NFC2_IRQ_STATE_LOW );
 
     log_printf( &logger, "-----------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

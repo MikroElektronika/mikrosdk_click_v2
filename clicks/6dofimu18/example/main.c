@@ -57,7 +57,7 @@ void application_init ( void )
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     uint8_t id = 0;
     c6dofimu18_reg_read( &c6dofimu18, C6DOFIMU18_BANK0_SEL, C6DOFIMU18_REG_WHO_AM_I, &id, 1);
@@ -67,7 +67,7 @@ void application_init ( void )
         log_error( &logger, " Communication error." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( C6DOFIMU18_OK != c6dofimu18_default_cfg ( &c6dofimu18 ) )
     {
@@ -92,12 +92,17 @@ void application_task ( void )
         log_printf( &logger, " GYRO: x:%d y:%d z:%d \r\n", gyro_data.data_x,gyro_data.data_y,gyro_data.data_z );
         log_printf( &logger, " ACCEL: x:%d y:%d z:%d \r\n", accel_data.data_x,accel_data.data_y,accel_data.data_z );
         log_printf( &logger, "========================== \r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }    
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

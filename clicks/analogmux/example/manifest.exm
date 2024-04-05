@@ -2,7 +2,7 @@
     "name": "Analog MUX Click",
     "description": "Analog MUX Click is a Click board™ that switches one of the sixteen inputs to one output. It employs the CD74HC4067, a High-Speed CMOS Logic 16-Channel Analog Multiplexer/Demultiplexer, produced by Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","CD74HC4067"],
     "category" : ["Port expander"] 
 }

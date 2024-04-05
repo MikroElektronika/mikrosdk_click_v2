@@ -114,7 +114,11 @@ void application_init ( void ) {
     log_printf( &logger, " ----------------------- \r\n" );
     log_printf( &logger, " Chip Erase \r\n" );
     flash7_chip_erase( &flash7 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     memory_addr = 4096;
     
@@ -122,7 +126,7 @@ void application_init ( void ) {
     log_printf( &logger, " Write data : %s ", demo_data );
     log_printf( &logger, " ----------------------- \r\n" );
     flash7_page_program( &flash7, memory_addr, demo_data, 9 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, " ----------------------- \r\n" );
@@ -140,7 +144,11 @@ void application_task ( void ) {
     flash7_read_memory( &flash7, memory_addr, rx_data, 9 );
     log_printf( &logger, " Read data : %s ", rx_data );
     log_printf( &logger, " ----------------------- \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

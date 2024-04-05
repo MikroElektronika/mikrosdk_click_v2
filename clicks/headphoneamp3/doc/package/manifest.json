@@ -25,14 +25,15 @@
     "name": "mikroe.click.headphoneamp3",
     "product_link": "https://www.mikroe.com/headphone-amp-3-click",
     "short_description": "Headphone AMP 3 Click is a compact add-on board that contains a stereo headphone amplifier. This board features the INA1620, a high-fidelity audio operational amplifier with integrated thin-film resistors and EMI filters from Texas Instruments. Over its dual amplifiers, it achieves a very low noise density and drives a 32Ω load at 150mW of output power. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.HeadphomeAMP3",
     "subdir_name": "lib_headphoneamp3"
 }
+
 
 
 

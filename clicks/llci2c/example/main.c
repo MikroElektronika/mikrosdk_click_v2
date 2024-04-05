@@ -82,11 +82,16 @@ void application_task ( void )
     if ( temp_lsb & 0x10 ) temp_msb += 0.0625;
 
     log_info( &logger, " Ambient temperature : %.2f C", temp_msb );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

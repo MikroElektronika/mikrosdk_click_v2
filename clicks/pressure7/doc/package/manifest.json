@@ -25,17 +25,18 @@
     "name": "mikroe.click.pressure7",
     "product_link": "https://www.mikroe.com/pressure-7-click",
     "short_description": "Pressure 7 click features an integrated digital barometric pressure and temperature sensor labeled as MS5837.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2621
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Pressure7",
     "subdir_name": "lib_pressure7"
 }
+
 
 
 

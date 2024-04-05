@@ -2,7 +2,7 @@
     "name": "Ambient 21 Click",
     "description": "Ambient 21 Click is a compact add-on board used to measure the amount of the present ambient light. This board features ams AG's TSL2591, a very-high sensitivity light-to-digital converter that transforms light intensity to a digital signal output capable of the direct I2C interface. It combines one broadband photodiode (visible plus infrared) and one infrared-responding photodiode on a single CMOS integrated circuit, providing a flexible and wide operating range of up to 88klx with an excellent responsivity close to the human eyes' response. The TSL2591 also has a programmable interrupt function and an integrated filter to reduce unwanted IR signals from the environment, improving lux accuracy across various light sources.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","TSL25911FN"],
     "category" : ["Click Boards > Sensors > Optical"]
 }

@@ -2,7 +2,7 @@
     "name": "Flash 9 Click",
     "description": "Flash 9 Click is a compact add-on board that contains a highly reliable memory solution. This board features the W25Q02JV, an SPI configurable serial Flash memory solution from Winbond Electronics. It represents a four 512Mb stack die supporting linear addressing for the full 2Gb memory address range, offering flexibility and performance well beyond ordinary Serial Flash devices. The W25Q02JV array is organized into 1,048,576 programmable pages of 256-bytes each, where up to 256 bytes can be programmed at a time. This memory also has advanced security features, can withstand many write cycles (minimum 100k), and has a data retention period greater than 20 years.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","W25Q02JVTBIM"],
     "category" : ["FLASH"]
 }

@@ -96,7 +96,7 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     //  Click initialization.
     fingerprint3_cfg_setup( &cfg );
@@ -109,24 +109,24 @@ void application_init ( void )
 
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     error_check = fingerprint3_set_config ( &fingerprint3, FINGERPRINT3_DEFAULT_ADDRESS, 
                                                            FINGERPRINT3_DEFAULT_PASSWORD );
     display_error( "Set Config" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     error_check = fingerprint3_soft_reset ( &fingerprint3 );
     display_error( "Soft Reset" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     error_check = fingerprint3_check_sensor ( &fingerprint3 );
     display_error( "Check Sensor" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     error_check = fingerprint3_empty_library ( &fingerprint3 );
     display_error( "Empty the Library" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     uint8_t cnt = 0; 
     do 
@@ -145,7 +145,7 @@ void application_init ( void )
         {
             cnt++;
         }
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     while ( FINGERPRINT3_OK != error_check || cnt != NUMBER_OF_FINGERPRINTS );
 }

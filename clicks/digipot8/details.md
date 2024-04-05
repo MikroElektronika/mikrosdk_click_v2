@@ -129,7 +129,7 @@ void application_task ( void )
         digipot8_set_wiper_6 ( &digipot8, cnt );
         log_printf( &logger, " * All wipers position set to %d *\r\n", ( uint16_t ) cnt );
         
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

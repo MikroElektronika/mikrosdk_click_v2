@@ -128,21 +128,40 @@ void application_task ( void )
     log_info( &logger, "---- Volume level control testing... ----" );
 
     audioamp_set_volume( &audioamp, AUDIOAMP_IN_1 | AUDIOAMP_IN_2, 5 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     audioamp_set_volume( &audioamp, AUDIOAMP_IN_1 | AUDIOAMP_IN_2, 15 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     audioamp_set_volume( &audioamp, AUDIOAMP_IN_1 | AUDIOAMP_IN_2, 25 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     audioamp_set_volume( &audioamp, AUDIOAMP_IN_1 | AUDIOAMP_IN_2, 32 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_info( &logger, "---- Volume level control test done. ----" );
     log_info( &logger, "---- Input mute/unmute control testing... ----" );
 
     audioamp_mute( &audioamp );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     audioamp_unmute( &audioamp );
-    Delay_ms( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_info( &logger, "---- Input mute/unmute control test done. ----" );
 }

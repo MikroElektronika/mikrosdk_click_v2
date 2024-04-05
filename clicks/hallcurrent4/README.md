@@ -102,7 +102,7 @@ void application_task ( void )
 
     log_printf( &logger, " >> Current value: %.2f mA\r\n", current );
     log_printf( &logger, " ------------------------- \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

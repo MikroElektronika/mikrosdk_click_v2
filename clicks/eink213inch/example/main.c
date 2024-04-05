@@ -46,8 +46,10 @@
 #include "board.h"
 #include "log.h"
 #include "eink213inch.h"
-#include "eink213inch_font.h"
 #include "eink213inch_image.h"
+#ifndef IMAGE_MODE_ONLY
+#include "eink213inch_font.h"
+#endif
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -88,7 +90,7 @@ void application_init ( void )
 
     eink213inch_start_config( &eink213inch );
     eink213inch_set_lut( &eink213inch, &eink213inch_lut_table[ 0 ], 70 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
 #ifndef IMAGE_MODE_ONLY
     cfg_font.p_font = &guiFont_Tahoma_18_Regular[ 0 ]; 
@@ -121,7 +123,7 @@ void application_init ( void )
     set_text.text_y = 120;
     eink213inch_text( &eink213inch, &demo_text2[ 0 ], &set_text );
 #endif
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -138,6 +140,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

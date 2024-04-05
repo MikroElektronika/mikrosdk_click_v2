@@ -184,7 +184,7 @@ void application_task ( void )
         log_printf( &logger, " GYRO: x:%d y:%d z:%d \r\n", gyro_data.data_x,gyro_data.data_y,gyro_data.data_z );
         log_printf( &logger, " ACCEL: x:%d y:%d z:%d \r\n", accel_data.data_x,accel_data.data_y,accel_data.data_z );
         log_printf( &logger, "========================== \r\n" );
-        Delay_ms(1000);
+        Delay_ms ( 1000 );
 #endif
     }    
 }

@@ -25,17 +25,18 @@
     "name": "mikroe.click.ambient3",
     "product_link": "https://www.mikroe.com/ambient-3-click",
     "short_description": "Ambient 3 Click is calibrated XYZ chromatic smart lighting director, providing the measurement data in digital format over the I2C interface. It utilizes the AS7225, a miniature light sensor with UART and I2C interfaces. Packed in a small casing, this sensor can provide calibrated for life nano-optic sensor providing direct CIE1931 XYZ and CIE 1976 u’v’ coordinate mapping.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2575
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Ambient3",
     "subdir_name": "lib_ambient3"
 }
+
 
 
 

@@ -93,11 +93,11 @@ void application_init ( void )
     mcp16331inv_cfg_setup( &cfg );
     MCP16331INV_MAP_MIKROBUS( cfg, MIKROBUS_1 );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     mcp16331inv_init( &mcp16331inv, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     mcp16331inv_enable_vin( &mcp16331inv, MCP16331INV_ENABLE_VIN_PULL_UP );
 }
@@ -117,9 +117,15 @@ void application_task ( void )
     //  Task implementation.
 
     mcp16331inv_set_dac_vout( &mcp16331inv, MCP16331INV_3500_MV_1X_GAIN, MCP16331INV_GAIN_1X_VREF, MCP16331INV_ACTIVE_MODE );
-    Delay_ms( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     mcp16331inv_set_dac_vout( &mcp16331inv, MCP16331INV_5000_MV_2X_GAIN, MCP16331INV_GAIN_2X_VREF, MCP16331INV_ACTIVE_MODE );
-    Delay_ms( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

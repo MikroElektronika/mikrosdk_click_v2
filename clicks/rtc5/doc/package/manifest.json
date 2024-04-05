@@ -25,17 +25,18 @@
     "name": "mikroe.click.rtc5",
     "product_link": "https://www.mikroe.com/rtc-5-click",
     "short_description": "RTC5 click carries MCP79510, a real-time clock/calendar with an SPI interface (mikroBUS MISO, MOSI, SCK and CS pins); along with a programmable interrupt for system output.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1560
     ],
-    "version": "2.1.0.18",
+    "version": "2.1.0.19",
     "cmake": true,
     "alias": "Click.Rtc5",
     "subdir_name": "lib_rtc5"
 }
+
 
 
 

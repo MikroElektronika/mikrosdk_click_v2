@@ -82,9 +82,9 @@ void application_init ( void ) {
 
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     rfid2_reset( &rfid2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     app_buf_len = 0;
     app_buf_cnt = 0;
@@ -104,6 +104,11 @@ void application_task ( void ) {
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

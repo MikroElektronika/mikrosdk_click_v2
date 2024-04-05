@@ -81,7 +81,7 @@ void application_init ( void )
     log_printf( &logger, "%.2X" , excelonultra.unique_id[ 1 ] );
     log_printf( &logger, "%.2X\r\n" , excelonultra.unique_id[ 0 ] );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, " Application Task " );
 }
 
@@ -108,27 +108,32 @@ void application_task ( void )
     log_printf( &logger, " > Writing data to memory: %s\r\n", to_write );
     excelonultra_write_data_to_memory( &excelonultra, memory_address, to_write, write_len );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     excelonultra_read_data_from_memory( &excelonultra, memory_address, read_from, write_len );
     log_printf( &logger, " > Read data from memory: %s\r\n", read_from );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     log_printf( &logger, " > Clearing data from memory\r\n" );
     excelonultra_clear_data_from_memory( &excelonultra, memory_address, write_len );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     excelonultra_read_data_from_memory( &excelonultra, memory_address, read_from, write_len );
     log_printf( &logger, " > Read data from memory: %s\r\n", read_from );
 
     log_printf( &logger, "***********************************\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

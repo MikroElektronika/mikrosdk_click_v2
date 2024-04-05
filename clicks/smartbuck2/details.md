@@ -110,7 +110,7 @@ void application_init ( void )
     }
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -126,7 +126,7 @@ void application_task ( void )
 {
     if ( SMARTBUCK2_OK == smartbuck2_set_voltage( &smartbuck2, vout_mv ) )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         if ( SMARTBUCK2_OK == smartbuck2_get_voltage( &smartbuck2, &vout_mv ) )
         {
             log_printf( &logger, " Output voltage: %u [mV]\r\n", vout_mv );
@@ -137,7 +137,9 @@ void application_task ( void )
     {
         vout_mv = SMARTBUCK2_VOUT_MIN;
     }
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

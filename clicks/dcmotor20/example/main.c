@@ -63,17 +63,24 @@ void application_task ( void )
     dcmotor20_drive_motor ( &dcmotor20, DCMOTOR20_SPEED_DEFAULT, 5000 );
     log_printf ( &logger, " Pull brake!\r\n" );
     dcmotor20_set_standby_mode ( &dcmotor20 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf ( &logger, " Driving motors in reverse...\r\n" );
     dcmotor20_set_channel_mode ( &dcmotor20, DCMOTOR20_CHANNEL_1 | DCMOTOR20_CHANNEL_2, DCMOTOR20_MODE_REVERSE );
     dcmotor20_drive_motor ( &dcmotor20, DCMOTOR20_SPEED_DEFAULT, 5000 );
     log_printf ( &logger, " Pull brake!\r\n\n" );
     dcmotor20_set_standby_mode ( &dcmotor20 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

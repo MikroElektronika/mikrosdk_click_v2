@@ -113,7 +113,7 @@ void application_init ( void )
     }
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );;
+    Delay_ms ( 100 );;
     
     static barometer7_identifier_t id_data;
     barometer7_get_identifier ( &barometer7, &id_data );
@@ -123,7 +123,7 @@ void application_init ( void )
     log_printf( &logger, " > Metal Version    : %d <\r\n", ( uint16_t ) id_data.metal_version );
     log_printf( &logger, " > ASCI Name        : %c <\r\n", id_data.asic_name );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```
@@ -154,7 +154,8 @@ void application_task ( void )
     }
     log_printf( &logger, " Temperature  : %.2f C\r\n", temperature );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

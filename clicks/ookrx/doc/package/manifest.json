@@ -25,17 +25,18 @@
     "name": "mikroe.click.ookrx",
     "product_link": "https://www.mikroe.com/ook-rx-click",
     "short_description": "OOK RX click is a wireless receiver that operates at the frequency of 433MHz (sub-GHz). This device allows realization of a simple, low-speed wireless ad hoc communication network between a receiver and compatible transmitter.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2278
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.OOKRX",
     "subdir_name": "lib_ookrx"
 }
+
 
 
 

@@ -25,14 +25,15 @@
     "name": "mikroe.click.buck22",
     "product_link": "https://www.mikroe.com/buck-22-click",
     "short_description": "Buck 22 Click is a compact add-on board that steps down the voltage from its input (supply) to its output (load). This board features the TPS62869, a high-frequency synchronous step-down converter with an I2C interface from Texas Instruments, providing an efficient, adaptive, and high power-density solution. The TPS62869 operates in PWM mode at medium to heavy loads (also for the slightest output voltage ripple), and it automatically enters Power-Save Mode operation at light load to maintain high efficiency over the entire output load current range. With its DCS-Control™ architecture, excellent load transient performance and tight output voltage accuracy are achieved alongside adjustable output voltage range from 0.8V to 3.35V with a 10mV step size.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.Buck22",
     "subdir_name": "lib_buck22"
 }
+
 
 
 

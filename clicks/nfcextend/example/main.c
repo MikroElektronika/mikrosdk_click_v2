@@ -45,7 +45,7 @@ void wait_for_interrupt ( )
     
     while ( ( int_pin_flag == 1 ) && ( timer_counter <= 300 ) )
     {
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
         timer_counter++;
         int_pin_flag = nfcextend_digital_read_int( &nfcextend );
     }
@@ -92,10 +92,10 @@ void application_init ( )
     nfcextend_init( &nfcextend, &cfg );
 
     nfcextend_password_present( &nfcextend, default_password );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     init_status_flag = nfcextend_default_cfg( &nfcextend );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     if ( 1 == init_status_flag )
     {
@@ -159,6 +159,11 @@ void application_task ( )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

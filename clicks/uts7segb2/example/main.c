@@ -67,7 +67,7 @@ void application_init ( void )
     number.base = UTS7SEGB2_BASE_NUM_SYS_HEXADECIMAL;
     number.dot_bit_mask = UTS7SEGB2_TOP_SEG_NO_DOT | UTS7SEGB2_BOTTOM_SEG_NO_DOT;
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -80,15 +80,20 @@ void application_task ( void )
         {
             log_printf( &logger, " %.3X\r\n", number.num_top );
             log_printf( &logger, " %.3X\r\n\n", number.num_bottom );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
     log_printf( &logger, " --------------\r\n\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

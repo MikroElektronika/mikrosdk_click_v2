@@ -51,7 +51,7 @@ void application_init ( )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     //  Click initialization.
 
@@ -59,9 +59,9 @@ void application_init ( )
     ANGLE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     angle2_init( &angle2, &cfg );
 
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
     angle2_default_cfg( &angle2 );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 
     log_printf( &logger, " * Angle 2 initialized * \r\n" );
 }
@@ -74,11 +74,16 @@ void application_task ( )
 
     log_printf( &logger, " Angle: %.2f deg\r\n", angle );
 
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

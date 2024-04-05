@@ -25,17 +25,18 @@
     "name": "mikroe.click.eeprom4",
     "product_link": "https://www.mikroe.com/eeprom-4-click",
     "short_description": "EEPROM 4 click is 2,097,152 bits on a click board™, organized into 262,144 bytes. In other words, this click board™ is an EEPROM memory medium with the capacity of 256 KB.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2296
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.Eeprom4",
     "subdir_name": "lib_eeprom4"
 }
+
 
 
 

@@ -86,7 +86,7 @@ void application_init ( void )
     opto2_set_logger( 1, 1, 0, 0 );
     log_printf( &logger, "OPTO 2 is initialized \r\n" );
     log_printf( &logger, "" );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 }
 
 void application_task ( void )
@@ -166,11 +166,17 @@ void application_task ( void )
         tmp <<= 1;
     }
 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

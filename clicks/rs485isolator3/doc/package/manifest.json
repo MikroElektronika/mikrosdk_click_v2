@@ -25,14 +25,15 @@
     "name": "mikroe.click.rs485isolator3",
     "product_link": "https://www.mikroe.com/rs485-isolator-3-click",
     "short_description": "RS485 Isolator 3 Click is a compact add-on board that provides electrical isolation and signal conditioning for RS485 communication systems. This board features the ADM2763E, a 500kbps, 5.7kV RMS, signal-isolated RS-485 transceiver from Analog Devices.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.RS485Isolator3",
     "subdir_name": "lib_rs485isolator3"
 }
+
 
 
 

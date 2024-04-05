@@ -2,7 +2,7 @@
     "name": "LDC Touch Click",
     "description": "LDC Touch Click is a compact add-on board optimized for inductive touch applications. This board features the LDC3114-Q1, a four-channel inductance-to-digital converter for low-power proximity and touch-button sensing from Texas Instruments. It comes with an adjustable sensitivity per input channel and operational power mode selection and measures frequency shifts caused by micro-deflection in the conductive targets formed by button presses. These presses are reported through a compatible I2C interface beside four LED indicators for its visual indication. This Click board™ enables touch button design for human-machine interface and precise linear position sensing of metal targets for automotive, consumer, and industrial applications by allowing access to the raw data representing the inductance value.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","LDC3114QPWRQ1"],
     "category" : ["Click Boards > HMI > Capacitive"]
 }

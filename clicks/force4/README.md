@@ -81,7 +81,7 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, "---- Application Init ----" );
 
     //  Click initialization.
@@ -89,7 +89,7 @@ void application_init ( void )
     force4_cfg_setup( &cfg );
     FORCE4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     force4_init( &force4, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -106,7 +106,7 @@ void application_task ( void )
 {
     adc_val = force4_read_adc( &force4 );
     log_printf( &logger, "ADC value: %d\r\n", adc_val );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

@@ -103,11 +103,11 @@ void application_init ( void ) {
 
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "-----------------------------\r\n" );
     log_printf( &logger, " Hardware Reset \r\n" );
     temphum14_hw_reset( &temphum14 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     ser_numb = temphum14_get_serial_number( &temphum14 );
     log_printf( &logger, "-----------------------------\r\n" );
@@ -115,13 +115,13 @@ void application_init ( void ) {
     log_printf( &logger, "-----------------------------\r\n" );
     log_printf( &logger, " Software Reset \r\n" );
     temphum14_soft_reset( &temphum14 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     temphum14_get_diagnostic( &temphum14, &status_data );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
 
     display_diagnostic( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, "-----------------------------\r\n" );
@@ -137,15 +137,17 @@ void application_init ( void ) {
 
 void application_task ( void ) {
     temphum14_set_conversion( &temphum14, TEMPHUM14_CONVERSION_HUM_OSR_0_020, TEMPHUM14_CONVERSION_TEMP_0_040 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     temphum14_get_temp_and_hum( &temphum14, &temperature, &humidity );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     log_printf( &logger, "  Temperature : %.2f C \r\n", temperature );
     log_printf( &logger, "  Humidity    : %.2f %% \r\n", humidity );
     log_printf( &logger, "-----------------------------\r\n" );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

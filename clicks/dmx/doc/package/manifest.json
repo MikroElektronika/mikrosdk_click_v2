@@ -25,16 +25,17 @@
     "name": "mikroe.click.dmx",
     "product_link": "https://www.mikroe.com/dmx-click",
     "short_description": "DMX Click is a device used to establish communication between the MCU and equipment that uses the DMX512-A communication protocol.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2870
     ],
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.Dmx",
     "subdir_name": "lib_dmx"
 }
+
 
 

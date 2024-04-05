@@ -61,13 +61,13 @@ void application_init ( )
     rs232spi_cfg_setup( &cfg );
     RS232SPI_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rs232spi_init( &rs232spi, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     rs232spi_digital_write_rst( &rs232spi, 1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     rs232spi_default_cfg( &rs232spi, 115200 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     rs232spi_flush( &rs232spi );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "App init done...\r\n" );
 }
 
@@ -90,13 +90,18 @@ void application_task ( )
         for ( cnt = 0; cnt < 9; cnt++ )
         {
             rs232spi_data_write( &rs232spi, message[ cnt ] );
-            Delay_ms( 500 );
+            Delay_ms ( 500 );
         }
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -2,7 +2,7 @@
     "name": "Force 5 Click",
     "description": "Force 5 Click is a compact add-on board that contains a stable and flexible compensated/amplified micro force sensor. This board features the FMAMSDXX025WC2C3, a piezoresistive-based force sensors offering a digital output for reading force over the specified full-scale force span and a temperature range from Honeywell Sensing and Productivity Solutions.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","FMAMSDXX025WC2C3"],
     "category" : ["Force"]
 }

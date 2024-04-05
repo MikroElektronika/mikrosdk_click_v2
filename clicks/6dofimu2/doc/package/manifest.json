@@ -25,17 +25,18 @@
     "name": "mikroe.click.c6dofimu2",
     "product_link": "https://www.mikroe.com/6dof-imu-2-click",
     "short_description": "6DOF IMU 2 Click is capable of precise acceleration and angular rate (gyroscopic) measurement.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1915
     ],
-    "version": "2.1.0.20",
+    "version": "2.1.0.21",
     "cmake": true,
     "alias": "Click.6DofImu2",
     "subdir_name": "lib_c6dofimu2"
 }
+
 
 
 

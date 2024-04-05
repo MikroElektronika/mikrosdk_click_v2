@@ -25,17 +25,18 @@
     "name": "mikroe.click.indexcounter",
     "product_link": "https://www.mikroe.com/index-counter-click",
     "short_description": "Index Counter Click is a simple prototyping high precision Hall-Effect switch solution with direction detection.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3102
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.IndexCounter",
     "subdir_name": "lib_indexcounter"
 }
+
 
 
 

@@ -25,14 +25,15 @@
     "name": "mikroe.click.airquality9",
     "product_link": "https://www.mikroe.com/air-quality-9-click",
     "short_description": "Air quality 9 Click is a compact add-on board containing a best-in-class air-quality sensing solution. This board features the ENS160, a digital multi-gas sensor solution based on metal oxide (MOX) technology with four MOx sensor elements from ScioSense. Each sensor element has independent hotplate control to detect a wide range of gases. The ENS160 series features TrueVOCâ„¢ air quality detection and supports intelligent algorithms, which calculate CO2 equivalents, TVOC, air quality index (AQI), and perform humidity and temperature compensation. This Click boardâ„¢ is interface-configurable and characterized by outstanding long-term stability and lifetime.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "alias": "Click.AirQuality9",
     "cmake": true,
     "subdir_name": "lib_airquality9"
 }
+
 
 
 

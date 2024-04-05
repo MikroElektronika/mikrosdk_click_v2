@@ -17,7 +17,9 @@ add_library(lib_oledc STATIC
 )
 add_library(Click.OledC  ALIAS lib_oledc)
 
-
+if (${MCU_NAME} MATCHES "(^dsPIC)")
+	add_compile_definitions(IMAGE_MODE_ONLY)
+endif()
 
 target_include_directories(lib_oledc PUBLIC
         include

@@ -2,7 +2,7 @@
     "name": "H-Bridge 16 Click",
     "description": "H-Bridge 16 Click is a compact add-on board with an H-Bridge gate driver, also known as a full-bridge pre-driver. This board features the DRV8262, a dual H-Bridge motor driver from Texas Instruments. The motor driver is designed for a variety of industrial applications and can drive one or two brushed DC motors, one stepper motor, and one or two thermoelectric coolers (TEC). It can operate in a wide supply voltage range of 4.5V to 65V.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","DRV8262DDWR"],
     "category" : ["Click Boards > Motor control > Brushed"]
 }

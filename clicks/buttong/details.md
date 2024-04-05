@@ -107,7 +107,7 @@ void application_init ( void )
 
         for ( ; ; );
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     buttong_set_duty_cycle ( &buttong, 0.0 );
     buttong_pwm_start( &buttong );
@@ -141,7 +141,7 @@ void application_task ( void )
             duty_cycle = ( float ) n_cnt ;
             duty_cycle /= 100;
             buttong_set_duty_cycle( &buttong, duty_cycle );
-            Delay_ms( 10 );
+            Delay_ms ( 10 );
         }
         button_state_old = button_state;
     } 
@@ -152,7 +152,7 @@ void application_task ( void )
             duty_cycle = ( float ) n_cnt ;
             duty_cycle /= 100;
             buttong_set_duty_cycle( &buttong,  duty_cycle );
-            Delay_ms( 10 );
+            Delay_ms ( 10 );
         }
         button_state_old = button_state;
     }

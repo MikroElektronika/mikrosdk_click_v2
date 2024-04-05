@@ -132,7 +132,7 @@ void application_task ( void )
 
     log_printf( &logger, "Angle is %f deg\r\n", angle );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

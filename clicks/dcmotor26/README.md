@@ -130,7 +130,9 @@ void application_task ( void )
     if ( DCMOTOR26_OK == dcmotor26_set_ch1_operation_mode ( &dcmotor26, DCMOTOR26_MODE_OUTPUT_OFF ) )
     {
         log_printf ( &logger, " MODE: OFF\r\n" );
-        Delay_ms ( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     if ( DCMOTOR26_OK == dcmotor26_set_ch1_operation_mode ( &dcmotor26, DCMOTOR26_MODE_FORWARD ) )
     {
@@ -153,7 +155,9 @@ void application_task ( void )
     if ( DCMOTOR26_OK == dcmotor26_set_ch1_operation_mode ( &dcmotor26, DCMOTOR26_MODE_BRAKE ) )
     {
         log_printf ( &logger, " MODE: BRAKE\r\n" );
-        Delay_ms ( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     if ( DCMOTOR26_OK == dcmotor26_set_ch1_operation_mode ( &dcmotor26, DCMOTOR26_MODE_REVERSE ) )
     {

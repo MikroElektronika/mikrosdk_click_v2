@@ -157,7 +157,9 @@ void application_init ( void )
     }
     
     esp8684_default_cfg( &esp8684 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     esp8684_process( );
     esp8684_clear_app_buf( );
@@ -165,19 +167,19 @@ void application_init ( void )
     esp8684_send_cmd( &esp8684, ESP8684_CMD_AT, NULL );
     app_error_flag = esp8684_rsp_check( ESP8684_RSP_OK );
     esp8684_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     esp8684_send_cmd( &esp8684, ESP8684_CMD_RST, NULL );
     app_error_flag = esp8684_rsp_check( ESP8684_RSP_READY );
     esp8684_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     esp8684_process( );
     esp8684_clear_app_buf();
     
     esp8684_send_cmd( &esp8684, ESP8684_CMD_GMR, NULL );
     app_error_flag = esp8684_rsp_check( ESP8684_RSP_OK );
     esp8684_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // Communication initialization
     esp8684_con_device_to_network ( );
@@ -189,11 +191,20 @@ void application_task ( void )
 {
     log_printf( &logger, "Sending and reading data from the TCP/UDP server \r\n" );
     esp8684_send_data( );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -337,27 +348,27 @@ void esp8684_con_device_to_network ( void )
     esp8684_send_cmd( &esp8684, ESP8684_CMD_CWMODE, "1" );
     app_error_flag = esp8684_rsp_check( ESP8684_RSP_OK );
     esp8684_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     esp8684_connect_to_network( &esp8684, ESP8684_SSID, ESP8684_PASSWORD );
     app_error_flag = esp8684_rsp_check( ESP8684_RSP_OK );
     esp8684_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     esp8684_send_cmd( &esp8684, ESP8684_CMD_CIPMUX, "1" );
     app_error_flag = esp8684_rsp_check( ESP8684_RSP_OK );
     esp8684_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     esp8684_send_cmd( &esp8684, ESP8684_CMD_CIPRECVMODE, "0" );
     app_error_flag = esp8684_rsp_check( ESP8684_RSP_OK );
     esp8684_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     esp8684_send_query_cmd( &esp8684, ESP8684_CMD_CIPSTATE );
     app_error_flag = esp8684_rsp_check( ESP8684_RSP_OK );
     esp8684_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void esp8684_send_data ( void )
@@ -365,38 +376,38 @@ void esp8684_send_data ( void )
     esp8684_connect_for_trans( &esp8684, "TCP", TCP_LINK_ID, REMOTE_IP, REMOTE_PORT );
     app_error_flag = esp8684_rsp_check( ESP8684_RSP_OK );
     esp8684_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     esp8684_connect_for_trans( &esp8684, "UDP", UDP_LINK_ID, REMOTE_IP, REMOTE_PORT );
     app_error_flag = esp8684_rsp_check( ESP8684_RSP_OK );
     esp8684_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     esp8684_send_message( TCP_LINK_ID, ESP8684_DATA );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_printf( &logger, "Read data TCP: \r\n" );
     app_error_flag = esp8684_rsp_check( ESP8684_RSP_RECEIVE );
     esp8684_error_check( app_error_flag );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     esp8684_send_message( UDP_LINK_ID, ESP8684_DATA );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_printf( &logger, "Read data UDP: \r\n" );
     app_error_flag = esp8684_rsp_check( ESP8684_RSP_RECEIVE );
     esp8684_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     esp8684_send_cmd( &esp8684, ESP8684_CMD_CIPCLOSE, TCP_LINK_ID );
     app_error_flag = esp8684_rsp_check( ESP8684_RSP_OK );
     esp8684_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     esp8684_send_cmd( &esp8684, ESP8684_CMD_CIPCLOSE, UDP_LINK_ID );
     app_error_flag = esp8684_rsp_check( ESP8684_RSP_OK );
     esp8684_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 // ------------------------------------------------------------------------ END

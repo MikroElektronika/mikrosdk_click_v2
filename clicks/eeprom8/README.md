@@ -135,7 +135,12 @@ void application_task ( void )
     }
     
     log_printf( &logger, " \r\nInitiating new iteration\r\n " );
-    Delay_ms( 6000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

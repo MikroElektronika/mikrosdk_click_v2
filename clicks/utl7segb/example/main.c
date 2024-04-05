@@ -72,13 +72,18 @@ void application_task ( void )
                                                      UTL7SEGB_NO_DOT ) )
         {
             log_printf( &logger, " --- %.2X ---\r\n", ( uint16_t ) hex_num );
-            Delay_ms( 500 );
+            Delay_ms ( 500 );
         }
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

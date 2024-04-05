@@ -80,10 +80,11 @@ void application_init ( void )
     c4x4rgb_init( &c4x4rgb, &cfg );
     
     c4x4rgb_fill_screen( &c4x4rgb, C4X4RGB_COLOR_WHITE );
-    Delay_ms( 100 ); 
+    Delay_ms ( 100 ); 
     
     c4x4rgb_color_mash();
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -101,25 +102,25 @@ void application_init ( void )
 void application_task ( void )
 {
     c4x4rgb_snake( C4X4RGB_COLOR_BLUE );
-    Delay_ms( 500 ); 
+    Delay_ms ( 500 ); 
     
     c4x4rgb_snake_return( C4X4RGB_COLOR_LIGHT_BLUE );
-    Delay_ms( 1000 ); 
+    Delay_ms ( 1000 ); 
     
     c4x4rgb_snake(  C4X4RGB_COLOR_GREEN );
-    Delay_ms( 500 ); 
+    Delay_ms ( 500 ); 
     
     c4x4rgb_snake_return( C4X4RGB_COLOR_YELLOW );
-    Delay_ms( 1000 ); 
+    Delay_ms ( 1000 ); 
     
     c4x4rgb_snake( C4X4RGB_COLOR_RED );
-    Delay_ms( 500 ); 
+    Delay_ms ( 500 ); 
     
     c4x4rgb_snake_return( C4X4RGB_COLOR_PURPLE );
-    Delay_ms( 1000 ); 
+    Delay_ms ( 1000 ); 
     
     c4x4rgb_fill_screen( &c4x4rgb, C4X4RGB_COLOR_WHITE );
-    Delay_ms( 100 ); 
+    Delay_ms ( 100 ); 
 }
 
 ```

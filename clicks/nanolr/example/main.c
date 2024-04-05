@@ -51,7 +51,7 @@ void nanolr_process( )
     while ( nanolr_rsp_rdy( &nanolr ) == 0 )
     {
         nanolr_uart_isr ( &nanolr );
-        Delay_ms( 1 ); 
+        Delay_ms ( 1 ); 
     }
 
     nanolr_err_t error;
@@ -122,7 +122,8 @@ void application_init ( void )
 #ifdef DEMO_APP_TRANSMITTER
     log_printf( &logger,  "---- TRANSMITER MODE ----\r\n" );
 #endif 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -135,12 +136,18 @@ void application_task ( void )
     nanolr_send_data( &nanolr, TEXT_TO_SEND, strlen( TEXT_TO_SEND ) );
     log_printf( &logger, "The message \"%s\" has been sent!\r\n", ( uint8_t * ) TEXT_TO_SEND );
     log_printf( &logger, "------------------------------------------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -123,7 +123,7 @@ void oximeter_uart_display ( void )
         oximeter_read_data( &oximeter, &tmp_data, OXIMETER_AVERAGE_RES_MODE );
         res_slot[ num_sampl ] = tmp_data;
     }
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 
     oximeter_set_mode( &oximeter, OXIMETER_DEV_PROGRAM_OP_MODE );
 
@@ -144,7 +144,7 @@ void oximeter_uart_display ( void )
         oximeter_read_data( &oximeter, &tmp_data, OXIMETER_AVERAGE_RES_MODE );
         res_slot_b[ num_sampl ] = tmp_data;
     }
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 
     oximeter_set_mode( &oximeter, OXIMETER_DEV_PROGRAM_OP_MODE );
 
@@ -191,7 +191,7 @@ void oximeter_uart_display ( void )
         }
         log_printf( &logger, "\r\n" );
 
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
     }
 }
 
@@ -267,7 +267,7 @@ void oximeter_logs_results( void )
     }
     log_printf( &logger, "-------------------------\r\n" );
 
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 
@@ -305,6 +305,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

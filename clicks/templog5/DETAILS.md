@@ -111,7 +111,7 @@ void application_init ( void )
    
     ee_test_write[ 0 ] = 0xAA;
     templog5_write_eeprom( &templog5, 0x10, &ee_test_write[ 0 ], 1);
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
     
     templog5_read_eeprom( &templog5, 0x10, &ee_test_read[ 0 ], 1);
  
@@ -134,7 +134,7 @@ void application_task ( void )
 
     temperature = templog5_get_temperature( &templog5 );
     log_info( &logger,"Temperature:  %.2f\r\n", temperature );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

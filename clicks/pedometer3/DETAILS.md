@@ -180,7 +180,7 @@ void application_task ( void )
         }
     }
 
-    Delay_ms( 400 );
+    Delay_ms ( 400 );
 }
 ```
 

@@ -53,13 +53,13 @@ void application_init ( void )
         for ( ; ; );
     }
     tempprobe_reset( &tempprobe );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
     if ( TEMPPROBE_ERROR == tempprobe_default_cfg( &tempprobe ) ) 
     {
         log_error( &logger, " Config Error " );
         for ( ; ; );
     }
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 
     log_info( &logger, " Application Task " );
 }
@@ -77,11 +77,17 @@ void application_task ( void )
     log_printf( &logger, " Thermo K:    %.2f C\r\n", temperature_k );
 
     log_printf( &logger, "------------------------\r\n" );
-    Delay_ms( 1500 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -96,7 +96,7 @@ void application_init ( void )
     barometer3_init( &barometer3, &cfg );
 
     barometer3_def_cfg( &barometer3 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     barometer3_generic_read( &barometer3, BAROMETER3_PROD_ID, &status_val, 1 );
     

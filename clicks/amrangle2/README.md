@@ -134,7 +134,7 @@ void application_task ( void )
     {
         log_printf( &logger, " Temperature: %.2f C\r\n\n", temperature );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 

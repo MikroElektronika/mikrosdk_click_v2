@@ -2,7 +2,7 @@
     "name": "UWB 2 Click",
     "description": "UWB 2 Click is a compact add-on board that brings Ultra-Wideband communication to any solution. This board features the DWM3000, an IEEE 802.15-z UWB transceiver module from Qorvo. This module fully aligns with FiRaTM PHY, MAC, and certification development. It uses an integrated UWB antenna to establish wireless communication in UWB channels 5 (6.5GHz) and 9 (8GHz). This Click board™ makes the perfect solution for developing precision real-time location systems (RTLS) using two-way ranging or TDoA schemes in various markets, location-aware wireless sensor networks (WSNs), and more.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","DWM3000TR13"],
     "category" : ["Click Boards > Wireless connectivity > UWB"]
 }

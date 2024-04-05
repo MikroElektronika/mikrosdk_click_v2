@@ -64,7 +64,7 @@ void application_init( void )
     
     fan2_default_cfg( &fan2 );
     fan2_speed = FAN2_HALF_SPEED_PER;
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "* * *  Fan 2 initialization done  * * *\r\n" );
     log_printf( &logger, "***************************************\r\n" );
@@ -75,7 +75,7 @@ void application_task( void )
 {
     fan2_direct_speed_control( &fan2, fan2_speed );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     fan2_read_tacho( &fan2, FAN2_REG_TACH1_CNT, &fan2_curr_speed );
     
     fan2_read_temp( &fan2, FAN2_REG_REMOTE_TEMP_READ, &fan2_temp );
@@ -104,6 +104,11 @@ void application_task( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

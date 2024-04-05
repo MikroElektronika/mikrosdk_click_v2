@@ -111,7 +111,7 @@ void application_init ( void ) {
 
     i2cmux5_default_cfg ( &i2cmux5 );
     log_info( &logger, " Application Task \r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "-------------------------------\r\n" );
     log_printf( &logger, "        I2C MUX 5 click        \r\n" );
     log_printf( &logger, "-------------------------------\r\n" );
@@ -135,24 +135,25 @@ void application_init ( void ) {
 void application_task ( void ) {   
     
     rx_data = i2cmux5_channel_read_byte( &i2cmux5, I2CMUX5_CH_1, I2CMUX5_SET_6DOF_IMU_9_ADDR, 0x75 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " CH-1 6DOF IMU 9 click  : 0x%X \r\n", ( uint16_t )rx_data );
     
     rx_data = i2cmux5_channel_read_byte( &i2cmux5, I2CMUX5_CH_2, I2CMUX5_SET_6DOF_IMU_11_ADDR, 0x00 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " CH-2 6DOF IMU 11 click : 0x%X \r\n", ( uint16_t )rx_data );
     
     rx_data = i2cmux5_channel_read_byte( &i2cmux5, I2CMUX5_CH_3, I2CMUX5_SET_RTC_10_ADDR, 0x0F ); 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " CH-3 RTC 10 click      : 0x%X \r\n", ( uint16_t )rx_data ); 
     
     rx_data = i2cmux5_channel_read_byte( &i2cmux5, I2CMUX5_CH_4, I2CMUX5_SET_ACCEL_10_ADDR, 0x0F );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " CH-4 Accel 10 click    : 0x%X \r\n", ( uint16_t )rx_data );
     log_printf( &logger, "-------------------------------\r\n" );
         
     i2cmux5_hw_reset( &i2cmux5 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

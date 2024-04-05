@@ -2,7 +2,7 @@
     "name": "Current Sens 2 Click",
     "description": "Current Sens 2 Click is a compact add-on board designed for precise current measurements in industrial applications. This board features the HO 10-P, an AC/DC current transducer from LEM USA. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","HO 10-P"],
     "category" : ["Click Boards > Mixed signal > Measurements"]
 }

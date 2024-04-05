@@ -114,7 +114,7 @@ void application_task ( void )
         s_counter = pedometer_get_step_counter( &pedometer );
         log_printf( &logger, " Step Counter : %d \r\n ", s_counter );
        
-        Delay_ms( 50 );
+        Delay_ms ( 50 );
     }
 
 ```

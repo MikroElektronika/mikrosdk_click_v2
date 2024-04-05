@@ -90,7 +90,7 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Init " );
 
     // Click initialization.
@@ -126,7 +126,7 @@ void application_task ( void )
         log_printf( &logger, " Illuminance : %u Lux\r\n\n", ambient10_voltage_to_lux( &ambient10, voltage ) );
     }
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

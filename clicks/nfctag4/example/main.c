@@ -46,7 +46,7 @@ void nfctag4_wait_for_int ()
     int_pin_flag = nfctag4_int_get( &nfctag4 );
     while ( ( int_pin_flag == 1 ) && ( timer_counter <= 300 ) )
     {
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
         timer_counter++;
         int_pin_flag = nfctag4_int_get( &nfctag4 );
     }
@@ -128,6 +128,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

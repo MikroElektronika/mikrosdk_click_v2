@@ -97,10 +97,10 @@ void application_init ( void )
 
     ecg3_sw_reset( &ecg3 );
     ecg3_fifo_reset( &ecg3 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     ecg3_default_cfg ( &ecg3 );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
   
 ```

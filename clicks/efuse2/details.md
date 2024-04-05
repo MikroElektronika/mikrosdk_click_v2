@@ -116,7 +116,7 @@ void application_init ( void )
         log_error( &logger, " Default configuration." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     op_current = 1.2;
     op_voltage = 12.0;
 
@@ -124,12 +124,12 @@ void application_init ( void )
     log_printf( &logger, "    Set operating  value:    \r\n" );
     log_printf( &logger, "       Voltage: 12.0 V       \r\n" );
     efuse2_set_operating_voltage( &efuse2, op_voltage, &min_voltage, &max_voltage );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "       Current:  1.2 A       \r\n" );
     log_printf( &logger, "-----------------------------\r\n" );
     efuse2_set_current_limit( &efuse2, op_current );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "    Turn ON Power Supply     \r\n" );
     log_printf( &logger, "-----------------------------\r\n" );
@@ -150,7 +150,7 @@ void application_task ( void )
     if ( EFUSE2_FAULT == efuse2_get_fault( &efuse2 ) ) 
     {
         efuse2_operating_mode( &efuse2, EFUSE2_AD5175_SHUTDOWN_MODE );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
 
         log_printf( &logger, "        Shutdown Mode        \r\n" );
         log_printf( &logger, "  Turn OFF the Power Supply  \r\n" );
@@ -167,7 +167,8 @@ void application_task ( void )
         log_printf( &logger, " Current Limit : %.3f A \r\n", op_current );
         log_printf( &logger, "-----------------------------\r\n" );
     }
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

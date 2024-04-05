@@ -25,17 +25,18 @@
     "name": "mikroe.click.dtmfgenerator",
     "product_link": "https://www.mikroe.com/dtmf-generator-click",
     "short_description": "DTMF Generator Click is a compact add-on board that generates DTMF (Dual-Tone Multi-Frequency) signals designed for MCU interfaces. This board features the HT9200A, a dual-tone multi-frequency decoder mostly used in mobile communications systems from Holtek Semiconductor Inc.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         3883
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.DTMFGenerator",
     "subdir_name": "lib_dtmfgenerator"
 }
+
 
 
 

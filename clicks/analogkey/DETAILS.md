@@ -88,7 +88,7 @@ void application_init ( void )
     analogkey_set_resolution( &analogkey, ANALOGKEY_ADC_RESOLUTION_12bit );
     
     analogkey_init( &analogkey, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf(&logger, " Press the button :D\r\n ");
 
@@ -126,11 +126,11 @@ void application_task ( void )
         log_printf( &logger, " T%u is pressed.\r\n", (uint16_t)key );
         
         while ( analogkey_read_voltage( &analogkey ) > 0.2 ) {
-             Delay_ms( 1 );   
+             Delay_ms ( 1 );   
         }
     
         log_printf( &logger, " T%u is released.\r\n", (uint16_t)key );
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
     }
 } 
 

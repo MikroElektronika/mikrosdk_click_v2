@@ -125,7 +125,7 @@ void application_init ( void )
     color10_cfg_setup( &cfg );
     COLOR10_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     color10_init( &color10, &cfg );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     if ( color10_get_id( &color10 ) == COLOR10_DEVICE_ID )
     {
@@ -145,7 +145,7 @@ void application_init ( void )
                     COLOR10_CFG_GAIN_1_X1 |
                     COLOR10_CFG_GAIN_2_X1 );
     log_printf( &logger, "-----Init done------\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void application_task ( void )
@@ -159,11 +159,16 @@ void application_task ( void )
     write_color( );
 
     log_printf( &logger, " ********************** \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

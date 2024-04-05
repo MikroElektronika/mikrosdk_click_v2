@@ -2,7 +2,7 @@
     "name": "3D Hall 4 Click",
     "description": "3D Hall 4 Click is a compact add-on board that can detect the strength of a magnetic field in all three dimensions. This board features the SENM3Dx, a 3D Hall magnetic sensor from SENIS. It is a CMOS-integrated magnetic field sensor that allows the acquisition of all three magnetic field components at the same time and in the same spot. The sensor is equipped with on-chip EPROM to hold initialization, calibration data, and other settings and definitions.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","SENM3Dx"],
     "category" : ["Click Boards > Sensors > Magnetic"]
 }

@@ -25,14 +25,15 @@
     "name": "mikroe.click.dcmotor18",
     "product_link": "https://www.mikroe.com/dc-motor-18-click",
     "short_description": "DC Motor 18 Click is a compact add-on board that contains a brushed DC motor driver. This board features the TB9051FTG, an automotive PWM-type single-channel H-Bridge DC brushed motor driver from Toshiba Semiconductor.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.DCMotor18",
     "subdir_name": "lib_dcmotor18"
 }
+
 
 
 

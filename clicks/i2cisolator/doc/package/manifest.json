@@ -25,17 +25,18 @@
     "name": "mikroe.click.i2cisolator",
     "product_link": "https://www.mikroe.com/i2c-isolator-click",
     "short_description": "I2C Isolator click carries ISO1540, a low-power, bidirectional isolator compatible with I2C interfaces. On the board, the Texas Instruments chip is connected to two sets of I2C pins, one on the mikroBUS connector (SDA, SCL), the other on the upper edge of the board (SCL2, SDL2).",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2885
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.I2Cisolator",
     "subdir_name": "lib_i2cisolator"
 }
+
 
 
 

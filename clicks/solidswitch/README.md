@@ -127,16 +127,24 @@ void application_task ( void )
 {
     solidswitch_write_single ( &solidswitch, SOLIDSWITCH_ENABLE_OUT0 | SOLIDSWITCH_ENABLE_OUT1 );
     solidswitch_display_enabled_channels( );
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     solidswitch_write_single ( &solidswitch, SOLIDSWITCH_ENABLE_OUT6 | SOLIDSWITCH_ENABLE_OUT7 );
     solidswitch_display_enabled_channels( );
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     solidswitch_write_single ( &solidswitch, SOLIDSWITCH_ENABLE_ALL_OUTPUTS );
     solidswitch_display_enabled_channels( );
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     solidswitch_write_single ( &solidswitch, SOLIDSWITCH_DISABLE_ALL_OUTPUTS );
     solidswitch_display_enabled_channels( );
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

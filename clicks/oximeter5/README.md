@@ -112,14 +112,14 @@ void application_init ( void )
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( OXIMETER5_ERROR == oximeter5_default_cfg ( &oximeter5 ) )
     {
         log_error( &logger, " Default configuration." );
         for ( ; ; );
     }
-    Delay_ms( 100 ); 
+    Delay_ms ( 100 ); 
     
     un_brightness = 0;
     un_min = 0x3FFFF;
@@ -144,7 +144,7 @@ void application_init ( void )
 
     oximeter5_get_oxygen_saturation( &aun_ir_buffer[ 0 ], 100, &aun_red_buffer[ 0 ], &n_spo2 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 ); 
+    Delay_ms ( 100 ); 
 }
 
 ```
@@ -221,11 +221,11 @@ void application_task ( void )
                 log_printf( &logger, "- - - - - - - - - - - - - - -\r\n" );
                 log_printf( &logger, "\tSPO2  : %d %%\r\n", ( uint16_t ) n_spo2 );
                 log_printf( &logger, "-----------------------------\r\n" );
-                Delay_ms( 100 );       
+                Delay_ms ( 100 );       
             }
             else
             {
-                Delay_ms( 10 );      
+                Delay_ms ( 10 );      
             }
         }
     }

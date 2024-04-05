@@ -128,7 +128,7 @@ void application_task ( void )
     {
         log_printf ( &logger, " Angle: %.2f Degrees\r\n\n", angle );
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 ```

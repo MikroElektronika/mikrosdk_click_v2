@@ -97,7 +97,7 @@ void application_init ( void )
     rn4870_cfg_setup( &cfg );
     RN4870_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rn4870_init( &rn4870, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     dev_type = RN4870_DEVICETYPE_MASTER;
 
@@ -120,12 +120,12 @@ void application_task ( void )
     rn4870_process(  );
 #ifdef DEMO_APP_TRANSMITER
     rn4870_connect( &rn4870, &RN4870_ADDR_SLAVE[ 0 ] );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, ">>> sending data  <<<\r\n" );
     rn4870_send( &rn4870, RN4870_MTYPE_MSG, RN4870_DTYPE_STRING, RN4870_ID_MASTER, &message_payload[ 0 ] );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     rn4870_disconnect( &rn4870 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 #endif
 
 #ifdef DEMO_APP_RECEIVER
@@ -142,6 +142,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

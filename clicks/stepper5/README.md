@@ -131,19 +131,22 @@ void application_task ( void )
     stepper5_set_direction ( &stepper5, STEPPER5_DIR_CW );
     stepper5_set_step_res ( &stepper5, STEPPER5_MRES_FULLSTEP );
     stepper5_drive_motor ( &stepper5, 200, STEPPER5_SPEED_SLOW );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf ( &logger, " Move 200 half steps counter-clockwise, speed: medium\r\n\n" );
     stepper5_set_direction ( &stepper5, STEPPER5_DIR_CCW );
     stepper5_set_step_res ( &stepper5, STEPPER5_MRES_2 );
     stepper5_drive_motor ( &stepper5, 200, STEPPER5_SPEED_MEDIUM );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf ( &logger, " Move 400 quarter steps counter-clockwise, speed: fast\r\n\n" );
     stepper5_set_direction ( &stepper5, STEPPER5_DIR_CCW );
     stepper5_set_step_res ( &stepper5, STEPPER5_MRES_4 );
     stepper5_drive_motor ( &stepper5, 400, STEPPER5_SPEED_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

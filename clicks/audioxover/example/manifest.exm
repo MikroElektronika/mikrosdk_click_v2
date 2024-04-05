@@ -2,7 +2,7 @@
     "name": "Audio Xover Click",
     "description": "Audio Xover Click is an analog active crossover solution for two-way loudspeakers. The primary purpose of the crossover circuit in a loudspeaker is to split an incoming audio signal into frequency bands that are passed to the speaker or “driver” best suited.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","MCP6H012"],
     "category" : ["Signal Processing"] 
 }

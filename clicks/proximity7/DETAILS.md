@@ -92,7 +92,7 @@ void application_init ( void )
     PROXIMITY7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     proximity7_init( &proximity7, &cfg );
 
-    Delay_ms(100);
+    Delay_ms ( 100 );
 
     log_printf( &logger, "> > > app init done < < <\r\n" );
 
@@ -134,7 +134,7 @@ void application_task ( void )
         proximity7_generic_write( &proximity7, PROXIMITY7_SPECIAL_FUNCTION | PROXIMITY7_PROXIMITY_AND_ALS_INT_PIN_CLEAR, &write_buffer[ 0 ], 1 );
     }
     
-    Delay_ms(300);
+    Delay_ms ( 300 );
 }  
 
 ```
@@ -259,7 +259,7 @@ void application_init ( void )
     write_buffer[0] = 0x00;
     proximity7_generic_write( &proximity7, PROXIMITY7_ENABLE | PROXIMITY7_REPEATED_BYTE, &write_buffer[0], 1 );
 
-    Delay_ms(100);
+    Delay_ms ( 100 );
 
     proximity7_set_als_integration_time( &proximity7, 400.0 );
     proximity7_set_proximity_integration_time( &proximity7, 2.73 );
@@ -277,7 +277,7 @@ void application_init ( void )
                       PROXIMITY7_ALS_ENA |
                       PROXIMITY7_POWER_ON;
    proximity7_generic_write( &proximity7, PROXIMITY7_ENABLE | PROXIMITY7_REPEATED_BYTE, &write_buffer[0], 1 );
-    Delay_ms(100);
+    Delay_ms ( 100 );
 
     log_printf( &logger, "> > > app init done < < <\r\n" );
 
@@ -312,7 +312,7 @@ void application_task ( void )
         proximity7_generic_write( &proximity7, PROXIMITY7_SPECIAL_FUNCTION | PROXIMITY7_PROXIMITY_AND_ALS_INT_PIN_CLEAR, &write_buffer[0], 1 );
     }
     
-    Delay_ms(300);
+    Delay_ms ( 300 );
 }  
 
 ```

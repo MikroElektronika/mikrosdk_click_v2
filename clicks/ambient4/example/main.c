@@ -54,7 +54,7 @@ void application_init ( void )
     ambient4_init( &ambient4, &cfg );
     
     ambient4_device_reset( &ambient4 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     ambient4_default_cfg ( &ambient4 );
     
 }
@@ -65,11 +65,16 @@ void application_task ( void )
     
     read_value = ambient4_read_data( &ambient4 );
     log_printf( &logger, " Ambient light: %d lx\r\n", read_value );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

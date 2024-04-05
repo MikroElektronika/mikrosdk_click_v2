@@ -130,7 +130,7 @@ void application_task ( void )
         brushless3_set_speed( &brushless3, speed );
         brushless3_get_speed( &brushless3, &velocity );
         log_printf( &logger, " Motor frequency: %.2f Hz\r\n", velocity );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 
     log_printf( &logger,  "\r\n ---------------------- \r\n" ); 
@@ -141,11 +141,11 @@ void application_task ( void )
         brushless3_set_speed( &brushless3, speed );
         brushless3_get_speed( &brushless3, &velocity );
         log_printf( &logger, " Motor frequency: %.2f Hz\r\n", velocity );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     
     log_printf( &logger, "-----------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ``` 

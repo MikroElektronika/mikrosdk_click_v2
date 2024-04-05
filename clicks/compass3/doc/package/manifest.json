@@ -25,17 +25,18 @@
     "name": "mikroe.click.compass3",
     "product_link": "https://www.mikroe.com/compass-3-click",
     "short_description": "Compass 3 Click is an expansion board that can measure the three-axis magnetic field which is perfect for implementation in applications such as electric compasses. This board features MMC5883MA, a complete 3-axis magnetic sensor with signal processing from MEMSIC.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3218
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Compass3",
     "subdir_name": "lib_compass3"
 }
+
 
 
 

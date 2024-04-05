@@ -173,7 +173,7 @@ void application_task ( void )
         log_printf( &logger, "------------------\r\n" );
         time_seconds = time_s.seconds;
     }
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 }
 ```
 

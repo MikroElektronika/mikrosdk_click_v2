@@ -49,7 +49,9 @@
 #include "log.h"
 #include "eink154inch.h"
 #include "eink154inch_image.h"
+#ifndef IMAGE_MODE_ONLY
 #include "eink154inch_font.h"
+#endif
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -82,7 +84,7 @@ void application_init ( void )
 
     eink154inch_start_config( &eink154inch );
     eink154inch_set_lut( &eink154inch, eink154inch_lut_table, 30 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
 #ifndef IMAGE_MODE_ONLY
     cfg_font.p_font = &guiFont_Tahoma_18_Regular[ 0 ];
@@ -102,7 +104,11 @@ void application_init ( void )
     text_set.text_x = 10;
     text_set.text_y = 130;
     eink154inch_text( &eink154inch, &demo_text2[ 0 ], &text_set ); 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif
 }
 
@@ -116,6 +122,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

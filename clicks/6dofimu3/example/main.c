@@ -57,7 +57,7 @@ void application_init ( void )
     c6dofimu3_init( &c6dofimu3, &cfg );
 
     c6dofimu3_default_cfg( &c6dofimu3 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -74,12 +74,17 @@ void application_task ( void )
         
         log_printf( &logger, "-------------------------------------\r\n" );
 
-        Delay_ms( 800 );
+        Delay_ms ( 800 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

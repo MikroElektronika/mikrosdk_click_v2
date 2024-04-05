@@ -51,7 +51,7 @@ void application_init ( )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     //  Click initialization.
 
@@ -81,14 +81,21 @@ void application_task ( )
 {
     pixi_write_reg( &pixi, PIXI_REG_GPO_DATA, 0x1 );
     log_printf( &logger, "Led on\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     pixi_write_reg( &pixi, PIXI_REG_GPO_DATA, 0 );
     log_printf( &logger, "Led off\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -111,7 +111,7 @@ void application_task ( void )
     ambient_temperature = thermo7_read_ambient_temperature( &thermo7 );
     log_printf( &logger, " Ambient temperature : %f �C\r\n", ambient_temperature );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

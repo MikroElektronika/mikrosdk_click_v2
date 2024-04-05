@@ -103,7 +103,10 @@ void application_init ( void )
     
     log_printf( &logger, " - Reseting device... \r\n" );
     nbiot2_hw_reset( &nbiot2 );
-    Delay_ms( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     app_error_flag = nbiot2_process( );
     nbiot2_error_check( app_error_flag );
     
@@ -132,7 +135,8 @@ void application_init ( void )
     nbiot2_error_check( app_error_flag );   
     
     nbiot2_send_cmd_with_parameter( &nbiot2, NBIOT2_CMD_QRST, "1" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     app_error_flag = nbiot2_process( );
     nbiot2_error_check( app_error_flag );  
     
@@ -193,7 +197,16 @@ void application_task ( void )
             #endif   
             #if defined( NBIOT2_SMS_EXAMPLE )
                 nbiot2_send_sms( );
-                Delay_ms( 10000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
             #endif
             break;
         }
@@ -201,7 +214,7 @@ void application_task ( void )
         {
             log_error( &logger, "Application status error!" );
             app_connection_status = CONFIGURATION_FOR_EXAMPLE;
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
             break;
         }
     }

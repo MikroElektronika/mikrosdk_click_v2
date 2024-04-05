@@ -72,12 +72,17 @@ void application_task ( void )
         digipot8_set_wiper_6 ( &digipot8, cnt );
         log_printf( &logger, " * All wipers position set to %d *\r\n", ( uint16_t ) cnt );
         
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

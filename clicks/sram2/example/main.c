@@ -57,7 +57,7 @@ void application_init ( void )
     SRAM2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     sram2_init( &sram2, &cfg );
     
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -67,31 +67,37 @@ void application_task ( void )
     log_printf( &logger, ">> Write data [ MikroE ] to memory. \r\n" );
 
     sram2_write_protect( &sram2, SRAM2_WR_ENABLE );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     for ( cnt = 0; cnt < 8; cnt++ )
     {
         sram2_generic_write( &sram2, memory_addr + cnt, message_data[ cnt ] );
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     sram2_write_protect( &sram2, SRAM2_WR_DISABLE );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
 
     log_printf( &logger, ">> Read data from memory. Data : " );
     for ( cnt = 0; cnt < 8; cnt++ )
     {
         sram2_generic_read( &sram2, memory_addr + cnt, &rx_data );
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
         log_printf( &logger, " %c ", rx_data );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     log_printf( &logger, "  \r\n" );
     log_printf( &logger, "-------------------------------- \r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

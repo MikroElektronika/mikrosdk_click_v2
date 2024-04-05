@@ -61,14 +61,14 @@ void application_init ( void )
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( I2CISOLATOR6_ERROR == i2cisolator6_set_slave_address( &i2cisolator6, ACCEL21_DEVICE_ADDRESS_GND ) )
     {
         log_error( &logger, " Set I2C Slave address ERROR." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, "---------------------\r\n" );
 }
@@ -85,11 +85,16 @@ void application_task ( void )
             log_printf( &logger, "---------------------\r\n" );
         }
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -103,23 +103,29 @@ void application_task ( void )
     stepper16_move_motor_angle( &stepper16, 360, STEPPER16_SPEED_MEDIUM );
     direction = !direction;
     stepper16_set_dir( &stepper16, direction );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     log_printf( &logger, "> Move 180deg in CCW direction.\r\n" );
     stepper16_set_step_resolution( &stepper16, STEPPER16_STEP_RES_QUARTER );
     check_error( &stepper16 );
     stepper16_move_motor_angle( &stepper16, 180, STEPPER16_SPEED_SLOW );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "> Move 180deg in CCW direcion.\r\n" );
     stepper16_set_step_resolution( &stepper16, STEPPER16_STEP_RES_1div16 );
     check_error( &stepper16 );
     stepper16_move_motor_angle( &stepper16, 180, STEPPER16_SPEED_FAST );
     direction = !direction;
     stepper16_set_dir( &stepper16, direction );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

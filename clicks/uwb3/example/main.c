@@ -187,6 +187,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -254,9 +259,9 @@ static err_t uwb3_display_response ( uwb3_t *ctx )
             log_error( &logger, " Timeout!" );
             return UWB3_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     uwb3_process( ctx );
     uwb3_log_app_buf ( );
     log_printf( &logger, "--------------------------\r\n" );

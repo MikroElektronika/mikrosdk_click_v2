@@ -121,7 +121,8 @@ void application_task ( void )
     display_alert_status( );
     log_printf( &logger, "--------------------------\r\n" );
     
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

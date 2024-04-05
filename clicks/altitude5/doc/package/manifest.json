@@ -25,14 +25,15 @@
     "name": "mikroe.click.altitude5",
     "product_link": "https://www.mikroe.com/altitude-5-click",
     "short_description": "Altitude 5 Click is a compact add-on board allowing high-resolution barometric pressure measurement. This board features the KP236, an analog barometric air pressure sensor based on a capacitive principle from Infineon Technologies. The KP236 is primarily developed for measuring barometric air pressure but can also be used in other application fields. It is surface micro-machined with a monolithic integrated signal conditioning circuit implemented in BiCMOS technology. The calibrated transfer function converts pressure into an analog output signal in a range of 40kPa to 115kPa. However, the choice of signal processing is up to the user; more precisely, the user can process the output signal in analog or digital form. The high accuracy and the high sensitivity of the KP236 make this Click board™ suitable for advanced automotive applications and industrial and consumer applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Altitude5",
     "subdir_name": "lib_altitude5"
 }
+
 
 
 

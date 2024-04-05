@@ -132,7 +132,7 @@ void application_task ( void )
     thermo20_start_conversion( &thermo20 );
     float temperature = thermo20_get_temperature( &thermo20 );
     log_printf( &logger, " > Temperature[deg C]: %.2f\r\n", temperature );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

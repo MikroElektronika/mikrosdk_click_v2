@@ -25,17 +25,18 @@
     "name": "mikroe.click.magneticlinear",
     "product_link": "https://www.mikroe.com/magnetic-linear-click",
     "short_description": "Magnetic linear click is a very accurate position sensing Click board™ which utilizes the HMC1501, a magnetic field displacement sensor IC.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2654
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Magneticlinear",
     "subdir_name": "lib_magneticlinear"
 }
+
 
 
 

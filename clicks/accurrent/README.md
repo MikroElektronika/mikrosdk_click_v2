@@ -108,7 +108,7 @@ void application_task ( void )
     float ac_current = 0;
     ac_current = accurrent_get_ma( &accurrent );
     log_printf( &logger, "Current value: %.3f mA\r\n", ac_current );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

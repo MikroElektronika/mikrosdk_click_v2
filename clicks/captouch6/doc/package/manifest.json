@@ -25,14 +25,15 @@
     "name": "mikroe.click.captouch6",
     "product_link": "https://www.mikroe.com/cap-touch-6-click",
     "short_description": "Cap Touch 6 Click is a compact add-on board that easily integrates projected capacitive touch into users' applications. This board features the IQS227D, a single-channel capacitive controller with an internal voltage regular and reference capacitor from Azoteq. Besides the capacitive sensing area, this board also has output pins for proximity and touch events with their corresponding LED indicators. The IQS227D automatically tracks slow varying environmental changes via various filters.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.CapTouch6",
     "subdir_name": "lib_captouch6"
 }
+
 
 
 

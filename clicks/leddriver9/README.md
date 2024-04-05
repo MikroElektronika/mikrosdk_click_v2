@@ -114,10 +114,10 @@ void application_init ( void ) {
     
     mode1_register_settings( );
     mode2_register_settings( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     led_output_state( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -149,7 +149,7 @@ void application_task ( void ) {
         leddriver9_set_pwm( &leddriver9, LEDDRIVER9_CHANNEL14, duty_cnt );
         leddriver9_set_pwm( &leddriver9, LEDDRIVER9_CHANNEL15, duty_cnt );
         duty_cnt += duty_gradient;
-        Delay_ms( breathing_speed );
+        Delay_ms ( breathing_speed );
     }
     while ( duty_cnt > min_duty ) {
         leddriver9_set_pwm( &leddriver9, LEDDRIVER9_CHANNEL0, duty_cnt );
@@ -169,7 +169,7 @@ void application_task ( void ) {
         leddriver9_set_pwm( &leddriver9, LEDDRIVER9_CHANNEL14, duty_cnt );
         leddriver9_set_pwm( &leddriver9, LEDDRIVER9_CHANNEL15, duty_cnt );
         duty_cnt -= duty_gradient;
-        Delay_ms( breathing_speed );
+        Delay_ms ( breathing_speed );
     }
 }
 

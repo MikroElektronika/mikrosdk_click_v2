@@ -69,7 +69,7 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     fiberopt_generic_write( &fiberopt, DEMO_TEXT_MESSAGE, strlen( DEMO_TEXT_MESSAGE ) );
     log_printf( &logger, "%s", ( char * ) DEMO_TEXT_MESSAGE );
-    Delay_ms( 1000 ); 
+    Delay_ms ( 1000 ); 
 #else
     uint8_t rx_byte = 0;
     if ( 1 == fiberopt_generic_read( &fiberopt, &rx_byte, 1 ) )
@@ -81,6 +81,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

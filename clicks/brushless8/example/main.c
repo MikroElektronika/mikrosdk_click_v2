@@ -91,7 +91,9 @@ void application_init ( void )
         brushless8_set_duty_cycle( &brushless8, 0 );
         brushless8_pwm_start( &brushless8 );
 
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 
     log_info( &logger, "Application Task" );
@@ -107,7 +109,7 @@ void application_task ( void )
     brushless8_set_duty_cycle ( &brushless8, duty );
     log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     if ( 10 == duty_cnt ) 
     {
@@ -122,6 +124,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

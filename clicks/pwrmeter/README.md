@@ -88,17 +88,17 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     //  Click initialization.
 
     pwrmeter_cfg_setup( &cfg );
     PWRMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pwrmeter_init( &pwrmeter, &cfg );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     pwrmeter_enable( &pwrmeter, PWRMETER_ENABLE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     response_byte = pwrmeter_write_reg_dword ( &pwrmeter, PWRMETER_SYS_CONFIG_REG, PWRMETER_VOLT_GAIN_1 | PWRMETER_CURR_GAIN_8 | PWRMETER_UART_BR_9600 );
     check_response( );
@@ -106,7 +106,7 @@ void application_init ( void )
     check_response( );
 
     log_printf( &logger, "PWR Meter is initialized\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -192,7 +192,7 @@ void application_task ( void )
     log_printf( &logger, "Power factor:  %.2f\r\n", meas_data[ 5 ] );
     log_printf( &logger, "-----------------------------------\r\n" );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

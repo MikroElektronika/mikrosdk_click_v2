@@ -108,7 +108,7 @@ void application_init ( void )
 
         for ( ; ; );
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     buttony_set_duty_cycle ( &buttony, 0.0 );
     buttony_pwm_start( &buttony );
@@ -142,7 +142,7 @@ void application_task ( void )
             duty_cycle = ( float ) n_cnt ;
             duty_cycle /= 100;
             buttony_set_duty_cycle( &buttony, duty_cycle );
-            Delay_ms( 10 );
+            Delay_ms ( 10 );
         }
         button_state_old = button_state;
     } 
@@ -153,7 +153,7 @@ void application_task ( void )
             duty_cycle = ( float ) n_cnt ;
             duty_cycle /= 100;
             buttony_set_duty_cycle( &buttony,  duty_cycle );
-            Delay_ms( 10 );
+            Delay_ms ( 10 );
         }
         button_state_old = button_state;
     }

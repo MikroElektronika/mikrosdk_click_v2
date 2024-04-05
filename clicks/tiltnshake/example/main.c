@@ -68,13 +68,18 @@ void application_task ( void )
         log_printf( &logger, " Y: %.2f\r\n", out_y );
         log_printf( &logger, " Z: %.2f\r\n", out_z );
         log_printf( &logger, "----------\r\n");
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

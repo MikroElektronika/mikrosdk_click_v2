@@ -117,19 +117,25 @@ void application_task( void )
                             CHARGER5_CURRENT_500MA );
     log_write( &console, "Output current is set to 500 mA.",
                LOG_FORMAT_LINE );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     charger5_increment_wiper( &charger5, CHARGER5_REG_WIPER0_VOL,
                               CHARGER5_STEPS_10 );
     log_write( &console, "Output current value is incremented by 10 steps.",
                LOG_FORMAT_LINE );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     charger5_decrement_wiper( &charger5, CHARGER5_REG_WIPER0_VOL,
                               CHARGER5_STEPS_5 );
     log_write( &console, "Output current value is decremented by 5 steps.",
                LOG_FORMAT_LINE );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

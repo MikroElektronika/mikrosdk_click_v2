@@ -67,7 +67,7 @@ void application_task ( void )
 {
     float angle_value = 0;
     angle_value = magneto2_read_angle( &magneto2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     if ( angle_value_old != angle_value )
     {
@@ -83,13 +83,18 @@ void application_task ( void )
             }
         }
         angle_value_old = angle_value;
-        Delay_ms(1000);
+        Delay_ms ( 1000 );
     }
 
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

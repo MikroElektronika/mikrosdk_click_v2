@@ -94,9 +94,13 @@ void application_init ( void )
 void application_task ( void )
 {
     mcp16331_set_vout( &mcp16331, 5000 );
-    delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     mcp16331_set_vout( &mcp16331, 12000 );
-    delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

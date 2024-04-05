@@ -25,14 +25,15 @@
     "name": "mikroe.click.gyro6",
     "product_link": "https://www.mikroe.com/gyro-6-click",
     "short_description": "Gyro 6 Click is a compact add-on board that contains a high-performance gyroscope. This board features the IAM-20380, a 3-axis, digital-output X-, Y-, and Z-axis angular rate sensor (gyroscope) from TDK InvenSense. It has a full-scale programmable range of ±250DPS, ±500DPS, ±1000DPS, and ±2000DPS with a factory-calibrated initial sensitivity and configurable host interface that supports both SPI and I2C serial communication.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.Gyro6",
     "subdir_name": "lib_gyro6"
 }
+
 
 
 

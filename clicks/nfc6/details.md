@@ -141,7 +141,7 @@ void application_task ( void )
             log_printf( &logger, "0x%.2X ", ( uint16_t ) tag_uid[ cnt ] );
         }
         log_printf( &logger, "\r\n----------------------------------\r\n" );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
 }
 ```

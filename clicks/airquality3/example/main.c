@@ -63,7 +63,7 @@ void application_init ( void )
 
     airquality3_default_cfg( &airquality3 );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     log_info( &logger, "---- Start measurement ----" );
 }
 
@@ -83,6 +83,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -84,15 +84,20 @@ void application_task ( void )
         }
 
         log_printf( &logger, " DAC value [12-bit] : %u\r\n", dac_value );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
 
         log_printf( &logger, " VOUT value [V] : %.3f\r\n\n", boost_vout_read( &boost ) );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

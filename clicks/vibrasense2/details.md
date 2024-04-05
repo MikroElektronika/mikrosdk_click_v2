@@ -117,7 +117,7 @@ void application_init ( void ) {
 
 void application_task ( void ) {
     new_val = vibrasense2_vibration_level( &vibrasense2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     if ( new_val != old_val ) {
         switch ( new_val ) {
             case VIBRASENSE2_VIBRA_LVL_0: {

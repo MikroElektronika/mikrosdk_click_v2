@@ -25,14 +25,15 @@
     "name": "mikroe.click.rtc13",
     "product_link": "https://www.mikroe.com/rtc-13-click",
     "short_description": "RTC 13 Click is a compact add-on board that accurately keeps the time of a day. This board features the PCF2123, an SPI configurable real-time clock/calendar optimized for low power operations from NXP Semiconductors. The PCF2123 provides year, month, day, weekday, hours, minutes, and seconds based on a 32.768kHz quartz crystal. Data is transferred serially via an SPI interface with a maximum data rate of 6.25 Mbit/s. An alarm and timer function is also available, providing the possibility to generate a wake-up signal on an interrupt line, in addition to a programmable square-wave clock output. This Click board™ is suitable for various time-keeping applications, including high-duration timers, metering, daily alarms, low standby power applications, and many more.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.RTC13",
     "subdir_name": "lib_rtc13"
 }
+
 
 
 

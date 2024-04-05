@@ -117,7 +117,7 @@ void application_init ( void )
 #endif 
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -134,7 +134,8 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     rs4858_generic_write( &rs4858, data_buf, strlen( data_buf ) );
     log_info( &logger, "---- Data sent ----" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #else
     rs4858_process( );
 #endif 

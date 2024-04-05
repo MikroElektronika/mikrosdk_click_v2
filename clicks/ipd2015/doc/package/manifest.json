@@ -25,11 +25,12 @@
     "name": "mikroe.click.ipd2015",
     "product_link": "https://www.mikroe.com/ipd-click-tpd2015",
     "short_description": "IPD Click is a compact add-on board for controlling inductive and resistive loads in industrial automation and other demanding applications. This board features the TPD2015FN, an 8-channel high-side switch with MOSFET outputs from Toshiba Semiconductor.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.IPD2015",
     "subdir_name": "lib_ipd2015"
 }
+

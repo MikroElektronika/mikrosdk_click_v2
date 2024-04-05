@@ -109,12 +109,16 @@ void application_task ( void )
     read_adc_val = amrcurrent_read_value ( &amrcurent );
     log_printf( &logger, " - ADC value: \r\n ", read_adc_val );
     
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     read_curr_val = amrcurrent_get_current (  &amrcurent );
     log_printf( &logger, " - Current value: \r\n ", read_curr_val );
     
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

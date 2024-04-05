@@ -121,7 +121,7 @@ void application_init ( void )
 
     audioamp5_default_cfg( &audioamp5 );
     log_printf( &logger, "** Audio Amp 5 is initialized **\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 ```
 
@@ -139,13 +139,21 @@ void application_task ( void )
     audioamp5_config_update( &audioamp5 );
     log_printf( &logger, "** Gain value is 26dB **\r\n" );    
 
-    Delay_ms ( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     audioamp5_gain_select( &audioamp5, AUDIOAMP5_GAIN_20DB );
     audioamp5_config_update( &audioamp5 );
     log_printf( &logger, "** Gain value is 20dB **\r\n" );  
     
-    Delay_ms ( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 
@@ -255,7 +263,7 @@ void application_init ( void )
     audioamp5_set_device_state( &audioamp5, AUDIOAMP5_PWRUP_UNMUTE_OUTPUTS );
     audioamp5_default_cfg( &audioamp5 );
     log_printf( &logger, "** Audio Amp 5 is initialized **\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 ```
 
@@ -273,7 +281,11 @@ void application_task ( void )
     audioamp5_config_update( &audioamp5 );
     log_printf( &logger, "** Gain value is 26dB \r\n**" );    
 
-    Delay_ms ( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     audioamp5_gain_select( &audioamp5, AUDIOAMP5_GAIN_20DB );
     audioamp5_config_update( &audioamp5 );

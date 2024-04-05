@@ -25,14 +25,15 @@
     "name": "mikroe.click.thermo22",
     "product_link": "https://www.mikroe.com/thermo-22-click",
     "short_description": "Thermo 22 Click is a compact add-on board that provides an accurate temperature measurement. This board features the TMP75C, a high-precision digital temperature sensor from Texas Instruments. The TMP75C houses an integrated digital temperature sensor with a 12-bit analog-to-digital converter (ADC), a reference circuit, and serial interface logic functions in one package. Characterized by its high accuracy (up to ±0.25°C typical) and high resolution of 0.0625°C, this temperature sensor provides temperature data to the host controller with a configurable I2C interface. This Click board™ is appropriate for thermal management and protection of various consumer, industrial, and environmental applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Thermo22",
     "subdir_name": "lib_thermo22"
 }
+
 
 
 

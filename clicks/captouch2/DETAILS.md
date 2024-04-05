@@ -96,9 +96,9 @@ void application_init ( void )
     captouch2_init( &captouch2, &cfg );
 
     captouch2_reset( &captouch2 );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
     captouch2_default_cfg( &captouch2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, ">> Cap Touch 2 is initialized " );
 }
 ```

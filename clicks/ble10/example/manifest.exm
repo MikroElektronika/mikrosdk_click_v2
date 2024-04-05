@@ -2,7 +2,7 @@
     "name": "BLE 10 Click",
     "description": "BLE 10 Click is a compact add-on board that provides BT/BLE connectivity for any embedded application. This board features the PAN1780-AT, a Bluetooth® 5 Low Energy Module based on Nordic's nRF52840 single-chip controller from Panasonic. ",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","PAN1780-AT"],
     "category" : ["BT/BLE"]
 }

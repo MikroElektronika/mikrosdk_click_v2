@@ -96,7 +96,7 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_info( &logger, " Application Init " );
 
@@ -138,7 +138,7 @@ void application_task ( void )
     log_printf( &logger, " Accel Z: %.3f g\t Mag Z: %.2f uT\r\n", acc_z, mag_z );
     log_printf( &logger, "----------------------------------\r\n");
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

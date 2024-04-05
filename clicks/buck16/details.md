@@ -127,19 +127,35 @@ void application_task ( void )
 {
     log_printf( &logger, " > Setting output to 0.9V\r\n" );
     buck16_set_output( &buck16, 900 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " > Setting output to 2.5V\r\n" );
     buck16_set_output( &buck16, 2500 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " > Disable output\r\n" );
     buck16_enable_output( &buck16, 0 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " > Enable output\r\n" );
     buck16_enable_output( &buck16, 1 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " > Setting output to 1.5V\r\n" );
     buck16_set_output( &buck16, 1500 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

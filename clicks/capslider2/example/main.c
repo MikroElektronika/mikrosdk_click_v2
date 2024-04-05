@@ -80,20 +80,22 @@ void application_init ( void )
     CAPSLIDER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     capslider2_init( &capslider2, &cfg );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     cnt = 0;
     wheel_avrg1 = 0;
     wheel_avrg2 = 0;
     
     capsldr2_reset( &capslider2 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     capsldr2_enable_chann( &capslider2, CAPSLDR2_CH0_PROX_EN | CAPSLDR2_CH1_EN | CAPSLDR2_CH2_EN | CAPSLDR2_CH3_EN | CAPSLDR2_CH4_EN | CAPSLDR2_CH5_EN | CAPSLDR2_CH6_EN | CAPSLDR2_CH7_EN | CAPSLDR2_CH8_EN | CAPSLDR2_CH9_EN );
     capsldr2_config( &capslider2 );
     capsldr2_set_threshold( &capslider2, 0x04 );
-    Delay_ms( 2000 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "CAP Slider 2 is initialized\r\n" );
 
@@ -137,6 +139,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

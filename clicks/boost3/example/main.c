@@ -65,16 +65,33 @@ void application_task ( void )
     log_printf( &logger, "Please use the on-board potentiometer" );
     log_printf( &logger, " to adjust the voltage output.\r\n" );
     log_printf( &logger, "--------------------------------\r\n" );
-    Delay_ms ( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     boost3_dev_enable( &boost3, BOOST3_DISABLE );
     log_printf( &logger, "The click board is turned OFF!\r\n" );
     log_printf( &logger, "--------------------------------\r\n" );
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

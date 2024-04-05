@@ -25,17 +25,18 @@
     "name": "mikroe.click.boostinv2",
     "product_link": "https://www.mikroe.com/boost-inv-2-click",
     "short_description": "Boost-INV 2 click is a very useful DC/DC voltage converter device, as can output both positive and negative voltage, boosted up to 15V and inverted to -15V, from a single fixed voltage input.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2497
     ],
-    "version": "2.1.0.19",
+    "version": "2.1.0.20",
     "cmake": true,
     "alias": "Click.BoostInv2",
     "subdir_name": "lib_boostinv2"
 }
+
 
 
 

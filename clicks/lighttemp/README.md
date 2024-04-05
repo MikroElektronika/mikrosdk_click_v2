@@ -82,7 +82,7 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     //  Click initialization.
 
@@ -95,7 +95,7 @@ void application_init ( void )
     
     log_info( &logger, "---- Application Task ----" );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
   
 ```
@@ -122,7 +122,7 @@ void application_task ( void )
     lighttemp_led2_pwm_start( &lighttemp );
 
     log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     if ( 10 == duty_cnt ) 
     {

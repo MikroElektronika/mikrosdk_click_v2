@@ -35,14 +35,18 @@
 #ifndef NANOGPS_H
 #define NANOGPS_H
 
-#include "mikrosdk_version.h"
-
-#ifdef __GNUC__
-#if mikroSDK_GET_VERSION < 20800ul
-#include "rcu_delays.h"
-#else
-#include "delays.h"
+/**
+ * Any initialization code needed for MCU to function properly.
+ * Do not remove this line or clock might not be set correctly.
+ */
+#ifdef PREINIT_SUPPORTED
+#include "preinit.h"
 #endif
+
+#ifdef MikroCCoreVersion
+    #if MikroCCoreVersion >= 1
+        #include "delays.h"
+    #endif
 #endif
 
 #include "drv_digital_out.h"
@@ -133,8 +137,8 @@
  * \defgroup driver Driver define
  * \{
  */
-#define DRV_RX_BUFFER_SIZE 500
-#define DRV_TX_BUFFER_SIZE 500
+#define NANOGPS_DRV_RX_BUFFER_SIZE 500
+#define NANOGPS_DRV_TX_BUFFER_SIZE 100
 /** \} */
 
 /** \} */ // End group macro 
@@ -161,8 +165,8 @@ typedef struct
 
     uart_t uart;
 
-    char uart_rx_buffer[ DRV_RX_BUFFER_SIZE ];
-    char uart_tx_buffer[ DRV_TX_BUFFER_SIZE ];
+    char uart_rx_buffer[ NANOGPS_DRV_RX_BUFFER_SIZE ];
+    char uart_tx_buffer[ NANOGPS_DRV_TX_BUFFER_SIZE ];
 
 } nanogps_t;
 

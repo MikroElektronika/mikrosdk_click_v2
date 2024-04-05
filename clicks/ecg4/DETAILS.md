@@ -93,12 +93,12 @@ void application_init ( void )
     ecg4_init( &ecg4, &cfg );
 
     ecg4.driver_hdl = make_response;
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     ecg4_module_reset ( &ecg4 );
     ecg4_enable_ldo_ctrl ( &ecg4, ECG4_ENABLE_LDO_CTRL );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```

@@ -156,7 +156,7 @@ void application_task ( void )
             }
         }
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

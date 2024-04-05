@@ -25,17 +25,18 @@
     "name": "mikroe.click.c8pini2c",
     "product_link": "https://www.mikroe.com/8-pin-i2c-click",
     "short_description": "8-pin I2C Click is a compact add-on board that represents a breakout board that simplifies the connection of add-on boards with 8 pin Female Connector to mikroBUS™ socket.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3849
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.8pinI2c",
     "subdir_name": "lib_c8pini2c"
 }
+
 
 
 

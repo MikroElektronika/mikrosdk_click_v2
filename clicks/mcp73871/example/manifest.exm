@@ -2,7 +2,7 @@
     "name": "MCP73871 Click",
     "description": "MCP73871 click is a fully integrated solution for system power delivery and Li-Po/Li-Ion battery charge management.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","MCP73871"],
     "category" : ["Battery charger"] 
 }

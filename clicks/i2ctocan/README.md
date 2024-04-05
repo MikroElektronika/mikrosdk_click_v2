@@ -118,18 +118,18 @@ void application_init ( void ) {
     
     i2ctocan_default_cfg ( &i2ctocan );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "--------------------------------\r\n" );
     log_printf( &logger, "     Set I2C Slave Address      \r\n" );
     i2ctocan_set_slave_address ( &i2ctocan, I2CTOCAN_VAV_PRESS_DEV_ADDR );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "--------------------------------\r\n" );
     log_printf( &logger, "          Enable Device         \r\n" );
     log_printf( &logger, "--------------------------------\r\n" );
     i2ctocan_enable_device( &i2ctocan );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -149,7 +149,8 @@ void application_task ( void ) {
     log_printf( &logger, " Diff. Pressure    : %.4f Pa\r\n", diff_press );
     log_printf( &logger, " Temperature       : %.4f C\r\n", temperature );
     log_printf( &logger, "--------------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

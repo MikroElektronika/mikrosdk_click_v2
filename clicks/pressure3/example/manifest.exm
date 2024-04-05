@@ -2,7 +2,7 @@
     "name": "Pressure 3 Click",
     "description": "Pressure 3 click is a mikroBUS add-on board that carries an Infineon DPS310 digital barometric pressure sensor. It has an operating range from 300 to 1200 hPa with a relative accuracy of 0.06 hPa and absolute accuracy of 1 hPa.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","DPS310"],
     "category" : ["Pressure"] 
 }

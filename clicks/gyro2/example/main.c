@@ -54,7 +54,7 @@ void application_init ( void )
     gyro2_cfg_setup( &cfg );
     GYRO2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     gyro2_init( &gyro2, &cfg );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     temp = gyro2_default_cfg( &gyro2 );
 
     if ( temp == 1 )
@@ -65,7 +65,7 @@ void application_init ( void )
     {
         log_printf( &logger, "Error\r\n" );
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void application_task ( void )
@@ -84,11 +84,17 @@ void application_task ( void )
 
     log_printf( &logger, "Temperature: %d degC\r\n +++++++++++++++++++++++++ \r\n", (int16_t)temperature );
 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

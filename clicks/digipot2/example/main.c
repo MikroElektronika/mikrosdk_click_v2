@@ -66,12 +66,21 @@ void application_task ( void ) {
     for ( uint16_t n_cnt = 127; n_cnt < 255; n_cnt += 10 ) {
         wiper_pos = ( uint8_t ) n_cnt;
         digipot2_set_wiper_positions( &digipot2, wiper_pos );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

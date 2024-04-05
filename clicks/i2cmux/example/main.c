@@ -54,14 +54,15 @@ void application_init ( void )
     i2cmux_cfg_setup( &cfg );
     I2CMUX_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     i2cmux_init( &i2cmux, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     i2cmux_hw_reset( &i2cmux );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     i2cmux_set_channel( &i2cmux, I2CMUX_CMD_SET_CH_0, 0x39 );
     log_printf( &logger, " Please connect a Spectrometer click to channel 0\r\n" );
     log_printf( &logger, "-------------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -71,11 +72,16 @@ void application_task ( void )
     i2cmux_generic_read( &i2cmux, 0x92, &rx_data, 1 );
     log_printf( &logger, " The click device ID is:  0x%.2X\r\n", ( uint16_t ) rx_data );
     log_printf( &logger, "-------------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

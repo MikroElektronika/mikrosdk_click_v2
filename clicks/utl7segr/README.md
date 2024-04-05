@@ -127,7 +127,7 @@ void application_task ( void ) {
 
     for ( uint8_t cnt = 0; cnt < 100; cnt++ ) {
         utl7segr_display_number( &utl7segr, cnt, UTL7SEGR_DOT_LEFT );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
 }
 

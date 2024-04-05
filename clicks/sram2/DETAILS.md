@@ -109,7 +109,7 @@ void application_task ( void )
     {
         sram2_generic_write( &sram2, memory_addr + cnt, message_data[ cnt ] );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     sram2_write_protect( &sram2, SRAM2_WR_DISABLE );
 
     log_printf( &logger, ">> Read data from memory. Data : " );
@@ -121,7 +121,8 @@ void application_task ( void )
     }
     log_printf( &logger, "  \r\n" );
     log_printf( &logger, "-------------------------------- \r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

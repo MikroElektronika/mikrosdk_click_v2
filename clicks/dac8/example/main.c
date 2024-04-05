@@ -68,19 +68,19 @@ void application_init ( void )
 
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "  I2C driver init.   \r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "      DAC60501       \r\n" );
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "     Soft reset      \r\n" );
     dac8_soft_reset( &dac8 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "  Disable sync. mode \r\n" );
     dac8_enable_sync( &dac8, DAC8_SYNC_DISABLE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "    Set config.:     \r\n" );
@@ -89,30 +89,30 @@ void application_init ( void )
     log_printf( &logger, " Disable:            \r\n" );
     log_printf( &logger, " Power-down mode     \r\n" );
     dac8_set_config( &dac8, DAC8_CONFIG_REF_PWDWN_ENABLE, DAC8_CONFIG_DAC_PWDWN_DISABLE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "  Vref divided by 2  \r\n" );
     log_printf( &logger, "  Set DAC gain of 2  \r\n" );
     dac8_set_gain( &dac8, DAC8_GAIN_REF_DIV_2, DAC8_GAIN_BUFF_GAIN_1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, " Set Vref ~ 2500 mV  \r\n" );
     dac8_set_vref( &dac8, 2500 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     dac8_init( &dac8, &cfg, DAC8_MASTER_SPI );
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "  SPI driver init.   \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "       DAC8554       \r\n" );
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "    Enable DAC8554   \r\n" );
     dac8_device_enable( &dac8, DAC8_DAC8554_ENABLE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -128,7 +128,11 @@ void application_task ( void )
     log_printf( &logger, " Channel A ~ 2500 mV \r\n" );
     dac8_device_config( &dac8, cfg_dac );
     dac8_load_dac(  &dac8 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "---------------------\r\n" );
 
@@ -141,7 +145,11 @@ void application_task ( void )
     log_printf( &logger, " Channel B ~ 1250 mV \r\n" );
     dac8_device_config(  &dac8, cfg_dac );
     dac8_load_dac( &dac8 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "---------------------\r\n" );
     
@@ -154,7 +162,11 @@ void application_task ( void )
     log_printf( &logger, " Channel C ~  625 mV \r\n" );
     dac8_device_config(  &dac8, cfg_dac );
     dac8_load_dac( &dac8 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "---------------------\r\n" );
 
@@ -167,11 +179,20 @@ void application_task ( void )
     log_printf( &logger, " Channel D ~  312 mV\r\n" );
     dac8_device_config(  &dac8, cfg_dac );
     dac8_load_dac(  &dac8 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

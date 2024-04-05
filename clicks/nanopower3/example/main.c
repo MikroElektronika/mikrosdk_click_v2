@@ -79,12 +79,21 @@ void application_task ( void )
         nanopower3_set_voltage( &nanopower3, n_cnt );
         log_printf( &logger, " Selected output is:" );
         print_selected_output_level ( n_cnt );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

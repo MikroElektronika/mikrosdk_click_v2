@@ -87,7 +87,9 @@ void application_task ( void )
         if ( error_check == BUCKNBOOST_ERROR )
         {
             log_error( &logger, " Setting Buck 1 Output Voltage." );
-            Delay_ms( 3000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
         }
         else
         {
@@ -115,12 +117,18 @@ void application_task ( void )
             }
             log_printf( &logger, "-----------------------------------\r\n" );
         }
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 ); 
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

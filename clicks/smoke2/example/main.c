@@ -84,11 +84,11 @@ void application_init ( void )
     uint16_t devid = smoke2_read_data( &smoke2, SMOKE2_REG_DEVID );
     log_printf( &logger, ">> ID:  0x%.2X\r\n", ( uint16_t ) ( devid & 0xFF ) );  
     log_printf( &logger, ">> REV: 0x%.2X\r\n", ( uint16_t ) ( ( devid >> 8 ) & 0xFF ) );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, ">> Configuration <<\r\n" );
     smoke2_default_cfg( &smoke2 ); 
-    Delay_ms( 1000 ); 
+    Delay_ms ( 1000 ); 
     
 #if ( EXAMPLE_MODE == EXAMPLE_MODE_SMOKE )
     log_printf( &logger, ">> SMOKE MODE <<\r\n" );
@@ -112,6 +112,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -159,14 +164,14 @@ void proximity_example ( void )
             sens_data = smoke2_read_sens_data( &smoke2, SMOKE2_SLOT_A, SMOKE2_CHN_1 );
             log_printf( &logger, ">> DATA A: %d\r\n", sens_data );
             slot_a_int = 0;
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
         if ( 0 != slot_b_int ) 
         {
             sens_data = smoke2_read_sens_data( &smoke2, SMOKE2_SLOT_B, SMOKE2_CHN_1 );
             log_printf( &logger, ">> DATA B: %d\r\n", sens_data );
             slot_b_int = 0;
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
         if ( 0 != fifo_int ) 
         {
@@ -176,7 +181,7 @@ void proximity_example ( void )
                 sens_data = smoke2_read_data( &smoke2, SMOKE2_REG_FIFO_ACCESS );
                 log_printf( &logger, ">> FIFO: %d\r\n", sens_data );
             }
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
 }

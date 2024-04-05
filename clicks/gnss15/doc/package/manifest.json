@@ -25,11 +25,12 @@
     "name": "mikroe.click.gnss15",
     "product_link": "https://www.mikroe.com/gnss-15-click",
     "short_description": "GNSS 15 Click is a compact add-on board for advanced automotive navigation and tracking applications. This board features the TESEO-VIC3DA, an automotive GNSS dead-reckoning module from STMicroelectronics. This module combines a 6-axis IMU with multi-constellation satellite reception, offering exceptional accuracy and dead-reckoning capabilities. It stands out for its rapid time-to-first-fix and the ability to receive firmware updates for enhanced performance. Designed for flexibility, it supports both UART and I2C communications, includes pins for precise odometer readings, and features an SMA antenna connector for superior signal quality.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.GNSS15",
     "subdir_name": "lib_gnss15"
 }
+

@@ -25,17 +25,18 @@
     "name": "mikroe.click.ecg",
     "product_link": "https://www.mikroe.com/ecg-click",
     "short_description": "This is an ECG (or EKG) machine on a click board. It measures the electrical activity of a beating heart through electrodes taped to the skin. The board requires little setup, and the final measurement results can be displayed as an Electrocardiogram using a free Windows app.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1936
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Ecg",
     "subdir_name": "lib_ecg"
 }
+
 
 
 

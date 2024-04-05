@@ -60,23 +60,48 @@ void application_init ( void ) {
     }
     speaker_default_cfg ( &speaker );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) {
     log_printf( &logger, "-------------------------\r\n" );
     log_printf( &logger, "  Normal Operation Mode \r\n" );
     speaker_normal_operation( &speaker );
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "-------------------------\r\n" );
     log_printf( &logger, "   Enter Shutdown Mode  \r\n" );
     speaker_shutdown( &speaker );
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

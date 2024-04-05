@@ -99,7 +99,7 @@ void application_init ( void )
     canfd2_init( &canfd2, &cfg );
     
     CANFD2_SET_DATA_SAMPLE_EDGE;
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
 #ifdef DEMO_APP_TRANSMITTER
     canfd2_set_mode( &canfd2, CANFD2_OP_MODE_NORMAL );
@@ -126,7 +126,7 @@ void application_init ( void )
         for ( ; ; );
     }
 #endif
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -142,7 +142,9 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     canfd2_generic_write( &canfd2, DEMO_TEXT_MESSAGE, strlen ( DEMO_TEXT_MESSAGE ) );
     log_info( &logger, "--- The message is sent ---" );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #else
     canfd2_process( &canfd2 );
     if ( app_buf_len > 0 ) 

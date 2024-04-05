@@ -25,17 +25,18 @@
     "name": "mikroe.click.powerbank2",
     "product_link": "https://www.mikroe.com/powerbank-2-click",
     "short_description": "This single chip includes a linear charger, a synchronous Boost with dual output load management and a torch function support.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3283
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Powerbank2",
     "subdir_name": "lib_powerbank2"
 }
+
 
 
 

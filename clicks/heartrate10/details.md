@@ -140,7 +140,7 @@ void application_task ( void )
         heartrate10_read_complete_fifo_data( &heartrate10, &ir, &red, &green, &blue );
         log_printf( &logger, "%lu,%lu,%lu,%lu\r\n", ir, red, green, blue );
     }
-    Delay_ms( 3 );
+    Delay_ms ( 3 );
 }
 
 ```

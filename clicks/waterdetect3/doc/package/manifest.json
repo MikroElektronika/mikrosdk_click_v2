@@ -25,14 +25,15 @@
     "name": "mikroe.click.waterdetect3",
     "product_link": "https://www.mikroe.com/water-detect-3-click",
     "short_description": "Water Detect 3 Click is a compact add-on board that detects water and other electroconductive liquids. This board features the MCP606, a micropower CMOS operational amplifier from Microchip. In the same package, the Water Detect 3 Click comes with a separate PCB with an electroconductive water detection area connected to a Click board™ with wires.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.WaterDetect3",
     "subdir_name": "lib_waterdetect3"
 }
+
 
 
 

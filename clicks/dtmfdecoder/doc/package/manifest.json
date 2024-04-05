@@ -25,14 +25,15 @@
     "name": "mikroe.click.dtmfdecoder",
     "product_link": "https://www.mikroe.com/dtmf-decoder-click",
     "short_description": "DTMF Decoder Click is a compact add-on board that contains an integrated DTMF receiver with enhanced sensitivity. This board features the MT8870D, a complete DTMF receiver integrating the band-split filter and digital decoder functions from Microchip Technology.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.DTMFDecoder",
     "subdir_name": "lib_dtmfdecoder"
 }
+
 
 
 

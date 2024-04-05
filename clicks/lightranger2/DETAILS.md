@@ -96,7 +96,7 @@ void application_init ( void )
     lightranger2_default_cfg( &lightranger2 );
     
     lightranger2_start_continuous( &lightranger2, 0 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -112,12 +112,12 @@ void application_task ( void )
     uint16_t distance;
     
     distance = lightranger2_get_range_continuous( &lightranger2 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     if ( distance )
     {
         log_printf( &logger, "Distance: %u mm \r\n", distance );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 }
 

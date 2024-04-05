@@ -117,7 +117,7 @@ void application_init ( void )
     dcmotor18_default_cfg ( &dcmotor18 );
 
     log_info( &logger, " Application Task " );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 ```
@@ -162,7 +162,7 @@ void application_task ( void )
     }
     duty_cnt += duty_inc;
     
-    Delay_ms( 1000 );  
+    Delay_ms ( 1000 );  
 }
 
 ```

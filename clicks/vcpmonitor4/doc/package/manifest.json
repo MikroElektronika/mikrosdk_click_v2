@@ -25,14 +25,15 @@
     "name": "mikroe.click.vcpmonitor4",
     "product_link": "https://www.mikroe.com/vcp-monitor-4-click",
     "short_description": "VCP Monitor 4 Click is a compact add-on board that represents a high-precision power monitoring system. This board features the INA239, ultra-precise digital power monitor with a 16-bit delta-sigma ADC specifically designed for current-sensing applications from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.VCPMonitor4",
     "subdir_name": "lib_vcpmonitor4"
 }
+
 
 
 

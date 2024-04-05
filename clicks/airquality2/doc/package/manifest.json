@@ -25,17 +25,18 @@
     "name": "mikroe.click.airquality2",
     "product_link": "https://www.mikroe.com/air-quality-2-click",
     "short_description": "Air quality 2 click carries the iAQ-Core Indoor Air Quality sensor that measures VOC levels and provides CO2 equivalent and TVOC equivalent predictions.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2009
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.Airquality2",
     "subdir_name": "lib_airquality2"
 }
+
 
 
 

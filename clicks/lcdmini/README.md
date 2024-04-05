@@ -121,12 +121,12 @@ void application_init ( void )
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "  Setting Backlight  \r\n" );
     lcdmini_set_backlight ( &lcdmini, 1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "  Set Contrast: 200  \r\n" );
     lcdmini_set_contrast( &lcdmini, 200 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
     
@@ -138,7 +138,7 @@ void application_init ( void )
     lcdmini_display_text ( &lcdmini, 2, 2, "LCD mini Click" ); 
     lcdmini_display_text ( &lcdmini, 3, 2, "LCD mini Click" ); 
     lcdmini_display_text ( &lcdmini, 4, 6, "Mikro E" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 ```
@@ -151,7 +151,7 @@ void application_init ( void )
 ```c
 void application_task ( void )
 {
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     lcdmini_send_cmd( &lcdmini, LCDMINI_SHIFT_LEFT ); 
 }
 ```

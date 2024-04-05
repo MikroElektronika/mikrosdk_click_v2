@@ -25,17 +25,18 @@
     "name": "mikroe.click.capslider2",
     "product_link": " https://www.mikroe.com/cap-slider-2-click",
     "short_description": "This application use for controlling various devices",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2553
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.CapSlider2",
     "subdir_name": "lib_capslider2"
 }
+
 
 
 

@@ -110,7 +110,7 @@ void application_init ( void )
 void application_task ( void )
 {
     spiisolator6_get_accel22_device_id ( &spiisolator6 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

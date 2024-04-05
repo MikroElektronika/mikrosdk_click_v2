@@ -100,7 +100,7 @@ void application_init ( void )
     log_printf( &logger, "------------------------\r\n" );
     
     ldc1101_default_cfg ( &ldc1101 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -116,7 +116,7 @@ void application_task ( void )
     rp_data = ldc1101_get_rp_data( &ldc1101 );
     log_printf( &logger, " Inductive Linear Position : %u\r\n", rp_data );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

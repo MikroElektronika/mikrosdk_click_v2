@@ -53,11 +53,23 @@ void application_init ( void )
     }
     
     log_printf( &logger, " Turn potentiometer VR1 all the way to the right.\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " Place a few drops of water onto the sensor.\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " Turn potentiometer VR1 to the left until the detect LED turns off.\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     while ( WATERDETECT3_PIN_STATE_HIGH == waterdetect3_get_int( &waterdetect3 ) );
     
@@ -71,12 +83,17 @@ void application_task ( void )
     if ( WATERDETECT3_PIN_STATE_HIGH == waterdetect3_get_int( &waterdetect3 ) )
     {
         log_printf( &logger, " Water detected.\r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

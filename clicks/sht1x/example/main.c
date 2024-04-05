@@ -199,7 +199,7 @@ uint8_t sht1x_measure( uint16_t *p_val, uint8_t mode )
 
     while( i < 240 )
     {
-        Delay_ms( 3 );
+        Delay_ms ( 3 );
         if ( sht1x_get_sda( &sht1x ) == 0 )
         {
             i = 0;
@@ -329,11 +329,16 @@ void application_task ( void )
     log_printf( &logger, " Humidity: %.2f ", humidity );
     log_printf( &logger, " \r\n" );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

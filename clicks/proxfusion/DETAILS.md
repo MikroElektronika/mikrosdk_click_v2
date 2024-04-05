@@ -136,7 +136,7 @@ void application_task ( void )
     {
         log_printf( &logger, " Both touch buttons are pressed\r\n" );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 

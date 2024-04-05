@@ -122,7 +122,7 @@ void application_task ( void )
     for ( uint8_t n_cnt = 0; n_cnt < 8; n_cnt++ )
     {
         irda4_generic_write( &irda4, &tx_message[ n_cnt ], 1 );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
     log_printf( &logger, "Message sent \r\n" );
 #else

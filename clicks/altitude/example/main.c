@@ -70,7 +70,7 @@ void application_task( void )
 
     //  Altimeter sensor mode for altitude data reading.
     altitude_set_sensor_mode( &altitude, ALTITUDE_SENSMOD_ALTIMETER );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     while ( 0 == altitude_get_drdy_status( &altitude, ALTITUDE_STATUS_FLAG_PDR ) );
 
@@ -78,7 +78,7 @@ void application_task( void )
 
     //  Barometer sensor mode for pressure data reading.
     altitude_set_sensor_mode( &altitude, ALTITUDE_SENSMOD_BAROMETER );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     while ( 0 == altitude_get_drdy_status( &altitude, ALTITUDE_STATUS_FLAG_PDR ) );
 
@@ -93,6 +93,11 @@ void application_task( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

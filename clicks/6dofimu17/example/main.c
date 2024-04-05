@@ -67,10 +67,10 @@ void application_init ( void )
     }
 
     c6dofimu17_default_cfg ( &c6dofimu17 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     c6dofimu17_get_device_id( &c6dofimu17, &device_id );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     if ( device_id == C6DOFIMU17_CHIP_ID ) 
     {
         log_printf( &logger, "\t\t  Communication OK\r\n" );
@@ -84,7 +84,7 @@ void application_init ( void )
     }
     
     log_printf( &logger, "\t--------------------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -103,11 +103,16 @@ void application_task ( void )
         log_printf( &logger, "\t\t Temperature: %.2f C\r\n", temperature );
         log_printf( &logger, "\t--------------------------------------\r\n" );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

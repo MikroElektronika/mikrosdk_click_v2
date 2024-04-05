@@ -55,7 +55,7 @@ void application_init ( void )
         for ( ; ; );
     }
     gainamp_reset( &gainamp );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
 }
@@ -63,14 +63,39 @@ void application_init ( void )
 void application_task ( void )
 {
     gainamp_set_gain( &gainamp, GAINAMP_CHANNEL_A_x1 | GAINAMP_CHANNEL_B_x5 );
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     gainamp_set_gain( &gainamp, GAINAMP_CHANNEL_A_x10 | GAINAMP_CHANNEL_B_x100 );
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

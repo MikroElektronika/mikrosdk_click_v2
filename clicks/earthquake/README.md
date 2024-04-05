@@ -108,9 +108,11 @@ void application_init ( void )
     earthquake_init( &earthquake, &cfg );
     Delay_ms ( 1000 );
     display_status( earthquake_read_status( &earthquake ) );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     earthquake_clear_memory( &earthquake );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "------------------------\r\n" );
     log_printf( &logger, "    Earthquake Click    \r\n" );
@@ -135,7 +137,8 @@ void application_task ( void )
     {
         log_printf( &logger, "  Earthquake detected!  \r\n" );
         log_printf( &logger, "------------------------\r\n" );
-        Delay_ms ( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
 
         for ( cnt = 20; cnt > 0; cnt-- )
         {
@@ -145,13 +148,36 @@ void application_task ( void )
             read_data = earthquake_read_si( &earthquake );
             log_printf( &logger, " Max SI : %d\r\n", read_data );
             log_printf( &logger, "------------------------ \r\n" );
-            Delay_ms( 5000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
         }
 
         earthquake_clear_memory( &earthquake );
         log_printf( &logger, " Afterquake  processing \r\n" );
         log_printf( &logger, "     please wait...     \r\n" );
-        Delay_ms( 20000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
 
         log_printf( &logger, "------------------------\r\n" );
         log_printf( &logger, " Waiting for a quake... \r\n" );

@@ -132,13 +132,18 @@ void application_task ( void )
         {
             log_printf( &logger, " Response : %s \r\n", resp_buf );
         }
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 #endif
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -178,7 +183,7 @@ static void lr_process ( void )
             process_cnt--;
             
             // Process delay 
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
 }

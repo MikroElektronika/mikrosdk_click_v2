@@ -25,14 +25,15 @@
     "name": "mikroe.click.airflow",
     "product_link": "https://www.mikroe.com/air-flow-click",
     "short_description": "Air Flow Click is a compact add-on board that contains a flow-based 2-in-1 differential pressure sensor. This board features the LHDULTRAM012UB3, LHD ULTRA series micro-flow differential pressure sensor from TE Connectivity Measurement Specialties.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.AirFlow",
     "subdir_name": "lib_airflow"
 }
+
 
 
 

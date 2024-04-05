@@ -119,7 +119,11 @@ void application_task ( void )
    
    log_printf( &logger, "-------------------------------" );
 
-   Delay_ms( 5000 );
+   Delay_ms ( 1000 );
+   Delay_ms ( 1000 );
+   Delay_ms ( 1000 );
+   Delay_ms ( 1000 );
+   Delay_ms ( 1000 );
 }  
 
 ```

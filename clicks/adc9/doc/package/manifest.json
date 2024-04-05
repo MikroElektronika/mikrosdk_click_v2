@@ -25,17 +25,18 @@
     "name": "mikroe.click.adc9",
     "product_link": "https://www.mikroe.com/adc-9-click",
     "short_description": "ADC 9 Click is 8th channel analog to digital converter expansion board, for projects where you have demand for multi channel ADC conversion such as microcontrollers with small number or none analog inputs. This Click board is based on MCP3564 a 24-bit Delta-Sigma Analog-to-Digital Converter with programmable data rate of up to 153.6 ksps from Microchip.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3275
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.Adc9",
     "subdir_name": "lib_adc9"
 }
+
 
 
 

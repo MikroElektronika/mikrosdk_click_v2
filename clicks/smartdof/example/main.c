@@ -97,7 +97,7 @@ void accelerometer_task ( smartdof_t *ctx, smartdof_sfc_t *sfc )
     sfc->sensor_specific_config = 0;
      
     smartdof_set_feature_command( ctx, sfc );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     aux_error_flag = smartdof_get_feature_response( ctx, sfc );
     if ( aux_error_flag != 0)
     {
@@ -106,7 +106,7 @@ void accelerometer_task ( smartdof_t *ctx, smartdof_sfc_t *sfc )
     }
     else
     {
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
     }
 
     for ( ; ; )
@@ -146,7 +146,7 @@ void accelerometer_task ( smartdof_t *ctx, smartdof_sfc_t *sfc )
                 log_printf( &logger, "Z-Axis : %.2f m/s^2\r\n", z_axis_f );
             }
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
 }
 
@@ -159,7 +159,7 @@ void magnetometer_task ( smartdof_t *ctx, smartdof_sfc_t *sfc )
     sfc->batch_interval         = 0; 
     sfc->sensor_specific_config = 0;
     smartdof_set_feature_command( ctx, sfc);
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     aux_error_flag = smartdof_get_feature_response( &smartdof, &smartdof_sfc );
     if ( aux_error_flag != 0 )
     {
@@ -168,7 +168,7 @@ void magnetometer_task ( smartdof_t *ctx, smartdof_sfc_t *sfc )
     }
     else
     {
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
     }
 
     for ( ; ; )
@@ -207,7 +207,7 @@ void magnetometer_task ( smartdof_t *ctx, smartdof_sfc_t *sfc )
                 log_printf( &logger, "Z-Axis : %.2f uTesla\r\n", z_axis_f );
             }
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
 }
 
@@ -220,7 +220,7 @@ void gyroscope_task ( smartdof_t *ctx, smartdof_sfc_t *sfc )
     sfc->batch_interval         = 0; 
     sfc->sensor_specific_config = 0;
     smartdof_set_feature_command( ctx, sfc );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     aux_error_flag = smartdof_get_feature_response( ctx, sfc );
     if ( aux_error_flag != 0)
     {
@@ -229,7 +229,7 @@ void gyroscope_task ( smartdof_t *ctx, smartdof_sfc_t *sfc )
     }
     else
     {
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
     }
 
     for ( ; ; )
@@ -269,7 +269,7 @@ void gyroscope_task ( smartdof_t *ctx, smartdof_sfc_t *sfc )
                 log_printf( &logger, "Z-Axis : %f rad/s\r\n", z_axis_f );
             }
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
 }
 
@@ -315,6 +315,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -2,7 +2,7 @@
     "name": "Temp-Log 5 Click",
     "description": "Temp-Log 5 click is a temperature measuring Click board™ featuring the CAT34TS02, an accurate temperature sensor IC with integrated Serial Presence Detect EEPROM. Temperature Sensor measures and store temperatures at least 10 times in second. Temperature measurement results can be retrieved by the host MCU via I2C interface, and are compared to critical limits stored into internal registers. It also features programmable event output function and supports three modes.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","CAT34TS02"],
     "category" : ["Temperature & humidity"] 
 }

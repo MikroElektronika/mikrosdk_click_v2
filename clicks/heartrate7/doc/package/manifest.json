@@ -25,17 +25,18 @@
     "name": "mikroe.click.heartrate7",
     "product_link": "https://www.mikroe.com/heart-rate-7-click",
     "short_description": "Heart Rate 7 click is an optical biosensor Click board™ which can be used for heart-rate monitoring (HRM). This Click board™ employs a very sensitive analog front-end IC with high dynamic range, which ensures accurate and reliable readings. This analog front-end IC is coupled with the optical front end, which consists of a sensitive photo-diode (PD) and two high brightness green LEDs.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         2405
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.HeartRate7",
     "subdir_name": "lib_heartrate7"
 }
+
 
 
 

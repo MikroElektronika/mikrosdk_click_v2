@@ -65,11 +65,11 @@ void application_init ( void )
         log_error( &logger, " Default configuration." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, "-----------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -79,21 +79,23 @@ void application_task ( void )
     if ( MRAM4_OK == mram4_block_erase( &mram4, MRAM4_CMD_ERASE_4KB, STARTING_ADDRESS ) )
     {
         log_printf( &logger, " Erase memory block (4KB)\r\n" );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     
     memcpy( data_buf, DEMO_TEXT_MESSAGE_1, strlen( DEMO_TEXT_MESSAGE_1 ) );    
     if ( MRAM4_OK == mram4_memory_write( &mram4, STARTING_ADDRESS, data_buf, sizeof( data_buf ) ) )
     {
         log_printf( &logger, " Write data: %s\r\n", data_buf );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     
     memset( data_buf, 0, sizeof( data_buf ) );
     if ( MRAM4_OK == mram4_memory_read( &mram4, STARTING_ADDRESS, data_buf, sizeof( data_buf ) ) )
     {
         log_printf( &logger, " Read data: %s\r\n", data_buf );
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     log_printf( &logger, " ----------------------------\r\n" );
     
@@ -107,20 +109,27 @@ void application_task ( void )
     if ( MRAM4_OK == mram4_memory_write( &mram4, STARTING_ADDRESS, data_buf, sizeof( data_buf ) ) )
     {
         log_printf( &logger, " Write data: %s\r\n", data_buf );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     
     memset( data_buf, 0, sizeof( data_buf ) );
     if ( MRAM4_OK == mram4_memory_read( &mram4, STARTING_ADDRESS, data_buf, sizeof( data_buf ) ) )
     {
         log_printf( &logger, " Read data: %s\r\n", data_buf );
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     log_printf ( &logger, " ----------------------------\r\n" );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

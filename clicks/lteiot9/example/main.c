@@ -252,7 +252,7 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     // Click initialization.
 
@@ -280,16 +280,17 @@ void application_init ( void )
     lteiot9_send_cmd( &lteiot9, LTEIOT9_CMD_AT );
     app_error_flag = lteiot9_rsp_check();
     lteiot9_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     //ATI
     lteiot9_send_cmd( &lteiot9, LTEIOT9_CMD_ATI );
     app_error_flag = lteiot9_rsp_check();
     lteiot9_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     app_connection_status = CONFIGURATION_FOR_NETWORK;
     log_info( &logger, " Application Task " );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -326,7 +327,7 @@ void application_task ( void )
         {
             log_error( &logger, "Application status error!" );
             app_connection_status = CHECK_NETWORK_CONNECTION;
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
             break;
         }
     }
@@ -334,6 +335,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -418,15 +424,15 @@ static err_t lteiot9_rsp_check ( void )
                     ( strstr( app_buf, LTEIOT9_RSP_ERROR ) == 0 ) )
             {
                 lteiot9_send_cmd( &lteiot9, LTEIOT9_CMD_AT );
-                Delay_ms( 100 );
+                Delay_ms ( 100 );
                 lteiot9_process(  );
-                Delay_ms( 100 );
+                Delay_ms ( 100 );
             }
             lteiot9_clear_app_buf(  );
             return LTEIOT9_ERROR_TIMEOUT;
         }
 
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
 
     lteiot9_check_connection();
@@ -587,7 +593,7 @@ static void lteiot9_power_up_wait ( void )
     do
     {
         lteiot9_process();
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
     }while( 0 == strstr( app_buf, LTEIOT9_SYSSTART ) );
 
     lteiot9_log_app_buf();
@@ -599,19 +605,20 @@ static void lteiot9_config_device_for_network( void )
     lteiot9_send_cmd( &lteiot9, LTEIOT9_CMD_CIMI );
     app_error_flag = lteiot9_rsp_check();
     lteiot9_error_check( app_error_flag );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     //CGDCONT
     lteiot9_set_sim_apn( &lteiot9, SIM_APN );
     app_error_flag = lteiot9_rsp_check();
     lteiot9_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     //CEREG
     lteiot9_send_cmd_with_parameter( &lteiot9, LTEIOT9_CMD_CREG, "2" );
     app_error_flag = lteiot9_rsp_check();
     lteiot9_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     app_connection_status = CHECK_NETWORK_CONNECTION;
 }
@@ -621,17 +628,18 @@ static void lteiot9_check_connection_to_network( void )
     lteiot9_send_cmd_check( &lteiot9, LTEIOT9_CMD_CGATT );
     app_error_flag = lteiot9_rsp_check();
     lteiot9_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     lteiot9_send_cmd_check( &lteiot9, LTEIOT9_CMD_CEREG );
     app_error_flag = lteiot9_rsp_check();
     lteiot9_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     lteiot9_send_cmd( &lteiot9, LTEIOT9_CMD_CSQ );
     app_error_flag = lteiot9_rsp_check();
     lteiot9_error_check( app_error_flag );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     if ( CHECK_NETWORK_CONNECTION != app_connection_status )
     {
@@ -644,7 +652,8 @@ static void lteiot9_send_sms( void )
     lteiot9_send_cmd_with_parameter( &lteiot9, LTEIOT9_CMD_CMGF, "1" );
     app_error_flag = lteiot9_rsp_check();
     lteiot9_error_check( app_error_flag );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "> Sending message to phone number...\r\n" );
     lteiot9_send_text_message( &lteiot9, PHONE_NUMBER_TO_MESSAGE, MESSAGE_CONTENT );
@@ -655,7 +664,8 @@ static void lteiot9_send_sms( void )
         log_printf( &logger, "> Message sent...\r\n" );
         app_connection_status = CONFIGURATION_FOR_GNSS;
     }
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 static void lteiot9_config_device_for_gnss( void )
@@ -667,16 +677,18 @@ static void lteiot9_config_device_for_gnss( void )
     lteiot9_send_cmd( &lteiot9, GNNS_START_GPS );
     app_error_flag = lteiot9_rsp_check();
     lteiot9_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     lteiot9_send_cmd( &lteiot9, GNNS_START_MODE_EN );
     app_error_flag = lteiot9_rsp_check();
     lteiot9_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     lteiot9_send_cmd_with_parameter( &lteiot9, LTEIOT9_CMD_CFUN, "1,1" );
     lteiot9_power_up_wait();
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     do {
         lteiot9_send_cmd( &lteiot9, GNSS_POWER_UP );

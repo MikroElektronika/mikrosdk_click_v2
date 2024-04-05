@@ -72,10 +72,10 @@ void application_init ( )
     // Software reset 
 
     barometer2_software_reset( &barometer2 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     barometer2_default_cfg( &barometer2 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "---- Start Measurement ---- \r\n" );
 }
 
@@ -91,11 +91,16 @@ void application_task ( )
     log_printf( &logger, " Pressure : %.2f mbar\r\n", pressure );
 
     log_printf( &logger, "-------------------------- \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

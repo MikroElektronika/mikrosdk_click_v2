@@ -25,17 +25,18 @@
     "name": "mikroe.click.hvac",
     "product_link": "https://www.mikroe.com/hvac-click",
     "short_description": "HVAC Click is a compact add-on board that contains Sensirion’s next-generation miniature CO2 sensor. This board features the SCD41, a carbon dioxide sensor build on the photoacoustic sensing principle, and Sensirion’s patented PASens® and CMOSens® technology to offer high accuracy at a minor form factor.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         3875
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.Hvac",
     "subdir_name": "lib_hvac"
 }
+
 
 
 

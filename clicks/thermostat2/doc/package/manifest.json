@@ -25,17 +25,18 @@
     "name": "mikroe.click.thermostat2",
     "product_link": "https://www.mikroe.com/thermostat-2-click",
     "short_description": "Thermostat 2 click is a general-purpose thermostat Click board™ designed to be used with any temperature sensor based on the DS1820 sensor design: 3-pin package with 1-Wire® communication interface",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2733
     ],
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.Thermostat2",
     "subdir_name": "lib_thermostat2"
 }
+
 
 
 

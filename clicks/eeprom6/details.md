@@ -123,13 +123,17 @@ void application_task ( void )
                 ( uint8_t * ) EEPROM6_DEMO_TEXT, EEPROM6_TEXT_ADDRESS );
     eeprom6_write_mem( &eeprom6, EEPROM6_TEXT_ADDRESS, ( char * ) EEPROM6_DEMO_TEXT,
                        strlen ( EEPROM6_DEMO_TEXT ) );
-    Delay_ms( 100 );    
+    Delay_ms ( 100 );    
     uint8_t read_buf[ 100 ] = { 0 };
     eeprom6_read_mem ( &eeprom6, EEPROM6_TEXT_ADDRESS,read_buf,
                        strlen ( EEPROM6_DEMO_TEXT ) );
     log_printf( &logger, "Reading \"%s\" from memory address 0x%.4X\r\n\n",
                 read_buf, ( uint16_t ) EEPROM6_TEXT_ADDRESS );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

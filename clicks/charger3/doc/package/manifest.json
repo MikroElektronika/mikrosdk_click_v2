@@ -25,14 +25,15 @@
     "name": "mikroe.click.charger3",
     "product_link": "https://www.mikroe.com/charger-3-click",
     "short_description": "Charger 3 Click is a compact add-on board that represents a standalone battery charger with thermal regulation. This board features the TP4056, a complete constant-current/constant-voltage linear charger for single-cell lithium-ion batteries from NanJing Top Power ASIC Corp.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Charger3",
     "subdir_name": "lib_charger3"
 }
+
 
 
 

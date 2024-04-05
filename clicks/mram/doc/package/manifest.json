@@ -25,17 +25,18 @@
     "name": "mikroe.click.mram",
     "product_link": "https://www.mikroe.com/mram-click",
     "short_description": "MRAM click features MRAM module which contains 262,144 magnetoresistive memory cells, organized into 32,768 bytes of memory. It means that MRAM click is a memory storage device with 32KB of memory space. The used memory module can withstand an unlimited number of write cycles, it has data retention period greater than 20 years and it can read and write to random addresses with no delay.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2279
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.MRAM",
     "subdir_name": "lib_mram"
 }
+
 
 
 

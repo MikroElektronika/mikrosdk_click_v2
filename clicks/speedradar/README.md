@@ -115,10 +115,10 @@ void application_init ( void )
     
     speedradar_process( &speedradar );
     speedradar_clear_app_buf( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Task " );
     log_printf( &logger, " ---------------------- \r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -133,13 +133,13 @@ void application_init ( void )
 void application_task ( void ) 
 {
     speedradar_send_command( &speedradar, SPEEDRADAR_CMD_GET_DETECTION_STR );
-    Delay_ms( 50 );
+    Delay_ms ( 50 );
     speedradar_process( &speedradar );
     if ( app_buf_len >= PROCESS_C00_RSP_LEN  )
     {
         speedradar_adv_det_display( );
         speedradar_clear_app_buf( );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 }
 ```

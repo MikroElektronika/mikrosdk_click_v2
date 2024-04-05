@@ -25,17 +25,18 @@
     "name": "mikroe.click.wheatstone",
     "product_link": "https://www.mikroe.com/wheatstone-click",
     "short_description": "Wheatstone Click is a measurement Click board™ which utilizes a Wheatstone bridge circuit onboard, in order to precisely measure the resistance of an external element. Besides the wheatstone bridge circuit, this Click board™ also utilizes MAX4208 – an ultra-low offset/drift, precision instrumentation amplifier, from Maxim Integrated.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3296
     ],
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.Wheatstone",
     "subdir_name": "lib_wheatstone"
 }
+
 
 
 

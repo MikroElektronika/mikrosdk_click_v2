@@ -58,7 +58,7 @@ void application_init ( void )
     irbeacon_pwm_start( &irbeacon );
     
     log_info( &logger, "---- Application Task ----" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -70,7 +70,7 @@ void application_task ( void )
     irbeacon_set_duty_cycle ( &irbeacon, duty );
     irbeacon_enable_mod( &irbeacon );
     log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     if ( 10 == duty_cnt ) 
     {
@@ -86,6 +86,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

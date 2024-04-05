@@ -88,11 +88,12 @@ void application_init ( void ) {
     log_printf( &logger, "------------------\r\n" );
     log_printf( &logger, "    Send data:    \r\n" );
     log_printf( &logger, "      MikroE      \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 #elif defined DEMO_APP_RECEIVER
     log_printf( &logger, "------------------\r\n" );
     log_printf( &logger, "   Receive data  \r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #else
     # error PLEASE SELECT TRANSMIT OR RECEIVE MODE!!!
 #endif
@@ -105,7 +106,11 @@ void application_task ( void ) {
     cxpi_send_command( &cxpi, &demo_message[ 0 ] );
     log_printf( &logger, " Sent data : %s",  &demo_message[ 0 ] );
     log_printf( &logger, "------------------\r\n" ); 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #elif defined DEMO_APP_RECEIVER
     cxpi_process( );
     if ( current_rsp_buf > 0 ) {
@@ -119,6 +124,11 @@ void application_task ( void ) {
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -165,7 +175,7 @@ static void cxpi_process ( void ) {
         } else {
             process_cnt--;
             // Process delay 
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
 }

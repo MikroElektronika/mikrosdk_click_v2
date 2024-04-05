@@ -123,33 +123,51 @@ void application_init ( void )
     log_printf(&logger, "-------------------------\r\n");
     log_printf(&logger, "     Load cell click     \r\n");
     log_printf(&logger, "-------------------------\r\n");
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     loadcell_set_mode( &loadcell, LOADCELL_POWER_UP );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     loadcell_reset( &loadcell );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     loadcell_set_rate( &loadcell, LOADCELL_10HZ_INTERNAL_OSC );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf(&logger, "    Tare the scale :   Channel B,  Gate 32  \r\n");
     log_printf(&logger, "-------------------------\r\n");
     log_printf(&logger, " In the following 10 seconds please REMOVE all object from the scale.\r\n");
-    Delay_ms( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf(&logger, "-------------------------\r\n");
     log_printf(&logger, "    Start tare scales    \r\n");
     loadcell_tare ( &loadcell, LOADCELL_CHANN_B_GATE_32_NEXT, &cell_data );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     log_printf(&logger, "-------------------------\r\n");
     log_printf(&logger, "    Tarring completed \r\n");
 
     log_printf(&logger, "-------------------------\r\n");
     log_printf(&logger, " In the following 10 seconds place 100g weight etalon on the scale for calibration purpose.\r\n");
-    Delay_ms( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf(&logger, "-------------------------\r\n");
     log_printf(&logger, "    Start calibration    \r\n");
@@ -161,7 +179,16 @@ void application_init ( void )
 
         log_printf(&logger, "- - - - - - - - - - - - -\r\n");
         log_printf(&logger, " In the following 10 seconds please REMOVE all object from the scale.\r\n");
-        Delay_ms( 10000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     else
     {
@@ -194,7 +221,7 @@ void application_task ( void )
 
     log_printf(&logger, "     Weight : %.2f\r\n", weight_val );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

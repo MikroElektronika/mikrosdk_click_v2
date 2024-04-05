@@ -25,14 +25,15 @@
     "name": "mikroe.click.pac1720",
     "product_link": "https://www.mikroe.com/pac1720-click",
     "short_description": "PAC1720 Click is a compact add-on board that contains an energy monitoring solution. This board features the PAC1720, an I2C configurable dual high-side bidirectional current sensing monitor with precision voltage measurement capabilities from Microchip Technology. The PAC1720 measures the voltage developed across external sense resistors to represent the high-side current of a battery or voltage regulator.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.PAC1720",
     "subdir_name": "lib_pac1720"
 }
+
 
 
 

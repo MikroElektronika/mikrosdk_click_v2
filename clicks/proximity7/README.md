@@ -95,7 +95,7 @@ void application_init ( void )
     PROXIMITY7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     proximity7_init( &proximity7, &cfg );
 
-    Delay_ms(100);
+    Delay_ms ( 100 );
 
     log_printf( &logger, "> > > app init done < < <\r\n" );
 
@@ -137,7 +137,7 @@ void application_task ( void )
         proximity7_generic_write( &proximity7, PROXIMITY7_SPECIAL_FUNCTION | PROXIMITY7_PROXIMITY_AND_ALS_INT_PIN_CLEAR, &write_buffer[ 0 ], 1 );
     }
     
-    Delay_ms(300);
+    Delay_ms ( 300 );
 }  
 
 ```

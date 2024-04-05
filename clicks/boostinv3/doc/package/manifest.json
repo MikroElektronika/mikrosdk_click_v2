@@ -25,14 +25,15 @@
     "name": "mikroe.click.boostinv3",
     "product_link": "https://www.mikroe.com/boost-inv-3-click",
     "short_description": "Boost-INV 3 Click is a compact add-on board designed to supply positive/negative-driven applications. This board features the TPS65132, a dual-output power supply from Texas Instruments. The TPS65132 uses a single inductor scheme for both outputs to provide the user with the smallest solution size and high efficiency. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.BoostINV3",
     "subdir_name": "lib_boostinv3"
 }
+
 
 
 

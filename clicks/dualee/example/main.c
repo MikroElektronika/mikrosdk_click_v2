@@ -57,7 +57,7 @@ void application_init ( void )
     dualee_init( &dualee, &cfg );
 
     log_printf( &logger, "*********** APPLICATION INIT ***********\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( )
@@ -72,10 +72,10 @@ void application_task ( )
     if ( write_dual == DUALEE_ERROR_RW )
     {
         log_printf( &logger, "Error writing data!!!\r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
         return;
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "Reading data...\r\n" );
     read_dual = dualee_read( &dualee, page_address, demo_text, 7 );
@@ -83,18 +83,23 @@ void application_task ( )
     if ( read_dual == 0 )
     {
         log_printf( &logger, "Error reading data!!!\r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
         return;
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "Data from read page is: %s \r\n", demo_text );
     
     log_printf( &logger, "__________________________________\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

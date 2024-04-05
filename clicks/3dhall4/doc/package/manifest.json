@@ -25,14 +25,15 @@
     "name": "mikroe.click.c3dhall4",
     "product_link": "https://www.mikroe.com/3d-hall-4-click",
     "short_description": "3D Hall 4 Click is a compact add-on board that can detect the strength of a magnetic field in all three dimensions. This board features the SENM3Dx, a 3D Hall magnetic sensor from SENIS. It is a CMOS-integrated magnetic field sensor that allows the acquisition of all three magnetic field components at the same time and in the same spot. The sensor is equipped with on-chip EPROM to hold initialization, calibration data, and other settings and definitions.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.3DHall4",
     "subdir_name": "lib_c3dhall4"
 }
+
 
 
 

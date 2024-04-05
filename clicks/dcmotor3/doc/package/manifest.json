@@ -25,17 +25,18 @@
     "name": "mikroe.click.dcmotor3",
     "product_link": "https://www.mikroe.com/dc-motor-3-click",
     "short_description": "DC MOTOR 3 click is a mikroBUS™ add-on board with a Toshiba TB6549FG full-bridge driver for direct current motors. The IC is capable of outputting currents of up to 3.5 A with 30V, making it suitable for high-power motors",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1904
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.DcMotor3",
     "subdir_name": "lib_dcmotor3"
 }
+
 
 
 

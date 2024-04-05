@@ -142,7 +142,7 @@ void application_task( void )
     log_write( &console, "**************************************",
                LOG_FORMAT_LINE );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 ```

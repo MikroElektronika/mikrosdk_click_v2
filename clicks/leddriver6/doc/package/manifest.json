@@ -25,17 +25,18 @@
     "name": "mikroe.click.leddriver6",
     "product_link": "https://www.mikroe.com/led-driver-6-click",
     "short_description": "LED driver 6 Click is a high brightness LED or LED strip driver, designed to be used in tunable Smart Connected Lighting (SCL) applications. It is based on the AL1781, a single-channel PWM dimmable linear LED driver.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2731
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.Leddriver6",
     "subdir_name": "lib_leddriver6"
 }
+
 
 
 

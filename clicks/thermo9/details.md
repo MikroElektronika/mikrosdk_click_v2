@@ -93,12 +93,12 @@ void application_init ( void )
     thermo9_cfg_setup( &cfg );
     THERMO9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     thermo9_init( &thermo9, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "    Thermo 9 click   \r\n" );
     log_printf( &logger, "---------------------\r\n" );
     thermo9_calibation( &thermo9 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "      Calibrated     \r\n" );
     log_printf( &logger, "---------------------\r\n" );
 }
@@ -122,7 +122,8 @@ void application_task ( void )
     log_printf( &logger, "-- Temperature : %.2f °C\r\n", temp_val );
 
     log_printf( &logger, "-----------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

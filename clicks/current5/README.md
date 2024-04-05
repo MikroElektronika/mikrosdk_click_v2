@@ -124,7 +124,7 @@ void application_task ( void )
     current5_get_current( &current5, &current );
     log_printf( &logger, " > Current[ A ]: %.2f\r\n", current );
     log_printf( &logger, "*************************************************\r\n" );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 
 ```

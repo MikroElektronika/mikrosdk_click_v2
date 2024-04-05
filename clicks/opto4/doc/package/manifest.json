@@ -25,17 +25,18 @@
     "name": "mikroe.click.opto4",
     "product_link": "https://www.mikroe.com/opto-4-click",
     "short_description": "Opto 4 click is a galvanically isolated power switch, which uses a power MOSFET in combination with an optocoupler.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2625
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.OPTO4",
     "subdir_name": "lib_opto4"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "Ambient 18 Click",
     "description": "Ambient 18 Click is a compact add-on board used to sense the amount of the present ambient light. This board features the BH1680FVC, an analog current-output ambient light sensor from Rohm Semiconductor. The BH1680FVC can detect a wide range of illuminance up to 10klx and provides excellent responsivity close to the human eyes' response. Besides, it is also characterized by low sensitivity variation across various light sources, a built-in shutdown function, and the ability to process the output signal in analog or digital form. This Click board™ is the most suitable for obtaining ambient light data for adjusting brightness in applications that require power saving and better visibility.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","BH1680FVC-TR"],
     "category" : ["Optical"]
 }

@@ -64,7 +64,7 @@ void application_init ( void )
     knob_init( &knob, &cfg );
 
     knob_reset( &knob );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 
     knob_default_cfg( &knob );
 }
@@ -84,7 +84,7 @@ void application_task ( void )
         if ( sw_state >= 3 ) sw_state = 0;
 
         knob_set_brightness( &knob, KNOB_BRIGHTNESS_ALL_LED, 0x00 );
-        Delay_ms( 300 );
+        Delay_ms ( 300 );
     }
 
     // Logs position
@@ -107,7 +107,7 @@ void application_task ( void )
                 cnt = 0;
             }
             knob_set_brightness( &knob, KNOB_BRIGHTNESS_ALL_LED, cnt );
-            Delay_ms( 15 );
+            Delay_ms ( 15 );
 
             break;
         }
@@ -168,6 +168,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

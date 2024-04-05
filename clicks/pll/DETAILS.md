@@ -112,31 +112,40 @@ void application_task ( void )
 {
     log_printf( &logger, " PLL level: x2\r\n\n" );
     pll_set_pll_2x( &pll );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " PLL level: x3\r\n\n" );
     pll_set_pll_3x( &pll );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " PLL level: x3.125\r\n\n" );
     pll_set_pll_3_125x( &pll );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " PLL level: x4\r\n\n" );
     pll_set_pll_4x( &pll );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " PLL level: x5\r\n\n" );
     pll_set_pll_5x( &pll );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " PLL level: x5.3125\r\n\n" );
     pll_set_pll_5_3125x( &pll );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " PLL level: x6\r\n\n" );
     pll_set_pll_6x( &pll );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " PLL level: x6.25\r\n\n" );
     pll_set_pll_6_25x( &pll );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " PLL level: x8\r\n\n" );
     pll_set_pll_8x( &pll );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

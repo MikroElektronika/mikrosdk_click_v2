@@ -25,11 +25,12 @@
     "name": "mikroe.click.lr10",
     "product_link": "https://www.mikroe.com/lr-10-click",
     "short_description": "LR 10 Click is a compact add-on board designed for the Internet of Things (IoT) applications requiring low power consumption and long-range connectivity. This board features the Wio-E5, a LoRa wireless module from Seeed Technology. The Wio-E5 integrates the STM32WLE5JC system-level chip and the SX126X LoRa® chip alongside an Arm® Cortex® M4 MCU, ensuring ultra-low power usage and high performance. It supports multi-mode operations, including (G)FSK and LoRa®, and can operate across a frequency range of 868 to 928MHz with robust signal strength and sensitivity. These characteristics make the LR 10 Click ideal for various IoT scenarios, such as wireless sensor networks, remote meter readings, and other applications with crucial low-power, wide-area network connectivity.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.LR10",
     "subdir_name": "lib_lr10"
 }
+

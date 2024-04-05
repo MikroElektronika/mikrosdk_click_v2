@@ -25,14 +25,15 @@
     "name": "mikroe.click.i2cmux5",
     "product_link": "https://www.mikroe.com/i2c-mux-5-click",
     "short_description": "I2C MUX 5 Click is a compact add-on board with translating I2C and SMBus switch intended for applications with I2C slave address conflicts.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.I2cMux5",
     "subdir_name": "lib_i2cmux5"
 }
+
 
 
 

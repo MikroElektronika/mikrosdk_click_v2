@@ -109,7 +109,7 @@ void application_task ( void )
     
     log_printf(&logger,"%u mV\r\n",out_volt_dc);
     
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 } 
 
 ```

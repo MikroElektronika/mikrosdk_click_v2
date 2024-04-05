@@ -68,12 +68,17 @@ void application_task ( void )
     if ( CURRENT9_OK == current9_read_current ( &current9, &current ) ) 
     {
         log_printf( &logger, " Current : %.3f[A]\r\n\n", current );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

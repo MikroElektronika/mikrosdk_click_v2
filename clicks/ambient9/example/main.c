@@ -66,7 +66,7 @@ void application_init ( void )
         log_printf( &logger, " *****  ERROR ID!  ***** \r\n" );
         for( ; ; );
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     ambient9_generic_read( &ambient9, AMBIENT9_REG_MAIN_STATUS, &status_data, 1 );
     if ( AMBIENT9_POWER_ON == ( status_data & AMBIENT9_POWER_ON ) )
     {
@@ -78,7 +78,7 @@ void application_init ( void )
     ambient9_enable_data( &ambient9, dev_mode );  
 
     log_printf( &logger, " ***** APP TASK ***** \r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void application_task ( void )
@@ -96,11 +96,16 @@ void application_task ( void )
         proxy_data = ambient9_proxy_data( &ambient9 );
         log_printf( &logger, " - Proximity data: %u \r\n", proxy_data );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

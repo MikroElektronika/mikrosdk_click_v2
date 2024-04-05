@@ -127,7 +127,7 @@ void application_init ( void )
 void application_task ( void )
 {
     c3dhall6_log_angle_deg_task( );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

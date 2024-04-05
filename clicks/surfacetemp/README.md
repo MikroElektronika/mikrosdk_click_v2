@@ -108,7 +108,7 @@ void application_init ( void )
         log_printf( &logger, "--- INIT ERROR --- \r\n" );
         for( ; ; );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -125,7 +125,7 @@ void application_task ( void )
 
     temperature = surfacetemp_get_temperature( &surfacetemp );
     log_printf( &logger, "> Temperature : %.2f \r\n", temperature );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

@@ -25,17 +25,18 @@
     "name": "mikroe.click.thumbstick",
     "product_link": "https://www.mikroe.com/thumbstick-click",
     "short_description": "Thumbstick click is a high precision input device.It features a dual axis, spring return, pushbutton enabled joystick, and a MCP3204 12-bit A/D converter.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1051
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.Thumbstick",
     "subdir_name": "lib_thumbstick"
 }
+
 
 
 

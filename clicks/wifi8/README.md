@@ -105,7 +105,7 @@ void application_init(void)
     log_init( &logger, &log_cfg );
     log_info(&logger, " Application Init ");
 
-    Delay_ms(1000);
+    Delay_ms ( 1000 );
 
     wifi8_cfg_setup(&wifi8_cfg);
     WIFI8_MAP_MIKROBUS(wifi8_cfg, MIKROBUS_1);

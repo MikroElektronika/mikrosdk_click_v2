@@ -83,7 +83,7 @@ void time_record ( uint32_t seconds_time )
     uint8_t cnt;
     for ( cnt = 0; cnt < seconds_time; cnt++ )
     {
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
         log_printf( &logger, "." );
     }
 }
@@ -144,7 +144,7 @@ void application_init ( void )
     status_byte = recplay_set_clk_cnfg( &recnplay, 0x34 );
     log_printf( &logger, "----------------------------\r\n" );
     volume = 0;
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -161,7 +161,8 @@ void application_task ( void )
         }
     }
     wait_ready( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "Message recording" );
     status_byte = recplay_record_msg_addr( &recnplay, 0x12000 );
@@ -173,7 +174,7 @@ void application_task ( void )
     status_byte = recplay_read_msg_addr( &recnplay, &msg_addr, &msg_len );
     log_printf( &logger, "Message Address: 0x%lx\r\n", msg_addr );
     log_printf( &logger, "Message Length: %u\r\n", msg_len );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "Preparing to play a message\r\n" );
     set_volume( 100 );
@@ -196,7 +197,8 @@ void application_task ( void )
     }
 
     wait_ready( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "Message is playing...\r\n" );
     status_byte = recplay_play_msg( &recnplay, 0x12000, 0 );
@@ -206,7 +208,7 @@ void application_task ( void )
 
     log_printf( &logger, "Status Byte: 0x%x\r\n", ( uint16_t ) status_byte );
     log_printf( &logger, "Interrupt byte: 0x%x\r\n", ( uint16_t ) interr_byte );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "Message erasing...\r\n" );
     status_byte = recplay_erase_msg( &recnplay, 0x12000 );
@@ -214,11 +216,16 @@ void application_task ( void )
     log_printf( &logger, "End of erasing\r\n" );
 
     log_printf( &logger, "----------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

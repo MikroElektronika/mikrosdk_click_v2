@@ -25,15 +25,16 @@
     "name": "mikroe.click.mcp2003b",
     "product_link": "https://www.mikroe.com/mcp2003b-click",
     "short_description": "MCP2003B Click is a compact add-on board with a physical interface to automotive and industrial LIN systems compliant with the LIN Bus Specification Revision 2.2, SAE J2602, and ISO 17987. This board features the MCP2003B, a LIN transceiver from Microchip. The LIN, which stands for a Local Interconnect Network, is used in conjunction with the CAN interface for communication between the components inside of vehicles. The MCP2003B is a bi-directional half-duplex LIN transceiver that supports baud rates up to 20Kbaud with a LIN-compatible output driver. According to the standard on which this LIN transceiver works, connecting up to 15 peripheral devices to a single controller device is possible.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
     "related_projects": [
         1866
     ],
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.MCP2003B",
     "subdir_name": "lib_mcp2003b"
 }
+
 

@@ -90,7 +90,8 @@ void application_init ( void )
     log_printf( &logger, " ----------------------------------------------\r\n" );
     log_printf( &logger, "                ***EEG click***               \r\n" );
     log_printf( &logger, "----------------------------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     // Click initialization.
     eeg_cfg_setup( &eeg_cfg );
@@ -118,7 +119,7 @@ void application_task ( void )
         
     if ( eeg_read_an_pin_value( &eeg, &eeg_an_value ) != ADC_ERROR ) {
         log_printf( &logger, " %u,%lu\r\n", eeg_an_value, time );
-        Delay_ms( 5 );
+        Delay_ms ( 5 );
         time += 5;
     }
 }

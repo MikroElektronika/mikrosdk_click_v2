@@ -25,14 +25,15 @@
     "name": "mikroe.click.iotexpresslink3",
     "product_link": "https://www.mikroe.com/iot-expresslink-3-click",
     "short_description": "IoT ExpressLink 3 Click is a compact add-on board that allows users to connect easily to IoT ExpressLink services and securely interact with cloud applications and other devices. This board features the NORA-W256WS, a standalone multi-radio module from u-blox. The module supports Wi-Fi radio at 802.11b/g/n standard and 2.4GHz of ISM band. It also supports the Bluetooth Low Energy 5. The embedded AWS IoT ExpressLink-compliant software includes secured pre-flashed certificates in the module.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.IoTExpressLink3",
     "subdir_name": "lib_iotexpresslink3"
 }
+
 
 
 

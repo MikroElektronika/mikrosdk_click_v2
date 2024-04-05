@@ -93,11 +93,13 @@ void application_init ( void )
     oledc_default_cfg( &oledc );
     oledc_fill_screen( &oledc, 0xFFFF );
 
+#ifndef IMAGE_MODE_ONLY
     oledc_set_font( &oledc, guiFont_Tahoma_8_Regular, 0 );
     oledc_text( &oledc, text1, 15, 10 );
     oledc_text( &oledc, text2, 5, 30 );
     oledc_text( &oledc, text3, 5, 45 );
-    Delay_ms( 1000 );
+#endif
+    Delay_ms ( 1000 );
 }
 ```
 
@@ -116,15 +118,15 @@ void application_task ( void )
 
     // Rectangle demo
     oledc_rectangle( &oledc, 0, 0, 96, 96, 0xF000 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     oledc_rectangle( &oledc, 5, 5, 91, 91, 0xFF00 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     oledc_rectangle( &oledc, 10, 10, 86, 86, 0x00F0 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     oledc_rectangle( &oledc, 15, 15, 81, 81, 0x0F0F );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     oledc_rectangle( &oledc, 20, 20, 76, 76, 0xF000 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     oledc_rectangle( &oledc, 25, 25, 71, 71, 0xFF00 );
     Delay_100ms();
 
@@ -136,12 +138,15 @@ void application_task ( void )
     oledc_rectangle( &oledc, 25, 25, 27, 71, 0 );
     Delay_100ms();
     oledc_rectangle( &oledc, 68, 25, 71, 71, 0 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
 
     // Image demo 
     oledc_image( &oledc, mikroe_with_slogan96x96, 0, 0 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

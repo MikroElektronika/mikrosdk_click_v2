@@ -115,22 +115,22 @@ void application_init ( void )
     }
 
     vibromotor4_enable( &vibromotor4, VIBROMOTOR4_PROPERTY_ENABLE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     vibromotor4_soft_rst( &vibromotor4 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     vibromotor4_default_cfg ( &vibromotor4 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     vibromotor4_set_duty_cycle( &vibromotor4, 0.0 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     vibromotor4_pwm_start( &vibromotor4 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -152,7 +152,7 @@ void application_task ( void )
     vibromotor4_set_duty_cycle ( &vibromotor4, duty );
     log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     if ( 5 == duty_cnt ) {
         duty_inc = -1;

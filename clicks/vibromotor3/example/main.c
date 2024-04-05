@@ -56,20 +56,20 @@ void application_init ( void ) {
         for ( ; ; );
     }
     vibromotor3_enable( &vibromotor3, VIBROMOTOR3_PROPERTY_ENABLE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     vibromotor3_soft_rst( &vibromotor3 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     vibromotor3_default_cfg( &vibromotor3 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     vibromotor3_set_duty_cycle( &vibromotor3, 0.0 );
     vibromotor3_pwm_start( &vibromotor3 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) {
@@ -80,7 +80,7 @@ void application_task ( void ) {
     vibromotor3_set_duty_cycle ( &vibromotor3, duty );
     log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     if ( 10 == duty_cnt ) {
         duty_inc = -1;
@@ -92,6 +92,11 @@ void application_task ( void ) {
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

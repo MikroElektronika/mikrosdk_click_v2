@@ -59,7 +59,7 @@ void application_init ( void )
     }
     charger16_default_cfg ( &charger16 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
@@ -67,16 +67,41 @@ void application_task ( void )
     log_printf( &logger, "-----------------\r\n" );
     log_printf( &logger, " Enable charging \r\n" );
     charger16_enable_charging( &charger16 );
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "------------------\r\n" );
     log_printf( &logger, " Disable charging \r\n" );
     charger16_disable_charging( &charger16 );
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

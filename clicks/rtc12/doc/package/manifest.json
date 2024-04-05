@@ -25,14 +25,15 @@
     "name": "mikroe.click.rtc12",
     "product_link": "https://www.mikroe.com/rtc-12-click",
     "short_description": "RTC 12 Click is a compact add-on board that measures the passage of time. This board features the DS1343, a low-current SPI-configurable real-time clock (RTC) from Maxim Integrated. This timekeeping device provides an extremely low standby current permitting longer life from a backup supply source. Its clock/calendar feature provides seconds, minutes, hours, day, date, month, and year information.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Rtc12",
     "subdir_name": "lib_rtc12"
 }
+
 
 
 

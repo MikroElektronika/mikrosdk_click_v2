@@ -90,7 +90,7 @@ void application_init ( void )
     current2_cfg_setup( &cfg );
     CURRENT2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     current2_init( &current, &cfg );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
     log_printf( &logger, "Current 2 is initialized \r\n \r\n" );
 }
   
@@ -111,7 +111,7 @@ void application_task ( void )
 
     log_printf( &logger, "Current : %d mA \r\n", tmp );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 } 
 
 ```

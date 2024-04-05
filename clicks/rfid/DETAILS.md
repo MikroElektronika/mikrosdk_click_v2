@@ -96,7 +96,7 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     // Click initialization.
 
@@ -148,7 +148,7 @@ void application_task ( void )
             log_printf( &logger, "0x%.2X ", ( uint16_t ) tag_uid[ cnt ] );
         }
         log_printf( &logger, "\r\n----------------------------------\r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

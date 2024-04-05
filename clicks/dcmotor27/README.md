@@ -130,12 +130,13 @@ void application_task ( void )
         float speed = ( float ) speed_cnt / 100;
         dcmotor27_set_duty_cycle( &dcmotor27, speed );
         log_printf( &logger, " Motor speed %d%% \r\n", ( uint16_t ) speed_cnt );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     
     log_printf( &logger, " Motor coasting \r\n" );
     dcmotor27_set_coast( &dcmotor27, DCMOTOR27_SET_COAST_ON );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     dcmotor27_set_coast( &dcmotor27, DCMOTOR27_SET_COAST_OFF );
     
     for ( uint8_t speed_cnt = 10; speed_cnt <= 100; speed_cnt += 10 )
@@ -143,12 +144,13 @@ void application_task ( void )
         float speed = ( float ) speed_cnt / 100;
         dcmotor27_set_duty_cycle( &dcmotor27, speed );
         log_printf( &logger, " Motor speed %d%% \r\n", ( uint16_t ) speed_cnt );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     
     log_printf( &logger, " Motor brake is on \r\n" );
     dcmotor27_pwm_stop( &dcmotor27 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     dcmotor27_pwm_start( &dcmotor27 );
 }
 ```

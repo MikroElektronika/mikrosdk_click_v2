@@ -109,7 +109,7 @@ void application_init ( void ) {
     }
 
     canfd6_default_cfg( &canfd6 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 #ifdef DEMO_APP_TRANSMITTER
     canfd6_mcan_tx_header_t canfd6_header = { 0 };
     uint8_t data_send_buf[ 64 ] = { 0 };
@@ -155,10 +155,12 @@ void application_task ( void ) {
 #ifdef DEMO_APP_TRANSMITTER
     log_printf( &logger, " Transmit first message\r\n" );
     canfd6_mcan_transmit_buffer_contents( &canfd6, CANFD6_FIRST_MSG );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " Transmit second message\r\n" );
     canfd6_mcan_transmit_buffer_contents( &canfd6, CANFD6_SECOND_MSG );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #else
     uint8_t cnt = 0;
     if ( !canfd6_get_int_pin( &canfd6 ) ) {

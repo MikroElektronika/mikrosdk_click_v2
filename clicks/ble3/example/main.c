@@ -97,7 +97,8 @@ static int8_t ble3_process ( void )
             if ( data_mode == 1) {
                 log_printf( &logger, "%s", current_parser_buf );
                 ble3_generic_write( &ble3, "Hello", 5 );
-                Delay_ms( 2000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
                 ble3_generic_write( &ble3, "MikroE", 6 );
             }
         } 
@@ -106,7 +107,7 @@ static int8_t ble3_process ( void )
             process_cnt--;
             
             // Process delay 
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
     
@@ -193,6 +194,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

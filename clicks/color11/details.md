@@ -116,7 +116,7 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, " ------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -142,7 +142,7 @@ void application_task ( void )
             log_printf( &logger, " Wideband : %u\r\n", color_data.wideband );
             log_printf( &logger, " Flicker : %u\r\n", color_data.flicker );
             log_printf( &logger, " ------------------\r\n" );
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
         }
     }
 }

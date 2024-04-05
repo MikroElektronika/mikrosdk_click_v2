@@ -25,14 +25,15 @@
     "name": "mikroe.click.audioamp9",
     "product_link": "https://www.mikroe.com/audioamp-9-click",
     "short_description": "AudioAMP 9 Click is a compact add-on board reproducing input audio signals with desired volume and power levels at sound-producing output elements. This board features the PAM8124, a 10W efficient, Class-D audio power amplifier from Diodes Incorporated for driving stereo speakers in a single-ended configuration. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.AudioAmp9",
     "subdir_name": "lib_audioamp9"
 }
+
 
 
 

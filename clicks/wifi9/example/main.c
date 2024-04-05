@@ -115,7 +115,10 @@ void application_init ( void )
 
     wifi9_reset_device( &wifi9 );
     wifi9_select_uart( &wifi9, WIFI9_SELECT_CMD_UART );
-    Delay_ms( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     wifi9_process( );
     wifi9_clear_app_buf( );
@@ -147,7 +150,9 @@ void application_init ( void )
     wifi9_send_command( &wifi9, WIFI9_CMD_GET_SYSTEM_HW_REV );
     wifi9_rsp_check( WIFI9_CMD_GET_SYSTEM_HW_REV );
     wifi9_log_app_buf( );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "--------------------------\r\n" );
     log_printf( &logger, "---- Start NETCAT app ----\r\n" );
@@ -157,7 +162,9 @@ void application_init ( void )
     wifi9_send_command( &wifi9, WIFI9_CMD_SET_WLAN_STATE_STA_ON );
     wifi9_rsp_check( WIFI9_CMD_SET_WLAN_STATE );
     wifi9_log_app_buf( );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "\r\nSet Station SSID and PASSWORD: " );
     strcpy( app_buf, WIFI9_CMD_SET_WLAN_CFG_STA );
@@ -169,19 +176,19 @@ void application_init ( void )
     wifi9_send_command( &wifi9, app_buf );
     wifi9_rsp_check( WIFI9_CMD_SET_WLAN_CFG );
     wifi9_log_app_buf( );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_printf( &logger, "\r\nTurn ON - Netcat module: " );
     wifi9_send_command( &wifi9, WIFI9_CMD_SET_NETCAT_STATE_ON );
     wifi9_rsp_check( WIFI9_CMD_SET_NETCAT_STATE );
     wifi9_log_app_buf( );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_printf( &logger, "\r\nExclude Netcat authentication: " );
     wifi9_send_command( &wifi9, WIFI9_CMD_SET_NETCAT_AUTH_OFF );
     wifi9_rsp_check( WIFI9_CMD_SET_NETCAT_AUTH );
     wifi9_log_app_buf( );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_printf( &logger, "\r\nSet the Netcat module server port: " );
     strcpy( app_buf, WIFI9_CMD_SET_NETCAT_CFG_SERVER );
@@ -190,7 +197,9 @@ void application_init ( void )
     wifi9_send_command( &wifi9, app_buf );
     wifi9_rsp_check( WIFI9_CMD_SET_NETCAT_CFG );
     wifi9_log_app_buf( );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "\r\nWaiting for an IP address assignment from DHCP server...\r\n" );
     for ( ; ; )
@@ -203,17 +212,21 @@ void application_init ( void )
         {
             break;
         }
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     wifi9_clear_app_buf( );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "\r\nNow you can connect to the TCP server listed above via a TCP client app\r\n" );  
     log_printf( &logger, "The module is transferred to BIN-UART - for data collection\r\n" );
 
     wifi9_select_uart( &wifi9, WIFI9_SELECT_BIN_UART );
     log_info( &logger, " Application Task " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -230,6 +243,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -297,9 +315,9 @@ static err_t wifi9_rsp_check ( uint8_t *rsp )
             wifi9_clear_app_buf( );
             return WIFI9_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     wifi9_process( );
     if ( strstr( app_buf, rsp ) )
     {

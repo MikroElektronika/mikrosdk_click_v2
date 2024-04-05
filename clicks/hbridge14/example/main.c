@@ -70,29 +70,50 @@ void application_task ( void )
     log_printf( &logger, " Driving motor Clockwise \r\n" );
     hbridge14_register_read( &hbridge14, HBRIDGE14_REG_FAULT_STATUS, &fault_status );
     log_printf( &logger, " Fault status : 0x%.2X \r\n", ( uint16_t ) fault_status );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     hbridge14_drive_motor( &hbridge14, HBRIDGE14_DRIVE_MOTOR_BRAKE );
     log_printf( &logger, " Brake is on \r\n" );
     hbridge14_register_read( &hbridge14, HBRIDGE14_REG_FAULT_STATUS, &fault_status );
     log_printf( &logger, " Fault status : 0x%.2X \r\n", ( uint16_t ) fault_status );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     hbridge14_drive_motor( &hbridge14, HBRIDGE14_DRIVE_MOTOR_CCW );
     log_printf( &logger, " Driving motor counter-clockwise \r\n" );
     hbridge14_register_read( &hbridge14, HBRIDGE14_REG_FAULT_STATUS, &fault_status );
     log_printf( &logger, " Fault status : 0x%.2X \r\n", ( uint16_t ) fault_status );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     hbridge14_drive_motor( &hbridge14, HBRIDGE14_DRIVE_MOTOR_COASTING );
     log_printf( &logger, " Driving motor Coasting \r\n" );
     hbridge14_register_read( &hbridge14, HBRIDGE14_REG_FAULT_STATUS, &fault_status );
     log_printf( &logger, " Fault status : 0x%.2X \r\n", ( uint16_t ) fault_status );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

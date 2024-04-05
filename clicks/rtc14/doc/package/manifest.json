@@ -25,14 +25,15 @@
     "name": "mikroe.click.rtc14",
     "product_link": "https://www.mikroe.com/rtc-14-click",
     "short_description": "RTC 14 Click is a compact add-on board that measures the passage of time. This board features the ISL1221, a low-power RTC with battery-backed SRAM and event detection from Renesas. The ISL1221 tracks time with separate registers for hours, minutes, and seconds, operating in normal and battery mode. It also can timestamp an event by either issuing an output signal, containing the second, minute, hour, date, month, and year that the triggering event occurred, or by stopping the RTC registers from advancing at the moment the event occurs. The calendar feature is exceptionally accurate through 2099, with automatic leap year correction. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.RTC14",
     "subdir_name": "lib_rtc14"
 }
+
 
 
 

@@ -98,7 +98,7 @@ void application_init ( void )
     TOUCHKEY4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     touchkey4_init( &touchkey4, &cfg );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     touchkey4_default_cfg( &touchkey4 );
     log_info( &logger, "---- Configured and ready ----" );
@@ -149,7 +149,7 @@ void application_task ( void )
             }
         }
     }
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 } 
 
 ```

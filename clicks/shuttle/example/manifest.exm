@@ -2,7 +2,7 @@
     "name": "Shuttle Click",
     "description": "<Shuttle click is a mikroBUS™ socket expansion board, which provides an easy and elegant solution for stacking up to four click boards™ on a single mikroBUS™. It is a perfect solution for expanding the capacity of the development system with additional mikroBUS™ sockets when there is a demand for using more click boards™ than the used development system is able to support.>",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","ICD BOX 2x8 pin headers"],
     "category" : ["Adapter"] 
 }

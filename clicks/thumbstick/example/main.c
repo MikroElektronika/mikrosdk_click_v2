@@ -86,12 +86,12 @@ void application_task ( void )
         if ( button_state == THUMBSTICK_PRESS_BUTTON )
         {
             log_printf( &logger, ">> Button is pressed \r\n" );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
         else
         {
             log_printf( &logger, ">> Button is released \r\n" );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
         old_butt_state = button_state;
     }
@@ -138,11 +138,16 @@ void application_task ( void )
     }
     
     timer_cnt++;
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -63,7 +63,7 @@ void application_init ( void )
 
     log_printf( &logger, "** Proximity 9 is initialized ** \r\n" );
     log_printf( &logger, "************************************ \r\n" );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 
 void application_task ( )
@@ -85,23 +85,28 @@ void application_task ( )
     {
         log_printf( &logger, "** Object is close! \r\n" );
         log_printf( &logger, "************************************ \r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     if ( int_check == PROXIMITY9_PS_IF_AWAY_FLAG )
     {
         log_printf( &logger, "** Object is away!\r\n" );
         log_printf( &logger, "************************************ \r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     if ( int_check == PROXIMITY9_INT_CLEARED )
     {
         log_printf( &logger, "************************************ \r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

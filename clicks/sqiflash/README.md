@@ -104,11 +104,11 @@ void application_init ( void )
         log_info( &logger, " Please, run program again... " );
         for ( ; ; );
     }
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
     sqiflash_global_block_unlock( &sqiflash );
-    Delay_ms( 400 );
+    Delay_ms ( 400 );
     sqiflash_chip_erase( &sqiflash );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
     
     device_manufac = sqiflash_device_manufac( &sqiflash );
     log_printf( &logger, " Manufacturer ID: 0x%.2X\r\n", ( uint16_t ) device_manufac );
@@ -136,7 +136,8 @@ void application_task ( void )
     sqiflash_read_generic( &sqiflash, address, rd_data, 9 );
     log_printf( &logger, " Read data: %s", rd_data );
     log_printf( &logger, "-------------------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

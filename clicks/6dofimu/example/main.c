@@ -63,7 +63,7 @@ void application_init ( )
     c6dofimu_cfg_setup( &cfg );
     C6DOFIMU_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c6dofimu_init( &c6dofimu, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     c6dofimu_default_cfg( &c6dofimu );
     log_info( &logger, "---- Click Init ----" );
 }
@@ -86,11 +86,16 @@ void application_task ( )
                                                                   c6dofimu.gyro_axis.y,
                                                                   c6dofimu.gyro_axis.z );
     log_printf( &logger, " * Temperature: %.2f C\r\n", temperature );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

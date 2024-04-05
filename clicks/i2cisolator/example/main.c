@@ -92,7 +92,7 @@ void application_init ( void )
 
     log_printf( &logger, "    Driver  Initialized\r\n" );
     log_printf( &logger, "---------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     tmp =    I2CISOLATOR_IRTHERMO2_CFG_MODEON |
                 I2CISOLATOR_IRTHERMO2_CFG_ALERTEN | 
@@ -107,7 +107,7 @@ void application_init ( void )
     log_printf( &logger, "       Configuration\r\n" );
     log_printf( &logger, "      IrThermo 2 Click\r\n" );
     log_printf( &logger, "---------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -116,11 +116,16 @@ void application_task ( void )
     
     log_printf( &logger, " Temperature : %0.2f C\r\n", temperature );
     log_printf( &logger, "---------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

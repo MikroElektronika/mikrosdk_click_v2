@@ -133,16 +133,16 @@ void application_task ( void )
     
     tmp = pollution_generic_read( &pollution );
     log_printf( &logger, " ADC value : %d ppm\r\n\n", tmp );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     value_volt = pollution_measure_load_voltage( &pollution, tmp );
     log_printf( &logger, " Load voltage : %0.2f V\r\n\n", value_volt );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     value_res = pollution_get_corrected_resistance( &pollution, tmp );
     log_printf( &logger, " Corrected resistance : %0.2f kOhm\r\n\n", value_res );
     log_printf( &logger, "---------------------------------------------\r\n\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

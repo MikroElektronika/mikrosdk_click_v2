@@ -68,16 +68,23 @@ void application_task ( void )
     log_printf ( &logger, " Move 200 steps clockwise \r\n\n" );
     multisteppertb62262_set_direction ( &multisteppertb62262, MULTISTEPPERTB62262_DIR_CW );
     multisteppertb62262_drive_motor ( &multisteppertb62262, 200, MULTISTEPPERTB62262_SPEED_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf ( &logger, " Move 100 steps counter-clockwise \r\n\n" );
     multisteppertb62262_set_direction ( &multisteppertb62262, MULTISTEPPERTB62262_DIR_CCW );
     multisteppertb62262_drive_motor ( &multisteppertb62262, 100, MULTISTEPPERTB62262_SPEED_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

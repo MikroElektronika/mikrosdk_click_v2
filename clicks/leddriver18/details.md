@@ -143,7 +143,7 @@ void application_task ( void )
         pwm_val = leddriver18_get_output_pwm( 0 );
         log_printf( &logger, " PWM value: %.2f \r\n", pwm_val );
         leddriver18_write_config( &leddriver18 );
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
     }
     for ( int8_t  n_cnt = 100; n_cnt >= 10; n_cnt -= 10 )
     {
@@ -154,7 +154,7 @@ void application_task ( void )
         pwm_val = leddriver18_get_output_pwm( 0 );
         log_printf( &logger, " PWM value: %.2f \r\n", pwm_val );
         leddriver18_write_config( &leddriver18 );
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
     }
 }
 ```

@@ -25,14 +25,15 @@
     "name": "mikroe.click.ltecat43",
     "product_link": "https://www.mikroe.com/lte-cat4-3-click-data",
     "short_description": "LTE Cat.4 3 Click is a compact add-on board representing a multi-band and multi-mode solution, offering universal connectivity and reliable performance. This board features the LARA-L6004D-01B, an LTE Cat 4 module in the smallest form factor from u-blox. The module supports an LTE Cat 4 FDD and an LTE Cat 4 TDD radio access technology (RAT), with a 3G UMTS/HSPA and 2G GSM/GPRS/EGPRS fallback. It is an ideal solution for global and multi-regional coverage.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.LTECat43",
     "subdir_name": "lib_ltecat43"
 }
+
 
 
 

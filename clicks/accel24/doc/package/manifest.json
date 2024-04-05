@@ -25,14 +25,15 @@
     "name": "mikroe.click.accel24",
     "product_link": "https://www.mikroe.com/accel-24-click",
     "short_description": "Accel 24 Click is a compact add-on board that contains an acceleration sensor. This board features the MXC6655XA, a 12-bit three-axis accelerometer from MEMSIC. It allows selectable full-scale acceleration measurements in ranges of ±2g, ±4g, or ±8g in three axes with a compatible I2C serial interface with 400KHz fast mode operation. Alongside low offset and temperature signal with high accuracy, the MXC6655XA also detects six orientation positions, X/Y shake, and shake directions with an appropriate interrupt signal for these states.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.Accel24",
     "subdir_name": "lib_accel24"
 }
+
 
 
 

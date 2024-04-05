@@ -25,17 +25,18 @@
     "name": "mikroe.click.irthermo2",
     "product_link": "https://www.mikroe.com/irthermo-2-click",
     "short_description": "IrThermo 2 click is a non-contact temperature measurement solution. The click board carries the TMP007 infrared thermopile sensor with an integrated math engine.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1468
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.IrThermo2",
     "subdir_name": "lib_irthermo2"
 }
+
 
 
 

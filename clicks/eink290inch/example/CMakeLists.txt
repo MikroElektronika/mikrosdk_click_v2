@@ -14,7 +14,7 @@ add_executable(example_eink290inch
 
 )
 
-if (${MCU_NAME} MATCHES "(^PIC18F)|(^ATMEGA)")
+if ((${MCU_NAME} MATCHES "(^PIC18F)") OR (${MCU_NAME} MATCHES "(^dsPIC)") OR (${MCU_NAME} MATCHES "(^ATMEGA)"))
 	add_compile_definitions(IMAGE_MODE_ONLY)
 endif()
 

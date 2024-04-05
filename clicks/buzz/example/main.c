@@ -43,152 +43,152 @@ static log_t logger;
 
 static void imperial_march( ) {
     buzz_play_sound( &buzz, BUZZ_NOTE_A6, VOLUME, Q );
-    Delay_ms( 1 + Q );
+    Delay_ms ( 1 + Q );
     buzz_play_sound( &buzz, BUZZ_NOTE_A6, VOLUME, Q );
-    Delay_ms( 1 + Q );
+    Delay_ms ( 1 + Q );
     buzz_play_sound( &buzz, BUZZ_NOTE_A6, VOLUME, Q );
-    Delay_ms( 1 + Q );
+    Delay_ms ( 1 + Q );
     buzz_play_sound( &buzz, BUZZ_NOTE_F6, VOLUME, E + S );
-    Delay_ms( 1 + E + S );
+    Delay_ms ( 1 + E + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_C7, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     
     buzz_play_sound( &buzz, BUZZ_NOTE_A6, VOLUME, Q );
-    Delay_ms( 1 + Q );
+    Delay_ms ( 1 + Q );
     buzz_play_sound( &buzz, BUZZ_NOTE_F6, VOLUME, E + S );
-    Delay_ms( 1 + E + S );
+    Delay_ms ( 1 + E + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_C7, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_A6, VOLUME, H );
-    Delay_ms( 1 + H );
+    Delay_ms ( 1 + H );
     
     buzz_play_sound( &buzz, BUZZ_NOTE_E7, VOLUME, Q );
-    Delay_ms( 1 + Q );
+    Delay_ms ( 1 + Q );
     buzz_play_sound( &buzz, BUZZ_NOTE_E7, VOLUME, Q );
-    Delay_ms( 1 + Q );
+    Delay_ms ( 1 + Q );
     buzz_play_sound( &buzz, BUZZ_NOTE_E7, VOLUME, Q );
-    Delay_ms( 1 + Q );
+    Delay_ms ( 1 + Q );
     buzz_play_sound( &buzz, BUZZ_NOTE_F7, VOLUME, E + S );
-    Delay_ms( 1 + E + S );
+    Delay_ms ( 1 + E + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_C7, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     
     buzz_play_sound( &buzz, BUZZ_NOTE_Ab6, VOLUME, Q );
-    Delay_ms( 1 + Q );
+    Delay_ms ( 1 + Q );
     buzz_play_sound( &buzz, BUZZ_NOTE_F6, VOLUME, E + S );
-    Delay_ms( 1 + E + S );
+    Delay_ms ( 1 + E + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_C7, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_A6, VOLUME, H );
-    Delay_ms( 1 + H );
+    Delay_ms ( 1 + H );
     
     buzz_play_sound( &buzz, BUZZ_NOTE_A7, VOLUME, Q );
-    Delay_ms( 1 + Q );
+    Delay_ms ( 1 + Q );
     buzz_play_sound( &buzz, BUZZ_NOTE_A6, VOLUME, E + S );
-    Delay_ms( 1 + E + S );
+    Delay_ms ( 1 + E + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_A6, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_A7, VOLUME, Q );
-    Delay_ms( 1 + Q );
+    Delay_ms ( 1 + Q );
     buzz_play_sound( &buzz, BUZZ_NOTE_Ab7, VOLUME, E + S );
-    Delay_ms( 1 + E + S );
+    Delay_ms ( 1 + E + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_G7, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     
     buzz_play_sound( &buzz, BUZZ_NOTE_Gb7, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_E7, VOLUME, Q );
-    Delay_ms( 1 + Q );
+    Delay_ms ( 1 + Q );
     buzz_play_sound( &buzz, BUZZ_NOTE_F7, VOLUME, E );
-    Delay_ms( 1 + E );
-    Delay_ms( 1 + E );
+    Delay_ms ( 1 + E );
+    Delay_ms ( 1 + E );
     buzz_play_sound( &buzz, BUZZ_NOTE_Bb6, VOLUME, E );
-    Delay_ms( 1 + E );
+    Delay_ms ( 1 + E );
     buzz_play_sound( &buzz, BUZZ_NOTE_Eb7, VOLUME, Q );
-    Delay_ms( 1 + Q );
+    Delay_ms ( 1 + Q );
     buzz_play_sound( &buzz, BUZZ_NOTE_D7, VOLUME, E + S );
-    Delay_ms( 1 + E + S );
+    Delay_ms ( 1 + E + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_Db7, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     
     buzz_play_sound( &buzz, BUZZ_NOTE_C7, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_B6, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_C7, VOLUME, E );
-    Delay_ms( 1 + E );
-    Delay_ms( 1 + E );
+    Delay_ms ( 1 + E );
+    Delay_ms ( 1 + E );
     buzz_play_sound( &buzz, BUZZ_NOTE_F6, VOLUME, E );
-    Delay_ms( 1 + E );
+    Delay_ms ( 1 + E );
     buzz_play_sound( &buzz, BUZZ_NOTE_Ab6, VOLUME, Q );
-    Delay_ms( 1 + Q );
+    Delay_ms ( 1 + Q );
     buzz_play_sound( &buzz, BUZZ_NOTE_F6, VOLUME, E + S );
-    Delay_ms( 1 + E + S );
+    Delay_ms ( 1 + E + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_A6, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     
     buzz_play_sound( &buzz, BUZZ_NOTE_C7, VOLUME, Q );
-    Delay_ms( 1 + Q );
+    Delay_ms ( 1 + Q );
     buzz_play_sound( &buzz, BUZZ_NOTE_A6, VOLUME, E + S );
-    Delay_ms( 1 + E + S );
+    Delay_ms ( 1 + E + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_C7, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_E7, VOLUME, H );
-    Delay_ms( 1 + H );
+    Delay_ms ( 1 + H );
     
     buzz_play_sound( &buzz, BUZZ_NOTE_A7, VOLUME, Q );
-    Delay_ms( 1 + Q );
+    Delay_ms ( 1 + Q );
     buzz_play_sound( &buzz, BUZZ_NOTE_A6, VOLUME, E + S );
-    Delay_ms( 1 + E + S );
+    Delay_ms ( 1 + E + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_A6, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_A7, VOLUME, Q );
-    Delay_ms( 1 + Q );
+    Delay_ms ( 1 + Q );
     buzz_play_sound( &buzz, BUZZ_NOTE_Ab7, VOLUME, E + S );
-    Delay_ms( 1 + E + S );
+    Delay_ms ( 1 + E + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_G7, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     
     buzz_play_sound( &buzz, BUZZ_NOTE_Gb7, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_E7, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_F7, VOLUME, E );
-    Delay_ms( 1 + E );
-    Delay_ms( 1 + E );
+    Delay_ms ( 1 + E );
+    Delay_ms ( 1 + E );
     buzz_play_sound( &buzz, BUZZ_NOTE_Bb6, VOLUME, E );
-    Delay_ms( 1 + E );
+    Delay_ms ( 1 + E );
     buzz_play_sound( &buzz, BUZZ_NOTE_Eb7, VOLUME, Q );
-    Delay_ms( 1 + Q );
+    Delay_ms ( 1 + Q );
     buzz_play_sound( &buzz, BUZZ_NOTE_D7, VOLUME, E + S );
-    Delay_ms( 1 + E + S );
+    Delay_ms ( 1 + E + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_Db7, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     
     buzz_play_sound( &buzz, BUZZ_NOTE_C7, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_B6, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_C7, VOLUME, E );
-    Delay_ms( 1 + E );
-    Delay_ms( 1 + E );
+    Delay_ms ( 1 + E );
+    Delay_ms ( 1 + E );
     buzz_play_sound( &buzz, BUZZ_NOTE_F6, VOLUME, E );
-    Delay_ms( 1 + E );
+    Delay_ms ( 1 + E );
     buzz_play_sound( &buzz, BUZZ_NOTE_Ab6, VOLUME, Q );
-    Delay_ms( 1 + Q );
+    Delay_ms ( 1 + Q );
     buzz_play_sound( &buzz, BUZZ_NOTE_F6, VOLUME, E + S );
-    Delay_ms( 1 + E + S );
+    Delay_ms ( 1 + E + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_C7, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     
     buzz_play_sound( &buzz, BUZZ_NOTE_A6, VOLUME, Q );
-    Delay_ms( 1 + Q );
+    Delay_ms ( 1 + Q );
     buzz_play_sound( &buzz, BUZZ_NOTE_F6, VOLUME, E + S );
-    Delay_ms( 1 + E + S );
+    Delay_ms ( 1 + E + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_C7, VOLUME, S );
-    Delay_ms( 1 + S );
+    Delay_ms ( 1 + S );
     buzz_play_sound( &buzz, BUZZ_NOTE_Ab6, VOLUME, H );
-    Delay_ms( 1 + H );
+    Delay_ms ( 1 + H );
 }
 
 
@@ -230,11 +230,26 @@ void application_init ( void ) {
 void application_task ( void ) {
     log_printf( &logger, "Playing the Imperial March melody ...\r\n" );
     imperial_march( ); 
-    Delay_ms( 10000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

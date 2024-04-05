@@ -65,12 +65,12 @@ void application_init ( void )
     C6DOFIMU8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c6dofimu8_init( &c6dofimu8, &cfg );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     c6dofimu8_default_cfg( &c6dofimu8 );
 
     log_printf( &logger, "** 6DOF IMU 8 is initialized **\r\n" );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 
 void application_task ( void )
@@ -101,11 +101,16 @@ void application_task ( void )
     log_printf( &logger, "** Temperature value : %d degC \r\n", ( int16_t )temperature );
     log_printf( &logger, "-------------------------------------------------\r\n" );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

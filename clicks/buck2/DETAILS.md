@@ -107,7 +107,11 @@ void application_task ( void )
 
     buck2_set_output_voltage( &buck2, BUCK2_SET_VOLTAGE_3300mV );
     log_printf( &logger, "---- Output voltage is 3300 mV ----\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     pg_state = buck2_get_power_good( &buck2 );
     if ( pg_state == 0 )
     {
@@ -115,7 +119,11 @@ void application_task ( void )
     }
     buck2_set_output_voltage( &buck2, BUCK2_SET_VOLTAGE_2500mV );
     log_printf( &logger, "---- Output voltage is 2500 mV ----\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     pg_state = buck2_get_power_good( &buck2 );
     if ( pg_state == 0 )
     {
@@ -123,7 +131,11 @@ void application_task ( void )
     }
     buck2_set_output_voltage( &buck2, BUCK2_SET_VOLTAGE_1800mV );
     log_printf( &logger, "---- Output voltage is 1800 mV ----\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     pg_state = buck2_get_power_good( &buck2 );
     if ( pg_state == 0 )
     {
@@ -132,7 +144,11 @@ void application_task ( void )
     buck2_set_output_voltage( &buck2, BUCK2_SET_VOLTAGE_1500mV );
     log_printf( &logger, "---- Output voltage is 1500 mV ----\r\n" );
     log_printf( &logger, "-----------------------------------\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     pg_state = buck2_get_power_good( &buck2 );
     if ( pg_state == 0 )
     {

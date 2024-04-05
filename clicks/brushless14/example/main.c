@@ -69,7 +69,7 @@ void application_init ( void )
     
     brushless14_default_cfg ( &brushless14 );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, " Application Task " );
 }
 
@@ -83,7 +83,8 @@ void application_task ( void )
     brushless14_set_duty_cycle ( &brushless14, duty );
     log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
     
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     if ( 10 == duty_cnt ) 
     {
@@ -100,6 +101,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

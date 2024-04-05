@@ -115,7 +115,7 @@ void application_task ( void )
     if ( MIC2_OK == mic2_read_an_pin_voltage ( &mic2, &voltage ) ) 
     {
         log_printf( &logger, " AN Voltage : %.3f[V]\r\n\n", voltage );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 } 
 

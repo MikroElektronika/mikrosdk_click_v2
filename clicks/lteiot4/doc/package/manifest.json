@@ -25,14 +25,15 @@
     "name": "mikroe.click.lteiot4",
     "product_link": "https://www.mikroe.com/lte-iot-4-click",
     "short_description": "LTE IoT 4 Click is a compact add-on board that contains an IoT module with worldwide coverage. This board features the nRF9160, highly integrated, low-power SiP with LTE-M/NB-IoT and GPS from Nordic Semiconductor.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.17",
+    "version": "2.1.0.18",
     "cmake": true,
     "alias": "Click.LTEIoT4",
     "subdir_name": "lib_lteiot4"
 }
+
 
 
 

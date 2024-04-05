@@ -110,7 +110,7 @@ void application_task ( void )
     for ( cnt = 0; cnt <= 10; cnt++ )
     {
         bargraph_display( &bargraph, cnt );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
 }  
 

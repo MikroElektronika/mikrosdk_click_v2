@@ -90,7 +90,7 @@ void application_init ( void )
     Delay_1sec( );
     
     ble8_set_dsr_pin( &ble8, 1 );
-    Delay_ms( 20 );
+    Delay_ms ( 20 );
 
     do {
         ble8_set_echo_cmd( &ble8, 1 );
@@ -123,7 +123,7 @@ void application_init ( void )
     while( ble8_process( ) != 1 );
     
     ble8_set_dsr_pin( &ble8, 0 );
-    Delay_ms( 20 );
+    Delay_ms ( 20 );
     data_mode = 1;
     log_printf( &logger, "The module has been configured.\n" );
 }

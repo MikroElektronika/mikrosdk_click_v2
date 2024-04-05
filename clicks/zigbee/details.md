@@ -176,7 +176,7 @@ void application_init ( void )
     zigbee_send_cmd( &zigbee, ZIGBEE_CMD_AT_N );
     resp_wait( &zigbee );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     app_mode = ZIGBEE_APP_TASK;
     
     log_info( &logger, " Application Task " );
@@ -199,7 +199,9 @@ void application_task ( void )
         log_printf( &logger, "-----------------------------------\r\n", app_buf );
         zigbee_send_at( &zigbee, ZIGBEE_CMD_AT_BCAST, &AT_BCAST_MSG[ 0 ] );
         resp_wait( &zigbee );
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     else if ( ZIGBEE_DEV_USER == dev_mode )
     {

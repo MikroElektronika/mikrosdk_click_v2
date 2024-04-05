@@ -71,11 +71,16 @@ void application_task ( void )
     vacuum_data = vacuum_get_percentage_of_vacuum(  &vacuum );
     log_printf ( &logger, "Percentage of vacuum [%%] : %.2f : \r\n ", vacuum_data );
     log_printf ( &logger, "------------------------------------------\r\n " );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

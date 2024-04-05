@@ -123,7 +123,7 @@ void application_init ( void )
 
     log_printf( &logger, "    Set default config    \r\n" );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -143,9 +143,9 @@ c6dofimu11_mag_t mag_data;
    c6dofimu11_accel_t accel_data;
    
    c6dofimu11_read_accel ( &c6dofimu11, &accel_data );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     c6dofimu11_read_mag ( &c6dofimu11, &mag_data );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
 
     log_printf( &logger, " Accel X : %d %c g\r\n", accel_data.x  );
     c6dofimu11_uart_sign_print (  );
@@ -165,7 +165,8 @@ c6dofimu11_mag_t mag_data;
 
     log_printf( &logger, " Mag Z : %d %c uT\r\n", mag_data.z  );
     c6dofimu11_uart_sign_print (  );
-   Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

@@ -2,7 +2,7 @@
     "name": "Fan 5 Click",
     "description": "Fan 5 Click is a compact add-on board specially designed for fan speed management. This board features Microchip’s TC654, a PWM mode fan speed controller with FanSense™ technology suitable for brushless DC fans.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","TC654EUNTR"],
     "category" : ["Click Boards > Motor control > Brushless"]
 }

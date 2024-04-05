@@ -131,7 +131,7 @@ void application_task ( void )
     log_printf( &logger, " RAW ADC: %u \r\n", raw_adc );
     log_printf( &logger, " Voltage from Channel 0: %.2f mV \r\n", voltage );
     log_printf( &logger, " ---------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

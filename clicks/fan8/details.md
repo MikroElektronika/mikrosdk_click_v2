@@ -169,7 +169,7 @@ void application_task ( void )
         log_printf( &logger, " Fault detected!\r\n\r\n", temperature );
     }
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 ```

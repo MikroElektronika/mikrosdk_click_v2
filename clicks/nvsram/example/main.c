@@ -64,10 +64,10 @@ void application_init ( void ) {
     log_printf( &logger,  "  Serial Number Lock   \r\n" );
     log_printf( &logger, " None Block Protection \r\n" );
     nvsram_reg_write( &nvsram, NVSRAM_MEM_CTL_REG, NVSRAM_SNL | NVSRAM_BP_NONE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, " Enable Memory Write \r\n" );
     nvsram_enable_memory_write( &nvsram, NVSRAM_WRITE_MEMORY_ENABLE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task \r\n" );
 }
@@ -76,16 +76,25 @@ void application_task ( void ) {
     log_printf( &logger, "  Write data : %s \r\n", demo_data );
     nvsram_memory_write( &nvsram, mem_addr, &demo_data[ 0 ], 9 );
     log_printf( &logger, "- - - - - - - - - - - - \r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     nvsram_memory_read( &nvsram, mem_addr, &read_data[ 0 ], 9 );
     log_printf( &logger, "  Read data  : %s \r\n", read_data );
     log_printf( &logger, "----------------------- \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

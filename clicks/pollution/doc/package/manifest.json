@@ -25,17 +25,18 @@
     "name": "mikroe.click.pollution",
     "product_link": "https://www.mikroe.com/pollution-click",
     "short_description": "Pollution click carries the VOC gas sensor and has high sensitivity to organic gases such as methanal (also known as formaldehyde), benzene, alcohol, toluene, etc.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1995
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Pollution",
     "subdir_name": "lib_pollution"
 }
+
 
 
 

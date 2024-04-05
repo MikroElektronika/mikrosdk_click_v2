@@ -110,7 +110,7 @@ void application_init ( void ) {
     loadcell4_default_cfg ( &loadcell4 );
     
     loadcell4_power_dev( &loadcell4, LOADCELL4_PWR_ON );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_printf( &logger, "-------------------------\r\n" );
     log_printf( &logger, "     ~~~  STEP 1  ~~~    \r\n" );
@@ -122,12 +122,21 @@ void application_init ( void ) {
     log_printf( &logger, " In the following 10 sec \r\n" );
     log_printf( &logger, " please remove all object\r\n" );
     log_printf( &logger, "     from the scale.     \r\n" );
-    Delay_ms( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "-------------------------\r\n" );
     log_printf( &logger, "    Start tare scales    \r\n" );
     loadcell4_tare( &loadcell4, &cell_data );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     log_printf( &logger, "-------------------------\r\n" );
     log_printf( &logger, "   Tarring is complete   \r\n" );
@@ -143,7 +152,16 @@ void application_init ( void ) {
     log_printf( &logger, "place 100 g weight etalon\r\n" );
     log_printf( &logger, "    on the scale for     \r\n" );
     log_printf( &logger, "   calibration purpose.  \r\n" );
-    Delay_ms( 10000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "-------------------------\r\n" );
     log_printf( &logger, "    Start calibration    \r\n" );
@@ -157,7 +175,16 @@ void application_init ( void ) {
         log_printf( &logger, " In the following 10 sec \r\n" );
         log_printf( &logger, "   remove 100 g weight   \r\n" );
         log_printf( &logger, "   etalon on the scale.  \r\n" );
-        Delay_ms( 10000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     } else {
         log_printf( &logger, "-------------------------\r\n" );
         log_printf( &logger, "   Calibration  Error   \r\n" );
@@ -181,7 +208,7 @@ void application_init ( void ) {
 void application_task ( void ) {
     weight_val = loadcell4_get_weight( &loadcell4, &cell_data );
     log_printf( &logger, "     Weight : %.2f g \r\n", weight_val );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```

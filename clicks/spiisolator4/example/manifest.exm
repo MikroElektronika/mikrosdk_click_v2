@@ -2,7 +2,7 @@
     "name": "SPI Isolator 4 Click",
     "description": "SPI Isolator 4 Click is a compact add-on board that contains a digital isolator optimized for a serial peripheral interface. This board features the ADuM341E, a quad-channel 5kVRMS digital isolator from Analog Devices. This board features the ADuM341E, a quad-channel 5kVRMS digital isolator from Analog Devices. This isolation component provides outstanding performance by combining high speed, complementary metal-oxide-semiconductor (CMOS), and monolithic air core transformer technology. Its data channels are independent and available in various configurations with a withstand voltage rating of 5kVrms, and operate with the external supply voltage ranging from 2.25V to 5.5V, providing compatibility with lower voltage systems enabling voltage translation functionality across the isolation barrier.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","ADuM341E"],
     "category" : ["SPI"]
 }

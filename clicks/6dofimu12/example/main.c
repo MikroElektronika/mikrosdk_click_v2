@@ -59,7 +59,7 @@ void application_init ( void )
     c6dofimu12_cfg_setup( &cfg );
     C6DOFIMU12_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     c6dofimu12_init( &c6dofimu12, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, " Driver init done \r\n" );
     log_printf( &logger, "----------------------------------\r\n");
@@ -82,15 +82,15 @@ void application_init ( void )
              C6DOFIMU12_FIFO_READ_DISABLED | 
              C6DOFIMU12_FAST_PWR_UP_DISABLED;
     c6dofimu12_generic_write( &c6dofimu12, C6DOFIMU12_REG_PWR_CONF_ADDR, &tx_buf, 1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     tx_buf = C6DOFIMU12_CMD_INITIALIZATION_START;
     c6dofimu12_generic_write( &c6dofimu12, C6DOFIMU12_REG_INIT_CTRL_ADDR, &tx_buf, 1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     c6dofimu12_generic_write( &c6dofimu12, C6DOFIMU12_REG_INIT_DATA_ADDR, bmi270_config_file, 8192 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     tx_buf = C6DOFIMU12_CMD_INITIALIZATION_STOP;
     c6dofimu12_generic_write( &c6dofimu12, C6DOFIMU12_REG_INIT_CTRL_ADDR, &tx_buf, 1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     if ( c6dofimu12_check_init_status( &c6dofimu12 ) == C6DOFIMU12_SUCCESS )
     {
@@ -106,7 +106,7 @@ void application_init ( void )
         for( ; ; );
     }
     c6dofimu12_default_cfg( &c6dofimu12 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -117,11 +117,16 @@ void application_task ( void )
     log_printf( &logger, " Accel Y: %d | Gyro Y: %d\r\n", c6dofimu12_accel.y, c6dofimu12_gyro.y );
     log_printf( &logger, " Accel Z: %d | Gyro Z: %d\r\n", c6dofimu12_accel.z, c6dofimu12_gyro.z );
     log_printf( &logger, "----------------------------------\r\n");
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -2,7 +2,7 @@
     "name": "6DOF IMU 20 Click",
     "description": "6DOF IMU 20 Click is a compact add-on board with a 6-axis inertial measurement unit. This board features the BMI323, a high-performance, low-power inertial measurement unit (IMU) from Bosch Sensortec.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","BMI323"],
     "category" : ["Click Boards > Sensors > Motion"]
 }

@@ -80,13 +80,19 @@ void application_task ( void )
        // TRANSMITER - TX each 2 sec
        
        mcp2542_generic_multi_write( &mcp2542, demo_message, 9 );
-       Delay_ms( 2000 );
+       Delay_ms ( 1000 );
+       Delay_ms ( 1000 );
 #endif
 
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

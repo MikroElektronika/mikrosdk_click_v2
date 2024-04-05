@@ -80,7 +80,7 @@ static void display_status ( void )
     }
     
     log_printf( &logger, "--------------------------------\r\n" );    
-    Delay_ms( 100 );    
+    Delay_ms ( 100 );    
 }
 
 void application_init ( void )
@@ -109,10 +109,10 @@ void application_init ( void )
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     hbridgedriver2_enable( &hbridgedriver2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, "  Default config " );
     
     if ( HBRIDGEDRIVER2_ERROR == hbridgedriver2_default_cfg ( &hbridgedriver2 ) )
@@ -120,28 +120,28 @@ void application_init ( void )
         log_error( &logger, " Default configuration." );
         for ( ; ; );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "--------------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     hbridgedriver2_get_device_id( &hbridgedriver2, &global_fault, &dev_id );
-    Delay_ms( 100 );  
+    Delay_ms ( 100 );  
     log_printf( &logger, " ID header      : 0x%.4X \r\n", dev_id.id_header ); 
     log_printf( &logger, " Version        : 0x%.4X \r\n", dev_id.version );
     log_printf( &logger, " Product Code 1 : 0x%.4X \r\n", dev_id.product_code_1 );
     log_printf( &logger, " Product Code 2 : 0x%.4X \r\n", dev_id.product_code_2 );
     log_printf( &logger, " SPI Frame ID   : 0x%.4X \r\n", dev_id.spi_frame_id );
     log_printf( &logger, "--------------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     hbridgedriver2_set_duty_cycle ( &hbridgedriver2, 0.5 );
     hbridgedriver2_pwm_start( &hbridgedriver2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "\t>>> START <<<\r\n" );
     display_status( );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -149,26 +149,35 @@ void application_task ( void )
     log_printf( &logger, "\t>>> Run Forward\r\n" );
     hbridgedriver2_run_forward( &hbridgedriver2, &global_fault );
     display_status( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "\t>>> Stop With Brake\r\n" );
     hbridgedriver2_stop_with_brake( &hbridgedriver2, &global_fault );
     display_status( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "\t>>> Run Backward\r\n" );
     hbridgedriver2_run_backward( &hbridgedriver2, &global_fault );
     display_status( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "\t>>> Stop\r\n" );
     hbridgedriver2_stop( &hbridgedriver2, &global_fault );
     display_status( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

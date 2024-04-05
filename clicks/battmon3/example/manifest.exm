@@ -2,7 +2,7 @@
     "name": "BATT-MON 3 Click",
     "description": "BATT-MON 3 Click is a compact add-on board representing an advanced battery monitoring solution. This board features the BQ35100, battery fuel gauge, and end-of-service monitor from Texas Instruments. The BQ35100 provides highly configurable fuel gauging for non-rechargeable (primary) lithium batteries without requiring a forced battery discharge. It uses patented TI gauging algorithms to support the option to replace an old battery with a new one seamlessly. It provides accurate results with ultra-low average power consumption, alongside an I2C interface through which the host can read the gathered data.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","BQ35100PWR"],
     "category" : ["Power management"]
 }

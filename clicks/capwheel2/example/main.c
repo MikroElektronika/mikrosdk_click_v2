@@ -244,7 +244,7 @@ void capwheel2_get_channels_task( )
     log_printf( &logger, ">      HALT  BYTES      <\r\n" );
     capwheel2_get_channels_touch( );
     capwheel2_get_channels_halt( );
-    Delay_ms( 150 );
+    Delay_ms ( 150 );
 }
 
 void capwheel2_get_gesture_task( )
@@ -266,7 +266,7 @@ void capwheel2_get_gesture_task( )
     {
         log_printf( &logger, "> PROX\r\n" );
     }
-    Delay_ms( 800 );
+    Delay_ms ( 800 );
 }
 
 void capwheel2_get_channel_counts_task( )
@@ -293,7 +293,7 @@ void capwheel2_get_channel_counts_task( )
     log_printf( &logger, "> Channel 2  counts : %u \r\n", channel_2_counts );
 
     log_info( &logger, " ");
-    Delay_ms( 150 );
+    Delay_ms ( 150 );
 }
 
 
@@ -331,6 +331,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

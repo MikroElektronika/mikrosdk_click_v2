@@ -25,17 +25,18 @@
     "name": "mikroe.click.rtc7",
     "product_link": "https://www.mikroe.com/rtc-7-click",
     "short_description": "RTC 7 Click is a real time clock module which has an extremely low power consumption, allowing it to be used with a single button cell battery or a super capacitor, for an extended period of time. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2406
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.RTC7",
     "subdir_name": "lib_rtc7"
 }
+
 
 
 

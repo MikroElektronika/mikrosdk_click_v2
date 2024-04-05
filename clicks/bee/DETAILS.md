@@ -180,12 +180,16 @@ void application_task ( void )
     bee_write_tx_normal_fifo( &bee, 0, &tx_data_fifo[ 0 ] );
     log_printf( &logger, " - Sent data :   " );
     log_printf( &logger, "%.6s \r\n", data_tx1 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     memcpy( &tx_data_fifo[ 13 ], &data_tx2[ 0 ], BEE_DATA_LENGHT );
     bee_write_tx_normal_fifo( &bee, 0, &tx_data_fifo[ 0 ] );
     log_printf( &logger, " - Sent data :   " );
     log_printf( &logger, "%.6s \r\n", data_tx2 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #else
     // Receiver mode
     bee_read_rx_fifo( &bee, &rx_data_fifo[ 0 ] );
@@ -195,9 +199,10 @@ void application_task ( void )
         memcpy( &rx_data_fifo_old [ 0 ], &rx_data_fifo[ 0 ], BEE_DATA_LENGHT );
         log_printf( &logger, " - Received data :   " );
         log_printf( &logger, "%.6s \r\n", rx_data_fifo );
-        Delay_ms( 1500 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 500 );
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 #endif
 }  
 

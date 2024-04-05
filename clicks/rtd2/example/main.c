@@ -55,20 +55,20 @@ void application_init ( void )
     rtd2_cfg_setup( &cfg );
     RTD2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rtd2_init( &rtd2, &cfg );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 
     log_printf( &logger, "----- Hardware Reset ------\r\n" );
     rtd2_hw_reset( &rtd2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "-- Default configuration --\r\n" );
     rtd2_default_cfg( &rtd2 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "--------------------------\r\n" );
     log_printf( &logger, "     Start Measurement    \r\n" );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -78,17 +78,22 @@ void application_task ( void )
         temperature = rtd2_get_temperature( &rtd2 );
         log_printf( &logger, " Temperature : %.2f C\r\n", temperature );
         log_printf( &logger, "--------------------------\r\n");
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     else
     {
         rtd2_enable_start( &rtd2, RTD2_START_CONVERSION_DISABLE );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

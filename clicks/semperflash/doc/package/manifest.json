@@ -25,17 +25,18 @@
     "name": "mikroe.click.semperflash",
     "product_link": "https://www.mikroe.com/semper-flash-click",
     "short_description": "The Semper Flash Click is a Click board™ which features the S25HS512T, a perfect solution for the mass storage option in various embedded applications. With fast performance being one of its key features, Semper Flash click can also be used for the code shadowing, execute-in-place (XIP), data logging and data storage.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2977
     ],
-    "version": "2.1.0.21",
+    "version": "2.1.0.22",
     "cmake": true,
     "alias": "Click.SemperFlash",
     "subdir_name": "lib_semperflash"
 }
+
 
 
 

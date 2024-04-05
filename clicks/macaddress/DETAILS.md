@@ -94,7 +94,7 @@ void application_init ( void )
     }
     log_printf( &logger, "\r\n" );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, "---- Application Task ----" );
     data_cnt = 0;
 }
@@ -113,29 +113,31 @@ void application_init ( void )
 void application_task ( void )
 {
     log_printf( &logger, " > Writing data to memory...\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     macaddress_generic_write( &macaddress, address, write_data[ data_cnt ], data_len[ data_cnt ] );
     log_printf( &logger, " > Writing done.\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     
     log_printf( &logger, " > Reading data from memory...\r\n" );
     macaddress_generic_read( &macaddress, address, read_buff, data_len[ data_cnt ] );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, " > Read data: " );
     for( uint8_t cnt = 0; cnt < data_len[ data_cnt ]; cnt++ )
     {
         log_printf( &logger, "%c", read_buff[ cnt ] );
     }
     log_printf( &logger, "\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, " > Reading done.\r\n" );
     log_printf( &logger, "---------------------------------\r\n" );
     data_cnt++;
     if ( data_cnt >= 3 )
         data_cnt = 0;
     
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

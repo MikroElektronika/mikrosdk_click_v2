@@ -88,9 +88,9 @@ void application_init ( void )
     DOTMATRIXR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     dotmatrixr_init( &dotmatrixr, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     dotmatrixr_restart( &dotmatrixr );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     dotmatrixr_set_bl_pin_state( &dotmatrixr, 0 );
     dotmatrixr_set_rs_pin_state( &dotmatrixr, 0 );
@@ -113,11 +113,11 @@ void application_init ( void )
 void application_task ( void )
 {
     dotmatrixr_write_ascii( &dotmatrixr, &demo_t1[ 0 ] );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     dotmatrixr_write_ascii( &dotmatrixr, &demo_t2[ 0 ] );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     dotmatrixr_write_ascii( &dotmatrixr, &demo_t3[ 0 ] );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

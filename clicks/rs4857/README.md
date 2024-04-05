@@ -114,7 +114,7 @@ void application_init ( void )
     
     rs4857_receiver_enable( &rs4857 );
     rs4857_driver_enable( &rs4857 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -136,7 +136,8 @@ void application_task ( void )
             rs4857_clear_app_buf( );
         }
     }
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

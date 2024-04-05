@@ -106,7 +106,7 @@ void application_init ( void )
 
     log_info( &logger, " Application Task " );
     select_port = EXPAND8_ADDR_OUT_LVL_PORT_P0;
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -123,13 +123,13 @@ void application_task ( void )
     
     log_printf( &logger, "     Port P%d - ON\r\n", ( uint16_t ) select_port );
     log_printf( &logger, "- - - - - - - - - - -\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     expand8_set_port( &expand8, select_port, EXPAND8_SET_HIGH_IMPEDANCE );
     
     log_printf( &logger, "     Port P%d - OFF\r\n", ( uint16_t ) select_port );
     log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     select_port++;
 

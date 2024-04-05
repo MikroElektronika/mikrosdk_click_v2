@@ -94,10 +94,10 @@ void application_init ( )
     nfcextend_init( &nfcextend, &cfg );
 
     nfcextend_password_present( &nfcextend, default_password );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     init_status_flag = nfcextend_default_cfg( &nfcextend );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     if ( 1 == init_status_flag )
     {

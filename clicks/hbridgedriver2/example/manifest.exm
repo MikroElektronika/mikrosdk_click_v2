@@ -2,7 +2,7 @@
     "name": "H-Bridge Driver 2 Click",
     "description": "H-Bridge Driver 2 Click is a compact add-on board that contains an H-bridge gate driver, also known as a full-bridge pre-driver. This board features the NCV7535, a monolithic H−bridge pre-driver for a DC motor with an enhanced feature set, useful in automotive systems from ON Semiconductor. The gate driver channels are independently controlled by a 24-bit SPI interface, allowing this Click board™ to be optionally configured in a single or dual H-bridge mode. It has a wide operating voltage range from 6V to 18V with built-in protection features against short-circuit, under/over voltage, overcurrent, and overtemperature conditions. This Click board™ is suitable to drive external MOSFETs, thus providing control of a DC-motor.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","NCV7535"],
     "category" : ["Motor control"]
 }

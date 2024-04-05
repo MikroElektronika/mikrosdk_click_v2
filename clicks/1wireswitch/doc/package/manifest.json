@@ -25,14 +25,15 @@
     "name": "mikroe.click.c1wireswitch",
     "product_link": "https://www.mikroe.com/1-wire-switch-click",
     "short_description": "1-Wire Switch Click is a compact add-on board that allows you to switch a device remotely using a 1-wire signal. This board features the DS2413, a dual-channel programmable I/O 1-Wire switch from Analog Devices. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.c1WireSwitch",
     "subdir_name": "lib_c1wireswitch"
 }
+
 
 
 

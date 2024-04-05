@@ -114,7 +114,8 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     rs485isolator_generic_write( &rs485isolator, TEXT_TO_SEND, strlen ( TEXT_TO_SEND ) );
     log_info( &logger, "---- Data sent ----" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #else
     rs485isolator_process( );
 #endif    

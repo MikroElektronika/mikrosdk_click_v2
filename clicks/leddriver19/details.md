@@ -142,16 +142,16 @@ void application_task ( void )
     for ( uint8_t n_cnt = LEDDRIVER19_CH_SEL_0; n_cnt <= LEDDRIVER19_CH_SEL_11; n_cnt++ )
     {
         leddriver19_set_pattern_pwm( &leddriver19, LEDDRIVER19_PATSEL_0, n_cnt, 100  );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     for ( uint8_t n_cnt = LEDDRIVER19_CH_SEL_0; n_cnt <= LEDDRIVER19_CH_SEL_11; n_cnt++ )
     {
         leddriver19_set_pattern_pwm( &leddriver19, LEDDRIVER19_PATSEL_0, n_cnt, 0  );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

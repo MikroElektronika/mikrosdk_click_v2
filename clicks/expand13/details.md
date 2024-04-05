@@ -133,7 +133,7 @@ void application_task ( void )
             log_printf( &logger, " Status port %d : 0x%.2X\r\n", ( uint16_t ) cnt, ( uint16_t ) port_value[ cnt ] );
         }
         log_printf( &logger, "\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

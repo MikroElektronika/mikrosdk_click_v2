@@ -61,11 +61,16 @@ void application_task ( void )  {
         log_printf( &logger, " %u,%lu\r\n ", emg_an, time );
     }
     time += 5;
-    Delay_ms( 5 );
+    Delay_ms ( 5 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

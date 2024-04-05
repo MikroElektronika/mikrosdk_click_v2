@@ -135,11 +135,15 @@ void application_task ( void )
         log_printf( &logger, "Percentage Output: %d %%\r\n", voltage_out );
         
         log_printf( &logger, "--------------------------\r\n" );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 
     log_printf( &logger, "###############################\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

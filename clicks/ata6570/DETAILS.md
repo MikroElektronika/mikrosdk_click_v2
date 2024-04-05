@@ -84,7 +84,7 @@ void application_init ( void )
     ATA6570_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ata6570_init( &ata6570, &cfg );
     ata6570_write_reg( &ata6570, ATA6570_DMCR, ATA6570_OPMODE_NORMAL );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
   
 ```
@@ -118,7 +118,8 @@ void application_task ( void )
        {
            ata6570_generic_write( &ata6570, &demo_message[ i ], 1 );
        }
-       Delay_ms( 2000 );
+       Delay_ms ( 1000 );
+       Delay_ms ( 1000 );
 #endif
 }  
 

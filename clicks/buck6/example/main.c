@@ -55,27 +55,44 @@ void application_init ( void )
 
     buck6_set_mode( &buck6, BUCK6_ACTIVE_MODE );
     buck6_set_max_voltage( &buck6, BUCK6_MAX_RANGE_5000mV );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
 {
     buck6_set_max_voltage( &buck6, BUCK6_MAX_RANGE_2500mV );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     buck6_set_max_voltage( &buck6, BUCK6_MAX_RANGE_5000mV );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     buck6_set_max_voltage( &buck6, BUCK6_MAX_RANGE_7500mV );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     buck6_set_max_voltage( &buck6, BUCK6_MAX_RANGE_10000mV );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     buck6_set_max_voltage( &buck6, BUCK6_MAX_RANGE_7500mV );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     buck6_set_max_voltage( &buck6, BUCK6_MAX_RANGE_5000mV );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

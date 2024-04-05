@@ -141,7 +141,7 @@ void application_init ( void )
     battman3_set_ldo_vout( &battman3, BATTMAN3_LDO3, BATTMAN3_LDO_2p50V );
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 ```
@@ -184,7 +184,7 @@ void application_task ( void )
         log_printf( &logger, "****************************************************\r\n" );
     }
     counter++;
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```

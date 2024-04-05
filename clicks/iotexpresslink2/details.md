@@ -221,7 +221,14 @@ void application_task ( void )
     strcat ( app_buf, TOPIC_NUM );
     iotexpresslink2_send_cmd ( &iotexpresslink2, app_buf );
     iotexpresslink2_read_response ( &iotexpresslink2, IOTEXPRESSLINK2_NORMAL_TIMEOUT );
-    Delay_ms ( 8000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

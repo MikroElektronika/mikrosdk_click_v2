@@ -25,17 +25,18 @@
     "name": "mikroe.click.balancer3",
     "product_link": "https://www.mikroe.com/balancer-3-click",
     "short_description": "Balancer 3 Click is overvoltage protection device for 2-series cell lithium-ion battery packs that incorporates a high-accuracy precision overvoltage detection circuit and automatic cell imbalance correction.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2876
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Balancer3",
     "subdir_name": "lib_balancer3"
 }
+
 
 
 

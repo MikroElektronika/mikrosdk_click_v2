@@ -60,7 +60,7 @@ void application_init ( void )
     log_printf( &logger, "----------------------\r\n" );
     log_printf( &logger, " Hardware reset\r\n" );
     ccrf3_hw_reset( &ccrf3 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     if ( CCRF3_ERROR == ccrf3_default_cfg ( &ccrf3 ) )
     {
@@ -80,7 +80,7 @@ void application_init ( void )
 #endif
 
     log_printf( &logger, "----------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, " Application Task \r\n" );
     log_printf( &logger, "----------------------\r\n" );
@@ -93,7 +93,8 @@ void application_task ( void )
     log_printf( &logger, " Sent message: MikroE\r\n" );
     log_printf( &logger, " Packet number: %u\r\n", ccrf3.packet_counter );
     log_printf( &logger, "----------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #else
     uint8_t num_bytes = ccrf3_receive_rx_data( &ccrf3, &rx_buffer[ 0 ] );
     if ( num_bytes )
@@ -111,6 +112,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

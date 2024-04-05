@@ -25,17 +25,18 @@
     "name": "mikroe.click.wifi9",
     "product_link": "https://www.mikroe.com/wifi-9-click",
     "short_description": "WiFi 9 Click is fully embedded stand-alone Wi-Fi module, equipped with the PAN9420 a 2.4 GHz ISM band Wi-Fi-embedded module which includes a wireless radio and an MCU for easy integration of Wi-Fi connectivity into various electronic devices.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2858
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Wifi9",
     "subdir_name": "lib_wifi9"
 }
+
 
 
 

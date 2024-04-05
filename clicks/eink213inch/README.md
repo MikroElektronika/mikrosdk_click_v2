@@ -89,7 +89,7 @@ void application_init ( void )
 
     eink213inch_start_config( &eink213inch );
     eink213inch_set_lut( &eink213inch, &eink213inch_lut_table[ 0 ], 70 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
 #ifndef IMAGE_MODE_ONLY
     cfg_font.p_font = &guiFont_Tahoma_18_Regular[ 0 ]; 
@@ -122,7 +122,7 @@ void application_init ( void )
     set_text.text_y = 120;
     eink213inch_text( &eink213inch, &demo_text2[ 0 ], &set_text );
 #endif
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```

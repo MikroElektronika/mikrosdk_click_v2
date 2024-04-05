@@ -89,7 +89,7 @@ void application_init ( void )
     canfd5_init( &canfd5, &cfg );
 
     canfd5_set_normal_operating_mode( &canfd5 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -108,7 +108,8 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     canfd5_generic_write( &canfd5, TEXT_TO_SEND, 8 );
     log_info( &logger, "--- The message is sent ---" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif 
 } 
 

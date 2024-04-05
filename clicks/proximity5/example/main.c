@@ -73,11 +73,16 @@ void application_task ( void )
     
     log_printf( &logger, "PS3 %d \r\n\r\n", bff[ 2 ] );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

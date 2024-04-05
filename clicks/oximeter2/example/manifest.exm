@@ -2,7 +2,7 @@
     "name": "Oximeter 2 Click",
     "description": "Oximeter 2 Click is a compact add-on board suitable for measuring blood oxygen saturation.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","VCNL4020C"],
     "category" : ["Biometrics"] 
 }

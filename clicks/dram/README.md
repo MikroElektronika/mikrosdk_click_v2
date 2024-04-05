@@ -140,7 +140,9 @@ void application_task ( void )
                                              data_buf, sizeof ( data_buf ) ) )
     {
         log_printf ( &logger, " Read data: %s\r\n\n", data_buf );
-        Delay_ms ( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     log_printf ( &logger, " Memory address: 0x%.6LX\r\n", ( uint32_t ) STARTING_ADDRESS );
     memcpy ( data_buf, DEMO_TEXT_MESSAGE_2, strlen ( DEMO_TEXT_MESSAGE_2 ) );
@@ -153,7 +155,9 @@ void application_task ( void )
     if ( DRAM_OK == dram_memory_read_fast ( &dram, STARTING_ADDRESS, data_buf, sizeof ( data_buf ) ) )
     {
         log_printf ( &logger, " Fast read data : %s\r\n\n", data_buf );
-        Delay_ms ( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

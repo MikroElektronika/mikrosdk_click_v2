@@ -123,12 +123,14 @@ void application_init ( void )
     
     log_printf( &logger, "Reset device\r\n\n" );
     iotexpresslink_reset_device ( &iotexpresslink );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "Factory reset\r\n" );
     strcpy ( app_buf, IOTEXPRESSLINK_CMD_FACTORY_RESET );
     iotexpresslink_send_cmd ( &iotexpresslink, app_buf );
     iotexpresslink_read_response ( &iotexpresslink );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "Vendor model\r\n" );
     strcpy ( app_buf, IOTEXPRESSLINK_CMD_CONF_CHECK );
@@ -193,6 +195,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -254,7 +261,7 @@ static err_t iotexpresslink_read_response ( iotexpresslink_t *ctx )
             iotexpresslink_clear_app_buf( );
             return IOTEXPRESSLINK_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
     Delay_ms ( 100 );
     iotexpresslink_process( ctx );

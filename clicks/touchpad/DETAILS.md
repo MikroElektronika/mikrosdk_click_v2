@@ -99,7 +99,7 @@ void application_init ( void )
     touchpad_default_cfg( &touchpad );
 
     log_info( &logger, "---- Waiting for a new touch or gesure event ----" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 } 
 ```
 
@@ -116,7 +116,7 @@ void application_task ( void )
 
     //  Task implementation.
 
-    Delay_ms( 50 );
+    Delay_ms ( 50 );
     state = touchpad_get_event_state( &touchpad );
     if ( state == TOUCHPAD_EVENT_TOUCH )
     {
@@ -126,7 +126,7 @@ void application_task ( void )
         log_printf( &logger, "\r\n>> ........... <<\r\n" );
         log_printf( &logger, "** X cord: %d \r\n** Y cord: %d \r\n", cord.x, cord.y );
         log_printf( &logger, ">> ........... <<\r\n" );
-        Delay_ms( 50 );
+        Delay_ms ( 50 );
     }
     else if ( state == TOUCHPAD_EVENT_GESTURE )
     {

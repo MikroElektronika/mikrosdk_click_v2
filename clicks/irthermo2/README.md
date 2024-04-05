@@ -108,7 +108,7 @@ void application_init ( void )
     irthermo2_init( &irthermo2, &cfg );
 
     irthermo2_default_cfg( &irthermo2 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -129,7 +129,11 @@ void application_task ( void )
     log_printf( &logger, " Temperature : %.2f C\r\n", temperature );
     log_printf( &logger, "---------------------------\r\n" );
 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

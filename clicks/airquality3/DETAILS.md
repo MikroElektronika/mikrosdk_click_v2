@@ -103,7 +103,7 @@ void application_init ( void )
 
     airquality3_default_cfg( &airquality3 );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     log_info( &logger, "---- Start measurement ----" );
 }
 ```

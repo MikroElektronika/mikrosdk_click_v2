@@ -25,17 +25,18 @@
     "name": "mikroe.click.nanopower",
     "product_link": "https://www.mikroe.com/nano-power-click",
     "short_description": "Nano Power click is a boost (step-up) DC-DC converter click with extremely high efficiency and very low input voltage, aimed at the low power IoT market and battery-powered sensors and other devices. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2369
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.NanoPower",
     "subdir_name": "lib_nanopower"
 }
+
 
 
 

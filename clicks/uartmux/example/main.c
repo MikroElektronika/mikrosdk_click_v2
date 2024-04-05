@@ -100,12 +100,18 @@ void application_task ( void )
     channel.state_b = UARTMUX_STATE_B_CHANNEL_1;
 
     uartmux_generic_write( &uartmux, TEXT_TO_SEND, strlen( TEXT_TO_SEND ), &channel );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -138,7 +138,11 @@ void application_task ( void )
         duty_step = -duty_step;
         duty_pct += ( duty_step * 2 );
     }
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

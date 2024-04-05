@@ -118,7 +118,7 @@ void application_init ( void )
         log_error( &logger, " Default configuration." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     static uint8_t cfg_data[ 6 ];
     static uint8_t prod_data[ 5 ];
@@ -132,24 +132,24 @@ void application_init ( void )
         display_error( );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "---------------------------\r\n" );
     log_printf( &logger, " Product ID : 0x%.2X  \r\n", pid );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     airquality8_init_sensor( &airquality8, &mox_lr, &mox_er );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     airquality8_init_measurement( &airquality8 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     log_printf( &logger, "---------------------------\r\n" );
     log_info( &logger, " Application Task " );
     log_printf( &logger, "---------------------------\r\n" );
     log_printf( &logger, "      Air Quality Index\r\n" );
     log_printf( &logger, "- - - - - - - - - - - - - -\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -174,19 +174,19 @@ void application_task ( void )
     status_flag = airquality8_start_measurement( &airquality8 );
 
     airquality8_get_status( &airquality8, &status_data );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     while ( ( status_data & AIRQUALITY8_STATUS_LAST_SEQ_STEP_MASK ) != AIRQUALITY8_OK )
     {
         airquality8_get_status( &airquality8, &status_data );
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
     }
 
     for ( uint8_t n_cnt = 0; n_cnt < 15; n_cnt++ )
     {        
         status_flag = airquality8_read_rmox( &airquality8, &rmox, mox_lr, mox_er );
         rmox_seq[ n_cnt ] = rmox;
-        Delay_ms( 100 ); 
+        Delay_ms ( 100 ); 
         
         if ( status_flag != AIRQUALITY8_OK )
         {
@@ -197,7 +197,7 @@ void application_task ( void )
     aqi = airquality8_calc_oaq( rmox_seq, AIRQUALITY8_RCDA_STRATEGY_ADJ, AIRQUALITY8_GAS_DETECTION_STRATEGY_AUTO );
     log_printf( &logger, " \tAQI : %.3f \r\n", aqi );
     log_printf( &logger, "---------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

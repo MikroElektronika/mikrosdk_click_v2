@@ -25,17 +25,18 @@
     "name": "mikroe.click.joystick2",
     "product_link": "https://www.mikroe.com/joystick-2-click",
     "short_description": "Joystick 2 Click is a smart navigation key concept based on SKRHABE010 by Alps, a 4-direction joystick switch with Center-push Function.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2851
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Joystick2",
     "subdir_name": "lib_joystick2"
 }
+
 
 
 

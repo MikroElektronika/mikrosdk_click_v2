@@ -2,7 +2,7 @@
     "name": "DC Motor 6 Click",
     "description": "DC Motor 6 Click is a PWM chopper type brushed DC motor driver, labeled as TB67H451FNG.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","TB67H451FNG"],
     "category" : ["Brushed"] 
 }

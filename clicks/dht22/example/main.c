@@ -75,7 +75,7 @@ void application_task ( void )
                 log_printf( &logger, " Humidity : %.2f %%\r\n", humidity );
                 log_printf( &logger, " Temperature : %.2f degC\r\n", temperature );
                 log_printf( &logger, " ---------------------------\r\n" );
-                Delay_ms( 1000 );
+                Delay_ms ( 1000 );
             }
         }
     }
@@ -83,6 +83,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -248,29 +248,43 @@ void application_init ( void )
     frame_data.apdu = &apdu_data;
     
     soft_reset( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     get_data_identify( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     select_card_manger( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     select_applet( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     check_free_memory( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     list_and_delete_objects( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     get_random( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     read_uid_object( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     get_version(  );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     create_check_delete( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     aes_cipher( );
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void ) 
@@ -295,7 +309,8 @@ void application_task ( void )
     {
         log_error( &logger, " Random" );
     }
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     if ( A5000PLUGNTRUST_OBJECT_DOESNT_EXIST == a5000plugntrust_check_object_exist( &a5000plugntrust, binary_id ) )
     {
         log_printf( &logger, " Write random data to binary object...\r\n" );
@@ -313,7 +328,8 @@ void application_task ( void )
     {
         log_error( &logger, " Binary object already exist" );
     }
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     if ( A5000PLUGNTRUST_OBJECT_DOES_EXISTS == a5000plugntrust_check_object_exist( &a5000plugntrust, binary_id ) )
     {
         if ( A5000PLUGNTRUST_OK == a5000plugntrust_read_object( &a5000plugntrust, binary_id, 0, 0, 
@@ -332,10 +348,12 @@ void application_task ( void )
     {
         log_error( &logger, " Binary object doesn't exist" );
     }
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " Create AES key...\r\n" );
     create_128_aes_key( aes_id, aes_value );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     if ( A5000PLUGNTRUST_OK == cipher_data_with_aes_key( aes_id, A5000PLUGNTRUST_P2_ENCRYPT_ONESHOT, 
                                                          read_data, encrypted_data ) )
     {
@@ -347,7 +365,8 @@ void application_task ( void )
     {
         log_error( &logger, " Encrypting data" );
     }
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     if ( A5000PLUGNTRUST_OK == cipher_data_with_aes_key( aes_id, A5000PLUGNTRUST_P2_DECRYPT_ONESHOT, 
                                                          encrypted_data, read_data ) )
     {
@@ -359,7 +378,8 @@ void application_task ( void )
     {
         log_error( &logger, " Decrypting data" );
     }
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " Delete Binary and AES object...\r\n" );
     if ( ( A5000PLUGNTRUST_OK != a5000plugntrust_delete_object( &a5000plugntrust, binary_id ) ) || 
          ( A5000PLUGNTRUST_OK != a5000plugntrust_delete_object( &a5000plugntrust, aes_id ) ) )
@@ -367,11 +387,20 @@ void application_task ( void )
         log_error( &logger, " Deleting objects" );
     }
     log_printf( &logger, "*****************************************************************************\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -81,7 +81,8 @@ void application_init ( void )
 
     rtc6_default_cfg( &rtc6, time_zone, &utc_time, &alarm_time );
     log_info( &logger, " ----- Init successfully ----- " );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -106,11 +107,16 @@ void application_task ( void )
         rtc6_repeat_alarm( &rtc6, RTC6_ALARM_0, 20 );
     }
 
-    Delay_ms( 900 );
+    Delay_ms ( 900 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

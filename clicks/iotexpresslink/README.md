@@ -112,12 +112,14 @@ void application_init ( void )
     
     log_printf( &logger, "Reset device\r\n\n" );
     iotexpresslink_reset_device ( &iotexpresslink );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "Factory reset\r\n" );
     strcpy ( app_buf, IOTEXPRESSLINK_CMD_FACTORY_RESET );
     iotexpresslink_send_cmd ( &iotexpresslink, app_buf );
     iotexpresslink_read_response ( &iotexpresslink );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "Vendor model\r\n" );
     strcpy ( app_buf, IOTEXPRESSLINK_CMD_CONF_CHECK );

@@ -91,7 +91,7 @@ void application_init ( void ) {
     RS4855V_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rs4855v_init( &rs4855v, &cfg );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
 #ifdef DEMO_APP_TRANSMITTER
     log_printf( &logger, "------------------\r\n" );
@@ -99,7 +99,7 @@ void application_init ( void ) {
     log_printf( &logger, "      MikroE      \r\n" );
     log_printf( &logger, "------------------\r\n" );
     log_printf( &logger, "  Transmit data   \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
 #endif
     
@@ -107,7 +107,8 @@ void application_init ( void ) {
     log_printf( &logger, "------------------\r\n" );
 
     log_printf( &logger, "   Receive data  \r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif
         
     log_printf( &logger, "------------------\r\n" );
@@ -136,7 +137,8 @@ void application_task ( void ) {
       
     rs4855v_send_command( &rs4855v, &demo_message[ 0 ] );
     log_printf( &logger, "\t%s",  &demo_message[ 0 ] );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "------------------\r\n" ); 
     
 #endif   

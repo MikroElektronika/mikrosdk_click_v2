@@ -355,7 +355,7 @@ err_t proxfusion3_generic_write ( proxfusion3_t *ctx, uint8_t reg, uint8_t *tx_b
     status |= i2c_master_write( &ctx->i2c, data_buf, tx_len + 1 );
     digital_out_high( &ctx->int_pin );
     
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 
     return status;
 }

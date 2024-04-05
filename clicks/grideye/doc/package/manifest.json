@@ -25,17 +25,18 @@
     "name": "mikroe.click.grideye",
     "product_link": "https://www.mikroe.com/grid-eye-click",
     "short_description": "64 individual thermal sensors build an image on a display. The detecting distance is 5m.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2034
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.Grideye",
     "subdir_name": "lib_grideye"
 }
+
 
 
 

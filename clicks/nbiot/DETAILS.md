@@ -82,7 +82,7 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     // Click initialization.
     nbiot_cfg_setup( &nbiot_cfg );
@@ -106,55 +106,60 @@ void application_init ( void )
     nbiot_send_cmd( &nbiot, NBIOT_CMD_AT );
     app_error_flag = nbiot_rsp_check( );
     nbiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // ATI - product information
     nbiot_send_cmd( &nbiot, NBIOT_CMD_ATI );
     app_error_flag = nbiot_rsp_check(  );
     nbiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CGMR - firmware version
     nbiot_send_cmd( &nbiot, NBIOT_CMD_CGMR );
     app_error_flag = nbiot_rsp_check(  );
     nbiot_error_check( app_error_flag );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     // COPS - deregister from network
     nbiot_send_cmd_with_parameter( &nbiot, NBIOT_CMD_COPS, "2" );
     app_error_flag = nbiot_rsp_check(  );
     nbiot_error_check( app_error_flag );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
      
     // CFUN - full funtionality
     nbiot_send_cmd_with_parameter( &nbiot, NBIOT_CMD_CFUN, "1" );
     app_error_flag = nbiot_rsp_check(  );
     nbiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // COPS - automatic mode
     nbiot_send_cmd_with_parameter( &nbiot, NBIOT_CMD_COPS, "0" );
     app_error_flag = nbiot_rsp_check(  );
     nbiot_error_check( app_error_flag );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     // CEREG - network registration status
     nbiot_send_cmd_with_parameter( &nbiot, NBIOT_CMD_CEREG, "2" );
     app_error_flag = nbiot_rsp_check(  );
     nbiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CIMI - request IMSI
     nbiot_send_cmd( &nbiot, NBIOT_CMD_CIMI );
     app_error_flag = nbiot_rsp_check(  );
     nbiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     app_buf_len = 0;
     app_buf_cnt = 0;
     app_connection_status = WAIT_FOR_CONNECTION;
     log_info( &logger, " Application Task " );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -174,19 +179,23 @@ void application_task ( void )
         nbiot_send_cmd_check( &nbiot, NBIOT_CMD_CGATT );
         app_error_flag = nbiot_rsp_check(  );
         nbiot_error_check( app_error_flag );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         
         // CEREG - network registration status
         nbiot_send_cmd_check( &nbiot, NBIOT_CMD_CEREG );
         app_error_flag = nbiot_rsp_check(  );
         nbiot_error_check( app_error_flag );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         
         // CSQ - signal quality
         nbiot_send_cmd( &nbiot, NBIOT_CMD_CSQ );
         app_error_flag = nbiot_rsp_check(  );
         nbiot_error_check( app_error_flag );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     else
     {
@@ -196,7 +205,11 @@ void application_task ( void )
         nbiot_send_cmd( &nbiot, NBIOT_CMD_CSQ );
         app_error_flag = nbiot_rsp_check(  );
         nbiot_error_check( app_error_flag );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 } 
 

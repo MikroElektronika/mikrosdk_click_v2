@@ -137,7 +137,11 @@ void application_init ( void )
     strcpy( last_reading, app_buf );
     log_printf( &logger, "Place the probe into the calibration solution,\r\n" );
     log_printf( &logger, "for single-point calibration \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "Waiting for stable readings \r\n" );
     while ( n_cnt <= 5 )
     {
@@ -154,7 +158,7 @@ void application_init ( void )
             }
         }
         log_printf( &logger, "- " );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
         ezocarrierorp_clear_app_buf( );
     }
 
@@ -179,11 +183,20 @@ void application_task ( void )
     ezocarrierorp_send_cmd( &ezocarrierorp, EZOCARRIERORP_CMD_SINGLE_READ );
     error_flag = ezocarrierorp_rsp_check( &ezocarrierorp, EZOCARRIERORP_RSP_OK );
     ezocarrierorp_error_check( error_flag );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -250,9 +263,9 @@ static err_t ezocarrierorp_rsp_check ( ezocarrierorp_t *ctx, uint8_t *rsp )
             ezocarrierorp_clear_app_buf( );
             return EZOCARRIERORP_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     error_flag |= ezocarrierorp_process( ctx );
     if ( strstr( app_buf, rsp ) )
     {
@@ -294,7 +307,7 @@ static void ezocarrierorp_error_check ( err_t error_flag )
         }
     }
     log_printf( &logger, "- - - - - - - - - - - - - - -\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 // ------------------------------------------------------------------------ END

@@ -117,7 +117,7 @@ void application_init( void )
 
 
     reram_send_cmd( &reram, RERAM_CMD_WREN );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```
@@ -150,7 +150,7 @@ void application_task( void )
         mem_addr = RERAM_MEM_ADDR_START;
     }
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 ```

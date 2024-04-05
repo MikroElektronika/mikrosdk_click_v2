@@ -25,14 +25,15 @@
     "name": "mikroe.click.lr3",
     "product_link": "https://www.mikroe.com/lr-3-click",
     "short_description": "LR 3 Click is a compact add-on board that contains a long-range transceiver. This board features the 32001345, RF technology-based SRD transceiver, which operates at a frequency of 868MHz from Mipot.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.LR3",
     "subdir_name": "lib_lr3"
 }
+
 
 
 

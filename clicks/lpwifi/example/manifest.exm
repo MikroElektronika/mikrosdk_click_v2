@@ -2,7 +2,7 @@
     "name": "LP WiFi Click",
     "description": "LP WiFi Click is a compact add-on board that represents an ultra-low-power Wi-Fi solution. This board features the DA16200, a fully integrated Wi-Fi module with ultra-low power consumption, best RF performance, and a comfortable development environment from Dialog Semiconductor.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","DA16200"],
     "category" : ["WiFi"]
 }

@@ -93,7 +93,7 @@ void application_init ( void )
     c9dof2_init( &c9dof2, &cfg );
 
     c9dof2_dev_rst( &c9dof2 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     id_val = c9dof2_read_byte ( &c9dof2, C9DOF2_WHO_AM_I_ICM20948 );
      
@@ -117,7 +117,7 @@ void application_init ( void )
     log_printf(  &logger, "--- Initialised ---\r\n" );
     log_printf(  &logger, "--------------------\r\n" );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -156,7 +156,7 @@ void application_task ( void )
 
     log_printf( &logger, "---------------------\r\n" );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

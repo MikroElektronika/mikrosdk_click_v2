@@ -97,7 +97,7 @@ void application_init ( void )
     expand7_cfg_setup( &cfg );
     EXPAND7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     expand7_init( &expand7, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "------------------- \r\n" );
     log_printf( &logger, "   EXPAND 7 click   \r\n" );
@@ -117,16 +117,17 @@ void application_task ( void )
     expand7_write_all ( &expand7, 0xFF );
     log_printf( &logger, "All pins set to HIGH logic level!\r\n" );
     log_printf( &logger, "---------------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     for ( uint8_t pin_num = 0; pin_num < 40; pin_num++ )
     {
         expand7_write_pin( &expand7, pin_num, EXPAND7_LOW );
         log_printf( &logger, "Pin %u is set to LOW logic level!\r\n", ( uint16_t ) pin_num );
-        Delay_ms( 300 );
+        Delay_ms ( 300 );
     }
     log_printf( &logger, "---------------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

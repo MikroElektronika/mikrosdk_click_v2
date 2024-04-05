@@ -25,17 +25,18 @@
     "name": "mikroe.click.mbusslave",
     "product_link": "https://www.mikroe.com/m-bus-slave-click",
     "short_description": "M-Bus Slave Click is a Click board™ equipped with the TSS721A, a single chip transceiver developed by Texas Instruments for Meter-Bus applications according to EN1434-3 standard. The connection to the bus is polarity independent and serves as a slave node in the system. M-Bus Slave Click has full galvanic isolation with optocouplers to improve the reliability of the whole circuit.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3723
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.MBusSlave",
     "subdir_name": "lib_mbusslave"
 }
+
 
 
 

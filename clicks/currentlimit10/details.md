@@ -122,7 +122,7 @@ void application_init ( void )
     }
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -143,7 +143,7 @@ void application_task ( void )
     {
         log_printf( &logger, " Current limit is 0.75 A\r\n" );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

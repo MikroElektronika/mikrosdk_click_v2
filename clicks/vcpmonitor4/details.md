@@ -122,7 +122,7 @@ void application_init ( void )
     log_printf( &logger, " > Device ID: \t\t0x%.4X\r\n", temp_data );
     
     vcpmonitor4_default_cfg ( &vcpmonitor4 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, " Application Task " );
 }
 
@@ -154,7 +154,7 @@ void application_task ( void )
     log_printf( &logger, " > Power[W]:\t%.2f \r\n", read_data );
     log_printf( &logger, "*************************\r\n" );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 ```

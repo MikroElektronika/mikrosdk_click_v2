@@ -121,7 +121,7 @@ void application_task ( void )
     }
     old_position = key_position;
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 ```
 

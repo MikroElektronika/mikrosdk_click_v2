@@ -99,7 +99,7 @@ void application_init ( void ) {
     }
     
     motion4_enable( &motion4, MOTION4_MODULE_ENABLE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "The sensor is ready.\r\n" );
     log_printf( &logger, "-----------------------\r\n" );
 }
@@ -127,7 +127,7 @@ void application_task ( void ) {
         }
         log_printf( &logger, "The sensor is ready.\r\n" );
         log_printf( &logger, "-----------------------\r\n" );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 }
 

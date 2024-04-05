@@ -2,7 +2,7 @@
     "name": "SolidSwitch 2 Click",
     "description": "SolidSwitch 2 Click is a compact add-on board that contains a load switching device. This board features the L9026, an automotive eight-channel relay driver from STMicroelectronics. The L9026 incorporates two high-side drivers and six configurable high-side/low-side drivers driven by an SPI interface or by two dedicated parallel inputs. Operating from an external power supply from 3V up to 18V, it provides a maximum current of 1A on its output terminals. It also offers advanced diagnostic and protection features such as short-to-ground, open load, overcurrent, and overtemperature detections.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","L9026-YO-TR"],
     "category" : ["Click Boards > Miscellaneous > Relay"]
 }

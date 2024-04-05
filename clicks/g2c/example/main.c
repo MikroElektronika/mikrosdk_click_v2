@@ -265,6 +265,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -325,9 +330,9 @@ static err_t g2c_rsp_check ( uint8_t *rsp )
             g2c_clear_app_buf( );
             return G2C_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     g2c_process( );
     if ( strstr( app_buf, rsp ) )
     {
@@ -374,7 +379,7 @@ static void g2c_error_check ( err_t error_flag )
             break;
         }
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 static void g2c_log_app_buf ( void )
@@ -417,7 +422,11 @@ static err_t g2c_connect_to_network ( void )
     func_error |= error_flag;
     g2c_error_check( error_flag );
     
-    Delay_ms ( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     return func_error;
 }
 
@@ -438,7 +447,11 @@ static err_t g2c_connect_to_cloud ( void )
     func_error |= error_flag;
     g2c_error_check( error_flag );
     
-    Delay_ms ( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     return func_error;
 }
 

@@ -100,10 +100,10 @@ void application_init ( void )
     rtc5_init( &rtc5, &cfg );
     
     rtc5_default_cfg ( &rtc5);
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     rtc5_clear( &rtc5 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     time_sec_new = 255;
 
@@ -118,7 +118,7 @@ void application_init ( void )
     
     // Start counting
     rtc5_set_counting( &rtc5, 1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "--------------------\r\n" );
     log_printf( &logger, "    RTC 5  Click    \r\n" );

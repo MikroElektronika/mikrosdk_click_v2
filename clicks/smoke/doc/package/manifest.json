@@ -25,17 +25,18 @@
     "name": "mikroe.click.smoke",
     "product_link": "https://www.mikroe.com/smoke-click",
     "short_description": "Smoke click carries the MAX30105 high-sensitivity optical sensor for smoke detection. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over I2C interface with additional functionality provided by the INT pin on the mikroBUS™ line.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2080
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Smoke",
     "subdir_name": "lib_smoke"
 }
+
 
 
 

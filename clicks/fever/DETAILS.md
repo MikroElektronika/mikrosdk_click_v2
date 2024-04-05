@@ -98,7 +98,7 @@ void application_task ( void )
     float temperature;
     temperature = fever_get_temperature( &fever );
     log_printf( &logger, "Current Temperature : %.2f C \r\n", temperature);
-    Delay_ms(1000);
+    Delay_ms ( 1000 );
 } 
 
 ```

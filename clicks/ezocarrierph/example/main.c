@@ -137,7 +137,11 @@ void application_init ( void )
     log_printf( &logger, "Mid point calibration \r\n" );
     log_printf( &logger, "- - - - - - - - - - - - - - -\r\n" );
     log_printf( &logger, "Place probe into pH neutral solution \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "Starting calibration \r\n" );
     log_printf( &logger, "- - - - - - - - - - - - - - -\r\n" );
     log_printf( &logger, "Waiting for stable readings \r\n" );
@@ -156,7 +160,7 @@ void application_init ( void )
             }
         }
         log_printf( &logger, "- " );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
         ezocarrierph_clear_app_buf( );
     }
     
@@ -181,11 +185,20 @@ void application_task ( void )
     ezocarrierph_send_cmd( &ezocarrierph, EZOCARRIERPH_CMD_SINGLE_READ );
     error_flag = ezocarrierph_rsp_check( &ezocarrierph, EZOCARRIERPH_RSP_OK );
     ezocarrierph_error_check( error_flag );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -252,9 +265,9 @@ static err_t ezocarrierph_rsp_check ( ezocarrierph_t *ctx, uint8_t *rsp )
             ezocarrierph_clear_app_buf( );
             return EZOCARRIERPH_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     error_flag |= ezocarrierph_process( ctx );
     if ( strstr( app_buf, rsp ) )
     {
@@ -296,7 +309,7 @@ static void ezocarrierph_error_check ( err_t error_flag )
         }
     }
     log_printf( &logger, "- - - - - - - - - - - - - - -\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 // ------------------------------------------------------------------------ END

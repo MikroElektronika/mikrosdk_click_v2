@@ -2,7 +2,7 @@
     "name": "DC Motor 22 Click",
     "description": "DC Motor 22 Click is a compact add-on board that contains a brushed DC motor driver. This board features the TMC7300, a low voltage driver for one or two DC motors from TRINAMIC Motion Control. The TMC7300 is rated for an operating voltage range from 2V to 11V and operates up to two DC motors via simple UART control for direction, velocity, and torque. It also has a complete set of diagnostic and protection capabilities that supports robust and reliable operation, like short to ground protection, short to power supply protection and undervoltage detection.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","TMC7300","MAX11645EUA"],
     "category" : ["Click Boards > Motor control > Brushed"]
 }

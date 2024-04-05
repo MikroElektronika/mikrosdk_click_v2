@@ -121,7 +121,7 @@ void application_task ( void ){
     log_info( &logger, "Reading 9 bytes of SRAM memory, from address 0x0150:" );
     eeram3v3_read( &eeram3v3, 0x0150, &rd_data, 9 );
     log_info( &logger, "Data read: %s", rd_data );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

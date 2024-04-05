@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240405](#20240405)**
 + **[20240329](#20240329)**
 + **[20240322](#20240322)**
 + **[20240315](#20240315)**
@@ -87,6 +88,19 @@
 
 ---
 ---
+---
+
+## `20240405`
+
+*Following click boards have been added:*
+
++ `4G LTE GNSS`
++ `LR 9`
+
+*Added XC compilers support to all click boards.*
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240329`

@@ -142,7 +142,9 @@ void application_task ( void )
     {
         log_printf ( &logger, "Data read from address 0x%.5lx: \t%s\r\n\n", ( uint32_t ) STARTING_ADDRESS, 
                                                                                          data_buf );
-        Delay_ms ( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

@@ -105,7 +105,7 @@ void application_init ( void )
 
     log_info( &logger, " Application Task " );
     log_printf( &logger, " _______________________ \r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -128,7 +128,7 @@ void application_task ( void )
         log_printf( &logger, " Diff Pressure : %.2f [Pa] \r\n", diff_press );
         log_printf( &logger, " Temperature   : %.2f [degC] \r\n", temperature );
         log_printf( &logger, " _______________________ \r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

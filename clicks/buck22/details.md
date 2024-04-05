@@ -138,7 +138,9 @@ void application_task ( void )
     {
         vout_mv = BUCK22_VOUT_MIN;
     }
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

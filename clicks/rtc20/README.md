@@ -129,7 +129,7 @@ void application_init ( void )
         log_printf( &logger, "  Set date : %.2d-%.2d-%.2d\r\n", 
                     ( uint16_t ) date.day, ( uint16_t ) date.month, ( uint16_t ) date.year );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "---------------------\r\n" );
 }
 ```
@@ -158,11 +158,11 @@ void application_task ( void )
                             ( uint16_t ) time.hour, ( uint16_t ) time.minute, ( uint16_t ) time.second );
                 log_printf( &logger, "- - - - - - - - - - -\r\n" );
                 new_sec = time.second;
-                Delay_ms( 1 );
+                Delay_ms ( 1 );
             }
         }
     }
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 }
 ```
 

@@ -104,42 +104,42 @@ void application_init ( void )
 
         for ( ; ; );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     ble6_power_on( &ble6, BLE6_MODULE_POWER_ON );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     ble6_module_init( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "-> Local Version Information: \r\n" );
     ble6_send_command( &ble6, &hci_read_local_version_information[ 0 ], 4 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     ble6_handler( );
     ble6_display_log( );
     ble6_local_version_info( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "--------------------------------\r\n" );
     log_printf( &logger, "-> ACI GAP Update Value: \r\n" );
     ble6_send_command( &ble6, &aci_gatt_update_value[ 0 ], 21 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     ble6_handler( );
     ble6_display_log( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "--------------------------------\r\n" );
     log_printf( &logger, "-> HCI Set Scan. Response Data: \r\n" );
     ble6_send_command( &ble6, &hci_le_set_scan_response_data[ 0 ], 36 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     ble6_handler( );
     ble6_display_log( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "--------------------------------\r\n" );
     log_printf( &logger, "-> ACI GAP Set Discoverable: \r\n" );
     ble6_send_command( &ble6, &aci_gap_set_discoverable[ 0 ], 30 );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     ble6_handler( );
     ble6_display_log( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
 }
@@ -164,7 +164,7 @@ void application_task ( void )
     while ( device_connected_flag ) 
     {
         int32_t cnt = ble6_generic_read( &ble6, rx_response, PROCESS_BUFFER_SIZE );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         if ( ( ble6_strncmp( rx_response, hci_le_serverwrite_event, 1 ) == 0 ) && ( cnt > 13 ) ) 
         {
             ble6_response_handler( );

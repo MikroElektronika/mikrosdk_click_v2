@@ -2,7 +2,7 @@
     "name": "WiFi 8 Click",
     "description": "WiFi 8 Click is a compact add-on board that contains a wireless combo module. This board features the ATWINC3400-MR210CA, a Bluetooth 5.0 certified module optimized for low power and high-performance mobile applications from Microchip Technology.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","WINC3400"],
     "category" : ["WiFi"]
 }

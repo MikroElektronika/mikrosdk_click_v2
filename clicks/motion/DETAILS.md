@@ -96,7 +96,7 @@ void application_init ( void )
     motion_default_cfg ( &motion );
     log_printf( &logger, "  Enable Motion sensor\r\n" );
     log_printf( &logger, "------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     motion_state = MOTION_NO_DETECT;
     motion_old_state = MOTION_DETECTED;

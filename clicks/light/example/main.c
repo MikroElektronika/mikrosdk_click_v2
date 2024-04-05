@@ -68,12 +68,17 @@ void application_task ( void )
     
     log_printf( &logger, " Light Intensity : %d \r\n", (uint16_t)light_percent );
     log_printf( &logger, " Light Value     : %d\r\n", light_value );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

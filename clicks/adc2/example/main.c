@@ -54,7 +54,7 @@ void application_init ( void )
     ADC2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     adc2_init( &adc2, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     adc2_set_vref( &adc2, ADC2_VCC_3v3 );
 
@@ -79,11 +79,16 @@ void application_task ( void )
         log_printf( &logger, "LOW OVERFLOW DETECTED\r\n" );
     
     log_printf( &logger, "------------------\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

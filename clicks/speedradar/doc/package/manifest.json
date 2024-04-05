@@ -25,13 +25,14 @@
     "name": "mikroe.click.speedradar",
     "product_link": "https://www.mikroe.com/speed-radar-click",
     "short_description": "Speed Radar Click is a compact add-on board that comes with a radar motion detector. This board features the K-LD2, a radar transceiver from RFbeam. It is a 24GHz radar with a detection distance for humans of up to 15m and cars of up to 30m. Its digital structure makes it easy to use in an MCU-based application or as a standalone device where movement detection or even a speed measurement is required.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.SpeedRadar",
     "subdir_name": "lib_speedradar"
 }
+
 
 

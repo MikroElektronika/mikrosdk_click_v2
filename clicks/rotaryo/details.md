@@ -132,14 +132,14 @@ void application_task ( void ) {
             if ( led_state == 4 ) {
                 for ( old_state = 0; old_state < 17; old_state++ ) {
                     rotaryo_turn_on_led_by_data( &rotaryo, 0xAAAA );
-                    Delay_ms( 100 );
+                    Delay_ms ( 100 );
                     rotaryo_turn_on_led_by_data( &rotaryo, 0x5555 );
-                    Delay_ms( 100 );
+                    Delay_ms ( 100 );
                 }
 
                 for ( old_state = 0; old_state < 17; old_state++ ) {
                     rotaryo_turn_on_led_by_position( &rotaryo, old_state );
-                    Delay_ms( 100 );
+                    Delay_ms ( 100 );
                 }
 
                 led_state = 0;

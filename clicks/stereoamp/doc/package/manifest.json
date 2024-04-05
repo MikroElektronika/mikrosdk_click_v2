@@ -25,17 +25,18 @@
     "name": "mikroe.click.stereoamp",
     "product_link": "https://www.mikroe.com/stereoamp-click",
     "short_description": "This is an example which demonstrates the use of StereoAmp Click board - stereo amplifier and is ideal for battery operated devices or as a lab amplifier.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1954
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.StereoAmp",
     "subdir_name": "lib_stereoamp"
 }
+
 
 
 

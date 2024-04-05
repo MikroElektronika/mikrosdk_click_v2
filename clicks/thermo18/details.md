@@ -132,7 +132,8 @@ void application_init ( void )
         for ( ; ; );
     }
 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     //One shot reading
     thermo18_generic_write( &thermo18, THERMO18_REG_CTRL, THERMO18_CONTROL_ONESHOT_ENABLED );
 
@@ -177,7 +178,7 @@ void application_task ( void )
         thermo18_generic_write( &thermo18, THERMO18_REG_CTRL, THERMO18_CONTROL_ONESHOT_ENABLED );
     }
 
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 
 ```

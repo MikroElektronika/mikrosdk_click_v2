@@ -103,7 +103,7 @@ void application_init ( void )
     adac_set_configuration( &adac, ADAC_POWER_REF_CTRL, ADAC_VREF_ON, ADAC_NO_OP );
     Delay_100ms( );
     log_printf( &logger, "\r\n Click module initialized \r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
   
 ```
@@ -129,12 +129,12 @@ void application_task ( void )
     for ( cnt = 0; cnt < 0xFF; cnt +=4 )
     {
         adac_write_dac( &adac, ADAC_PB_PIN3, cnt / 0x100, cnt % 0x100 );
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
         log_printf( &logger, " > write... \r\n" );
     }
     
     log_printf( &logger, "-------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "\r\n *** ADC : read ***\r\n" );
     adac_set_configuration( &adac, ADAC_ADC_CONFIG, ADAC_NO_OP, ADAC_IO4 );
@@ -146,11 +146,12 @@ void application_task ( void )
         adc_val = adac_read_adc( &adac, &chan );
         log_printf( &logger, "   channel : %d\r\n", chan );
         log_printf( &logger, "       val : %d\r\n", adc_val ); 
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 
     log_printf( &logger, "-------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

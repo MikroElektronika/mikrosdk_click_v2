@@ -25,13 +25,14 @@
     "name": "mikroe.click.canisolator3",
     "product_link": "https://www.mikroe.com/can-isolator-3-click",
     "short_description": "CAN Isolator 3 Click is a compact add-on board that provides isolated CAN communication. This board features the MAX14882, an isolated CAN transceiver with an integrated transformer driver from Analog Devices. It is galvanically isolated between the device's CAN-protocol controller side (TDX, RDX) and the physical wires of the CAN network (CANH, CANL) cable-side/bus-side of the transceiver.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.CANIsolator3",
     "subdir_name": "lib_canisolator3"
 }
+
 
 

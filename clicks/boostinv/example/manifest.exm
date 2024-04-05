@@ -2,7 +2,7 @@
     "name": "Boost-INV Click",
     "description": "Boost-INV click is a very useful DC/DC voltage converter device, as can output both positive and negative voltage, boosted up to 12.78V and -13.95, from a single fixed voltage input.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","LT3582"],
     "category" : ["Boost"] 
 }

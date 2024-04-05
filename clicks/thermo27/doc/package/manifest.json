@@ -25,14 +25,15 @@
     "name": "mikroe.click.thermo27",
     "product_link": "https://www.mikroe.com/thermo-27-click",
     "short_description": "Thermo 27 Click is a compact add-on board that accurately measures temperature. This board features the TMP114, a high-accuracy digital temperature sensor from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.Thermo27",
     "subdir_name": "lib_thermo27"
 }
+
 
 
 

@@ -90,7 +90,11 @@ void application_init ( void )
     gps_init( &gps, &cfg );
 
     gps_module_wakeup( &gps );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```

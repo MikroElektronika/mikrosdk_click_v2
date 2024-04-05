@@ -157,7 +157,7 @@ void application_init ( void )
     SAMLTOUCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     samltouch_init( &samltouch, &cfg );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void application_task ( void )
@@ -167,6 +167,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

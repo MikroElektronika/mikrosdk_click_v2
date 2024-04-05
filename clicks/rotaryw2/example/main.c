@@ -122,6 +122,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -178,15 +183,15 @@ static void rotaryw2_switch_detection ( void )
                 for ( uint8_t n_cnt = 0; n_cnt < 10; n_cnt++ )
                 {
                     rotaryw2_set_led_data( &rotaryw2, ROTARYW2_EIGHT_LED_INV );
-                    Delay_ms( 100 );
+                    Delay_ms ( 100 );
                     rotaryw2_set_led_data( &rotaryw2, ROTARYW2_EIGHT_LED );
-                    Delay_ms( 100 );
+                    Delay_ms ( 100 );
                 }
                 
                 for ( uint8_t led_p = ROTARYW2_SET_LED_POS_1; led_p <= ROTARYW2_SET_LED_POS_16; led_p++ ) 
                 {
                     rotaryw2_set_led_pos( &rotaryw2, led_p );
-                    Delay_ms( 100 );
+                    Delay_ms ( 100 );
                 }
                 
                 led_demo_state = 0;

@@ -167,7 +167,7 @@ void application_task ( void )
         }
         pom <<= 1;
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 ```

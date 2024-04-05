@@ -177,7 +177,7 @@ void application_task ( void )
             break;
         }
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

@@ -109,7 +109,7 @@ void application_init ( void )
     {
         log_info( &logger, "Read PROM - ERROR!\r\n" );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -128,7 +128,9 @@ void application_task ( void )
     log_printf( &logger, "Temperature: %fC\r\n", Temperature );
     log_printf( &logger, "Pressure: %f\r\n", Pressure );
 
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

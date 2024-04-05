@@ -25,17 +25,18 @@
     "name": "mikroe.click.temphum13",
     "product_link": "https://www.mikroe.com/temphum-13-click",
     "short_description": "Temp&Hum 13 Click is a Click board™ which is perfectly suited for measuring the relative humidity (RH) and temperature. The Click board™ is equipped with the HTU21DF, an accurate and reliable sensor IC, packed in a miniature 3x3mm DFN package.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2838
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.TempHum13",
     "subdir_name": "lib_temphum13"
 }
+
 
 
 

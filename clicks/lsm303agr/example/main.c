@@ -86,11 +86,17 @@ void application_task ( void )
     read_data = lsm303agr_get_mag_axis_z ( &lsm303agr );
     log_printf(&logger, "Z Axis : %.2f\r\n", read_data);
 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

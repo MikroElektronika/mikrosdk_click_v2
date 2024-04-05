@@ -113,7 +113,7 @@ void application_init ( void )
     }
     profet23a_default_cfg ( &profet23a );
     log_info( &logger, " Application Task " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```
@@ -142,7 +142,7 @@ void application_task ( void )
     {
         mode = PROFET23A_MODE_OFF;
         log_printf( &logger, " > Output ON Channel %u in diagnostic mode\r\n", ( uint16_t )profet23a.channel );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     else
     {
@@ -160,7 +160,8 @@ void application_task ( void )
     
     log_printf( &logger, "*******************************************\r\n" );
     
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

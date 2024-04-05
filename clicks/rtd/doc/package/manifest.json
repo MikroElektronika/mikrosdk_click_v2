@@ -25,17 +25,18 @@
     "name": "mikroe.click.rtd",
     "product_link": "https://www.mikroe.com/rtd-click",
     "short_description": "RTD click is based on MAX31865 resistance to digital converter from Maxim Integrated, optimized for platinum resistance temperature detectors, or RTD.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2240
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Rtd",
     "subdir_name": "lib_rtd"
 }
+
 
 
 

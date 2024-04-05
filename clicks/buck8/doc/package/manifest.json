@@ -25,17 +25,18 @@
     "name": "mikroe.click.buck8",
     "product_link": "https://www.mikroe.com/buck-8-click",
     "short_description": "Buck 8 click is a high efficiency, wide voltage range, and high current synchronous step down (buck) DC-DC converter, featuring two enhanced modes that can be used to drive lighter loads with increased efficiency. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2305
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.Buck8",
     "subdir_name": "lib_buck8"
 }
+
 
 
 

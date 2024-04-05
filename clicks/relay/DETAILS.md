@@ -88,7 +88,8 @@ void application_init ( void )
     relay_init( &relay, &cfg );
     
     relay_default_cfg ( &relay );
-    Delay_ms( 1500 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 500 );
 }
 ```
 

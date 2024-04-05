@@ -130,13 +130,15 @@ void application_task ( void )
     stepper20_set_step_mode ( &stepper20, STEPPER20_MODE_FULL_STEP );
     stepper20_set_direction ( &stepper20, STEPPER20_DIR_CW );
     stepper20_drive_motor ( &stepper20, 200, STEPPER20_SPEED_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf ( &logger, " Move 400 quarter steps counter-clockwise \r\n\n" );
     stepper20_set_step_mode ( &stepper20, STEPPER20_MODE_QUARTER_STEP );
     stepper20_set_direction ( &stepper20, STEPPER20_DIR_CCW );
     stepper20_drive_motor ( &stepper20, 400, STEPPER20_SPEED_VERY_FAST );
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

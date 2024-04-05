@@ -25,17 +25,18 @@
     "name": "mikroe.click.methane",
     "product_link": "https://www.mikroe.com/methane-click",
     "short_description": "Methane click carries an MQ-4 sensor for methane (CH4). The gas sensing layer on the sensor unit is made of tin dioxide (SnO2), which has lower conductivity in clean air.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1048
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Methane",
     "subdir_name": "lib_methane"
 }
+
 
 
 

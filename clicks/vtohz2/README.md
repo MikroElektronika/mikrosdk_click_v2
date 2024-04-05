@@ -111,7 +111,7 @@ void application_task ( void )
     {
         vtohz2_set_duty_cycle ( &vtohz2, duty_cycle );
         log_printf( &logger," PWM Duty: %.2f%%\r\n", duty_cycle * 100 );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     log_printf( &logger, "------------------------------\r\n" );
 }

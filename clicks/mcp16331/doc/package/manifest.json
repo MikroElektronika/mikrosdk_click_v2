@@ -25,17 +25,18 @@
     "name": "mikroe.click.mcp16331",
     "product_link": "https://www.mikroe.com/mcp16331-click",
     "short_description": "MCP16331 click functions as a buck-boost voltage regulator, a switching regulator topology that combines principles of the buck conversion (step-down) and the boost conversion (step-up).",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2202
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Mcp16331",
     "subdir_name": "lib_mcp16331"
 }
+
 
 
 

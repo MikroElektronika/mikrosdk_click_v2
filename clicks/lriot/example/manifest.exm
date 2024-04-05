@@ -2,7 +2,7 @@
     "name": "LR IoT Click",
     "description": "LR IoT Click is a compact add-on board that contains a long-range LoRa transceiver. This board features Semtech Corporation’s LR1110, an ultra-low power platform integrating a LoRa® transceiver, multi-constellation GNSS, and passive WiFi AP MAC address scanner. Alongside its sub-GHz capabilities, the LR1110 also has a multi-band front-end capable of receiving 802.11b/g/n WiFi Access Point MAC addresses and GNSS (GPS, BeiDou, geostationary) satellite raw data befitting geo-positioning purposes. The acquired information is then transmitted using an LPWAN network to a geolocation server, which analyzes it and correlates the position with data from a geolocation database, enabling a unique balance between low power and performance.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","LR1110"],
     "category" : ["Click Boards > Wireless connectivity > LoRa"]
 }

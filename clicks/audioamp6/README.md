@@ -110,10 +110,12 @@ void application_task ( void )
 
     log_printf( &logger, ">> Set gain 20 dB \r\n" );
     audioamp6_set_gain( &audioamp6, AUDIOAMP6_GAIN_20dB );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, ">> Set gain 26 dB \r\n" );
     audioamp6_set_gain( &audioamp6, AUDIOAMP6_GAIN_26dB );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

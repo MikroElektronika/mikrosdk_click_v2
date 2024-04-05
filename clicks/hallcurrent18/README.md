@@ -115,10 +115,14 @@ void application_init ( void )
         log_error( &logger, " Default configuration." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, " Turn off the load current in the following 5 sec.\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     if ( HALLCURRENT18_OK == hallcurrent18_set_zero_ref( &hallcurrent18 ) )
     {
         log_printf( &logger, " Process complete!\r\n");
@@ -130,7 +134,7 @@ void application_init ( void )
     }
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -146,7 +150,7 @@ void application_task ( void )
     if ( HALLCURRENT18_OK == hallcurrent18_read_current ( &hallcurrent18, &current ) ) 
     {
         log_printf( &logger, " Current : %.2f [A]\r\n\n", current );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

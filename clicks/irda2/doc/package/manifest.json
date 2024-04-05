@@ -25,17 +25,18 @@
     "name": "mikroe.click.irda2",
     "product_link": "https://www.mikroe.com/irda2-click",
     "short_description": "IrDA2 click features the TFDU4101 infrared transceiver module as well as MCP2120 infrared encoder/decoder from Microchip connected with the 7.3728 MHz external crystal. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target board via UART interface and the following mikroBUS™ pins: AN, RST, CS.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         372
     ],
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.IrDA2",
     "subdir_name": "lib_irda2"
 }
+
 
 
 

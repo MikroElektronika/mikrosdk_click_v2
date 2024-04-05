@@ -25,14 +25,15 @@
     "name": "mikroe.click.ledring2",
     "product_link": "https://www.mikroe.com/led-ring-2-click",
     "short_description": "LED Ring 2 Click is a compact add-on board that provides a circular-shaped electronic lighting solution. This board features three I2C-configurable high-performance LED matrix drivers, the LP5862 from Texas Instruments. The LP5862 integrates 18 constant current sinks for driving 18 yellow LEDs. With the help of two additional LP5862 drivers, it is possible to realize, as shown on this board, a solution of 54 yellow LEDs arranged in a circular pattern. In addition, it also provides excellent PWM dimming effects.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.LEDRing2",
     "subdir_name": "lib_ledring2"
 }
+
 
 
 

@@ -109,7 +109,7 @@ void application_init ( void )
     
     log_printf( &logger, " Set VAV Press Click I2C Slave Address \r\n" );
     i2cisolator5_set_slave_address ( &i2cisolator5, I2CISOLATOR5_VAV_PRESS_DEV_ADDR );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
 }
@@ -133,7 +133,8 @@ void application_task ( void )
         log_printf( &logger, "--------------------------------\r\n" );
     }
     
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

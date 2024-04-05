@@ -58,11 +58,11 @@ void application_init ( void )
 
     mcp1664_set_duty_cycle( &mcp1664, duty_cycle );
     mcp1664_pwm_start( &mcp1664 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "------------------ \r\n" );
     log_printf( &logger, "  MCP1664  Click   \r\n" );
     log_printf( &logger, "------------------ \r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -83,6 +83,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

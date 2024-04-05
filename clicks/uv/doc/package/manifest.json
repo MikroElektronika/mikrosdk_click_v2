@@ -25,17 +25,18 @@
     "name": "mikroe.click.uv",
     "product_link": "https://www.mikroe.com/uv-click",
     "short_description": "Design devices that warn you of excesive ultraviolet radiation levels with UV click. This click boards carries the ML8511 IC that is sensitive to UV-A (365-315 nm) and UV-B (315-280 nm) rays.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1090
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Uv",
     "subdir_name": "lib_uv"
 }
+
 
 
 

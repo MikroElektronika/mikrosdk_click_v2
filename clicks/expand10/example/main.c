@@ -82,12 +82,17 @@ void application_task ( void )
         
         expand10_read_port_value( &expand10, EXPAND10_PORT_2, &port_value );
         log_printf( &logger, " Status P2 (input) : 0x%.2X\r\n\r\n", ( uint16_t ) port_value );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

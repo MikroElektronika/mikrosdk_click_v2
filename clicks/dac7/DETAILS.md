@@ -113,7 +113,7 @@ void application_init ( void )
         for ( ; ; );
     }
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     log_printf( &logger, "--------------------------\r\n\n" );
 
     
@@ -128,7 +128,7 @@ void application_init ( void )
         for ( ; ; );
     }
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     log_printf( &logger, "--------------------------\r\n\n" );
     log_printf( &logger, " -- Initialization  done. --\r\n" );
     log_printf( &logger, "--------------------------\r\n\n" );
@@ -159,7 +159,11 @@ void application_task ( void )
         for ( ; ; );
     }
 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "--------------------------\r\n\n" );
     
     if ( dac7_set_ch_voltage ( &dac7, DAC7_ADDRESS_CHANNEL_B, 2000, v_ref_sel ) == DAC7_SUCCESS )
@@ -172,7 +176,11 @@ void application_task ( void )
         for ( ; ; );
     }
 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "--------------------------\r\n\n" );
     
     if ( dac7_set_ch_voltage ( &dac7, DAC7_ADDRESS_CHANNEL_C, 3000, v_ref_sel ) == DAC7_SUCCESS )
@@ -185,7 +193,11 @@ void application_task ( void )
         for ( ; ; );
     }
     
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "--------------------------\r\n\n" );
     
     if ( dac7_set_ch_voltage ( &dac7, DAC7_ADDRESS_CHANNEL_D, 4000, v_ref_sel ) == DAC7_SUCCESS )
@@ -198,7 +210,11 @@ void application_task ( void )
         for ( ; ; );
     }
 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "--------------------------\r\n\n" );
 
     if ( dac7_set_ch_voltage ( &dac7, DAC7_ADDRESS_CHANNEL_ALL, 5000, v_ref_sel ) == DAC7_SUCCESS )
@@ -211,7 +227,11 @@ void application_task ( void )
         for ( ; ; );
     }
 
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "--------------------------\r\n\n" );
 } 
 

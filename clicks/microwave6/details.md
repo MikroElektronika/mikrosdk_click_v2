@@ -110,14 +110,16 @@ void application_init ( void )
     log_printf( &logger, " Calibrating the sensor...\r\n" );
     log_printf( &logger, " There must be no movement near the sensor!\r\n" );
     log_printf( &logger, "----------------------------------\r\n" );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     if ( MICROWAVE6_OK == microwave6_read_voltage( &microwave6, &reference ) )
     {
         log_printf( &logger, " The sensor has been calibrated!\r\n" );
         log_printf( &logger, "  Detector AN Voltage : %.3f[V]\r\n", reference );
         log_printf( &logger, "----------------------------------\r\n" );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     else
     {
@@ -127,7 +129,7 @@ void application_init ( void )
     
     log_printf( &logger, "The motion detector unit is ready.\r\n" );
     log_printf( &logger, "----------------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -152,7 +154,7 @@ void application_task ( void )
                 log_printf( &logger, " Detector AN Voltage : %.3f[V]\r\n", voltage );
                 log_printf( &logger, "----------------------------------\r\n" );
                 flag = MICROWAVE6_FLAG_CLEAR;
-                Delay_ms( 100 );
+                Delay_ms ( 100 );
             }
         }
         else

@@ -25,14 +25,15 @@
     "name": "mikroe.click.lteiot9",
     "product_link": "https://www.mikroe.com/lte-iot-9-click",
     "short_description": "LTE IoT 9 Click is a compact add-on board containing a cellular IoT Module that supports 3GPP Release 14 and all LTE bands.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.LTEIoT9",
     "subdir_name": "lib_lteiot9"
 }
+
 
 
 

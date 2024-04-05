@@ -25,17 +25,18 @@
     "name": "mikroe.click.pressure6",
     "product_link": "https://www.mikroe.com/pressure-6-click",
     "short_description": "Pressure 6 Click features a simple, yet highly accurate and reliable pressure sensor labeled as BM1386GLV, produced by ROHM. This sensor is a piezo-resistive pressure sensor with internal thermal compensation, which greatly simplifies the pressure reading.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2580
     ],
-    "version": "2.1.0.20",
+    "version": "2.1.0.21",
     "cmake": true,
     "alias": "Click.Pressure6",
     "subdir_name": "lib_pressure6"
 }
+
 
 
 

@@ -59,7 +59,7 @@ static void rs4855_process ( void )
             log_printf( &logger, "%c", uart_rx_buffer[ check_buf_cnt ] );
         }
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
@@ -88,7 +88,7 @@ void application_init ( void )
     RS4855_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rs4855_init( &rs4855, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
 #ifdef DEMO_APP_RECEIVER
     rs4855_set_re_state( &rs4855, RS4855_PIN_STATE_LOW );
@@ -111,12 +111,18 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     rs4855_generic_write( &rs4855, TEXT_TO_SEND, 8 );
     log_info( &logger, "---- Data sent ----" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif    
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

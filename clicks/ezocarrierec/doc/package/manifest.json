@@ -25,11 +25,12 @@
     "name": "mikroe.click.ezocarrierec",
     "product_link": "https://www.mikroe.com/ezo-carrier-click-conductivity",
     "short_description": "EZO Carrier Click - Conductivity is a compact add-on board for measuring conductivity, salinity, and Total Dissolved Solids (TDS) in various applications from chemical production to hydroponics. This board features the EZO-EC™, an ISO 7888 compliant embedded conductivity circuit board from Atlas Scientific.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.EZOCarrierEC",
     "subdir_name": "lib_ezocarrierec"
 }
+

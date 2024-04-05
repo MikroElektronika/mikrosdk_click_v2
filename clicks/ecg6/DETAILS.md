@@ -94,13 +94,13 @@ void application_init ( void )
     ECG6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ecg6_init( &ecg6, &cfg );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     DEMO_EXAMPLE = PPG_EXAMPLE;
    
     // Dummy read
     ecg6_check_path_id( &ecg6 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     device_check = ecg6_check_path_id( &ecg6 );
     
@@ -121,7 +121,7 @@ void application_init ( void )
     }
 
     log_printf( &logger, " ---- Configuration done ----- \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     time_cnt = 0;
 }

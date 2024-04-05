@@ -114,7 +114,11 @@ void application_init ( void )
     
     log_printf( &logger, " --- Sensor calibration --- \r\n" );
     log_printf( &logger, " Place an object at 200mm distance from sensor in the next 5 seconds.\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " Sensor calibration is in progress...\r\n" );
     if ( LIGHTRANGER10_ERROR == lightranger10_calibrate_distance ( &lightranger10, 200 ) )
     {

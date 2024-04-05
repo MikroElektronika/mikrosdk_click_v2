@@ -110,37 +110,57 @@ void application_task ( void )
      // Positive output voltage 
      log_printf( &logger, "VOUT = 6V\r\n");
      boostinv2_set_positive_voltage( &boostinv2, BOOSTINV2_POS_VOUT_6V );
-     Delay_ms( 3000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
      log_printf( &logger, "VOUT = 8V\r\n");
      boostinv2_set_positive_voltage( &boostinv2, BOOSTINV2_POS_VOUT_8V );
-     Delay_ms( 3000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
      log_printf( &logger, "VOUT = 12V\r\n");
      boostinv2_set_positive_voltage( &boostinv2, BOOSTINV2_POS_VOUT_12V );
-     Delay_ms( 3000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
      log_printf( &logger, "VOUT = 14V\r\n");
      boostinv2_set_positive_voltage( &boostinv2, BOOSTINV2_POS_VOUT_14V );
-     Delay_ms( 3000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
      log_printf( &logger, "VOUT = 12V\r\n");
      boostinv2_set_positive_voltage( &boostinv2, BOOSTINV2_POS_VOUT_12V );
-     Delay_ms( 3000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
      log_printf( &logger, "VOUT = 8V\r\n");
      boostinv2_set_positive_voltage( &boostinv2, BOOSTINV2_POS_VOUT_8V );
-     Delay_ms( 3000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
      
      // Negative output voltage 
      
      log_printf( &logger, "VOUT = -5V\r\n");
      boostinv2_set_negative_voltage( &boostinv2, BOOSTINV2_NEG_VOUT_5V );
-     Delay_ms( 3000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
      log_printf( &logger, "VOUT = -7V\r\n");
      boostinv2_set_negative_voltage( &boostinv2, BOOSTINV2_NEG_VOUT_7V );
-     Delay_ms( 3000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
      log_printf( &logger, "VOUT = -13V\r\n");
      boostinv2_set_negative_voltage( &boostinv2, BOOSTINV2_NEG_VOUT_13V );
-     Delay_ms( 3000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
      log_printf( &logger, "VOUT = -7V\r\n");
      boostinv2_set_negative_voltage( &boostinv2, BOOSTINV2_NEG_VOUT_7V );
-     Delay_ms( 3000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
+     Delay_ms ( 1000 );
 }
 ```
 

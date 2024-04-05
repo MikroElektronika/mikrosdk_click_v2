@@ -2,7 +2,7 @@
     "name": "EnOcean 4 Click",
     "description": "EnOcean 4 Click carries a ultra-low power TCM515U transceiver gateway module which operates at 902MHz radio band, perfectly suited for the realization of transceiver gateways, actuators and controllers for systems communicating based on the EnOcean radio standard.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","TCM515U"],
     "category" : ["Sub-1 GHz Transceivers"] 
 }

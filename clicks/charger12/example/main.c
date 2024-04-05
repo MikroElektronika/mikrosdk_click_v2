@@ -103,35 +103,40 @@ void application_init ( void )
     CHARGER12_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     charger12_init( &charger12, &cfg );
 
-    Delay_ms(100);
+    Delay_ms ( 100 );
     charger12_mode_select( &charger12, CHARGER12_MODE_DISABLE );
-    Delay_ms(100);
+    Delay_ms ( 100 );
     log_printf( &logger, "> App init done" );
 }
 
 void application_task ( void )
 {
     charger12_case_plus(  );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
   
     charger12_case_minus( );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     charger12_case_one( );
-    Delay_ms( 1000 );     
+    Delay_ms ( 1000 );     
 
     charger12_case_two( );
-    Delay_ms( 1000 );   
+    Delay_ms ( 1000 );   
 
     charger12_case_three( );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     charger12_case_four( );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

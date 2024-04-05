@@ -126,7 +126,7 @@ void application_task( void ) {
     if ( rx_message[ 0 ] != 0 ) {
         log_printf( &logger, "%c", ( char ) rx_message[ 0 ] );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
 #endif
 
@@ -136,7 +136,7 @@ void application_task( void ) {
 
     log_printf( &logger, "RECEIVED MESSAGE : " );
     log_printf( &logger, "%s\r\n", rx_message );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
 #endif
     
@@ -145,7 +145,8 @@ void application_task( void ) {
     irda3_generic_multiple_send( &irda3, tx_message );
 
     log_printf( &logger, "MESSAGE SENT\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
 #endif
     
@@ -158,7 +159,8 @@ void application_task( void ) {
     }
 
     log_printf( &logger, "MESSAGE SENT\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
 #endif
 

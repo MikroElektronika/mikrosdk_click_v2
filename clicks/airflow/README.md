@@ -98,7 +98,7 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Init " );
 
     // Click initialization.
@@ -149,7 +149,8 @@ void application_init ( void )
         //sequence number
         log_printf( &logger, "Sequence number: %d\r\n", airflow.sequence_number );
     }
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, " Application Task " );
 }
 
@@ -171,7 +172,7 @@ void application_task ( void )
     airflow_get_atmospheric_pressure( &airflow, &pressure_data, &temperature_data );
     log_printf( &logger, "Atmospheric pressure[mBar]: %.2f\r\nTemperature[degC]: %.2f\r\n", pressure_data, temperature_data );
     log_printf( &logger, "***********************************************************\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 ```

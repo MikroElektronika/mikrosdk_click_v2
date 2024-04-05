@@ -135,7 +135,7 @@ void application_task ( )
     log_printf( &logger, " %d | * \r\n", msb & 0x01 );
 
     log_printf( &logger, " * ----------------------- * \r\n\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 } 
 
 ```

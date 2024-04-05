@@ -94,7 +94,11 @@ void application_init ( void )
     gnss4_init( &gnss4, &cfg );
 
     gnss4_module_wakeup( &gnss4 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```

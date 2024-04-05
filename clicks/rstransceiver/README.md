@@ -113,7 +113,7 @@ void application_init ( void )
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( RSTRANSCEIVER_ERROR == rstransceiver_default_cfg ( &rstransceiver ) )
     {
@@ -122,7 +122,7 @@ void application_init ( void )
     }
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -142,7 +142,8 @@ void application_task ( void )
         {
             log_printf( &logger, "%s", app_buf );
             memset( app_buf, 0, PROCESS_BUFFER_SIZE );
-            Delay_ms( 2000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
         }
     }
 }

@@ -124,7 +124,7 @@ void application_init ( void )
     }
     
     example_type = EXAMPLE_AXIS;
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, " Application Task " );
 }
 
@@ -175,7 +175,7 @@ void application_task ( void )
         }
     }
     log_printf( &logger, "*************************************\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```

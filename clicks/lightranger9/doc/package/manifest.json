@@ -25,14 +25,15 @@
     "name": "mikroe.click.lightranger9",
     "product_link": "https://www.mikroe.com/lightranger-9-click",
     "short_description": "LightRanger 9 Click is a compact add-on board suitable for range-finding and distance sensing applications. This board features the TMF8828, a dToF (direct time of flight) optical distance sensor with an integrated Vertical Cavity Surface Emitting Laser (VCSEL) achieving up to 5m target detection distance from ams AG. Due to its lens on the SPAD, it supports 3x3, 4x4, 3x6, and 8x8 multizone output data and a wide, dynamically adjustable field of view. All raw data processing is performed inside the TMF8828, providing distance information and confidence values through its I2C interface. A unique addition to this Click board™ represents an additional 0.7mm thick protective lens that further reduces interference and improves the sensor's accuracy.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.LightRanger9",
     "subdir_name": "lib_lightranger9"
 }
+
 
 
 

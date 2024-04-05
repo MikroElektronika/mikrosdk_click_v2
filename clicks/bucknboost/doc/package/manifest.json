@@ -25,17 +25,18 @@
     "name": "mikroe.click.bucknboost",
     "product_link": "https://www.mikroe.com/buck-and-boost-click",
     "short_description": "Buck & Boost Click is a compact add-on board that contains a configurable power management device. This board features the MIC7401, a highly-integrated power-management IC featuring five synchronous buck regulators, one boost regulator, and a high-speed I2C interface with an internal EEPROM memory from Microchip.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3815
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.BucknBoost",
     "subdir_name": "lib_bucknboost"
 }
+
 
 
 

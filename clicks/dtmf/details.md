@@ -138,7 +138,10 @@ void application_task ( void )
 #if ( DEMO_APP == APP_DIALING )
     log_printf( &logger, "\r\n Hook OFF\r\n" );
     dtmf_hook_off ( &dtmf );
-    Delay_ms ( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " Dial: %s\r\n", ( char * ) DIAL_NUMBER );
     dtmf_dial ( &dtmf, DIAL_NUMBER );
     dtmf.rx_mode &= DTMF_RX_LEVEL_MASK; // No change in rx level setting
@@ -189,7 +192,10 @@ void application_task ( void )
     }
     log_printf( &logger, " Hook ON\r\n" );
     dtmf_hook_on ( &dtmf );
-    Delay_ms ( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #elif ( DEMO_APP == APP_ANSWERING )
     uint8_t rx_data = 0;
     uint8_t msg_end_buff[ 2 ] = { 0 };
@@ -263,7 +269,10 @@ void application_task ( void )
     }
     log_printf( &logger, " Hook ON\r\n" );
     dtmf_hook_on ( &dtmf );
-    Delay_ms ( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif
 }
 ```

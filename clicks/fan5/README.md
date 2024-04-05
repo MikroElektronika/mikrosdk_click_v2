@@ -162,7 +162,8 @@ void application_task ( void )
         }
     }
     
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #else
     uint16_t speed;
     uint8_t duty_value;
@@ -171,10 +172,14 @@ void application_task ( void )
     {
         fan5_set_duty_cycle( &fan5, duty_value );
         log_printf( &logger, " Duty value: %d \r\n", ( uint16_t ) duty_value );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
         fan5_get_rpm1( &fan5, &speed);
         log_printf( &logger, " SPEED: %d RPM \r\n", speed );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
 #endif
 }

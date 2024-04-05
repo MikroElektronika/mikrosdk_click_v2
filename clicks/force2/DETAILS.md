@@ -95,7 +95,7 @@ void application_init ( void )
     log_printf( &logger, "--------------------\r\n" );
     log_printf( &logger, "    Force 2 click   \r\n" );
     log_printf( &logger, "--------------------\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
   
 ```
@@ -115,7 +115,7 @@ void application_task ( void )
         log_printf( &logger, " Force: %.1f N\r\n", 
                     FORCE2_FORCE_MAX - voltage * FORCE2_FORCE_MAX / FORCE2_VREF );
         log_printf( &logger, "-----------------------------\r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }  
 

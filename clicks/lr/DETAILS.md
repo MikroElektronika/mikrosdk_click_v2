@@ -154,7 +154,7 @@ void application_task ( void )
         {
             log_printf( &logger, " Response : %s \r\n", resp_buf );
         }
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 #endif
 }

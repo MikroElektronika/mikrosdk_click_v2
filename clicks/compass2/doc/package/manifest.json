@@ -25,17 +25,18 @@
     "name": "mikroe.click.compass2",
     "product_link": "https://www.mikroe.com/compass-2-click",
     "short_description": "Compass 2 click carries the AK8963 3-axis electronic compass. The AK8963 sensor is based on the Hall effect.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1833
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Compass2",
     "subdir_name": "lib_compass2"
 }
+
 
 
 

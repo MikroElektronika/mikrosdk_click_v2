@@ -73,7 +73,7 @@ void application_task ( void )
             {
                 driver_set_in1( &driver, ENABLE_IN );
                 log_printf( &logger, "OUT1 enabled\r\n" );
-                Delay_ms( PULSE_WIDTH );
+                Delay_ms ( PULSE_WIDTH );
                 driver_set_in1( &driver, DISABLE_IN );
                 log_printf( &logger, "OUT1 disabled\r\n" );
                 break;
@@ -82,7 +82,7 @@ void application_task ( void )
             {
                 driver_set_in2( &driver, ENABLE_IN );
                 log_printf( &logger, "OUT2 enabled\r\n" );
-                Delay_ms( PULSE_WIDTH );
+                Delay_ms ( PULSE_WIDTH );
                 driver_set_in2( &driver, DISABLE_IN );
                 log_printf( &logger, "OUT2 disabled\r\n" );
                 break;
@@ -91,7 +91,7 @@ void application_task ( void )
             {
                 driver_set_in3( &driver, ENABLE_IN );
                 log_printf( &logger, "OUT3 enabled\r\n" );
-                Delay_ms( PULSE_WIDTH );
+                Delay_ms ( PULSE_WIDTH );
                 driver_set_in3( &driver, DISABLE_IN );
                 log_printf( &logger, "OUT3 disabled\r\n" );
                 break;
@@ -100,7 +100,7 @@ void application_task ( void )
             {
                 driver_set_in4( &driver, ENABLE_IN );
                 log_printf( &logger, "OUT4 enabled\r\n" );
-                Delay_ms( PULSE_WIDTH );
+                Delay_ms ( PULSE_WIDTH );
                 driver_set_in4( &driver, DISABLE_IN );
                 log_printf( &logger, "OUT4 disabled\r\n" );
                 break;
@@ -109,7 +109,7 @@ void application_task ( void )
             {
                 driver_set_in5( &driver, ENABLE_IN );
                 log_printf( &logger, "OUT5 enabled\r\n" );
-                Delay_ms( PULSE_WIDTH );
+                Delay_ms ( PULSE_WIDTH );
                 driver_set_in5( &driver, DISABLE_IN );
                 log_printf( &logger, "OUT5 disabled\r\n" );
                 break;
@@ -118,7 +118,7 @@ void application_task ( void )
             {
                 driver_set_in6( &driver, ENABLE_IN );
                 log_printf( &logger, "OUT6 enabled\r\n" );
-                Delay_ms( PULSE_WIDTH );
+                Delay_ms ( PULSE_WIDTH );
                 driver_set_in6( &driver, DISABLE_IN );
                 log_printf( &logger, "OUT6 disabled\r\n" );
                 break;
@@ -127,7 +127,7 @@ void application_task ( void )
             {
                 driver_set_in7( &driver, ENABLE_IN );
                 log_printf( &logger, "OUT7 enabled\r\n" );
-                Delay_ms( PULSE_WIDTH );
+                Delay_ms ( PULSE_WIDTH );
                 driver_set_in7( &driver, DISABLE_IN );
                 log_printf( &logger, "OUT7 disabled\r\n" );
                 break;
@@ -140,12 +140,17 @@ void application_task ( void )
         log_printf( &logger, "----------------------\r\n" );
         temp <<= 1;
         
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

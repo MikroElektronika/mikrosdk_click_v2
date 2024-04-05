@@ -25,14 +25,15 @@
     "name": "mikroe.click.digipot12",
     "product_link": "https://www.mikroe.com/digi-pot-12-click",
     "short_description": "DIGI POT 12 Click is a compact add-on board that contains a digitally controlled potentiometer. This board features the AD5142A, a dual-channel, 256-position nonvolatile digital potentiometer from Analog Devices. On this Click board™, two digitally I2C-controlled potentiometers are realized with end-to-end resistance of 10KΩ and wiper resistance of only 40Ω. The DIGI POT 12 Click can be used in potentiometer and linear gain modes.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.DIGIPOT12",
     "subdir_name": "lib_digipot12"
 }
+
 
 
 

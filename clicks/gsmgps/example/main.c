@@ -170,67 +170,72 @@ void application_init ( void )
     gsmgps_send_cmd( &gsmgps, GSMGPS_CMD_AT );
     app_error_flag = gsmgps_rsp_check( );
     gsmgps_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // ATI - product information
     gsmgps_send_cmd( &gsmgps, GSMGPS_CMD_ATI );
     app_error_flag = gsmgps_rsp_check(  );
     gsmgps_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CGMR - firmware version
     gsmgps_send_cmd( &gsmgps, GSMGPS_CMD_CGMR );
     app_error_flag = gsmgps_rsp_check(  );
     gsmgps_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // COPS - deregister from network
     gsmgps_send_cmd_with_parameter( &gsmgps, GSMGPS_CMD_COPS, "2" );
     app_error_flag = gsmgps_rsp_check(  );
     gsmgps_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CGDCONT - set sim apn
     gsmgps_set_sim_apn( &gsmgps, SIM_APN );
     app_error_flag = gsmgps_rsp_check(  );
     gsmgps_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
      
     // CFUN - full funtionality
     gsmgps_send_cmd_with_parameter( &gsmgps, GSMGPS_CMD_CFUN, "1" );
     app_error_flag = gsmgps_rsp_check(  );
     gsmgps_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // COPS - automatic mode
     gsmgps_send_cmd_with_parameter( &gsmgps, GSMGPS_CMD_COPS, "0" );
     app_error_flag = gsmgps_rsp_check(  );
     gsmgps_error_check( app_error_flag );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     // CREG - network registration status
     gsmgps_send_cmd_with_parameter( &gsmgps, GSMGPS_CMD_CREG, "2" );
     app_error_flag = gsmgps_rsp_check(  );
     gsmgps_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CIMI - request IMSI
     gsmgps_send_cmd( &gsmgps, GSMGPS_CMD_CIMI );
     app_error_flag = gsmgps_rsp_check(  );
     gsmgps_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CGNSPWR - power ON GPS
     gsmgps_send_cmd_with_parameter( &gsmgps, GSMGPS_CMD_CGNSPWR, "1" );
     app_error_flag = gsmgps_rsp_check(  );
     gsmgps_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     app_buf_len = 0;
     app_buf_cnt = 0;
     app_connection_status = WAIT_FOR_CONNECTION;
     log_info( &logger, " Application Task " );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -241,19 +246,23 @@ void application_task ( void )
         gsmgps_send_cmd_check( &gsmgps, GSMGPS_CMD_CGATT );
         app_error_flag = gsmgps_rsp_check(  );
         gsmgps_error_check( app_error_flag );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         
         // CREG - network registration status
         gsmgps_send_cmd_check( &gsmgps, GSMGPS_CMD_CREG );
         app_error_flag = gsmgps_rsp_check(  );
         gsmgps_error_check( app_error_flag );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         
         // CSQ - signal quality
         gsmgps_send_cmd( &gsmgps, GSMGPS_CMD_CSQ );
         app_error_flag = gsmgps_rsp_check(  );
         gsmgps_error_check( app_error_flag );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     else
     {
@@ -263,7 +272,9 @@ void application_task ( void )
         gsmgps_send_cmd_with_parameter( &gsmgps, GSMGPS_CMD_CMGF, "0" );
         app_error_flag = gsmgps_rsp_check(  );
         gsmgps_error_check( app_error_flag );
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
         
         for( ; ; )
         {   
@@ -272,7 +283,9 @@ void application_task ( void )
             gsmgps_send_cmd_with_parameter( &gsmgps, GSMGPS_CMD_CGPSINF, "2" );
             app_error_flag = gsmgps_rsp_check(  );
             gsmgps_error_check( app_error_flag );
-            Delay_ms( 3000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
             
             if ( gps_parser_flag == 0 )
             {
@@ -280,9 +293,37 @@ void application_task ( void )
                 gsmgps_send_sms_pdu ( &gsmgps, SIM_SMSC, PHONE_NUMBER_TO_MESSAGE, gps_info_message );
                 app_error_flag = gsmgps_rsp_check(  );
                 gsmgps_error_check( app_error_flag );
-                Delay_ms( 10000 );
-                Delay_ms( 10000 );
-                Delay_ms( 10000 );
+                // 30 seconds delay
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
             }
         }
     }
@@ -290,6 +331,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -375,13 +421,13 @@ static err_t gsmgps_rsp_check ( void )
             {
                 gsmgps_send_cmd( &gsmgps, GSMGPS_CMD_AT );
                 gsmgps_process(  );
-                Delay_ms( 100 );
+                Delay_ms ( 100 );
             }
             gsmgps_clear_app_buf(  );
             return APP_ERROR_TIMEOUT;
         }
         
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
     
     gsmgps_check_connection();

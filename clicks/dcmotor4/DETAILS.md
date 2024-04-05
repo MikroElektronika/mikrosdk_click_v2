@@ -86,13 +86,13 @@ void application_init ( )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, "---- Application Init ----" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     //  Click initialization.
 
     dcmotor4_cfg_setup( &cfg );
     DCMOTOR4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     dcmotor4_init( &dcmotor4, &cfg );
     dcmotor4_pwm_start( &dcmotor4 );
 }
@@ -131,7 +131,7 @@ void application_task ( )
     dcmotor4_enable_motor ( &dcmotor4 );
     
     log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     if ( 10 == duty_cnt ) 
     {

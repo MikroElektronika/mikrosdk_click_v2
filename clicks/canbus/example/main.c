@@ -97,10 +97,10 @@ void application_init ( void ) {
     app_buf_len = 0;
     app_buf_cnt = 0;
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     canbus_set_high_speed_mode( &canbus );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     #ifdef TRANSMIT
     
@@ -108,14 +108,15 @@ void application_init ( void ) {
         log_printf( &logger, "      MikroE      \r\n" );
         log_printf( &logger, "------------------\r\n" );
         log_printf( &logger, "  Transmit data   \r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
 
     #endif
         
     #ifdef RECIEVER
 
         log_printf( &logger, "   Receive data  \r\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 ); 
+        Delay_ms ( 1000 );
     
     #endif
         
@@ -127,7 +128,8 @@ void application_task ( void ) {
     
         canbus_send_data( &canbus, demo_message );
         log_printf( &logger, "\t%s", demo_message );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 ); 
+        Delay_ms ( 1000 );
         log_printf( &logger, "------------------\r\n" );    
     
     #endif
@@ -146,6 +148,11 @@ void application_task ( void ) {
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

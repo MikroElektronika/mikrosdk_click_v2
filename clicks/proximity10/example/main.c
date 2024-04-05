@@ -114,7 +114,8 @@ void application_init ( void )
     PROXIMITY10_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     proximity10_init( &proximity10, &cfg );
 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     w_temp = PROXIMITY10_HW_KEY;
     proximity10_generic_write( &proximity10, PROXIMITY10_HW_KEY_REG, &w_temp, 1 );
@@ -123,7 +124,8 @@ void application_init ( void )
     check_response( cmd_resp );
     cmd_resp = proximity10_send_command( &proximity10, PROXIMITY10_RESET_CMD );
     check_response( cmd_resp );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     cmd_resp = proximity10_param_set( &proximity10, PROXIMITY10_CHLIST_PARAM, PROXIMITY10_EN_AUX | PROXIMITY10_EN_ALS_IR | PROXIMITY10_EN_ALS_VIS | PROXIMITY10_EN_PS1 );
     check_response( cmd_resp );
@@ -143,7 +145,7 @@ void application_init ( void )
     
     log_printf( &logger, "** Proximity 10 is initialized **\r\n" );
     log_printf( &logger, "**************************************\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -174,17 +176,22 @@ void application_task ( void )
         alarm_dur = 180 - alarm_dur;
         
         //Sound_Play( 1400, alarm_dur );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     else
     {
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     log_printf( &logger, "**************************************\r\n" );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

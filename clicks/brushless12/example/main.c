@@ -58,7 +58,7 @@ void application_init ( void )
     }
     
     brushless12_default_cfg( &brushless12 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Task " );
 }
 
@@ -67,24 +67,39 @@ void application_task ( void )
     log_printf( &logger, "The motor turns forward! \r\n" );
     brushless12_set_direction ( &brushless12, BRUSHLESS12_DIR_FORWARD );
     brushless12_set_brake ( &brushless12, BRUSHLESS12_START );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "Pull brake! \r\n" );
     brushless12_set_brake ( &brushless12, BRUSHLESS12_BRAKE );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "The motor turns in reverse! \r\n" );
     brushless12_set_direction ( &brushless12, BRUSHLESS12_DIR_REVERSE );
     brushless12_set_brake ( &brushless12, BRUSHLESS12_START );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "Pull brake! \r\n" );
     brushless12_set_brake ( &brushless12, BRUSHLESS12_BRAKE );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

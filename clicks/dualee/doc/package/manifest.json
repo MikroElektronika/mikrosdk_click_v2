@@ -25,17 +25,18 @@
     "name": "mikroe.click.dualee",
     "product_link": "https://www.mikroe.com/dual-ee-click",
     "short_description": "Dual EE Click contains two AT24CM02 EEPROM ICs onboard which gives total of 4MB of memory. Each memory IC can be addressed through the I2C interface with the transfer speed of 400KHz. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2910
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.DualEE",
     "subdir_name": "lib_dualee"
 }
+
 
 
 

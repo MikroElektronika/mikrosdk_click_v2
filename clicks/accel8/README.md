@@ -106,7 +106,7 @@ void application_init ( void )
     log_printf( &logger, " *-* Device Configuration *-* \r\n" );
     accel8_default_cfg ( &accel8, ACCEL8_INTE_DATA_RDY_ENABLE, ACCEL8_GYRO_CFG_FULL_SCALE_RANGE_250dbs, &range);
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " --- Start Measurement --- \r\n" );
 }
   
@@ -148,7 +148,8 @@ void application_task ( void )
     log_printf( &logger, "|_________|_________________|\r\n" );
 
     log_printf( &logger, " \r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

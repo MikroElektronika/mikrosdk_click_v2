@@ -89,7 +89,7 @@ static void rs2322_process ( void )
             process_cnt--;
             
             // Process delay 
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
     log_printf( &logger, "%s\r\n", current_rsp_buf );
@@ -145,6 +145,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

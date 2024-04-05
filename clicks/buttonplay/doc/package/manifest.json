@@ -25,17 +25,18 @@
     "name": "mikroe.click.buttonplay",
     "product_link": "https://www.mikroe.com/button-play-click",
     "short_description": "Button PLAY click is a very interesting interactive gadget on a Click board™. It is an integrated capacitive touch sensor display in the form of a button. By utilizing an advanced capacitive touch sensing technology, the CTHS15CIC05ARROW sensor can successfully replace the traditional mechanical button, allowing very simplified yet reliable user interfaces to be developed. Besides the touch detection, this sensor also features a green arrow icon with backlight, which makes the Click board™ very useful for building various stylized and visually appealing interfaces.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2685
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.ButtonPlay",
     "subdir_name": "lib_buttonplay"
 }
+
 
 
 

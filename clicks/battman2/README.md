@@ -121,10 +121,10 @@ void application_init ( void )
 
     battman2_default_cfg ( &battman2 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 ); 
+    Delay_ms ( 100 ); 
     
     battman2_set_charger_enable( &battman2, BATTMAN2_SET_CHARGER_DISABLE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
         
     #ifdef CHARGER
         log_printf( &logger, "-----------------------------------------------\r\n" );
@@ -153,10 +153,10 @@ void application_init ( void )
         chg_cfg.mux_sel           = BATTMAN2_MUX_SEL_MULTIPLEXER_DISABLED;
         
         battman2_set_charger_cfg( &battman2, chg_cfg );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         
         battman2_set_charger_enable( &battman2, BATTMAN2_SET_CHARGER_ENABLE );
-        Delay_ms( 100 );  
+        Delay_ms ( 100 );  
     #endif
         
     #ifdef BUCKBOOST
@@ -176,7 +176,7 @@ void application_init ( void )
         battman2_set_gpio_output( &battman2, BATTMAN2_SEL_LED_RED, BATTMAN2_PIN_STATE_OFF );
         battman2_set_gpio_output( &battman2, BATTMAN2_SEL_LED_YELLOW, BATTMAN2_PIN_STATE_ON );
         battman2_set_gpio_output( &battman2, BATTMAN2_SEL_LED_BLUE, BATTMAN2_PIN_STATE_OFF );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     #endif
 }
 
@@ -199,10 +199,10 @@ void application_task ( void )
 {   
     #ifdef CHARGER
         battman2_get_chg_status( &battman2, &chg_stat );
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
         
         display_charger_status( );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
         
         battman2_get_charger_cfg( &battman2, &chg_cfg );
         log_printf( &logger, " Fast-charge constant current value : %.1f mA\r\n", chg_cfg.chg_cc );
@@ -213,15 +213,15 @@ void application_task ( void )
         log_printf( &logger, " Fast-charge battery Vreg           : %.3f V\r\n", chg_cfg.chg_cv );
         log_printf( &logger, " Vfast-chg-jeita                    : %.3f V\r\n", chg_cfg.chg_cv_jeita );
         log_printf( &logger, "-----------------------------------------------\r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     #endif
         
     #ifdef BUCKBOOST 
         battman2_get_sbb_config( &battman2, sbb_sel, &sbb_cfg );
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
         
         display_sbb_status( );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     #endif
 }
 

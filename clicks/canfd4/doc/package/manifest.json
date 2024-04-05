@@ -25,17 +25,18 @@
     "name": "mikroe.click.canfd4",
     "product_link": "https://www.mikroe.com/can-fd-4-click",
     "short_description": "The CAN FD 4 Click is a Click board™ that features the NCV7344D10R2G, a Controller Area Network (CAN) transceiver, from ON Semiconductor.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3242
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.CanFd4",
     "subdir_name": "lib_canfd4"
 }
+
 
 
 

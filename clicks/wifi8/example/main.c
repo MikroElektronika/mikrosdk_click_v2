@@ -89,7 +89,7 @@ void application_init(void)
     log_init( &logger, &log_cfg );
     log_info(&logger, " Application Init ");
 
-    Delay_ms(1000);
+    Delay_ms ( 1000 );
 
     wifi8_cfg_setup(&wifi8_cfg);
     WIFI8_MAP_MIKROBUS(wifi8_cfg, MIKROBUS_1);
@@ -178,6 +178,11 @@ void application_task(void)
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -288,7 +293,7 @@ static void socket_cb(int8_t sock, uint8_t u8_msg, void *pv_msg)
             if (pstr_bind && pstr_bind->status == 0)
             {
                 log_printf(&logger, "socket_cb: bind success!\r\n");
-                Delay_ms(500);
+                Delay_ms ( 500 );
                 wifi8_socket_listen(&wifi8, tcp_server_socket, 0);
             }
             else

@@ -25,17 +25,18 @@
     "name": "mikroe.click.nvsram",
     "product_link": "https://www.mikroe.com/nvsram-click",
     "short_description": "nvSRAM Click is a compact add-on board that contains the most reliable nonvolatile memory. This board features the CY14B101J, a 1-Mbit nvSRAM organized as 128K words of 8 bits each with a nonvolatile element in each memory cell from Cypress Semiconductor. The embedded nonvolatile elements incorporate the QuantumTrap technology and provide highly reliable nonvolatile storage of data.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         4100
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.nvSRAM",
     "subdir_name": "lib_nvsram"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "NTAG 5 Link Click",
     "description": "NTAG 5 Link Click is a compact add-on board that acts as a bridge between an NFC-enabled device and any I2C slave, such as a sensor or external memory. This board features the NTA5332, a highly integrated NFC IC which creates a secure standard-based link from the device to the cloud from NXP Semiconductors. Based on the NTAG 5 switch and operating at 13.56MHz, the NTA5332 represents an NFC Forum-compliant contactless tag that can be read and written by an NFC-enabled device at close range and by an ISO/IEC 15693-enabled industrial reader over a more extended range. It also incorporates an I2C interface with an I2C master features and AES mutual authentication, SRAM memory, and energy harvesting possibility, which means it can supply power to other components in the system.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","NTP53321G0JHKZ"],
     "category" : ["RFID/NFC"]
 }

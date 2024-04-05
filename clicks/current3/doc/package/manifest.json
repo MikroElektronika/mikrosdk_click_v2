@@ -25,17 +25,18 @@
     "name": "mikroe.click.current3",
     "product_link": "https://www.mikroe.com/current-3-click",
     "short_description": "Current 3 Click is a compact add-on board for applications like current sense and temperature monitoring.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3825
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.Current3",
     "subdir_name": "lib_current3"
 }
+
 
 
 

@@ -25,14 +25,15 @@
     "name": "mikroe.click.battman3",
     "product_link": "https://www.mikroe.com/batt-man-3-click",
     "short_description": "BATT-MAN 3 Click is a compact add-on board representing an advanced battery management solution. This board features the ADP5350, a power management IC with inductive boost LED, and three LDO regulators from Analog Devices. This I2C programmable board supports USB optimized for USB voltage input. It combines one high-performance buck regulator for single Li-Ion/Li-Ion polymer battery charging, a fuel gauge, a highly programmable boost regulator for LED backlight illumination, and three 150mA LDO regulators.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.BATT-MAN3",
     "subdir_name": "lib_battman3"
 }
+
 
 
 

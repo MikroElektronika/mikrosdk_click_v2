@@ -25,14 +25,15 @@
     "name": "mikroe.click.amrangle",
     "product_link": "https://www.mikroe.com/amr-angle-click",
     "short_description": "AMR Angle Click is a compact add-on board containing an anisotropic magnetoresistive measurement solution ideal for either angle or linear position measurements.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.AMRAngle",
     "subdir_name": "lib_amrangle"
 }
+
 
 
 

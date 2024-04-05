@@ -75,7 +75,7 @@ void application_init ( void )
 void application_task ( void )
 {
     shtan_set_mode( &shtan, SHTAN_SET_ADC_MODE_TEMP );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 
     float shtan_temperature;
 
@@ -85,7 +85,7 @@ void application_task ( void )
     }
 
     shtan_set_mode( &shtan, SHTAN_SET_ADC_MODE_HUM );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 
     float shtan_humidity;
 
@@ -95,11 +95,16 @@ void application_task ( void )
     }
 
     log_printf( &logger, "\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -59,7 +59,7 @@ void application_init ( void )
     }
     
     ph_factory_rst( &ph, app_buf );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     ph_cont_read( &ph, 0, app_buf );
     log_printf( &logger, "-----------------------\r\n" );
@@ -71,19 +71,19 @@ void application_init ( void )
     log_printf( &logger, "-----------------------\r\n" );
     for ( uint8_t n_cnt = 0; n_cnt < 20; n_cnt++ )
     {
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     log_printf( &logger, " Starting calibration  \r\n" );
     log_printf( &logger, "-----------------------\r\n" );
     ph_perf_calib ( &ph, PH_CMD_CALIB_MID, 7.000, app_buf );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " Calibration done!     \r\n" );
     log_printf( &logger, "-----------------------\r\n" );
     
     log_printf( &logger, " - Application  task -\r\n" );
     log_printf( &logger, "-----------------------\r\n" );
     ph_send_cmd( &ph, PH_CMD_DIS_RSP_CODES );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     ph_clr_log_buf( app_buf );
 }
 
@@ -94,11 +94,16 @@ void application_task ( void )
     log_printf( &logger, " pH value: %s ", app_buf );
     log_printf( &logger, "-----------------------\r\n" );
     ph_clr_log_buf( app_buf );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

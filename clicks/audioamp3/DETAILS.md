@@ -171,7 +171,8 @@ void application_task ( void )
     {
         status_flag = audioamp3_set_gain_lvl( &audioamp3, cnt );
         log_printf( &logger, "    -  Volume Up  -  \r\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 	
     log_printf( &logger, " ---------------------------\r\n\n" );
@@ -181,7 +182,8 @@ void application_task ( void )
         status_flag = audioamp3_set_gain_lvl( &audioamp3, cnt );
     
         log_printf( &logger, "    -  Volume Down  -  \r\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 	
     log_printf( &logger, " ---------------------------\r\n\n" );

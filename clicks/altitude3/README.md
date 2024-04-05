@@ -117,7 +117,7 @@ void application_task ( void )
 
     response = altitude3_measurement_mode( &altitude3, ALTITUDE3_NORMAL_T_FIRST );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     response = altitude3_get_data( &altitude3, response );
     
@@ -129,7 +129,7 @@ void application_task ( void )
     
         log_printf( &logger, "Altitude is : %d m\r\n\r\n", ( int16_t ) altitude3.sens_data.altitude );
 
-        Delay_ms( 400 );
+        Delay_ms ( 400 );
     }
 } 
 

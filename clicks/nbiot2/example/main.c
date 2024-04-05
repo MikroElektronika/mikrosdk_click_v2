@@ -211,7 +211,10 @@ void application_init ( void )
     
     log_printf( &logger, " - Reseting device... \r\n" );
     nbiot2_hw_reset( &nbiot2 );
-    Delay_ms( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     app_error_flag = nbiot2_process( );
     nbiot2_error_check( app_error_flag );
     
@@ -240,7 +243,8 @@ void application_init ( void )
     nbiot2_error_check( app_error_flag );   
     
     nbiot2_send_cmd_with_parameter( &nbiot2, NBIOT2_CMD_QRST, "1" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     app_error_flag = nbiot2_process( );
     nbiot2_error_check( app_error_flag );  
     
@@ -292,7 +296,17 @@ void application_task ( void )
             #endif   
             #if defined( NBIOT2_SMS_EXAMPLE )
                 nbiot2_send_sms( );
-                Delay_ms( 10000 );
+                // 10 seconds delay
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
             #endif
             break;
         }
@@ -300,7 +314,7 @@ void application_task ( void )
         {
             log_error( &logger, "Application status error!" );
             app_connection_status = CONFIGURATION_FOR_EXAMPLE;
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
             break;
         }
     }
@@ -308,6 +322,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -406,7 +425,7 @@ static err_t nbiot2_check_response ( void )
             nbiot2_clear_app_buf( );
             return NBIOT2_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
     if ( strstr( app_buf, NBIOT2_RSP_OK ) )
     {
@@ -459,7 +478,7 @@ static void nbiot2_error_check( err_t error_flag )
         }
     }
     nbiot2_clear_app_buf(  );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 static void nbiot2_config_device_for_network( void )
@@ -511,7 +530,17 @@ static void nbiot2_send_sms ( void )
     if ( NBIOT2_OK != app_error_flag )
     {
         log_printf( &logger, "> Message sent...\r\n" );
-        Delay_ms( 10000 );
+        // 10 seconds delay
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 #elif defined( SMS_PDU_MODE )
     nbiot2_send_cmd_with_parameter( &nbiot2, NBIOT2_CMD_CMGF, "0" );
@@ -524,7 +553,17 @@ static void nbiot2_send_sms ( void )
     if ( NBIOT2_OK != app_error_flag )
     {
         log_printf( &logger, "> Message sent...\r\n" );
-        Delay_ms( 10000 );
+        // 10 seconds delay
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 #endif
 }
@@ -574,7 +613,8 @@ static void nbiot2_tcp_udp_example ( void )
     nbiot2_send_cmd_with_parameter( &nbiot2, NBIOT2_CMD_QIOPEN, cmd_buf );
     app_error_flag = nbiot2_check_response( );
     nbiot2_error_check( app_error_flag );  
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     if ( NBIOT2_OK == app_error_flag )
     {
@@ -614,10 +654,11 @@ static void nbiot2_tcp_udp_example ( void )
                 log_error( &logger, "TIMEOUT!!!" );
                 break;
             }   
-            Delay_ms( 1 );
+            Delay_ms ( 1 );
         }
         timeout_cnt = 0;
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 ); 
+        Delay_ms ( 1000 );
         
         // Close TCP socket
         nbiot2_send_cmd_with_parameter( &nbiot2, NBIOT2_CMD_QICLOSE, TCP_PROTOCOL );
@@ -644,7 +685,8 @@ static void nbiot2_tcp_udp_example ( void )
     nbiot2_send_cmd_with_parameter( &nbiot2, NBIOT2_CMD_QIOPEN, cmd_buf );
     app_error_flag = nbiot2_check_response( );
     nbiot2_error_check( app_error_flag );  
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     if ( NBIOT2_OK == app_error_flag )
     {
@@ -684,10 +726,11 @@ static void nbiot2_tcp_udp_example ( void )
                 log_error( &logger, "TIMEOUT!!!" );
                 break;
             }   
-            Delay_ms( 1 );
+            Delay_ms ( 1 );
         }
         timeout_cnt = 0;
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 ); 
+        Delay_ms ( 1000 );
         
         // Close UDP socket
         nbiot2_send_cmd_with_parameter( &nbiot2, NBIOT2_CMD_QICLOSE, UDP_PROTOCOL );
@@ -699,7 +742,11 @@ static void nbiot2_tcp_udp_example ( void )
         log_error( &logger, "Not connected to the UDP server" );
     }
     
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 

@@ -113,14 +113,14 @@ void application_task ( void ) {
     uint16_t mv_data;
     
     isoadc2_read_adc( &isoadc2, &rx_data );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     isoadc2_get_mv( &isoadc2, &mv_data );
     
     log_printf( &logger, " ADC: %d \r\n", rx_data );
     log_printf( &logger, " VIN: %d mV\r\n", mv_data );
     log_printf( &logger, "---------------\r\n" );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

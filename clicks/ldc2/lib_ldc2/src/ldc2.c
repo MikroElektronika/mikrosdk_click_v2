@@ -323,7 +323,7 @@ err_t ldc2_measure_inductance ( ldc2_t *ctx, float *freq, float *inductance )
     
     if ( *freq > 0 )
     {
-        *inductance = 1.0 / ( LDC2_PARALLEL_CAPACITANCE_uF * pow( TWO_PI * *freq, 2.0 ) );
+        *inductance = 1.0 / ( LDC2_PARALLEL_CAPACITANCE_uF * pow( LDC2_MATH_TWO_PI * *freq, 2.0 ) );
     }
     
     return error_flag;

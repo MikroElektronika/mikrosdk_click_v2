@@ -56,7 +56,7 @@ void application_init ( void )
     
     bargraph3_enable( &bargraph3, BARGRAPH3_DEVICE_ENABLE );
     bargraph3_set_pwm( &bargraph3, BARGRAPH3_DEVICE_ENABLE );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void application_task ( void )
@@ -68,12 +68,17 @@ void application_task ( void )
         bargraph3_display( &bargraph3, BARGRAPH3_INCREASE_LED,  
                            BARGRAPH3_DIRECTION_BOTTOM_TO_TOP, 
                            bargraph_cnt );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

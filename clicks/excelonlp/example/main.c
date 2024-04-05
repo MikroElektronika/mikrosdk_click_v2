@@ -92,11 +92,20 @@ void application_task ( )
        Delay_100ms();
    }
    log_printf( &logger, "\r\n \r\n" );
-   Delay_ms( 5000 );
+   Delay_ms ( 1000 );
+   Delay_ms ( 1000 );
+   Delay_ms ( 1000 );
+   Delay_ms ( 1000 );
+   Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

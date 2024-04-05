@@ -92,12 +92,12 @@ void application_init ( void )
     PWMDRIVER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pwmdriver_init( &pwmdriver, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "   Initialization PWM  \r\n  " );
     pwmdriver_set_duty_cycle( &pwmdriver, 0.0 );
     pwmdriver_pwm_start( &pwmdriver );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, "---- Application Task ----" );
 }
   
@@ -120,7 +120,7 @@ void application_task ( void )
 
     pwmdriver_set_duty_cycle ( &pwmdriver, duty );
     log_printf( &logger, "Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     if ( 10 == duty_cnt ) 
     {

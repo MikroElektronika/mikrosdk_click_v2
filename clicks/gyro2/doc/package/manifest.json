@@ -25,17 +25,18 @@
     "name": "mikroe.click.gyro2",
     "product_link": "https://www.mikroe.com/gyro-2-click",
     "short_description": "The Gyro 2 click is a three-axis digital angular rate sensor which can sense the angular movement and velocity in three perpendicular axes.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2604
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Gyro2",
     "subdir_name": "lib_gyro2"
 }
+
 
 
 

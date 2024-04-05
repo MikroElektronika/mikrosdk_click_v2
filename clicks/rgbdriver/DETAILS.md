@@ -92,10 +92,10 @@ void application_init ( void )
     rgbdriver_cfg_setup( &cfg );
     RGBDRIVER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rgbdriver_init( &rgbdriver, &cfg );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     rgbdriver_default_cfg( &rgbdriver );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```

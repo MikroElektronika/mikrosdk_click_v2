@@ -134,16 +134,16 @@ void application_task ( void )
     stepper11_set_direction( &stepper11, 1 );
     log_info( &logger, " Rotate motor CW for 360 degrees in full step" );
     stepper11_move_motor_angle( &stepper11, 360, STEPPER11_SPEED_FAST );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     stepper11_set_direction( &stepper11, 0 );
     stepper11_set_step_resolution( &stepper11, STEPPER11_RESOLUTION_QUARTER );
     log_info( &logger, " Rotate motor CCW for 180 degrees in half step" );
     stepper11_move_motor_angle( &stepper11, 180, STEPPER11_SPEED_FAST );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     stepper11_set_step_resolution( &stepper11, STEPPER11_RESOLUTION_1div16 );
     log_info( &logger, " Rotate motor CCW for 180 degrees in 1/8 step" );
     stepper11_move_motor_angle( &stepper11, 180, STEPPER11_SPEED_FAST );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

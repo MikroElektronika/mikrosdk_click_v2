@@ -25,17 +25,18 @@
     "name": "mikroe.click.dac",
     "product_link": "https://www.mikroe.com/dac-click",
     "short_description": "DAC click is an accessory board in mikroBUS form factor. It includes a 12-bit Digital-to-Analog Converter MCP4921 that features an optional 2x buffered output and SPI interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         209
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.Dac",
     "subdir_name": "lib_dac"
 }
+
 
 
 

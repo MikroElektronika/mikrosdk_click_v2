@@ -92,37 +92,42 @@ void application_task ( void )
     capsense_read_data( &capsense, CAPSENSE_CS_READ_STATUS0, &button_select );
     capsense_get_slider_lvl( &capsense, &slider_lvl );
     capsense_write_data( &capsense, CAPSENSE_OUTPUT_PORT0, current_led_state );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     if ( 8 == button_select )
     {
         current_led_state ^= 0x01;
         log_printf( &logger, "Toggle LED1\r\n");
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     if ( 16 == button_select )
     {
         current_led_state ^= 0x02;
         log_printf( &logger, "Toggle LED2\r\n");
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     if ( 24 == button_select )
     {
         current_led_state = ~current_led_state;
         log_printf( &logger, "Toggle both LEDs\r\n");
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 
     if ( slider_lvl )
     {
         bits_to_str( slider_lvl, output_lvl );
         log_printf( &logger, "Slider level - channels [5-1]:\t%s \r\n", &output_lvl[ 3 ] );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

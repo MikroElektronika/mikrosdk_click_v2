@@ -25,13 +25,14 @@
     "name": "mikroe.click.tempalarm",
     "product_link": "https://www.mikroe.com/temp-alarm-click",
     "short_description": "Temp Alarm Click is a compact add-on board that adds temperature alarm functionalities to your project. This board features the PTMP4718, a high-accuracy remote and local temperature sensor from Texas Instruments. This temperature sensor has pin-programmable alert thresholds, with a fault queue for debounce.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.TempAlarm",
     "subdir_name": "lib_tempalarm"
 }
+
 
 

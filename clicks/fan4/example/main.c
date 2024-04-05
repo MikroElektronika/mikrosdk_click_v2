@@ -72,12 +72,17 @@ void application_task ( void )
         log_info( &logger, "** Voltage is %d mV", voltage );
 
         fan4_set_output( &fan4, voltage, FAN4_BOOST_START_TIMER_DIS );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

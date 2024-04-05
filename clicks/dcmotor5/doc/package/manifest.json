@@ -25,17 +25,18 @@
     "name": "mikroe.click.dcmotor5",
     "product_link": "https://www.mikroe.com/dc-motor-5-click",
     "short_description": "DC MOTOR 5 click carries the DRV8701 brushed DC motor gate driver from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2094
     ],
-    "version": "2.1.0.18",
+    "version": "2.1.0.19",
     "cmake": true,
     "alias": "Click.DcMotor5",
     "subdir_name": "lib_dcmotor5"
 }
+
 
 
 

@@ -148,7 +148,7 @@ void application_task ( void )
         time_seconds_new = rtc_c.time.time_seconds;
     }
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 } 
 
 ```

@@ -119,16 +119,24 @@ void application_task ( void )
 {
     log_printf( &logger, " OUTPUT : IN1\r\n\n" );
     powermux_set_mode( &powermux, POWERMUX_INPUT_CHANNEL_1_ON );
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " OUTPUT : IN2\r\n\n" );
     powermux_set_mode( &powermux, POWERMUX_INPUT_CHANNEL_2_ON );
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " OUTPUT : OFF\r\n\n" );
     powermux_set_mode( &powermux, POWERMUX_INPUT_CHANNEL_OFF );
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " OUTPUT : AUTO\r\n\n" );
     powermux_set_mode( &powermux, POWERMUX_INPUT_CHANNEL_AUTO );
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

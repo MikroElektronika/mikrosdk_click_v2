@@ -130,7 +130,8 @@ void application_task ( void )
     angle_value = magneto_calculate_angle( &magneto );
     log_printf( &logger, "  [ANGLE] : %0.3f \r\n", angle_value );
 
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

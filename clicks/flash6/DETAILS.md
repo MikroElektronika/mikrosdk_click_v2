@@ -92,12 +92,12 @@ void application_init ( void )
     flash6_init( &flash6, &cfg );
 
     flash6_software_reset( &flash6 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     flash6_get_manufacture_device_id( &flash6, &manufacture_id, &device_id );
     log_printf( &logger, "\r\n ------> MANUFACTURE ID: 0x%x \r\n", manufacture_id );
     log_printf( &logger, " ------> DEVICE ID: 0x%x \r\n \r\n", device_id );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -119,7 +119,7 @@ void application_task ( void )
 
     log_printf( &logger, " ---> Erase sector  \r\n" );
     flash6_erase_memory_segment( &flash6, FLASH6_CMD_SECTOR_ERASE_4KB, start_addr );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_printf( &logger, " ---> Write in memory ... \r\n" );
     flash6_write_memory_data( &flash6, start_addr, &write_buf[ 0 ], 9 );
@@ -129,10 +129,11 @@ void application_task ( void )
     log_printf( &logger, "---->>>> " );
     
     log_printf( &logger, "%s ", read_buff );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "----------------------------------\r\n" );
     
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

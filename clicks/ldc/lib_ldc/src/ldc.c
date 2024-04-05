@@ -168,7 +168,7 @@ err_t ldc_get_frequency ( ldc_t *ctx, uint8_t channel, uint16_t divider, float *
 
 float ldc_calculate_inductance ( float frequency )
 {
-    return 1.0 / ( pow( ( TWO_PI * frequency ), 2 ) * LDC_SENSOR_CAPACITANCE );
+    return 1.0 / ( pow( ( LDC_MATH_TWO_PI * frequency ), 2 ) * LDC_SENSOR_CAPACITANCE );
 }
 
 // ------------------------------------------------------------------------- END

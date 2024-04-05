@@ -25,17 +25,18 @@
     "name": "mikroe.click.fan4",
     "product_link": "https://www.mikroe.com/fan-4-click",
     "short_description": "Fan 4 click is a very compact, two-wire fan driver. It utilizes an integrated 5V, DC, brushless-motor driver chip.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2581
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Fan4",
     "subdir_name": "lib_fan4"
 }
+
 
 
 

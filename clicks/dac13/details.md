@@ -133,7 +133,8 @@ void application_task ( void )
         {
             log_printf ( &logger, " Output voltage : %.2f V\r\n\n", out_voltage );
             out_voltage += step;
-            Delay_ms ( 2000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
         }
     }
 }

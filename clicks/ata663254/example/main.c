@@ -61,7 +61,7 @@ void application_init ( void )
     ata663254_init( &ata663254, &cfg );
     
     ata663254_enable( &ata663254, 1 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -80,7 +80,7 @@ void application_task ( void )
         }
         memset( rec_buf, 0 , 50 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 #endif
 #ifdef DEMO_APP_TRANSMITTER
 
@@ -89,12 +89,18 @@ void application_task ( void )
     ata663254_generic_write( &ata663254, demo_message, 9 );
     log_info( &logger, "--- Data sent ---" );
 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

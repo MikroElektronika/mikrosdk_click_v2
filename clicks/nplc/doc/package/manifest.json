@@ -25,14 +25,15 @@
     "name": "mikroe.click.nplc",
     "product_link": "https://www.mikroe.com/n-plc-click",
     "short_description": "N-PLC Click is a compact add-on board that uses existing electrical power lines to transmit data signals. This board features the SM2400, an advanced multi-standard Narrow-band Power Line Communication (N-PLC) modem from Semitech. The SM2400 features a dual-core architecture, a DSP core for N-PLC modulations, and a 32-bit core for running protocols for superior communication performance and flexibility for various open standards and customized implementations. It includes firmware options for IEEE 1901.2 compliant PHY and MAC layers, a 6LoWPAN data link layer, and special modes for industrial IoT applications. In addition to the ability to accept signals from another PLC modem or the power line communication AC coupling circuit, this board also has a handful of other features, such as a selectable interface and power supply, firmware update capabilities, LED indicators, and many others.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.NPLC",
     "subdir_name": "lib_nplc"
 }
+
 
 
 

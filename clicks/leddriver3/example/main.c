@@ -73,20 +73,25 @@ void application_task ( void )
     leddriver3_set_intensity( &leddriver3, LEDDRIVER3_INCREMENT | LEDDRIVER3_INTENSITY_8 );
     leddriver3_set_timer( &leddriver3, LEDDRIVER3_TIMER_8ms | LEDDRIVER3_TIMER_16ms );
     leddriver3_set_color( &leddriver3, LEDDRIVER3_COLOR_RED );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     leddriver3_set_intensity( &leddriver3, LEDDRIVER3_CONSTANT | LEDDRIVER3_INTENSITY_16 );
     leddriver3_set_color( &leddriver3, LEDDRIVER3_COLOR_PURPLE );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     leddriver3_set_color( &leddriver3, LEDDRIVER3_COLOR_BLUE );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     leddriver3_set_rgb_color( &leddriver3, &rgb );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

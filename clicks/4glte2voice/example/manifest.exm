@@ -2,7 +2,7 @@
     "name": "4G LTE 2 Voice Click",
     "description": "4G LTE 2 Click is a compact add-on board representing a secure-cloud multi-band solution offering universal connectivity and reliable performance. This board features the LARA-R6001, the world’s smallest LTE Cat 1 module with global coverage and a built-in MQTT client from u-blox, representing a data and voice solution. Equipped with familiar AT commands set over the UART interface, USB interface, and Network and Status indicators, the LARA-R6001 also has a comprehensive certification scheme and multi-band/multi-mode capabilities providing excellent flexibility alongside the support of voice/audio application.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","LARA-R6001"],
     "category" : ["Click Boards > Wireless connectivity > GSM/LTE"]
 }

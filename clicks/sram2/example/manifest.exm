@@ -2,7 +2,7 @@
     "name": "SRAM 2 Click",
     "description": "SRAM 2 Click is based on ANV32A62A SRAM memory from Anvo-Systems Dresden. It's a 64Kb serial SRAM with a non-volatile SONOS storage element included with each memory cell, organized as 8k words of 8 bits each.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","ANV32A62A"],
     "category" : ["SRAM"] 
 }

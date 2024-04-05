@@ -109,14 +109,14 @@ void application_task ( void )
     
     for (i = 0; i < r_time; i++)
 	{
-		Delay_ms(1);
+		Delay_ms ( 1 );
 	}
 
 	high_res_light_level = ambient5_get_high_resolution_light_level( &ambient5 );
 
 	log_printf( &logger, " Ambient Light Level : %.2f lx\r\n", high_res_light_level );
 	    
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 ```

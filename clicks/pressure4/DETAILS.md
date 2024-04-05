@@ -121,13 +121,13 @@ void application_task ( void )
 
     temperature = pressure4_get_temperature( &pressure4 );
     log_printf( &logger, "Temperature : %.2f degC\r\n", temperature );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     pressure = pressure4_get_pressure( &pressure4 );
     log_printf( &logger, "Pressure : %.2f mBar\r\n", pressure );
     log_printf( &logger, "========================\r\n" );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 } 
 
 ```

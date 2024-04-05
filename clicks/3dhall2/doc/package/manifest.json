@@ -25,17 +25,18 @@
     "name": "mikroe.click.c3dhall2",
     "product_link": "https://www.mikroe.com/3d-hall-2-click",
     "short_description": "3D Hall 2 click is a very accurate magnetic field sensing Click board™, used to sense the magnetic field strength in three perpendicular axes. It relies on a TLV493D-A1B6, a low power 3D magnetic sensor from Infineon. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2592
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.3dHall2",
     "subdir_name": "lib_c3dhall2"
 }
+
 
 
 

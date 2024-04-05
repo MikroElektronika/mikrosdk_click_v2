@@ -121,7 +121,7 @@ void application_init ( void )
     log_printf( &logger, "     Initialised!     \r\n" );
     log_printf( &logger, "----------------------\r\n" );    
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```

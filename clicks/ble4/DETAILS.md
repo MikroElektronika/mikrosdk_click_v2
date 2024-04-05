@@ -89,7 +89,7 @@ void application_init ( void )
     Delay_1sec( );
     
     ble4_set_dsr_pin( &ble4, 1 );
-    Delay_ms( 20 );
+    Delay_ms ( 20 );
 
     do {
         ble4_set_echo_cmd( &ble4, 1 );
@@ -122,7 +122,7 @@ void application_init ( void )
     while( ble4_process( ) != 1 );
     
     ble4_set_dsr_pin( &ble4, 0 );
-    Delay_ms( 20 );
+    Delay_ms ( 20 );
     data_mode = 1;
     log_printf( &logger, "The module has been configured.\n" );
 }

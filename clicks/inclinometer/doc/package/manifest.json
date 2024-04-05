@@ -25,14 +25,15 @@
     "name": "mikroe.click.inclinometer",
     "product_link": "https://www.mikroe.com/inclinometer-click",
     "short_description": "Inclinometer Click is a compact add-on board that offers best-in-class characteristics for inclination measurements. This board features the SCL3300, a high-performance inclinometer sensor component from Murata.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Inclinometer",
     "subdir_name": "lib_inclinometer"
 }
+
 
 
 

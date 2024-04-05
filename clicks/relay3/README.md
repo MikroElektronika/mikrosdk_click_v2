@@ -98,13 +98,13 @@ void application_init ( )
 void application_task ( )
 {
     case_1( );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     case_2( );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     case_3( );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

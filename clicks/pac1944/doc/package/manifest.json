@@ -25,14 +25,15 @@
     "name": "mikroe.click.pac1944",
     "product_link": "https://www.mikroe.com/pac1944-click",
     "short_description": "PAC1944 Click is a compact add-on board that contains an energy monitoring solution. This board features the PAC1944, a multi-channel DC power/energy monitor from Microchip Technology. It uses real-time calibration to minimize offset and gain errors with no input filters required for this device.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.PAC1944",
     "subdir_name": "lib_pac1944"
 }
+
 
 
 

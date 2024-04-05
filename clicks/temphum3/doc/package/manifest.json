@@ -25,17 +25,18 @@
     "name": "mikroe.click.temphum3",
     "product_link": "https://www.mikroe.com/temp-hum-3-click",
     "short_description": "Temp&Hum 3 click is a smart environmental temperature and humidity sensor Click board™, packed with features which allow easy and simple integration into any design that requires accurate and reliable humidity and temperature measurements",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2324
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.TempHum3",
     "subdir_name": "lib_temphum3"
 }
+
 
 
 

@@ -25,14 +25,15 @@
     "name": "mikroe.click.silentstep",
     "product_link": "https://www.mikroe.com/silent-step-click",
     "short_description": "Silent Step Click is the complete integrated bipolar step motor driver solution, rich with many features that allow extremely smooth and silent operation of the connected motor while being able to provide up to 2.5A peak motor current and withstand up to 46V supply voltage. The specialized TMC5130 IC driver from Trinamic Company far exceeds the capabilities of similar step motor drivers that are commonly used.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
     "related_projects": [
         2750
     ],
-    "version": "2.1.0.0",
+    "version": "2.1.0.1",
     "cmake": true,
     "alias": "Click.SilentStep",
     "subdir_name": "lib_silentstep"
 }
+

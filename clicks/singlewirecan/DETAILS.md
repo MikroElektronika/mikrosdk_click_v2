@@ -88,11 +88,11 @@ void application_init ( void )
     singlewirecan_cfg_setup( &cfg );
     SINGLEWIRECAN_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     singlewirecan_init( &singlewirecan, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     singlewirecan_set_operating_mode( &singlewirecan, SINGLEWIRECAN_OPERATING_MODE_NORMAL );
     log_info( &logger, "---- Normal Operation Mode ----" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -112,7 +112,8 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     singlewirecan_generic_write( &singlewirecan, TEXT_TO_SEND, 8 );
     log_info( &logger, "---- Data sent ----" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif    
 } 
 

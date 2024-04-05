@@ -25,17 +25,18 @@
     "name": "mikroe.click.gnss",
     "product_link": "https://www.mikroe.com/gnss-click",
     "short_description": "GNSS click carries Quectel’s L86 GNSS module with a patch antenna along with an external antenna connector.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1262
     ],
-    "version": "2.1.0.18",
+    "version": "2.1.0.19",
     "cmake": true,
     "alias": "Click.Gnss",
     "subdir_name": "lib_gnss"
 }
+
 
 
 

@@ -73,7 +73,8 @@ void application_task ( void )
     {
         log_printf ( &logger, " PWM duty: %d\r\n", pwm_duty );
     }
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     if ( DCMOTOR22_OK == dcmotor22_get_motor_current ( &dcmotor22, DCMOTOR22_MOTOR_A, &current ) )
     {
         log_printf ( &logger, " Current: %.3f A\r\n\n", current );
@@ -84,7 +85,8 @@ void application_task ( void )
     {
         log_printf ( &logger, " PWM duty: %d\r\n", pwm_duty );
     }
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     if ( DCMOTOR22_OK == dcmotor22_get_motor_current ( &dcmotor22, DCMOTOR22_MOTOR_B, &current ) )
     {
         log_printf ( &logger, " Current: %.3f A\r\n\n", current );
@@ -100,6 +102,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

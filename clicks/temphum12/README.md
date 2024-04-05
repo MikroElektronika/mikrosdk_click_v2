@@ -98,7 +98,8 @@ void application_init ( void )
 
     temphum12_default_cfg( &temphum12 );
     
-    Delay_ms( 1500 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 500 );
     log_printf( &logger, "--- Start measurement ----\r\n" );
 }
 

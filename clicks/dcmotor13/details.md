@@ -133,7 +133,9 @@ void application_task ( void )
     {
         log_printf ( &logger, " OUTB: Clockwise\r\n\n" );
     }
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     if ( DCMOTOR13_OK == dcmotor13_set_outa_mode ( &dcmotor13, DCMOTOR13_MODE_CCW ) )
     {
         log_printf ( &logger, " OUTA: Counter-Clockwise\r\n" );
@@ -142,7 +144,9 @@ void application_task ( void )
     {
         log_printf ( &logger, " OUTB: Counter-Clockwise\r\n\n" );
     }
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     if ( DCMOTOR13_OK == dcmotor13_set_outa_mode ( &dcmotor13, DCMOTOR13_MODE_SHORT_BRAKE ) )
     {
         log_printf ( &logger, " OUTA: Short brake\r\n" );
@@ -151,7 +155,9 @@ void application_task ( void )
     {
         log_printf ( &logger, " OUTB: Short brake\r\n\n" );
     }
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

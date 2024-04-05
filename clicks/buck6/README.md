@@ -104,17 +104,29 @@ void application_init ( void )
 void application_task ( void )
 {
     buck6_set_max_voltage( &buck6, BUCK6_MAX_RANGE_2500mV );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     buck6_set_max_voltage( &buck6, BUCK6_MAX_RANGE_5000mV );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     buck6_set_max_voltage( &buck6, BUCK6_MAX_RANGE_7500mV );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     buck6_set_max_voltage( &buck6, BUCK6_MAX_RANGE_10000mV );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     buck6_set_max_voltage( &buck6, BUCK6_MAX_RANGE_7500mV );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     buck6_set_max_voltage( &buck6, BUCK6_MAX_RANGE_5000mV );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
  
 

@@ -96,10 +96,10 @@ void application_init ( void )
     adswio_cfg_setup( &cfg );
     ADSWIO_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     adswio_init( &adswio, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     adswio_default_cfg( &adswio );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     adswio_rdy  = DUMMY;
     adswio_ch_a = DUMMY;
@@ -149,7 +149,7 @@ void application_task ( void )
         log_printf( &logger, " Voltage from channel A: %d mV\r\n", adswio_ch_a );
         
         log_printf( &logger, "-----------------------------------\r\n\r\n" );
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
     }
 }  
 

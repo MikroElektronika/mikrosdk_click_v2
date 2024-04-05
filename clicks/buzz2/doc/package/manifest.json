@@ -25,17 +25,18 @@
     "name": "mikroe.click.buzz2",
     "product_link": "https://www.mikroe.com/buzz-2-click",
     "short_description": "BUZZ 2 click carries the CMT-8540S-SMT magnetic buzzer transducer. The buzzer’s resonant frequency is 4kHz. The click is designed to run on either 3.3V or 5V power supply.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2129
     ],
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.Buzz2",
     "subdir_name": "lib_buzz2"
 }
+
 
 
 

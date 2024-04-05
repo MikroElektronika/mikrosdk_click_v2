@@ -61,23 +61,44 @@ void application_init ( void )
 
     clockgen_default_cfg( &clockgen );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void application_task ( void )
 {
     clockgen_set_frequency( &clockgen, CLOCKGEN_CLOCK_0, CLOCKGEN_PLLA, 1 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     clockgen_set_frequency( &clockgen, CLOCKGEN_CLOCK_0, CLOCKGEN_PLLA, 3 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     clockgen_set_frequency( &clockgen, CLOCKGEN_CLOCK_0, CLOCKGEN_PLLA, 10 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     clockgen_set_frequency( &clockgen, CLOCKGEN_CLOCK_0, CLOCKGEN_PLLA, 5 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

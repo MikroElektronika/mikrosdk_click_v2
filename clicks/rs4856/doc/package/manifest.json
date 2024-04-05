@@ -25,17 +25,18 @@
     "name": "mikroe.click.rs4856",
     "product_link": "https://www.mikroe.com/rs485-6-click",
     "short_description": "RS485 6 Click offers a half-duplex RS-485 communication with integrated surge protection",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3207
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Rs4856",
     "subdir_name": "lib_rs4856"
 }
+
 
 
 

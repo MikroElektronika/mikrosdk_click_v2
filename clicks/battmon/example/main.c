@@ -68,7 +68,7 @@ void application_init ( void )
     BATTMON_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     battmon_init( &battmon, &cfg );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     battmon_read_bytes( &battmon, BATTMON_REG_ID, &reg_read, 1 );
     log_printf( &logger, " ** Part ID: 0x%d \r\n", (uint16_t) reg_read );
@@ -118,16 +118,21 @@ void application_task ( void )
         }
         
         log_printf( &logger, "********************************* \r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     else
     {
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

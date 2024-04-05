@@ -105,10 +105,10 @@ void application_init ( void )
 
     log_printf( &logger, " RELAY ON\r\n" );
     thermostat4_relay_ctrl( &thermostat4, THERMOSTAT4_RELAY_ON );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " RELAY OFF\r\n" );
     thermostat4_relay_ctrl( &thermostat4, THERMOSTAT4_RELAY_OFF );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     thermostat4_set_warm_hysteresis( &thermostat4, 0 );
     thermostat4_new_cfg_upload( &thermostat4 );
@@ -141,7 +141,8 @@ void application_task ( void )
         log_printf( &logger, " TEMPERATURE OK\r\n" );
         thermostat4_relay_ctrl( &thermostat4, THERMOSTAT4_RELAY_OFF );
     }  
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

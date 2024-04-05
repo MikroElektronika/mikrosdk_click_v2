@@ -2,7 +2,7 @@
     "name": "Clock Gen 3 Click",
     "description": "Clock Gen 3 Click features a low power self-contained digital frequency source providing a precision frequency from 1kHz to 68MHz, set through a serial port.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","LTC6904"],
     "category" : ["Clock generator"] 
 }

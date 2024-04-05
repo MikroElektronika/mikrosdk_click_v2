@@ -110,7 +110,7 @@ void application_init ( void )
     log_printf( &logger, "       Initializing       \r\n" );
     log_printf( &logger, "--------------------------\r\n" );
     
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -142,7 +142,9 @@ void application_task ( void )
 
     log_printf( &logger, "--------------------------\r\n" );
     
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

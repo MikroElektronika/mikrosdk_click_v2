@@ -134,7 +134,8 @@ void application_task ( void )
     brushless10_set_duty_cycle ( &brushless10, duty );
     log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
     
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     duty_cnt += duty_inc;
     if ( duty_cnt > 10 ) 
@@ -148,10 +149,12 @@ void application_task ( void )
         duty_inc = 1;
         log_printf( &logger, " Pull brake\r\n" );
         brushless10_pull_brake ( &brushless10 );
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
         log_printf( &logger, " Release brake\r\n" );
         brushless10_release_brake ( &brushless10 );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

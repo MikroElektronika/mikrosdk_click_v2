@@ -25,14 +25,15 @@
     "name": "mikroe.click.buck19",
     "product_link": "https://www.mikroe.com/buck-19-click",
     "short_description": "Buck 19 Click is a compact add-on board that steps down the voltage from its input (supply) to its output (load). This board features the STPD01, a programmable synchronous buck converter from STMicroelectronics, providing power supply in applications following USB power delivery specifications. The STPD01 provides the desired voltage levels required by USB power delivery systems (USB PD 3.0) via I2C serial interface up to 60W output power, more precisely voltages in the range of 3V to 20V with a step of 20mV minimum, and currents from 0.1A to 3A with a minimum in steps of 50mA. It also offers advanced protection features such as overvoltage, overcurrent, and overtemperature detections.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.Buck19",
     "subdir_name": "lib_buck19"
 }
+
 
 
 

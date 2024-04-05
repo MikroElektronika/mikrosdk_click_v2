@@ -122,7 +122,8 @@ void application_task ( void )
     humidity = temphum8_get_humidity_data( &temphum8 );
     log_printf( &logger, "** Humidity: %.2f %%RH \r\n", humidity );
 
-    Delay_ms( 1500 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 500 );
 }
 ```
 

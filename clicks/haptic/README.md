@@ -98,7 +98,7 @@ void application_init ( void )
     haptic_enable( &haptic );
     haptic_set_mode( &haptic, HAPTIC_MODE_AUTOCAL );
     haptic_start_motor( &haptic );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     haptic_set_mode( &haptic, HAPTIC_MODE_AUDIOVIBE );
     haptic_enable_ac_coulping( &haptic );

@@ -103,7 +103,7 @@ void application_task ( void )
     new_angle = angle5_read_angle_deg( &angle5 );
     log_printf( &logger, "Angle: %.2f\r\n", new_angle );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 } 
 
 ```

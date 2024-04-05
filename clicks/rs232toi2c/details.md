@@ -163,7 +163,8 @@ void application_task ( void )
             log_error ( &logger, "TIMEOUT - no response received" );
         }
         log_printf( &logger, "\r\n\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 #else
     // wait for an RX interrupt

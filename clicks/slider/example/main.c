@@ -57,7 +57,7 @@ void application_init ( void )
     slider_cfg_setup( &cfg );
     SLIDER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     slider_init( &slider, &cfg );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 
 }
 
@@ -65,11 +65,16 @@ void application_task ( void )
 {
     adc_value = slider_write_output( &slider );
     log_printf( &logger, "%.2f\r\n", adc_value );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

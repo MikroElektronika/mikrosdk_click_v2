@@ -57,12 +57,17 @@ void application_task ( void )
     if ( MIC2_OK == mic2_read_an_pin_voltage ( &mic2, &voltage ) ) 
     {
         log_printf( &logger, " AN Voltage : %.3f[V]\r\n\n", voltage );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

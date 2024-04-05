@@ -76,11 +76,16 @@ void application_task ( void )
     {
         dimming = LEDDRIVER15_I2C_DIMMING_MIN;
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -104,7 +104,7 @@ void application_init ( void )
     }
     
     log_printf( &logger, " Remove Click from the electrical circuit \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     if ( CURRENTSENS2_ERROR == currentsens2_tare ( &currentsens2 ) )
     {
         log_error( &logger, " Click tare error." );
@@ -132,7 +132,7 @@ void application_task ( void )
     if ( CURRENTSENS2_OK == currentsens2_get_current ( &currentsens2, &current ) ) 
     {
         log_printf( &logger, " Current : %.2f[A]\r\n\n", current );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

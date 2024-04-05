@@ -2,7 +2,7 @@
     "name": "Silent Step 4 Click",
     "description": "Silent Step 4 Click is a compact add-on board representing a completely integrated step motor driver solution. This board features the TMC2240, a smart integrated stepper driver from Analog Devices. The driver is based on a 256 micro-steps built-in indexer, two fully integrated H-Bridges, and non-dissipative integrated current sensing (ICS). The two H-Bridges can drive motors of up to 36V and 3A at max.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","TMC2240ATJ"],
     "category" : ["Click Boards > Motor control > Stepper"]
 }

@@ -107,7 +107,7 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Init " );
 
     // Click initialization.
@@ -151,7 +151,7 @@ void application_task ( void )
     bluetooth2_process();
     if ( app_buf_len > 0 ) 
     {
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
         bluetooth2_process();
         
         if ( strstr( app_buf, RSP_RING ) )
@@ -174,11 +174,16 @@ void application_task ( void )
         send_cnt = 0;
     }
     
-    Delay_ms( 1 );
+    Delay_ms ( 1 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -245,7 +250,7 @@ static err_t bluetooth2_display_rsp ( uint16_t timeout )
     while ( ( strstr( app_buf, RSP_OK ) == 0 ) && ( strstr( app_buf, RSP_READY ) == 0 ) && timeout_cnt++ < timeout )
     {
         bluetooth2_process(  );
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
     
     if ( app_buf_len > 0 )

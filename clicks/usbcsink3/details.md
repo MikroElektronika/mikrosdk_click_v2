@@ -113,18 +113,18 @@ void application_init ( void )
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( USBCSINK3_ERROR == usbcsink3_default_cfg ( &usbcsink3 ) )
     {
         log_error( &logger, " Default configuration." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, " ------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 
@@ -147,11 +147,15 @@ void application_task ( void )
     {
         log_printf( &logger, " Output:\r\nVoltage: 5.0 [V]\r\nPower: 15.0 [W]\r\n" );
         log_printf( &logger, " - - - - - -  - - - - - -\r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
         usbcsink3_get_vbus ( &usbcsink3, &voltage );
         log_printf( &logger, " VBUS : %.1f [V]\r\n", voltage );
         log_printf( &logger, " ------------------------\r\n" );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     
     if ( ( USBCSINK3_OK == usbcsink3_set_voltage( &usbcsink3, USBCSINK3_VTG_SEL_9V ) ) &&
@@ -159,11 +163,15 @@ void application_task ( void )
     {
         log_printf( &logger, " Output:\r\nVoltage: 9.0 [V]\r\nPower: 18.0 [W]\r\n" );
         log_printf( &logger, " - - - - - -  - - - - - -\r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
         usbcsink3_get_vbus ( &usbcsink3, &voltage );
         log_printf( &logger, " VBUS : %.1f [V]\r\n", voltage );
         log_printf( &logger, " ------------------------\r\n" );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

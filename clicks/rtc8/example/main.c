@@ -170,11 +170,16 @@ void application_task ( void )
         log_printf( &logger, "------------------\r\n" );
         time_seconds = time_s.seconds;
     }
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

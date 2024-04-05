@@ -57,11 +57,11 @@ void application_init ( void )
     heartrate6_cfg_setup( &cfg );
     HEARTRATE6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     heartrate6_init( &heartrate6, &cfg );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     heartrate6_default_cfg( &heartrate6 );
     log_printf( &logger, " Heart rate 6 is initialized. \r\n");
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void application_task ( void )
@@ -85,6 +85,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -63,7 +63,7 @@ void application_init ( void ) {
     log_printf( &logger, "   Set configuration   \r\n" );
     log_printf( &logger, "-----------------------\r\n" );
     clockgen5_set_config( &clockgen5, CLOCKGEN5_CFG_ON_CLK_180 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_info( &logger, " Application Task " );
 }
@@ -72,36 +72,53 @@ void application_task ( void ) {
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, "        12.0 MHz       \r\n" );
     clockgen5_set_freq( &clockgen5, 12000.0 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, "         8.0 MHz       \r\n" );
     clockgen5_set_freq( &clockgen5, 8000.0 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, "         5.5 MHz       \r\n" );
     clockgen5_set_freq( &clockgen5, 5500.0 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, "         2.7 MHz       \r\n" );
     clockgen5_set_freq( &clockgen5, 2700.0 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, "         0.8 MHz       \r\n" );
     clockgen5_set_freq( &clockgen5, 800.0 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, "         0.2 MHz       \r\n" );
     clockgen5_set_freq( &clockgen5, 200.0 );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

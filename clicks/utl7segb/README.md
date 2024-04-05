@@ -128,7 +128,7 @@ void application_task ( void )
                                                      UTL7SEGB_NO_DOT ) )
         {
             log_printf( &logger, " --- %.2X ---\r\n", ( uint16_t ) hex_num );
-            Delay_ms( 500 );
+            Delay_ms ( 500 );
         }
     }
 }

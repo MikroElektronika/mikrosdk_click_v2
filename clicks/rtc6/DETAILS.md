@@ -148,7 +148,7 @@ void application_task ( void )
         rtc6_repeat_alarm( &rtc6, RTC6_ALARM_0, 20 );
     }
 
-    Delay_ms( 900 );
+    Delay_ms ( 900 );
 }  
 
 ```

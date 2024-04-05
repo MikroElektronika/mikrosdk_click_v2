@@ -122,7 +122,7 @@ void application_init ( void )
 
     log_info( &logger, " Application Task " );
     log_printf( &logger, " ----------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -148,14 +148,16 @@ void application_task ( void )
     if ( FLASH11_OK == flash11_memory_write( &flash11, STARTING_ADDRESS_1, data_buf, sizeof( data_buf ) ) )
     {
        log_printf( &logger, " Write data: %s\r\n", data_buf );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     
     memset( data_buf, 0, sizeof( data_buf ) );
     if ( FLASH11_OK == flash11_memory_read( &flash11, STARTING_ADDRESS_1, data_buf, sizeof( data_buf ) ) )
     {
         log_printf( &logger, " Read data: %s\r\n", data_buf );
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     log_printf( &logger, " ----------------------------\r\n" );
     
@@ -168,14 +170,16 @@ void application_task ( void )
     if ( FLASH11_OK == flash11_memory_write( &flash11, STARTING_ADDRESS_2, data_buf, sizeof( data_buf ) ) )
     {
         log_printf( &logger, " Write data: %s\r\n", data_buf );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     
     memset( data_buf, 0, sizeof( data_buf ) );
     if ( FLASH11_OK == flash11_memory_read( &flash11, STARTING_ADDRESS_2, data_buf, sizeof( data_buf ) ) )
     {
         log_printf( &logger, " Read data: %s\r\n", data_buf );
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     log_printf ( &logger, " ----------------------------\r\n" );
 }

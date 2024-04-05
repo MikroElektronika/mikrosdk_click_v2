@@ -25,17 +25,18 @@
     "name": "mikroe.click.hallcurrent3",
     "product_link": "https://www.mikroe.com/hall-current-3-click",
     "short_description": "Hall current 3 click is a very accurate current measurement Click board™, which utilizes the Hall effect to provide a precise and reliable measurement of reasonably high current. Its most distinctive feature is a very low series resistance of only 0.7mΩ, making this device a nearly-perfect ammeter.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2502
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.HallCurrent3",
     "subdir_name": "lib_hallcurrent3"
 }
+
 
 
 

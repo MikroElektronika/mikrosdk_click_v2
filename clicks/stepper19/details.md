@@ -138,7 +138,8 @@ void application_task ( void )
     if ( STEPPER19_OK == stepper19_rotate_by_angle( &stepper19, 50, 90, STEPPER19_STEP_RES_200 ) )
     {
         log_printf( &logger, "-----------------------------\r\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     
     log_printf( &logger, " Counterclockwise motion\r\n" );
@@ -148,7 +149,8 @@ void application_task ( void )
     if ( STEPPER19_OK == stepper19_rotate_by_angle( &stepper19, 50, 180, STEPPER19_STEP_RES_200 ) )
     {
         log_printf( &logger, "-----------------------------\r\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     
     log_printf( &logger, " Clockwise motion\r\n" );
@@ -158,7 +160,8 @@ void application_task ( void )
     if ( STEPPER19_OK == stepper19_rotate_by_angle( &stepper19, 90, 270, STEPPER19_STEP_RES_200 ) )
     {
         log_printf( &logger, "-----------------------------\r\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     
     log_printf( &logger, " Counterclockwise motion\r\n" );
@@ -168,7 +171,8 @@ void application_task ( void )
     if ( STEPPER19_OK == stepper19_rotate_by_angle( &stepper19, 90, 360, STEPPER19_STEP_RES_200 ) )
     {
         log_printf( &logger, "-----------------------------\r\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     
     log_printf( &logger, " Clockwise motion\r\n" );
@@ -178,7 +182,8 @@ void application_task ( void )
     if ( STEPPER19_OK == stepper19_rotate_by_angle( &stepper19, 90, 360, STEPPER19_STEP_RES_200 ) )
     {
         log_printf( &logger, "-----------------------------\r\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

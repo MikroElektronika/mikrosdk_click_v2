@@ -59,7 +59,7 @@ void application_init ( void )
     UV2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     uv2_init( &uv2, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "------------------------\r\n" );
     log_printf( &logger, "       UV 2  Click      \r\n" );
@@ -79,7 +79,7 @@ void application_init ( void )
     }
 
     log_printf( &logger, "------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -98,11 +98,17 @@ void application_task ( void )
     log_printf( &logger, " UV Index = %f \r\n", uv_index );
 
     log_printf( &logger, "------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

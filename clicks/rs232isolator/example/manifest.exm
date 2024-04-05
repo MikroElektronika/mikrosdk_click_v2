@@ -2,7 +2,7 @@
     "name": "RS232 Isolator Click",
     "description": "RS232 Isolator click is a fully isolated dual transceiver click, used to provide secure and easy UART to RS232 conversion, with the galvanic isolation.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","ADM3252E"],
     "category" : ["RS232"] 
 }

@@ -66,7 +66,7 @@ void application_init ( void )
     spectral2_reset( &spectral2 );
     spectral2_default_cfg( &spectral2 );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, "---- Application Running... ----\n" );
 }
 
@@ -92,11 +92,17 @@ void application_task ( void )
     int16_t r_dat = spectral2_get_data( &spectral2, SPECTRAL2_DATA_R );
     log_printf( &logger, " -- R ( Red data ) : %d\r\n", r_dat );
 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

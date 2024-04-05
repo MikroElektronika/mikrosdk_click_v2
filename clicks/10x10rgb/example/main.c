@@ -99,28 +99,36 @@ void application_init ( void )
     c10x10rgb_init( &c10x10rgb, &cfg );
 
     c10x10rgb_fill_screen( &c10x10rgb, C10X10RGB_COLOR_OFF );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
 {
     c10x10rgb_display_byte ( &c10x10rgb, &rgb_data_byte[ 0 ] );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     c10x10rgb_display_byte ( &c10x10rgb, &rgb_data_byte[ 1 ] );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     c10x10rgb_display_byte ( &c10x10rgb, &rgb_data_byte[ 2 ] );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     c10x10rgb_display_string( &c10x10rgb, &scroll_data_obj, scroll_data_len, scroll_speed_ms );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     c10x10rgb_display_image( &c10x10rgb, &MIKROE_IMAGE[ 0 ] );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     c10x10rgb_demo_rainbow( &c10x10rgb, rainbow_brightness, rainbow_speed_ms );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

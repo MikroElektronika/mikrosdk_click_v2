@@ -125,7 +125,8 @@ void application_task ( void )
                                            THERMOK_TEMP_IN_CELSIUS );
     log_printf( &logger, ">> Temperature is %.2f C\r\n", temperature );
 
-    Delay_ms( 1500 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 500 );
 }
 ```
 

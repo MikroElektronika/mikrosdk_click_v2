@@ -79,33 +79,40 @@ void application_init ( void ) {
     log_printf( &logger, "  Driver Init. Done  \r\n" );
     log_printf( &logger, "  Set I2C Slave Address   \r\n" );
     log_printf( &logger, "  of the Thermo 20 click   \r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "--------------------------\r\n" );
     log_printf( &logger, "      Software Reset      \r\n" );
     i2cisolator3_send_cmd(  &i2cisolator3, I2CISOLATOR3_THERMO20_CMD_RESET );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "--------------------------\r\n" );
     log_printf( &logger, "     Start Measuring      \r\n" );
     log_printf( &logger, "--------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_info( &logger, " Application Task \r\n" );
 }
 
 void application_task ( void ) {
     i2cisolator3_send_cmd( &i2cisolator3, I2CISOLATOR3_THERMO20_CMD_CONVERSION );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     calculate_temperature( );
 
     log_printf( &logger, "Temperature : %.2f \r\n", temperature );
-    Delay_ms( 3000 );    
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );    
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

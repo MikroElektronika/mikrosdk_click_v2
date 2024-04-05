@@ -2,7 +2,7 @@
     "name": "UT-L 7-SEG B Click",
     "description": "UT-L 7-SEG B Click is a compact add-on board that presents an easy solution for adding a numeric or hexadecimal display to your application. This board features two blue JSS-5611BUB-21s, ultra-thin single-digit numeric displays from Ningbo Junsheng Electronics. The displays are medium (0.56 inches in height) and can display letters, numbers, and symbols in a highly readable form. The host MCU can control the light intensity of the red segments of the display.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","JSS-5611BUB-21"],
     "category" : ["Click Boards > Display & LED > LED segment"]
 }

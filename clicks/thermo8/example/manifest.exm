@@ -2,7 +2,7 @@
     "name": "Thermo 8 Click",
     "description": "Thermo 8 click is a very accurate thermometer Click board™, with a very high typical measurement accuracy of ±0.25°C, and great data repeatability, with drift in the range of ±0.0625°C.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","MCP9808"],
     "category" : ["Temperature & humidity"] 
 }

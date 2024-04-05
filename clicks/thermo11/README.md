@@ -101,7 +101,7 @@ void application_init ( void )
     log_printf( &logger, "** Thermo 11 is initialized ** \r\n" );
     log_printf( &logger, "************************************************ \r\n \r\n" );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
   
 ```

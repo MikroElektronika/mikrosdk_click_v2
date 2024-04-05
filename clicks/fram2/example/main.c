@@ -70,19 +70,24 @@ void application_task ( void )
     log_info( &logger, "Writing value 42 into register 0x10..." );  
     test_addr = 0x0010;  
     fram2_write( &fram2, test_addr, data_to_write, 3 );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 
     log_info( &logger, "Reading from register 0x10..." );
     memset( read_buf, 0, 32 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     fram2_read( &fram2, test_addr, read_buf, 3 );
     log_printf ( &logger, "Read value: %s\r\n\n", read_buf );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

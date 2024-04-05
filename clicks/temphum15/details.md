@@ -107,10 +107,10 @@ void application_init ( void ) {
         for ( ; ; );
     }
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     temphum15_default_cfg( &temphum15 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -133,7 +133,8 @@ void application_task ( void ) {
         log_printf( &logger, "----------------------------\r\n" );
         log_printf( &logger, "> No data\r\n" );
     }
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

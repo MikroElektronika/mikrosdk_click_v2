@@ -64,11 +64,16 @@ void application_task ( void )
     temp = thermo16_get_temperature ( &thermo16, THERMO16_TEMP_IN_CELSIUS );
     log_printf( &logger, "** Temperature : %.2f C \r\n", temp );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

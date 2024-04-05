@@ -106,7 +106,7 @@ void application_init ( void )
     }
 #endif
     log_printf( &logger, " ______________________ \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void ) 
@@ -120,6 +120,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -137,7 +142,7 @@ void example_pressure_temperature ( void )
         log_printf( &logger, " Pressure    : %.2f mBar \r\n", pressure );
         log_printf( &logger, " Temperature : %.2f degC \r\n", temperature );
         log_printf( &logger, " ______________________ \r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

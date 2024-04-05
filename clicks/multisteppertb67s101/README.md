@@ -131,7 +131,8 @@ void application_task ( void )
                                                                      MULTISTEPPERTB67S101_SPEED_FAST ) )
     {
         log_printf ( &logger, " Move 200 steps clockwise \r\n\n" );
-        Delay_ms ( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     
     multisteppertb67s101_set_direction ( &multisteppertb67s101, MULTISTEPPERTB67S101_DIR_CCW );
@@ -139,7 +140,8 @@ void application_task ( void )
                                                                      MULTISTEPPERTB67S101_SPEED_FAST ) )
     {
         log_printf ( &logger, " Move 100 steps counter-clockwise \r\n\n" );
-        Delay_ms ( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

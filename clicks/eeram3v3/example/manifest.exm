@@ -2,7 +2,7 @@
     "name": "EERAM 3v3 Click",
     "description": "EERAM 3.3V click is a static RAM (SRAM) memory click board™ with the unique feature - it has a backup non-volatile memory array, used to store the data from the SRAM array. Since the SRAM is not able to maintain its content after the power loss, the non-volatile EEPROM backup can be a very handy addition that can be used to preserve the data, even after the power loss event. This is a very useful feature when working with critical or sensitive applications. The memory backup procedure can be executed both automatically and manually. When it is set to work in the manual mode, the onboard capacitor will act as a power source with enough power to complete the backup cycle. The power-on backup restore mode is also available, taking only about 25ms to complete.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","47C16 I2C"],
     "category" : ["SRAM"]
 }

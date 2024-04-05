@@ -25,17 +25,18 @@
     "name": "mikroe.click.hdc1000",
     "product_link": "https://www.mikroe.com/hdc1000-click",
     "short_description": "HDC1000 Click is a humidity and temperature measurement click board carrying the HDC1000 sensor.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1240
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.HDC1000",
     "subdir_name": "lib_hdc1000"
 }
+
 
 
 

@@ -108,7 +108,7 @@ void application_task ( void )
     if ( AMBIENT7_OK == ambient7_read_an_pin_voltage ( &ambient7, &voltage ) ) 
     {
         log_printf( &logger, " AN Voltage : %.3f[V]\r\n\n", voltage );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }  
 

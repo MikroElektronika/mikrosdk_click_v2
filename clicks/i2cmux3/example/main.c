@@ -56,14 +56,15 @@ void application_init ( void )
     i2cmux3_cfg_setup( &cfg );
     I2CMUX3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     i2cmux3_init( &i2cmux3, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     i2cmux3_hw_rst( &i2cmux3 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     i2cmux3_ch_sel( &i2cmux3, 0 );
     log_printf( &logger, " Please connect a 6DOF IMU 12 click to channel 0\r\n" );
     log_printf( &logger, "-------------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -71,11 +72,16 @@ void application_task ( void )
     i2cmux3_rd_slv ( &i2cmux3, 0x68, 0x00, &id_val, 1 );
     log_printf( &logger, " The click device ID is:  0x%.2X \r\n", ( uint16_t ) id_val );
     log_printf( &logger, "-------------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

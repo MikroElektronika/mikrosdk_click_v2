@@ -80,7 +80,7 @@ void application_task ( void )
 
             angle_value_old = angle_value;
 
-            Delay_ms( 300 );
+            Delay_ms ( 300 );
         }
     }
     else
@@ -88,12 +88,17 @@ void application_task ( void )
         log_printf( &logger, " Magnetic Field Too Weak\r\n" );
 
         angle_value_old = 0;
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

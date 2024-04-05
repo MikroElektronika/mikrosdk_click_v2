@@ -89,11 +89,16 @@ void application_task ( void )
     log_printf( &logger, "- CH(1-3): %.2f\r\n", diff_volt.ch_1_3 );
     log_printf( &logger, "- CH(2-3): %.2f\r\n", diff_volt.ch_2_3 );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

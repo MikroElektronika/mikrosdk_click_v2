@@ -94,7 +94,7 @@ void application_init ( void )
     CO2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     co2_init( &co2, &cfg );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     temp_w = CO2_WRITE_MODE;
     co2_generic_write( &co2, CO2_LOCK_REG, &temp_w, 1 );
@@ -106,7 +106,7 @@ void application_init ( void )
     co2_generic_write( &co2, CO2_REFCN_REG, &temp_w, 1 );
     
     log_printf( &logger, "CO 2 is initialized\r\n\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -125,7 +125,7 @@ void application_task ( void )
     co2_get_co2_ppm( &co2, &co2_value );
     
     log_printf( &logger, "CO : %.2f ppm\r\n", co2_value );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 ```
 

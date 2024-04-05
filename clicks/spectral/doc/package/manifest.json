@@ -25,17 +25,18 @@
     "name": "mikroe.click.spectral",
     "product_link": "https://www.mikroe.com/spectral-click",
     "short_description": "Spectral click is a multispectral light sensing device, which uses the state-of-the-art sensor IC for a very accurate chromatic white color sensing.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2348
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Spectral",
     "subdir_name": "lib_spectral"
 }
+
 
 
 

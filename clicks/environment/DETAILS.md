@@ -119,7 +119,8 @@ void application_task ( void )
     gas = environment_get_gas_resistance( &environment );
     log_printf( &logger, "      Gas Resistance : %ld\r\n", gas);
 
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

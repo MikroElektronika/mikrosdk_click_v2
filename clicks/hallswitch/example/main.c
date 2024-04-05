@@ -60,17 +60,22 @@ void application_init ( void )
 void application_task()
 {
     hallswitch_set_npole( &hallswitch, HALLSWITCH_POLE_ACTIVE );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     hallswitch_set_spole( &hallswitch, HALLSWITCH_POLE_ACTIVE );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     hallswitch_set_npole( &hallswitch, HALLSWITCH_POLE_NO_ACTIVE );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     hallswitch_set_spole( &hallswitch, HALLSWITCH_POLE_NO_ACTIVE );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

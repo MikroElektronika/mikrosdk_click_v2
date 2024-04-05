@@ -93,14 +93,14 @@ void application_init ( void )
     BUCK11_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     buck11_init( &buck11, &cfg );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     buck11_set_vdd_value( 4.935 );
     vout_resol = BUCK11_VOUT_VOLTS;
     
     log_printf( &logger, "** Buck 11 is initialized ** \r\n" );
     log_printf( &logger, "************************************* \r\n" );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 }
   
 ```
@@ -131,7 +131,7 @@ void application_task ( )
     }
     
     log_printf( &logger, "************************************* \r\n" );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 
 ```

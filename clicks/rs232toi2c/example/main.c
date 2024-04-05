@@ -111,7 +111,8 @@ void application_task ( void )
             log_error ( &logger, "TIMEOUT - no response received" );
         }
         log_printf( &logger, "\r\n\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 ); 
+        Delay_ms ( 1000 );
     }
 #else
     // wait for an RX interrupt
@@ -147,6 +148,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

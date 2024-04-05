@@ -25,14 +25,15 @@
     "name": "mikroe.click.adc10",
     "product_link": "https://www.mikroe.com/adc-10-click",
     "short_description": "ADC 10 Click is a compact add-on board that contains a high-performance data converter. This board features the ADS122U04, a 24-bit precision ΔΣ analog-to-digital converter with UART compatible interface from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Adc10",
     "subdir_name": "lib_adc10"
 }
+
 
 
 

@@ -91,7 +91,7 @@ void application_init ( void )
     AMBIENT3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     ambient3_init( &ambient3, &cfg );
     ambient3_default_cfg( &ambient3 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -111,7 +111,7 @@ void application_task ( )
     log_printf( &logger, " - Light in LUX : %u\r\n", data_lux );
     log_printf( &logger, " --------------------\r\n" );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

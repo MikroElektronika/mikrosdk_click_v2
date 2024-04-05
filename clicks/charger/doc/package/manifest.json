@@ -25,15 +25,16 @@
     "name": "mikroe.click.charger",
     "product_link": "https://www.mikroe.com/charger-click",
     "short_description": "Charger Click is a compact add-on board providing a standalone battery charger and monitor. This board features Microchip's MCP73831, a miniature single-cell, fully integrated Li-Ion, Li-Polymer charge management controller. The charge voltage of the MCP73831 is set to 4.20V, and a charge current to 250mA with an external resistor. In addition, this Click board™ features the DS2438, a smart battery monitor that monitors the total amount of current going into and out of the battery.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
     "related_projects": [
         1677
     ],
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.Charger",
     "subdir_name": "lib_charger"
 }
+
 

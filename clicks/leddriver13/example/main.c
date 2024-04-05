@@ -64,7 +64,7 @@ void application_init ( void )
     log_info( &logger, " Application Task " );
     
     leddriver13_set_duty_cycle ( &leddriver13, 0.01 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
@@ -75,7 +75,7 @@ void application_task ( void )
     
     leddriver13_set_duty_cycle ( &leddriver13, duty );
     log_printf( &logger, "> Duty: %.1f%%\r\n", duty * 100 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( 30 == duty_cnt ) 
     {
@@ -90,6 +90,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

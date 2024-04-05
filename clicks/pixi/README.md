@@ -125,9 +125,9 @@ void application_init ( void )
 void application_task ( void )
 {
     pixi_write_reg( &pixi, PIXI_REG_GPO_DATA, 1 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     pixi_write_reg( &pixi, PIXI_REG_GPO_DATA, 0 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 

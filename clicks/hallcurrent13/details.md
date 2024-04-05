@@ -124,7 +124,7 @@ void application_task ( void )
     if ( HALLCURRENT13_OK == hallcurrent13_read_current ( &hallcurrent13, &current ) ) 
     {
         log_printf( &logger, " Current : %.3f[A]\r\n\n", current );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 

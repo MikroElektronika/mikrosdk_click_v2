@@ -25,14 +25,15 @@
     "name": "mikroe.click.relay5",
     "product_link": "https://www.mikroe.com/relay-5-click",
     "short_description": "Relay 5 Click is a compact add-on board with general-purpose relays that any host MCU can control. This board features three J1031C3VDC.15S, a high-current single-pole double-throw (SPDT) signal relays controlled by the PCA9538A, a low-voltage 8-bit I/O port expander from NXP Semiconductors. Highly sensitive, the J1031C3VDC.15S offers a low coil power consumption in a small, lightweight package with PC pin mounting. It comes with a dimension of 12.5x7.5x10 millimeters (LxWxH) and a 1C contact arrangement with a coil voltage of 3VDC, providing a maximum switching voltage of 125VAC/60VDC.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.Relay5",
     "subdir_name": "lib_relay5"
 }
+
 
 
 

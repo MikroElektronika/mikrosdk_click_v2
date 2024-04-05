@@ -65,7 +65,7 @@ void application_init ( void )
     {
         log_printf( &logger, " FW Version: 0x%.6LX\r\n", fw_version );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_info( &logger, " Application Task " );
 }
@@ -84,6 +84,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

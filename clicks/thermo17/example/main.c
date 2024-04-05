@@ -76,18 +76,23 @@ void application_task ( void )
     read_data = thermo17_read_temp( &thermo17 ,THERMO17_TEMPERATURE_LOCAL );
     log_printf( &logger, " - LOCAL: : %.2f C\r\n", read_data );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     read_data = thermo17_read_temp( &thermo17 ,THERMO17_TEMPERATURE_REMOTE );
     log_printf( &logger, " - REMOTE: : %.2f C\r\n", read_data );
     
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, " ******************** \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

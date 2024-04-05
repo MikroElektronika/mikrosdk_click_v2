@@ -100,73 +100,78 @@ void application_init ( void )
     lteiot2_send_cmd( &lteiot2, LTEIOT2_CMD_AT );
     app_error_flag = lteiot2_rsp_check( );
     lteiot2_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // ATI - product information
     lteiot2_send_cmd( &lteiot2, LTEIOT2_CMD_ATI );
     app_error_flag = lteiot2_rsp_check(  );
     lteiot2_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CGMR - firmware version
     lteiot2_send_cmd( &lteiot2, LTEIOT2_CMD_CGMR );
     app_error_flag = lteiot2_rsp_check(  );
     lteiot2_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // COPS - deregister from network
     lteiot2_send_cmd_with_parameter( &lteiot2, LTEIOT2_CMD_COPS, "2" );
     app_error_flag = lteiot2_rsp_check(  );
     lteiot2_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CGDCONT - set sim apn
     lteiot2_set_sim_apn( &lteiot2, SIM_APN );
     app_error_flag = lteiot2_rsp_check(  );
     lteiot2_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
      
     // CFUN - full funtionality
     lteiot2_send_cmd_with_parameter( &lteiot2, LTEIOT2_CMD_CFUN, "1" );
     app_error_flag = lteiot2_rsp_check(  );
     lteiot2_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // COPS - automatic mode
     lteiot2_send_cmd_with_parameter( &lteiot2, LTEIOT2_CMD_COPS, "0" );
     app_error_flag = lteiot2_rsp_check(  );
     lteiot2_error_check( app_error_flag );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     // CREG - network registration status
     lteiot2_send_cmd_with_parameter( &lteiot2, LTEIOT2_CMD_CREG, "2" );
     app_error_flag = lteiot2_rsp_check(  );
     lteiot2_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CIMI - request IMSI
     lteiot2_send_cmd( &lteiot2, LTEIOT2_CMD_CIMI );
     app_error_flag = lteiot2_rsp_check(  );
     lteiot2_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // QGPSCFG - Set <nmeasrc> to 1 to enable acquisition of NMEA sentences via AT+QGPSGNMEA
     lteiot2_send_cmd_with_parameter( &lteiot2, LTEIOT2_CMD_QGPSCFG, "\"nmeasrc\",1" );
     app_error_flag = lteiot2_rsp_check(  );
     lteiot2_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // QGPS - Set to 1 to turn ON GNSS
     lteiot2_send_cmd_with_parameter( &lteiot2, LTEIOT2_CMD_QGPS, "1" );
     app_error_flag = lteiot2_rsp_check(  );
     lteiot2_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     app_buf_len = 0;
     app_buf_cnt = 0;
     app_connection_status = WAIT_FOR_CONNECTION;
     log_info( &logger, " Application Task " );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -186,19 +191,23 @@ void application_task ( void )
         lteiot2_send_cmd_check( &lteiot2, LTEIOT2_CMD_CGATT );
         app_error_flag = lteiot2_rsp_check(  );
         lteiot2_error_check( app_error_flag );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         
         // CREG - network registration status
         lteiot2_send_cmd_check( &lteiot2, LTEIOT2_CMD_CREG );
         app_error_flag = lteiot2_rsp_check(  );
         lteiot2_error_check( app_error_flag );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         
         // CSQ - signal quality
         lteiot2_send_cmd( &lteiot2, LTEIOT2_CMD_CSQ );
         app_error_flag = lteiot2_rsp_check(  );
         lteiot2_error_check( app_error_flag );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     else
     {
@@ -208,7 +217,9 @@ void application_task ( void )
         lteiot2_send_cmd_with_parameter( &lteiot2, LTEIOT2_CMD_CMGF, "0" );
         app_error_flag = lteiot2_rsp_check(  );
         lteiot2_error_check( app_error_flag );
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
         
         for( ; ; )
         {   
@@ -217,7 +228,9 @@ void application_task ( void )
             lteiot2_send_cmd_with_parameter( &lteiot2, LTEIOT2_CMD_QGPSGNMEA, "\"GGA\"" );
             app_error_flag = lteiot2_rsp_check(  );
             lteiot2_error_check( app_error_flag );
-            Delay_ms( 3000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
             
             if ( gps_parser_flag == 0 )
             {
@@ -225,9 +238,36 @@ void application_task ( void )
                 lteiot2_send_sms_pdu ( &lteiot2, SIM_SMSC, PHONE_NUMBER_TO_MESSAGE, gps_info_message );
                 app_error_flag = lteiot2_rsp_check(  );
                 lteiot2_error_check( app_error_flag );
-                Delay_ms( 10000 );
-                Delay_ms( 10000 );
-                Delay_ms( 10000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
+                Delay_ms ( 1000 );
             }
         }
     }

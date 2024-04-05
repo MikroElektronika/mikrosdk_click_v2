@@ -58,7 +58,7 @@ void application_init ( void )
     compass3_cfg_setup( &cfg );
     COMPASS3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     compass3_init( &compass3, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     compass3_generic_read( &compass3, COMPASS3_DEVICE_ID, &test_val, 1 );
 
@@ -75,7 +75,7 @@ void application_init ( void )
     }
 
     compass3_default_cfg ( &compass3 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -88,13 +88,18 @@ void application_task ( void )
         log_printf( &logger,"  Y-axis : %.2f mG\r\n", y_val );
         log_printf( &logger,"  Z-axis : %.2f mG\r\n", z_val );
 
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
         log_printf( &logger, "--------------------\r\n" );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

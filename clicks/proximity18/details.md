@@ -129,17 +129,29 @@ void application_task ( void )
     if ( PROXIMITY18_ERROR == proximity18_start_measurement ( &proximity18 ) )
     {
         log_error ( &logger, " Start measurement." );
-        Delay_ms ( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     if ( PROXIMITY18_ERROR == proximity18_wait_for_data_ready ( &proximity18 ) )
     {
         log_error ( &logger, " Wait for data ready." );
-        Delay_ms ( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     if ( PROXIMITY18_ERROR == proximity18_read_proximity ( &proximity18, &ps1_data, &ps2_data, &ps3_data ) )
     {
         log_error ( &logger, " Read proximity." );
-        Delay_ms ( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     else
     {

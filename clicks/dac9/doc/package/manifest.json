@@ -25,17 +25,18 @@
     "name": "mikroe.click.dac9",
     "product_link": "https://www.mikroe.com/dac-9-click",
     "short_description": "DAC 9 Click is a compact add-on board that contains a fully-featured, highly accurate digital-to-analog converter. This board features the DAC80501, a 16-bit voltage-output digital-to-analog converter with precision internal reference from Texas Instruments. It supports both I2C and SPI serial interface and offers a linearity of < 1 LSB. It also includes a 2.5V internal reference, giving full-scale output voltage ranges of 1.25V, 2.5V, or 5V, incorporate a Power-On Reset function, consume a low current of 1mA, and include a Power-Down feature that reduces current consumption to typically 15μA at 5V.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         3877
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.DAC9",
     "subdir_name": "lib_dac9"
 }
+
 
 
 

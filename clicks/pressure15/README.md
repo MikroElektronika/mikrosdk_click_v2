@@ -125,7 +125,7 @@ void application_init ( void )
     }
     
     pressure15_default_cfg ( &pressure15 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, " Application Task " );
 }
 
@@ -150,7 +150,7 @@ void application_task ( void )
         pressure15_get_temperature( &pressure15, &temperature );
         log_printf( &logger, " > Temperature[degC]: %.2f\r\n", temperature );
         log_printf( &logger, "***************************************\r\n" );
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
     }
 }
 

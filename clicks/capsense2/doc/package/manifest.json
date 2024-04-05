@@ -25,14 +25,15 @@
     "name": "mikroe.click.capsense2",
     "product_link": "https://www.mikroe.com/capsense-2-click",
     "short_description": "CapSense 2 Click is a compact add-on board that easily integrates projected capacitive touch into user's applications. This board features the CAP1114, a multi-channel capacitive touch sensor that takes human body capacitance as an input and directly provides the real-time sensor information via the I2C serial interface from Microchip. This board contains capacitive sensing elements, a 7-segment slider, two buttons, and four LED indicators that visually detect the activation on some of these parts. This Click board™ offers reliable and accurate sensing for any application that uses capacitive touch sensing functions.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.CapSense2",
     "subdir_name": "lib_capsense2"
 }
+
 
 
 

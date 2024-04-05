@@ -55,13 +55,13 @@ void application_init ( void )
     touchclamp_cfg_setup( &cfg );
     TOUCHCLAMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     touchclamp_init( &touchclamp, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     touchclamp_soft_reset( &touchclamp );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     touchclamp_default_cfg( &touchclamp );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     touch_data_old = TOUCHCLAMP_NO_TOUCH;
     
@@ -106,6 +106,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

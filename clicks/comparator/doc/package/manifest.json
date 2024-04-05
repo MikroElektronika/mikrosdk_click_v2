@@ -25,17 +25,18 @@
     "name": "mikroe.click.comparator",
     "product_link": "https://www.mikroe.com/comparator-click",
     "short_description": "Comparator Click represents board equipped with two independent precise voltage comparators.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1494
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Comparator",
     "subdir_name": "lib_comparator"
 }
+
 
 
 

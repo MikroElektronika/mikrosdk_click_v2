@@ -101,7 +101,7 @@ void application_init ( void )
     charger8_set_usb_suspend( &charger8, CHARGER8_USB_SUSPAND_MODE_DISABLE );
     charger8_set_max_battery_capacity( 2000 );
     log_printf( &logger, " --- Charger - Start measurement --- \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -140,7 +140,8 @@ void application_task ( void )
     log_printf( &logger, " - SOC : %d %%\r\n", soc );
     
     log_printf( &logger, " -------------------------- \r\n" );
-    Delay_ms( 1500 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 500 );
 }
 
 ```

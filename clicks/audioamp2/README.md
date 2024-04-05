@@ -91,10 +91,10 @@ void application_init ( void )
     audioamp2_cfg_setup( &cfg );
     AUDIOAMP2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     audioamp2_init( &audioamp2, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "AudioAmp 2 is initialized \r\n \r\n" );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 }
   
 ```
@@ -110,12 +110,29 @@ void application_init ( void )
 void application_task ( void )
 {
     audioamp2_set_mode( &audioamp2, AUDIOAMP2_MUTE_MODE );
-    Delay_ms( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     audioamp2_set_gain( &audioamp2, AUDIOAMP2_20DB_GAIN );
     audioamp2_set_mode( &audioamp2, AUDIOAMP2_PLAY_MODE );
-    Delay_ms( 8000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     audioamp2_set_gain( &audioamp2, AUDIOAMP2_32DB_GAIN );
-    Delay_ms( 8000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

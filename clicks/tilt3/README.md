@@ -91,7 +91,7 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Init " );
 
     // Click initialization.
@@ -132,7 +132,7 @@ void application_task ( void )
         {
             log_printf( &logger, " Tilt switch OFF!\r\n\n" );
         }
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
 }
 

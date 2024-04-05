@@ -56,21 +56,32 @@ void application_init ( void )
     hbridge2_enable( &hbridge2, HBRIDGE2_ENABLE );
     hbridge2_set_gout( &hbridge2, HBRIDGE2_GOUT_HIGH );
     log_printf( &logger, "H-Bridge 2 is intialized\r\n" );
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
 }
 
 void application_task ( void )
 {
     hbridge2_set_output( &hbridge2, HBRIDGE2_OUT1_H_OUT2_L );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     hbridge2_set_output( &hbridge2, HBRIDGE2_OUT1_L_OUT2_H );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     hbridge2_set_output( &hbridge2, HBRIDGE2_OUT1_Z_OUT2_Z );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

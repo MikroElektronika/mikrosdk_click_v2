@@ -138,7 +138,7 @@ void application_task ( void )
             pin_num = ( ~pin_num ) & EXPAND11_ALL_PINS_MASK;
         }
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

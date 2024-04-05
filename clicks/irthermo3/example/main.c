@@ -58,7 +58,7 @@ void application_init ( void )
     irthermo3_init( &irthermo3, &cfg );
 
     irthermo3_cal ( &irthermo3 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 void application_task ( void )
@@ -70,11 +70,16 @@ void application_task ( void )
     log_printf( &logger, "Object temperature: %.2f degC \r\n", obj_temp );
 
     log_printf( &logger, "----------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

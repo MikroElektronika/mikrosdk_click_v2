@@ -133,7 +133,7 @@ void application_task ( void )
     {
         dimming = LEDDRIVER15_I2C_DIMMING_MIN;
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 ```
 

@@ -113,13 +113,13 @@ void application_init ( void )
     }
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, "---------------------------\r\n" );
     log_printf( &logger, "   Current Limit 7 Click   \r\n" );
     log_printf( &logger, "---------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
 #ifdef CURRENTLIMIT_MODE_250_mA_500_mA
     currentlimit7_set_current_limit ( &currentlimit7, CURRENTLIMIT7_OP_MODE_250_mA_500_mA, limit_value_op[ 10 ] );
@@ -127,18 +127,18 @@ void application_init ( void )
     log_printf( &logger, "- - - - - - - - - - - - - -\r\n" );
     log_printf( &logger, " Current limit is %d mA    \r\n", limit_value_op[ 10 ] );
     log_printf( &logger, "---------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 #else
     currentlimit7_set_current_limit ( &currentlimit7, CURRENTLIMIT7_OP_MODE_500_mA_2500_mA, limit_value_op[ 0 ] );
     log_printf( &logger, "  >>> Selected mode %d     \r\n", 0 );
     log_printf( &logger, "- - - - - - - - - - - - - -\r\n" );
     log_printf( &logger, " Current limit is %d mA    \r\n", limit_value_op[ 0 ] );
     log_printf( &logger, "---------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 #endif
     
     display_selection( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
@@ -155,7 +155,7 @@ void application_task ( void )
             log_printf( &logger, "- - - - - - - - - - - - - -\r\n" );
             log_printf( &logger, "  Current limit is %d mA   \r\n", limit_value_op[ index - 38 ] );
             log_printf( &logger, "---------------------------\r\n" );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     #else
         if ( ( index >= '0' ) && ( index <= '9' ) ) 
@@ -165,7 +165,7 @@ void application_task ( void )
             log_printf( &logger, "- - - - - - - - - - - - - -\r\n" );
             log_printf( &logger, "  Current limit is %d mA   \r\n", limit_value_op[ index - 48 ] );
             log_printf( &logger, "---------------------------\r\n" );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     #endif
         else 
@@ -173,13 +173,18 @@ void application_task ( void )
             log_printf( &logger, "    Data not in range!    \r\n" );
             log_printf( &logger, "---------------------------\r\n" );
             display_selection( );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -92,7 +92,7 @@ void application_init ( void )
     
     brushless2_set_duty_cycle ( &brushless2, 0.0 );
     brushless2_pwm_start ( &brushless2 );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     log_info( &logger, "---- Application Task ----" );
 }
   
@@ -116,7 +116,7 @@ void application_task ( void )
     brushless2_clockwise ( &brushless2 );
     log_printf( &logger, "> Duty: %d%%\r\n", ( uint16_t )( duty_cnt * 10 ) );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     if ( 10 == duty_cnt ) 
     {

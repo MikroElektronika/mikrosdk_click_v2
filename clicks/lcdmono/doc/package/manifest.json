@@ -25,17 +25,18 @@
     "name": "mikroe.click.lcdmono",
     "product_link": "https://www.mikroe.com/lcd-mono-click",
     "short_description": "LCD Mono Click is a Click board™ that uses the LS013B7DH03 LCD display from Sharp which combined with the EFM32, from Silicon Labs, and its energy saving capabilities creates a powerful display application.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2956
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.LcdMono",
     "subdir_name": "lib_lcdmono"
 }
+
 
 
 

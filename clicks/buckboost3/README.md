@@ -88,7 +88,8 @@ void application_init ( void )
     
     buckboost3_enable ( &buckboost3, BUCKBOOST3_DEVICE_ENABLE );
     log_info( &logger, " Device enabled " );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 
@@ -103,7 +104,7 @@ void application_task ( void )
     {
         log_error( &logger, " Low input voltage !!!" );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

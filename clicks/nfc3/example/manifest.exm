@@ -2,7 +2,7 @@
     "name": "NFC 3 Click",
     "description": "NFC 3 Click is a compact add-on board that contains an NFC transceiver for contactless communication at 13.56MHz. This board features the PN5180A0HN, a highly integrated high-performance full NFC Forum-compliant frontend from NXP Semiconductors. The PN5180A0HN utilizes an outstanding modulation and demodulation concept for different contactless communication methods and protocols. It is fully compliant with many Reader/Writer standards (ISO 14443A/B, ISO 15693, ISO 18092, and more), alongside support for reading all NFC tag types (type 1, 2, 3, 4A, and 4B). Besides the SPI host interface, it also features high RF output power to drive an antenna etched on the PCB directly, besides its tuning circuit, at high efficiency.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","PN5180A0HN/C3Y"],
     "category" : ["Click Boards > Wireless connectivity > RFID/NFC"]
 }

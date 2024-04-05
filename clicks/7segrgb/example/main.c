@@ -107,7 +107,9 @@ void application_init ( void )
         c7segrgb.segments[ cnt ] = segments_data[ cnt ];
     }
     c7segrgb_set_seven_seg( &c7segrgb );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -117,46 +119,51 @@ void application_task ( void )
         for ( uint8_t cnt_j = 10; cnt_j > 0; cnt_j-- )
         {
             c7segrgb_set_num( &c7segrgb, CHARACTER_TABLE[ cnt_i ], 4 * cnt_i, 4 * cnt_j, cnt_i * cnt_j );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
     
     c7segrgb_set_num( &c7segrgb, C7SEGRGB_POINT, 10, 10, 10 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     c7segrgb_set_num( &c7segrgb, C7SEGRGB_ZERO, 40, 40, 40 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     c7segrgb_set_num( &c7segrgb, C7SEGRGB_ONE, 40, 0, 0 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     c7segrgb_set_num( &c7segrgb, C7SEGRGB_TWO, 0, 40, 0 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     c7segrgb_set_num( &c7segrgb, C7SEGRGB_THREE, 0, 0, 40 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     c7segrgb_set_num( &c7segrgb, C7SEGRGB_FOUR, 40, 0, 40 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     c7segrgb_set_num( &c7segrgb, C7SEGRGB_FIVE, 0, 40, 40 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     c7segrgb_set_num( &c7segrgb, C7SEGRGB_SIX, 40, 40, 0 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     c7segrgb_set_num( &c7segrgb, C7SEGRGB_SEVEN, 20, 30, 40 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     c7segrgb_set_num( &c7segrgb, C7SEGRGB_EIGHT, 40, 15, 31 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     c7segrgb_set_num( &c7segrgb, C7SEGRGB_NINE, 20, 10, 30 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

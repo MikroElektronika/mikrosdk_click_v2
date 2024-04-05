@@ -93,7 +93,7 @@ void application_init ( void )
     
     log_printf( &logger, "  Lin Hall click  \r\n" );
     log_printf( &logger, "------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     value_adc_old = 0;
     sensitivity = 30;
@@ -121,7 +121,7 @@ void application_task ( void )
         log_printf( &logger, "------------------\r\n" );
 
         value_adc_old = value_adc;
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 }  
 

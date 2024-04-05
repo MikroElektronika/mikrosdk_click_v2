@@ -25,17 +25,18 @@
     "name": "mikroe.click.adswio",
     "product_link": "https://www.mikroe.com/ad-swio-click",
     "short_description": "AD-SWIO Click is a quad-channel software configurable input/output solution based on AD74412R. The AD74412R is a quad-channel software configurable input/output integrated circuit for building and process control applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3217
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.AdSwio",
     "subdir_name": "lib_adswio"
 }
+
 
 
 

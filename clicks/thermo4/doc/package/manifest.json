@@ -25,17 +25,18 @@
     "name": "mikroe.click.thermo4",
     "product_link": "https://www.mikroe.com/thermo-4-click",
     "short_description": "THERMO 4 click carries the LM75A digital temperature sensor and thermal watchdog. The sensor has the range from −55 °C to +125 °C.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2064
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.Thermo4",
     "subdir_name": "lib_thermo4"
 }
+
 
 
 

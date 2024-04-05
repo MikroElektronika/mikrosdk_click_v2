@@ -125,7 +125,8 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     ccrf_transmit_packet( &ccrf, DEMO_TEXT_MESSAGE, strlen( DEMO_TEXT_MESSAGE ) );
     log_printf( &logger, " The message \"%s\" has been sent!\r\n", ( char * ) DEMO_TEXT_MESSAGE );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #else
     uint8_t data_buf[ 64 ] = { 0 };
     uint8_t data_len = sizeof( data_buf );

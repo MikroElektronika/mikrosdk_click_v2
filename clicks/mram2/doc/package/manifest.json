@@ -25,17 +25,18 @@
     "name": "mikroe.click.mram2",
     "product_link": "https://www.mikroe.com/mram-2-click",
     "short_description": "MRAM 2 Click is a compact add-on board for applications that must store and retrieve data and programs quickly using a small number of pins.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3843
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Mram2",
     "subdir_name": "lib_mram2"
 }
+
 
 
 

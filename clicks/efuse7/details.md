@@ -117,7 +117,7 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
     display_selection( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -141,14 +141,14 @@ void application_task ( void )
             efuse7_set_limit ( &efuse7, limit_value_op[ index - 48 ] );
             log_printf( &logger, "  >>> Selected mode %c     \r\n", index );
             log_printf( &logger, "---------------------------\r\n" );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
         else 
         { 
             log_printf( &logger, "    Data not in range!    \r\n" );
             log_printf( &logger, "---------------------------\r\n" );
             display_selection( );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
 }

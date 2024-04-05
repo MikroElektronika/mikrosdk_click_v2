@@ -120,32 +120,42 @@ void application_task ( void )
     log_printf( &logger, ">>> START MOTOR\r\n" );
     stspin233_send_single_cmd( &stspin233, STSPIN233_CMD_START_MOTOR );
     stspin233_process( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, ">>> Set clockwise direction\r\n" );
     stspin233_send_double_cmd( &stspin233, STSPIN233_CMD_DIR_MOTOR, STSPIN233_CW_DIR );
     stspin233_process( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, ">>> Set counter clockwise direction\r\n" );
     stspin233_send_double_cmd( &stspin233, STSPIN233_CMD_DIR_MOTOR, STSPIN233_CCW_DIR );
     stspin233_process( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, ">>> STOP MOTOR\r\n" );
     stspin233_send_single_cmd( &stspin233, STSPIN233_CMD_STOP_MOTOR );
     stspin233_process( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     stspin233_send_single_cmd( &stspin233, STSPIN233_CMD_STATUS );
     stspin233_process( );
     log_printf( &logger, ">>> STATUS: %.5s\r\n", &current_parser_buf[ 9 ] );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "------------------------------\r\n" );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

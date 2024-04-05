@@ -64,7 +64,7 @@ void application_init ( void )
 
     log_info( &logger, " Application Task " );
     log_printf( &logger, "**************************************\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void ) 
@@ -78,11 +78,16 @@ void application_task ( void )
     log_printf( &logger, "> XYZ magnetic matching: %.2f\r\n", magnetic_match );
     log_printf( &logger, "**************************************\r\n" );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

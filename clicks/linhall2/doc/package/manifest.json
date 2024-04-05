@@ -25,12 +25,13 @@
     "name": "mikroe.click.linhall2",
     "product_link": "https://www.mikroe.com/lin-hall-2-click",
     "short_description": "LIN Hall 2 Click is a compact add-on board representing a linear Hall-effect sensing solution. This board features the TMAG5253, a low-power linear Hall-effect sensor from Texas Instruments. The sensor responds proportionally to the magnetic flux density with a magnetic sensitivity range of ±80mT and outputs proportional analog voltage.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.LINHall2",
     "subdir_name": "lib_linhall2"
 }
+
 

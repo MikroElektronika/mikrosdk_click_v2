@@ -66,7 +66,7 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, "_________________\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -80,13 +80,18 @@ void application_task ( void )
             log_printf( &logger, " Gyro Y: %.2f pds\r\n", gyro_axis.y );
             log_printf( &logger, " Gyro Z: %.2f pds\r\n", gyro_axis.z );
             log_printf( &logger, "_________________\r\n" );
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
         }
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

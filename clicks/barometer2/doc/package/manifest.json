@@ -25,17 +25,18 @@
     "name": "mikroe.click.barometer2",
     "product_link": "https://www.mikroe.com/barometer-2-click",
     "short_description": "Barometer 2 Click is a digital barometer on a Click board™. Barometer 2 is equipped with the LPS35HW, an absolute piezoresistive pressure sensor with ceramic, water resistant package, manufactured using a proprietary technology.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2775
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Barometer2",
     "subdir_name": "lib_barometer2"
 }
+
 
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.ccrf3",
     "product_link": "https://www.mikroe.com/ccrf-3-click",
     "short_description": "The clicks will enable you to add a low-power consumption radio transceiver at 433 MHz frequency. ccRF 3 click is designed to run on a 3.3V power supply. It communicates with the target microcontroller over SPI interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         2045
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.ccRF3",
     "subdir_name": "lib_ccrf3"
 }
+
 
 
 

@@ -2,7 +2,7 @@
     "name": "Temp Log 4 Click",
     "description": "Temp-Log 4 Click is a temperature measuring Click board™ featuring the SE97B IC, an accurate temperature sensor IC with integrated EEPROM.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","SE97B IC"],
     "category" : ["Temperature & humidity,Temperature Logging"] 
 }

@@ -103,7 +103,7 @@ void application_init ( void ) {
     log_printf( &logger, " Powering on device \r\n" );
     log_printf( &logger, "--------------------\r\n" );
     dtmfgenerator_power_on( &dtmfgenerator );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, " Application Task " );
 }
 

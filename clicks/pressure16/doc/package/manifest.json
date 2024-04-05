@@ -25,14 +25,15 @@
     "name": "mikroe.click.pressure16",
     "product_link": "https://www.mikroe.com/pressure-16-click",
     "short_description": "Pressure 16 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the WSEN-PADS (2511020213301), a high-precision MEMS-based digital absolute pressure sensor from Würth Elektronik. It has a fully-calibrated 24-bit pressure output to provide accurate atmospheric pressure data with a configurable host interface that supports both I2C and SPI serial communication and with an intelligent on-chip motion-triggered interrupt feature.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Pressure16",
     "subdir_name": "lib_pressure16"
 }
+
 
 
 

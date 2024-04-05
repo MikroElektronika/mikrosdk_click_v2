@@ -2,7 +2,7 @@
     "name": "Brushless 15 Click",
     "description": "Brushless 15 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the TB9061AFNG, an automotive pre-driver that incorporates a sensorless controller for driving a 3-phase full-wave brushless DC motor from Toshiba Semiconductor. The TB9061AFNG achieves 120° rectangular wave motor control by using an input signal line that measures the induced voltage of the motors and three-phase motor output without using Hall sensors, rated for an operating voltage range of 6 to 18V. Motor rotation can be controlled by either the DC or the PWM input signal. Besides, it features several diagnostic circuits and drive-control functions such as motor lock detection, step-out detection, over-current/over-temperature detection, and many more.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","TB9061AFNG"],
     "category" : ["Brushless"]
 }

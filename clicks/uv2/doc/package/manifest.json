@@ -25,17 +25,18 @@
     "name": "mikroe.click.uv2",
     "product_link": "https://www.mikroe.com/uv2-click",
     "short_description": "UV 2 click is a mikroBUS™ add-on board with a VEML6075 UVA and UVB light sensor. VEML6075 is a CMOS chip that incorporates a photodiode, amplifiers,and analog/digital circuits.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1900
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.UV2",
     "subdir_name": "lib_uv2"
 }
+
 
 
 

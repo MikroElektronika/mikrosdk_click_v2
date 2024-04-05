@@ -106,7 +106,7 @@ void application_init ( void )
     status_dev = HEATER_HEATING;
     
     log_printf( &logger, " ***** APP INIT ***** \r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
 }
   
@@ -153,7 +153,7 @@ void application_task ( void )
     
     log_printf( &logger, "***************\r\n" );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 

@@ -61,20 +61,35 @@ void application_task ( void )
 {
     log_printf( &logger, "The motor turns forward! \r\n" );
     dcmotor6_set_direction( &dcmotor6, DCMOTOR6_MOTOR_FORWARD );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "Pull brake! \r\n" );
     dcmotor6_set_direction( &dcmotor6, DCMOTOR6_MOTOR_BRAKE );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "The motor turns in reverse! \r\n" );
     dcmotor6_set_direction( &dcmotor6, DCMOTOR6_MOTOR_REVERSE );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "The motor is disconnected (High-Z)! \r\n" );
     dcmotor6_set_direction( &dcmotor6, DCMOTOR6_MOTOR_STOP );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

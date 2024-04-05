@@ -123,7 +123,7 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, "--------------------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -145,7 +145,7 @@ void application_task ( void )
         log_printf( &logger, " Accel Z: %.2f mg | Gyro Z: %.2f dps\r\n", acc_axis.z, gyro_axis.z );
         log_printf( &logger, "--------------------------------------\r\n" );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

@@ -2,7 +2,7 @@
     "name": "Expand 3 Click",
     "description": "Expand 3 Click is a compact add-on board providing general-purpose I/O expansion. This board features the DS2408, an 8-channel programmable I/O expander from Analog Devices. The DS2408 has a factory-lasered 64-bit registration number, enabling multiple Expand 3 Click boards™ to be connected on the same data line, communicating with the host MCU through a standard Dallas Semiconductor 1-Wire interface (15.3kbps or 100kbps). PIO outputs are configured as open-drain and provide a maximum on-resistance of 100Ω.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","DS2408"],
     "category" : ["Click Boards > Interface > Port expander"]
 }

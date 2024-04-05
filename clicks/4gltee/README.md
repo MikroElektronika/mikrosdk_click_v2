@@ -108,64 +108,75 @@ void application_init ( void ) {
     c4gltee_send_cmd( &c4gltee, C4GLTEE_CMD_AT );
     app_error_flag = c4gltee_rsp_check( );
     c4gltee_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // ATI - product information
     c4gltee_send_cmd( &c4gltee, C4GLTEE_CMD_ATI );
     app_error_flag = c4gltee_rsp_check(  );
     c4gltee_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CGMR - firmware version
     c4gltee_send_cmd( &c4gltee, C4GLTEE_CMD_CGMR );
     app_error_flag = c4gltee_rsp_check(  );
     c4gltee_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CMEE - Report Mobile Equipment Error
     c4gltee_send_cmd_with_parameter( &c4gltee, C4GLTEE_CMD_CMEE, "2" );
     app_error_flag = c4gltee_rsp_check(  );
     c4gltee_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // COPS - deregister from network
     c4gltee_send_cmd_with_parameter( &c4gltee, C4GLTEE_CMD_COPS, "2" );
-    Delay_ms( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     app_error_flag = c4gltee_rsp_check(  );
     c4gltee_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CGDCONT - set sim apn
     c4gltee_set_sim_apn( &c4gltee, SIM_APN );
     app_error_flag = c4gltee_rsp_check(  );
     c4gltee_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CFUN - full funtionality
     c4gltee_send_cmd_with_parameter( &c4gltee, C4GLTEE_CMD_CFUN, "1" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     app_error_flag = c4gltee_rsp_check(  );
     c4gltee_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // COPS - automatic mode
     c4gltee_send_cmd_with_parameter( &c4gltee, C4GLTEE_CMD_COPS, "0" );
-    Delay_ms( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     app_error_flag = c4gltee_rsp_check(  );
     c4gltee_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CREG - network registration status
     c4gltee_send_cmd_with_parameter( &c4gltee, C4GLTEE_CMD_CREG, "1" );
     app_error_flag = c4gltee_rsp_check(  );
     c4gltee_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     app_buf_len = 0;
     app_buf_cnt = 0;
     app_connection_status = WAIT_FOR_CONNECTION;
     log_info( &logger, " Application Task " );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 
@@ -181,13 +192,15 @@ void application_task ( void ) {
         c4gltee_send_cmd_check( &c4gltee, C4GLTEE_CMD_CREG );
         app_error_flag = c4gltee_rsp_check(  );
         c4gltee_error_check( app_error_flag );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         
         // CSQ - signal quality
         c4gltee_send_cmd( &c4gltee, C4GLTEE_CMD_CSQ );
         app_error_flag = c4gltee_rsp_check(  );
         c4gltee_error_check( app_error_flag );
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     } else {
         log_info( &logger, "CONNECTED TO NETWORK" );
         
@@ -195,16 +208,45 @@ void application_task ( void ) {
         c4gltee_send_cmd_with_parameter( &c4gltee, C4GLTEE_CMD_CMGF, "0" );
         app_error_flag = c4gltee_rsp_check(  );
         c4gltee_error_check( app_error_flag );
-        Delay_ms( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
         
         for( ; ; ) {   
             log_printf( &logger, "> Sending message to phone number...\r\n" );
             c4gltee_send_sms_pdu ( &c4gltee, SIM_SMSC, PHONE_NUMBER_TO_MESSAGE, MESSAGE_CONTENT );
             app_error_flag = c4gltee_rsp_check(  );
             c4gltee_error_check( app_error_flag );
-            Delay_ms( 10000 );
-            Delay_ms( 10000 );
-            Delay_ms( 10000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
         }
     }
 }

@@ -97,7 +97,7 @@ void application_init ( void )
     spectrometer_cfg_setup( &cfg );
     SPECTROMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     spectrometer_init( &spectrometer, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     spectrometer_generic_read ( &spectrometer, SPECTROMETER_ID, &id_val, 1 );
     if ( id_val == SPECTROMETER_ID_VALUE )
@@ -113,10 +113,10 @@ void application_init ( void )
         log_printf( &logger, "-------------------------\r\n" );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     spectrometer_def_cfg( &spectrometer );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -207,7 +207,7 @@ void application_task ( void )
     }
 
     log_printf( &logger, "-----------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

@@ -112,7 +112,7 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, "-----------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -136,7 +136,8 @@ void application_task ( void )
     if ( SILENTSTEP2_OK == silentstep2_rotate_by_angle( &silentstep2, 50, 90, SILENTSTEP2_STEP_RES_200 ) )
     {
         log_printf( &logger, "-----------------------------\r\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     
     log_printf( &logger, " Counterclockwise motion\r\n" );
@@ -146,7 +147,8 @@ void application_task ( void )
     if ( SILENTSTEP2_OK == silentstep2_rotate_by_angle( &silentstep2, 50, 180, SILENTSTEP2_STEP_RES_200 ) )
     {
         log_printf( &logger, "-----------------------------\r\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     
     log_printf( &logger, " Clockwise motion\r\n" );
@@ -156,7 +158,8 @@ void application_task ( void )
     if ( SILENTSTEP2_OK == silentstep2_rotate_by_angle( &silentstep2, 50, 270, SILENTSTEP2_STEP_RES_200 ) )
     {
         log_printf( &logger, "-----------------------------\r\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     
     log_printf( &logger, " Counterclockwise motion\r\n" );
@@ -166,7 +169,8 @@ void application_task ( void )
     if ( SILENTSTEP2_OK == silentstep2_rotate_by_angle( &silentstep2, 90, 360, SILENTSTEP2_STEP_RES_200 ) )
     {
         log_printf( &logger, "-----------------------------\r\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     
     log_printf( &logger, " Clockwise motion\r\n" );
@@ -176,7 +180,8 @@ void application_task ( void )
     if ( SILENTSTEP2_OK == silentstep2_rotate_by_angle( &silentstep2, 90, 360, SILENTSTEP2_STEP_RES_200 ) )
     {
         log_printf( &logger, "-----------------------------\r\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

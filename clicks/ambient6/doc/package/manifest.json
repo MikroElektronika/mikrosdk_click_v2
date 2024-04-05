@@ -25,17 +25,18 @@
     "name": "mikroe.click.ambient6",
     "product_link": "https://www.mikroe.com/ambient-6-click",
     "short_description": "Ambient 6 click can sense the intensity of the ambient light, providing the measurement data in digital format over the I2C interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2652
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.Ambient6",
     "subdir_name": "lib_ambient6"
 }
+
 
 
 

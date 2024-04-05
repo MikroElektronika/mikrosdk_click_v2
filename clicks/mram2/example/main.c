@@ -64,29 +64,38 @@ void application_init ( void )
     mram2_hold( &mram2, MRAM2_HLD_DISABLE );
     log_printf( &logger, "   Initialized      \r\n" );
     log_printf( &logger, "------------------- \r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
 {
     mram2_wren( &mram2 );
     log_printf( &logger, "Write enabled!\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "Writing \"%s\" to memory...\r\n", val_in );
     mram2_write( &mram2, 0x000000, &val_in[ 0 ], 6 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     mram2_wrdi ( &mram2 );
     log_printf( &logger, "Write disabled!\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     mram2_read ( &mram2, 0x000000, &val_out[ 0 ], 6 );
     log_printf( &logger, "Read data : %s\r\n", val_out );
     
     log_printf( &logger, "-------------------\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -114,7 +114,7 @@ void application_init ( void )
     }
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 
@@ -130,7 +130,7 @@ void application_task ( void )
     if ( ADC23_OK == adc23_get_voltage( &adc23, &voltage ) )
     {
         log_printf( &logger, " Voltage : %.2f [mV]\r\n", voltage );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     } 
 }
 ```

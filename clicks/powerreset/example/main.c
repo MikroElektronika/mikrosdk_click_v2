@@ -59,7 +59,7 @@ void application_init ( void )
     POWERRESET_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     powerreset_init( &powerreset, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, "** Touch Button initialization done **\r\n");
     log_printf( &logger, "**************************************\r\n");
@@ -75,12 +75,12 @@ void application_task ( void )
         if ( new_pwr_state == POWERRESET_ACTIVE )
         {
             log_printf( &logger, "POWER ON\r\n" );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
         else if ( new_pwr_state == POWERRESET_INACTIVE )
         {
             log_printf( &logger, "POWER OFF\r\n" );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
         pwr_state = new_pwr_state;
     }
@@ -90,7 +90,7 @@ void application_task ( void )
         if ( new_rst_state == POWERRESET_ACTIVE )
         {
             log_printf( &logger, "Reset occured!\r\n" );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
         rst_state = new_rst_state;
     }
@@ -98,6 +98,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

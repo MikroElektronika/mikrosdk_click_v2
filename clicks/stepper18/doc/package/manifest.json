@@ -25,14 +25,15 @@
     "name": "mikroe.click.stepper18",
     "product_link": "https://www.mikroe.com/stepper-18-click",
     "short_description": "Stepper 18 Click is a compact add-on board that contains a microstepping stepper motor driver. This board features the DRV8426, a stepper motor driver for industrial and consumer applications from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Stepper18",
     "subdir_name": "lib_stepper18"
 }
+
 
 
 

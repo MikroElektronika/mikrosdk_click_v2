@@ -84,7 +84,7 @@ void application_init ( void )
     keylock_cfg_setup( &cfg );
     KEYLOCK_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     keylock_init( &keylock, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "--------------- \r\n" );
     log_printf( &logger, " Keylock Click \r\n" );
     log_printf( &logger, "--------------- \r\n" );
@@ -128,7 +128,7 @@ void application_task ( void )
     log_printf( &logger, "---------------- \r\n" );
     }
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }  
 
 ```

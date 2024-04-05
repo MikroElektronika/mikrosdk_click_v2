@@ -25,17 +25,18 @@
     "name": "mikroe.click.buzz",
     "product_link": "https://www.mikroe.com/buzz-click",
     "short_description": "BUZZ Click is an accessory board in mikroBus™ form factor. Board features a piezo speaker capable of emitting audio signals.Buzzer’s resonant frequency is 3.8kHz (where you can expect it’s best performance).",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         206
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.BUZZ",
     "subdir_name": "lib_buzz"
 }
+
 
 
 

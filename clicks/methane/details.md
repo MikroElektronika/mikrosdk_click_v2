@@ -126,7 +126,7 @@ void application_task ( void ) {
         log_printf( &logger, " AN Voltage : %.3f[V]\r\n\n", methane_an_voltage );
     }
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

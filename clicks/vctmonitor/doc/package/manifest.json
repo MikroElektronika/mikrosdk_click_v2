@@ -25,17 +25,18 @@
     "name": "mikroe.click.vctmonitor",
     "product_link": "https://www.mikroe.com/vct-monitor-click",
     "short_description": "VCT Monitor Click is a compact add-on board that contains a highly integrated monitoring solution without compromising accuracy. This board features the LTC2990, an I2C configurable high-performance temperature, voltage, and current monitor from Analog Devices.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         3907
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.VCTMonitor",
     "subdir_name": "lib_vctmonitor"
 }
+
 
 
 

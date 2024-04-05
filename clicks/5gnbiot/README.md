@@ -86,7 +86,7 @@ void application_init ( void )
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     // Click initialization.
     c5gnbiot_cfg_setup( &c5gnbiot_cfg );
@@ -101,7 +101,7 @@ void application_init ( void )
     }
     
     log_info( &logger, " Power on device... " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     c5gnbiot_power_on( &c5gnbiot );
     
     // dummy read
@@ -111,61 +111,66 @@ void application_init ( void )
     c5gnbiot_send_cmd( &c5gnbiot, C5GNBIOT_CMD_AT );
     app_error_flag = c5gnbiot_rsp_check( );
     c5gnbiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // ATI - product information
     c5gnbiot_send_cmd( &c5gnbiot, C5GNBIOT_CMD_ATI );
     app_error_flag = c5gnbiot_rsp_check(  );
     c5gnbiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CGMR - firmware version
     c5gnbiot_send_cmd( &c5gnbiot, C5GNBIOT_CMD_CGMR );
     app_error_flag = c5gnbiot_rsp_check(  );
     c5gnbiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // COPS - deregister from network
     c5gnbiot_send_cmd_with_parameter( &c5gnbiot, C5GNBIOT_CMD_COPS, "2" );
     app_error_flag = c5gnbiot_rsp_check(  );
     c5gnbiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CGDCONT - set sim apn
     c5gnbiot_set_sim_apn( &c5gnbiot, SIM_APN );
     app_error_flag = c5gnbiot_rsp_check(  );
     c5gnbiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
      
     // CFUN - full funtionality
     c5gnbiot_send_cmd_with_parameter( &c5gnbiot, C5GNBIOT_CMD_CFUN, "1" );
     app_error_flag = c5gnbiot_rsp_check(  );
     c5gnbiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // COPS - automatic mode
     c5gnbiot_send_cmd_with_parameter( &c5gnbiot, C5GNBIOT_CMD_COPS, "0" );
     app_error_flag = c5gnbiot_rsp_check(  );
     c5gnbiot_error_check( app_error_flag );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     // CEREG - network registration status
     c5gnbiot_send_cmd_with_parameter( &c5gnbiot, C5GNBIOT_CMD_CEREG, "2" );
     app_error_flag = c5gnbiot_rsp_check(  );
     c5gnbiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     // CIMI - request IMSI
     c5gnbiot_send_cmd( &c5gnbiot, C5GNBIOT_CMD_CIMI );
     app_error_flag = c5gnbiot_rsp_check(  );
     c5gnbiot_error_check( app_error_flag );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     app_buf_len = 0;
     app_buf_cnt = 0;
     app_connection_status = WAIT_FOR_CONNECTION;
     log_info( &logger, " Application Task " );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -184,19 +189,23 @@ void application_task ( void )
         c5gnbiot_send_cmd_check( &c5gnbiot, C5GNBIOT_CMD_CGATT );
         app_error_flag = c5gnbiot_rsp_check(  );
         c5gnbiot_error_check( app_error_flag );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         
         // CEREG - network registration status
         c5gnbiot_send_cmd_check( &c5gnbiot, C5GNBIOT_CMD_CEREG );
         app_error_flag = c5gnbiot_rsp_check(  );
         c5gnbiot_error_check( app_error_flag );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         
         // CSQ - signal quality
         c5gnbiot_send_cmd( &c5gnbiot, C5GNBIOT_CMD_CESQ );
         app_error_flag = c5gnbiot_rsp_check(  );
         c5gnbiot_error_check( app_error_flag );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     else
     {
@@ -208,9 +217,36 @@ void application_task ( void )
             c5gnbiot_send_text_message( &c5gnbiot, SIM_SMSC, PHONE_NUMBER_TO_MESSAGE, MESSAGE_CONTENT );
             app_error_flag = c5gnbiot_rsp_check(  );
             c5gnbiot_error_check( app_error_flag );
-            Delay_ms( 10000 );
-            Delay_ms( 10000 );
-            Delay_ms( 10000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
         }
     }
 }

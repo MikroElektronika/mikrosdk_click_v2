@@ -113,7 +113,7 @@ void application_task ( void )
     z_axis = magneto5_get_axis_value( &magneto5, MAGNETO5_AXIS_Z, MAGNETO5_CH3_12bits_1ms );
     log_printf ( &logger, "-- Z axis : %d \r\n ", z_axis );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

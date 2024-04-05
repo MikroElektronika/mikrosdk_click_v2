@@ -57,7 +57,7 @@ void application_init ( void )
     }
 
     accel17_default_cfg ( &accel17 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_info( &logger, " Application Task " );
 }
 
@@ -67,11 +67,16 @@ void application_task ( void )
     accel17_get_axes_data ( &accel17, &axes );
     log_printf( &logger, " > X[degree]: %.2f\r\n > Y[degree]: %.2f\r\n", axes.x, axes.y );
     log_printf( &logger, "*********************************\r\n" );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

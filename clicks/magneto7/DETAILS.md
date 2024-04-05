@@ -92,7 +92,7 @@ void application_init ( void )
     magneto7_cfg_setup( &cfg );
     MAGNETO7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     magneto7_init( &magneto7, &cfg );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 
     init_status = magneto7_default_cfg( &magneto7 );
     if ( init_status == 0)
@@ -138,7 +138,7 @@ void application_task ( void )
 
         log_printf( &logger, "\r\n" );
         
-        Delay_ms( 300 );
+        Delay_ms ( 300 );
     }
 }
 ```

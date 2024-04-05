@@ -2,7 +2,7 @@
     "name": "EnOcean Click",
     "description": "EnOcean click carries a TCM 310 transceiver, which is a bidirectional gateway for EnOcean’s 868 MHz radio systems. The click is designed to run on a 3.3V power supply.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","TCM310"],
     "category" : ["Sub-1 GHz Transceivers"] 
 }

@@ -87,14 +87,14 @@ void application_task ( void ) {
             if ( led_state == 4 ) {
                 for ( old_state = 0; old_state < 17; old_state++ ) {
                     rotaryg_turn_on_led_by_data( &rotaryg, 0xAAAA );
-                    Delay_ms( 100 );
+                    Delay_ms ( 100 );
                     rotaryg_turn_on_led_by_data( &rotaryg, 0x5555 );
-                    Delay_ms( 100 );
+                    Delay_ms ( 100 );
                 }
 
                 for ( old_state = 0; old_state < 17; old_state++ ) {
                     rotaryg_turn_on_led_by_position( &rotaryg, old_state );
-                    Delay_ms( 100 );
+                    Delay_ms ( 100 );
                 }
 
                 led_state = 0;
@@ -130,6 +130,11 @@ void application_task ( void ) {
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

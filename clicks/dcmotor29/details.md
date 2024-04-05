@@ -127,19 +127,35 @@ void application_task ( void )
 {
     dcmotor29_drive_motor( &dcmotor29, DCMOTOR29_DRIVE_MOTOR_CW );
     log_printf( &logger, " Driving motor Clockwise \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     dcmotor29_drive_motor( &dcmotor29, DCMOTOR29_DRIVE_MOTOR_BRAKE );
     log_printf( &logger, " Brake is on \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     dcmotor29_drive_motor( &dcmotor29, DCMOTOR29_DRIVE_MOTOR_CCW );
     log_printf( &logger, " Driving motor counter-clockwise \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     dcmotor29_drive_motor( &dcmotor29, DCMOTOR29_DRIVE_MOTOR_COASTING );
     log_printf( &logger, " Driving motor Coasting \r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

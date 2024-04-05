@@ -25,14 +25,15 @@
     "name": "mikroe.click.leddriver15",
     "product_link": "https://www.mikroe.com/led-driver-15-click",
     "short_description": "LED Driver 15 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the MP3309C, a fully integrated synchronous boost white LED driver with an I2C interface from Monolithic Power Systems. The MP3309C offers high efficiency, delivers up to 40mA of LED current, and operates from a voltage of mikroBUS™ power rails, supporting up to 8 white LEDs in series. It also features a programmable switching frequency to optimize efficiency, supports analog and PWM dimming, and has multiple built-in protection functions that protect the circuit during abnormalities.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.LEDDriver15",
     "subdir_name": "lib_leddriver15"
 }
+
 
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.weather",
     "product_link": "https://www.mikroe.com/weather-click",
     "short_description": "Weather click carries BME280 integrated environmental unit from Bosch.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1555
     ],
-    "version": "2.1.0.22",
+    "version": "2.1.0.23",
     "cmake": true,
     "alias": "Click.Weather",
     "subdir_name": "lib_weather"
 }
+
 
 
 

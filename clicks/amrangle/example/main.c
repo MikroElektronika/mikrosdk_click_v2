@@ -63,7 +63,7 @@ void application_init ( void ) {
     }
 
     amrangle_default_cfg( &amrangle );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     log_info( &logger, " Application Task " );
 }
 
@@ -73,11 +73,16 @@ void application_task ( void ) {
     log_printf( &logger, " Temperature: %.2f C\r\n", temperature_res );
     log_printf( &logger, " Angle: %.2f degrees\r\n", angle_res );
     log_printf( &logger, " --------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

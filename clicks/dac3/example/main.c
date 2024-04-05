@@ -86,7 +86,11 @@ void application_task ( )
         log_printf( &logger, " .output voltage: %d mV\r\n", ( ( output_value * cnt ) * 79 ) / 64 );
         log_printf( &logger, "-------------------------------\r\n" );
 
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 
     log_printf( &logger, "###############################\r\n" );
@@ -95,6 +99,11 @@ void application_task ( )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

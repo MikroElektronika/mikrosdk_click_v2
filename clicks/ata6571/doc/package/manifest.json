@@ -25,17 +25,18 @@
     "name": "mikroe.click.ata6571",
     "product_link": "https://www.mikroe.com/ata6571-click",
     "short_description": "ATA6571 Click is a compact add-on board that contains a transceiver designed for high-speed CAN applications. This board features the ATA6571, a standalone high-speed CAN FD transceiver that interfaces a CAN protocol controller and the physical two-wire CAN bus from Microchip.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3818
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.ATA6571",
     "subdir_name": "lib_ata6571"
 }
+
 
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.dac4",
     "product_link": "https://www.mikroe.com/dac-4-click",
     "short_description": "DAC 4 Click carries Microchip’s MCP4728 IC, a Quad Digital-to-Analog Converter with nonvolatile (EEPROM) Memory.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2894
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Dac4",
     "subdir_name": "lib_dac4"
 }
+
 
 
 

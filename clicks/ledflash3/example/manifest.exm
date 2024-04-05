@@ -2,7 +2,7 @@
     "name": "LED Flash 3 Click",
     "description": "LED Flash 3 Click is a compact add-on board representing a powerful flash/torch solution. This board features the KTD2691, an inductor-less, single-flash LED driver from Kinetic Technologies. It includes one current source that can drive up to 1.5A of LED flash current or up to 376mA of torch current.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","KTD2691ERAA-TA"],
     "category" : ["Click Boards > Display & LED > LED segment"]
 }

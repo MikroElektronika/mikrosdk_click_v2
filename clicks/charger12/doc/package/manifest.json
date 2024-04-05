@@ -25,17 +25,18 @@
     "name": "mikroe.click.charger12",
     "product_link": "https://www.mikroe.com/charger-12-click",
     "short_description": "This application charges the batery",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2896
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Charger12",
     "subdir_name": "lib_charger12"
 }
+
 
 
 

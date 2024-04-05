@@ -2,7 +2,7 @@
     "name": "IRNSS Click",
     "description": "IRNSS Click is a compact add-on board that provides fast positioning capability. This board features the L89H, a high-performance IRNSS-enabled GNSS module capable of acquiring and tracking GPS, IRNSS, GLONASS, BeiDou, Galileo, and QZSS signals from Quectel Wireless Solutions.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","L89"],
     "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"]
 }

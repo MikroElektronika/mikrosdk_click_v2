@@ -2,7 +2,7 @@
     "name": "ADC 20 Click",
     "description": "ADC 20 Click is a compact add-on board with a high-performance data converter. This board features the TLA2518, an SPI-configurable eight-channel 12-bit successive approximation register analog-to-digital converter (SAR ADC) from Texas Instruments. The TLA2518 has an internal oscillator for the ADC conversion and supports averaging multiple data samples with a single conversion start. Also, the built-in programmable averaging filters help reduce noise from the analog inputs and reduce the number of data samples required to be read by the host MCU. All eight channels can be used as analog inputs, with the addition that the four channels can be used as digital inputs or digital outputs.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","TLA2518IRTER"],
     "category" : ["Click Boards > Mixed signal > ADC"]
 }

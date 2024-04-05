@@ -119,7 +119,11 @@ void application_task ( void )
     {
         freq = ANTOPWM2_FREQ_MIN;
     }
-    Delay_ms ( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

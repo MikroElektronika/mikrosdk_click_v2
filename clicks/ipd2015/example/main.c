@@ -58,18 +58,21 @@ void application_task ( void )
 {
     log_printf( &logger, " Turning OUT 1 to OUT 4 HIGH \r\n" );
     ipd2015_all_pins_set( &ipd2015 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, " Turning OUT 1 to OUT 4 LOW \r\n" );
     ipd2015_all_pins_clear( &ipd2015 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, " Turning OUT 1 to OUT 4 one by one \r\n" );
     uint8_t out_sel = IPD2015_OUT1_PIN_MASK;
     do
     {
         ipd2015_set_out_level( &ipd2015, out_sel, IPD2015_PIN_STATE_HIGH );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 ); 
+        Delay_ms ( 1000 );
         ipd2015_set_out_level( &ipd2015, out_sel, IPD2015_PIN_STATE_LOW );
         out_sel <<=  1;
     }
@@ -79,6 +82,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

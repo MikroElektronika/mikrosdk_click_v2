@@ -25,17 +25,18 @@
     "name": "mikroe.click.signalrelay",
     "product_link": "https://www.mikroe.com/signal-relay-click",
     "short_description": "Signal Relay click can be used for ON/OFF control in various devices. It carries four ultra-small GV5-1 PCB relays from Omron and runs on a 5V power supply.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1977
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.SignalRealy",
     "subdir_name": "lib_signalrelay"
 }
+
 
 
 

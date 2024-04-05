@@ -92,7 +92,7 @@ void application_init ( void )
     accel10_cfg_setup( &cfg );
     ACCEL10_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     accel10_init( &accel10, &cfg );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "    Accel 10 Click\r\n" );
@@ -103,7 +103,7 @@ void application_init ( void )
     {
         log_printf( &logger, "  Communication  OK\r\n" );
         log_printf( &logger, "---------------------\r\n" );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     else
     {
@@ -116,7 +116,7 @@ void application_init ( void )
     accel10_default_cfg ( &accel10 );
     log_printf( &logger, "  Default config.\r\n" );
     log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -133,18 +133,18 @@ void application_task ( void )
     if ( accel10_check_data_ready( &accel10 ) == ACCEL10_STATUS_DATA_READY )
     {
         accel10_get_data ( &accel10, &accel_data );
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
         
         log_printf( &logger, "  Accel X :  %d\r\n", accel_data.x );
         log_printf( &logger, "  Accel Y :  %d\r\n", accel_data.y );
         log_printf( &logger, "  Accel Z :  %d\r\n", accel_data.z );
     
         temperature = accel10_read_temperature( &accel10 );
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
 
         log_printf( &logger, " Temperature :  %d C\r\n", ( int16_t ) temperature );
         log_printf( &logger, "---------------------\r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 } 
 

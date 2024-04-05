@@ -25,14 +25,15 @@
     "name": "mikroe.click.nvsram4",
     "product_link": "https://www.mikroe.com/nvsram-4-click",
     "short_description": "nvSRAM 4 Click is a compact add-on board that contains the most reliable nonvolatile memory. This board features the CY14B101PA, a 1-Mbit nvSRAM with a fully-featured real-time clock from Cypress Semiconductor.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.nvSRAM4",
     "subdir_name": "lib_nvsram4"
 }
+
 
 
 

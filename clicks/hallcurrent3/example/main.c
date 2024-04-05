@@ -62,11 +62,16 @@ void application_task ( )
     current_data = hallcurrent3_get_current( &hallcurrent3 );
     log_printf( &logger, "Current : %f mA\r\n", current_data );
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

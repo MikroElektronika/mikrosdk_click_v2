@@ -64,7 +64,7 @@ void application_init ( void )
     
     fin = HZTOV_MIN_FREQ;
     
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -72,7 +72,7 @@ void application_task ( void )
     if ( fin > HZTOV_MAX_FREQ )
         fin = HZTOV_MIN_FREQ;
     hztov_set_input_frequency( &hztov, fin );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "Frequency: %u Hz \r\n", fin );
     voltage = 0;
     for ( uint8_t cnt = 0; cnt < 100; cnt++ )
@@ -83,11 +83,17 @@ void application_task ( void )
     log_printf( &logger, "-------------------\r\n" );
     
     fin += 1000;
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

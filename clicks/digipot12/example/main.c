@@ -65,7 +65,7 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, " ----------------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
@@ -78,7 +78,7 @@ void application_task ( void )
             if ( DIGIPOT12_OK == digipot12_get_resistance( &digipot12, DIGIPOT12_WIPER_SEL_1, &res_kohm ) )
             {
                 log_printf( &logger, " Rwb1 : %.2f kOhm\r\n", res_kohm );
-                Delay_ms( 100 );
+                Delay_ms ( 100 );
             }
         }
         
@@ -87,16 +87,25 @@ void application_task ( void )
             if ( DIGIPOT12_OK == digipot12_get_resistance( &digipot12, DIGIPOT12_WIPER_SEL_2, &res_kohm ) )
             {
                 log_printf( &logger, " Rwb2 : %.2f kOhm\r\n", res_kohm );
-                Delay_ms( 100 );
+                Delay_ms ( 100 );
             }
         }
         log_printf( &logger, " ----------------------------\r\n" );
-        Delay_ms( 5000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

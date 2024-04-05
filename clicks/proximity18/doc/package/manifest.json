@@ -25,14 +25,15 @@
     "name": "mikroe.click.proximity18",
     "product_link": "https://www.mikroe.com/proximity-18-click",
     "short_description": "Proximity 18 Click is a compact add-on board that contains a close-range proximity sensing solution. This board features the VCNL3036X01, a high-resolution digital proximity sensor from Vishay Semiconductors. Besides the proximity sensor, the VCNL3036X01 also integrates a mux and a driver for three external LEDs, which are located near the chip on the board, photodiodes, amplifiers, and analog to digital converting circuits into a single chip by CMOS process. It allows absolute distance measurement, whatever the target color and reflectance, providing an accurate range of up to 50cm.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.Proximity18",
     "subdir_name": "lib_proximity18"
 }
+
 
 
 

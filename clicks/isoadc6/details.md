@@ -133,7 +133,7 @@ void application_task ( void )
     if ( ISOADC6_OK == isoadc6_get_voltage( &isoadc6, &voltage ) )
     {
         log_printf( &logger, " Voltage: %.3f [V]\r\n", voltage );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

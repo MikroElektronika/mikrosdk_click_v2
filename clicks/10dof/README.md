@@ -112,16 +112,16 @@ void application_init ( void )
 void application_task ( void )
 {
     c10dof_read_accel( &c10dof, &accelX, &accelY, &accelZ );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     c10dof_read_gyro( &c10dof, &gyroX,  &gyroY, &gyroZ );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     c10dof_read_mag( &c10dof, &magX,  &magY, &magZ );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     temperature = c10dof_get_temperature( &c10dof );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     c10dof_get_measurements( &c10dof, &temperature, &pressure );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
 
     log_printf( &logger, "Accel X : %d  |  ", accelX );
     log_printf( &logger, "Gyro X  : %d  |  ", gyroX );
@@ -138,7 +138,7 @@ void application_task ( void )
     log_printf( &logger, "Press.  : %.2f mbar \r\n", pressure);
 
     log_printf( &logger, "--------------------------------------------------------------------\r\n", pressure);
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 ```

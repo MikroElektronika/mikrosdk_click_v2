@@ -101,7 +101,7 @@ void application_init ( void )
     pressure9_cfg_setup( &cfg );
     PRESSURE9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pressure9_init( &pressure9, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     // Test comunication
     uint8_t product_id = 0;
@@ -113,7 +113,7 @@ void application_init ( void )
     }
 
     pressure9_default_cfg( &pressure9 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_info( &logger, " Application Task " );
 } 
@@ -133,7 +133,8 @@ void application_task ( void )
     log_printf( &logger, " Temperature: %.2f degC\r\n", temperature );
 
     log_printf( &logger, "-----------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

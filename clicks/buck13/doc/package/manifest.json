@@ -25,17 +25,18 @@
     "name": "mikroe.click.buck13",
     "product_link": "https://www.mikroe.com/buck-13-click",
     "short_description": "Buck 13 Click is a high-efficiency step-down converter which provides a highly regulated output voltage derived from the connected power source, rated from 4.5V to 5.5V. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2833
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Buck13",
     "subdir_name": "lib_buck13"
 }
+
 
 
 

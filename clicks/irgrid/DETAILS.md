@@ -125,13 +125,13 @@ void application_task ( void )
             log_printf( &logger, "%.3f    ", ir_tmp[ i ] );
         }
         log_printf( &logger, "\r\n" );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     
     log_printf( &logger, "\r\n" );
     log_printf( &logger, "\r\n" );
     log_printf( &logger, "\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }  
 
 ```

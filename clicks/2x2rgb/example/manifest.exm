@@ -2,7 +2,7 @@
     "name": "2x2 RGB Click",
     "description": "2x2 RGB Click is a compact add-on board that contains a matrix of 4 “intelligent” RGB elements, forming a 2x2 display screen. This board features the KTD2052A, a 12-channel RGB LED driver from Kinetic Technologies. It is a fully programmable current regulator for up to four RGB LEDs (12 LEDs in total). The LED matrix consists of four LRTB GFTG, a 6-lead in-line MULTILEDs, from ams OSRAM. The LEDs have a 120-degree viewing angle.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","KTD2052AEVAA-TR"],
     "category" : ["Click Boards > Display & LED > LED matrix"]
 }

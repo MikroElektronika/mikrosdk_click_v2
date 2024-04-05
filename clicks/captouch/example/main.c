@@ -66,12 +66,17 @@ void application_task ( void )
     if ( touch != 0 )
     {
         log_printf( &logger, "-- New Touch\r\n" );
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

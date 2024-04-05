@@ -112,7 +112,7 @@ void application_task ( void )
     log_printf( &logger, "Reading 9 bytes of Fram memory, from address 0x0150: \r\n" );
     fram_read( &fram, 0x0150, &rd_data[ 0 ], 9 );
     log_printf( &logger, "Data read: %c \r\n", rd_data );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
  
 

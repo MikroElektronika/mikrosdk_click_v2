@@ -172,7 +172,7 @@ void application_init ( void )
     ENOCEAN_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     enocean_init( &enocean, &cfg );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     enocean_response_handler_set( &enocean, &make_response );
 }
@@ -186,6 +186,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

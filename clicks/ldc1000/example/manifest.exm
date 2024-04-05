@@ -2,7 +2,7 @@
     "name": "LDC 1000 Click",
     "description": "LDC1000 click carries the world's first inductance-to-digital converter IC, along with a detachable sensor (an LC tank comprising a 36-turn PCB coil and a 100pF 1% NPO capacitor). The LDC1000 IC has a sub-micron resolution in short range applications; the board is ideal for highly precise short range measurements of the position, motion or composition of conductive targets.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","Inductance-to-digital converter IC, along with a detachable sensor"],
     "category" : ["Inductance"] 
 }

@@ -53,7 +53,7 @@ void application_init ( void )
     FRAM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     fram_init( &fram, &cfg );
     fram_erase_all( &fram );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
@@ -64,16 +64,21 @@ void application_task ( void )
 
     log_printf( &logger, "Writing MikroE to  Fram memory, from address 0x0150: \r\n" );
     fram_write( &fram, 0x0150, &wr_data[ 0 ], 9 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "Reading 9 bytes of Fram memory, from address 0x0150: \r\n" );
     fram_read( &fram, 0x0150, &rd_data[ 0 ], 9 );
     log_printf( &logger, "Data read: %s \r\n", rd_data );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

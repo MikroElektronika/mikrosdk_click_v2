@@ -183,6 +183,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -249,9 +254,9 @@ static err_t aiwb212f_rsp_check ( uint8_t *rsp )
             aiwb212f_clear_app_buf( );
             return AIWB212F_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     aiwb212f_process( );
     if ( strstr( app_buf, rsp ) )
     {
@@ -285,7 +290,7 @@ static void aiwb212f_error_check ( err_t error_flag )
             log_error( &logger, " Overflow!" );
 
             aiwb212f_set_gpio( &aiwb212f, LED_RED_GPIO, LED_STATE_ON );
-            Delay_ms( 500 );
+            Delay_ms ( 500 );
             aiwb212f_set_gpio( &aiwb212f, LED_RED_GPIO, LED_STATE_OFF );
             break;
         }
@@ -294,7 +299,7 @@ static void aiwb212f_error_check ( err_t error_flag )
             log_error( &logger, " Timeout!" );
 
             aiwb212f_set_gpio( &aiwb212f, LED_RED_GPIO, LED_STATE_ON );
-            Delay_ms( 500 );
+            Delay_ms ( 500 );
             aiwb212f_set_gpio( &aiwb212f, LED_RED_GPIO, LED_STATE_OFF );
             break;
         }
@@ -303,7 +308,7 @@ static void aiwb212f_error_check ( err_t error_flag )
             log_error( &logger, " CMD!" );
 
             aiwb212f_set_gpio( &aiwb212f, LED_RED_GPIO, LED_STATE_ON );
-            Delay_ms( 500 );
+            Delay_ms ( 500 );
             aiwb212f_set_gpio( &aiwb212f, LED_RED_GPIO, LED_STATE_OFF );
             break;
         }
@@ -313,13 +318,13 @@ static void aiwb212f_error_check ( err_t error_flag )
             log_error( &logger, " Unknown!" );
 
             aiwb212f_set_gpio( &aiwb212f, LED_RED_GPIO, LED_STATE_ON );
-            Delay_ms( 500 );
+            Delay_ms ( 500 );
             aiwb212f_set_gpio( &aiwb212f, LED_RED_GPIO, LED_STATE_OFF );
             break;
         }
     }
     log_printf( &logger, "- - - - - - - - - - - - - - - -\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 static void aiwb212f_configure_for_example ( void )
@@ -359,11 +364,11 @@ static void aiwb212f_configure_for_example ( void )
     {
         aiwb212f_process(); 
         aiwb212f_set_gpio( &aiwb212f, LED_BLUE_GPIO, LED_STATE_ON );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
         aiwb212f_set_gpio( &aiwb212f, LED_BLUE_GPIO, LED_STATE_OFF );
     }
     while ( !strstr( app_buf, DEVICE_CONNECT ) );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     aiwb212f_clear_app_buf( );
     log_printf( &logger, "- - - - - - - - - - - - - - - -\r\n" );
 
@@ -382,7 +387,7 @@ static void aiwb212f_example ( void )
     #define KEEP_ALIVE          "1"
 
     aiwb212f_set_gpio( &aiwb212f, LED_BLUE_GPIO, LED_STATE_ON );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     aiwb212f_set_gpio( &aiwb212f, LED_BLUE_GPIO, LED_STATE_OFF );
 
     log_printf( &logger, " TCP Example \r\n" );
@@ -423,7 +428,7 @@ static void aiwb212f_example ( void )
     aiwb212f_error_check( error_flag );
 
     aiwb212f_set_gpio( &aiwb212f, LED_BLUE_GPIO, LED_STATE_ON );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     aiwb212f_set_gpio( &aiwb212f, LED_BLUE_GPIO, LED_STATE_OFF );
 
     // UDP mode doesn't support read function
@@ -459,9 +464,17 @@ static void aiwb212f_example ( void )
     aiwb212f_send_cmd_with_par( &aiwb212f, AIWB212F_CMD_AT_SOCKETDEL, CON_ID );
     error_flag = aiwb212f_rsp_check( AIWB212F_RSP_OK );
     aiwb212f_error_check( error_flag );
-
-    Delay_ms( 5000 );
-    Delay_ms( 5000 );
+    // 10 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
 #elif ( EXAMPLE_BLE == DEMO_EXAMPLE )
     aiwb212f_process();

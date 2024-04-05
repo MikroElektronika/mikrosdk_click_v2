@@ -103,11 +103,15 @@ void application_task ( void )
     mic24055_set_vout( &mic24055, 1500 );
     log_printf( &logger, "VOUT set to 1500mV \r\n" );
     log_printf( &logger, "-------------------------- \r\n" );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     mic24055_set_vout( &mic24055, 3300 );
     log_printf( &logger, "VOUT set to 3300mV \r\n" );
     log_printf( &logger, "-------------------------- \r\n" );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ```

@@ -115,7 +115,7 @@ void application_task ( void )
     log_printf( &logger, "Pressure: %u\r\n", pressure);
     log_printf( &logger, "Temperature: %u\r\n", temperature);
 
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

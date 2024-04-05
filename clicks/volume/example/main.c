@@ -73,7 +73,7 @@ void application_task ( void ) {
                 volume_set_vol_gain( &volume, left_speaker_gain, right_speaker_gain );
                 left_speaker_gain += 0.5;
                 right_speaker_gain += 0.5;
-                Delay_ms( 50 );
+                Delay_ms ( 50 );
             } else {
                 one_circle++;
                 log_printf( &logger, " Turning volume down.\r\n" );
@@ -82,13 +82,18 @@ void application_task ( void ) {
             volume_set_vol_gain( &volume, left_speaker_gain, right_speaker_gain );
             left_speaker_gain -= 0.5;
             right_speaker_gain -= 0.5;
-            Delay_ms( 50 );
+            Delay_ms ( 50 );
         } else one_circle++;
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

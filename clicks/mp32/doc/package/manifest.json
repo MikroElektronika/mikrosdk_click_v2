@@ -25,17 +25,18 @@
     "name": "mikroe.click.mp32",
     "product_link": "https://www.mikroe.com/mp3-2-click",
     "short_description": "MP3 2 Click is an audio decoder expansion board with on-board microSD card slot, that enables you to create your personal audio playback system. It holds the KT403A,a SOC chip solution with intergraded MCU, hardware audio MP3/WAV decoder and DSP, from Shenzhen Qianle Microelectronics Technology Co.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3749
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Mp32",
     "subdir_name": "lib_mp32"
 }
+
 
 
 

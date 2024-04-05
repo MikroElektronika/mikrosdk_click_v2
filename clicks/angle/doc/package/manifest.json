@@ -25,17 +25,18 @@
     "name": "mikroe.click.angle",
     "product_link": "https://www.mikroe.com/angle-click",
     "short_description": "Angle click is a precise Hall-effect angle sensing click board that can be used to measure the rotational angle of the magnetic field in the X-Y plane above it (parallel to the surface of the click), through the whole range of 360°.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1667
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Angle",
     "subdir_name": "lib_angle"
 }
+
 
 
 

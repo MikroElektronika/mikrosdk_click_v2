@@ -2,7 +2,7 @@
     "name": "Stepper 7 Click",
     "description": "Stepper 7 click is a bipolar step motor driver. It features an H-bridge bipolar step motor driver, which supports full and half step control modes. Stepper 7 click also carries a port expander so that the communication can be done with a minimal number of pins, through the mikroBUS™ SPI bus.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","MTS62C19A","MCP23S08"],
     "category" : ["Click Boards > Motor control > Stepper"]
 }

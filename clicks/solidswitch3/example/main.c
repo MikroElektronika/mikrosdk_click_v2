@@ -87,12 +87,19 @@ void application_task ( void )
     if ( SOLIDSWITCH3_OK == solidswitch3_disable_output ( &solidswitch3, SOLIDSWITCH3_ALL_CHANNELS ) )
     {
         solidswitch3_display_enabled_channels( &solidswitch3 );
-        Delay_ms ( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

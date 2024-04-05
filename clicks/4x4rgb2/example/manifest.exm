@@ -2,7 +2,7 @@
     "name": "4x4 RGB 2 Click",
     "description": "4x4 RGB 2 Click is a compact add-on board that contains a matrix of 16 intelligent RGB LEDs, forming a 4x4 display screen. This board features 16 IN-PC55TBTRGB, 5x5mm RGB LEDs with an integrated IC from Inolux. The LEDs feature an 8-bit color control in 256 steps (256-level greyscale) and a 5-bit brightness control in 32 steps. The intelligent LEDs are cascaded (daisy-chained); thus, every one of them can communicate with the host MCU using the same data lines.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","IN-PC55TBTRGB"],
     "category" : ["Click Boards > Display & LED > LED matrix"]
 }

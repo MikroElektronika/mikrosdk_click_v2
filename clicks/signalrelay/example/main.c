@@ -67,15 +67,20 @@ void application_task ( void )
     {
         log_info( &logger, " *** Relay [ %d ] ON ", cnt );
         signalrelay_relay_state( &signalrelay, cnt, SIGNALRELAY_STATE_ON );
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
         log_info( &logger, " *** Relay [ %d ] OFF ", cnt );
         signalrelay_relay_state( &signalrelay, cnt, SIGNALRELAY_STATE_OFF );
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

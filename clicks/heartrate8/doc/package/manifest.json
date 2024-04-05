@@ -25,17 +25,18 @@
     "name": "mikroe.click.heartrate8",
     "product_link": "https://www.mikroe.com/heart-rate-8-click",
     "short_description": "Heart Rate 8 click is an optical biosensor Click board™, designed for heart-rate monitoring (HRM). This Click board™ employs a specialized sensor that incorporates three LED drivers and two photo-sensing elements, sensitive to green and IR light.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2590
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.HeartRate8",
     "subdir_name": "lib_heartrate8"
 }
+
 
 
 

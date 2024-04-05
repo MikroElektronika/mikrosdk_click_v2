@@ -100,10 +100,10 @@ void application_init ( void )
     color3_cfg_setup( &cfg );
     COLOR3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     color3_init( &color3, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     color3_set_default_settings( &color3 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "-----------------\r\n" );
     log_printf( &logger, " Color 3  Click  \r\n" );

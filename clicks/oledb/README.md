@@ -117,59 +117,67 @@ void application_init ( void ) {
 
 void application_task ( void ) {
     oledb_clear_display( &oledb );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     oledb_write_string( &oledb, OLEDB_FONT_6X8, 0, 0, "     MIKROE     " );
     oledb_write_string( &oledb, OLEDB_FONT_6X8, 1, 0, "  OLED B click  " );
     oledb_write_string( &oledb, OLEDB_FONT_6X8, 2, 0, "  with SSD1306  " );
     oledb_write_string( &oledb, OLEDB_FONT_6X8, 3, 0, "   controller   " );
     oledb_write_string( &oledb, OLEDB_FONT_6X8, 4, 0, "  TEST EXAMPLE  " );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     oledb_write_string( &oledb, OLEDB_FONT_6X8, 0, 0, " TEXT SCROLL EXAMPLE " );
     oledb_write_string( &oledb, OLEDB_FONT_6X8, 4, 0, " TEXT SCROLL EXAMPLE " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     oledb_scroll_right( &oledb, 4, 0 );
-    Delay_ms( 6000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     oledb_stop_scroll( &oledb );
     
     oledb_clear_display( &oledb );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     oledb_display_picture( &oledb, oledb_img_mikroe );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     oledb_send_cmd( &oledb, OLEDB_INVERTDISPLAY );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     oledb_send_cmd( &oledb, OLEDB_NORMALDISPLAY );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     oledb_send_cmd( &oledb, OLEDB_INVERTDISPLAY );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     oledb_send_cmd( &oledb, OLEDB_NORMALDISPLAY );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 
     for ( uint8_t contrast = 0xAF; contrast > 0x00; contrast-- ) 
     {
         oledb_set_contrast( &oledb, contrast );
-        Delay_ms( 5 );
+        Delay_ms ( 5 );
     }
 
     for ( uint8_t contrast = 0x00; contrast < 0xAF; contrast++ ) 
     {
         oledb_set_contrast( &oledb, contrast );
-        Delay_ms( 5 );
+        Delay_ms ( 5 );
     }
 
     oledb_scroll_left( &oledb, 0, 4 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     oledb_stop_scroll( &oledb );
 
     oledb_scroll_right( &oledb, 0, 4 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     oledb_stop_scroll( &oledb );
     
     oledb_scroll_left( &oledb, 0, 4 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     oledb_stop_scroll( &oledb );
 }
 

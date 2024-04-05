@@ -25,17 +25,18 @@
     "name": "mikroe.click.keylock",
     "product_link": "https://www.mikroe.com/keylock-click",
     "short_description": "Keylock click carries a processed sealed key lock mechanism that can be set in three different positions. The click is designed to run on either 3.3V or 5V power supply.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2159
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Keylock",
     "subdir_name": "lib_keylock"
 }
+
 
 
 

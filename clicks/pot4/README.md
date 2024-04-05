@@ -124,7 +124,7 @@ void application_task ( void )
             log_printf( &logger, " AN Voltage : %.3f V\r\n", voltage );
             log_printf( &logger, " Potentiometer : %u %%\r\n\n", 
                         ( uint16_t ) pot4_convert_voltage_to_percents ( &pot4, voltage ) );
-            Delay_ms( 1000 );
+            Delay_ms ( 1000 );
         }
     }
 }

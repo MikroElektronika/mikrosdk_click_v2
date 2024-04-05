@@ -25,17 +25,18 @@
     "name": "mikroe.click.utm7segr",
     "product_link": "https://www.mikroe.com/ut-m-7-seg-r-click",
     "short_description": "UT-M 7-SEG R click carries two SMD ultra thin LED 7-SEG displays and the MAX6969 constant-current LED driver from Maxim Integrated. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over SPI interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2149
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.UT-M7-SEGR",
     "subdir_name": "lib_utm7segr"
 }
+
 
 
 

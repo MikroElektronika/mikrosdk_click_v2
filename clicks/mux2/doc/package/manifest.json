@@ -25,17 +25,18 @@
     "name": "mikroe.click.mux2",
     "product_link": "https://www.mikroe.com/mux-2-click",
     "short_description": "MUX 2 click is a Click board™ that switches one of the eight inputs to one output. It employs the MUX508, a modern CMOS analog multiplexing integrated circuit, produced by Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2597
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Mux2",
     "subdir_name": "lib_mux2"
 }
+
 
 
 

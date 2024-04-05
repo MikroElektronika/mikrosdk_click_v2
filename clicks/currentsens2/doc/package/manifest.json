@@ -25,11 +25,12 @@
     "name": "mikroe.click.currentsens2",
     "product_link": "https://www.mikroe.com/current-sens-2-click",
     "short_description": "Current Sens 2 Click is a compact add-on board designed for precise current measurements in industrial applications. This board features the HO 10-P, an AC/DC current transducer from LEM USA. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.CurrentSens2",
     "subdir_name": "lib_currentsens2"
 }
+

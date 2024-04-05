@@ -88,7 +88,7 @@ void application_init ( void )
     ENOCEAN3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     enocean3_init( &enocean3, &cfg );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 
     enocean3_response_handler_set( &enocean3, &make_response );
     rsp_check = 1;

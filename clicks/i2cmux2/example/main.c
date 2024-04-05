@@ -116,15 +116,15 @@ void application_init ( void )
     I2CMUX2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     i2cmux2_init( &i2cmux2, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "I2C MUX 2 Click driver init\r\n");
     log_printf( &logger, "---------------------------------------\r\n");
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     i2cmux2_hw_reset( &i2cmux2 );
     log_printf( &logger, "I2C MUX 2 Click HW reset\r\n");
     log_printf( &logger, "---------------------------------------\r\n");
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -135,7 +135,7 @@ void application_task ( void )
 #ifdef ENABLE_CHANNEL_0
     // SET CHANNEL 0: 6DOF IMU 11 click
     i2cmux2_set_channel( &i2cmux2, I2CMUX2_CMD_SET_CH_0, 0x0E );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     i2cmux2_generic_read( &i2cmux2, 0x00, &rx_data, 1 );
     display_log( I2CMUX2_CMD_SET_CH_0 );
 #endif
@@ -143,7 +143,7 @@ void application_task ( void )
 #ifdef ENABLE_CHANNEL_1
     // SET CHANNEL 1: Altitude click
     i2cmux2_set_channel( &i2cmux2, I2CMUX2_CMD_SET_CH_1, 0x60 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     i2cmux2_generic_read( &i2cmux2, 0x0C, &rx_data, 1 );
     display_log( I2CMUX2_CMD_SET_CH_1 );
 #endif
@@ -151,7 +151,7 @@ void application_task ( void )
 #ifdef ENABLE_CHANNEL_2
     // SET CHANNEL 2: 6DOF IMU 9 click
     i2cmux2_set_channel( &i2cmux2, I2CMUX2_CMD_SET_CH_2, 0x69 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     i2cmux2_generic_read( &i2cmux2, 0x75, &rx_data, 1 );
     display_log( I2CMUX2_CMD_SET_CH_2 );
 #endif
@@ -159,17 +159,23 @@ void application_task ( void )
 #ifdef ENABLE_CHANNEL_3
     // SET CHANNEL 3: Compass 3 click
     i2cmux2_set_channel( &i2cmux2, I2CMUX2_CMD_SET_CH_3, 0x30 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     i2cmux2_generic_read( &i2cmux2, 0x2F, &rx_data, 1 );
     display_log( I2CMUX2_CMD_SET_CH_3 );
 #endif
 
     log_printf( &logger, "----------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

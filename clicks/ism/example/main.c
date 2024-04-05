@@ -62,7 +62,7 @@ void application_init ( void )
     }
 
     ism_default_cfg ( &ism );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
 #ifdef DEMO_APP_TRANSMITTER
     ism_switch_tx_mode( &ism );
@@ -79,11 +79,11 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     ism_transmit_packet( &ism, ISM_CMD_W_TX_PAYLOAD_NOACK, demo_message_1, 9 );
     log_printf( &logger, "  Tx : %s", demo_message_1 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     ism_transmit_packet( &ism, ISM_CMD_W_TX_PAYLOAD_NOACK, demo_message_2, 12 );
     log_printf( &logger, "  Tx : %s", demo_message_2 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 #else
     uint8_t rx_buf[ ISM_MAX_PACKET_LEN ] = { 0 };
 
@@ -98,6 +98,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -25,14 +25,15 @@
     "name": "mikroe.click.ecg7",
     "product_link": "https://www.mikroe.com/ecg-7-click",
     "short_description": "ECG 7 Click is a compact add-on board that records the heart's electrical activity. This board features the MCP6N16, a single zero-drift instrumentation amplifier with selectable gain from Microchip. In addition to the jack connector provided for connecting the cable with ECG electrodes, this Click boardâ„¢ offers the possibility of connecting electrodes through screw terminals or an onboard header if the electrode connection does not match the jack connector. Besides, the user is allowed to process the output signal in analog or digital form.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "alias": "Click.ECG7",
     "cmake": true,
     "subdir_name": "lib_ecg7"
 }
+
 
 
 

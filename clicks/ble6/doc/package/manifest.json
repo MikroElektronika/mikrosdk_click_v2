@@ -25,16 +25,17 @@
     "name": "mikroe.click.ble6",
     "product_link": "https://www.mikroe.com/ble-6-click",
     "short_description": "BLE 6 Click is a Bluetooth low energy system-on-chip application processor certified module, compliant with BT specifications v5.0 and BQE qualified. The featured BlueNRG-M2 module developed by STMicroelectronics supports multiple roles simultaneously and can act at the same time as Bluetooth master and slave device.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         3784
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.BLE6",
     "subdir_name": "lib_ble6"
 }
+
 
 

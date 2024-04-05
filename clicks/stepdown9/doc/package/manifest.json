@@ -25,13 +25,14 @@
     "name": "mikroe.click.stepdown9",
     "product_link": "https://www.mikroe.com/step-down-9-click",
     "short_description": "Step Down 9 Click is a compact add-on board that converts higher voltages into a lower voltage level. This board features the MAX20406, an automotive fully integrated synchronous silent switcher buck converter from Analog Devices. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.StepDown9",
     "subdir_name": "lib_stepdown9"
 }
+
 
 

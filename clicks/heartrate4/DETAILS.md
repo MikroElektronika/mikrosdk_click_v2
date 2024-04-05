@@ -93,9 +93,9 @@ void application_init ( void )
     HEARTRATE4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     heartrate4_init( &heartrate4, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     heartrate4_default_cfg( &heartrate4 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -119,13 +119,13 @@ void application_task ( void )
         if ( red_samp > 0x8000 )
         {
             log_printf( &logger, "%lu\r\n", red_samp );
-            Delay_ms( 1 );
+            Delay_ms ( 1 );
             counter = 200;
         }
         else if ( counter > 200 )
         {
             log_printf( &logger, "Place Finger On Sensor\r\n" );
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
             counter = 0;
         }
     }

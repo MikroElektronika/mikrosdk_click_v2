@@ -117,7 +117,7 @@ void application_task ( void )
     log_printf( &logger, " Temperature : %f C \r\n", temperature );
     humidity = temphum4_get_humidity( &temphum4 );
     log_printf( &logger, " Humidity : %f %% \r\n", humidity );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 ```
 

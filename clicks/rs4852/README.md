@@ -88,7 +88,7 @@ void application_init ( void )
     rs4852_cfg_setup( &cfg );
     RS4852_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     rs4852_init( &rs4852, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
 #ifdef DEMO_APP_RECEIVER
     rs4852_set_re_pin( &rs4852, RS4852_ENABLE_RE );
@@ -100,7 +100,7 @@ void application_init ( void )
     rs4852_set_re_pin( &rs4852, RS4852_DISABLE_RE );
     log_info( &logger, "---- Transmitter mode ----" );
 #endif    
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -120,7 +120,8 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     rs4852_generic_write( &rs4852, TEXT_TO_SEND, strlen( TEXT_TO_SEND ) );
     log_info( &logger, "---- Data sent ----" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif  
 } 
 

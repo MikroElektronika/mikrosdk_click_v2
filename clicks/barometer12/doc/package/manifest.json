@@ -25,13 +25,14 @@
     "name": "mikroe.click.barometer12",
     "product_link": "https://www.mikroe.com/barometer-12-click",
     "short_description": "Barometer 12 Click is a compact add-on board that measures air pressure in a specific environment. This board features the ICP-10125, a high-accuracy, low-power, 10-atm waterproof barometric pressure and temperature sensor from TDK InvenSense. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "cmake": true,
     "alias": "Click.Barometer12",
     "subdir_name": "lib_barometer12"
 }
+
 
 

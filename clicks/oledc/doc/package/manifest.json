@@ -25,17 +25,19 @@
     "name": "mikroe.click.oledc",
     "product_link": "https://www.mikroe.com/oled-c-click",
     "short_description": "OLED C click is equipped with the 96x96 high-color OLED display. It can display up to 65K/262K different colors and shades on a compact size display, based on the OLED technology.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1117
     ],
-    "version": "2.1.0.20",
+    "version": "2.1.0.22",
     "cmake": true,
     "alias": "Click.OledC",
     "subdir_name": "lib_oledc"
 }
+
+
 
 
 

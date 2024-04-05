@@ -112,10 +112,10 @@ void application_init ( void )
     rtc5_init( &rtc5, &cfg );
     
     rtc5_default_cfg ( &rtc5);
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     rtc5_clear( &rtc5 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     time_sec_new = 255;
 
@@ -130,7 +130,7 @@ void application_init ( void )
     
     // Start counting
     rtc5_set_counting( &rtc5, 1 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "--------------------\r\n" );
     log_printf( &logger, "    RTC 5  Click    \r\n" );
@@ -157,6 +157,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

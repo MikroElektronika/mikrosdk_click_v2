@@ -49,7 +49,7 @@ char uart_rx_buffer[ PROCESS_RX_BUFFER_SIZE ] = { 0 };
 
 static void clear_app_buf ( void )
 {
-    Delay_ms( 200 );
+    Delay_ms ( 200 );
     enocean2_generic_read( &enocean2, uart_rx_buffer, PROCESS_RX_BUFFER_SIZE );
     memset( uart_rx_buffer, 0, PROCESS_RX_BUFFER_SIZE );
 }
@@ -117,7 +117,7 @@ static void enocean2_process ( void )
             process_cnt--;
             
             // Process delay 
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
 }
@@ -164,6 +164,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

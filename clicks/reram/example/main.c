@@ -89,7 +89,7 @@ void application_init( void )
 
 
     reram_send_cmd( &reram, RERAM_CMD_WREN );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task( void )
@@ -97,15 +97,21 @@ void application_task( void )
     log_printf( &logger, "* Writing data *\r\n" );
     
     reram_write_memory( &reram, RERAM_MEM_ADDR_START, write_buf, 6 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     reram_read_memory( &reram, RERAM_MEM_ADDR_START, read_buf, 6 );
 
     log_printf( &logger, "* Read data:%s\r\n", read_buf );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

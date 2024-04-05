@@ -152,9 +152,9 @@ void application_task ( void )
             log_printf( &logger, " Button is pressed, LED is OFF. \r\n " );
             state = 0;
         }
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 ```
 

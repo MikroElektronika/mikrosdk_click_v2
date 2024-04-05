@@ -79,12 +79,12 @@ void application_task ( void )
         {
             ir_nec_send_command( &ir, 0x00, tx_data[ cnt ] );
             log_printf( &logger, "." );
-            Delay_ms( 50 );
+            Delay_ms ( 50 );
         }
         
         log_printf( &logger, "\r\n Message sent! \r\n" );
         log_printf( &logger, "- - - - - - - - - - - - \r\n" );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     #else
         uint8_t arr;
         char rx_data;
@@ -99,12 +99,17 @@ void application_task ( void )
         {
             log_printf( &logger, "Read ERROR! \r\n" );
         }
-        Delay_ms( 50 );
+        Delay_ms ( 50 );
     #endif
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

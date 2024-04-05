@@ -25,13 +25,14 @@
     "name": "mikroe.click.neomesh868mhz",
     "product_link": "https://www.mikroe.com/neomesh-click-868mhz",
     "short_description": "NeoMesh Click - 868MHz is a compact add-on board with a low-power, long-range transceiver, ideal for Mesh wireless networking. This board features the NC1000C-8, a wireless Mesh network module from NeoCortec. With an additional antenna that MikroE offers connected to the module’s u.Fl connector, you can create a fully functional wireless Mesh network node that will work in the Sub-GHz frequency band of 868MHz. The module has a generic application layer that can configured to suit applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.NeoMesh868MHz",
     "subdir_name": "lib_neomesh868mhz"
 }
+
 
 

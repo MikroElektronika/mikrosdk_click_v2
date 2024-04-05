@@ -124,16 +124,16 @@ err_t adswio3_default_cfg ( adswio3_t *ctx )
 {
     ADSWIO3_SET_DATA_SAMPLE_EDGE;
     adswio3_hw_reset( ctx );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     err_t err_flag = adswio3_function_setup( ctx, ADSWIO3_CH_FUNC_SETUP_VTG_IN );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     err_flag |= adswio3_set_diag_assign( ctx, ADSWIO3_DIAG_ASSIGN_AVDD, 
                                               ADSWIO3_DIAG_ASSIGN_AVSS, 
                                               ADSWIO3_DIAG_ASSIGN_AVCC, 
                                               ADSWIO3_DIAG_ASSIGN_LVIN );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     adswio3_adc_cnv_ctrl_t adc_cnv_ctrl;
     adc_cnv_ctrl.conv_rate_diag = ADSWIO3_ADC_CONV_RATE_DIAG_20_SPS;
@@ -145,7 +145,7 @@ err_t adswio3_default_cfg ( adswio3_t *ctx )
     adc_cnv_ctrl.conv2_en = ADSWIO3_ADC_CONV_CTRL_CONV_DIS;
     adc_cnv_ctrl.conv1_en = ADSWIO3_ADC_CONV_CTRL_CONV_EN;
     err_flag |= adswio3_set_adc_cnv( ctx, adc_cnv_ctrl );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     adswio3_adc_cfg_t adc_config;
     adc_config.conv1_mux = ADSWIO3_ADC_CONFIG_CNV1_SENSELF_AGND_SEN;
@@ -155,7 +155,7 @@ err_t adswio3_default_cfg ( adswio3_t *ctx )
     adc_config.conv1_rate = ADSWIO3_ADC_CONFIG_CNV_RATE_4_8K_SPS;
     adc_config.conv2_rate = ADSWIO3_ADC_CONFIG_CNV_RATE_4_8K_SPS;
     err_flag |= adswio3_adc_config( ctx, adc_config );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     return err_flag;
 }

@@ -151,7 +151,7 @@ void oximeter2_logs_results( void )
     log_printf( &logger, "Average result, in percentage: %u\r\n", ( uint16_t )final_result );
     log_printf( &logger, "-------------------------\r\n" );
 
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 
 void application_task ( void )

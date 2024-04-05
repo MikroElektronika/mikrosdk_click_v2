@@ -140,7 +140,9 @@ void application_task ( void )
                                              data_buf, sizeof ( data_buf ) ) )
     {
         log_printf ( &logger, " Read data: %s\r\n\n", data_buf );
-        Delay_ms ( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
     log_printf ( &logger, " Memory address: 0x%.6LX\r\n", ( uint32_t ) STARTING_ADDRESS );
     if ( FLASH10_OK == flash10_erase_memory ( &flash10, FLASH10_CMD_BLOCK_ERASE_4KB, STARTING_ADDRESS ) )
@@ -159,7 +161,9 @@ void application_task ( void )
                                              data_buf, sizeof ( data_buf ) ) )
     {
         log_printf ( &logger, " Read data: %s\r\n\n", data_buf );
-        Delay_ms ( 3000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

@@ -131,7 +131,11 @@ void application_task ( )
        log_printf( &logger, " %d", memory_address );
        Delay_100ms();
    }
-   Delay_ms( 5000 );
+   Delay_ms ( 1000 );
+   Delay_ms ( 1000 );
+   Delay_ms ( 1000 );
+   Delay_ms ( 1000 );
+   Delay_ms ( 1000 );
 }
 
 ```

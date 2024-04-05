@@ -107,7 +107,7 @@ void application_init ( void )
     if ( CHARGER27_OK == charger27_set_mode( &charger27, CHARGER27_MODE_CHARGE ) )
     {
         log_printf( &logger, " > Charge mode <\r\n" );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 }
 ```
@@ -125,12 +125,12 @@ void application_task ( void )
     if ( CHARGER27_CHG_CHARGE == charger27_check_chg_completion( &charger27 ) )
     {
         log_printf( &logger, " Charging.\r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
     else
     {
         log_printf( &logger, " Charging has completed or is suspended.\r\n" );
-        Delay_ms( 1000 );
+        Delay_ms ( 1000 );
     }
 }
 ```

@@ -25,12 +25,13 @@
     "name": "mikroe.click.silentstep4",
     "product_link": "https://www.mikroe.com/silent-step-4-click",
     "short_description": "Silent Step 4 Click is a compact add-on board representing a completely integrated step motor driver solution. This board features the TMC2240, a smart integrated stepper driver from Analog Devices. The driver is based on a 256 micro-steps built-in indexer, two fully integrated H-Bridges, and non-dissipative integrated current sensing (ICS). The two H-Bridges can drive motors of up to 36V and 3A at max.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.SilentStep4",
     "subdir_name": "lib_silentstep4"
 }
+
 

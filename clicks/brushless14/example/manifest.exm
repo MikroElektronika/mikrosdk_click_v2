@@ -2,7 +2,7 @@
     "name": "Brushless 14 Click",
     "description": "Brushless 14 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the TB67B001FTG, a three-phase, brushless, Hall sensorless driver IC from Toshiba Semiconductor.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","TB67B001FTG","PCA9538ABSHP","DAC43608RTER"],
     "category" : ["Brushless"]
 }

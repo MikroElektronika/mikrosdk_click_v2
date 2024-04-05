@@ -25,17 +25,18 @@
     "name": "mikroe.click.expand8",
     "product_link": "https://www.mikroe.com/expand-8-click",
     "short_description": "Expand 8 Click is a compact add-on board that contains a multi-port I/O expander with bi-directional input/outputs. This board features the MAX7317, 10-Port SPI-interfaced I/O expander with overvoltage and hot-insertion protection from Maxim Integrated.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         4086
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Expand8",
     "subdir_name": "lib_expand8"
 }
+
 
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.rmstodc",
     "product_link": "https://www.mikroe.com/rms-to-dc-click",
     "short_description": "RMS to DC click is a Click board™ that is used to convert the RMS of the input signal into a DC voltage, with a value directly readable over the I2C interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2657
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.RmstoDc",
     "subdir_name": "lib_rmstodc"
 }
+
 
 
 

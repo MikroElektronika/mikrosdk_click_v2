@@ -25,17 +25,18 @@
     "name": "mikroe.click.vreg2",
     "product_link": "https://www.mikroe.com/vreg-2-click",
     "short_description": "VREG 2 click is a voltage regulator click, with outstanding performances.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2414
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Vreg2",
     "subdir_name": "lib_vreg2"
 }
+
 
 
 

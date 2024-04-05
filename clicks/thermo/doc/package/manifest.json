@@ -25,17 +25,18 @@
     "name": "mikroe.click.thermo",
     "product_link": "https://www.mikroe.com/thermo-click",
     "short_description": "THERMO click features the MAX31855K thermocouple-to-digital converter as well as PCC-SMP connector for K-type thermocouple probes. The click is designed to run on a 3.3V power supply. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         381
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Thermo",
     "subdir_name": "lib_thermo"
 }
+
 
 
 

@@ -25,17 +25,18 @@
     "name": "mikroe.click.c420mar",
     "product_link": "https://www.mikroe.com/4-20ma-r-click",
     "short_description": "4-20mA R Click is an add-on board in mikroBUS form factor which serves as a receiver in a 4-20mA current loop standard. It features INA196 current shunt monitor, MCP3201 12-bit ADC as well as TPS61041 DC/DC boost converter.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         564
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.420MaR",
     "subdir_name": "lib_c420mar"
 }
+
 
 
 

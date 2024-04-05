@@ -96,7 +96,7 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Init " );
 
     // Click initialization.
@@ -110,7 +110,7 @@ void application_init ( void )
 
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     init_flag = proximity12_default_cfg ( &proximity12 );
     if ( PROXIMITY12_ERROR == init_flag ) 
@@ -153,7 +153,7 @@ void application_task ( void )
                                                                                             als.ir1, 
                                                                                             als.ir2 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```

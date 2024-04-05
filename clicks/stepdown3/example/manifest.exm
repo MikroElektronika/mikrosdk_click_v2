@@ -2,7 +2,7 @@
     "name": "Step Down 3 Click",
     "description": "Step Down 3 Click is a compact add-on board that steps down the voltage from its input to its output. This board features the ST1PS03, a nano-quiescent miniaturized synchronous step-down converter with a load switch from STMicroelectronics. The ST1PS03 can provide up to 400mA output current with an input voltage ranging from 1.8V to 5.5V, specifically designed for applications where high efficiency is crucial. It also embeds a controlled switch accessible from auxiliary channel input to supply a subsystem, output voltage from 1.6V to 3.3V set using three digital control inputs, and a Power Good signal to indicate stabilized output voltages.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","ST1PS03AQTR"],
     "category" : ["Buck"]
 }

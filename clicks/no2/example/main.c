@@ -56,7 +56,7 @@ void application_init ( void )
     no2_default_cfg( &no2 );
 
     log_printf( &logger, "NO2 is initialized \r\n" );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 }
 
 void application_task ( void )
@@ -65,11 +65,16 @@ void application_task ( void )
 
     no2_value = no2_get_no_2_ppm( &no2 );
     log_printf( &logger, "NO2 value : %.2f ppm \r\n", no2_value );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

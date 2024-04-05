@@ -2,7 +2,7 @@
     "name": "CDC Click",
     "description": "CDC Click is a compact add-on board that allows your application do a conversion of capacitance to a digital format. This board features the PCAP04, a capacitance-to-digital converter (CDC) from ScioSense. It also includes an integrated digital signal processor (DSP) for on-chip data post-processing. The converter has high flexibility and allows you to convert grounded capacitors and floating capacitors to a digital format. It has up to 50KHz sampling rate in up to 20-bit resolution.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","PCAP04-AQFM-24-V2"],
     "category" : ["Click Boards > Mixed signal > Measurements"]
 }

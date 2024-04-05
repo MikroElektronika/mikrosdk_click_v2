@@ -2,7 +2,7 @@
     "name": "Analog MUX 4 Click",
     "description": "Analog MUX 4 Click is a compact add-on board that switches one of many analog inputs to one digital output. This board features the TMUX1308, a general-purpose 8:1 single-ended CMOS multiplexer (MUX) from Texas Instruments. The TMUX1308 has an internal injection current control which eliminates the need for external diode and resistor networks to protect the switch and keep the input signals within the supply voltage. It also supports bidirectional analog and digital signals ranging from 0 to 5V, alongside several protection features allowing a reliable operation and protecting the device from potential damage.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","TMUX1308"],
     "category" : ["Click Boards > Mixed signal > Measurements"]
 }

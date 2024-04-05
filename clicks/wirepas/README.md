@@ -55,17 +55,17 @@ void wirepas_default_cfg ( wirepas_t *ctx );
 
 - `wirepas_send_command` Wirepas send command function.
 ```c
-err_t wirepas_send_command ( wirepas_t *ctx, uint8_t primitive_id, uint8_t frame_id, uint8_t payload_length, uint8_t *payload );
+err_t wirepas_send_command ( wirepas_t *ctx, uint8_t primitive_id, uint8_t payload_length, uint8_t *payload );
 ```
 
 - `wirepas_write_csap_attribute` Wirepas write CSAP attribute function.
 ```c
-err_t wirepas_write_csap_attribute ( wirepas_t *ctx, uint8_t frame_id, uint16_t attribute_id, uint8_t attribute_len, uint8_t *attribute_val );
+err_t wirepas_write_csap_attribute ( wirepas_t *ctx, uint16_t attribute_id, uint8_t attribute_len, uint8_t *attribute_val );
 ```
 
 - `wirepas_send_data` Wirepas send data function.
 ```c
-err_t wirepas_send_data ( wirepas_t *ctx, uint8_t frame_id, wirepas_sink_data sink_data, uint8_t tx_op, uint8_t apdu_length, uint8_t *apdu );
+err_t wirepas_send_data ( wirepas_t *ctx, wirepas_sink_data sink_data, uint8_t tx_op, uint8_t apdu_length, uint8_t *apdu );
 ```
 
 ## Example Description
@@ -112,81 +112,76 @@ void application_init ( void )
     
     wirepas_default_cfg ( &wirepas );
    
-    uint8_t tmp_data[ 1 ] = { 0x00 };
+    wirepas.tx_frame_id = 0;
+    do
+    {
+        log_printf( &logger, " Wirepas stack stop request:" );
+        wirepas_send_command( &wirepas, WIREPAS_MSAP_STACK_STOP_REQUEST, 0, NULL );
+    }
+    while ( WIREPAS_OK != wirepas_wait_response ( &wirepas, WIREPAS_MSAP_STACK_STOP_CONFIRM ) );
+    Delay_ms ( 1000 );
     
-    Delay_ms( 1000 );
-    wirepas_poll_indication( &wirepas, frame_id, NULL, NULL );
-    frame_id++;
-   
-    Delay_ms( 1000 );
-    wirepas_poll_indication( &wirepas, frame_id, NULL, NULL );
-    frame_id++;
+    do
+    {
+        log_printf( &logger, " Wirepas factory reset request:" );
+        wirepas_send_command( &wirepas, WIREPAS_CSAP_FACTORY_RESET_REQUEST,
+                              strlen( WIREPAS_FACTORY_RESET_CODE ), WIREPAS_FACTORY_RESET_CODE );
+    }
+    while ( WIREPAS_OK != wirepas_wait_response ( &wirepas, WIREPAS_CSAP_FACTORY_RESET_CONFIRM ) );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+
+    do
+    {
+        log_printf( &logger, " Set node address:" );
+        wirepas_set_node_address( &wirepas, NODE_ADDRESS );
+    }
+    while ( WIREPAS_OK != wirepas_wait_response ( &wirepas, WIREPAS_CSAP_ATTRIBUTE_WRITE_CONFIRM ) );
+    Delay_ms ( 1000 );
     
-    Delay_ms( 1000 );
-    log_printf( &logger, " Wirepas stack stop request: \n" );
-    wirepas_send_command( &wirepas, WIREPAS_MSAP_STACK_STOP_REQUEST, frame_id, 0x00, tmp_data );
-    frame_id++;
-    wirepas_get_resp( &wirepas );
+    do
+    {
+        log_printf( &logger, " Set net address:" );
+        wirepas_set_net_address( &wirepas, NET_ADDRESS );
+    }
+    while ( WIREPAS_OK != wirepas_wait_response ( &wirepas, WIREPAS_CSAP_ATTRIBUTE_WRITE_CONFIRM ) );
+    Delay_ms ( 1000 );
     
-    Delay_ms( 1000 );
-    log_printf( &logger, " Wirepas factory reset request: \n" );
-    wirepas_send_command( &wirepas, WIREPAS_CSAP_FACTORY_RESET_REQUEST, frame_id, strlen( WIREPAS_FACTORY_RESET_CODE ), WIREPAS_FACTORY_RESET_CODE );
-    frame_id++;
-    wirepas_get_resp( &wirepas );
-    
-    Delay_ms( 1000 );
-    wirepas_poll_indication( &wirepas, frame_id, NULL, NULL );
-    frame_id++;
-    
-    Delay_ms( 1000 );
-    wirepas_poll_indication( &wirepas, frame_id, NULL, NULL );
-    frame_id++;
-    
-    Delay_ms( 1000 );
-    log_printf( &logger, " Set node address: \n" );
-    wirepas_set_node_address( &wirepas, frame_id, NODE_ADDRESS );
-    frame_id++;
-    wirepas_get_resp( &wirepas );
-    
-    Delay_ms( 1000 );
-    log_printf( &logger, " Set net address: \n" );
-    wirepas_set_net_address( &wirepas, frame_id, NET_ADDRESS );
-    frame_id++;
-    wirepas_get_resp( &wirepas );
-    
-    Delay_ms( 1000 );
-    log_printf( &logger, " Set channel address: \n" );
     uint8_t channel_net = CHANNEL_ADDRESS;
-    wirepas_write_csap_attribute( &wirepas, frame_id, WIREPAS_CSAP_ATTRIBUTE_NETWORK_CHANNEL, 1, &channel_net );
-    frame_id++;
-    wirepas_get_resp( &wirepas );
-    
-    Delay_ms( 1000 );
-    log_printf( &logger, " Set role: \n" );
+    do
+    {
+        log_printf( &logger, " Set channel address:" );
+        wirepas_write_csap_attribute( &wirepas, WIREPAS_CSAP_ATTRIBUTE_NETWORK_CHANNEL, 1, &channel_net );
+    }
+    while ( WIREPAS_OK != wirepas_wait_response ( &wirepas, WIREPAS_CSAP_ATTRIBUTE_WRITE_CONFIRM ) );
+    Delay_ms ( 1000 );
+
+
     uint8_t role;
 #if ( ROUTER_NODE_ADDRESS == NODE_ADDRESS )
     role = WIREPAS_ROUTER_NODE_MODE;
 #else
     role = WIREPAS_SINK_NODE_MODE;
 #endif
-    wirepas_write_csap_attribute( &wirepas, frame_id, WIREPAS_CSAP_ATTRIBUTE_NODE_ROLE, 1, &role );
-    frame_id++;
-    wirepas_get_resp( &wirepas );
+    do
+    {
+        log_printf( &logger, " Set role:" );
+        wirepas_write_csap_attribute( &wirepas, WIREPAS_CSAP_ATTRIBUTE_NODE_ROLE, 1, &role );
+    }
+    while ( WIREPAS_OK != wirepas_wait_response ( &wirepas, WIREPAS_CSAP_ATTRIBUTE_WRITE_CONFIRM ) );
+    Delay_1sec( );
     
-    Delay_ms( 1000 );
-    log_printf( &logger, " Wirepas Stack start request: \n" ); 
-    tmp_data[ 0 ] = 0x01;
-    wirepas_send_command( &wirepas, WIREPAS_MSAP_STACK_START_REQUEST, frame_id, 0x01, tmp_data );
-    frame_id++;
-    wirepas_get_resp( &wirepas );
-    
-    uint8_t data_buf[ WIREPAS_RX_DRV_BUFFER_SIZE ] = { 0 };
-    
-#if ( ROUTER_NODE_ADDRESS == NODE_ADDRESS )
-    Delay_ms( 1000 );
-    wirepas_poll_indication( &wirepas, frame_id, data_buf, NULL );
-    frame_id++;
+    do
+    {
+        log_printf( &logger, " Wirepas Stack start request:" ); 
+        wirepas_send_command( &wirepas, WIREPAS_MSAP_STACK_START_REQUEST, 1, &stack_auto_start );
+    }
+    while ( WIREPAS_OK != wirepas_wait_response ( &wirepas, WIREPAS_MSAP_STACK_START_CONFIRM ) );
+    Delay_1sec( );
         
+#if ( ROUTER_NODE_ADDRESS == NODE_ADDRESS )
+
     sink_1.pduid = 0x00;
     sink_1.source_endpoint = 0x01;
     sink_1.destination_addr = SINK_1_NODE_ADDRESS;
@@ -197,16 +192,8 @@ void application_init ( void )
         sink_2.destination_addr = SINK_2_NODE_ADDRESS;
         sink_2.destination_endpoint = 0x01;
     #endif
-#else
-    uint8_t data_rd = 0;
-    while ( 0 == data_rd )
-    {
-        wirepas_poll_indication( &wirepas, frame_id, data_buf, &data_rd );
-        frame_id++;
-        Delay_ms( 1000 );
-    }
 #endif
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_info( &logger, " Application Task " );
 }
@@ -220,32 +207,22 @@ void application_init ( void )
 ```c
 void application_task ( void ) 
 {
+    wirepas_poll_indication ( &wirepas );
 #if ( ROUTER_NODE_ADDRESS == NODE_ADDRESS )
-    
-    log_printf( &logger, " Sending data to the first Sink node: \n" );
-    wirepas_send_data ( &wirepas, frame_id, sink_1, 0x01, strlen( TX_DATA ), TX_DATA );
-    frame_id++;
-    wirepas_get_resp( &wirepas );
-    Delay_ms( 5000 );
-    
-    #if defined MULTI_SINK_MODE
-        log_printf( &logger, " Sending data to the second Sink node: \n" );
-        wirepas_send_data ( &wirepas, frame_id, sink_2, 0x01, strlen( TX_DATA ), TX_DATA );
-        frame_id++;
-        wirepas_get_resp( &wirepas );
-        Delay_ms( 5000 );
-    #endif
-#else
-    
-    uint8_t data_buf[ WIREPAS_RX_DRV_BUFFER_SIZE ] = { 0 };
-    uint8_t data_rdy = 0;
-    err_t error = wirepas_poll_indication( &wirepas, frame_id, data_buf, &data_rdy );
-    frame_id++;
-    if ( 1 == data_rdy )
+    if ( wirepas_get_din_state ( &wirepas ) && ( pdu_capacity > 0 ) )
     {
-        log_printf( &logger, "%s \r\n", data_buf );
+        log_printf( &logger, " Sending data to the first Sink node: \n" );
+        wirepas_send_data ( &wirepas,  sink_1, 0x01, strlen( TX_DATA ), TX_DATA );
+        wirepas_wait_response ( &wirepas, WIREPAS_DSAP_DATA_TX_CONFIRM );
+        Delay_ms ( 1000 );
+        
+        #if defined MULTI_SINK_MODE
+            log_printf( &logger, " Sending data to the second Sink node: \n" );
+            wirepas_send_data ( &wirepas,  sink_2, 0x01, strlen( TX_DATA ), TX_DATA );
+            wirepas_wait_response ( &wirepas, WIREPAS_DSAP_DATA_TX_CONFIRM );
+            Delay_ms ( 1000 );
+        #endif
     }
-    Delay_ms( 2000 );
 #endif
 }
 ```

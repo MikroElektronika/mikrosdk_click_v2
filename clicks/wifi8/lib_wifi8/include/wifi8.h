@@ -29,8 +29,21 @@
 #define WIFI8_H
 
 #ifdef __cplusplus
-extern "C"
-{
+extern "C"{
+#endif
+
+/**
+ * Any initialization code needed for MCU to function properly.
+ * Do not remove this line or clock might not be set correctly.
+ */
+#ifdef PREINIT_SUPPORTED
+#include "preinit.h"
+#endif
+
+#ifdef MikroCCoreVersion
+    #if MikroCCoreVersion >= 1
+        #include "delays.h"
+    #endif
 #endif
 
 #include "drv_digital_out.h"

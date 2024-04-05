@@ -2,7 +2,7 @@
     "name": "RS485 4 Click",
     "description": "RS485 4 Click offers an UART to RS485 signal conversion, featuring the ADM2795E specialized IC with the complete galvanic isolation.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","ADM2795E"],
     "category" : ["RS485"] 
 }

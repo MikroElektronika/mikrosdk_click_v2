@@ -25,14 +25,15 @@
     "name": "mikroe.click.dac14",
     "product_link": "https://www.mikroe.com/dac-14-click",
     "short_description": "DAC 14 Click is a compact add-on board providing highly accurate digital-to-analog conversion. This board features the DAC53202, a 10-bit dual-channel programmable voltage/current-output DAC from Texas Instruments. The DAC53202 supports high-speed I2C and SPI serial interface alongside Hi-Z Power-Down mode and Hi-Z output during Power-OFF conditions. It has a programmable comparator mode for both DAC channels and one general-purpose I/O pin configurable as multiple functions allowing this smart DAC for processor-less applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.DAC14",
     "subdir_name": "lib_dac14"
 }
+
 
 
 

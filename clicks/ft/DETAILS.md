@@ -122,7 +122,7 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     ft_send_package( &ft, DEMO_TEXT_MESSAGE, strlen( DEMO_TEXT_MESSAGE ), 1 );
     log_printf( &logger, " Sent data: %s", ( char * ) DEMO_TEXT_MESSAGE );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 #else
     uint8_t rsp_data_buf[ FT_MAX_DATA_BUFFER ] = { 0 };
     uint8_t rx_byte = 0;

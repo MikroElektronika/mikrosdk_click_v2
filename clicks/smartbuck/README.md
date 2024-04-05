@@ -111,7 +111,7 @@ void application_init ( void )
 void application_task ( void )
 {
     smartbuck_send_cmd_pac( &smartbuck, SMARTBUCK_REFRESH_V_CMND );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     smartbuck_get_data( &smartbuck, &voltage_res[ 0 ], &current_res[ 0 ], &power_res[ 0 ] );
     
     check_byte = 0x80;

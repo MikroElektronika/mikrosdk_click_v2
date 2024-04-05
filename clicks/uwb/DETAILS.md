@@ -96,10 +96,10 @@ void application_init ( void )
     uwb_cfg_setup( &cfg );
     UWB_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     uwb_init( &uwb, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     uwb_enable ( &uwb );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     uint8_t id_raw[ 4 ] = { 0 };
     uwb.offset = UWB_SUB_NO;                               
@@ -136,7 +136,7 @@ void application_init ( void )
     }
     log_printf( &logger, " ******************** \r\n" );
     
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     // Setting default configuartion and tuning device for that configuration
     uwb_use_smart_power( &uwb, UWB_LOW );
@@ -146,7 +146,7 @@ void application_init ( void )
     uwb_set_channel( &uwb, UWB_CHANNEL_5 );
     uwb_tune_config( &uwb );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( UWB_MODE_RX == dev_mode )
     {
@@ -171,7 +171,8 @@ void application_init ( void )
     }
 
     log_printf( &logger, " ***** APP TASK ***** \r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
   
@@ -213,14 +214,16 @@ void application_task ( void )
             uwb_set_mode( &uwb, UWB_MODE_TX );
             uwb_start_transceiver( &uwb );
             log_printf( &logger, " - Transmit 2 done - \r\n" );
-            Delay_ms( 2000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
             uwb_set_mode( &uwb, UWB_MODE_IDLE );
             uwb_clear_status( &uwb );
             uwb_set_transmit( &uwb, &data_tx_1[ 0 ], 6 );
             uwb_set_mode( &uwb, UWB_MODE_TX );
             uwb_start_transceiver( &uwb );
             log_printf( &logger, " - Transmit 1 done - \r\n" );
-            Delay_ms( 2000 );
+            Delay_ms ( 1000 );
+            Delay_ms ( 1000 );
         }
     }
 } 

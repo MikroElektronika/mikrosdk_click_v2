@@ -134,7 +134,8 @@ void application_task ( void )
             log_printf( &logger, " Vibration level: %.3f \r\n\n", vibration_level );
         }
     }
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     if ( HAPTIC4_OK == haptic4_set_vibration_level ( &haptic4, HAPTIC4_VIBRATION_LEVEL_MIN ) )
     {
@@ -143,7 +144,8 @@ void application_task ( void )
             log_printf( &logger, " Vibration level: %.3f \r\n\n", vibration_level );
         }
     }
-    Delay_ms ( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

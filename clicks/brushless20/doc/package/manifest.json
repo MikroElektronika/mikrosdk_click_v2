@@ -25,14 +25,15 @@
     "name": "mikroe.click.brushless20",
     "product_link": "https://www.mikroe.com/brushless-20-click",
     "short_description": "Brushless 20 Click is a compact add-on board that controls brushless DC (BLDC) motors with any MCU. This board features the DRV8313, a fully integrated three-phase BLDC motor driver from Texas Instruments. It provides three individually controllable half-H-bridge drivers intended to drive a three-phase BLDC motor, solenoids, or other loads. Each output driver channel consists of N-channel power MOSFETs configured in a 1/2-H-bridge configuration. Besides, it has a wide operating voltage range from 8V to 60V, alongside several built-in protection circuits such as undervoltage, charge pump faults, overcurrent, and overtemperature.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.Brushless20",
     "subdir_name": "lib_brushless20"
 }
+
 
 
 

@@ -166,7 +166,9 @@ void application_task ( void )
     {
         vout = STEPDOWN3_OUT_VOLTAGE_1V6;
     }
-    Delay_ms ( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

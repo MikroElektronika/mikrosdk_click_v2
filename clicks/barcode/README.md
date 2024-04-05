@@ -86,7 +86,7 @@ void application_init ( void )
     BARCODE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     barcode_init( &barcode, &cfg );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
   
 ```
@@ -101,9 +101,11 @@ void application_task ( void )
 {
     barcode_enable_scaning( &barcode, BARCODE_LOGIC_ON );
     barcode_process( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     barcode_enable_scaning( &barcode, BARCODE_LOGIC_OFF );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

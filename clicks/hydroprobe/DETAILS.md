@@ -89,7 +89,7 @@ void application_init ( void )
     HYDROPROBE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     hydroprobe_init( &hydroprobe, &cfg );
     
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "  Hydro Probe click  \r\n" );
@@ -97,7 +97,9 @@ void application_init ( void )
     hydroprobe_calib( );
     log_printf( &logger, "     Calibrated      \r\n" );
     log_printf( &logger, "---------------------\r\n" );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
   
 ```
@@ -114,7 +116,7 @@ void application_task ( void )
     humy_val = hydroprobe_rel_env_hum( &hydroprobe, dry_val, wet_val );
     log_printf( &logger, "Environment moisture content: %d %% \r\n ", ( uint16_t ) humy_val );
     log_printf( &logger, "------------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

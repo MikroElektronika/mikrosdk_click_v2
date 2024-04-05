@@ -25,14 +25,15 @@
     "name": "mikroe.click.solidswitch3",
     "product_link": "https://www.mikroe.com/solidswitch-3-click",
     "short_description": "SolidSwitch 3 Click is a compact add-on board that contains a load switching device. This board features the BD8LB600FS-C, an automotive eight-channel low-side switch from Rohm Semiconductor. Every switch is controlled via an SPI interface and includes an N-channel MOSFET that supports a maximum current of 1A. The BD8LB600FS-C also has built-in protection circuits, namely the overcurrent, the thermal shutdown, the open-load detection, and the voltage lock-out circuits. Moreover, this device also possesses a diagnostic output function during abnormal detection.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.SolidSwitch3",
     "subdir_name": "lib_solidswitch3"
 }
+
 
 
 

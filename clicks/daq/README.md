@@ -132,7 +132,7 @@ void application_init ( void )
     log_printf( &logger, " > ID: \t\t0x%.2X", ( uint16_t )id );
     daq_generic_read( &daq, DAQ_REG_PRODUCT_ID_L, &id, 1 );
     log_printf( &logger, "%.2X\r\n", ( uint16_t )id );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_info( &logger, " Application Task " );
 }
@@ -155,7 +155,7 @@ void application_task ( void )
     log_printf( &logger, " > Data: %ld\r\n", adc_data );
     log_printf( &logger, " > Voltage: %.2f\r\n", voltage );
     log_printf( &logger, "***********************************\r\n" );
-    Delay_ms( 300 );  
+    Delay_ms ( 300 );  
 }
 
 ```

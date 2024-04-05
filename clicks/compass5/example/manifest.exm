@@ -2,7 +2,7 @@
     "name": "Compass 5 Click",
     "description": "Compass 5 Click is a compact add-on board that contains a 3-axis magnetometer device suitable for compass application. This board features the AK09918C, a 3-axis electronic compass with high sensitive Hall sensor technology from AKM Semiconductor.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","AK09918C"],
     "category" : ["Magnetic"]
 }

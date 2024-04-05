@@ -25,14 +25,15 @@
     "name": "mikroe.click.lightranger5",
     "product_link": "https://www.mikroe.com/lightranger-5-click",
     "short_description": "LightRanger 5 Click is a compact add-on board that contains a ranging sensor with multi-target detection. This board features the TMF8801, a dToF (direct time of flight) optical distance sensor achieving up to 2500mm target detection distance from company AMS-TAOS. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.LightRanger5",
     "subdir_name": "lib_lightranger5"
 }
+
 
 
 

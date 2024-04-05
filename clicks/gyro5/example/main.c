@@ -60,7 +60,7 @@ void application_init ( void )
     GYRO5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     gyro5_init( &gyro5, &cfg );
     gyro5_default_cfg ( &gyro5 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "      Gyro 5 Click\r\n" );
     log_printf( &logger, "-----------------------\r\n" );
@@ -75,20 +75,26 @@ void application_task ( void )
     if ( data_ready_flag == GYRO5_STATUS_INT_DATA_RDY )
     {
         gyro5_get_temperature( &gyro5, &temperature_value );
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
         gyro5_get_axes(  &gyro5, &x_axis_value, &y_axis_value, &z_axis_value );
-        Delay_ms( 10 );
+        Delay_ms ( 10 );
         log_printf( &logger, " Temperature = %.2f C\r\n", temperature_value );
         log_printf( &logger, " X axis = %.2f \r\n", x_axis_value );
         log_printf( &logger, " Y axis = %.2f \r\n", y_axis_value );
         log_printf( &logger, " Z axis = %.2f \r\n", z_axis_value );
         log_printf( &logger, "------------------------\r\n" );
-        Delay_ms( 2000 );
+        Delay_ms ( 1000 ); 
+        Delay_ms ( 1000 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

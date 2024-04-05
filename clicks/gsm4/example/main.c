@@ -284,6 +284,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -344,9 +349,9 @@ static err_t gsm4_rsp_check ( uint8_t *rsp )
             gsm4_clear_app_buf( );
             return GSM4_ERROR_TIMEOUT;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     gsm4_process( );
     if ( strstr( app_buf, rsp ) )
     {
@@ -393,7 +398,7 @@ static void gsm4_error_check ( err_t error_flag )
             break;
         }
     }
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 
 static void gsm4_log_app_buf ( void )
@@ -408,7 +413,11 @@ static err_t gsm4_configure_for_network ( void )
 {
     err_t func_error = GSM4_OK;
 #if ( ( DEMO_EXAMPLE == EXAMPLE_TCP_UDP ) || ( DEMO_EXAMPLE == EXAMPLE_SMS ) )
-    Delay_ms ( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     // Deregister from network
     #define DEREGISTER_FROM_NETWORK "2"
     gsm4_send_cmd_with_par( &gsm4, GSM4_CMD_COPS, DEREGISTER_FROM_NETWORK );
@@ -455,7 +464,7 @@ static err_t gsm4_check_connection ( void )
     gsm4_error_check( error_flag );
     if ( strstr( app_buf, CONNECTED ) )
     {
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         // Check signal quality
         gsm4_send_cmd( &gsm4, GSM4_CMD_CSQ );
         error_flag = gsm4_rsp_check( GSM4_RSP_OK );
@@ -580,7 +589,7 @@ static err_t gsm4_example ( void )
         uint8_t * __generic_ptr start_response_buf = strstr( app_buf, urc_buf );
         if ( start_response_buf )
         {
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
             gsm4_process( ); 
             uint8_t response_len_buf[ 5 ] = { 0 };
             uint8_t * __generic_ptr start_response_len = strstr( start_response_buf, "," ) + 1;
@@ -600,7 +609,7 @@ static err_t gsm4_example ( void )
         {
             break;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
     timeout_cnt = 0;
     
@@ -625,7 +634,7 @@ static err_t gsm4_example ( void )
         uint8_t * __generic_ptr start_response_buf = strstr( app_buf, urc_buf );
         if ( start_response_buf )
         {
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
             gsm4_process( );
             uint8_t response_len_buf[ 5 ] = { 0 };
             uint8_t * __generic_ptr start_response_len = strstr( start_response_buf, "," ) + 1;
@@ -645,7 +654,7 @@ static err_t gsm4_example ( void )
         {
             break;
         }
-        Delay_ms( 1 );
+        Delay_ms ( 1 );
     }
     
     // Close TCP socket
@@ -659,7 +668,11 @@ static err_t gsm4_example ( void )
     error_flag = gsm4_rsp_check( GSM4_RSP_OK );
     func_error |= error_flag;
     gsm4_error_check( error_flag );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #elif ( DEMO_EXAMPLE == EXAMPLE_SMS )
     // Check SMS mode
     #define CMGF_PDU "+CMGF: 0"
@@ -684,9 +697,37 @@ static err_t gsm4_example ( void )
         func_error |= error_flag;
         gsm4_error_check( error_flag );
     }
-    Delay_ms( 10000 );
-    Delay_ms( 10000 );
-    Delay_ms( 10000 );
+    // 30 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #else
     #error "No demo example selected"
 #endif

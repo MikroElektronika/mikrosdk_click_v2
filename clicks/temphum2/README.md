@@ -115,7 +115,7 @@ void application_task ( void )
     log_printf( &logger, " --- Temperature : %.2f C \r\n ", data_buffer[ 0 ] );
     log_printf( &logger, " --- Humidity : %.2f RH \r\n ", data_buffer[ 1 ] );
     
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 } 
 
 ```

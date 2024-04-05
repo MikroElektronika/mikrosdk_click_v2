@@ -25,17 +25,18 @@
     "name": "mikroe.click.smartdof",
     "product_link": "https://www.mikroe.com/smart-dof-click",
     "short_description": "SmartDOF click features a highly advanced integrated system-in-package (SiP) solution with three different sensors on-chip: triaxial accelerometer, magnetometer, and triaxial gyroscope are all integrated on the same die, along with the powerful 32-bit ARM® Cortex®-M0+ MCU. Thanks to the integrated MCU, the BN080 SiP provides extensive signal processing.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2793
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.SmartDof",
     "subdir_name": "lib_smartdof"
 }
+
 
 
 

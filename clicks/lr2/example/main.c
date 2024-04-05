@@ -108,7 +108,7 @@ void application_task ( void )
         log_printf( &logger, " Sent message: %s", send_message );
         log_printf( &logger, " Response : %s\r\n", resp_buf );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 #else
     if ( LR2_OK == lr2_rx( &lr2, LR2_ARG_0, resp_buf ) ) 
     {
@@ -128,6 +128,11 @@ void application_task ( void )
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 
@@ -167,7 +172,7 @@ static void lr2_process ( void )
             process_cnt--;
             
             // Process delay 
-            Delay_ms( 100 );
+            Delay_ms ( 100 );
         }
     }
 }

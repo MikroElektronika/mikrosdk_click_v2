@@ -94,7 +94,7 @@ void application_init ( void ) {
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_info( &logger, " Application Init " );
     // Click initialization.
 
@@ -125,7 +125,7 @@ void application_task ( void ) {
 
     for ( uint8_t cnt = 0; cnt < 100; cnt++ ) {
         uts7segr_display_number( &uts7segr, cnt, UTS7SEGR_DOT_LEFT );
-        Delay_ms( 500 );
+        Delay_ms ( 500 );
     }
 }
 

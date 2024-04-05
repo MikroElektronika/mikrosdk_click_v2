@@ -61,56 +61,61 @@ void application_init ( void )
 
     expand9_default_cfg ( &expand9 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void ) 
 {   
     expand9_soft_reset( &expand9 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     for ( uint8_t cnt = 0; cnt < 16; cnt++ )
     {
         expand9_set_ch_output_state( &expand9, cnt, CH_OUTPUT_ON );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         expand9_set_ch_output_state( &expand9, cnt, CH_OUTPUT_OFF );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     
     for ( uint8_t cnt = 15; cnt > 0; cnt-- )
     {
         expand9_set_ch_output_state( &expand9, cnt, CH_OUTPUT_ON );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         expand9_set_ch_output_state( &expand9, cnt, CH_OUTPUT_OFF );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     
     expand9_soft_reset( &expand9 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     for ( uint8_t cnt = 0; cnt < 16; cnt++ )
     {
         expand9_led_driver_config( &expand9, cnt, EXPAND9_FREQ_DIV_1, EXPAND9_LED_MODE_LINEAR );
         expand9_set_intensity( &expand9, cnt, 10 );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         expand9_led_driver_config( &expand9, cnt, EXPAND9_FREQ_DIV_1, EXPAND9_LED_MODE_LINEAR );
         expand9_set_intensity( &expand9, cnt, 200 );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
     
     for ( uint8_t cnt = 15; cnt > 0; cnt-- )
     {
         expand9_led_driver_config( &expand9, cnt, EXPAND9_FREQ_DIV_1, EXPAND9_LED_MODE_LINEAR );
         expand9_set_intensity( &expand9, cnt, 200 );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
         expand9_led_driver_config( &expand9, cnt, EXPAND9_FREQ_DIV_1, EXPAND9_LED_MODE_LINEAR );
         expand9_set_intensity( &expand9, cnt, 10 );
-        Delay_ms( 100 );
+        Delay_ms ( 100 );
     }
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

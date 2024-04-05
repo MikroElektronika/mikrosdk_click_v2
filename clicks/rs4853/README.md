@@ -107,7 +107,8 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITER
     rs4853_send_command( &rs4853, TEXT_TO_SEND );
     rs4853_process( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif     
 } 
 

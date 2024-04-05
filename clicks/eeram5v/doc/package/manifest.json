@@ -25,17 +25,18 @@
     "name": "mikroe.click.eeram5v",
     "product_link": "https://www.mikroe.com/eeram-5v-click",
     "short_description": "EERAM 5V click is a static RAM (SRAM) memory click board™ with the unique feature - it has a backup non-volatile memory array, used to store the data from the SRAM array. Since the SRAM is not able to maintain its content after the power loss, the non-volatile EEPROM backup can be a very handy addition that can be used to preserve the data, even after the power loss event. This is a very useful feature when working with critical or sensitive applications. The memory backup procedure can be executed both automatically and manually. When it is set to work in the manual mode, the onboard capacitor will act as a power source with enough power to complete the backup cycle. The power-on backup restore mode is also available, taking only about 25ms to complete.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2365
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.EERAM5V",
     "subdir_name": "lib_eeram5v"
 }
+
 
 
 

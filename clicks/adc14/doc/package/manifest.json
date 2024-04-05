@@ -25,13 +25,14 @@
     "name": "mikroe.click.adc14",
     "product_link": "https://www.mikroe.com/adc-14-click",
     "short_description": "ADC 14 Click is a compact add-on board with a high-performance data converter. This board features the MAX11108A, a low-power serial ADC from Analog Devices. It includes a high-dynamic range sample-and-hold and a high-speed serial interface. ",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.ADC14",
     "subdir_name": "lib_adc14"
 }
+
 
 

@@ -70,7 +70,7 @@ void application_init ( void )
     log_printf( &logger, " > ID: 0x%.4X\r\n", temp_data );
     
     log_info( &logger, " Application Task " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void ) 
@@ -78,11 +78,16 @@ void application_task ( void )
     uint16_t temp_data = 0;
     proximity14_generic_read( &proximity14, PROXIMITY14_REG_DATA, &temp_data );
     log_printf( &logger, " > Data: %u\r\n", temp_data );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

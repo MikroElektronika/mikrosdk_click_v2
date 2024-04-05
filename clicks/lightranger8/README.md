@@ -82,7 +82,7 @@ default settings of the ranging sensor including distance
 mode and timing budget. The optional calibration helps
 improvement of the accuracy on the targeted distance.
 This process takes 10 second ( which can by modifed by
-simply lowering the Delay_ms( 5000 ) value ) so the user can
+simply lowering the Delay_ms ( ) value ) so the user can
 place an object on the exact location. When calibration is
 finished, device starts the measurement with intermeasurement
 period set by the user.
@@ -126,21 +126,29 @@ void application_init ( void ) {
     }
     lightranger8_set_distance_mode( &lightranger8, LIGHTRANGER8_DISTANCE_MODE_MEDIUM );
     lightranger8_set_measurement_timing_budget( &lightranger8, budget_us );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, " -------------------------------------------------------------------------\r\n" );
     log_printf( &logger, " For calibration place an object at %.1f cm distance from sensor.\r\n", ( float )calibration_distance_mm / 10 );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, " -------------------------------------------------------------------------\r\n" );
     log_printf( &logger, " ---------------    Sensor calibration is in progress...     ---------------\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     lightranger8_calibrate_offset( &lightranger8, calibration_distance_mm, period_ms, &offset );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     lightranger8_start_measurement( &lightranger8, period_ms );
     log_printf( &logger, " -------------------------------------------------------------------------\r\n" );
     log_printf( &logger, " -------------    Sensor measurement commencing...    -------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 ```
@@ -165,7 +173,8 @@ void application_task ( void ) {
     log_printf( &logger, " ----------------------\r\n" );
     log_printf( &logger, " Distance: %.1f cm \r\n", ( float )distance / 10 );
     lightranger8_system_interrupt_clear ( &lightranger8 );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

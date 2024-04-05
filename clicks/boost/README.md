@@ -112,12 +112,20 @@ void application_task ( void )
   log_printf( &logger, " Setting voltage to 15000 mV \r\n" );
 
   boost_set_voltage( &boost, 15000 );
-  Delay_ms( 5000 );
+  Delay_ms ( 1000 );
+  Delay_ms ( 1000 );
+  Delay_ms ( 1000 );
+  Delay_ms ( 1000 );
+  Delay_ms ( 1000 );
 
   log_printf( &logger, " Setting voltage to 30000 mV \r\n" );
 
   boost_set_voltage( &boost, 30000 );
-  Delay_ms( 5000 );
+  Delay_ms ( 1000 );
+  Delay_ms ( 1000 );
+  Delay_ms ( 1000 );
+  Delay_ms ( 1000 );
+  Delay_ms ( 1000 );
 }  
 
 ```

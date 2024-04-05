@@ -25,17 +25,18 @@
     "name": "mikroe.click.g2c3g",
     "product_link": "https://www.mikroe.com/go-to-cloud-g2c-3g-click",
     "short_description": "Go to Cloud (G2C) 3G click is a gateway Click board™ which provides a simple and reliable connection to the Click Cloud platform, a cloud-based rapid prototyping environment, hosted by Mikroe. G2C 3G offers an unprecedented simplicity for adding Click Cloud connectivity over UMTS/HSPA to any embedded application, by utilizing the simple UART interface: it can be configured and managed using a minimal set of well-documented AT commands.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
     "related_projects": [
         3211
     ],
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.G2C3G",
     "subdir_name": "lib_g2c3g"
 }
+
 
 
 

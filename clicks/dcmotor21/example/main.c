@@ -66,19 +66,27 @@ void application_task ( void )
     dcmotor21_set_out_1 ( &dcmotor21, DCMOTOR21_OUT_LOW );
     dcmotor21_set_out_2 ( &dcmotor21, DCMOTOR21_OUT_HIGH );
     log_printf( &logger, " \r\n Driving the motor...\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     dcmotor21_set_out_1 ( &dcmotor21, DCMOTOR21_OUT_HIGH );
     dcmotor21_set_out_2 ( &dcmotor21, DCMOTOR21_OUT_LOW );
     log_printf( &logger, " Switch direction.\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     dcmotor21_set_out_1 ( &dcmotor21, DCMOTOR21_OUT_HIGH_Z );
     dcmotor21_set_out_2 ( &dcmotor21, DCMOTOR21_OUT_HIGH_Z );
     log_printf( &logger, " The motor is disconnected.\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -93,7 +93,7 @@ void application_init ( void )
     mic33153_cfg_setup( &cfg );
     MIC33153_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     mic33153_init( &mic33153, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
   
 ```
@@ -111,27 +111,33 @@ void application_task ( void )
     
     mic33153_write_dac ( &mic33153, MIC33153_VOLTAGE_1000MV );
     log_printf( &logger, "Output voltage set to 1000mV\r\n" );
-    Delay_ms(2000);
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     mic33153_write_dac ( &mic33153, MIC33153_VOLTAGE_1500MV );
     log_printf( &logger, "Output voltage set to 1500mV\r\n" );
-    Delay_ms(2000);
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     mic33153_write_dac ( &mic33153, MIC33153_VOLTAGE_2000MV );
     log_printf( &logger, "Output voltage set to 2000mV\r\n" );
-    Delay_ms(2000);
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     mic33153_write_dac ( &mic33153, MIC33153_VOLTAGE_2500MV );
     log_printf( &logger, "Output voltage set to 2500mV\r\n" );
-    Delay_ms(2000);
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     mic33153_write_dac ( &mic33153, MIC33153_VOLTAGE_3000MV );
     log_printf( &logger, "Output voltage set to 3000mV\r\n" );
-    Delay_ms(2000);
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     mic33153_write_dac ( &mic33153, MIC33153_VOLTAGE_3200MV );
     log_printf( &logger, "Output voltage set to 3200mV\r\n" );
-    Delay_ms(2000);
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "-----------------------------------\r\n" );
 }

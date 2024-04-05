@@ -59,7 +59,7 @@ void application_init ( void )
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     if ( ACCEL19_ERROR == accel19_default_cfg ( &accel19 ) )
     {
@@ -78,7 +78,7 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
     log_printf( &logger, "-------------------------\r\n" );
-    Delay_ms( 1000 ); 
+    Delay_ms ( 1000 ); 
 }
 
 void application_task ( void )
@@ -90,13 +90,18 @@ void application_task ( void )
         accel19_get_axis_data( &accel19, &axis );
         log_printf( &logger, "\tX : %d \r\n\tY : %d \r\n\tZ : %d \r\n",axis.x, axis.y, axis.z );
         log_printf( &logger, "-------------------------\r\n" );
-        Delay_ms( 1000 );     
+        Delay_ms ( 1000 );     
     }
-    Delay_ms( 1 );  
+    Delay_ms ( 1 );  
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

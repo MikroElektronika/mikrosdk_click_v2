@@ -137,7 +137,7 @@ void application_task ( )
     
     log_printf( &logger, "___________________________\r\n" );
     
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 } 
 
 ```

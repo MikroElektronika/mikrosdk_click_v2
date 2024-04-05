@@ -106,11 +106,11 @@ void application_init ( void ) {
     log_printf( &logger, "--------------------------- \r\n " );
     log_printf( &logger, " Device reset \r\n" );
     pht_reset( &pht );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "--------------------------- \r\n " );
     log_printf( &logger, " Set Oversampling Ratio \r\n" );
     pht_set_ratio( &pht, PHT_PT_CMD_RATIO_2048, PHT_PT_CMD_RATIO_2048);
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "--------------------------- \r\n " );
     log_info( &logger, " Application Task " );
     log_printf( &logger, "--------------------------- \r\n " );
@@ -126,15 +126,17 @@ void application_init ( void ) {
 
 void application_task ( void ) {
     pht_get_temperature_pressure( &pht, &temperature, &pressure );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     pht_get_relative_humidity( &pht, &humidity );
-    Delay_ms( 10 );
+    Delay_ms ( 10 );
     
     log_printf( &logger, " Preassure   : %.2f mbar \r\n ", pressure );
     log_printf( &logger, " Humidity    : %.2f %% \r\n ", humidity );
     log_printf( &logger, " Temperature : %.2f C \r\n ", temperature );
     log_printf( &logger, "--------------------------- \r\n " );
-    Delay_ms( 3000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

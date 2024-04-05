@@ -25,14 +25,15 @@
     "name": "mikroe.click.vavpress",
     "product_link": "https://www.mikroe.com/vav-press-click",
     "short_description": "VAV Press Click is a compact add-on board that contains a board-mount pressure sensor. This board features the LMIS025B, a low differential pressure sensor from First Sensor (part of TE Connectivity). It is based on thermal flow measurement of gas through a micro-flow channel integrated within the sensor chip. The innovative LMI technology features superior sensitivity, especially for ultra-low pressures ranging from 0 to 25Pa. The extremely low gas flow through the sensor ensures high immunity to dust contamination, humidity, and long tubing compared to other flow-based pressure sensors.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.VavPress",
     "subdir_name": "lib_vavpress"
 }
+
 
 
 

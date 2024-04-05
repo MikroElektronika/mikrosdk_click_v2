@@ -91,11 +91,11 @@ void application_init ( void )
     lin_cfg_setup( &cfg );
     LIN_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     lin_init( &lin, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     lin_set_enable ( &lin, 1 );
     lin_set_wake_up ( &lin, 0 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 #ifdef DEMO_APP_RECEIVER
     log_info( &logger, "---- Receiver mode ----" );
 #endif    
@@ -113,12 +113,18 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITTER
     lin_generic_write( &lin, TEXT_TO_SEND, strlen( TEXT_TO_SEND ) );
     log_info( &logger, "---- Data sent ----" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif   
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

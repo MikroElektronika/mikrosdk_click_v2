@@ -25,14 +25,15 @@
     "name": "mikroe.click.expand15",
     "product_link": "https://www.mikroe.com/expand-15-click",
     "short_description": "Expand 15 Click is a compact add-on board that contains a multi-channel I/O expander. This board features the TCAL6416, a general-purpose I/O expansion for most microcontroller families from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.Expand15",
     "subdir_name": "lib_expand15"
 }
+
 
 
 

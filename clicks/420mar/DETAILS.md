@@ -104,7 +104,7 @@ void application_task ( )
     log_printf( &logger, "-----------------------------\r\n" );
     log_printf( &logger, " * Current: %.3f mA * \r\n", current );
 
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 } 
 
 ```

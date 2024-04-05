@@ -97,7 +97,7 @@ static void fingerprint2_process ( void )
 void fp_reg_one ( uint8_t fngr_number )
 {
     log_printf( &logger, "Registration process\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
    
     fingerprint2_reg_one_fp( &fingerprint2, fngr_number );
     do
@@ -111,7 +111,7 @@ void fp_reg_one ( uint8_t fngr_number )
 void fp_clr_one ( uint8_t fngr_number )
 {
     log_printf( &logger, "Deleting process\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     fingerprint2_delete_one_fp( &fingerprint2, fngr_number );
     do
@@ -126,7 +126,7 @@ void fp_clr_all ( )
 {
     uint8_t cnt = 0;
     log_printf( &logger, "Process of deleting all fingeprints\r\n" );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
     
     while ( cnt < 23 )
     {
@@ -191,20 +191,29 @@ void application_init ( void )
     fingerprint2_init( &fingerprint2, &cfg );
     
     fingerprint2_reset ( &fingerprint2 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     fp_reg_one( 0 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 void application_task ( void )
 {    
     fp_compare( );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

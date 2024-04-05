@@ -107,7 +107,7 @@ void application_init ( void )
     i2cisolator2_init( &i2cisolator2, &cfg );
     
     i2cisolator2_enable_power( &i2cisolator2, I2CISOLATOR2_POWER_ENABLE );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_info( &logger, " Application Task " );
 }
@@ -129,7 +129,7 @@ void application_task ( void )
     {
         log_printf( &logger, " Demo text message is written to EEPROM 3 click!\r\n" );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     if ( I2CISOLATOR2_OK == eeprom3_read_page ( EEPROM3_MEMORY_ADDRESS, read_buf, 
                                                 strlen( EEPROM3_DEMO_TEXT ) ) )
@@ -137,7 +137,7 @@ void application_task ( void )
         read_buf[ strlen( EEPROM3_DEMO_TEXT ) ] = 0;
         log_printf( &logger, " Read data: \"%s\"\r\n\n", read_buf );
     }
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }  
 
 ``` 

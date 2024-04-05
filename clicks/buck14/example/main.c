@@ -92,7 +92,7 @@ void application_init ( void )
 
     write_data  = BUCK14_CTRL_ENABLE_NO_MARGIN;
     buck14_generic_write( &buck14, BUCK14_CMD_OPERATION, &write_data , 1 );
-    Delay_ms( 300 );
+    Delay_ms ( 300 );
 
     status_data = buck14_check_mfr_id(  &buck14 );
     error_handler( status_data );
@@ -103,7 +103,7 @@ void application_init ( void )
     buck14_default_cfg( &buck14 );
     log_printf( &logger, " ***** App init ***** \r\n" );
     log_printf( &logger, "----------------------\r\n" );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 }
 
 void application_task ( void )
@@ -119,7 +119,15 @@ void application_task ( void )
     {
         read_vout_data(  &buck14 );
     }
-    Delay_ms( 8000 );
+    // 8 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     vout_value = 3.7;
     status_data = buc14_write_vout( &buck14, vout_value );
@@ -130,7 +138,15 @@ void application_task ( void )
         read_vout_data( &buck14 );
     }
 
-    Delay_ms( 8000 );
+    // 8 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     vout_value = 2.5;
     status_data = buc14_write_vout( &buck14, vout_value );
@@ -141,7 +157,15 @@ void application_task ( void )
         read_vout_data(  &buck14 );
     }
     
-    Delay_ms( 8000 );
+    // 8 seconds delay
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 
     vout_value = 4.5;
     status_data = buc14_write_vout(  &buck14, vout_value );
@@ -152,13 +176,24 @@ void application_task ( void )
         read_vout_data(  &buck14 );
     }
     
-    Delay_ms( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     log_printf( &logger, "```````````````\r\n" );
-    Delay_ms( 4000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

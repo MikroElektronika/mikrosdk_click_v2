@@ -94,7 +94,7 @@ void application_init ( void )
     moisture_cfg_setup( &cfg );
     MOISTURE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     moisture_init( &moisture, &cfg );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     data_res = moisture_read_word( &moisture, MOISTURE_REG_DEVICE_ID );
 
@@ -113,7 +113,7 @@ void application_init ( void )
 
     log_printf( &logger, " --- Calibration start --- \r\n" );
     moisture_cal( &moisture );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, " --- Calibration finishing --- \r\n" );
 }
@@ -128,7 +128,7 @@ void application_task ( void )
 {
     moisture_data = moisture_get_data( &moisture  );
     log_printf( &logger, " Moisture data : %d \r\n", moisture_data );
-    Delay_ms( 500 );
+    Delay_ms ( 500 );
 }
 ```
 

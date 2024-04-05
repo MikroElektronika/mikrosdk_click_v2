@@ -130,11 +130,19 @@ void application_task ( void )
 {
     audioamp12_gain_select( &audioamp12, AUDIOAMP12_GAIN_6_DB );
     log_printf( &logger, " Gain set to 6 dB.\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     audioamp12_gain_select( &audioamp12, AUDIOAMP12_GAIN_12_DB );
     log_printf( &logger, " Gain set to 12 dB.\r\n" );
-    Delay_ms( 5000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

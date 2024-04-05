@@ -25,17 +25,18 @@
     "name": "mikroe.click.magneto7",
     "product_link": "https://www.mikroe.com/magneto-7-click",
     "short_description": "Magneto 7 Click is a high-resolution magnetic sensor Click board™ which allows contactless orientation sensing.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2861
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.Magneto7",
     "subdir_name": "lib_magneto7"
 }
+
 
 
 

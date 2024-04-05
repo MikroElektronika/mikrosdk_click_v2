@@ -2,7 +2,7 @@
     "name": "H-Bridge Click",
     "description": "H-Bridge click is a high-efficiency dual H-bridge driver Click board™, capable of providing reasonably high current while driving the connected load with up to 7V. Since the used driver IC has two full H-bridge channels, this Click board™ is an ideal solution for driving smaller bipolar stepper motors. H-Bridge click provides driving in both directions, with an addition of the brake mode, and the high impedance mode (Hi-Z). Overshoot current suppression algorithm protects the output stages from being damaged if both high-side and low-side MOSFETs on a single H-bridge channel become conductive.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","MC34933EPR2"],
     "category" : ["Click Boards > Motor control > Brushed"]
 }

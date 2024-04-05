@@ -25,17 +25,18 @@
     "name": "mikroe.click.vacuum",
     "product_link": "https://www.mikroe.com/vacuum-click",
     "short_description": "Vacuum click is an accurate vacuum pressure sensing click board™, capable of measuring absolute pressure values down to -115kPa.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2572
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Vacuum",
     "subdir_name": "lib_vacuum"
 }
+
 
 
 

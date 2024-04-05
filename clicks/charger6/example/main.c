@@ -176,28 +176,28 @@ void application_init ( void ) {
 
     charger6_default_cfg ( &charger6 );
     log_info( &logger, " Application Task " );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 
     log_printf( &logger, "-------------------------------\r\n" );
     log_printf( &logger, " Set Current Limit   :  500 mA \r\n" );
     charger6_set_input_current_limit( &charger6, 500 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, " Set Sys Min Voltage : 3500 mV \r\n" );
     charger6_set_system_minimum_voltage( &charger6, 3500 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, " Set Fast Chg Current:  360 mA \r\n" );
     charger6_set_fast_charge_current( &charger6, 360 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, " Set Charge Voltage  : 4112 mV \r\n" );
     charger6_set_charge_voltage( &charger6, 4112 );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     log_printf( &logger, " >> Enable Battery Charging << \r\n" );
     charger6_enable_battery_charging( &charger6 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "-------------------------------\r\n" );
     log_printf( &logger, "       >>>   Status   <<<      \r\n" );
@@ -206,27 +206,33 @@ void application_init ( void ) {
 
 void application_task ( void ) {
     charger6_get_status( &charger6, &chg_status );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     display_power_good_status( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     display_chrg_status( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     display_bat_status( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     display_chrg_fault_status( );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     display_vsys_status( );
     log_printf( &logger, "-------------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 }
 
 int main ( void ) 
 {
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
     application_init( );
     
     for ( ; ; ) 

@@ -2,7 +2,7 @@
     "name": "DC Motor 21 Click",
     "description": "DC Motor 21 Click is a compact add-on board that contains a brushed DC motor driver. This board features the A3910, a DC motor driver designed for low voltage power applications from Allegro Microsystems. It is controlled via several GPIO pins and has a wide operating voltage range with an output current capacity of 500mA. In addition to the possibility to be used in the full-bridge configuration to drive a single bidirectional DC motor, it can also be used as a dual half-bridge to drive dual DC motors.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["click","A3910"],
     "category" : ["Brushed"]
 }

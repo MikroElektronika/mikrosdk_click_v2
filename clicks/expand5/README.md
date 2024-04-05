@@ -90,14 +90,14 @@ void application_init ( void )
     EXPAND5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     expand5_init( &expand5, &cfg );
 
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "------------------- \r\n" );
     log_printf( &logger, "   EXPAND 5 click   \r\n" );
     log_printf( &logger, "------------------- \r\n" );
     expand5_reset( &expand5 );
     expand5_set_all_dir( &expand5, bank_out, bank_out, bank_out );
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     log_printf( &logger, "  Pins configured   \r\n" );
     log_printf( &logger, "     as output      \r\n" );
     log_printf( &logger, "------------------- \r\n" );
@@ -119,11 +119,11 @@ void application_task ( void )
         expand5_write_pin ( &expand5, pin_num, EXPAND5_HIGH );
         log_printf( &logger, "Pin %u is high \r\n", ( uint16_t ) pin_num );
 
-        Delay_ms( 200 );
+        Delay_ms ( 200 );
         expand5_write_all_banks ( &expand5, bank_low, bank_low, bank_low );
     }
     log_printf( &logger, "------------------- \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

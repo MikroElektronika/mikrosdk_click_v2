@@ -25,17 +25,18 @@
     "name": "mikroe.click.canfd3",
     "product_link": "https://www.mikroe.com/can-fd-3-click",
     "short_description": "CAN FD 3 Click is a add-on board based on TLE9251V CAN network transceiver, designed for HS CAN networks up to 5 Mbit/s in automotive and industrial applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3219
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.CanFd3",
     "subdir_name": "lib_canfd3"
 }
+
 
 
 

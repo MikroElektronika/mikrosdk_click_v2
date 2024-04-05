@@ -106,7 +106,8 @@ void application_task ( void )
 #ifdef DEMO_APP_TRANSMITER
     rs232isolator_send_command( &rs232isolator, TEXT_TO_SEND );
     rs232isolator_process( );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
 #endif    
 } 
 

@@ -25,14 +25,15 @@
     "name": "mikroe.click.tilt3",
     "product_link": "https://www.mikroe.com/tilt-3-click",
     "short_description": "Tilt 3 Click is a compact add-on board used for measuring the tilt in multiple axes in relation to an absolute level plane. This board features the DSBA1P, a tilt sensor switch that breaks the circuit when tilted to an angle from ±30° to ±60° from NKK Switches.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Tilt3",
     "subdir_name": "lib_tilt3"
 }
+
 
 
 

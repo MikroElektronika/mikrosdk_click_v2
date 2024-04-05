@@ -109,7 +109,7 @@ void application_init ( void )
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
-    Delay_ms( 100 );
+    Delay_ms ( 100 );
     
     if ( BAROMETER9_ERROR == barometer9_default_cfg ( &barometer9 ) )
     {
@@ -149,7 +149,7 @@ void application_task ( void )
     barometer9_get_pressure( &barometer9, &pressure );
     log_printf( &logger, " Temperature: %.2f C \r\n Pressure %.3f Pa \r\n", temperature, pressure );
     log_printf( &logger, " - - - - - - - - - - \r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 ```
 

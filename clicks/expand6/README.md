@@ -91,7 +91,7 @@ void application_init ( void )
     expand6_init( &expand6, &cfg );
 
     expand6_reset ( &expand6 );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
     
     log_printf( &logger, "------------------- \r\n" );
     log_printf( &logger, "   EXPAND 6 click   \r\n" );
@@ -114,17 +114,18 @@ void application_task ( void )
     
     log_printf( &logger, "All pins set to HIGH logic level!\r\n" );
     log_printf( &logger, "---------------------------------\r\n" );
-    Delay_ms( 2000 );
+    Delay_ms ( 1000 );
+    Delay_ms ( 1000 );
     
     for ( pin_num = 0; pin_num < 20; pin_num++ )
     {
         expand6_write_pin( &expand6, pin_num, EXPAND6_LOW );
         log_printf( &logger, "Pin %u is set to LOW logic level!\r\n", ( uint16_t) pin_num );
-        Delay_ms( 300 );
+        Delay_ms ( 300 );
     }
 
     log_printf( &logger, "---------------------------------\r\n" );
-    Delay_ms( 1000 );
+    Delay_ms ( 1000 );
 }
 
 ```

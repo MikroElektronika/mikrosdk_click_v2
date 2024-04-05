@@ -2,7 +2,7 @@
     "name": "RTK Base Click",
     "description": "RTK Base Click is a compact add-on board used to improve the positional accuracy of the compatible RTK Rover board. This board features Quectel’s LG69TASMD, a dual-band multi-constellation GNSS module featuring a high-performance and high-reliability positioning engine. This module carries an RTK base station function by calculating and transmitting differential correction data via radio to allow the roving GPS to correct its position. It features the fifth generation of STMicroelectronics® positioning receiver platform with 80 tracking and four fast acquisition channels, supports up to 4 concurrent global constellations (GPS, QZSS, Galileo, and BDS) alongside RTCM 3.x protocol and commonly used UART interface.",
     "image" : "../../Resources/click_icon.png",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","gcc-riscv","clang-riscv","mikrocdspic"],
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["click","LG69T-AS"],
     "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"]
 }

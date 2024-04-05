@@ -25,17 +25,18 @@
     "name": "mikroe.click.stspin233",
     "product_link": "https://www.mikroe.com/stspin233-click",
     "short_description": "STSPIN233 click is a complete solution for a 3-phase integrated motor driver, based on the STSPIN233, Low voltage 3-phase integrated motor driver.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2969
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Stspin233",
     "subdir_name": "lib_stspin233"
 }
+
 
 
 

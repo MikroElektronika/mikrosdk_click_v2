@@ -25,17 +25,18 @@
     "name": "mikroe.click.nfcextend",
     "product_link": "https://www.mikroe.com/nfc-extend-click",
     "short_description": "NFC Extend Click is NFC tag interface device with possibility of using any shape and size external antenna, offering 16 Kbit of electrically erasable programmable memory (EEPROM). This Click Board™ offer two communication interfaces.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3193
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.NfcExtend",
     "subdir_name": "lib_nfcextend"
 }
+
 
 
 
