@@ -1,0 +1,37 @@
+{
+    "architecture": "ARM|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Wireless connectivity > RFID/NFC",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "NFC 5 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.nfc5",
+    "product_link": "https://www.mikroe.com/nfc-5-click",
+    "short_description": "NFC 5 Click is a compact add-on board designed for advanced NFC applications. This board features the ST25R3918, a multipurpose NFC transceiver from STMicroelectronics. This Click board™ is built to cater to the growing needs of the Internet of Things (IoT) ecosystem, providing robust NFC reader functionalities, passive peer-to-peer communication, and card emulation modes with outstanding analog performance. Its notable features include exceptional read range with minimal power output, advanced noise reduction, and compatibility with ISO14443, ISO15693, and NFC Forum Tag types 1, 2, 4, and 5.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.NFC5",
+    "subdir_name": "lib_nfc5"
+}
+
+

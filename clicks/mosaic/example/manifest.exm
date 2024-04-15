@@ -1,0 +1,8 @@
+{
+    "name": "Mosaic Click",
+    "description": "Mosaic Click is a compact add-on board for precision navigation and location-based applications. This board features the Mosaic-X5, a compact global navigation satellite system (GNSS) receiver from Septentrio. The Mosaic-X5 stands out for its multi-band and multi-constellation tracking ability, ensuring robust and comprehensive global coverage. It features Septentrio's AIM+ technology for superior interference mitigation, enabling it to counteract a wide range of signal disruptions.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
+    "hw" : ["click","MOSAIC-X5"],
+    "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"]
+}
