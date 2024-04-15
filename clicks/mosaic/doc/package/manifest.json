@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
+    "category": "Click Boards > Wireless connectivity > GPS/GNSS",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Mosaic click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.mosaic",
+    "product_link": "https://www.mikroe.com/mosaic-click",
+    "short_description": "Mosaic Click is a compact add-on board for precision navigation and location-based applications. This board features the Mosaic-X5, a compact global navigation satellite system (GNSS) receiver from Septentrio. The Mosaic-X5 stands out for its multi-band and multi-constellation tracking ability, ensuring robust and comprehensive global coverage. It features Septentrio's AIM+ technology for superior interference mitigation, enabling it to counteract a wide range of signal disruptions.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.Mosaic",
+    "subdir_name": "lib_mosaic"
+}
+

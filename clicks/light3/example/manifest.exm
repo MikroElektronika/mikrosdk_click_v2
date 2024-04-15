@@ -1,0 +1,8 @@
+{
+    "name": "Light 3 Click",
+    "description": "Light 3 Click is a compact add-on board for precise ambient light measurement in automotive applications. This board features the OPT4003-Q1, an automotive-grade digital ambient light sensor from Texas Instruments. This digital ambient light sensor excels in detecting both visible and near-infrared light with high accuracy, thanks to its dual-channel functionality and filters that mimic the human eye's response while efficiently segregating NIR light.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","OPT4003-Q1"],
+    "category" : ["Click Boards > Sensors > Optical"]
+}
