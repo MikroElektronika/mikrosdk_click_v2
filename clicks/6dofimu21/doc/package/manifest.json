@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Sensors > Motion",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "6DOF IMU 21 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.c6dofimu21",
+    "product_link": "https://www.mikroe.com/6dof-imu-21-click",
+    "short_description": "6DOF IMU 21 Click is a compact add-on board perfect for applications requiring accurate orientation and movement detection. This board features the WSEN-ISDS (2536030320001) sensor from Würth Elektronik, which integrates 3-axis acceleration and gyroscope sensors using advanced MEMS-based capacitive sensing technology. It offers a fully calibrated 16-bit digital output, with acceleration ranges from ±2g to ±16g and gyroscope ranges from ±125dps to ±2000dps, alongside a high output data rate of up to 6.6kHz for seamless movement tracking. Additionally, an embedded temperature sensor provides environmental monitoring capabilities.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.C6DOFIMU21",
+    "subdir_name": "lib_c6dofimu21"
+}
+

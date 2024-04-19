@@ -1,0 +1,8 @@
+{
+    "name": "10x10 RGB 2 Click",
+    "description": "10x10 RGB 2 Click is a compact add-on board designed for creating vibrant LED displays and lighting solutions. This board features the IN-PC20TBT5R5G5B, an RGB LED with an advanced IC for seamless operation from Inolux. The board features a 10x10 matrix of "smart" RGB LEDs capable of dual-wire transmission and a sophisticated control circuit for dynamic color rendering. It incorporates CMOS technology for low power consumption and supports 256 grayscale levels for precise PWM dimming, along with 32 levels of brightness control.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","LSF0102DCTR","IN-PC20TBT5R5G5B"],
+    "category" : ["Click Boards > Display & LED > LED matrix"]
+}

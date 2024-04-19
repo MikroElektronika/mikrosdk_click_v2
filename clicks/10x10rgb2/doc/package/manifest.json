@@ -1,0 +1,37 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Display & LED > LED matrix",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "10x10 RGB 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.c10x10rgb2",
+    "product_link": "https://www.mikroe.com/10x10-rgb-2-click",
+    "short_description": "10x10 RGB 2 Click is a compact add-on board designed for creating vibrant LED displays and lighting solutions. This board features the IN-PC20TBT5R5G5B, an RGB LED with an advanced IC for seamless operation from Inolux. The board features a 10x10 matrix of smart RGB LEDs capable of dual-wire transmission and a sophisticated control circuit for dynamic color rendering. It incorporates CMOS technology for low power consumption and supports 256 grayscale levels for precise PWM dimming, along with 32 levels of brightness control.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.10x10RGB2",
+    "subdir_name": "lib_c10x10rgb2"
+}
+
+
