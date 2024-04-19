@@ -1,0 +1,8 @@
+{
+    "name": "6DOF IMU 21 Click",
+    "description": "6DOF IMU 21 Click is a compact add-on board perfect for applications requiring accurate orientation and movement detection. This board features the WSEN-ISDS (2536030320001) sensor from Würth Elektronik, which integrates 3-axis acceleration and gyroscope sensors using advanced MEMS-based capacitive sensing technology. It offers a fully calibrated 16-bit digital output, with acceleration ranges from ±2g to ±16g and gyroscope ranges from ±125dps to ±2000dps, alongside a high output data rate of up to 6.6kHz for seamless movement tracking. Additionally, an embedded temperature sensor provides environmental monitoring capabilities.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","WSEN-ISDS"],
+    "category" : ["Click Boards > Sensors > Motion"]
+}
