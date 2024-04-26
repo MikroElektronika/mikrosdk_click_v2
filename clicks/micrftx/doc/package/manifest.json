@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Wireless connectivity > Sub-1 GHz Transceivers",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "MICRF TX click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.micrftx",
+    "product_link": "https://www.mikroe.com/micrf-tx-click",
+    "short_description": "MICRF TX Click is a compact add-on board designed as a powerful RF transmitter for data transmission over the 315MHz frequency band. This board features the MICRF112, a high-performance RF transmitter IC from Microchip, renowned for its efficiency in operation. This Click board™ stands out for its ease of use, requiring only a simple crystal oscillator to set the frequency, and supports both ASK and FSK modulation types with a Phase-Locked Loop (PLL) for stable frequency.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.MICRFTX",
+    "subdir_name": "lib_micrftx"
+}
+
