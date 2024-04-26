@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240426](#20240426)**
 + **[20240419](#20240419)**
 + **[20240415](#20240415)**
 + **[20240405](#20240405)**
@@ -90,6 +91,18 @@
 
 ---
 ---
+---
+
+## `20240426`
+
+*Following click boards have been added:*
+
++ `MICRF TX`
++ `MICRF RX`
++ `MICRF RX 2`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240419`
