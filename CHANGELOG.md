@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240510](#20240510)**
 + **[20240426](#20240426)**
 + **[20240419](#20240419)**
 + **[20240415](#20240415)**
@@ -91,6 +92,21 @@
 
 ---
 ---
+---
+
+## `20240510`
+
+*Following click boards have been added:*
+
++ `DIGI IN 2`
++ `AccelQvar`
++ `Air Quality 11`
++ `Step Up 2`
++ `Cooler`
++ `Opto Encoder 5`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240426`

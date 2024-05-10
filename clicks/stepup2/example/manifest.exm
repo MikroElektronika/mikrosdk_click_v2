@@ -1,0 +1,8 @@
+{
+    "name": "Step Up 2 Click",
+    "description": "Step Up 2 Click is a compact add-on board designed to boost the power capabilities of devices. This board features the TPS61299, a synchronous boost converter from Texas Instruments. This component is renowned for its low quiescent current and high efficiency under light-load conditions. The board distinguishes itself with the ability to adjust output voltage via the integrated MAX5419 digital potentiometer, offering precise control through an I2C interface. It supports external voltages from 0.2V to 5.5V, delivering a regulated output range of 1.8V to 5.5V.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","TPS612994YBHR"],
+    "category" : ["Click Boards > Power management > Boost"]
+}

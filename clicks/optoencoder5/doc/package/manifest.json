@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Sensors > Optical",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Opto Encoder 5 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.optoencoder5",
+    "product_link": "https://www.mikroe.com/opto-encoder-5-click",
+    "short_description": "Opto Encoder 5 Click is a compact add-on board that offers non-contact switching with unparalleled accuracy and precision. This board features the OPB666N, a Photologic® slotted optical switch from TT Electronics, ensuring top-notch performance and reliability. It integrates an 890nm infrared LED and a monolithic integrated circuit with a photodiode, linear amplifier, and Schmitt trigger, all powered effectively by a 5V supply from the mikroBUS™ power rail. The board features an NPN open-collector output configuration and is TTI/LST TL compatible, highlighting its ease of use and versatility.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.OptoEncoder5",
+    "subdir_name": "lib_optoencoder5"
+}
+

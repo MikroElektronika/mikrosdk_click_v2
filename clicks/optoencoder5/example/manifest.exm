@@ -1,0 +1,8 @@
+{
+    "name": "Opto Encoder 5 Click",
+    "description": "Opto Encoder 5 Click is a compact add-on board that offers non-contact switching with unparalleled accuracy and precision. This board features the OPB666N, a Photologic® slotted optical switch from TT Electronics, ensuring top-notch performance and reliability. It integrates an 890nm infrared LED and a monolithic integrated circuit with a photodiode, linear amplifier, and Schmitt trigger, all powered effectively by a 5V supply from the mikroBUS™ power rail. The board features an NPN open-collector output configuration and is TTI/LST TL compatible, highlighting its ease of use and versatility.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","OPB666N"],
+    "category" : ["Click Boards > Sensors > Optical"]
+}
