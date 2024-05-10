@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Sensors > Motion",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "AccelQvar click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.accelqvar",
+    "product_link": "https://www.mikroe.com/accelqvar-click",
+    "short_description": "Accel&Qvar Click is a compact add-on board for capturing precise acceleration measurements and detecting electric charge variations. This board features the LIS2DUXS12, an ultralow-power accelerometer from STMicroelectronics. Besides low power consumption, it also includes Qvar technology, artificial intelligence, and an anti-aliasing filter. This digital, 3-axis accelerometer has adjustable full scales (±2g to ±16g), output data rates (1.6Hz to 800Hz), and multiple operating modes to serve various applications.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.AccelQvar",
+    "subdir_name": "lib_accelqvar"
+}
+

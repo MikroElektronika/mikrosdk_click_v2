@@ -1,0 +1,8 @@
+{
+    "name": "Air Quality 11 Click",
+    "description": "Air Quality 11 Click is a compact add-on board for monitoring and analyzing indoor air quality. This board features the ENS161, a multi-gas sensor from ScioSense based on metal oxide (MOX) technology, to detect a range of volatile organic compounds with high sensitivity. The board supports I2C and SPI communication protocols, allowing flexible integration with various MCU platforms. It can calculate equivalent CO2 and TVOC levels and provide standardized air quality indices directly on-chip.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","ENS161-BLGT"],
+    "category" : ["Click Boards > Sensors > Gas"]
+}
