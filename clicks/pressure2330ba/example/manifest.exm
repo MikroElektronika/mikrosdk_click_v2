@@ -1,0 +1,8 @@
+{
+    "name": "Pressure 23 30BA Click",
+    "description": "Pressure 23 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the MS5849-30BA, an ultra-compact chlorine-resistant absolute pressure sensor from TE Connectivity. The sensor is a small digital altimeter operating from 300 up to 30000mbar, optimized for applications where chlorine is present. The sensor’s stainless-steel housing is filled with gel, which makes it robust and enables it to work in harsh environments.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","MS5849-30BA"],
+    "category" : ["Click Boards > Sensors > Pressure"]
+}

@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Sensors > Optical",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "IR Eclipse 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.ireclipse2",
+    "product_link": "https://www.mikroe.com/ir-eclipse-2-click",
+    "short_description": "IR Eclipse 2 Click is a compact add-on board that adds photo interrupter ability to any application. This board features the EE-SX1330, a transmissive photomicrosensor with a phototransistor output from OMRON. This compact interrupter sensor senses objects or object positions with an optical beam. It can sense any object less than 3mm as it is the space between the photomicrosensor and phototransistor in which an object can fit.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.IREclipse2",
+    "subdir_name": "lib_ireclipse2"
+}
+

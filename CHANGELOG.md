@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240517](#20240517)**
 + **[20240510](#20240510)**
 + **[20240426](#20240426)**
 + **[20240419](#20240419)**
@@ -92,6 +93,26 @@
 
 ---
 ---
+---
+
+## `20240517`
+
+*Following click boards have been added:*
+
++ `IR Eclipse 2`
++ `M-BUS RF 2`
++ `I2C 1-Wire 2`
++ `GNSS RTK 3 EA`
++ `GNSS RTK 3 DA`
++ `Pressure 23 30BA`
+
+*Following click boards have been removed:*
+
++ `GNSS RTK 3`
++ `Pressure 23`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240510`
