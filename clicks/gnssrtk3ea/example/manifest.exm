@@ -1,0 +1,8 @@
+{
+    "name": "GNSS RTK 3 EA Click",
+    "description": "GNSS RTK 3 Click is a compact add-on board that enhances the precision of position data derived from satellite-based positioning systems. This board features the LC29HEA, a dual-band, multi-castellation GNSS module from Quectel. This module supports the concurrent reception of all five global GNSS constellations: GPS, BDS, Galileo, GZSS, and GLONASS. It can receive and track many visible satellites in multi-bands, significantly mitigating the multipath effect in deep urban canyons and improving positioning accuracy.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","LC29HEAMD"],
+    "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"]
+}
