@@ -134,7 +134,7 @@ err_t buckboost4_set_vref ( buckboost4_t *ctx, float vref_mv )
         vref_mv /= BUCKBOOST4_VREF_MV_STEP;
         data_buf[ 0 ] = ( uint8_t ) vref_mv;
         data_buf[ 1 ] = ( uint8_t ) ( ( uint16_t ) vref_mv >> 8 );
-        err_flag = buckboost4_generic_write( ctx, BUCKBOOST4_REG_REF_MSB, data_buf, 2 );
+        err_flag = buckboost4_generic_write( ctx, BUCKBOOST4_REG_REF_LSB, data_buf, 2 );
     }
     return err_flag;
 }

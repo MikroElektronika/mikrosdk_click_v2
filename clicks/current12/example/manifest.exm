@@ -1,0 +1,8 @@
+{
+    "name": "Current 12 Click",
+    "description": "Current 12 Click is a compact add-on board designed for high-precision monitoring of current, voltage, power, and temperature in various applications. This board features the TSC1641, a 60V 16-bit power monitor with an I2C interface from STMicroelectronics. The TSC1641 consist of a high-precision 16-bit dual-channel sigma-delta ADC, capable of measuring high-side, low-side, and bidirectional currents with a programmable conversion time ranging from 128µs to 32.7ms. It supports 2-wire I2C communication with clock frequencies up to 1MHz, and includes an alert interrupt pin for setting thresholds on voltage, current, power, and temperature.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","TSC1641IQT"],
+    "category" : ["Click Boards > Sensors > Current sensor"]
+}

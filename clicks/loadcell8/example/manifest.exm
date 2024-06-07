@@ -1,0 +1,8 @@
+{
+    "name": "Load Cell 8 Click",
+    "description": "Load Cell 8 Click is a compact add-on board representing a weigh scale solution. This board features the ZSC31050, an advanced differential sensor signal conditioner from Renesas designed for high-precision signal conditioning in applications requiring detailed sensor-specific corrections. It excels in processing differential sensor signals for various resistive bridge sensors. The ZSC31050 is capable of highly accurate amplification, offering digital compensation of sensor offset, sensitivity, temperature drift, and non-linearity. It supports a broad signal range from 1mV/V to 275mV/V, making its use across industrial, medical, and consumer applications.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","ZSC31050FAG1-R"],
+    "category" : ["Click Boards > Sensors > Force"]
+}

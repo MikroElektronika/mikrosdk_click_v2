@@ -1,0 +1,9 @@
+{
+    "name": "Boost 11 Click",
+    "description": "Boost 11 Click is a compact add-on board that boosts low input voltages to a stable output. This board features the XCL105B331H2-G, a synchronous step-up DC/DC converter from TOREX Semi. It operates from an input voltage as low as 0.9V, ideal for devices using single Alkaline or Nickel-metal hydride batteries, with an output fixed at 3.3V. It features an EN pin for easy start-up and standby mode and supports both 3.3V and 5V logic levels. This versatility makes Boost 11 Click suitable for industrial equipment, IoT devices, wearables, and applications prioritizing battery life.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","XCL105B331H2-G"],
+    "category" : ["Click Boards > Power management > Boost"]
+}
+
