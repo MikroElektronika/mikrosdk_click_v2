@@ -70,8 +70,8 @@ extern "C"{
  * @brief Buck-Boost 4 description register.
  * @details Specified register for description of Buck-Boost 4 Click driver.
  */
-#define BUCKBOOST4_REG_REF_MSB                   0x00
-#define BUCKBOOST4_REG_REF_LSB                   0x01
+#define BUCKBOOST4_REG_REF_LSB                   0x00
+#define BUCKBOOST4_REG_REF_MSB                   0x01
 #define BUCKBOOST4_REG_IOUT_LIMIT                0x02
 #define BUCKBOOST4_REG_VOUT_SR                   0x03
 #define BUCKBOOST4_REG_VOUT_FS                   0x04

@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240607](#20240607)**
 + **[20240517](#20240517)**
 + **[20240510](#20240510)**
 + **[20240426](#20240426)**
@@ -93,6 +94,28 @@
 
 ---
 ---
+---
+
+## `20240607`
+
+*Following click boards have been added:*
+
++ `Light 2`
++ `Relay 6`
++ `DAC 17`
++ `Inclinometer 3`
++ `GNSS 16`
++ `Load Cell 8`
++ `Rotary RGB`
++ `Boost 11`
++ `Current 12`
+
+*Following click boards have been updated:*
+
++ `Buck-Boost 4`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240517`

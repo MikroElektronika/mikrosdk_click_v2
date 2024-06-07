@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC32|RISC-V",
+    "category": "Click Boards > HMI > Rotary encoder",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Rotary RGB click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.rotaryrgb",
+    "product_link": "https://www.mikroe.com/rotary-rgb-click",
+    "short_description": "Rotary RGB Click is a compact add-on board for creating visual effects and precise position indications. This board features 16 individual RGB LEDs (WS2812B-2020) from Worldsemi and a high-quality rotary encoder (EC12D1564402) from ALPS. The WS2812B-2020 offers low driving voltage, high brightness, and excellent consistency, while the rotary encoder provides accurate 15-pulse incremental encoding with push-button functionality.",
+    "supported_compiler": "mikroC AI|GCC|Clang",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.3",
+    "cmake": true,
+    "alias": "Click.RotaryRGB",
+    "subdir_name": "lib_rotaryrgb"
+}
+
