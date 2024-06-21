@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240621](#20240621)**
 + **[20240614](#20240614)**
 + **[20240607](#20240607)**
 + **[20240517](#20240517)**
@@ -95,6 +96,18 @@
 
 ---
 ---
+---
+
+## `20240621`
+
+*Following click boards have been added:*
+
++ `IR Sense 5`
++ `Relay 7`
++ `Hall Current 19`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240614`
