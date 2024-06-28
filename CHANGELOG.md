@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240628](#20240628)**
 + **[20240621](#20240621)**
 + **[20240614](#20240614)**
 + **[20240607](#20240607)**
@@ -96,6 +97,23 @@
 
 ---
 ---
+---
+
+## `20240628`
+
+*Following click boards have been added:*
+
++ `Battery Source`
++ `Inclinometer 4`
++ `Compass 8`
++ `PWR Meter 3 90A`
+
+*Following click boards have been removed:*
+
++ `PWR Meter 3`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240621`
