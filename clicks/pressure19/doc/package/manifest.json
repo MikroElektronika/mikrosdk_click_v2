@@ -28,11 +28,13 @@
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.10",
     "alias": "Click.Pressure19",
     "cmake": true,
     "subdir_name": "lib_pressure19"
 }
+
+
 
 
 

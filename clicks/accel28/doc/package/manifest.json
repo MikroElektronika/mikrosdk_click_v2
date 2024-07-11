@@ -28,11 +28,13 @@
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Accel28",
     "subdir_name": "lib_accel28"
 }
+
+
 
 
 

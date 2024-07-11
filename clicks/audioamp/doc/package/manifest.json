@@ -31,11 +31,13 @@
     "related_projects": [
         1871
     ],
-    "version": "2.1.0.17",
+    "version": "2.1.0.19",
     "cmake": true,
     "alias": "Click.AudioAmp",
     "subdir_name": "lib_audioamp"
 }
+
+
 
 
 

@@ -31,11 +31,13 @@
     "related_projects": [
         1990
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.GsmGnss",
     "subdir_name": "lib_gsmgnss"
 }
+
+
 
 
 

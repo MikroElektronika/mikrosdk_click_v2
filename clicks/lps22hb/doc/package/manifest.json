@@ -31,11 +31,12 @@
     "related_projects": [
         2074
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.Lps22hb",
     "subdir_name": "lib_lps22hb"
 }
+
 
 
 

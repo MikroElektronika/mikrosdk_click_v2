@@ -31,11 +31,12 @@
     "related_projects": [
         3882
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "alias": "Click.EEPROM6",
     "cmake": true,
     "subdir_name": "lib_eeprom6"
 }
+
 
 
 

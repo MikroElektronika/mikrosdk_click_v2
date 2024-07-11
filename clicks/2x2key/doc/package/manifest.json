@@ -31,11 +31,12 @@
     "related_projects": [
         1965
     ],
-    "version": "2.1.0.18",
+    "version": "2.1.0.19",
     "cmake": true,
     "alias": "Click.2x2key",
     "subdir_name": "lib_c2x2key"
 }
+
 
 
 

@@ -31,11 +31,12 @@
     "related_projects": [
         2303
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Buck3",
     "subdir_name": "lib_buck3"
 }
+
 
 
 

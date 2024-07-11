@@ -31,10 +31,12 @@
     "related_projects": [
         2154
     ],
-    "version": "2.1.0.2",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.1WireI2C",
     "subdir_name": "lib_c1wirei2c"
 }
+
+
 
 

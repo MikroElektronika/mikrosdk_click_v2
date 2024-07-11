@@ -31,11 +31,12 @@
     "related_projects": [
         2927
     ],
-    "version": "2.1.0.17",
+    "version": "2.1.0.18",
     "cmake": true,
     "alias": "Click.Spiisolator",
     "subdir_name": "lib_spiisolator"
 }
+
 
 
 

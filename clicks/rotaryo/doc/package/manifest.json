@@ -31,11 +31,13 @@
         2494
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.RotaryO",
     "subdir_name": "lib_rotaryo"
 }
+
+
 
 
 

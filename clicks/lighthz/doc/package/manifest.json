@@ -31,10 +31,11 @@
     "related_projects": [
         243
     ],
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.LightHz",
     "subdir_name": "lib_lighthz"
 }
+
 
 

@@ -31,11 +31,12 @@
     "related_projects": [
         3870
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.6DofImu15",
     "subdir_name": "lib_c6dofimu15"
 }
+
 
 
 

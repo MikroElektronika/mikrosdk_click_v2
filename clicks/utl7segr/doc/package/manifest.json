@@ -31,11 +31,12 @@
     "related_projects": [
         2144
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.UT-L7-SEGR",
     "subdir_name": "lib_utl7segr"
 }
+
 
 
 

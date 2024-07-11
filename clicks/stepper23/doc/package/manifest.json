@@ -1,0 +1,37 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Motor control > Stepper",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Stepper 23 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.stepper23",
+    "product_link": "https://www.mikroe.com/stepper-23-click",
+    "short_description": "Stepper 23 Click is a compact add-on board designed to drive small stepping motors in consumer electronics and industrial equipment applications. This board features the TB67S569FTG, a BiCD constant-current 2-phase bipolar stepping motor driver IC from Toshiba Semiconductor. Key features include a PWM chopper-type 2-phase bipolar drive system, high withstand voltage of up to 34V operating, and a maximum operating current of 1.8A per phase. The board also integrates safety mechanisms such as over-temperature, over-current, and low-supply voltage detection. Additional control is provided by the PCA9555A port expander via I2C, enabling functions like decay and torque modes, step resolution settings, and many more.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.Stepper23",
+    "subdir_name": "lib_stepper23"
+}
+
+

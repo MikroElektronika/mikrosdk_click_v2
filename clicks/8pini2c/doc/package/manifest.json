@@ -31,11 +31,12 @@
     "related_projects": [
         3849
     ],
-    "version": "2.1.0.9",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.8pinI2c",
     "subdir_name": "lib_c8pini2c"
 }
+
 
 
 

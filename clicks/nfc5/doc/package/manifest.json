@@ -28,10 +28,12 @@
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.NFC5",
     "subdir_name": "lib_nfc5"
 }
+
+
 
 

@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240711](#20240711)**
 + **[20240628](#20240628)**
 + **[20240621](#20240621)**
 + **[20240614](#20240614)**
@@ -97,6 +98,23 @@
 
 ---
 ---
+---
+
+## `20240711`
+
+*Following click boards have been added:*
+
++ `1x4 RGB`
++ `Proximity 19`
++ `Stepper 23`
++ `Stepper 24`
++ `TempHum 25`
++ `Thyone-I`
+
+*Updated CMakeLists.txt files of all click boards.*
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240628`

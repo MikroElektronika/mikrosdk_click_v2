@@ -31,11 +31,12 @@
     "related_projects": [
         2682
     ],
-    "version": "2.1.0.20",
+    "version": "2.1.0.21",
     "cmake": true,
     "alias": "Click.AnalogKey",
     "subdir_name": "lib_analogkey"
 }
+
 
 
 

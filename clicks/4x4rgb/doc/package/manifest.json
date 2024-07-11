@@ -31,11 +31,13 @@
     "related_projects": [
         1413
     ],
-    "version": "2.1.0.19",
+    "version": "2.1.0.21",
     "cmake": true,
     "alias": "Click.4x4Rgb",
     "subdir_name": "lib_c4x4rgb"
 }
+
+
 
 
 

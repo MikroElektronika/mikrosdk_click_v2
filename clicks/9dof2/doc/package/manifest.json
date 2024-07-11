@@ -31,11 +31,12 @@
     "related_projects": [
         3254
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.9dof2",
     "subdir_name": "lib_c9dof2"
 }
+
 
 
 

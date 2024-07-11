@@ -31,11 +31,12 @@
     "related_projects": [
         1582
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.7x10R",
     "subdir_name": "lib_c7x10r"
 }
+
 
 
 

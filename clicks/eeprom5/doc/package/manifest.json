@@ -31,11 +31,12 @@
         4082
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.EEPROM5",
     "subdir_name": "lib_eeprom5"
 }
+
 
 
 

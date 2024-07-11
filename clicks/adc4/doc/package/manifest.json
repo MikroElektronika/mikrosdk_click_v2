@@ -31,11 +31,12 @@
     "related_projects": [
         2293
     ],
-    "version": "2.1.0.20",
+    "version": "2.1.0.21",
     "cmake": true,
     "alias": "Click.Adc4",
     "subdir_name": "lib_adc4"
 }
+
 
 
 

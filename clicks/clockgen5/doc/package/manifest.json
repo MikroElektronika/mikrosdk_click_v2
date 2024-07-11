@@ -31,11 +31,12 @@
         4095
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.ClockGen5",
     "subdir_name": "lib_clockgen5"
 }
+
 
 
 

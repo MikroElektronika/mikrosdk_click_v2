@@ -31,11 +31,12 @@
     "related_projects": [
         2846
     ],
-    "version": "2.1.0.17",
+    "version": "2.1.0.18",
     "cmake": true,
     "alias": "Click.HBridge3",
     "subdir_name": "lib_hbridge3"
 }
+
 
 
 

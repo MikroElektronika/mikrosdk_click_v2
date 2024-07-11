@@ -31,11 +31,13 @@
     "related_projects": [
         3244
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.10",
     "cmake": true,
     "alias": "Click.Motion3",
     "subdir_name": "lib_motion3"
 }
+
+
 
 
 

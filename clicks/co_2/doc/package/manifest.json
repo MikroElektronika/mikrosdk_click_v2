@@ -31,11 +31,12 @@
     "related_projects": [
         2424
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.CO2",
     "subdir_name": "lib_co2"
 }
+
 
 
 

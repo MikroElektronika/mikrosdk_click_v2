@@ -31,11 +31,12 @@
     "related_projects": [
         2290
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.Barcode",
     "subdir_name": "lib_barcode"
 }
+
 
 
 

@@ -31,11 +31,12 @@
     "related_projects": [
         2556
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.Eink290Inch",
     "subdir_name": "lib_eink290inch"
 }
+
 
 
 

@@ -31,11 +31,12 @@
     "related_projects": [
         3346
     ],
-    "version": "2.1.0.18",
+    "version": "2.1.0.19",
     "cmake": true,
     "alias": "Click.2x5WAmp",
     "subdir_name": "lib_c2x5wamp"
 }
+
 
 
 

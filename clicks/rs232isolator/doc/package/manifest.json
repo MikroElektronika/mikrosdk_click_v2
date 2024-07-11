@@ -31,11 +31,12 @@
     "related_projects": [
         2744
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.Rs232Isolator",
     "subdir_name": "lib_rs232isolator"
 }
+
 
 
 

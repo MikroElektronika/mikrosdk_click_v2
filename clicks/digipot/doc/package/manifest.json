@@ -31,11 +31,12 @@
         200
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.17",
+    "version": "2.1.0.18",
     "cmake": true,
     "alias": "Click.DigiPot",
     "subdir_name": "lib_digipot"
 }
+
 
 
 

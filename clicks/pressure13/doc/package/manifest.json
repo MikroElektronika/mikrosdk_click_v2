@@ -31,11 +31,12 @@
         3880
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Pressure13",
     "subdir_name": "lib_pressure13"
 }
+
 
 
 

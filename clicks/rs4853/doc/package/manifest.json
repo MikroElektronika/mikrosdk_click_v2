@@ -31,11 +31,13 @@
     "related_projects": [
         2236
     ],
-    "version": "2.1.0.19",
+    "version": "2.1.0.21",
     "cmake": true,
     "alias": "Click.Rs4853",
     "subdir_name": "lib_rs4853"
 }
+
+
 
 
 

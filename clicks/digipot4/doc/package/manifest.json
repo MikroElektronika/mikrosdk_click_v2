@@ -31,11 +31,12 @@
     "related_projects": [
         2287
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.DigiPot4",
     "subdir_name": "lib_digipot4"
 }
+
 
 
 

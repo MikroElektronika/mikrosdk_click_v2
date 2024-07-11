@@ -31,11 +31,12 @@
     "related_projects": [
         1442
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Thermo3",
     "subdir_name": "lib_thermo3"
 }
+
 
 
 

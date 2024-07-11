@@ -31,11 +31,12 @@
     "related_projects": [
         2495
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.BoostInv",
     "subdir_name": "lib_boostinv"
 }
+
 
 
 

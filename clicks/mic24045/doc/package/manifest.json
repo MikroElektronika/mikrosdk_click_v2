@@ -31,11 +31,13 @@
     "related_projects": [
         2048
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Mic24045",
     "subdir_name": "lib_mic24045"
 }
+
+
 
 
 

@@ -31,11 +31,12 @@
         3872
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.RTC11",
     "subdir_name": "lib_rtc11"
 }
+
 
 
 

@@ -31,11 +31,12 @@
     "related_projects": [
         1457
     ],
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "alias": "Click.RTC4",
     "cmake": true,
     "subdir_name": "lib_rtc4"
 }
+
 
 
 

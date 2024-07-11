@@ -31,11 +31,13 @@
     "related_projects": [
         2622
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.RFID2",
     "subdir_name": "lib_rfid2"
 }
+
+
 
 
 

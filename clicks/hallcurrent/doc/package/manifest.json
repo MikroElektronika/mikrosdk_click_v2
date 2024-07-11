@@ -31,11 +31,13 @@
     "related_projects": [
         1039
     ],
-    "version": "2.1.0.10",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.HallCurrent",
     "subdir_name": "lib_hallcurrent"
 }
+
+
 
 
 

@@ -31,11 +31,12 @@
     "related_projects": [
         251
     ],
-    "version": "2.1.0.23",
+    "version": "2.1.0.24",
     "cmake": true,
     "alias": "Click.Gps",
     "subdir_name": "lib_gps"
 }
+
 
 
 
