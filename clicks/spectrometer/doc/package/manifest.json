@@ -31,11 +31,12 @@
     "related_projects": [
         3332
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Spectrometer",
     "subdir_name": "lib_spectrometer"
 }
+
 
 
 

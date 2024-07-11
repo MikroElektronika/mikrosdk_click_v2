@@ -31,11 +31,12 @@
     "related_projects": [
         3193
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.NfcExtend",
     "subdir_name": "lib_nfcextend"
 }
+
 
 
 

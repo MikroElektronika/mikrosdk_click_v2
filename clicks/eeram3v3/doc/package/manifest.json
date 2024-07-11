@@ -31,11 +31,12 @@
     "related_projects": [
         2124
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.EERAM3v3",
     "subdir_name": "lib_eeram3v3"
 }
+
 
 
 

@@ -31,11 +31,12 @@
     "related_projects": [
         2654
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Magneticlinear",
     "subdir_name": "lib_magneticlinear"
 }
+
 
 
 

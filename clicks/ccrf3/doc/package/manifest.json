@@ -31,11 +31,12 @@
         2045
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.ccRF3",
     "subdir_name": "lib_ccrf3"
 }
+
 
 
 

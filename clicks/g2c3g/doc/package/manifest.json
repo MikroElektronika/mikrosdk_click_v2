@@ -31,11 +31,12 @@
     "related_projects": [
         3211
     ],
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.G2C3G",
     "subdir_name": "lib_g2c3g"
 }
+
 
 
 

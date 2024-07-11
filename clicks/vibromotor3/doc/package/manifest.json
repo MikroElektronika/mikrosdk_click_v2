@@ -31,11 +31,12 @@
         3902
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.VibroMotor3",
     "subdir_name": "lib_vibromotor3"
 }
+
 
 
 

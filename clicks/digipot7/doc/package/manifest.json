@@ -31,11 +31,12 @@
         4094
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.DIGIPOT7",
     "subdir_name": "lib_digipot7"
 }
+
 
 
 

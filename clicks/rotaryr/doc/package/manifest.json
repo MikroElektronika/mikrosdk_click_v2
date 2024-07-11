@@ -31,11 +31,12 @@
     "related_projects": [
         2498
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.RotaryR",
     "subdir_name": "lib_rotaryr"
 }
+
 
 
 

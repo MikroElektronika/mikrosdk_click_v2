@@ -31,11 +31,12 @@
         3923
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Driver2",
     "subdir_name": "lib_driver2"
 }
+
 
 
 

@@ -31,10 +31,11 @@
     "related_projects": [
         3831
     ],
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.ANtoPWM2",
     "subdir_name": "lib_antopwm2"
 }
+
 
 

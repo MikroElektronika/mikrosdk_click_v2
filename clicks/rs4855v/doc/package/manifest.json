@@ -31,11 +31,12 @@
         202
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
+    "version": "2.1.0.9",
     "cmake": true,
     "alias": "Click.RS4855V",
     "subdir_name": "lib_rs4855v"
 }
+
 
 
 

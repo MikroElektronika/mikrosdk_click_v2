@@ -31,11 +31,12 @@
         3104
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.LTECat1EU",
     "subdir_name": "lib_ltecat1eu"
 }
+
 
 
 

@@ -31,11 +31,12 @@
     "related_projects": [
         3262
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.AnalogMUX",
     "subdir_name": "lib_analogmux"
 }
+
 
 
 

@@ -31,11 +31,13 @@
     "related_projects": [
         2504
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.IrThermo3",
     "subdir_name": "lib_irthermo3"
 }
+
+
 
 
 

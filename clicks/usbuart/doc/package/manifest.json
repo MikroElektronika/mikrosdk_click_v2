@@ -31,11 +31,12 @@
         421
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.20",
+    "version": "2.1.0.21",
     "cmake": true,
     "alias": "Click.USBUART",
     "subdir_name": "lib_usbuart"
 }
+
 
 
 

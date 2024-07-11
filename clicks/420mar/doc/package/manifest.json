@@ -31,11 +31,12 @@
     "related_projects": [
         564
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.420MaR",
     "subdir_name": "lib_c420mar"
 }
+
 
 
 

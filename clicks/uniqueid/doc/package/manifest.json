@@ -31,11 +31,12 @@
     "related_projects": [
         1359
     ],
-    "version": "2.1.0.5",
+    "version": "2.1.0.6",
     "alias": "Click.UNIQUEID",
     "cmake": true,
     "subdir_name": "lib_uniqueid"
 }
+
 
 
 

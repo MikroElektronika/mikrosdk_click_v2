@@ -31,11 +31,12 @@
     "related_projects": [
         2795
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.OptoEncoder2",
     "subdir_name": "lib_optoencoder2"
 }
+
 
 
 

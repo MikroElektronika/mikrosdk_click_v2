@@ -31,9 +31,10 @@
     "related_projects": [
         3243
     ],
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.Stepper14",
     "subdir_name": "lib_stepper14"
 }
+
 

@@ -31,11 +31,13 @@
     "related_projects": [
         2948
     ],
-    "version": "2.1.0.18",
+    "version": "2.1.0.20",
     "cmake": true,
     "alias": "Click.Flash5",
     "subdir_name": "lib_flash5"
 }
+
+
 
 
 

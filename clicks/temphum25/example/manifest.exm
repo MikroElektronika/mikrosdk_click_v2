@@ -1,0 +1,8 @@
+{
+    "name": "TempHum 25 Click",
+    "description": "Temp&Hum 25 Click is a compact add-on board designed for precise temperature and humidity monitoring. This board features the SHT33-DIS-B2.5KS, a high-reliability, third-generation relative humidity and temperature sensor from Sensirion. This sensor offers exceptional accuracy and reliability, with a range of 0-100% RH and -40 to +125°C, and features ISO17025-certified calibration, CMOSens® technology, and NIST-traceability. The board supports the new Click Snap feature, allowing easy detachment of the sensor area for flexible use.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","SHT33-DIS-B2.5KS"],
+    "category" : ["Click Boards > Sensors > Temperature & humidity"]
+}

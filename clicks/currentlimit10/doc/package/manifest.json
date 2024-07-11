@@ -28,10 +28,11 @@
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.CurrentLimit10",
     "subdir_name": "lib_currentlimit10"
 }
+
 
 

@@ -31,11 +31,12 @@
     "related_projects": [
         2238
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Fan3",
     "subdir_name": "lib_fan3"
 }
+
 
 
 

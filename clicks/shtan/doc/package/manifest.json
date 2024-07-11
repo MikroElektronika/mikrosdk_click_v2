@@ -31,11 +31,12 @@
     "related_projects": [
         3188
     ],
-    "version": "2.1.0.22",
+    "version": "2.1.0.23",
     "cmake": true,
     "alias": "Click.ShtAn",
     "subdir_name": "lib_shtan"
 }
+
 
 
 

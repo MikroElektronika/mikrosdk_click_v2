@@ -31,9 +31,10 @@
     "related_projects": [
         2852
     ],
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.STSPIN220",
     "subdir_name": "lib_stspin220"
 }
+
 

@@ -31,11 +31,12 @@
     "related_projects": [
         3832
     ],
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.Fingerprint3",
     "subdir_name": "lib_fingerprint3"
 }
+
 
 
 

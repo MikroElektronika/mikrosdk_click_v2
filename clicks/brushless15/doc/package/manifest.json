@@ -28,11 +28,13 @@
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Brushless15",
     "subdir_name": "lib_brushless15"
 }
+
+
 
 
 

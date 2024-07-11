@@ -28,9 +28,11 @@
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.I2C1Wire2",
     "subdir_name": "lib_i2c1wire2"
 }
+
+
 

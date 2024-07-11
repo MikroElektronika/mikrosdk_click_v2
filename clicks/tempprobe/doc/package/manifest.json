@@ -31,11 +31,12 @@
         2505
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
+    "version": "2.1.0.11",
     "cmake": true,
     "alias": "Click.TempProbe",
     "subdir_name": "lib_tempprobe"
 }
+
 
 
 

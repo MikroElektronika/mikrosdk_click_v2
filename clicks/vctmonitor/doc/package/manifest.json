@@ -31,11 +31,12 @@
         3907
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.VCTMonitor",
     "subdir_name": "lib_vctmonitor"
 }
+
 
 
 
