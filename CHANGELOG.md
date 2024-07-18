@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240718](#20240718)**
 + **[20240711](#20240711)**
 + **[20240628](#20240628)**
 + **[20240621](#20240621)**
@@ -98,6 +99,18 @@
 
 ---
 ---
+---
+
+## `20240718`
+
+*Following click boards have been added:*
+
++ `PWR Meter 3 30A`
++ `3D Hall 14`
++ `VCP Monitor 6`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240711`
