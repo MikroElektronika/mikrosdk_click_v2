@@ -3,7 +3,7 @@ name: Bug report
 about: Create a report to help us improve mikroSDK Click board repository
 title: "[BUG]"
 labels: ''
-assignees: MarkoZiv
+assignees: StefanFilipovic15
 
 ---
 
