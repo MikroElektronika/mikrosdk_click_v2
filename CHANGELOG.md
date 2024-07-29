@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240729](#20240729)**
 + **[20240718](#20240718)**
 + **[20240711](#20240711)**
 + **[20240628](#20240628)**
@@ -99,6 +100,18 @@
 
 ---
 ---
+---
+
+## `20240729`
+
+*Following click boards have been added:*
+
++ `LTE Cat.1 3 EX`
++ `Proximity 20`
++ `Fan 9`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240718`

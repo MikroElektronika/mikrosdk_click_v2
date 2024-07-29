@@ -1,0 +1,8 @@
+{
+    "name": "Proximity 20 Click",
+    "description": "Proximity 20 Click is a compact add-on board for short-range proximity sensing applications up to 200mm. This board features two VCNL36828P proximity sensors from Vishay Semiconductor. Key features include a 940nm VCSEL for immunity to a red glow, intelligent cancellation technology to minimize crosstalk, and a smart persistence scheme for reduced measurement response time.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","VCNL36828P"],
+    "category" : ["Click Boards > Sensors > Proximity"]
+}
