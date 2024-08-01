@@ -1,0 +1,8 @@
+{
+    "name": "Button 2 Click",
+    "description": "Button 2 Click is a compact add-on board designed for simple and efficient tactile input detection. This board features the TL3215AF160BQ, a TL3215 series of tactile switches from E-Switch, featuring high reliability and precise operation. The switch has a 2mm actuator, 160gf actuation force, silver contact material, and a lifespan of 1,000,000 cycles, while the integrated blue LED provides visual feedback. The board supports the new Click Snap feature, allowing easy detachment of the sensor area for flexible use.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","TL3215AF160BQ"],
+    "category" : ["Click Boards > HMI > Pushbutton/Switches"]
+}

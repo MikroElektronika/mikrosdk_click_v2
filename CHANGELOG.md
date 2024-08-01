@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240801](#20240801)**
 + **[20240729](#20240729)**
 + **[20240718](#20240718)**
 + **[20240711](#20240711)**
@@ -100,6 +101,19 @@
 
 ---
 ---
+---
+
+## `20240801`
+
+*Following click boards have been added:*
+
++ `LTE Cat.1 3 NAX`
++ `Button 2`
++ `LTE Cat.1 3 AUX`
++ `GNSS 18`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240729`
