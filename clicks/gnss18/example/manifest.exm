@@ -1,0 +1,8 @@
+{
+    "name": "GNSS 18 Click",
+    "description": "GNSS 18 Click is a compact add-on board designed for high-precision GNSS applications. This board features the SAM-M10Q-00B-00B, M10 standard precision GNSS module from u-blox, known for exceptional sensitivity and rapid acquisition of L1 GNSS signals. It supports concurrent reception of GPS, Galileo, GLONASS, and BeiDou B1C, with additional support for QZSS and SBAS. Featuring u-blox Super-S technology for improved dynamic position accuracy and low power consumption of 37mW in continuous tracking mode, it is ideal for battery-operated devices.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","TESEO-LIV4FTR"],
+    "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"]
+}
