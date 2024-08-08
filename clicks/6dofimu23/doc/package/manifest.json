@@ -1,0 +1,37 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Sensors > Motion",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "6DOF IMU 23 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.c6dofimu23",
+    "product_link": "https://www.mikroe.com/6dof-imu-23-click",
+    "short_description": "6DOF IMU 23 Click is a compact add-on board for precise motion tracking and measurement. This board features the IIM-20670, a high-performance 6-axis MotionTracking device from TDK InvenSense that integrates a 3-axis gyroscope and a 3-axis accelerometer. The gyroscope offers a full-scale range of up to ±1966 dps with high accuracy, while the accelerometer provides a range of ±2g to ±65g. Key features also include a 10MHz SPI interface, shock tolerance up to 10,000 g, on-chip 16-bit ADCs, and low current consumption.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.6DOFIMU23",
+    "subdir_name": "lib_c6dofimu23"
+}
+
+

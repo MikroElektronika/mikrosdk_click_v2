@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240808](#20240808)**
 + **[20240801](#20240801)**
 + **[20240729](#20240729)**
 + **[20240718](#20240718)**
@@ -101,6 +102,19 @@
 
 ---
 ---
+---
+
+## `20240808`
+
+*Following click boards have been added:*
+
++ `BM78`
++ `Button 3`
++ `Pressure 23 07BA`
++ `6DOF IMU 23`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240801`

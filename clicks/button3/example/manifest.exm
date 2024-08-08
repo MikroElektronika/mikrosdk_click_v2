@@ -1,0 +1,8 @@
+{
+    "name": "Button 3 Click",
+    "description": "Button 3 Click is a compact add-on board for precise and reliable tactile input detection. This board features three TL3215 series tactile switches from E-Switch, known for their high reliability and consistent performance. Each switch has a 2mm actuator, 160gf actuation force, and a silver contact material for excellent conductivity and durability. The integrated LED provides clear visual feedback, and the board supports the new Click Snap feature, allowing the main sensor area to become movable by breaking the PCB for flexible implementation.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","TCA6408ARSVR","TL3215AF160"],
+    "category" : ["Click Boards > HMI > Pushbutton/Switches"]
+}

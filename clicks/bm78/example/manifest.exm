@@ -1,0 +1,8 @@
+{
+    "name": "BM78 Click",
+    "description": "BM78 Click is a compact add-on board designed to integrate dual-mode Bluetooth wireless capability into various projects. This board features the BM78, a fully certified 2.4GHz Bluetooth (BR/EDR/LE) wireless module from Microchip. The BM78 module includes an on-board Bluetooth stack, power management subsystem, 2.4GHz transceiver, and RF power amplifier. It supports GAP, SDP, SPP, and GATT profiles, with data transfer facilitated through transparent UART mode. It features a MODE SEL switch for operational modes, a reset pin, status indicators, a software power button, and a WAKE button.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
+    "hw" : ["click","BM78"],
+    "category" : ["Click Boards > Wireless connectivity > BT/BLE"]
+}
