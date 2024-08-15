@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
+    "category": "Click Boards > Wireless connectivity > GPS/GNSS",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "GNSS 17 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.gnss17",
+    "product_link": "https://www.mikroe.com/gnss-17-click",
+    "short_description": "GNSS 17 Click is a compact add-on board for precise and reliable global navigation and positioning. This board features the M20071, an integrated full-function GNSS receiver module from Antenova, which features the MediaTek AG3335MN flash chip. This module can concurrently track multiple GNSS constellations, including GPS, GLONASS, GALILEO, BEIDOU, and QZSS, ensuring accurate positioning even in dense urban environments. It includes advanced features like multi-path algorithms for enhanced accuracy, a high-performance onboard LNA for weak-signal environments, and power-saving modes to optimize energy consumption.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.GNSS17",
+    "subdir_name": "lib_gnss17"
+}
+
