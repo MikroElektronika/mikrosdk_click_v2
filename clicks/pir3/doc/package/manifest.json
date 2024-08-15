@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Sensors > Motion",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "PIR 3 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.pir3",
+    "product_link": "https://www.mikroe.com/pir-3-click",
+    "short_description": "PIR 3 Click is a compact add-on board designed for efficient and reliable motion detection in various applications. This board features the ZDP323B1 sensor from Zilog (Littelfuse), with high EMI immunity and precise motion detection capabilities. It includes a spectral filter window tuned to an 8-13um wavelength, dual sensing elements with a 0.6mm spacing, and a field of view of 148° on the X-axis and 136° on the Y-axis. The board also integrates the ZNCL10S PIR lens for maximum IR transmissivity and includes the Click Snap feature for flexible implementation.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.PIR3",
+    "subdir_name": "lib_pir3"
+}
+
