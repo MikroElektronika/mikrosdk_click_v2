@@ -1,0 +1,8 @@
+{
+    "name": "Joystick 4 Click",
+    "description": "Joystick 4 Click is a compact add-on board that provides precise and reliable input control for various interactive projects. This board features the 2434804-1, a 5-position tactile switch from the ALCOSWITCH series by TE Connectivity. The switch features an extended top actuator for precise input detection, a stainless steel contact base, and silver contact plating, ensuring durability and corrosion resistance with a lifespan of 100,000 cycles. With a low-profile design, it handles a contact current rating of 50mA.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","TCA6408ARSVR","2434804-1"],
+    "category" : ["Click Boards > HMI > Pushbutton/Switches"]
+}

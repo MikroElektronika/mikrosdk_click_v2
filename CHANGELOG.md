@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240822](#20240822)**
 + **[20240815](#20240815)**
 + **[20240808](#20240808)**
 + **[20240801](#20240801)**
@@ -103,6 +104,19 @@
 
 ---
 ---
+---
+
+## `20240822`
+
+*Following click boards have been added:*
+
++ `UWB 4`
++ `Joystick 4`
++ `PMIC`
++ `Current 11`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240815`
