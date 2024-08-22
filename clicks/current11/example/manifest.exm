@@ -1,0 +1,8 @@
+{
+    "name": "Current 11 Click",
+    "description": "Current 11 Click is a compact add-on board for industrial and commercial current-sensing applications. This board features the ACS37600K (ACS37600KOKATN-006B5-C), a programmable linear Hall-effect sensor IC from Allegro Microsystems. This sensor features a chopper-stabilized Hall-effect front-end for precise magnetic flux detection, with a sensitivity of 6mV/G and a bidirectional operating range of ±333G.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","ACS37600KOKATN-006B5-C","MCP3221A5T"],
+    "category" : ["Click Boards > Sensors > Current sensor"]
+}

@@ -1,0 +1,8 @@
+{
+    "name": "PMIC Click",
+    "description": "PMIC Click is a compact add-on board for efficient power management in rechargeable applications. This board features the nPM1300, an advanced Power Management Integrated Circuit (PMIC) from Nordic Semiconductor, offering integrated battery charging and advanced system power management features. The board includes an 800mA JEITA-compliant linear battery charger, two 200mA buck regulators, and configurable load switches, all housed in a compact QFN32 package.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","NPM1300-QEAA-R"],
+    "category" : ["Click Boards > Power management > Battery Charger"]
+}
