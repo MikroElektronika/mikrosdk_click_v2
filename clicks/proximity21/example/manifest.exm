@@ -1,0 +1,8 @@
+{
+    "name": "Proximity 21 Click",
+    "description": "Proximity 21 Click is a compact add-on board for high-precision proximity sensing and short-range distance measurements. This board features the VL53L4ED, a Time-of-Flight (ToF) proximity sensor from STMicroelectronics, known for its extended temperature capability and accuracy. This sensor provides a field of view (FoV) of 18°, measuring distances from 1mm up to 1300mm in standard conditions and up to 1150mm in extended temperature environments, with reliable performance even in ambient light conditions up to 5klx. The Click board™ features a unique Click Snap design, making the main IC area movable for versatile implementation.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","VL53L4EDV0DH"],
+    "category" : ["Click Boards > Sensors > Proximity"]
+}

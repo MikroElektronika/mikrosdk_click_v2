@@ -1,0 +1,8 @@
+{
+    "name": "Color 18 Click",
+    "description": "Color 18 Click is a compact add-on board for accurate ambient light detection and flicker monitoring. This board features the TCS3530, a true color ambient light sensor from ams OSRAM. The TCS3530 features true color XYZ sensing, flicker detection up to 7kHz, and eight concurrent sensing channels with independent gain configurations. It also includes a UV/IR blocking filter for precise light measurements and a unique Click Snap feature, allowing the main sensor area to become movable by breaking the PCB for flexible implementation.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","TCS35303-2M"],
+    "category" : ["Click Boards > Sensors > Optical"]
+}

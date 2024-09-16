@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Wireless connectivity > LoRa",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "LR 6 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.lr6",
+    "product_link": "https://www.mikroe.com/lr-6-click",
+    "short_description": "LR 6 Click is a compact add-on board designed for ultra-long-distance spread-spectrum communication. This board features the Ra-01S, a LoRa™ wireless radio frequency module from Ai-Thinker Technology, featuring the SX1268 radio chip. This module provides exceptional sensitivity of over -148dBm, a power output of +22dBm, and supports multiple modulation methods, including LoRa™, within the 433MHz frequency band. The board offers robust anti-interference capabilities and low power consumption, making it ideal for applications requiring reliable long-range communication.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.LR6",
+    "subdir_name": "lib_lr6"
+}
+
