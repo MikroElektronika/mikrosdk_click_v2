@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240916](#20240916)**
 + **[20240822](#20240822)**
 + **[20240815](#20240815)**
 + **[20240808](#20240808)**
@@ -104,6 +105,28 @@
 
 ---
 ---
+---
+
+## `20240916`
+
+*Following click boards have been added:*
+
++ `LTE Cat.4`
++ `Color 18`
++ `LR 11 868MHz`
++ `LR 11 915MHz`
++ `B102C`
++ `Grid-EYE 2`
++ `LR 6`
++ `Brushless 30`
++ `Brushless 31`
++ `WiFi NORA`
++ `Proximity 21`
++ `Stepper 22`
++ `Buck 18`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240822`

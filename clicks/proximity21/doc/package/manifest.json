@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Sensors > Proximity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Proximity 21 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.proximity21",
+    "product_link": "https://www.mikroe.com/proximity-21-click",
+    "short_description": "Proximity 21 Click is a compact add-on board for high-precision proximity sensing and short-range distance measurements. This board features the VL53L4ED, a Time-of-Flight (ToF) proximity sensor from STMicroelectronics, known for its extended temperature capability and accuracy. This sensor provides a field of view (FoV) of 18°, measuring distances from 1mm up to 1300mm in standard conditions and up to 1150mm in extended temperature environments, with reliable performance even in ambient light conditions up to 5klx. The Click board™ features a unique Click Snap design, making the main IC area movable for versatile implementation.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.Proximity21",
+    "subdir_name": "lib_proximity21"
+}
+

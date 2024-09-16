@@ -1,0 +1,8 @@
+{
+    "name": "B102C Click",
+    "description": "B102C Click is a compact add-on board designed for Bluetooth 5.0 (BLE) communication in various wireless applications. This board features the B102C, a Bluetooth module from Amphenol based on the Realtek RTL8762CMF chip. The board offers BLE v5.0 support, a 20MHz Arm® Cortex® M4F processor, and an integrated antenna for 2.4GHz communication, with low-power modes for optimal energy efficiency. It includes UART and USB Type-C connectivity, a PROG header for debugging, and fully programmable GPIOs.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
+    "hw" : ["click","B102C"],
+    "category" : ["Click Boards > Wireless connectivity > BT/BLE"]
+}
