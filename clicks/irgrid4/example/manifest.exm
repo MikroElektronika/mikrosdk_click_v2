@@ -1,0 +1,8 @@
+{
+    "name": "IR Grid 4 Click",
+    "description": "IR Grid 4 Click is a compact add-on board for high-precision, non-contact temperature measurement and thermal imaging. This board is based on the MLX90641, a fully calibrated thermal IR array from Melexis. It captures temperature data across a 16x12 matrix (192 pixels) and accurately measures temperatures from -40°C to +300°C with a typical accuracy of 1°C. The board supports the innovative 'Click Snap' feature, allowing the sensor area to be detached for flexible positioning.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","MLX90641ESF-BCB-000-TU"],
+    "category" : ["Click Boards > Sensors > Temperature & humidity"]
+}

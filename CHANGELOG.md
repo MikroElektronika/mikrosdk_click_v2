@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240919](#20240919)**
 + **[20240916](#20240916)**
 + **[20240822](#20240822)**
 + **[20240815](#20240815)**
@@ -105,6 +106,19 @@
 
 ---
 ---
+---
+
+## `20240919`
+
+*Following click boards have been added:*
+
++ `NINA-W152`
++ `IR Grid 4`
++ `Power Monitor 2`
++ `DAC 16`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240916`

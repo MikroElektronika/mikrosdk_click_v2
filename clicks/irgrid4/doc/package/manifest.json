@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Sensors > Temperature & humidity",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "IR Grid 4 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.irgrid4",
+    "product_link": "https://www.mikroe.com/ir-grid-4-click",
+    "short_description": "IR Grid 4 Click is a compact add-on board for high-precision, non-contact temperature measurement and thermal imaging. This board is based on the MLX90641, a fully calibrated thermal IR array from Melexis. It captures temperature data across a 16x12 matrix (192 pixels) and accurately measures temperatures from -40°C to +300°C with a typical accuracy of 1°C. The board supports the innovative 'Click Snap' feature, allowing the sensor area to be detached for flexible positioning.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.IRGrid4",
+    "subdir_name": "lib_irgrid4"
+}
+

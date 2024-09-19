@@ -1,0 +1,8 @@
+{
+    "name": "Power Monitor 2 Click",
+    "description": "Power Monitoring 2 Click is a compact add-on board for precise power monitoring of connected load devices. This board features two INA219 12-bit I2C-output digital power monitors from Texas Instruments. This Click board™ monitors current and voltage on two separate power rails - 3.3V and 5V - of an onboard mikroBUS™ socket, providing real-time digital readings of the power consumption of added Click boards™. It supports high-speed I2C communication with configurable I2C addresses and operates at 3.3V and 5V logic levels, which makes it ideal for applications in power management, system diagnostics, and energy optimization in embedded systems.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","INA219BIDR"],
+    "category" : ["Click Boards > Power management > Power Switch"]
+}

@@ -1,0 +1,8 @@
+{
+    "name": "DAC 16 Click",
+    "description": "DAC 16 Click is a compact add-on board, a digital-to-analog converter (DAC) designed for precise voltage and current output applications. This board features the DAC63204-Q1, an automotive-qualified 12-bit DAC from Texas Instruments. This Click board™ features four output channels with flexible configuration options, including adjustable voltage gains and selectable current ranges from ±25μA to ±250μA. It also supports both internal and external voltage references and offers a Hi-Z power-down mode for enhanced protection. Communication with the host MCU is enabled through either a 4-wire SPI or I2C interface, with configurable I2C addresses and a general-purpose I/O pin for additional functionality.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","DAC63204RTERQ1"],
+    "category" : ["Click Boards > Mixed signal > DAC"]
+}
