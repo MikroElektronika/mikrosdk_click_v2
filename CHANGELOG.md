@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20240926](#20240926)**
 + **[20240919](#20240919)**
 + **[20240916](#20240916)**
 + **[20240822](#20240822)**
@@ -106,6 +107,19 @@
 
 ---
 ---
+---
+
+## `20240926`
+
+*Following click boards have been added:*
+
++ `EPOS Module`
++ `Expand 19`
++ `LED Flash 4`
++ `DAC 18`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240919`

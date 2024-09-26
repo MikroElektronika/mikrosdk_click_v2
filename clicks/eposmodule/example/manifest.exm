@@ -1,0 +1,8 @@
+{
+    "name": "EPOS Module Click",
+    "description": "EPOS Module Click is a compact add-on board that provides a low-power modem solution for use in EPOS terminals and telephone-based systems. It is based on the CMX869B, a multi-standard v.32 bis modem from CML Micro, which supports multiple communication protocols. The CMX869B has built-in functions such as DTMF encoding/decoding and a Powersave mode to optimize energy consumption. It also includes a fully isolated telephone interface via the P1200 transformer for reliable communication.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","CMX869BD2"],
+    "category" : ["Click Boards > Audio & voice > Signal processing"]
+}

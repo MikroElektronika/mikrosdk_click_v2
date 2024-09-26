@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Mixed signal > DAC",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "DAC 18 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.dac18",
+    "product_link": "https://www.mikroe.com/dac-18-click",
+    "short_description": "DAC 18 Click is a compact add-on board for converting general-purpose input to PWM signals. This board features the DAC539G2-Q1, a 10-bit smart DAC from Texas Instruments. The board offers two key output channels: one for digital-to-analog conversion (OUT1) and the other for voltage-to-PWM conversion (OUT0) supporting triangle or sawtooth waveforms. It features an operational mode selection pin for I2C programming or standalone operation, along with nonvolatile memory for storing register settings. DAC 18 Click is ideal for automotive lighting systems and industrial environments requiring reliable signal conversion.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.DAC18",
+    "subdir_name": "lib_dac18"
+}
+
