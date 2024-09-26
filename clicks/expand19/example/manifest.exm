@@ -1,0 +1,8 @@
+{
+    "name": "Expand 19 Click",
+    "description": "Expand 19 Click is an add-on board that provides additional input/output capabilities for various applications. This board features the TCAL9538, an 8-bit I2C-bus I/O expander from Texas Instruments. The board features eight configurable I/O pins that can be set as inputs or outputs, with polarity inversion, programmable output drive strength, and interrupt functionality for real-time event handling. It operates using a standard 2-wire I2C communication interface, supporting clock frequencies up to 1MHz, and includes an onboard interrupt pin for efficient system integration.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","TCAL9538RSVR"],
+    "category" : ["Click Boards > Interface > Port expander"]
+}
