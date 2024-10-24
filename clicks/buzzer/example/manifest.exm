@@ -1,0 +1,8 @@
+{
+    "name": "Buzzer Click",
+    "description": "Buzzer Click is a compact add-on board for generating sound signals in various electronic applications. This board features the CPT-7502-65-SMT-TR, a piezoelectric buzzer transducer from CUI Devices, known for its efficient sound output and compact surface-mount design. The buzzer offers a sound pressure level of 65dB and consumes only 1mA of current, making it ideal for battery-powered devices. The board also features the MIKROE 'Click Snap' function, allowing for flexible installation and autonomous operation.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","CPT-7502-65-SMT-TR"],
+    "category" : ["Click Boards > Audio & voice > Speakers"]
+}

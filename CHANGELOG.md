@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20241024](#20241024)**
 + **[20240926](#20240926)**
 + **[20240919](#20240919)**
 + **[20240916](#20240916)**
@@ -107,6 +108,31 @@
 
 ---
 ---
+---
+
+## `20241024`
+
+*Following click boards have been added:*
+
++ `Calypso`
++ `Buzzer`
++ `IR Thermo 4`
++ `Current 10`
++ `M-BUS RF 3`
++ `2x4 RGB`
++ `BATT Boost 2`
++ `Ambient 14`
++ `Rec&Play 2`
++ `Cap Touch 4`
++ `USB-C Sink 4`
++ `Expand 17`
++ `GNSS MAX 2`
++ `Smart DOF 5`
++ `LTE IoT 12`
++ `SolidSwitch 6`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20240926`

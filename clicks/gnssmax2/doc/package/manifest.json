@@ -1,0 +1,37 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Wireless connectivity > GPS/GNSS",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "GNSS MAX 2 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.gnssmax2",
+    "product_link": "https://www.mikroe.com/gnss-max-2-click",
+    "short_description": "GNSS MAX 2 Click is a compact add-on board designed for precise positioning in urban environments. This board features the MAX-F10S, a professional-grade L1/L5 dual-band GNSS receiver from u-blox. This receiver uses dual-band GNSS technology to provide meter-level accuracy, even in challenging urban areas, by mitigating multipath effects. It supports concurrent GPS, Galileo, and BeiDou constellation tracking, offering robust performance with integrated filters and a low-noise amplifier for protection against RF interference. GNSS MAX 2 Click is ideal for vehicle tracking, fleet management, and micromobility solutions, even with small antennas.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.GNSSMAX2",
+    "subdir_name": "lib_gnssmax2"
+}
+
+

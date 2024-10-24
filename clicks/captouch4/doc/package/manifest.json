@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC32|RISC-V|AVR",
+    "category": "Click Boards > HMI > Capacitive",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Cap Touch 4 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.captouch4",
+    "product_link": "https://www.mikroe.com/cap-touch-4-click",
+    "short_description": "Cap Touch 4 Click is a compact add-on board for wake-on-touch and activation applications. This board features the IQS211B, a single-channel capacitive controller from Azoteq, featuring ProxSense® technology for highly sensitive self-capacitance measurements. The board includes a defined circular touch-sensing area, signal conditioning for parasitic capacitance, and a low-power Sleep mode with wake-up functionality, ensuring efficient energy consumption. It communicates via the I2C interface with a fixed address of 0x47, operates at 3.3V logic, and features the new Click Snap for added flexibility.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.CapTouch4",
+    "subdir_name": "lib_captouch4"
+}
+

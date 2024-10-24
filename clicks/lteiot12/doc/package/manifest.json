@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
+    "category": "Click Boards > Wireless connectivity > LTE IoT",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "LTE IoT 12 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.lteiot12",
+    "product_link": "https://www.mikroe.com/lte-iot-12-click",
+    "short_description": "LTE IoT 12 Click is a compact add-on board designed for low-power LTE Cat M1, NB-IoT, and EGPRS communication in IoT applications. This board features the BG95-M3 multi-mode data-only from Quectel, which also integrates GNSS (GPS, GLONASS, BDS, Galileo, QZSS) for precise location tracking. The board supports a wide range of LTE and 2G bands, offers ultra-low power consumption, and features advanced security via an ARM Cortex A7 processor with TrustZone technology. It includes UART and USB interfaces for easy communication, GNSS data output, and firmware upgrades.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.4",
+    "cmake": true,
+    "alias": "Click.LTEIoT12",
+    "subdir_name": "lib_lteiot12"
+}
+
