@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Sensors > Motion",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Smart DOF 5 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.smartdof5",
+    "product_link": "https://www.mikroe.com/smart-dof-5-click",
+    "short_description": "Smart DOF 5 Click is a compact add-on board designed for precise motion and orientation detection in automotive applications. This board features the ASM330LHHXG1, a high-accuracy 6-axis inertial measurement unit (IMU) from STMicroelectronics. It features a 3-axis accelerometer and a 3-axis gyroscope and supports dual operating modes (high-performance and low-power) with flexible communication options through SPI or I2C interfaces. Additionally, it includes the Click Snap format, enabling the autonomous use of the Snap section and integration of external sensors via the I2C Master interface.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.SmartDOF5",
+    "subdir_name": "lib_smartdof5"
+}
+

@@ -1,0 +1,8 @@
+{
+    "name": "USB-C Sink 4 Click",
+    "description": "USB-C Sink 4 Click is a compact add-on board designed to enable devices to draw power through the USB Type-C interface. This board features the CYPD3178, a USB Type-C power sink controller from Infineon. This Click board™ includes a controller with an integrated USB Type-C transceiver, load switch control with soft start, and system-level fault protection. It has configurable charging protocols, voltage negotiation, and an unpopulated SAFE 5V header for an alternate power supply.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["click","CYPD3178-24LQXQ"],
+    "category" : ["Click Boards > Power management > USB-C PD"]
+}

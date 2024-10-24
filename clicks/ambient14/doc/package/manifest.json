@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Sensors > Optical",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Ambient 14 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.ambient14",
+    "product_link": "https://www.mikroe.com/ambient-14-click",
+    "short_description": "Ambient 14 Click is a compact add-on board for ambient light and proximity detection applications. This board features the TMD2755, an advanced sensor from ams OSRAM, which combines ambient light sensing (ALS) and proximity detection in a single, compact module. The TMD2755 features an integrated infrared VCSEL and driver and a proximity engine that includes offset adjustment and ambient light subtraction for enhanced accuracy. It provides 16-bit data output for ALS and proximity detection, allowing precise control of backlight brightness in devices.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.Ambient14",
+    "subdir_name": "lib_ambient14"
+}
+

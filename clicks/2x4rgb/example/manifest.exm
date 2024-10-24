@@ -1,0 +1,8 @@
+{
+    "name": "2x4 RGB Click",
+    "description": "2x4 RGB Click is a compact add-on board for dynamic and colorful lighting control. This board features an array of 2x4 RGB LEDs (WL-ICLED 1312121320437) from Würth Elektronik, featuring individual control of each red, green, and blue component via an integrated IC and pulse width modulation (PWM) technology. The board also includes an LSF0102 voltage translator, ensuring seamless operation with both 3.3V and 5V logic systems, and supports MIKROE’s innovative Click Snap feature for flexible installation options. With its precise color control and flexible design, 2x4 RGB Click is ideal for applications such as ambient lighting, displays, and visual indicators in various consumer electronics and industrial environments.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","gcc-riscv","clang-riscv"],
+    "hw" : ["click","1312121320437"],
+    "category" : ["Click Boards > Display & LED > LED matrix"]
+}

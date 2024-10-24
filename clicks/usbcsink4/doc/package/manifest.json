@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Power management > USB-C PD",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "USB-C Sink 4 click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.usbcsink4",
+    "product_link": "https://www.mikroe.com/usb-c-sink-4-click",
+    "short_description": "USB-C Sink 4 Click is a compact add-on board designed to enable devices to draw power through the USB Type-C interface. This board features the CYPD3178, a USB Type-C power sink controller from Infineon. This Click board™ includes a controller with an integrated USB Type-C transceiver, load switch control with soft start, and system-level fault protection. It has configurable charging protocols, voltage negotiation, and an unpopulated SAFE 5V header for an alternate power supply.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.USBCSink4",
+    "subdir_name": "lib_usbcsink4"
+}
+
