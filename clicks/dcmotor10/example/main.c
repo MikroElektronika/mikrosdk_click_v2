@@ -8,10 +8,10 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initalizes SPI, click drivers and uninhibites the device.
+ * Initalizes SPI, Click drivers and uninhibites the device.
  * 
  * ## Application Task  
- * This example demonstrates the use of DC MOTOR 10 click by running dc motors 
+ * This example demonstrates the use of DC MOTOR 10 Click by running dc motors 
  * on channels 1 through 3, first all 3 together and then separately.
  * 
  * \author Jovan Stajkovic

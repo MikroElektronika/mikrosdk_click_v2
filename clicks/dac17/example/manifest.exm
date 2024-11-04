@@ -3,6 +3,6 @@
     "description": "DAC 17 Click is a compact add-on board that establishes precise voltage output control in various electronic applications. This board features the DAC7558, a 12-bit, octal-channel voltage output digital-to-analog (DAC) from Texas Instruments. It offers flexible internal or external power options with a voltage range from 2.7V to 5.5V. It features a rapid settling time of 5µs, rail-to-rail output amplifiers, and the ability to simultaneously or sequentially update outputs, ensuring precise and efficient performance.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","DAC7558IRHBR"],
+    "hw" : ["Click","DAC7558IRHBR"],
     "category" : ["Click Boards > Mixed signal > DAC"]
 }

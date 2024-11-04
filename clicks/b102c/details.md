@@ -1,6 +1,6 @@
 
 ---
-# B102C click
+# B102C Click
 
 > B102C Click is a compact add-on board designed for Bluetooth 5.0 (BLE) communication in various wireless applications. This board features the B102C, a Bluetooth module from Amphenol based on the Realtek RTL8762CMF chip. The board offers BLE v5.0 support, a 20MHz Arm® Cortex® M4F processor, and an integrated antenna for 2.4GHz communication, with low-power modes for optimal energy efficiency. It includes UART and USB Type-C connectivity, a PROG header for debugging, and fully programmable GPIOs.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/b102c_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/b102c-click)
+[Click Product page](https://www.mikroe.com/b102c-click)
 
 ---
 
@@ -57,7 +57,7 @@ err_t b102c_default_cfg ( b102c_t *ctx );
 void b102c_send_cmd ( b102c_t *ctx, uint8_t *cmd );
 ```
 
-- `b102c_send_cmd_with_params` This function sends a command with specified parameter to the click module.
+- `b102c_send_cmd_with_params` This function sends a command with specified parameter to the Click module.
 ```c
 void b102c_send_cmd_with_params ( b102c_t *ctx, uint8_t *at_cmd_buf, uint8_t *param_buf );
 ```
@@ -69,7 +69,7 @@ void b102c_send_cmd_params_check ( b102c_t *ctx, uint8_t *at_cmd_buf );
 
 ## Example Description
 
-> This example demonstrates the use of B102C click board by processing
+> This example demonstrates the use of B102C Click board by processing
   the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
@@ -150,7 +150,7 @@ void application_task ( void )
 
 ## Note
 
-> For communication with B102C click use the android application on the link:
+> For communication with B102C Click use the android application on the link:
 > https://play.google.com/store/apps/details?id=com.macdom.ble.blescanner
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
@@ -164,7 +164,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

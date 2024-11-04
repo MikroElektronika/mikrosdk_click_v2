@@ -145,7 +145,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void lsm303agr_cfg_setup ( lsm303agr_cfg_t *cfg );
@@ -155,7 +155,7 @@ void lsm303agr_cfg_setup ( lsm303agr_cfg_t *cfg );
  * @param lsm303agr Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LSM303AGR_RETVAL lsm303agr_init ( lsm303agr_t *ctx, lsm303agr_cfg_t *cfg );
 
@@ -164,7 +164,7 @@ LSM303AGR_RETVAL lsm303agr_init ( lsm303agr_t *ctx, lsm303agr_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for LSM303AGR click.
+ * @description This function executes default configuration for LSM303AGR Click.
  */
 void lsm303agr_default_cfg ( lsm303agr_t *ctx );
 
@@ -290,6 +290,6 @@ void lsm303agr_magnetometer_init ( lsm303agr_t *ctx );
 #endif  // _LSM303AGR_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

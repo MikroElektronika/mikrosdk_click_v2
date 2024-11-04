@@ -3,7 +3,7 @@
  * \brief OledC Click example
  * 
  * # Description
- * This demo demonstrates the use of the OLED C click board and the control of
+ * This demo demonstrates the use of the OLED C Click board and the control of
  * the OLED C display.
  *
  * The demo application is composed of two sections :
@@ -38,7 +38,7 @@ static log_t logger;
 
 #define text1 "Hello"
 #define text2  "this is the demo"
-#define text3  "for OLED C click"
+#define text3  "for OLED C Click"
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS
 

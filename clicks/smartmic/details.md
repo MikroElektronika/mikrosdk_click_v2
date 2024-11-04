@@ -1,6 +1,6 @@
 
 ---
-# Smart Mic click
+# Smart Mic Click
 
 > Smart Mic Click is a compact add-on board that provides wake-on-voice capabilities with secured privacy without compromising performance. This board features the IA611, an “Always-On” voice-wake acoustic processor from Knowles Electronics. The IA611 offers flexibility by supporting the most relevant audio and data interfaces and enables ultra-low-power voice and event detection, including voice UI supporting keywords, voice commands, and acoustic event detection. Its integrated programmable DSP is made available to 3rd party algorithms with 168kB of RAM, enabling unlimited creativity.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/smartmic_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/smart-mic-click)
+[Click Product page](https://www.mikroe.com/smart-mic-click)
 
 ---
 
@@ -69,14 +69,14 @@ err_t smartmic_voice_make ( smartmic_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Smart Mic click board by programming it with 4 different keywords, and then waiting for a keyword event,
+> This example demonstrates the use of Smart Mic Click board by programming it with 4 different keywords, and then waiting for a keyword event,
 parsing it and displaying on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which programs the device with system config, firmware, and 4 keywords
+> Initializes the driver and performs the Click default configuration which programs the device with system config, firmware, and 4 keywords
 ("Hello VoiceQ","Switch The Light","Next Song","Baidu Yixia") binaries.
 
 ```c
@@ -165,7 +165,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

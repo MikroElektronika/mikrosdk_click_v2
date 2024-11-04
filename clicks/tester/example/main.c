@@ -3,13 +3,13 @@
  * \brief Tester Click example
  * 
  * # Description
- * This example showcases how to initialize, configure and use the Tester click. It is a simple
- * GPIO click which is used to test if all the pins on a MikroBUS are working correctly.
+ * This example showcases how to initialize, configure and use the Tester Click. It is a simple
+ * GPIO Click which is used to test if all the pins on a MikroBUS are working correctly.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the click and logger modules.
+ * This function initializes and configures the Click and logger modules.
  * 
  * ## Application Task  
  * This function sets the output on all the pins (one by one) on the left side to high, going

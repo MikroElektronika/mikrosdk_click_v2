@@ -195,7 +195,7 @@ typedef enum
 
 /**
  * @brief IR Grid configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #irgrid_cfg_t object definition for detailed explanation.
@@ -207,7 +207,7 @@ void irgrid_cfg_setup ( irgrid_cfg_t *cfg );
 /**
  * @brief IR Grid initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #irgrid_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -224,7 +224,7 @@ err_t irgrid_init ( irgrid_t *ctx, irgrid_cfg_t *cfg );
  * @brief Device Initialization
  *
  * @param ctx          Click object.
- * @param data_str     Data click object.
+ * @param data_str     Data Click object.
  * @param refrate      Refresh Rate
  *
  * @returns 0 - OK
@@ -236,7 +236,7 @@ uint8_t irgrid_device_init ( irgrid_t *ctx, irgrid_data_t *data_str, uint8_t ref
 /**
  * @brief Write function using RAM slave adress.
  *
- * @param ctx          Data click object.
+ * @param ctx          Data Click object.
  * @param data_buf     Data buf to be written.
  * @param len          Number of the bytes in data buf.
  *
@@ -259,7 +259,7 @@ void irgrid_read_ram ( irgrid_t *ctx, uint8_t *reg, uint8_t *data_buf, uint8_t l
 /**
  * @brief Write function using EEPROM slave adress.
  *
- * @param ctx          Data click object.
+ * @param ctx          Data Click object.
  * @param reg          Register address.
  * @param data_buf     Data buf to be written.
  * @param len          Number of the bytes in data buf.
@@ -284,7 +284,7 @@ void irgrid_read_eeprom ( irgrid_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t
  * @brief Measurement
  *
  * @param ctx          Click object.
- * @param data_str     Data click object.
+ * @param data_str     Data Click object.
  * @returns 0 - OK
  *
  * @description Measures temperature and places it inside internal buffers. This function is 
@@ -295,7 +295,7 @@ uint8_t irgrid_measure ( irgrid_t *ctx, irgrid_data_t *data_str );
 /**
  * @brief Read Raw Temperature buffer
  *
- * @param data_str     Data click object.
+ * @param data_str     Data Click object.
  * @param buffer       Output data buf.
  *
  * @description Populates provided buffer with raw measurements. Buffer must have at least 64 members.
@@ -305,7 +305,7 @@ void irgrid_get_ir_raw ( irgrid_data_t *data_str, int16_t *buffer );
 /**
  * @brief Read Calculated Temperature buffer
  *
- * @param data_str     Data click object.
+ * @param data_str     Data Click object.
  * @param buffer       Output data buf.
  *
  * @description Populates provided buffer with calculated temperatures. Buffer must have at least 64 members.

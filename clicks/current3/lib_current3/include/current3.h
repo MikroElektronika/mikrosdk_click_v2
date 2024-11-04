@@ -430,7 +430,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void current3_cfg_setup ( current3_cfg_t *cfg );
@@ -443,7 +443,7 @@ void current3_cfg_setup ( current3_cfg_t *cfg );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t current3_init ( current3_t *ctx, current3_cfg_t *cfg );
 
@@ -452,7 +452,7 @@ err_t current3_init ( current3_t *ctx, current3_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @details This function executes default configuration for Current3 click.
+ * @details This function executes default configuration for Current3 Click.
  */
 void current3_default_cfg ( current3_t *ctx, current3_sense_cfg_data_t sense_cfg_data );
 
@@ -658,6 +658,6 @@ uint8_t current3_check_alert ( current3_t *ctx );
 #endif  // _CURRENT3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

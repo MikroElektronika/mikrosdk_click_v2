@@ -1,14 +1,14 @@
 
 ---
-# SPIRIT click
+# SPIRIT Click
 
-SPIRIT click carries the SP1ML 868MHz ultra low-power RF module. The board is designed to use 3.3V power supply and 3.3V or 5V I/O voltage levels. It communicates with the target MCU over UART interface, with additional functionality provided by the following pins on the mikroBUS™ line: PWM, RST, CS.
+SPIRIT Click carries the SP1ML 868MHz ultra low-power RF module. The board is designed to use 3.3V power supply and 3.3V or 5V I/O voltage levels. It communicates with the target MCU over UART interface, with additional functionality provided by the following pins on the mikroBUS™ line: PWM, RST, CS.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/spirit_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/spirit-click)
+[Click Product page](https://www.mikroe.com/spirit-click)
 
 ---
 
@@ -47,17 +47,17 @@ err_t spirit_init ( spirit_t *ctx, spirit_cfg_t *cfg );
 
 #### Example key functions :
 
-- `spirit_power_module` Function for power mode of SPIRIT click.
+- `spirit_power_module` Function for power mode of SPIRIT Click.
 ```c
 void spirit_power_module ( spirit_t *ctx, uint8_t power_state );
 ```
 
-- `spirit_reset` Function for reseting SPIRIT click.
+- `spirit_reset` Function for reseting SPIRIT Click.
 ```c
 void spirit_reset ( spirit_t *ctx );
 ```
 
-- `spirit_set_mode` Function for setting mode of SPIRIT click.
+- `spirit_set_mode` Function for setting mode of SPIRIT Click.
 ```c
 void spirit_set_mode ( spirit_t *ctx, uint8_t mode );
 ```
@@ -70,7 +70,7 @@ void spirit_set_mode ( spirit_t *ctx, uint8_t mode );
 
 ### Application Init
 
-> Initializes the driver and configures the click board.
+> Initializes the driver and configures the Click board.
 
 ```c
 
@@ -163,7 +163,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

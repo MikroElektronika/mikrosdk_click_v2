@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Diff Press 4 click
+# Diff Press 4 Click
 
 > Diff Press 4 Click is a compact add-on board that can measure differential pressure. This board features the SM9336-BCE-S-250-000, a digital pressure and altimeter sensor module from TE Connectivity. The SM9336-BCE-S-250-000 has a configurable host interface that supports I2C serial communication and measures pressure in a wide range with an accuracy of 3%. It comes as calibrated and temperature-compensated with high reliability/long-term stability. It operates in a compensated temperature range of -20°C to 85°C, ensuring stable operation under extreme conditions.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/diffpress4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/diff-press-4-click)
+[Click Product page](https://www.mikroe.com/diff-press-4-click)
 
 ---
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

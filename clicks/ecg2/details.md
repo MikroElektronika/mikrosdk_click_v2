@@ -1,14 +1,14 @@
 
 ---
-# ECG 2 click
+# ECG 2 Click
 
-> ECG 2 click contains ADS1194 16-bit delta-sigma analog-to-digital converters from Texas Instruments, a built-in programmable gain amplifier (PGA), an internal reference, and an onboard oscillator.
+> ECG 2 Click contains ADS1194 16-bit delta-sigma analog-to-digital converters from Texas Instruments, a built-in programmable gain amplifier (PGA), an internal reference, and an onboard oscillator.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ecg2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ecg-2-click)
+[Click Product page](https://www.mikroe.com/ecg-2-click)
 
 ---
 
@@ -76,7 +76,7 @@ void ecg2_read_channel_data ( ecg2_t *ctx, uint8_t channel, uint16_t *data_out )
 ### Application Init
 
 > Initializes SPI and UART communication, configures INT pin as INPUT, RST pin as OUTPUT, CS pin as 
-> OUTPUT and PWM pin as OUTPUT. Initializes SPI driver, initializes ECG2 click, sends START and 
+> OUTPUT and PWM pin as OUTPUT. Initializes SPI driver, initializes ECG2 Click, sends START and 
 > RDATAC opcodes.
 
 ```c
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,7 +1,7 @@
 
 
 ---
-# DC Motor 17 click
+# DC Motor 17 Click
 
 DC Motor 17 Click is a compact add-on board that contains a brushed DC motor driver. This board features the TC78H660FTG,
 a dual H Bridge driver for one or two brushed motors that incorporate a DMOS
@@ -11,7 +11,7 @@ with low on-resistance in output transistors from Toshiba Semiconductor.
   <img src="https://download.mikroe.com/images/click_for_ide/dcmotor17_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dc-motor-17-click?adtoken=48b980cc0840208867ff3317ac2fc531db4a1dd7&ad=mikromanage&id_employee=33)
+[Click Product page](https://www.mikroe.com/dc-motor-17-click?adtoken=48b980cc0840208867ff3317ac2fc531db4a1dd7&ad=mikromanage&id_employee=33)
 
 ---
 
@@ -102,7 +102,7 @@ void application_init ( void ) {
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_printf( &logger, "----------------------------\r\n" );
-    log_printf( &logger, "      DC Motor 17 click     \r\n" );
+    log_printf( &logger, "      DC Motor 17 Click     \r\n" );
     log_printf( &logger, "----------------------------\r\n" );
     log_info( &logger, " Application Init " );
 
@@ -123,8 +123,8 @@ void application_init ( void ) {
 
 ### Application Task
 
-> This is an example that demonstrates the use of the DC Motor 17 click board.
-> This example demonstrates the use of DC Motor 17 click,
+> This is an example that demonstrates the use of the DC Motor 17 Click board.
+> This example demonstrates the use of DC Motor 17 Click,
 > we first control motion A by driving it forward motion for 5 seconds,
 > than applying short brakes it for 2 second, then driving it in reverse for 5 seconds
 > and stop the motor for 2 seconds.
@@ -210,7 +210,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

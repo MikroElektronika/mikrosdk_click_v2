@@ -208,7 +208,7 @@ typedef enum
 
 /**
  * @brief Barometer 12 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #barometer12_cfg_t object definition for detailed explanation.
@@ -220,7 +220,7 @@ void barometer12_cfg_setup ( barometer12_cfg_t *cfg );
 /**
  * @brief Barometer 12 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #barometer12_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -235,7 +235,7 @@ err_t barometer12_init ( barometer12_t *ctx, barometer12_cfg_t *cfg );
 /**
  * @brief Barometer 12 default configuration function.
  * @details This function executes a default configuration of Barometer 12
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #barometer12_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -280,7 +280,7 @@ err_t barometer12_generic_read ( barometer12_t *ctx, uint16_t cmd, uint16_t *dat
 
 /**
  * @brief Barometer 12 set command function.
- * @details This function sets desired command of the Barometer 12 click board™. 
+ * @details This function sets desired command of the Barometer 12 Click board™. 
  * @param[in] ctx : Click context object.
  * See #barometer12_t object definition for detailed explanation.
  * @param[in] cmd : Desired command.
@@ -293,7 +293,7 @@ err_t barometer12_set_command ( barometer12_t *ctx, uint16_t cmd ) ;
 
 /**
  * @brief Barometer 12 software reset function.
- * @details This function performs a software reset of the Barometer 12 click board™. 
+ * @details This function performs a software reset of the Barometer 12 Click board™. 
  * @param[in] ctx : Click context object.
  * See #barometer12_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -305,7 +305,7 @@ err_t barometer12_soft_reset ( barometer12_t *ctx );
 
 /**
  * @brief Barometer 12 get device ID function.
- * @details This function read device ID of the Barometer 12 click board™. 
+ * @details This function read device ID of the Barometer 12 Click board™. 
  * @param[in] ctx : Click context object.
  * See #barometer12_t object definition for detailed explanation.
  * @param[out] device_id : Device ID value.
@@ -318,7 +318,7 @@ err_t barometer12_get_device_id ( barometer12_t *ctx, uint16_t *device_id );
 
 /**
  * @brief Barometer 12 set up OTP read function.
- * @details This function performs a OTP read mode of the Barometer 12 click board™. 
+ * @details This function performs a OTP read mode of the Barometer 12 Click board™. 
  * @param[in] ctx : Click context object.
  * See #barometer12_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -330,7 +330,7 @@ err_t barometer12_set_up_otp_read ( barometer12_t *ctx );
 
 /**
  * @brief Barometer 12 get OTP function.
- * @details This function read OTP values of the Barometer 12 click board™. 
+ * @details This function read OTP values of the Barometer 12 Click board™. 
  * @param[in] ctx : Click context object.
  * See #barometer12_t object definition for detailed explanation.
  * @param[out] otp_data : OTP values.
@@ -343,7 +343,7 @@ err_t barometer12_get_otp ( barometer12_t *ctx, uint16_t *otp_data );
 
 /**
  * @brief Barometer 12 inverse process data function.
- * @details This function performs a inverse process data of the Barometer 12 click board™. 
+ * @details This function performs a inverse process data of the Barometer 12 Click board™. 
  * @param[in] ctx : Click context object.
  * See #barometer12_t object definition for detailed explanation.
  * @param[in] cfg_data : Data structure to hold pressure sensor related parameters.
@@ -356,7 +356,7 @@ err_t barometer12_inv_invpres_calib ( barometer12_t *ctx, barometer12_invpres_t 
 
 /**
  * @brief Barometer 12 get RAW data function.
- * @details This function read RAW data of the Barometer 12 click board™. 
+ * @details This function read RAW data of the Barometer 12 Click board™. 
  * @param[in] ctx : Click context object.
  * See #barometer12_t object definition for detailed explanation.
  * @param[in] measurement_comd : Operation mode measurement commands.
@@ -372,7 +372,7 @@ err_t barometer12_get_raw_data ( barometer12_t *ctx, uint16_t measurement_comd, 
 /**
  * @brief Barometer 12 get pressure and temperature function.
  * @details This function read pressure ( Pa ) and temperature ( degree Celsius ) of 
- * the Barometer 12 click board™. 
+ * the Barometer 12 Click board™. 
  * @param[in] ctx : Click context object.
  * See #barometer12_t object definition for detailed explanation.
  * @param[out] pressure : Pressure data ( Pa ).

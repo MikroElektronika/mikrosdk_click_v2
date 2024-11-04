@@ -3,7 +3,7 @@
  * @brief Joystick 3 Click example
  *
  * # Description
- * This example demonstrates the use of the joystick 3 click board by reading
+ * This example demonstrates the use of the joystick 3 Click board by reading
  * and displaying the raw ADC for X and Y axis, as well as the joystick angle and position
  * calculated from those ADC readings.
  *

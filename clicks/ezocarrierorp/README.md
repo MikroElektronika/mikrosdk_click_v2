@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# EZO Carrier ORP click
+# EZO Carrier ORP Click
 
 > EZO Carrier Click - ORP is a compact add-on board suitable for determining a liquid's oxidation/reduction potential in your application. This board features the EZO-ORP™, an ISO 11271 compliant embedded ORP circuit board from Atlas Scientific. 
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ezocarrierorp_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ezo-carrier-click-orp)
+[Click Product page](https://www.mikroe.com/ezo-carrier-click-orp)
 
 ---
 
@@ -65,14 +65,14 @@ void ezocarrierorp_send_cmd_check ( ezocarrierorp_t *ctx, uint8_t *cmd );
 
 ## Example Description
 
-> This example demonstrates the use of EZO Carrier ORP click board by processing
+> This example demonstrates the use of EZO Carrier ORP Click board by processing
  the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver, performs the click default factory reset, and single point calibration 
+> Initializes the driver, performs the Click default factory reset, and single point calibration 
   with a calibration solutio with 225 mV ORP value.
 
 ```c
@@ -171,7 +171,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Initializes the driver, performs the click default factory reset, and single point calibration 
+> Initializes the driver, performs the Click default factory reset, and single point calibration 
   with a calibration solutio with 225 mV ORP value.
 
 ```c
@@ -201,7 +201,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,16 +3,16 @@
  * @brief Thermo2 Click example
  *
  * # Description
- * This example demonstrates the use of Thermo 2 click board by reading
+ * This example demonstrates the use of Thermo 2 Click board by reading
  * and displaying the temperature in Celsius.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
- * Reads and displays the temperature measured by the click board on the USB UART
+ * Reads and displays the temperature measured by the Click board on the USB UART
  * approximately every 800ms as this matches the required conversion time for 12-bit 
  * temperature resolution.
  *

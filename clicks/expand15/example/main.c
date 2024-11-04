@@ -3,13 +3,13 @@
  * @brief Expand 15 Click example
  *
  * # Description
- * This example demonstrates the use of Expand 15 click board by setting and reading 
+ * This example demonstrates the use of Expand 15 Click board by setting and reading 
  * the ports state.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which sets 
+ * Initializes the driver and performs the Click default configuration which sets 
  * half of the port 0 and port 1 pins as output ( P00, P02, P04, P06, P10, P12, P14 and P16) and the 
  * half of the port 0 and port 1 pins as inputs ( P01, P03, P05, P07, P11, P13, P15 and P17).
  *

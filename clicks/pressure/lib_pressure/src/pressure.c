@@ -34,11 +34,11 @@
 
 #define PRESSURE_DUMMY  0
 
-//  Pressure click slave address.
+//  Pressure Click slave address.
 #define PRESSURE_I2C_ADDR_0  0x5C
 #define PRESSURE_I2C_ADDR_1  0x5D
 
-//  Pressure click commands.
+//  Pressure Click commands.
 #define PRESSURE_SPI_READ_CMD  0x80
 #define PRESSURE_SPI_AUTO_INC  0x40
 #define PRESSURE_I2C_AUTO_INC  0x80

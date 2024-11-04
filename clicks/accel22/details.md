@@ -1,6 +1,6 @@
 
 ---
-# Accel 22 click
+# Accel 22 Click
 
 > Accel 22 Click is a compact add-on board that contains an acceleration sensor. This board features the ADXL367, an ultra-low-power, high-performance three-axis accelerometer from Analog Devices. The ADXL367 allows selectable full-scale acceleration measurements in ranges of ±2g, ±4g, and ±8g in three axes, with a resolution of 0.25 mg/LSB on the ±2g range, alongside a configurable host interface that supports both SPI and I2C serial communication. This device combines a 3-axis MEMS accelerometer, a temperature sensor, and a 14-bit analog-to-digital converter (ADC) to synchronize an external analog signal conversion.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/accel22_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/accel-22-click)
+[Click Product page](https://www.mikroe.com/accel-22-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t accel22_get_adc ( accel22_t *ctx, float *v_adc );
 
 ## Example Description
 
-> This example demonstrates the use of Accel 22 click board by reading and displaying Accel data (X, Y, and Z axis) as well as temperature and ADC measurements on the USB UART.
+> This example demonstrates the use of Accel 22 Click board by reading and displaying Accel data (X, Y, and Z axis) as well as temperature and ADC measurements on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -171,7 +171,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

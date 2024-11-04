@@ -219,7 +219,7 @@ typedef enum
 
 /**
  * @brief DC Motor 24 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #dcmotor24_cfg_t object definition for detailed explanation.
@@ -231,7 +231,7 @@ void dcmotor24_cfg_setup ( dcmotor24_cfg_t *cfg );
 /**
  * @brief DC Motor 24 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #dcmotor24_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -246,7 +246,7 @@ err_t dcmotor24_init ( dcmotor24_t *ctx, dcmotor24_cfg_t *cfg );
 /**
  * @brief DC Motor 24 default configuration function.
  * @details This function executes a default configuration of DC Motor 24
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #dcmotor24_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

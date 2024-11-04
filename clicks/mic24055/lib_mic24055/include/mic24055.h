@@ -159,7 +159,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void mic24055_cfg_setup ( mic24055_cfg_t *cfg );
@@ -169,7 +169,7 @@ void mic24055_cfg_setup ( mic24055_cfg_t *cfg );
  * @param mic24055 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MIC24055_RETVAL mic24055_init ( mic24055_t *ctx, mic24055_cfg_t *cfg );
 
@@ -219,6 +219,6 @@ void mic24055_set_vout ( mic24055_t *ctx, uint16_t voltage );
 #endif  // _MIC24055_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

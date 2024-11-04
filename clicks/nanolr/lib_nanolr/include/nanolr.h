@@ -410,7 +410,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void nanolr_cfg_setup ( nanolr_cfg_t *cfg );
@@ -421,7 +421,7 @@ void nanolr_cfg_setup ( nanolr_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 NANOLR_RETVAL nanolr_init ( nanolr_t *ctx, nanolr_cfg_t *cfg );
 
@@ -430,7 +430,7 @@ NANOLR_RETVAL nanolr_init ( nanolr_t *ctx, nanolr_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for NanoLR click.
+ * @description This function executes default configuration for NanoLR Click.
  */
 void nanolr_default_cfg ( nanolr_t *ctx );
 
@@ -962,6 +962,6 @@ nanolr_err_t nanolr_parser_rsp ( nanolr_t *ctx, nanolr_rsp_t *response );
 #endif  // _NANOLR_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

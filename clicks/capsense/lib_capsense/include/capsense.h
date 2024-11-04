@@ -174,7 +174,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void capsense_cfg_setup ( capsense_cfg_t *cfg );
@@ -187,7 +187,7 @@ void capsense_cfg_setup ( capsense_cfg_t *cfg );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t capsense_init ( capsense_t *ctx, capsense_cfg_t *cfg );
 
@@ -199,7 +199,7 @@ err_t capsense_init ( capsense_t *ctx, capsense_cfg_t *cfg );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @description This function executes default configuration for CapSense click.
+ * @description This function executes default configuration for CapSense Click.
  * @note
  * <pre>
  * The following configuration is set in main:
@@ -300,7 +300,7 @@ err_t capsense_read_data_bytes( capsense_t *ctx, uint8_t reg_address, uint16_t *
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @description This function gets slider level of click object ctx.
+ * @description This function gets slider level of Click object ctx.
  */
 err_t capsense_get_slider_lvl( capsense_t *ctx, uint8_t *slider_lvl );
 
@@ -310,6 +310,6 @@ err_t capsense_get_slider_lvl( capsense_t *ctx, uint8_t *slider_lvl );
 #endif  // _CAPSENSE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

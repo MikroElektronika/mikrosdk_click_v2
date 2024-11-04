@@ -13,7 +13,7 @@
  * settings and writes an initial log.
  * 
  * ## Application Task  
- * Demonstrates the use of 6DOF IMU 6 click board by reading angular rate, acceleration rate 
+ * Demonstrates the use of 6DOF IMU 6 Click board by reading angular rate, acceleration rate 
  * and displaying data to USB UART.
  * 
  * \author MikroE Team
@@ -69,7 +69,7 @@ void application_init ( void )
     if ( id_val == C6DOFIMU6_WHO_AM_I_VAL )
     {
         log_printf( &logger, "-------------------------\r\n" );
-        log_printf( &logger, "   6DOF  IMU  6  click   \r\n" );
+        log_printf( &logger, "   6DOF  IMU  6  Click   \r\n" );
         log_printf( &logger, "-------------------------\r\n" );
         c6dofimu6_power ( &c6dofimu6, C6DOFIMU6_POWER_ON );
     }

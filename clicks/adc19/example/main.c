@@ -3,7 +3,7 @@
  * @brief ADC19 Click example
  *
  * # Description
- * This example demonstrates the use of ADC 19 click board by reading 
+ * This example demonstrates the use of ADC 19 Click board by reading 
  * the voltage from the two analog input channels.
  *
  * The demo application is composed of two sections :

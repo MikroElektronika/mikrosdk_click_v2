@@ -3,7 +3,7 @@
  * @brief Terminal 2 Click Example.
  *
  * # Description
- * This example demonstates the use of Terminal 2 click board by toggling all its pins.
+ * This example demonstates the use of Terminal 2 Click board by toggling all its pins.
  *
  * The demo application is composed of two sections :
  *

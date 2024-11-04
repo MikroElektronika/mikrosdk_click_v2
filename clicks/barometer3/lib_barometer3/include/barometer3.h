@@ -424,7 +424,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void barometer3_cfg_setup ( barometer3_cfg_t *cfg );
@@ -434,7 +434,7 @@ void barometer3_cfg_setup ( barometer3_cfg_t *cfg );
  * @param barometer3 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 BAROMETER3_RETVAL barometer3_init ( barometer3_t *ctx, barometer3_cfg_t *cfg );
 
@@ -726,6 +726,6 @@ uint8_t barometer3_check_int ( barometer3_t *ctx );
 #endif  // _BAROMETER3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

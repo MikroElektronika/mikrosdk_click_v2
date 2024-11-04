@@ -351,7 +351,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to
+ * @description This function initializes Click configuration structure to
  * initial state.
  * @note All used pins will be set to unconnected state.
  */
@@ -368,7 +368,7 @@ void fan2_cfg_setup( fan2_cfg_t *cfg );
  *          0xFB - Unsupported pin.
  *
  * @description This function initializes all necessary pins and peripherals
- * used for this click.
+ * used for this Click.
  */
 fan2_err_t fan2_init( fan2_t *ctx, fan2_cfg_t *cfg );
 
@@ -377,7 +377,7 @@ fan2_err_t fan2_init( fan2_t *ctx, fan2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes a default configuration for Fan 2 click.
+ * @description This function executes a default configuration for Fan 2 Click.
  */
 void fan2_default_cfg( fan2_t *ctx );
 

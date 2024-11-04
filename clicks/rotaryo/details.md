@@ -1,14 +1,14 @@
 
 ---
-# ROTARY O click
+# ROTARY O Click
 
-Rotary click carries a 15-pulse incremental rotary encoder with detents, surrounded by a ring of 16 orange LEDs. It’s a perfect solution for adding a precision input knob to your design. The encoder outputs A and B signals (out of phase to each other); the knob also acts as a push-button which sends an interrupt to the target board MCU. The LED ring is controlled through SPI lines (CS, SCK, MISO, MOSI). Rotary click can be used with either a 3.3V or 5V power supply.
+Rotary Click carries a 15-pulse incremental rotary encoder with detents, surrounded by a ring of 16 orange LEDs. It’s a perfect solution for adding a precision input knob to your design. The encoder outputs A and B signals (out of phase to each other); the knob also acts as a push-button which sends an interrupt to the target board MCU. The LED ring is controlled through SPI lines (CS, SCK, MISO, MOSI). Rotary Click can be used with either a 3.3V or 5V power supply.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/rotaryo_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rotary-o-click)
+[Click Product page](https://www.mikroe.com/rotary-o-click)
 
 ---
 
@@ -64,7 +64,7 @@ void rotaryo_turn_on_led_by_position ( rotaryo_t *ctx, uint8_t led_position );
 
 ## Example Description
 
-> The demo application controls led on click with rotory on board
+> The demo application controls led on Click with rotory on board
 
 **The demo application is composed of two sections :**
 
@@ -190,7 +190,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

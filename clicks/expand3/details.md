@@ -1,6 +1,6 @@
 
 ---
-# Expand 3 click
+# Expand 3 Click
 
 > Expand 3 Click is a compact add-on board providing general-purpose I/O expansion. This board features the DS2408, an 8-channel programmable I/O expander from Analog Devices. The DS2408 has a factory-lasered 64-bit registration number, enabling multiple Expand 3 Click boards™ to be connected on the same data line, communicating with the host MCU through a standard Dallas Semiconductor 1-Wire interface (15.3kbps or 100kbps). PIO outputs are configured as open-drain and provide a maximum on-resistance of 100Ω.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/expand3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/expand-3-click)
+[Click Product page](https://www.mikroe.com/expand-3-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t expand3_read_current_state ( expand3_t *ctx, uint8_t *curr_state );
 
 ## Example Description
 
-> This example demonstrates the use of Expand 3 click board by setting and reading the port state.
+> This example demonstrates the use of Expand 3 Click board by setting and reading the port state.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -142,7 +142,7 @@ void application_task ( void )
 ## Note
 
 > The PIO pins are in the open-drain mode, therefore a pull-up resistor must be added to each pin.
-This click board can be used in a combination with an EasyLED [MIKROE-571] and EasyPULL [MIKROE-575] boards.
+This Click board can be used in a combination with an EasyLED [MIKROE-571] and EasyPULL [MIKROE-575] boards.
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

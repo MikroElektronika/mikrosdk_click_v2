@@ -3,12 +3,12 @@
  * @brief HBridge9 Click example
  *
  * # Description
- * This example demonstrates the use of H-Bridge 9 click board.
+ * This example demonstrates the use of H-Bridge 9 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which will
+ * Initializes the driver and performs the Click default configuration which will
  * set the OUT1 to LOW, OUT2 to HIGH polarity, and the runtime to 1000ms.
  *
  * ## Application Task

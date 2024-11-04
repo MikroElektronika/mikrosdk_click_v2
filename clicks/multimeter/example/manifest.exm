@@ -1,8 +1,8 @@
 {
     "name": "Multimeter Click",
-    "description": "<Multimeter click is a Click board™ designed to measure voltage, current, resistance, and capacitance properties of the components, connected to the input terminals. Each property measurement is done on a separate terminal.>",
+    "description": "<Multimeter Click is a Click board™ designed to measure voltage, current, resistance, and capacitance properties of the components, connected to the input terminals. Each property measurement is done on a separate terminal.>",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MCP607"],
+    "hw" : ["Click","MCP607"],
     "category" : ["Measurements"] 
 }

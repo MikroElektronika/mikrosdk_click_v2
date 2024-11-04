@@ -245,7 +245,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void alcohol2_cfg_setup ( alcohol2_cfg_t *cfg );
@@ -256,7 +256,7 @@ void alcohol2_cfg_setup ( alcohol2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ALCOHOL2_RETVAL alcohol2_init ( alcohol2_t *ctx, alcohol2_cfg_t *cfg );
 
@@ -265,7 +265,7 @@ ALCOHOL2_RETVAL alcohol2_init ( alcohol2_t *ctx, alcohol2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Alcohol2 click.
+ * @description This function executes default configuration for Alcohol2 Click.
  */
 void alcohol2_default_cfg ( alcohol2_t *ctx );
 
@@ -348,6 +348,6 @@ void alcohol2_wait_ready( alcohol2_t *ctx );
 #endif  // _ALCOHOL2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

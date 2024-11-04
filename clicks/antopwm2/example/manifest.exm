@@ -3,6 +3,6 @@
     "description": "AN to PWM 2 Click is a compact add-on board that contains an easy-to-use component that converts the value of the input analog signal to a fixed frequency PWM voltage output, with a duty cycle proportional to the input voltage. This board features the LTC6992CS6, a silicon oscillator with an easy-to-use analog voltage-controlled pulse width modulation (PWM) capability from Analog Devices. It features the PWM signal controlled by analog input in range of -2.5V to 2.5V, frequency range up to 1 MHz, frequency error less than 1.7%, and it has good temperature stability. It has many features that make it well suited for heater control, PWM servo loops, LED dimming, signal isolation, and other duty cycle control applications.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","LTC6992CS6","AD5171BRJZ50"],
+    "hw" : ["Click","LTC6992CS6","AD5171BRJZ50"],
     "category" : ["Click Boards > Mixed signal > ADC"]
 }

@@ -10,7 +10,7 @@
     ],
     "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "iButton click",
+    "display_name": "iButton Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.ibutton",
     "product_link": "https://www.mikroe.com/ibutton-click",
-    "short_description": "iButton click - is an iButton™ probe Click board™. The iButton is a Analog Devices technology based on Analog's 1-Wire® communication protocol, and a chip usually packed in a robust stainless steel casing. The button-shaped iButton device has two contacts - the lid and the base. These contacts carry the necessary connections down to a sensitive silicone chip, embedded inside the metal button. When the iButton touches the reader probe on the Click board™, it establishes the communication with the host MCU, via the 1-Wire® interface. The communication is almost instant, so it is enough to press the iButton lightly to the probe contacts.",
+    "short_description": "iButton Click - is an iButton™ probe Click board™. The iButton is a Analog Devices technology based on Analog's 1-Wire® communication protocol, and a chip usually packed in a robust stainless steel casing. The button-shaped iButton device has two contacts - the lid and the base. These contacts carry the necessary connections down to a sensitive silicone chip, embedded inside the metal button. When the iButton touches the reader probe on the Click board™, it establishes the communication with the host MCU, via the 1-Wire® interface. The communication is almost instant, so it is enough to press the iButton lightly to the probe contacts.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
     "related_projects": [
         2283
     ],
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.iButton",
     "subdir_name": "lib_ibutton"
 }
+
 
 
 

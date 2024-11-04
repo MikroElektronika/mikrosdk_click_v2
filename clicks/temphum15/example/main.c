@@ -4,7 +4,7 @@
  *
  * # Description
  * This demo app represents the performance of the
- * Temp&Hum 15 click board. The log displays the
+ * Temp&Hum 15 Click board. The log displays the
  * temperature and humidity obtained from the sensor.
  *
  * The demo application is composed of two sections :

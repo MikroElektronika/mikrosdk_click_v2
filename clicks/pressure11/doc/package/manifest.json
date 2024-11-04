@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "Pressure 11 click",
+    "display_name": "Pressure 11 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -31,11 +31,12 @@
     "related_projects": [
         2720
     ],
-    "version": "2.1.0.18",
+    "version": "2.1.0.19",
     "cmake": true,
     "alias": "Click.Pressure11",
     "subdir_name": "lib_pressure11"
 }
+
 
 
 

@@ -3,12 +3,12 @@
  * \brief Eeram2 Click example
  * 
  * # Description
- * This example demonstrates the use of EERAM 2 click board.
+ * This example demonstrates the use of EERAM 2 Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and enables the click board.
+ * Initializes the driver and enables the Click board.
  * 
  * ## Application Task  
  * Writes a desired number of bytes to the memory and then verifies if it is written correctly

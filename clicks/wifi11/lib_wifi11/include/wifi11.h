@@ -219,7 +219,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void wifi11_cfg_setup ( wifi11_cfg_t *cfg );
@@ -230,7 +230,7 @@ void wifi11_cfg_setup ( wifi11_cfg_t *cfg );
  * See #wifi11_t object definition for detailed explanation.
  * @param[in] cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 WIFI11_RETVAL wifi11_init ( wifi11_t *ctx, wifi11_cfg_t *cfg );
 
@@ -268,7 +268,7 @@ void wifi11_reset_device ( wifi11_t *ctx );
 
 /**
  * @brief Send command function.
- * @details This function sends the specified command to the click module.
+ * @details This function sends the specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #wifi11_t object definition for detailed explanation.
  * @param[in] cmd  Command variable.
@@ -279,7 +279,7 @@ void wifi11_send_cmd ( wifi11_t *ctx, char *cmd );
 
 /**
  * @brief Send command function with parameter.
- * @details This function sends commands to the click module.
+ * @details This function sends commands to the Click module.
  * @param[in] ctx : Click context object.
  * See #wifi11_t object definition for detailed explanation.
  * @param[in] at_cmd_buf  Command buffer.
@@ -319,6 +319,6 @@ void wifi11_create_tcp_udp_server ( wifi11_t *ctx, uint8_t mode, uint16_t port )
 #endif  // _WIFI11_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -159,7 +159,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void samltouch_cfg_setup ( samltouch_cfg_t *cfg );
@@ -170,7 +170,7 @@ void samltouch_cfg_setup ( samltouch_cfg_t *cfg );
  * @param samltouch Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 SAMLTOUCH_RETVAL samltouch_init ( samltouch_t *ctx, samltouch_cfg_t *cfg );
 
@@ -211,6 +211,6 @@ void samltouch_parser ( char *data_in, samltouch_state_t *state );
 #endif  // _SAMLTOUCH_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

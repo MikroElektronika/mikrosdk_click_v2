@@ -3,18 +3,18 @@
  * \brief I2C1Wire Click example
  * 
  * # Description
- * This example showcases how to initialize, confiure and use the I2C 1-Wire click. The click
+ * This example showcases how to initialize, confiure and use the I2C 1-Wire Click. The Click
  * is a I2C (host) to 1-Wire interface (slave). In order for the example to work one or more 
- * 1-Wire (GPIO) click modules are required. Gnd goes to gnd, power goes to power and the cha-
+ * 1-Wire (GPIO) Click modules are required. Gnd goes to gnd, power goes to power and the cha-
  * nnels are there to read data from connected modules.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules.
+ * This function initializes and configures the logger and Click modules.
  * 
  * ## Application Task  
- * This function reads all of the channels on the click module and displays any data it acqu-
+ * This function reads all of the channels on the Click module and displays any data it acqu-
  * ires from them with a 100 millisecond delay.
  * 
  * 

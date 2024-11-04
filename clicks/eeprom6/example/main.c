@@ -3,13 +3,13 @@
  * @brief EEPROM 6 Click Example.
  *
  * # Description
- * This example demonstrates the use of EEPROM6 click board by writing 
+ * This example demonstrates the use of EEPROM6 Click board by writing 
  * string to a memory at some specific location and then reading it back.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * This example shows capabilities of EEPROM 6 Click board by writting a string 
@@ -26,7 +26,7 @@
 static eeprom6_t eeprom6;
 static log_t logger;
 
-#define EEPROM6_DEMO_TEXT       "MikroE - EEPROM 6 click board"
+#define EEPROM6_DEMO_TEXT       "MikroE - EEPROM 6 Click board"
 #define EEPROM6_TEXT_ADDRESS    0x0000
 
 void application_init ( void ) 

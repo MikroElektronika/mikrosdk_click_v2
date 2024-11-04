@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "Smart Buck click",
+    "display_name": "Smart Buck Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.smartbuck",
     "product_link": "https://www.mikroe.com/smart-buck-click",
-    "short_description": "Smart Buck click is the two-channel step-down DC/DC converter and regulator, with plenty of additional functions. It can provide voltage measurement at each of its two programmable voltage outputs, as well as the measurement of the current consumption. In addition, it can also provide power consumption measurements of the Click board™ itself, both at the mikroBUS™ +5V power rail, and the external voltage input terminal. Finally, there is 2kbit of EEPROM at disposal, which can be used for logging the measurements, storage of the working parameters, or any other type of general purpose data.",
+    "short_description": "Smart Buck Click is the two-channel step-down DC/DC converter and regulator, with plenty of additional functions. It can provide voltage measurement at each of its two programmable voltage outputs, as well as the measurement of the current consumption. In addition, it can also provide power consumption measurements of the Click board™ itself, both at the mikroBUS™ +5V power rail, and the external voltage input terminal. Finally, there is 2kbit of EEPROM at disposal, which can be used for logging the measurements, storage of the working parameters, or any other type of general purpose data.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2546
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.SMARTBUCK",
     "subdir_name": "lib_smartbuck"
 }
+
 
 
 

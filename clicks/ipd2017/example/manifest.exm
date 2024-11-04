@@ -3,6 +3,6 @@
     "description": "IPD Click is a compact add-on board for controlling inductive and resistive loads in industrial automation and other demanding applications. This board features the TPD2017FN, an 8-channel low-side switch with MOSFET outputs from Toshiba Semiconductor.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TPD2017FN"],
+    "hw" : ["Click","TPD2017FN"],
     "category" : ["Click Boards > Miscellaneous > Relay"]
 }

@@ -3,8 +3,8 @@
  * @brief DcMotor8 Click example
  * 
  * # Description
- * This click can drive simple DC motors with brushes, providing them with a significant amount 
- * of current and voltage up to 40V. The click has one control input, that uses the PWM signal 
+ * This Click can drive simple DC motors with brushes, providing them with a significant amount 
+ * of current and voltage up to 40V. The Click has one control input, that uses the PWM signal 
  * from the host MCU. It uses the half-bridge topology to regulate the speed of the motor 
  * rotation, employs advanced dead-time circuitry that monitors the output stage, providing 
  * maximum switching efficiency and features an advanced technique to avoid shoot-through 
@@ -13,10 +13,10 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and enables the click board.
+ * Initializes the driver and enables the Click board.
  * 
  * ## Application Task  
- * This is an example that demonstrates the use of DC Motor 8 click
+ * This is an example that demonstrates the use of DC Motor 8 Click
  * board by increasing and decreasing the motor speed.
  * DC Motor 8 Click communicates with the register via the PWM interface.
  * Results are being sent to the Usart Terminal where you can track their changes.

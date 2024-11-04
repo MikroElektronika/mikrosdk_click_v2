@@ -1,6 +1,6 @@
 
 ---
-# Magneto 8 click
+# Magneto 8 Click
 
 Magneto 8 Click is a compact add-on board that contains an easy-to-program magnetic rotary position sensor with incremental quadrature (A/B) and 12-bit digital outputs. This board features the AS5601, 12-bit programmable contactless encoder IC from AMS-AG.
 
@@ -9,7 +9,7 @@ Magneto 8 Click is a compact add-on board that contains an easy-to-program magne
 </p>
 
 
-[click Product page](https://www.mikroe.com/magneto-8-click)
+[Click Product page](https://www.mikroe.com/magneto-8-click)
 
 ---
 
@@ -76,7 +76,7 @@ uint8_t magneto8_psh_pin_state ( magneto8_t *ctx );
 
 ### Application Init 
 
-> Initializes the driver and applies the click default configuration.
+> Initializes the driver and applies the Click default configuration.
 
 ```c
 
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -127,7 +127,7 @@ typedef enum
 
 /**
  * @brief AudioAMP 12 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #audioamp12_cfg_t object definition for detailed explanation.
@@ -139,7 +139,7 @@ void audioamp12_cfg_setup ( audioamp12_cfg_t *cfg );
 /**
  * @brief AudioAMP 12 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #audioamp12_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -154,7 +154,7 @@ err_t audioamp12_init ( audioamp12_t *ctx, audioamp12_cfg_t *cfg );
 /**
  * @brief AudioAMP 12 default configuration function.
  * @details This function executes a default configuration of AudioAMP 12
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #audioamp12_t object definition for detailed explanation.
  * @return Nothing.
@@ -167,7 +167,7 @@ void audioamp12_default_cfg ( audioamp12_t *ctx );
  * @brief AudioAMP 12 set standby mode function.
  * @details This function sets the standby mode 
  * of the TS2007EIJT, 3 W, filter-free, class-D audio power amplifier 
- * with 6 or 12 dB fixed gain select on the AudioAMP 12 click board™.
+ * with 6 or 12 dB fixed gain select on the AudioAMP 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp12_t object definition for detailed explanation.
  * @return Nothing.
@@ -179,7 +179,7 @@ void audioamp12_set_mode_standby ( audioamp12_t *ctx );
  * @brief AudioAMP 12 set operation mode function.
  * @details This function sets the device operation mode
  * of the TS2007EIJT, 3 W, filter-free, class-D audio power amplifier 
- * with 6 or 12 dB fixed gain select on the AudioAMP 12 click board™.
+ * with 6 or 12 dB fixed gain select on the AudioAMP 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp12_t object definition for detailed explanation.
  * @return Nothing.
@@ -191,7 +191,7 @@ void audioamp12_set_mode_operation ( audioamp12_t *ctx );
  * @brief AudioAMP 12 select gain level function.
  * @details This function selects the gain level
  * of the TS2007EIJT, 3 W, filter-free, class-D audio power amplifier 
- * with 6 or 12 dB fixed gain select on the AudioAMP 12 click board™.
+ * with 6 or 12 dB fixed gain select on the AudioAMP 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp12_t object definition for detailed explanation.
  * @param[in] sel_gain : Gain selection value.
@@ -205,7 +205,7 @@ void audioamp12_gain_select ( audioamp12_t *ctx, audioamp12_gain_select_t sel_ga
  * @brief AudioAMP 12 changes the gain function.
  * @details This function switch between two gain settings, 6 dB or 12 dB, 
  * of the TS2007EIJT, 3 W, filter-free, class-D audio power amplifier 
- * with 6 or 12 dB fixed gain select on the AudioAMP 12 click board™.
+ * with 6 or 12 dB fixed gain select on the AudioAMP 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp12_t object definition for detailed explanation.
  * @return Nothing.

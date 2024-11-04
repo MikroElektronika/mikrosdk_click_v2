@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and applies the click default configuration.
+ * Initializes the driver and applies the Click default configuration.
  * 
  * ## Application Task  
  * Reads angle and magnitude data and displays it on the USB UART every 500ms.

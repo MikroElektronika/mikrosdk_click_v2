@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# H-Bridge 14 click
+# H-Bridge 14 Click
 
 > H-Bridge 14 Click is a compact add-on board with an H-Bridge gate driver, also known as a full-bridge pre-driver. This board features the DRV8873, an automotive H-Bridge motor driver from Texas Instruments. The DRV8873 is an N-channel H-Bridge motor driver that can drive one bidirectional brushed DC motor, two unidirectional brushed DC motors, solenoids, or other resistive inductive loads.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/hbridge14_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/h-bridge-14-click)
+[Click Product page](https://www.mikroe.com/h-bridge-14-click)
 
 ---
 
@@ -77,7 +77,7 @@ err_t hbridge14_drive_motor ( hbridge14_t *ctx, uint8_t state );
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -183,7 +183,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

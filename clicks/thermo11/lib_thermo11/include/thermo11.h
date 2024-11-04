@@ -231,7 +231,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void thermo11_cfg_setup ( thermo11_cfg_t *cfg );
@@ -242,7 +242,7 @@ void thermo11_cfg_setup ( thermo11_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 THERMO11_RETVAL thermo11_init ( thermo11_t *ctx, thermo11_cfg_t *cfg );
 
@@ -265,7 +265,7 @@ THERMO11_RETVAL thermo11_init ( thermo11_t *ctx, thermo11_cfg_t *cfg );
  *    set: THERMO11_LOW_LIMIT_REG
  *        - -5
  *</pre>
- * @description This function executes default configuration for Thermo11 click.
+ * @description This function executes default configuration for Thermo11 Click.
  */
 void thermo11_default_cfg ( thermo11_t *ctx );
 
@@ -412,6 +412,6 @@ THERMO11_RETVAL thermo11_set_temp ( thermo11_t *ctx, uint8_t temp_addr, float te
 #endif  // _THERMO11_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

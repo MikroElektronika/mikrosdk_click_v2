@@ -3,6 +3,6 @@
     "description": "DAC 5 Click carries Texas Instruments DAC53608 IC, a low-power, eight-channel, 10-bit buffered Digital-to-Analog Converter.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MAX6106","DAC53608"],
+    "hw" : ["Click","MAX6106","DAC53608"],
     "category" : ["DAC"] 
 }

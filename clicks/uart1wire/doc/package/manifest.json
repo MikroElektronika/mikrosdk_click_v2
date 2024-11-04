@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "UART 1-Wire click",
+    "display_name": "UART 1-Wire Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.uart1wire",
     "product_link": "https://www.mikroe.com/uart-1-wire-click",
-    "short_description": "UART 1-Wire click is used to convert standard UART or RS232 signals into 1-Wire® signals. Apart from other features such as the slew rate control for larger 1-Wire® busses, selectable data rate, an accurate self-calibrating time base, ESD protection and more, the main feature of the UART 1-Wire® click, is that it manages all the sensitive signal timings involved in 1-Wire® communication, allowing rapid development of UART to 1-Wire® applications.",
+    "short_description": "UART 1-Wire Click is used to convert standard UART or RS232 signals into 1-Wire® signals. Apart from other features such as the slew rate control for larger 1-Wire® busses, selectable data rate, an accurate self-calibrating time base, ESD protection and more, the main feature of the UART 1-Wire® Click, is that it manages all the sensitive signal timings involved in 1-Wire® communication, allowing rapid development of UART to 1-Wire® applications.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2439
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.UART1Wire",
     "subdir_name": "lib_uart1wire"
 }
+
 
 
 

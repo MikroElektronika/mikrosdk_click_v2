@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "MCP73213 click",
+    "display_name": "MCP73213 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.mcp73213",
     "product_link": "https://www.mikroe.com/mcp73213-click",
-    "short_description": "MCP73213 click carries the MCP73213 dual-cell Li-Ion/Li-Polymer battery charge management controller with input overvoltage protection from Microchip.",
+    "short_description": "MCP73213 Click carries the MCP73213 dual-cell Li-Ion/Li-Polymer battery charge management controller with input overvoltage protection from Microchip.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2050
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.Mcp73213",
     "subdir_name": "lib_mcp73213"
 }
+
 
 
 

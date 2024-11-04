@@ -1,6 +1,6 @@
 
 ---
-# AMR Angle 2 click
+# AMR Angle 2 Click
 
 > AMR Angle 2 Click is a compact add-on board containing an anisotropic magnetoresistive measurement solution ideal for either angle or linear position measurements. This board features the ADA4570, an integrated AMR angle sensor with an integrated signal conditioner and differential outputs from Analog Devices. The ADA4570 delivers amplified differential cosine and sine output signals, with respect to the angle measuring from 0° to 180° when the magnetic field is rotating in the x-axis and the y-axis (x-y) plane, processed later by MAX11122, SAR ADC, which forwards the digital angle information to MCU via SPI interface for further processing.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/amrangle2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/amr-angle-2-click)
+[Click Product page](https://www.mikroe.com/amr-angle-2-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t amrangle2_read_vsin_vcos ( amrangle2_t *ctx, float *vsin, float *vcos );
 
 ## Example Description
 
-> This example demonstrates the use of AMR Angle 2 click board by reading and displaying the magnet's angular position in Degrees and a system temperature in Celsius.
+> This example demonstrates the use of AMR Angle 2 Click board by reading and displaying the magnet's angular position in Degrees and a system temperature in Celsius.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -148,7 +148,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -115,7 +115,7 @@ typedef enum {
 
 /**
  * @brief Alcohol configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #alcohol_cfg_t object definition for detailed explanation.
@@ -127,7 +127,7 @@ void alcohol_cfg_setup ( alcohol_cfg_t *cfg );
 /**
  * @brief Alcohol initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #alcohol_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

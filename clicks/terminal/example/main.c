@@ -3,14 +3,14 @@
  * \brief Terminal Click example
  * 
  * # Description
- * This example showcases how to initialize, configure and use the Terminal click. It is a simple
- * GPIO click which is used like an adapter for connecting and stacking other clicks and external
+ * This example showcases how to initialize, configure and use the Terminal Click. It is a simple
+ * GPIO Click which is used like an adapter for connecting and stacking other clicks and external
  * equimpent.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the click and logger modules.
+ * This function initializes and configures the Click and logger modules.
  * 
  * ## Application Task  
  * This function sets the output on all the pins (one by one) on the left side to high, going

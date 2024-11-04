@@ -3,15 +3,15 @@
  
 
 ---
-# Balancer 5 click
+# Balancer 5 Click
 
-Balancer 5 Click is an intelligent 2-cell Li-Ion battery charger, system power manager, and a battery fuel gauge Click board™. Balancer 5 click is based on BQ25887 controller which has some extra features enabling charging without too much hassle.
+Balancer 5 Click is an intelligent 2-cell Li-Ion battery charger, system power manager, and a battery fuel gauge Click board™. Balancer 5 Click is based on BQ25887 controller which has some extra features enabling charging without too much hassle.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/balancer5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/balancer-5-click)
+[Click Product page](https://www.mikroe.com/balancer-5-click)
 
 ---
 
@@ -56,7 +56,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This demo performs neccessary initializations, reads ADC values from click registers and logs it.
+> This demo performs neccessary initializations, reads ADC values from Click registers and logs it.
 
 **The demo application is composed of two sections :**
 
@@ -216,7 +216,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

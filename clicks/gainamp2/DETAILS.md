@@ -1,15 +1,15 @@
 
 
 ---
-# GainAMP 2 click
+# GainAMP 2 Click
 
-GainAMP 2 click is a 6-channel programmable gain amplifier, used to amplify signals on any of the 6 non-inverting input channels up to 32x, in eight discrete steps.
+GainAMP 2 Click is a 6-channel programmable gain amplifier, used to amplify signals on any of the 6 non-inverting input channels up to 32x, in eight discrete steps.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/gainapm2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gainamp-2-click)
+[Click Product page](https://www.mikroe.com/gainamp-2-click)
 
 ---
 
@@ -62,7 +62,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes and sets GainAMP 2 click channel 0 to amplify the signal 2 times
+> Initializes and sets GainAMP 2 Click channel 0 to amplify the signal 2 times
 
 ```c
 
@@ -122,7 +122,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

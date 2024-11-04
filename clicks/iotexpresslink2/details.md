@@ -1,6 +1,6 @@
 
 ---
-# IoT ExpressLink 2 click
+# IoT ExpressLink 2 Click
 
 > IoT ExpressLink 2 Click is a compact add-on board that allows users to connect to IoT ExpressLink services easily and securely interact with cloud applications and other services. This board features the SARA-R510AWS, an LTE-M AWS IoT EsxpressLink module from u-blox. It supports a comprehensive set of 3GPP Rel. 14 features that are relevant for IoT applications, like improvements to power consumption, coverage, data rate, mobility, and positioning. They are 5G-ready, meaning customers will be able to (software) upgrade their deployed devices once 5G LTE has been fully rolled out by mobile operators, greatly improving end-product scalability and lifetime.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/iotexpresslink2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/iot-expresslink-2-click)
+[Click Product page](https://www.mikroe.com/iot-expresslink-2-click)
 
 ---
 
@@ -64,7 +64,7 @@ err_t iotexpresslink2_generic_read ( iotexpresslink2_t *ctx, uint8_t *data_out, 
 
 ## Example Description
 
-> This example demonstrates the use of IoT ExpressLink 2 click board by connecting
+> This example demonstrates the use of IoT ExpressLink 2 Click board by connecting
 to the selected AWS account's data endpoint and showcasing the messaging topic model
 through sending and receiving messages to/from AWS IoT console.
 
@@ -253,7 +253,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

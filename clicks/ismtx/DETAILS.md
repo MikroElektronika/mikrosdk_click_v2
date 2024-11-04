@@ -1,6 +1,6 @@
 
 ---
-# ISM TX click
+# ISM TX Click
 
 > ISM TX Click is a compact add-on board that contains an ASK and (G)FSK transmitter with a programmable SPI interface. This board features the MAX41460, a UHF sub-GHz ISM/SRD transmitter designed to transmit On-Off Keying (OOK), Amplitude- Shift Keying (ASK), Frequency-Shift Keying (FSK), and Gaussian (G)FSK (or 2GFSK) data from Maxim Integrated. 
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ismtx_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ism-tx-click)
+[Click Product page](https://www.mikroe.com/ism-tx-click)
 
 ---
 
@@ -157,7 +157,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://shop.mikroe.com/usb-uart-click),
+[USB UART Click](https://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

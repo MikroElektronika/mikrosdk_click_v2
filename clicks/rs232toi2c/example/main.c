@@ -3,13 +3,13 @@
  * @brief RS232toI2C Click example
  *
  * # Description
- * This example demonstrates the use of an RS232 to I2C click board by showing
- * the communication between the two click board configured as a receiver and transmitter.
+ * This example demonstrates the use of an RS232 to I2C Click board by showing
+ * the communication between the two Click board configured as a receiver and transmitter.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which sets
+ * Initializes the driver and performs the Click default configuration which sets
  * the default UART configuration with 9600 baud rate.
  *
  * ## Application Task
@@ -30,7 +30,7 @@ static log_t logger;
 // Comment out the line below in order to switch the application mode to receiver
 #define DEMO_APP_TRANSMITTER
 
-#define DEMO_TEXT_MESSAGE           "MikroE - RS232 to I2C click"
+#define DEMO_TEXT_MESSAGE           "MikroE - RS232 to I2C Click"
 #define RESPONSE_OK                 "OK"
 #define RESPONSE_ERROR              "ERROR"
 

@@ -1,6 +1,6 @@
 
 ---
-# VCP Monitor 3 click
+# VCP Monitor 3 Click
 
 > VCP Monitor 3 Click is a high precision Voltage, Current and Power measurement Click board™ with an input capable of taking up to 15V. It features the LTC2947, from Analog Devices, a high precision power and energy monitor with an internal sense resistor supporting up to ±30A.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/vcpmonitor3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/vcp-monitor-3-click)
+[Click Product page](https://www.mikroe.com/vcp-monitor-3-click)
 
 ---
 
@@ -159,7 +159,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

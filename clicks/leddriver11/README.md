@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LED Driver 11 click
+# LED Driver 11 Click
 
 LED Driver 11 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the WLMDU9456001JT (172946001), a fully integrated constant current LED driver with the buck switching regulator and inductor in a single package from Würth Elektronik.
 
@@ -9,7 +9,7 @@ LED Driver 11 Click is a compact add-on board that simplifies the control of mul
   <img src="https://download.mikroe.com/images/click_for_ide/leddriver11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/led-driver-11-click)
+[Click Product page](https://www.mikroe.com/led-driver-11-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t leddriver11_set_duty_cycle ( leddriver11_t *ctx, float duty_cycle );
 
 ## Example Description
 
-> This example demonstrates the use of LED Driver 11 click board.
+> This example demonstrates the use of LED Driver 11 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and executes the click default configuration which starts the PWM module and sets the LEDs current to minimum.
+> Initializes the driver and executes the Click default configuration which starts the PWM module and sets the LEDs current to minimum.
 
 ```c
 
@@ -157,7 +157,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

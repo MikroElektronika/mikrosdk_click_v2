@@ -248,7 +248,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void angle4_cfg_setup ( angle4_cfg_t *cfg );
@@ -259,7 +259,7 @@ void angle4_cfg_setup ( angle4_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ANGLE4_RETVAL angle4_init ( angle4_t *ctx, angle4_cfg_t *cfg );
 
@@ -270,7 +270,7 @@ ANGLE4_RETVAL angle4_init ( angle4_t *ctx, angle4_cfg_t *cfg );
  * @param dir                Direction definition (counter-clockwise rotation or clockwise rotation)
  * @param data_resolution    Absolute Resolution ( 10bit, 12bit, 14bit or 16bit)
  *
- * @description This function executes default configuration for Angle 4 click.
+ * @description This function executes default configuration for Angle 4 Click.
  */
 void angle4_default_cfg ( angle4_t *ctx, uint8_t dir, uint8_t data_resolution );
 
@@ -344,6 +344,6 @@ uint8_t angle4_get_new_angle ( angle4_t *ctx, uint16_t *data_out );
 #endif  // _ANGLE4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

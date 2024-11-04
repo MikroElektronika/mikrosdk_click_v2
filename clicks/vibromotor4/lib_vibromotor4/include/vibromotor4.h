@@ -372,7 +372,7 @@ typedef enum
 
 /**
  * @brief Vibro Motor 4 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #vibromotor4_cfg_t object definition for detailed explanation.
@@ -384,7 +384,7 @@ void vibromotor4_cfg_setup ( vibromotor4_cfg_t *cfg );
 /**
  * @brief Vibro Motor 4 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -400,7 +400,7 @@ err_t vibromotor4_init ( vibromotor4_t *ctx, vibromotor4_cfg_t *cfg );
 /**
  * @brief Vibro Motor 4 default configuration function.
  * @details This function executes a default configuration of Vibro Motor 4
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -450,7 +450,7 @@ err_t vibromotor4_generic_read ( vibromotor4_t *ctx, uint8_t reg, uint8_t *rx_bu
  * @brief Vibro Motor 4 enable the device function.
  * @details This function is used to enable or disable the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -499,7 +499,7 @@ err_t vibromotor4_read_byte ( vibromotor4_t *ctx, uint8_t reg, uint8_t *rx_buf )
  * @brief Vibro Motor 4 sets the desired mode function.
  * @details This function is used to apply the desired mode of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -542,7 +542,7 @@ err_t vibromotor4_set_mode ( vibromotor4_t *ctx, uint8_t mode_sel );
  * @brief Vibro Motor 4 software reset function.
  * @details This function is used to perform software reset of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -558,7 +558,7 @@ err_t vibromotor4_soft_rst ( vibromotor4_t *ctx );
  * @brief Vibro Motor 4 software standby mode function.
  * @details This function is used to enable or disable the standby mode of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -575,7 +575,7 @@ err_t vibromotor4_stb_mode ( vibromotor4_t *ctx, uint8_t state );
  * @brief Vibro Motor 4 get status function.
  * @details This function is used to read the status data of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -592,7 +592,7 @@ err_t vibromotor4_get_stat ( vibromotor4_t *ctx, uint8_t *status );
  * @brief Vibro Motor 4 sets the desired input for RTP mode function.
  * @details This function is used to sets the desired Real-Time Playback Input of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -609,7 +609,7 @@ err_t vibromotor4_set_rtp_input ( vibromotor4_t *ctx, uint8_t rtp_input );
  * @brief Vibro Motor 4 sets the devices in HI-Z state function.
  * @details This function is used to enable or disable the HI-Z state of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -628,7 +628,7 @@ err_t vibromotor4_set_state_hi_z ( vibromotor4_t *ctx, uint8_t state );
  * @brief Vibro Motor 4 sets the desired vibrating patterns library function.
  * @details This function is used to set waveform library selection of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -652,7 +652,7 @@ err_t vibromotor4_set_library ( vibromotor4_t *ctx, uint8_t lib_sel );
  * @brief Vibro Motor 4 starts the motor function.
  * @details This function is used to start or stop the motor using of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -671,7 +671,7 @@ err_t vibromotor4_start_motor ( vibromotor4_t *ctx, uint8_t state );
  * @brief Vibro Motor 4 sets overdrive offset function.
  * @details This function is used to sets the desired overdrive offset of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -688,7 +688,7 @@ err_t vibromotor4_set_ovdr_offset ( vibromotor4_t *ctx, uint8_t ovdr_offset );
  * @brief Vibro Motor 4 sets sustain offset - positive function.
  * @details This function is used to sets the desired sustain offset - positive of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -705,7 +705,7 @@ err_t vibromotor4_set_sustain_offset_pos ( vibromotor4_t *ctx, uint8_t sustain_o
  * @brief Vibro Motor 4 sets sustain offset - negative function.
  * @details This function is used to sets the desired sustain offset - negative of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -722,7 +722,7 @@ err_t vibromotor4_set_sustain_offset_neg ( vibromotor4_t *ctx, uint8_t sustain_o
  * @brief Vibro Motor 4 sets brake time offset function.
  * @details This function is used to sets the desired brake time offset of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -739,7 +739,7 @@ err_t vibromotor4_set_brake_time_offset ( vibromotor4_t *ctx, uint8_t brake_time
  * @brief Vibro Motor 4 sets reference voltage function.
  * @details This function is used to sets the desired reference voltage of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -757,7 +757,7 @@ err_t vibromotor4_set_rated_volt ( vibromotor4_t *ctx, uint8_t rated_volt );
  * @details This function is used to sets a clamp so that the
  * automatic overdrive is bounded the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -775,7 +775,7 @@ err_t vibromotor4_set_ovdrv_clamp_volt ( vibromotor4_t *ctx, uint8_t ovdrv_clamp
  * @details This function is used to gets the voltage-compensation result after execution
  * of auto calibration of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -793,7 +793,7 @@ err_t vibromotor4_get_calib_res_comp ( vibromotor4_t *ctx, uint8_t *calib_res_co
  * @details This function does a real-time reading of the supply voltage
  * at the VDD pin of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -810,7 +810,7 @@ err_t vibromotor4_get_supply_volt_val ( vibromotor4_t *ctx, float *supply_volt )
  * @brief Vibro Motor 4 get the measurement of the LRA resonance period function.
  * @details This function gets the measurement of the LRA resonance period of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -827,7 +827,7 @@ err_t vibromotor4_get_lra_resonance_period ( vibromotor4_t *ctx, float *lra_res 
  * @brief Vibro Motor 4 sets the device in LRA mode function.
  * @details This function is used to sets the device in LRA mode of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -845,7 +845,7 @@ err_t vibromotor4_set_lra_mode ( vibromotor4_t *ctx, uint8_t lra_mode );
  * @details This function selects the feedback gain ratio between braking
  * gain and driving gain of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -870,7 +870,7 @@ err_t vibromotor4_set_brake_factor ( vibromotor4_t *ctx, uint8_t brk_fac );
  * @brief Vibro Motor 4 selects a loop gain function.
  * @details This function selects a loop gain for the feedback control of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -892,7 +892,7 @@ err_t vibromotor4_set_loop_gain ( vibromotor4_t *ctx, uint8_t gain );
  * @details This function is used to select the input mode for
  * the IN/TRIG(PWM) pin of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.
@@ -912,7 +912,7 @@ err_t vibromotor4_set_input ( vibromotor4_t *ctx, uint8_t state );
  * @details This function applies a 0.9-V common mode voltage
  * to the IN/TRIG pin of the DRV2605L,
  * 2- to 5.2-V Haptic Driver for LRA and ERM with Effect Library and Smart-Loop Architecture
- * on the Vibro Motor 4 click board™.
+ * on the Vibro Motor 4 Click board™.
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #vibromotor4_t object definition for detailed explanation.

@@ -265,7 +265,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void tmrangle_cfg_setup ( tmrangle_cfg_t *cfg );
@@ -275,7 +275,7 @@ void tmrangle_cfg_setup ( tmrangle_cfg_t *cfg );
  * @param tmrangle Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 TMRANGLE_RETVAL tmrangle_init ( tmrangle_t *ctx, tmrangle_cfg_t *cfg );
 
@@ -442,6 +442,6 @@ void tmrangle_calibration_find_param ( tmrangle_t* ctx,
 #endif  // _TMRANGLE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

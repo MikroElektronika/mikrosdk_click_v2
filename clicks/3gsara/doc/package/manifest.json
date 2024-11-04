@@ -10,7 +10,7 @@
     ],
     "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "3G SARA click",
+    "display_name": "3G SARA Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.c3gsara",
     "product_link": "https://www.mikroe.com/3g-sara-click",
-    "short_description": "3G SARA click is a versatile cellular network communication solution, featuring the compact 3.75G UMTS/HSPA SARA U-201 modem from u-blox.",
+    "short_description": "3G SARA Click is a versatile cellular network communication solution, featuring the compact 3.75G UMTS/HSPA SARA U-201 modem from u-blox.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1938
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.3gSara",
     "subdir_name": "lib_c3gsara"
 }
+
 
 
 

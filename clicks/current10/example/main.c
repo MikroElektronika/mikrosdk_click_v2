@@ -3,7 +3,7 @@
  * @brief Current 10 Click Example.
  *
  * # Description
- * This example demonstrates the use of Current 10 click board by reading and
+ * This example demonstrates the use of Current 10 Click board by reading and
  * displaying the input current measurements.
  *
  * The demo application is composed of two sections :

@@ -3,16 +3,16 @@
  
 
 ---
-# MCP2542 click
+# MCP2542 Click
 
-MCP2542 click is the CAN bus transceiver, which allows TTL/CMOS level signals typically found on MCUs, to be used for the communication via the CAN bus, which uses the higher voltage levels and differential signals
+MCP2542 Click is the CAN bus transceiver, which allows TTL/CMOS level signals typically found on MCUs, to be used for the communication via the CAN bus, which uses the higher voltage levels and differential signals
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/mcp2542_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/mcp2542-click)
+[Click Product page](https://www.mikroe.com/mcp2542-click)
 
 ---
 
@@ -145,7 +145,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# MRAM 4 click
+# MRAM 4 Click
 
 > MRAM 4 Click is a compact add-on board representing a magneto-resistive random-access memory solution. This board features the EM064LX, an industrial STT-MRAM persistent memory from Everspin Technologies. It is a 64Mb MRAM IC RAM and can achieve up to 200MHz as a single and double data rate (STR/DTR). The MRAM technology is analog to Flash technology with SRAM-compatible read/write timings (Persistent SRAM, P-SRAM), where data is always non-volatile. It also has a hardware write-protection feature and performs read and write operations with data retention for ten years and unlimited read, write, and erase operations for the supported life of the chip.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/mram4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/mram-4-click)
+[Click Product page](https://www.mikroe.com/mram-4-click)
 
 ---
 
@@ -70,7 +70,7 @@ err_t mram4_block_erase ( mram4_t *ctx, uint8_t cmd_block_erase, uint32_t mem_ad
 
 ## Example Description
 
-> This example demonstrates the use of MRAM 4 click board.
+> This example demonstrates the use of MRAM 4 Click board.
 > The demo app writes specified data to the memory and reads it back.
 
 **The demo application is composed of two sections :**
@@ -192,7 +192,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

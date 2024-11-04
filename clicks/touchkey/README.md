@@ -3,15 +3,15 @@
  
 
 ---
-# TouchKey click
+# TouchKey Click
 
-> Touchkey click has four capacitive pads powered by TTP224, a touchpad detector IC. Capacitive buttons like these can be toggled even when placed under a layer of glass or paper. The board outputs an interrupt signals for each pad: OUTA, OUTB,OUTC and OUTD (in place of default mikroBUS RST, AN, PWM and INT pins, respectively). The TTP224 IC has several operating modes which are accessed through onboard jumpers. Modes include Fast or low power (the response time is just 100mS at fast mode and 200mS at low power). Single-key or multi-key, direct or toggle buttons, and so on.
+> Touchkey Click has four capacitive pads powered by TTP224, a touchpad detector IC. Capacitive buttons like these can be toggled even when placed under a layer of glass or paper. The board outputs an interrupt signals for each pad: OUTA, OUTB,OUTC and OUTD (in place of default mikroBUS RST, AN, PWM and INT pins, respectively). The TTP224 IC has several operating modes which are accessed through onboard jumpers. Modes include Fast or low power (the response time is just 100mS at fast mode and 200mS at low power). Single-key or multi-key, direct or toggle buttons, and so on.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/touchkey_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/touchkey-click)
+[Click Product page](https://www.mikroe.com/touchkey-click)
 
 ---
 
@@ -159,7 +159,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

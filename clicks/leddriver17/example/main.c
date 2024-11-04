@@ -3,13 +3,13 @@
  * @brief LED Driver 17 Click example
  *
  * # Description
- * This example demonstrates the use of LED Driver 17 click board by changing
+ * This example demonstrates the use of LED Driver 17 Click board by changing
  * the LEDs dimming level.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Changes the LEDs dimming level by setting the PWM duty cycle every 500ms. 

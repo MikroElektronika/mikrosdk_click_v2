@@ -3,7 +3,7 @@
  * @brief ISOADC3 Click example
  *
  * # Description
- * This example shows the capabilities of the ISO ADC 3 click.
+ * This example shows the capabilities of the ISO ADC 3 Click.
  *
  * The demo application is composed of two sections :
  *

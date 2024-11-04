@@ -3,6 +3,6 @@
     "description": "Color 12 Click is a compact add-on board providing an accurate color-sensing solution. This board features the BU27006MUC-Z, a digital color sensor from Rohm Semiconductor with an integrated flicker sensing function. The BU27006MUC-Z can sense Red, Green, Blue (RGB), and Infrared light and efficiently convert them into digital values via the I2C interface. Its remarkable high sensitivity, wide dynamic range, and exceptional IR-cut characteristics enable precise illuminance measurement, typically up to 50klx, and accurate ambient light color temperature determination. Moreover, this sensor can effectively detect flicker noise originating from displays and room lighting, with a typical sensitivity of 10klx.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","BU27006MUC-Z"],
+    "hw" : ["Click","BU27006MUC-Z"],
     "category" : ["Click Boards > Sensors > Optical"]
 }

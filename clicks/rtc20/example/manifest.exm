@@ -3,6 +3,6 @@
     "description": "RTC 20 Click is a compact add-on board that measures the passage of real-time. This board features the AB0805, an I2C-configurable real-time clock with a highly sophisticated feature set from Abracon LLC. The AB0805 provides information like seconds, minutes, hours, days, months, years, and dates based on a 32.768kHz quartz crystal through an I2C serial interface to transmit time and calendar data to the MCU. It also has automatic leap year compensation, low power consumption, and full RTC functions such as battery backup, programmable counters, and alarms for timer and watchdog functions.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","AB0805"],
+    "hw" : ["Click","AB0805"],
     "category" : ["Click Boards > Clock & Timing > RTC"]
 }

@@ -1,8 +1,8 @@
 {
     "name": "NDIR CO2 Click",
-    "description": "NDIR CO2 click is an advanced integrated CO2 gas sensor system, which is able to measure an absolute CO2 concentration, by utilizing the CDM7160 integrated sensor. ",
+    "description": "NDIR CO2 Click is an advanced integrated CO2 gas sensor system, which is able to measure an absolute CO2 concentration, by utilizing the CDM7160 integrated sensor. ",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","CDM7160"],
+    "hw" : ["Click","CDM7160"],
     "category" : ["Gas"] 
 }

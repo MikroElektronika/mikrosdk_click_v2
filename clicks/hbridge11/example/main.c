@@ -3,13 +3,13 @@
  * @brief H-Bridge 11 Click example
  *
  * # Description
- * This example demonstrates the use of the H-Bridge 11 click board by
+ * This example demonstrates the use of the H-Bridge 11 Click board by
  * driving the DC motors connected between OUT0-OUT1 and OUT2-OUT3 in both directions. 
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Drives the motors connected between OUT0-OUT1 and OUT2-OUT3 in both directions

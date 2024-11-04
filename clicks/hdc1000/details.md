@@ -1,15 +1,15 @@
 
 
 ---
-# HDC1000 click
+# HDC1000 Click
 
-HDC1000 Click is a humidity and temperature measurement click board carrying the HDC1000 sensor. 
+HDC1000 Click is a humidity and temperature measurement Click board carrying the HDC1000 sensor. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/hdc1000_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/hdc1000-click)
+[Click Product page](https://www.mikroe.com/hdc1000-click)
 
 ---
 
@@ -47,7 +47,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- This function executes default configuration for HDC1000 click.
+- This function executes default configuration for HDC1000 Click.
 > hdc1000_default_cfg( &hdc1000 );
  
 - This function gets temperature data from the HDC1000 sensor.
@@ -141,7 +141,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

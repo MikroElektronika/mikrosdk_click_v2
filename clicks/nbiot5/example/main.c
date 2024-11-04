@@ -47,7 +47,7 @@
     SIM_APN "internet"
     SIM_SMSC "+381610401"
     PHONE_NUMBER_TO_MESSAGE "+381659999999"
- * Make sure the JP2 is removed from the click board, otherwise, you will need to connect the USB
+ * Make sure the JP2 is removed from the Click board, otherwise, you will need to connect the USB
  * so that the module can boot up successfully.
  *
  * @author Stefan Filipovic
@@ -77,7 +77,7 @@
 #define REMOTE_PORT                         "51111"         // TCP/UDP echo server port
 
 // Message content
-#define MESSAGE_CONTENT                     "NB IoT 5 click board - demo example."
+#define MESSAGE_CONTENT                     "NB IoT 5 Click board - demo example."
 
 // Application buffer size
 #define APP_BUFFER_SIZE                     256

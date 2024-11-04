@@ -1,6 +1,6 @@
 
 ---
-# Speed Sense click
+# Speed Sense Click
 
 > Speed Sense Click is a compact add-on board that allows you to measure the speed and rotation of a spinning object. This board features the A17501, a dual output differential speed and direction sensor from Allegro Microsystems. It has a high-speed switching bandwidth of up to 40kHz for two different signals. The sensor has two independent output channels with options for high-resolution XOR speed, pulse, and direction protocol.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/speedsense_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/speed-sense-click)
+[Click Product page](https://www.mikroe.com/speed-sense-click)
 
 ---
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

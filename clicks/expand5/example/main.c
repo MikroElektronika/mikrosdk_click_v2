@@ -11,7 +11,7 @@
  * Initalizes I2C driver, resets the device, configures all pins as output and makes an initial log.
  * 
  * ## Application Task  
- * This example shows the capabilities of the EXPAND 5 click by toggling each of the 24 available pins.
+ * This example shows the capabilities of the EXPAND 5 Click by toggling each of the 24 available pins.
  * 
  * \author MikroE Team
  *
@@ -61,7 +61,7 @@ void application_init ( void )
     Delay_ms ( 100 );
 
     log_printf( &logger, "------------------- \r\n" );
-    log_printf( &logger, "   EXPAND 5 click   \r\n" );
+    log_printf( &logger, "   EXPAND 5 Click   \r\n" );
     log_printf( &logger, "------------------- \r\n" );
     expand5_reset( &expand5 );
     expand5_set_all_dir( &expand5, bank_out, bank_out, bank_out );

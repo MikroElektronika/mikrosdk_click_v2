@@ -1,6 +1,6 @@
 
 ---
-# AD SWIO 2 click
+# AD SWIO 2 Click
 
 > AD-SWIO 2 Click is a quad-channel software configurable input/output solution based on AD74413R, for building and process control application. The AD74413R is a quad-channel software configurable input/output solution for building and process control applications. The device provides a fully integrated single chip solution for input and output operation. The AD-SWIO 2 Click contains four 13-bit DACs, one per chanal, and 16-bit Σ-∆ ADC. 
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/adswio2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ad-swio-2-click)
+[Click Product page](https://www.mikroe.com/ad-swio-2-click)
 
 ---
 
@@ -75,7 +75,7 @@ uint8_t adswio2_status_pin_ready ( adswio2_t *ctx );
 
 ### Application Init 
 
-> Performs a hardware reset of the click board and
+> Performs a hardware reset of the Click board and
 > executes a default configuration that enables channel A and sets it to measure voltage
 > input in the range from 0V to 10V, with 4800 SPS.
 
@@ -113,7 +113,7 @@ void application_init ( void )
     adswio2_ch_a = DUMMY;
     adswio2_res  = DUMMY;
     adswio2_err  = ADSWIO2_ERR_STATUS_OK;
-    log_printf( &logger, " AD-SWIO 2 click initialization done \r\n");
+    log_printf( &logger, " AD-SWIO 2 Click initialization done \r\n");
     log_printf( &logger, "************************************\r\n");
 }
   
@@ -174,7 +174,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# BATT Boost click
+# BATT Boost Click
 
 > BATT Boost Click is a compact add-on board that expands a coin battery cell's lifetime and current capability, like the CR2032 and lithium thionyl batteries. This board features the NBM5100A, a coin-cell battery life booster with adaptive power optimization from Nexperia. It is a battery energy management device designed to maximize usable capacity from non-rechargeable, primary batteries when used in low-voltage, low-power applications requiring burst current loads. The devices overcome voltage drop and battery life limitations associated with extracting high pulse currents.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/battboost_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/batt-boost-click)
+[Click Product page](https://www.mikroe.com/batt-boost-click)
 
 ---
 
@@ -199,7 +199,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

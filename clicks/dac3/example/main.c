@@ -3,18 +3,18 @@
  * \brief DAC3 Click example
  * 
  * # Description
- * This example showcases how to initialize, configure and use the DAC 3 click module. The click
+ * This example showcases how to initialize, configure and use the DAC 3 Click module. The Click
  * performs digital to analog conversion and the output voltage can be read on the output termi-
  * nal using a multimeter. An oscilloscope is required to read the analog signal.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function configures and initializes the click and logger modules. The write_all_mem(...)
+ * This function configures and initializes the Click and logger modules. The write_all_mem(...)
  * function configures DAC settings.
  * 
  * ## Application Task  
- * This function resets and wakes up the click module and then changes the output voltage on the
+ * This function resets and wakes up the Click module and then changes the output voltage on the
  * output terminal a few times in a loop with a 5 second delay. It does so every 1 second.
  * 
  * \author MikroE Team

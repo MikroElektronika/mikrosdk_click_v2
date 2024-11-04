@@ -3,7 +3,7 @@
  * \brief LteIot Click example
  * 
  * # Description
- * This example reads and processes data from LTE IoT click.
+ * This example reads and processes data from LTE IoT Click.
  *
  * The demo application is composed of two sections :
  * 

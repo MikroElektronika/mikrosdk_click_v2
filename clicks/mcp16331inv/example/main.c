@@ -3,12 +3,12 @@
  * \brief Mcp16331Inv Click example
  * 
  * # Description
- * This application enables usage of this click as a buck-boost voltage regulator.
+ * This application enables usage of this Click as a buck-boost voltage regulator.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes click driver and enables VIN Pull Up.
+ * Initializes Click driver and enables VIN Pull Up.
  * 
  * ## Application Task  
  * Sets DAC output voltage on 3500mV, when gain is set up on 1x VREF,

@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes driver and configures the click board.
+ * Initializes driver and configures the Click board.
  * 
  * ## Application Task  
  * Reads data from the CNTR register and calculates the speed of the motor in Rad/s.
@@ -18,7 +18,7 @@
  * A and B inputs, or alternatively, in non-quadrature mode, pulses applied at the A input.
  * 
  * ## NOTE
- * An appropriate motor with optical encoder needs to be connected to the click board.
+ * An appropriate motor with optical encoder needs to be connected to the Click board.
  * 
  * \author MikroE Team
  *

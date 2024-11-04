@@ -1,16 +1,16 @@
 \mainpage Main Page
  
 ---
-# Altitude 4 click
+# Altitude 4 Click
 
-Altitude 4 Click introduces an absolute pressure sensor with digital output for low-cost applications labeled as NPA-201. Altitude 4 click employs a MEMS pressure sensor with a signal-conditioning IC to provide accurate pressure measurements from 260 to 1260 mBar.
+Altitude 4 Click introduces an absolute pressure sensor with digital output for low-cost applications labeled as NPA-201. Altitude 4 Click employs a MEMS pressure sensor with a signal-conditioning IC to provide accurate pressure measurements from 260 to 1260 mBar.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/altitude4_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/altitude-4-click)
+[Click Product page](https://www.mikroe.com/altitude-4-click)
 
 ---
 
@@ -56,21 +56,21 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 - This function writes the len amount of data from the w_buf to the address reg.
 > void altitude4_generic_write ( altitude4_t *ctx, uint8_t reg, uint8_t *w_buf, uint8_t len );
 
-- This function acquires sensor data from the click module and stores it in the
+- This function acquires sensor data from the Click module and stores it in the
   sensor data object.
 > uint8_t altitude4_read_sensor ( altitude4_t *ctx, altitude4_sensor_t *sens_data );
 
 ## Examples Description
 
-> This example showcases how to initialize, configure and use the Altitude 4 click module. The
-  click has a sensor that measures: altitude, pressure and temperature. No additional equipment
+> This example showcases how to initialize, configure and use the Altitude 4 Click module. The
+  Click has a sensor that measures: altitude, pressure and temperature. No additional equipment
   or special configuration is required in order for this demo to work. 
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> This function initializes and configures the logger and click modules. 
+> This function initializes and configures the logger and Click modules. 
 
 ```c
 
@@ -137,7 +137,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

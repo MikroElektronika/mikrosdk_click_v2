@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# RTC 19 click
+# RTC 19 Click
 
 > RTC 19 Click is a compact add-on board that measures the passage of real-time. This board features the MAX31334, an I2C-configurable real-time clock with an integrated power switch from Analog Devices. The MAX31334 provides information like seconds, minutes, hours, days, months, years, and dates based on a 32.768kHz quartz crystal through an I2C serial interface to transmit time and calendar data to the MCU. It also has an alarm function that outputs an interrupt signal to the MCU when the day of the week, hour, or minute matches with the pre-set time, as well as a programmable square-wave output, event detection input with timestamping, and backup supply.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/rtc19_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rtc-19-click)
+[Click Product page](https://www.mikroe.com/rtc-19-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t rtc19_read_date ( rtc19_t *ctx, rtc19_date_t *date );
 
 ## Example Description
 
-> This example demonstrates the use of RTC 19 click board by reading and displaying the time and date values.
+> This example demonstrates the use of RTC 19 Click board by reading and displaying the time and date values.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and logger and performs the click default configuration which resets the device and sets the timer interrupt to 1 Hz. After that, it sets the starting time and date.
+> Initializes the driver and logger and performs the Click default configuration which resets the device and sets the timer interrupt to 1 Hz. After that, it sets the starting time and date.
 
 ```c
 
@@ -174,7 +174,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

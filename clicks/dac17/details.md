@@ -1,6 +1,6 @@
 
 ---
-# DAC 17 click
+# DAC 17 Click
 
 > DAC 17 Click is a compact add-on board that establishes precise voltage output control in various electronic applications. This board features the DAC7558, a 12-bit, octal-channel voltage output digital-to-analog (DAC) from Texas Instruments. It offers flexible internal or external power options with a voltage range from 2.7V to 5.5V. It features a rapid settling time of 5µs, rail-to-rail output amplifiers, and the ability to simultaneously or sequentially update outputs, ensuring precise and efficient performance.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dac17_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dac-17-click)
+[Click Product page](https://www.mikroe.com/dac-17-click)
 
 ---
 
@@ -52,17 +52,17 @@ err_t dac17_default_cfg ( dac17_t *ctx );
 
 #### Example key functions :
 
-- `dac17_send_command` This function is used to send specific command of the DAC 17 click board.
+- `dac17_send_command` This function is used to send specific command of the DAC 17 Click board.
 ```c
 err_t dac17_send_command ( dac17_t *ctx, uint8_t command, uint8_t ch_sel, uint16_t data_in );
 ```
 
-- `dac17_set_dac_output` This function is used to set output level of the sellected channel of the DAC 17 click board.
+- `dac17_set_dac_output` This function is used to set output level of the sellected channel of the DAC 17 Click board.
 ```c
 err_t dac17_set_dac_output ( dac17_t *ctx, uint8_t ch_sel, uint16_t dac_data );
 ```
 
-- `dac17_set_all_dac_output` This function is used to set output level of the DAC 17 click board.
+- `dac17_set_all_dac_output` This function is used to set output level of the DAC 17 Click board.
 ```c
 err_t dac17_set_all_dac_output ( dac17_t *ctx, uint16_t dac_data );
 ```
@@ -75,7 +75,7 @@ err_t dac17_set_all_dac_output ( dac17_t *ctx, uint16_t dac_data );
 
 ### Application Init
 
-> Initializes the driver and performs click default configuration.
+> Initializes the driver and performs Click default configuration.
 
 ```c
 
@@ -157,7 +157,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

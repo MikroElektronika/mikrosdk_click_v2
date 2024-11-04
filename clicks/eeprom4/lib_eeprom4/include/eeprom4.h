@@ -196,7 +196,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void eeprom4_cfg_setup ( eeprom4_cfg_t *cfg );
@@ -207,7 +207,7 @@ void eeprom4_cfg_setup ( eeprom4_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 EEPROM4_RETVAL eeprom4_init ( eeprom4_t *ctx, eeprom4_cfg_t *cfg );
 
@@ -216,7 +216,7 @@ EEPROM4_RETVAL eeprom4_init ( eeprom4_t *ctx, eeprom4_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for EEPROM 4 click.
+ * @description This function executes default configuration for EEPROM 4 Click.
  */
 void eeprom4_default_cfg ( eeprom4_t *ctx );
 
@@ -241,7 +241,7 @@ void eeprom4_generic_transfer ( eeprom4_t *ctx, uint8_t *wr_buf,
  *
  * @param ctx               Click object.    
  *
- * @description Function sends command (instruction) to click. In case that command byte is EEPROM4_LOW_POWER_WRITE_POLL_COMMAND (0x08)
+ * @description Function sends command (instruction) to Click. In case that command byte is EEPROM4_LOW_POWER_WRITE_POLL_COMMAND (0x08)
  * function returns 0x00 if part is not in a write cycle and returns 0xFF is part still busy completing the write cycle.
  * In other case function returns 0.
  */
@@ -333,6 +333,6 @@ uint8_t eeprom4_check_status_reg ( eeprom4_t *ctx, uint8_t check_bit );
 #endif  // _EEPROM4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

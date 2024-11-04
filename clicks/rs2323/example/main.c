@@ -3,8 +3,8 @@
  * @brief RS232 3 Click Example.
  *
  * # Description
- * This example demonstrates the use of an RS232 3 click board by showing
- * the communication between the two click board configured as a receiver and transmitter.
+ * This example demonstrates the use of an RS232 3 Click board by showing
+ * the communication between the two Click board configured as a receiver and transmitter.
  *
  * The demo application is composed of two sections :
  *
@@ -26,7 +26,7 @@
 // Comment out the line below in order to switch the application mode to receiver
 #define DEMO_APP_TRANSMITTER
 
-#define DEMO_TEXT_MESSAGE           "MikroE - RS232 3 click board\r\n"
+#define DEMO_TEXT_MESSAGE           "MikroE - RS232 3 Click board\r\n"
 
 static rs2323_t rs2323;
 static log_t logger;

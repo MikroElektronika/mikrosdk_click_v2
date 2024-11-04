@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and logger, and enables the click board.
+ * Initializes the driver and logger, and enables the Click board.
  * 
  * ## Application Task  
  * Set the desired output voltage by cycling through a couple of predefined voltage values.

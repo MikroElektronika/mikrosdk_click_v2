@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Brushless 11 click
+# Brushless 11 Click
 
 > Brushless 11 Click is a compact add-on board that controls brushless DC motors with any MCU. This board features the A4931, a 3-phase brushless DC motor pre-driver from Allegro Microsystems. It drives six onboard N-channel power MOSFETs and supplies the motor with 8V up to 30V voltages. This pre-driver offers enable, direction, and brake inputs that can control motor functions and logic outputs for measuring motor rotation.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/brushless11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/brushless-11-click)
+[Click Product page](https://www.mikroe.com/brushless-11-click)
 
 ---
 
@@ -70,14 +70,14 @@ err_t brushless11_set_speed ( brushless11_t *ctx, uint8_t speed );
 
 ## Example Description
 
-> This example demonstrates the use of the Brushless 11 click board by driving the 
+> This example demonstrates the use of the Brushless 11 Click board by driving the 
   motor at different speeds.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

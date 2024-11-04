@@ -306,7 +306,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void knob_cfg_setup ( knob_cfg_t *cfg );
@@ -316,7 +316,7 @@ void knob_cfg_setup ( knob_cfg_t *cfg );
  * @param knob Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 KNOB_RETVAL knob_init ( knob_t *ctx, knob_cfg_t *cfg );
 
@@ -325,9 +325,9 @@ KNOB_RETVAL knob_init ( knob_t *ctx, knob_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Knob click.
+ * @description This function executes default configuration for Knob Click.
  *
- * @note The default click set contains:
+ * @note The default Click set contains:
  *<pre>
  *    -  Led output enable
  *         ** KNOB_ENABLE_LED_OUTPUTS
@@ -460,6 +460,6 @@ void knob_get_encoder_position ( knob_t *ctx, int32_t *position, uint8_t *dir );
 #endif  // _KNOB_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

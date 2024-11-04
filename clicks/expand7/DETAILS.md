@@ -1,6 +1,6 @@
 
 ---
-# Expand 7 click
+# Expand 7 Click
 
 EXPAND 7 Click is a compact add-on board that contains a multi-port I/O expander with bi-directional input/outputs or PWM outputs.
 
@@ -9,7 +9,7 @@ EXPAND 7 Click is a compact add-on board that contains a multi-port I/O expander
 </p>
 
 
-[click Product page](https://www.mikroe.com/expand-7-click)
+[Click Product page](https://www.mikroe.com/expand-7-click)
 
 ---
 
@@ -65,7 +65,7 @@ void expand7_write_pin ( expand7_t *ctx, uint8_t pin, uint8_t pin_val );
 
 ## Examples Description
 
-> This example demonstrates the use of the EXPAND 7 click.
+> This example demonstrates the use of the EXPAND 7 Click.
 
 **The demo application is composed of two sections :**
 
@@ -100,7 +100,7 @@ void application_init ( void )
     Delay_ms ( 100 );
     
     log_printf( &logger, "------------------- \r\n" );
-    log_printf( &logger, "   EXPAND 7 click   \r\n" );
+    log_printf( &logger, "   EXPAND 7 Click   \r\n" );
     log_printf( &logger, "------------------- \r\n" );
 }
   
@@ -108,7 +108,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This example shows the capabilities of the EXPAND 7 click by toggling each of the 40 available pins.
+> This example shows the capabilities of the EXPAND 7 Click by toggling each of the 40 available pins.
 
 ```c
 
@@ -143,7 +143,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

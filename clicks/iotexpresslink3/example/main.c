@@ -3,14 +3,14 @@
  * @brief IoT ExpressLink 3 Click Example.
  *
  * # Description
- * This example demonstrates the use of IoT ExpressLink 3 click board by bridging the USB UART
- * to mikroBUS UART which allows the click board to establish a connection with
+ * This example demonstrates the use of IoT ExpressLink 3 Click board by bridging the USB UART
+ * to mikroBUS UART which allows the Click board to establish a connection with
  * the IoT ExpressLink over the Quick Connect demo application without an AWS account.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver, resets the click board to factory default settings, reads
+ * Initializes the driver, resets the Click board to factory default settings, reads
  * and displays the vendor model and thing name on the USB UART, sets the WiFi credentials,
  * and attempts to connect to the AWS Cloud. If the initial attempt fails and the error
  * message "Failed to access network" or "Failed to login AWS (MQTT) broker" appears,

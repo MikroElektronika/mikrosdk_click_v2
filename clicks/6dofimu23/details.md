@@ -1,6 +1,6 @@
 
 ---
-# 6DOF IMU 23 click
+# 6DOF IMU 23 Click
 
 > 6DOF IMU 23 Click is a compact add-on board for precise motion tracking and measurement. This board features the IIM-20670, a high-performance 6-axis MotionTracking device from TDK InvenSense that integrates a 3-axis gyroscope and a 3-axis accelerometer. The gyroscope offers a full-scale range of up to ±1966 dps with high accuracy, while the accelerometer provides a range of ±2g to ±65g. Key features also include a 10MHz SPI interface, shock tolerance up to 10,000 g, on-chip 16-bit ADCs, and low current consumption.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/6dofimu23_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/6dof-imu-23-click)
+[Click Product page](https://www.mikroe.com/6dof-imu-23-click)
 
 ---
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

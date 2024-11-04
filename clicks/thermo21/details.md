@@ -1,6 +1,6 @@
 
 ---
-# Thermo 21 click
+# Thermo 21 Click
 
 > Thermo 21 Click is a compact add-on board that provides an accurate temperature measurement. This board features the ADT7301, a high-precision digital temperature sensor from Analog Devices. The ADT7301 houses an on-chip temperature sensor, a 13-bit A/D converter, a reference circuit, and serial interface logic functions in one package. Characterized by its high accuracy (up to ±0.5°C typical) and high resolution of 0.03125°C, this temperature sensor provides temperature data to the host controller with a configurable SPI interface. This Click board™ is appropriate for process control, environmental monitoring, domestic appliances, electronic test equipment, or other temperature measurement applications.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/thermo21_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/thermo-21-click)
+[Click Product page](https://www.mikroe.com/thermo-21-click)
 
 ---
 
@@ -59,7 +59,7 @@ err_t thermo21_generic_read ( thermo21_t *ctx, uint8_t *data_out, uint8_t len );
 
 ## Example Description
 
-> This example application showcases ability of the click board to read temperature data.
+> This example application showcases ability of the Click board to read temperature data.
 
 **The demo application is composed of two sections :**
 
@@ -130,7 +130,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

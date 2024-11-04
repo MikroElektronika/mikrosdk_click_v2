@@ -156,7 +156,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void audioamp4_cfg_setup ( audioamp4_cfg_t *cfg );
@@ -166,7 +166,7 @@ void audioamp4_cfg_setup ( audioamp4_cfg_t *cfg );
  * @param audioamp4 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 AUDIOAMP4_RETVAL audioamp4_init ( audioamp4_t *ctx, audioamp4_cfg_t *cfg );
 
@@ -175,7 +175,7 @@ AUDIOAMP4_RETVAL audioamp4_init ( audioamp4_t *ctx, audioamp4_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for AudioAmp 4 click.
+ * @description This function executes default configuration for AudioAmp 4 Click.
  * 
  * @note Default Configuration
  * <pre>
@@ -194,7 +194,7 @@ void audioamp4_default_cfg ( audioamp4_t *ctx );
  *  
  * @returns          Returns device response
  * 
- * @description This function executes default configuration for AudioAmp 4 click.
+ * @description This function executes default configuration for AudioAmp 4 Click.
  */
 AUDIOAMP4_RETVAL audioamp4_set_channel ( audioamp4_t *ctx, uint8_t channel );
 
@@ -206,7 +206,7 @@ AUDIOAMP4_RETVAL audioamp4_set_channel ( audioamp4_t *ctx, uint8_t channel );
  *  
  * @returns          Returns device response
  * 
- * @description This function executes default configuration for AudioAmp 4 click.
+ * @description This function executes default configuration for AudioAmp 4 Click.
  */
 AUDIOAMP4_RETVAL audioamp4_shutdown ( audioamp4_t *ctx, uint8_t state );
 
@@ -217,6 +217,6 @@ AUDIOAMP4_RETVAL audioamp4_shutdown ( audioamp4_t *ctx, uint8_t state );
 #endif  // _AUDIOAMP4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

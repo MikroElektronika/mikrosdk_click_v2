@@ -187,7 +187,7 @@ extern "C"{
  *
  * @param cfg            Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void sram_cfg_setup ( sram_cfg_t *cfg );
@@ -198,7 +198,7 @@ void sram_cfg_setup ( sram_cfg_t *cfg );
  * @param sram           Click object.
  * @param cfg            Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 SRAM_RETVAL sram_init ( sram_t *ctx, sram_cfg_t *cfg );
 
@@ -302,6 +302,6 @@ void sram_hold_transmission ( sram_t *ctx );
 #endif  // _SRAM_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

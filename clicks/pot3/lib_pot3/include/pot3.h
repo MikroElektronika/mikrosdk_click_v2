@@ -156,7 +156,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void pot3_cfg_setup ( pot3_cfg_t *cfg );
@@ -166,7 +166,7 @@ void pot3_cfg_setup ( pot3_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  *
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 POT3_RETVAL pot3_init ( pot3_t* ctx, pot3_cfg_t* cfg );
 
@@ -213,6 +213,6 @@ uint16_t pot3_get_vout ( pot3_t* ctx, uint8_t vref_sel, uint16_t n_samples );
 #endif  // _POT3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

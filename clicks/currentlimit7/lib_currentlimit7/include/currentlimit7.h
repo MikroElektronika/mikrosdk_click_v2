@@ -221,7 +221,7 @@ typedef enum
 
 /**
  * @brief Current Limit 7 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #currentlimit7_cfg_t object definition for detailed explanation.
@@ -233,7 +233,7 @@ void currentlimit7_cfg_setup ( currentlimit7_cfg_t *cfg );
 /**
  * @brief Current Limit 7 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #currentlimit7_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -249,7 +249,7 @@ err_t currentlimit7_init ( currentlimit7_t *ctx, currentlimit7_cfg_t *cfg );
 /**
  * @brief Current Limit 7 default configuration function.
  * @details This function executes a default configuration of Current Limit 7
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #currentlimit7_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

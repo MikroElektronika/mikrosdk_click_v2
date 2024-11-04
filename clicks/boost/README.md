@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# BOOST click
+# BOOST Click
 
-Boost click carries Microchip’s MIC2606, a 2MHz, PWM DC/DC boost switching regulator available in a 2mm x 2mm MLF® package.
+Boost Click carries Microchip’s MIC2606, a 2MHz, PWM DC/DC boost switching regulator available in a 2mm x 2mm MLF® package.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/boost_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/boost-click)
+[Click Product page](https://www.mikroe.com/boost-click)
 
 ---
 
@@ -59,7 +59,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> Boost click provides an adjustable output voltage through the onboard DAC that drives the FB pin of the MIC2606 to set desired output voltage.
+> Boost Click provides an adjustable output voltage through the onboard DAC that drives the FB pin of the MIC2606 to set desired output voltage.
 
 **The demo application is composed of two sections :**
 
@@ -141,7 +141,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

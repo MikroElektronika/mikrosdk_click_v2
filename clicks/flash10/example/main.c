@@ -3,7 +3,7 @@
  * @brief Flash 10 Click example
  *
  * # Description
- * This example demonstrates the use of Flash 10 click board by writing specified data to
+ * This example demonstrates the use of Flash 10 Click board by writing specified data to
  * the memory and reading it back.
  *
  * The demo application is composed of two sections :
@@ -25,7 +25,7 @@
 #include "flash10.h"
 
 #define DEMO_TEXT_MESSAGE_1         "MIKROE"
-#define DEMO_TEXT_MESSAGE_2         "Flash 10 click"
+#define DEMO_TEXT_MESSAGE_2         "Flash 10 Click"
 #define STARTING_ADDRESS            0x012345
 
 static flash10_t flash10;

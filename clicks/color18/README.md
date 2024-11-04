@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Color 18 click
+# Color 18 Click
 
 > Color 18 Click is a compact add-on board for accurate ambient light detection and flicker monitoring. This board features the TCS3530, a true color ambient light sensor from ams OSRAM. The TCS3530 features true color XYZ sensing, flicker detection up to 7kHz, and eight concurrent sensing channels with independent gain configurations. It also includes a UV/IR blocking filter for precise light measurements and a unique Click Snap feature, allowing the main sensor area to become movable by breaking the PCB for flexible implementation.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/color18_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/color-18-click)
+[Click Product page](https://www.mikroe.com/color-18-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t color18_clear_fifo ( color18_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Color 18 click by reading and displaying the values from all 8 modulator channels.
+> This example demonstrates the use of Color 18 Click by reading and displaying the values from all 8 modulator channels.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -207,7 +207,7 @@ typedef enum
 
 /**
  * @brief GSM 5 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #gsm5_cfg_t object definition for detailed explanation.
@@ -219,7 +219,7 @@ void gsm5_cfg_setup ( gsm5_cfg_t *cfg );
 /**
  * @brief GSM 5 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #gsm5_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -325,7 +325,7 @@ void gsm5_module_power_on ( gsm5_t *ctx );
 
 /**
  * @brief Send command function.
- * @details This function sends a specified command to the click module.
+ * @details This function sends a specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #gsm5_t object definition for detailed explanation.
  * @param[in] cmd  Command variable.
@@ -336,7 +336,7 @@ void gsm5_send_cmd ( gsm5_t *ctx, char *cmd );
 
 /**
  * @brief Send command function with parameter.
- * @details This function sends a command with specified parameter to the click module.
+ * @details This function sends a command with specified parameter to the Click module.
  * @param[in] ctx : Click context object.
  * See #gsm5_t object definition for detailed explanation.
  * @param[in] at_cmd_buf  Command buffer.

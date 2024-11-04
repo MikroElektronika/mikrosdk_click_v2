@@ -3,13 +3,13 @@
  * @brief RTC 19 Click example
  *
  * # Description
- * This example demonstrates the use of RTC 19 click board by reading and displaying
+ * This example demonstrates the use of RTC 19 Click board by reading and displaying
  * the time and date values.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and logger and performs the click default configuration
+ * Initializes the driver and logger and performs the Click default configuration
  * which resets the device and sets the timer interrupt to 1 Hz. 
  * After that, it sets the starting time and date.
  *

@@ -1,6 +1,6 @@
 
 ---
-# Brushless 22 click
+# Brushless 22 Click
 
 > Brushless 22 Click is a compact add-on board suitable for controlling brushless DC (BLDC) motors with any MCU. This board features the MTD6508, a 3-phase full-wave sensorless driver for BLDC motors from Microchip Technology. It features 180° sinusoidal drive, high torque output, and silent drive, rated for an operating voltage range including both mikroBUS™ power rails, and comes with speed control achieved through pulse-width modulation (PWM). Besides, it features several diagnostic circuits and drive-control functions such as motor lock protection, overcurrent limitation, and thermal shutdown protection.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/brushless22_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/brushless-22-click)
+[Click Product page](https://www.mikroe.com/brushless-22-click)
 
 ---
 
@@ -69,13 +69,13 @@ void brushless22_switch_direction ( brushless22_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of the Brushless 22 click board by driving the motor in both directions at different speeds.
+> This example demonstrates the use of the Brushless 22 Click board by driving the motor in both directions at different speeds.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -160,7 +160,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

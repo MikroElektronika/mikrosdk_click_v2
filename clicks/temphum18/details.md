@@ -1,6 +1,6 @@
 
 ---
-# Temp&Hum 18 click
+# Temp&Hum 18 Click
 
 > Temp&Hum 18 Click is a compact add-on board that represents temperature and humidity sensing solutions. This board features the HS3003, a highly accurate, fully calibrated relative humidity and temperature sensor from Renesas. It features proprietary sensor-level protection, ensuring high reliability and long-term stability. Integrated calibration and temperature-compensation logic provides fully corrected RH and temperature values via standard I2C output. No user calibration of the output data is required. The high accuracy, fast measurement response time, and long-term stability make this Click board™ ideal for various temperature and humidity-related applications and a vast number of applications ranging from portable devices to products designed for harsh environments.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/temphum18_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/temphum-18-click)
+[Click Product page](https://www.mikroe.com/temphum-18-click)
 
 ---
 
@@ -163,7 +163,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

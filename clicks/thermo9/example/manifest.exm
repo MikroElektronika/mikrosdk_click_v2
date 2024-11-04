@@ -3,6 +3,6 @@
     "description": "The TSYS01 is a single chip, versatile, new technology temperature sensor. The TSYS01 provides factory calibrated temperature information. It includes a temperature sensing chip and a 24 bit Σ-ADC.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TSYS01"],
+    "hw" : ["Click","TSYS01"],
     "category" : ["Temperature & humidity"] 
 }

@@ -3,12 +3,12 @@
  * @brief VibroMotor3 Click example
  *
  * # Description
- * This example shows the capabilities of the Vibro Motor 3 click board 
+ * This example shows the capabilities of the Vibro Motor 3 Click board 
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initalizes I2C driver, PWM driver and configures Vibro Motor 3 click board.
+ * Initalizes I2C driver, PWM driver and configures Vibro Motor 3 Click board.
  *
  * ## Application Task
  * Changing duty cycle applied in order to get different vibrations.

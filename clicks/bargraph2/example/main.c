@@ -3,13 +3,13 @@
  * \brief Bargraph2 Click example
  * 
  * # Description
- * The example starts off with the initalisation and configuration of the logger and click
- * modules and later on showcases different ways of lighting LED diodes on the click.
+ * The example starts off with the initalisation and configuration of the logger and Click
+ * modules and later on showcases different ways of lighting LED diodes on the Click.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules.
+ * This function initializes and configures the logger and Click modules.
  * 
  * ## Application Task  
  * This function shows the user how to light single and multiple LED diodes.

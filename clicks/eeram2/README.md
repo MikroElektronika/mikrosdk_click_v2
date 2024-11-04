@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# EERAM 2 click
+# EERAM 2 Click
 
 EERAM 2 Click is a standalone serial SRAM memory that includes shadow non-volatile backup. EERAM uses a small external capacitor to provide the energy needed to move the contents of the SRAM to the non-volatile cells when system power is lost.
 
@@ -9,7 +9,7 @@ EERAM 2 Click is a standalone serial SRAM memory that includes shadow non-volati
   <img src="https://download.mikroe.com/images/click_for_ide/eeram2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/eeram-2-click)
+[Click Product page](https://www.mikroe.com/eeram-2-click)
 
 ---
 
@@ -55,7 +55,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example demonstrates the use of EERAM 2 click board. 
+> This example demonstrates the use of EERAM 2 Click board. 
 
 **The demo application is composed of two sections :**
 
@@ -148,7 +148,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

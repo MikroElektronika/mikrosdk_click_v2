@@ -3,7 +3,7 @@
  * \brief OPTO 4 Click example
  * 
  * # Description
- * This click sets power on switch enabled and disabled.
+ * This Click sets power on switch enabled and disabled.
  *
  * The demo application is composed of two sections :
  * 

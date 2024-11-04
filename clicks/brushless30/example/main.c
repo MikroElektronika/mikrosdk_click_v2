@@ -3,13 +3,13 @@
  * @brief Brushless 30 Click example
  *
  * # Description
- * This example configures the Brushless 30 click board and makes it ready for
+ * This example configures the Brushless 30 Click board and makes it ready for
  * the motor control over 6 PWM input signals.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Monitors the DIAG pin state, displays the STAT1 and STAT2 registers on the USB UART,

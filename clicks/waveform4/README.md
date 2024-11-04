@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Waveform 4 click
+# Waveform 4 Click
 
 > Waveform 4 Click is a compact add-on board that represents a high-performance signal generator. This board features the AD9106, a quad-channel, 12-bit, 180MSPS waveform generator, integrating on-chip static random access memory (SRAM) and direct digital synthesis (DDS) for complex waveform generation from Analog Devices. The DDS is up to a 180 MHz master clock sinewave generator with a 24-bit tuning word allowing 10.8 Hz/LSB frequency resolution.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/waveform4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/waveform-4-click)
+[Click Product page](https://www.mikroe.com/waveform-4-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t waveform4_set_wave_output ( waveform4_t *ctx, uint8_t channel, uint8_t wav
 
 ## Example Description
 
-> This example demonstrates the use of Waveform 4 click board.
+> This example demonstrates the use of Waveform 4 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which resets the registers and sets the sine wave output with default gain and 
+> Initializes the driver and performs the Click default configuration which resets the registers and sets the sine wave output with default gain and 
 > default frequency for all channels. After that it displays the list of supported commands on the USB UART.
 
 ```c
@@ -148,7 +148,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

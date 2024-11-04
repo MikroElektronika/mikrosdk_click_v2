@@ -57,7 +57,7 @@ void application_init ( void )
 
     altitude3_default_cfg ( &altitude3 );
 
-    log_printf( &logger, "** Altitude 3 click is initialized **\r\n\r\n" );
+    log_printf( &logger, "** Altitude 3 Click is initialized **\r\n\r\n" );
 }
 
 void application_task ( void )

@@ -140,7 +140,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void current2_cfg_setup ( current2_cfg_t *cfg );
@@ -150,7 +150,7 @@ void current2_cfg_setup ( current2_cfg_t *cfg );
  * @param current2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 uint8_t current2_init ( current2_t *ctx, current2_cfg_t *cfg );
 
@@ -209,6 +209,6 @@ uint16_t current2_get_current ( current2_t *ctx, uint8_t n_sample );
 #endif  // _CURRENT2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

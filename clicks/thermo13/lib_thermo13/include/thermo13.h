@@ -209,7 +209,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void thermo13_cfg_setup ( thermo13_cfg_t *cfg );
@@ -219,7 +219,7 @@ void thermo13_cfg_setup ( thermo13_cfg_t *cfg );
  * @param thermo13 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 THERMO13_RETVAL thermo13_init ( thermo13_t *ctx, thermo13_cfg_t *cfg );
 
@@ -228,7 +228,7 @@ THERMO13_RETVAL thermo13_init ( thermo13_t *ctx, thermo13_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Thermo13 click.
+ * @description This function executes default configuration for Thermo13 Click.
  */
 void thermo13_default_cfg ( thermo13_t *ctx );
 
@@ -333,6 +333,6 @@ void thermo13_software_reset ( thermo13_t *ctx );
 #endif  // THERMO13_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

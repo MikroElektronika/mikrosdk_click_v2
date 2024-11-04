@@ -1,6 +1,6 @@
 
 ---
-# PAC1944 click
+# PAC1944 Click
 
 PAC1944 Click is a compact add-on board that contains an energy monitoring solution. This board features the PAC1944, a multi-channel DC power/energy monitor from Microchip Technology. It uses real-time calibration to minimize offset and gain errors with no input filters required for this device.
 
@@ -8,7 +8,7 @@ PAC1944 Click is a compact add-on board that contains an energy monitoring solut
   <img src="https://download.mikroe.com/images/click_for_ide/pac1944_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pac1944-click)
+[Click Product page](https://www.mikroe.com/pac1944-click)
 
 ---
 
@@ -134,7 +134,7 @@ void application_init ( void ) {
 > The application sends a refresh command which stores the
 > measurement data in registers. Measurements are acquired
 > for voltage, current and power on channel 1 of PAC1944
-> click board. The last 8 measurements are averaged and
+> Click board. The last 8 measurements are averaged and
 > calculated in bipolar mode. Process is repeated every
 > two seconds.
 
@@ -182,7 +182,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

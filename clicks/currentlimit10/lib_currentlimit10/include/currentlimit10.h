@@ -202,7 +202,7 @@ typedef enum
 
 /**
  * @brief Current Limit 10 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #currentlimit10_cfg_t object definition for detailed explanation.
@@ -214,7 +214,7 @@ void currentlimit10_cfg_setup ( currentlimit10_cfg_t *cfg );
 /**
  * @brief Current Limit 10 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #currentlimit10_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -229,7 +229,7 @@ err_t currentlimit10_init ( currentlimit10_t *ctx, currentlimit10_cfg_t *cfg );
 /**
  * @brief Current Limit 10 default configuration function.
  * @details This function executes a default configuration of Current Limit 10
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #currentlimit10_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

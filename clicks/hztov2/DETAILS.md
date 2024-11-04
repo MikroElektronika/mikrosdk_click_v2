@@ -1,14 +1,14 @@
 
 ---
-# HZ to V 2 click
+# HZ to V 2 Click
 
-HZ to V 2 click is a device that can convert input frequency of the signal with virtually any wave shape to a DC voltage output, with a level proportional to the input frequency.
+HZ to V 2 Click is a device that can convert input frequency of the signal with virtually any wave shape to a DC voltage output, with a level proportional to the input frequency.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/hztov2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/hz-to-v-2-click)
+[Click Product page](https://www.mikroe.com/hz-to-v-2-click)
 
 ---
 
@@ -44,7 +44,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- This function enable the click board.
+- This function enable the Click board.
 > void hztov2_en_pin ( hztov2_t *ctx, uint8_t pin_state );
 
 - This function read ADC data and converts it to voltage.
@@ -61,7 +61,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> This function initializes and configures the logger and the click board.
+> This function initializes and configures the logger and the Click board.
 
 ```c
 
@@ -132,7 +132,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -3,6 +3,6 @@
     "description": "VCP Monitor 4 Click is a compact add-on board that represents a high-precision power monitoring system. This board features the INA239, ultra-precise digital power monitor with a 16-bit delta-sigma ADC specifically designed for current-sensing applications from Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","INA239"],
+    "hw" : ["Click","INA239"],
     "category" : ["Current sensor"]
 }

@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# 3G SARA click
+# 3G SARA Click
 
-3G SARA click is a versatile cellular network communication solution, featuring the compact 3.75G UMTS/HSPA SARA U-201 modem from u-blox.
+3G SARA Click is a versatile cellular network communication solution, featuring the compact 3.75G UMTS/HSPA SARA U-201 modem from u-blox.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/3gsara_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/3g-sara-click)
+[Click Product page](https://www.mikroe.com/3g-sara-click)
 
 ---
 
@@ -205,7 +205,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

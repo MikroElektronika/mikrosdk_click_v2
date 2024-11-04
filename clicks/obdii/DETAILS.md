@@ -1,14 +1,14 @@
 
 ---
-# OBDII click
+# OBDII Click
 
-> OBDII click offers a unique opportunity to tap into the car diagnostic systems. It features the STN1110 Multiprotocol OBD to UART Interface, developed by the ScanTool technologies. This click can be used for the communication with the Electronic Control Unit (ECU) of a vehicle, via several different OBD II diagnostic protocols such as CAN, K LINE, L LINE and J1850. The STN1110 IC is used to process requests sent by the MCU via the UART interface and return back the responses from the ECU network nodes.
+> OBDII Click offers a unique opportunity to tap into the car diagnostic systems. It features the STN1110 Multiprotocol OBD to UART Interface, developed by the ScanTool technologies. This Click can be used for the communication with the Electronic Control Unit (ECU) of a vehicle, via several different OBD II diagnostic protocols such as CAN, K LINE, L LINE and J1850. The STN1110 IC is used to process requests sent by the MCU via the UART interface and return back the responses from the ECU network nodes.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/obdii_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/obdii-click)
+[Click Product page](https://www.mikroe.com/obdii-click)
 
 ---
 
@@ -64,13 +64,13 @@ void obdii_reset_device ( obdii_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of OBDII click board by reading the engine RPM and vehicle speed and displaying results on the USB UART.
+> This example demonstrates the use of OBDII Click board by reading the engine RPM and vehicle speed and displaying results on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -182,7 +182,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

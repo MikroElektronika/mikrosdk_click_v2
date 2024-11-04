@@ -3,6 +3,6 @@
     "description": "Smart DOF 5 Click is a compact add-on board designed for precise motion and orientation detection in automotive applications. This board features the ASM330LHHXG1, a high-accuracy 6-axis inertial measurement unit (IMU) from STMicroelectronics. It features a 3-axis accelerometer and a 3-axis gyroscope and supports dual operating modes (high-performance and low-power) with flexible communication options through SPI or I2C interfaces. Additionally, it includes the Click Snap format, enabling the autonomous use of the Snap section and integration of external sensors via the I2C Master interface.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","ASM330LHHXG1TR"],
+    "hw" : ["Click","ASM330LHHXG1TR"],
     "category" : ["Click Boards > Sensors > Motion"]
 }

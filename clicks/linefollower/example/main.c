@@ -3,17 +3,17 @@
  * \brief Line Follower Click example
  * 
  * # Description
- * Line Follower click carries an array of five QRE1113 
+ * Line Follower Click carries an array of five QRE1113 
  * miniature reflective object sensors,
  * reading staus of AN, RST, PWM, TX and RX pins and reading tracking data.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Application Init performs logger and click Initialization.
+ * Application Init performs logger and Click Initialization.
  * 
  * ## Application Task  
- * Application Task shows the functionality of the Line Follower click.
+ * Application Task shows the functionality of the Line Follower Click.
  * Each one of the QRE1113 sensors consist of an
  * infrared transmitter and infrared receiver. 
  * By default the sensor output a Logic Level 1, until they encounter a 

@@ -10,8 +10,8 @@
  * ## Application Init 
  * Initialization driver enables - I2C, also write log.
  * 
- * ## Application Task - (code snippet) This is an example which demonstrates the use of MAC Address click board.
- * MAC Address click communicates with register via I2C protocol by the write to register and read from the register.
+ * ## Application Task - (code snippet) This is an example which demonstrates the use of MAC Address Click board.
+ * MAC Address Click communicates with register via I2C protocol by the write to register and read from the register.
  * This example shows write/read single byte and sequential write/read from EEPROM.
  * Results are being sent to the Usart Terminal where you can track their changes.
  * All data logs write on USB uart changes for every 1 sec.

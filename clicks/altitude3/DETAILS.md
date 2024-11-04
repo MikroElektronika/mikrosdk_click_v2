@@ -1,15 +1,15 @@
 
 
 ---
-# Altitude 3 click
+# Altitude 3 Click
 
-Altitude 3 click allows high-resolution barometric pressure measurement, by utilizing the ICP-10100, an integrated barometric pressure and temperature sensor.
+Altitude 3 Click allows high-resolution barometric pressure measurement, by utilizing the ICP-10100, an integrated barometric pressure and temperature sensor.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/altitude3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/altitude-3-click)
+[Click Product page](https://www.mikroe.com/altitude-3-click)
 
 ---
 
@@ -98,7 +98,7 @@ void application_init ( void )
 
     altitude3_default_cfg ( &altitude3 );
 
-    log_printf( &logger, "** Altitude 3 click is initialized **\r\n\r\n" );
+    log_printf( &logger, "** Altitude 3 Click is initialized **\r\n\r\n" );
 }
   
 ```
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

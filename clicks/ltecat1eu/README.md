@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# LTE Cat.1-EU click
+# LTE Cat.1-EU Click
 
-LTE Cat.1-EU click is a Click board™ based on Thales Cinterion® ELS61 wireless module that delivers highly efficient Cat 1 LTE connectivity for M2M IoT solutions offering seamless fall back to 2G and 3G networks. The best in class solution enables M2M optimized speeds of 10Mbit/s download and 5Mbit/s uplink making it ideal for the vast number of M2M and industrial IoT applications that are not dependent on speed but that requires the longevity of LTE networks, while still providing 3G and 2G connectivity to ensure complete population and geographic coverage as LTE rolls out.
+LTE Cat.1-EU Click is a Click board™ based on Thales Cinterion® ELS61 wireless module that delivers highly efficient Cat 1 LTE connectivity for M2M IoT solutions offering seamless fall back to 2G and 3G networks. The best in class solution enables M2M optimized speeds of 10Mbit/s download and 5Mbit/s uplink making it ideal for the vast number of M2M and industrial IoT applications that are not dependent on speed but that requires the longevity of LTE networks, while still providing 3G and 2G connectivity to ensure complete population and geographic coverage as LTE rolls out.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ltecat1eu_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lte-cat1-eu-click-for-europe)
+[Click Product page](https://www.mikroe.com/lte-cat1-eu-click-for-europe)
 
 ---
 
@@ -48,12 +48,12 @@ err_t ltecat1eu_init ( ltecat1eu_t *ctx, ltecat1eu_cfg_t *cfg );
 
 #### Example key functions :
 
-- `ltecat1eu_send_cmd` This function sends the specified command to the click module.
+- `ltecat1eu_send_cmd` This function sends the specified command to the Click module.
 ```c
 void ltecat1eu_send_cmd ( ltecat1eu_t *ctx, char *cmd );
 ```
 
-- `ltecat1eu_send_cmd_with_parameter` This function sends commands to the click module.
+- `ltecat1eu_send_cmd_with_parameter` This function sends commands to the Click module.
 ```c
 void ltecat1eu_send_cmd_with_parameter ( ltecat1eu_t *ctx, char *at_cmd_buf, char *param_buf );
 ```
@@ -282,7 +282,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

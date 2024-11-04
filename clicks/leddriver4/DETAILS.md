@@ -1,14 +1,14 @@
 
 ---
-# LED Driver 4 click
+# LED Driver 4 Click
 
-LED Driver 4 click is a form of a high-efficiency boost converter that is ideally suited for driving an array of white LEDs. The driver has the ability to dim the connected LED array, without producing any noise on the output. The Click board is capable of driving a LED array with up to 26V, providing a constant current to the LED segments.
+LED Driver 4 Click is a form of a high-efficiency boost converter that is ideally suited for driving an array of white LEDs. The driver has the ability to dim the connected LED array, without producing any noise on the output. The Click board is capable of driving a LED array with up to 26V, providing a constant current to the LED segments.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/leddriver4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/led-driver-4-click)
+[Click Product page](https://www.mikroe.com/led-driver-4-click)
 
 ---
 
@@ -54,7 +54,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This click has the ability to dim the connected LED array, without producing any noise on the output.
+> This Click has the ability to dim the connected LED array, without producing any noise on the output.
 
 **The demo application is composed of two sections :**
 
@@ -140,7 +140,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

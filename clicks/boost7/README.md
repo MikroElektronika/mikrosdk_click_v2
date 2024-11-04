@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Boost 7 click
+# Boost 7 Click
 
 > Boost 7 Click is a compact add-on board that steps up the voltage from its input (supply) to its output (load). This board features the BD8316GWL, a dual DC/DC converter from Rohm Semiconductor. Each converter inside the BD8316GWL is designed with up to 200mA current limit generating well-regulated positive and negative outputs of ±3.3V or ±5V, making the BD8316GWL ideal for various applications. In addition to the possibility of working with both mikroBUS™ power rails, it also provides the opportunity of using an external power supply with a very low voltage of 2.5V.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/boost7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/boost-7-click)
+[Click Product page](https://www.mikroe.com/boost-7-click)
 
 ---
 
@@ -65,7 +65,7 @@ void boost7_enable_out2 ( boost7_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Boost 7 click board by controlling the V- and V+ outputs state.
+> This example demonstrates the use of Boost 7 Click board by controlling the V- and V+ outputs state.
 
 **The demo application is composed of two sections :**
 
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

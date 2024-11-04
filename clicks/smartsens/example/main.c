@@ -3,7 +3,7 @@
  * @brief Smart Sens Click example
  *
  * # Description
- * This example showcases the ability of the Smart Sens click board.
+ * This example showcases the ability of the Smart Sens Click board.
  * It has multiple examples that you can easily select with the 
  * defines at the top of the main. There are 5 examples: Euler, Quaternion, 
  * and Vector (Accelerometer, Gyroscope, Magnetometer).

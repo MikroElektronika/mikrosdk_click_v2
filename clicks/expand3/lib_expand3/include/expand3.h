@@ -232,7 +232,7 @@ typedef enum
 
 /**
  * @brief Expand 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #expand3_cfg_t object definition for detailed explanation.
@@ -244,7 +244,7 @@ void expand3_cfg_setup ( expand3_cfg_t *cfg );
 /**
  * @brief Expand 3 driver interface setup function.
  * @details This function sets a communication GPIO pin which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #expand3_cfg_t object definition for detailed explanation.
  * @param[in] gpio_sel : GPIO pin selection.
@@ -260,7 +260,7 @@ void expand3_gpio_selection ( expand3_cfg_t *cfg, expand3_gpio_sel_t gpio_sel );
 /**
  * @brief Expand 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #expand3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -275,7 +275,7 @@ err_t expand3_init ( expand3_t *ctx, expand3_cfg_t *cfg );
 /**
  * @brief Expand 3 default configuration function.
  * @details This function executes a default configuration of Expand 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #expand3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

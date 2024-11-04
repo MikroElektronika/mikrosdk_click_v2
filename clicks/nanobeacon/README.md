@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# NanoBeacon click
+# NanoBeacon Click
 
 > NanoBeacon Click is a compact add-on board that provides a powerful and efficient Bluetooth beacon solution. This board features the IN100, an ultra-low power Bluetooth 5.3 Beacon SoC from InPlay, that sets a new standard in beacon technology. Its ultra-low power consumption, enhanced privacy mode, and three beacon modes offer seamless compatibility with no Bluetooth programming required - plug and play. Its compact design houses two types of built-in memory (4Kb OTP and 4KB SRAM), UART and I2C interfaces, and a hardware security engine.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/nanobeacon_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/nanobeacon-click)
+[Click Product page](https://www.mikroe.com/nanobeacon-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t nanobeacon_start_advertising ( nanobeacon_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of NanoBeacon click board by setting the Eddystone URI advertisement to click boards webpage.
+> This example demonstrates the use of NanoBeacon Click board by setting the Eddystone URI advertisement to Click boards webpage.
 
 **The demo application is composed of two sections :**
 
@@ -109,7 +109,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Every 10 seconds, it restarts and configures the device for advertisement with the Eddystone URI beacon format set to click boards webpage: https://www.mikroe.com/click
+> Every 10 seconds, it restarts and configures the device for advertisement with the Eddystone URI beacon format set to Click boards webpage: https://www.mikroe.com/click
 
 ```c
 void application_task ( void )
@@ -173,7 +173,7 @@ void application_task ( void )
 
 ## Note
 
-> During advertising, the click board should appear as an Eddystone URI beacon on the BLE Scanner application.
+> During advertising, the Click board should appear as an Eddystone URI beacon on the BLE Scanner application.
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 
@@ -186,7 +186,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -359,7 +359,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void buck14_cfg_setup ( buck14_cfg_t *cfg );
@@ -369,7 +369,7 @@ void buck14_cfg_setup ( buck14_cfg_t *cfg );
  * @param buck14 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 BUCK14_RETVAL buck14_init ( buck14_t *ctx, buck14_cfg_t *cfg );
 
@@ -378,7 +378,7 @@ BUCK14_RETVAL buck14_init ( buck14_t *ctx, buck14_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Buck14 click.
+ * @description This function executes default configuration for Buck14 Click.
  */
 void buck14_default_cfg ( buck14_t *ctx );
 
@@ -487,6 +487,6 @@ uint8_t buc14_write_vout ( buck14_t *ctx, float vout );
 #endif  // _BUCK14_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

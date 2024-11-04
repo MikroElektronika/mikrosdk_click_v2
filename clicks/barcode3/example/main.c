@@ -3,7 +3,7 @@
  * @brief Barcode 3 Click Example.
  *
  * # Description
- * This example demonstrates the use of the Barcode 3 click board by scanning
+ * This example demonstrates the use of the Barcode 3 Click board by scanning
  * and displaying the content of a barcode or QR Code.
  *
  * The demo application is composed of two sections :

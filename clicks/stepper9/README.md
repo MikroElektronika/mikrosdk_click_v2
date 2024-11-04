@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Stepper 9 click
+# Stepper 9 Click
 
 > Stepper 9 Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the TB67S581FNG, a two-phase bipolar stepping motor driver from Toshiba Semiconductor. Fabricated with the BiCD process, it supports a PWM constant-current control drive and steps resolution from full to 1/32 for less motor noise and smoother control. It has a wide operating voltage range of 8.2V to 44V with a maximum output current capacity of 2A, decay modes selection function, protection, and several anomaly detection indicators.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/stepper9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/stepper-9-click)
+[Click Product page](https://www.mikroe.com/stepper-9-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t stepper9_set_step_mode ( stepper9_t *ctx, uint8_t mode );
 
 ## Example Description
 
-> This example demonstrates the use of the Stepper 9 click board by driving the motor in both directions for a desired number of steps.
+> This example demonstrates the use of the Stepper 9 Click board by driving the motor in both directions for a desired number of steps.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

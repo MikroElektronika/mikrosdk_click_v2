@@ -373,7 +373,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void proximity13_cfg_setup ( proximity13_cfg_t *cfg );
@@ -384,7 +384,7 @@ void proximity13_cfg_setup ( proximity13_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 PROXIMITY13_RETVAL proximity13_init ( proximity13_t *ctx, proximity13_cfg_t *cfg );
 
@@ -393,7 +393,7 @@ PROXIMITY13_RETVAL proximity13_init ( proximity13_t *ctx, proximity13_cfg_t *cfg
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Proximity13 click.
+ * @description This function executes default configuration for Proximity13 Click.
  */
 void proximity13_default_cfg ( proximity13_t *ctx );
 
@@ -496,6 +496,6 @@ void proximity13_read_channels ( proximity13_t *ctx, proximity13_chn_val_t *chn_
 #endif  // _PROXIMITY13_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

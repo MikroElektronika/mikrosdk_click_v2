@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# RS232 3 click
+# RS232 3 Click
 
 > RS232 3 Click is a compact add-on board representing a universal usable RS232 transceiver. This board features the SP3221E, a low-power RS232 transceiver from MaxLinear. The SP3221E uses an internal high-efficiency, charge-pump power supply and is compliant with EIA/TIA-232-F standards when powered by any of the mikroBUS™ power rails. The AUTO ON-LINE® feature allows the SP3221E to automatically "Wake-Up" from a Shutdown state when an RS232 cable is connected and a peripheral device is turned on. When not connected or not in use, the SP3221E will automatically shut down, drawing less supply current.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/rs2323_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rs232-3-click)
+[Click Product page](https://www.mikroe.com/rs232-3-click)
 
 ---
 
@@ -60,7 +60,7 @@ err_t rs2323_generic_read ( rs2323_t *ctx, char *data_buf, uint16_t max_len );
 
 ## Example Description
 
-> This example demonstrates the use of an RS232 3 click board by showing the communication between the two click board configured as a receiver and transmitter.
+> This example demonstrates the use of an RS232 3 Click board by showing the communication between the two Click board configured as a receiver and transmitter.
 
 **The demo application is composed of two sections :**
 
@@ -140,7 +140,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

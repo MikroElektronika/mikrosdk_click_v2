@@ -3,6 +3,6 @@
     "description": "Accel 3 Click represent 3-axis linear accelerometer.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","H3LIS331DL"],
+    "hw" : ["Click","H3LIS331DL"],
     "category" : ["Motion,Acceleration"] 
 }

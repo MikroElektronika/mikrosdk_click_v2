@@ -1,6 +1,6 @@
 
 ---
-# Altitude 6 click
+# Altitude 6 Click
 
 > Altitude 6 Click is a compact add-on board that allows height measurement of an object or point related to sea level or ground level. This board features the MS5611-01BA03, a high-resolution barometric pressure sensor optimized for altimeter applications with an altitude resolution of 10 cm from TE Connectivity. It consists of a high linearity pressure sensor and an ultra-low power 24 bit ΔΣ ADC with internal factory calibrated coefficients. Also, it provides a precise digital 24-bit pressure and temperature value, different operation modes, and a configurable host interface that supports both SPI and I2C serial communication allowing the user to optimize for conversion speed and current consumption. The high accuracy and stability of both pressure and temperature signal of the MS5611-01BA03 make this Click board™ suitable for height sensing in medical and consumer applications, indoor navigation, mobile altimeter or barometer systems, and many more.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/altitude6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/altitude-6-click)
+[Click Product page](https://www.mikroe.com/altitude-6-click)
 
 ---
 
@@ -163,7 +163,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

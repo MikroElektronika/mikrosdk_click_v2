@@ -173,7 +173,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void mp3_cfg_setup ( mp3_cfg_t *cfg );
@@ -183,7 +183,7 @@ void mp3_cfg_setup ( mp3_cfg_t *cfg );
  * @param mp3 Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t mp3_init ( mp3_t *ctx, mp3_cfg_t *cfg );
 
@@ -229,7 +229,7 @@ err_t mp3_data_write( mp3_t *ctx, uint8_t input );
 err_t mp3_data_write_32( mp3_t *ctx, uint8_t *input32 );
 
 /**
- * @brief  Function set volume to MP3 click for left and right channels
+ * @brief  Function set volume to MP3 Click for left and right channels
  * @param ctx          Click object.
  * @param vol_left     Volume level for left channel.
  * @param vol_right    Volume level for right channel.
@@ -243,6 +243,6 @@ void mp3_set_volume ( mp3_t *ctx, uint8_t vol_left, uint8_t vol_right );
 #endif  // _MP3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

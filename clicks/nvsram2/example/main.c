@@ -3,7 +3,7 @@
  * @brief nvSRAM2 Click example
  *
  * # Description
- * This is an example using nvSRAM 2 click based on CY14B101Q which is combines a 1-Mbit nvSRAM with a
+ * This is an example using nvSRAM 2 Click based on CY14B101Q which is combines a 1-Mbit nvSRAM with a
  * nonvolatile element in each memory cell with serial SPI interface. The memory is organized as 128K words of 8 bits each.
  *
  * The demo application is composed of two sections :
@@ -14,7 +14,7 @@
  * for burst write starting point and writes data which is also displayed on the log.
  *
  * ## Application Task
- * This is an example that demonstrates the use of the nvSRAM 2 click board. In this example, the data is read from
+ * This is an example that demonstrates the use of the nvSRAM 2 Click board. In this example, the data is read from
  * the targeted memory address. The results are being sent to the Usart Terminal. This task repeats every 5 sec.
  *
  * @author Jelena Milosavljevic

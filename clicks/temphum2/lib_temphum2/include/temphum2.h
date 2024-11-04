@@ -184,7 +184,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void temphum2_cfg_setup ( temphum2_cfg_t *cfg );
@@ -195,7 +195,7 @@ void temphum2_cfg_setup ( temphum2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 TEMPHUM2_RETVAL temphum2_init ( temphum2_t *ctx, temphum2_cfg_t *cfg );
 
@@ -211,7 +211,7 @@ TEMPHUM2_RETVAL temphum2_init ( temphum2_t *ctx, temphum2_cfg_t *cfg );
  *    Set: TEMPHUM2_REG_WRITE_HEATER_CONTROL
  *          - TEMPHUM2_HEATER_ENABLE | TEMPHUM2_HEATER_CURRENT_6_4mA
  * </pre>
- * @description This function executes default configuration for TempHum2 click.
+ * @description This function executes default configuration for TempHum2 Click.
  */
 void temphum2_default_cfg ( temphum2_t *ctx );
 
@@ -292,6 +292,6 @@ void temphum2_get_measurement ( temphum2_t *ctx, float *data_buffer );
 #endif  // _TEMPHUM2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

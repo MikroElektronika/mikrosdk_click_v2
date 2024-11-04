@@ -318,7 +318,7 @@ typedef struct
  * @brief Config Object Initialization function.
  *
  * @param cfg  Click configuration structure.
- * @description This function initializes click configuration structure to default state.
+ * @description This function initializes Click configuration structure to default state.
  *
  * @note All used pins will be set to unconnected state.
  */
@@ -329,7 +329,7 @@ void ble9_cfg_setup ( ble9_cfg_t *cfg );
  *
  * @param ctx Click object.
  * @param cfg Click configuration structure.
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  *
  * @return err_t
  */
@@ -851,6 +851,6 @@ void ble9_send_command ( ble9_t *ctx, uint32_t command );
 #endif  // _BLE9_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group
+/// \}    // End Click Driver group
 /*! @} */
 // ------------------------------------------------------------------------- END

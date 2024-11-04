@@ -1,14 +1,14 @@
 
 ---
-# EERAM 5V click
+# EERAM 5V Click
 
-EERAM 5V click is a static RAM (SRAM) memory click board™ with the unique feature - it has a backup non-volatile memory array, used to store the data from the SRAM array. Since the SRAM is not able to maintain its content after the power loss, the non-volatile EEPROM backup can be a very handy addition that can be used to preserve the data, even after the power loss event. This is a very useful feature when working with critical or sensitive applications. The memory backup procedure can be executed both automatically and manually. When it is set to work in the manual mode, the onboard capacitor will act as a power source with enough power to complete the backup cycle. The power-on backup restore mode is also available, taking only about 25ms to complete.
+EERAM 5V Click is a static RAM (SRAM) memory Click board™ with the unique feature - it has a backup non-volatile memory array, used to store the data from the SRAM array. Since the SRAM is not able to maintain its content after the power loss, the non-volatile EEPROM backup can be a very handy addition that can be used to preserve the data, even after the power loss event. This is a very useful feature when working with critical or sensitive applications. The memory backup procedure can be executed both automatically and manually. When it is set to work in the manual mode, the onboard capacitor will act as a power source with enough power to complete the backup cycle. The power-on backup restore mode is also available, taking only about 25ms to complete.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/eeram5v_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/eeram-5v-click)
+[Click Product page](https://www.mikroe.com/eeram-5v-click)
 
 ---
 
@@ -64,7 +64,7 @@ uint8_t eeram5v_status_read ( eeram5v_t *ctx );
 
 ## Example Description
 
-> This example show using EERAM click to store the data to the SRAM ( static RAM ) memory.
+> This example show using EERAM Click to store the data to the SRAM ( static RAM ) memory.
 The data is read and written by the I2C serial communication bus, and the memory cells 
 are organized into 2048 bytes, each 8bit wide.
 
@@ -112,7 +112,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-> Writing data to click memory and displaying the read data via UART. 
+> Writing data to Click memory and displaying the read data via UART. 
 
 ```c
 
@@ -138,7 +138,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

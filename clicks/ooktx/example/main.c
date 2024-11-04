@@ -3,7 +3,7 @@
  * @brief OOK TX Click Example.
  *
  * # Description
- * This example demonstrates the use of OOK TX click board by sending
+ * This example demonstrates the use of OOK TX Click board by sending
  * a predefined message to the receiver.
  *
  * The demo application is composed of two sections :
@@ -15,7 +15,7 @@
  * Sends a predefined message every 3 seconds and displays it on the USB UART.
  *
  * @note
- * The OOK RX click board is a compatible receiver for the OOK TX click.
+ * The OOK RX Click board is a compatible receiver for the OOK TX Click.
  * Here are a few steps for troubleshooting if you are experiencing issues running
  * this example:
  *  - Check the MCU clock configuration, use an external oscillator instead of the MCU's

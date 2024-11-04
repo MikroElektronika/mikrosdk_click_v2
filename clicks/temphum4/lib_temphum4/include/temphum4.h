@@ -197,7 +197,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void temphum4_cfg_setup ( temphum4_cfg_t *cfg );
@@ -208,7 +208,7 @@ void temphum4_cfg_setup ( temphum4_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 TEMPHUM4_RETVAL temphum4_init ( temphum4_t *ctx, temphum4_cfg_t *cfg );
 
@@ -217,7 +217,7 @@ TEMPHUM4_RETVAL temphum4_init ( temphum4_t *ctx, temphum4_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Temp&Hum4 click.
+ * @description This function executes default configuration for Temp&Hum4 Click.
  */
 void temphum4_default_cfg ( temphum4_t *ctx );
 
@@ -307,6 +307,6 @@ float temphum4_get_humidity ( temphum4_t *ctx );
 #endif  // _TEMPHUM4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

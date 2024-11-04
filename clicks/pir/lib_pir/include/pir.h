@@ -146,7 +146,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void pir_cfg_setup ( pir_cfg_t *cfg );
@@ -157,7 +157,7 @@ void pir_cfg_setup ( pir_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 PIR_RETVAL pir_init ( pir_t *ctx, pir_cfg_t *cfg );
 
@@ -232,6 +232,6 @@ float pir_scale_results ( pir_t *ctx, uint16_t in_val, uint16_t out_min, uint16_
 #endif  // _PIR_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

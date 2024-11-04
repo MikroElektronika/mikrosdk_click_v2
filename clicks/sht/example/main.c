@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initialize the communication interface and configure the click board.
+ * Initialize the communication interface and configure the Click board.
  * 
  * ## Application Task  
  * Temperature and humidity data is measured and read from the sensor. 

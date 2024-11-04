@@ -13,7 +13,7 @@
  * set the default configuration and start to write log.
  *
  * ## Application Task
- * This is an example that shows the use of a Analog MUX 2 click board.
+ * This is an example that shows the use of a Analog MUX 2 Click board.
  * In this example, we switch from channel AN0 to channel AN7, 
  * read and display the analog value and voltage on the active channel.
  * Results are being sent to the Usart Terminal where you can track their changes.

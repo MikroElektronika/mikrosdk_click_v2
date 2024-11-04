@@ -1,6 +1,6 @@
 
 ---
-# Buck 22 click
+# Buck 22 Click
 
 > Buck 22 Click is a compact add-on board that steps down the voltage from its input (supply) to its output (load). This board features the TPS62869, a high-frequency synchronous step-down converter with an I2C interface from Texas Instruments, providing an efficient, adaptive, and high power-density solution. The TPS62869 operates in PWM mode at medium to heavy loads (also for the slightest output voltage ripple), and it automatically enters Power-Save Mode operation at light load to maintain high efficiency over the entire output load current range. With its DCS-Control™ architecture, excellent load transient performance and tight output voltage accuracy are achieved alongside adjustable output voltage range from 0.8V to 3.35V with a 10mV step size.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/buck22_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/buck-22-click)
+[Click Product page](https://www.mikroe.com/buck-22-click)
 
 ---
 
@@ -64,7 +64,7 @@ uint8_t buck22_get_pg_pin ( buck22_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Buck 22 click by changing the output voltage.
+> This example demonstrates the use of Buck 22 Click by changing the output voltage.
 
 **The demo application is composed of two sections :**
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

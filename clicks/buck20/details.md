@@ -1,6 +1,6 @@
 
 ---
-# Buck 20 click
+# Buck 20 Click
 
 > Buck 20 Click is a compact add-on board that contains a DC-DC power converter that steps down the voltage from its input to its output. This board features the MP2316, a fully-integrated, high-efficiency, synchronous, step-down switch-mode converter from Monolithic Power Systems (MPS). The MP2316 achieves 3A continuous output current over a wide input supply range from 4V to 19V. It has excellent load and line regulation and can operate efficiently over a vast output voltage load range. The MP2316 also offers advanced protection features such as undervoltage, overcurrent, and short-circuit detections.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/buck20_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/buck-20-click)
+[Click Product page](https://www.mikroe.com/buck-20-click)
 
 ---
 
@@ -64,7 +64,7 @@ void buck20_disable_device ( buck20_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Buck 20 click by changing the output voltage.
+> This example demonstrates the use of Buck 20 Click by changing the output voltage.
 
 **The demo application is composed of two sections :**
 
@@ -153,7 +153,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

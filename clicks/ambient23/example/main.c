@@ -3,17 +3,17 @@
  * @brief Ambient 23 Click example
  *
  * # Description
- * This example demonstrates the use of Ambient 23 click board by measuring 
+ * This example demonstrates the use of Ambient 23 Click board by measuring 
  * the ambient light level in Lux.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
  * Initializes the driver, checks communication by reading part ID
- * and performs the click default configuration.
+ * and performs the Click default configuration.
  *
  * ## Application Task
- * Measuring ambient light level by reading data from the Ambient 23 click board
+ * Measuring ambient light level by reading data from the Ambient 23 Click board
  * and displaying it using UART Serial terminal.
  *
  * @author Stefan Ilic

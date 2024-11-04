@@ -10,7 +10,7 @@
     ],
     "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "4-20mA T 2 click",
+    "display_name": "4-20mA T 2 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -28,11 +28,12 @@
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.c420mAT2",
     "subdir_name": "lib_c420mat2"
 }
+
 
 
 

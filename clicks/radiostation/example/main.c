@@ -3,7 +3,7 @@
  * \brief RadioStation Click example
  * 
  * # Description
- * RadioStation click can be used to broadcast the music via the FM radio band 
+ * RadioStation Click can be used to broadcast the music via the FM radio band 
  * ( which operates in the frequency range of 76MHz to 108MHz ).
  *
  * The demo application is composed of two sections :

@@ -1,6 +1,6 @@
 
 ---
-# Barometer 3 click
+# Barometer 3 Click
 
 Barometer 3 Click is a compact add-on board for applications which require digital barometric air pressure measurement. This board features the DPS368, a digital barometric air pressure sensor from Infineon.
 
@@ -9,7 +9,7 @@ Barometer 3 Click is a compact add-on board for applications which require digit
 </p>
 
 
-[click Product page](https://www.mikroe.com/barometer-3-click)
+[Click Product page](https://www.mikroe.com/barometer-3-click)
 
 ---
 
@@ -59,13 +59,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example demonstrates the use of Barometer 3 click board.
+> This example demonstrates the use of Barometer 3 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes the driver, sets the click board default configuration and check the communication by reading the device ID.
+> Initializes the driver, sets the Click board default configuration and check the communication by reading the device ID.
 
 ```c
 
@@ -145,7 +145,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

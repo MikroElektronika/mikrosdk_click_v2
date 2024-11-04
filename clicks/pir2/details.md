@@ -1,6 +1,6 @@
 
 ---
-# PIR 2 click
+# PIR 2 Click
 
 > PIR 2 Click is a compact add-on board designed for high-performance motion detection applications. This board features the ZSLM323511, a dual-element balanced differential pyroelectric (PIR) sensor from Zilog. Key features include excellent EMI immunity, a low-profile surface mount package, and a typical field of view of 150 degrees on the X-axis and 139 degrees on the Y-axis. The board also integrates the ZCWM05GIV1 PIR lens for maximum IR transmissivity. Ideal for security systems, lighting control, and video doorbells, PIR 2 Click ensures reliable motion detection in various demanding environments.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/pir2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pir-2-click)
+[Click Product page](https://www.mikroe.com/pir-2-click)
 
 ---
 
@@ -57,7 +57,7 @@ err_t pir2_read_raw_adc ( pir2_t *ctx, uint16_t *raw_adc );
 err_t pir2_read_voltage ( pir2_t *ctx, float *voltage );
 ```
 
-- `pir2_set_vref` This function sets the voltage reference for PIR 2 click driver.
+- `pir2_set_vref` This function sets the voltage reference for PIR 2 Click driver.
 ```c
 err_t pir2_set_vref ( pir2_t *ctx, float vref );
 ```
@@ -139,7 +139,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

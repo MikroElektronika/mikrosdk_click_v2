@@ -1,6 +1,6 @@
 
 ---
-# LED Flash 3 click
+# LED Flash 3 Click
 
 > LED Flash 3 Click is a compact add-on board representing a powerful flash/torch solution. This board features the KTD2691, an inductor-less, single-flash LED driver from Kinetic Technologies. It includes one current source that can drive up to 1.5A of LED flash current or up to 376mA of torch current.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ledflash3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/led-flash-3-click)
+[Click Product page](https://www.mikroe.com/led-flash-3-click)
 
 ---
 
@@ -75,7 +75,7 @@ err_t ledflash3_set_torch_current ( ledflash3_t *ctx, float torch_current );
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -142,7 +142,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

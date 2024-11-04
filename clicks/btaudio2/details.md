@@ -1,6 +1,6 @@
 
 ---
-# BT Audio 2 click
+# BT Audio 2 Click
 
 > BT Audio 2 Click is Bluetooth audio stream add on board based on BM62 module from Microchip. It's a Stereo Audio module which is fully qualified Bluetooth v5.0 dual-mode (BDR/EDR/BLE) to be added in any wireless audio and voice application. With features like high resolution up to 24-bit, 96 kHz audio data format, Bluetooth Low Energy data rate up to 1Mbits/s, connection of two hosts with HFP/A2DP profiles simultaneously, seamless serial data over UART interface and many more it's perfect solution for applications like portable speakers and headsets.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/btaudio2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/bt-audio-2-click)
+[Click Product page](https://www.mikroe.com/bt-audio-2-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t btaudio2_volume_up ( btaudio2_t *ctx, uint8_t database_index, uint8_t mask
 
 ## Example Description
 
-> This example demonstrates the use of BT Audio 2 click board by reading the commands received from remote device and performing adequate actions accordingly.
+> This example demonstrates the use of BT Audio 2 Click board by reading the commands received from remote device and performing adequate actions accordingly.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and configures the click board.
+> Initializes the driver and configures the Click board.
 
 ```c
 
@@ -140,8 +140,8 @@ void application_task ( void )
 ## Note
 
 > We have used the Serial Bluetooth Terminal smartphone application for the test. 
-A smartphone and the click board must be paired in order to exchange messages
-with each other. So make sure to pair your device with the click board and
+A smartphone and the Click board must be paired in order to exchange messages
+with each other. So make sure to pair your device with the Click board and
 connect it to using the Serial Bluetooth Terminal application, then you will be able 
 to send commands listed below.
 
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

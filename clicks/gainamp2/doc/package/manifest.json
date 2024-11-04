@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "GainAMP 2 click",
+    "display_name": "GainAMP 2 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.gainamp2",
     "product_link": "https://www.mikroe.com/gainamp-2-click",
-    "short_description": "GainAMP 2 click is a 6-channel programmable gain amplifier, used to amplify signals on any of the 6 non-inverting input channels up to 32x, in eight discrete steps.",
+    "short_description": "GainAMP 2 Click is a 6-channel programmable gain amplifier, used to amplify signals on any of the 6 non-inverting input channels up to 32x, in eight discrete steps.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2272
     ],
-    "version": "2.1.0.19",
+    "version": "2.1.0.20",
     "cmake": true,
     "alias": "Click.GainAmp2",
     "subdir_name": "lib_gainamp2"
 }
+
 
 
 

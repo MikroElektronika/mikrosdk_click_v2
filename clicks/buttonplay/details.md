@@ -1,14 +1,14 @@
 
 ---
-# Button Play click
+# Button Play Click
 
-Button PLAY click is a very interesting interactive gadget on a Click board™. It is an integrated capacitive touch sensor display in the form of a button. By utilizing an advanced capacitive touch sensing technology, the CTHS15CIC05ARROW sensor can successfully replace the traditional mechanical button, allowing very simplified yet reliable user interfaces to be developed. Besides the touch detection, this sensor also features a green arrow icon with backlight, which makes the Click board™ very useful for building various stylized and visually appealing interfaces.
+Button PLAY Click is a very interesting interactive gadget on a Click board™. It is an integrated capacitive touch sensor display in the form of a button. By utilizing an advanced capacitive touch sensing technology, the CTHS15CIC05ARROW sensor can successfully replace the traditional mechanical button, allowing very simplified yet reliable user interfaces to be developed. Besides the touch detection, this sensor also features a green arrow icon with backlight, which makes the Click board™ very useful for building various stylized and visually appealing interfaces.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/button_play_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/button-play-click)
+[Click Product page](https://www.mikroe.com/button-play-click)
 
 ---
 
@@ -73,7 +73,7 @@ uint8_t buttonplay_get_button_state ( buttonplay_t *ctx );
 
 ### Application Init
 
-> This function initializes and configures the logger and click modules.
+> This function initializes and configures the logger and Click modules.
 
 ```c
 
@@ -171,7 +171,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

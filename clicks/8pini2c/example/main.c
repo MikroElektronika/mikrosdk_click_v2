@@ -3,20 +3,20 @@
  * \brief 8pinI2c Click example
  * 
  * # Description
- * This demo example reads temperature detected by Surface temp click board.
+ * This demo example reads temperature detected by Surface temp Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and configures a Surface temp click board.
+ * Initializes the driver and configures a Surface temp Click board.
  * 
  * ## Application Task  
- * Reads the temperature detected by Surface temp click board and 
+ * Reads the temperature detected by Surface temp Click board and 
  * logs it on the USB UART each second.
  * 
  * @note
- * In order to run this example successfully, a Surface temp click board needs to be 
- * connected properly to an 8-pin I2C click board.
+ * In order to run this example successfully, a Surface temp Click board needs to be 
+ * connected properly to an 8-pin I2C Click board.
  * 
  * \author MikroE Team
  *
@@ -32,7 +32,7 @@
 static c8pini2c_t c8pini2c;
 static log_t logger;
 
-// Surface temp click - example
+// Surface temp Click - example
 #define SURFACE_TEMP_DEVICE_SLAVE_ADDRESS 0x48
 #define SURFACE_TEMP_REG_SOFT_RESET       0x2F
 #define SURFACE_TEMP_REG_ID               0x0B

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LED Driver 15 click
+# LED Driver 15 Click
 
 > LED Driver 15 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the MP3309C, a fully integrated synchronous boost white LED driver with an I2C interface from Monolithic Power Systems. The MP3309C offers high efficiency, delivers up to 40mA of LED current, and operates from a voltage of mikroBUS™ power rails, supporting up to 8 white LEDs in series. It also features a programmable switching frequency to optimize efficiency, supports analog and PWM dimming, and has multiple built-in protection functions that protect the circuit during abnormalities.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/leddriver15_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/led-driver-15-click)
+[Click Product page](https://www.mikroe.com/led-driver-15-click)
 
 ---
 
@@ -70,13 +70,13 @@ void leddriver15_disable_device ( leddriver15_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of LED Driver 15 click board by changing the LEDs dimming level.
+> This example demonstrates the use of LED Driver 15 Click board by changing the LEDs dimming level.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -153,7 +153,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

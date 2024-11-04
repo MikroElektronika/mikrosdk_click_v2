@@ -1,6 +1,6 @@
 
 ---
-# Ambient 15 click
+# Ambient 15 Click
 
 > Ambient 15 Click is a compact add-on board used to measure the amount of the present ambient light. This board features the TSL2584TSV, a very-high sensitivity light-to-digital converter with an I2C interface that transforms light intensity into a digital output signal from AMS-AG. The TSL2584TSV’s near-photopic response produces a highly accurate lux measurement up to 33klx even when mounted behind dark glass. Filtering out unwanted IR light enables the sensor to measure the ambient light more accurately, thus producing a near-photopic response.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ambient15_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ambient-15-click)
+[Click Product page](https://www.mikroe.com/ambient-15-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t ambient15_measure_light_level ( ambient15_t *ctx, uint16_t *lux );
 
 ## Example Description
 
-> This example demonstrates the use of Ambient 15 click board by measuring the ambient light level in Lux.
+> This example demonstrates the use of Ambient 15 Click board by measuring the ambient light level in Lux.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

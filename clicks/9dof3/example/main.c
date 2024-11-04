@@ -3,7 +3,7 @@
  * \brief 9Dof3 Click example
  * 
  * # Description
- * This click introduces a small-scale absolute orientation sensor in the class of low-noise 
+ * This Click introduces a small-scale absolute orientation sensor in the class of low-noise 
  * 9-axis measurement units. It comprises the full functionality of a triaxial, low-g acceleration 
  * sensor, a triaxial angular rate sensor and a triaxial geomagnetic sensor. All three sensor 
  * components can be operated and addressed independently from each other. 9DOF 3 Click offers 

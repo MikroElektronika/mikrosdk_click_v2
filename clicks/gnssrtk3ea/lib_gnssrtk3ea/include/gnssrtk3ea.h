@@ -239,7 +239,7 @@ typedef enum
 
 /**
  * @brief GNSS RTK 3 EA configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #gnssrtk3ea_cfg_t object definition for detailed explanation.
@@ -251,7 +251,7 @@ void gnssrtk3ea_cfg_setup ( gnssrtk3ea_cfg_t *cfg );
 /**
  * @brief GNSS RTK 3 EA driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #gnssrtk3ea_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -267,7 +267,7 @@ void gnssrtk3ea_drv_interface_sel ( gnssrtk3ea_cfg_t *cfg, gnssrtk3ea_drv_t drv_
 /**
  * @brief GNSS RTK 3 EA initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #gnssrtk3ea_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

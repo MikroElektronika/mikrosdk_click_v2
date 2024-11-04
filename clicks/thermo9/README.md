@@ -3,7 +3,7 @@
  
 
 ---
-# Thermo 9 click
+# Thermo 9 Click
 
 The TSYS01 is a single chip, versatile, new technology temperature sensor. The TSYS01 provides factory calibrated temperature information. It includes a temperature sensing chip and a 24 bit Σ-ADC.
 
@@ -11,7 +11,7 @@ The TSYS01 is a single chip, versatile, new technology temperature sensor. The T
   <img src="https://download.mikroe.com/images/click_for_ide/thermo9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/thermo-9-click)
+[Click Product page](https://www.mikroe.com/thermo-9-click)
 
 ---
 
@@ -66,7 +66,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ### Application Init 
 
 >
-> Logger initialization, click initialization and calibration.
+> Logger initialization, Click initialization and calibration.
 > 
 
 ```c
@@ -96,7 +96,7 @@ void application_init ( void )
     thermo9_init( &thermo9, &cfg );
     Delay_ms ( 100 );
     log_printf( &logger, "---------------------\r\n" );
-    log_printf( &logger, "    Thermo 9 click   \r\n" );
+    log_printf( &logger, "    Thermo 9 Click   \r\n" );
     log_printf( &logger, "---------------------\r\n" );
     thermo9_calibation( &thermo9 );
     Delay_ms ( 100 );
@@ -109,7 +109,7 @@ void application_init ( void )
 ### Application Task
 
 >
-> This example shows capabilities of Thermo 9 click by measuring
+> This example shows capabilities of Thermo 9 Click by measuring
 > temperature every 3 seconds and displaying temperature in degrres Celsius 
 > via USART terminal.
 > 
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -3,6 +3,6 @@
     "description": "4G LTE&GNSS Click is a compact add-on board designed for advanced global tracking and telematics applications, enabling developers to build highly efficient and smaller solutions without compromising performance. This board features the LENA-R8, a multi-mode LTE Cat 1bis module from u-blox. It stands out for its compact size and extensive network compatibility. It supports 14 LTE bands, four GSM/GPRS bands for universal connectivity, and integrated u-blox GNSS for precise global tracking. The board facilitates seamless communication via UART and includes a USB interface for comprehensive device management and firmware updates.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","LENA-R8001M10-00C"],
+    "hw" : ["Click","LENA-R8001M10-00C"],
     "category" : ["Click Boards > Wireless connectivity > GSM/LTE"]
 }

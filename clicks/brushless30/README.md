@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Brushless 30 click
+# Brushless 30 Click
 
 > Brushless 30 Click is a compact add-on board for precise and reliable control of brushless motors. This board features the TB9083FTG, a gate-driver IC from Toshiba Semiconductor, known for its robust performance in automotive environments. It also includes additional header pins for 6 PWM inputs , safety relays and current sense amplifiers. Comprehensive error detection capabilities, as required from automotive devices, are included. Brushless 30 Click is ideal for demanding automotive applications such as electric power steering (EPS), powered brakes, and automotive pumps where high-precision motor control is crucial.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/brushless30_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/brushless-30-click)
+[Click Product page](https://www.mikroe.com/brushless-30-click)
 
 ---
 
@@ -70,13 +70,13 @@ uint8_t brushless30_get_diag_pin ( brushless30_t *ctx );
 
 ## Example Description
 
-> This example configures the Brushless 30 click board and makes it ready for the motor control over 6 PWM input signals.
+> This example configures the Brushless 30 Click board and makes it ready for the motor control over 6 PWM input signals.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -171,7 +171,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

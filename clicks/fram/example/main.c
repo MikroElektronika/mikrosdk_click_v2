@@ -3,7 +3,7 @@
  * \brief Fram Click example
  * 
  * # Description
- * This app writing data to click memory.
+ * This app writing data to Click memory.
  *
  * The demo application is composed of two sections :
  * 
@@ -11,7 +11,7 @@
  * Initialization device.
  * 
  * ## Application Task  
- * Writing data to click memory and displaying the read data via UART. 
+ * Writing data to Click memory and displaying the read data via UART. 
  * 
  * \author MikroE Team
  *

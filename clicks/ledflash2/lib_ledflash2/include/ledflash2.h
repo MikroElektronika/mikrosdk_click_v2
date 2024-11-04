@@ -197,7 +197,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void ledflash2_cfg_setup ( ledflash2_cfg_t *cfg );
@@ -207,7 +207,7 @@ void ledflash2_cfg_setup ( ledflash2_cfg_t *cfg );
  * @param ledflash2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LEDFLASH2_RETVAL ledflash2_init ( ledflash2_t *ctx, ledflash2_cfg_t *cfg );
 
@@ -264,7 +264,7 @@ void ledflash2_write_register ( ledflash2_t *ctx, uint8_t reg_address, uint8_t r
  * @param intensity         Led intensity.
  * @param flash_duration    Flash duration.
  *
- * @description This control function that sets the click into one of the three available modes.
+ * @description This control function that sets the Click into one of the three available modes.
  * OFF mode requires no additional parameters, and will ignore intensity and
  * duration. 
  * Flash mode will set both the intensity and duration, and will set them to
@@ -282,7 +282,7 @@ void ledflash2_set_mode ( ledflash2_t *ctx, uint8_t mode, uint8_t intensity, uin
  * @param pin_state      Flash inhibit on or off.
  *
  * @description This function will set the flash inhibit pin to either 1 or 0. It should be
- * used when click is in flash mode, to reduce the flash intensity.
+ * used when Click is in flash mode, to reduce the flash intensity.
  */
 void ledflash2_toggle_flash_inhibit ( ledflash2_t *ctx, uint8_t pin_state );
 
@@ -292,6 +292,6 @@ void ledflash2_toggle_flash_inhibit ( ledflash2_t *ctx, uint8_t pin_state );
 #endif  // _LEDFLASH2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

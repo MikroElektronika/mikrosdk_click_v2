@@ -3,6 +3,6 @@
     "description": "BLE 6 Click is a Bluetooth low energy system-on-chip application processor certified module, compliant with BT specifications v5.0 and BQE qualified. The featured BlueNRG-M2 module developed by STMicroelectronics supports multiple roles simultaneously and can act at the same time as Bluetooth master and slave device.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","BlueNRG-M2"],
+    "hw" : ["Click","BlueNRG-M2"],
     "category" : ["BT/BLE"]
 }

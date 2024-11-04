@@ -252,7 +252,7 @@ typedef enum
 
 /**
  * @brief LTE IoT 12 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #lteiot12_cfg_t object definition for detailed explanation.
@@ -264,7 +264,7 @@ void lteiot12_cfg_setup ( lteiot12_cfg_t *cfg );
 /**
  * @brief LTE IoT 12 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #lteiot12_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -370,7 +370,7 @@ void lteiot12_set_power_state ( lteiot12_t *ctx, uint8_t state );
 
 /**
  * @brief LTE IoT 12 cmd run function.
- * @details This function sends a specified command to the click module.
+ * @details This function sends a specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #lteiot12_t object definition for detailed explanation.
  * @param[in] cmd : Command string.
@@ -381,7 +381,7 @@ void lteiot12_cmd_run ( lteiot12_t *ctx, uint8_t *cmd );
 
 /**
  * @brief LTE IoT 12 cmd set function.
- * @details This function sets a value to a specified command of the click module.
+ * @details This function sets a value to a specified command of the Click module.
  * @param[in] ctx : Click context object.
  * See #lteiot12_t object definition for detailed explanation.
  * @param[in] cmd : Command string.
@@ -393,7 +393,7 @@ void lteiot12_cmd_set ( lteiot12_t *ctx, uint8_t *cmd, uint8_t *value );
 
 /**
  * @brief LTE IoT 12 cmd get function.
- * @details This function is used to get the value of a given command from the click module.
+ * @details This function is used to get the value of a given command from the Click module.
  * @param[in] ctx : Click context object.
  * See #lteiot12_t object definition for detailed explanation.
  * @param[in] cmd : Command string.
@@ -404,7 +404,7 @@ void lteiot12_cmd_get ( lteiot12_t *ctx, uint8_t *cmd );
 
 /**
  * @brief LTE IoT 12 cmd help function.
- * @details This function provides a short description of the given command of the click module.
+ * @details This function provides a short description of the given command of the Click module.
  * @param[in] ctx : Click context object.
  * See #lteiot12_t object definition for detailed explanation.
  * @param[in] cmd : Command string.

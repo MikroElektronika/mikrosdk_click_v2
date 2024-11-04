@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LED Driver 10 click
+# LED Driver 10 Click
 
 LED Driver 10 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the TLC59283, a 16-channel, constant-current sink light-emitting diode (LED) driver with pre-charge FET from Texas Instruments.
 
@@ -9,7 +9,7 @@ LED Driver 10 Click is a compact add-on board that simplifies the control of mul
   <img src="https://download.mikroe.com/images/click_for_ide/leddriver10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/led-driver-10-click)
+[Click Product page](https://www.mikroe.com/led-driver-10-click)
 
 ---
 
@@ -36,12 +36,12 @@ Package can be downloaded/installed directly from *NECTO Studio Package Manager*
 
 #### Standard key functions :
 
-- `leddriver10_cfg_setup` This function initializes click configuration structure to initial values.
+- `leddriver10_cfg_setup` This function initializes Click configuration structure to initial values.
 ```c
 void leddriver10_cfg_setup ( leddriver10_cfg_t *cfg );
 ```
 
-- `leddriver10_init` This function initializes all necessary pins and peripherals used for this click board.
+- `leddriver10_init` This function initializes all necessary pins and peripherals used for this Click board.
 ```c
 err_t leddriver10_init ( leddriver10_t *ctx, leddriver10_cfg_t *cfg );
 ```
@@ -70,7 +70,7 @@ err_t leddriver10_set_duty_cycle ( leddriver10_t *ctx, float duty_cycle );
 
 ## Example Description
 
-> This example demonstrates the use of LED Driver 10 click board.
+> This example demonstrates the use of LED Driver 10 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -162,7 +162,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

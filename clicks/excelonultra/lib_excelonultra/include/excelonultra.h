@@ -239,7 +239,7 @@ typedef enum
 
 /**
  * @brief Excelon-Ultra configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #excelonultra_cfg_t object definition for detailed explanation.
@@ -251,7 +251,7 @@ void excelonultra_cfg_setup ( excelonultra_cfg_t *cfg );
 /**
  * @brief Excelon-Ultra initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #excelonultra_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -267,7 +267,7 @@ err_t excelonultra_init ( excelonultra_t *ctx, excelonultra_cfg_t *cfg );
 /**
  * @brief Excelon-Ultra default configuration function.
  * @details This function executes a default configuration of Excelon-Ultra
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #excelonultra_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

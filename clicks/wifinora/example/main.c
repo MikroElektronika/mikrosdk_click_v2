@@ -3,7 +3,7 @@
  * @brief WiFi NORA Click Example.
  *
  * # Description
- * This example demonstrates the use of WiFi NORA click board by processing
+ * This example demonstrates the use of WiFi NORA Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
@@ -31,7 +31,7 @@
 #include "wifinora.h"
 
 // Message content
-#define MESSAGE_CONTENT                     "WiFi NORA click board - demo example."
+#define MESSAGE_CONTENT                     "WiFi NORA Click board - demo example."
 
 // TCP/UDP example parameters
 #define REMOTE_IP                           "77.46.162.162" // TCP/UDP echo server IP address

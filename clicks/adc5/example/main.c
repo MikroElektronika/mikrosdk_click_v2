@@ -3,13 +3,13 @@
  * \brief ADC5 Click example
  * 
  * # Description
- * This example showcases how to initialize and configure the logger and click modules and 
- * how to read and display ADC voltage data from the click.
+ * This example showcases how to initialize and configure the logger and Click modules and 
+ * how to read and display ADC voltage data from the Click.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules. 
+ * This function initializes and configures the logger and Click modules. 
  * 
  * ## Application Task  
  * This function reads and displays ADC voltage data every second.

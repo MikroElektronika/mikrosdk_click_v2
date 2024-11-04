@@ -229,7 +229,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void adc7_cfg_setup ( adc7_cfg_t *cfg );
@@ -239,7 +239,7 @@ void adc7_cfg_setup ( adc7_cfg_t *cfg );
  *
  * @param ctx  Click object. 
  *
- * @description This function initializes default click configuration.
+ * @description This function initializes default Click configuration.
  */
 void adc7_default_cfg ( adc7_t *ctx );
 
@@ -249,7 +249,7 @@ void adc7_default_cfg ( adc7_t *ctx );
  * @param ctx Click object.
  * @param cfg  Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ADC7_RETVAL adc7_init ( adc7_t *ctx, adc7_cfg_t *cfg );
 
@@ -359,6 +359,6 @@ uint8_t adc7_read_results ( adc7_t* ctx, float* voltage );
 #endif  // _ADC7_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

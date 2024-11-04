@@ -1,6 +1,6 @@
 
 ---
-# Color 16 click
+# Color 16 Click
 
 > Color 16 Click is a compact add-on board providing an accurate color-sensing solution. This board features ams AG’s AS7343, a 14-channel multi-purpose spectral sensor offering spectral response through a compatible I2C interface. It has a built-in aperture that controls the light entering the sensor array to increase accuracy, alongside precise optical filters integrated into standard CMOS silicon via deposited interference filter technology. The spectral response is defined by individual channels covering approximately 380nm to 1000nm with 11 channels centered in the visible spectrum, one near-infrared, and a clear channel.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/color16_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/color-16-click)
+[Click Product page](https://www.mikroe.com/color-16-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t color16_set_integration_time_ms ( color16_t *ctx, float int_time_ms );
 
 ## Example Description
 
-> This example demonstrates the use of Color 16 click by reading and displaying the values from all 14 channels.
+> This example demonstrates the use of Color 16 Click by reading and displaying the values from all 14 channels.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -168,7 +168,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

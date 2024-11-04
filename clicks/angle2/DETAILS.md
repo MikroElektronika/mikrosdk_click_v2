@@ -1,14 +1,14 @@
 
 ---
-# Angle 2 click
+# Angle 2 Click
 
-Angle 2 click is a magnetic rotational sensor which relies on the ultra-fast MA700 angular sensor IC. Due to a high data output rate of 500kHz, the MA700 IC is able to provide a reliable absolute angular positional data at speeds up to 100,000 RPM.
+Angle 2 Click is a magnetic rotational sensor which relies on the ultra-fast MA700 angular sensor IC. Due to a high data output rate of 500kHz, the MA700 IC is able to provide a reliable absolute angular positional data at speeds up to 100,000 RPM.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/angle2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/angle-2-click)
+[Click Product page](https://www.mikroe.com/angle-2-click)
 
 ---
 
@@ -47,10 +47,10 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- This function reads angle data from the click module.
+- This function reads angle data from the Click module.
 > double angle2_get_angle ( angle2_t *ctx );
  
-- This function reads angle and time index data from the click module.
+- This function reads angle and time index data from the Click module.
 > double angle2_get_angle_with_time_index ( angle2_t *ctx, uint8_t *time_index );
 
 - This function sets the zero scale value.
@@ -58,7 +58,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example showcases how to configure and use the Angle 2 click. This click senses
+> This example showcases how to configure and use the Angle 2 Click. This Click senses
   the magnetic field along the horizontal plane using an array of Hal effect sensors.
   The module uses advanced Spinaxis technology based on a direct angle sampling app-
   roach in order to provide reliable data quickly. 
@@ -67,7 +67,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> This function initializes and configures the click and logger modules. Additional con-
+> This function initializes and configures the Click and logger modules. Additional con-
   figuring is done in the default_cfg(...) function. 
 
 ```c
@@ -108,7 +108,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This function reads angle data from the click module and displays that data using the
+> This function reads angle data from the Click module and displays that data using the
   UART console every 200 miliseconds.
 
 ```c
@@ -138,7 +138,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

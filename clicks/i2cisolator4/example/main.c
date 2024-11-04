@@ -3,9 +3,9 @@
  * @brief I2cIsolator4 Click example
  *
  * # Description
- * This library contains API for the I2C Isolator 4 click driver.
- * This demo application shows an example of an I2C Isolator 4 click 
- * wired to the VAV Press click for reading 
+ * This library contains API for the I2C Isolator 4 Click driver.
+ * This demo application shows an example of an I2C Isolator 4 Click 
+ * wired to the VAV Press Click for reading 
  * differential pressure and temperature measurement.
  *
  * The demo application is composed of two sections :
@@ -13,13 +13,13 @@
  * ## Application Init
  * Initialization of I2C module and log UART.
  * After driver initialization and default settings, 
- * the app set VAV Press click I2C slave address ( 0x5C ) 
+ * the app set VAV Press Click I2C slave address ( 0x5C ) 
  * and enable device.
  *
  * ## Application Task
- * This is an example that shows the use of an I2C Isolator 4 click board™.
+ * This is an example that shows the use of an I2C Isolator 4 Click board™.
  * Logs pressure difference [ Pa ] and temperature [ degree Celsius ] values 
- * of the VAV Press click wired to the I2C Isolator 4 click board™.  
+ * of the VAV Press Click wired to the I2C Isolator 4 Click board™.  
  * Results are being sent to the Usart Terminal where you can track their changes.
  *
  * @note

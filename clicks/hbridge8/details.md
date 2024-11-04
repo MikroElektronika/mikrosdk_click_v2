@@ -1,6 +1,6 @@
 
 ---
-# H-Bridge 8 click
+# H-Bridge 8 Click
 
 H-Bridge 8 Click is a compact add-on board that contains H-bridge current regulator. This board features the MP6519, a monolithic, step-down, current-source driver for applications that require accurate and fast current-response control from Monolithic Power Systems (MPS). It achieves excellent load and line regulation over a wide input supply range up to 28V. The four integrated MOSFET H-bridge control provide a fast dynamic load response and an ultra-high efficiency solution. Complete protection features include load open, load-short protection, over-current protection (OCP), over-temperature protection (OTP), and input over-voltage protection (OVP).
 
@@ -8,7 +8,7 @@ H-Bridge 8 Click is a compact add-on board that contains H-bridge current regula
   <img src="https://download.mikroe.com/images/click_for_ide/hbridge8_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/h-bridge-8-click)
+[Click Product page](https://www.mikroe.com/h-bridge-8-click)
 
 ---
 
@@ -171,7 +171,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

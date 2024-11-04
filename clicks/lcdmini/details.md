@@ -1,14 +1,14 @@
 
 ---
-# LCD mini click
+# LCD mini Click
 
-> LCD mini click displays 2x16 monochrome characters on an LMB162XFW LCD display. It features the MCP23S17 port expander and the MCP4161 digital potentiometer, both from Microchip.
+> LCD mini Click displays 2x16 monochrome characters on an LMB162XFW LCD display. It features the MCP23S17 port expander and the MCP4161 digital potentiometer, both from Microchip.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/lcdmini_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lcd-mini-click)
+[Click Product page](https://www.mikroe.com/lcd-mini-click)
 
 ---
 
@@ -170,7 +170,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

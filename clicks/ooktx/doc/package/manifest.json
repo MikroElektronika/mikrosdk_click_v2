@@ -10,7 +10,7 @@
     ],
     "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "OOK TX click",
+    "display_name": "OOK TX Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.ooktx",
     "product_link": "https://www.mikroe.com/ook-tx-click",
-    "short_description": "OOK TX click is a simple wireless transmitter that operates at the frequency of 433MHz (sub-GHz). This device allows realization of a simple, low-speed wireless ad-hoc communication network between a transmitter and compatible receiver, such as the OOK RX click.",
+    "short_description": "OOK TX Click is a simple wireless transmitter that operates at the frequency of 433MHz (sub-GHz). This device allows realization of a simple, low-speed wireless ad-hoc communication network between a transmitter and compatible receiver, such as the OOK RX Click.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2277
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.OOKTX",
     "subdir_name": "lib_ooktx"
 }
+
 
 
 

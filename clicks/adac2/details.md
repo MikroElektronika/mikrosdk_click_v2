@@ -1,6 +1,6 @@
 
 ---
-# ADAC 2 click
+# ADAC 2 Click
 
 > ADAC 2 Click is a compact add-on board providing the ADC/DAC combo solution. This board features the MAX22000, a 24-bit ADC, an 18-bit DAC, and an analog front-end (AFE) from Analog Devices. It allows users to create a software-configurable (SPI interface) input/output that supports all standard industrial analog interfaces: -10V to +10V analog input or output, -20mA to +20mA analog input or output, as well as an RTD or thermocouple input for temperature measurement.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/adac2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/adac-2-click)
+[Click Product page](https://www.mikroe.com/adac-2-click)
 
 ---
 
@@ -69,7 +69,7 @@ err_t adac2_write_dac ( adac2_t *ctx, int32_t dac );
 
 ## Example Description
 
-> This example demonstrates the use of ADAC 2 click board by setting the DAC output (CIO)
+> This example demonstrates the use of ADAC 2 Click board by setting the DAC output (CIO)
 and reading the ADC results from a single-ended channel (AI4) and from a differential
 channel (AI5+, AI6-) as well as toggling all GPIO pins.
 
@@ -77,7 +77,7 @@ channel (AI5+, AI6-) as well as toggling all GPIO pins.
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which enables
+> Initializes the driver and performs the Click default configuration which enables
 DAC voltage output, sets the analog input mode to single-ended for AI4 and
 differential (AI5+, AI6-), and enables all GPIOs as output.
 
@@ -189,7 +189,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,6 +3,6 @@
     "description": "UT-S 7-SEG B 2 Click is a compact add-on board that presents an easy solution for adding a numeric or hexadecimal display to your application. This board features the TLC5947, a constant-current sink LED driver from Texas Instruments, alongside six ultra-thin blue single-digit numeric displays, the JSS-3011BUB-21. The displays are small in size (0.39 inches in height) and can display letters, numbers, and symbols in a highly readable form. The host MCU can control the light intensity of the blue segments of the display.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","JSS-3011BUB-21"],
+    "hw" : ["Click","JSS-3011BUB-21"],
     "category" : ["Click Boards > Display & LED > LED segment"]
 }

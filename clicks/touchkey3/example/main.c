@@ -3,7 +3,7 @@
  * \brief TouchKey3 Click example
  * 
  * # Description
- * This click uses 7 capacitive sensing channels, with the #CHANGE pin routed to the INT pin of the mikroBUS™, 
+ * This Click uses 7 capacitive sensing channels, with the #CHANGE pin routed to the INT pin of the mikroBUS™, 
  * so that an interrupt can be triggered if any of the sensors detect a touch event. 
  * This can be used to trigger an SPI read cycle only when the key is actually pressed, 
  * avoiding the need for constant polling of the sensor registers.
@@ -11,7 +11,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes click driver and performs a soft reset of the click.
+ * Initializes Click driver and performs a soft reset of the Click.
  * 
  * ## Application Task  
  * Reads the status of the keys, and outputs a message if a key is touched.

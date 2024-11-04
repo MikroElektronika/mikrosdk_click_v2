@@ -1,6 +1,6 @@
 
 ---
-# GNSS 10 click
+# GNSS 10 Click
 
 > GNSS 10 Click is a compact add-on board that provides fast positioning capability. This board features the NEO-M8J, a standard precision GNSS module built on the high-performing M8 GNSS engine in the industry-proven NEO form factor from u-blox. This module utilizes concurrent reception of up to three GNSS systems (GPS/Galileo together with BeiDou or GLONASS), recognizes multiple constellations simultaneously, and provides outstanding positioning accuracy in scenarios where urban canyon or weak signals are involved. It supports all satellite augmentation systems for even better and faster positioning improvement, comes with a configurable host interface, and advanced jamming and spoofing detection. This Click board™ is ideally suited for industrial and automotive applications.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/gnss10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gnss-10-click)
+[Click Product page](https://www.mikroe.com/gnss-10-click)
 
 ---
 
@@ -64,13 +64,13 @@ err_t gnss10_parse_gngga ( char *rsp_buf, uint8_t gngga_element, char *element_d
 
 ## Example Description
 
-> This example demonstrates the use of GNSS 10 click by reading and displaying the GNSS coordinates.
+> This example demonstrates the use of GNSS 10 Click by reading and displaying the GNSS coordinates.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and resets the click board.
+> Initializes the driver and resets the Click board.
 
 ```c
 
@@ -134,7 +134,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

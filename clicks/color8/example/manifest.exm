@@ -1,8 +1,8 @@
 {
     "name": "Color 8 Click",
-    "description": "Color 8 click is a color-sensing Click board™, a part of our sensor Click board™ line. Sensing the color by utilizing ROHM’s BH1749NUC, an integrated color sensor IC, it comes in the package which also includes the mikroSDK™ software, a library with all the functions.",
+    "description": "Color 8 Click is a color-sensing Click board™, a part of our sensor Click board™ line. Sensing the color by utilizing ROHM’s BH1749NUC, an integrated color sensor IC, it comes in the package which also includes the mikroSDK™ software, a library with all the functions.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","BH1749NUC"],
+    "hw" : ["Click","BH1749NUC"],
     "category" : ["Color Sensing"] 
 }

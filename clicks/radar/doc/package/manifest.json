@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "Radar click",
+    "display_name": "Radar Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -28,11 +28,12 @@
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "alias": "Click.Radar",
     "cmake": true,
     "subdir_name": "lib_radar"
 }
+
 
 
 

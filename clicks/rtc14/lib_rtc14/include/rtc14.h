@@ -282,7 +282,7 @@ typedef enum
 
 /**
  * @brief RTC 14 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #rtc14_cfg_t object definition for detailed explanation.
@@ -296,7 +296,7 @@ void rtc14_cfg_setup ( rtc14_cfg_t *cfg );
 /**
  * @brief RTC 14 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #rtc14_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -314,7 +314,7 @@ err_t rtc14_init ( rtc14_t *ctx, rtc14_cfg_t *cfg );
 /**
  * @brief RTC 14 default configuration function.
  * @details This function executes a default configuration of RTC 14
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #rtc14_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -370,7 +370,7 @@ err_t rtc14_generic_read ( rtc14_t *ctx, uint8_t reg, uint8_t *rx_buf, uint8_t r
  * @brief RTC 14 write SRAM function.
  * @details This function writes a user SRAM memory 
  * of the ISL1221 Low Power RTC with Battery Backed SRAM and Event Detection
- * on the RTC 14 click board™.
+ * on the RTC 14 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc14_t object definition for detailed explanation.
  * @param[in] sram_data_in : Data to be written.
@@ -388,7 +388,7 @@ err_t rtc14_write_sram ( rtc14_t *ctx, uint16_t sram_data_in );
  * @brief RTC 14 I2C reading SRAM function.
  * @details This function reads a user SRAM memory 
  * of the ISL1221 Low Power RTC with Battery Backed SRAM and Event Detection
- * on the RTC 14 click board™.
+ * on the RTC 14 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc14_t object definition for detailed explanation.
  * @param[out] sram_data_out : Output read data.
@@ -406,7 +406,7 @@ err_t rtc14_read_sram ( rtc14_t *ctx, uint16_t *sram_data_out );
  * @brief RTC 14 get interrupt function.
  * @details This function check the interrupt state 
  * of the ISL1221 Low Power RTC with Battery Backed SRAM and Event Detection
- * on the RTC 14 click board™.
+ * on the RTC 14 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc14_t object definition for detailed explanation.
  * @return @li @c 0 - INT pin state low,,
@@ -422,7 +422,7 @@ uint8_t rtc14_get_interrupt ( rtc14_t *ctx );
  * @brief RTC 14 get fout function.
  * @details This function get frequency output pin state
  * of the ISL1221 Low Power RTC with Battery Backed SRAM and Event Detection
- * on the RTC 14 click board™.
+ * on the RTC 14 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc14_t object definition for detailed explanation.
  * @return @li @c 0 - FO pin state low,,
@@ -438,7 +438,7 @@ uint8_t rtc14_get_fout ( rtc14_t *ctx );
  * @brief RTC 14 enable RTC function.
  * @details This function enable  the RTC, crystal oscillator
  * of the ISL1221 Low Power RTC with Battery Backed SRAM and Event Detection
- * on the RTC 14 click board™.
+ * on the RTC 14 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc14_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -455,7 +455,7 @@ err_t rtc14_enable_rtc ( rtc14_t *ctx );
  * @brief RTC 14 soft reset function.
  * @details This function performs a software reset
  * of the ISL1221 Low Power RTC with Battery Backed SRAM and Event Detection
- * on the RTC 14 click board™.
+ * on the RTC 14 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc14_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -472,7 +472,7 @@ err_t rtc14_soft_reset ( rtc14_t *ctx );
  * @brief RTC 14 get time function.
  * @details This function function get RTC time data structure
  * of the ISL1221 Low Power RTC with Battery Backed SRAM and Event Detection
- * on the RTC 14 click board™.
+ * on the RTC 14 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc14_t object definition for detailed explanation.
  * @param[out] rtc_time : Pointer of the RTC time structure.
@@ -490,7 +490,7 @@ err_t rtc14_get_time ( rtc14_t *ctx, rtc14_time_t *rtc_time );
  * @brief RTC 14 set time function.
  * @details This function function set RTC time data structure
  * of the ISL1221 Low Power RTC with Battery Backed SRAM and Event Detection
- * on the RTC 14 click board™.
+ * on the RTC 14 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc14_t object definition for detailed explanation.
  * @param[in] rtc_time : Pointer of the RTC time structure.
@@ -508,7 +508,7 @@ err_t rtc14_set_time ( rtc14_t *ctx, rtc14_time_t rtc_time );
  * @brief RTC 14 get date function.
  * @details This function function get RTC date data structure
  * of the ISL1221 Low Power RTC with Battery Backed SRAM and Event Detection
- * on the RTC 14 click board™.
+ * on the RTC 14 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc14_t object definition for detailed explanation.
  * @param[out] rtc_date : Pointer of the RTC date structure.
@@ -526,7 +526,7 @@ err_t rtc14_get_date ( rtc14_t *ctx, rtc14_date_t *rtc_date );
  * @brief RTC 14 set date function.
  * @details This function function set RTC date data structure
  * of the ISL1221 Low Power RTC with Battery Backed SRAM and Event Detection
- * on the RTC 14 click board™.
+ * on the RTC 14 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc14_t object definition for detailed explanation.
  * @param[in] rtc_date : Pointer of the RTC date structure.
@@ -544,7 +544,7 @@ err_t rtc14_set_date ( rtc14_t *ctx, rtc14_date_t rtc_date );
  * @brief RTC 14 get alarm function.
  * @details This function function get RTC alarm data structure
  * of the ISL1221 Low Power RTC with Battery Backed SRAM and Event Detection
- * on the RTC 14 click board™.
+ * on the RTC 14 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc14_t object definition for detailed explanation.
  * @param[out] rtc_alarm : Pointer of the RTC alarm structure.
@@ -562,7 +562,7 @@ err_t rtc14_get_alarm ( rtc14_t *ctx, rtc14_alarm_t *rtc_alarm );
  * @brief RTC 14 set alarm function.
  * @details This function function set RTC alarm data structure
  * of the ISL1221 Low Power RTC with Battery Backed SRAM and Event Detection
- * on the RTC 14 click board™.
+ * on the RTC 14 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc14_t object definition for detailed explanation.
  * @param[in] rtc_alarm : Pointer of the RTC alarm structure.
@@ -580,7 +580,7 @@ err_t rtc14_set_alarm ( rtc14_t *ctx, rtc14_alarm_t rtc_alarm );
  * @brief RTC 14 trigger time stamp function.
  * @details This function function trigger time stamp ( EIN pin is triggered ) 
  * of the ISL1221 Low Power RTC with Battery Backed SRAM and Event Detection
- * on the RTC 14 click board™.
+ * on the RTC 14 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc14_t object definition for detailed explanation.
  * @return Nothing.
@@ -594,7 +594,7 @@ void rtc14_trigger_time_stamp ( rtc14_t *ctx );
  * @brief RTC 14 get time stamp function.
  * @details This function function get RTC time stamp data structure
  * of the ISL1221 Low Power RTC with Battery Backed SRAM and Event Detection
- * on the RTC 14 click board™.
+ * on the RTC 14 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc14_t object definition for detailed explanation.
  * @param[out] rtc_time_stamp : Pointer of the RTC time stamp structure.

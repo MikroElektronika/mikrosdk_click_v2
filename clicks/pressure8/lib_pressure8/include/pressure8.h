@@ -156,7 +156,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void pressure8_cfg_setup ( pressure8_cfg_t *cfg );
@@ -167,7 +167,7 @@ void pressure8_cfg_setup ( pressure8_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t pressure8_init ( pressure8_t *ctx, pressure8_cfg_t *cfg );
 
@@ -248,6 +248,6 @@ void pressure8_set_psi_range ( pressure8_t *ctx, float psi_min, float psi_max );
 #endif  // _PRESSURE8_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

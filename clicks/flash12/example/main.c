@@ -3,7 +3,7 @@
  * @brief Flash 12 Click example
  *
  * # Description
- * This example demonstrates the use of Flash 12 click board 
+ * This example demonstrates the use of Flash 12 Click board 
  * by writing specified data to the memory and reading it back.
  *
  * The demo application is composed of two sections :

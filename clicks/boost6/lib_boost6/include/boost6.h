@@ -136,7 +136,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void boost6_cfg_setup ( boost6_cfg_t *cfg );
@@ -147,7 +147,7 @@ void boost6_cfg_setup ( boost6_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 BOOST6_RETVAL boost6_init ( boost6_t *ctx, boost6_cfg_t *cfg );
 
@@ -157,7 +157,7 @@ BOOST6_RETVAL boost6_init ( boost6_t *ctx, boost6_cfg_t *cfg );
  * @param ctx  Click object.
  *
  * @description This function hardware reset the TPS55332-Q1 60-V Output Step Up DC/DC Converter
- * on Boost 6 click by cleared to '0' state of the RST pin,
+ * on Boost 6 Click by cleared to '0' state of the RST pin,
  * wait the 100 ms, sets to '1' state of the RST pin and wait another the 100 ms.
  */
 void boost6_hw_reset ( boost6_t *ctx );
@@ -169,7 +169,7 @@ void boost6_hw_reset ( boost6_t *ctx );
  *
  * @description This function power OFF provides electrical off control of the regulator
  * TPS55332-Q1 60-V Output Step Up DC/DC Converter
- * on Boost 6 click by cleared to '0' state of the EN pin.
+ * on Boost 6 Click by cleared to '0' state of the EN pin.
  */
 void boost6_power_off ( boost6_t *ctx );
 
@@ -180,7 +180,7 @@ void boost6_power_off ( boost6_t *ctx );
  *
  * @description This function power ON provides electrical off control of the regulator
  * TPS55332-Q1 60-V Output Step Up DC/DC Converter
- * on Boost 6 click by sets to '1' state of the EN pin.
+ * on Boost 6 Click by sets to '1' state of the EN pin.
  */
 void boost6_power_on ( boost6_t *ctx );
 
@@ -190,6 +190,6 @@ void boost6_power_on ( boost6_t *ctx );
 #endif  // _BOOST6_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

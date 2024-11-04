@@ -1,6 +1,6 @@
 
 ---
-# DC Motor 14 click
+# DC Motor 14 Click
 
 DC MOTOR 14 Click is a PWM chopper type brushed DC motor driver, labeled as TB67H450FNG.
 
@@ -8,7 +8,7 @@ DC MOTOR 14 Click is a PWM chopper type brushed DC motor driver, labeled as TB67
   <img src="https://download.mikroe.com/images/click_for_ide/dcmotor14_click.png">
 </p>
 
-[click Product page](https://www.mikroe.com/dc-motor-14-click)
+[Click Product page](https://www.mikroe.com/dc-motor-14-click)
 
 ---
 
@@ -53,7 +53,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example demonstrates the use of DC Motor 14 click board. 
+> This example demonstrates the use of DC Motor 14 Click board. 
 
 **The demo application is composed of two sections :**
 
@@ -138,7 +138,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

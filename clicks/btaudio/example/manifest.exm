@@ -3,6 +3,6 @@
     "description": "If you are getting tired of all those cables you need just to listen to your favorite song over speakers.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","RN52"],
+    "hw" : ["Click","RN52"],
     "category" : ["BT/BLE"] 
 }

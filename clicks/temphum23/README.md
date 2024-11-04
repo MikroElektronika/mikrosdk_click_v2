@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# TempHum 23 click
+# TempHum 23 Click
 
 > Temp&Hum 23 Click is a compact add-on board representing temperature and humidity sensing solution. This board features the SHT45, a 4th generation ultra-low-power relative humidity and temperature sensor from Sensirion. The SHT45 is characterized by its high accuracy (±1% RH and ±0.1°C over a wide operating temperature range) and high resolution providing 16-bit data to the host controller with a configurable I2C interface. Also, it is designed for reliable operation in harsh conditions such as condensing environments. This Click board™ is perfectly suitable for high-volume applications.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/temphum23_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/temphum-23-click)
+[Click Product page](https://www.mikroe.com/temphum-23-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t temphum23_read_measurement_high_precision ( temphum23_t *ctx, float *temp,
 
 ## Example Description
 
-> This example demonstrates the use of Temp & Hum 23 click board by reading the temperature and humidity data.
+> This example demonstrates the use of Temp & Hum 23 Click board by reading the temperature and humidity data.
 
 **The demo application is composed of two sections :**
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

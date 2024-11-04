@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes and sets GainAMP 2 click channel 0 to amplify the signal 2 times
+ * Initializes and sets GainAMP 2 Click channel 0 to amplify the signal 2 times
  * 
  * ## Application Task  
  * Displays the voltage measured from VOUT pin

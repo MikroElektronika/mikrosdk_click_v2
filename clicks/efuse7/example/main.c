@@ -10,7 +10,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initialization of click module and UART log, then performing default 
+ * Initialization of Click module and UART log, then performing default 
  * configuration and setting a current limit to 1 A.
  *
  * ## Application Task

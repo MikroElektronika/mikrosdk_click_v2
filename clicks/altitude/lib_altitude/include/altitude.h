@@ -361,7 +361,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to initial state.
+ * @description This function initializes Click configuration structure to initial state.
  * @note All used pins will be set to unconnected state.
  */
 void altitude_cfg_setup( altitude_cfg_t *cfg );
@@ -374,7 +374,7 @@ void altitude_cfg_setup( altitude_cfg_t *cfg );
  *
  * @returns 0x0 - Ok, 0xFD - Driver init error.
  *
- * @description This function initializes all necessary peripherals and pins used for this click.
+ * @description This function initializes all necessary peripherals and pins used for this Click.
  */
 altitude_err_t altitude_init( altitude_t *ctx, altitude_cfg_t *cfg );
 
@@ -383,8 +383,8 @@ altitude_err_t altitude_init( altitude_t *ctx, altitude_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes a default configuration for Altitude click.
- * @note This function sets click to active mode, and sensor will measure the altitude by default.
+ * @description This function executes a default configuration for Altitude Click.
+ * @note This function sets Click to active mode, and sensor will measure the altitude by default.
  * All necessary interrupts will be enabled in this function.
  */
 void altitude_default_cfg( altitude_t *ctx );

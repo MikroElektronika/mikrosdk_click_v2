@@ -3,6 +3,6 @@
     "description": "Thermo 18 Click is a compact add-on board that provides an accurate temperature measurement. This board features the WSEN-TIDS, a silicon-based, high-precision digital temperature sensor with embedded analog and digital signal processing unit from Würth Elektronik.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","WSEN-TIDS"],
+    "hw" : ["Click","WSEN-TIDS"],
     "category" : ["Temperature & humidity"]
 }

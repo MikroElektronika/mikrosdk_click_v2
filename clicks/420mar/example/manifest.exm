@@ -3,6 +3,6 @@
     "description": "<4-20mA R Click is an add-on board in mikroBUS form factor which serves as a receiver in a 4-20mA current loop standard. It features INA196 current shunt monitor, MCP3201 12-bit ADC as well as TPS61041 DC/DC boost converter.>",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MCP3201"],
+    "hw" : ["Click","MCP3201"],
     "category" : ["Current"] 
 }

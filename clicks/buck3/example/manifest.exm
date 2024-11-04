@@ -1,8 +1,8 @@
 {
     "name": "Buck 3 Click",
-    "description": "Buck 3 click is a very advanced synchronous step-down (buck) converter, which is designed to deliver noise and ripple-free voltage to highly sensitive applications, such as FPGA and high-performance DSP platforms.",
+    "description": "Buck 3 Click is a very advanced synchronous step-down (buck) converter, which is designed to deliver noise and ripple-free voltage to highly sensitive applications, such as FPGA and high-performance DSP platforms.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TPS568215"],
+    "hw" : ["Click","TPS568215"],
     "category" : ["Buck"] 
 }

@@ -3,6 +3,6 @@
     "description": "DIGI POT 13 Click is a compact add-on board that contains a digitally controlled potentiometer. This board features the MAX5419, a 256-tap non-volatile digital potentiometer from Analog Devices. On this Click board™, one digitally I2C-controlled potentiometer is realized with typical end-to-end resistance values of 200kΩ. It can operate from both 3.3V and 5V power supplies and provides a low 35ppm/ºC end-to-end nominal resistance temperature coefficient and only 5ppm/ºC ratiometric.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MAX5419LETA+T"],
+    "hw" : ["Click","MAX5419LETA+T"],
     "category" : ["Click Boards > Mixed signal > Digital potentiometer"]
 }

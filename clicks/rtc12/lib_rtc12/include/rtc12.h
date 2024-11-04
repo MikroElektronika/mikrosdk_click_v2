@@ -270,7 +270,7 @@ typedef enum
 
 /**
  * @brief RTC 12 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #rtc12_cfg_t object definition for detailed explanation.
@@ -282,7 +282,7 @@ void rtc12_cfg_setup ( rtc12_cfg_t *cfg );
 /**
  * @brief RTC 12 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #rtc12_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -298,7 +298,7 @@ err_t rtc12_init ( rtc12_t *ctx, rtc12_cfg_t *cfg );
 /**
  * @brief RTC 12 default configuration function.
  * @details This function executes a default configuration of RTC 12
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #rtc12_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -348,7 +348,7 @@ err_t rtc12_generic_read ( rtc12_t *ctx, uint8_t reg, uint8_t *data_out, uint8_t
  * @brief RTC 12 set control register function.
  * @details This function sets a control register 
  * of the DS1343 Low-Current SPI/3-Wire RTCs 
- * on the RTC 12 click board™.
+ * on the RTC 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc12_t object definition for detailed explanation.
  * @param[in] rtc_ctrl : RTC control structure.
@@ -364,7 +364,7 @@ err_t rtc12_set_ctrl_reg ( rtc12_t *ctx, rtc12_control_t rtc_ctrl );
  * @brief RTC 12 get control register function.
  * @details This function get a control register data 
  * of the DS1343 Low-Current SPI/3-Wire RTCs 
- * on the RTC 12 click board™.
+ * on the RTC 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc12_t object definition for detailed explanation.
  * @param[out] rtc_ctrl : RTC control structure.
@@ -380,7 +380,7 @@ err_t rtc12_get_ctrl_reg ( rtc12_t *ctx, rtc12_control_t *rtc_ctrl );
  * @brief RTC 12 get time function.
  * @details This function get RTC time data structure
  * of the DS1343 Low-Current SPI/3-Wire RTCs 
- * on the RTC 12 click board™.
+ * on the RTC 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc12_t object definition for detailed explanation.
  * @param[out] rtc_time : Pointer of the RTC time structure.
@@ -396,7 +396,7 @@ err_t rtc12_get_time ( rtc12_t *ctx, rtc12_time_t *rtc_time );
  * @brief RTC 12 set time function.
  * @details This function set RTC time data structure
  * of the DS1343 Low-Current SPI/3-Wire RTCs 
- * on the RTC 12 click board™.
+ * on the RTC 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc12_t object definition for detailed explanation.
  * @param[in] rtc_time : RTC time structure.
@@ -412,7 +412,7 @@ err_t rtc12_set_time ( rtc12_t *ctx, rtc12_time_t rtc_time );
  * @brief RTC 12 get date function.
  * @details This function get RTC data structure
  * of the DS1343 Low-Current SPI/3-Wire RTCs 
- * on the RTC 12 click board™.
+ * on the RTC 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc12_t object definition for detailed explanation.
  * @param[out] rtc_date : Pointer of the RTC date structure.
@@ -428,7 +428,7 @@ err_t rtc12_get_date ( rtc12_t *ctx, rtc12_date_t *rtc_date );
  * @brief RTC 12 get time function.
  * @details This function get RTC time data structure
  * of the DS1343 Low-Current SPI/3-Wire RTCs 
- * on the RTC 12 click board™.
+ * on the RTC 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc12_t object definition for detailed explanation.
  * @param[in] rtc_date : RTC date structure.
@@ -444,7 +444,7 @@ err_t rtc12_set_date ( rtc12_t *ctx, rtc12_date_t rtc_date );
  * @brief RTC 12 get alarm 0 function.
  * @details This function get RTC alarm 0 structure
  * of the DS1343 Low-Current SPI/3-Wire RTCs 
- * on the RTC 12 click board™.
+ * on the RTC 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc12_t object definition for detailed explanation.
  * @param[out] rtc_alarm : Pointer of the RTC alarm 0 structure.
@@ -460,7 +460,7 @@ err_t rtc12_get_alarm_0 ( rtc12_t *ctx, rtc12_alarm_t *rtc_alarm );
  * @brief RTC 12 get alarm 0 function.
  * @details This function get RTC alarm 0 data structure
  * of the DS1343 Low-Current SPI/3-Wire RTCs 
- * on the RTC 12 click board™.
+ * on the RTC 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc12_t object definition for detailed explanation.
  * @param[in] rtc_alarm : RTC alarm 0 structure.
@@ -476,7 +476,7 @@ err_t rtc12_set_alarm_0 ( rtc12_t *ctx, rtc12_alarm_t rtc_alarm );
  * @brief RTC 12 get alarm 1 function.
  * @details This function get RTC alarm 1 structure
  * of the DS1343 Low-Current SPI/3-Wire RTCs 
- * on the RTC 12 click board™.
+ * on the RTC 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc12_t object definition for detailed explanation.
  * @param[out] rtc_alarm : Pointer of the RTC alarm 1 structure.
@@ -492,7 +492,7 @@ err_t rtc12_get_alarm_1 ( rtc12_t *ctx, rtc12_alarm_t *rtc_alarm );
  * @brief RTC 12 get alarm 1 function.
  * @details This function get RTC alarm 1 data structure
  * of the DS1343 Low-Current SPI/3-Wire RTCs 
- * on the RTC 12 click board™.
+ * on the RTC 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc12_t object definition for detailed explanation.
  * @param[in] rtc_alarm : RTC alarm 1 structure.
@@ -508,7 +508,7 @@ err_t rtc12_set_alarm_1 ( rtc12_t *ctx, rtc12_alarm_t rtc_alarm );
  * @brief RTC 12 check interrupt state function.
  * @details This function check the interrupt state
  * of the DS1343 Low-Current SPI/3-Wire RTCs 
- * on the RTC 12 click board™.
+ * on the RTC 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc12_t object definition for detailed explanation.
  * @return @li @c 0 - INT pin state low,
@@ -523,7 +523,7 @@ uint8_t rtc12_check_int ( rtc12_t *ctx );
  * @brief RTC 12 check power fail state function.
  * @details This function check the power fail state
  * of the DS1343 Low-Current SPI/3-Wire RTCs 
- * on the RTC 12 click board™.
+ * on the RTC 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc12_t object definition for detailed explanation.
  * @return @li @c 0 - PF pin state low,

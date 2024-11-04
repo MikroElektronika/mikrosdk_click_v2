@@ -3,13 +3,13 @@
  * @brief Expand 3 Click Example.
  *
  * # Description
- * This example demonstrates the use of Expand 3 click board by setting and
+ * This example demonstrates the use of Expand 3 Click board by setting and
  * reading the port state.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Writes a counter data to the port output pins and reads the status of the same port
@@ -17,7 +17,7 @@
  * 
  * @note
  * The PIO pins are in the open-drain mode, therefore a pull-up resistor must be added
- * to each pin. This click board can be used in a combination with an EasyLED [MIKROE-571]
+ * to each pin. This Click board can be used in a combination with an EasyLED [MIKROE-571]
  * and EasyPULL [MIKROE-575] boards.
  *
  * @author Stefan Filipovic

@@ -3,13 +3,13 @@
  * @brief GNSS 15 Click Example.
  *
  * # Description
- * This example demonstrates the use of GNSS 15 click board by processing
+ * This example demonstrates the use of GNSS 15 Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and resets the click board.
+ * Initializes the driver and resets the Click board.
  *
  * ## Application Task
  * Reads the received data, parses the GPGGA info from it, and once it receives the position fix

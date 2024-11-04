@@ -191,7 +191,7 @@ typedef enum
 
 /**
  * @brief GPS 5 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #gps5_cfg_t object definition for detailed explanation.
@@ -203,7 +203,7 @@ void gps5_cfg_setup ( gps5_cfg_t *cfg );
 /**
  * @brief GPS 5 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #gps5_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

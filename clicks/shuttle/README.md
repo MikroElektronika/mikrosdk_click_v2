@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# Shuttle click
+# Shuttle Click
 
-Shuttle click is a mikroBUS™ socket expansion board, which provides an easy and elegant solution for stacking up to four click boards™ on a single mikroBUS™. It is a perfect solution for expanding the capacity of the development system with additional mikroBUS™ sockets when there is a demand for using more click boards™ than the used development system is able to support.
+Shuttle Click is a mikroBUS™ socket expansion board, which provides an easy and elegant solution for stacking up to four Click boards™ on a single mikroBUS™. It is a perfect solution for expanding the capacity of the development system with additional mikroBUS™ sockets when there is a demand for using more Click boards™ than the used development system is able to support.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/shuttle_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/shuttle-click)
+[Click Product page](https://www.mikroe.com/shuttle-click)
 
 ---
 
@@ -54,15 +54,15 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example showcases how to initialize, configure and use the Terminal click. It is a simple
-  GPIO click which uses high-quality PCB design, four ICD BOX headers and flat ribbon cables to
-  enable stable communication and easy stacking of other click modules.
+> This example showcases how to initialize, configure and use the Terminal Click. It is a simple
+  GPIO Click which uses high-quality PCB design, four ICD BOX headers and flat ribbon cables to
+  enable stable communication and easy stacking of other Click modules.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> This function initializes and configures the click and logger modules. 
+> This function initializes and configures the Click and logger modules. 
 
 ```c
 
@@ -128,7 +128,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

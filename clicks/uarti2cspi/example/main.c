@@ -3,9 +3,9 @@
  * \brief UARTI2CSPI Click example
  * 
  * # Description
- * This example showcases how to initialize, configure and use the UART I2C/SPI click module. 
- * The click is a I2C/SPI to UART bridge interface. It requires a RS232/485 cable in order to be 
- * connected to other click module or an adapter.
+ * This example showcases how to initialize, configure and use the UART I2C/SPI Click module. 
+ * The Click is a I2C/SPI to UART bridge interface. It requires a RS232/485 cable in order to be 
+ * connected to other Click module or an adapter.
  *
  * The demo application is composed of two sections :
  * 
@@ -30,7 +30,7 @@
 // #define DEMO_APP_TRANSMITTER
 #define DEMO_APP_RECEIVER
 
-#define TEXT_TO_SEND    "MikroE - UART I2C/SPI click\r\n"
+#define TEXT_TO_SEND    "MikroE - UART I2C/SPI Click\r\n"
 
 static uarti2cspi_t uarti2cspi;
 static log_t logger;

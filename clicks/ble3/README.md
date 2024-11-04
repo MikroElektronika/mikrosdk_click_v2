@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# BLE 3 click
+# BLE 3 Click
 
-BLE 3 click is a quick and simple solution if you want to add Bluetooth Low Energy to your project. It features the NINA-B1 Bluetooth 4.2 module, from u-blox. This click also comes with an integrated antenna mounted on the PCB.
+BLE 3 Click is a quick and simple solution if you want to add Bluetooth Low Energy to your project. It features the NINA-B1 Bluetooth 4.2 module, from u-blox. This Click also comes with an integrated antenna mounted on the PCB.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ble3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ble-3-click)
+[Click Product page](https://www.mikroe.com/ble-3-click)
 
 ---
 
@@ -160,7 +160,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

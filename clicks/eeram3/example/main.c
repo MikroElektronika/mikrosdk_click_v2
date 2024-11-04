@@ -3,12 +3,12 @@
  * @brief EERAM3 Click example
  *
  * # Description
- * This example demonstrates the use of EERAM 3 click board.
+ * This example demonstrates the use of EERAM 3 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Writes a desired number of bytes to the memory and then verifies that it's written correctly
@@ -22,7 +22,7 @@
 #include "log.h"
 #include "eeram3.h"
 
-#define DEMO_TEXT_MESSAGE           "MikroE - EERAM 3 click board"
+#define DEMO_TEXT_MESSAGE           "MikroE - EERAM 3 Click board"
 #define STARTING_ADDRESS            0x1000 
 
 static eeram3_t eeram3;

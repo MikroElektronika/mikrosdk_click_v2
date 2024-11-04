@@ -288,7 +288,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void adc8_cfg_setup ( adc8_cfg_t *cfg );
@@ -299,7 +299,7 @@ void adc8_cfg_setup ( adc8_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ADC8_RETVAL adc8_init ( adc8_t *ctx, adc8_cfg_t *cfg );
 
@@ -308,7 +308,7 @@ ADC8_RETVAL adc8_init ( adc8_t *ctx, adc8_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Adc8 click.
+ * @description This function executes default configuration for Adc8 Click.
  *
  * @note The default configuration is set:
  * <pre>
@@ -424,6 +424,6 @@ void adc8_get_diff_channel( adc8_t *ctx, adc8_diff_volt_t *volt );
 #endif  // _ADC8_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

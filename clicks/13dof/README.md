@@ -3,7 +3,7 @@
  
 
 ---
-# 13DOF click
+# 13DOF Click
 
 13DOF Click is an advanced 13-axis motion tracking Click board™, which utilizes three different sensor ICs onboard: BME680, a digital gas, humidity, pressure and temperature sensor and BMM150, a geomagnetic sensor and a BMI088, small, versatile 6DoF sensor module. All integrated sensors ICs are made by Bosch Sensortec, featuring the state-of-the-art sensor technology processes, in order to fulfill the requirements for immersive gaming and navigation applications, which require highly accurate sensor data fusion.>
 
@@ -11,7 +11,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/13dof_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/13dof-click)
+[Click Product page](https://www.mikroe.com/13dof-click)
 
 ---
 
@@ -61,7 +61,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example displays values registered by sensors on click board.
+> This example displays values registered by sensors on Click board.
 
 **The demo application is composed of two sections :**
 
@@ -172,7 +172,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

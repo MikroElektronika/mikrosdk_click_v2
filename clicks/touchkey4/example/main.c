@@ -3,7 +3,7 @@
  * \brief TouchKey4 Click example
  * 
  * # Description
- * This demo performs touch & release detection click functionality.
+ * This demo performs touch & release detection Click functionality.
  *
  * The demo application is composed of two sections :
  * 
@@ -22,7 +22,7 @@
  * detected and when touch is released. 
  * Standby mode should be used when fewer sensor inputs are enabled, and when
  * they are programmed to have more sensitivity.
- * Sometimes it is neccessary to cycle the board power supply if click doesn't work. 
+ * Sometimes it is neccessary to cycle the board power supply if Click doesn't work. 
  * </pre>
  * \author MikroE Team
  *

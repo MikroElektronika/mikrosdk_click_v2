@@ -3,7 +3,7 @@
  * @brief EEPROM8 Click example
  *
  * # Description
- * This example demonstrates the use of EEPROM 8 click board by writing specified data to
+ * This example demonstrates the use of EEPROM 8 Click board by writing specified data to
  * the memory and reading it back.
  *
  * The demo application is composed of two sections :

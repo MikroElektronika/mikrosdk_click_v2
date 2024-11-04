@@ -3,7 +3,7 @@
  * @brief UPS 3 Click Example.
  *
  * # Description
- * This application demonstrates the use of UPS 3 click board. 
+ * This application demonstrates the use of UPS 3 Click board. 
  *
  * The demo application is composed of two sections :
  *

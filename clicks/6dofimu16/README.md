@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# 6DOF IMU 16 click
+# 6DOF IMU 16 Click
 
 > 6DOF IMU 16 Click is a compact add-on board with a 6-axis inertial measurement device. This board features the ICM-42605, a premium performance 6-axis MotionTracking™ IMU from TDK InvenSense. It combines a 3-axis gyroscope and a 3-axis accelerometer, supporting the lowest gyroscope and accelerometer sensor noise in this IMU class. It also has the highest stability against temperature, shock, SMT/bend-induced offset, and more.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/6dofimu16_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/6dof-imu-16-click)
+[Click Product page](https://www.mikroe.com/6dof-imu-16-click)
 
 ---
 
@@ -70,14 +70,14 @@ err_t c6dofimu16_get_accel_data ( c6dofimu16_t *ctx, c6dofimu16_axis_t *accel_da
 
 ## Example Description
 
-> This example demonstrates the use of 6DOF IMU 16 click board by reading and displaying 
+> This example demonstrates the use of 6DOF IMU 16 Click board by reading and displaying 
  the accelerometer and gyroscope data (X, Y, and Z axis).
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver performs the click default configuration, 
+> Initializes the driver performs the Click default configuration, 
   and checks communication by reading device ID.
 
 ```c
@@ -162,7 +162,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

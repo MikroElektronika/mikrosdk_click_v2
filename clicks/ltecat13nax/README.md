@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LTE Cat.1 3 NAX click
+# LTE Cat.1 3 NAX Click
 
 > LTE Cat.1 3 Click (for North America) is a compact add-on board for reliable 4G wireless communication. This board features the EG91NAXDGA-128-SGNS, an LTE Cat 1 IoT data-only module that meets the 3GPP Release 11 standard from Quectel. It supports multiple wireless standards, including LTE-FDD and WCDMA, ensuring broad network compatibility. Key features include multi-band LTE support (B2/B4/B5/B12/B13/B25/B26), RX diversity for bands B2, B4, and B5, and multi-constellation GNSS (GPS, GLONASS, BeiDou/Compass, Galileo, QZSS). It also integrates a 16-bit mono audio codec for voice functionality with support for CTIA standard headphones.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ltecat13nax_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lte-cat1-3-click-for-north-america)
+[Click Product page](https://www.mikroe.com/lte-cat1-3-click-for-north-america)
 
 ---
 
@@ -53,7 +53,7 @@ err_t ltecat13nax_init ( ltecat13nax_t *ctx, ltecat13nax_cfg_t *cfg );
 err_t ltecat13nax_write_register ( ltecat13nax_t *ctx, uint8_t reg, uint8_t data_in );
 ```
 
-- `ltecat13nax_max9860_cfg` This function is used to set basic config for MAX9860 of LTE Cat.1 3 NAX click board.
+- `ltecat13nax_max9860_cfg` This function is used to set basic config for MAX9860 of LTE Cat.1 3 NAX Click board.
 ```c
 err_t ltecat13nax_max9860_cfg ( ltecat13nax_t *ctx );
 ```
@@ -208,7 +208,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

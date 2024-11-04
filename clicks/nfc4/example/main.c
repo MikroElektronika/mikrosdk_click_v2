@@ -9,7 +9,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * If there's a tag detected, it reads its UID and displays it on the USB UART every 500ms.

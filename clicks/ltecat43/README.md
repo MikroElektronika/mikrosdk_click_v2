@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LTE Cat.4 3 click
+# LTE Cat.4 3 Click
 
 > LTE Cat.4 3 Click is a compact add-on board representing a multi-band and multi-mode solution, offering universal connectivity and reliable performance. This board features the LARA-L6004D-01B, an LTE Cat 4 module in the smallest form factor from u-blox. The module supports an LTE Cat 4 FDD and an LTE Cat 4 TDD radio access technology (RAT), with a 3G UMTS/HSPA and 2G GSM/GPRS/EGPRS fallback. It is an ideal solution for global and multi-regional coverage.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ltecat43_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lte-cat4-3-click-data)
+[Click Product page](https://www.mikroe.com/lte-cat4-3-click-data)
 
 ---
 
@@ -202,7 +202,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

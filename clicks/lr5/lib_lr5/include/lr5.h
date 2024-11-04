@@ -287,7 +287,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void lr5_cfg_setup ( lr5_cfg_t *cfg );
@@ -298,7 +298,7 @@ void lr5_cfg_setup ( lr5_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LR5_RETVAL lr5_init ( lr5_t *ctx, lr5_cfg_t *cfg );
 
@@ -638,6 +638,6 @@ LR5_RETVAL lr5_get_ch_param_cmd ( lr5_t *ctx, uint8_t ch_idx );
 #endif  // _LR5_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

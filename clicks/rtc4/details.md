@@ -1,14 +1,14 @@
 
 ---
-# RTC 4 click
+# RTC 4 Click
 
-> RTC 4 click carries DS2417, a real time clock/calendar with a 1-Wire MicroLAN interface and a programmable interrupt for system output.
+> RTC 4 Click carries DS2417, a real time clock/calendar with a 1-Wire MicroLAN interface and a programmable interrupt for system output.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/rtc4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rtc-4-click)
+[Click Product page](https://www.mikroe.com/rtc-4-click)
 
 ---
 
@@ -64,7 +64,7 @@ err_t rtc4_get_date_time ( rtc4_t *ctx, rtc4_date_t *date, rtc4_time_t *time );
 
 ## Example Description
 
-> This example demonstrates the use of the RTC 4 click board.
+> This example demonstrates the use of the RTC 4 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -153,7 +153,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

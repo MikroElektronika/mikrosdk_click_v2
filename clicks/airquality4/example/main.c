@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * nitializes click driver and gets ID data.
+ * nitializes Click driver and gets ID data.
  * 
  * ## Application Task  
  * Performs measurements of air concentracion for H2, EthOH, CO2 and TVOC data.

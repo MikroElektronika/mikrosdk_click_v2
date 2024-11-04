@@ -594,7 +594,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void accel13_cfg_setup ( accel13_cfg_t *cfg );
@@ -604,7 +604,7 @@ void accel13_cfg_setup ( accel13_cfg_t *cfg );
  * @param accel13 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ACCEL13_RETVAL accel13_init ( accel13_t *ctx, accel13_cfg_t *cfg );
 
@@ -613,7 +613,7 @@ ACCEL13_RETVAL accel13_init ( accel13_t *ctx, accel13_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Accel 13 click.
+ * @description This function executes default configuration for Accel 13 Click.
  *
  * @note:
  *    This functions contains some basic initial setups that we have set for start-up wake-up and configuration of the chip
@@ -821,6 +821,6 @@ uint8_t accel13_get_interrupt ( accel13_t *ctx, uint8_t int_num );
 #endif  // _ACCEL13_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

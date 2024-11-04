@@ -1,6 +1,6 @@
 
 ---
-# IoT ExpressLink click
+# IoT ExpressLink Click
 
 > IoT ExpressLink Click is a compact add-on board that allows users 
 > to easily connected to IoT ExpressLink services 
@@ -15,7 +15,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/iotexpresslink_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/iot-expresslink-click)
+[Click Product page](https://www.mikroe.com/iot-expresslink-click)
 
 ---
 
@@ -66,15 +66,15 @@ void iotexpresslink_send_cmd ( iotexpresslink_t *ctx, uint8_t *cmd );
 
 ## Example Description
 
-> This example demonstrates the use of IoT ExpressLink click board by bridging the USB UART
-to mikroBUS UART which allows the click board to establish a connection with
+> This example demonstrates the use of IoT ExpressLink Click board by bridging the USB UART
+to mikroBUS UART which allows the Click board to establish a connection with
 the IoT ExpressLink over the Quick Connect demo application without an AWS account.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver, resets the click board to factory default settings, reads
+> Initializes the driver, resets the Click board to factory default settings, reads
 and displays the vendor model and thing name on the USB UART, sets the WiFi credentials,
 and attempts to connect to the AWS Cloud. If the initial attempt fails and the error
 message "Failed to access network" or "Failed to login AWS (MQTT) broker" appears,
@@ -216,7 +216,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

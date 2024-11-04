@@ -149,7 +149,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void force_cfg_setup ( force_cfg_t *cfg );
@@ -160,7 +160,7 @@ void force_cfg_setup ( force_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 FORCE_RETVAL force_init ( force_t *ctx, force_cfg_t *cfg );
 
@@ -211,6 +211,6 @@ float force_get_corrected_resistance ( float temperature, float humidity, uint32
 #endif  // _FORCE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------ END

@@ -153,7 +153,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void shtan_cfg_setup ( shtan_cfg_t *cfg );
@@ -166,7 +166,7 @@ void shtan_cfg_setup ( shtan_cfg_t *cfg );
  * @return    0  - Ok,
  *          (-1) - Error.
  *
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t shtan_init ( shtan_t *ctx, shtan_cfg_t *cfg );
 
@@ -238,7 +238,7 @@ void shtan_set_mode ( shtan_t *ctx, shtan_adc_mode_t sel );
  * @param ctx Click object.
  *
  * @description Function hardware reset the SHT3x-ARP Humidity and Temperature Sensor IC
- * on SHT AN click by cleared to '0' state of the RST pin, wait the 100 ms, then sets to
+ * on SHT AN Click by cleared to '0' state of the RST pin, wait the 100 ms, then sets to
  * '1' state of the RST pin and wait for 1 second to establish the device.
  */
 void shtan_reset ( shtan_t *ctx );
@@ -249,6 +249,6 @@ void shtan_reset ( shtan_t *ctx );
 #endif  // SHTAN_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group
+/// \}    // End Click Driver group
 /*! @} */
 // ------------------------------------------------------------------------ END

@@ -3,6 +3,6 @@
     "description": "Pressure 8 Click is an accurate and fully calibrated pressure sensor, equipped with the MPR series integrated piezoresistive silicon pressure sensor IC.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MPRLS0025PA00001A"],
+    "hw" : ["Click","MPRLS0025PA00001A"],
     "category" : ["Pressure"] 
 }

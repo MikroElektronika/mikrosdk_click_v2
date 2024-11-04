@@ -198,7 +198,7 @@ typedef enum
 
 /**
  * @brief DIGI POT 7 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #digipot7_cfg_t object definition for detailed explanation.
@@ -212,7 +212,7 @@ void digipot7_cfg_setup ( digipot7_cfg_t *cfg );
 /**
  * @brief DIGI POT 7 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #digipot7_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -256,7 +256,7 @@ uint16_t digipot7_generic_read ( digipot7_t *ctx, uint8_t cmd, uint8_t wiper_pos
  * @brief Hardware reset function.
  * @details The function reset the
  * AD5175 Single-Channel, 1024-Position, Digital Rheostat with I2C Interface
- * and 50-TP Memory on the DIGI POT 7 click board.
+ * and 50-TP Memory on the DIGI POT 7 Click board.
  * @param[in] ctx : Click context object.
  * See #digipot7_t object definition for detailed explanation.
  * 
@@ -268,7 +268,7 @@ void digipot7_hw_reset ( digipot7_t *ctx );
  * @brief Enable write function.
  * @details The function enable write of the
  * AD5175 Single-Channel, 1024-Position, Digital Rheostat with I2C Interface
- * and 50-TP Memory on the DIGI POT 7 click board.
+ * and 50-TP Memory on the DIGI POT 7 Click board.
  * @param[in] ctx : Click context object.
  * See #digipot7_t object definition for detailed explanation.
  * 
@@ -280,7 +280,7 @@ void digipot7_enable_write ( digipot7_t *ctx );
  * @brief Read RDAC function.
  * @details The function read a 10-bit RDAC data of the
  * AD5175 Single-Channel, 1024-Position, Digital Rheostat with I2C Interface
- * and 50-TP Memory on the DIGI POT 7 click board.
+ * and 50-TP Memory on the DIGI POT 7 Click board.
  * @param[in] ctx : Click context object.
  * See #digipot7_t object definition for detailed explanation.
  * 
@@ -293,7 +293,7 @@ uint16_t digipot7_read_rdac ( digipot7_t *ctx );
  * @brief Write RDAC function.
  * @details The function writes a 10-bit RDAC data of the
  * AD5175 Single-Channel, 1024-Position, Digital Rheostat with I2C Interface
- * and 50-TP Memory on the DIGI POT 7 click board.
+ * and 50-TP Memory on the DIGI POT 7 Click board.
  * @param[in] ctx : Click context object.
  * See #digipot7_t object definition for detailed explanation.
  * @param[in] rdac_data : 10-bit rdac data.
@@ -307,7 +307,7 @@ void digipot7_write_rdac ( digipot7_t *ctx, uint16_t rdac_data );
  * @brief Set resistance function.
  * @details The function writes a 10-bit RDAC data of the
  * AD5175 Single-Channel, 1024-Position, Digital Rheostat with I2C Interface
- * and 50-TP Memory on the DIGI POT 7 click board.
+ * and 50-TP Memory on the DIGI POT 7 Click board.
  * @param[in] ctx : Click context object.
  * See #digipot7_t object definition for detailed explanation.
  * @param[in] res_ohm : Resistance ( ohm ) from 0 to 10000.
@@ -323,7 +323,7 @@ err_t digipot7_set_resistance ( digipot7_t *ctx, uint16_t res_ohm );
  * @brief Software reset function.
  * @details The function software reset the
  * AD5241 I2C Compatible, 256-Position Digital Potentiometers
- * on the DIGI POT 7 click board.
+ * on the DIGI POT 7 Click board.
  * @param[in] ctx : Click context object.
  * See #digipot7_t object definition for detailed explanation.
  * 
@@ -335,7 +335,7 @@ void digipot7_sw_reset ( digipot7_t *ctx );
  * @brief Store wiper setting function.
  * @details The function store wiper setting, store RDAC setting to 50-TP
  * of the AD5241 I2C Compatible, 256-Position Digital Potentiometers
- * on the DIGI POT 7 click board.
+ * on the DIGI POT 7 Click board.
  * @param[in] ctx : Click context object.
  * See #digipot7_t object definition for detailed explanation.
  * 
@@ -347,7 +347,7 @@ void digipot7_store_wiper ( digipot7_t *ctx );
  * @brief Set operating mode function.
  * @details The function set operating mode of the
  * AD5241 I2C Compatible, 256-Position Digital Potentiometers
- * on the DIGI POT 7 click board.
+ * on the DIGI POT 7 Click board.
  * @param[in] ctx : Click context object.
  * See #digipot7_t object definition for detailed explanation.
  * @param[in] mode : Software shutdown options.
@@ -360,7 +360,7 @@ void digipot7_operating_mode ( digipot7_t *ctx, uint8_t mode );
  * @brief Next frame read function.
  * @details The function next frame read of the
  * AD5241 I2C Compatible, 256-Position Digital Potentiometers
- * on the DIGI POT 7 click board.
+ * on the DIGI POT 7 Click board.
  * @param[in] ctx : Click context object.
  * See #digipot7_t object definition for detailed explanation.
  * @param[in] wiper_location : Wiper location ( from 0x00 to the 0x38 ).
@@ -374,7 +374,7 @@ uint16_t digipot7_next_frame_read ( digipot7_t *ctx, uint8_t wiper_location );
  * @details The function read address of the
  * last 50-TP programmed memory location of the
  * AD5241 I2C Compatible, 256-Position Digital Potentiometers
- * on the DIGI POT 7 click board.
+ * on the DIGI POT 7 Click board.
  * @param[in] ctx : Click context object.
  * See #digipot7_t object definition for detailed explanation.
  * 
@@ -386,7 +386,7 @@ uint16_t digipot7_read_memory ( digipot7_t *ctx );
  * @brief Read control register function.
  * @details The function read contents of the control register of the
  * AD5241 I2C Compatible, 256-Position Digital Potentiometers
- * on the DIGI POT 7 click board.
+ * on the DIGI POT 7 Click board.
  * @param[in] ctx : Click context object.
  * See #digipot7_t object definition for detailed explanation.
  * 

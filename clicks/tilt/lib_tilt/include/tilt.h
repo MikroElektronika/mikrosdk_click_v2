@@ -153,7 +153,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void tilt_cfg_setup ( tilt_cfg_t *cfg );
@@ -163,7 +163,7 @@ void tilt_cfg_setup ( tilt_cfg_t *cfg );
  * @param tilt Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 TILT_RETVAL tilt_init ( tilt_t *ctx, tilt_cfg_t *cfg );
 
@@ -177,7 +177,7 @@ TILT_RETVAL tilt_init ( tilt_t *ctx, tilt_cfg_t *cfg );
  * - 1 : left movement direction;
  *
  * @description This function check the tilt left movement's direction
- * of RPI-1035 Surface Mount Type 4-Direction Detector on Tilt click board.
+ * of RPI-1035 Surface Mount Type 4-Direction Detector on Tilt Click board.
  */
 uint8_t tilt_left ( tilt_t *ctx );
 
@@ -191,7 +191,7 @@ uint8_t tilt_left ( tilt_t *ctx );
  * - 1 : right movement direction;
  *
  * @description This function check the tilt right movement's direction
- * of RPI-1035 Surface Mount Type 4-Direction Detector on Tilt click board.
+ * of RPI-1035 Surface Mount Type 4-Direction Detector on Tilt Click board.
  */
 uint8_t tilt_right ( tilt_t *ctx );
 
@@ -205,7 +205,7 @@ uint8_t tilt_right ( tilt_t *ctx );
  * - 1 : up movement direction;
  *
  * @description This function check the tilt up movement's direction
- * of RPI-1035 Surface Mount Type 4-Direction Detector on Tilt click board.
+ * of RPI-1035 Surface Mount Type 4-Direction Detector on Tilt Click board.
  */
 uint8_t tilt_up ( tilt_t *ctx );
 
@@ -219,7 +219,7 @@ uint8_t tilt_up ( tilt_t *ctx );
  * - 1 : down movement direction;
  *
  * @description This function check the tilt down movement's direction
- * of RPI-1035 Surface Mount Type 4-Direction Detector on Tilt click board.
+ * of RPI-1035 Surface Mount Type 4-Direction Detector on Tilt Click board.
  */
 uint8_t tilt_down ( tilt_t *ctx );
 
@@ -236,7 +236,7 @@ uint8_t tilt_down ( tilt_t *ctx );
  *
  * @description This function check the tilt movement's direction:
  * left, right, up or down,
- * of RPI-1035 Surface Mount Type 4-Direction Detector on Tilt click board.
+ * of RPI-1035 Surface Mount Type 4-Direction Detector on Tilt Click board.
  */
 uint8_t tilt_direction ( tilt_t *ctx );
 
@@ -246,6 +246,6 @@ uint8_t tilt_direction ( tilt_t *ctx );
 #endif  // _TILT_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

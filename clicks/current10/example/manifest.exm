@@ -3,6 +3,6 @@
     "description": "Current 10 Click is a compact add-on board designed for reliable current measurements. This board features the CT455, an XtremeSense™ TMR coreless current sensor from Allegro Microsystems, with a wide 1MHz bandwidth and a sensitivity of 333.3mV/mT, capable of detecting both positive and negative current flows (±6mT). It translates magnetic fields into a linear analog output with less than ±1.0% error across temperature and supply voltage variations.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","CT455-H06B5-TS08"],
+    "hw" : ["Click","CT455-H06B5-TS08"],
     "category" : ["Click Boards > Sensors > Current sensor"]
 }

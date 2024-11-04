@@ -3,13 +3,13 @@
  * @brief Color 16 Click example
  *
  * # Description
- * This example demonstrates the use of Color 16 click by reading and displaying
+ * This example demonstrates the use of Color 16 Click by reading and displaying
  * the values from all 14 channels.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Waits for the spectral measurement complete flag and then reads data from all 14 channels

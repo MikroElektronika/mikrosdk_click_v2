@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and enables the click board, then checks the communication 
+ * Initializes the driver and enables the Click board, then checks the communication 
  * by reading the device and manufacturer IDs.
  * 
  * ## Application Task  

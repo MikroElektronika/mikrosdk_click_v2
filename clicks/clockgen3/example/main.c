@@ -3,12 +3,12 @@
  * \brief ClockGen3 Click example
  * 
  * # Description
- * This example demonstrates the use of Clock Gen 3 click board.
+ * This example demonstrates the use of Clock Gen 3 Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and configures the click board.
+ * Initializes the driver and configures the Click board.
  * 
  * ## Application Task  
  * Sets different frequencies every 3 seconds and displays the set frequency 

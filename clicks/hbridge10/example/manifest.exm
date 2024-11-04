@@ -3,6 +3,6 @@
     "description": "H-Bridge 10 Click is a compact add-on board containing H-bridge outputs that let you control a DC motor to go backward or forward. This board features the MP6523, a triple, half-bridge, DMOS, output driver with integrated power MOSFETs that can drive up to three different loads from Monolithic Power Systems (MPS). The MP6523 is rated for an operating voltage range from 7V to 28V. It is SPI-configurable and has various diagnostic functions. Complete protection features include short-circuit protection (SCP), under-voltage protection (UVP), and thermal shutdown, alongside an onboard power supply existence-check circuit. This Click board™ is suitable as a multiple brushed DC motor driver for driving various loads in automotive and industrial applications, and more.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MP6523GR-Z"],
+    "hw" : ["Click","MP6523GR-Z"],
     "category" : ["Brushed"]
 }

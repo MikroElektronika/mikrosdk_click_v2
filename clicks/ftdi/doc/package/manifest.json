@@ -10,7 +10,7 @@
     ],
     "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "FTDI click",
+    "display_name": "FTDI Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -31,11 +31,12 @@
     "related_projects": [
         621
     ],
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.FTDI",
     "subdir_name": "lib_ftdi"
 }
+
 
 
 

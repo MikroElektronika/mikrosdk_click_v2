@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# NFC 6 click
+# NFC 6 Click
 
 > NFC 6 Click is a compact add-on board that contains an NFC transceiver for contactless communication. This board features the ST25R95, a near-field communication transceiver from STMicroelectronics. It supports reader and writer operating modes and emulates ISO/IEC 14443-3 Type A cards. The RF communications are done over the 13.56MHz. The transceiver features tag detection mode, field detection mode, transmission and reception modes, and more.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/nfc6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/nfc-6-click)
+[Click Product page](https://www.mikroe.com/nfc-6-click)
 
 ---
 
@@ -76,7 +76,7 @@ err_t nfc6_read_mifare_tag_uid ( nfc6_t *ctx, uint8_t *tag_uid, uint8_t *tag_uid
 
 ### Application Init
 
-> Initializes the driver and logger, performs the click default configuration and reads the device ID.
+> Initializes the driver and logger, performs the Click default configuration and reads the device ID.
 
 ```c
 
@@ -163,7 +163,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

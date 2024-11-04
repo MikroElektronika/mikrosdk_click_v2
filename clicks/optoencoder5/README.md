@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Opto Encoder 5 click
+# Opto Encoder 5 Click
 
 > Opto Encoder 5 Click is a compact add-on board that offers non-contact switching with unparalleled accuracy and precision. This board features the OPB666N, a Photologic® slotted optical switch from TT Electronics, ensuring top-notch performance and reliability. It integrates an 890nm infrared LED and a monolithic integrated circuit with a photodiode, linear amplifier, and Schmitt trigger, all powered effectively by a 5V supply from the mikroBUS™ power rail. The board features an NPN open-collector output configuration and is TTI/LST TL compatible, highlighting its ease of use and versatility.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/optoencoder5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/opto-encoder-5-click)
+[Click Product page](https://www.mikroe.com/opto-encoder-5-click)
 
 ---
 
@@ -48,17 +48,17 @@ err_t optoencoder5_init ( optoencoder5_t *ctx, optoencoder5_cfg_t *cfg );
 
 #### Example key functions :
 
-- `optoencoder5_enable` This function enables the slotted optical switch of Opto Encoder 5 click board.
+- `optoencoder5_enable` This function enables the slotted optical switch of Opto Encoder 5 Click board.
 ```c
 void optoencoder5_enable ( optoencoder5_t *ctx );
 ```
 
-- `optoencoder5_disable` This function disables the slotted optical switch of Opto Encoder 5 click board.
+- `optoencoder5_disable` This function disables the slotted optical switch of Opto Encoder 5 Click board.
 ```c
 void optoencoder5_disable ( optoencoder5_t *ctx );
 ```
 
-- `optoencoder5_get_out_state` This function detecting slotted optical switch states of Opto Encoder 5 click board.
+- `optoencoder5_get_out_state` This function detecting slotted optical switch states of Opto Encoder 5 Click board.
 ```c
 uint8_t optoencoder5_get_out_state ( optoencoder5_t *ctx );
 ```
@@ -142,7 +142,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

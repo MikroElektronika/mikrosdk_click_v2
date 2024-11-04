@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "OLED B click",
+    "display_name": "OLED B Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.oledb",
     "product_link": "https://www.mikroe.com/oled-b-click",
-    "short_description": "OLED B click carries a 96 x 39px blue monochrome passive matrix OLED display. The display is bright, has a wide viewing angle and low power consumption.",
+    "short_description": "OLED B Click carries a 96 x 39px blue monochrome passive matrix OLED display. The display is bright, has a wide viewing angle and low power consumption.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         1111
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.OLEDB",
     "subdir_name": "lib_oledb"
 }
+
 
 
 

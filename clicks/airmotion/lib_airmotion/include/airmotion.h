@@ -853,7 +853,7 @@ typedef enum
 
 /**
  * @brief Air Motion configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #airmotion_cfg_t object definition for detailed explanation.
@@ -865,7 +865,7 @@ void airmotion_cfg_setup ( airmotion_cfg_t *cfg );
 /**
  * @brief Air Motion driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #airmotion_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -881,7 +881,7 @@ void airmotion_drv_interface_selection ( airmotion_cfg_t *cfg, airmotion_drv_t d
 /**
  * @brief Air Motion initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #airmotion_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -896,7 +896,7 @@ err_t airmotion_init ( airmotion_t *ctx, airmotion_cfg_t *cfg );
 /**
  * @brief Air Motion default configuration function.
  * @details This function executes a default configuration of Air Motion
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #airmotion_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -1023,7 +1023,7 @@ uint8_t airmotion_get_int1_state ( airmotion_t *ctx );
 /**
  * @brief Air Motion software reset function.
  * @details This function is used to perform a software reset of the Air Motion
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #airmotion_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -1036,7 +1036,7 @@ err_t airmotion_sw_reset( airmotion_t *ctx );
 /**
  * @brief Air Motion read temperature function.
  * @details This function is used to read temperature from the Air Motion
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #airmotion_t object definition for detailed explanation.
  * @param[out] temperature_data : Temperature value.
@@ -1050,7 +1050,7 @@ err_t airmotion_read_temperature ( airmotion_t *ctx, float *temperature_data );
 /**
  * @brief Air Motion read timestamp function.
  * @details This function is used to read data timestamp from the Air Motion
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #airmotion_t object definition for detailed explanation.
  * @param[out] tmst_data : Timestamp value.
@@ -1064,7 +1064,7 @@ err_t airmotion_read_timestamp ( airmotion_t *ctx, uint32_t *tmst_data );
 /**
  * @brief Air Motion read data function.
  * @details This function is used to read accel, gyro, temperature, and timestamp data from the 
- * Air Motion click board. This data can be then processed and used in a specific way.
+ * Air Motion Click board. This data can be then processed and used in a specific way.
  * @param[in] ctx : Click context object.
  * See #airmotion_t object definition for detailed explanation.
  * @param[out] temperature_data : Temperature data value.
@@ -1082,7 +1082,7 @@ err_t airmotion_get_data_from_register ( airmotion_t *ctx, float *temperature_da
 
 /**
  * @brief Air Motion basic tap detection configuration function.
- * @details This function is used to configure the Air Motion click board into tap detection configuration. 
+ * @details This function is used to configure the Air Motion Click board into tap detection configuration. 
  * @param[in] ctx : Click context object.
  * See #airmotion_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -1094,7 +1094,7 @@ err_t airmotion_set_basic_tap_detection ( airmotion_t *ctx );
 
 /**
  * @brief Air Motion get tap detection data function.
- * @details This function is used to read tap detection data from the Air Motion click board.
+ * @details This function is used to read tap detection data from the Air Motion Click board.
  * @param[in] ctx : Click context object.
  * See #airmotion_t object definition for detailed explanation.
  * @param[out] tap_num : Numbers of taps.

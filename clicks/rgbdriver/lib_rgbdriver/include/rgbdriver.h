@@ -158,7 +158,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void rgbdriver_cfg_setup ( rgbdriver_cfg_t *cfg );
@@ -169,7 +169,7 @@ void rgbdriver_cfg_setup ( rgbdriver_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 RGBDRIVER_RETVAL rgbdriver_init ( rgbdriver_t *ctx, rgbdriver_cfg_t *cfg );
 
@@ -178,7 +178,7 @@ RGBDRIVER_RETVAL rgbdriver_init ( rgbdriver_t *ctx, rgbdriver_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for RGB Driver click.
+ * @description This function executes default configuration for RGB Driver Click.
  */
 RGBDRIVER_RETVAL rgbdriver_default_cfg ( rgbdriver_t *ctx );
 
@@ -240,6 +240,6 @@ void rgbdriver_shut_down ( rgbdriver_t *ctx );
 #endif  // _RGBDRIVER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

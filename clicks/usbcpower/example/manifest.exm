@@ -3,6 +3,6 @@
     "description": "USB-C Power Click is a compact add-on board that provides a quick and easy way to supply power without carrying multiple adapters or cables. This board features the TPS25750S, a highly integrated USB Type-C and Power Delivery (PD) controller with integrated power switches optimized for power applications from Texas Instruments. The TPS25750S integrates fully managed power paths (5V/3A with 36mΩ sourcing switch) with robust protection (reverse and inrush current as well as over/under voltage protection) and control for external battery charger IC for a complete USB-C PD solution. Besides web-based GUI and pre-configured firmware, the TPS25750S also has some GPIOs and LED indicators that are user-defined for either status or control information.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","TPS25750"],
+    "hw" : ["Click","TPS25750"],
     "category" : ["Click Boards > Power management > USB-C PD"]
 }

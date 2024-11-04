@@ -525,7 +525,7 @@ typedef enum
 
 /**
  * @brief Charger 6 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #charger6_cfg_t object definition for detailed explanation.
@@ -539,7 +539,7 @@ void charger6_cfg_setup ( charger6_cfg_t *cfg );
 /**
  * @brief Charger 6 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #charger6_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -557,7 +557,7 @@ err_t charger6_init ( charger6_t *ctx, charger6_cfg_t *cfg );
 /**
  * @brief Charger 6 default configuration function.
  * @details This function executes a default configuration of Charger 6
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #charger6_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

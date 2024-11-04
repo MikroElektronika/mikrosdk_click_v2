@@ -3,15 +3,15 @@
  * \brief Lem Click example
  * 
  * # Description
- * Demo app measures and displays current by using LEM click board.
+ * Demo app measures and displays current by using LEM Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initalizes SPI, LOG and click drivers.
+ * Initalizes SPI, LOG and Click drivers.
  * 
  * ## Application Task  
- * This is an example that shows the capabilities of the LEM click by measuring 
+ * This is an example that shows the capabilities of the LEM Click by measuring 
  * current passing through the conductor placed through the hole on the sensor.
  * 
  * \author Jovan Stajkovic

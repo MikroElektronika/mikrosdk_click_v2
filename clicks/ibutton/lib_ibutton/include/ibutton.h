@@ -203,7 +203,7 @@ typedef enum
 
 /**
  * @brief iButton configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #ibutton_cfg_t object definition for detailed explanation.
@@ -215,7 +215,7 @@ void ibutton_cfg_setup ( ibutton_cfg_t *cfg );
 /**
  * @brief iButton driver interface setup function.
  * @details This function sets a communication GPIO pin which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #ibutton_cfg_t object definition for detailed explanation.
  * @param[in] gpio_sel : GPIO pin selection.
@@ -231,7 +231,7 @@ void ibutton_gpio_selection ( ibutton_cfg_t *cfg, ibutton_gpio_sel_t gpio_sel );
 /**
  * @brief iButton initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #ibutton_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

@@ -131,7 +131,7 @@ typedef enum
 
 /**
  * @brief Headphone AMP 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #headphoneamp3_cfg_t object definition for detailed explanation.
@@ -143,7 +143,7 @@ void headphoneamp3_cfg_setup ( headphoneamp3_cfg_t *cfg );
 /**
  * @brief Headphone AMP 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #headphoneamp3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -158,7 +158,7 @@ err_t headphoneamp3_init ( headphoneamp3_t *ctx, headphoneamp3_cfg_t *cfg );
 /**
  * @brief Headphone AMP 3 default configuration function.
  * @details This function executes a default configuration of Headphone AMP 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #headphoneamp3_t object definition for detailed explanation.
  * @return Nothing.
@@ -170,7 +170,7 @@ void headphoneamp3_default_cfg ( headphoneamp3_t *ctx );
 /**
  * @brief Headphone AMP 3 power pin setting function.
  * @details This function sets the power pin on the selected level of
- * Headphone AMP 3 click board.
+ * Headphone AMP 3 Click board.
  * @param[in] ctx : Click context object.
  * See #headphoneamp3_t object definition for detailed explanation.
  * @param[in] state : State of the pin.
@@ -182,7 +182,7 @@ void headphoneamp3_enable_power ( headphoneamp3_t *ctx, uint8_t state );
 /**
  * @brief Headphone AMP 3 amp pin setting function.
  * @details This function sets the amp pin on the selected level of
- * Headphone AMP 3 click board.
+ * Headphone AMP 3 Click board.
  * @param[in] ctx : Click context object.
  * See #headphoneamp3_t object definition for detailed explanation.
  * @param[in] state : State of the pin.

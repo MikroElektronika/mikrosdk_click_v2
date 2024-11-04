@@ -3,7 +3,7 @@
  * @brief Cap Touch 6 Click Example.
  *
  * # Description
- * This example demonstrates the use of Cap Touch 6 click board by reading and displaying
+ * This example demonstrates the use of Cap Touch 6 Click board by reading and displaying
  * the touch and proximity events.
  *
  * The demo application is composed of two sections :

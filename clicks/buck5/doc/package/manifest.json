@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "Buck 5 click",
+    "display_name": "Buck 5 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.buck5",
     "product_link": "https://www.mikroe.com/buck-5-click",
-    "short_description": "Buck 5 Click is a high-efficiency buck (step-down) DC/DC converter, which can provide digitally adjusted step-down voltage on its output while delivering a considerable amount of current. Buck 5 click accepts a wide voltage range on its input - from 5V to 30V. ",
+    "short_description": "Buck 5 Click is a high-efficiency buck (step-down) DC/DC converter, which can provide digitally adjusted step-down voltage on its output while delivering a considerable amount of current. Buck 5 Click accepts a wide voltage range on its input - from 5V to 30V. ",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2358
     ],
-    "version": "2.1.0.18",
+    "version": "2.1.0.19",
     "cmake": true,
     "alias": "Click.Buck5",
     "subdir_name": "lib_buck5"
 }
+
 
 
 

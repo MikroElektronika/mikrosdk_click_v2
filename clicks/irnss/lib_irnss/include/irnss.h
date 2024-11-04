@@ -188,7 +188,7 @@ typedef enum
 
 /**
  * @brief IRNSS configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #irnss_cfg_t object definition for detailed explanation.
@@ -200,7 +200,7 @@ void irnss_cfg_setup ( irnss_cfg_t *cfg );
 /**
  * @brief IRNSS initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #irnss_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

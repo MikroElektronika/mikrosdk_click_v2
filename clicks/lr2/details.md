@@ -1,6 +1,6 @@
 
 ---
-# LR 2 click
+# LR 2 Click
 
 > LR 2 Click is a compact add-on board that contains a low-power, long-range transceiver. This board features the RN2903, RF technology-based SRD transceiver, which operates at a frequency of 915MHz from Microchip Technology. This Click board™ features an embedded LoRaWAN Class A compliant stack, providing a long-range spread spectrum communication with high interference immunity. The RN2903 module is fully compliant with the United States (FCC) and Canada (IC) regulations combined with the advanced and straightforward command interface allowing easy integration into the final application. 
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/lr_2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lr-2-click)
+[Click Product page](https://www.mikroe.com/lr-2-click)
 
 ---
 
@@ -183,7 +183,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

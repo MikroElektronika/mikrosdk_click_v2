@@ -3,7 +3,7 @@
  * @brief ADC12 Click example
  *
  * # Description
- * This example demonstrates the use of ADC 12 click board.
+ * This example demonstrates the use of ADC 12 Click board.
  *
  * The demo application is composed of two sections :
  *
@@ -15,7 +15,7 @@
  * both values on the USB UART every second.
  *
  * @note
- * With internal reference voltage set the click measures up to 2500 mV.
+ * With internal reference voltage set the Click measures up to 2500 mV.
  *
  * @author Stefan Filipovic
  *

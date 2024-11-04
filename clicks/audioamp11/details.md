@@ -1,6 +1,6 @@
 
 ---
-# AudioAMP 11 click
+# AudioAMP 11 Click
 
 > AudioAmp 11 Click is a compact add-on board reproducing input audio signals with desired volume 
 > and power levels at sound-producing output elements. 
@@ -14,7 +14,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/audioamp11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/audioamp-11-click)
+[Click Product page](https://www.mikroe.com/audioamp-11-click)
 
 ---
 
@@ -75,8 +75,8 @@ err_t audioamp11_set_output_volume_level ( audioamp11_t *ctx, uint8_t volume_dat
 
 ## Example Description
 
-> This library contains API for the AudioAMP 11 click driver.
-> This demo application shows use of a AudioAMP 11 click board™.
+> This library contains API for the AudioAMP 11 Click driver.
+> This demo application shows use of a AudioAMP 11 Click board™.
 
 **The demo application is composed of two sections :**
 
@@ -128,7 +128,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This example demonstrates the use of the AudioAMP 11 click board™.
+> This example demonstrates the use of the AudioAMP 11 Click board™.
 > If GAIN SEL switches are set to 12dB, the app performs circles 
 > switching the volume from -20.5 dB to 12 dB.
 > If the GAIN SEL switches are different, the app sets the volume level to 31 (maximum).
@@ -188,7 +188,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Angle 9 click
+# Angle 9 Click
 
 > Angle 9 Click is a compact add-on board that detects the absolute position of a permanent magnet. This board features the AAS33001, a precision angle sensor with incremental and motor commutation outputs and on-chip linearization from Allegro Microsystems. It is a contactless angle sensor for 0° to 360° angular position, rotation speed, and directional measurement. Support for incremental output interface (ABI) and motor commutation (UVW) is also available. The same goes for the on-chip EEPROM for storing factory and customer calibration parameters.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/angle9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/angle-9-click)
+[Click Product page](https://www.mikroe.com/angle-9-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t angle9_read_temperature ( angle9_t *ctx, float *temperature );
 
 ## Example Description
 
-> This example demonstrates the use of Angle 9 click board by reading and displaying
+> This example demonstrates the use of Angle 9 Click board by reading and displaying
 the magnet's angular position in degrees, field strength in gauss, and the internal
 sensor temperature in degrees celsius.
 
@@ -148,7 +148,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

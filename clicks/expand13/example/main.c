@@ -3,13 +3,13 @@
  * @brief Expand13 Click example
  *
  * # Description
- * This example demonstrates the use of Expand 13 click board, 
+ * This example demonstrates the use of Expand 13 Click board, 
  * by writing data to all six ports and then reading back the status of the ports. 
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and enables the click board.
+ * Initializes the driver and enables the Click board.
  *
  * ## Application Task
  * Sets the pins of all ports and then reads and displays their status on the 

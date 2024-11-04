@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# EasyPull click
+# EasyPull Click
 
 > EasyPull Click is a compact add-on board designed to easily configure mikroBUS™ signals into pull-up or pull-down states, perfect for various applications. It features a universal setup with 4.7kΩ resistors to ensure stable performance across vital communication lines such as SPI, UART, I2C, and standard mikroBUS™ signals (AN, RST, PWM, INT).
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/easypull_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/easypull-click)
+[Click Product page](https://www.mikroe.com/easypull-click)
 
 ---
 
@@ -48,17 +48,17 @@ err_t easypull_init ( easypull_t *ctx, easypull_cfg_t *cfg );
 
 #### Example key functions :
 
-- `easypull_get_an_pin` This function reads the state of the AN pin of EasyPull click board.
+- `easypull_get_an_pin` This function reads the state of the AN pin of EasyPull Click board.
 ```c
 uint8_t easypull_get_an_pin ( easypull_t *ctx );
 ```
 
-- `easypull_get_rst_pin` This function reads the state of the RST pin of EasyPull click board.
+- `easypull_get_rst_pin` This function reads the state of the RST pin of EasyPull Click board.
 ```c
 uint8_t easypull_get_rst_pin ( easypull_t *ctx );
 ```
 
-- `easypull_get_cs_pin` This function reads the state of the CS pin of EasyPull click board.
+- `easypull_get_cs_pin` This function reads the state of the CS pin of EasyPull Click board.
 ```c
 uint8_t easypull_get_cs_pin ( easypull_t *ctx );
 ```
@@ -175,7 +175,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

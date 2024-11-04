@@ -253,7 +253,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void stspin233_cfg_setup ( stspin233_cfg_t *cfg );
@@ -263,7 +263,7 @@ void stspin233_cfg_setup ( stspin233_cfg_t *cfg );
  * @param stspin233 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 STSPIN233_RETVAL stspin233_init ( stspin233_t *ctx, stspin233_cfg_t *cfg );
 
@@ -272,7 +272,7 @@ STSPIN233_RETVAL stspin233_init ( stspin233_t *ctx, stspin233_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for STSPIN233 click.
+ * @description This function executes default configuration for STSPIN233 Click.
  */
 void stspin233_default_cfg ( stspin233_t *ctx );
 
@@ -353,6 +353,6 @@ uint8_t stspin233_get_int_state ( stspin233_t *ctx );
 #endif  // _STSPIN233_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

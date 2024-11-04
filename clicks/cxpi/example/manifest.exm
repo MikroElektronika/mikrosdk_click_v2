@@ -3,6 +3,6 @@
     "description": "CXPI Click is a compact add-on board that contains a transceiver that supports the next-generation automotive communication protocol. This board features the BD41000AFJ-C, a transceiver for the CXPI (Clock Extension Peripheral Interface) communication from Rohm Semiconductor.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","BD41000AFJ-C"],
+    "hw" : ["Click","BD41000AFJ-C"],
     "category" : ["Interface"]
 }

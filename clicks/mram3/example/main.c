@@ -3,13 +3,13 @@
  * @brief MRAM3 Click example
  *
  * # Description
- * This example demonstrates the use of MRAM 3 click board by writing specified data to
+ * This example demonstrates the use of MRAM 3 Click board by writing specified data to
  * the memory and reading it back.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Writes a desired number of bytes to the memory and then verifies if it is written correctly
@@ -27,7 +27,7 @@ static mram3_t mram3;
 static log_t logger;
 
 #define DEMO_TEXT_MESSAGE_1         "MikroE"
-#define DEMO_TEXT_MESSAGE_2         "MRAM 3 click"
+#define DEMO_TEXT_MESSAGE_2         "MRAM 3 Click"
 #define STARTING_ADDRESS            0x01234
 
 void application_init ( void )

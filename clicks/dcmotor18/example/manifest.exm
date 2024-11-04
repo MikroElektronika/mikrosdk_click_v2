@@ -3,6 +3,6 @@
     "description": "DC Motor 18 Click is a compact add-on board that contains a brushed DC motor driver. This board features the TB9051FTG, an automotive PWM-type single-channel H-Bridge DC brushed motor driver from Toshiba Semiconductor.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TB9051FTG"],
+    "hw" : ["Click","TB9051FTG"],
     "category" : ["Brushed"]
 }

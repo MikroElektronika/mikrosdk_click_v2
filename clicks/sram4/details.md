@@ -1,6 +1,6 @@
 
 ---
-# SRAM 4 click
+# SRAM 4 Click
 
 > SRAM 4 Click is a compact add-on board that contains highly reliable nonvolatile memory. This board features the CY14B512Q, a 512Kbit SRAM with a nonvolatile element in each memory cell from Cypress Semiconductor, now part of Infineon.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/sram_4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/sram-4-click)
+[Click Product page](https://www.mikroe.com/sram-4-click)
 
 ---
 
@@ -175,7 +175,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

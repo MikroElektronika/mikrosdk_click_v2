@@ -168,7 +168,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void i2cmux_cfg_setup ( i2cmux_cfg_t *cfg );
@@ -179,7 +179,7 @@ void i2cmux_cfg_setup ( i2cmux_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 I2CMUX_RETVAL i2cmux_init ( i2cmux_t *ctx, i2cmux_cfg_t *cfg );
 
@@ -212,7 +212,7 @@ void i2cmux_generic_read ( i2cmux_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_
  *
  * @param ctx          Click object.
  *
- * @description This function resets I2C MUX 2 click board
+ * @description This function resets I2C MUX 2 Click board
  * by clearing the RST pin for 100ms.
  */
 void i2cmux_hw_reset ( i2cmux_t *ctx );
@@ -225,7 +225,7 @@ void i2cmux_hw_reset ( i2cmux_t *ctx );
  *
  * @description This function executes writes command to the TCA9546A
  * Low Voltage 4-Channel I2C and SMBus Switch
- * on the I2C MUX click board.
+ * on the I2C MUX Click board.
  */
 void i2cmux_write_cmd ( i2cmux_t *ctx, uint8_t tx_data );
 
@@ -236,7 +236,7 @@ void i2cmux_write_cmd ( i2cmux_t *ctx, uint8_t tx_data );
  *
  * @description This function executes read command from the TCA9546A
  * Low Voltage 4-Channel I2C and SMBus Switch
- * on the I2C MUX click board.
+ * on the I2C MUX Click board.
  */
 uint8_t i2cmux_read_cmd ( i2cmux_t *ctx );
 
@@ -247,7 +247,7 @@ uint8_t i2cmux_read_cmd ( i2cmux_t *ctx );
  * @param channel           8-bit register address.
  * @param ch_slave_address  Pointer to the data to be written.
  *
- * @description This function sets channel of the I2C MUX click board.
+ * @description This function sets channel of the I2C MUX Click board.
  */
 void i2cmux_set_channel ( i2cmux_t *ctx, uint8_t channel, uint8_t ch_slave_address );
 
@@ -257,6 +257,6 @@ void i2cmux_set_channel ( i2cmux_t *ctx, uint8_t channel, uint8_t ch_slave_addre
 #endif  // _I2CMUX_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

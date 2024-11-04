@@ -3,13 +3,13 @@
  * \brief CapExtend Click example
  * 
  * # Description
- * This example showcases the initialization and configuration of the logger and click modules
+ * This example showcases the initialization and configuration of the logger and Click modules
  * and later on shows how to read and display the 16-bit button map ( LSB + MSB ).
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the click and logger modules.
+ * This function initializes and configures the Click and logger modules.
  * 
  * ## Application Task  
  * This function collects map data and displays the 16-bit button map, where each bit that has

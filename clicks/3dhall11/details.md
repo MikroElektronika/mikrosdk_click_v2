@@ -1,6 +1,6 @@
 
 ---
-# 3D Hall 11 click
+# 3D Hall 11 Click
 
 > 3D Hall 11 Click is a compact add-on board used to detect the strength of a magnetic field in all three dimensions. This board features the TMAG5273, a low-power linear 3D Hall-effect sensor from Texas Instruments. A precision analog signal chain alongside an integrated 12-bit ADC digitizes the measured analog magnetic field values and passes them via the I2C interface to the microcontroller for further processing. It can achieve ultra-high precision at speeds up to 20kSPS for faster and more accurate real-time control and has an integrated temperature sensor available for multiple system functions.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/3dhall11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/3d-hall-11-click)
+[Click Product page](https://www.mikroe.com/3d-hall-11-click)
 
 ---
 
@@ -69,7 +69,7 @@ err_t c3dhall11_read_data ( c3dhall11_t *ctx, c3dhall11_data_t *data_out );
 
 ## Example Description
 
-> This example demonstrates the use of 3D Hall 11 click board by reading the magnetic
+> This example demonstrates the use of 3D Hall 11 Click board by reading the magnetic
 flux density from 3 axes, and the angle and magnitude between X and Y axes
 as well as the sensor internal temperature.
 
@@ -77,7 +77,7 @@ as well as the sensor internal temperature.
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

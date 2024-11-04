@@ -124,7 +124,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void optoencoder2_cfg_setup ( optoencoder2_cfg_t *cfg );
@@ -134,7 +134,7 @@ void optoencoder2_cfg_setup ( optoencoder2_cfg_t *cfg );
  * @param optoencoder2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t optoencoder2_init ( optoencoder2_t *ctx, optoencoder2_cfg_t *cfg );
 
@@ -213,6 +213,6 @@ uint8_t optoencoder2_isr ( optoencoder2_t *ctx, uint8_t n_cycles );
 #endif  // _OPTOENCODER2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

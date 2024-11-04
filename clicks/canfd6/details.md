@@ -1,6 +1,6 @@
 
 ---
-# CAN FD 6 click
+# CAN FD 6 Click
 
 > CAN FD 6 Click is a compact add-on board containing a CAN transceiver that supports CAN and CAN FD protocols. This board features the TCAN4550, a CAN FD controller that provides an interface between the CAN bus and the CAN protocol controller up to 5 megabits per second (Mbps) from Texas Instruments.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/canfd6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/can-fd-6-click)
+[Click Product page](https://www.mikroe.com/can-fd-6-click)
 
 ---
 
@@ -69,7 +69,7 @@ uint8_t canfd6_mcan_read_nextfifo ( canfd6_t *ctx, canfd6_mcan_fifo_enum_t fifo_
 
 ## Example Description
 
-> This application presents the capabilities of the CAN FD 6 click board. The board can be used both as a receiver and a transmitter. Use def directive to define the receive or transmit app.
+> This application presents the capabilities of the CAN FD 6 Click board. The board can be used both as a receiver and a transmitter. Use def directive to define the receive or transmit app.
 
 **The demo application is composed of two sections :**
 
@@ -124,7 +124,7 @@ void application_init ( void ) {
     canfd6_header.ESI = 0;
     canfd6_mcan_write_txbuffer( &canfd6, CANFD6_FIRST_MSG, &canfd6_header, data_send_buf );
 
-    strcpy ( data_send_buf, "CAN FD 6 click board" );
+    strcpy ( data_send_buf, "CAN FD 6 Click board" );
     canfd6_header.DLC = CANFD6_MCAN_DLC_20B;
     canfd6_header.ID = 0x456;
     canfd6_header.FDF = 1;
@@ -210,7 +210,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

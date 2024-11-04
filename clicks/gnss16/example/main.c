@@ -3,13 +3,13 @@
  * @brief GNSS 16 Click Example.
  *
  * # Description
- * This example demonstrates the use of GNSS 16 click board by processing
+ * This example demonstrates the use of GNSS 16 Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and resets the click board.
+ * Initializes the driver and resets the Click board.
  *
  * ## Application Task
  * Reads and processes all incoming data and displays them on the USB UART.

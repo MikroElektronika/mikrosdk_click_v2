@@ -1,6 +1,6 @@
 
 ---
-# CAN FD4 click
+# CAN FD4 Click
 
 The CAN FD 4 Click is a Click board™ that features the NCV7344D10R2G, a Controller Area Network (CAN) transceiver, from ON Semiconductor.
 
@@ -8,7 +8,7 @@ The CAN FD 4 Click is a Click board™ that features the NCV7344D10R2G, a Contro
   <img src="https://download.mikroe.com/images/click_for_ide/canfd4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/can-fd-4-click)
+[Click Product page](https://www.mikroe.com/can-fd-4-click)
 
 ---
 
@@ -61,7 +61,7 @@ Package can be downloaded/installed directly from compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes the driver and enables the click board.
+> Initializes the driver and enables the Click board.
 
 ```c
 
@@ -127,7 +127,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -189,7 +189,7 @@ typedef enum
 
 /**
  * @brief LTE Cat.1-US configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #ltecat1us_cfg_t object definition for detailed explanation.
@@ -201,7 +201,7 @@ void ltecat1us_cfg_setup ( ltecat1us_cfg_t *cfg );
 /**
  * @brief LTE Cat.1-US initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #ltecat1us_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -245,7 +245,7 @@ err_t ltecat1us_generic_read ( ltecat1us_t *ctx, char *data_buf, uint16_t max_le
 
 /**
  * @brief LTE Cat.1-US module power on.
- * @details This function resets the chip on LTE Cat.1-US click.
+ * @details This function resets the chip on LTE Cat.1-US Click.
  * @param[in] ctx : Click context object.
  * See #ltecat1us_t object definition for detailed explanation.
  * @return Nothing.
@@ -284,7 +284,7 @@ uint8_t ltecat1us_get_cts ( ltecat1us_t *ctx );
 
 /**
  * @brief Send command function.
- * @details This function sends the specified command to the click module.
+ * @details This function sends the specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #ltecat1us_t object definition for detailed explanation.
  * @param[in] cmd  Command variable.
@@ -295,7 +295,7 @@ void ltecat1us_send_cmd ( ltecat1us_t *ctx, char *cmd );
 
 /**
  * @brief Send command function with parameter.
- * @details This function sends commands to the click module.
+ * @details This function sends commands to the Click module.
  * @param[in] ctx : Click context object.
  * See #ltecat1us_t object definition for detailed explanation.
  * @param[in] at_cmd_buf  Command buffer.

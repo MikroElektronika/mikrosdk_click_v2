@@ -1,8 +1,8 @@
 {
     "name": "Tamper 2 Click",
-    "description": "Tamper 2 click contains a levered D2HW-A221D switch by Omron, which outputs signal in both positions - pressed and released.",
+    "description": "Tamper 2 Click contains a levered D2HW-A221D switch by Omron, which outputs signal in both positions - pressed and released.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","D2HW-A221D"],
+    "hw" : ["Click","D2HW-A221D"],
     "category" : ["Pushbutton/Switches"] 
 }

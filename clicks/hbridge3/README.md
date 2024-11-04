@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# H Bridge 3 click
+# H Bridge 3 Click
 
 H-Bridge 3 Click is designed for the control of small DC motors and inductive loads, it features TLE9201SG a general purpose 6A H-Bridge perfectly suited for industrial and automotive applications. This IC meets the harsh automotive environmental conditions and it is qualified in accordance with the AEC-Q100 standard, also has set of features such as the short circuit and over-temperature protection, under-voltage protection, detailed SPI diagnosis or simple error flag and fully 3.3/5.5V compatible logic inputs.
 
@@ -9,7 +9,7 @@ H-Bridge 3 Click is designed for the control of small DC motors and inductive lo
   <img src="https://download.mikroe.com/images/click_for_ide/hbridge3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/h-bridge-3-click)
+[Click Product page](https://www.mikroe.com/h-bridge-3-click)
 
 ---
 
@@ -60,7 +60,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ## Examples Description
 
 > H-bridge in general, allows the current to flow in one or another direction.
-> This click is used for drive a H-Bridge motor by changing output states. 
+> This Click is used for drive a H-Bridge motor by changing output states. 
 > The outputs can be pulse width modulated at frequencies up to 20kHz by means of PWM/DIR control. 
 
 **The demo application is composed of two sections :**
@@ -160,7 +160,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

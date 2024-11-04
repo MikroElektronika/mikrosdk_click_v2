@@ -3,7 +3,7 @@
  * @brief Current 12 Click example
  *
  * # Description
- * This example demonstrates the use of the Current 12 click board 
+ * This example demonstrates the use of the Current 12 Click board 
  * by reading and displaying the input current measurements.
  *
  * The demo application is composed of two sections :

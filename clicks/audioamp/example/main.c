@@ -4,7 +4,7 @@
  * 
  * # Description
  * AudioAmp Click is a stereo audio amplifier which can be controlled by using this
- * click driver.
+ * Click driver.
  *
  * The demo application is composed of two sections :
  * 

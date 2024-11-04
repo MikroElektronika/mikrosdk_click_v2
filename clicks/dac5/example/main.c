@@ -15,7 +15,7 @@
  * Sets the channel H with different values and logs the expected output on USB UART
  *
  * ## NOTE
- * In order to improve the accuracy, measure the voltage on the click board VrefIN SEL jumper and set it as VREF below.
+ * In order to improve the accuracy, measure the voltage on the Click board VrefIN SEL jumper and set it as VREF below.
  * 
  * \author Luka Filipovic
  *
@@ -65,7 +65,7 @@ void application_init ( void )
     }
 
     dac5_config( &dac5, DAC5_CONFIG_GLOBAL_ENABLED );
-    log_printf( &logger, "The click board is configured.\r\n" );
+    log_printf( &logger, "The Click board is configured.\r\n" );
 
     Delay_ms ( 100 );
 }

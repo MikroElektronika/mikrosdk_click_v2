@@ -257,7 +257,7 @@ typedef struct
 
 /**
  * @brief DAQ 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #daq3_cfg_t object definition for detailed explanation.
@@ -269,7 +269,7 @@ void daq3_cfg_setup ( daq3_cfg_t *cfg );
 /**
  * @brief DAQ 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #daq3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -285,7 +285,7 @@ err_t daq3_init ( daq3_t *ctx, daq3_cfg_t *cfg );
 /**
  * @brief DAQ 3 default configuration function.
  * @details This function executes a default configuration of DAQ 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #daq3_t object definition for detailed explanation.
  * 
@@ -298,7 +298,7 @@ void daq3_default_cfg ( daq3_t *ctx );
  * @brief DAQ 3 set power mode function.
  * @details This function set power mode for the fully differential ADC Driver
  * of ADAQ4003 18-Bit, 2 MSPS, µModule Data Acquisition Solution 
- * on DAQ 3 click board.
+ * on DAQ 3 Click board.
  * @param[out] ctx : Click context object.
  * See #daq3_t object definition for detailed explanation.
  * @param[in] mode   
@@ -314,7 +314,7 @@ void daq3_set_pwr_mode ( daq3_t *ctx, uint8_t mode );
  * @brief DAQ 3 set power reference buffer function.
  * @details This function set power reference buffer
  * of ADAQ4003 18-Bit, 2 MSPS, µModule Data Acquisition Solution 
- * on DAQ 3 click board.
+ * on DAQ 3 Click board.
  * @param[out] ctx : Click context object.
  * See #daq3_t object definition for detailed explanation.
  * @param[in] pd_ref   
@@ -330,7 +330,7 @@ void daq3_set_pwr_down_ref_buf ( daq3_t *ctx, uint8_t pd_ref );
  * @brief DAQ 3 set power Amplifier function.
  * @details This function set power Amplifier
  * of ADAQ4003 18-Bit, 2 MSPS, µModule Data Acquisition Solution 
- * on DAQ 3 click board.
+ * on DAQ 3 Click board.
  * @param[out] ctx : Click context object.
  * See #daq3_t object definition for detailed explanation.
  * @param[in] pd_amp   
@@ -347,7 +347,7 @@ void daq3_set_pwr_down_amp ( daq3_t *ctx, uint8_t pd_amp );
  * @brief DAQ 3 get state of SDO function.
  * @details This function get State of SDO on Power-Up
  * of ADAQ4003 18-Bit, 2 MSPS, µModule Data Acquisition Solution 
- * on DAQ 3 click board.
+ * on DAQ 3 Click board.
  * @param[out] ctx : Click context object.
  * See #daq3_t object definition for detailed explanation.
  * @return 
@@ -394,7 +394,7 @@ err_t daq3_generic_read ( daq3_t *ctx, uint8_t reg, uint8_t *data_out );
  * @brief DAQ 3 set command register function.
  * @details This function set command register status 
  * of ADAQ4003 18-Bit, 2 MSPS, µModule Data Acquisition Solution 
- * on DAQ 3 click board. 
+ * on DAQ 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #daq3_t object definition for detailed explanation.
  * @param[in] cfg_data : Structure where gesture data be stored.
@@ -410,7 +410,7 @@ err_t daq3_set_reg_cfg ( daq3_t *ctx, daq3_reg_cfg_t cfg_data );
  * @brief DAQ 3 get command register function.
  * @details This function get command register status 
  * of ADAQ4003 18-Bit, 2 MSPS, µModule Data Acquisition Solution 
- * on DAQ 3 click board. 
+ * on DAQ 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #daq3_t object definition for detailed explanation.
  * @param[in] cfg_data : Pointer to the memory location where data be stored.
@@ -426,7 +426,7 @@ err_t daq3_get_reg_cfg ( daq3_t *ctx, daq3_reg_cfg_t *cfg_data );
  * @brief DAQ 3 get conversion result function.
  * @details This function reads a conversion result data
  * of ADAQ4003 18-Bit, 2 MSPS, µModule Data Acquisition Solution 
- * on DAQ 3 click board. 
+ * on DAQ 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #daq3_t object definition for detailed explanation.
  * @param[in] cfg_data : Structure where gesture data be stored.
@@ -442,7 +442,7 @@ int32_t daq3_get_conversion_result ( daq3_t *ctx, daq3_reg_cfg_t cfg_data );
  * @details This function reads a conversion result data and 
  * calculate voltage [ mV ]
  * of ADAQ4003 18-Bit, 2 MSPS, µModule Data Acquisition Solution 
- * on DAQ 3 click board. 
+ * on DAQ 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #daq3_t object definition for detailed explanation.
  * @return Volatge [ mV ]. 

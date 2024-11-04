@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Proximity 16 click
+# Proximity 16 Click
 
 > Proximity 16 Click is a compact add-on board that contains a close-range proximity sensing solution. This board features the VL53L5CX, a Time-of-Flight (ToF) multizone ranging sensor from STMicroelectronics. The VL53L5CX integrates a SPAD array, physical infrared filters, and diffractive optical elements (DOE) to achieve the best-ranging performance in various ambient lighting conditions with different cover glass materials. It allows absolute distance measurement, whatever the target color and reflectance, provides accurate ranging up to 400cm, and can work at fast speeds (60Hz). Also, multizone distance measurements are possible with either 4x4 or 8x8 separate zones with broad 63° diagonal software-configurable Field-of-View (FoV).
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/proximity16_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/proximity-16-click)
+[Click Product page](https://www.mikroe.com/proximity-16-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t proximity16_get_ranging_data ( proximity16_t *ctx, proximity16_results_dat
 
 ## Example Description
 
-> This example demonstrates the use of Proximity 16 click board by reading and displaying 8x8 zones measurements on the USB UART.
+> This example demonstrates the use of Proximity 16 Click board by reading and displaying 8x8 zones measurements on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -160,7 +160,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

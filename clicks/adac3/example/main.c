@@ -3,14 +3,14 @@
  * @brief ADAC3 Click example
  *
  * # Description
- * This example demonstrates the use of ADAC 3 click board by setting the DAC output
+ * This example demonstrates the use of ADAC 3 Click board by setting the DAC output
  * and reading the ADC results from 2 single-ended channels (AIN0, AIN1) and from a 
  * differential channel (AIN2+, AIN3-).
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which enables
+ * Initializes the driver and performs the Click default configuration which enables
  * DAC output, sets the analog input mode to single-ended (AIN0, AIN1) and 
  * differential (AIN2+, AIN3-), and enables the auto increment mode.
  *

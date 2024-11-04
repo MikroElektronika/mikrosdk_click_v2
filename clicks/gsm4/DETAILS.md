@@ -1,14 +1,14 @@
 
 ---
-# GSM 4 click
+# GSM 4 Click
 
-> GSM 4 click is a compact quad-band GSM cellular network communication solution, featuring the quad-band 2.5G GSM/GPRS SARA-G350 module. This module features a full set of options for the cellular networking and communication, such as the network status indication, jamming detection, embedded internet protocols, including TCP/IP, UDP, FTP, PPP, HTTP, SMTP, full GPRS multislot class 10 implementation, and more. Data communication speed is rated up to 42.8 for the uplink and 85.6 kbps for downlink connection.
+> GSM 4 Click is a compact quad-band GSM cellular network communication solution, featuring the quad-band 2.5G GSM/GPRS SARA-G350 module. This module features a full set of options for the cellular networking and communication, such as the network status indication, jamming detection, embedded internet protocols, including TCP/IP, UDP, FTP, PPP, HTTP, SMTP, full GPRS multislot class 10 implementation, and more. Data communication speed is rated up to 42.8 for the uplink and 85.6 kbps for downlink connection.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/gsm4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gsm-4-click)
+[Click Product page](https://www.mikroe.com/gsm-4-click)
 
 ---
 
@@ -202,7 +202,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

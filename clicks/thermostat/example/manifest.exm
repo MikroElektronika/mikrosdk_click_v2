@@ -1,8 +1,8 @@
 {
     "name": "Thermostat Click",
-    "description": "If you need a temperature sensor and relay in one device, you should look no further than Thermostat click. It can be used to measure environmental temperature and to directly switch ON/OFF cooling and heating devices, performing all the functions of a thermostat.",
+    "description": "If you need a temperature sensor and relay in one device, you should look no further than Thermostat Click. It can be used to measure environmental temperature and to directly switch ON/OFF cooling and heating devices, performing all the functions of a thermostat.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MAX7502 IC"],
+    "hw" : ["Click","MAX7502 IC"],
     "category" : ["Temperature & humidity"] 
 }

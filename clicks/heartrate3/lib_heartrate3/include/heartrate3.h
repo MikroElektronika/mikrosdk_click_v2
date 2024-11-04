@@ -269,7 +269,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to 
+ * @details This function initializes Click configuration structure to 
  * init state.
  * @note All used pins will be set to unconnected state.
  */
@@ -282,7 +282,7 @@ void heartrate3_cfg_setup ( heartrate3_cfg_t *cfg );
  * @param cfg Click configuration structure.
  * 
  * @details This function initializes all necessary pins and peripherals 
- * used for this click.
+ * used for this Click.
  */
 err_t heartrate3_init ( heartrate3_t *ctx, heartrate3_cfg_t *cfg );
 
@@ -292,7 +292,7 @@ err_t heartrate3_init ( heartrate3_t *ctx, heartrate3_cfg_t *cfg );
  * @param ctx  Click object.
  *
  * @details This function executes default configuration for 
- * HeartRate3 click.
+ * HeartRate3 Click.
  */
 err_t heartrate3_default_cfg ( heartrate3_t *ctx );
 
@@ -390,6 +390,6 @@ uint8_t heartrate3_check_data_ready ( heartrate3_t *ctx );
 #endif  // _HEARTRATE3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

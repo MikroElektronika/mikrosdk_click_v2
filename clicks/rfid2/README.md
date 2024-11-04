@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# RFID 2 click
+# RFID 2 Click
 
 > RFID 2 Click is a compact add-on board that contains a stand-alone RFID reader with a built-in antenna easy-to-use for embedded applications. This board features the ID-12LA-SA, an advanced low-cost RFID reader module usable with 38 different tags from ID Innovations.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/rfid2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rfid-2-click)
+[Click Product page](https://www.mikroe.com/rfid-2-click)
 
 ---
 
@@ -142,7 +142,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

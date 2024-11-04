@@ -3,13 +3,13 @@
  * @brief Inclinometer2 Click example
  *
  * # Description
- * This example demonstrates the use of Inclinometer 2 click board by reading and displaying 
+ * This example demonstrates the use of Inclinometer 2 Click board by reading and displaying 
  * the Accel X and Y axis data (mg) and the temperature (degC) on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which enables the accel
+ * Initializes the driver and performs the Click default configuration which enables the accel
  * data ready interrupt, sets output data rate to 12.5 Hz and accel full-scale range to +-2g.
  *
  * ## Application Task

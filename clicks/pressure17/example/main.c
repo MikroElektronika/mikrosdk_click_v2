@@ -3,13 +3,13 @@
  * @brief Pressure17 Click example
  *
  * # Description
- * This example demonstrates the use of Pressure 17 click board by reading and displaying 
+ * This example demonstrates the use of Pressure 17 Click board by reading and displaying 
  * the pressure and temperature data.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Waits for the data ready interrupt and then reads the pressure [mbar] and temperature [C] data

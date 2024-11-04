@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "TempHum 8 click",
+    "display_name": "TempHum 8 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.temphum8",
     "product_link": "https://www.mikroe.com/temp-hum-8-click",
-    "short_description": "Temp&Hum 8 click is based on a sensor from the popular SHT family, designed to measure temperature and humidity. ",
+    "short_description": "Temp&Hum 8 Click is based on a sensor from the popular SHT family, designed to measure temperature and humidity. ",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2656
     ],
-    "version": "2.1.0.19",
+    "version": "2.1.0.20",
     "cmake": true,
     "alias": "Click.TempHum8",
     "subdir_name": "lib_temphum8"
 }
+
 
 
 

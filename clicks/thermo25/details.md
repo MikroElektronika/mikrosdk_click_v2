@@ -1,6 +1,6 @@
 
 ---
-# Thermo 25 click
+# Thermo 25 Click
 
 > Thermo 25 Click is a compact add-on board that accurately measures temperature. This board features the TMP127-Q1, a high-precision digital temperature sensor from Texas Instruments. This SPI-configurable factory-calibrated temperature sensor has a high accuracy of 0.8°C, supporting an ambient temperature range from -55°C to 175°C. It features a 14-bit signed temperature resolution (0.03125 °C per LSB) while operating over a supply range.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/thermo25_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/thermo-25-click)
+[Click Product page](https://www.mikroe.com/thermo-25-click)
 
 ---
 
@@ -64,7 +64,7 @@ err_t thermo25_set_mode ( thermo25_t *ctx, uint8_t mode );
 
 ## Example Description
 
-> This example demonstrates the use of Thermo 25 click board by reading and displaying the temperature measurements.
+> This example demonstrates the use of Thermo 25 Click board by reading and displaying the temperature measurements.
 
 **The demo application is composed of two sections :**
 
@@ -139,7 +139,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

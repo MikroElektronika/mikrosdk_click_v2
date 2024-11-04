@@ -4,12 +4,12 @@
  * 
  * # Description
  * This application reads the raw ALS and proximity data from
- * Proximity 3 click board.
+ * Proximity 3 Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  * 
  * ## Application Task  
  * Reads the raw ALS and proximity data and displays the results on the USB UART

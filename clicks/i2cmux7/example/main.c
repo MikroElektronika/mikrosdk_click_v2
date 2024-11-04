@@ -3,8 +3,8 @@
  * @brief I2CMUX7 Click example
  *
  * # Description
- * This example demonstrates the use of I2C MUX 7 click board by reading the
- * device ID of a 6DOF IMU 11 and Compass 3 click boards connected to 
+ * This example demonstrates the use of I2C MUX 7 Click board by reading the
+ * device ID of a 6DOF IMU 11 and Compass 3 Click boards connected to 
  * the channels 0 and 7 respectfully.
  *
  * The demo application is composed of two sections :
@@ -13,9 +13,9 @@
  * Initializes the driver and resets the device.
  *
  * ## Application Task
- * Reads the device ID of the connected click boards.
- * Channel 0 : 6DOF IMU 11 click [slave address: 0x0E; reg: 0x00; id: 0x2D],
- * Channel 7 : Compass 3 click   [slave address: 0x30; reg: 0x2F; id: 0x0C].
+ * Reads the device ID of the connected Click boards.
+ * Channel 0 : 6DOF IMU 11 Click [slave address: 0x0E; reg: 0x00; id: 0x2D],
+ * Channel 7 : Compass 3 Click   [slave address: 0x30; reg: 0x2F; id: 0x0C].
  * All data is being logged on the USB UART where you can check the device ID.
  *
  * @author Stefan Filipovic
@@ -26,13 +26,13 @@
 #include "log.h"
 #include "i2cmux7.h"
 
-#define DEVICE0_NAME                "6DOF IMU 11 click"
+#define DEVICE0_NAME                "6DOF IMU 11 Click"
 #define DEVICE0_POSITION            I2CMUX7_CHANNEL_0
 #define DEVICE0_SLAVE_ADDRESS       0x0E
 #define DEVICE0_REG_ID              0x00
 #define DEVICE0_ID                  0x2D
 
-#define DEVICE1_NAME                "Compass 3 click"
+#define DEVICE1_NAME                "Compass 3 Click"
 #define DEVICE1_POSITION            I2CMUX7_CHANNEL_7
 #define DEVICE1_SLAVE_ADDRESS       0x30
 #define DEVICE1_REG_ID              0x2F

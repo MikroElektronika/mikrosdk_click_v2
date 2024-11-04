@@ -1,6 +1,6 @@
 
 ---
-# Analog MUX click
+# Analog MUX Click
 
 Analog MUX Click is a Click board™ that switches one of the sixteen inputs to one output. It employs the CD74HC4067, a High-Speed CMOS Logic 16-Channel Analog Multiplexer/Demultiplexer, produced by Texas Instruments.
 
@@ -9,7 +9,7 @@ Analog MUX Click is a Click board™ that switches one of the sixteen inputs to 
 </p>
 
 
-[click Product page](https://www.mikroe.com/analog-mux-click)
+[Click Product page](https://www.mikroe.com/analog-mux-click)
 
 ---
 
@@ -52,15 +52,15 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example showcases how to initialize, configure and use the Analog MUX click module. 
-> The click switches one of the 16 inputs to output so the adc value of that input 
+> This example showcases how to initialize, configure and use the Analog MUX Click module. 
+> The Click switches one of the 16 inputs to output so the adc value of that input 
 > can be read on the COM (AN) pin. The RST, PWM, CS and INT are used as control output pins. 
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> This function initializes and configures the logger and click modules.
+> This function initializes and configures the logger and Click modules.
 
 ```c
 
@@ -134,7 +134,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

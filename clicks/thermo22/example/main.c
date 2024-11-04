@@ -3,13 +3,13 @@
  * @brief Thermo22 Click example
  *
  * # Description
- * This example demonstrates the use of Thermo 22 click board by reading and displaying
+ * This example demonstrates the use of Thermo 22 Click board by reading and displaying
  * the temperature measurements.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which
+ * Initializes the driver and performs the Click default configuration which
  * enables continuous conversation and sets the overtemperature limits to 35.0 Celsius.
  *
  * ## Application Task

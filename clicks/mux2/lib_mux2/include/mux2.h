@@ -148,7 +148,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void mux2_cfg_setup ( mux2_cfg_t *cfg );
@@ -158,7 +158,7 @@ void mux2_cfg_setup ( mux2_cfg_t *cfg );
  * @param mux2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MUX2_RETVAL mux2_init ( mux2_t *ctx, mux2_cfg_t *cfg );
 
@@ -167,7 +167,7 @@ MUX2_RETVAL mux2_init ( mux2_t *ctx, mux2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function enable MUX device for Mux 2 click.
+ * @description This function enable MUX device for Mux 2 Click.
  */
 void mux2_device_enable ( mux2_t *ctx );
 
@@ -176,7 +176,7 @@ void mux2_device_enable ( mux2_t *ctx );
  *
  * @param ctx  Click object.
  *
- * @description This function disable MUX device for Mux 2 click.
+ * @description This function disable MUX device for Mux 2 Click.
  */
 void mux2_device_disable ( mux2_t *ctx );
 
@@ -218,7 +218,7 @@ void mux2_device_disable ( mux2_t *ctx );
  * 0x08 ( MUX2_CHANNEL_S8 ) : Enable channel S8;
  * </pre>
  *
- * @description This function active sel_ch MUX channel for Mux 2 click.
+ * @description This function active sel_ch MUX channel for Mux 2 Click.
  */
 void mux2_active_mux_channel (  mux2_t *ctx, uint8_t sel_ch );
 
@@ -228,6 +228,6 @@ void mux2_active_mux_channel (  mux2_t *ctx, uint8_t sel_ch );
 #endif  // _MUX2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

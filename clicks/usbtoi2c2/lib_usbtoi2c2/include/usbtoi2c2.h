@@ -166,7 +166,7 @@ typedef enum
 
 /**
  * @brief USB to I2C 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #usbtoi2c2_cfg_t object definition for detailed explanation.
@@ -178,7 +178,7 @@ void usbtoi2c2_cfg_setup ( usbtoi2c2_cfg_t *cfg );
 /**
  * @brief USB to I2C 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #usbtoi2c2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -194,7 +194,7 @@ err_t usbtoi2c2_init ( usbtoi2c2_t *ctx, usbtoi2c2_cfg_t *cfg );
 /**
  * @brief USB to I2C 2 default configuration function.
  * @details This function executes a default configuration of USB to I2C 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #usbtoi2c2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

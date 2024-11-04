@@ -3,7 +3,7 @@
  * @brief eFuse2 Click example
  *
  * # Description
- * This is an example that demonstrate the use of the eFuse 2 click board.
+ * This is an example that demonstrate the use of the eFuse 2 Click board.
  *
  * The demo application is composed of two sections :
  *
@@ -15,7 +15,7 @@
  * display diagnostic states.
  *
  * ## Application Task
- * eFuse 2 click board uses USB UART log to display
+ * eFuse 2 Click board uses USB UART log to display
  * operating voltage, OVLO, UVLO and current limit condition.
  * This firmware provides the functions to set the operating voltage and
  * current limiting conditions in order to provide the threshold

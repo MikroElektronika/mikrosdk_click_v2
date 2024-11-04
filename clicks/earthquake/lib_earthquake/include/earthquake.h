@@ -491,7 +491,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void earthquake_cfg_setup ( earthquake_cfg_t *cfg );
@@ -501,7 +501,7 @@ void earthquake_cfg_setup ( earthquake_cfg_t *cfg );
  * @param earthquake Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 EARTHQUAKE_RETVAL earthquake_init ( earthquake_t *ctx, earthquake_cfg_t *cfg );
 
@@ -602,6 +602,6 @@ void earthquake_clear_memory ( earthquake_t *ctx );
 #endif  // _EARTHQUAKE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

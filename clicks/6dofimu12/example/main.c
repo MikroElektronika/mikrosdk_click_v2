@@ -3,7 +3,7 @@
  * \brief C6DofImu12 Click example
  * 
  * # Description
- * This example demonstrates the use of 6DOF IMU 12 click board.
+ * This example demonstrates the use of 6DOF IMU 12 Click board.
  *
  * The demo application is composed of two sections :
  * 

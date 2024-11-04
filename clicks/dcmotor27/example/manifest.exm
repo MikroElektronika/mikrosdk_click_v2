@@ -3,6 +3,6 @@
     "description": "DC Motor 27 Click is a compact add-on board that contains a high-performance brushed DC motor driver. This board features the DRV8143, an automotive half-bridge driver with integrated current sense and diagnostic from Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","DRV8143HQRXYRQ1"],
+    "hw" : ["Click","DRV8143HQRXYRQ1"],
     "category" : ["Click Boards > Motor control > Brushed"]
 }

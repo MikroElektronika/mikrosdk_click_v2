@@ -472,7 +472,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void expand6_cfg_setup ( expand6_cfg_t *cfg );
@@ -482,7 +482,7 @@ void expand6_cfg_setup ( expand6_cfg_t *cfg );
  * @param expand6 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 EXPAND6_RETVAL expand6_init ( expand6_t *ctx, expand6_cfg_t *cfg );
 
@@ -753,6 +753,6 @@ uint8_t expand6_check_int ( expand6_t *ctx );
 #endif  // _EXPAND6_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

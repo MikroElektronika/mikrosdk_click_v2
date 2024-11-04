@@ -1,16 +1,16 @@
 \mainpage Main Page
  
 ---
-# IrThermo 2 click
+# IrThermo 2 Click
 
-IrThermo 2 click is a non-contact temperature measurement solution. The click board carries the TMP007 infrared thermopile sensor with an integrated math engine.
+IrThermo 2 Click is a non-contact temperature measurement solution. The Click board carries the TMP007 infrared thermopile sensor with an integrated math engine.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/irthermo2_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/irthermo-2-click)
+[Click Product page](https://www.mikroe.com/irthermo-2-click)
 
 ---
 
@@ -70,7 +70,7 @@ float irthermo2_get_object_temperature_f ( irthermo2_t *ctx );
 
 ## Examples Description
 
-> IrThermo 2 is a non-contact temperature measurement click. The sensor absorbs the infrared 
+> IrThermo 2 is a non-contact temperature measurement Click. The sensor absorbs the infrared 
 > radiation emitted by the target object (withing the sensor’s field of view) and 
 > the integrated math engine calculates its temperature by comparing it with the temperature 
 > of the silicon die. The measurement range of the sensor is between –40°C to 125°C.
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

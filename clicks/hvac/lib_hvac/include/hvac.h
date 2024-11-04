@@ -250,7 +250,7 @@ typedef enum
 
 /**
  * @brief HVAC configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #hvac_cfg_t object definition for detailed explanation.
@@ -262,7 +262,7 @@ void hvac_cfg_setup ( hvac_cfg_t *cfg );
 /**
  * @brief HVAC initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #hvac_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -314,7 +314,7 @@ err_t hvac_generic_read ( hvac_t *ctx, uint8_t reg, uint8_t *rx_buf, uint8_t rx_
  * @brief SCD40 generic write data function.
  * @details The function writes a 16-bit data to the targeted 16-bit
  * register address of the SCD40 CO2, RH and T Sensor
- * on the HVAC click board.
+ * on the HVAC Click board.
  * @param[in] ctx : Click context object.
  * See #hvac_t object definition for detailed explanation.
  * @param[in] reg : 16-bit register address.
@@ -330,7 +330,7 @@ err_t hvac_scd40_write_data ( hvac_t *ctx, uint16_t reg, uint16_t tx_data );
  * @brief SCD40 generic read data function.
  * @details The function read a 16-bit data from the targeted 16-bit
  * register address of the SCD40 CO2, RH and T Sensor
- * on the HVAC click board.
+ * on the HVAC Click board.
  * @param[in] ctx : Click context object.
  * See #hvac_t object definition for detailed explanation.
  * @param[in] reg : 16-bit register address.
@@ -344,7 +344,7 @@ err_t hvac_scd40_read_data ( hvac_t *ctx, uint16_t reg, uint16_t *rx_data );
 /**
  * @brief SCD40 send command function.
  * @details The function send command to the SCD40 CO2, RH and T Sensor
- * on the HVAC click board.
+ * on the HVAC Click board.
  * @param[in] ctx : Click context object.
  * See #hvac_t object definition for detailed explanation.
  * @param[in] cmd : 16-bit command.
@@ -356,7 +356,7 @@ void hvac_scd40_send_cmd ( hvac_t *ctx, uint16_t cmd );
  * @brief SCD40 read measurement function.
  * @details The function read sensor measurement data
  * of the SCD40 CO2, RH and T Sensor
- * on the HVAC click board.
+ * on the HVAC Click board.
  * @param[in] ctx : Click context object.
  * See #hvac_t object definition for detailed explanation.
  * @param[in] m_data : Pointer to the memory location where structure data be stored.
@@ -368,7 +368,7 @@ void hvac_scd40_read_measurement ( hvac_t *ctx, measuremen_data_t *m_data );
  * @brief SCD40 get serial number function.
  * @details The function get serial number value 
  * of the SCD40 CO2, RH and T Sensor
- * on the HVAC click board.
+ * on the HVAC Click board.
  * @param[in] ctx : Click context object.
  * See #hvac_t object definition for detailed explanation.
  * @param[in] serial_number : Pointer to the memory location where serial numbe value be stored.
@@ -380,7 +380,7 @@ void hvac_scd40_get_serial_number ( hvac_t *ctx, uint16_t *serial_number );
  * @brief SCD40 get feature set version function.
  * @details The function get feature set version value
  * of the SCD40 CO2, RH and T Sensor
- * on the HVAC click board.
+ * on the HVAC Click board.
  * @param[in] ctx : Click context object.
  * See #hvac_t object definition for detailed explanation.
  * @param[in] f_data : Pointer to the memory location where structure data be stored.
@@ -392,7 +392,7 @@ void hvac_scd40_get_feature_set_version ( hvac_t *ctx, feature_data_t *f_data );
  * @brief SCD40 set temperature offset function
  * @details The function set temperature offset value
  * of the SCD40 CO2, RH and T Sensor
- * on the HVAC click board.
+ * on the HVAC Click board.
  * @param[in] ctx : Click context object.
  * See #hvac_t object definition for detailed explanation.
  * @param[in] temp_offset : Float temperature offset value ( degree Celsius ).
@@ -404,7 +404,7 @@ void hvac_scd40_set_temperature_offset ( hvac_t *ctx, float temp_offset );
  * @brief SCD40 get temperature offset function.
  * @details The function get temperature offset value
  * of the SCD40 CO2, RH and T Sensor
- * on the HVAC click board.
+ * on the HVAC Click board.
  * @param[in] ctx : Click context object.
  * See #hvac_t object definition for detailed explanation.
  * @return Float temperature offset value ( degree Celsius ).
@@ -416,7 +416,7 @@ float hvac_scd40_get_temperature_offset ( hvac_t *ctx );
  * @details The function writes a 16-bit data to the targeted 16-bit
  * register address 
  * of the SPS30 Particulate Matter Sensor for Air Quality Monitoring and Control
- * on the HVAC click board.
+ * on the HVAC Click board.
  * @param[in] ctx : Click context object.
  * See #hvac_t object definition for detailed explanation.
  * @param[in] reg : 16-bit register address.
@@ -433,7 +433,7 @@ err_t hvac_sps30_i2c_write_data ( hvac_t *ctx, uint16_t reg, uint16_t tx_data );
  * @details The function read a 16-bit data from the targeted 16-bit
  * register address
  * of the SPS30 Particulate Matter Sensor for Air Quality Monitoring and Control
- * on the HVAC click board.
+ * on the HVAC Click board.
  * @param[in] ctx : Click context object.
  * See #hvac_t object definition for detailed explanation.
  * @param[in] reg : 16-bit register address.
@@ -449,7 +449,7 @@ err_t hvac_sps30_i2c_read_data ( hvac_t *ctx, uint16_t reg, uint16_t *rx_data );
  * @brief SPS30 start measurement command function.
  * @details The function set starts the measurement mode
  * of the SPS30 Particulate Matter Sensor for Air Quality Monitoring and Control
- * on the HVAC click board.
+ * on the HVAC Click board.
  * @param[in] ctx : Click context object.
  * See #hvac_t object definition for detailed explanation.
  * @return Nothing.
@@ -460,7 +460,7 @@ void hvac_sps30_start_measurement ( hvac_t *ctx );
  * @brief SPS30 stop measurement command function.
  * @details The function set stop the measurement mode
  * of the SPS30 Particulate Matter Sensor for Air Quality Monitoring and Control
- * on the HVAC click board.
+ * on the HVAC Click board.
  * @param[in] ctx : Click context object.
  * See #hvac_t object definition for detailed explanation.
  * @return Nothing.
@@ -471,7 +471,7 @@ void hvac_sps30_stop_measurement ( hvac_t *ctx );
  * @brief SPS30 set device reset function.
  * @details The function set set device reset
  * of the SPS30 Particulate Matter Sensor for Air Quality Monitoring and Control
- * on the HVAC click board.
+ * on the HVAC Click board.
  * @param[in] ctx : Click context object.
  * See #hvac_t object definition for detailed explanation.
  * @return Nothing.
@@ -482,7 +482,7 @@ void hvac_sps30_device_reset ( hvac_t *ctx );
  * @brief SPS30 get ready flag function.
  * @details The function get new data ready flag
  * of the SPS30 Particulate Matter Sensor for Air Quality Monitoring and Control
- * on the HVAC click board.
+ * on the HVAC Click board.
  * @param[in] ctx : Click context object.
  * See #hvac_t object definition for detailed explanation.
  * @return @li @c 0 - No new data,
@@ -496,7 +496,7 @@ uint8_t hvac_sps30_get_ready_flag ( hvac_t *ctx );
  * @brief SPS30 read measured data function.
  * @details The functionread measured data
  * of the SPS30 Particulate Matter Sensor for Air Quality Monitoring and Control
- * on the HVAC click board.
+ * on the HVAC Click board.
  * @param[in] ctx : Click context object.
  * See #hvac_t object definition for detailed explanation.
  * @param[out] m_n_c_data : Pointer to the memory location where structure data be stored.

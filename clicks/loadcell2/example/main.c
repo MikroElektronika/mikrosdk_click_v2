@@ -3,7 +3,7 @@
  * \brief LoadCell2 Click example
  * 
  * # Description
- * Load Cell 2 click is a weight measurement click 
+ * Load Cell 2 Click is a weight measurement Click 
  * which utilizes a load cell element, 
  * in order to precisely measure the weight of an object. 
  *
@@ -66,7 +66,7 @@ void application_init ( void )
     loadcell2_init( &loadcell2, &cfg );
     
     log_printf( &logger, "-------------------------\r\n");
-    log_printf( &logger, "     Load cell click     \r\n");
+    log_printf( &logger, "     Load cell Click     \r\n");
     log_printf( &logger, "-------------------------\r\n");
     Delay_ms ( 100 );
     

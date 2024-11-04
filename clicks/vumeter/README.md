@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# VU Meter click
+# VU Meter Click
 
 > VU Meter Click is a compact add-on board representing a volume unit meter that displays the intensity of an audio signal. This board features the LM3914, a monolithic integrated circuit that senses analog voltage levels and drives a 10-segment bar graph display from Texas Instruments. This Click board™ is manufactured with a sound detecting device (microphone), Op-Amp, and the LM3914, which gleams the bar graph display according to the sound’s quality. The LM3914 is an analog-controlled driver meaning it can control (turn ON or OFF) a display by an analog input voltage and eliminates the need for additional programming.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/vumeter_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/vu-meter-click)
+[Click Product page](https://www.mikroe.com/vu-meter-click)
 
 ---
 
@@ -65,7 +65,7 @@ float vumeter_calculate_vu_level ( vumeter_t *ctx, uint16_t sample_rate_ms );
 
 ## Example Description
 
-> This example demonstrates the use of VU Meter click board.
+> This example demonstrates the use of VU Meter Click board.
 
 **The demo application is composed of two sections :**
 
@@ -136,7 +136,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

@@ -3,7 +3,7 @@
  * \brief Expand6 Click example
  * 
  * # Description
- * This example demonstrates the use of EXPAND 6 click board.
+ * This example demonstrates the use of EXPAND 6 Click board.
  *
  * The demo application is composed of two sections :
  * 
@@ -11,7 +11,7 @@
  * Initalizes I2C driver and makes an initial log.
  * 
  * ## Application Task  
- * This example shows the capabilities of the EXPAND 6 click by toggling 
+ * This example shows the capabilities of the EXPAND 6 Click by toggling 
  * each of the 20 available pins.
  * 
  * \author MikroE Team
@@ -60,7 +60,7 @@ void application_init ( void )
     Delay_ms ( 1000 );
     
     log_printf( &logger, "------------------- \r\n" );
-    log_printf( &logger, "   EXPAND 6 click   \r\n" );
+    log_printf( &logger, "   EXPAND 6 Click   \r\n" );
     log_printf( &logger, "------------------- \r\n" );
 }
 

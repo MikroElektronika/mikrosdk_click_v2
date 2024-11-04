@@ -245,7 +245,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void grideye_cfg_setup ( grideye_cfg_t *cfg );
@@ -255,7 +255,7 @@ void grideye_cfg_setup ( grideye_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 GRIDEYE_RETVAL grideye_init ( grideye_t *ctx, grideye_cfg_t *cfg );
 
@@ -264,7 +264,7 @@ GRIDEYE_RETVAL grideye_init ( grideye_t *ctx, grideye_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Grideye click.
+ * @description This function executes default configuration for Grideye Click.
  */
 void grideye_default_cfg ( grideye_t *ctx );
 
@@ -650,6 +650,6 @@ uint8_t grideye_read_int7 ( grideye_t *ctx );
 #endif  // GRIDEYE_H
 
 /** \} */ // End public_function group
-/** \} */ // End click Driver group
+/** \} */ // End Click Driver group
 
 // ------------------------------------------------------------------------ END

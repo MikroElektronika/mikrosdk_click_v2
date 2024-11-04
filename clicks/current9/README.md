@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Current 9 click
+# Current 9 Click
 
 > Current 9 Click is a compact add-on board providing a precise and accurate current sensing solution. This board features the CT415-HSN830DR, high-bandwidth and ultra-low-noise XtremeSense® TMR current sensor designed for the current range up to 30A from Crocus Technology. This sensor also features an integrated current-carrying conductor which handles rated current and generates a current measurement as a linear analog output voltage, accomplishing a total output error of about ±1% full-scale. After that, the user is allowed to process the output voltage in analog or digital form.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/current9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/current-9-click)
+[Click Product page](https://www.mikroe.com/current-9-click)
 
 ---
 
@@ -58,14 +58,14 @@ err_t current9_read_voltage ( current9_t *ctx, float *voltage );
 err_t current9_read_current ( current9_t *ctx, float *current );
 ```
 
-- `current9_set_vref` This function sets the voltage reference for Current 9 click driver.
+- `current9_set_vref` This function sets the voltage reference for Current 9 Click driver.
 ```c
 err_t current9_set_vref ( current9_t *ctx, float vref );
 ```
 
 ## Example Description
 
-> This example demonstrates the use of Current 9 click board by reading and displaying the input current measurements.
+> This example demonstrates the use of Current 9 Click board by reading and displaying the input current measurements.
 
 **The demo application is composed of two sections :**
 
@@ -143,7 +143,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

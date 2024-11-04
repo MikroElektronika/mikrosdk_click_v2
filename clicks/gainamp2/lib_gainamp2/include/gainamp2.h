@@ -199,7 +199,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void gainamp2_cfg_setup ( gainamp2_cfg_t *cfg );
@@ -209,7 +209,7 @@ void gainamp2_cfg_setup ( gainamp2_cfg_t *cfg );
  * @param gainamp2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 GAINAMP2_RETVAL gainamp2_init ( gainamp2_t *ctx, gainamp2_cfg_t *cfg );
 
@@ -263,6 +263,6 @@ float gainamp2_get_voltage ( gainamp2_t *ctx );
 #endif  // _GAINAMP2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

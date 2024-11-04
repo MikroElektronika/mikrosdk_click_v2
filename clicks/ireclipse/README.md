@@ -3,15 +3,15 @@
  
 
 ---
-# Ir Eclipse click
+# Ir Eclipse Click
 
-IR eclipse click carries an EE-SX198 photo interrupter sensor. This sensor consists of an infrared transmitter and receiver facing each other and spaced apart by a 3mm slit.
+IR eclipse Click carries an EE-SX198 photo interrupter sensor. This sensor consists of an infrared transmitter and receiver facing each other and spaced apart by a 3mm slit.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ireclipse_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ir-eclipse-click)
+[Click Product page](https://www.mikroe.com/ir-eclipse-click)
 
 ---
 
@@ -56,7 +56,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ## Examples Description
 
 > 
-> This is an example of IR ECLIPSE click board.
+> This is an example of IR ECLIPSE Click board.
 > 
 
 **The demo application is composed of two sections :**
@@ -148,7 +148,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

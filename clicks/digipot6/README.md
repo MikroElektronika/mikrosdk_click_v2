@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# DIGI POT 6 click
+# DIGI POT 6 Click
 
 DIGI POT 6 Click features the MCP41HVX1 family of devices which have dual power rails (analog and digital). The analog power rail allows high voltage on the resistor network terminal pins.
 
@@ -9,7 +9,7 @@ DIGI POT 6 Click features the MCP41HVX1 family of devices which have dual power 
   <img src="https://download.mikroe.com/images/click_for_ide/digipot6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/digi-pot-6-click)
+[Click Product page](https://www.mikroe.com/digi-pot-6-click)
 
 ---
 
@@ -49,7 +49,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 - This function reads data from the specified register address.
 > uint8_t digipot6_read_data ( digipot6_t *ctx, uint8_t reg ) ;
  
-- This function writes a wiper configuration command to the click module.
+- This function writes a wiper configuration command to the Click module.
 > void digipot6_write_wiper_cmd ( digipot6_t *ctx, uint8_t cmd );
 
 - This function reads data from the specified register address.
@@ -57,15 +57,15 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example showcases how to initialize, configure and use the DIGI POT 6 click module. The
-> click is a digital potentiometer. The potentiometer has a programmable wiper which controls 
+> This example showcases how to initialize, configure and use the DIGI POT 6 Click module. The
+> Click is a digital potentiometer. The potentiometer has a programmable wiper which controls 
 > the resistance between P0W-POA and POW-POB. An external power supply is required for this example. 
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> This function initializes and configures the logger and click modules. This function also sets the click default configuration. 
+> This function initializes and configures the logger and Click modules. This function also sets the Click default configuration. 
 
 ```c
 
@@ -135,7 +135,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -224,7 +224,7 @@ typedef enum
 
 /**
  * @brief H-Bridge 6 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #hbridge6_cfg_t object definition for detailed explanation.
@@ -237,7 +237,7 @@ void hbridge6_cfg_setup ( hbridge6_cfg_t *cfg );
 /**
  * @brief H-Bridge 6 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #hbridge6_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -276,7 +276,7 @@ uint8_t hbridge6_generic_read ( hbridge6_t *ctx, uint8_t reg );
 /**
  * @brief H-Bridge 6 default configuration function.
  * @details This function executes a default configuration of H-Bridge 6
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #hbridge6_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

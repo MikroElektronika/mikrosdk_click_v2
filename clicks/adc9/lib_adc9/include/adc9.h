@@ -457,7 +457,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void adc9_cfg_setup ( adc9_cfg_t *cfg );
@@ -468,7 +468,7 @@ void adc9_cfg_setup ( adc9_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ADC9_RETVAL adc9_init ( adc9_t *ctx, adc9_cfg_t *cfg );
 
@@ -478,7 +478,7 @@ ADC9_RETVAL adc9_init ( adc9_t *ctx, adc9_cfg_t *cfg );
  * @param ctx  Click object.
  * @param rw   Read/write object.
  *
- * @description This function executes default configuration for ADC 9 click.
+ * @description This function executes default configuration for ADC 9 Click.
  */
 void adc9_default_cfg ( adc9_t *ctx, adc9_rw_t *rw );
 
@@ -749,6 +749,6 @@ float adc9_volt_calc ( adc9_t *ctx, int32_t adc_val, uint16_t v_ref, uint8_t gai
 #endif  // _ADC9_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

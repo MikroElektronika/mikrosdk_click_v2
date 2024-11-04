@@ -12,7 +12,7 @@
  * makes an initial log.
  * 
  * ## Application Task  
- * Reads the device ID of a 6DOF IMU 12 click (dev ID: 0x24) and displays it 
+ * Reads the device ID of a 6DOF IMU 12 Click (dev ID: 0x24) and displays it 
  * on the USB UART each second.
  * 
  * \author MikroE Team
@@ -61,7 +61,7 @@ void application_init ( void )
     i2cmux3_hw_rst( &i2cmux3 );
     Delay_ms ( 100 );
     i2cmux3_ch_sel( &i2cmux3, 0 );
-    log_printf( &logger, " Please connect a 6DOF IMU 12 click to channel 0\r\n" );
+    log_printf( &logger, " Please connect a 6DOF IMU 12 Click to channel 0\r\n" );
     log_printf( &logger, "-------------------------------\r\n" );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
@@ -70,7 +70,7 @@ void application_init ( void )
 void application_task ( void )
 {
     i2cmux3_rd_slv ( &i2cmux3, 0x68, 0x00, &id_val, 1 );
-    log_printf( &logger, " The click device ID is:  0x%.2X \r\n", ( uint16_t ) id_val );
+    log_printf( &logger, " The Click device ID is:  0x%.2X \r\n", ( uint16_t ) id_val );
     log_printf( &logger, "-------------------------------\r\n" );
     Delay_ms ( 1000 );
 }

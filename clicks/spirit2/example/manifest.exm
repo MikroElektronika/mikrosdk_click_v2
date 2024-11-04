@@ -3,6 +3,6 @@
     "description": "SPIRIT 2 Click features the SP1ML-915, an ultra-low power, fully integrated RF module, which operates at 915 MHz ISM band. This Click board™ can be used to add wireless connectivity to any application, requiring no extensive RF communication experience. The module integrates all the required components, including the 32-bit STM32L1 MCU, a compact chip antenna, and accompanying circuitry. The SP1ML-915 module supports several types of modulation schemes, including 2-FSK, GFSK, GMSK, OOK, and ASK, allowing it to fulfill different RF transmission requirements.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","SP1ML-915"],
+    "hw" : ["Click","SP1ML-915"],
     "category" : ["Sub-1 GHz Transceivers"]
 }

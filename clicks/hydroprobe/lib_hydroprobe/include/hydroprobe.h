@@ -141,7 +141,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void hydroprobe_cfg_setup ( hydroprobe_cfg_t *cfg );
@@ -152,7 +152,7 @@ void hydroprobe_cfg_setup ( hydroprobe_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 HYDROPROBE_RETVAL hydroprobe_init ( hydroprobe_t *ctx, hydroprobe_cfg_t *cfg );
 
@@ -243,6 +243,6 @@ uint8_t hydroprobe_rel_env_hum ( hydroprobe_t *ctx, uint16_t dry_val, uint16_t w
 #endif  // _HYDROPROBE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

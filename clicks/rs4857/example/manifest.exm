@@ -3,6 +3,6 @@
     "description": "RS485 7 Click is a compact add-on board that enables communication over an RS485 network. This board features the THVD1424, a full duplex RS485 transceiver with a selectable data rate from Texas Instruments. The THVD1424 offers several pin-controlled features, including an on-chip 120Ω termination resistor, slew rate control, and the ability to switch between half and full duplex mode. With its high immunity to IEC Contact Discharge ESD events, the bus pins require no additional system-level protection components. Additionally, the chip is known for its low power consumption and glitch-free power-up/power-down functionality, which enables hot plug-in capability.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","THVD1424"],
+    "hw" : ["Click","THVD1424"],
     "category" : ["Click Boards > Interface > RS485"]
 }

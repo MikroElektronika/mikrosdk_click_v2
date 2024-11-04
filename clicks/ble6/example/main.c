@@ -32,7 +32,7 @@
  * - void ble6_local_version_info ( void );
  *
  * @note
- * For communication with BLE 6 click use the android application on the link:
+ * For communication with BLE 6 Click use the android application on the link:
  * https://play.google.com/store/apps/details?id=com.macdom.ble.blescanner
  *
  * @author Stefan Ilic

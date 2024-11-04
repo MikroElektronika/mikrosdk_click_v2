@@ -3,13 +3,13 @@
  * \brief ProxFusion Click example
  * 
  * # Description
- * This demo-app reads and displays touch events using ProxFusion click.
+ * This demo-app reads and displays touch events using ProxFusion Click.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
  * Configuring clicks and log objects.
- * Settings the click in the default configuration.
+ * Settings the Click in the default configuration.
  * 
  * ## Application Task  
  * Checks if a new touch event occurred and prints(logs) event message on usbuart.

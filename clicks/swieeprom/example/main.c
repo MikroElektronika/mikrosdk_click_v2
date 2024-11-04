@@ -3,7 +3,7 @@
  * @brief SWI EEPROM Click Example.
  *
  * # Description
- * This example demonstrates the use of SWI EEPROM click board by writing specified data to
+ * This example demonstrates the use of SWI EEPROM Click board by writing specified data to
  * the memory and reading it back.
  *
  * The demo application is composed of two sections :

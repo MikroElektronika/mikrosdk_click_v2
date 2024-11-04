@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# Accel 7 click
+# Accel 7 Click
 
-The Accel 7 click is a tri-axis acceleration sensing Click board™ powered by the KXTJ3-1057 14-bit tri-axis digital accelerometer from Kionix.  This sensor was developed using proprietary Kionix micromachining technology, resulting in high accuracy and excellent noise immunity.
+The Accel 7 Click is a tri-axis acceleration sensing Click board™ powered by the KXTJ3-1057 14-bit tri-axis digital accelerometer from Kionix.  This sensor was developed using proprietary Kionix micromachining technology, resulting in high accuracy and excellent noise immunity.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/accel7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/accel-7-click)
+[Click Product page](https://www.mikroe.com/accel-7-click)
 
 ---
 
@@ -66,7 +66,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes and configures the click and logger modules.
+> Initializes and configures the Click and logger modules.
 
 ```c
 
@@ -143,7 +143,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

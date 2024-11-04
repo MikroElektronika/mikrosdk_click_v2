@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# H-Bridge 12 click
+# H-Bridge 12 Click
 
 > H Bridge 12 Click is a compact add-on board with an H-Bridge gate driver, also known as a full-bridge pre-driver. This board features the DRV8823, a 4-bridge serial interface motor driver from Texas Instruments.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/hbridge12_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/h-bridge-12-click)
+[Click Product page](https://www.mikroe.com/h-bridge-12-click)
 
 ---
 
@@ -70,14 +70,14 @@ err_t hbridge12_turn_clockwise ( hbridge12_t *ctx, uint8_t channel_sel );
 
 ## Example Description
 
-> This example demonstrates the use of the H-Bridge 12 click board by
+> This example demonstrates the use of the H-Bridge 12 Click board by
   driving the motor connected to OUT A and OUT B, in both directions with braking and freewheeling. 
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -171,7 +171,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

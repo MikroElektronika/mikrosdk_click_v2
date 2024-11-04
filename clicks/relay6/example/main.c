@@ -3,7 +3,7 @@
  * @brief Relay 6 Click example
  *
  * # Description
- * This example demonstrates the use of Relay 6 click board by toggling the relays state.
+ * This example demonstrates the use of Relay 6 Click board by toggling the relays state.
  *
  * The demo application is composed of two sections :
  *

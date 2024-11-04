@@ -1,6 +1,6 @@
 
 ---
-# Magnetic Rotary 4 click
+# Magnetic Rotary 4 Click
 
 > Magnetic Rotary 4 Click is a compact add-on board for accurate magnet-position sensing. This board features the AS5047D, an SPI-configurable high-resolution rotary position sensor for fast absolute angle measurement over a full 360-degree range from ams AG. The AS5047D is equipped with revolutionary integrated dynamic angle error compensation (DAEC™) with almost 0 latency and offers a robust design that suppresses the influence of any homogenous external stray magnetic field. It also comes with an onboard header reserved for incremental and commutation signals of their respective A/B/I and U/V/W signals alongside embedded self-diagnostics, including magnetic field strength, lost magnet, and other related diagnostic features.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/magneticrotary4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/magnetic-rotary-4-click)
+[Click Product page](https://www.mikroe.com/magnetic-rotary-4-click)
 
 ---
 
@@ -64,7 +64,7 @@ err_t magneticrotary4_get_angle ( magneticrotary4_t *ctx, float *angle );
 
 ## Example Description
 
-> This example demonstrates the use of Magnetic Rotary 4 click board by reading and displaying the magnet (potentiometer) angular position in degrees.
+> This example demonstrates the use of Magnetic Rotary 4 Click board by reading and displaying the magnet (potentiometer) angular position in degrees.
 
 **The demo application is composed of two sections :**
 
@@ -145,7 +145,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

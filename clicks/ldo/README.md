@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LDO click
+# LDO Click
 
 > LDO Click is a compact add-on board designed to regulate the output voltage of a power supply to a lower level with a very low dropout voltage. This board features the TPS7A83A, a low-noise, low-dropout linear regulator (LDO) from Texas Instruments capable of sourcing 2A with only 200mV of maximum dropout. The TPS7A8300A has a pin-programmable output voltage from 0.8V-3.95V with a 50mV resolution, or it can be adjustable from 0.8V-5.2V using an external resistor divider.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ldo_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ldo-click)
+[Click Product page](https://www.mikroe.com/ldo-click)
 
 ---
 
@@ -70,7 +70,7 @@ err_t ldo_set_vout ( ldo_t *ctx, uint16_t vout );
 
 ## Example Description
 
-> This example demonstrates the use of LDO click by changing the output voltage.
+> This example demonstrates the use of LDO Click by changing the output voltage.
 
 **The demo application is composed of two sections :**
 
@@ -158,7 +158,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# HAPTIC 3 click
+# HAPTIC 3 Click
 
 > Haptic 3 Click is a compact add-on board that uses advanced vibration patterns and waveforms to convey information to a user. This board features the DA7282, a linear resonant actuator (LRA), and an eccentric rotating mass (ERM) haptic driver from Dialog Semiconductor. The DA7282 features LRA or ERM drive capability with automatic closed-loop LRA resonant frequency tracking, guaranteeing consistency across LRA production tolerances. It also offers wideband operation that fully utilizes the capabilities of newer wideband and multi-directional LRAs, alongside three external general-purpose inputs for triggering up to six independent haptic sequences.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/haptic3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/haptic-3-click)
+[Click Product page](https://www.mikroe.com/haptic-3-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t haptic3_write_register ( haptic3_t *ctx, uint8_t reg, uint8_t data_in );
 
 ## Example Description
 
-> This example demonstrates the use of HAPTIC 3 click board by controlling the attached motor vibration level.
+> This example demonstrates the use of HAPTIC 3 Click board by controlling the attached motor vibration level.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -159,7 +159,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

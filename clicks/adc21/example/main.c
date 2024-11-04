@@ -3,7 +3,7 @@
  * @brief ADC 21 Click example
  *
  * # Description
- * This example demonstrates the use of ADC 21 click board by reading and displaying
+ * This example demonstrates the use of ADC 21 Click board by reading and displaying
  * the voltage levels from 8 analog input channels.
  *
  * The demo application is composed of two sections :

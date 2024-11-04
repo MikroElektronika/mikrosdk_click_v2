@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# SPI Isolator 4 click
+# SPI Isolator 4 Click
 
 > SPI Isolator 4 Click is a compact add-on board that contains a digital isolator optimized for a serial peripheral interface. This board features the ADuM341E, a quad-channel 5kVRMS digital isolator from Analog Devices. This board features the ADuM341E, a quad-channel 5kVRMS digital isolator from Analog Devices. This isolation component provides outstanding performance by combining high speed, complementary metal-oxide-semiconductor (CMOS), and monolithic air core transformer technology. Its data channels are independent and available in various configurations with a withstand voltage rating of 5kVrms, and operate with the external supply voltage ranging from 2.25V to 5.5V, providing compatibility with lower voltage systems enabling voltage translation functionality across the isolation barrier.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/spiisolator4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/spi-isolator-4-click)
+[Click Product page](https://www.mikroe.com/spi-isolator-4-click)
 
 ---
 
@@ -71,9 +71,9 @@ err_t spiisolator4_set_enable ( spiisolator4_t *ctx, spiisolator4_enable_mode_t 
 
 ## Example Description
 
-> This library contains API for the SPI Isolator 4 click driver.
-> This demo application shows an example of an SPI Isolator 4 click wired 
-> to the nvSRAM 4 click for reading Device ID.
+> This library contains API for the SPI Isolator 4 Click driver.
+> This demo application shows an example of an SPI Isolator 4 Click wired 
+> to the nvSRAM 4 Click for reading Device ID.
 
 **The demo application is composed of two sections :**
 
@@ -125,8 +125,8 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example that shows the use of an SPI Isolator 4 click board™.
-> Logs Device ID of the nvSRAM 4 click wired to the SPI Isolator 4 board™.  
+> This is an example that shows the use of an SPI Isolator 4 Click board™.
+> Logs Device ID of the nvSRAM 4 Click wired to the SPI Isolator 4 board™.  
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
@@ -158,7 +158,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

@@ -298,7 +298,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void gyro2_cfg_setup ( gyro2_cfg_t *cfg );
@@ -308,7 +308,7 @@ void gyro2_cfg_setup ( gyro2_cfg_t *cfg );
  * @param gyro2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 GYRO2_RETVAL gyro2_init ( gyro2_t *ctx, gyro2_cfg_t *cfg );
 
@@ -317,7 +317,7 @@ GYRO2_RETVAL gyro2_init ( gyro2_t *ctx, gyro2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Gyro 2 click.
+ * @description This function executes default configuration for Gyro 2 Click.
  */
 uint8_t gyro2_default_cfg ( gyro2_t *ctx );
 
@@ -459,7 +459,7 @@ uint8_t gyro2_read_temperature ( gyro2_t *ctx );
  * 
  * @param ctx     Click object.
  * 
- * @description Function for tringgering a software reset of the click board.
+ * @description Function for tringgering a software reset of the Click board.
   */
 void gyro2_sw_reset ( gyro2_t *ctx );
 
@@ -525,6 +525,6 @@ void gyro2_fr_setup ( gyro2_t *ctx, uint8_t low_pass, uint8_t hi_pass, uint8_t s
 #endif  // GYRO2_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------ END

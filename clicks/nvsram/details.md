@@ -1,6 +1,6 @@
 
 ---
-# nvSRAM click
+# nvSRAM Click
 
 nvSRAM Click is a compact add-on board that contains the most reliable nonvolatile memory. This board features the CY14B101J, a 1-Mbit nvSRAM organized as 128K words of 8 bits each with a nonvolatile element in each memory cell from Cypress Semiconductor. The embedded nonvolatile elements incorporate the QuantumTrap technology and provide highly reliable nonvolatile storage of data.
 
@@ -8,7 +8,7 @@ nvSRAM Click is a compact add-on board that contains the most reliable nonvolati
   <img src="https://download.mikroe.com/images/click_for_ide/nvsram_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/nvsram-click)
+[Click Product page](https://www.mikroe.com/nvsram-click)
 
 ---
 
@@ -47,7 +47,7 @@ err_t nvsram_init ( nvsram_t *ctx, nvsram_cfg_t *cfg );
 
 #### Example key functions :
 
-- `nvsram_send_cmd` The function sends the desired command to the CY14B101J2 1-Mbit (128K � 8) Serial (I2C) nvSRAM on nvSRAM click board.
+- `nvsram_send_cmd` The function sends the desired command to the CY14B101J2 1-Mbit (128K � 8) Serial (I2C) nvSRAM on nvSRAM Click board.
 ```c
 void nvsram_send_cmd ( nvsram_t *ctx, uint8_t cmd );
 ```
@@ -64,7 +64,7 @@ void nvsram_memory_read ( nvsram_t *ctx, uint32_t mem_adr, uint8_t *p_rx_data, u
 
 ## Example Description
 
-> This is an example that demonstrates the use of the nvSRAM click board. In this example, we write and then read data from nvSRAM memory. Results are being sent to the Usart Terminal where you can track their changes. All data logs write on USB uart changes approximately for every 5 sec.
+> This is an example that demonstrates the use of the nvSRAM Click board. In this example, we write and then read data from nvSRAM memory. Results are being sent to the Usart Terminal where you can track their changes. All data logs write on USB uart changes approximately for every 5 sec.
 
 **The demo application is composed of two sections :**
 
@@ -153,7 +153,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

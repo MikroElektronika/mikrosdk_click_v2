@@ -3,6 +3,6 @@
     "description": "SRAM 4 Click is a compact add-on board that contains highly reliable nonvolatile memory. This board features the CY14B512Q, a 512Kbit SRAM with a nonvolatile element in each memory cell from Cypress Semiconductor, now part of Infineon.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","CY14B512Q2A"],
+    "hw" : ["Click","CY14B512Q2A"],
     "category" : ["SRAM"]
 }

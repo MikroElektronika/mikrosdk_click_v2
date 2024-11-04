@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Smart Sens click
+# Smart Sens Click
 
 > Smart Sens Click is a compact add-on board that contains an intelligent sensor hub with an integrated IMU sensor. This board utilizes the BHI260 and BMM150, an environmental sensor and magnetometer from Bosch Sensortech. The BHI260 includes a programmable and powerful 32-bit MCU, a 6-axis IMU, and a robust software framework. In addition to its internal functions, it also performs signal data processing from the BMM150 that performs measurements of the magnetic field in three perpendicular axes.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/smartsens_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/smart-sens-click)
+[Click Product page](https://www.mikroe.com/smart-sens-click)
 
 ---
 
@@ -70,7 +70,7 @@ err_t smartsens_power_on_device( smartsens_t *ctx );
 
 ## Example Description
 
-> This example showcases the ability of the Smart Sens click board.
+> This example showcases the ability of the Smart Sens Click board.
 It has multiple examples that you can easily select with the 
 defines at the top of the main. There are 5 examples: Euler, Quaternion, 
 and Vector (Accelerometer, Gyroscope, Magnetometer).
@@ -242,7 +242,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

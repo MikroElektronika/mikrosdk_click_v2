@@ -3,7 +3,7 @@
  * \brief Thermo16 Click example
  * 
  * # Description
- * This demo-app shows the temperature measurement procedure using Thermo 16 click.
+ * This demo-app shows the temperature measurement procedure using Thermo 16 Click.
  *
  * The demo application is composed of two sections :
  * 

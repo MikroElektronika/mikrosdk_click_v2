@@ -3,7 +3,7 @@
  * \brief Thermostat3 Click example
  * 
  * # Description
- * This application enables usage of the general puprose Thermostat click to be used with temperature sensors.
+ * This application enables usage of the general puprose Thermostat Click to be used with temperature sensors.
  *
  * The demo application is composed of two sections :
  * 

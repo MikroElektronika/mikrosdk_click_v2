@@ -3,13 +3,13 @@
  * @brief Inclinometer 4 Click example
  *
  * # Description
- * This example demonstrates the use of Inclinometer 4 click board by reading and displaying 
+ * This example demonstrates the use of Inclinometer 4 Click board by reading and displaying 
  * accel data (X, Y, and Z axis) as well as temperature measurements on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which enables data ready
+ * Initializes the driver and performs the Click default configuration which enables data ready
  * interrupt on INT2 pin and sets full scale range to +/-2G and output data rate to 160ms.
  *
  * ## Application Task

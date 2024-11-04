@@ -4,7 +4,7 @@
  * 
  * # Description
  * H-bridge in general, allows the current to flow in one or another direction.
- * This click is used for driving a H-Bridge motor by changing output states. 
+ * This Click is used for driving a H-Bridge motor by changing output states. 
  * The outputs can be pulse width modulated at frequencies up to 20kHz by means of PWM/DIR control. 
  * 
  * The demo application is composed of two sections :

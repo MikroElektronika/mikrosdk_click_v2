@@ -3,6 +3,6 @@
     "description": "PIR 3 Click is a compact add-on board designed for efficient and reliable motion detection in various applications. This board features the ZDP323B1 sensor from Zilog (Littelfuse), with high EMI immunity and precise motion detection capabilities. It includes a spectral filter window tuned to an 8-13um wavelength, dual sensing elements with a 0.6mm spacing, and a field of view of 148° on the X-axis and 136° on the Y-axis. The board also integrates the ZNCL10S PIR lens for maximum IR transmissivity and includes the Click Snap feature for flexible implementation.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","ZDP323B","MAX40200AUK+"],
+    "hw" : ["Click","ZDP323B","MAX40200AUK+"],
     "category" : ["Click Boards > Sensors > Motion"]
 }

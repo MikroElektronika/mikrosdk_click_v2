@@ -3,13 +3,13 @@
  * \brief ccRF Click example
  * 
  * # Description
- * This example demonstrates the use of an ccRF click board by showing
- * the communication between the two click boards configured as a receiver and transmitter.
+ * This example demonstrates the use of an ccRF Click board by showing
+ * the communication between the two Click boards configured as a receiver and transmitter.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and logger, performs the click default configuration and 
+ * Initializes the driver and logger, performs the Click default configuration and 
  * displays the selected application mode.
  *
  * ## Application Task
@@ -28,7 +28,7 @@
 #define DEMO_APP_TRANSMITTER
 
 // Text message to send in the transmitter application mode
-#define DEMO_TEXT_MESSAGE           "MIKROE - ccRF click board\0"
+#define DEMO_TEXT_MESSAGE           "MIKROE - ccRF Click board\0"
 
 static ccrf_t ccrf;
 static log_t logger;

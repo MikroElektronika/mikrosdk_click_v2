@@ -71,7 +71,7 @@ void application_init ( void )
     if ( id_val == C9DOF2_WHO_AM_I_ICM20948_VAL )
     {
         log_printf( &logger, "--------------------\r\n" );
-        log_printf( &logger, "   9DOF  2  click   \r\n" );
+        log_printf( &logger, "   9DOF  2  Click   \r\n" );
         log_printf( &logger, "--------------------\r\n" );
         c9dof2_power ( &c9dof2, C9DOF2_POWER_ON );
     }

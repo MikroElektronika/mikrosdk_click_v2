@@ -410,7 +410,7 @@ typedef struct
 
 /**
  * @brief PAC1944 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #pac1944_cfg_t object definition for detailed explanation.
@@ -424,7 +424,7 @@ void pac1944_cfg_setup ( pac1944_cfg_t *cfg );
 /**
  * @brief PAC1944 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #pac1944_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -442,7 +442,7 @@ err_t pac1944_init ( pac1944_t *ctx, pac1944_cfg_t *cfg );
 /**
  * @brief PAC1944 default configuration function.
  * @details This function executes a default configuration of PAC1944
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #pac1944_t object definition for detailed explanation.
  *

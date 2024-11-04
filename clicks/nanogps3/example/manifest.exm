@@ -3,6 +3,6 @@
     "description": "Nano GPS 3 Click is a compact add-on board that provides fast positioning capabilities. This board features the ORG1511, a GPS/GNSS module with an integrated antenna from OriginGPS. It is a miniature, multi-channel GPS, GLONASS, Galileo, SBAS, and QZSS overlay system receiver that continuously tracks all satellites in view, providing real-time positioning data in industry-standard NMEA format. The module introduces the industry’s lowest energy per fix ratio, unparalleled accuracy, and extremely fast fixes even under challenging.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","ORG1511-MK05"],
+    "hw" : ["Click","ORG1511-MK05"],
     "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"]
 }

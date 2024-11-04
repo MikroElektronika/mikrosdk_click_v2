@@ -1,6 +1,6 @@
 
 ---
-# Speed Radar click
+# Speed Radar Click
 
 > Speed Radar Click is a compact add-on board that comes with a radar motion detector. This board features the K-LD2, a radar transceiver from RFbeam. It is a 24GHz radar with a detection distance for humans of up to 15m and cars of up to 30m. Its digital structure makes it easy to use in an MCU-based application or as a standalone device where movement detection or even a speed measurement is required.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/speedradar_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/speed-radar-click)
+[Click Product page](https://www.mikroe.com/speed-radar-click)
 
 ---
 
@@ -69,14 +69,14 @@ uint8_t speedradar_get_detection ( speedradar_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Speed Radar click board by processing
+> This example demonstrates the use of Speed Radar Click board by processing
 > the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 void application_init ( void ) 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

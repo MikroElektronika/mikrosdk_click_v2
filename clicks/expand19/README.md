@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Expand 19 click
+# Expand 19 Click
 
 > Expand 19 Click is an add-on board that provides additional input/output capabilities for various applications. This board features the TCAL9538, an 8-bit I2C-bus I/O expander from Texas Instruments. The board features eight configurable I/O pins that can be set as inputs or outputs, with polarity inversion, programmable output drive strength, and interrupt functionality for real-time event handling. It operates using a standard 2-wire I2C communication interface, supporting clock frequencies up to 1MHz, and includes an onboard interrupt pin for efficient system integration.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/expand19_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/expand-19-click)
+[Click Product page](https://www.mikroe.com/expand-19-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t expand19_read_port_value ( expand19_t *ctx, uint8_t *data_out );
 
 ## Example Description
 
-> This example demonstrates the use of Expand 19 click board by setting and reading the port state.
+> This example demonstrates the use of Expand 19 Click board by setting and reading the port state.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which sets the pins 0-3 as output and others as input with pull-up enabled.
+> Initializes the driver and performs the Click default configuration which sets the pins 0-3 as output and others as input with pull-up enabled.
 
 ```c
 
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

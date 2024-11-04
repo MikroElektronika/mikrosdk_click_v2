@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# RS232 to I2C click
+# RS232 to I2C Click
 
 > RS232 to I2C Click is a compact add-on board representing a universal usable RS232 to I2C converter. This board features the ZDU0110RFX, a bridge between a UART port and an I2C bus from Zilog, which at the same time represents the connection between the MCU and the RS232 line driver and receiver, the MAX3232. The ZDU0110RFX provides full-duplex asynchronous communications with a 128 byte FIFO buffer, of which 64 bytes each are allocated to receive and transmit operations. It also contains a 4kbit EEPROM and GPIO with programmable interrupt capability; programmable interrupts and interrupt lines for UART and GPIO notifications.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/rs232toi2c_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rs232-to-i2c-click)
+[Click Product page](https://www.mikroe.com/rs232-to-i2c-click)
 
 ---
 
@@ -70,13 +70,13 @@ uint8_t rs232toi2c_get_int_pin ( rs232toi2c_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of an RS232 to I2C click board by showing the communication between the two click board configured as a receiver and transmitter.
+> This example demonstrates the use of an RS232 to I2C Click board by showing the communication between the two Click board configured as a receiver and transmitter.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which sets the default UART configuration with 9600 baud rate.
+> Initializes the driver and performs the Click default configuration which sets the default UART configuration with 9600 baud rate.
 
 ```c
 
@@ -211,7 +211,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "AD SWIO click",
+    "display_name": "AD SWIO Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -31,11 +31,12 @@
     "related_projects": [
         3217
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.AdSwio",
     "subdir_name": "lib_adswio"
 }
+
 
 
 

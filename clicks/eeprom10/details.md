@@ -1,6 +1,6 @@
 
 ---
-# EEPROM 10 click
+# EEPROM 10 Click
 
 > EEPROM 10 Click is a compact add-on board that contains the highest-density memory solution. This board features the N24C32, a 32Kb I2C CMOS Serial EEPROM from ON Semiconductor. It is internally organized as 128 pages of 32 bytes each, with a 32-byte page write buffer and a fast write time of up to 4ms. 
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/eeprom10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/eeprom-10-click)
+[Click Product page](https://www.mikroe.com/eeprom-10-click)
 
 ---
 
@@ -64,7 +64,7 @@ err_t eeprom10_read_n_byte ( eeprom10_t *ctx, uint16_t address, uint8_t *data_ou
 
 ## Example Description
 
-> This example demonstrates the use of EEPROM 10 click board by writing specified data to
+> This example demonstrates the use of EEPROM 10 Click board by writing specified data to
   the memory and reading it back.
 
 **The demo application is composed of two sections :**
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

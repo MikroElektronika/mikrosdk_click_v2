@@ -3,7 +3,7 @@
  * @brief ISO ADC Click example
  *
  * # Description
- * This example demonstrates the use of ISO ADC click board by reading
+ * This example demonstrates the use of ISO ADC Click board by reading
  * the shunt voltage, current, and power.
  *
  * The demo application is composed of two sections :

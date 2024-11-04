@@ -145,7 +145,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void vacuum_cfg_setup ( vacuum_cfg_t *cfg );
@@ -156,7 +156,7 @@ void vacuum_cfg_setup ( vacuum_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 VACCUM_RETVAL vacuum_init ( vacuum_t *ctx, vacuum_cfg_t *cfg );
 
@@ -165,7 +165,7 @@ VACCUM_RETVAL vacuum_init ( vacuum_t *ctx, vacuum_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Vacuum click.
+ * @description This function executes default configuration for Vacuum Click.
  */
 void vacuum_default_cfg ( vacuum_t *ctx );
 
@@ -220,6 +220,6 @@ void vacuum_calibration ( vacuum_t *ctx );
 #endif  // _VACCUM_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -1,15 +1,15 @@
 
 ---
-# Tamper click
+# Tamper Click
 
-Tamper click is equipped with SDS001, a low profile side-actuated detect switch, made by C&K company. This is a high-quality, low-current detection switch, which is designed in a form of a push button. The switch itself is very small - only 2mm of switch overtravel length, which coupled with its low actuation force, makes it ideal for using it as a contact detector in various applications - consumer electronics devices, medical devices, smart card detection and similar applications.
+Tamper Click is equipped with SDS001, a low profile side-actuated detect switch, made by C&K company. This is a high-quality, low-current detection switch, which is designed in a form of a push button. The switch itself is very small - only 2mm of switch overtravel length, which coupled with its low actuation force, makes it ideal for using it as a contact detector in various applications - consumer electronics devices, medical devices, smart card detection and similar applications.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/tamper_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/tamper-click)
+[Click Product page](https://www.mikroe.com/tamper-click)
 
 ---
 
@@ -50,7 +50,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> Tamper click is equipped with side-actuated detect switch. The switch itself acts as 
+> Tamper Click is equipped with side-actuated detect switch. The switch itself acts as 
 > a push button and has 2 Normally Open terminals, which get shorted when the force is applied. 
 > The applied pressure closes the circuit, connecting the VCC routed to the first pin 
 > of the switch with the INT pin on the mikroBUS. The microcontroller is then able to detect 
@@ -93,8 +93,8 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example which demonstrates the use of Tamper click board.
-> It detects whether the state of switch on Tamper click is changes to open or to closed.
+> This is an example which demonstrates the use of Tamper Click board.
+> It detects whether the state of switch on Tamper Click is changes to open or to closed.
 > Results are being sent to the Usart Terminal where you can keep track of their changes.
 
 ```c
@@ -132,7 +132,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

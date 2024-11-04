@@ -1,6 +1,6 @@
 
 ---
-# 4x4 RGB 2 click
+# 4x4 RGB 2 Click
 
 > 4x4 RGB 2 Click is a compact add-on board that contains a matrix of 16 intelligent RGB LEDs, forming a 4x4 display screen. This board features 16 IN-PC55TBTRGB, 5x5mm RGB LEDs with an integrated IC from Inolux. The LEDs feature an 8-bit color control in 256 steps (256-level greyscale) and a 5-bit brightness control in 32 steps. The intelligent LEDs are cascaded (daisy-chained); thus, every one of them can communicate with the host MCU using the same data lines.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/4x4rgb2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/4x4-rgb-2-click)
+[Click Product page](https://www.mikroe.com/4x4-rgb-2-click)
 
 ---
 
@@ -62,20 +62,20 @@ void c4x4rgb2_set_led_color ( c4x4rgb2_t *ctx, uint8_t led_num, uint32_t rgb );
 void c4x4rgb2_set_led_brightness ( c4x4rgb2_t *ctx, uint8_t led_num, uint8_t brightness );
 ```
 
-- `c4x4rgb2_write_led_matrix` This function writes the led matrix data from the click context object.
+- `c4x4rgb2_write_led_matrix` This function writes the led matrix data from the Click context object.
 ```c
 err_t c4x4rgb2_write_led_matrix ( c4x4rgb2_t *ctx );
 ```
 
 ## Example Description
 
-> This example demonstrates the use of 4x4 RGB 2 click board by setting all 16 LEDs to different colors and changing the LEDs color every 500 milliseconds. 
+> This example demonstrates the use of 4x4 RGB 2 Click board by setting all 16 LEDs to different colors and changing the LEDs color every 500 milliseconds. 
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which sets the LEDs brightness to level 1 and the color to black (all LEDs off).
+> Initializes the driver and performs the Click default configuration which sets the LEDs brightness to level 1 and the color to black (all LEDs off).
 
 ```c
 
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

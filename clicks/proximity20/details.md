@@ -1,6 +1,6 @@
 
 ---
-# Proximity 20 click
+# Proximity 20 Click
 
 > Proximity 20 Click is a compact add-on board for short-range proximity sensing applications up to 200mm. This board features two VCNL36828P proximity sensors from Vishay Semiconductor. Key features include a 940nm VCSEL for immunity to a red glow, intelligent cancellation technology to minimize crosstalk, and a smart persistence scheme for reduced measurement response time.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/proximity20_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/proximity-20-click)
+[Click Product page](https://www.mikroe.com/proximity-20-click)
 
 ---
 
@@ -69,13 +69,13 @@ void proximity20_enable_device ( proximity20_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Proximity 20 click board by reading and displaying the proximity data on the USB UART.
+> This example demonstrates the use of Proximity 20 Click board by reading and displaying the proximity data on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and logger, and performs the click default configuration.
+> Initializes the driver and logger, and performs the Click default configuration.
 
 ```c
 
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

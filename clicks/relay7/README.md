@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Relay 7 click
+# Relay 7 Click
 
 > Relay 7 Click is a compact add-on board for precise load control and monitoring applications. This board features four CRR05-1As, a CRR series reed relay from Standex Electronics, well-known for its ultra-miniature SMD design and high insulation resistance. These four relays each have four load connection terminals and orange LED indicators that signal the operational status, ensuring clear and immediate feedback. These relays are highly reliable and come in a rugged thermoset over-molded package with ceramic substrate and a typical 1013Ω insulation resistance. They support a coil voltage of 5VDC and switching capabilities up to 170VDC/0.5A/10W. It is ideally suited for test and measurement (ATE) equipment, instrumentation, and telecommunications.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/relay7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/relay-7-click)
+[Click Product page](https://www.mikroe.com/relay-7-click)
 
 ---
 
@@ -70,7 +70,7 @@ uint8_t relay7_get_interrupt ( relay7_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of the Relay 7 click board by toggling the relay state.
+> This example demonstrates the use of the Relay 7 Click board by toggling the relay state.
 
 **The demo application is composed of two sections :**
 
@@ -157,7 +157,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

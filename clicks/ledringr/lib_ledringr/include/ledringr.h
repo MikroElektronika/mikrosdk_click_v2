@@ -150,7 +150,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void ledringr_cfg_setup ( ledringr_cfg_t *cfg );
@@ -160,7 +160,7 @@ void ledringr_cfg_setup ( ledringr_cfg_t *cfg );
  * @param ledringr Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LEDRINGR_RETVAL ledringr_init ( ledringr_t *ctx, ledringr_cfg_t *cfg );
 
@@ -173,7 +173,7 @@ LEDRINGR_RETVAL ledringr_init ( ledringr_t *ctx, ledringr_cfg_t *cfg );
  * @param read_buf   Read buffer.  
  * @param rbuf_size   Buffer size.
  * 
- * @description This function transfers data to/from the click module.
+ * @description This function transfers data to/from the Click module.
  */
 void ledringr_transfer_data 
 (   
@@ -228,6 +228,6 @@ void ledringr_led_ring_reset ( ledringr_t *ctx );
 #endif  // _LEDRINGR_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -3,14 +3,14 @@
  * \brief Altitude4 Click example
  * 
  * # Description
- * This example showcases how to initialize, configure and use the Altitude 4 click module. The
- * click has a sensor that measures: altitude, pressure and temperature. No additional equipment
+ * This example showcases how to initialize, configure and use the Altitude 4 Click module. The
+ * Click has a sensor that measures: altitude, pressure and temperature. No additional equipment
  * or special configuration is required in order for this demo to work.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules.
+ * This function initializes and configures the logger and Click modules.
  * 
  * ## Application Task  
  * This function initializes the sensor data object through the read_sensor(...) function and

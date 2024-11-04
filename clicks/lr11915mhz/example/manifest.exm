@@ -3,6 +3,6 @@
     "description": "LR 11 Click - 915MHz is a compact add-on board for long-range, low-power wireless communication in IoT applications. This board features the 453-00139R, an ultra-low power LoraWAN module Ezurio (part of the RM126x series), integrating the Silicon Labs EFR32 SoC and the Semtech SX1262 radio. It supports LoRaWAN classes A, B, and C, offering secure, scalable, and bi-directional communication. It operates in the 902-928MHz frequency range with a typical transmit power of up to 22dBm and a communication range of up to 15km.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","453-00139R"],
+    "hw" : ["Click","453-00139R"],
     "category" : ["Click Boards > Wireless connectivity > LoRa"]
 }

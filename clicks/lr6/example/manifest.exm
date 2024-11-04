@@ -3,6 +3,6 @@
     "description": "LR 6 Click is a compact add-on board designed for ultra-long-distance spread-spectrum communication. This board features the Ra-01S, a LoRa™ wireless radio frequency module from Ai-Thinker Technology, featuring the SX1268 radio chip. This module provides exceptional sensitivity of over -148dBm, a power output of +22dBm, and supports multiple modulation methods, including LoRa™, within the 433MHz frequency band. The board offers robust anti-interference capabilities and low power consumption, making it ideal for applications requiring reliable long-range communication.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","RA-01S"],
+    "hw" : ["Click","RA-01S"],
     "category" : ["Click Boards > Wireless connectivity > LoRa"]
 }

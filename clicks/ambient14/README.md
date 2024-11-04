@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Ambient 14 click
+# Ambient 14 Click
 
 > Ambient 14 Click is a compact add-on board for ambient light and proximity detection applications. This board features the TMD2755, an advanced sensor from ams OSRAM, which combines ambient light sensing (ALS) and proximity detection in a single, compact module. The TMD2755 features an integrated infrared VCSEL and driver and a proximity engine that includes offset adjustment and ambient light subtraction for enhanced accuracy. It provides 16-bit data output for ALS and proximity detection, allowing precise control of backlight brightness in devices.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ambient14_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ambient-14-click)
+[Click Product page](https://www.mikroe.com/ambient-14-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t ambient14_get_illuminance ( ambient14_t *ctx, uint16_t als_data, float *il
 
 ## Example Description
 
-> This example demonstrates the use of Ambient 14 click board by measuring the illuminance level (Lux) and the proximity data on the USB UART.
+> This example demonstrates the use of Ambient 14 Click board by measuring the illuminance level (Lux) and the proximity data on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -171,7 +171,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

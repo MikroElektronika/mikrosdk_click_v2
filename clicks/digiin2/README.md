@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# DIGI IN 2 click
+# DIGI IN 2 Click
 
 > DIGI IN 2 Click is a compact add-on board designed for converting high-voltage industrial signals into logic-level outputs, ideal for enhancing industrial control systems. This board features the MAX22196, a high-performance octal industrial sink/source digital input IC from Analog Devices. This Click board™ stands out for its ability to interface eight industrial inputs (8V-24V) via SPI, configurable as either sinking or sourcing with built-in current limiters, ensuring adherence to IEC 61131-2 standards.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/digiin2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/digi-in-2-click)
+[Click Product page](https://www.mikroe.com/digi-in-2-click)
 
 ---
 
@@ -76,7 +76,7 @@ err_t digiin2_read_reg ( digiin2_t *ctx, uint8_t reg, uint8_t *data_out );
 
 ### Application Init
 
-> Initializes the driver, performs the click default configuration.
+> Initializes the driver, performs the Click default configuration.
 
 ```c
 
@@ -228,7 +228,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

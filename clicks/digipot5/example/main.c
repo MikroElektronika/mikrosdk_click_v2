@@ -3,17 +3,17 @@
  * \brief DIGI POT 5 Click example
  *
  * # Description
- * This example demonstrates the use of the DIGI POT 5 click board.
+ * This example demonstrates the use of the DIGI POT 5 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes all necessary peripherals and pins used for the DIGI POT 5 click.
+ * Initializes all necessary peripherals and pins used for the DIGI POT 5 Click.
  * Also allows the device to be reset and configured to enable all wipers (4).
  * UART console module will be initialized also in this function.
  *
  * ## Application Task
- * Demonstrates the use of click driver functions by performing a control of
+ * Demonstrates the use of Click driver functions by performing a control of
  * the all wipers positions. By checking the uart console, user can be informed
  * about the all current wipers positions.
  *

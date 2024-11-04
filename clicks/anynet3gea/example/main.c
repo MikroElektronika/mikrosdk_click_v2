@@ -3,13 +3,13 @@
  * @brief AnyNet 3G-EA Click Example.
  *
  * # Description
- * This example demonstrates the use of AnyNet 3G-EA click board.
+ * This example demonstrates the use of AnyNet 3G-EA Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
  * Initializes the driver and sends a few AT commands to test the communication
- * and configure the click board.
+ * and configure the Click board.
  *
  * ## Application Task
  * Reads all the received data and logs them to the USB UART.

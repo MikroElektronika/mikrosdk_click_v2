@@ -1,6 +1,6 @@
 
 ---
-# GSM 5 click
+# GSM 5 Click
 
 > GSM 5 Click is a compact add-on board representing a compact GSM cellular network communication solution. This board features the SARA-G450, a GSM/GPRS quad-band cellular module certified and approved by the main regulatory bodies and operators from u-blox. It features class 12 GSM/GPRS connectivity in the popular u-blox SARA form factor and comes with a comprehensive feature set, including an extensive set of internet protocols designed to provide fully integrated access to u-blox GNSS positioning with embedded A-GPS (AssistNow Online and AssistNow Offline) functionality. Besides a data rate up to 85.6 kbps and an advanced jamming detection feature, this board also offers a high-quality integrated audio interface allowing voice communication.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/gsm5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gsm-5-click)
+[Click Product page](https://www.mikroe.com/gsm-5-click)
 
 ---
 
@@ -47,7 +47,7 @@ err_t gsm5_init ( gsm5_t *ctx, gsm5_cfg_t *cfg );
 
 #### Example key functions :
 
-- `gsm5_send_cmd` This function sends a specified command to the click module.
+- `gsm5_send_cmd` This function sends a specified command to the Click module.
 ```c
 void gsm5_send_cmd ( gsm5_t *ctx, char *cmd );
 ```
@@ -197,7 +197,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

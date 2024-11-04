@@ -1,8 +1,8 @@
 {
     "name": "Buck Boost 3 Click",
-    "description": "The Buck-Boost 3 click is a voltage converter regulator, which is able to provide a regulated voltage of 3.3V or 5V on the output, even when the input voltage drops under 3V.",
+    "description": "The Buck-Boost 3 Click is a voltage converter regulator, which is able to provide a regulated voltage of 3.3V or 5V on the output, even when the input voltage drops under 3V.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","ISL85403"],
+    "hw" : ["Click","ISL85403"],
     "category" : ["Buck-Boost"] 
 }

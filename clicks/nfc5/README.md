@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# NFC 5 click
+# NFC 5 Click
 
 > NFC 5 Click is a compact add-on board designed for advanced NFC applications. This board features the ST25R3918, a multipurpose NFC transceiver from STMicroelectronics. This Click board™ is built to cater to the growing needs of the Internet of Things (IoT) ecosystem, providing robust NFC reader functionalities, passive peer-to-peer communication, and card emulation modes with outstanding analog performance. Its notable features include exceptional read range with minimal power output, advanced noise reduction, and compatibility with ISO14443, ISO15693, and NFC Forum Tag types 1, 2, 4, and 5.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/nfc5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/nfc-5-click)
+[Click Product page](https://www.mikroe.com/nfc-5-click)
 
 ---
 
@@ -76,7 +76,7 @@ err_t nfc5_read_reg ( nfc5_t *ctx, uint8_t reg, uint8_t *data_out );
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -158,7 +158,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

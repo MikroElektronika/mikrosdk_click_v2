@@ -1,6 +1,6 @@
 
 ---
-# Pressure 16 click
+# Pressure 16 Click
 
 Pressure 16 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the WSEN-PADS (2511020213301), a high-precision MEMS-based digital absolute pressure sensor from Würth Elektronik. It has a fully-calibrated 24-bit pressure output to provide accurate atmospheric pressure data with a configurable host interface that supports both I2C and SPI serial communication and with an intelligent on-chip motion-triggered interrupt feature.
 
@@ -8,7 +8,7 @@ Pressure 16 Click is a compact add-on board that contains a board-mount pressure
   <img src="https://download.mikroe.com/images/click_for_ide/pressure_16_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pressure-16-click)
+[Click Product page](https://www.mikroe.com/pressure-16-click)
 
 ---
 
@@ -166,7 +166,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

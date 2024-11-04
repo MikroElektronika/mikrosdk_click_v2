@@ -11,7 +11,7 @@
  * Initalizes SPI or I2C driver and applies default settings.
  *
  * ## Application Task
- * Demonstrates use of DAC 9 click board by changing output values every two seconds.
+ * Demonstrates use of DAC 9 Click board by changing output values every two seconds.
  *
  * @author Stefan Ilic
  *

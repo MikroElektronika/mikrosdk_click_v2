@@ -1,7 +1,7 @@
 
 
 ---
-# One Shot click
+# One Shot Click
 
 One Shot Click is equipped with the monostable multivibrator (also known as a “one-shot” pulse generator) with a programmable pulse width of 1μs to 33.6 seconds. The used LTC6993-2 is part of the TimerBlox® family of versatile silicon timing devices, from Analog Devices.
 
@@ -9,7 +9,7 @@ One Shot Click is equipped with the monostable multivibrator (also known as a �
   <img src="https://download.mikroe.com/images/click_for_ide/oneshot_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/one-shot-click)
+[Click Product page](https://www.mikroe.com/one-shot-click)
 
 ---
 
@@ -57,14 +57,14 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example shows the user how to configure and use the One Shot click. The click has a 
+> This example shows the user how to configure and use the One Shot Click. The Click has a 
   monostable monovibrator which cam generate a pulse of width between 1μs and 33.6 seconds.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> This function initializes and configures the logger and click modules. Resistance data,
+> This function initializes and configures the logger and Click modules. Resistance data,
   acquired from the AD5241, is displayed at the end of the initialization process. 
 
 ```c
@@ -136,7 +136,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

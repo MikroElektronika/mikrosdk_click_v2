@@ -1,14 +1,14 @@
 
 ---
-# Buck 9 click
+# Buck 9 Click
 
-Buck 9 Click is a high-efficiency step-down converter which provides a highly regulated output voltage derived from the connected power source, rated from 4V to 36V. The regulated output voltage can be selected between two values: 3.3V and 5V. These are voltage values ​​that are most commonly used in many embedded designs. Buck 9 click is based around an integrated DC-DC converter, labeled as MP9943. 
+Buck 9 Click is a high-efficiency step-down converter which provides a highly regulated output voltage derived from the connected power source, rated from 4V to 36V. The regulated output voltage can be selected between two values: 3.3V and 5V. These are voltage values ​​that are most commonly used in many embedded designs. Buck 9 Click is based around an integrated DC-DC converter, labeled as MP9943. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/buck9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/buck-9-click)
+[Click Product page](https://www.mikroe.com/buck-9-click)
 
 ---
 
@@ -47,20 +47,20 @@ err_t buck9_init ( buck9_t *ctx, buck9_cfg_t *cfg );
 
 #### Example key functions :
 
-- `buck9_set_device_mode` This function enables and disables output of this click board.
+- `buck9_set_device_mode` This function enables and disables output of this Click board.
 ```c
 void buck9_set_device_mode ( buck9_t *ctx, uint8_t mode);
 ```
 
 ## Example Description
 
-> Demo application shows basic usage of Buck 9 click.
+> Demo application shows basic usage of Buck 9 Click.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Configuring clicks and log objects. Settings the click in the default configuration.
+> Configuring clicks and log objects. Settings the Click in the default configuration.
 
 ```c
 
@@ -139,7 +139,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

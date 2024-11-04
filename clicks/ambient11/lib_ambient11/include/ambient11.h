@@ -188,7 +188,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void ambient11_cfg_setup ( ambient11_cfg_t *cfg );
@@ -199,7 +199,7 @@ void ambient11_cfg_setup ( ambient11_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 AMBIENT11_RETVAL ambient11_init ( ambient11_t *ctx, ambient11_cfg_t *cfg );
 
@@ -208,7 +208,7 @@ AMBIENT11_RETVAL ambient11_init ( ambient11_t *ctx, ambient11_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Ambient11 click.
+ * @description This function executes default configuration for Ambient11 Click.
  */
 void ambient11_default_cfg ( ambient11_t *ctx );
 
@@ -265,6 +265,6 @@ uint8_t ambient11_check_int ( ambient11_t *ctx );
 #endif  // _AMBIENT11_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

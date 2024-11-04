@@ -1,14 +1,14 @@
 
 ---
-# 6DOF IMU click
+# 6DOF IMU Click
 
-<6DOF IMU click carries ST’s LSM6DS33TR 6-axis inertial measurement unit comprising a 3-axis gyroscope and a 3-axis accelerometer. The chip is a highly accurate 6 DOF inertial measurement unit with long-term stable operation over a wide range of temperatures.>
+<6DOF IMU Click carries ST’s LSM6DS33TR 6-axis inertial measurement unit comprising a 3-axis gyroscope and a 3-axis accelerometer. The chip is a highly accurate 6 DOF inertial measurement unit with long-term stable operation over a wide range of temperatures.>
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/6dofimu_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/6dof-imu-click)
+[Click Product page](https://www.mikroe.com/6dof-imu-click)
 
 ---
 
@@ -56,15 +56,15 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example showcases how to initalize and use the 6DOF IMU click. The click contains a 
-  6-axis inertial measurement unit ( accelerometer + gyroscope ). After configuring the click
+> This example showcases how to initalize and use the 6DOF IMU Click. The Click contains a 
+  6-axis inertial measurement unit ( accelerometer + gyroscope ). After configuring the Click
   module for proper use, axis and temperature data will be measured every second. 
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> This function initializes and configures the click and logger modules. In order for the 
+> This function initializes and configures the Click and logger modules. In order for the 
   device to work well, proper data needs to be written to the measurement control
   registers as is done in the default_cfg(...) function. 
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

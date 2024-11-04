@@ -1,14 +1,14 @@
 
 ---
-# GSM 2 click
+# GSM 2 Click
 
-> GSM2 click is a compact quad-band GSM cellular network communication solution, featuring the GSM/GPRS Quectel M95. This module features a full set of options for the cellular networking and communication, such as the network status indication, jamming detection, embedded internet protocols, including TCP/IP, UDP, FTP, PPP, HTTP, SMTP, full GPRS multislot class 12 implementation, it is fully compliant to GSM Phase 2/2+, and more. Data communication speed is rated up to 85.6 kbps for both uplink and downlink connection.
+> GSM2 Click is a compact quad-band GSM cellular network communication solution, featuring the GSM/GPRS Quectel M95. This module features a full set of options for the cellular networking and communication, such as the network status indication, jamming detection, embedded internet protocols, including TCP/IP, UDP, FTP, PPP, HTTP, SMTP, full GPRS multislot class 12 implementation, it is fully compliant to GSM Phase 2/2+, and more. Data communication speed is rated up to 85.6 kbps for both uplink and downlink connection.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/gsm2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gsm-2-click)
+[Click Product page](https://www.mikroe.com/gsm-2-click)
 
 ---
 
@@ -202,7 +202,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

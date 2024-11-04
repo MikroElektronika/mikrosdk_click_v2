@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Smart Buck 2 click
+# Smart Buck 2 Click
 
 > Smart Buck 2 Click is a compact add-on board that contains a high-frequency synchronous step-down DC-DC converter. This board features the TPS62363, a 3A processor supply with remote sense from Texas Instruments. The converter is optimized for battery-powered portable applications for a small solution size. It has an input range of 2.5V to 5.5V, which is common for battery technologies. The converter provides up to 3A peak load current operating at 2.5MHz typical switching frequency.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/smartbuck2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/smart-buck-2-click)
+[Click Product page](https://www.mikroe.com/smart-buck-2-click)
 
 ---
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

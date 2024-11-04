@@ -1,14 +1,14 @@
 
 ---
-# EEG click
+# EEG Click
 
-> EEG Click is a Click board™ that allows monitoring of brain activity. Although not suitable for clinical examination, it is quite sufficient to allow some insight into brain activity. EEG click is equipped with a high-sensitivity circuit which amplifies faint electrical signals from the brain, allowing them to be sampled by a host MCU.
+> EEG Click is a Click board™ that allows monitoring of brain activity. Although not suitable for clinical examination, it is quite sufficient to allow some insight into brain activity. EEG Click is equipped with a high-sensitivity circuit which amplifies faint electrical signals from the brain, allowing them to be sampled by a host MCU.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/eeg_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/eeg-click)
+[Click Product page](https://www.mikroe.com/eeg-click)
 
 ---
 
@@ -87,7 +87,7 @@ void application_init ( void )
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
     log_printf( &logger, " ----------------------------------------------\r\n" );
-    log_printf( &logger, "                ***EEG click***               \r\n" );
+    log_printf( &logger, "                ***EEG Click***               \r\n" );
     log_printf( &logger, "----------------------------------------------\r\n" );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
@@ -136,7 +136,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

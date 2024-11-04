@@ -1,14 +1,14 @@
 
 ---
-# Brushless 5 click
+# Brushless 5 Click
 
-Brushless 5 click is a 3 phase sensorless BLDC motor controller, with a soft-switching feature for reduced motor noise and EMI, and precise BEMF motor sensing, which eliminates the need for Hall-sensors in motor applications.
+Brushless 5 Click is a 3 phase sensorless BLDC motor controller, with a soft-switching feature for reduced motor noise and EMI, and precise BEMF motor sensing, which eliminates the need for Hall-sensors in motor applications.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/brushless5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/brushless-5-click)
+[Click Product page](https://www.mikroe.com/brushless-5-click)
 
 ---
 
@@ -55,8 +55,8 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ## Examples Description
 
 >  This library contains an API for the Brushless5 Click driver.
->  This example showcases how to initialize and use the Brushless 5 click. 
->  The click has a brushless 5 motor driver which controls the work 
+>  This example showcases how to initialize and use the Brushless 5 Click. 
+>  The Click has a brushless 5 motor driver which controls the work 
 >  of the motor through the BLDC terminal. 
 >  In order for this example to work a motor and a power supply are needed.
 
@@ -148,7 +148,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# DTMF click
+# DTMF Click
 
 > DTMF Click is a compact add-on board designed for projects that demand reliable telephony interactions. This board features the CMX865A, a DTMF Codec/FSK Combo multi-standard modem from CML Micro. The CMX865A excels in encoding and decoding DTMF signals, alongside supporting FSK data transmission compatible with V.23, V.21, Bell 103, and Bell 202 standards, making it versatile for various telephony applications. It's particularly adept at enabling dual-mode operations for transmitting and receiving data, ensuring high fidelity in signal processing and resistance to voice falsing. Ideal for security systems, automated response services, and IoT devices requiring telephonic interaction, DTMF Click provides a solution for developers looking to incorporate reliable telecommunication capabilities.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dtmf_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dtmf-click)
+[Click Product page](https://www.mikroe.com/dtmf-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t dtmf_send_message ( dtmf_t *ctx, uint8_t *data_in, uint8_t len );
 
 ## Example Description
 
-> This example demonstrates the use of DTMF click board by showing the communication between the two click boards connected to PBX system.
+> This example demonstrates the use of DTMF Click board by showing the communication between the two Click boards connected to PBX system.
 
 **The demo application is composed of two sections :**
 
@@ -280,7 +280,7 @@ void application_task ( void )
 
 ## Note
 
-> We have used a Yeastar S20 VoIP PBX system for the test, where the click boards are
+> We have used a Yeastar S20 VoIP PBX system for the test, where the Click boards are
 connected to ports 1 and 2 configured as FXS extension with numbers 1000 and 1001 (dialer).
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
@@ -294,7 +294,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

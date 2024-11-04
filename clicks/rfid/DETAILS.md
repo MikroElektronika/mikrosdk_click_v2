@@ -1,14 +1,14 @@
 
 ---
-# RFID click
+# RFID Click
 
-RFid click features CR95HF 13.56 MHz contactless transceiver as well as trace antenna.
+RFid Click features CR95HF 13.56 MHz contactless transceiver as well as trace antenna.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/rfid_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rfid-click)
+[Click Product page](https://www.mikroe.com/rfid-click)
 
 ---
 
@@ -75,7 +75,7 @@ err_t rfid_get_device_id ( rfid_t *ctx, uint8_t *device_id );
 
 ### Application Init
 
-> Initializes the driver, selects the communication interface and performs the click default configuration.
+> Initializes the driver, selects the communication interface and performs the Click default configuration.
 
 ```c
 
@@ -175,7 +175,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

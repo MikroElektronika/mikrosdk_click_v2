@@ -3,8 +3,8 @@
  * @brief UWB 4 Click Example.
  *
  * # Description
- * This example demonstrates the use of UWB 4 click board by showing
- * the UWB ranging between two click boards configured as initiator and responder.
+ * This example demonstrates the use of UWB 4 Click board by showing
+ * the UWB ranging between two Click boards configured as initiator and responder.
  *
  * The demo application is composed of two sections :
  *

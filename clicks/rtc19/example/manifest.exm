@@ -3,6 +3,6 @@
     "description": "RTC 19 Click is a compact add-on board that measures the passage of real-time. This board features the MAX31334, an I2C-configurable real-time clock with an integrated power switch from Analog Devices. The MAX31334 provides information like seconds, minutes, hours, days, months, years, and dates based on a 32.768kHz quartz crystal through an I2C serial interface to transmit time and calendar data to the MCU. It also has an alarm function that outputs an interrupt signal to the MCU when the day of the week, hour, or minute matches with the pre-set time, as well as a programmable square-wave output, event detection input with timestamping, and backup supply.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MAX31334"],
+    "hw" : ["Click","MAX31334"],
     "category" : ["Click Boards > Clock & Timing > RTC"]
 }

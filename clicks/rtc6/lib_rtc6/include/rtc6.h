@@ -321,7 +321,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void rtc6_cfg_setup ( rtc6_cfg_t *cfg );
@@ -332,7 +332,7 @@ void rtc6_cfg_setup ( rtc6_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  *
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 RTC6_RETVAL rtc6_init ( rtc6_t *ctx, rtc6_cfg_t *cfg );
 
@@ -341,7 +341,7 @@ RTC6_RETVAL rtc6_init ( rtc6_t *ctx, rtc6_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Rtc6 click.
+ * @description This function executes default configuration for Rtc6 Click.
  */
 void rtc6_default_cfg ( rtc6_t *ctx, int8_t time_zone, rtc6_time_t *utc_time, rtc6_time_t *alarm_time );
 
@@ -636,6 +636,6 @@ void rtc6_read_unique_id ( rtc6_t *ctx, uint8_t *unique_id );
 #endif  // _RTC6_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group
+/// \}    // End Click Driver group
 /*! @} */
 // ------------------------------------------------------------------------- END

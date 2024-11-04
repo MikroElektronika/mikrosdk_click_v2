@@ -3,13 +3,13 @@
  * \brief Cap Touch Click example
  * 
  * # Description
- * Demo application is used to shows basic controls Cap Touch click.
+ * Demo application is used to shows basic controls Cap Touch Click.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
  * Configuring clicks and log objects.
- * Settings the click in the default configuration.
+ * Settings the Click in the default configuration.
  * 
  * ## Application Task  
  *  Checks for a new touch event. If so, prints the message to USBUART.

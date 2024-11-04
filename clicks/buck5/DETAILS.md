@@ -1,14 +1,14 @@
 
 ---
-# Buck 5 click
+# Buck 5 Click
 
-Buck 5 Click is a high-efficiency buck (step-down) DC/DC converter, which can provide digitally adjusted step-down voltage on its output while delivering a considerable amount of current. Buck 5 click accepts a wide voltage range on its input - from 5V to 30V. 
+Buck 5 Click is a high-efficiency buck (step-down) DC/DC converter, which can provide digitally adjusted step-down voltage on its output while delivering a considerable amount of current. Buck 5 Click accepts a wide voltage range on its input - from 5V to 30V. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/buck5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/buck-5-click)
+[Click Product page](https://www.mikroe.com/buck-5-click)
 
 ---
 
@@ -57,14 +57,14 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 > Buck 5 Click is a high-efficiency buck DC/DC converter, which can provide digitally 
 > adjusted step-down voltage on its output while delivering a considerable amount of current. 
-> Buck 5 click accepts a wide voltage range on its input - from 5V to 30V. The output voltage 
+> Buck 5 Click accepts a wide voltage range on its input - from 5V to 30V. The output voltage 
 > may be adjusted via the SPI interface, in the range from 0.9V to approximately 5.5V.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes driver init, and enables the click board.
+> Initializes driver init, and enables the Click board.
 
 ```c
 
@@ -176,7 +176,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# USB UART ISO click
+# USB UART ISO Click
 
 > USB UART ISO Click is a compact add-on board that offers a completely isolated differential pair of lines of the USB physical interface. This board features the ISOUSB111, a full/low-speed isolated USB repeater from Texas Instruments. It is a USB 2.0-compliant device that supports low-speed (1.5Mbps) and full-speed (12Mbps) signaling, USB On-The-Go (OtG), and Type-C Dual Role Port (DRP). In addition, this Click board™ comes with the FT232R, a USB UART IC from FTDI, making it a complete USB-to-UART isolated solution.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/usbuartiso_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/usb-uart-iso-click)
+[Click Product page](https://www.mikroe.com/usb-uart-iso-click)
 
 ---
 
@@ -65,14 +65,14 @@ err_t usbuartiso_generic_read ( usbuartiso_t *ctx, uint8_t *data_out, uint16_t l
 
 ## Example Description
 
-> This example demonstrates the use of USB UART ISO click board by processing
+> This example demonstrates the use of USB UART ISO Click board by processing
 > the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 void application_init ( void ) 
@@ -110,7 +110,7 @@ void application_init ( void )
 ### Application Task
 
 > Any data which the host PC sends via UART Terminal
-> will be sent over USB to the click board and then it will be read and 
+> will be sent over USB to the Click board and then it will be read and 
 > echoed back by the MCU to the PC where the terminal program will display it.
 > Results are being sent to the UART Terminal, where you can track their changes.
 
@@ -139,7 +139,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

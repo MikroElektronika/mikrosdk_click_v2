@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "CXPI click",
+    "display_name": "CXPI Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -31,11 +31,12 @@
         3893
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.CXPI",
     "subdir_name": "lib_cxpi"
 }
+
 
 
 

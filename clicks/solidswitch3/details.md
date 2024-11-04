@@ -1,6 +1,6 @@
 
 ---
-# SolidSwitch 3 click
+# SolidSwitch 3 Click
 
 > SolidSwitch 3 Click is a compact add-on board that contains a load switching device. This board features the BD8LB600FS-C, an automotive eight-channel low-side switch from Rohm Semiconductor. Every switch is controlled via an SPI interface and includes an N-channel MOSFET that supports a maximum current of 1A. The BD8LB600FS-C also has built-in protection circuits, namely the overcurrent, the thermal shutdown, the open-load detection, and the voltage lock-out circuits. Moreover, this device also possesses a diagnostic output function during abnormal detection.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/solidswitch3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/solidswitch-3-click)
+[Click Product page](https://www.mikroe.com/solidswitch-3-click)
 
 ---
 
@@ -69,13 +69,13 @@ void solidswitch3_reset ( solidswitch3_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of SolidSwitch 3 click board by controlling the output state.
+> This example demonstrates the use of SolidSwitch 3 Click board by controlling the output state.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

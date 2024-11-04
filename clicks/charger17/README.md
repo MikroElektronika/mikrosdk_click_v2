@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Charger 17 click
+# Charger 17 Click
 
 > Charger 17 Click is a compact add-on board that provides a single-cell battery charging solution. This board features the RT9471, a 3A single-cell switching battery charger from Richtek. It is a highly-integrated battery charge and system power-path management device for single-cell Li-Ion and Li-Polymer batteries. The high-efficiency 1.5MHz synchronous switch-mode buck charger achieves up to 92% charge efficiency at 2A with 5V input and 3.8V battery.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/charger17_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/charger-17-click)
+[Click Product page](https://www.mikroe.com/charger-17-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t charger17_read_register ( charger17_t *ctx, uint8_t reg, uint8_t *data_out
 
 ## Example Description
 
-> This example demonstrates the use of Charger 17 click board by enabling battery charging and displaying the charging status.
+> This example demonstrates the use of Charger 17 Click board by enabling battery charging and displaying the charging status.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which enables charging.
+> Initializes the driver and performs the Click default configuration which enables charging.
 
 ```c
 
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

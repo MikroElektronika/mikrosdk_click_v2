@@ -3,8 +3,8 @@
  * @brief ISO 9141 Click Example.
  *
  * # Description
- * This example demonstrates the use of an ISO 9141 click board by showing
- * the communication between the two click boards.
+ * This example demonstrates the use of an ISO 9141 Click board by showing
+ * the communication between the two Click boards.
  *
  * The demo application is composed of two sections :
  * 
@@ -27,7 +27,7 @@
 #define DEMO_APP_TRANSMITTER
 
 // Text message to send in the transmitter application mode
-#define DEMO_TEXT_MESSAGE           "MIKROE - ISO 9141 click board\r\n\0"
+#define DEMO_TEXT_MESSAGE           "MIKROE - ISO 9141 Click board\r\n\0"
 
 static iso9141_t iso9141;
 static log_t logger;

@@ -1,6 +1,6 @@
 
 ---
-# LightRanger 7 click
+# LightRanger 7 Click
 
 > LightRanger 7 Click is a compact add-on board capable of precise distance measurement and motion tracking. This board features the AFBR-S50, a medium-range 3D multipixel Time-of-Flight (ToF) sensor from Broadcom. Besides a VCSEL-based ToF sensor (Laser Class 1 eye safety), optimized to measure various distances working equally well on white, black, colored, and metallic reflective surfaces, this board also includes a 32-bit MCU, RA4M2 group of Renesas MCU with Arm® Cortex®-M33 core, alongside a 4-pin standard CAN connections compatible with Pixhawk®, a popular general-purpose flight controller.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/lightranger7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lightranger-7-click)
+[Click Product page](https://www.mikroe.com/lightranger-7-click)
 
 ---
 
@@ -64,13 +64,13 @@ err_t lightranger7_generic_read ( lightranger7_t *ctx, uint8_t *data_out, uint16
 
 ## Example Description
 
-> This example demonstrates the use of LightRanger 7 click board by processing the incoming data and displaying them on the USB UART.
+> This example demonstrates the use of LightRanger 7 Click board by processing the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -125,7 +125,7 @@ void application_task ( void )
 
 ## Note
 
-> By default, the click board is programmed with the AFBR_S50_Example_RA4M2 firmware.
+> By default, the Click board is programmed with the AFBR_S50_Example_RA4M2 firmware.
 At the beginning this FW returns API version, chip ID, and module version. After that
 it starts the measurements and prints the recent measurement results that consists of:
 > - Time stamp in seconds since the last MCU reset.
@@ -148,7 +148,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

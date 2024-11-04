@@ -3,7 +3,7 @@
  * @brief Thermo K 3 Click example
  *
  * # Description
- * This example demonstrates the use of Thermo K 3 click board by reading and displaying
+ * This example demonstrates the use of Thermo K 3 Click board by reading and displaying
  * the temperature measurements.
  *
  * The demo application is composed of two sections :

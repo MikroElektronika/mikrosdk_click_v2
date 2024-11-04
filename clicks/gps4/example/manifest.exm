@@ -1,8 +1,8 @@
 {
     "name": "GPS 4 Click",
-    "description": "GPS 4 click carries the L70 compact GPS module from Quectel. ",
+    "description": "GPS 4 Click carries the L70 compact GPS module from Quectel. ",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","Quectel's L70"],
+    "hw" : ["Click","Quectel's L70"],
     "category" : ["GPS+GNSS"] 
 }

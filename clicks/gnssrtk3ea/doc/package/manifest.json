@@ -10,7 +10,7 @@
     ],
     "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "GNSS RTK 3 EA click",
+    "display_name": "GNSS RTK 3 EA Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -28,11 +28,12 @@
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.GNSSRTK3EA",
     "subdir_name": "lib_gnssrtk3ea"
 }
+
 
 
 

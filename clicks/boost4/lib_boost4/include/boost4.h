@@ -168,7 +168,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure 
+ * @description This function initializes Click configuration structure 
  * to init state.
  * @note All used pins will be set to unconnected state.
  */
@@ -180,7 +180,7 @@ void boost4_cfg_setup ( boost4_cfg_t *cfg );
  * @param cfg Click configuration structure.
  * 
  * @description This function initializes all necessary pins and peripherals 
- * used for this click.
+ * used for this Click.
  */
 BOOST4_RETVAL boost4_init ( boost4_t *ctx, boost4_cfg_t *cfg );
 
@@ -211,6 +211,6 @@ void boost4_set_out_voltage ( boost4_t *ctx, uint16_t value );
 #endif  // _BOOST4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

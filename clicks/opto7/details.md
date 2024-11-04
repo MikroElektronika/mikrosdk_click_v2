@@ -1,6 +1,6 @@
 
 ---
-# Opto 7 click
+# Opto 7 Click
 
 > Opto 7 Click is a compact add-on board that provides uncomplicated safety isolation from high voltage. This board features two ISOM8710, high-speed single-channel opto-emulators from Texas Instruments. The ISOM8710 opto-emulator has a diode-emulator input and digital output
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/opto7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/opto-7-click)
+[Click Product page](https://www.mikroe.com/opto-7-click)
 
 ---
 
@@ -64,7 +64,7 @@ uint8_t opto7_get_gp2_pin( opto7_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Opto 7 click board by processing
+> This example demonstrates the use of Opto 7 Click board by processing
   the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
@@ -186,7 +186,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

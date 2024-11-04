@@ -1,6 +1,6 @@
 
 ---
-# Timer Relay click
+# Timer Relay Click
 
 > Timer Relay Click is a compact add-on board that allows you to control the load with a timer. This board features the NE5555, a precision timer from Diodes Incorporated. It is a precision timing circuit capable of producing accurate time delays in a monostable mode of operation.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/timerrelay_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/timer-relay-click)
+[Click Product page](https://www.mikroe.com/timer-relay-click)
 
 ---
 
@@ -76,7 +76,7 @@ void timerrelay_activate_trigger ( timerrelay_t *ctx );
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration,
+> Initializes the driver and performs the Click default configuration,
   then setting the ON time to 2 seconds.
 
 ```c
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

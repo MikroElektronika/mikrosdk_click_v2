@@ -361,7 +361,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void fingerprint3_cfg_setup ( fingerprint3_cfg_t *cfg );
@@ -371,7 +371,7 @@ void fingerprint3_cfg_setup ( fingerprint3_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t fingerprint3_init ( fingerprint3_t *ctx, fingerprint3_cfg_t *cfg );
 
@@ -385,7 +385,7 @@ err_t fingerprint3_init ( fingerprint3_t *ctx, fingerprint3_cfg_t *cfg );
  * @returns 0 - OK, Other - error.
  * 
  * @details This function verifies password and sets the address, also stores product info and system parameters
- * in the click object structure. 
+ * in the Click object structure. 
  */
 uint8_t fingerprint3_set_config ( fingerprint3_t *ctx, uint32_t addr, uint32_t pass );
 
@@ -433,7 +433,7 @@ int32_t fingerprint3_generic_read ( fingerprint3_t *ctx, uint8_t *data_buf, uint
  * @returns Confirmation code or Read errors.
  *
  * @details This function sends package and reads response to that package which will be stored
- * in the click object structure. It also checks checksum and header bytes.
+ * in the Click object structure. It also checks checksum and header bytes.
  */
 uint8_t fingerprint3_send_package ( fingerprint3_t *ctx, uint8_t pkg_id, uint8_t *pkg_content, uint16_t pkg_len );
 
@@ -486,7 +486,7 @@ uint8_t fingerprint3_verify_password ( fingerprint3_t *ctx, uint32_t pass );
  *
  * @returns Confirmation code or Read errors.
  *
- * @details This function reads product info and stores data in the click object product_info structure.
+ * @details This function reads product info and stores data in the Click object product_info structure.
  */
 uint8_t fingerprint3_read_product_info ( fingerprint3_t *ctx );
 
@@ -497,7 +497,7 @@ uint8_t fingerprint3_read_product_info ( fingerprint3_t *ctx );
  *
  * @returns Confirmation code or Read errors.
  *
- * @details This function reads system parameter and stores data in the click object system_parameter structure.
+ * @details This function reads system parameter and stores data in the Click object system_parameter structure.
  */
 uint8_t fingerprint3_read_sys_param ( fingerprint3_t *ctx );
 
@@ -689,6 +689,6 @@ uint8_t fingerprint3_search_finger ( fingerprint3_t *ctx, uint8_t char_buffer, u
 #endif  // _FINGERPRINT3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

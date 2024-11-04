@@ -1,6 +1,6 @@
 
 ---
-# PWR Meter 3 90A click
+# PWR Meter 3 90A Click
 
 > PWR Meter 3 Click - 90A is a compact add-on board that measures voltage and current through the connected load. This board features the ACS37800KMACLU-090B3-I2C, an I2C-configurable power monitoring solution from Allegro MicroSystems, which simplifies the addition of power monitoring to many AC/DC powered systems. The ACS37800KMACLU-090B3-I2C’s Hall-effect-based current sensing technology achieves reinforced isolation ratings (4800 VRMS) alongside a reliable ±90A bidirectional current sensing. It also has two LED indicators for the realization of visual detection of some anomalies in operation, such as under/overvoltage and fast overcurrent fault detection.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/pwrmeter3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pwr-meter-3-click)
+[Click Product page](https://www.mikroe.com/pwr-meter-3-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t pwrmeter390a_read_average_rms ( pwrmeter390a_t *ctx, float *v_rms, float *
 
 ## Example Description
 
-> This example demonstrates the use of PWR Meter 3 90A click board by reading and displaying the voltage, current, and power RMS measurements.
+> This example demonstrates the use of PWR Meter 3 90A Click board by reading and displaying the voltage, current, and power RMS measurements.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which sets the DC measurement
+> Initializes the driver and performs the Click default configuration which sets the DC measurement
 and VRMS thresholds to about 28V for overvoltage and about 9.3V for undervoltage flag.
 
 ```c
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

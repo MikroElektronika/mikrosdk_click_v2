@@ -8,10 +8,10 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes click driver.
+ * Initializes Click driver.
  * 
  * ## Application Task  
- * Slowly alternates the click output between two values.
+ * Slowly alternates the Click output between two values.
  * 
  * \author MikroE Team
  *

@@ -1,8 +1,8 @@
 {
     "name": "Cap Extend 3 Click",
-    "description": "Cap Extend 3 click features four capacitive sensor pads integrated on the PCB, that can sense touch through a variety of different materials.",
+    "description": "Cap Extend 3 Click features four capacitive sensor pads integrated on the PCB, that can sense touch through a variety of different materials.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MTCH105"],
+    "hw" : ["Click","MTCH105"],
     "category" : ["Capacitive"] 
 }

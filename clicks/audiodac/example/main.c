@@ -3,13 +3,13 @@
  * @brief Audio DAC Click example
  *
  * # Description
- * This example demonstrates the use of Audio DAC click board by controling the volume
+ * This example demonstrates the use of Audio DAC Click board by controling the volume
  * level of both output channels.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Checks if the auto mute flag is set and then changes the volume level of both output channels

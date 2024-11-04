@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# 4G LTE 2 Data click
+# 4G LTE 2 Data Click
 
 > 4G LTE 2 Click is a compact add-on board representing a secure-cloud multi-band solution offering universal connectivity and reliable performance. This board features the LARA-R6001D, the world’s smallest LTE Cat 1 module with global coverage and a built-in MQTT client from u-blox, representing a data-only solution. Equipped with familiar AT commands set over the UART interface, USB interface, and Network and Status indicators, the LARA-R6001D also has a comprehensive certification scheme, multi-band and multi-mode capabilities providing excellent flexibility, except for the support of voice/audio application.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/4glte2data_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/4g-lte-2-click-data)
+[Click Product page](https://www.mikroe.com/4g-lte-2-click-data)
 
 ---
 
@@ -197,7 +197,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

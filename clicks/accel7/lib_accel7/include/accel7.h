@@ -286,7 +286,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void accel7_cfg_setup ( accel7_cfg_t *cfg );
@@ -297,7 +297,7 @@ void accel7_cfg_setup ( accel7_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ACCEL7_RETVAL accel7_init ( accel7_t *ctx, accel7_cfg_t *cfg );
 
@@ -308,7 +308,7 @@ ACCEL7_RETVAL accel7_init ( accel7_t *ctx, accel7_cfg_t *cfg );
  * @param resolution Resolution variable.
  * @param range Range variable.
  * 
- * @description This function executes default configuration for Accel7 click.
+ * @description This function executes default configuration for Accel7 Click.
  */
 void accel7_default_cfg ( accel7_t *ctx, uint8_t resolution, uint8_t range );
 
@@ -394,6 +394,6 @@ uint8_t accel7_get_interrupt_state ( accel7_t *ctx );
 #endif  // _ACCEL7_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

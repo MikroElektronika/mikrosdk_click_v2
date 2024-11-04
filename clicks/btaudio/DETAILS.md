@@ -1,6 +1,6 @@
 
 ---
-# BT Audio click
+# BT Audio Click
 
 If you are getting tired of all those cables you need just to listen to your favorite song over speakers.
 
@@ -8,7 +8,7 @@ If you are getting tired of all those cables you need just to listen to your fav
   <img src="https://download.mikroe.com/images/click_for_ide/btaudio_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/bt-audio-click)
+[Click Product page](https://www.mikroe.com/bt-audio-click)
 
 ---
 
@@ -60,7 +60,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes the driver and configures the click board.
+> Initializes the driver and configures the Click board.
 
 ```c
 
@@ -98,7 +98,7 @@ void application_init ( void )
     btaudio_process( RESPONSE_NULL );
     
     log_printf( &logger, "Set device name\r\n" );
-    btaudio_set_device_name( &btaudio, "BT Audio click" );
+    btaudio_set_device_name( &btaudio, "BT Audio Click" );
     btaudio_reset( &btaudio );
     btaudio_process( RESPONSE_AOK );
     
@@ -125,8 +125,8 @@ void application_task ( void )
 ## Note
 
 > We have used the Serial Bluetooth Terminal smartphone application for the test. 
-> A smartphone and the click board must be paired in order to exchange messages
-> with each other. So make sure to pair your device with the click board and
+> A smartphone and the Click board must be paired in order to exchange messages
+> with each other. So make sure to pair your device with the Click board and
 > connect to it using the Serial Bluetooth Terminal application, then you will be able 
 > to send commands listed below.
 
@@ -141,7 +141,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

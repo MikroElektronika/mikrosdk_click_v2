@@ -216,7 +216,7 @@ typedef enum
 
 /**
  * @brief BLE TINY configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #bletiny_cfg_t object definition for detailed explanation.
@@ -228,7 +228,7 @@ void bletiny_cfg_setup ( bletiny_cfg_t *cfg );
 /**
  * @brief BLE TINY initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #bletiny_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -244,7 +244,7 @@ err_t bletiny_init ( bletiny_t *ctx, bletiny_cfg_t *cfg );
 /**
  * @brief BLE TINY default configuration function.
  * @details This function executes a default configuration of BLE TINY
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #bletiny_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -288,7 +288,7 @@ err_t bletiny_generic_read ( bletiny_t *ctx, char *data_buf, uint16_t max_len );
 
 /**
  * @brief Send command function.
- * @details This function sends the specified command to the click module.
+ * @details This function sends the specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #bletiny_t object definition for detailed explanation.
  * @param[in] cmd : Command variable.

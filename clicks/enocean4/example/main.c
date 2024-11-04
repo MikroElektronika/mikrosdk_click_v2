@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and configures the click board.
+ * Initializes the driver and configures the Click board.
  * 
  * ## Application Task  
  * In the receiver mode, it waits for a telegram, then replies to it with the certain message.

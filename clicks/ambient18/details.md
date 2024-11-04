@@ -1,6 +1,6 @@
 
 ---
-# Ambient 18 click
+# Ambient 18 Click
 
 > Ambient 18 Click is a compact add-on board used to sense the amount of the present ambient light. This board features the BH1680FVC, an analog current-output ambient light sensor from Rohm Semiconductor. The BH1680FVC can detect a wide range of illuminance up to 10klx and provides excellent responsivity close to the human eyes' response. Besides, it is also characterized by low sensitivity variation across various light sources, a built-in shutdown function, and the ability to process the output signal in analog or digital form. This Click board™ is the most suitable for obtaining ambient light data for adjusting brightness in applications that require power saving and better visibility.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ambient18_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ambient-18-click)
+[Click Product page](https://www.mikroe.com/ambient-18-click)
 
 ---
 
@@ -64,7 +64,7 @@ int32_t ambient18_voltage_to_lux ( ambient18_t *ctx, float voltage );
 
 ## Example Description
 
-> This example demonstrates the use of Ambient 18 click board by measuring and displaying the illuminance value in Lux.
+> This example demonstrates the use of Ambient 18 Click board by measuring and displaying the illuminance value in Lux.
 
 **The demo application is composed of two sections :**
 
@@ -141,7 +141,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

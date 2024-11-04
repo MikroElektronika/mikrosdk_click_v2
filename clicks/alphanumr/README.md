@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# AlphaNum R click
+# AlphaNum R Click
 
-AlphaNum click is a simple solution for adding 14-segment alphanumeric display to your device. The board carries two TLC5926 16-bit Constant-Current LED sink Drivers
+AlphaNum Click is a simple solution for adding 14-segment alphanumeric display to your device. The board carries two TLC5926 16-bit Constant-Current LED sink Drivers
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/alphanumr_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/alphanum-r-click)
+[Click Product page](https://www.mikroe.com/alphanum-r-click)
 
 ---
 
@@ -65,13 +65,13 @@ void alphanumr_write_number ( alphanumr_t *ctx, uint8_t left_char, uint8_t right
 
 ## Example Description
 
-> This example showcases the initialization and configuration of the logger and click modules and shows how to display characters and numbers on both LED segments of the click.
+> This example showcases the initialization and configuration of the logger and Click modules and shows how to display characters and numbers on both LED segments of the Click.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> This function initializes and configures the logger and click modules.
+> This function initializes and configures the logger and Click modules.
 
 ```c
 
@@ -142,7 +142,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

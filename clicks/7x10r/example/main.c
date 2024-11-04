@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Configuring the click board.
+ * Configuring the Click board.
  *
  * ## Application Task
  * Draws characters, numbers, and pixels to the display.

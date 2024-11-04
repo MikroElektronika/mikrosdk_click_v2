@@ -3,7 +3,7 @@
  * @brief ECG 7 Click Example.
  *
  * # Description
- * This example demonstrates the use of ECG 7 click board by reading and displaying
+ * This example demonstrates the use of ECG 7 Click board by reading and displaying
  * the voltage from VOUT BUFF which can be visualized on the SerialPlot application.
  *
  * The demo application is composed of two sections :

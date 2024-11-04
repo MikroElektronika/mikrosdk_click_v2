@@ -9,7 +9,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes GPIO, PWM and logger and enables the click board.
+ * Initializes GPIO, PWM and logger and enables the Click board.
  *
  * ## Application Task
  * This is a example which demonstrates the use of DC Motor 5 Click board.

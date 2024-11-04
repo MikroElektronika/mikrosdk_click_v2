@@ -4,7 +4,7 @@
  *
  * # Description
  * This demo app shows the basic capabilities of Waveform 3
- * click board. First, the sinusoidal wave is incremented
+ * Click board. First, the sinusoidal wave is incremented
  * to targeted frequency for visually pleasing introduction
  * after which it changes between 4 modes of output.
  *
@@ -24,7 +24,7 @@
  * outputs respectively.
  *
  * *note:*
- * Waveform 3 click might not provide a high enough peak to peak signal on higher frequencies.
+ * Waveform 3 Click might not provide a high enough peak to peak signal on higher frequencies.
  * The user can freely implement custom buffer for the output stage.
  * Special thanks to my esteemed co-worker Nenad Filipovic for support during firmware development.
  *

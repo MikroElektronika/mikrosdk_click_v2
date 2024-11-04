@@ -3,6 +3,6 @@
     "description": "Charger 3 Click is a compact add-on board that represents a standalone battery charger with thermal regulation. This board features the TP4056, a complete constant-current/constant-voltage linear charger for single-cell lithium-ion batteries from NanJing Top Power ASIC Corp.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TP4056"],
+    "hw" : ["Click","TP4056"],
     "category" : ["Battery charger"]
 }

@@ -171,7 +171,7 @@ typedef enum
 
 /**
  * @brief CXPI configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #cxpi_cfg_t object definition for detailed explanation.
@@ -183,7 +183,7 @@ void cxpi_cfg_setup ( cxpi_cfg_t *cfg );
 /**
  * @brief CXPI initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #cxpi_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -198,7 +198,7 @@ err_t cxpi_init ( cxpi_t *ctx, cxpi_cfg_t *cfg );
 /**
  * @brief CXPI default configuration function.
  * @details This function executes a default configuration of CXPI
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #cxpi_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -279,7 +279,7 @@ void cxpi_send_command ( cxpi_t *ctx, char *command );
 /**
  * @brief Set NSLP pin state function.
  * @details This function set state of the NSLP ( CS ) pin
- * of CXPI Transceiver for Automotive on CXPI click board.
+ * of CXPI Transceiver for Automotive on CXPI Click board.
  * @param[out] ctx : Click context object.
  * See #cxpi_t object definition for detailed explanation.
  * @param[in] pin_state : Disable or Enable. 
@@ -290,7 +290,7 @@ void cxpi_set_nslp_pin_state ( cxpi_t *ctx, uint8_t pin_state );
 /**
  * @brief Set PWM pin state function.
  * @details This function set state of the PWM ( CLK ) pin
- * of CXPI Transceiver for Automotive on CXPI click board.
+ * of CXPI Transceiver for Automotive on CXPI Click board.
  * @param[out] ctx : Click context object.
  * See #cxpi_t object definition for detailed explanation.
  * @param[in] pin_state : Disable or Enable.
@@ -303,7 +303,7 @@ void cxpi_set_pwm_pin_state ( cxpi_t *ctx, uint8_t pin_state );
  * @brief Set through mode function.
  * @details This function set through mode does not process Coding/Decoding
  * and it only drives signals from TXD to BUS and from BUS to RXD directly
- * of CXPI Transceiver for Automotive on CXPI click board.
+ * of CXPI Transceiver for Automotive on CXPI Click board.
  * @param[in] ctx : Click context object.
  * See #cxpi_t object definition for detailed explanation.
  * @return Nothing.

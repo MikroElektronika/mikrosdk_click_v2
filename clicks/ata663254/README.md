@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# ATA663254 click
+# ATA663254 Click
 
-ATA663254 click is a fully integrated LIN transceiver device with an integrated 5V LDO voltage regulator.
+ATA663254 Click is a fully integrated LIN transceiver device with an integrated 5V LDO voltage regulator.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ata663254_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ata663254-click)
+[Click Product page](https://www.mikroe.com/ata663254-click)
 
 ---
 
@@ -64,7 +64,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes the click driver and enables the click board.
+> Initializes the Click driver and enables the Click board.
 
 ```c
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](http://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](http://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

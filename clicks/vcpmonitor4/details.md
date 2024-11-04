@@ -1,6 +1,6 @@
 
 ---
-# VCP Monitor 4 click
+# VCP Monitor 4 Click
 
 > VCP Monitor 4 Click is a compact add-on board that represents a high-precision power monitoring system. This board features the INA239, ultra-precise digital power monitor with a 16-bit delta-sigma ADC specifically designed for current-sensing applications from Texas Instruments.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/vcp_monitor_4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/vcp-monitor-4-click)
+[Click Product page](https://www.mikroe.com/vcp-monitor-4-click)
 
 ---
 
@@ -170,7 +170,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

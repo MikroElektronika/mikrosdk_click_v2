@@ -3,6 +3,6 @@
     "description": "MUX 5 Click is a compact add-on board that contains a precise multiplexing solution. This board features the MAX14661, a serially controlled, dual-channel analog multiplexer from Analog Devices, allowing any of the 16 pins to be connected to either common pin simultaneously in any combination. The MAX14661 features Beyond-the-Rails™ capability that allows ±5.5V signals to be passed with any supply configuration alongside a configurable host interface that supports SPI and I2C serial communications. Both modes provide individual control of each independent switch so that any combination of switches can be applied.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MAX14661ETI"],
+    "hw" : ["Click","MAX14661ETI"],
     "category" : ["Click Boards > Mixed signal > DAC"]
 }

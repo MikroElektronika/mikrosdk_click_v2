@@ -3,7 +3,7 @@
  * \brief Dac7 Click example
  * 
  * # Description
- * DAC 7 click carries the AD5624R 12-bit buffered Digital-to-Analog Converter 
+ * DAC 7 Click carries the AD5624R 12-bit buffered Digital-to-Analog Converter 
  * that converts digital value to the corresponding voltage level 
  * using external voltage reference.
  *

@@ -350,7 +350,7 @@ typedef enum
 
 /**
  * @brief 3D Hall 4 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #c3dhall4_cfg_t object definition for detailed explanation.
@@ -362,7 +362,7 @@ void c3dhall4_cfg_setup ( c3dhall4_cfg_t *cfg );
 /**
  * @brief 3D Hall 4 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #c3dhall4_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -377,7 +377,7 @@ err_t c3dhall4_init ( c3dhall4_t *ctx, c3dhall4_cfg_t *cfg );
 /**
  * @brief 3D Hall 4 default configuration function.
  * @details This function executes a default configuration of 3D Hall 4
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #c3dhall4_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

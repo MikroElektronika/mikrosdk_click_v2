@@ -1,8 +1,8 @@
 {
     "name": "ADC Click",
-    "description": "ADC Click carries the MCP3204 12-bit Analog-to-Digital converter. The click is designed to run on 3.3V by default.",
+    "description": "ADC Click carries the MCP3204 12-bit Analog-to-Digital converter. The Click is designed to run on 3.3V by default.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MCP3204"],
+    "hw" : ["Click","MCP3204"],
     "category" : ["ADC"] 
 }

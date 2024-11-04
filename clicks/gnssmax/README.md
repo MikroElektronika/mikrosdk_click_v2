@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# GNSS MAX click
+# GNSS MAX Click
 
 GNSS MAX Click is a compact add-on board that provides fast positioning capability. This board features the MAX-M10S, an ultra-low-power GNSS receiver for high-performance asset-tracking from u-blox. The MAX-M10S supports the concurrent reception of four GNSS (GPS, GLONASS, Galileo, and BeiDou), which maximizes the position availability, particularly under challenging conditions such as in deep urban canyons. It is built on the u-blox M10 GNSS platform, which provides exceptional sensitivity and acquisition times for all L1 GNSS systems. It also comes with a configurable host interface, and advanced jamming and spoofing detection.
 
@@ -9,7 +9,7 @@ GNSS MAX Click is a compact add-on board that provides fast positioning capabili
   <img src="https://download.mikroe.com/images/click_for_ide/gnssmax_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gnss-max-click)
+[Click Product page](https://www.mikroe.com/gnss-max-click)
 
 ---
 
@@ -191,7 +191,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

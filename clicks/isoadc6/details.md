@@ -1,6 +1,6 @@
 
 ---
-# ISO ADC 6 click
+# ISO ADC 6 Click
 
 > ISO ADC 6 Click is a compact add-on board that contains an eight-channel isolated ADC. This board features the AD7124-8, an 8-channel, low noise, low power, 24-bit, sigma-delta ADC from Analog Devices. The ADC has a programmable gain array (PGA) that allows gains of 1, 2, 4, 8, 16, 32, 64, and 128. Additionally, the ADC contains a 2.5V reference, which can be used with reference buffers, along with the externally applied references. The host MCU is isolated from the ADC by the ADuM341E, a 5kVrms quad digital isolator from Analog Devices.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/isoadc6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/iso-adc-6-click)
+[Click Product page](https://www.mikroe.com/iso-adc-6-click)
 
 ---
 
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

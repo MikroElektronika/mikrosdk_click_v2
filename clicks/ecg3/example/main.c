@@ -3,7 +3,7 @@
  * \brief Ecg3 Click example
  * 
  * # Description
- * This click is made for ECG and HR, 
+ * This Click is made for ECG and HR, 
  * equipped with an ultra-low power, single channel, integrated biopotential AFE, 
  * with the ECG and R-to-R detection functionality. 
  *

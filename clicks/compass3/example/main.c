@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initalizes I2C driver and click driver, performs check, applies default 
+ * Initalizes I2C driver and Click driver, performs check, applies default 
  * setup and writes an initial log.
  * 
  * ## Application Task  
@@ -65,7 +65,7 @@ void application_init ( void )
     if ( test_val == COMPASS3_DEVICE_ID_NUM )
     {
         log_printf( &logger, "--------------------\r\n" );
-        log_printf( &logger, "   Compass 3 click  \r\n" );
+        log_printf( &logger, "   Compass 3 Click  \r\n" );
         log_printf( &logger, "--------------------\r\n" );
     }
     else

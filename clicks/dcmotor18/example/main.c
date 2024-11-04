@@ -3,7 +3,7 @@
  * @brief DCMotor18 Click example
  *
  * # Description
- * This example application showcases ability of click 
+ * This example application showcases ability of Click 
  * board to control DC motors using PWM modulation in 
  * both directions and different speeds.
  *

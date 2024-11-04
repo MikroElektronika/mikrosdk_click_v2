@@ -8,12 +8,12 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver, enables the click board and makes an initial log.
+ * Initializes the driver, enables the Click board and makes an initial log.
  * 
  * ## Application Task  
- * In this example, we read the device ID register of the connected click boards.
- * Channel 0 : 6DOF IMU 12 click [slave address: 0x68; reg: 0x00; id val.: 0x24],
- * Channel 1 : Compass 3 click   [slave address: 0x30; reg: 0x2F; id val.: 0x0C].
+ * In this example, we read the device ID register of the connected Click boards.
+ * Channel 0 : 6DOF IMU 12 Click [slave address: 0x68; reg: 0x00; id val.: 0x24],
+ * Channel 1 : Compass 3 Click   [slave address: 0x30; reg: 0x2F; id val.: 0x0C].
  * All data logs write on USB UART changes every 2 sec.
  * 
  * \author MikroE Team
@@ -67,28 +67,28 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    // CH 0 - 6DOF IMU 12 click
+    // CH 0 - 6DOF IMU 12 Click
     i2cmux4_set_channel( &i2cmux4, I2CMUX4_SEL_CH_0, 0x68 );
     Delay_ms ( 100 );
 
     i2cmux4_rmt_read_bytes( &i2cmux4, 0x00, &rx_data, 1 );
     Delay_ms ( 100 );
 
-    log_printf( &logger, "    6DOF IMU 12 click   \r\n" );
+    log_printf( &logger, "    6DOF IMU 12 Click   \r\n" );
     log_printf( &logger, "- - - - - - - - - - - - \r\n" );
     log_printf( &logger, "       ID = 0x%.2X  \r\n", ( uint16_t ) rx_data );
     log_printf( &logger, "----------------------- \r\n" );
     Delay_ms ( 1000 );
     
     
-    // CH 1 - Compass 3 click
+    // CH 1 - Compass 3 Click
     i2cmux4_set_channel( &i2cmux4, I2CMUX4_SEL_CH_1, 0x30 );
     Delay_ms ( 100 );
 
     i2cmux4_rmt_read_bytes( &i2cmux4, 0x2F, &rx_data, 1 );
     Delay_ms ( 100 );
 
-    log_printf( &logger, "      Compass 3 click      \r\n" );
+    log_printf( &logger, "      Compass 3 Click      \r\n" );
     log_printf( &logger, "- - - - - - - - - - - - \r\n" );
     log_printf( &logger, "       ID = 0x%.2X \r\n ", ( uint16_t ) rx_data );
     log_printf( &logger, "----------------------- \r\n" );

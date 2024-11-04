@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# RTC 18 click
+# RTC 18 Click
 
 > RTC 18 Click is a compact add-on board that accurately keeps the time of a day. This board features the RV-3032-C7, an I2C-configurable real-time clock module that incorporates an integrated CMOS circuit and an XTAL from Micro Crystal AG. The RV-3032-C7 is a temperature compensated RTC with premium accuracy (0.22 sec/day) and extremely low power consumption, allowing it to be used with a single button cell battery for an extended period. It can measure temperature with a typical accuracy of ±1°C and a resolution of 0.0625°C/step with a programmable alarm on top and bottom temperature limits. It features standard RTC functions with automatic leap year correction, and standard interrupt for Periodic Countdown Timer and Periodic Time Update (seconds, minutes), date/hour/minute alarm, and an external event.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/rtc18_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rtc-18-click)
+[Click Product page](https://www.mikroe.com/rtc-18-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t rtc18_read_temperature ( rtc18_t *ctx, float *temperature );
 
 ## Example Description
 
-> This example demonstrates the use of RTC 18 click board by reading and displaying the time and date values as well as the temperature measurements in Celsius.
+> This example demonstrates the use of RTC 18 Click board by reading and displaying the time and date values as well as the temperature measurements in Celsius.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and logger and performs the click default configuration which enables the periodic interrupt on seconds count-up, and sets the starting time and date.
+> Initializes the driver and logger and performs the Click default configuration which enables the periodic interrupt on seconds count-up, and sets the starting time and date.
 
 ```c
 
@@ -181,7 +181,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

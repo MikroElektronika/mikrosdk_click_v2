@@ -349,7 +349,7 @@ typedef enum
 
 /**
  * @brief NFC 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #nfc2_cfg_t object definition for detailed explanation.
@@ -361,7 +361,7 @@ void nfc2_cfg_setup ( nfc2_cfg_t *cfg );
 /**
  * @brief NFC 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -376,7 +376,7 @@ err_t nfc2_init ( nfc2_t *ctx, nfc2_cfg_t *cfg );
 /**
  * @brief NFC 2 default configuration function.
  * @details This function executes a default configuration of NFC 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
  * @param[out] ctrl_pck : Pointer to the memory location of structure.
@@ -421,7 +421,7 @@ err_t nfc2_generic_read ( nfc2_t *ctx, uint8_t *p_rx_h_data, uint8_t *p_rx_p_dat
  * @details The function hw reset 
  * @param[out] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
- * the PN7150 High performance NFC controller on the NFC 2 click board.
+ * the PN7150 High performance NFC controller on the NFC 2 Click board.
  * @return Nothing.
  */
 void nfc2_hw_reset( nfc2_t *ctx );
@@ -429,7 +429,7 @@ void nfc2_hw_reset( nfc2_t *ctx );
 /**
  * @brief Get data function.
  * @details The function read a sequential data starting
- * of the PN7150 High performance NFC controller on the NFC 2 click board.
+ * of the PN7150 High performance NFC controller on the NFC 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
  * @param[out] p_rx_data : Pointer to the memory location where data be stored.
@@ -440,7 +440,7 @@ uint8_t nfc2_get_data ( nfc2_t *ctx, uint8_t *p_rx_data );
 /**
  * @brief Read control packet data function.
  * @details The function read control packet data
- * of the PN7150 High performance NFC controller on the NFC 2 click board.
+ * of the PN7150 High performance NFC controller on the NFC 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
  * @param[in] ctrl_pck : Pointer to the memory location of structure.
@@ -451,7 +451,7 @@ void nfc2_read_ctrl_packet_data ( nfc2_t *ctx, control_packet_t *ctrl_pck );
 /**
  * @brief Write control packet data function.
  * @details The function write control packet data
- * to the PN7150 High performance NFC controller on the NFC 2 click board.
+ * to the PN7150 High performance NFC controller on the NFC 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
  * @param[in] ctrl_pck : Structure where data be stored.
@@ -463,7 +463,7 @@ void nfc2_write_ctrl_packet_data ( nfc2_t *ctx, control_packet_t ctrl_pck );
  * @brief Check IRQ ststus function.
  * @details The function check interrupt state and 
  * return state of the INT pin
- * of the PN7150 High performance NFC controller on the NFC 2 click board.
+ * of the PN7150 High performance NFC controller on the NFC 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
  * @return @li @c  0 - No active,
@@ -474,7 +474,7 @@ uint8_t nfc2_check_irq ( nfc2_t *ctx );
 /**
  * @brief Core reset command function.
  * @details The function set core reset command
- * to the PN7150 High performance NFC controller on the NFC 2 click board.
+ * to the PN7150 High performance NFC controller on the NFC 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
  * @return Nothing.
@@ -484,7 +484,7 @@ void nfc2_cmd_core_reset ( nfc2_t *ctx );
 /**
  * @brief Core init command function.
  * @details The function set core init command
- * to the PN7150 High performance NFC controller on the NFC 2 click board.
+ * to the PN7150 High performance NFC controller on the NFC 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
  * @return Nothing.
@@ -494,7 +494,7 @@ void nfc2_cmd_core_init ( nfc2_t *ctx );
 /**
  * @brief Disable standby mode command function.
  * @details The function set disable standby mode command
- * to the PN7150 High performance NFC controller on the NFC 2 click board.
+ * to the PN7150 High performance NFC controller on the NFC 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
  */
@@ -503,7 +503,7 @@ void nfc2_cmd_disable_standby_mode ( nfc2_t *ctx );
 /**
  * @brief Antenna test function.
  * @details The function set antenna test
- * to the PN7150 High performance NFC controller on the NFC 2 click board.
+ * to the PN7150 High performance NFC controller on the NFC 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
  * @param[in] sel_ant : Presence of the antenna components.
@@ -514,7 +514,7 @@ void nfc2_cmd_antenna_test ( nfc2_t *ctx, uint8_t sel_ant );
 /**
  * @brief NFC test procedure command function.
  * @details The function set test procedure command
- * to the PN7150 High performance NFC controller on the NFC 2 click board.
+ * to the PN7150 High performance NFC controller on the NFC 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
  * @return Nothing.
@@ -524,7 +524,7 @@ void nfc2_cmd_test_procedure ( nfc2_t *ctx );
 /**
  * @brief Core reset command function.
  * @details The function set core reset command
- * to the PN7150 High performance NFC controller on the NFC 2 click board.
+ * to the PN7150 High performance NFC controller on the NFC 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
  * @return Nothing.
@@ -534,7 +534,7 @@ void nfc2_core_reset ( nfc2_t *ctx );
 /**
  * @brief Core initialization command function.
  * @details The function set core initialization command
- * to the PN7150 High performance NFC controller on the NFC 2 click board.
+ * to the PN7150 High performance NFC controller on the NFC 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
  * @return Nothing.
@@ -544,7 +544,7 @@ void nfc2_init_core ( nfc2_t *ctx );
 /**
  * @brief Set default configuration function.
  * @details The function set default configuration
- * of the PN7150 High performance NFC controller on the NFC 2 click board.
+ * of the PN7150 High performance NFC controller on the NFC 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
  * @return Nothing.
@@ -554,7 +554,7 @@ void nfc2_core_set_default_config ( nfc2_t *ctx );
 /**
  * @brief Set protocol configuration function.
  * @details The function set protocol configuration
- * of the PN7150 High performance NFC controller on the NFC 2 click board.
+ * of the PN7150 High performance NFC controller on the NFC 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
  * @return Nothing.
@@ -564,7 +564,7 @@ void nfc2_core_set_protocol_config ( nfc2_t *ctx );
 /**
  * @brief Start discovery command function.
  * @details The function set start discovery command
- * of the PN7150 High performance NFC controller on the NFC 2 click board.
+ * of the PN7150 High performance NFC controller on the NFC 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
  * @return Nothing.
@@ -574,7 +574,7 @@ void nfc2_cmd_start_discovery ( nfc2_t *ctx );
 /**
  * @brief Activate remote mifare card command function.
  * @details The function set activate remote mifare card command
- * of the PN7150 High performance NFC controller on the NFC 2 click board.
+ * of the PN7150 High performance NFC controller on the NFC 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
  * @return Nothing.
@@ -584,7 +584,7 @@ void nfc2_activate_rmt_mifare_card ( nfc2_t *ctx );
 /**
  * @brief Authenticate sector command function.
  * @details The function set authenticate sector command
- * of the PN7150 High performance NFC controller on the NFC 2 click board.
+ * of the PN7150 High performance NFC controller on the NFC 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
  * @param[in] sel_sect_addr : Sector authenticate address.
@@ -595,7 +595,7 @@ void nfc2_cmd_authenticate_sector ( nfc2_t *ctx, uint8_t sel_sect_addr );
 /**
  * @brief Card disconnected command function.
  * @details The function set card disconnected command
- * of the PN7150 High performance NFC controller on the NFC 2 click board.
+ * of the PN7150 High performance NFC controller on the NFC 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nfc2_t object definition for detailed explanation.
  * @return Nothing.

@@ -187,7 +187,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c2x20wamp_cfg_setup ( c2x20wamp_cfg_t *cfg );
@@ -197,7 +197,7 @@ void c2x20wamp_cfg_setup ( c2x20wamp_cfg_t *cfg );
  * @param c2x20wamp Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 C2X20WAMP_RETVAL c2x20wamp_init ( c2x20wamp_t *ctx, c2x20wamp_cfg_t *cfg );
 
@@ -315,6 +315,6 @@ void c2x20wamp_classic_pwm_modulation( c2x20wamp_t *ctx );
 #endif  // C2X20WAMP_H
 
 /** \} */ // End public_function group
-/** \} */ // End click Driver group  
+/** \} */ // End Click Driver group  
 
 // ------------------------------------------------------------------------ END

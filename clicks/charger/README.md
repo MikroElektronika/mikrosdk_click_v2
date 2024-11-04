@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Charger click
+# Charger Click
 
 > Charger Click is a compact add-on board providing a standalone battery charger and monitor. This board features Microchip's MCP73831, a miniature single-cell, fully integrated Li-Ion, Li-Polymer charge management controller. The charge voltage of the MCP73831 is set to 4.20V, and a charge current to 250mA with an external resistor. In addition, this Click board™ features the DS2438, a smart battery monitor that monitors the total amount of current going into and out of the battery.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/charger_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/charger-click)
+[Click Product page](https://www.mikroe.com/charger-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t charger_read_current ( charger_t *ctx, float *current );
 
 ## Example Description
 
-> This example demonstrates the use of Charger click board by monitoring the battery charging status.
+> This example demonstrates the use of Charger Click board by monitoring the battery charging status.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver, performs the click default configuration, calibrates the zero current charging offset, and resets the elapsed time counter.
+> Initializes the driver, performs the Click default configuration, calibrates the zero current charging offset, and resets the elapsed time counter.
 
 ```c
 
@@ -184,7 +184,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

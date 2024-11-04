@@ -3,14 +3,14 @@
  * \brief TempLog6 Click example
  * 
  * # Description
- * The example starts off with the initialization and configuration of the click and logger
+ * The example starts off with the initialization and configuration of the Click and logger
  * modules, tests the communication channel and reads and displays local and remote temperature
  * values every second.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes and configures the click and logger modules and tests the communication for errors.
+ * Initializes and configures the Click and logger modules and tests the communication for errors.
  * 
  * ## Application Task  
  * Reads and displays local and remote temperature values every second.

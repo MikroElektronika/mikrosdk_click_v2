@@ -1,6 +1,6 @@
 
 ---
-# Stepper 8 click
+# Stepper 8 Click
 
 > Stepper 8 Click is a motor control add on board based on TC78H670FTG from Toshiba, a clock-in and serial controlled Bipolar Stepping Motor Driver which can drive a 128 micro-stepping motor with a power supply ranging from 2.5V to 16V for wide range of applications includes USB-powered, battery-powered, and standard 9-12V system devices. A perfect solution for driving stepper motors in security cameras, portable printers, handheld scanners, pico-projectors, smartphones and many more.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/stepper8_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/stepper-8-click)
+[Click Product page](https://www.mikroe.com/stepper-8-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t stepper8_drive_motor ( stepper8_t *ctx, uint32_t steps, uint8_t speed );
 
 ## Example Description
 
-> This example demonstrates the use of the Stepper 8 click board by driving the motor in both directions for a desired number of steps.
+> This example demonstrates the use of the Stepper 8 Click board by driving the motor in both directions for a desired number of steps.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -161,7 +161,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

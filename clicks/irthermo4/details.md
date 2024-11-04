@@ -1,6 +1,6 @@
 
 ---
-# IR Thermo 4 click
+# IR Thermo 4 Click
 
 > IR Thermo 4 Click is a compact add-on board for precise remote sensing applications. This board features the TPiS 1T 1386 L5.5 H thermopile sensor from Excelitas, known for its high accuracy and narrow 5° field of view (FoV). This sensor, part of the CaliPile™ family, features factory-calibrated data stored in EEPROM, ensuring reliable and accurate performance. The sensor also comes in an isothermal TO-39 package with an integrated lens hood for minimized stray light and enhanced thermal stability, making it ideal for challenging environmental conditions. With a built-in ADC and multiple filter options, the sensor's data is easily accessible via an I2C interface. IR Thermo 4 Click is well-suited for remote skin temperature monitoring, over-temperature protection, human presence sensing, and motion detection.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/irthermo4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ir-thermo-4-click)
+[Click Product page](https://www.mikroe.com/ir-thermo-4-click)
 
 ---
 
@@ -69,13 +69,13 @@ uint8_t irthermo4_get_int_pin ( irthermo4_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of IR Thermo 4 click board by reading and displaying the ambient and object temperature measurements.
+> This example demonstrates the use of IR Thermo 4 Click board by reading and displaying the ambient and object temperature measurements.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,7 +3,7 @@
  * @brief Motion 2 Click Example.
  *
  * # Description
- * This example demonstrates the use of Motion 2 click boards.
+ * This example demonstrates the use of Motion 2 Click boards.
  * 
  * The demo application is composed of two sections :
  *

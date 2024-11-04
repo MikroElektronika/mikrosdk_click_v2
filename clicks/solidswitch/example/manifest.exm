@@ -3,6 +3,6 @@
     "description": "SolidSwitch Click is a compact add-on board that contains load switch devices. This board features the TPS22918, four single-channel load switches from Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MAX7323AEE"],
+    "hw" : ["Click","MAX7323AEE"],
     "category" : ["Port expander"]
 }

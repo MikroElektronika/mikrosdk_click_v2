@@ -3,13 +3,13 @@
  * @brief Charger Click Example.
  *
  * # Description
- * This example demonstrates the use of Charger click board by monitoring
+ * This example demonstrates the use of Charger Click board by monitoring
  * the battery charging status.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver, performs the click default configuration, calibrates
+ * Initializes the driver, performs the Click default configuration, calibrates
  * the zero current charging offset, and resets the elapsed time counter.
  *
  * ## Application Task

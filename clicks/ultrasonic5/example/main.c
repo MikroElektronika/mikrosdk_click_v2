@@ -3,14 +3,14 @@
  * @brief Ultrasonic 5 Click example
  *
  * # Description
- * This example demonstrates the use of Ultrasonic 5 click board by reading
+ * This example demonstrates the use of Ultrasonic 5 Click board by reading
  * the measurements from the connected ultrasonic sensor and displaying it
  * on a Serial Plot.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Performs a burst generation which starts the measurement and then reads the next

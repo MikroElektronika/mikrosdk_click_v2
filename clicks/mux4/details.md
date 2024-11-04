@@ -1,6 +1,6 @@
 
 ---
-# MUX 4 click
+# MUX 4 Click
 
 MUX 4 Click is a compact add-on board that contains a precise analog multiplexing IC. This board features the 74HC4851, 8-channel analog multiplexer/demultiplexer with injection-current effect control from Nexperia USA Inc.
 
@@ -8,7 +8,7 @@ MUX 4 Click is a compact add-on board that contains a precise analog multiplexin
   <img src="https://download.mikroe.com/images/click_for_ide/mux_4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/mux-4-click)
+[Click Product page](https://www.mikroe.com/mux-4-click)
 
 ---
 
@@ -64,7 +64,7 @@ void mux4_select_input ( mux4_t *ctx, uint8_t input );
 
 ## Example Description
 
-> This example demonstrates the use of MUX 4 click board.
+> This example demonstrates the use of MUX 4 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

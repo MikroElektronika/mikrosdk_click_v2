@@ -1,6 +1,6 @@
 
 ---
-# 6DOF IMU 5 click
+# 6DOF IMU 5 Click
 
 6DOF IMU 5 Click features 7-Axis ICM-20789 chip from TDK, an integrated 6-axis inertial device that combines a 3-axis gyroscope, 3-axis accelerometer, and an ultra-low noise MEMS capacitive pressure sensor. 
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/6dofimu5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/6dof-imu-5-click)
+[Click Product page](https://www.mikroe.com/6dof-imu-5-click)
 
 ---
 
@@ -58,7 +58,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example demonstrates the use of 6DOF IMU 5 click board.
+> This example demonstrates the use of 6DOF IMU 5 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -97,7 +97,7 @@ void application_init ( void )
     if ( id_val == C6DOFIMU5_WHO_AM_I_VAL )
     {
         log_printf( &logger, "-------------------------\r\n " );
-        log_printf( &logger, "   6DOF  IMU  5  click   \r\n " );
+        log_printf( &logger, "   6DOF  IMU  5  Click   \r\n " );
         log_printf( &logger, "-------------------------\r\n " );
         c6dofimu5_power ( &c6dofimu5, C6DOFIMU5_POWER_ON );
     }
@@ -174,7 +174,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

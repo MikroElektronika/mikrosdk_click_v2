@@ -3,7 +3,7 @@
  * @brief LightRanger5 Click example
  *
  * # Description
- * This is an example that demonstrates the use of the LightRanger 5 click board.
+ * This is an example that demonstrates the use of the LightRanger 5 Click board.
  * This demo application shows an example of distance measurement.
  *
  * The demo application is composed of two sections :
@@ -18,7 +18,7 @@
  * 
  *
  * ## Application Task
- * This is an example that shows the use of a LightRanger 5 click board.
+ * This is an example that shows the use of a LightRanger 5 Click board.
  * A new data ready is checked as soon as possible which signals 
  * the time required for the ranging sensor to perform the distance measurement.
  * Results are being sent to the Usart Terminal where you can track their changes.

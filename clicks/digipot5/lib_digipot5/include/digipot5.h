@@ -189,7 +189,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes the click configuration structure to
+ * @description This function initializes the Click configuration structure to
  * initial state.
  * @note All used pins will be set to unconnected state.
  */
@@ -206,7 +206,7 @@ digipot5_cfg_setup( digipot5_cfg_t *cfg );
  *                       2 - Driver init error.
  *
  * @description This function initializes all necessary pins and peripherals
- * used for this click.
+ * used for this Click.
  */
 digipot5_err_t
 digipot5_init( digipot5_t *ctx, digipot5_cfg_t *cfg );
@@ -228,7 +228,7 @@ digipot5_reset( digipot5_t *ctx );
  * @param ctx  Click object.
  *
  * @description This function executes a default configuration for the
- * DIGI POT 5 click.
+ * DIGI POT 5 Click.
  */
 void
 digipot5_default_cfg( digipot5_t *ctx );

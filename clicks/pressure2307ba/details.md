@@ -1,6 +1,6 @@
 
 ---
-# Pressure 23 07BA click
+# Pressure 23 07BA Click
 
 > Pressure 23 Click - 07BA is a compact add-on board for accurate and reliable absolute pressure and temperature measurements in harsh environments. This board features the MS5849-07BA, an ultra-compact, chlorine-resistant sensor from TE Connectivity that delivers 24-bit resolution data via I2C or SPI interfaces. It operates within pressure ranges of 0.4 to 7 bar, features a chlorine-resistant gel coating, and measures temperatures from -20 to +85°C. The sensor's grounded metal ring provides robust protection and secure O-ring mounting, while the flexible communication options allow for optimized performance.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/pressure2307ba_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pressure-23-click-07ba)
+[Click Product page](https://www.mikroe.com/pressure-23-click-07ba)
 
 ---
 
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

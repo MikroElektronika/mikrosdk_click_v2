@@ -3,12 +3,12 @@
  * @brief SPIRIT 2 Click Example.
  *
  * # Description
- * This example reads and processes data from SPIRIT 2 click.
+ * This example reads and processes data from SPIRIT 2 Click.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and configures the click board.
+ * Initializes the driver and configures the Click board.
  *
  * ## Application Task
  * Depending on the selected mode, it reads all the received data or sends the desired message 
@@ -30,7 +30,7 @@
 #define PROCESS_BUFFER_SIZE    500
 #define PROCESS_COUNTER        20
 
-#define TEXT_TO_SEND           "MikroE - SPIRIT 2 click board\r\n"
+#define TEXT_TO_SEND           "MikroE - SPIRIT 2 Click board\r\n"
 
 #define DEMO_APP_RECEIVER
 //#define DEMO_APP_TRANSMITTER

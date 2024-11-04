@@ -3,7 +3,7 @@
  * @brief Relay 7 Click example
  *
  * # Description
- * This example demonstrates the use of the Relay 7 click board by toggling the relay state.
+ * This example demonstrates the use of the Relay 7 Click board by toggling the relay state.
  *
  * The demo application is composed of two sections :
  *

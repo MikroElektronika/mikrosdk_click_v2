@@ -3,16 +3,16 @@
  
 
 ---
-# Ambient 2 click
+# Ambient 2 Click
 
-Ambient 2 click carries TI’s OPT3001 Ambient Light sensor.
+Ambient 2 Click carries TI’s OPT3001 Ambient Light sensor.
 It’s a small (2mm x 2mm) single-chip lux meter that measures only the visible part of the light spectrum from any kind of source (mimicking the way humans see light).
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ambient2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ambient-2-click)
+[Click Product page](https://www.mikroe.com/ambient-2-click)
 
 ---
 
@@ -72,9 +72,9 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ### Application Init
 
 >
-> Initializes I2C driver and all used pins for Ambient 2 click. 
-> Also executes a default configuration for this click, which means
-> that click will work in continuous conversion mode, in automatic full scale
+> Initializes I2C driver and all used pins for Ambient 2 Click. 
+> Also executes a default configuration for this Click, which means
+> that Click will work in continuous conversion mode, in automatic full scale
 > range, with conversion time of 800ms.
 >
 
@@ -142,7 +142,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

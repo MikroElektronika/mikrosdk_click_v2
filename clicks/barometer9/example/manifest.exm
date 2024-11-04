@@ -3,6 +3,6 @@
     "description": "Barometer 9 Click is a compact add-on board ideal for precision activity tracking and indoor navigation/localization. This board features the ENS220, a barometric pressure and temperature sensor from ScioSense",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","ENS220S-BLGT"],
+    "hw" : ["Click","ENS220S-BLGT"],
     "category" : ["Click Boards > Sensors > Pressure"]
 }

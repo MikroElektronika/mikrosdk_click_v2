@@ -3,6 +3,6 @@
     "description": "AudioAmp 11 Click is a compact add-on board reproducing input audio signals with desired volume and power levels at sound-producing output elements. This board features the NAU8224, a high-performance stereo Class-D audio amplifier from Nuvoton Technology. This flexible I2C configurable audio amplifier can drive a 4O load with up to 3.1W output power. In addition to the possibility of digital control (using only one enable pin), the NAU8224 also has many useful gain settings from 6dB to 24dB. Besides, it is equipped with protection features, allowing a reliable operation.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","NAU8224"],
+    "hw" : ["Click","NAU8224"],
     "category" : ["Click Boards > Audio & voice > Amplifier"]
 }

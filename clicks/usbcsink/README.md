@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# USB-C Sink click
+# USB-C Sink Click
 
 > USB-C Sink Click is a compact add-on board that contains a standalone autonomous USB power delivery controller. This board features the STUSB4500, a USB-C sink-only controller compatible with Power-Delivery (PD) from STMicroelectronics. It supports dead battery mode to allow a system to be powered from an external source directly, establishes a valid source-to-sink connection, and negotiates a USB power delivery (PD) contract with a PD capable source device.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/usbcsink_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/usb-c-sink-click)
+[Click Product page](https://www.mikroe.com/usb-c-sink-click)
 
 ---
 
@@ -175,7 +175,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

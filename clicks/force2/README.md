@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# Force 2 click
+# Force 2 Click
 
-Force 2 Click is a mikroBUS™ add-on board with circuitry for implementing Honeywell’s FSS1500NGT Series force sensors into your projects (with a single zone force sensing resistor included with the click).
+Force 2 Click is a mikroBUS™ add-on board with circuitry for implementing Honeywell’s FSS1500NGT Series force sensors into your projects (with a single zone force sensing resistor included with the Click).
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/force2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/force-2-click)
+[Click Product page](https://www.mikroe.com/force-2-click)
 
 ---
 
@@ -60,7 +60,7 @@ err_t force2_read_an_pin_voltage ( force2_t *ctx, float *data_out );
 
 ## Examples Description
 
-> This example demonstrates the use of Force 2 click board by reading and displaying the voltage from AN pin and the calculated force (N) value.
+> This example demonstrates the use of Force 2 Click board by reading and displaying the voltage from AN pin and the calculated force (N) value.
 
 **The demo application is composed of two sections :**
 
@@ -94,7 +94,7 @@ void application_init ( void )
     force2_init( &force2, &cfg );
 
     log_printf( &logger, "--------------------\r\n" );
-    log_printf( &logger, "    Force 2 click   \r\n" );
+    log_printf( &logger, "    Force 2 Click   \r\n" );
     log_printf( &logger, "--------------------\r\n" );
     Delay_ms ( 500 );
 }
@@ -137,7 +137,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

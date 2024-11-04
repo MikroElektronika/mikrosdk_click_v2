@@ -2,15 +2,15 @@
  
 
 ---
-# MRAM click
+# MRAM Click
 
-MRAM click features MRAM module which contains 262,144 magnetoresistive memory cells, organized into 32,768 bytes of memory. It means that MRAM click is a memory storage device with 32KB of memory space. 
+MRAM Click features MRAM module which contains 262,144 magnetoresistive memory cells, organized into 32,768 bytes of memory. It means that MRAM Click is a memory storage device with 32KB of memory space. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/mram_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/mram-click)
+[Click Product page](https://www.mikroe.com/mram-click)
 
 ---
 
@@ -77,7 +77,7 @@ void mram_enable_write_protect ( mram_t *ctx, uint8_t state);
 
 ### Application Init 
 
-> Initializes click driver.
+> Initializes Click driver.
 
 ```c
 
@@ -158,7 +158,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

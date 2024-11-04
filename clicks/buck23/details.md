@@ -1,6 +1,6 @@
 
 ---
-# Buck 23 click
+# Buck 23 Click
 
 > Buck 23 Click is a compact add-on board with a DC-DC power converter that steps down the voltage from its input to its output. This board features the MAX20010C, a fully-integrated, high-efficiency, synchronous, step-down converter from Analog Devices. The MAX20010C achieves 6A continuous output current over a wide input supply range from 3V to 5.5V. It offers ±2% output voltage accuracy and can operate efficiently over interface-configurable output voltage load range from 0.5V to 1.58V. The MAX20010C also offers programmable soft-start, overcurrent, and overtemperature protections.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/buck23_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/buck-23-click)
+[Click Product page](https://www.mikroe.com/buck-23-click)
 
 ---
 
@@ -69,7 +69,7 @@ uint8_t buck23_get_pg_pin ( buck23_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Buck 23 click by changing the output voltage.
+> This example demonstrates the use of Buck 23 Click by changing the output voltage.
 
 **The demo application is composed of two sections :**
 
@@ -193,7 +193,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

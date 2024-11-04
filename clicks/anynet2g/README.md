@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# AnyNet 2G click
+# AnyNet 2G Click
 
 > AnyNet 2G Click is a cellular to AWS gateway device, which provides developers with the complete solution for various IoT applications, by using the AWS IoT and Cloud Storage services for the data storage, analyzing and processing.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/anynet2g_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/anynet-2g-click)
+[Click Product page](https://www.mikroe.com/anynet-2g-click)
 
 ---
 
@@ -48,12 +48,12 @@ err_t anynet2g_init ( anynet2g_t *ctx, anynet2g_cfg_t *cfg );
 
 #### Example key functions :
 
-- `anynet2g_send_cmd` This function sends a specified command to the click module.
+- `anynet2g_send_cmd` This function sends a specified command to the Click module.
 ```c
 void anynet2g_send_cmd ( anynet2g_t *ctx, uint8_t *cmd );
 ```
 
-- `anynet2g_send_cmd_with_par` This function sends a command with specified parameter to the click module.
+- `anynet2g_send_cmd_with_par` This function sends a command with specified parameter to the Click module.
 ```c
 void anynet2g_send_cmd_with_par ( anynet2g_t *ctx, uint8_t *at_cmd_buf, uint8_t *param_buf );
 ```
@@ -65,13 +65,13 @@ void anynet2g_send_cmd_check ( anynet2g_t *ctx, uint8_t *at_cmd_buf );
 
 ## Example Description
 
-> This example demonstrates the use of AnyNet 2G click board.
+> This example demonstrates the use of AnyNet 2G Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and sends a few AT commands to test the communication and configure the click board.
+> Initializes the driver and sends a few AT commands to test the communication and configure the Click board.
 
 ```c
 
@@ -175,7 +175,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

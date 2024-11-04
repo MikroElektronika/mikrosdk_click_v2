@@ -1,8 +1,8 @@
 {
     "name": "Matrix RGB Click",
-    "description": "Matrix RGB click is a mikroBUS™ add-on board powered by a 32-bit FT900 MCU designed specifically for powering 16x32 RGB LED matrices.",
+    "description": "Matrix RGB Click is a mikroBUS™ add-on board powered by a 32-bit FT900 MCU designed specifically for powering 16x32 RGB LED matrices.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","FT900 MCU"],
+    "hw" : ["Click","FT900 MCU"],
     "category" : ["LED Matrix"] 
 }

@@ -1,6 +1,6 @@
 
 ---
-# ADAC 3 click
+# ADAC 3 Click
 
 > ADAC 3 Click is a compact add-on board representing the ADC/DAC combo solution. This board features the PCF8591, a low-power 8-bit CMOS data acquisition device with four analog inputs, one analog output, and a serial I2C interface from NXP Semiconductors. The PCF8591 includes analog input multiplexing, an on-chip track and hold function and 8-bit analog-to-digital conversion alongside an 8-bit digital-to-analog conversion. In addition, the user is given the option to select the PCF8591 reference voltage value, choosing between 2,048 and 4,096V.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/adac3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/adac-3-click)
+[Click Product page](https://www.mikroe.com/adac-3-click)
 
 ---
 
@@ -69,7 +69,7 @@ err_t adac3_read_adc ( adac3_t *ctx, uint8_t *adc );
 
 ## Example Description
 
-> This example demonstrates the use of ADAC 3 click board by setting the DAC output
+> This example demonstrates the use of ADAC 3 Click board by setting the DAC output
 and reading the ADC results from 2 single-ended channels (AIN0, AIN1) and from a
 differential channel (AIN2+, AIN3-).
 
@@ -77,7 +77,7 @@ differential channel (AIN2+, AIN3-).
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which enables
+> Initializes the driver and performs the Click default configuration which enables
 DAC output, sets the analog input mode to single-ended (AIN0, AIN1) and
 differential (AIN2+, AIN3-), and enables the auto increment mode.
 
@@ -171,7 +171,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

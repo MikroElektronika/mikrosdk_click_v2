@@ -200,7 +200,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void heartrate6_cfg_setup ( heartrate6_cfg_t *cfg );
@@ -211,7 +211,7 @@ void heartrate6_cfg_setup ( heartrate6_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 HEARTRATE6_RETVAL heartrate6_init ( heartrate6_t *ctx, heartrate6_cfg_t *cfg );
 
@@ -220,7 +220,7 @@ HEARTRATE6_RETVAL heartrate6_init ( heartrate6_t *ctx, heartrate6_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for HeartRate6 click.
+ * @description This function executes default configuration for HeartRate6 Click.
  */
 void heartrate6_default_cfg ( heartrate6_t *ctx );
 
@@ -309,7 +309,7 @@ void heartrate6_get_data ( heartrate6_t *ctx, uint16_t *led_off_data, uint16_t *
  *
  * @param ctx  Click object.
  *
- * @description Function delays program for a time specified in click object wait_time field.
+ * @description Function delays program for a time specified in Click object wait_time field.
  */
 void heartrate6_wait_measure( heartrate6_t *ctx );
 
@@ -319,6 +319,6 @@ void heartrate6_wait_measure( heartrate6_t *ctx );
 #endif  // _HEARTRATE6_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

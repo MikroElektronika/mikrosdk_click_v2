@@ -1,6 +1,6 @@
 
 ---
-# Smart Sens 2 click
+# Smart Sens 2 Click
 
 > Smart Sens 2 Click is a compact add-on board that contains a smart sensor system with an integrated IMU sensor. This board utilizes the BHI260AP, BME688, BMP390, and BMM150, an ultra-low-power programmable smart sensor, environmental and pressure sensor, and a magnetometer from Bosch Sensortec. The BHI260AP includes a powerful 32-bit MCU and a 6-axis IMU (3-axis accelerometer and 3-axis gyroscope) alongside an event-driven software framework. In addition to its internal functions also perform signal data processing from several onboard sensors performing measurements of various parameters such as an environmental and magnetic field. In addition to these primary functions, this Click board™ allows users to select the desired serial interface, use the debug interface, and select BOOT mode.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/smartsens2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/smart-sens-2-click)
+[Click Product page](https://www.mikroe.com/smart-sens-2-click)
 
 ---
 
@@ -69,7 +69,7 @@ err_t smartsens2_get_and_process_fifo ( smartsens2_t *ctx, uint8_t *work_buffer,
 
 ## Example Description
 
-> This example showcases the ability of the Smart Sens 2 click board.
+> This example showcases the ability of the Smart Sens 2 Click board.
 It has multiple examples that you can easily select with the
 defines at the top of the main. There are 9 examples: Euler, Quaternion,
 Vector (Accelerometer, Gyroscope, Magnetometer), and
@@ -260,7 +260,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

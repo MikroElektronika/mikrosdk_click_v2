@@ -3,12 +3,12 @@
  * @brief ADC13 Click example
  *
  * # Description
- * This example demonstrates the use of ADC 13 click board.
+ * This example demonstrates the use of ADC 13 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads the voltage between AIN0 and AIN1 channels, and the module internal temperature as well. 

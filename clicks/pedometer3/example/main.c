@@ -11,7 +11,7 @@
  *
  * ## Application Init
  * Configuring clicks and log objects.
- * Settings the click in the default configuration.
+ * Settings the Click in the default configuration.
  *
  * ## Application Task
  * Reads Accel and High Pass Accel X/Y/Z axis and detect Tilt Position.
@@ -57,7 +57,7 @@ void application_init ( void )
     PEDOMETER3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pedometer3_init( &pedometer3, &cfg );
 
-    // Default click configurations
+    // Default Click configurations
     pedometer3_default_cfg( &pedometer3 );
 
     tmp = PEDOMETER3_CNTL1_MODE_LOW_POWER | PEDOMETER3_CNTL1_MODE_LOW_POWER |
@@ -79,7 +79,7 @@ void application_task ( void )
     pedometer3_get_hp_accel_axis( &pedometer3, &highpass_axis );
     ped_step += pedometer3_get_step_counter( &pedometer3 );
 
-    log_printf( &logger, "___________ Pedometer 3 click _____________\r\n");
+    log_printf( &logger, "___________ Pedometer 3 Click _____________\r\n");
 
     log_printf( &logger, "--  Accel : [ X ]: %d / [ Y ]: %d / [ Z ]: %d \r\n", 
                 accel_axis.x, accel_axis.y, accel_axis.z );

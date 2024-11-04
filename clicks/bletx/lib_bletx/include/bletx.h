@@ -482,7 +482,7 @@ typedef enum
 
 /**
  * @brief BLE TX configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #bletx_cfg_t object definition for detailed explanation.
@@ -494,7 +494,7 @@ void bletx_cfg_setup ( bletx_cfg_t *cfg );
 /**
  * @brief BLE TX initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board™.
+ * for this Click board™.
  * @param[out] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -509,7 +509,7 @@ err_t bletx_init ( bletx_t *ctx, bletx_cfg_t *cfg );
 /**
  * @brief BLE TX default configuration function.
  * @details This function executes a default configuration of BLE TX
- * click board™.
+ * Click board™.
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -523,7 +523,7 @@ err_t bletx_default_cfg ( bletx_t *ctx );
 /**
  * @brief BLE TX full power down function.
  * @details This function full power-down blocks communication of the 
- * AK1595 Bluetooth® Low Energy transmitter on the BLE TX click board™.
+ * AK1595 Bluetooth® Low Energy transmitter on the BLE TX Click board™.
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -536,7 +536,7 @@ err_t bletx_power_down ( bletx_t *ctx );
 /**
  * @brief BLE TX full power up function.
  * @details This function full power-up initialization of all registers of the 
- * AK1595 Bluetooth® Low Energy transmitter on the BLE TX click board™.
+ * AK1595 Bluetooth® Low Energy transmitter on the BLE TX Click board™.
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -549,7 +549,7 @@ err_t bletx_power_up ( bletx_t *ctx );
 /**
  * @brief BLE TX hardware reset function.
  * @details This function executes a hardware reset reconfigures all registers of the 
- * AK1595 Bluetooth® Low Energy transmitter on the BLE TX click board™.
+ * AK1595 Bluetooth® Low Energy transmitter on the BLE TX Click board™.
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -562,7 +562,7 @@ err_t bletx_hw_reset ( bletx_t *ctx );
 /**
  * @brief BLE TX software reset function.
  * @details This function executes a software reset reconfigures all registers of the 
- * AK1595 Bluetooth® Low Energy transmitter on the BLE TX click board™.
+ * AK1595 Bluetooth® Low Energy transmitter on the BLE TX Click board™.
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -575,7 +575,7 @@ err_t bletx_soft_reset ( bletx_t *ctx );
 /**
  * @brief BLE TX interface selection function.
  * @details This function select interface of the 
- * AK1595 Bluetooth® Low Energy transmitter on the BLE TX click board™.
+ * AK1595 Bluetooth® Low Energy transmitter on the BLE TX Click board™.
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @param[in] sel_interface : 
@@ -591,7 +591,7 @@ err_t bletx_interface_selection ( bletx_t *ctx, uint8_t sel_interface );
 /**
  * @brief BLE TX slave address selection function.
  * @details This function select slave address of the 
- * AK1595 Bluetooth® Low Energy transmitter on the BLE TX click board™.
+ * AK1595 Bluetooth® Low Energy transmitter on the BLE TX Click board™.
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @param[in] sel_slave_address : Slave address.
@@ -605,7 +605,7 @@ err_t bletx_slave_address_selection ( bletx_t *ctx, uint8_t sel_slave_address ) 
 /**
  * @brief BLE TX baud rate selection function.
  * @details This function select baud rate of the 
- * AK1595 Bluetooth® Low Energy transmitter on the BLE TX click board™.
+ * AK1595 Bluetooth® Low Energy transmitter on the BLE TX Click board™.
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @param[in] sel_baud_rate :
@@ -653,7 +653,7 @@ err_t bletx_generic_read ( bletx_t *ctx, uint8_t reg, uint8_t *rx_buf, uint8_t r
 /**
  * @brief BLE TX start advertising function.
  * @details This function start advertising of the 
- * AK1595 Bluetooth® Low Energy transmitter on the BLE TX click board™. 
+ * AK1595 Bluetooth® Low Energy transmitter on the BLE TX Click board™. 
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -666,7 +666,7 @@ err_t bletx_start_advertising ( bletx_t *ctx );
 /**
  * @brief BLE TX stop advertising function.
  * @details This function stop advertising of the 
- * AK1595 Bluetooth® Low Energy transmitter on the BLE TX click board™. 
+ * AK1595 Bluetooth® Low Energy transmitter on the BLE TX Click board™. 
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -679,7 +679,7 @@ err_t bletx_stop_advertising ( bletx_t *ctx );
 /**
  * @brief BLE TX advertising channel setting function.
  * @details This function advertising channel setting of the 
- * AK1595 Bluetooth® Low Energy transmitter on the BLE TX click board™. 
+ * AK1595 Bluetooth® Low Energy transmitter on the BLE TX Click board™. 
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @param[in] advch_data : Enum values for advertising channel setting.
@@ -693,7 +693,7 @@ err_t bletx_set_cfg_adv_channel ( bletx_t *ctx, bletx_advch_value_t advch_data )
 /**
  * @brief BLE TX output power setting function.
  * @details This function output power setting of the 
- * AK1595 Bluetooth® Low Energy transmitter on the BLE TX click board™. 
+ * AK1595 Bluetooth® Low Energy transmitter on the BLE TX Click board™. 
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @param[in] power_data : Enum values for TX output power [ dBm ] setting.
@@ -707,7 +707,7 @@ err_t bletx_set_output_power ( bletx_t *ctx, bletx_tx_output_power_value_t power
 /**
  * @brief BLE TX TX data setting function.
  * @details This function TX data setting of the 
- * AK1595 Bluetooth® Low Energy transmitter on the BLE TX click board™. 
+ * AK1595 Bluetooth® Low Energy transmitter on the BLE TX Click board™. 
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @param[in] txdata_data : Enum values for TX data loop, burst transmission or continuous transmission setting.
@@ -721,7 +721,7 @@ err_t bletx_set_tx_data ( bletx_t *ctx, bletx_txdata_value_t txdata_data );
 /**
  * @brief BLE TX eventnum setting function.
  * @details This function eventnum setting of the 
- * AK1595 Bluetooth® Low Energy transmitter on the BLE TX click board™. 
+ * AK1595 Bluetooth® Low Energy transmitter on the BLE TX Click board™. 
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @param[in] eventnum_data : Enum values for the number of advertising event setting.
@@ -735,7 +735,7 @@ err_t bletx_set_eventnum ( bletx_t *ctx, bletx_eventnum_value_t eventnum_data );
 /**
  * @brief BLE TX advertising delay setting function.
  * @details This function advertising delay setting of the 
- * AK1595 Bluetooth® Low Energy transmitter on the BLE TX click board™. 
+ * AK1595 Bluetooth® Low Energy transmitter on the BLE TX Click board™. 
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @param[in] adv_delay_ms : Advertising delay in milliseconds from 20 ms to 10240 ms.
@@ -749,7 +749,7 @@ err_t bletx_set_adv_delay ( bletx_t *ctx, float adv_delay_ms );
 /**
  * @brief BLE TX configuration setting function.
  * @details This function configuration setting of the 
- * AK1595 Bluetooth® Low Energy transmitter on the BLE TX click board™. 
+ * AK1595 Bluetooth® Low Energy transmitter on the BLE TX Click board™. 
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @param[in] adv_cfg : Advertising settings structure.
@@ -763,7 +763,7 @@ err_t bletx_set_configuration ( bletx_t *ctx, bletx_adv_cfg_t adv_cfg );
 /**
  * @brief BLE TX create advertising data packet function.
  * @details This function create advertising data packet of the 
- * AK1595 Bluetooth® Low Energy transmitter on the BLE TX click board™. 
+ * AK1595 Bluetooth® Low Energy transmitter on the BLE TX Click board™. 
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @param[in] adv_data_packet : Advertising data packet structure.
@@ -777,7 +777,7 @@ err_t bletx_create_adv_data_packet ( bletx_t *ctx, bletx_create_adv_data_packet_
 /**
  * @brief BLE TX create Eddystone™ URI data packet function.
  * @details This function create advertising Eddystone™ URI data packet of the 
- * AK1595 Bluetooth® Low Energy transmitter on the BLE TX click board™. 
+ * AK1595 Bluetooth® Low Energy transmitter on the BLE TX Click board™. 
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @param[in] adv_data : Advertising data packet structure.
@@ -791,7 +791,7 @@ err_t bletx_create_eddystone_uri ( bletx_t *ctx, bletx_eddystone_data_t adv_data
 /**
  * @brief BLE TX create Eddystone™ UID data packet function.
  * @details This function create advertising Eddystone™ UID data packet of the 
- * AK1595 Bluetooth® Low Energy transmitter on the BLE TX click board™. 
+ * AK1595 Bluetooth® Low Energy transmitter on the BLE TX Click board™. 
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @param[in] adv_data : Advertising data packet structure.
@@ -805,7 +805,7 @@ err_t bletx_create_eddystone_uid ( bletx_t *ctx, bletx_eddystone_data_t adv_data
 /**
  * @brief BLE TX create Eddystone™ TLM data packet function.
  * @details This function create advertising Eddystone™ TLM data packet of the 
- * AK1595 Bluetooth® Low Energy transmitter on the BLE TX click board™. 
+ * AK1595 Bluetooth® Low Energy transmitter on the BLE TX Click board™. 
  * @param[in] ctx : Click context object.
  * See #bletx_t object definition for detailed explanation.
  * @param[in] adv_data : Advertising data packet structure.

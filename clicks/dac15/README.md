@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# DAC 15 click
+# DAC 15 Click
 
 > DAC 15 Click is a compact add-on board that provides a highly accurate digital-to-analog conversion on two channels. This board features the DAC80502, a dual 16-bit 1-LSB INL voltage-output DAC from Texas Instruments. The DAC operates at a wide power supply range and is a low-power device with as low as 1mA per channel at 5.5V. It also includes a 2.5V, 5-ppm/°C internal reference, giving a full-scale voltage buffered output ranges of 1.25V, 2.5V, and 5.5V.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dac15_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dac-15-click)
+[Click Product page](https://www.mikroe.com/dac-15-click)
 
 ---
 
@@ -161,7 +161,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

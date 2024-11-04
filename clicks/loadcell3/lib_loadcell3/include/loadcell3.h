@@ -303,7 +303,7 @@ loadcell3_data_t;
 
 /**
  * @brief Load Cell 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #loadcell3_cfg_t object definition for detailed explanation.
@@ -317,7 +317,7 @@ void loadcell3_cfg_setup ( loadcell3_cfg_t *cfg );
 /**
  * @brief Load Cell 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #loadcell3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -335,7 +335,7 @@ err_t loadcell3_init ( loadcell3_t *ctx, loadcell3_cfg_t *cfg );
 /**
  * @brief Load Cell 3 default configuration function.
  * @details This function executes a default configuration of Load Cell 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #loadcell3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -466,7 +466,7 @@ err_t loadcell3_generic_test_page_read ( loadcell3_t *ctx, uint8_t reg, uint8_t 
 /**
  * @brief Load Cell 3 set memory page function.
  * @details This function set memory page slave address to control communication of the 
- * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 click board™.
+ * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell3_t object definition for detailed explanation.
  * @param[in] memory_page : Desired memory page slave address.
@@ -483,7 +483,7 @@ err_t loadcell3_set_memory_page_slave_addr ( loadcell3_t *ctx, uint8_t memory_pa
 /**
  * @brief Load Cell 3 accesses controller function.
  * @details This function set ccontroller accesses the memory of the 
- * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 click board™.
+ * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -499,7 +499,7 @@ err_t loadcell3_accesses_controller ( loadcell3_t *ctx );
 /**
  * @brief Load Cell 3 accesses digital interface control function.
  * @details This function set digital interface accesses the memory of the 
- * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 click board™.
+ * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -515,7 +515,7 @@ err_t loadcell3_accesses_digital_interface_control ( loadcell3_t *ctx );
 /**
  * @brief Load Cell 3 soft reset function.
  * @details This function executes a software reset of the 
- * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 click board™.
+ * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -531,7 +531,7 @@ err_t loadcell3_soft_reset ( loadcell3_t *ctx );
 /**
  * @brief Load Cell 3 set pressure gain function.
  * @details This function set desired pressure gain of the 
- * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 click board™.
+ * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell3_t object definition for detailed explanation.
  * @param[in] p_gain : Desired pressure gain steps.
@@ -548,7 +548,7 @@ err_t loadcell3_set_p_gain ( loadcell3_t *ctx, uint8_t p_gain );
 /**
  * @brief Load Cell 3 set temperature gain function.
  * @details This function set desired temperature gain of the 
- * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 click board™.
+ * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell3_t object definition for detailed explanation.
  * @param[in] t_gain : Desired temperature gain steps.
@@ -565,7 +565,7 @@ err_t loadcell3_set_t_gain ( loadcell3_t *ctx, uint8_t t_gain );
 /**
  * @brief Load Cell 3 set temperature mode function.
  * @details This function set desired temperature mode of the 
- * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 click board™.
+ * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell3_t object definition for detailed explanation.
  * @param[in] t_mode : Desired temperature mode.
@@ -582,7 +582,7 @@ err_t loadcell3_set_temp_mode ( loadcell3_t *ctx, uint8_t t_mode );
 /**
  * @brief Load Cell 3 set mux control function.
  * @details This function set desired pressure channel input MUX of the 
- * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 click board™.
+ * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell3_t object definition for detailed explanation.
  * @param[in] t_mux_ctrl : Desired P channel input MUX.
@@ -599,7 +599,7 @@ err_t loadcell3_set_t_mux_ctrl ( loadcell3_t *ctx, uint8_t t_mux_ctrl );
 /**
  * @brief Load Cell 3 set ITEMP control function.
  * @details This function set desired ITEMP control of the 
- * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 click board™.
+ * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell3_t object definition for detailed explanation.
  * @param[in] itemp_ctrl : Desired ITEMP control.
@@ -616,7 +616,7 @@ err_t loadcell3_itemp_ctrl ( loadcell3_t *ctx, uint8_t itemp_ctrl );
 /**
  * @brief Load Cell 3 set offset function.
  * @details This function set desired offset of the 
- * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 click board™.
+ * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell3_t object definition for detailed explanation.
  * @param[in] offset_cancel_val : Desired offset cancel value.
@@ -634,7 +634,7 @@ err_t loadcell3_set_offset ( loadcell3_t *ctx, uint8_t offset_cancel_val, uint8_
 /**
  * @brief Load Cell 3 get pressure ADC data function.
  * @details This function set desired offset of the 
- * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 click board™.
+ * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell3_t object definition for detailed explanation.
  * @return 16-bit pressure ADC data.
@@ -649,7 +649,7 @@ int16_t loadcell3_get_p_adc_data ( loadcell3_t *ctx );
 /**
  * @brief Load Cell 3 get temperature ADC data function.
  * @details This function set desired offset of the 
- * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 click board™.
+ * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell3_t object definition for detailed explanation.
  * @return 16-bit temperature ADC data.
@@ -664,7 +664,7 @@ int16_t loadcell3_get_t_adc_data ( loadcell3_t *ctx );
 /**
  * @brief Load Cell 3 tare the scales function.
  * @details This function for the tare scales sets the tara value into the cell data structure of the 
- * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 click board™.
+ * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell3_t object definition for detailed explanation.
  * @param[out] cell_data : Pointer to the memory location of the structure where data be stored.
@@ -679,7 +679,7 @@ void loadcell3_tare ( loadcell3_t *ctx, loadcell3_data_t *cell_data );
 /**
  * @brief Load Cell 3 calibration function.
  * @details This function for the calibration sets the calibration value into the cell data structure of the
- * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 click board™.
+ * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell3_t object definition for detailed explanation.
  * @param[in] cal_val : Etalon weight value
@@ -702,7 +702,7 @@ err_t loadcell3_calibration ( loadcell3_t *ctx, uint16_t cal_val, loadcell3_data
 /**
  * @brief Load Cell 3 get weight function.
  * @details This function gets float value of the scales measurements [ g ] of the
- * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 click board™.
+ * PGA302 Sensor Signal Conditioner With 0-5V Ratiometric Output on the Load Cell 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell3_t object definition for detailed explanation.
  * @param[out] cell_data : Pointer to the memory location of the structure where data be stored.

@@ -1,6 +1,6 @@
 
 ---
-# Pressure 20 click
+# Pressure 20 Click
 
 > Pressure 20 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the ICP-20100, a high-accuracy digital barometric pressure and temperature sensor from TDK InvenSense. The ICP-20100 is based on MEMS capacitive technology with ultra-low noise, low power consumption, and temperature stability alongside programmable output: all-pressure, all-temperature, or pressure and temperature output. It converts output data into a 20-bit digital value and sends the information via a configurable host interface that supports SPI and I2C serial communications. It measures pressure from 30kPa up to 110kPa with an accuracy of ±20Pa over a wide operating temperature range.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/pressure20_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pressure-20-click)
+[Click Product page](https://www.mikroe.com/pressure-20-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t pressure20_read_data ( pressure20_t *ctx, float *pressure, float *temperat
 
 ## Example Description
 
-> This example demonstrates the use of Pressure 20 click board by reading and displaying the pressure and temperature data on the USB UART.
+> This example demonstrates the use of Pressure 20 Click board by reading and displaying the pressure and temperature data on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -43,7 +43,7 @@ void application_init ( void )
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
     log_printf( &logger, " ----------------------------------------------\r\n" );
-    log_printf( &logger, "                ***EEG click***               \r\n" );
+    log_printf( &logger, "                ***EEG Click***               \r\n" );
     log_printf( &logger, "----------------------------------------------\r\n" );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );

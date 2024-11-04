@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "BT-EZ click",
+    "display_name": "BT-EZ Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.btez",
     "product_link": "https://www.mikroe.com/bt-ez-click",
-    "short_description": "The BT-EZ click is a Click board™ which provide BLE connectivity for any embedded application.",
+    "short_description": "The BT-EZ Click is a Click board™ which provide BLE connectivity for any embedded application.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         3236
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.BtEz",
     "subdir_name": "lib_btez"
 }
+
 
 
 

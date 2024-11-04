@@ -1,14 +1,14 @@
 
 ---
-# 7x10 Y click
+# 7x10 Y Click
 
-7x10 Y click is a LED dot matrix display click, which can be used to display graphics or letters in a very simple and easy way. The click board has two LED dot matrix modules with 7x5 stylish, round, dot-like LED elements. These displays produce clean and uniform patterns since the elements are optically isolated from each other and there is no light bleeding between the adjacent LED cells. Additionally, turn-on and turn-off times of the matrix cells are optimized for a clean and fluid display performance, with no flickering or lag.
+7x10 Y Click is a LED dot matrix display Click, which can be used to display graphics or letters in a very simple and easy way. The Click board has two LED dot matrix modules with 7x5 stylish, round, dot-like LED elements. These displays produce clean and uniform patterns since the elements are optically isolated from each other and there is no light bleeding between the adjacent LED cells. Additionally, turn-on and turn-off times of the matrix cells are optimized for a clean and fluid display performance, with no flickering or lag.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/7x10y_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/7x10-y-click)
+[Click Product page](https://www.mikroe.com/7x10-y-click)
 
 ---
 
@@ -70,7 +70,7 @@ void c7x10y_draw_number ( c7x10y_t *ctx, uint8_t num, uint16_t num_delay );
 
 ### Application Init
 
-> Configuring the click board.
+> Configuring the Click board.
 
 ```c
 
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

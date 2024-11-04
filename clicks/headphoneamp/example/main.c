@@ -3,8 +3,8 @@
  * @brief Headphone AMP Click Example.
  *
  * # Description
- * This library contains API for the Headphone AMP click driver.
- * This demo application shows use of a Headphone AMP click board™.
+ * This library contains API for the Headphone AMP Click driver.
+ * This demo application shows use of a Headphone AMP Click board™.
  *
  * The demo application is composed of two sections :
  *
@@ -14,7 +14,7 @@
  * performs power-up sequence, sets a the sound volume of -12 dB.
  *
  * ## Application Task
- * This is an example that shows the use of Headphone AMP click board™.
+ * This is an example that shows the use of Headphone AMP Click board™.
  * The app performs circles the volume from -12 dB to 3 dB back and forth,
  * increase/decrement by 3dB.
  * Results are being sent to the Usart Terminal where you can track their changes.

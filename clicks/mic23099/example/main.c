@@ -3,7 +3,7 @@
  * \brief MIC23099 Click example
  * 
  * # Description
- * MIC23099 click represent single AA/AAA cell step-down/step-up regulator 
+ * MIC23099 Click represent single AA/AAA cell step-down/step-up regulator 
  * with battery monitoring.
  *
  * The demo application is composed of two sections :

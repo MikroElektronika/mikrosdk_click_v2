@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# 6DOF IMU 17 click
+# 6DOF IMU 17 Click
 
 > 6DOF IMU 17 Click is a compact add-on board that contains a 6-axis inertial measurement unit. This board features the IIM-42652, a 6-axis SmartIndustrial™ MotionTracking device that supports an extended operating temperature range for industrial applications from TDK InvenSense. It combines a 3-axis gyroscope and a 3-axis accelerometer featuring a 2K-byte FIFO that can lower the traffic on the serial bus interface (SPI or I2C) and reduce power consumption by allowing the system processor to burst read sensor data and then go into a low-power mode.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/6dofimu17_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/6dof-imu-17-click)
+[Click Product page](https://www.mikroe.com/6dof-imu-17-click)
 
 ---
 
@@ -183,7 +183,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

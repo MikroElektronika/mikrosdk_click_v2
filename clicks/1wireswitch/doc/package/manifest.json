@@ -10,7 +10,7 @@
     ],
     "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "1-Wire Switch click",
+    "display_name": "1-Wire Switch Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -28,11 +28,12 @@
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
+    "version": "2.1.0.8",
     "cmake": true,
     "alias": "Click.c1WireSwitch",
     "subdir_name": "lib_c1wireswitch"
 }
+
 
 
 

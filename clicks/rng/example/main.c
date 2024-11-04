@@ -3,7 +3,7 @@
  * \brief Rng Click example
  * 
  * # Description
- * This click is a random number generator. The device contain potentiometer which control voltage
+ * This Click is a random number generator. The device contain potentiometer which control voltage
  * so it generates a sequence of numbers or symbols that cannot be reasonably predicted better 
  * by a random chance. Random number generators have applications in gambling, statistical sampling,
  * computer simulation, cryptography, completely randomized design, and various other areas. 

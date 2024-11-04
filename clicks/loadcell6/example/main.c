@@ -15,8 +15,8 @@
  * sets tare the scale, calibrate scale and start measurements.
  *
  * ## Application Task
- * This is an example that demonstrates the use of the Load Cell 6 click board™.
- * The Load Cell 6 click board™ can be used to measure weight and
+ * This is an example that demonstrates the use of the Load Cell 6 Click board™.
+ * The Load Cell 6 Click board™ can be used to measure weight and
  * shows the measurement of scales in grams [ g ].
  * Results are being sent to the Usart Terminal where you can track their changes.
  *

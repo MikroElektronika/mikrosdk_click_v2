@@ -1,8 +1,8 @@
 {
     "name": "MCP2542 Click",
-    "description": "MCP2542 click is the CAN bus transceiver, which allows TTL/CMOS level signals typically found on MCUs, to be used for the communication via the CAN bus, which uses the higher voltage levels and differential signals",
+    "description": "MCP2542 Click is the CAN bus transceiver, which allows TTL/CMOS level signals typically found on MCUs, to be used for the communication via the CAN bus, which uses the higher voltage levels and differential signals",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","MCP2542WFD"],
+    "hw" : ["Click","MCP2542WFD"],
     "category" : ["CAN"] 
 }

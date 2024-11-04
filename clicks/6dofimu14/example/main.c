@@ -3,12 +3,12 @@
  * @brief 6DOFIMU14 Click example
  *
  * # Description
- * This example demonstrates the use of 6DOF IMU 14 click board.
+ * This example demonstrates the use of 6DOF IMU 14 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and configures the click board.
+ * Initializes the driver and configures the Click board.
  *
  * ## Application Task
  * Reads accel, gyro, and temperature data and displays the results 

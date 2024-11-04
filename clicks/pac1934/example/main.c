@@ -12,7 +12,7 @@
  * 
  * ## Application Task  
  * This is an example that shows the most important
- * functions that PAC1934 click has, it mesures voltage, current, power and energy.
+ * functions that PAC1934 Click has, it mesures voltage, current, power and energy.
  * 
  * \author MikroE Team
  *

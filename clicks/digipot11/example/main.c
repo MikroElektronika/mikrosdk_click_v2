@@ -3,7 +3,7 @@
  * @brief DIGI POT 11 Click example
  *
  * # Description
- * This example demonstrates the use of DIGI POT 11 click board by changing
+ * This example demonstrates the use of DIGI POT 11 Click board by changing
  * the wipers position of both U1 and U2 devices.
  *
  * The demo application is composed of two sections :

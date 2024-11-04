@@ -15,7 +15,7 @@
  * on the USB UART every second.
  * 
  * @note
- * Connect only DQ and GND pins to the UART 1-Wire click connector.
+ * Connect only DQ and GND pins to the UART 1-Wire Click connector.
  * 
  * \author MikroE Team
  *

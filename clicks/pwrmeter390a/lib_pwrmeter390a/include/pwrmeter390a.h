@@ -275,7 +275,7 @@ typedef enum
 
 /**
  * @brief PWR Meter 3 90A configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #pwrmeter390a_cfg_t object definition for detailed explanation.
@@ -287,7 +287,7 @@ void pwrmeter390a_cfg_setup ( pwrmeter390a_cfg_t *cfg );
 /**
  * @brief PWR Meter 3 90A initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #pwrmeter390a_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -302,7 +302,7 @@ err_t pwrmeter390a_init ( pwrmeter390a_t *ctx, pwrmeter390a_cfg_t *cfg );
 /**
  * @brief PWR Meter 3 90A default configuration function.
  * @details This function executes a default configuration of PWR Meter 3 90A
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #pwrmeter390a_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

@@ -4,13 +4,13 @@
  * 
  * # Description
  * The demo application displays frequency change and voltage 
- * regulation using a BUCK click.
+ * regulation using a BUCK Click.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
  * Configuring clicks and log objects.
- * Settings the click in the default configuration.
+ * Settings the Click in the default configuration.
  * 
  * ## Application Task  
  * This is a example which demonstrates the use of Buck Click board.

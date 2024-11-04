@@ -3,12 +3,12 @@
  * \brief Expand2 Click example
  * 
  * # Description
- * This application demonstrates the use of the Expand 2 click board.
+ * This application demonstrates the use of the Expand 2 Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and logger, and then sets the click 
+ * Initializes the driver and logger, and then sets the Click 
  * default configuration: PORTA as output, PORTB as input with pull-ups on all pins.
  * 
  * ## Application Task  

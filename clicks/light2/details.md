@@ -1,6 +1,6 @@
 
 ---
-# Light 2 click
+# Light 2 Click
 
 > Light 2 Click is a compact add-on board designed for accurate and flexible light measurement in various environments. This board features the ISL76682, a high-sensitivity, light-to-digital sensor with an I2C interface from Renesas, made specifically for automotive applications. Key features include a photodiode array that closely mimics the human eye's response, an ADC for flicker rejection, and four selectable light measurement ranges via I2C, enhancing both flexibility and accuracy. With a typical power consumption of 55µA in Standard mode and two power-down modes to minimize energy use, the board is efficient and adaptable to different lighting conditions.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/light2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/light-2-click)
+[Click Product page](https://www.mikroe.com/light-2-click)
 
 ---
 
@@ -52,31 +52,31 @@ err_t light2_default_cfg ( light2_t *ctx );
 
 #### Example key functions :
 
-- `light2_read_raw_data` This function reads raw data from the ADC of Light 2 click board.
+- `light2_read_raw_data` This function reads raw data from the ADC of Light 2 Click board.
 ```c
 err_t light2_read_raw_data ( light2_t *ctx, uint16_t *data_out );
 ```
 
-- `light2_get_cal_const` This function is used to get a calculation constant depending on Light 2 click board configuration.
+- `light2_get_cal_const` This function is used to get a calculation constant depending on Light 2 Click board configuration.
 ```c
 err_t light2_get_cal_const ( light2_t *ctx );
 ```
 
-- `light2_get_light_data` This function is used to read light data of Light 2 click board configuration.
+- `light2_get_light_data` This function is used to read light data of Light 2 Click board configuration.
 ```c
 err_t light2_get_light_data ( light2_t *ctx, float *light_data );
 ```
 
 ## Example Description
 
-> This example demonstrates the use of Light 2 click board by measuring 
+> This example demonstrates the use of Light 2 Click board by measuring 
   the ambient light level in Lux.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -163,7 +163,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c4x4key_cfg_setup ( c4x4key_cfg_t *cfg );
@@ -174,7 +174,7 @@ void c4x4key_cfg_setup ( c4x4key_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 C4X4KEY_RETVAL c4x4key_init ( c4x4key_t *ctx, c4x4key_cfg_t *cfg );
 
@@ -218,6 +218,6 @@ uint8_t c4x4key_get_btn_position ( c4x4key_t *ctx );
 #endif  // _C4X4KEY_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

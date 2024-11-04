@@ -1,14 +1,14 @@
 
 ---
-# Shake2Wake click
+# Shake2Wake Click
 
-> Shake2Wake click carries an ADXL362 ultralow power, 3-axis MEMS accelerometer and ADP195 load switch. The distinguishing feature of this IC is that it incorporates several activity detection modes.
+> Shake2Wake Click carries an ADXL362 ultralow power, 3-axis MEMS accelerometer and ADP195 load switch. The distinguishing feature of this IC is that it incorporates several activity detection modes.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/shake2wake_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/shake-2-wake-click)
+[Click Product page](https://www.mikroe.com/shake-2-wake-click)
 
 ---
 
@@ -67,7 +67,7 @@ float shake2wake_read_temperature ( shake2wake_t *ctx );
 
 ## Examples Description
 
-> This app shows the capabilities of the Shake2Wake click by
+> This app shows the capabilities of the Shake2Wake Click by
 > reading values of an accelerometer.
 
 **The demo application is composed of two sections :**
@@ -114,7 +114,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example that shows the capabilities of the Shake2Wake click by
+> This is an example that shows the capabilities of the Shake2Wake Click by
 > reading values of an accelerometer and logging them on USART terminal and,
 > in case of an interrupt, it raises voltage on the connector.
 
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

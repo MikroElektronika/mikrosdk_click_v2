@@ -3,14 +3,14 @@
  * \brief Gaussmeter Click example
  * 
  * # Description
- * This example showcases how to configure and use the Gaussmeter click. This click measures
+ * This example showcases how to configure and use the Gaussmeter Click. This Click measures
  * magnetic fields around the device using a 3 axis measurement system. Alongside the magnetometer,
- * the click contains an integrated temperature sensor which provides data for the thermal compensation.
+ * the Click contains an integrated temperature sensor which provides data for the thermal compensation.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the click and logger modules. 
+ * This function initializes and configures the Click and logger modules. 
  * Additional configuring is done in the default_cfg(...) function.
  * 
  * ## Application Task  

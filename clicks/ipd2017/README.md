@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# IPD 2017 click
+# IPD 2017 Click
 
 > IPD Click is a compact add-on board for controlling inductive and resistive loads in industrial automation and other demanding applications. This board features the TPD2017FN, an 8-channel low-side switch with MOSFET outputs from Toshiba Semiconductor.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ipd2017_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ipd-click-tpd2017)
+[Click Product page](https://www.mikroe.com/ipd-click-tpd2017)
 
 ---
 
@@ -65,7 +65,7 @@ uint8_t ipd2017_get_out_state ( ipd2017_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of IPD 2017 click board by toggling the output state.
+> This example demonstrates the use of IPD 2017 Click board by toggling the output state.
 
 **The demo application is composed of two sections :**
 
@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

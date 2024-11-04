@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# I2C to CAN click
+# I2C to CAN Click
 
 I2C to CAN Click is a compact add-on board that contains I2C to CAN-physical transceiver, which extends a single-master I2C bus through harsh or noisy environments. This board features the LT3960, a robust high-speed transceiver that extends a single-master I2C bus up to 400kbps using the CAN-physical layer from Analog Devices. One LT3960 from SCL and SDA I2C lines creates equivalent differential buses (CAN) on two twisted pairs, while the second LT3960 recreates the I2C bus locally for any slave I2C devices on the other end of the twisted pairs. A built-in 3.3V LDO powers both the I2C and CAN lines from a single input supply from 4V to 60V. This Click board™ is suitable for industrial and automotive networking, remote sensor applications, and more.
 
@@ -9,7 +9,7 @@ I2C to CAN Click is a compact add-on board that contains I2C to CAN-physical tra
   <img src="https://download.mikroe.com/images/click_for_ide/i2ctocan_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/i2c-to-can-click)
+[Click Product page](https://www.mikroe.com/i2c-to-can-click)
 
 ---
 
@@ -70,9 +70,9 @@ I2CTOCAN_RETVAL i2ctocan_generic_read ( i2ctocan_t *ctx, uint8_t reg, uint8_t *r
 
 ## Example Description
 
-> This library contains API for the I2C to CAN click driver.
-> This demo application shows an example of an I2C CAN click 
-> wired to the VAV Press click for reading 
+> This library contains API for the I2C to CAN Click driver.
+> This demo application shows an example of an I2C CAN Click 
+> wired to the VAV Press Click for reading 
 > differential pressure and temperature measurement.
 
 **The demo application is composed of two sections :**
@@ -81,7 +81,7 @@ I2CTOCAN_RETVAL i2ctocan_generic_read ( i2ctocan_t *ctx, uint8_t reg, uint8_t *r
 
 > Initialization of I2C module and log UART.
 > After driver initialization and default settings, 
-> the app set VAV Press click I2C slave address ( 0x5C ) 
+> the app set VAV Press Click I2C slave address ( 0x5C ) 
 > and enable device.
 
 ```c
@@ -136,9 +136,9 @@ void application_init ( void ) {
 
 ### Application Task
 
-> This is an example that shows the use of an I2C to CAN click board™.
+> This is an example that shows the use of an I2C to CAN Click board™.
 > Logs pressure difference [ Pa ] and temperature [ degree Celsius ] values 
-> of the VAV Press click wired to the I2C to CAN click board™.  
+> of the VAV Press Click wired to the I2C to CAN Click board™.  
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
@@ -175,7 +175,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

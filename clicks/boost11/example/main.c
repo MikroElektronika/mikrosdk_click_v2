@@ -3,7 +3,7 @@
  * @brief Boost 11 Click Example.
  *
  * # Description
- * This example demonstrates the use of Boost 11 click board 
+ * This example demonstrates the use of Boost 11 Click board 
  * by controlling the output state.
  *
  * The demo application is composed of two sections :

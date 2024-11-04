@@ -128,7 +128,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void hallcurrent6_cfg_setup ( hallcurrent6_cfg_t *cfg );
@@ -139,7 +139,7 @@ void hallcurrent6_cfg_setup ( hallcurrent6_cfg_t *cfg );
  * @param ctx              Click object.
  * @param cfg              Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 HALLCURRENT6_RETVAL hallcurrent6_init ( hallcurrent6_t *ctx, hallcurrent6_cfg_t *cfg );
 
@@ -207,6 +207,6 @@ float hallcurrent6_get_current ( hallcurrent6_t *ctx );
 #endif  // _HALLCURRENT6_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

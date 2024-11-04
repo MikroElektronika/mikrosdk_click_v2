@@ -224,7 +224,7 @@ typedef enum
 
 /**
  * @brief Buck 18 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #buck18_cfg_t object definition for detailed explanation.
@@ -236,7 +236,7 @@ void buck18_cfg_setup ( buck18_cfg_t *cfg );
 /**
  * @brief Buck 18 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #buck18_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -251,7 +251,7 @@ err_t buck18_init ( buck18_t *ctx, buck18_cfg_t *cfg );
 /**
  * @brief Buck 18 default configuration function.
  * @details This function executes a default configuration of Buck 18
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #buck18_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -290,7 +290,7 @@ err_t buck18_read_voltage ( buck18_t *ctx, float *voltage );
 
 /**
  * @brief Buck 18 set vref function.
- * @details This function sets the voltage reference for Buck 18 click driver.
+ * @details This function sets the voltage reference for Buck 18 Click driver.
  * @param[in] ctx : Click context object.
  * See #buck18_t object definition for detailed explanation.
  * @param[in] vref : Reference voltage (volts).

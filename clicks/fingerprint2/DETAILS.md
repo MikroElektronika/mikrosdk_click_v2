@@ -1,6 +1,6 @@
 
 ---
-# Fingerprint 2 click
+# Fingerprint 2 Click
 
 Fingerprint 2 Click is a new fingerprint scanner Click board simplified for everyone's use and it's very easy to implement! This add-on board consists of a high-speed Nuvoton processor which carries high-performance fingerprint algorithm developed for on-board A-172-MRQ fingerprint sensor from company ByNew Technology Inc. This board can be used as a standalone device when connected over USB to PC or it can be controlled by the MCU/processor over serial UART interface. 
 
@@ -8,7 +8,7 @@ Fingerprint 2 Click is a new fingerprint scanner Click board simplified for ever
   <img src="https://download.mikroe.com/images/click_for_ide/fingerprint2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/fingerprint-2-click)
+[Click Product page](https://www.mikroe.com/fingerprint-2-click)
 
 ---
 
@@ -56,13 +56,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example demonstrates the use of Fingerprint 2 click board.
+> This example demonstrates the use of Fingerprint 2 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes the driver, enables the click board, and then executes a command for registering a fingerprint.
+> Initializes the driver, enables the Click board, and then executes a command for registering a fingerprint.
 
 ```c
 
@@ -131,7 +131,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

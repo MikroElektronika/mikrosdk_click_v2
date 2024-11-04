@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and checks the communication with the click board.
+ * Initializes the driver and checks the communication with the Click board.
  *
  * ## Application Task
  * Reads the information from ClickID permanent manifest every 5 seconds.
@@ -54,7 +54,7 @@ void application_init ( void )
     if ( CLICKID_ERROR == clickid_check_communication ( &clickid ) )
     {
         log_error( &logger, " Communication fail." );
-        log_printf( &logger, "Check if the click is attached to the correct " );
+        log_printf( &logger, "Check if the Click is attached to the correct " );
         log_printf( &logger, "MIKROBUS socket, and try again.\r\n" );
         for ( ; ; );
     }

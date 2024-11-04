@@ -1,6 +1,6 @@
 
 ---
-# SHT1x click
+# SHT1x Click
 
 SHT11 Click is an accessory board in mikroBus™ form factor. It includes a digital humidity and temperature sensor SHT11.
 
@@ -8,7 +8,7 @@ SHT11 Click is an accessory board in mikroBus™ form factor. It includes a digi
   <img src="https://download.mikroe.com/images/click_for_ide/sht1x_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/sht1x-click)
+[Click Product page](https://www.mikroe.com/sht1x-click)
 
 ---
 
@@ -58,7 +58,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This click measures temperature and humidity.
+> This Click measures temperature and humidity.
 
 **The demo application is composed of two sections :**
 
@@ -124,7 +124,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

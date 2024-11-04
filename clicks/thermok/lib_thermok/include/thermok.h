@@ -324,7 +324,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void thermok_cfg_setup ( thermok_cfg_t *cfg );
@@ -335,7 +335,7 @@ void thermok_cfg_setup ( thermok_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 THERMOK_RETVAL thermok_init ( thermok_t *ctx, thermok_cfg_t *cfg );
 
@@ -437,6 +437,6 @@ uint8_t thermok_get_alert_state_4 ( thermok_t *ctx );
 #endif  // _THERMOK_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

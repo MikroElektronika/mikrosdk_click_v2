@@ -3,15 +3,15 @@
  
 
 ---
-# Tilt 2 click
+# Tilt 2 Click
 
-Tilt 2 click is a tilt sensor switch, which breaks the circuit when tilted to an angle of 45° or when shaken. It is a single-pole-double-throw type of switch (SPDT), which can be operated with up to 24V.
+Tilt 2 Click is a tilt sensor switch, which breaks the circuit when tilted to an angle of 45° or when shaken. It is a single-pole-double-throw type of switch (SPDT), which can be operated with up to 24V.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/tilt2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/tilt-2-click)
+[Click Product page](https://www.mikroe.com/tilt-2-click)
 
 ---
 
@@ -123,7 +123,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

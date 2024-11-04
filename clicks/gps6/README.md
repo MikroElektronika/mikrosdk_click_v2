@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# GPS 6 click
+# GPS 6 Click
 
 > GPS 6 Click is a compact add-on board that provides users with positioning, navigation, and timing services. This board features the A2200-A, a GPS receiver module that enables fast acquisition and tracking with SiRFstar IV technology from Lantronix. This small-form-factor module operates with a frequency of 1,575GHz with accuracy from 2 up to 2.5m and fully addresses the demand for the lowest power consumption. The removal of jammers guarantees operation even in hostile environments. High sensitivity during acquisition or while tracking allows for use in many different backgrounds and under the most challenging operating conditions.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/gps6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gps-6-click)
+[Click Product page](https://www.mikroe.com/gps-6-click)
 
 ---
 
@@ -65,13 +65,13 @@ err_t gps6_parse_gpgga ( char *rsp_buf, uint8_t gpgga_element, char *element_dat
 
 ## Example Description
 
-> This example demonstrates the use of GPS 6 click by reading and displaying the GPS coordinates.
+> This example demonstrates the use of GPS 6 Click by reading and displaying the GPS coordinates.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and logger and enables the click board.
+> Initializes the driver and logger and enables the Click board.
 
 ```c
 
@@ -133,7 +133,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

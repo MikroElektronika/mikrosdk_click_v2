@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes click driver.
+ * Initializes Click driver.
  * 
  * ## Application Task  
  * Reads temperature from temperature register in decimal value in 9-bit resolution,

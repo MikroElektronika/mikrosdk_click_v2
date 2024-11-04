@@ -3,7 +3,7 @@
 
 
 ---
-# Analog MUX 2 click
+# Analog MUX 2 Click
 
 Analog MUX 2 Click is a compact add-on board that switches one of the eight inputs to one output. This board features the ADG728, a low voltage, CMOS 8-channel analog matrix switch with a serially controlled 2-wire interface from Analog Devices. The ADG728 can operate equally well as either multiplexer, demultiplexer, or switch array easily connected to a 9 pole spring action block terminal. It provides flexibility and features a low on-resistance closely matched between switches and very flat over the full signal range. This Click board™ is suitable for a wide range of applications, from industrial and instrumentation to medical, consumer, communications, and automotive systems.
 
@@ -11,7 +11,7 @@ Analog MUX 2 Click is a compact add-on board that switches one of the eight inpu
   <img src="https://download.mikroe.com/images/click_for_ide/analogmux2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/analog-mux-2-click)
+[Click Product page](https://www.mikroe.com/analog-mux-2-click)
 
 ---
 
@@ -128,7 +128,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-This is an example that shows the use of a Analog MUX 2 click board.
+This is an example that shows the use of a Analog MUX 2 Click board.
 In this example, we switch from channel AN0 to channel AN7, 
 read and display the analog value and voltage on the active channel.
 Results are being sent to the Usart Terminal where you can track their changes.
@@ -172,7 +172,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

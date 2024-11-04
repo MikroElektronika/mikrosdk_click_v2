@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Hall Current 14 click
+# Hall Current 14 Click
 
 > Hall Current 14 Click is a compact add-on board that contains a precise solution for AC/DC current sensing. This board features the MCS1801, a fully integrated Hall-effect-based isolated linear current sensor designed for the current range of ±25A from Monolithic Power Systems (MPS). The galvanic isolation between the pins of the primary copper conductive path and the sensor leads allows the MCS1801 to replace optoisolators or other isolation devices. Applied current flowing through this copper conduction path generates a magnetic field that the differential Hall sensors convert into a proportional voltage, where after that, the user is given the option to process the output voltage as an analog or digital value.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent14_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/hall-current-14-click)
+[Click Product page](https://www.mikroe.com/hall-current-14-click)
 
 ---
 
@@ -53,7 +53,7 @@ err_t hallcurrent14_init ( hallcurrent14_t *ctx, hallcurrent14_cfg_t *cfg );
 err_t hallcurrent14_read_voltage ( hallcurrent14_t *ctx, float *voltage );
 ```
 
-- `hallcurrent14_set_vref` This function sets the voltage reference for Hall Current 14 click driver.
+- `hallcurrent14_set_vref` This function sets the voltage reference for Hall Current 14 Click driver.
 ```c
 err_t hallcurrent14_set_vref ( hallcurrent14_t *ctx, float vref );
 ```
@@ -65,7 +65,7 @@ err_t hallcurrent14_read_current ( hallcurrent14_t *ctx, float *current );
 
 ## Example Description
 
-> This example demonstrates the use of Hall Current 14 click board by reading and displaying the input current measurements.
+> This example demonstrates the use of Hall Current 14 Click board by reading and displaying the input current measurements.
 
 **The demo application is composed of two sections :**
 
@@ -137,7 +137,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

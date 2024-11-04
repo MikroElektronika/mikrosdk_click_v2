@@ -3,13 +3,13 @@
  * @brief Speed Radar Click Example.
  *
  * # Description
- * This example demonstrates the use of Speed Radar click board by processing
+ * This example demonstrates the use of Speed Radar Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * The demo application sends a command that returns and displays the speed [km/h] 

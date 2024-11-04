@@ -3,7 +3,7 @@
  * @brief RTK Base Click Example.
  *
  * # Description
- * This example demonstrates the use of RTK Base click by reading and displaying the RTCM3 messages.
+ * This example demonstrates the use of RTK Base Click by reading and displaying the RTCM3 messages.
  *
  * The demo application is composed of two sections :
  *
@@ -18,7 +18,7 @@
  * - static err_t rtkbase_process_rtcm3 ( rtkbase_t *ctx )
  *
  * @note
- * The click board comes with the default baud rate of 460800, but the baud rate is set to 115200
+ * The Click board comes with the default baud rate of 460800, but the baud rate is set to 115200
  * in the example due to code portability and speed limitations of some MCUs. So in order to run
  * the example you will need to adjust the baud rate using Quectel QGNSS evaluation software.
  *

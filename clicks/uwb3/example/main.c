@@ -3,21 +3,21 @@
  * @brief UWB 3 Click Example.
  *
  * # Description
- * This example demonstrates the use of an UWB 3 click board by showing
- * the communication between the two click boards.
+ * This example demonstrates the use of an UWB 3 Click board by showing
+ * the communication between the two Click boards.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and configures the click board for the selected
+ * Initializes the driver and configures the Click board for the selected
  * application mode.
  *
  * ## Application Task
  * Reads and processes all incoming ranging block messages and displays them
- * on the USB UART. One click board should be configured to initiator mode and
- * the others to responder 1 or 2. The initiator click displays the address
- * and distance of each responder nodes, while the responder click boards displays
- * the address and distance of the initiator click board.
+ * on the USB UART. One Click board should be configured to initiator mode and
+ * the others to responder 1 or 2. The initiator Click displays the address
+ * and distance of each responder nodes, while the responder Click boards displays
+ * the address and distance of the initiator Click board.
  *
  * ## Additional Function
  * - static void uwb3_clear_app_buf ( void )

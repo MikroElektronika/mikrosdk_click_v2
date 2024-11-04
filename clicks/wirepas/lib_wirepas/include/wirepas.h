@@ -273,7 +273,7 @@ typedef enum
 
 /**
  * @brief Wirepas configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #wirepas_cfg_t object definition for detailed explanation.
@@ -285,7 +285,7 @@ void wirepas_cfg_setup ( wirepas_cfg_t *cfg );
 /**
  * @brief Wirepas initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #wirepas_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -300,7 +300,7 @@ err_t wirepas_init ( wirepas_t *ctx, wirepas_cfg_t *cfg );
 /**
  * @brief Wirepas default configuration function.
  * @details This function executes a default configuration of Wirepas
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #wirepas_t object definition for detailed explanation.
  * @return Nothing.
@@ -460,7 +460,7 @@ err_t wirepas_set_net_address ( wirepas_t *ctx, uint32_t net_address );
 
 /**
  * @brief @brief Wirepas read frame function.
- * @details This function is used to read whole frame of the Wirepas click data.
+ * @details This function is used to read whole frame of the Wirepas Click data.
  * @param[in] ctx : Click context object.
  * See #wirepas_t object definition for detailed explanation.
  * @param[out] frame : Read frame data.

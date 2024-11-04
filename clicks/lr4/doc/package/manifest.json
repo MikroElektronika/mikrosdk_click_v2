@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "LR 4 click",
+    "display_name": "LR 4 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -28,11 +28,12 @@
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.LR4",
     "subdir_name": "lib_lr4"
 }
+
 
 
 

@@ -201,7 +201,7 @@ typedef enum
 
 /**
  * @brief Clock Gen 5 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #clockgen5_cfg_t object definition for detailed explanation.
@@ -213,7 +213,7 @@ void clockgen5_cfg_setup ( clockgen5_cfg_t *cfg );
 /**
  * @brief Clock Gen 5 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #clockgen5_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -241,7 +241,7 @@ void clockgen5_out_enable ( clockgen5_t *ctx, uint8_t en_out );
  * @details The function set configuration.
  * @param[in] ctx : Click context object.
  * See #clockgen5_t object definition for detailed explanation.
- * @param[in] cfg : Config settings of Clock Gen 5 click.
+ * @param[in] cfg : Config settings of Clock Gen 5 Click.
  * @return Nothing.
  */
 void clockgen5_set_config ( clockgen5_t *ctx, uint8_t cfg );

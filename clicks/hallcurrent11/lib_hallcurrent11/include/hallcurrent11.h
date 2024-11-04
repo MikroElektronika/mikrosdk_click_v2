@@ -172,7 +172,7 @@ typedef enum
 
 /**
  * @brief Hall Current 11 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #hallcurrent11_cfg_t object definition for detailed explanation.
@@ -186,7 +186,7 @@ void hallcurrent11_cfg_setup ( hallcurrent11_cfg_t *cfg );
 /**
  * @brief Hall Current 11 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #hallcurrent11_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -204,7 +204,7 @@ err_t hallcurrent11_init ( hallcurrent11_t *ctx, hallcurrent11_cfg_t *cfg );
 /**
  * @brief Hall Current 11 default configuration function.
  * @details This function executes a default configuration of Hall Current 11
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #hallcurrent11_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

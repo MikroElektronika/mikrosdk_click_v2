@@ -3,13 +3,13 @@
  * @brief GPS 6 Click Example.
  *
  * # Description
- * This example demonstrates the use of GPS 6 click by reading and displaying
+ * This example demonstrates the use of GPS 6 Click by reading and displaying
  * the GPS coordinates.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and logger and enables the click board.
+ * Initializes the driver and logger and enables the Click board.
  *
  * ## Application Task
  * Reads the received data, parses the GPGGA info from it, and once it receives the position fix

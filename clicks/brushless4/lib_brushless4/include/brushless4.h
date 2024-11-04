@@ -153,7 +153,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void brushless4_cfg_setup ( brushless4_cfg_t *cfg );
@@ -163,7 +163,7 @@ void brushless4_cfg_setup ( brushless4_cfg_t *cfg );
  * @param brushless4 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 BRUSHLESS4_RETVAL brushless4_init ( brushless4_t *ctx, brushless4_cfg_t *cfg );
 
@@ -172,7 +172,7 @@ BRUSHLESS4_RETVAL brushless4_init ( brushless4_t *ctx, brushless4_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Brushless 4 click.
+ * @description This function executes default configuration for Brushless 4 Click.
  */
 void brushless4_default_cfg ( brushless4_t *ctx );
 
@@ -254,6 +254,6 @@ uint8_t brushless4_fg_get ( brushless4_t *ctx );
 #endif  // _BRUSHLESS4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

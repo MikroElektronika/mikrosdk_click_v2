@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# DIGI Isolator click
+# DIGI Isolator Click
 
 > DIGI Isolator Click is a compact add-on board that provides electrical isolation 
 > and signal conditioning for the serial peripheral interface and a UART interface. 
@@ -14,7 +14,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/digiisolator_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/digi-isolator-click)
+[Click Product page](https://www.mikroe.com/digi-isolator-click)
 
 ---
 
@@ -70,7 +70,7 @@ err_t digiisolator_get_d1_pin_voltage ( digiisolator_t *ctx, float *data_out );
 
 ## Example Description
 
-> This example demonstrates the use of the DIGI Isolator click board 
+> This example demonstrates the use of the DIGI Isolator Click board 
 > by reading and writing data by using SPI and UART serial interface 
 > and reading results of AD conversion.
 
@@ -117,7 +117,7 @@ void application_init ( void )
 ### Application Task
 
 > At the start, the demo application reads and checks the manufacturer ID and 
-> device ID of the connected Flash 11 click board by using SPI serial interface. 
+> device ID of the connected Flash 11 Click board by using SPI serial interface. 
 > After that, sends a "MikroE" message, reads the received data, 
 > and parses it by using UART serial interface in loopback mode. 
 > And finally, the demo app reads the results of the AD conversion of the D1 (AN) pin. 
@@ -179,7 +179,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

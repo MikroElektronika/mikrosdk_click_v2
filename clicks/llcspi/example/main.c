@@ -15,8 +15,8 @@
  * 
  * *note:* 
  * Connection between BarGraph and LLC-SPI is made through SPI interface.
- * You can connect a BarGraph click to LLC-SPI click with the wires to make connection between click boards.
- * We use the BarGraph click to demonstrate the functions of the LLC-SPI click.
+ * You can connect a BarGraph Click to LLC-SPI Click with the wires to make connection between Click boards.
+ * We use the BarGraph Click to demonstrate the functions of the LLC-SPI Click.
  * 
  * \author MikroE Team
  *

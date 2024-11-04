@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Color 13 click
+# Color 13 Click
 
 > Color 13 Click is a compact add-on board that measures the subtlest changes in light. This board features the APDS-9999, I2C compatible RGB, proximity detector, and vertical-cavity surface-emitting laser (VCSEL) in one optical module from Broadcom Limited.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/color_13_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/color-13-click)
+[Click Product page](https://www.mikroe.com/color-13-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t color13_get_proximity ( color13_t *ctx, uint16_t *ps_data );
 
 ## Example Description
 
-> This application showcases ability of click board to read RGB and IR data
+> This application showcases ability of Click board to read RGB and IR data
 from device. Also it can be configured to read proximity data and
 ALS data in lux units.
 
@@ -181,7 +181,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

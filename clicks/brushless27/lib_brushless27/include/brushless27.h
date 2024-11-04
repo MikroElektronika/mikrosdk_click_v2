@@ -258,7 +258,7 @@ typedef enum
 
 /**
  * @brief Brushless 27 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #brushless27_cfg_t object definition for detailed explanation.
@@ -270,7 +270,7 @@ void brushless27_cfg_setup ( brushless27_cfg_t *cfg );
 /**
  * @brief Brushless 27 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #brushless27_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -285,7 +285,7 @@ err_t brushless27_init ( brushless27_t *ctx, brushless27_cfg_t *cfg );
 /**
  * @brief Brushless 27 default configuration function.
  * @details This function executes a default configuration of Brushless 27
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #brushless27_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

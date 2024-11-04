@@ -1,15 +1,15 @@
 
 
 ---
-# UV click
+# UV Click
 
-> Design devices that warn you of excesive ultraviolet radiation levels with UV click. This click boards carries the ML8511 IC that is sensitive to UV-A (365-315 nm) and UV-B (315-280 nm) rays.
+> Design devices that warn you of excesive ultraviolet radiation levels with UV Click. This Click boards carries the ML8511 IC that is sensitive to UV-A (365-315 nm) and UV-B (315-280 nm) rays.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/uv_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/uv-click)
+[Click Product page](https://www.mikroe.com/uv-click)
 
 ---
 
@@ -66,7 +66,7 @@ void uv_calc_index ( uv_t *ctx, float data_in, uint8_t *data_out );
 
 ### Application Init 
 
-> Configuration of the click and log objects.
+> Configuration of the Click and log objects.
 
 ```c
 
@@ -140,7 +140,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

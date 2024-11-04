@@ -25,7 +25,7 @@
  * The application sends a refresh command which stores the
  * measurement data in registers. Measurements are acquired
  * for voltage, current and power on channel 1 of PAC1944
- * click board. The last 8 measurements are averaged and
+ * Click board. The last 8 measurements are averaged and
  * calculated in bipolar mode. Process is repeated every
  * two seconds.
  *

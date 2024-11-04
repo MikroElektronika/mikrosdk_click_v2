@@ -3,7 +3,7 @@
  * \brief Single Cell Click example
  * 
  * # Description
- * Demo application is used to shows basic controls Single Cell click board.
+ * Demo application is used to shows basic controls Single Cell Click board.
  *
  * The demo application is composed of two sections :
  * 
@@ -14,7 +14,7 @@
  * 
  * ## Application Task  
  * This is a example which demonstrates the use of Single Cell board.
- * This example shows the automatic control of the Single Cell click,
+ * This example shows the automatic control of the Single Cell Click,
  * enable and disable power the regulator output on 10 sec. 
  * 
  * \author MikroE Team
@@ -62,7 +62,7 @@ void application_init ( void )
     singlecell_default_cfg ( &singlecell );
    
     log_printf(&logger, "-------------------------\r\n");
-    log_printf(&logger, "    Single Cell click    \r\n");
+    log_printf(&logger, "    Single Cell Click    \r\n");
     log_printf(&logger, "-------------------------\r\n");
 
     Delay_ms ( 100 );

@@ -324,7 +324,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void proxfusion_cfg_setup ( proxfusion_cfg_t *cfg );
@@ -338,7 +338,7 @@ void proxfusion_cfg_setup ( proxfusion_cfg_t *cfg );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t proxfusion_init ( proxfusion_t *ctx, proxfusion_cfg_t *cfg );
 
@@ -350,7 +350,7 @@ err_t proxfusion_init ( proxfusion_t *ctx, proxfusion_cfg_t *cfg );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @details This function executes default configuration for ProxFusion click.
+ * @details This function executes default configuration for ProxFusion Click.
  *
  * @note Default configuration of the chip contains the settings :
  *      Sysyem register:
@@ -452,6 +452,6 @@ err_t proxfusion_set_event_reg ( proxfusion_t *ctx, uint8_t cfg );
 #endif  // _PROXFUSION_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

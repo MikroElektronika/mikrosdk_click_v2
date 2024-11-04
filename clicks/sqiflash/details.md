@@ -1,14 +1,14 @@
 
 ---
-# SQI FLASH click
+# SQI FLASH Click
 
-> SQI FLASH click is based on the SST26VF064B, a 64 Mbit Serial Quad I/O flash device from Microchip. The chip utilizes 4-bit multiplexed I/O serial interface to boost the performance. The click is a very fast solid-state, non-volatile data storage medium, that can be electrically erased and reprogrammed.
+> SQI FLASH Click is based on the SST26VF064B, a 64 Mbit Serial Quad I/O flash device from Microchip. The chip utilizes 4-bit multiplexed I/O serial interface to boost the performance. The Click is a very fast solid-state, non-volatile data storage medium, that can be electrically erased and reprogrammed.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/sqiflash_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/sqi-flash-click)
+[Click Product page](https://www.mikroe.com/sqi-flash-click)
 
 ---
 
@@ -70,7 +70,7 @@ void sqiflash_global_block_unlock( sqiflash_t *ctx );
 
 ### Application Init
 
-> SQI FLASH Driver Initialization, initializes the click by setting mikroBUS to
+> SQI FLASH Driver Initialization, initializes the Click by setting mikroBUS to
 > approprieate logic levels, performing global block unlock and chip erase functions,
 > reads manufacturer ID, memory type and device ID and logs it on USB UART terminal.
 
@@ -122,7 +122,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Writing data to click memory and displaying the read data via UART.
+> Writing data to Click memory and displaying the read data via UART.
 
 ```c
 
@@ -153,7 +153,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

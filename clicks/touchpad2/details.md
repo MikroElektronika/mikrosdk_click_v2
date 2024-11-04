@@ -1,6 +1,6 @@
 
 ---
-# TouchPad 2 click
+# TouchPad 2 Click
 
 Touchpad 2 Click is a compact add-on board that easily integrates projected capacitive touch into their applications. This board features the IQS525, a projected capacitive touch and proximity trackpad/touchscreen controller from Azoteq. It features best in class sensitivity, signal-to-noise ratio, and automatic tuning of electrodes, in addition to the multi-touch and multi-hover feature. This Click board™ is characterized by embedded gesture engine recognition for simple gestures (tap, swipes, hold), as well as built-in noise detection and filtering.
 
@@ -8,7 +8,7 @@ Touchpad 2 Click is a compact add-on board that easily integrates projected capa
   <img src="https://download.mikroe.com/images/click_for_ide/touchpad2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/touchpad-2-click)
+[Click Product page](https://www.mikroe.com/touchpad-2-click)
 
 ---
 
@@ -180,7 +180,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

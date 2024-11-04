@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "ECG 5 click",
+    "display_name": "ECG 5 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.ecg5",
     "product_link": "https://www.mikroe.com/ecg-5-click",
-    "short_description": "ECG 5 click can be used for the development of ECG and Heart-Rate (HR) applications. The Click board™ features the AD8232, an integrated bio-signal front end. This IC has many features necessary for providing accurate ECG measurements, including very high common-mode rejection ratio, high gain with DC blocking capability, adjustable high-pass and low-pass filters, integrated right leg drive (RLD), etc.",
+    "short_description": "ECG 5 Click can be used for the development of ECG and Heart-Rate (HR) applications. The Click board™ features the AD8232, an integrated bio-signal front end. This IC has many features necessary for providing accurate ECG measurements, including very high common-mode rejection ratio, high gain with DC blocking capability, adjustable high-pass and low-pass filters, integrated right leg drive (RLD), etc.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         2742
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.ECG5",
     "subdir_name": "lib_ecg5"
 }
+
 
 
 

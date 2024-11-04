@@ -3,13 +3,13 @@
  * @brief Clock Gen 6 Click Example.
  *
  * # Description
- * This example demonstrates the use of Clock Gen 6 click board which acts as 
+ * This example demonstrates the use of Clock Gen 6 Click board which acts as 
  * an astable oscillator.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which sets the digital
+ * Initializes the driver and performs the Click default configuration which sets the digital
  * potentiometer to max position and enables the clock output.
  *
  * ## Application Task

@@ -10,7 +10,7 @@
     ],
     "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "B102C click",
+    "display_name": "B102C Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -28,9 +28,10 @@
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
+    "version": "2.1.0.4",
     "cmake": true,
     "alias": "Click.B102C",
     "subdir_name": "lib_b102c"
 }
+
 

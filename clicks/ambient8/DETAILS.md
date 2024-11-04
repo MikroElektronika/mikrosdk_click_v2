@@ -1,9 +1,9 @@
 
 
 ---
-# Ambient 8 click
+# Ambient 8 Click
 
-Ambient 8 click is equipped with the ambient light sensor (ALS) IC, providing
+Ambient 8 Click is equipped with the ambient light sensor (ALS) IC, providing
 measurements of the ambient light intensity in a digital format.
 It utilizes the LTR-329ALS-01, an ALS with the I2C interface.
 
@@ -11,7 +11,7 @@ It utilizes the LTR-329ALS-01, an ALS with the I2C interface.
   <img src="https://download.mikroe.com/images/click_for_ide/ambient8_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ambient-8-click)
+[Click Product page](https://www.mikroe.com/ambient-8-click)
 
 ---
 
@@ -130,7 +130,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -271,7 +271,7 @@ extern "C"{
  *
  * @param cfg           Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void accel3_cfg_setup ( accel3_cfg_t *cfg );
@@ -282,7 +282,7 @@ void accel3_cfg_setup ( accel3_cfg_t *cfg );
  * @param accel3        Click object.
  * @param cfg           Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ACCEL3_RETVAL accel3_init ( accel3_t *ctx, accel3_cfg_t *cfg );
 
@@ -291,7 +291,7 @@ ACCEL3_RETVAL accel3_init ( accel3_t *ctx, accel3_cfg_t *cfg );
  *
  * @param ctx           Click object.
  *
- * @description This function executes default configuration for Accel3 click.
+ * @description This function executes default configuration for Accel3 Click.
  */
 void accel3_default_cfg ( accel3_t *ctx, accel3_cfg_t *cfg );
 
@@ -345,6 +345,6 @@ void accel3_read_data ( accel3_t *ctx, accel3_data_t *accel3_data );
 #endif  // _ACCEL3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

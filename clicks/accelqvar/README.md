@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# AccelQvar click
+# AccelQvar Click
 
 > Accel&Qvar Click is a compact add-on board for capturing precise acceleration measurements and detecting electric charge variations. This board features the LIS2DUXS12, an ultralow-power accelerometer from STMicroelectronics. Besides low power consumption, it also includes Qvar technology, artificial intelligence, and an anti-aliasing filter. This digital, 3-axis accelerometer has adjustable full scales (±2g to ±16g), output data rates (1.6Hz to 800Hz), and multiple operating modes to serve various applications.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/accelqvar_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/accelqvar-click)
+[Click Product page](https://www.mikroe.com/accelqvar-click)
 
 ---
 
@@ -178,7 +178,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

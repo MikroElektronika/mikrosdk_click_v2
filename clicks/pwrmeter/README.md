@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# PWR Meter click
+# PWR Meter Click
 
-PWR Meter click is a power measurement Click board™, capable of measuring voltage and current through the load, connected to either AC or DC power source. PWR Meter click uses the MCP39F511A, a very sophisticated monitoring IC from Microchip, with 16-bit processing core.
+PWR Meter Click is a power measurement Click board™, capable of measuring voltage and current through the load, connected to either AC or DC power source. PWR Meter Click uses the MCP39F511A, a very sophisticated monitoring IC from Microchip, with 16-bit processing core.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/pwrmeter_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pwr-meter-click)
+[Click Product page](https://www.mikroe.com/pwr-meter-click)
 
 ---
 
@@ -56,7 +56,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This click is capable of measuring voltage and current through the load, connected to either 
+> This Click is capable of measuring voltage and current through the load, connected to either 
 > AC or DC power source. It is used to calculate all the measurement parameters, returning 
 > values of multiple power parameters directly, over the UART interface, reducing the processing 
 > load on the host MCU. These parameters include active, reactive, and apparent power, current 
@@ -198,7 +198,7 @@ void application_task ( void )
 
 ## Note
 
-> Do not apply higher voltage than 60V to this board! This click is designed for lower voltage 
+> Do not apply higher voltage than 60V to this board! This Click is designed for lower voltage 
 > monitoring and evaluation of the MCP39F511A and its basic functionalities. 
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
@@ -212,7 +212,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

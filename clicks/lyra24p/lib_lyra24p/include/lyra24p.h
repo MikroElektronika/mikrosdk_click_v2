@@ -353,7 +353,7 @@ typedef enum
 
 /**
  * @brief LYRA 24P configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #lyra24p_cfg_t object definition for detailed explanation.
@@ -365,7 +365,7 @@ void lyra24p_cfg_setup ( lyra24p_cfg_t *cfg );
 /**
  * @brief LYRA 24P initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #lyra24p_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

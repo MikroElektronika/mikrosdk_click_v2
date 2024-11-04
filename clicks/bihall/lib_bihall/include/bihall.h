@@ -147,7 +147,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration
+ * @description This function initializes Click configuration
  * structure to init state.
  * @note All used pins will be set to unconnected state.
  */
@@ -159,7 +159,7 @@ void bihall_cfg_setup ( bihall_cfg_t *cfg );
  * @param cfg Click configuration structure.
  * 
  * @description This function initializes all necessary pins
- * and peripherals used for this click.
+ * and peripherals used for this Click.
  */
 BIHALL_RETVAL bihall_init ( bihall_t *ctx, bihall_cfg_t *cfg );
 
@@ -187,6 +187,6 @@ uint8_t bihall_det_mag_field ( bihall_t *ctx );
 #endif  // _BIHALL_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

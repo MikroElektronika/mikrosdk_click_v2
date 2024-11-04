@@ -1,7 +1,7 @@
 
 
 ---
-# Pressure 6 click
+# Pressure 6 Click
 
 Pressure 6 Click features a simple, yet highly accurate and reliable pressure sensor labeled as BM1386GLV, produced by ROHM. This sensor is a piezo-resistive pressure sensor with internal thermal compensation, which greatly simplifies the pressure reading.
 
@@ -9,7 +9,7 @@ Pressure 6 Click features a simple, yet highly accurate and reliable pressure se
   <img src="https://download.mikroe.com/images/click_for_ide/pressure6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pressure-6-click)
+[Click Product page](https://www.mikroe.com/pressure-6-click)
 
 ---
 
@@ -132,7 +132,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

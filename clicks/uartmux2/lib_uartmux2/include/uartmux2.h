@@ -239,7 +239,7 @@ typedef struct
 
 /**
  * @brief UART MUX 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #uartmux2_cfg_t object definition for detailed explanation.
@@ -251,7 +251,7 @@ void uartmux2_cfg_setup ( uartmux2_cfg_t *cfg );
 /**
  * @brief UART MUX 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #uartmux2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -267,7 +267,7 @@ err_t uartmux2_init ( uartmux2_t *ctx, uartmux2_cfg_t *cfg );
 /**
  * @brief UART MUX 2 default configuration function.
  * @details This function executes a default configuration of UART MUX 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #uartmux2_t object definition for detailed explanation.
 
@@ -309,7 +309,7 @@ err_t uartmux2_generic_read ( uartmux2_t *ctx, char *data_buf, uint16_t max_len 
 /**
  * @brief UART MUX 2 set operation mode function.
  * @details This function set a desired operation mode of the 
- * UART MUX 2 click board. 
+ * UART MUX 2 Click board. 
  * @param[in] ctx : Click context object.
  * See #uartmux2_t object definition for detailed explanation.
  * @param[in] op_mode : Operation mode
@@ -326,7 +326,7 @@ err_t uartmux2_set_operation_mode ( uartmux2_t *ctx, uint8_t op_mode );
 /**
  * @brief UART MUX 2 set channel function.
  * @details This function set a desired channel f the 
- * UART MUX 2 click board. 
+ * UART MUX 2 Click board. 
  * @param[in] ctx : Click context object.
  * See #uartmux2_t object definition for detailed explanation.
  * @param[in] mux_ch : Selected channel
@@ -359,7 +359,7 @@ err_t uartmux2_send_data ( uartmux2_t *ctx, char *tx_data );
 /**
  * @brief UART MUX 2 get INV pin status function.
  * @details This function get INV pin status ( RS232 status ) of the 
- * UART MUX 2 click board.  
+ * UART MUX 2 Click board.  
  * @param[in] ctx : Click context object.
  * See #uartmux2_t object definition for detailed explanation.
  * @return @li @c 0 - RS232 receiver input are unpowered,

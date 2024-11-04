@@ -1,15 +1,15 @@
 
 ---
-# LDC 1000 click
+# LDC 1000 Click
 
-LDC1000 click carries the world's first inductance-to-digital converter IC, along with a detachable sensor (an LC tank comprising a 36-turn PCB coil and a 100pF 1% NPO capacitor). The LDC1000 IC has a sub-micron resolution in short range applications; the board is ideal for highly precise short range measurements of the position, motion or composition of conductive targets.
+LDC1000 Click carries the world's first inductance-to-digital converter IC, along with a detachable sensor (an LC tank comprising a 36-turn PCB coil and a 100pF 1% NPO capacitor). The LDC1000 IC has a sub-micron resolution in short range applications; the board is ideal for highly precise short range measurements of the position, motion or composition of conductive targets.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ldc1000_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/ldc1000-click)
+[Click Product page](https://www.mikroe.com/ldc1000-click)
 
 ---
 
@@ -56,14 +56,14 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example showcases how to initialize and configure the logger and click modules and
+> This example showcases how to initialize and configure the logger and Click modules and
   read and display proximity and impendance data.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> This function initializes and configures the logger and click modules. Configuration data 
+> This function initializes and configures the logger and Click modules. Configuration data 
   is written to the: rp maximum/minimum, sensor frequency, LDC/Clock/Power registers. 
 
 ```c
@@ -139,7 +139,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -1,6 +1,6 @@
 
 ---
-# BATT-MON 2 click
+# BATT-MON 2 Click
 
 > BATT-MON 2 Click is a compact add-on board representing a battery monitoring solution. 
 > This board features the MAX17262, an ultra-low power I2C-configurable fuel-gauge IC which implements the ModelGauge™ m5 algorithm from Analog Devices. 
@@ -12,7 +12,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/battmon2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/batt-mon-2-click)
+[Click Product page](https://www.mikroe.com/batt-mon-2-click)
 
 ---
 
@@ -68,7 +68,7 @@ err_t battmon2_get_battery_percentage ( battmon2_t *ctx, float *percentage );
 
 ## Example Description
 
-> This example demonstrates the use of BATT-MON 2 click board by monitoring
+> This example demonstrates the use of BATT-MON 2 Click board by monitoring
 the measurements of battery voltage, current, capacity, percentage, time-to-empty or time-to-full,
 as well as the chip internal temperature.
 
@@ -182,7 +182,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

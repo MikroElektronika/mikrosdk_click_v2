@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# I2C MUX 3 click
+# I2C MUX 3 Click
 
 I2C MUX 3 Click is a compact add-on board that contains eight bidirectional translating switches dedicated for applications with I2C slave address conflicts. This board features the TCA9548APWR, a low voltage 8-channel I2C bus switch with an active-low reset input from Texas Instruments.
 
@@ -10,7 +10,7 @@ I2C MUX 3 Click is a compact add-on board that contains eight bidirectional tran
 </p>
 
 
-[click Product page](https://www.mikroe.com/i2c-mux-3-click)
+[Click Product page](https://www.mikroe.com/i2c-mux-3-click)
 
 ---
 
@@ -94,7 +94,7 @@ void application_init ( void )
     i2cmux3_hw_rst( &i2cmux3 );
     Delay_ms ( 100 );
     i2cmux3_ch_sel( &i2cmux3, 0 );
-    log_printf( &logger, " Please connect a 6DOF IMU 12 click to channel 0\r\n" );
+    log_printf( &logger, " Please connect a 6DOF IMU 12 Click to channel 0\r\n" );
     log_printf( &logger, "-------------------------------\r\n" );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
@@ -104,14 +104,14 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads the device ID of a 6DOF IMU 12 click (dev ID: 0x24) and displays it on the USB UART each second.
+> Reads the device ID of a 6DOF IMU 12 Click (dev ID: 0x24) and displays it on the USB UART each second.
 
 ```c
 
 void application_task ( void )
 {
     i2cmux3_rd_slv ( &i2cmux3, 0x68, 0x00, &id_val, 1 );
-    log_printf( &logger, " The click device ID is:  0x%.2X \r\n", ( uint16_t ) id_val );
+    log_printf( &logger, " The Click device ID is:  0x%.2X \r\n", ( uint16_t ) id_val );
     log_printf( &logger, "-------------------------------\r\n" );
     Delay_ms ( 1000 );
 }  
@@ -129,7 +129,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

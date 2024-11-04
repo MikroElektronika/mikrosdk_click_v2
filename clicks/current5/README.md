@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Current 5 click
+# Current 5 Click
 
 > Current 5 Click is a compact add-on board that provides a precise and accurate current sensing solution. This board features the INA381, a high-speed current-sense amplifier with an integrated comparator from Texas Instruments. This device has selectable operating modes (transparent or latched) and detects overcurrent conditions by measuring the voltage developed across a current shunt resistor. Then it compares that voltage to a user-defined threshold limit set by the comparator reference potentiometer. The current-shunt monitor can measure differential voltage signals on common-mode voltages that vary from –0.2V to 26V, independent of the supply voltage. This Click board™ delivers higher performance to applications such as test and measurement, load and power supplies monitoring, low-side phase motor control, and many more.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/current5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/current-5-click)
+[Click Product page](https://www.mikroe.com/current-5-click)
 
 ---
 
@@ -140,7 +140,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

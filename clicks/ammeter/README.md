@@ -3,15 +3,15 @@
  
 
 ---
-# Ammeter click
+# Ammeter Click
 
-Ammeter click is a mikroBUS add-on board with circuitry for measuring electric current (both AC and DC).
+Ammeter Click is a mikroBUS add-on board with circuitry for measuring electric current (both AC and DC).
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ammeter_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ammeter-click)
+[Click Product page](https://www.mikroe.com/ammeter-click)
 
 ---
 
@@ -47,13 +47,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- Function is used to measure amperage of a power consumer connected to the click board.
+- Function is used to measure amperage of a power consumer connected to the Click board.
 > float ammeter_amperage ( ammeter_t *ctx );
 
 ## Examples Description
 
 > 
-> Demo app measures and displays current by using Ammeter click board.
+> Demo app measures and displays current by using Ammeter Click board.
 > 
 
 **The demo application is composed of two sections :**
@@ -61,7 +61,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ### Application Init 
 
 >
-> Initalizes SPI, LOG and click drivers.
+> Initalizes SPI, LOG and Click drivers.
 > 
 
 ```c
@@ -99,8 +99,8 @@ void application_init ( void )
 ### Application Task
 
 >
-> This is an example that shows the capabilities of the Ammeter click by 
-  measuring amperage in miliampers. Ammeter click board can be used to saftly 
+> This is an example that shows the capabilities of the Ammeter Click by 
+  measuring amperage in miliampers. Ammeter Click board can be used to saftly 
   measure current up to 1A both AC and DC, in the case of AC, for peak to peak value.
 > 
 
@@ -120,7 +120,7 @@ void application_task ( void )
 ## Note
 
 > 
-> It is important to notice that this click board has its' own electronic 
+> It is important to notice that this Click board has its' own electronic 
   circuit, and may not be powered from the same source which we are measuring.
   Result will not be correct in that case.
 > 
@@ -136,7 +136,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

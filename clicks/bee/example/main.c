@@ -3,13 +3,13 @@
  * \brief Bee Click example
  * 
  * # Description
- * This example demonstrates the use of an BEE click board by showing
- * the communication between the two click boards.
+ * This example demonstrates the use of an BEE Click board by showing
+ * the communication between the two Click boards.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and configures the click board.
+ * Initializes the driver and configures the Click board.
  *
  * ## Application Task
  * Depending on the selected application mode, it reads all the received data or 

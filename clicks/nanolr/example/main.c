@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver, and performs the click default configuration.
+ * Initializes the driver, and performs the Click default configuration.
  * 
  * ## Application Task  
  * Depending on the selected mode, it reads all the received data or sends a desired message
@@ -34,7 +34,7 @@
 // #define DEMO_APP_RECEIVER
 #define DEMO_APP_TRANSMITTER
 
-#define TEXT_TO_SEND "MikroE - Nano LR click"
+#define TEXT_TO_SEND "MikroE - Nano LR Click"
 
 static nanolr_t nanolr;
 static log_t logger;

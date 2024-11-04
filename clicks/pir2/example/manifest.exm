@@ -3,6 +3,6 @@
     "description": "PIR 2 Click is a compact add-on board designed for high-performance motion detection applications. This board features the ZSLM323511, a dual-element balanced differential pyroelectric (PIR) sensor from Zilog. Key features include excellent EMI immunity, a low-profile surface mount package, and a typical field of view of 150 degrees on the X-axis and 139 degrees on the Y-axis. The board also integrates the ZCWM05GIV1 PIR lens for maximum IR transmissivity. Ideal for security systems, lighting control, and video doorbells, PIR 2 Click ensures reliable motion detection in various demanding environments.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","ZSLM323511"],
+    "hw" : ["Click","ZSLM323511"],
     "category" : ["Click Boards > Sensors > Motion"]
 }

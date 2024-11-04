@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "Charger 9 click",
+    "display_name": "Charger 9 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.charger9",
     "product_link": "https://www.mikroe.com/charger-9-click",
-    "short_description": "Charger 9 click is a Li-Ion (Li+, Li-Po) battery charger, capable of charging one, two or three battery cells.",
+    "short_description": "Charger 9 Click is a Li-Ion (Li+, Li-Po) battery charger, capable of charging one, two or three battery cells.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2831
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Charger9",
     "subdir_name": "lib_charger9"
 }
+
 
 
 

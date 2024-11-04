@@ -163,7 +163,7 @@ typedef enum
 
 /**
  * @brief DIGI POT 11 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #digipot11_cfg_t object definition for detailed explanation.
@@ -175,7 +175,7 @@ void digipot11_cfg_setup ( digipot11_cfg_t *cfg );
 /**
  * @brief DIGI POT 11 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #digipot11_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

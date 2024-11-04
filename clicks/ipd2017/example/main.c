@@ -3,7 +3,7 @@
  * @brief IPD 2017 Click Example.
  *
  * # Description
- * This example demonstrates the use of IPD 2017 click board by toggling the output state.
+ * This example demonstrates the use of IPD 2017 Click board by toggling the output state.
  *
  * The demo application is composed of two sections :
  *

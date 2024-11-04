@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# DIGI POT 9 click
+# DIGI POT 9 Click
 
 DIGI POT 9 Click is a compact add-on board used as a digitally controlled potentiometer. This board features the AD5235, a dual-channel, nonvolatile memory, digitally controlled potentiometer from Analog Devices. The AD5235's versatile programming via an SPI-compatible serial interface allows multiple modes of operation and adjustment. The resistor wiper position is determined by the RDAC register contents, which act as a scratchpad register, allowing unlimited changes of resistance settings. The nominal resistance of the RDAC between terminal A and terminal B (RAB) is 250 kΩ with 1024 positions (10-bit resolution).
 
@@ -9,7 +9,7 @@ DIGI POT 9 Click is a compact add-on board used as a digitally controlled potent
   <img src="https://download.mikroe.com/images/click_for_ide/digipot9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/digi-pot-9-click)
+[Click Product page](https://www.mikroe.com/digi-pot-9-click)
 
 ---
 
@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

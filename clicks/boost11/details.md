@@ -1,6 +1,6 @@
 
 ---
-# Boost 11 click
+# Boost 11 Click
 
 > Boost 11 Click is a compact add-on board that boosts low input voltages to a stable output. This board features the XCL105B331H2-G, a synchronous step-up DC/DC converter from TOREX Semi. It operates from an input voltage as low as 0.9V, ideal for devices using single Alkaline or Nickel-metal hydride batteries, with an output fixed at 3.3V. It features an EN pin for easy start-up and standby mode and supports both 3.3V and 5V logic levels. This versatility makes Boost 11 Click suitable for industrial equipment, IoT devices, wearables, and applications prioritizing battery life.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/boost11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/boost-11-click)
+[Click Product page](https://www.mikroe.com/boost-11-click)
 
 ---
 
@@ -59,7 +59,7 @@ err_t boost11_read_an_pin_voltage ( boost11_t *ctx, float *data_out );
 
 ## Example Description
 
-> This example demonstrates the use of Boost 11 click board 
+> This example demonstrates the use of Boost 11 Click board 
 > by controlling the output state.
 
 **The demo application is composed of two sections :**
@@ -132,7 +132,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

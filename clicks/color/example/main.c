@@ -4,7 +4,7 @@
  * 
  * # Description
  * This demo shows color detection/recognition 
- * functionality of the click.
+ * functionality of the Click.
  *
  * The demo application is composed of two sections :
  * 

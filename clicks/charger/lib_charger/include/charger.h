@@ -217,7 +217,7 @@ typedef enum
 
 /**
  * @brief Charger configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #charger_cfg_t object definition for detailed explanation.
@@ -229,7 +229,7 @@ void charger_cfg_setup ( charger_cfg_t *cfg );
 /**
  * @brief Charger driver interface setup function.
  * @details This function sets a communication GPIO pin which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #charger_cfg_t object definition for detailed explanation.
  * @param[in] gpio_sel : GPIO pin selection.
@@ -245,7 +245,7 @@ void charger_gpio_selection ( charger_cfg_t *cfg, charger_gpio_sel_t gpio_sel );
 /**
  * @brief Charger initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #charger_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -260,7 +260,7 @@ err_t charger_init ( charger_t *ctx, charger_cfg_t *cfg );
 /**
  * @brief Charger default configuration function.
  * @details This function executes a default configuration of Charger
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #charger_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -437,7 +437,7 @@ err_t charger_read_current ( charger_t *ctx, float *current );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @note No battery should be connected to the click board during this calibration.
+ * @note No battery should be connected to the Click board during this calibration.
  */
 err_t charger_calibrate_current ( charger_t *ctx );
 

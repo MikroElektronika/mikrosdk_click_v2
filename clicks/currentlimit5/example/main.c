@@ -3,14 +3,14 @@
  * @brief CurrentLimit5 Click example
  *
  * # Description
- * This example demonstrates the use of Current Limit 5 click board by limiting
+ * This example demonstrates the use of Current Limit 5 Click board by limiting
  * the current to a certain value and displaying an appropriate message when the current
  * reaches the limit.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which sets
+ * Initializes the driver and performs the Click default configuration which sets
  * the current limit to 200mA.
  *
  * ## Application Task

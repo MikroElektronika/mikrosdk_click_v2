@@ -1,6 +1,6 @@
 
 ---
-# LED Flash 4 click
+# LED Flash 4 Click
 
 > LED Flash 4 Click is a compact add-on board for high-performance LED flash and torch applications. This board features the AS1170, a high-current LED driver from ams OSRAM. The AS1170 operates as an inductive, highly efficient DC-DC step-up converter with an external power supply range of 2.7V to 4.4V, featuring two internal current sinks for independent control of onboard flash LEDs. It includes essential protection functions such as flash timeout, overvoltage, overtemperature, undervoltage, and short circuit protection, ensuring reliable operation even in demanding environments.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ledflash4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/led-flash-4-click)
+[Click Product page](https://www.mikroe.com/led-flash-4-click)
 
 ---
 
@@ -69,14 +69,14 @@ void ledflash4_set_stb_pin ( ledflash4_t *ctx, uint8_t state );
 
 ## Example Description
 
-> This example demonstrates the use of LED Flash 4 click board by toggling the LEDs output.
+> This example demonstrates the use of LED Flash 4 Click board by toggling the LEDs output.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which sets
-the click in flash mode with the LED current of 50mA for both LEDs. The strobe pin is set to active high level type.
+> Initializes the driver and performs the Click default configuration which sets
+the Click in flash mode with the LED current of 50mA for both LEDs. The strobe pin is set to active high level type.
 
 ```c
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

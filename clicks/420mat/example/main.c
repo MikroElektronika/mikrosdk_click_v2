@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes click SPI driver.
+ * Initializes Click SPI driver.
  * 
  * ## Application Task  
  * Periodically changes Iout value.

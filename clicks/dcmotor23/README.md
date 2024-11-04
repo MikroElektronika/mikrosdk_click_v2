@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# DC Motor 23 click
+# DC Motor 23 Click
 
 > DC Motor 23 Click is a compact add-on board with a brushed DC motor driver. 
 > This board features the TB67H480FNG, a dual-channel, H-bridge, brushed DC motor driver from Toshiba Semiconductor. 
@@ -14,7 +14,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dcmotor23_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dc-motor-23-click)
+[Click Product page](https://www.mikroe.com/dc-motor-23-click)
 
 ---
 
@@ -75,14 +75,14 @@ err_t dcmotor23_set_decay ( dcmotor23_t *ctx, uint8_t sel_motor );
 
 ## Example Description
 
-> This example demonstrates the use of DC Motor 23 click board™. 
+> This example demonstrates the use of DC Motor 23 Click board™. 
 > by driving the motors in both direction every 3 seconds.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration 
+> Initializes the driver and performs the Click default configuration 
 > which sets the output torque to 100%.
 
 ```c
@@ -199,7 +199,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,12 +3,12 @@
  * \brief Eink154Inch Click example
  * 
  * # Description
- * This application demonstrates the use of eINK click board.
+ * This application demonstrates the use of eINK Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and configures the click board for 1.54 inch eINK display.
+ * Initializes the driver and configures the Click board for 1.54 inch eINK display.
  * After that, if the TEXT mode is supported, shows a desired text messages on the display.
  * 
  * ## Application Task  

@@ -1,8 +1,8 @@
 {
     "name": "2X5W AMP",
-    "description": "2x5W AMP click functions as an amplifier and features the TDA7491LP 2x5-watt dual BTL class-D audio amplifier. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over the following pins on the mikroBUS™ line: AN, RST, CS, PWM, INT.",
+    "description": "2x5W AMP Click functions as an amplifier and features the TDA7491LP 2x5-watt dual BTL class-D audio amplifier. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over the following pins on the mikroBUS™ line: AN, RST, CS, PWM, INT.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TDA7491LP"],
+    "hw" : ["Click","TDA7491LP"],
     "category" : ["	Amplifier"] 
 }

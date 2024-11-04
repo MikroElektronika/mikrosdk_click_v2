@@ -1,6 +1,6 @@
 
 ---
-# Analog MUX 3 click
+# Analog MUX 3 Click
 
 Analog MUX 3 Click is a compact add-on board that switches one of the eight inputs to one output. This board features the ADG738, a CMOS analog matrix switch with a serially-controlled SPI interface from Analog Devices. In an active state, the ADG738 conducts equally well in both directions, making it suitable for multiplexing and demultiplexing applications. It can also be configured as a type of switch array where any, all, or none of eight switches may be closed any time. All channels exhibit ‘break-before-make switching action, preventing momentary shorting when switching channels. This Click board™ is suitable for a wide range of applications, from industrial and instrumentation to medical, consumer, communications, and automotive systems.
 
@@ -8,7 +8,7 @@ Analog MUX 3 Click is a compact add-on board that switches one of the eight inpu
   <img src="https://download.mikroe.com/images/click_for_ide/analog_mux_3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/analog-mux-3-click)
+[Click Product page](https://www.mikroe.com/analog-mux-3-click)
 
 ---
 
@@ -69,7 +69,7 @@ err_t analogmux3_read_an_pin_voltage ( analogmux3_t *ctx, float *data_out );
 
 ## Example Description
 
-> This is an example that demonstrates the use of the Analog MUX 3 click board.
+> This is an example that demonstrates the use of the Analog MUX 3 Click board.
 > This application controls the multiplexing of a single input channel
 > with an eight-channel matrix switch.
 
@@ -127,7 +127,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-> This is an example that shows the use of a Analog MUX 3 click board.
+> This is an example that shows the use of a Analog MUX 3 Click board.
 > In this example, we switch from channel AN0 to channel AN7, 
 > read and display the analog value and voltage on the active channel.
 > Results are being sent to the Usart Terminal where you can track their changes.
@@ -171,7 +171,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

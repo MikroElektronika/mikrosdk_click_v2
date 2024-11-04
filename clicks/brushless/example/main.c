@@ -3,15 +3,15 @@
  * \brief Brushless Click example
  * 
  * # Description
- * This example showcases how to initialize and use the Brushless click. 
- * The click has a brushless motor driver which controls the work 
+ * This example showcases how to initialize and use the Brushless Click. 
+ * The Click has a brushless motor driver which controls the work 
  * of the motor through the BLDC terminal. 
  * In order for this example to work a motor and a power supply are needed. 
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules.
+ * This function initializes and configures the logger and Click modules.
  * 
  * ## Application Task  
  * This is an example that demonstrates the use of a Brushless Click board.

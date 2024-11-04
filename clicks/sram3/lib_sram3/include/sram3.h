@@ -196,7 +196,7 @@ typedef enum
 
 /**
  * @brief SRAM 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #sram3_cfg_t object definition for detailed explanation.
@@ -208,7 +208,7 @@ void sram3_cfg_setup ( sram3_cfg_t *cfg );
 /**
  * @brief SRAM 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #sram3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -358,7 +358,7 @@ void sram3_store( sram3_t *ctx );
 
 /**
  * @brief SRAM 3 changing function.
- * @details Function that puts SRAM3 click to hibernate mode.
+ * @details Function that puts SRAM3 Click to hibernate mode.
  * @param[in] ctx : Click context object.
  * See #sram3_t object definition for detailed explanation.
  * @return Nothing.
@@ -369,7 +369,7 @@ void sram3_hibernate_start( sram3_t *ctx );
 
 /**
  * @brief SRAM 3 changing function.
- * @details Function that ends SRAM3 click to hibernate mode.
+ * @details Function that ends SRAM3 Click to hibernate mode.
  * @param[in] ctx : Click context object.
  * See #sram3_t object definition for detailed explanation.
  * @return Nothing.
@@ -402,7 +402,7 @@ void sram3_release_hold( sram3_t *ctx );
 
 /**
  * @brief SRAM 3 reading number function.
- * @details Function that reads serial number of click.
+ * @details Function that reads serial number of Click.
  * @param[in] ctx : Click context object.
  * See #sram3_t object definition for detailed explanation.
  * @param[in] buf : Buffer to be written to.
@@ -414,7 +414,7 @@ void sram3_read_serial( sram3_t *ctx, uint8_t *buf );
 
 /**
  * @brief SRAM 3 writing number function.
- * @details Function that writes serial number of click.
+ * @details Function that writes serial number of Click.
  * @param[in] ctx : Click context object.
  * See #sram3_t object definition for detailed explanation.
  * @param[in] buf : Buffer to be written to.

@@ -1,8 +1,8 @@
 {
     "name": "VREG 2 Click",
-    "description": "VREG 2 click is a voltage regulator click, with outstanding performances.",
+    "description": "VREG 2 Click is a voltage regulator Click, with outstanding performances.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","LM2596","LM317","LM358"],
+    "hw" : ["Click","LM2596","LM317","LM358"],
     "category" : ["Buck"] 
 }

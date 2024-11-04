@@ -339,7 +339,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void mbusrf4_cfg_setup ( mbusrf4_cfg_t *cfg );
@@ -350,7 +350,7 @@ void mbusrf4_cfg_setup ( mbusrf4_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MBUSRF4_RETVAL mbusrf4_init ( mbusrf4_t *ctx, mbusrf4_cfg_t *cfg );
 
@@ -436,6 +436,6 @@ uint8_t mbusrf4_get_state_ind ( mbusrf4_t *ctx );
 #endif  // _MBUSRF4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

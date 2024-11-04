@@ -3,13 +3,13 @@
  * @brief GNSS 17 Click Example.
  *
  * # Description
- * This example demonstrates the use of GNSS 17 click by reading and displaying
+ * This example demonstrates the use of GNSS 17 Click by reading and displaying
  * the GNSS coordinates.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and resets the click board.
+ * Initializes the driver and resets the Click board.
  *
  * ## Application Task
  * Reads the received data, parses the NMEA GGA info from it, and once it receives 

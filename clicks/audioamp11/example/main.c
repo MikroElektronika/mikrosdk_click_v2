@@ -3,8 +3,8 @@
  * @brief AudioAMP 11 Click example
  *
  * # Description
- * This library contains API for the AudioAMP 11 click driver.
- * This demo application shows use of a AudioAMP 11 click board™.
+ * This library contains API for the AudioAMP 11 Click driver.
+ * This demo application shows use of a AudioAMP 11 Click board™.
  *
  * The demo application is composed of two sections :
  *
@@ -14,7 +14,7 @@
  * performs power-up sequence, sets the volume level to 0.
  *
  * ## Application Task
- * This example demonstrates the use of the AudioAMP 11 click board™.
+ * This example demonstrates the use of the AudioAMP 11 Click board™.
  * If GAIN SEL switches are set to 12dB, the app performs circles 
  * switching the volume from -20.5 dB to 12 dB.
  * If the GAIN SEL switches are different, the app sets the volume level to 31 (maximum).

@@ -3,7 +3,7 @@
  * @brief Boost 7 Click Example.
  *
  * # Description
- * This example demonstrates the use of Boost 7 click board by controlling
+ * This example demonstrates the use of Boost 7 Click board by controlling
  * the V- and V+ outputs state.
  *
  * The demo application is composed of two sections :

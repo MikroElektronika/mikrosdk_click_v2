@@ -173,7 +173,7 @@ typedef enum
 
 /**
  * @brief MUX 9 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #mux9_cfg_t object definition for detailed explanation.
@@ -185,7 +185,7 @@ void mux9_cfg_setup ( mux9_cfg_t *cfg );
 /**
  * @brief MUX 9 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #mux9_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -202,7 +202,7 @@ err_t mux9_init ( mux9_t *ctx, mux9_cfg_t *cfg );
  * @details This function executes the reset 
  * of the  ADG1438B Serially Controlled, ±15 V/+12 V/±5 V, 
  * 8-Channel/4-Channel, iCMOS Multiplexers/Matrix Switches
- * on the MUX 9 click board™.
+ * on the MUX 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #mux9_t object definition for detailed explanation.
  * @return Nothing.
@@ -216,7 +216,7 @@ void mux9_reset ( mux9_t *ctx );
  * @details This function turns on all switches
  * of the ADG1438B Serially Controlled, ±15 V/+12 V/±5 V, 
  * 8-Channel/4-Channel, iCMOS Multiplexers/Matrix Switches
- * on the MUX 9 click board™.
+ * on the MUX 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #mux9_t object definition for detailed explanation.
  * @return Nothing.
@@ -230,7 +230,7 @@ void mux9_enable ( mux9_t *ctx );
  * @details This function turns off all switches
  * of the ADG1438B Serially Controlled, ±15 V/+12 V/±5 V, 
  * 8-Channel/4-Channel, iCMOS Multiplexers/Matrix Switches
- * on the MUX 9 click board™.
+ * on the MUX 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #mux9_t object definition for detailed explanation.
  * @return Nothing.
@@ -258,7 +258,7 @@ err_t mux9_generic_write ( mux9_t *ctx, uint8_t data_in );
  * @details This function enable is the selected channel
  * of the ADG1438B Serially Controlled, ±15 V/+12 V/±5 V, 
  * 8-Channel/4-Channel, iCMOS Multiplexers/Matrix Switches
- * on the MUX 9 click board™.
+ * on the MUX 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #mux9_t object definition for detailed explanation.
  * @param[in] sel_ch : Selection of the desired channel [1-8].

@@ -174,7 +174,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void proximity3_cfg_setup ( proximity3_cfg_t *cfg );
@@ -188,13 +188,13 @@ void proximity3_cfg_setup ( proximity3_cfg_t *cfg );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t proximity3_init ( proximity3_t *ctx, proximity3_cfg_t *cfg );
 
 /**
  * @brief Proximity 3 default configuration function.
- * @details This function executes a default configuration of Proximity 3 click board.
+ * @details This function executes a default configuration of Proximity 3 Click board.
  * @param[in] ctx : Click context object.
  * See #proximity3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -259,6 +259,6 @@ uint16_t proximity3_read_proximity ( proximity3_t *ctx );
 #endif  // _PROXIMITY3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

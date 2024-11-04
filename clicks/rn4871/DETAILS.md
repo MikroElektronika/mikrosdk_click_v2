@@ -1,14 +1,14 @@
 
 ---
-# RN4871 click
+# RN4871 Click
 
-RN4871 click carries the RN4871 Bluetooth® 4.2 low energy module from Microchip.The click is designed to run on a 3.3V power supply. It uses ASCII Command Interface over UART for communication with target microcontroller, with additional functionality provided by the following pins on the mikroBUS™ line: RST, CS, and INT.
+RN4871 Click carries the RN4871 Bluetooth® 4.2 low energy module from Microchip.The Click is designed to run on a 3.3V power supply. It uses ASCII Command Interface over UART for communication with target microcontroller, with additional functionality provided by the following pins on the mikroBUS™ line: RST, CS, and INT.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/rn4871_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rn4871-click)
+[Click Product page](https://www.mikroe.com/rn4871-click)
 
 ---
 
@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

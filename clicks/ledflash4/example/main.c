@@ -3,14 +3,14 @@
  * @brief LED Flash 4 Click example
  *
  * # Description
- * This example demonstrates the use of LED Flash 4 click board by toggling
+ * This example demonstrates the use of LED Flash 4 Click board by toggling
  * the LEDs output.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which sets
- * the click in flash mode with the LED current of 50mA for both LEDs. The strobe
+ * Initializes the driver and performs the Click default configuration which sets
+ * the Click in flash mode with the LED current of 50mA for both LEDs. The strobe
  * pin is set to active high level type.
 
  * ## Application Task

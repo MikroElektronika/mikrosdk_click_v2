@@ -401,7 +401,7 @@ typedef struct
 
 /**
  * @brief nvSRAM 4 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #nvsram4_cfg_t object definition for detailed explanation.
@@ -413,7 +413,7 @@ void nvsram4_cfg_setup ( nvsram4_cfg_t *cfg );
 /**
  * @brief nvSRAM 4 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -429,7 +429,7 @@ err_t nvsram4_init ( nvsram4_t *ctx, nvsram4_cfg_t *cfg );
 /**
  * @brief nvSRAM 4 default configuration function.
  * @details This function executes a default configuration of nvSRAM 4
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * 
@@ -443,7 +443,7 @@ void nvsram4_default_cfg ( nvsram4_t *ctx );
  * @details This function writes a desired number of data bytes starting from
  * the selected register by using SPI serial interface 
  * of the CY14B101P, 1-Mbit (128K × 8) Serial (SPI) nvSRAM with Real-Time Clock
- * on the nvSRAM 4 click.
+ * on the nvSRAM 4 Click.
  * @param[in] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * @param[in] reg : Start register address.
@@ -462,7 +462,7 @@ err_t nvsram4_generic_write ( nvsram4_t *ctx, uint8_t reg, uint8_t *data_in, uin
  * @details This function reads a desired number of data bytes starting from
  * the selected register by using SPI serial interface
  * of the CY14B101P, 1-Mbit (128K × 8) Serial (SPI) nvSRAM with Real-Time Clock
- * on the nvSRAM 4 click.
+ * on the nvSRAM 4 Click.
  * @param[in] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * @param[in] reg : Start register address.
@@ -523,7 +523,7 @@ void nvsram4_write_status ( nvsram4_t *ctx, uint8_t st_data );
  * of data bytes starting from
  * the selected register by using SPI serial interface
  * of the CY14B101P, 1-Mbit (128K × 8) Serial (SPI) nvSRAM with Real-Time Clock
- * on the nvSRAM 4 click.
+ * on the nvSRAM 4 Click.
  * @param[in] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * @param[in] mem_addr : Start memory address.
@@ -543,7 +543,7 @@ err_t nvsram4_burst_read_memory ( nvsram4_t *ctx, uint32_t mem_addr, uint8_t *da
  * of data bytes starting from
  * the selected memory address by using SPI serial interface
  * of the CY14B101P, 1-Mbit (128K × 8) Serial (SPI) nvSRAM with Real-Time Clock
- * on the nvSRAM 4 click.
+ * on the nvSRAM 4 Click.
  * @param[in] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * @param[in] mem_addr : Start memory address.
@@ -562,7 +562,7 @@ err_t nvsram4_burst_write_memory ( nvsram4_t *ctx, uint32_t mem_addr, uint8_t *d
  * @details This function reads a device ID
  * by using SPI serial interface
  * of the CY14B101P, 1-Mbit (128K × 8) Serial (SPI) nvSRAM with Real-Time Clock
- * on the nvSRAM 4 click.
+ * on the nvSRAM 4 Click.
  * @param[in] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * @return Device ID.
@@ -577,7 +577,7 @@ uint32_t nvsram4_read_id ( nvsram4_t *ctx );
  * @details This function reads a desired the bytes of data from
  * the selected rtc register by using SPI serial interface
  * of the CY14B101P, 1-Mbit (128K × 8) Serial (SPI) nvSRAM with Real-Time Clock
- * on the nvSRAM 4 click.
+ * on the nvSRAM 4 Click.
  * @param[in] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * @param[in] rtc_reg : RTC register address.
@@ -593,7 +593,7 @@ uint8_t nvsram4_rtc_read_reg ( nvsram4_t *ctx, uint8_t rtc_reg );
  * @details This function writes a desired the bytes of data from
  * the selected rtc register by using SPI serial interface 
  * of the CY14B101P, 1-Mbit (128K × 8) Serial (SPI) nvSRAM with Real-Time Clock
- * on the nvSRAM 4 click. 
+ * on the nvSRAM 4 Click. 
  * @param[in] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * @param[in] rtc_reg : RTC register address.
@@ -609,7 +609,7 @@ void nvsram4_rtc_write_reg ( nvsram4_t *ctx, uint8_t rtc_reg, uint8_t data_in );
  * @brief nvSRAM 4 enable rtc register write function.
  * @details This function enable write rtc register of the
  * CY14B101P, 1-Mbit (128K × 8) Serial (SPI) nvSRAM with Real-Time Clock
- * on the nvSRAM 4 click. 
+ * on the nvSRAM 4 Click. 
  * @param[in] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * @return Nothing.
@@ -623,7 +623,7 @@ void nvsram4_enable_rtc_write ( nvsram4_t *ctx );
  * @brief nvSRAM 4 disable rtc register write function.
  * @details This function disable write rtc register 
  * of the CY14B101P, 1-Mbit (128K × 8) Serial (SPI) nvSRAM with Real-Time Clock
- * on the nvSRAM 4 click. 
+ * on the nvSRAM 4 Click. 
  * @param[in] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * @return Nothing.
@@ -637,7 +637,7 @@ void nvsram4_disable_rtc_write ( nvsram4_t *ctx );
  * @brief nvSRAM 4 get RTC time function.
  * @details This function get RTC time data structure
  * of the CY14B101P, 1-Mbit (128K × 8) Serial (SPI) nvSRAM with Real-Time Clock
- * on the nvSRAM 4 click. 
+ * on the nvSRAM 4 Click. 
  * @param[in] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * @param[out] rtc_time : RTC time context object.
@@ -652,7 +652,7 @@ void nvsram4_get_rtc_time ( nvsram4_t *ctx, nvsram4_rtc_time_t *rtc_time );
  * @brief nvSRAM 4 set RTC time function.
  * @details This function set RTC time data structure
  * of the CY14B101P, 1-Mbit (128K × 8) Serial (SPI) nvSRAM with Real-Time Clock
- * on the nvSRAM 4 click. 
+ * on the nvSRAM 4 Click. 
  * @param[in] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * @param[in] rtc_time : RTC time context object.
@@ -668,7 +668,7 @@ err_t nvsram4_set_rtc_time ( nvsram4_t *ctx, nvsram4_rtc_time_t rtc_time );
  * @brief nvSRAM 4 get RTC date function.
  * @details This function get RTC date data structure
  * of the CY14B101P, 1-Mbit (128K × 8) Serial (SPI) nvSRAM with Real-Time Clock
- * on the nvSRAM 4 click. 
+ * on the nvSRAM 4 Click. 
  * @param[in] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * @param[out] rtc_date : RTC date context object.
@@ -683,7 +683,7 @@ void nvsram4_get_rtc_date ( nvsram4_t *ctx, nvsram4_rtc_date_t *rtc_date );
  * @brief nvSRAM 4 set RTC date function.
  * @details This function set RTC date data structure
  * of the CY14B101P, 1-Mbit (128K × 8) Serial (SPI) nvSRAM with Real-Time Clock
- * on the nvSRAM 4 click. 
+ * on the nvSRAM 4 Click. 
  * @param[in] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * @param[in] rtc_date : RTC date context object.
@@ -699,7 +699,7 @@ err_t nvsram4_set_rtc_date ( nvsram4_t *ctx, nvsram4_rtc_date_t rtc_date );
  * @brief nvSRAM 4 get RTC alarm function.
  * @details This function get RTC alarm structure
  * of the CY14B101P, 1-Mbit (128K × 8) Serial (SPI) nvSRAM with Real-Time Clock
- * on the nvSRAM 4 click. 
+ * on the nvSRAM 4 Click. 
  * @param[in] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * @param[out] rtc_alarm : RTC alarm context object.
@@ -714,7 +714,7 @@ void nvsram4_get_rtc_alarm ( nvsram4_t *ctx, nvsram4_rtc_alarm_t *rtc_alarm );
  * @brief nvSRAM 4 set RTC alarm function.
  * @details This function set RTC date alarm structure
  * of the CY14B101P, 1-Mbit (128K × 8) Serial (SPI) nvSRAM with Real-Time Clock
- * on the nvSRAM 4 click. 
+ * on the nvSRAM 4 Click. 
  * @param[in] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * @param[in] rtc_alarm : RTC alarm context object.
@@ -730,7 +730,7 @@ err_t nvsram4_set_rtc_alarm ( nvsram4_t *ctx, nvsram4_rtc_alarm_t rtc_alarm );
  * @brief nvSRAM 4 set hold function.
  * @details This function set hold by setting the HLD pin state
  * of the CY14B101P, 1-Mbit (128K × 8) Serial (SPI) nvSRAM with Real-Time Clock
- * on the nvSRAM 4 click. 
+ * on the nvSRAM 4 Click. 
  * @param[in] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * @param[in] en_hold : 
@@ -749,7 +749,7 @@ err_t nvsram4_hold ( nvsram4_t *ctx, uint8_t en_hold );
  * @brief nvSRAM 4 hardware store function.
  * @details This function set hardware store by setting the HSB pin state
  * of the CY14B101P, 1-Mbit (128K × 8) Serial (SPI) nvSRAM with Real-Time Clock
- * on the nvSRAM 4 click. 
+ * on the nvSRAM 4 Click. 
  * @param[in] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * @param[in] en_hw_store : 
@@ -768,7 +768,7 @@ err_t nvsram4_hardware_store ( nvsram4_t *ctx, uint8_t en_hw_store );
  * @brief nvSRAM 4 write protection function.
  * @details This function set write protection by setting the WP pin state
  * of the CY14B101P, 1-Mbit (128K × 8) Serial (SPI) nvSRAM with Real-Time Clock
- * on the nvSRAM 4 click. 
+ * on the nvSRAM 4 Click. 
  * @param[in] ctx : Click context object.
  * See #nvsram4_t object definition for detailed explanation.
  * @param[in] en_wp : 

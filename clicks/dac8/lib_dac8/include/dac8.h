@@ -305,7 +305,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  *
  * @note All used pins will be set to unconnected state.
  */
@@ -317,7 +317,7 @@ void dac8_cfg_setup ( dac8_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 DAC8_RETVAL dac8_init ( dac8_t *ctx, dac8_cfg_t *cfg, uint8_t master_mode );
 
@@ -557,6 +557,6 @@ void dac8_device_config ( dac8_t *ctx, dac8_cfg_data_t cfg_data );
 #endif  // _DAC8_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

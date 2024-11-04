@@ -4,20 +4,20 @@
  *
  * # Description
  * Demo app measures and displays resistance of a resistor connected 
- * to the R Meter click board.
+ * to the R Meter Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initalizes SPI serial communication, LOG module and click driver.
+ * Initalizes SPI serial communication, LOG module and Click driver.
  * Also sets the app callback handler.
  *
  * ## Application Task
- * This is an example that shows the capabilities of the R Meter click by 
+ * This is an example that shows the capabilities of the R Meter Click by 
  * measuring the target resistance.
  *
  * *note:*
- * R Meter click is a handy tool but it is not to be used as a high precision 
+ * R Meter Click is a handy tool but it is not to be used as a high precision 
  * instrument! The linearity of the OP Amplifier impacts the measurement.
  * The range of resistance measurement goes from 1 ohm to 1M9 ohms.
  *

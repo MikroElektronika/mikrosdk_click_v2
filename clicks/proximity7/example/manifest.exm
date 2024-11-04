@@ -1,8 +1,8 @@
 {
     "name": "PROXIMITY 7 Click",
-    "description": "<Proximity 7 click is an advanced proximity and ambient light sensing Click board™. It features the ADPS9930, a digital sensor IC equipped with two photodiodes (PD) and an IR LED, driven by a proprietary LED driver circuit. It allows an accurate proximity detection for a maximum distance of 100mm.>",
+    "description": "<Proximity 7 Click is an advanced proximity and ambient light sensing Click board™. It features the ADPS9930, a digital sensor IC equipped with two photodiodes (PD) and an IR LED, driven by a proprietary LED driver circuit. It allows an accurate proximity detection for a maximum distance of 100mm.>",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","ADPS9930"],
+    "hw" : ["Click","ADPS9930"],
     "category" : ["Proximity"] 
 }

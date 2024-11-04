@@ -3,13 +3,13 @@
  * @brief 10x10 RGB 2 Click example
  *
  * # Description
- * This example demonstrates the use of the 10x10 RGB 2 click board by showing
+ * This example demonstrates the use of the 10x10 RGB 2 Click board by showing
  * a practical example of using the implemented functions.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Displays digits 0-9 first, then writes RGB chars and demonstrates the rotation of characters.

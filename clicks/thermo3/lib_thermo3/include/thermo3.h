@@ -152,7 +152,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void thermo3_cfg_setup ( thermo3_cfg_t *cfg );
@@ -163,7 +163,7 @@ void thermo3_cfg_setup ( thermo3_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 THERMO3_RETVAL thermo3_init ( thermo3_t *ctx, thermo3_cfg_t *cfg );
 
@@ -172,7 +172,7 @@ THERMO3_RETVAL thermo3_init ( thermo3_t *ctx, thermo3_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Thermo3 click.
+ * @description This function executes default configuration for Thermo3 Click.
  */
 void thermo3_default_cfg ( thermo3_t *ctx );
 
@@ -215,6 +215,6 @@ void thermo3_generic_read ( thermo3_t *ctx, uint8_t reg, uint8_t *data_buf, uint
 #endif  // _THERMO3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

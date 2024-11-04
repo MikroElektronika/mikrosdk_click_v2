@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# GNSS 17 click
+# GNSS 17 Click
 
 > GNSS 17 Click is a compact add-on board for precise and reliable global navigation and positioning. This board features the M20071, an integrated full-function GNSS receiver module from Antenova, which features the MediaTek AG3335MN flash chip. This module can concurrently track multiple GNSS constellations, including GPS, GLONASS, GALILEO, BEIDOU, and QZSS, ensuring accurate positioning even in dense urban environments. It includes advanced features like multi-path algorithms for enhanced accuracy, a high-performance onboard LNA for weak-signal environments, and power-saving modes to optimize energy consumption.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/gnss17_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gnss-17-click)
+[Click Product page](https://www.mikroe.com/gnss-17-click)
 
 ---
 
@@ -65,13 +65,13 @@ void gnss17_reset_device ( gnss17_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of GNSS 17 click by reading and displaying the GNSS coordinates.
+> This example demonstrates the use of GNSS 17 Click by reading and displaying the GNSS coordinates.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and resets the click board.
+> Initializes the driver and resets the Click board.
 
 ```c
 
@@ -135,7 +135,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

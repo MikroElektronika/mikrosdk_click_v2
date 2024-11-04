@@ -183,7 +183,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c6dofimu7_cfg_setup ( c6dofimu7_cfg_t *cfg );
@@ -194,7 +194,7 @@ void c6dofimu7_cfg_setup ( c6dofimu7_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 C6DOFIMU7_RETVAL c6dofimu7_init ( c6dofimu7_t *ctx, c6dofimu7_cfg_t *cfg );
 
@@ -203,7 +203,7 @@ C6DOFIMU7_RETVAL c6dofimu7_init ( c6dofimu7_t *ctx, c6dofimu7_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for 6DofImu7 click.
+ * @description This function executes default configuration for 6DofImu7 Click.
  */
 void c6dofimu7_default_cfg ( c6dofimu7_t *ctx );
 
@@ -298,6 +298,6 @@ uint8_t c6dofimu7_get_int_input ( c6dofimu7_t *ctx );
 #endif  // _C6DOFIMU7_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

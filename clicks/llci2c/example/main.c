@@ -3,7 +3,7 @@
  * \brief LlcI2c Click example
  * 
  * # Description
- * This click can be utilized as the level converter for logic signals. The topology of this 
+ * This Click can be utilized as the level converter for logic signals. The topology of this 
  * logic level conversion (LLC) circuit is perfectly suited for the bi-directional I2C communication.
  *
  * The demo application is composed of two sections :
@@ -12,13 +12,13 @@
  * Initialization driver init
  * 
  * ## Application Task  
- * Reads the temperature from the Thermo 7 click board and logs data to UART.
+ * Reads the temperature from the Thermo 7 Click board and logs data to UART.
  * 
  * *note:* 
  * <pre>
  * Connection between Thermo 7 and I2C-LLC is made through I2C interface.
- * You can connect a Thermo 7 click and I2C-LLC click with the wires to make connection between click boards.
- * We use the Thermo 7 click to demonstrate the functions of the I2C-LLC click.
+ * You can connect a Thermo 7 Click and I2C-LLC Click with the wires to make connection between Click boards.
+ * We use the Thermo 7 Click to demonstrate the functions of the I2C-LLC Click.
  * </pre> 
  * 
  * \author MikroE Team

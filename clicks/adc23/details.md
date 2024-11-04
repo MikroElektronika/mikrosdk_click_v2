@@ -1,6 +1,6 @@
 
 ---
-# ADC 23 click
+# ADC 23 Click
 
 > ADC 23 Click is a compact add-on board that converts an analog voltage into a digital representation. This board features the ADS127L11, a wide-bandwidth 24-bit delta-sigma analog-to-digital converter from Texas Instruments. It is capable of data rates up to 400ksps using a wideband filter and up to 1067ksps using a low-latency filter. It also offers an excellent combination of AC performance and DC precision with low power consumption.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/adc23_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/adc-23-click)
+[Click Product page](https://www.mikroe.com/adc-23-click)
 
 ---
 
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

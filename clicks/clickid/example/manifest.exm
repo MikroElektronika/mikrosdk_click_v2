@@ -3,6 +3,6 @@
     "description": "Hardware and software solution based on a secure authenticator device (EEPROM) that enables the hot-plugging of peripheral add-on Click Boards™ to any mikroBUS™ compatible system.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","DS28E36BQ"],
+    "hw" : ["Click","DS28E36BQ"],
     "category" : ["Click Boards > Miscellaneous > ID"]
 }

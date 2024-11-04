@@ -3,12 +3,12 @@
  * @brief RF Meter 3 Click Example.
  *
  * # Description
- * This example demonstrates the use of RF Meter 3 click board.
+ * This example demonstrates the use of RF Meter 3 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and enables the click board.
+ * Initializes the driver and enables the Click board.
  *
  * ## Application Task
  * Measures the RF input signal power in dBm and displays the results on the USB UART every 100ms.

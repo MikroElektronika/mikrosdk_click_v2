@@ -1,8 +1,8 @@
 {
     "name": "IR Beacon Click",
-    "description": "IR Beacon click is a mikroBUS™ add-on board with an array of nine high speed infrared emitting diodes.",
+    "description": "IR Beacon Click is a mikroBUS™ add-on board with an array of nine high speed infrared emitting diodes.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","VSMB2948SL diodes"],
+    "hw" : ["Click","VSMB2948SL diodes"],
     "category" : ["Optical"] 
 }

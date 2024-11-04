@@ -342,7 +342,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void lsm6dsl_cfg_setup ( lsm6dsl_cfg_t *cfg );
@@ -352,7 +352,7 @@ void lsm6dsl_cfg_setup ( lsm6dsl_cfg_t *cfg );
  * @param lsm6dsl Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LSM6DSL_RETVAL lsm6dsl_init ( lsm6dsl_t *ctx, lsm6dsl_cfg_t *cfg );
 
@@ -361,7 +361,7 @@ LSM6DSL_RETVAL lsm6dsl_init ( lsm6dsl_t *ctx, lsm6dsl_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for LSM6DSL click.
+ * @description This function executes default configuration for LSM6DSL Click.
  */
 void lsm6dsl_default_cfg ( lsm6dsl_t *ctx );
 
@@ -569,6 +569,6 @@ void lsm6dsl_get_gyro ( lsm6dsl_t *ctx, lsm6dsl_gyro_t *gyro, uint8_t full_scale
 #endif  // _LSM6DSL_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

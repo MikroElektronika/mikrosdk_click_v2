@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# BLE 10 click
+# BLE 10 Click
 
 > BLE 10 Click is a compact add-on board that provides BT/BLE connectivity for any embedded application. This board features the PAN1780-AT, a Bluetooth® 5 Low Energy Module based on Nordic's nRF52840 single-chip controller from Panasonic. 
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ble10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ble-10-click)
+[Click Product page](https://www.mikroe.com/ble-10-click)
 
 ---
 
@@ -186,7 +186,7 @@ void application_task ( void )
 
 > We have used the nRF Connect smartphone application for the test. 
 > Make sure to configure the GATT Server properly in the nRF Connect application, then you 
-> will be able to send a desired command from it, once you connect to the click board.
+> will be able to send a desired command from it, once you connect to the Click board.
 > You can use the Sample configuration for GATT Server which comes with the application installation
 > and then send a command via Test Service from the Server.
 
@@ -201,7 +201,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

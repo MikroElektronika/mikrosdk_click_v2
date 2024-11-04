@@ -3,13 +3,13 @@
  * @brief Thermo24 Click example
  *
  * # Description
- * This example demonstrates the use of Thermo 24 click board by reading and displaying
+ * This example demonstrates the use of Thermo 24 Click board by reading and displaying
  * the temperature measurements.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and logger, then performs the software reset of the click board 
+ * Initializes the driver and logger, then performs the software reset of the Click board 
  * and reads and displays its serial number.
  *
  * ## Application Task

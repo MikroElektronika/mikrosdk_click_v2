@@ -175,7 +175,7 @@ typedef struct
 
 /**
  * @brief Piezo Accel configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #piezoaccel_cfg_t object definition for detailed explanation.
@@ -187,7 +187,7 @@ void piezoaccel_cfg_setup ( piezoaccel_cfg_t *cfg );
 /**
  * @brief Piezo Accel initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #piezoaccel_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -203,7 +203,7 @@ err_t piezoaccel_init ( piezoaccel_t *ctx, piezoaccel_cfg_t *cfg );
 /**
  * @brief Piezo Accel default configuration function.
  * @details This function executes a default configuration of Piezo Accel
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #piezoaccel_t object definition for detailed explanation.
  * @param setup_cfg_data : Setup config structure.
@@ -269,7 +269,7 @@ err_t piezoaccel_read_an_pin_voltage ( piezoaccel_t *ctx, float *data_out );
  * @brief Piezo Accel read force of acceleration function.
  * @details This function returns the converted G-force of acceleration
  * depending on the config settings. In addition, the configuration has
- * to be set on the click board by soldering jumpers.
+ * to be set on the Click board by soldering jumpers.
  * @param[in] ctx : Click context object.
  * See #analogmux2_t object definition for detailed explanation.
  * @param cfg_data : Config data structure.

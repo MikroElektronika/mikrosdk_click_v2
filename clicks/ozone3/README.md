@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Ozone 3 click
+# Ozone 3 Click
 
 Ozone 3 Click is a compact add-on board suitable for ozone concentration detection and monitoring. This board features the 110-407, a high-performance ultra-thin electrochemical gas sensor from SPEC Sensors supported by the LMP91000, a high-precision integrated analog front-end IC (AFE) ideal for this sensing application. It provides the reference voltage required by the sensor and offers a choice between the analog output from the AFE IC buffered with the low noise Op-Amp and digital output from the 12-bit SAR A/D converter.
 
@@ -9,7 +9,7 @@ Ozone 3 Click is a compact add-on board suitable for ozone concentration detecti
   <img src="https://download.mikroe.com/images/click_for_ide/ozone3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ozone-3-click)
+[Click Product page](https://www.mikroe.com/ozone-3-click)
 
 ---
 
@@ -65,7 +65,7 @@ float ozone3_get_o3_ppm ( ozone3_t *ctx );
 
 ## Example Description
 
-> This library contains API for the Ozone 3 click driver.
+> This library contains API for the Ozone 3 Click driver.
 > This demo application shows an example of the O3 ppm data measurement.
 
 **The demo application is composed of two sections :**
@@ -115,7 +115,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-> This is an example that shows the use of a Ozone 3 click board™.
+> This is an example that shows the use of a Ozone 3 Click board™.
 > Get and logs O3 ( Trioxygen ) data as ppm value.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
@@ -140,7 +140,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

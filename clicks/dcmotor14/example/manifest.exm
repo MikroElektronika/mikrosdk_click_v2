@@ -3,6 +3,6 @@
     "description": "DC MOTOR 14 Click is a PWM chopper type brushed DC motor driver, labeled as TB67H450FNG.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TB67H450FNG"],
+    "hw" : ["Click","TB67H450FNG"],
     "category" : ["Brushed"] 
 }

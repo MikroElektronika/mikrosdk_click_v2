@@ -3,6 +3,6 @@
     "description": "CAN Isolator 3 Click is a compact add-on board that provides isolated CAN communication. This board features the MAX14882, an isolated CAN transceiver with an integrated transformer driver from Analog Devices. It is galvanically isolated between the device's CAN-protocol controller side (TDX, RDX) and the physical wires of the CAN network (CANH, CANL) cable-side/bus-side of the transceiver.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","MAX14882AWE+"],
+    "hw" : ["Click","MAX14882AWE+"],
     "category" : ["Click Boards > Interface > CAN"]
 }

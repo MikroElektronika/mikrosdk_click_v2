@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Pressure 19 click
+# Pressure 19 Click
 
 > Pressure 19 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the MLX90817, a factory-calibrated absolute pressure sensor delivering ratiometric analog output from Melexis Technologies. The MLX90817 comes with a configurable host interface that supports I2C serial communication and configurable signal processing (the user is allowed to process the output signal in analog or digital form). It measures pressure from 0.2 up to 3bar with a pressure accuracy of ±33mbar. Its DSP-based architecture using a 16bit microcontroller provides outstanding performance in terms of initial accuracy and assures operation in a temperature range of -40°C to +120°C, ensuring stable operation under extreme conditions.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/pressure19_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pressure-19-click)
+[Click Product page](https://www.mikroe.com/pressure-19-click)
 
 ---
 
@@ -58,14 +58,14 @@ err_t pressure19_get_pressure ( pressure19_t *ctx, uint16_t *pressure );
 err_t pressure19_read_voltage ( pressure19_t *ctx, float *voltage );
 ```
 
-- `pressure19_set_vref` This function sets the voltage reference for Pressure 19 click driver.
+- `pressure19_set_vref` This function sets the voltage reference for Pressure 19 Click driver.
 ```c
 err_t pressure19_set_vref ( pressure19_t *ctx, float vref );
 ```
 
 ## Example Description
 
-> This example demonstrates the use of Pressure 19 click board by reading and displaying the absolute pressure value in mBar.
+> This example demonstrates the use of Pressure 19 Click board by reading and displaying the absolute pressure value in mBar.
 
 **The demo application is composed of two sections :**
 
@@ -137,7 +137,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

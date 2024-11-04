@@ -9,12 +9,12 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver, performs a hardware reset, and sets the click 
+ * Initializes the driver, performs a hardware reset, and sets the Click 
  * default configuration.
  * 
  * ## Application Task  
  * Reads an ambient temperature measured by the PT100 3-wire temperature probe
- * connected to the RTD 2 click board, and logs the results on the USB UART each second.
+ * connected to the RTD 2 Click board, and logs the results on the USB UART each second.
  * 
  * \author MikroE Team
  *

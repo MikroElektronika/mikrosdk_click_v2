@@ -184,7 +184,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void leddriver3_cfg_setup ( leddriver3_cfg_t *cfg );
@@ -194,7 +194,7 @@ void leddriver3_cfg_setup ( leddriver3_cfg_t *cfg );
  * @param leddriver3 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LEDDRIVER3_RETVAL leddriver3_init ( leddriver3_t *ctx, leddriver3_cfg_t *cfg );
 
@@ -289,6 +289,6 @@ void leddriver3_set_timer ( leddriver3_t *ctx, uint8_t time );
 #endif  // _LEDDRIVER3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

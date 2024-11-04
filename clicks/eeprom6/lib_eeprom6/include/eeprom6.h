@@ -183,7 +183,7 @@ typedef enum
 
 /**
  * @brief EEPROM 6 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #eeprom6_cfg_t object definition for detailed explanation.
@@ -195,7 +195,7 @@ void eeprom6_cfg_setup ( eeprom6_cfg_t *cfg );
 /**
  * @brief EEPROM 6 driver interface setup function.
  * @details This function sets a communication GPIO pin which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #eeprom6_cfg_t object definition for detailed explanation.
  * @param[in] gpio_sel : GPIO pin selection.
@@ -211,7 +211,7 @@ void eeprom6_gpio_selection ( eeprom6_cfg_t *cfg, eeprom6_gpio_sel_t gpio_sel );
 /**
  * @brief EEPROM 6 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #eeprom6_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -227,7 +227,7 @@ err_t eeprom6_init ( eeprom6_t *ctx, eeprom6_cfg_t *cfg );
 /**
  * @brief EEPROM 6 default configuration function.
  * @details This function executes a default configuration of EEPROM 6
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom6_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

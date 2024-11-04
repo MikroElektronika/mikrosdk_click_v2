@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Cooler click
+# Cooler Click
 
 > Cooler Click is a compact add-on board designed as a cooling solution to manage heat in electronic systems efficiently. This board features the DRV8213, a brushless DC motor driver from Texas Instruments, ensuring a high-performance operation. This board also directly integrates a TMP007 temperature sensor and an MF25060V2-1000U-A99 cooling fan onto its platform, offering a compact and ready-to-use cooling system. It operates across a wide PWM frequency range from 0 to 100kHz, supports both 3.3V and 5V logic levels, and features several protection mechanisms, including undervoltage lockout, overcurrent protection, and overtemperature shutdown.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/cooler_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/cooler-click)
+[Click Product page](https://www.mikroe.com/cooler-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t cooler_set_out_state ( cooler_t *ctx, cooler_out_state_t out_state );
 
 ## Example Description
 
-> This example demonstrates the use of the Cooler click board
+> This example demonstrates the use of the Cooler Click board
  by reading the target object temperature and controlling the cooler.
 
 **The demo application is composed of two sections :**
@@ -158,7 +158,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

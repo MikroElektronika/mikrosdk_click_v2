@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# PIR 3 click
+# PIR 3 Click
 
 > PIR 3 Click is a compact add-on board designed for efficient and reliable motion detection in various applications. This board features the ZDP323B1 sensor from Zilog (Littelfuse), with high EMI immunity and precise motion detection capabilities. It includes a spectral filter window tuned to an 8-13um wavelength, dual sensing elements with a 0.6mm spacing, and a field of view of 148° on the X-axis and 136° on the Y-axis. The board also integrates the ZNCL10S PIR lens for maximum IR transmissivity and includes the Click Snap feature for flexible implementation.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/pir3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pir-3-click)
+[Click Product page](https://www.mikroe.com/pir-3-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t pir3_read_peak_hold ( pir3_t *ctx, int16_t *peak_hold );
 
 ## Example Description
 
-> This example demonstrates the use of PIR 3 click board by reading and displaying the peak hold tracking data.
+> This example demonstrates the use of PIR 3 Click board by reading and displaying the peak hold tracking data.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

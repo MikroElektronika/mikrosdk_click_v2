@@ -1,6 +1,6 @@
 
 ---
-# BATT-MON 3 click
+# BATT-MON 3 Click
 
 > BATT-MON 3 Click is a compact add-on board representing an advanced battery monitoring solution. This board features the BQ35100, battery fuel gauge, and end-of-service monitor from Texas Instruments. The BQ35100 provides highly configurable fuel gauging for non-rechargeable (primary) lithium batteries without requiring a forced battery discharge. It uses patented TI gauging algorithms to support the option to replace an old battery with a new one seamlessly. It provides accurate results with ultra-low average power consumption, alongside an I2C interface through which the host can read the gathered data.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/battmon3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/batt-mon-3-click)
+[Click Product page](https://www.mikroe.com/batt-mon-3-click)
 
 ---
 
@@ -69,14 +69,14 @@ err_t battmon3_read_used_capacity ( battmon3_t *ctx, float *used_capacity );
 
 ## Example Description
 
-> This example demonstrates the use of BATT-MON 3 click by measuring the battery
+> This example demonstrates the use of BATT-MON 3 Click by measuring the battery
 voltage, current and used capacity, as well as the chip internal temperature.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initialized the driver and performs the click default configuration.
+> Initialized the driver and performs the Click default configuration.
 
 ```c
 
@@ -164,7 +164,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

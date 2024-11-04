@@ -173,7 +173,7 @@ typedef struct
 
 /**
  * @brief DSP configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #dsp_cfg_t object definition for detailed explanation.
@@ -185,7 +185,7 @@ void dsp_cfg_setup ( dsp_cfg_t *cfg );
 /**
  * @brief DSP initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #dsp_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -201,7 +201,7 @@ err_t dsp_init ( dsp_t *ctx, dsp_cfg_t *cfg );
 /**
  * @brief DSP default configuration function.
  * @details This function executes a default configuration of DSP
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #dsp_t object definition for detailed explanation.
  * 
@@ -213,7 +213,7 @@ void dsp_default_cfg ( dsp_t *ctx );
 /**
  * @brief DSP P0 pin setting function.
  * @details This function sets the P0 pin state to the desired level
- * DSP click board.
+ * DSP Click board.
  * @param[in] ctx : Click context object.
  * See #dsp_t object definition for detailed explanation.
  * @param[in] pin_state : 
@@ -227,7 +227,7 @@ void dsp_pin_set_p0 ( dsp_t *ctx, uint8_t pin_state );
 /**
  * @brief DSP P1 pin setting function.
  * @details This function sets the P1 pin state to the desired level
- * DSP click board.
+ * DSP Click board.
  * @param[in] ctx : Click context object.
  * See #dsp_t object definition for detailed explanation.
  * @param[in] pin_state : 
@@ -241,7 +241,7 @@ void dsp_pin_set_p1 ( dsp_t *ctx, uint8_t pin_state );
 /**
  * @brief DSP P2 pin setting function.
  * @details This function sets the P2 pin state to the desired level
- * DSP click board.
+ * DSP Click board.
  * @param[in] ctx : Click context object.
  * See #dsp_t object definition for detailed explanation.
  * @param[in] pin_state : 
@@ -255,7 +255,7 @@ void dsp_pin_set_p2 ( dsp_t *ctx, uint8_t pin_state );
 /**
  * @brief DSP P3 pin setting function.
  * @details This function sets the P3 pin state to the desired level
- * DSP click board.
+ * DSP Click board.
  * @param[in] ctx : Click context object.
  * See #dsp_t object definition for detailed explanation.
  * @param[in] pin_state : 
@@ -269,7 +269,7 @@ void dsp_pin_set_p3 ( dsp_t *ctx, uint8_t pin_state );
 /**
  * @brief DSP power on the device function.
  * @details This function executes power-up of the device of 
- * DSP click board.
+ * DSP Click board.
  * @param[in] ctx : Click context object.
  * See #dsp_t object definition for detailed explanation.
  * @return Nothing.
@@ -280,7 +280,7 @@ void dsp_power_on ( dsp_t *ctx );
 /**
  * @brief DSP reset the device function.
  * @details This function executes a hardware reset of
- * DSP click board.
+ * DSP Click board.
  * @param[in] ctx : Click context object.
  * See #dsp_t object definition for detailed explanation.
  * @return Nothing.
@@ -291,7 +291,7 @@ void dsp_reset ( dsp_t *ctx );
 /**
  * @brief DSP reverb and multi-effects setting function.
  * @details This function sets the reverb and multi-effects of
- * DSP click board.
+ * DSP Click board.
  * @param[in] ctx : Click context object.
  * See #dsp_t object definition for detailed explanation.
  * @param[in] effects : The number of the desired effect ( from 0 to 15 )

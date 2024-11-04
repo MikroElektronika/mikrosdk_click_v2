@@ -3,7 +3,7 @@
  * \brief 2x2 key Click example
  * 
  * # Description
- * 2x2 Key click has a 4 button keypad and allows multiple key presses.
+ * 2x2 Key Click has a 4 button keypad and allows multiple key presses.
  *
  * The demo application is composed of two sections :
  * 

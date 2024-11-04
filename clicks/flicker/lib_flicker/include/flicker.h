@@ -132,7 +132,7 @@ void flicker_cfg_setup ( flicker_cfg_t *cfg );
  * @param flicker Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 FLICKER_RETVAL flicker_init ( flicker_t *ctx, flicker_cfg_t *cfg );
 
@@ -151,6 +151,6 @@ void flicker_engage ( flicker_t *ctx );
 #endif  // _FLICKER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

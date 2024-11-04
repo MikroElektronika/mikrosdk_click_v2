@@ -173,7 +173,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void bargraph2_cfg_setup ( bargraph2_cfg_t *cfg );
@@ -184,7 +184,7 @@ void bargraph2_cfg_setup ( bargraph2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 BARGRAPH2_RETVAL bargraph2_init ( bargraph2_t *ctx, bargraph2_cfg_t *cfg );
 
@@ -193,7 +193,7 @@ BARGRAPH2_RETVAL bargraph2_init ( bargraph2_t *ctx, bargraph2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Bargraph 2 click.
+ * @description This function executes default configuration for Bargraph 2 Click.
  */
 void bargraph2_default_cfg ( bargraph2_t *ctx );
 
@@ -215,7 +215,7 @@ void bargraph2_generic_transfer ( bargraph2_t *ctx, uint8_t *wr_buf, uint16_t wr
  *
  * @param ctx          Click object.
  *
- * @description This function does a reset of the click module.
+ * @description This function does a reset of the Click module.
  */
 void bargraph2_reset ( bargraph2_t *ctx ); 
 
@@ -329,6 +329,6 @@ void barpgraph2_power ( bargraph2_t *ctx, uint8_t power_on_off );
 #endif  // _BARGRAPH2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

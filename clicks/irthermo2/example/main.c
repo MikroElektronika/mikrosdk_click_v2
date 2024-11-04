@@ -3,7 +3,7 @@
  * @brief IrThermo2 Click example
  * 
  * # Description
- * IrThermo 2 is a non-contact temperature measurement click. The sensor absorbs the infrared 
+ * IrThermo 2 is a non-contact temperature measurement Click. The sensor absorbs the infrared 
  * radiation emitted by the target object (withing the sensor’s field of view) and 
  * the integrated math engine calculates its temperature by comparing it with the temperature 
  * of the silicon die. The measurement range of the sensor is between –40°C to 125°C.

@@ -3,12 +3,12 @@
  * @brief LEDDriver11 Click example
  *
  * # Description
- * This example demonstrates the use of LED Driver 11 click board.
+ * This example demonstrates the use of LED Driver 11 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and executes the click default configuration which
+ * Initializes the driver and executes the Click default configuration which
  * starts the PWM module and sets the LEDs current to minimum.
  *
  * ## Application Task

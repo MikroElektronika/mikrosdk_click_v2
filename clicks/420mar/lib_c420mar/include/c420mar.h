@@ -146,7 +146,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c420mar_cfg_setup ( c420mar_cfg_t *cfg );
@@ -157,7 +157,7 @@ void c420mar_cfg_setup ( c420mar_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 c420MAR_RETVAL c420mar_init ( c420mar_t *ctx, c420mar_cfg_t *cfg );
 
@@ -190,6 +190,6 @@ float c420mar_read_data( c420mar_t *ctx );
 #endif  // _c420MAR_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

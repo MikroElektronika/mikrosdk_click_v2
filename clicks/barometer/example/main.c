@@ -13,7 +13,7 @@
  * ## Application Task  
  * This is a example which demonstrates the use of Barometer Click board.
  * ## NOTE
- * External pull-up resistors are required on I2C lines, if the click board is configured for I2C mode.
+ * External pull-up resistors are required on I2C lines, if the Click board is configured for I2C mode.
  * 
  * 
  * \author MikroE Team

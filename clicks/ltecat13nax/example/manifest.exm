@@ -3,6 +3,6 @@
     "description": "LTE Cat.1 3 Click (for North America) is a compact add-on board for reliable 4G wireless communication. This board features the EG91NAXDGA-128-SGNS, an LTE Cat 1 IoT data-only module that meets the 3GPP Release 11 standard from Quectel. It supports multiple wireless standards, including LTE-FDD and WCDMA, ensuring broad network compatibility. Key features include multi-band LTE support (B2/B4/B5/B12/B13/B25/B26), RX diversity for bands B2, B4, and B5, and multi-constellation GNSS (GPS, GLONASS, BeiDou/Compass, Galileo, QZSS). It also integrates a 16-bit mono audio codec for voice functionality with support for CTIA standard headphones.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","EG91NAXDGA-128-SGNS"],
+    "hw" : ["Click","EG91NAXDGA-128-SGNS"],
     "category" : ["Click Boards > Wireless connectivity > GSM/LTE"]
 }

@@ -1,14 +1,14 @@
  
 ---
-# Temp Hum 11 click
+# Temp Hum 11 Click
 
-Temp-hum 11 click is a temperature and humidity sensing Click board™, equipped with the HDC1080, a high accuracy digital humidity, and temperature sensor. Its key features are its low power consumption, and the measurement accuracy achieved with that much energy.
+Temp-hum 11 Click is a temperature and humidity sensing Click board™, equipped with the HDC1080, a high accuracy digital humidity, and temperature sensor. Its key features are its low power consumption, and the measurement accuracy achieved with that much energy.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/temphum11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/temp-hum-11-click)
+[Click Product page](https://www.mikroe.com/temp-hum-11-click)
 
 ---
 
@@ -58,7 +58,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This click has two sensors which can be set to sample measurements with the resolution 
+> This Click has two sensors which can be set to sample measurements with the resolution 
 > of 8, 11 or 14 bits, based on the measurement time. Calibration coefficients that are applied 
 > to the measured value and the results are stored in the MSB/LSB format, on the output registers. 
 > These values are then used in formulas so that the final temperature or relative humidity data can be calculated.
@@ -148,7 +148,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

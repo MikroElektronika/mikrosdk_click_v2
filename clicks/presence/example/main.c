@@ -9,7 +9,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes driver and performs the click default configuration.
+ * Initializes driver and performs the Click default configuration.
  * 
  * ## Application Task  
  * Checks whether a new event (motion, presence or over-temperature) is detected. 

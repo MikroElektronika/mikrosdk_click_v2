@@ -373,7 +373,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void adc4_cfg_setup ( adc4_cfg_t *cfg );
@@ -384,7 +384,7 @@ void adc4_cfg_setup ( adc4_cfg_t *cfg );
  * @param ctx        Click object.
  * @param cfg        Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ADC4_RETVAL adc4_init ( adc4_t *ctx, adc4_cfg_t *cfg );
 
@@ -393,7 +393,7 @@ ADC4_RETVAL adc4_init ( adc4_t *ctx, adc4_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for ADC 4 click.
+ * @description This function executes default configuration for ADC 4 Click.
  */
 void adc4_default_cfg ( adc4_t *ctx );
 
@@ -454,7 +454,7 @@ uint8_t adc4_read_reg ( adc4_t *ctx, const uint8_t reg_address, uint8_t *value )
  *
  * @param ctx          Click object.
  * 
- * @description This function reset ADC 4 click.
+ * @description This function reset ADC 4 Click.
  */
 void adc4_reset ( adc4_t *ctx );
 
@@ -520,6 +520,6 @@ uint16_t adc4_get_voltage ( adc4_t *ctx, const float ref_voltage );
 #endif  // _ADC4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -1,7 +1,7 @@
 \mainpage Main Page
   
 ---
-# MP3 click
+# MP3 Click
 
 > MP3 Click is an accessory board in mikroBus™ form factor. It includes a stereo MP3 decoder chip VS1053 which can decode multiple formats (Ogg vorbis, MP3, MP1, MP2, MPEG4, WMA, FLAC, WAV, MIDI).
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/mp3_click.png">
 </p>
 
-[click Product page](https://www.mikroe.com/mp3-click)
+[Click Product page](https://www.mikroe.com/mp3-click)
 
 ---
 
@@ -65,13 +65,13 @@ err_t mp3_data_write_32( mp3_t *ctx, uint8_t *input32 );
 
 ## Example Description
 
-> This app demonstrates the use of MP3 click by playing the specified sound from the mp3_resources.h file.
+> This app demonstrates the use of MP3 Click by playing the specified sound from the mp3_resources.h file.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes the driver and performs the default click configuration.
+> Initializes the driver and performs the default Click configuration.
 
 ```c
 
@@ -152,7 +152,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

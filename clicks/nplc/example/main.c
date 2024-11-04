@@ -3,13 +3,13 @@
  * @brief N-PLC Click Example.
  *
  * # Description
- * This example demonstrates the use of an N-PLC click boards by showing
- * the communication between the two click boards configured as a receiver and transmitter.
+ * This example demonstrates the use of an N-PLC Click boards by showing
+ * the communication between the two Click boards configured as a receiver and transmitter.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver, resets the click board to default config, displays the firmware version
+ * Initializes the driver, resets the Click board to default config, displays the firmware version
  * and switches to data operation mode. After that displays the selected application mode
  * and sends an initial message in case of transmitter mode.
  *
@@ -32,7 +32,7 @@
 // Comment out the line below in order to switch the application mode to receiver
 // #define DEMO_APP_TRANSMITTER
 
-#define DEMO_TEXT_MESSAGE       "MikroE - N-PLC click board"
+#define DEMO_TEXT_MESSAGE       "MikroE - N-PLC Click board"
 
 #define PROCESS_BUFFER_SIZE     200
 #define RSP_TIMEOUT_MS          20000

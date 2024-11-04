@@ -3,6 +3,6 @@
     "description": "Accel&Pressure Click is a compact add-on board representing a rate-of-climb sensing solution for your application. This board features the FXLS8974CF, a 3-axis low-g accelerometer, and the MPL3115A2, a precision pressure sensor with altimetry, both from NXP Semiconductor. Those two sensors are high-performance, low-power devices covering all of Earth's surface elevations. By combining the acceleration and the barometric pressure data, you can easily determine the vertical velocity (the rate of climb) of the device on which the Accel&Pressure Click is integrated.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","FXLS8974,MPL3115"],
+    "hw" : ["Click","FXLS8974,MPL3115"],
     "category" : ["Click Boards > Sensors > Motion"]
 }

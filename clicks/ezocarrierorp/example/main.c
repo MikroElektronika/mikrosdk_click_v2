@@ -3,13 +3,13 @@
  * @brief EZO Carrier ORP Click Example.
  *
  * # Description
- * This example demonstrates the use of EZO Carrier ORP click board by processing
+ * This example demonstrates the use of EZO Carrier ORP Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver, performs the click default factory reset, and single point calibration 
+ * Initializes the driver, performs the Click default factory reset, and single point calibration 
  * with a calibration solutio with 225 mV ORP value.
  *
  * ## Application Task

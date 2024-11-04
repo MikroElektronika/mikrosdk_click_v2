@@ -34,7 +34,7 @@
 /**
  * @brief Thermo 28 default configuration.
  * @details Default configuration of the AS6221 Digital Temperature Sensor
- * on the Thermo 28 click board™
+ * on the Thermo 28 Click board™
  */
 static thermo28_config_t default_config = 
 {

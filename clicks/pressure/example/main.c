@@ -5,7 +5,7 @@
  * # Description
  * This is a example which demonstrates the use of Pressure Click board.
  * Measured pressure and temperature data from the LPS331AP sensor on Pressure
- * click.
+ * Click.
  *
  * The demo application is composed of two sections :
  *

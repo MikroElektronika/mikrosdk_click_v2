@@ -3,7 +3,7 @@
  * \brief TempHum13 Click example
  * 
  * # Description
- * This demo shows basic TempHum13 click functionality - temperature
+ * This demo shows basic TempHum13 Click functionality - temperature
  * and humidity measurement. 
  *
  * The demo application is composed of two sections :

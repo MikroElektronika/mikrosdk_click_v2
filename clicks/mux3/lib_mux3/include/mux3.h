@@ -146,7 +146,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void mux3_cfg_setup ( mux3_cfg_t *cfg );
@@ -156,7 +156,7 @@ void mux3_cfg_setup ( mux3_cfg_t *cfg );
  * @param mux3 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MUX3_RETVAL mux3_init ( mux3_t *ctx, mux3_cfg_t *cfg );
 
@@ -187,6 +187,6 @@ void mux3_set_channel ( mux3_t *ctx, uint8_t select_channel );
 #endif  // _MUX3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

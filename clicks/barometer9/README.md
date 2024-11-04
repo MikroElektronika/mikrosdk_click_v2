@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Barometer 9 click
+# Barometer 9 Click
 
 > Barometer 9 Click is a compact add-on board ideal for precision activity tracking and indoor navigation/localization. This board features the ENS220, a barometric pressure and temperature sensor from ScioSense
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/barometer9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/barometer-9-click)
+[Click Product page](https://www.mikroe.com/barometer-9-click)
 
 ---
 
@@ -53,17 +53,17 @@ err_t barometer9_default_cfg ( barometer9_t *ctx );
 
 #### Example key functions :
 
-- `barometer9_read_part_id` This function is used to read a Device ID of Barometer 9 click board.
+- `barometer9_read_part_id` This function is used to read a Device ID of Barometer 9 Click board.
 ```c
 err_t barometer9_read_part_id ( barometer9_t *ctx, uint16_t *part_id );
 ```
 
-- `barometer9_get_temperature` This function is used to read a temperature of Barometer 9 click board in degree of Celsius.
+- `barometer9_get_temperature` This function is used to read a temperature of Barometer 9 Click board in degree of Celsius.
 ```c
 err_t barometer9_get_temperature ( barometer9_t *ctx, float *temperature );
 ```
 
-- `barometer9_get_pressure` This function is used to read a pressure of Barometer 9 click board in Pascals.
+- `barometer9_get_pressure` This function is used to read a pressure of Barometer 9 Click board in Pascals.
 ```c
 err_t barometer9_get_pressure ( barometer9_t *ctx, float *pressure );
 ```
@@ -164,7 +164,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

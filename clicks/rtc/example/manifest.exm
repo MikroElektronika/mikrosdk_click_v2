@@ -3,6 +3,6 @@
     "description": "RTC Click is an accessory board in mikroBus™ form factor. It features the PCF8583 serial real-time clock (RTC).",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","PCF8583"],
+    "hw" : ["Click","PCF8583"],
     "category" : ["RTC"] 
 }

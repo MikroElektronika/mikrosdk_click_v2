@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Buzz 3 click
+# Buzz 3 Click
 
 > Buzz 3 Click is a compact add-on board that contains a sounder driver that produces higher volume with a lower current. This board features the PAM8904, 
 a piezo-sounder driver with an integrated Multi-Mode charge pump boost converter from Diodes Incorporated. 
@@ -10,7 +10,7 @@ a piezo-sounder driver with an integrated Multi-Mode charge pump boost converter
   <img src="https://download.mikroe.com/images/click_for_ide/buzz3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/buzz-3-click)
+[Click Product page](https://www.mikroe.com/buzz-3-click)
 
 ---
 
@@ -59,7 +59,7 @@ err_t buzz3_default_cfg ( buzz3_t *ctx );
 err_t buzz3_pwm_start ( buzz3_t *ctx );
 ```
 
-- `buzz3_set_gain_operating_mode` The function set gain operating mode of the PAM8904 piezo sounder driver with integrated charge pump boost converter on Buzz 3 click board.
+- `buzz3_set_gain_operating_mode` The function set gain operating mode of the PAM8904 piezo sounder driver with integrated charge pump boost converter on Buzz 3 Click board.
 ```c
 err_t buzz3_set_gain_operating_mode ( buzz3_t *ctx, uint8_t op_mode );
 ```
@@ -71,7 +71,7 @@ void buzz3_play_sound ( buzz3_t *ctx, uint16_t freq, uint16_t duration );
 
 ## Example Description
 
-> This example demonstrates the use of Buzz 3 click boards with PAM8904 for play the Imperial March.
+> This example demonstrates the use of Buzz 3 Click boards with PAM8904 for play the Imperial March.
 PAM8904 is piezo-sounder driver with an integrated Multi-Mode charge pump boost converter from Diodes Incorporated. 
 
 **The demo application is composed of two sections :**
@@ -163,7 +163,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

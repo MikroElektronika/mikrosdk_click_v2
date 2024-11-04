@@ -1,6 +1,6 @@
 
 ---
-# Power MUX click
+# Power MUX Click
 
 > Power MUX Click features power multiplexer that enables transition between two power supplies (such as a battery and a wall adapter), each operating at 2.8V to 5.5V and delivering up to 2A current depending on the package. This IC provides inrush current control and thermal protection to Power MUX Click, manual and auto-switching operating modes, cross-conduction blocking, and reverse-conduction blocking.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/powermux_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/power-mux-click)
+[Click Product page](https://www.mikroe.com/power-mux-click)
 
 ---
 
@@ -152,7 +152,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

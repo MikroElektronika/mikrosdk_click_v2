@@ -3,7 +3,7 @@
  * @brief Thermo21 Click example
  *
  * # Description
- * This example application showcases ability of the click board
+ * This example application showcases ability of the Click board
  * to read temperature data.
  *
  * The demo application is composed of two sections :

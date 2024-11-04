@@ -196,7 +196,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void i2c1wire_cfg_setup ( i2c1wire_cfg_t *cfg );
@@ -207,7 +207,7 @@ void i2c1wire_cfg_setup ( i2c1wire_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t i2c1wire_init ( i2c1wire_t *ctx, i2c1wire_cfg_t *cfg );
 
@@ -240,7 +240,7 @@ err_t i2c1wire_generic_read ( i2c1wire_t *ctx, uint8_t reg, uint8_t *data_out, u
  * 
  * @param ctx          Click object.
  *
- * @details This function does a software reset of the click module.
+ * @details This function does a software reset of the Click module.
  */
 void i2c1wire_soft_reset ( i2c1wire_t *ctx );
 
@@ -250,7 +250,7 @@ void i2c1wire_soft_reset ( i2c1wire_t *ctx );
  * @param ctx          Click object.
  * @param cfg          Configuration.
  *
- * @details This function configures the click module using the specified settings.
+ * @details This function configures the Click module using the specified settings.
  */
 uint8_t i2c1wire_set_config ( i2c1wire_t *ctx, uint8_t cfg );
 
@@ -260,7 +260,7 @@ uint8_t i2c1wire_set_config ( i2c1wire_t *ctx, uint8_t cfg );
  * @param ctx          Click object.
  * @param chan         Channel.
  *
- * @details This function configures the click module using the specified settings.
+ * @details This function configures the Click module using the specified settings.
  */
 uint8_t i2c1wire_set_channel ( i2c1wire_t *ctx, uint8_t chan );
 
@@ -270,7 +270,7 @@ uint8_t i2c1wire_set_channel ( i2c1wire_t *ctx, uint8_t chan );
  * @param ctx          Click object.
  * @param ptr          Pointer.
  *
- * @details This function sets the read pointer for the click module.
+ * @details This function sets the read pointer for the Click module.
  */
 void i2c1wire_set_read_pointer ( i2c1wire_t *ctx, uint8_t ptr );
 
@@ -279,7 +279,7 @@ void i2c1wire_set_read_pointer ( i2c1wire_t *ctx, uint8_t ptr );
  * 
  * @param ctx          Click object.
  *
- * @details This function does a hardware reset of the click module.
+ * @details This function does a hardware reset of the Click module.
  */
 void i2c1wire_one_wire_reset ( i2c1wire_t *ctx );
 
@@ -289,7 +289,7 @@ void i2c1wire_one_wire_reset ( i2c1wire_t *ctx );
  * @param ctx          Click object.
  * @param input        Write data.
  *
- * @details This function writes one byte to the click module.
+ * @details This function writes one byte to the Click module.
  */
 void i2c1wire_write_byte_one_wire ( i2c1wire_t *ctx, uint8_t input );
 
@@ -298,7 +298,7 @@ void i2c1wire_write_byte_one_wire ( i2c1wire_t *ctx, uint8_t input );
  * 
  * @param ctx          Click object.
  *
- * @details This function reads one byte from the click module.
+ * @details This function reads one byte from the Click module.
  */
 uint8_t i2c1wire_read_byte_one_wire ( i2c1wire_t *ctx );
 
@@ -308,6 +308,6 @@ uint8_t i2c1wire_read_byte_one_wire ( i2c1wire_t *ctx );
 #endif  // _I2C1WIRE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

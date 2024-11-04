@@ -3,13 +3,13 @@
  * @brief BT Audio 2 Click Example.
  *
  * # Description
- * This example demonstrates the use of BT Audio 2 click board by reading the commands
+ * This example demonstrates the use of BT Audio 2 Click board by reading the commands
  * received from remote device and performing adequate actions accordingly.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and configures the click board.
+ * Initializes the driver and configures the Click board.
  *
  * ## Application Task
  * Reads all the received events and parses them.
@@ -20,8 +20,8 @@
  *
  * @note
  * We have used the Serial Bluetooth Terminal smartphone application for the test. 
- * A smartphone and the click board must be paired in order to exchange messages
- * with each other. So make sure to pair your device with the click board and
+ * A smartphone and the Click board must be paired in order to exchange messages
+ * with each other. So make sure to pair your device with the Click board and
  * connect it to using the Serial Bluetooth Terminal application, then you will be able 
  * to send commands listed below.
  *
@@ -37,7 +37,7 @@ static btaudio2_t btaudio2;
 static log_t logger;
 
 // Bluetooth device name
-#define DEVICE_NAME                 "BT Audio 2 click"
+#define DEVICE_NAME                 "BT Audio 2 Click"
 
 // SPP Commands list
 #define COMMAND_PLAY                "play"          // play music

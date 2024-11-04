@@ -1,6 +1,6 @@
 
 ---
-# UVA click
+# UVA Click
 
 > UVA Click is a compact add-on board used to detect solar UV index. This board features the GUVA-C32SM, an ultraviolet light sensor capable of measuring UV index between 0 to 14 from Genicom Co., Ltd. It contains the GaN-based chip die, amplifiers, ADC, digital control logic, and I2C interface circuit to measure UVA volumes, working in the spectral range of 220-370nm. The GUVA-C32M can acquire the intensity of UVA, respectively, and outputs digital count according to each intensity.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/uva_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/uva-click)
+[Click Product page](https://www.mikroe.com/uva-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t uva_write_register ( uva_t *ctx, uint8_t reg, uint8_t data_in );
 
 ## Example Description
 
-> This example demonstrates the use of UVA click board by reading and displaying the UVA data measurement results.
+> This example demonstrates the use of UVA Click board by reading and displaying the UVA data measurement results.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and applies the click default configuration.
+> Initializes the driver and applies the Click default configuration.
 
 ```c
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -13,7 +13,7 @@
  *
  * ## Application Task
  * Logs all the received messages/responses on the USB UART, and if there's any device
- * connected to the click board the module sends a desired message every 5 seconds back to it.
+ * connected to the Click board the module sends a desired message every 5 seconds back to it.
  *
  * ## Additional Function
  * - static void bluetooth2_clear_app_buf ( void )
@@ -22,7 +22,7 @@
  *
  * @note
  * We have used the Serial Bluetooth Terminal smartphone application for the test. 
- * A smartphone and the click board must be paired in order to exchange messages with each other.
+ * A smartphone and the Click board must be paired in order to exchange messages with each other.
  * 
  * @author Stefan Filipovic
  *
@@ -43,7 +43,7 @@
 #define DEVICE_NAME         "Bluetooth 2 Click"
 
 // Message which will be sent to the connected device.
-#define TEXT_TO_SEND        "MikroE - Bluetooth 2 click\r\n" 
+#define TEXT_TO_SEND        "MikroE - Bluetooth 2 Click\r\n" 
 
 // Text sending frequency in miliseconds.
 #define SENDING_FREQ        5000  

@@ -131,7 +131,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void solarenergy_cfg_setup ( solarenergy_cfg_t *cfg );
@@ -141,7 +141,7 @@ void solarenergy_cfg_setup ( solarenergy_cfg_t *cfg );
  * @param solarenergy Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 SOLARENERGY_RETVAL solarenergy_init ( solarenergy_t *ctx, solarenergy_cfg_t *cfg );
 
@@ -151,7 +151,7 @@ SOLARENERGY_RETVAL solarenergy_init ( solarenergy_t *ctx, solarenergy_cfg_t *cfg
  * @param ctx  Click object.
  *
  * @description Function enable charging by set CS ( EN ) pin,
- * enable BQ25570 Nano Power Boost Charger on Solar Energy click board.
+ * enable BQ25570 Nano Power Boost Charger on Solar Energy Click board.
  */
  void solarenergy_charge_enable ( solarenergy_t *ctx );
  
@@ -161,7 +161,7 @@ SOLARENERGY_RETVAL solarenergy_init ( solarenergy_t *ctx, solarenergy_cfg_t *cfg
  * @param ctx  Click object.
  *
  * @description Function disable charging by clear CS ( EN ) pin,
- * disable BQ25570 Nano Power Boost Charger on Solar Energy click board.
+ * disable BQ25570 Nano Power Boost Charger on Solar Energy Click board.
  */
 void solarenergy_charge_disable ( solarenergy_t *ctx );
 
@@ -176,7 +176,7 @@ void solarenergy_charge_disable ( solarenergy_t *ctx );
  * - 1 : battery full status;
  *
  * @description Function get state of INT pin by check battery good indicator
- * from BQ25570 Nano Power Boost Charger on Solar Energy click board.
+ * from BQ25570 Nano Power Boost Charger on Solar Energy Click board.
  */
 uint8_t solarenergy_check_indicator ( solarenergy_t *ctx );
 
@@ -186,6 +186,6 @@ uint8_t solarenergy_check_indicator ( solarenergy_t *ctx );
 #endif  // _SOLARENERGY_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

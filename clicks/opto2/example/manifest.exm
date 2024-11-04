@@ -1,8 +1,8 @@
 {
     "name": "Opto 2 Click",
-    "description": "Opto 2 click is a galvanic isolator Click board™, used to provide an optical isolation of sensitive microcontroller (MCU) pins, when operated by external signals.",
+    "description": "Opto 2 Click is a galvanic isolator Click board™, used to provide an optical isolation of sensitive microcontroller (MCU) pins, when operated by external signals.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TLP2770"],
+    "hw" : ["Click","TLP2770"],
     "category" : ["Optocoupler"] 
 }

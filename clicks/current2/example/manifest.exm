@@ -1,8 +1,8 @@
 {
     "name": "Current 2 Click",
-    "description": "Current 2 click is an accurate current sensing Click board™ suitable for a very accurate measurement of the current through the load.",
+    "description": "Current 2 Click is an accurate current sensing Click board™ suitable for a very accurate measurement of the current through the load.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","FAN4010"],
+    "hw" : ["Click","FAN4010"],
     "category" : ["Measurements"] 
 }

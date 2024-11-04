@@ -404,7 +404,7 @@ typedef enum
 
 /**
  * @brief Pressure 23 07BA configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #pressure2307ba_cfg_t object definition for detailed explanation.
@@ -416,7 +416,7 @@ void pressure2307ba_cfg_setup ( pressure2307ba_cfg_t *cfg );
 /**
  * @brief Pressure 23 07BA driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #pressure2307ba_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -432,7 +432,7 @@ void pressure2307ba_drv_int_sel ( pressure2307ba_cfg_t *cfg, pressure2307ba_drv_
 /**
  * @brief Pressure 23 07BA initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #pressure2307ba_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -447,7 +447,7 @@ err_t pressure2307ba_init ( pressure2307ba_t *ctx, pressure2307ba_cfg_t *cfg );
 /**
  * @brief Pressure 23 07BA default configuration function.
  * @details This function executes a default configuration of Pressure 23 07BA
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #pressure2307ba_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

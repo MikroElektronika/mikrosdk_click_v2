@@ -128,7 +128,7 @@ typedef enum
 
 /**
  * @brief Water Detect 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #waterdetect3_cfg_t object definition for detailed explanation.
@@ -140,7 +140,7 @@ void waterdetect3_cfg_setup ( waterdetect3_cfg_t *cfg );
 /**
  * @brief Water Detect 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #waterdetect3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -155,7 +155,7 @@ err_t waterdetect3_init ( waterdetect3_t *ctx, waterdetect3_cfg_t *cfg );
 /**
  * @brief Water Detect 3 interrupt pin reading function.
  * @details This function reads the state of the interrupt pin of Water Detect 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #waterdetect3_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,

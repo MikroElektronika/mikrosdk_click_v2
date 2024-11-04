@@ -1,6 +1,6 @@
 
 ---
-# UV 5 click
+# UV 5 Click
 
 > UV 5 Click is a compact add-on board that can measure UV radiation. This board features the AS7331, a spectral UVA/B/C sensor from ams. The sensor can measure UVA, UVB, and UVC, which are the main types of UV rays from the UV radiation of the sunlight. It uses ADC with a high dynamic range (16… 24-bit) for measurements from low to high radiation conditions and has a high sensitivity, which makes it usable for fluorescence light conditions.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/uv5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/uv-5-click)
+[Click Product page](https://www.mikroe.com/uv-5-click)
 
 ---
 
@@ -69,14 +69,14 @@ err_t uv5_channel_uva_read ( uv5_t *ctx, uint16_t *uva_data );
 
 ## Example Description
 
-> This example demonstrates the use of UV 5 click board by measuring 
+> This example demonstrates the use of UV 5 Click board by measuring 
   the light irradiance of the UVA, UVB and UVC.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver, and performs the click default configuration.
+> Initializes the driver, and performs the Click default configuration.
 
 ```c
 
@@ -120,7 +120,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Measuring light irradiance level by reading data from the UV 5 click board 
+> Measuring light irradiance level by reading data from the UV 5 Click board 
   approximately every 4 seconds and displaying it using UART Serial terminal.
 
 ```c
@@ -162,7 +162,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# Brushless 7 click
+# Brushless 7 Click
 
 Brushless 7 Click is, as its name said, a motor driver based expansion board for controlling BLCD motors with any microcontroller.
 
@@ -10,7 +10,7 @@ Brushless 7 Click is, as its name said, a motor driver based expansion board for
 </p>
 
 
-[click Product page](https://www.mikroe.com/brushless-7-click)
+[Click Product page](https://www.mikroe.com/brushless-7-click)
 
 ---
 
@@ -66,7 +66,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Sets the default configuration and then configures the click board for the selected mode. 
+> Sets the default configuration and then configures the Click board for the selected mode. 
 
 ```c
 
@@ -255,7 +255,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

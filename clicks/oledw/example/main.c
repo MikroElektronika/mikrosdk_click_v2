@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Configures the microcontroller for communication and initializes the click
+ * Configures the microcontroller for communication and initializes the Click
  * board to default state.
  *
  * ## Application Task

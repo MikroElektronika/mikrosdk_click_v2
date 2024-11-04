@@ -1,6 +1,6 @@
 
 ---
-# Opto 5 click
+# Opto 5 Click
 
 Opto 5 Click is a compact add-on board that provides uncomplicated safety isolation from the high voltage. This board features the FOD4216, a random phase snubberless Triac driver from ON Semiconductor.
 
@@ -8,7 +8,7 @@ Opto 5 Click is a compact add-on board that provides uncomplicated safety isolat
   <img src="https://download.mikroe.com/images/click_for_ide/opto5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/opto-5-click)
+[Click Product page](https://www.mikroe.com/opto-5-click)
 
 ---
 
@@ -71,7 +71,7 @@ void opto5_pin_toggle ( opto5_t *ctx );
 
 ## Examples Description
 
-This example demonstrates the use of Opto 5 click board.
+This example demonstrates the use of Opto 5 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -143,7 +143,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

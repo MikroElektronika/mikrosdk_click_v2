@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Button Power click
+# Button Power Click
 
 Button Power Click is a very interesting interactive gadget on a Click board™. It is an integrated capacitive touch sensor display in the form of a button. By utilizing an advanced capacitive touch sensing technology, the CTHS15CIC05ONOFF sensor can successfully replace the traditional mechanical button, allowing very simplified yet reliable user interfaces to be developed. Besides the touch detection, this sensor also features a green power symbol icon with backlight, which makes the Click board™ very useful for building various stylized and visually appealing interfaces.
 
@@ -9,7 +9,7 @@ Button Power Click is a very interesting interactive gadget on a Click board™.
   <img src="https://download.mikroe.com/images/click_for_ide/button_power_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/button-power-click)
+[Click Product page](https://www.mikroe.com/button-power-click)
 
 ---
 
@@ -72,7 +72,7 @@ uint8_t buttonpower_get_button_state ( buttonpower_t *ctx );
 
 ### Application Init
 
-> This function initializes and configures the logger and click modules.
+> This function initializes and configures the logger and Click modules.
 
 ```c
 
@@ -169,7 +169,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

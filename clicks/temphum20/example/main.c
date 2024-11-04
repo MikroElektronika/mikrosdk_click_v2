@@ -3,12 +3,12 @@
  * @brief TempHum20 Click example
  *
  * # Description
- * This example demonstrates the use of Temp & Hum 20 click board.
+ * This example demonstrates the use of Temp & Hum 20 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and logger and performs the click default configuration 
+ * Initializes the driver and logger and performs the Click default configuration 
  * which resets the device and sets it to normal operating mode.
  *
  * ## Application Task

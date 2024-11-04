@@ -3,15 +3,15 @@
  
 
 ---
-# Charger 13 click
+# Charger 13 Click
 
-Charger 13 Click is a single lithium-ion (Li+) cell battery charger. This click can be used for Low-Cost Li-Ion battery chargers, or Power Tools, toys, backup energy storage solutions, etc.
+Charger 13 Click is a single lithium-ion (Li+) cell battery charger. This Click can be used for Low-Cost Li-Ion battery chargers, or Power Tools, toys, backup energy storage solutions, etc.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/charger13_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/charger-13-click)
+[Click Product page](https://www.mikroe.com/charger-13-click)
 
 ---
 
@@ -50,13 +50,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- This function enable battery charging by cleared to LOW state of the EN ( PWM ) pin of the Charger 13 click board.
+- This function enable battery charging by cleared to LOW state of the EN ( PWM ) pin of the Charger 13 Click board.
 > void charger13_enable ( charger13_t *ctx );
  
-- This function disable battery charging by sets to HIGH state of the EN ( PWM ) pin of the Charger 13 click board.
+- This function disable battery charging by sets to HIGH state of the EN ( PWM ) pin of the Charger 13 Click board.
 > charger13_disable ( charger13_t *ctx );
 
-- This function check if the battery is charging of the Charger 13 click board.
+- This function check if the battery is charging of the Charger 13 Click board.
 > uint8_t charger13_check ( charger13_t *ctx );
 
 ## Examples Description
@@ -113,8 +113,8 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example which demonstrates the use of Charger 13 click board.
-> This example shows the automatic control of the Charger 13 click,
+> This is an example which demonstrates the use of Charger 13 Click board.
+> This example shows the automatic control of the Charger 13 Click,
 > waits for valid user input and executes functions based on a set of valid commands
 > and check the battery charge status.
 > Results are being sent to the Usart Terminal where you can track their changes.
@@ -168,7 +168,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https:///shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https:///shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https:///shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https:///shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

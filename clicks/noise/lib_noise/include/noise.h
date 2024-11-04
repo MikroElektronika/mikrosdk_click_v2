@@ -168,7 +168,7 @@ extern "C"{
  *
  * @param cfg Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void noise_cfg_setup ( noise_cfg_t *cfg );
@@ -178,7 +178,7 @@ void noise_cfg_setup ( noise_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t noise_init ( noise_t *ctx, noise_cfg_t *cfg );
 
@@ -187,7 +187,7 @@ err_t noise_init ( noise_t *ctx, noise_cfg_t *cfg );
  *
  * @param ctx Click object.
  *
- * @details This function performs default configuration for Noise click.
+ * @details This function performs default configuration for Noise Click.
  * Typically, it's setting threshold to default value. 
  */
 void noise_default_cfg ( noise_t *ctx );
@@ -198,7 +198,7 @@ void noise_default_cfg ( noise_t *ctx );
  * @param ctx      Click object.
  * @param cmd_data Command and data to send.
  *
- * @details This function writes data to click's command register.
+ * @details This function writes data to Click's command register.
  */
 void noise_write_cmd_reg ( noise_t *ctx, uint16_t cmd_data );
 
@@ -222,12 +222,12 @@ void noise_write_cmd_reg ( noise_t *ctx, uint16_t cmd_data );
 err_t noise_set_cmd_reg ( noise_t *ctx, uint8_t configuration, uint16_t threshold );
 
 /**
- * @brief Enable/disable click 
+ * @brief Enable/disable Click 
  *
  * @param ctx   Click object.
- * @param state State to set click on.
+ * @param state State to set Click on.
  *
- * @details This function switches click on or off.
+ * @details This function switches Click on or off.
  */
 void noise_set_state ( noise_t *ctx, uint8_t state );
 
@@ -236,7 +236,7 @@ void noise_set_state ( noise_t *ctx, uint8_t state );
  *
  * @param ctx Click object.
  *
- * @details This function performs click reset.
+ * @details This function performs Click reset.
  */
 void noise_reset ( noise_t *ctx );
 
@@ -285,6 +285,6 @@ err_t noise_read_an_pin_voltage ( noise_t *ctx, float *data_out );
 #endif  // _NOISE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

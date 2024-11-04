@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# RS232 Isolator 2 click
+# RS232 Isolator 2 Click
 
 RS232 Isolator 2 Click is a compact add-on board that contains a fully isolated transceiver used to provide secure and easy UART to RS232 conversion. This board features the ICL3221, a 3.3V powered RS232 transmitter/receiver that provides ±15kV ESD protection on its RS232 pins from Renesas. This Click board™ is characterized by an assured minimum data rate of 250kbps. It features an automatic power-down function and uses high-speed digital optocouplers to isolate the RS232 interface for 3.75kV isolation. It also possesses an LED indicator that indicates a valid RS232 signal at any of the receiver inputs. This Click board™ is suitable for isolation of RS232 signals, portable equipment, and where the low operational power consumption and even lower standby power consumption are critical.
 
@@ -9,7 +9,7 @@ RS232 Isolator 2 Click is a compact add-on board that contains a fully isolated 
   <img src="https://download.mikroe.com/images/click_for_ide/rs232isolator2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rs232-isolator-2-click)
+[Click Product page](https://www.mikroe.com/rs232-isolator-2-click)
 
 ---
 
@@ -184,7 +184,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -12,7 +12,7 @@
  * Initalizes I2C driver and makes an initial log.
  * 
  * ## Application Task  
- * This example shows the capabilities of the Power Bank 2 click
+ * This example shows the capabilities of the Power Bank 2 Click
  * by measuring voltage of the connected battery. In order to get correct calculations 
  * the user should change "v_ref" value to his own power supply voltage.
  * 

@@ -708,7 +708,7 @@ typedef struct
 
 /**
  * @brief ProxFusion 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #proxfusion3_cfg_t object definition for detailed explanation.
@@ -722,7 +722,7 @@ void proxfusion3_cfg_setup ( proxfusion3_cfg_t *cfg );
 /**
  * @brief ProxFusion 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #proxfusion3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -740,7 +740,7 @@ err_t proxfusion3_init ( proxfusion3_t *ctx, proxfusion3_cfg_t *cfg );
 /**
  * @brief ProxFusion 3 default configuration function.
  * @details This function executes a default configuration of ProxFusion 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #proxfusion3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -757,7 +757,7 @@ err_t proxfusion3_default_cfg ( proxfusion3_t *ctx );
 /**
  * @brief ProxFusion 3 INT pin setting function.
  * @details This function sets the INT pin state to the desired level
- * ProxFusion 3 click board.
+ * ProxFusion 3 Click board.
  * @param[in] ctx : Click context object.
  * See #proxfusion3_t object definition for detailed explanation.
  * @param[in] pin_state : 
@@ -771,7 +771,7 @@ void proxfusion3_set_state_int_pin ( proxfusion3_t *ctx, uint8_t pin_state );
 /**
  * @brief ProxFusion 3 get state of GP pin function.
  * @details This function get State of GP pin 
- * on ProxFusion 3 click board.
+ * on ProxFusion 3 Click board.
  * @param[out] ctx : Click context object.
  * See #proxfusion3_t object definition for detailed explanation.
  * @return 
@@ -874,7 +874,7 @@ err_t proxfusion3_get_version_info ( proxfusion3_t *ctx, uint8_t *product_number
  * @details This function is a method which clears the Show Reset bit 
  * by writing it to a 0
  * of the IQS269A 8 Channel capacitive touch and proximity controller
- * on the ProxFusion 3 click board. 
+ * on the ProxFusion 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #proxfusion3_t object definition for detailed explanation.
  * @return Nothing.
@@ -889,7 +889,7 @@ void proxfusion3_sw_reset ( proxfusion3_t *ctx );
  * @brief ProxFusion 3 enable channels function.
  * @details This function is a method which enables all channels
  * of the IQS269A 8 Channel capacitive touch and proximity controller
- * on the ProxFusion 3 click board. 
+ * on the ProxFusion 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #proxfusion3_t object definition for detailed explanation.
  * @return Nothing.
@@ -904,7 +904,7 @@ void proxfusion3_enable_channels ( proxfusion3_t *ctx );
  * @brief ProxFusion 3 channel remap function.
  * @details This function is remap the channels
  * of the IQS269A 8 Channel capacitive touch and proximity controller
- * on the ProxFusion 3 click board. 
+ * on the ProxFusion 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #proxfusion3_t object definition for detailed explanation.
  * @return Nothing.
@@ -919,7 +919,7 @@ void proxfusion3_channel_remap ( proxfusion3_t *ctx );
  * @brief ProxFusion 3 adjust touch thresholds function.
  * @details This function adjust touch thresholds
  * of the IQS269A 8 Channel capacitive touch and proximity controller
- * on the ProxFusion 3 click board. 
+ * on the ProxFusion 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #proxfusion3_t object definition for detailed explanation.
  * @return Nothing.
@@ -934,7 +934,7 @@ void proxfusion3_adjust_touch_thresholds ( proxfusion3_t *ctx );
  * @brief ProxFusion 3 adjust deep touch thresholds function.
  * @details This function adjust deep touch thresholds
  * of the IQS269A 8 Channel capacitive touch and proximity controller
- * on the ProxFusion 3 click board. 
+ * on the ProxFusion 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #proxfusion3_t object definition for detailed explanation.
  * @return Nothing.
@@ -950,7 +950,7 @@ void proxfusion3_adjust_deep_touch_thresholds ( proxfusion3_t *ctx );
  * @details This function force the device to run the 
  * Automatic Tuning Implementation (ATI) routine
  * of the IQS269A 8 Channel capacitive touch and proximity controller
- * on the ProxFusion 3 click board. 
+ * on the ProxFusion 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #proxfusion3_t object definition for detailed explanation.
  * @return Nothing.
@@ -965,7 +965,7 @@ void proxfusion3_auto_tune ( proxfusion3_t *ctx );
  * @brief ProxFusion 3 set event function.
  * @details This function set desired event
  * of the IQS269A 8 Channel capacitive touch and proximity controller
- * on the ProxFusion 3 click board.
+ * on the ProxFusion 3 Click board.
  * @param[in] ctx : Click context object.
  * See #proxfusion3_t object definition for detailed explanation.
  * @param[in] event : 
@@ -990,7 +990,7 @@ void proxfusion3_set_event ( proxfusion3_t *ctx, uint8_t event );
  * @details This function read the absolute capacitance registers 
  * and calculate the absolute capacitance
  * of the IQS269A 8 Channel capacitive touch and proximity controller
- * on the ProxFusion 3 click board.
+ * on the ProxFusion 3 Click board.
  * @param[in] ctx : Click context object.
  * See #proxfusion3_t object definition for detailed explanation.
  * @return absolute capacitance.
@@ -1005,7 +1005,7 @@ float proxfusion3_get_absolute_measurement ( proxfusion3_t *ctx );
  * @brief ProxFusion 3 read channel delta function.
  * @details This function reads and returns the Delta value of a specific channel
  * of the IQS269A 8 Channel capacitive touch and proximity controller
- * on the ProxFusion 3 click board.
+ * on the ProxFusion 3 Click board.
  * @param[in] ctx : Click context object.
  * See #proxfusion3_t object definition for detailed explanation.
  * @param[in] channel : The enumerator which specifes which channel's Delta value to return.
@@ -1021,7 +1021,7 @@ uint16_t proxfusion3_read_channel_delta ( proxfusion3_t *ctx, uint8_t channel );
  * @brief ProxFusion 3 check touch event function.
  * @details This function reads and check touch event
  * of the IQS269A 8 Channel capacitive touch and proximity controller
- * on the ProxFusion 3 click board.
+ * on the ProxFusion 3 Click board.
  * @param[in] ctx : Click context object.
  * See #proxfusion3_t object definition for detailed explanation.
  * @return  @li @c 0x00 ( PROXFUSION3_EVENT_NO_TOUCH ) - No Touch event,
@@ -1037,7 +1037,7 @@ uint8_t proxfusion3_check_touch_event ( proxfusion3_t *ctx );
  * @brief ProxFusion 3 get touch function.
  * @details This function reads and returns the position of the touch
  * of the IQS269A 8 Channel capacitive touch and proximity controller
- * on the ProxFusion 3 click board.
+ * on the ProxFusion 3 Click board.
  * @param[in] ctx : Click context object.
  * See #proxfusion3_t object definition for detailed explanation.
  * @return position of the touch:
@@ -1061,7 +1061,7 @@ uint8_t proxfusion3_get_touch ( proxfusion3_t *ctx );
  * @details This function is a method which enables 
  * the absolute capacitiance UI
  * of the IQS269A 8 Channel capacitive touch and proximity controller
- * on the ProxFusion 3 click board. 
+ * on the ProxFusion 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #proxfusion3_t object definition for detailed explanation.
  * @return Nothing.
@@ -1076,7 +1076,7 @@ void proxfusion3_en_abs_cap ( proxfusion3_t *ctx );
  * @brief ProxFusion 3 set even mode function.
  * @details This function set the desire even mode 
  * of the IQS269A 8 Channel capacitive touch and proximity controller
- * on the ProxFusion 3 click board. 
+ * on the ProxFusion 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #proxfusion3_t object definition for detailed explanation.
  * @param[in] mode : 
@@ -1100,7 +1100,7 @@ void proxfusion3_set_even_mode ( proxfusion3_t *ctx, uint8_t mode );
  * @brief ProxFusion 3 get events function.
  * @details This function reads and returns the byte which holds the event flags 
  * of the IQS269A 8 Channel capacitive touch and proximity controller
- * on the ProxFusion 3 click board. 
+ * on the ProxFusion 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #proxfusion3_t object definition for detailed explanation.
  * @return Byte which contains the event flags.
@@ -1115,7 +1115,7 @@ uint8_t proxfusion3_get_events ( proxfusion3_t *ctx );
  * @brief ProxFusion 3 get gestures function.
  * @details This function reads and returns the byte which holds the gesture flags 
  * of the IQS269A 8 Channel capacitive touch and proximity controller
- * on the ProxFusion 3 click board. 
+ * on the ProxFusion 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #proxfusion3_t object definition for detailed explanation.
  * @return Byte which contains the gesture flags.

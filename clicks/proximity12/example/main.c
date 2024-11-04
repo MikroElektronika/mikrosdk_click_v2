@@ -3,12 +3,12 @@
  * @brief Proximity12 Click example
  *
  * # Description
- * This function demonstrates the use of Proximity 12 click board.
+ * This function demonstrates the use of Proximity 12 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads the proximity and ALS values and displays the results on the USB UART 

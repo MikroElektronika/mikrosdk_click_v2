@@ -3,6 +3,6 @@
     "description": "NB IoT 5 Click is a compact add-on board suitable as narrow-band Internet of Things universal wireless communication solution. This board features the OT01-5, a high-performance NB-IoT module with ultra-low power consumption allowing battery life of about ten years from Notioni.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","OT01-5"],
+    "hw" : ["Click","OT01-5"],
     "category" : ["Click Boards > Wireless connectivity > GSM/LTE"]
 }

@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# I2C MUX 2 click
+# I2C MUX 2 Click
 
-> I2C MUX 2 Click is a quad bidirectional translating I2C and SMBus switch with reset and interrupt functions, intended for applications with I2C slave address conflicts. It features a quad bidirectional translating switch controlled via the I2C bus, labeled as TCA9545A from Texas Instruments. Four interrupt inputs (INT3–INT0), one for each of the downstream pairs, are provided on click board. One interrupt (INT) output acts as an AND of the four interrupt inputs.
+> I2C MUX 2 Click is a quad bidirectional translating I2C and SMBus switch with reset and interrupt functions, intended for applications with I2C slave address conflicts. It features a quad bidirectional translating switch controlled via the I2C bus, labeled as TCA9545A from Texas Instruments. Four interrupt inputs (INT3–INT0), one for each of the downstream pairs, are provided on Click board. One interrupt (INT) output acts as an AND of the four interrupt inputs.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/i2cmux2_click.png">
 </p>
 
-[click Product page](https://www.mikroe.com/i2c-mux-2-click)
+[Click Product page](https://www.mikroe.com/i2c-mux-2-click)
 
 ---
 
@@ -48,12 +48,12 @@ err_t i2cmux2_init ( i2cmux2_t *ctx, i2cmux2_cfg_t *cfg );
 
 #### Example key functions :
 
-- `i2cmux2_hw_reset` This function resets I2C MUX 2 click board by clearing the RST pin for 100ms.
+- `i2cmux2_hw_reset` This function resets I2C MUX 2 Click board by clearing the RST pin for 100ms.
 ```c
 void i2cmux2_hw_reset ( i2cmux2_t *ctx );
 ```
 
-- `i2cmux2_set_channel` Function sets channel of the I2C MUX 2 click board.
+- `i2cmux2_set_channel` Function sets channel of the I2C MUX 2 Click board.
 ```c
 void i2cmux2_set_channel ( i2cmux2_t *ctx, uint8_t channel, uint8_t ch_slave_address );
 ```
@@ -113,11 +113,11 @@ void application_init ( void )
 
 ### Application Task
 
-> In this example, we read the device ID register of the connected click boards.
-> Channel 0 : 6DOF IMU 11 click [slave address: 0x0E; reg: 0x00; id val.: 0x2D],
-> Channel 1 : Altitude click    [slave address: 0x60; reg: 0x0C; id val.: 0xC4],
-> Channel 2 : 6DOF IMU 9 click  [slave address: 0x69; reg: 0x75; id val.: 0xA9],
-> Channel 3 : Compass 3 click   [slave address: 0x30; reg: 0x2F; id val.: 0x0C].
+> In this example, we read the device ID register of the connected Click boards.
+> Channel 0 : 6DOF IMU 11 Click [slave address: 0x0E; reg: 0x00; id val.: 0x2D],
+> Channel 1 : Altitude Click    [slave address: 0x60; reg: 0x0C; id val.: 0xC4],
+> Channel 2 : 6DOF IMU 9 Click  [slave address: 0x69; reg: 0x75; id val.: 0xA9],
+> Channel 3 : Compass 3 Click   [slave address: 0x30; reg: 0x2F; id val.: 0x0C].
 > All data logs write on USB UART changes every 2 sec.
 
 ```c
@@ -128,7 +128,7 @@ void application_task ( void )
     log_printf( &logger, "----------------------\r\n" );
     
 #ifdef ENABLE_CHANNEL_0
-    // SET CHANNEL 0: 6DOF IMU 11 click
+    // SET CHANNEL 0: 6DOF IMU 11 Click
     i2cmux2_set_channel( &i2cmux2, I2CMUX2_CMD_SET_CH_0, 0x0E );
     Delay_ms ( 100 );
     i2cmux2_generic_read( &i2cmux2, 0x00, &rx_data, 1 );
@@ -136,7 +136,7 @@ void application_task ( void )
 #endif
     
 #ifdef ENABLE_CHANNEL_1
-    // SET CHANNEL 1: Altitude click
+    // SET CHANNEL 1: Altitude Click
     i2cmux2_set_channel( &i2cmux2, I2CMUX2_CMD_SET_CH_1, 0x60 );
     Delay_ms ( 100 );
     i2cmux2_generic_read( &i2cmux2, 0x0C, &rx_data, 1 );
@@ -144,7 +144,7 @@ void application_task ( void )
 #endif
     
 #ifdef ENABLE_CHANNEL_2
-    // SET CHANNEL 2: 6DOF IMU 9 click
+    // SET CHANNEL 2: 6DOF IMU 9 Click
     i2cmux2_set_channel( &i2cmux2, I2CMUX2_CMD_SET_CH_2, 0x69 );
     Delay_ms ( 100 );
     i2cmux2_generic_read( &i2cmux2, 0x75, &rx_data, 1 );
@@ -152,7 +152,7 @@ void application_task ( void )
 #endif
 
 #ifdef ENABLE_CHANNEL_3
-    // SET CHANNEL 3: Compass 3 click
+    // SET CHANNEL 3: Compass 3 Click
     i2cmux2_set_channel( &i2cmux2, I2CMUX2_CMD_SET_CH_3, 0x30 );
     Delay_ms ( 100 );
     i2cmux2_generic_read( &i2cmux2, 0x2F, &rx_data, 1 );
@@ -181,7 +181,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

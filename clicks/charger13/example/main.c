@@ -11,8 +11,8 @@
  * Initialization device.
  * 
  * ## Application Task  
- * This is an example which demonstrates the use of Charger 13 click board.
- * This example shows the automatic control of the Charger 13 click,
+ * This is an example which demonstrates the use of Charger 13 Click board.
+ * This example shows the automatic control of the Charger 13 Click,
  * waits for valid user input and executes functions based on a set of valid commands
  * and check the battery charge status.
  * Results are being sent to the Usart Terminal where you can track their changes.

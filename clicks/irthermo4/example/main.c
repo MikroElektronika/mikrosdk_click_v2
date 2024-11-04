@@ -3,13 +3,13 @@
  * @brief IR Thermo 4 Click example
  *
  * # Description
- * This example demonstrates the use of IR Thermo 4 click board by reading and displaying
+ * This example demonstrates the use of IR Thermo 4 Click board by reading and displaying
  * the ambient and object temperature measurements.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads the ambient and object temperature measurements twice per second and displays

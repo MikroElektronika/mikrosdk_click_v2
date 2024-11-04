@@ -3,7 +3,7 @@
  * @brief Environment3 Click example
  *
  * # Description
- * This example demonstrates the use of Environment 3 click board.
+ * This example demonstrates the use of Environment 3 Click board.
  *
  * The demo application is composed of two sections :
  *

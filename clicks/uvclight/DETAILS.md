@@ -1,6 +1,6 @@
 
 ---
-# UVC Light click
+# UVC Light Click
 
 UVC Light Click is Click board™ with ultraviolet LEDs with 275nm wavelength which can be complemented with UVC Click for measuring exact dose of UV radiation. UVC radiation refers to wavelengths shorter than 280 nm. Because of the spectral sensitivity of DNA, only the UVC region demonstrates significant germicidal properties. As evident by multiple research studies and reports, when biological organisms are exposed to deep UV light in the range of 200 nm to 300 nm it is absorbed by DNA, RNA, and proteins. With two 0.7W (1.4W combined power) UVC Light Click is a perfect solution as a small surface disinfection tool.
 
@@ -8,7 +8,7 @@ UVC Light Click is Click board™ with ultraviolet LEDs with 275nm wavelength wh
   <img src="https://download.mikroe.com/images/click_for_ide/uvclight_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/uvc-light-click)
+[Click Product page](https://www.mikroe.com/uvc-light-click)
 
 ---
 
@@ -55,7 +55,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This click has ultraviolet LEDs with 275nm wavelength. UVC radiation refers to wavelengths 
+> This Click has ultraviolet LEDs with 275nm wavelength. UVC radiation refers to wavelengths 
 > shorter than 280 nm. Because of the spectral sensitivity of DNA, only the UVC region 
 > demonstrates significant germicidal properties.
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "2x2 key click",
+    "display_name": "2x2 key Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.c2x2key",
     "product_link": "https://www.mikroe.com/2x2-key-click",
-    "short_description": "2x2 Key click has a 4 button keypad and allows multiple key presses.",
+    "short_description": "2x2 Key Click has a 4 button keypad and allows multiple key presses.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1965
     ],
-    "version": "2.1.0.19",
+    "version": "2.1.0.20",
     "cmake": true,
     "alias": "Click.2x2key",
     "subdir_name": "lib_c2x2key"
 }
+
 
 
 

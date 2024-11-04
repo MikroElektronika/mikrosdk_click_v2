@@ -3,14 +3,14 @@
  * @brief Smart DOF 5 Click example
  *
  * # Description
- * This example demonstrates the use of Smart DOF 5 click board by reading and displaying 
+ * This example demonstrates the use of Smart DOF 5 Click board by reading and displaying 
  * the accelerometer and gyroscope data (X, Y, and Z axis) as well as a temperature measurement
  * in degrees Celsius.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Waits for a data ready indication and then reads the accelerometer, gyroscope, and temperature

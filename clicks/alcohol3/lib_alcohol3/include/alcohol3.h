@@ -192,7 +192,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void alcohol3_cfg_setup ( alcohol3_cfg_t *cfg );
@@ -203,7 +203,7 @@ void alcohol3_cfg_setup ( alcohol3_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ALCOHOL3_RETVAL alcohol3_init ( alcohol3_t *ctx, alcohol3_cfg_t *cfg );
 
@@ -212,7 +212,7 @@ ALCOHOL3_RETVAL alcohol3_init ( alcohol3_t *ctx, alcohol3_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Alcohol3 click.
+ * @description This function executes default configuration for Alcohol3 Click.
  */
 void alcohol3_default_cfg ( alcohol3_t *ctx );
 
@@ -291,6 +291,6 @@ float alcohol3_get_percentage_bac ( alcohol3_t *ctx );
 #endif  // _ALCOHOL3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

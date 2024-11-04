@@ -3,6 +3,6 @@
     "description": "6DOF IMU 2 Click is capable of precise acceleration and angular rate (gyroscopic) measurement.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","BMI160"],
+    "hw" : ["Click","BMI160"],
     "category" : ["Motion"] 
 }

@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "MIC 3 click",
+    "display_name": "MIC 3 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -31,11 +31,12 @@
         3748
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
+    "version": "2.1.0.7",
     "cmake": true,
     "alias": "Click.MIC3",
     "subdir_name": "lib_mic3"
 }
+
 
 
 

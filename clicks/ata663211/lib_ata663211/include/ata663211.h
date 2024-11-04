@@ -155,7 +155,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void ata663211_cfg_setup ( ata663211_cfg_t *cfg );
@@ -165,7 +165,7 @@ void ata663211_cfg_setup ( ata663211_cfg_t *cfg );
  * @param ata663211 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t ata663211_init ( ata663211_t *ctx, ata663211_cfg_t *cfg );
 
@@ -230,6 +230,6 @@ uint8_t ata663211_check_inh ( ata663211_t *ctx );
 #endif  // _ATA663211_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

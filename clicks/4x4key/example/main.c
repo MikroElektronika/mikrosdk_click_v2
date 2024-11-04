@@ -4,7 +4,7 @@
  * 
  * # Description
  * The library covers all the necessary functions to control the 4x4 Key Click.
- * 4x4 Key click communicates with the target board via SPI interface. 
+ * 4x4 Key Click communicates with the target board via SPI interface. 
  * This library contains drivers for reading data from a sensor and get 
  * the position of the pressed button.
  *

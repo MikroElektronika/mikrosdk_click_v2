@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# RMS to DC 2 click
+# RMS to DC 2 Click
 
 > RMS to DC 2 Click is a compact add-on board that converts the RMS of the input signal into a DC voltage. This board features the AD8436, a low-cost, low-power, true RMS-to-DC converter from Analog Devices. The AD8436 is a translinear precision, low-power, true RMS-to-DC converter that delivers true RMS or average rectified value of AC waveform. It features high accuracy, a wide dynamic input range (100μV rms to 3V rms), a wide bandwidth of up to 1MHz, and more. This Click board™ makes the perfect solution for the development of various true RMS digital multimeter applications, panel meters and gauges, AC + DC measurement applications, a true RMS measurement of an audio signal, and other similar applications that require accurate RMS value readings.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/rmstodc2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rms-to-dc-2-click)
+[Click Product page](https://www.mikroe.com/rms-to-dc-2-click)
 
 ---
 
@@ -48,7 +48,7 @@ err_t rmstodc2_init ( rmstodc2_t *ctx, rmstodc2_cfg_t *cfg );
 
 #### Example key functions :
 
-- `rmstodc2_set_vref` This function sets the voltage reference for RMS to DC 2 click driver.
+- `rmstodc2_set_vref` This function sets the voltage reference for RMS to DC 2 Click driver.
 ```c
 err_t rmstodc2_set_vref ( rmstodc2_t *ctx, float vref );
 ```
@@ -60,7 +60,7 @@ err_t rmstodc2_read_voltage ( rmstodc2_t *ctx, float *voltage );
 
 ## Example Description
 
-> This example demonstrates the use of the RMS to DC 2 click board by measuring the RMS voltage of the input signal.
+> This example demonstrates the use of the RMS to DC 2 Click board by measuring the RMS voltage of the input signal.
 
 **The demo application is composed of two sections :**
 
@@ -132,7 +132,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

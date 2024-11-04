@@ -3,7 +3,7 @@
  * \brief Servo Click example
  * 
  * # Description
- * This app shows how the servo motor can be controled by the click board.
+ * This app shows how the servo motor can be controled by the Click board.
  *
  * The demo application is composed of two sections :
  * 

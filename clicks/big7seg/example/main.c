@@ -12,7 +12,7 @@
  * by setting PWM pin to logic 1 and prepare to communcation via SPI.
  * 
  * ## Application Task  
- * This example shows functionality of the BIG 7-SEG R click,
+ * This example shows functionality of the BIG 7-SEG R Click,
  * shows number or character on display.
  * 
  * \author MikroE Team

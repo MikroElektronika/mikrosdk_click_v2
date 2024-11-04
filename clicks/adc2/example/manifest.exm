@@ -1,8 +1,8 @@
 {
     "name": "ADC 2 Click",
-    "description": "ADC 2 click carries MCP3551/3, which is a 22-bit ADC with automatic internal offset and gain calibration.",
+    "description": "ADC 2 Click carries MCP3551/3, which is a 22-bit ADC with automatic internal offset and gain calibration.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MCP3551/3"],
+    "hw" : ["Click","MCP3551/3"],
     "category" : ["ADC"] 
 }

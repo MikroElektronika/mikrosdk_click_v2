@@ -3,7 +3,7 @@
  * \brief IR distance Click example
  * 
  * # Description
- * The click board outputs an analog voltage corresponding to the distance of the object 
+ * The Click board outputs an analog voltage corresponding to the distance of the object 
  * (through the mikroBUS AN pin). An Enable (EN) pin is also utilized.
  *
  * The demo application is composed of two sections :
@@ -12,8 +12,8 @@
  * Initialization driver enables GPIO, enable IR sensor, initialization ADC, also write log.
  * 
  * ## Application Task  
- * This is an example which demonstrates the use of IR Distance click board.
- * IR Distance click reads and displays ADC value.
+ * This is an example which demonstrates the use of IR Distance Click board.
+ * IR Distance Click reads and displays ADC value.
  * Results are being sent to the Usart Terminal where you can track their changes.
  * All data logs on USB uart change for every 1 sec.
  * 

@@ -1,8 +1,8 @@
 {
     "name": "Clock Gen 2 Click",
-    "description": "Clock Gen 2 click is an accurate square wave generator that can generate a clock signal in the range from 260kHz to 66.6MHz.",
+    "description": "Clock Gen 2 Click is an accurate square wave generator that can generate a clock signal in the range from 260kHz to 66.6MHz.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","DS1087LU-266"],
+    "hw" : ["Click","DS1087LU-266"],
     "category" : ["Clock generator"] 
 }

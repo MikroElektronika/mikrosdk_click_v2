@@ -1,6 +1,6 @@
 
 ---
-# LR 4 click
+# LR 4 Click
 
 LR 4 Click is a compact add-on board that contains a long-range transceiver. This board features the 32001353, RF technology-based SRD transceiver, which operates at a frequency of 868MHz from Mipot.
 
@@ -8,7 +8,7 @@ LR 4 Click is a compact add-on board that contains a long-range transceiver. Thi
   <img src="https://download.mikroe.com/images/click_for_ide/lr4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lr-4-click)
+[Click Product page](https://www.mikroe.com/lr-4-click)
 
 ---
 
@@ -61,7 +61,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes the driver, and resets the click board to factory default configuration.
+> Initializes the driver, and resets the Click board to factory default configuration.
 > Then performs a group of commands for getting the FW version, the serial number, and the DevEUI.
 > After that executes the join activation by personalization command.
 
@@ -219,7 +219,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

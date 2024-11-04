@@ -13,7 +13,7 @@
  * ## Application Task  
  * Sequential read of voltage. Information about
  * current voltage is logget to UART. Operation is repeated each second. Settings are set
- * to calculate and convert input voltage from CH0 with external referent voltage set by VREF jumper on the click board.
+ * to calculate and convert input voltage from CH0 with external referent voltage set by VREF jumper on the Click board.
  * 
  * \author MikroE Team
  *

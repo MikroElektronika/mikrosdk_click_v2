@@ -367,7 +367,7 @@ typedef enum
 
 /**
  * @brief Pressure 16 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #pressure16_cfg_t object definition for detailed explanation.
@@ -379,7 +379,7 @@ void pressure16_cfg_setup ( pressure16_cfg_t *cfg );
 /**
  * @brief Pressure 16 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #pressure16_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -395,7 +395,7 @@ void pressure16_drv_interface_selection ( pressure16_cfg_t *cfg, pressure16_drv_
 /**
  * @brief Pressure 16 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #pressure16_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -411,7 +411,7 @@ err_t pressure16_init ( pressure16_t *ctx, pressure16_cfg_t *cfg );
 /**
  * @brief Pressure 16 default configuration function.
  * @details This function executes a default configuration of Pressure 16
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #pressure16_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

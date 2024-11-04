@@ -3,7 +3,7 @@
  * @brief Haptic2 Click example
  *
  * # Description
- * This app shows some of the functions that Haptic 2 click has.
+ * This app shows some of the functions that Haptic 2 Click has.
  *
  * The demo application is composed of two sections :
  *

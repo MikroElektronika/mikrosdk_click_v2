@@ -75,7 +75,7 @@
 #define REMOTE_PORT                         "51111"         // TCP/UDP echo server port
 
 // Message content
-#define MESSAGE_CONTENT                     "4G LTE 2 Data click board - demo example."
+#define MESSAGE_CONTENT                     "4G LTE 2 Data Click board - demo example."
 
 // Application buffer size
 #define PROCESS_BUFFER_SIZE                 300

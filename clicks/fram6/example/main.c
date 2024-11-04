@@ -3,12 +3,12 @@
  * @brief FRAM6 Click example
  *
  * # Description
- * This example demonstrates the use of FRAM 6 click board.
+ * This example demonstrates the use of FRAM 6 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Writes a desired number of bytes to the memory and then verifies that it's written correctly
@@ -21,7 +21,7 @@
 #include "log.h"
 #include "fram6.h"
 
-#define DEMO_TEXT_MESSAGE           "MikroE - FRAM 6 click board"
+#define DEMO_TEXT_MESSAGE           "MikroE - FRAM 6 Click board"
 #define STARTING_ADDRESS            0x01234        
 
 static fram6_t fram6;

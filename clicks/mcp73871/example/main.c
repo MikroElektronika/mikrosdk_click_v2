@@ -8,11 +8,11 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the click driver, and enables the click board.
+ * Initializes the Click driver, and enables the Click board.
  * 
  * ## Application Task  
- * This is the example of MCP73871 click functions usage.
- * It enables this click, sets input current to 100mA, 
+ * This is the example of MCP73871 Click functions usage.
+ * It enables this Click, sets input current to 100mA, 
  * and enables safety timer.
  * 
  * \author MikroE Team

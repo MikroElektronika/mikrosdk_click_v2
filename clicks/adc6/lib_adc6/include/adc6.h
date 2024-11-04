@@ -428,7 +428,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void adc6_cfg_setup ( adc6_cfg_t *cfg );
@@ -439,7 +439,7 @@ void adc6_cfg_setup ( adc6_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t adc6_init ( adc6_t *ctx, adc6_cfg_t *cfg );
 
@@ -504,6 +504,6 @@ void adc6_write_reg ( adc6_t* ctx, uint8_t register_address, uint32_t transfer_d
 #endif  // _ADC6_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

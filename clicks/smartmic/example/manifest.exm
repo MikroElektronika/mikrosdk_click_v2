@@ -3,6 +3,6 @@
     "description": "Smart Mic Click is a compact add-on board that provides wake-on-voice capabilities with secured privacy without compromising performance. This board features the IA611, an “Always-On” voice-wake acoustic processor from Knowles Electronics. The IA611 offers flexibility by supporting the most relevant audio and data interfaces and enables ultra-low-power voice and event detection, including voice UI supporting keywords, voice commands, and acoustic event detection. Its integrated programmable DSP is made available to 3rd party algorithms with 168kB of RAM, enabling unlimited creativity.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","xc32","gcc-riscv","clang-riscv"],
-    "hw" : ["click","IA611"],
+    "hw" : ["Click","IA611"],
     "category" : ["Microphone"]
 }

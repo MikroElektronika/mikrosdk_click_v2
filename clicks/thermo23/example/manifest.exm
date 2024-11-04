@@ -3,6 +3,6 @@
     "description": "Thermo 23 Click is a compact add-on board that provides an accurate temperature measurement. This board features the TMP144, a high-precision digital temperature sensor from Texas Instruments. The temperature sensor in the TMP144 is the chip itself, that houses temperature sensor circuitry, 12-bit analog-to-digital converter (ADC), a control logic, and a serial interface block in one package. Characterized by its high accuracy (up to ±0.5°C typical) and high resolution of 0.0625°C, this temperature sensor provides temperature data to the host controller with a configurable UART interface.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","TMP144YFFT"],
+    "hw" : ["Click","TMP144YFFT"],
     "category" : ["Temperature & humidity"]
 }

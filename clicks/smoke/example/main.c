@@ -3,7 +3,7 @@
  * \brief Smoke Click example
  * 
  * # Description
- * This click includes internal LEDs, photodetectors, optical elements, and low-noise electronics 
+ * This Click includes internal LEDs, photodetectors, optical elements, and low-noise electronics 
  * with ambient light rejection. The sensor can detect a wide variety of smoke particle sizes. 
  * It also has an on-chip temperature sensor for calibrating the temperature dependence of the 
  * particle sensing subsystem. The temperature sensor has an inherent resolution 0.0625°C.

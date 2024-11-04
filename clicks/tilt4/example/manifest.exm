@@ -3,6 +3,6 @@
     "description": "Tilt 4 Click is a compact add-on board designed for reliable tilt detection applications. This board features the RB-231X2, a rolling ball tilt switch from C&K Components, ensuring accurate and safe tilt detection. The RB-231X2 features a compact, shielded design with a detection angle of up to 10° and an operating life of 100,000 cycles. It interfaces with the MCU using only the INT and LED pins, providing real-time interrupt signals and visual tilt indication through a red LED.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","RB-231X2"],
+    "hw" : ["Click","RB-231X2"],
     "category" : ["Click Boards > Sensors > Motion"]
 }

@@ -192,7 +192,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void hbridge5_cfg_setup ( hbridge5_cfg_t *cfg );
@@ -203,7 +203,7 @@ void hbridge5_cfg_setup ( hbridge5_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 HBRIDGE5_RETVAL hbridge5_init ( hbridge5_t *ctx, hbridge5_cfg_t *cfg );
 
@@ -212,7 +212,7 @@ HBRIDGE5_RETVAL hbridge5_init ( hbridge5_t *ctx, hbridge5_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for HBridge5 click.
+ * @description This function executes default configuration for HBridge5 Click.
  */
 void hbridge5_default_cfg ( hbridge5_t *ctx );
 
@@ -383,6 +383,6 @@ uint8_t hbridge5_n_fault_check ( hbridge5_t *ctx );
 #endif  // _HBRIDGE5_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

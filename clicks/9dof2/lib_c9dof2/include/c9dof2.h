@@ -688,7 +688,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c9dof2_cfg_setup ( c9dof2_cfg_t *cfg );
@@ -698,7 +698,7 @@ void c9dof2_cfg_setup ( c9dof2_cfg_t *cfg );
  * @param c9dof2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 C9DOF2_RETVAL c9dof2_init ( c9dof2_t *ctx, c9dof2_cfg_t *cfg );
 
@@ -873,6 +873,6 @@ void c9dof2_snc_pin ( c9dof2_t *ctx, uint8_t state );
 #endif  // _C9DOF2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

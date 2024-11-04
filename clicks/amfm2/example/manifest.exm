@@ -3,6 +3,6 @@
     "description": "AM/FM 2 Click is a compact add-on board that can be used to listen to music from the AM and FM radio bands. This board features the Si4732, a broadcast AM/FM/SE/LW/RDS radio receiver from Skyworks. This radio receiver integrates the complete broadcast tuner and receiver function from antenna input to digital audio output. In addition to the radio receiver, this Click board™ is equipped with the LM4910, a Boomer output capacitor-less stereo 35mW headphone amplifier from Texas Instruments. This amplifier can deliver 35mW of continuous average power to a 32Ω load with less than 1% distortion.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","SI4732-A10-GS"],
+    "hw" : ["Click","SI4732-A10-GS"],
     "category" : ["Click Boards > Audio & voice > FM"]
 }

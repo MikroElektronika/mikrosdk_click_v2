@@ -172,7 +172,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c3dhall2_cfg_setup ( c3dhall2_cfg_t *cfg );
@@ -183,7 +183,7 @@ void c3dhall2_cfg_setup ( c3dhall2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t c3dhall2_init ( c3dhall2_t *ctx, c3dhall2_cfg_t *cfg );
 
@@ -261,6 +261,6 @@ err_t c3dhall2_configuration ( c3dhall2_t *ctx, uint8_t settings1, uint8_t setti
 #endif  // _C3DHALL2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

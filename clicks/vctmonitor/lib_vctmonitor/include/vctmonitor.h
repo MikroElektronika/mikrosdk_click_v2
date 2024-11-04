@@ -209,7 +209,7 @@ typedef enum
 
 /**
  * @brief VCT Monitor configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #vctmonitor_cfg_t object definition for detailed explanation.
@@ -221,7 +221,7 @@ void vctmonitor_cfg_setup ( vctmonitor_cfg_t *cfg );
 /**
  * @brief VCT Monitor initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #vctmonitor_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -236,7 +236,7 @@ err_t vctmonitor_init ( vctmonitor_t *ctx, vctmonitor_cfg_t *cfg );
 /**
  * @brief VCT Monitor default configuration function.
  * @details This function executes a default configuration of VCT Monitor
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #vctmonitor_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -292,7 +292,7 @@ uint8_t vctmonitor_get_status ( vctmonitor_t *ctx );
 /**
  * @brief Configuration function
  * @details This function is used for configuration paramethers of VCT Monitor
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #vctmonitor_t object definition for detailed explanation.
  * @param[in] cfg : Config data

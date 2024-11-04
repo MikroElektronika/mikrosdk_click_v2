@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Charger 18 click
+# Charger 18 Click
 
 > Charger 18 Click is a compact add-on board representing a single-cell battery charger. This board features the LTC3553, a micropower, highly integrated power management, and battery charger for single-cell Li-Ion/Polymer battery applications from Analog Devices. Designed specifically for USB applications, it also includes a PowerPath manager with automatic load prioritization and input current limit, a battery charger, and numerous internal protection features. It also indicates a battery charge state, and it comes with a synchronous 200mA buck regulator and a 150mA low dropout linear regulator (LDO).
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/charger18_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/charger-18-click)
+[Click Product page](https://www.mikroe.com/charger-18-click)
 
 ---
 
@@ -48,24 +48,24 @@ err_t charger18_init ( charger18_t *ctx, charger18_cfg_t *cfg );
 
 #### Example key functions :
 
-- `charger18_buck_control` This function controls the buck regulator enable state of Charger 18 click board.
+- `charger18_buck_control` This function controls the buck regulator enable state of Charger 18 Click board.
 ```c
 void charger18_buck_control ( charger18_t *ctx, uint8_t state ); 
 ```
 
-- `charger18_ldo_control` This function controls the low dropout (LDO) regulator enable state of Charger 18 click board.
+- `charger18_ldo_control` This function controls the low dropout (LDO) regulator enable state of Charger 18 Click board.
 ```c
 void charger18_ldo_control ( charger18_t *ctx, uint8_t state );
 ```
 
-- `charger18_suspend_control` This function controls the suspend charging mode state of Charger 18 click board.
+- `charger18_suspend_control` This function controls the suspend charging mode state of Charger 18 Click board.
 ```c
 void charger18_suspend_control ( charger18_t *ctx, uint8_t state ); 
 ```
 
 ## Example Description
 
-> This example demonstrates the use of Charger 18 click board by controlling the status of the charger as well as the LDO and BUCK regulators.
+> This example demonstrates the use of Charger 18 Click board by controlling the status of the charger as well as the LDO and BUCK regulators.
 
 **The demo application is composed of two sections :**
 
@@ -174,7 +174,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

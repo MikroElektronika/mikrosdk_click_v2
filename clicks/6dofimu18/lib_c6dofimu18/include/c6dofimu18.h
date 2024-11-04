@@ -872,7 +872,7 @@ typedef enum
 
 /**
  * @brief 6DOF IMU 18 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #c6dofimu18_cfg_t object definition for detailed explanation.
@@ -884,7 +884,7 @@ void c6dofimu18_cfg_setup ( c6dofimu18_cfg_t *cfg );
 /**
  * @brief 6DOF IMU 18 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #c6dofimu18_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -900,7 +900,7 @@ void c6dofimu18_drv_interface_selection ( c6dofimu18_cfg_t *cfg, c6dofimu18_drv_
 /**
  * @brief 6DOF IMU 18 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #c6dofimu18_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -915,7 +915,7 @@ err_t c6dofimu18_init ( c6dofimu18_t *ctx, c6dofimu18_cfg_t *cfg );
 /**
  * @brief 6DOF IMU 18 default configuration function.
  * @details This function executes a default configuration of 6DOF IMU 18
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #c6dofimu18_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -1042,7 +1042,7 @@ uint8_t c6dofimu18_get_int1_state ( c6dofimu18_t *ctx );
 /**
  * @brief 6DOF IMU 18 software reset function.
  * @details This function is used to perform a software reset of the 6DOF IMU 18
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #c6dofimu18_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -1055,7 +1055,7 @@ err_t c6dofimu18_sw_reset( c6dofimu18_t *ctx );
 /**
  * @brief 6DOF IMU 18 read temperature function.
  * @details This function is used to read temperature from the 6DOF IMU 18
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #c6dofimu18_t object definition for detailed explanation.
  * @param[out] temperature_data : Temperature value.
@@ -1069,7 +1069,7 @@ err_t c6dofimu18_read_temperature ( c6dofimu18_t *ctx, float *temperature_data )
 /**
  * @brief 6DOF IMU 18 read timestamp function.
  * @details This function is used to read data timestamp from the 6DOF IMU 18
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #c6dofimu18_t object definition for detailed explanation.
  * @param[out] tmst_data : Timestamp value.
@@ -1083,7 +1083,7 @@ err_t c6dofimu18_read_timestamp ( c6dofimu18_t *ctx, uint32_t *tmst_data );
 /**
  * @brief 6DOF IMU 18 read data function.
  * @details This function is used to read accel, gyro, temperature, and timestamp data from the 
- * 6DOF IMU 18 click board. This data can be then processed and used in a specific way.
+ * 6DOF IMU 18 Click board. This data can be then processed and used in a specific way.
  * @param[in] ctx : Click context object.
  * See #c6dofimu18_t object definition for detailed explanation.
  * @param[out] temperature_data : Temperature data value.
@@ -1101,7 +1101,7 @@ err_t c6dofimu18_get_data_from_register ( c6dofimu18_t *ctx, float *temperature_
 
 /**
  * @brief 6DOF IMU 18 basic tap detection configuration function.
- * @details This function is used to configure the 6DOF IMU 18 click board into tap detection configuration. 
+ * @details This function is used to configure the 6DOF IMU 18 Click board into tap detection configuration. 
  * @param[in] ctx : Click context object.
  * See #c6dofimu18_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -1113,7 +1113,7 @@ err_t c6dofimu18_set_basic_tap_detection ( c6dofimu18_t *ctx );
 
 /**
  * @brief 6DOF IMU 18 get tap detection data function.
- * @details This function is used to read tap detection data from the 6DOF IMU 18 click board.
+ * @details This function is used to read tap detection data from the 6DOF IMU 18 Click board.
  * @param[in] ctx : Click context object.
  * See #c6dofimu18_t object definition for detailed explanation.
  * @param[out] tap_num : Numbers of taps.

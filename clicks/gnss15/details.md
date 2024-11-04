@@ -1,6 +1,6 @@
 
 ---
-# GNSS 15 click
+# GNSS 15 Click
 
 > GNSS 15 Click is a compact add-on board for advanced automotive navigation and tracking applications. This board features the TESEO-VIC3DA, an automotive GNSS dead-reckoning module from STMicroelectronics. This module combines a 6-axis IMU with multi-constellation satellite reception, offering exceptional accuracy and dead-reckoning capabilities. It stands out for its rapid time-to-first-fix and the ability to receive firmware updates for enhanced performance. Designed for flexibility, it supports both UART and I2C communications, includes pins for precise odometer readings, and features an SMA antenna connector for superior signal quality.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/gnss15_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gnss-15-click)
+[Click Product page](https://www.mikroe.com/gnss-15-click)
 
 ---
 
@@ -59,14 +59,14 @@ void gnss15_reset_device ( gnss15_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of GNSS 15 click board by processing
+> This example demonstrates the use of GNSS 15 Click board by processing
 > the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and resets the click board.
+> Initializes the driver and resets the Click board.
 
 ```c
 void application_init ( void ) 
@@ -129,7 +129,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

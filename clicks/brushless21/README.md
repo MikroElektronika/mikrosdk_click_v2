@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Brushless 21 click
+# Brushless 21 Click
 
 > Brushless 21 Click is a compact add-on board suitable for controlling brushless DC (BLDC) motors with any MCU. This board features the AMT49400, an advanced 3-phase, sensorless BLDC motor driver with integrated power MOSFETs from Allegro Microsystems. The AMT49400 is rated for an operating voltage range from 4V to 16V. Motor rotation speed is controlled by applying a duty cycle command to the PWM input, while a simple I2C interface is provided for setting motor-rated voltage, rated current, rated speed, resistance, and startup profiles.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/brushless21_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/brushless-21-click)
+[Click Product page](https://www.mikroe.com/brushless-21-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t brushless21_switch_direction ( brushless21_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of the Brushless 21 click board by driving the motor at different speeds.
+> This example demonstrates the use of the Brushless 21 Click board by driving the motor at different speeds.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which sets the GPIO as a default communication and enables the PWM.
+> Initializes the driver and performs the Click default configuration which sets the GPIO as a default communication and enables the PWM.
 
 ```c
 
@@ -122,7 +122,7 @@ void application_init ( void )
 ### Application Task
 
 > Controls the motor speed by changing the PWM duty cycle once per second. The duty cycle ranges from 0% to 100%. 
-When the click board is configured in I2C mode the motor switches the direction at a minimal speed.
+When the Click board is configured in I2C mode the motor switches the direction at a minimal speed.
 Also, the chip internal temperature, VBB voltage and the motor speed readings are supported in I2C mode.
 Each step will be logged on the USB UART where you can track the program flow.
 
@@ -189,7 +189,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

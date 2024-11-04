@@ -117,7 +117,7 @@ extern "C"{
  *
  * @param cfg Click configuration structure.
  *
- * @description This function initializes click configuration structure to init
+ * @description This function initializes Click configuration structure to init
  * state.
  * @note All used pins will be set to unconnected state.
  */
@@ -134,7 +134,7 @@ void pot2_cfg_setup ( pot2_cfg_t *cfg );
  *          (-1) - Error.
  *
  * @description This function initializes all necessary pins and peripherals
- * used for this click.
+ * used for this Click.
  */
 err_t pot2_init ( pot2_t *ctx, pot2_cfg_t *cfg );
 
@@ -168,6 +168,6 @@ err_t pot2_read_pin_voltage ( pot2_t *ctx, float *data_out );
 #endif  // _POT2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group
+/// \}    // End Click Driver group
 /*! @} */
 // ------------------------------------------------------------------------ END

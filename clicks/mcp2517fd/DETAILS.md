@@ -1,14 +1,14 @@
 
 ---
-# MCP2517FD click
+# MCP2517FD Click
 
-> MCP2517FD click is a complete CAN solution which carries the MCP2517FD CAN FD controller and ATA6563 high-speed CAN transceiver from Microchip, as well as a DB9 9-pin connector.
+> MCP2517FD Click is a complete CAN solution which carries the MCP2517FD CAN FD controller and ATA6563 high-speed CAN transceiver from Microchip, as well as a DB9 9-pin connector.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/mcp2517fd_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/mcp2517fd-click)
+[Click Product page](https://www.mikroe.com/mcp2517fd-click)
 
 ---
 
@@ -69,14 +69,14 @@ err_t mcp2517fd_reset ( mcp2517fd_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of an MCP2517FD click board by showing
-the communication between the two click boards configured as a receiver and transmitter.
+> This example demonstrates the use of an MCP2517FD Click board by showing
+the communication between the two Click boards configured as a receiver and transmitter.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and logger, performs the click default configuration and displays the selected application mode.
+> Initializes the driver and logger, performs the Click default configuration and displays the selected application mode.
 
 ```c
 
@@ -166,7 +166,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

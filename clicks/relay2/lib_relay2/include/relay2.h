@@ -125,7 +125,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void relay2_cfg_setup ( relay2_cfg_t *cfg );
@@ -135,7 +135,7 @@ void relay2_cfg_setup ( relay2_cfg_t *cfg );
  * @param relay2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 RELAY2_RETVAL relay2_init ( relay2_t *ctx, relay2_cfg_t *cfg );
 
@@ -166,6 +166,6 @@ void relay2_relay1_control (relay2_t *ctx, uint8_t pin_state );
 #endif  // _RELAY2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

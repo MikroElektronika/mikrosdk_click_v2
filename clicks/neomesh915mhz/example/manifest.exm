@@ -3,6 +3,6 @@
     "description": "NeoMesh Click - 915MHz is a compact add-on board with a low-power, long-range transceiver, ideal for Mesh wireless networking. This board features the NC1000C-9, a wireless Mesh network module from NeoCortec. With an additional antenna that MikroE offers connected to the module’s u.Fl connector, you can create a fully functional wireless Mesh network node that will work in the Sub-GHz frequency band of 915MHz. The module has a generic application layer that can configured to suit applications.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","NC1000C-9"],
+    "hw" : ["Click","NC1000C-9"],
     "category" : ["Click Boards > Wireless connectivity > Sub-1 GHz Transceivers"]
 }

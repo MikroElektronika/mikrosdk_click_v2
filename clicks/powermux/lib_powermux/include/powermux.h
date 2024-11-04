@@ -142,7 +142,7 @@ typedef enum
 
 /**
  * @brief Power MUX configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #powermux_cfg_t object definition for detailed explanation.
@@ -154,7 +154,7 @@ void powermux_cfg_setup ( powermux_cfg_t *cfg );
 /**
  * @brief Power MUX initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #powermux_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -169,7 +169,7 @@ err_t powermux_init ( powermux_t *ctx, powermux_cfg_t *cfg );
 /**
  * @brief Power MUX default configuration function.
  * @details This function executes a default configuration of Power MUX
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #powermux_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -183,7 +183,7 @@ void powermux_default_cfg ( powermux_t *ctx );
 /**
  * @brief Power MUX pin reading function.
  * @details This function reads the state of the INT pin of Power MUX
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #powermux_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,
@@ -193,7 +193,7 @@ uint8_t powermux_int_pin_read ( powermux_t *ctx );
 
 /**
  * @brief Power MUX mode set function.
- * @details This function sets operating mode of Power MUX click board.
+ * @details This function sets operating mode of Power MUX Click board.
  * @param[in] ctx : Click context object.
  * See #powermux_t object definition for detailed explanation.
  * @param[in] mode : Operating mode.

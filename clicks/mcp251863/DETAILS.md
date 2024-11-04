@@ -1,6 +1,6 @@
 
 ---
-# MCP251863 click
+# MCP251863 Click
 
 > MCP251863 Click is a compact add-on board representing a complete CAN solution used as a control node in a CAN network. This board features the MCP251863, IC representing a compact solution with a controller and a transceiver in one package, the MCP2518FD and ATA6563 from Microchip. The ATA6563, a low-level physical layer IC (PHY), provides a physical connection with the CAN bus itself, while the CAN controller MCP2518FD represents an interface between the MCU and the PHY. It features three operating modes with dedicated fail-safe features, remote wake-up via CAN, and ideally passive behavior when powered off on the CAN bus. This Click board™ is suitable for developing a wide range of automotive diagnostic applications, even on MCUs that don’t support CAN interface.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/mcp251863_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/mcp251863-click)
+[Click Product page](https://www.mikroe.com/mcp251863-click)
 
 ---
 
@@ -69,14 +69,14 @@ err_t mcp251863_operation_mode_select ( mcp251863_t *ctx, uint8_t op_mode );
 
 ## Example Description
 
-> This example demonstrates the use of an MCP251863 click board by showing
-the communication between the two click boards configured as a receiver and transmitter.
+> This example demonstrates the use of an MCP251863 Click board by showing
+the communication between the two Click boards configured as a receiver and transmitter.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and logger, performs the click default configuration and displays the selected application mode.
+> Initializes the driver and logger, performs the Click default configuration and displays the selected application mode.
 
 ```c
 
@@ -166,7 +166,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

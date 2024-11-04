@@ -1,8 +1,8 @@
 {
     "name": "RN4870 Click",
-    "description": "RN4870 click carries the RN4870 Bluetooth® 4.2 low energy module from Microchip.The click is designed to run on a 3.3V power supply. It uses ASCII Command Interface over UART for communication with target microcontroller, with additional functionality provided by the following pins on the mikroBUS™ line: RST, CS, and INT.",
+    "description": "RN4870 Click carries the RN4870 Bluetooth® 4.2 low energy module from Microchip.The Click is designed to run on a 3.3V power supply. It uses ASCII Command Interface over UART for communication with target microcontroller, with additional functionality provided by the following pins on the mikroBUS™ line: RST, CS, and INT.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","RN4870"],
+    "hw" : ["Click","RN4870"],
     "category" : ["BT/BLE"] 
 }

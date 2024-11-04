@@ -3,7 +3,7 @@
  
 
 ---
-# AudioAmp 3 click
+# AudioAmp 3 Click
 
 AudioAmp 3 Click is a stereo audio amplifier, capable of delivering up to 79W per channel with the 4Ω load.
 
@@ -11,7 +11,7 @@ AudioAmp 3 Click is a stereo audio amplifier, capable of delivering up to 79W pe
   <img src="https://download.mikroe.com/images/click_for_ide/audioamp3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/audioamp-3-click)
+[Click Product page](https://www.mikroe.com/audioamp-3-click)
 
 ---
 
@@ -49,23 +49,23 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- This function power up the audio amplifier by sets to '1' state of the STB pin of the AudioAmp 3 click board.
+- This function power up the audio amplifier by sets to '1' state of the STB pin of the AudioAmp 3 Click board.
 > void audioamp3_power_up ( audioamp3_t *ctx );
  
 - This function set the play mode for all channels by writing the appropriate value to 
 - the target AUDIOAMP3_EXT_CTRL_REG_5 ( 0x0C ) register of TAS5414C-Q1 
-- four channel digital audio amplifiers on AudioAmp 3 click board.
+- four channel digital audio amplifiers on AudioAmp 3 Click board.
 > AUDIOAMP3_STATUS_T audioamp3_set_play_mode ( audioamp3_t *ctx );
 
 - This function set the gain level for all channels by writing the appropriate value 
 - to the target AUDIOAMP3_EXT_CTRL_REG_1 ( 0x08 ) register of TAS5414C-Q1 
-- four channel digital audio amplifiers on AudioAmp 3 click board.
+- four channel digital audio amplifiers on AudioAmp 3 Click board.
 > AUDIOAMP3_STATUS_T audioamp3_set_gain_lvl ( audioamp3_t *ctx, uint8_t gain_lvl );
 
 ## Examples Description
 
 > 
-> This is an example which demonstrates the use of AudioAmp 3 click board, stereo audio amplifier.
+> This is an example which demonstrates the use of AudioAmp 3 Click board, stereo audio amplifier.
 > 
 
 **The demo application is composed of two sections :**
@@ -204,7 +204,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -3,7 +3,7 @@
  * @brief MICRF RX Click Example.
  *
  * # Description
- * This example demonstrates the use of MICRF RX click board by reading and parsing
+ * This example demonstrates the use of MICRF RX Click board by reading and parsing
  * packet messages received from the transmitter.
  *
  * The demo application is composed of two sections :
@@ -16,10 +16,10 @@
  * bytes in a packet, and displays its data as well as the RSSI value on the USB UART.
  *
  * @note
- * The MICRF TX click board is a compatible transmitter for the MICRF RX click.
+ * The MICRF TX Click board is a compatible transmitter for the MICRF RX Click.
  * Here are a few steps for troubleshooting if you are experiencing issues running
  * this example:
- *  - Make sure the MICRF TX click is set to ASK mode with on-board jumpers.
+ *  - Make sure the MICRF TX Click is set to ASK mode with on-board jumpers.
  *  - Check the MCU clock configuration, use an external oscillator instead of the MCU's
  * internal one for better accuracy on manchester data rate delay.
  *  - Measure the actual data rate on the data line and adjust the MICRFRX_MAN_BIT_LEN_US

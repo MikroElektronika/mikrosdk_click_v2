@@ -1,8 +1,8 @@
 {
     "name": "Stepper 4 Click",
-    "description": "Stepper 4 click is a very versatile bipolar stepping motor driver. It features TB67S269FTG IC, fabricated with the BiCD process, allowing the Click board™ to handle significant voltage and current levels up to 35V and 1.2A. This IC has the integrated translator section, used to simplify the control: using simple step control inputs from the host MCU, the stepper motor can be driven in both directions, with the predetermined step sizes from the full step, up to 1/32 step.",
+    "description": "Stepper 4 Click is a very versatile bipolar stepping motor driver. It features TB67S269FTG IC, fabricated with the BiCD process, allowing the Click board™ to handle significant voltage and current levels up to 35V and 1.2A. This IC has the integrated translator section, used to simplify the control: using simple step control inputs from the host MCU, the stepper motor can be driven in both directions, with the predetermined step sizes from the full step, up to 1/32 step.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TB67S269FTG"],
+    "hw" : ["Click","TB67S269FTG"],
     "category" : ["Click Boards > Motor control > Stepper"]
 }

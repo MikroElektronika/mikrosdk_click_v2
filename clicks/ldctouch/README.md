@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LDC Touch click
+# LDC Touch Click
 
 > LDC Touch Click is a compact add-on board optimized for inductive touch applications. This board features the LDC3114-Q1, a four-channel inductance-to-digital converter for low-power proximity and touch-button sensing from Texas Instruments. It comes with an adjustable sensitivity per input channel and operational power mode selection and measures frequency shifts caused by micro-deflection in the conductive targets formed by button presses. These presses are reported through a compatible I2C interface beside four LED indicators for its visual indication. This Click board™ enables touch button design for human-machine interface and precise linear position sensing of metal targets for automotive, consumer, and industrial applications by allowing access to the raw data representing the inductance value.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ldctouch_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ldc-touch-click)
+[Click Product page](https://www.mikroe.com/ldc-touch-click)
 
 ---
 
@@ -70,7 +70,7 @@ err_t ldctouch_set_operation_mode ( ldctouch_t *ctx, uint8_t mode );
 
 ## Example Description
 
-> This example demonstrates the use of LDC Touch click board by configuring
+> This example demonstrates the use of LDC Touch Click board by configuring
 the buttons to trigger on finger press, and reading the buttons state in the loop.
 
 **The demo application is composed of two sections :**
@@ -171,7 +171,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

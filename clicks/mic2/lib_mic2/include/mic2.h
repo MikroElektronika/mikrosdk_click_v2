@@ -150,7 +150,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void mic2_cfg_setup ( mic2_cfg_t *cfg );
@@ -161,7 +161,7 @@ void mic2_cfg_setup ( mic2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t mic2_init ( mic2_t *ctx, mic2_cfg_t *cfg );
 
@@ -170,7 +170,7 @@ err_t mic2_init ( mic2_t *ctx, mic2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @details This function executes default configuration for MIC 2 click.
+ * @details This function executes default configuration for MIC 2 Click.
  */
 void mic2_generic_write ( mic2_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
 
@@ -217,6 +217,6 @@ err_t mic2_read_an_pin_voltage ( mic2_t *ctx, float *data_out );
 #endif  // _MIC2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------ END

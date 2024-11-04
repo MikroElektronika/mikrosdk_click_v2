@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes driver and configures the click board.
+ * Initializes driver and configures the Click board.
  * 
  * ## Application Task  
  * This example demonstrates the use of STSPIN233 Click board, by running the motor clockwise and counter clockwise.

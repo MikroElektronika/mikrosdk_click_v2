@@ -10,7 +10,7 @@
     ],
     "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "XBEE click",
+    "display_name": "XBEE Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -31,10 +31,11 @@
     "related_projects": [
         1624
     ],
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.XBEE",
     "subdir_name": "lib_xbee"
 }
+
 
 

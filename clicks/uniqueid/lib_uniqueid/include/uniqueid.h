@@ -51,14 +51,14 @@ extern "C"{
 #include "drv_one_wire.h"
 
 /*!
- * @addtogroup uniqueid UNIQUE ID click criver
- * @brief API for configuring and manipulating UNIQUEID click driver.
+ * @addtogroup uniqueid UNIQUE ID Click criver
+ * @brief API for configuring and manipulating UNIQUEID Click driver.
  * @{
  */
 
 /**
  * @defgroup uniqueid_set UNIQUE ID Settings
- * @brief Settings of UNIQUE ID click driver.
+ * @brief Settings of UNIQUE ID Click driver.
  */
 
 /**
@@ -68,7 +68,7 @@ extern "C"{
 
 /**
  * @brief UNIQUE ID Family Code value.
- * @details Specified Family Code value of UNIQUE ID click driver.
+ * @details Specified Family Code value of UNIQUE ID Click driver.
  */
 #define UNIQUEID_FAMILY_CODE               0x01
 
@@ -76,7 +76,7 @@ extern "C"{
 
 /**
  * @brief MikroBUS pin mapping.
- * @details Mapping pins of UNIQUE ID click to the selected MikroBUS.
+ * @details Mapping pins of UNIQUE ID Click to the selected MikroBUS.
  */
 
 /**
@@ -90,8 +90,8 @@ extern "C"{
 /*! @} */ // uniqueid_map
 
 /**
- * @brief UNIQUE ID click GPIO selector.
- * @details Selecting GPIO pins of UNIQUE ID click driver.
+ * @brief UNIQUE ID Click GPIO selector.
+ * @details Selecting GPIO pins of UNIQUE ID Click driver.
  */
 typedef enum
 {
@@ -101,8 +101,8 @@ typedef enum
 } uniqueid_gpio_sel_t;
 
 /**
- * @brief UNIQUE ID click context object.
- * @details Context object definition of UNIQUE ID click driver.
+ * @brief UNIQUE ID Click context object.
+ * @details Context object definition of UNIQUE ID Click driver.
  */
 typedef struct
 {
@@ -115,8 +115,8 @@ typedef struct
 } uniqueid_t;
 
 /**
- * @brief UNIQUE ID click configuration object.
- * @details Configuration object definition of UNIQUE ID click driver.
+ * @brief UNIQUE ID Click configuration object.
+ * @details Configuration object definition of UNIQUE ID Click driver.
  */
 typedef struct
 {
@@ -129,7 +129,7 @@ typedef struct
 } uniqueid_cfg_t;
 
 /**
- * @brief UNIQUE ID click return value data.
+ * @brief UNIQUE ID Click return value data.
  * @details Predefined enum values for driver return values.
  */
 typedef enum
@@ -142,14 +142,14 @@ typedef enum
 /*! @} */ // uniqueid
 
 /*!
- * @addtogroup uniqueid UNIQUE ID click Driver
- * @brief API for configuring and manipulating UNIQUE ID click driver.
+ * @addtogroup uniqueid UNIQUE ID Click Driver
+ * @brief API for configuring and manipulating UNIQUE ID Click driver.
  * @{
  */
 
 /**
  * @brief UNIQUE ID configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #uniqueid_cfg_t object definition for detailed explanation.
@@ -161,7 +161,7 @@ void uniqueid_cfg_setup ( uniqueid_cfg_t *cfg );
 /**
  * @brief UNIQUE ID driver interface setup function.
  * @details This function sets a communication GPIO pins which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #uniqueid_cfg_t object definition for detailed explanation.
  * @param[in] gpio_sel : GPIO selector.

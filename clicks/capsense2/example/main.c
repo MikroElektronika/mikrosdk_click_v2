@@ -3,14 +3,14 @@
  * @brief CapSense2 Click example
  *
  * # Description
- * This example demonstrates the use of CapSense 2 click board by reading 
+ * This example demonstrates the use of CapSense 2 Click board by reading 
  * and displaying the sensor's events.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration
- * which resets the click board and links the desired LEDs to buttons and swipe sensors.
+ * Initializes the driver and performs the Click default configuration
+ * which resets the Click board and links the desired LEDs to buttons and swipe sensors.
  *
  * ## Application Task
  * Waits for an event interrupt and displays the event on the USB UART.

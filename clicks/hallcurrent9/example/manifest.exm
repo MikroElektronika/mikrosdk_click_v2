@@ -3,6 +3,6 @@
     "description": "Hall Current 9 Click is a compact add-on board that contains the coreless current sensor corresponding to the safety standards. This board features the CQ3300, a high-speed response coreless current sensor using a Hall sensor that outputs the analog voltage proportional to the AC/DC from AKM Semiconductor.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","CQ-3301"],
+    "hw" : ["Click","CQ-3301"],
     "category" : ["Current sensor"]
 }

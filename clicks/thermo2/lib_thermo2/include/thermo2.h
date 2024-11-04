@@ -220,7 +220,7 @@ typedef enum
 
 /**
  * @brief Thermo 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #thermo2_cfg_t object definition for detailed explanation.
@@ -232,7 +232,7 @@ void thermo2_cfg_setup ( thermo2_cfg_t *cfg );
 /**
  * @brief Thermo 2 driver interface setup function.
  * @details This function sets a communication GPIO pin which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #thermo2_cfg_t object definition for detailed explanation.
  * @param[in] gpio_sel : GPIO pin selection.
@@ -248,7 +248,7 @@ void thermo2_gpio_selection ( thermo2_cfg_t *cfg, thermo2_gpio_sel_t gpio_sel );
 /**
  * @brief Thermo 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #thermo2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -264,7 +264,7 @@ err_t thermo2_init ( thermo2_t *ctx, thermo2_cfg_t *cfg );
 /**
  * @brief Thermo 2 default configuration function.
  * @details This function executes a default configuration of Thermo 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #thermo2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

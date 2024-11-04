@@ -1,6 +1,6 @@
 
 ---
-# Buck 19 click
+# Buck 19 Click
 
 > Buck 19 Click is a compact add-on board that steps down the voltage from its input (supply) to its output (load). This board features the STPD01, a programmable synchronous buck converter from STMicroelectronics, providing power supply in applications following USB power delivery specifications. The STPD01 provides the desired voltage levels required by USB power delivery systems (USB PD 3.0) via I2C serial interface up to 60W output power, more precisely voltages in the range of 3V to 20V with a step of 20mV minimum, and currents from 0.1A to 3A with a minimum in steps of 50mA. It also offers advanced protection features such as overvoltage, overcurrent, and overtemperature detections.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/buck19_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/buck-19-click)
+[Click Product page](https://www.mikroe.com/buck-19-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t buck19_set_ilimit ( buck19_t *ctx, uint16_t ilimit );
 
 ## Example Description
 
-> This example demonstrates the use of Buck 19 click board by iterating through the entire output voltage range.
+> This example demonstrates the use of Buck 19 Click board by iterating through the entire output voltage range.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

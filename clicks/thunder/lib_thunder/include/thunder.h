@@ -284,7 +284,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void thunder_cfg_setup ( thunder_cfg_t *cfg );
@@ -296,7 +296,7 @@ void thunder_cfg_setup ( thunder_cfg_t *cfg );
  * 
  * @return 0 - OK, -1 - ERROR
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t thunder_init ( thunder_t *ctx, thunder_cfg_t *cfg );
 
@@ -305,7 +305,7 @@ err_t thunder_init ( thunder_t *ctx, thunder_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @details This function executes default configuration for Thunder click.
+ * @details This function executes default configuration for Thunder Click.
  */
 void thunder_default_cfg ( thunder_t *ctx );
 
@@ -412,6 +412,6 @@ uint8_t thunder_check_irq_pin ( thunder_t *ctx );
 #endif  // _THUNDER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

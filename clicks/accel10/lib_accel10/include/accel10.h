@@ -605,7 +605,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void accel10_cfg_setup ( accel10_cfg_t *cfg );
@@ -616,7 +616,7 @@ void accel10_cfg_setup ( accel10_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ACCEL10_RETVAL accel10_init ( accel10_t *ctx, accel10_cfg_t *cfg );
 
@@ -625,7 +625,7 @@ ACCEL10_RETVAL accel10_init ( accel10_t *ctx, accel10_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Accel 10 click.
+ * @description This function executes default configuration for Accel 10 Click.
  * @note
  *    Click default configuration:
  * -------------------------------------------------
@@ -785,6 +785,6 @@ uint8_t accel10_check_it2 ( accel10_t *ctx );
 #endif  // _ACCEL10_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

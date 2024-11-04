@@ -1,6 +1,6 @@
 
 ---
-# Analog Key click
+# Analog Key Click
 
 Analog Key Click is an analog keyboard on a Click board�. It contains six 
 tactile pushbuttons, used to select one of six different voltage levels.
@@ -9,7 +9,7 @@ tactile pushbuttons, used to select one of six different voltage levels.
   <img src="https://download.mikroe.com/images/click_for_ide/analogkey_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/analog-key-click)
+[Click Product page](https://www.mikroe.com/analog-key-click)
 
 ---
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

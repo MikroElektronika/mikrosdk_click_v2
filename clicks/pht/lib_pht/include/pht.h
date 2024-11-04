@@ -191,7 +191,7 @@ typedef enum
 
 /**
  * @brief PHT configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #pht_cfg_t object definition for detailed explanation.
@@ -203,7 +203,7 @@ void pht_cfg_setup ( pht_cfg_t *cfg );
 /**
  * @brief PHT initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #pht_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -252,7 +252,7 @@ err_t pht_generic_read ( pht_t *ctx, uint8_t reg, uint8_t *rx_buf, uint8_t rx_le
  * @brief Set Command function.
  * @details The function set desired command to the desired sensor type
  * of MS8607 PHT ( Pressure, Humidity and Temperature ) Combination Sensor
- * on the PHT click board.
+ * on the PHT Click board.
  * @param[in] ctx : Click context object.
  * See #pht_t object definition for detailed explanation.
  * @param[in] sensor_type : Selection between temperature and pressure or humidity.
@@ -265,7 +265,7 @@ void pht_set_command ( pht_t *ctx, uint8_t sensor_type, uint8_t cmd );
  * @brief Soft Reset function.
  * @details The function is performed by a software reset
  * of MS8607 PHT ( Pressure, Humidity and Temperature ) Combination Sensor
- * on the PHT click board.
+ * on the PHT Click board.
  * @param[in] ctx : Click context object.
  * See #pht_t object definition for detailed explanation.
  * @param[in] sensor_type : Selection between temperature and pressure or humidity.
@@ -277,7 +277,7 @@ void pht_soft_reset ( pht_t *ctx, uint8_t sensor_type );
  * @brief Calibration Data Read function.
  * @details The function reads calibration data from PROM
  * of MS8607 PHT ( Pressure, Humidity and Temperature ) Combination Sensor
- * on the PHT click board.
+ * on the PHT Click board.
  * @param[in] ctx : Click context object.
  * See #pht_t object definition for detailed explanation.
  * @param[in] sel_data : Select coefficient from 0 to 7 which be read;
@@ -294,7 +294,7 @@ uint8_t pht_get_prom ( pht_t *ctx, uint8_t sel_data, uint32_t *tx_data );
  * @details The function determines the oversampling ratio value 
  * for temperature and pressure measurements 
  * of MS8607 PHT ( Pressure, Humidity and Temperature ) Combination Sensor
- * on the PHT click board.
+ * on the PHT Click board.
  * @param[in] ctx : Click context object.
  * See #pht_t object definition for detailed explanation.
  * @param[in] temp_ratio : Determines the oversampling ratio for temperature measurement:
@@ -312,7 +312,7 @@ uint8_t pht_set_ratio ( pht_t *ctx, uint8_t temp_ratio, uint8_t press_ratio );
  * reads calibration coefficients after reset,
  * which are necessary for temperature and pressure calculation
  * of MS8607 PHT ( Pressure, Humidity and Temperature ) Combination Sensor
- * on the PHT click board.
+ * on the PHT Click board.
  * @param[in] ctx : Click context object.
  * See #pht_t object definition for detailed explanation.
  * @return Nothing.
@@ -323,7 +323,7 @@ void pht_reset ( pht_t *ctx );
  * @brief Write User Register function.
  * @details The function write the byte of the data to the user register
  * of MS8607 PHT ( Pressure, Humidity and Temperature ) Combination Sensor
- * on the PHT click board.
+ * on the PHT Click board.
  * @param[in] ctx : Click context object.
  * See #pht_t object definition for detailed explanation.
  * @param[in] tx_data : 8-bit data to be written to the user register;
@@ -335,7 +335,7 @@ void pht_write_user_register ( pht_t *ctx, uint8_t tx_data );
  * @brief Raed User Register function.
  * @details The function read the byte of the data from the user register
  * of MS8607 PHT ( Pressure, Humidity and Temperature ) Combination Sensor
- * on the PHT click board.
+ * on the PHT Click board.
  * @param[in] ctx : Click context object.
  * See #pht_t object definition for detailed explanation.
  * @return 8-bit status register.
@@ -346,7 +346,7 @@ uint8_t pht_read_user_register ( pht_t *ctx );
  * @brief Measure RH function.
  * @details The function performs humidity measurements
  * of MS8607 PHT ( Pressure, Humidity and Temperature ) Combination Sensor
- * on the PHT click board.
+ * on the PHT Click board.
  * @param[in] ctx : Click context object.
  * See #pht_t object definition for detailed explanation.
  * @param[out] rh_data : Pointer to the memory location where humidity data be stored.
@@ -361,7 +361,7 @@ uint8_t pht_measure_rh ( pht_t *ctx, uint16_t *rh_data );
  * the calculations that converts temperature data in celsius value 
  * and pressure data in mbar value 
  * of MS8607 PHT ( Pressure, Humidity and Temperature ) Combination Sensor
- * on the PHT click board.
+ * on the PHT Click board.
  * @param[in] ctx : Click context object.
  * See #pht_t object definition for detailed explanation.
  * @param[out] temperature : Pointer to the memory location where temperature (degree Celsius) be stored.
@@ -376,7 +376,7 @@ void pht_get_temperature_pressure ( pht_t *ctx, float *temperature, float *press
  * with desired oversampling ratio and performs
  * the calculations that converts humidity data in mBar
  * of MS8607 PHT ( Pressure, Humidity and Temperature ) Combination Sensor
- * on the PHT click board.
+ * on the PHT Click board.
  * @param[in] ctx : Click context object.
  * See #pht_t object definition for detailed explanation.
  * @param[out] humidity : Pointer to the memory location where humidity (percentage) be stored.

@@ -317,7 +317,7 @@ extern "C"{
  *
  * @param cfg           Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void lps22hb_cfg_setup ( lps22hb_cfg_t *cfg );
@@ -328,7 +328,7 @@ void lps22hb_cfg_setup ( lps22hb_cfg_t *cfg );
  * @param ctx       Click object.
  * @param cfg           Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LPS22HB_RETVAL lps22hb_init ( lps22hb_t *ctx, lps22hb_cfg_t *cfg );
 
@@ -337,7 +337,7 @@ LPS22HB_RETVAL lps22hb_init ( lps22hb_t *ctx, lps22hb_cfg_t *cfg );
  *
  * @param ctx           Click object.
  *
- * @description This function executes default configuration for LPS22HB click.
+ * @description This function executes default configuration for LPS22HB Click.
  */
 void lps22hb_default_cfg ( lps22hb_t *ctx, lps22hb_cfg_t *cfg  );
 
@@ -461,6 +461,6 @@ uint8_t lps22hb_check_int ( lps22hb_t *ctx );
 #endif  // _LPS22HB_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

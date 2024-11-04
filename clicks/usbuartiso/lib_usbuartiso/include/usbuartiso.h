@@ -168,7 +168,7 @@ typedef enum
 
 /**
  * @brief USB UART ISO configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #usbuartiso_cfg_t object definition for detailed explanation.
@@ -180,7 +180,7 @@ void usbuartiso_cfg_setup ( usbuartiso_cfg_t *cfg );
 /**
  * @brief USB UART ISO initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #usbuartiso_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -195,7 +195,7 @@ err_t usbuartiso_init ( usbuartiso_t *ctx, usbuartiso_cfg_t *cfg );
 /**
  * @brief USB UART ISO default configuration function.
  * @details This function executes a default configuration of USB UART ISO
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #usbuartiso_t object definition for detailed explanation.
  * @return Nothing.
@@ -236,7 +236,7 @@ err_t usbuartiso_generic_read ( usbuartiso_t *ctx, uint8_t *data_out, uint16_t l
  * @brief USB UART ISO power on function.
  * @details This function performs a power on 
  * of the FT232RL, USB Full Speed to Serial UART IC
- * on the USB UART ISO click board™.  
+ * on the USB UART ISO Click board™.  
  * @param[in] ctx : Click context object.
  * See #usbuartiso_t object definition for detailed explanation.
  * @return Nothing.
@@ -248,7 +248,7 @@ void usbuartiso_power_on ( usbuartiso_t *ctx );
  * @brief USB UART ISO power off function.
  * @details This function performs a power off 
  * of the FT232RL, USB Full Speed to Serial UART IC
- * on the USB UART ISO click board™.  
+ * on the USB UART ISO Click board™.  
  * @param[in] ctx : Click context object.
  * See #usbuartiso_t object definition for detailed explanation.
  * @return Nothing.
@@ -260,7 +260,7 @@ void usbuartiso_power_off ( usbuartiso_t *ctx );
  * @brief USB UART ISO sleep indicator function.
  * @details This function indicates that the device going into USB suspend mode
  * of the FT232RL, USB Full Speed to Serial UART IC
- * on the USB UART ISO click board™.  
+ * on the USB UART ISO Click board™.  
  * @param[in] ctx : Click context object.
  * See #usbuartiso_t object definition for detailed explanation.
  * @return @li @c 0 - USB suspend mode,
@@ -272,7 +272,7 @@ uint8_t usbuartiso_get_slp_ind ( usbuartiso_t *ctx );
 /**
  * @brief USB UART ISO request to send function.
  * @details This function is flow control and uses to get requests to send status
- * of the USB UART ISO click board™.  
+ * of the USB UART ISO Click board™.  
  * @param[in] ctx : Click context object.
  * See #usbuartiso_t object definition for detailed explanation.
  * @return Status of the request to send.
@@ -283,7 +283,7 @@ uint8_t usbuartiso_request_to_send ( usbuartiso_t *ctx );
 /**
  * @brief USB UART ISO clear to send function.
  * @details This function is flow control and uses to sets the clear to send state
- * of the USB UART ISO click board™.  
+ * of the USB UART ISO Click board™.  
  * @param[in] ctx : Click context object.
  * See #usbuartiso_t object definition for detailed explanation.
  * @param[in] cts : Clear to send state.

@@ -305,7 +305,7 @@ typedef enum
 
 /**
  * @brief LightRanger 5 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #lightranger5_cfg_t object definition for detailed explanation.
@@ -319,7 +319,7 @@ void lightranger5_cfg_setup ( lightranger5_cfg_t *cfg );
 /**
  * @brief LightRanger 5 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -337,7 +337,7 @@ err_t lightranger5_init ( lightranger5_t *ctx, lightranger5_cfg_t *cfg );
 /**
  * @brief LightRanger 5 default configuration function.
  * @details This function executes a default configuration of LightRanger 5
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -393,7 +393,7 @@ err_t lightranger5_generic_read ( lightranger5_t *ctx, uint8_t reg, uint8_t *rx_
 /**
  * @brief LightRanger 5 enable device function.
  * @details This function enables the device by sets EN ( CS ) pin to high state of the 
- * TMF8801, Time-of-Flight Sensor on the LightRanger 5 click board™.
+ * TMF8801, Time-of-Flight Sensor on the LightRanger 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -409,7 +409,7 @@ err_t lightranger5_enable_device ( lightranger5_t *ctx );
 /**
  * @brief LightRanger 5 disable device function.
  * @details This function disables the device by sets EN ( CS ) pin to low state of the 
- * TMF8801, Time-of-Flight Sensor on the LightRanger 5 click board™.
+ * TMF8801, Time-of-Flight Sensor on the LightRanger 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -425,7 +425,7 @@ err_t lightranger5_disable_device ( lightranger5_t *ctx );
 /**
  * @brief LightRanger 5 set IO0 pin state function.
  * @details This function sets the state of the IO0 ( RST ) pin of the 
- * TMF8801, Time-of-Flight Sensor on the LightRanger 5 click board™.
+ * TMF8801, Time-of-Flight Sensor on the LightRanger 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @param[in] io0_state :
@@ -444,7 +444,7 @@ err_t lightranger5_set_pin_state_io0 ( lightranger5_t *ctx, uint8_t io0_state );
 /**
  * @brief LightRanger 5 set IO1 pin state function.
  * @details This function sets the state of the IO1 ( PWM ) pin of the 
- * TMF8801, Time-of-Flight Sensor on the LightRanger 5 click board™.
+ * TMF8801, Time-of-Flight Sensor on the LightRanger 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @param[in] io1_state :
@@ -464,7 +464,7 @@ err_t lightranger5_set_pin_state_io1 ( lightranger5_t *ctx, uint8_t io1_state );
  * @brief LightRanger 5 device reset function.
  * @details This function performs a software reset device and 
  * fully resetting CPU and all CPU registers of the 
- * TMF8801, Time-of-Flight Sensor on the LightRanger 5 click board™.
+ * TMF8801, Time-of-Flight Sensor on the LightRanger 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -481,7 +481,7 @@ err_t lightranger5_device_reset ( lightranger5_t *ctx );
  * @brief LightRanger 5 load app function.
  * @details This function set application that shall be started, 
  * set this to measurement app mode of the
- * TMF8801, Time-of-Flight Sensor on the LightRanger 5 click board™.
+ * TMF8801, Time-of-Flight Sensor on the LightRanger 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -497,7 +497,7 @@ err_t lightranger5_load_app ( lightranger5_t *ctx );
 /**
  * @brief LightRanger 5 start calibration function.
  * @details This function start the calibration of the
- * TMF8801, Time-of-Flight Sensor on the LightRanger 5 click board™.
+ * TMF8801, Time-of-Flight Sensor on the LightRanger 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -514,7 +514,7 @@ err_t lightranger5_start_calib_cmd ( lightranger5_t *ctx );
  * @brief LightRanger 5 check factory calibration function.
  * @details This function check the factory calibration, check device ID and
  * currently running application status of the
- * TMF8801, Time-of-Flight Sensor on the LightRanger 5 click board™.
+ * TMF8801, Time-of-Flight Sensor on the LightRanger 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -530,7 +530,7 @@ err_t lightranger5_check_factory_calibration ( lightranger5_t *ctx );
 /**
  * @brief LightRanger 5 get status function.
  * @details This function get status data of the
- * TMF8801, Time-of-Flight Sensor on the LightRanger 5 click board™.
+ * TMF8801, Time-of-Flight Sensor on the LightRanger 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @param[out] status : Status data.
@@ -547,7 +547,7 @@ err_t lightranger5_get_status ( lightranger5_t *ctx, uint8_t *status );
 /**
  * @brief LightRanger 5 set command function.
  * @details This function set the command of the
- * TMF8801, Time-of-Flight Sensor on the LightRanger 5 click board™.
+ * TMF8801, Time-of-Flight Sensor on the LightRanger 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @param[in] cmd : Command data.
@@ -564,7 +564,7 @@ err_t lightranger5_set_command ( lightranger5_t *ctx, uint8_t cmd );
 /**
  * @brief LightRanger 5 set factory calib data function.
  * @details This function set the factory calibration data of the
- * TMF8801, Time-of-Flight Sensor on the LightRanger 5 click board™.
+ * TMF8801, Time-of-Flight Sensor on the LightRanger 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @param[in] factory_calib_data : Pointer to the memory location where factory calibration data be stored.
@@ -582,7 +582,7 @@ err_t lightranger5_set_factory_calib_data ( lightranger5_t *ctx, uint8_t *factor
 /**
  * @brief LightRanger 5 get factory calib data function.
  * @details This function get the factory calibration data of the
- * TMF8801, Time-of-Flight Sensor on the LightRanger 5 click board™.
+ * TMF8801, Time-of-Flight Sensor on the LightRanger 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @param[out] factory_calib_data : Pointer to the memory location where factory calibration data be stored.
@@ -600,7 +600,7 @@ err_t lightranger5_get_factory_calib_data ( lightranger5_t *ctx, uint8_t *factor
 /**
  * @brief LightRanger 5 set algorithm state data function.
  * @details This function set algorithm state data array of the
- * TMF8801, Time-of-Flight Sensor on the LightRanger 5 click board™.
+ * TMF8801, Time-of-Flight Sensor on the LightRanger 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @param[in] alg_state_data : Pointer to the memory location where factory algorithm state data be stored.
@@ -619,7 +619,7 @@ err_t lightranger5_set_algorithm_state_data ( lightranger5_t *ctx, uint8_t *alg_
 /**
  * @brief LightRanger 5 set command data function.
  * @details This function set command data array of the
- * TMF8801, Time-of-Flight Sensor on the LightRanger 5 click board™.
+ * TMF8801, Time-of-Flight Sensor on the LightRanger 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @param[in] cmd_data : Pointer to the memory location where command data be stored.
@@ -637,7 +637,7 @@ err_t lightranger5_set_command_data ( lightranger5_t *ctx, uint8_t *cmd_data );
  * @brief LightRanger 5 check previous command function.
  * @details This function check the previous command that was executed
  * or current if continues mode is selected of the
- * TMF8801, Time-of-Flight Sensor on the LightRanger 5 click board™.
+ * TMF8801, Time-of-Flight Sensor on the LightRanger 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @param[out] previous_cmd : 
@@ -656,7 +656,7 @@ err_t lightranger5_check_previous_command ( lightranger5_t *ctx, uint8_t *previo
 /**
  * @brief LightRanger 5 get currently running application function.
  * @details This function get currently running application mode of the
- * TMF8801, Time-of-Flight Sensor on the LightRanger 5 click board™.
+ * TMF8801, Time-of-Flight Sensor on the LightRanger 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @param[out] appid_data : 
@@ -675,7 +675,7 @@ err_t lightranger5_get_currently_run_app ( lightranger5_t *ctx, uint8_t *appid_d
 /**
  * @brief LightRanger 5 check data ready function.
  * @details This function check is new data ready of the
- * TMF8801, Time-of-Flight Sensor on the LightRanger 5 click board™.
+ * TMF8801, Time-of-Flight Sensor on the LightRanger 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @return @li @c 0x00 ( LIGHTRANGER5_DATA_NOT_READY ) - Data not ready,
@@ -691,7 +691,7 @@ lightranger5_return_data_ready_t lightranger5_check_data_ready ( lightranger5_t 
 /**
  * @brief LightRanger 5 measure distance function.
  * @details This function measure the distance of the
- * TMF8801, Time-of-Flight Sensor on the LightRanger 5 click board™.
+ * TMF8801, Time-of-Flight Sensor on the LightRanger 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @return Distance in mm.
@@ -706,7 +706,7 @@ uint16_t lightranger5_measure_distance ( lightranger5_t *ctx );
 /**
  * @brief LightRanger 5 check interrupt state function.
  * @details This function check the interrupt state of the
- * TMF8801, Time-of-Flight Sensor on the LightRanger 5 click board™.
+ * TMF8801, Time-of-Flight Sensor on the LightRanger 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #lightranger5_t object definition for detailed explanation.
  * @return @li @c 0 - INT pin state low,

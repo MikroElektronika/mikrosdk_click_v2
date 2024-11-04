@@ -3,16 +3,16 @@
  * @brief UV 5 Click example
  *
  * # Description
- * This example demonstrates the use of UV 5 click board by measuring 
+ * This example demonstrates the use of UV 5 Click board by measuring 
  * the light irradiance of the UVA, UVB and UVC.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver, and performs the click default configuration.
+ * Initializes the driver, and performs the Click default configuration.
  *
  * ## Application Task
- * Measuring light irradiance level by reading data from the UV 5 click board 
+ * Measuring light irradiance level by reading data from the UV 5 Click board 
  * approximately every 4 seconds and displaying it using UART Serial terminal.
  *
  * @author Stefan Ilic

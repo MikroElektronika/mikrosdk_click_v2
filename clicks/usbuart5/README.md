@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# USB UART 5 click
+# USB UART 5 Click
 
 > USB UART 5 Click is a compact add-on board with a general-purpose USB to UART serial interface. This board features the CP2110, a highly-integrated USB-to-UART bridge controller from Silicon Labs. The CP2110 uses the standard USB HID device class, requiring no custom driver and a UART interface that implements all RS-232 signals, including control and hardware handshaking, so existing system firmware does not need to be modified. The UART capabilities of the CP2110 also include baud rate support from 300 to 1Mbps, hardware flow control, RS-485 support, and GPIO signals that are user-defined for status and control information.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/usbuart5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/usb-uart-5-click)
+[Click Product page](https://www.mikroe.com/usb-uart-5-click)
 
 ---
 
@@ -116,7 +116,7 @@ void application_init ( void )
 ### Application Task
 
 > Any data which the host PC sends via HidUartExample 
-> will be sent over USB to the click board and then it will be read and 
+> will be sent over USB to the Click board and then it will be read and 
 > echoed back by the MCU to the PC where the terminal program will display it.
 > Results are being sent to the UART Terminal, where you can track their changes.
 
@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# DAC 10 click
+# DAC 10 Click
 
 DAC 10 Click is a compact add-on board that contains a fully-featured, highly accurate digital-to-analog converter. This board features the DAC53401, a 10-bit voltage-output smart digital-to-analog converter from Texas Instruments.
 
@@ -9,7 +9,7 @@ DAC 10 Click is a compact add-on board that contains a fully-featured, highly ac
   <img src="https://download.mikroe.com/images/click_for_ide/dac_10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dac-10-click)
+[Click Product page](https://www.mikroe.com/dac-10-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t dac10_set_output_voltage ( dac10_t *ctx, float vref, float voltage );
 
 ## Example Description
 
-> This example demonstrates the use of DAC 10 click board.
+> This example demonstrates the use of DAC 10 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -162,7 +162,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

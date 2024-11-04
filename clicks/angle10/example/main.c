@@ -3,7 +3,7 @@
  * @brief Angle 10 Click Example.
  *
  * # Description
- * This example demonstrates the use of Angle 10 click board by reading and displaying
+ * This example demonstrates the use of Angle 10 Click board by reading and displaying
  * the magnet's angular position in degrees and analog voltage output.
  *
  * The demo application is composed of two sections :

@@ -188,7 +188,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void heater_cfg_setup ( heater_cfg_t *cfg, heater_config_t  *cfg1);
@@ -199,7 +199,7 @@ void heater_cfg_setup ( heater_cfg_t *cfg, heater_config_t  *cfg1);
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 HEATER_RETVAL heater_init ( heater_t *ctx, heater_cfg_t *cfg, heater_config_t *cfg1  );
 
@@ -283,6 +283,6 @@ void heater_pwm_start ( heater_t *ctx );
 #endif  // _HEATER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

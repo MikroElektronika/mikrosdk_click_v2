@@ -3,13 +3,13 @@
  * @brief LightRanger10 Click example
  *
  * # Description
- * This example demonstrates the use of LightRanger 10 click board by reading 
+ * This example demonstrates the use of LightRanger 10 Click board by reading 
  * and displaying the target object distance in millimeters.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver, performs the click default configuration, and then calibrates
+ * Initializes the driver, performs the Click default configuration, and then calibrates
  * the sensor to the object positioned at 200mm distance from the sensor.
  *
  * ## Application Task

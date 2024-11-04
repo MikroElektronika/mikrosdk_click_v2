@@ -1,16 +1,16 @@
 \mainpage Main Page
  
 ---
-# LLC I2C click
+# LLC I2C Click
 
-LLC I2C click can be utilized as the level converter for logic signals, which makes it a very useful Click board™. The topology of this logic level conversion (LLC) circuit is perfectly suited for the bi-directional I2C communication. Although there are some specialized integrated circuits on the market, sometimes it is more convenient to have a simple solution made of just a few passive elements and four MOSFETs.
+LLC I2C Click can be utilized as the level converter for logic signals, which makes it a very useful Click board™. The topology of this logic level conversion (LLC) circuit is perfectly suited for the bi-directional I2C communication. Although there are some specialized integrated circuits on the market, sometimes it is more convenient to have a simple solution made of just a few passive elements and four MOSFETs.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/llci2c_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/llc-i2c-click)
+[Click Product page](https://www.mikroe.com/llc-i2c-click)
 
 ---
 
@@ -55,7 +55,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This click can be utilized as the level converter for logic signals. The topology of this 
+> This Click can be utilized as the level converter for logic signals. The topology of this 
 > logic level conversion (LLC) circuit is perfectly suited for the bi-directional I2C communication.
 
 **The demo application is composed of two sections :**
@@ -95,7 +95,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads the temperature from the Thermo 7 click board and logs data to UART.
+> Reads the temperature from the Thermo 7 Click board and logs data to UART.
 
 ```c
 
@@ -128,8 +128,8 @@ void application_task ( void )
 
 > <pre>
 > Connection between Thermo 7 and I2C-LLC is made through I2C interface.
-> You can connect a Thermo 7 click and I2C-LLC click with the wires to make connection between click boards.
-> We use the Thermo 7 click to demonstrate the functions of the I2C-LLC click.
+> You can connect a Thermo 7 Click and I2C-LLC Click with the wires to make connection between Click boards.
+> We use the Thermo 7 Click to demonstrate the functions of the I2C-LLC Click.
 > </pre> 
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
@@ -143,7 +143,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

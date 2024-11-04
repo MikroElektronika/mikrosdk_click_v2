@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Accel 16 click
+# Accel 16 Click
 
 > Accel 16 Click is a compact add-on board that contains an acceleration sensor. This board features the ADXL363, a micropower three-sensor combination including acceleration and temperature from Analog Devices. This device combines a 3-axis MEMS accelerometer, a temperature sensor, and an analog-to-digital converter (ADC) input for synchronized conversions of external signals.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/accel16_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/accel-16-click)
+[Click Product page](https://www.mikroe.com/accel-16-click)
 
 ---
 
@@ -70,7 +70,7 @@ err_t accel16_get_temperature ( accel16_t *ctx, float *temperature );
 
 ## Example Description
 
-> This showcases ability of the click board to 
+> This showcases ability of the Click board to 
 read x, y, and z axes data in different resolution,
 read IC temperature and also have additional functionality
 to read ADC data. Device also has ability to store data 
@@ -177,7 +177,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

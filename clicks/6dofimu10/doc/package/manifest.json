@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "6DOF IMU 10 click",
+    "display_name": "6DOF IMU 10 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -31,11 +31,12 @@
     "related_projects": [
         3016
     ],
-    "version": "2.1.0.21",
+    "version": "2.1.0.22",
     "cmake": true,
     "alias": "Click.6DofImu10",
     "subdir_name": "lib_c6dofimu10"
 }
+
 
 
 

@@ -3,15 +3,15 @@
  
 
 ---
-# Slider click
+# Slider Click
 
-Slider click features a mechanical slide action potentiometer - a slider, which gives a nice feeling when actuating, along with 16 SMD LEDs, that can be used for any kind of visual feedback. The onboard high-resolution 22-bit ADC can detect even the smallest move, faithfully capturing the smoothness of the slider movement, while digitizing its position. The 16 onboard SMD LEDs can give a nice visual feedback of the slider position, but those LEDs can also be used for other purposes since they are not hardwired to the slider.
+Slider Click features a mechanical slide action potentiometer - a slider, which gives a nice feeling when actuating, along with 16 SMD LEDs, that can be used for any kind of visual feedback. The onboard high-resolution 22-bit ADC can detect even the smallest move, faithfully capturing the smoothness of the slider movement, while digitizing its position. The 16 onboard SMD LEDs can give a nice visual feedback of the slider position, but those LEDs can also be used for other purposes since they are not hardwired to the slider.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/slider_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/slider-click)
+[Click Product page](https://www.mikroe.com/slider-click)
 
 ---
 
@@ -67,7 +67,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes click driver
+> Initializes Click driver
 
 ```c
 
@@ -124,7 +124,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Vibro Motor 4 click
+# Vibro Motor 4 Click
 
 > Vibro Motor 4 Click is a compact add-on board that makes an ideal solution for adding simple haptic feedback in any design. This board features the G1040003D, a coin-sized linear resonant actuator (LRA) that generates vibration/haptic feedback from Jinlong Machinery & Electronics, Inc. Driven by a flexible Haptic/Vibra driver, the DRV2605, G1040003D vibrates in the Z-axis, which is perpendicular to the face of the vibration motor. It draws a maximum of 170mA while producing the highest G force/vibration energy of 2 GRMS.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/vibromotor4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/vibro-motor-4-click)
+[Click Product page](https://www.mikroe.com/vibro-motor-4-click)
 
 ---
 
@@ -175,7 +175,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

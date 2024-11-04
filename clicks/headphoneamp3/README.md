@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Headphone AMP 3 click
+# Headphone AMP 3 Click
 
 > Headphone AMP 3 Click is a compact add-on board that contains a stereo headphone amplifier. This board features the INA1620, a high-fidelity audio operational amplifier with integrated thin-film resistors and EMI filters from Texas Instruments. Over its dual amplifiers, it achieves a very low noise density and drives a 32Ω load at 150mW of output power. 
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/headphoneamp3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/headphone-amp-3-click)
+[Click Product page](https://www.mikroe.com/headphone-amp-3-click)
 
 ---
 
@@ -65,8 +65,8 @@ void headphoneamp3_enable_amp ( headphoneamp3_t *ctx, uint8_t state );
 
 ## Example Description
 
-> This library contains API for the Headphone AMP 3 click driver.
-  This demo application shows use of a Headphone AMP 3 click board™.
+> This library contains API for the Headphone AMP 3 Click driver.
+  This demo application shows use of a Headphone AMP 3 Click board™.
 
 **The demo application is composed of two sections :**
 
@@ -113,7 +113,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This example demonstrates the use of the Headphone AMP 3 click board™.
+> This example demonstrates the use of the Headphone AMP 3 Click board™.
   The app is enabling and disabling headphone output by changing ENA pin state every 10 seconds. 
 
 ```c
@@ -159,7 +159,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -176,7 +176,7 @@ typedef enum
 
 /**
  * @brief H-Bridge 8 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #hbridge8_cfg_t object definition for detailed explanation.
@@ -188,7 +188,7 @@ void hbridge8_cfg_setup ( hbridge8_cfg_t *cfg );
 /**
  * @brief H-Bridge 8 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #hbridge8_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -204,7 +204,7 @@ err_t hbridge8_init ( hbridge8_t *ctx, hbridge8_cfg_t *cfg );
 /**
  * @brief H-Bridge 8 default configuration function.
  * @details This function executes a default configuration of H-Bridge 8
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #hbridge8_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -259,7 +259,7 @@ err_t hbridge8_pwm_start ( hbridge8_t *ctx );
 /**
  * @brief H-Bridge 8 set operating mode function.
  * @details This function sets the desired operating mode 
- * of the H-Bridge 8 click board™.
+ * of the H-Bridge 8 Click board™.
  * @param[out] ctx : Click context object.
  * See #hbridge8_t object definition for detailed explanation.
  * @param[in] mode : Operating mode.
@@ -276,7 +276,7 @@ err_t hbridge8_set_mode ( hbridge8_t *ctx, uint8_t mode );
 /**
  * @brief H-Bridge 8 set IC enable function.
  * @details This function sets the IC enable 
- * of the H-Bridge 8 click board™.
+ * of the H-Bridge 8 Click board™.
  * @param[out] ctx : Click context object.
  * See #hbridge8_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -290,7 +290,7 @@ err_t hbridge8_enable ( hbridge8_t *ctx );
 /**
  * @brief H-Bridge 8 set IC disable function.
  * @details This function sets the IC disable 
- * of the H-Bridge 8 click board™.
+ * of the H-Bridge 8 Click board™.
  * @param[out] ctx : Click context object.
  * See #hbridge8_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -304,7 +304,7 @@ err_t hbridge8_disable ( hbridge8_t *ctx );
 /**
  * @brief H-Bridge 8 get fault indication function.
  * @details This function get fault indication
- * of the H-Bridge 8 click board™.
+ * of the H-Bridge 8 Click board™.
  * @param[out] ctx : Click context object.
  * See #hbridge8_t object definition for detailed explanation.
  * @return @li @c 0 - Fault conditions,

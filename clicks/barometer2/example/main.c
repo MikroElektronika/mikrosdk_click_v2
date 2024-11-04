@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes and configures the click and logger modules and tests the communication for errors.
+ * Initializes and configures the Click and logger modules and tests the communication for errors.
  * 
  * ## Application Task  
  * Reads and displays temperature and pressure values every second. 

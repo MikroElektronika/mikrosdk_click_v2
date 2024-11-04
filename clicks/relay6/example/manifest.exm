@@ -3,6 +3,6 @@
     "description": "Relay 6 Click is a compact add-on board for precise load control and monitoring applications. This board features four 9913-05-20TRs, a reed relay from Coto Technology, well-known for its ultra-miniature SMD design, which offers the smallest footprint in the market. These four relays each have four load connection terminals and blue LED indicators that signal the operational status, ensuring clear and immediate feedback.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","9913-05-20TR"],
+    "hw" : ["Click","9913-05-20TR"],
     "category" : ["Click Boards > Miscellaneous > Relay"]
 }

@@ -11,7 +11,7 @@
  * 
  * ## Application Init 
  * Initializes driver and wifi communication, then connects to the desired WiFi network
- * and creates TCP server on the IP address assigned to the click board.
+ * and creates TCP server on the IP address assigned to the Click board.
  * 
  * ## Application Task  
  * All data received from the TCP clients will be logger to USB UART and echoed back to the clients.

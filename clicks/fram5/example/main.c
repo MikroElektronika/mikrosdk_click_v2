@@ -3,13 +3,13 @@
  * @brief FRAM5 Click example
  *
  * # Description
- * This example demonstrates the use of FRAM 5 click board by writing specified data to
+ * This example demonstrates the use of FRAM 5 Click board by writing specified data to
  * the memory and reading it back.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and checks the communication with the click board.
+ * Initializes the driver and checks the communication with the Click board.
  *
  * ## Application Task
  * Writes a desired number of bytes to the memory and then verifies that it's written correctly
@@ -26,7 +26,7 @@
 static fram5_t fram5;
 static log_t logger;
 
-#define DEMO_TEXT_MESSAGE           "MikroE - FRAM 5 click board"
+#define DEMO_TEXT_MESSAGE           "MikroE - FRAM 5 Click board"
 #define STARTING_ADDRESS            0x01234   
 
 void application_init ( void ) 

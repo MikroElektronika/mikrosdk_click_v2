@@ -180,7 +180,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void buck2_cfg_setup ( buck2_cfg_t *cfg );
@@ -190,7 +190,7 @@ void buck2_cfg_setup ( buck2_cfg_t *cfg );
  * @param buck2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 BUCK2_RETVAL buck2_init ( buck2_t *ctx, buck2_cfg_t *cfg );
 
@@ -199,7 +199,7 @@ BUCK2_RETVAL buck2_init ( buck2_t *ctx, buck2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Buck 2 click.
+ * @description This function executes default configuration for Buck 2 Click.
  * @note Settings that are included in the default config:
  * <pre>
  ***  Power mode options:
@@ -288,6 +288,6 @@ void buck2_set_output_voltage ( buck2_t *ctx , uint8_t voltage );
 #endif  // _BUCK2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

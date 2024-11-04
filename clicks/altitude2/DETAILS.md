@@ -1,15 +1,15 @@
 
 
 ---
-# Altitude 2 click
+# Altitude 2 Click
 
-Altitude 2 click is a high-resolution barometric pressure sensor Click board™. It provides very accurate measurements of temperature and atmospheric pressure, which can be used to calculate the altitude with a very high resolution of 20cm per step. Besides that, the device also includes features such as the ultra-low noise delta-sigma 24bit ADC, low power consumption, fast conversion times, pre-programmed unique compensation values, and more.
+Altitude 2 Click is a high-resolution barometric pressure sensor Click board™. It provides very accurate measurements of temperature and atmospheric pressure, which can be used to calculate the altitude with a very high resolution of 20cm per step. Besides that, the device also includes features such as the ultra-low noise delta-sigma 24bit ADC, low power consumption, fast conversion times, pre-programmed unique compensation values, and more.
 
 <p align="center">
   <img src="http://download.mikroe.com/images/click_for_ide/altitude2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/altitude-2-click)
+[Click Product page](https://www.mikroe.com/altitude-2-click)
 
 ---
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](http://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](http://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

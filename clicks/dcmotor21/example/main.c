@@ -3,12 +3,12 @@
  * @brief DC Motor 21 Click Example.
  *
  * # Description
- * This example demonstrates the use of DC Motor 21 click board.
+ * This example demonstrates the use of DC Motor 21 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * In the span of six seconds, it drives the motor in one direction, then switches the direction, 

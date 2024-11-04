@@ -3,6 +3,6 @@
     "description": "Ambient 20 Click is a compact add-on board used to measure the amount of the present ambient light. This board features the BU27030NUC, a 16-bit digital-output ambient light sensor with an I2C interface from Rohm Semiconductor. The BU27030NUC has a flexible and wide operating range of up to 20klx with a maximum resolution of 0.0007lux/count, providing an excellent responsivity close to the human eyes' response. It also features inherent 50Hz/60Hz light noise rejection and excellent IR-cut characteristics for high robustness at high sensitivity.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","BU27030NUC-E2"],
+    "hw" : ["Click","BU27030NUC-E2"],
     "category" : ["Click Boards > Sensors > Optical"]
 }

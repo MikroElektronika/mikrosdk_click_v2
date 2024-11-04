@@ -134,7 +134,7 @@ typedef enum
 
 /**
  * @brief AudioAmp 9 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #audioamp9_cfg_t object definition for detailed explanation.
@@ -146,7 +146,7 @@ void audioamp9_cfg_setup ( audioamp9_cfg_t *cfg );
 /**
  * @brief AudioAmp 9 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #audioamp9_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -161,7 +161,7 @@ err_t audioamp9_init ( audioamp9_t *ctx, audioamp9_cfg_t *cfg );
 /**
  * @brief AudioAmp 9 default configuration function.
  * @details This function executes a default configuration of AudioAmp 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #audioamp9_t object definition for detailed explanation.
  * @return Nothing.
@@ -173,7 +173,7 @@ void audioamp9_default_cfg ( audioamp9_t *ctx );
 /**
  * @brief AudioAmp 9 shutdown on function.
  * @details This function turns on the shutdown mode of AudioAmp 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #audioamp9_t object definition for detailed explanation.
  * @return Nothing.
@@ -184,7 +184,7 @@ void audioamp9_shutdown_on ( audioamp9_t *ctx );
 /**
  * @brief AudioAmp 9 shutdown off function.
  * @details This function turns off the shutdown mode of AudioAmp 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #audioamp9_t object definition for detailed explanation.
  * @return Nothing.
@@ -195,7 +195,7 @@ void audioamp9_shutdown_off ( audioamp9_t *ctx );
 /**
  * @brief AudioAmp 9 mute on function.
  * @details This function turns on the mute mode of AudioAmp 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #audioamp9_t object definition for detailed explanation.
  * @return Nothing.
@@ -206,7 +206,7 @@ void audioamp9_mute_on ( audioamp9_t *ctx );
 /**
  * @brief AudioAmp 9 mute off function.
  * @details This function turns off the mute mode of AudioAmp 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #audioamp9_t object definition for detailed explanation.
  * @return Nothing.
@@ -217,7 +217,7 @@ void audioamp9_mute_off ( audioamp9_t *ctx );
 /**
  * @brief AudioAmp 9 set gain level 1 function.
  * @details This function turns on gain level 1 of AudioAmp 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #audioamp9_t object definition for detailed explanation.
  * @return Nothing.
@@ -228,7 +228,7 @@ void audioamp9_set_gain1 ( audioamp9_t *ctx );
 /**
  * @brief AudioAmp 9 set gain level 2 function.
  * @details This function turns on gain level 2 of AudioAmp 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #audioamp9_t object definition for detailed explanation.
  * @return Nothing.
@@ -239,7 +239,7 @@ void audioamp9_set_gain2 ( audioamp9_t *ctx );
 /**
  * @brief AudioAmp 9 set gain level 3 function.
  * @details This function turns on gain level 3 of AudioAmp 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #audioamp9_t object definition for detailed explanation.
  * @return Nothing.
@@ -250,7 +250,7 @@ void audioamp9_set_gain3 ( audioamp9_t *ctx );
 /**
  * @brief AudioAmp 9 set gain level 4 function.
  * @details This function turns on gain level 4 of AudioAmp 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #audioamp9_t object definition for detailed explanation.
  * @return Nothing.
@@ -261,7 +261,7 @@ void audioamp9_set_gain4 ( audioamp9_t *ctx );
 /**
  * @brief AudioAmp 9 set gain function.
  * @details This function sets a specific gain level of AudioAmp 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #audioamp9_t object definition for detailed explanation.
  * @param[in] gain_level : Selected gain level.

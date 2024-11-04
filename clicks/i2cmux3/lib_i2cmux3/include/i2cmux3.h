@@ -180,7 +180,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void i2cmux3_cfg_setup ( i2cmux3_cfg_t *cfg );
@@ -190,7 +190,7 @@ void i2cmux3_cfg_setup ( i2cmux3_cfg_t *cfg );
  * @param i2cmux3 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 I2CMUX3_RETVAL i2cmux3_init ( i2cmux3_t *ctx, i2cmux3_cfg_t *cfg );
 
@@ -263,7 +263,7 @@ void i2cmux3_ch_sel ( i2cmux3_t *ctx, uint8_t sel_ch );
  *
  * Function is used to write a sequential data starting from the targeted 8-bit
  * register address of the device connected to the desired channel 
- * of the I2C MUX 3 click board.
+ * of the I2C MUX 3 Click board.
 **/
 void i2cmux3_wr_slv ( i2cmux3_t *ctx, uint8_t slv_sel_adr, uint8_t reg, uint8_t *p_wr_data, 
                       uint8_t n_bytes );
@@ -279,7 +279,7 @@ void i2cmux3_wr_slv ( i2cmux3_t *ctx, uint8_t slv_sel_adr, uint8_t reg, uint8_t 
  *
  * Function is used to read a sequential data starting from the targeted 8-bit 
  * register address of the device connected to the desired channel
- * of the I2C MUX 3 click board.
+ * of the I2C MUX 3 Click board.
 **/
 void i2cmux3_rd_slv ( i2cmux3_t *ctx, uint8_t slv_sel_adr, uint8_t reg, uint8_t *p_rd_data, 
                       uint8_t n_bytes );
@@ -301,7 +301,7 @@ void i2cmux3_dev_enable ( i2cmux3_t *ctx, uint8_t stat );
  *
  * @param ctx          Click object.
  * 
- * Function is used to perform hardware reset of the I2C MUX 4 click board.
+ * Function is used to perform hardware reset of the I2C MUX 4 Click board.
  * @note Function holds two 100 milliseconds delay.
 **/
 void i2cmux3_hw_rst ( i2cmux3_t *ctx );
@@ -312,6 +312,6 @@ void i2cmux3_hw_rst ( i2cmux3_t *ctx );
 #endif  // _I2CMUX3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

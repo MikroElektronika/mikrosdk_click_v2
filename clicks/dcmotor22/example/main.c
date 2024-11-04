@@ -3,13 +3,13 @@
  * @brief DC Motor 22 Click Example.
  *
  * # Description
- * This example demonstrates the use of DC Motor 22 click board by controlling the speed
+ * This example demonstrates the use of DC Motor 22 Click board by controlling the speed
  * of both motors over PWM duty cycle as well as displaying the motors current consumption.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Controls the motor speed by changing the PWM duty cycle every 5 seconds, and displays

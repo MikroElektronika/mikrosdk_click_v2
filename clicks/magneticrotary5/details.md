@@ -1,6 +1,6 @@
 
 ---
-# Magnetic Rotary 5 click
+# Magnetic Rotary 5 Click
 
 > Magnetic Rotary 5 Click is a compact add-on board for accurate magnet-position sensing. This board features the AS5134, a contactless magnetic rotary encoder from ams AG for accurate angular measurement over a full turn of 360º. It is designed to provide accurate angle measurements with a simple two-pole magnet rotating over the center of the chip, featuring an integrated Hall element, analog front end, and digital signal processing. Offering a high resolution of 8.5 bits, which equates to 360 positions per revolution, it is also capable of high-speed performance, with a maximum RPM of 76875. It can accommodate a wide range of magnetic fields, from 20 to 80mT. It also has an onboard header for incremental and commutation signals of their respective A/B/I and U/V/W signals and pins for Daisy Chain Mode and OTP programming.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/magneticrotary5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/magnetic-rotary-5-click)
+[Click Product page](https://www.mikroe.com/magnetic-rotary-5-click)
 
 ---
 
@@ -69,7 +69,7 @@ err_t magneticrotary5_read_voltage ( magneticrotary5_t *ctx, float *voltage );
 
 ## Example Description
 
-> This example demonstrates the use of Magnetic Rotary 5 click board by reading and displaying
+> This example demonstrates the use of Magnetic Rotary 5 Click board by reading and displaying
 the magnet angular position as well as the AGC and multi turn counter values.
 
 **The demo application is composed of two sections :**
@@ -158,7 +158,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

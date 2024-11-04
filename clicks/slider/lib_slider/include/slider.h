@@ -151,7 +151,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void slider_cfg_setup ( slider_cfg_t *cfg );
@@ -161,7 +161,7 @@ void slider_cfg_setup ( slider_cfg_t *cfg );
  * @param slider Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 SLIDER_RETVAL slider_init ( slider_t *ctx, slider_cfg_t *cfg );
 
@@ -170,7 +170,7 @@ SLIDER_RETVAL slider_init ( slider_t *ctx, slider_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Slider click.
+ * @description This function executes default configuration for Slider Click.
  */
 void slider_default_cfg ( slider_t *ctx );
 
@@ -255,6 +255,6 @@ uint32_t slider_write_output ( slider_t *ctx);
 #endif  // _SLIDER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

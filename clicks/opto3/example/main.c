@@ -3,7 +3,7 @@
  * \brief Opto 3 Click example
  * 
  * # Description
- * Opto 3 click to be used in applications that require reinforced galvanic 
+ * Opto 3 Click to be used in applications that require reinforced galvanic 
  * isolation for both their input and output stages.
  *
  * The demo application is composed of two sections :

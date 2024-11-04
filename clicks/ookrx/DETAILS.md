@@ -1,14 +1,14 @@
 
 ---
-# OOK RX click
+# OOK RX Click
 
-> OOK RX click is a wireless receiver that operates at the frequency of 433MHz (sub-GHz). This device allows realization of a simple, low-speed wireless ad hoc communication network between a receiver and compatible transmitter.
+> OOK RX Click is a wireless receiver that operates at the frequency of 433MHz (sub-GHz). This device allows realization of a simple, low-speed wireless ad hoc communication network between a receiver and compatible transmitter.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ookrx_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ook-rx-click)
+[Click Product page](https://www.mikroe.com/ook-rx-click)
 
 ---
 
@@ -64,7 +64,7 @@ static uint8_t ookrx_read_packet ( ookrx_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of OOK RX click board by reading and parsing packet messages received from the transmitter.
+> This example demonstrates the use of OOK RX Click board by reading and parsing packet messages received from the transmitter.
 
 **The demo application is composed of two sections :**
 
@@ -144,7 +144,7 @@ void application_task ( void )
 
 ## Note
 
-> The OOK TX click board is a compatible transmitter for the OOK RX click.
+> The OOK TX Click board is a compatible transmitter for the OOK RX Click.
 Here are a few steps for troubleshooting if you are experiencing issues running this example:
 > - Check the MCU clock configuration, use an external oscillator instead of the MCU's internal one for better accuracy on manchester data rate delay.
 > - Measure the actual data rate on the data line and adjust the OOKRX_MAN_BIT_LEN_US value accordingly.
@@ -160,7 +160,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

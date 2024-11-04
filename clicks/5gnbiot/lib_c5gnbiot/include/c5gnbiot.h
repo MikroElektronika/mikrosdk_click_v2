@@ -187,7 +187,7 @@ extern "C"{
 
 /**
  * @brief 5G NB IoT configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #c5gnbiot_cfg_t object definition for detailed explanation.
@@ -199,7 +199,7 @@ void c5gnbiot_cfg_setup ( c5gnbiot_cfg_t *cfg );
 /**
  * @brief 5G NB IoT initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #c5gnbiot_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -244,7 +244,7 @@ err_t c5gnbiot_generic_read ( c5gnbiot_t *ctx, char *data_buf, uint16_t max_len 
 
 /**
  * @brief 5G NB IoT module power on.
- * @details This function resets the chip on 5G NB IoT click.
+ * @details This function resets the chip on 5G NB IoT Click.
  * @param[in] ctx : Click context object.
  * See #c5gnbiot_t object definition for detailed explanation.
  * @return Nothing.
@@ -283,7 +283,7 @@ uint8_t c5gnbiot_get_cts ( c5gnbiot_t *ctx );
 
 /**
  * @brief Send command function.
- * @details This function sends the specified command to the click module.
+ * @details This function sends the specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #c5gnbiot_t object definition for detailed explanation.
  * @param[in] cmd  Command variable.
@@ -294,7 +294,7 @@ void c5gnbiot_send_cmd ( c5gnbiot_t *ctx, char *cmd );
 
 /**
  * @brief Send command function with parameter.
- * @details This function sends commands to the click module.
+ * @details This function sends commands to the Click module.
  * @param[in] ctx : Click context object.
  * See #c5gnbiot_t object definition for detailed explanation.
  * @param[in] at_cmd_buf  Command buffer.
@@ -359,6 +359,6 @@ err_t c5gnbiot_send_text_message ( c5gnbiot_t *ctx, char *service_center_number,
 #endif  // _C5GNBIOT_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

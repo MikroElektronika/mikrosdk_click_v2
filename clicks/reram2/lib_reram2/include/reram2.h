@@ -241,7 +241,7 @@ typedef enum
 
 /**
  * @brief ReRAM 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #reram2_cfg_t object definition for detailed explanation.
@@ -253,7 +253,7 @@ void reram2_cfg_setup ( reram2_cfg_t *cfg );
 /**
  * @brief ReRAM 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #reram2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -269,7 +269,7 @@ err_t reram2_init ( reram2_t *ctx, reram2_cfg_t *cfg );
 /**
  * @brief ReRAM 2 default configuration function.
  * @details This function executes a default configuration of ReRAM 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #reram2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

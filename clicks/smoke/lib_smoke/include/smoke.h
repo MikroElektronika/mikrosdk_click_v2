@@ -81,7 +81,7 @@
 /** \} */
 
 /**
- * \defgroup slave_address SMOKE click slave address
+ * \defgroup slave_address SMOKE Click slave address
  * \{
  */
 #define SMOKE_I2C_ADDRESS                 0x57
@@ -372,7 +372,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void smoke_cfg_setup ( smoke_cfg_t *cfg );
@@ -383,7 +383,7 @@ void smoke_cfg_setup ( smoke_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 SMOKE_RETVAL smoke_init ( smoke_t *ctx, smoke_cfg_t *cfg );
 
@@ -392,7 +392,7 @@ SMOKE_RETVAL smoke_init ( smoke_t *ctx, smoke_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Smoke click.
+ * @description This function executes default configuration for Smoke Click.
  */
 void smoke_default_cfg ( smoke_t *ctx );
 
@@ -868,6 +868,6 @@ uint8_t smoke_check_int ( smoke_t *ctx );
 #endif  // _SMOKE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

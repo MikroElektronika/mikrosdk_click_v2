@@ -1,6 +1,6 @@
 
 ---
-# TDC 2 click
+# TDC 2 Click
 
 > TDC 2 Click is a compact add-on board that recognizes events and provides a digital representation of the time they occurred. This board features ScioSense’s AS6500, a four-channel time-to-digital converter (TDC) frontend with high measurement performance and high data throughput. The AS6500 is characterized by simple data post-processing thanks to calibrated results (calculates calibrated stop measurements referenced to the applied reference clock).
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/tdc2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/tdc-2-click)
+[Click Product page](https://www.mikroe.com/tdc-2-click)
 
 ---
 
@@ -182,7 +182,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

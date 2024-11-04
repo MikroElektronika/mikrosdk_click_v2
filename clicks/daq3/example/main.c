@@ -11,10 +11,10 @@
  * Initializes SPI driver and start to write log.
  *
  * ## Application Task
- * This is an example that demonstrates the use of the DAQ 3 click board.
+ * This is an example that demonstrates the use of the DAQ 3 Click board.
  * In this example, we read ADC value, calculate and display the voltage ( mV ) data.
  * The maximum output voltage ( Vout ) is 4V and  
- * depends on the gain that is set at the click.
+ * depends on the gain that is set at the Click.
  * The formula used to calculate is Vin = Vout / gain. 
  * Keep in mind that Vout should not exceed 4V.
  * For example, if the gain is set to 2 the maximum Vin is 2V ( 2V = 4V / 2 ). 
@@ -65,7 +65,7 @@ void application_init ( void ) {
     log_info( &logger, " Application Task \r\n" );
     Delay_ms ( 100 );
     log_printf( &logger, "---------------------------\r\n" );
-    log_printf( &logger, "         DAQ 3 click       \r\n" );
+    log_printf( &logger, "         DAQ 3 Click       \r\n" );
     log_printf( &logger, "---------------------------\r\n" );
 }
 

@@ -1,6 +1,6 @@
 
 ---
-# Barometer 5 click
+# Barometer 5 Click
 
 > Barometer 5 Click is a compact add-on board used to measure air pressure in a specific environment. This board features the MS5637-02BA03, a high accuracy low voltage barometric and temperature sensor from TE Connectivity Measurement Specialties. The MS5637-02BA03 includes a high-linearity pressure sensor and an ultra-low-power 24-bit ΔΣ ADC with internal factory-calibrated coefficients, providing a precise digital 24-bit pressure and temperature value, and different operation modes allowing the user to optimize for conversion speed and current consumption. It comes with a configurable host interface that supports I2C serial communication and measures pressure in a range from 300mbar up to 1.2bar with an accuracy of ±2mbar over a wide operating temperature range.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/barometer5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/barometer-5-click)
+[Click Product page](https://www.mikroe.com/barometer-5-click)
 
 ---
 
@@ -157,7 +157,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

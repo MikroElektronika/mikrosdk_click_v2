@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Pressure 14 click
+# Pressure 14 Click
 
 Pressure 14 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the ABP2LANT060PG2A3XX, a piezoresistive silicon pressure sensor offering a digital output for reading pressure over the specified full-scale pressure span and a temperature range from Honeywell Sensing and Productivity Solutions. This I2C configurable sensor is calibrated and temperature compensated for sensor offset, sensitivity, temperature effects, and accuracy errors, including non-linearity, repeatability, and hysteresis, using an on-board ASIC. This Click board™ is suitable for pressure measurements in automotive applications, industrial and consumer applications.
 
@@ -9,7 +9,7 @@ Pressure 14 Click is a compact add-on board that contains a board-mount pressure
   <img src="https://download.mikroe.com/images/click_for_ide/pressure14_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pressure-14-click)
+[Click Product page](https://www.mikroe.com/pressure-14-click)
 
 ---
 
@@ -53,12 +53,12 @@ err_t pressure14_init ( pressure14_t *ctx, pressure14_cfg_t *cfg );
 void pressure14_measure_cmd ( pressure14_t *ctx );
 ```
 
-- `pressure14_check_busy_flag_int` This function returns the INT pin state which indicates the End-of-conversion for ABP2 series pressure sensor on Pressure 14 click board.
+- `pressure14_check_busy_flag_int` This function returns the INT pin state which indicates the End-of-conversion for ABP2 series pressure sensor on Pressure 14 Click board.
 ```c
 uint8_t pressure14_check_busy_flag_int ( pressure14_t *ctx );
 ```
 
-- `pressure14_read_press_and_temp` This function reads 24-bit pressure, 24-bit temperature data and 8-bit status register from the ABP2 series pressure sensor on Pressure 14 click board.
+- `pressure14_read_press_and_temp` This function reads 24-bit pressure, 24-bit temperature data and 8-bit status register from the ABP2 series pressure sensor on Pressure 14 Click board.
 ```c
 void pressure14_read_press_and_temp ( pressure14_t *ctx, uint8_t *status_byte, uint32_t *pressure_data, uint32_t *temp_data );
 ```
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

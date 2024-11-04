@@ -3,7 +3,7 @@
  * @brief Pressure 19 Click Example.
  *
  * # Description
- * This example demonstrates the use of Pressure 19 click board by reading and 
+ * This example demonstrates the use of Pressure 19 Click board by reading and 
  * displaying the absolute pressure value in mBar.
  *
  * The demo application is composed of two sections :

@@ -3,7 +3,7 @@
  * \brief Pot2 Click example
  * 
  * # Description
- * This demo-app shows the ADC values using POT 2 click board.
+ * This demo-app shows the ADC values using POT 2 Click board.
  *
  * The demo application is composed of two sections :
  * 

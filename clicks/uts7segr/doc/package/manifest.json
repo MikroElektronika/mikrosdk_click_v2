@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "UT-S 7-SEG R click",
+    "display_name": "UT-S 7-SEG R Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -31,11 +31,12 @@
     "related_projects": [
         2258
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.UT-S7-SEGR",
     "subdir_name": "lib_uts7segr"
 }
+
 
 
 

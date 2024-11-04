@@ -217,7 +217,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void haptic_cfg_setup ( haptic_cfg_t *cfg );
@@ -228,7 +228,7 @@ void haptic_cfg_setup ( haptic_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 HAPTIC_RETVAL haptic_init ( haptic_t *ctx, haptic_cfg_t *cfg );
 
@@ -307,7 +307,7 @@ void haptic_write_byte (  haptic_t *ctx, uint8_t reg_address, uint8_t write_data
 uint8_t haptic_read_byte ( haptic_t *ctx, uint8_t reg_address );
 
  /**
- * @brief Sets the Haptic click to desired mode function.
+ * @brief Sets the Haptic Click to desired mode function.
  *
  * @param ctx          Click object.
  * @param sel_mode     Select mode.
@@ -588,22 +588,22 @@ uint8_t haptic_get_supply_voltage_value ( haptic_t *ctx );
 uint8_t haptic_get_lra_resonance_period ( haptic_t *ctx );
 
  /**
- * @brief Sets the Haptic click in ERM mode function.
+ * @brief Sets the Haptic Click in ERM mode function.
  *
  * @param ctx          Click object.
  *
- * @description Function sets the Haptic click in ERM mode
+ * @description Function sets the Haptic Click in ERM mode
  * by write clear highest bit of feedback register
  * of DRV2605 chip on Haptic Click board.
  */
 void haptic_set_to_erm_mode ( haptic_t *ctx );
 
  /**
- * @brief Sets the Haptic click in LRA mode function.
+ * @brief Sets the Haptic Click in LRA mode function.
  *
  * @param ctx          Click object.
  *
- * @description Function sets the Haptic click in LRA mode
+ * @description Function sets the Haptic Click in LRA mode
  * by write set highest bit of feedback register
  * of DRV2605 chip on Haptic Click board.
  */
@@ -646,7 +646,7 @@ uint8_t haptic_set_loop_gain ( haptic_t *ctx, uint8_t gain );
  *
  * @param ctx          Click object.
  *
- * @description Function sets the input of the Haptic click to analog
+ * @description Function sets the input of the Haptic Click to analog
  * by set second lowest bit of control 3 register
  * of DRV2605 chip on Haptic Click board.
  */
@@ -725,6 +725,6 @@ void haptic_pwm_start ( haptic_t *ctx );
 #endif  // _HAPTIC_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# I2C Extend click
+# I2C Extend Click
 
 > I2C Extend Click is a compact add-on board for applications that require extending the I2C communication bus over a long distance. This board features the LTC4331 - an I2C slave device extender over a rugged differential link, from Analog Devices.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/i2cextend_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/i2c-extend-click)
+[Click Product page](https://www.mikroe.com/i2c-extend-click)
 
 ---
 
@@ -172,7 +172,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

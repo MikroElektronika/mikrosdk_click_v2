@@ -3,7 +3,7 @@
  * @brief Rtc12 Click example
  *
  * # Description
- * This is an example that demonstrates the use of the RTC 12 click board™.
+ * This is an example that demonstrates the use of the RTC 12 Click board™.
  * 
  *
  * The demo application is composed of two sections :
@@ -14,7 +14,7 @@
  * the app set the time to 23:59:50 and set the date to 27.05.'21.
  *
  * ## Application Task
- * This is an example that shows the use of a RTC 12 click board™.
+ * This is an example that shows the use of a RTC 12 Click board™.
  * In this example, we read and display the current time and date, 
  * which we also previously set.
  * Results are being sent to the Usart Terminal where you can track their changes.

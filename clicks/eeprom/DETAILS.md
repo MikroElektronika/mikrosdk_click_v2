@@ -1,7 +1,7 @@
  
 
 ---
-# EEPROM click
+# EEPROM Click
 
 EEPROM Click is an accessory board in mikroBUS form factor. It features 24C08WP - a highly reliable, high performance CMOS technology serial 8K EEPROM in DIP packaging.
 
@@ -9,7 +9,7 @@ EEPROM Click is an accessory board in mikroBUS form factor. It features 24C08WP 
   <img src="https://download.mikroe.com/images/click_for_ide/eeprom_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/eeprom-click)
+[Click Product page](https://www.mikroe.com/eeprom-click)
 
 ---
 
@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -95,7 +95,7 @@ void application_task ( void )
     
     // LOGS DATA
 
-    log_printf( &logger, "________________ Accel 8 click _________\r\n" );
+    log_printf( &logger, "________________ Accel 8 Click _________\r\n" );
     log_printf( &logger, "|  Data   | X axis | Y axis | Z axis |  Range  |\r\n" );
     log_printf( &logger, "|______|______|______|_____|________|\r\n" );
     log_printf( &logger, "|  Accel  | %d    | %d    | %d    | %dg    |\r\n", x_accel_axis, y_accel_axis, z_accel_axis, &range.accel_range );

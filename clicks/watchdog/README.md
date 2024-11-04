@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Watchdog click
+# Watchdog Click
 
 > Watchdog Click is a compact add-on board that contains a simple countdown timer for a wide variety of applications. This board features the TPS3430, a standalone watchdog timer with a programmable watchdog window and programmable reset delay from Texas Instruments.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/watchdog_click.png" height=300px>
 </p>
 
-[click Product page](mikroe.com/watchdog-click)
+[Click Product page](mikroe.com/watchdog-click)
 
 ---
 
@@ -70,7 +70,7 @@ void watchdog_send_pulse ( watchdog_t *ctx, uint16_t p_duration_ms );
 
 ## Example Description
 
-> This is an example that demonstrates the use of the Watchdog click board.
+> This is an example that demonstrates the use of the Watchdog Click board.
 
 **The demo application is composed of two sections :**
 
@@ -129,7 +129,7 @@ void application_init ( void )
 
 > In the first part of the example, we send pulses in a valid time window (Correct Operation).
 > The second part of the example sends pulses outside the valid time window and then the watchdog detects a fault condition, display "Fault",
-> performs the reset and turn on the LED ( WDT FLT ) on the Watchdog click board.
+> performs the reset and turn on the LED ( WDT FLT ) on the Watchdog Click board.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
@@ -169,7 +169,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,15 +3,15 @@
  
 
 ---
-# Line Follower click
+# Line Follower Click
 
-Line Follower Click carries an array of five QRE1113 miniature reflective object sensors. As the name implies, Line Follower click is best used for line following robots and cars.
+Line Follower Click carries an array of five QRE1113 miniature reflective object sensors. As the name implies, Line Follower Click is best used for line following robots and cars.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/linefollower_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/line-follower-click)
+[Click Product page](https://www.mikroe.com/line-follower-click)
 
 ---
 
@@ -55,7 +55,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> Line Follower click carries an array of five QRE1113 
+> Line Follower Click carries an array of five QRE1113 
 > miniature reflective object sensors,
 > reading staus of AN, RST, PWM, TX and RX pins and reading tracking data.
 
@@ -63,7 +63,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Application Init performs logger and click Initialization.
+> Application Init performs logger and Click Initialization.
 
 ```c
 
@@ -100,7 +100,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Application Task shows the functionality of the Line Follower click.
+> Application Task shows the functionality of the Line Follower Click.
 > Each one of the QRE1113 sensors consist of an
 > infrared transmitter and infrared receiver. 
 > By default the sensor output a Logic Level 1, until they encounter a 
@@ -139,7 +139,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

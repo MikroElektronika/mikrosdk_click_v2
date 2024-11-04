@@ -164,7 +164,7 @@ typedef enum
 
 /**
  * @brief CAN Bus configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #canbus_cfg_t object definition for detailed explanation.
@@ -176,7 +176,7 @@ void canbus_cfg_setup ( canbus_cfg_t *cfg );
 /**
  * @brief CAN Bus initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #canbus_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -192,7 +192,7 @@ err_t canbus_init ( canbus_t *ctx, canbus_cfg_t *cfg );
 /**
  * @brief CAN Bus default configuration function.
  * @details This function executes a default configuration of CAN Bus
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #canbus_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -238,7 +238,7 @@ err_t canbus_generic_read ( canbus_t *ctx, char *data_buf, uint16_t max_len );
  * @brief CAN Bus low current standby mode function.
  * @details This function enables the low current standby mode by 
  * sets the STB ( AN ) pin on the high level
- * of the CAN Bus click board™.
+ * of the CAN Bus Click board™.
  * @param[in] ctx : Click context object.
  * See #canbus_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -253,7 +253,7 @@ err_t canbus_set_low_current_standby_mode ( canbus_t *ctx );
  * @brief CAN Bus high speed mode function.
  * @details This function enables the high speed operation mode by 
  * clears the STB ( AN ) pin on the low level 
- * of the CAN Bus click board™.
+ * of the CAN Bus Click board™.
  * @param[in] ctx : Click context object.
  * See #canbus_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

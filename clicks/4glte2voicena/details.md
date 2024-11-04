@@ -1,6 +1,6 @@
 
 ---
-# 4G LTE 2 Voice-NA click
+# 4G LTE 2 Voice-NA Click
 
 > 4G LTE 2 Click - Voice (for North America) is a compact add-on board representing a secure-cloud multi-band solution offering universal connectivity and reliable performance. This board features the LARA-R6401, an ideal LTE Cat 1 solution for North America from u-blox, supporting all relevant LTE bands for use on AT&T, FirstNet, Verizon, or T-Mobile mobile networks in single SKU for the North American market. Equipped with familiar AT commands set over the UART interface, USB interface, and Network and Status indicators, the LARA-R6401 also has a comprehensive certification scheme and multi-band/multi-mode capabilities providing excellent flexibility alongside the support of voice/audio application.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/4glte2voicena_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/4g-lte-2-click-voice-for-north-america)
+[Click Product page](https://www.mikroe.com/4g-lte-2-click-voice-for-north-america)
 
 ---
 
@@ -196,7 +196,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,6 +1,6 @@
 
 ---
-# ISM RX 3 click
+# ISM RX 3 Click
 
 ISM RX 3 Click is a compact add-on board that contains a Sub-GHz RF receiver. This board features the MAX41470, a high-performance, low-power receiver ideal for amplitude shift-keyed (ASK) and frequency shift-keyed (FSK) data from Maxim Integrated, now part of Analog Devices.
 
@@ -8,7 +8,7 @@ ISM RX 3 Click is a compact add-on board that contains a Sub-GHz RF receiver. Th
   <img src="https://download.mikroe.com/images/click_for_ide/ismrx3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ism-rx-3-click)
+[Click Product page](https://www.mikroe.com/ism-rx-3-click)
 
 ---
 
@@ -69,7 +69,7 @@ uint8_t ismrx3_get_clk( ismrx3_t *ctx );
 
 ## Example Description
 
-> This example showcases ability of click board to configure 
+> This example showcases ability of Click board to configure 
 and read incoming rf signal and parses data using data and clock line.
 
 **The demo application is composed of two sections :**
@@ -200,7 +200,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

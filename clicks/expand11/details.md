@@ -1,6 +1,6 @@
 
 ---
-# Expand 11 click
+# Expand 11 Click
 
 > Expand 11 Click is a compact add-on board that contains a multi-port I/O expander. This board features the TCA9536, a general-purpose remote I/O expansion for most microcontroller families from Texas Instruments. The TCA9536 comes in a 4-port configuration and allows easy addition of I/O through a standard I2C serial interface. Each port is user-configurable to either a logic input or logic output by writing to the I/O configuration register bits. The data for each input or output is kept in the corresponding input or output register. There is an additional special function register that port P3, in addition to its standard I/O function, can also configure as an interrupt feature.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/expand11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/expand-11-click)
+[Click Product page](https://www.mikroe.com/expand-11-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t expand11_read_port_value ( expand11_t *ctx, uint8_t *data_out );
 
 ## Example Description
 
-> This example demonstrates the use of Expand 11 click board by setting and reading the port state.
+> This example demonstrates the use of Expand 11 Click board by setting and reading the port state.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which sets the pins P0-P1 as output and P2-P3 as input.
+> Initializes the driver and performs the Click default configuration which sets the pins P0-P1 as output and P2-P3 as input.
 
 ```c
 
@@ -153,7 +153,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

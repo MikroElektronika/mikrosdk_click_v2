@@ -1,6 +1,6 @@
 
 ---
-# Magnetic Rotary 6 click
+# Magnetic Rotary 6 Click
 
 > Magnetic Rotary 6 Click is a compact add-on board for accurate magnet-position sensing. This board features the AS5247U, an SPI-configurable high-resolution dual rotary position sensor for fast absolute angle measurement over a full 360-degree range from ams AG. The AS5047D is equipped with revolutionary integrated dynamic angle error compensation (DAEC™) with almost 0 latency and offers a robust design that suppresses the influence of any homogenous external stray magnetic field. It also comes with onboard headers reserved for incremental and commutation signals of their respective A/B/I and U/V/W signals, with a maximum resolution of 16384 steps / 4096 pulses per revolution, alongside embedded self-diagnostics features.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/magneticrotary6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/magnetic-rotary-6-click)
+[Click Product page](https://www.mikroe.com/magnetic-rotary-6-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t magneticrotary6_set_direction ( magneticrotary6_t *ctx, uint8_t die_sel, u
 
 ## Example Description
 
-> This example demonstrates the use of Magnetic Rotary 6 click board by reading and displaying the magnet's angular position in degrees measured by the bottom and top sensor dies.
+> This example demonstrates the use of Magnetic Rotary 6 Click board by reading and displaying the magnet's angular position in degrees measured by the bottom and top sensor dies.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which sets the magnet rotation direction for the bottom die to clockwise and for the top die to counter-clockwise.
+> Initializes the driver and performs the Click default configuration which sets the magnet rotation direction for the bottom die to clockwise and for the top die to counter-clockwise.
 
 ```c
 
@@ -148,7 +148,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

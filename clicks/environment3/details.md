@@ -1,6 +1,6 @@
 
 ---
-# Environment 3 click
+# Environment 3 Click
 
 Environment 3 Click is a compact add-on board that contains a four-in-one environmental measurement solution. This board features BME688, a first gas sensor with Artificial Intelligence (AI), and integrated high-linearity/high-accuracy pressure, humidity, and temperature sensors from Bosch Sensortech. The BME688 can detect Volatile Organic Compounds (VOCs), Volatile Sulfur Compounds (VSCs), and other gases such as carbon monoxide and hydrogen in part per billion (ppb) range. It provides absolute temperature accuracy, typical of ±1°C, and best performance when operated within the pressure, temperature, and humidity range of 300-110hPa, 0-65°C, and 10-90%RH.
 
@@ -8,7 +8,7 @@ Environment 3 Click is a compact add-on board that contains a four-in-one enviro
   <img src="https://download.mikroe.com/images/click_for_ide/enviroment3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/environment-3-click)
+[Click Product page](https://www.mikroe.com/environment-3-click)
 
 ---
 
@@ -69,7 +69,7 @@ int8_t environment3_soft_reset ( environment3_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Environment 3 click board.
+> This example demonstrates the use of Environment 3 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -179,7 +179,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

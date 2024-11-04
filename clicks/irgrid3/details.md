@@ -1,14 +1,14 @@
 
 ---
-# IR Grid 3 click
+# IR Grid 3 Click
 
-IR Grid 3 click is a thermal imaging sensor. It has an array of 768 very sensitive, factory calibrated IR elements (pixels), arranged in 32 rows of 24 pixels, each measuring an object temperature up to 300˚C within its local Field of View (FOV). The MLX90640ESF-BAA IR sensor used on this Click board™ has only four pins, and it is mounted inside of the industry standard TO39 package. 
+IR Grid 3 Click is a thermal imaging sensor. It has an array of 768 very sensitive, factory calibrated IR elements (pixels), arranged in 32 rows of 24 pixels, each measuring an object temperature up to 300˚C within its local Field of View (FOV). The MLX90640ESF-BAA IR sensor used on this Click board™ has only four pins, and it is mounted inside of the industry standard TO39 package. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/irgrid3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ir-grid-3-click)
+[Click Product page](https://www.mikroe.com/ir-grid-3-click)
 
 ---
 
@@ -75,7 +75,7 @@ void irgrid3_get_pixel_temperature ( irgrid3_t *ctx, float *temp_ambient, float 
 
 ### Application Init
 
-> Configures the click and log objects and sets the click default configuration.
+> Configures the Click and log objects and sets the Click default configuration.
 
 ```c
 
@@ -153,7 +153,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

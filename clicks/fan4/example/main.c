@@ -3,13 +3,13 @@
  * \brief Fan4 Click example
  * 
  * # Description
- * Demo application shows basic use of Fan 4 click.
+ * Demo application shows basic use of Fan 4 Click.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
  * Configuring clicks and log objects.
- * Settings the click in the default configuration.
+ * Settings the Click in the default configuration.
  * 
  * ## Application Task  
  * Increases the output voltage every 500 ms until it reaches the maximum fan voltage.

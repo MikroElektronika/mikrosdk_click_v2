@@ -3,7 +3,7 @@
  * @brief Ai-WB2-12F Click Example.
  *
  * # Description
- * This example demonstrates the use of Ai-WB2-12F click board by processing
+ * This example demonstrates the use of Ai-WB2-12F Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
@@ -43,7 +43,7 @@
 #define DEMO_EXAMPLE                        EXAMPLE_TCP_UDP // Example selection macro
 
 // Message content
-#define MESSAGE_CONTENT                     "Ai-WB2-12F click board - demo example."
+#define MESSAGE_CONTENT                     "Ai-WB2-12F Click board - demo example."
 #define MESSAGE_LEN                         "40"
 
 // TCP/UDP example parameters

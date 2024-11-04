@@ -1,14 +1,14 @@
  
 ---
-# Flash 2 click
+# Flash 2 Click
 
-Flash 2 click features a 64 Mbit Flash memory IC, manufactured by using the proprietary high-performance CMOS Super-Flash® technology, which allows the Flash 2 click to withstand up to 100,000 write cycles, with the data retention period of 100 years, which is considerably longer than any other memory module of this type. The flash memory IC used on this Click board™ features Serial Flash Discoverable Parameters (SFDP) mode, used to retrieve the advanced information from the device, such as the operating characteristics, structure and vendor specified information, memory size, operating voltage, timing information, and more.
+Flash 2 Click features a 64 Mbit Flash memory IC, manufactured by using the proprietary high-performance CMOS Super-Flash® technology, which allows the Flash 2 Click to withstand up to 100,000 write cycles, with the data retention period of 100 years, which is considerably longer than any other memory module of this type. The flash memory IC used on this Click board™ features Serial Flash Discoverable Parameters (SFDP) mode, used to retrieve the advanced information from the device, such as the operating characteristics, structure and vendor specified information, memory size, operating voltage, timing information, and more.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/flash2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/flash-2-click)
+[Click Product page](https://www.mikroe.com/flash-2-click)
 
 ---
 
@@ -73,13 +73,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example demonstrates the process of writing and reading data from Flash 2 click memory.
+> This example demonstrates the process of writing and reading data from Flash 2 Click memory.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Flash Driver Initialization, initialization of click by setting mikorBUS to
+> Flash Driver Initialization, initialization of Click by setting mikorBUS to
 > approprieate logic levels, performing global block unlock and chip erase functions.
 
 ```c
@@ -118,7 +118,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Writing data to click memory and displaying the read data via UART.  
+> Writing data to Click memory and displaying the read data via UART.  
 
 ```c
 
@@ -145,7 +145,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

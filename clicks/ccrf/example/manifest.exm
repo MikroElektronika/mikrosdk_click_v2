@@ -1,8 +1,8 @@
 {
     "name": "ccRF Click",
-    "description": "ccRF click is a low-power 2.4 GHz transceiver designed for the 2400- 2483.5 MHz ISM and SRD frequency bands. It features CC2500 Low-Power 2.4 GHz RF transceiver as well as PCB trace antenna. The CC2500 is integrated with a highly configurable baseband modem that supports various modulation formats and has data rate up to 500 kBaud.",
+    "description": "ccRF Click is a low-power 2.4 GHz transceiver designed for the 2400- 2483.5 MHz ISM and SRD frequency bands. It features CC2500 Low-Power 2.4 GHz RF transceiver as well as PCB trace antenna. The CC2500 is integrated with a highly configurable baseband modem that supports various modulation formats and has data rate up to 500 kBaud.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","CC2500"],
+    "hw" : ["Click","CC2500"],
     "category" : ["2.4 GHz Transceivers"] 
 }

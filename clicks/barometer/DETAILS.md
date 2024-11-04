@@ -1,14 +1,14 @@
 
 ---
-# Barometer click
+# Barometer Click
 
-Barometer click carries the LPS25HB IC, which is a piezoresistive absolute pressure sensor with a measurement range from 260 to 1260 hPa.
+Barometer Click carries the LPS25HB IC, which is a piezoresistive absolute pressure sensor with a measurement range from 260 to 1260 hPa.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/barometer_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/barometer-click)
+[Click Product page](https://www.mikroe.com/barometer-click)
 
 ---
 

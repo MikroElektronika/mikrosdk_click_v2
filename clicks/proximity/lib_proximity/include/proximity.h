@@ -264,7 +264,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void proximity_cfg_setup ( proximity_cfg_t *cfg );
@@ -275,7 +275,7 @@ void proximity_cfg_setup ( proximity_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 PROXIMITY_RETVAL proximity_init ( proximity_t *ctx, proximity_cfg_t *cfg );
 
@@ -353,6 +353,6 @@ uint16_t proximity_read_ambient_light ( proximity_t *ctx );
 #endif  // _PROXIMITY_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

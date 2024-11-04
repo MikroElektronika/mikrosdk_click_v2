@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# DC Motor 16 click
+# DC Motor 16 Click
 
 > DC Motor 16 Click is a compact add-on board that contains a high-performance single phase reversible DC motor drive with speed control. This board features the ZXBM5210, a fully-featured DC motor drive solution with an average current capability of up to 700mA from Diodes Incorporated. The ZXBM5210 has several modes of operations selected by two GPIO pins, has a wide supply voltage range from 3V to 18V, and low power consumption.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dcmotor16_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dc-motor-16-click)
+[Click Product page](https://www.mikroe.com/dc-motor-16-click)
 
 ---
 
@@ -65,7 +65,7 @@ void dcmotor16_stop( dcmotor16_t *ctx );
 
 ## Example Description
 
-> This example shows the capabilities of the DC Motor 16 click board.
+> This example shows the capabilities of the DC Motor 16 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -158,7 +158,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

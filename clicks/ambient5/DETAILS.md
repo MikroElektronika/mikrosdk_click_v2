@@ -1,8 +1,8 @@
  
 ---
-# Ambient 5 click
+# Ambient 5 Click
 
-Ambient 5 click can sense the intensity of the ambient light, providing 
+Ambient 5 Click can sense the intensity of the ambient light, providing 
 measurement data in a digital format, over the I2C interface. It utilizes 
 the VEML6030, a miniature ambient light sensor (ALS) which occupies 
 only 2x2 mm of space.
@@ -11,7 +11,7 @@ only 2x2 mm of space.
   <img src="https://download.mikroe.com/images/click_for_ide/ambient5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ambient-5-click)
+[Click Product page](https://www.mikroe.com/ambient-5-click)
 
 ---
 
@@ -132,7 +132,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

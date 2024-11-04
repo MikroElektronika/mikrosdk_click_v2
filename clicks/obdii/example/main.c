@@ -3,13 +3,13 @@
  * @brief OBDII Click Example.
  *
  * # Description
- * This example demonstrates the use of OBDII click board by reading the engine RPM
+ * This example demonstrates the use of OBDII Click board by reading the engine RPM
  * and vehicle speed and displaying results on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads and processes the engine RPM and vehicle speed and displays the results

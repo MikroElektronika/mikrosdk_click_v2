@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# EEPROM 13 click
+# EEPROM 13 Click
 
 > EEPROM 13 Click is a compact add-on board that contains a highly reliable, nonvolatile memory solution. This board features the M24M01E, an electrically erasable programmable memory with enhanced hardware write protection for entire memory from STMicroelectronics. Its memory size of 1Mbit is organized as 128K words of 8bits each, with a page size of 256 bytes and an additional 256 bytes of identification page. The identification page can be used to store sensitive application parameters, which can be (later) permanently locked in read-only mode.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/eeprom13_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/eeprom-13-click)
+[Click Product page](https://www.mikroe.com/eeprom-13-click)
 
 ---
 
@@ -65,7 +65,7 @@ void eeprom13_hw_write_enable ( eeprom13_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of EEPROM 13 click board.
+> This example demonstrates the use of EEPROM 13 Click board.
 > The demo app writes specified data to the memory and reads it back.
 
 **The demo application is composed of two sections :**
@@ -176,7 +176,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

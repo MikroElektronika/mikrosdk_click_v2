@@ -1,6 +1,6 @@
 
 ---
-# DC Motor 26 click
+# DC Motor 26 Click
 
 > DC Motor 26 Click is a compact add-on board with a brushed DC motor driver. This board features the TB9053FTG, a PWM-type, dual-channel, H-bridge, brushed DC motor driver from Toshiba Semiconductor. The TB9053FTG is rated for an operating voltage range from 4.5V to 28V, with the motor controlled directly through a PWM signal or SPI serial interface. In addition, this driver allows a dual configuration with two motors with 5A current ratings per channel or one 10A channel drive in a Parallel mode of operation. It also has complete diagnostic and protection capabilities supporting robust and reliable operation.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dcmotor26_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dc-motor-26-click)
+[Click Product page](https://www.mikroe.com/dc-motor-26-click)
 
 ---
 
@@ -69,14 +69,14 @@ err_t dcmotor26_set_cm_sel_pin ( dcmotor26_t *ctx, uint8_t state );
 
 ## Example Description
 
-> This example demonstrates the use of DC Motor 26 click board by controlling the speed
+> This example demonstrates the use of DC Motor 26 Click board by controlling the speed
 of DC motor over PWM duty cycle as well as displaying the motor current consumption.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -181,8 +181,8 @@ void application_task ( void )
 
 ## Note
 
-> The click board swiches should be set as follows: SW 1-2-3-4 : H-H-L-L
-This sets the click board as a SPI controlled single-channel device so the motor should be connected to OUT1/2 and OUT3/4.
+> The Click board swiches should be set as follows: SW 1-2-3-4 : H-H-L-L
+This sets the Click board as a SPI controlled single-channel device so the motor should be connected to OUT1/2 and OUT3/4.
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 
@@ -195,7 +195,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

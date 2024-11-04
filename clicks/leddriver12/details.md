@@ -1,6 +1,6 @@
 
 ---
-# LED Driver 12 click
+# LED Driver 12 Click
 
 > LED Driver 12 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the PCA9532, a 16-bit I2C-configurable I/O expander optimized for dimming LEDs in 256 discrete Red/Green/Blue (RGB) steps from NXP Semiconductors. The PCA9532 offers high efficiency, supporting up to 16 LED channels and delivering a maximum of up to 25mA of LED current per channel. It contains an internal oscillator with two user-programmable blink rates and duty cycles coupled to the output PWM. Any bits not used for controlling the LEDs can be used for GPIO expansion, which provides a simple solution when additional I/O is needed for some sensors, push-buttons, or alarm monitoring. This Click board™ is suitable for color mixing and backlight application for amusement products, LED status signalization, home automation projects, and many more.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/leddriver12_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/led-driver-12-click)
+[Click Product page](https://www.mikroe.com/led-driver-12-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t leddriver12_set_blink_period_pwm_0 ( leddriver12_t *ctx, float blink_perio
 
 ## Example Description
 
-> This example demonstrates the use of LED Driver 12 click board.
+> This example demonstrates the use of LED Driver 12 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which turns OFF
+> Initializes the driver and performs the Click default configuration which turns OFF
 the LEDs 0 to 7, configures LEDs 8 to 11 for PWM0, and LEDs 12 to 15 for PWM1 settings.
 PWM0 is set at half duty cycle with a one-second blinking period, while PWM1 is configured
 for a quarter of duty cycle with a half-second blinking period.
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

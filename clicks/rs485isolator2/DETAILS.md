@@ -1,6 +1,6 @@
 
 ---
-# RS485 Isolator 2 click
+# RS485 Isolator 2 Click
 
 RS485 Isolator 2 Click features ADM2867E a 5.7 kV rms signal and power isolated full duplex RS-485 transceiver.
 
@@ -8,7 +8,7 @@ RS485 Isolator 2 Click features ADM2867E a 5.7 kV rms signal and power isolated 
   <img src="https://download.mikroe.com/images/click_for_ide/rs485isolator2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rs485-isolator-2-click)
+[Click Product page](https://www.mikroe.com/rs485-isolator-2-click)
 
 ---
 
@@ -137,7 +137,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

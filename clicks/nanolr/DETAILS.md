@@ -1,6 +1,6 @@
 
 ---
-# Nano LR click
+# Nano LR Click
 
 Nano LR Click is a compact add-on board that contains a long-range transceiver. This board features the EMB-LR1276S, RF technology-based SRD transceiver, which operates at a frequency of 868MHz from Embit.
 
@@ -8,7 +8,7 @@ Nano LR Click is a compact add-on board that contains a long-range transceiver. 
   <img src="https://download.mikroe.com/images/click_for_ide/nanolr_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/nano-lr-click)
+[Click Product page](https://www.mikroe.com/nano-lr-click)
 
 ---
 
@@ -64,7 +64,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes the driver, and performs the click default configuration.
+> Initializes the driver, and performs the Click default configuration.
 
 ```c
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

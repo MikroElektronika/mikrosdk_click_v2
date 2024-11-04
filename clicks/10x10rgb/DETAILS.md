@@ -1,6 +1,6 @@
 
 ---
-# 10x10 RGB click
+# 10x10 RGB Click
 
 10x10 RGB Click is a matrix of 100 intelligent RGB elements, forming a 10x10 display screen. These LED elements feature internal logic, which allows them to communicate directly with the MCU.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/10x10rgb_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/10x10-rgb-click)
+[Click Product page](https://www.mikroe.com/10x10-rgb-click)
 
 ---
 
@@ -69,7 +69,7 @@ void c10x10rgb_display_string ( c10x10rgb_t *ctx, c10x10rgb_byte_t *data_obj, ui
 
 ## Examples Description
 
-> This example showcases how to initialize, configure and use the 10x10 RGB click module. The
+> This example showcases how to initialize, configure and use the 10x10 RGB Click module. The
 click has a 10 by 10 RGB LED matrix which can be programmed to show different colors or even
 images. LED elements that form the matrix communicate by a single line with the host MCU. 
 
@@ -77,7 +77,7 @@ images. LED elements that form the matrix communicate by a single line with the 
 
 ### Application Init 
 
-> This function initializes and configures the click board.
+> This function initializes and configures the Click board.
 
 ```c
 
@@ -139,7 +139,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

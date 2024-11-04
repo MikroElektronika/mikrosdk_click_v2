@@ -3,6 +3,6 @@
     "description": "4G LTE 2 Click - Voice (for North America) is a compact add-on board representing a secure-cloud multi-band solution offering universal connectivity and reliable performance. This board features the LARA-R6401, an ideal LTE Cat 1 solution for North America from u-blox, supporting all relevant LTE bands for use on AT&T, FirstNet, Verizon, or T-Mobile mobile networks in single SKU for the North American market. Equipped with familiar AT commands set over the UART interface, USB interface, and Network and Status indicators, the LARA-R6401 also has a comprehensive certification scheme and multi-band/multi-mode capabilities providing excellent flexibility alongside the support of voice/audio application.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","LARA-R6401"],
+    "hw" : ["Click","LARA-R6401"],
     "category" : ["Click Boards > Wireless connectivity > GSM/LTE"]
 }

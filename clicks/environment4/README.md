@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Environment 4 click
+# Environment 4 Click
 
 > Environment 4 Click is a compact add-on board combining 4th-generation SHT humidity and SGP air-quality sensing solutions from Sensirion. This board features SHT41A-AD1B and SGP41, an I2C-configurable high-accuracy relative humidity/temperature combined with a MOx-based gas sensor. The SHT41A-AD1B offers linearized digital output alongside temperature/humidity accuracy up to ±0.3°C/±2%RH. It performs best within the operating range of 5-60°C and 20-80%RH. With the help of SGP41, which features a temperature-controlled micro hotplate, it also provides a humidity-compensated VOC and NOx-based indoor air quality signal.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/environment4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/environment-4-click)
+[Click Product page](https://www.mikroe.com/environment-4-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t environment4_sgp_meas_raw_signals ( environment4_t *ctx, uint16_t comp_rh,
 
 ## Example Description
 
-> This example demonstrates the use of Environment 4 click board by reading the temperature and humidity data and calculating VOC and NOx indexes.
+> This example demonstrates the use of Environment 4 Click board by reading the temperature and humidity data and calculating VOC and NOx indexes.
 
 **The demo application is composed of two sections :**
 
@@ -216,7 +216,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

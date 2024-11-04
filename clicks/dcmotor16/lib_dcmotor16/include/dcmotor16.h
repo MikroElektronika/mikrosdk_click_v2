@@ -173,7 +173,7 @@ typedef enum
 
 /**
  * @brief DC Motor 16 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #dcmotor16_cfg_t object definition for detailed explanation.
@@ -185,7 +185,7 @@ void dcmotor16_cfg_setup ( dcmotor16_cfg_t *cfg );
 /**
  * @brief DC Motor 16 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #dcmotor16_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -262,7 +262,7 @@ void dcmotor16_ctrl_rev_pin( dcmotor16_t *ctx, uint8_t state );
 
 /**
  * @brief Control motor VRef (speed).
- * @details This function sets the VRef value used for this click board.
+ * @details This function sets the VRef value used for this Click board.
  * @param[out] ctx : Click context object.
  * See #dcmotor16_t object definition for detailed explanation.
  * @param[in] value : Motor Vref ( 0x0000 to 0x0100 )

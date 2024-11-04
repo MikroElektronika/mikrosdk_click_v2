@@ -1,6 +1,6 @@
 
 ---
-# LTE Cat.4 click
+# LTE Cat.4 Click
 
 > LTE Cat.4 Click (for Europe) is a compact add-on board made specially for 4G M2M and IoT applications in Europe. This board features the EG95EXGA-128-SGNS, an IoT/M2M-optimized LTE Cat.4 module that meets the 3GPP Release 11 standard from Quectel. It supports multiple wireless standards, including LTE-FDD, WCDMA, and GSM, ensuring broad network compatibility. Key features include multi-band LTE support (B1/B3/B7/B8/B20/B28), RX diversity for bands B1 and B8, and multi-constellation GNSS (GPS, GLONASS, BeiDou/Compass, Galileo, QZSS). It also integrates a 16-bit mono audio codec for voice functionality with support for CTIA standard headphones. Additionally, it offers a USB Type C connector for power and data transfer, AT command communication, and firmware upgrades.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ltecat4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lte-cat4-click-for-europe)
+[Click Product page](https://www.mikroe.com/lte-cat4-click-for-europe)
 
 ---
 
@@ -57,7 +57,7 @@ void ltecat4_set_sim_apn ( ltecat4_t *ctx, uint8_t *sim_apn );
 void ltecat4_send_sms_text ( ltecat4_t *ctx, uint8_t *phone_number, uint8_t *sms_text );
 ```
 
-- `ltecat4_send_cmd` This function sends a specified command to the click module.
+- `ltecat4_send_cmd` This function sends a specified command to the Click module.
 ```c
 void ltecat4_send_cmd ( ltecat4_t *ctx, uint8_t *cmd );
 ```
@@ -201,7 +201,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

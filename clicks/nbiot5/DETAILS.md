@@ -1,6 +1,6 @@
 
 ---
-# NB IoT 5 click
+# NB IoT 5 Click
 
 > NB IoT 5 Click is a compact add-on board suitable as narrow-band Internet of Things universal wireless communication solution. This board features the OT01-5, a high-performance NB-IoT module with ultra-low power consumption allowing battery life of about ten years from Notioni.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/nb_iot_5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/nb-iot-5-click)
+[Click Product page](https://www.mikroe.com/nb-iot-5-click)
 
 ---
 
@@ -189,7 +189,7 @@ Enter valid values for the following macros: SIM_APN, SIM_SMSC and PHONE_NUMBER_
 > > - SIM_APN "internet"
 > > - SIM_SMSC "+381610401"
 > > - PHONE_NUMBER_TO_MESSAGE "+381659999999"
-> Make sure the JP2 is removed from the click board, otherwise, you will need to connect the USB so that the module can boot up successfully.
+> Make sure the JP2 is removed from the Click board, otherwise, you will need to connect the USB so that the module can boot up successfully.
 
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
@@ -203,7 +203,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

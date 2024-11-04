@@ -214,7 +214,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to
+ * @description This function initializes Click configuration structure to
  * initial state.
  * @note All used pins will be set to unconnected state.
  */
@@ -230,7 +230,7 @@ void flash_cfg_setup( flash_cfg_t *cfg );
  *          0xFD - Driver init error.
  *
  * @description This function initializes all necessary pins and peripherals
- * used for this click.
+ * used for this Click.
  */
 flash_err_t flash_init( flash_t *ctx, flash_cfg_t *cfg );
 
@@ -239,7 +239,7 @@ flash_err_t flash_init( flash_t *ctx, flash_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Flash click.
+ * @description This function executes default configuration for Flash Click.
  */
 void flash_default_cfg( flash_t *ctx );
 

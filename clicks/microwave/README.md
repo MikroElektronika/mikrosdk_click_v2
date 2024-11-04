@@ -1,16 +1,16 @@
 \mainpage Main Page
 
 ---
-# Microwave click
+# Microwave Click
 
-Microwave click detects movement, thanks to the PD-V11 a 24GHz microwave motion sensor.
-The typical use for Microwave click is a proximity or motion detector in various applications and devices.
+Microwave Click detects movement, thanks to the PD-V11 a 24GHz microwave motion sensor.
+The typical use for Microwave Click is a proximity or motion detector in various applications and devices.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/microwave_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/microwave-click)
+[Click Product page](https://www.mikroe.com/microwave-click)
 
 ---
 
@@ -51,7 +51,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ## Examples Description
 
 > This is an example which demonstrates the use of Microwave Click board.
-> Microwave click reads ADC results, takes exact amount of samples,
+> Microwave Click reads ADC results, takes exact amount of samples,
 > calculation of difference between taken samples and reference ADC value, and
 > reports movement if difference is greater/lower than selected threshold value.
 
@@ -167,7 +167,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

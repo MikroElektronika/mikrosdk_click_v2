@@ -3,7 +3,7 @@
  * @brief LYRA 24P Click Example.
  *
  * # Description
- * This example demonstrates the use of LYRA 24P click board by processing
+ * This example demonstrates the use of LYRA 24P Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :

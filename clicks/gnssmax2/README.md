@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# GNSS MAX 2 click
+# GNSS MAX 2 Click
 
 > GNSS MAX 2 Click is a compact add-on board designed for precise positioning in urban environments. This board features the MAX-F10S, a professional-grade L1/L5 dual-band GNSS receiver from u-blox. This receiver uses dual-band GNSS technology to provide meter-level accuracy, even in challenging urban areas, by mitigating multipath effects. It supports concurrent GPS, Galileo, and BeiDou constellation tracking, offering robust performance with integrated filters and a low-noise amplifier for protection against RF interference. GNSS MAX 2 Click is ideal for vehicle tracking, fleet management, and micromobility solutions, even with small antennas.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/gnssmax2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gnss-max-2-click)
+[Click Product page](https://www.mikroe.com/gnss-max-2-click)
 
 ---
 
@@ -70,7 +70,7 @@ void gnssmax2_reset_device ( gnssmax2_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of GNSS MAX 2 click by reading and displaying the GNSS coordinates.
+> This example demonstrates the use of GNSS MAX 2 Click by reading and displaying the GNSS coordinates.
 
 **The demo application is composed of two sections :**
 
@@ -138,7 +138,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,6 +1,6 @@
 
 ---
-# Power Monitor click
+# Power Monitor Click
 
 > Power Monitor Click is a compact add-on board that represents an ultra-precise power monitoring solution. This board features the INA228, a digital power monitor with a 20-bit delta-sigma ADC specifically designed for current-sensing applications from Texas Instruments. The INA228 reports current, bus voltage, temperature, power, energy, and charge accumulation while employing a precision ±0.5 % integrated oscillator, all while performing the needed calculations in the background. It can measure a full-scale differential input of ±163.84mV or ±40.96mV across a resistive shunt sense element, with common-mode voltage support up to +85V. This Click board™ is suitable for current-sensing applications in DC-DC converters, power inverters, telecom equipment, industrial measurements, and many more.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/powermonitor_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/power-monitor-click)
+[Click Product page](https://www.mikroe.com/power-monitor-click)
 
 ---
 
@@ -193,7 +193,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

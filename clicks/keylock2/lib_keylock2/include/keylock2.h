@@ -145,7 +145,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void keylock2_cfg_setup ( keylock2_cfg_t *cfg );
@@ -157,7 +157,7 @@ void keylock2_cfg_setup ( keylock2_cfg_t *cfg );
  * @param cfg Click configuration structure.
  * 
  * @description This function initializes all necessary pins and peripherals used for
- * this click.
+ * this Click.
  */
 KEYLOCK2_RETVAL keylock2_init ( keylock2_t *ctx, keylock2_cfg_t *cfg );
 
@@ -166,7 +166,7 @@ KEYLOCK2_RETVAL keylock2_init ( keylock2_t *ctx, keylock2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function gets states of pins in1, in2 and in3 on Key Lock 2 click.
+ * @description This function gets states of pins in1, in2 and in3 on Key Lock 2 Click.
  */
 uint8_t keylock2_get_pin_state ( keylock2_t *ctx, uint8_t pin );
 
@@ -176,7 +176,7 @@ uint8_t keylock2_get_pin_state ( keylock2_t *ctx, uint8_t pin );
  * @param ctx  Click object.
  *
  * @description This function gets Position (First, Second, Third) of pins 
- * in1, in2 and in3 on Key Lock 2 click.
+ * in1, in2 and in3 on Key Lock 2 Click.
  */
 uint8_t keylock2_get_position ( keylock2_t *ctx );
 
@@ -186,6 +186,6 @@ uint8_t keylock2_get_position ( keylock2_t *ctx );
 #endif  // _KEYLOCK2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

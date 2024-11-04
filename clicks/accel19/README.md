@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Accel 19 click
+# Accel 19 Click
 
 > Accel 19 Click is a compact add-on board that contains an acceleration sensor. This board features the LIS2DTW12, an ultra-low-power high-performance three-axis accelerometer from STMicroelectronics. It allows selectable full-scale acceleration measurements in ranges of ±2g, ±4g, ±8g, or ±16g in three axes with a configurable host interface that supports both SPI and I2C serial communication. Alongside an embedded 0.8°C accuracy temperature sensor with ODRs ranging from 50 to 1.6Hz and resolution from 8 to 12 bits, it has a dedicated internal engine to process motion and acceleration detection.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/accel19_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/accel-19-click)
+[Click Product page](https://www.mikroe.com/accel-19-click)
 
 ---
 
@@ -172,7 +172,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# TFmini click
+# TFmini Click
 
 > TFmini Click is an adapter Click board™ used to interface a compatible ToF (Time of Flight) LiDAR sensor with the host MCU. This board features one four positions 1.25mm connector suitable for a TFmini LiDAR module (TFmini Plus and TFmini-S) specially made to measure an object's distance. Depending on the used LiDAR module, it is possible to achieve different measurement ranges and the use of a different serial interface, such as the UART or I2C. This Click board™ is suitable for various industrial environments like pedestrian detection, vehicle testing, and altitude.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/tfmini_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/tfmini-click)
+[Click Product page](https://www.mikroe.com/tfmini-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t tfmini_send_frame ( tfmini_t *ctx, tfmini_frame_t frame );
 
 ## Example Description
 
-> This example demonstrates the use of TFmini click board by reading the measurements from the attached TFmini-S or TFmini Plus sensors.
+> This example demonstrates the use of TFmini Click board by reading the measurements from the attached TFmini-S or TFmini Plus sensors.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and the click board, and reads the firmware version of the attached sensor.
+> Initializes the driver and the Click board, and reads the firmware version of the attached sensor.
 
 ```c
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

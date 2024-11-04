@@ -134,7 +134,7 @@ typedef enum
 
 /**
  * @brief Boost 11 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #boost11_cfg_t object definition for detailed explanation.
@@ -146,7 +146,7 @@ void boost11_cfg_setup ( boost11_cfg_t *cfg );
 /**
  * @brief Boost 11 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #boost11_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -208,7 +208,7 @@ err_t boost11_read_an_pin_voltage ( boost11_t *ctx, float *data_out );
 
 /**
  * @brief Boost 11 set vref function.
- * @details This function sets the voltage reference for Boost 11 click driver.
+ * @details This function sets the voltage reference for Boost 11 Click driver.
  * @param[in] ctx : Click context object.
  * See #boost11_t object definition for detailed explanation.
  * @param[in] vref : Reference voltage (volts).

@@ -475,7 +475,7 @@ typedef enum
 
 /**
  * @brief IR Gesture 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #irgesture2_cfg_t object definition for detailed explanation.
@@ -487,7 +487,7 @@ void irgesture2_cfg_setup ( irgesture2_cfg_t *cfg );
 /**
  * @brief IR Gesture 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #irgesture2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -502,7 +502,7 @@ err_t irgesture2_init ( irgesture2_t *ctx, irgesture2_cfg_t *cfg );
 /**
  * @brief IR Gesture 2 default configuration function.
  * @details This function executes a default configuration of IR Gesture 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #irgesture2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -579,7 +579,7 @@ err_t irgesture2_read_register ( irgesture2_t *ctx, uint8_t reg, uint8_t *data_o
  * @param[in] ctx : Click context object.
  * See #irgesture2_t object definition for detailed explanation.
  * @param[out] pixels : Array of 60 int16_t elements where to store the pixels values.
- * @param[in] flip_pixels : Flip pixels, set to true if the click board is mounted upside-down.
+ * @param[in] flip_pixels : Flip pixels, set to true if the Click board is mounted upside-down.
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.

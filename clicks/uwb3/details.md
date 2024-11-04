@@ -1,6 +1,6 @@
 
 ---
-# UWB 3 click
+# UWB 3 Click
 
 > UWB 3 Click is a compact add-on board that brings Ultra-Wideband communication to your application. This board features the DWM3001, a fully integrated UWB transceiver module from Qorvo. The module integrates the DW3110 IC, nRF52833 MCU, planar UWB antenna, accelerometer, power management, and crystal. It is a fully calibrated, tested, and validated design. This Click board™ makes the perfect solution for the development of precision real-time location systems (RTLS) using two-way ranging or TDoA schemes in various markets, location-aware wireless sensor networks (WSNs), and more.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/uwb3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/uwb-3-click)
+[Click Product page](https://www.mikroe.com/uwb-3-click)
 
 ---
 
@@ -47,12 +47,12 @@ err_t uwb3_init ( uwb3_t *ctx, uwb3_cfg_t *cfg );
 
 #### Example key functions :
 
-- `uwb3_send_cmd` This function sends a specified command to the click module.
+- `uwb3_send_cmd` This function sends a specified command to the Click module.
 ```c
 void uwb3_send_cmd ( uwb3_t *ctx, uint8_t *cmd );
 ```
 
-- `uwb3_send_cmd_with_parameter` This function sends a command with specified parameter to the click module.
+- `uwb3_send_cmd_with_parameter` This function sends a command with specified parameter to the Click module.
 ```c
 void uwb3_send_cmd_with_parameter ( uwb3_t *ctx, uint8_t *cmd, uint8_t *param );
 ```
@@ -64,13 +64,13 @@ void uwb3_reset_device ( uwb3_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of an UWB 3 click board by showing the communication between the two click boards.
+> This example demonstrates the use of an UWB 3 Click board by showing the communication between the two Click boards.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and configures the click board for the selected application mode.
+> Initializes the driver and configures the Click board for the selected application mode.
 
 ```c
 
@@ -132,10 +132,10 @@ void application_init ( void )
 ### Application Task
 
 > Reads and processes all incoming ranging block messages and displays them
-on the USB UART. One click board should be configured to initiator mode and
-the others to responder 1 or 2. The initiator click displays the address
-and distance of each responder nodes, while the responder click boards displays
-the address and distance of the initiator click board.
+on the USB UART. One Click board should be configured to initiator mode and
+the others to responder 1 or 2. The initiator Click displays the address
+and distance of each responder nodes, while the responder Click boards displays
+the address and distance of the initiator Click board.
 
 ```c
 void application_task ( void )
@@ -161,7 +161,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

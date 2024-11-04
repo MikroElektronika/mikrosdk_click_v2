@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Thunder EMU click
+# Thunder EMU Click
 
 > Thunder EMU Click is a compact add-on board that can be used to emulate lightning. This board features circuits that generate an RF signal that mimics lightning strikes. It is a thunder emulator board that allows you to mimic lightning signals that can represent different distances, thus enabling you to debug your lightning detector application for all kinds of scenarios. The RF signal has an effective range of about 5 – 15cm from the emulator antenna of this Click board™ to the sensor antenna.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/thunderemu_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/thunder-emu-click)
+[Click Product page](https://www.mikroe.com/thunder-emu-click)
 
 ---
 
@@ -70,14 +70,14 @@ uint8_t thunderemu_get_mid_pin ( thunderemu_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Thunder EMU click board by generating
-CLOSE, MID, or FAR range thunder signal depending on the click push-buttons state.
+> This example demonstrates the use of Thunder EMU Click board by generating
+CLOSE, MID, or FAR range thunder signal depending on the Click push-buttons state.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -121,7 +121,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Checks if any of the click board buttons are pressed and then generates a thunder
+> Checks if any of the Click board buttons are pressed and then generates a thunder
 signal related to the pressed button and displays an appropriate message on the USB UART.
 
 ```c
@@ -156,9 +156,9 @@ void application_task ( void )
 
 ## Note
 
-> Thunder EMU click should be used in combination with a Thunder click which detects
+> Thunder EMU Click should be used in combination with a Thunder Click which detects
 a lightning presence. The emulator is calibrated for ranges of up to 15cm from the sensor board.
-It's recommended to distant both click boards from their development boards using a Shuttle click
+It's recommended to distant both Click boards from their development boards using a Shuttle Click
 to reduce the board noise that can affect the sensor and emulator performance.
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
@@ -172,7 +172,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

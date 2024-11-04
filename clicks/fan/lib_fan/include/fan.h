@@ -274,7 +274,7 @@ extern "C"{
  * @param[out] cfg Click configuration structure. See #fan_cfg_t object
  * definition.
  *
- * @description This function initializes click configuration structure to
+ * @description This function initializes Click configuration structure to
  * initial state.
  * @note All used pins will be set to unconnected state.
  */
@@ -290,7 +290,7 @@ fan_cfg_setup ( fan_cfg_t *cfg );
  *            0  - Ok,
  *          (-1) - Error.
  *
- * @description This function executes a default configuration for the FAN click.
+ * @description This function executes a default configuration for the FAN Click.
  */
 err_t
 fan_default_cfg ( fan_t *ctx );
@@ -307,7 +307,7 @@ fan_default_cfg ( fan_t *ctx );
  *          (-1) - Error.
  *
  * @description This function initializes all necessary pins and peripherals
- * used for this click board.
+ * used for this Click board.
  */
 err_t
 fan_init ( fan_t *ctx, fan_cfg_t *cfg );
@@ -928,6 +928,6 @@ fan_read_int_pin ( fan_t *ctx );
 #endif  // FAN_H
 
 /** \} */ // End public_function group
-/// \}    // End click driver group
+/// \}    // End Click driver group
 /*! @} */
 // ------------------------------------------------------------------------- END

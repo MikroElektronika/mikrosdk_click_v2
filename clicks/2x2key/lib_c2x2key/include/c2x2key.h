@@ -154,7 +154,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c2x2key_cfg_setup ( c2x2key_cfg_t *cfg );
@@ -164,7 +164,7 @@ void c2x2key_cfg_setup ( c2x2key_cfg_t *cfg );
  * @param c2x2key Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 C2X2KEY_RETVAL c2x2key_init ( c2x2key_t *ctx, c2x2key_cfg_t *cfg );
 
@@ -173,7 +173,7 @@ C2X2KEY_RETVAL c2x2key_init ( c2x2key_t *ctx, c2x2key_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for 2x2 key click.
+ * @description This function executes default configuration for 2x2 key Click.
  */
 void c2x2key_default_cfg ( c2x2key_t *ctx );
 
@@ -248,6 +248,6 @@ uint8_t c2x2key_taster_pressed ( c2x2key_t *ctx );
 #endif  // _C2X2KEY_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

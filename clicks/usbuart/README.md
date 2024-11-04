@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# USB UART click
+# USB UART Click
 
-USB UART click offers a USB to asynchronous serial data (UART) interface, allowing the microcontroller based designs to communicate with the personal computer, in a very simple way. It is equipped with the FT232RL, a very popular USB to UART interface IC, used on many MikroElektronika devices - both for its reliability and simplicity. USB UART click is used for whenever there is a need for seamless and effortless interfacing of the UART lines to a personal computer.
+USB UART Click offers a USB to asynchronous serial data (UART) interface, allowing the microcontroller based designs to communicate with the personal computer, in a very simple way. It is equipped with the FT232RL, a very popular USB to UART interface IC, used on many MikroElektronika devices - both for its reliability and simplicity. USB UART Click is used for whenever there is a need for seamless and effortless interfacing of the UART lines to a personal computer.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/usbuart_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/usb-uart-click)
+[Click Product page](https://www.mikroe.com/usb-uart-click)
 
 ---
 
@@ -48,7 +48,7 @@ err_t usbuart_init ( usbuart_t *ctx, usbuart_cfg_t *cfg );
 
 #### Example key functions :
 
-- `usbuart_pwr_ctrl` This function sets the click turns click on.
+- `usbuart_pwr_ctrl` This function sets the Click turns Click on.
 ```c
 void usbuart_pwr_ctrl ( usbuart_t *ctx, uint8_t state );
 ```
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

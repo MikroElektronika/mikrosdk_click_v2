@@ -3,13 +3,13 @@
  * @brief BucknBoost Click example
  *
  * # Description
- * This application demonstrates the use of Buck n Boost click board.
+ * This application demonstrates the use of Buck n Boost Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and sets the click default configuration.
- * The default config enables the click board and limits the current of all outputs to 1100mA.
+ * Initializes the driver and sets the Click default configuration.
+ * The default config enables the Click board and limits the current of all outputs to 1100mA.
  * It also sets the default voltages of all channels which are the following:
  * OUT1 - 1.8V, OUT2 - 1.1V, OUT3 - 1.8V, OUT4 - 1.05V, OUT5 - 1.25V, OUT6 - 12V 
  *

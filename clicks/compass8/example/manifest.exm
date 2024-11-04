@@ -3,6 +3,6 @@
     "description": "Compass 8 Click is a compact add-on board designed for precise compass applications. This board features the AK09919, a 3-axis electronic compass IC from AKM Semiconductor. The AK09919 is based on high-sensitivity Hall sensor technology for detecting terrestrial magnetism across the X, Y, and Z axes, has multiple operational modes, a built-in oscillator, and a Power On Reset circuit. It also includes a magnetic sensor overflow monitor and a 16-sample FIFO data buffer for efficient data handling.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","AK09919C"],
+    "hw" : ["Click","AK09919C"],
     "category" : ["Click Boards > Sensors > Magnetic"]
 }

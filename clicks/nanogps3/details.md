@@ -1,6 +1,6 @@
 
 ---
-# Nano GPS 3 click
+# Nano GPS 3 Click
 
 > Nano GPS 3 Click is a compact add-on board that provides fast positioning capabilities. 
 > This board features the ORG1511, a GPS/GNSS module with an integrated antenna from OriginGPS. 
@@ -14,7 +14,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/nanogps3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/nano-gps-3-click)
+[Click Product page](https://www.mikroe.com/nano-gps-3-click)
 
 ---
 
@@ -75,14 +75,14 @@ err_t nanogps3_generic_write ( nanogps3_t *ctx, uint8_t *data_in, uint8_t len );
 
 ## Example Description
 
-> This example demonstrates the use of Nano GPS 3 click by reading and displaying
+> This example demonstrates the use of Nano GPS 3 Click by reading and displaying
 > the GPS coordinates.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and resets the click board.
+> Initializes the driver and resets the Click board.
 
 ```c
 void application_init ( void ) 
@@ -145,7 +145,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

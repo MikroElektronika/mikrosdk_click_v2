@@ -1,8 +1,8 @@
 {
     "name": "MAC Address Click",
-    "description": "MAC Address click provides a unique node address for your application. It also has 1Kbit of writable EEPROM memory.",
+    "description": "MAC Address Click provides a unique node address for your application. It also has 1Kbit of writable EEPROM memory.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","24AA025E64"],
+    "hw" : ["Click","24AA025E64"],
     "category" : ["EEPROM"] 
 }

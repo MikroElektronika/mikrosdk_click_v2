@@ -224,7 +224,7 @@ typedef enum
 
 /**
  * @brief EEPROM 7 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #eeprom7_cfg_t object definition for detailed explanation.
@@ -236,7 +236,7 @@ void eeprom7_cfg_setup ( eeprom7_cfg_t *cfg );
 /**
  * @brief EEPROM 7 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #eeprom7_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -252,7 +252,7 @@ err_t eeprom7_init ( eeprom7_t *ctx, eeprom7_cfg_t *cfg );
 /**
  * @brief EEPROM 7 default configuration function.
  * @details This function executes a default configuration of EEPROM 7
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom7_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -344,7 +344,7 @@ void eeprom7_enable_hold_operation ( eeprom7_t *ctx, uint8_t en_hold );
  * @brief Enable write function.
  * @details The function enable write depending on the function argument
  * of the 25CSM04 4-Mbit SPI Serial EEPROM with 128-Bit Serial Number
- * and Enhanced Write Protection on EEPROM 7 click board.
+ * and Enhanced Write Protection on EEPROM 7 Click board.
  * @param[out] ctx : Click context object.
  * See #eeprom7_t object definition for detailed explanation.
  * @param[in] en_write : Write enable/disable
@@ -356,7 +356,7 @@ void eeprom7_enable_write ( eeprom7_t *ctx, uint8_t en_write );
  * @brief Read status function.
  * @details The function read 16-bit status register
  * of the 25CSM04 4-Mbit SPI Serial EEPROM with 128-Bit Serial Number
- * and Enhanced Write Protection on EEPROM 7 click board.
+ * and Enhanced Write Protection on EEPROM 7 Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom7_t object definition for detailed explanation.
  * @return 16-bit status data.
@@ -369,7 +369,7 @@ uint16_t eeprom7_read_status ( eeprom7_t *ctx );
  * by check bit 0 of the status register 
  * of the 25CSM04 4-Mbit SPI Serial EEPROM 
  * with 128-Bit Serial Number and Enhanced Write Protection 
- * on EEPROM 7 click board.
+ * on EEPROM 7 Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom7_t object definition for detailed explanation.
  * @return EEPROM 7 status.
@@ -381,7 +381,7 @@ uint8_t eeprom7_is_device_ready ( eeprom7_t *ctx );
  * @details The function sends the desired command
  * to the 25CSM04 4-Mbit SPI Serial EEPROM
  * with 128-Bit Serial Number and Enhanced Write Protection
- * on EEPROM 7 click board.
+ * on EEPROM 7 Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom7_t object definition for detailed explanation.
  * @param[in] cmd : 8-bit Commands Opcode.
@@ -397,7 +397,7 @@ err_t eeprom7_send_cmd ( eeprom7_t *ctx, uint8_t cmd );
  * @details The function software reset,
  * reset the 25CSM04 4-Mbit SPI Serial EEPROM
  * with 128-Bit Serial Number and Enhanced Write Protection
- * on EEPROM 7 click board.
+ * on EEPROM 7 Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom7_t object definition for detailed explanation.
  * @return Nothing.
@@ -409,7 +409,7 @@ void eeprom7_sw_reset ( eeprom7_t *ctx );
  * @details The function set status register
  * of the 25CSM04 4-Mbit SPI Serial EEPROM
  * with 128-Bit Serial Number and Enhanced Write Protection
- * on EEPROM 7 click board.
+ * on EEPROM 7 Click board.
  * @param[out] ctx : Click context object.
  * See #eeprom7_t object definition for detailed explanation.
  * @param[in] status : 8-bit status data.
@@ -422,7 +422,7 @@ void eeprom7_set_status ( eeprom7_t *ctx, uint8_t status );
  * @details The function get status register
  * of the 25CSM04 4-Mbit SPI Serial EEPROM
  * with 128-Bit Serial Number and Enhanced Write Protection
- * on EEPROM 7 click board.
+ * on EEPROM 7 Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom7_t object definition for detailed explanation.
  * @return 8-bit status data.
@@ -434,7 +434,7 @@ uint8_t eeprom7_get_status ( eeprom7_t *ctx );
  * @details The function writes a sequential data starting
  * of the targeted register address of the 25CSM04 4-Mbit SPI Serial EEPROM
  * with 128-Bit Serial Number and Enhanced Write Protection
- * on EEPROM 7 click board.
+ * on EEPROM 7 Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom7_t object definition for detailed explanation.
  * @param[in] addr : 24-bit memory address.
@@ -449,7 +449,7 @@ void eeprom7_write_memory ( eeprom7_t *ctx, uint32_t addr, uint8_t *p_tx_data, u
  * @details The function read a sequential data starting
  * from the targeted register address of t25CSM04 4-Mbit SPI Serial EEPROM
  * with 128-Bit Serial Number and Enhanced Write Protection
- * on EEPROM 7 click board.
+ * on EEPROM 7 Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom7_t object definition for detailed explanation.
  * @param[in] addr : 24-bit memory address.
@@ -464,7 +464,7 @@ void eeprom7_read_memory ( eeprom7_t *ctx, uint32_t addr, uint8_t *p_rx_data, ui
  * by check_bit parametar from the targeted register address
  * of t25CSM04 4-Mbit SPI Serial EEPROM
  * with 128-Bit Serial Number and Enhanced Write Protection
- * on EEPROM 7 click board.
+ * on EEPROM 7 Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom7_t object definition for detailed explanation.
  * @param[in] check_bit : Determined witch bit in status register be checked

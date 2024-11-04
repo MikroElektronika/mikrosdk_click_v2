@@ -1,8 +1,8 @@
 {
     "name": "OLED Switch Click",
-    "description": "If you are building any type of human machine interface, OLED Switch click can help you keep the design simple, clear and interactive. It can be used in designing a control panel for an industrial machine… or a DIY arcade.",
+    "description": "If you are building any type of human machine interface, OLED Switch Click can help you keep the design simple, clear and interactive. It can be used in designing a control panel for an industrial machine… or a DIY arcade.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","ISC15ANP4"],
+    "hw" : ["Click","ISC15ANP4"],
     "category" : ["OLED"] 
 }

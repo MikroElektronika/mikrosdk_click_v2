@@ -133,7 +133,7 @@ typedef enum
 
 /**
  * @brief Zero-Cross configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #zerocross_cfg_t object definition for detailed explanation.
@@ -145,7 +145,7 @@ void zerocross_cfg_setup ( zerocross_cfg_t *cfg );
 /**
  * @brief Zero-Cross initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #zerocross_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -160,7 +160,7 @@ err_t zerocross_init ( zerocross_t *ctx, zerocross_cfg_t *cfg );
 /**
  * @brief Zero-Cross pin reading function.
  * @details This function reads the state of the ZC pin of Zero-Cross
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #zerocross_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,
@@ -172,7 +172,7 @@ uint8_t zerocross_pin_read ( zerocross_t *ctx );
 /**
  * @brief Zero-Cross frequency reading function.
  * @details This function reads the frequency of the Zero-Cross
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #zerocross_t object definition for detailed explanation.
  * @param[out] freq : Read frequency.

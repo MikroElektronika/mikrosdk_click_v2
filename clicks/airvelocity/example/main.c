@@ -3,7 +3,7 @@
  * @brief Air Velocity Click example
  *
  * # Description
- * This example demonstrates the use of Air Velocity click board by reading
+ * This example demonstrates the use of Air Velocity Click board by reading
  * and displaying the output counts and air velocity in m/sec.
  *
  * The demo application is composed of two sections :

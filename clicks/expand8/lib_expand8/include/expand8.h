@@ -191,7 +191,7 @@ typedef enum
 
 /**
  * @brief Expand 8 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #expand8_cfg_t object definition for detailed explanation.
@@ -203,7 +203,7 @@ void expand8_cfg_setup ( expand8_cfg_t *cfg );
 /**
  * @brief Expand 8 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #expand8_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -253,7 +253,7 @@ err_t expand8_generic_read ( expand8_t *ctx, uint8_t reg, uint8_t *data_out, uin
  * @details The function write the byte of data
  * to the target 8-bit register address of the MAX7317,
  * 10-Port SPI-Interfaced I/O Expander with
- * Overvoltage and Hot-Insertion Protection on Expand 8 click board.
+ * Overvoltage and Hot-Insertion Protection on Expand 8 Click board.
  * @param[in] ctx : Click context object.
  * See #expand8_t object definition for detailed explanation.
  * @param[in] addr : 7-bit Command Address.
@@ -267,7 +267,7 @@ void expand8_write_data ( expand8_t *ctx, uint8_t addr, uint8_t tx_data );
  * @details The function read the the byte of data
  * from the target 8-bit register address of the MAX7317,
  * 10-Port SPI-Interfaced I/O Expander with
- * Overvoltage and Hot-Insertion Protection on Expand 8 click boar.
+ * Overvoltage and Hot-Insertion Protection on Expand 8 Click boar.
  * @param[in] ctx : Click context object.
  * See #expand8_t object definition for detailed explanation.
  * @param[in] addr : 7-bit Command Address.
@@ -279,7 +279,7 @@ uint8_t expand8_read_data ( expand8_t *ctx, uint8_t addr );
  * @brief Set port function.
  * @details The function set and configur the target port 
  * of the MAX7317, 10-Port SPI-Interfaced I/O Expander with
- * Overvoltage and Hot-Insertion Protection on Expand 8 click board.
+ * Overvoltage and Hot-Insertion Protection on Expand 8 Click board.
  * @param[in] ctx : Click context object.
  * See #expand8_t object definition for detailed explanation.
  * @param sel_port : Selected Port [ 0 : 9 ].

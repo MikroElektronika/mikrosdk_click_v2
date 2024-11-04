@@ -3,12 +3,12 @@
  * @brief Magneto10 Click example
  *
  * # Description
- * This example demonstrates the use of Magneto 10 click board.
+ * This example demonstrates the use of Magneto 10 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads the magnetic flux as well as the internal temperature data every 100ms 

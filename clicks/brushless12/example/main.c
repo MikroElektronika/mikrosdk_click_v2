@@ -3,12 +3,12 @@
  * @brief Brushless 12 Click Example.
  *
  * # Description
- * This example demonstrates the use of Brushless 12 click board.
+ * This example demonstrates the use of Brushless 12 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and sets the click default configuration.
+ * Initializes the driver and sets the Click default configuration.
  *
  * ## Application Task
  * Drives the motor in the forward direction for 5 seconds, then pulls brake for 2 seconds, 

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Color 15 click
+# Color 15 Click
 
 > Color 15 Click is a compact add-on board representing an accurate color sensing solution. This board features the CLS-16D24-44-DF8/TR8, a low power, high sensitivity, color light sensor from Everlight Electronics. This Click board™, with an I2C configurable color sensor, senses red, green, blue, white (RGBW), and infrared light and converts them to digital values. The RGBW sensor is designed to reject IR in light sources allowing the device to operate in environments from sunlight to dark rooms. The integrating ADC rejects 50Hz and 60Hz flickers caused by artificial light sources.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/color15_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/color-15-click)
+[Click Product page](https://www.mikroe.com/color-15-click)
 
 ---
 
@@ -70,14 +70,14 @@ uint8_t color15_get_color ( color15_hsl_t *hsl );
 
 ## Example Description
 
-> This example demonstrates the use of Color 15 click board by reading data from 5 channels and converting them to HSL color and displaying those data as
+> This example demonstrates the use of Color 15 Click board by reading data from 5 channels and converting them to HSL color and displaying those data as
 well as the detected color name on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -202,7 +202,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

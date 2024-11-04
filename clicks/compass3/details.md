@@ -1,6 +1,6 @@
 
 ---
-# Compass 3 click
+# Compass 3 Click
 
 Compass 3 Click is an expansion board that can measure the three-axis magnetic field which is perfect for implementation in applications such as electric compasses. This board features MMC5883MA, a complete 3-axis magnetic sensor with signal processing from MEMSIC.
 
@@ -8,7 +8,7 @@ Compass 3 Click is an expansion board that can measure the three-axis magnetic f
   <img src="https://download.mikroe.com/images/click_for_ide/compass3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/compass-3-click)
+[Click Product page](https://www.mikroe.com/compass-3-click)
 
 ---
 
@@ -67,7 +67,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ### Application Init 
 
 >
-> Initalizes I2C driver and click driver, performs check, applies default 
+> Initalizes I2C driver and Click driver, performs check, applies default 
 > setup and writes an initial log.
 > 
 
@@ -103,7 +103,7 @@ void application_init ( void )
     if ( test_val == COMPASS3_DEVICE_ID_NUM )
     {
         log_printf( &logger, "--------------------\r\n" );
-        log_printf( &logger, "   Compass 3 click  \r\n" );
+        log_printf( &logger, "   Compass 3 Click  \r\n" );
         log_printf( &logger, "--------------------\r\n" );
     }
     else
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

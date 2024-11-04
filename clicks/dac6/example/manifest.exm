@@ -3,6 +3,6 @@
     "description": "DAC 6 Click is a compact add-on board that contains a fully-featured, general-purpose voltage-output digital-to-analog converter. ",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","DAC104S085"],
+    "hw" : ["Click","DAC104S085"],
     "category" : ["DAC"] 
 }

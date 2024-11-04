@@ -67,7 +67,7 @@ HAPTIC_RETVAL haptic_init ( haptic_t *ctx, haptic_cfg_t *cfg )
     i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed );
     i2c_master_set_timeout( &ctx->i2c, 0 );
 
-//     Only when the click board is in PWM interface mode
+//     Only when the Click board is in PWM interface mode
     
 //     pwm_configure_default( &pwm_cfg );
 // 

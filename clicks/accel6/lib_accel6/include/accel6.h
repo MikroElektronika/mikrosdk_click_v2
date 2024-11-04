@@ -612,7 +612,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void accel6_cfg_setup ( accel6_cfg_t *cfg );
@@ -622,7 +622,7 @@ void accel6_cfg_setup ( accel6_cfg_t *cfg );
  * @param accel6 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ACCEL6_RETVAL accel6_init ( accel6_t *ctx, accel6_cfg_t *cfg );
 
@@ -666,7 +666,7 @@ void accel6_soft_reset ( accel6_t *ctx );
  * @param bw_data     Acceleration data filter bandwidth
  * @param lpw_data    Power mode and the low power sleep period.      
  *
- * @description This function executes default configuration for Accel 6 click.
+ * @description This function executes default configuration for Accel 6 Click.
  * @note Default configuration of the chip contains the settings:
  *<pre> 
  *      Set ACCEL6_REG_PMU_RANGE reg:
@@ -806,6 +806,6 @@ float accel6_get_temperature ( accel6_t *ctx );
 #endif  // _ACCEL6_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -1,15 +1,15 @@
 
 
 ---
-# Led Flash 2 click
+# Led Flash 2 Click
 
-LED Flash 2 click is a powerful flash/torch click, featuring the MIC2870 from Microchip, a high-efficiency flash LED driver, optimized for driving one or two high-brightness camera flash LEDs.
+LED Flash 2 Click is a powerful flash/torch Click, featuring the MIC2870 from Microchip, a high-efficiency flash LED driver, optimized for driving one or two high-brightness camera flash LEDs.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ledflash2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/led-flash-2-click)
+[Click Product page](https://www.mikroe.com/led-flash-2-click)
 
 ---
 
@@ -55,7 +55,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 > void ledflash2_write_register ( ledflash2_t *ctx, uint8_t reg_address, uint8_t reg_data );
 
 - This function will set the flash inhibit pin to either 1 or 0. It should be
-- used when click is in flash mode, to reduce the flash intensity.
+- used when Click is in flash mode, to reduce the flash intensity.
 > void ledflash2_toggle_flash_inhibit ( ledflash2_t *ctx, uint8_t pin_state );
 
 ## Examples Description
@@ -66,7 +66,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes device and sets the click into "OFF" mode.
+> Initializes device and sets the Click into "OFF" mode.
 
 ```c
 
@@ -104,7 +104,7 @@ void application_init ( void )
 
 > This function will demonstrate how to use the flash mode,
 > and the torch mode, with different power settings. 
-> It will then turn the click off.
+> It will then turn the Click off.
 
 ```c
 
@@ -156,7 +156,7 @@ void application_task ( void )
 ## Note
 
 > LED lights can be very bright, even on lowest power settings.
-> Avoid looking directly into the light when click is in operation.
+> Avoid looking directly into the light when Click is in operation.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
@@ -169,7 +169,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

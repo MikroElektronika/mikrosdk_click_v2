@@ -3,19 +3,19 @@
  * @brief Accel 27 Click example
  *
  * # Description
- * This example demonstrates the use of Accel 27 click board by reading and displaying 
+ * This example demonstrates the use of Accel 27 Click board by reading and displaying 
  * the accelerometer data (X, Y, and Z axis) averaged from 100 samples.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads and displays on the USB UART the accelerometer data (X, Y, and Z axis) averaged from 100 samples.
  *
  * @note
- * This click board should be used for high g applications of up to +-400g. It is not recommended
+ * This Click board should be used for high g applications of up to +-400g. It is not recommended
  * for low g applications because of its high scale factor which is about 200 mg per LSB.
  * 
  * @author Stefan Filipovic

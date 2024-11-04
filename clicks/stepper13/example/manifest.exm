@@ -1,8 +1,8 @@
 {
     "name": "Stepper 13 Click",
-    "description": "Stepper 13 Click is a bipolar step motor driver. It features an H-bridge bipolar step motor driver, which supports full-, half-, quarter-, or eighth-step modes. Stepper 13 click also carries a port expander so that the communication can be done with a minimal number of pins, through the mikroBUS™ I2C bus.",
+    "description": "Stepper 13 Click is a bipolar step motor driver. It features an H-bridge bipolar step motor driver, which supports full-, half-, quarter-, or eighth-step modes. Stepper 13 Click also carries a port expander so that the communication can be done with a minimal number of pins, through the mikroBUS™ I2C bus.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MP6500GU-Z","PCA9538ABSHP"],
+    "hw" : ["Click","MP6500GU-Z","PCA9538ABSHP"],
     "category" : ["Click Boards > Motor control > Stepper"]
 }

@@ -156,7 +156,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void ireclipse_cfg_setup ( ireclipse_cfg_t *cfg );
@@ -166,7 +166,7 @@ void ireclipse_cfg_setup ( ireclipse_cfg_t *cfg );
  * @param ireclipse Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 IRECLIPSE_RETVAL ireclipse_init ( ireclipse_t *ctx, ireclipse_cfg_t *cfg );
 
@@ -190,6 +190,6 @@ uint8_t ireclipse_int_status ( ireclipse_t *ctx );
 #endif  // _IRECLIPSE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -259,7 +259,7 @@ extern "C"{
  *
  * @param cfg                       Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void stereoamp_cfg_setup ( stereoamp_cfg_t *cfg );
@@ -270,7 +270,7 @@ void stereoamp_cfg_setup ( stereoamp_cfg_t *cfg );
  * @param ctx                       Click object.
  * @param cfg                       Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 STEREOAMP_RETVAL stereoamp_init ( stereoamp_t *ctx, stereoamp_cfg_t *cfg );
 
@@ -279,7 +279,7 @@ STEREOAMP_RETVAL stereoamp_init ( stereoamp_t *ctx, stereoamp_cfg_t *cfg );
  *
  * @param ctx           Click object.
  *
- * @description This function executes default configuration for LTC2601 click.
+ * @description This function executes default configuration for LTC2601 Click.
  */
 void stereoamp_default_cfg ( stereoamp_t *ctx );
 
@@ -308,7 +308,7 @@ void stereoamp_generic_write ( stereoamp_t *ctx, uint8_t ch_addr, uint8_t reg_ad
  * @param volume                    5-bit volume value from 0 ( 0x00 ) to 31 ( 0x1F ).
  *
  * @description This function set the volume of both channels to the 
- * Volume Control register address of LM48100Q-Q1 chip on StereoAmp click board.
+ * Volume Control register address of LM48100Q-Q1 chip on StereoAmp Click board.
  */
 void stereoamp_set_volume ( stereoamp_t *ctx, uint8_t volume );
 
@@ -318,7 +318,7 @@ void stereoamp_set_volume ( stereoamp_t *ctx, uint8_t volume );
  * @param ctx                       Click object.
  *
  * @description This function set the mute mode of both channels to the
- * Volume Control register address of LM48100Q-Q1 chip on StereoAmp click board.
+ * Volume Control register address of LM48100Q-Q1 chip on StereoAmp Click board.
  */
 void stereoamp_mute ( stereoamp_t *ctx );
 
@@ -328,7 +328,7 @@ void stereoamp_mute ( stereoamp_t *ctx );
  * @param ctx                       Click object.
  *
  * @description This function set soft reset by write to the
- * Diagnostic Control register address of LM48100Q-Q1 chip on StereoAmp click board.
+ * Diagnostic Control register address of LM48100Q-Q1 chip on StereoAmp Click board.
  */
 void stereoamp_soft_reset ( stereoamp_t *ctx );
 
@@ -338,7 +338,7 @@ void stereoamp_soft_reset ( stereoamp_t *ctx );
  * @param ctx                       Click object.
  *
  * @description This function enable the diagnostic by write to the
- * Diagnostic Control register address of LM48100Q-Q1 chip on StereoAmp click board.
+ * Diagnostic Control register address of LM48100Q-Q1 chip on StereoAmp Click board.
  */
 void stereoamp_enable_diagnostic ( stereoamp_t *ctx );
 
@@ -348,7 +348,7 @@ void stereoamp_enable_diagnostic ( stereoamp_t *ctx );
  * @param ctx                       Click object.
  *
  * @description This function set the power On of both channels by write to the
- * Mode Control register address of LM48100Q-Q1 chip on StereoAmp click board.
+ * Mode Control register address of LM48100Q-Q1 chip on StereoAmp Click board.
  */
 void stereoamp_set_power_on ( stereoamp_t *ctx );
 
@@ -358,7 +358,7 @@ void stereoamp_set_power_on ( stereoamp_t *ctx );
  * @param ctx                       Click object.
  *
  * @description This function enable the fault of both channels by write to the
- * Fault Detection Control register address of LM48100Q-Q1 chip on StereoAmp click board.
+ * Fault Detection Control register address of LM48100Q-Q1 chip on StereoAmp Click board.
  */
 void stereoamp_enable_fault ( stereoamp_t *ctx );
 
@@ -368,7 +368,7 @@ void stereoamp_enable_fault ( stereoamp_t *ctx );
  * @param ctx                       Click object.
  *
  * @description This function check the fault of the left speaker
- * by get states of AN pin of StereoAmp click board.
+ * by get states of AN pin of StereoAmp Click board.
  */
 uint8_t stereoamp_check_fault_left ( stereoamp_t *ctx );
 
@@ -378,7 +378,7 @@ uint8_t stereoamp_check_fault_left ( stereoamp_t *ctx );
  * @param ctx                       Click object.
  *
  * @description This function check the fault of the right speaker
- * by get states of INT pin of StereoAmp click board.
+ * by get states of INT pin of StereoAmp Click board.
  */
 uint8_t stereoamp_check_fault_right ( stereoamp_t *ctx );
 
@@ -388,6 +388,6 @@ uint8_t stereoamp_check_fault_right ( stereoamp_t *ctx );
 #endif  // _STEREOAMP_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

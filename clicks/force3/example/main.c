@@ -3,7 +3,7 @@
  * \brief Force3 Click example
  * 
  * # Description
- * This application demonstrates the use of Force 3 click board.
+ * This application demonstrates the use of Force 3 Click board.
  *
  * The demo application is composed of two sections :
  * 

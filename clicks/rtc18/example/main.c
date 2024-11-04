@@ -3,13 +3,13 @@
  * @brief RTC18 Click example
  *
  * # Description
- * This example demonstrates the use of RTC 18 click board by reading and displaying
+ * This example demonstrates the use of RTC 18 Click board by reading and displaying
  * the time and date values as well as the temperature measurements in Celsius.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and logger and performs the click default configuration
+ * Initializes the driver and logger and performs the Click default configuration
  * which enables the periodic interrupt on seconds count-up, and sets the starting time and date.
  *
  * ## Application Task

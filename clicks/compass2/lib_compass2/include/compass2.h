@@ -233,7 +233,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * 
  * @note All used pins will be set to unconnected state.
  */
@@ -244,7 +244,7 @@ void compass2_cfg_setup ( compass2_cfg_t *cfg );
  * @param compass2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 COMPASS2_RETVAL compass2_init ( compass2_t *ctx, compass2_cfg_t *cfg );
 
@@ -253,7 +253,7 @@ COMPASS2_RETVAL compass2_init ( compass2_t *ctx, compass2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Compass 2 click.
+ * @description This function executes default configuration for Compass 2 Click.
  */
 void compass2_default_cfg ( compass2_t *ctx );
 
@@ -425,6 +425,6 @@ void compass2_new_measurement ( compass2_t *ctx );
 #endif  // _COMPASS2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -3,6 +3,6 @@
     "description": "RTC 21 Click is a compact add-on board that accurately keeps the time of the day. This board features the PT7C4311, an I2C-configurable real-time clock module with programmable square-wave output from Diodes Incorporated. The PT7C4311 includes time and calendar functions providing various information such as hour, minute, second, day, date, month, year, and century. It operates in a 24-hour format indicator, has automatic leap year compensation, and low power consumption, allowing it to be used with a single button cell battery for an extended period.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","PT7C4311WEX"],
+    "hw" : ["Click","PT7C4311WEX"],
     "category" : ["Click Boards > Clock & Timing > RTC"]
 }

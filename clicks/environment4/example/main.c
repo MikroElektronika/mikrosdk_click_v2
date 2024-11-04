@@ -3,7 +3,7 @@
  * @brief Environment 4 Click example
  *
  * # Description
- * This example demonstrates the use of Environment 4 click board by reading
+ * This example demonstrates the use of Environment 4 Click board by reading
  * the temperature and humidity data and calculating VOC and NOx indexes.
  * 
  * The demo application is composed of two sections :

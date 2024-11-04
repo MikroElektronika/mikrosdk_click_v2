@@ -3,6 +3,6 @@
     "description": "SolidSwitch 6 Click is a compact add-on board for reliable load management in automotive power distribution systems. This board features the VNF1048F, a high-side switch controller with intelligent e-fuse protection from STMicroelectronics. This board supports an input voltage range of 6V to 48V, controls external MOSFET, and offers essential protection features such as overcurrent, under-voltage, and thermal shutdown, with diagnostic feedback via SPI. It also includes an NTC resistor for monitoring MOSFET temperature and operates with either 3.3V or 5V logic levels.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","VNF1048FTR"],
+    "hw" : ["Click","VNF1048FTR"],
     "category" : ["Click Boards > Miscellaneous > Relay"]
 }

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# MUX 5 click
+# MUX 5 Click
 
 > MUX 5 Click is a compact add-on board that contains a precise multiplexing solution. This board features the MAX14661, a serially controlled, dual-channel analog multiplexer from Analog Devices, allowing any of the 16 pins to be connected to either common pin simultaneously in any combination. The MAX14661 features Beyond-the-Rails™ capability that allows ±5.5V signals to be passed with any supply configuration alongside a configurable host interface that supports SPI and I2C serial communications. Both modes provide individual control of each independent switch so that any combination of switches can be applied.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/mux5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/mux-5-click)
+[Click Product page](https://www.mikroe.com/mux-5-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t mux5_set_channels_state ( mux5_t *ctx, uint16_t ch_mask, uint8_t ch_state 
 
 ## Example Description
 
-> This example demonstrates the use of MUX 5 click board by mapping the common connection A and B to different channels every 5 seconds.
+> This example demonstrates the use of MUX 5 Click board by mapping the common connection A and B to different channels every 5 seconds.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -161,7 +161,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

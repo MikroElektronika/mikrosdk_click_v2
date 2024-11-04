@@ -1,8 +1,8 @@
 {
     "name": "ECG 5 Click",
-    "description": "ECG 5 click can be used for the development of ECG and Heart-Rate (HR) applications. The Click board™ features the AD8232, an integrated bio-signal front end. This IC has many features necessary for providing accurate ECG measurements, including very high common-mode rejection ratio, high gain with DC blocking capability, adjustable high-pass and low-pass filters, integrated right leg drive (RLD), etc.",
+    "description": "ECG 5 Click can be used for the development of ECG and Heart-Rate (HR) applications. The Click board™ features the AD8232, an integrated bio-signal front end. This IC has many features necessary for providing accurate ECG measurements, including very high common-mode rejection ratio, high gain with DC blocking capability, adjustable high-pass and low-pass filters, integrated right leg drive (RLD), etc.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","AD8232"],
+    "hw" : ["Click","AD8232"],
     "category" : ["Biometrics"]
 }

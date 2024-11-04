@@ -3,7 +3,7 @@
  * @brief GNSS Click Example.
  *
  * # Description
- * This example demonstrates the use of GNSS click by reading and displaying
+ * This example demonstrates the use of GNSS Click by reading and displaying
  * the GPS coordinates.
  *
  * The demo application is composed of two sections :

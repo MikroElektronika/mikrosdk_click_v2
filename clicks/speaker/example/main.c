@@ -3,9 +3,9 @@
  * @brief Speaker Click Example.
  *
  * # Description
- * This library contains API for the Speaker click driver.
+ * This library contains API for the Speaker Click driver.
  * This application controls the operating modes of the 
- * Speaker click board™.
+ * Speaker Click board™.
  *
  * The demo application is composed of two sections :
  *
@@ -14,7 +14,7 @@
  * After driver initialization, the application performs the default settings.
  *
  * ## Application Task
- * This is an example that shows the use of a Speaker click board™.
+ * This is an example that shows the use of a Speaker Click board™.
  * The task of the application consists of 
  * switching two modes of operation: normal and shutdown modes.
  * Results are being sent to the Usart Terminal where you can track their changes.

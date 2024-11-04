@@ -3,7 +3,7 @@
  * @brief Serializer Click example
  *
  * # Description
- * This example demonstrates the use of a Serializer click board by reading
+ * This example demonstrates the use of a Serializer Click board by reading
  * the state of all inputs and displaying the results on the USB UART.
  *
  * The demo application is composed of two sections :

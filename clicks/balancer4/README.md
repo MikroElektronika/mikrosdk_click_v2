@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Balancer 4 click
+# Balancer 4 Click
 
 > Balancer 4 Click is a compact add-on board optimized for overvoltage protection balancing the voltage of serially connected batteries. This board features the MP2672A, a highly integrated, flexible switch-mode battery charger for Lithium-Ion batteries with two cells in series from Monolithic Power Systems (MPS). The MP2672A has a narrow voltage DC (NVDC) power structure and monitors the voltage across each cell, equalizing the cell’s voltages if the difference between the two cells exceeds the mismatch threshold. It also has two selective operating modes with configurable output current up to 2A via register setting via I2C serial interface, alongside selectable MP2672A power supply, LED indication, and protection features allowing a reliable operation.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/balancer4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/balancer-4-click)
+[Click Product page](https://www.mikroe.com/balancer-4-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t balancer4_read_register ( balancer4_t *ctx, uint8_t reg, uint8_t *data_out
 
 ## Example Description
 
-> This example demonstrates the use of Balancer 4 click board by configuring the click board for charging and then reading the status and fault registers.
+> This example demonstrates the use of Balancer 4 Click board by configuring the Click board for charging and then reading the status and fault registers.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and configures the click board for charging.
+> Initializes the driver and configures the Click board for charging.
 
 ```c
 
@@ -228,7 +228,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -9,7 +9,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver, performs the click default configuration.
+ * Initializes the driver, performs the Click default configuration.
  *
  * ## Application Task
  * Recording sound for 5 seconds, then playing it back.

@@ -181,7 +181,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void boost_cfg_setup ( boost_cfg_t *cfg );
@@ -194,7 +194,7 @@ void boost_cfg_setup ( boost_cfg_t *cfg );
  * @return    0  - Ok,
  *          (-1) - Error.
  *
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t boost_init ( boost_t *ctx, boost_cfg_t *cfg );
 
@@ -222,7 +222,7 @@ void boost_device_disable ( boost_t *ctx );
  * @param ctx  Click object.
  * @param cfg  DAC configuration structure.
  *
- * @description This function performs the setup of the DAC converter of the Boost click.
+ * @description This function performs the setup of the DAC converter of the Boost Click.
  */
 void boost_dac_setup ( boost_t *ctx, boost_dac_cfg_t *cfg );
 
@@ -255,6 +255,6 @@ float boost_vout_read ( boost_t *ctx );
 #endif  // BOOST_H
 
 /** \} */ // End public_function group
-/** \} */ // End click Driver group
+/** \} */ // End Click Driver group
 
 // ------------------------------------------------------------------------ END

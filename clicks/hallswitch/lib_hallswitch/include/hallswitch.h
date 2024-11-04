@@ -132,7 +132,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void hallswitch_cfg_setup ( hallswitch_cfg_t *cfg );
@@ -144,7 +144,7 @@ void hallswitch_cfg_setup ( hallswitch_cfg_t *cfg );
  *
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 HALLSWITCH_RETVAL hallswitch_init ( hallswitch_t *ctx, hallswitch_cfg_t *cfg );
 
@@ -172,6 +172,6 @@ void hallswitch_set_spole ( hallswitch_t *ctx, uint8_t state );
 #endif  // _HALLSWITCH_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

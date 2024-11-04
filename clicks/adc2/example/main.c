@@ -11,7 +11,7 @@
  * Initalizes SPI driver and makes an initial log.
  * 
  * ## Application Task  
- * This is an example that shows the capabilities of the ADC 2 click
+ * This is an example that shows the capabilities of the ADC 2 Click
  * 
  * 
  * \author MikroE Team

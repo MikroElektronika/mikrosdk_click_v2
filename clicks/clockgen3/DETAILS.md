@@ -1,6 +1,6 @@
 
 ---
-# Clock Gen 3 click
+# Clock Gen 3 Click
 
 Clock Gen 3 Click features a low power self-contained digital frequency source providing a precision frequency from 1kHz to 68MHz, set through a serial port.
 
@@ -9,7 +9,7 @@ Clock Gen 3 Click features a low power self-contained digital frequency source p
 </p>
 
 
-[click Product page](https://www.mikroe.com/clock-gen-3-click)
+[Click Product page](https://www.mikroe.com/clock-gen-3-click)
 
 ---
 
@@ -65,13 +65,13 @@ void clockgen3_set_freq ( clockgen3_t *ctx, float freq );
 
 ## Examples Description
 
-> This example demonstrates the use of Clock Gen 3 click board.
+> This example demonstrates the use of Clock Gen 3 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes the driver and configures the click board.
+> Initializes the driver and configures the Click board.
 
 ```c
 
@@ -159,7 +159,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https:///shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https:///shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https:///shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https:///shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

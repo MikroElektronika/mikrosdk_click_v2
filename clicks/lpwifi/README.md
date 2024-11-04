@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LP WiFi click
+# LP WiFi Click
 
 LP WiFi Click is a compact add-on board that represents an ultra-low-power Wi-Fi solution. This board features the DA16200, a fully integrated Wi-Fi module with ultra-low power consumption, best RF performance, and a comfortable development environment from Dialog Semiconductor.
 
@@ -9,7 +9,7 @@ LP WiFi Click is a compact add-on board that represents an ultra-low-power Wi-Fi
   <img src="https://download.mikroe.com/images/click_for_ide/lpwifi_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lp-wifi-click)
+[Click Product page](https://www.mikroe.com/lp-wifi-click)
 
 ---
 
@@ -212,7 +212,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

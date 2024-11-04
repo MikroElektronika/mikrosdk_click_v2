@@ -163,7 +163,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void audioamp_cfg_setup ( audioamp_cfg_t *cfg );
@@ -176,31 +176,31 @@ void audioamp_cfg_setup ( audioamp_cfg_t *cfg );
  * @return    0  - Ok,
  *          (-1) - Error.
  *
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t audioamp_init ( audioamp_t *ctx, audioamp_cfg_t *cfg );
 
 /**
- * @brief Turn on the Audio Amp click function.
+ * @brief Turn on the Audio Amp Click function.
  *
  * @param ctx  Click object.
  * @return    0  - Ok,
  *          (-1) - Error.
  *
- * @description Function turns on the Audio Amp click
+ * @description Function turns on the Audio Amp Click
  * by setting POWER_ON and set INPUT_2 and INPUT_1 bits
  * to MODE CONTROL register of LM48100Q-Q1 chip.
  */
 err_t audioamp_power_on ( audioamp_t *ctx );
 
 /**
- * @brief Turn off the Audio Amp click function.
+ * @brief Turn off the Audio Amp Click function.
  *
  * @param ctx  Click object.
  * @return    0  - Ok,
  *          (-1) - Error.
  *
- * @description Function turns off the Audio Amp click
+ * @description Function turns off the Audio Amp Click
  * by setting POWER_OFF bit to MODE CONTROL register of LM48100Q-Q1 chip.
  */
 err_t audioamp_power_off ( audioamp_t *ctx );
@@ -309,6 +309,6 @@ uint8_t audioamp_check_fault ( audioamp_t *ctx );
 #endif  // AUDIOAMP_H
 
 /** \} */ // End public_function group
-/** \} */ // End click Driver group
+/** \} */ // End Click Driver group
 
 // ------------------------------------------------------------------------ END

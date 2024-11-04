@@ -3,13 +3,13 @@
  * @brief AMR Angle 2 Click example
  *
  * # Description
- * This example demonstrates the use of AMR Angle 2 click board by reading and displaying
+ * This example demonstrates the use of AMR Angle 2 Click board by reading and displaying
  * the magnet's angular position in Degrees and a system temperature in Celsius.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads the magnet's angular position in degrees and a system temperature in Celsius 

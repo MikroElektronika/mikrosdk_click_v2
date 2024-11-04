@@ -1,14 +1,14 @@
 
 ---
-# Stepper 13 click
+# Stepper 13 Click
 
-> Stepper 13 Click is a bipolar step motor driver. It features an H-bridge bipolar step motor driver, which supports full-, half-, quarter-, or eighth-step modes. Stepper 13 click also carries a port expander so that the communication can be done with a minimal number of pins, through the mikroBUS™ I2C bus.
+> Stepper 13 Click is a bipolar step motor driver. It features an H-bridge bipolar step motor driver, which supports full-, half-, quarter-, or eighth-step modes. Stepper 13 Click also carries a port expander so that the communication can be done with a minimal number of pins, through the mikroBUS™ I2C bus.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/stepper13_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/stepper-13-click)
+[Click Product page](https://www.mikroe.com/stepper-13-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t stepper13_drive_motor ( stepper13_t *ctx, uint32_t steps, uint8_t speed );
 
 ## Example Description
 
-> This example demonstrates the use of the Stepper 13 click board by driving the motor in both directions for a desired number of steps.
+> This example demonstrates the use of the Stepper 13 Click board by driving the motor in both directions for a desired number of steps.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -160,7 +160,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

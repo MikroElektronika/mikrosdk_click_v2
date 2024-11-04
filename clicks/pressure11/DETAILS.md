@@ -1,6 +1,6 @@
  
 ---
-# Pressure 11 click
+# Pressure 11 Click
 
 Pressure 11 Click is a digital barometer on a Click board™. Pressure 11 is equipped with the LPS33HW, an absolute piezoresistive pressure sensor, manufactured using a proprietary technology. 
 
@@ -8,7 +8,7 @@ Pressure 11 Click is a digital barometer on a Click board™. Pressure 11 is equ
   <img src="https://download.mikroe.com/images/click_for_ide/pressure11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pressure-11-click)
+[Click Product page](https://www.mikroe.com/pressure-11-click)
 
 
 #### Click library 
@@ -124,7 +124,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

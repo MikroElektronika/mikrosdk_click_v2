@@ -4,19 +4,19 @@
  * 
  * # Description
  * This example connects to the desired WiFi network and then
- * creates web server on the IP address assigned to the click board.
+ * creates web server on the IP address assigned to the Click board.
  * The user can connect to the server via web browser.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
  * Initializes driver and wifi communication, then connects to the desired WiFi network
- * and creates web server on the IP address assigned to the click board.
+ * and creates web server on the IP address assigned to the Click board.
  * 
  * ## Application Task  
  * Waits for the client request (paste IP address in your web browser and 
  * refresh to send a request).
- * The click board will respond by sending a page content to the client.
+ * The Click board will respond by sending a page content to the client.
  * 
  * \author MikroE Team
  *
@@ -37,7 +37,7 @@
 // ------------------------------------------------------------------ VARIABLES
 
 uint8_t page[ ] = "<a href=\"https://www.mikroe.com/\">MikroElektronika</a>\
-<h1 style=\"color:red;\">WiFi ESP click board</h1>";
+<h1 style=\"color:red;\">WiFi ESP Click board</h1>";
 uint8_t page_len[ 10 ] = { 0 };
 uint8_t send_buf[ 10 ] = { 0 };
 static uint8_t link_id[ 2 ] = { 0 };

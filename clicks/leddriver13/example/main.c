@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and executes the click default configuration which
+ * Initializes the driver and executes the Click default configuration which
  * starts the PWM module and sets the LEDs current to minimum.
  *
  * ## Application Task

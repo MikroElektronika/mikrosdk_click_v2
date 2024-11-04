@@ -237,7 +237,7 @@ typedef enum
 
 /**
  * @brief BLE 12 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #ble12_cfg_t object definition for detailed explanation.
@@ -249,7 +249,7 @@ void ble12_cfg_setup ( ble12_cfg_t *cfg );
 /**
  * @brief BLE 12 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #ble12_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -265,7 +265,7 @@ err_t ble12_init ( ble12_t *ctx, ble12_cfg_t *cfg );
 /**
  * @brief BLE 12 default configuration function.
  * @details This function executes a default configuration of BLE 12
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #ble12_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -310,7 +310,7 @@ err_t ble12_generic_read ( ble12_t *ctx, char *data_buf, uint16_t max_len );
 /**
  * @brief BLE 12 wake up the device function.
  * @details This function performs the wake-up UART interface 
- * of the BM832A Bluetooth 5 Module on the BLE 12 click board™.
+ * of the BM832A Bluetooth 5 Module on the BLE 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #ble12_t object definition for detailed explanation.
  * @return @li @c  0 - Success.
@@ -322,7 +322,7 @@ err_t ble12_wake_up_device ( ble12_t *ctx );
 /**
  * @brief BLE 12 sends the command function.
  * @details This function sends the desired command by using UART serial interface
- * of the BM832A Bluetooth 5 Module on the BLE 12 click board™.
+ * of the BM832A Bluetooth 5 Module on the BLE 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #ble12_t object definition for detailed explanation.
  * @param[in] cmd : Desired command.
@@ -338,7 +338,7 @@ err_t ble12_send_cmd ( ble12_t *ctx, char *cmd );
  * @brief BLE 12 send data function.
  * @details This function send the desired data to the paired device
  * by using UART serial interface
- * of the BM832A Bluetooth 5 Module on the BLE 12 click board™.
+ * of the BM832A Bluetooth 5 Module on the BLE 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #ble12_t object definition for detailed explanation.
  * @param[in] tx_data : Data for sending.
@@ -354,7 +354,7 @@ err_t ble12_send_data ( ble12_t *ctx, char *tx_data );
  * @brief BLE 12 LED initialization function.
  * @details This function initialization for LED control
  * by using UART serial interface
- * of the BM832A Bluetooth 5 Module on the BLE 12 click board™.
+ * of the BM832A Bluetooth 5 Module on the BLE 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #ble12_t object definition for detailed explanation.
  * @return @li @c  >=0 - Success,
@@ -369,7 +369,7 @@ err_t ble12_init_led ( ble12_t *ctx );
  * @brief BLE 12 set LED state function.
  * @details This function controls the LEDs 
  * by using UART serial interface
- * of the BM832A Bluetooth 5 Module on the BLE 12 click board™.
+ * of the BM832A Bluetooth 5 Module on the BLE 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #ble12_t object definition for detailed explanation.
  * @param[in] led : select LED
@@ -390,7 +390,7 @@ err_t ble12_set_led_state ( ble12_t *ctx, uint8_t led, uint8_t state );
  * @brief BLE 12 reset function.
  * @details This function software reset the device
  * by using UART serial interface
- * of the BM832A Bluetooth 5 Module on the BLE 12 click board™.
+ * of the BM832A Bluetooth 5 Module on the BLE 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #ble12_t object definition for detailed explanation.
  * @return @li @c  >=0 - Success,
@@ -405,7 +405,7 @@ err_t ble12_reset ( ble12_t *ctx );
  * @brief BLE 12 get version function.
  * @details This function get module version
  * by using UART serial interface
- * of the BM832A Bluetooth 5 Module on the BLE 12 click board™.
+ * of the BM832A Bluetooth 5 Module on the BLE 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #ble12_t object definition for detailed explanation.
  * @return @li @c  >=0 - Success,
@@ -420,7 +420,7 @@ err_t ble12_get_version ( ble12_t *ctx );
  * @brief BLE 12 set device name function.
  * @details This function sets the device name
  * by using UART serial interface
- * of the BM832A Bluetooth 5 Module on the BLE 12 click board™.
+ * of the BM832A Bluetooth 5 Module on the BLE 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #ble12_t object definition for detailed explanation.
  * @param[in] device_name : Device name.
@@ -436,7 +436,7 @@ err_t ble12_set_device_name ( ble12_t *ctx, uint8_t *device_name );
  * @brief BLE 12 save config function.
  * @details This function performs the configuration save procedure
  * by using UART serial interface
- * of the BM832A Bluetooth 5 Module on the BLE 12 click board™.
+ * of the BM832A Bluetooth 5 Module on the BLE 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #ble12_t object definition for detailed explanation.
  * @return @li @c  >=0 - Success,
@@ -451,7 +451,7 @@ err_t ble12_save_config ( ble12_t *ctx );
  * @brief BLE 12 set adv interval function.
  * @details This function sets the advertising interval
  * by using UART serial interface
- * of the BM832A Bluetooth 5 Module on the BLE 12 click board™.
+ * of the BM832A Bluetooth 5 Module on the BLE 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #ble12_t object definition for detailed explanation.
  * @param[in] adv_interval : Advertising interval time ( ms ).
@@ -467,7 +467,7 @@ err_t ble12_set_adv_interval ( ble12_t *ctx, uint8_t *adv_interval );
  * @brief BLE 12 disconnect function.
  * @details This function disconnects all paired devices
  * by using UART serial interface
- * of the BM832A Bluetooth 5 Module on the BLE 12 click board™.
+ * of the BM832A Bluetooth 5 Module on the BLE 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #ble12_t object definition for detailed explanation.
  * @return @li @c  >=0 - Success,
@@ -482,7 +482,7 @@ err_t ble12_disconnect ( ble12_t *ctx  );
  * @brief BLE 12 set default function.
  * @details This function sets the default module configuration
  * by using UART serial interface
- * of the BM832A Bluetooth 5 Module on the BLE 12 click board™.
+ * of the BM832A Bluetooth 5 Module on the BLE 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #ble12_t object definition for detailed explanation.
  * @return @li @c  >=0 - Success,
@@ -497,7 +497,7 @@ err_t ble12_set_default ( ble12_t *ctx );
  * @brief BLE 12 set operating mode function.
  * @details This function sets the operating mode
  * by using UART serial interface
- * of the BM832A Bluetooth 5 Module on the BLE 12 click board™.
+ * of the BM832A Bluetooth 5 Module on the BLE 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #ble12_t object definition for detailed explanation.
  * @param[in] op_mode : Operating mode.
@@ -513,7 +513,7 @@ err_t ble12_set_op_mode ( ble12_t *ctx, uint8_t op_mode );
  * @brief BLE 12 event start-up function.
  * @details This function event start-up for the control LED
  * by using UART serial interface
- * of the BM832A Bluetooth 5 Module on the BLE 12 click board™.
+ * of the BM832A Bluetooth 5 Module on the BLE 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #ble12_t object definition for detailed explanation.
  * @return @li @c  >=0 - Success,

@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# Load Cell 2 click
+# Load Cell 2 Click
 
-Load cell 2 Click is a weight measurement click which utilizes a load cell element, in order to precisely measure the weight of an object. The Load Cell 2 Click can be used with the strain gauge type of load cells with external differential reference voltage range from 0.1V to 5V. 
+Load cell 2 Click is a weight measurement Click which utilizes a load cell element, in order to precisely measure the weight of an object. The Load Cell 2 Click can be used with the strain gauge type of load cells with external differential reference voltage range from 0.1V to 5V. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/loadcell2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/load-cell-2-click)
+[Click Product page](https://www.mikroe.com/load-cell-2-click)
 
 ---
 
@@ -60,7 +60,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ## Examples Description
 
 > 
-> Load Cell 2 click is a weight measurement click 
+> Load Cell 2 Click is a weight measurement Click 
 > which utilizes a load cell element, 
 > in order to precisely measure the weight of an object.
 > 
@@ -102,7 +102,7 @@ void application_init ( void )
     loadcell2_init( &loadcell2, &cfg );
     
     log_printf( &logger, "-------------------------\r\n");
-    log_printf( &logger, "     Load cell click     \r\n");
+    log_printf( &logger, "     Load cell Click     \r\n");
     log_printf( &logger, "-------------------------\r\n");
     Delay_ms ( 100 );
     
@@ -249,7 +249,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -1,6 +1,6 @@
 
 ---
-# EEPROM 12 click
+# EEPROM 12 Click
 
 > EEPROM 12 Click is a compact add-on board that contains a highly reliable, nonvolatile memory solution. This board features the M24256E, an EEPROM from STMicroelectronics. It is a 256Kbit (32KB) EEPROM with a page size of 64 bytes and an additional identification page with the same size. This identification page can be read or written and (later) permanently locked in read-only mode and can be used to store sensitive application parameters.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/eeprom12_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/eeprom-12-click)
+[Click Product page](https://www.mikroe.com/eeprom-12-click)
 
 ---
 
@@ -59,7 +59,7 @@ err_t eeprom12_memory_read ( eeprom12_t *ctx, uint16_t mem_addr, uint8_t *data_o
 
 ## Example Description
 
-> This example demonstrates the use of EEPROM 12 click board™.
+> This example demonstrates the use of EEPROM 12 Click board™.
 > The demo app writes specified data to the memory and reads it back.
 
 **The demo application is composed of two sections :**
@@ -170,7 +170,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# GNSS 14 click
+# GNSS 14 Click
 
 > GNSS 14 Click is a compact add-on board that provides fast positioning capability to your application. This board features the MIA-M10Q, a standard precision GNSS module from u-blox. It has an exceptional sensitivity and acquisition time for all L1 GNSS signals, attributed to its integrated M10 standard precision low-power platform. The M10 platform supports concurrent reception of four GNSS (GPS, GLONASS, Galileo, and BeiDou). The high number of visible satellites enables the receiver to select the best signals. This maximizes position availability, particularly under challenging conditions like deep urban canyons.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/gnss14_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gnss-14-click)
+[Click Product page](https://www.mikroe.com/gnss-14-click)
 
 ---
 
@@ -60,14 +60,14 @@ void gnss14_reset_device ( gnss14_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of GNSS 14 click board by reading and displaying
+> This example demonstrates the use of GNSS 14 Click board by reading and displaying
 > the GNSS coordinates.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and resets the click board.
+> Initializes the driver and resets the Click board.
 
 ```c
 void application_init ( void ) 
@@ -131,7 +131,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

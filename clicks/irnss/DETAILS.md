@@ -1,7 +1,7 @@
 
 ---
 
-# IRNSS click
+# IRNSS Click
 
 > IRNSS Click is a compact add-on board that provides fast positioning capability. This board features the L89H, a high-performance IRNSS-enabled GNSS module capable of acquiring and tracking GPS, IRNSS, GLONASS, BeiDou, Galileo, and QZSS signals from Quectel Wireless Solutions.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/irnss_click.png">
 </p>
 
-[click Product page](https://www.mikroe.com/irnss-click)
+[Click Product page](https://www.mikroe.com/irnss-click)
 
 ---
 
@@ -65,13 +65,13 @@ err_t irnss_parse_gngga ( char *rsp_buf, uint8_t gngga_element, char *element_da
 
 ## Example Description
 
-> This example demonstrates the use of IRNSS click by reading and displaying the GPS coordinates.
+> This example demonstrates the use of IRNSS Click by reading and displaying the GPS coordinates.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and resets the click board.
+> Initializes the driver and resets the Click board.
 
 ```c
 
@@ -131,7 +131,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

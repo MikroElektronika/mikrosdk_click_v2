@@ -200,7 +200,7 @@ typedef enum
 
 /**
  * @brief 3G-EA configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #c3gea_cfg_t object definition for detailed explanation.
@@ -212,7 +212,7 @@ void c3gea_cfg_setup ( c3gea_cfg_t *cfg );
 /**
  * @brief 3G-EA initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #c3gea_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -306,7 +306,7 @@ uint8_t c3gea_get_ring_pin ( c3gea_t *ctx );
 
 /**
  * @brief Send command function.
- * @details This function sends a specified command to the click module.
+ * @details This function sends a specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #c3gea_t object definition for detailed explanation.
  * @param[in] cmd : Command variable.
@@ -317,7 +317,7 @@ void c3gea_send_cmd ( c3gea_t *ctx, uint8_t *cmd );
 
 /**
  * @brief Send command function with parameter.
- * @details This function sends a command with specified parameter to the click module.
+ * @details This function sends a command with specified parameter to the Click module.
  * @param[in] ctx : Click context object.
  * See #c3gea_t object definition for detailed explanation.
  * @param[in] at_cmd_buf : Command buffer.

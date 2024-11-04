@@ -3,6 +3,6 @@
     "description": "NB IoT 4 Click is a compact add-on board that contains a cellular IoT-based module with integrated eSIM for global data connectivity. This board features the C1-RM, a three-band NB-IoT, IoT/2G wireless communication module supporting Band 3, 5, and 8 mainly applied to low power data transmission service from Cavli Wireless.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","C1RM"],
+    "hw" : ["Click","C1RM"],
     "category" : ["Click Boards > Wireless connectivity > GSM/LTE"]
 }

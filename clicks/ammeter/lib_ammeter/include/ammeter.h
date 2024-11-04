@@ -147,7 +147,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void ammeter_cfg_setup ( ammeter_cfg_t *cfg );
@@ -158,7 +158,7 @@ void ammeter_cfg_setup ( ammeter_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 AMMETER_RETVAL ammeter_init ( ammeter_t *ctx, ammeter_cfg_t *cfg );
 
@@ -205,8 +205,8 @@ float ammeter_get_avg_data ( ammeter_t *ctx );
  * @returns result 12-bit value that represents amperage.
  *
  * Function is used to measure amperage of a power consumer connected 
- * to the click board.
- * @note Ammeter click board can be used to saftly measure current up to 1A.
+ * to the Click board.
+ * @note Ammeter Click board can be used to saftly measure current up to 1A.
 **/
 float ammeter_amperage ( ammeter_t *ctx );
 
@@ -216,6 +216,6 @@ float ammeter_amperage ( ammeter_t *ctx );
 #endif  // _AMMETER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

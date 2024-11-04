@@ -1,8 +1,8 @@
 {
     "name": "ROTARY B Click",
-    "description": "Rotary B click carries a 15-pulse incremental rotary encoder with detents, surrounded by a ring of 16 blue LEDs. It’s a perfect solution for adding a precision input knob to your design. The encoder outputs A and B signals (out of phase to each other); the knob also acts as a push-button which sends an interrupt to the target board MCU. The LED ring is controlled through SPI lines (CS, SCK, MISO, MOSI). Rotary click™ can be used with either a 3.3V or 5V power supply.",
+    "description": "Rotary B Click carries a 15-pulse incremental rotary encoder with detents, surrounded by a ring of 16 blue LEDs. It’s a perfect solution for adding a precision input knob to your design. The encoder outputs A and B signals (out of phase to each other); the knob also acts as a push-button which sends an interrupt to the target board MCU. The LED ring is controlled through SPI lines (CS, SCK, MISO, MOSI). Rotary Click™ can be used with either a 3.3V or 5V power supply.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","74HC595"],
+    "hw" : ["Click","74HC595"],
     "category" : ["Rotary encoder"]
 }

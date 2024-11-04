@@ -3,7 +3,7 @@
  * @brief Thermostat 2 Click Example.
  *
  * # Description
- * This example demonstrates the use of Thermostat 2 click board by reading
+ * This example demonstrates the use of Thermostat 2 Click board by reading
  * and displaying the temperature in Celsius and turning the relay on/off 
  * depending on the temperature value.
  * DS1820, DS18S20 and DS18B20 chips can be used in this example. 
@@ -11,10 +11,10 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
- * Reads and displays the temperature measured by the click board on the UART Terminal.
+ * Reads and displays the temperature measured by the Click board on the UART Terminal.
  * If the temperature goes beneath the THERMOSTAT2_TEMPERATURE_LIMIT, 
  * the relay will be turned off while otherwise it will be turned on. 
  * In both cases an appropriate message will be displayed on the terminal. 

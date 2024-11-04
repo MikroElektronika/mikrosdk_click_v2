@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# FAN 8 click
+# FAN 8 Click
 
 > Fan 8 Click is a compact add-on board that represents a compliant fan controller. This board features the MAX6615, a fan-speed controller, and a dual-channel temperature monitor with external thermistor inputs from Maxim Integrated, now part of Analog Devices. The MAX6615 controls the speed of two cooling fans based on the temperatures of external thermistors and the device's internal temperature, reporting temperature values in a digital form using the I2C serial interface.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/fan8_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/fan-8-click)
+[Click Product page](https://www.mikroe.com/fan-8-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t fan8_read_temperature ( fan8_t *ctx, uint8_t temp_ch, float *temperature )
 
 ## Example Description
 
-> This example demonstrates the use of FAN 8 click board.
+> This example demonstrates the use of FAN 8 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -192,7 +192,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -332,7 +332,7 @@ typedef enum
 
 /**
  * @brief Color 11 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #color11_cfg_t object definition for detailed explanation.
@@ -344,7 +344,7 @@ void color11_cfg_setup ( color11_cfg_t *cfg );
 /**
  * @brief Color 11 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #color11_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -359,7 +359,7 @@ err_t color11_init ( color11_t *ctx, color11_cfg_t *cfg );
 /**
  * @brief Color 11 default configuration function.
  * @details This function executes a default configuration of Color 11
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #color11_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

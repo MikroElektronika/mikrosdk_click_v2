@@ -3,7 +3,7 @@
  * @brief FTDI Click Example.
  *
  * # Description
- * This example demonstrates the use of FTDI click by echoing back all the received messages.
+ * This example demonstrates the use of FTDI Click by echoing back all the received messages.
  *
  * The demo application is composed of two sections :
  *
@@ -12,7 +12,7 @@
  *
  * ## Application Task
  * Any data which the host PC sends to the Virtual COM Port (for example, typed into the terminal 
- * window in UART Terminal) will be sent over USB to the click board and then it will be read and 
+ * window in UART Terminal) will be sent over USB to the Click board and then it will be read and 
  * echoed back by the MCU to the PC where the terminal program will display it. The data will also
  * be displayed on the USB UART.
  *

@@ -164,7 +164,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to
+ * @description This function initializes Click configuration structure to
  * initial state.
  * @note All used pins will be set to unconnected state.
  *       Reference voltage will be set to 3V3 by default.
@@ -181,7 +181,7 @@ void adc_cfg_setup( adc_cfg_t *cfg );
  *          0xFF - Driver init error.
  *
  * @description This function initializes all necessary pins and peripherals
- * used for this click.
+ * used for this Click.
  */
 ADC_RETVAL adc_init( adc_t *ctx, adc_cfg_t *cfg );
 

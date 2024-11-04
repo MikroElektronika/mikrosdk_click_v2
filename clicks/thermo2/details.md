@@ -1,14 +1,14 @@
 
 ---
-# Thermo 2 click
+# Thermo 2 Click
 
-> THERMO 2 click carries DS1825, a programmable resolution digital thermometer IC with a unique 64-bit address. The click is designed to run on a 3.3V power supply. The board communicates with the target microcontroller through a 1-wire interface. Using the onboard jumper you can select between two outputs: GP1 (default mikroBUS™ AN pin), and GPO (default PWM pin).
+> THERMO 2 Click carries DS1825, a programmable resolution digital thermometer IC with a unique 64-bit address. The Click is designed to run on a 3.3V power supply. The board communicates with the target microcontroller through a 1-wire interface. Using the onboard jumper you can select between two outputs: GP1 (default mikroBUS™ AN pin), and GPO (default PWM pin).
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/thermo2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/thermo-2-click)
+[Click Product page](https://www.mikroe.com/thermo-2-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t thermo2_read_temperature ( thermo2_t *ctx, float *temperature );
 
 ## Example Description
 
-> This example demonstrates the use of Thermo 2 click board by reading and displaying the temperature in Celsius.
+> This example demonstrates the use of Thermo 2 Click board by reading and displaying the temperature in Celsius.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -119,7 +119,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads and displays the temperature measured by the click board on the USB UART
+> Reads and displays the temperature measured by the Click board on the USB UART
 approximately every 800ms as this matches the required conversion time for 12-bit temperature resolution.
 
 ```c
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "NO2 click",
+    "display_name": "NO2 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.no2",
     "product_link": "https://www.mikroe.com/no2-click",
-    "short_description": "NO2 click is a very accurate nitrogen-dioxide gas sensor Click board™, equipped with the SPEC amperometric gas sensor which electrochemically reacts with the nitrogen-dioxide (NO2).",
+    "short_description": "NO2 Click is a very accurate nitrogen-dioxide gas sensor Click board™, equipped with the SPEC amperometric gas sensor which electrochemically reacts with the nitrogen-dioxide (NO2).",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2484
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.No2",
     "subdir_name": "lib_no2"
 }
+
 
 
 

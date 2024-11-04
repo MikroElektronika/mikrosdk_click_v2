@@ -250,7 +250,7 @@ typedef enum
 
 /**
  * @brief pH 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #ph2_cfg_t object definition for detailed explanation.
@@ -262,7 +262,7 @@ void ph2_cfg_setup ( ph2_cfg_t *cfg );
 /**
  * @brief pH 2 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #ph2_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -278,7 +278,7 @@ void ph2_drv_interface_selection ( ph2_cfg_t *cfg, ph2_drv_t drv_sel );
 /**
  * @brief pH 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #ph2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -318,7 +318,7 @@ err_t ph2_read_voltage ( ph2_t *ctx, float *voltage );
 
 /**
  * @brief pH 2 set vref function.
- * @details This function sets the voltage reference for pH 2 click driver.
+ * @details This function sets the voltage reference for pH 2 Click driver.
  * @param[in] ctx : Click context object.
  * See #ph2_t object definition for detailed explanation.
  * @param[in] vref : Reference voltage (volts).
@@ -331,7 +331,7 @@ err_t ph2_set_vref ( ph2_t *ctx, float vref );
 
 /**
  * @brief Ph 2 calibrate function.
- * @details This function is performing calibration of Ph 2 click driver 
+ * @details This function is performing calibration of Ph 2 Click driver 
  * with known pH value substance.
  * @param[in] ctx : Click context object.
  * See #ph2_t object definition for detailed explanation.
@@ -359,7 +359,7 @@ err_t ph2_calculate_ph ( ph2_t *ctx, float *pH_value );
 
 /**
  * @brief Ph 2 calibrate offset function.
- * @details This function is used to calibrate offset of Ph 2 click driver.
+ * @details This function is used to calibrate offset of Ph 2 Click driver.
  * @param[in] ctx : Click context object.
  * See #ph2_t object definition for detailed explanation.
  * @return Nothing.
@@ -373,7 +373,7 @@ void ph2_calibrate_offset ( ph2_t *ctx );
 
 /**
  * @brief Ph 2 enable LED STAT1 function.
- * @details This function is used turn on STAT1 LED of Ph 2 click driver.
+ * @details This function is used turn on STAT1 LED of Ph 2 Click driver.
  * @param[in] ctx : Click context object.
  * See #ph2_t object definition for detailed explanation.
  * @return Nothing.
@@ -383,7 +383,7 @@ void ph2_enable_st1 ( ph2_t *ctx );
 
 /**
  * @brief Ph 2 disable LED STAT1 function.
- * @details This function is used turn off STAT1 LED of Ph 2 click driver.
+ * @details This function is used turn off STAT1 LED of Ph 2 Click driver.
  * @param[in] ctx : Click context object.
  * See #ph2_t object definition for detailed explanation.
  * @return Nothing.
@@ -393,7 +393,7 @@ void ph2_disable_st1 ( ph2_t *ctx );
 
 /**
  * @brief Ph 2 enable LED STAT2 function.
- * @details This function is used turn on STAT2 LED of Ph 2 click driver.
+ * @details This function is used turn on STAT2 LED of Ph 2 Click driver.
  * @param[in] ctx : Click context object.
  * See #ph2_t object definition for detailed explanation.
  * @return Nothing.
@@ -403,7 +403,7 @@ void ph2_enable_st2 ( ph2_t *ctx );
 
 /**
  * @brief Ph 2 disable LED STAT2 function.
- * @details This function is used turn off STAT2 LED of Ph 2 click driver.
+ * @details This function is used turn off STAT2 LED of Ph 2 Click driver.
  * @param[in] ctx : Click context object.
  * See #ph2_t object definition for detailed explanation.
  * @return Nothing.

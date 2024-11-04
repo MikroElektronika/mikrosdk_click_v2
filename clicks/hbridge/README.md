@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# H-Bridge click
+# H-Bridge Click
 
-> H-Bridge click is a high-efficiency dual H-bridge driver Click board™, capable of providing reasonably high current while driving the connected load with up to 7V. Since the used driver IC has two full H-bridge channels, this Click board™ is an ideal solution for driving smaller bipolar stepper motors. H-Bridge click provides driving in both directions, with an addition of the brake mode, and the high impedance mode (Hi-Z). Overshoot current suppression algorithm protects the output stages from being damaged if both high-side and low-side MOSFETs on a single H-bridge channel become conductive.
+> H-Bridge Click is a high-efficiency dual H-bridge driver Click board™, capable of providing reasonably high current while driving the connected load with up to 7V. Since the used driver IC has two full H-bridge channels, this Click board™ is an ideal solution for driving smaller bipolar stepper motors. H-Bridge Click provides driving in both directions, with an addition of the brake mode, and the high impedance mode (Hi-Z). Overshoot current suppression algorithm protects the output stages from being damaged if both high-side and low-side MOSFETs on a single H-bridge channel become conductive.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/hbridge_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/h-bridge-click)
+[Click Product page](https://www.mikroe.com/h-bridge-click)
 
 ---
 
@@ -65,7 +65,7 @@ void hbridge_drive_motor ( hbridge_t *ctx, uint32_t steps, uint8_t speed );
 
 ## Example Description
 
-> This example demonstrates the use of the H-Bridge click board by driving the motor in both directions for a desired number of steps.
+> This example demonstrates the use of the H-Bridge Click board by driving the motor in both directions for a desired number of steps.
 
 **The demo application is composed of two sections :**
 
@@ -143,7 +143,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

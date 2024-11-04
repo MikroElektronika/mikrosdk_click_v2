@@ -149,7 +149,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void big7seg_cfg_setup ( big7seg_cfg_t *cfg );
@@ -159,7 +159,7 @@ void big7seg_cfg_setup ( big7seg_cfg_t *cfg );
  * @param big7seg Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 BIG7SEG_RETVAL big7seg_init ( big7seg_t *ctx, big7seg_cfg_t *cfg );
 
@@ -255,6 +255,6 @@ void big7seg_write_data_character ( big7seg_t *ctx, char display_char );
 #endif  // _BIG7SEG_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -1,6 +1,6 @@
 
 ---
-# Light 3 click
+# Light 3 Click
 
 > Light 3 Click is a compact add-on board for precise ambient light measurement in automotive applications. This board features the OPT4003-Q1, an automotive-grade digital ambient light sensor from Texas Instruments. This digital ambient light sensor excels in detecting both visible and near-infrared light with high accuracy, thanks to its dual-channel functionality and filters that mimic the human eye's response while efficiently segregating NIR light.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/light3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/light-3-click)
+[Click Product page](https://www.mikroe.com/light-3-click)
 
 ---
 
@@ -75,7 +75,7 @@ err_t light3_get_ch0_data ( light3_t *ctx, float *lux );
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

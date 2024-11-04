@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# Stepper 4 click
+# Stepper 4 Click
 
-> Stepper 4 click is a very versatile bipolar stepping motor driver. It features TB67S269FTG IC, fabricated with the BiCD process, allowing the Click board™ to handle significant voltage and current levels up to 35V and 1.2A. This IC has the integrated translator section, used to simplify the control: using simple step control inputs from the host MCU, the stepper motor can be driven in both directions, with the predetermined step sizes from the full step, up to 1/32 step.
+> Stepper 4 Click is a very versatile bipolar stepping motor driver. It features TB67S269FTG IC, fabricated with the BiCD process, allowing the Click board™ to handle significant voltage and current levels up to 35V and 1.2A. This IC has the integrated translator section, used to simplify the control: using simple step control inputs from the host MCU, the stepper motor can be driven in both directions, with the predetermined step sizes from the full step, up to 1/32 step.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/stepper4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/stepper-4-click)
+[Click Product page](https://www.mikroe.com/stepper-4-click)
 
 ---
 
@@ -70,13 +70,13 @@ void stepper4_reset_device ( stepper4_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of the Stepper 4 click board by driving the motor in both directions for a desired number of steps.
+> This example demonstrates the use of the Stepper 4 Click board by driving the motor in both directions for a desired number of steps.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

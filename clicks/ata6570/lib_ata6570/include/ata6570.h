@@ -250,7 +250,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void ata6570_cfg_setup ( ata6570_cfg_t *cfg );
@@ -261,7 +261,7 @@ void ata6570_cfg_setup ( ata6570_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ATA6570_RETVAL ata6570_init ( ata6570_t *ctx, ata6570_cfg_t *cfg );
 
@@ -328,6 +328,6 @@ uint8_t ata6570_read_reg ( ata6570_t *ctx, const uint8_t address );
 #endif  // _ATA6570_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

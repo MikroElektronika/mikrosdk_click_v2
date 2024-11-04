@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# UART MUX 2 click
+# UART MUX 2 Click
 
 UART MUX 2 Click is a compact add-on board that enables pseudo-multidrop RS232 transmission. This board features the MAX399, a precise CMOS analog multiplexer that allows four remote RS-232 transceivers to share a single UART from Maxim Integrated. It offers fast switching speeds with a transition time of less than 250ns and low on-resistance less than 100Ω while retains CMOS-logic input compatibility and fast switching. Channel selection is performed through a set of specific GPIO pins and possesses additional functionality such as the manual ON/OFF feature. 
 
@@ -9,7 +9,7 @@ UART MUX 2 Click is a compact add-on board that enables pseudo-multidrop RS232 t
   <img src="https://download.mikroe.com/images/click_for_ide/uartmux2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/uart-mux-2-click)
+[Click Product page](https://www.mikroe.com/uart-mux-2-click)
 
 ---
 
@@ -201,7 +201,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

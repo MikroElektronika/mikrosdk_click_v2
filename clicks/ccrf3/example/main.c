@@ -3,7 +3,7 @@
  * @brief ccRF3 Click example
  *
  * # Description
- * This example demonstrates the use of ccRF 3 click board.
+ * This example demonstrates the use of ccRF 3 Click board.
  *
  * The demo application is composed of two sections :
  *

@@ -159,7 +159,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void hztov2_cfg_setup ( hztov2_cfg_t *cfg );
@@ -170,7 +170,7 @@ void hztov2_cfg_setup ( hztov2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 HZTOV2_RETVAL hztov2_init ( hztov2_t *ctx, hztov2_cfg_t *cfg );
 
@@ -195,12 +195,12 @@ hztov2_data_t hztov2_generic_read ( hztov2_t *ctx );
 float hztov2_read_voltage ( hztov2_t *ctx );
 
 /**
- * @brief Function for enabling the click board.
+ * @brief Function for enabling the Click board.
  * 
  * @param ctx       Click object.
  * @param pin_state Pin state.
  * 
- * @description This function enable the click board.
+ * @description This function enable the Click board.
  */
 void hztov2_en_pin ( hztov2_t *ctx, uint8_t pin_state );
 
@@ -222,6 +222,6 @@ HZTOV2_RETVAL hztov2_fin_set ( hztov2_t *ctx, uint32_t fin );
 #endif  // _HZTOV2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------ END

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Charger 27 click
+# Charger 27 Click
 
 > Charger 27 Click is a compact add-on board that provides a single-cell charging solution. This board features the MP2639B, a Li-Ion or Li-Polymer switching charger from MPS. It is a highly integrated, flexible switch-mode battery charging management device for a single-cell battery for various portable applications. It uses a 4.5V up to 16V external input voltage to provide up to 2A of programmable charging current.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/charger27_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/charger-27-click)
+[Click Product page](https://www.mikroe.com/charger-27-click)
 
 ---
 
@@ -65,7 +65,7 @@ uint8_t charger27_check_input_supply ( charger27_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of the Charger 27 click board 
+> This example demonstrates the use of the Charger 27 Click board 
 > by enabling charge or discharge mode and 
 > indicating valid input supply and charging completion.
 
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LYRA 24P click
+# LYRA 24P Click
 
 > LYRA 24P Click is a compact add-on board for high-performance wireless connectivity in IoT devices running on Bluetooth. This board features the LYRA 24P (453-00145R), a secure high-performance wireless module from Ezurio. It features a 32-bit ARM® Cortex®-M33 core at 39MHz, Bluetooth® Low Energy (BLE) 5.3 connectivity, and industry-leading Secure Vault® technology for enhanced security and future-proofing. The module supports 2.4GHz wireless connectivity with a built-in antenna and offers global regulatory certifications.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/lyra24p_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lyra-24p-click)
+[Click Product page](https://www.mikroe.com/lyra-24p-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t lyra24p_inquire_command ( lyra24p_t *ctx, uint8_t *command, uint8_t *cmd_v
 
 ## Example Description
 
-> This example demonstrates the use of LYRA 24P click board by processing
+> This example demonstrates the use of LYRA 24P Click board by processing
 > the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
@@ -195,7 +195,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

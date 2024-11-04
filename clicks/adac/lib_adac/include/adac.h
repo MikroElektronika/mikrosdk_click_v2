@@ -254,7 +254,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void adac_cfg_setup ( adac_cfg_t *cfg );
@@ -264,7 +264,7 @@ void adac_cfg_setup ( adac_cfg_t *cfg );
  * @param adac Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ADAC_RETVAL adac_init ( adac_t *ctx, adac_cfg_t *cfg );
 
@@ -298,7 +298,7 @@ void adac_generic_read ( adac_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t le
  *
  * @param ctx          Click object.
  *
- * @description This function does a hardware reset of the click module.
+ * @description This function does a hardware reset of the Click module.
  */
 void adac_hardware_reset ( adac_t *ctx );
 
@@ -308,7 +308,7 @@ void adac_hardware_reset ( adac_t *ctx );
  * @param ctx          Click object.
  * @param cmd          Command.
  *
- * @description This function does a software reset of the click module.
+ * @description This function does a software reset of the Click module.
  */
 void adac_software_reset ( adac_t *ctx, uint16_t cmd );
 
@@ -318,7 +318,7 @@ void adac_software_reset ( adac_t *ctx, uint16_t cmd );
  * @param ctx          Click object.
  * @param settings     Settings.
  *
- * @description This function configures power down settings of the click module.
+ * @description This function configures power down settings of the Click module.
  */
 void adac_power_down_settings ( adac_t *ctx, uint16_t settings );
 
@@ -328,7 +328,7 @@ void adac_power_down_settings ( adac_t *ctx, uint16_t settings );
  * @param ctx          Click object.
  * @param settings     Settings.
  *
- * @description This function configures general purpose register settings of the click module.
+ * @description This function configures general purpose register settings of the Click module.
  */
 void adac_general_purpose_settings ( adac_t *ctx, uint16_t settings );
 
@@ -337,7 +337,7 @@ void adac_general_purpose_settings ( adac_t *ctx, uint16_t settings );
  *
  * @param ctx          Click object.
  *
- * @description This function acquires the current settings data of the click module.
+ * @description This function acquires the current settings data of the Click module.
  */
 uint16_t adac_read_config( adac_t *ctx );
 
@@ -411,7 +411,7 @@ void adac_write_dac ( adac_t *ctx, uint8_t chan, uint8_t msb, uint8_t lsb );
  * @param msb          Most significant byte.
  * @param lsb          Least significant byte.
  * 
- * @description This function sets the configuration for the click module.
+ * @description This function sets the configuration for the Click module.
  */
 void adac_set_configuration ( adac_t *ctx, uint8_t ptr, uint8_t msb, uint8_t lsb );
 
@@ -443,6 +443,6 @@ void adac_write_data ( adac_t *ctx, uint8_t addr, uint16_t w_data );
 #endif  // _ADAC_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

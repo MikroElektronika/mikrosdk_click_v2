@@ -3,7 +3,7 @@
  
 
 ---
-# TempHum 13 click
+# TempHum 13 Click
 
 Temp&Hum 13 Click is a Click board™ which is perfectly suited for measuring the relative humidity (RH) and temperature. The Click board™ is equipped with the HTU21DF, an accurate and reliable sensor IC, packed in a miniature 3x3mm DFN package.
 
@@ -11,7 +11,7 @@ Temp&Hum 13 Click is a Click board™ which is perfectly suited for measuring th
   <img src="https://download.mikroe.com/images/click_for_ide/temphum13_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/temphum-13-click)
+[Click Product page](https://www.mikroe.com/temphum-13-click)
 
 ---
 
@@ -58,12 +58,12 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 > float temphum13_get_temperature( temphum13_t *ctx );
 
 
-- This function sets click measurement resolution.
+- This function sets Click measurement resolution.
 > uint8_t temphum13_change_resolution( temphum13_t *ctx, uint8_t measurement_resolution );
 
 ## Examples Description
 
-This demo shows basic TempHum13 click functionality - temperature
+This demo shows basic TempHum13 Click functionality - temperature
 and humidity measurement. 
 
 **The demo application is composed of two sections :**
@@ -141,7 +141,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -3,7 +3,7 @@
  * \brief Uvc Click example
  * 
  * # Description
- * This click is capable of measuring UVC spectrum in the range of 220nm up to 280nm and light 
+ * This Click is capable of measuring UVC spectrum in the range of 220nm up to 280nm and light 
  * intensity from 0mW/cm² up to 9.3mW/cm². With high sensitivity and good solar blindness, 
  * it can be used for monitoring sterilization lamps.
  *

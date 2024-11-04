@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# NeoMesh 2 click
+# NeoMesh 2 Click
 
 > NeoMesh 2 Click is a compact add-on board with a low-power, long-range transceiver, ideal for Mesh wireless networking. This board features the NC2400, a wireless Mesh network module from NeoCortec. With an additional antenna that MikroE offers connected to the module’s u.Fl connector, you can create a fully functional wireless Mesh network node that will work in the Sub-GHz frequency band of 2.4GHz. The module has a generic application layer that can be configured to suit applications.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/neomesh2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/neomesh-2-click)
+[Click Product page](https://www.mikroe.com/neomesh-2-click)
 
 ---
 
@@ -65,13 +65,13 @@ err_t neomesh2_send_sapi_frame ( neomesh2_t *ctx, neomesh2_sapi_frame_t *frame )
 
 ## Example Description
 
-> This example demonstrates the use of NeoMesh 2 click board by showing the communication between the two click boards.
+> This example demonstrates the use of NeoMesh 2 Click board by showing the communication between the two Click boards.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and configures the click board for the selected application mode.
+> Initializes the driver and configures the Click board for the selected application mode.
 
 ```c
 
@@ -182,7 +182,7 @@ void application_init ( void )
 
 ### Application Task
 
-> One click board should be set to originator mode and the others to receiver 1 or 2.
+> One Click board should be set to originator mode and the others to receiver 1 or 2.
 If the SINGLE_RECEIVER_MODE is enabled, the originator device sends a desired message
 to RECEIVER_1 node and waits for an acknowledge response, otherwise it sends the same
 message to both RECEIVER_1 and RECEIVER_2 nodes. The receiver devices reads and parses
@@ -233,7 +233,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -15,7 +15,7 @@
  * ## Application Task
  * The demo application displays digits from '0' to '9', 
  * symbols: colon, semicolon, less-than, equals-to, greater-than, question mark, at sign 
- * and capital alphabet letters, on both alphanumeric segments of the click. 
+ * and capital alphabet letters, on both alphanumeric segments of the Click. 
  * Results are being sent to the UART Terminal, where you can track their changes.
  *
  * @author Nenad Filipovic

@@ -1,6 +1,6 @@
 
 ---
-# Current 10 click
+# Current 10 Click
 
 > Current 10 Click is a compact add-on board designed for reliable current measurements. This board features the CT455, an XtremeSense™ TMR coreless current sensor from Allegro Microsystems, with a wide 1MHz bandwidth and a sensitivity of 333.3mV/mT, capable of detecting both positive and negative current flows (±6mT). It translates magnetic fields into a linear analog output with less than ±1.0% error across temperature and supply voltage variations.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/current10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/current-10-click)
+[Click Product page](https://www.mikroe.com/current-10-click)
 
 ---
 
@@ -64,7 +64,7 @@ err_t current10_read_current ( current10_t *ctx, float *current );
 
 ## Example Description
 
-> This example demonstrates the use of Current 10 click board by reading and displaying the input current measurements.
+> This example demonstrates the use of Current 10 Click board by reading and displaying the input current measurements.
 
 **The demo application is composed of two sections :**
 
@@ -169,7 +169,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,6 +1,6 @@
 
 ---
-# LTE IoT 3 click
+# LTE IoT 3 Click
 
 > LTE IoT 3 Click is a compact add-on board that contains a Low Power Wide Area (LPWA) Wireless IoT module that allows connections to the LTE CAT-M1, CAT NB1/2, and 2G networks. This board features the EXS82-W, LTE-IoT Wireless Module from Thales that offers a rich set of Internet protocols and industry-standard interfaces such as UART, USB, etc. Global IoT connectivity, integrated GNSS support, SMS support, extended coverage range, and reduced power consumption makes this single IoT module an excellent choice for device makers while ensuring worldwide reliability.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/lteiot3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lte-iot-3-click)
+[Click Product page](https://www.mikroe.com/lte-iot-3-click)
 
 ---
 
@@ -199,7 +199,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -255,7 +255,7 @@ typedef enum
 
 /**
  * @brief Light 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #light3_cfg_t object definition for detailed explanation.
@@ -267,7 +267,7 @@ void light3_cfg_setup ( light3_cfg_t *cfg );
 /**
  * @brief Light 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #light3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -282,7 +282,7 @@ err_t light3_init ( light3_t *ctx, light3_cfg_t *cfg );
 /**
  * @brief Light 3 default configuration function.
  * @details This function executes a default configuration of Light 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #light3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -328,7 +328,7 @@ err_t light3_generic_read ( light3_t *ctx, uint8_t reg, uint8_t *data_out, uint8
 /**
  * @brief Light 3 get INT pin state function.
  * @details This function is used to get INT pin state of Light 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #light3_t object definition for detailed explanation.
  * @return INT pin state.

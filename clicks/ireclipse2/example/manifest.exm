@@ -3,6 +3,6 @@
     "description": "IR Eclipse 2 Click is a compact add-on board that adds photo interrupter ability to any application. This board features the EE-SX1330, a transmissive photomicrosensor with a phototransistor output from OMRON. This compact interrupter sensor senses objects or object positions with an optical beam. It can sense any object less than 3mm as it is the space between the photomicrosensor and phototransistor in which an object can fit.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","EE-SX1330-2"],
+    "hw" : ["Click","EE-SX1330-2"],
     "category" : ["Click Boards > Sensors > Optical"]
 }

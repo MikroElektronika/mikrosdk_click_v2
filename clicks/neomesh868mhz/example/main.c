@@ -3,17 +3,17 @@
  * @brief NeoMesh 868MHz Click Example.
  *
  * # Description
- * This example demonstrates the use of NeoMesh 868MHz click board by showing
- * the communication between the two click boards.
+ * This example demonstrates the use of NeoMesh 868MHz Click board by showing
+ * the communication between the two Click boards.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and configures the click board for the selected
+ * Initializes the driver and configures the Click board for the selected
  * application mode.
  *
  * ## Application Task
- * One click board should be set to originator mode and the others to receiver 1 or 2.
+ * One Click board should be set to originator mode and the others to receiver 1 or 2.
  * If the SINGLE_RECEIVER_MODE is enabled, the originator device sends a desired message
  * to RECEIVER_1 node and waits for an acknowledge response, otherwise it sends the same
  * message to both RECEIVER_1 and RECEIVER_2 nodes. The receiver devices reads and parses

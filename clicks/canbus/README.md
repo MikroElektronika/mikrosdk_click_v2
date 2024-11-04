@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# CAN Bus click
+# CAN Bus Click
 
 CAN Bus Click is a compact add-on board that provides a link between the CAN protocol controller and the physical wires of the bus lines in a control area network (CAN). This board features the MAX13054, an industry-standard, high-speed CAN transceiver with extended ±80V fault protection from Maxim Integrated.
 
@@ -9,7 +9,7 @@ CAN Bus Click is a compact add-on board that provides a link between the CAN pro
   <img src="https://download.mikroe.com/images/click_for_ide/can_bus_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/can-bus-click)
+[Click Product page](https://www.mikroe.com/can-bus-click)
 
 ---
 
@@ -70,8 +70,8 @@ err_t canbus_set_low_current_standby_mode ( canbus_t *ctx );
 
 ## Example Description
 
-> This library contains API for CAN Bus click board™.
-> This example transmits/receives and processes data from CAN Bus click.
+> This library contains API for CAN Bus Click board™.
+> This example transmits/receives and processes data from CAN Bus Click.
 > The library initializes and defines the 
 > UART bus drivers to transmit or receive data. 
 
@@ -200,7 +200,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

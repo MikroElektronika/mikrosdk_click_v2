@@ -3,6 +3,6 @@
     "description": "GNSS 11 Click is a compact add-on board that provides fast positioning capability. This board features the EVA-M8M, a concurrent GNSS module from u-blox. The module provides a reception of GPS, GLONASS, Galileo, QZSS, SBAS, and BeiDou. It delivers high sensitivity and minimal acquisition times, with concurrent reception of up to three GNSS, achieved by a dual-frequency RF front-end architecture. This Click board™ makes the perfect solution for the development of both acquisition and tracking devices and represents an ideal product for automotive, consumer, and industrial tracking applications.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","EVA-M8M-0"],
+    "hw" : ["Click","EVA-M8M-0"],
     "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"]
 }

@@ -294,7 +294,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void i2ctospi_cfg_setup ( i2ctospi_cfg_t *cfg );
@@ -305,7 +305,7 @@ void i2ctospi_cfg_setup ( i2ctospi_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 I2CTOSPI_RETVAL i2ctospi_init ( i2ctospi_t *ctx, i2ctospi_cfg_t *cfg );
 
@@ -314,7 +314,7 @@ I2CTOSPI_RETVAL i2ctospi_init ( i2ctospi_t *ctx, i2ctospi_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for I2cToSpi click.
+ * @description This function executes default configuration for I2cToSpi Click.
  */
 void i2ctospi_default_cfg ( i2ctospi_t *ctx );
 
@@ -347,7 +347,7 @@ void i2ctospi_generic_read ( i2ctospi_t *ctx, uint8_t reg, uint8_t *data_buf, ui
  *
  * @param ctx          Click object.
  *
- * @description Function hardware reset I2C to SPI click board by cleared to '0' state of the RST pin,
+ * @description Function hardware reset I2C to SPI Click board by cleared to '0' state of the RST pin,
  * wait the 100 ms, sets to '1' state of the RST pin and wait another the 100 ms.
  *
  * @note
@@ -362,7 +362,7 @@ void i2ctospi_hw_reset ( i2ctospi_t *ctx );
  *
  * @returns interrupt state: 0 - No active; 1 - Active;
  *
- * @description  Function gets state of the INT pin on I2C to SPI click board.
+ * @description  Function gets state of the INT pin on I2C to SPI Click board.
 */
 uint8_t i2ctospi_get_interrupt ( i2ctospi_t *ctx );
 
@@ -380,7 +380,7 @@ uint8_t i2ctospi_get_interrupt ( i2ctospi_t *ctx );
  * @param write_data   8-bit data to write
  *
  * @description  Function SPI write the byte of data to the targeted 8-bit register address 
- * of the SC18IS602B I2C-bus to SPI bridge on the I2C to SPI click board.
+ * of the SC18IS602B I2C-bus to SPI bridge on the I2C to SPI Click board.
 */
 void i2ctospi_spi_write_byte ( i2ctospi_t *ctx, i2ctospi_spi_t *spi, uint8_t write_data );
 
@@ -399,7 +399,7 @@ void i2ctospi_spi_write_byte ( i2ctospi_t *ctx, i2ctospi_spi_t *spi, uint8_t wri
  * @returns the byte of data from data buffer
  *
  * @description Function SPI read the byte of data from the targeted 8-bit register address 
- * of the SC18IS602B I2C-bus to SPI bridge on the I2C to SPI click board.
+ * of the SC18IS602B I2C-bus to SPI bridge on the I2C to SPI Click board.
 */
 uint8_t i2ctospi_spi_read_byte ( i2ctospi_t *ctx, i2ctospi_spi_t *spi );
 
@@ -418,7 +418,7 @@ uint8_t i2ctospi_spi_read_byte ( i2ctospi_t *ctx, i2ctospi_spi_t *spi );
  * @param write_data   Pointer to the data to be written
  *
  * @description Function SPI burst write data to the targeted 8-bit register address of the
- * SC18IS602B I2C-bus to SPI bridge on the I2C to SPI click board.
+ * SC18IS602B I2C-bus to SPI bridge on the I2C to SPI Click board.
 */
 void i2ctospi_spi_burst_write ( i2ctospi_t *ctx, i2ctospi_spi_t *spi, uint8_t *write_data );
 
@@ -438,7 +438,7 @@ void i2ctospi_spi_burst_write ( i2ctospi_t *ctx, i2ctospi_spi_t *spi, uint8_t *w
  * @param read_data     Pointer to the memory location where data be stored
  *
  * @description Function SPI burst read data from the targeted 8-bit register address of the
- * SC18IS602B I2C-bus to SPI bridge on the I2C to SPI click board.
+ * SC18IS602B I2C-bus to SPI bridge on the I2C to SPI Click board.
 */ 
 void i2ctospi_spi_burst_read ( i2ctospi_t *ctx, i2ctospi_spi_t *spi, uint8_t *read_data );
 
@@ -456,7 +456,7 @@ void i2ctospi_spi_burst_read ( i2ctospi_t *ctx, i2ctospi_spi_t *spi, uint8_t *re
  * @param read_data    Pointer to the memory location where data be stored
  *
  * @description Function sequential read data starts from the targeted 8-bit buffer register
- * address of the SC18IS602B I2C-bus to SPI bridge on the I2C to SPI click board.
+ * address of the SC18IS602B I2C-bus to SPI bridge on the I2C to SPI Click board.
  */
 void i2ctospi_read_buffer_bytes ( i2ctospi_t *ctx, i2ctospi_spi_t *spi, uint8_t *read_data );
 
@@ -473,7 +473,7 @@ void i2ctospi_read_buffer_bytes ( i2ctospi_t *ctx, i2ctospi_spi_t *spi, uint8_t 
  * @param command_data  8-bit command data
  *
  * @description  Function write the bytes of data command to the 8-bit register address of the
- * SC18IS602B I2C-bus to SPI bridge on the I2C to SPI click board.
+ * SC18IS602B I2C-bus to SPI bridge on the I2C to SPI Click board.
 */
 void i2ctospi_write_command ( i2ctospi_t *ctx, i2ctospi_spi_t *spi, uint8_t command_data );
 
@@ -490,7 +490,7 @@ void i2ctospi_write_command ( i2ctospi_t *ctx, i2ctospi_spi_t *spi, uint8_t comm
  * </pre>
  *
  * @description Function SPI EEPROM wite enable by enable selected SPI port 
- * ( SS0, SS1, SS2 or SS3 ) SC18IS602B I2C-bus to SPI bridge on the I2C to SPI click board.
+ * ( SS0, SS1, SS2 or SS3 ) SC18IS602B I2C-bus to SPI bridge on the I2C to SPI Click board.
 */
 void i2ctospi_write_enable ( i2ctospi_t *ctx, uint8_t ss_pin_data );
 
@@ -520,7 +520,7 @@ void i2ctospi_write_enable ( i2ctospi_t *ctx, uint8_t ss_pin_data );
  *
  * @description Function configure SPI Interface by write configuration the byte of data
  * to the targeted [ I2CTOSPI_CONFIGURE_SPI ] register address 
- * of the SC18IS602B I2C-bus to SPI bridge on the I2C to SPI click board.
+ * of the SC18IS602B I2C-bus to SPI bridge on the I2C to SPI Click board.
  */
 void i2ctospi_config_spi ( i2ctospi_t *ctx, uint8_t config_data );
 
@@ -535,7 +535,7 @@ void i2ctospi_config_spi ( i2ctospi_t *ctx, uint8_t config_data );
  * @note
  * This interrupt can be cleared ( INT pin HIGH ) by sending a clear interrupt command
  * to the targeted [ I2CTOSPI_CLEAR_INTERRUPT ] register address
- * SC18IS602B I2C-bus to SPI bridge on the I2C to SPI click board.
+ * SC18IS602B I2C-bus to SPI bridge on the I2C to SPI Click board.
 */ 
 void i2ctospi_clear_interrupt ( i2ctospi_t *ctx );
 
@@ -546,7 +546,7 @@ void i2ctospi_clear_interrupt ( i2ctospi_t *ctx );
  *
  * @description Function set Idle mode, a low-power mode may be entered 
  * by sending the Idle Mode command to the targeted [ I2CTOSPI_IDLE_MODE ] register address
- * SC18IS602B I2C-bus to SPI bridge on the I2C to SPI click board.
+ * SC18IS602B I2C-bus to SPI bridge on the I2C to SPI Click board.
 */
 void i2ctospi_set_idle_mode ( i2ctospi_t *ctx );
 
@@ -567,7 +567,7 @@ void i2ctospi_set_idle_mode ( i2ctospi_t *ctx );
  *
  * @note
  * The Port Enable function will define if these pins are used as SPI Slave Selects or if 
- * they are GPIO of the SC18IS602B I2C-bus to SPI bridge on the I2C to SPI click board.
+ * they are GPIO of the SC18IS602B I2C-bus to SPI bridge on the I2C to SPI Click board.
 */
 void i2ctospi_set_write_state_of_gpio ( i2ctospi_t *ctx, uint8_t gpio_state );
 
@@ -586,7 +586,7 @@ void i2ctospi_set_write_state_of_gpio ( i2ctospi_t *ctx, uint8_t gpio_state );
  * @description Function set the state of the pins defined as GPIO may be read into the 
  * SC18IS602B data buffer using the GPIO read by write 8-bit gpioState data to the after 
  * write targeted [ I2CTOSPI_GPIO_READ ] functio Id
- * to the SC18IS602B I2C-bus to SPI bridge on the I2C to SPI click board.
+ * to the SC18IS602B I2C-bus to SPI bridge on the I2C to SPI Click board.
 */
 void i2ctospi_set_read_state_of_gpio ( i2ctospi_t *ctx, uint8_t gpio_state );
 
@@ -605,7 +605,7 @@ void i2ctospi_set_read_state_of_gpio ( i2ctospi_t *ctx, uint8_t gpio_state );
  * @description Function enable the pins defined as GPIO, the Slave Select pins 
  * ( SS0, SS1, SS2 and SS3 ) are configured to be used as slave select outputs
  * by write 8-bit ss_pin_number data after write targeted [ I2CTOSPI_GPIO_ENABLE ] functio Id
- * to the SC18IS602B I2C-bus to SPI bridge on the I2C to SPI click board.
+ * to the SC18IS602B I2C-bus to SPI bridge on the I2C to SPI Click board.
 */
 void i2ctospi_enable_gpio ( i2ctospi_t *ctx, uint8_t ss_pin_number );
 
@@ -641,7 +641,7 @@ void i2ctospi_enable_gpio ( i2ctospi_t *ctx, uint8_t ss_pin_number );
  * @description Function enable the pins defined as GPIO configured by software to one of four 
  * types on a pin-by-pin basis by write types on a selected SS pins basis 8-bit data
  * after write targeted [ _I2CTOSPI_GPIO_CONFIGURATION ] functio Id
- * to the SC18IS602B I2C-bus to SPI bridge on the I2C to SPI click board.
+ * to the SC18IS602B I2C-bus to SPI bridge on the I2C to SPI Click board.
  */
 void i2ctospi_types_gpio ( i2ctospi_t *ctx, i2ctospi_gpio_t *gpio );
 
@@ -651,6 +651,6 @@ void i2ctospi_types_gpio ( i2ctospi_t *ctx, i2ctospi_gpio_t *gpio );
 #endif  // _I2CTOSPI_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

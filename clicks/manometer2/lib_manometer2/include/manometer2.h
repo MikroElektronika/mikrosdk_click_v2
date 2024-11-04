@@ -207,7 +207,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void manometer2_cfg_setup ( manometer2_cfg_t *cfg );
@@ -218,7 +218,7 @@ void manometer2_cfg_setup ( manometer2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MANOMETER2_RETVAL manometer2_init ( manometer2_t *ctx, manometer2_cfg_t *cfg );
 
@@ -227,7 +227,7 @@ MANOMETER2_RETVAL manometer2_init ( manometer2_t *ctx, manometer2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Manometer 2 click.
+ * @description This function executes default configuration for Manometer 2 Click.
  */
 void manometer2_default_cfg ( manometer2_t *ctx );
 
@@ -318,6 +318,6 @@ float manometer2_get_pressure ( manometer2_t *ctx, uint8_t oversampling_ratio );
 #endif  // _MANOMETER2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -1,6 +1,6 @@
 
 ---
-# EZO Carrier EC click
+# EZO Carrier EC Click
 
 > EZO Carrier Click - Conductivity is a compact add-on board for measuring conductivity, salinity, and Total Dissolved Solids (TDS) in various applications from chemical production to hydroponics. This board features the EZO-EC™, an ISO 7888 compliant embedded conductivity circuit board from Atlas Scientific.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ezocarrierec_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ezo-carrier-click-conductivity)
+[Click Product page](https://www.mikroe.com/ezo-carrier-click-conductivity)
 
 ---
 
@@ -64,14 +64,14 @@ void ezocarrierec_send_cmd_check ( ezocarrierec_t *ctx, uint8_t *cmd );
 
 ## Example Description
 
-> This example demonstrates the use of EZO Carrier EC click board by processing
+> This example demonstrates the use of EZO Carrier EC Click board by processing
   the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver, performs the click default factory reset, and single point calibration.
+> Initializes the driver, performs the Click default factory reset, and single point calibration.
 
 ```c
 
@@ -202,7 +202,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

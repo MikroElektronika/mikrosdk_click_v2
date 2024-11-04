@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# 8x8 R click
+# 8x8 R Click
 
-8x8 R click is a 64 LED matrix display Click board™, composed of SMD LEDs organized in 8 rows by 8 columns. It has a digital brightness control in 16 steps, it can control every LED in the display matrix independently, it blanks the display on power up to eliminate glitches and it requires a single resistor to control the current through all the LEDs at once, which simplifies the design. 8x8 R click uses a fast SPI communication protocol, allowing fast display response and no lag.8x8 R Click is an add-on board in mikroBUS form factor.
+8x8 R Click is a 64 LED matrix display Click board™, composed of SMD LEDs organized in 8 rows by 8 columns. It has a digital brightness control in 16 steps, it can control every LED in the display matrix independently, it blanks the display on power up to eliminate glitches and it requires a single resistor to control the current through all the LEDs at once, which simplifies the design. 8x8 R Click uses a fast SPI communication protocol, allowing fast display response and no lag.8x8 R Click is an add-on board in mikroBUS form factor.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/8x8r_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/8x8-r-click)
+[Click Product page](https://www.mikroe.com/8x8-r-click)
 
 ---
 
@@ -76,7 +76,7 @@ void c8x8r_display_byte ( c8x8r_t *ctx, char tx_byte );
 
 ### Application Init
 
-> Configuring clicks and log objects. Settings the click in the default configuration.
+> Configuring clicks and log objects. Settings the Click in the default configuration.
 
 ```c
 
@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

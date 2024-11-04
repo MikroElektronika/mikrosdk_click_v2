@@ -142,7 +142,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void relay3_cfg_setup ( relay3_cfg_t *cfg );
@@ -152,7 +152,7 @@ void relay3_cfg_setup ( relay3_cfg_t *cfg );
  * @param relay3 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 RELAY3_RETVAL relay3_init ( relay3_t *ctx, relay3_cfg_t *cfg );
 
@@ -162,7 +162,7 @@ RELAY3_RETVAL relay3_init ( relay3_t *ctx, relay3_cfg_t *cfg );
  * @param cfg   Click configuration structure.
  * @param relay Relay choice (1/2).
  * 
- * @description This function turns on either the 1st or the 2nd relay on the click.
+ * @description This function turns on either the 1st or the 2nd relay on the Click.
  */
 void relay3_relay_on ( relay3_t *ctx, uint8_t relay );
 
@@ -172,7 +172,7 @@ void relay3_relay_on ( relay3_t *ctx, uint8_t relay );
  * @param cfg   Click configuration structure.
  * @param relay Relay choice (1/2).
  * 
- * @description This function turns off either the 1st or the 2nd relay on the click.
+ * @description This function turns off either the 1st or the 2nd relay on the Click.
  */
 void relay3_relay_off ( relay3_t *ctx, uint8_t relay );
 
@@ -206,6 +206,6 @@ void relay3_on_delay ( relay3_t *ctx, uint8_t relay, uint8_t units, uint16_t tim
 #endif  // _RELAY3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

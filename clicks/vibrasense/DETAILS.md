@@ -1,15 +1,15 @@
 
 
 ---
-# Vibra sense click
+# Vibra sense Click
 
-Vibra Sense click is a low cost micro shock vibration sensor with a digital output which can be set as an Interrupt (mikroBUS INT pin) An onboard potentiometer lets you set the interrupt threshold.
+Vibra Sense Click is a low cost micro shock vibration sensor with a digital output which can be set as an Interrupt (mikroBUS INT pin) An onboard potentiometer lets you set the interrupt threshold.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/vibrasense_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/vibra-sense-click)
+[Click Product page](https://www.mikroe.com/vibra-sense-click)
 
 ---
 
@@ -136,7 +136,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

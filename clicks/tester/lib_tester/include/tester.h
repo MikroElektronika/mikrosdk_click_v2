@@ -161,7 +161,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void tester_cfg_setup ( tester_cfg_t *cfg );
@@ -171,7 +171,7 @@ void tester_cfg_setup ( tester_cfg_t *cfg );
  * @param tester Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 TESTER_RETVAL tester_init ( tester_t *ctx, tester_cfg_t *cfg );
 
@@ -203,6 +203,6 @@ void tester_set_pin_low ( digital_out_t *pin );
 #endif  // _TESTER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

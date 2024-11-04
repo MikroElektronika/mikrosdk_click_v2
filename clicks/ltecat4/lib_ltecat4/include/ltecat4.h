@@ -323,7 +323,7 @@ typedef enum
 
 /**
  * @brief LTE Cat.4 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #ltecat4_cfg_t object definition for detailed explanation.
@@ -335,7 +335,7 @@ void ltecat4_cfg_setup ( ltecat4_cfg_t *cfg );
 /**
  * @brief LTE Cat.4 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #ltecat4_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -378,7 +378,7 @@ err_t ltecat4_read_register ( ltecat4_t *ctx, uint8_t reg, uint8_t *data_out );
 /**
  * @brief LTE Cat.4 config codec function.
  * @details This function is used to set basic config for MAX9860 audio codec of 
- * LTE Cat.4 click board.
+ * LTE Cat.4 Click board.
  * @param[in] ctx : Click context object.
  * See #ltecat4_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -473,7 +473,7 @@ void ltecat4_set_power_state ( ltecat4_t *ctx, uint8_t state );
 
 /**
  * @brief Send command function.
- * @details This function sends a specified command to the click module.
+ * @details This function sends a specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #ltecat4_t object definition for detailed explanation.
  * @param[in] cmd  Command variable.
@@ -484,7 +484,7 @@ void ltecat4_send_cmd ( ltecat4_t *ctx, uint8_t *cmd );
 
 /**
  * @brief Send command function with parameter.
- * @details This function sends a command with specified parameter to the click module.
+ * @details This function sends a command with specified parameter to the Click module.
  * @param[in] ctx : Click context object.
  * See #ltecat4_t object definition for detailed explanation.
  * @param[in] at_cmd_buf  Command buffer.

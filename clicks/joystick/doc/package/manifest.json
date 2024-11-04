@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "Joystick click",
+    "display_name": "Joystick Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.joystick",
     "product_link": "https://www.mikroe.com/joystick-click",
-    "short_description": "Joystick click is a smart navigation key concept based on contactless, magnetic movement detection.",
+    "short_description": "Joystick Click is a smart navigation key concept based on contactless, magnetic movement detection.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         846
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.Joystick",
     "subdir_name": "lib_joystick"
 }
+
 
 
 

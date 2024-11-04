@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# Stepper 3 click
+# Stepper 3 Click
 
-> Stepper 3 click is designed to drive unipolar stepper motors, with a supply voltage applied to the common wire. The current flows through the common wire and the motor coil, via the activated current sink driver, to the ground. This Click board™ uses the ULN2003A, a high voltage and current Darlington transistors array IC, as the sink driver. This IC is an ideal solution for this purpose, as it has seven high power Darlington output stages, activated by TTL/CMOS logic level signals, applied to the control pins. This allows driving unipolar stepper motors with up to 30V and 500mA per coil.
+> Stepper 3 Click is designed to drive unipolar stepper motors, with a supply voltage applied to the common wire. The current flows through the common wire and the motor coil, via the activated current sink driver, to the ground. This Click board™ uses the ULN2003A, a high voltage and current Darlington transistors array IC, as the sink driver. This IC is an ideal solution for this purpose, as it has seven high power Darlington output stages, activated by TTL/CMOS logic level signals, applied to the control pins. This allows driving unipolar stepper motors with up to 30V and 500mA per coil.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/stepper3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/stepper-3-click)
+[Click Product page](https://www.mikroe.com/stepper-3-click)
 
 ---
 
@@ -65,7 +65,7 @@ void stepper3_drive_motor ( stepper3_t *ctx, uint32_t steps, uint8_t speed );
 
 ## Example Description
 
-> This example demonstrates the use of the Stepper 3 click board by driving the motor in both directions for a desired number of steps.
+> This example demonstrates the use of the Stepper 3 Click board by driving the motor in both directions for a desired number of steps.
 
 **The demo application is composed of two sections :**
 
@@ -134,7 +134,7 @@ void application_task ( void )
 
 ## Note
 
-> Step Motor 5v [MIKROE-1530] is a fully compatible stepper motor for this click board: https://www.mikroe.com/step-motor-5v
+> Step Motor 5v [MIKROE-1530] is a fully compatible stepper motor for this Click board: https://www.mikroe.com/step-motor-5v
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

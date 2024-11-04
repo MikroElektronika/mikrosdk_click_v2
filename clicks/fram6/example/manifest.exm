@@ -3,6 +3,6 @@
     "description": "FRAM 6 Click is a compact add-on board that contains highly reliable ferroelectric random access memory. This board features the CY15B102Q, a 2Mbit nonvolatile memory employing an advanced ferroelectric process organized as 256K words of 8 bits each from Cypress Semiconductor, now part of Infineon.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","CY15B102Q"],
+    "hw" : ["Click","CY15B102Q"],
     "category" : ["FRAM"]
 }

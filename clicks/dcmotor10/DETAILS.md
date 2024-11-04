@@ -1,7 +1,7 @@
 
 
 ---
-# DC Motor 10 click
+# DC Motor 10 Click
 
 DC Motor 10 Click is a brushed DC motor driver with the current limiting and current sensing. It is based on the TLE 6208-6 G, an Hex-Half-Bridge / Double Six-Driver IC,
 optimized for motor driving applications.
@@ -10,7 +10,7 @@ optimized for motor driving applications.
   <img src="https://download.mikroe.com/images/click_for_ide/dcmotor10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dc-motor-10-click)
+[Click Product page](https://www.mikroe.com/dc-motor-10-click)
 
 ---
 
@@ -66,7 +66,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ### Application Init 
 
 >
-> Initalizes SPI, click drivers and uninhibites the device.
+> Initalizes SPI, Click drivers and uninhibites the device.
 > 
 
 ```c
@@ -106,7 +106,7 @@ void application_init ( void )
 ### Application Task
 
 >
-> This example demonstrates the use of DC MOTOR 10 click by running dc motors 
+> This example demonstrates the use of DC MOTOR 10 Click by running dc motors 
 > on channels 1 through 3, first all 3 together and then separately.
 > 
 
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

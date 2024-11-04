@@ -3,7 +3,7 @@
  * @brief Button 2 Click Example.
  *
  * # Description
- * This example demonstrates the use of Button 2 click board by toggling the button
+ * This example demonstrates the use of Button 2 Click board by toggling the button
  * LED and switch state on button press.
  *
  * The demo application is composed of two sections :

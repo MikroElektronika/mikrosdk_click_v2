@@ -3,13 +3,13 @@
  * @brief EZO Carrier EC Click Example.
  *
  * # Description
- * This example demonstrates the use of EZO Carrier EC click board by processing
+ * This example demonstrates the use of EZO Carrier EC Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver, performs the click default factory reset, and single point calibration.
+ * Initializes the driver, performs the Click default factory reset, and single point calibration.
  *
  * ## Application Task
  * Reads and processes all incoming conductivity data from the probe, and displays them on the USB UART in uS.

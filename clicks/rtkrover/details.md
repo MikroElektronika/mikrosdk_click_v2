@@ -1,6 +1,6 @@
 
 ---
-# RTK Rover click
+# RTK Rover Click
 
 > RTK Rover Click is a compact add-on board that enhances the precision of position data derived from compatible RTK Base Station. This board features Quectel’s LG69TAMMD, a dual-band multi-constellation GNSS module featuring a high-performance and high-reliability positioning engine. This module facilitates a fast and precise GNSS positioning capability for centimeter-level accuracy, featuring the fifth generation of STMicroelectronics® positioning receiver platform with 80 tracking and four fast acquisition channels. It supports up to 3 concurrent global constellations (GPS/QZSS, Galileo, and BDS) alongside NMEA 0183/RTCM 3.x protocol and commonly used UART interface.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/rtkrover_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rtk-rover-click)
+[Click Product page](https://www.mikroe.com/rtk-rover-click)
 
 ---
 
@@ -64,7 +64,7 @@ err_t rtkrover_parse_gngga ( char *rsp_buf, uint8_t gngga_element, char *element
 
 ## Example Description
 
-> This example demonstrates the use of RTK Rover click by reading and displaying the GPS coordinates.
+> This example demonstrates the use of RTK Rover Click by reading and displaying the GPS coordinates.
 
 **The demo application is composed of two sections :**
 
@@ -124,7 +124,7 @@ void application_task ( void )
 
 ## Note
 
-> The click board comes with the default baud rate of 460800, but the baud rate is set to 115200
+> The Click board comes with the default baud rate of 460800, but the baud rate is set to 115200
 in the example due to code portability and speed limitations of some MCUs. So in order to run
 the example you will need to adjust the baud rate using Quectel QGNSS evaluation software.
 
@@ -139,7 +139,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

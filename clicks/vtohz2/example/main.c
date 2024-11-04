@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes driver and enables the click board.
+ * Initializes driver and enables the Click board.
  * 
  * ## Application Task  
  * Sets the output frequency by incrementing the pwm duty cycle from 0 to 100% in an infinite loop.

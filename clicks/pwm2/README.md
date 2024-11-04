@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# PWM 2 click
+# PWM 2 Click
 
-PWM 2 click offers 48 independently controlled PWM channels, available over the onboard headers, perfectly suited for driving LEDs. Each channel has a 12-bit PWM register associated to it, with the addition of the 6-bit correction register, also known as the dot correction register
+PWM 2 Click offers 48 independently controlled PWM channels, available over the onboard headers, perfectly suited for driving LEDs. Each channel has a 12-bit PWM register associated to it, with the addition of the 6-bit correction register, also known as the dot correction register
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/pwm2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pwm-2-click)
+[Click Product page](https://www.mikroe.com/pwm-2-click)
 
 ---
 
@@ -62,7 +62,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Configures the click board and sets all PWM channels on the click board to
+> Configures the Click board and sets all PWM channels on the Click board to
 > 50% duty cycle with the phase shift enabled.
 
 ```c
@@ -83,7 +83,7 @@ void application_init ( void )
     pwm2_default_cfg( &pwm2 );
     pwm2_toggle_phase_shift( &pwm2 );
 
-    //setting all 48 PWM channels of the PWM2 click to 50% duty
+    //setting all 48 PWM channels of the PWM2 Click to 50% duty
     for( uint8_t cnt = 1; cnt < 49; cnt++ ) 
     {
         pwm2_set_channel( &pwm2, cnt, PWM2_50_PERCENT_DUTY, PWM2_NO_CORRECTION );
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

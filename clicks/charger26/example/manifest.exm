@@ -3,6 +3,6 @@
     "description": "Charger 26 Click is a compact add-on board that provides a single-cell charging solution. This board features the MAX1811, a USB-powered Li+ charger from Analog Devices. The charger uses an internal FET to deliver the battery up to 500mA charging current. It has pre-conditioning that soft-starts a near-dead battery cell before charging. ",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MAX1811ESA+"],
+    "hw" : ["Click","MAX1811ESA+"],
     "category" : ["Click Boards > Power management > Battery Charger"]
 }

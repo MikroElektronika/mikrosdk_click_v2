@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# SPI Isolator 3 click
+# SPI Isolator 3 Click
 
 SPI Isolator 3 Click is a compact add-on board that contains a digital isolator optimized for a serial peripheral interface. This board features the MAX14483, a 6-channel 3.75kVRMS digital galvanic isolator with a very low propagation delay on the SDI, SDO, and SCLK channels from Maxim Integrated. Besides a second enable control input, which allows MAX14483 to isolate multiple SPI devices, and an auxiliary channel available for passing timing or control signals from the master side to the slave side, the MAX14483 also possesses power monitors provided for both power domains to signal if the opposite side of the isolator is ready for operation.
 
@@ -9,7 +9,7 @@ SPI Isolator 3 Click is a compact add-on board that contains a digital isolator 
   <img src="https://download.mikroe.com/images/click_for_ide/spi_isolator_3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/spi-isolator-3-click)
+[Click Product page](https://www.mikroe.com/spi-isolator-3-click)
 
 ---
 
@@ -70,9 +70,9 @@ uint8_t spiisolator3_get_fault ( spiisolator3_t *ctx );
 
 ## Example Description
 
-> This library contains API for the SPI Isolator 3 click driver.
-> This demo application shows an example of an SPI Isolator 3 click wired 
-> to the nvSRAM 4 click for reading Device ID.
+> This library contains API for the SPI Isolator 3 Click driver.
+> This demo application shows an example of an SPI Isolator 3 Click wired 
+> to the nvSRAM 4 Click for reading Device ID.
 
 **The demo application is composed of two sections :**
 
@@ -121,8 +121,8 @@ void application_init ( void ) {
 
 ### Application Task
 
-> This is an example that shows the use of an SPI Isolator 3 click board™.
-> Logs Device ID of the nvSRAM 4 click wired to the SPI Isolator 3 board™.  
+> This is an example that shows the use of an SPI Isolator 3 Click board™.
+> Logs Device ID of the nvSRAM 4 Click wired to the SPI Isolator 3 board™.  
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
@@ -153,7 +153,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

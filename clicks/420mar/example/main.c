@@ -3,14 +3,14 @@
  * \brief 420MaR Click example
  * 
  * # Description
- * This example showcases how to initialize, configure and use the 4-20 mA R click. It is a
- * simple SPI communication module that acts as a receiver in a 4-20 current loop. The click
+ * This example showcases how to initialize, configure and use the 4-20 mA R Click. It is a
+ * simple SPI communication module that acts as a receiver in a 4-20 current loop. The Click
  * reads current data and converts the analog signal to a digital 12-bit format.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules.
+ * This function initializes and configures the logger and Click modules.
  * 
  * ## Application Task  
  * This function reads and displays current data every half a second.

@@ -293,7 +293,7 @@ typedef enum
 
 /**
  * @brief SPIRIT configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #spirit_cfg_t object definition for detailed explanation.
@@ -305,7 +305,7 @@ void spirit_cfg_setup ( spirit_cfg_t *cfg );
 /**
  * @brief SPIRIT initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #spirit_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -320,7 +320,7 @@ err_t spirit_init ( spirit_t *ctx, spirit_cfg_t *cfg );
 
 /**
  * @brief Power module function.
- * @details Function for power mode of SPIRIT click.
+ * @details Function for power mode of SPIRIT Click.
  * @param ctx           Click object.
  * @param power_state   State of PWM pin
  * @return Nothing.
@@ -330,7 +330,7 @@ void spirit_power_module ( spirit_t *ctx, uint8_t power_state );
 
 /**
  * @brief Software reset function.
- * @details Function for reseting SPIRIT click.
+ * @details Function for reseting SPIRIT Click.
  * @param ctx           Click object.
  * @return Nothing.
  * @note None.
@@ -339,7 +339,7 @@ void spirit_reset ( spirit_t *ctx );
 
 /**
  * @brief Set mode function.
- * @details Function for setting mode of SPIRIT click.
+ * @details Function for setting mode of SPIRIT Click.
  * @param ctx           Click object.
  * @param mode          Set mode.
  * @return Nothing.
@@ -379,7 +379,7 @@ int32_t spirit_generic_read ( spirit_t *ctx, char *data_buf, uint16_t max_len );
 
 /**
  * @brief Send command function.
- * @details This function sends the specified command to the click module.
+ * @details This function sends the specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #spirit_t object definition for detailed explanation.
  * @param[in] cmd  Command variable.
@@ -390,7 +390,7 @@ void spirit_send_cmd ( spirit_t *ctx, char *cmd );
 
 /**
  * @brief Send command function with parameter.
- * @details This function sends commands to the click module.
+ * @details This function sends commands to the Click module.
  * @param[in] ctx : Click context object.
  * See #spirit_t object definition for detailed explanation.
  * @param[in] at_cmd_buf  Command buffer.

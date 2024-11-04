@@ -8,11 +8,11 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initalizes device, Flash 3 click board and makes an initial log.
+ * Initalizes device, Flash 3 Click board and makes an initial log.
  * 
  * ## Application Task  
- * This is an example that shows the capabilities of the Flash 3 click by
-   writing into memory array of a Flash 3 click board and reading same data from memory array.
+ * This is an example that shows the capabilities of the Flash 3 Click by
+   writing into memory array of a Flash 3 Click board and reading same data from memory array.
  * 
  * \author MikroE Team
  *

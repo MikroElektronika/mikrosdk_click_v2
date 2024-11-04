@@ -1,6 +1,6 @@
 
 ---
-# IR Eclipse 2 click
+# IR Eclipse 2 Click
 
 > IR Eclipse 2 Click is a compact add-on board that adds photo interrupter ability to any application. This board features the EE-SX1330, a transmissive photomicrosensor with a phototransistor output from OMRON. This compact interrupter sensor senses objects or object positions with an optical beam. It can sense any object less than 3mm as it is the space between the photomicrosensor and phototransistor in which an object can fit.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ireclipse2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ir-eclipse-2-click)
+[Click Product page](https://www.mikroe.com/ir-eclipse-2-click)
 
 ---
 
@@ -139,7 +139,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -245,7 +245,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c10x10rgb_cfg_setup ( c10x10rgb_cfg_t *cfg, drv_logic_t logic_zero, drv_logic_t logic_one );
@@ -255,7 +255,7 @@ void c10x10rgb_cfg_setup ( c10x10rgb_cfg_t *cfg, drv_logic_t logic_zero, drv_log
  * @param c10x10rgb Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 C10X10RGB_RETVAL c10x10rgb_init ( c10x10rgb_t *ctx, c10x10rgb_cfg_t *cfg );
 
@@ -265,7 +265,7 @@ C10X10RGB_RETVAL c10x10rgb_init ( c10x10rgb_t *ctx, c10x10rgb_cfg_t *cfg );
  * @param c10x10rgb     Click object.
  * @param w_data        Write data.
  * 
- * @description This function writes data to the click module using the GPIO protocol.
+ * @description This function writes data to the Click module using the GPIO protocol.
  */
 void c10x10rgb_write_data ( c10x10rgb_t *ctx, uint32_t w_data );
 
@@ -342,6 +342,6 @@ void c10x10rgb_demo_rainbow ( c10x10rgb_t *ctx, uint8_t brightness, uint16_t spe
 #endif  // _C10X10RGB_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

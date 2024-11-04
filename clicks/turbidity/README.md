@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Turbidity click
+# Turbidity Click
 
 > Turbidity Click is an adapter Click board™, used to interface a compatible turbidity sensor with the host MCU. This board features one 1x3 2.5mm connector suitable for connecting a TSD-10 Turbidity Sensor via an additional 3-wire cable for Turbidity Click specially made for this purpose. It allows users to upgrade their projects with a sensor that senses the cloudiness or haziness of a fluid caused by large numbers of individual particles invisible to the naked eye. This sensor also measures temperature as well as turbidity.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/turbidity_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/turbidity-click)
+[Click Product page](https://www.mikroe.com/turbidity-click)
 
 ---
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

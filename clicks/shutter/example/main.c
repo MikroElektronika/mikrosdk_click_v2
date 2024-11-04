@@ -3,7 +3,7 @@
  * @brief Shutter Click Example.
  *
  * # Description
- * This example demonstrates the use of Shutter click board by taking pictures
+ * This example demonstrates the use of Shutter Click board by taking pictures
  * with and without auto focus function.
  *
  * The demo application is composed of two sections :

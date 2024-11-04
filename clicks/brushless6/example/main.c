@@ -3,18 +3,18 @@
  * \brief Brushless6 Click example
  * 
  * # Description
- * Brushless 6 click is designed to drive a three-phase sensorless.
+ * Brushless 6 Click is designed to drive a three-phase sensorless.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and the click board.
+ * This function initializes and configures the logger and the Click board.
  * 
  * ## Application Task  
  * This function drives the motor in both directions increasing and decreasing the speed of the motor.
  * 
  * ## NOTE
- * The maximal PWM Clock frequency for this click board is 500 Hz. 
+ * The maximal PWM Clock frequency for this Click board is 500 Hz. 
  * So, the user will need to decrease the MCU's main clock frequency in MCU Settings in order to get up-to 500 Hz PWM clock frequency.
  * 
  * 

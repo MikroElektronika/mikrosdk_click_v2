@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Expand 16 click
+# Expand 16 Click
 
 > Expand 16 Click is a compact add-on board with a multi-port I/O expander. This board features the FLX6408, a fully configurable 8-bit GPIO expander from ON Semiconductor. It brings eight independently configurable input/output ports, with a 6mA output drive, when configured in the output mode. 
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/expand16_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/expand-16-click)
+[Click Product page](https://www.mikroe.com/expand-16-click)
 
 ---
 
@@ -70,14 +70,14 @@ err_t expand16_set_output_state ( expand16_t *ctx, uint8_t clr_mask, uint8_t set
 
 ## Example Description
 
-> This example demonstrates the use of Expand 16 click board by setting and reading 
+> This example demonstrates the use of Expand 16 Click board by setting and reading 
   the ports state.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which sets 
+> Initializes the driver and performs the Click default configuration which sets 
   half of the pins as output ( GPIO4, GPIO5, GPIO6 and GPIO7 ) and the 
   other half of the pins as inputs ( GPIO0, GPIO1, GPIO2 and GPIO3 ).
 
@@ -177,7 +177,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

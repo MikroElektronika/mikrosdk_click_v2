@@ -1,8 +1,8 @@
 {
     "name": "ProxFusion Click",
-    "description": "ProxFusion click is a multifunctional capacitive and Hall-effect sensor device. This click can detect touch by using two onboard sensor pads, and it can sense a rotation angle of a magnetic field, parallel with the surface of the click board.",
+    "description": "ProxFusion Click is a multifunctional capacitive and Hall-effect sensor device. This Click can detect touch by using two onboard sensor pads, and it can sense a rotation angle of a magnetic field, parallel with the surface of the Click board.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","IQS624"],
+    "hw" : ["Click","IQS624"],
     "category" : ["Capacitive"] 
 }

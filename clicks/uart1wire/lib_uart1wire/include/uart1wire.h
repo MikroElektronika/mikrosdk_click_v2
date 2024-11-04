@@ -165,7 +165,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void uart1wire_cfg_setup ( uart1wire_cfg_t *cfg );
@@ -175,7 +175,7 @@ void uart1wire_cfg_setup ( uart1wire_cfg_t *cfg );
  * @param uart1wire Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 UART1WIRE_RETVAL uart1wire_init ( uart1wire_t *ctx, uart1wire_cfg_t *cfg );
 
@@ -202,7 +202,7 @@ int32_t uart1wire_generic_read ( uart1wire_t *ctx, char *data_buf, uint16_t max_
  * @param ctx   Click object.
  * @param cmd   Command value.
  *
- * @description This function sends an 8-bit command to the click module.
+ * @description This function sends an 8-bit command to the Click module.
  */
 void uart1wire_write_command ( uart1wire_t *ctx, uint8_t cmd );
 
@@ -213,7 +213,7 @@ void uart1wire_write_command ( uart1wire_t *ctx, uint8_t cmd );
  *
  * @return    Read data byte.
  * 
- * @description This function reads one byte of data from the click module.
+ * @description This function reads one byte of data from the Click module.
  */
 uint8_t uart1wire_read_byte ( uart1wire_t *ctx );
 
@@ -236,7 +236,7 @@ void uart1wire_reset ( uart1wire_t *ctx );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  *
- * @description This function reads a desired number of data bytes from the click module.
+ * @description This function reads a desired number of data bytes from the Click module.
  */
 int8_t uart1wire_read_data ( uart1wire_t *ctx, uint8_t *data_out, uint8_t num_bytes );
 
@@ -260,6 +260,6 @@ int8_t uart1wire_read_temperature ( uart1wire_t *ctx, float *temperature, uint8_
 #endif  // _UART1WIRE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

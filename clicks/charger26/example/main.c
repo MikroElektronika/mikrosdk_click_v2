@@ -3,7 +3,7 @@
  * @brief Charger 26 Click Example.
  *
  * # Description
- * This example demonstrates the use of Charger 26 click board by enabling the device
+ * This example demonstrates the use of Charger 26 Click board by enabling the device
  * and then reading and displaying the charger status.
  *
  * The demo application is composed of two sections :

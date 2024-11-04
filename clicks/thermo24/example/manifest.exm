@@ -3,6 +3,6 @@
     "description": "Thermo 24 Click is a compact add-on board that contains the 4th generation temperature sensing solution from Sensirion. This board features the STS40, a high-accuracy ultra-low-power temperature sensor. The STS40 integrates a digital temperature sensor with a 16-bit analog-to-digital converter (ADC), a data processing circuit, and serial interface logic functions in one package. Characterized by its high accuracy (up to ±0.2°C typical) and high resolution of 0.01°C, this temperature sensor provides temperature data to the host controller with a configurable I2C interface.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","STS40-AD1B"],
+    "hw" : ["Click","STS40-AD1B"],
     "category" : ["Temperature & humidity"]
 }

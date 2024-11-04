@@ -11,7 +11,7 @@
  * Sends HAL pointers
  * 
  * ## Application Task  
- * Detects whether the state of switch on Tamper 2 click is ON or OFF.
+ * Detects whether the state of switch on Tamper 2 Click is ON or OFF.
  * 
  * \author MikroE Team
  *
@@ -64,13 +64,13 @@ void application_task ( )
 
     if ( on_state == 1 )
     {
-        log_printf( &logger, "Tamper 2 click is in ON state.\r\n" );
+        log_printf( &logger, "Tamper 2 Click is in ON state.\r\n" );
 		
     }
 
     if ( off_state == 1 )
     {
-       log_printf( &logger, "Tamper 2 click is in OFF state.\r\n" );
+       log_printf( &logger, "Tamper 2 Click is in OFF state.\r\n" );
 		
     }
 

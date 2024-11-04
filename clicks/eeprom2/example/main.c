@@ -59,7 +59,7 @@ void application_init ( void )
 void application_task ( void )
 {
     eeprom2_write_bytes ( &eeprom2, 0x01, text, 6 );
-    log_printf ( &logger, "Writing Mikroe to EEPROM 2 click\r\n" );
+    log_printf ( &logger, "Writing Mikroe to EEPROM 2 Click\r\n" );
     Delay_ms ( 1000 );
     eeprom2_read_bytes ( &eeprom2, 0x01 , mem_value, 6 );
     log_printf ( &logger, "Data read: %s\r\n", mem_value );

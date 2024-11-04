@@ -1,6 +1,6 @@
 
 ---
-# RTC 11 click
+# RTC 11 Click
 
 RTC 11 Click is a compact add-on board that contains a real-time clock IC designed to maximize battery life and reduce overall battery requirements in wearable applications. This board features the AB0815, an ultra-low-power coupled with a highly sophisticated feature set the real-time clock from Abracon LLC.
 
@@ -8,7 +8,7 @@ RTC 11 Click is a compact add-on board that contains a real-time clock IC design
   <img src="https://download.mikroe.com/images/click_for_ide/rtc11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rtc-11-click)
+[Click Product page](https://www.mikroe.com/rtc-11-click)
 
 ---
 
@@ -64,7 +64,7 @@ err_t rtc11_set_date ( rtc11_t *ctx, rtc11_date_t rtc_date );
 
 ## Example Description
 
-> This is an example that demonstrates the use of the RTC 11 click board.
+> This is an example that demonstrates the use of the RTC 11 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -133,7 +133,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-> Demonstrates use of RTC 11 click board by reading and displaying time and date via USART terminal.
+> Demonstrates use of RTC 11 Click board by reading and displaying time and date via USART terminal.
 
 ```c
 
@@ -167,7 +167,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

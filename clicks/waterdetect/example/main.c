@@ -3,7 +3,7 @@
  * \brief Water Detect Click example
  * 
  * # Description
- * Water Detect click is used for detecting water and other electroconductive liquids. If the detection area is wet the output of Microchip's MCP606 CMOS op-amp will go positive, signaling the presence of liquid.
+ * Water Detect Click is used for detecting water and other electroconductive liquids. If the detection area is wet the output of Microchip's MCP606 CMOS op-amp will go positive, signaling the presence of liquid.
  *
  * The demo application is composed of two sections :
  * 

@@ -1,6 +1,6 @@
 
 ---
-# DAC 14 click
+# DAC 14 Click
 
 > DAC 14 Click is a compact add-on board providing highly accurate digital-to-analog conversion. This board features the DAC53202, a 10-bit dual-channel programmable voltage/current-output DAC from Texas Instruments. The DAC53202 supports high-speed I2C and SPI serial interface alongside Hi-Z Power-Down mode and Hi-Z output during Power-OFF conditions. It has a programmable comparator mode for both DAC channels and one general-purpose I/O pin configurable as multiple functions allowing this smart DAC for processor-less applications.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dac14_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dac-14-click)
+[Click Product page](https://www.mikroe.com/dac-14-click)
 
 ---
 
@@ -69,14 +69,14 @@ err_t dac14_config_function_gen ( dac14_t *ctx, uint8_t dac, uint8_t waveform, u
 
 ## Example Description
 
-> This example demonstrates the use of DAC 14 click board by changing the voltage level
+> This example demonstrates the use of DAC 14 Click board by changing the voltage level
 on the OUT0 as well as the waveform signals from a function generator on the OUT1.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -202,7 +202,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

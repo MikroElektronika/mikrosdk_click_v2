@@ -3,6 +3,6 @@
     "description": "Cooler Click is a compact add-on board designed as a cooling solution to manage heat in electronic systems efficiently. This board features the DRV8213, a brushless DC motor driver from Texas Instruments, ensuring a high-performance operation. This board also directly integrates a TMP007 temperature sensor and an MF25060V2-1000U-A99 cooling fan onto its platform, offering a compact and ready-to-use cooling system. It operates across a wide PWM frequency range from 0 to 100kHz, supports both 3.3V and 5V logic levels, and features several protection mechanisms, including undervoltage lockout, overcurrent protection, and overtemperature shutdown.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","DRV8213DSGR","TMP007"],
+    "hw" : ["Click","DRV8213DSGR","TMP007"],
     "category" : ["Click Boards > Motor control > Brushed"]
 }

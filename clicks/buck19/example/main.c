@@ -3,13 +3,13 @@
  * @brief Buck 19 Click example
  *
  * # Description
- * This example demonstrates the use of Buck 19 click board by
+ * This example demonstrates the use of Buck 19 Click board by
  * iterating through the entire output voltage range.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Changes the output voltage every 3 seconds and displays on the USB UART

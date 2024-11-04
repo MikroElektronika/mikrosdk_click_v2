@@ -230,7 +230,7 @@ typedef enum
 
 /**
  * @brief GNSS 13 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #gnss13_cfg_t object definition for detailed explanation.
@@ -242,7 +242,7 @@ void gnss13_cfg_setup ( gnss13_cfg_t *cfg );
 /**
  * @brief GNSS 13 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #gnss13_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -258,7 +258,7 @@ void gnss13_drv_interface_selection ( gnss13_cfg_t *cfg, gnss13_drv_t drv_sel );
 /**
  * @brief GNSS 13 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #gnss13_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

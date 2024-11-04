@@ -3,13 +3,13 @@
  * @brief ADC18 Click example
  *
  * # Description
- * This example demonstrates the use of ADC 18 click board by reading 
+ * This example demonstrates the use of ADC 18 Click board by reading 
  * the voltage from 12 analog input single-ended channels.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and logger, and performs the click default configuration.
+ * Initializes the driver and logger, and performs the Click default configuration.
  *
  * ## Application Task
  * Reads and displays the voltage from 12 analog input single-ended channels 

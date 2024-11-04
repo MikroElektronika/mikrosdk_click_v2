@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# ECG 4 click
+# ECG 4 Click
 
 ECG 4 Click is a complete solution for the development of ECG and Heart-Rate (HR) applications, based on the BMD101, a specialized bio-signal sensing System-on-Chip (SoC).
 
@@ -9,7 +9,7 @@ ECG 4 Click is a complete solution for the development of ECG and Heart-Rate (HR
   <img src="https://download.mikroe.com/images/click_for_ide/ecg4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ecg-4-click)
+[Click Product page](https://www.mikroe.com/ecg-4-click)
 
 ---
 
@@ -65,7 +65,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes the driver, sets the driver handler and enables the click board.
+> Initializes the driver, sets the driver handler and enables the Click board.
 
 ```c
 
@@ -136,7 +136,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

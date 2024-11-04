@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# 3D Hall 6 click
+# 3D Hall 6 Click
 
 > 3D Hall 6 Click is a very accurate, magnetic field sensing Click board™, used to measure the intensity of the magnetic field across three perpendicular axes. 
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/3dhall6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/3d-hall-6-click)
+[Click Product page](https://www.mikroe.com/3d-hall-6-click)
 
 ---
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

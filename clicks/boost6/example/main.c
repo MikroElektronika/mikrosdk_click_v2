@@ -11,7 +11,7 @@
  * Initializes device.
  * 
  * ## Application Task  
- * This is an example which demonstrates the use of Boost 6 click board.
+ * This is an example which demonstrates the use of Boost 6 Click board.
  * Enable device 5000ms and disable device 5000ms.
  * 
  * \author MikroE Team
@@ -55,7 +55,7 @@ void application_init ( void )
     boost6_init( &boost6, &cfg );
 
     log_printf( &logger, "-----------------\r\n" );
-    log_printf( &logger, "  Boost 6 click  \r\n" );
+    log_printf( &logger, "  Boost 6 Click  \r\n" );
     log_printf( &logger, "-----------------\r\n" );
 
     log_printf( &logger, "-----------------\r\n" );

@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initialization of click driver and usb uart serial terminal for results
+ * Initialization of Click driver and usb uart serial terminal for results
  * logging.
  *
  * ## Application Task
@@ -35,7 +35,7 @@
 
 // ------------------------------------------------------------------ VARIABLES
 
-static fan_t fan;       /**< Fan click object. >*/
+static fan_t fan;       /**< Fan Click object. >*/
 static log_t logger;    /**< Logger object. >*/
 
 // ------------------------------------------------------ APPLICATION FUNCTIONS

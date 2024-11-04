@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Thermo 28 click
+# Thermo 28 Click
 
 > Thermo 28 Click is a compact add-on board that accurately measures temperature. 
 > This board features the ams AG’s AS6221, a high-accuracy digital temperature sensor. 
@@ -15,7 +15,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/thermo28_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/thermo-28-click)
+[Click Product page](https://www.mikroe.com/thermo-28-click)
 
 ---
 
@@ -76,14 +76,14 @@ err_t thermo28_set_continuous_conversion ( thermo28_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Thermo 28 click board™ 
+> This example demonstrates the use of Thermo 28 Click board™ 
 > by reading and displaying the temperature measurements.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -129,7 +129,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example that shows the use of a Thermo 28 click board™.
+> This is an example that shows the use of a Thermo 28 Click board™.
 > Reads the temperature measurement in degree Celsius and displays the results.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
@@ -158,7 +158,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

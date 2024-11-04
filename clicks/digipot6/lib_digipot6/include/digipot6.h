@@ -181,7 +181,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void digipot6_cfg_setup ( digipot6_cfg_t *cfg );
@@ -192,7 +192,7 @@ void digipot6_cfg_setup ( digipot6_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 DIGIPOT6_RETVAL digipot6_init ( digipot6_t *ctx, digipot6_cfg_t *cfg );
 
@@ -201,7 +201,7 @@ DIGIPOT6_RETVAL digipot6_init ( digipot6_t *ctx, digipot6_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for DIGI POT 6 click.
+ * @description This function executes default configuration for DIGI POT 6 Click.
  */
 void digipot6_default_cfg ( digipot6_t *ctx );
 
@@ -222,7 +222,7 @@ void digipot6_write_data ( digipot6_t *ctx, uint8_t reg, uint8_t w_data );
  * @param ctx       Click object.
  * @param cmd       Command.
  *
- * @description This function writes a wiper configuration command to the click module.
+ * @description This function writes a wiper configuration command to the Click module.
  */
 void digipot6_write_wiper_cmd ( digipot6_t *ctx, uint8_t cmd );
 
@@ -254,6 +254,6 @@ void digipot6_set_resistor ( digipot6_t *ctx, uint8_t state, uint8_t mask, uint8
 #endif  // _DIGIPOT6_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

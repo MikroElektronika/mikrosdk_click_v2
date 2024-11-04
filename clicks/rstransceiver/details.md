@@ -1,6 +1,6 @@
 
 ---
-# RS Transceiver click
+# RS Transceiver Click
 
 > RS Transceiver is a compact add-on board that offers an interface between the TTL level UART and 
 > RS-232/RS-422/RS-485 communication buses. This board features the XR34350, 
@@ -13,7 +13,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/rstransceiver_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rs-transceiver-click)
+[Click Product page](https://www.mikroe.com/rs-transceiver-click)
 
 ---
 
@@ -159,7 +159,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

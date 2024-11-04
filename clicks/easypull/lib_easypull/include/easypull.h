@@ -140,7 +140,7 @@ typedef enum
 
 /**
  * @brief EasyPull configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #easypull_cfg_t object definition for detailed explanation.
@@ -152,7 +152,7 @@ void easypull_cfg_setup ( easypull_cfg_t *cfg );
 /**
  * @brief EasyPull initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #easypull_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -167,7 +167,7 @@ err_t easypull_init ( easypull_t *ctx, easypull_cfg_t *cfg );
 /**
  * @brief EasyPull AN pin reading function.
  * @details This function reads the state of the AN pin of EasyPull
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #easypull_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,
@@ -179,7 +179,7 @@ uint8_t easypull_get_an_pin ( easypull_t *ctx );
 /**
  * @brief EasyPull RST pin reading function.
  * @details This function reads the state of the RST pin of EasyPull
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #easypull_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,
@@ -191,7 +191,7 @@ uint8_t easypull_get_rst_pin ( easypull_t *ctx );
 /**
  * @brief EasyPull CS pin reading function.
  * @details This function reads the state of the CS pin of EasyPull
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #easypull_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,
@@ -203,7 +203,7 @@ uint8_t easypull_get_cs_pin ( easypull_t *ctx );
 /**
  * @brief EasyPull PWM pin reading function.
  * @details This function reads the state of the PWM pin of EasyPull
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #easypull_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,
@@ -215,7 +215,7 @@ uint8_t easypull_get_pwm_pin ( easypull_t *ctx );
 /**
  * @brief EasyPull INT pin reading function.
  * @details This function reads the state of the INT pin of EasyPull
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #easypull_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,

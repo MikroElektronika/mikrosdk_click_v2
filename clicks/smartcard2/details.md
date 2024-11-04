@@ -1,6 +1,6 @@
 
 ---
-# Smart Card 2 click
+# Smart Card 2 Click
 
 > Smart Card 2 Click is a compact add-on board for reading smart cards. This board features Microchip’s SEC1210, a low-power single-chip Smart Card controller with a UART interface. The SEC1210 bridge controller uses a combination of hardware and software to deliver high-performance and flexible design customization options. It is fully compliant with standards like ISO/IEC 7816, EMV 4.2/4.3, ETSI TS 102 221, and PC/SC, utilizing TrustSpan™ technology that enables digital systems to communicate securely, process, move and store information. With its onboard card holder, it supports data processing with 2FF smart cards, and with an additional connector for external connection, it also allows the processing of a standard 1FF card.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/smartcard2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/smart-card-2-click)
+[Click Product page](https://www.mikroe.com/smart-card-2-click)
 
 ---
 
@@ -64,7 +64,7 @@ err_t smartcard2_icc_power_on ( smartcard2_t *ctx, uint8_t power_sel );
 
 ## Example Description
 
-> This example demonstrates the use of Smart Card 2 click board by checking the SIM card presence and activating the card on insert. The card should respond with an ATR (Answer to Reset) message.
+> This example demonstrates the use of Smart Card 2 Click board by checking the SIM card presence and activating the card on insert. The card should respond with an ATR (Answer to Reset) message.
 
 **The demo application is composed of two sections :**
 
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

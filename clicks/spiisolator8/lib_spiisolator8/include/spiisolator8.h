@@ -164,7 +164,7 @@ typedef enum
 
 /**
  * @brief SPI Isolator 8 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #spiisolator8_cfg_t object definition for detailed explanation.
@@ -176,7 +176,7 @@ void spiisolator8_cfg_setup ( spiisolator8_cfg_t *cfg );
 /**
  * @brief SPI Isolator 8 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #spiisolator8_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -191,7 +191,7 @@ err_t spiisolator8_init ( spiisolator8_t *ctx, spiisolator8_cfg_t *cfg );
 /**
  * @brief SPI Isolator 8 default configuration function.
  * @details This function executes a default configuration of SPI Isolator 8
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #spiisolator8_t object definition for detailed explanation.
  * @return Nothing.

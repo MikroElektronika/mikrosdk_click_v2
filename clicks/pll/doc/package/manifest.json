@@ -10,7 +10,7 @@
     ],
     "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "PLL click",
+    "display_name": "PLL Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.pll",
     "product_link": "https://www.mikroe.com/pll-click",
-    "short_description": "PLL click is a frequency multiplier which uses the Phase-Locked Loop (PLL) techniques to provide a high-frequency clock output from a cheap, standard fundamental mode crystal oscillator.",
+    "short_description": "PLL Click is a frequency multiplier which uses the Phase-Locked Loop (PLL) techniques to provide a high-frequency clock output from a cheap, standard fundamental mode crystal oscillator.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2355
     ],
-    "version": "2.1.0.12",
+    "version": "2.1.0.13",
     "cmake": true,
     "alias": "Click.Pll",
     "subdir_name": "lib_pll"
 }
+
 
 
 

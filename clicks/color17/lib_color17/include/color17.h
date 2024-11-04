@@ -292,7 +292,7 @@ typedef enum
 
 /**
  * @brief Color 17 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #color17_cfg_t object definition for detailed explanation.
@@ -304,7 +304,7 @@ void color17_cfg_setup ( color17_cfg_t *cfg );
 /**
  * @brief Color 17 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #color17_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -319,7 +319,7 @@ err_t color17_init ( color17_t *ctx, color17_cfg_t *cfg );
 /**
  * @brief Color 17 default configuration function.
  * @details This function executes a default configuration of Color 17
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #color17_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -366,7 +366,7 @@ err_t color17_generic_read ( color17_t *ctx, uint8_t reg, uint8_t *data_out, uin
  * @brief Color 17write register function.
  * @details This function writes 16-bit data to the selected register
  * of the OPT4048DTSR, High-speed high-precision tristimulus XYZ color sensor
- * on the Color 17 click board™. 
+ * on the Color 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #color17_t object definition for detailed explanation.
  * @param[in] reg : Start register address.
@@ -382,7 +382,7 @@ err_t color17_write_reg ( color17_t *ctx, uint8_t reg, uint16_t data_in );
  * @brief Color 17 read register function.
  * @details This function reads a datafrom the selected register 
  * of the OPT4048DTSR, High-speed high-precision tristimulus XYZ color sensor
- * on the Color 17 click board™. 
+ * on the Color 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #color17_t object definition for detailed explanation.
  * @param[in] reg : Start register address.
@@ -398,7 +398,7 @@ err_t color17_read_reg ( color17_t *ctx, uint8_t reg, uint16_t *data_out );
  * @brief Color 17 gets device ID function.
  * @details This function reads a device ID
  * of the OPT4048DTSR, High-speed high-precision tristimulus XYZ color sensor
- * on the Color 17 click board™. 
+ * on the Color 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #color17_t object definition for detailed explanation.
  * @param[out] device_id : Device ID.
@@ -413,7 +413,7 @@ err_t color17_get_device_id ( color17_t *ctx, uint16_t *device_id );
  * @brief Color 17 set the configuration function.
  * @details This function executes a configuration of the 
  * of the OPT4048DTSR, High-speed high-precision tristimulus XYZ color sensor
- * on the Color 17 click board™. 
+ * on the Color 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #color17_t object definition for detailed explanation.
  * @param[in] config : Sensor configuration object.
@@ -429,7 +429,7 @@ err_t color17_set_config ( color17_t *ctx, color17_config_t config );
  * @brief Color 17 gets the status flag function.
  * @details This function reads the status flag
  * of the OPT4048DTSR, High-speed high-precision tristimulus XYZ color sensor
- * on the Color 17 click board™. 
+ * on the Color 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #color17_t object definition for detailed explanation.
  * @param[out] status_flag : Sensor status flag object.
@@ -445,7 +445,7 @@ err_t color17_get_status_flag ( color17_t *ctx, color17_status_flag_t *status_fl
  * @brief Color 17 gets the channel measurements data function.
  * @details This function reads the measurements values of the selected channel
  * of the OPT4048DTSR, High-speed high-precision tristimulus XYZ color sensor
- * on the Color 17 click board™. 
+ * on the Color 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #color17_t object definition for detailed explanation.
  * @param[out] adc_codes : 28-bit ADC codes.
@@ -461,7 +461,7 @@ err_t color17_get_ch_measurement ( color17_t *ctx, uint8_t ch, uint32_t *adc_cod
  * @details This function reads the measurements values of the all channels
  * by reading the device measures light on 4 independent channels 
  * of the OPT4048DTSR, High-speed high-precision tristimulus XYZ color sensor
- * on the Color 17 click board™. 
+ * on the Color 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #color17_t object definition for detailed explanation.
  * @param[out] adc_codes : 28-bit ADC codes.
@@ -477,7 +477,7 @@ err_t color17_get_measurement ( color17_t *ctx, uint32_t *adc_codes );
  * @details This function reads the measurements values of the all channels
  * and calculate the correlated color temperature (CCT) and lux
  * of the OPT4048DTSR, High-speed high-precision tristimulus XYZ color sensor
- * on the Color 17 click board™. 
+ * on the Color 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #color17_t object definition for detailed explanation.
  * @param[out] cct : Correlated color temperature.
@@ -493,7 +493,7 @@ err_t color17_get_cct ( color17_t *ctx, float *cct, float *light_intensity );
  * @brief Color 17 gets interrupt function.
  * @details This function gets states of the Interrupt ( INT ) pin
  * of the OPT4048DTSR, High-speed high-precision tristimulus XYZ color sensor
- * on the Color 17 click board™. 
+ * on the Color 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #color17_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,

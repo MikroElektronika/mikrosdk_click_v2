@@ -1,6 +1,6 @@
 
 ---
-# Hall Switch 2 click
+# Hall Switch 2 Click
 
 Hall Switch 2 Click is a compact add-on board that represents a magnetic field-activated dual-relay Click board™. This board features the MHA100KN, a high-performance, low-power Hall-Effect sensor from MEMSIC.
 
@@ -8,7 +8,7 @@ Hall Switch 2 Click is a compact add-on board that represents a magnetic field-a
   <img src="https://download.mikroe.com/images/click_for_ide/hall_switch_2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/hall-switch-2-click)
+[Click Product page](https://www.mikroe.com/hall-switch-2-click)
 
 ---
 
@@ -54,7 +54,7 @@ uint8_t hallswitch2_check_state ( hallswitch2_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Hall Switch 2 click board.
+> This example demonstrates the use of Hall Switch 2 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -159,7 +159,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

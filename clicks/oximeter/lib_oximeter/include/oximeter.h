@@ -311,7 +311,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void oximeter_cfg_setup ( oximeter_cfg_t *cfg );
@@ -322,7 +322,7 @@ void oximeter_cfg_setup ( oximeter_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t oximeter_init ( oximeter_t *ctx, oximeter_cfg_t *cfg );
 
@@ -331,7 +331,7 @@ err_t oximeter_init ( oximeter_t *ctx, oximeter_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @details This function executes default configuration for Oximeter click.
+ * @details This function executes default configuration for Oximeter Click.
  */
 void oximeter_default_cfg ( oximeter_t *ctx );
 
@@ -464,6 +464,6 @@ err_t oximeter_set_mode ( oximeter_t* ctx, uint16_t select_mode );
 #endif  // _OXIMETER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

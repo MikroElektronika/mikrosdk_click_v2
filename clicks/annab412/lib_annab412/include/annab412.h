@@ -231,7 +231,7 @@ typedef enum
 
 /**
  * @brief ANNA-B412 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #annab412_cfg_t object definition for detailed explanation.
@@ -243,7 +243,7 @@ void annab412_cfg_setup ( annab412_cfg_t *cfg );
 /**
  * @brief ANNA-B412 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #annab412_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -258,7 +258,7 @@ err_t annab412_init ( annab412_t *ctx, annab412_cfg_t *cfg );
 /**
  * @brief ANNA-B412 default configuration function.
  * @details This function executes a default configuration of ANNA-B412
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #annab412_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -366,7 +366,7 @@ void annab412_hw_reset ( annab412_t *ctx );
  * @brief ANNA-B412 send command function.
  * @details This function sends a desired command
  * of the Stand-alone Bluetooth 5.1 low energy module
- * on the ANNA-B412 click board™. 
+ * on the ANNA-B412 Click board™. 
  * @param[in] ctx : Click context object.
  * See #annab412_t object definition for detailed explanation.
  * @param[in] command : Number of bytes to be read.
@@ -381,7 +381,7 @@ err_t annab412_send_command ( annab412_t *ctx, char *command );
  * @brief ANNA-B412 set command echo on function.
  * @details This function enables the echo mode 
  * of the Stand-alone Bluetooth 5.1 low energy module
- * on the ANNA-B412 click board™. 
+ * on the ANNA-B412 Click board™. 
  * @param[in] ctx : Click context object.
  * See #annab412_t object definition for detailed explanation.
  * @return @li @c  >0 - Number of data bytes read,
@@ -395,7 +395,7 @@ err_t annab412_set_cmd_echo_on ( annab412_t *ctx );
  * @brief ANNA-B412 set command echo on function.
  * @details This function disable the echo mode 
  * of the Stand-alone Bluetooth 5.1 low energy module
- * on the ANNA-B412 click board™. 
+ * on the ANNA-B412 Click board™. 
  * @param[in] ctx : Click context object.
  * See #annab412_t object definition for detailed explanation.
  * @return @li @c  >0 - Number of data bytes read,
@@ -409,7 +409,7 @@ err_t annab412_set_cmd_echo_off ( annab412_t *ctx );
  * @brief ANNA-B412 set device name function.
  * @details This function sets the device name
  * of the Stand-alone Bluetooth 5.1 low energy module
- * on the ANNA-B412 click board™. 
+ * on the ANNA-B412 Click board™. 
  * @param[in] ctx : Click context object.
  * See #annab412_t object definition for detailed explanation.
  * @param[in] device_name : Desired device name.
@@ -424,7 +424,7 @@ err_t annab412_set_cmd_device_name ( annab412_t *ctx, char *device_name );
  * @brief ANNA-B412 set connectability mode function.
  * @details This function sets the connectability mode
  * of the Stand-alone Bluetooth 5.1 low energy module
- * on the ANNA-B412 click board™. 
+ * on the ANNA-B412 Click board™. 
  * @param[in] ctx : Click context object.
  * See #annab412_t object definition for detailed explanation.
  * @param[in] mode : Desired connectability mode [1-2].
@@ -439,7 +439,7 @@ err_t annab412_set_cmd_conn_mode ( annab412_t *ctx, uint8_t mode );
  * @brief ANNA-B412 set discoverability mode function.
  * @details This function sets the discoverability mode
  * of the Stand-alone Bluetooth 5.1 low energy module
- * on the ANNA-B412 click board™. 
+ * on the ANNA-B412 Click board™. 
  * @param[in] ctx : Click context object.
  * See #annab412_t object definition for detailed explanation.
  * @param[in] mode : Desired discoverability mode [1-3].
@@ -454,7 +454,7 @@ err_t annab412_set_cmd_discover_mode ( annab412_t *ctx, uint8_t mode );
  * @brief ANNA-B412 set enter mode function.
  * @details This function sets the enter mode
  * of the Stand-alone Bluetooth 5.1 low energy module
- * on the ANNA-B412 click board™. 
+ * on the ANNA-B412 Click board™. 
  * @param[in] ctx : Click context object.
  * See #annab412_t object definition for detailed explanation.
  * @param[in] mode : Desired enter mode [0-4].

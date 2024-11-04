@@ -1,6 +1,6 @@
 
 ---
-# ADC 9 click
+# ADC 9 Click
 
 ADC 9 Click is 8th channel analog to digital converter expansion board, for projects where you have demand for multi channel ADC conversion such as microcontrollers with small number or none analog inputs. This Click board is based on MCP3564 a 24-bit Delta-Sigma Analog-to-Digital Converter with programmable data rate of up to 153.6 ksps from Microchip. 
 
@@ -8,7 +8,7 @@ ADC 9 Click is 8th channel analog to digital converter expansion board, for proj
   <img src="https://download.mikroe.com/images/click_for_ide/adc9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/adc-9-click)
+[Click Product page](https://www.mikroe.com/adc-9-click)
 
 ---
 
@@ -58,7 +58,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This click is 8th channel analog to digital converter expansion board, usefull for projects 
+> This Click is 8th channel analog to digital converter expansion board, usefull for projects 
 > where we have demand for multi channel ADC conversion such as microcontrollers with small 
 > number or none analog inputs. It offers integrated features, such as internal oscillator, 
 > temperature sensor and burnout sensor detection, in order to reduce system component count 
@@ -110,7 +110,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example that shows the capabilities of the ADC 9 click by calculating voltage level 
+> This is an example that shows the capabilities of the ADC 9 Click by calculating voltage level 
 > based on ADC from channels 0(positive) and 1(negative), and logs the result. 
 
 ```c
@@ -137,7 +137,7 @@ void application_task ( void )
 
 ## Note
 
-> Depending on the VOLT SEL jumper position on the click board the user needs to set VREF macro value (mV) in the code.
+> Depending on the VOLT SEL jumper position on the Click board the user needs to set VREF macro value (mV) in the code.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

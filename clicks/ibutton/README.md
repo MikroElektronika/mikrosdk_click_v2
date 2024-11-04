@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# iButton click
+# iButton Click
 
-> iButton click - is an iButton™ probe Click board™. The iButton is a Analog Devices technology based on Analog's 1-Wire® communication protocol, and a chip usually packed in a robust stainless steel casing. The button-shaped iButton device has two contacts - the lid and the base. These contacts carry the necessary connections down to a sensitive silicone chip, embedded inside the metal button. When the iButton touches the reader probe on the Click board™, it establishes the communication with the host MCU, via the 1-Wire® interface. The communication is almost instant, so it is enough to press the iButton lightly to the probe contacts.
+> iButton Click - is an iButton™ probe Click board™. The iButton is a Analog Devices technology based on Analog's 1-Wire® communication protocol, and a chip usually packed in a robust stainless steel casing. The button-shaped iButton device has two contacts - the lid and the base. These contacts carry the necessary connections down to a sensitive silicone chip, embedded inside the metal button. When the iButton touches the reader probe on the Click board™, it establishes the communication with the host MCU, via the 1-Wire® interface. The communication is almost instant, so it is enough to press the iButton lightly to the probe contacts.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ibutton_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ibutton-click)
+[Click Product page](https://www.mikroe.com/ibutton-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t ibutton_check_key ( ibutton_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of the iButton click boards by registering a DS1990A Serial Number iButton
+> This example demonstrates the use of the iButton Click boards by registering a DS1990A Serial Number iButton
 key and then waiting until a key is detected on the reader and identifying if the key matches one of those stored in RAM.
 
 **The demo application is composed of two sections :**
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

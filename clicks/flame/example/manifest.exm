@@ -1,8 +1,8 @@
 {
     "name": "Flame Click",
-    "description": "Flame click is a fire detection solution. It carries a PT334-6B silicon phototransistor that’s covered in black epoxy and therefore sensitive only to infrared light.",
+    "description": "Flame Click is a fire detection solution. It carries a PT334-6B silicon phototransistor that’s covered in black epoxy and therefore sensitive only to infrared light.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","PT334-6B"],
+    "hw" : ["Click","PT334-6B"],
     "category" : ["Optical"] 
 }

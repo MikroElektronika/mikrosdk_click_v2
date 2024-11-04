@@ -1,14 +1,14 @@
 
 ---
-# 2X5W AMP click
+# 2X5W AMP Click
 
- 2x5W AMP click functions as an amplifier and features the TDA7491LP 2x5-watt dual BTL class-D audio amplifier. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over the following pins on the mikroBUS™ line: AN, RST, CS, PWM, INT.
+ 2x5W AMP Click functions as an amplifier and features the TDA7491LP 2x5-watt dual BTL class-D audio amplifier. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over the following pins on the mikroBUS™ line: AN, RST, CS, PWM, INT.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/2x5wamp_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/2x5w-amp-click)
+[Click Product page](https://www.mikroe.com/2x5w-amp-click)
 
 ---
 
@@ -180,7 +180,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

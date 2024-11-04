@@ -1,15 +1,15 @@
  
 ---
-# Clock Gen click
+# Clock Gen Click
 
-Clock Gen Click offers an ideal replacement for crystals, crystal oscillators, VCXOs, phase-locked loops (PLLs), and fanout buffers in cost-sensitive applications. This click features the Si5351A from Silicon Labs, an I2C configurable clock generator based on a PLL + high resolution MultiSynth fractional divider architecture which can generate any frequency up to 200 MHz on each of its outputs with 0 ppm error.
+Clock Gen Click offers an ideal replacement for crystals, crystal oscillators, VCXOs, phase-locked loops (PLLs), and fanout buffers in cost-sensitive applications. This Click features the Si5351A from Silicon Labs, an I2C configurable clock generator based on a PLL + high resolution MultiSynth fractional divider architecture which can generate any frequency up to 200 MHz on each of its outputs with 0 ppm error.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/clockgen_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/clock-gen-click)
+[Click Product page](https://www.mikroe.com/clock-gen-click)
 
 ---
 
@@ -60,9 +60,9 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ## Examples Description
 
 > Clock Gen Click represent a replacement for crystals, crystal oscillators, VCXOs, phase-locked 
-> loops (PLLs), and fanout buffers. This click features an I2C configurable clock generator 
+> loops (PLLs), and fanout buffers. This Click features an I2C configurable clock generator 
 > based on a PLL + high resolution MultiSynth fractional divider architecture which can generate
-> any frequency up to 200 MHz with 0 ppm error. The chip on click is capable of generating 
+> any frequency up to 200 MHz with 0 ppm error. The chip on Click is capable of generating 
 > synchronous or free-running non-integer related clock frequencies at each of its outputs 
 > (CLK0, CLK1, and CLK2), enabling one device to synthesize clocks for multiple clock domains in a design.
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https:///shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https:///shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https:///shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https:///shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

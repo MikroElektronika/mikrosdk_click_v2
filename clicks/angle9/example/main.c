@@ -3,7 +3,7 @@
  * @brief Angle 9 Click example
  *
  * # Description
- * This example demonstrates the use of Angle 9 click board by reading and displaying
+ * This example demonstrates the use of Angle 9 Click board by reading and displaying
  * the magnet's angular position in degrees, field strength in gauss, and the internal
  * sensor temperature in degrees celsius.
  *

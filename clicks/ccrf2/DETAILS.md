@@ -1,14 +1,14 @@
 
 ---
-# ccRF 2 click
+# ccRF 2 Click
 
-ccRF2 click carries CC1120, the fully integrated, high-performance single-chip radio transceiver with extremely low power consumption.
+ccRF2 Click carries CC1120, the fully integrated, high-performance single-chip radio transceiver with extremely low power consumption.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ccrf2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ccrf-2-click)
+[Click Product page](https://www.mikroe.com/ccrf-2-click)
 
 ---
 
@@ -58,7 +58,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example demonstrates the use of ccRF 2 click board.
+> This example demonstrates the use of ccRF 2 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -166,7 +166,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

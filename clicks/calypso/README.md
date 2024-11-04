@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Calypso click
+# Calypso Click
 
 > Calypso Click is a compact add-on board for wireless connectivity in embedded applications. This board features the WIRL-WIFS Calypso WLAN module (2610011025000) from Würth Elektronik, which supports IEEE 802.11 b/g/n standards and includes a fully integrated TCP/IP stack. It also features edge castellated connections, a smart antenna configuration, and supports both IPv4 and IPv6 protocols, including SNTP, DHCP, mDNS, HTTP(S), and MQTT, offering secure connectivity with six simultaneous secure sockets, secure boot, and OTA updates.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/calypso_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/calypso-click)
+[Click Product page](https://www.mikroe.com/calypso-click)
 
 ---
 
@@ -53,7 +53,7 @@ err_t calypso_default_cfg ( calypso_t *ctx );
 
 #### Example key functions :
 
-- `calypso_set_app_mode` This function is used to set selected APP mode of Calypso click board.
+- `calypso_set_app_mode` This function is used to set selected APP mode of Calypso Click board.
 ```c
 err_t calypso_set_app_mode ( calypso_t *ctx, uint8_t mode_sel );
 ```
@@ -70,7 +70,7 @@ void calypso_send_cmd ( calypso_t *ctx, uint8_t *at_cmd_buf );
 
 ## Example Description
 
-> This example demonstrates the use of Calypso click board by processing the incoming data and displaying them on the USB UART.
+> This example demonstrates the use of Calypso Click board by processing the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

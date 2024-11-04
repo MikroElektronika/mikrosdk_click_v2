@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes click driver.
+ * Initializes Click driver.
  * 
  * ## Application Task  
  * Activates the output voltage of the device, and then sets output voltage to various different values.

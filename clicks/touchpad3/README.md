@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Touchpad 3 click
+# Touchpad 3 Click
 
 Touchpad 3 Click is a compact add-on board that allows users to easily integrate projected capacitive touch into their applications. This board features the MTCH6301, a turnkey capacitive touch controller that makes it easy for users to use popular multitouch and gesture interfaces from Microchip. This controller’s sophisticated combination of Self and Mutual capacitive scanning for XY touchscreens and touchpads enables several features, including single and dual-touch drawing, the reporting of 11 single-finger gestures, and the detection of up to 10 touches. This Click board™ is suitable for human-machine interfaces, keypad or scrolling functions, single-finger gesture-based interfaces, and more.
 
@@ -9,7 +9,7 @@ Touchpad 3 Click is a compact add-on board that allows users to easily integrate
   <img src="https://download.mikroe.com/images/click_for_ide/touchpad3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/touchpad-3-click)
+[Click Product page](https://www.mikroe.com/touchpad-3-click)
 
 ---
 
@@ -53,24 +53,24 @@ void touchpad3_default_cfg ( touchpad3_t *ctx );
 
 #### Example key functions :
 
-- `touchpad3_general_configuration` The function performs the general configuration of the MTCH6301 Projected Capacitive Touch Controller on the TouchPad 3 click board.
+- `touchpad3_general_configuration` The function performs the general configuration of the MTCH6301 Projected Capacitive Touch Controller on the TouchPad 3 Click board.
 ```c
 void touchpad3_general_configuration ( touchpad3_t *ctx );
 ```
 
-- `touchpad3_decoding_configuration` The function performs the decoding configuration of the MTCH6301 Projected Capacitive Touch Controller on the TouchPad 3 click board.
+- `touchpad3_decoding_configuration` The function performs the decoding configuration of the MTCH6301 Projected Capacitive Touch Controller on the TouchPad 3 Click board.
 ```c
 void touchpad3_decoding_configuration ( touchpad3_t *ctx );
 ```
 
-- `touchpad3_sensor_mapping_configuration` The function configures the sensor mapping of the MTCH6301 Projected Capacitive Touch Controller on the TouchPad 3 click board.
+- `touchpad3_sensor_mapping_configuration` The function configures the sensor mapping of the MTCH6301 Projected Capacitive Touch Controller on the TouchPad 3 Click board.
 ```c
 void touchpad3_sensor_mapping_configuration ( touchpad3_t *ctx );
 ```
 
 ## Example Description
 
-> This example prints the coordinate points of the position we touch on a click. We use RST and INT pins. The whole project is done through i2c communication.
+> This example prints the coordinate points of the position we touch on a Click. We use RST and INT pins. The whole project is done through i2c communication.
 
 **The demo application is composed of two sections :**
 
@@ -132,7 +132,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-> This is an example that demonstrates the use of the TouchPad 3 click board. TouchPad 3 click board uses USB UART log to display X and Y coordinates of the touch, depending on the selected Touch ID.
+> This is an example that demonstrates the use of the TouchPad 3 Click board. TouchPad 3 Click board uses USB UART log to display X and Y coordinates of the touch, depending on the selected Touch ID.
 
 ```c
 
@@ -164,7 +164,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

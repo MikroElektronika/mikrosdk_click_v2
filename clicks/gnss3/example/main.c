@@ -3,13 +3,13 @@
  * \brief Gnss3 Click example
  * 
  * # Description
- * This example demonstrates the use of GNSS 3 click by reading and displaying
+ * This example demonstrates the use of GNSS 3 Click by reading and displaying
  * the GPS coordinates.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and resets the click board.
+ * Initializes the driver and resets the Click board.
  *
  * ## Application Task
  * Reads the received data, parses the GNGGA info from it, and once it receives the position fix
@@ -22,7 +22,7 @@
  * 
  * @note
  * The default baud rate for communication UART is set to 9600. If you receive 
- * a click board on which the default baud rate for UART is set differently,
+ * a Click board on which the default baud rate for UART is set differently,
  * you will need to change the setting in the gnss13_setup_cfg function.
  *
  * \author MikroE Team

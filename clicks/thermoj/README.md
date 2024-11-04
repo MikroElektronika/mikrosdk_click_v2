@@ -3,15 +3,15 @@
  
 
 ---
-# Thermo J click
+# Thermo J Click
 
-Thermo J Click is a temperature measurement click board™, which uses a thermocouple type-J probe, connected to a PPC-SMP-J onboard connector.
+Thermo J Click is a temperature measurement Click board™, which uses a thermocouple type-J probe, connected to a PPC-SMP-J onboard connector.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/thermoj_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/thermo-j-click)
+[Click Product page](https://www.mikroe.com/thermo-j-click)
 
 ---
 
@@ -112,7 +112,7 @@ void application_init ( void )
 ### Application Task
 
 > This is a example which demonstrates the use of Thermo J Click board.
-> Measured temperature data from the MCP9600 sensor on Thermo J click board.
+> Measured temperature data from the MCP9600 sensor on Thermo J Click board.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
@@ -145,7 +145,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

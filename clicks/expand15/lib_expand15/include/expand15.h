@@ -247,7 +247,7 @@ typedef enum
 
 /**
  * @brief Expand 15 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #expand15_cfg_t object definition for detailed explanation.
@@ -259,7 +259,7 @@ void expand15_cfg_setup ( expand15_cfg_t *cfg );
 /**
  * @brief Expand 15 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #expand15_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -274,7 +274,7 @@ err_t expand15_init ( expand15_t *ctx, expand15_cfg_t *cfg );
 /**
  * @brief Expand 15 default configuration function.
  * @details This function executes a default configuration of Expand 15
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #expand15_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -329,7 +329,7 @@ uint8_t expand15_get_int_pin_state ( expand15_t *ctx );
 
 /**
  * @brief Expand 15 hardware reset function.
- * @details This function is used to perform hardware reset of the click board.
+ * @details This function is used to perform hardware reset of the Click board.
  * @param[in] ctx : Click context object.
  * See #expand15_t object definition for detailed explanation.
  * @return Nothing.

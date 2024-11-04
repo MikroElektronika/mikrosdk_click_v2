@@ -3,6 +3,6 @@
     "description": "Nano LR Click is a compact add-on board that contains a long-range transceiver. This board features the EMB-LR1276S, RF technology-based SRD transceiver, which operates at a frequency of 868MHz from Embit.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","EMB-LR1276S"],
+    "hw" : ["Click","EMB-LR1276S"],
     "category" : ["LoRa"] 
 }

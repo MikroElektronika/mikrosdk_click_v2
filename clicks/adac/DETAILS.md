@@ -1,15 +1,15 @@
 
 ---
-# ADAC click
+# ADAC Click
 
-The click is designed to run on either 3.3V or 5V power supply. ADAC click communicates with the target microcontroller over I2C interface, with additional functionality provided by the RST pin on the mikroBUS™ line. 
+The Click is designed to run on either 3.3V or 5V power supply. ADAC Click communicates with the target microcontroller over I2C interface, with additional functionality provided by the RST pin on the mikroBUS™ line. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/adac_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/adac-click-click)
+[Click Product page](https://www.mikroe.com/adac-click-click)
 
 ---
 
@@ -54,12 +54,12 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 - This function reads ADC data using the I2C serial interface.
 > uint16_t adac_read_adc( adac_t *ctx, uint8_t *chan );
 
-- This function sets the configuration for the click module.
+- This function sets the configuration for the Click module.
 > void adac_set_configuration ( adac_t *ctx, uint8_t ptr, uint8_t msb, uint8_t lsb );
 
 ## Examples Description
 
-> This example showcases how to initialize, configure and use the ADAC click module. The click
+> This example showcases how to initialize, configure and use the ADAC Click module. The Click
   has an ADC and a DAC. An external power supply sets the maximum voltage of the input analog
   signal, which is bound to 2.5 V by default. For the input any external analog signal will
   suffice and a multimeter is needed to read the output on one of the channels.
@@ -68,8 +68,8 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> This function initializes and configures the click and logger modules. It does a hardware 
-  reset first and after that configures the click module using default settings. 
+> This function initializes and configures the Click and logger modules. It does a hardware 
+  reset first and after that configures the Click module using default settings. 
 
 ```c
 
@@ -166,7 +166,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

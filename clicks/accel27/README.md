@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Accel 27 click
+# Accel 27 Click
 
 > Accel 27 Click is a compact add-on board that contains an acceleration sensor. This board features the ADXL373, a three-axis MEMS ±400g accelerometer from Analog Devices. In addition to its ultra-low power consumption, the ADXL373 enables impact detection while providing system-level power reduction. It offers 12-bit output data at 200mg/LSB scale factor with a configurable host interface that supports SPI and I2C serial communication.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/accel27_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/accel-27-click)
+[Click Product page](https://www.mikroe.com/accel-27-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t accel27_reset_device ( accel27_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Accel 27 click board by reading and displaying the accelerometer data (X, Y, and Z axis) averaged from 100 samples.
+> This example demonstrates the use of Accel 27 Click board by reading and displaying the accelerometer data (X, Y, and Z axis) averaged from 100 samples.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -153,7 +153,7 @@ void application_task ( void )
 
 ## Note
 
-> This click board should be used for high g applications of up to +-400g. It is not recommended
+> This Click board should be used for high g applications of up to +-400g. It is not recommended
 for low g applications because of its high scale factor which is about 200 mg per LSB.
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
@@ -167,7 +167,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

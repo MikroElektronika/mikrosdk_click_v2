@@ -11,7 +11,7 @@
  * Initalizes I2C driver, prerforms calibration and makes an initial log.
  * 
  * ## Application Task  
- * This example shows the capabilities of the Hydro Probe click by measuring 
+ * This example shows the capabilities of the Hydro Probe Click by measuring 
  * environment moisture content and displaying it in percent via USB UART.
  * 
  * \author MikroE Team
@@ -91,7 +91,7 @@ void application_init ( void )
     Delay_ms ( 100 );
 
     log_printf( &logger, "---------------------\r\n" );
-    log_printf( &logger, "  Hydro Probe click  \r\n" );
+    log_printf( &logger, "  Hydro Probe Click  \r\n" );
     log_printf( &logger, "---------------------\r\n" );
     hydroprobe_calib( );
     log_printf( &logger, "     Calibrated      \r\n" );

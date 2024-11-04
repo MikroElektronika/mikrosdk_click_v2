@@ -134,7 +134,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void indexcounter_cfg_setup ( indexcounter_cfg_t *cfg );
@@ -144,7 +144,7 @@ void indexcounter_cfg_setup ( indexcounter_cfg_t *cfg );
  * @param indexcounter Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 INDEXCOUNTER_RETVAL indexcounter_init ( indexcounter_t *ctx, indexcounter_cfg_t *cfg );
 
@@ -153,7 +153,7 @@ INDEXCOUNTER_RETVAL indexcounter_init ( indexcounter_t *ctx, indexcounter_cfg_t 
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Index Counter click.
+ * @description This function executes default configuration for Index Counter Click.
  */
 void indexcounter_default_cfg ( indexcounter_t *ctx );
 
@@ -185,6 +185,6 @@ uint8_t indexcounter_get_speed ( indexcounter_t *ctx );
 #endif  // _INDEXCOUNTER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

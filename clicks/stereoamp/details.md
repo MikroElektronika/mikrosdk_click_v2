@@ -1,6 +1,6 @@
 
 ---
-# StereoAmp click
+# StereoAmp Click
 
 This is an example which demonstrates the use of StereoAmp Click board - stereo amplifier and is ideal for battery operated devices or as a lab amplifier.
 
@@ -9,7 +9,7 @@ This is an example which demonstrates the use of StereoAmp Click board - stereo 
 </p>
 
 
-[click Product page](https://www.mikroe.com/stereoamp-click)
+[Click Product page](https://www.mikroe.com/stereoamp-click)
 
 ---
 
@@ -48,10 +48,10 @@ Package can be downloaded/installed directly from compilers IDE(recommended way)
 
 #### Example key functions :
 
-- This function set the power On of both channels by write to the Mode Control register address of LM48100Q-Q1 chip on StereoAmp click board.
+- This function set the power On of both channels by write to the Mode Control register address of LM48100Q-Q1 chip on StereoAmp Click board.
 > void stereoamp_set_power_on ( stereoamp_t *ctx );
  
-- This function set the volume of both channels to the Volume Control register address of LM48100Q-Q1 chip on StereoAmp click board.
+- This function set the volume of both channels to the Volume Control register address of LM48100Q-Q1 chip on StereoAmp Click board.
 > void stereoamp_set_volume ( stereoamp_t *ctx, uint8_t volume );
 
 ## Examples Description
@@ -190,7 +190,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and infromations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

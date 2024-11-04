@@ -127,7 +127,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void irreflect_cfg_setup ( irreflect_cfg_t *cfg );
@@ -137,7 +137,7 @@ void irreflect_cfg_setup ( irreflect_cfg_t *cfg );
  * @param irreflect Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 IRREFLECT_RETVAL irreflect_init ( irreflect_t *ctx, irreflect_cfg_t *cfg );
 
@@ -173,6 +173,6 @@ uint8_t irreflect_analog_status ( irreflect_t *ctx );
 #endif  // _IRREFLECT_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -1,6 +1,6 @@
 
 ---
-# Brushless 31 click
+# Brushless 31 Click
 
 > Brushless 31 Click is a compact add-on board for precise and efficient brushless motor control. This board features the TB6605FTG, a three-phase full sine-wave brushless motor controller from Toshiba Semiconductor. The board features six onboard external N-channel MOSFETs for smooth motor operation, sine-wave PWM driving with 2-phase modulation for high efficiency and low noise, and includes essential functions like dead time, brake, and manual/auto lead-angle control. It supports clockwise and counterclockwise rotation and offers motor lock protection for added safety. Brushless 31 Click is ideal for home appliances, fans, and office equipment applications, where reliable and precise motor control is critical.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/brushless31_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/brushless-31-click)
+[Click Product page](https://www.mikroe.com/brushless-31-click)
 
 ---
 
@@ -69,13 +69,13 @@ void brushless31_switch_direction ( brushless31_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of the Brushless 31 click board by driving the motor in both directions at different speeds.
+> This example demonstrates the use of the Brushless 31 Click board by driving the motor in both directions at different speeds.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -160,7 +160,7 @@ void application_task ( void )
 
 ## Note
 
-> This click board is designed for 5V systems but can also be controlled with 3V3 GPIO lines.
+> This Click board is designed for 5V systems but can also be controlled with 3V3 GPIO lines.
 Ensure your MCU is 5V tolerant on mikroBUS GPIO lines before turning on the power supply.
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
@@ -174,7 +174,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,6 +1,6 @@
 
 ---
-# Barcode 2 click
+# Barcode 2 Click
 
 Barcode 2 Click is an adapter add-on board that contains a computerized image recognition system that is compliant with a wide range of different 1D and 2D barcode protocols.
 
@@ -8,7 +8,7 @@ Barcode 2 Click is an adapter add-on board that contains a computerized image re
   <img src="https://download.mikroe.com/images/click_for_ide/barcode2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/barcode-2-click)
+[Click Product page](https://www.mikroe.com/barcode-2-click)
 
 ---
 
@@ -128,7 +128,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](http://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](http://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

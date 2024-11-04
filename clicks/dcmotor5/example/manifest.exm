@@ -1,8 +1,8 @@
 {
     "name": "DC Motor 5 Click",
-    "description": "DC MOTOR 5 click carries the DRV8701 brushed DC motor gate driver from Texas Instruments.",
+    "description": "DC MOTOR 5 Click carries the DRV8701 brushed DC motor gate driver from Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","DRV8701"],
+    "hw" : ["Click","DRV8701"],
     "category" : ["Brushed"] 
 }

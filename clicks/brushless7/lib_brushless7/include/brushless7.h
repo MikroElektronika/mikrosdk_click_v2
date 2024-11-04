@@ -318,7 +318,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void brushless7_cfg_setup ( brushless7_cfg_t *cfg );
@@ -329,7 +329,7 @@ void brushless7_cfg_setup ( brushless7_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 BRUSHLESS7_RETVAL brushless7_init ( brushless7_t *ctx, brushless7_cfg_t *cfg );
 
@@ -338,7 +338,7 @@ BRUSHLESS7_RETVAL brushless7_init ( brushless7_t *ctx, brushless7_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Brushless7 click.
+ * @description This function executes default configuration for Brushless7 Click.
  */
 void brushless7_default_cfg ( brushless7_t *ctx );
 
@@ -515,6 +515,6 @@ void brushless7_pwm_start ( brushless7_t *ctx );
 #endif  // _BRUSHLESS7_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

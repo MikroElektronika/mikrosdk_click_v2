@@ -1,6 +1,6 @@
 
 ---
-# LTE IoT 6 click
+# LTE IoT 6 Click
 
 LTE IoT 6 Click is a compact add-on board that contains an IoT module with worldwide coverage. This board features the SARA-R412M, a cellular module that offers multi-band data transmissions for Low Power Wide Area solutions in a compact form factor from u-Blox.
 
@@ -8,7 +8,7 @@ LTE IoT 6 Click is a compact add-on board that contains an IoT module with world
   <img src="https://download.mikroe.com/images/click_for_ide/lteiot6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lte-iot-6-click)
+[Click Product page](https://www.mikroe.com/lte-iot-6-click)
 
 ---
 
@@ -234,7 +234,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

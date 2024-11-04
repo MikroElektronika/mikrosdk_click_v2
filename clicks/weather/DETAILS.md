@@ -1,14 +1,14 @@
 
 ---
-# Weather click
+# Weather Click
 
-> Weather click carries BME280 integrated environmental unit from Bosch.
+> Weather Click carries BME280 integrated environmental unit from Bosch.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/weather_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/weather-click)
+[Click Product page](https://www.mikroe.com/weather-click)
 
 ---
 
@@ -57,7 +57,7 @@ err_t weather_default_cfg ( weather_t *ctx );
 err_t weather_get_ambient_data( weather_t *ctx, weather_data_t *weather_data );
 ```
 
-- `weather_get_device_id` You can use this function as a check on click communication with your MCU.
+- `weather_get_device_id` You can use this function as a check on Click communication with your MCU.
 ```c
 err_t weather_get_device_id ( weather_t *ctx, uint8_t *device_id );
 ```
@@ -69,14 +69,14 @@ err_t weather_measurement_cfg ( weather_t *ctx, weather_measurement_cfg_t *cfg )
 
 ## Example Description
 
-> This demo-app shows the temperature, pressure and humidity measurement using Weather click.
+> This demo-app shows the temperature, pressure and humidity measurement using Weather Click.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
 > Configuring clicks and log objects.
-> Setting the click in the default configuration to start the measurement.
+> Setting the Click in the default configuration to start the measurement.
 
 ```c
 void application_init ( void )
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

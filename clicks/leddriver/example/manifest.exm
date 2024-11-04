@@ -1,8 +1,8 @@
 {
     "name": "LED DRIVER Click",
-    "description": "LED driver click carries the MCP1662 high-voltage step-up voltage driver from Microchip. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over PWM pin on the mikroBUS™ line",
+    "description": "LED driver Click carries the MCP1662 high-voltage step-up voltage driver from Microchip. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over PWM pin on the mikroBUS™ line",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MCP1662"],
+    "hw" : ["Click","MCP1662"],
     "category" : ["LED Drivers"] 
 }

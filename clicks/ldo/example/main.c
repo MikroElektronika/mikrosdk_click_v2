@@ -3,7 +3,7 @@
  * @brief LDO Click example
  *
  * # Description
- * This example demonstrates the use of LDO click by changing the output voltage.
+ * This example demonstrates the use of LDO Click by changing the output voltage.
  *
  * The demo application is composed of two sections :
  *

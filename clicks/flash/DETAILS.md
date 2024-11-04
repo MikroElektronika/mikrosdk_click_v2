@@ -1,7 +1,7 @@
 
 
 ---
-# Flash click
+# Flash Click
 
 Flash Click is 8,388,608 bits (8 Mbit) on a Click board, organized into 1,048,576 bytes (1 MB).
 In other words, this Click board is a Flash memory medium with the capacity of 1 MB.
@@ -11,7 +11,7 @@ The used Flash module has very good endurance and it can withstand up to 100,000
   <img src="https://download.mikroe.com/images/click_for_ide/flash_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/flash-click)
+[Click Product page](https://www.mikroe.com/flash-click)
 
 ---
 
@@ -69,7 +69,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ### Application Init
 
 >
-> Initializes all necessary peripherals and pins used by Flash click and also
+> Initializes all necessary peripherals and pins used by Flash Click and also
 > initializes uart logger to show results.
 >
 
@@ -162,7 +162,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

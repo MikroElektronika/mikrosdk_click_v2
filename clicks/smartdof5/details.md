@@ -1,6 +1,6 @@
 
 ---
-# Smart DOF 5 click
+# Smart DOF 5 Click
 
 > Smart DOF 5 Click is a compact add-on board designed for precise motion and orientation detection in automotive applications. This board features the ASM330LHHXG1, a high-accuracy 6-axis inertial measurement unit (IMU) from STMicroelectronics. It features a 3-axis accelerometer and a 3-axis gyroscope and supports dual operating modes (high-performance and low-power) with flexible communication options through SPI or I2C interfaces. Additionally, it includes the Click Snap format, enabling the autonomous use of the Snap section and integration of external sensors via the I2C Master interface.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/smartdof5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/smart-dof-5-click)
+[Click Product page](https://www.mikroe.com/smart-dof-5-click)
 
 ---
 
@@ -69,14 +69,14 @@ err_t smartdof5_set_accel_fsr ( smartdof5_t *ctx, uint8_t fsr );
 
 ## Example Description
 
-> This example demonstrates the use of Smart DOF 5 click board by reading and displaying 
+> This example demonstrates the use of Smart DOF 5 Click board by reading and displaying 
 the accelerometer and gyroscope data (X, Y, and Z axis) as well as a temperature measurement in degrees Celsius.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

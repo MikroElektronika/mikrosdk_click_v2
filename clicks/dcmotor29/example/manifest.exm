@@ -3,6 +3,6 @@
     "description": "DC Motor 29 Click is a compact add-on board that contains a high-performance DC motor driver. This board features the DRV8245P, an automotive H-Bridge driver with integrated current sense and diagnostic from Texas Instruments. It can be configured as a single full-bridge driver or independent half-bridge driver. The driver offers excellent power handling and thermal capability due to a BiCMOS high power process technology mode, in which it is designed.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","DRV8245PQPWPRQ1"],
+    "hw" : ["Click","DRV8245PQPWPRQ1"],
     "category" : ["Click Boards > Motor control > Brushed"]
 }

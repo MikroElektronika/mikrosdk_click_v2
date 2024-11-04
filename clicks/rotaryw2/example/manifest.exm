@@ -3,6 +3,6 @@
     "description": "Rotary W 2 Click is a compact add-on board that allows you to add a precision input knob to your design. This board features the TLC5925, a low-power 16-channel constant-current LED sink driver from Texas Instruments that, combined with a high-quality rotary encoder from ALPS, the EC12D1564402, allows you to add a precision input knob to your design. It also features an LED ring composed of 16 individual white LEDs that can be used to represent the encoder position more visually.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TLC5925IDWR"],
+    "hw" : ["Click","TLC5925IDWR"],
     "category" : ["Click Boards > HMI > Rotary encoder"]
 }

@@ -3,7 +3,7 @@
 
 
 ---
-# nvSRAM 4 click
+# nvSRAM 4 Click
 
 nvSRAM 4 Click is a compact add-on board that contains the most reliable nonvolatile memory. This board features the CY14B101PA, a 1-Mbit nvSRAM with a fully-featured real-time clock from Cypress Semiconductor.
 
@@ -11,7 +11,7 @@ nvSRAM 4 Click is a compact add-on board that contains the most reliable nonvola
   <img src="https://download.mikroe.com/images/click_for_ide/nvsram4_click.png">
 </p>
 
-[click Product page](https://www.mikroe.com/nvsram-4-click)
+[Click Product page](https://www.mikroe.com/nvsram-4-click)
 
 ---
 
@@ -74,7 +74,7 @@ void nvsram4_get_rtc_time ( nvsram4_t *ctx, nvsram4_rtc_time_t *rtc_time );
 
 ## Examples Description
 
-> This is an example that demonstrates the use of the nvSRAM 4 click board.
+> This is an example that demonstrates the use of the nvSRAM 4 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -120,7 +120,7 @@ void application_init ( void ) {
     log_info( &logger, " Application Task " );
     
     log_printf( &logger, "-----------------------\r\n" );
-    log_printf( &logger, "     nvSRAM 4 click    \r\n" );
+    log_printf( &logger, "     nvSRAM 4 Click    \r\n" );
     log_printf( &logger, "-----------------------\r\n" );
     
     memory_addr = 112233;
@@ -199,7 +199,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

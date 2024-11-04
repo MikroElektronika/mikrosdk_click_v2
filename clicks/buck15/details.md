@@ -1,6 +1,6 @@
 
 ---
-# Buck 15 click
+# Buck 15 Click
 
 > Buck 15 Click is a compact add-on board for precision voltage regulation across various applications. This board features the TPS62903, a synchronous step-down DC/DC converter from Texas Instruments. It is known for its adaptability, rapid transient response, and high output voltage accuracy of ±1.5% across all operating temperatures. Featuring the innovative DCS-control topology, it supports a wide input voltage range of 3V to 17V, an adjustable output voltage from 0.4V to 5V, and currents up to 3A. This Click board™ can be used in a variety of automotive applications, such as the ADAS, body electronics and lighting, infotainment and cluster, hybrid, electric, and powertrain systems, any application with a 12V input voltage or a 1-4 cell lithium battery pack, and more.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/buck15_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/buck-15-click)
+[Click Product page](https://www.mikroe.com/buck-15-click)
 
 ---
 
@@ -152,7 +152,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

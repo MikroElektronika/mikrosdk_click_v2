@@ -1,6 +1,6 @@
 
 ---
-# 6DOF IMU 21 click
+# 6DOF IMU 21 Click
 
 > 6DOF IMU 21 Click is a compact add-on board perfect for applications requiring accurate orientation and movement detection. This board features the WSEN-ISDS (2536030320001) sensor from Würth Elektronik, which integrates 3-axis acceleration and gyroscope sensors using advanced MEMS-based capacitive sensing technology. It offers a fully calibrated 16-bit digital output, with acceleration ranges from ±2g to ±16g and gyroscope ranges from ±125dps to ±2000dps, alongside a high output data rate of up to 6.6kHz for seamless movement tracking. Additionally, an embedded temperature sensor provides environmental monitoring capabilities.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/6dofimu21_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/6dof-imu-21-click)
+[Click Product page](https://www.mikroe.com/6dof-imu-21-click)
 
 ---
 
@@ -69,14 +69,14 @@ err_t c6dofimu21_read_gyro_data ( c6dofimu21_t *ctx, c6dofimu21_data_t *gyro_dat
 
 ## Example Description
 
-> This example demonstrates the use of 6DOF IMU 21 click board by reading and displaying 
+> This example demonstrates the use of 6DOF IMU 21 Click board by reading and displaying 
   the accelerometer and gyroscope data (X, Y, and Z axis).
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver performs the click default configuration, 
+> Initializes the driver performs the Click default configuration, 
   and checks communication by reading device ID.
 
 ```c
@@ -159,7 +159,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

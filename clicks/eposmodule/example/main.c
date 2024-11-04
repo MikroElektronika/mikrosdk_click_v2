@@ -3,8 +3,8 @@
  * @brief EPOS Module Click example
  *
  * # Description
- * This example demonstrates the use of EPOS Module click board by showing
- * the communication between the two click boards connected to PBX system.
+ * This example demonstrates the use of EPOS Module Click board by showing
+ * the communication between the two Click boards connected to PBX system.
  *
  * The demo application is composed of two sections :
  *
@@ -22,7 +22,7 @@
  * are received successfully.
  *
  * @note
- * We have used a Yeastar S20 VoIP PBX system for the test, where the click boards are
+ * We have used a Yeastar S20 VoIP PBX system for the test, where the Click boards are
  * connected to ports 1 and 2 configured as FXS extension with numbers 1000 and 1001 (dialer).
  *
  * @author Stefan Filipovic
@@ -40,7 +40,7 @@
 
 // Dialing application settings - a dial number and text to send (must end with CRLF - \r\n)
 #define DIAL_NUMBER                 "1000"
-#define TEXT_TO_SEND                "MIKROE - EPOS Module click\r\n"
+#define TEXT_TO_SEND                "MIKROE - EPOS Module Click\r\n"
 
 // Answering application settings - a number of successfully received messages before call termination
 #define NUM_MESSAGES                5u

@@ -3,12 +3,12 @@
  * \brief Buck 3 Click example
  * 
  * # Description
- * This example demonstrates the use of Buck 3 click board.
+ * This example demonstrates the use of Buck 3 Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and configures the click board.
+ * Initializes the driver and configures the Click board.
  * 
  * ## Application Task  
  * Checks the PGD pin state which signalize the undervoltage or overvoltage fault or

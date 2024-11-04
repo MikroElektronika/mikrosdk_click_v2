@@ -3,7 +3,7 @@
  * @brief Magnetic Rotary 5 Click example
  *
  * # Description
- * This example demonstrates the use of Magnetic Rotary 5 click board by reading and displaying
+ * This example demonstrates the use of Magnetic Rotary 5 Click board by reading and displaying
  * the magnet angular position as well as the AGC and multi turn counter values.
  *
  * The demo application is composed of two sections :

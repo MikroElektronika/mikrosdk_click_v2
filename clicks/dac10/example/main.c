@@ -3,7 +3,7 @@
  * @brief DAC10 Click example
  *
  * # Description
- * This example demonstrates the use of DAC 10 click board.
+ * This example demonstrates the use of DAC 10 Click board.
  *
  * The demo application is composed of two sections :
  *

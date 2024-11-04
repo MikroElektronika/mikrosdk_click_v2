@@ -3,7 +3,7 @@
  * @brief Mosaic Click Example.
  *
  * # Description
- * This example demonstrates the use of Mosaic click by reading and displaying
+ * This example demonstrates the use of Mosaic Click by reading and displaying
  * the GNSS coordinates.
  *
  * The demo application is composed of two sections :

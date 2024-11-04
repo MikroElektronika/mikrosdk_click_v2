@@ -3,6 +3,6 @@
     "description": "Heart rate 6 Click is an optical biosensor Click board™ designed for heart-rate monitoring (HRM). This Click board™ employs a specialized sensor that incorporates two LED drivers and photo-sensing elements which are the most sensitive to green light.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","BH1790GLC"],
+    "hw" : ["Click","BH1790GLC"],
     "category" : ["Biometrics"] 
 }

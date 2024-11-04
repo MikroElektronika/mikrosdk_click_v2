@@ -3,7 +3,7 @@
  * \brief Tamper Click example
  * 
  * # Description
- * Tamper click is equipped with side-actuated detect switch. The switch itself acts as 
+ * Tamper Click is equipped with side-actuated detect switch. The switch itself acts as 
  * a push button and has 2 Normally Open terminals, which get shorted when the force is applied. 
  * The applied pressure closes the circuit, connecting the VCC routed to the first pin 
  * of the switch with the INT pin on the mikroBUS. The microcontroller is then able to detect 
@@ -15,8 +15,8 @@
  * Initialization driver enables GPIO and also starts write log.
  * 
  * ## Application Task  
- * This is an example which demonstrates the use of Tamper click board.
- * It detects whether the state of switch on Tamper click is changes to open or to closed.
+ * This is an example which demonstrates the use of Tamper Click board.
+ * It detects whether the state of switch on Tamper Click is changes to open or to closed.
  * Results are being sent to the Usart Terminal where you can keep track of their changes.
  * 
  * 

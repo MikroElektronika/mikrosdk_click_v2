@@ -10,7 +10,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and configures the click board.
+ * Initializes the driver and configures the Click board.
  * 
  * ## Application Task  
  * Reads X/Y/Z hall axis and Temperature data.

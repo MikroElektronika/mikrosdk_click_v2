@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Volume 2 click
+# Volume 2 Click
 
 > Volume 2 Click is a compact add-on board that provides the user with complete digital volume control. This board features the NJU72341, a 2-channel I2C configurable electronic volume IC with external mute control from NJRC.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/volume2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/volume-2-click)
+[Click Product page](https://www.mikroe.com/volume-2-click)
 
 ---
 
@@ -70,7 +70,7 @@ err_t volume2_generic_write ( volume2_t *ctx, uint8_t reg, uint8_t *tx_buf, uint
 
 ## Example Description
 
-> This example shows how Volume 2 click board can be used
+> This example shows how Volume 2 Click board can be used
 for controlling the audio channels. Thanks to this, a
 simple audio effect is created by switching volume from
 right to left and vice versa.
@@ -159,7 +159,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

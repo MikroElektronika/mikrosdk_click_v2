@@ -1,8 +1,8 @@
 {
     "name": "Moisture Click",
-    "description": "Moisture click is a Click board™ that can be used to easily detect a moisture level of the skin, by simply touching the sensitive surface of the PCB.",
+    "description": "Moisture Click is a Click board™ that can be used to easily detect a moisture level of the skin, by simply touching the sensitive surface of the PCB.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","FDC2112"],
+    "hw" : ["Click","FDC2112"],
     "category" : ["Temperature & humidity"] 
 }

@@ -225,7 +225,7 @@ typedef struct
 
 /**
  * @brief Temp Hum 14 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #temphum14_cfg_t object definition for detailed explanation.
@@ -237,7 +237,7 @@ void temphum14_cfg_setup ( temphum14_cfg_t *cfg );
 /**
  * @brief Temp Hum 14 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #temphum14_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -287,7 +287,7 @@ err_t temphum14_generic_read ( temphum14_t *ctx, uint8_t reg, uint8_t *rx_buf, u
  * @brief HW reset function.
  * @details The function is performed by a hardware reset
  * of the HTU31D RH/T SENSOR IC Digital Relative Humidity sensor with
- * Temperature output on the Temp-Hum 14 click board.
+ * Temperature output on the Temp-Hum 14 Click board.
  * @param[in] ctx : Click context object.
  * See #temphum14_t object definition for detailed explanation.
  * @return Nothing.
@@ -298,7 +298,7 @@ void temphum14_hw_reset ( temphum14_t *ctx );
  * @brief Send command function.
  * @details The function send the desired command
  * to the HTU31D RH/T SENSOR IC Digital Relative Humidity sensor with
- * Temperature output on the Temp-Hum 14 click board.
+ * Temperature output on the Temp-Hum 14 Click board.
  * @param[in] ctx : Click context object.
  * See #temphum14_t object definition for detailed explanation.
  * @param[in] cmd : 8-bit command.
@@ -311,7 +311,7 @@ void temphum14_set_cmd ( temphum14_t *ctx, uint8_t cmd );
  * @details The function set conversion
  * a single temperature and humidity conversion and select data resolution
  * to the HTU31D RH/T SENSOR IC Digital Relative Humidity sensor with
- * Temperature output on the Temp-Hum 14 click board.
+ * Temperature output on the Temp-Hum 14 Click board.
  * @param[in] ctx : Click context object.
  * See #temphum14_t object definition for detailed explanation.
  * @param[in] hum_osr : Humidity OSR
@@ -326,7 +326,7 @@ void temphum14_set_conversion ( temphum14_t *ctx, uint8_t hum_osr, uint8_t temp_
  * @brief Read temperature and humidity data function.
  * @details The function read temperature and humidity data
  * of the HTU31D RH/T SENSOR IC Digital Relative Humidity sensor with
- * Temperature output on the Temp-Hum 14 click board.
+ * Temperature output on the Temp-Hum 14 Click board.
  * @param[in] ctx : Click context object.
  * See #temphum14_t object definition for detailed explanation.
  * @param[out] p_rx_data : Pointer to the memory location where data be stored.
@@ -338,7 +338,7 @@ void temphum14_read_t_and_rh ( temphum14_t *ctx, uint8_t *p_rx_data );
  * @brief Get temperature and humidity data function.
  * @details The function get temperature and humidity value
  * of the HTU31D RH/T SENSOR IC Digital Relative Humidity sensor with
- * Temperature output on the Temp-Hum 14 click board.
+ * Temperature output on the Temp-Hum 14 Click board.
  * @param[in] ctx : Click context object.
  * See #temphum14_t object definition for detailed explanation.
  * @param[out] temp : Pointer to the memory location where temperature (degree Celsius) be stored.
@@ -351,7 +351,7 @@ void temphum14_get_temp_and_hum ( temphum14_t *ctx, float *temp, float *hum );
  * @brief Read humidity data function.
  * @details The function read humidity data
  * of the HTU31D RH/T SENSOR IC Digital Relative Humidity sensor with
- * Temperature output on the Temp-Hum 14 click board.
+ * Temperature output on the Temp-Hum 14 Click board.
  * @param[in] ctx : Click context object.
  * See #temphum14_t object definition for detailed explanation.
  * @param[out] p_rx_data : Pointer to the memory location where data be stored.
@@ -363,7 +363,7 @@ void temphum14_read_rh ( temphum14_t *ctx, uint8_t *p_rx_data );
  * @brief Get humidity data function.
  * @details The function get humidity value
  * of the HTU31D RH/T SENSOR IC Digital Relative Humidity sensor with
- * Temperature output on the Temp-Hum 14 click board.
+ * Temperature output on the Temp-Hum 14 Click board.
  * @param[in] ctx : Click context object.
  * See #temphum14_t object definition for detailed explanation.
  * @return Humidity value (percentage).
@@ -375,7 +375,7 @@ float temphum14_get_hum ( temphum14_t *ctx );
  * @brief Soft reset function.
  * @details The function is performed by a software reset
  * of the HTU31D RH/T SENSOR IC Digital Relative Humidity sensor with
- * Temperature output on the Temp-Hum 14 click board.
+ * Temperature output on the Temp-Hum 14 Click board.
  * @param[in] ctx : Click context object.
  * See #temphum14_t object definition for detailed explanation.
  * @return Nothing.
@@ -386,7 +386,7 @@ void temphum14_soft_reset ( temphum14_t *ctx );
  * @brief Enable heater function.
  * @details The function set heater status ( disable or enable )
  * of the HTU31D RH/T SENSOR IC Digital Relative Humidity sensor with
- * Temperature output on the Temp-Hum 14 click board.
+ * Temperature output on the Temp-Hum 14 Click board.
  * @param[in] en_heater : Heater enable and disable.
  * @param[in] ctx : Click context object.
  * See #temphum14_t object definition for detailed explanation.
@@ -398,7 +398,7 @@ void temphum14_set_heater ( temphum14_t *ctx, uint8_t en_heater );
  * @brief Get diagnostic status function.
  * @details The function get diagnostic status
  * of the HTU31D RH/T SENSOR IC Digital Relative Humidity sensor with
- * Temperature output on the Temp-Hum 14 click board.
+ * Temperature output on the Temp-Hum 14 Click board.
  * @param[in] ctx : Click context object.
  * See #temphum14_t object definition for detailed explanation.
  * @param[out] diag_data : pointer to the memory location where structure where data be stored.
@@ -410,7 +410,7 @@ void temphum14_get_diagnostic ( temphum14_t *ctx, temphum14_diagn_t *diag_data )
  * @brief Get serial number function.
  * @details The function get the serial number
  * of the HTU31D RH/T SENSOR IC Digital Relative Humidity sensor with
- * Temperature output on the Temp-Hum 14 click board.
+ * Temperature output on the Temp-Hum 14 Click board.
  * @param[in] ctx : Click context object.
  * See #temphum14_t object definition for detailed explanation.
  * @return 24-bit serial number.

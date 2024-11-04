@@ -1,6 +1,6 @@
 
 ---
-# Clock Gen 4 click
+# Clock Gen 4 Click
 
 > Clock Gen 4 Click is a compact add-on board that contains both a clock generator and a multiplier/jitter reduced clock frequency synthesizer. This board features the CS2200-CP, an analog PLL architecture comprised of a Delta-Sigma fractional-N frequency synthesizer from Cirrus Logic. This clocking device utilizes a programmable phase lock loop and allows frequency synthesis and clock generation from a stable reference clock. It generates a low-jitter PLL clock from an external crystal, supports both I²C and SPI for full software control, and also has configurable auxiliary clock output. This Click board™ is suitable for MCU clock source, or in applications like digital effects processors, digital mixing consoles, and many more.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/clockgen4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/clock-gen-4-click)
+[Click Product page](https://www.mikroe.com/clock-gen-4-click)
 
 ---
 
@@ -69,7 +69,7 @@ void clockgen4_glob_cfg ( clockgen4_t *ctx, uint8_t glob_cfg );
 
 ## Example Description
 
-> This example demonstrates the uses of Clock Gen 4 click which is based on CS2200-CP for changing the channel clock. The CS2200-CP is an extremely versatile system clocking 
+> This example demonstrates the uses of Clock Gen 4 Click which is based on CS2200-CP for changing the channel clock. The CS2200-CP is an extremely versatile system clocking 
 device that utilizes a programmable phase lock loop. The CS2200-CP is based on an analog PLL architecture and this architecture allows for frequency synthesis and clock generation
 from a stable reference clock. The CS2200-CP supports both I²C and SPI for full software control.
 
@@ -123,7 +123,7 @@ void application_init ( void ){
 
 ### Application Task
 
-> Clock Gen 4 click is used in this example to generate and change the clock on the output channel.
+> Clock Gen 4 Click is used in this example to generate and change the clock on the output channel.
 
 ```c
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# BLE 7 click
+# BLE 7 Click
 
-The BLE 7 click is a Click board™ witch provide BT/BLE connectivity for any embedded application. BLE 7 click based on the BGX13S22GA-V31, a SiP module from Silicon Labs with a buit-in antenna. Click board™ an ultra-small, high-performing, Bluetooth low energy module for easy integration of Bluetooth low energy connectivity (BLE) into various electronic devices. Given its features, this click can be used for health, sports, and wellness devices as well as Industrial, home, and building automation; and smart phone, tablet, and PC accessories.
+The BLE 7 Click is a Click board™ witch provide BT/BLE connectivity for any embedded application. BLE 7 Click based on the BGX13S22GA-V31, a SiP module from Silicon Labs with a buit-in antenna. Click board™ an ultra-small, high-performing, Bluetooth low energy module for easy integration of Bluetooth low energy connectivity (BLE) into various electronic devices. Given its features, this Click can be used for health, sports, and wellness devices as well as Industrial, home, and building automation; and smart phone, tablet, and PC accessories.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ble7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ble-7-click)
+[Click Product page](https://www.mikroe.com/ble-7-click)
 
 ---
 
@@ -59,7 +59,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes the driver and configures the click board.
+> Initializes the driver and configures the Click board.
 
 ```c
 
@@ -185,7 +185,7 @@ void application_task ( void )
 ## Note
 
 > We have used the BLE Scanner smartphone application for the test. 
-> A smartphone and the click board must be paired in order to exchange messages with each other.
+> A smartphone and the Click board must be paired in order to exchange messages with each other.
 > For more information about the BGX module commands, please refer to the following link:
 > https://docs.silabs.com/gecko-os/1/bgx/latest/commands
 
@@ -200,7 +200,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

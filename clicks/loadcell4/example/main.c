@@ -3,7 +3,7 @@
  * @brief LoadCell4 Click example
  *
  * # Description
- * This is an example that demonstrates the use of the Load Cell 4 click board.
+ * This is an example that demonstrates the use of the Load Cell 4 Click board.
  *
  * The demo application is composed of two sections :
  *
@@ -12,7 +12,7 @@
  * Sets tare the scale, calibrate scale and start measurements.
  *
  * ## Application Task
- * The Load Cell 4 click board can be used to measure weight,
+ * The Load Cell 4 Click board can be used to measure weight,
  * shows the measurement of scales in grams [ g ].
  * Results are being sent to the Usart Terminal where you can track their changes.
  * All data logs write on USB uart changes for every 4 sec.

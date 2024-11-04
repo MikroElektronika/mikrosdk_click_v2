@@ -3,21 +3,21 @@
  * @brief MatrixG Click example
  *
  * # Description
- * This example showcases how to prepare the logger and click modules for use and 
- * how to display ASCII characters on both of the LED segments of the click.
+ * This example showcases how to prepare the logger and Click modules for use and 
+ * how to display ASCII characters on both of the LED segments of the Click.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * This function initializes and configures the logger and click modules. After the initialization of the logger module, 
- * communication, mikrobus and pin setup, some of the registers are configured in order for the click module to work properly.
+ * This function initializes and configures the logger and Click modules. After the initialization of the logger module, 
+ * communication, mikrobus and pin setup, some of the registers are configured in order for the Click module to work properly.
  *
  * ## Application Task
  * This function displays two strings on each of the LED segments, showing one character every second. 
  * It should display " Mikroelektronika" on the left one and "Mikroelektronika " on the right.
  *
  * @note
- * The click has two chips, each controlling one of the LED segments, on and requires you to write data to both at the same time. 
+ * The Click has two chips, each controlling one of the LED segments, on and requires you to write data to both at the same time. 
  * Writing to one specific chip will not work. If you wish to display characters on a single segment, you have to send ' ' characters to the other segment.
  *
  * @author Jelena Milosavljevic

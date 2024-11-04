@@ -3,8 +3,8 @@
  * @brief IR2 Click example
  *
  * # Description
- * This example demonstrates the use of an IR 2 click board by showing
- * the communication between the two click boards configured as a receiver and transmitter
+ * This example demonstrates the use of an IR 2 Click board by showing
+ * the communication between the two Click boards configured as a receiver and transmitter
  * using the NEC protocol.
  *
  * The demo application is composed of two sections :
@@ -27,7 +27,7 @@
 #define IR2_TRANSMITTER_MODE    // Uncomment this line to switch to the transmitter mode
 
 #define IR2_ADDRESS     0xAB
-#define IR2_DATA        "MikroE - IR 2 click board\r\n"
+#define IR2_DATA        "MikroE - IR 2 Click board\r\n"
 
 static ir2_t ir2;
 static log_t logger;

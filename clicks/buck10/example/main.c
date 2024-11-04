@@ -3,13 +3,13 @@
  * @brief Buck 10 Click Example.
  *
  * # Description
- *  Demo application shows basic usage of Buck 10 click.
+ *  Demo application shows basic usage of Buck 10 Click.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
  *  Configuring clicks and log objects.
- *  Settings the click in the default configuration.
+ *  Settings the Click in the default configuration.
  * 
  * ## Application Task  
  *  Enable and Disable device every 5 seconds.

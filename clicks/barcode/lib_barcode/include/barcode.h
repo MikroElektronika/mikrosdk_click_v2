@@ -155,7 +155,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void barcode_cfg_setup ( barcode_cfg_t *cfg );
@@ -165,7 +165,7 @@ void barcode_cfg_setup ( barcode_cfg_t *cfg );
  * @param barcode Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 BARCODE_RETVAL barcode_init ( barcode_t *ctx, barcode_cfg_t *cfg );
 
@@ -199,6 +199,6 @@ uint16_t barcode_generic_read ( barcode_t *ctx, char *data_buf, uint16_t max_len
 #endif  // BARCODE_H
 
 /** \} */ // End public_function group
-/** \} */ // End click Driver group
+/** \} */ // End Click Driver group
 
 // ------------------------------------------------------------------------ END

@@ -1,6 +1,6 @@
 
 ---
-# LTE IoT 12 click
+# LTE IoT 12 Click
 
 > LTE IoT 12 Click is a compact add-on board designed for low-power LTE Cat M1, NB-IoT, and EGPRS communication in IoT applications. This board features the BG95-M3 multi-mode data-only from Quectel, which also integrates GNSS (GPS, GLONASS, BDS, Galileo, QZSS) for precise location tracking. The board supports a wide range of LTE and 2G bands, offers ultra-low power consumption, and features advanced security via an ARM Cortex A7 processor with TrustZone technology. It includes UART and USB interfaces for easy communication, GNSS data output, and firmware upgrades.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/lteiot12_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lte-iot-12-click)
+[Click Product page](https://www.mikroe.com/lte-iot-12-click)
 
 ---
 
@@ -57,7 +57,7 @@ void lteiot12_set_sim_apn ( lteiot12_t *ctx, uint8_t *sim_apn );
 void lteiot12_send_sms_text ( lteiot12_t *ctx, uint8_t *phone_number, uint8_t *sms_text );
 ```
 
-- `lteiot12_cmd_run` This function sends a specified command to the click module.
+- `lteiot12_cmd_run` This function sends a specified command to the Click module.
 ```c
 void lteiot12_cmd_run ( lteiot12_t *ctx, uint8_t *cmd );
 ```
@@ -201,7 +201,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

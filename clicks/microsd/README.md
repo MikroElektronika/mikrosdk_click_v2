@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# microSD click
+# microSD Click
 
-> Need more additional memory? We've got just the thing for you - microSD click. It features a microSD card slot for microSD cards used as a mass storage media for portable devices. microSD click is designed to run on 3.3V power supply. Industry standard SPI interface ensures simple communication at high data rates. Use it for reading or storing data like music, text files, videos and more.
+> Need more additional memory? We've got just the thing for you - microSD Click. It features a microSD card slot for microSD cards used as a mass storage media for portable devices. microSD Click is designed to run on 3.3V power supply. Industry standard SPI interface ensures simple communication at high data rates. Use it for reading or storing data like music, text files, videos and more.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/microsd_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/microsd-click)
+[Click Product page](https://www.mikroe.com/microsd-click)
 
 ---
 
@@ -48,7 +48,7 @@ err_t microsd_init ( microsd_t *ctx, microsd_cfg_t *cfg );
 
 #### Example key functions :
 
-- `microsd_check_card_detection` This function checks and waits for a microSD card to be inserted to the click board.
+- `microsd_check_card_detection` This function checks and waits for a microSD card to be inserted to the Click board.
 ```c
 void microsd_check_card_detection ( microsd_t *ctx );
 ```
@@ -65,13 +65,13 @@ void microsd_display_directory ( uint8_t *dir_path );
 
 ## Example Description
 
-> This example demonstrates a basic file system functionality and operations with files and directories using a microSD click board.
+> This example demonstrates a basic file system functionality and operations with files and directories using a microSD Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and logger and performs a several operations with file system that demonstrates the basic usage of microSD click board.
+> Initializes the driver and logger and performs a several operations with file system that demonstrates the basic usage of microSD Click board.
 
 ```c
 
@@ -239,7 +239,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

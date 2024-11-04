@@ -3,7 +3,7 @@
  * \brief SmartDof Click example
  * 
  * # Description
- * This click integrates a triaxial accelerometer, triaxial gyroscope and magnetometer.
+ * This Click integrates a triaxial accelerometer, triaxial gyroscope and magnetometer.
  * It can provide very accurate and precise 3D acceleration, magnetic, and angular velocity data, in real-time. 
  * 
  * The demo application is composed of two sections :

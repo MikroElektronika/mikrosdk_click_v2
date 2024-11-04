@@ -3,6 +3,6 @@
     "description": "Analog MUX 5 Click is a compact add-on board that switches one of many inputs to one output. This board features the MAX4634, a fast, low-voltage four-channel CMOS analog multiplexer from Analog Devices. This low-voltage multiplexer operates from both mikroBUS™ power rails and features 4Ω maximum ON-resistance (RON). CMOS switch construction allows the processing of analog signals within the supply voltage range. It is also characterized by an easy way of management, only through a couple of signals from the mikroBUS™ socket. This Click board™ is suitable for various applications, from industrial and instrumentation to medical, consumer, communications, and more.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MAX4634"],
+    "hw" : ["Click","MAX4634"],
     "category" : ["Port expander"]
 }

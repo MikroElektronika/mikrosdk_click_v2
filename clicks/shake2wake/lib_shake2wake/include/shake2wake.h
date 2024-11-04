@@ -311,7 +311,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void shake2wake_cfg_setup ( shake2wake_cfg_t *cfg );
@@ -321,7 +321,7 @@ void shake2wake_cfg_setup ( shake2wake_cfg_t *cfg );
  * @param shake2wake Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t shake2wake_init ( shake2wake_t *ctx, shake2wake_cfg_t *cfg );
 
@@ -330,7 +330,7 @@ err_t shake2wake_init ( shake2wake_t *ctx, shake2wake_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @details This function executes default configuration for Shake2Wake click.
+ * @details This function executes default configuration for Shake2Wake Click.
  */
 void shake2wake_default_cfg ( shake2wake_t *ctx );
 
@@ -849,6 +849,6 @@ uint8_t shake2wake_check_int ( shake2wake_t *ctx );
 #endif  // _SHAKE2WAKE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

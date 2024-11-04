@@ -3,6 +3,6 @@
     "description": "Proximity 10 Click is a versatile proximity detection device on a Click board™. It can detect a foreign object distanced up to 20cm.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","SI1143"],
+    "hw" : ["Click","SI1143"],
     "category" : ["Proximity"] 
 }

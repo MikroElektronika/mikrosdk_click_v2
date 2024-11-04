@@ -3,8 +3,8 @@
  * @brief FT Click example
  * 
  * # Description
- * This example demonstrates the use of an FT click board by showing
- * the communication between the two click boards.
+ * This example demonstrates the use of an FT Click board by showing
+ * the communication between the two Click boards.
  *
  * The demo application is composed of two sections :
  * 
@@ -27,7 +27,7 @@
 #define DEMO_APP_TRANSMITTER
 
 // Text message to send in the transmitter application mode
-#define DEMO_TEXT_MESSAGE           "MIKROE - FT click board\r\n\0"
+#define DEMO_TEXT_MESSAGE           "MIKROE - FT Click board\r\n\0"
 
 static ft_t ft;
 static log_t logger;

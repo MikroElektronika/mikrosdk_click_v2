@@ -146,7 +146,7 @@ typedef enum
 
 /**
  * @brief Angle 10 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #angle10_cfg_t object definition for detailed explanation.
@@ -158,7 +158,7 @@ void angle10_cfg_setup ( angle10_cfg_t *cfg );
 /**
  * @brief Angle 10 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #angle10_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -198,7 +198,7 @@ err_t angle10_read_voltage ( angle10_t *ctx, float *voltage );
 
 /**
  * @brief Angle 10 set vref function.
- * @details This function sets the voltage reference for Angle 10 click driver.
+ * @details This function sets the voltage reference for Angle 10 Click driver.
  * @param[in] ctx : Click context object.
  * See #angle10_t object definition for detailed explanation.
  * @param[in] vref : Reference voltage (volts).

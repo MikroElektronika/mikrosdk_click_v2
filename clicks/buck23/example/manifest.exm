@@ -3,6 +3,6 @@
     "description": "Buck 23 Click is a compact add-on board with a DC-DC power converter that steps down the voltage from its input to its output. This board features the MAX20010C, a fully-integrated, high-efficiency, synchronous, step-down converter from Analog Devices. The MAX20010C achieves 6A continuous output current over a wide input supply range from 3V to 5.5V. It offers ±2% output voltage accuracy and can operate efficiently over interface-configurable output voltage load range from 0.5V to 1.58V. The MAX20010C also offers programmable soft-start, overcurrent, and overtemperature protections.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MAX20010CATPX/V+"],
+    "hw" : ["Click","MAX20010CATPX/V+"],
     "category" : ["Click Boards > Power management > Buck"]
 }

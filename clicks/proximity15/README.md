@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Proximity 15 click
+# Proximity 15 Click
 
 > Proximity 15 Click is a compact add-on board that contains a close-range proximity sensing solution. This board features the VL53L1, a state-of-the-art, Time-of-Flight (ToF), a laser-ranging miniature sensor from STMicroelectronics.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/proximity15_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/proximity-15-click)
+[Click Product page](https://www.mikroe.com/proximity-15-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t proximity15_set_timing_budget ( proximity15_t *ctx, proximity15_timing_bud
 
 ## Example Description
 
-> This example demonstrates the use of Proximity 15 click board.
+> This example demonstrates the use of Proximity 15 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which 
+> Initializes the driver and performs the Click default configuration which 
 enables the sensor and sets it to long distance mode with 50ms timing budget and 100ms inter measurement periods.
 
 ```c
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

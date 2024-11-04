@@ -1,6 +1,6 @@
 
 ---
-# IR Sense 5 click
+# IR Sense 5 Click
 
 > IR Sense 5 Click is a compact add-on board designed for accurate, non-contact surface temperature measurement. This board features the ZTP-148SRC1, a thermopile IR sensor from Amphenol, with a measurement range from -20 to +100°C, an active area of 0.7x0.7mm², and a typical field of view of 85 degrees. The board also integrates an OPA2365AIDR OpAmp for signal amplification and an MCP3221 analog-to-digital converter for digitizing the output. Additional features include output offset selection and test points for signal monitoring.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/irsense5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ir-sense-5-click)
+[Click Product page](https://www.mikroe.com/ir-sense-5-click)
 
 ---
 
@@ -140,7 +140,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

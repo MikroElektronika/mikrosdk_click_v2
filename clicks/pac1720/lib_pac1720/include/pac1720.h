@@ -289,7 +289,7 @@ typedef enum
 
 /**
  * @brief PAC1720 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #pac1720_cfg_t object definition for detailed explanation.
@@ -301,7 +301,7 @@ void pac1720_cfg_setup ( pac1720_cfg_t *cfg );
 /**
  * @brief PAC1720 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #pac1720_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -317,7 +317,7 @@ err_t pac1720_init ( pac1720_t *ctx, pac1720_cfg_t *cfg );
 /**
  * @brief PAC1720 default configuration function.
  * @details This function executes a default configuration of PAC1720
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #pac1720_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

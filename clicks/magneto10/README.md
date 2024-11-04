@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Magneto 10 click
+# Magneto 10 Click
 
 > Magneto 10 Click is a compact add-on board that contains a 3D magnetometer. This board features the MLX90392, a +/-5mT range magnetometer for low-noise applications from Melexis Technologies. The MLX90392, specially designed for micropower applications, measures magnetic fields along the three axes (X, Y being in a plane parallel to the surface of the die, and Z being perpendicular to the surface).
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/magneto10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/magneto-10-click)
+[Click Product page](https://www.mikroe.com/magneto-10-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t magneto10_set_operating_mode ( magneto10_t *ctx, uint8_t mode );
 
 ## Example Description
 
-> This example demonstrates the use of Magneto 10 click board.
+> This example demonstrates the use of Magneto 10 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

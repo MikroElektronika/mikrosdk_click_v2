@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# SHT AN click
+# SHT AN Click
 
 SHT AN Click is a sensorics based add on board which can be used for measuring humidity and temperature. It features fully calibrated, linearized and temperature compensated SHT31-ARP-B sensor with analog output.
 
@@ -9,7 +9,7 @@ SHT AN Click is a sensorics based add on board which can be used for measuring h
   <img src="https://download.mikroe.com/images/click_for_ide/shtan_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/sht-an-click)
+[Click Product page](https://www.mikroe.com/sht-an-click)
 
 ---
 
@@ -54,14 +54,14 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 > void shtan_set_mode ( shtan_t *ctx, uint8_t adc_mode );
  
 - Function hardware reset the SHT3x-ARP Humidity and Temperature Sensor IC
-- on SHT AN click by cleared to '0' state of the RST pin,
+- on SHT AN Click by cleared to '0' state of the RST pin,
 - wait the 100 ms, sets to '1' state of the RST pin.
 > void shtan_reset ( shtan_t *ctx );
 
 
 ## Examples Description
 
-> This example demonstrates the use of SHT AN click to measure temperature and humidity.
+> This example demonstrates the use of SHT AN Click to measure temperature and humidity.
 
 
 **The demo application is composed of two sections :**
@@ -98,7 +98,7 @@ void application_init ( void )
     shtan_init( &shtan, &cfg );
 
     log_printf( &logger, "------------------\r\n" );
-    log_printf( &logger, "   SHT AN click   \r\n" );
+    log_printf( &logger, "   SHT AN Click   \r\n" );
     log_printf( &logger, "------------------\r\n" );
     Delay_ms ( 1000 );
     Delay_ms ( 100 );
@@ -152,7 +152,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

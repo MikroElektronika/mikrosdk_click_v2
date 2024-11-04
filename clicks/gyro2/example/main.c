@@ -8,10 +8,10 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initialize the communication interface and configure the click board.  
+ * Initialize the communication interface and configure the Click board.  
  * 
  * ## Application Task  
- * Read the x,y,z and temperature data from the click board and display the resoults on the serial port.
+ * Read the x,y,z and temperature data from the Click board and display the resoults on the serial port.
  * 
  * 
  * \author MikroE Team

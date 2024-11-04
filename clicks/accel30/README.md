@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Accel 30 click
+# Accel 30 Click
 
 > Accel 30 Click is a compact add-on board that contains an acceleration sensor. This board features the MC3635, an ultra-low power, low-noise, integrated digital output 3-axis accelerometer from MEMSIC. The MC3635 allows selectable full-scale acceleration measurements in ranges of ±2g, ±4g, ±8g, ±12g, or ±16g in three axes with a configurable host interface that supports both SPI and I2C serial communication. It also supports high-resolution, low-power operating modes and interrupt feature for various events allowing maximum flexibility to meet multiple use case needs.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/accel30_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/accel-30-click)
+[Click Product page](https://www.mikroe.com/accel-30-click)
 
 ---
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

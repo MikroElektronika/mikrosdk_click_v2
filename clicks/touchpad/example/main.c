@@ -11,7 +11,7 @@
  * 
  * ## Application Init 
  * Configuring clicks and log objects.
- * Setting the click in the default configuration.
+ * Setting the Click in the default configuration.
  * 
  * ## Application Task  
  * Reads every touch and gesture and this data logs to USBUART.

@@ -240,7 +240,7 @@ typedef enum
 
 /**
  * @brief GNSS 18 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #gnss18_cfg_t object definition for detailed explanation.
@@ -252,7 +252,7 @@ void gnss18_cfg_setup ( gnss18_cfg_t *cfg );
 /**
  * @brief GNSS 18 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #gnss18_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -268,7 +268,7 @@ void gnss18_drv_interface_selection ( gnss18_cfg_t *cfg, gnss18_drv_t drv_sel );
 /**
  * @brief GNSS 18 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #gnss18_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

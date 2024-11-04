@@ -169,7 +169,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void mram_cfg_setup ( mram_cfg_t *cfg );
@@ -179,7 +179,7 @@ void mram_cfg_setup ( mram_cfg_t *cfg );
  * @param mram Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t mram_init ( mram_t *ctx, mram_cfg_t *cfg );
 
@@ -188,7 +188,7 @@ err_t mram_init ( mram_t *ctx, mram_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @details This function executes default configuration for MRAM click.
+ * @details This function executes default configuration for MRAM Click.
  */
 void mram_default_cfg ( mram_t *ctx );
 
@@ -300,7 +300,7 @@ void mram_write_data_bytes ( mram_t *ctx, const uint16_t address, uint8_t *buffe
  * @param ctx   Click object.
  * 
  * 
- * @details     Function puts click board into sleep mode.
+ * @details     Function puts Click board into sleep mode.
  */
 void mram_enter_sleep_mode ( mram_t *ctx );
 
@@ -310,7 +310,7 @@ void mram_enter_sleep_mode ( mram_t *ctx );
  * @param ctx   Click object.
  * 
  * 
- * @details     Function wakes up the click board.
+ * @details     Function wakes up the Click board.
  */
 void mram_wake_up_mode ( mram_t *ctx );
 
@@ -342,6 +342,6 @@ void mram_enable_hold_mode ( mram_t *ctx, uint8_t state);
 #endif  // _MRAM_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

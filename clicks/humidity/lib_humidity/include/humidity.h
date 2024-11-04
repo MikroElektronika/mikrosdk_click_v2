@@ -177,7 +177,7 @@ typedef enum
 
 /**
  * @brief Humidity configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #humidity_cfg_t object definition for detailed explanation.
@@ -189,7 +189,7 @@ void humidity_cfg_setup ( humidity_cfg_t *cfg );
 /**
  * @brief Humidity driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #humidity_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -205,7 +205,7 @@ void humidity_drv_interface_selection ( humidity_cfg_t *cfg, humidity_drv_t drv_
 /**
  * @brief Humidity initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #humidity_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -248,7 +248,7 @@ err_t humidity_read_voltage ( humidity_t *ctx, float *voltage );
 
 /**
  * @brief Humidity set vref function.
- * @details This function sets the voltage reference for Humidity click driver.
+ * @details This function sets the voltage reference for Humidity Click driver.
  * @param[in] ctx : Click context object.
  * See #humidity_t object definition for detailed explanation.
  * @param[in] vref : Reference voltage (volts).

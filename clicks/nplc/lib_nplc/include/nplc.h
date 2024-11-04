@@ -199,7 +199,7 @@ typedef enum
 
 /**
  * @brief N-PLC configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #nplc_cfg_t object definition for detailed explanation.
@@ -211,7 +211,7 @@ void nplc_cfg_setup ( nplc_cfg_t *cfg );
 /**
  * @brief N-PLC initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #nplc_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

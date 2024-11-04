@@ -257,7 +257,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void proximity9_cfg_setup ( proximity9_cfg_t *cfg );
@@ -268,7 +268,7 @@ void proximity9_cfg_setup ( proximity9_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 PROXIMITY9_RETVAL proximity9_init ( proximity9_t *ctx, proximity9_cfg_t *cfg );
 
@@ -295,7 +295,7 @@ PROXIMITY9_RETVAL proximity9_init ( proximity9_t *ctx, proximity9_cfg_t *cfg );
  *      set: 2000;
  * </pre>
  *
- * @description This function executes default configuration for Proximity9 click.
+ * @description This function executes default configuration for Proximity9 Click.
  */
 void proximity9_default_cfg ( proximity9_t *ctx );
 
@@ -390,6 +390,6 @@ float proximity9_get_als_lux ( proximity9_t *ctx );
 #endif  // _PROXIMITY9_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

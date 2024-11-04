@@ -3,12 +3,12 @@
  * @brief Waveform4 Click example
  *
  * # Description
- * This example demonstrates the use of Waveform 4 click board.
+ * This example demonstrates the use of Waveform 4 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which
+ * Initializes the driver and performs the Click default configuration which
  * resets the registers and sets the sine wave output with default gain and 
  * default frequency for all channels. After that it displays the list of
  * supported commands on the USB UART.

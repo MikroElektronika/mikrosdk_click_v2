@@ -244,7 +244,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void co2_cfg_setup ( co2_cfg_t *cfg );
@@ -254,7 +254,7 @@ void co2_cfg_setup ( co2_cfg_t *cfg );
  * @param co2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 CO2_RETVAL co2_init ( co2_t *ctx, co2_cfg_t *cfg );
 
@@ -328,6 +328,6 @@ void co2_get_co2_ppm( co2_t *ctx, float *co2_data );
 #endif  // _CO2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -3,7 +3,7 @@
  * @brief Smart Card 2 Click Example.
  *
  * # Description
- * This example demonstrates the use of Smart Card 2 click board by checking
+ * This example demonstrates the use of Smart Card 2 Click board by checking
  * the SIM card presence and activating the card on insert. The card should respond
  * with an ATR (Answer to Reset) message.
  *

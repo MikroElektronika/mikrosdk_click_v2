@@ -155,7 +155,7 @@ extern "C"{
  *
  * @param cfg           Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void mic23099_cfg_setup ( mic23099_cfg_t *cfg );
@@ -167,7 +167,7 @@ void mic23099_cfg_setup ( mic23099_cfg_t *cfg );
  * .
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MIC23099_RETVAL mic23099_init ( mic23099_t *ctx, mic23099_cfg_t *cfg );
 
@@ -176,7 +176,7 @@ MIC23099_RETVAL mic23099_init ( mic23099_t *ctx, mic23099_cfg_t *cfg );
  *
  * @param ctx           Click object.
  *
- * @description This function executes default configuration for MIC23099 click.
+ * @description This function executes default configuration for MIC23099 Click.
  */
 void mic23099_default_cfg ( mic23099_t *ctx );
 
@@ -221,6 +221,6 @@ uint8_t mic23099_check_power_good ( mic23099_t *ctx );
 #endif  // _MIC23099_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

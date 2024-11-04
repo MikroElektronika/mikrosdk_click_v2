@@ -1,6 +1,6 @@
 
 ---
-# 6DOF IMU 18 click
+# 6DOF IMU 18 Click
 
 > 6DOF IMU 18 Click is a compact add-on board with a 6-axis inertial measurement unit. This board features the ICM-42605, a high-performance 6-axis MotionTracking™ IMU from TDK InvenSense.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/6dofimu18_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/6dof-imu-18-click)
+[Click Product page](https://www.mikroe.com/6dof-imu-18-click)
 
 ---
 
@@ -169,7 +169,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

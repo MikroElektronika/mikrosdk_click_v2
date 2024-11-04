@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Accel 15 click
+# Accel 15 Click
 
 Accel 15 Click is a compact add-on board that contains a longevity acceleration sensor. This board features the BMA490L, a high-performance 16-bit digital triaxial acceleration sensor with extended availability of up to ten years from Bosch Sensortech. It allows selectable full-scale acceleration measurements in ranges of ±2g, ±4g, ±8g, and ±16g in three axes with a configurable host interface that supports both I2C and SPI serial communication and with intelligent on-chip motion-triggered interrupt features. Intelligent signal processing and evaluation in the accelerometer ASIC enables advanced gesture recognition for numerous industrial IoT applications where low power consumption is vital. This Click board™ is suitable for home appliances, power tools, and other industrial products whose lifetime is essential.
 
@@ -9,7 +9,7 @@ Accel 15 Click is a compact add-on board that contains a longevity acceleration 
   <img src="https://download.mikroe.com/images/click_for_ide/accel15_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/accel-15-click)
+[Click Product page](https://www.mikroe.com/accel-15-click)
 
 ---
 
@@ -172,7 +172,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

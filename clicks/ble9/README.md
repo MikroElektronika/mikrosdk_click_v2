@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# BLE 9 click
+# BLE 9 Click
 
-BLE 9 Click is a fully embedded stand-alone Bluetooth 5.2 Energy connectivity module, equipped with the EFR32BG22 Series 2 Modules, an ultra-small, high-performing, standalone Bluetooth low energy module for easy integration of Bluetooth low energy connectivity (BLE) into various electronic devices. This module combines a high-performance Arm® Cortex®-M33 CPU microprocessor with FPU, and state-of-the-art power performance. Reliable and easy to use, BLE 9 click is a perfect solution for development of various IoT applications, smart home applications, BLE enabled toys, advanced robotics, and other similar applications.
+BLE 9 Click is a fully embedded stand-alone Bluetooth 5.2 Energy connectivity module, equipped with the EFR32BG22 Series 2 Modules, an ultra-small, high-performing, standalone Bluetooth low energy module for easy integration of Bluetooth low energy connectivity (BLE) into various electronic devices. This module combines a high-performance Arm® Cortex®-M33 CPU microprocessor with FPU, and state-of-the-art power performance. Reliable and easy to use, BLE 9 Click is a perfect solution for development of various IoT applications, smart home applications, BLE enabled toys, advanced robotics, and other similar applications.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ble9_click.png">
 </p>
 
-[click Product page](https://www.mikroe.com/ble-9-click)
+[Click Product page](https://www.mikroe.com/ble-9-click)
 
 ---
 
@@ -34,7 +34,7 @@ Package can be downloaded/installed directly from *NECTO Studio Package Manager*
 
 #### Standard key functions :
 
-- `ble9_cfg_setup` function initializes click configuration structure to initial values.
+- `ble9_cfg_setup` function initializes Click configuration structure to initial values.
 ```c
 void ble9_cfg_setup ( ble9_cfg_t *cfg );
 ```
@@ -58,13 +58,13 @@ err_t ble9_adv_start ( ble9_t *ctx, ble9_adv_mode_discoverable_t discover, ble9_
 
 ## Examples Description
 
-> This example demonstrates the use of BLE 9 click board by processing the incoming data and displaying them on the USB UART.
+> This example demonstrates the use of BLE 9 Click board by processing the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -169,7 +169,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,6 +3,6 @@
     "description": "UPS 3 Click is a compact add-on board that represents a bidirectional active charge/balancing solution. This board features the LTC3110, a bidirectional buck-boost DC/DC regulator/charger combination with selectable operation modes for charging and system backup from Analog Devices. It can autonomously transition from Charge to Backup mode or switch modes based on an external command.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","LTC3110"],
+    "hw" : ["Click","LTC3110"],
     "category" : ["Battery Charger"]
 }

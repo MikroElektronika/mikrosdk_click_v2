@@ -1,8 +1,8 @@
 {
     "name": "WiFi ESP Click",
-    "description": "WiFi ESP click carries the ESP-WROOM-02 module that integrates ESP8266EX.",
+    "description": "WiFi ESP Click carries the ESP-WROOM-02 module that integrates ESP8266EX.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","ESP8266EX"],
+    "hw" : ["Click","ESP8266EX"],
     "category" : ["WiFi"] 
 }

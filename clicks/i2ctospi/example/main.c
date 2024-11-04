@@ -19,12 +19,12 @@
  * clear RT5 register, sets starting time: hours, minutes and seconds ( enable counting ), also write log.
  * 
  * ## Application Task  
- * This is an example which demonstrates the use of RTC 5 click is wired to I2C to SPI click board.
- * I2C to SPI click communicates with register via the I2C interface,
+ * This is an example which demonstrates the use of RTC 5 Click is wired to I2C to SPI Click board.
+ * I2C to SPI Click communicates with register via the I2C interface,
  * serve as an interface between a standard I2C-bus of a microcontroller and an SPI bus.
- * RTC 5 click communicates with register via SPI interface.
+ * RTC 5 Click communicates with register via SPI interface.
  * In this examples, we display RTC time which we received reading from the target register 
- * address of MCP79510 chip on RTC 5 click board via I2C interface of I2C to SPI click board.
+ * address of MCP79510 chip on RTC 5 Click board via I2C interface of I2C to SPI Click board.
  * Results are being sent to the Usart Terminal where you can track their changes.
  * All data logs write on usb uart changes for every 1 sec.
  * 
@@ -32,7 +32,7 @@
  * <pre>
  * Additional Functions :
  *  - void display_log_uart( uint8_t value ) - Write the value of time or date as a two-digit number.
- *  - void rtc5_clear( i2ctospi_t *ctx, i2ctospi_spi_t *spi ) - Clear RTCC and SRAM memory of RTC 5 click.
+ *  - void rtc5_clear( i2ctospi_t *ctx, i2ctospi_spi_t *spi ) - Clear RTCC and SRAM memory of RTC 5 Click.
  *  - void rtc5_set_time_seconds( i2ctospi_t *ctx, i2ctospi_spi_t *spi, uint8_t seconds ) - Set the seconds and enable counting.
  *  - uint8_t rtc5_get_time_seconds( i2ctospi_t *ctx, i2ctospi_spi_t *spi ) - Get the seconds.
  *  - void rtc5_set_time_minutes( uint8_t minutes ) - Set the minutes.

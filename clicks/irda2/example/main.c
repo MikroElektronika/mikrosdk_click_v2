@@ -3,8 +3,8 @@
  * @brief IrDA 2 Click Example.
  *
  * # Description
- * This example demonstrates the use of an IrDA 2 click board by showing
- * the communication between the two click boards.
+ * This example demonstrates the use of an IrDA 2 Click board by showing
+ * the communication between the two Click boards.
  *
  * The demo application is composed of two sections :
  * 
@@ -26,7 +26,7 @@
 #define DEMO_APP_TRANSMITTER
 
 // Text message to send in the transmitter application mode
-#define DEMO_TEXT_MESSAGE           "MIKROE - IrDA 2 click board\r\n\0"
+#define DEMO_TEXT_MESSAGE           "MIKROE - IrDA 2 Click board\r\n\0"
 
 static irda2_t irda2;
 static log_t logger;

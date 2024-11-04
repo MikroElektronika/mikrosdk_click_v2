@@ -287,7 +287,7 @@ typedef enum
 
 /**
  * @brief Nano GPS 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #nanogps3_cfg_t object definition for detailed explanation.
@@ -299,7 +299,7 @@ void nanogps3_cfg_setup ( nanogps3_cfg_t *cfg );
 /**
  * @brief Nano GPS 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #nanogps3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -314,7 +314,7 @@ err_t nanogps3_init ( nanogps3_t *ctx, nanogps3_cfg_t *cfg );
 /**
  * @brief Nano GPS 3 default configuration function.
  * @details This function executes a default configuration of Nano GPS 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #nanogps3_t object definition for detailed explanation.
  * @return Nothing.
@@ -354,7 +354,7 @@ err_t nanogps3_generic_read ( nanogps3_t *ctx, uint8_t *data_out, uint8_t len );
 /**
  * @brief Nano GPS 3 request to send function.
  * @details This function is flow control and uses to sets the request to send logic state
- * of the Nano GPS 3 click board™.
+ * of the Nano GPS 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #nanogps3_t object definition for detailed explanation.
  * @param[in] cts : Request to send state.
@@ -366,7 +366,7 @@ void nanogps3_request_to_send ( nanogps3_t *ctx, uint8_t rts );
 /**
  * @brief Nano GPS 3 clear to send function.
  * @details This function is flow control and uses to get the clear to send logic state
- * of the Nano GPS 3 click board™.
+ * of the Nano GPS 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #nanogps3_t object definition for detailed explanation.
  * @return Status of the clear to send.
@@ -377,7 +377,7 @@ uint8_t nanogps3_clear_to_send ( nanogps3_t *ctx );
 /**
  * @brief Nano GPS 3 set reset state function.
  * @details This function sets RST pin logic state 
- * of the Nano GPS 3 click board™.
+ * of the Nano GPS 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #nanogps3_t object definition for detailed explanation.
  * @param[in] rst_state : Reset pin states.
@@ -389,7 +389,7 @@ void nanogps3_set_reset_state ( nanogps3_t *ctx, uint8_t rst_state );
 /**
  * @brief Nano GPS 3 set force on state function.
  * @details This function controls the power states
- * of the Nano GPS 3 click board™.
+ * of the Nano GPS 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #nanogps3_t object definition for detailed explanation.
  * @param[in] pwr_state : Power pin states.
@@ -401,7 +401,7 @@ void nanogps3_set_force_on_state ( nanogps3_t *ctx, uint8_t pwr_state );
 /**
  * @brief Nano GPS 3 get wakeup pin function.
  * @details This function get logic states of the WUP pin
- * of the Nano GPS 3 click board™.
+ * of the Nano GPS 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #nanogps3_t object definition for detailed explanation.
  * @return WUP pin logic state.

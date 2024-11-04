@@ -3,13 +3,13 @@
  * @brief RTC17 Click example
  *
  * # Description
- * This example demonstrates the use of RTC 17 click board by reading and displaying
+ * This example demonstrates the use of RTC 17 Click board by reading and displaying
  * the time and date values.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and logger and performs the click default configuration
+ * Initializes the driver and logger and performs the Click default configuration
  * which sets 24h time mode and interrupt to be synchronized with second count-up.
  * And after that setting the starting time and date.
  *

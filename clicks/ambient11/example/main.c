@@ -15,7 +15,7 @@
  * makes an initial log.>
  * 
  * ## Application Task  
- * < This example shows the capabilities of the Ambient 11 click
+ * < This example shows the capabilities of the Ambient 11 Click
  *  by measuring ambiental illumination and displaying calculated value
  * via USART terminal in luxes.>
  * 

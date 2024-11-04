@@ -3,18 +3,18 @@
  * @brief Brushless21 Click example
  *
  * # Description
- * This example demonstrates the use of the Brushless 21 click board by driving the 
+ * This example demonstrates the use of the Brushless 21 Click board by driving the 
  * motor at different speeds.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which sets the GPIO 
+ * Initializes the driver and performs the Click default configuration which sets the GPIO 
  * as a default communication and enables the PWM.
  *
  * ## Application Task
  * Controls the motor speed by changing the PWM duty cycle once per second. The duty cycle ranges from 0% to 100%. 
- * When the click board is configured in I2C mode the motor switches the direction at a minimal speed.
+ * When the Click board is configured in I2C mode the motor switches the direction at a minimal speed.
  * Also, the chip internal temperature, VBB voltage and the motor speed readings are supported in I2C mode.
  * Each step will be logged on the USB UART where you can track the program flow.
  *

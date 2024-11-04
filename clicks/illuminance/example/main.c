@@ -3,13 +3,13 @@
  * @brief Illuminance Click example
  *
  * # Description
- * This example demonstrates the use of Illuminance click board by reading
+ * This example demonstrates the use of Illuminance Click board by reading
  * and displaying the RAW channels data measurements.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Waits for the data ready interrupt, then reads the RAW channels data measurements

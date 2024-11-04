@@ -4,7 +4,7 @@
  *
  * # Description
  * This example demonstrates the use of the Water Detect 3 Click board by
- * detecting if water is present on the sensor part of the click.
+ * detecting if water is present on the sensor part of the Click.
  *
  * The demo application is composed of two sections :
  *

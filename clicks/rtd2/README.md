@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# RTD 2 click
+# RTD 2 Click
 
 > RTD 2 Click is a compact add-on board used for applications with resistive elements that change resistance over temperature. This board features the ADS1247, 24-bit analog-to-digital converter with a programmable gain amplifier (PGA) for sensor measurement applications from Texas Instruments.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/rtd2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rtd-2-click)
+[Click Product page](https://www.mikroe.com/rtd-2-click)
 
 ---
 
@@ -53,17 +53,17 @@ void rtd2_default_cfg ( rtd2_t *ctx );
 
 #### Example key functions :
 
-- `rtd2_check_new_data_ready` The function check new data ready of the 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With Programmable Gain Amplifier (PGA) For Sensor Measurement on the RTD 2 click board.
+- `rtd2_check_new_data_ready` The function check new data ready of the 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With Programmable Gain Amplifier (PGA) For Sensor Measurement on the RTD 2 Click board.
 ```c
 uint8_t rtd2_check_new_data_ready ( rtd2_t *ctx );
 ```
 
-- `rtd2_get_temperature` The function read output data and return ambient temperature from the PT100 3-wire temperature probe wired to the 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With Programmable Gain Amplifier (PGA) For Sensor Measurement on the RTD 2 click board.
+- `rtd2_get_temperature` The function read output data and return ambient temperature from the PT100 3-wire temperature probe wired to the 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With Programmable Gain Amplifier (PGA) For Sensor Measurement on the RTD 2 Click board.
 ```c
 float rtd2_get_temperature ( rtd2_t *ctx );
 ```
 
-- `rtd2_enable_start` The function enables ADC conversion of the 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With Programmable Gain Amplifier (PGA) For Sensor Measurement on the RTD 2 click.
+- `rtd2_enable_start` The function enables ADC conversion of the 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With Programmable Gain Amplifier (PGA) For Sensor Measurement on the RTD 2 Click.
 ```c
 void rtd2_enable_start ( rtd2_t *ctx, uint8_t en_start );
 ```
@@ -76,7 +76,7 @@ void rtd2_enable_start ( rtd2_t *ctx, uint8_t en_start );
 
 ### Application Init 
 
-> Initializes the driver, performs a hardware reset, and sets the click default configuration.
+> Initializes the driver, performs a hardware reset, and sets the Click default configuration.
 
 ```c
 
@@ -122,7 +122,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads an ambient temperature measured by the PT100 3-wire temperature probe connected to the RTD 2 click board, and logs the results on the USB UART each second.
+> Reads an ambient temperature measured by the PT100 3-wire temperature probe connected to the RTD 2 Click board, and logs the results on the USB UART each second.
 
 ```c
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

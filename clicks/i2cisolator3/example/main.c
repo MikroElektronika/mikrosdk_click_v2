@@ -3,17 +3,17 @@
  * @brief I2CIsolator3 Click example
  *
  * # Description
- * This is an example that demonstrates the use of the I2C Isolator 3 click board. In this example, we measure temperature
- * from the Thermo 20 click connected to the I2C Isolator 3 click board. 
+ * This is an example that demonstrates the use of the I2C Isolator 3 Click board. In this example, we measure temperature
+ * from the Thermo 20 Click connected to the I2C Isolator 3 Click board. 
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
  * Initializes I2C and start to write log. Initialization driver enables - I2C,
- * set I2C slave address of the Thermo 20 click, performs software reset, also write log.
+ * set I2C slave address of the Thermo 20 Click, performs software reset, also write log.
  *
  * ## Application Task
- * In this example via Thermo 20 click we get the data processed by the function. When the function processes the data, we get
+ * In this example via Thermo 20 Click we get the data processed by the function. When the function processes the data, we get
  * the temperature information. All data logs write on USB UART changes every 3 sec.
  *
  * Additional Functions :
@@ -78,7 +78,7 @@ void application_init ( void ) {
     }
     log_printf( &logger, "  Driver Init. Done  \r\n" );
     log_printf( &logger, "  Set I2C Slave Address   \r\n" );
-    log_printf( &logger, "  of the Thermo 20 click   \r\n" );
+    log_printf( &logger, "  of the Thermo 20 Click   \r\n" );
     Delay_ms ( 100 );
     
     log_printf( &logger, "--------------------------\r\n" );

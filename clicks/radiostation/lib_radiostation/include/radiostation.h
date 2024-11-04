@@ -293,7 +293,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void radiostation_cfg_setup ( radiostation_cfg_t *cfg, bool slave_select );
@@ -304,7 +304,7 @@ void radiostation_cfg_setup ( radiostation_cfg_t *cfg, bool slave_select );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 RADIOSTATION_RETVAL radiostation_init ( radiostation_t *ctx, radiostation_cfg_t *cfg );
 
@@ -312,9 +312,9 @@ RADIOSTATION_RETVAL radiostation_init ( radiostation_t *ctx, radiostation_cfg_t 
  * @brief Click Default Configuration function.
  *
  * @param ctx  Click object.
- * @param cmd  Command click object.
+ * @param cmd  Command Click object.
  *
- * @description This function executes default configuration for RadioStation click.
+ * @description This function executes default configuration for RadioStation Click.
  */
 void radiostation_default_cfg ( radiostation_t *ctx, radiostation_cmd_t *cmd );
 
@@ -344,7 +344,7 @@ void radiostation_read ( radiostation_t *ctx, uint8_t *data_buf, uint8_t len );
  * @brief Radio Station Click Power Up Advanced
  *
  * @param ctx               Click object.
- * @param cmd               Command click object.
+ * @param cmd               Command Click object.
  * @param config            Power Up settings.
  *
  * @description Powers up the chip with custom settings. This function (or radiostation_power_up ) 
@@ -356,7 +356,7 @@ uint8_t radiostation_power_up_advanced ( radiostation_t *ctx, radiostation_cmd_t
  * @brief Radio Station Click Power Up
  *
  * @param ctx  Click object.
- * @param cmd  Command click object.
+ * @param cmd  Command Click object.
  *
  * @description Powers up the chip with default settings. This function should be executed 
  * before sending any commands to the chip.
@@ -367,7 +367,7 @@ uint8_t radiostation_power_up ( radiostation_t *ctx, radiostation_cmd_t *cmd );
  * @brief Radio Station Click Power Down
  *
  * @param ctx  Click object.
- * @param cmd  Command click object.
+ * @param cmd  Command Click object.
  * 
  * @description Powers down the chip. Any command sent after this will not return correct result.
  */
@@ -377,7 +377,7 @@ uint8_t radiostation_power_down ( radiostation_t *ctx, radiostation_cmd_t *cmd )
  * @brief Radio Station Click Get Revision
  *
  * @param ctx                  Click object.
- * @param cmd                  Command click object. 
+ * @param cmd                  Command Click object. 
  * @param ret_vals             Pointer to a buffer that receives revision information.
  *
  * @description Gets the revision information about the chip.
@@ -389,7 +389,7 @@ uint8_t radiostation_get_revision ( radiostation_t *ctx, radiostation_cmd_t *cmd
  * @brief Radio Station Click Set Tune Frequency
  *
  * @param ctx              Click object.
- * @param cmd              Command click object. 
+ * @param cmd              Command Click object. 
  * @param freq             Desired carrier frequency (between 7600 and 10800).
  *
  * @description Sets carrier frequency to specified value. 
@@ -402,7 +402,7 @@ uint8_t radiostation_get_revision1 ( radiostation_t *ctx, uint8_t *ret_vals );
  * @brief Radio Station Click Set Tune Frequency
  *
  * @param ctx              Click object.
- * @param cmd              Command click object. 
+ * @param cmd              Command Click object. 
  * @param freq             Desired carrier frequency (between 7600 and 10800).
  *
  * @description Sets carrier frequency to specified value.
@@ -415,7 +415,7 @@ uint8_t radiostation_set_tune_frequency ( radiostation_t *ctx, radiostation_cmd_
  * @brief Radio Station Click Get Revision
  *
  * @param ctx                 Click object.
- * @param cmd                 Command click object. 
+ * @param cmd                 Command Click object. 
  * @param voltage             Tune power (between 0 and 115/120 dB�V).
  * @param capacitance         Tuning capacitor capacitance (between 0 and 191).
  *
@@ -428,7 +428,7 @@ uint8_t radiostation_set_tune_power ( radiostation_t *ctx,  radiostation_cmd_t *
  * @brief Radio Station Click Get Tuning Measurements
  *
  * @param ctx                 Click object.
- * @param cmd                 Command click object. 
+ * @param cmd                 Command Click object. 
  * @param freq                Frequency at which measurement is performed.
  * @param capacitance         Tuning capacitor capacitance (between 0 and 191).
  *
@@ -440,7 +440,7 @@ uint8_t radiostation_get_tune_measure ( radiostation_t *ctx, radiostation_cmd_t 
  * @brief Getting int pin status
  *
  * @param ctx  Click object.
- * @param cmd  Command click object.
+ * @param cmd  Command Click object.
  * 
  * @description This function get int status.
  */
@@ -450,7 +450,7 @@ uint8_t radiostation_get_int_status ( radiostation_t *ctx, radiostation_cmd_t *c
  * @brief Radio Station Click Busy Wait for STCINT
  *
  * @param ctx  Click object.
- * @param cmd  Command click object.
+ * @param cmd  Command Click object.
  * 
  * @description Should be called after a command that sets STCINT bit if interrupts are not used.
  * Busy waits for the bit to become 1.
@@ -461,7 +461,7 @@ void radiostation_busy_wait_for_stcint ( radiostation_t *ctx, radiostation_cmd_t
  * @brief Radio Station Click Busy Wait for ASQINT
  *
  * @param ctx  Click object.
- * @param cmd  Command click object.
+ * @param cmd  Command Click object.
  * 
  * @description Should be called after a command that sets ASQINT bit if interrupts are not used.
  * Busy waits for the bit to become 1.
@@ -472,7 +472,7 @@ void radiostation_busy_wait_for_asqint ( radiostation_t *ctx, radiostation_cmd_t
  * @brief Radio Station Click Busy Wait for RDSINT
  *
  * @param ctx  Click object.
- * @param cmd  Command click object.
+ * @param cmd  Command Click object.
  *
  * @description Should be called after a command that sets RDSINT bit if interrupts are not used.
  * Busy waits for the bit to become 1.
@@ -483,7 +483,7 @@ void radiostation_busy_wait_for_rdsint ( radiostation_t *ctx, radiostation_cmd_t
  * @brief Radio Station Click Get Tune Status
  *
  * @param ctx                    Click object.
- * @param cmd                    Command click object. 
+ * @param cmd                    Command Click object. 
  * @param clear_stc_status_bit   Clear STC bit.
  * @param ret_vals               Pointer to a buffer that receives tune status.
  *
@@ -497,7 +497,7 @@ uint8_t radiostation_get_tune_status ( radiostation_t *ctx, radiostation_cmd_t *
  * @brief Radio Station Click ASQ Status
  *
  * @param ctx                    Click object.
- * @param cmd                    Command click object.  
+ * @param cmd                    Command Click object.  
  * @param ret_vals               Pointer to a buffer that receives ASQ status.
  *
  * @description Returns status information about the Audio Signal Quality and current FM 
@@ -509,7 +509,7 @@ uint8_t radiostation_get_asq_status ( radiostation_t *ctx, radiostation_cmd_t *c
  * @brief Radio Station Click Set Property
  *
  * @param ctx                     Click object.
- * @param cmd                     Command click object.  
+ * @param cmd                     Command Click object.  
  * @param property_id             ID of the property.
  * @param property_value          Value of the property being set.
  *
@@ -521,7 +521,7 @@ uint8_t radiostation_set_property ( radiostation_t *ctx, radiostation_cmd_t *cmd
  * @brief Radio Station Click Get Property
  *
  * @param ctx                    Click object.
- * @param cmd                    Command click object.   
+ * @param cmd                    Command Click object.   
  * @param property_id            ID of the property.
  *
  * @description Gets specified property. Returns the property value (16 bits).
@@ -535,6 +535,6 @@ uint16_t radiostation_get_property ( radiostation_t *ctx, radiostation_cmd_t *cm
 #endif  // _RADIOSTATION_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

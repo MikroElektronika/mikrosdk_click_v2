@@ -174,7 +174,7 @@ typedef enum
 
 /**
  * @brief SPI Isolator 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #spiisolator2_cfg_t object definition for detailed explanation.
@@ -186,7 +186,7 @@ void spiisolator2_cfg_setup ( spiisolator2_cfg_t *cfg );
 /**
  * @brief SPI Isolator 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #spiisolator2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -233,7 +233,7 @@ err_t spiisolator2_generic_read ( spiisolator2_t *ctx, uint8_t reg, uint8_t *dat
 /**
  * @brief SPI Isolator 2 output enable function.
  * @details The function enable or disable output ( isolation ) of the ISO7741DWR High-Speed, 
- * Robust-EMC Reinforced and Basic Quad-Channel Digital Isolators on SPI Isolator 2 click board.
+ * Robust-EMC Reinforced and Basic Quad-Channel Digital Isolators on SPI Isolator 2 Click board.
  * @param[in] ctx : Click context object.
  * See #spiisolator2_t object definition for detailed explanation.
  * @param[in] en_out : Enable/disable pin.
@@ -245,7 +245,7 @@ void spiisolator2_output_enable( spiisolator2_t *ctx, uint8_t en_out );
 /**
  * @brief SPI Isolator 2 send command function.
  * @details The function sends the desired command to the ISO7741DWR High-Speed, Robust-EMC Reinforced
- * and Basic Quad-Channel Digital Isolators on SPI Isolator 2 click board.
+ * and Basic Quad-Channel Digital Isolators on SPI Isolator 2 Click board.
  * @param[in] ctx : Click context object.
  * See #spiisolator2_t object definition for detailed explanation.
  * @param[in] cmd : 8-bit commands instruction.
@@ -258,7 +258,7 @@ void spiisolator2_set_cmd ( spiisolator2_t *ctx, uint8_t cmd );
  * @brief SPI Isolator 2 write the byte of data function.
  * @details The function writes the byte of data to the targeted 8-bit
  * register address of the ISO7741DWR High-Speed, Robust-EMC Reinforced
- * and Basic Quad-Channel Digital Isolators on SPI Isolator 2 click board.
+ * and Basic Quad-Channel Digital Isolators on SPI Isolator 2 Click board.
  * @param[in] ctx : Click context object.
  * See #spiisolator2_t object definition for detailed explanation.
  * @param[in] reg : 8-bit register address.
@@ -272,7 +272,7 @@ void spiisolator2_write_byte ( spiisolator2_t *ctx, uint8_t reg, uint8_t tx_data
  * @brief SPI Isolator 2 read the byte of data function.
  * @details The function read a the byte of data from the targeted 8-bit
  * register address of the ISO7741DWR High-Speed, Robust-EMC Reinforced
- * and Basic Quad-Channel Digital Isolators on SPI Isolator 2 click board.
+ * and Basic Quad-Channel Digital Isolators on SPI Isolator 2 Click board.
  * @param[in] ctx : Click context object.
  * See #spiisolator2_t object definition for detailed explanation.
  * @param[in] reg : 8-bit register address.
@@ -285,7 +285,7 @@ uint8_t spiisolator2_read_byte ( spiisolator2_t *ctx, uint8_t reg );
  * @brief SPI Isolator 2 burst write function.
  * @details The function writes sequential data starting to the targeted 8-bit register address
  * of the ISO7741DWR High-Speed, Robust-EMC Reinforced and Basic Quad-Channel Digital Isolators 
- * on SPI Isolator 2 click board.
+ * on SPI Isolator 2 Click board.
  * @param[in] ctx : Click context object.
  * See #spiisolator2_t object definition for detailed explanation.
  * @param[in] reg : 8-bit register address.
@@ -300,7 +300,7 @@ void spiisolator2_burst_write ( spiisolator2_t *ctx, uint8_t reg, uint8_t *p_tx_
  * @brief SPI Isolator 2 burst read function.
  * @details The function read sequential data starting from the targeted 8-bit register address
  * of the ISO7741DWR High-Speed, Robust-EMC Reinforced and Basic Quad-Channel Digital Isolators
- * on SPI Isolator 2 click board.
+ * on SPI Isolator 2 Click board.
  * @param[in] ctx : Click context object.
  * See #spiisolator2_t object definition for detailed explanation.
  * @param[in] reg : 8-bit register address.
@@ -315,7 +315,7 @@ void spiisolator2_burst_read ( spiisolator2_t *ctx, uint8_t reg, uint8_t *p_rx_d
  * @brief SPI Isolator 2 multi write function.
  * @details The function writes sequential data starting of the targeted (selected) 8-bit, 16-bit, 
  * 24-bit, or 32-bit register address of the ISO7741DWR High-Speed, Robust-EMC Reinforced
- * and Basic Quad-Channel Digital Isolators on SPI Isolator 2 click board.
+ * and Basic Quad-Channel Digital Isolators on SPI Isolator 2 Click board.
  * @param[in] ctx : Click context object.
  * See #spiisolator2_t object definition for detailed explanation.
  * @param[in] addr : 8-bit register address.
@@ -332,7 +332,7 @@ void spiisolator2_multi_write ( spiisolator2_t *ctx, uint32_t addr, uint8_t addr
  * @brief SPI Isolator 2 multi read function.
  * @details The function read sequential data starting from the targeted (selected) 8-bit, 16-bit, 
  * 24-bit, or 32-bit register address of the ISO7741DWR High-Speed, Robust-EMC Reinforced
- * and Basic Quad-Channel Digital Isolators on SPI Isolator 2 click board.
+ * and Basic Quad-Channel Digital Isolators on SPI Isolator 2 Click board.
  * @param[in] ctx : Click context object.
  * See #spiisolator2_t object definition for detailed explanation.
  * @param[in] addr : 8-bit register address.

@@ -3,7 +3,7 @@
  * @brief RTC 4 Click Example.
  *
  * # Description
- * This example demonstrates the use of the RTC 4 click board.
+ * This example demonstrates the use of the RTC 4 Click board.
  *
  * The demo application is composed of two sections :
  *

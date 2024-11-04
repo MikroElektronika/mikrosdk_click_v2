@@ -238,7 +238,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void thingstream_cfg_setup ( thingstream_cfg_t *cfg );
@@ -248,7 +248,7 @@ void thingstream_cfg_setup ( thingstream_cfg_t *cfg );
  * @param thingstream Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t thingstream_init ( thingstream_t *ctx, thingstream_cfg_t *cfg );
 
@@ -315,6 +315,6 @@ thingstream_error_t thingstream_generic_parser ( char *rsp,  uint8_t command,
 #endif  // _THINGSTREAM_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

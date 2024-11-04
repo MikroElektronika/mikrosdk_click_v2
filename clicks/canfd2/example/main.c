@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and configures the click board for the selected mode.
+ * Initializes the driver and configures the Click board for the selected mode.
  * 
  * ## Application Task  
  * Depending on the selected mode, it reads all the received data or sends the desired message
@@ -32,7 +32,7 @@
 #define DEMO_APP_TRANSMITTER
 
 // Text message to send in the transmitter application mode
-#define DEMO_TEXT_MESSAGE           "MIKROE - CAN FD 2 click board\r\n\0"
+#define DEMO_TEXT_MESSAGE           "MIKROE - CAN FD 2 Click board\r\n\0"
 
 #define PROCESS_BUFFER_SIZE 200
 

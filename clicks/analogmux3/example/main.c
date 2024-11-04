@@ -3,7 +3,7 @@
  * @brief AnalogMux3 Click example
  *
  * # Description
- * This is an example that demonstrates the use of the Analog MUX 3 click board.
+ * This is an example that demonstrates the use of the Analog MUX 3 Click board.
  * This application controls the multiplexing of a single input channel
  * with an eight-channel matrix switch.
  *
@@ -14,7 +14,7 @@
  * set the default configuration and start to write log.
  *
  * ## Application Task
- * This is an example that shows the use of a Analog MUX 3 click board.
+ * This is an example that shows the use of a Analog MUX 3 Click board.
  * In this example, we switch from channel AN0 to channel AN7, 
  * read and display the analog value and voltage on the active channel.
  * Results are being sent to the Usart Terminal where you can track their changes.

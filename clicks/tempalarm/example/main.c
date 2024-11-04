@@ -3,7 +3,7 @@
  * @brief Temp Alarm Click example
  *
  * # Description
- * This example demonstrates the use of Temp Alarm click board by reading and displaying
+ * This example demonstrates the use of Temp Alarm Click board by reading and displaying
  * the temperature measurements and monitoring it.
  *
  * The demo application is composed of two sections :

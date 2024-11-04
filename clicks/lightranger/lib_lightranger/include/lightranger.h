@@ -269,7 +269,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void lightranger_cfg_setup ( lightranger_cfg_t *cfg );
@@ -280,7 +280,7 @@ void lightranger_cfg_setup ( lightranger_cfg_t *cfg );
  * @param lightranger Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LIGHTRANGER_RETVAL lightranger_init ( lightranger_t *ctx, lightranger_cfg_t *cfg );
 
@@ -400,6 +400,6 @@ void lightranger_write_byte ( lightranger_t* ctx, uint16_t reg_addr, uint8_t wri
 #endif  // _LIGHTRANGER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

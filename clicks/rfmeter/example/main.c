@@ -3,15 +3,15 @@
  * \brief Rfmeter Click example
  * 
  * # Description
- * Demo app measures and displays signal strenght by using RF Meter click board.
+ * Demo app measures and displays signal strenght by using RF Meter Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initalizes SPI, LOG and click drivers.
+ * Initalizes SPI, LOG and Click drivers.
  * 
  * ## Application Task  
- * This is an example that shows the capabilities of the RF Meter click by 
+ * This is an example that shows the capabilities of the RF Meter Click by 
  * measuring radio frequency signal strenght.
  * 
  * \author Jovan Stajkovic

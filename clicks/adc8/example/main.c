@@ -8,8 +8,8 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Configuring clicks and log objects.
- * Settings the click in the default configuration.
+ * Configuring Clicks and log objects.
+ * Settings the Click in the default configuration.
  * 
  * ## Application Task  
  * Reads voltage from each channel one by one and the voltage difference 

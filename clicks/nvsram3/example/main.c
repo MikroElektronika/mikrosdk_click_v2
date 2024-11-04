@@ -68,7 +68,7 @@ void application_init ( void )
     }
 
     log_printf( &logger, "-----------------------\r\n" );
-    log_printf( &logger, "     nvSRAM 3 click    \r\n" );
+    log_printf( &logger, "     nvSRAM 3 Click    \r\n" );
     log_printf( &logger, "-----------------------\r\n" );
     
     nvsram3_default_cfg ( &nvsram3 );

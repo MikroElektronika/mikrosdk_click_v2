@@ -3,13 +3,13 @@
  * @brief NFCTag5 Click example
  *
  * # Description
- * This example demonstrates the use of NFC Tag 5 click board by programming the
+ * This example demonstrates the use of NFC Tag 5 Click board by programming the
  * specified NDEF URI record to the memory, and showing the memory read/write feature.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and logger and performs the click default configuration which 
+ * Initializes the driver and logger and performs the Click default configuration which 
  * formats its user memory. After that it programs the specified NDEF URI record to the memory.
  *
  * ## Application Task
@@ -44,7 +44,7 @@
 /**
  * Text message content that will be stored to memory
  */
-#define TEXT_MESSAGE            "MikroE - NFC Tag 5 click"
+#define TEXT_MESSAGE            "MikroE - NFC Tag 5 Click"
 
 static nfctag5_t nfctag5;
 static log_t logger;

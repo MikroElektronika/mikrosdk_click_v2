@@ -1,6 +1,6 @@
 
 ---
-# Heart Rate 2 click
+# Heart Rate 2 Click
 
 Heart Rate 2 Click is an add-on board based on MAXM86161 from Maxim Integrated a complete, integrated, optical data acquisition system, ideal for optical pulse oximetry and heart-rate detection applications. The optical readout has a low-noise signal conditioning analog front-end (AFE), including 19-bit ADC, an industry-lead ambient light cancellation (ALC) circuit, and a picket fence detect and replace algorithm.
 
@@ -8,7 +8,7 @@ Heart Rate 2 Click is an add-on board based on MAXM86161 from Maxim Integrated a
   <img src="https://download.mikroe.com/images/click_for_ide/heartrate2_click.png">
 </p>
 
-[click Product page](https://www.mikroe.com/heart-rate-2-click)
+[Click Product page](https://www.mikroe.com/heart-rate-2-click)
 
 ---
 
@@ -58,7 +58,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example demonstrates the use of Heart rate 2 click board.
+> This example demonstrates the use of Heart rate 2 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -158,7 +158,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

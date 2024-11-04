@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Angle 7 click
+# Angle 7 Click
 
 > Angle 7 Click is a compact add-on board that detects the absolute angular position of a permanent magnet. This board features the AS5600, a programmable Hall-based rotary magnetic position sensor with a high-resolution 12-bit analog or PWM output from ams AG.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/angle7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/angle-7-click)
+[Click Product page](https://www.mikroe.com/angle-7-click)
 
 ---
 
@@ -70,7 +70,7 @@ err_t angle7_get_magnitude ( angle7_t *ctx, uint16_t *magnitude );
 
 ## Example Description
 
-> This example demonstrates the use of Angle 7 click board by reading and displaying
+> This example demonstrates the use of Angle 7 Click board by reading and displaying
 the magnet's angular position in degrees and analog voltage output as well as
 the magnet's status and magnitude.
 
@@ -78,7 +78,7 @@ the magnet's status and magnitude.
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -182,7 +182,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

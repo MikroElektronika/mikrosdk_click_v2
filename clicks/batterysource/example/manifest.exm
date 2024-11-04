@@ -3,6 +3,6 @@
     "description": "Battery Source Click is a compact add-on board designed to boost power from a battery for portable applications. This board features the TPS81256, a high-efficiency step-up converter from Texas Instruments. The board boosts input voltage (2.5V to 5.5V) to 5V/1A on a USB Type-C connector. It operates at a 4MHz switching frequency, enters Power-Save mode at light loads, and reduces supply current to 43μA during light load operation. The board supports over 3W output power and has an input current of less than 1µA in shutdown mode, maximizing battery life.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TPS81256SIPR"],
+    "hw" : ["Click","TPS81256SIPR"],
     "category" : ["Click Boards > Power management > Buck-Boost"]
 }

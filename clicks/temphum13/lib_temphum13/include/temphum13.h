@@ -183,7 +183,7 @@ extern "C"{
  *
  * @param cfg               Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void temphum13_cfg_setup ( temphum13_cfg_t *cfg );
@@ -194,7 +194,7 @@ void temphum13_cfg_setup ( temphum13_cfg_t *cfg );
  * @param ctx               Click object.
  * @param cfg               Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 TEMPHUM13_RETVAL temphum13_init ( temphum13_t *ctx, temphum13_cfg_t *cfg );
 
@@ -204,7 +204,7 @@ TEMPHUM13_RETVAL temphum13_init ( temphum13_t *ctx, temphum13_cfg_t *cfg );
  * @param ctx               Click object.
  *
  * @description This function executes default configuration ( delay 0,5 secs - soft reset -
- * delay 0,5 secs ) for TempHum13 click.
+ * delay 0,5 secs ) for TempHum13 Click.
  */
 void temphum13_default_cfg ( temphum13_t *ctx );
 
@@ -280,7 +280,7 @@ void temphum13_set_user_register ( temphum13_t *ctx, uint8_t register_content );
  *
  * @param ctx               Click object.
  *
- * @description This function performs click soft reset.
+ * @description This function performs Click soft reset.
  */
 void temphum13_soft_reset ( temphum13_t *ctx );
 
@@ -309,7 +309,7 @@ uint8_t temphum13_enable_heater ( temphum13_t *ctx, uint8_t enable_heater );
  *
  * @returns 0 - correct input value, 1 - incorrect input value
  *
- * @description This function sets click measurement resolution.
+ * @description This function sets Click measurement resolution.
  *
  * @note
  * <pre>
@@ -342,6 +342,6 @@ uint8_t temphum13_disable_otp_reload ( temphum13_t *ctx, uint8_t disable_otp_rel
 #endif  // _TEMPHUM13_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

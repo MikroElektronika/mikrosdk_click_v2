@@ -120,7 +120,7 @@ extern "C"{
 
 /**
  * @brief POT configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #pot_cfg_t object definition for detailed explanation.
@@ -132,7 +132,7 @@ void pot_cfg_setup ( pot_cfg_t *cfg );
 /**
  * @brief POT initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #pot_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -178,6 +178,6 @@ err_t pot_read_an_pin_voltage ( pot_t *ctx, float *data_out );
 #endif  // _POT_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------ END

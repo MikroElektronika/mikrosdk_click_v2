@@ -3,15 +3,15 @@
  
 
 ---
-# ADC 4 click
+# ADC 4 Click
 
-ADC 4 click is an advanced analog to digital multichannel converter, which can sample inputs from 16 single-ended channels or 8 differential input channel pairs.
+ADC 4 Click is an advanced analog to digital multichannel converter, which can sample inputs from 16 single-ended channels or 8 differential input channel pairs.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/adc4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/adc-4-click)
+[Click Product page](https://www.mikroe.com/adc-4-click)
 
 ---
 
@@ -108,7 +108,7 @@ void application_init ( void )
 
 > Sequential read of voltage. Information about
 > current voltage is logget to UART. Operation is repeated each second. Settings are set
-> to calculate and convert input voltage from CH0 with external referent voltage set by VREF jumper on the click board.
+> to calculate and convert input voltage from CH0 with external referent voltage set by VREF jumper on the Click board.
 
 ```c
 
@@ -141,7 +141,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

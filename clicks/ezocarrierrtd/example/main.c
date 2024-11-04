@@ -3,13 +3,13 @@
  * @brief EZO Carrier RTD Click Example.
  *
  * # Description
- * This example demonstrates the use of EZO Carrier RTD click board by processing
+ * This example demonstrates the use of EZO Carrier RTD Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver, performs the click default factory reset, and single point calibration at 100 degC.
+ * Initializes the driver, performs the Click default factory reset, and single point calibration at 100 degC.
  *
  * ## Application Task
  * Reads and processes all incoming temperature data from the probe, and displays them on the USB UART in degC.

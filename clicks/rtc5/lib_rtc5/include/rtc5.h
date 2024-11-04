@@ -250,7 +250,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void rtc5_cfg_setup ( rtc5_cfg_t *cfg );
@@ -260,7 +260,7 @@ void rtc5_cfg_setup ( rtc5_cfg_t *cfg );
  * @param rtc5 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 RTC5_RETVAL rtc5_init ( rtc5_t *ctx, rtc5_cfg_t *cfg );
 
@@ -269,7 +269,7 @@ RTC5_RETVAL rtc5_init ( rtc5_t *ctx, rtc5_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for RTC5 click.
+ * @description This function executes default configuration for RTC5 Click.
  *  * @note
  * Set time and date:
  * -------------------
@@ -630,6 +630,6 @@ void rtc5_get_time_and_date ( rtc5_t *ctx, rtc5_timedate_t *timedate_data );
 #endif  // _RTC5_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

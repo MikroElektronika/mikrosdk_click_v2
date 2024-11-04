@@ -3,7 +3,7 @@
  * \brief HallCurrent4 Click example
  * 
  * # Description
- * Demo application shows is reading current data in mA using Hall current 4 click.
+ * Demo application shows is reading current data in mA using Hall current 4 Click.
  *
  * The demo application is composed of two sections :
  * 

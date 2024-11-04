@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# 3 x Buck click
+# 3 x Buck Click
 
-3xBuck click is a triple step-down (buck) converter Click board™. It features three independent output terminals that can provide 1.8V, 3.3V, and 5V with the combined current output up to 3A. 
+3xBuck Click is a triple step-down (buck) converter Click board™. It features three independent output terminals that can provide 1.8V, 3.3V, and 5V with the combined current output up to 3A. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/3xbuck_click.png">
 </p>
 
-[click Product page](https://www.mikroe.com/3xbuck-click)
+[Click Product page](https://www.mikroe.com/3xbuck-click)
 
 ---
 
@@ -48,10 +48,10 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- This function enables desired Buck on the click.
+- This function enables desired Buck on the Click.
 > void c3xbuck_enable_buck ( c3xbuck_t *ctx, uint8_t buck );
  
-- This function disables desired Buck on the click.
+- This function disables desired Buck on the Click.
 > void c3xbuck_disable_buck ( c3xbuck_t *ctx, uint8_t buck );
 
 - This function sets voltage on desired Buck.
@@ -66,7 +66,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -164,7 +164,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

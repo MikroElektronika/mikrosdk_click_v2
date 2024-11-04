@@ -3,7 +3,7 @@
  * \brief 5gNbIot Click example
  * 
  * # Description
- * This example reads and processes data from 5G NB IoT click.
+ * This example reads and processes data from 5G NB IoT Click.
  *
  * The demo application is composed of two sections :
  * 

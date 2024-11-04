@@ -1,6 +1,6 @@
 
 ---
-# Force 3 click
+# Force 3 Click
 
 Force 3 Click is a compact add-on board with circuitry for implementing Force Sensing Resistor into your projects whose resistance changes when a force, pressure, or mechanical stress is applied.
 
@@ -9,7 +9,7 @@ Force 3 Click is a compact add-on board with circuitry for implementing Force Se
 </p>
 
 
-[click Product page](https://www.mikroe.com/force-3-click)
+[Click Product page](https://www.mikroe.com/force-3-click)
 
 ---
 
@@ -49,7 +49,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This application demonstrates the use of Force 3 click board.
+> This application demonstrates the use of Force 3 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -134,7 +134,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

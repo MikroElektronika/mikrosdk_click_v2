@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# DAC 16 click
+# DAC 16 Click
 
 > DAC 16 Click is a compact add-on board, a digital-to-analog converter (DAC) designed for precise voltage and current output applications. This board features the DAC63204-Q1, an automotive-qualified 12-bit DAC from Texas Instruments. This Click board™ features four output channels with flexible configuration options, including adjustable voltage gains and selectable current ranges from ±25μA to ±250μA. It also supports both internal and external voltage references and offers a Hi-Z power-down mode for enhanced protection. Communication with the host MCU is enabled through either a 4-wire SPI or I2C interface, with configurable I2C addresses and a general-purpose I/O pin for additional functionality.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dac16_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dac-16-click)
+[Click Product page](https://www.mikroe.com/dac-16-click)
 
 ---
 
@@ -70,14 +70,14 @@ err_t dac16_stop_function_gen ( dac16_t *ctx, uint8_t dac );
 
 ## Example Description
 
-> This example demonstrates the use of DAC 16 click board by changing the voltage level
+> This example demonstrates the use of DAC 16 Click board by changing the voltage level
 on the OUT0 as well as the waveform signals from a function generator on the OUT1.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -206,7 +206,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

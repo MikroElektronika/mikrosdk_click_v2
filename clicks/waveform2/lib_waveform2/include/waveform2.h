@@ -198,7 +198,7 @@ typedef enum
 
 /**
  * @brief Waveform 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #waveform2_cfg_t object definition for detailed explanation.
@@ -210,7 +210,7 @@ void waveform2_cfg_setup ( waveform2_cfg_t *cfg );
 /**
  * @brief Waveform 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #waveform2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -225,7 +225,7 @@ err_t waveform2_init ( waveform2_t *ctx, waveform2_cfg_t *cfg );
 /**
  * @brief Waveform 2 default configuration function.
  * @details This function executes a default configuration of Waveform 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #waveform2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -408,7 +408,7 @@ void waveform2_mclk_disable ( waveform2_t *ctx );
 
 /**
  * @brief Waveform 2 hardware reset function.
- * @details Function for performing a hardware reset of the click board.
+ * @details Function for performing a hardware reset of the Click board.
  * @param[out] ctx : Click context object.
  * See #waveform2_t object definition for detailed explanation.
  * @return Nothing.

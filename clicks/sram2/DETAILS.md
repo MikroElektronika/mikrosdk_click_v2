@@ -1,6 +1,6 @@
 
 ---
-# SRAM 2 click
+# SRAM 2 Click
 
 SRAM 2 Click is based on ANV32A62A SRAM memory from Anvo-Systems Dresden. It's a 64Kb serial SRAM with a non-volatile SONOS storage element included with each memory cell, organized as 8k words of 8 bits each.
 
@@ -9,7 +9,7 @@ SRAM 2 Click is based on ANV32A62A SRAM memory from Anvo-Systems Dresden. It's a
 </p>
 
 
-[click Product page](https://www.mikroe.com/sram-2-click)
+[Click Product page](https://www.mikroe.com/sram-2-click)
 
 ---
 
@@ -139,7 +139,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

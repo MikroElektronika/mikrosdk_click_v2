@@ -3,7 +3,7 @@
  * @brief POT 5 Click Example.
  *
  * # Description
- * This example demonstrates the use of POT 5 click board by reading and displaying
+ * This example demonstrates the use of POT 5 Click board by reading and displaying
  * the potentiometer position.
  *
  * The demo application is composed of two sections :

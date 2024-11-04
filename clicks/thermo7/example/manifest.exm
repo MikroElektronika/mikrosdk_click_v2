@@ -1,8 +1,8 @@
 {
     "name": "Thermo 7 Click",
-    "description": "Thermo 7 click is a Click board™ equipped with the sensor IC, which can digitize temperature measurements between -55°C and +125°C so that the temperature measurement data can be processed by the host MCU.",
+    "description": "Thermo 7 Click is a Click board™ equipped with the sensor IC, which can digitize temperature measurements between -55°C and +125°C so that the temperature measurement data can be processed by the host MCU.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MCP9800"],
+    "hw" : ["Click","MCP9800"],
     "category" : ["Temperature & humidity"] 
 }

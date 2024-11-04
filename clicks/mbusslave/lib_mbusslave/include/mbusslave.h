@@ -147,7 +147,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void mbusslave_cfg_setup ( mbusslave_cfg_t *cfg );
@@ -157,7 +157,7 @@ void mbusslave_cfg_setup ( mbusslave_cfg_t *cfg );
  * @param mbusslave Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MBUSSLAVE_RETVAL mbusslave_init ( mbusslave_t *ctx, mbusslave_cfg_t *cfg );
 
@@ -184,6 +184,6 @@ int32_t mbusslave_generic_read ( mbusslave_t *ctx, char *data_buf, uint16_t max_
 #endif  // _MBUSSLAVE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

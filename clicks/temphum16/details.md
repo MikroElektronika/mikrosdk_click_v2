@@ -1,6 +1,6 @@
 
 ---
-# Temp&Hum 16 click
+# Temp&Hum 16 Click
 
 Temp&Hum 16 Click is a compact add-on board that represents temperature and humidity sensing solutions. This board features the WSEN-HIDS (2525020210001), a MEMS-based capacitive humidity sensor with an integrated ASIC and I2C and SPI serial communication from Würth Elektronik. A silicon-based temperature sensor is also integrated within the same package. ASIC contains the multiplier, operational amplifier, analog-to-digital converter, and other signal conditioning blocks like controller logics and interrupts. It converts the analog signal from humidity and temperature sensing elements into 16-bit digital humidity and temperature values. The 2525020210001 is factory calibrated for both humidity and temperature measurements with no further calibration required. This Click board™ is an ideal solution to be used in various temperature and humidity-related applications.
 
@@ -8,7 +8,7 @@ Temp&Hum 16 Click is a compact add-on board that represents temperature and humi
   <img src="https://download.mikroe.com/images/click_for_ide/temphum16_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/temphum-16-click)
+[Click Product page](https://www.mikroe.com/temphum-16-click)
 
 ---
 
@@ -168,7 +168,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

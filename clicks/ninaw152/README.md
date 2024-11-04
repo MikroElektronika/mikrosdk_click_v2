@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# NINA-W152 click
+# NINA-W152 Click
 
 > NINA-W152 Click is a compact add-on board designed for seamless integration of Wi-Fi and Bluetooth communication into your projects. Based on the NINA-W152 multi-radio module from u-blox, this Click board™ provides dual-mode wireless connectivity, including Wi-Fi 802.11b/g/n and Bluetooth BR/EDR v4.2+EDR and Bluetooth Low Energy v4.2. It features an internal PIFA antenna for optimal performance and supports communication through UART and SPI interfaces, with secure boot and enterprise-level security protocols (WPA2/WPA3) ensuring reliable operation.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ninaw152_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/nina-w152-click)
+[Click Product page](https://www.mikroe.com/nina-w152-click)
 
 ---
 
@@ -53,12 +53,12 @@ err_t ninaw152_init ( ninaw152_t *ctx, ninaw152_cfg_t *cfg );
 void ninaw152_reset_device ( ninaw152_t *ctx );
 ```
 
-- `ninaw152_send_cmd` This function sends a specified command to the click module.
+- `ninaw152_send_cmd` This function sends a specified command to the Click module.
 ```c
 void ninaw152_send_cmd ( ninaw152_t *ctx, uint8_t *cmd );
 ```
 
-- `ninaw152_send_cmd_with_par` This function sends a command with specified parameter to the click module.
+- `ninaw152_send_cmd_with_par` This function sends a command with specified parameter to the Click module.
 ```c
 void ninaw152_send_cmd_with_par ( ninaw152_t *ctx, uint8_t *at_cmd_buf, uint8_t *param_buf );
 ```
@@ -173,7 +173,7 @@ void application_task ( void )
 
 ## Note
 
-> For the BT example, we have used the Serial Bluetooth Terminal smartphone application for the test. A smartphone and the click board must be paired to exchange messages.
+> For the BT example, we have used the Serial Bluetooth Terminal smartphone application for the test. A smartphone and the Click board must be paired to exchange messages.
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 
@@ -186,7 +186,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

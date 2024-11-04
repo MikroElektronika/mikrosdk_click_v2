@@ -1,8 +1,8 @@
 {
     "name": "Temp Log 6 Click",
-    "description": "Temp-Log 6 click is a temperature sensing Click board™, which features the MAX6642, a specifically designed IC, capable of measuring its own die temperature, as well as a temperature at a remote PN junction. This option makes Temp-Log 6 click well-suited for monitoring the temperature of a CPU, GPU or FPGA, where the PN junction is typically a substrate PNP transistor on the die of the measured IC.",
+    "description": "Temp-Log 6 Click is a temperature sensing Click board™, which features the MAX6642, a specifically designed IC, capable of measuring its own die temperature, as well as a temperature at a remote PN junction. This option makes Temp-Log 6 Click well-suited for monitoring the temperature of a CPU, GPU or FPGA, where the PN junction is typically a substrate PNP transistor on the die of the measured IC.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MAX6642"],
+    "hw" : ["Click","MAX6642"],
     "category" : ["Temperature & humidity"] 
 }

@@ -3,6 +3,6 @@
     "description": "Smart Buck 3 Click is a compact add-on board that contains a high-frequency synchronous step-down DC-DC converter. This board features the TPS62366A, a processor supply with I2C compatible interface and a remote sense from Texas Instruments. As input, it uses voltages in the range of 2.5V up to 5.5V, including support for common battery technologies. As output, the converter can scale voltage from 0.5V up to 1.77V in 10mV steps, retaining up to 2.5A peak output current, operating at 2.5MHz of the typical switching frequency.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TPS62366A"],
+    "hw" : ["Click","TPS62366A"],
     "category" : ["Click Boards > Power management > Buck"]
 }

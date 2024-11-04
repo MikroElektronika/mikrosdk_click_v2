@@ -1,6 +1,6 @@
 
 ---
-# Altitude 5 click
+# Altitude 5 Click
 
 > Altitude 5 Click is a compact add-on board allowing high-resolution barometric pressure measurement. This board features the KP236, an analog barometric air pressure sensor based on a capacitive principle from Infineon Technologies. The KP236 is primarily developed for measuring barometric air pressure but can also be used in other application fields. It is surface micro-machined with a monolithic integrated signal conditioning circuit implemented in BiCMOS technology. The calibrated transfer function converts pressure into an analog output signal in a range of 40kPa to 115kPa. However, the choice of signal processing is up to the user; more precisely, the user can process the output signal in analog or digital form. The high accuracy and the high sensitivity of the KP236 make this Click board™ suitable for advanced automotive applications and industrial and consumer applications.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/altitude5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/altitude-5-click)
+[Click Product page](https://www.mikroe.com/altitude-5-click)
 
 ---
 
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

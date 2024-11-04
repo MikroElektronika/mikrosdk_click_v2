@@ -1,14 +1,14 @@
 
 ---
-# IrThermo 5V click
+# IrThermo 5V Click
 
-IrThermo click 5V is a contactless temperature measurement device that relies on the accurate thermopile sensor chip, which encompasses both the thermopile sensor element and the ASSP. The ASSP - signal conditioning circuitry features 17bit ADC and powerful DSP which allow high degree of accuracy and wide temperature measurement range. The IrThermo click is equipped with both the 10bit PWM interface and the SMBus/I2C interface.
+IrThermo Click 5V is a contactless temperature measurement device that relies on the accurate thermopile sensor chip, which encompasses both the thermopile sensor element and the ASSP. The ASSP - signal conditioning circuitry features 17bit ADC and powerful DSP which allow high degree of accuracy and wide temperature measurement range. The IrThermo Click is equipped with both the 10bit PWM interface and the SMBus/I2C interface.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/irthermo5v_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/irthermo-5v-click)
+[Click Product page](https://www.mikroe.com/irthermo-5v-click)
 
 ---
 
@@ -133,7 +133,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

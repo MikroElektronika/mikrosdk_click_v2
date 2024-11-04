@@ -3,7 +3,7 @@
  * @brief MICRF TX Click Example.
  *
  * # Description
- * This example demonstrates the use of MICRF TX click board by sending
+ * This example demonstrates the use of MICRF TX Click board by sending
  * a predefined message to the receiver.
  *
  * The demo application is composed of two sections :
@@ -15,10 +15,10 @@
  * Sends a predefined message every 3 seconds and displays it on the USB UART.
  *
  * @note
- * The MICRF RX click board is a compatible receiver for the MICRF TX click.
+ * The MICRF RX Click board is a compatible receiver for the MICRF TX Click.
  * Here are a few steps for troubleshooting if you are experiencing issues running
  * this example:
- *  - Make sure the MICRF TX click is set to ASK mode with on-board jumpers.
+ *  - Make sure the MICRF TX Click is set to ASK mode with on-board jumpers.
  *  - Check the MCU clock configuration, use an external oscillator instead of the MCU's
  * internal one for better accuracy on manchester data rate delay.
  *  - Measure the actual data rate on the data line and adjust the MICRFTX_MAN_BIT_LEN_US

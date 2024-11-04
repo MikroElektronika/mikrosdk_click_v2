@@ -147,7 +147,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to
+ * @description This function initializes Click configuration structure to
  * initial state.
  * @note All used pins will be set to unconnected state and AD conversion
  *       configuration will be set to default value using channel 3 on the

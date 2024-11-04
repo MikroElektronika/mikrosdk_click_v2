@@ -3,7 +3,7 @@
  * @brief IrDA 3 Click Example.
  *
  * # Description
- * This example demonstrates the use of IrDA 3 click boards.
+ * This example demonstrates the use of IrDA 3 Click boards.
  * The example can perform both roles, transmitter and receiver.
  *
  * The demo application is composed of two sections :

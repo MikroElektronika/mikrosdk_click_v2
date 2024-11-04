@@ -3,6 +3,6 @@
     "description": "Brushless 8 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the TC78B042FTG, a sine-wave PWM drive three-phase full-wave brushless motor controller from Toshiba Semiconductor.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TC78B042FTG"],
+    "hw" : ["Click","TC78B042FTG"],
     "category" : ["Brushless"]
 }

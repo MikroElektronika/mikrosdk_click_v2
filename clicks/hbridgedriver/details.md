@@ -1,6 +1,6 @@
 
 ---
-# H-Bridge Driver click
+# H-Bridge Driver Click
 
 > H-Bridge Driver Click is a compact add-on board that contains an H-bridge gate driver, also known as a full-bridge pre-driver. This board features the MC33883, an H-Bridge gate driver with an integrated charge pump and independent high and low side gate drive channels from NXP Semiconductors.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/h_bridge_driver_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/h-bridge-driver-click)
+[Click Product page](https://www.mikroe.com/h-bridge-driver-click)
 
 ---
 
@@ -109,7 +109,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Demonstrates use of the H-Bridge Driver click board by turning connected MOSFETs 
+> Demonstrates use of the H-Bridge Driver Click board by turning connected MOSFETs 
 > gates high or low in order to drive the motor forward, in reverse, brake or coast.
 
 ```c
@@ -152,7 +152,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

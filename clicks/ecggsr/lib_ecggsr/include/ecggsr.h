@@ -393,7 +393,7 @@ typedef enum
 
 /**
  * @brief ECG GSR configuration object setup function.
- * @details This function initializes click configuration structure to initial values.
+ * @details This function initializes Click configuration structure to initial values.
  * @param[in] *cfg: Click configuration structure.
  * @note All used pins will be set to unconnected state.
  */
@@ -401,7 +401,7 @@ void ecggsr_cfg_setup( ecggsr_cfg_t *cfg );
 
 /**
  * @brief Initialization function.
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  * @param[in] *ctx Click object.
  * @param[in] *cfg Click configuration structure.
  * @return 0 - OK, 1 - I2C Master Open functionality has failed.

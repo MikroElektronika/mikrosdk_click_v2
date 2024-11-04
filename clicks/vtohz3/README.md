@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# V to Hz 3 click
+# V to Hz 3 Click
 
 > V to Hz 3 Click is a compact add-on board that converts an analog voltage input signal into a specific frequency pulse wave signal. This board features the AD7740, an ultrasmall synchronous voltage-to-frequency converter from Analog Devices. The AD7740 has a linear response, so applying a voltage from 3V up to 5V on its VIN terminal will generate the pulse with a frequency linearly proportional to the input voltage. It contains an integrated 2.5V bandgap reference defining the span of the VFC and can be overdriven using an external reference. The full-scale output frequency is synchronous with the input clock signal provided by the LTC6903 programmable oscillator, with a maximum input frequency of 1MHz. Based on the analog input value, the output frequency goes from 10% to 90% of the input frequency.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/vtohz3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/v-to-hz-3-click)
+[Click Product page](https://www.mikroe.com/v-to-hz-3-click)
 
 ---
 
@@ -65,7 +65,7 @@ uint32_t vtohz3_get_frequency ( vtohz3_t *ctx, float voltage, float vref_in );
 
 ## Example Description
 
-> This example demonstrates the use of the V to Hz 3 click board by calculating the estimated output frequency from the input voltage.
+> This example demonstrates the use of the V to Hz 3 Click board by calculating the estimated output frequency from the input voltage.
 
 **The demo application is composed of two sections :**
 
@@ -141,7 +141,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

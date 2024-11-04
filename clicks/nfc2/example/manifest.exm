@@ -3,6 +3,6 @@
     "description": "NFC 2 Click is a compact add-on board that contains a highly integrated NFC transceiver for contactless communication. This board features the PN7150, the best plug&play high-performance full NFC solution with integrated firmware and NCI interface designed for contactless communication at 13.56 MHz from NXP USA Inc.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","PN7150"],
+    "hw" : ["Click","PN7150"],
     "category" : ["RFID/NFC"]
 }

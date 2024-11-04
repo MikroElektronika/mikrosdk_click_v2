@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initalizes click driver, resets the device, applies default settings
+ * Initalizes Click driver, resets the device, applies default settings
  * and makes an initial log.
  * 
  * ## Application Task  

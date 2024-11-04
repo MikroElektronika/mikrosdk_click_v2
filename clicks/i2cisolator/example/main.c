@@ -9,10 +9,10 @@
  * 
  * ## Application Init 
  * Initialization driver enables - I2C,
- * sets configuration of TMP007 sensor on IrThermo 2 click and start to write log.
+ * sets configuration of TMP007 sensor on IrThermo 2 Click and start to write log.
  * 
  * ## Application Task  
- * In this example we use IrThermo 2 click, measures the temperature with,
+ * In this example we use IrThermo 2 Click, measures the temperature with,
  * and calculate the temperature in degrees Celsius [ C ].
  * Results are being sent to the USART Terminal where you can track their changes.
  * All data logs on usb uart each second.

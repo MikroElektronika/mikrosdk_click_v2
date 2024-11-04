@@ -13,7 +13,7 @@
  * Initializes I2C driver and triggers the built-in calibration.
  *
  * ## Application Task
- * This is an example that demonstrates the use of the Hall Current 9 click board.
+ * This is an example that demonstrates the use of the Hall Current 9 Click board.
  * In this example, we read and display the ADC and current ( mA ) data.
  * Results are being sent to the Usart Terminal where you can track their changes.
  * 
@@ -49,7 +49,7 @@ void application_init ( void ) {
     log_init( &logger, &log_cfg );
     log_printf( &logger, "\r\n" );
     log_printf( &logger, "--------------------------\r\n" );
-    log_printf( &logger, "   Hall Current 9 click   \r\n" );
+    log_printf( &logger, "   Hall Current 9 Click   \r\n" );
     log_printf( &logger, "--------------------------\r\n" );
     log_info( &logger, " Application Init " );
 

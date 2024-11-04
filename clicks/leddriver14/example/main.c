@@ -3,13 +3,13 @@
  * @brief LEDDriver14 Click example
  *
  * # Description
- * This example demonstrates the use of LED Driver 14 click board by controlling
+ * This example demonstrates the use of LED Driver 14 Click board by controlling
  * the brightness of LEDs by changing the PWM Duty Cycle.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Adjusts the LEDs' brightness by changing the PWM duty cycle every 500ms.

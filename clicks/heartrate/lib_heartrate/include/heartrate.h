@@ -265,7 +265,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void heartrate_cfg_setup ( heartrate_cfg_t *cfg );
@@ -276,7 +276,7 @@ void heartrate_cfg_setup ( heartrate_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 HEARTRATE_RETVAL heartrate_init ( heartrate_t *ctx, heartrate_cfg_t *cfg );
 
@@ -285,7 +285,7 @@ HEARTRATE_RETVAL heartrate_init ( heartrate_t *ctx, heartrate_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for HeartRate click.
+ * @description This function executes default configuration for HeartRate Click.
  */
 void heartrate_default_cfg ( heartrate_t *ctx );
 
@@ -317,11 +317,11 @@ uint8_t heartrate_get_part_id ( heartrate_t *ctx );
 uint8_t heartrate_get_config ( heartrate_t *ctx );
 
 /**
- * @brief Function for getting status of heartrate click.
+ * @brief Function for getting status of heartrate Click.
  * 
  * @param ctx  Click object.
  *
- * @description Using this function we can get status of heartrate click.
+ * @description Using this function we can get status of heartrate Click.
  */
 uint8_t heartrate_get_status ( heartrate_t *ctx );
 
@@ -336,12 +336,12 @@ uint8_t heartrate_get_status ( heartrate_t *ctx );
 void heartrate_set_config ( heartrate_t *ctx, uint8_t cfg );
 
 /**
- * @brief Function for setting interrupt for heartrate click.
+ * @brief Function for setting interrupt for heartrate Click.
  * 
  * @param ctx     Click object.
  * @param intrpts Interrup.
  * 
- * @description Using this function we can set interrupt for heartrate click.
+ * @description Using this function we can set interrupt for heartrate Click.
  */
 void heartrate_set_interrupt ( heartrate_t *ctx, uint8_t intrpts );
 
@@ -577,6 +577,6 @@ uint8_t hr_get_status ( heartrate_t *ctx );
 #endif  // _HEARTRATE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

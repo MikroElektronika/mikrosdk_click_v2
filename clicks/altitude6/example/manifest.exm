@@ -3,6 +3,6 @@
     "description": "Altitude 6 Click is a compact add-on board that allows height measurement of an object or point related to sea level or ground level. This board features the MS5611-01BA03, a high-resolution barometric pressure sensor optimized for altimeter applications with an altitude resolution of 10 cm from TE Connectivity. It consists of a high linearity pressure sensor and an ultra-low power 24 bit ΔΣ ADC with internal factory calibrated coefficients. Also, it provides a precise digital 24-bit pressure and temperature value, different operation modes, and a configurable host interface that supports both SPI and I2C serial communication allowing the user to optimize for conversion speed and current consumption. The high accuracy and stability of both pressure and temperature signal of the MS5611-01BA03 make this Click board™ suitable for height sensing in medical and consumer applications, indoor navigation, mobile altimeter or barometer systems, and many more.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MS5611"],
+    "hw" : ["Click","MS5611"],
     "category" : ["Pressure"]
 }

@@ -3,8 +3,8 @@
  * \brief Angle Click example
  * 
  * # Description
- * Angle click is a precise Hall-effect angle sensing click board that can be used to measure the rotational angle 
- * of the magnetic field in the X-Y plane above it (parallel to the surface of the click), through the whole range of 360°.
+ * Angle Click is a precise Hall-effect angle sensing Click board that can be used to measure the rotational angle 
+ * of the magnetic field in the X-Y plane above it (parallel to the surface of the Click), through the whole range of 360°.
  *
  * The demo application is composed of two sections :
  * 

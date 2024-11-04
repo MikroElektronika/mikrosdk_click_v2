@@ -206,7 +206,7 @@ typedef enum
 
 /**
  * @brief Light 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #light2_cfg_t object definition for detailed explanation.
@@ -218,7 +218,7 @@ void light2_cfg_setup ( light2_cfg_t *cfg );
 /**
  * @brief Light 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #light2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -233,7 +233,7 @@ err_t light2_init ( light2_t *ctx, light2_cfg_t *cfg );
 /**
  * @brief Light 2 default configuration function.
  * @details This function executes a default configuration of Light 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #light2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -279,7 +279,7 @@ err_t light2_generic_read ( light2_t *ctx, uint8_t reg, uint8_t *data_out, uint8
 /**
  * @brief Light 2 write config function.
  * @details This function is used to set configuration for Light 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #light2_t object definition for detailed explanation.
  * @param[in] data_in : Data to be written.
@@ -293,7 +293,7 @@ err_t light2_write_config ( light2_t *ctx, uint8_t data_in );
 /**
  * @brief Light 2 raw data reading function.
  * @details This function reads raw data from the ADC of Light 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #light2_t object definition for detailed explanation.
  * @param[out] data_out : Output read data.
@@ -307,7 +307,7 @@ err_t light2_read_raw_data ( light2_t *ctx, uint16_t *data_out );
 /**
  * @brief Light 2 get calculation constant function.
  * @details This function is used to get a calculation constant depending on Light 2
- * click board configuration.
+ * Click board configuration.
  * @param[in] ctx : Click context object.
  * See #light2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -320,7 +320,7 @@ err_t light2_get_cal_const ( light2_t *ctx );
 /**
  * @brief Light 2 get light data function.
  * @details This function is used to read light data of Light 2
- * click board configuration.
+ * Click board configuration.
  * @param[in] ctx : Click context object.
  * See #light2_t object definition for detailed explanation.
  * @param[out] light_data : Read data in LUX.

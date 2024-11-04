@@ -347,7 +347,7 @@ typedef enum
 
 /**
  * @brief ISM TX configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #ismtx_cfg_t object definition for detailed explanation.
@@ -359,7 +359,7 @@ void ismtx_cfg_setup ( ismtx_cfg_t *cfg );
 /**
  * @brief ISM TX initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #ismtx_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -374,7 +374,7 @@ err_t ismtx_init ( ismtx_t *ctx, ismtx_cfg_t *cfg );
 /**
  * @brief ISM TX default configuration function.
  * @details This function executes a default configuration of ISM TX
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #ismtx_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

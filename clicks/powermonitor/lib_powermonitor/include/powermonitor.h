@@ -300,7 +300,7 @@ typedef enum
 
 /**
  * @brief Power Monitor configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #powermonitor_cfg_t object definition for detailed explanation.
@@ -314,7 +314,7 @@ void powermonitor_cfg_setup ( powermonitor_cfg_t *cfg );
 /**
  * @brief Power Monitor initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -332,7 +332,7 @@ err_t powermonitor_init ( powermonitor_t *ctx, powermonitor_cfg_t *cfg );
 /**
  * @brief Power Monitor default configuration function.
  * @details This function executes a default configuration of Power Monitor
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -388,7 +388,7 @@ err_t powermonitor_generic_read ( powermonitor_t *ctx, uint8_t reg, uint8_t *rx_
  * @brief Power Monitor software reset function.
  * @details This function executes a software reset 
  * of the INA228 85-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor 
- * on the Power Monitor click board™.
+ * on the Power Monitor Click board™.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -405,7 +405,7 @@ err_t powermonitor_soft_reset ( powermonitor_t *ctx );
  * @brief Power Monitor set configuration function.
  * @details This function performs configuration 
  * of the INA228 85-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor 
- * on the Power Monitor click board™.
+ * on the Power Monitor Click board™.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @param[in] cfg_data : Settings object.
@@ -423,7 +423,7 @@ err_t powermonitor_set_configuration ( powermonitor_t *ctx, powermonitor_dev_cfg
  * @brief Power Monitor get configuration function.
  * @details This function get configuration 
  * of the INA228 85-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor 
- * on the Power Monitor click board™.
+ * on the Power Monitor Click board™.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @param[out] cfg_data : Settings object.
@@ -441,7 +441,7 @@ err_t powermonitor_get_configuration ( powermonitor_t *ctx, powermonitor_dev_cfg
  * @brief Power Monitor set ADC configuration function.
  * @details This function performs ADC configuration 
  * of the INA228 85-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor 
- * on the Power Monitor click board™.
+ * on the Power Monitor Click board™.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @param[in] adc_cfg : ADC configuration object.
@@ -459,7 +459,7 @@ err_t powermonitor_set_adc_config ( powermonitor_t *ctx, powermonitor_adc_cfg_t 
  * @brief Power Monitor get ADC configuration function.
  * @details This function get ADC configuration 
  * of the INA228 85-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor 
- * on the Power Monitor click board™.
+ * on the Power Monitor Click board™.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @param[out] adc_cfg : ADC configuration object.
@@ -478,7 +478,7 @@ err_t powermonitor_get_adc_configu ( powermonitor_t *ctx, powermonitor_adc_cfg_t
  * @details This function sets the bus overvoltage threshold for comparison 
  * of the value to detect Bus Overvoltage
  * of the INA228 85-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor 
- * on the Power Monitor click board™.
+ * on the Power Monitor Click board™.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @param[in] bovl : Overvoltage threshold for comparison ( 0 mV - 102400 mV) .
@@ -497,7 +497,7 @@ err_t powermonitor_set_bus_overvoltage_threshold ( powermonitor_t *ctx, float bo
  * @details This function sets the bus undervoltage threshold for comparison 
  * of the value to detect Bus Undervoltage
  * of the INA228 85-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor 
- * on the Power Monitor click board™.
+ * on the Power Monitor Click board™.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @param[in] buvl : Undervoltage threshold for comparison ( 0 mV - 102400 mV) .
@@ -516,7 +516,7 @@ err_t powermonitor_set_bus_undervoltage_threshold ( powermonitor_t *ctx, float b
  * @details This function sets the shunt overvoltage threshold for comparison 
  * of the value to detect Bus Overvoltage
  * of the INA228 85-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor 
- * on the Power Monitor click board™.
+ * on the Power Monitor Click board™.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @param[in] sovl : Overvoltage threshold for comparison 
@@ -536,7 +536,7 @@ err_t powermonitor_set_shunt_overvoltage_threshold ( powermonitor_t *ctx, float 
  * @details This function sets the shunt undervoltage threshold for comparison 
  * of the value to detect Bus Undervoltage
  * of the INA228 85-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor 
- * on the Power Monitor click board™.
+ * on the Power Monitor Click board™.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @param[in] suvl : Undervoltage threshold for comparison 
@@ -556,7 +556,7 @@ err_t powermonitor_set_shunt_undervoltage_threshold ( powermonitor_t *ctx, float
  * @details This function get shunt voltage measurement
  * of the value to detect Bus Undervoltage
  * of the INA228 85-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor 
- * on the Power Monitor click board™.
+ * on the Power Monitor Click board™.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @param[out] vshunt : Differential voltage measured ( mV ).
@@ -575,7 +575,7 @@ err_t powermonitor_get_vshunt ( powermonitor_t *ctx, float *vshunt );
  * @details This function get bus voltage measurement
  * of the value to detect Bus Undervoltage
  * of the INA228 85-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor 
- * on the Power Monitor click board™.
+ * on the Power Monitor Click board™.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @param[out] vbus : Bus voltage output ( mV ).
@@ -594,7 +594,7 @@ err_t powermonitor_get_vbus ( powermonitor_t *ctx, float *vbus );
  * @details This function get temperature measurement
  * of the value to detect Bus Undervoltage
  * of the INA228 85-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor 
- * on the Power Monitor click board™.
+ * on the Power Monitor Click board™.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @param[out] temperature : Temperature ( degree Celsius ).
@@ -613,7 +613,7 @@ err_t powermonitor_get_temperature ( powermonitor_t *ctx, float *temperature );
  * @details This function get and calculate current output 
  * of the value to detect Bus Undervoltage
  * of the INA228 85-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor 
- * on the Power Monitor click board™.
+ * on the Power Monitor Click board™.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @param[out] current : Current output ( mA ).
@@ -632,7 +632,7 @@ err_t powermonitor_get_current ( powermonitor_t *ctx, float *current );
  * @details This function get and calculate power output 
  * of the value to detect Bus Undervoltage
  * of the INA228 85-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor 
- * on the Power Monitor click board™.
+ * on the Power Monitor Click board™.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @param[out] power : Power output ( W ).
@@ -651,7 +651,7 @@ err_t powermonitor_get_power ( powermonitor_t *ctx, float *power );
  * @details This function read energy data 
  * of the value to detect Bus Undervoltage
  * of the INA228 85-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor 
- * on the Power Monitor click board™.
+ * on the Power Monitor Click board™.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @param[out] energy_data : Pointer to the memory location where the data is stored.
@@ -670,7 +670,7 @@ err_t powermonitor_get_energy_data ( powermonitor_t *ctx, uint8_t *energy_data )
  * @details This function get and calculate energy output 
  * of the value to detect Bus Undervoltage
  * of the INA228 85-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor 
- * on the Power Monitor click board™.
+ * on the Power Monitor Click board™.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @param[out] energy : Energy output ( J ).
@@ -689,7 +689,7 @@ err_t powermonitor_get_energy ( powermonitor_t *ctx, float *energy );
  * @details This function get device ID 
  * of the value to detect Bus Undervoltage
  * of the INA228 85-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor 
- * on the Power Monitor click board™.
+ * on the Power Monitor Click board™.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @param[out] manufacturer_id : Reads back TI in ASCII.
@@ -710,7 +710,7 @@ err_t powermonitor_get_id ( powermonitor_t *ctx, uint8_t *manufacturer_id, uint1
  * @details This function get alert state 
  * of the value to detect Bus Undervoltage
  * of the INA228 85-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor 
- * on the Power Monitor click board™.
+ * on the Power Monitor Click board™.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @return @li @c 0 - Alert state active,

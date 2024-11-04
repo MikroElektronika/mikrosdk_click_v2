@@ -257,7 +257,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void accel2_cfg_setup ( accel2_cfg_t *cfg );
@@ -267,7 +267,7 @@ void accel2_cfg_setup ( accel2_cfg_t *cfg );
  * @param accel2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ACCEL2_RETVAL accel2_init ( accel2_t *ctx, accel2_cfg_t *cfg );
 
@@ -346,6 +346,6 @@ int16_t accel2_read_zaxis ( accel2_t *ctx );
 #endif  // _ACCEL2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

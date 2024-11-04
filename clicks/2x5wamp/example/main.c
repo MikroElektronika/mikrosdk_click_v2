@@ -4,7 +4,7 @@
  * 
  * # Description
  * This is a example which demonstrates the use of 2x5W Amp Click board.
- * 2x5W AMP click functions as an amplifier and features the TDA7491LP 
+ * 2x5W AMP Click functions as an amplifier and features the TDA7491LP 
  * 2x5-watt dual BTL class-D audio amplifier.
  * It communicates with the target MCU over the following pins
  * on the mikroBUS™ line: AN, RST, CS, PWM, INT.

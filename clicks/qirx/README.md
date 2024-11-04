@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Qi RX click
+# Qi RX Click
 
 > Qi RX Click is a compact add-on board made for the purpose of wireless power transfer. This board features the PIC16F15313, a general-purpose 8-bit MCU that makes a flexible, low-cost alternative to the wireless charging solutions based on ASICs from Microchip.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/qi_rx_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/qi-rx-click)
+[Click Product page](https://www.mikroe.com/qi-rx-click)
 
 ---
 
@@ -98,7 +98,7 @@ void application_init ( void )
         for ( ; ; );
     }
     log_printf( &logger, "----------------------- \r\n" );
-    log_printf( &logger, "      Qi RX click       \r\n" );
+    log_printf( &logger, "      Qi RX Click       \r\n" );
     log_printf( &logger, "----------------------- \r\n" );
     
     log_info( &logger, " Application Task " );
@@ -109,7 +109,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This example shows the capabilities of the Qi RX click by measuring voltage of the connected
+> This example shows the capabilities of the Qi RX Click by measuring voltage of the connected
 > battery. In order to get correct calculations user should change "v_ref" value 
 > to his own power supply voltage.
 
@@ -138,7 +138,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

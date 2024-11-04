@@ -3,7 +3,7 @@
  * \brief Thermo17 Click example
  * 
  * # Description
- * This demo-app shows local and remote temperature measurement procedure using Thermo 17 click.
+ * This demo-app shows local and remote temperature measurement procedure using Thermo 17 Click.
  *
  * The demo application is composed of two sections :
  * 

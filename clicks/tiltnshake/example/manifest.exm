@@ -1,8 +1,8 @@
 {
     "name": "TILTnSHAKE Click",
-    "description": "TILT-n-SHAKE click carries Freescale’s MMA8491Q IC. It’s a multifunctional 3-axis digital accelerometer that can also be configured as a 45-degree Tilt sensor.",
+    "description": "TILT-n-SHAKE Click carries Freescale’s MMA8491Q IC. It’s a multifunctional 3-axis digital accelerometer that can also be configured as a 45-degree Tilt sensor.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click"," MMA8491Q"],
+    "hw" : ["Click"," MMA8491Q"],
     "category" : ["Vibration,Motion"] 
 }

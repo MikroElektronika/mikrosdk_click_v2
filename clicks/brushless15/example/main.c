@@ -3,13 +3,13 @@
  * @brief Brushless15 Click example
  *
  * # Description
- * This example demonstrates the use of the Brushless 15 click board by driving the 
+ * This example demonstrates the use of the Brushless 15 Click board by driving the 
  * motor in both directions at different speeds.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Controls the motor speed by changing the PWM duty cycle once per second.
@@ -17,7 +17,7 @@
  * Each step will be logged on the USB UART where you can track the program flow.
  * 
  * @note
- * The maximal PWM Clock frequency for this click board is 1 kHz. 
+ * The maximal PWM Clock frequency for this Click board is 1 kHz. 
  * So, depending on the selected setup the user will need to lower the MCU's main clock frequency 
  * in the setup in order to get the PWM clock frequency down to 1 kHz.
  *

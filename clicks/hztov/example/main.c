@@ -3,12 +3,12 @@
  * \brief HzToV Click example
  * 
  * # Description
- * This example demonstrates the use of Hz to V click board.
+ * This example demonstrates the use of Hz to V Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and enables the click board.
+ * Initializes the driver and enables the Click board.
  * 
  * ## Application Task  
  * Sets the PWM frequency then reads the voltage from VO pin and logs all data on USB UART.
@@ -16,7 +16,7 @@
  * @note
  * In order to set PWM frequency down to 1 kHz, the user will probably need to 
  * lower the main MCU clock frequency.
- * The output voltage may vary, depending on the offset potentiometer setting on the click.
+ * The output voltage may vary, depending on the offset potentiometer setting on the Click.
  * 
  * \author MikroE Team
  *

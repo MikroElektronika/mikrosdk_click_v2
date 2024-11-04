@@ -561,7 +561,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c6dofimu8_cfg_setup ( c6dofimu8_cfg_t *cfg );
@@ -571,7 +571,7 @@ void c6dofimu8_cfg_setup ( c6dofimu8_cfg_t *cfg );
  * @param c6dofimu8 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 C6DOFIMU8_RETVAL c6dofimu8_init ( c6dofimu8_t *ctx, c6dofimu8_cfg_t *cfg );
 
@@ -580,7 +580,7 @@ C6DOFIMU8_RETVAL c6dofimu8_init ( c6dofimu8_t *ctx, c6dofimu8_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for c6DOF IMU 8 click.
+ * @description This function executes default configuration for c6DOF IMU 8 Click.
  */
 void c6dofimu8_default_cfg ( c6dofimu8_t *ctx );
 
@@ -763,6 +763,6 @@ void c6dofimu8_get_magnetometer_data ( c6dofimu8_t *ctx, t_c6dofimu8_axis *magne
 #endif  // _C6DOFIMU8_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

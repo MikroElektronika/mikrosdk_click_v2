@@ -308,7 +308,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c9dof_cfg_setup ( c9dof_cfg_t *cfg );
@@ -319,7 +319,7 @@ void c9dof_cfg_setup ( c9dof_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 C9DOF_RETVAL c9dof_init ( c9dof_t *ctx, c9dof_cfg_t *cfg );
 
@@ -328,7 +328,7 @@ C9DOF_RETVAL c9dof_init ( c9dof_t *ctx, c9dof_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for 9Dof click.
+ * @description This function executes default configuration for 9Dof Click.
  * @note
  *    Click default configuration:
  * -------------------------------------------------
@@ -412,7 +412,7 @@ void c9dof_default_cfg ( c9dof_t *ctx );
  * 1 ( C9DOF_ACCEL_GYRO_POWER_MODE_ON )  : Enable accel and gyro sensors.
  * </pre> 
  *
- * @description This function sets power mode of the 9Dof click.
+ * @description This function sets power mode of the 9Dof Click.
  */
 void c9dof_set_power_mode ( c9dof_t *ctx, uint8_t pwr_mode );
 
@@ -529,6 +529,6 @@ uint8_t c9dof_get_interrupt ( c9dof_t *ctx );
 #endif  // _C9DOF_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -3,13 +3,13 @@
  * @brief Pressure20 Click example
  *
  * # Description
- * This example demonstrates the use of Pressure 20 click board by reading and displaying
+ * This example demonstrates the use of Pressure 20 Click board by reading and displaying
  * the pressure and temperature data on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Waits for the data ready interrupt, clears the interrupts and than reads 

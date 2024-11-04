@@ -1,6 +1,6 @@
 
 ---
-# Current 12 click
+# Current 12 Click
 
 > Current 12 Click is a compact add-on board designed for high-precision monitoring of current, voltage, power, and temperature in various applications. This board features the TSC1641, a 60V 16-bit power monitor with an I2C interface from STMicroelectronics. The TSC1641 consist of a high-precision 16-bit dual-channel sigma-delta ADC, capable of measuring high-side, low-side, and bidirectional currents with a programmable conversion time ranging from 128µs to 32.7ms. It supports 2-wire I2C communication with clock frequencies up to 1MHz, and includes an alert interrupt pin for setting thresholds on voltage, current, power, and temperature.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/current12_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/current-12-click)
+[Click Product page](https://www.mikroe.com/current-12-click)
 
 ---
 
@@ -69,7 +69,7 @@ err_t current12_get_current ( current12_t *ctx, float *current );
 
 ## Example Description
 
-> This example demonstrates the use of the Current 12 click board 
+> This example demonstrates the use of the Current 12 Click board 
 > by reading and displaying the input current measurements.
 
 **The demo application is composed of two sections :**
@@ -169,7 +169,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

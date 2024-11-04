@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Sets the default configuration and then configures the click board for the selected mode.
+ * Sets the default configuration and then configures the Click board for the selected mode.
  * 
  * ## Application Task  
  * Increases and decreases the speed of the motor rotation by setting the duty cycle or 

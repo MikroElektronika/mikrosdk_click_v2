@@ -302,7 +302,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void accel12_cfg_setup ( accel12_cfg_t *cfg );
@@ -313,7 +313,7 @@ void accel12_cfg_setup ( accel12_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ACCEL12_RETVAL accel12_init ( accel12_t *ctx, accel12_cfg_t *cfg );
 
@@ -358,7 +358,7 @@ ACCEL12_RETVAL accel12_init ( accel12_t *ctx, accel12_cfg_t *cfg );
  *           - ACCEL12_MODE_IAH_ACTIVE_HIGH
  * </pre> 
  *
- * @description This function executes default configuration for Accel12 click.
+ * @description This function executes default configuration for Accel12 Click.
  */
 void accel12_default_cfg ( accel12_t *ctx );
 
@@ -454,6 +454,6 @@ uint8_t accel12_get_interrupt_state ( accel12_t *ctx );
 #endif  // _ACCEL12_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -47,7 +47,7 @@
  * float value of the angle speed
  *
  * @description Function calculate the angle speed of the
- * TLE5012 GMR-Based Angular Sensor on the GMR Angle click board.
+ * TLE5012 GMR-Based Angular Sensor on the GMR Angle Click board.
 */
 static float gmrangle_calc_angle_speed ( float ang_range, int16_t angle_speed_val, 
                                          uint16_t fir_md, uint16_t prediction_val );

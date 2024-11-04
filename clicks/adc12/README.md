@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# ADC 12 click
+# ADC 12 Click
 
 ADC 12 Click is a compact add-on board that contains a fully-featured, general-purpose analog-to-digital converter. This board features the ADS7828, a low-power 12-bit data acquisition device that features a serial I2C interface and an 8-channel multiplexer from Texas Instruments.
 
@@ -9,7 +9,7 @@ ADC 12 Click is a compact add-on board that contains a fully-featured, general-p
   <img src="https://download.mikroe.com/images/click_for_ide/adc12_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/adc-12-click)
+[Click Product page](https://www.mikroe.com/adc-12-click)
 
 ---
 
@@ -65,7 +65,7 @@ void adc12_set_sd_mode ( adc12_t *ctx, uint8_t sd_mode );
 
 ## Example Description
 
-> This example demonstrates the use of ADC 12 click board.
+> This example demonstrates the use of ADC 12 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -138,7 +138,7 @@ void application_task ( void )
 
 ## Note
 
-> With internal reference voltage set the click measures up to 2500 mV.
+> With internal reference voltage set the Click measures up to 2500 mV.
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

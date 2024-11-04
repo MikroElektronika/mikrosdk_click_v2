@@ -10,7 +10,7 @@
     ],
     "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "LR 11 868MHz click",
+    "display_name": "LR 11 868MHz Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -28,8 +28,9 @@
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.0",
+    "version": "2.1.0.1",
     "cmake": true,
     "alias": "Click.LR11868MHz",
     "subdir_name": "lib_lr11868mhz"
 }
+

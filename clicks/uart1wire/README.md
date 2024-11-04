@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# UART 1-Wire click
+# UART 1-Wire Click
 
-UART 1-Wire click is used to convert standard UART or RS232 signals into 1-Wire® signals. Apart from other features such as the slew rate control for larger 1-Wire® busses, selectable data rate, an accurate self-calibrating time base, ESD protection and more, the main feature of the UART 1-Wire® click, is that it manages all the sensitive signal timings involved in 1-Wire® communication, allowing rapid development of UART to 1-Wire® applications.
+UART 1-Wire Click is used to convert standard UART or RS232 signals into 1-Wire® signals. Apart from other features such as the slew rate control for larger 1-Wire® busses, selectable data rate, an accurate self-calibrating time base, ESD protection and more, the main feature of the UART 1-Wire® Click, is that it manages all the sensitive signal timings involved in 1-Wire® communication, allowing rapid development of UART to 1-Wire® applications.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/uart1wire_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/uart-1-wire-click)
+[Click Product page](https://www.mikroe.com/uart-1-wire-click)
 
 ---
 
@@ -44,7 +44,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- This function sends an 8-bit command to the click module.
+- This function sends an 8-bit command to the Click module.
 > void uart1wire_write_command ( uart1wire_t *ctx, uint8_t cmd );
  
 - This function reads the temperature from DALLAS one wire temperature sensors.
@@ -118,7 +118,7 @@ void application_task ( void )
 
 ## Note
 
-> Connect only DQ and GND pins to the UART 1-Wire click connector.
+> Connect only DQ and GND pins to the UART 1-Wire Click connector.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
@@ -131,7 +131,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -153,7 +153,7 @@ extern "C"{
  *
  * @param cfg                 Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void comparator_cfg_setup ( comparator_cfg_t *cfg );
@@ -164,7 +164,7 @@ void comparator_cfg_setup ( comparator_cfg_t *cfg );
  * @param comparator          Click object.
  * @param cfg                 Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 COMPARATOR_RETVAL comparator_init ( comparator_t *ctx, comparator_cfg_t *cfg );
 
@@ -204,6 +204,6 @@ uint8_t comparator_check_output_two ( comparator_t *ctx );
 #endif  // _COMPARATOR_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -1,6 +1,6 @@
 
 ---
-# 9DOF 3 click
+# 9DOF 3 Click
 
 9DOF 3 Click introduces the BMX055, a small-scale absolute orientation sensor in the class of low-noise 9-axis measurement units, from Bosch Sensortec. It comprises the full functionality of a triaxial, low-g acceleration sensor, a triaxial angular rate sensor and a triaxial geomagnetic sensor. All three sensor components of the BMX055 can be operated and addressed independently from each other. On top, the BMX055 integrates a multitude of features that facilitate its use especially in the area of motion detection applications, such as device orientation measurement, gaming, HMI or menu browser control. 9DOF 3 Click offers both SPI and I2C digital interfaces for easy and fast system integration.
 
@@ -9,7 +9,7 @@
 </p>
 
 
-[click Product page](https://www.mikroe.com/9dof-3-click)
+[Click Product page](https://www.mikroe.com/9dof-3-click)
 
 ---
 
@@ -59,7 +59,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This click introduces a small-scale absolute orientation sensor in the class of low-noise 
+> This Click introduces a small-scale absolute orientation sensor in the class of low-noise 
 > 9-axis measurement units. It comprises the full functionality of a triaxial, low-g acceleration 
 > sensor, a triaxial angular rate sensor and a triaxial geomagnetic sensor. All three sensor 
 > components can be operated and addressed independently from each other. 9DOF 3 Click offers 
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

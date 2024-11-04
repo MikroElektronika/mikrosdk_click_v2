@@ -3,6 +3,6 @@
     "description": "Stepper 12 Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the TB67S549FTG, a two-phase bipolar stepping motor driver from Toshiba Semiconductor. It supports a PWM constant-current control drive without a current sense resistor for motor-current detection and allows full-step to 1/32 steps resolution for less motor noise and smoother control. It has a wide operating voltage range of 4.5V to 34V with an output current capacity of 1.2A maximum and several anomaly detection indicators.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TB67S549FTG","PCA9555AHF"],
+    "hw" : ["Click","TB67S549FTG","PCA9555AHF"],
     "category" : ["Click Boards > Motor control > Stepper"]
 }

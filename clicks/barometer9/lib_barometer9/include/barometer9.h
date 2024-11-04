@@ -290,7 +290,7 @@ typedef enum
 
 /**
  * @brief Barometer 9 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #barometer9_cfg_t object definition for detailed explanation.
@@ -302,7 +302,7 @@ void barometer9_cfg_setup ( barometer9_cfg_t *cfg );
 /**
  * @brief Barometer 9 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #barometer9_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -318,7 +318,7 @@ void barometer9_drv_interface_sel ( barometer9_cfg_t *cfg, barometer9_drv_t drv_
 /**
  * @brief Barometer 9 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #barometer9_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -333,7 +333,7 @@ err_t barometer9_init ( barometer9_t *ctx, barometer9_cfg_t *cfg );
 /**
  * @brief Barometer 9 default configuration function.
  * @details This function executes a default configuration of Barometer 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #barometer9_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -379,7 +379,7 @@ err_t barometer9_generic_read ( barometer9_t *ctx, uint8_t reg, uint8_t *data_ou
 /**
  * @brief Barometer 9 Device ID reading function.
  * @details This function is used to read a Device ID of Barometer 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #barometer9_t object definition for detailed explanation.
  * @param[out] part_id : Device ID value.
@@ -393,7 +393,7 @@ err_t barometer9_read_part_id ( barometer9_t *ctx, uint16_t *part_id );
 /**
  * @brief Barometer 9 temperature reading function.
  * @details This function is used to read a temperature of Barometer 9
- * click board in degree of Celsius.
+ * Click board in degree of Celsius.
  * @param[in] ctx : Click context object.
  * See #barometer9_t object definition for detailed explanation.
  * @param[out] temperature : Temperature in degrees of Celsius.
@@ -407,7 +407,7 @@ err_t barometer9_get_temperature ( barometer9_t *ctx, float *temperature );
 /**
  * @brief Barometer 9 pressure reading function.
  * @details This function is used to read a pressure of Barometer 9
- * click board in Pascals.
+ * Click board in Pascals.
  * @param[in] ctx : Click context object.
  * See #barometer9_t object definition for detailed explanation.
  * @param[out] pressure : Pressure in Pascals.
@@ -421,7 +421,7 @@ err_t barometer9_get_pressure ( barometer9_t *ctx, float *pressure );
 /**
  * @brief Barometer 9 software reset function.
  * @details This function is used to perform software reset of Barometer 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #barometer9_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

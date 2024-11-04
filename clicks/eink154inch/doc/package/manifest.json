@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.eink154inch",
     "product_link": "https://www.mikroe.com/e-paper-bundle-1",
-    "short_description": "eINK click is an adapter Click board™, used to interface a compatible eINK display with the host MCU.",
+    "short_description": "eINK Click is an adapter Click board™, used to interface a compatible eINK display with the host MCU.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2554
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.Eink154Inch",
     "subdir_name": "lib_eink154inch"
 }
+
 
 
 

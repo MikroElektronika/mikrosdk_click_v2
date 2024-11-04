@@ -3,16 +3,16 @@
  * \brief Flash2 Click example
  * 
  * # Description
- * This application demonstrates the process of writing and reading data from Flash 2 click memory.
+ * This application demonstrates the process of writing and reading data from Flash 2 Click memory.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Flash Driver Initialization, initialization of click by setting mikorBUS to
+ * Flash Driver Initialization, initialization of Click by setting mikorBUS to
  * approprieate logic levels, performing global block unlock and chip erase functions.
  * 
  * ## Application Task  
- * Writing data to click memory and displaying the read data via UART. 
+ * Writing data to Click memory and displaying the read data via UART. 
  * 
  * 
  * \author MikroE Team

@@ -3,15 +3,15 @@
  
 
 ---
-# Digi Pot 4 click
+# Digi Pot 4 Click
 
-DIGI POT 4 click is a digitally controlled dual potentiometer, with the resistance of 10KΩ. It has a 10bit resolution which allows for a very smooth linear wiper positioning through 1024 steps.
+DIGI POT 4 Click is a digitally controlled dual potentiometer, with the resistance of 10KΩ. It has a 10bit resolution which allows for a very smooth linear wiper positioning through 1024 steps.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/digipot4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/digi-pot-4-click)
+[Click Product page](https://www.mikroe.com/digi-pot-4-click)
 
 ---
 
@@ -126,7 +126,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

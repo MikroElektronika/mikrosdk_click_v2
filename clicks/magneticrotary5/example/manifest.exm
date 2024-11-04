@@ -3,6 +3,6 @@
     "description": "Magnetic Rotary 5 Click is a compact add-on board for accurate magnet-position sensing. This board features the AS5134, a contactless magnetic rotary encoder from ams AG for accurate angular measurement over a full turn of 360º. It is designed to provide accurate angle measurements with a simple two-pole magnet rotating over the center of the chip, featuring an integrated Hall element, analog front end, and digital signal processing. Offering a high resolution of 8.5 bits, which equates to 360 positions per revolution, it is also capable of high-speed performance, with a maximum RPM of 76875. It can accommodate a wide range of magnetic fields, from 20 to 80mT. It also has an onboard header for incremental and commutation signals of their respective A/B/I and U/V/W signals and pins for Daisy Chain Mode and OTP programming.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","AS5134-ZSST"],
+    "hw" : ["Click","AS5134-ZSST"],
     "category" : ["Click Boards > Sensors > Magnetic"]
 }

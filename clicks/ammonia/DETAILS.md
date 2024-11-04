@@ -1,6 +1,6 @@
 
 ---
-# Ammonia click
+# Ammonia Click
 
 Ammonia Click is an Ammonia detection (NH3) sensor, based on the MQ-137 gas sensor. This gas sensor has a sensitive layer made of SnO2, which changes its resistance when exposed to ammonia. 
 
@@ -8,7 +8,7 @@ Ammonia Click is an Ammonia detection (NH3) sensor, based on the MQ-137 gas sens
   <img src="https://download.mikroe.com/images/click_for_ide/ammonia_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ammonia-click)
+[Click Product page](https://www.mikroe.com/ammonia-click)
 
 ---
 
@@ -90,7 +90,7 @@ void application_init ( void )
     Delay_ms ( 1000 );
 
     log_printf( &logger, "-------------------- \r\n" );
-    log_printf( &logger, "   Ammonia  click    \r\n" );
+    log_printf( &logger, "   Ammonia  Click    \r\n" );
     log_printf( &logger, "-------------------- \r\n" );
 }
   
@@ -98,7 +98,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example that shows the capabilities of the ADC 9 click by reading ADC value and displaying it via UART.
+> This is an example that shows the capabilities of the ADC 9 Click by reading ADC value and displaying it via UART.
 
 ```c
 
@@ -125,7 +125,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

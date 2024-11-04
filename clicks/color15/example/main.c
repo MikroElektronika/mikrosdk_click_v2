@@ -3,14 +3,14 @@
  * @brief Color15 Click example
  *
  * # Description
- * This example demonstrates the use of Color 15 click board by reading data
+ * This example demonstrates the use of Color 15 Click board by reading data
  * from 5 channels and converting them to HSL color and displaying those data as 
  * well as the detected color name on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Waits for the data ready interrupt, then reads the values of all channels and converts

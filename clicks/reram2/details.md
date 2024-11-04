@@ -1,6 +1,6 @@
 
 ---
-# ReRAM 2 click
+# ReRAM 2 Click
 
 > ReRAM 2 Click is a compact add-on board containing highly reliable resistive random-access memory. This board features the MB85AS8MT, an 8Mbit memory organized as 1,048,576 words of 8 bits from Fujitsu Semiconductor. The MB85AS8MT uses the resistance-variable memory process and silicon-gate CMOS process technologies to form nonvolatile memory cells. This SPI configurable ReRAM can withstand many write cycles (1x106 rewrite operations), has a data retention period greater than ten years, and can read and write to random addresses with very negligible delay. This Click board™ is ideal as a nonvolatile storage media or temporary RAM expansion for storing variables in any embedded application that requires rapid writes and unlimited endurance.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/reram2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/reram-2-click)
+[Click Product page](https://www.mikroe.com/reram-2-click)
 
 ---
 
@@ -173,7 +173,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,6 +3,6 @@
     "description": "Fingerprint 3 Click is an adapter Click board™, used to interface a compatible Fingerprint Sensor with Two-Color LED Ring with the host MCU.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","External R503"],
+    "hw" : ["Click","External R503"],
     "category" : ["Fingerprint"] 
 }

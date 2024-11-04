@@ -1,8 +1,8 @@
 {
     "name": "EnOcean 2 Click",
-    "description": "EnOcean 2 click carries the TCM 515Z transceiver, based on the 2.4 GHz IEEE 802.15.4 radio standard. The click is designed to run on a 3.3V power supply. It communicates with the target microcontroller over UART interface.",
+    "description": "EnOcean 2 Click carries the TCM 515Z transceiver, based on the 2.4 GHz IEEE 802.15.4 radio standard. The Click is designed to run on a 3.3V power supply. It communicates with the target microcontroller over UART interface.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TCM 515Z"],
+    "hw" : ["Click","TCM 515Z"],
     "category" : ["2.4 GHz Transceivers"] 
 }

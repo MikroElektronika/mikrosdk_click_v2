@@ -8,10 +8,10 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initialization device. Check sensor ID and initialize Accel 2 click.
+ * Initialization device. Check sensor ID and initialize Accel 2 Click.
  * 
  * ## Application Task  
- * This is a example which demonstrates the use of Accel 2 click board.
+ * This is a example which demonstrates the use of Accel 2 Click board.
    Measured coordinates (X,Y,Z) are being sent to the UART where you can track their changes.
  * 
  * \author MikroE Team

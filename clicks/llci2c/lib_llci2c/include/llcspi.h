@@ -142,7 +142,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void llcspi_cfg_setup ( llcspi_cfg_t *cfg );
@@ -152,7 +152,7 @@ void llcspi_cfg_setup ( llcspi_cfg_t *cfg );
  * @param llcspi Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LLCSPI_RETVAL llcspi_init ( llcspi_t *ctx, llcspi_cfg_t *cfg );
 
@@ -208,6 +208,6 @@ void spillc_generic_read ( llcspi_t *ctx, uint8_t *p_buf, uint16_t n_bytes );
 #endif  // _LLCSPI_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -3,7 +3,7 @@
  * \brief Rtc6 Click example
  * 
  * # Description
- * This application enables usage of Real-TIme clock and calendar with alarm on RTC 6 click.
+ * This application enables usage of Real-TIme clock and calendar with alarm on RTC 6 Click.
  *
  * The demo application is composed of two sections :
  * 

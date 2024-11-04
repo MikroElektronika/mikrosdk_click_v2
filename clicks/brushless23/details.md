@@ -1,6 +1,6 @@
 
 ---
-# Brushless 23 click
+# Brushless 23 Click
 
 > Brushless 23 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the TC78B011FTG, a three-phase sine-wave PWM pre-driver realized with six external MOSFETs to drive sensorless brushless motors from Toshiba Semiconductor. Some of the main features are a built-in closed-loop speed control function with internal non-volatile memory (NVM) for speed profile setting and the ability to set other features such as rotation direction selection, brake, Standby mode, and others. It also has a wide operating voltage range of 11V to 27V with an output current capacity of 5A and several built-in error detection circuits.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/brushless23_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/brushless-23-click)
+[Click Product page](https://www.mikroe.com/brushless-23-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t brushless23_get_motor_speed ( brushless23_t *ctx, float *motor_speed_hz );
 
 ## Example Description
 
-> This example demonstrates the use of the Brushless 23 click board by driving the motor in both directions at different speeds.
+> This example demonstrates the use of the Brushless 23 Click board by driving the motor in both directions at different speeds.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -168,7 +168,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

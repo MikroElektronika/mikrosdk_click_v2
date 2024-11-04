@@ -1,6 +1,6 @@
 
 ---
-# SpeakUp 3 click
+# SpeakUp 3 Click
 
 > SpeakUP 3 Click is a compact add-on board providing an offline speech recognition solution. This board features the VC-02, a low-cost pure offline speech recognition module developed by Ai-Thinker Technology. The VC-02 module uses an integrated voice chip US516P6 based on a 32-bit RSIC architecture core, a DSP instruction set for signal processing and speech recognition, an FPU arithmetic unit, and an FFT accelerator. The VC-02 supports offline identification of 150 local instructions, RTOS lightweight system, firmware update feature, as well as the selection of the communication method with the module.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/speakup3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/speakup-3-click)
+[Click Product page](https://www.mikroe.com/speakup-3-click)
 
 ---
 
@@ -59,7 +59,7 @@ err_t speakup3_wait_for_reply ( speakup3_t *ctx, uint8_t *reply_ins, uint32_t wa
 
 ## Example Description
 
-> This example demonstrates the use of the SpeakUp 3 click board by reading and displaying the voice commands reply messages.
+> This example demonstrates the use of the SpeakUp 3 Click board by reading and displaying the voice commands reply messages.
 
 **The demo application is composed of two sections :**
 
@@ -127,7 +127,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

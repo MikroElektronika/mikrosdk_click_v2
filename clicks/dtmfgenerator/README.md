@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# DTMF Generator click
+# DTMF Generator Click
 
 > DTMF Generator Click is a compact add-on board that generates DTMF (Dual-Tone Multi-Frequency) signals designed for MCU interfaces. This board features the HT9200A, a dual-tone multi-frequency decoder mostly used in mobile communications systems from Holtek Semiconductor Inc.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dtmfgenerator_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dtmf-generator-click)
+[Click Product page](https://www.mikroe.com/dtmf-generator-click)
 
 ---
 
@@ -112,7 +112,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-> DTMF Generator click board DTMF generator transmits the signal for generating tone for digits :
+> DTMF Generator Click board DTMF generator transmits the signal for generating tone for digits :
 > "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
 > "A", "B", "C", "D", "*" and "#".
 > All data logs write on USB uart changes.
@@ -215,7 +215,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

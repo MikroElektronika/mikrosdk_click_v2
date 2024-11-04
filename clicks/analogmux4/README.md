@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Analog MUX 4 click
+# Analog MUX 4 Click
 
 > Analog MUX 4 Click is a compact add-on board that switches one of many analog inputs to one digital output. This board features the TMUX1308, a general-purpose 8:1 single-ended CMOS multiplexer (MUX) from Texas Instruments. The TMUX1308 has an internal injection current control which eliminates the need for external diode and resistor networks to protect the switch and keep the input signals within the supply voltage. It also supports bidirectional analog and digital signals ranging from 0 to 5V, alongside several protection features allowing a reliable operation and protecting the device from potential damage.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/analogmux4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/analog-mux-4-click)
+[Click Product page](https://www.mikroe.com/analog-mux-4-click)
 
 ---
 
@@ -65,7 +65,7 @@ void analogmux4_set_input_channel ( analogmux4_t *ctx, uint8_t channel );
 
 ## Example Description
 
-> This example demonstrates the use of Analog MUX 4 click board.
+> This example demonstrates the use of Analog MUX 4 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

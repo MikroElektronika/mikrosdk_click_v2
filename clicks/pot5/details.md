@@ -1,6 +1,6 @@
 
 ---
-# POT 5 click
+# POT 5 Click
 
 > POT 5 Click is a compact add-on board with accurate selectable reference voltage output. This board features the PDB081-P10-103B1, a high-quality 8mm micro rotary 10k potentiometer from Bourns. The PDB081-P10-103B1 potentiometers operate over a wide temperature range, withstanding 50V maximum voltage. This rotary potentiometer offers 5Ω maximum resistance, 0.03W power rating, and 100mV maximum sliding noise.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/pot5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pot-5-click)
+[Click Product page](https://www.mikroe.com/pot-5-click)
 
 ---
 
@@ -57,14 +57,14 @@ err_t pot5_read_voltage ( pot5_t *ctx, float *voltage );
 uint8_t pot5_convert_voltage_to_percents ( pot5_t *ctx, float voltage );
 ```
 
-- `pot5_set_vref` This function sets the voltage reference for POT 5 click driver.
+- `pot5_set_vref` This function sets the voltage reference for POT 5 Click driver.
 ```c
 err_t pot5_set_vref ( pot5_t *ctx, float vref );
 ```
 
 ## Example Description
 
-> This example demonstrates the use of POT 5 click board by reading and displaying the potentiometer position.
+> This example demonstrates the use of POT 5 Click board by reading and displaying the potentiometer position.
 
 **The demo application is composed of two sections :**
 
@@ -138,7 +138,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

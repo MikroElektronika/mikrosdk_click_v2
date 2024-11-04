@@ -1,5 +1,5 @@
 ---
-# DSP click
+# DSP Click
 
 DSP Click is a compact add-on board that contains a multi-effects digital signal processor. This board features the V1000, a complete multi-effects audio DSP with ultra-high quality audio performance in a rapid ‘time-to-market’ solution from Coolaudio. The V1000 includes its integrated RAM with 16 built-in multi-effects and reverb controlled via I/O pins or I2C interface. Combined with a low-cost A/D-D/A codec like the V4220, this Click board™ provides an ultra-low cost FX solution.
 
@@ -7,7 +7,7 @@ DSP Click is a compact add-on board that contains a multi-effects digital signal
   <img src="https://download.mikroe.com/images/click_for_ide/dsp_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dsp-click?adtoken=48b980cc0840208867ff3317ac2fc531db4a1dd7&ad=mikromanage&id_employee=33)
+[Click Product page](https://www.mikroe.com/dsp-click?adtoken=48b980cc0840208867ff3317ac2fc531db4a1dd7&ad=mikromanage&id_employee=33)
 
 ---
 
@@ -113,7 +113,7 @@ void application_init ( void ) {
     Delay_ms ( 100 );
     
     log_printf( &logger, "-------------------------------\r\n" );
-    log_printf( &logger, "           DSP click           \r\n" );
+    log_printf( &logger, "           DSP Click           \r\n" );
     log_printf( &logger, "-------------------------------\r\n" );
     log_printf( &logger, "     Digital Multi-Effects     \r\n" );
 }
@@ -121,7 +121,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-> This is an example that shows the use of a DSP click board.
+> This is an example that shows the use of a DSP Click board.
 > In this example, we change different sound effects
 > such as multiple reverbs, echo, phaser, chorus, flanger, etc. every 10 sec.
 > Results are being sent to the Usart Terminal where you can track their changes.
@@ -161,7 +161,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

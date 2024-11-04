@@ -3,7 +3,7 @@
  * @brief Flash 11 Click example
  *
  * # Description
- * This example demonstrates the use of Flash 11 click board.
+ * This example demonstrates the use of Flash 11 Click board.
  * The demo app writes specified data to the memory and reads it back.
  *
  * The demo application is composed of two sections :

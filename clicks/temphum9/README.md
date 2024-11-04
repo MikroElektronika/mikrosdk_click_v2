@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# Temp-Hum 9 click
+# Temp-Hum 9 Click
 
-> Temp-Hum 9 click is a smart temperature and humidity sensing click board™, packed with features that allow simple integration into any design.
+> Temp-Hum 9 Click is a smart temperature and humidity sensing Click board™, packed with features that allow simple integration into any design.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/temphum9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/temphum-9-click)
+[Click Product page](https://www.mikroe.com/temphum-9-click)
 
 ---
 
@@ -65,7 +65,7 @@ void temhum9_get_data ( temphum9_t *ctx, uint8_t data_mode, float *temp, float *
 
 ## Example Description
 
-> This example demonstrates the use of TempHum 9 click board by reading and displaying the temperature and humidity measurement results.
+> This example demonstrates the use of TempHum 9 Click board by reading and displaying the temperature and humidity measurement results.
 
 **The demo application is composed of two sections :**
 
@@ -143,7 +143,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

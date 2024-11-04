@@ -519,7 +519,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void amfm_cfg_setup ( amfm_cfg_t *cfg );
@@ -530,7 +530,7 @@ void amfm_cfg_setup ( amfm_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t amfm_init ( amfm_t *ctx, amfm_cfg_t *cfg );
 
@@ -539,7 +539,7 @@ err_t amfm_init ( amfm_t *ctx, amfm_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for AmFm click.
+ * @description This function executes default configuration for AmFm Click.
  */
 void amfm_default_cfg ( amfm_t *ctx );
 
@@ -755,6 +755,6 @@ uint16_t amfm_get_channel ( amfm_t *ctx );
 #endif  // _AMFM_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

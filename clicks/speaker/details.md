@@ -1,6 +1,6 @@
 
 ---
-# Speaker click
+# Speaker Click
 
 Speaker Click is a compact add-on board that contains an audio power amplifier with a high-quality audio reproduction. This board features the MAX9717, a 1.4W mono bridge-tied load (BTL) architecture audio power amplifier from Maxim Integrated.
 
@@ -8,7 +8,7 @@ Speaker Click is a compact add-on board that contains an audio power amplifier w
   <img src="https://download.mikroe.com/images/click_for_ide/speaker_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/speaker-click)
+[Click Product page](https://www.mikroe.com/speaker-click)
 
 ---
 
@@ -69,9 +69,9 @@ err_t speaker_enable_slave_amp ( speaker_t *ctx );
 
 ## Example Description
 
-> This library contains API for the Speaker click driver.
+> This library contains API for the Speaker Click driver.
 > This application controls the operating modes of the 
-> Speaker click board™.
+> Speaker Click board™.
 
 **The demo application is composed of two sections :**
 
@@ -119,7 +119,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-> This is an example that shows the use of a Speaker click board™.
+> This is an example that shows the use of a Speaker Click board™.
 > The task of the application consists of 
 > switching two modes of operation: normal and shutdown modes.
 > Results are being sent to the Usart Terminal where you can track their changes.
@@ -169,7 +169,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

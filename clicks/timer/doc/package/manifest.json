@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "Timer click",
+    "display_name": "Timer Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.timer",
     "product_link": "https://www.mikroe.com/timer-click",
-    "short_description": "Timer click is a mikroBUS add-on board with Maxim’s DS1682 total elapsed time recorder.",
+    "short_description": "Timer Click is a mikroBUS add-on board with Maxim’s DS1682 total elapsed time recorder.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1822
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.Timer",
     "subdir_name": "lib_timer"
 }
+
 
 
 

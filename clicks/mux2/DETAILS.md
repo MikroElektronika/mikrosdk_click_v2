@@ -1,15 +1,15 @@
  
 
 ---
-# MUX 2 click
+# MUX 2 Click
 
-MUX 2 click is a Click board™ that switches one of the eight inputs to one output. It employs the MUX508, a modern CMOS analog multiplexing integrated circuit, produced by Texas Instruments.
+MUX 2 Click is a Click board™ that switches one of the eight inputs to one output. It employs the MUX508, a modern CMOS analog multiplexing integrated circuit, produced by Texas Instruments.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/mux2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/mux-2-click)
+[Click Product page](https://www.mikroe.com/mux-2-click)
 
 ---
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -1,6 +1,6 @@
 
 ---
-# Charger 23 click
+# Charger 23 Click
 
 > Charger 23 Click is a compact add-on board providing a single-cell battery charging solution. This board features the ISL78693, a single-cell Li-ion or Li-polymer battery charger from Renesas. The ISL78693 can operate with an input voltage as low as 2.6V and works as a linear charger with the battery charged in a Constant Current/Constant Voltage (CC/CV) profile. The charge current is selectable with an external resistor between 250 and 500mA. Additional features include the preconditioning of an over-discharged battery, an NTC thermistor interface for charging the battery in a safe temperature range, automatic recharge, and more.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/charger23_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/charger-23-click)
+[Click Product page](https://www.mikroe.com/charger-23-click)
 
 ---
 
@@ -64,7 +64,7 @@ uint8_t charger23_get_charger_state ( charger23_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Charger 23 click board by enabling the device and then reading and displaying the charger status.
+> This example demonstrates the use of Charger 23 Click board by enabling the device and then reading and displaying the charger status.
 
 **The demo application is composed of two sections :**
 
@@ -150,7 +150,7 @@ void application_task ( void )
 
 ## Note
 
-> Depending on the CURR SEL onboard jumper position this click board is able to charge batteries of 250mAh or 500mAh rated capacity.
+> Depending on the CURR SEL onboard jumper position this Click board is able to charge batteries of 250mAh or 500mAh rated capacity.
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 
@@ -163,7 +163,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -163,7 +163,7 @@ extern "C"{
 
 /**
  * @brief Config Object Initialization function.
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  *
  * @param cfg  Click configuration structure.
  * @param logic_zero  Function pointer for logic zero
@@ -175,7 +175,7 @@ void c4x4rgb_cfg_setup ( c4x4rgb_cfg_t *cfg, drv_logic_t logic_zero, drv_logic_t
 
 /**
  * @brief Initialization function.
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  * 
  * @param ctx Click object.
  * @param cfg Click configuration structure.
@@ -210,6 +210,6 @@ void c4x4rgb_fill_screen ( c4x4rgb_t *ctx, uint32_t fill_color );
 #endif  // _C4X4RGB_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver, sets the driver handler and enables the click board.
+ * Initializes the driver, sets the driver handler and enables the Click board.
  * 
  * ## Application Task  
  * Reads the received data and parses it on the USB UART if the response buffer is ready.

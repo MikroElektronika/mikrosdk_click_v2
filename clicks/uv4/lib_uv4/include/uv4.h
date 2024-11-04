@@ -391,7 +391,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void uv4_cfg_setup ( uv4_cfg_t *cfg );
@@ -402,7 +402,7 @@ void uv4_cfg_setup ( uv4_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 UV4_RETVAL uv4_init ( uv4_t *ctx, uv4_cfg_t *cfg );
 
@@ -517,6 +517,6 @@ UV4_RETVAL uv4_check_interr(uv4_t* ctx);
 #endif  // _UV4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

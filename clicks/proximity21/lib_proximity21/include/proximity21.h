@@ -251,7 +251,7 @@ typedef enum
 
 /**
  * @brief Proximity 21 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #proximity21_cfg_t object definition for detailed explanation.
@@ -263,7 +263,7 @@ void proximity21_cfg_setup ( proximity21_cfg_t *cfg );
 /**
  * @brief Proximity 21 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #proximity21_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -278,7 +278,7 @@ err_t proximity21_init ( proximity21_t *ctx, proximity21_cfg_t *cfg );
 /**
  * @brief Proximity 21 default configuration function.
  * @details This function executes a default configuration of Proximity 21
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #proximity21_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -453,7 +453,7 @@ err_t proximity21_check_comm ( proximity21_t *ctx );
 
 /**
  * @brief Proximity 21 set I2C address function.
- * @details This function sets a new 7-bit I2C address for the click sensor.
+ * @details This function sets a new 7-bit I2C address for the Click sensor.
  * @param[in] ctx : Click context object.
  * See #proximity21_t object definition for detailed explanation.
  * @param[in] address : 7-bit I2C address to be set.

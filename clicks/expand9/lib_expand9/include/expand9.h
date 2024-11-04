@@ -325,7 +325,7 @@ typedef enum
 
 /**
  * @brief Expand 9 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #expand9_cfg_t object definition for detailed explanation.
@@ -337,7 +337,7 @@ void expand9_cfg_setup ( expand9_cfg_t *cfg );
 /**
  * @brief Expand 9 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #expand9_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -353,7 +353,7 @@ err_t expand9_init ( expand9_t *ctx, expand9_cfg_t *cfg );
 /**
  * @brief Expand 9 default configuration function.
  * @details This function executes a default configuration of Expand 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #expand9_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -420,7 +420,7 @@ err_t expand9_generic_read ( expand9_t *ctx, uint8_t reg, uint8_t *rx_buf, uint8
  * @brief Expand 9 software reset function.
  * @details This function performs software reset of the SX1509QB,
  * World’s Lowest Voltage Level Shifting GPIO with LED Driver and Keypad Engine
- * on the Expand 9 click board™.
+ * on the Expand 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #expand9_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -435,7 +435,7 @@ err_t expand9_soft_reset ( expand9_t *ctx );
  * @brief Expand 9 set channel direction function.
  * @details This function sets desired direction  of the desired channel of the SX1509QB,
  * World’s Lowest Voltage Level Shifting GPIO with LED Driver and Keypad Engine
- * on the Expand 9 click board™.
+ * on the Expand 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #expand9_t object definition for detailed explanation.
  * @param[in] direction : Direction object data.
@@ -451,7 +451,7 @@ err_t expand9_set_ch_direction ( expand9_t *ctx, uint8_t ch_pos, expand9_directi
  * @brief Expand 9 set all channel output function.
  * @details This function sets output direction for all channels of the SX1509QB,
  * World’s Lowest Voltage Level Shifting GPIO with LED Driver and Keypad Engine
- * on the Expand 9 click board™.
+ * on the Expand 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #expand9_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -466,7 +466,7 @@ err_t expand9_set_all_ch_output ( expand9_t *ctx );
  * @brief Expand 9 set all channel input function.
  * @details This function sets input direction for all channels of the SX1509QB,
  * World’s Lowest Voltage Level Shifting GPIO with LED Driver and Keypad Engine
- * on the Expand 9 click board™.
+ * on the Expand 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #expand9_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -481,7 +481,7 @@ err_t expand9_set_all_ch_input ( expand9_t *ctx );
  * @brief Expand 9 set channel output state function.
  * @details This function sets output state of the desired channel of the SX1509QB,
  * World’s Lowest Voltage Level Shifting GPIO with LED Driver and Keypad Engine
- * on the Expand 9 click board™.
+ * on the Expand 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #expand9_t object definition for detailed explanation.
  * @param[in] ch_pos : Desired channel position [ 0 - 15 ].
@@ -498,7 +498,7 @@ err_t expand9_set_ch_output_state ( expand9_t *ctx, uint8_t ch_pos, expand9_ch_s
  * @brief Expand 9 get channel output state function.
  * @details This function get output state of the desired channel of the SX1509QB,
  * World’s Lowest Voltage Level Shifting GPIO with LED Driver and Keypad Engine
- * on the Expand 9 click board™.
+ * on the Expand 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #expand9_t object definition for detailed explanation.
  * @param[in] ch_pos : Desired channel position [ 0 - 15 ].
@@ -518,7 +518,7 @@ err_t expand9_get_ch_output_state ( expand9_t *ctx, uint8_t ch_pos, expand9_ch_s
  * input, this method will activate either the pull-up	or pull-down
  * resistor ( high or low respectively ) of the SX1509QB,
  * World’s Lowest Voltage Level Shifting GPIO with LED Driver and Keypad Engine
- * on the Expand 9 click board™.
+ * on the Expand 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #expand9_t object definition for detailed explanation.
  * @param[in] ch_pos : Desired channel position [ 0 - 15 ].
@@ -535,7 +535,7 @@ err_t expand9_write_ch (  expand9_t *ctx, uint8_t ch_pos, expand9_ch_state_value
  * @brief Expand 9 read channel function.
  * @details This function reads the input channel state ( high or low ) of the SX1509QB,
  * World’s Lowest Voltage Level Shifting GPIO with LED Driver and Keypad Engine
- * on the Expand 9 click board™.
+ * on the Expand 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #expand9_t object definition for detailed explanation.
  * @param[in] ch_pos : Desired channel position [ 0 - 15 ].
@@ -554,7 +554,7 @@ err_t expand9_read_ch ( expand9_t *ctx, uint8_t ch_pos, expand9_ch_state_value_t
  * It must be called if you want to use the pwm or blink functions 
  * on that channel of the SX1509QB,
  * World’s Lowest Voltage Level Shifting GPIO with LED Driver and Keypad Engine
- * on the Expand 9 click board™.
+ * on the Expand 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #expand9_t object definition for detailed explanation.
  * @param[in] ch_pos : Desired channel position [ 0 - 15 ].
@@ -575,7 +575,7 @@ err_t expand9_led_driver_config ( expand9_t *ctx, uint8_t ch_pos, uint8_t freq_d
  * @details This function can be used to control the intensity 
  * of an output channel connected to an LED of the SX1509QB,
  * World’s Lowest Voltage Level Shifting GPIO with LED Driver and Keypad Engine
- * on the Expand 9 click board™.
+ * on the Expand 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #expand9_t object definition for detailed explanation.
  * @param[in] ch_pos : Desired channel position [ 0 - 15 ].
@@ -593,7 +593,7 @@ err_t expand9_set_intensity ( expand9_t *ctx, uint8_t ch_pos, uint8_t intensity 
  * @details This function resets the PWM/Blink/Fade counters, syncing any 
  * blinking LEDs of the SX1509QB,
  * World’s Lowest Voltage Level Shifting GPIO with LED Driver and Keypad Engine
- * on the Expand 9 click board™.
+ * on the Expand 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #expand9_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -609,7 +609,7 @@ err_t expand9_sync ( expand9_t *ctx );
  * @details This function resets the PWM/Blink/Fade counters, syncing any 
  * blinking LEDs of the SX1509QB,
  * World’s Lowest Voltage Level Shifting GPIO with LED Driver and Keypad Engine
- * on the Expand 9 click board™.
+ * on the Expand 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #expand9_t object definition for detailed explanation.
  * @param[in] config_val : configuring the debounce time:
@@ -634,7 +634,7 @@ err_t expand9_debounce_config ( expand9_t *ctx, uint8_t config_val );
  * @brief Expand 9 enable channel interrupt function.
  * @details This function enable interrupt for desired channels of the SX1509QB,
  * World’s Lowest Voltage Level Shifting GPIO with LED Driver and Keypad Engine
- * on the Expand 9 click board™.
+ * on the Expand 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #expand9_t object definition for detailed explanation.
  * @param[in] ch_pos : Desired channel position [ 0 - 15 ].
@@ -655,7 +655,7 @@ err_t expand9_enable_ch_interrupt ( expand9_t *ctx, uint8_t ch_pos, uint8_t rise
  * @brief Expand 9 clear all interrupt function.
  * @details This function clear all interrupts of the SX1509QB,
  * World’s Lowest Voltage Level Shifting GPIO with LED Driver and Keypad Engine
- * on the Expand 9 click board™.
+ * on the Expand 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #expand9_t object definition for detailed explanation.
  * 
@@ -671,7 +671,7 @@ err_t expand9_clear_interrupt ( expand9_t *ctx );
  * @brief Expand 9 check channel interrupt function.
  * @details This function check interrupt for desired channels of the SX1509QB,
  * World’s Lowest Voltage Level Shifting GPIO with LED Driver and Keypad Engine
- * on the Expand 9 click board™.
+ * on the Expand 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #expand9_t object definition for detailed explanation.
  * @param[out] ch_pos : Desired channel position [ 0 - 15 ].
@@ -688,7 +688,7 @@ err_t expand9_check_ch_interrupt ( expand9_t *ctx, uint8_t ch_pos, expand9_ch_st
  * @brief Expand 9 check interrupt pin function.
  * @details This function check interrupt pi state of the SX1509QB,
  * World’s Lowest Voltage Level Shifting GPIO with LED Driver and Keypad Engine
- * on the Expand 9 click board™.
+ * on the Expand 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #expand9_t object definition for detailed explanation.
  * 

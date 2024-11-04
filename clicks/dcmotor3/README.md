@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# DC Motor 3 click
+# DC Motor 3 Click
 
-DC MOTOR 3 click is a mikroBUS™ add-on board with a Toshiba TB6549FG full-bridge driver for direct current motors. The IC is capable of outputting currents of up to 3.5 A with 30V, making it suitable for high-power motors
+DC MOTOR 3 Click is a mikroBUS™ add-on board with a Toshiba TB6549FG full-bridge driver for direct current motors. The IC is capable of outputting currents of up to 3.5 A with 30V, making it suitable for high-power motors
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/dcmotor3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dc-motor-3-click)
+[Click Product page](https://www.mikroe.com/dc-motor-3-click)
 
 ---
 
@@ -59,7 +59,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This click  has four operating modes: clockwise, counter-clockwise, short brake and stop. 
+> This Click  has four operating modes: clockwise, counter-clockwise, short brake and stop. 
 > The operating mode is configured through IN1 and IN2 pins. 
 
 **The demo application is composed of two sections :**
@@ -171,7 +171,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

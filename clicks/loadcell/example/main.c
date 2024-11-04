@@ -3,9 +3,9 @@
  * \brief Load cell Click example
  * 
  * # Description
- * Load cell click is a weight measurement click which utilizes a load cell element, 
+ * Load cell Click is a weight measurement Click which utilizes a load cell element, 
  * in order to precisely measure the weight of an object. 
- * The Load Cell click can be used with the strain gauge type of load cells 
+ * The Load Cell Click can be used with the strain gauge type of load cells 
  * and can measure up to ±20V or ±40V of differential voltage. 
  *
  * The demo application is composed of two sections :
@@ -69,7 +69,7 @@ void application_init ( void )
     loadcell_init( &loadcell, &cfg );
     
     log_printf(&logger, "-------------------------\r\n");
-    log_printf(&logger, "     Load cell click     \r\n");
+    log_printf(&logger, "     Load cell Click     \r\n");
     log_printf(&logger, "-------------------------\r\n");
     Delay_ms ( 100 );
     

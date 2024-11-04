@@ -1,8 +1,8 @@
 {
     "name": "${Nano Power} Click",
-    "description": "Nano Power click is a boost (step-up) DC-DC converter click with extremely high efficiency and very low input voltage, aimed at the low power IoT market and battery-powered sensors and other devices. ",
+    "description": "Nano Power Click is a boost (step-up) DC-DC converter Click with extremely high efficiency and very low input voltage, aimed at the low power IoT market and battery-powered sensors and other devices. ",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MAX17222"],
+    "hw" : ["Click","MAX17222"],
     "category" : [" Boost"] 
 }

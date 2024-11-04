@@ -76,7 +76,7 @@ void application_init ( void )
     lightmixsens_data.lightmixsens_bdata = LIGHTMIXSENS_DUMMY_DATA;
     lightmixsens_data.lightmixsens_pdata = LIGHTMIXSENS_DUMMY_DATA;
 
-    log_printf( &logger, "*  Light mix-sens click initialization done.  *\r\n" );
+    log_printf( &logger, "*  Light mix-sens Click initialization done.  *\r\n" );
 }
 
 void application_task ( void )

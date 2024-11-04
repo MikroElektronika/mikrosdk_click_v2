@@ -3,7 +3,7 @@
  * @brief Magneto 9 Click Example.
  *
  * # Description
- * This example demonstrates the use of Magneto 9 click board.
+ * This example demonstrates the use of Magneto 9 Click board.
  *
  * The demo application is composed of two sections :
  *

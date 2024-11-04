@@ -4,7 +4,7 @@
  *
  * # Description
  * This is an example which demonstrates the use of Microwave Click board.
- * Microwave click reads ADC results, takes exact amount of samples,
+ * Microwave Click reads ADC results, takes exact amount of samples,
  * calculation of difference between taken samples and reference ADC value, and
  * reports movement if difference is greater/lower than selected threshold value.
  *

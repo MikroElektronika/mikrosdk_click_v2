@@ -163,7 +163,7 @@ typedef enum
 
 /**
  * @brief RS485 Isolator 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #rs485isolator3_cfg_t object definition for detailed explanation.
@@ -175,7 +175,7 @@ void rs485isolator3_cfg_setup ( rs485isolator3_cfg_t *cfg );
 /**
  * @brief RS485 Isolator 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #rs485isolator3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -190,7 +190,7 @@ err_t rs485isolator3_init ( rs485isolator3_t *ctx, rs485isolator3_cfg_t *cfg );
 /**
  * @brief RS485 Isolator 3 default configuration function.
  * @details This function executes a default configuration of RS485 Isolator 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #rs485isolator3_t object definition for detailed explanation.
  * @return Nothing.

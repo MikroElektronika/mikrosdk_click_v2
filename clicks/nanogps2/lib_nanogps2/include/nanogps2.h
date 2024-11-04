@@ -223,7 +223,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void nanogps2_cfg_setup ( nanogps2_cfg_t *cfg );
@@ -234,7 +234,7 @@ void nanogps2_cfg_setup ( nanogps2_cfg_t *cfg );
  * @param ctx  Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 NANOGPS2_RETVAL nanogps2_init ( nanogps2_t *ctx, nanogps2_cfg_t *cfg );
 
@@ -326,6 +326,6 @@ nanogps2_error_t nanogps2_generic_parser
 #endif  // _NANOGPS2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

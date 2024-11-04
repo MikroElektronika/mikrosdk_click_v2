@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# Pressure 9 click
+# Pressure 9 Click
 
-> Pressure 9 click is a digital barometric air pressure sensor Click board™. It is equipped with the DPS422, barometric air pressure sensor, based on a capacitive sensor element.
+> Pressure 9 Click is a digital barometric air pressure sensor Click board™. It is equipped with the DPS422, barometric air pressure sensor, based on a capacitive sensor element.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/pressure9_click.png" height=300px>
 </p>
 
-> - [click Product page](https://www.mikroe.com/pressure-9-click)
+> - [Click Product page](https://www.mikroe.com/pressure-9-click)
 
 ---
 
@@ -70,13 +70,13 @@ void pressure9_configuration ( pressure9_t *ctx, uint8_t reg_adr, uint8_t data_i
 
 ## Examples Description
 
-> The demo application displays the pressure and temperature measurement using Pressure 9 click.
+> The demo application displays the pressure and temperature measurement using Pressure 9 Click.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initialization the driver, test comunication, and performs the click default configuration.
+> Initialization the driver, test comunication, and performs the Click default configuration.
 
 ```c
 void application_init ( void )
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -3,7 +3,7 @@
  * @brief H-Bridge Click Example.
  *
  * # Description
- * This example demonstrates the use of the H-Bridge click board by driving the 
+ * This example demonstrates the use of the H-Bridge Click board by driving the 
  * motor in both directions for a desired number of steps.
  *
  * The demo application is composed of two sections :

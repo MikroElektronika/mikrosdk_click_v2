@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Smoke 2 click
+# Smoke 2 Click
 
 > Smoke 2 Click is a compact add-on board that contains the most efficient version of the smoke detector. This board features the ADPD188BI, a complete photometric system for smoke detection using optical dual-wavelength technology from Analog Devices.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/smoke2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/smoke-2-click)
+[Click Product page](https://www.mikroe.com/smoke-2-click)
 
 ---
 
@@ -53,17 +53,17 @@ err_t smoke2_default_cfg ( smoke2_t *ctx );
 
 #### Example key functions :
 
-- `smoke2_get_int_pin` This function eget state of int pin of Smoke 2 click board.
+- `smoke2_get_int_pin` This function eget state of int pin of Smoke 2 Click board.
 ```c
 uint8_t smoke2_get_int_pin ( smoke2_t *ctx );
 ```
 
-- `smoke2_write_data` This function is generic for writing data to register of Smoke 2 click board.
+- `smoke2_write_data` This function is generic for writing data to register of Smoke 2 Click board.
 ```c
 void smoke2_write_data( smoke2_t *ctx, uint8_t reg, uint16_t tx_data );
 ```
 
-- `smoke2_read_data` This function is generic for reading data from registar of Smoke 2 click board.
+- `smoke2_read_data` This function is generic for reading data from registar of Smoke 2 Click board.
 ```c
 uint16_t smoke2_read_data( smoke2_t *ctx, uint8_t reg );
 ```
@@ -163,7 +163,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -168,7 +168,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void angle2_cfg_setup ( angle2_cfg_t *cfg );
@@ -179,7 +179,7 @@ void angle2_cfg_setup ( angle2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ANGLE2_RETVAL angle2_init ( angle2_t *ctx, angle2_cfg_t *cfg );
 
@@ -188,7 +188,7 @@ ANGLE2_RETVAL angle2_init ( angle2_t *ctx, angle2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Angle 2 click.
+ * @description This function executes default configuration for Angle 2 Click.
  */
 void angle2_default_cfg ( angle2_t *ctx );
 
@@ -232,7 +232,7 @@ double angle2_read_reg ( angle2_t *ctx, uint8_t addr, uint8_t *output );
  *
  * @param ctx          Click object.
  *
- * @description This function reads angle data from the click module.
+ * @description This function reads angle data from the Click module.
  */
 double angle2_get_angle ( angle2_t *ctx );
 
@@ -241,7 +241,7 @@ double angle2_get_angle ( angle2_t *ctx );
  *
  * @param ctx          Click object.
  *
- * @description This function reads angle and time index data from the click module.
+ * @description This function reads angle and time index data from the Click module.
  */
 double angle2_get_angle_with_time_index ( angle2_t *ctx, uint8_t *time_index );
 
@@ -281,6 +281,6 @@ void angle2_flash_reg ( angle2_t *ctx, uint8_t reg_sel );
 #endif  // _ANGLE2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

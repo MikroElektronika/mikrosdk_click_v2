@@ -232,7 +232,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void thermo9_cfg_setup ( thermo9_cfg_t *cfg );
@@ -243,7 +243,7 @@ void thermo9_cfg_setup ( thermo9_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 THERMO9_RETVAL thermo9_init ( thermo9_t *ctx, thermo9_cfg_t *cfg );
 
@@ -310,6 +310,6 @@ float thermo9_read_temp ( thermo9_t *ctx );
 #endif  // _THERMO9_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

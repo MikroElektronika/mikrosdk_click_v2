@@ -340,7 +340,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void pwrmeter_cfg_setup ( pwrmeter_cfg_t *cfg );
@@ -351,7 +351,7 @@ void pwrmeter_cfg_setup ( pwrmeter_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 PWRMETER_RETVAL pwrmeter_init ( pwrmeter_t *ctx, pwrmeter_cfg_t *cfg );
 
@@ -360,7 +360,7 @@ PWRMETER_RETVAL pwrmeter_init ( pwrmeter_t *ctx, pwrmeter_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for PwrMeter click.
+ * @description This function executes default configuration for PwrMeter Click.
  */
 void pwrmeter_default_cfg ( pwrmeter_t *ctx );
 
@@ -565,6 +565,6 @@ void pwrmeter_enable ( pwrmeter_t *ctx, uint8_t state );
 #endif  // _PWRMETER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

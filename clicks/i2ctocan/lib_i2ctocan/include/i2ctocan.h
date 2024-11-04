@@ -151,7 +151,7 @@ typedef enum
 
 /**
  * @brief I2C to CAN configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #i2ctocan_cfg_t object definition for detailed explanation.
@@ -165,7 +165,7 @@ void i2ctocan_cfg_setup ( i2ctocan_cfg_t *cfg );
 /**
  * @brief I2C to CAN initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #i2ctocan_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -183,7 +183,7 @@ err_t i2ctocan_init ( i2ctocan_t *ctx, i2ctocan_cfg_t *cfg );
 /**
  * @brief I2C to CAN default configuration function.
  * @details This function executes a default configuration of I2C to CAN
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #i2ctocan_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -200,7 +200,7 @@ err_t i2ctocan_default_cfg ( i2ctocan_t *ctx );
 /**
  * @brief I2C to CAN enable the device function.
  * @details This function enable the LT3960, I2C to CAN-Physical Transceiver
- * on the I2C to CAN click board™.
+ * on the I2C to CAN Click board™.
  * @param[in] ctx : Click context object.
  * See #i2ctocan_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -216,7 +216,7 @@ err_t i2ctocan_enable_device ( i2ctocan_t *ctx );
 /**
  * @brief I2C to CAN shutdown the device function.
  * @details This function turn off the LT3960, I2C to CAN-Physical Transceiver
- * on the I2C to CAN click board™.
+ * on the I2C to CAN Click board™.
  * @param[in] ctx : Click context object.
  * See #i2ctocan_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

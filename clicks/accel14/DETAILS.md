@@ -1,6 +1,6 @@
 
 ---
-# Accel 14 click
+# Accel 14 Click
 
 Accel 14 Click is digital acceleration and vibration sensor Click board™. It features an ultra-wide bandwidth, low-noise, 3-axis digital vibration sensor, labeled as IIS3DWB, from STMicroelectronics. This Click board™ allows selectable full-scale acceleration measurements in ranges of ±2 g, ±4 g, ±8, and ±16 g in three axes, and it’s capable of measuring accelerations with a bandwidth up to 6 kHz with an output data rate of 26.7 kHz.
 
@@ -8,7 +8,7 @@ Accel 14 Click is digital acceleration and vibration sensor Click board™. It f
   <img src="https://download.mikroe.com/images/click_for_ide/accel14_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/accel-14-click)
+[Click Product page](https://www.mikroe.com/accel-14-click)
 
 ---
 
@@ -162,7 +162,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

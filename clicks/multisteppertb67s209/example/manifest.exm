@@ -3,6 +3,6 @@
     "description": "Multi Stepper Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the TB67S209FTG, CLOCK-in controlled bipolar stepping motor driver from Toshiba Semiconductor. It supports a PWM constant-current control drive, selectable mixed decay mode, and allows from full-step up to 1/32 steps resolution for less motor noise and smoother control. It has a wide operating voltage range of 10V to 47V with an output current capacity of 2.8A in addition to several built-in error detection circuits.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TB67S209"],
+    "hw" : ["Click","TB67S209"],
     "category" : ["Stepper"]
 }

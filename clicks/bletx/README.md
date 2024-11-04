@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# BLE TX click
+# BLE TX Click
 
 > BLE TX Click is a compact add-on board that contains a low-energy Bluetooth transmitter. This board features the AK1595, a Bluetooth 5.2 transmitter with incorporated proprietary algorithm software from AKM Semiconductor. The AK1595 transmitter simplifies wireless connectivity to a system with no need to develop complicated, proprietary microcontroller code. Bluetooth Low Energy compliant advertising transmission can be achieved by simply configuring the transmission power, data, and transmission start-trigger via the UART or I2C interface.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ble_tx_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ble-tx-click)
+[Click Product page](https://www.mikroe.com/ble-tx-click)
 
 ---
 
@@ -227,7 +227,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example that shows the use of a Ble TX click board™.
+> This is an example that shows the use of a Ble TX Click board™.
 > In this example, the application turns the selected advertising frames
 > ON and OFF for a period of 10 seconds.
 
@@ -266,7 +266,7 @@ void application_task ( void )
 
 ## Note
 
-> For scanning BLE TX click board™ BLE Scanner is a recommended Android application 
+> For scanning BLE TX Click board™ BLE Scanner is a recommended Android application 
 > and you can find it at the link:
 > https://play.google.com/store/apps/details?id=com.macdom.ble.blescanner
 
@@ -281,7 +281,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,6 +3,6 @@
     "description": "RS485 Isolator 3 Click is a compact add-on board that provides electrical isolation and signal conditioning for RS485 communication systems. This board features the ADM2763E, a 500kbps, 5.7kV RMS, signal-isolated RS-485 transceiver from Analog Devices.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","ADM2763EBRWZ"],
+    "hw" : ["Click","ADM2763EBRWZ"],
     "category" : ["Click Boards > Interface > RS485"]
 }

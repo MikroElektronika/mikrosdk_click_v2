@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Proximity 18 click
+# Proximity 18 Click
 
 > Proximity 18 Click is a compact add-on board that contains a close-range proximity sensing solution. This board features the VCNL3036X01, a high-resolution digital proximity sensor from Vishay Semiconductors. Besides the proximity sensor, the VCNL3036X01 also integrates a mux and a driver for three external LEDs, which are located near the chip on the board, photodiodes, amplifiers, and analog to digital converting circuits into a single chip by CMOS process. It allows absolute distance measurement, whatever the target color and reflectance, providing an accurate range of up to 50cm.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/proximity18_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/proximity-18-click)
+[Click Product page](https://www.mikroe.com/proximity-18-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t proximity18_read_proximity ( proximity18_t *ctx, uint16_t *ps1_data, uint1
 
 ## Example Description
 
-> This example demonstrates the use of Proximity 18 click board by reading and displaying the proximity data on the USB UART.
+> This example demonstrates the use of Proximity 18 Click board by reading and displaying the proximity data on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and logger, and performs the click default configuration.
+> Initializes the driver and logger, and performs the Click default configuration.
 
 ```c
 
@@ -175,7 +175,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

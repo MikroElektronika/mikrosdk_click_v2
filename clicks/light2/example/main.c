@@ -3,13 +3,13 @@
  * @brief Light 2 Click example
  *
  * # Description
- * This example demonstrates the use of Light 2 click board by measuring 
+ * This example demonstrates the use of Light 2 Click board by measuring 
  * the ambient light level in Lux.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads the ADC voltage and then calculates the illuminance from it.

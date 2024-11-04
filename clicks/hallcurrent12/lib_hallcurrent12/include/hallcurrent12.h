@@ -168,7 +168,7 @@ typedef enum
 
 /**
  * @brief Hall Current 12 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #hallcurrent12_cfg_t object definition for detailed explanation.
@@ -180,7 +180,7 @@ void hallcurrent12_cfg_setup ( hallcurrent12_cfg_t *cfg );
 /**
  * @brief Hall Current 12 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #hallcurrent12_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -196,7 +196,7 @@ err_t hallcurrent12_init ( hallcurrent12_t *ctx, hallcurrent12_cfg_t *cfg );
  * @brief Hall Current 12 get ADC function.
  * @details This function reads ADC voltage ( V )
  * of the TMCS1100 1% High-Precision, Basic Isolation Hall-Effect Current Sensor
- * on the Hall Current 12 click board™.
+ * on the Hall Current 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #hallcurrent12_t object definition for detailed explanation.
  * @param[out] adc_vtg : Output ADC voltage ( V ) data.
@@ -211,7 +211,7 @@ err_t hallcurrent12_get_adc ( hallcurrent12_t *ctx, float *adc_vtg );
  * @brief Hall Current 12 get ADC voltage function.
  * @details This function reads 12-bit ADC data and calculate ADC voltage ( V ) 
  * of the TMCS1100 1% High-Precision, Basic Isolation Hall-Effect Current Sensor
- * on the Hall Current 12 click board™.
+ * on the Hall Current 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #hallcurrent12_t object definition for detailed explanation.
  * @param[out] adc_vtg : Output ADC voltage ( V ) data.
@@ -226,7 +226,7 @@ err_t hallcurrent12_get_adc_voltage ( hallcurrent12_t *ctx, float *adc_vtg );
  * @brief Hall Current 12 get current function.
  * @details This function reads 12-bit ADC data and calculate current ( A )
  * of the TMCS1100 1% High-Precision, Basic Isolation Hall-Effect Current Sensor
- * on the Hall Current 12 click board™.
+ * on the Hall Current 12 Click board™.
  * @param[in] ctx : Click context object.
  * See #hallcurrent12_t object definition for detailed explanation.
  * @param[out] adc_vtg : Output current ( A ) data.

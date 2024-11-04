@@ -3,6 +3,6 @@
     "description": "VCT Monitor Click is a compact add-on board that contains a highly integrated monitoring solution without compromising accuracy. This board features the LTC2990, an I2C configurable high-performance temperature, voltage, and current monitor from Analog Devices.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","LTC2990"],
+    "hw" : ["Click","LTC2990"],
     "category" : ["Current"]
 }

@@ -334,7 +334,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void leddriver8_cfg_setup ( leddriver8_cfg_t *cfg );
@@ -344,7 +344,7 @@ void leddriver8_cfg_setup ( leddriver8_cfg_t *cfg );
  * @param leddriver8 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LEDDRIVER8_RETVAL leddriver8_init ( leddriver8_t *ctx, leddriver8_cfg_t *cfg );
 
@@ -423,6 +423,6 @@ void leddriver8_set_mode_register( leddriver8_t *ctx, uint8_t mode_1, uint8_t mo
 #endif  // _LEDDRIVER8_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

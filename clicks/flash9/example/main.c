@@ -3,13 +3,13 @@
  * @brief Flash9 Click example
  *
  * # Description
- * This example demonstrates the use of Flash 9 click board by writing specified data to
+ * This example demonstrates the use of Flash 9 Click board by writing specified data to
  * the memory and reading it back.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Erases the memory sector and then writes a desired number of data bytes to the memory 
@@ -24,7 +24,7 @@
 #include "log.h"
 #include "flash9.h"
 
-#define DEMO_TEXT_MESSAGE           "MikroE - Flash 9 click board"
+#define DEMO_TEXT_MESSAGE           "MikroE - Flash 9 Click board"
 #define STARTING_ADDRESS            0x01234567ul
 
 static flash9_t flash9;

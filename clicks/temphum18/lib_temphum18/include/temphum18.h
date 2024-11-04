@@ -212,7 +212,7 @@ typedef enum
 
 /**
  * @brief Temp&Hum 18 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #temphum18_cfg_t object definition for detailed explanation.
@@ -224,7 +224,7 @@ void temphum18_cfg_setup ( temphum18_cfg_t *cfg );
 /**
  * @brief Temp&Hum 18 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #temphum18_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -240,7 +240,7 @@ err_t temphum18_init ( temphum18_t *ctx, temphum18_cfg_t *cfg );
 /**
  * @brief Temp&Hum 18 default configuration function.
  * @details This function executes a default configuration of Temp&Hum 18
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #temphum18_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -305,7 +305,7 @@ err_t temphum18_wake_up ( temphum18_t *ctx );
  * @brief Temp&Hum 18 get raw data function.
  * @details This function get raw data 
  * of the HS3003 High Performance Relative Humidity and Temperature Sensor
- * on the  Temp&Hum 18 click board™.
+ * on the  Temp&Hum 18 Click board™.
  * @param[in] ctx : Click context object.
  * @param[in] resolution : 
  *         @li @c 0x00 ( TEMPHUM18_RESOLUTION_8_BITS )  - 8 bit resolution,
@@ -336,7 +336,7 @@ err_t temphum18_get_raw_data ( temphum18_t *ctx, uint8_t resolution, int16_t *te
  * @brief Temp&Hum 18 get temperature and humidity function.
  * @details This function get temperature ( degree Celsius ) and humidity ( % ) 
  * of the HS3003 High Performance Relative Humidity and Temperature Sensor
- * on the  Temp&Hum 18 click board™.
+ * on the  Temp&Hum 18 Click board™.
  * @param[in] ctx : Click context object.
  * @param[in] resolution : 
  *         @li @c 0x00 ( TEMPHUM18_RESOLUTION_8_BITS )  - 8 bit resolution,
@@ -365,7 +365,7 @@ err_t temphum18_get_temp_hum ( temphum18_t *ctx, uint8_t resolution, float *temp
  * @brief Temp&Hum 18 enter programming mode function.
  * @details This function enter programming mode, accessing the non-volatile memory 
  * of the HS3003 High Performance Relative Humidity and Temperature Sensor
- * on the  Temp&Hum 18 click board™.
+ * on the  Temp&Hum 18 Click board™.
  * @param[in] ctx : Click context object.
  * See #temphum18_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -380,7 +380,7 @@ err_t temphum18_enter_programming_mode ( temphum18_t *ctx );
  * @brief Temp&Hum 18 enter measurements mode function.
  * @details This function enter measurements mode, exit programming mode
  * of the HS3003 High Performance Relative Humidity and Temperature Sensor
- * on the  Temp&Hum 18 click board™.
+ * on the  Temp&Hum 18 Click board™.
  * @param[in] ctx : Click context object.
  * See #temphum18_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -395,7 +395,7 @@ err_t temphum18_enter_measurements_mode ( temphum18_t *ctx );
  * @brief Temp&Hum 18 set relative humidity resolution function.
  * @details This function sets desired relative humidity resolution
  * of the HS3003 High Performance Relative Humidity and Temperature Sensor
- * on the  Temp&Hum 18 click board™.
+ * on the  Temp&Hum 18 Click board™.
  * @param[in] ctx : Click context object.
  * @param[in] resolution : 
  *         @li @c 0x00 ( TEMPHUM18_RESOLUTION_8_BITS )  - 8 bit resolution,
@@ -414,7 +414,7 @@ err_t temphum18_set_relative_humidity_resolution ( temphum18_t *ctx, uint8_t res
  * @brief Temp&Hum 18 set relative temperature resolution function.
  * @details This function sets desired relative temperature resolution
  * of the HS3003 High Performance Relative Humidity and Temperature Sensor
- * on the  Temp&Hum 18 click board™.
+ * on the  Temp&Hum 18 Click board™.
  * @param[in] ctx : Click context object.
  * @param[in] resolution : 
  *         @li @c 0x00 ( TEMPHUM18_RESOLUTION_8_BITS )  - 8 bit resolution,

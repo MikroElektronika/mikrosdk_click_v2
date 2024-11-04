@@ -3,13 +3,13 @@
  * @brief AlphaNumG Click example
  *
  * # Description
- * This example showcases the initialization and configuration of the logger and click modules
- * and shows how to display characters and numbers on both LED segments of the click.
+ * This example showcases the initialization and configuration of the logger and Click modules
+ * and shows how to display characters and numbers on both LED segments of the Click.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules.
+ * This function initializes and configures the logger and Click modules.
  * 
  * ## Application Task  
  * This function sets the time interval at which the symbols are displayed on the LED 

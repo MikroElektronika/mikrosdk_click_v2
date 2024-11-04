@@ -3,6 +3,6 @@
     "description": "RFID 2 Click is a compact add-on board that contains a stand-alone RFID reader with a built-in antenna easy-to-use for embedded applications. This board features the ID-12LA-SA, an advanced low-cost RFID reader module usable with 38 different tags from ID Innovations.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","ID-12LA-SA"],
+    "hw" : ["Click","ID-12LA-SA"],
     "category" : ["RFid"]
 }

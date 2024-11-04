@@ -452,7 +452,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void uwb_cfg_setup ( uwb_cfg_t *cfg );
@@ -463,7 +463,7 @@ void uwb_cfg_setup ( uwb_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t uwb_init ( uwb_t *ctx, uwb_cfg_t *cfg );
 
@@ -784,6 +784,6 @@ void uwb_enable ( uwb_t *ctx );
 #endif  // _UWB_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

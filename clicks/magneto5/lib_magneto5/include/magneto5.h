@@ -208,7 +208,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void magneto5_cfg_setup ( magneto5_cfg_t *cfg );
@@ -218,7 +218,7 @@ void magneto5_cfg_setup ( magneto5_cfg_t *cfg );
  * @param magneto5 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MAGNETO5_RETVAL magneto5_init ( magneto5_t *ctx, magneto5_cfg_t *cfg );
 
@@ -227,7 +227,7 @@ MAGNETO5_RETVAL magneto5_init ( magneto5_t *ctx, magneto5_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Magneto5 click.
+ * @description This function executes default configuration for Magneto5 Click.
  */
 void magneto5_default_cfg ( magneto5_t *ctx );
 
@@ -348,6 +348,6 @@ void magneto5_reset (  magneto5_t *ctx );
 #endif  // _MAGNETO5_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

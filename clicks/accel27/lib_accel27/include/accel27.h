@@ -352,7 +352,7 @@ typedef enum
 
 /**
  * @brief Accel 27 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #accel27_cfg_t object definition for detailed explanation.
@@ -364,7 +364,7 @@ void accel27_cfg_setup ( accel27_cfg_t *cfg );
 /**
  * @brief Accel 27 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #accel27_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -380,7 +380,7 @@ void accel27_drv_interface_selection ( accel27_cfg_t *cfg, accel27_drv_t drv_sel
 /**
  * @brief Accel 27 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #accel27_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -395,7 +395,7 @@ err_t accel27_init ( accel27_t *ctx, accel27_cfg_t *cfg );
 /**
  * @brief Accel 27 default configuration function.
  * @details This function executes a default configuration of Accel 27
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #accel27_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

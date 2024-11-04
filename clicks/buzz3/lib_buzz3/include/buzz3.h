@@ -246,7 +246,7 @@ typedef enum
 
 /**
  * @brief Buzz 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #buzz3_cfg_t object definition for detailed explanation.
@@ -258,7 +258,7 @@ void buzz3_cfg_setup ( buzz3_cfg_t *cfg );
 /**
  * @brief Buzz 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #buzz3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -273,7 +273,7 @@ err_t buzz3_init ( buzz3_t *ctx, buzz3_cfg_t *cfg );
 /**
  * @brief Buzz 3 default configuration function.
  * @details This function executes a default configuration of Buzz 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #buzz3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -325,7 +325,7 @@ err_t buzz3_pwm_start ( buzz3_t *ctx );
 /**
  * @brief Buzz 3 set gain operating mode function.
  * @details The function set gain operating mode of the PAM8904 piezo sounder driver 
- * with integrated charge pump boost converter on Buzz 3 click board.
+ * with integrated charge pump boost converter on Buzz 3 Click board.
  * @param[out] ctx : Click context object.
  * See #buzz3_t object definition for detailed explanation.
  * @param[out] op_mode : charge pump mode.

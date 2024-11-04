@@ -3,16 +3,16 @@
  
 
 ---
-# DigiVref click
+# DigiVref Click
 
-DigiVref click is a very precise voltage reference Click board™, which allows one of four different voltage values to be selected over the SPI interface.
+DigiVref Click is a very precise voltage reference Click board™, which allows one of four different voltage values to be selected over the SPI interface.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/digivref_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/digivref-click)
+[Click Product page](https://www.mikroe.com/digivref-click)
 
 ---
 
@@ -140,7 +140,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

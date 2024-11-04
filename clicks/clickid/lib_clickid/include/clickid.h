@@ -207,7 +207,7 @@ typedef enum
 
 /**
  * @brief ClickID configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : configuration structure.
  * See #clickid_cfg_t object definition for detailed explanation.
@@ -219,7 +219,7 @@ void clickid_cfg_setup ( clickid_cfg_t *cfg );
 /**
  * @brief ClickID initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : context object.
  * See #clickid_t object definition for detailed explanation.
  * @param[in] cfg : configuration structure.
@@ -288,7 +288,7 @@ err_t clickid_write_memory ( clickid_t *ctx, uint16_t address, uint8_t *data_in,
 
 /**
  * @brief ClickID read information function.
- * @details This function reads the click board information from the permanent data memory.
+ * @details This function reads the Click board information from the permanent data memory.
  * @param[in] ctx : context object.
  * See #clickid_t object definition for detailed explanation.
  * @param[out] info : Click board information.

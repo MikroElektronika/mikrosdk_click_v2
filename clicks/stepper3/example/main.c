@@ -3,7 +3,7 @@
  * @brief Stepper 3 Click Example.
  *
  * # Description
- * This example demonstrates the use of the Stepper 3 click board by driving the 
+ * This example demonstrates the use of the Stepper 3 Click board by driving the 
  * motor in both directions for a desired number of steps.
  *
  * The demo application is composed of two sections :
@@ -17,7 +17,7 @@
  * the USB UART where you can track the program flow.
  *
  * @note
- * Step Motor 5v [MIKROE-1530] is a fully compatible stepper motor for this click board:
+ * Step Motor 5v [MIKROE-1530] is a fully compatible stepper motor for this Click board:
  * https://www.mikroe.com/step-motor-5v
  *
  * @author Stefan Filipovic

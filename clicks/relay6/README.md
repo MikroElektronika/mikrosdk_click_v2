@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Relay 6 click
+# Relay 6 Click
 
 > Relay 6 Click is a compact add-on board for precise load control and monitoring applications. This board features four 9913-05-20TRs, a reed relay from Coto Technology, well-known for its ultra-miniature SMD design, which offers the smallest footprint in the market. These four relays each have four load connection terminals and blue LED indicators that signal the operational status, ensuring clear and immediate feedback.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/relay6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/relay-6-click)
+[Click Product page](https://www.mikroe.com/relay-6-click)
 
 ---
 
@@ -70,7 +70,7 @@ err_t relay6_set_relay ( relay6_t *ctx, uint8_t on_relay, uint8_t off_relay );
 
 ## Example Description
 
-> This example demonstrates the use of Relay 6 click board by toggling the relays state.
+> This example demonstrates the use of Relay 6 Click board by toggling the relays state.
 
 **The demo application is composed of two sections :**
 
@@ -166,7 +166,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

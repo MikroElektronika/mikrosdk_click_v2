@@ -1,6 +1,6 @@
 
 ---
-# GPS 5 click
+# GPS 5 Click
 
 > GPS 5 Click is a compact add-on board that provides users with positioning, navigation, and timing services. This board features the M20050-1, a compact GPS module receiver using the MediaTek MT3333 flash chip, providing a complete GNSS receiver for optimum performance from Antenova. The receiver tracks 3 GNSS constellations concurrently (GPS+Galileo+GLONASS or GPS+Beidou) to considerably enhance location and TTFF (Time-to-first-fix) and has configurable low power modes operating from a 3.3V power supply. In addition to the possibility of using an external antenna, backup power, and various visual indicators, the M20050-1 also has an accurate 0.5ppm TXCO ensuring short TTFF alongside multi-path algorithms, which improves position accuracy in inner-city environments.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/gps5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gps-5-click)
+[Click Product page](https://www.mikroe.com/gps-5-click)
 
 ---
 
@@ -64,13 +64,13 @@ err_t gps5_parse_gngga ( char *rsp_buf, uint8_t gngga_element, char *element_dat
 
 ## Example Description
 
-> This example demonstrates the use of GPS 5 click by reading and displaying the GPS coordinates.
+> This example demonstrates the use of GPS 5 Click by reading and displaying the GPS coordinates.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and resets the click board.
+> Initializes the driver and resets the Click board.
 
 ```c
 
@@ -131,7 +131,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

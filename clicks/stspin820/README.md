@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# STSPIN820 click
+# STSPIN820 Click
 
-> STSPIN820 click is a stepper motor driver with the PWM current control, selectable microstepping up to 256 microsteps, and a wide voltage range. It is based on the STSPIN820, a stepper motor driver from STSPIN8 series. Designed to be a bullet-proof solution for the new wave of demanding industrial applications, it integrates two full-bridges with low ON resistance, the control logic, and a full set of protection features, in a small 4x4mm QFN package. Its output stage implements the PWM current control with the fixed OFF time. The device can be used with the step motor voltage ranging from 7V up to 45V, and current up to 1.5A per bridge.
+> STSPIN820 Click is a stepper motor driver with the PWM current control, selectable microstepping up to 256 microsteps, and a wide voltage range. It is based on the STSPIN820, a stepper motor driver from STSPIN8 series. Designed to be a bullet-proof solution for the new wave of demanding industrial applications, it integrates two full-bridges with low ON resistance, the control logic, and a full set of protection features, in a small 4x4mm QFN package. Its output stage implements the PWM current control with the fixed OFF time. The device can be used with the step motor voltage ranging from 7V up to 45V, and current up to 1.5A per bridge.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/stspin820_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/stspin820-click)
+[Click Product page](https://www.mikroe.com/stspin820-click)
 
 ---
 
@@ -70,13 +70,13 @@ void stspin820_reset_device ( stspin820_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of the STSPIN820 click board by driving the motor in both directions for a desired number of steps.
+> This example demonstrates the use of the STSPIN820 Click board by driving the motor in both directions for a desired number of steps.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -148,7 +148,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

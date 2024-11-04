@@ -1,14 +1,14 @@
 
 ---
-# ProxFusion click
+# ProxFusion Click
 
-> ProxFusion click is a multifunctional capacitive and Hall-effect sensor device. This click can detect touch by using two onboard sensor pads, and it can sense a rotation angle of a magnetic field, parallel with the surface of the click board.
+> ProxFusion Click is a multifunctional capacitive and Hall-effect sensor device. This Click can detect touch by using two onboard sensor pads, and it can sense a rotation angle of a magnetic field, parallel with the surface of the Click board.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/proxfusion_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/proxfusion-click)
+[Click Product page](https://www.mikroe.com/proxfusion-click)
 
 ---
 
@@ -69,14 +69,14 @@ err_t proxfusion_set_event_reg ( proxfusion_t *ctx, uint8_t cfg );
 
 ## Examples Description
 
-> This demo-app reads and displays touch events using ProxFusion click.
+> This demo-app reads and displays touch events using ProxFusion Click.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
 > Configuring clicks and log objects.
-> Settings the click in the default configuration.
+> Settings the Click in the default configuration.
 
 ```c
 void application_init ( void )
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

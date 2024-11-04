@@ -3,7 +3,7 @@
  * \brief Accel Click example
  * 
  * # Description
- * This example demonstrates the use of Accel click board by reading and
+ * This example demonstrates the use of Accel Click board by reading and
  * displaying the accelerometer data (X, Y, and Z axis).
  *
  * The demo application is composed of two sections :

@@ -180,7 +180,7 @@ typedef enum
 
 /**
  * @brief Current Limit 6 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #currentlimit6_cfg_t object definition for detailed explanation.
@@ -192,7 +192,7 @@ void currentlimit6_cfg_setup ( currentlimit6_cfg_t *cfg );
 /**
  * @brief Current Limit 6 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #currentlimit6_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -208,7 +208,7 @@ err_t currentlimit6_init ( currentlimit6_t *ctx, currentlimit6_cfg_t *cfg );
 /**
  * @brief Current Limit 6 default configuration function.
  * @details This function executes a default configuration of Current Limit 6
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #currentlimit6_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -224,7 +224,7 @@ err_t currentlimit6_default_cfg ( currentlimit6_t *ctx );
  * @brief Current Limit 6 power mode function.
  * @details This function executes the desired power mode of the
  * MAX17608 4.5V to 60V, 1A Current Limiter with OV, UV, and Reverse Protection
- * on the Current Limit 6 click board™.
+ * on the Current Limit 6 Click board™.
  * @param[in] ctx : Click context object.
  * See #currentlimit6_t object definition for detailed explanation.
  * @param[in] pwr_mode :
@@ -257,7 +257,7 @@ err_t currentlimit6_generic_write ( currentlimit6_t *ctx, uint8_t data_in );
  * @brief Current Limit 6 set current limit function.
  * @details This function set current limit ( A ) of the
  * MAX17608 4.5V to 60V, 1A Current Limiter with OV, UV, and Reverse Protection
- * on the Current Limit 6 click board™.
+ * on the Current Limit 6 Click board™.
  * @param[in] ctx : Click context object.
  * See #currentlimit6_t object definition for detailed explanation.
  * @param[in] current_limit : Desired current limit [ 0.100 A : 1.0 A ]
@@ -273,7 +273,7 @@ err_t currentlimit6_set_current_limit ( currentlimit6_t *ctx, float current_limi
  * @brief Current Limit 6 check limit exceeded function.
  * @details This function checks limit exceeded of the
  * MAX17608 4.5V to 60V, 1A Current Limiter with OV, UV, and Reverse Protection
- * on the Current Limit 6 click board™.
+ * on the Current Limit 6 Click board™.
  * @param[in] ctx : Click context object.
  * See #currentlimit6_t object definition for detailed explanation.
  * @return @li @c  0 - Overcurrent duration exceeds the blanking time,
@@ -289,7 +289,7 @@ uint8_t currentlimit6_check_limit_exceeded ( currentlimit6_t *ctx );
  * @brief Current Limit 6 check voltage error function.
  * @details This function check the voltage error of the
  * MAX17608 4.5V to 60V, 1A Current Limiter with OV, UV, and Reverse Protection
- * on the Current Limit 6 click board™.
+ * on the Current Limit 6 Click board™.
  * @param[in] ctx : Click context object.
  * See #currentlimit6_t object definition for detailed explanation.
  * @return @li @c  0 - Input voltage falls below UVLO threshold or 

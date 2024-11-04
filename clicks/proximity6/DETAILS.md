@@ -1,14 +1,14 @@
 
 ---
-# Proximity 6 click
+# Proximity 6 Click
 
-> Proximity 6 click is a versatile proximity detection device on a Click board™.
+> Proximity 6 Click is a versatile proximity detection device on a Click board™.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/proximity6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/proximity-6-click)
+[Click Product page](https://www.mikroe.com/proximity-6-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t proximity6_generic_read ( proximity6_t *ctx, uint8_t reg, uint16_t *data_o
 
 ## Examples Description
  
-> This application demonstrates the use of Proximity 6 click board by reading and displaying the raw data measurements from 4 photodiode channels.
+> This application demonstrates the use of Proximity 6 Click board by reading and displaying the raw data measurements from 4 photodiode channels.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -177,7 +177,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void magneticrotary_cfg_setup ( magneticrotary_cfg_t *cfg );
@@ -187,7 +187,7 @@ void magneticrotary_cfg_setup ( magneticrotary_cfg_t *cfg );
  * @param magneticrotary Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MAGNETICROTARY_RETVAL magneticrotary_init ( magneticrotary_t *ctx, magneticrotary_cfg_t *cfg );
 
@@ -257,6 +257,6 @@ double magnrotary_get_field_angle  ( magneticrotary_t *ctx, uint8_t cmd_byte );
 #endif  // _MAGNETICROTARY_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

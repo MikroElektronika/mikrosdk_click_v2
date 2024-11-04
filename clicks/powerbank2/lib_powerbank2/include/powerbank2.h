@@ -151,7 +151,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void powerbank2_cfg_setup ( powerbank2_cfg_t *cfg );
@@ -161,7 +161,7 @@ void powerbank2_cfg_setup ( powerbank2_cfg_t *cfg );
  * @param powerbank2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 POWERBANK2_RETVAL powerbank2_init ( powerbank2_t *ctx, powerbank2_cfg_t *cfg );
 
@@ -206,6 +206,6 @@ uint16_t powerbank2_read_voltage ( powerbank2_t *ctx, uint16_t v_ref );
 #endif  // _POWERBANK2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

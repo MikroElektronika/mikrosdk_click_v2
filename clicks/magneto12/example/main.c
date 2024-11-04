@@ -3,7 +3,7 @@
  * @brief Magneto 12 Click Example.
  *
  * # Description
- * This example demonstrates the use of Magneto 12 click board by reading and displaying
+ * This example demonstrates the use of Magneto 12 Click board by reading and displaying
  * the magnet's angular position in degrees.
  *
  * The demo application is composed of two sections :

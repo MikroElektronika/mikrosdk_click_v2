@@ -3,7 +3,7 @@
  * @brief ISMRX3 Click example
  *
  * # Description
- * This example showcases ability of click board to configure
+ * This example showcases ability of Click board to configure
  * and read incoming rf signal and parses data using data and clock line.
  *
  * The demo application is composed of two sections :

@@ -3,13 +3,13 @@
  * @brief LightRanger9 Click example
  *
  * # Description
- * This example demonstrates the use of LightRanger 9 click board by reading and displaying
+ * This example demonstrates the use of LightRanger 9 Click board by reading and displaying
  * all four sub-captures data measurements on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads all four sub-captures data approximately every 500ms and logs them to the USB UART

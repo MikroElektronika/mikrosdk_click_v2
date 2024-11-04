@@ -3,7 +3,7 @@
  * @brief DIGI Isolator 2 Click example
  *
  * # Description
- * This example demonstrates the use of DIGI Isolator 2 click board by reading
+ * This example demonstrates the use of DIGI Isolator 2 Click board by reading
  * and displaying the state of 8 digital input channels.
  *
  * The demo application is composed of two sections :

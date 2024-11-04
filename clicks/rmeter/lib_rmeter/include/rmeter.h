@@ -171,7 +171,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void rmeter_cfg_setup ( rmeter_cfg_t *cfg );
@@ -184,7 +184,7 @@ void rmeter_cfg_setup ( rmeter_cfg_t *cfg );
  * @return    0  - Ok,
  *          (-1) - Error.
  *
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t rmeter_init ( rmeter_t *ctx, rmeter_cfg_t *cfg );
 
@@ -295,6 +295,6 @@ err_t rmeter_read_an_voltage ( rmeter_t *ctx, float *data_out );
 #endif  // RMETER_H
 
 /** \} */ // End public_function group
-/** \} */ // End click Driver group
+/** \} */ // End Click Driver group
 
 // ------------------------------------------------------------------------ END

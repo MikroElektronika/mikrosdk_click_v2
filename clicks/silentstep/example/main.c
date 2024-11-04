@@ -3,13 +3,13 @@
  * @brief Silent Step Click example
  *
  * # Description
- * This example demonstrates the use of the Silent Step click board by driving the 
+ * This example demonstrates the use of the Silent Step Click board by driving the 
  * motor in both directions for a desired number of steps.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Drives the motor clockwise for 200 full steps and then counter-clockiwse for 200 half

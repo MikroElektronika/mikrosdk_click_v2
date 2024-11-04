@@ -3,6 +3,6 @@
     "description": "eFuse 3 Click is a compact add-on board that contains an electronic eFuse. This board features the NIS6150, a resettable fuse that can significantly enhance the reliability of a USB application from both catastrophic and shutdown failures from ON Semiconductor. It is designed to buffer the load device from the excessive input voltage, which can damage sensitive circuits and protect the input side from reverse currents. It includes an over-voltage clamp circuit that limits the output voltage during transients but doesn’t shut the unit down, allowing the load circuit to continue its operation.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","NIS6150"],
+    "hw" : ["Click","NIS6150"],
     "category" : ["Power Switch"]
 }

@@ -1,6 +1,6 @@
 
 ---
-# LTE Cat.1 2 click
+# LTE Cat.1 2 Click
 
 > LTE Cat.1 2 Click (EU) is a compact add-on board that provides your application with complete LTE and VoLTE with CSFB functionalities. This board features the ELS62-E, a single antenna LTE cat.1bis module from Telit.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ltecat12_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lte-cat1-2-click-for-eu)
+[Click Product page](https://www.mikroe.com/lte-cat1-2-click-for-eu)
 
 ---
 
@@ -192,7 +192,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

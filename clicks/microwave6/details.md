@@ -1,6 +1,6 @@
 
 ---
-# Microwave 6 click
+# Microwave 6 Click
 
 > Microwave 6 Click is a compact add-on board that utilizes the Doppler Shift Phenomenon to sense motion. 
 > This board features the PD-V8-S, a high-frequency microwave sensor from Ningbo Pdlux Electronic Technology. 
@@ -12,7 +12,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/microwave6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/microwave-6-click)
+[Click Product page](https://www.mikroe.com/microwave-6-click)
 
 ---
 
@@ -176,7 +176,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

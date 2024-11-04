@@ -163,7 +163,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void fram2_cfg_setup ( fram2_cfg_t *cfg );
@@ -174,7 +174,7 @@ void fram2_cfg_setup ( fram2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 FRAM2_RETVAL fram2_init ( fram2_t *ctx, fram2_cfg_t *cfg );
 
@@ -184,7 +184,7 @@ FRAM2_RETVAL fram2_init ( fram2_t *ctx, fram2_cfg_t *cfg );
  * @param ctx  Click object.
  *
  * @description This function executes default configuration i.e enable write operation for
- * FRAM 2 click.
+ * FRAM 2 Click.
  */
 void fram2_default_cfg ( fram2_t *ctx );
 
@@ -206,7 +206,7 @@ void fram2_generic_transfer ( fram2_t *ctx, uint8_t *wr_buf, uint16_t wr_len, ui
  *
  * @param ctx          Click object.
  *
- * @description This function sends write enable command to the click.
+ * @description This function sends write enable command to the Click.
  */
 void fram2_write_enable ( fram2_t *ctx );
 
@@ -215,12 +215,12 @@ void fram2_write_enable ( fram2_t *ctx );
  *
  * @param ctx          Click object.
  *
- * @description This function sends write disable command to the click.
+ * @description This function sends write disable command to the Click.
  */
 void fram2_write_disable ( fram2_t *ctx );
 
 /**
- * @brief Read Fram click status
+ * @brief Read Fram Click status
  *
  * @param ctx          Click object.
  *
@@ -231,7 +231,7 @@ void fram2_write_disable ( fram2_t *ctx );
 uint8_t fram2_read_status ( fram2_t *ctx ); 
 
 /**
- * @brief Write Fram click status
+ * @brief Write Fram Click status
  *
  * @param ctx          Click object.
  * @param value        Value to be written.
@@ -241,7 +241,7 @@ uint8_t fram2_read_status ( fram2_t *ctx );
 void fram2_write_status ( fram2_t *ctx, uint8_t value ); 
 
 /**
- * @brief Read from FRAM click memory.
+ * @brief Read from FRAM Click memory.
  *
  * @param ctx          Click object.
  * @param address      Desired starting address (0x0000 to FRAM_MEM_SIZE).
@@ -254,7 +254,7 @@ void fram2_write_status ( fram2_t *ctx, uint8_t value );
 void fram2_read ( fram2_t *ctx, uint32_t address, uint8_t *buffer, uint8_t count ); 
 
 /**
- * @brief Write to FRAM click memory.
+ * @brief Write to FRAM Click memory.
  *
  * @param ctx          Click object.
  * @param address      Address to write to (0x0000 to FRAM_MEM_SIZE).
@@ -272,6 +272,6 @@ void fram2_write( fram2_t *ctx, uint32_t address, uint8_t *buffer, uint8_t count
 #endif  // _FRAM2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

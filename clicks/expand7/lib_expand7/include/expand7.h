@@ -470,7 +470,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void expand7_cfg_setup ( expand7_cfg_t *cfg );
@@ -480,7 +480,7 @@ void expand7_cfg_setup ( expand7_cfg_t *cfg );
  * @param expand7 Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t expand7_init ( expand7_t *ctx, expand7_cfg_t *cfg );
 
@@ -763,6 +763,6 @@ uint8_t expand7_check_int ( expand7_t *ctx );
 #endif  // _EXPAND7_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

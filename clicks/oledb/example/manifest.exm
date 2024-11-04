@@ -1,8 +1,8 @@
 {
     "name": "OLED B Click",
-    "description": "OLED B click carries a 96 x 39px blue monochrome passive matrix OLED display. The display is bright, has a wide viewing angle and low power consumption.",
+    "description": "OLED B Click carries a 96 x 39px blue monochrome passive matrix OLED display. The display is bright, has a wide viewing angle and low power consumption.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MI9639BO-B","SSD1306"],
+    "hw" : ["Click","MI9639BO-B","SSD1306"],
     "category" : ["Click Boards > Display & LED > OLED"]
 }

@@ -140,7 +140,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void balancer3_cfg_setup ( balancer3_cfg_t *cfg );
@@ -150,7 +150,7 @@ void balancer3_cfg_setup ( balancer3_cfg_t *cfg );
  * @param balancer3 Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t balancer3_init ( balancer3_t *ctx, balancer3_cfg_t *cfg );
 
@@ -179,6 +179,6 @@ uint8_t balancer3_check_overvoltage ( balancer3_t *ctx );
 #endif  // _BALANCER3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

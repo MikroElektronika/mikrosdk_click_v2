@@ -3,6 +3,6 @@
     "description": "ISM RX 3 Click is a compact add-on board that contains a Sub-GHz RF receiver. This board features the MAX41470, a high-performance, low-power receiver ideal for amplitude shift-keyed (ASK) and frequency shift-keyed (FSK) data from Maxim Integrated, now part of Analog Devices.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MAX41470"],
+    "hw" : ["Click","MAX41470"],
     "category" : ["Sub-1 GHz Transceivers"]
 }

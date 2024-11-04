@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# SE051 Plug n Trust click
+# SE051 Plug n Trust Click
 
 > SE051 Plug&Trust Click is a compact add-on board representing a ready-to-use IoT security solution. This board features the SE051C2, an updatable extension of the EdgeLock™ SE050 from NXP Semiconductor, which delivers proven security certified to CC EAL 6+, with AVA_VAN.5up to the OS level. Designed for the latest IoT security requirements, it allows securely storing and provisioning credentials performing cryptographic operations, giving edge-to-cloud security capability right out of the box. It also provides upgrade functionality of the IoT applet while preserving on-device credentials, alongside reconfiguration possibility.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/se051plugntrust_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/se051-plugtrust-click)
+[Click Product page](https://www.mikroe.com/se051-plugtrust-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t se051plugntrust_apdu_transfer ( se051plugntrust_t *ctx, se051plugntrust_fr
 
 ## Example Description
 
-> This application is showcasing basic functionality of SE051 Plug&Trust click board.
+> This application is showcasing basic functionality of SE051 Plug&Trust Click board.
 It gets identify data from device, selects card manager and applet.
 Then checks free memory, reads all objects and deletes not reserved ones.
 After that showcases a few of functionality:
@@ -299,7 +299,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

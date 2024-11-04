@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# Noise click
+# Noise Click
 
-Noise click is a mikroBUS add-on board with noise detecting circuitry. It enables you to set a noise detection threshold for alarm systems, environmental monitoring or data logging.
+Noise Click is a mikroBUS add-on board with noise detecting circuitry. It enables you to set a noise detection threshold for alarm systems, environmental monitoring or data logging.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/noise_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/noise-click)
+[Click Product page](https://www.mikroe.com/noise-click)
 
 ---
 
@@ -58,7 +58,7 @@ void noise_default_cfg ( noise_t *ctx );
 err_t noise_set_cmd_reg ( noise_t *ctx, uint8_t configuration, uint16_t threshold );
 ```
 
-- `noise_set_state` This function switches click on or off.
+- `noise_set_state` This function switches Click on or off.
 ```c
 void noise_set_state ( noise_t *ctx, uint8_t state );
 ```
@@ -70,7 +70,7 @@ err_t noise_read_an_pin_voltage ( noise_t *ctx, float *data_out );
 
 ## Examples Description
 
-> This example performs an ambient noise monitoring using the Noise click board.
+> This example performs an ambient noise monitoring using the Noise Click board.
 
 **The demo application is composed of two sections :**
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -1,6 +1,6 @@
 
 ---
-# GNSS 16 click
+# GNSS 16 Click
 
 > GNSS 16 Click is a compact add-on board that delivers meter-level accuracy in urban environments. This Click board™ features the NEO-F10N-00B, a professional-grade L1/L5 dual-band GNSS receiver from u-blox. It features dual-band multipath mitigation technology to ensure robust signal reception and supports multiple GNSS systems, including GPS, Galileo, and BeiDou. Configurable for specific constellations, it optimizes power consumption while maintaining high performance.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/gnss16_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gnss-16-click)
+[Click Product page](https://www.mikroe.com/gnss-16-click)
 
 ---
 
@@ -59,14 +59,14 @@ void gnss16_reset_device ( gnss16_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of GNSS 16 click board by processing
+> This example demonstrates the use of GNSS 16 Click board by processing
 > the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and resets the click board.
+> Initializes the driver and resets the Click board.
 
 ```c
 void application_init ( void ) 
@@ -127,7 +127,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,6 +1,6 @@
 
 ---
-# Bluetooth2 click
+# Bluetooth2 Click
 
 > Bluetooth 2 Click features WT41u, a long range class 1, Bluetooth® 2.1 + EDR module. WT41u is a highly integrated and sophisticated Bluetooth® module, containing all the necessary elements from Bluetooth® radio and a fully implemented protocol stack. Therefore WT41u provides an ideal solution for developers who want to integrate Bluetooth® wireless technology into their design with limited knowledge of Bluetooth® and RF technologies. WT41u optimized for long range applications is available with an integrated chip antenna. By default, the WT41u module is equipped with powerful and easy-to-use iWRAP firmware which enables users to access Bluetooth® functionality with simple ASCII commands delivered to the module over serial interface - it's just like a Bluetooth® modem.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/bluetooth2__click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/bluetooth2-click)
+[Click Product page](https://www.mikroe.com/bluetooth2-click)
 
 ---
 
@@ -139,7 +139,7 @@ void application_init ( void )
 ### Application Task
 
 > Logs all the received messages/responses on the USB UART, and if there's any device
-> connected to the click board the module sends a desired message every 5 seconds back to it.
+> connected to the Click board the module sends a desired message every 5 seconds back to it.
 
 ```c
 
@@ -179,7 +179,7 @@ void application_task ( void )
 ## Note
 
 > We have used the Serial Bluetooth Terminal smartphone application for the test. 
-> A smartphone and the click board must be paired in order to exchange messages with each other.
+> A smartphone and the Click board must be paired in order to exchange messages with each other.
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 
@@ -192,7 +192,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

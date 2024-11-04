@@ -1,6 +1,6 @@
 
 ---
-# Proximity 17 click
+# Proximity 17 Click
 
 > Proximity 17 Click is a compact add-on board that contains a close-range proximity sensing solution. This board features the TMD2635, a miniature proximity sensor module from ams AG. The TMD2635 features advanced proximity measurement in a tiny and thin optical land grid array module that incorporates a 940nm infrared vertical-cavity surface-emitting laser (IR VCSEL) factory calibrated for IR proximity response. It also offers advanced crosstalk noise cancellation through a wide range of offset adjustments through a digital fast-mode I2C interface to compensate for unwanted IR energy reflection at the sensor. This Click board™ is suitable for consumer and industrial applications.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/proximity17_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/proximity-17-click)
+[Click Product page](https://www.mikroe.com/proximity-17-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t proximity17_soft_reset ( proximity17_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Proximity 17 click board by reading and displaying the proximity data on the USB UART.
+> This example demonstrates the use of Proximity 17 Click board by reading and displaying the proximity data on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and logger, and performs the click default configuration.
+> Initializes the driver and logger, and performs the Click default configuration.
 
 ```c
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

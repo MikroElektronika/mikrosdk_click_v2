@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Ambient 22 click
+# Ambient 22 Click
 
 > Ambient 22 Click is a compact add-on board that measures the intensity of visible light. This board features the OPT3005, a single-chip lux meter from Texas Instruments that transforms light intensity to a digital signal output that can be directly communicated via an I2C interface. The sensor's spectral response tightly matches the human eye's photopic response along with extreme rejection to 850nm and 940nm infrared light over a wide angle of incidence. Measurements can be made from 20mlux up to 166klux without manually selecting full-scale ranges using the built-in, full-scale setting feature.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ambient22_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ambient-22-click)
+[Click Product page](https://www.mikroe.com/ambient-22-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t ambient22_write_register ( ambient22_t *ctx, uint8_t reg, uint16_t data_in
 
 ## Example Description
 
-> This example demonstrates the use of Ambient 22 click board by measuring the ambient light level in lux.
+> This example demonstrates the use of Ambient 22 Click board by measuring the ambient light level in lux.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

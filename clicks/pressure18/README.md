@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Pressure 18 click
+# Pressure 18 Click
 
 > Pressure 18 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the BMP384, a robust barometric pressure sensor delivering market-leading accuracy in a compact package from Bosch Sensortec. The BMP384 provides a relative accuracy of ±9Pa and typical absolute accuracy of ±50Pa with ultra-low noise, low power consumption, and a temperature coefficient offset of ±1Pa/K. It converts output data into a 24-bit digital value and sends the information via a configurable host interface that supports SPI and I2C serial communications. It measures pressure from 300hPa to 1250hPa over a wide operating temperature range.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/pressure18_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pressure-18-click)
+[Click Product page](https://www.mikroe.com/pressure-18-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t pressure18_soft_reset ( pressure18_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Pressure 18 click board by reading and displaying the pressure and temperature measurements.
+> This example demonstrates the use of Pressure 18 Click board by reading and displaying the pressure and temperature measurements.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

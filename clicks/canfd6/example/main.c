@@ -4,7 +4,7 @@
  *
  * # Description
  * This application presents the capabilities of the
- * CAN FD 6 click board. The board can be used both
+ * CAN FD 6 Click board. The board can be used both
  * as a receiver and a transmitter. Use def directive
  * to define the receive or transmit app.
  *
@@ -91,7 +91,7 @@ void application_init ( void ) {
     canfd6_header.ESI = 0;
     canfd6_mcan_write_txbuffer( &canfd6, CANFD6_FIRST_MSG, &canfd6_header, data_send_buf );
 
-    strcpy ( data_send_buf, "CAN FD 6 click board" );
+    strcpy ( data_send_buf, "CAN FD 6 Click board" );
     canfd6_header.DLC = CANFD6_MCAN_DLC_20B;
     canfd6_header.ID = 0x456;
     canfd6_header.FDF = 1;

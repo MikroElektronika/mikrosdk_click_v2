@@ -153,7 +153,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void charger9_cfg_setup ( charger9_cfg_t *cfg );
@@ -163,7 +163,7 @@ void charger9_cfg_setup ( charger9_cfg_t *cfg );
  * @param charger9 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 CHARGER9_RETVAL charger9_init ( charger9_t *ctx, charger9_cfg_t *cfg );
 
@@ -218,6 +218,6 @@ CHARGER9_RETVAL charger9_fault_ind ( charger9_t *ctx );
 #endif  // _CHARGER9_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

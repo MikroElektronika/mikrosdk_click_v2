@@ -3,13 +3,13 @@
  * \brief Thermo15 Click example
  *
  * # Description
- * This demo-app shows the temperature measurement procedure using Thermo 15 click.
+ * This demo-app shows the temperature measurement procedure using Thermo 15 Click.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
  * Configuring clicks and log objects.
- * Setting the click in the default configuration to start the measurement.
+ * Setting the Click in the default configuration to start the measurement.
  *
  * ## Application Task
  * Reads ambient temperature data and this data logs to USBUART every 1500ms.

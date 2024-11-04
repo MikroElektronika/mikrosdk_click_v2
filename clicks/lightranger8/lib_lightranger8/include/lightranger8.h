@@ -1416,7 +1416,7 @@ typedef struct
 
 /**
  * @brief LightRanger 8 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #lightranger8_cfg_t object definition for detailed explanation.
@@ -1428,7 +1428,7 @@ void lightranger8_cfg_setup ( lightranger8_cfg_t *cfg );
 /**
  * @brief LightRanger 8 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #lightranger8_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -1444,7 +1444,7 @@ err_t lightranger8_init ( lightranger8_t *ctx, lightranger8_cfg_t *cfg );
 /**
  * @brief LightRanger 8 default configuration function.
  * @details This function executes a default configuration of LightRanger 8
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #lightranger8_t object definition for detailed explanation.
  * @return @li @c  0x01 ( LIGHTRANGER8_RESP_DEVICE_ERROR_ID_IS_NOT_VALID ) - ID error,

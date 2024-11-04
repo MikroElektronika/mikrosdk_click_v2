@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# TempHum 20 click
+# TempHum 20 Click
 
 > Temp&Hum 20 Click is a compact add-on board that represents temperature and humidity sensing solution. This board features the CC2D23, a highly accurate, fully-calibrated relative humidity and temperature sensor from Amphenol. This sensor, characterized by its high accuracy (±2% from 20% to 80%RH (±3% over entire humidity range)) and high resolution, provides factory-calibrated 14-bit data to the host controller with a configurable I2C interface. It also comes with alarm features for preset control at a minimum and maximum humidity.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/temphum20_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/temphum-20-click)
+[Click Product page](https://www.mikroe.com/temphum-20-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t temphum20_set_operating_mode ( temphum20_t *ctx, uint8_t op_mode );
 
 ## Example Description
 
-> This example demonstrates the use of Temp & Hum 20 click board.
+> This example demonstrates the use of Temp & Hum 20 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and logger and performs the click default configuration which resets the device and sets it to normal operating mode.
+> Initializes the driver and logger and performs the Click default configuration which resets the device and sets it to normal operating mode.
 
 ```c
 
@@ -148,7 +148,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

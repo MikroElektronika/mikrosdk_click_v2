@@ -3,6 +3,6 @@
     "description": "BATT Boost Click is a compact add-on board that expands a coin battery cell's lifetime and current capability, like the CR2032 and lithium thionyl batteries. This board features the NBM5100A, a coin-cell battery life booster with adaptive power optimization from Nexperia. It is a battery energy management device designed to maximize usable capacity from non-rechargeable, primary batteries when used in low-voltage, low-power applications requiring burst current loads. The devices overcome voltage drop and battery life limitations associated with extracting high pulse currents.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","NBM5100ABQX"],
+    "hw" : ["Click","NBM5100ABQX"],
     "category" : ["Click Boards > Power management > Boost"]
 }

@@ -230,7 +230,7 @@ typedef enum
 
 /**
  * @brief Radar configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #radar_cfg_t object definition for detailed explanation.
@@ -242,7 +242,7 @@ void radar_cfg_setup ( radar_cfg_t *cfg );
 /**
  * @brief Radar initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #radar_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -257,7 +257,7 @@ err_t radar_init ( radar_t *ctx, radar_cfg_t *cfg );
 /**
  * @brief Radar default configuration function.
  * @details This function executes a default configuration of Radar
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #radar_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

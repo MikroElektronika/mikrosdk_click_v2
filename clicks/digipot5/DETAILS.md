@@ -1,9 +1,9 @@
  
 
 ---
-# DIGI POT 5 click
+# DIGI POT 5 Click
 
-DIGI POT 5 click is a digitally controlled quad potentiometer, with the resistance of 10KΩ.
+DIGI POT 5 Click is a digitally controlled quad potentiometer, with the resistance of 10KΩ.
 It has an 8bit wiper step resolution, which allows the wiper to take 257 different discrete positions (across 256 internal resistors).
 The digital wiper position can be controlled via the SPI interface.
 
@@ -11,7 +11,7 @@ The digital wiper position can be controlled via the SPI interface.
   <img src="https://download.mikroe.com/images/click_for_ide/digipot5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/digipot-5-click)
+[Click Product page](https://www.mikroe.com/digipot-5-click)
 
 ---
 
@@ -61,7 +61,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ## Examples Description
 
 >
-> This example demonstrates the use of the DIGI POT 5 click board.
+> This example demonstrates the use of the DIGI POT 5 Click board.
 >
 
 **The demo application is composed of two sections :**
@@ -69,7 +69,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ### Application Init
 
 >
-> Initializes all necessary peripherals and pins used for the DIGI POT 5 click.
+> Initializes all necessary peripherals and pins used for the DIGI POT 5 Click.
 > Also allows the device to be reset and configured to enable all wipers (4).
 > UART console module will be initialized also in this function.
 >
@@ -110,7 +110,7 @@ void application_init( void )
 ### Application Task
 
 >
-> Demonstrates the use of click driver functions by performing a control of
+> Demonstrates the use of Click driver functions by performing a control of
 > the all wipers positions. By checking the uart console, user can be informed
 > about the all current wipers positions.
 >
@@ -196,7 +196,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

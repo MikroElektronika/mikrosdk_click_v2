@@ -3,7 +3,7 @@
  
 
 ---
-# Fan click
+# Fan Click
 
 Fan Click carries an EMC2301 controller for powering and regulating the operation of 5V four-wire fans, which are commonly utilized as coolers in computers and other electronics.
 
@@ -11,7 +11,7 @@ Fan Click carries an EMC2301 controller for powering and regulating the operatio
   <img src="https://download.mikroe.com/images/click_for_ide/fan_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/fan-click)
+[Click Product page](https://www.mikroe.com/fan-click)
 
 ---
 
@@ -51,7 +51,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
  
 - Generic read function.
 > void fan_generic_read ( fan_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-- Fan click lock registers.
+- Fan Click lock registers.
 > void fan_lock_registers ( fan_t *ctx, uint8_t lock );
 
 ## Examples Description
@@ -142,7 +142,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

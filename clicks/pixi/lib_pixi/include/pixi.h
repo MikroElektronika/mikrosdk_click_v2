@@ -291,7 +291,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void pixi_cfg_setup ( pixi_cfg_t *cfg );
@@ -301,7 +301,7 @@ void pixi_cfg_setup ( pixi_cfg_t *cfg );
  * @param pixi Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 PIXI_RETVAL pixi_init ( pixi_t *ctx, pixi_cfg_t *cfg );
 
@@ -310,7 +310,7 @@ PIXI_RETVAL pixi_init ( pixi_t *ctx, pixi_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Pixi click.
+ * @description This function executes default configuration for Pixi Click.
  */
 void pixi_default_cfg ( pixi_t *ctx );
 
@@ -321,7 +321,7 @@ void pixi_default_cfg ( pixi_t *ctx );
  * @param reg_addr   Register address.
  * @param reg_data   Write data.
  *
- * @description This function writes data to the click module.
+ * @description This function writes data to the Click module.
  */
 uint8_t pixi_write_reg ( pixi_t *ctx, const uint8_t reg_addr, uint32_t reg_data );
 
@@ -332,7 +332,7 @@ uint8_t pixi_write_reg ( pixi_t *ctx, const uint8_t reg_addr, uint32_t reg_data 
  * @param reg_addr   Register address.
  * @param reg_data   Read buffer.
  *
- * @description This function reads data from the click module.
+ * @description This function reads data from the Click module.
  */
 uint8_t pixi_read_reg ( pixi_t *ctx, const uint8_t reg_addr, uint32_t *reg_data );
 
@@ -342,6 +342,6 @@ uint8_t pixi_read_reg ( pixi_t *ctx, const uint8_t reg_addr, uint32_t *reg_data 
 #endif  // _PIXI_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

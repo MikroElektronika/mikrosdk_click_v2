@@ -3,21 +3,21 @@
  * \brief Ammeter Click example
  * 
  * # Description
- * Demo app measures and displays current by using Ammeter click board.
+ * Demo app measures and displays current by using Ammeter Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initalizes SPI, LOG and click drivers.
+ * Initalizes SPI, LOG and Click drivers.
  * 
  * ## Application Task  
- * This is an example that shows the capabilities of the Ammeter click by 
- * measuring amperage in miliampers. Ammeter click board can be used to saftly 
+ * This is an example that shows the capabilities of the Ammeter Click by 
+ * measuring amperage in miliampers. Ammeter Click board can be used to saftly 
  * measure current up to 1A both AC and DC, in the case of AC, 
  * for peak to peak value.
  * 
  * *note:* 
- * It is important to notice that this click board has its' own electronic 
+ * It is important to notice that this Click board has its' own electronic 
  * circuit, and may not be powered from the same source which we are measuring.
  * Result will not be correct in that case.
  * 

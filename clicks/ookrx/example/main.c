@@ -3,7 +3,7 @@
  * @brief OOK RX Click Example.
  *
  * # Description
- * This example demonstrates the use of OOK RX click board by reading and parsing
+ * This example demonstrates the use of OOK RX Click board by reading and parsing
  * packet messages received from the transmitter.
  *
  * The demo application is composed of two sections :
@@ -16,7 +16,7 @@
  * bytes in a packet, and displays its data as well as the RSSI value on the USB UART.
  *
  * @note
- * The OOK TX click board is a compatible transmitter for the OOK RX click.
+ * The OOK TX Click board is a compatible transmitter for the OOK RX Click.
  * Here are a few steps for troubleshooting if you are experiencing issues running
  * this example:
  *  - Check the MCU clock configuration, use an external oscillator instead of the MCU's

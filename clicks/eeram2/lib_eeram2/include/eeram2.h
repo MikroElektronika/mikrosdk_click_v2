@@ -239,7 +239,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void eeram2_cfg_setup ( eeram2_cfg_t *cfg );
@@ -250,7 +250,7 @@ void eeram2_cfg_setup ( eeram2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 EERAM2_RETVAL eeram2_init ( eeram2_t *ctx, eeram2_cfg_t *cfg );
 
@@ -287,7 +287,7 @@ void eeram2_set_on_hold_status ( eeram2_t *ctx, uint8_t en_hold );
  * @param command      8-bit Commands Opcode.
  *
  * @description Function set command to the
- * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 click board.
+ * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 Click board.
  */
 void eeram2_set_command ( eeram2_t *ctx, uint8_t command );
 
@@ -300,7 +300,7 @@ void eeram2_set_command ( eeram2_t *ctx, uint8_t command );
  * - 0x01 ( EERAM2_WRITE_ENABLE )  : Write disable instruction.
  *
  * @description Function set write enable instruction of the
- * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 click board.
+ * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 Click board.
  */
 void eeram2_set_write_status ( eeram2_t *ctx, uint8_t en_write );
 
@@ -319,7 +319,7 @@ void eeram2_set_write_status ( eeram2_t *ctx, uint8_t en_write );
  * - EERAM2_STATUS_BP_LVL_3 :  Entire SRAM memory array protection.
  *
  * @description Function set status register of the
- * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 click board.
+ * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 Click board.
  */
 void eeram2_set_status ( eeram2_t *ctx, uint8_t tx_data );
 
@@ -349,7 +349,7 @@ void eeram2_set_status ( eeram2_t *ctx, uint8_t tx_data );
  *             - 1 : Device is busy with an internal store or recall operation.
  *
  * @description Function set status register of the
- * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 click board.
+ * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 Click board.
  */
 uint8_t eeram2_get_status ( eeram2_t *ctx );
 
@@ -367,7 +367,7 @@ uint8_t eeram2_get_status ( eeram2_t *ctx );
  *
  * @description Function write the data byte
  * to the desired register address of the
- * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 click board.
+ * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 Click board.
  */
 uint8_t eeram2_write_byte ( eeram2_t *ctx, uint32_t reg, uint8_t tx_data );
 
@@ -382,7 +382,7 @@ uint8_t eeram2_write_byte ( eeram2_t *ctx, uint32_t reg, uint8_t tx_data );
  *
  * @description Function read the data byte
  * of the desired register address of the
- * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 click board.
+ * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 Click board.
  */
 uint8_t eeram2_read_byte ( eeram2_t *ctx, uint32_t reg );
 
@@ -402,7 +402,7 @@ uint8_t eeram2_read_byte ( eeram2_t *ctx, uint32_t reg );
  *
  * @description Function writes a sequential data starting
  * to the targeted register address of the
- * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 click board.
+ * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 Click board.
  */
 uint8_t eeram2_write_continuous ( eeram2_t *ctx, uint32_t reg, uint8_t *p_tx_data, uint8_t n_bytes );
 
@@ -422,7 +422,7 @@ uint8_t eeram2_write_continuous ( eeram2_t *ctx, uint32_t reg, uint8_t *p_tx_dat
  *
  * @description Function read a sequential data starting
  * from the targeted register address of the
- * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 click board.
+ * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 Click board.
  */
 uint8_t eeram2_read_continuous ( eeram2_t *ctx, uint32_t reg, uint8_t *p_rx_data, uint8_t n_bytes );
 
@@ -437,7 +437,7 @@ uint8_t eeram2_read_continuous ( eeram2_t *ctx, uint32_t reg, uint8_t *p_rx_data
  * - 1 ( EERAM2_SUCCESS ) : Successful writing;
  *
  * @description Function writes a nonvolatile user space of the
- * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 click board.
+ * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 Click board.
  */
 uint8_t eeram2_read_nonvolatile ( eeram2_t *ctx, uint8_t *p_rx_data );
 
@@ -452,7 +452,7 @@ uint8_t eeram2_read_nonvolatile ( eeram2_t *ctx, uint8_t *p_rx_data );
  * - 1 ( EERAM2_SUCCESS ) : Successful reading;
  *
  * @description Function read a nonvolatile user space of the
- * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 click board.
+ * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 Click board.
  */
 uint8_t eeram2_write_nonvolatile ( eeram2_t *ctx, uint8_t *p_tx_data );
 
@@ -468,7 +468,7 @@ uint8_t eeram2_write_nonvolatile ( eeram2_t *ctx, uint8_t *p_tx_data );
  *
  * @description Function secure SRAM write,
  * which add another layer of protection to data of the
- * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 click board.
+ * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 Click board.
  */
 uint8_t eeram2_secure_write ( eeram2_t *ctx, uint16_t reg, uint8_t *p_tx_data );
 
@@ -483,7 +483,7 @@ uint8_t eeram2_secure_write ( eeram2_t *ctx, uint16_t reg, uint8_t *p_tx_data );
  * - 1 ( EERAM2_SUCCESS ) : Successful reading;
  *
  * @description Function read data from the secure SRAM memory space of the
- * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 click board.
+ * 48LM01 1-Mbit SPI Serial EERAM on the EERAM 2 Click board.
  */
 uint8_t eeram2_secure_read ( eeram2_t *ctx, uint16_t reg, uint8_t *p_rx_data );
 
@@ -493,6 +493,6 @@ uint8_t eeram2_secure_read ( eeram2_t *ctx, uint16_t reg, uint8_t *p_rx_data );
 #endif  // _EERAM2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

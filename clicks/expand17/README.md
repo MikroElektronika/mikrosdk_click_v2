@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Expand 17 click
+# Expand 17 Click
 
 > Expand 17 Click is a compact add-on board designed to expand the number of input/output pins in your system. This board features the TCAL6408, an 8-bit I/O expander from Texas Instruments, which communicates via the I2C protocol. The TCAL6408 features programmable output drive strength, latchable inputs, pull-up/pull-down resistors, and configurable open-drain or push-pull outputs, offering flexible and enhanced I/O performance with minimal power consumption and reduced EMI.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/expand17_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/expand-17-click)
+[Click Product page](https://www.mikroe.com/expand-17-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t expand17_get_input_state ( expand17_t *ctx, uint8_t *input_state );
 
 ## Example Description
 
-> This example demonstrates the use of Expand 17 click board by setting and reading the ports state.
+> This example demonstrates the use of Expand 17 Click board by setting and reading the ports state.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which sets 
+> Initializes the driver and performs the Click default configuration which sets 
  half of pins as output ( IO5, IO6, IO7 and IO8 ) and the 
  half of the pins as inputs ( IO1, IO2, IO3 and IO4 ).
 
@@ -238,7 +238,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

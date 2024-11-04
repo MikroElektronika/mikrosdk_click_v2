@@ -341,7 +341,7 @@ typedef enum
 
 /**
  * @brief AudioAmp 8 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #audioamp8_cfg_t object definition for detailed explanation.
@@ -353,7 +353,7 @@ void audioamp8_cfg_setup ( audioamp8_cfg_t *cfg );
 /**
  * @brief AudioAmp 8 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -369,7 +369,7 @@ err_t audioamp8_init ( audioamp8_t *ctx, audioamp8_cfg_t *cfg );
 /**
  * @brief AudioAmp 8 default configuration function.
  * @details This function executes a default configuration of AudioAmp 8
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -419,7 +419,7 @@ err_t audioamp8_generic_read ( audioamp8_t *ctx, uint8_t reg, uint8_t *rx_buf, u
  * @brief AudioAmp 8 start-up procedure function.
  * @details This function performs a start-up procedure 
  * of the MA12070 Filterless and High-Efficiency +4V to +26V Audio Amplifier with Analog Input
- * on the AudioAmp 8 click board™.
+ * on the AudioAmp 8 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @return @li @c  0 - Success.
@@ -433,7 +433,7 @@ err_t audioamp8_start_up ( audioamp8_t *ctx );
  * @brief AudioAmp 8 shut-down procedure function.
  * @details This function performs a power-down procedure 
  * of the MA12070 Filterless and High-Efficiency +4V to +26V Audio Amplifier with Analog Input
- * on the AudioAmp 8 click board™.
+ * on the AudioAmp 8 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @return @li @c  0 - Success.
@@ -447,7 +447,7 @@ err_t audioamp8_shut_down ( audioamp8_t *ctx );
  * @brief AudioAmp 8 mute function.
  * @details This function performs a mute 
  * of the MA12070 Filterless and High-Efficiency +4V to +26V Audio Amplifier with Analog Input
- * on the AudioAmp 8 click board™.
+ * on the AudioAmp 8 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @return @li @c  0 - Success.
@@ -461,7 +461,7 @@ err_t audioamp8_set_mute ( audioamp8_t *ctx, uint8_t en_mute );
  * @brief AudioAmp 8 enable function.
  * @details This function performs a enable 
  * of the MA12070 Filterless and High-Efficiency +4V to +26V Audio Amplifier with Analog Input
- * on the AudioAmp 8 click board™.
+ * on the AudioAmp 8 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @return @li @c  0 - Success.
@@ -476,7 +476,7 @@ err_t audioamp8_set_enable ( audioamp8_t *ctx, uint8_t dev_en );
  * @details This function performs a BTL signal configuration, 
  * two input- and output terminals are used per channel 
  * of the MA12070 Filterless and High-Efficiency +4V to +26V Audio Amplifier with Analog Input
- * on the AudioAmp 8 click board™.
+ * on the AudioAmp 8 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @return @li @c  0 - Success.
@@ -490,7 +490,7 @@ err_t audioamp8_btl_cfg ( audioamp8_t *ctx );
  * @brief AudioAmp 8 set power mode configuration function.
  * @details This function configure power mode
  * of the MA12070 Filterless and High-Efficiency +4V to +26V Audio Amplifier with Analog Input
- * on the AudioAmp 8 click board™.
+ * on the AudioAmp 8 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @param[in] pwr_mode : Power mode configuration object object.
@@ -506,7 +506,7 @@ err_t audioamp8_set_cfg_pmode ( audioamp8_t *ctx, audioamp8_pwr_mon_cfg_t pwr_mo
  * @brief AudioAmp 8 get power mode configuration function.
  * @details This function get power mode configuration
  * of the MA12070 Filterless and High-Efficiency +4V to +26V Audio Amplifier with Analog Input
- * on the AudioAmp 8 click board™.
+ * on the AudioAmp 8 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @param[out] pwr_mode : Power mode configuration object object.
@@ -522,7 +522,7 @@ err_t audioamp8_get_cfg_pmode ( audioamp8_t *ctx, audioamp8_pwr_mon_cfg_t *pwr_m
  * @brief AudioAmp 8 set soft-clipping and overcurrent protection latching function.
  * @details This function configure oft-clipping and overcurrent protection latching 
  * of the MA12070 Filterless and High-Efficiency +4V to +26V Audio Amplifier with Analog Input
- * on the AudioAmp 8 click board™.
+ * on the AudioAmp 8 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @param[in] lf_clamp_en : Enables soft-clipping: 
@@ -543,7 +543,7 @@ err_t audioamp8_set_soft_copl ( audioamp8_t *ctx, uint8_t lf_clamp_en, uint8_t o
  * @brief AudioAmp 8 set power mode profile configuration function.
  * @details This function configure power mode profile
  * of the MA12070 Filterless and High-Efficiency +4V to +26V Audio Amplifier with Analog Input
- * on the AudioAmp 8 click board™.
+ * on the AudioAmp 8 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @param[in] pm_profile : Power mode profile configuration object object.
@@ -559,7 +559,7 @@ err_t audioamp8_set_cfg_pmode_p ( audioamp8_t *ctx, audioamp8_pwr_mod_profile_cf
  * @brief AudioAmp 8 get power mode configuration function.
  * @details This function get power mode profile configuration
  * of the MA12070 Filterless and High-Efficiency +4V to +26V Audio Amplifier with Analog Input
- * on the AudioAmp 8 click board™.
+ * on the AudioAmp 8 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @param[out] pm_profile : Power mode profile configuration object object.
@@ -575,7 +575,7 @@ err_t audioamp8_get_cfg_pmode_p ( audioamp8_t *ctx, audioamp8_pwr_mod_profile_cf
  * @brief AudioAmp 8 over-current protection latch clear function.
  * @details This function clears over current protection latch
  * of the MA12070 Filterless and High-Efficiency +4V to +26V Audio Amplifier with Analog Input
- * on the AudioAmp 8 click board™.
+ * on the AudioAmp 8 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -590,7 +590,7 @@ err_t audioamp8_clr_opl ( audioamp8_t *ctx );
  * @brief AudioAmp 8 set audio IN mode function.
  * @details This function set audio IN mode
  * of the MA12070 Filterless and High-Efficiency +4V to +26V Audio Amplifier with Analog Input
- * on the AudioAmp 8 click board™.
+ * on the AudioAmp 8 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @param[in] audio_in_mode : Audio IN:
@@ -608,7 +608,7 @@ err_t audioamp8_set_audio_imode ( audioamp8_t *ctx, uint8_t audio_in_mode );
  * @brief AudioAmp 8 set DC protection function.
  * @details This function set DC protection
  * of the MA12070 Filterless and High-Efficiency +4V to +26V Audio Amplifier with Analog Input
- * on the AudioAmp 8 click board™.
+ * on the AudioAmp 8 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @param[in] eh_dcshdn : DC protection:
@@ -626,7 +626,7 @@ err_t audioamp8_set_dc_protection ( audioamp8_t *ctx, uint8_t eh_dcshdn );
  * @brief AudioAmp 8 set audio IN mode overwrite function.
  * @details This function set audio IN mode overwrite
  * of the MA12070 Filterless and High-Efficiency +4V to +26V Audio Amplifier with Analog Input
- * on the AudioAmp 8 click board™.
+ * on the AudioAmp 8 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @param[in] audio_in_mode_ext : Audio IN mode overwrite:
@@ -644,7 +644,7 @@ err_t audioamp8_set_audio_imode_ow ( audioamp8_t *ctx, uint8_t audio_in_mode_ext
  * @brief AudioAmp 8 error handler clear function.
  * @details This function clears error handler 
  * of the MA12070 Filterless and High-Efficiency +4V to +26V Audio Amplifier with Analog Input
- * on the AudioAmp 8 click board™.
+ * on the AudioAmp 8 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -659,7 +659,7 @@ err_t audioamp8_clr_err_handler ( audioamp8_t *ctx );
  * @brief AudioAmp 8 monitors the status of the channel's function.
  * @details This function performs monitoring of the channel 0 or channel 1
  * of the MA12070 Filterless and High-Efficiency +4V to +26V Audio Amplifier with Analog Input
- * on the AudioAmp 8 click board™.
+ * on the AudioAmp 8 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @param[in] mon_ch : Select monitor channel:
@@ -678,7 +678,7 @@ err_t audioamp8_channel_monitoring ( audioamp8_t *ctx, uint8_t mon_ch, audioamp8
  * @brief AudioAmp 8 monitor msel function.
  * @details This function performs monitoring of the signal configuration PBTL, SE/BTL, BTL, SE
  * of the MA12070 Filterless and High-Efficiency +4V to +26V Audio Amplifier with Analog Input
- * on the AudioAmp 8 click board™.
+ * on the AudioAmp 8 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @param[out] msel : signal configuration: 
@@ -698,7 +698,7 @@ err_t audioamp8_monitor_msel ( audioamp8_t *ctx, uint8_t *msel );
  * @brief AudioAmp 8 get error status function.
  * @details This function read error status
  * of the MA12070 Filterless and High-Efficiency +4V to +26V Audio Amplifier with Analog Input
- * on the AudioAmp 8 click board™.
+ * on the AudioAmp 8 Click board™.
  * @param[in] ctx : Click context object.
  * See #audioamp8_t object definition for detailed explanation.
  * @param[out] error_status : Gives the live status of every potential error source. 

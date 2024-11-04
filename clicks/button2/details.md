@@ -1,6 +1,6 @@
 
 ---
-# Button 2 click
+# Button 2 Click
 
 > Button 2 Click is a compact add-on board designed for simple and efficient tactile input detection. This board features the TL3215AF160BQ, a TL3215 series of tactile switches from E-Switch, featuring high reliability and precise operation. The switch has a 2mm actuator, 160gf actuation force, silver contact material, and a lifespan of 1,000,000 cycles, while the integrated blue LED provides visual feedback. The board supports the new Click Snap feature, allowing easy detachment of the sensor area for flexible use.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/button2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/button-2-click)
+[Click Product page](https://www.mikroe.com/button-2-click)
 
 ---
 
@@ -64,7 +64,7 @@ void button2_enable_led ( button2_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Button 2 click board by toggling the button LED and switch state on button press.
+> This example demonstrates the use of Button 2 Click board by toggling the button LED and switch state on button press.
 
 **The demo application is composed of two sections :**
 
@@ -145,7 +145,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

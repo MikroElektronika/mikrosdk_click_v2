@@ -1,16 +1,16 @@
 
 
 ---
-# UNI HALL click
+# UNI HALL Click
 
-UNI HALL click is a simple solution for adding an unipolar Hall switch to your design. It carries the Melexis US5881 unipolar Hall-effect switch and a 74LVC1T45 single bit, dual supply translating transceiver.
+UNI HALL Click is a simple solution for adding an unipolar Hall switch to your design. It carries the Melexis US5881 unipolar Hall-effect switch and a 74LVC1T45 single bit, dual supply translating transceiver.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/unihall_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/uni-hall-click)
+[Click Product page](https://www.mikroe.com/uni-hall-click)
 
 ---
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

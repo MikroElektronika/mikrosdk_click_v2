@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# Heart Rate 7 click
+# Heart Rate 7 Click
 
-> Heart Rate 7 click is an optical biosensor Click board™ which can be used for heart-rate monitoring (HRM). This Click board™ employs a very sensitive analog front-end IC with high dynamic range, which ensures accurate and reliable readings. This analog front-end IC is coupled with the optical front end, which consists of a sensitive photo-diode (PD) and two high brightness green LEDs.
+> Heart Rate 7 Click is an optical biosensor Click board™ which can be used for heart-rate monitoring (HRM). This Click board™ employs a very sensitive analog front-end IC with high dynamic range, which ensures accurate and reliable readings. This analog front-end IC is coupled with the optical front end, which consists of a sensitive photo-diode (PD) and two high brightness green LEDs.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/heartrate7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/heart-rate-7-click)
+[Click Product page](https://www.mikroe.com/heart-rate-7-click)
 
 ---
 
@@ -76,7 +76,7 @@ void heartrate7_sw_reset( heartrate7_t *ctx );
 
 ### Application Init
 
-> Configures the micro controller for communication and initializes the click board. 
+> Configures the micro controller for communication and initializes the Click board. 
 
 ```c
 
@@ -148,7 +148,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

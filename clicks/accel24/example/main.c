@@ -3,13 +3,13 @@
  * @brief Accel 24 Click example
  *
  * # Description
- * This example demonstrates the use of Accel 24 click board by reading and displaying 
+ * This example demonstrates the use of Accel 24 Click board by reading and displaying 
  * accel data (X, Y, and Z axis) as well as temperature measurements on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads and displays the accel data (X, Y, and Z axis) as well as temperature measurements

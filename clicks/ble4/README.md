@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# BLE 4  click
+# BLE 4  Click
 
 BLE 4 Click is fully embedded stand-alone Bluetooth 5.0 low energy connectivity module, equipped with the NINA-B312, an ultra-small, high-performing, standalone Bluetooth low energy module for easy integration of Bluetooth low energy connectivity (BLE) into various electronic devices. This module combines a high-performance Arm® Cortex®-M4 CPU microprocessor with FPU, and state-of-the-art power performance.
 
@@ -9,7 +9,7 @@ BLE 4 Click is fully embedded stand-alone Bluetooth 5.0 low energy connectivity 
   <img src="https://download.mikroe.com/images/click_for_ide/ble4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ble-4-click)
+[Click Product page](https://www.mikroe.com/ble-4-click)
 
 ---
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# 3D Hall 4 click
+# 3D Hall 4 Click
 
 > 3D Hall 4 Click is a compact add-on board that can detect the strength of a magnetic field in all three dimensions. This board features the SENM3Dx, a 3D Hall magnetic sensor from SENIS. It is a CMOS-integrated magnetic field sensor that allows the acquisition of all three magnetic field components at the same time and in the same spot. The sensor is equipped with on-chip EPROM to hold initialization, calibration data, and other settings and definitions.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/3dhall4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/3d-hall-4-click)
+[Click Product page](https://www.mikroe.com/3d-hall-4-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t c3dhall4_reg_read ( c3dhall4_t *ctx, uint8_t reg, uint8_t *data_out, uint8
 
 ## Example Description
 
-> This example demonstrates the use of 3D Hall 4 click board by reading the magnetic field strength from 3 axes and the sensor internal temperature.
+> This example demonstrates the use of 3D Hall 4 Click board by reading the magnetic field strength from 3 axes and the sensor internal temperature.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

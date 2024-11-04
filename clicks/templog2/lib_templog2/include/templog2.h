@@ -248,7 +248,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init
+ * @description This function initializes Click configuration structure to init
  * state.
  *
  * @note All used pins will be set to unconnected state.
@@ -266,7 +266,7 @@ templog2_cfg_setup( templog2_cfg_t *cfg );
  * @returns 0x00 - Ok, 0xFD - Driver init error.
  *
  * @description This function initializes all necessary pins and peripherals
- * used for this click.
+ * used for this Click.
  */
 TEMPLOG2_RETVAL
 templog2_init( templog2_t *ctx, templog2_cfg_t *cfg );
@@ -277,7 +277,7 @@ templog2_init( templog2_t *ctx, templog2_cfg_t *cfg );
  * @param ctx  Click object.
  *
  * @description This function executes default configuration for Temp-Log 2
- * click.
+ * Click.
  */
 void
 templog2_default_config( templog2_t *ctx );
@@ -330,7 +330,7 @@ templog2_data_ready( templog2_t *ctx );
  * @returns 0 or 1.
  *
  * @description This function returns the state of the Alert pin on the
- * Temp-Log 2 click.
+ * Temp-Log 2 Click.
  */
 uint8_t
 templog2_check_alert( templog2_t *ctx );

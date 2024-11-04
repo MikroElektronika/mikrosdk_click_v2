@@ -3,6 +3,6 @@
     "description": "IR Thermo 4 Click is a compact add-on board for precise remote sensing applications. This board features the TPiS 1T 1386 L5.5 H thermopile sensor from Excelitas, known for its high accuracy and narrow 5° field of view (FoV). This sensor, part of the CaliPile™ family, features factory-calibrated data stored in EEPROM, ensuring reliable and accurate performance. The sensor also comes in an isothermal TO-39 package with an integrated lens hood for minimized stray light and enhanced thermal stability, making it ideal for challenging environmental conditions. With a built-in ADC and multiple filter options, the sensor's data is easily accessible via an I2C interface. IR Thermo 4 Click is well-suited for remote skin temperature monitoring, over-temperature protection, human presence sensing, and motion detection.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TPiS 1T 1386 L5.5 H / 7455"],
+    "hw" : ["Click","TPiS 1T 1386 L5.5 H / 7455"],
     "category" : ["Click Boards > Sensors > Temperature & humidity"]
 }

@@ -268,7 +268,7 @@ typedef enum
 
 /**
  * @brief Pressure 14 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #pressure14_cfg_t object definition for detailed explanation.
@@ -280,7 +280,7 @@ void pressure14_cfg_setup ( pressure14_cfg_t *cfg );
 /**
  * @brief Pressure 14 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #pressure14_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -343,7 +343,7 @@ void pressure14_measure_cmd ( pressure14_t *ctx );
 /**
  * @brief Pressure 14 checks INT pin state function.
  * @details This function returns the INT pin state which indicates the
- * End-of-conversion for ABP2 series pressure sensor on Pressure 14 click board.
+ * End-of-conversion for ABP2 series pressure sensor on Pressure 14 Click board.
  * @param[in] ctx : Click context object.
  * See #pressure14_t object definition for detailed explanation.
  * @return INT pin state.
@@ -356,7 +356,7 @@ uint8_t pressure14_check_busy_flag_int ( pressure14_t *ctx );
 /**
  * @brief Pressure 14 read pressure and temperature function.
  * @details This function reads 24-bit pressure, 24-bit temperature data
- * and 8-bit status register from the ABP2 series pressure sensor on Pressure 14 click board.
+ * and 8-bit status register from the ABP2 series pressure sensor on Pressure 14 Click board.
  * @param[in] ctx : Click context object.
  * See #pressure14_t object definition for detailed explanation.
  * @param[in] status_byte : Pointer to the memory location where the 8-bit status will be stored.
@@ -372,7 +372,7 @@ void pressure14_read_press_and_temp ( pressure14_t *ctx, uint8_t *status_byte, u
 /**
  * @brief Pressure 14 calculate pressure function.
  * @details This function calculates raw pressure data acquired from the
- * ABP2 series pressure sensor on Pressure 14 click board, and converts the result into preferred unit.
+ * ABP2 series pressure sensor on Pressure 14 Click board, and converts the result into preferred unit.
  * @param[in] pressure_raw : Input parameter of raw pressure to be converted into a more meaningful value.
  * @param[in] conv_unit : Preferred conversion unit for measured pressure.
  * @return The result of the calculation pressure.
@@ -386,7 +386,7 @@ float pressure14_get_pressure ( uint32_t pressure_raw, uint8_t conv_unit );
 /**
  * @brief Pressure 14 calculate temperature function.
  * @details This function calculates raw temperature data acquired from the
- * ABP2 series pressure sensor on Pressure 14 click board,
+ * ABP2 series pressure sensor on Pressure 14 Click board,
  * and converts the result into preferred unit.
  * @param[in] temperature_raw : input parameter of raw temperature to be converted into a more meaningful value.
  * @param[out] conv_unit : Preferred conversion unit for measured temperature.

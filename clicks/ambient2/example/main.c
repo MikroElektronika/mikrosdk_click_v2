@@ -9,9 +9,9 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes I2C driver and all used pins for Ambient 2 click. 
- * Also executes a default configuration for this click, which
- * means that click will work in continuous conversion mode, in automatic full
+ * Initializes I2C driver and all used pins for Ambient 2 Click. 
+ * Also executes a default configuration for this Click, which
+ * means that Click will work in continuous conversion mode, in automatic full
  * scale range, with conversion time of 800ms.
  *
  * ## Application Task

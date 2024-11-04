@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# WiFi 9 click
+# WiFi 9 Click
 
 > WiFi 9 Click is fully embedded stand-alone Wi-Fi module, equipped with the PAN9420 a 2.4 GHz ISM band Wi-Fi-embedded module which includes a wireless radio and an MCU for easy integration of Wi-Fi connectivity into various electronic devices.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/wifi9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/wifi-9-click)
+[Click Product page](https://www.mikroe.com/wifi-9-click)
 
 ---
 
@@ -74,7 +74,7 @@ and logs every message it receives from clients and returns back those messages 
 ### Application Init 
 
 > Initializes driver and wifi communication, then connects to the desired WiFi network
-and creates TCP server on the IP address assigned to the click board.
+and creates TCP server on the IP address assigned to the Click board.
 
 ```c
 
@@ -250,7 +250,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

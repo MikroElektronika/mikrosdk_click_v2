@@ -1,8 +1,8 @@
 {
     "name": "Altitude Click",
-    "description": "Altitude click features a MEMS pressure sensor MPL3115A2, which provides accurate pressure/altitude (20-bit) and temperature (12-bit) data.",
+    "description": "Altitude Click features a MEMS pressure sensor MPL3115A2, which provides accurate pressure/altitude (20-bit) and temperature (12-bit) data.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MPL3115A2"],
+    "hw" : ["Click","MPL3115A2"],
     "category" : ["Pressure"] 
 }

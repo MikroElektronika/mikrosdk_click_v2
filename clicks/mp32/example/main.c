@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and enables the click board.
+ * Initializes the driver and enables the Click board.
  * Then sets the device to play songs from SD Card, and after that sets volume, and equalizer.
  * 
  * ## Application Task  
@@ -17,7 +17,7 @@
  * 
  * @note
  * A valid microSD Card that contains at least one mp3 sound on it needs to be 
- * inserted into the click board.
+ * inserted into the Click board.
  * 
  * \author MikroE Team
  *
@@ -63,7 +63,7 @@ void application_init ( void )
     Delay_ms ( 500 );
 
     log_printf( &logger, "-------------------------\r\n" );
-    log_printf( &logger, "       MP3 2 click       \r\n" );
+    log_printf( &logger, "       MP3 2 Click       \r\n" );
     log_printf( &logger, "-------------------------\r\n" );
     Delay_100ms( );
 

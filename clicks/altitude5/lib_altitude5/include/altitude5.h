@@ -179,7 +179,7 @@ typedef enum
 
 /**
  * @brief Altitude 5 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #altitude5_cfg_t object definition for detailed explanation.
@@ -191,7 +191,7 @@ void altitude5_cfg_setup ( altitude5_cfg_t *cfg );
 /**
  * @brief Altitude 5 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #altitude5_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -207,7 +207,7 @@ err_t altitude5_init ( altitude5_t *ctx, altitude5_cfg_t *cfg );
 /**
  * @brief Altitude 5 default configuration function.
  * @details This function executes a default configuration of Altitude 5
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #altitude5_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -223,7 +223,7 @@ err_t altitude5_default_cfg ( altitude5_t *ctx );
  * @brief Altitude 5 get ADC function.
  * @details This function reads 12-bit ADC data
  * of the TKP236 Analog Absolute Pressure Sensor
- * on the Altitude 5 click board™.
+ * on the Altitude 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #altitude5_t object definition for detailed explanation.
  * @param[out] data_out : Output ADC result.
@@ -254,7 +254,7 @@ err_t altitude5_read_an_pin_voltage ( altitude5_t *ctx, float *data_out );
  * @brief Altitude 5 get ADC voltage function.
  * @details This function reads 12-bit ADC data and calculate ADC voltage ( V )
  * of the TKP236 Analog Absolute Pressure Sensor
- * on the Altitude 5 click board™.
+ * on the Altitude 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #altitude5_t object definition for detailed explanation.
  * @param[out] adc_vtg : Output ADC voltage ( V ) data.
@@ -270,7 +270,7 @@ err_t altitude5_get_adc_voltage ( altitude5_t *ctx, float *adc_vtg );
  * @brief Altitude 5 get pressure function.
  * @details This function reads 12-bit ADC data and calculate pressure ( hPa - mBar )
  * of the TKP236 Analog Absolute Pressure Sensor
- * on the Altitude 5 click board™.
+ * on the Altitude 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #altitude5_t object definition for detailed explanation.
  * @param[out] pressure : Output pressure ( hPa - mBar ) data.
@@ -286,7 +286,7 @@ err_t altitude5_get_pressure ( altitude5_t *ctx, float *pressure );
  * @brief Altitude 5 get altitude function.
  * @details This function reads 12-bit ADC data and calculate altitude ( meters )
  * of the TKP236 Analog Absolute Pressure Sensor
- * on the Altitude 5 click board™.
+ * on the Altitude 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #altitude5_t object definition for detailed explanation.
  * @param[out] altitude : Output altitude ( m ) data.

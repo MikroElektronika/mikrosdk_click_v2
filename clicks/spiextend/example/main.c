@@ -16,7 +16,7 @@
  * connected to the SPI Extend Click ( Remote Mode ).
  *
  * ## Application Task
- * If the click is connected properly then the status becomes active and the X-axis coordinate is printed first on the UART terminal, 
+ * If the Click is connected properly then the status becomes active and the X-axis coordinate is printed first on the UART terminal, 
  * then Y and finally Z. After 1s the process is repeated. 
  * In case an error has occurred, printed "LINK is not established" on UART Terminal.
  * 

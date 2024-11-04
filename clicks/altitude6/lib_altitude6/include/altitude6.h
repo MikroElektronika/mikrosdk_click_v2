@@ -246,7 +246,7 @@ typedef enum
 
 /**
  * @brief Altitude 6 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #altitude6_cfg_t object definition for detailed explanation.
@@ -258,7 +258,7 @@ void altitude6_cfg_setup ( altitude6_cfg_t *cfg );
 /**
  * @brief Altitude 6 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #altitude6_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -274,7 +274,7 @@ void altitude6_drv_interface_selection ( altitude6_cfg_t *cfg, altitude6_drv_t d
 /**
  * @brief Altitude 6 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #altitude6_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -290,7 +290,7 @@ err_t altitude6_init ( altitude6_t *ctx, altitude6_cfg_t *cfg );
 /**
  * @brief Altitude 6 default configuration function.
  * @details This function executes a default configuration of Altitude 6
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #altitude6_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -306,7 +306,7 @@ err_t altitude6_default_cfg ( altitude6_t *ctx );
  * @brief Altitude 6 set command function.
  * @details This function writes a desired command
  * of the MS5611 Barometric Pressure Sensor, with stainless steel cap
- * on the Altitude 6 click board™
+ * on the Altitude 6 Click board™
  * @param[in] ctx : Click context object.
  * See #altitude6_t object definition for detailed explanation.
  * @param[in] cmd : Desired command.
@@ -322,7 +322,7 @@ err_t altitude6_set_command ( altitude6_t *ctx, uint8_t cmd );
  * @brief Altitude 6 data reading function.
  * @details This function reads a desired number of data bytes starting from
  * the selected register of the MS5611 Barometric Pressure Sensor, with stainless steel cap
- * on the Altitude 6 click board™
+ * on the Altitude 6 Click board™
  * @param[in] ctx : Click context object.
  * See #altitude6_t object definition for detailed explanation.
  * @param[in] cmd : Desired command.
@@ -340,7 +340,7 @@ err_t altitude6_generic_read ( altitude6_t *ctx, uint8_t cmd, uint8_t *data_out,
  * @brief Altitude 6 set data ratio function.
  * @details This function set data ratio
  * of the MS5611 Barometric Pressure Sensor, with stainless steel cap
- * on the Altitude 6 click board™
+ * on the Altitude 6 Click board™
  * @param[in] ctx : Click context object.
  * See #altitude6_t object definition for detailed explanation.
  * @param[in] temp_ratio : Determines oversampling ratio for temperature measurement.
@@ -357,7 +357,7 @@ err_t altitude6_set_ratio ( altitude6_t *ctx, uint8_t temp_ratio, uint8_t press_
  * @brief Altitude 6 software reset function.
  * @details This function performs a software reset
  * of the MS5611 Barometric Pressure Sensor, with stainless steel cap
- * on the Altitude 6 click board™
+ * on the Altitude 6 Click board™
  * @param[in] ctx : Click context object.
  * See #altitude6_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -372,7 +372,7 @@ err_t altitude6_sw_reset ( altitude6_t *ctx );
  * @brief Altitude 6 get calibration data function.
  * @details This function read and store calibration data
  * of the MS5611 Barometric Pressure Sensor, with stainless steel cap
- * on the Altitude 6 click board™
+ * on the Altitude 6 Click board™
  * @param[in] ctx : Click context object.
  * See #altitude6_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -387,7 +387,7 @@ err_t altitude6_get_calibration_data ( altitude6_t *ctx );
  * @brief Altitude 6 get raw data function.
  * @details This function read raw temperature and pressure data
  * of the MS5611 Barometric Pressure Sensor, with stainless steel cap
- * on the Altitude 6 click board™
+ * on the Altitude 6 Click board™
  * @param[in] ctx : Click context object.
  * See #altitude6_t object definition for detailed explanation.
  * @param[out] temp_data : Raw temperature data.
@@ -404,7 +404,7 @@ err_t altitude6_get_raw_data ( altitude6_t *ctx, uint32_t *temp_data, uint32_t *
  * @brief Altitude 6 get temperature data function.
  * @details This function read temperature data and convert to the degree Celsius
  * of the MS5611 Barometric Pressure Sensor, with stainless steel cap
- * on the Altitude 6 click board™
+ * on the Altitude 6 Click board™
  * @param[in] ctx : Click context object.
  * See #altitude6_t object definition for detailed explanation.
  * @param[out] temperature : Temperature in degree Celsius.
@@ -420,7 +420,7 @@ err_t altitude6_get_temperature ( altitude6_t *ctx, float *temperature );
  * @brief Altitude 6 get pressure data function.
  * @details This function read pressure data and convert to the mbar
  * of the MS5611 Barometric Pressure Sensor, with stainless steel cap
- * on the Altitude 6 click board™
+ * on the Altitude 6 Click board™
  * @param[in] ctx : Click context object.
  * See #altitude6_t object definition for detailed explanation.
  * @param[out] pressure : Pressure in mbar.
@@ -437,7 +437,7 @@ err_t altitude6_get_pressure ( altitude6_t *ctx, float *pressure );
  * @details This function read temperature and pressure data, 
  * convert temperature data to the degree Celsius and pressure data to the mbar 
  * of the MS5611 Barometric Pressure Sensor, with stainless steel cap
- * on the Altitude 6 click board™
+ * on the Altitude 6 Click board™
  * Depending on the temperature and pressure data, function calculates altitude in meters
  * @param[in] ctx : Click context object.
  * See #altitude6_t object definition for detailed explanation.

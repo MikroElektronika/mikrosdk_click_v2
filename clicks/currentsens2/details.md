@@ -1,6 +1,6 @@
 
 ---
-# Current Sens 2 click
+# Current Sens 2 Click
 
 > Current Sens 2 Click is a compact add-on board designed for precise current measurements in industrial applications. This board features the HO 10-P, an AC/DC current transducer from LEM USA. 
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/currentsens2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/current-sens-2-click)
+[Click Product page](https://www.mikroe.com/current-sens-2-click)
 
 ---
 
@@ -64,7 +64,7 @@ err_t currentsens2_get_current ( currentsens2_t *ctx, float *current );
 
 ## Example Description
 
-> This example demonstrates the use of Current Sens 2 click board by reading and
+> This example demonstrates the use of Current Sens 2 Click board by reading and
   displaying the input current measurements.
 
 **The demo application is composed of two sections :**
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

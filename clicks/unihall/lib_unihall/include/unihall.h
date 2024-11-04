@@ -148,7 +148,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void unihall_cfg_setup ( unihall_cfg_t *cfg );
@@ -158,7 +158,7 @@ void unihall_cfg_setup ( unihall_cfg_t *cfg );
  * @param unihall Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 UNIHALL_RETVAL unihall_init ( unihall_t *ctx, unihall_cfg_t *cfg );
 
@@ -185,6 +185,6 @@ uint8_t unihall_detecting_magnetic_fields ( unihall_t *ctx );
 #endif  // _UNIHALL_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

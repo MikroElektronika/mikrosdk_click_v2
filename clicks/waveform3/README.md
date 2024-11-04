@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Waveform 3 click
+# Waveform 3 Click
 
 > Waveform 3 Click is a compact add-on board that represents a high-performance signal generator. This board features the AD9837, a low-power programmable waveform generator capable of producing sine, triangular, and square wave outputs from Analog Devices.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/waveform3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/waveform-3-click)
+[Click Product page](https://www.mikroe.com/waveform-3-click)
 
 ---
 
@@ -160,7 +160,7 @@ void application_task ( void ) {
 
 ## Note
 
-> Waveform 3 click might not provide a high enough peak to peak signal on higher frequencies.
+> Waveform 3 Click might not provide a high enough peak to peak signal on higher frequencies.
 The user can freely implement custom buffer for the output stage.
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
@@ -174,7 +174,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://shop.mikroe.com/usb-uart-click),
+[USB UART Click](https://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

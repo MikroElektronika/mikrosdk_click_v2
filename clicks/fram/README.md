@@ -3,15 +3,15 @@
  
 
 ---
-# Fram click
+# Fram Click
 
-FRAM click is a Click board™ that carries a ferroelectric RAM module. Ferroelectric RAM, also known as FRAM, is a non-volatile memory type, with characteristics comparable to much faster DRAM memory modules.
+FRAM Click is a Click board™ that carries a ferroelectric RAM module. Ferroelectric RAM, also known as FRAM, is a non-volatile memory type, with characteristics comparable to much faster DRAM memory modules.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/fram_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/fram-click)
+[Click Product page](https://www.mikroe.com/fram-click)
 
 ---
 
@@ -61,7 +61,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This app writing data to click memory.
+> This app writing data to Click memory.
 
 **The demo application is composed of two sections :**
 
@@ -101,7 +101,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Writing data to click memory and displaying the read data via UART. 
+> Writing data to Click memory and displaying the read data via UART. 
 
 ```c
 
@@ -132,7 +132,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

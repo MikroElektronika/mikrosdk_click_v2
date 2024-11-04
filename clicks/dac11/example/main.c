@@ -3,12 +3,12 @@
  * @brief DAC11 Click example
  *
  * # Description
- * This example demonstrates the use of DAC 11 click board.
+ * This example demonstrates the use of DAC 11 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and executes the click default configuration which sets the WRM mode and
+ * Initializes the driver and executes the Click default configuration which sets the WRM mode and
  * disables all outputs.
  *
  * ## Application Task

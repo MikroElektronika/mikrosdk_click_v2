@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Magneto 6 click
+# Magneto 6 Click
 
 > Magneto 6 Click features low power three dimensional Hall effect sensor, TLI493D-A2B6, designed for magnetic sensing applications. It measures the magnetic field in X, Y, and Z direction. Each X, Y and Z Hall probe is connected sequentially to a multiplexer, which is then connected to an Analog to Digital Converter (ADC). Optional, the temperature can be determined as well after the three Hall channels. The data measurement is provided in digital format to the microcontroller over the standard I2C interface. Some of the benefits of this Click board™ are wide application range addressable due to high flexibility and component reduction due to the 3D magnetic measurement principle.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/magneto6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/magneto-6-click)
+[Click Product page](https://www.mikroe.com/magneto-6-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t magneto6_write_reg ( magneto6_t *ctx, uint8_t reg, uint8_t data_in );
 
 ## Example Description
 
-> This example demonstrates the use of Magneto 6 click board by reading the magnetic field strength from 3 axes as well as the ambient temperature measurements.
+> This example demonstrates the use of Magneto 6 Click board by reading the magnetic field strength from 3 axes as well as the ambient temperature measurements.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -148,7 +148,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

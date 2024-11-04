@@ -3,19 +3,19 @@
  * @brief LightRanger 7 Click Example.
  *
  * # Description
- * This example demonstrates the use of LightRanger 7 click board by processing
+ * This example demonstrates the use of LightRanger 7 Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads and processes all incoming data and displays them on the USB UART.
  * 
  * @note 
- * By default, the click board is programmed with the AFBR_S50_Example_RA4M2 firmware.
+ * By default, the Click board is programmed with the AFBR_S50_Example_RA4M2 firmware.
  * At the beginning this FW returns API version, chip ID, and module version. After that
  * it starts the measurements and prints the recent measurement results that consists of:
  *  1. Time stamp in seconds since the last MCU reset.

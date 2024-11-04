@@ -328,7 +328,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c3dhall5_cfg_setup ( c3dhall5_cfg_t *cfg );
@@ -338,7 +338,7 @@ void c3dhall5_cfg_setup ( c3dhall5_cfg_t *cfg );
  * @param c3dhall5 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 C3DHALL5_RETVAL c3dhall5_init ( c3dhall5_t *ctx, c3dhall5_cfg_t *cfg );
 
@@ -347,7 +347,7 @@ C3DHALL5_RETVAL c3dhall5_init ( c3dhall5_t *ctx, c3dhall5_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for 3DHall5 click.
+ * @description This function executes default configuration for 3DHall5 Click.
  * @note
  *    Default configuration of the chip contains the settings :
  *      Config A:
@@ -388,7 +388,7 @@ void c3dhall5_generic_read ( c3dhall5_t *ctx, uint8_t reg, uint8_t *data_buf, ui
  * @param ctx      Click object.
  * @return Device ID ( C3DHALL5_I_AM )
  *
- * @description You can use this function as a check to communicate a click with your MCU.
+ * @description You can use this function as a check to communicate a Click with your MCU.
  */
 uint8_t c3dhall5_get_device_id ( c3dhall5_t *ctx );
 
@@ -434,6 +434,6 @@ int16_t c3dhall5_get_axis_data ( c3dhall5_t *ctx, uint8_t axis );
 #endif  // _C3DHALL5_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

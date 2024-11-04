@@ -3,7 +3,7 @@
 
 
 ---
-# ProxFusion 3 click
+# ProxFusion 3 Click
 
 ProxFusion 3 Click is a compact add-on board that represents a multifunctional touch sensing Click board™. This board features the IQS2692A, an 8-channel ProxFusion® capacitive touch and proximity controller with additional sensing such as Hall- and inductive sensing from Azoteq.
 
@@ -11,7 +11,7 @@ ProxFusion 3 Click is a compact add-on board that represents a multifunctional t
   <img src="https://download.mikroe.com/images/click_for_ide/proxfusion3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/proxfusion-3-click)
+[Click Product page](https://www.mikroe.com/proxfusion-3-click)
 
 ---
 
@@ -131,7 +131,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-This is an example that demonstrates the use of the ProxFusion 3 click board.
+This is an example that demonstrates the use of the ProxFusion 3 Click board.
 In this example, we check the touch event and display the last detected touch. 
 Results are being sent to the Usart Terminal where you can track their changes.
 
@@ -198,7 +198,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

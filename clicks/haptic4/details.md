@@ -1,6 +1,6 @@
 
 ---
-# Haptic 4 click
+# Haptic 4 Click
 
 > Haptic 4 Click is a compact add-on board that enables precise haptic feedback in various electronic projects. This board features the DA7280, a haptic driver designed to drive linear resonant actuator (LRA) and eccentric rotating mass (ERM) actuators from Renesas. The DA7280 boasts a differential output drive and continuous motion sensing for calibration-free operation, coupled with wide-band support to leverage the capabilities of modern LRAs. It supports six independent haptic sequences activated directly via mikroBUS™ pins or externally through I2C or PWM signals, offering extensive flexibility for haptic configuration. Ideal for enhancing user experience in wearables, electronic peripherals, automotive interfaces, industrial controls, and AR/VR controllers, this Click board™ opens new possibilities for interactive and tactile-responsive technology.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/haptic4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/haptic-4-click)
+[Click Product page](https://www.mikroe.com/haptic-4-click)
 
 ---
 
@@ -69,14 +69,14 @@ err_t haptic4_get_vibration_level ( haptic4_t *ctx, float *level );
 
 ## Example Description
 
-> This example demonstrates the use of Haptic 4 click board by controlling
+> This example demonstrates the use of Haptic 4 Click board by controlling
   the attached motor vibration level.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -161,7 +161,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

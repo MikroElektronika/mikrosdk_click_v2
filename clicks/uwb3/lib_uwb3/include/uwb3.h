@@ -221,7 +221,7 @@ typedef enum
 
 /**
  * @brief UWB 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #uwb3_cfg_t object definition for detailed explanation.
@@ -233,7 +233,7 @@ void uwb3_cfg_setup ( uwb3_cfg_t *cfg );
 /**
  * @brief UWB 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #uwb3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -275,7 +275,7 @@ err_t uwb3_generic_read ( uwb3_t *ctx, uint8_t *data_out, uint16_t len );
 
 /**
  * @brief UWB 3 send cmd function.
- * @details This function sends a specified command to the click module.
+ * @details This function sends a specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #uwb3_t object definition for detailed explanation.
  * @param[in] cmd  Command buffer.
@@ -286,7 +286,7 @@ void uwb3_send_cmd ( uwb3_t *ctx, uint8_t *cmd );
 
 /**
  * @brief UWB 3 send cmd with parameter function.
- * @details This function sends a command with specified parameter to the click module.
+ * @details This function sends a command with specified parameter to the Click module.
  * @param[in] ctx : Click context object.
  * See #uwb3_t object definition for detailed explanation.
  * @param[in] cmd  Command buffer.

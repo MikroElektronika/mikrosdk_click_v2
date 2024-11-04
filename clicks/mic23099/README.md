@@ -3,15 +3,15 @@
  
 
 ---
-# MIC23099 click
+# MIC23099 Click
 
-MIC23099 click represent single AA/AAA cell step-down/step-up regulator with battery monitoring.
+MIC23099 Click represent single AA/AAA cell step-down/step-up regulator with battery monitoring.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/mic23099_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/mic23099-click)
+[Click Product page](https://www.mikroe.com/mic23099-click)
 
 ---
 
@@ -50,7 +50,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- This function executes default configuration for MIC23099 click.
+- This function executes default configuration for MIC23099 Click.
 > void mic23099_default_cfg ( mic23099_t *ctx );
  
 - This function checks the state of Power Good output pin.
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

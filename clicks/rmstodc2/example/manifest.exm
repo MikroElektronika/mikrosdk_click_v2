@@ -3,6 +3,6 @@
     "description": "RMS to DC 2 Click is a compact add-on board that converts the RMS of the input signal into a DC voltage. This board features the AD8436, a low-cost, low-power, true RMS-to-DC converter from Analog Devices. The AD8436 is a translinear precision, low-power, true RMS-to-DC converter that delivers true RMS or average rectified value of AC waveform. It features high accuracy, a wide dynamic input range (100μV rms to 3V rms), a wide bandwidth of up to 1MHz, and more. This Click board™ makes the perfect solution for the development of various true RMS digital multimeter applications, panel meters and gauges, AC + DC measurement applications, a true RMS measurement of an audio signal, and other similar applications that require accurate RMS value readings.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","AD8436A","MCP3221A5T"],
+    "hw" : ["Click","AD8436A","MCP3221A5T"],
     "category" : ["Click Boards > Mixed signal > Measurements"]
 }

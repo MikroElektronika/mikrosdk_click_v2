@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# Hall Current click
+# Hall Current Click
 
 > Hall Current Click is a compact add-on board that contains a precise solution for AC/DC current sensing. This board features the TLI4970-D050T4, a 16-bit digital SPI output (13-bit current value) coreless magnetic current sensor designed for the current range of ±25A from Infineon Technology. A differential measurement principle allows effective stray field suppression with a highly linear output signal without hysteresis. Due to the integrated primary conductor (current rail), there is no need for external calibration. The TLI4970-D050T4 is highly accurate over temperature range and lifetime with fast overcurrent detection with a configurable threshold.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/hall-current-click)
+[Click Product page](https://www.mikroe.com/hall-current-click)
 
 ---
 
@@ -132,7 +132,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

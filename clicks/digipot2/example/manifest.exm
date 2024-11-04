@@ -1,8 +1,8 @@
 {
     "name": "DIGI POT 2 Click",
-    "description": "DIGI POT 2 click is a mikroBUS™ add-on board with a single channel digital potentiometer TPL0501 with 256 wiper positions.",
+    "description": "DIGI POT 2 Click is a mikroBUS™ add-on board with a single channel digital potentiometer TPL0501 with 256 wiper positions.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TPL0501"],
+    "hw" : ["Click","TPL0501"],
     "category" : ["Digital potentiometer"]
 }

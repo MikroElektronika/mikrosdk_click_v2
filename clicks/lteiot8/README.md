@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LTE IoT 8 click
+# LTE IoT 8 Click
 
 > LTE IoT 8 Click is a compact add-on board that contains a low-power solution for LTE and NB-IoT connectivity. This board features the SKY66430-11, a multi-band multi-chip System-in-Package (SiP) supporting 5G Massive IoT (LTE-M/NB-IoT) platforms from Skyworks Solutions and Sequans Communications.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/lte_iot_8_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lte-iot-8-click)
+[Click Product page](https://www.mikroe.com/lte-iot-8-click)
 
 ---
 
@@ -247,7 +247,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

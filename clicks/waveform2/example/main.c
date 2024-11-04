@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initialize the communication interface, preforming hardware reset, and configure the click board.
+ * Initialize the communication interface, preforming hardware reset, and configure the Click board.
  *
  * ## Application Task
  * Predefined characters are inputed from the serial port.

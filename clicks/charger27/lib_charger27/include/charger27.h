@@ -149,7 +149,7 @@ typedef enum
 
 /**
  * @brief Charger 27 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #charger27_cfg_t object definition for detailed explanation.
@@ -161,7 +161,7 @@ void charger27_cfg_setup ( charger27_cfg_t *cfg );
 /**
  * @brief Charger 27 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #charger27_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -178,7 +178,7 @@ err_t charger27_init ( charger27_t *ctx, charger27_cfg_t *cfg );
  * @details This function checks valid input supply indicator state
  * of the MP2639B, 1S Cell Li-ion or Li-polymer Switching Charger 
  * Compatible with Wide Input Range and Integrated Programmable OTG 
- * on the Charger 27 click board.
+ * on the Charger 27 Click board.
  * @param[in] ctx : Click context object.
  * See #charger27_t object definition for detailed explanation.
  * @return Valid input supply indicator state:
@@ -193,7 +193,7 @@ uint8_t charger27_check_input_supply ( charger27_t *ctx );
  * @details This function is used for the charge or discharge mode selection
  * of the MP2639B, 1S Cell Li-ion or Li-polymer Switching Charger 
  * Compatible with Wide Input Range and Integrated Programmable OTG 
- * on the Charger 27 click board.
+ * on the Charger 27 Click board.
  * @param[in] ctx : Click context object.
  * See #charger27_t object definition for detailed explanation.
  * @param[in] mode : Charge or discharge mode selection [0-1].
@@ -209,7 +209,7 @@ err_t charger27_set_mode ( charger27_t *ctx, uint8_t mode );
  * @details This function checks the charging completion indicator state
  * of the MP2639B, 1S Cell Li-ion or Li-polymer Switching Charger 
  * Compatible with Wide Input Range and Integrated Programmable OTG 
- * on the Charger 27 click board.
+ * on the Charger 27 Click board.
  * @param[in] ctx : Click context object.
  * See #charger27_t object definition for detailed explanation.
  * @return Valid input supply indicator state:

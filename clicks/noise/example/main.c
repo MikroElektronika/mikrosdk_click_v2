@@ -1,9 +1,9 @@
 /*!
  * \file 
- * \brief Noise click example
+ * \brief Noise Click example
  * 
  * # Description
- * This example performs an ambient noise monitoring using the Noise click board.
+ * This example performs an ambient noise monitoring using the Noise Click board.
  *
  * The demo application is composed of two sections :
  * 

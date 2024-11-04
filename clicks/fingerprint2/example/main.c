@@ -3,12 +3,12 @@
  * \brief Fingerprint2 Click example
  * 
  * # Description
- * This example demonstrates the use of Fingerprint 2 click board.
+ * This example demonstrates the use of Fingerprint 2 Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver, enables the click board, and then executes a command for 
+ * Initializes the driver, enables the Click board, and then executes a command for 
  * registering a fingerprint.
  * 
  * ## Application Task  

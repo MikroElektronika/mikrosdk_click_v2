@@ -302,7 +302,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void irsense_cfg_setup ( irsense_cfg_t *cfg );
@@ -312,7 +312,7 @@ void irsense_cfg_setup ( irsense_cfg_t *cfg );
  * @param irsense Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 IRSENSE_RETVAL irsense_init ( irsense_t *ctx, irsense_cfg_t *cfg );
 
@@ -350,7 +350,7 @@ void irsense_generic_read ( irsense_t *ctx, uint8_t reg, uint8_t *data_buf, uint
  * @param write_data   Byte of data to write.
  *
  * @description Function write the 8-bit data to the
- * target 8-bit register address of AK9750 sensor on IR Sense click board.
+ * target 8-bit register address of AK9750 sensor on IR Sense Click board.
  */
  void irsense_write_byte ( irsense_t *ctx, uint8_t reg_address, uint8_t write_data );
 
@@ -362,7 +362,7 @@ void irsense_generic_read ( irsense_t *ctx, uint8_t reg, uint8_t *data_buf, uint
  * @param reg_address  Register address.
  *
  * @description Function read the 8-bit data from the
- * target 8-bit register address of AK9750 sensor on IR Sense click board.
+ * target 8-bit register address of AK9750 sensor on IR Sense Click board.
  */
  uint8_t irsense_read_byte ( irsense_t *ctx, uint8_t reg_address );
 
@@ -374,7 +374,7 @@ void irsense_generic_read ( irsense_t *ctx, uint8_t reg, uint8_t *data_buf, uint
  * @param reg_address_low Low register address.
  *
  * @description Function read the 16-bit data from the
- * two target 8-bit register address of AK9750 sensor on IR Sense click board.
+ * two target 8-bit register address of AK9750 sensor on IR Sense Click board.
  */
  uint16_t irsense_read_data ( irsense_t *ctx, uint8_t reg_address_low );
 
@@ -385,7 +385,7 @@ void irsense_generic_read ( irsense_t *ctx, uint8_t reg, uint8_t *data_buf, uint
  * @param ctx          Click object.
  *
  * @description  Function enable the sensor by set state of CS pin
- * of AK9750 sensor on IR Sense click board.
+ * of AK9750 sensor on IR Sense Click board.
  */
 void irsense_power_on ( irsense_t *ctx );
 
@@ -396,7 +396,7 @@ void irsense_power_on ( irsense_t *ctx );
  * @param ctx          Click object.
  *
  * @description Function disable the sensor by clear state of CS pin
- * of AK9750 sensor on IR Sense click board.
+ * of AK9750 sensor on IR Sense Click board.
  */
  void irsense_power_off ( irsense_t *ctx );
 
@@ -407,7 +407,7 @@ void irsense_power_on ( irsense_t *ctx );
  * @param ctx          Click object.
  *
  * @description Function get company code by read 8-bit data from the
- * target _IRSENSE_REG_WIA1 register address of AK9750 sensor on IR Sense click board.
+ * target _IRSENSE_REG_WIA1 register address of AK9750 sensor on IR Sense Click board.
  */
  uint8_t irsense_get_company_code ( irsense_t *ctx );
 
@@ -418,7 +418,7 @@ void irsense_power_on ( irsense_t *ctx );
  * @param ctx          Click object.
  *
  * @description Function get device ID by read 8-bit data from the
- * target IRSENSE_REG_WIA2 register address of AK9750 sensor on IR Sense click board.
+ * target IRSENSE_REG_WIA2 register address of AK9750 sensor on IR Sense Click board.
  */
  uint8_t irsense_get_device_id ( irsense_t *ctx );
 
@@ -449,7 +449,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  *
  * @description Function get interrupts activate or inactivate corresponding status by read 8-bit data from the
- * target _IRSENSE_REG_INTST register address of AK9750 sensor on IR Sense click board.
+ * target _IRSENSE_REG_INTST register address of AK9750 sensor on IR Sense Click board.
  */
  uint8_t irsense_read_interrupt_status ( irsense_t *ctx );
 
@@ -469,7 +469,7 @@ void irsense_power_on ( irsense_t *ctx );
  *    - 1 : Data Ready.
  *
  * @description Function get status value by read 8-bit data from the
- * target IRSENSE_REG_ST1 register address of AK9750 sensor on IR Sense click board.
+ * target IRSENSE_REG_ST1 register address of AK9750 sensor on IR Sense Click board.
  */
  uint8_t irsense_get_status ( irsense_t *ctx );
 
@@ -503,7 +503,7 @@ void irsense_power_on ( irsense_t *ctx );
  *    - 7 : Continuous Mode 3.
  *
  * @description  Function set configuration by write 8-bit registerValue to the
- * target IRSENSE_REG_ECNTL1 register address of AK9750 sensor on IR Sense click board.
+ * target IRSENSE_REG_ECNTL1 register address of AK9750 sensor on IR Sense Click board.
  */
  void irsense_set_configuration ( irsense_t *ctx, uint8_t register_value );
 
@@ -523,7 +523,7 @@ void irsense_power_on ( irsense_t *ctx );
  *    - 0x07 : Continuous Mode 3.
  *
  * @description Function set the mode by write 8-bit mode to the
- * target IRSENSE_REG_ECNTL1 register address of AK9750 sensor on IR Sense click board.
+ * target IRSENSE_REG_ECNTL1 register address of AK9750 sensor on IR Sense Click board.
  */
  void irsense_set_mode ( irsense_t *ctx, uint8_t mode );
 
@@ -543,7 +543,7 @@ void irsense_power_on ( irsense_t *ctx );
  *    - 0x38 : Be prohibited.
  *
  * @description Function set the cutoff frequency by write 8-bit mode to the
- * target _IRSENSE_REG_ECNTL1 register address of AK9750 sensor on IR Sense click board.
+ * target _IRSENSE_REG_ECNTL1 register address of AK9750 sensor on IR Sense Click board.
  */
  void irsense_set_cutoff_frequency ( irsense_t *ctx, uint8_t frequency );
 
@@ -559,7 +559,7 @@ void irsense_power_on ( irsense_t *ctx );
  *    - 1 : Data Ready.
  *
  * @description Function checks to see if DRDY flag is set in the status register by read DRDY bit from the
- * target IRSENSE_REG_ST1 register address of AK9750 sensor on IR Sense click board.
+ * target IRSENSE_REG_ST1 register address of AK9750 sensor on IR Sense Click board.
  */
  uint8_t irsense_check_available ( irsense_t *ctx );
 
@@ -576,7 +576,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  *
  * @description Function checks to see if overrun flag is set in the status register by read overrun bit from the
- * target IRSENSE_REG_ST1 register address of AK9750 sensor on IR Sense click board.
+ * target IRSENSE_REG_ST1 register address of AK9750 sensor on IR Sense Click board.
  */
  uint8_t irsense_check_overrun ( irsense_t *ctx );
 
@@ -587,7 +587,7 @@ void irsense_power_on ( irsense_t *ctx );
  * @param ctx          Click object.
  *
  * @description Function soft reset by sets Soft Reset bit ( write 0x01 ) to the
- * target IRSENSE_REG_CNTL2 register address of AK9750 sensor on IR Sense click board.
+ * target IRSENSE_REG_CNTL2 register address of AK9750 sensor on IR Sense Click board.
  */
  void irsense_soft_reset ( irsense_t *ctx );
 
@@ -598,7 +598,7 @@ void irsense_power_on ( irsense_t *ctx );
  * @param ctx          Click object.
  *
  * @description Function refresh by read dummy data by read data from the
- * target IRSENSE_REG_ST2 register address of AK9750 sensor on IR Sense click board.
+ * target IRSENSE_REG_ST2 register address of AK9750 sensor on IR Sense Click board.
  */
  void irsense_refresh ( irsense_t *ctx );
 
@@ -613,7 +613,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function get value of sensor channel 1 by read value from the
  * two target IRSENSE_REG_IR1_LOW and IRSENSE_REG_IR1_HIGH
- * register address of AK9750 sensor on IR Sense click board.
+ * register address of AK9750 sensor on IR Sense Click board.
  */
  int16_t irsense_get_ir1 ( irsense_t *ctx );
 
@@ -628,7 +628,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function get value of sensor channel 2 by read value from the
  * two target IRSENSE_REG_IR2_LOW and IRSENSE_REG_IR2_HIGH
- * register address of AK9750 sensor on IR Sense click board.
+ * register address of AK9750 sensor on IR Sense Click board.
  */
  int16_t irsense_get_ir2 ( irsense_t *ctx );
 
@@ -643,7 +643,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function get value of sensor channel 3 by read value from the
  * two target IRSENSE_REG_IR3_LOW and IRSENSE_REG_IR3_HIGH
- * register address of AK9750 sensor on IR Sense click board.
+ * register address of AK9750 sensor on IR Sense Click board.
  */
  int16_t irsense_get_ir3 ( irsense_t *ctx );
 
@@ -658,7 +658,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function get value of sensor channel 4 by read value from the
  * two target IRSENSE_REG_IR4_LOW and IRSENSE_REG_IR4_HIGH
- * register address of AK9750 sensor on IR Sense click board.
+ * register address of AK9750 sensor on IR Sense Click board.
  */
  int16_t irsense_get_ir4 ( irsense_t *ctx );
 
@@ -675,7 +675,7 @@ void irsense_power_on ( irsense_t *ctx );
  * IRSENSE_REG_IR2_LOW, IRSENSE_REG_IR2_HIGH,
  * IRSENSE_REG_IR3_LOW, IRSENSE_REG_IR3_HIGH,
  * IRSENSE_REG_IR4_LOW and IRSENSE_REG_IR4_HIGH
- * register address of AK9750 sensor on IR Sense click board.
+ * register address of AK9750 sensor on IR Sense Click board.
  */
  void irsense_get_ir_sense ( irsense_t *ctx, irsense_ir_data_t *ir_data );
 
@@ -690,7 +690,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function get the temperature float value by read the measurement data from the
  * two target IRSENSE_REG_TMP_LOW and IRSENSE_REG_TMP_HIGH
- * register address of AK9750 sensor on IR Sense click board
+ * register address of AK9750 sensor on IR Sense Click board
  * calculate temperature value to degree Celsius [ �C ].
  */
  float irsense_get_temperature ( irsense_t *ctx );
@@ -706,7 +706,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description  Function get the temperature float value by read the measurement data from the
  * two target IRSENSE_REG_TMP_LOW and IRSENSE_REG_TMP_HIGH
- * register address of AK9750 sensor on IR Sense click board
+ * register address of AK9750 sensor on IR Sense Click board
  * calculate temperature value to Fahrenheit degrees [ �F ].
  */
  float irsense_get_temperature_f ( irsense_t *ctx );
@@ -720,7 +720,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function set high or low threshold level setting for channel 2 and channel 4 ( Ir2-Ir4 )
  * by write 8-bit value to the two target IRSENSE_REG_ETH24H_LOW and IRSENSE_REG_ETH24H_HIGH
- * of AK9750 sensor on IR Sense click board.
+ * of AK9750 sensor on IR Sense Click board.
  */
  void irsense_set_threshold_ir2_ir4 ( irsense_t *ctx, uint8_t value );
 
@@ -736,7 +736,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function get threshold level setting value for channel 2 and channel 4 ( Ir2-Ir4 )
  * by read 16-bit value to the two target IRSENSE_REG_ETH24H_LOW and IRSENSE_REG_ETH24H_HIGH
- * of AK9750 sensor on IR Sense click board.
+ * of AK9750 sensor on IR Sense Click board.
  */
  uint16_t irsense_get_threshold_ir2_ir4 ( irsense_t *ctx );
 
@@ -749,7 +749,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function set high or low EEPROM threshold level setting for channel 2 and channel 4 ( Ir2-Ir4 )
  * by write 8-bit value to the two target _IRSENSE_REG_ETH24H_LOW and _IRSENSE_REG_ETH24H_HIGH
- * of AK9750 sensor on IR Sense click board.
+ * of AK9750 sensor on IR Sense Click board.
  */
  void irsense_set_threshold_eeprom_ir2_ir4 ( irsense_t *ctx, uint8_t value );
 
@@ -762,7 +762,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function set high or low threshold level setting for channel 1 and channel 3 ( Ir1-Ir3 )
  * by write 8-bit value to the two target _IRSENSE_REG_ETH13H_LOW and _IRSENSE_REG_ETH13H_HIGH
- * of AK9750 sensor on IR Sense click board.
+ * of AK9750 sensor on IR Sense Click board.
  */
  void irsense_set_threshold_ir1_ir3 ( irsense_t *ctx, uint8_t value );
 
@@ -777,7 +777,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function get threshold level setting value for channel 1 and channel 3 ( Ir1-Ir3 )
  * by read 16-bit value to the two target _IRSENSE_REG_ETH13H_LOW and _IRSENSE_REG_ETH13H_HIGH
- * of AK9750 sensor on IR Sense click board.
+ * of AK9750 sensor on IR Sense Click board.
  */
  uint16_t irsense_get_threshold_ir1_ir3 ( irsense_t *ctx );
 
@@ -790,7 +790,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function set high or low EEPROM threshold level setting for channel 1 and channel 3 ( Ir1-Ir3 )
  * by write 8-bit value to the two target _IRSENSE_REG_ETH13H_LOW and _IRSENSE_REG_ETH13H_HIGH
- * of AK9750 sensor on IR Sense click board.
+ * of AK9750 sensor on IR Sense Click board.
  */
  void irsense_set_threshold_eeprom_ir1_ir3( irsense_t *ctx, uint8_t value );
 
@@ -803,7 +803,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function get threshold level setting value for all channels
  * by read all threshold level setting value from all target registers
- * of AK9750 sensor on IR Sense click board.
+ * of AK9750 sensor on IR Sense Click board.
  */
  void irsense_read_threshold ( irsense_t *ctx, irsense_reg_t *reg );
 
@@ -820,7 +820,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function get threshold EEPROM level setting value for all channels
  * by read all threshold EEPROM level setting value from all target registers
- * of AK9750 sensor on IR Sense click board.
+ * of AK9750 sensor on IR Sense Click board.
  */
  void irsense_read_threshold_eeprom ( irsense_t *ctx, irsense_eeprom_t *eeprom );
 
@@ -833,7 +833,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function set hysteresis setting of threshold level value for channel 2 and channel 4 ( Ir2-Ir4 )
  * by write 8-bit hysteresis value to the target IRSENSE_REG_EHYS24
- * of AK9750 sensor on IR Sense click board.
+ * of AK9750 sensor on IR Sense Click board.
  */
  void irsense_set_hysteresis_ir2_ir4 ( irsense_t *ctx, uint8_t value );
 
@@ -846,7 +846,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function set hysteresis EEPROM setting of threshold level value for channel 2 and channel 4 ( Ir2-Ir4 )
  * by write 8-bit hysteresis EEPROM value to the target IRSENSE_EEPROM_MAP_EHYS24
- * of AK9750 sensor on IR Sense click board.
+ * of AK9750 sensor on IR Sense Click board.
  */
  void irsense_set_hysteresis_eeprom_ir2_ir4 ( irsense_t *ctx, uint8_t value );
 
@@ -859,7 +859,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function set hysteresis setting of threshold level value for channel 1 and channel 3 ( Ir1-Ir3 )
  * by write 8-bit hysteresis value to the target IRSENSE_REG_EHYS13
- * of AK9750 sensor on IR Sense click board.
+ * of AK9750 sensor on IR Sense Click board.
  */
  void irsense_set_hysteresis_ir1_ir3 ( irsense_t *ctx, uint8_t value );
 
@@ -872,7 +872,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function set hysteresis EEPROM setting of threshold level value for channel 1 and channel 3 ( Ir1-Ir3 )
  * by write 8-bit hysteresis EEPROM value to the target IRSENSE_EEPROM_MAP_EHYS13
- * of AK9750 sensor on IR Sense click board.
+ * of AK9750 sensor on IR Sense Click board.
  */
  void irsense_set_hysteresis_eeprom_ir1_ir3 (irsense_t *ctx, uint8_t value );
 
@@ -886,7 +886,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description  Function get hysteresis setting of threshold level value for all channels
  * by read all hysteresis setting of threshold level value from all target registers
- * of AK9750 sensor on IR Sense click board.
+ * of AK9750 sensor on IR Sense Click board.
  */
  void irsense_read_hysteresis ( irsense_t *ctx, uint8_t *ehys24, uint8_t *ehys13 );
 
@@ -900,7 +900,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function get hysteresis EEPROM setting of threshold level value for all channels
  * by read all hysteresis EEPROM setting of threshold level value from all target registers
- * of AK9750 sensor on IR Sense click board.
+ * of AK9750 sensor on IR Sense Click board.
  */
  void irsense_read_hysteresis_eeprom ( irsense_t *ctx, uint8_t *eehys24, uint8_t *eehys13 );
 
@@ -913,7 +913,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function sets interrupts activate or inactivate corresponding
  * by write interrupts activate value to the target IRSENSE_REG_EINTEN
- * of AK9750 sensor on IR Sense click board.
+ * of AK9750 sensor on IR Sense Click board.
  */
  void irsense_set_interrupts_reg ( irsense_t *ctx, irsense_eint_t *eint );
 
@@ -925,7 +925,7 @@ void irsense_power_on ( irsense_t *ctx );
  *
  * @description Function sets interrupts activate or inactivate corresponding
  * by write activate data ready interrupt setting bit to the target IRSENSE_REG_EINTEN
- * of AK9750 sensor on IR Sense click board.
+ * of AK9750 sensor on IR Sense Click board.
  */
  void irsense_enable_data_ready_interrupt ( irsense_t *ctx );  
 
@@ -941,7 +941,7 @@ void irsense_power_on ( irsense_t *ctx );
  *    - 1 : Interrupt Enable.
  *
  * @description Function check state of INT pin
- * of AK9750 sensor on IR Sense click board.
+ * of AK9750 sensor on IR Sense Click board.
  */
  uint8_t irsense_check_int_states ( irsense_t *ctx );
 
@@ -952,6 +952,6 @@ void irsense_power_on ( irsense_t *ctx );
 #endif  // _IRSENSE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -348,7 +348,7 @@ typedef enum
 
 /**
  * @brief H-Bridge Driver 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #hbridgedriver2_cfg_t object definition for detailed explanation.
@@ -360,7 +360,7 @@ void hbridgedriver2_cfg_setup ( hbridgedriver2_cfg_t *cfg );
 /**
  * @brief H-Bridge Driver 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #hbridgedriver2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -376,7 +376,7 @@ err_t hbridgedriver2_init ( hbridgedriver2_t *ctx, hbridgedriver2_cfg_t *cfg );
 /**
  * @brief H-Bridge Driver 2 default configuration function.
  * @details This function executes a default configuration of H-Bridge Driver 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #hbridgedriver2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -392,7 +392,7 @@ err_t hbridgedriver2_default_cfg ( hbridgedriver2_t *ctx );
  * @brief H-Bridge Driver 2 enable function.
  * @details This function sets enable signal to turn on the 
  * NCV7535 SPI Controlled H-bridge and Dual-Half Bridge Pre-Driver
- * on the H-Bridge Driver 2 click board™.
+ * on the H-Bridge Driver 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #hbridgedriver2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -407,7 +407,7 @@ err_t hbridgedriver2_enable ( hbridgedriver2_t *ctx );
  * @brief H-Bridge Driver 2 disable function.
  * @details This function sets enable signal to turn off the 
  * NCV7535 SPI Controlled H-bridge and Dual-Half Bridge Pre-Driver
- * on the H-Bridge Driver 2 click board™.
+ * on the H-Bridge Driver 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #hbridgedriver2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -490,7 +490,7 @@ err_t hbridgedriver2_read_id ( hbridgedriver2_t *ctx, uint8_t reg, uint8_t *glob
  * @brief H-Bridge Driver 2 set active mode function.
  * @details This function set active mode 
  * of the NCV7535 SPI Controlled H-bridge and Dual-Half Bridge Pre-Driver
- * on the H-Bridge Driver 2 click board™.
+ * on the H-Bridge Driver 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #hbridgedriver2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -505,7 +505,7 @@ err_t hbridgedriver2_set_active_mode ( hbridgedriver2_t *ctx );
  * @brief H-Bridge Driver 2 get status function.
  * @details This function reads status data
  * of the NCV7535 SPI Controlled H-bridge and Dual-Half Bridge Pre-Driver
- * on the H-Bridge Driver 2 click board™.
+ * on the H-Bridge Driver 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #hbridgedriver2_t object definition for detailed explanation.
  * @param[out] status : Status data.
@@ -521,7 +521,7 @@ err_t hbridgedriver2_get_status ( hbridgedriver2_t *ctx, uint16_t *status );
  * @brief H-Bridge Driver 2 get control function.
  * @details This function reads control data
  * of the NCV7535 SPI Controlled H-bridge and Dual-Half Bridge Pre-Driver
- * on the H-Bridge Driver 2 click board™.
+ * on the H-Bridge Driver 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #hbridgedriver2_t object definition for detailed explanation.
  * @param[out] control : Control data.
@@ -537,7 +537,7 @@ err_t hbridgedriver2_get_control ( hbridgedriver2_t *ctx, uint16_t *control );
  * @brief H-Bridge Driver 2 set control function.
  * @details This function sets control data
  * of the NCV7535 SPI Controlled H-bridge and Dual-Half Bridge Pre-Driver
- * on the H-Bridge Driver 2 click board™.
+ * on the H-Bridge Driver 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #hbridgedriver2_t object definition for detailed explanation.
  * @param[in] global_fault : Global status byte content.
@@ -554,7 +554,7 @@ err_t hbridgedriver2_set_control ( hbridgedriver2_t *ctx, uint8_t *global_fault,
  * @brief H-Bridge Driver 2 get config function.
  * @details This function reads configuration data
  * of the NCV7535 SPI Controlled H-bridge and Dual-Half Bridge Pre-Driver
- * on the H-Bridge Driver 2 click board™.
+ * on the H-Bridge Driver 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #hbridgedriver2_t object definition for detailed explanation.
  * @param[out] config : Configuration data.
@@ -570,7 +570,7 @@ err_t hbridgedriver2_get_config ( hbridgedriver2_t *ctx, uint16_t *config );
  * @brief H-Bridge Driver 2 set config function.
  * @details This function sets configuration data
  * of the NCV7535 SPI Controlled H-bridge and Dual-Half Bridge Pre-Driver
- * on the H-Bridge Driver 2 click board™.
+ * on the H-Bridge Driver 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #hbridgedriver2_t object definition for detailed explanation.
  * @param[in] global_fault : Global status byte content.
@@ -587,7 +587,7 @@ err_t hbridgedriver2_set_config ( hbridgedriver2_t *ctx, uint8_t *global_fault, 
  * @brief H-Bridge Driver 2 get device ID function.
  * @details This function reads device ID data
  * of the NCV7535 SPI Controlled H-bridge and Dual-Half Bridge Pre-Driver
- * on the H-Bridge Driver 2 click board™.
+ * on the H-Bridge Driver 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #hbridgedriver2_t object definition for detailed explanation.
  * @param[in] global_fault : Global status byte content.
@@ -604,7 +604,7 @@ err_t hbridgedriver2_get_device_id ( hbridgedriver2_t *ctx, uint8_t *global_faul
  * @brief H-Bridge Driver 2 control function.
  * @details This function configuration control 
  * of the NCV7535 SPI Controlled H-bridge and Dual-Half Bridge Pre-Driver
- * on the H-Bridge Driver 2 click board™.
+ * on the H-Bridge Driver 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #hbridgedriver2_t object definition for detailed explanation.
  * @param[in] global_fault : Global status byte content.
@@ -621,7 +621,7 @@ err_t hbridgedriver2_control ( hbridgedriver2_t *ctx, uint8_t *global_fault, hbr
  * @brief H-Bridge Driver 2 run backward function.
  * @details This function performs motor start run backward
  * of the NCV7535 SPI Controlled H-bridge and Dual-Half Bridge Pre-Driver
- * on the H-Bridge Driver 2 click board™.
+ * on the H-Bridge Driver 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #hbridgedriver2_t object definition for detailed explanation.
  * @param[in] global_fault : Global status byte content.
@@ -637,7 +637,7 @@ err_t hbridgedriver2_run_backward ( hbridgedriver2_t *ctx, uint8_t *global_fault
  * @brief H-Bridge Driver 2 run forward function.
  * @details This function performs motor start run forward
  * of the NCV7535 SPI Controlled H-bridge and Dual-Half Bridge Pre-Driver
- * on the H-Bridge Driver 2 click board™.
+ * on the H-Bridge Driver 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #hbridgedriver2_t object definition for detailed explanation.
  * @param[in] global_fault : Global status byte content.
@@ -653,7 +653,7 @@ err_t hbridgedriver2_run_forward ( hbridgedriver2_t *ctx, uint8_t *global_fault 
  * @brief H-Bridge Driver 2 stop function.
  * @details This function performs motor stop
  * of the NCV7535 SPI Controlled H-bridge and Dual-Half Bridge Pre-Driver
- * on the H-Bridge Driver 2 click board™.
+ * on the H-Bridge Driver 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #hbridgedriver2_t object definition for detailed explanation.
  * @param[in] global_fault : Global status byte content.
@@ -669,7 +669,7 @@ err_t hbridgedriver2_stop ( hbridgedriver2_t *ctx, uint8_t *global_fault );
  * @brief H-Bridge Driver 2 stop with brake function.
  * @details This function performs motor stop with brake
  * of the NCV7535 SPI Controlled H-bridge and Dual-Half Bridge Pre-Driver
- * on the H-Bridge Driver 2 click board™.
+ * on the H-Bridge Driver 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #hbridgedriver2_t object definition for detailed explanation.
  * @param[in] global_fault : Global status byte content.

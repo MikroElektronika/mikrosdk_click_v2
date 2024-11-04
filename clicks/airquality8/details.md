@@ -1,6 +1,6 @@
 
 ---
-# Air Quality 8 click
+# Air Quality 8 Click
 
 > Air quality 8 Click is a compact add-on board containing a best-in-class air-quality sensing solution. This board features the ZMOD4510, a fully calibrated digital sensor solution that detects air quality in various indoor and outdoor applications from Renesas. The ZMOD4510 comes with selective ozone measurement capabilities, offering visibility into the air quality in users' environments for a personalized experience. This Click board™ is an I2C configurable and characterized by outstanding long-term stability and lifetime. Many additional features such as low power consumption, wide NO2 and O3 detection range, and high sensitivity make this Click board™ an excellent choice for detecting unhealthy conditions in outdoor air, such as personal air-quality monitor, HVAC, and other various air quality-related applications.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/airquality8_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/air-quality-8-click)
+[Click Product page](https://www.mikroe.com/air-quality-8-click)
 
 ---
 
@@ -219,7 +219,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

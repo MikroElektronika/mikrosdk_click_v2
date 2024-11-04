@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Ambient 23 click
+# Ambient 23 Click
 
 > Ambient 23 Click is a compact add-on board that measures the intensity of visible light. This board features the VEML3235SL, an advanced ambient light sensor designed by the CMOS process from Vishay Semiconductors that transforms light intensity to a 16-bit digital signal output that can be directly communicated via an I2C interface. 
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ambient23_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ambient-23-click)
+[Click Product page](https://www.mikroe.com/ambient-23-click)
 
 ---
 
@@ -70,7 +70,7 @@ err_t ambient23_read_light_data ( ambient23_t *ctx, float *light_data );
 
 ## Example Description
 
-> This example demonstrates the use of Ambient 23 click board by measuring 
+> This example demonstrates the use of Ambient 23 Click board by measuring 
   the ambient light level in Lux.
 
 **The demo application is composed of two sections :**
@@ -78,7 +78,7 @@ err_t ambient23_read_light_data ( ambient23_t *ctx, float *light_data );
 ### Application Init
 
 > Initializes the driver, checks communication by reading part ID
-  and performs the click default configuration.
+  and performs the Click default configuration.
 
 ```c
 
@@ -130,7 +130,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Measuring ambient light level by reading data from the Ambient 23 click board
+> Measuring ambient light level by reading data from the Ambient 23 Click board
   and displaying it using UART Serial terminal.
 
 ```c
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

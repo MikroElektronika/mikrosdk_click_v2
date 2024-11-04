@@ -1,6 +1,6 @@
 
 ---
-# Ambient 20 click
+# Ambient 20 Click
 
 > Ambient 20 Click is a compact add-on board used to measure the amount of the present ambient light. This board features the BU27030NUC, a 16-bit digital-output ambient light sensor with an I2C interface from Rohm Semiconductor. The BU27030NUC has a flexible and wide operating range of up to 20klx with a maximum resolution of 0.0007lux/count, providing an excellent responsivity close to the human eyes' response. It also features inherent 50Hz/60Hz light noise rejection and excellent IR-cut characteristics for high robustness at high sensitivity.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ambient20_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ambient-20-click)
+[Click Product page](https://www.mikroe.com/ambient-20-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t ambient20_read_data0 ( ambient20_t *ctx, uint16_t *data0_out );
 
 ## Example Description
 
-> This example demonstrates the use of Ambient 20 click board by measuring the ambient light level.
+> This example demonstrates the use of Ambient 20 Click board by measuring the ambient light level.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -127,7 +127,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Measuring ambient light level by reading DATA0 and DATA1 channels of the Ambient 20 click board and displaying it using UART Serial terminal.
+> Measuring ambient light level by reading DATA0 and DATA1 channels of the Ambient 20 Click board and displaying it using UART Serial terminal.
 
 ```c
 void application_task ( void ) 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

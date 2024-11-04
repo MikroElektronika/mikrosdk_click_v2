@@ -3,7 +3,7 @@
  * @brief ADC 10 Click Example.
  *
  * # Description
- * This is an example that demonstrates the use of the ADC 10 click board.
+ * This is an example that demonstrates the use of the ADC 10 Click board.
  *
  * The demo application is composed of two sections :
  *

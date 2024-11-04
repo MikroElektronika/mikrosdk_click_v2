@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Heart Rate 11 click
+# Heart Rate 11 Click
 
 > Heart Rate 11 Click is a compact add-on board suitable for heart rate monitoring applications. This board features the OB1203, a multi-channel light sensor (LS/CS), a proximity sensor (PS), and a photoplethysmography sensor (PPG) from Renesas. It can be configured as an ambient light sensor to measure ambient light similar to the human eye experience or as an RGB color sensor. The OB1203 establishes communication to and from the module entirely through a standard I2C compatible interface and has a fully integrated biosensor for reflective photoplethysmography.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/heartrate11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/heart-rate-11-click)
+[Click Product page](https://www.mikroe.com/heart-rate-11-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t heartrate11_read_fifo ( heartrate11_t *ctx, uint32_t *fifo_data );
 
 ## Example Description
 
-> This example demonstrates the use of Heart Rate 11 click board by reading and displaying the PPG1 (HR) values which can be visualized on the SerialPlot application.
+> This example demonstrates the use of Heart Rate 11 Click board by reading and displaying the PPG1 (HR) values which can be visualized on the SerialPlot application.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration for heart rate measurement.
+> Initializes the driver and performs the Click default configuration for heart rate measurement.
 
 ```c
 
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

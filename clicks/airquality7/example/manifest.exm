@@ -3,6 +3,6 @@
     "description": "Air quality 7 Click is a compact add-on board that combines state-of-the-art MOS sensor technology.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MiCS-VZ-89TE"],
+    "hw" : ["Click","MiCS-VZ-89TE"],
     "category" : ["Gas"] 
 }

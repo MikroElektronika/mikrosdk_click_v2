@@ -3,6 +3,6 @@
     "description": "IoT ExpressLink 3 Click is a compact add-on board that allows users to connect easily to IoT ExpressLink services and securely interact with cloud applications and other devices. This board features the NORA-W256WS, a standalone multi-radio module from u-blox. The module supports Wi-Fi radio at 802.11b/g/n standard and 2.4GHz of ISM band. It also supports the Bluetooth Low Energy 5. The embedded AWS IoT ExpressLink-compliant software includes secured pre-flashed certificates in the module.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","NORA-W256AWS-00B"],
+    "hw" : ["Click","NORA-W256AWS-00B"],
     "category" : ["Click Boards > Wireless connectivity > WIFI"]
 }

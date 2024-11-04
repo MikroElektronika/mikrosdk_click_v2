@@ -150,7 +150,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void digivref_cfg_setup ( digivref_cfg_t *cfg );
@@ -161,7 +161,7 @@ void digivref_cfg_setup ( digivref_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 DIGIVREF_RETVAL digivref_init ( digivref_t *ctx, digivref_cfg_t *cfg );
 
@@ -195,6 +195,6 @@ void digivref_set_output_voltage ( digivref_t *ctx, uint8_t v_ref );
 #endif  // _DIGIVREF_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

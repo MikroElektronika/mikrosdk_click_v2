@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# DC Motor 12 click
+# DC Motor 12 Click
 
 > DC Motor 12 Click is a compact add-on board with a brushed DC motor driver. This board features the TB9054FTG, 
 > a PWM-type, dual-channel, H-bridge, brushed DC motor driver from Toshiba Semiconductor. 
@@ -15,7 +15,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dcmotor12_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dc-motor-12-click)
+[Click Product page](https://www.mikroe.com/dc-motor-12-click)
 
 ---
 
@@ -76,14 +76,14 @@ err_t dcmotor12_set_cm_sel_pin ( dcmotor12_t *ctx, uint8_t state );
 
 ## Example Description
 
-> This example demonstrates the use of DC Motor 12 click board by controlling the speed
+> This example demonstrates the use of DC Motor 12 Click board by controlling the speed
 > of DC motor over PWM duty cycle as well as displaying the motor current consumption.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -189,8 +189,8 @@ void application_task ( void )
 
 ## Note
 
-> The click board swiches should be set as follows: SW 1-2-3-4 : H-H-L-L
-> This sets the click board as a SPI controlled single-channel device so 
+> The Click board swiches should be set as follows: SW 1-2-3-4 : H-H-L-L
+> This sets the Click board as a SPI controlled single-channel device so 
 > the motor should be connected to OUT1/2 and OUT3/4.
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
@@ -204,7 +204,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,6 +1,6 @@
 
 ---
-# LED Driver 9 click
+# LED Driver 9 Click
 
 LED Driver 9 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the TLC59116, I2C bus-controlled 16-channel LED driver optimized for red/green/blue/amber (RGBA) color mixing and backlight application from Texas Instruments.
 
@@ -8,7 +8,7 @@ LED Driver 9 Click is a compact add-on board that simplifies the control of mult
   <img src="https://download.mikroe.com/images/click_for_ide/led_driver_9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/led-driver-9-click)
+[Click Product page](https://www.mikroe.com/led-driver-9-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t leddriver9_set_dimmer_pwm ( leddriver9_t *ctx, float duty_cycle );
 
 ## Example Description
 
-> This app demonstrates the configuration and control of the LED Driver 9 click board resulting in a nice breathing effect.
+> This app demonstrates the configuration and control of the LED Driver 9 Click board resulting in a nice breathing effect.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> The initialization configures the UART LOG and I2C drivers and adjusts the Led Driver 9 click general register settings.
+> The initialization configures the UART LOG and I2C drivers and adjusts the Led Driver 9 Click general register settings.
 
 ```c
 
@@ -185,7 +185,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

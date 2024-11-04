@@ -1,6 +1,6 @@
 
 ---
-# Fan 9 click
+# Fan 9 Click
 
 > Fan 9 Click is a compact add-on board designed for high-power fan applications requiring low noise and minimal vibration. This board features the A5932, an automotive-grade three-phase sinusoidal sensorless fan controller from Allegro Microsystems. This board operates with a power supply range of 12V to 42V, using a sinusoidal drive to reduce audible noise and vibration. It features I2C communication, PWM speed control, and a red FLT LED indicator for fault conditions.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/fan9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/fan-9-click)
+[Click Product page](https://www.mikroe.com/fan-9-click)
 
 ---
 
@@ -52,7 +52,7 @@ err_t fan9_default_cfg ( fan9_t *ctx );
 
 #### Example key functions :
 
-- `fan9_set_direction` This function is used to set direction of Fan 9 click board.
+- `fan9_set_direction` This function is used to set direction of Fan 9 Click board.
 ```c
 void fan9_set_direction ( fan9_t *ctx, uint8_t dir );
 ```
@@ -62,20 +62,20 @@ void fan9_set_direction ( fan9_t *ctx, uint8_t dir );
 err_t fan9_write_reg ( fan9_t *ctx, uint8_t reg, uint16_t data_in );
 ```
 
-- `fan9_set_pwm` This function is used to get PWM value of Fan 9 click board.
+- `fan9_set_pwm` This function is used to get PWM value of Fan 9 Click board.
 ```c
 err_t fan9_set_pwm ( fan9_t *ctx, uint8_t pwm_val );
 ```
 
 ## Example Description
 
-> This example demonstrates the use of FAN 9 click board, by changing speed of the fan from 0 to 100 percent, then decreasing it back to 0.
+> This example demonstrates the use of FAN 9 Click board, by changing speed of the fan from 0 to 100 percent, then decreasing it back to 0.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -162,7 +162,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

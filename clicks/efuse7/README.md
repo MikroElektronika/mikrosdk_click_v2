@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# eFuse 7 click
+# eFuse 7 Click
 
 > eFuse 7 Click is a compact add-on board with a power path protection solution that limits circuit currents and voltages to safe levels during fault conditions. This board features the LS12052BD33, an eFuse with over-voltage protection and blocking FET control from Littelfuse. 
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/efuse7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/efuse-7-click)
+[Click Product page](https://www.mikroe.com/efuse-7-click)
 
 ---
 
@@ -78,7 +78,7 @@ err_t efuse7_set_limit ( efuse7_t *ctx, uint8_t set_current );
 
 ### Application Init
 
-> Initialization of click module and UART log, then performing default 
+> Initialization of Click module and UART log, then performing default 
   configuration and setting a current limit to 1A.
 
 ```c
@@ -166,7 +166,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

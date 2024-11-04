@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# 4G LTE-ATT  click
+# 4G LTE-ATT  Click
 
-4G LTE-AT&T click is an LTE Cat 1 / UMTS multimodecellular network solution, featuring the compact LARA-R2 series modem from u-blox. This module supports up to four LTE bands and up to two UMTS bands. It also features a full range of options for the high speed cellular networking and communication, such as the network indication, full embedded TCP/UDP stack, HTTP and HTTPS transfer protocols, IPv4/IPv6 dual-stack support, secondary antenna for the RX diversity, antenna detection, jamming signal detection, embedded TLS 1.2 protocol for the improved security and more. 4G LARA click can achieve data rates up to 10.3 Mbps/5.2 Mbps (downlink/uplink).
+4G LTE-AT&T Click is an LTE Cat 1 / UMTS multimodecellular network solution, featuring the compact LARA-R2 series modem from u-blox. This module supports up to four LTE bands and up to two UMTS bands. It also features a full range of options for the high speed cellular networking and communication, such as the network indication, full embedded TCP/UDP stack, HTTP and HTTPS transfer protocols, IPv4/IPv6 dual-stack support, secondary antenna for the RX diversity, antenna detection, jamming signal detection, embedded TLS 1.2 protocol for the improved security and more. 4G LARA Click can achieve data rates up to 10.3 Mbps/5.2 Mbps (downlink/uplink).
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/4g-lte-att-click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/4g-lte-att-click)
+[Click Product page](https://www.mikroe.com/4g-lte-att-click)
 
 ---
 
@@ -53,7 +53,7 @@ err_t c4glteatt_init ( c4glteatt_t *ctx, c4glteatt_cfg_t *cfg );
 void c4glteatt_module_power_on ( c4glteatt_t *ctx );
 ```
 
-- `c4glteatt_send_cmd_with_parameter` This function sends a command with specified parameter to the click module.
+- `c4glteatt_send_cmd_with_parameter` This function sends a command with specified parameter to the Click module.
 ```c
 void c4glteatt_send_cmd_with_parameter ( c4glteatt_t *ctx, char *at_cmd_buf, char *param_buf );
 ```
@@ -65,7 +65,7 @@ void c4glteatt_send_cmd_parameter_check ( c4glteatt_t *ctx, char *at_cmd_buf );
 
 ## Example Description
 
-> This example reads and processes data from 4G LTE ATT click.
+> This example reads and processes data from 4G LTE ATT Click.
 
 **The demo application is composed of two sections :**
 
@@ -275,7 +275,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

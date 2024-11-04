@@ -1,6 +1,6 @@
 
 ---
-# Wheatstone click
+# Wheatstone Click
 
 > Wheatstone Click is a measurement Click board™ which utilizes a Wheatstone bridge circuit onboard, in order to precisely measure the resistance of an external element. Besides the wheatstone bridge circuit, this Click board™ also utilizes MAX4208 – an ultra-low offset/drift, precision instrumentation amplifier, from Maxim Integrated.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/wheatstone_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/wheatstone-click)
+[Click Product page](https://www.mikroe.com/wheatstone-click)
 
 ---
 
@@ -59,7 +59,7 @@ err_t wheatstone_read_an_pin_voltage ( wheatstone_t *ctx, float *data_out );
 
 ## Examples Description
 
-> This example demonstrates the use of Wheatstone click board by measuring the input resistance.
+> This example demonstrates the use of Wheatstone Click board by measuring the input resistance.
 
 **The demo application is composed of two sections :**
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

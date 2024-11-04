@@ -3,12 +3,12 @@
  * @brief SolidSwitch Click example
  *
  * # Description
- * This example demonstrates the use of SolidSwitch click board.
+ * This example demonstrates the use of SolidSwitch Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and logger and enables the click board.
+ * Initializes the driver and logger and enables the Click board.
  *
  * ## Application Task
  * Enables different outputs every 3 seconds and displays all enabled 

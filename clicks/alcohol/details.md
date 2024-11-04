@@ -1,17 +1,17 @@
 
 ---
-# Alcohol click
+# Alcohol Click
 
-Alcohol click has a high sensitivity to alcohol and it can be used to detect alcohol in concentrations from 0.04 to 4mg/l.
+Alcohol Click has a high sensitivity to alcohol and it can be used to detect alcohol in concentrations from 0.04 to 4mg/l.
 
-Alcohol click carries an MQ-3 Semiconductor sensor for alcohol. The click is designed to run on a 5V power supply only. It communicates with the target microcontroller through the AN pin on the mikroBUS™ line. 
+Alcohol Click carries an MQ-3 Semiconductor sensor for alcohol. The Click is designed to run on a 5V power supply only. It communicates with the target microcontroller through the AN pin on the mikroBUS™ line. 
 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/alcohol_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/alcohol-click)
+[Click Product page](https://www.mikroe.com/alcohol-click)
 
 ---
 
@@ -68,7 +68,7 @@ err_t alcohol_read_an_pin_voltage ( alcohol_t *ctx, float *data_out );
 
 ### Application Init
 
-> Configuring clicks and log objects.
+> Configuring Clicks and log objects.
 
 ```c
 
@@ -140,7 +140,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

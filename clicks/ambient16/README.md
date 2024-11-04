@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Ambient 16 click
+# Ambient 16 Click
 
 > Ambient 16 Click is a compact add-on board used to measure the amount of the present ambient light. This board features the BH1726NUC, a 16-bit digital-output ambient light sensor with an I2C interface from Rohm Semiconductor. The BH1726NUC can detect a wide range of illuminance up to 30klx and provides excellent responsivity close to the human eyes' response. It is designed to control the brightness in various applications based on ambient light availability, brightness for optimum visibility, and energy efficiency.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ambient16_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ambient-16-click)
+[Click Product page](https://www.mikroe.com/ambient-16-click)
 
 ---
 
@@ -129,7 +129,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Demonstrates use of Ambient 16 click board by reading data values of DATA0 and DATA1 in Lux
+> Demonstrates use of Ambient 16 Click board by reading data values of DATA0 and DATA1 in Lux
 > every second, and logging it on the UART terminal.
 
 ```c
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

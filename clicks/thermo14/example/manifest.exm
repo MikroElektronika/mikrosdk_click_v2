@@ -3,6 +3,6 @@
     "description": "Thermo 14 Click uses the STTS22H digital temperature sensor and thermal watchdog, which can measure temperature measurements between -40°C and +125°C so that the temperature measurement data can be processed by the host MCU. ",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","STTS22H IC"],
+    "hw" : ["Click","STTS22H IC"],
     "category" : ["Temperature & humidity"] 
 }

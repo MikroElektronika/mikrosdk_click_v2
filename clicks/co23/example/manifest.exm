@@ -3,6 +3,6 @@
     "description": "CO2 3 Click is a compact add-on board that allows for precise and reliable indoor air quality measurements. This board features XENSIV™ PASCO2V01BUMA1, a highly accurate CO2 sensor module from Infineon Technologies that uses photoacoustic spectroscopy technology to measure indoor air quality. The module comprises a gas measuring cell, an IR emitter, a microphone, and a microcontroller for data processing. Its key components are developed in-house, ensuring the highest quality and performance. Other major characteristics include high accuracy, low power consumption, and versatile configuration options.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","PASCO2V01"],
+    "hw" : ["Click","PASCO2V01"],
     "category" : ["Click Boards > Sensors > Gas"]
 }

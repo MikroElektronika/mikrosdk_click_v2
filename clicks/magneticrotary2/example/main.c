@@ -3,13 +3,13 @@
  * @brief MagneticRotary2 Click example
  *
  * # Description
- * This example demonstrates the use of Magnetic Rotary 2 click board by reading and displaying
+ * This example demonstrates the use of Magnetic Rotary 2 Click board by reading and displaying
  * the magnet's angular position in degrees.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads the magnet's angular position in degrees every 100ms and displays the results on the USB UART.

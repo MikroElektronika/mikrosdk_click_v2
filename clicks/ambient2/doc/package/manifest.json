@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "Ambient 2 click",
+    "display_name": "Ambient 2 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.ambient2",
     "product_link": "https://www.mikroe.com/ambient-2-click",
-    "short_description": "Ambient 2 click carries TI’s OPT3001 Ambient Light sensor. It’s a small (2mm x 2mm) single-chip lux meter that measures only the visible part of the light spectrum from any kind of source (mimicking the way humans see light).",
+    "short_description": "Ambient 2 Click carries TI’s OPT3001 Ambient Light sensor. It’s a small (2mm x 2mm) single-chip lux meter that measures only the visible part of the light spectrum from any kind of source (mimicking the way humans see light).",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1490
     ],
-    "version": "2.1.0.19",
+    "version": "2.1.0.20",
     "cmake": true,
     "alias": "Click.Ambient2",
     "subdir_name": "lib_ambient2"
 }
+
 
 
 

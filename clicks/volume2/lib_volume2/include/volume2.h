@@ -257,7 +257,7 @@ typedef struct
 
 /**
  * @brief Volume 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #volume2_cfg_t object definition for detailed explanation.
@@ -271,7 +271,7 @@ void volume2_cfg_setup ( volume2_cfg_t *cfg );
 /**
  * @brief Volume 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #volume2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -289,7 +289,7 @@ err_t volume2_init ( volume2_t *ctx, volume2_cfg_t *cfg );
 /**
  * @brief Volume 2 default configuration function.
  * @details This function executes a default configuration of Volume 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #volume2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

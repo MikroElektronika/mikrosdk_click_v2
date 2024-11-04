@@ -1,14 +1,14 @@
 
 ---
-# GSM 3 click
+# GSM 3 Click
 
-> GSM3 click is a complete quad-band GSM cellular network communication solution, featuring the SIM800H-BT, a quad-band 2G GSM/GPRS module. This module is GSM Phase 2/2+ compliant, featuring a full set of options for the cellular networking and communication. It has a network status indication, jamming detection, embedded internet protocols including TCP/IP, UDP, FTP, PPP, HTTP, E-mail, MMS, and more. It also features advanced voice/audio functions, including the FM radio interface. The GPRS multislot class 12 implementation allows 4 uplink and 4 downlink slots, with 5 slots open in total.
+> GSM3 Click is a complete quad-band GSM cellular network communication solution, featuring the SIM800H-BT, a quad-band 2G GSM/GPRS module. This module is GSM Phase 2/2+ compliant, featuring a full set of options for the cellular networking and communication. It has a network status indication, jamming detection, embedded internet protocols including TCP/IP, UDP, FTP, PPP, HTTP, E-mail, MMS, and more. It also features advanced voice/audio functions, including the FM radio interface. The GPRS multislot class 12 implementation allows 4 uplink and 4 downlink slots, with 5 slots open in total.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/gsm3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gsm-3-click)
+[Click Product page](https://www.mikroe.com/gsm-3-click)
 
 ---
 
@@ -202,7 +202,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

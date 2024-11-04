@@ -357,7 +357,7 @@ typedef enum
 
 /**
  * @brief Load Cell 6 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #loadcell6_cfg_t object definition for detailed explanation.
@@ -369,7 +369,7 @@ void loadcell6_cfg_setup ( loadcell6_cfg_t *cfg );
 /**
  * @brief Load Cell 6 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #loadcell6_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -385,7 +385,7 @@ err_t loadcell6_init ( loadcell6_t *ctx, loadcell6_cfg_t *cfg );
 /**
  * @brief Load Cell 6 default configuration function.
  * @details This function executes a default configuration of Load Cell 6
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #loadcell6_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -435,7 +435,7 @@ err_t loadcell6_generic_read ( loadcell6_t *ctx, uint8_t reg, uint8_t *data_out,
  * @brief Load Cell 6 hw reset function.
  * @details This function executes a hardware reset 
  * of the MAX11270 24-Bit, 10mW, 130dB SNR, 64ksps Delta-Sigma ADC with Integrated PGA
- * on the Load Cell 6 click board™.
+ * on the Load Cell 6 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell6_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -450,7 +450,7 @@ err_t loadcell6_hw_reset ( loadcell6_t *ctx );
  * @brief Load Cell 6 get sync function.
  * @details This function get sync state
  * of the MAX11270 24-Bit, 10mW, 130dB SNR, 64ksps Delta-Sigma ADC with Integrated PGA
- * on the Load Cell 6  click board™.
+ * on the Load Cell 6  Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell6_t object definition for detailed explanation.
  * @return @li @c  0 - Low pin state,
@@ -464,7 +464,7 @@ uint8_t loadcell6_sync ( loadcell6_t *ctx );
  * @brief Load Cell 6 check data ready function.
  * @details This function check data ready state
  * of the MAX11270 24-Bit, 10mW, 130dB SNR, 64ksps Delta-Sigma ADC with Integrated PGA
- * on the Load Cell 6 click board™.
+ * on the Load Cell 6 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell6_t object definition for detailed explanation.
  * @return @li @c  0 - Low pin state,
@@ -478,7 +478,7 @@ uint8_t loadcell6_check_data_ready ( loadcell6_t *ctx );
  * @brief Load Cell 6 write reg function.
  * @details This function writes a byte of the data to the selected register
  * of the MAX11270 24-Bit, 10mW, 130dB SNR, 64ksps Delta-Sigma ADC with Integrated PGA
- * on the Load Cell 6 click board™
+ * on the Load Cell 6 Click board™
  * @param[in] ctx : Click context object.
  * See #loadcell6_t object definition for detailed explanation.
  * @param[in] reg : Start register address.
@@ -495,7 +495,7 @@ err_t loadcell6_write_reg ( loadcell6_t *ctx, uint8_t reg, uint8_t data_in );
  * @brief Load Cell 6 read reg function.
  * @details This function reads a byte of data from the selected register 
  * of the MAX11270 24-Bit, 10mW, 130dB SNR, 64ksps Delta-Sigma ADC with Integrated PGA
- * on the Load Cell 6 click board™.
+ * on the Load Cell 6 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell6_t object definition for detailed explanation.
  * @param[in] reg : Start register address.
@@ -512,7 +512,7 @@ err_t loadcell6_read_reg ( loadcell6_t *ctx, uint8_t reg, uint8_t *data_out );
  * @brief Load Cell 6 read reg data function.
  * @details This function writes a 24-bit data to the selected register
  * of the MAX11270 24-Bit, 10mW, 130dB SNR, 64ksps Delta-Sigma ADC with Integrated PGA
- * on the Load Cell 6 click board™.
+ * on the Load Cell 6 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell6_t object definition for detailed explanation.
  * @param[in] reg : Start register address.
@@ -529,7 +529,7 @@ err_t loadcell6_write_reg_data ( loadcell6_t *ctx, uint8_t reg, uint32_t data_in
  * @brief Load Cell 6 read reg data function.
  * @details This function reads a 24-bit data from the selected register 
  * of the MAX11270 24-Bit, 10mW, 130dB SNR, 64ksps Delta-Sigma ADC with Integrated PGA
- * on the Load Cell 6 click board™.
+ * on the Load Cell 6 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell6_t object definition for detailed explanation.
  * @param[in] reg : Start register address.
@@ -546,7 +546,7 @@ err_t loadcell6_read_reg_data ( loadcell6_t *ctx, uint8_t reg, uint32_t *data_ou
  * @brief Load Cell 6 set command function.
  * @details This function writes a desired commands
  * of the MAX11270 24-Bit, 10mW, 130dB SNR, 64ksps Delta-Sigma ADC with Integrated PGA
- * on the Load Cell 6 click board™.
+ * on the Load Cell 6 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell6_t object definition for detailed explanation.
  * @param[in] cmd : Desired command.
@@ -562,7 +562,7 @@ err_t loadcell6_set_command ( loadcell6_t *ctx, uint8_t cmd );
  * @brief Load Cell 6 get status function.
  * @details This function reads status
  * of the MAX11270 24-Bit, 10mW, 130dB SNR, 64ksps Delta-Sigma ADC with Integrated PGA
- * on the Load Cell 6 click board™.
+ * on the Load Cell 6 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell6_t object definition for detailed explanation.
  * @param[out] status : Status data.
@@ -578,7 +578,7 @@ err_t loadcell6_get_status ( loadcell6_t *ctx, uint16_t *status );
  * @brief Load Cell 6 read ADC data function.
  * @details This function reads the ADC data
  * of the MAX11270 24-Bit, 10mW, 130dB SNR, 64ksps Delta-Sigma ADC with Integrated PGA
- * on the Load Cell 6 click board™.
+ * on the Load Cell 6 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell6_t object definition for detailed explanation.
  * @param[out] data_out : ADC data.
@@ -594,7 +594,7 @@ err_t loadcell6_read_adc ( loadcell6_t *ctx, uint32_t *data_out );
  * @brief Load Cell 6 tare the scales function.
  * @details This function for the tare scales sets the tara value into the cell data structure
  * of the MAX11270 24-Bit, 10mW, 130dB SNR, 64ksps Delta-Sigma ADC with Integrated PGA
- * on the Load Cell 6 click board™.
+ * on the Load Cell 6 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell6_t object definition for detailed explanation.
  * @param[out] cell_data : Pointer to the memory location of the structure where data be stored.
@@ -610,7 +610,7 @@ err_t loadcell6_tare ( loadcell6_t *ctx, loadcell6_data_t *cell_data );
  * @brief Load Cell 6 calibration function.
  * @details This function for the calibration sets the calibration value into the cell data structure
  * of the MAX11270 24-Bit, 10mW, 130dB SNR, 64ksps Delta-Sigma ADC with Integrated PGA
- * on the Load Cell 6 click board™.
+ * on the Load Cell 6 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell6_t object definition for detailed explanation.
  * @param[in] cal_val : Etalon weight value
@@ -633,7 +633,7 @@ err_t loadcell6_calibration ( loadcell6_t *ctx, uint16_t cal_val, loadcell6_data
  * @brief Load Cell 6 get weight function.
  * @details This function gets float value of the scales measurements [ g ]
  * of the MAX11270 24-Bit, 10mW, 130dB SNR, 64ksps Delta-Sigma ADC with Integrated PGA
- * on the Load Cell 6 click board™.
+ * on the Load Cell 6 Click board™.
  * @param[in] ctx : Click context object.
  * See #loadcell6_t object definition for detailed explanation.
  * @param[out] cell_data : Pointer to the memory location of the structure where data be stored.

@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and configures the click board for the selected mode.
+ * Initializes the driver and configures the Click board for the selected mode.
  * 
  * ## Application Task  
  * Depending on the selected mode, it reads all the received data or sends the desired message
@@ -33,7 +33,7 @@ static uint8_t dev_mode = UWB_MODE_TX;
 
 // Transmit buffers
 static uint8_t data_tx_1[ 7 ] = "MikroE";
-static uint8_t data_tx_2[ 10 ] = "UWB click";
+static uint8_t data_tx_2[ 10 ] = "UWB Click";
 
 // Transmit length read var
 static uint16_t temp_len = 0;

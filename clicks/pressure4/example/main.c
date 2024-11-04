@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the click board.
+ * Initializes the Click board.
  * 
  * ## Application Task  
  * The pressure and temperature data is read from the sensor 

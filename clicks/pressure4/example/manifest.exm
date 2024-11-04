@@ -1,8 +1,8 @@
 {
     "name": "Pressure 4 Click",
-    "description": "Pressure 4 click is an absolute barometric pressure measurement Click board™, which features a low power consumption, high precision barometric pressure sensor. Capable of using both SPI and I2C communication protocols, Pressure 4 click allows being interfaced with a broad range of various microcontroller units (MCUs). The sensor used on this Click board™ features onboard processing capabilities, such as the IIR filtering, used to filter out abrupt changes of pressure. Low power consumption allows Pressure 4 click to be used in many portable, battery-powered applications.",
+    "description": "Pressure 4 Click is an absolute barometric pressure measurement Click board™, which features a low power consumption, high precision barometric pressure sensor. Capable of using both SPI and I2C communication protocols, Pressure 4 Click allows being interfaced with a broad range of various microcontroller units (MCUs). The sensor used on this Click board™ features onboard processing capabilities, such as the IIR filtering, used to filter out abrupt changes of pressure. Low power consumption allows Pressure 4 Click to be used in many portable, battery-powered applications.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","BMP280"],
+    "hw" : ["Click","BMP280"],
     "category" : ["Click Boards > Sensors > Pressure"] 
 }

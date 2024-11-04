@@ -52,7 +52,7 @@ static uint16_t fingerprint3_chk_sum ( uint8_t pkg_id, uint8_t *pkg_content, uin
  * @param ctx  Click object.
  * @returns 0 - OK, other - ERROR
  *
- * @details This function reads response and stores it in the click object structure.
+ * @details This function reads response and stores it in the Click object structure.
  */
 static uint8_t fingerprint3_read_response ( fingerprint3_t *ctx );
 

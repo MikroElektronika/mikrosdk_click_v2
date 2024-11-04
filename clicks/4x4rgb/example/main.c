@@ -12,8 +12,8 @@
  * 
  * ## Application Task  
  * This is an example which demonstrates the use of 4x4 RGB Click board.
- * This simple example shows all ten numbers in different colors on 4x4 RGB click.
- * The 4x4 RGB click carries a matrix of 16 RGB LEDs and an MCP1826 low dropout regulator.
+ * This simple example shows all ten numbers in different colors on 4x4 RGB Click.
+ * The 4x4 RGB Click carries a matrix of 16 RGB LEDs and an MCP1826 low dropout regulator.
  * These LEDs actually consist of three single colored LEDs ( Red, Green and Blue ) in a single package.
  * Various colors can be reproduced by mixing the intensity of each LED.
  * 

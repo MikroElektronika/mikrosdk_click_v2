@@ -134,7 +134,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void peltier_cfg_setup ( peltier_cfg_t *cfg );
@@ -144,7 +144,7 @@ void peltier_cfg_setup ( peltier_cfg_t *cfg );
  * @param peltier Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 PELTIER_RETVAL peltier_init ( peltier_t *ctx, peltier_cfg_t *cfg );
 
@@ -208,6 +208,6 @@ uint8_t peltier_vin_good_flag ( peltier_t *ctx );
 #endif  // _PELTIER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

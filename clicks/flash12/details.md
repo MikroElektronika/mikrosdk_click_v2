@@ -1,6 +1,6 @@
 
 ---
-# Flash 12 click
+# Flash 12 Click
 
 > Flash 12 Click is a compact add-on board representing a highly reliable memory solution. This board features the AT25EU0041A, a 4Mbit serial flash memory from Renesas, known for its ultra-low power consumption. This Click board™ is specifically designed to address the needs of systems operating at the IoT network's edge, providing an optimal solution for program code storage and execution directly from NOR Flash memory. It stands out for its innovative erase architecture, offering short erase times and low power consumption across operations, including reading, programming, and erasing.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/flash12_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/flash-12-click)
+[Click Product page](https://www.mikroe.com/flash-12-click)
 
 ---
 
@@ -69,7 +69,7 @@ err_t flash12_erase_memory ( flash12_t *ctx, uint8_t erase_cmd, uint32_t mem_add
 
 ## Example Description
 
-> This example demonstrates the use of Flash 12 click board 
+> This example demonstrates the use of Flash 12 Click board 
 > by writing specified data to the memory and reading it back.
 
 **The demo application is composed of two sections :**
@@ -189,7 +189,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

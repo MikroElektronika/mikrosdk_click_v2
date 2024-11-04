@@ -265,7 +265,7 @@ typedef enum
 
 /**
  * @brief GNSS 11 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #gnss11_cfg_t object definition for detailed explanation.
@@ -277,7 +277,7 @@ void gnss11_cfg_setup ( gnss11_cfg_t *cfg );
 /**
  * @brief GNSS 11 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #gnss11_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -292,7 +292,7 @@ err_t gnss11_init ( gnss11_t *ctx, gnss11_cfg_t *cfg );
 /**
  * @brief GNSS 11 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #gnss11_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -308,7 +308,7 @@ void gnss11_drv_interface_selection ( gnss11_cfg_t *cfg, gnss11_drv_t drv_sel );
 /**
  * @brief GNSS 11 default configuration function.
  * @details This function executes a default configuration of GNSS 11
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #gnss11_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

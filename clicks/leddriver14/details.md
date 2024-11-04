@@ -1,6 +1,6 @@
 
 ---
-# LED Driver 14 click
+# LED Driver 14 Click
 
 > LED Driver 14 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the BD18337EFV-M, a reliable four-channel constant current LED driver from Rohm Semiconductor. It is powered by an external power supply in the range of 5.5V to 20V, providing a maximum output current of 150mA per channel. The BD18337EFV-M also comes with the possibility for up to 3 LEDs in series on its output OUTx pin and built-in energy sharing control, selectable operational mode, and multiple built-in protection functions that protect the circuit during abnormalities. This Click board™ is ideal for LED rear lamps (turn/stop), fog lamps, and turn signals for automotive applications.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/leddriver14_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/led-driver-14-click)
+[Click Product page](https://www.mikroe.com/led-driver-14-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t leddriver14_set_duty_cycle ( leddriver14_t *ctx, float duty_cycle );
 
 ## Example Description
 
-> This example demonstrates the use of LED Driver 14 click board by controlling the brightness of LEDs by changing the PWM Duty Cycle.
+> This example demonstrates the use of LED Driver 14 Click board by controlling the brightness of LEDs by changing the PWM Duty Cycle.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -162,7 +162,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,8 +1,8 @@
 {
     "name": "Spectral 3 Click",
-    "description": "Spectral 3 click is a multispectral sensing device, which uses the state-of-the-art sensor IC for a very accurate near-IR (NIR) sensing.",
+    "description": "Spectral 3 Click is a multispectral sensing device, which uses the state-of-the-art sensor IC for a very accurate near-IR (NIR) sensing.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","AT25SF041"],
+    "hw" : ["Click","AT25SF041"],
     "category" : ["Optical"] 
 }

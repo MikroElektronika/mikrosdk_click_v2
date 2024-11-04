@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# H-Bridge 9 click
+# H-Bridge 9 Click
 
 > H-Bridge 9 Click is a compact add-on board that contains six MOSFET half-bridge outputs. This board features the L99UDL01, a six-channel half-bridge driver monolithic integrated circuit that is PWM configurable and current regulated from STMicroelectronics.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/hbridge9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/h-bridge-9-click)
+[Click Product page](https://www.mikroe.com/h-bridge-9-click)
 
 ---
 
@@ -70,13 +70,13 @@ void hbridge9_send_actuation_pulse ( hbridge9_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of H-Bridge 9 click board.
+> This example demonstrates the use of H-Bridge 9 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which will set the OUT1 to LOW, OUT2 to HIGH polarity, and the runtime to 1000ms.
+> Initializes the driver and performs the Click default configuration which will set the OUT1 to LOW, OUT2 to HIGH polarity, and the runtime to 1000ms.
 
 ```c
 
@@ -158,7 +158,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

@@ -3,7 +3,7 @@
  * \brief Brushless3 Click example
  * 
  * # Description
- * This click has three-phase sensorless motor driver and 
+ * This Click has three-phase sensorless motor driver and 
  * with an external power supply it drives a brushless DC motor.
  *
  * The demo application is composed of two sections :
@@ -14,7 +14,7 @@
  * ## Application Task  
  * This is an example which demonstrates the use of Brushless 3 Click board.
  * Read and display float motor frequency value from the DRV10983 sensorless 
- * BLDC motor driver on Brushless 3 click board. Results are being sent to 
+ * BLDC motor driver on Brushless 3 Click board. Results are being sent to 
  * the Usart Terminal where you can track their changes. 
  * 
  * 

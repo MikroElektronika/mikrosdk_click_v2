@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LR 9 click
+# LR 9 Click
 
 > LR 9 Click is a compact add-on board designed for ultra-long-range spread spectrum communication tasks within the LPWAN domain. This board is based on the RA-08, a LoRaWAN module from Ai-Thinker Technology, featuring the ASR6601 system-on-chip (SoC) that combines RF transceivers, modems, and a 32-bit RISC microcontroller (MCU). This module excels with its support for LoRa and (G)FSK modulation, a frequency range of 410MHz to 525MHz, and embedded storage of 128KB FLASH and 16KB SRAM, ensuring robust and versatile communication capabilities. Moreover, it's equipped with UART and I2C interfaces for easy programming and integration and an SMA antenna connector for enhanced connectivity.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/lr9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lr-9-click)
+[Click Product page](https://www.mikroe.com/lr-9-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t lr9_write_command ( lr9_t *ctx, uint8_t *command, uint8_t *param );
 
 ## Example Description
 
-> This example demonstrates the use of LR 9 click board by processing
+> This example demonstrates the use of LR 9 Click board by processing
 > the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
@@ -161,7 +161,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

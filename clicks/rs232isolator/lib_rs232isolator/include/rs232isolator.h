@@ -162,7 +162,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void rs232isolator_cfg_setup ( rs232isolator_cfg_t *cfg );
@@ -172,7 +172,7 @@ void rs232isolator_cfg_setup ( rs232isolator_cfg_t *cfg );
  * @param rs232isolator Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 RS232ISOLATOR_RETVAL rs232isolator_init ( rs232isolator_t *ctx, rs232isolator_cfg_t *cfg );
 
@@ -226,6 +226,6 @@ void rs232isolator_send_command ( rs232isolator_t *ctx, char *command );
 #endif  // _RS232ISOLATOR_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

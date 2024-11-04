@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes click driver.
+ * Initializes Click driver.
  * 
  * ## Application Task  
  * Writes 10 bytes of buffer data in memory with start address 0x0001. Then reads

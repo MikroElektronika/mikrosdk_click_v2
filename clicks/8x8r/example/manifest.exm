@@ -1,8 +1,8 @@
 {
     "name": "8x8 R Click",
-    "description": "8x8 R click is a 64 LED matrix display Click board™, composed of SMD LEDs organized in 8 rows by 8 columns. It has a digital brightness control in 16 steps, it can control every LED in the display matrix independently, it blanks the display on power up to eliminate glitches and it requires a single resistor to control the current through all the LEDs at once, which simplifies the design. 8x8 R click uses a fast SPI communication protocol, allowing fast display response and no lag.8x8 R Click is an add-on board in mikroBUS form factor.",
+    "description": "8x8 R Click is a 64 LED matrix display Click board™, composed of SMD LEDs organized in 8 rows by 8 columns. It has a digital brightness control in 16 steps, it can control every LED in the display matrix independently, it blanks the display on power up to eliminate glitches and it requires a single resistor to control the current through all the LEDs at once, which simplifies the design. 8x8 R Click uses a fast SPI communication protocol, allowing fast display response and no lag.8x8 R Click is an add-on board in mikroBUS form factor.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MAX7219"],
+    "hw" : ["Click","MAX7219"],
     "category" : ["LED matrix"]
 }

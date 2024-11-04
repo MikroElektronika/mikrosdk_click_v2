@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  * 
  * ## Application Task  
  * Reads the temperature and huminidy and logs results to the USB UART every 500 ms.

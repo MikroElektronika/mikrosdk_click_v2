@@ -153,7 +153,7 @@ typedef enum
 
 /**
  * @brief I2C Isolator 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #i2cisolator3_cfg_t object definition for detailed explanation.
@@ -165,7 +165,7 @@ void i2cisolator3_cfg_setup ( i2cisolator3_cfg_t *cfg );
 /**
  * @brief I2C Isolator 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #i2cisolator3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -215,7 +215,7 @@ err_t i2cisolator3_generic_read ( i2cisolator3_t *ctx, uint8_t reg, uint8_t *rx_
 /**
  * @brief I2C Isolator 3 send command function.
  * @details The function sends the desired command to a remote device wired with CPC5902, 
- * Optically Isolated I2C Bus Repeater on I2C Isolator 3 click board.
+ * Optically Isolated I2C Bus Repeater on I2C Isolator 3 Click board.
  * @param[in] ctx : Click context object.
  * See #i2cisolator3_t object definition for detailed explanation.
  * @param[in] command : 8-bit commands instruction.
@@ -227,7 +227,7 @@ void i2cisolator3_send_cmd ( i2cisolator3_t *ctx, uint8_t command );
 /**
  * @brief I2C Isolator 3 write the byte of data function.
  * @details The function writes the byte of data to the targeted 8-bit register address of the remote device
- * wired with CPC5902, Optically Isolated I2C Bus Repeater on I2C Isolator 3 click board.
+ * wired with CPC5902, Optically Isolated I2C Bus Repeater on I2C Isolator 3 Click board.
  * @param[in] ctx : Click context object.
  * See #i2cisolator3_t object definition for detailed explanation.
  * @param[in] reg : 8-bit register address.
@@ -240,7 +240,7 @@ void i2cisolator3_write_byte ( i2cisolator3_t *ctx, uint8_t reg, uint8_t tx_data
 /**
  * @brief I2C Isolator 3 read the byte of data function.
  * @details The function read a the byte of data from the targeted 8-bit register address of the remote device
- * wired with CPC5902, Optically Isolated I2C Bus Repeater on I2C Isolator 3 click board.
+ * wired with CPC5902, Optically Isolated I2C Bus Repeater on I2C Isolator 3 Click board.
  * @param[in] ctx : Click context object.
  * See #i2cisolator3_t object definition for detailed explanation.
  * @param[in] reg : 8-bit register address.
@@ -252,7 +252,7 @@ uint8_t i2cisolator3_read_byte ( i2cisolator3_t *ctx, uint8_t reg );
 /**
  * @brief I2C Isolator 3 burst write function.
  * @details The function writes sequential data starting to the targeted 8-bit register address
- * of the remote device wired with CPC5902, Optically Isolated I2C Bus Repeater on I2C Isolator 3 click board.
+ * of the remote device wired with CPC5902, Optically Isolated I2C Bus Repeater on I2C Isolator 3 Click board.
  * @param[in] ctx : Click context object.
  * See #i2cisolator3_t object definition for detailed explanation.
  * @param[in] reg : 8-bit register address.
@@ -267,7 +267,7 @@ err_t i2cisolator3_burst_write ( i2cisolator3_t *ctx, uint8_t reg, uint8_t *p_tx
 /**
  * @brief I2C Isolator 3 burst read function.
  * @details The function read sequential data starting from the targeted 8-bit register address
- * of the remote device wired with CPC5902, Optically Isolated I2C Bus Repeater on I2C Isolator 3 click board.
+ * of the remote device wired with CPC5902, Optically Isolated I2C Bus Repeater on I2C Isolator 3 Click board.
  * @param[in] ctx : Click context object.
  * See #i2cisolator3_t object definition for detailed explanation.
  * @param[in] reg : 8-bit memory address.
@@ -282,7 +282,7 @@ err_t i2cisolator3_burst_read ( i2cisolator3_t *ctx, uint8_t reg, uint8_t *p_rx_
 /**
  * @brief I2C Isolator 3 advanced write function.
  * @details The function advanced write, writes sequential data starting of the targeted ( selectable ) register address
- * of the remote device wired with CPC5902, Optically Isolated I2C Bus Repeater on I2C Isolator 3 click board.
+ * of the remote device wired with CPC5902, Optically Isolated I2C Bus Repeater on I2C Isolator 3 Click board.
  * @param[in] ctx : Click context object.
  * See #i2cisolator3_t object definition for detailed explanation.
  * @param[in] p_reg : pointer to the memory address.
@@ -298,7 +298,7 @@ err_t i2cisolator3_adv_write ( i2cisolator3_t *ctx, uint8_t *p_reg, uint8_t n_re
 /**
  * @brief I2C Isolator 3 advanced read function.
  * @details The function advanced read, read sequential data starting from the targeted ( selectable ) register address
- * of the remote device wired with CPC5902, Optically Isolated I2C Bus Repeater on I2C Isolator 3 click board.
+ * of the remote device wired with CPC5902, Optically Isolated I2C Bus Repeater on I2C Isolator 3 Click board.
  * @param[in] ctx : Click context object.
  * See #i2cisolator3_t object definition for detailed explanation.
  * @param[in] p_reg : pointer to the memory address.

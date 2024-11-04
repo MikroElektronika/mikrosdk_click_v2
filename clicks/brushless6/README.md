@@ -2,15 +2,15 @@
  
 
 ---
-# Brushless 6 click
+# Brushless 6 Click
 
-Brushless 6 click is designed to drive a three-phase sensorless, brushless motor, also known as the BLDC motor.
+Brushless 6 Click is designed to drive a three-phase sensorless, brushless motor, also known as the BLDC motor.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/brushless6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/brushless-6-click)
+[Click Product page](https://www.mikroe.com/brushless-6-click)
 
 ---
 
@@ -66,13 +66,13 @@ void brushless6_set_duty_cycle ( brushless6_t *ctx, float duty_cycle );
 
 ## Examples Description
 
-> Brushless 6 click is designed to drive a three-phase sensorless.
+> Brushless 6 Click is designed to drive a three-phase sensorless.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> This function initializes and configures the logger and the click board.
+> This function initializes and configures the logger and the Click board.
 
 ```c
 
@@ -121,7 +121,7 @@ void application_task ( void )
 
 ### NOTE
 
-> The maximal PWM Clock frequency for this click board is 500 Hz. 
+> The maximal PWM Clock frequency for this Click board is 500 Hz. 
 > So, the user will need to decrease the MCU's main clock frequency in MCU Settings in order to get up-to 500 Hz PWM clock frequency.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
@@ -135,7 +135,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

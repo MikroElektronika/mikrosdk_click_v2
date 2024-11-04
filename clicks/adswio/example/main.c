@@ -3,7 +3,7 @@
  * \brief AdSwio Click example
  * 
  * # Description
- * This click provides a fully integrated single chip solution for input and output operation. 
+ * This Click provides a fully integrated single chip solution for input and output operation. 
  * The AD-SWIO Click contains four 13-bit DACs, one per chanal, and 16-bit Σ-∆ ADC. 
  * These options give a lot of flexibility in choosing functionality for analog output, 
  * analog input, digital input, resistance temperature detector (RTD), and thermocouple 
@@ -12,7 +12,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Performs a hardware reset of the click board and
+ * Performs a hardware reset of the Click board and
  * executes a default configuration that enables channel A and sets it to measure voltage
  * input in the range from 0V to 10V, with 4800 SPS.
  * 
@@ -22,7 +22,7 @@
  * 
  * ## Additional Functions
  *
- * - void application_default_handler ( uint8_t *err_msg ) - Sends an error report messages from click
+ * - void application_default_handler ( uint8_t *err_msg ) - Sends an error report messages from Click
  * driver to initialized console module. It must be set using adswio2_set_handler function.
  *
  * 
@@ -94,7 +94,7 @@ void application_init ( void )
     adswio_res  = DUMMY;
     adswio_err  = ADSWIO_ERR_STATUS_OK;
 
-    log_printf( &logger, " AD-SWIO click initialization done \r\n");
+    log_printf( &logger, " AD-SWIO Click initialization done \r\n");
     log_printf( &logger, "************************************\r\n");
 }
 

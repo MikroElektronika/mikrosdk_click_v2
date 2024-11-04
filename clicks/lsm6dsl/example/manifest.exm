@@ -1,8 +1,8 @@
 {
     "name": "LSM6DSL Click",
-    "description": "LSM6DSL click measures linear and angular velocity with six degrees of freedom. It carries the LSM6DSL high-performance 3-axis digital accelerometer and 3-axis digital gyroscope. ",
+    "description": "LSM6DSL Click measures linear and angular velocity with six degrees of freedom. It carries the LSM6DSL high-performance 3-axis digital accelerometer and 3-axis digital gyroscope. ",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","LSM6DSL"],
+    "hw" : ["Click","LSM6DSL"],
     "category" : ["Motion"] 
 }

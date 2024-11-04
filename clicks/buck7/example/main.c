@@ -3,7 +3,7 @@
  * \brief BUCK7 Click example
  * 
  * # Description
- * This demo application controls the voltage at the output using the BUCK 7 click.
+ * This demo application controls the voltage at the output using the BUCK 7 Click.
  *
  * The demo application is composed of two sections :
  * 

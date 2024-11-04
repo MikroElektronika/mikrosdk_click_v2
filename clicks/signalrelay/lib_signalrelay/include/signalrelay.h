@@ -148,7 +148,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void signalrelay_cfg_setup ( signalrelay_cfg_t *cfg );
@@ -158,7 +158,7 @@ void signalrelay_cfg_setup ( signalrelay_cfg_t *cfg );
  * @param signalrelay Click object.
  * @param cfg Click configuration structure.
  *
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 SIGNALRELAY_RETVAL signalrelay_init ( signalrelay_t *ctx, signalrelay_cfg_t *cfg );
 
@@ -167,7 +167,7 @@ SIGNALRELAY_RETVAL signalrelay_init ( signalrelay_t *ctx, signalrelay_cfg_t *cfg
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for SignalRelay click.
+ * @description This function executes default configuration for SignalRelay Click.
  * @note All relays are initially set to OFF state.
  */
 void signalrelay_default_cfg ( signalrelay_t *ctx );
@@ -188,6 +188,6 @@ void signalrelay_relay_state( signalrelay_t *ctx, uint8_t relay, uint8_t state )
 #endif  // _SIGNALRELAY_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

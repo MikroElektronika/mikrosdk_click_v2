@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Step Down 10 click
+# Step Down 10 Click
 
 > Step Down 10 Click is a compact add-on board that converts higher voltages into a lower voltage level. This board features the TPSM63610, a high-density synchronous buck DC/DC power module with enhanced HotRodTM from Texas Instruments. 
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/stepdown10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/step-down-10-click)
+[Click Product page](https://www.mikroe.com/step-down-10-click)
 
 ---
 
@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

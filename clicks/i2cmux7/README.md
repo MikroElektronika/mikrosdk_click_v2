@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# I2C MUX 7 click
+# I2C MUX 7 Click
 
 > I2C MUX 7 Click is a compact add-on board representing a bidirectional selector dedicated to applications with I2C slave address conflicts. This board features the PI4MSD5V9547, an octal bidirectional translating multiplexer controlled by the I2C-bus from Texas Instruments. Only one SCL/SDA channel can be selected at a time, determined by the contents of the programmable control register. The board powers up with Channel 0 connected, allowing immediate communication between the Master and downstream devices on that channel.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/i2cmux7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/i2c-mux-7-click)
+[Click Product page](https://www.mikroe.com/i2c-mux-7-click)
 
 ---
 
@@ -70,8 +70,8 @@ err_t i2cmux7_generic_read ( i2cmux7_t *ctx, uint8_t reg, uint8_t *rx_buf, uint8
 
 ## Example Description
 
-> This example demonstrates the use of I2C MUX 7 click board by reading the
-device ID of a 6DOF IMU 11 and Compass 3 click boards connected to the channels 0 and 7 respectfully.
+> This example demonstrates the use of I2C MUX 7 Click board by reading the
+device ID of a 6DOF IMU 11 and Compass 3 Click boards connected to the channels 0 and 7 respectfully.
 
 **The demo application is composed of two sections :**
 
@@ -117,9 +117,9 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads the device ID of the connected click boards.
-Channel 0 : 6DOF IMU 11 click [slave address: 0x0E; reg: 0x00; id: 0x2D],
-Channel 7 : Compass 3 click   [slave address: 0x30; reg: 0x2F; id: 0x0C].
+> Reads the device ID of the connected Click boards.
+Channel 0 : 6DOF IMU 11 Click [slave address: 0x0E; reg: 0x00; id: 0x2D],
+Channel 7 : Compass 3 Click   [slave address: 0x30; reg: 0x2F; id: 0x0C].
 All data is being logged on the USB UART where you can check the device ID.
 
 ```c
@@ -164,7 +164,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

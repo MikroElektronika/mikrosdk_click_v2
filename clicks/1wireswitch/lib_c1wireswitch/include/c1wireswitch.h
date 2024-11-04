@@ -210,7 +210,7 @@ typedef enum
 
 /**
  * @brief 1-Wire Switch configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #c1wireswitch_cfg_t object definition for detailed explanation.
@@ -222,7 +222,7 @@ void c1wireswitch_cfg_setup ( c1wireswitch_cfg_t *cfg );
 /**
  * @brief 1-Wire Switch driver interface setup function.
  * @details This function sets a communication GPIO pin which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #c1wireswitch_cfg_t object definition for detailed explanation.
  * @param[in] gpio_sel : GPIO pin selection.
@@ -238,7 +238,7 @@ void c1wireswitch_gpio_selection ( c1wireswitch_cfg_t *cfg, c1wireswitch_gpio_se
 /**
  * @brief 1-Wire Switch initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #c1wireswitch_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -253,7 +253,7 @@ err_t c1wireswitch_init ( c1wireswitch_t *ctx, c1wireswitch_cfg_t *cfg );
 /**
  * @brief 1-Wire Switch default configuration function.
  * @details This function executes a default configuration of 1-Wire Switch
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #c1wireswitch_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

@@ -1,6 +1,6 @@
 
 ---
-# RF Switch click
+# RF Switch Click
 
 > RF Switch Click is a Click board™ equipped with the MASWSS0115, a GaAs PHEMT MMIC single-pole, double-throw (SPDT) switch developed by Macom for switching between small signal components such as filter banks, single-band LNAs, converters, etc. The MASWSS0115 is ideally suited for applications where a very small size and low cost are required.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/rfswitch_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rf-switch-click)
+[Click Product page](https://www.mikroe.com/rf-switch-click)
 
 ---
 
@@ -173,7 +173,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,6 +1,6 @@
 
 ---
-# DAC 11 click
+# DAC 11 Click
 
 > DAC 11 Click is a compact add-on board that contains a highly accurate digital-to-analog converter. This board features the DAC128S085, a general-purpose OCTAL 12-bit analog voltage-output DAC from Texas Instruments.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dac11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dac-11-click)
+[Click Product page](https://www.mikroe.com/dac-11-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t dac11_set_specific_ch_voltage( dac11_t *ctx, uint8_t channel, float vref, 
 
 ## Example Description
 
-> This example demonstrates the use of DAC 11 click board.
+> This example demonstrates the use of DAC 11 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and executes the click default configuration which sets the WRM mode and disables all outputs.
+> Initializes the driver and executes the Click default configuration which sets the WRM mode and disables all outputs.
 
 ```c
 
@@ -158,7 +158,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

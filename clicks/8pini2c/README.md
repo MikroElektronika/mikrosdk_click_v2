@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# 8-pin I2C click
+# 8-pin I2C Click
 
 8-pin I2C Click is a compact add-on board that represents a breakout board that simplifies the connection of add-on boards with 8 pin Female Connector to mikroBUS™ socket.
 
@@ -10,7 +10,7 @@
 </p>
 
 
-[click Product page](https://www.mikroe.com/8-pin-i2c-click)
+[Click Product page](https://www.mikroe.com/8-pin-i2c-click)
 
 ---
 
@@ -53,13 +53,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This demo example reads temperature detected by Surface temp click board.
+> This demo example reads temperature detected by Surface temp Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes the driver and configures a Surface temp click board.
+> Initializes the driver and configures a Surface temp Click board.
 
 ```c
 
@@ -105,7 +105,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads the temperature detected by Surface temp click board and logs it on the USB UART each second.
+> Reads the temperature detected by Surface temp Click board and logs it on the USB UART each second.
 
 ```c
 
@@ -122,7 +122,7 @@ void application_task ( void )
 
 ## Note
 
-> In order to run this example successfully, a Surface temp click board needs to be connected properly to an 8-pin I2C click board.
+> In order to run this example successfully, a Surface temp Click board needs to be connected properly to an 8-pin I2C Click board.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
@@ -135,7 +135,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -10,7 +10,7 @@
     ],
     "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "MIC 2 click",
+    "display_name": "MIC 2 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.mic2",
     "product_link": "https://www.mikroe.com/mic-2-click",
-    "short_description": "MIC 2 click is equipped with a small electret microphone, accompanied by a suitable pre-amplifying circuit. The small electret microphone is not capable of providing sufficient line-level output; therefore, the pre-amp has to be used",
+    "short_description": "MIC 2 Click is equipped with a small electret microphone, accompanied by a suitable pre-amplifying circuit. The small electret microphone is not capable of providing sufficient line-level output; therefore, the pre-amp has to be used",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2736
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Mic2",
     "subdir_name": "lib_mic2"
 }
+
 
 
 

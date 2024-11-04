@@ -3,7 +3,7 @@
  * \brief Rtc9 Click example
  * 
  * # Description
- * This example demonstrates the use of RTC 9 click board.
+ * This example demonstrates the use of RTC 9 Click board.
  *
  * The demo application is composed of two sections :
  * 

@@ -1,0 +1,8 @@
+{
+    "name": "RGB Ring Click",
+    "description": "RGB Ring Click is a compact add-on board designed for dynamic and colorful lighting applications. This board features eight RGB LEDs (WL-ICLED 1312020030000) from Würth Elektronik, incorporating integrated circuits to control color mixing precisely. This board supports individual control of each LED's red, green, and blue components with single-wire communication enabling daisy-chaining. It also features the innovative Click Snap function, allowing the main LED area to be detached for flexible use, and includes a button for interactive functionality.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","gcc-riscv","clang-riscv"],
+    "hw" : ["Click","1312020030000"],
+    "category" : ["Click Boards > Display & LED > LED matrix"]
+}

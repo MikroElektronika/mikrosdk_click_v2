@@ -208,7 +208,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void flash2_cfg_setup ( flash2_cfg_t *cfg );
@@ -219,7 +219,7 @@ void flash2_cfg_setup ( flash2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 FLASH2_RETVAL flash2_init ( flash2_t *ctx, flash2_cfg_t *cfg );
 
@@ -242,9 +242,9 @@ void flash2_generic_transfer ( flash2_t *ctx, uint8_t *wr_buf,
  *
  * @param ctx               Click object.
  * @returns                 0 - Success, else - failure.
- * @description Checks if click is busy reading/writing
+ * @description Checks if Click is busy reading/writing
  *
- * @note Used to check when click is ready to be written to / read from.
+ * @note Used to check when Click is ready to be written to / read from.
  *
  */
 uint8_t flash2_busy( flash2_t *ctx );
@@ -266,7 +266,7 @@ uint8_t flash2_get_status_reg( flash2_t *ctx );
  *
  * @param ctx             Click object.
  * @returns               0-erase not suspended, 1-erase suspended.
- * @description Checks if click erase is suspended
+ * @description Checks if Click erase is suspended
  *
  */
 uint8_t flash2_erase_status( flash2_t *ctx );
@@ -275,7 +275,7 @@ uint8_t flash2_erase_status( flash2_t *ctx );
  * @brief  Flash 2 Write Status 
  *
  * @param ctx             Click object.
- * @description Checks if click write is suspended
+ * @description Checks if Click write is suspended
  *
  * @returns 0 - write not suspended
  * @returns 1 - write suspended
@@ -287,7 +287,7 @@ uint8_t flash2_write_status( flash2_t *ctx );
  * @brief  Flash 2 Program Status 
  *
  * @param ctx             Click object.
- * @description Checks if click write-program is suspended
+ * @description Checks if Click write-program is suspended
  *
  * @returns 0 - write program not suspended
  * @returns 1 - write program suspended
@@ -299,7 +299,7 @@ uint8_t flash2_program_status( flash2_t *ctx );
  * @brief  Flash 2 Protect Status 
  *
  * @param ctx             Click object.
- * @description Checks if click write-protect lock-down is suspended
+ * @description Checks if Click write-protect lock-down is suspended
  *
  * @returns 0 - write-protect not suspended
  * @returns 1 - write protect suspended
@@ -322,7 +322,7 @@ void flash2_lock_security_id( flash2_t *ctx );
  * @brief  Flash 2 Security Status 
  *
  * @param ctx             Click object.
- * @description Checks if click security ID is locked
+ * @description Checks if Click security ID is locked
  *
  * @returns 0 - security ID not locked
  * @returns 1 - security ID locked
@@ -1043,6 +1043,6 @@ void flash2_write_enable( flash2_t *ctx );
 #endif  // _FLASH2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

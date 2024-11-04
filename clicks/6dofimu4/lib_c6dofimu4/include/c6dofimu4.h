@@ -398,7 +398,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c6dofimu4_cfg_setup ( c6dofimu4_cfg_t *cfg );
@@ -409,7 +409,7 @@ void c6dofimu4_cfg_setup ( c6dofimu4_cfg_t *cfg );
  * @param ctx          Click object.
  * @param cfg          Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 C6DOFIMU4_RETVAL c6dofimu4_init ( c6dofimu4_t *ctx, c6dofimu4_cfg_t *cfg );
 
@@ -434,7 +434,7 @@ C6DOFIMU4_RETVAL c6dofimu4_init ( c6dofimu4_t *ctx, c6dofimu4_cfg_t *cfg );
  *             -C6DOFIMU4_ACCEL_FS_SEL_16_G
  * </pre>
  *
- * @description This function executes default configuration for c6DOF IMU 4 click.
+ * @description This function executes default configuration for c6DOF IMU 4 Click.
  */
 void c6dofimu4_default_cfg ( c6dofimu4_t *ctx );
 
@@ -616,6 +616,6 @@ uint8_t c6dofimu4_set_fsr ( c6dofimu4_t *ctx, uint8_t gyro_resol, uint8_t accel_
 #endif  // _C6DOFIMU4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

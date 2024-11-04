@@ -3,15 +3,15 @@
  
 
 ---
-# Boost 2 click
+# Boost 2 Click
 
-BOOST 2 click is a DC-DC step-up (boost) regulator that has a fixed 5V output, which can be obtained from any low voltage input - such as NiCd, NiMH or one cell Li-Po/Li-Ion batteries.
+BOOST 2 Click is a DC-DC step-up (boost) regulator that has a fixed 5V output, which can be obtained from any low voltage input - such as NiCd, NiMH or one cell Li-Po/Li-Ion batteries.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/boost2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/boost-2-click)
+[Click Product page](https://www.mikroe.com/boost-2-click)
 
 ---
 
@@ -60,7 +60,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes click driver.
+> Initializes Click driver.
 
 ```c
 
@@ -93,15 +93,15 @@ void application_init ( void )
 
 ### Application Task
 
-> Demonstrates the use of the click drivers function. It
-shows how to enable or disable click operation, and how to check if supplied
+> Demonstrates the use of the Click drivers function. It
+shows how to enable or disable Click operation, and how to check if supplied
 voltage is good.
 
 ```c
 
 void application_task ( void )
 {
-    log_printf( &logger, "Enabling click operation... \r\n" );
+    log_printf( &logger, "Enabling Click operation... \r\n" );
     boost2_set_en_pin( &boost2, 1 );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
@@ -121,7 +121,7 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
     
-    log_printf( &logger, "Disabling click operation... \r\n" );
+    log_printf( &logger, "Disabling Click operation... \r\n" );
     boost2_set_en_pin( &boost2, 0 );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
@@ -143,7 +143,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

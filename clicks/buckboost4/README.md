@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Buck-Boost 4 click
+# Buck-Boost 4 Click
 
 > Buck-Boost 4 Click is a compact add-on board that contains a buck-boost DC/DC converter with four integrated MOSFETs. This board features the TPS55289, a buck-boost converter from Texas Instruments. It can deliver on its output voltages from 0.8 up to 22V, from the input voltage in a range of 3 up to 30V. The output voltage can be programmed in 10mV steps.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/buckboost4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/buck-boost-4-click)
+[Click Product page](https://www.mikroe.com/buck-boost-4-click)
 
 ---
 
@@ -157,7 +157,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# HAPTIC 2 click
+# HAPTIC 2 Click
 
 HAPTIC 2 Click is a compact add-on board that contains a linear vibration driver. This board features the LC898302AXA, a motor driver dedicated to LRA and ERM applications from ON Semiconductor. Controlled by only one pin, it allows crisp vibration thanks to automatic braking and over-driving feature and ignores the deviation of resonance frequency thanks to auto-tuning function. The original driving waveform will enable you to reduce power consumption, and it is helpful to maintain battery lifetime. 
 
@@ -9,7 +9,7 @@ HAPTIC 2 Click is a compact add-on board that contains a linear vibration driver
   <img src="https://download.mikroe.com/images/click_for_ide/haptic2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/haptic-2-click)
+[Click Product page](https://www.mikroe.com/haptic-2-click)
 
 ---
 
@@ -72,7 +72,7 @@ err_t haptic2_pwm_start ( haptic2_t *ctx );
 
 ## Examples Description
 
-This app shows some of the functions that Haptic 2 click has.
+This app shows some of the functions that Haptic 2 Click has.
 
 **The demo application is composed of two sections :**
 
@@ -165,7 +165,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

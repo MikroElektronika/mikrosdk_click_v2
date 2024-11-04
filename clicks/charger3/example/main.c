@@ -3,7 +3,7 @@
  * @brief Charger3 Click example
  *
  * # Description
- * This example demonstrates the utilization of Charger 3 click.
+ * This example demonstrates the utilization of Charger 3 Click.
  *
  * The demo application is composed of two sections :
  *

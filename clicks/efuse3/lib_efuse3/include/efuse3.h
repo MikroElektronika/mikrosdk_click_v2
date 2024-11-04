@@ -199,7 +199,7 @@ typedef enum
 
 /**
  * @brief e Fuse 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #efuse3_cfg_t object definition for detailed explanation.
@@ -211,7 +211,7 @@ void efuse3_cfg_setup ( efuse3_cfg_t *cfg );
 /**
  * @brief e Fuse 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #efuse3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -227,7 +227,7 @@ err_t efuse3_init ( efuse3_t *ctx, efuse3_cfg_t *cfg );
 /**
  * @brief e Fuse 3 default configuration function.
  * @details This function executes a default configuration of e Fuse 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #efuse3_t object definition for detailed explanation.
  * @return Nothing.
@@ -256,7 +256,7 @@ err_t efuse3_generic_read ( efuse3_t *ctx, uint8_t *data_out, uint8_t len );
  * @brief e Fuse 3 get monitor output function.
  * @details This function reads and monitoring an output voltage 
  * of the NIS6150 +5 Volt Electronic eFuse 
- * on the e Fuse 3 click board. 
+ * on the e Fuse 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #efuse3_t object definition for detailed explanation.
  * @param[out] voltage  : Output volatge [ V ].
@@ -272,7 +272,7 @@ err_t efuse3_get_monitor_output ( efuse3_t *ctx, float *voltage, uint8_t *overfl
 /**
  * @brief e Fuse 3 get current function.
  * @details This function reads current of the NIS6150 +5 Volt Electronic eFuse 
- * on the e Fuse 3 click board. 
+ * on the e Fuse 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #efuse3_t object definition for detailed explanation.
  * @param[out] current  : Current [ V ].
@@ -287,7 +287,7 @@ err_t efuse3_get_current ( efuse3_t *ctx, float *current );
 /**
  * @brief e Fuse 3 enable device function.
  * @details This function enable the the NIS6150 +5 Volt Electronic eFuse 
- * on the e Fuse 3 click board. 
+ * on the e Fuse 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #efuse3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -301,7 +301,7 @@ void efuse3_enable_device ( efuse3_t *ctx );
 /**
  * @brief e Fuse 3 reset function.
  * @details This function reset the the NIS6150 +5 Volt Electronic eFuse 
- * on the e Fuse 3 click board. 
+ * on the e Fuse 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #efuse3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -315,7 +315,7 @@ void efuse3_reset ( efuse3_t *ctx );
 /**
  * @brief e Fuse 3 disable device function.
  * @details This function idsble the the NIS6150 +5 Volt Electronic eFuse 
- * on the e Fuse 3 click board. 
+ * on the e Fuse 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #efuse3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -330,7 +330,7 @@ void efuse3_disable_device ( efuse3_t *ctx );
  * @brief e Fuse 3 set overvoltage clamp function.
  * @details This function set overvoltage clamp to be set at either a 5.7 V or 6.5 V minimum 
  * of the NIS6150 +5 Volt Electronic eFuse 
- * on the e Fuse 3 click board. 
+ * on the e Fuse 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #efuse3_t object definition for detailed explanation.
  * @param[in] vc_sel : 
@@ -348,7 +348,7 @@ void efuse3_set_overvoltage_clamp ( efuse3_t *ctx, uint8_t vc_sel );
  * @brief e Fuse 3 get flag function.
  * @details This function get flag state
  * of the NIS6150 +5 Volt Electronic eFuse 
- * on the e Fuse 3 click board. 
+ * on the e Fuse 3 Click board. 
  * @param[in] ctx : Click context object.
  * See #efuse3_t object definition for detailed explanation.
  * @return @li @c 0 ( EFUSE3_FLAG_NORMAL_OPERATION )- Normal operation,

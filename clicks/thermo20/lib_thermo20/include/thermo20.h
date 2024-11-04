@@ -164,7 +164,7 @@ typedef enum
 
 /**
  * @brief Thermo 20 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #thermo20_cfg_t object definition for detailed explanation.
@@ -176,7 +176,7 @@ void thermo20_cfg_setup ( thermo20_cfg_t *cfg );
 /**
  * @brief Thermo 20 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #thermo20_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -192,7 +192,7 @@ err_t thermo20_init ( thermo20_t *ctx, thermo20_cfg_t *cfg );
 /**
  * @brief Thermo 20 default configuration function.
  * @details This function executes a default configuration of Thermo 20
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #thermo20_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -241,7 +241,7 @@ err_t thermo20_generic_read ( thermo20_t *ctx, uint8_t reg, uint8_t *rx_buf, uin
 /**
  * @brief Send command function.
  * @details The function send the desired command
- * to the TSYS03 Digital Temperature Sensor on the Thermo 20 click board.
+ * to the TSYS03 Digital Temperature Sensor on the Thermo 20 Click board.
  * @param[in] ctx : Click context object.
  * See #thermo20_t object definition for detailed explanation.
  * @param[in] cmd Commands byte.
@@ -255,7 +255,7 @@ err_t thermo20_set_cmd ( thermo20_t *ctx, uint8_t cmd );
 /**
  * @brief Soft reset function.
  * @details The function is performed by a software reset
- * of the TSYS03 Digital Temperature Sensor on the Thermo 20 click board.
+ * of the TSYS03 Digital Temperature Sensor on the Thermo 20 Click board.
  * @param[in] ctx : Click context object.
  * See #thermo20_t object definition for detailed explanation.
  * @return Nothing.
@@ -265,7 +265,7 @@ void thermo20_soft_reset ( thermo20_t *ctx );
 /**
  * @brief Start conversion function.
  * @details The function set conversion a single temperature conversion
- * of the TSYS03 Digital Temperature Sensor on the Thermo 20 click board.
+ * of the TSYS03 Digital Temperature Sensor on the Thermo 20 Click board.
  * @param[in] ctx : Click context object.
  * See #thermo20_t object definition for detailed explanation.
  * @return Nothing.
@@ -277,7 +277,7 @@ void thermo20_start_conversion ( thermo20_t *ctx );
 /**
  * @brief Read ADC data function.
  * @details The function 16-bit temperature reprinting ADC result
- * of the TSYS03 Digital Temperature Sensor on the Thermo 20 click board.
+ * of the TSYS03 Digital Temperature Sensor on the Thermo 20 Click board.
  * @param[in] ctx : Click context object.
  * See #thermo20_t object definition for detailed explanation.
  * @return 16-bit temperature reprinting ADC result.
@@ -287,7 +287,7 @@ uint16_t thermo20_read_adc ( thermo20_t *ctx );
 /**
  * @brief Get temperature data function.
  * @details The function get temperature value in degree Celsius
- * of the TSYS03 Digital Temperature Sensor on the Thermo 20 click board.
+ * of the TSYS03 Digital Temperature Sensor on the Thermo 20 Click board.
  * @param[in] ctx : Click context object.
  * See #thermo20_t object definition for detailed explanation.
  * @return  float temperature value in degree Celsius.
@@ -297,7 +297,7 @@ float thermo20_get_temperature ( thermo20_t *ctx );
 /**
  * @brief Get serial number function.
  * @details The function get the serial number
- * of the TSYS03 Digital Temperature Sensor on the Thermo 20 click board.
+ * of the TSYS03 Digital Temperature Sensor on the Thermo 20 Click board.
  * @param[in] ctx : Click context object.
  * See #thermo20_t object definition for detailed explanation.
  * @return 24-bit serial number.

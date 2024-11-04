@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# FT click
+# FT Click
 
 > FT Click is a compact smart transceiver add-on board that helps you add a Free Topology (FT) interface to any host board with the mikroBUS™ socket. Leveraging FT, the most reliable and easiest-to-scale wired communications media, FT Click lets you network sensors and devices to create IoT solutions for automation and control networks that are easier to develop, integrate and install. This Click board™ supports full communication stacks for LON® and BACnet FT, as well as FTMQ (MQTT like messaging format) on board to simplify integration of BACnet, LON or custom IoT networks over twisted pair wire. FT Click is ideal for markets including smart buildings, cities, machines, agriculture, manufacturing, transportation and many more where wireless communications do not provide the required reliability and scale.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ft_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ft-click)
+[Click Product page](https://www.mikroe.com/ft-click)
 
 ---
 
@@ -65,7 +65,7 @@ void ft_send_package ( ft_t *ctx, uint8_t *data_buf, uint16_t len, uint8_t queue
 
 ## Example Description
 
-> This example demonstrates the use of an FT click board by showing the communication between the two click boards.
+> This example demonstrates the use of an FT Click board by showing the communication between the two Click boards.
 
 **The demo application is composed of two sections :**
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

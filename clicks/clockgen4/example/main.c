@@ -3,7 +3,7 @@
  * @brief ClockGen4 Click example
  *
  * # Description
- * This example demonstrates the use of Clock Gen 4 click which is based on CS2200-CP for changing the channel clock. The CS2200-CP is an extremely 
+ * This example demonstrates the use of Clock Gen 4 Click which is based on CS2200-CP for changing the channel clock. The CS2200-CP is an extremely 
  * versatile system clocking device that utilizes a programmable phase lock loop. The CS2200-CP is based on an analog PLL architecture and this 
  * architecture allows for frequency synthesis and clock generation from a stable reference clock. The CS2200-CP supports both I²C and SPI for full software control.
  *
@@ -13,7 +13,7 @@
  * Initializes I2C and SPI, sets CS pin as output and starts to write log, applies default settings and adjusted ratio to obtain a frequency.
  *
  * ## Application Task
- * Clock Gen 4 click is used in this example to generate and change the clock on the output channel.
+ * Clock Gen 4 Click is used in this example to generate and change the clock on the output channel.
  *
  * @author Jelena Milosavljevic
  *

@@ -1,6 +1,6 @@
 
 ---
-# Battery Source click
+# Battery Source Click
 
 > Battery Source Click is a compact add-on board designed to boost power from a battery for portable applications. This board features the TPS81256, a high-efficiency step-up converter from Texas Instruments. The board boosts input voltage (2.5V to 5.5V) to 5V/1A on a USB Type-C connector. It operates at a 4MHz switching frequency, enters Power-Save mode at light loads, and reduces supply current to 43μA during light load operation. The board supports over 3W output power and has an input current of less than 1µA in shutdown mode, maximizing battery life.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/batterysource_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/battery-source-click)
+[Click Product page](https://www.mikroe.com/battery-source-click)
 
 ---
 
@@ -47,7 +47,7 @@ err_t batterysource_init ( batterysource_t *ctx, batterysource_cfg_t *cfg );
 
 #### Example key functions :
 
-- `batterysource_set_output` This function is used to set output state of Battery Source click board.
+- `batterysource_set_output` This function is used to set output state of Battery Source Click board.
 ```c
 void batterysource_set_output ( batterysource_t *ctx, uint8_t output_state );
 ```
@@ -136,7 +136,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

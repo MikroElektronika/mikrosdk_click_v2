@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Multi Stepper TB67S269 click
+# Multi Stepper TB67S269 Click
 
 > Multi Stepper Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the TB67S269FTG, CLOCK-in controlled bipolar stepping motor driver from Toshiba Semiconductor. It supports a PWM constant-current control drive and allows from full-step up to 1/32 steps resolution for less motor noise and smoother control. It has a wide operating voltage range of 10V to 47V with an output current capacity of 1.4A in addition to several built-in error detection circuits.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/multisteppertb67s269_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/multi-stepper-click-tb67s269)
+[Click Product page](https://www.mikroe.com/multi-stepper-click-tb67s269)
 
 ---
 
@@ -70,13 +70,13 @@ void multisteppertb67s269_set_direction ( multisteppertb67s269_t *ctx, uint8_t d
 
 ## Example Description
 
-> This example demonstrates the use of the Multi Stepper TB67S269 click board by driving the motor in both directions for a desired number of steps.
+> This example demonstrates the use of the Multi Stepper TB67S269 Click board by driving the motor in both directions for a desired number of steps.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

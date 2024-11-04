@@ -3,15 +3,15 @@
  
 
 ---
-# ECG click
+# ECG Click
 
-This is an ECG (or EKG) machine on a click board. It measures the electrical activity of a beating heart through electrodes taped to the skin. The board requires little setup, and the final measurement results can be displayed as an Electrocardiogram using a free Windows app.
+This is an ECG (or EKG) machine on a Click board. It measures the electrical activity of a beating heart through electrodes taped to the skin. The board requires little setup, and the final measurement results can be displayed as an Electrocardiogram using a free Windows app.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ecg_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ecg-click)
+[Click Product page](https://www.mikroe.com/ecg-click)
 
 ---
 
@@ -53,11 +53,11 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 - This function read ADC data.
 > ecg_data_t ecg_generic_read ( ecg_t *ctx );
  
-- This function executes default configuration for ECG click.
+- This function executes default configuration for ECG Click.
 > void ecg_default_cfg ( ecg_t *ctx );
 
 
-- This function initializes all necessary pins and peripherals used for this click.
+- This function initializes all necessary pins and peripherals used for this Click.
 > ECG_RETVAL ecg_init ( ecg_t *ctx, ecg_cfg_t *cfg );
 
 ## Examples Description
@@ -131,7 +131,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

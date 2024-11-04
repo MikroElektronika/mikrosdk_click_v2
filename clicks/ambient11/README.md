@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# Ambient 11 click
+# Ambient 11 Click
 
  The Ambient 11 Click is a Click board™ equipped with the VEML6035,
  a low power, high sensitivity, I2C ambient light sensor from Vishay Semiconductors.
@@ -14,7 +14,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ambient11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ambient-11-click)
+[Click Product page](https://www.mikroe.com/ambient-11-click)
 
 ---
 
@@ -115,7 +115,7 @@ void application_init ( void )
 ### Application Task
 
 
-> This example shows the capabilities of the Ambient 11 click by measuring
+> This example shows the capabilities of the Ambient 11 Click by measuring
 >  ambiental illumination and displaying calculated value via USART terminal in luxes.
  
 
@@ -143,7 +143,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -1,6 +1,6 @@
 
 ---
-# ADC 18 click
+# ADC 18 Click
 
 > ADC 18 Click is a compact add-on board that contains a high-performance data converter. This board features the MAX22005, an SPI-configurable twelve-channel 24-bit analog-to-digital converter (ADC) from Analog Devices.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/adc18_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/adc-18-click)
+[Click Product page](https://www.mikroe.com/adc-18-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t adc18_read_voltage ( adc18_t *ctx, float *voltage );
 
 ## Example Description
 
-> This example demonstrates the use of ADC 18 click board by reading the voltage from 12 analog input single-ended channels.
+> This example demonstrates the use of ADC 18 Click board by reading the voltage from 12 analog input single-ended channels.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and logger, and performs the click default configuration.
+> Initializes the driver and logger, and performs the Click default configuration.
 
 ```c
 
@@ -160,7 +160,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

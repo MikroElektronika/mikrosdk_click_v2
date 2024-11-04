@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Accel 29 click
+# Accel 29 Click
 
 > Accel 29 Click is a compact add-on board that contains an acceleration sensor. This board features the ADXL314, a three-axis ±200g accelerometer from Analog Devices. The ADXL314 offers 16-bit digital output data with a configurable host interface that supports SPI and I2C serial communication. An integrated memory management system with a 32-level FIFO buffer can store data to minimize host processor activity and lower overall system power consumption. Low power modes enable intelligent motion-based power management with threshold sensing and active acceleration measurement at low power dissipation.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/accel29_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/accel-29-click)
+[Click Product page](https://www.mikroe.com/accel-29-click)
 
 ---
 
@@ -65,13 +65,13 @@ err_t accel29_get_avg_axes ( accel29_t *ctx, uint16_t num_samples, accel29_axes_
 
 ## Example Description
 
-> This example demonstrates the use of Accel 29 click board by reading and displaying the accelerometer data (X, Y, and Z axis) averaged from 100 samples.
+> This example demonstrates the use of Accel 29 Click board by reading and displaying the accelerometer data (X, Y, and Z axis) averaged from 100 samples.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver, performs the click default configuration, and calibrates the accel data offsets.
+> Initializes the driver, performs the Click default configuration, and calibrates the accel data offsets.
 
 ```c
 
@@ -143,7 +143,7 @@ void application_task ( void )
 
 ## Note
 
-> This click board should be used for high g applications of up to +-200g. It is not recommended for low g applications because of its high scale factor which is about 48.83 mg per LSB.
+> This Click board should be used for high g applications of up to +-200g. It is not recommended for low g applications because of its high scale factor which is about 48.83 mg per LSB.
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

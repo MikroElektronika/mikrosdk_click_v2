@@ -565,7 +565,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void spectrometer_cfg_setup ( spectrometer_cfg_t *cfg );
@@ -576,7 +576,7 @@ void spectrometer_cfg_setup ( spectrometer_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 SPECTROMETER_RETVAL spectrometer_init ( spectrometer_t *ctx, spectrometer_cfg_t *cfg );
 
@@ -712,7 +712,7 @@ void spectrometer_reg_bank_cfg ( spectrometer_t *ctx, uint8_t reg_bank );
  * @param ctx          Click object.
  * 
  * @description This function is used to apply the default configuration used to demonstrate 
- * the usage of the click board.
+ * the usage of the Click board.
 **/
 void spectrometer_def_cfg ( spectrometer_t *ctx );
 
@@ -764,6 +764,6 @@ uint8_t spectrometer_get_int ( spectrometer_t *ctx );
 #endif  // _SPECTROMETER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

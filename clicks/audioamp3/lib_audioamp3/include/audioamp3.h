@@ -352,7 +352,7 @@ extern "C"{
  *
  * @param cfg           Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void audioamp3_cfg_setup ( audioamp3_cfg_t *cfg );
@@ -363,7 +363,7 @@ void audioamp3_cfg_setup ( audioamp3_cfg_t *cfg );
  * @param audioamp3     Click object.
  * @param cfg           Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 AUDIOAMP3_RETVAL audioamp3_init ( audioamp3_t *ctx, audioamp3_cfg_t *cfg );
 
@@ -398,7 +398,7 @@ void audioamp3_generic_read ( audioamp3_t *ctx, uint8_t reg, uint8_t *data_buf, 
  * @param ctx           Click object.
  *
  * @description This function power up the audio amplifier by sets to '1' state of the STB pin
- * of the AudioAmp 3 click board.
+ * of the AudioAmp 3 Click board.
  */
 void audioamp3_power_up ( audioamp3_t *ctx );
 
@@ -408,7 +408,7 @@ void audioamp3_power_up ( audioamp3_t *ctx );
  * @param ctx           Click object.
  *
  * @description This function hardware reset the TAS5414C-Q1 four channel digital audio amplifier
- * on AudioAmp 3 click by cleared to '0' state of the STB pin, wait the 100 ms, sets to '1' state 
+ * on AudioAmp 3 Click by cleared to '0' state of the STB pin, wait the 100 ms, sets to '1' state 
  * of the STB pin and wait another the 100 ms.
  * @note Delay is 200 ms.
  */
@@ -422,7 +422,7 @@ void audioamp3_hw_reset ( audioamp3_t *ctx );
  *
  * @description This function read all diagnostics from the targeted registers address starting 
  * from the AUDIOAMP3_DIAG_LATCHED_FAULT_REG_1 registers of TAS5414C-Q1 four channel 
- * digital audio amplifiers on AudioAmp 3 click board.
+ * digital audio amplifiers on AudioAmp 3 Click board.
  */
 void audioamp3_read_all_diagnostics ( audioamp3_t *ctx, uint8_t *p_all_diagnostics );
 
@@ -449,7 +449,7 @@ void audioamp3_read_all_diagnostics ( audioamp3_t *ctx, uint8_t *p_all_diagnosti
  *
  * @description This function the channel to low-low state by writing the appropriate value to the
  * target AUDIOAMP3_EXT_CTRL_REG_6 ( 0x0D ) register of TAS5414C-Q1 four channel 
- * digital audio amplifiers on AudioAmp 3 click board.
+ * digital audio amplifiers on AudioAmp 3 Click board.
  */
 AUDIOAMP3_STATUS_T audioamp3_set_channel_low_to_low ( audioamp3_t *ctx, uint8_t s_channel );
 
@@ -478,7 +478,7 @@ AUDIOAMP3_STATUS_T audioamp3_set_channel_low_to_low ( audioamp3_t *ctx, uint8_t 
  *
  * @description This function set the mute mode of target channel by writing the appropriate value to the
  * target AUDIOAMP3_EXT_CTRL_REG_5 ( 0x0C ) register of TAS5414C-Q1 four channel digital 
- * audio amplifiers on AudioAmp 3 click board.
+ * audio amplifiers on AudioAmp 3 Click board.
  */
 AUDIOAMP3_STATUS_T audioamp3_set_channel_mute_mode ( audioamp3_t *ctx, uint8_t s_channel );
 
@@ -499,7 +499,7 @@ AUDIOAMP3_STATUS_T audioamp3_set_channel_mute_mode ( audioamp3_t *ctx, uint8_t s
  *
  * @description This function run channel diagnostics by writing the appropriate value to the 
  * target AUDIOAMP3_EXT_CTRL_REG_4 ( 0x0B ) register of TAS5414C-Q1 four channel digital 
- * audio amplifiers on AudioAmp 3 click board.
+ * audio amplifiers on AudioAmp 3 Click board.
  */
 AUDIOAMP3_STATUS_T audioamp3_run_channel_diagnostics ( audioamp3_t *ctx, uint8_t rc_channel );
 
@@ -519,7 +519,7 @@ AUDIOAMP3_STATUS_T audioamp3_run_channel_diagnostics ( audioamp3_t *ctx, uint8_t
  *
  * @description This function set the play mode for all channels by writing the appropriate value to the
  * target AUDIOAMP3_EXT_CTRL_REG_5 ( 0x0C ) register of TAS5414C-Q1 four channel digital 
- * audio amplifiers on AudioAmp 3 click board.
+ * audio amplifiers on AudioAmp 3 Click board.
  */
 AUDIOAMP3_STATUS_T audioamp3_set_play_mode ( audioamp3_t *ctx );
 
@@ -549,7 +549,7 @@ AUDIOAMP3_STATUS_T audioamp3_set_play_mode ( audioamp3_t *ctx );
  * @description This function set the gain level for all channels by writing 
  * the appropriate value to the target AUDIOAMP3_EXT_CTRL_REG_1 ( 0x08 ) 
  * register of TAS5414C-Q1 four channel digital audio amplifiers on 
- * AudioAmp 3 click board.
+ * AudioAmp 3 Click board.
  */
 AUDIOAMP3_STATUS_T audioamp3_set_gain_lvl ( audioamp3_t *ctx, uint8_t gain_lvl );
 
@@ -559,6 +559,6 @@ AUDIOAMP3_STATUS_T audioamp3_set_gain_lvl ( audioamp3_t *ctx, uint8_t gain_lvl )
 #endif  // _AUDIOAMP3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

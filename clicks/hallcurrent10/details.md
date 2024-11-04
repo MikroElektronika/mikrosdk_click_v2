@@ -1,6 +1,6 @@
 
 ---
-# Hall Current 10 click
+# Hall Current 10 Click
 
 > Hall Current 10 Click is a compact add-on board that provides economical and precise AC or DC current sensing solutions. This board features the ACHS-7194, a fully integrated Hall-effect-based isolated linear current sensor designed for the current range of ±40A from Broadcom Limited. Inside ACHS-7194 is a precise, low-offset, linear Hall circuit with a copper conduction path located near the surface of the die. Applied current flowing through this copper conduction path generates a magnetic field that the differential Hall sensors convert into a proportional voltage, where after that, the user is given the option to process the output voltage as an analog or digital value. This Click board™ is suitable for AC or DC current-sensing in industrial, commercial, and communications systems.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/hall-current-10-click)
+[Click Product page](https://www.mikroe.com/hall-current-10-click)
 
 ---
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

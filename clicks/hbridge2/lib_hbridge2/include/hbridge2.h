@@ -149,7 +149,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void hbridge2_cfg_setup ( hbridge2_cfg_t *cfg );
@@ -159,7 +159,7 @@ void hbridge2_cfg_setup ( hbridge2_cfg_t *cfg );
  * @param hbridge2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 HBRIDGE2_RETVAL hbridge2_init ( hbridge2_t *ctx, hbridge2_cfg_t *cfg );
 
@@ -205,6 +205,6 @@ void hbridge2_set_gout ( hbridge2_t *ctx, uint8_t state );
 #endif  // _HBRIDGE2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

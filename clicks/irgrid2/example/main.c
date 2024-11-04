@@ -9,7 +9,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Configures the click and log objects and sets the click default configuration.
+ * Configures the Click and log objects and sets the Click default configuration.
  * 
  * ## Application Task  
  * Reads the temperature of all pixels every 500ms 

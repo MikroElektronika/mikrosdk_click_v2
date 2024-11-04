@@ -3,17 +3,17 @@
  * @brief USBtoI2C2 Click example
  *
  * # Description
- * This example demonstrates the use of USB to I2C 2 click by echoing back all
+ * This example demonstrates the use of USB to I2C 2 Click by echoing back all
  * the received messages.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Any data which the host PC sends to the Virtual COM Port (for example, typed into the terminal 
- * window in UART Terminal) will be sent over USB to the click board and then it will be read and 
+ * window in UART Terminal) will be sent over USB to the Click board and then it will be read and 
  * echoed back by the MCU to the PC where the terminal program will display it.
  * 
  * @note 

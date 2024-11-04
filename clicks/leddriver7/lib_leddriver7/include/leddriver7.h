@@ -161,7 +161,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void leddriver7_cfg_setup ( leddriver7_cfg_t *cfg );
@@ -171,7 +171,7 @@ void leddriver7_cfg_setup ( leddriver7_cfg_t *cfg );
  * @param leddriver7 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LEDDRIVER7_RETVAL leddriver7_init ( leddriver7_t *ctx, leddriver7_cfg_t *cfg );
 
@@ -206,6 +206,6 @@ void leddriver7_generic_read ( leddriver7_t *ctx, uint8_t reg, uint8_t *data_buf
 #endif  // _LEDDRIVER7_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

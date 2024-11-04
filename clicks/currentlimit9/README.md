@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Current Limit 9 click
+# Current Limit 9 Click
 
 > Current Limit 9 Click is a compact add-on board representing a current-limiting solution for your application. This board features the NPS4053, a load switch with a precision adjustable current limit from Nexperia. It is a 5.5V, 55mΩ load switch that allows precise adjustment of the current limit in a range of 110mA up to 2.5A while preserving the constant current during the current limiting.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/currentlimit9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/current-limit-9-click)
+[Click Product page](https://www.mikroe.com/current-limit-9-click)
 
 ---
 
@@ -159,7 +159,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

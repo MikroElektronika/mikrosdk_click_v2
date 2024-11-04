@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LightRanger 10 click
+# LightRanger 10 Click
 
 > LightRanger 10 Click is a compact add-on board suitable for range-finding and distance sensing applications. This board features the VL53L4CX, a ToF (time of flight) optical distance sensor with an extended target detection range from STMicroelectronics. Specifically designed for long-range and multi-target measurements, the VL53L4CX provides very accurate distance measurements up to 6m with excellent results over short distances and 18° FoV (Field of View), which improves performances under ambient light. Data processing is performed inside the VL53L4CX, providing distance information and confidence values through its I2C interface.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/lightranger10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lightranger-10-click)
+[Click Product page](https://www.mikroe.com/lightranger-10-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t lightranger10_get_distance ( lightranger10_t *ctx, uint16_t *distance_mm )
 
 ## Example Description
 
-> This example demonstrates the use of LightRanger 10 click board by reading and displaying the target object distance in millimeters.
+> This example demonstrates the use of LightRanger 10 Click board by reading and displaying the target object distance in millimeters.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver, performs the click default configuration, and then calibrates the sensor to the object positioned at 200mm distance from the sensor.
+> Initializes the driver, performs the Click default configuration, and then calibrates the sensor to the object positioned at 200mm distance from the sensor.
 
 ```c
 
@@ -161,7 +161,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

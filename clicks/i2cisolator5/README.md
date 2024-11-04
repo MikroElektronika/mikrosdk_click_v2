@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# I2C Isolator 5 click
+# I2C Isolator 5 Click
 
 > I2C Isolator 5 Click is a compact add-on board that offers completely isolated bidirectional communication. This board features ISO1644, a hot-swappable bidirectional I2C isolator with enhanced EMC and GPIOs from Texas Instruments. The ISO1644 provides two bidirectional channels, supporting a completely isolated I2C interface that eliminates the need for splitting I2C signals into separate transmit and receive signals for use with standalone optocouplers.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/i2cisolator5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/i2c-isolator-5-click)
+[Click Product page](https://www.mikroe.com/i2c-isolator-5-click)
 
 ---
 
@@ -65,9 +65,9 @@ uint8_t i2cisolator5_get_ina_state ( i2cisolator5_t *ctx );
 
 ## Example Description
 
-> This library contains API for the I2C Isolator 5 click driver.
-  This demo application shows an example of an I2C Isolator 5 click 
-  wired to the VAV Press click for reading 
+> This library contains API for the I2C Isolator 5 Click driver.
+  This demo application shows an example of an I2C Isolator 5 Click 
+  wired to the VAV Press Click for reading 
   differential pressure and temperature measurement.
 
 **The demo application is composed of two sections :**
@@ -76,7 +76,7 @@ uint8_t i2cisolator5_get_ina_state ( i2cisolator5_t *ctx );
 
 > Initialization of I2C module and log UART.
   After driver initialization and default settings, 
-  the app set VAV Press click I2C slave address ( 0x5C ) 
+  the app set VAV Press Click I2C slave address ( 0x5C ) 
   and enable device.
 
 ```c
@@ -119,9 +119,9 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example that shows the use of an I2C Isolator 5 click board™.
+> This is an example that shows the use of an I2C Isolator 5 Click board™.
   Logs pressure difference [ Pa ] and temperature [ degree Celsius ] values 
-  of the VAV Press click written to the I2C Isolator 5 click board™.  
+  of the VAV Press Click written to the I2C Isolator 5 Click board™.  
   Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

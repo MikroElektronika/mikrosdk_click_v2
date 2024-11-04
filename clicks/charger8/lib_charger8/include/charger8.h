@@ -392,7 +392,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void charger8_cfg_setup ( charger8_cfg_t *cfg );
@@ -402,7 +402,7 @@ void charger8_cfg_setup ( charger8_cfg_t *cfg );
  * @param charger8 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 CHARGER8_RETVAL charger8_init ( charger8_t *ctx, charger8_cfg_t *cfg );
 
@@ -411,7 +411,7 @@ CHARGER8_RETVAL charger8_init ( charger8_t *ctx, charger8_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Charger8 click.
+ * @description This function executes default configuration for Charger8 Click.
  */
 void charger8_default_cfg ( charger8_t *ctx );
 
@@ -611,6 +611,6 @@ void charger8_set_max_battery_capacity ( charger8_t *ctx, uint16_t capacity );
 #endif  // _CHARGER8_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

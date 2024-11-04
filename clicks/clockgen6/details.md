@@ -1,6 +1,6 @@
 
 ---
-# Clock Gen 6 click
+# Clock Gen 6 Click
 
 > Clock Gen 6 Click is a compact add-on board representing a digital oscillator solution. This board features the MIC1557, an IttyBitty CMOS RC oscillator designed to provide rail-to-rail pulses for precise time delay or frequency generation from Microchip Technology. The MIC1557 has a single threshold and trigger connection, internally connected, for astable (oscillator) operation only. It also has an enable/reset control signal routed to the RST pin of the mikroBUS™ socket, which controls the bias supply to the oscillator’s internal circuitry and optimizes power consumption used for oscillator power ON/OFF purposes. In addition, it provides the ability to select the desired frequency programmed via a digital potentiometer, the MAX5401.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/clockgen6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/clock-gen-6-click)
+[Click Product page](https://www.mikroe.com/clock-gen-6-click)
 
 ---
 
@@ -45,7 +45,7 @@ void clockgen6_cfg_setup ( clockgen6_cfg_t *cfg );
 err_t clockgen6_init ( clockgen6_t *ctx, clockgen6_cfg_t *cfg );
 ```
 
-- `clockgen6_default_cfg` This function executes a default configuration of Clock Gen 6 click board.
+- `clockgen6_default_cfg` This function executes a default configuration of Clock Gen 6 Click board.
 ```c
 err_t clockgen6_default_cfg ( clockgen6_t *ctx );
 ```
@@ -69,13 +69,13 @@ void clockgen6_disable_output ( clockgen6_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Clock Gen 6 click board which acts as an astable oscillator.
+> This example demonstrates the use of Clock Gen 6 Click board which acts as an astable oscillator.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which sets the digital potentiometer to max position and enables the clock output.
+> Initializes the driver and performs the Click default configuration which sets the digital potentiometer to max position and enables the clock output.
 
 ```c
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

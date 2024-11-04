@@ -3,7 +3,7 @@
  * @brief Current Sens 2 Click Example.
  *
  * # Description
- * This example demonstrates the use of Current Sens 2 click board by reading and
+ * This example demonstrates the use of Current Sens 2 Click board by reading and
  * displaying the input current measurements.
  *
  * The demo application is composed of two sections :

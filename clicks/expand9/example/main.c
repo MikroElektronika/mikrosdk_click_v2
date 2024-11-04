@@ -15,7 +15,7 @@
  *
  * ## Application Task
  * This is an example that demonstrates the use of the Expand 9 Click board™.
- * This example shows the capabilities of the Expand 9 click by toggling each of 16 available channels.
+ * This example shows the capabilities of the Expand 9 Click by toggling each of 16 available channels.
  * Results are being sent to the Usart Terminal where you can track their changes.
  *
  * @author Nenad Filipovic

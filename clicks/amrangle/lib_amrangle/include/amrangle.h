@@ -94,13 +94,13 @@ extern "C"{
 
 /**
  * @brief AMR Angle gain control enable.
- * @details Enables the gain control mode of AMR Angle click.
+ * @details Enables the gain control mode of AMR Angle Click.
  */
 #define AMRANGLE_GAIN_CONTROL_EN                                0x01
 
 /**
  * @brief AMR Angle gain control disable.
- * @details Disables the gain control mode of AMR Angle click.
+ * @details Disables the gain control mode of AMR Angle Click.
  */
 #define AMRANGLE_GAIN_CONTROL_DIS                               0x00
 
@@ -118,13 +118,13 @@ extern "C"{
 
 /**
  * @brief AMR Angle power down enable.
- * @details Shuts down the device of AMR Angle click.
+ * @details Shuts down the device of AMR Angle Click.
  */
 #define AMRANGLE_POWER_DOWN_EN                                  0x01
 
 /**
  * @brief AMR Angle power down disable.
- * @details Powers up the device of AMR Angle click.
+ * @details Powers up the device of AMR Angle Click.
  */
 #define AMRANGLE_POWER_DOWN_DIS                                 0x00
 
@@ -226,7 +226,7 @@ typedef enum
 
 /**
  * @brief AMR Angle configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #amrangle_cfg_t object definition for detailed explanation.
@@ -241,7 +241,7 @@ void amrangle_cfg_setup ( amrangle_cfg_t *cfg, uint8_t sel_toolchain );
 /**
  * @brief AMR Angle initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #amrangle_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -257,7 +257,7 @@ err_t amrangle_init ( amrangle_t *ctx, amrangle_cfg_t *cfg );
 /**
  * @brief AMR Angle default configuration function.
  * @details This function executes a default configuration of AMR Angle
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #amrangle_t object definition for detailed explanation.
  * 

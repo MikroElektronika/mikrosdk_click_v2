@@ -1,6 +1,6 @@
 
 ---
-# UART to I2C click
+# UART to I2C Click
 
 > UART to I2C Click is a compact add-on board allowing connections to UART controllers and I2C targets for protocol conversion. This board features the SC18IM704, a bridge between the standard UART host interface and a serial I2C bus from NXP Semiconductors. The SC18IM704 provides a high-speed UART interface with a baud rate of up to 460.8 kbit/s and 256-byte FIFO for the transfer/receive data process, alongside several user-configurable GPIO pins. The host MCU communicates with the SC18IM704 with ASCII messages protocol, allowing it to control all the specific I2C-bus sequences, protocol, arbitration, and timing.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/uarttoi2c_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/uart-to-i2c-click)
+[Click Product page](https://www.mikroe.com/uart-to-i2c-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t uarttoi2c_i2c_write_then_read ( uarttoi2c_t *ctx, uint8_t slave_addr, uint
 
 ## Example Description
 
-> This example demonstrates the use of USB to I2C click board by reading the device ID of a 3D Hall 11 click board connected to the I2C port and controlling the GPIO pins.
+> This example demonstrates the use of USB to I2C Click board by reading the device ID of a 3D Hall 11 Click board connected to the I2C port and controlling the GPIO pins.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default config which resets the device and sets the GPIO pins 0-3 as push-pull output and others as input.
+> Initializes the driver and performs the Click default config which resets the device and sets the GPIO pins 0-3 as push-pull output and others as input.
 After that, reads and displays the chip firmware version.
 
 ```c
@@ -126,7 +126,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads the device ID of a 3D Hall 11 click board connected to the I2C port, toggles the output pins and displays the GPIO port state.
+> Reads the device ID of a 3D Hall 11 Click board connected to the I2C port, toggles the output pins and displays the GPIO port state.
 The results will be displayed on the USB UART approximately once per second.
 
 ```c
@@ -163,7 +163,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

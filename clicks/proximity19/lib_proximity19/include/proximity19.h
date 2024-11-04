@@ -270,7 +270,7 @@ typedef enum
 
 /**
  * @brief Proximity 19 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #proximity19_cfg_t object definition for detailed explanation.
@@ -282,7 +282,7 @@ void proximity19_cfg_setup ( proximity19_cfg_t *cfg );
 /**
  * @brief Proximity 19 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #proximity19_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -297,7 +297,7 @@ err_t proximity19_init ( proximity19_t *ctx, proximity19_cfg_t *cfg );
 /**
  * @brief Proximity 19 default configuration function.
  * @details This function executes a default configuration of Proximity 19
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #proximity19_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -554,7 +554,7 @@ err_t proximity19_get_manufact_id ( proximity19_t *ctx, uint8_t *manufact_id );
  * @brief Proximity 19 get interrupt function.
  * @details This function get states of the Interrupt ( INT ) pin
  * of the RPR-0720, Reflective Type Photosensor Miniature Proximity Sensor
- * on the Proximity 19 click board.
+ * on the Proximity 19 Click board.
  * @param[in] ctx : Click context object.
  * See #proximity19_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,

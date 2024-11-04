@@ -263,7 +263,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c3dhall3_cfg_setup ( c3dhall3_cfg_t *cfg );
@@ -273,7 +273,7 @@ void c3dhall3_cfg_setup ( c3dhall3_cfg_t *cfg );
  * @param c3dhall3 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 C3DHALL3_RETVAL c3dhall3_init ( c3dhall3_t *ctx, c3dhall3_cfg_t *cfg );
 
@@ -282,7 +282,7 @@ C3DHALL3_RETVAL c3dhall3_init ( c3dhall3_t *ctx, c3dhall3_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for 3D Hall 3 click.
+ * @description This function executes default configuration for 3D Hall 3 Click.
  */
 void c3dhall3_default_cfg ( c3dhall3_t *ctx );
 
@@ -400,6 +400,6 @@ uint8_t c3dhall3_check_int_pin ( c3dhall3_t *ctx );
 #endif  // _C3DHALL3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

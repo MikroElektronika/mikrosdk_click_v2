@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Compass 7 click
+# Compass 7 Click
 
 > Compass 7 Click is a compact add-on board perfect for applications like an electronic compass. This board features the MMC5633NJL, a monolithic complete 3-axis AMR magnetic sensor with on-chip signal processing and an integrated digital bus from MEMSIC. It can measure magnetic fields within the full-scale range of ±30 Gauss (G) with up to 0.0625mG per LSB resolution at 20bits operation mode and 2mG total RMS noise level, enabling heading accuracy of ±1º in electronic compass applications. Also, an integrated SET/RESET function eliminates thermal variation-induced offset error (Null field output) and clears the residual magnetization resulting from powerful external fields.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/compass7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/compass-7-click)
+[Click Product page](https://www.mikroe.com/compass-7-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t compass7_get_temperature ( compass7_t *ctx, float *temperature );
 
 ## Example Description
 
-> This example demonstrates the use of Compass 7 click board by reading and displaying the magnetic field strength of 3-axis as well as the temperature measurements in Celsius.
+> This example demonstrates the use of Compass 7 Click board by reading and displaying the magnetic field strength of 3-axis as well as the temperature measurements in Celsius.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

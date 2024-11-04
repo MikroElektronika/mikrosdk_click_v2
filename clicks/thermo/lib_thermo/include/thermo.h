@@ -139,7 +139,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void thermo_cfg_setup ( thermo_cfg_t *cfg );
@@ -149,7 +149,7 @@ void thermo_cfg_setup ( thermo_cfg_t *cfg );
  * @param thermo Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 THERMO_RETVAL thermo_init ( thermo_t *ctx, thermo_cfg_t *cfg );
 
@@ -161,7 +161,7 @@ THERMO_RETVAL thermo_init ( thermo_t *ctx, thermo_cfg_t *cfg );
  * @returns      32-bit read sensor data
  *
  * @description Function reads the 32-bit of data from the
- * MAX31855 sensor on Thermo click board.
+ * MAX31855 sensor on Thermo Click board.
  */
 uint32_t thermo_read_data ( thermo_t* ctx );
 
@@ -172,7 +172,7 @@ uint32_t thermo_read_data ( thermo_t* ctx );
  *
  * @returns float thermocouple temperature in degree Celsius [ �C ]
  *
- * @description Function gets thermocouple temperature data from MAX31855 sensor on Thermo click board
+ * @description Function gets thermocouple temperature data from MAX31855 sensor on Thermo Click board
  * and convert to float value of thermocouple temperature in degree Celsius [ �C ].
  */
 float thermo_get_temperature ( thermo_t* ctx );
@@ -184,7 +184,7 @@ float thermo_get_temperature ( thermo_t* ctx );
  *
  * @returns float reference junction temperature in degree Celsius [ �C ]
  *
- * @description Function get reference junction temperature data from MAX31855 sensor on Thermo click board
+ * @description Function get reference junction temperature data from MAX31855 sensor on Thermo Click board
  * and convert to float value of reference junction temperature in degree Celsius [ �C ].
  */
 float thermo_get_junction_temperature ( thermo_t* ctx );
@@ -198,7 +198,7 @@ float thermo_get_junction_temperature ( thermo_t* ctx );
  * - 0 : OK
  * - 1 : ERROR ( when any of the SCV, SCG, or OC faults are active );
  *
- * @description Function checks fault states of MAX31855 sensor on Thermo click board.
+ * @description Function checks fault states of MAX31855 sensor on Thermo Click board.
  */
 uint8_t thermo_check_fault ( thermo_t* ctx );
 
@@ -212,7 +212,7 @@ uint8_t thermo_check_fault ( thermo_t* ctx );
  * - 1 : ERROR ( when the thermocouple is short-circuited to VCC );
  *
  * @description Function check fault states of short-circuited to Vcc
- * of MAX31855 sensor on Thermo click board.
+ * of MAX31855 sensor on Thermo Click board.
  */
 uint8_t thermo_short_circuited_vcc ( thermo_t* ctx );
 
@@ -226,7 +226,7 @@ uint8_t thermo_short_circuited_vcc ( thermo_t* ctx );
  * - 1 : ERROR ( when the thermocouple is short-circuited to GND );
  *
  * @description Function check fault states of short-circuited to GND
- * of MAX31855 sensor on Thermo click board.
+ * of MAX31855 sensor on Thermo Click board.
  */
 uint8_t thermo_short_circuited_gnd ( thermo_t* ctx );
 
@@ -240,7 +240,7 @@ uint8_t thermo_short_circuited_gnd ( thermo_t* ctx );
  * - 1 : ERROR (  when the thermocouple is open (no connections) );
  *
  * @description Function check connections fault
- * of MAX31855 sensor on Thermo click board.
+ * of MAX31855 sensor on Thermo Click board.
  */
 uint8_t thermo_check_connections ( thermo_t* ctx );
 
@@ -250,6 +250,6 @@ uint8_t thermo_check_connections ( thermo_t* ctx );
 #endif  // _THERMO_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

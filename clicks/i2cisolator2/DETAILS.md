@@ -1,15 +1,15 @@
 
 ---
-# I2C Isolator 2 click
+# I2C Isolator 2 Click
 
-> I2C Isolator 2 click provides I2C lines and power isolation for slave devices. It carries the ADM3260 dual I2C isolator with an integrated DC-to-DC converter. I2C Isolator 2 click is designed to run on either 3.3V or 5V power supply.
+> I2C Isolator 2 Click provides I2C lines and power isolation for slave devices. It carries the ADM3260 dual I2C isolator with an integrated DC-to-DC converter. I2C Isolator 2 Click is designed to run on either 3.3V or 5V power supply.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/i2cisolator2_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/i2c-isolator-2-click)
+[Click Product page](https://www.mikroe.com/i2c-isolator-2-click)
 
 ---
 
@@ -70,9 +70,9 @@ err_t i2cisolator2_set_slave_address ( i2cisolator2_t *ctx, uint8_t slave_addr )
 
 ## Examples Description
 
-> This example showcases how to initialize, configure and use the I2C Isolator 2 click module.
-> The click provides I2C lines and power isolation for slave devices. In order for this 
-> example to work, you need the EEPROM 3 click.
+> This example showcases how to initialize, configure and use the I2C Isolator 2 Click module.
+> The Click provides I2C lines and power isolation for slave devices. In order for this 
+> example to work, you need the EEPROM 3 Click.
 
 **The demo application is composed of two sections :**
 
@@ -115,7 +115,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Writes the desired message to EEPROM 3 click board and reads it back every 2 seconds.
+> Writes the desired message to EEPROM 3 Click board and reads it back every 2 seconds.
 > All data is being displayed on the USB UART where you can track the program flow.
 
 ```c
@@ -126,7 +126,7 @@ void application_task ( void )
     if ( I2CISOLATOR2_OK == eeprom3_write_page ( EEPROM3_MEMORY_ADDRESS, EEPROM3_DEMO_TEXT, 
                                                  strlen( EEPROM3_DEMO_TEXT ) ) )
     {
-        log_printf( &logger, " Demo text message is written to EEPROM 3 click!\r\n" );
+        log_printf( &logger, " Demo text message is written to EEPROM 3 Click!\r\n" );
     }
     Delay_ms ( 1000 );
     
@@ -143,7 +143,7 @@ void application_task ( void )
 
 ## Note
 
-> Make sure to provide the VCC power supply on VCC pin and EEPROM 3 click.
+> Make sure to provide the VCC power supply on VCC pin and EEPROM 3 Click.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

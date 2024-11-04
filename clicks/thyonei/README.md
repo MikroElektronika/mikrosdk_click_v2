@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Thyone-I click
+# Thyone-I Click
 
 > Thyone-I Click is a compact add-on board for wireless communication in various devices like control systems, remote controls, and sensor nodes. This board features the WIRL-PRO2 Thyone-I (2611011021000) module from Würth Elektronik. It operates in the 2.4GHz license-free band, ensuring secure and reliable data transmission in both point-to-point and mesh configurations. It features versatile connectivity options with onboard and external antenna support, a data transmission rate of up to 2Mbit/s, and embedded security with hardware-accelerated encryption.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/thyonei_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/thyone-i-click)
+[Click Product page](https://www.mikroe.com/thyone-i-click)
 
 ---
 
@@ -53,30 +53,30 @@ void thyonei_default_cfg ( thyonei_t *ctx );
 
 #### Example key functions :
 
-- `thyonei_get_req` This command can be used to set individual setting parameters in flash of Thyone-I click board.
+- `thyonei_get_req` This command can be used to set individual setting parameters in flash of Thyone-I Click board.
 ```c
 err_t thyonei_get_req ( thyonei_t *ctx, uint8_t settings_index, uint8_t *param_len, uint8_t *parameter );
 ```
 
-- `thyonei_multicast_data_req` This command provides the multicast data transmission to a group of modules configured with the same MAC GROUP ADDRESS of Thyone-I click board.
+- `thyonei_multicast_data_req` This command provides the multicast data transmission to a group of modules configured with the same MAC GROUP ADDRESS of Thyone-I Click board.
 ```c
 err_t thyonei_multicast_data_req ( thyonei_t *ctx, uint8_t message_len, uint8_t *message );
 ```
 
-- `thyonei_unicast_data_req` This command provides the unicast data transmission to the configured MAC DESTINATION ADDRESS of Thyone-I click board.
+- `thyonei_unicast_data_req` This command provides the unicast data transmission to the configured MAC DESTINATION ADDRESS of Thyone-I Click board.
 ```c
 err_t thyonei_unicast_data_req ( thyonei_t *ctx, uint8_t message_len, uint8_t *message );
 ```
 
 ## Example Description
 
-> This example demonstrates the use of the Thyone-I click board by sending and receiving data and displaying them on the USB UART.
+> This example demonstrates the use of the Thyone-I Click board by sending and receiving data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration and setting the MAC addresses and mode.
+> Initializes the driver and performs the Click default configuration and setting the MAC addresses and mode.
 
 ```c
 
@@ -228,7 +228,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

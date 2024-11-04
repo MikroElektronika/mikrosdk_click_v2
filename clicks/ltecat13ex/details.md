@@ -1,6 +1,6 @@
 
 ---
-# LTE Cat.1 3 EX click
+# LTE Cat.1 3 EX Click
 
 > LTE Cat.1 3 Click (for Europe) is a compact add-on board for reliable 4G wireless communication. This board features the EG91EXGA-128-SGNS, an LTE Cat 1 IoT module that meets the 3GPP Release 11 standard from Quectel. It supports multiple wireless standards, including LTE-FDD, WCDMA, and GSM, ensuring broad network compatibility. Key features include multi-band LTE support (B1/B3/B7/B8/B20/B28), RX diversity for bands B1 and B8, and multi-constellation GNSS (GPS, GLONASS, BeiDou/Compass, Galileo, QZSS). It also integrates a 16-bit mono audio codec for voice functionality with support for CTIA standard headphones.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ltecat13_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lte-cat1-3-click)
+[Click Product page](https://www.mikroe.com/lte-cat1-3-click)
 
 ---
 
@@ -52,7 +52,7 @@ err_t ltecat13ex_init ( ltecat13ex_t *ctx, ltecat13ex_cfg_t *cfg );
 err_t ltecat13ex_write_register ( ltecat13ex_t *ctx, uint8_t reg, uint8_t data_in );
 ```
 
-- `ltecat13ex_max9860_cfg` This function is used to set basic config for MAX9860 of LTE Cat.1 3 EX click board.
+- `ltecat13ex_max9860_cfg` This function is used to set basic config for MAX9860 of LTE Cat.1 3 EX Click board.
 ```c
 err_t ltecat13ex_max9860_cfg ( ltecat13ex_t *ctx );
 ```
@@ -207,7 +207,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

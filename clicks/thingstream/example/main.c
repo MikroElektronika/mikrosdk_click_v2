@@ -17,8 +17,8 @@
  * - thingstream_process ( ) - The general process of collecting data the module sends.
  * 
  * @note
- * The click board needs to be registered with a redemption code to a Thingstream Domain.
- * For more information please refer to the Thingstream click user manual available on the product page.
+ * The Click board needs to be registered with a redemption code to a Thingstream Domain.
+ * For more information please refer to the Thingstream Click user manual available on the product page.
  * 
  * \author MikroE Team
  *

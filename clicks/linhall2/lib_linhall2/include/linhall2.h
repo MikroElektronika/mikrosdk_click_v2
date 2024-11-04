@@ -148,7 +148,7 @@ typedef enum
 
 /**
  * @brief LIN Hall 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #linhall2_cfg_t object definition for detailed explanation.
@@ -160,7 +160,7 @@ void linhall2_cfg_setup ( linhall2_cfg_t *cfg );
 /**
  * @brief LIN Hall 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #linhall2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -203,7 +203,7 @@ err_t linhall2_read_an_pin_voltage ( linhall2_t *ctx, float *data_out );
 /**
  * @brief LIN Hall 2 set EN pin state function.
  * @details This function is used to set EN pin state of the LIN Hall 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #linhall2_t object definition for detailed explanation.
  * @param[in] pin_state : State of the EN pin state.

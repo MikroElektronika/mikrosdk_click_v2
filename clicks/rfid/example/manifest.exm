@@ -1,8 +1,8 @@
 {
     "name": "RFID Click",
-    "description": "RFid click features CR95HF 13.56 MHz contactless transceiver as well as trace antenna.",
+    "description": "RFid Click features CR95HF 13.56 MHz contactless transceiver as well as trace antenna.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","CR95HF"],
+    "hw" : ["Click","CR95HF"],
     "category" : ["RFID/NFC"]
 }

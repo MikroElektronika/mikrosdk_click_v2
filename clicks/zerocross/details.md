@@ -1,6 +1,6 @@
 
 ---
-# Zero-Cross click
+# Zero-Cross Click
 
 > Zero-Cross Click is a compact add-on board that has the ability to detect the change from positive to negative or negative to a positive level of a sinusoidal waveform. This board features circuitry that provides Zero Crossing Detection (ZCD). Whenever the sine wave crosses the ground potential, the output shifts from HIGH logic to LOW or vice-versa. 
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/zerocross_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/zero-cross-click)
+[Click Product page](https://www.mikroe.com/zero-cross-click)
 
 ---
 
@@ -126,7 +126,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

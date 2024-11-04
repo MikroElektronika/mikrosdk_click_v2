@@ -3,12 +3,12 @@
  * @brief FAN8 Click example
  *
  * # Description
- * This example demonstrates the use of FAN 8 click board.
+ * This example demonstrates the use of FAN 8 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Changes the speed of fans at both channels by changing the PWM duty cycle, then calculates 

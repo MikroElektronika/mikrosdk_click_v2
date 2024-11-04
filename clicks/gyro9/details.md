@@ -1,6 +1,6 @@
 
 ---
-# Gyro 9 click
+# Gyro 9 Click
 
 > Gyro 9 Click is a compact add-on board that contains a high-performance gyroscope. This board features the A3G4250D, a MEMS motion sensor from STMicroelectronics. It is a low-power 3-axes digital output gyroscope that provides unprecedented stability at zero rate level and sensitivity over temperature and time and is equipped with an embedded temperature sensor. The gyroscope has a 16-bit rate value data output with an 8-bit compensation temperature data output.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/gyro9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gyro-9-click)
+[Click Product page](https://www.mikroe.com/gyro-9-click)
 
 ---
 
@@ -157,7 +157,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

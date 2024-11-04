@@ -3,7 +3,7 @@
  * @brief Charger 18 Click Example.
  *
  * # Description
- * This example demonstrates the use of Charger 18 click board by controlling
+ * This example demonstrates the use of Charger 18 Click board by controlling
  * the status of the charger as well as the LDO and BUCK regulators.
  *
  * The demo application is composed of two sections :

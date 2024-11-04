@@ -3,16 +3,16 @@
  * \brief TouchClamp Click example
  * 
  * # Description
- * This demo-app shows the touch position using TouchClamp click.
+ * This demo-app shows the touch position using TouchClamp Click.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
  * Configuring clicks and log objects.
- * Setting the click in the default configuration.
+ * Setting the Click in the default configuration.
  * 
  * ## Application Task  
- * Detect and dispay touch position when the click is triggered.
+ * Detect and dispay touch position when the Click is triggered.
  * 
  * \author Nenad Filipovic
  *

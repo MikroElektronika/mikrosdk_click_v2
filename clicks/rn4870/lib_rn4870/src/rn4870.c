@@ -177,7 +177,7 @@ void rn4870_initialize ( rn4870_t *ctx, char *p_addr )
     rn4870_uart_write( ctx, "$$$" );
     Delay_1sec( );
 
-    // Sets the address of the click 
+    // Sets the address of the Click 
     rn4870_uart_write( ctx, "&," );
     rn4870_uart_write( ctx, p_addr );
     rn4870_uart_write( ctx, "\r" );

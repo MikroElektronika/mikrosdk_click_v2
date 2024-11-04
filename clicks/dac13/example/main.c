@@ -3,13 +3,13 @@
  * @brief DAC 13 Click example
  *
  * # Description
- * This example demonstrates the use of DAC 13 click board by changing 
+ * This example demonstrates the use of DAC 13 Click board by changing 
  * the outputs voltage level every 2 seconds.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Changes the output voltage every 2 seconds and logs the voltage value on the USB UART.

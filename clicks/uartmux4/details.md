@@ -1,6 +1,6 @@
 
 ---
-# UART MUX 4 click
+# UART MUX 4 Click
 
 > UART MUX 4 Click is a compact add-on board that switches the UART pins (RX and TX) 
 from the mikroBUS™ socket to one of the two available outputs. 
@@ -12,7 +12,7 @@ but not both simultaneously.
   <img src="https://download.mikroe.com/images/click_for_ide/uartmux4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/uart-mux-4-click)
+[Click Product page](https://www.mikroe.com/uart-mux-4-click)
 
 ---
 
@@ -63,7 +63,7 @@ void uartmux4_enable_uart2 ( uartmux4_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of UART MUX 4 click board by processing
+> This example demonstrates the use of UART MUX 4 Click board by processing
 > the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
@@ -160,7 +160,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

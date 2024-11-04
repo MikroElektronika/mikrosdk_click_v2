@@ -3,7 +3,7 @@
  * @brief ClockGen5 Click example
  *
  * # Description
- * This is an example that demonstrates the use of the Clock Gen 5 click board.
+ * This is an example that demonstrates the use of the Clock Gen 5 Click board.
  *
  * The demo application is composed of two sections :
  *

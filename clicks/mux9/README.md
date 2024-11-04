@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# MUX 9 click
+# MUX 9 Click
 
 > MUX 9 Click is a compact add-on board that contains a precise multiplexing solution. 
 > This board features the ADG1438, a CMOS 8-channel analog matrix switch 
@@ -15,7 +15,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/mux9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/mux-9-click)
+[Click Product page](https://www.mikroe.com/mux-9-click)
 
 ---
 
@@ -71,7 +71,7 @@ void mux9_disable ( mux9_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of MUX 9 click board™.
+> This example demonstrates the use of MUX 9 Click board™.
 
 **The demo application is composed of two sections :**
 
@@ -117,7 +117,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example that shows the use of a MUX 9 click board™.
+> This is an example that shows the use of a MUX 9 Click board™.
 > This example shows switching channels (from CH 1 to CH 8) on and off.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
@@ -148,7 +148,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

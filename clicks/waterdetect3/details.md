@@ -1,6 +1,6 @@
 
 ---
-# Water Detect 3 click
+# Water Detect 3 Click
 
 > Water Detect 3 Click is a compact add-on board that detects water and other electroconductive liquids. This board features the MCP606, a micropower CMOS operational amplifier from Microchip. In the same package, the Water Detect 3 Click comes with a separate PCB with an electroconductive water detection area connected to a Click board™ with wires.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/waterdetect3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/water-detect-3-click)
+[Click Product page](https://www.mikroe.com/water-detect-3-click)
 
 ---
 
@@ -55,7 +55,7 @@ uint8_t waterdetect3_get_int ( waterdetect3_t *ctx );
 ## Example Description
 
 > This example demonstrates the use of the Water Detect 3 Click board by
-  detecting if water is present on the sensor part of the click.
+  detecting if water is present on the sensor part of the Click.
 
 **The demo application is composed of two sections :**
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

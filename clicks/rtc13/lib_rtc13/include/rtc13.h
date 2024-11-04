@@ -245,7 +245,7 @@ typedef enum
 
 /**
  * @brief RTC 13 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #rtc13_cfg_t object definition for detailed explanation.
@@ -259,7 +259,7 @@ void rtc13_cfg_setup ( rtc13_cfg_t *cfg );
 /**
  * @brief RTC 13 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #rtc13_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -277,7 +277,7 @@ err_t rtc13_init ( rtc13_t *ctx, rtc13_cfg_t *cfg );
 /**
  * @brief RTC 13 default configuration function.
  * @details This function executes a default configuration of RTC 13
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #rtc13_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -295,7 +295,7 @@ err_t rtc13_default_cfg ( rtc13_t *ctx );
  * @brief RTC 13 get interrupt function.
  * @details This function check the interrupt state 
  * of the PCF2123 SPI Real time clock/calendar
- * on the RTC 13 click board™.
+ * on the RTC 13 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc13_t object definition for detailed explanation.
  * @return @li @c 0 - INT pin state low,,
@@ -311,7 +311,7 @@ uint8_t rtc13_get_interrupt ( rtc13_t *ctx );
  * @brief RTC 13 block CLKOUT function.
  * @details This function enable/disable block CLKOUT 
  * of the PCF2123 SPI Real time clock/calendar
- * on the RTC 13 click board™.
+ * on the RTC 13 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc13_t object definition for detailed explanation.
  * @param[in] en_clkout : 
@@ -368,7 +368,7 @@ err_t rtc13_generic_read ( rtc13_t *ctx, uint8_t reg, uint8_t *data_out, uint8_t
  * @brief RTC 13 soft reset function.
  * @details This function performs a software reset 
  * of the PCF2123 SPI Real time clock/calendar
- * on the RTC 13 click board™.
+ * on the RTC 13 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc13_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -385,7 +385,7 @@ err_t rtc13_soft_reset ( rtc13_t *ctx );
  * @brief RTC 13 get time function.
  * @details This function get RTC time data structure
  * of the PCF2123 SPI Real time clock/calendar
- * on the RTC 13 click board™.
+ * on the RTC 13 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc13_t object definition for detailed explanation.
  * @param[out] rtc_time : Pointer of the RTC time structure.
@@ -403,7 +403,7 @@ err_t rtc13_get_time ( rtc13_t *ctx, rtc13_time_t *rtc_time );
  * @brief RTC 13 set time function.
  * @details This function set RTC time data structure
  * of the PCF2123 SPI Real time clock/calendar
- * on the RTC 13 click board™.
+ * on the RTC 13 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc13_t object definition for detailed explanation.
  * @param[in] rtc_time : RTC time structure.
@@ -421,7 +421,7 @@ err_t rtc13_set_time ( rtc13_t *ctx, rtc13_time_t rtc_time );
  * @brief RTC 13 get date function.
  * @details This function get RTC date data structure
  * of the PCF2123 SPI Real time clock/calendar
- * on the RTC 13 click board™.
+ * on the RTC 13 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc13_t object definition for detailed explanation.
  * @param[out] rtc_date : Pointer of the RTC date data structure.
@@ -439,7 +439,7 @@ err_t rtc13_get_date ( rtc13_t *ctx, rtc13_date_t *rtc_date );
  * @brief RTC 13 set date function.
  * @details This function set RTC date data structure
  * of the PCF2123 SPI Real time clock/calendar
- * on the RTC 13 click board™.
+ * on the RTC 13 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc13_t object definition for detailed explanation.
  * @param[in] rtc_date : RTC date structure.
@@ -457,7 +457,7 @@ err_t rtc13_set_date ( rtc13_t *ctx, rtc13_date_t rtc_date );
  * @brief RTC 13 get alarm function.
  * @details This function get RTC alarm data structure
  * of the PCF2123 SPI Real time clock/calendar
- * on the RTC 13 click board™.
+ * on the RTC 13 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc13_t object definition for detailed explanation.
  * @param[out] rtc_alarm : Pointer of the RTC alarm data structure.
@@ -475,7 +475,7 @@ err_t rtc13_get_alarm ( rtc13_t *ctx, rtc13_alarm_t *rtc_alarm );
  * @brief RTC 13 set alarm function.
  * @details This function set RTC alarm data structure
  * of the PCF2123 SPI Real time clock/calendar
- * on the RTC 13 click board™.
+ * on the RTC 13 Click board™.
  * @param[in] ctx : Click context object.
  * See #rtc13_t object definition for detailed explanation.
  * @param[in] rtc_alarm : RTC alarm structure.

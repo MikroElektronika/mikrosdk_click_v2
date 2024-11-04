@@ -1,8 +1,8 @@
 {
     "name": "Pressure 5 Click",
-    "description": "Pressure 5 click is a barometric pressure measurement Click board™, which features the BMP388, an accurate absolute barometric pressure sensor. Due to its very high sensing accuracy, it is perfectly suited for precise altitude tracking applications.",
+    "description": "Pressure 5 Click is a barometric pressure measurement Click board™, which features the BMP388, an accurate absolute barometric pressure sensor. Due to its very high sensing accuracy, it is perfectly suited for precise altitude tracking applications.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","BMP388"],
+    "hw" : ["Click","BMP388"],
     "category" : ["Pressure"] 
 }

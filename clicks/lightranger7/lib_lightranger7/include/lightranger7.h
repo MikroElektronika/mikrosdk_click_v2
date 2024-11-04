@@ -162,7 +162,7 @@ typedef enum
 
 /**
  * @brief LightRanger 7 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #lightranger7_cfg_t object definition for detailed explanation.
@@ -174,7 +174,7 @@ void lightranger7_cfg_setup ( lightranger7_cfg_t *cfg );
 /**
  * @brief LightRanger 7 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #lightranger7_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -222,7 +222,7 @@ err_t lightranger7_generic_read ( lightranger7_t *ctx, uint8_t *data_out, uint16
  * @return @li @c  >=0 - Success,
  *         @li @c   <0 - Error.
  * See #err_t definition for detailed explanation.
- * @note The click board must be programmed with a AFBR_S50_CANApp_RA4M2 firmware which
+ * @note The Click board must be programmed with a AFBR_S50_CANApp_RA4M2 firmware which
  * support this command.
  */
 err_t lightranger7_start_measurement ( lightranger7_t *ctx );
@@ -235,7 +235,7 @@ err_t lightranger7_start_measurement ( lightranger7_t *ctx );
  * @return @li @c  >=0 - Success,
  *         @li @c   <0 - Error.
  * See #err_t definition for detailed explanation.
- * @note The click board must be programmed with a AFBR_S50_CANApp_RA4M2 firmware which
+ * @note The Click board must be programmed with a AFBR_S50_CANApp_RA4M2 firmware which
  * support this command.
  */
 err_t lightranger7_stop_measurement ( lightranger7_t *ctx );

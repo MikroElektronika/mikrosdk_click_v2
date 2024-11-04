@@ -3,6 +3,6 @@
     "description": "ECG 6 Click is a complete solution for the development of ECG and Heart-Rate (HR) applications. It features the MAX86150, a Reflective Heart Rate Monitor and Medical-Grade Pulse Oximeter from Maxim Integrated. The Click board™ contain integrated electrocardiogram, pulse oximeter, heart rate monitor sensor module. The ECG 6 Click can be used for application in Fitness Assistant Devices, Wearable Devices, Smartphones, Tablet.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MAX86150"],
+    "hw" : ["Click","MAX86150"],
     "category" : ["Biometrics"] 
 }

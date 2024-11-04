@@ -3,7 +3,7 @@
  * \brief Mic24045 Click example
  * 
  * # Description
- * This example demonstrates the use of MIC24045 click board.
+ * This example demonstrates the use of MIC24045 Click board.
  *
  * The demo application is composed of two sections :
  * 

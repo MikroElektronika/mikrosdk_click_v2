@@ -171,7 +171,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void optoencoder3_cfg_setup ( optoencoder3_cfg_t *cfg );
@@ -181,12 +181,12 @@ void optoencoder3_cfg_setup ( optoencoder3_cfg_t *cfg );
  * @param optoencoder3 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 OPTOENCODER3_RETVAL optoencoder3_init ( optoencoder3_t *ctx, optoencoder3_cfg_t *cfg );
 
 /**
- * @brief Sets state of click
+ * @brief Sets state of Click
  *
  * @param ctx  Click object.
  * 
@@ -276,6 +276,6 @@ void optoencoder3_read_all_pins ( optoencoder3_t *ctx, optoencoder3_pins_t *pins
 #endif  // _OPTOENCODER3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

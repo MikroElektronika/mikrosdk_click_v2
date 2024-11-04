@@ -262,7 +262,7 @@ typedef enum
 
 /**
  * @brief NINA-W152 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #ninaw152_cfg_t object definition for detailed explanation.
@@ -274,7 +274,7 @@ void ninaw152_cfg_setup ( ninaw152_cfg_t *cfg );
 /**
  * @brief NINA-W152 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #ninaw152_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -289,7 +289,7 @@ err_t ninaw152_init ( ninaw152_t *ctx, ninaw152_cfg_t *cfg );
 /**
  * @brief NINA-W152 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #ninaw152_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -395,7 +395,7 @@ uint8_t ninaw152_get_sry_pin ( ninaw152_t *ctx );
 
 /**
  * @brief NINA-W152 send command function.
- * @details This function sends a specified command to the click module.
+ * @details This function sends a specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #ninaw152_t object definition for detailed explanation.
  * @param[in] cmd : Command string.
@@ -406,7 +406,7 @@ void ninaw152_send_cmd ( ninaw152_t *ctx, uint8_t *cmd );
 
 /**
  * @brief NINA-W152 send command with parameter function.
- * @details This function sends a command with specified parameter to the click module.
+ * @details This function sends a command with specified parameter to the Click module.
  * @param[in] ctx : Click context object.
  * See #ninaw152_t object definition for detailed explanation.
  * @param[in] at_cmd_buf : Command buffer.

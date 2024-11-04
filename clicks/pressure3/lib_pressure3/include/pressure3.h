@@ -375,7 +375,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void pressure3_cfg_setup ( pressure3_cfg_t *cfg );
@@ -386,7 +386,7 @@ void pressure3_cfg_setup ( pressure3_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 PRESSURE3_RETVAL pressure3_init ( pressure3_t *ctx, pressure3_cfg_t *cfg );
 
@@ -395,7 +395,7 @@ PRESSURE3_RETVAL pressure3_init ( pressure3_t *ctx, pressure3_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Pressure 3 click.
+ * @description This function executes default configuration for Pressure 3 Click.
  */
 void pressure3_default_cfg ( pressure3_t *ctx );
 
@@ -442,7 +442,7 @@ void pressure3_get_t_p_data ( pressure3_t *ctx, float *temperature, float *presu
  * @param coeff_struct         Structure.
  *
  * @description This function read the measurement data by read from the
- * three target register address of DPS310 sensor on Pressure 3 click board.
+ * three target register address of DPS310 sensor on Pressure 3 Click board.
  */
 void pressure3_get_coefficients ( pressure3_t *ctx, pressure3_coeff_t *coeff_struct );
 
@@ -484,7 +484,7 @@ int32_t pressure3_get_measurement_data ( pressure3_t *ctx, uint8_t mbs_reg_addr 
  *    - 1xxx : Reserved
  *
  * @description This function set the pressure configuration by write pressConfig data to the
- * target _PRESSURE3_REG_PRS_CFG register of DPS310 sensor on Pressure 3 click board.
+ * target _PRESSURE3_REG_PRS_CFG register of DPS310 sensor on Pressure 3 Click board.
  */
 void pressure3_set_pressure_configuration ( pressure3_t *ctx, uint8_t press_config );
 
@@ -494,7 +494,7 @@ void pressure3_set_pressure_configuration ( pressure3_t *ctx, uint8_t press_conf
  * @param ctx      Click object.
  *
  * @description This function get the pressure configuration by read from the
- * target _PRESSURE3_REG_PRS_CFG register of DPS310 sensor on Pressure 3 click board.
+ * target _PRESSURE3_REG_PRS_CFG register of DPS310 sensor on Pressure 3 Click board.
  */
 uint8_t pressure3_get_pressure_configuration ( pressure3_t *ctx );
 
@@ -527,7 +527,7 @@ uint8_t pressure3_get_pressure_configuration ( pressure3_t *ctx );
  *    - 1xxx : Reserved
  *
  * @description This function set the temperature configuration by write tempConfig data to the
- * target _PRESSURE3_REG_TMP_CFG register of DPS310 sensor on Pressure 3 click board.
+ * target _PRESSURE3_REG_TMP_CFG register of DPS310 sensor on Pressure 3 Click board.
  */
 void pressure3_set_temperature_configuration ( pressure3_t *ctx, uint8_t temp_config );
 
@@ -537,7 +537,7 @@ void pressure3_set_temperature_configuration ( pressure3_t *ctx, uint8_t temp_co
  * @param ctx      Click object.
  *
  * @description This function get the temperature configuration by write tempConfig data to the
- * target _PRESSURE3_REG_TMP_CFG register of DPS310 sensor on Pressure 3 click board.
+ * target _PRESSURE3_REG_TMP_CFG register of DPS310 sensor on Pressure 3 Click board.
  */
 uint8_t pressure3_get_temperature_configuration ( pressure3_t *ctx );
 
@@ -547,7 +547,7 @@ uint8_t pressure3_get_temperature_configuration ( pressure3_t *ctx );
  * @param ctx      Click object.
  *
  * @description This function set the sensor operating mode by write operationMode data to the
- * target _PRESSURE3_REG_MEAS_CFG register of DPS310 sensor on Pressure 3 click board.
+ * target _PRESSURE3_REG_MEAS_CFG register of DPS310 sensor on Pressure 3 Click board.
  */
 void pressure3_set_operating_mode( pressure3_t *ctx, uint8_t operation_mode );
 
@@ -557,7 +557,7 @@ void pressure3_set_operating_mode( pressure3_t *ctx, uint8_t operation_mode );
  * @param ctx      Click object.
  *
  * @description This function set the sensor operating mode by write operationMode data to the
- * target _PRESSURE3_REG_MEAS_CFG register of DPS310 sensor on Pressure 3 click board.
+ * target _PRESSURE3_REG_MEAS_CFG register of DPS310 sensor on Pressure 3 Click board.
  */
 uint8_t pressure3_get_operating_mode ( pressure3_t *ctx );
 
@@ -567,7 +567,7 @@ uint8_t pressure3_get_operating_mode ( pressure3_t *ctx );
  * @param ctx      Click object.
  *
  * @description This function set the configuration by write confgData data to the
- * target _PRESSURE3_REG_CFG_REG register of DPS310 sensor on Pressure 3 click board.
+ * target _PRESSURE3_REG_CFG_REG register of DPS310 sensor on Pressure 3 Click board.
  */
 void pressure3_set_configuration ( pressure3_t *ctx,uint8_t confg_data );
 
@@ -577,7 +577,7 @@ void pressure3_set_configuration ( pressure3_t *ctx,uint8_t confg_data );
  * @param ctx      Click object.
  *
  * @description This function get the configuration read the byte of data from the
- * target _PRESSURE3_REG_CFG_REG register of DPS310 sensor on Pressure 3 click board.
+ * target _PRESSURE3_REG_CFG_REG register of DPS310 sensor on Pressure 3 Click board.
  */
 uint8_t pressure3_get_configuration ( pressure3_t *ctx );
 
@@ -587,7 +587,7 @@ uint8_t pressure3_get_configuration ( pressure3_t *ctx );
  * @param ctx      Click object.
  *
  * @description This function get the interrupt status by read the byte of data from the
- * target _PRESSURE3_REG_INT_STS register of DPS310 sensor on Pressure 3 click board.
+ * target _PRESSURE3_REG_INT_STS register of DPS310 sensor on Pressure 3 Click board.
  */
 uint8_t pressure3_get_interrupt_status ( pressure3_t *ctx );
 
@@ -597,7 +597,7 @@ uint8_t pressure3_get_interrupt_status ( pressure3_t *ctx );
  * @param ctx      Click object.
  *
  * @description This function get the interrupt The FIFO is empty by read the byte of data from the
- * target _PRESSURE3_REG_FIFO_STS register of DPS310 sensor on Pressure 3 click board.
+ * target _PRESSURE3_REG_FIFO_STS register of DPS310 sensor on Pressure 3 Click board.
  */
 uint8_t pressure3_get_fifo_status ( pressure3_t *ctx );
 
@@ -607,7 +607,7 @@ uint8_t pressure3_get_fifo_status ( pressure3_t *ctx );
  * @param ctx      Click object.
  *
  * @description This function set soft reset by write 0x09 to the
- * target _PRESSURE3_REG_RESET register of DPS310 sensor on Pressure 3 click board..
+ * target _PRESSURE3_REG_RESET register of DPS310 sensor on Pressure 3 Click board..
  */
 void pressure3_soft_reset (  pressure3_t *ctx );
 
@@ -617,6 +617,6 @@ void pressure3_soft_reset (  pressure3_t *ctx );
 #endif  // _PRESSURE3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

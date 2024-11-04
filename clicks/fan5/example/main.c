@@ -3,13 +3,13 @@
  * @brief Fan 5 Click example
  *
  * # Description
- * This example demonstrates the use of FAN 5 click board by controlling and 
+ * This example demonstrates the use of FAN 5 Click board by controlling and 
  * regulating the fan motors speed.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver, performs the click default configuration, reads 
+ * Initializes the driver, performs the Click default configuration, reads 
  * manufacturer id and sets configuration in correspondence to user-selected mode.
  *
  * ## Application Task

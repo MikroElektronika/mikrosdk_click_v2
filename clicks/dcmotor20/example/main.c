@@ -3,13 +3,13 @@
  * @brief DC Motor 20 Click Example.
  *
  * # Description
- * This example demonstrates the use of DC Motor 20 click board by driving the motors
+ * This example demonstrates the use of DC Motor 20 Click board by driving the motors
  * in both direction in the span of 14 seconds.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and sets the click board to standby mode.
+ * Initializes the driver and sets the Click board to standby mode.
  *
  * ## Application Task
  * Drives the motors in the forward direction for 5 seconds, and then switches the direction, 

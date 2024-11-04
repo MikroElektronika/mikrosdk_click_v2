@@ -221,7 +221,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void rs232spi_cfg_setup ( rs232spi_cfg_t *cfg );
@@ -231,7 +231,7 @@ void rs232spi_cfg_setup ( rs232spi_cfg_t *cfg );
  * @param rs232spi Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 RS232SPI_RETVAL rs232spi_init ( rs232spi_t *ctx, rs232spi_cfg_t *cfg );
 
@@ -241,7 +241,7 @@ RS232SPI_RETVAL rs232spi_init ( rs232spi_t *ctx, rs232spi_cfg_t *cfg );
  * @param ctx     Click object.
  * @param speed   Speed variable.
  *
- * @description This function executes default configuration for RS232 SPI click.
+ * @description This function executes default configuration for RS232 SPI Click.
  */
 void rs232spi_default_cfg ( rs232spi_t *ctx, uint32_t speed );
 
@@ -344,6 +344,6 @@ uint8_t rs232spi_digital_read_int ( rs232spi_t *ctx );
 #endif  // _RS232SPI_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

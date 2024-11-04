@@ -3,6 +3,6 @@
     "description": "LR 4 Click is a compact add-on board that contains a long-range transceiver. This board features the 32001353, RF technology-based SRD transceiver, which operates at a frequency of 868MHz from Mipot.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","MIPOT 32001353"],
+    "hw" : ["Click","MIPOT 32001353"],
     "category" : ["LoRa"] 
 }

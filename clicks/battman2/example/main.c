@@ -23,7 +23,7 @@
  * This is an example that shows the use of a BATT-MAN 2 Click board™.
  * The choice of example profile tasks depends on uncommented code.
  * Examples profile: CHARGER and BUCK-BOOST.
- * In the CHARGER profile, while on the BATT-MAN 2 click board™ the 
+ * In the CHARGER profile, while on the BATT-MAN 2 Click board™ the 
  * blue LED is the battery charging indicator, 
  * while the red LED indicates the cessation of battery charging. 
  * The yellow LED is an indicator of the BUCK-BOOST profile.

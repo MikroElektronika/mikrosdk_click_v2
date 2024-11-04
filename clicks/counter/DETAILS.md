@@ -1,15 +1,15 @@
 
 
 ---
-# Counter click
+# Counter Click
 
-Counter click carries an LS7366R 32-bit quadrature counter. The top of the board has a pinout for interfacing with incremental encoders. The interface has ENCA and ENCB pins, along with ENCI, which is a programmable index.
+Counter Click carries an LS7366R 32-bit quadrature counter. The top of the board has a pinout for interfacing with incremental encoders. The interface has ENCA and ENCB pins, along with ENCI, which is a programmable index.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/counter_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/counter-click)
+[Click Product page](https://www.mikroe.com/counter-click)
 
 ---
 
@@ -48,13 +48,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- This function reads CNTR, using click object.
+- This function reads CNTR, using Click object.
 > int32_t counter_read_cntr ( counter_t *ctx );
  
-- This function reads STR, using click object.
+- This function reads STR, using Click object.
 > uint8_t counter_read_str ( counter_t *ctx );
 
-- This function reads OTR, using click object.
+- This function reads OTR, using Click object.
 > int32_t counter_read_otr ( counter_t *ctx );
 
 ## Examples Description
@@ -128,7 +128,7 @@ void application_task ( void )
 
 ## NOTE
 
-> An appropriate motor with optical encoder needs to be connected to the click board.
+> An appropriate motor with optical encoder needs to be connected to the Click board.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
@@ -141,7 +141,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

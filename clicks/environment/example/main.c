@@ -3,7 +3,7 @@
  * \brief Environment Click example
  * 
  * # Description
- * Example demonstrates use of the Environment click board.
+ * Example demonstrates use of the Environment Click board.
  *
  * The demo application is composed of two sections :
  * 

@@ -1,14 +1,14 @@
 
 ---
-# RS485 3V3 click
+# RS485 3V3 Click
 
-RS485 click 3.3V is a RS422/485 transceiver Click board™, which can be used as an interface between the TTL level UART and the RS422/485 communication bus. It features a half-duplex communication capability, bus Idle, open and short-circuit detection, glitch free power-up and power-down for hot-plugging applications, thermal shutdown, and more. It is well suited for transmitting data packets over long distances and noisy areas, using the twisted wire bus, which offers good electromagnetic interferences (EMI) immunity. ESD protection of the transceiver IC ensures reliable operation, exceeding 16kV for human body model (HBM).
+RS485 Click 3.3V is a RS422/485 transceiver Click board™, which can be used as an interface between the TTL level UART and the RS422/485 communication bus. It features a half-duplex communication capability, bus Idle, open and short-circuit detection, glitch free power-up and power-down for hot-plugging applications, thermal shutdown, and more. It is well suited for transmitting data packets over long distances and noisy areas, using the twisted wire bus, which offers good electromagnetic interferences (EMI) immunity. ESD protection of the transceiver IC ensures reliable operation, exceeding 16kV for human body model (HBM).
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/rs48533v_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rs485-33v-click)
+[Click Product page](https://www.mikroe.com/rs485-33v-click)
 
 ---
 
@@ -153,7 +153,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

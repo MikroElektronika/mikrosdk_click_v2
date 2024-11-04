@@ -488,7 +488,7 @@ typedef enum
 
 /**
  * @brief Touchpad 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #touchpad3_cfg_t object definition for detailed explanation.
@@ -500,7 +500,7 @@ void touchpad3_cfg_setup ( touchpad3_cfg_t *cfg );
 /**
  * @brief Touchpad 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #touchpad3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -516,7 +516,7 @@ err_t touchpad3_init ( touchpad3_t *ctx, touchpad3_cfg_t *cfg );
 /**
  * @brief Touchpad 3 default configuration function.
  * @details This function executes a default configuration of Touchpad 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #touchpad3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -530,7 +530,7 @@ err_t touchpad3_default_cfg ( touchpad3_t *ctx );
 
 /**
  * @brief Touchpad 3 get interrupt function..
- * @details The function get INT pin state of the TouchPad 3 click board.
+ * @details The function get INT pin state of the TouchPad 3 Click board.
  * @param[in] ctx : Click context object.
  * See #touchpad3_t object definition for detailed explanation.
  * @return State of the INT pin.
@@ -543,7 +543,7 @@ uint8_t touchpad3_get_int ( touchpad3_t *ctx );
 /**
  * @brief Touchpad 3 hardware reset function.
  * @details The function hardware reset the MTCH6301 Projected Capacitive Touch Controller
- * on the TouchPad 3 click board.
+ * on the TouchPad 3 Click board.
  * @param[in] ctx : Click context object.
  * See #touchpad3_t object definition for detailed explanation.
  * @return Nothing.
@@ -589,7 +589,7 @@ err_t touchpad3_generic_read ( touchpad3_t *ctx, uint8_t reg, uint8_t *rx_buf, u
 /**
  * @brief Touchpad 3 general configuration function.
  * @details The function performs the general configuration of the MTCH6301 Projected Capacitive Touch Controller
- * on the TouchPad 3 click board.
+ * on the TouchPad 3 Click board.
  * @param[in] ctx : Click context object.
  * See #touchpad3_t object definition for detailed explanation.
  * @return Nothing. 
@@ -602,7 +602,7 @@ void touchpad3_general_configuration ( touchpad3_t *ctx );
 /**
  * @brief Touchpad 3 decoding configuration function.
  * @details The function performs the decoding configuration of the MTCH6301 Projected Capacitive Touch Controller
- * on the TouchPad 3 click board.
+ * on the TouchPad 3 Click board.
  * @param[in] ctx : Click context object.
  * See #touchpad3_t object definition for detailed explanation.
  * @return Nothing. 
@@ -615,7 +615,7 @@ void touchpad3_decoding_configuration ( touchpad3_t *ctx );
 /**
  * @brief Touchpad 3 sensor mapping configuration function.
  * @details The function configures the sensor mapping of the MTCH6301 Projected Capacitive Touch Controller
- * on the TouchPad 3 click board.
+ * on the TouchPad 3 Click board.
  * @param[in] ctx : Click context object.
  * See #touchpad3_t object definition for detailed explanation.
  * @return Nothing. 
@@ -628,7 +628,7 @@ void touchpad3_sensor_mapping_configuration ( touchpad3_t *ctx );
 /**
  * @brief Touchpad 3 get touch data function.
  * @details The function get touch data of the MTCH6301 Projected Capacitive Touch Controller
- * on the TouchPad 3 click board.
+ * on the TouchPad 3 Click board.
  * @param[in] ctx : Click context object.
  * See #touchpad3_t object definition for detailed explanation.
  * @param [in] tch_data: structure where touch data be stored.
@@ -645,7 +645,7 @@ uint8_t touchpad3_get_touch ( touchpad3_t *ctx, touch_data_t *tch_data,uint16_t 
 /**
  * @brief Touchpad 3 get gesture data function.
  * @details The function get gesture data of the MTCH6301 Projected Capacitive Touch Controller
- * on the TouchPad 3 click board.
+ * on the TouchPad 3 Click board.
  * @param[in] ctx : Click context object.
  * See #touchpad3_t object definition for detailed explanation.
  * @param [in] gst_data: Structure where gesture data be stored.
@@ -661,7 +661,7 @@ uint8_t touchpad3_get_gesture ( touchpad3_t *ctx, touch_data_t *gst_data, uint8_
 /**
  * @brief Touchpad 3 command protocol function.
  * @details The function set the desired command to the MTCH6301 Projected Capacitive Touch Controller
- * on the TouchPad 3 click board.
+ * on the TouchPad 3 Click board.
  * @param[in] ctx : Click context object.
  * See #touchpad3_t object definition for detailed explanation.
  * @param [in] cmd_data: Pointer to the memory location where data be stored.
@@ -682,7 +682,7 @@ uint8_t touchpad3_cmd_protocol ( touchpad3_t *ctx, cmd_protocol_t cmd_data, uint
 /**
  * @brief Touchpad 3 write register data function.
  * @details The function writes a the byte of data to the targeted index and offset locationof the MTCH6301 Projected Capacitive Touch Controller
- * on the TouchPad 3 click board.
+ * on the TouchPad 3 Click board.
  * @param[in] ctx : Click context object.
  * See #touchpad3_t object definition for detailed explanation.
  * @param [in] index_loc : Index location.
@@ -705,7 +705,7 @@ uint8_t touchpad3_write_reg ( touchpad3_t *ctx, uint8_t index_loc, uint8_t offse
 /**
  * @brief Touchpad 3 read register data function.
  * @details The function read a the byte of data from the targeted index and offset location of the MTCH6301 Projected Capacitive Touch Controller
- * on the TouchPad 3 click board.
+ * on the TouchPad 3 Click board.
  * @param[in] ctx : Click context object.
  * See #touchpad3_t object definition for detailed explanation.
  * @param [in] index_loc : Index location.
@@ -727,7 +727,7 @@ uint8_t touchpad3_read_reg ( touchpad3_t *ctx, uint8_t index_loc, uint8_t offset
 /**
  * @brief Touchpad 3 manufacturing test function.
  * @details The function set manufacturing test of the MTCH6301 Projected Capacitive Touch Controller
- * on the TouchPad 3 click board.
+ * on the TouchPad 3 Click board.
  * @param[in] ctx : Click context object.
  * See #touchpad3_t object definition for detailed explanation.
  * @return @li @c  0x00 - Success,
@@ -741,7 +741,7 @@ uint8_t touchpad3_manufacturing_test ( touchpad3_t *ctx );
 /**
  * @brief Touchpad 3 get device id function.
  * @details The function reads device id of the MTCH6301 Projected Capacitive Touch Controller
- * on the TouchPad 3 click board.
+ * on the TouchPad 3 Click board.
  * @param[in] ctx : Click context object.
  * See #touchpad3_t object definition for detailed explanation.
  * @return Device id.
@@ -752,7 +752,7 @@ uint32_t touchpad3_get_device_id ( touchpad3_t *ctx );
 /**
  * @brief Touchpad 3 configure touch function.
  * @details The function configures touch of the MTCH6301 Projected Capacitive Touch Controller
- * on the TouchPad 3 click board.
+ * on the TouchPad 3 Click board.
  * @param[in] ctx : Click context object.
  * See #touchpad3_t object definition for detailed explanation.
  * @param[in] en_touch : Touch enable settings.
@@ -765,7 +765,7 @@ uint8_t touchpad3_config_touch ( touchpad3_t *ctx, uint8_t en_touch );
 /**
  * @brief Touchpad 3 configure gesture function.
  * @details The function configures gesture of the MTCH6301 Projected Capacitive Touch Controller
- * on the TouchPad 3 click board.
+ * on the TouchPad 3 Click board.
  * @param[in] ctx : Click context object.
  * See #touchpad3_t object definition for detailed explanation.
  * @param[in] en_gesture : Gesture enable settings.

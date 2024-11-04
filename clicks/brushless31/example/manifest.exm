@@ -3,6 +3,6 @@
     "description": "Brushless 31 Click is a compact add-on board for precise and efficient brushless motor control. This board features the TB6605FTG, a three-phase full sine-wave brushless motor controller from Toshiba Semiconductor. The board features six onboard external N-channel MOSFETs for smooth motor operation, sine-wave PWM driving with 2-phase modulation for high efficiency and low noise, and includes essential functions like dead time, brake, and manual/auto lead-angle control. It supports clockwise and counterclockwise rotation and offers motor lock protection for added safety. Brushless 31 Click is ideal for home appliances, fans, and office equipment applications, where reliable and precise motor control is critical.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TB6605FTG"],
+    "hw" : ["Click","TB6605FTG"],
     "category" : ["Click Boards > Motor control > Brushless"]
 }

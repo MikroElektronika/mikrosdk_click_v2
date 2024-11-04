@@ -1,6 +1,6 @@
 
 ---
-# UVC click
+# UVC Click
 
 UVC Click is an ultraviolet sensing board which complements UVC Light Click for a ultimate ultraviolet solution. The board is based on GUVC-T21GH ultraviolet sensor from GenUV, capable of measuring UVC spectrum in the range of 220nm up to 280nm and light intensity from 0mW/cm² up to 9.3mW/cm². With high sensitivity and good solar blindness, it can be a perfect solution for monitoring sterilization lamps used in ultraviolet germicidal irradiation (UVGI), a disinfection method that is becoming an essential tool in the battle against viruses and bacteria. UVC Click has two ways of reading UV sensor output, direct analog output value and digital output thanks to MCP3221 ADC converter.
 
@@ -9,7 +9,7 @@ UVC Click is an ultraviolet sensing board which complements UVC Light Click for 
 </p>
 
 
-[click Product page](https://www.mikroe.com/uvc-click)
+[Click Product page](https://www.mikroe.com/uvc-click)
 
 ---
 
@@ -56,7 +56,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This click is capable of measuring UVC spectrum in the range of 220nm up to 280nm and light 
+> This Click is capable of measuring UVC spectrum in the range of 220nm up to 280nm and light 
 > intensity from 0mW/cm² up to 9.3mW/cm². With high sensitivity and good solar blindness, 
 > it can be used for monitoring sterilization lamps. 
 
@@ -136,7 +136,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

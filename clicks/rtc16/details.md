@@ -1,6 +1,6 @@
 
 ---
-# RTC 16 click
+# RTC 16 Click
 
 > RTC 16 Click is a compact add-on board that accurately keeps the time of a day. This board features the BU9873, a CMOS real-time clock that has a built-in interrupt generation function from Rohm Semiconductors. The BU9873 provides year, month, day, weekday, hours, minutes, and seconds based on a 32.768kHz quartz crystal. This RTC is connected to the MCU through an I2C interface and configured to serial transmit time and calendar data. It also has an alarm function that outputs an interrupt signal to the MCU when the day of the week, hour, or minute matches with the preset time.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/rtc16_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rtc-16-click)
+[Click Product page](https://www.mikroe.com/rtc-16-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t rtc16_read_date ( rtc16_t *ctx, rtc16_date_t *date );
 
 ## Example Description
 
-> This example demonstrates the use of RTC 16 click board by reading and displaying the time and date values.
+> This example demonstrates the use of RTC 16 Click board by reading and displaying the time and date values.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and logger and performs the click default configuration which sets 24h time mode and interrupt to be synchronized with second count-up.
+> Initializes the driver and logger and performs the Click default configuration which sets 24h time mode and interrupt to be synchronized with second count-up.
 And after that setting the starting time and date.
 
 ```c
@@ -173,7 +173,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

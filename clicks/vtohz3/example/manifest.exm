@@ -3,6 +3,6 @@
     "description": "V to Hz 3 Click is a compact add-on board that converts an analog voltage input signal into a specific frequency pulse wave signal. This board features the AD7740, an ultrasmall synchronous voltage-to-frequency converter from Analog Devices. The AD7740 has a linear response, so applying a voltage from 3V up to 5V on its VIN terminal will generate the pulse with a frequency linearly proportional to the input voltage. It contains an integrated 2.5V bandgap reference defining the span of the VFC and can be overdriven using an external reference. The full-scale output frequency is synchronous with the input clock signal provided by the LTC6903 programmable oscillator, with a maximum input frequency of 1MHz. Based on the analog input value, the output frequency goes from 10% to 90% of the input frequency.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","AD7740YRTZ","LTC6903C"],
+    "hw" : ["Click","AD7740YRTZ","LTC6903C"],
     "category" : ["Click Boards > Mixed signal > Measurements"]
 }

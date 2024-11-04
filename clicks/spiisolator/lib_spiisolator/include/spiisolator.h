@@ -82,7 +82,7 @@
 /** \} */
 
 /**
- * \defgroup Write & Read Command - Pressure 3 click
+ * \defgroup Write & Read Command - Pressure 3 Click
  * \{
  */
 #define SPIISOLATOR_PRESSURE3_SPI_CMD_WRITE                               0x7F
@@ -90,7 +90,7 @@
 /** \} */
 
 /**
- * \defgroup Register Map - Pressure 3 click
+ * \defgroup Register Map - Pressure 3 Click
  * \{
  */
 #define SPIISOLATOR_PRESSURE3_REG_PSR_B2                                  0x00
@@ -321,7 +321,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void spiisolator_cfg_setup ( spiisolator_cfg_t *cfg );
@@ -331,7 +331,7 @@ void spiisolator_cfg_setup ( spiisolator_cfg_t *cfg );
  * @param spiisolator Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 SPIISOLATOR_RETVAL spiisolator_init ( spiisolator_t *ctx, spiisolator_cfg_t *cfg );
 
@@ -367,7 +367,7 @@ void spiisolator_write_cmd ( spiisolator_t *ctx, uint8_t cmd, uint8_t tx_data );
  * @param write_data                 Byte of data to write
  *
  * @description Function writes the byte of data to the
- * targeted 8-bit register address of connected random I2C click
+ * targeted 8-bit register address of connected random I2C Click
  * which is wired to the SPI Isolator Click board
  */
 void spiisolator_write_byte ( spiisolator_t *ctx, uint8_t reg_address, uint8_t write_cmd, uint8_t write_data );
@@ -382,7 +382,7 @@ void spiisolator_write_byte ( spiisolator_t *ctx, uint8_t reg_address, uint8_t w
  * @return  8-bit read data
  *
  * @description Function reads the byte of data from the
- * targeted 8-bit register address of connected random I2C click
+ * targeted 8-bit register address of connected random I2C Click
  * which is wired to the SPI Isolator Click board
  */
 uint8_t spiisolator_read_byte ( spiisolator_t *ctx, uint8_t reg_address, uint8_t read_cmd );
@@ -395,7 +395,7 @@ uint8_t spiisolator_read_byte ( spiisolator_t *ctx, uint8_t reg_address, uint8_t
  * @param write_data                 16-bit data to write
  *
  * @description Function writes the 16-bit data to the
- * targeted 8-bit register address of connected random I2C click
+ * targeted 8-bit register address of connected random I2C Click
  * which is wired to the SPI Isolator Click board
  */
 void spiisolator_write_data ( spiisolator_t *ctx, uint8_t reg_address, uint8_t write_cmd, uint16_t write_data );
@@ -408,7 +408,7 @@ void spiisolator_write_data ( spiisolator_t *ctx, uint8_t reg_address, uint8_t w
  * @return 16-bit read data
  *
  * @description Function reads the 16-bit data from the
- * targeted 8-bit register address of connected random I2C click
+ * targeted 8-bit register address of connected random I2C Click
  * which is wired to the SPI Isolator Click board
  */
 uint16_t spiisolator_read_data ( spiisolator_t *ctx, uint8_t reg_address, uint8_t read_cmd );
@@ -422,7 +422,7 @@ uint16_t spiisolator_read_data ( spiisolator_t *ctx, uint8_t reg_address, uint8_
  * @param n_bytes                    number of bytes to be written
  *
  * @description function writes a sequential data starting from the
- * targeted 8-bit register address of connected random I2C click
+ * targeted 8-bit register address of connected random I2C Click
  * which is wired to the SPI Isolator Click board
  */
 void spiisolator_write_bytes ( spiisolator_t *ctx, uint8_t reg_address, uint8_t write_cmd, uint8_t *write_data, uint16_t n_bytes );
@@ -436,7 +436,7 @@ void spiisolator_write_bytes ( spiisolator_t *ctx, uint8_t reg_address, uint8_t 
  * @param n_bytes                    number of bytes to be written
  *
  * @description Function read a sequential data starting from the
- * targeted 8-bit register address of connected random I2C click
+ * targeted 8-bit register address of connected random I2C Click
  * which is wired to the SPI Isolator Click board
  */
 void spiisolator_read_bytes ( spiisolator_t *ctx,uint8_t reg_address, uint8_t read_cmd, uint8_t *read_data, uint16_t n_bytes );
@@ -447,6 +447,6 @@ void spiisolator_read_bytes ( spiisolator_t *ctx,uint8_t reg_address, uint8_t re
 #endif  // _SPIISOLATOR_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

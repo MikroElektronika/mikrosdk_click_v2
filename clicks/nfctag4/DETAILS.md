@@ -1,7 +1,7 @@
 
 
 ---
-# NFC Tag 4  click
+# NFC Tag 4  Click
 
 NFC Tag 4 Click is NFC tag device, offering 16 Kbit of electrically erasable
 programmable memory (EEPROM). 
@@ -10,7 +10,7 @@ programmable memory (EEPROM).
   <img src="https://download.mikroe.com/images/click_for_ide/nfctag4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/nfc-tag-4-click)
+[Click Product page](https://www.mikroe.com/nfc-tag-4-click)
 
 ---
 
@@ -60,7 +60,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example showcases how to configure and use the NFC Tag 4 click. The click is an NFC tag 
+> This example showcases how to configure and use the NFC Tag 4 Click. The Click is an NFC tag 
 > interface which uses the I2C serial interface and an RF link interface in order to communicate.
 > The example requires the ST25 NFC Tap application which can be downloaded to your phone.
 
@@ -69,7 +69,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> This function initializes and configures the logger and click modules.
+> This function initializes and configures the logger and Click modules.
 
 ```c
 
@@ -157,7 +157,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

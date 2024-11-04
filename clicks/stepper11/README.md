@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Stepper 11 click
+# Stepper 11 Click
 
 > Stepper 11 Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the TB9120AFTG, a two-phase bipolar stepping motor driver with a clock input interface and a PWM constant-current control system from Toshiba Semiconductor.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/stepper_11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/stepper-11-click)
+[Click Product page](https://www.mikroe.com/stepper-11-click)
 
 ---
 
@@ -161,7 +161,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

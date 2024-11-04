@@ -250,7 +250,7 @@ typedef enum
 
 /**
  * @brief Ambient 16 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #ambient16_cfg_t object definition for detailed explanation.
@@ -262,7 +262,7 @@ void ambient16_cfg_setup ( ambient16_cfg_t *cfg );
 /**
  * @brief Ambient 16 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #ambient16_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -277,7 +277,7 @@ err_t ambient16_init ( ambient16_t *ctx, ambient16_cfg_t *cfg );
 /**
  * @brief Ambient 16 default configuration function.
  * @details This function executes a default configuration of Ambient 16
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #ambient16_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -361,7 +361,7 @@ err_t ambient16_send_cmd ( ambient16_t *ctx, uint8_t cmd );
 
 /**
  * @brief Ambient 16 software reset function.
- * @details This function executes a software reset of Ambient 16 click board.
+ * @details This function executes a software reset of Ambient 16 Click board.
  * @param[in] ctx : Click context object.
  * See #ambient16_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -373,7 +373,7 @@ err_t ambient16_sw_reset ( ambient16_t *ctx );
 
 /**
  * @brief Ambient 16 interrupt reset function.
- * @details This function executes an interrupt reset of Ambient 16 click board.
+ * @details This function executes an interrupt reset of Ambient 16 Click board.
  * @param[in] ctx : Click context object.
  * See #ambient16_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

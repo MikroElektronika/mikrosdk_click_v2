@@ -3,7 +3,7 @@
  * \brief Mpu9Dof Click example
  * 
  * # Description
- * MPU 9DOF click carries the world’s first 9-axis Motion Tracking device. It comprises two chips: one that contains 
+ * MPU 9DOF Click carries the world’s first 9-axis Motion Tracking device. It comprises two chips: one that contains 
  * a 3-axis accelerometer, a 3-axis gyroscope, and a DMP (digital motion processor); 
  * the other is a 3-axis digital compass.
  *

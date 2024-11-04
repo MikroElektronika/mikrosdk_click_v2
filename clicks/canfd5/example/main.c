@@ -3,12 +3,12 @@
  * \brief CanFd5 Click example
  * 
  * # Description
- * This is an example that demonstrates the use of the CAN FD 5 click board.
+ * This is an example that demonstrates the use of the CAN FD 5 Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and enables the click board.
+ * Initializes the driver and enables the Click board.
  * 
  * ## Application Task  
  * Depending on the selected mode, it reads all the received data or sends the desired message

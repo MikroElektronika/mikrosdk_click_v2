@@ -3,13 +3,13 @@
  * \brief Relay Click example
  *
  * # Description
- * Demo application is used to shows basic controls Relay click
+ * Demo application is used to shows basic controls Relay Click
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
  * Configuring clicks and log objects.
- * Settings the click in the default configuration.
+ * Settings the Click in the default configuration.
  *
  * ## Application Task
  * Alternately sets relays to ON-OFF state...

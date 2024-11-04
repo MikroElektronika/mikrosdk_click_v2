@@ -3,7 +3,7 @@
  * @brief VUMeter Click example
  *
  * # Description
- * This example demonstrates the use of VU Meter click board.
+ * This example demonstrates the use of VU Meter Click board.
  *
  * The demo application is composed of two sections :
  *

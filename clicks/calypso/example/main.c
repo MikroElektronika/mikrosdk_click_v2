@@ -3,7 +3,7 @@
  * @brief Calypso Click Example.
  *
  * # Description
- * This example demonstrates the use of Calypso click board by processing
+ * This example demonstrates the use of Calypso Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
@@ -35,7 +35,7 @@
 #include "conversions.h"
 
 // Message content
-#define MESSAGE_CONTENT                     "Calypso click board - demo example."
+#define MESSAGE_CONTENT                     "Calypso Click board - demo example."
 
 // TCP/UDP example parameters
 #define REMOTE_IP                           "77.46.162.162" // TCP/UDP echo server IP address

@@ -3,14 +3,14 @@
  * @brief Wirepas Click Example.
  *
  * # Description
- * This example demonstrates the use of Wirepas click board by processing
+ * This example demonstrates the use of Wirepas Click board by processing
  * the incoming data and displaying them on the USB UART in sink mode, and sending data to 
  * the sinks in router mode.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration, setting device mode, node,
+ * Initializes the driver and performs the Click default configuration, setting device mode, node,
  * net and channel addresses, and starting stack.
  *
  * ## Application Task

@@ -3,6 +3,6 @@
     "description": "DC Motor 23 Click is a compact add-on board with a brushed DC motor driver. This board features the TB67H480FNG, a dual-channel, H-bridge, brushed DC motor driver from Toshiba Semiconductor. Fabricated with the BiCD process (DMOSFET is used for output power transistor), it covers a wide operating voltage range of 8.2V to 44V with a maximum output current capacity of 2A. It also offers many helpful features that support a robust and reliable operation, like the decay modes selection function, several protection features, and one anomaly detection indicator.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TB67H480FNG"],
+    "hw" : ["Click","TB67H480FNG"],
     "category" : ["Click Boards > Motor control > Brushed"]
 }

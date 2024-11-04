@@ -3,7 +3,7 @@
  * @brief Rotary O Click example
  *
  * # Description
- * The demo application controls led on click with rotory on board
+ * The demo application controls led on Click with rotory on board
  *
  * The demo application is composed of two sections :
  *

@@ -1,8 +1,8 @@
 {
     "name": "16x9 G Click",
-    "description": "16x9 click is an array of 144 LEDs, driven by a single IC with relatively low pin count (28).",
+    "description": "16x9 Click is an array of 144 LEDs, driven by a single IC with relatively low pin count (28).",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","IS31FL3731"],
+    "hw" : ["Click","IS31FL3731"],
     "category" : ["LED Matrix"] 
 }

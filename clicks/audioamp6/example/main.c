@@ -3,12 +3,12 @@
  * \brief AudioAmp 6 Click example
  * 
  * # Description
- *  The demo application displays the volume change using AudioAmp 6 click.
+ *  The demo application displays the volume change using AudioAmp 6 Click.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Configuring clicks and log objects.
+ * Configuring Clicks and log objects.
  * Select mode and sets output on the enable state.
  * 
  * ## Application Task  
@@ -60,7 +60,7 @@ void application_init ( void )
     audioamp6_set_mode( &audioamp6, AUDIOAMP6_MODE_BD );
     audioamp6_set_output( &audioamp6, AUDIOAMP6_OUTPUT_ENABLE );
 
-    log_info( &logger,"---- Start control AudioAmp 6 click ----" );
+    log_info( &logger,"---- Start control AudioAmp 6 Click ----" );
 }
 
 void application_task ( void )

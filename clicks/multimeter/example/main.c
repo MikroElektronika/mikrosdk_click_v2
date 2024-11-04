@@ -3,14 +3,14 @@
  * \brief Multimeter Click example
  * 
  * # Description
- * This example showcases how to configure, initialize and use the Multimeter click. The
- * click measures resistance in Ohms, voltage in mVs, current in mAs and capacitance in nFs
+ * This example showcases how to configure, initialize and use the Multimeter Click. The
+ * Click measures resistance in Ohms, voltage in mVs, current in mAs and capacitance in nFs
  * using a dual CMOS and quad CMOS op-amps, an ADC and other on board modules.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules. Additional 
+ * This function initializes and configures the logger and Click modules. Additional 
  * calibration of the measurement components is done in the default_cfg(...) function.
  * 
  * ## Application Task  

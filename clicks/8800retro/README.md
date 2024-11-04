@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# 8800 Retro click
+# 8800 Retro Click
 
 8800 Retro Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the AS1115, compact LED driver for 8x8 display screen programmed via a compatible 2-wire I2C interface from ASM-AG.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/8800retro_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/8800-retro-click)
+[Click Product page](https://www.mikroe.com/8800-retro-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t c8800retro_display_string ( c8800retro_t *ctx, uint8_t scroll_mode, uint16
 
 ## Example Description
 
-> This example demonstrates the use of 8800 Retro click board.
+> This example demonstrates the use of 8800 Retro Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and issues the click default configuration, then asks the user to select the demo example using the on-board KeyPad.
+> Initializes the driver and issues the Click default configuration, then asks the user to select the demo example using the on-board KeyPad.
 
 ```c
 
@@ -172,7 +172,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

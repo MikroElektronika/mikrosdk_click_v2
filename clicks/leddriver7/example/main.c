@@ -56,7 +56,7 @@ void application_init ( void )
 
     Delay_ms ( 100 );
     log_printf( &logger, "-------------------- \r\n" );
-    log_printf( &logger, " LED Driver 7 click  \r\n" );
+    log_printf( &logger, " LED Driver 7 Click  \r\n" );
     log_printf( &logger, "-------------------- \r\n" );
 }
 

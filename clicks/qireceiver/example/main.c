@@ -12,11 +12,11 @@
  * 
  * ## Application Task  
  * This is an example that shows the most important
- * functions that Qi Receiver click has, it mesures current voltage, amperage and frequency.
+ * functions that Qi Receiver Click has, it mesures current voltage, amperage and frequency.
  * 
  * ## Note
  * Click board needs to have external power ( Qi transmitter ) in order to work, otherwise I2C communication won't work.
- * If Qi Transmitter is removed from click board it will stop working, if you return it you should restart your application.
+ * If Qi Transmitter is removed from Click board it will stop working, if you return it you should restart your application.
  * You will now when Click board has power and is ready to start application when red STAT led is on, when it's off I2C communication won't work.
  * 
  * \author MikroE Team

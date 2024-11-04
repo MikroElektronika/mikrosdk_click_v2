@@ -1,6 +1,6 @@
 
 ---
-# eFuse 2 click
+# eFuse 2 Click
 
 > eFuse 2 Click is a compact add-on board that contains an integrated FET hot-swap device. This board features the TPS259631, a highly integrated circuit protection and power management solution from Texas Instruments. It provides multiple protection modes against overloads, short circuits, voltage surges, and excessive inrush current.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/efuse2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/efuse-2-click)
+[Click Product page](https://www.mikroe.com/efuse-2-click)
 
 ---
 
@@ -69,7 +69,7 @@ uint8_t efuse2_get_fault ( efuse2_t *ctx );
 
 ## Example Description
 
-> This is an example that demonstrate the use of the eFuse 2 click board.
+> This is an example that demonstrate the use of the eFuse 2 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -140,7 +140,7 @@ void application_init ( void )
 
 ### Application Task
 
-> eFuse 2 click board uses USB UART log to display operating voltage, OVLO, UVLO and current limit condition. This firmware provides the functions to set the operating voltage and current limiting conditions in order to provide the threshold of the fault conditions.
+> eFuse 2 Click board uses USB UART log to display operating voltage, OVLO, UVLO and current limit condition. This firmware provides the functions to set the operating voltage and current limiting conditions in order to provide the threshold of the fault conditions.
 > When one of the fault conditions is met, the microcontroller is notified via INT pin which is checked by the app to initiate a shutdown mode. All data logs write on USB UART changes every 2000 milliseconds.
 
 ```c
@@ -185,7 +185,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

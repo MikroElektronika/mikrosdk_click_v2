@@ -3,12 +3,12 @@
  * \brief Waveform Click example
  * 
  * # Description
- * This example demonstrates the use of Waveform click board.
+ * This example demonstrates the use of Waveform Click board.
  *
  * The application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the communication interface and configures the click board.
+ * Initializes the communication interface and configures the Click board.
  * 
  * ## Application Task  
  * Predefined commands are inputed from the serial port.

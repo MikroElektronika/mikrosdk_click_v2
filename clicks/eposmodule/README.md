@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# EPOS Module click
+# EPOS Module Click
 
 > EPOS Module Click is a compact add-on board that provides a low-power modem solution for use in EPOS terminals and telephone-based systems. It is based on the CMX869B, a multi-standard v.32 bis modem from CML Micro, which supports multiple communication protocols. The CMX869B has built-in functions such as DTMF encoding/decoding and a Powersave mode to optimize energy consumption. It also includes a fully isolated telephone interface via the P1200 transformer for reliable communication.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/eposmodule_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/epos-module-click)
+[Click Product page](https://www.mikroe.com/epos-module-click)
 
 ---
 
@@ -66,8 +66,8 @@ err_t eposmodule_send_message ( dtmf_t *ctx, uint8_t *data_in, uint8_t len );
 
 ## Example Description
 
-> This example demonstrates the use of EPOS Module click board by showing
-the communication between the two click boards connected to PBX system.
+> This example demonstrates the use of EPOS Module Click board by showing
+the communication between the two Click boards connected to PBX system.
 
 **The demo application is composed of two sections :**
 
@@ -287,7 +287,7 @@ void application_task ( void )
 
 ## Note
 
-> We have used a Yeastar S20 VoIP PBX system for the test, where the click boards are
+> We have used a Yeastar S20 VoIP PBX system for the test, where the Click boards are
 connected to ports 1 and 2 configured as FXS extension with numbers 1000 and 1001 (dialer).
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
@@ -301,7 +301,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

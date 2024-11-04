@@ -1,15 +1,15 @@
 
 
 ---
-# HAPTIC click
+# HAPTIC Click
 
-< Haptic click carries DRV2605, a Haptic Driver for ERM and LRA vibration motors (acronyms stand for Eccentric Rotating Mass and Linear Resonant Actuator, respectively) >
+< Haptic Click carries DRV2605, a Haptic Driver for ERM and LRA vibration motors (acronyms stand for Eccentric Rotating Mass and Linear Resonant Actuator, respectively) >
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/haptic_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/haptic-click)
+[Click Product page](https://www.mikroe.com/haptic-click)
 
 ---
 
@@ -51,7 +51,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 -  Disable the device function.
 > void haptic_disable ( haptic_t *ctx );
 
-- Sets the Haptic click to desired mode function.
+- Sets the Haptic Click to desired mode function.
 > void haptic_set_mode ( haptic_t *ctx, uint8_t sel_mode );
 
 ## Examples Description
@@ -62,7 +62,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Configures the click board in Audio-to-Vibe mode.
+> Configures the Click board in Audio-to-Vibe mode.
 
 ```c
 
@@ -90,7 +90,7 @@ void application_init ( void )
     HAPTIC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     haptic_init( &haptic, &cfg );
 
-    log_printf( &logger, " Configuring the click board...\r\n" );
+    log_printf( &logger, " Configuring the Click board...\r\n" );
     log_printf( &logger, "----------------------- \r\n" );
     
     haptic_enable( &haptic );
@@ -102,7 +102,7 @@ void application_init ( void )
     haptic_enable_ac_coulping( &haptic );
     haptic_set_input_to_analog( &haptic );
     
-    log_printf( &logger, " The click board is configured in Audio-to-Vibe mode...\r\n" );
+    log_printf( &logger, " The Click board is configured in Audio-to-Vibe mode...\r\n" );
 }
   
 ```
@@ -132,7 +132,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

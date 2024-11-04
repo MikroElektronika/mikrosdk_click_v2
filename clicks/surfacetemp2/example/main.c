@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initalizes the driver and configures the click board.
+ * Initalizes the driver and configures the Click board.
  * 
  * ## Application Task  
  * Reads the temperature in Celsius and displays the value on the USB UART each second.

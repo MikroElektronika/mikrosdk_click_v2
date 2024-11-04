@@ -1,6 +1,6 @@
 
 ---
-# GNSS RTK 2 click
+# GNSS RTK 2 Click
 
 > GNSS RTK 2 Click is a compact add-on board used to enhance the precision of position data derived from satellite-based positioning systems. This board features the ZED-F9R, a multi-band professional-grade GNSS module with integrated multi-band Real Time Kinematics (RTK) technology offering centimeter-level accuracy from u-blox. This module concurrently uses GNSS signals from all four GNSS constellations (GPS/QZSS, GLONASS, Galileo, and BeiDou) and provides a reliable multi-band RTK turnkey solution with up to 30Hz real-time position update rate and full GNSS carrier raw data.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/gnssrtk2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gnss-rtk-2-click)
+[Click Product page](https://www.mikroe.com/gnss-rtk-2-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t gnssrtk2_parse_gngga ( char *rsp_buf, uint8_t gngga_element, char *element
 
 ## Example Description
 
-> This example demonstrates the use of GNSS RTK 2 click by reading and displaying the GNSS coordinates.
+> This example demonstrates the use of GNSS RTK 2 Click by reading and displaying the GNSS coordinates.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and resets the click board.
+> Initializes the driver and resets the Click board.
 
 ```c
 
@@ -138,7 +138,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART
